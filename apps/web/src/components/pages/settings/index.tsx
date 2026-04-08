@@ -24,6 +24,7 @@ import { Separator } from "@components/ui/separator";
 import { toastManager } from "@components/ui/toast";
 import { AccountPageNav, AccountPagePanel, accountSection } from "./account-page";
 import { AdvancedPageNav, AdvancedPagePanel, advancedSection } from "./advanced-page";
+import { BillingPageNav, BillingPagePanel, billingSection } from "./billing-page";
 import {
   InboxBehaviorPageNav,
   InboxBehaviorPagePanel,
@@ -33,6 +34,7 @@ import { ReaderPageNav, ReaderPagePanel, readerSection } from "./reader-page";
 
 const SETTINGS_NAV = [
   accountSection,
+  billingSection,
   readerSection,
   inboxBehaviorSection,
   advancedSection,
@@ -101,6 +103,12 @@ export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
                         setActiveSectionName("Account");
                       }}
                     />
+                    <BillingPageNav
+                      isActive={activeSectionName === "Billing"}
+                      onSelect={() => {
+                        setActiveSectionName("Billing");
+                      }}
+                    />
                     <ReaderPageNav
                       isActive={activeSectionName === "Reader"}
                       onSelect={() => {
@@ -143,6 +151,7 @@ export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
               {activeSectionName === "Account" ? (
                 <AccountPagePanel onLogout={handleLogout} />
               ) : null}
+              {activeSectionName === "Billing" ? <BillingPagePanel /> : null}
               {activeSectionName === "Reader" ? <ReaderPagePanel /> : null}
               {activeSectionName === "Inbox Behavior" ? <InboxBehaviorPagePanel /> : null}
               {activeSectionName === "Advanced" ? <AdvancedPagePanel /> : null}

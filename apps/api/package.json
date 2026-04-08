@@ -6,6 +6,7 @@
   "scripts": {
     "test": "bun test src",
     "dev": "bun --env-file=../../docker/.env --env-file=.env --watch src/app/entry.ts",
+    "worker": "bun --env-file=../../docker/.env --env-file=.env src/app/worker.ts",
     "fmt": "bunx oxfmt src",
     "fmt:check": "bunx oxfmt --check src",
     "lint": "bunx oxlint src",
@@ -13,6 +14,9 @@
     "typecheck": "bunx tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
+    "@cronos/db": "workspace:*",
+    "@cronos/feed-ingest": "workspace:*",
+    "@cronos/job-queue": "workspace:*",
     "@elysiajs/cors": "^1.4.0",
     "@elysiajs/swagger": "^1.3.1",
     "@sinclair/typebox": "0.34.48",

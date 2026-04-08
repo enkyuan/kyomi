@@ -1,10 +1,10 @@
 import { HeadContent, Outlet, Scripts, createRootRouteWithContext } from "@tanstack/react-router";
 import { useEffect } from "react";
 import type { QueryClient } from "@tanstack/react-query";
-import AuthProvider from "@/integrations/better-auth/auth-provider";
-import TanstackQueryProvider from "@/integrations/tanstack-query/root-provider";
+import AuthProvider from "@integrations/better-auth/auth-provider";
+import TanstackQueryProvider from "@integrations/tanstack-query/root-provider";
 import { AnchoredToastProvider, ToastProvider } from "@components/ui/toast";
-import PostHogProvider from "../integrations/posthog/provider";
+import PostHogProvider from "@integrations/posthog/provider";
 import appCss from "../styles.css?url";
 
 interface MyRouterContext {

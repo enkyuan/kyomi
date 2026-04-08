@@ -1,0 +1,14 @@
+{
+  "name": "@cronos/feed-ingest",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@cronos/db": "workspace:*",
+    "drizzle-orm": "^0.45.2",
+    "fast-xml-parser": "^5.5.10",
+    "pg": "^8.16.3"
+  }
+}

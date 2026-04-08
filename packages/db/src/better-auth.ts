@@ -39,11 +39,7 @@ export function resolveBetterAuthTrustedOrigins(options: {
   }
 
   return Array.from(
-    new Set([
-      options.baseURL,
-      ...DEFAULT_LOCALHOST_ORIGINS,
-      ...(options.additionalOrigins ?? []),
-    ]),
+    new Set([options.baseURL, ...DEFAULT_LOCALHOST_ORIGINS, ...(options.additionalOrigins ?? [])]),
   );
 }
 

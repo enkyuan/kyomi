@@ -6,7 +6,7 @@ import {
   resolveBetterAuthBaseUrl,
   resolveBetterAuthTrustedOrigins,
   shouldUseSecureCookies,
-} from "@/db/better-auth";
+} from "@cronos/db";
 import { db } from "@/db";
 
 function requireBetterAuthSecret() {

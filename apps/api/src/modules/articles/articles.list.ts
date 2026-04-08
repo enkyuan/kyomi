@@ -10,6 +10,7 @@ type DB = typeof db;
 
 export type ListArticlesOptions = {
   feedId?: string;
+  folderId?: string;
   isRead?: boolean;
   isSaved?: boolean;
   publishedAfter?: Date;
@@ -98,6 +99,9 @@ async function listArticleRows(
   if (opts.feedId) {
     filters.push(eq(feedItems.feedId, opts.feedId));
   }
+  if (opts.folderId) {
+    filters.push(eq(feedSubscriptions.folderId, opts.folderId));
+  }
   if (opts.isRead === true) {
     filters.push(sql`(${articleIsReadSql}) = true`);
   } else if (opts.isRead === false) {
@@ -121,7 +125,13 @@ async function listArticleRows(
       })
       .from(feedItems)
       .innerJoin(feedSubscriptions, feedSubscriptionsJoin)
-      .where(and(eq(feedItems.id, opts.cursor), eq(feedSubscriptions.userId, userId)))
+      .where(
+        and(
+          eq(feedItems.id, opts.cursor),
+          eq(feedSubscriptions.userId, userId),
+          opts.folderId ? eq(feedSubscriptions.folderId, opts.folderId) : undefined,
+        ),
+      )
       .limit(1);
     const c = cur[0];
     if (c) {

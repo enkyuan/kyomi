@@ -12,6 +12,7 @@ import {
   translateContent,
 } from "./articles.enhancements";
 import { listArticlesForUser } from "./articles.list";
+import { checkSavedArticleForUser } from "./articles.saved-check";
 import { updateArticleOrClipForUser } from "./articles.update";
 import {
   listMergedRecentlyReadView,
@@ -56,6 +57,18 @@ const articleDetail = t.Object({
 const countsResponse = t.Object({
   unread: t.Number(),
   saved: t.Number(),
+});
+
+const savedCheckArticle = t.Object({
+  id: t.String(),
+  title: t.String(),
+  url: t.String(),
+  articleType: t.Union([t.Literal("feed"), t.Literal("clip")]),
+});
+
+const savedCheckResponse = t.Object({
+  is_saved: t.Boolean(),
+  article: t.Union([savedCheckArticle, t.Null()]),
 });
 
 const messageResponse = t.Object({
@@ -118,6 +131,20 @@ export function registerArticleRoutes(app: Elysia) {
         return getArticleCountsForUser(db, userId);
       },
       { response: { 200: countsResponse } },
+    )
+    .get(
+      "/articles/check-saved",
+      async (context) => {
+        const { db, query, userId } = v1HandlerContext(context);
+        const url = typeof query.url === "string" ? query.url : "";
+        return checkSavedArticleForUser(db, userId, url);
+      },
+      {
+        query: t.Object({
+          url: t.String({ minLength: 1 }),
+        }),
+        response: { 200: savedCheckResponse },
+      },
     )
     .get(
       "/articles/saved",
@@ -205,6 +232,7 @@ export function registerArticleRoutes(app: Elysia) {
         const limit = Math.min(200, Math.max(1, Number(query.limit ?? 50) || 50));
         const cursor = typeof query.cursor === "string" ? query.cursor : undefined;
         const feedId = typeof query.feed_id === "string" ? query.feed_id : undefined;
+        const folderId = typeof query.folder_id === "string" ? query.folder_id : undefined;
         const source = typeof query.source === "string" ? query.source.toLowerCase() : "feeds";
         const isRead =
           query.is_read === "true" ? true : query.is_read === "false" ? false : undefined;
@@ -221,6 +249,7 @@ export function registerArticleRoutes(app: Elysia) {
           limit,
           cursor,
           feedId,
+          folderId,
           isRead,
           isSaved,
           autoRefreshEmpty: Boolean(feedId),

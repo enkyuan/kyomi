@@ -31,3 +31,15 @@ export type ArticleCountsDto = {
   unread: number;
   saved: number;
 };
+
+export type SavedArticleMatchDto = {
+  id: string;
+  title: string;
+  url: string;
+  articleType: "feed" | "clip";
+};
+
+export type ArticleSavedCheckDto = {
+  is_saved: boolean;
+  article: SavedArticleMatchDto | null;
+};

@@ -8,3 +8,12 @@ export type FeedPreviewDto = {
   link: string | null;
   isSubscribed: boolean;
 };
+
+export type FeedSearchResultDto = {
+  id: string;
+  url: string;
+  title: string;
+  description: string | null;
+  link: string | null;
+  isSubscribed: boolean;
+};

@@ -1,5 +1,6 @@
 "use client";
 
+import { layout, prepare } from "@chenglou/pretext";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useNavigate } from "@tanstack/react-router";
@@ -8,11 +9,17 @@ import { Route } from "@/routes/inbox/index";
 import { AppShell } from "@pages/app-shell";
 import { getInboxItemDetail, getInboxItems } from "@lib/inbox-functions";
 import { cn } from "@lib/utils";
+import { EmptyStateIcon } from "@components/icons/empty-state-svg";
 import { Checkbox } from "@components/ui/checkbox";
 import { Separator } from "@components/ui/separator";
 
 const MIN_LEFT_PERCENT = 30;
 const MIN_RIGHT_PERCENT = 60;
+const EMPTY_STATE_BODY_COPY =
+  "Stories from your feeds appear here so you can preview them before opening the original source.";
+const EMPTY_STATE_BODY_FONT = '400 14px "Inter Variable"';
+const EMPTY_STATE_BODY_LINE_HEIGHT = 24;
+const EMPTY_STATE_BODY_MAX_WIDTH = 360;
 
 export function InboxPage() {
   const navigate = useNavigate();
@@ -172,10 +179,84 @@ export function InboxPage() {
         </div>
 
         <section className="min-h-80 min-w-0 rounded-xl border border-border bg-card p-4 text-card-foreground md:min-h-0">
-          {selectedItem ? <ItemDetail item={selectedItem} /> : null}
+          {selectedItem ? (
+            <ItemDetail item={selectedItem} />
+          ) : (
+            <div className="flex h-full min-h-72 flex-col items-center justify-center gap-5 px-6 py-10 text-center">
+              <EmptyStateIcon className="size-40 shrink-0 sm:size-44" height={176} width={176} />
+              <div className="max-w-sm space-y-2">
+                <p className="text-base font-semibold text-foreground">
+                  Select an item to start reading
+                </p>
+                <BalancedEmptyStateBody text={EMPTY_STATE_BODY_COPY} />
+              </div>
+            </div>
+          )}
         </section>
       </div>
     </AppShell>
+  );
+}
+
+function BalancedEmptyStateBody({ text }: { text: string }) {
+  const containerRef = useRef<HTMLParagraphElement | null>(null);
+  const prepared = useMemo(() => prepare(text, EMPTY_STATE_BODY_FONT), [text]);
+  const [maxWidth, setMaxWidth] = useState(EMPTY_STATE_BODY_MAX_WIDTH);
+
+  useEffect(() => {
+    const element = containerRef.current;
+    if (!element) {
+      return;
+    }
+
+    const updateWidth = () => {
+      setMaxWidth(Math.min(EMPTY_STATE_BODY_MAX_WIDTH, element.clientWidth));
+    };
+
+    updateWidth();
+
+    const observer = new ResizeObserver(() => {
+      updateWidth();
+    });
+    observer.observe(element);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  const fittedWidth = useMemo(() => {
+    if (maxWidth <= 0) {
+      return undefined;
+    }
+
+    let low = 160;
+    let high = maxWidth;
+    let best = maxWidth;
+
+    while (low <= high) {
+      const mid = Math.floor((low + high) / 2);
+      const { lineCount } = layout(prepared, mid, EMPTY_STATE_BODY_LINE_HEIGHT);
+
+      if (lineCount <= 2) {
+        best = mid;
+        high = mid - 1;
+      } else {
+        low = mid + 1;
+      }
+    }
+
+    return best;
+  }, [maxWidth, prepared]);
+
+  return (
+    <p
+      ref={containerRef}
+      className="mx-auto text-sm leading-6 text-muted-foreground"
+      style={fittedWidth ? { maxWidth: `${fittedWidth}px` } : undefined}
+    >
+      {text}
+    </p>
   );
 }
 

@@ -87,7 +87,7 @@ export function SidebarProvider({
   const [_open, _setOpen] = React.useState(defaultOpen);
   const open = openProp ?? _open;
   const setOpen = React.useCallback(
-    async (value: boolean | ((value: boolean) => boolean)) => {
+    (value: boolean | ((value: boolean) => boolean)) => {
       const openState = typeof value === "function" ? value(open) : value;
       if (setOpenProp) {
         setOpenProp(openState);
@@ -95,13 +95,9 @@ export function SidebarProvider({
         _setOpen(openState);
       }
 
-      // This sets the cookie to keep the sidebar state.
-      await cookieStore.set({
-        expires: Date.now() + SIDEBAR_COOKIE_MAX_AGE * 1000,
-        name: SIDEBAR_COOKIE_NAME,
-        path: "/",
-        value: String(openState),
-      });
+      if (typeof document !== "undefined") {
+        document.cookie = `${SIDEBAR_COOKIE_NAME}=${String(openState)}; path=/; max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
+      }
     },
     [setOpenProp, open],
   );
@@ -522,6 +518,7 @@ export function SidebarMenuItem({
 
 export function SidebarMenuButton({
   isActive = false,
+  activeAdornment,
   variant = "default",
   size = "default",
   tooltip,
@@ -530,12 +527,26 @@ export function SidebarMenuButton({
   ...props
 }: useRender.ComponentProps<"button"> & {
   isActive?: boolean;
+  activeAdornment?: React.ReactNode;
   tooltip?: string | React.ComponentProps<typeof TooltipPopup>;
 } & VariantProps<typeof sidebarMenuButtonVariants>): React.ReactElement {
   const { isMobile, state } = useSidebar();
 
+  const childrenWithAdornment =
+    isActive && activeAdornment ? (
+      <>
+        {props.children}
+        <span className="ms-auto shrink-0 group-data-[collapsible=icon]:hidden">
+          {activeAdornment}
+        </span>
+      </>
+    ) : (
+      props.children
+    );
+
   const defaultProps = {
     className: cn(sidebarMenuButtonVariants({ size, variant }), className),
+    children: childrenWithAdornment,
     "data-active": isActive,
     "data-sidebar": "menu-button",
     "data-size": size,

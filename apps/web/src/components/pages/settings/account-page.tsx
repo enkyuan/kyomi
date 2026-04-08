@@ -1,7 +1,8 @@
 "use client";
 
+import Avvvatars from "avvvatars-react";
 import { User3Fill } from "@mingcute/react";
-import { useAuth } from "@/integrations/better-auth/auth-provider";
+import { useAuth } from "@integrations/better-auth/auth-provider";
 import { Badge } from "@components/ui/badge";
 import { Button } from "@components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@components/ui/card";
@@ -47,18 +48,22 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
       <Card>
         <CardHeader>
           <div className="flex items-start gap-3">
-            <div className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-border bg-muted/40">
-              <accountSection.icon className="size-5" />
-            </div>
+            <Avvvatars
+              border
+              borderColor="hsl(var(--border))"
+              borderSize={1}
+              radius={12}
+              size={40}
+              style="character"
+              value={user?.email || ""}
+            />
             <div className="min-w-0">
               <CardTitle>{accountSection.name}</CardTitle>
               <CardDescription className="mt-1">{accountSection.description}</CardDescription>
               {user?.email ? (
-                <div className="mt-3 flex items-center gap-2 text-sm text-muted-foreground">
+                <div className="mt-3 flex items-center gap-2 text-[0.8rem] text-muted-foreground">
                   <span>Signed in as</span>
-                  <Badge size="lg" variant="outline">
-                    {user.email}
-                  </Badge>
+                  <Badge variant="outline">{user.email}</Badge>
                 </div>
               ) : null}
             </div>

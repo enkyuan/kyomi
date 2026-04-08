@@ -2,9 +2,8 @@
 
 import { useState } from "react";
 import type { CSSProperties } from "react";
-import { Link } from "@tanstack/react-router";
-import { useLocation } from "@tanstack/react-router";
-import { useNavigate } from "@tanstack/react-router";
+import { useQuery } from "@tanstack/react-query";
+import { useLocation, useNavigate, Link } from "@tanstack/react-router";
 import {
   BookmarkFill,
   Chat3Fill,
@@ -43,6 +42,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@components/ui/sidebar";
+import { getInboxItems } from "@lib/inbox-functions";
 
 type InboxNavSearch = {
   source?: "reddit" | "x";
@@ -89,6 +89,21 @@ export function AppSidebar() {
   const navigate = useNavigate();
   const [commandOpen, setCommandOpen] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const inboxSummaryQuery = useQuery({
+    queryKey: ["sidebar", "inbox-summary"],
+    queryFn: () =>
+      getInboxItems({
+        data: {
+          source: undefined,
+          status: undefined,
+          search: undefined,
+          sort: undefined,
+        },
+      }),
+  });
+  const unreadCount = Array.isArray(inboxSummaryQuery.data?.items)
+    ? inboxSummaryQuery.data.items.filter((item) => item.state === "new").length
+    : 0;
 
   const commandItems = [
     {
@@ -208,6 +223,13 @@ export function AppSidebar() {
             {INBOX_NAV.map((item) => (
               <SidebarMenuItem key={item.label}>
                 <SidebarMenuButton
+                  activeAdornment={
+                    item.label === "Today" && unreadCount > 0 ? (
+                      <span className="flex size-5 items-center justify-center rounded-full bg-sidebar-foreground/10 px-1 text-[11px] font-semibold text-sidebar-foreground tabular-nums">
+                        {unreadCount}
+                      </span>
+                    ) : null
+                  }
                   isActive={
                     location.pathname === "/inbox" &&
                     FILTER_KEYS.every((key) => {
