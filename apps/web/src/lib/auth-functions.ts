@@ -1,12 +1,8 @@
 import { createServerFn } from "@tanstack/react-start";
 import { getRequestHeaders } from "@tanstack/react-start/server";
-import {
-  loginFormSchema,
-  registerFormSchema,
-} from "@pages/auth/auth-form.shared";
+import { loginFormSchema, registerFormSchema } from "@pages/auth/schema";
 
-type SessionData =
-  Awaited<ReturnType<Awaited<ReturnType<typeof getAuth>>["api"]["getSession"]>>;
+type SessionData = Awaited<ReturnType<Awaited<ReturnType<typeof getAuth>>["api"]["getSession"]>>;
 
 type SessionGetter = {
   getSession: (args: { headers: Headers }) => Promise<SessionData>;
@@ -32,10 +28,7 @@ async function getAuth() {
   return module.auth;
 }
 
-export async function fetchSessionFromHeaders(
-  headers: Headers,
-  sessionGetter?: SessionGetter,
-) {
+export async function fetchSessionFromHeaders(headers: Headers, sessionGetter?: SessionGetter) {
   const auth = await getAuth();
   return (sessionGetter ?? auth.api).getSession({ headers });
 }

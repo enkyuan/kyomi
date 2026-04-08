@@ -7,14 +7,13 @@
     "paths": {
       "*": ["./*"],
       "@/*": ["./src/*"],
-      "@lib/*": ["./src/lib/*"],
-      "@hooks/*": ["./src/hooks/*"],
       "@components/*": ["./src/components/*"],
       "@config/*": ["./src/config/*"],
-      "@services/*": ["./src/services/*"],
-      "@middleware/*": ["./src/middleware/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@integrations/*": ["./src/integrations/*"],
+      "@lib/*": ["./src/lib/*"],
       "@utils/*": ["./src/utils/*"],
-      "@pages/*": ["./src/components/pages/*"]
+      "@pages/*": ["./src/components/pages/*"],
     },
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "types": ["vite/client"],
@@ -29,6 +28,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
-  }
+    "noUncheckedSideEffectImports": true,
+  },
 }

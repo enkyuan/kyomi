@@ -13,6 +13,6 @@ export async function requireGuest() {
   const session = await getSession();
 
   if (session?.user) {
-    throw redirect({ to: "/dashboard" });
+    throw redirect({ to: "/inbox" });
   }
 }

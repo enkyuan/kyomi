@@ -31,10 +31,7 @@ type ValidationErrorLike = {
   message?: string;
 };
 
-export function getFieldErrorMessage(
-  errors: readonly unknown[],
-  canShow: boolean,
-) {
+export function getFieldErrorMessage(errors: readonly unknown[], canShow: boolean) {
   if (!canShow) {
     return null;
   }
@@ -45,7 +42,5 @@ export function getFieldErrorMessage(
     return null;
   }
 
-  return typeof firstError === "string"
-    ? firstError
-    : (firstError.message ?? null);
+  return typeof firstError === "string" ? firstError : (firstError.message ?? null);
 }

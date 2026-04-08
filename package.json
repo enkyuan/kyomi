@@ -32,6 +32,7 @@
     "db:studio": "bun run --cwd packages/db db:studio"
   },
   "devDependencies": {
+    "@typescript/native-preview": "^7.0.0-dev.20260407.1",
     "drizzle-kit": "^0.31.10",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",

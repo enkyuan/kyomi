@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useForm } from "@tanstack/react-form";
 import { Link, useRouter } from "@tanstack/react-router";
 import { authClient } from "@lib/auth-client";
-import { useAuth } from "@/integrations/better-auth/auth-provider";
+import { useAuth } from "@integrations/better-auth/auth-provider";
 import { Button } from "@components/ui/button";
 import {
   Card,
@@ -17,14 +17,10 @@ import {
 import { Form } from "@components/ui/form";
 import { Field, FieldError, FieldLabel } from "@components/ui/field";
 import { Input } from "@components/ui/input";
-import {
-  getFieldErrorMessage,
-  loginDefaultValues,
-  loginFormSchema,
-} from "./auth-form.shared";
+import { toastManager } from "@components/ui/toast";
+import { getFieldErrorMessage, loginDefaultValues, loginFormSchema } from "./schema";
 
 export function LoginPage() {
-  const [globalError, setGlobalError] = useState<string | null>(null);
   const router = useRouter();
   const { isAuthenticated, isPending } = useAuth();
   const form = useForm({
@@ -34,26 +30,46 @@ export function LoginPage() {
       onSubmit: loginFormSchema,
     },
     onSubmit: async ({ value }) => {
-      setGlobalError(null);
-      const result = await authClient.signIn.email({
-        email: value.email,
-        password: value.password,
-        callbackURL: "/inbox",
-      });
+      await toastManager.promise(
+        (async () => {
+          const result = await authClient.signIn.email({
+            email: value.email,
+            password: value.password,
+            callbackURL: "/inbox",
+          });
 
-      if (result.error) {
-        setGlobalError(result.error.message?.trim() || "Invalid email or password");
-        return;
-      }
+          if (result.error) {
+            throw new Error(result.error.message?.trim() || "Invalid email or password");
+          }
 
-      await router.invalidate();
-      await router.navigate({ to: "/inbox/" });
+          await router.invalidate();
+          await router.navigate({ to: "/inbox" });
+        })(),
+        {
+          error: (error) => ({
+            description: error instanceof Error ? error.message : "Invalid email or password",
+            title: "Login failed",
+            type: "error",
+          }),
+          loading: {
+            description: "Authenticating your account.",
+            timeout: 0,
+            title: "Logging in...",
+            type: "loading",
+          },
+          success: {
+            description: "Redirecting to your inbox.",
+            title: "Logged in",
+            type: "success",
+          },
+        },
+      );
     },
   });
 
   useEffect(() => {
     if (!isPending && isAuthenticated) {
-      void router.navigate({ to: "/inbox/" });
+      void router.navigate({ to: "/inbox" });
     }
   }, [isAuthenticated, isPending, router]);
 
@@ -62,14 +78,12 @@ export function LoginPage() {
   }
 
   return (
-    <main className="flex min-h-[100dvh] w-full items-center justify-center px-4 py-12">
+    <main className="flex min-h-dvh w-full items-center justify-center px-4 py-12">
       <Card className="w-full max-w-xs">
         <CardHeader>
           <div className="space-y-1">
             <CardTitle>Login to your account</CardTitle>
-            <CardDescription>
-              Enter your email and password to continue.
-            </CardDescription>
+            <CardDescription>Enter your email and password to continue.</CardDescription>
           </div>
           <CardAction>
             <Link
@@ -88,23 +102,10 @@ export function LoginPage() {
               void form.handleSubmit();
             }}
           >
-            {globalError ? (
-              <p
-                className="text-destructive-foreground text-xs font-medium"
-                role="alert"
-              >
-                {globalError}
-              </p>
-            ) : null}
-
             <form.Field name="email">
               {(field) => {
-                const canShow =
-                  field.state.meta.isTouched || field.form.state.isSubmitted;
-                const errorMessage = getFieldErrorMessage(
-                  field.state.meta.errors,
-                  canShow,
-                );
+                const canShow = field.state.meta.isTouched || field.form.state.isSubmitted;
+                const errorMessage = getFieldErrorMessage(field.state.meta.errors, canShow);
 
                 return (
                   <Field>
@@ -113,17 +114,13 @@ export function LoginPage() {
                       name={field.name}
                       value={field.state.value}
                       onBlur={field.handleBlur}
-                      onChange={(event) =>
-                        field.handleChange(event.target.value)
-                      }
+                      onChange={(event) => field.handleChange(event.target.value)}
                       placeholder="Enter your email"
                       type="email"
                       autoComplete="email"
                     />
                     {errorMessage ? (
-                      <FieldError match={true}>
-                        {errorMessage as string}
-                      </FieldError>
+                      <FieldError match={true}>{errorMessage as string}</FieldError>
                     ) : null}
                   </Field>
                 );
@@ -132,12 +129,8 @@ export function LoginPage() {
 
             <form.Field name="password">
               {(field) => {
-                const canShow =
-                  field.state.meta.isTouched || field.form.state.isSubmitted;
-                const errorMessage = getFieldErrorMessage(
-                  field.state.meta.errors,
-                  canShow,
-                );
+                const canShow = field.state.meta.isTouched || field.form.state.isSubmitted;
+                const errorMessage = getFieldErrorMessage(field.state.meta.errors, canShow);
 
                 return (
                   <Field>
@@ -146,17 +139,13 @@ export function LoginPage() {
                       name={field.name}
                       value={field.state.value}
                       onBlur={field.handleBlur}
-                      onChange={(event) =>
-                        field.handleChange(event.target.value)
-                      }
+                      onChange={(event) => field.handleChange(event.target.value)}
                       placeholder="Enter your password"
                       type="password"
                       autoComplete="current-password"
                     />
                     {errorMessage ? (
-                      <FieldError match={true}>
-                        {errorMessage as string}
-                      </FieldError>
+                      <FieldError match={true}>{errorMessage as string}</FieldError>
                     ) : null}
                   </Field>
                 );
@@ -165,11 +154,7 @@ export function LoginPage() {
 
             <form.Subscribe selector={(state) => [state.isSubmitting]}>
               {([isSubmitting]) => (
-                <Button
-                  className="w-full"
-                  type="submit"
-                  loading={Boolean(isSubmitting)}
-                >
+                <Button className="w-full" type="submit" loading={Boolean(isSubmitting)}>
                   {isSubmitting ? "Logging in..." : "Login"}
                 </Button>
               )}

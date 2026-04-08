@@ -11,19 +11,9 @@ import { Button } from "@components/ui/button";
 import { Input } from "@components/ui/input";
 import { ScrollArea } from "@components/ui/scroll-area";
 import { Separator } from "@components/ui/separator";
-import {
-  Sheet,
-  SheetDescription,
-  SheetHeader,
-  SheetPopup,
-  SheetTitle,
-} from "@components/ui/sheet";
+import { Sheet, SheetDescription, SheetHeader, SheetPopup, SheetTitle } from "@components/ui/sheet";
 import { Skeleton } from "@components/ui/skeleton";
-import {
-  Tooltip,
-  TooltipPopup,
-  TooltipTrigger,
-} from "@components/ui/tooltip";
+import { Tooltip, TooltipPopup, TooltipTrigger } from "@components/ui/tooltip";
 
 const SIDEBAR_COOKIE_NAME: string = "sidebar_state";
 const SIDEBAR_COOKIE_MAX_AGE: number = 60 * 60 * 24 * 7;
@@ -124,10 +114,7 @@ export function SidebarProvider({
   // Adds a keyboard shortcut to toggle the sidebar.
   React.useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent): void => {
-      if (
-        event.key === SIDEBAR_KEYBOARD_SHORTCUT &&
-        (event.metaKey || event.ctrlKey)
-      ) {
+      if (event.key === SIDEBAR_KEYBOARD_SHORTCUT && (event.metaKey || event.ctrlKey)) {
         event.preventDefault();
         toggleSidebar();
       }
@@ -183,6 +170,7 @@ export function Sidebar({
   collapsible = "offcanvas",
   className,
   children,
+  style,
   ...props
 }: React.ComponentProps<"div"> & {
   side?: "left" | "right";
@@ -239,6 +227,7 @@ export function Sidebar({
       data-slot="sidebar"
       data-state={state}
       data-variant={variant}
+      style={style}
     >
       {/* This is what handles the sidebar gap on desktop */}
       <div
@@ -260,7 +249,7 @@ export function Sidebar({
             : "right-0 group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)]",
           // Adjust the padding for floating and inset variants.
           variant === "floating" || variant === "inset"
-            ? "p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+(--spacing(4))+2px)]"
+            ? "ps-2 pe-0 py-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+(--spacing(2))+2px)]"
             : "group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r group-data-[side=right]:border-l",
           className,
         )}
@@ -413,7 +402,7 @@ export function SidebarContent({
 }: React.ComponentProps<"div">): React.ReactElement {
   return (
     <ScrollArea
-      className="**:data-[slot=scroll-area-scrollbar]:hidden"
+      className="h-auto min-h-0 flex-1 **:data-[slot=scroll-area-scrollbar]:hidden"
       scrollFade
     >
       <div
@@ -573,9 +562,7 @@ export function SidebarMenuButton({
 
   return (
     <Tooltip>
-      <TooltipTrigger
-        render={buttonElement as React.ReactElement<Record<string, unknown>>}
-      />
+      <TooltipTrigger render={buttonElement as React.ReactElement<Record<string, unknown>>} />
       <TooltipPopup
         align="center"
         hidden={state !== "collapsed" || isMobile}
@@ -659,12 +646,7 @@ export function SidebarMenuSkeleton({
       data-slot="sidebar-menu-skeleton"
       {...props}
     >
-      {showIcon && (
-        <Skeleton
-          className="size-4 rounded-lg"
-          data-sidebar="menu-skeleton-icon"
-        />
-      )}
+      {showIcon && <Skeleton className="size-4 rounded-lg" data-sidebar="menu-skeleton-icon" />}
       <Skeleton
         className="h-4 max-w-(--skeleton-width) flex-1"
         data-sidebar="menu-skeleton-text"
