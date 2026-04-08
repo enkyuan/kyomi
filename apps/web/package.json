@@ -73,6 +73,7 @@
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^5.1.4",
+    "agentation": "^3.0.2",
     "dotenv": "^17.3.1",
     "jsdom": "^28.1.0",
     "react-grab": "^0.1.31",

@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { fieldsForJob, parseJob, toRedisStreamFieldList } from "./index";
+import { fieldsForJob, parseJob, parseJobMessageFields, toRedisStreamFieldList } from "./index";
 
 describe("job-queue", () => {
   test("round-trips a feed refresh job through flat fields", () => {
@@ -19,6 +19,12 @@ describe("job-queue", () => {
       JSON.stringify(job.payload),
     ]);
     expect(parseJob(fields)).toEqual(job);
+    expect(parseJobMessageFields("1-0", fields)).toEqual({
+      id: "1-0",
+      job,
+      attempts: 0,
+      rawFields: fields,
+    });
   });
 
   test("rejects unknown job types", () => {

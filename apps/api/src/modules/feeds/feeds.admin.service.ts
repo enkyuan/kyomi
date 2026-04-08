@@ -1,6 +1,7 @@
 import { and, eq, ne } from "drizzle-orm";
 import { feeds } from "@cronos/db";
 import type { db } from "@adapters/db/client";
+import { deleteFeedSearchDocument, upsertFeedSearchDocument } from "@adapters/search/meili";
 import {
   assertHttpOrHttpsUrl,
   normalizeFeedUrl,
@@ -131,6 +132,14 @@ export async function adminUpdateGlobalFeed(
     throw new AppError("Feed not found", { status: 404, code: "FEED_NOT_FOUND" });
   }
 
+  await upsertFeedSearchDocument({
+    id: row.id,
+    url: row.url,
+    title: row.title,
+    description: row.description,
+    link: row.link,
+  }).catch(() => undefined);
+
   return mapFeedRow(row);
 }
 
@@ -142,4 +151,5 @@ export async function adminDeleteGlobalFeed(database: DB, feedId: string): Promi
   if (removed.length === 0) {
     throw new AppError("Feed not found", { status: 404, code: "FEED_NOT_FOUND" });
   }
+  await deleteFeedSearchDocument(feedId).catch(() => undefined);
 }

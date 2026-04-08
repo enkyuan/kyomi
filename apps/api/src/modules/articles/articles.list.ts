@@ -53,7 +53,11 @@ export async function listArticlesForUser(
     page.length === 0 &&
     env.DATABASE_URL
   ) {
-    const refreshed = await runFeedRefresh(env.DATABASE_URL, opts.feedId);
+    const refreshed = await runFeedRefresh(env.DATABASE_URL, opts.feedId, {
+      url: env.MEILI_URL ?? "",
+      masterKey: env.MEILI_MASTER_KEY,
+      indexUid: env.MEILI_INDEX_FEEDS,
+    });
     if (refreshed.ok && refreshed.itemCount > 0) {
       return listArticlesForUser(database, userId, { ...opts, autoRefreshEmpty: false });
     }

@@ -2,6 +2,7 @@ import type Redis from "ioredis";
 
 export const JOBS_STREAM_KEY = "jobs";
 export const JOBS_CONSUMER_GROUP = "cronos-workers";
+export const JOBS_DEAD_LETTER_STREAM_KEY = "jobs:dead-letter";
 
 export type FeedRefreshJob = {
   type: "feed.refresh";
@@ -16,13 +17,25 @@ export type Job = FeedRefreshJob;
 export type JobMessage = {
   id: string;
   job: Job;
+  attempts: number;
+  rawFields: Record<string, string>;
 };
 
-export function fieldsForJob(job: Job): Record<string, string> {
-  return {
+export function fieldsForJob(
+  job: Job,
+  metadata?: { attempts?: number; lastError?: string | null },
+): Record<string, string> {
+  const fields: Record<string, string> = {
     type: job.type,
     payload: JSON.stringify(job.payload),
   };
+  if (metadata?.attempts !== undefined) {
+    fields.attempts = String(metadata.attempts);
+  }
+  if (metadata?.lastError) {
+    fields.last_error = metadata.lastError;
+  }
+  return fields;
 }
 
 export function toRedisStreamFieldList(
@@ -60,6 +73,17 @@ export function parseJob(fields: Record<string, string>): Job {
   };
 }
 
+export function parseJobMessageFields(id: string, fields: Record<string, string>): JobMessage {
+  const attemptsRaw = Number(fields.attempts ?? "0");
+  const attempts = Number.isFinite(attemptsRaw) && attemptsRaw >= 0 ? attemptsRaw : 0;
+  return {
+    id,
+    job: parseJob(fields),
+    attempts,
+    rawFields: fields,
+  };
+}
+
 function streamFieldsToRecord(fields: string[]): Record<string, string> {
   if (fields.length % 2 !== 0) {
     throw new Error("Redis stream message fields must be key/value pairs");
@@ -93,10 +117,118 @@ export type ConsumeJobsOptions = {
   streamKey?: string;
   blockMs?: number;
   count?: number;
+  maxAttempts?: number;
+  retryDelayMs?: number;
+  pendingMinIdleMs?: number;
+  deadLetterStreamKey?: string;
   signal?: AbortSignal;
   onJob: (message: JobMessage) => Promise<void>;
   onError?: (error: unknown, message: JobMessage | null) => Promise<void> | void;
 };
+
+async function retryOrDeadLetterJob(
+  redis: Redis,
+  options: {
+    streamKey: string;
+    group: string;
+    deadLetterStreamKey: string;
+    message: JobMessage;
+    error: unknown;
+    maxAttempts: number;
+    retryDelayMs: number;
+  },
+): Promise<void> {
+  const { streamKey, group, deadLetterStreamKey, message, error, maxAttempts, retryDelayMs } =
+    options;
+  const nextAttempts = message.attempts + 1;
+  const errorMessage = error instanceof Error ? error.message : String(error);
+
+  if (nextAttempts <= maxAttempts) {
+    if (retryDelayMs > 0) {
+      await new Promise((resolve) => setTimeout(resolve, retryDelayMs));
+    }
+    await redis.xadd(
+      streamKey,
+      "*",
+      ...toRedisStreamFieldList(
+        fieldsForJob(message.job, {
+          attempts: nextAttempts,
+          lastError: errorMessage,
+        }),
+      ),
+    );
+  } else {
+    const deadLetterFields = {
+      ...message.rawFields,
+      attempts: String(nextAttempts),
+      error: errorMessage,
+      failed_at: new Date().toISOString(),
+      original_stream_id: message.id,
+    };
+    await redis.xadd(deadLetterStreamKey, "*", ...toRedisStreamFieldList(deadLetterFields));
+  }
+
+  await redis.xack(streamKey, group, message.id);
+}
+
+async function claimPendingJobs(
+  redis: Redis,
+  options: {
+    streamKey: string;
+    group: string;
+    consumer: string;
+    pendingMinIdleMs: number;
+    count: number;
+  },
+): Promise<[string, string[]][]> {
+  const response = (await redis.call(
+    "XAUTOCLAIM",
+    options.streamKey,
+    options.group,
+    options.consumer,
+    options.pendingMinIdleMs,
+    "0-0",
+    "COUNT",
+    options.count,
+  )) as [string, [string, string[]][]];
+
+  return Array.isArray(response?.[1]) ? response[1] : [];
+}
+
+async function processMessage(
+  redis: Redis,
+  options: {
+    streamKey: string;
+    group: string;
+    deadLetterStreamKey: string;
+    maxAttempts: number;
+    retryDelayMs: number;
+    onJob: (message: JobMessage) => Promise<void>;
+    onError?: (error: unknown, message: JobMessage | null) => Promise<void> | void;
+  },
+  id: string,
+  fields: string[],
+): Promise<void> {
+  let message: JobMessage | null = null;
+  try {
+    message = parseJobMessageFields(id, streamFieldsToRecord(fields));
+    await options.onJob(message);
+    await redis.xack(options.streamKey, options.group, id);
+  } catch (error) {
+    if (message) {
+      await retryOrDeadLetterJob(redis, {
+        streamKey: options.streamKey,
+        group: options.group,
+        deadLetterStreamKey: options.deadLetterStreamKey,
+        message,
+        error,
+        maxAttempts: options.maxAttempts,
+        retryDelayMs: options.retryDelayMs,
+      });
+    }
+    await options.onError?.(error, message);
+  }
+}
 
 export async function consumeJobs(redis: Redis, options: ConsumeJobsOptions): Promise<void> {
   const {
@@ -106,6 +238,10 @@ export async function consumeJobs(redis: Redis, options: ConsumeJobsOptions): Pr
     signal,
     blockMs = 5_000,
     count = 1,
+    maxAttempts = 3,
+    retryDelayMs = 0,
+    pendingMinIdleMs = 30_000,
+    deadLetterStreamKey = JOBS_DEAD_LETTER_STREAM_KEY,
     group = JOBS_CONSUMER_GROUP,
     streamKey = JOBS_STREAM_KEY,
   } = options;
@@ -113,6 +249,37 @@ export async function consumeJobs(redis: Redis, options: ConsumeJobsOptions): Pr
   await ensureConsumerGroup(redis, group, streamKey);
 
   while (!signal?.aborted) {
+    const pendingMessages = await claimPendingJobs(redis, {
+      streamKey,
+      group,
+      consumer,
+      pendingMinIdleMs,
+      count,
+    }).catch(async (error) => {
+      await onError?.(error, null);
+      return [];
+    });
+
+    if (pendingMessages.length > 0) {
+      for (const [id, fields] of pendingMessages) {
+        await processMessage(
+          redis,
+          {
+            streamKey,
+            group,
+            deadLetterStreamKey,
+            maxAttempts,
+            retryDelayMs,
+            onJob,
+            onError,
+          },
+          id,
+          fields,
+        );
+      }
+      continue;
+    }
+
     let response: [[string, [string, string[]][]]] | null;
 
     try {
@@ -143,17 +310,20 @@ export async function consumeJobs(redis: Redis, options: ConsumeJobsOptions): Pr
     }
 
     for (const [id, fields] of messages) {
-      let message: JobMessage | null = null;
-      try {
-        message = {
-          id,
-          job: parseJob(streamFieldsToRecord(fields)),
-        };
-        await onJob(message);
-        await redis.xack(streamKey, group, id);
-      } catch (error) {
-        await onError?.(error, message);
-      }
+      await processMessage(
+        redis,
+        {
+          streamKey,
+          group,
+          deadLetterStreamKey,
+          maxAttempts,
+          retryDelayMs,
+          onJob,
+          onError,
+        },
+        id,
+        fields,
+      );
     }
   }
 }

@@ -3,6 +3,7 @@ import { articleClips } from "@cronos/db";
 import { assertHttpOrHttpsUrl } from "@modules/discover/discover.normalize-feed-url";
 import { and, desc, eq, gte, lt, or, type SQL } from "drizzle-orm";
 import { AppError } from "@shared/errors/app-error";
+import { extractFullTextFromUrl } from "./articles.enhancements";
 import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "./articles.clips.constants";
 import type {
   ArticleDetailDto,
@@ -58,7 +59,25 @@ export async function createArticleClip(
     throw new AppError("Invalid URL", { status: 400, code: "INVALID_CLIP_URL" });
   }
 
+  let content = body.content?.trim() || null;
+  if (!content) {
+    try {
+      content = await extractFullTextFromUrl(trimmedUrl);
+    } catch {
+      content = null;
+    }
+  }
+
   let title = body.title?.trim() ?? "";
+  if (!title && content) {
+    const firstLine = content
+      .split(/\n+/)
+      .map((part) => part.trim())
+      .find((part) => part.length > 0);
+    if (firstLine) {
+      title = firstLine.length > 120 ? `${firstLine.slice(0, 117)}...` : firstLine;
+    }
+  }
   if (!title) {
     try {
       title = new URL(trimmedUrl).hostname || CLIP_LIST_FEED_TITLE;
@@ -76,7 +95,7 @@ export async function createArticleClip(
       userId,
       url: trimmedUrl,
       title,
-      content: body.content?.trim() || null,
+      content,
       note: body.note?.trim() || null,
       isRead: false,
       isSaved: true,

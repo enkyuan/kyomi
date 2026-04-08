@@ -5,7 +5,8 @@
   "module": "src/index.ts",
   "scripts": {
     "test": "bun test src",
-    "dev": "bun --env-file=../../docker/.env --env-file=.env --watch src/app/entry.ts",
+    "dev": "bun --env-file=../../docker/.env --env-file=.env --watch src/app/dev.ts",
+    "start": "bun --env-file=../../docker/.env --env-file=.env src/app/entry.ts",
     "worker": "bun --env-file=../../docker/.env --env-file=.env src/app/worker.ts",
     "fmt": "bunx oxfmt src",
     "fmt:check": "bunx oxfmt --check src",
