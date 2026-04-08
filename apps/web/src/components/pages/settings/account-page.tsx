@@ -74,7 +74,7 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
       <Card>
         <CardHeader>
           <CardTitle className="text-sm">Session</CardTitle>
-          <CardDescription>Sign out of your current Better Auth session.</CardDescription>
+          <CardDescription>Sign out of your current session.</CardDescription>
         </CardHeader>
         <CardContent className="pt-0">
           <Button onClick={() => void onLogout()} variant="outline">

@@ -8,7 +8,6 @@
       "*": ["./*"],
       "@/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
-      "@config/*": ["./src/config/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@integrations/*": ["./src/integrations/*"],
       "@lib/*": ["./src/lib/*"],
