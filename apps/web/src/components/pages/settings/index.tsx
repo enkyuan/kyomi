@@ -89,7 +89,7 @@ export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
         <SidebarProvider className="h-full items-start bg-popover">
           <Sidebar
             collapsible="none"
-            className="hidden h-full w-64 border-r border-border bg-sidebar md:flex"
+            className="hidden h-full w-48 border-r border-border bg-sidebar md:flex"
           >
             <SidebarContent className="gap-0">
               <SidebarGroup className="p-3">
@@ -108,9 +108,9 @@ export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
                       }}
                     />
                     <InboxBehaviorPageNav
-                      isActive={activeSectionName === "Inbox behavior"}
+                      isActive={activeSectionName === "Inbox Behavior"}
                       onSelect={() => {
-                        setActiveSectionName("Inbox behavior");
+                        setActiveSectionName("Inbox Behavior");
                       }}
                     />
                     <AdvancedPageNav
@@ -144,7 +144,7 @@ export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
                 <AccountPagePanel onLogout={handleLogout} />
               ) : null}
               {activeSectionName === "Reader" ? <ReaderPagePanel /> : null}
-              {activeSectionName === "Inbox behavior" ? <InboxBehaviorPagePanel /> : null}
+              {activeSectionName === "Inbox Behavior" ? <InboxBehaviorPagePanel /> : null}
               {activeSectionName === "Advanced" ? <AdvancedPagePanel /> : null}
             </div>
           </main>

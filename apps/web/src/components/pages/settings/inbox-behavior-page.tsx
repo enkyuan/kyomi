@@ -1,13 +1,13 @@
 "use client";
 
-import { PhoneFill, StarFill } from "@mingcute/react";
+import { InboxFill, PhoneFill } from "@mingcute/react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@components/ui/card";
 import { SidebarMenuButton, SidebarMenuItem } from "@components/ui/sidebar";
 
 export const inboxBehaviorSection = {
   description: "Control saved views, starring, and default sorting behavior.",
-  icon: StarFill,
-  name: "Inbox behavior",
+  icon: InboxFill,
+  name: "Inbox Behavior",
 } as const;
 
 type InboxBehaviorPageNavProps = {
@@ -19,7 +19,7 @@ export function InboxBehaviorPageNav({ isActive, onSelect }: InboxBehaviorPageNa
   return (
     <SidebarMenuItem>
       <SidebarMenuButton isActive={isActive} onClick={onSelect}>
-        <StarFill />
+        <InboxFill />
         <span>{inboxBehaviorSection.name}</span>
       </SidebarMenuButton>
     </SidebarMenuItem>
