@@ -14,6 +14,7 @@ import {
   Settings3Fill,
   StarFill,
 } from "@mingcute/react";
+import { ChevronDownIcon } from "lucide-react";
 import {
   Command,
   CommandDialog,
@@ -31,6 +32,7 @@ import {
   CommandShortcut,
 } from "@components/ui/command";
 import { SettingsDialog } from "src/components/pages/settings";
+import { Collapsible, CollapsiblePanel, CollapsibleTrigger } from "@components/ui/collapsible";
 import {
   Sidebar,
   SidebarContent,
@@ -42,7 +44,9 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@components/ui/sidebar";
+import { FeedbackDialog } from "@components/ui/feedback-dialog";
 import { getInboxItems } from "@lib/inbox-functions";
+import { cn } from "@lib/utils";
 
 type InboxNavSearch = {
   source?: "reddit" | "x";
@@ -88,6 +92,7 @@ export function AppSidebar() {
   const location = useLocation();
   const navigate = useNavigate();
   const [commandOpen, setCommandOpen] = useState(false);
+  const [pinnedOpen, setPinnedOpen] = useState(true);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const inboxSummaryQuery = useQuery({
     queryKey: ["sidebar", "inbox-summary"],
@@ -259,21 +264,35 @@ export function AppSidebar() {
         </SidebarGroup>
 
         <SidebarGroup className="gap-1">
-          <SidebarGroupLabel>Pinned</SidebarGroupLabel>
-          <SidebarMenu>
-            {pinnedItems.map((item) => (
-              <SidebarMenuItem key={item.label}>
-                <SidebarMenuButton
-                  disabled
-                  tooltip={item.label}
-                  className="cursor-default opacity-72"
-                >
-                  <item.icon />
-                  <span>{item.label}</span>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            ))}
-          </SidebarMenu>
+          <Collapsible onOpenChange={setPinnedOpen} open={pinnedOpen}>
+            <CollapsibleTrigger className="w-full">
+              <SidebarGroupLabel className="w-full cursor-pointer justify-between">
+                <span>Pinned</span>
+                <ChevronDownIcon
+                  className={cn(
+                    "size-4 transition-transform duration-200",
+                    !pinnedOpen && "-rotate-90",
+                  )}
+                />
+              </SidebarGroupLabel>
+            </CollapsibleTrigger>
+            <CollapsiblePanel>
+              <SidebarMenu>
+                {pinnedItems.map((item) => (
+                  <SidebarMenuItem key={item.label}>
+                    <SidebarMenuButton
+                      disabled
+                      tooltip={item.label}
+                      className="cursor-default opacity-72"
+                    >
+                      <item.icon />
+                      <span>{item.label}</span>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                ))}
+              </SidebarMenu>
+            </CollapsiblePanel>
+          </Collapsible>
         </SidebarGroup>
       </SidebarContent>
 
@@ -281,20 +300,31 @@ export function AppSidebar() {
         <SidebarMenu>
           {FOOTER_NAV.map((item) => (
             <SidebarMenuItem key={item.label}>
-              <SidebarMenuButton
-                tooltip={item.label}
-                className={item.label === "Settings" ? undefined : "opacity-72"}
-                onClick={
-                  item.label === "Settings"
-                    ? () => {
-                        setSettingsOpen(true);
-                      }
-                    : undefined
-                }
-              >
-                <item.icon />
-                <span>{item.label}</span>
-              </SidebarMenuButton>
+              {item.label === "Feedback" ? (
+                <FeedbackDialog
+                  trigger={
+                    <SidebarMenuButton tooltip={item.label} className="opacity-72">
+                      <item.icon />
+                      <span>{item.label}</span>
+                    </SidebarMenuButton>
+                  }
+                />
+              ) : (
+                <SidebarMenuButton
+                  tooltip={item.label}
+                  className="opacity-72"
+                  onClick={
+                    item.label === "Settings"
+                      ? () => {
+                          setSettingsOpen(true);
+                        }
+                      : undefined
+                  }
+                >
+                  <item.icon />
+                  <span>{item.label}</span>
+                </SidebarMenuButton>
+              )}
             </SidebarMenuItem>
           ))}
         </SidebarMenu>

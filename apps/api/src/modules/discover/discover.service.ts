@@ -1,6 +1,7 @@
-import { and, asc, eq, ilike, or, sql } from "drizzle-orm";
+import { and, asc, eq, ilike, inArray, or, sql } from "drizzle-orm";
 import { feedSubscriptions, feeds } from "@cronos/db";
 import type { db } from "@adapters/db/client";
+import { isMeiliConfigured, searchFeedSearchDocuments } from "@adapters/search/meili";
 import { resolveRemoteFeed } from "./discover.resolve-remote-feed";
 import type { FeedPreviewDto, FeedSearchResultDto } from "./discover.types";
 
@@ -52,6 +53,29 @@ export async function searchFeeds(
   }
 
   const safeLimit = Math.min(Math.max(limit, 1), 50);
+  if (isMeiliConfigured()) {
+    try {
+      const hits = await searchFeedSearchDocuments(query, safeLimit);
+      if (hits.length === 0) {
+        return [];
+      }
+      const hitIds = hits.map((hit) => hit.id);
+      const subscriptionRows = await database
+        .select({ feedId: feedSubscriptions.feedId })
+        .from(feedSubscriptions)
+        .where(
+          and(eq(feedSubscriptions.userId, userId), inArray(feedSubscriptions.feedId, hitIds)),
+        );
+      const subscribedIds = new Set(subscriptionRows.map((row) => row.feedId));
+      return hits.map((hit) => ({
+        ...hit,
+        isSubscribed: subscribedIds.has(hit.id),
+      }));
+    } catch {
+      // Fall back to Postgres search when the index is unavailable or warming up.
+    }
+  }
+
   const pattern = `%${query}%`;
   const subscriptionJoin = and(
     eq(feedSubscriptions.feedId, feeds.id),

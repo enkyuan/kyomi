@@ -1,4 +1,5 @@
 import { HeadContent, Outlet, Scripts, createRootRouteWithContext } from "@tanstack/react-router";
+import { Agentation } from "agentation";
 import { useEffect } from "react";
 import type { QueryClient } from "@tanstack/react-query";
 import AuthProvider from "@integrations/better-auth/auth-provider";
@@ -89,6 +90,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
             </AnchoredToastProvider>
           </ToastProvider>
         </PostHogProvider>
+        {import.meta.env.DEV ? <Agentation /> : null}
         <Scripts />
       </body>
     </html>

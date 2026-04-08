@@ -1,6 +1,7 @@
 import { and, eq, inArray } from "drizzle-orm";
 import { feedSubscriptions, feeds, folders } from "@cronos/db";
 import type { db } from "@adapters/db/client";
+import { upsertFeedSearchDocument } from "@adapters/search/meili";
 import { resolveRemoteFeed } from "@modules/discover/discover.resolve-remote-feed";
 import { AppError } from "@shared/errors/app-error";
 import { displayFeedTitle } from "./feeds.display-title";
@@ -54,8 +55,7 @@ export async function createOrSubscribeToFeed(
   rawUrl: string,
 ): Promise<FeedSubscribeResultDto> {
   const resolved = await resolveRemoteFeed(rawUrl);
-
-  return await database.transaction(async (tx) => {
+  const result = await database.transaction(async (tx) => {
     const now = new Date();
 
     const existingFeed = await tx
@@ -127,6 +127,16 @@ export async function createOrSubscribeToFeed(
       newSubscription: true,
     };
   });
+
+  await upsertFeedSearchDocument({
+    id: result.feedId,
+    url: result.url,
+    title: result.title,
+    description: resolved.description,
+    link: result.link,
+  }).catch(() => undefined);
+
+  return result;
 }
 
 /** Subscribe to a feed row that already exists (no remote fetch). */

@@ -1,6 +1,6 @@
 import { drizzle } from "drizzle-orm/node-postgres";
 import { eq, sql } from "drizzle-orm";
-// @ts-expect-error pg is installed at runtime in the workspace, but types are not hoisted here.
+// @ts-expect-error workspace runtime resolves pg correctly; package-local type resolution does not propagate here.
 import { Pool } from "pg";
 import { XMLParser } from "fast-xml-parser";
 import { feedItems, feeds } from "@cronos/db";
@@ -8,6 +8,42 @@ import * as schema from "@cronos/db";
 
 const FETCH_TIMEOUT_MS = 12_000;
 const MAX_BYTES = 2 * 1024 * 1024;
+const MAX_ENRICHMENTS_PER_REFRESH = 5;
+const ENRICHMENT_CONCURRENCY = 3;
+
+const PRIVATE_IP_PATTERNS = [
+  /^127\./,
+  /^10\./,
+  /^172\.(1[6-9]|2\d|3[01])\./,
+  /^192\.168\./,
+  /^169\.254\./,
+  /^0\.0\.0\.0$/,
+  /^::1$/,
+  /^::$/,
+  /^::ffff:/i,
+  /^fc00:/i,
+  /^fe80:/i,
+  /^localhost$/i,
+];
+
+function isSafeEnrichmentUrl(raw: string): boolean {
+  let url: URL;
+  try {
+    url = new URL(raw);
+  } catch {
+    return false;
+  }
+  if (url.protocol !== "http:" && url.protocol !== "https:") {
+    return false;
+  }
+  const hostname = url.hostname.replace(/^\[/, "").replace(/\]$/, "");
+  for (const pattern of PRIVATE_IP_PATTERNS) {
+    if (pattern.test(hostname)) {
+      return false;
+    }
+  }
+  return true;
+}
 
 export type FeedRefreshResult = {
   ok: boolean;
@@ -27,6 +63,7 @@ type ParsedFeedItem = {
   link: string;
   summary: string | null;
   content: string | null;
+  imageUrl: string | null;
   publishedAt: Date;
 };
 
@@ -38,6 +75,12 @@ type ParsedFeedDocument = {
 type FetchFeedDocumentResult =
   | { ok: true; finalUrl: string; body: string; contentType: string }
   | { ok: false; error: string };
+
+type SearchSyncConfig = {
+  url: string;
+  masterKey?: string;
+  indexUid?: string;
+};
 
 function normalizeFeedUrl(raw: string): string {
   const trimmed = raw.trim();
@@ -52,10 +95,66 @@ function normalizeFeedUrl(raw: string): string {
 
 function stripTags(html: string): string {
   return html
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
     .replace(/<[^>]*>/g, " ")
     .replace(/&nbsp;/gi, " ")
+    .replace(/&amp;/gi, "&")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+function sanitizeStoredContent(value: string | null): string | null {
+  if (!value) {
+    return null;
+  }
+  const sanitized = value
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/\son\w+="[^"]*"/gi, "")
+    .replace(/\son\w+='[^']*'/gi, "")
+    .trim();
+  return sanitized || null;
+}
+
+function absoluteUrl(candidate: string | null, baseUrl: string): string | null {
+  if (!candidate) {
+    return null;
+  }
+  try {
+    return new URL(candidate, baseUrl).href;
+  } catch {
+    return null;
+  }
+}
+
+function firstMatch(input: string, pattern: RegExp): string | null {
+  const match = input.match(pattern);
+  return match?.[1]?.trim() || null;
+}
+
+function extractImageUrl(html: string | null, baseUrl: string): string | null {
+  if (!html) {
+    return null;
+  }
+  return (
+    absoluteUrl(
+      firstMatch(html, /<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i) ??
+        firstMatch(html, /<meta[^>]+name=["']twitter:image["'][^>]+content=["']([^"']+)["']/i) ??
+        firstMatch(html, /<img[^>]+src=["']([^"']+)["']/i),
+      baseUrl,
+    ) ?? null
+  );
+}
+
+function extractReadableTextFromHtml(html: string): string | null {
+  const articleSection =
+    firstMatch(html, /<article[^>]*>([\s\S]*?)<\/article>/i) ??
+    firstMatch(html, /<main[^>]*>([\s\S]*?)<\/main>/i) ??
+    firstMatch(html, /<body[^>]*>([\s\S]*?)<\/body>/i) ??
+    html;
+  const text = stripTags(articleSection);
+  return text || null;
 }
 
 function summarizeText(value: string | null): string | null {
@@ -224,6 +323,75 @@ async function fetchFeedDocument(url: string): Promise<FetchFeedDocumentResult> 
   }
 }
 
+async function fetchArticleEnrichment(
+  url: string,
+): Promise<{ content: string | null; imageUrl: string | null }> {
+  if (!isSafeEnrichmentUrl(url)) {
+    return { content: null, imageUrl: null };
+  }
+  const fetched = await fetchFeedDocument(url);
+  if (!fetched.ok) {
+    return { content: null, imageUrl: null };
+  }
+
+  return {
+    content: sanitizeStoredContent(extractReadableTextFromHtml(fetched.body)),
+    imageUrl: extractImageUrl(fetched.body, fetched.finalUrl),
+  };
+}
+
+async function syncFeedToSearch(
+  config: SearchSyncConfig | undefined,
+  document: FeedMetadata & { id: string },
+): Promise<void> {
+  if (!config?.url) {
+    return;
+  }
+
+  const baseUrl = config.url.replace(/\/+$/, "");
+  const indexUid = config.indexUid?.trim() || "feeds";
+  const headers: Record<string, string> = {
+    "Content-Type": "application/json",
+  };
+  if (config.masterKey) {
+    headers.Authorization = `Bearer ${config.masterKey}`;
+  }
+
+  const createResponse = await fetch(`${baseUrl}/indexes`, {
+    method: "POST",
+    headers,
+    body: JSON.stringify({ uid: indexUid, primaryKey: "id" }),
+  }).catch((error: unknown) => {
+    console.warn("[syncFeedToSearch] index creation request failed:", error);
+    return null;
+  });
+
+  if (createResponse && !createResponse.ok && createResponse.status !== 409) {
+    console.warn(`[syncFeedToSearch] index creation returned ${createResponse.status}`);
+  }
+
+  const upsertResponse = await fetch(`${baseUrl}/indexes/${indexUid}/documents`, {
+    method: "POST",
+    headers,
+    body: JSON.stringify([
+      {
+        id: document.id,
+        url: document.canonicalUrl,
+        title: document.title,
+        description: document.description,
+        link: document.link,
+      },
+    ]),
+  }).catch((error: unknown) => {
+    console.warn("[syncFeedToSearch] document upsert request failed:", error);
+    return null;
+  });
+
+  if (upsertResponse && !upsertResponse.ok) {
+    console.warn(`[syncFeedToSearch] document upsert returned ${upsertResponse.status}`);
+  }
+}
+
 function parseJsonFeedDocument(body: string, feedId: string, finalUrl: string): ParsedFeedDocument {
   const now = new Date();
   const parsed = JSON.parse(body) as Record<string, unknown>;
@@ -248,7 +416,8 @@ function parseJsonFeedDocument(body: string, feedId: string, finalUrl: string): 
       typeof record.content_html === "string" ? record.content_html.trim() || null : null;
     const contentText =
       typeof record.content_text === "string" ? record.content_text.trim() || null : null;
-    const content = contentHtml ?? contentText;
+    const content = sanitizeStoredContent(contentHtml ?? contentText);
+    const imageUrl = extractImageUrl(contentHtml, itemLink);
     const publishedAt = parsePublishedAt(record.date_published, now);
     return [
       {
@@ -259,6 +428,7 @@ function parseJsonFeedDocument(body: string, feedId: string, finalUrl: string): 
           (typeof record.summary === "string" && summarizeText(record.summary)) ||
           summarizeText(content),
         content,
+        imageUrl,
         publishedAt,
       },
     ];
@@ -294,7 +464,13 @@ function parseRssDocument(
       record.link,
       rawText(record.guid) ?? `${finalUrl}#item-${index + 1}`,
     );
-    const content = rawText(record["content:encoded"]) ?? rawText(record.description);
+    const content = sanitizeStoredContent(
+      rawText(record["content:encoded"]) ?? rawText(record.description),
+    );
+    const imageUrl = extractImageUrl(
+      rawText(record["content:encoded"]) ?? rawText(record.description),
+      itemLink,
+    );
     const summary = summarizeText(rawText(record.description) ?? content);
     const publishedAt = parsePublishedAt(record.pubDate ?? record.isoDate, now);
 
@@ -305,6 +481,7 @@ function parseRssDocument(
         link: itemLink,
         summary,
         content,
+        imageUrl,
         publishedAt,
       },
     ];
@@ -337,7 +514,8 @@ function parseAtomDocument(
     const record = entry as Record<string, unknown>;
     const itemTitle = xmlText(record.title) || `Untitled item ${index + 1}`;
     const itemLink = pickAtomLink(record.link, `${finalUrl}#entry-${index + 1}`);
-    const content = rawText(record.content) ?? rawText(record.summary);
+    const content = sanitizeStoredContent(rawText(record.content) ?? rawText(record.summary));
+    const imageUrl = extractImageUrl(rawText(record.content) ?? rawText(record.summary), itemLink);
     const summary = summarizeText(rawText(record.summary) ?? content);
     const publishedAt = parsePublishedAt(record.published ?? record.updated, now);
 
@@ -348,6 +526,7 @@ function parseAtomDocument(
         link: itemLink,
         summary,
         content,
+        imageUrl,
         publishedAt,
       },
     ];
@@ -398,6 +577,7 @@ export function parseFeedDocument(
 export async function runFeedRefresh(
   databaseUrl: string,
   feedId: string,
+  searchSync?: SearchSyncConfig,
 ): Promise<FeedRefreshResult> {
   const pool = new Pool({ connectionString: databaseUrl });
   const database = drizzle(pool, { schema });
@@ -428,6 +608,26 @@ export async function runFeedRefresh(
       deduped.set(item.id, item);
     }
     const items = Array.from(deduped.values());
+    // TODO: add language detection once we settle on the TS-side metadata/storage model.
+    const enrichmentCandidates = items
+      .filter((item) => !(item.content && item.content.length >= 220 && item.imageUrl))
+      .slice(0, MAX_ENRICHMENTS_PER_REFRESH);
+
+    for (let i = 0; i < enrichmentCandidates.length; i += ENRICHMENT_CONCURRENCY) {
+      const batch = enrichmentCandidates.slice(i, i + ENRICHMENT_CONCURRENCY);
+      await Promise.all(
+        batch.map(async (item) => {
+          const enrichment = await fetchArticleEnrichment(item.link);
+          if ((!item.content || item.content.length < 220) && enrichment.content) {
+            item.content = enrichment.content;
+            item.summary = summarizeText(enrichment.content) ?? item.summary;
+          }
+          if (!item.imageUrl && enrichment.imageUrl) {
+            item.imageUrl = enrichment.imageUrl;
+          }
+        }),
+      );
+    }
 
     await database.transaction(async (tx) => {
       await tx
@@ -455,6 +655,7 @@ export async function runFeedRefresh(
             link: item.link,
             summary: item.summary,
             content: item.content,
+            imageUrl: item.imageUrl,
             publishedAt: item.publishedAt,
             createdAt: now,
             updatedAt: now,
@@ -467,10 +668,16 @@ export async function runFeedRefresh(
             link: sql`excluded.link`,
             summary: sql`excluded.summary`,
             content: sql`excluded.content`,
+            imageUrl: sql`excluded.image_url`,
             publishedAt: sql`excluded.published_at`,
             updatedAt: now,
           },
         });
+    });
+
+    await syncFeedToSearch(searchSync, {
+      id: feed.id,
+      ...parsed.metadata,
     });
 
     return {
