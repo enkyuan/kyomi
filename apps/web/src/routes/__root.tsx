@@ -26,11 +26,39 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
       {
         title: "Cronos",
       },
+      {
+        name: "apple-mobile-web-app-title",
+        content: "Cronos",
+      },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      {
+        rel: "icon",
+        href: "/favicon/favicon.ico",
+        sizes: "any",
+      },
+      {
+        rel: "icon",
+        type: "image/svg+xml",
+        href: "/favicon/favicon.svg",
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "96x96",
+        href: "/favicon/favicon-96x96.png",
+      },
+      {
+        rel: "apple-touch-icon",
+        href: "/favicon/apple-touch-icon.png",
+      },
+      {
+        rel: "manifest",
+        href: "/favicon/site.webmanifest",
       },
     ],
   }),

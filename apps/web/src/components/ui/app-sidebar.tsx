@@ -6,8 +6,8 @@ import { useQuery } from "@tanstack/react-query";
 import { useLocation, useNavigate, Link } from "@tanstack/react-router";
 import {
   BookmarkFill,
+  Calendar3Fill,
   Chat3Fill,
-  InboxFill,
   NewsFill,
   PhoneFill,
   SelectorVerticalLine,
@@ -54,13 +54,13 @@ const INBOX_NAV: Array<{
   label: string;
   to: "/inbox";
   search: InboxNavSearch;
-  icon: typeof InboxFill;
+  icon: typeof Calendar3Fill;
 }> = [
   {
     label: "Today",
     to: "/inbox",
     search: {},
-    icon: InboxFill,
+    icon: Calendar3Fill,
   },
   {
     label: "All Unread",
@@ -109,7 +109,7 @@ export function AppSidebar() {
     {
       label: "Today",
       shortcut: "G I",
-      icon: InboxFill,
+      icon: Calendar3Fill,
       action: () =>
         navigate({
           to: "/inbox",

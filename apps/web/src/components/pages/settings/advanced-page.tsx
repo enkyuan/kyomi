@@ -1,12 +1,12 @@
 "use client";
 
-import { PhoneFill, Settings3Fill } from "@mingcute/react";
+import { PhoneFill, SwitchFill } from "@mingcute/react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@components/ui/card";
 import { SidebarMenuButton, SidebarMenuItem } from "@components/ui/sidebar";
 
 export const advancedSection = {
   description: "Update advanced preferences and account-level controls.",
-  icon: Settings3Fill,
+  icon: SwitchFill,
   name: "Advanced",
 } as const;
 
@@ -19,7 +19,7 @@ export function AdvancedPageNav({ isActive, onSelect }: AdvancedPageNavProps) {
   return (
     <SidebarMenuItem>
       <SidebarMenuButton isActive={isActive} onClick={onSelect}>
-        <Settings3Fill />
+        <SwitchFill />
         <span>{advancedSection.name}</span>
       </SidebarMenuButton>
     </SidebarMenuItem>
