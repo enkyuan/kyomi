@@ -159,7 +159,7 @@ async function retryOrDeadLetterJob(
         signal?.addEventListener("abort", () => {
           clearTimeout(timer);
           resolve();
-        });
+        }, { once: true });
       });
     }
     await redis.xadd(
