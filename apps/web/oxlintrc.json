@@ -1,0 +1,40 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "ignorePatterns": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/coverage/**",
+    "**/*.gen.ts",
+    "**/.output/**",
+    "**/.nitro/**"
+  ],
+  "plugins": ["typescript", "import", "unicorn"],
+  "categories": {
+    "correctness": "off",
+    "suspicious": "off",
+    "perf": "off",
+    "style": "off"
+  },
+  "rules": {
+    "typescript/no-explicit-any": "warn",
+    "import/no-cycle": "error",
+    "import/no-duplicates": "warn",
+    "max-lines": [
+      "warn",
+      {
+        "max": 400,
+        "skipBlankLines": true,
+        "skipComments": true
+      }
+    ],
+    "complexity": ["warn", 10],
+    "max-depth": ["warn", 3],
+    "unicorn/filename-case": [
+      "warn",
+      {
+        "case": "kebabCase",
+        "ignore": ["^__root\\.tsx$", "^routeTree\\.gen\\.ts$"]
+      }
+    ]
+  }
+}

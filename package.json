@@ -1,0 +1,52 @@
+{
+  "name": "cronos",
+  "private": true,
+  "packageManager": "bun@1.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "dev:app": "turbo run dev --filter=@cronos/api --filter=@cronos/web",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "fmt": "turbo run fmt",
+    "fmt:check": "turbo run fmt:check",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "clean": "turbo run clean --force && rm -rf node_modules",
+    "prepare": "husky || true",
+    "docker:up": "docker compose -f docker/docker-compose.yml --project-directory docker up -d",
+    "docker:down": "docker compose -f docker/docker-compose.yml --project-directory docker down",
+    "docker:restart": "docker compose -f docker/docker-compose.yml --project-directory docker restart",
+    "docker:logs": "docker compose -f docker/docker-compose.yml --project-directory docker logs -f",
+    "docker:ps": "docker compose -f docker/docker-compose.yml --project-directory docker ps",
+    "docker:pull": "docker compose -f docker/docker-compose.yml --project-directory docker pull",
+    "docker:build": "docker compose -f docker/docker-compose.yml --project-directory docker build",
+    "db:generate": "bun run --cwd packages/db db:generate",
+    "db:migrate": "bun run --cwd packages/db db:migrate",
+    "db:push": "bun run --cwd packages/db db:push",
+    "db:pull": "bun run --cwd packages/db db:pull",
+    "db:studio": "bun run --cwd packages/db db:studio"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.10",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "turbo": "^2.9.5"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.45.2",
+    "nitro": "npm:nitro-nightly@latest"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,mjs,cjs}": [
+      "bunx oxfmt"
+    ],
+    "apps/api/src/**/*.{ts,tsx}": [
+      "bunx oxlint --fix"
+    ]
+  }
+}

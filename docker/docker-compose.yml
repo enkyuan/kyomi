@@ -1,0 +1,65 @@
+services:
+  postgres:
+    image: postgres:18-alpine
+    container_name: cronos-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-cronos}
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-admin}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - cronos-network
+
+  redis:
+    image: redis:8-alpine
+    container_name: cronos-redis
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+    networks:
+      - cronos-network
+
+  garage:
+    image: dxflrs/garage:v2.2.0
+    container_name: cronos-garage
+    restart: unless-stopped
+    volumes:
+      - ./garage.toml:/etc/garage.toml
+      - garage_data:/var/lib/garage/data
+      - garage_meta:/var/lib/garage/meta
+    ports:
+      - "${GARAGE_S3_PORT:-3900}:3900"
+      - "${GARAGE_RPC_PORT:-3901}:3901"
+      - "${GARAGE_WEB_PORT:-3902}:3902"
+    networks:
+      - cronos-network
+
+volumes:
+  postgres_data:
+  redis_data:
+  garage_data:
+  garage_meta:
+
+networks:
+  cronos-network:
+    name: cronos-network
+    driver: bridge
