@@ -1,0 +1,539 @@
+{
+  "category": "Religious",
+  "source_url": "https://rss.feedspot.com/religious_rss_feeds",
+  "feeds": [
+    {
+      "title": "Religion News Service",
+      "feed_url": "https://religionnews.com/feed/",
+      "website_url": "https://religionnews.com/",
+      "description": "Religion News Service's first priority is to provide intelligent, objective coverage of all religions Judaism, Christianity, Islam, Asian religions and private spirituality. RNS also provides commentary from a diverse array of all points of the political and theological spectrum.",
+      "followers": {
+        "facebook": 34800,
+        "twitter": 89900
+      },
+      "image_url": "https://i1.feedspot.com/4524024.jpg?t=1657956501"
+    },
+    {
+      "title": "The Revealer",
+      "feed_url": "https://therevealer.org/feed/",
+      "website_url": "https://therevealer.org/",
+      "description": "The Revealer is an online magazine that explores religion and its many roles in society and people's lives. The Revealer takes seriously how religion shapes, and is shaped by, race, sexuality, gender, politics, history, and culture. We aim to help the public better understand topics covered elsewhere by pointing a wider lens, providing greater context, and offering more nuanced perspectives. The Revealer features articles from scholars, journalists, and freelance writers. For scholars, writing for the Revealer offers an opportunity to share their expertise with a broad public audience.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 6500,
+        "instagram": 600
+      },
+      "image_url": "https://i1.feedspot.com/5269989.jpg?t=1618567025"
+    },
+    {
+      "title": "Feminism and Religion",
+      "feed_url": "https://feminismandreligion.com/feed/",
+      "website_url": "https://feminismandreligion.com/",
+      "description": "Feminism and Religion is a global project dedicated to exploring the F-word in religion and the intersection between scholarship, activism, and community in the 21st century. This project was co-founded by Xochitl Alvizo, Cynthia Garrity-Bond, Caroline Kline, and Gina Messina.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4524015.jpg?t=1606745946"
+    },
+    {
+      "title": "RealClearReligion",
+      "feed_url": "https://www.realclearreligion.org/index.xml",
+      "website_url": "https://www.realclearreligion.org/",
+      "description": "RealClearReligion is a catch-all source for religion stories, opinion and controversy. Everyday the RealClearReligion team scours the Web to find the best religious news and analysis to help readers of all faiths better understand one another. We cover religion in itself and religion as it touches our lives through music, books, business, history and politics.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/1497896.jpg?t=1607089451"
+    },
+    {
+      "title": "Catholic Exchange",
+      "feed_url": "https://feeds.feedburner.com/catholicex",
+      "website_url": "https://catholicexchange.com/",
+      "description": "Catholic Exchange seeks to enable all to be enriched and strengthened in their Christian faith as proclaimed by the Catholic Church. By offering accessible articles and helpful tools for spiritual growth, we seek to make saints in our own time especially among those who live busy lives but still seek to grow in friendship with Christ.",
+      "followers": {
+        "facebook": 363400,
+        "twitter": 26700
+      },
+      "image_url": "https://i1.feedspot.com/1229538.jpg?t=1607000895"
+    },
+    {
+      "title": "A Journey through NYC religions",
+      "feed_url": "https://nycreligion.info/feed/",
+      "website_url": "https://nycreligion.info/",
+      "description": "To explore, document and explain the great religious changes that are taking place in New York City.",
+      "followers": {
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4765681.jpg?t=1606746025"
+    },
+    {
+      "title": "Religion and Belief",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/http://www.nytimes.com/topic/subject/religion-and-belief/rss.xml",
+      "website_url": "https://www.nytimes.com/topic/subject/religion-and-belief",
+      "description": "News about religion and belief. Commentary and archival information about religion and belief from The New York Times.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/4524527.jpg?t=1606745931"
+    },
+    {
+      "title": "LSE Religion and Global Society",
+      "feed_url": "https://blogs.lse.ac.uk/religionglobalsociety/feed/",
+      "website_url": "https://blogs.lse.ac.uk/religionglobalsociety/",
+      "description": "A research-led interdisciplinary blog that promotes an understanding of religion and its relevance in world affairs",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5035739.jpg?t=1606746000"
+    },
+    {
+      "title": "David Rupert Red Letter Believers",
+      "feed_url": "https://www.patheos.com/blogs/davidrupert/feed/",
+      "website_url": "https://www.patheos.com/blogs/davidrupert/",
+      "description": "Thoughtful discussions for the inquisitive believer. Red Letter Believers is my weak effort to encourage the Christian world to live out their beliefs in both word and deed. I am the chief of all sinners, so I certainly don't have it all together.",
+      "followers": {
+        "twitter": 775
+      },
+      "image_url": "https://i1.feedspot.com/4524511.jpg?t=1606745996"
+    },
+    {
+      "title": "The Christian Post",
+      "feed_url": "https://www.christianpost.com/rss/feed/",
+      "website_url": "https://www.christianpost.com/",
+      "description": "Christian news on The Christian Post, the largest Christian newspaper in the world featuring world Christian news, Christian news sites, and religious news.",
+      "followers": {
+        "facebook": 845300,
+        "twitter": 186300
+      },
+      "image_url": "https://i1.feedspot.com/12812.jpg?t=1606746003"
+    },
+    {
+      "title": "The Immanent Frame",
+      "feed_url": "https://tif.ssrc.org/feed/",
+      "website_url": "https://tif.ssrc.org/",
+      "description": "The Social Science Research Council's blog on secularism, religion, and the public sphere.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 7900
+      },
+      "image_url": "https://i1.feedspot.com/303469.jpg?t=1607089443"
+    },
+    {
+      "title": "Sadlier We Believe Blog",
+      "feed_url": "https://www.sadlier.com/religion/blog/rss.xml",
+      "website_url": "https://www.sadlier.com/religion/blog",
+      "description": "The Sadlier We Believe Blog is designed to put innovative and exciting digital program resources at the fingertips of Sadlier Religion program users.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 1100,
+        "instagram": 524
+      },
+      "image_url": "https://i1.feedspot.com/4524521.jpg?t=1607089458"
+    },
+    {
+      "title": "Baptist Joint Committee for Religious Liberty",
+      "feed_url": "https://bjconline.org/category/blog/feed/",
+      "website_url": "https://bjconline.org/category/blog/",
+      "description": "The Baptist Joint Committee for Religious Liberty's mission is to defend and extend God-given religious liberty for all, furthering the Baptist heritage that champions the principle that religion must be freely exercised, neither advanced nor inhibited by government. Our mission is to defend and extend God-given religious liberty for all people.",
+      "followers": {
+        "facebook": 7300,
+        "twitter": 5200,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4524038.jpg?t=1607089482"
+    },
+    {
+      "title": "Divine Code",
+      "feed_url": "https://divinecode.page/feed/",
+      "website_url": "https://divinecode.page/",
+      "description": "Fill the earth with the light and warmth of compelling truths. Empower people. I am Shawnie, a member of The Church of Jesus Christ of Latter-day Saints.",
+      "followers": {
+        "facebook": 356,
+        "twitter": 7500
+      },
+      "image_url": "https://i1.feedspot.com/5230266.jpg?t=1608644889"
+    },
+    {
+      "title": "Velveteen Rabbi",
+      "feed_url": "https://feeds.feedburner.com/blogs/velveteenrabbi",
+      "website_url": "https://velveteenrabbi.blogs.com/blog/",
+      "description": "Now running and playing with the real rabbis! Here you will find post on Judaism.",
+      "followers": {
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/642916.jpg?t=1606799724"
+    },
+    {
+      "title": "Tanenbaum",
+      "feed_url": "https://tanenbaum.org/resources/feed/",
+      "website_url": "https://tanenbaum.org/resources/",
+      "description": "The Tanenbaum Center for Interreligious Understanding promotes mutual respect with practical programs that bridge religious difference and combat prejudice in areas of armed conflict, schools, workplaces, and health care settings.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 2800,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4524478.jpg?t=1606797758"
+    },
+    {
+      "title": "The Religion Teacher",
+      "feed_url": "https://feeds.feedburner.com/TheReligionTeacher",
+      "website_url": "https://www.thereligionteacher.com/blog/",
+      "description": "At The Religion Teacher, you will find practical resources, activities, lesson plans, and teaching strategies for religious educators, created and edited by Jared Dees.",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 2800,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/919860.jpg?t=1628071533"
+    },
+    {
+      "title": "Gladys Ganiel",
+      "feed_url": "https://gladysganiel.co.uk/feed/",
+      "website_url": "https://gladysganiel.co.uk/",
+      "description": "Welcome to Building a Church Without Walls, a website for people who are excited about how Christianity is developing in the 21st Century. This is my interest to expand the role of religion in violence and peacebuilding, and its contributions to conflict transformation and social justice.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4524517.jpg"
+    },
+    {
+      "title": "Law & Religion UK",
+      "feed_url": "https://lawandreligionuk.com/feed/",
+      "website_url": "https://lawandreligionuk.com/",
+      "description": "Law & Religion UK is intended as a forum for what we hope is academically-rigorous exploration of the interactions between law and religion, together with the associated human rights issues. Issues of law and religion in the United Kingdom with occasional forays further afield.",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4524028.jpg"
+    },
+    {
+      "title": "Religion in Public",
+      "feed_url": "https://religioninpublic.blog/feed/",
+      "website_url": "https://religioninpublic.blog/",
+      "description": "Religion in Public was founded by Paul Djupe and Ryan Burge to give a platform to academics who study religion and politics. The aim is to share new findings and give notice to new ways of thinking about the public presence of religion.",
+      "followers": {
+        "facebook": 875,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5295840.jpg?t=1624455146"
+    },
+    {
+      "title": "Religion Clause",
+      "feed_url": "http://religionclause.blogspot.com/feeds/posts/default",
+      "website_url": "http://religionclause.blogspot.com/",
+      "description": "Religion Clause brings daily neutral reporting on church-state and religious liberty developments, with extensive links to primary source documents.",
+      "followers": {
+        "facebook": 233,
+        "twitter": 778
+      },
+      "image_url": "https://i1.feedspot.com/354546.jpg?t=1607089511"
+    },
+    {
+      "title": "Religious Socialism Blog",
+      "feed_url": "https://www.religioussocialism.org/blog.rss",
+      "website_url": "https://www.religioussocialism.org/blog",
+      "description": "If you've wondered what religion and socialism have to do with each other, we hope this site will be useful to you. It is dedicated to people of faith and socialism. The original Religious Socialism was founded by John Cort, a long-time Christian Socialist writer, and activist as well as co-chair of the Religion and Socialism Commission of Democratic Socialists of America (DSA).",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4524040.jpg?t=1606797778"
+    },
+    {
+      "title": "Law and Religion Australia Blog",
+      "feed_url": "https://lawandreligionaustralia.blog/feed/",
+      "website_url": "https://lawandreligionaustralia.blog/",
+      "description": "A page for those who are interested in Law and Religion issues.",
+      "followers": {
+        "facebook": 815
+      },
+      "image_url": "https://i1.feedspot.com/4524060.jpg?t=1606797795"
+    },
+    {
+      "title": "The Religious Coalition",
+      "feed_url": "https://thereligiouscoalition.org/feed/",
+      "website_url": "https://thereligiouscoalition.org/news/",
+      "description": "The Religious Coalition of Frederick, Maryland is the leading provider of homeless prevention, and emergency shelter for homeless adults and families. Our mission is to make our faith real through acts of faith that manifest God's caring presence. We coordinate donations of time, talent, money, food and other resources to meet the urgent needs of people in Frederick County.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 178,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4524481.jpg?t=1606797815"
+    },
+    {
+      "title": "Feminist Studies in Religion",
+      "feed_url": "https://www.fsrinc.org/blog/feed/",
+      "website_url": "https://www.fsrinc.org/blog/",
+      "description": "Feminist Studies in Religion's goal is to foster feminist studies in religion in all of its variety and diversity. We understand 'feminist studies in religion' to encompass global critical feminist work in religious studies, theology, theology, and spirituality both inside and outside the academy and at the grassroots level.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4524017.jpg"
+    },
+    {
+      "title": "Soul Intent Arts Ancient Healing, Modern Shamanism",
+      "feed_url": "https://www.soulintentarts.com/feed/",
+      "website_url": "https://www.soulintentarts.com/blog/",
+      "description": "Soul Intent Arts brings ancient healing into modern lives. While she performs a range of shamanic techniques, including soul retrieval, extraction, depossession, guide retrieval, and ceremonial art. A major focus of her work is helping those in spiritual emergence incorporate animistic life through private sessions and mentorship.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 869,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4524520.jpg?t=1606797800"
+    },
+    {
+      "title": "Religious Tourism",
+      "feed_url": "https://www.rel-tour.com/feed/",
+      "website_url": "https://www.rel-tour.com/",
+      "description": "Pilgrimage: Buddhism, Islam, Christianity, Judaism. For religious and not very religious people who love traveling.",
+      "followers": {
+        "facebook": 386,
+        "twitter": 59
+      },
+      "image_url": "https://i1.feedspot.com/4869594.jpg?t=1606797785"
+    },
+    {
+      "title": "Religious Education Blog First Church Unitarian",
+      "feed_url": "https://www.fculittle.org/category/religious-education/feed/",
+      "website_url": "https://www.fculittle.org/category/religious-education/",
+      "description": "We believe in a liberal religious education. As a non-creedal faith we explore religious truth, meaning and faith. We also promote the principles of justice, love, trust, safety, tolerance and encouragement. Our religious education programming covers a broad spectrum that enriches the lives of all in our community based on our seven UU Principles and drawing from our six UU Sources.",
+      "followers": {
+        "facebook": 570
+      },
+      "image_url": "https://i1.feedspot.com/4524493.jpg?t=1606797811"
+    },
+    {
+      "title": "Rich Kirkpatrick's Blog",
+      "feed_url": "https://feeds.feedburner.com/RichKirkpatricksWeblog",
+      "website_url": "https://rkblog.com/",
+      "description": "The aim of RKblog.com is to catalyze creative influencers of faith culture and religion, rather than simply push hot buttons or echo the popular path.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 8800
+      },
+      "image_url": "https://i1.feedspot.com/4524509.jpg?t=1606797830"
+    },
+    {
+      "title": "Rod Dreher's Diary",
+      "feed_url": "https://roddreher.substack.com/feed",
+      "website_url": "https://roddreher.substack.com/",
+      "description": "An eclectic portmanteau of culture, religion, politics, books, food and ideas",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Froddreher.substack.com%2Fimg%2Fsubstack.png"
+    },
+    {
+      "title": "Religion | The Guardian",
+      "feed_url": "https://www.theguardian.com/world/religion/rss",
+      "website_url": "https://www.theguardian.com/world/religion",
+      "description": "Get latest news and features on Religion from theguardian.com, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4524526.jpg?t=1614235637"
+    },
+    {
+      "title": "GetReligion",
+      "feed_url": "https://www.getreligion.org/getreligion?format=RSS",
+      "website_url": "https://www.getreligion.org/",
+      "description": "Get Religion is a national and global journalism site focusing on how the mainstream press covers religion news in politics, entertainment,\u00a0business and sports. GetReligion has become one of the leading English-language blogs committed to improving the quality of religion coverage in the news.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 13100
+      },
+      "image_url": "https://i1.feedspot.com/4524473.jpg?t=1606745942"
+    },
+    {
+      "title": "Scientology Religious Freedom Blog",
+      "feed_url": "https://www.scientologyreligion.org/rss.xml",
+      "website_url": "https://www.scientologyreligion.org/blog/",
+      "description": "Scientology Religious Freedom Blog is a blog created by the Church of Scientology in 2018. Their mission is to promote religious freedom and to highlight the importance of protecting it around the world. Their blog features articles and news related to religious freedom. Get the latest news articles, videos and blog on freedom of religion.",
+      "followers": {
+        "facebook": 606000,
+        "twitter": 98300
+      },
+      "image_url": "https://i1.feedspot.com/4524033.jpg?t=1606745951"
+    },
+    {
+      "title": "The Diagonal Way",
+      "feed_url": "https://www.patheos.com/blogs/thediagonalway/feed/",
+      "website_url": "https://www.patheos.com/blogs/thediagonalway/",
+      "description": "Theological reflections on creation's holy journey into the life of its holy Creator.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5357090.jpg?t=1640607277"
+    },
+    {
+      "title": "Mystagogy Resource Center",
+      "feed_url": "https://feeds.feedburner.com/Mystagogy",
+      "website_url": "https://www.johnsanidopoulos.com/",
+      "description": "Mystagogy Resource Center is an International Orthodox Christian Ministry headed by John Sanidopoulos. This is n not merely a christian orthodox website but a source offering a unique orthodox christian topics, faith, philosophy, literature and more.",
+      "followers": {
+        "facebook": 12300,
+        "twitter": 6800
+      },
+      "image_url": "https://i1.feedspot.com/1301808.jpg?t=1606797730"
+    },
+    {
+      "title": "The Religious Studies Project",
+      "feed_url": "https://www.religiousstudiesproject.com/podcast/",
+      "website_url": "https://www.religiousstudiesproject.com/",
+      "description": "The Religious Studies Project (RSP) features weekly conversations with leading scholars of Religious Studies and related fields. Our aim is to provide engaging, concise, and reliable accounts of the most important concepts, traditions, scholars, and methodologies in the contemporary study of religion. Episodes are produced by The Religious Studies Project Association (SCIO), a Scottish Charitable Incorporated Organisation (charity number SC047750).RSP material is disseminated under a Creative Commons Attribution-NonCommercial-NoDerivs 3...",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 7800
+      },
+      "image_url": "https://i1.feedspot.com/4964973.jpg?t=1752403513"
+    },
+    {
+      "title": "Listening Faithfully",
+      "feed_url": "https://listeningfaithfullyblog.com/feed",
+      "website_url": "https://listeningfaithfullyblog.com/",
+      "description": "A periodical inspired reflection based on the words and promises of God.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5023139.jpg?t=1606799175"
+    },
+    {
+      "title": "paarsurrey",
+      "feed_url": "https://paarsurrey.wordpress.com/feed/",
+      "website_url": "https://paarsurrey.wordpress.com/",
+      "description": "Keep up with updates from paarsurrey.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5059143.jpg"
+    },
+    {
+      "title": "The Critical Religion Association",
+      "feed_url": "https://criticalreligion.org/blog/feed/",
+      "website_url": "https://criticalreligion.org/blog/",
+      "description": "Critical Approaches to the Study of Religion. The Critical Religion Association seeks to promote engagement with ideas around religion and other categories.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4524061.jpg?t=1606797804"
+    },
+    {
+      "title": "Jewish Treats",
+      "feed_url": "http://www.jewishtreats.org/feeds/posts/default",
+      "website_url": "http://www.jewishtreats.org/",
+      "description": "Welcome to Jewish Treats Jewish Treats is our initiative to share interesting and enjoyable observations about Judaism.",
+      "followers": {
+        "facebook": 12900,
+        "twitter": 66700
+      },
+      "image_url": "https://i1.feedspot.com/1092619.jpg?t=1606797773"
+    },
+    {
+      "title": "The World Religion",
+      "feed_url": "https://abrahamicreligion.wordpress.com/feed/",
+      "website_url": "https://abrahamicreligion.wordpress.com/",
+      "description": "Exploring common ground between Abrahamic religions",
+      "followers": {
+        "twitter": 52
+      },
+      "image_url": "https://i1.feedspot.com/5023141.jpg"
+    },
+    {
+      "title": "jainism in 21st century",
+      "feed_url": "https://jainismin21stcentury.art.blog/feed/",
+      "website_url": "https://jainismin21stcentury.art.blog/",
+      "description": "jainism in 21st century is a strong foundation of jainism.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5137195.jpg?t=1606797314"
+    },
+    {
+      "title": "World Religions",
+      "feed_url": "http://worldreligionseducatorsblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://worldreligionseducatorsblog.blogspot.com/",
+      "description": "Resources for teaching about religion",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5023140.jpg"
+    },
+    {
+      "title": "Abraham Inetianbor | Life - Christianity - Politics - Discrimination",
+      "feed_url": "https://www.abrahaminetianbor.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.abrahaminetianbor.com/",
+      "description": "Wrong is wrong, regardless of who the person is, including me, myself and I. You can condemn a wrong doing without condemning and sending the person to hell.' - Abraham Inetianbor",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4954965.jpg?t=1606746108"
+    },
+    {
+      "title": "Religion Today",
+      "feed_url": "https://religion-today.blogspot.com/feeds/posts/default",
+      "website_url": "https://religion-today.blogspot.com/",
+      "description": "This blog features the twice-monthly newspaper column I have been writing since 1999 called Religion Today. I post a new column on Wednesday every other week. The column is contributed for the purpose of examining and promoting discussion of religious issues.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4524486.jpg?t=1606799304"
+    },
+    {
+      "title": "Crosswalk",
+      "feed_url": "https://www.christianheadlines.com/rss",
+      "website_url": "https://www.crosswalk.com/headlines/",
+      "description": "We are a for-profit religious corporation dedicated to building up the Church, which is the Body of Christ. As a Christ-centered, for-profit corporation, we will create value for our customers, employees and shareholders.Our aim is to offer the freshest and most compelling biblically-based content to Christians who take seriously their relationship with Christ.",
+      "followers": {
+        "twitter": 9100
+      },
+      "image_url": "https://i1.feedspot.com/4425092.jpg?t=1606745962"
+    },
+    {
+      "title": "Religious Freedom Institute",
+      "feed_url": "https://religiousfreedominstitute.org/feed/",
+      "website_url": "https://religiousfreedominstitute.org/",
+      "description": "The Religious Freedom Institute is committed to achieving broad acceptance of religious liberty as a fundamental human right, the cornerstone of a successful society, and a source of national and international security. It will achieve this goal by convincing stakeholders in select regions that religious freedom can help them achieve their own goals political, economic, strategic, and religious.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 7500
+      },
+      "image_url": "https://i1.feedspot.com/4524032.jpg?t=1606797746"
+    },
+    {
+      "title": "Studying Religion in Culture",
+      "feed_url": "https://religion.ua.edu/blog/feed/",
+      "website_url": "https://religion.ua.edu/blog/",
+      "description": "The Department of Religious Studies promotes descriptive and comparative studies of religion by describing and analyzing cross-cultural beliefs, practices, and institutions, both past and present. The Department is one of the principal arenas in the University where students learn of the history, diversity, and ingenuity of human systems of thought and practice.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4524059.jpg?t=1614235644"
+    },
+    {
+      "title": "ISKCON Dwarka Blog",
+      "feed_url": "https://iskcondwarka.org/blogs/feed/",
+      "website_url": "https://elizabethkendal.blogspot.com/",
+      "description": "Read Iskcon Dwarka's latest blogs on Lord Krishna, Lifetsyle Management, Spiritual Growth, Festivals, Donations, and more. ISKCON Dwarka Delhi is a beautiful place for gaining such values and for making your life even more fruitful and meaningful.",
+      "followers": {
+        "twitter": 13700
+      },
+      "image_url": "https://i1.feedspot.com/4699606.jpg?t=1668079376"
+    },
+    {
+      "title": "Religious Liberty Monitoring",
+      "feed_url": "https://elizabethkendal.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://elizabethkendal.blogspot.com/",
+      "description": "Religious Liberty Monitoring exists to expose and analyse religious liberty issues that are strategically significant AND/OR ignored by mainstream media. The Religious Liberty Prayer Bulletin (RLPB) exists to assist churches, small groups and individuals in prayer for the persecuted church.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4524013.jpg?t=1606799338"
+    },
+    {
+      "title": "Bulletin for the Study of Religion",
+      "feed_url": "https://bulletin.equinoxpub.com/feed/",
+      "website_url": "https://bulletin.equinoxpub.com/",
+      "description": "The Bulletin publishes articles that address religion in general, the history of the field of religious studies, method and theory in the study of religion, and pedagogical practices. Articles featured in the Bulletin cover diverse religious traditions from any time period from ancient religions to new religious movements.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4524475.jpg?t=1606745958"
+    }
+  ]
+}

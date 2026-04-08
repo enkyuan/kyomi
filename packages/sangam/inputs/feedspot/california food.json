@@ -1,0 +1,903 @@
+{
+  "category": "California Food",
+  "source_url": "https://rss.feedspot.com/california_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "101 Cookbooks",
+      "feed_url": "https://www.101cookbooks.com/feed",
+      "website_url": "https://www.101cookbooks.com/",
+      "description": "101 Cookbooks is a food blog focused on healthy recipes for everyday. It features over 700 vegetarian recipes, whole foods recipes, and vegan recipes, plus the occasional sweet treat. It is written by New York Times best selling author Heidi Swanson. She started 101 cookbooks in early 2003.",
+      "followers": {
+        "facebook": 189100,
+        "twitter": 133800,
+        "instagram": 128400
+      },
+      "image_url": "https://i1.feedspot.com/5016738.jpg?t=1628512173"
+    },
+    {
+      "title": "Kitchen Confidante",
+      "feed_url": "https://kitchenconfidante.com/feed",
+      "website_url": "https://kitchenconfidante.com/",
+      "description": "Hi, I'm Liren. I am a mother of two and wife to one, currently based in the SF Bay Area, land of fresh foods, and sublime wine. I create incredible family-friendly recipes that will make your loved ones bite, swirl and sip every last bite! Good food has never been easier or more inspiring, let me be your Kitchen Confidante!",
+      "followers": {
+        "facebook": 61300,
+        "twitter": 9300,
+        "instagram": 33500
+      },
+      "image_url": "https://i1.feedspot.com/4900513.jpg?t=1612788167"
+    },
+    {
+      "title": "Eat The Love",
+      "feed_url": "https://www.eatthelove.com/feed/",
+      "website_url": "https://www.eatthelove.com/",
+      "description": "Recipes, Photographs, and Stories about Desserts, Baked Goods and Food in general, with a healthy dose of humor and happiness for the food-obsessed authored by critically acclaimed cookbook author Irvin Lin.",
+      "followers": {
+        "facebook": 10900,
+        "twitter": 8400,
+        "instagram": 11200
+      },
+      "image_url": "https://i1.feedspot.com/4785745.jpg?t=1609394573"
+    },
+    {
+      "title": "Food GPS",
+      "feed_url": "https://foodgps.com/feed/",
+      "website_url": "https://foodgps.com/",
+      "description": "Pinpointing the best tasting food and drink, regardless of price or cuisine, and sharing personal stories of the people behind the flavor. Josh grew up in suburban New Jersey, his passion for food really exploded during his college summers, when he drove west to work in Los Angeles.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 15600,
+        "instagram": 49200
+      },
+      "image_url": "https://i1.feedspot.com/5310685.jpg?t=1628512963"
+    },
+    {
+      "title": "What's Gaby Cooking",
+      "feed_url": "https://whatsgabycooking.com/feed/",
+      "website_url": "https://whatsgabycooking.com/",
+      "description": "I'm Gaby, a cookbook author, chef, and food/lifestyle writer. Here you can expect the best recipes, videos, and travel guides to make your life even easier and more delicious!",
+      "followers": {
+        "facebook": 429400,
+        "twitter": 29000,
+        "instagram": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/4795000.jpg?t=1628151914"
+    },
+    {
+      "title": "Eater Los Angeles",
+      "feed_url": "https://la.eater.com/rss/index.xml",
+      "website_url": "https://la.eater.com/",
+      "description": "Eater LA is an online publication that covers the food and dining scene in Los Angeles. It provides city maps and travel dining guides marking all the best places to eat, punchy editorials exploring the cultural significance of what and how we eat, in-depth industry investigations, and light-hearted ruminations on food fads and cooking tips and tricks.",
+      "followers": {
+        "facebook": 222700,
+        "twitter": 284300,
+        "instagram": 585200
+      },
+      "image_url": "https://i1.feedspot.com/4786725.jpg?t=1609401186"
+    },
+    {
+      "title": "Eat Drink LA",
+      "feed_url": "https://www.eatdrinkla.com/feed/",
+      "website_url": "https://www.eatdrinkla.com/",
+      "description": "A site with the best places to eat and drink in Los Angeles! Here you will find lots of round-ups, guides where to eat every day of the week in Los Angeles.",
+      "followers": {
+        "twitter": 24
+      },
+      "image_url": "https://i1.feedspot.com/4787018.jpg?t=1612773148"
+    },
+    {
+      "title": "Kemmy Recipes",
+      "feed_url": "https://kemmyrecipes.net/feed",
+      "website_url": "https://kemmyrecipes.net/",
+      "description": "Established in 2019, kemmyrecipes.net is a family-friendly food blog dedicated to sharing GOOD recipes for everyday cooking as well as entertaining. You'll find over 500 of the very best and easy recipes with nutrition, ratings, and big, beautiful images.",
+      "followers": {
+        "facebook": 850600,
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/5593018.jpg?t=1686217291"
+    },
+    {
+      "title": "California Avocados",
+      "feed_url": "https://californiaavocado.com/recipes/feed/",
+      "website_url": "https://californiaavocado.com/recipes/",
+      "description": "The California Avocado Commission is an organization that represents the avocado growers in California and promotes the consumption and usage of California avocados. On their blog you will find a wide range of recipes that showcase the versatility and deliciousness of California avocados.",
+      "followers": {
+        "facebook": 300700,
+        "twitter": 20200,
+        "instagram": 49700
+      },
+      "image_url": "https://i1.feedspot.com/5603817.jpg?t=1687332851"
+    },
+    {
+      "title": "The Berry Buzz Blog",
+      "feed_url": "https://berrybuzz.calgiant.com/rss.xml",
+      "website_url": "https://berrybuzz.calgiant.com/",
+      "description": "The Berry Buzz Blog is a blog by California Giant Berry Farms that covers a wide range of topics related to berries. It includes news and updates, recipes, tips, videos, and information regarding the different berries in their farms.",
+      "followers": {
+        "facebook": 239500,
+        "twitter": 27300,
+        "instagram": 23000
+      },
+      "image_url": "https://i1.feedspot.com/5603820.jpg?t=1687332877"
+    },
+    {
+      "title": "Girl From California",
+      "feed_url": "https://christyw.com/feed/",
+      "website_url": "https://christyw.com/category/recipes/",
+      "description": "The Girl From California blog is written by Christy Wang, a food blogger and recipe developer. The blog features a variety of recipes, all inspired by Christy's Chinese-American heritage and her love of California cuisine. The recipes on the blog are all written in a clear and easy-to-follow way",
+      "followers": {
+        "twitter": 210,
+        "instagram": 175100
+      },
+      "image_url": "https://i1.feedspot.com/5603819.jpg?t=1687332944"
+    },
+    {
+      "title": "Lindsey Eats",
+      "feed_url": "https://lindseyeatsla.com/feed/",
+      "website_url": "https://lindseyeatsla.com/",
+      "description": "Hi, my name is Lindsey and I'm so happy you're here! I am the photographer, recipe developer, writer, and cook behind Lindsey Eats! This is a website dedicated to all things recipes, entertainment, travel & lifestyle. Here you'll find the classics, as well as all my go-to weeknight dinner recipes, snacks & appetizers, and more with seasonality in mind! My mission is to share good food that inspires you to cook while creating recipes that are simple and approachable.",
+      "followers": {
+        "facebook": 24900,
+        "twitter": 106
+      },
+      "image_url": "https://i1.feedspot.com/5749455.jpg?t=1704441217"
+    },
+    {
+      "title": "A Cozy Kitchen",
+      "feed_url": "https://www.acozykitchen.com/feed",
+      "website_url": "https://www.acozykitchen.com/",
+      "description": "Adrianna shares easy pastry recipes, bakery-style desserts and cakes, and the absolute best breakfast recipes! Her Latin-inspired recipes are cozy comfort food.",
+      "followers": {
+        "facebook": 81900,
+        "twitter": 7200,
+        "instagram": 634400
+      },
+      "image_url": "https://i1.feedspot.com/1085250.jpg?t=1600346225"
+    },
+    {
+      "title": "Eater San Diego",
+      "feed_url": "https://sandiego.eater.com/rss/index.xml",
+      "website_url": "https://sandiego.eater.com/",
+      "description": "The San Diego Restaurant, Bar, and Nightlife Blog. Food news and dining guides for San Diego.",
+      "followers": {
+        "facebook": 48600,
+        "twitter": 14300,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/4828950.jpg?t=1610972685"
+    },
+    {
+      "title": "Eater San Francisco",
+      "feed_url": "https://sf.eater.com/rss/index.xml",
+      "website_url": "https://sf.eater.com/",
+      "description": "Eater SF is the San Francisco Restaurant, Bar, and Nightlife Blog. Get the best food news and dining guides for San Francisco. Check out the maps and neighborhoods for the best places to eat in San Francisco, and well as the hottest new openings in the city.",
+      "followers": {
+        "facebook": 110800,
+        "twitter": 134400,
+        "instagram": 142400
+      },
+      "image_url": "https://i1.feedspot.com/4785620.jpg?t=1667303632"
+    },
+    {
+      "title": "InsideHook \u00bb Food & Drink",
+      "feed_url": "https://www.insidehook.com/feed",
+      "website_url": "https://www.insidehook.com/food-san-francisco",
+      "description": "Each weekday, Insidehook publishes a single compelling story - something you need to know right now about food and drink, travel, style, health, tech, culture, and outdoor adventures. In this blog, you will get to read about food & drinks from the SF Bay Area.",
+      "followers": {
+        "facebook": 162100,
+        "twitter": 20400,
+        "instagram": 59000
+      },
+      "image_url": "https://i1.feedspot.com/5233335.jpg?t=1609764087"
+    },
+    {
+      "title": "Detoxinista Blog",
+      "feed_url": "https://detoxinista.com/blog/feed/",
+      "website_url": "https://detoxinista.com/blog/",
+      "description": "Healthy comfort food recipes that are quick and easy to prepare, using only all-natural, whole food ingredients. Gluten-free, air fryer, and Instant Pot recipes included. Megan Gilmore is a certified Health Coach, trained at the Institute for Integrative Nutrition and also studied clinical nutrition at the Natural Healing Institute.",
+      "followers": {
+        "facebook": 374600,
+        "twitter": 5000,
+        "instagram": 311600
+      },
+      "image_url": "https://i1.feedspot.com/545975.jpg?t=1600345379"
+    },
+    {
+      "title": "7x7 Bay Area \u00bb Eat-Drink",
+      "feed_url": "https://www.7x7.com/feeds/Eat-Drink.rss",
+      "website_url": "https://www.7x7.com/eat-drink/",
+      "description": "Founded in 2001, 7x7 is an online magazine celebrating San Francisco Bay Area life, publishing daily stories on the best local food and drink and much more",
+      "followers": {
+        "facebook": 72200,
+        "twitter": 191800
+      },
+      "image_url": "https://i1.feedspot.com/4900542.jpg?t=1612788157"
+    },
+    {
+      "title": "SFist Blog",
+      "feed_url": "https://sfist.com/food/rss/",
+      "website_url": "https://sfist.com/food/",
+      "description": "San Francisco has more restaurants per capita than any city in the U.S. SFist is the place where you can read about the most interesting openings, disappointing closings, and everything in between. It has news about restaurants, food, & drink that is sure to lead you to your next favorite location.",
+      "followers": {
+        "facebook": 58000,
+        "twitter": 274900
+      },
+      "image_url": "https://i1.feedspot.com/5233347.jpg?t=1609766043"
+    },
+    {
+      "title": "Healthy Happy Life",
+      "feed_url": "https://healthyhappylife.com/feed/",
+      "website_url": "https://healthyhappylife.com/",
+      "description": "Kathy Patalsky is a content creator, artist and author. Kathy founded the recipe and vegan lifestyle blog, HealthyHappyLife.com est. 2007. Kathy is the author and photographer of two cookbooks, 365 Vegan Smoothies and Healthy Happy Vegan Kitchen.",
+      "followers": {
+        "facebook": 77700,
+        "twitter": 1300,
+        "instagram": 22500
+      },
+      "image_url": "https://i1.feedspot.com/593621.jpg?t=1654520106"
+    },
+    {
+      "title": "A Side of Sweet",
+      "feed_url": "https://asideofsweet.com/feed/",
+      "website_url": "https://asideofsweet.com/",
+      "description": "A Side of Sweet is a San Francisco life and style blog founded by Kelly Huibregtse. Here you'll find recipes, DIYs, style, travel, fitness, and design that fit into your busy lifestyle.",
+      "followers": {
+        "facebook": 30400,
+        "twitter": 8100,
+        "instagram": 137000
+      },
+      "image_url": "https://i1.feedspot.com/4785748.jpg?t=1646051464"
+    },
+    {
+      "title": "Bowl Me Over",
+      "feed_url": "https://bowl-me-over.com/feed/",
+      "website_url": "https://bowl-me-over.com/",
+      "description": "Browse hundreds of easy-to-make bowl-oriented soup, salad, pasta, meat, and vegan recipes that are big on flavor and short on prep time. Get inspired and make mealtime delicious, fun, and less complicated!",
+      "followers": {
+        "facebook": 625000,
+        "twitter": 3800,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5380650.jpg?t=1647242197"
+    },
+    {
+      "title": "Ketchup With Linda Blog",
+      "feed_url": "https://ketchupwithlinda.com/feed/",
+      "website_url": "https://ketchupwithlinda.com/blog/",
+      "description": "Ketchup With Linda features brunch and modern classics comfort food recipes. Linda is a recipe developer, food photographer, and a chocaholic living life in San Francisco.",
+      "followers": {
+        "facebook": 18700,
+        "twitter": 2100,
+        "instagram": 12800
+      },
+      "image_url": "https://i1.feedspot.com/5049243.jpg?t=1612788403"
+    },
+    {
+      "title": "Snixy Kitchen",
+      "feed_url": "https://www.snixykitchen.com/feed/",
+      "website_url": "https://www.snixykitchen.com/",
+      "description": "Snixy Kitchen is a Bay Area food blog, where I share recipes and the stories that go along with them. I cook from scratch, make up rules, use seasonal ingredients as much as possible, and reinvent classics to create special occasion sweets and everyday staples.",
+      "followers": {
+        "facebook": 25400,
+        "twitter": 1800,
+        "instagram": 44800
+      },
+      "image_url": "https://i1.feedspot.com/4900530.jpg?t=1612788172"
+    },
+    {
+      "title": "Food Gal",
+      "feed_url": "https://feeds.feedburner.com/FoodGal",
+      "website_url": "https://www.foodgal.com/",
+      "description": "FoodGal.com was established in 2008. It is an award-winning food blog musings on food, wine, laughter, and life by a James Beard Award-winning Bay Area food writer.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 9100,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/1237682.jpg?t=1612788163"
+    },
+    {
+      "title": "Culinary Hill",
+      "feed_url": "https://www.culinaryhill.com/feed/",
+      "website_url": "https://www.culinaryhill.com/",
+      "description": "Midwest recipes and cooking focus primarily on Wisconsin recipes, Minnesota recipes, and Iowa recipes. Comfort food such as casseroles, hearty potluck salads, appetizers and party food, bratwurst, German food, and lots of cheese recipes and bacon recipes. I'm Meggan, a classically-trained chef and professional writer. I was born and raised in Wisconsin and now live in sunny Southern California with my husband and 3 kids.",
+      "followers": {
+        "facebook": 363300,
+        "twitter": 7800,
+        "instagram": 47900
+      },
+      "image_url": "https://i1.feedspot.com/4477061.jpg?t=1628514988"
+    },
+    {
+      "title": "The Amateur Gourmet",
+      "feed_url": "https://www.amateurgourmet.com/blog?format=rss",
+      "website_url": "https://www.amateurgourmet.com/",
+      "description": "I am Adam Roberts and I created this here food blog back in 2004 to share recipes, cooking tips, and restaurant reviews. I am an author of two books and produce web content for The Food Network. Upon graduating, I moved to New York to get an MFA in dramatic writing at NYU's Tisch School of the Arts. It was there that I met my future husband, Craig Johnson.",
+      "followers": {
+        "facebook": 13700,
+        "twitter": 3,
+        "instagram": 89400
+      },
+      "image_url": "https://i1.feedspot.com/4887322.jpg?t=1702026569"
+    },
+    {
+      "title": "Foodnut Blog",
+      "feed_url": "https://www.foodnut.com/feed/",
+      "website_url": "https://www.foodnut.com/",
+      "description": "Welcome to the FoodNut.com. The site was created by folks nuts about food! They help those looking for great restaurants, especially ones in our home base, the San Francisco Bay Area. Their goal is to find the best food, not review every place under the sun. Their friends and family had kept asking where to eat, so they decided to build this website for them and foodies at large.",
+      "followers": {
+        "facebook": 413,
+        "twitter": 380
+      },
+      "image_url": "https://i1.feedspot.com/4900494.jpg?t=1612788186"
+    },
+    {
+      "title": "Table hopper",
+      "feed_url": "https://feeds.feedburner.com/Tablehopper",
+      "website_url": "https://www.tablehopper.com/",
+      "description": "Tablehopper is a weekly insider e-column about the San Francisco dining and drinking scene. Get all the latest on what's new, opening, closing, and changing, plus cool food/wine/booze events!",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 17200,
+        "instagram": 24200
+      },
+      "image_url": "https://i1.feedspot.com/30568.jpg?t=1609394639"
+    },
+    {
+      "title": "Cooking Therapy",
+      "feed_url": "https://www.cooking-therapy.com/feed/",
+      "website_url": "https://www.cooking-therapy.com/",
+      "description": "Hello! I'm Rebecca. I am a home cook that is obsessed with food. Through this blog, I hope to inspire the everyday home cook as well as share stories from my own food adventures.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 152,
+        "instagram": 19300
+      },
+      "image_url": "https://i1.feedspot.com/4900576.jpg?t=1612788191"
+    },
+    {
+      "title": "Kirbie's Cravings",
+      "feed_url": "https://kirbiecravings.com/feed/",
+      "website_url": "https://kirbiecravings.com/",
+      "description": "Kirbie's Cravings is a food blog based in San Diego sharing recipes (ranging from healthy meals to easy desserts) and dining out experiences (in San Diego and from our travels). It chronicles the food cravings of Kirbie and her supportive husband, Mr. K.",
+      "followers": {
+        "facebook": 25800,
+        "twitter": 2600,
+        "instagram": 54200
+      },
+      "image_url": "https://i1.feedspot.com/4872607.jpg?t=1612784096"
+    },
+    {
+      "title": "The Joy of Food Blog",
+      "feed_url": "https://thejoyoffood.life/feed/",
+      "website_url": "https://thejoyoffood.life/",
+      "description": "The Joy of Food is a food blog that celebrates eating well, traveling often, and living la dolce vita. Get reviews and photos that help to highlight wonderful (or not) food experiences from around the world.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5291054.jpg?t=1623133341"
+    },
+    {
+      "title": "Marga's Food Blog",
+      "feed_url": "http://www.marga.org/foodblog/feed/",
+      "website_url": "http://www.marga.org/foodblog/",
+      "description": "Hi there! I'm Marga. This blog is my main conduit for publishing my recipes, restaurant reviews, and other thoughts on food. I like to cook and I like to eat out, and the San Francisco Bay Area is a wonderful place to engage in both activities.",
+      "followers": {
+        "twitter": 544
+      },
+      "image_url": "https://i1.feedspot.com/5233343.jpg?t=1609765199"
+    },
+    {
+      "title": "Gastronomy Blog",
+      "feed_url": "https://gastronomyblog.com/feed/",
+      "website_url": "https://gastronomyblog.com/",
+      "description": "My name is Cathy Chaplin. I serve up restaurant reviews in Los Angeles and The World. I was born in La Mesa, California, educated in Swarthmore, Pennsylvania, and cultured in Saigon, Vietnam. Now based in Los Angeles. My writing and photography have appeared in numerous publications including Saveur, Los Angeles Times, Bon App\u00e9tit, and Cond\u00e9 Nast Traveler.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 7200
+      },
+      "image_url": "https://i1.feedspot.com/4710013.jpg?t=1612773156"
+    },
+    {
+      "title": "Christina Mueller Blog",
+      "feed_url": "https://christinamueller.com/blog/feed/",
+      "website_url": "https://christinamueller.com/blog/",
+      "description": "Christina Mueller's blog is a trusted source for balanced, well-informed reviews and opinions on the San Francisco Bay Area restaurant scene.",
+      "followers": {
+        "twitter": 688,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5233323.jpg?t=1609763160"
+    },
+    {
+      "title": "Vegan Anj Blog",
+      "feed_url": "https://vegananj.com/feed/",
+      "website_url": "https://vegananj.com/blog/",
+      "description": "Anj is here to share ways in which we can live more consciously through plant-forward eating and make small shifts in our daily rituals to make a tangible impact on our individual and collective health - all in ways that are attainable, and, most importantly, delicious. In addition to sharing her experience through FFI's culinary school, you can also find #VeganAnj's original dishes, plant-based adaptations of her favorite foods, and family recipes.",
+      "followers": {
+        "facebook": 38,
+        "twitter": 8,
+        "instagram": 590
+      },
+      "image_url": "https://i1.feedspot.com/5419342.jpg?t=1695880127"
+    },
+    {
+      "title": "Edward & Sons Recipe",
+      "feed_url": "https://store.edwardandsons.com/blogs/recipes.atom",
+      "website_url": "https://store.edwardandsons.com/blogs/recipes/",
+      "description": "Edward & Sons Trading Co., based in Carpinteria, CA, supplies innovative natural, organic, vegan and gluten free foods to stores and consumers throughout the world.",
+      "followers": {
+        "facebook": 26900,
+        "twitter": 1900,
+        "instagram": 91500
+      },
+      "image_url": "https://i1.feedspot.com/5419343.jpg?t=1657192090"
+    },
+    {
+      "title": "The Korean Vegan",
+      "feed_url": "https://thekoreanvegan.com/category/podcast-newsletter/feed/",
+      "website_url": "https://thekoreanvegan.com/category/podcast-newsletter/",
+      "description": "Healthy and Not-So-Healthy Plant Based Recipes. New York Times best-selling author Joanne Molinaro, a.k.a The Korean Vegan, has appeared on The Food Network, CBS Saturday Morning, ABC's Live with Kelly and Ryan, The Today Show, PBS, and The Rich Roll Podcast.",
+      "followers": {
+        "facebook": 254200,
+        "twitter": 48600,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5419344.jpg?t=1657189067"
+    },
+    {
+      "title": "Your Neighborhood Vegan Blog",
+      "feed_url": "https://yourneighborhoodvegan.com/feed/",
+      "website_url": "https://yourneighborhoodvegan.com/blog/",
+      "description": "I'm Tiffany, Your Neighborhood Vegan! My hope is for this blog to be a resource for those who are newly vegan or new to the Central Valley area. Whether you're a long-time vegan, RAW vegan, flexitarian, vegetarian, pescatarian, or simply plant-curious, this is the place for you!",
+      "followers": {
+        "facebook": 847,
+        "instagram": 6800
+      },
+      "image_url": "https://i1.feedspot.com/5419338.jpg?t=1657188752"
+    },
+    {
+      "title": "Colleen Patrick-Goudreau Blog",
+      "feed_url": "https://colleenpatrickgoudreau.com/feed/",
+      "website_url": "https://colleenpatrickgoudreau.com/blog/",
+      "description": "Colleen Patrick-Goudreau's compassionate living philosophy is propelling plant-based eating into the mainstream and forever changing how we regard animals. A recognized expert and thought leader on the culinary, social, ethical, and practical aspects of living compassionately and healthfully, Colleen Patrick-Goudreau is a speaker, cultural commentator, podcaster, and award-winning author of seven books.",
+      "followers": {
+        "facebook": 72600,
+        "twitter": 22300,
+        "instagram": 73200
+      },
+      "image_url": "https://i1.feedspot.com/5419341.jpg?t=1657187389"
+    },
+    {
+      "title": "Merit Vegan Restaurant Blog",
+      "feed_url": "https://www.meritvegetarian.com/blog-feed.xml",
+      "website_url": "https://www.meritvegetarian.com/blog",
+      "description": "Merit Vegan Restaurant offers customers the best of our know-how, and uses high-quality, health-beneficial ingredients whenever possible for good flavors and to ensure good health. The freshly prepared Vegan dishes feature the exquisite and fine flavors of Eastern and Western cuisines.",
+      "followers": {
+        "facebook": 106,
+        "twitter": 11,
+        "instagram": 626
+      },
+      "image_url": "https://i1.feedspot.com/5419345.jpg?t=1695880066"
+    },
+    {
+      "title": "Straight Up Food Blog",
+      "feed_url": "https://www.straightupfood.com/blog/feed/",
+      "website_url": "https://www.straightupfood.com/blog/",
+      "description": "Welcome to Straight Up Food! My passion is creating recipes without animal foods, salt, oil or sugar, and very few processed foods. This blog is full of recipes and information on how to eat a plant-based diet that has no added salt, oil and sugar. The focus is not only on consuming a vegan diet (avoiding animal foods and ingredients), but one that actually promotes excellent health.",
+      "followers": {
+        "facebook": 53600,
+        "instagram": 20100
+      },
+      "image_url": "https://i1.feedspot.com/5040840.jpg?t=1657189490"
+    },
+    {
+      "title": "Rainbow Plant Life",
+      "feed_url": "https://rainbowplantlife.com/feed/",
+      "website_url": "https://rainbowplantlife.com/",
+      "description": "Created by Nisha Vora, a self-taught vegan chef, food blogger, photographer, and author of The Vegan Instant Pot Cookbook, Rainbow Plant Life is a vegan food and lifestyle website that features wildly flavorful recipes that will please vegans and non-vegans alike.",
+      "followers": {
+        "facebook": 160600,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5241027.jpg?t=1695879992"
+    },
+    {
+      "title": "Sharon Palmer Blog",
+      "feed_url": "https://sharonpalmer.com/feed/",
+      "website_url": "https://sharonpalmer.com/blog/",
+      "description": "Sharon is a registered dietitian nutritionist (RDN) with more than 20 years of experience in the field of plant-based nutrition and sustainability. Join her in this adventure! Explore delicious plant-based recipes, sustainable living tips, and healthy nutrition facts.",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 10000,
+        "instagram": 10700
+      },
+      "image_url": "https://i1.feedspot.com/4502452.jpg?t=1695880313"
+    },
+    {
+      "title": "Sweet Potato Soul",
+      "feed_url": "https://sweetpotatosoul.com/feed/",
+      "website_url": "https://sweetpotatosoul.com/",
+      "description": "A vegan food and lifestyle blog, cookbook, and cooking show! Featuring easy, delicious, and healthy vegan recipes. Hi, I'm Jenn\u00e9! On Sweet Potato Soul you'll discover hundreds of delicious and easy-to-make vegan recipes. I also share lots of cooking videos and healthy eating tips.",
+      "followers": {
+        "facebook": 95400,
+        "twitter": 8400,
+        "instagram": 362300
+      },
+      "image_url": "https://i1.feedspot.com/4241979.jpg?t=1609842588"
+    },
+    {
+      "title": "The Wimpy Vegetarian",
+      "feed_url": "https://thewimpyvegetarian.com/feed/",
+      "website_url": "https://thewimpyvegetarian.com/",
+      "description": "Mostly vegetarian food blog by author of Simply Vegetarian cookbook. Recipes, vegetarian meal plans + tips for omnivores, and help for going vegetarian. I share mostly vegetarian recipes where meat is featured as a condiment, if at all, and provide instructional accompanying photos for recipes that are an artisan in nature, for example making cheese or making pasta from scratch.",
+      "followers": {
+        "facebook": 9000,
+        "twitter": 3300,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/2200904.jpg?t=1605764574"
+    },
+    {
+      "title": "Vegan Yack Attack",
+      "feed_url": "https://veganyackattack.com/feed/",
+      "website_url": "https://veganyackattack.com/",
+      "description": "A vegan recipe blog for people who love food, run by Jackie Sobon, that covers everything from indulgent desserts to healthy dinners, and even the occasional raw recipe.",
+      "followers": {
+        "facebook": 36100,
+        "twitter": 31300,
+        "instagram": 94200
+      },
+      "image_url": "https://i1.feedspot.com/640328.jpg?t=1609245374"
+    },
+    {
+      "title": "VegNews \u00bb Vegan Recipes",
+      "feed_url": "https://vegnews.com/recipes/feed.rss",
+      "website_url": "https://vegnews.com/recipes",
+      "description": "From breakfast to dessert, VegNews gives you the world's largest collection of editor-tested vegan recipes. Mouthwatering plant-based pastas, hearty soups, and melt-in-your-mouth cookies - here you come!",
+      "followers": {
+        "facebook": 620600,
+        "twitter": 180700,
+        "instagram": 888200
+      },
+      "image_url": "https://i1.feedspot.com/5419347.jpg?t=1657192188"
+    },
+    {
+      "title": "Todo Verde Blog",
+      "feed_url": "https://todoverde.org/blogs/recipes-1.atom",
+      "website_url": "https://todoverde.org/blogs/recipes-1",
+      "description": "Todo Verde is a WOC-owned food business inspired by Latin American roots and flavors that provides healthy and delicious plant-based culturally relevant dishes to the East Los Angeles community and beyond.",
+      "followers": {
+        "facebook": 3900,
+        "instagram": 44700
+      },
+      "image_url": "https://i1.feedspot.com/5419348.jpg?t=1657192289"
+    },
+    {
+      "title": "Naturally Ella",
+      "feed_url": "https://naturallyella.com/feed/",
+      "website_url": "https://naturallyella.com/recipes/",
+      "description": "I'm Erin and this is my space for all things vegetarian food inspired by California and my love of cooking. My blog features different types of recipes using diffenrt kinds of products. The recipes are organized by season, diet, meal, and seasonal ingredients.",
+      "followers": {
+        "facebook": 42100,
+        "twitter": 6,
+        "instagram": 128100
+      },
+      "image_url": "https://i1.feedspot.com/640319.jpg?t=1600346215"
+    },
+    {
+      "title": "Seasons And Suppers",
+      "feed_url": "https://www.seasonsandsuppers.ca/feed/",
+      "website_url": "https://www.seasonsandsuppers.ca/",
+      "description": "Hi! I'm Jennifer and I am cooking my way through the seasons in beautiful Muskoka, Ontario, Canada. Seasons and Suppers is my online food blog and cooking diary, where I get a chance to share what's cooking in my kitchen throughout the year.",
+      "followers": {
+        "facebook": 18900,
+        "twitter": 1400,
+        "instagram": 12200
+      },
+      "image_url": "https://i1.feedspot.com/1211274.jpg?t=1612163744"
+    },
+    {
+      "title": "Southern California Life Magazine",
+      "feed_url": "https://socallifemag.com/feed/",
+      "website_url": "https://socallifemag.com/",
+      "description": "A multi-platform print and digital magazine toasting the culture, spirit & lifestyle of Southern California. Find the latest news on spirits, bubbles and brews, lounges, cocktails, beers, wines, wineries, juices, smoothies, coffees, teas, and more in Southern California magazine.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 785,
+        "instagram": 7200
+      },
+      "image_url": "https://i1.feedspot.com/4900441.jpg?t=1653977903"
+    },
+    {
+      "title": "Ev's Eats",
+      "feed_url": "https://evseats.com/feed/",
+      "website_url": "https://evseats.com/",
+      "description": "Hey! I'm Evi from the food blog Ev's Eats. Ev's Eats is a food and lifestyle blog showcasing my adventures in food; creating simple, flavorful recipes, and your guide to the best places to eat in Los Angeles.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 710,
+        "instagram": 34000
+      },
+      "image_url": "https://i1.feedspot.com/4899705.jpg?t=1612773163"
+    },
+    {
+      "title": "Craving California",
+      "feed_url": "https://cravingcalifornia.com/feed/",
+      "website_url": "https://cravingcalifornia.com/",
+      "description": "Welcome to Craving California where I'm sharing flavorful, smiple, down-to-earth recipes and all the culinary tips and tricks I've learned as a classicly trained professional chef. I've been obsessed with cooking (and eating!) since I was really young. I grew up making Kraft mac and cheese, and every recipe on the side of the Bisquick box. My brothers and I loved to play restaurant, and I proudly made dinner for my family a few nights a week. I knew early on that I was going to be a chef.",
+      "followers": {
+        "facebook": 764,
+        "twitter": 4,
+        "instagram": 15500
+      },
+      "image_url": "https://i1.feedspot.com/5310643.jpg?t=1628509835"
+    },
+    {
+      "title": "HangryDiary",
+      "feed_url": "http://www.hangrydiary.com/press-1?format=rss",
+      "website_url": "http://www.hangrydiary.com/",
+      "description": "Come join us in our daily foodie adventure and discover all the food options available in the Greater Los Angeles area. Our passion for exploring new restaurants inspired us to launch HangryDiary. We were raised in Hong Kong and moved to Los Angeles to continue our education. We are excited to announce the launch of our product section. Each item is carefully selected and HangryDiary approved.",
+      "followers": {
+        "facebook": 9900,
+        "twitter": 494
+      },
+      "image_url": "https://i1.feedspot.com/5310687.jpg?t=1628513196"
+    },
+    {
+      "title": "Growing Up Cali Blog",
+      "feed_url": "https://www.growingupcali.com/feed/",
+      "website_url": "https://www.growingupcali.com/growing-up-cali-2/blog/",
+      "description": "Hi friends! I'm Laura, a food blogger, food photographer, and recipe developer based in San Diego, California. I love creating and sharing seasonal, relaxed recipes for busy home cooks! My blog, The Growing Up Cali features seasonal, relaxed recipes for busy people, as well as travel, entertaining, and style tips.",
+      "followers": {
+        "facebook": 34,
+        "twitter": 9,
+        "instagram": 10600
+      },
+      "image_url": "https://i1.feedspot.com/5603821.jpg?t=1687332882"
+    },
+    {
+      "title": "Bloody Mary Obsessed Blog",
+      "feed_url": "https://www.bloodymaryobsessed.com/blog?format=RSS",
+      "website_url": "https://www.bloodymaryobsessed.com/blog/",
+      "description": "Follow me on my quest for the best brunch & bloody mary! Reviews, recipes and rankings of the best in San Diego and beyond!",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 126,
+        "instagram": 6200
+      },
+      "image_url": "https://i1.feedspot.com/5048543.jpg?t=1612784123"
+    },
+    {
+      "title": "Dessert First",
+      "feed_url": "https://feeds.feedburner.com/dessertfirstgirl",
+      "website_url": "https://dessertfirstgirl.com/",
+      "description": "Dessert First is a a san francisco food, travel and all things sweetblog written by Anita Chu She is a native with a passion for pastry!",
+      "followers": {
+        "twitter": 5000,
+        "instagram": 6500
+      },
+      "image_url": "https://i1.feedspot.com/5233293.jpg?t=1609759827"
+    },
+    {
+      "title": "Edible San Francisco",
+      "feed_url": "https://ediblesanfrancisco.com/feed/",
+      "website_url": "https://ediblesanfrancisco.com/",
+      "description": "Edible San Francisco is a food magazine that covers local food and drink makers, restaurants, farmers markets, food culture and events in San Francisco. They celebrate the food that feeds their community. They connect people to their food\u2014where it comes from, how it's produced and who makes it.",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 49900,
+        "instagram": 25600
+      },
+      "image_url": "https://i1.feedspot.com/4786417.jpg?t=1611841813"
+    },
+    {
+      "title": "Classic San Diego",
+      "feed_url": "https://classicsandiego.com/feed/",
+      "website_url": "https://classicsandiego.com/",
+      "description": "Official website for 'Classic San Diego,' a book about the history of San Diego and Tijuana's classic restaurants, bars and hotels.",
+      "followers": {
+        "facebook": 948,
+        "twitter": 26,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4959401.jpg?t=1612784113"
+    },
+    {
+      "title": "This Tasty Life",
+      "feed_url": "http://food.theplainjane.com/feed/",
+      "website_url": "http://food.theplainjane.com/",
+      "description": "San Diego food blog covering restaurant reviews, recipes, travel and more. Mary has a journalism degree and wanted a fun way to express herself and got into food blogging with her friend, Alyssa.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 1400,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/3802344.jpg?t=1610973154"
+    },
+    {
+      "title": "San Diego Food",
+      "feed_url": "https://www.sandiegofood.net/feed",
+      "website_url": "https://www.sandiegofood.net/",
+      "description": "San Diego's best food and restaurant blog. It was born as the creation of 2 cousins (Michael & Darren), Michael's wife (Jorgina), and a community of foodies searching for the best food San Diego has to offer. They explore the dining scene one bite at a time.",
+      "followers": {
+        "facebook": 616,
+        "twitter": 3400,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4828156.jpg?t=1610973165"
+    },
+    {
+      "title": "Hungry In LA",
+      "feed_url": "http://www.imhungryinla.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.imhungryinla.com/",
+      "description": "Hungry in LA is about food & travel, run by a Los Angeles native who recommends the best places to eat and visit in LA and beyond. Eddie is the founder of Hungry in LA. He's a local, born and raised in Los Angeles and is passionate about food, travel, music, and photography. Proud to be from LA, he has an ardent love for this city and its food scene.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 8400,
+        "instagram": 191800
+      },
+      "image_url": "https://i1.feedspot.com/4899532.jpg?t=1628510452"
+    },
+    {
+      "title": "Miss Cheesemonger",
+      "feed_url": "http://misscheesemonger.com/feed/",
+      "website_url": "http://misscheesemonger.com/",
+      "description": "A San Francisco-based blog celebrating artisan cheese, food, and living. Veronique Kherian's creativity, entrepreneurship, and skill are the cornerstones of both cheesemaking and the art.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 945,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4651749.jpg?t=1609394752"
+    },
+    {
+      "title": "California Greek Girl \u00bb Vegan/Plant Based Recipes",
+      "feed_url": "https://www.californiagreekgirl.com/category/plant-based-recipes/feed/",
+      "website_url": "https://www.californiagreekgirl.com/category/plant-based-recipes/",
+      "description": "A Blog by Chef Mary Papoulias Platis. Hello from California Greek Girl. I'm the owner of Ethos Culinary located in the beautiful city of Carlsbad. Join me as we explore California's bounty of foods, farmlands, and culinary experts. I'm looking forward to bringing you Greek, Mediterranean and Plant-Forward Cuisines.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5419337.jpg?t=1657189723"
+    },
+    {
+      "title": "Native Foods News",
+      "feed_url": "https://www.nativefoods.com/blog-feed.xml",
+      "website_url": "https://www.nativefoods.com/blog",
+      "description": "Native Foods vegan food news and plant-based restaurant updates. Native Foods was founded on the premise that tasty meals and natural plant-based ingredients should go hand-in-hand and that environmental sustainability and animal welfare need to be an important element of our mission.",
+      "followers": {
+        "facebook": 94700,
+        "twitter": 16600,
+        "instagram": 46100
+      },
+      "image_url": "https://i1.feedspot.com/5419336.jpg?t=1657191179"
+    },
+    {
+      "title": "Manjula's Kitchen Blog",
+      "feed_url": "https://manjulaskitchen.com/feed/",
+      "website_url": "https://manjulaskitchen.com/blog/",
+      "description": "Learn to cook Indian Vegetarian Recipes the easy way. Manjula is here to teach you simple and practical recipes that carry out the authenticity of Indian vegetarian cooking. For new cooks and cooks new to Indian vegetarian cooking, the combination of video tutorials and written recipes will make it easier for you to understand the fundamentals in cooking Indian dishes.",
+      "followers": {
+        "facebook": 2200000,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5419335.jpg?t=1657190872"
+    },
+    {
+      "title": "ChooseVeg Blog",
+      "feed_url": "https://chooseveg.com/feed/",
+      "website_url": "https://chooseveg.com/blog/",
+      "description": "Latest vegan meal tips, vegetarian restaurant reviews, and breaking vegan news to help you move toward a vegetarian or vegan diet. ChooseVeg is a project of Mercy For Animals, dedicated to promoting compassionate food choices & policies.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 315000,
+        "instagram": 519799
+      },
+      "image_url": "https://i1.feedspot.com/5291699.jpg?t=1657190718"
+    },
+    {
+      "title": "Pavi's Kitchen",
+      "feed_url": "https://www.paviskitchen.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.paviskitchen.com/",
+      "description": "Authentic Indian vegetarian recipes with step by step instructions and pictures. Pavi's Kitchen recipes include Indian vegetarian recipes, sweets, soups, salads, cakes, Indian Festival Procedures, vegan recipes and eggless cakes.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 9,
+        "instagram": 362
+      },
+      "image_url": "https://i1.feedspot.com/5162994.jpg?t=1605764979"
+    },
+    {
+      "title": "Vegan Liftz Blog",
+      "feed_url": "https://veganliftz.com/feed/",
+      "website_url": "https://veganliftz.com/blog/",
+      "description": "Vegan Liftz is a team of diverse individuals striving to provide you with the best quality information on supplements, health, and overall lifestyle topics. With years of experience in vegan fitness and nutrition, here at Vegan Liftz, the team believes that being vegan can be tasty, exciting, and enjoyable. Vegan Liftz has set out time to research foods, exercise equipment, and more that are all vegan-based.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 166,
+        "instagram": 14700
+      },
+      "image_url": "https://i1.feedspot.com/5063055.jpg?t=1609245311"
+    },
+    {
+      "title": "The Los Angeles Food Blog",
+      "feed_url": "http://www.consumingla.com/feed/",
+      "website_url": "http://www.consumingla.com/",
+      "description": "Howard Meyers dedicates his time curating lists and guides introducing his favorite restaurants and food discoveries in L.A. His love for the diverse cuisine of the city has given him a lot of material to work within his journey to uncover all of the yummiest eateries in Los Angeles.",
+      "followers": {
+        "facebook": 2600,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/2267517.jpg?t=1612773143"
+    },
+    {
+      "title": "Norcal Foodies",
+      "feed_url": "https://www.norcalfoodies.com/feed/",
+      "website_url": "https://www.norcalfoodies.com/",
+      "description": "We (Mack and Deanna) live in the heart of San Francisco. We met online and were married in May 2012. We spend just about every weeknight in our kitchen cooking something, whether it be something simple like a soup, breakfast or something more complex, we are always looking forward to our next bite. Not all of the recipes we post are completely original. Not all our posts are recipes. We just like food.",
+      "followers": {
+        "facebook": 105
+      },
+      "image_url": "https://i1.feedspot.com/5603822.jpg?t=1687332982"
+    },
+    {
+      "title": "My San Francisco Kitchen",
+      "feed_url": "https://www.mysanfranciscokitchen.com/feed/",
+      "website_url": "https://www.mysanfranciscokitchen.com/",
+      "description": "A San Francisco food blog written by Kristianne Hannemann, with recipes cooked from scratch in every day life.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 2100,
+        "instagram": 89
+      },
+      "image_url": "https://i1.feedspot.com/5233308.jpg?t=1609761566"
+    },
+    {
+      "title": "GradFood",
+      "feed_url": "https://gradfood.com/feed/",
+      "website_url": "https://gradfood.com/",
+      "description": "GradFood is a food blog started by two grad students as a way to showcase easy-to-make, delicious recipes from around the world, and proving that even busy people can and should make time for cooking.",
+      "followers": {
+        "facebook": 176,
+        "instagram": 709
+      },
+      "image_url": "https://i1.feedspot.com/5198426.jpg?t=1600771166"
+    },
+    {
+      "title": "Cooking with Amy Blog",
+      "feed_url": "http://feeds.feedburner.com/blogspot/jibH",
+      "website_url": "https://cookingwithamy.blogspot.com/",
+      "description": "Hi! I'm Amy Sherman, a San Francisco based cookbook author, food writer and recipe developer. On the blog I offer original recipes, reviews, commentary, news and culinary travel information. I hope you enjoy visiting as much as I enjoy writing and sharing my discoveries.",
+      "followers": {
+        "twitter": 18100,
+        "instagram": 4300
+      },
+      "image_url": "https://i1.feedspot.com/308684.jpg?t=1612788181"
+    },
+    {
+      "title": "Forks Over Knives",
+      "feed_url": "https://www.forksoverknives.com/articles/feed/",
+      "website_url": "https://www.forksoverknives.com/articles/",
+      "description": "Hundreds of chef-tested plant-based recipes, cooking courses, expert advice, and the latest plant-based news, plus everything you need to make a plant-based lifestyle easy and enjoyable. Forks Over Knives empowers people to live healthier lives by changing the way the world understands nutrition.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 230600,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/5087603.jpg?t=1628245848"
+    },
+    {
+      "title": "HappyCow Blog",
+      "feed_url": "https://www.happycow.net/blog/",
+      "website_url": "https://www.happycow.net/blog/",
+      "description": "HappyCow was founded in 1999 as a public service to assist travelers and people everywhere to find plant-based / vegan options and healthy food. It is vegan-run, from a vegan perspective, and staffed by vegans and vegetarians. More than simply a restaurant and health food store guide, HappyCow is an ever-evolving online hub that serves millions worldwide each month.",
+      "followers": {
+        "facebook": 133300,
+        "twitter": 33800,
+        "instagram": 230500
+      },
+      "image_url": "https://i1.feedspot.com/4481960.jpg?t=1657192027"
+    }
+  ]
+}

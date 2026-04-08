@@ -1,0 +1,51 @@
+{
+  "category": "UK Sea Food",
+  "source_url": "https://rss.feedspot.com/uk_sea_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Direct Seafoods",
+      "feed_url": "https://www.directseafoods.co.uk/feed/",
+      "website_url": "https://www.directseafoods.co.uk/latest/",
+      "description": "Direct Seafoods supply quality fresh fish and seafood to the catering industry. We source, prepare and deliver fresh and frozen, fish and seafood; directly to professional kitchens.",
+      "followers": {
+        "facebook": 694,
+        "twitter": 1200,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4916201.jpg?t=1620379753"
+    },
+    {
+      "title": "Bradley's Fish Factory",
+      "feed_url": "https://bradleysfish.com/feed/",
+      "website_url": "https://bradleysfish.com/recipes/",
+      "description": "Bradley's are a third-generation family business, who delivers over 200 types of fresh frozen fish from around the world to your door. A variety of delicious recipes for seafood caught in UK waters. Cooking seafood can be daunting but our handy recipes are a great place to start.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 188
+      },
+      "image_url": "https://i1.feedspot.com/5201010.jpg?t=1607499609"
+    },
+    {
+      "title": "Mussel Inn Blog",
+      "feed_url": "https://www.mussel-inn.com/feed/",
+      "website_url": "https://www.mussel-inn.com/blog/",
+      "description": "Mussel Inn Seafood Restaurants is an Award winning seafood restaurants perfectly suited for families, lunches, dinners and celebrations, excellent value for money and friendly service. Follow us to keep up with news and recipes on seafood.",
+      "followers": {
+        "twitter": 395,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4720993.jpg?t=1607499475"
+    },
+    {
+      "title": "The Cornish Fishmonger Blog",
+      "feed_url": "https://thecornishfishmonger.co.uk/blogs/recipes.atom",
+      "website_url": "https://thecornishfishmonger.co.uk/blogs/recipes",
+      "description": "The Cornish Fishmonger is a family run specialist fishmonger, involved in the fishing industry since its creation by Robert Clifford-Wing some thirty years ago. During this time the business has earned an enviable reputation throughout the country for supplying top quality fish and seafood to many of the nations top chefs. Follow us to keep up with articles and recipes on seafood.",
+      "followers": {
+        "facebook": 18200,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4720970.jpg?t=1607499445"
+    }
+  ]
+}

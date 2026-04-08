@@ -1,0 +1,276 @@
+{
+  "category": "Calgary Food",
+  "source_url": "https://rss.feedspot.com/calgary_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Savour Calgary",
+      "feed_url": "https://savourcalgary.ca/feed/",
+      "website_url": "https://savourcalgary.ca/",
+      "description": "Savour Calgary is dedicated to supporting Calgary's culinary industry by presenting stories for food lovers in an entertaining, educational, and relevant fashion. They explore and 'savor' new and exciting experiences in and around the great city. Their writers have a passion for telling stories and their readers are enthusiastic about reading them.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1100,
+        "instagram": 6200
+      },
+      "image_url": "https://i1.feedspot.com/5457865.jpg?t=1666078040"
+    },
+    {
+      "title": "Avenue Calgary \u00bb Restaurants & Food",
+      "feed_url": "https://www.avenuecalgary.com/restaurants-food/feed/",
+      "website_url": "https://www.avenuecalgary.com/restaurants-food/",
+      "description": "Avenue magazine features the best of what the city has to offer - from arts, fashion, and interior design to food - telling provocative stories about the people and issues that shape our community. Through stimulating editorial and a sleek aesthetic, Avenue reaches readers who are active, affluent, and sophisticated. Find Restaurant review articles, recipes, tips and tricks for you, and more in our Restaurants and Food section.",
+      "followers": {
+        "facebook": 25000,
+        "twitter": 72100,
+        "instagram": 66000
+      },
+      "image_url": "https://i1.feedspot.com/5457860.jpg?t=1666077617"
+    },
+    {
+      "title": "Calgary Herald \u00bb Food",
+      "feed_url": "https://calgaryherald.com/category/life/food/feed.xml",
+      "website_url": "https://calgaryherald.com/category/life/food/",
+      "description": "Looking for new recipes or restaurants to try? We have you covered with all the latest food news, trending recipes and restaurant reviews.",
+      "followers": {
+        "facebook": 159900,
+        "twitter": 217600,
+        "instagram": 44700
+      },
+      "image_url": "https://i1.feedspot.com/5457856.jpg?t=1747382032"
+    },
+    {
+      "title": "Just a Smidgen Blog",
+      "feed_url": "https://feeds.feedburner.com/JustASmidgen",
+      "website_url": "https://justasmidgen.com/alt-home/blog/",
+      "description": "Hi, I am Barbara J Barry, I have a passion for baking, culinary creations, and the wonders of existence as I wander around my hometown this space holds words of love written just for you. Here you'll find the faces of creativity, beauty, love, kindness, abundance, receptivity, and a flourishing search for joy. This is a lifestyle blog filled with recipes, photography, poems, and DIY.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5457854.jpg?t=1666079398"
+    },
+    {
+      "title": "Fit Kitchen Blog",
+      "feed_url": "https://fitkitchen.ca/category/blog/feed/",
+      "website_url": "https://fitkitchen.ca/category/blog/",
+      "description": "Fit Kitchen are a healthy result oriented catering and meal prep company servicing the greater Sacramento area, fully committed to our clients and their goals! They deliver healthy, delicious and nutritious food and meal plans in Calgary areas. Read about physical and mental health, diet, fitness, and life from the fitness and health-focused team at Fit Kitchen.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 1400,
+        "instagram": 11900
+      },
+      "image_url": "https://i1.feedspot.com/5330532.jpg?t=1634018488"
+    },
+    {
+      "title": "Food Meanderings",
+      "feed_url": "https://foodmeanderings.com/feed/",
+      "website_url": "https://foodmeanderings.com/",
+      "description": "I'm Terri, a passionate home cook, and baker, My mission is to share not only my recipes, cooking hacks, and tips with you but also my secrets to successful weight maintenance. At Food Meanderings you'll find an easy, quick, shortcut, make-ahead, always delicious, and healthy and Weight Watchers-friendly recipes, with some indulgent baking thrown in for good measure!",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 226,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5267609.jpg?t=1666079640"
+    },
+    {
+      "title": "Jo Cooks Blog",
+      "feed_url": "https://www.jocooks.com/feed/",
+      "website_url": "https://www.jocooks.com/blog/",
+      "description": "Covers everything from instant pot recipes to filling breakfasts to decadent desserts. Jo Cooks is a lighthearted food blog with delicious and quick to make recipes with a select few easily available or on hand ingredients for the everyday homecook.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 2000,
+        "instagram": 265900
+      },
+      "image_url": "https://i1.feedspot.com/2022234.jpg?t=1666079601"
+    },
+    {
+      "title": "Cuisine et Ch\u00e2teau Blog",
+      "feed_url": "https://www.cuisineandchateau.com/blog?format=rss",
+      "website_url": "https://www.cuisineandchateau.com/blog",
+      "description": "Cuisine et Ch\u00e2teau Inc. started in 2010 out of a desire to share an infectious passion and knowledge of great food. Understanding ingredients and how to use them together, no matter what your level of expertise, can add special appreciation and enjoyment to the simplest of meals. Let us forever change the way we think and feel about food.",
+      "followers": {
+        "twitter": 569,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5457859.jpg?t=1666081112"
+    },
+    {
+      "title": "Food Mamma Blog",
+      "feed_url": "https://foodmamma.com/feed/",
+      "website_url": "https://foodmamma.com/blog/",
+      "description": "My name is Fareen Jadavji Jessa, I'm the founder of Food Mamma. I have a love of food, making it, eating it, photographing it, and watching it get made. This blog celebrates my favorite things - family, food, and travel.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 2500,
+        "instagram": 6900
+      },
+      "image_url": "https://i1.feedspot.com/4971283.jpg?t=1667885627"
+    },
+    {
+      "title": "Cut Cooking",
+      "feed_url": "https://cutcooking.com/feed/",
+      "website_url": "https://cutcooking.com/",
+      "description": "We are two authentic, ambitious women, who have created a company that is inspiring the world through:'manufacturing and distributing a gluten-free flour that doesn't compromise on taste and texture. Find various kinds of gluten-free recipes and food photographs on the site.",
+      "followers": {
+        "facebook": 1100,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5457861.jpg?t=1666081575"
+    },
+    {
+      "title": "Dish 'n' the Kitchen",
+      "feed_url": "https://dishnthekitchen.com/feed/",
+      "website_url": "https://dishnthekitchen.com/",
+      "description": "Hi, I'm Bernice Hill. Like many home cooks I learned to cook at my grandmother's side; baking cookies and sandwich bread for the hardworking farmers of the family. Dish 'n' the Kitchen is just a place for me to organize my food thoughts and creations. Staying in, Going out...sharing my food adventure with YOU through my blogs.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 3900,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4864108.jpg?t=1666081152"
+    },
+    {
+      "title": "Jillian Rae Cooks",
+      "feed_url": "https://www.jillianraecooks.com/recipe?format=rss",
+      "website_url": "https://www.jillianraecooks.com/recipe",
+      "description": "This is a food blog that doubles as a creative outlet to explore and share what I'm learning every day. This has ranged from food photography, and food styling, to new cooking techniques as well as building and managing my brand. Therefore, my blog continues to evolve as I do. I am also a micro-influencer, working with various companies that align with my personal values. Stay up to date by checking in here!",
+      "followers": {
+        "facebook": 252,
+        "twitter": 116,
+        "instagram": 11000
+      },
+      "image_url": "https://i1.feedspot.com/5457864.jpg?t=1666079565"
+    },
+    {
+      "title": "Calgary Farmers Market \u00bb Food Hall",
+      "feed_url": "https://www.calgaryfarmersmarket.ca/vendor_categories/food-hall/feed/",
+      "website_url": "https://www.calgaryfarmersmarket.ca/vendor_categories/food-hall/",
+      "description": "The Calgary Farmers' Market has a long and vibrant history in Calgary. We opened our doors in a historic airplane hangar in the community of Currie on July 1st, 2004. Believing that small choices make a big difference is what got us here, and seeing how many of you believe the same is what keeps us here and helps us grow. We are what you eat. Dig In. We invite you to get to know them and discover more about the products they make.",
+      "followers": {
+        "facebook": 56200,
+        "twitter": 25500,
+        "instagram": 8300
+      },
+      "image_url": "https://i1.feedspot.com/5457862.jpg?t=1666078763"
+    },
+    {
+      "title": "Buzz Bishop \u00bb Food",
+      "feed_url": "http://blog.buzzbishop.com/category/food/feed/",
+      "website_url": "http://blog.buzzbishop.com/category/food/",
+      "description": "I am Buzz Bishop and I published my first article online in 1995 and have been an active voice on the internet ever since. I pride myself on creating engaging, shareable stories where the brand is a tangential part of the process. Native content on my site reads just like the other stories and adventures I naturally tell. You will find restaurant reviews, recipes, food stories, etc in my blogs.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 11600,
+        "instagram": 9900
+      },
+      "image_url": "https://i1.feedspot.com/5457855.jpg?t=1666079123"
+    },
+    {
+      "title": "Linda Hoang \u00bb Calgary Food",
+      "feed_url": "https://linda-hoang.com/category/calgary-food/feed/",
+      "website_url": "https://linda-hoang.com/category/calgary-food/",
+      "description": "Linda Hoang is a blogger and content creator sharing travel, food, and lifestyle topics. Linda Hoang's blog is your source for things to do, eat and know each week. You will find suitable recommendations of food, recipes, and the latest update, etc in her blogs.",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 20600,
+        "instagram": 38000
+      },
+      "image_url": "https://i1.feedspot.com/5457852.jpg?t=1666080192"
+    },
+    {
+      "title": "Bakersbeans",
+      "feed_url": "https://www.bakersbeans.ca/feed/",
+      "website_url": "https://www.bakersbeans.ca/",
+      "description": "Welcome to Bakersbeans, the place where Wanda experiments and has fun with food and recipes. Cooking should be easy and not complicated right?! We like to make easy, delicious-tasting, and sometimes quick recipes for our busy family. We also like to revisit vintage recipes and test out new ones until perfect. Lifestyle and brand features fit naturally with our blog's vision.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 5700,
+        "instagram": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5128429.jpg?t=1666081824"
+    },
+    {
+      "title": "Meal Plan Addict",
+      "feed_url": "https://mealplanaddict.com/feed/",
+      "website_url": "https://mealplanaddict.com/",
+      "description": "My name is Steph, and I have a problem. I am a meal plan addict. I write the blog confessions of a Meal Plan Addict. My goal is to cook once, and have a fridge and freezer full of healthy go-to meals for the week and sometimes a month.",
+      "followers": {
+        "facebook": 21900,
+        "instagram": 56200
+      },
+      "image_url": "https://i1.feedspot.com/4879198.jpg?t=1666079252"
+    },
+    {
+      "title": "Dinner with Julie",
+      "feed_url": "https://www.dinnerwithjulie.com/feed/",
+      "website_url": "https://www.dinnerwithjulie.com/",
+      "description": "This artsy food blog is run by Julie Van Rosendaal, a culinary professional with decades of experience in cooking, baking, catering, and even teaching others about food by being a regular speaker on the Calgary Eyeopener radio show. Julie is a passionate researcher of home food and the culture of families and communities making food to share with each other.",
+      "followers": {
+        "facebook": 25000,
+        "twitter": 43400,
+        "instagram": 54000
+      },
+      "image_url": "https://i1.feedspot.com/4863618.jpg?t=1666078628"
+    },
+    {
+      "title": "Hungry in Calgary",
+      "feed_url": "https://hungryincalgary.com/feed/",
+      "website_url": "https://hungryincalgary.com/",
+      "description": "Since starting this blog in February 2017, I have learned exactly how much there is to appreciate about Calgary's foodie community. Hungry in Calgary blogs you will be exploring new recipes, recommendations for restaurants, and thoughts from one hungry friend to another.",
+      "followers": {
+        "facebook": 123,
+        "twitter": 27,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5457857.jpg?t=1666081661"
+    },
+    {
+      "title": "Deborah Nakaska Food",
+      "feed_url": "https://www.dnakaskafood.com/cant-stop-the-eat?format=rss",
+      "website_url": "https://www.dnakaskafood.com/cant-stop-the-eat",
+      "description": "Deborah Nakaska is a professional commercial food photographer and food stylist. Deborah Nakaska's blog is where she covers different parts of food photography, including lighting, styling techniques, and some of the best cooking practices.",
+      "followers": {
+        "facebook": 80,
+        "instagram": 288
+      },
+      "image_url": "https://i1.feedspot.com/5457858.jpg?t=1666081061"
+    },
+    {
+      "title": "Calgary Food Bank Blog",
+      "feed_url": "https://www.calgaryfoodbank.com/feed/",
+      "website_url": "https://www.culinairemagazine.ca/articles",
+      "description": "The Calgary Food Bank distributes healthy emergency food to individuals, families, and the agencies that serve them. Individuals and families in temporary emergency situations may request up to three hampers in a 12-month period. A bite of information, get the latest information from the Calgary Food Bank. Read about our volunteers, donors, programs, and more.",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 14900
+      },
+      "image_url": "https://i1.feedspot.com/4921602.jpg?t=1666081486"
+    },
+    {
+      "title": "Health Stand Nutrition Consulting Inc. Blog",
+      "feed_url": "https://www.healthstandnutrition.com/blog/",
+      "website_url": "https://www.healthstandnutrition.com/blog/",
+      "description": "We Live HealthFULLY + SoulFULLY Food. It sounds so simple but often can be hard to figure out. As a Calgary Dietician team and online nutrition experts, our mission is to empower people to create a healthy and joyous relationship with food and their body. Follow our nutrition blog for healthy eating articles, nutrition tips, videos, and healthy recipes from our Registered Dietitian Online Nutritionist team.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 2100,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4484550.jpg?t=1666077971"
+    },
+    {
+      "title": "Alberta Food Tours Blog",
+      "feed_url": "https://albertafoodtours.ca/blog/feed/",
+      "website_url": "https://albertafoodtours.ca/blog/",
+      "description": "Eat, Engage and Explore Alberta with us. You'll eat like an insider with Alberta Food Tours, Inc. When you eat, engage, and explore with us, you support farmers who create healthy soil and food, you keep our food businesses thriving and you create rewarding jobs for our team. Check out our blog posts that include recipes, discounts, and signature ways to enjoy Calgary, Banff, Canmore, and Edmonton with Alberta Food Tours.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 1200,
+        "instagram": 9100
+      },
+      "image_url": "https://i1.feedspot.com/5457853.jpg?t=1666077812"
+    }
+  ]
+}

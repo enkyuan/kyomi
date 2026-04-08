@@ -1,0 +1,52 @@
+{
+  "category": "Escondido News",
+  "source_url": "https://rss.feedspot.com/escondido_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Escondido Times-Advocate",
+      "feed_url": "https://www.times-advocate.com/feed/",
+      "website_url": "https://www.times-advocate.com/",
+      "description": "Times-Advocate is the hometown newspaper of Escondido, California. We are committed to bringing local news to Escondido! We are the leading source of breaking news, sports, business, local government, and more.",
+      "followers": {
+        "facebook": 45600,
+        "twitter": 245
+      },
+      "image_url": "https://i1.feedspot.com/4824132.jpg?t=1623650183"
+    },
+    {
+      "title": "Escondido Grapevine",
+      "feed_url": "https://feeds.feedburner.com/escondidograpevine/WSSs",
+      "website_url": "https://www.escondidograpevine.com/",
+      "description": "Escondido Grapevine is a state-of-the-art media site covering Escondido, San Marcos, Valley Center, San Diego County, California and the world. Posted directly by experienced journalists, and community supporters, and directed by Dan Weisman, editor, The Escondido Grapevine combines the best practices of old school journalism with the cutting edge design of what technology has wrought.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 40
+      },
+      "image_url": "https://i1.feedspot.com/5138584.jpg"
+    },
+    {
+      "title": "ABC 10News \u00bb Escondido",
+      "feed_url": "https://www.10news.com/news/north-county/escondido.rss",
+      "website_url": "https://www.10news.com/news/north-county/escondido",
+      "description": "ABC10 is the ABC television affiliate in San Diego, California, and is owned by E.W. Scripps. Get all the major news that matters to you from San Diego's leading news source, ABC 10News. Follow this feed for news headlines, weather, traffic, sports, entertainment & lifestyle in Escondido, California.",
+      "followers": {
+        "facebook": 689400,
+        "twitter": 191300,
+        "instagram": 100600
+      },
+      "image_url": "https://i1.feedspot.com/5138751.jpg?t=1586846855"
+    },
+    {
+      "title": "San Diego Union-Tribune \u00bb Escondido",
+      "feed_url": "https://www.sandiegouniontribune.com/location/california/san-diego-county/north-county/escondido/feed/",
+      "website_url": "https://www.sandiegouniontribune.com/location/california/san-diego-county/north-county/escondido/",
+      "description": "The San Diego Union-Tribune is San Diego's largest media company and its oldest business, dating back to the founding of the Union in 1868. Today, Union-Tribune publications reach more than 96 percent of San Diego County households each week. The company portfolio includes its Pulitzer Prize-winning newspaper, The San Diego Union-Tribune; the region's leading website, SanDiegoUnionTribune.com.",
+      "followers": {
+        "facebook": 259700,
+        "twitter": 217100,
+        "instagram": 75800
+      },
+      "image_url": "https://i1.feedspot.com/5138750.jpg?t=1586846346"
+    }
+  ]
+}

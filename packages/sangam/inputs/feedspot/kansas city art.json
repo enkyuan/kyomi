@@ -1,0 +1,101 @@
+{
+  "category": "Kansas City Art",
+  "source_url": "https://rss.feedspot.com/kansas_city_art_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kansas City Magazine \u00bb Arts & Entertainment",
+      "feed_url": "https://kansascitymag.com/category/things-to-do/arts-entertainment/feed/",
+      "website_url": "https://kansascitymag.com/category/things-to-do/arts-entertainment/",
+      "description": "Kansas City magazine - Restaurants, local news, Best of KC, events, BBQ",
+      "followers": {
+        "facebook": 45700,
+        "instagram": 48200
+      },
+      "image_url": "https://i1.feedspot.com/5716677.jpg?t=1700546910"
+    },
+    {
+      "title": "KC Studio",
+      "feed_url": "https://kcstudio.org/feed/",
+      "website_url": "https://kcstudio.org/category/articles/",
+      "description": "KC Studio Magazine covers the performing, visual, cinematic, and literary arts and the artists, organizations, and patrons that make Kansas City a vibrant center for arts and culture.",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 8700,
+        "instagram": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5715543.jpg?t=1700465875"
+    },
+    {
+      "title": "The Nelson-Atkins Museum of Art",
+      "feed_url": "https://nelson-atkins.org/feed/",
+      "website_url": "https://nelson-atkins.org/news-archive/",
+      "description": "The Nelson-Atkins Museum of Art",
+      "followers": {
+        "facebook": 148000,
+        "twitter": 53400,
+        "instagram": 109900
+      },
+      "image_url": "https://i1.feedspot.com/5716679.jpg?t=1700546917"
+    },
+    {
+      "title": "KCUR \u00bb Arts & Life",
+      "feed_url": "https://www.kcur.org/arts-life.rss",
+      "website_url": "https://www.kcur.org/arts-life",
+      "description": "KCUR is created by the public, for the public. As a vital and vibrant institution, It serves the public by reporting on and sharing information about local governments, politics, education, health care, arts, and culture through the voices of the people living those stories. Its Arts & Life Desk covers arts news from music to visual art to dance and theater, with a focus on Kansas and Missouri.",
+      "followers": {
+        "facebook": 40000,
+        "twitter": 30500,
+        "instagram": 27600
+      },
+      "image_url": "https://i1.feedspot.com/5715874.jpg?t=1700476642"
+    },
+    {
+      "title": "Lorrie Boydston Blog",
+      "feed_url": "https://www.lorrieboydston.com/blog-feed.xml",
+      "website_url": "https://www.lorrieboydston.com/blog",
+      "description": "lorrieboydston",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 410300,
+        "instagram": 592
+      },
+      "image_url": "https://i1.feedspot.com/5716680.jpg?t=1700547121"
+    },
+    {
+      "title": "Visit Kansas City Blog \u00bb Arts & Culture",
+      "feed_url": "https://www.visitkansascityks.com/blog/category/arts-&-culture/57b4dae7319a53116f05532e/rss/",
+      "website_url": "https://www.visitkansascityks.com/blog/category/arts-%26-culture/57b4dae7319a53116f05532e/",
+      "description": "Blog",
+      "followers": {
+        "facebook": 38800,
+        "twitter": 6500,
+        "instagram": 16300
+      },
+      "image_url": "https://i1.feedspot.com/5716675.jpg?t=1700546889"
+    },
+    {
+      "title": "Let's Make Art Matter",
+      "feed_url": "https://www.letsmakeart.com/blogs/make-art-matter.atom",
+      "website_url": "https://www.letsmakeart.com/blogs/make-art-matter/",
+      "description": "Art lessons that help you give back to someone who could use a little bit of extra love.",
+      "followers": {
+        "facebook": 132300,
+        "twitter": 3300,
+        "instagram": 122800
+      },
+      "image_url": "https://i1.feedspot.com/5716676.jpg?t=1700546896"
+    },
+    {
+      "title": "18th & Vine Arts Festival Blog",
+      "feed_url": "https://www.18thandvineartsfestival.com/blog?format=rss",
+      "website_url": "https://www.18thandvineartsfestival.com/blog/",
+      "description": "Stay updated with the latest news, stories, and insights from the 18th & Vine Arts Festival. Discover behind-the-scenes content and more.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 26,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5716678.jpg?t=1700546913"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "category": "Maine Politics",
+  "source_url": "https://rss.feedspot.com/maine_politics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Maine Public Politics",
+      "feed_url": "https://www.mainepublic.org/politics.rss",
+      "website_url": "https://www.mainepublic.org/politics",
+      "description": "Every day, Maine Public connects the people of Maine to each other and to the world through the open exchange of information, ideas, and cultural content. This section of the news website covers political updates and news.",
+      "followers": {
+        "facebook": 79100,
+        "twitter": 37300
+      },
+      "image_url": "https://i1.feedspot.com/5314695.jpg?t=1629723882"
+    },
+    {
+      "title": "The Portland Press Herald \u00bb Politics",
+      "feed_url": "https://www.pressherald.com/politics/feed/",
+      "website_url": "https://www.pressherald.com/politics/",
+      "description": "Looking to stay up on the latest political news? Look no further than the expert coverage provided by the Press Herald.",
+      "followers": {
+        "facebook": 91500,
+        "twitter": 101400,
+        "instagram": 46900
+      },
+      "image_url": "https://i1.feedspot.com/5240506.jpg?t=1750678759"
+    },
+    {
+      "title": "Maine Beacon",
+      "feed_url": "https://mainebeacon.com/feed/",
+      "website_url": "https://mainebeacon.com/",
+      "description": "Beacon is a website and podcast created by the Maine People's Alliance that features rigorous reporting, political news and smart progressive voices from across the state Maine.",
+      "followers": {
+        "facebook": 16900,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4923597.jpg?t=1611036444"
+    },
+    {
+      "title": "The Maine Wire",
+      "feed_url": "https://www.themainewire.com/feed/",
+      "website_url": "https://www.themainewire.com/category/news/",
+      "description": "The Maine Wire is a news and opinion service dedicated to providing information and perspective on the issues important to Maine people. The Maine Wire follows the policy, politics, and people of the State of Maine.",
+      "followers": {
+        "facebook": 108000,
+        "twitter": 9700,
+        "instagram": 28800
+      },
+      "image_url": "https://i1.feedspot.com/5314829.jpg?t=1629725072"
+    },
+    {
+      "title": "Maine Center for Economic Policy Blog",
+      "feed_url": "https://www.mecep.org/feed/",
+      "website_url": "https://www.mecep.org/",
+      "description": "The Maine Center for Economic Policy is a nonpartisan policy research organization that provides citizens, policymakers, advocates, and media with credible and rigorous economic analysis that advances economic justice and prosperity for all Maine people.",
+      "followers": {
+        "facebook": 8800,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4924185.jpg?t=1611036514"
+    },
+    {
+      "title": "Central Maine Politics",
+      "feed_url": "https://www.centralmaine.com/politics/feed/",
+      "website_url": "https://www.centralmaine.com/politics/",
+      "description": "Features news from the Kennebec Journal of Augusta, Maine and Morning Sentinel of Waterville, Maine. This section of the news website covers political updates and news.",
+      "followers": {
+        "facebook": 30200,
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/5314822.jpg?t=1629724926"
+    },
+    {
+      "title": "Lewiston Sun Journal Politics",
+      "feed_url": "https://www.sunjournal.com/politics/feed/",
+      "website_url": "https://www.sunjournal.com/politics/",
+      "description": "Lewiston Sun Journalcovers news and conversations from Maine since 1847. This section of the news website covers political updates and news.",
+      "followers": {
+        "twitter": 35800
+      },
+      "image_url": "https://i1.feedspot.com/5314858.jpg?t=1629725316"
+    },
+    {
+      "title": "MaineGOP",
+      "feed_url": "https://www.mainegop.com/news/",
+      "website_url": "https://www.mainegop.com/news/",
+      "description": "The Maine Republican Party is Maine's premier political organization. Covers the latest Maine Republican news and notes.",
+      "followers": {
+        "facebook": 28000,
+        "twitter": 10600,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5131835.jpg?t=1629724750"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "category": "Cyberpunk 2077",
+  "source_url": "https://rss.feedspot.com/cyberpunk_2077_rss_feeds",
+  "feeds": [
+    {
+      "title": "Steam \u00bb Cyberpunk 2077",
+      "feed_url": "https://store.steampowered.com/feeds/news/app/1091500/?cc=IN&l=english&snr=1_2108_9__2107",
+      "website_url": "https://store.steampowered.com/news/app/1091500",
+      "description": "Get Updates, events, and news from the developers of Cyberpunk 2077. Steam is the ultimate destination for playing, discussing, and creating games.",
+      "followers": {
+        "facebook": 5000000,
+        "twitter": 8800000
+      },
+      "image_url": "https://i1.feedspot.com/5374063.jpg?t=1645595246"
+    },
+    {
+      "title": "IGN India \u00bb Cyberpunk 2077",
+      "feed_url": "https://in.ign.com/cyberpunk-2077-2.xml",
+      "website_url": "https://in.ign.com/cyberpunk-2077-2",
+      "description": "All the latest Cyberpunk 2077 news, sales, achievements, videos and screenshots. IGN is the leading destination for gaming, entertainment and lifestyle-related stories for the passionate and dedicated audience of India.",
+      "followers": {
+        "facebook": 309200,
+        "twitter": 7400
+      },
+      "image_url": "https://i1.feedspot.com/5374061.jpg?t=1645447631"
+    },
+    {
+      "title": "Wow Pro \u00bb Cyberpunk 2077",
+      "feed_url": "https://www.wow-pro.com/category/cyberpunk-2077/feed/",
+      "website_url": "https://www.wow-pro.com/category/cyberpunk-2077/",
+      "description": "All the latest Cyberpunk 2077 news, sales, achievements, videos and screenshots. Wow pro is published by a Game guide writer who is an expert world of warcraft.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5374070.jpg?t=1645448237"
+    },
+    {
+      "title": "TutoGame \u00bb Cyberpunk 2077",
+      "feed_url": "https://www.tutogame.com/en/category/cyberpunk-2077/feed/",
+      "website_url": "https://www.tutogame.com/en/category/cyberpunk-2077/",
+      "description": "All the latest Cyberpunk 2077 news, sales, achievements, videos and screenshots. TUTOGAME is a video game blog published in the US, founded in February 2020 by industry veterans.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5374068.jpg?t=1645448249"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "category": "Tokyo food",
+  "source_url": "https://rss.feedspot.com/tokyo_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Tokyo Belly",
+      "feed_url": "http://tokyobelly.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://tokyobelly.blogspot.com/",
+      "description": "Steve's random food adventures in Tokyo that is all about checking out new and best restaurants in Tokyo.",
+      "followers": {
+        "facebook": 169
+      },
+      "image_url": "https://i1.feedspot.com/4622691.jpg?t=1616068860"
+    },
+    {
+      "title": "Tokyo Fox \u00bb Food & Drink",
+      "feed_url": "https://tokyofox.net/category/food-drink/feed/",
+      "website_url": "https://tokyofox.net/category/food-drink/",
+      "description": "Read posts about Food & Drink written by Tokyo Fox in this section. Tokyo Fox is the pseudonym used by a freelance journalist and Leicester City FC fan living and working in Tokyo as an English teacher.",
+      "followers": {
+        "facebook": 238,
+        "twitter": 768
+      },
+      "image_url": "https://i1.feedspot.com/4633689.jpg?t=1640091304"
+    },
+    {
+      "title": "Food Sake Tokyo",
+      "feed_url": "https://foodsaketokyo.com/feed/",
+      "website_url": "https://foodsaketokyo.com/",
+      "description": "Food Sake Tokyo conducts private guided field trips to Tokyo's popular food destinations that is led by food professionals. Yukari and Shinji Sakamoto authors of Food Sake Tokyo offers a unique insight to the food culture of Japan.",
+      "followers": {
+        "twitter": 10500
+      },
+      "image_url": "https://i1.feedspot.com/4621638.jpg?t=1616068887"
+    },
+    {
+      "title": "Tokyo Beer Drinker Blog",
+      "feed_url": "https://tokyobeerdrinker.com/feed",
+      "website_url": "https://tokyobeerdrinker.com/blog",
+      "description": "Blog with sporadic updates and information about drinking good beer in Tokyo.",
+      "followers": {
+        "twitter": 287
+      },
+      "image_url": "https://i1.feedspot.com/4639921.jpg?t=1616239781"
+    },
+    {
+      "title": "Tokyo Table",
+      "feed_url": "https://tokyotable.substack.com/feed",
+      "website_url": "https://tokyotable.substack.com/",
+      "description": "My mission is to help you experience Tokyo's most memorable meals. I will share with you my discoveries with insights into culinary technique, cultural experience, and value from my distinctive combination of perspectives as a professional chef, economist, and Tokyo resident.",
+      "followers": {
+        "facebook": 2300,
+        "instagram": 220
+      },
+      "image_url": "https://i1.feedspot.com/5002088.jpg?t=1616239777"
+    },
+    {
+      "title": "Tokyo Eats",
+      "feed_url": "http://www.tokyoeats.jp/feed/",
+      "website_url": "http://www.tokyoeats.jp/",
+      "description": "A daily Tokyo food blog about good places to eat in and around Tokyo, Japan. Photos, reviews and ratings of Tokyo restaurants.",
+      "followers": {
+        "facebook": 2700
+      },
+      "image_url": "https://i1.feedspot.com/422745.jpg?t=1616068647"
+    },
+    {
+      "title": "World_food_dina Tokyo",
+      "feed_url": "https://worldfooddina.com/category/tokyo/feed/",
+      "website_url": "https://worldfooddina.com/category/tokyo/",
+      "description": "Dina a food, wine, party, cooking lover and want to share her experiences in Tokyo with everyone.",
+      "followers": {
+        "facebook": 421,
+        "twitter": 10
+      },
+      "image_url": "https://i1.feedspot.com/4633711.jpg?t=1616239757"
+    },
+    {
+      "title": "Savvy Tokyo \u00bb Food & Drink",
+      "feed_url": "https://savvytokyo.com/category/food-and-drink/feed/",
+      "website_url": "https://danielfooddiary.com/category/overseas/overseas-japan/tokyo/",
+      "description": "This section features articles on Food & Drink. Savvy is Tokyo's foremost platform for women looking for the latest scoop on what's new in fashion, food and fun in this great city. We seek out the best-hidden shops, the coolest bars and the most cutting-edge salons in order to bring inspiration and knowledge to our savvy readers.",
+      "followers": {
+        "facebook": 43200,
+        "twitter": 3700,
+        "instagram": 8900
+      },
+      "image_url": "https://i1.feedspot.com/4633971.jpg?t=1640072515"
+    },
+    {
+      "title": "DanielFoodDiary \u00bb Overseas",
+      "feed_url": "https://danielfooddiary.com/category/overseas/overseas-japan/tokyo/",
+      "website_url": "https://danielfooddiary.com/category/overseas/overseas-japan/tokyo/",
+      "description": "DanielFoodDiary.com introduces some of the best food and dining experiences in Tokyo.",
+      "followers": {
+        "facebook": 401000,
+        "twitter": 4300,
+        "instagram": 294400
+      },
+      "image_url": "https://i1.feedspot.com/4633665.jpg?t=1616239746"
+    },
+    {
+      "title": "Bon Appetit Tokyo!",
+      "feed_url": "https://www.bonappetittokyo.com/feed/",
+      "website_url": "https://bonappetitvancouver.com/category/tokyo/",
+      "description": "Tokyo restaurant review blog. Let me share with you my dining experiences in the world's foodiest city. I am passionate about good food and wine, so during my free time I am always hunting for new restaurants and bars to try. I hope that you will be able to find a few good spots thanks to my blog!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5160077.jpg?t=1613743576"
+    }
+  ]
+}

@@ -1,0 +1,390 @@
+{
+  "category": "Black News",
+  "source_url": "https://rss.feedspot.com/black_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "AllAfrica",
+      "feed_url": "https://allafrica.com/tools/headlines/rdf/latest/headlines.rdf",
+      "website_url": "https://allafrica.com/",
+      "description": "AllAfrica is a voice of, by and about Africa - aggregating, producing and distributing 600 news and information items daily from over 100 African news organizations and our own reporters to an African and global public.",
+      "followers": {
+        "facebook": 271200,
+        "twitter": 486900
+      },
+      "image_url": "https://i1.feedspot.com/5060424.jpg?t=1658387627"
+    },
+    {
+      "title": "TheGrio",
+      "feed_url": "https://thegrio.com/feed/",
+      "website_url": "https://thegrio.com/",
+      "description": "TheGrio is a community devoted to perspectives that affect and reflect the African-American community. Find the latest news and breaking news for U.S., world, entertainment, politics and health news for African Americans.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 147900,
+        "instagram": 414800
+      },
+      "image_url": "https://i1.feedspot.com/2994.jpg?t=1658401334"
+    },
+    {
+      "title": "EURweb \u00bb Black Celebrity Gossip",
+      "feed_url": "https://eurweb.com/feed/",
+      "website_url": "https://eurweb.com/category/celebrity/black-celebrity-gossip-gossip/",
+      "description": "Covering the culture since 1997. Everything Urban + Radioscope is your home for black news, culture, and entertainment. EURweb has become the Internet's foremost information source for urban entertainment, sports, politics and opinion.",
+      "followers": {
+        "facebook": 73200,
+        "twitter": 9500,
+        "instagram": 14200
+      },
+      "image_url": "https://i1.feedspot.com/5423907.jpg?t=1658389034"
+    },
+    {
+      "title": "Black Enterprise",
+      "feed_url": "https://www.blackenterprise.com/feed/",
+      "website_url": "https://www.blackenterprise.com/",
+      "description": "Since 1970, Black Enterprise has been the go-to resource for black entrepreneurs and professionals. It offers indispensable business insights, career advice, and tech and finance content, empowering black individuals to thrive in the corporate world and beyond.",
+      "followers": {
+        "facebook": 861800,
+        "twitter": 316200,
+        "instagram": 983400
+      },
+      "image_url": "https://i1.feedspot.com/4945394.jpg?t=1710828912"
+    },
+    {
+      "title": "The Root",
+      "feed_url": "https://www.theroot.com/rss",
+      "website_url": "https://www.theroot.com/",
+      "description": "The Root, a digital magazine, offers insightful commentary and news from diverse black perspectives, providing unflinching analysis of key issues within the black community. With thought-provoking commentary from black thought leaders, it offers comprehensive coverage of politics, news, and more.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 599700,
+        "instagram": 594000
+      },
+      "image_url": "https://i1.feedspot.com/4861061.jpg?t=1629540554"
+    },
+    {
+      "title": "Bossip",
+      "feed_url": "https://bossip.com/feed/",
+      "website_url": "https://bossip.com/",
+      "description": "Bossip is the premier destination for African American popular culture and entertainment, with a voice that's edgy, viciously hilarious, politically aware - and completely unique.",
+      "followers": {
+        "facebook": 727300,
+        "twitter": 323500,
+        "instagram": 643000
+      },
+      "image_url": "https://i1.feedspot.com/326839.jpg?t=1658390417"
+    },
+    {
+      "title": "Africanews",
+      "feed_url": "https://www.africanews.com/feed/",
+      "website_url": "https://www.africanews.com/",
+      "description": "Find out all about latest breaking news, daily news and hot news in Africa. African politics, African business, African sports, health and technology on, also available. At Africanews we believe in people's intelligence and that News is not a matter of having preconceptions. Africanews is a media for all views and voices, ideas and perspectives.",
+      "followers": {
+        "facebook": 241500,
+        "twitter": 80000,
+        "instagram": 66400
+      },
+      "image_url": "https://i1.feedspot.com/5423909.jpg?t=1658390621"
+    },
+    {
+      "title": "NewsOne",
+      "feed_url": "https://newsone.com/feed/",
+      "website_url": "https://newsone.com/",
+      "description": "NewsOne.com is your destination for news and information for and about Blacks in America. Filled with original stories, diverse opinions, photos, videos and polls, NewsOne is dedicated to deepening out audiences' understanding about current events and their impact on black lives.",
+      "followers": {
+        "facebook": 730200,
+        "twitter": 73300,
+        "instagram": 66700
+      },
+      "image_url": "https://i1.feedspot.com/5206272.jpg?t=1658401983"
+    },
+    {
+      "title": "Black America Web",
+      "feed_url": "https://blackamericaweb.com/feed/",
+      "website_url": "https://blackamericaweb.com/",
+      "description": "Black America Web is your one stop for all things Black America. It features a blend of news, entertainment, and gossip for Black America.",
+      "followers": {
+        "facebook": 228100,
+        "twitter": 61000,
+        "instagram": 449400
+      },
+      "image_url": "https://i1.feedspot.com/4976341.jpg?t=1658391278"
+    },
+    {
+      "title": "Rolling Out",
+      "feed_url": "https://rollingout.com/feed/",
+      "website_url": "https://rollingout.com/",
+      "description": "Rolling Out is a brand with a trusted and influential voice. We develop rich, unique content around urban lifestyle, entertainment and music.",
+      "followers": {
+        "facebook": 334500,
+        "twitter": 58000,
+        "instagram": 147000
+      },
+      "image_url": "https://i1.feedspot.com/2095772.jpg?t=1658401104"
+    },
+    {
+      "title": "The South African",
+      "feed_url": "https://www.thesouthafrican.com/feed/",
+      "website_url": "https://www.thesouthafrican.com/",
+      "description": "The South African is an independent, no agenda and bias online news platform that gives the latest news updates. The South African is all about South Africa and the stories that affect South Africans, wherever they are in the world.",
+      "followers": {
+        "facebook": 913700,
+        "twitter": 41500,
+        "instagram": 11300
+      },
+      "image_url": "https://i1.feedspot.com/4857309.jpg?t=1658401701"
+    },
+    {
+      "title": "Atlanta Black Star",
+      "feed_url": "https://atlantablackstar.com/feed/",
+      "website_url": "https://atlantablackstar.com/",
+      "description": "Explore the latest news and coverage of trending topics from the Atlanta Black Star. Featuring news that empowers narratives to change our world. Atlanta Black Star is a narrative company. We publish narratives intentionally and specifically to enlighten and transform the world.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 39900,
+        "instagram": 229700
+      },
+      "image_url": "https://i1.feedspot.com/4411267.jpg?t=1658402135"
+    },
+    {
+      "title": "AFRO News",
+      "feed_url": "https://afro.com/feed/",
+      "website_url": "https://afro.com/",
+      "description": "The AFRO knows what it's like to endure challenging times. John H. Murphy, Sr., a former enslaved man founded the AFRO in 1892 with $200 from his wife, Martha Howard Murphy. Together they created a platform to offer images and stories of hope to advance their community. The AFRO provides readers with good news about the Black community not otherwise found.",
+      "followers": {
+        "facebook": 655100,
+        "twitter": 12800,
+        "instagram": 21900
+      },
+      "image_url": "https://i1.feedspot.com/5423984.jpg?t=1658402422"
+    },
+    {
+      "title": "Black News",
+      "feed_url": "https://blacknews.com/feed/",
+      "website_url": "https://blacknews.com/",
+      "description": "Daily Black news for African American professionals. Features headline stories, celebrity photos, columns, interviews, reviews and more. Black News is a non-partisan online destination for African American news, commentary, and celebrity photos. Since the year 2000, the site has been a valuable resource to the African American community.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 93000
+      },
+      "image_url": "https://i1.feedspot.com/5423985.jpg?t=1658402467"
+    },
+    {
+      "title": "Face2Face Africa",
+      "feed_url": "https://face2faceafrica.com/feed",
+      "website_url": "https://face2faceafrica.com/",
+      "description": "The Premier Pan-African Voice: We report on pan-African news and affairs with a focus on politics, business, lifestyle, women, entertainment, fashion and culture. It is a fast growing online news platform and an international reference for global black history, culture, business, and innovation. We amplify the voice of people of African descent around the world by reporting on what matters most to them and their communities.",
+      "followers": {
+        "facebook": 661200,
+        "twitter": 16300,
+        "instagram": 113400
+      },
+      "image_url": "https://i1.feedspot.com/4857332.jpg?t=1658402886"
+    },
+    {
+      "title": "African American News",
+      "feed_url": "https://aframnews.com/feed/",
+      "website_url": "https://aframnews.com/",
+      "description": "The African American News and Issues newspaper is the largest African American newspaper in Texas, and one of the largest in the nation. The purpose of the newspaper is to address current and historical issues that are impacting the African American community.",
+      "followers": {
+        "facebook": 337500,
+        "twitter": 1100,
+        "instagram": 385
+      },
+      "image_url": "https://i1.feedspot.com/5423982.jpg?t=1658403110"
+    },
+    {
+      "title": "Houston Defender Network",
+      "feed_url": "https://defendernetwork.com/feed/",
+      "website_url": "https://defendernetwork.com/",
+      "description": "Houston's Leading Black News & Information Source. The Defender is the leading and most trusted source of Black news and information in the Greater Houston area on multiple platforms: web, social media, print and more.",
+      "followers": {
+        "facebook": 75400,
+        "twitter": 6900,
+        "instagram": 11500
+      },
+      "image_url": "https://i1.feedspot.com/5424000.jpg?t=1658405667"
+    },
+    {
+      "title": "The Washington Informer",
+      "feed_url": "https://www.washingtoninformer.com/feed/",
+      "website_url": "https://www.washingtoninformer.com/",
+      "description": "The Washington Informer, a Black, woman-owned multimedia news organization serving the African-Americans in the DMV. We are three generations strong - that's 57 years of delivering accurate, timely, need-to-know information that has built an established trust among our audience.",
+      "followers": {
+        "facebook": 20400,
+        "twitter": 12200,
+        "instagram": 34100
+      },
+      "image_url": "https://i1.feedspot.com/5424003.jpg?t=1670415734"
+    },
+    {
+      "title": "New York Amsterdam News",
+      "feed_url": "https://amsterdamnews.com/feed/",
+      "website_url": "https://amsterdamnews.com/",
+      "description": "New York City's oldest Black newspaper offering the 'New Black View' within local, national and international news. The New York Amsterdam News was started more than a century ago, with a $10 investment. It has gone on to become one of the most important Black newspapers in the country and today remains one of the most influential Black-owned and -operated media businesses in the nation, if not the world.",
+      "followers": {
+        "facebook": 73500,
+        "twitter": 14900,
+        "instagram": 18200
+      },
+      "image_url": "https://i1.feedspot.com/5423999.jpg?t=1658409375"
+    },
+    {
+      "title": "Black Voice News",
+      "feed_url": "https://blackvoicenews.com/feed/",
+      "website_url": "https://blackvoicenews.com/",
+      "description": "Established in 1999 by Brown Publishing Company, Black Voice News is the oldest African-American online news publication on the West Coast. Originally launched as the online version of the California-based advocacy newspaper Black Voice News, the redesigned website was unveiled in 2015 as a platform for creative and concise content that informs + inspires.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 3200,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5042069.jpg?t=1670992987"
+    },
+    {
+      "title": "Capital B",
+      "feed_url": "https://capitalbnews.org/feed/",
+      "website_url": "https://capitalbnews.org/",
+      "description": "Capital B is a Black-led, nonprofit local and national news organization reporting for Black communities across the country. Our national team produces in-depth journalism on topics of crucial importance to Black people across the country, such as education, housing, health, the environment, criminal justice, and politics.",
+      "followers": {
+        "facebook": 11900,
+        "twitter": 10500,
+        "instagram": 14200
+      },
+      "image_url": "https://i1.feedspot.com/5424032.jpg?t=1658407894"
+    },
+    {
+      "title": "Dallas Examiner",
+      "feed_url": "https://dallasexaminer.com/feed/",
+      "website_url": "https://dallasexaminer.com/",
+      "description": "The Dallas Examiner is the leading African American Newspaper in the Dallas/Fort Worth area. We have been the voice of the Black community since 1986. Our weekly newspaper features an in depth look at issues that affect you and your community.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 746,
+        "instagram": 711
+      },
+      "image_url": "https://i1.feedspot.com/5424034.jpg?t=1658408213"
+    },
+    {
+      "title": "Black Health Matters",
+      "feed_url": "https://blackhealthmatters.com/feed/",
+      "website_url": "https://blackhealthmatters.com/",
+      "description": "Black Health Matters will provide information about health and well-being from a service-oriented perspective - with lots of upbeat, positive solutions and tips.",
+      "followers": {
+        "facebook": 55100,
+        "twitter": 3700,
+        "instagram": 12600
+      },
+      "image_url": "https://i1.feedspot.com/5283093.jpg?t=1658408577"
+    },
+    {
+      "title": "QCity Metro",
+      "feed_url": "https://qcitymetro.com/feed/",
+      "website_url": "https://qcitymetro.com/",
+      "description": "Qcitymetro provides online news, local event and entertainment information for the African American community of Charlotte, NC. At QCity Metro, our mission is to provide news, information and commentary from a Black perspective.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 4000,
+        "instagram": 29400
+      },
+      "image_url": "https://i1.feedspot.com/5424042.jpg?t=1658409115"
+    },
+    {
+      "title": "Peace FM Online",
+      "feed_url": "https://www.peacefmonline.com/pages/news.xml",
+      "website_url": "https://www.peacefmonline.com/",
+      "description": "Peace FM Online is for latest news, breaking news, audio and feature stories in Ghana. This site also contains latest news on entertainment, business, technology and health. Peace FM Online offers its reading audience with a comprehensive online source for up-to-the-minute news about Ghana politics, business, entertainment.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 859700
+      },
+      "image_url": "https://i1.feedspot.com/4916292.jpg?t=1658387752"
+    },
+    {
+      "title": "NBC News \u00bb Black News & Culture",
+      "feed_url": "https://www.nbcnews.com/nbcblk",
+      "website_url": "https://www.nbcnews.com/nbcblk",
+      "description": "Find the latest news articles, photos, and videos covering stories, issues, and opinions of the Black community on NBC News.",
+      "followers": {
+        "facebook": 14200000,
+        "twitter": 62900
+      },
+      "image_url": "https://i1.feedspot.com/5424002.jpg?t=1658404254"
+    },
+    {
+      "title": "Ebony",
+      "feed_url": "https://www.ebony.com/feed/",
+      "website_url": "https://www.ebony.com/",
+      "description": "Ebony Magazine has shined a spotlight on the worlds of Black people in America and worldwide. Our commitment to showcasing the best and brightest as well as highlighting disparities in Black life has been, and will always be, cornerstone to Ebony.",
+      "followers": {
+        "facebook": 1500000,
+        "twitter": 445700,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/5423908.jpg?t=1661776808"
+    },
+    {
+      "title": "Black Headline News",
+      "feed_url": "https://www.blackheadlinenews.com/blog-feed.xml",
+      "website_url": "https://www.blackheadlinenews.com/",
+      "description": "The Black Headline News Channel is a 24/7 stream to inform viewers of the latest news headlines featured in Black news outlets from across the world. These news headlines include breaking news, elections, world, national and regional news, and special feature reports. News genres also include sports, entertainment, lifestyles, health, financial help, fashion, food, travel, and inspirational talks.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5622056.jpg?t=1689050950"
+    },
+    {
+      "title": "HuffPost \u00bb Black Voices",
+      "feed_url": "https://www.huffpost.com/voices/black-voices",
+      "website_url": "https://www.huffpost.com/voices/black-voices",
+      "description": "Amplifying African American voices through political, social justice, entertainment and cultural news. All black lives deserve to tell their stories.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 399500,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/5424001.jpg?t=1658403835"
+    },
+    {
+      "title": "Los Angeles Sentinel",
+      "feed_url": "https://lasentinel.net/",
+      "website_url": "https://lasentinel.net/",
+      "description": "The Los Angeles Sentinel is an African American owned and operated newspaper that puts emphasis on issues concerning the African-American community and it's readers. Its a highly regarded paper that significantly influences the perceptions, attitudes and buying decisions of it's readership.",
+      "followers": {
+        "facebook": 14400,
+        "twitter": 7400,
+        "instagram": 16300
+      },
+      "image_url": "https://i1.feedspot.com/4821579.jpg?t=1658406159"
+    },
+    {
+      "title": "Black Enterprise News",
+      "feed_url": "https://www.blackenterprise.com/",
+      "website_url": "https://www.blackenterprise.com/",
+      "description": "Black Enterprise is the premier business, investing, and wealth-building resource for African Americans. Since 1970, Black Enterprise has provided essential business information and advice to professionals, corporate executives, entrepreneurs, and decision makers.",
+      "followers": {
+        "facebook": 861800,
+        "twitter": 316200,
+        "instagram": 983400
+      },
+      "image_url": "https://i1.feedspot.com/5424037.jpg?t=1658406694"
+    },
+    {
+      "title": "Philadelphia Tribune",
+      "feed_url": "https://www.phillytrib.com/",
+      "website_url": "https://www.phillytrib.com/",
+      "description": "With a rich history of growth and advocacy that closely mirrors the nation's Civil Rights progress, The Philadelphia Tribune is the nation's oldest continuously published newspaper reflecting the African-American experience.",
+      "followers": {
+        "facebook": 25300,
+        "twitter": 24000,
+        "instagram": 8900
+      },
+      "image_url": "https://i1.feedspot.com/5424033.jpg?t=1658407645"
+    },
+    {
+      "title": "Black Business News",
+      "feed_url": "https://feeds.feedburner.com/blackbusinessorg",
+      "website_url": "https://www.blackbusiness.com/",
+      "description": "A blog and directory with the latest news, resources and more for and about Black-owned businesses. Our site features the latest success stories for and about African American entrepreneurs, executives, and CEOs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5341300.jpg?t=1649660641"
+    }
+  ]
+}

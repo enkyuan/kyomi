@@ -1,0 +1,67 @@
+{
+  "category": "Haskell Programming",
+  "source_url": "https://rss.feedspot.com/haskell_programming_rss_feeds",
+  "feeds": [
+    {
+      "title": "Planet Haskell",
+      "feed_url": "https://planet.haskell.org/rss20.xml",
+      "website_url": "https://planet.haskell.org/",
+      "description": "Haskell is an advanced purely-functional programming language. An open-source product of more than twenty years of cutting-edge research, it allows rapid development of robust, concise, correct software. With strong support for integration with other languages, built-in concurrency and parallelism, debuggers, profilers, rich libraries, and an active community, Haskell makes it easier to produce flexible, maintainable, high-quality software.",
+      "followers": {
+        "twitter": 12700
+      },
+      "image_url": "https://i1.feedspot.com/4955027.jpg?t=1621836112"
+    },
+    {
+      "title": "Alexis King's Blog",
+      "feed_url": "https://lexi-lambda.github.io/feeds/all.rss.xml",
+      "website_url": "https://lexi-lambda.github.io/",
+      "description": "My name is Alexis King, and I write a lot of software. I'm interested in functional programming, static types, and programming language research, and I try to spend as much time as I can writing Haskell and Racket.",
+      "followers": {
+        "twitter": 12000
+      },
+      "image_url": "https://i1.feedspot.com/4660201.jpg?t=1621836125"
+    },
+    {
+      "title": "Neil Mitchell's Haskell Blog",
+      "feed_url": "http://neilmitchell.blogspot.com/feeds/posts/default",
+      "website_url": "http://neilmitchell.blogspot.com/",
+      "description": "Neil Mitchell is one of Australia's most experienced journalists. He is also a Haskell programmer. This blog is all about Haskell.",
+      "followers": {
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/101285.jpg?t=1621836120"
+    },
+    {
+      "title": "Mark Karpov's Site",
+      "feed_url": "https://markkarpov.com/feed.atom",
+      "website_url": "https://markkarpov.com/posts.html",
+      "description": "Mark Karpov is a software engineer who applies the principles of functional programming to solve real-world problems. He works as a consultant helping clients design and build correct, robust, and maintainable software. His personal projects include high-profile Haskell libraries, tutorials, and a technical blog.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4955131.jpg?t=1621836138"
+    },
+    {
+      "title": "FP Complete Blog",
+      "feed_url": "https://www.fpcomplete.com/atom.xml",
+      "website_url": "https://www.fpcomplete.com/blog/",
+      "description": "Get the latest insights from our team.Founded in 2012 by Aaron Contorer, former Microsoft executive, FP Complete became a leader in commercial-grade software and functional programming.",
+      "followers": {
+        "facebook": 380,
+        "twitter": 6200
+      },
+      "image_url": "https://i1.feedspot.com/4955082.jpg?t=1621836134"
+    },
+    {
+      "title": "Bitemyapp",
+      "feed_url": "https://bitemyapp.com/rss.xml",
+      "website_url": "https://bitemyapp.com/",
+      "description": "I'm Chris - a software business consultant and avid hacker. I love building, working on, and marketing software products. Occasionally I post to my blog or announce a project. I teach Haskell and Rust as well as work on projects written in Rust.",
+      "followers": {
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/3830818.jpg?t=1621836166"
+    }
+  ]
+}

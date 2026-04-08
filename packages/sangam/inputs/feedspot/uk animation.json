@@ -1,0 +1,76 @@
+{
+  "category": "UK Animation",
+  "source_url": "https://rss.feedspot.com/uk_animation_rss_feeds",
+  "feeds": [
+    {
+      "title": "Skwigly",
+      "feed_url": "https://www.skwigly.co.uk/feed/",
+      "website_url": "https://www.skwigly.co.uk/",
+      "description": "Find the latest animation news, reviews, interviews, videos, podcasts and much more from the world of animation. Skwigly is the largest & longest running animation magazine in the UK.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 12700
+      },
+      "image_url": "https://i1.feedspot.com/4483341.jpg?t=1634206352"
+    },
+    {
+      "title": "All the Anime",
+      "feed_url": "http://blog.alltheanime.com/feed/",
+      "website_url": "https://blog.alltheanime.com/",
+      "description": "Anime Ltd started out as a consultancy company ran by Andrew Partridge and since has grown into something completely different. Their blog is an updated blog about all thing anime.",
+      "followers": {
+        "facebook": 29900,
+        "twitter": 51900,
+        "instagram": 13600
+      },
+      "image_url": "https://i1.feedspot.com/4484200.jpg?t=1607404739"
+    },
+    {
+      "title": "Slurpy Animation Studios London",
+      "feed_url": "https://slurpystudios.com/feed/",
+      "website_url": "https://slurpystudios.com/",
+      "description": "Award winning Slurpy Animation Studios London is a full-service animation production company. We make: animation for education, commercials, entertainment. Read more on our blog",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 2900,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4863654.jpg?t=1607405324"
+    },
+    {
+      "title": "Dennis Sisterson Animation Blog",
+      "feed_url": "https://www.sisterson.co.uk/blog-feed.xml",
+      "website_url": "https://www.sisterson.co.uk/blog",
+      "description": "I've been working as an independent animator, mostly in London, since 1998. Although I always enjoy working on narrative cartoon-type material, I feel there is a great deal of untapped potential in animation as a tool for communication and education and I'm always looking for opportunities to explore this.",
+      "followers": {
+        "twitter": 75,
+        "instagram": 427
+      },
+      "image_url": "https://i1.feedspot.com/4911544.jpg?t=1620134221"
+    },
+    {
+      "title": "Fudge Animation Journal",
+      "feed_url": "https://www.fudgeanimation.com/feed",
+      "website_url": "https://www.fudgeanimation.com/journal",
+      "description": "The latest news section of the Fudge Animation website has been providing latest news about the animation industry, interviews, inspiration, as well as art and design influences from the world of animation. An award-winning independent animation studio based in the UK, it inspires and motivates target audiences with distinctive character animation.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 523,
+        "instagram": 773
+      },
+      "image_url": "https://i1.feedspot.com/4483887.jpg?t=1607405512"
+    },
+    {
+      "title": "Animated Technologies",
+      "feed_url": "https://www.animatedtechnologies.co.uk/feed",
+      "website_url": "https://www.animatedtechnologies.co.uk/",
+      "description": "Animated Technologies is a technology marketing agency that specialises in explainer videos, animated marketing videos, and product launch videos.",
+      "followers": {
+        "facebook": 451,
+        "twitter": 1800,
+        "instagram": 481
+      },
+      "image_url": "https://i1.feedspot.com/5030353.jpg?t=1620134184"
+    }
+  ]
+}

@@ -1,0 +1,1057 @@
+{
+  "category": "GIS",
+  "source_url": "https://rss.feedspot.com/gis_rss_feeds",
+  "feeds": [
+    {
+      "title": "GIS Geography",
+      "feed_url": "https://gisgeography.com/feed/",
+      "website_url": "https://gisgeography.com/articles/",
+      "description": "GIS Geography is the source for geographic data, cartographic maps, remote sensing, spatial analysis and GIS software.",
+      "followers": {
+        "facebook": 6300,
+        "twitter": 24700
+      },
+      "image_url": "https://i1.feedspot.com/4567576.jpg?t=1607664942"
+    },
+    {
+      "title": "Digital Geography",
+      "feed_url": "https://digital-geography.com/feed/",
+      "website_url": "https://digital-geography.com/",
+      "description": "Digital-geography.com is a multilingual blog about GIS-tutorials, webmapping, statistics and much more out of the 'geosphere'.",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/1152684.jpg?t=1607698119"
+    },
+    {
+      "title": "Free and Open Source GIS Ramblings",
+      "feed_url": "https://anitagraser.com/feed/",
+      "website_url": "https://anitagraser.com/",
+      "description": "Free and Open Source GIS Ramblings - written by Anita Graser aka Underdark. I am a scientist, open source GIS advocate, and author. This blog was born in 2010 as a place to record my thoughts and experiences in using open source GIS.",
+      "followers": {
+        "twitter": 22400
+      },
+      "image_url": "https://i1.feedspot.com/4439475.jpg?t=1607664842"
+    },
+    {
+      "title": "GeoInformatics",
+      "feed_url": "https://www.geoinformatics.com/feed/",
+      "website_url": "https://www.geoinformatics.com/",
+      "description": "GeoInformatics provides coverage, analysis and commentary with respect to the international surveying, mapping and GIS industry. GeoInformatics gives product and business news, reports, technical/application articles, hard- and software reviews, columns and more.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 12200
+      },
+      "image_url": "https://i1.feedspot.com/4730540.jpg?t=1699592932"
+    },
+    {
+      "title": "Google Maps Blog",
+      "feed_url": "https://blog.google/products/maps/rss/",
+      "website_url": "https://blog.google/products/maps/",
+      "description": "The latest news and updates about Google Maps, which makes navigating and exploring your world faster and easier.",
+      "followers": {
+        "facebook": 4500000,
+        "twitter": 4300000,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/4729959.jpg?t=1699592958"
+    },
+    {
+      "title": "AABSyS Blog",
+      "feed_url": "https://aabsys.com/feed/",
+      "website_url": "https://aabsys.com/blogs/",
+      "description": "AABSyS provides its GIS, CAD, and GIS software services to its clients all over the world. The company undertakes many large-scale GIS, Software, and CAD projects. Their blog section informs readers on the latest developments and technological innovations in the Geodata Mapping sector.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 442
+      },
+      "image_url": "https://i1.feedspot.com/5761554.jpg?t=1706167700"
+    },
+    {
+      "title": "North River Geographic Systems Inc Blog",
+      "feed_url": "https://www.northrivergeographic.com/feed/",
+      "website_url": "https://www.northrivergeographic.com/category/gis/",
+      "description": "North River Geographic Systems, Inc. is a geospatial consulting company located in Chattanooga Tennessee. NRGS works exclusively with Free and Open Source Software for Geoinformatics (FOSS4G). It helps companies, organizations, and various agencies with analysis, training, or using Open Source Software. NRGS brings 25+ years of experience in the Geospatial Industry and tackles every problem with a mix of technology and sound reasoning.",
+      "followers": {
+        "facebook": 224
+      },
+      "image_url": "https://i1.feedspot.com/5709333.jpg?t=1699592649"
+    },
+    {
+      "title": "QGIS.org blog",
+      "feed_url": "https://blog.qgis.org/feed/",
+      "website_url": "https://blog.qgis.org/",
+      "description": "QGIS is a user friendly Open Source Geographic Information System (GIS) licensed under the GNU General Public License. QGIS is an official project of the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix, Mac OSX, Windows and Android and supports numerous vector, raster, and database formats and functionalities.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/531191.jpg?t=1699599553"
+    },
+    {
+      "title": "Planet OSGeo",
+      "feed_url": "http://planet.osgeo.org/atom.xml",
+      "website_url": "https://planet.osgeo.org/",
+      "description": "Planet OSGeo is a website that aggregates blog posts and other web content from members of the Open Source Geospatial Foundation (OSGeo). OSGeo is ahttps://www.linkedin.com/in/geospatialtechno/ non-profit organization that supports the development of open source geospatial software. Planet OSGeo is a valuable resource for anyone interested in geospatial technology. It provides a way to stay up-to-date on the latest news and developments in the field, and to learn from the experiences of other OSGeo members.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/646852.jpg?t=1699609056"
+    },
+    {
+      "title": "Spatial Reserves",
+      "feed_url": "https://spatialreserves.wordpress.com/feed/",
+      "website_url": "https://spatialreserves.wordpress.com/",
+      "description": "Welcome to the Spatial Reserves blog. The GIS Guide to Public Domain Data was written to provide GIS practitioners and instructors with the essential skills to find, acquire, format, and analyze public domain spatial data. Some of the themes discussed in the book include open data access and spatial law, the importance of metadata, the fee vs. free debate, and more. This blog was established to follow up on some of these themes, promote a current discussion of the issues raised, and host a copy of the exercises that accompany the book.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4306210.jpg?t=1699603398"
+    },
+    {
+      "title": "Po Ve Sham",
+      "feed_url": "https://povesham.wordpress.com/feed/",
+      "website_url": "https://povesham.wordpress.com/",
+      "description": "Muki Haklay is a Professor of Geographic Information Science in the Department of Geography, at University College London. He is also the co-director of the UCL Extreme Citizen Science group, which is dedicated to allowing any community, regardless of their literacy, to use scientific methods and tools to collect, analyze, interpret, and use information about their area and activities.",
+      "followers": {
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4081945.jpg?t=1699603568"
+    },
+    {
+      "title": "GEO Jobe Blog",
+      "feed_url": "https://geo-jobe.com/feed/",
+      "website_url": "https://geo-jobe.com/blog/",
+      "description": "Since 1999, GEO Jobe's experienced team of experts and business partners have been helping a range of industries benefit from the power of GIS technology. Geo Jobe blog contains GIS insights, musings, and resources from spatial-thinking brainiacs interested in maps, GIS, Esri, ArcGIS, ArcGIS online, admin tools, UAV and other cool Geo technology",
+      "followers": {
+        "facebook": 2300,
+        "instagram": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5709343.jpg?t=1699594792"
+    },
+    {
+      "title": "Lepton Software Blog",
+      "feed_url": "https://leptonsoftware.com/feed/",
+      "website_url": "https://leptonsoftware.com/blog/",
+      "description": "Empowering enterprises and start-ups with comprehensible location intelligence built on the foundation pillars of AI, ML, and Big Data. Lepton Software solve large complex business problems such as business expansion, performance analysis, and operations optimization with actionable location intelligence and data analytics. Read location intelligence articles, news, product updates & industry reports on GIS & location analytics & AI/ML cloud based mapping software solutions.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5709341.jpg?t=1699594896"
+    },
+    {
+      "title": "IQGeo blog \u00bb Geographic Information Systems",
+      "feed_url": "https://www.iqgeo.com/blog/rss.xml",
+      "website_url": "https://www.iqgeo.com/blog/tag/geographic-information-systems-gis",
+      "description": "Whether it's highly competitive fiber and 5G broadband rollouts, optimized private and regional networks, or complex utility grid modernization projects, customers trust IQGeo's flexible software solutions. The blog covers various topics related to geographic information systems (GIS), telecommunications, electric utilities, gas utilities, and district energy.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5708808.jpg?t=1699595070"
+    },
+    {
+      "title": "The GIS Blog",
+      "feed_url": "https://blogs.lincoln.ac.nz/gis/feed/",
+      "website_url": "https://blogs.lincoln.ac.nz/gis/",
+      "description": "GIS stands for Geographic Information Systems - a suite of software that allows us to work with spatial data for mapping and analysis. This blog was started as a way to better communicate with the GIS users on the Lincoln University campus. It's about common problems and solutions, and sharing the successes and frustrations that go with doing spatial analysis.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5709340.jpg?t=1699595095"
+    },
+    {
+      "title": "North Road Blog",
+      "feed_url": "https://north-road.com/feed/",
+      "website_url": "https://north-road.com/blog/",
+      "description": "North Road Blog is passionate about all things geospatial and wants to help your spatial data be used in the most effective way. Headed up by Nyall Dawson, spatial analyst and established member of the QGIS development community, North Road offers expert spatial analysis of your data, cartography, tailored enhancements and features to QGIS, training in QGIS, and assistance in transferring your business from expensive commercial GIS packages to open-source alternatives.",
+      "followers": {
+        "facebook": 662
+      },
+      "image_url": "https://i1.feedspot.com/5709345.jpg?t=1699595124"
+    },
+    {
+      "title": "3-GIS Blog",
+      "feed_url": "https://blog.3-gis.com/blog/rss.xml",
+      "website_url": "https://blog.3-gis.com/blog/topic/gis",
+      "description": "3-GIS solves the problems of the telecommunications industry for managing physical network assets. 3-GIS is wholly owned by SSP Innovations, a premier provider of GIS solutions for the utility & telecom industries. The 3-GIS blog is full of insights on industry trends, new technologies, best practices, and more.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 490
+      },
+      "image_url": "https://i1.feedspot.com/5709335.jpg?t=1699592658"
+    },
+    {
+      "title": "NYS GIS",
+      "feed_url": "https://www.nysgis.net/feed/",
+      "website_url": "https://www.nysgis.net/",
+      "description": "The NYS GIS Association represents the interests of the entire geospatial community within New York and is the premier statewide professional organization for GIS and related industries. The Association is uniquely positioned to advocate in the state and nationally on issues of importance to the GIS industry (e.g., legislation and funding), reach out to sister organizations in other professions in building strong collaborations, and provide a statewide forum for advancing our profession through shared experiences, learning and training.",
+      "followers": {
+        "facebook": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4185118.jpg?t=1699610078"
+    },
+    {
+      "title": "Magnasoft Blog",
+      "feed_url": "https://www.magnasoft.com/feed/",
+      "website_url": "https://www.magnasoft.com/blog/",
+      "description": "Magnasoft is a leading provider of geospatial services, offering a range of solutions to help businesses make better-informed decisions. We specialize in geospatial mapping, engineering and design, and analysis, with a proven track record and experience in this ever-evolving field. Our knowledgeable team of experts is dedicated to developing innovative and reliable solutions that utilize the power of geospatial data to help our clients achieve their goals.",
+      "followers": {
+        "twitter": 127
+      },
+      "image_url": "https://i1.feedspot.com/5701219.jpg?t=1698746563"
+    },
+    {
+      "title": "Procore Corporate Blog",
+      "feed_url": "https://blog.procore.com/rss/",
+      "website_url": "https://blog.procore.com/",
+      "description": "Unearth's mission is to support critical infrastructure providers in building and maintaining a better society. It cover the latest news within critical infrastructure industries - exploring innovative technologies, urgent risks, software solutions, and more.",
+      "followers": {
+        "facebook": 43,
+        "twitter": 339
+      },
+      "image_url": "https://i1.feedspot.com/5554860.jpg?t=1683099099"
+    },
+    {
+      "title": "SoCalGIS.org",
+      "feed_url": "https://socalgis.org/category/news/feed/",
+      "website_url": "https://socalgis.org/category/news/",
+      "description": "SoCalGIS is a local government GIS user group serving Los Angeles County and Orange County area municipalities, local government agencies, education, and non-profits using GIS. SoCalGIS is also a California Regional GIS Collaborative which allows an opportunity for government, non-profits, and private sectors to create and achieve mutual goals in California.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5709332.jpg?t=1699595240"
+    },
+    {
+      "title": "USC GIS Blog",
+      "feed_url": "https://gis.usc.edu/feed/",
+      "website_url": "https://gis.usc.edu/blog/",
+      "description": "Welcome to our geographic information science (GIS) and technology blog. We feature a mixture of GIS academic articles, news, USC student stories, and interesting GIS application articles. We recommend follow this blog if you want to find out more about what excites us as GIS practitioners and academics - we aim to provide a mixture of interesting GIS news articles, career information, and highlights from the GIS programs at the University of Southern California.",
+      "followers": {
+        "facebook": 19300,
+        "twitter": 331
+      },
+      "image_url": "https://i1.feedspot.com/5287303.jpg?t=1622545073"
+    },
+    {
+      "title": "SSP Innovations Blog",
+      "feed_url": "https://sspinnovations.com/blog/feed/",
+      "website_url": "https://sspinnovations.com/blog/",
+      "description": "SSP Innovations is a Multi-award winning GIS experts in Esri & Schneider Electric software. Check out free GIS ebooks, videos, and more.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4890609.jpg?t=1607665545"
+    },
+    {
+      "title": "GoGeomatics Canada",
+      "feed_url": "https://gogeomatics.ca/feed/",
+      "website_url": "https://gogeomatics.ca/",
+      "description": "GoGeomatics is the largest and most popular communications hub promoting the Canadian geospatial community. The business was incorporated in 2011. GoGeomatics hosts over 100 fun, free, location technology networking events each year in cities across Canada.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 10600
+      },
+      "image_url": "https://i1.feedspot.com/4945492.jpg?t=1699593448"
+    },
+    {
+      "title": "Canadian GIS & Geomatics",
+      "feed_url": "https://canadiangis.com/feed",
+      "website_url": "https://canadiangis.com/",
+      "description": "Canadian GIS & Geomatics have been helping Canadians find geographic information since 2005. It focuses on GIS, open data, cartography, geography & geomatics. Canadian Geospatial Resources helps in information related to geomatics, GIS, cartography / maps, geography, open data, python, drones / UAV, LIDAR, geo books, conferences, GIS jobs, & more.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 39300
+      },
+      "image_url": "https://i1.feedspot.com/4729528.jpg?t=1699593500"
+    },
+    {
+      "title": "Spatial Source",
+      "feed_url": "https://www.spatialsource.com.au/feed/",
+      "website_url": "https://www.spatialsource.com.au/category/gis-data/",
+      "description": "Spatial Source is the only independent news service for the Australasian surveying and spatial sectors. Find latest news on geospatial, surveying, GIS, location data and unmanned technologies.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4731327.jpg?t=1699593549"
+    },
+    {
+      "title": "Coordinates",
+      "feed_url": "https://mycoordinates.org/category/news/gisnews/feed/",
+      "website_url": "https://mycoordinates.org/category/news/gisnews/",
+      "description": "Coordinates : A resource on positioning, navigation and beyond and also GIS News. It also covers related technologies and applications like Mapping, Surveying, Cartography, Timing etc. It also highlights GIS, Remote Sensing, LIDAR, Photogrammetry etc and their applications",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4730501.jpg?t=1610603001"
+    },
+    {
+      "title": "xyHt",
+      "feed_url": "https://www.xyht.com/feed/",
+      "website_url": "https://www.xyht.com/category/spatial-itgis/",
+      "description": "xyHt, a magazine for geospatial professionals, is an evolving resource for professionals in the fields of positioning, measurement, and imaging. xyHt and its related publications cover topics in precision location and measurement. Specifically, Cartography - GIS, GIOS, Spatial IT.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1700,
+        "instagram": 833
+      },
+      "image_url": "https://i1.feedspot.com/4733452.jpg?t=1699593590"
+    },
+    {
+      "title": "Spatial Times",
+      "feed_url": "https://www.spatialtimes.com/rss.xml",
+      "website_url": "https://www.spatialtimes.com/",
+      "description": "Unofficial thoughts on GIS technology for the spatial world. This blog is just as much for me as it is my [potential] readers. The goal is to share interesting news, ideas, and solutions related to the world of GIS.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4944551.jpg?t=1610602929"
+    },
+    {
+      "title": "Paul Shapley's Open Source Geospatial Blog",
+      "feed_url": "https://www.paulshapley.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.paulshapley.com/",
+      "description": "Find Observations, comments and tutorials on the world of open source mapping and geographical information systems(GIS) for users and developers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4730075.jpg?t=1607666692"
+    },
+    {
+      "title": "Earth Imaging Journal",
+      "feed_url": "https://feeds.feedburner.com/EIJournal",
+      "website_url": "https://eijournal.com/",
+      "description": "Earth Imaging Journal is a bimonthly magazine covering a range of earth observation and geospatial technologies and applications. Content ranges from introductory material to advanced technical discussion on a range of topics, including the latest advances in geospatial technology.",
+      "followers": {
+        "facebook": 385,
+        "twitter": 776
+      },
+      "image_url": "https://i1.feedspot.com/4729977.jpg?t=1699593765"
+    },
+    {
+      "title": "GeoPlanIT",
+      "feed_url": "https://www.geoplanit.co.uk/?feed=rss2",
+      "website_url": "https://www.geoplanit.co.uk/",
+      "description": "The intention of this blog is to discuss themes related to technology, geography and town planning. It's a broad topic area I know but it should provide me with some material! The blog will be a place where you find out useful information such as methods to make maps, or cool plugins for SketchUp that I like.",
+      "followers": {
+        "facebook": 130
+      },
+      "image_url": "https://i1.feedspot.com/4729891.jpg?t=1607665761"
+    },
+    {
+      "title": "Geospatial Enabling Technologies Blog",
+      "feed_url": "https://www.getmap.eu/feed/?lang=en",
+      "website_url": "https://www.getmap.eu/blog/",
+      "description": "GEOSPATIAL ENABLING TECHNOLOGIES (GET) was founded in 2006 with headquarters in Athens and in Thessaloniki, active in Greece and abroad. Our team consists of professionals with high level of technical knowledge and experience in management and development of spatial information, in open standards, open and free software, open data and the environment.",
+      "followers": {
+        "twitter": 255
+      },
+      "image_url": "https://i1.feedspot.com/4944562.jpg?t=1607666120"
+    },
+    {
+      "title": "GIS Crack",
+      "feed_url": "https://giscrack.com/category/gis/feed/",
+      "website_url": "https://giscrack.com/category/gis/",
+      "description": "Learn for free Geographic Information System. Know the power of GIS.",
+      "followers": {
+        "facebook": 13600
+      },
+      "image_url": "https://i1.feedspot.com/4736363.jpg?t=1607665101"
+    },
+    {
+      "title": "GIS and Agent-Based Modeling",
+      "feed_url": "https://www.gisagents.org/feeds/posts/default?alt=rss",
+      "website_url": "https://www.gisagents.org/search/label/GIS",
+      "description": "GIS and Agent-based modeling aim is to highlight and examine the latest advances in the fields of agent-based modeling, geographical information science (GIS) and other things along the way.This is a research site focused around my interests in Geographical Information Science (GIS) and Agent-Based Modeling (ABM).",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4729953.jpg?t=1607665566"
+    },
+    {
+      "title": "GeoHipster",
+      "feed_url": "https://www.geohipster.com/feed/",
+      "website_url": "https://www.geohipster.com/posts/",
+      "description": "GeoHipster is the brainchild of Atanas Entchev and Glenn Letham, of ENTCHEV GIS and GIS User, respectively. GeoHipster is a collaborative independent online publication on geotechnology and culture, with special focus on open source and open data. Mapping the world, one organic vertex at a time.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/4730027.jpg?t=1607665577"
+    },
+    {
+      "title": "geoObserver",
+      "feed_url": "https://geoobserver.de/feed/",
+      "website_url": "https://geoobserver.de/",
+      "description": "mikeE's Geo-Blog. The GeoObserver: 1. We do not need a space cover and 2. the earth is a disk.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4749790.jpg?t=1607665587"
+    },
+    {
+      "title": "Swift Geospatial Blog",
+      "feed_url": "https://swiftgeospatial.solutions/feed/",
+      "website_url": "https://swiftgeospatial.solutions/blog/",
+      "description": "Explore Explore Transforming Geospatial (GIS) Data Into Knowledge Swift Geospatial - A Company with a Vision At Swift Geospatial, we believe technology that helps describe the changes on our planet should be accessible to all professionals and decision makers alike.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 30,
+        "instagram": 646
+      },
+      "image_url": "https://i1.feedspot.com/5124411.jpg?t=1607665593"
+    },
+    {
+      "title": "geoMusings Blog",
+      "feed_url": "https://blog.geomusings.com/feed/",
+      "website_url": "https://blog.geomusings.com/",
+      "description": "My name is Bill Dollins and I am a consultant specializing in the integration of geospatial technologies into mainstream IT environments. I have been working primarily for US Federal and DoD organizations since the early 1990s.",
+      "followers": {
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/85192.jpg?t=1607666026"
+    },
+    {
+      "title": "Manitoba GIS User Group",
+      "feed_url": "http://mgug.ca/feed/",
+      "website_url": "https://mgug.ca/stories/",
+      "description": "The Manitoba GIS User Group (MGUG) is a group of geomatics professionals and interested individuals using or supporting the use of Geographic Information Systems (GIS) for spatial data management, analysis, and visualization. Formed to facilitate communication between people working in all areas of GIS, the User Group meets to allow its members to learn more about current activities and technology",
+      "followers": {
+        "facebook": 187,
+        "twitter": 989
+      },
+      "image_url": "https://i1.feedspot.com/4730612.jpg?t=1607666059"
+    },
+    {
+      "title": "Argisusers",
+      "feed_url": "https://www.argisusers.org/blog-feed.xml",
+      "website_url": "https://www.argisusers.org/news",
+      "description": "This Forum is a volunteer organization that addresses the complex issues surrounding our chosen field, GIS (Geographic Information Science). This page of the Arkansas GIS Users Forum is an educational non profit organization for the shared use and application of Geographic Information Systems.",
+      "followers": {
+        "facebook": 631,
+        "twitter": 458,
+        "instagram": 288
+      },
+      "image_url": "https://i1.feedspot.com/4731338.jpg?t=1607666077"
+    },
+    {
+      "title": "GIS @ UWF Blog",
+      "feed_url": "http://uwf-gis.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://uwf-gis.blogspot.com/search/label/GIS",
+      "description": "Making Geography Smarter. Bringing research and Geographic Information Science (GIS) services and education to regional partners, UWF faculty, and students.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 314
+      },
+      "image_url": "https://i1.feedspot.com/4729943.jpg?t=1607666082"
+    },
+    {
+      "title": "Indian Remote Sensing and GIS",
+      "feed_url": "https://www.indiaremotesensing.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.indiaremotesensing.com/",
+      "description": "Remote Sensing and GIS in India , Free GIS Data Download, Windows Apps, Watershed Analysis , ArcGIS Erdas Steps with Indian Remote Sensing.",
+      "followers": {
+        "facebook": 28500
+      },
+      "image_url": "https://i1.feedspot.com/4730624.jpg?t=1607666102"
+    },
+    {
+      "title": "The CASA Blog \u00bb GIS",
+      "feed_url": "http://blogs.casa.ucl.ac.uk/category/gis/feed/",
+      "website_url": "http://blogs.casa.ucl.ac.uk/category/gis/",
+      "description": "The latest outputs from researchers, alumni and friends at the UCL Centre for Advanced Spatial Analysis (CASA). Find information on GIS in this blog.",
+      "followers": {
+        "facebook": 288400,
+        "twitter": 141700
+      },
+      "image_url": "https://i1.feedspot.com/4730191.jpg?t=1607664861"
+    },
+    {
+      "title": "IGISMAP Blog",
+      "feed_url": "https://www.igismap.com/feed/",
+      "website_url": "https://www.igismap.com/blog/",
+      "description": "GIS MAP Info is a website that provides all useful tips and tricks to perform GIS operation with GIS tools. It also enlist all types of Map Engine and related tutorial with it.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 171
+      },
+      "image_url": "https://i1.feedspot.com/4890610.jpg?t=1607664879"
+    },
+    {
+      "title": "The Think Geo Blog",
+      "feed_url": "https://thinkgeo.com/blog?format=rss",
+      "website_url": "https://thinkgeo.com/blog",
+      "description": "ThinkGeo is a GIS (Geographic Information Systems) software company. Discussing Current Events in the GIS Industry and Highlighting New Map Suite Features.",
+      "followers": {
+        "facebook": 708,
+        "twitter": 492
+      },
+      "image_url": "https://i1.feedspot.com/4730067.jpg?t=1607664924"
+    },
+    {
+      "title": "Esri UK Blog",
+      "feed_url": "https://resource.esriuk.com/feed/",
+      "website_url": "https://resource.esriuk.com/blog/",
+      "description": "Esri UK is the world's leading provider of geographic information systems (GIS), creating technology that gives you access to maps, apps, and analytics. The people of Esri UK, share more about their work, inspiration, and how to get the most out of Esri UK technology on their blog.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 10100
+      },
+      "image_url": "https://i1.feedspot.com/4912924.jpg?t=1620294498"
+    },
+    {
+      "title": "Austin Community College GIS Blog",
+      "feed_url": "https://dmcat.austincc.edu/gis-blog/feed/",
+      "website_url": "https://dmcat.austincc.edu/gis-blog/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7281440.jpg?t=1711356806"
+    },
+    {
+      "title": "Geospatial World",
+      "feed_url": "https://geospatialworld.net/feed/",
+      "website_url": "https://geospatialworld.net/news/",
+      "description": "Get the latest updates on geospatial technology, application, research and business trends from our news, videos, magazine, blogs and more!",
+      "followers": {
+        "facebook": 17300,
+        "twitter": 32400,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4496025.jpg?t=1699592835"
+    },
+    {
+      "title": "Adventures In Mapping",
+      "feed_url": "https://adventuresinmapping.com/feed/",
+      "website_url": "https://adventuresinmapping.com/",
+      "description": "Adventures In Mapping illuminates the art and science of Cartoprahy further by sharing thoughtful ideas and stories from the history of Map-making. The author also shares strategies, recreations, guides on what tools to use, and their personal favorite reimagined maps for readers to enjoy.",
+      "followers": {
+        "twitter": 22300
+      },
+      "image_url": "https://i1.feedspot.com/4785835.jpg?t=1609396374"
+    },
+    {
+      "title": "Sanborn Geospatial Blog",
+      "feed_url": "https://sanborn.com/category/blog/feed/",
+      "website_url": "https://sanborn.com/blog/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7281436.jpg?t=1711356913"
+    },
+    {
+      "title": "GeoCurrents",
+      "feed_url": "https://www.geocurrents.info/feed/",
+      "website_url": "https://www.geocurrents.info/",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4329568.jpg?t=1711373329"
+    },
+    {
+      "title": "The Map Room \u00bb GIS",
+      "feed_url": "https://www.maproomblog.com/category/gis/feed/",
+      "website_url": "https://www.maproomblog.com/category/gis/",
+      "description": "Blogging about maps since 2003",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 8900
+      },
+      "image_url": "https://i1.feedspot.com/7281442.jpg?t=1711356998"
+    },
+    {
+      "title": "GIS & You",
+      "feed_url": "https://gisandyou.org/feed/",
+      "website_url": "https://gisandyou.org/",
+      "description": "The King County GIS Center provides quality service and exceptional value for clients with the most capable GIS organization in the Pacific Northwest. Unlike most consultants, the professional staff members are not merely theoreticians, but practicing users of the types of GIS solutions government and business require.",
+      "followers": {
+        "facebook": 42300
+      },
+      "image_url": "https://i1.feedspot.com/5709342.jpg?t=1699595041"
+    },
+    {
+      "title": "VertiGIS Blog",
+      "feed_url": "https://www.vertigis.com/vertigis_blog/feed/",
+      "website_url": "https://www.vertigis.com/vertigis_blog/",
+      "description": "Solutions designed with your purpose in mind",
+      "followers": {
+        "facebook": 815,
+        "twitter": 308
+      },
+      "image_url": "https://i1.feedspot.com/7281439.jpg?t=1711356251"
+    },
+    {
+      "title": "Open Geospatial Consortium",
+      "feed_url": "https://www.ogc.org/feed/",
+      "website_url": "https://www.ogc.org/news/",
+      "description": "The Home of Location Technology Innovation and Collaboration",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 28100
+      },
+      "image_url": "https://i1.feedspot.com/7281433.jpg?t=1711356222"
+    },
+    {
+      "title": "Life in GIS",
+      "feed_url": "https://www.lifeingis.com/feed/",
+      "website_url": "https://www.lifeingis.com/category/gis/",
+      "description": "For Everyone, Everywhere",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/7281443.jpg?t=1711372583"
+    },
+    {
+      "title": "Seiler Geospatial Blog",
+      "feed_url": "https://www.seilergeo.com/feed/",
+      "website_url": "https://www.seilergeo.com/blogs/",
+      "description": "Survey Supply, Trimble Dealer",
+      "followers": {
+        "facebook": 705
+      },
+      "image_url": "https://i1.feedspot.com/7281444.jpg?t=1711357101"
+    },
+    {
+      "title": "GeoSolutions Blog",
+      "feed_url": "https://www.geosolutionsgroup.com/category/blog/feed/",
+      "website_url": "https://www.geosolutionsgroup.com/category/blog/",
+      "description": "Transform data into insights with MapStore, GeoNode, and GeoServer",
+      "followers": {
+        "twitter": 6800
+      },
+      "image_url": "https://i1.feedspot.com/7281441.jpg?t=1711357306"
+    },
+    {
+      "title": "GeoConnexion",
+      "feed_url": "https://www.geoconnexion.com/news/feed.rss",
+      "website_url": "https://www.geoconnexion.com/news",
+      "description": "Keep yourself up-to-speed with GeoTechnology news and stories, events, and industry directories. GeoConnexion is the leading publication for geospatial and GIS technologies professionals. Bringing you the latest news stories and reports from the industry.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5689928.jpg?t=1697440716"
+    },
+    {
+      "title": "GIM International \u00bb GIS",
+      "feed_url": "https://www.gim-international.com/content/rss/news",
+      "website_url": "https://www.gim-international.com/news/gis",
+      "description": "Your online source for quality GIS news & developments. Every GIS related news item that has ever been published at GIM International can be found here!",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 9500
+      },
+      "image_url": "https://i1.feedspot.com/7281426.jpg?t=1711356194"
+    },
+    {
+      "title": "GISuser",
+      "feed_url": "https://gisuser.com/feed/",
+      "website_url": "https://gisuser.com/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4185100.jpg?t=1711368732"
+    },
+    {
+      "title": "Decision-Making Information Resources & Solutions",
+      "feed_url": "https://proximityone.wordpress.com/feed/",
+      "website_url": "https://proximityone.wordpress.com/",
+      "description": "by Warren Glimpse at ProximityOne",
+      "followers": {
+        "twitter": 732
+      },
+      "image_url": "https://i1.feedspot.com/7281431.jpg?t=1711357837"
+    },
+    {
+      "title": "Google Earth Blog",
+      "feed_url": "https://www.gearthblog.com/feed",
+      "website_url": "https://www.gearthblog.com/",
+      "description": "Google Earth Blog - The amazing things about Google Earth. Google Earth has revolutionized the ability to visualize geospatial information and has raised awareness about the importance of tying information to location.",
+      "followers": {
+        "facebook": 43700,
+        "twitter": 20900
+      },
+      "image_url": "https://i1.feedspot.com/4611248.jpg?t=1607698146"
+    },
+    {
+      "title": "Mariosmsk",
+      "feed_url": "https://mariosmsk.wordpress.com/feed/",
+      "website_url": "https://mariosmsk.wordpress.com/",
+      "description": "QGIS Cyprus aims to promote the use of QGIS. The purpose of QGIS Cyprus, was created to gather the community of Cypriot QGIS users.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5512051.jpg?t=1699593089"
+    },
+    {
+      "title": "Prius Intelli Blog",
+      "feed_url": "https://priusintelli.com/feed/",
+      "website_url": "https://priusintelli.com/blog/",
+      "description": "Prius Intelli is a Texas-based aerial imagery company dedicated to serving businesses in need of accurate, high-resolution, high-accuracy, and high-quality aerial photography and data-driven GIS solutions - at an incredible value, in volumes affordable for any company. Geospatial Blog with articles on the geospatial services industry, GIS mapping & data, aerial photography, planimetric mapping, real estate imagery & more.",
+      "followers": {
+        "facebook": 312,
+        "instagram": 73
+      },
+      "image_url": "https://i1.feedspot.com/5709331.jpg?t=1699592639"
+    },
+    {
+      "title": "Paul Ramsey",
+      "feed_url": "https://blog.cleverelephant.ca/atom.xml",
+      "website_url": "https://blog.cleverelephant.ca/",
+      "description": "Paul Ramsey is an Open source and enterprise IT expert, with a specialization in geospatial technology. Building large geospatial systems, hacking on PostGIS, working with open-source communities, and leading technology teams to build amazing things.",
+      "followers": {
+        "twitter": 7700
+      },
+      "image_url": "https://i1.feedspot.com/5709328.jpg?t=1699594545"
+    },
+    {
+      "title": "Geospatial Industry, GIS, Image Processing & Remote Sensing s Blog",
+      "feed_url": "https://www.sgligis.com/feed/",
+      "website_url": "https://www.sgligis.com/blog/",
+      "description": "Scanpoint Geomatics Limited is a leader in the Indian geomatics industry. We pioneer the nation's geospatial domain through IGiS - an indigenous technology that brings GIS, image processing, photogrammetry and CAD together on the same platform.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 632,
+        "instagram": 994
+      },
+      "image_url": "https://i1.feedspot.com/5219801.jpg?t=1682057084"
+    },
+    {
+      "title": "Grind GIS",
+      "feed_url": "https://grindgis.com/feed",
+      "website_url": "https://grindgis.com/",
+      "description": "Read and Learn about GIS and Remote Sensing Blogs, Articles, Tutorials and Maps. Learn about different kinds of open source GIS software and see different map.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 136
+      },
+      "image_url": "https://i1.feedspot.com/4729993.jpg?t=1699593345"
+    },
+    {
+      "title": "GIS Tools and Techniques for Landscape Ecological Research",
+      "feed_url": "http://gislandscapeecology.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://gislandscapeecology.blogspot.com/",
+      "description": "With this blog I intend to share GIS, remote sensing, and spatial analysis tips, experiences, and techniques with others. Most of my work is in the field of Landscape Ecology, so there is a focus on ecological applications. Postings include tips and suggestions for data processing and day-to-day GIS tasks, links to my GIS tools and approaches, and links to scientific papers that I've been involved in.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4944566.jpg?t=1699593726"
+    },
+    {
+      "title": "Spatial Vision Blog",
+      "feed_url": "https://spatialvision.com.au/feed/",
+      "website_url": "https://web2.spatialvision.com.au/blog/",
+      "description": "Specialist in information and spatial technologies. We provide business systems, advanced spatial analyses, practical mapping applications, and much more. Check the blog for Industry-leading news and insights on location technology, climate change, data visualisation, citizen science, emergency management, GIS, and more.",
+      "followers": {
+        "facebook": 185,
+        "twitter": 872
+      },
+      "image_url": "https://i1.feedspot.com/4944570.jpg?t=1607666133"
+    },
+    {
+      "title": "Between the Poles",
+      "feed_url": "https://feeds.feedburner.com/typepad/zeissg/geospatial",
+      "website_url": "https://geospatial.blogs.com/",
+      "description": "All about infrastructure and the impact of global climate change on how we manage our infrastructure. Geoff Zeiss has more than 20 years experience developing geospatial solutions for the utilities, communications, and public works industries.",
+      "followers": {
+        "facebook": 8,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/1053375.jpg?t=1699594080"
+    },
+    {
+      "title": "Cloudpoint Geographics Blog",
+      "feed_url": "https://cloudpointgeo.com/blog?format=rss",
+      "website_url": "https://cloudpointgeo.com/blog/",
+      "description": "GIS services, GPS data collection, drone mapping, and asset management for state & local government, public works, utilities, engineers, surveyors, and facility owners founded by Jonathan Hodel in 2011.",
+      "followers": {
+        "facebook": 341,
+        "twitter": 518,
+        "instagram": 208
+      },
+      "image_url": "https://i1.feedspot.com/4944559.jpg?t=1607665553"
+    },
+    {
+      "title": "Smathermather's Weblog",
+      "feed_url": "https://smathermather.com/feed/",
+      "website_url": "https://smathermather.com/",
+      "description": "Remote Sensing, GIS, Ecology, and Oddball Techniques.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4944554.jpg?t=1607666041"
+    },
+    {
+      "title": "GIS @ SU",
+      "feed_url": "http://southwesterngis.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://southwesterngis.blogspot.com/",
+      "description": "GIS community at Southwestern University. This blog provides information on Environmental GIS, Advanced GIS, and Independent Studies in GIS.",
+      "followers": {
+        "facebook": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4729949.jpg?t=1607666064"
+    },
+    {
+      "title": "Thunderhead Explorer",
+      "feed_url": "http://feeds.feedburner.com/ThunderheadExplorer",
+      "website_url": "http://thunderheadxpler.blogspot.com/",
+      "description": "Tips and Tricks using GIS BigData, ArcGIS APIs and other fun stuff.",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/904913.jpg?t=1607666069"
+    },
+    {
+      "title": "Simply MY GIS",
+      "feed_url": "https://simplymygis.wordpress.com/feed/",
+      "website_url": "https://simplymygis.wordpress.com/blog-2/",
+      "description": "Welcome to my GIS Blog This is not a technical blog for GIS developers or programmers. Rather this is a GIS blog for Senior Executives, managers and non-GIS users that would like to gain more understanding about the advantage and potential of GIS applications in help making the right decision.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4730157.jpg?t=1607666073"
+    },
+    {
+      "title": "Michael's Course Blog",
+      "feed_url": "http://ma159.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://ma159.blogspot.com/",
+      "description": "A blog on GIS.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4731282.jpg?t=1607666475"
+    },
+    {
+      "title": "WiSAR and GIS Blog",
+      "feed_url": "https://wisarandgis.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://wisarandgis.blogspot.com/",
+      "description": "Paul Doherty is a GIS specialist and enthusiast. Find maps are at the core of any Wildland Search and Rescue (WiSAR) operation.",
+      "followers": {
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4729998.jpg?t=1609396579"
+    },
+    {
+      "title": "Boston GIS Blog",
+      "feed_url": "http://www.bostongis.com/blog/index.php?/feeds/index.rss2",
+      "website_url": "http://www.bostongis.com/blog/",
+      "description": "Geographic Information Systems Web Mapping OpenGIS and open source Solutions. Its a database programmer's perspective on GIS. It focuses on providing information and tips on using standard complaint and open source GIS tools.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/85187.jpg?t=1607666123"
+    },
+    {
+      "title": "Lat Long Blog",
+      "feed_url": "https://latlong.blog/feeds/rss.xml",
+      "website_url": "https://latlong.blog/",
+      "description": "Lat \u00d7 Long is a weblog exploring and documenting geospatial technology, data and standards on the Web. It provides regular updates and links to industry news, events, software and tools.",
+      "followers": {
+        "twitter": 274
+      },
+      "image_url": "https://i1.feedspot.com/5435251.jpg?t=1661338096"
+    },
+    {
+      "title": "From GIS to Remote Sensing",
+      "feed_url": "https://feeds.feedburner.com/fromgistors",
+      "website_url": "https://fromgistors.blogspot.com/search/label/Blog?max-results=10",
+      "description": "A blog that goes from GIS to Remote Sensing, with tutorials and tips especially for open source software. By Luca Congedo, the author of the Semi-Automatic Classification Plugin for QGIS that allows for supervised classifications of Land Cover.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4729873.jpg?t=1607665519"
+    },
+    {
+      "title": "GeoSeer Blog",
+      "feed_url": "https://www.geoseer.net/blog/rss.php",
+      "website_url": "https://www.geoseer.net/blog/",
+      "description": "Keep up with articles from GeoSeer Blog .",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5074397.jpg?t=1699941349"
+    },
+    {
+      "title": "Another GIS Blog",
+      "feed_url": "https://feeds.feedburner.com/AnotherGisBlog",
+      "website_url": "https://anothergisblog.blogspot.com/",
+      "description": "I use GIS and develop GIS applications. This blog about GIS, C , .Net, Python, and Other Information Technologies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4729907.jpg?t=1610602782"
+    },
+    {
+      "title": "MyArcGISserver",
+      "feed_url": "https://myarcgisserver.wordpress.com/feed/",
+      "website_url": "https://myarcgisserver.wordpress.com/",
+      "description": "My name is Muryadi Oey. I have been working in IT for more than 10 years but a newbie in GIS world. I am still learning, learning and learning. This blog is my media to make me always remember what I forgot and also share with other who has similar issue when administer ArcGIS server.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4944476.jpg?t=1607666403"
+    },
+    {
+      "title": "Justin's GIS Blog",
+      "feed_url": "https://justincolegis.com/feed/",
+      "website_url": "https://justincolegis.com/",
+      "description": "Justin's GIS Blog is where he posts articles, tips and tricks, and other useful GIS information. He is writing this to help people with GIS. Justin is also trying to keep his teaching skills up. While many posts deal with ArcGIS, some will also use other software like QGIS.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5709330.jpg?t=1699594877"
+    },
+    {
+      "title": "Gartrell Group Blog",
+      "feed_url": "https://www.gartrellgroup.com/blog?format=rss",
+      "website_url": "https://www.gartrellgroup.com/blog",
+      "description": "A boutique GIS software & services firm",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7281430.jpg?t=1711356959"
+    },
+    {
+      "title": "GisCourse.com Blog",
+      "feed_url": "https://www.giscourse.com/feed/",
+      "website_url": "https://www.giscourse.com/blog/",
+      "description": "Read articles that refer to the latest releases, capabilities, and functionalities of GIS, Remote Sensing, and CAD software. You can find all kinds of news and information about the GIS community. GisCourse.com belongs to the TYC GIS Group, a consulting firm specializing in advising and technical training with GIS Software applications. Our multidisciplinary team with extensive experience allows us to offer the best training in geomatic-related matters.",
+      "followers": {
+        "facebook": 20400,
+        "twitter": 4600,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5426352.jpg?t=1659071079"
+    },
+    {
+      "title": "Axim Blog",
+      "feed_url": "https://www.aximgeo.com/blog/rss.xml",
+      "website_url": "https://www.aximgeo.com/blog",
+      "description": "Axim serves the geospatial community with thought leadership to address challenges such as national security, global climate change and resiliency, infrastructure and physical security, and environmental management. Axim clients include national, state, and local governments, defense and intelligence agencies, infrastructure, energy, utility, commercial, and environmental organizations.",
+      "followers": {
+        "facebook": 96,
+        "twitter": 187
+      },
+      "image_url": "https://i1.feedspot.com/7281428.jpg?t=1711357274"
+    },
+    {
+      "title": "Geographic Information Success Blog",
+      "feed_url": "https://drchrisgeosci.wordpress.com/feed/",
+      "website_url": "https://drchrisgeosci.wordpress.com/blog/",
+      "description": "Accelerate Your GIS Career, Impact & Success",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/7281427.jpg?t=1711357607"
+    },
+    {
+      "title": "GIS Lounge",
+      "feed_url": "https://www.gislounge.com/feed/",
+      "website_url": "https://www.geographyrealm.com/",
+      "description": "GIS Lounge is where you can learn about geographic information systems ( GIS ), geospatial technologies, cartography, and maps. Also featured are GIS jobs, conferences, and GIS industry news.",
+      "followers": {
+        "facebook": 29600
+      },
+      "image_url": "https://i1.feedspot.com/4730128.jpg?t=1607664939"
+    },
+    {
+      "title": "CARTO Blog",
+      "feed_url": "https://carto.com/blog",
+      "website_url": "https://carto.com/blog",
+      "description": "CARTO is the location intelligence platform for turning location data into business outcomes. Learn about new features, event updates, conferences, online mapping, and view how-to-guides at the CARTO blog.",
+      "followers": {
+        "facebook": 10500,
+        "twitter": 32500
+      },
+      "image_url": "https://i1.feedspot.com/4478699.jpg?t=1699595565"
+    },
+    {
+      "title": "Geoawesome",
+      "feed_url": "https://geoawesome.com/",
+      "website_url": "https://geoawesome.com/",
+      "description": "Geoawesomeness is a blog about geospatial technologies and everything awesome around it. We are passionate about gis, maps, location-based apps, geomarketing, drones and remote sensing. We are passionate about the connection between location and the technology and are on a mission to build a geospatial knowledge community.",
+      "followers": {
+        "facebook": 24100,
+        "twitter": 26600,
+        "instagram": 15900
+      },
+      "image_url": "https://i1.feedspot.com/4409870.jpg?t=1699593319"
+    },
+    {
+      "title": "PolicyMap Blog",
+      "feed_url": "https://www.policymap.com/feed/",
+      "website_url": "https://www.policymap.com/resources/blog",
+      "description": "GIS mapping from PolicyMap allows you to map data quickly and easily. PolicyMap provides up-to-date news, information and interesting data insights using the web's most user-friendly geographic information system (GIS).",
+      "followers": {
+        "facebook": 539,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4729905.jpg?t=1699593412"
+    },
+    {
+      "title": "GIScience News Blog",
+      "feed_url": "http://k1z.blog.uni-heidelberg.de/feed",
+      "website_url": "https://giscienceblog.uni-heidelberg.de/",
+      "description": "Essential parts of the research focus of the GIScience research group (Geoinformatics) are reflected. News of Heidelberg University's GIScience Research Group and research in Geoinformatics and GIScience plus Higher Education.",
+      "followers": {
+        "facebook": 960,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4730011.jpg?t=1607665557"
+    },
+    {
+      "title": "Esri Blog",
+      "feed_url": "https://www.esri.com/arcgis-blog/feed/?post_type=blog",
+      "website_url": "https://www.esri.com/arcgis-blog/overview",
+      "description": "The ArcGIS Blog is a helpful resource on all items related to ArcGIS. Find the latest info on product updates, best practices and more.",
+      "followers": {
+        "facebook": 636100,
+        "twitter": 189900,
+        "instagram": 224800
+      },
+      "image_url": "https://i1.feedspot.com/5198753.jpg?t=1711374617"
+    },
+    {
+      "title": "GIS WebTech Blog",
+      "feed_url": "https://giswebtech.com/blog.php",
+      "website_url": "https://giswebtech.com/blog.php",
+      "description": "A Complete GIS... Made Easy",
+      "followers": {
+        "facebook": 212,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/7281434.jpg?t=1711356227"
+    },
+    {
+      "title": "Open Geospatial Solutions",
+      "feed_url": "https://blog.gishub.org/rss.xml",
+      "website_url": "https://blog.gishub.org/",
+      "description": "Qiusheng Wu is a geospatial data scientist who specializes in open source tools and Python. He is an Assistant Professor in the Department of Geography at the University of Tennessee, Knoxville. His research interests include Geographic Information Science (GIS), remote sensing, and environmental modeling. More specifically, He is interested in applying geospatial big data, machine learning, and cloud computing to study environmental change, especially surface water and wetland inundation dynamics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5709334.jpg?t=1699594949"
+    },
+    {
+      "title": "Latapult Blog",
+      "feed_url": "https://latapult.com/blog/",
+      "website_url": "https://latapult.com/blog/",
+      "description": "geothinQ is a pioneer of an on-demand geographic land mapping and data visualization software that is accelerating smart, data-driven decisions among land stakeholders like never before. Read the blog to stay up to date with the latest insights on GIS software's role in commercial real estate.",
+      "followers": {
+        "facebook": 170
+      },
+      "image_url": "https://i1.feedspot.com/5709337.jpg?t=1699592668"
+    },
+    {
+      "title": "GIS Cafe",
+      "feed_url": "https://www10.giscafe.com/rss/CorpNews/news.xml",
+      "website_url": "https://www10.giscafe.com/blogs/gissusan/tag/gis/",
+      "description": "GISCafe is a portal offering GIS and geospatial professionals complete GIS product catalog listings, technical papers,GIS news. It delivers the latest GIS industry commentary, news, product reviews, articles, events and resources from a single, convenient point. We provide our users a constantly updated view of the entire world of GIS that allows them to make more timely and informed decisions.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/4730471.jpg?t=1607664898"
+    },
+    {
+      "title": "GISADVISOR.COM",
+      "feed_url": "https://www.artlembo.com/feed",
+      "website_url": "https://www.artlembo.com/",
+      "description": "I am a Professor in the Department of Geography and Geosciences at Salisbury University in Salisbury, Maryland. In these pages, you can expect me to talk about statistics and geography, spatial SQL, enterprise GIS, parallel processing and GIS, and programming GIS solutions.",
+      "followers": {
+        "twitter": 524
+      },
+      "image_url": "https://i1.feedspot.com/4730046.jpg?t=1607666031"
+    },
+    {
+      "title": "Korem Blog",
+      "feed_url": "https://www.korem.com/feed/",
+      "website_url": "https://www.korem.com/blog/",
+      "description": "Stay informed with Korem's geospatial blog. Browse our articles and news on geospatial technology, trends, and insights. Expand your knowledge today!",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 18
+      },
+      "image_url": "https://i1.feedspot.com/7281432.jpg?t=1711356218"
+    },
+    {
+      "title": "Walker Data Blog",
+      "feed_url": "https://walker-data.com/blog.xml",
+      "website_url": "https://walker-data.com/blog.html",
+      "description": "GIS, demographics, and data science consulting",
+      "followers": {
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/7281429.jpg?t=1711357138"
+    },
+    {
+      "title": "GIS and Earth Observation University Blog",
+      "feed_url": "https://io.dropinblog.com/feed/8GH4PFSZRMKPPJCO8MS7/?limit=10",
+      "website_url": "https://www.geo.university/pages/blog?c=geographical-information-systems",
+      "followers": {
+        "facebook": 15200,
+        "twitter": 616
+      },
+      "image_url": "https://i1.feedspot.com/7281435.jpg?t=1711356232"
+    }
+  ]
+}

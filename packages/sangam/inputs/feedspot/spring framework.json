@@ -1,0 +1,81 @@
+{
+  "category": "Spring Framework",
+  "source_url": "https://rss.feedspot.com/spring_rss_feeds",
+  "feeds": [
+    {
+      "title": "Petri Kainulainen Blog",
+      "feed_url": "https://feeds.feedblitz.com/PetriKainulainen",
+      "website_url": "https://www.petrikainulainen.net/blog/",
+      "description": "Petri Kainulainen is passionate about software development and continuous improvement. He is specialized in software development with the Spring Framework and is the author of Spring Data book.",
+      "followers": {
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4540512.jpg?t=1606111235"
+    },
+    {
+      "title": "JoshLong.com",
+      "feed_url": "https://api.joshlong.com/feed.xml",
+      "website_url": "https://amanhimself.dev/about/",
+      "description": "Want to learn about the latest-and-greatest aspects of the Spring ecosystem, then this is the blog for you. Josh Long has been the first Spring Developer Advocate since 2010. Josh is a Java Champion, author of 6 books and numerous best-selling video training, and an open-source contributor, a podcaster and a YouTuber.",
+      "followers": {
+        "twitter": 80300
+      },
+      "image_url": "https://i1.feedspot.com/5403882.jpg?t=1653484406"
+    },
+    {
+      "title": "Baeldung \u00bb Spring",
+      "feed_url": "https://www.baeldung.com/category/spring/feed",
+      "website_url": "https://www.baeldung.com/category/spring",
+      "description": "Have a look through a list of in-depth tutorials on the various Spring modules, including Spring MVC, Spring Security, Spring Cloud and many more. Baeldung helps developers explore the Java ecosystem and simply be better engineers. We publish to-the-point guides and courses, with a strong focus on building web applications, Spring, Spring Security, and RESTful APIs.",
+      "followers": {
+        "facebook": 50100,
+        "twitter": 66600
+      },
+      "image_url": "https://i1.feedspot.com/5403880.jpg?t=1653975169"
+    },
+    {
+      "title": "Piotr's TechBlog \u00bb Spring boot",
+      "feed_url": "https://piotrminkowski.com/category/spring-boot/feed/",
+      "website_url": "https://piotrminkowski.com/category/spring-boot/",
+      "description": "Explore spring boot section to know more about latest updates, features and more! My name is Piotr Minkowski and I published the first post on this blog on February 2017. Since that time I do my best to publish high quality content about topics I'm really interested in.",
+      "followers": {
+        "twitter": 12000
+      },
+      "image_url": "https://i1.feedspot.com/5403883.jpg?t=1653484412"
+    },
+    {
+      "title": "Spring Framework Guru Blog",
+      "feed_url": "https://springframework.guru/feed/",
+      "website_url": "https://springframework.guru/blog/",
+      "description": "Hi. I'm John. I've been in the IT industry for over 25 years. Today, I specialize mainly in Java, the most successful and widely known programming language in use today. I also specialize in the Spring Framework, which is the most popular open source application framework for building enterprise class applications on the Java platform. Through this site, I hope to leverage my years of experience to accelerate your learning of the Spring Framework.",
+      "followers": {
+        "facebook": 12300,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5403881.jpg?t=1653976339"
+    },
+    {
+      "title": "Reflectoring \u00bb Spring",
+      "feed_url": "https://reflectoring.io/categories/spring/index.xml",
+      "website_url": "https://reflectoring.io/categories/spring/",
+      "description": "Learn more about Spring, shell, boot and more! Hi, I'm Tom, and I run the reflectoring blog. The mission of this blog is to provide comprehensive and easy-to-read learning experiences that generate 'aha' moments when you need to solve a specific problem.",
+      "followers": {
+        "facebook": 149,
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5403879.jpg?t=1653975881"
+    },
+    {
+      "title": "Knoldus Blogs \u00bb Spring",
+      "feed_url": "https://blog.knoldus.com/category/spring/feed/",
+      "website_url": "https://blog.knoldus.com/category/spring/",
+      "description": "Find Insights and Perspectives to keep you updated on Spring. Knoldus is the world's largest pure-play Scala and Spark company. We modernize enterprises through cutting-edge digital engineering by leveraging Functional Programming (Scala, Rust, Java) & Fast Data (Spark, Flink) ecosystems.",
+      "followers": {
+        "facebook": 960,
+        "twitter": 814,
+        "instagram": 191
+      },
+      "image_url": "https://i1.feedspot.com/5403878.jpg?t=1653484395"
+    }
+  ]
+}

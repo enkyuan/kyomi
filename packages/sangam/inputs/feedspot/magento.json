@@ -1,0 +1,581 @@
+{
+  "category": "Magento",
+  "source_url": "https://rss.feedspot.com/magento_rss_feeds",
+  "feeds": [
+    {
+      "title": "MagenTech Blog",
+      "feed_url": "https://www.magentech.com/blog?format=feed&type=rss",
+      "website_url": "https://www.magentech.com/blog/",
+      "description": "MagenTech is a brand of YouTech Company that specializes in providing products for the world's most popular open sources including Magento, PrestaShop, OpenCart, WordPress, etc.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 383
+      },
+      "image_url": "https://i1.feedspot.com/5267302.jpg?t=1618291029"
+    },
+    {
+      "title": "Atwix Blog",
+      "feed_url": "https://www.atwix.com/feed/",
+      "website_url": "https://www.atwix.com/blog/",
+      "description": "Articles about Magento development, tips and tricks, Atwix office life.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4641572.jpg?t=1616591663"
+    },
+    {
+      "title": "Mageworx Blog",
+      "feed_url": "https://www.mageworx.com/blog/feed/",
+      "website_url": "https://www.mageworx.com/blog/",
+      "description": "Mageworx blog brings together news, opinion, and perspectives from eCommerce professionals. We build simple, focused Magento extensions, Shopify apps, and Shopware plugins that do what you need and nothing you don't.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 4000,
+        "instagram": 633
+      },
+      "image_url": "https://i1.feedspot.com/4064006.jpg?t=1669707495"
+    },
+    {
+      "title": "CreativeMinds WordPress and Magento Blog",
+      "feed_url": "https://www.cminds.com/blog/feed/",
+      "website_url": "https://www.cminds.com/blog/",
+      "description": "CreativeMinds specializes in developing premium WordPress Plugins and Magento Extensions. They offer custom development & grow ideas into products Need help with our WordPress Plugins and Magento extensions.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4641632.jpg"
+    },
+    {
+      "title": "webguru.dev",
+      "feed_url": "https://webguru.dev/feed/",
+      "website_url": "https://webguru.dev/",
+      "description": "Learn to build and customize your store with comprehensive eCommerce tutorials. From creating to customization, webguru.dev's detailed guide will teach you everything. Find valuable resources on Magento that can easily help you navigate the booming B2B landscape.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5792155.jpg?t=1706618956"
+    },
+    {
+      "title": "Mageplaza Blog",
+      "feed_url": "https://www.mageplaza.com/feed",
+      "website_url": "https://www.mageplaza.com/blog/",
+      "description": "The best Magento 2 extensions by Mageplaza. 30-day money back, trust by thousands merchants and developers around the world.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 554
+      },
+      "image_url": "https://i1.feedspot.com/4641864.jpg?t=1616591714"
+    },
+    {
+      "title": "Magenest Blog",
+      "feed_url": "https://magenest.com/en/feed/",
+      "website_url": "https://magenest.com/en/blog/",
+      "description": "Magenest is leading E-commerce company with professional E-commerce solutions by Magento and Woocommerce.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 408,
+        "instagram": 104
+      },
+      "image_url": "https://i1.feedspot.com/4642171.jpg?t=1616591133"
+    },
+    {
+      "title": "FireBear Blog",
+      "feed_url": "https://firebearstudio.com/blog/feed",
+      "website_url": "https://firebearstudio.com/blog/",
+      "description": "Firebear Studio Blog is about Magento extensions, development, tips, tricks, exchange of experience, research, fire.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4641568.jpg"
+    },
+    {
+      "title": "Magestore Blog",
+      "feed_url": "https://blog.magestore.com/feed/",
+      "website_url": "https://blog.magestore.com/",
+      "description": "Magento blog of Magestore is a collection of articles on Magento extensions, Magento 1 and 2 Tutorials, Magento Site management and Marketing guides. We share the best practices and knowledge to help store owners solve even the most difficult problem from their business.",
+      "followers": {
+        "facebook": 8500,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4772410.jpg?t=1616591138"
+    },
+    {
+      "title": "Landofcoder Blog",
+      "feed_url": "https://blog.landofcoder.com/feed/",
+      "website_url": "https://blog.landofcoder.com/",
+      "description": "Grow your eCommerce Store with the help of Landofcoder Blog. Find many articles, tutorials and marketing tips to boost your business!",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 422
+      },
+      "image_url": "https://i1.feedspot.com/5056961.jpg?t=1616591193"
+    },
+    {
+      "title": "MageStore Blog",
+      "feed_url": "https://www.magestore.com/feed/",
+      "website_url": "https://www.magestore.com/blog/",
+      "description": "Magestore's blog provides retail news, Magento knowledge, customer experience, inventory management, omnichannel POS solution, Magestore's feature updates, etc. We expect our content will help merchants save time on information finding and focus on their primary purpose - run business successfully.",
+      "followers": {
+        "facebook": 8500,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5267873.jpg?t=1622038343"
+    },
+    {
+      "title": "Inchoo Blog",
+      "feed_url": "https://inchoo.net/blog/feed/",
+      "website_url": "https://inchoo.net/blog/",
+      "description": "Read this blog to stay up to date with latest eCommerce (mostly Magento) design, development, and consulting techniques.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 8900,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4641439.jpg"
+    },
+    {
+      "title": "ConnectPOS Blog",
+      "feed_url": "https://www.connectpos.com/feed/",
+      "website_url": "https://www.connectpos.com/blog/",
+      "description": "ConnectPOS is the first product in the ecosystem, making transactions in physical stores become easy and automatic. It enables consumers to click and collect, synchronize information across platforms and devices and have a seamless shopping experience. It also helps retailers digitalize customer behaviors, track data in real time at customer touchpoints and provide intelligent business recommendations.",
+      "followers": {
+        "facebook": 326,
+        "twitter": 100
+      },
+      "image_url": "https://i1.feedspot.com/5009851.jpg?t=1616591688"
+    },
+    {
+      "title": "Wagento Commerce Blog",
+      "feed_url": "https://www.wagento.com/feed/",
+      "website_url": "https://www.wagento.com/blog/",
+      "description": "Wagento Creative is a full service web development company specializing in Magento Development, Content Management, Magento Custom Modules and Applications, Server Tuning and SEO Refinement. We specialize in installation, configuration and version upgrades with a logical upgrade process that will always leave your live site safe and running.",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4642722.jpg?t=1616591681"
+    },
+    {
+      "title": "Magento India Blog",
+      "feed_url": "https://www.magentoindia.in/blog/feed/",
+      "website_url": "https://www.magentoindia.in/blog/",
+      "description": "Magento India is a leading e-commerce web development company that provides Magento module, customization, and maintenance services all over the world. Get the latest news, tips, and advice for maximizing your online store with Magento India's e-commerce blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5267303.jpg?t=1618293045"
+    },
+    {
+      "title": "Codilar Blog",
+      "feed_url": "https://www.codilar.com/feed/",
+      "website_url": "https://www.codilar.com/blog/",
+      "description": "From this vast pool of information, get highlights on Magento best practices and updates, technical advancements, customer stories and much more.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 688,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5007750.jpg?t=1616591795"
+    },
+    {
+      "title": "Human Element Blog",
+      "feed_url": "https://www.human-element.com/blog/feed/",
+      "website_url": "https://www.human-element.com/blog/",
+      "description": "Human Element is a US-based digital agency focused on eCommerce development with Magento. Human Element Blog team of certified Magento developers share best practices, technical tricks, and Magento secrets in weekly blog. Some serious eCommerce knowledge.",
+      "followers": {
+        "facebook": 477,
+        "twitter": 827,
+        "instagram": 378
+      },
+      "image_url": "https://i1.feedspot.com/4642067.jpg?t=1616148697"
+    },
+    {
+      "title": "Extendware Magento Blog",
+      "feed_url": "https://blog.extendware.com/feed/",
+      "website_url": "https://blog.extendware.com/",
+      "description": "Empowering Online Entrepreneurs and Retailers Worldwide by Maximizing Magento Performance.",
+      "followers": {
+        "facebook": 169
+      },
+      "image_url": "https://i1.feedspot.com/4641984.jpg?t=1616591708"
+    },
+    {
+      "title": "Magenticians",
+      "feed_url": "https://magenticians.com/feed/",
+      "website_url": "https://magenticians.com/",
+      "description": "Magento tutorials for all kind of users. Learn step by step Magento tutorial and solutions. Get Magento news weekly updates and reviews from the community.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4641548.jpg?t=1616591010"
+    },
+    {
+      "title": "Shero Commerce Blog",
+      "feed_url": "https://sherocommerce.com/blog/feed/",
+      "website_url": "https://sherocommerce.com/blog/",
+      "description": "Shero is an eCommerce agency based in Hudson Valley, NY. Their focus is on Magento and eCommerce solutions, customized for clients' needs. Check out the Magento Community blog with news, tips, tutorials & free how-to articles.",
+      "followers": {
+        "facebook": 533,
+        "twitter": 1500,
+        "instagram": 670
+      },
+      "image_url": "https://i1.feedspot.com/4641952.jpg"
+    },
+    {
+      "title": "Magento tutorial",
+      "feed_url": "https://www.magentoexplorer.com/feed/",
+      "website_url": "https://www.magentoexplorer.com/",
+      "description": "Magento tutorial from basic to advanced levels: Magento tutorials on hosting, server, extensions, themes. Fixing Various magento issues.",
+      "followers": {
+        "twitter": 233
+      },
+      "image_url": "https://i1.feedspot.com/4641911.jpg?t=1616591004"
+    },
+    {
+      "title": "M-Connect Media - Magento eCommerce Blog",
+      "feed_url": "https://www.mconnectmedia.com/blog/feed/",
+      "website_url": "https://www.mconnectmedia.com/blog/",
+      "description": "Connect Media is one of few eCommerce companies developing solutions for Magento websites since Magento first launched in Market in 2008.",
+      "followers": {
+        "facebook": 349,
+        "twitter": 783
+      },
+      "image_url": "https://i1.feedspot.com/4642070.jpg?t=1616591648"
+    },
+    {
+      "title": "Magezon Blog",
+      "feed_url": "https://blog.magezon.com/feed/",
+      "website_url": "https://blog.magezon.com/",
+      "description": "Magezon Blog keeps you updated with everything about Magento. We share tutorials, news, tips, and tricks for Magento users.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 126
+      },
+      "image_url": "https://i1.feedspot.com/5181774.jpg?t=1597409770"
+    },
+    {
+      "title": "Paul Rogers Blog",
+      "feed_url": "https://paulnrogers.com/blog/feed/",
+      "website_url": "https://paulnrogers.com/blog/",
+      "description": "Paul Rogers is a Specialist, enterprise-level Magento consulting and auditing services, delivered by certified engineers and an experienced eCommerce professional.",
+      "followers": {
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4642844.jpg?t=1616591656"
+    },
+    {
+      "title": "MageTop Blog",
+      "feed_url": "https://www.magetop.com/blog/feed/",
+      "website_url": "https://www.magetop.com/blog/",
+      "description": "A Magento blog featuring various tutorials, Devdocs, insights, tips, news, and guides to upscale your online-to-offline business. MageTop offers high-quality Magento extensions and customization services.",
+      "followers": {
+        "facebook": 465,
+        "twitter": 24
+      },
+      "image_url": "https://i1.feedspot.com/5307844.jpg?t=1627898256"
+    },
+    {
+      "title": "Alan Kent's Blog",
+      "feed_url": "https://alankent.me/feed/",
+      "website_url": "https://alankent.me/",
+      "description": "Alan Kent's Blog is all about Magento.",
+      "followers": {
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4641487.jpg"
+    },
+    {
+      "title": "MagentoSpark Blog",
+      "feed_url": "https://www.magespark.com/blog/rss",
+      "website_url": "https://www.magespark.com/blog",
+      "description": "Magento Development Company provides you the best & feature-rich Magento 2 extensions, Themes, & services to best fit with your online marketing & business needs.",
+      "followers": {
+        "twitter": 18
+      },
+      "image_url": "https://i1.feedspot.com/5120886.jpg?t=1616591722"
+    },
+    {
+      "title": "One Step Checkout",
+      "feed_url": "https://blog.onestepcheckout.com/feed/",
+      "website_url": "https://blog.onestepcheckout.com/",
+      "description": "OneStepCheckout is a Norwegian company about ecommerce, cart abandonment, checkout processes and Magento.",
+      "followers": {
+        "facebook": 309,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4641886.jpg?t=1616591685"
+    },
+    {
+      "title": "Williams Commerce \u00bb Magento 2",
+      "feed_url": "https://www.williamscommerce.com/category/magento-2-commerce/feed/",
+      "website_url": "https://www.williamscommerce.com/category/magento-2-commerce/",
+      "description": "Williams Commerce is a UK-based eCommerce development agency and Magento Enterprise Partner delivering complete eCommerce, digital marketing & technology solutions to a wide range of B2B and retail businesses across the UK & internationally.",
+      "followers": {
+        "facebook": 210,
+        "twitter": 516
+      },
+      "image_url": "https://i1.feedspot.com/5279902.jpg?t=1620806921"
+    },
+    {
+      "title": "WebMeridian Blog",
+      "feed_url": "https://webmeridian.org/feed/",
+      "website_url": "https://webmeridian.net/blog/",
+      "description": "WebMeridian is a full-service Magento eCommerce agency. We design, develop, and support robust tech and business solutions for eCommerce brands. Our blog covers topics on how to run the eCommerce store, use Magento, Shopify, or other technologies to sell online, important site features, and eCommerce trends.",
+      "followers": {
+        "facebook": 184,
+        "twitter": 30
+      },
+      "image_url": "https://i1.feedspot.com/5284151.jpg?t=1621952661"
+    },
+    {
+      "title": "APPSeCONNECT Blog",
+      "feed_url": "https://www.appseconnect.com/blog/feed/",
+      "website_url": "https://www.appseconnect.com/blog/",
+      "description": "Get the latest news, tips & tricks for boosting your online eCommerce Business.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4641868.jpg?t=1616591042"
+    },
+    {
+      "title": "Tom Robertshaw Blog",
+      "feed_url": "https://tomrobertshaw.net/feed.xml",
+      "website_url": "https://tomrobertshaw.net/blog/",
+      "description": "Tom Robertshaw is a diligent eCommerce and Magento expert with a passion for solving problems through innovation.",
+      "followers": {
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4641603.jpg?t=1616591995"
+    },
+    {
+      "title": "WEB4PRO Blog",
+      "feed_url": "https://web4pro.net/blog-news/category/magento-2-blog/feed/",
+      "website_url": "https://web4pro.net/blog-news/category/magento-2-blog/",
+      "description": "Welcome to Magento 2 blog by WEB4PRO! Here you'll find lots of useful web development tips and cases, reviews and tutorials, and the latest hottest news related to Magento 2.",
+      "followers": {
+        "facebook": 518,
+        "twitter": 168,
+        "instagram": 171
+      },
+      "image_url": "https://i1.feedspot.com/5009864.jpg?t=1616591792"
+    },
+    {
+      "title": "Magento-eCommerce-platform",
+      "feed_url": "https://medium.com/feed/magento-ecommerce-platform",
+      "website_url": "https://medium.com/magento-ecommerce-platform",
+      "description": "Magento is the leading eCommerce platform for open commerce innovation. Every year, Magento handles over $100 billion in gross merchandise volume. Magento successfully integrates digital and physical shopping experiences, delighting customers.",
+      "followers": {
+        "facebook": 102
+      },
+      "image_url": "https://i1.feedspot.com/5045927.jpg?t=1616590999"
+    },
+    {
+      "title": "BSS Commerce Blog \u00bb Magento",
+      "feed_url": "https://bsscommerce.com/magento/blog/feed/",
+      "website_url": "https://bsscommerce.com/magento/blog/",
+      "description": "BssCommerce is one of the leading providers in the field of Magento extensions, a reliable address for those desiring to empower their Magento Store to be much more efficient and multifunctional.",
+      "followers": {
+        "facebook": 462,
+        "twitter": 576
+      },
+      "image_url": "https://i1.feedspot.com/4642718.jpg?t=1616591032"
+    },
+    {
+      "title": "Apptha Blog",
+      "feed_url": "https://www.apptha.com/blog/feed/",
+      "website_url": "https://magentobrain.com/blog/",
+      "description": "Apptha.com is a leading provider of best extensions, plugins, free templates and themes for some of the best open source platforms like WordPress, Magento and Joomla.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 280
+      },
+      "image_url": "https://i1.feedspot.com/4642064.jpg?t=1616591666"
+    },
+    {
+      "title": "AYKO Blog",
+      "feed_url": "https://www.ayko.com/blog/",
+      "website_url": "https://www.ayko.com/blog/",
+      "description": "We're a full-service digital agency who craft and grow market-leading eCommerce experiences. As Magento Enterprise Partners, we specialise in Magento and are the largest and most experienced Magento Solution Partner in the UK. Having been early adopters of the platform and its latest versions, we're leading the way when it comes to Magento 2; with a current total of 30+ Magento 2 certified developers and over 25 Magento 2 builds completed.",
+      "followers": {
+        "facebook": 770,
+        "twitter": 199,
+        "instagram": 359
+      },
+      "image_url": "https://i1.feedspot.com/4642749.jpg?t=1612442386"
+    },
+    {
+      "title": "FMEextension - Blog",
+      "feed_url": "https://www.fmeextensions.com/blog/feed/",
+      "website_url": "https://www.fmeextensions.com/blog",
+      "description": "A blog about Magento, eCommerce News, Tips & Tutorials.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 715
+      },
+      "image_url": "https://i1.feedspot.com/4641668.jpg?t=1616591142"
+    },
+    {
+      "title": "MageDelight Extension Blog",
+      "feed_url": "https://blog.magedelight.com/feed/",
+      "website_url": "https://blog.magedelight.com/",
+      "description": "MageDelight.com is the gateway to an extensive range of Magento extensions that provides innovative solutions for the Magento Platform.",
+      "followers": {
+        "facebook": 851,
+        "twitter": 724,
+        "instagram": 233
+      },
+      "image_url": "https://i1.feedspot.com/4642776.jpg?t=1616591652"
+    },
+    {
+      "title": "Aitoc Magento Development Blog",
+      "feed_url": "https://www.aitoc.com/blog/feed/",
+      "website_url": "https://www.aitoc.com/blog",
+      "description": "Aitoc is a leading provider of extensions and services for Magento eCommerce platform.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4642783.jpg?t=1616591146"
+    },
+    {
+      "title": "NWDthemes.com Blog",
+      "feed_url": "https://nwdthemes.com/blog/feed/",
+      "website_url": "https://nwdthemes.com/blog/",
+      "description": "We provide premium magento themes and extensions to help launch your Magento store quickly and easily. Our goal is to create ultimate quality products. Each product is heavily tested, both internally and on selected beta customers.",
+      "followers": {
+        "facebook": 302,
+        "twitter": 785
+      },
+      "image_url": "https://i1.feedspot.com/4718816.jpg?t=1616591673"
+    },
+    {
+      "title": "Fooman Blog",
+      "feed_url": "https://fooman.com/blog/",
+      "website_url": "https://fooman.com/blog/",
+      "description": "The Blog by Fooman about Magento and extension development from Kristof, the guy behind Fooman.",
+      "followers": {
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4641552.jpg?t=1616591677"
+    },
+    {
+      "title": "Magenaut",
+      "feed_url": "https://magenaut.com/feed/",
+      "website_url": "https://magenaut.com/",
+      "description": "Hi, I'm Jared, the author of The Lazy Dev blog. I'm a full-time freelancer who has experience with Magento, WordPress, and Laravel. Magenaut is a combination of Magento and Astronaut. On this blog, I write about Magento 2, take notes about bug fixing, and sometimes about server administration. I hope my posts will help other Magento developers to save their time.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5279903.jpg?t=1620822412"
+    },
+    {
+      "title": "Ampersand Insights",
+      "feed_url": "https://ampersandcommerce.com/insights/feed/",
+      "website_url": "https://ampersandcommerce.com/insights/",
+      "description": "Ampersand helps established high street retailers build better online stores. They collaborate with high street retailers like Poundland and Harvey Nichols to build multi-channel retail systems and ecommerce websites that drive sales.",
+      "followers": {
+        "facebook": 1,
+        "twitter": 2400,
+        "instagram": 1
+      },
+      "image_url": "https://i1.feedspot.com/4641455.jpg?t=1616591710"
+    },
+    {
+      "title": "The MageComp Blog",
+      "feed_url": "https://magecomp.com/blog/",
+      "website_url": "https://magecomp.com/blog/",
+      "description": "Magecomp blogs to stay updated with latest news, tips & tricks, tutorials for Magento and Ecommerce.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 915,
+        "instagram": 815
+      },
+      "image_url": "https://i1.feedspot.com/4641562.jpg?t=1616591023"
+    },
+    {
+      "title": "Netbase (CMSmart) - Magento Extensions Free",
+      "feed_url": "https://magentoextensionsfree.com/feed",
+      "website_url": "https://magentoextensionsfree.com/",
+      "description": "A professional partner providing e-commerce solutions for Virtuemart and Magento users in the world with well-designed templates and fully useful extensions",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 464
+      },
+      "image_url": "https://i1.feedspot.com/4642799.jpg?t=1616591730"
+    },
+    {
+      "title": "EmizenTech Blog",
+      "feed_url": "https://www.emizentech.com/blog/feed",
+      "website_url": "https://emizentech.com/blog/",
+      "description": "We innovate not just create. We make your Idea an independent Innovation, raising it with your values, ideologies and belief, ensuring that they are well integrated with all usable and meaningful design and IT solutions, to make it abiding impressive.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 899
+      },
+      "image_url": "https://i1.feedspot.com/4686047.jpg?t=1616591799"
+    },
+    {
+      "title": "Onilab Blog",
+      "feed_url": "https://onilab.com/blog/feed/",
+      "website_url": "https://onilab.com/blog",
+      "description": "Being a full service Magento eCommerce agency, Onilab is committed to making its contribution to online shops development. Our team has the perfect combination of creative and technical skills. We are able to launch the project of your dreams, bringing the results you need. We help companies fulfil their potential in eCommerce,with the help of the Magento engine.",
+      "followers": {
+        "facebook": 43,
+        "twitter": 73,
+        "instagram": 396
+      },
+      "image_url": "https://i1.feedspot.com/5009866.jpg?t=1616591669"
+    },
+    {
+      "title": "VenusTheme - Premium Magento Themes Blog",
+      "feed_url": "https://www.venustheme.com/feed/",
+      "website_url": "https://www.venustheme.com/blog/",
+      "description": "VenusTheme is a leading provider of Magento themes. Having many years of experience in web development, they produce premium responsive themes for Magento.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 291
+      },
+      "image_url": "https://i1.feedspot.com/4641996.jpg"
+    },
+    {
+      "title": "DCKAP Blog",
+      "feed_url": "https://www.dckap.com/blog/feed/",
+      "website_url": "https://www.dckap.com/blog/",
+      "description": "DCKAP is an Enterprise Magento Agency specialized in building successful e-commerce store fronts. Being a Professional Solutions Partner and a Magento 2 Trained partner, DCKAP excels in building Enterprise Magento Store fronts and offers problem solving extensions in the Marketplace.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/576130.jpg?t=1616591986"
+    },
+    {
+      "title": "Mukesh Chapagain Blog \u00bb Magento",
+      "feed_url": "https://chapagain.dev/category/magento/feed/",
+      "website_url": "https://chapagain.dev/category/magento/",
+      "description": "Mukesh Chapagain Blog is all about PHP, Magento, jQuery, SQL, WordPress, Joomla Programming & Tutorial.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 7400
+      },
+      "image_url": "https://i1.feedspot.com/4641619.jpg?t=1616592011"
+    },
+    {
+      "title": "Goivvy Magento Blog",
+      "feed_url": "https://www.goivvy.com/blog/feed",
+      "website_url": "https://www.goivvy.com/blog",
+      "description": "Goivvy.com provide expert, professional Magento services: this is Magento blog where they provide great tips and tricks to improve your own Magento websites.",
+      "followers": {
+        "twitter": 178
+      },
+      "image_url": "https://i1.feedspot.com/4642023.jpg?t=1616591805"
+    },
+    {
+      "title": "Magento Store Manager Blog",
+      "feed_url": "https://blog.mag-manager.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.mag-manager.com/magento-2-tutorials/",
+      "description": "Store Manager for Magento is a Windows application to quickly and effectively manage your Magento online store.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 572
+      },
+      "image_url": "https://i1.feedspot.com/4642147.jpg?t=1616591845"
+    }
+  ]
+}

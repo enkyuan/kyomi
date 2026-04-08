@@ -1,0 +1,105 @@
+{
+  "category": "Meta",
+  "source_url": "https://rss.feedspot.com/meta_rss_feeds",
+  "feeds": [
+    {
+      "title": "Facebook Newsroom",
+      "feed_url": "https://about.fb.com/feed/",
+      "website_url": "https://about.fb.com/news/",
+      "description": "Get the latest news, announcements and media resources from the Facebook company. The Facebook company builds technologies that give people the power to connect with friends and family, find communities and grow businesses.",
+      "followers": {
+        "facebook": 94400000,
+        "twitter": 13900000,
+        "instagram": 5000000
+      },
+      "image_url": "https://i1.feedspot.com/3881708.jpg?t=1659955887"
+    },
+    {
+      "title": "Meta Engineering",
+      "feed_url": "https://engineering.fb.com/feed/",
+      "website_url": "https://engineering.fb.com/",
+      "description": "Stay up-to-date with the latest open source project releases from Facebook, news about Infrastructure Systems, Open Source, Connectivity, Data Center Engineering, and Developer Tools. Meta is helping build a future where people have more ways to play and connect in the metaverse.",
+      "followers": {
+        "facebook": 92000000,
+        "twitter": 13900000,
+        "instagram": 5000000
+      },
+      "image_url": "https://i1.feedspot.com/4278042.jpg?t=1659956163"
+    },
+    {
+      "title": "WABetaInfo",
+      "feed_url": "https://wabetainfo.com/feed/",
+      "website_url": "https://wabetainfo.com/",
+      "description": "WABetaInfo is the main source where you can discover news and real-time updates about Whatsapp. WABetaInfo (also called WBI) was founded in January 15, 2016 on Twitter to independently announce news about WhatsApp, their updates and new features.",
+      "followers": {
+        "twitter": 310200,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5036467.jpg?t=1659956586"
+    },
+    {
+      "title": "WATI Blog",
+      "feed_url": "https://www.wati.io/feed/",
+      "website_url": "https://www.wati.io/blog/",
+      "description": "Get to know more about Whatsapp, news, the latest updates and features and business uses of Whatsapp and more! WATI is a comprehensive customer communication platform for WhatsApp. An official WhatsApp API partner, WATI enables sales, customer support and marketing teams to use a single platform to send bulk messages, broadcasts, template messages, build chatbots with a no-code builder and manage customer queries with a single team inbox.",
+      "followers": {
+        "twitter": 508
+      },
+      "image_url": "https://i1.feedspot.com/5430068.jpg?t=1659956655"
+    },
+    {
+      "title": "Meta Research Blog",
+      "feed_url": "https://research.facebook.com/feed/",
+      "website_url": "https://research.facebook.com/blog/",
+      "description": "At Meta, research permeates everything we do. We believe the most interesting research questions are derived from real world problems. Read the latest in data science, systems, and infrastructure. Meta builds technologies that help people connect, find communities and grow businesses.",
+      "followers": {
+        "facebook": 428400
+      },
+      "image_url": "https://i1.feedspot.com/5429895.jpg?t=1659955707"
+    },
+    {
+      "title": "Meta Research",
+      "feed_url": "https://medium.com/feed/meta-research",
+      "website_url": "https://medium.com/meta-research",
+      "description": "Explore learnings from the people who study human behavior for Meta. Meta UX researchers tackle some of the most complex challenges to gain deeper insights into how people interact with each other and the world around them.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 85200,
+        "instagram": 183500
+      },
+      "image_url": "https://i1.feedspot.com/5430065.jpg?t=1660914159"
+    },
+    {
+      "title": "Preview Instagram",
+      "feed_url": "https://thepreviewapp.com/feed/",
+      "website_url": "https://thepreviewapp.com/instagram-tips/",
+      "description": "This is the place where you will get Instagram tips, theme ideas, feed tips, Instagram strategy, tips and tricks, hacks, Instagram planner, Instagram layout ideas, filters & more! We are Alexandra and Andrew, the creators of Preview. We are a community of 10 Million people using Preview for Instagram. We are dedicated to creating the easiest and most powerful Instagram tool - for you.",
+      "followers": {
+        "twitter": 137
+      },
+      "image_url": "https://i1.feedspot.com/4915547.jpg?t=1659956599"
+    },
+    {
+      "title": "Instagram Engineering",
+      "feed_url": "https://instagram-engineering.com/feed",
+      "website_url": "https://instagram-engineering.com/",
+      "description": "Get the latest updates and stories from the people that build Instagram. Instagram brings you closer to the people and things you love.",
+      "followers": {
+        "facebook": 18100,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4915551.jpg?t=1620310357"
+    },
+    {
+      "title": "Meta Blog",
+      "feed_url": "https://www.meta.com/blog/",
+      "website_url": "https://www.meta.com/blog/",
+      "description": "The official blog for all things Oculus. Get the latest news and updates on oculus, features and more! Oculus brings the world closer through the power of virtual reality. In 2014, The Facebook Company brought Oculus into the product family. Together, we're developing virtual reality products to reimagine how people work, play, and connect.",
+      "followers": {
+        "facebook": 2200000,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5259672.jpg?t=1659956046"
+    }
+  ]
+}

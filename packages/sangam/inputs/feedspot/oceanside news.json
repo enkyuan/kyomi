@@ -1,0 +1,65 @@
+{
+  "category": "Oceanside News",
+  "source_url": "https://rss.feedspot.com/oceanside_california_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "ABC 10News San Diego \u00bb Oceanside",
+      "feed_url": "https://www.10news.com/news/north-county/oceanside.rss",
+      "website_url": "https://www.10news.com/news/north-county/oceanside",
+      "description": "Get Oceanside breaking news headlines, weather, traffic, sports, and entertainment & lifestyle on this page from 10News.com. ABC 10NEWS San Diego is a trusted choice for breaking news, weather, traffic, sports, and entertainment & lifestyle.",
+      "followers": {
+        "facebook": 689400,
+        "twitter": 191300,
+        "instagram": 100600
+      },
+      "image_url": "https://i1.feedspot.com/5500068.jpg?t=1674807176"
+    },
+    {
+      "title": "AmericanTowns \u00bb Oceanside",
+      "feed_url": "https://www.americantowns.com/oceanside-ca/rss/news/",
+      "website_url": "https://www.americantowns.com/oceanside-ca/news/",
+      "description": "AmericanTowns is a virtual 'town square', connecting you to all the events and news happening in Oceanside California. Whether it's town issues and community activism, or school calendars and sports schedules, AmericanTowns delivers the information faster and helps you use it better.",
+      "followers": {
+        "facebook": 44600,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5500070.jpg?t=1674807293"
+    },
+    {
+      "title": "San Diego Union-Tribune \u00bb Oceanside",
+      "feed_url": "https://www.sandiegouniontribune.com/location/california/san-diego-county/north-county/oceanside/feed/",
+      "website_url": "https://www.sandiegouniontribune.com/location/california/san-diego-county/north-county/oceanside/",
+      "description": "Find the community news and features about Oceanside, in coastal northern San Diego County.",
+      "followers": {
+        "facebook": 259700,
+        "twitter": 217100,
+        "instagram": 75800
+      },
+      "image_url": "https://i1.feedspot.com/5140517.jpg?t=1587201425"
+    },
+    {
+      "title": "City of Oceanside, California \u00bb News",
+      "feed_url": "https://www.ci.oceanside.ca.us/news/default.asp",
+      "website_url": "https://www.ci.oceanside.ca.us/news/default.asp",
+      "description": "City of Oceanside, California is dedicated to keeping residents informed and up-to-date by providing the latest news about sports, business, performing arts, health/safety issues, human interest and more.",
+      "followers": {
+        "facebook": 27500,
+        "twitter": 21800,
+        "instagram": 27100
+      },
+      "image_url": "https://i1.feedspot.com/5214409.jpg?t=1604907510"
+    },
+    {
+      "title": "The Coast News Group \u00bb Oceanside",
+      "feed_url": "https://thecoastnews.com/category/cities-news/oceanside/feed/",
+      "website_url": "https://thecoastnews.com/category/cities-news/oceanside/",
+      "description": "Know what's going on in your world. Follow The Coast News Group for stories, video & columns covering world, breaking & local news in Oceanside, CA.",
+      "followers": {
+        "facebook": 12400,
+        "twitter": 9300,
+        "instagram": 13400
+      },
+      "image_url": "https://i1.feedspot.com/5140534.jpg?t=1623822634"
+    }
+  ]
+}

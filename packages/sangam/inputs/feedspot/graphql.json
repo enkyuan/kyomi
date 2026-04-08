@@ -1,0 +1,28 @@
+{
+  "category": "GraphQL",
+  "source_url": "https://rss.feedspot.com/graphql_rss_feeds",
+  "feeds": [
+    {
+      "title": "WPGraphQL Blog",
+      "feed_url": "https://www.wpgraphql.com/api/feeds/rss.xml",
+      "website_url": "https://www.wpgraphql.com/blog",
+      "description": "GraphQL API for WordPress WPGraphQL is a free, open-source WordPress plugin that provides an extendable GraphQL schema and API for any WordPress site. With GraphQL, the client makes declarative queries, asking for the exact data needed.",
+      "followers": {
+        "facebook": 64,
+        "twitter": 5900
+      },
+      "image_url": "https://i1.feedspot.com/4974728.jpg?t=1621947468"
+    },
+    {
+      "title": "Apollo GraphQL Blog",
+      "feed_url": "https://www.apollographql.com/blog/rss.xml",
+      "website_url": "https://www.apollographql.com/blog/",
+      "description": "Apollo is a GraphQL company. Our Data Graph Platform helps developers, startups, and enterprises get the most out of GraphQL. We build the Apollo Platform to help developers adopt GraphQL the right way.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 46700
+      },
+      "image_url": "https://i1.feedspot.com/4974721.jpg?t=1621947476"
+    }
+  ]
+}

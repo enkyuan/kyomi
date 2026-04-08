@@ -1,0 +1,247 @@
+{
+  "category": "The Economist",
+  "source_url": "https://rss.feedspot.com/economist_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Economist \u00bb Economics",
+      "feed_url": "https://www.economist.com/finance-and-economics/rss.xml",
+      "website_url": "https://www.economist.com/finance-and-economics",
+      "description": "Explore our coverage of finance and economics, from stockmarkets and central banks to business trends and our opinions on stories of global significance from The Economist.",
+      "followers": {
+        "facebook": 11200000,
+        "twitter": 27000000,
+        "instagram": 7300000
+      },
+      "image_url": "https://i1.feedspot.com/4887361.jpg?t=1751455703"
+    },
+    {
+      "title": "The Economist \u00bb Business",
+      "feed_url": "https://www.economist.com/business/rss.xml",
+      "website_url": "https://www.economist.com/topics/business",
+      "description": "Explore our coverage of business, commerce, and industries plus our Bartleby column on work and management from The Economist.",
+      "followers": {
+        "facebook": 11200000,
+        "twitter": 27000000,
+        "instagram": 7300000
+      },
+      "image_url": "https://i1.feedspot.com/4887361.jpg?t=1751455703"
+    },
+    {
+      "title": "The Economist \u00bb United States",
+      "feed_url": "https://www.economist.com/united-states/rss.xml",
+      "website_url": "https://www.economist.com/topics/united-states",
+      "description": "Explore our coverage of United States' politics, economics, business and culture, in articles, charts, podcasts and video from The Economist.",
+      "followers": {
+        "facebook": 11200000,
+        "twitter": 27000000,
+        "instagram": 7300000
+      },
+      "image_url": "https://i1.feedspot.com/4887361.jpg?t=1751455703"
+    },
+    {
+      "title": "The Economist \u00bb Britain",
+      "feed_url": "https://www.economist.com/britain/rss.xml",
+      "website_url": "https://www.economist.com/topics/britain",
+      "description": "Get news and information on Britain from The Economist.",
+      "followers": {
+        "facebook": 11200000,
+        "twitter": 27000000,
+        "instagram": 7300000
+      },
+      "image_url": "https://i1.feedspot.com/4887361.jpg?t=1751455703"
+    },
+    {
+      "title": "The Economist \u00bb Europe",
+      "feed_url": "https://www.economist.com/europe/rss.xml",
+      "website_url": "https://www.economist.com/topics/europe",
+      "description": "Explore our coverage of Europe's politics, economics, business and culture, in articles, charts, podcasts and video from The Economist.",
+      "followers": {
+        "facebook": 11200000,
+        "twitter": 27000000
+      },
+      "image_url": "https://i1.feedspot.com/4887361.jpg?t=1751455703"
+    },
+    {
+      "title": "The Economist \u00bb Middle East and Africa",
+      "feed_url": "https://www.economist.com/middle-east-and-africa/rss.xml",
+      "website_url": "https://www.economist.com/middle-east-and-africa",
+      "description": "Get latest news on Middle East and Africa from The Economist.",
+      "followers": {
+        "facebook": 11200000,
+        "twitter": 27000000
+      },
+      "image_url": "https://i1.feedspot.com/4887361.jpg?t=1751455703"
+    },
+    {
+      "title": "The Economist \u00bb Asia",
+      "feed_url": "https://www.economist.com/asia/rss.xml",
+      "website_url": "https://www.economist.com/topics/asia",
+      "description": "Explore our coverage of Asia's politics, economics, business and culture, in articles, charts, podcasts and video from The Economist.",
+      "followers": {
+        "facebook": 11200000,
+        "twitter": 27000000
+      },
+      "image_url": "https://i1.feedspot.com/4887361.jpg?t=1751455703"
+    },
+    {
+      "title": "The Economist \u00bb Culture",
+      "feed_url": "https://www.economist.com/culture/rss.xml",
+      "website_url": "https://www.economist.com/topics/culture",
+      "description": "Explore our coverage of books, TV and film, food and sport, art, religion and more from The Economist.",
+      "followers": {
+        "facebook": 11200000,
+        "twitter": 27000000,
+        "instagram": 7300000
+      },
+      "image_url": "https://i1.feedspot.com/4887379.jpg?t=1751460697"
+    },
+    {
+      "title": "The Economist \u00bb Americas",
+      "feed_url": "https://www.economist.com/the-americas/rss.xml",
+      "website_url": "https://www.economist.com/topics/the-americas",
+      "description": "Explore our coverage of Canada, Latin America and the Caribbean in articles, charts, podcasts and video from The Economist.",
+      "followers": {
+        "facebook": 11200000,
+        "twitter": 27000000
+      },
+      "image_url": "https://i1.feedspot.com/4887361.jpg?t=1751455703"
+    },
+    {
+      "title": "The Economist \u00bb Leaders",
+      "feed_url": "https://www.economist.com/leaders/rss.xml",
+      "website_url": "https://www.economist.com/topics/leaders",
+      "description": "Read our opinions on the issues of the day and our recommendations for policymakers and business leaders from The Economist.",
+      "followers": {
+        "facebook": 11200000,
+        "twitter": 27000000,
+        "instagram": 7300000
+      },
+      "image_url": "https://i1.feedspot.com/4887361.jpg?t=1751455703"
+    },
+    {
+      "title": "The Economist \u00bb The Economist explains",
+      "feed_url": "https://www.economist.com/the-economist-explains/rss.xml",
+      "website_url": "https://www.economist.com/topics/the-economist-explains",
+      "description": "Straightforward explanations of complex topics in politics, economics, science and culture from The Economist.",
+      "followers": {
+        "facebook": 11200000,
+        "twitter": 27000000
+      },
+      "image_url": "https://i1.feedspot.com/4887361.jpg?t=1751455703"
+    },
+    {
+      "title": "The Economist \u00bb Science and Technology",
+      "feed_url": "https://www.economist.com/science-and-technology/rss.xml",
+      "website_url": "https://www.economist.com/topics/science-and-technology",
+      "description": "Explore our coverage of AI, scientific discoveries and the emerging technologies that are transforming the world from The Economist.",
+      "followers": {
+        "facebook": 11200000,
+        "twitter": 27000000,
+        "instagram": 7300000
+      },
+      "image_url": "https://i1.feedspot.com/4887361.jpg?t=1751455703"
+    },
+    {
+      "title": "The Economist \u00bb China",
+      "feed_url": "https://www.economist.com/china/rss.xml",
+      "website_url": "https://www.economist.com/topics/china",
+      "description": "Explore our coverage of China's politics, economics, business and culture, in articles, charts, podcasts and video from The Economist.",
+      "followers": {
+        "facebook": 11200000,
+        "twitter": 27000000
+      },
+      "image_url": "https://i1.feedspot.com/4887361.jpg?t=1751455703"
+    },
+    {
+      "title": "The Economist \u00bb Graphic Detail",
+      "feed_url": "https://www.economist.com/graphic-detail/rss.xml",
+      "website_url": "https://www.economist.com/topics/graphic-detail",
+      "description": "Explore how data, analytics and interactive journalism paint a picture of the world and tell stories of their own from The Economist.",
+      "followers": {
+        "facebook": 11200000,
+        "twitter": 174500,
+        "instagram": 7300000
+      },
+      "image_url": "https://i1.feedspot.com/4887361.jpg?t=1751455703"
+    },
+    {
+      "title": "The Economist \u00bb International",
+      "feed_url": "https://www.economist.com/international/rss.xml",
+      "website_url": "https://www.economist.com/topics/international",
+      "description": "Stories that span the world, from geopolitics to education, health care to sport, combining our reporting and analysis from The Economist.",
+      "followers": {
+        "facebook": 11200000,
+        "twitter": 27000000
+      },
+      "image_url": "https://i1.feedspot.com/4887361.jpg?t=1751455703"
+    },
+    {
+      "title": "The Economist \u00bb Obituaries",
+      "feed_url": "https://www.economist.com/obituary/rss.xml",
+      "website_url": "https://www.economist.com/topics/obituary",
+      "description": "Our coverage remembers remarkable lives, exploring the legacies of influential figures and leaders who shaped the world from The Economist.",
+      "followers": {
+        "facebook": 11200000,
+        "twitter": 27000000
+      },
+      "image_url": "https://i1.feedspot.com/4887361.jpg?t=1751455703"
+    },
+    {
+      "title": "The Economist \u00bb Prospero",
+      "feed_url": "https://www.economist.com/prospero/rss.xml",
+      "website_url": "https://www.economist.com/prospero",
+      "description": "An enchanting mix of literary insight and cultural commentary, in the spirit of the hero of 'The Tempest'.",
+      "followers": {
+        "facebook": 11200000,
+        "twitter": 109600,
+        "instagram": 7300000
+      },
+      "image_url": "https://i1.feedspot.com/189738.jpg"
+    },
+    {
+      "title": "The Economist \u00bb Erasmus",
+      "feed_url": "https://www.economist.com/erasmus/rss.xml",
+      "website_url": "https://www.economist.com/erasmus",
+      "description": "Notes on the interplay between religion and policy, in the spirit of the Dutch Renaissance humanist and scholar.",
+      "followers": {
+        "facebook": 11200000,
+        "twitter": 27000000
+      },
+      "image_url": "https://i1.feedspot.com/4887436.jpg"
+    },
+    {
+      "title": "The Economist \u00bb Gulliver",
+      "feed_url": "https://www.economist.com/gulliver/rss.xml",
+      "website_url": "https://www.economist.com/gulliver",
+      "description": "News and views to entertain and inform business travellers, and help them make the most of life on the road.",
+      "followers": {
+        "facebook": 11200000,
+        "twitter": 27000000,
+        "instagram": 7300000
+      },
+      "image_url": "https://i1.feedspot.com/189671.jpg"
+    },
+    {
+      "title": "The Economist \u00bb The Sports Page",
+      "feed_url": "https://www.economist.com/game-theory/rss.xml",
+      "website_url": "https://www.economist.com/topics/the-sports-page",
+      "description": "The politics, economics, science and statistical analysis of the games we play and watch.",
+      "followers": {
+        "facebook": 11200000,
+        "twitter": 27000000
+      },
+      "image_url": "https://i1.feedspot.com/8544394.jpg?t=1751459520"
+    },
+    {
+      "title": "The Economist \u00bb Free exchange",
+      "feed_url": "https://www.economist.com/free-exchange/rss.xml",
+      "website_url": "https://www.economist.com/topics/free-exchange",
+      "description": "Our economics column offers rigorous analysis, insights into global trends and policy debates.",
+      "followers": {
+        "facebook": 11200000,
+        "instagram": 7300000
+      },
+      "image_url": "https://i1.feedspot.com/8544394.jpg?t=1751459520"
+    }
+  ]
+}

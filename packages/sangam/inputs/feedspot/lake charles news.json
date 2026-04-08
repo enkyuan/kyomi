@@ -1,0 +1,18 @@
+{
+  "category": "Lake Charles News",
+  "source_url": "https://rss.feedspot.com/lake_charles_louisiana_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "American Press",
+      "feed_url": "https://americanpress.com/feed/",
+      "website_url": "https://americanpress.com/",
+      "description": "American Press delivers up-to-the-minute news and information on the latest top stories, local, state and national news as well as business news and more.",
+      "followers": {
+        "facebook": 47300,
+        "twitter": 8900,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5219883.jpg?t=1606220377"
+    }
+  ]
+}

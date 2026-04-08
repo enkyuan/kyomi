@@ -1,0 +1,17 @@
+{
+  "category": "Identity Theft",
+  "source_url": "https://rss.feedspot.com/identity_theft_rss_feeds",
+  "feeds": [
+    {
+      "title": "Identity Force Blog",
+      "feed_url": "https://www.identityforce.com/blog/feed",
+      "website_url": "https://www.identityforce.com/blog",
+      "description": "IdentityForce is a Sontiq Brand. We are proud of our legacy in identity protection and the next evolution of Intelligent Identity Security with Sontiq. Read our blog to learn about the latest developments, and how to best protect yourself and your family from identity theft.",
+      "followers": {
+        "facebook": 8500,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5075324.jpg?t=1619786123"
+    }
+  ]
+}

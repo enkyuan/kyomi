@@ -1,0 +1,30 @@
+{
+  "category": "Midwest City News",
+  "source_url": "https://rss.feedspot.com/midwest_city_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of Midwest City, OK",
+      "feed_url": "https://www.midwestcityok.org/news/rss",
+      "website_url": "https://www.midwestcityok.org/news",
+      "description": "Midwest City, OK is dedicated to keeping residents informed and up-to-date by providing the latest news about schools, sports, business, performing arts, health/safety issues, human interest and more.",
+      "followers": {
+        "facebook": 13800,
+        "twitter": 1800,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5149670.jpg?t=1625639337"
+    },
+    {
+      "title": "The Journal Record \u00bb Midwest City",
+      "feed_url": "https://journalrecord.com/tag/midwest-city/feed/",
+      "website_url": "https://journalrecord.com/tag/midwest-city/",
+      "description": "The Journal Record is an award-winning daily general business and legal news source focusing on local business trends and in-depth stories that convey the voice of the Oklahoma business. Get the latest news and updates of Midwest City at The Journal Record.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 16500,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5149672.jpg?t=1589206520"
+    }
+  ]
+}

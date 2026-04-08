@@ -1,0 +1,126 @@
+{
+  "category": "The Conversation",
+  "source_url": "https://rss.feedspot.com/the_conversation_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Conversation",
+      "feed_url": "https://theconversation.com/us/articles.atom",
+      "website_url": "https://theconversation.com/us",
+      "description": "The Conversation is a nonprofit, independent news organization dedicated to unlocking the knowledge of experts for the public good. We publish trustworthy and informative articles written by academic experts for the general public and edited by our team of journalists.",
+      "followers": {
+        "facebook": 117400,
+        "twitter": 65300,
+        "instagram": 54600
+      },
+      "image_url": "https://i1.feedspot.com/4292113.jpg?t=1658724907"
+    },
+    {
+      "title": "The Conversation \u00bb Arts+Culture",
+      "feed_url": "https://theconversation.com/us/arts/articles.atom",
+      "website_url": "https://theconversation.com/us/arts",
+      "description": "Get the most recent incisive analyses and thought-provoking articles on a variety of arts topics, such as visual arts, literature, music, cinema, and cultural trends.",
+      "followers": {
+        "facebook": 117400,
+        "twitter": 65300,
+        "instagram": 54600
+      },
+      "image_url": "https://i1.feedspot.com/4461233.jpg?t=1686562336"
+    },
+    {
+      "title": "The Conversation \u00bb Economy",
+      "feed_url": "https://theconversation.com/us/business/articles.atom",
+      "website_url": "https://theconversation.com/us/business",
+      "description": "This area of the website is a reliable source for insightful and in-depth analysis on business-related issues such as diverse industries, economics, entrepreneurship, and more.",
+      "followers": {
+        "facebook": 117400,
+        "twitter": 65300,
+        "instagram": 54600
+      },
+      "image_url": "https://i1.feedspot.com/4461129.jpg?t=1686562687"
+    },
+    {
+      "title": "The Conversation \u00bb World",
+      "feed_url": "https://theconversation.com/us/world/articles.atom",
+      "website_url": "https://theconversation.com/us/world",
+      "description": "Curated by professional editors, The Conversation offers informed commentary and debate on the issues affecting our world. Plus a Plain English guide to the latest developments and discoveries from the university and research sector.",
+      "followers": {
+        "facebook": 117400,
+        "twitter": 65300,
+        "instagram": 54600
+      },
+      "image_url": "https://i1.feedspot.com/8535881.jpg"
+    },
+    {
+      "title": "The Conversation \u00bb Education",
+      "feed_url": "https://theconversation.com/us/education/articles.atom",
+      "website_url": "https://theconversation.com/us/education",
+      "description": "Discover the newest expert analysis, research-based articles, and thought-provoking debates on a variety of education-related subjects in the United States.",
+      "followers": {
+        "facebook": 117400,
+        "twitter": 65300,
+        "instagram": 54600
+      },
+      "image_url": "https://i1.feedspot.com/5032907.jpg?t=1686562882"
+    },
+    {
+      "title": "The Conversation \u00bb Environment + Energy",
+      "feed_url": "https://theconversation.com/us/environment/articles.atom",
+      "website_url": "https://theconversation.com/us/environment",
+      "description": "Explore the thought-provoking and informative articles on diverse environmental themes, which provide a forum for professionals to share their expertise and engage in important debates.",
+      "followers": {
+        "facebook": 117400,
+        "twitter": 65300,
+        "instagram": 54600
+      },
+      "image_url": "https://i1.feedspot.com/4468882.jpg?t=1686563058"
+    },
+    {
+      "title": "The Conversation \u00bb Ethics+Religion",
+      "feed_url": "https://theconversation.com/us/ethics/articles.atom",
+      "website_url": "https://theconversation.com/us/ethics",
+      "description": "This area of the website offers succinct and incisive essays on ethical concerns, delving into the moral elements of diverse topics and stimulating intelligent debate.",
+      "followers": {
+        "facebook": 117400,
+        "twitter": 65300,
+        "instagram": 54600
+      },
+      "image_url": "https://i1.feedspot.com/4947296.jpg"
+    },
+    {
+      "title": "The Conversation \u00bb Health",
+      "feed_url": "https://theconversation.com/us/health/articles.atom",
+      "website_url": "https://theconversation.com/us/health",
+      "description": "A wide range of health-related subjects are covered in this website section's informative and fact-based articles, which give helpful information and analysis on the most recent developments and trends in the healthcare industry.",
+      "followers": {
+        "facebook": 117400,
+        "twitter": 65300,
+        "instagram": 54600
+      },
+      "image_url": "https://i1.feedspot.com/5221067.jpg?t=1686563230"
+    },
+    {
+      "title": "The Conversation \u00bb Politics+Society",
+      "feed_url": "https://theconversation.com/us/politics/articles.atom",
+      "website_url": "https://theconversation.com/us/politics",
+      "description": "This website part offers precise evaluation, authoritative viewpoints, and in-depth articles addressing a variety of political subjects and concerns in the USA.",
+      "followers": {
+        "facebook": 117400,
+        "twitter": 65300,
+        "instagram": 54600
+      },
+      "image_url": "https://i1.feedspot.com/4461238.jpg?t=1686563361"
+    },
+    {
+      "title": "The Conversation \u00bb Science+Tech",
+      "feed_url": "https://theconversation.com/us/technology/articles.atom",
+      "website_url": "https://theconversation.com/us/technology",
+      "description": "The articles in the technology section of the web page provide a comprehensive overview of the constantly evolving tech landscape by providing enlightening and interesting information on the most recent technological developments, trends, and effects in the United States.",
+      "followers": {
+        "facebook": 117400,
+        "twitter": 65300,
+        "instagram": 54600
+      },
+      "image_url": "https://i1.feedspot.com/4397849.jpg?t=1686563449"
+    }
+  ]
+}

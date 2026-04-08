@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>News Feeds</title>
+  </head>
+  <body>
+
+    <outline text="World / U.S. News">
+      <outline text="CNN.com" type="rss" xmlUrl="http://rss.cnn.com/rss/cnn_topstories.rss" />
+      <outline text="New York Times Home Page" type="rss" xmlUrl="http://feeds.nytimes.com/nyt/rss/HomePage" />
+      <outline text="Washington Post: Today's Highlights" type="rss" xmlUrl="http://www.washingtonpost.com/rss/" />
+      <outline text="USATODAY.com News - Top Stories" type="rss" xmlUrl="http://rssfeeds.usatoday.com/usatoday-NewsTopStories" />
+      <outline text="NPR Topics: News" type="rss" xmlUrl="http://www.npr.org/rss/rss.php?id=1001" />
+      <outline text="BBC News - Americas: World Edition" type="rss" xmlUrl="http://newsrss.bbc.co.uk/rss/newsonline_world_edition/americas/rss.xml" />
+    </outline>
+
+    <outline text="Local News">
+      <outline text="Salt Lake Tribune: Utah" type="rss" xmlUrl="http://www.sltrib.com/rss/feed/?sec=/News/Utah/&amp;level=1" />
+      <outline text="KSL Local Stories" type="rss" xmlUrl="https://www.ksl.com/rss/news" />
+      <outline text="Utah.gov News Provider" type="rss" xmlUrl="http://www.utah.gov/whatsnew/rss.xml" />
+      <outline text="The Spectrum Local News" type="rss" xmlUrl="http://rssfeeds.thespectrum.com/stgeorge/news" />
+      <outline text="New York Times &gt; Utah" type="rss" xmlUrl="https://www.nytimes.com/topic/destination/utah?inline=nyt-geo&amp;rss=1" />
+    </outline>
+
+    <outline text="Education News">
+      <outline text="News - Utah Education Network" type="rss" xmlUrl="https://www.uen.org/feeds/rss/news.xml.php" />
+      <outline text="ASCD SmartBrief" type="rss" xmlUrl="http://www.smartbrief.com/servlet/rss?b=ASCD" />
+      <outline text="NPR Topics: Education" type="rss" xmlUrl="http://www.npr.org/rss/rss.php?id=1013" />
+    </outline>
+
+    <outline text="Science">
+      <outline text="ScienceDaily Headlines" type="rss" xmlUrl="http://feeds.sciencedaily.com/sciencedaily" />
+      <outline text="news@nature.com" type="rss" xmlUrl="http://feeds.nature.com/nature/rss/current" />
+    </outline>
+
+    <outline text="Technology">
+      <outline text="Wired Top Stories" type="rss" xmlUrl="http://feeds.wired.com/wired/index" />
+      <outline text="New York Times - Technology" type="rss" xmlUrl="http://feeds.nytimes.com/nyt/rss/Technology" />
+      <outline text="NPR: Technology" type="rss" xmlUrl="http://www.npr.org/rss/rss.php?id=1019" />
+      <outline text="Surfing the Net with Kids" type="rss" xmlUrl="http://feeds.surfnetkids.com/SurfingTheNetWithKids" />
+      <outline text="Macworld" type="rss" xmlUrl="http://rss.macworld.com/macworld/feeds/main" />
+      <outline text="PC World Magazine Latest News" type="rss" xmlUrl="http://feeds.pcworld.com/pcworld/latestnews" />
+    </outline>
+
+    <outline text="PBS">
+      <outline text="Frontline" type="rss" xmlUrl="http://feeds.feedburner.com/FrontlineEditorsNotes" />
+      <outline text="Nova" type="rss" xmlUrl="http://www.pbs.org/wgbh/nova/rss/nova.xml" />
+    </outline>
+
+    <outline text="Sports">
+      <outline text="New York Times - Sports" type="rss" xmlUrl="http://feeds1.nytimes.com/nyt/rss/Sports" />
+      <outline text="NBA.com - Jazz News" type="rss" xmlUrl="http://www.nba.com/jazz/rss.xml" />
+    </outline>
+
+    <outline text="Entertainment">
+      <outline text="NPR Topics - Arts &amp; Culture" type="rss" xmlUrl="http://www.npr.org/rss/rss.php?id=1008" />
+      <outline text="New Yorker Humor" type="rss" xmlUrl="http://www.newyorker.com/feed/humor" />
+      <outline text="NPR Fresh Air with Terry Gross" type="rss" xmlUrl="http://www.npr.org/rss/rss.php?id=13" />
+      <outline text="NPR Topics: Movies" type="rss" xmlUrl="http://www.npr.org/rss/rss.php?id=1045" />
+    </outline>
+
+    <outline text="Photos">
+      <outline text="The Daily Puppy" type="rss" xmlUrl="http://feeds.feedburner.com/TheDailyPuppy" />
+      <outline text="Animal of the Day" type="rss" xmlUrl="http://feeds.feedburner.com/animals" />
+    </outline>
+
+  </body>
+</opml>

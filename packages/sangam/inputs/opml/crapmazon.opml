@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<opml version="2.0">
+  <head>
+    <title>Crap From Amazon - Blogroll</title>
+  </head>
+  <body>
+    <outline type="rss" text="Kottke" xmlUrl="http://feeds.kottke.org/main" htmlUrl="https://kottke.org" category="Recommendations"/>
+    <outline type="rss" text="Kinopio" xmlUrl="" htmlUrl="https://kinopio.club/" category="Recommendations"/>
+    <outline type="rss" text=" The Honest Broker" xmlUrl="https://www.honest-broker.com/feed" htmlUrl="https://www.honest-broker.com/" category="Recommendations"/>
+    <outline type="rss" text="Garbage Day" xmlUrl="" htmlUrl="https://www.garbageday.email/" category="Recommendations"/>
+    <outline type="rss" text="Hacker News" xmlUrl="rss" htmlUrl="https://news.ycombinator.com/" category="Recommendations"/>
+    <outline type="rss" text="The Brutalist Report" xmlUrl="" htmlUrl="https://brutalist.report/" category="Recommendations"/>
+    <outline type="rss" text="UCP" xmlUrl="https://ucp.org/feed/" htmlUrl="https://ucp.org/" category="Recommendations"/>
+  </body>
+</opml>

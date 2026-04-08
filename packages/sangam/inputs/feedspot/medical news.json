@@ -1,0 +1,263 @@
+{
+  "category": "Medical News",
+  "source_url": "https://rss.feedspot.com/medical_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Medical Daily",
+      "feed_url": "https://www.medicaldaily.com/rss",
+      "website_url": "https://www.medicaldaily.com/",
+      "description": "The latest health news, scientific trends and medical information, covered in a way that helps you make sense of the complex and constantly changing field of medical knowledge.",
+      "followers": {
+        "facebook": 2100000,
+        "twitter": 17200
+      },
+      "image_url": "https://i1.feedspot.com/4130371.jpg?t=1583218769"
+    },
+    {
+      "title": "Medscape",
+      "feed_url": "https://www.medscape.com/cx/rssfeeds/2700.xml",
+      "website_url": "https://www.medscape.com/",
+      "description": "Get the latest medical news, thought leader perspective, clinical trial coverage, drug updates, journal articles, CME activities & more on Medscape. A free resource for physicians.",
+      "followers": {
+        "facebook": 877800,
+        "twitter": 256399,
+        "instagram": 893800
+      },
+      "image_url": "https://i1.feedspot.com/4808861.jpg"
+    },
+    {
+      "title": "Medical Xpress",
+      "feed_url": "https://medicalxpress.com/rss-feed/",
+      "website_url": "https://medicalxpress.com/",
+      "description": "Medical Xpress is a web-based medical and health news service that features the most comprehensive coverage in the fields of neuroscience, cardiology, cancer, HIV/AIDS, psychology, psychiatry, dentistry, genetics, diseases and conditions, medications and more.",
+      "followers": {
+        "facebook": 183500,
+        "twitter": 170600
+      },
+      "image_url": "https://i1.feedspot.com/4554005.jpg?t=1514468974"
+    },
+    {
+      "title": "STAT",
+      "feed_url": "https://www.statnews.com/category/pharma/feed/",
+      "website_url": "https://www.statnews.com/category/pharma/",
+      "description": "STAT is a media company focused on finding and telling compelling stories about health, medicine, and scientific discovery.",
+      "followers": {
+        "facebook": 314600,
+        "twitter": 160600,
+        "instagram": 21300
+      },
+      "image_url": "https://i1.feedspot.com/4479260.jpg?t=1659004729"
+    },
+    {
+      "title": "MedlinePlus",
+      "feed_url": "https://medlineplus.gov/groupfeeds/new.xml",
+      "website_url": "https://medlineplus.gov/whatsnew/",
+      "description": "Find information on health conditions, wellness issues, and more in easy-to-read language on MedlinePlus, the up-to-date, trusted health information site from the NIH and the National Library of Medicine.",
+      "followers": {
+        "facebook": 39900,
+        "twitter": 104300
+      },
+      "image_url": "https://i1.feedspot.com/4463524.jpg?t=1647930653"
+    },
+    {
+      "title": "Healio",
+      "feed_url": "https://www.healio.com/sws/feed/news/all",
+      "website_url": "https://www.healio.com/",
+      "description": "Healio is a cross-specialty clinical information website for medical specialists, a leading publisher of medical specialty newspapers, journals, books, education, meetings and more.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/4809567.jpg"
+    },
+    {
+      "title": "MobiHealthNews",
+      "feed_url": "https://www.mobihealthnews.com/feed",
+      "website_url": "https://www.mobihealthnews.com/news",
+      "description": "Covers health related news, analysis and articles.MobiHealthNews is digital health's publication of record covering breaking news and contextualizing the trends for healthcare innovators.",
+      "followers": {
+        "facebook": 15000,
+        "twitter": 33800
+      },
+      "image_url": "https://i1.feedspot.com/4387293.jpg?t=1600750854"
+    },
+    {
+      "title": "Medical News Bulletin",
+      "feed_url": "https://medicalnewsbulletin.com/feed/",
+      "website_url": "https://medicalnewsbulletin.com/",
+      "description": "Daily medical news, health news, clinical trials and clinical research, medical technology, fitness and nutrition news in one place",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 2800,
+        "instagram": 991
+      },
+      "image_url": "https://i1.feedspot.com/5096988.jpg?t=1647931662"
+    },
+    {
+      "title": "Irish Medical Times",
+      "feed_url": "https://www.imt.ie/feed/",
+      "website_url": "https://www.imt.ie/",
+      "description": "Irish Medical Times is the original newspaper for Irish doctors, with breaking health news, insightful analysis and clinical reports, and controversial opinions. IMT's mission is to deliver quality, up-to-date news, features, special reports, and interviews for Ireland's medical professionals",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 14500
+      },
+      "image_url": "https://i1.feedspot.com/4809021.jpg?t=1635510123"
+    },
+    {
+      "title": "Medical Dialogues",
+      "feed_url": "https://medicaldialogues.in/feed",
+      "website_url": "https://medicaldialogues.in/news",
+      "description": "Covers medical news, latest health news, medical guidelines, articles about medical education and more. Medical Dialogues is a platform for medical professionals and other people associated with healthcare sector, or pharma sector in India, to get latest medical news.",
+      "followers": {
+        "facebook": 40000,
+        "twitter": 10900
+      },
+      "image_url": "https://i1.feedspot.com/4550390.jpg?t=1614664167"
+    },
+    {
+      "title": "Medical News India",
+      "feed_url": "https://medicalnewsindia.com/feed/",
+      "website_url": "https://medicalnewsindia.com/",
+      "description": "Find latest medical news related to various medical policies, medical devices and various therapies.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 579
+      },
+      "image_url": "https://i1.feedspot.com/4809424.jpg?t=1548750507"
+    },
+    {
+      "title": "Acutis",
+      "feed_url": "https://blog.acutis.com/rss.xml",
+      "website_url": "https://blog.acutis.com/",
+      "description": "Acutis serves the medical community and related fields by providing rapid and reliable diagnostic insights that impact clinical decisions in infectious disease and in clinical toxicology for medication monitoring and substance use testing.",
+      "followers": {
+        "facebook": 180,
+        "instagram": 192
+      },
+      "image_url": "https://i1.feedspot.com/5214557.jpg?t=1604930604"
+    },
+    {
+      "title": "WebMD",
+      "feed_url": "https://www.webmd.com/news/default.htm",
+      "website_url": "https://www.webmd.com/news/default.htm",
+      "description": "WebMD has created an organization that we believe fulfills the promise of health information on the Internet. We provide credible information, supportive communities, and in-depth reference material about health subjects that matter to you. We are a source for original and timely health information as well as material from well-known content providers.",
+      "followers": {
+        "facebook": 2100000,
+        "twitter": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4766651.jpg?t=1622125365"
+    },
+    {
+      "title": "KFF Health News",
+      "feed_url": "https://khn.org/feed/",
+      "website_url": "https://kffhealthnews.org/",
+      "description": "KHN (Kaiser Health News) is a national newsroom that produces in-depth journalism about health issues. KHN reports on how the health care system - hospitals, doctors, nurses, insurers, governments, and consumers - works.",
+      "followers": {
+        "facebook": 39200,
+        "twitter": 92
+      },
+      "image_url": "https://i1.feedspot.com/4483564.jpg?t=1600750867"
+    },
+    {
+      "title": "Dental News",
+      "feed_url": "https://www.dentalnews.pk/",
+      "website_url": "https://www.dentalnews.pk/",
+      "description": "Pakistan's latest news from dentistry & beyond.Dental News is a widely read dental periodical nationally and internationally. We will be uploading the most recent news about the dental world.",
+      "followers": {
+        "facebook": 52900,
+        "twitter": 1400,
+        "instagram": 33300
+      },
+      "image_url": "https://i1.feedspot.com/4809489.jpg?t=1623132524"
+    },
+    {
+      "title": "Stanford Medicine",
+      "feed_url": "https://med.stanford.edu/",
+      "website_url": "https://med.stanford.edu/",
+      "description": "Stanford Medicine integrates a premier medical school with world-class hospitals to advance human health.",
+      "followers": {
+        "facebook": 128100,
+        "twitter": 354900,
+        "instagram": 208100
+      },
+      "image_url": "https://i1.feedspot.com/2210200.jpg?t=1647933425"
+    },
+    {
+      "title": "Medical News Today",
+      "feed_url": "https://www.medicalnewstoday.com/",
+      "website_url": "https://www.medicalnewstoday.com/",
+      "description": "MNT produces original, timely and authoritative information from respected, credible sources. The editorial team has a strict code of practice and covers all areas of health and medicine, including rare diseases and conditions, we strive to achieve coverage across all areas of human health.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 89700
+      },
+      "image_url": "https://i1.feedspot.com/4719755.jpg?t=1535458968"
+    },
+    {
+      "title": "Healthcare IT News",
+      "feed_url": "https://www.healthcareitnews.com/",
+      "website_url": "https://www.healthcareitnews.com/",
+      "description": "Healthcare IT news blog delivers cutting-edge info and crucial business insights into Health care. Check out routine updates and more. Healthcare IT News is the industry's authoritative source covering the people, policy & technology driving next-generation healthcare in the U.S.",
+      "followers": {
+        "facebook": 28700,
+        "twitter": 120700
+      },
+      "image_url": "https://i1.feedspot.com/743988.jpg?t=1611819777"
+    },
+    {
+      "title": "Medical News",
+      "feed_url": "https://www.medicalnews.md/feed/",
+      "website_url": "https://medicalnews.md/",
+      "description": "Find latest medical news on this site.",
+      "followers": {
+        "facebook": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4809341.jpg"
+    },
+    {
+      "title": "Pharmacy Practice News",
+      "feed_url": "https://www.pharmacypracticenews.com/",
+      "website_url": "https://www.pharmacypracticenews.com/",
+      "description": "Pharmacy Practice News (PPN), strives to provide health-system pharmacists with accurate, relevant and up-to-date information that improves their clinical practice. In addition to news, the web site includes many of the magazine's regular features, including Continuing Education lessons, new FDA drug approvals, and our renowned educational reviews.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 7300
+      },
+      "image_url": "https://i1.feedspot.com/4809394.jpg"
+    },
+    {
+      "title": "Clinical Oncology News",
+      "feed_url": "https://www.clinicaloncology.com/",
+      "website_url": "https://www.clinicaloncology.com/",
+      "description": "Clinical Oncology News is to be an independent source of unbiased, accurate and reliable news combined with in-depth expert analysis about the issues that oncologists and hematologists/oncologists care about most. We strive to be a valuable source for oncologists and hematologists/oncologists in providing the best possible care for their patients.",
+      "followers": {
+        "facebook": 550,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4811342.jpg"
+    },
+    {
+      "title": "Pain Medicine News",
+      "feed_url": "https://www.painmedicinenews.com/",
+      "website_url": "https://www.painmedicinenews.com/",
+      "description": "Pain Medicine News feature articles on topics relevant to practicing clinicians, in-depth clinical reviews written by thought leaders, cutting-edge practice management articles and medical education.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 14500
+      },
+      "image_url": "https://i1.feedspot.com/4809005.jpg"
+    },
+    {
+      "title": "General Surgery News",
+      "feed_url": "https://www.generalsurgerynews.com/",
+      "website_url": "https://www.generalsurgerynews.com/",
+      "description": "General Surgery News, is a monthly newspaper designed to keep general surgeons abreast of the latest developments in the field. The publication features extensive meeting coverage, analysis of journal articles, educational reviews, and information on new drugs and products.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 17000
+      },
+      "image_url": "https://i1.feedspot.com/4811311.jpg"
+    }
+  ]
+}

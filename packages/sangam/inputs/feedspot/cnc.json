@@ -1,0 +1,417 @@
+{
+  "category": "CNC",
+  "source_url": "https://rss.feedspot.com/cnc_rss_feeds",
+  "feeds": [
+    {
+      "title": "Hackaday \u00bb CNC Hacks",
+      "feed_url": "https://hackaday.com/category/cnc-hacks/feed/",
+      "website_url": "https://hackaday.com/category/cnc-hacks/",
+      "description": "Hackaday.com serves up fresh hacks each day, every day from around the web. Hackaday.io is a platform for people who like to make things. From electronics hacks to CNC hacks you can find all the hacks at one place here.",
+      "followers": {
+        "facebook": 202000,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/4637801.jpg?t=1746599510"
+    },
+    {
+      "title": "Harvey Performance Company | In the Loupe Machinist Blog",
+      "feed_url": "https://www.harveyperformance.com/feed/",
+      "website_url": "https://www.harveyperformance.com/in-the-loupe/cnc-machining/",
+      "description": "In the Loupe is dedicated to machining how-tos, technical tips, and tool selection guides. Access helpful resources and share with other machinists.",
+      "followers": {
+        "facebook": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5037830.jpg?t=1623918604"
+    },
+    {
+      "title": "Mantech Machinery",
+      "feed_url": "https://mantechmachinery.co.uk/feed/",
+      "website_url": "https://mantechmachinery.co.uk/news/",
+      "description": "Read about everything that is happening at Mantech Machinery, The UK's Premier CNC, Plasma, Laser, Fibre, and Sheet Metal machinery specialists.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 116,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5178553.jpg?t=1616487904"
+    },
+    {
+      "title": "CNC WEST",
+      "feed_url": "http://www.cnc-west.com/feed/",
+      "website_url": "https://www.cnc-west.com/",
+      "description": "CNC WEST is a West Coast metalworking print magazine devoted to machinist and metalworking decision makers in machine shops and job shops on the west coast. The magazine features articles on CNC machining, machine shops and the west coast metal working industry. The blog provides articles, news, and more.",
+      "followers": {
+        "facebook": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4640278.jpg?t=1689924746"
+    },
+    {
+      "title": "Prima Tooling",
+      "feed_url": "https://primatooling.co.uk/feed/",
+      "website_url": "https://primatooling.co.uk/articles/",
+      "description": "Read more about and their services, including PCD- Diamond Routers, Solid Carbide Tooling, SpindleTooling. Prima Tooling is a PCD and Carbide CNC Tooling Manufacturer and Distributor of standard and bespoke cutting tools. Providing quality precision rotary cutting tools for Wood, Metal, Composites, and Foam.",
+      "followers": {
+        "facebook": 206
+      },
+      "image_url": "https://i1.feedspot.com/5635275.jpg?t=1690285808"
+    },
+    {
+      "title": "Laguna Tools | The Best Woodworking & CNC Machines",
+      "feed_url": "https://info.lagunatools.com/rss.xml",
+      "website_url": "https://info.lagunatools.com/",
+      "description": "Laguna Tools is an award winning manufacturer of innovative CNC routers, fiber lasers, band saws, jointers, mortisers, planers, dust collectors, and blades. For over 34 years, Laguna Tools has been a supplier of high quality products for the woodworking, metalworking, and sign making industries & the home hobbyist.",
+      "followers": {
+        "facebook": 257200,
+        "twitter": 9300,
+        "instagram": 98400
+      },
+      "image_url": "https://i1.feedspot.com/4639592.jpg?t=1616488415"
+    },
+    {
+      "title": "OMNI CNC",
+      "feed_url": "https://www.omni-cnc.com/feed/",
+      "website_url": "https://www.omni-cnc.com/blog/",
+      "description": "OMNI is the manufacturer of cnc router, laser and cnc plasma cutting machine. OMNI supply machines to a wide variety of manufacturing sectors including aerospace, automotive, marine, recreational vehicles, 3D sculpture, concept models, pattern making, formed plastics and wood working, sign.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 137
+      },
+      "image_url": "https://i1.feedspot.com/4639606.jpg?t=1616487928"
+    },
+    {
+      "title": "Datron Dynamics",
+      "feed_url": "https://www.datron.com/feed/",
+      "website_url": "https://www.datron.com/resources/blog/",
+      "description": "DATRON Dynamics is the North American representative of DATRON AG, manufacturer of high-speed CNC milling machines, dental mills & dispensing systems. Sales and service of high speed CNC machining centers, engraving machines and milling tools for machining aluminum, plastics, composites and steel.",
+      "followers": {
+        "facebook": 23600,
+        "twitter": 853
+      },
+      "image_url": "https://i1.feedspot.com/4639868.jpg?t=1616488438"
+    },
+    {
+      "title": "RJC Mold",
+      "feed_url": "https://rjcmold.com/feed/",
+      "website_url": "https://rjcmold.com/news/",
+      "description": "Features articles that have to do exclusively with CNC and related topics. Established in 2002, RJC Mold has served for rapid prototyping, CNC machining, 3D printing services, injection molding, and tool-making and mold making.",
+      "followers": {
+        "facebook": 530,
+        "twitter": 35,
+        "instagram": 120
+      },
+      "image_url": "https://i1.feedspot.com/5401067.jpg?t=1652785327"
+    },
+    {
+      "title": "RCO Engineering Blog",
+      "feed_url": "https://www.rcoeng.com/blog/rss.xml",
+      "website_url": "https://www.rcoeng.com/blog",
+      "description": "Covers articles ranging rom prototyping to additive manufacturing. RCO provides comprehensive manufacturing services for the Automotive, Aerospace, and Defense industries.",
+      "followers": {
+        "facebook": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5342303.jpg?t=1636717160"
+    },
+    {
+      "title": "Billor McDowell",
+      "feed_url": "https://billor.com/feed/",
+      "website_url": "https://billor.com/blog/",
+      "description": "Articles about all things CNC, featuring tips for maintaining CNC machines, tools, CNC control retrofits, manufacturing machinery, and where to find CNC parts. Billor McDowell provides repairs on all makes and models of CNC machine tools.",
+      "followers": {
+        "facebook": 36
+      },
+      "image_url": "https://i1.feedspot.com/5323874.jpg?t=1632219046"
+    },
+    {
+      "title": "Bates Machine Shop",
+      "feed_url": "https://batesmachineonline.com/blog/feed/",
+      "website_url": "https://batesmachineonline.com/blog/",
+      "description": "Bates Machine & Mfg is the CNC machining company to call if you need precision machining and design consulting services. They manufacture the highest quality machine parts.",
+      "followers": {
+        "facebook": 167
+      },
+      "image_url": "https://i1.feedspot.com/4639863.jpg?t=1616488312"
+    },
+    {
+      "title": "SANS Machining Blog",
+      "feed_url": "https://www.sansmachining.com/category/blog/feed/",
+      "website_url": "https://www.sansmachining.com/category/blog/",
+      "description": "SANS Machining, as a factory with more then 10 years, specialize in providing OEM Custom Precision Machining Parts, Rapid CNC Machining Service as your design. You can get high quality products, good aftersales service with suitable price. Just send us your drawings then get our quotation within hours. No MOQ, 1 piece is OK.",
+      "followers": {
+        "twitter": 487
+      },
+      "image_url": "https://i1.feedspot.com/5192611.jpg?t=1599130840"
+    },
+    {
+      "title": "Machinery Marketing International",
+      "feed_url": "https://blog.mmi-direct.com/rss.xml",
+      "website_url": "https://blog.mmi-direct.com/",
+      "description": "Machinery Marketing International has been in the business of buying, selling and marketing high-quality used machinery and equipment directly from end users for more than 20 years. MMI's full range of services includes buying and selling machinery, asset recovery, liquidation, scrapping, logistics, marketing and financing.",
+      "followers": {
+        "facebook": 8800,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4638913.jpg?t=1616488639"
+    },
+    {
+      "title": "CNC Masters Blog",
+      "feed_url": "https://www.cncmasters.com/feed/",
+      "website_url": "https://www.cncmasters.com/cnc-blog/",
+      "description": "CNC Masters is a leading manufacturer of many varieties of CNC mills, lathes, milling machine accessories, & more. CNC Masters has been in operation for more than 20 years in providing the industry CNC Milling and Turning products at competitive prices.",
+      "followers": {
+        "facebook": 620,
+        "twitter": 224
+      },
+      "image_url": "https://i1.feedspot.com/4639934.jpg?t=1616487907"
+    },
+    {
+      "title": "DXFforCNC Blog",
+      "feed_url": "https://www.dxfforcnc.com/blogs/cnc-arts.atom",
+      "website_url": "https://www.dxfforcnc.com/blogs/cnc-arts",
+      "description": "DXFforCNC.com offers Dxf files contain cut-ready designs for CNC machines like laser and plasma cutters illustrated in decorative views and we also offer Custom quote designs. The blog offers information about CNC machines like plasma cutters, laser cutters, waterjet cutters including DXF files Cut Ready and CNC machines with all new technologies about CNC machines and CAD-CAM software.",
+      "followers": {
+        "facebook": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5265923.jpg?t=1617862354"
+    },
+    {
+      "title": "OneCNC News & Events Blog",
+      "feed_url": "https://onecnc.net/en/feed",
+      "website_url": "https://onecnc.com/en/news/blog",
+      "description": "OneCNC is one of the pioneers in PC-based CAD/CAM, the company has a long history of consistent research and development. They provide world class CAD CAM Software, Effective and Affordable CNC Solutions.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 965
+      },
+      "image_url": "https://i1.feedspot.com/4640229.jpg"
+    },
+    {
+      "title": "Learn Your CNC Blog",
+      "feed_url": "https://www.learnyourcnc.com/blog?format=rss",
+      "website_url": "https://www.learnyourcnc.com/blog",
+      "description": "Kyle started woodworking when he was 12 years old and also had lot of interest in technology. Later he combined these interests when he built his very first CNC machine in his bedroom at just 16 years old. He is very excited to be able to share his knowledge on all things CNC.",
+      "followers": {
+        "facebook": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5265924.jpg?t=1617862781"
+    },
+    {
+      "title": "YoraHome",
+      "feed_url": "https://yorahome.com/blogs/news.atom",
+      "website_url": "https://yorahome.com/blogs/news",
+      "description": "We created YoraHome with you in mind first and one simple goal: To help YOU unleash your creativity and run a successful business from home. At YoraHome, we do not only sell amazing DIY products like CNC routers, laser engravers, 3d printers and woodworking tools. We also build a family of engaged and successful people who become our friends and ambassadors. Every week, we publish detailed articles and tutorials that help our customers and thousands of creators, DIYers and professionals CNC users worldwide.",
+      "followers": {
+        "facebook": 12600,
+        "twitter": 1700,
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/5293827.jpg?t=1623918578"
+    },
+    {
+      "title": "3Q Machining",
+      "feed_url": "https://www.3qmachining.com/feed/",
+      "website_url": "https://www.3qmachining.com/learn/",
+      "description": "Covers articles related to cnc machining & 3D printing & Injection Molding. 3Q Machining is top quality 3D Printing & CNC Machining Service Shop manufacturer in China for your custom precise plastic & metal machining parts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5353833.jpg?t=1639569254"
+    },
+    {
+      "title": "DJC Precision CNC Machining",
+      "feed_url": "https://djc-cnc-machining.com/feed/",
+      "website_url": "https://djc-cnc-machining.com/",
+      "description": "Precision CNC Machined Parts Small, medium and large series for demanding industries where each machined part needs to be of the highest precision for Automotive, Medtech, Aerospace, Electronic, Hydraulic, and Pneumatic.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5202350.jpg?t=1601456615"
+    },
+    {
+      "title": "CNC Indexing",
+      "feed_url": "https://www.cncindexing.com/blog/feed/",
+      "website_url": "https://www.cncindexing.com/blog/",
+      "description": "CNC Indexing & Feeding Technologies is committed to making machine tools run more efficiently and cost-effectively. CNC Indexing is your one-stop source for CNC accessories: rotary tables, high pressure coolant systems, bar feeders & oil skimmers.",
+      "followers": {
+        "facebook": 780,
+        "twitter": 397
+      },
+      "image_url": "https://i1.feedspot.com/4639631.jpg"
+    },
+    {
+      "title": "ArcBro CNC Cutting Machine",
+      "feed_url": "https://www.arcbro.com/blog/feed/",
+      "website_url": "https://www.arcbro.com/blog/",
+      "description": "ArcBro , the portable CNC cutting system, with the good quality in the world. Currently, ArcBro has become the best company doing portable cnc cutting production. Taking advantage of endurable industry steel, we use only carefully selected materials. that must have high quality.",
+      "followers": {
+        "facebook": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4638697.jpg?t=1616488308"
+    },
+    {
+      "title": "CNC Repair,Replacement and Retofit",
+      "feed_url": "https://amsindiasolutions.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://amsindiasolutions.blogspot.com/",
+      "description": "AMS is proud to be a one-stop cnc and industrial automation solutions company, through Repair, Replacement and Retrofitting.",
+      "followers": {
+        "twitter": 48
+      },
+      "image_url": "https://i1.feedspot.com/5075312.jpg"
+    },
+    {
+      "title": "Machine Tool Bids",
+      "feed_url": "https://machinetoolbids.wordpress.com/feed/",
+      "website_url": "https://machinetoolbids.wordpress.com/",
+      "description": "Machine Tool Bids is a true business-to-business platform for buying and selling surplus equipment, bringing machines directly from end users to end users. This core approach reflects in our digital CNC marketplace. You will find a wide range of selective CNC equipment that meets our quality standards all are in good working condition, have been in production, and come at a great cost savings ov",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4638916.jpg"
+    },
+    {
+      "title": "Opus CNC",
+      "feed_url": "https://www.opuscnc.co.uk/blog/feed/",
+      "website_url": "https://www.opuscnc.co.uk/blog/",
+      "description": "We are a family run business specialising in the retail and commissioning of CNC routers and laser cutting machines. We pride ourselves on providing customer service on a first-class scale.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 87,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5120983.jpg?t=1616488362"
+    },
+    {
+      "title": "MultiCam CNC Cutting Solutions",
+      "feed_url": "http://multicamusa.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://multicamusa.blogspot.com/",
+      "description": "MultiCam manufactures CNC Router, Laser, Plasma, WaterJet, and Knife Cutting machines. For over two decades thousands of MultiCam cutting systems have been installed around the world.",
+      "followers": {
+        "facebook": 13600,
+        "twitter": 943
+      },
+      "image_url": "https://i1.feedspot.com/4638805.jpg?t=1616488366"
+    },
+    {
+      "title": "Knowcnc.com \u00bb Knowledgebase",
+      "feed_url": "https://knowcnc.com/category/knowledgebase/feed/",
+      "website_url": "https://knowcnc.com/category/knowledgebase/",
+      "description": "Everything you need to know about CNC Milling and Machining",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5470178.jpg?t=1669036340"
+    },
+    {
+      "title": "WayKen Blogs",
+      "feed_url": "https://waykenrm.com/blogs/",
+      "website_url": "https://waykenrm.com/blogs/",
+      "description": "Read about trends in WayKen Rapid Prototyping, including the latest in engineered prototypes.",
+      "followers": {
+        "facebook": 28100
+      },
+      "image_url": "https://i1.feedspot.com/5027549.jpg"
+    },
+    {
+      "title": "AXYZ Blogs",
+      "feed_url": "https://www.axyz.com/blog/feed/",
+      "website_url": "https://www.axyz.com/blog/",
+      "description": "AXYZ International was founded in 1990 as a machinery service company, primarily servicing, selling and installing CNC machinery including several brands of CNC routers. AXYZ provide 366,918 standard CNC Router configurations, specialising in matching an industrial/heavy-duty CNC router to customer's unique needs and budget.",
+      "followers": {
+        "facebook": 1900,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4639644.jpg?t=1616488285"
+    },
+    {
+      "title": "CNC Cookbook",
+      "feed_url": "https://www.cnccookbook.com/blog/feed/",
+      "website_url": "https://www.cnccookbook.com/blog/",
+      "description": "CNC Cookbook have created over 1000 articles about CNC aimed at everyone from beginner/DIY to professional CNC machinist. They're here to make CNC easier. That's why we have 2 different software packages: G-Wizard CNC Calculator and G-Wizard G-Code Editor/Simulator.",
+      "followers": {
+        "facebook": 14600,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/3509547.jpg?t=1616487875"
+    },
+    {
+      "title": "Okuma | CNC Blog | CNC Machine Tool",
+      "feed_url": "https://www.okuma.com/rssmgr/feed.php?co=blog_makerssfeed&ot[blog_id]=1096&en=2403b",
+      "website_url": "https://www.okuma.com/cnc-blog",
+      "description": "A weekly CNC blog, with posts written by a variety of Okuma subject matter experts, to provide machine tool users with useful information. Okuma America Corporation is the U.S.-based sales and service affiliate of Okuma Corporation, a world leader in CNC machine tools, founded in 1898 in Nagoya, Japan.",
+      "followers": {
+        "facebook": 16900,
+        "twitter": 8500,
+        "instagram": 28000
+      },
+      "image_url": "https://i1.feedspot.com/4639624.jpg?t=1616487921"
+    },
+    {
+      "title": "Rapid Direct",
+      "feed_url": "https://www.rapiddirect.com/blog/feed/",
+      "website_url": "https://www.rapiddirect.com/blog/",
+      "description": "Read informational articles, guides & tips, Learn about the manufacturing world in China. Rapid Direct provides prototyping, custom parts manufacturing and end-use production services for global product designer and engineers.",
+      "followers": {
+        "twitter": 421
+      },
+      "image_url": "https://i1.feedspot.com/5036667.jpg"
+    },
+    {
+      "title": "CNC Knowledge",
+      "feed_url": "https://www.blogger.com/feeds/5935120587892339806/posts/default",
+      "website_url": "https://www.cncknowledge.in/",
+      "description": "Hi, I am Harshal Dhawas a Mechinical Engineer. I am very passionate about cnc machining. I always try to learn more and teach more about my cnc machining programming skills and other technical, programming skill.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 7
+      },
+      "image_url": "https://i1.feedspot.com/5135958.jpg?t=1616488147"
+    },
+    {
+      "title": "NexGen Machine Co.",
+      "feed_url": "https://www.nexgenmachine.com/blog/feed/",
+      "website_url": "http://www.nexgenmachine.com/blog/",
+      "description": "NexGen Machine Company has over 40 years of experience in CNC turning and manufacturing. We provide superior quality and customer service is our clients. They are a custom CNC drilling shop, with our wide range of CNC drilling machines, we provide complete CNC lathe services including turning and milling.",
+      "followers": {
+        "twitter": 19
+      },
+      "image_url": "https://i1.feedspot.com/4638919.jpg?t=1616488323"
+    },
+    {
+      "title": "The Job Shop Blog",
+      "feed_url": "https://jobshopblog.com/blog/f.rss",
+      "website_url": "https://jobshopblog.com/blog",
+      "description": "A blog for CNC Machine Shop Owners, Managers, and Machinists. About Deming's 14 points, CNC Shop Training, CNC Machining tips, IIoT, TQM and ISO cert.",
+      "followers": {
+        "twitter": 91
+      },
+      "image_url": "https://i1.feedspot.com/5070176.jpg?t=1616488333"
+    },
+    {
+      "title": "Gizmo Machine Tools Inc.",
+      "feed_url": "https://www.gizmo-mt.ca/blog/feed/",
+      "website_url": "https://www.gizmo-mt.ca/blog",
+      "description": "Gizmo is venture started by professional engineers with over 18 years of experience in the manufacturing industry. Looking at the changing times we focus on providing our customers with an alternative to expensive new machinery when tooling up for a job or replacing existing capital equipment. We buy and sell quality used CNC Machinery, Conventional Machinery, Gear Machinery, Plastic Machinery, Sheet Metal Machinery, Presses, and Plant Machinery.",
+      "followers": {
+        "facebook": 221
+      },
+      "image_url": "https://i1.feedspot.com/5231102.jpg?t=1609135183"
+    },
+    {
+      "title": "Rapid Enterprises Inc.",
+      "feed_url": "https://www.rapidenterprises.ca/feed/",
+      "website_url": "https://www.rapidenterprises.ca/blog/",
+      "description": "For more than 36 years, Rapid Enterprises has been committed to providing superior production services. We are dedicated to high-quality manufacturing and perfect craftsmanship and take quality and time-sensitivity very seriously. We are independently audited to be in conformance with ISO 9001:2015 international quality standards.",
+      "followers": {
+        "facebook": 459,
+        "twitter": 29,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5269418.jpg?t=1618466598"
+    },
+    {
+      "title": "MultiCam Canada",
+      "feed_url": "https://www.mikonmachinery.com/category/blog/feed/",
+      "website_url": "https://multicam.ca/category/blog/",
+      "description": "MultiCam Canada, with offices on the outskirts of Toronto, ON and Quebec City, PQ, has been a Regional Technology Centre for MultiCam's full line of CNC Cutting equipment since 1994. They offer CNC Routers, Plasma, Laser, Waterjet, and Knife Cutting Systems.",
+      "followers": {
+        "facebook": 937,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4639650.jpg?t=1616487935"
+    }
+  ]
+}

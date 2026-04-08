@@ -1,0 +1,70 @@
+{
+  "category": "South Africa Cryptocurrency",
+  "source_url": "https://rss.feedspot.com/south_africa_cryptocurrency_rss_feeds",
+  "feeds": [
+    {
+      "title": "MyBroadband",
+      "feed_url": "https://mybroadband.co.za/news/cryptocurrency/feed",
+      "website_url": "https://mybroadband.co.za/news/cryptocurrency",
+      "description": "MyBroadband is South Africa's biggest and best IT news website, covering the latest international and local IT and tech news.",
+      "followers": {
+        "facebook": 290300,
+        "twitter": 114200,
+        "instagram": 15100
+      },
+      "image_url": "https://i1.feedspot.com/4951023.jpg?t=1621506828"
+    },
+    {
+      "title": "Bitcoin Africa",
+      "feed_url": "https://bitcoinafrica.io/feed/",
+      "website_url": "https://bitcoinafrica.io/",
+      "description": "BitcoinAfrica.io is Africa's leading cryptocurrency information portal with the aim to promote bitcoin and its underlying technology in Africa.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 11200
+      },
+      "image_url": "https://i1.feedspot.com/4951040.jpg?t=1621506838"
+    },
+    {
+      "title": "CryptoAfricaNow",
+      "feed_url": "https://cryptoafricanow.com/feed/",
+      "website_url": "https://cryptoafricanow.com/",
+      "description": "Keep up with Breaking Bitcoin News from CryptoAfricaNow.",
+      "followers": {
+        "twitter": 27
+      },
+      "image_url": "https://i1.feedspot.com/5067199.jpg?t=1621506862"
+    },
+    {
+      "title": "Bitmart Blog",
+      "feed_url": "https://www.bitmart.co.za/blog/feed/",
+      "website_url": "https://www.bitmart.co.za/blog/",
+      "description": "This blog tries to empower individuals and businesses to enjoy the advantages that crypto currencies such as Bitcoin can offer them. To Ensure Fair and honest trade among individuals in the Crypto Currency Mining Hardware industry.",
+      "followers": {
+        "facebook": 29,
+        "twitter": 928
+      },
+      "image_url": "https://i1.feedspot.com/4951025.jpg?t=1621506789"
+    },
+    {
+      "title": "BitcoinZAR Blog",
+      "feed_url": "https://www.bitcoinzar.co.za/blog/feed/",
+      "website_url": "https://www.bitcoinzar.co.za/blog/",
+      "description": "From this blog, you can learn about bitcoin in South Africa, bitcoin business directory for S.A. and where to buy and sell bitcoin in South Africa.",
+      "followers": {
+        "facebook": 85700,
+        "twitter": 9000
+      },
+      "image_url": "https://i1.feedspot.com/4951019.jpg?t=1621506805"
+    },
+    {
+      "title": "Africa Cryptocurrency",
+      "feed_url": "https://africacryptocurrency.com/feed/",
+      "description": "Our primary goal on this site to educate people that are new to this space. This is important to us because in the cryptocurrency market there is a lot of scammers that are preying on the poor people hoping to get rich quick. We believe with proper education, and reliable news source people will be less likely to get scammed.",
+      "followers": {
+        "instagram": 371
+      },
+      "image_url": "https://i1.feedspot.com/4951256.jpg"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "category": "Rage Room",
+  "source_url": "https://rss.feedspot.com/rage_room_rss_feeds",
+  "feeds": [
+    {
+      "title": "Super Smash Kansas City Blog",
+      "feed_url": "https://www.supersmashkc.com/blog-feed.xml",
+      "website_url": "https://www.supersmashkc.com/blog",
+      "description": "Discover articles on all things Super Smash Bros. from tournament recaps to character analysis on the Super Smash Kansas City Blog. Stay tuned for the latest updates and strategies to improve your gameplay. Follow their blog to stay up-to-date on the Kansas City Super Smash Bros. scene.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5509472.jpg?t=1676618369"
+    },
+    {
+      "title": "Rage Ground Blog",
+      "feed_url": "https://rageground.com/feed/",
+      "website_url": "https://rageground.com/category/blog/",
+      "description": "Need to blow off some steam? Look no further than the Rage Ground Blog. Their blog has a collection of posts covering everything from the benefits of smashing things to the latest news on rage rooms around the world. Follow their blog for info and curiosity about the rage room phenomenon.",
+      "followers": {
+        "facebook": 1700,
+        "instagram": 10200
+      },
+      "image_url": "https://i1.feedspot.com/5509468.jpg?t=1676618212"
+    },
+    {
+      "title": "Popup Rage Room Blog",
+      "feed_url": "https://popuprageroom.com/blog-listing/feed/",
+      "website_url": "https://popuprageroom.com/blog-listing/",
+      "description": "The Popup Rage Room Blog is your go-to source to read more about the latest trends in popup rage rooms. Discover articles on the benefits of venting your frustrations and the latest rage room experiences. Stay tuned to their blog for recent updates on where to find popup rage rooms in your area.",
+      "followers": {
+        "facebook": 100
+      },
+      "image_url": "https://i1.feedspot.com/5509471.jpg?t=1676618268"
+    },
+    {
+      "title": "Outburst Rage Room Blog",
+      "feed_url": "https://www.outburstrageroom.com/blog-feed.xml",
+      "website_url": "https://www.outburstrageroom.com/blog",
+      "description": "Outburst Rage Room Blog is your place to find answers to all your questions about rage rooms. Discover articles on the benefits of breaking things and the latest rage room experiences. Read their blog for info and curiosity about the rage room phenomenon.",
+      "followers": {
+        "facebook": 531,
+        "twitter": 2,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5509473.jpg?t=1676618407"
+    }
+  ]
+}

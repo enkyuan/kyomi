@@ -1,0 +1,244 @@
+{
+  "category": "South Wales Argus",
+  "source_url": "https://rss.feedspot.com/southwalesargus_rss_feeds",
+  "feeds": [
+    {
+      "title": "South Wales Argus \u00bb News",
+      "feed_url": "https://www.southwalesargus.co.uk/news/rss/",
+      "website_url": "https://www.southwalesargus.co.uk/news/",
+      "description": "South Wales Argus is a news magazine portal which gives you a daily dose of sports, business related news from south wales. It is a first place to look for news in Newport, Gwent and across South East Wales.",
+      "followers": {
+        "facebook": 143700,
+        "twitter": 100600,
+        "instagram": 20600
+      },
+      "image_url": "https://i1.feedspot.com/79477.jpg?t=1739957209"
+    },
+    {
+      "title": "South Wales Argus \u00bb Sport",
+      "feed_url": "https://www.southwalesargus.co.uk/sport/rss/",
+      "website_url": "https://www.southwalesargus.co.uk/sport/",
+      "description": "Newport County AFC, Dragons PRO-14 rugby and other sport news, fixtures transfer gossip from Gwent and South East Wales, by the South Wales Argus",
+      "followers": {
+        "twitter": 100600
+      },
+      "image_url": "https://i1.feedspot.com/7878486.jpg?t=1739957047"
+    },
+    {
+      "title": "South Wales Argus \u00bb Crime & Court",
+      "feed_url": "https://www.southwalesargus.co.uk/news/crime/rss/",
+      "website_url": "https://www.southwalesargus.co.uk/news/crime/",
+      "description": "Crime and court stories from the South Wales Argus, covering Newport. Cwmbran, Pontypool, Risca, Monmouthshire, Blaenau Gwent, Caerphilly and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7878504.jpg"
+    },
+    {
+      "title": "South Wales Argus \u00bb Business",
+      "feed_url": "https://www.southwalesargus.co.uk/news/business/rss/",
+      "website_url": "https://www.southwalesargus.co.uk/news/business/",
+      "description": "Business news from the South Wales Argus",
+      "followers": {
+        "twitter": 100600
+      },
+      "image_url": "https://i1.feedspot.com/7878493.jpg"
+    },
+    {
+      "title": "South Wales Argus \u00bb Dragons",
+      "feed_url": "https://www.southwalesargus.co.uk/sport/dragons/rss/",
+      "website_url": "https://www.southwalesargus.co.uk/sport/dragons/",
+      "description": "South Wales Argus Dragons",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7878503.jpg?t=1739957032"
+    },
+    {
+      "title": "South Wales Argus \u00bb Latest Rugby",
+      "feed_url": "https://www.southwalesargus.co.uk/sport/rugby/latest/rss/",
+      "website_url": "https://www.southwalesargus.co.uk/sport/rugby/latest/",
+      "description": "Latest Rugby news from the South Wales Argus",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7878496.jpg"
+    },
+    {
+      "title": "South Wales Argus \u00bb Football",
+      "feed_url": "https://www.southwalesargus.co.uk/sport/football/latest/rss/",
+      "website_url": "https://www.southwalesargus.co.uk/sport/football/latest/",
+      "description": "All articles about Football from South Wales Argus.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7878507.jpg"
+    },
+    {
+      "title": "South Wales Argus \u00bb Cricket",
+      "feed_url": "https://www.southwalesargus.co.uk/sport/cricket/latestcricket/rss/",
+      "website_url": "https://www.southwalesargus.co.uk/sport/cricket/latestcricket/",
+      "description": "Latest cricket news from the South Wales Argus",
+      "followers": {
+        "twitter": 100600
+      },
+      "image_url": "https://i1.feedspot.com/7878499.jpg"
+    },
+    {
+      "title": "South Wales Argus \u00bb Newport County",
+      "feed_url": "https://www.southwalesargus.co.uk/sport/football/newportcounty/rss/",
+      "website_url": "https://www.southwalesargus.co.uk/sport/football/newportcounty/",
+      "description": "All the latest Newport County AFC news, results, fixtures, live match coverage, transfers, team news, gossip and more from the team at the South",
+      "followers": {
+        "twitter": 100600
+      },
+      "image_url": "https://i1.feedspot.com/7878510.jpg"
+    },
+    {
+      "title": "South Wales Argus \u00bb Education",
+      "feed_url": "https://www.southwalesargus.co.uk/li/education_zone/education_news/rss/",
+      "website_url": "https://www.southwalesargus.co.uk/li/education_zone/education_news/",
+      "description": "Education news from the South Wales Argus",
+      "followers": {
+        "twitter": 100600
+      },
+      "image_url": "https://i1.feedspot.com/7878494.jpg"
+    },
+    {
+      "title": "South Wales Argus \u00bb Cars",
+      "feed_url": "https://www.southwalesargus.co.uk/cars/news/rss/",
+      "website_url": "https://www.southwalesargus.co.uk/cars/news/",
+      "description": "All articles about Cars from South Wales Argus.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7878508.jpg"
+    },
+    {
+      "title": "South Wales Argus \u00bb Property",
+      "feed_url": "https://www.southwalesargus.co.uk/homes/property_news/rss/",
+      "website_url": "https://www.southwalesargus.co.uk/homes/property_news/",
+      "description": "All articles about Property from South Wales Argus.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7878511.jpg"
+    },
+    {
+      "title": "South Wales Argus \u00bb Showbiz",
+      "feed_url": "https://www.southwalesargus.co.uk/leisure/showbiz/rss/",
+      "website_url": "https://www.southwalesargus.co.uk/leisure/showbiz/",
+      "description": "All articles about Showbiz from South Wales Argus.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7878509.jpg"
+    },
+    {
+      "title": "South Wales Argus \u00bb Travel",
+      "feed_url": "https://www.southwalesargus.co.uk/leisure/travel/rss/",
+      "website_url": "https://www.southwalesargus.co.uk/leisure/travel/",
+      "description": "All articles about Travel from South Wales Argus.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7878500.jpg"
+    },
+    {
+      "title": "South Wales Argus \u00bb Nightlife",
+      "feed_url": "https://www.southwalesargus.co.uk/leisure/nightlife/rss/",
+      "website_url": "https://www.southwalesargus.co.uk/leisure/nightlife/",
+      "description": "All articles about Nightlife from South Wales Argus.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7878489.jpg"
+    },
+    {
+      "title": "South Wales Argus \u00bb Days Out",
+      "feed_url": "https://www.southwalesargus.co.uk/leisure/days-out/rss/",
+      "website_url": "https://www.southwalesargus.co.uk/leisure/days-out/",
+      "description": "Days Out from the South Wales Argus",
+      "followers": {
+        "twitter": 100600
+      },
+      "image_url": "https://i1.feedspot.com/7878505.jpg"
+    },
+    {
+      "title": "South Wales Argus \u00bb Television",
+      "feed_url": "https://www.southwalesargus.co.uk/leisure/television/rss/",
+      "website_url": "https://www.southwalesargus.co.uk/leisure/television/",
+      "description": "All articles about Television from South Wales Argus.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7878491.jpg"
+    },
+    {
+      "title": "South Wales Argus \u00bb Shopping",
+      "feed_url": "https://www.southwalesargus.co.uk/leisure/shopping/rss/",
+      "website_url": "https://www.southwalesargus.co.uk/leisure/shopping/",
+      "description": "All articles about Shopping from South Wales Argus.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7878488.jpg"
+    },
+    {
+      "title": "South Wales Argus \u00bb Eating Out",
+      "feed_url": "https://www.southwalesargus.co.uk/leisure/eating-out/rss/",
+      "website_url": "https://www.southwalesargus.co.uk/leisure/eating-out/",
+      "description": "All articles about Eating Out from South Wales Argus.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7878498.jpg?t=1739956961"
+    },
+    {
+      "title": "South Wales Argus \u00bb Leisure",
+      "feed_url": "https://www.southwalesargus.co.uk/leisure/rss/",
+      "website_url": "https://www.southwalesargus.co.uk/leisure/",
+      "description": "What's On in South Wales - tv, cinema, music, theatre listings, South Wales showbiz",
+      "followers": {
+        "twitter": 100600
+      },
+      "image_url": "https://i1.feedspot.com/7878497.jpg"
+    },
+    {
+      "title": "South Wales Argus \u00bb Cycling",
+      "feed_url": "https://www.southwalesargus.co.uk/sport/cycling/rss/",
+      "website_url": "https://www.southwalesargus.co.uk/sport/cycling/",
+      "description": "All articles about Cycling from South Wales Argus.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7878490.jpg"
+    },
+    {
+      "title": "South Wales Argus \u00bb Boxing",
+      "feed_url": "https://www.southwalesargus.co.uk/sport/boxing/rss/",
+      "website_url": "https://www.southwalesargus.co.uk/sport/boxing/",
+      "description": "World boxing champ and South Wales Argus columnist Joe Calzaghe",
+      "followers": {
+        "twitter": 100600
+      },
+      "image_url": "https://i1.feedspot.com/7878501.jpg"
+    },
+    {
+      "title": "South Wales Argus \u00bb Racing",
+      "feed_url": "https://www.southwalesargus.co.uk/sport/racing/rss/",
+      "website_url": "https://www.southwalesargus.co.uk/sport/racing/",
+      "description": "Racing news from the South Wales Argus",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7878492.jpg"
+    },
+    {
+      "title": "South Wales Argus \u00bb Wales football",
+      "feed_url": "https://www.southwalesargus.co.uk/sport/football/euro_2016/rss/",
+      "website_url": "https://www.southwalesargus.co.uk/sport/football/euro_2016/",
+      "description": "Follow Wales' Euro 2016 campaign with South Wales Argus football writer Andrew Penman",
+      "followers": {
+        "twitter": 100600
+      },
+      "image_url": "https://i1.feedspot.com/7878487.jpg?t=1739956998"
+    },
+    {
+      "title": "South Wales Argus \u00bb Gwent Rugby",
+      "feed_url": "https://www.southwalesargus.co.uk/sport/rugby/gwent/rss/",
+      "website_url": "https://www.southwalesargus.co.uk/sport/rugby/gwent/",
+      "description": "Gwent Rugby news from the South Wales Argus",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7878506.jpg"
+    },
+    {
+      "title": "South Wales Argus \u00bb National Rugby",
+      "feed_url": "https://www.southwalesargus.co.uk/sport/rugby/national/rss/",
+      "website_url": "https://www.southwalesargus.co.uk/sport/rugby/national/",
+      "description": "All articles about National Rugby from South Wales Argus.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7878495.jpg"
+    },
+    {
+      "title": "South Wales Argus \u00bb Dragons",
+      "feed_url": "https://www.southwalesargus.co.uk/sport/rugby/dragons/rss/",
+      "website_url": "https://www.southwalesargus.co.uk/sport/rugby/dragons/",
+      "description": "All articles about Dragons from South Wales Argus.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7878502.jpg"
+    }
+  ]
+}

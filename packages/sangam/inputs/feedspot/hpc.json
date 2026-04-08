@@ -1,0 +1,114 @@
+{
+  "category": "HPC",
+  "source_url": "https://rss.feedspot.com/hpc_rss_feeds",
+  "feeds": [
+    {
+      "title": "HPCwire",
+      "feed_url": "https://www.hpcwire.com/feed/",
+      "website_url": "https://www.hpcwire.com/",
+      "description": "HPC news and supercomputing information focused on emerging HPC applications in science, engineering, financial modeling, virtual reality, databases, and other compute-intensive tasks.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 20000
+      },
+      "image_url": "https://i1.feedspot.com/4834091.jpg?t=1611052442"
+    },
+    {
+      "title": "insideHPC",
+      "feed_url": "https://insidehpc.com/feed/",
+      "website_url": "https://insidehpc.com/",
+      "description": "insideHPC is a blog that distills news and events in the world of HPC and presents them in bite-sized nuggets of helpfulness as a resource for supercomputing professionals.",
+      "followers": {
+        "twitter": 14800
+      },
+      "image_url": "https://i1.feedspot.com/4835126.jpg?t=1611052447"
+    },
+    {
+      "title": "Advanced Clustering Technologies Blog",
+      "feed_url": "https://www.advancedclustering.com/blog/feed/",
+      "website_url": "https://www.advancedclustering.com/blog/",
+      "description": "Advanced Clustering Technologies has been building custom, turn-key high-performance computing solutions including HPC clusters for more than 15 years. Advanced Clustering's blog features articles of interest to the high-performance computing industry.",
+      "followers": {
+        "facebook": 508,
+        "twitter": 550
+      },
+      "image_url": "https://i1.feedspot.com/4835341.jpg?t=1611052459"
+    },
+    {
+      "title": "Women in High Performance Computing Blog",
+      "feed_url": "https://womeninhpc.org/feed",
+      "website_url": "https://womeninhpc.org/blog",
+      "description": "The Women in HPC network was created with the vision to encourage women to participate in the HPC community by providing fellowship, education, and support to women and the organizations that employ them.",
+      "followers": {
+        "facebook": 595,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4834077.jpg?t=1611052473"
+    },
+    {
+      "title": "TOP500 Supercomputer Sites",
+      "feed_url": "https://www.top500.org/news/feed/",
+      "website_url": "https://www.top500.org/news/",
+      "description": "The main objective of the TOP500 list is to provide a ranked list of general-purpose systems that are in common use for high-end applications. Follow this blog to get information on High-Performance Computing.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 7800
+      },
+      "image_url": "https://i1.feedspot.com/4835243.jpg?t=1611052485"
+    },
+    {
+      "title": "Cluster Monkey",
+      "feed_url": "https://www.clustermonkey.net/feed/rss/",
+      "website_url": "https://www.clustermonkey.net/",
+      "description": "Cluster Monkey is an exclusive content-based site that speaks directly to the high performance computing cluster market and community. We focus on benchmarks, tutorials, case studies, and how-to information that is useful to cluster users, administrators, purchasers, and designers.",
+      "followers": {
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4835160.jpg?t=1611052496"
+    },
+    {
+      "title": "Amazon Web Services \u00bb HPC Blog",
+      "feed_url": "https://aws.amazon.com/blogs/hpc/feed/",
+      "website_url": "https://aws.amazon.com/blogs/hpc/",
+      "description": "A High-Performance Computing (HPC) blog by Amazon Web Services. Subscribe to get the latest articles and updates from this blog.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/5292717.jpg?t=1623755342"
+    },
+    {
+      "title": "Puget Systems",
+      "feed_url": "https://www.pugetsystems.com/feed/",
+      "website_url": "https://www.pugetsystems.com/all-hpc/",
+      "description": "Puget Systems builds custom PCs tailor-made for your workflow. We offer custom-built desktops and workstations for gaming, content creation, design, engineering, scientific computing, and more. Check out our HPC blog section and keep up with the latest HPC articles.",
+      "followers": {
+        "facebook": 13100,
+        "twitter": 27500,
+        "instagram": 15700
+      },
+      "image_url": "https://i1.feedspot.com/5292722.jpg?t=1623673864"
+    },
+    {
+      "title": "HPC - High Performance Computing, Supercomputing & Cloud",
+      "feed_url": "http://feeds.feedburner.com/hpcnotes",
+      "website_url": "https://www.hpcnotes.com/",
+      "description": "HPC blog covers high-performance computing, e-infrastructure, scientific computing, exascale, parallel programming services, software, big data, cloud computing for HPC, multicore, manycore, MIC/Phi, GPU computing, HPC events, HPC news, HPC opinion, and much more.",
+      "followers": {
+        "twitter": 7900
+      },
+      "image_url": "https://i1.feedspot.com/1098586.jpg?t=1611052479"
+    },
+    {
+      "title": "Scientific Computing World",
+      "feed_url": "https://www.scientific-computing.com/feed/news.xml",
+      "website_url": "https://www.scientific-computing.com/",
+      "description": "Scientific Computing World is the only global publication dedicated to the computing and information technology needs of scientists and engineers. It covers computing for engineering, science, and technology, grouped under the headings of Informatics; High-Performance Computing; and Application software.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4835136.jpg?t=1611052537"
+    }
+  ]
+}

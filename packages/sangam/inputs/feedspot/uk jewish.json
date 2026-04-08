@@ -1,0 +1,86 @@
+{
+  "category": "UK Jewish",
+  "source_url": "https://rss.feedspot.com/uk_jewish_rss_feeds",
+  "feeds": [
+    {
+      "title": "Jewish Renaissance Blog",
+      "feed_url": "https://www.jewishrenaissance.org.uk/blog?format=RSS",
+      "website_url": "https://www.jewishrenaissance.org.uk/blog/",
+      "description": "Jewish Renaissance is a quarterly magazine which presents Jewish culture in a radically new lively, colourful and accessible way.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 4200,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4537865.jpg?t=1606480739"
+    },
+    {
+      "title": "Reform Judaism",
+      "feed_url": "https://www.reformjudaism.org.uk/news/feed/",
+      "website_url": "https://www.reformjudaism.org.uk/news/",
+      "description": "The Movement for Reform Judaism aims to inspire individuals and communities with Reform Jewish values and traditions.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4908105.jpg?t=1614061578"
+    },
+    {
+      "title": "Smashing the Glass",
+      "feed_url": "https://www.smashingtheglass.com/feed/",
+      "website_url": "https://www.smashingtheglass.com/",
+      "description": "Hello, Im Karen Cinnamon, welcome to Smashing The Glass, the biggest Jewish wedding blog in the world, and the only Jewish wedding blog in UK.Find creative, inventive and original ideas for style-focused Jewish soon-to-be brides and grooms.",
+      "followers": {
+        "facebook": 8500,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4842658.jpg?t=1611294194"
+    },
+    {
+      "title": "Jami UK",
+      "feed_url": "https://jamiuk.org/feed/",
+      "website_url": "https://jamiuk.org/news/",
+      "description": "Here you can stay up-to-date with our latest news and blogs on mental health and our services. Jami supports many hundreds of people each year impacted by mental health problems, enabling those isolated because of their mental distress to become re-engaged with their family, friends and local community.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 1900,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5501669.jpg?t=1675167740"
+    },
+    {
+      "title": "Essex Jewish News",
+      "feed_url": "https://essexjewishnews.co.uk/feed/",
+      "website_url": "https://essexjewishnews.co.uk/",
+      "description": "There are not many areas in Britain, if any, that can boast a community newspaper devoted entirely to one particular area and to one particular community, so the Essex Jewish News, formerly The Bridge, could be in a class of its own.",
+      "followers": {
+        "facebook": 625,
+        "twitter": 107,
+        "instagram": 995
+      },
+      "image_url": "https://i1.feedspot.com/5501668.jpg?t=1675167737"
+    },
+    {
+      "title": "Jewish News",
+      "feed_url": "https://jewishnews.timesofisrael.com/feed/",
+      "website_url": "https://www.jewishnews.co.uk/",
+      "description": "The Jewish News is Britain's most popular Jewish newspaper and website, with breaking news and analysis, acclaimed blogs, celebrity features, religious insight and incredible competitions.",
+      "followers": {
+        "facebook": 117200,
+        "twitter": 58600
+      },
+      "image_url": "https://i1.feedspot.com/4536632.jpg?t=1606480393"
+    },
+    {
+      "title": "Manchester Jewish Studies",
+      "feed_url": "https://www.manchesterjewishstudies.org/news-blog/atom.xml",
+      "website_url": "https://www.manchesterjewishstudies.org/blog",
+      "description": "The Centre for Jewish Studies focuses on Jewish Studies at the University of Manchester and draws in staff from other higher education institutions in the region. Administered in the Dept of Religions and Theology, it is home to a number of outstanding academics in the fields of Bible, Dead Sea Scrolls, rabbinic Judaism, Jewish Thought, Holocaust Studies, ancient, medieval and modern Jewish History, and much more.",
+      "followers": {
+        "twitter": 678,
+        "instagram": 111
+      },
+      "image_url": "https://i1.feedspot.com/3069857.jpg?t=1675168344"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "category": "UK Urban Planning",
+  "source_url": "https://rss.feedspot.com/uk_urban_planning_rss_feeds",
+  "feeds": [
+    {
+      "title": "PlanningResource | Independent Intelligence For Planning Proffessionals",
+      "feed_url": "https://www.planningresource.co.uk/rss/news",
+      "website_url": "https://www.planningresource.co.uk/news",
+      "description": "Follow us to keep up with news, appeals decisions & best practice for development management & strategic planners on PlanningResource.",
+      "followers": {
+        "twitter": 23200
+      },
+      "image_url": "https://i1.feedspot.com/1387191.jpg?t=1605961738"
+    },
+    {
+      "title": "WEA Planning Blog",
+      "feed_url": "https://www.weaplanning.co.uk/blog/rss/",
+      "website_url": "https://www.weaplanning.co.uk/blog/",
+      "description": "WEA Planning is a planning consultancy based in Notting Hill, West London and is owned and run by Founder Director William Avery. Our aim is to provide you with the best town planning expertise to improve the living and working lives of as many Londoners as possible.",
+      "followers": {
+        "twitter": 79
+      },
+      "image_url": "https://i1.feedspot.com/4912281.jpg?t=1620206158"
+    },
+    {
+      "title": "GeoPlanIT",
+      "feed_url": "https://www.geoplanit.co.uk/?feed=rss2",
+      "website_url": "https://www.geoplanit.co.uk/",
+      "description": "The intention of this blog is to discuss themes related to technology, geography and town planning. It's a broad topic area I know but it should provide me with some material! The blog will be a place where you find out useful information such as methods to make maps, or cool plugins for SketchUp that I like.",
+      "followers": {
+        "facebook": 130
+      },
+      "image_url": "https://i1.feedspot.com/4729891.jpg?t=1607665761"
+    },
+    {
+      "title": "Urban Foundry Blog",
+      "feed_url": "https://www.urbanfoundry.co.uk/feed/",
+      "website_url": "https://www.urbanfoundry.co.uk/blog/",
+      "description": "We were founded on the back of a strong social sciences discipline social research, urban design and regeneration, and socio-economics combining with our creative entrepreneurial side to deliver good ideas. Follow us to keep up with articles on Urban planning from Urban Foundry.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4912265.jpg?t=1620206180"
+    },
+    {
+      "title": "Planning Portal Blog",
+      "feed_url": "https://blog.planningportal.co.uk/feed/",
+      "website_url": "https://blog.planningportal.co.uk/",
+      "description": "Follow us to keep up with News and updates from the Planning Portal - the online planning and building regs resource for England and Wales",
+      "followers": {
+        "twitter": 10600
+      },
+      "image_url": "https://i1.feedspot.com/4912441.jpg"
+    },
+    {
+      "title": "Jones the planner",
+      "feed_url": "http://www.jonestheplanner.co.uk/feeds/posts/default?alt=rss",
+      "website_url": "http://www.jonestheplanner.co.uk/",
+      "description": "A series exploring architecture, urban design and planning issues in Britain's towns and cities. Primarily written by the town planner/urban designer Adrian Jones and presented by Chris Matthews, a local historian and graphic designer.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4912224.jpg?t=1620206192"
+    },
+    {
+      "title": "LDA Design",
+      "feed_url": "https://www.lda-design.co.uk/feed/",
+      "website_url": "https://www.udg.org.uk/publications/articles",
+      "description": "LDA Design is an independent, design, environment and sustainability consultancy. Follow us to keep up with articles on Urban Design.",
+      "followers": {
+        "twitter": 4600,
+        "instagram": 6400
+      },
+      "image_url": "https://i1.feedspot.com/4912227.jpg?t=1620206175"
+    }
+  ]
+}

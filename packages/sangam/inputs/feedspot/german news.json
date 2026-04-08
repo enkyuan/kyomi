@@ -1,0 +1,379 @@
+{
+  "category": "German News",
+  "source_url": "https://rss.feedspot.com/german_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "deutschland.de",
+      "feed_url": "https://www.deutschland.de/en/feed-news/rss.xml",
+      "website_url": "https://www.deutschland.de/en",
+      "description": "DEUTSCHLAND.de aims to present a comprehensive, modern and topical picture of Germany abroad. DEUTSCHLAND.de offers news on politics, economics, culture, environment, knowledge and life.",
+      "followers": {
+        "facebook": 3700000,
+        "twitter": 40600,
+        "instagram": 496100
+      },
+      "image_url": "https://i1.feedspot.com/4634703.jpg"
+    },
+    {
+      "title": "DER SPIEGEL",
+      "feed_url": "https://www.spiegel.de/international/index.rss",
+      "website_url": "https://www.spiegel.de/",
+      "description": "SPIEGEL ONLINE provides daily news, analysis and opinion from Europe's leading news magazine and Germany's top news Web site.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 454500
+      },
+      "image_url": "https://i1.feedspot.com/25932.jpg?t=1603890169"
+    },
+    {
+      "title": "ZEIT ONLINE",
+      "feed_url": "http://newsfeed.zeit.de/index",
+      "website_url": "https://www.zeit.de/english/index",
+      "description": "Find breaking news, analysis, reviews and opinion on politics, business, culture about Germany from ZEIT ONLINE in English.",
+      "followers": {
+        "facebook": 861600,
+        "twitter": 2500000,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/31154.jpg"
+    },
+    {
+      "title": "The Local Germany",
+      "feed_url": "https://feeds.thelocal.com/rss/de",
+      "website_url": "https://www.thelocal.de/",
+      "description": "Latest news, travel, politics, money, jobs and more. Get guides on property, second homes, visas, language, taxes from The Local's journalists in Germany.",
+      "followers": {
+        "facebook": 228600,
+        "twitter": 40600,
+        "instagram": 7100
+      },
+      "image_url": "https://i1.feedspot.com/4634615.jpg?t=1623138997"
+    },
+    {
+      "title": "Kieler Nachrichten",
+      "feed_url": "https://www.kn-online.de/arc/outboundfeeds/rss/",
+      "website_url": "https://www.kn-online.de/",
+      "description": "Kieler Nachrichten offers a direct, informative, and balanced perspective of Kiel city with timely and accurate news coverage, Featuring the latest updates on Police, War, Germany, Regional Sports, and more current topics. We also have dedicated sections for Health, Christmas and Family.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5481700.jpg?t=1671523583"
+    },
+    {
+      "title": "JUNGE FREIHEIT",
+      "feed_url": "https://jungefreiheit.de/feed/",
+      "website_url": "https://jungefreiheit.de/",
+      "description": "Junge Freiheit is a German weekly newspaper that is known for its far-right, nationalist, and conservative perspective. Browse weekly news, discussion, and strong opinions on current on our website.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4348002.jpg?t=1671523434"
+    },
+    {
+      "title": "taz",
+      "feed_url": "https://taz.de/!p4608;rss/",
+      "website_url": "https://taz.de/",
+      "description": "Taz, short for Tagezeitiung, is a left-leaning newspaper in Germany known for its investigative reporting and in-depth analysis of current events and issues. Dive into Critical, independent journalism from the left wing with analyses, background information, comments, interviews, and reports.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5244830.jpg?t=1671523053"
+    },
+    {
+      "title": "Abendzeitung",
+      "feed_url": "https://www.abendzeitung-muenchen.de/storage/rss/rss/alle-artikel-abendzeitung.xml",
+      "website_url": "https://www.abendzeitung-muenchen.de/",
+      "description": "Here you will find everything about TSV 1860 and FC Bayern Munich, fascinating pictures from Munich, Bavaria, Germany, and the world, exciting videos, and of course everything important from the fields of politics, sports, entertainment, people, region, panorama, and culture. The Abendzeitung is a German-language newspaper based in Munich, Germany.",
+      "followers": {
+        "facebook": 100000,
+        "twitter": 59000,
+        "instagram": 28300
+      },
+      "image_url": "https://i1.feedspot.com/5481707.jpg?t=1671528711"
+    },
+    {
+      "title": "L\u00fcbecker Nachrichten",
+      "feed_url": "https://www.ln-online.de/arc/outboundfeeds/rss/",
+      "website_url": "https://www.ln-online.de/",
+      "description": "Stay up-to-date on Lubeck city with news and information from L\u00fcbeck, the region & Schleswig-Holstein as well as from politics, business, sports, culture, entertainment, and advice. L\u00fcbecker Nachrichten is a primary news source for the local community in Lubeck. The paper is published in print as well as updated online throughout the day.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5481712.jpg?t=1671524402"
+    },
+    {
+      "title": "Ostsee Zeitung",
+      "feed_url": "https://www.ostsee-zeitung.de/arc/outboundfeeds/rss/",
+      "website_url": "https://www.ostsee-zeitung.de/",
+      "description": "The Digital destination for all up-to-date news and information about events and issues in the community served by the Ostsee Zeitung newspaper. Read Current news and information from Rostock, as well as from politics, business, sports, culture, and entertainment. Ostsee Zeitung is a local news publication providing coverage of major events in the area.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5481711.jpg?t=1671528945"
+    },
+    {
+      "title": "Handelsblatt",
+      "feed_url": "https://www.handelsblatt.com/contentexport/feed/top-themen",
+      "website_url": "https://www.handelsblatt.com/",
+      "description": "Innovations from technology, IT, telecommunications, research, medicine, energy and the environment. Read up-to-the-minute technology news on Handelsblatt Online. Handelsblatt is Germany's leading newspaper which covers topics such as finance, technology, politics and much more.",
+      "followers": {
+        "facebook": 343800,
+        "twitter": 425400
+      },
+      "image_url": "https://i1.feedspot.com/5003480.jpg?t=1671522988"
+    },
+    {
+      "title": "Oberhessische Presse",
+      "feed_url": "https://www.op-marburg.de/arc/outboundfeeds/rss/",
+      "website_url": "https://www.op-marburg.de/",
+      "description": "Discover trending stories news and information from Marburg, the surrounding region, and Hesse as well as from politics, business, sports, culture, entertainment, and opinions. Oberhessische Presse is a daily newspaper that offers local news coverage, as well as coverage of national and international news.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5481713.jpg?t=1671524445"
+    },
+    {
+      "title": "S\u00fcddeutsche Zeitung",
+      "feed_url": "https://rss.sueddeutsche.de/rss/Topthemen",
+      "website_url": "https://www.sueddeutsche.de/",
+      "description": "S\u00fcddeutsche Zeitung Online provides News updates from Germany and all over the world with comments and background reports. S\u00fcddeutsche Zeitung is one of the largest newspapers published in Germany. It is widely respected for its comprehensive coverage of local and nationally relevant issues.",
+      "followers": {
+        "facebook": 812900,
+        "twitter": 1900000,
+        "instagram": 918700
+      },
+      "image_url": "https://i1.feedspot.com/35416.jpg?t=1671522716"
+    },
+    {
+      "title": "K\u00f6lner Stadt-Anzeiger",
+      "feed_url": "https://feed.ksta.de/feed/rss/index.rss",
+      "website_url": "https://www.ksta.de/",
+      "description": "The 'K\u00f6lner Stadt-Anzeiger' is among the most demanding and well-stocked regional newspapers in Germany. On ksta.de, you will find digital and extended versions of articles and additional news content covering Politics, Business, Sports, Art & Entertainment from the Kologne region.",
+      "followers": {
+        "facebook": 173900
+      },
+      "image_url": "https://i1.feedspot.com/5481696.jpg?t=1671524317"
+    },
+    {
+      "title": "neues deutschland",
+      "feed_url": "https://www.nd-aktuell.de/rss/aktuell.php",
+      "website_url": "https://www.nd-aktuell.de/",
+      "description": "ND is a left-leaning news website that covers news from politics, at home, abroad, economy, sports, culture, and feuilleton from the left perspective. Find information about events and processes in society with leftist ideology. One of the popular site among youth, nd-aktuell is often known its bold and critical brand of reporting.",
+      "followers": {
+        "facebook": 68200,
+        "twitter": 56700,
+        "instagram": 45300
+      },
+      "image_url": "https://i1.feedspot.com/5481706.jpg?t=1671523169"
+    },
+    {
+      "title": "Stuttgart Journal",
+      "feed_url": "https://stuttgart-journal.de/tp3/feed/",
+      "website_url": "https://stuttgart-journal.de/tp3/",
+      "description": "Browse Top news and headlines covering Finance, Sports, and Police news. Run by an open community of journalists and creative people who sustainably produce and disseminate valuable information, The Stuttgart Journal is one of the most modern cities and news magazines for the Stuttgart region.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5481705.jpg?t=1671524483"
+    },
+    {
+      "title": "Ruhr Nachrichten",
+      "feed_url": "https://www.ruhrnachrichten.de/feed/",
+      "website_url": "https://www.ruhrnachrichten.de/",
+      "description": "Find everything you need to know about regional sports, politics, business, and culture from the Ruhr Nachrichten web platform. Ruhr News is part of a group of local news publications and provides the Dortmund region with excellent coverage and insight into current events and important matters.",
+      "followers": {
+        "facebook": 73100
+      },
+      "image_url": "https://i1.feedspot.com/5481710.jpg?t=1671529011"
+    },
+    {
+      "title": "Stern",
+      "feed_url": "https://www.stern.de/feed/standard/alle-nachrichten/",
+      "website_url": "https://www.stern.de/",
+      "description": "On STERN.DE you will find news, exciting background information and powerfully illustrated reports from all areas: from politics and business to culture and science. Stern.de is the online magazine of the stern brand. stern.de was founded in 1995 and is one of the largest news sites in Germany.",
+      "followers": {
+        "facebook": 773300,
+        "twitter": 1400000,
+        "instagram": 314500
+      },
+      "image_url": "https://i1.feedspot.com/30989.jpg?t=1671529290"
+    },
+    {
+      "title": "Freie Presse",
+      "feed_url": "https://www.freiepresse.de/rss/rss_chemnitz.php",
+      "website_url": "https://www.freiepresse.de/",
+      "description": "FreiePresse.de provides up-to-the-minute news and trending headlines from Chemnitz, the Ore Mountains, Vogtland, and Saxony. The Freie Presse newsroom is a dedicated group of editors and reporters striving to keep everyone updated on the latest activities and events in the region.",
+      "followers": {
+        "facebook": 127900,
+        "twitter": 16400
+      },
+      "image_url": "https://i1.feedspot.com/5481708.jpg?t=1671524472"
+    },
+    {
+      "title": "M\u00fcnstersche Zeitung",
+      "feed_url": "https://www.muensterschezeitung.de/rss/feed/mz_lokales",
+      "website_url": "https://www.muensterschezeitung.de/",
+      "description": "M\u00fcnstersche Zeitung reports on what keeps Munster ticking with news, events, and background information. Producing Locally-focused, straightforward journalism, M\u00fcnstersche Zeitung is an online news source committed to delivering timely and thorough coverage of everything that goes on in Munster and surrounding areas.",
+      "followers": {
+        "facebook": 13600,
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/5481704.jpg?t=1671529394"
+    },
+    {
+      "title": "General-Anzeiger",
+      "feed_url": "https://ga.de/feed.rss",
+      "website_url": "https://ga.de/",
+      "description": "Covering breaking news and headlines on currently relevant topics and issues, The General-Anzeiger Bonn provides the latest news, images, videos and services from Bonn, the Rhein-Sieg district, the Neuwied district and the Ahrweiler district. For comprehensive and analytical coverage, read the ga.de feed.",
+      "followers": {
+        "facebook": 95800,
+        "twitter": 20500,
+        "instagram": 56900
+      },
+      "image_url": "https://i1.feedspot.com/5481702.jpg?t=1671528887"
+    },
+    {
+      "title": "Hamburger Morgenpost",
+      "feed_url": "https://www.mopo.de/feed/",
+      "website_url": "https://www.mopo.de/",
+      "description": "Our website provides round-the-clock updates and daily trending news articles from Hamburg, The Northern region, Sports & Entertainment, and more. Hamburger Morgenpost is a daily newspaper published in Hamburg, Germany. It covers local, national, and international news, sports, culture, and entertainment.",
+      "followers": {
+        "facebook": 235600,
+        "twitter": 228700,
+        "instagram": 76500
+      },
+      "image_url": "https://i1.feedspot.com/5481699.jpg?t=1671528742"
+    },
+    {
+      "title": "junge Welt",
+      "feed_url": "https://www.jungewelt.de/feeds/newsticker.rss",
+      "website_url": "https://www.jungewelt.de/",
+      "description": "Discover views on popular topics and commentary on social struggles and economic processes in Germany and worldwide. Die Junge Welt is a left-wing, Marxist-oriented, national daily newspaper known for its left-leaning, progressive views and coverage of topics such as politics, social issues, and culture.",
+      "followers": {
+        "facebook": 74400,
+        "twitter": 42500,
+        "instagram": 41100
+      },
+      "image_url": "https://i1.feedspot.com/574275.jpg?t=1671523349"
+    },
+    {
+      "title": "Rheinische Post",
+      "feed_url": "https://rp-online.de/feed.rss",
+      "website_url": "https://rp-online.de/",
+      "description": "Rheinische Post Online covers the latest news, pictures, and videos from politics, business, sports, culture, society, cars, the digital world as well as D\u00fcsseldorf and all of NRW. Rheinische Post is a German newspaper published in D\u00fcsseldorf and is known for its intellectual in-depth reporting on various topical issues.",
+      "followers": {
+        "facebook": 198300,
+        "twitter": 218900,
+        "instagram": 80500
+      },
+      "image_url": "https://i1.feedspot.com/5481697.jpg?t=1671528990"
+    },
+    {
+      "title": "Frankfurter Allgemeine",
+      "feed_url": "https://www.faz.net/rss/aktuell/",
+      "website_url": "https://www.faz.net/aktuell/",
+      "description": "Catch current news from all categories like Politics, economy, sports, feuilleton, and finance at a glance. The Frankfurter Allgemeine is a daily newspaper that covers national and international news, as well as cultural and economic issues. It is widely known and respected for its impartial and objective reporting.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/527482.jpg?t=1671522766"
+    },
+    {
+      "title": "Hannoversche Allgemeine",
+      "feed_url": "https://www.haz.de/arc/outboundfeeds/rss/",
+      "website_url": "https://www.haz.de/",
+      "description": "HAZ.de, the dedicated website for Hannoversche Allgemeine includes articles, videos, and other multimedia content related to local news, sports, politics, business, and other topics of interest to readers. Hannoversche Allgemeine is a German known for its thorough coverage on relevant topics of public interest.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5481698.jpg?t=1671523554"
+    },
+    {
+      "title": "LVZ",
+      "feed_url": "https://www.lvz.de/arc/outboundfeeds/rss/",
+      "website_url": "https://www.lvz.de/",
+      "description": "Read Current news and information from Leipzig, the region, and Saxony as well as from politics, business, sports, culture, entertainment, and advice. Founded in 1848, Leipziger Volkszeitung is a regional newspaper known for its comprehensive coverage of local news and events and is widely read in the Leipzig area.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5481701.jpg?t=1671529349"
+    },
+    {
+      "title": "German Brief",
+      "feed_url": "https://www.germanbrief.com/blog-feed.xml",
+      "website_url": "https://www.germanbrief.com/",
+      "description": "German Brief was conceived to report on, discuss, and explain German affairs. It covers a broad range of topics that are of interest and consequence to an international audience. German Brief values facts over speculation. While individual articles may express particular opinions, overall, the German Brief does not favor one cause over another.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5712359.jpg?t=1700042351"
+    },
+    {
+      "title": "The Munich Eye",
+      "feed_url": "https://themunicheye.com/sitemap.rss",
+      "website_url": "https://themunicheye.com/",
+      "description": "The Munich Eye is a News site covering German private health insurance, engineering jobs in Germany, art, culture, science, travel, business, and politics. It is one of the most popular news websites in Germany and is known for its fast-paced and concise reporting style.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 609
+      },
+      "image_url": "https://i1.feedspot.com/5481709.jpg?t=1671521988"
+    },
+    {
+      "title": "Main-Post",
+      "feed_url": "https://www.mainpost.de/storage/rss/rss/topnews.xml",
+      "website_url": "https://www.mainpost.de/",
+      "description": "News, advertisements, and events dates from W\u00fcrzburg, Schweinfurt, Franconia, Bavaria, and the world on mainpost.de - with local sports, regional economy, and culture. The Main-Post website serves as a resource for breaking news and the latest information on a variety of topics like Sports, Politics, Germany & the World, and more.",
+      "followers": {
+        "facebook": 55700,
+        "twitter": 11000,
+        "instagram": 78300
+      },
+      "image_url": "https://i1.feedspot.com/4616809.jpg?t=1671529411"
+    },
+    {
+      "title": "t-online",
+      "feed_url": "https://www.t-online.de/feed.rss",
+      "website_url": "https://www.t-online.de/",
+      "description": "At t-online.de you will find a lot of information and reports on politics as well as further reports",
+      "followers": {
+        "twitter": 14700
+      },
+      "image_url": "https://i1.feedspot.com/5196502.jpg?t=1600076057"
+    },
+    {
+      "title": "FOCUS online",
+      "feed_url": "https://rss.focus.de/",
+      "website_url": "https://www.focus.de/",
+      "description": "FOCUS Online minutenaktuelle Nachrichten und Service-Informationen von Deutschlands modernem Nachrichtenmagazin.",
+      "followers": {
+        "facebook": 976300,
+        "twitter": 793500
+      },
+      "image_url": "https://i1.feedspot.com/5481695.jpg?t=1743578813"
+    },
+    {
+      "title": "Squirrel News",
+      "feed_url": "https://squirrel-news.net/feed/",
+      "website_url": "https://squirrel-news.net/",
+      "description": "Dive into the most happening news content on the Internet. Squirrel News is a curated, constructive news app. We collect the most important solution-oriented pieces of journalism from across the international media landscape and curate them into compact, digestible issues.",
+      "followers": {
+        "facebook": 516,
+        "twitter": 1100,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5277223.jpg?t=1671529225"
+    },
+    {
+      "title": "Aachener Zeitung",
+      "feed_url": "https://www.aachener-zeitung.de/feed.rss",
+      "website_url": "https://www.aachener-zeitung.de/",
+      "description": "The Aachener Zeitung is a valuable resource for staying informed about the local community and staying connected to the news that matters most to its readers. Catch up on the latest events and changes with News articles, pictures and videos from the region of Aachen, D\u00fcren and Heinsberg.",
+      "followers": {
+        "facebook": 84200,
+        "twitter": 9000
+      },
+      "image_url": "https://i1.feedspot.com/5481703.jpg?t=1671528678"
+    },
+    {
+      "title": "tagesschau",
+      "feed_url": "https://www.tagesschau.de/xml/rss2/",
+      "website_url": "https://www.tagesschau.de/",
+      "description": "tagesschau.de provides a constructive and encompassing overview of European politics and general news & information. Updated around the clock, Tagesschau is the go-to online news destination for in-depth and exclusive information on any given topic form the European sphere.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/31035.jpg?t=1671529528"
+    },
+    {
+      "title": "MunichNOW",
+      "feed_url": "https://munichnow.com/feed/",
+      "website_url": "https://munichnow.com/",
+      "description": "Munich NOW brings you Munich news headlines, sports, opinions, culture, and articles on life in Munich and Bavaria - all in English - for locals and expatriates.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 526
+      },
+      "image_url": "https://i1.feedspot.com/4634683.jpg"
+    }
+  ]
+}

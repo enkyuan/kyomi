@@ -1,0 +1,35 @@
+{
+  "category": "XML",
+  "source_url": "https://rss.feedspot.com/xml_rss_feeds",
+  "feeds": [
+    {
+      "title": "Oxygen XML Editor Blog",
+      "feed_url": "https://blog.oxygenxml.com/rss.xml",
+      "website_url": "https://blog.oxygenxml.com/",
+      "description": "Discover useful articles and tutorials covering the various aspects of editing, developing, and publishing using Oxygen XML Editor with various XML technologies at our blog. The Oxygen XML Editor provides the best coverage of today's XML technologies. It complies with the established standards released by W3C and other organizations and enhances the productivity of developers.",
+      "followers": {
+        "facebook": 809,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5431612.jpg?t=1660280126"
+    },
+    {
+      "title": "Fonto XML Blog",
+      "feed_url": "https://www.fontoxml.com/feed/",
+      "website_url": "https://www.fontoxml.com/blog/",
+      "description": "On our blog, we share backgrounds on structured content authoring and XML editing, as well as technical details and tricks related to configuring Fonto Editor. Fully focused on (web-based) authoring and reviewing structured content, Fonto Editor is mostly used in Finance, Life Sciences, Pharma, Legislation, Technical documentation, Aerospace & Defense, and Publishing.",
+      "followers": {
+        "twitter": 717
+      },
+      "image_url": "https://i1.feedspot.com/5431634.jpg?t=1660280416"
+    },
+    {
+      "title": "DeltaXignia Blog",
+      "feed_url": "https://www.deltaxignia.com/feed/",
+      "website_url": "https://www.deltaxignia.com/blog/",
+      "description": "Get the latest news from the world of DeltaXML and read blog posts on our XML and JSON software, new releases, and opinion pieces on industry topics. DeltaXML specializes in XML and JSON focusing on managing change to structured information. Our comparison and merge software tools transform the way our customers handle change in their XML documents, XML data and JSON files.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5431633.jpg?t=1660280361"
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "category": "Firewall",
+  "source_url": "https://rss.feedspot.com/firewall_rss_feeds",
+  "feeds": [
+    {
+      "title": "Firewalls.com Blog",
+      "feed_url": "https://www.firewalls.com/blog/feed/",
+      "website_url": "https://www.firewalls.com/blog/",
+      "description": "Firewalls.com is the largest provider of Internet security solutions and services for business networks.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4966461.jpg?t=1542263205"
+    },
+    {
+      "title": "FireMon - Firewall Management Blog",
+      "feed_url": "https://www.firemon.com/feed/",
+      "website_url": "https://www.firemon.com/blog/",
+      "description": "Keep up-to-date with the latest news on Firewall Management and Network Security by subscribing to the FireMon Blog.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4690771.jpg?t=1619099610"
+    },
+    {
+      "title": "Carey Parker - Firewalls Don't Stop Dragons",
+      "feed_url": "https://firewallsdontstopdragons.com/feed/",
+      "website_url": "https://firewallsdontstopdragons.com/",
+      "description": "Carey Parker is on a mission to raise the awareness of everyday, non-technical people on the important topics of cyber-security and online privacy. I've written a step-by-step guide to improving your online security and privacy, and host a weekly podcast on the subjects as well.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4971279.jpg?t=1543642123"
+    },
+    {
+      "title": "Trend Micro Simply Security",
+      "feed_url": "http://feeds.trendmicro.com/TrendMicroSimplySecurity?format=xml",
+      "website_url": "https://www.trendmicro.com/en_in/business.html",
+      "description": "Trend Micro is the global leader in enterprise data security and cybersecurity solutions for businesses, data centers, cloud environments, networks, and endpoints.Simply Security News, Views and Opinions from Trend Micro offers breaking security research and threat news that impacts your life everyday.",
+      "followers": {
+        "facebook": 193400
+      },
+      "image_url": "https://i1.feedspot.com/4222781.jpg?t=1543638401"
+    },
+    {
+      "title": "Kaspersky Blog",
+      "feed_url": "https://www.kaspersky.com/blog/feed/",
+      "website_url": "https://www.kaspersky.com/blog/",
+      "description": "The Official Blog from Kaspersky covers information to help protect you against viruses, spyware, hackers, spam & other forms of malware.",
+      "followers": {
+        "facebook": 3300000,
+        "twitter": 320100
+      },
+      "image_url": "https://i1.feedspot.com/4971163.jpg?t=1763016904"
+    },
+    {
+      "title": "Sucuri Blog",
+      "feed_url": "https://blog.sucuri.net/feed",
+      "website_url": "https://blog.sucuri.net/",
+      "description": "Learn about website security, emerging vulnerabilities, and web malware infections from our team of website security researchers. We've offered holistic website security solutions since 2008 including malware removal, malware monitoring, and website protection services. Our SiteCheck website security monitor is used by thousands of website owners every month to monitor their websites for malware, blacklist status, and other security issues, and our CloudProxy Firewall safeguards sites and those who visit them from attacks of all kinds.",
+      "followers": {
+        "facebook": 16000,
+        "twitter": 22000,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4414663.jpg?t=1658727983"
+    },
+    {
+      "title": "Indusface Blog",
+      "feed_url": "https://www.indusface.com/feed/",
+      "website_url": "https://www.indusface.com/blog/",
+      "description": "Learn the latest updates on web application security, web application scanning, WAF, DDoS attacks and CDN. Stay secure with Indusface. Indusface offers best website security, web application firewall and SSL certificate to keep your online business much safer.",
+      "followers": {
+        "facebook": 24800,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4971146.jpg?t=1646117308"
+    },
+    {
+      "title": "Indusface \u00bb Web Application Firewall (WAF)",
+      "feed_url": "https://www.indusface.com/blog/category/web-application-firewall/feed/",
+      "website_url": "https://www.indusface.com/blog/category/web-application-firewall/",
+      "description": "Know more about what is Web Application Firewall and how it helps in protecting web applications, along with other general information on firewalls and web security. Indusface is a SaaS company that secures critical Web applications.",
+      "followers": {
+        "facebook": 24800,
+        "twitter": 3700,
+        "instagram": 303
+      },
+      "image_url": "https://i1.feedspot.com/5297433.jpg?t=1624950943"
+    },
+    {
+      "title": "Untangle Blog",
+      "feed_url": "https://www.untangle.com/feed/",
+      "website_url": "https://blogs.arista.com/blog",
+      "description": "Untangle, a network software and appliance company, provides the most complete multi-function firewall and Internet management application suite available today",
+      "followers": {
+        "facebook": 46,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4971317.jpg?t=1543649589"
+    },
+    {
+      "title": "Cloudflare \u00bb Firewall",
+      "feed_url": "https://blog.cloudflare.com/tag/firewall/rss/",
+      "website_url": "https://blog.cloudflare.com/tag/firewall/",
+      "description": "Information on firewalls, Web Application Firewalls(WAF), firewall rules, and the importance of firewall in network security. Cloudflare, Inc. provides services that protect websites from all manner of attacks, while simultaneously optimizing performance.",
+      "followers": {
+        "facebook": 273500,
+        "twitter": 216400,
+        "instagram": 55800
+      },
+      "image_url": "https://i1.feedspot.com/5297425.jpg?t=1624962590"
+    },
+    {
+      "title": "Netgate Blog",
+      "feed_url": "https://www.netgate.com/feed.xml",
+      "website_url": "https://www.netgate.com/blog",
+      "description": "Netgate is host of the pfSense open source firewall project, Netgate believes in enhancing network connectivity that maintains both security and privacy. Netgate is focused on delivering secure high-performance network connectivity for everyone. Secure networks start here.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 8500
+      },
+      "image_url": "https://i1.feedspot.com/4610797.jpg?t=1543642747"
+    },
+    {
+      "title": "SC Media",
+      "feed_url": "https://www.scworld.com/",
+      "website_url": "https://www.scworld.com/",
+      "description": "Breaking news on cybersecurity, cybercrime, and security product reviews by SC Media.",
+      "followers": {
+        "facebook": 12000,
+        "twitter": 119900
+      },
+      "image_url": "https://i1.feedspot.com/4837161.jpg?t=1543640216"
+    },
+    {
+      "title": "Palo Alto Networks Blog",
+      "feed_url": "http://feeds.feedburner.com/FirewallPaloAltoNetworksBlog",
+      "website_url": "https://www.paloaltonetworks.com/blog/category/firewall/",
+      "description": "Palo Alto Networks is the next-generation security company maintaining trust in the digital age by helping tens of thousands of organizations worldwide prevent cyber breaches.",
+      "followers": {
+        "facebook": 51800,
+        "twitter": 127100
+      },
+      "image_url": "https://i1.feedspot.com/4966470.jpg?t=1611573479"
+    },
+    {
+      "title": "Algosec Blog",
+      "feed_url": "https://www.algosec.com/feed/",
+      "website_url": "https://www.algosec.com/blog/",
+      "description": "AlgoSec provides firewall policy management tools that help organizations align security with business processes. AlgoSec, discovers, maps and migrates application connectivity, analyzes risk, and intelligently automates network security policy changes across cloud, SDN and on-premise networks.",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4966649.jpg"
+    },
+    {
+      "title": "Allot Blog",
+      "feed_url": "https://www.allot.com/blog/feed/",
+      "website_url": "https://www.allot.com/blog/",
+      "description": "Allot is a leading, global provider of leading innovative network intelligence and security solutions for Communications Service Providers and Enterprises worldwide.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/4966482.jpg?t=1542265610"
+    }
+  ]
+}

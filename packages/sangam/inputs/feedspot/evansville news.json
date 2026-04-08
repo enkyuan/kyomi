@@ -1,0 +1,40 @@
+{
+  "category": "Evansville News",
+  "source_url": "https://rss.feedspot.com/evansville_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Eyewitness News",
+      "feed_url": "https://www.tristatehomepage.com/feed/",
+      "website_url": "https://www.tristatehomepage.com/",
+      "description": "The Latest News and Updates in News brought to you by the team at Eyewitness News (WEHT/WTVW)",
+      "followers": {
+        "facebook": 257500,
+        "twitter": 42500
+      },
+      "image_url": "https://i1.feedspot.com/5133807.jpg?t=1670911876"
+    },
+    {
+      "title": "EvansvilleWatch",
+      "feed_url": "https://evansville.watch/news/",
+      "website_url": "https://evansville.watch/news/",
+      "description": "EvansvilleWatch monitors local scanner traffic (and a few other sources) and reports Evansville/Vanderburgh County incidents as they happen.",
+      "followers": {
+        "facebook": 238100,
+        "twitter": 80700,
+        "instagram": 28900
+      },
+      "image_url": "https://i1.feedspot.com/5133813.jpg?t=1623157454"
+    },
+    {
+      "title": "Courier & Press",
+      "feed_url": "https://www.courierpress.com/",
+      "website_url": "https://www.courierpress.com/",
+      "description": "The Courier & Press website provides you with top headlines from local Sports, Business and Entertainment areas. Explore local news, stories, and trending videos here. Courier & Press is one oldest and prime news publications serving the Fargo Community with both print and online media. It is part of the USA Today network owned by Ganett Inc.",
+      "followers": {
+        "facebook": 66700,
+        "twitter": 19000
+      },
+      "image_url": "https://i1.feedspot.com/5466057.jpg?t=1668404168"
+    }
+  ]
+}

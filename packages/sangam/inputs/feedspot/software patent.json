@@ -1,0 +1,55 @@
+{
+  "category": "Software Patent",
+  "source_url": "https://rss.feedspot.com/software_patent_rss_feeds",
+  "feeds": [
+    {
+      "title": "Blueshift IP Blog",
+      "feed_url": "https://blueshiftip.com/feed/",
+      "website_url": "https://blueshiftip.com/blog/",
+      "description": "The Blueshift IP Blog is a valuable resource for individuals and businesses interested in intellectual property, particularly patents. Founded by a team of experienced patent attorneys, the blog provides insights, strategies, and updates on patent law, patent prosecution, and patent portfolio management.",
+      "followers": {
+        "facebook": 17,
+        "twitter": 163
+      },
+      "image_url": "https://i1.feedspot.com/5594777.jpg?t=1686545753"
+    },
+    {
+      "title": "PatentNext \u00bb Software",
+      "feed_url": "https://www.patentnext.com/category/software/feed/",
+      "website_url": "https://www.patentnext.com/category/software/",
+      "description": "The PatentNext blog focuses specifically on software patents and related topics. With a team of patent attorneys specializing in software innovations, the blog provides in-depth analysis, case studies, and updates on software patent law and trends. Founded with a vision to assist software developers and companies in protecting their technological advancements, PatentNext's blog aims to demystify software patents and provide guidance for successful patent strategies.",
+      "followers": {
+        "twitter": 89
+      },
+      "image_url": "https://i1.feedspot.com/5594775.jpg?t=1686545744"
+    },
+    {
+      "title": "BESTPATENT Blog",
+      "feed_url": "https://bestpatent.eu/feed/",
+      "website_url": "https://bestpatent.eu/blog/",
+      "description": "The BESTPATENT Blog is a trusted resource for individuals seeking information and insights into patent law, particularly in the field of technology and innovation. With a team of patent experts and legal professionals, the blog covers a wide range of patent-related topics, including patent application process, patent infringement, and patent litigation. Their mission is to provide practical guidance, news, and analysis to help individuals and businesses maximize the value of their intellectual property.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5594778.jpg?t=1686545857"
+    },
+    {
+      "title": "End Software Patents Blog",
+      "feed_url": "https://endsoftwarepatents.org/feed/",
+      "website_url": "https://endsoftwarepatents.org/blog/",
+      "description": "The End Software Patents Blog is dedicated to discussing the issues and challenges surrounding software patents. With a mission to advocate for reform and limitations on software patentability, the blog explores the impact of software patents on innovation, software development, and the broader technology industry.",
+      "followers": {
+        "twitter": 63600
+      },
+      "image_url": "https://i1.feedspot.com/5594776.jpg?t=1686545822"
+    },
+    {
+      "title": "FOSS PATENTS",
+      "feed_url": "http://www.fosspatents.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.fosspatents.com/",
+      "description": "This blog covers software patent news and issues with a particular focus on wireless, mobile devices (smartphones, tablet computers). Florian Mueller is an app developer who used to be an award-winning intellectual property activist.Florian advised a diversity of clients on the patent wars surrounding mobile devices, and on their economic and technical implications.",
+      "followers": {
+        "twitter": 32800
+      },
+      "image_url": "https://i1.feedspot.com/631372.jpg?t=1625487877"
+    }
+  ]
+}

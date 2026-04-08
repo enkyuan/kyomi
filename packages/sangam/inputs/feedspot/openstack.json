@@ -1,0 +1,157 @@
+{
+  "category": "OpenStack",
+  "source_url": "https://rss.feedspot.com/openstack_rss_feeds",
+  "feeds": [
+    {
+      "title": "The OpenStack Blog",
+      "feed_url": "https://www.openstack.org/blog/feed/",
+      "website_url": "https://www.openstack.org/blog/",
+      "description": "Everything in & around OpenStack in written words. Topics covered are Development, Documentation, Communication, Press Release, Governance, OpenStack Updates, and Technical Committee Updates.",
+      "followers": {
+        "facebook": 22500,
+        "twitter": 155900
+      },
+      "image_url": "https://i1.feedspot.com/53899.jpg?t=1637921155"
+    },
+    {
+      "title": "Julio's Blog",
+      "feed_url": "https://www.juliosblog.com/rss/",
+      "website_url": "https://www.juliosblog.com/",
+      "description": "Julio serves as a chief Architect for Cloud and Infrastructure in the cloud practice, works on OpenStack, Ansible, and other emerging technologies. This blog is about Linux, Virtualization, Cloud, Open Source, and other emerging technologies.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4884305.jpg?t=1612507441"
+    },
+    {
+      "title": "Assaf Muller",
+      "feed_url": "https://assafmuller.com/feed/",
+      "website_url": "https://assafmuller.com/category/openstack/",
+      "description": "Assaf Muller is associate manager of the Red Hat OpenStack Networking engineering team. He was formerly a neutron core reviewer, member of the drivers team and responsible for the project's testing. Follow this blog where he shares his thoughts and experience on OpenStack.",
+      "followers": {
+        "twitter": 696
+      },
+      "image_url": "https://i1.feedspot.com/4883562.jpg?t=1612507478"
+    },
+    {
+      "title": "Opensource.com",
+      "feed_url": "https://opensource.com/taxonomy/term/5126/feed",
+      "website_url": "https://opensource.com/tags/openstack",
+      "description": "OpenStack is a set of software tools for building and managing cloud computing platforms for public and private clouds. OpenStack is considered by many people and organizations to be the future of cloud computing. Follow this blog to learn more on OpenStack.",
+      "followers": {
+        "facebook": 227700,
+        "twitter": 65000
+      },
+      "image_url": "https://i1.feedspot.com/4884228.jpg?t=1612507592"
+    },
+    {
+      "title": "Doug Hellmann",
+      "feed_url": "https://feeds.feedburner.com/DougHellmann",
+      "website_url": "https://doughellmann.com/",
+      "description": "Doug Hellmann is a software developer with a wide range of experience in application areas and types. He is currently employed by Red Hat to work on OpenStack full time. He is an elected member of the OpenStack Technical Committee. Follow this blog to get in depth knowledge on OpenStack.",
+      "followers": {
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/4523070.jpg?t=1612507465"
+    },
+    {
+      "title": "RDO Community Blogs",
+      "feed_url": "https://blogs.rdoproject.org/feed/",
+      "website_url": "https://blogs.rdoproject.org/",
+      "description": "Follow this blog for articles about OpenStack and related technologies from the RDO community.",
+      "followers": {
+        "facebook": 736,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4884373.jpg?t=1612507459"
+    },
+    {
+      "title": "jpichon.net",
+      "feed_url": "https://www.jpichon.net/feeds/all.rss.xml",
+      "website_url": "https://www.jpichon.net/",
+      "description": "I'm a software developer, currently based in Ireland. I care a lot about free and open-source software, and am usually interested in the crossing of education and technology. I tremendously enjoy sharing what I know and teach workshops from time to time. Follow this blog to find articles on OpenStack.",
+      "followers": {
+        "twitter": 546
+      },
+      "image_url": "https://i1.feedspot.com/4884301.jpg?t=1612507483"
+    },
+    {
+      "title": "Rob Hirschfeld",
+      "feed_url": "https://robhirschfeld.com/feed/",
+      "website_url": "https://robhirschfeld.com/",
+      "description": "Rob Hirschfeld is CEO and co-founder of RackN, leaders in physical and hybrid DevOps software. He has been in the cloud and infrastructure space for nearly 15 years from working with early ESX Betas to serving four terms on the OpenStack Foundation Board and becoming an Execute at Dell. Follow this blog to get in depth knowledge on Openstack.",
+      "followers": {
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4884859.jpg?t=1612507488"
+    },
+    {
+      "title": "Steve Hardy",
+      "feed_url": "http://hardysteven.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://hardysteven.blogspot.com/",
+      "description": "Steve Hardy is a software engineer working for Red Hat, currently he is primarily involved with the Heat and TripleO projects. He shares his thoughts and experience on open-source, openstack, linux and much more.",
+      "followers": {
+        "twitter": 810
+      },
+      "image_url": "https://i1.feedspot.com/4884200.jpg?t=1612507498"
+    },
+    {
+      "title": "JavaCruft",
+      "feed_url": "https://javacruft.wordpress.com/feed/",
+      "website_url": "https://javacruft.wordpress.com/",
+      "description": "James Page is a Technical Architect of the Ubuntu Server Team. Follow this blog for resources and articles on Ubuntu OpenStack.",
+      "followers": {
+        "twitter": 387
+      },
+      "image_url": "https://i1.feedspot.com/4884294.jpg?t=1612507507"
+    },
+    {
+      "title": "OpenStack in Production",
+      "feed_url": "http://openstack-in-production.blogspot.com/feeds/posts/default",
+      "website_url": "http://openstack-in-production.blogspot.com/",
+      "description": "Follow this blog for hints, tips and tricks from the CERN OpenStack cloud team.",
+      "followers": {
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4474919.jpg?t=1612507550"
+    },
+    {
+      "title": "Cloud {Native}",
+      "feed_url": "https://cloudnativetech.wordpress.com/feed/",
+      "website_url": "https://cloudnativetech.wordpress.com/",
+      "description": "Swapnil is an Open Source enthusiast with experience in Blockchain, Cloud Native solutions, Containers & Enterprise Software Product architectures. He has knowledge about different private, hybrid cloud architectures with OpenStack, CloudStack, IBM Cloud and more. He's also a Core Reviewer in OpenStack Kolla and OpenStack Requirements Project. Follow this blog where Swapnil shares his knowledge and thoughts on OpenStack.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4884353.jpg?t=1612507514"
+    },
+    {
+      "title": "Superuser",
+      "feed_url": "https://superuser.openinfra.org/feed/",
+      "website_url": "https://superuser.openinfra.org/",
+      "description": "OpenStack Superuser is a publication built to chronicle the work of superusers and their many accomplishments personally, professionally and organizationally. The emphasis is on a blend of original journalism and user-generated content, ranging from technical to business-level issues with feature stories, case studies, tips and videos for OpenStack cloud architects and administrators.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4884258.jpg?t=1612507675"
+    },
+    {
+      "title": "Mirantis Blog",
+      "feed_url": "https://www.mirantis.com/blog/feed/",
+      "website_url": "https://www.mirantis.com/blog/",
+      "description": "Mirantis delivers open cloud infrastructure to top enterprises using OpenStack, Kubernetes and related open source technologies. Follow this blog to get answers to OpenStack questions, news and much more.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 13200
+      },
+      "image_url": "https://i1.feedspot.com/4691072.jpg?t=1612507447"
+    },
+    {
+      "title": "NetApp Developer",
+      "feed_url": "https://www.netapp.com/developer/",
+      "website_url": "https://www.netapp.com/developer/",
+      "description": "NetApp is the leader in data insight, access and control for hybrid cloud environments. It provides global organizations the ability to manage and share their data across on-premises, private and public clouds. Follow this blog for developer centric content, code, videos and more on OpenStack.",
+      "followers": {
+        "facebook": 37100,
+        "twitter": 125000
+      },
+      "image_url": "https://i1.feedspot.com/4884335.jpg?t=1612507472"
+    }
+  ]
+}

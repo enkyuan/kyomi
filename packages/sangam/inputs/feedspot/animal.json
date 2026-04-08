@@ -1,0 +1,798 @@
+{
+  "category": "Animal",
+  "source_url": "https://rss.feedspot.com/animal_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Animal Rescue Site News",
+      "feed_url": "https://theanimalrescuesite.com/blogs/news/tagged/the-animal-rescue-site.atom",
+      "website_url": "https://theanimalrescuesite.com/blogs/news/tagged/the-animal-rescue-site",
+      "description": "The Animal Rescue Site provides food and vital care for some of the eight million unwanted animals given to shelters every year in the U.S., as well as animals in desperate need around the world.",
+      "followers": {
+        "facebook": 6600000,
+        "twitter": 90000
+      },
+      "image_url": "https://i1.feedspot.com/4621321.jpg?t=1611059796"
+    },
+    {
+      "title": "World Animal News",
+      "feed_url": "https://worldanimalnews.com/feed/",
+      "website_url": "https://worldanimalnews.com/",
+      "description": "World Animal News is a global digital news platform covering the latest breaking stories, advocacy efforts, and policy developments in animal welfare, led by Peace\u202f4\u202fAnimals founders Katie Cleary and Karen\u202fLapizco",
+      "followers": {
+        "facebook": 270400,
+        "twitter": 20200,
+        "instagram": 100500
+      },
+      "image_url": "https://i1.feedspot.com/4622666.jpg?t=1616056411"
+    },
+    {
+      "title": "Talis Us Blog",
+      "feed_url": "https://talis-us.com/blogs/news.atom",
+      "website_url": "https://talis-us.com/blogs/news",
+      "description": "Discover expert tips and heartfelt advice on nurturing your furry friends. From health hacks to behavior guidance, Talis Us Blog is your go-to resource for fostering a loving bond with your pets. Talis Us is a brand of family-owned pet stores that offers quality nutrition and supplies for dogs and other animals.",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 968,
+        "instagram": 20100
+      },
+      "image_url": "https://i1.feedspot.com/5746790.jpg?t=1704188794"
+    },
+    {
+      "title": "Animal Friendly Life",
+      "feed_url": "https://animalfriendlylife.com.au/feed/",
+      "website_url": "https://animalfriendlylife.com.au/",
+      "description": "Helping create a kinder world for all animals with content, resources, and tools for pet parents and animal lovers. Our focus is on providing practical guidance on pet wellness, animal advocacy, and conscious living guidance.",
+      "followers": {
+        "facebook": 786,
+        "twitter": 46,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/7851937/page/5749779/logo_1758103921.png"
+    },
+    {
+      "title": "Animal Charity Evaluators Blog",
+      "feed_url": "https://animalcharityevaluators.org/feed/",
+      "website_url": "https://animalcharityevaluators.org/blog/",
+      "description": "At Animal Charity Evaluators, we find and promote the most effective ways to help animals. We use effective altruism principles to evaluate causes and research. Stay tuned and get the latest news about what's going on at ACE, from research and recommendations to conversations and interviews.",
+      "followers": {
+        "facebook": 20300,
+        "twitter": 4700,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4621331.jpg?t=1616056501"
+    },
+    {
+      "title": "The Cincinnati Zoo Blog",
+      "feed_url": "https://cincinnatizoo.org/news/feed/",
+      "website_url": "https://cincinnatizoo.org/news/",
+      "description": "The Cincinnati Zoo blog is dedicated to creating adventure, conveying knowledge, conserving nature, and serving the community.",
+      "followers": {
+        "facebook": 5600000,
+        "twitter": 365900
+      },
+      "image_url": "https://i1.feedspot.com/1373537.jpg?t=1612763002"
+    },
+    {
+      "title": "Ontario SPCA and Humane Society Blog",
+      "feed_url": "https://ontariospca.ca/blog/feed/",
+      "website_url": "https://ontariospca.ca/blog/",
+      "description": "The Ontario SPCA's mission is to facilitate and provide for province-wide leadership on matters relating to the prevention of cruelty to animals and the promotion of animal welfare. The Society is working to bring an end to pet overpopulation and the abuse, neglect and abandonment of animals and promote respect and appreciation of animals. Read the latest news from Ontario SPCA.",
+      "followers": {
+        "facebook": 90300,
+        "twitter": 20600,
+        "instagram": 38600
+      },
+      "image_url": "https://i1.feedspot.com/4622410.jpg?t=1662974480"
+    },
+    {
+      "title": "Oh My Dog! Blog",
+      "feed_url": "https://ohmydogblog.com/feed/",
+      "website_url": "https://ohmydogblog.com/blog/",
+      "description": "'Oh My Dog!' is an engaging blog created and curated by Maggie Marton, an enthusiastic writer, pit bull advocate, and pet lifestyle expert. The blog celebrates pets, particularly dogs and cats, through a variety of posts ranging from personal stories to practical tips on training, DIY projects, and product reviews. Maggie's writing reflects her deep commitment to values such as compassion, authenticity, and community engagement. Living in Indiana with her family and pets, Maggie aims to inspire and connect with fellow animal lovers, fostering a supportive online community.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 4300,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/1360947.jpg?t=1602676216"
+    },
+    {
+      "title": "Farm Sanctuary",
+      "feed_url": "https://www.farmsanctuary.org/feed/",
+      "website_url": "https://www.farmsanctuary.org/news-stories/",
+      "description": "Farm Sanctuary works to protect farm animals from cruelty, inspire change in the way society views and treats farm animals, and promote compassionate vegan living.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 133600,
+        "instagram": 655500
+      },
+      "image_url": "https://i1.feedspot.com/4622455.jpg?t=1616056493"
+    },
+    {
+      "title": "Endangered Species Coalition Blog",
+      "feed_url": "https://www.endangered.org/feed/",
+      "website_url": "https://www.endangered.org/blog/",
+      "description": "Read all the blogs and get updates on the happening world of wildlife. The Endangered Species Coalition's mission is to stop the human-caused extinction of at-risk species, protect and restore their habitats, and guide these fragile populations along the road to recovery.",
+      "followers": {
+        "facebook": 95000,
+        "twitter": 44600
+      },
+      "image_url": "https://i1.feedspot.com/4622593.jpg?t=1655966826"
+    },
+    {
+      "title": "Companion Animal Psychology",
+      "feed_url": "https://www.companionanimalpsychology.com/feeds/posts/default",
+      "website_url": "https://www.companionanimalpsychology.com/index.html",
+      "description": "Find about dog training, animal behavior, behavior problems, attachment and emotional responses to animals, and the benefits of pet ownership. Companion Animal Psychology Blog publishes stories about the science of people's relationships with their cats, dogs, and other pets.",
+      "followers": {
+        "facebook": 33500,
+        "twitter": 13500,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4621780.jpg?t=1602671587"
+    },
+    {
+      "title": "Animal Aid Unlimited",
+      "feed_url": "https://www.animalaidunlimited.org/feed/",
+      "website_url": "https://www.animalaidunlimited.org/success-stories/",
+      "description": "Animal Aid Unlimited is a charitable organization that runs a busy animal hospital and shelter in Udaipur, Rajasthan India, where ownerless street animals are rescued, healed, loved, and returned to the neighborhoods from where they came. Its mission is to both bring relief to suffering animals, and to awaken compassion among people.",
+      "followers": {
+        "facebook": 2800000,
+        "twitter": 23200
+      },
+      "image_url": "https://i1.feedspot.com/4621608.jpg?t=1616056473"
+    },
+    {
+      "title": "Minnesota Wild Animal Management Inc. Blog",
+      "feed_url": "https://www.minnesotawildanimalmanagement.com/blog/feed/",
+      "website_url": "https://www.minnesotawildanimalmanagement.com/blog/",
+      "description": "MN Wild Animal Management Inc. has been dealing with wild animals with a combined experience of over 35 years of wildlife control. We are very familiar with common pests that invade homes and business.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4622711.jpg?t=1616057600"
+    },
+    {
+      "title": "Pibbles & More Animal Rescue",
+      "feed_url": "https://www.pmarinc.org/feed/",
+      "website_url": "https://www.pmarinc.org/blog/",
+      "description": "Pibbles and More Animal Rescue, Inc. is a foster based rescue located in Binghamton, NY. We are made up of fosters and volunteers who not only generously give their time but give of themselves. It is together through the collaboration of dedicated volunteers that we rescue dogs in NYC as well as from other states that use gas chambers for euthanasia.",
+      "followers": {
+        "facebook": 287000,
+        "twitter": 5200,
+        "instagram": 8300
+      },
+      "image_url": "https://i1.feedspot.com/4622655.jpg?t=1616057507"
+    },
+    {
+      "title": "Animal Aid",
+      "feed_url": "https://www.animalaid.org.uk/feed/",
+      "website_url": "https://www.animalaid.org.uk/news/",
+      "description": "Animal Aid is one of the UK's largest animal rights groups. Animal Aid campaigns peacefully against all forms of animal abuse and promotes cruelty-free living.",
+      "followers": {
+        "facebook": 178000,
+        "twitter": 88800
+      },
+      "image_url": "https://i1.feedspot.com/4622459.jpg?t=1616057497"
+    },
+    {
+      "title": "Animal Medical Center Blog",
+      "feed_url": "https://www.amcny.org/feed/",
+      "website_url": "https://www.amcny.org/blog/",
+      "description": "The Animal Medical Center of New York provides routine and emergency medical care for pets, and also offers specialized care for animals suffering from complicated diseases.",
+      "followers": {
+        "facebook": 30300,
+        "twitter": 11800,
+        "instagram": 34800
+      },
+      "image_url": "https://i1.feedspot.com/4621777.jpg?t=1616057769"
+    },
+    {
+      "title": "I Spy Animals",
+      "feed_url": "http://feeds.feedburner.com/ISpyAnimals",
+      "website_url": "https://www.ispyanimals.com/",
+      "description": "Where kids learn about animals of the world! Hello, and thank you for reading my blog. It is so fun to write because art and animals have fascinated me all my life. This comes out in my painting, blogging, writing & illustrating, as I am a learning aids designer, and wildlife artist.",
+      "followers": {
+        "twitter": 42
+      },
+      "image_url": "https://i1.feedspot.com/5145133.jpg?t=1616057821"
+    },
+    {
+      "title": "My Shetland",
+      "feed_url": "https://myshetland.co.uk/feed/",
+      "website_url": "https://myshetland.co.uk/",
+      "description": "Run by joint business partners, Jo Tonkinson and Frances Taylor. Thordale Shetland Stud aims to breed standard up-to-height Shetland ponies with excellent breedlines.",
+      "followers": {
+        "facebook": 895,
+        "twitter": 636
+      },
+      "image_url": "https://i1.feedspot.com/4859521.jpg?t=1616057931"
+    },
+    {
+      "title": "Freshfields Animal Rescue Blog",
+      "feed_url": "https://www.freshfields.org.uk/feed/",
+      "website_url": "https://www.freshfields.org.uk/freshfields-blog/",
+      "description": "We rescue, rehabilitate and rehome over 2000 animals and birds every year. Ours is a genuine non destruction policy and any animal we cannot rehome or place in foster has a home at the rescue for life.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4622652.jpg?t=1611060392"
+    },
+    {
+      "title": "Possum Valley Animal Sanctuary Inc.",
+      "feed_url": "http://possumvalleysanctuary.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://possumvalleysanctuary.blogspot.com/",
+      "description": "Possum Valley Animal Sanctuary Inc. is located in Mount Helena, Western Australia. The Sanctuary is a not for profit association and aims to prevent or relieve the suffering of native and 'farm' animals.",
+      "followers": {
+        "facebook": 14500
+      },
+      "image_url": "https://i1.feedspot.com/4623665.jpg?t=1616057977"
+    },
+    {
+      "title": "The Animal Reader",
+      "feed_url": "https://www.theanimalreader.com/feed/",
+      "website_url": "https://www.theanimalreader.com/",
+      "description": "The Animal Reader covers stories about animals from all over the world. We want to create awareness about the well-being of animals by making their stories mainstream.",
+      "followers": {
+        "twitter": 2000,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5081744.jpg?t=1753274141"
+    },
+    {
+      "title": "Companion Animal Protection Society Blog",
+      "feed_url": "https://caps-web.org/feed/",
+      "website_url": "https://caps-web.org/blogs/",
+      "description": "Companion Animal Protection Society (CAPS) is the only national nonprofit organization dedicated exclusively to protecting companion animals from cruelty in pet shops and puppy mills.",
+      "followers": {
+        "facebook": 11700,
+        "twitter": 1200,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4621616.jpg?t=1616058849"
+    },
+    {
+      "title": "Interesting Animals",
+      "feed_url": "https://interesting-animals.com/feed/",
+      "website_url": "https://interesting-animals.com/",
+      "description": "Interesting Animals is the place where people come to see amazing pictures of cute and interesting animals, watch funny animal videos and get advice!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4857180.jpg"
+    },
+    {
+      "title": "Animal Fact Guide Blog",
+      "feed_url": "https://animalfactguide.com/feed/",
+      "website_url": "https://animalfactguide.com/wildlife-blog/",
+      "description": "At Animal Fact Guide, you can learn all sorts of interesting facts about the animals roaming our planet. Each article includes an animal's physical characteristics, habitat (with a distribution map), diet, breeding patterns, unique traits and behavior, and when applicable, conservation and tips on what you can do to help.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4622421.jpg?t=1616059617"
+    },
+    {
+      "title": "Dogster: Dog Care, Health Guides, & Shop by Veterinarians & Experts",
+      "feed_url": "https://www.dogster.com/feed",
+      "website_url": "https://www.dogster.com/",
+      "description": "Formerly Dog Fancy, Dogster started as an online community of dogs and the people who love them and has evolved into an award-winning source for all things canine-related, offering knowledge, laughs, and trustworthy points of view as well as fiercely held opinions, advice and wisdom for our four-legged friends.",
+      "followers": {
+        "facebook": 181200,
+        "twitter": 63900,
+        "instagram": 46100
+      },
+      "image_url": "https://i1.feedspot.com/4945313.jpg?t=1629179886"
+    },
+    {
+      "title": "Doglime",
+      "feed_url": "https://doglime.com/feed/",
+      "website_url": "https://doglime.com/",
+      "description": "Follow Doglime to get articles related to dogs, different dog breeds, puppies, health and facts, feeding, training, and products.",
+      "followers": {
+        "facebook": 300
+      },
+      "image_url": "https://i1.feedspot.com/5120782.jpg?t=1602666487"
+    },
+    {
+      "title": "Petsworld",
+      "feed_url": "https://petsworld.in/blogs/news.atom",
+      "website_url": "https://petsworld.in/blogs/news/",
+      "description": "Articles on pet health, pet food, pet training and pet products. Petsworld provides food, clothing, toys, accessories and training materials for dogs, cats, and tiny pets such as rabbits, birds and fish.",
+      "followers": {
+        "facebook": 74800,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4624752.jpg?t=1602665955"
+    },
+    {
+      "title": "The Wild Life",
+      "feed_url": "https://thewildlife.blog/feed/",
+      "website_url": "https://thewildlife.blog/the-wild-life/blog/",
+      "description": "You have just reached the mitochondria of the cell that is The Wild Life. This is where the magic happens. The powerhouse of the blog, if you will. The Wild Life started as a blog long before it became a podcast, and many episodes often find their origins right here!",
+      "followers": {
+        "facebook": 50800
+      },
+      "image_url": "https://i1.feedspot.com/8645162.jpg"
+    },
+    {
+      "title": "Matson & Ridley Safaris",
+      "feed_url": "https://matsonridley.com/blog/feed/",
+      "website_url": "https://matsonridley.com/blog/",
+      "description": "Enjoy our safari blog. With Matson & Ridley, you won't just have the experience of a lifetime; you are also directly contributing conservation in Africa.",
+      "followers": {
+        "facebook": 1300
+      },
+      "image_url": "https://i1.feedspot.com/8645165.jpg?t=1753337437"
+    },
+    {
+      "title": "Explorer Safari",
+      "feed_url": "https://explorersafari.com/feed/",
+      "website_url": "https://explorersafari.com/blog/",
+      "description": "Stay up to date with all travel and safari news, features and guides. Covers African travel destinations from Botswana, Zambia, Zimbabwe, Tanzania, South Africa, Namibia and Kenya. Also find articles on Food & Wine, Luxury experiences, Wildlife & Birdlife and Romantic safaris. Explorer Safari is a private, tailor-made travel and tour operator in South Africa.",
+      "followers": {
+        "facebook": 21800,
+        "twitter": 97,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5300109.jpg?t=1625663335"
+    },
+    {
+      "title": "Katzenworld",
+      "feed_url": "https://katzenworld.co.uk/feed/",
+      "website_url": "https://katzenworld.co.uk/",
+      "description": "Katzenworld, the place for all your cat needs! We cover cute stories but also more serious cat health and advice, product reviews and competitions.",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 33600,
+        "instagram": 13200
+      },
+      "image_url": "https://i1.feedspot.com/4497423.jpg?t=1602763813"
+    },
+    {
+      "title": "Amazon Explorer",
+      "feed_url": "https://amazonexplorer.com/feed/",
+      "website_url": "https://amazonexplorer.com/blog/",
+      "description": "Amazon Explorer offers an exciting and extreme experience in a unique and challenging environment. We specialize in adventure tourism and survival training in the Amazon jungle.",
+      "followers": {
+        "facebook": 3900,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/8645164.jpg?t=1753338293"
+    },
+    {
+      "title": "The Guardian - Animals",
+      "feed_url": "https://www.theguardian.com/world/animals/rss",
+      "website_url": "https://www.theguardian.com/world/animals",
+      "description": "Keep up to date with the latest information on animals from theguardian.com.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4622658.jpg?t=1616056420"
+    },
+    {
+      "title": "Animal Equality Blog",
+      "feed_url": "https://animalequality.org/blog/post-subtype/blog/feed/",
+      "website_url": "https://animalequality.org/blog/",
+      "description": "Animal Equality is an international animal advocacy organisation that is dedicated to defending animals through public education, campaigns and investigations. Animal Equality works to achieve long-term social change, where all animals are treated with compassion and respect.",
+      "followers": {
+        "facebook": 961100,
+        "twitter": 36800,
+        "instagram": 110600
+      },
+      "image_url": "https://i1.feedspot.com/4622476.jpg"
+    },
+    {
+      "title": "Animals Guide",
+      "feed_url": "https://animalsguide.com/feed/",
+      "website_url": "https://animalsguide.com/",
+      "description": "Animals Guide is the go-to resource for animal lovers who want to learn more about pets and wildlife. Our team of researchers, editors, and contributors work hard to provide comprehensive information on topics ranging from the fascinating lives of wild animals to animal welfare and pet ownership. Through our carefully curated content, we strive to bring readers an informative, engaging, and entertaining destination that educates while hopefully also bringing a smile to your face.",
+      "followers": {
+        "facebook": 43800,
+        "instagram": 40
+      },
+      "image_url": "https://i1.feedspot.com/5709874.jpg?t=1699613783"
+    },
+    {
+      "title": "The Better India - Animal Welfare",
+      "feed_url": "https://thebetterindia.com/topics/animal-welfare/feed/",
+      "website_url": "https://thebetterindia.com/topics/animal-welfare/",
+      "description": "Get animal welfare related positive news from India.",
+      "followers": {
+        "facebook": 3400000,
+        "twitter": 831100,
+        "instagram": 2600000
+      },
+      "image_url": "https://i1.feedspot.com/4622591.jpg?t=1616056432"
+    },
+    {
+      "title": "Dog Star Daily - The Dog Blog",
+      "feed_url": "https://www.dogstardaily.com/blogs/feed",
+      "website_url": "https://www.dogstardaily.com/blogs",
+      "description": "At DogStarDaily.com we provide easy & effective dog training & behavior info for dog lovers. Education keeps dogs out of shelters & happily in homes.",
+      "followers": {
+        "facebook": 13800,
+        "twitter": 19500
+      },
+      "image_url": "https://i1.feedspot.com/669442.jpg?t=1602680730"
+    },
+    {
+      "title": "The Animal Protection Society of Durham",
+      "feed_url": "https://www.apsofdurham.org/feed/",
+      "website_url": "https://www.apsofdurham.org/blog/",
+      "description": "APS is a non-profit organization that has helped animals in our community since 1970, and has managed the Durham County Animal Shelter. The mission of the APS of Durham is to educate the public about the humane care, treatment and well-being of all animals, to help stop pet overpopulation through the promotion of spay/neuter programs, and to find adoptive homes for the animals in our care.",
+      "followers": {
+        "facebook": 17200,
+        "twitter": 1200,
+        "instagram": 12600
+      },
+      "image_url": "https://i1.feedspot.com/4621361.jpg?t=1616058909"
+    },
+    {
+      "title": "Dog Shaming",
+      "feed_url": "https://www.dogshaming.com/feed/",
+      "website_url": "https://www.dogshaming.com/",
+      "description": "Dog owners everywhere have found their outlet in dogshaming.com, where they can confess their dogs' biggest (and often grossest!) sins, which turn out to be recognizably universal\u2014complete with snapshots of ridiculously cute but shamed pups who don't seem capable of humping humans, pooping on pillows, or snagging steak straight from a grill.",
+      "followers": {
+        "facebook": 178800,
+        "twitter": 25200
+      },
+      "image_url": "https://i1.feedspot.com/509395.jpg?t=1602675949"
+    },
+    {
+      "title": "Talented Animals Blog",
+      "feed_url": "https://talentedanimals.com/blog/feed/",
+      "website_url": "https://talentedanimals.com/blog/",
+      "description": "This blog shares the philosophy and ethos which defines our interactions with animals. We share our lives with animals and how we train them and nurture their bodies, minds, and spirits.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4621676.jpg"
+    },
+    {
+      "title": "ohmidog!",
+      "feed_url": "https://www.ohmidog.com/feed/",
+      "website_url": "https://www.ohmidog.com/",
+      "description": "ohmidog! provides relevant, interesting and accurate news, features and information about dogs to readers around the world.",
+      "followers": {
+        "facebook": 795,
+        "twitter": 521
+      },
+      "image_url": "https://i1.feedspot.com/1458.jpg?t=1616057801"
+    },
+    {
+      "title": "The Abolitionist Approach Blog",
+      "feed_url": "https://www.abolitionistapproach.com/feed/",
+      "website_url": "https://www.abolitionistapproach.com/blog/",
+      "description": "The mission of this website is to provide a clear statement of an approach to animal rights that (1) requires the abolition of animal exploitation and rejects the regulation of animal exploitation; (2) is based only on animal sentience and no other cognitive characteristic, (3) regards veganism as the moral baseline of the animal rights position; and (4) rejects all violence and promotes activism in the form of creative, non-violent vegan education.",
+      "followers": {
+        "facebook": 71100,
+        "twitter": 27400,
+        "instagram": 11000
+      },
+      "image_url": "https://i1.feedspot.com/839611.jpg?t=1652964366"
+    },
+    {
+      "title": "Margs Animals",
+      "feed_url": "https://margsanimals.blogspot.com/feeds/posts/default",
+      "website_url": "https://margsanimals.blogspot.com/",
+      "description": "Margs Animals is all about animals, cats, dogs, goats, and donkeys and their health and behavior. We do sell some pet products and books to try to help pay for all the stray cats that have come to live here.",
+      "followers": {
+        "facebook": 1000
+      },
+      "image_url": "https://i1.feedspot.com/1787751.jpg?t=1616057912"
+    },
+    {
+      "title": "No Dog About It Blog",
+      "feed_url": "https://nodogaboutit.wordpress.com/feed/",
+      "website_url": "https://nodogaboutit.wordpress.com/",
+      "description": "No Dog About It Blog is all about dogs, cats and pets. I try to make it fun, interesting and informative. Check out our regular features - Wordless Wednesday and Favorite Video Fridays, for some really fun stuff!",
+      "followers": {
+        "facebook": 16900,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4476656.jpg"
+    },
+    {
+      "title": "ACT! Animal Care Thassos",
+      "feed_url": "http://act-thassos.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://act-thassos.blogspot.com/",
+      "description": "ACT Animal Care Thassos has been set up by a group of people living on the island of Thassos. ACT's mission is to neuter stray cats and dogs to stop the growth of the population, give medical care to strays when needed and, if possible, find new homes for unwanted stray dogs.",
+      "followers": {
+        "facebook": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4623384.jpg?t=1602768472"
+    },
+    {
+      "title": "Showing Animals Respect & Kindness",
+      "feed_url": "https://sharkonline.org/index.php/shark-blog?format=feed&type=rss",
+      "website_url": "https://sharkonline.org/index.php/shark-blog",
+      "description": "Showing Animals Respect & Kindness (SHARK) is a nonprofit, animal protection organization. Our mission is to nonviolently battle animal abuse whenever and wherever possible.",
+      "followers": {
+        "facebook": 31000,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4621364.jpg?t=1616057959"
+    },
+    {
+      "title": "Tiger - Wildlife Blog - India",
+      "feed_url": "https://feeds.feedburner.com/TigerSafari",
+      "website_url": "https://tigersafari.blogspot.com/",
+      "description": "Blog on tiger safari and conservation in National Parks of India. Find facts about wildlife of India. Provides interesting articles on tiger conservation and about wild animals of India.",
+      "followers": {
+        "facebook": 9500
+      },
+      "image_url": "https://i1.feedspot.com/4622706.jpg?t=1616057969"
+    },
+    {
+      "title": "Nevada SPCA Animal Rescue",
+      "feed_url": "http://nevadaspca.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://nevadaspca.blogspot.com/",
+      "description": "The Nevada SPCA, a nonprofit organization, operates a no-kill animal sanctuary, promotes humane education, makes referrals for lower-cost spay/neuter and vaccination services, and challenges people to be the best possible guardians for the companion animals in their care.",
+      "followers": {
+        "facebook": 54200,
+        "twitter": 24200
+      },
+      "image_url": "https://i1.feedspot.com/4623418.jpg?t=1611060704"
+    },
+    {
+      "title": "Animal Nepal",
+      "feed_url": "https://animalnepal.wordpress.com/feed/",
+      "website_url": "https://animalnepal.wordpress.com/",
+      "description": "Animal Nepal is an innovative organisation, run by local and overseas animal welfare campaigners. We run outreach programs for stray dogs and working equines. AN runs outreach programmes for strays and working donkeys, with two sanctuaries. AN also actively campaigns for better conditions for Nepal's animals.",
+      "followers": {
+        "facebook": 29500,
+        "twitter": 353
+      },
+      "image_url": "https://i1.feedspot.com/4623647.jpg?t=1616058073"
+    },
+    {
+      "title": "Animalia",
+      "feed_url": "https://lovelycutepets.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://lovelycutepets.blogspot.com/",
+      "description": "Follow to get the updated from Animalia Blog",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4946981.jpg"
+    },
+    {
+      "title": "Touching Animal Souls",
+      "feed_url": "https://touchinganimalsouls.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://touchinganimalsouls.blogspot.com/",
+      "description": "Experiences and insights from being around animals. Gabrielle Harris offers and new and astonishing way of viewing animal behaviour and what humanity can learn from the animal kingdom.",
+      "followers": {
+        "facebook": 829,
+        "twitter": 460
+      },
+      "image_url": "https://i1.feedspot.com/4623207.jpg?t=1616058078"
+    },
+    {
+      "title": "Animals Without Limits",
+      "feed_url": "http://animalswithoutlimits.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://animalswithoutlimits.blogspot.com/",
+      "description": "Animals Without Limits is an international, non-profit foundation dedicated to assisting animals in crisis situations. It is 100% volunteer operated by a pool of dedicated, caring people around the world.",
+      "followers": {
+        "facebook": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4623203.jpg?t=1616058082"
+    },
+    {
+      "title": "Animal Channeler",
+      "feed_url": "http://animalchanneler.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://animalchanneler.blogspot.com/",
+      "description": "My mission is to give a voice to as many animals as possible. Our animal friends need to be heard,",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4623416.jpg?t=1616059650"
+    },
+    {
+      "title": "Talking to Animals | The Animal Communication & Reiki Pet Healing Blog",
+      "feed_url": "https://www.talkingtoanimals.co.uk/feed/",
+      "website_url": "https://www.talkingtoanimals.co.uk/blog/",
+      "description": "Explore the world of animal reiki healing and pet communication with inspiring words from the animals themselves. Its mission is to bring about a greater awareness of the animal world and help humans and pets live a more harmonious life together.",
+      "followers": {
+        "facebook": 659,
+        "twitter": 378,
+        "instagram": 292
+      },
+      "image_url": "https://i1.feedspot.com/4622621.jpg?t=1611906324"
+    },
+    {
+      "title": "Happy Tails - Animal Education Blog",
+      "feed_url": "https://www.mjhappytails.com/1/feed",
+      "website_url": "https://www.mjhappytails.com/blog",
+      "description": "Meghan Arriola is an animal care consultant from Texas that spends her time promoting holistic wellbeing for humans and animals, while also caring for her many pets including dogs, ferrets, reptiles, goats and more.",
+      "followers": {
+        "facebook": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4621658.jpg?t=1616058838"
+    },
+    {
+      "title": "Amazing Creatures",
+      "feed_url": "http://amazing-creature.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://amazing-creature.blogspot.com/",
+      "description": "Funny, cute, wonderful animal pictures and videos on Amazing Creatures.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 186
+      },
+      "image_url": "https://i1.feedspot.com/4623202.jpg"
+    },
+    {
+      "title": "Voice for Animal",
+      "feed_url": "https://www.voiceforanimal.org/feeds/posts/default",
+      "website_url": "https://www.voiceforanimal.org/",
+      "description": "We are a group of animal lovers who are passionate about animal welfare. We strive to be the Voices for Animals to tell their stories.",
+      "followers": {
+        "facebook": 974,
+        "twitter": 68
+      },
+      "image_url": "https://i1.feedspot.com/5248297.jpg?t=1614174226"
+    },
+    {
+      "title": "Smart Animal Training Systems",
+      "feed_url": "http://blog.smartanimaltraining.com/feed/",
+      "website_url": "https://blog.smartanimaltraining.com/",
+      "description": "Smart Animal Training Systems was started to support the world of positive animal training through the use of smart technologies.",
+      "followers": {
+        "facebook": 13400,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4622464.jpg"
+    },
+    {
+      "title": "City Wildlife",
+      "feed_url": "https://citywildlife.org/feed/",
+      "website_url": "https://citywildlife.org/blog/",
+      "description": "City Wildlife was created to address the need for wildlife rescue and rehabilitation in Washington, DC. Over the past several decades, urban development has reduced local wildlife habitat and wild animals have had to adapt to living in close proximity with people. Each year, hundreds of wild animals in DC are unintentionally harmed by people and the urban environment.",
+      "followers": {
+        "facebook": 10900,
+        "twitter": 2900,
+        "instagram": 7700
+      },
+      "image_url": "https://i1.feedspot.com/8645163.jpg?t=1753335258"
+    },
+    {
+      "title": "PETA Blog",
+      "feed_url": "https://www.peta.org/blog/feed/",
+      "website_url": "https://www.peta.org/blog/",
+      "description": "People for the Ethical Treatment of Animals (PETA) is the largest animal rights organization in the world. PETA's blog is your source for up-to-the-minute information about PETA's campaigns; breaking news about victories, new initiatives to help animals, and animal rights information from across the globe.",
+      "followers": {
+        "facebook": 5700000,
+        "twitter": 1100000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/4622439.jpg?t=1616056406"
+    },
+    {
+      "title": "Animal Place",
+      "feed_url": "https://animalplace.org/feed/",
+      "website_url": "https://animalplace.org/category/news/",
+      "description": "Animal Place rescues farmed animals from slaughter, provides them with permanent sanctuary or homes, and promotes veganism. We operate a 600-acre sanctuary in Grass Valley, California and a 60-acre adoption center in Vacaville, Calif. Each year, more than 2,500 chickens, turkeys, goats, sheep and other farmed animals find new homes through our rescue and adoption program.",
+      "followers": {
+        "facebook": 261700,
+        "twitter": 14900,
+        "instagram": 77800
+      },
+      "image_url": "https://i1.feedspot.com/4623627.jpg?t=1611059825"
+    },
+    {
+      "title": "American Humane Blog",
+      "feed_url": "https://www.americanhumane.org/feed/",
+      "website_url": "https://www.americanhumane.org/blog/",
+      "description": "Founded in 1877, American Humane is committed to ensuring the safety, welfare and well-being of animals. Our leadership programs are first to serve in promoting and nurturing the bonds between animals and humans.",
+      "followers": {
+        "facebook": 403000,
+        "twitter": 30400,
+        "instagram": 24400
+      },
+      "image_url": "https://i1.feedspot.com/4623582.jpg?t=1616056479"
+    },
+    {
+      "title": "ZooBorns",
+      "feed_url": "https://zooborns.typepad.com/zooborns/atom.xml",
+      "website_url": "https://www.zooborns.com/",
+      "description": "The newest, cutest baby animals from the world's accredited zoos and aquariums. Cute baby animal pictures and videos by date, species, and institution.",
+      "followers": {
+        "facebook": 866700,
+        "twitter": 18600,
+        "instagram": 193400
+      },
+      "image_url": "https://i1.feedspot.com/4622719.jpg?t=1616056497"
+    },
+    {
+      "title": "Animals Home",
+      "feed_url": "https://animalsarea.com/feed/",
+      "website_url": "https://animalsarea.com/",
+      "description": "Get articles on animals, pets care (dogs-cats-birds), and wildlife animals care, diet, and nutrition tips for healthy pets.",
+      "followers": {
+        "twitter": 8
+      },
+      "image_url": "https://i1.feedspot.com/5283953.jpg?t=1621937826"
+    },
+    {
+      "title": "Wildlife ACT Blog",
+      "feed_url": "https://www.wildlifeact.com/feed",
+      "website_url": "https://www.wildlifeact.com/blog",
+      "description": "Wildlife Africa Conservation Team (Wildlife ACT) is a dedicated team of conservationists aimed at expanding the monitoring of endangered wildlife species within Southern Africa. Join our professional team and get started today with wildlife volunteering.",
+      "followers": {
+        "facebook": 106600,
+        "twitter": 18600,
+        "instagram": 24100
+      },
+      "image_url": "https://i1.feedspot.com/4622699.jpg?t=1616056506"
+    },
+    {
+      "title": "Humane Society Legislative Fund Blog",
+      "feed_url": "https://hslf.org/blog-feed/rss.xml",
+      "website_url": "https://hslf.org/blog",
+      "description": "Humane Society Legislative Fund (HSLF) President Michael Markarian blogs on the latest news and issues in the animal protection movement from a legislative and political angle.",
+      "followers": {
+        "facebook": 328000,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4622630.jpg"
+    },
+    {
+      "title": "Animal Justice Project Blog",
+      "feed_url": "https://www.animaljusticeproject.com/feed",
+      "website_url": "https://www.animaljusticeproject.com/blog",
+      "description": "The Animal Justice Project is a UK-based non-profit founded in December 2014 campaigning predominantly for the end of animal farming. We work with activists nationwide to Slot Gacor Hari Ini to build on the capacity, scale, and effectiveness of the animal rights movement; so that we can collectively achieve our shared vision of a society that is just.",
+      "followers": {
+        "facebook": 119300,
+        "twitter": 10500,
+        "instagram": 71100
+      },
+      "image_url": "https://i1.feedspot.com/4622650.jpg?t=1616056511"
+    },
+    {
+      "title": "Animal Good News",
+      "feed_url": "https://animalgoodnews.com/feed/",
+      "website_url": "https://animalgoodnews.com/",
+      "description": "Read Animal Good News! Positive kind interesting, funny cute news stories in the world about animals. Cats, dogs, wild animals, and pets.",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/5191196.jpg?t=1598879925"
+    },
+    {
+      "title": "Animal Defense League of Arizona - Arizona's statewide animal protection organization",
+      "feed_url": "https://adlaz.org/feed/",
+      "website_url": "https://adlaz.org/",
+      "description": "The Animal Defense League of Arizona (ADLA) is a statewide non-profit animal rights organization. Its mission is to protect and defend Arizona's animals.",
+      "followers": {
+        "facebook": 7800,
+        "twitter": 267
+      },
+      "image_url": "https://i1.feedspot.com/4622492.jpg?t=1616057963"
+    },
+    {
+      "title": "MedicAnimal | UK Pet Veterinary Products Blog",
+      "feed_url": "https://blog.medicanimal.com/feed/",
+      "website_url": "https://blog.wcs.org/photo/",
+      "description": "MedicAnimal.com is one of Europe's largest and most trusted online retailers of veterinary products and animal supplies.",
+      "followers": {
+        "facebook": 40900,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4621785.jpg?t=1602666210"
+    },
+    {
+      "title": "Dallas ZooHoo! | A blog gone WILD",
+      "feed_url": "http://zoohoo.dallaszoo.com/feed/",
+      "website_url": "https://blog.wcs.org/photo/",
+      "description": "Welcome to the largest zoological experience in Texas. Thousands of animals and an unwavering commitment to conservation, education and research. This blog is your spot for animal adventures, conservation updates, behind-the-scenes keeper chats and more.",
+      "followers": {
+        "facebook": 384000,
+        "twitter": 82600
+      },
+      "image_url": "https://i1.feedspot.com/4622718.jpg?t=1612763099"
+    },
+    {
+      "title": "Wild View",
+      "feed_url": "https://blog.wcs.org/photo/",
+      "website_url": "https://blog.wcs.org/photo/",
+      "description": "Wild View, the Wildlife Conservation Society's photo blog, offers a glimpse into the world of wildlife, and a lens on the conservation challenges of our day. The Wildlife Conservation Society (WCS) saves wildlife and wild places worldwide through science, conservation action, education, and inspiring people to value nature.",
+      "followers": {
+        "facebook": 480700,
+        "twitter": 72800,
+        "instagram": 281400
+      },
+      "image_url": "https://i1.feedspot.com/4621670.jpg?t=1616059612"
+    }
+  ]
+}

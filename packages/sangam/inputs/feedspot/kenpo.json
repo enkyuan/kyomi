@@ -1,0 +1,36 @@
+{
+  "category": "Kenpo",
+  "source_url": "https://rss.feedspot.com/kenpo_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kenpo Notes",
+      "feed_url": "http://kenponotes.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://kenponotes.blogspot.com/",
+      "description": "On the look-out for Kenpo information, insight, history, and stories.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4888786.jpg?t=1612533785"
+    },
+    {
+      "title": "Kenpo Girl",
+      "feed_url": "http://www.kenpogirl.com/articles/feed",
+      "website_url": "http://www.kenpogirl.com/articles",
+      "description": "Kenpo Girl was founded by Jesalyn Mae Harper, an avid and passionate martial artist studying American Kenpo and Eskrima. Kenpo Girl now features articles and interviews from various martial artists while staying true to the original mission.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 70,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4888077.jpg?t=1612533655"
+    },
+    {
+      "title": "American Kenpo Karate Blog",
+      "feed_url": "https://americankenpokarate.net/feed/",
+      "website_url": "https://americankenpokarate.net/blog/",
+      "description": "Our mission at American Kenpo Karate is to provide a safe and encouraging training environment for all ages. Follow the blog to find more on Kenpo Karate Classes, Martial Arts Classes, Kickboxing Karate, MMA, Self Defense, Adaptive Karate, Ed Parker, online karate.",
+      "followers": {
+        "instagram": 383
+      },
+      "image_url": "https://i1.feedspot.com/4888276.jpg?t=1612533729"
+    }
+  ]
+}

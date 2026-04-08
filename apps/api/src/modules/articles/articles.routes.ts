@@ -98,6 +98,28 @@ const translateResponse = t.Object({
   target_language: t.String(),
 });
 
+type ParsedListQuery = {
+  limit: number;
+  cursor: string | undefined;
+  feedId: string | undefined;
+  folderId: string | undefined;
+  source: string;
+  isRead: boolean | undefined;
+  isSaved: boolean | undefined;
+};
+
+function parseArticlesListQuery(query: Record<string, unknown>): ParsedListQuery {
+  return {
+    limit: Math.min(200, Math.max(1, Number(query.limit ?? 50) || 50)),
+    cursor: typeof query.cursor === "string" ? query.cursor : undefined,
+    feedId: typeof query.feed_id === "string" ? query.feed_id : undefined,
+    folderId: typeof query.folder_id === "string" ? query.folder_id : undefined,
+    source: typeof query.source === "string" ? query.source.toLowerCase() : "feeds",
+    isRead: query.is_read === "true" ? true : query.is_read === "false" ? false : undefined,
+    isSaved: query.is_saved === "true" ? true : undefined,
+  };
+}
+
 export function registerArticleRoutes(app: Elysia) {
   return app
     .get(
@@ -229,30 +251,23 @@ export function registerArticleRoutes(app: Elysia) {
       "/articles",
       async (context) => {
         const { db, query, userId } = v1HandlerContext(context);
-        const limit = Math.min(200, Math.max(1, Number(query.limit ?? 50) || 50));
-        const cursor = typeof query.cursor === "string" ? query.cursor : undefined;
-        const feedId = typeof query.feed_id === "string" ? query.feed_id : undefined;
-        const folderId = typeof query.folder_id === "string" ? query.folder_id : undefined;
-        const source = typeof query.source === "string" ? query.source.toLowerCase() : "feeds";
-        const isRead =
-          query.is_read === "true" ? true : query.is_read === "false" ? false : undefined;
-        const isSaved = query.is_saved === "true" ? true : undefined;
-        if (source === "clips") {
+        const parsed = parseArticlesListQuery(query as Record<string, unknown>);
+        if (parsed.source === "clips") {
           return listClipsForUser(db, userId, {
-            limit,
-            cursor,
-            isRead,
-            isSaved,
+            limit: parsed.limit,
+            cursor: parsed.cursor,
+            isRead: parsed.isRead,
+            isSaved: parsed.isSaved,
           });
         }
         return listArticlesForUser(db, userId, {
-          limit,
-          cursor,
-          feedId,
-          folderId,
-          isRead,
-          isSaved,
-          autoRefreshEmpty: Boolean(feedId),
+          limit: parsed.limit,
+          cursor: parsed.cursor,
+          feedId: parsed.feedId,
+          folderId: parsed.folderId,
+          isRead: parsed.isRead,
+          isSaved: parsed.isSaved,
+          autoRefreshEmpty: Boolean(parsed.feedId),
         });
       },
       {

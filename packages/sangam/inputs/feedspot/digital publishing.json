@@ -1,0 +1,78 @@
+{
+  "category": "Digital Publishing",
+  "source_url": "https://rss.feedspot.com/digital_publishing_rss_feeds",
+  "feeds": [
+    {
+      "title": "PressPad Blog",
+      "feed_url": "https://www.presspadapp.com/blog/feed/",
+      "website_url": "https://www.presspadapp.com/blog/",
+      "description": "The best digital publishing solutions for your publication are mobile magazine apps, dedicated digital newsstands for online PDF issues, and native news apps for WordPress. Reading digital issues is increasing in the US, but this growing readership trend is actually global. Try us. Be mobile. With your magazine or a PDF publication.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 2900,
+        "instagram": 68
+      },
+      "image_url": "https://i1.feedspot.com/5558650.jpg?t=1683550363"
+    },
+    {
+      "title": "supDigital Blog",
+      "feed_url": "https://blog.supdigital.org/feed/",
+      "website_url": "https://blog.supdigital.org/",
+      "followers": {
+        "twitter": 25
+      },
+      "image_url": "https://i1.feedspot.com/5558652.jpg?t=1694514840"
+    },
+    {
+      "title": "FlipBuilder Blog",
+      "feed_url": "https://blog.flipbuilder.com/feed/",
+      "website_url": "https://blog.flipbuilder.com/",
+      "description": "FlipBuilder is an innovative and professional digital publishing platform, providing the best solution to convert static PDF files into a wonderful online flipbook. From design to delivery, we focus on simplicity in use and power in function. Unlike traditional printed publications based on paper, you can create an online elegant digital magazine within several steps.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5558649.jpg?t=1683550416"
+    },
+    {
+      "title": "Calam\u00e9o Blog",
+      "feed_url": "https://blog.calameo.com/feed/",
+      "website_url": "https://blog.calameo.com/",
+      "description": "Calam\u00e9o is a leading digital publishing platform with millions of users worldwide. Digital publishing, classical publishing, self-publishing: you'll find it all here.",
+      "followers": {
+        "facebook": 168100,
+        "twitter": 24300,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5569038.jpg?t=1684305439"
+    },
+    {
+      "title": "PublishingState.com",
+      "feed_url": "https://publishingstate.com/feed/",
+      "website_url": "https://publishingstate.com/",
+      "description": "Find valuable information, guidance, and thoughtful analysis to navigate the ever-evolving landscape of publishing. PublishingState.com curates content on the past, and the future of publishing. The content covers, among others, the evolution of publishing, scholarly publishing, self-publishing, and the changing technologies that transform the publishing future.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5738704.jpg?t=1702904109"
+    },
+    {
+      "title": "mag+ Blogs",
+      "feed_url": "https://www.magplus.com/feed/",
+      "website_url": "https://www.magplus.com/blog/",
+      "description": "Tour our blog for articles on digital magazine publishing. mag+ is a complete ecosystem for creating and distributing content to apps on the one billion+ mobile devices in the world. We provide tools for creating and delivering touchscreen-native documents and issues, news items, real-time notifications, in-app messaging, and Web content.",
+      "followers": {
+        "facebook": 35100,
+        "twitter": 3400,
+        "instagram": 109
+      },
+      "image_url": "https://i1.feedspot.com/1313272.jpg?t=1684305477"
+    },
+    {
+      "title": "Kitaboo Blog",
+      "feed_url": "https://kitaboo.com/feed/",
+      "website_url": "https://kitaboo.com/blog/",
+      "description": "Read blogs by Ktiaboo about eLearning, creating interactive ebooks, and digital publishing for a better and more engaging learning experience. An ePublishing platform that allows you to create, publish and securely distribute your digital content. We address the eBook conversion needs of publishers and the training content requirements of enterprises.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5472609.jpg?t=1669633950"
+    }
+  ]
+}

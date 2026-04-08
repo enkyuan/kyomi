@@ -1,0 +1,800 @@
+{
+  "category": "Fly Fishing",
+  "source_url": "https://rss.feedspot.com/fly_fishing_rss_feeds",
+  "feeds": [
+    {
+      "title": "MidCurrent - Fly-Fishing News",
+      "feed_url": "https://midcurrent.com/news/feed/",
+      "website_url": "https://midcurrent.com/news/",
+      "description": "Daily fly fishing news, reviews, and tips from fly fishing's most authoritative source. MidCurrent is the most popular media channel in fly fishing, with more than 20,000 pages of video, art, photography, travel, reviews, tips and daily news.",
+      "followers": {
+        "facebook": 36800,
+        "twitter": 19600,
+        "instagram": 44700
+      },
+      "image_url": "https://i1.feedspot.com/4515028.jpg?t=1609223965"
+    },
+    {
+      "title": "Duranglers Fly Shop Blog",
+      "feed_url": "https://duranglers.com/feed/",
+      "website_url": "https://duranglers.com/fly-fishing-blog",
+      "description": "Posts feature up-to-date articles on local conditions, tips and tricks, events, and all the news and advice related to fly fishing in Southwest Colorado. Duranglers is the Four Corners' area premier outfitter for all the fly fishing needs.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 756,
+        "instagram": 15400
+      },
+      "image_url": "https://i1.feedspot.com/4515473.jpg?t=1609224012"
+    },
+    {
+      "title": "The Fiberglass Manifesto",
+      "feed_url": "http://thefiberglassmanifesto.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://thefiberglassmanifesto.blogspot.com/",
+      "description": "The Fiberglass Manifesto is a blog which updated daily keeping up with news and stories of fiberglass fly rod builders and really anything else in the fly fishing industry that I think is notable as well.",
+      "followers": {
+        "facebook": 15100,
+        "twitter": 5900
+      },
+      "image_url": "https://i1.feedspot.com/4778131.jpg?t=1609224021"
+    },
+    {
+      "title": "The Caddis Fly",
+      "feed_url": "http://oregonflyfishingblog.com/feed/",
+      "website_url": "http://oregonflyfishingblog.com/",
+      "description": "The Caddis Fly Oregon Fly Fishing Blog is a source for fly fishing information in Oregon. It includes Oregon fishing reports, conservation news, fly fishing advice, gear reviews and hot fly patterns.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/6573.jpg?t=1609224032"
+    },
+    {
+      "title": "The FlyFish Journal - Tailgate",
+      "feed_url": "https://www.theflyfishjournal.com/feed/",
+      "website_url": "https://www.theflyfishjournal.com/about/news/",
+      "description": "The flyfishing world's cultural catalog. Publishing four issues per volume in limited editions. Also available digitally for iPad and Android devices.",
+      "followers": {
+        "facebook": 17600,
+        "twitter": 15500,
+        "instagram": 59000
+      },
+      "image_url": "https://i1.feedspot.com/4778224.jpg?t=1609224045"
+    },
+    {
+      "title": "Hatch Magazine",
+      "feed_url": "https://www.hatchmag.com/rss.xml",
+      "website_url": "https://www.hatchmag.com/",
+      "description": "Hatch Magazine is an online magazine / site / blog / photoblog / etc dedicated to the sport of fly fishing.",
+      "followers": {
+        "facebook": 53800,
+        "twitter": 22900
+      },
+      "image_url": "https://i1.feedspot.com/4778986.jpg?t=1609224067"
+    },
+    {
+      "title": "Angler's Covey Blog",
+      "feed_url": "https://anglerscovey.com/feed/",
+      "website_url": "https://anglerscovey.com/blog/",
+      "description": "Fly Fishing news for those looking to pursue the sport with passion. Comprehensive information about fly fishing in Colorado. Features where to fish, maps, regional features, stores, fly fishing classes, guiding, on-line shopping.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 1000,
+        "instagram": 9200
+      },
+      "image_url": "https://i1.feedspot.com/1201345.jpg?t=1622099447"
+    },
+    {
+      "title": "AvidMax Blog",
+      "feed_url": "https://blog.avidmax.com/feed/",
+      "website_url": "https://blog.avidmax.com/",
+      "description": "In our blog, we show the tutorial on Fly Tying every Tuesday.AvidMax is a retailer of outdoor sporting goods and gear. We sell a wide range of fun stuff including fly fishing equipment, camping gear, cycling gear, apparel, photography accessories, dog gear, and more. We have been selling outdoor gear online since 2005.",
+      "followers": {
+        "facebook": 11800,
+        "twitter": 2100,
+        "instagram": 10000
+      },
+      "image_url": "https://i1.feedspot.com/5175188.jpg?t=1656936958"
+    },
+    {
+      "title": "Flylords Mag",
+      "feed_url": "https://flylordsmag.com/feed/",
+      "website_url": "https://flylordsmag.com/",
+      "description": "We are a group of passionate people about the outdoors and creating beautiful content. We are storytellers and innovators. Explore our picks for the week's best videos, stories, and news from the fly-fishing community.",
+      "followers": {
+        "facebook": 67300,
+        "twitter": 2000,
+        "instagram": 394900
+      },
+      "image_url": "https://i1.feedspot.com/4998607.jpg?t=1674652189"
+    },
+    {
+      "title": "Troutbitten",
+      "feed_url": "https://troutbitten.com/feed/",
+      "website_url": "https://troutbitten.com/",
+      "description": "Hi! I'm Domenick Swentosky. This site is more of a book than a blog. Contained in the 550+ articles are tips and tactics, adventures, stories and philosophies. This is a fly fishing site about trout and rivers. Stories, tips and tactics for pursuing wild trout with nymphs, streamers and dry flies.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 218,
+        "instagram": 24100
+      },
+      "image_url": "https://i1.feedspot.com/4781029.jpg?t=1609224192"
+    },
+    {
+      "title": "The Venturing Angler",
+      "feed_url": "https://venturingangler.com/feed/",
+      "website_url": "https://venturingangler.com/",
+      "description": "Founded by Tim Harden, The Venturing Angler is intended to serve the interests of traveling fly anglers. Blog posts cover Fly fishing trips, travel, photos, videos, gear news & reviews, and more.",
+      "followers": {
+        "facebook": 30200,
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/2915103.jpg?t=1631603307"
+    },
+    {
+      "title": "RiverBum \u00bb Fly Fishing Blog",
+      "feed_url": "https://riverbum.com/rss.php?action=newblogs&type=rss",
+      "website_url": "https://riverbum.com/riverbum-blog/",
+      "description": "At RiverBum we are serious about our fly fishing gear and we cherish our time on the water. We proudly offer the best quality flies and gear you can find on the market today, and we tie our flies to the exact quality specifications of our staff of fly fishing and fly tying experts.",
+      "followers": {
+        "facebook": 8000
+      },
+      "image_url": "https://i1.feedspot.com/4998587.jpg?t=1609224880"
+    },
+    {
+      "title": "Gink and Gasoline - Fly Fishing",
+      "feed_url": "https://www.ginkandgasoline.com/category/fly-fishing/feed/",
+      "website_url": "https://www.ginkandgasoline.com/category/fly-fishing/",
+      "description": "A new way of looking at Fly Fishing. Fly Fishing photography, video, tips and talk. Fly Fishing Blog written by a handful of crazy fly fishermen. Gink & Gasoline is updated multiple times a week, and it's loaded with badass photography and fly fishing guide tips for both freshwater and saltwater. It's about challenging ourselves as fishermen and sharing the experience.",
+      "followers": {
+        "facebook": 26000,
+        "twitter": 3000,
+        "instagram": 35600
+      },
+      "image_url": "https://i1.feedspot.com/4778164.jpg?t=1609224180"
+    },
+    {
+      "title": "Tail Fly Fishing Magazine",
+      "feed_url": "https://www.tailflyfishing.com/feed/",
+      "website_url": "https://www.tailflyfishing.com/",
+      "description": "Tail Fly Fishing Magazine is the voice of saltwater fly fishing. The magazine delivers the best photography, destination travel, reputable commentary, and technical features from the saltwater fly fishing lifestyle.",
+      "followers": {
+        "facebook": 22300,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4903874.jpg?t=1628744346"
+    },
+    {
+      "title": "Angler's Tonic",
+      "feed_url": "https://www.anglerstonic.com/feed/",
+      "website_url": "https://www.anglerstonic.com/",
+      "description": "Angler's Tonic is about living a good life with much of it experienced through fishing, meaning the places we visit, the people we meet, and the amazing things we see along the way.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5186616.jpg?t=1613371050"
+    },
+    {
+      "title": "Fulling Mill Blog",
+      "feed_url": "https://blog.fullingmill.com/feed/",
+      "website_url": "https://blog.fullingmill.com/",
+      "description": "Fulling Mill is widely recognised as a global leader in the manufacture of premium quality fishing flies. With a heritage that dates all the way back to the 1930s we have slowly but surely built a brand on the keystones of quality, value and service. Follow to get updates.",
+      "followers": {
+        "facebook": 38700,
+        "instagram": 68100
+      },
+      "image_url": "https://i1.feedspot.com/5066843.jpg"
+    },
+    {
+      "title": "Reno Fly Shop Blog",
+      "feed_url": "https://renoflyshop.com/blogs/blog.atom",
+      "website_url": "https://renoflyshop.com/blogs/blog",
+      "description": "Reno Fly Shop is Northern Nevada's fly fishing outfitter providing information on fishing the Truckee River, Little Truckee River, Pyramid Lake and other lakes and streams. The Reno Fly Shop offers local information and guide service to area waters as well as the regions most complete inventory of fly-fishing equipment.",
+      "followers": {
+        "facebook": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4781137.jpg?t=1609224214"
+    },
+    {
+      "title": "The Urban Fly Fisher",
+      "feed_url": "https://feeds.feedburner.com/urbanflyfisher",
+      "website_url": "https://urbanflyfisher.com/",
+      "description": "This site was the first (not the best) fly fishing blog on the internet. It is about fishing in urban and sometimes the non-urban places in the Clyde Valley. Along the way, I have had a lot of fun, like being featured in the Glasgow Herald and being featured on the infamous Trout n About episode about the River Kelvin. I even won an award as I was second place in the Metro newspaper blog awards.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 720
+      },
+      "image_url": "https://i1.feedspot.com/1651069.jpg?t=1609224224"
+    },
+    {
+      "title": "Texas Fly Caster",
+      "feed_url": "https://texasflycaster.com/feed/",
+      "website_url": "https://texasflycaster.com/",
+      "description": "Texas fly fishing techniques locations news culture and product reviews help fly fishers catch more fish in Texas salt and freshwater. Stories and videos about fly fishing and its culture.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 844,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5090322.jpg?t=1609224233"
+    },
+    {
+      "title": "BlogFlyFish.com",
+      "feed_url": "https://blogflyfish.com/feed",
+      "website_url": "https://blogflyfish.com/",
+      "description": "#1 New England Fly Fishing Blog. Androscoggin, Ashuelot, Cape Cod, Cocheco, Connecticut, Deerfield, Farmington, Hoosic, Housatonic, Isinglass, Lamprey, Millers, Natchaug, New Haven, Nissitissit, Quaboag, Quinapoxet, Saco, Salmon, Squannacook, Stillwater, Swift, Wachusett Reservoir, Westfield, Willimantic and others.",
+      "followers": {
+        "facebook": 342,
+        "twitter": 150,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4779242.jpg?t=1609224247"
+    },
+    {
+      "title": "The Swift Fly Fishing Company",
+      "feed_url": "https://feeds.feedburner.com//SwiftFlyFishing-TheDrift",
+      "website_url": "https://www.epicflyrods.com/blogs/news",
+      "description": "The Swift Fly Fishing Company is an exquisitely designed and meticulously fashioned range of premium quality fly rods - each handcrafted to order",
+      "followers": {
+        "facebook": 20600,
+        "twitter": 3000,
+        "instagram": 202
+      },
+      "image_url": "https://i1.feedspot.com/5024875.jpg?t=1609224251"
+    },
+    {
+      "title": "Aardvark McLeod - International Fly Fishing Specialists Blog",
+      "feed_url": "https://www.aardvarkmcleod.com/feed/",
+      "website_url": "https://www.aardvarkmcleod.com/blog/",
+      "description": "Find Travel Tips, Exotic Destinations and Become a better angler, helpful fly fishing blog for destinations around the world. Saltwater fishing in the Caribbean to freshwater fishing in Iceland. Aardvark McLeod specialize in fly fishing holidays worldwide in saltwater and freshwater. Targeting Atlantic salmon, trout, bonefish, tarpon, giant trevally.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 1800,
+        "instagram": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4779126.jpg?t=1609224255"
+    },
+    {
+      "title": "R and R Fly Fishing - Fly Fishing Guides",
+      "feed_url": "https://feeds.feedburner.com/RrFlyFishingGuideService",
+      "website_url": "https://randrflyfishing.com/the-fishing-report/",
+      "description": "Site of R&R Fly Fishing - fly fishing guides to the Great Smoky Mountains National Park and East Tennessee\\'s tailwaters, including the Clinch River. Fly Fishing the streams in Great Smoky Mountains National Park and the tailwater rivers of East Tennessee and western North Carolina.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 3000,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4779377.jpg?t=1609224609"
+    },
+    {
+      "title": "Anchored with April Vokey",
+      "feed_url": "https://feeds.megaphone.fm/WPCM8100104444",
+      "website_url": "https://anchoredoutdoors.com/blog/",
+      "description": "Join renowned angler April Vokey as she explores fishing, hunting, foraging and homesteading through intimate, face-to-face conversations with some of the outdoor world's most influential people. Her intense curiosity drives her to take a behind-the-scenes, vulnerable and honest approach with her guests that often ends up uncovering never-before-heard stories. An Anchored Outdoors production.",
+      "followers": {
+        "facebook": 65099,
+        "twitter": 13700,
+        "instagram": 9600
+      },
+      "image_url": "https://i1.feedspot.com/4968967.jpg?t=1745430782"
+    },
+    {
+      "title": "Faraway Fly Fishing - Argentina, Patagonia Fly Fishing Trips Blog",
+      "feed_url": "https://farawayflyfishing.com/feed/",
+      "website_url": "https://farawayflyfishing.com/argentina-fly-fishing-blog/",
+      "description": "Faraway Fly Fishing specializes in connecting adventurous anglers with the finest fly fishing trips, guides and lodges around the world! Fly Fishing Reports from our Team's Angling Exploits.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 57
+      },
+      "image_url": "https://i1.feedspot.com/4781007.jpg?t=1609224324"
+    },
+    {
+      "title": "the unfamous fly - Fly fishing in Scotland and Beyond",
+      "feed_url": "https://www.theunfamousfly.co.uk/feed/",
+      "website_url": "https://www.theunfamousfly.co.uk/",
+      "description": "The Unfamous fly is one of Scotland's most popular fly fishing blog sites. The site documents the fly fishing outings of an otherwise unknown angler, no one famous, not a guide, not trying to sell anything. Homepage of the Unfamous fly a blog about fly fishing in Scotland and beyond. Find posts on Fly fishing by a very average angler. Also The adventures of a nobody fly fisher.",
+      "followers": {
+        "facebook": 967,
+        "twitter": 631,
+        "instagram": 311
+      },
+      "image_url": "https://i1.feedspot.com/4780094.jpg?t=1609225029"
+    },
+    {
+      "title": "The Trout Zone",
+      "feed_url": "https://feeds.feedburner.com/blogspot/OgIcP",
+      "website_url": "https://www.thetroutzone.com/",
+      "description": "A fly fishing blog containing the ramblings of an East Tennessee fly fisherman and fly fishing guide covering the Great Smoky Mountains, area tailwaters like the Caney Fork River, Cumberland Plateau smallmouth bass and musky streams, and many other fishing adventures.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 241
+      },
+      "image_url": "https://i1.feedspot.com/4780173.jpg?t=1609225035"
+    },
+    {
+      "title": "Mainely Fly Fishing Blog",
+      "feed_url": "http://www.mainelyflyfishing.com/feed/",
+      "website_url": "http://www.mainelyflyfishing.com/",
+      "description": "Fishing report from the Western Maine Mountains and Beyond.",
+      "followers": {
+        "facebook": 288
+      },
+      "image_url": "https://i1.feedspot.com/4780164.jpg?t=1609225049"
+    },
+    {
+      "title": "The Average Angler",
+      "feed_url": "https://www.blogger.com/feeds/8329604530570540184/posts/default",
+      "website_url": "https://theaverageangler.blogspot.com/",
+      "description": "The Average Angler was founded by fly-fishing guide Colin Archer. The Average Angler offers flyfishing guided trips and instruction offering walk and wade and boat trips along the Jersey Shore.",
+      "followers": {
+        "twitter": 40
+      },
+      "image_url": "https://i1.feedspot.com/5203088.jpg?t=1613368875"
+    },
+    {
+      "title": "Dave Weller's Fly Fishing Blog",
+      "feed_url": "https://wellerfish.me/feed/",
+      "website_url": "https://wellerfish.me/",
+      "description": "In his blog Dave Weller blogs about his Fly Fishing Adventures in Colorado and Beyond. Explore the rich fauna of fishing water across the state. Dave Weller is a River fishing enthusiast from Colorado.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4780136.jpg?t=1613370984"
+    },
+    {
+      "title": "The River Damsel",
+      "feed_url": "https://www.theriverdamsel.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.theriverdamsel.com/",
+      "description": "As an avid Flyfisher, I have come to realize that there is more adventure in the 'riffles' of the river as it is in life. It was when I picked up a flyrod, that I knew that I was filling a void in my life! I was 'hooked'!",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 123
+      },
+      "image_url": "https://i1.feedspot.com/4780177.jpg?t=1609225069"
+    },
+    {
+      "title": "5280 Angler Blog",
+      "feed_url": "https://5280angler.com/blog/feed/",
+      "website_url": "https://5280angler.com/blog/",
+      "description": "BLOG posts offer Colorado fly fishing info, tips, strategies, condition reports, news, events, sales, and more! Passionate about Service | Wild about Fish",
+      "followers": {
+        "facebook": 2400,
+        "instagram": 115
+      },
+      "image_url": "https://i1.feedspot.com/4780304.jpg?t=1609226270"
+    },
+    {
+      "title": "TroutStrike",
+      "feed_url": "https://troutstrike.com/feed/",
+      "website_url": "https://troutstrike.com/",
+      "description": "TroutStrike is where fly anglers continue to learn when not in the water.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 108
+      },
+      "image_url": "https://i1.feedspot.com/5421137.jpg?t=1657704259"
+    },
+    {
+      "title": "Hawker-Overend Blog",
+      "feed_url": "https://hawker-overend.com/feed/",
+      "website_url": "https://hawker-overend.com/fishing-blog/",
+      "description": "Covers his fly fishing antics for grayling, trout, sea trout, salmon, pike, and bass in the northwest UK. It includes reports of the river, lake, and coastal fishing trips with the flies & fishing methods that are catching fish.",
+      "followers": {
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5422606.jpg?t=1658149683"
+    },
+    {
+      "title": "Panfish On The Fly Blog",
+      "feed_url": "https://www.panfishonthefly.com/blog?format=RSS",
+      "website_url": "https://www.panfishonthefly.com/blog/",
+      "description": "On these pages, you will learn about the techniques and fly patterns that will help you catch bluegill and other panfish. Our favorite flies for bluegills and other panfish are discussed here in detail. Panfish On The Fly is a website dedicated to fly fishing and fly tying for bluegill and other panfish as well as other species of warm-water fish such as bass, pike and carp.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 520
+      },
+      "image_url": "https://i1.feedspot.com/4781145.jpg?t=1609224237"
+    },
+    {
+      "title": "Orvis - Fly-Fishing Blog",
+      "feed_url": "https://news.orvis.com/fly-fishing/feed",
+      "website_url": "https://news.orvis.com/fly-fishing",
+      "description": "Get the latest fly-fishing news, helpful fly-fishing tips and a host of entertaining articles from the Orvis Fly-Fishing Blog. Your go to fly-fishing resource.",
+      "followers": {
+        "facebook": 324500,
+        "twitter": 62500,
+        "instagram": 364900
+      },
+      "image_url": "https://i1.feedspot.com/4515072.jpg?t=1609224006"
+    },
+    {
+      "title": "Fly Fish Food Blog",
+      "feed_url": "https://www.flyfishfood.com/blogs/fly-tying-articles.atom",
+      "website_url": "https://www.flyfishfood.com/blogs/fly-tying-articles",
+      "description": "A blog focused on all things fly tying, from materials, methods, techniques, tutorials and reviews to just cool patterns. Fly Tying Tutorials, Fly Fishing and Fly Tying related information, gear reviews and all other fly tying and fishing topics",
+      "followers": {
+        "facebook": 54700,
+        "twitter": 3400,
+        "instagram": 160500
+      },
+      "image_url": "https://i1.feedspot.com/4778995.jpg?t=1609224037"
+    },
+    {
+      "title": "Aspiring Fly Fishing Blog",
+      "feed_url": "https://www.aspiringflyfishing.co.nz/blog?format=RSS",
+      "website_url": "https://www.aspiringflyfishing.co.nz/blog",
+      "description": "Check out the latest New Zealand trout fishing news and stories from on the rivers & streams of the South Island of NZ with Aspiring Fly Fishing. Paul Macandrew is a Wanaka based fly fishing guide, who will customise your fly fishing adventure to suit your experience, from a keen beginner needing attentive tuition, to the advanced angler exploring the back country wilderness.",
+      "followers": {
+        "facebook": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4515080.jpg?t=1692345631"
+    },
+    {
+      "title": "Postfly: The Wade - The Fly Fishing Blog for those who wade",
+      "feed_url": "https://blog.postflybox.com/feed/",
+      "website_url": "https://blog.postflybox.com/",
+      "description": "A fly fishing blog for those who want to walk with effort through water to attack vigorously. Premium Fly Fishing Flies, Gear & Apparel Delivered Monthly.",
+      "followers": {
+        "facebook": 118100,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4779298.jpg?t=1609224164"
+    },
+    {
+      "title": "The Beardy Bros fly fishing - Fly fishing blog UK, tips & guides",
+      "feed_url": "https://www.beardybros.co.uk/feed",
+      "website_url": "https://www.beardybros.co.uk/",
+      "description": "Two beardy brothers on a quest to become better fly fishermen. Everything we learn about fly fishing we're going to document on this fly fishing blog, mainly so we don't keep making the same mistakes next year when we've forgotten everything we did that worked and caught us fish!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4781077.jpg?t=1609224678"
+    },
+    {
+      "title": "First Cast Fly Fishing",
+      "feed_url": "https://www.firstcastflyfishing.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.firstcastflyfishing.com/",
+      "description": "A blog about fly-fishing, fly-casting, fly tying, guiding, and hunting in New England and Argentina. Learn more about Fly Casting and Fly Tying Lessons, Guiding, and Patagonia Fishing Trips.",
+      "followers": {
+        "facebook": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4780969.jpg?t=1609225000"
+    },
+    {
+      "title": "Chi Wulff \u2014 Lying About Fly Fishing Since 2007",
+      "feed_url": "http://feeds.feedburner.com/ChiWulff",
+      "website_url": "https://chiwulff.com/",
+      "description": "Know more about the Fly Fishermen Pondering the World. The Chi Wulff hooked a fish so large that losing the fly became a distinct possibility.",
+      "followers": {
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/889380.jpg?t=1609224228"
+    },
+    {
+      "title": "Mauser Fly Fishing Blog",
+      "feed_url": "https://mauserflyfishing.com/blogs/blog.atom",
+      "website_url": "https://mauserflyfishing.com/blogs/blog",
+      "description": "The Right Gear for your Adventure. USA made high performance fly rods, using the highest quality components and backed with un-matched support and service.",
+      "followers": {
+        "facebook": 628,
+        "twitter": 135,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4781097.jpg?t=1609224242"
+    },
+    {
+      "title": "flyguys.net",
+      "feed_url": "https://flyguys.net/feed",
+      "website_url": "https://flyguys.net/",
+      "description": "flyguys.net offers a place to share fishing information, techniques, methods, stories, pictures & video for the purpose of promoting fishing in our spectacular province!",
+      "followers": {
+        "facebook": 10000,
+        "twitter": 2900,
+        "instagram": 13600
+      },
+      "image_url": "https://i1.feedspot.com/4779994.jpg?t=1609224309"
+    },
+    {
+      "title": "New England On The Fly",
+      "feed_url": "https://newenglandonthefly.com/feed/",
+      "website_url": "https://newenglandonthefly.com/",
+      "description": "New England Fly Fishing News, Trips & Tips. New England on the Fly is about fly fishing. It focuses on New England \u2014 the issues, the people, the waters, and the fish \u2014 but takes in the sport.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4780288.jpg?t=1609224315"
+    },
+    {
+      "title": "Missoula River Lodge Fly Fishing Guide Blog",
+      "feed_url": "http://www.montanaflyfishingguide.com/blog/feed/",
+      "website_url": "https://www.montanaflyfishingguide.com/blog/",
+      "description": "All Inclusive Fishing Vacations in Missoula Montana. Our vacations feature fishing guide services and nationally recognized dining.",
+      "followers": {
+        "facebook": 2700,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4779419.jpg?t=1609224319"
+    },
+    {
+      "title": "Pat Dorsey Fly Fishing - Blog",
+      "feed_url": "https://www.patdorseyflyfishing.com/blog/feed/",
+      "website_url": "https://www.patdorseyflyfishing.com/blog/",
+      "description": "With the winter-season quickly approaching, fly-fishers need to break out their arsenal of tiny flies. Pat Dorsey is a Denver, Colorado based fly fishing guide that has been pursuing selective, Rocky Mountain trout for over thirty-five years. His vast knowledge and expertise makes him a true authority in the fly fishing industry.",
+      "followers": {
+        "facebook": 5100,
+        "instagram": 79200
+      },
+      "image_url": "https://i1.feedspot.com/4780146.jpg?t=1609224329"
+    },
+    {
+      "title": "Tenkara Tracks",
+      "feed_url": "http://www.tenkaratracks.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.tenkaratracks.com/",
+      "description": "Tenkara fly fishing and lightweight backpacking in the Mountain West. Tenkara is a Japanese method of fly fishing where your setup is incredibly simple you just use a very long rod, a line, and a fly to catch fish.",
+      "followers": {
+        "twitter": 31
+      },
+      "image_url": "https://i1.feedspot.com/4780008.jpg"
+    },
+    {
+      "title": "Rouse Fly Fishing - GUIDE SHACK",
+      "feed_url": "https://blog.rouseflyfishing.com/rss",
+      "website_url": "https://www.rouseflyfishing.com/rouseflyfish",
+      "description": "Experience year round fly fishing for trophy trout on the Little Red River (home of the world record brown trout), White River, and Norfork River as well as smallmouth and stripers on area lakes and streams. Rouse Fly Fishing is Arkansas' Orvis Endorsed Guide Service. Guide: Little Red, White, and Norfork Rivers, area lakes and streams.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 575
+      },
+      "image_url": "https://i1.feedspot.com/4781178.jpg?t=1609225054"
+    },
+    {
+      "title": "Fly Fishing Russia",
+      "feed_url": "https://flyfishingrussia.com/posts/rss.xml?locale=en",
+      "website_url": "https://flyfishingrussia.com/",
+      "description": "This blog is dedicated to flyfishing which is the most interesting fishing method. I am living in the Russian Far East, love fishing and travel, flyfish since 1986. The author is a fish biologist (100 scientific papers), outdoors writer with 150 popular articles and 4 books on sport fishing. My last book Flyfishing Russia: The Far East will be printed in Canada in March.",
+      "followers": {
+        "twitter": 17
+      },
+      "image_url": "https://i1.feedspot.com/5250720.jpg?t=1640870856"
+    },
+    {
+      "title": "The Jersey Angler",
+      "feed_url": "http://thejerseyangler.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://thejerseyangler.blogspot.com/",
+      "description": "Pursuing fish with hook and feather. I decided to start this blog to share information about fly fishing, conservation and other outdoor interests.",
+      "followers": {
+        "facebook": 666,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4781157.jpg?t=1609225074"
+    },
+    {
+      "title": "Piscari-Fly",
+      "feed_url": "http://peterdriver.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://peterdriver.blogspot.com/",
+      "description": "A blog about fly tying and fly fishing, also techniques in nymph fishing, dry fly fishing, lake fly fishing, streamer fishing.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4781192.jpg?t=1609226066"
+    },
+    {
+      "title": "Fly-Fish-BC",
+      "feed_url": "https://feeds.feedburner.com/blogspot/rDUMP",
+      "website_url": "https://fly-fish-bc.blogspot.com/",
+      "description": "An informative and adventurous site whose primary focus is on fly fishing in British Columbia, Canada.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4998601.jpg?t=1613368862"
+    },
+    {
+      "title": "Fish on a Fly",
+      "feed_url": "https://fishonflynz.wordpress.com/feed/",
+      "website_url": "https://fishonflynz.wordpress.com/",
+      "description": "Fish on a Fly is a blog about Fly Fishing in the New Zealand Backcountry & Photography blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4998610.jpg?t=1609225912"
+    },
+    {
+      "title": "Montana Angling Company Blog",
+      "feed_url": "https://www.montanaanglingco.com/feed/",
+      "website_url": "https://www.montanaanglingco.com/blog/",
+      "description": "The Montana Angling Company is a fly fishing outfitting and guide service based in Bozeman, MT offering custom fly fishing trips across Montana's blue-ribbon waters.",
+      "followers": {
+        "facebook": 1800,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5069607.jpg"
+    },
+    {
+      "title": "The Missoulian Angler Fly Shop Missoula Fly Fishing Blog",
+      "feed_url": "https://missoulianangler.com/blog/feed/",
+      "website_url": "https://missoulianangler.com/blog/",
+      "description": "Find Montana Missoula Fly Fishing Blog | Missoula Fishing Reports, Fly Fishing Gear Reviews, Missoula Fly Fishing Videos. The Missoulian Angler Fly Shop offers select fly fishing gear and guided Montana fly fishing trips. We are dedicated to providing quality local knowledge and offering a pleasant retail experience. Licensed Montana Outfitter Russell Parks Missoula Fly Fishing Outfitters.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 777,
+        "instagram": 6800
+      },
+      "image_url": "https://i1.feedspot.com/4781071.jpg?t=1609225114"
+    },
+    {
+      "title": "Tight Lined Tales of a Fly Fisherman",
+      "feed_url": "http://www.tight-lined-tales-of-a-fly-fisherman.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.tight-lined-tales-of-a-fly-fisherman.com/",
+      "description": "At TLTFF we focus on anything from trip reports, product reviews, daily fly fishing videos, deals on gear and equipment, conservation, and basically anything to keep you in the know about a sport we love.",
+      "followers": {
+        "facebook": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4780242.jpg?t=1609225120"
+    },
+    {
+      "title": "Kajanaclub - Fly Fishing",
+      "feed_url": "https://kajanaclub.com/feed/",
+      "website_url": "https://kajanaclub.com/",
+      "description": "Fly Fishing offers flyfishing enthusiasts inspiration, courses, community and help with international travel planning. Anni Yli-Lonttinen is a fly fishing journalist and an entrepreneur. She has been writing about fly fishing for 7 years. In 2014 Anni started her own fly fishing business. In her own words she is the eternal novice of fly fishing with over twenty years of experience.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 382
+      },
+      "image_url": "https://i1.feedspot.com/4779439.jpg?t=1609226275"
+    },
+    {
+      "title": "Get Fly Fishing",
+      "feed_url": "https://www.getflyfishing.com/feed/",
+      "website_url": "https://www.getflyfishing.com/",
+      "description": "Fly fishing website dedicated to fly fishing beginners and offering advice and help on how to fly fish.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5139019.jpg"
+    },
+    {
+      "title": "Erik's Fly Fishing Blog",
+      "feed_url": "http://flyfishingboise.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://flyfishingboise.blogspot.com/",
+      "description": "I am creating this blog to help inspire others to go fishing, give new ideas on where or how to fish, or to help you escape for just a moment in your day to read about something you love. Thank you for checking out my blog, and please leave a comment so I know you are out there.",
+      "followers": {
+        "twitter": 154
+      },
+      "image_url": "https://i1.feedspot.com/4780986.jpg"
+    },
+    {
+      "title": "Millers, Swift, Ware And EB Fly Fishing Forum",
+      "feed_url": "https://millersriverflyfishingforum.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://millersriverflyfishingforum.blogspot.com/",
+      "description": "Guided Fly Fishing On The Millers, Swift, Middle, West & East Branches Of the Westfield River and the Ware, North, and Mill rivers. Authored by Ken Elmer, fly fishing expert.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5321527.jpg?t=1631532860"
+    },
+    {
+      "title": "Sipping Mayflies",
+      "feed_url": "https://sippingmayflies.com/feed/",
+      "website_url": "http://",
+      "description": "A fly fishing blog with extremely detailed articles related to catching trout, carp, and other species of fish on a fly.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5370737.jpg?t=1644491848"
+    },
+    {
+      "title": "Jeff Currier Blog",
+      "feed_url": "https://www.jeffcurrier.com/feed/",
+      "website_url": "https://www.jeffcurrier.com/blog/",
+      "description": "A Global Fly Fishing by Jeff Currier. Jeff has been fly fishing the world for over forty years. Wherever he goes, Jeff brings a sense of humor, enthusiasm, approachability, and plenty of experience. Here, you'll find his adventures, photographs, artwork, and more.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 190
+      },
+      "image_url": "https://i1.feedspot.com/5321528.jpg?t=1631621550"
+    },
+    {
+      "title": "J. Stockard Fly Fishing",
+      "feed_url": "https://www.jsflyfishing.com/blog/feed/",
+      "website_url": "https://www.jsflyfishing.com/pages/thoughts-on-the-fly",
+      "description": "Content filed under the Fly Tying Tips & More category. At J. Stockard Fly Fishing, we are always on the lookout for fly fishers, fly tyers, fly fishing guides, and more.",
+      "followers": {
+        "facebook": 10400,
+        "instagram": 15000
+      },
+      "image_url": "https://i1.feedspot.com/4780159.jpg?t=1609224076"
+    },
+    {
+      "title": "The Feather Bender",
+      "feed_url": "https://thefeatherbender.com/feed/",
+      "website_url": "https://thefeatherbender.com/",
+      "description": "Fly tying blog how to tie Fly fishing flies through best Fly tying videos, A Comprehensive Guide to Classic and Modern Trout Flies by Barry Ord Clarke. You will find, not only my patterns and tying techniques but also many of the most popular international patterns and how to tie them.",
+      "followers": {
+        "facebook": 3600,
+        "instagram": 7300
+      },
+      "image_url": "https://i1.feedspot.com/5180897.jpg?t=1656939835"
+    },
+    {
+      "title": "Fish Untamed",
+      "feed_url": "https://www.fishuntamed.com/feed/",
+      "website_url": "https://www.fishuntamed.com/",
+      "description": "Fish Untamed Blog is your source for fly fishing in the backcountry by Katie.",
+      "followers": {
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4998598.jpg"
+    },
+    {
+      "title": "The Blue Quill Angler - Denver's Premier Fly Fishing Shop & Guide Service",
+      "feed_url": "https://bluequillangler.com/feed/",
+      "website_url": "https://bluequillangler.com/blogs/home-page",
+      "description": "Since 1988, The Blue Quill Angler has served our loyal clients with an online & retail store, our award winning fly fishing guide service, and classes. The Blue Quill Angler also offers guided fly fishing trips to a multitude of public and private water destinations in the Rocky Mountain region.",
+      "followers": {
+        "facebook": 7800,
+        "twitter": 584,
+        "instagram": 12200
+      },
+      "image_url": "https://i1.feedspot.com/4780153.jpg?t=1609224174"
+    },
+    {
+      "title": "Headhunters Fly Shop",
+      "feed_url": "https://www.headhuntersflyshop.com/feed/",
+      "website_url": "https://www.headhuntersflyshop.com/",
+      "description": "Headhunters Fly Shop & Guide Service - Missouri River Montana Fly Fishing fly shop and guided fly fishing.",
+      "followers": {
+        "facebook": 12400,
+        "twitter": 7600
+      },
+      "image_url": "https://i1.feedspot.com/4998604.jpg?t=1609224209"
+    },
+    {
+      "title": "Enjoy Fly Fishing",
+      "feed_url": "https://www.enjoyflyfishing.co.uk/feed/",
+      "website_url": "https://www.enjoyflyfishing.co.uk/",
+      "description": "Get Fly fishing reviews and fly fishing information for the fly fisherman.",
+      "followers": {
+        "twitter": 680
+      },
+      "image_url": "https://i1.feedspot.com/5205798.jpg?t=1609224333"
+    },
+    {
+      "title": "Guideline Blog",
+      "feed_url": "https://guideline.blog/feed/",
+      "website_url": "https://guidelineflyfish.wordpress.com/",
+      "description": "This is the official blog for Guideline fishing. Get updates on Fly fishing, tips, travel reports, Fishing Techniques, Flies, Lines, Reels, Rods, and other fly fishing products.",
+      "followers": {
+        "facebook": 36100,
+        "instagram": 34400
+      },
+      "image_url": "https://i1.feedspot.com/4780337.jpg?t=1609225041"
+    },
+    {
+      "title": "Troutlands Fly Fishing Blog",
+      "feed_url": "https://www.troutlands.com/fly-fishing-blog/feed/",
+      "website_url": "https://www.troutlands.com/fly-fishing-blog/",
+      "description": "New Zealand fly fishing guide Martin Langlands, takes guided fly fishing trips into the beautiful backcountry of Canterbury in New Zealand's South Island.",
+      "followers": {
+        "facebook": 2000,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4781162.jpg?t=1609225079"
+    },
+    {
+      "title": "Due West Anglers",
+      "feed_url": "https://www.duewestanglers.com/blog-feed.xml/",
+      "website_url": "https://www.duewestanglers.com/",
+      "description": "Due West Anglers discuss Rocky Mountain fly fishing and conservation. Check out our posts on Rivers, Lakes, Fishing and more categories. We frequently mix in our training in ecology and conservation biology to provide a mix of writing that's always grounded in science.",
+      "followers": {
+        "twitter": 62,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5046851.jpg?t=1665147008"
+    },
+    {
+      "title": "Fly Fishing with Chris Dore",
+      "feed_url": "https://www.chrisdore.com/apps/blog/entries/feed/rss",
+      "website_url": "https://www.chrisdore.co.nz/blog/",
+      "description": "Guided fly fishing and casting instruction upon the unparalelled trout streams of Southland, New Zealand. Chris Dore is a Professional New Zealand fly fishing guide, writer, FFF casting instructor, SCOTT pro staff and rep for Manic Tackle Project.",
+      "followers": {
+        "facebook": 11600,
+        "twitter": 901
+      },
+      "image_url": "https://i1.feedspot.com/4780121.jpg?t=1609225124"
+    },
+    {
+      "title": "Troutnut.com - Fly Fishing for Trout",
+      "feed_url": "https://www.troutnut.com/troutnut.rss/feed",
+      "website_url": "https://www.troutnut.com/",
+      "description": "The blog posts below describe every update ever added to Troutnut.com by myself (Troutnut) and other contributors, along with occasional other thoughts and stories from my adventures in fishing, hunting, research, and travel in Alaska and beyond.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 58
+      },
+      "image_url": "https://i1.feedspot.com/4779456.jpg?t=1609224197"
+    }
+  ]
+}

@@ -1,0 +1,518 @@
+{
+  "category": "ELTIEMPO.COM",
+  "source_url": "https://rss.feedspot.com/eltiempodotcom_rss_feeds",
+  "feeds": [
+    {
+      "title": "ELTIEMPO.COM \u00bb Editorial",
+      "feed_url": "https://www.eltiempo.com/rss/opinion_editorial.xml",
+      "website_url": "https://www.eltiempo.com/opinion/editorial",
+      "description": "All the Editorial Opinions, articles, videos, and photos on the most important news from Colombia and around the world today.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744352252"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Colombia",
+      "feed_url": "https://www.eltiempo.com/rss/colombia.xml",
+      "website_url": "https://www.eltiempo.com/colombia",
+      "description": "All the latest news from the cities of Colombia. Find the main news about Cali, Medellin, Bogot\u00e1 in Colombia.",
+      "followers": {
+        "facebook": 8100000,
+        "twitter": 9100000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4473562.jpg?t=1634880070"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Barranquilla",
+      "feed_url": "https://www.eltiempo.com/rss/colombia_barranquilla.xml",
+      "website_url": "https://www.eltiempo.com/colombia/barranquilla",
+      "description": "The latest news from Barranquilla. Live coverage, local news, mobility, security, and weather in El Tiempo.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744352218"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Medell\u00edn",
+      "feed_url": "https://www.eltiempo.com/rss/colombia_medellin.xml",
+      "website_url": "https://www.eltiempo.com/colombia/medellin",
+      "description": "The latest news from Medell\u00edn and Antioquia. Live coverage, local news, mobility, security, and weather in El Tiempo.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744352198"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Cali",
+      "feed_url": "https://www.eltiempo.com/rss/colombia_cali.xml",
+      "website_url": "https://www.eltiempo.com/colombia/cali",
+      "description": "News from Find the latest news from Cali. Live coverage, local news, mobility, security, and weather in El Tiempo.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744352166"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Other Cities",
+      "feed_url": "https://www.eltiempo.com/rss/colombia_otras-ciudades.xml",
+      "website_url": "https://www.eltiempo.com/colombia/otras-ciudades",
+      "description": "Breaking news from Cartagena, Manizales, Boyac\u00e1, Villaviencio, C\u00facuta, Bucaramanga, Ibagu\u00e9, and other regions of Colombia.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744352149"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Bogot\u00e1",
+      "feed_url": "https://www.eltiempo.com/rss/bogota.xml",
+      "website_url": "https://www.eltiempo.com/bogota",
+      "description": "All articles about Bogota from ELTIEMPO.COM",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744352119"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb World",
+      "feed_url": "https://www.eltiempo.com/rss/mundo.xml",
+      "website_url": "https://www.eltiempo.com/mundo",
+      "description": "All the latest news from all continents around the world. Find the top news from Latin America, Asia, Africa, and Europe around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744352081"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Latin America",
+      "feed_url": "https://www.eltiempo.com/rss/mundo_latinoamerica.xml",
+      "website_url": "https://www.eltiempo.com/mundo/latinoamerica",
+      "description": "Latin American news: articles, videos, photos, and the most comprehensive archive of news from Colombia and around the world about Latin America.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744352066"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb USA and Canada",
+      "feed_url": "https://www.eltiempo.com/rss/mundo_eeuu-y-canada.xml",
+      "website_url": "https://www.eltiempo.com/mundo/eeuu-y-canada",
+      "description": "Stay up-to-date on stories, events, and news from the United States and around the world.",
+      "followers": {
+        "facebook": 8100000,
+        "twitter": 9100000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744351970"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Europe",
+      "feed_url": "https://www.eltiempo.com/rss/mundo_europa.xml",
+      "website_url": "https://www.eltiempo.com/mundo/europa",
+      "description": "News about Europe: articles, videos, photos, and the most comprehensive archive of news from Colombia and around the world about Europe.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744351951"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Middle East",
+      "feed_url": "https://www.eltiempo.com/rss/mundo_medio-oriente.xml",
+      "website_url": "https://www.eltiempo.com/mundo/medio-oriente",
+      "description": "Middle East News: Articles, videos, photos, and the most comprehensive archive of Middle East news from Colombia and around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744351922"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Asia",
+      "feed_url": "https://www.eltiempo.com/rss/mundo_asia.xml",
+      "website_url": "https://www.eltiempo.com/mundo/asia",
+      "description": "Asia News: Articles, videos, photos, and the most comprehensive archive of news from Colombia and around the world about Asia.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744351887"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Africa",
+      "feed_url": "https://www.eltiempo.com/rss/mundo_africa.xml",
+      "website_url": "https://www.eltiempo.com/mundo/africa",
+      "description": "News about Africa: articles, videos, photos, and the most comprehensive archive of news from Colombia and around the world about Africa.",
+      "followers": {
+        "facebook": 8100000,
+        "twitter": 9100000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744351838"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Other Regions",
+      "feed_url": "https://www.eltiempo.com/rss/mundo_mas-regiones.xml",
+      "website_url": "https://www.eltiempo.com/mundo/mas-regiones",
+      "description": "News from Other Regions: articles, videos, photos, and the most comprehensive archive of news from Colombia and around the world about Other Regions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744351803"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Politics",
+      "feed_url": "https://www.eltiempo.com/rss/politica.xml",
+      "website_url": "https://www.eltiempo.com/politica",
+      "description": "News from All the latest political news from Colombia and around the world. Find the top political news.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744351229"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Government",
+      "feed_url": "https://www.eltiempo.com/rss/politica_gobierno.xml",
+      "website_url": "https://www.eltiempo.com/politica/gobierno",
+      "description": "Government News: Articles, videos, photos, and the most comprehensive archive of government news from Colombia and around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744351216"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Congress",
+      "feed_url": "https://www.eltiempo.com/rss/politica_congreso.xml",
+      "website_url": "https://www.eltiempo.com/politica/congreso",
+      "description": "Congress News: Articles, videos, photos, and the most comprehensive archive of news from Colombia and around the world about Congress.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Peace Process",
+      "feed_url": "https://www.eltiempo.com/rss/politica_proceso-de-paz.xml",
+      "website_url": "https://www.eltiempo.com/politica/proceso-de-paz",
+      "description": "Peace Process News: Articles, videos, photos, and the most comprehensive archive of news from Colombia and around the world about the peace process.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744351146"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Political Parties",
+      "feed_url": "https://www.eltiempo.com/rss/politica_partidos-politicos.xml",
+      "website_url": "https://www.eltiempo.com/politica/partidos-politicos",
+      "description": "Political Party News: Articles, videos, photos, and the most comprehensive archive of political party news from Colombia and around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744351092"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Justice",
+      "feed_url": "https://www.eltiempo.com/rss/justicia.xml",
+      "website_url": "https://www.eltiempo.com/justicia",
+      "description": "Justice News: articles, videos, photos, and the most comprehensive archive of news from Colombia and around the world about Justice.",
+      "followers": {
+        "facebook": 8100000,
+        "twitter": 9100000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744351068"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Courts",
+      "feed_url": "https://www.eltiempo.com/rss/justicia_cortes.xml",
+      "website_url": "https://www.eltiempo.com/justicia/cortes",
+      "description": "News about Courts: articles, videos, photos, and the most complete archive of news from Colombia and the world about Courts",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744351020"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Conflict and Drug Trafficking",
+      "feed_url": "https://www.eltiempo.com/rss/justicia_conflicto-y-narcotrafico.xml",
+      "website_url": "https://www.eltiempo.com/justicia/conflicto-y-narcotrafico",
+      "description": "News about Conflict and Drug Trafficking: articles, videos, photos, and the most comprehensive archive of news from Colombia and around the world about Conflict and Drug Trafficking.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744350940"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Justice Services",
+      "feed_url": "https://www.eltiempo.com/rss/justicia_servicios.xml",
+      "website_url": "https://www.eltiempo.com/justicia/servicios",
+      "description": "News about Services: articles, videos, photos, and the most comprehensive archive of news from Colombia and around the world about Services",
+      "followers": {
+        "facebook": 8100000,
+        "twitter": 9100000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744350917"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Crimes",
+      "feed_url": "https://www.eltiempo.com/rss/justicia_delitos.xml",
+      "website_url": "https://www.eltiempo.com/justicia/delitos",
+      "description": "Crime News: Articles, videos, photos, and the most comprehensive archive of crime news from Colombia and around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744350891"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Economy",
+      "feed_url": "https://www.eltiempo.com/rss/economia.xml",
+      "website_url": "https://www.eltiempo.com/economia",
+      "description": "News from All the latest economic news from Colombia and around the world. Economic indicators, the dollar today, the TRM (Treasury Exchange Rate), the FTA, foreign trade, banks, finance, and economic analysis.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744350868"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Personal Finance",
+      "feed_url": "https://www.eltiempo.com/rss/economia_finanzas-personales.xml",
+      "website_url": "https://www.eltiempo.com/economia/finanzas-personales",
+      "description": "Personal Finance News: articles, videos, photos, and the most comprehensive archive of Personal Finance news from Colombia and around the world.",
+      "followers": {
+        "facebook": 8100000,
+        "twitter": 9100000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744350773"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Companies",
+      "feed_url": "https://www.eltiempo.com/rss/economia_empresas.xml",
+      "website_url": "https://www.eltiempo.com/economia/empresas",
+      "description": "All articles about Companies from ELTIEMPO.COM",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744350830"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Bogot\u00e1 Elections",
+      "feed_url": "https://www.eltiempo.com/rss/elecciones-colombia-2019_bogota.xml",
+      "website_url": "https://www.eltiempo.com/elecciones-colombia-2019/bogota",
+      "description": "Get special coverage of the 2019 Colombian mayoral and gubernatorial elections and learn about where to vote, hours, polling stations, and juries in Bogot\u00e1.",
+      "followers": {
+        "facebook": 8100000,
+        "twitter": 9100000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744349105"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Colombian Elections 2019",
+      "feed_url": "https://www.eltiempo.com/rss/elecciones-colombia-2019.xml",
+      "website_url": "https://www.eltiempo.com/elecciones-colombia-2019",
+      "description": "News from Colombia's 2019 mayoral and gubernatorial elections, and learn about where to vote, voting hours, polling stations, juries, and candidates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744349139"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Environment",
+      "feed_url": "https://www.eltiempo.com/rss/vida_medio-ambiente.xml",
+      "website_url": "https://www.eltiempo.com/vida/medio-ambiente",
+      "description": "Environmental News: Articles, videos, photos, and the most comprehensive archive of environmental news from Colombia and around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744349165"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Travel",
+      "feed_url": "https://www.eltiempo.com/rss/vida_viajar.xml",
+      "website_url": "https://www.eltiempo.com/vida/viajar",
+      "description": "Travel News: articles, videos, photos, and the most comprehensive archive of travel news from Colombia and around the world.",
+      "followers": {
+        "facebook": 8100000,
+        "twitter": 9100000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744349321"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Science",
+      "feed_url": "https://www.eltiempo.com/rss/vida_ciencia.xml",
+      "website_url": "https://www.eltiempo.com/vida/ciencia",
+      "description": "Science News: Articles, videos, photos, and the most comprehensive archive of science news from Colombia and around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744349338"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Education",
+      "feed_url": "https://www.eltiempo.com/rss/vida_educacion.xml",
+      "website_url": "https://www.eltiempo.com/vida/educacion",
+      "description": "Education News: articles, videos, photos, and the most comprehensive archive of education news from Colombia and around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744349355"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Health",
+      "feed_url": "https://www.eltiempo.com/rss/salud.xml",
+      "website_url": "https://www.eltiempo.com/salud",
+      "description": "Health News: Articles, videos, photos, and the most comprehensive archive of health news from Colombia and around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744349396"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Life",
+      "feed_url": "https://www.eltiempo.com/rss/vida.xml",
+      "website_url": "https://www.eltiempo.com/vida",
+      "description": "All articles about Life from ELTIEMPO.COM",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744349456"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Video Games",
+      "feed_url": "https://www.eltiempo.com/rss/tecnosfera_videojuegos.xml",
+      "website_url": "https://www.eltiempo.com/tecnosfera/videojuegos",
+      "description": "Video Game News: Articles, videos, photos, and the most comprehensive archive of video game news from Colombia and around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744349487"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Technology Tutorials",
+      "feed_url": "https://www.eltiempo.com/rss/tecnosfera_tutoriales-tecnologia.xml",
+      "website_url": "https://www.eltiempo.com/tecnosfera/tutoriales-tecnologia",
+      "description": "Technology Tutorials News: Articles, videos, photos, and the most comprehensive archive of technology tutorials from Colombia and around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744349583"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Devices",
+      "feed_url": "https://www.eltiempo.com/rss/tecnosfera_dispositivos.xml",
+      "website_url": "https://www.eltiempo.com/tecnosfera/dispositivos",
+      "description": "Gadget News: Articles, videos, photos, and the most comprehensive archive of gadget news from Colombia and around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744349711"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Technology Apps",
+      "feed_url": "https://www.eltiempo.com/rss/tecnosfera_apps.xml",
+      "website_url": "https://www.eltiempo.com/tecnosfera/apps",
+      "description": "App News: articles, videos, photos, and the most comprehensive archive of app news from Colombia and around the world.",
+      "followers": {
+        "facebook": 8100000,
+        "twitter": 9100000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744349734"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb NOVEDADES TECNOLOG\u00cdA",
+      "feed_url": "https://www.eltiempo.com/rss/tecnosfera_novedades-tecnologia.xml",
+      "website_url": "https://www.eltiempo.com/tecnosfera/novedades-tecnologia",
+      "description": "Technology News: Articles, videos, photos, and the most comprehensive archive of technology news from Colombia and around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744349762"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Technology",
+      "feed_url": "https://www.eltiempo.com/rss/tecnosfera.xml",
+      "website_url": "https://www.eltiempo.com/tecnosfera",
+      "description": "News from All the latest technology news from Colombia and around the world: gadgets, computers, technological advances, and the latest from Facebook, Google, Apple, and Samsung.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744349786"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb People",
+      "feed_url": "https://www.eltiempo.com/rss/cultura_gente.xml",
+      "website_url": "https://www.eltiempo.com/cultura/gente",
+      "description": "People News: Articles, videos, photos, and the most comprehensive archive of news from Colombia and around the world about people.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744349804"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Entertainment",
+      "feed_url": "https://www.eltiempo.com/rss/cultura_entretenimiento.xml",
+      "website_url": "https://www.eltiempo.com/cultura/entretenimiento",
+      "description": "News from all the latest entertainment news in Colombia and around the world. Find the top entertainment news.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744349839"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Food",
+      "feed_url": "https://www.eltiempo.com/rss/cultura_gastronomia.xml",
+      "website_url": "https://www.eltiempo.com/cultura/gastronomia",
+      "description": "Gastronomy News: articles, videos, photos, and the most comprehensive archive of gastronomy news from Colombia and around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744349856"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Art and Theater",
+      "feed_url": "https://www.eltiempo.com/rss/cultura_arte-y-teatro.xml",
+      "website_url": "https://www.eltiempo.com/cultura/arte-y-teatro",
+      "description": "Art and Theater News: articles, videos, photos, and the most comprehensive archive of art and theater news from Colombia and around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744349866"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Music and Books",
+      "feed_url": "https://www.eltiempo.com/rss/cultura_musica-y-libros.xml",
+      "website_url": "https://www.eltiempo.com/cultura/musica-y-libros",
+      "description": "Music and Book News: articles, videos, photos, and the most comprehensive archive of music and book news from Colombia and around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744349886"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Cinema and TV",
+      "feed_url": "https://www.eltiempo.com/rss/cultura_cine-y-tv.xml",
+      "website_url": "https://www.eltiempo.com/cultura/cine-y-tv",
+      "description": "Film and TV News: Articles, videos, photos, and the most comprehensive archive of film and TV news from Colombia and around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744349942"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Culture",
+      "feed_url": "https://www.eltiempo.com/rss/cultura.xml",
+      "website_url": "https://www.eltiempo.com/cultura",
+      "description": "News from All the latest cultural news from Colombia and around the world. Find the top cultural news.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744350093"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Other Sports",
+      "feed_url": "https://www.eltiempo.com/rss/deportes_otros-deportes.xml",
+      "website_url": "https://www.eltiempo.com/deportes/otros-deportes",
+      "description": "Other Sports News: articles, videos, photos, and the most comprehensive archive of news from Colombia and around the world about Other Sports.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744350121"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Motoring",
+      "feed_url": "https://www.eltiempo.com/rss/deportes_automovilismo.xml",
+      "website_url": "https://www.eltiempo.com/deportes/automovilismo",
+      "description": "Automotive News: articles, videos, photos, and the most comprehensive archive of automotive news from Colombia and around the world.",
+      "followers": {
+        "facebook": 8100000,
+        "twitter": 9100000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744350140"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Cycling",
+      "feed_url": "https://www.eltiempo.com/rss/deportes_ciclismo.xml",
+      "website_url": "https://www.eltiempo.com/deportes/ciclismo",
+      "description": "Cycling News: Articles, videos, photos, and the most comprehensive archive of cycling news from Colombia and around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744350174"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Tennis",
+      "feed_url": "https://www.eltiempo.com/rss/deportes_tenis.xml",
+      "website_url": "https://www.eltiempo.com/deportes/tenis",
+      "description": "Tennis News: Articles, videos, photos, and the most comprehensive archive of tennis news from Colombia and around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744350191"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Colombian Football",
+      "feed_url": "https://www.eltiempo.com/rss/deportes_futbol-colombiano.xml",
+      "website_url": "https://www.eltiempo.com/deportes/futbol-colombiano",
+      "description": "All the Colombian soccer news: Results, Standings, Analysis, Players, Teams, and Interviews. Liga and Copa \u00c1guila.",
+      "followers": {
+        "facebook": 8100000,
+        "twitter": 9100000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744350213"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb International Football",
+      "feed_url": "https://www.eltiempo.com/rss/deportes_futbol-internacional.xml",
+      "website_url": "https://www.eltiempo.com/deportes/futbol-internacional",
+      "description": "Latest Soccer News. Scores, matches, and photos from Mexican, Argentine, Spanish, Italian, and all other soccer leagues around the world.",
+      "followers": {
+        "facebook": 8100000,
+        "twitter": 9100000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744350243"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Sports",
+      "feed_url": "https://www.eltiempo.com/rss/deportes.xml",
+      "website_url": "https://www.eltiempo.com/deportes",
+      "description": "All articles about Sports from ELTIEMPO.COM",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744350277"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Financial Sector",
+      "feed_url": "https://www.eltiempo.com/rss/economia_sector-financiero.xml",
+      "website_url": "https://www.eltiempo.com/economia/sector-financiero",
+      "description": "Financial Sector News: articles, videos, photos, and the most comprehensive archive of financial sector news from Colombia and around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744350308"
+    },
+    {
+      "title": "ELTIEMPO.COM \u00bb Sectors",
+      "feed_url": "https://www.eltiempo.com/rss/economia_sectores.xml",
+      "website_url": "https://www.eltiempo.com/economia/sectores",
+      "description": "Sector News: articles, videos, photos, and the most comprehensive archive of sector news from Colombia and around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897084.jpg?t=1744350737"
+    }
+  ]
+}

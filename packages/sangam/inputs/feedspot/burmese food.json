@@ -1,0 +1,29 @@
+{
+  "category": "Burmese Food",
+  "source_url": "https://rss.feedspot.com/burmese_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Burmalicious Blog",
+      "feed_url": "https://www.theburmalicious.com/blog?format=rss",
+      "website_url": "https://www.theburmalicious.com/blog/",
+      "description": "Get the new tastiest recipes on Burmese (Myanmar) Food by Burmalicious. Hi! I am Suu, I started 'Burmalicious by Suu' to preserve and honor the culinary heritage passed down in my family for generations. Every dish I make has a personal anecdote tied to it family, traditions, culture, ethnicity and history.",
+      "followers": {
+        "facebook": 71600,
+        "instagram": 119100
+      },
+      "image_url": "https://i1.feedspot.com/5420835.jpg?t=1657612159"
+    },
+    {
+      "title": "Burmese Vegan Blog",
+      "feed_url": "https://burmesevegan.com/feed/",
+      "website_url": "https://burmesevegan.com/blog/",
+      "description": "Eat thoughtfully, live joyfully, join our community, browse our recipes, shop our products and get inspiration from our newsletter. Ms. Thet Hnin Aye (aka Flora) is a food lover, passionate home cook, and tinkerer. She started Burmese Vegan to share her wandering heart's journey through the world of vegan cooking - with a passion for Burmese culture and language.Burmese Vegan is powered by a love of veganism, culture, food, healthy living, and making changes in the community.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 25,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5420836.jpg?t=1657612367"
+    }
+  ]
+}

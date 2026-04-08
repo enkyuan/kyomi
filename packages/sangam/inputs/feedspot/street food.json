@@ -1,0 +1,96 @@
+{
+  "category": "Street Food",
+  "source_url": "https://rss.feedspot.com/street_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Bangkok Glutton",
+      "feed_url": "https://bangkokglutton.com/feed/",
+      "website_url": "https://bangkokglutton.com/",
+      "description": "I am Chawadee. I am a Thai-American from Pittsburgh (Steeler Nation) who is now married with two kids in Bangkok. I am a freelance journalist, mostly writing about food. The blog is for anyone who has ever wanted to eat or learn more about eating, at any of the food stalls lining the streets in Thailand.",
+      "followers": {
+        "twitter": 4500,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4636178.jpg?t=1600347751"
+    },
+    {
+      "title": "I Just Want To Eat!",
+      "feed_url": "https://www.ijustwanttoeat.com/post?format=RSS",
+      "website_url": "https://www.ijustwanttoeat.com/",
+      "description": "I Just Want To Eat is a personal blog that me, Jean-Philippe Gerbi, decided to create back in July 2011. I love food, talking about food and experienced different types of cuisine during the years I traveled around the world. I do not know if it is because of my French palate and the different food I have been exposed to, but trust me: I can eat any type of food. On this blog, you will find information about places where I eat (whether in New York, New Jersey or anywhere where I travel), recipes and various information related to food.",
+      "followers": {
+        "facebook": 574,
+        "twitter": 365,
+        "instagram": 9400
+      },
+      "image_url": "https://i1.feedspot.com/5589849.jpg?t=1757330680"
+    },
+    {
+      "title": "B-Kyu",
+      "feed_url": "https://www.b-kyu.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.b-kyu.com/",
+      "description": "A Sydney food blog celebrating the world's great culinary underbelly. We are ham-fisted enthusiasts who dig traditional foods, hole-in-the-wall restaurants, and international supermarkets of mystery. This blog covers ethnic food, street food, hole-in-the-wall restaurants, travel food, and a celebration of cultural diversity.",
+      "followers": {
+        "facebook": 268,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4899752.jpg?t=1612782418"
+    },
+    {
+      "title": "Palermo Street Food Blog",
+      "feed_url": "https://www.palermostreetfood.com/blog?format=RSS",
+      "website_url": "https://www.palermostreetfood.com/blog/",
+      "description": "The best way to step inside Sicilian and Palermitan culture is through its Street Food! A cheap, authentic, and original food tour of Palermo. The Palermo Street Food Blog is your place to read about what's going on and what everyone is eating in the streets of Palermo.",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 424,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4899777.jpg?t=1612782449"
+    },
+    {
+      "title": "The Jabberwocky Soliloquy Blog",
+      "feed_url": "https://www.thejabberwocky.co.uk/feed/",
+      "website_url": "http://www.thejabberwocky.co.uk/blog/",
+      "description": "The blog contains all of our collected street food expertise. Browse at your leisure or use the search bar for specific information. Discover toasties, street food and what will happen to your meal in the event of a zombie apocalypse.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 2700,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4899760.jpg?t=1612782452"
+    },
+    {
+      "title": "British Street Food \u00bb miscellaneous",
+      "feed_url": "https://britishstreetfood.co.uk/category/miscellaneous/news/feed/",
+      "website_url": "http://britishstreetfood.co.uk/category/miscellaneous/news/",
+      "description": "A well-established blog run by Richard Johnson, an award-winning food journalist, and broadcaster. He was also heavily involved in the opening of the Trinity Kitchen in Leeds' biggest shopping center. The blog also features a useful app that showcases the top spots in Britain for good street food.",
+      "followers": {
+        "twitter": 24100,
+        "instagram": 291
+      },
+      "image_url": "https://i1.feedspot.com/4899755.jpg?t=1612782458"
+    },
+    {
+      "title": "The Street Food Guy",
+      "feed_url": "https://www.streetfoodguy.com/feed/",
+      "website_url": "https://newyorkstreetfood.com/",
+      "description": "Exploring the world through Street Food. Get articles on Street Food, Drinks, and Travel.",
+      "followers": {
+        "twitter": 40,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5030379.jpg?t=1612782438"
+    },
+    {
+      "title": "Delhi Food Walks",
+      "feed_url": "http://blog.delhifoodwalks.com/feed/",
+      "website_url": "http://blog.delhifoodwalks.com/",
+      "description": "Delhi, the iconic post-colonial capital of India, represents a food utopia, an epicurean paradise of sorts, with cuisines for just about every palate. Whether it is Mughlai splendors, street food discoveries, or global foods with an Indian twist, Delhi is the place to be.",
+      "followers": {
+        "twitter": 8100
+      },
+      "image_url": "https://i1.feedspot.com/4899750.jpg?t=1612782430"
+    }
+  ]
+}

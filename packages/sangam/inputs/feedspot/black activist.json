@@ -1,0 +1,36 @@
+{
+  "category": "Black Activist",
+  "source_url": "https://rss.feedspot.com/black_activist_rss_feeds",
+  "feeds": [
+    {
+      "title": "Color Of Change",
+      "feed_url": "https://colorofchange.org/feed/",
+      "website_url": "https://colorofchange.org/",
+      "description": "Color Of Change is a non-profit organization dedicated to advancing racial justice and creating a more equitable society. The organization's mission is to help people respond effectively to injustice in the world, particularly with regards to issues of race, by using the power of technology and media to empower individuals and communities. The Color Of Change website features a blog that covers a variety of topics related to social justice and activism.",
+      "followers": {
+        "facebook": 433600,
+        "twitter": 226600,
+        "instagram": 911900
+      },
+      "image_url": "https://i1.feedspot.com/5193466.jpg?t=1673953990"
+    },
+    {
+      "title": "Black Women Radicals Blog",
+      "feed_url": "https://www.blackwomenradicals.com/blog?format=rss",
+      "website_url": "https://www.blackwomenradicals.com/blog",
+      "description": "Black Women Radicals Blog is a platform dedicated to centering the experiences and perspectives of Black women in discussions of social justice and activism. The blog features essays, interviews, and other content related to a variety of issues, including anti-Blackness, feminism, and decolonization. The blog seeks to challenge dominant narratives and amplify the voices of Black women who are often marginalized in mainstream discussions of social justice.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5489003.jpg?t=1673953983"
+    },
+    {
+      "title": "Bell Hooks Books Blog",
+      "feed_url": "https://bellhooksbooks.com/feed/",
+      "description": "Bell Hooks Books Blog is a space dedicated to exploring the works of renowned author and feminist, bell hooks. The blog features reviews and discussions of hooks' books, as well as reflections on her ideas and their relevance to contemporary issues related to race, gender, and social justice.",
+      "followers": {
+        "facebook": 801,
+        "twitter": 22
+      },
+      "image_url": "https://i1.feedspot.com/5494965.jpg?t=1673954029"
+    }
+  ]
+}

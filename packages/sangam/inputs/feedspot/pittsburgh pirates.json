@@ -1,0 +1,170 @@
+{
+  "category": "Pittsburgh Pirates",
+  "source_url": "https://rss.feedspot.com/pittsburgh_pirates_rss_feeds",
+  "feeds": [
+    {
+      "title": "Bucs Dugout",
+      "feed_url": "https://www.bucsdugout.com/rss/current.xml",
+      "website_url": "https://www.bucsdugout.com/",
+      "description": "Bucs Dugout is your best source for quality Pittsburgh Pirates news, rumours, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 11300
+      },
+      "image_url": "https://i1.feedspot.com/5182976.jpg?t=1597646853"
+    },
+    {
+      "title": "Pittsburgh Pirates",
+      "feed_url": "https://www.mlb.com/pirates/feeds/news/rss.xml",
+      "website_url": "https://www.mlb.com/pirates",
+      "description": "The official website of the Pittsburgh Pirates with the most up-to-date information on scores, schedule, stats, tickets, and team news.",
+      "followers": {
+        "facebook": 11600000,
+        "twitter": 12700000,
+        "instagram": 13100000
+      },
+      "image_url": "https://i1.feedspot.com/5183069.jpg?t=1646456956"
+    },
+    {
+      "title": "Pittsburgh Baseball Now",
+      "feed_url": "https://pittsburghbaseballnow.com/feed/",
+      "website_url": "https://pittsburghbaseballnow.com/",
+      "description": "Pittsburgh Baseball Now is your new source for the best coverage of the Pittsburgh Pirates and Major League Baseball. We bring you Pirates news, opinion, analysis and videos.",
+      "followers": {
+        "facebook": 10600,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5377593.jpg?t=1646456553"
+    },
+    {
+      "title": "Steel City Pirates",
+      "feed_url": "https://steelcitypirates.com/feed/",
+      "website_url": "https://steelcitypirates.com/",
+      "description": "Inside the Bucs Basement is for fans, by fans. Here, you'll find the latest Pittsburgh Pirates Baseball news and updates and fair coverage of MLB.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5377589.jpg?t=1646458732"
+    },
+    {
+      "title": "Bucco Ball",
+      "feed_url": "https://buccoball.wordpress.com/feed/",
+      "website_url": "https://buccoball.wordpress.com/",
+      "description": "Bucco Ball is one fan's perspective on the Pittsburgh Pirates, with a pinch of analytics and a helping of biased opinions.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5377592.jpg?t=1646456548"
+    },
+    {
+      "title": "PBC Asylum",
+      "feed_url": "https://pbc-asylum.blogspot.com/feeds/posts/default",
+      "website_url": "https://pbc-asylum.blogspot.com/",
+      "description": "PBC Asylum is home for Pittsburgh Pirates fans. This is a Pirate discussion group where we share news, stats, and more about the Pirates from year around.",
+      "followers": {
+        "twitter": 49
+      },
+      "image_url": "https://i1.feedspot.com/5183107.jpg?t=1597656195"
+    },
+    {
+      "title": "The Cold Wire \u00bb Pittsburgh Pirates",
+      "feed_url": "https://www.thecoldwire.com/sports/mlb/pittsburgh-pirates/feed/",
+      "website_url": "https://www.thecoldwire.com/sports/mlb/pittsburgh-pirates/",
+      "description": "A go-to source for trending sports news covering the NFL, MLB, NBA, college football, entertainment, and much more. Get the latest Pittsburgh Pirates news, updates, rumors, trades, signings, injuries, commentary, analysis, and more!",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 1300,
+        "instagram": 100
+      },
+      "image_url": "https://i1.feedspot.com/5517311.jpg?t=1678257484"
+    },
+    {
+      "title": "MLB Trade Rumors \u00bb Pittsburgh Pirates",
+      "feed_url": "https://www.mlbtraderumors.com/pittsburgh-pirates/feed",
+      "website_url": "https://www.mlbtraderumors.com/pittsburgh-pirates",
+      "description": "Read Pittsburgh Pirates trade and free agent rumors from MLB Trade Rumors. MLBTradeRumors.com: the only website you need for constantly updated baseball trade and free agent rumors.",
+      "followers": {
+        "facebook": 174600,
+        "twitter": 770500,
+        "instagram": 35500
+      },
+      "image_url": "https://i1.feedspot.com/5377591.jpg?t=1646456544"
+    },
+    {
+      "title": "Last Word On Sports \u00bb Pittsburgh Pirates",
+      "feed_url": "https://lastwordonsports.com/baseball/category/pirates/feed/",
+      "website_url": "https://lastwordonsports.com/baseball/category/pirates/",
+      "description": "Last Word On Sports brings you the latest Pittsburgh Pirates news, rumors, analysis, schedule, and scores from around MLB. Last Word On Sports brings you all sports coverage with a decade of experience covering news, analysis, history and schedule, as well as from junior leagues, and more.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 20700
+      },
+      "image_url": "https://i1.feedspot.com/5377602.jpg?t=1646459001"
+    },
+    {
+      "title": "Rum Bunter",
+      "feed_url": "https://rumbunter.com/feed",
+      "website_url": "https://rumbunter.com/",
+      "description": "Welcome to Rum Bunter, the Pittsburgh Pirates news and opinions site brought to you by the FanSided Network. Rum Bunter is dedicated to providing top-notch Pirates news, views, and original content.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 16500
+      },
+      "image_url": "https://i1.feedspot.com/5182964.jpg?t=1597643165"
+    },
+    {
+      "title": "Pirates Prospects",
+      "feed_url": "https://piratesprospects.com/feed",
+      "website_url": "https://calltothepen.com/nl-central/pittsburgh-pirates/",
+      "description": "Pirates Prospects is the best source for news on the Pittsburgh Pirates and their minor league system.",
+      "followers": {
+        "facebook": 6300,
+        "twitter": 11300
+      },
+      "image_url": "https://i1.feedspot.com/4084642.jpg?t=1646458372"
+    },
+    {
+      "title": "Call to the Pen \u00bb Pittsburgh Pirates",
+      "feed_url": "https://calltothepen.com/nl-central/pittsburgh-pirates/feed/",
+      "website_url": "https://calltothepen.com/nl-central/pittsburgh-pirates/",
+      "description": "Welcome to Call to the Pen, the MLB news and opinions site brought to you by the FanSided Network. Call to the Pen is dedicated to providing top-notch MLB news, views, and original content.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5377598.jpg?t=1646458101"
+    },
+    {
+      "title": "CBS Pittsburgh \u00bb Pirates",
+      "feed_url": "https://pittsburgh.cbslocal.com/category/sports/pirates/feed/",
+      "website_url": "https://www.cbsnews.com/pittsburgh/sports/pirates/",
+      "description": "Read Pittsburgh Pirates news and updates from CBS 2 And KDKA. The new portal is your #1 source for breaking news, weather, and sports. We bring you the latest breaking news, headlines, recent updates, reports on current affairs and more.",
+      "followers": {
+        "facebook": 572500,
+        "twitter": 235600
+      },
+      "image_url": "https://i1.feedspot.com/5377588.jpg?t=1646456529"
+    },
+    {
+      "title": "The Athletic \u00bb Pittsburgh Pirates",
+      "feed_url": "https://theathletic.com/team/pirates/?rss=1",
+      "website_url": "https://www.nytimes.com/athletic/mlb/team/pirates/",
+      "description": "Breaking Pittsburgh Pirates news and in-depth analysis from the best newsroom in sports. The Athletic provides unrivaled sports coverage across every team you care about and every league you follow.",
+      "followers": {
+        "facebook": 707100,
+        "twitter": 612600,
+        "instagram": 328300
+      },
+      "image_url": "https://i1.feedspot.com/5377604.jpg?t=1646456646"
+    },
+    {
+      "title": "WTAE Channel 4 \u00bb Pittsburgh Pirates",
+      "feed_url": "https://www.wtae.com/mlb-pirates",
+      "website_url": "https://www.wtae.com/mlb-pirates",
+      "description": "Read the latest Pittsburgh Pirates scores, schedules, videos and more only on WTAE Channel 4. We are Pittsburgh's #1 source for breaking news, weather, sports, and entertainment.",
+      "followers": {
+        "facebook": 634100,
+        "twitter": 158800
+      },
+      "image_url": "https://i1.feedspot.com/5377601.jpg?t=1646456622"
+    }
+  ]
+}

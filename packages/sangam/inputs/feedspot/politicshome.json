@@ -1,0 +1,133 @@
+{
+  "category": "PoliticsHome",
+  "source_url": "https://rss.feedspot.com/politicshome_rss_feeds",
+  "feeds": [
+    {
+      "title": "Politics Home \u00bb News",
+      "feed_url": "https://www.politicshome.com/news/rss",
+      "website_url": "https://www.politicshome.com/news.htm",
+      "description": "Gather all the latest political news, opinion, interviews, and analysis from Westminster, Whitehall, and beyond. Fast, impartial, and respected, PoliticsHome offers comprehensive, non-partisan coverage of politics in Westminster and exclusive editorials from MPs, peers, and policy stakeholders.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 115100,
+        "instagram": 120
+      },
+      "image_url": "https://i1.feedspot.com/5179468.jpg?t=1666937046"
+    },
+    {
+      "title": "PoliticsHome \u00bb Home Affairs",
+      "feed_url": "https://www.politicshome.com/home-affairs/rss",
+      "website_url": "https://www.politicshome.com/news/home-affairs.htm",
+      "description": "All the latest home affairs news, breaking news, and current news from Politicshome.com.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 115100
+      },
+      "image_url": "https://i1.feedspot.com/5260092.jpg?t=1616412601"
+    },
+    {
+      "title": "PoliticsHome \u00bb Foreign Affairs",
+      "feed_url": "https://www.politicshome.com/foreign-affairs/rss",
+      "website_url": "https://www.politicshome.com/news/foreign-affairs.htm",
+      "description": "All the latest foreign affairs news, breaking news, and current news from Politicshome.com.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 115100
+      },
+      "image_url": "https://i1.feedspot.com/5260091.jpg?t=1616413570"
+    },
+    {
+      "title": "PoliticsHome \u00bb Health",
+      "feed_url": "https://www.politicshome.com/health/rss",
+      "website_url": "https://www.politicshome.com/news/health-care.htm",
+      "description": "All the latest UK health and care news, breaking news, and current news from Politicshome.com.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 115100
+      },
+      "image_url": "https://i1.feedspot.com/5260096.jpg?t=1616414332"
+    },
+    {
+      "title": "PoliticsHome \u00bb Education",
+      "feed_url": "https://www.politicshome.com/education/rss",
+      "website_url": "https://www.politicshome.com/news/education.htm",
+      "description": "All the latest education news, breaking news, and current news from Politicshome.com.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 115100
+      },
+      "image_url": "https://i1.feedspot.com/5260089.jpg?t=1616413198"
+    },
+    {
+      "title": "PoliticsHome \u00bb Environment",
+      "feed_url": "https://www.politicshome.com/environment/rss",
+      "website_url": "https://www.politicshome.com/news/environment.htm",
+      "description": "All the latest environment news, breaking news, and current news from Politicshome.com.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 115100
+      },
+      "image_url": "https://i1.feedspot.com/5260088.jpg?t=1616412405"
+    },
+    {
+      "title": "PoliticsHome \u00bb Culture",
+      "feed_url": "https://www.politicshome.com/culture/rss",
+      "website_url": "https://www.politicshome.com/news/culture.htm",
+      "description": "All the latest UK culture news, breaking news, and current news from Politicshome.com",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 115100
+      },
+      "image_url": "https://i1.feedspot.com/5260090.jpg?t=1616413697"
+    },
+    {
+      "title": "PoliticsHome \u00bb Communities",
+      "feed_url": "https://www.politicshome.com/communities/rss",
+      "website_url": "https://www.politicshome.com/news/communities.htm",
+      "description": "All the latest UK communities news, breaking news, and current news from Politicshome.com.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 115100
+      },
+      "image_url": "https://i1.feedspot.com/5260094.jpg?t=1616414056"
+    },
+    {
+      "title": "PoliticsHome \u00bb Social Affairs",
+      "feed_url": "https://www.politicshome.com/social-affairs/rss",
+      "website_url": "https://www.politicshome.com/news/social-affairs.htm",
+      "description": "All the latest UK social affairs news, breaking news, and current news from Politicshome.com.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 115100
+      },
+      "image_url": "https://i1.feedspot.com/5260095.jpg?t=1616414751"
+    },
+    {
+      "title": "PoliticsHome \u00bb Transport",
+      "feed_url": "https://www.politicshome.com/transport/rss",
+      "website_url": "https://www.politicshome.com/news/transport.htm",
+      "description": "All the latest transport news, breaking news, and current news from Politicshome.com.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 115100
+      },
+      "image_url": "https://i1.feedspot.com/5260093.jpg?t=1616414880"
+    },
+    {
+      "title": "Politics Home \u00bb Economy",
+      "feed_url": "https://www.politicshome.com/economy/rss",
+      "website_url": "https://www.politicshome.com/news/economy.htm",
+      "description": "All the latest economy news, breaking news and current news from Politicshome.com.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5179468.jpg?t=1666937046"
+    },
+    {
+      "title": "Politics Home \u00bb Opinion",
+      "feed_url": "https://www.politicshome.com/opinion/rss",
+      "website_url": "https://www.politicshome.com/opinion.htm",
+      "description": "All Opinions from Politics Home.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5179468.jpg?t=1666937046"
+    }
+  ]
+}

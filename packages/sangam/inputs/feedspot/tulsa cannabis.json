@@ -1,0 +1,26 @@
+{
+  "category": "Tulsa Cannabis",
+  "source_url": "https://rss.feedspot.com/tulsa_cannabis_rss_feeds",
+  "feeds": [
+    {
+      "title": "Lady Jane's Naturals Blog",
+      "feed_url": "https://www.ladyjanesnaturals.com/blog-feed.xml",
+      "website_url": "https://www.ladyjanesnaturals.com/blog",
+      "description": "Get ready to dabble in the world of Cannabis Topicals. This blog is your guide to the right cannabis enjoyment path! Lady Jane's Naturals LLC is a local woman-owned medical cannabis dispensary offering a variety of cannabis products to support the well-being of patients in Tulsa and the surrounding areas.",
+      "followers": {
+        "facebook": 863
+      },
+      "image_url": "https://i1.feedspot.com/7297782.jpg?t=1712926580"
+    },
+    {
+      "title": "WOMEN + WEED Blog",
+      "feed_url": "https://www.dopewomenandweed.com/blog-feed.xml",
+      "website_url": "https://www.dopewomenandweed.com/blog",
+      "description": "Women + Weed is an organization, whose mission is to break the stigma surrounding Cannabis and Plant medicine, through education and networking. Their blog aims to be your go-to source for cannabis knowledge, from strain guides and product reviews to legalization news and exploring the iconic Tulsa weed scene.",
+      "followers": {
+        "facebook": 304300
+      },
+      "image_url": "https://i1.feedspot.com/7297783.jpg?t=1712926686"
+    }
+  ]
+}

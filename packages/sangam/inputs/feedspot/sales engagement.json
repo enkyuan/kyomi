@@ -1,0 +1,39 @@
+{
+  "category": "Sales Engagement",
+  "source_url": "https://rss.feedspot.com/sales_engagement_rss_feeds",
+  "feeds": [
+    {
+      "title": "Skylead Blog",
+      "feed_url": "https://skylead.io/feed/",
+      "website_url": "https://skylead.io/blog/",
+      "description": "Read about all things sales engagement-related in our wonderful blogs. Skylead is a sales automation tool that helps B2B companies, agencies, and sales teams to find new leads using the power of personalization.",
+      "followers": {
+        "facebook": 142,
+        "twitter": 39
+      },
+      "image_url": "https://i1.feedspot.com/5408611.jpg?t=1654690767"
+    },
+    {
+      "title": "Salesvue Blog \u00bb Sales Engagement",
+      "feed_url": "https://salesvue.com/blog/sales-engagement/feed/",
+      "website_url": "https://salesvue.com/blog/sales-engagement/",
+      "description": "Salesvue is the easiest to use and most powerful first Salesforce-native sales engagement platform. Salesvue unifies and improves the efficiency of marketing, sales and client on-boarding teams.",
+      "followers": {
+        "facebook": 83,
+        "twitter": 373
+      },
+      "image_url": "https://i1.feedspot.com/5408610.jpg?t=1654690315"
+    },
+    {
+      "title": "FunnelFLARE Blog",
+      "feed_url": "https://funnelflare.io/feed/",
+      "website_url": "https://funnelflare.io/category/blog/",
+      "description": "FunnelFLARE sales process automation software will reduce your sales effort so you spend more time with those prospects that matter.",
+      "followers": {
+        "facebook": 27,
+        "twitter": 60
+      },
+      "image_url": "https://i1.feedspot.com/5408615.jpg?t=1654690531"
+    }
+  ]
+}

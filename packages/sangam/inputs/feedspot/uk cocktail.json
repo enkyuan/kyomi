@@ -1,0 +1,52 @@
+{
+  "category": "UK Cocktail",
+  "source_url": "https://rss.feedspot.com/uk_cocktail_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Cocktail Lovers Magazine",
+      "feed_url": "https://thecocktaillovers.com/feed/",
+      "website_url": "https://thecocktaillovers.com/",
+      "description": "The Cocktail Lovers are on a mission to find the best cocktails and cocktail bars in London. From classic cocktails to modern mixology, Cocktail Lovers visit the bars, talk to the bartenders, and drink and mix the cocktails that make London home to the best cocktails and cocktail bars in the world.",
+      "followers": {
+        "facebook": 11900,
+        "twitter": 13700,
+        "instagram": 14300
+      },
+      "image_url": "https://i1.feedspot.com/4905675.jpg?t=1613654612"
+    },
+    {
+      "title": "A Lush Life Manual",
+      "feed_url": "https://alushlifemanual.com/feed/",
+      "website_url": "https://alushlifemanual.com/",
+      "description": "Everything you need and want for your home bar: cocktail recipes, top tips from expert bartenders, bar guides, spirits reviews and more. Susan L. Schwartz goal is to discover the soul of the beverage and why it is linked to a certain time and place, as well as making and sipping some of the simplest and most complex cocktails the world has to offer.",
+      "followers": {
+        "facebook": 745,
+        "twitter": 643,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4887411.jpg?t=1613654629"
+    },
+    {
+      "title": "A Literary Cocktail",
+      "feed_url": "https://aliterarycocktail.com/feed/",
+      "website_url": "https://aliterarycocktail.com/",
+      "description": "A Literary Cocktail is a Yorkshire based personal lifestyle blog, talking about life, beauty, books, weddings, food, and drink. Pour yourself a cocktail and enjoy!",
+      "followers": {
+        "facebook": 391,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4905679.jpg?t=1613654624"
+    },
+    {
+      "title": "All Things Drinks Blog",
+      "feed_url": "https://allthingsdrinks.co.uk/feed/",
+      "website_url": "https://allthingsdrinks.co.uk/ultimate-drinks-blog/",
+      "description": "Covers useful articles and quick guides on beer styles, simplified wine knowledge, best no & low drinks to try and in-depth video stories from talented drinks producers. All Things Drinks is a lifestyle and drinks community sharing gift ideas, shopping guides, how-tos and expert advice to help you discover exciting new drinks.",
+      "followers": {
+        "facebook": 67,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5341541.jpg?t=1636548558"
+    }
+  ]
+}

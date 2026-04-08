@@ -1,0 +1,57 @@
+{
+  "category": "Pentax",
+  "source_url": "https://rss.feedspot.com/pentax_rss_feeds",
+  "feeds": [
+    {
+      "title": "RICOH IMAGING",
+      "feed_url": "https://news.ricoh-imaging.co.jp/rim_info2/index.xml?_ga=2.8384944.363296459.1531117731-353431779.1531117730/feed",
+      "website_url": "https://www.ricoh-imaging.co.jp/english/index.html",
+      "description": "Ricoh Imaging is a web site for digital camera products. Follow this blog to get all the latest news and releases related to Pentax Digital cameras, Binoculars, CCTV and Machine-Vision Lens and more.",
+      "followers": {
+        "facebook": 44600,
+        "twitter": 27100
+      },
+      "image_url": "https://i1.feedspot.com/4921846.jpg?t=1620812802"
+    },
+    {
+      "title": "Pentax Forums",
+      "feed_url": "https://www.pentaxforums.com/articlerss/feed",
+      "website_url": "https://www.pentaxforums.com/articles/",
+      "description": "Pentax Forums is the ultimate hangout and resource for Pentax camera fans - we are the Internet's largest and friendliest Pentax-dedicated community! We feature in-depth reviews, news, photographic articles, lens and camera databases, and a huge forum!",
+      "followers": {
+        "facebook": 184800,
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4921239.jpg?t=1620812806"
+    },
+    {
+      "title": "Pentax Rumors",
+      "feed_url": "https://feeds.feedburner.com/PentaxRumors",
+      "website_url": "https://pentaxrumors.com/",
+      "description": "Pentax Rumors Blog is about upcoming Pentax products and rumors.",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4921227.jpg?t=1620812814"
+    },
+    {
+      "title": "RiceHigh's Pentax Blog",
+      "feed_url": "https://feeds.feedburner.com/RiceHigh",
+      "website_url": "https://ricehigh.blogspot.com/",
+      "description": "Get news about new products and latest company direction, summaries of reported problems and potential issues, technical articles on photographic gear and technologies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1413503.jpg?t=1620812901"
+    },
+    {
+      "title": "PENTAXever.com",
+      "feed_url": "https://pentaxever.com/feed/",
+      "website_url": "https://pentaxever.com/",
+      "description": "PENTAXever is an news platform about PENTAX/RICOH digital systems.",
+      "followers": {
+        "facebook": 790
+      },
+      "image_url": "https://i1.feedspot.com/4921842.jpg?t=1620812811"
+    }
+  ]
+}

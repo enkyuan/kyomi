@@ -1,0 +1,40 @@
+{
+  "category": "Philippines Tax and Accounting",
+  "source_url": "https://rss.feedspot.com/philippines_tax_and_accounting_rss_feeds",
+  "feeds": [
+    {
+      "title": "D&V Philippines Blog",
+      "feed_url": "https://www.dvphilippines.com/blog/rss.xml",
+      "website_url": "https://www.dvphilippines.com/blog",
+      "description": "D&V Philippines is a finance and accounting outsourcing firm based in Makati City. We are a professional services firm managed by Filipino accountants. Find out all you need to know about accounting and bookkeeping for your business through our blog with bi-weekly updates.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 1200,
+        "instagram": 803
+      },
+      "image_url": "https://i1.feedspot.com/4606552.jpg?t=1615358775"
+    },
+    {
+      "title": "ReliaBooks Blog",
+      "feed_url": "http://reliabooks.ph/feed/",
+      "website_url": "http://reliabooks.ph/blog/",
+      "description": "ReliaBooks Consulting is an accounting, bookkeeping, taxation, & business registration service provider. It helps entrepreneurs save time by outsourcing their accounting system to us so they will have the time to do more and be more.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4926020.jpg?t=1620977395"
+    },
+    {
+      "title": "ACCOUNTAHOLICSPH",
+      "feed_url": "https://accountaholicsph.com/feed/",
+      "website_url": "https://accountaholicsph.com/",
+      "description": "ACCOUNTAHOLICSPH provides resources to ensure you are equipped with the right knowledge to manage your business. We aim to empower small and medium-sized enterprises so they can learn, grow, and thrive in complex environment. Our mission is to empower all kinds of enterprises through timely and accurate tax and accounting information.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 7,
+        "instagram": 59
+      },
+      "image_url": "https://i1.feedspot.com/5298468.jpg?t=1625209549"
+    }
+  ]
+}

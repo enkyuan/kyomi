@@ -1,0 +1,189 @@
+{
+  "category": "Germany Startup",
+  "source_url": "https://rss.feedspot.com/germany_startup_rss_feeds",
+  "feeds": [
+    {
+      "title": "Deutsche Startups",
+      "feed_url": "https://www.deutsche-startups.de/feed/",
+      "website_url": "https://www.deutsche-startups.de/",
+      "description": "Deutsche Sta shares News from the German startup and digital scene. Everything about German internet founders, jobs, VCs, exits and financing rounds. deutsche-startups.de has been providing daily information about news from the local internet start-up scene since 2007. Interviews, portraits of individual startups and founders as well as market overviews of interesting segments complement the daily news rush.",
+      "followers": {
+        "facebook": 88300
+      },
+      "image_url": "https://i1.feedspot.com/82069.jpg?t=1694671015"
+    },
+    {
+      "title": "Spinlab Blog",
+      "feed_url": "https://www.spinlab.co/blog/rss.xml",
+      "website_url": "https://www.spinlab.co/blog",
+      "description": "A startup blog to keep you updated on the latest happenings with the startup and innovation scene in Leipzig. Spinlab is a Top Startup Accelerator that's pushing innovation to the limit right in the heart of Germany.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 5500,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5662127.jpg?t=1693560620"
+    },
+    {
+      "title": "Silicon Allee",
+      "feed_url": "https://news.siliconallee.com/feed/",
+      "website_url": "https://news.siliconallee.com/",
+      "description": "Silicon Allee is there to help you find jobs, co-founders, apartments, and office spaces, and stay up-to-date on tech news and advice. Silicon Allee offers informative articles on Entrepreneurship Insights marketing campaigns, feature stories, startup culture news, and updates.",
+      "followers": {
+        "facebook": 12300,
+        "twitter": 34400,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5662130.jpg?t=1693560642"
+    },
+    {
+      "title": "Startuprad.io",
+      "feed_url": "https://medium.com/feed/startuprad-io",
+      "website_url": "https://medium.com/startuprad-io",
+      "description": "Germany has a rich history when it comes to entrepreneurship. There is no shortage of success stories that can be told about German-based companies looking for global expansion opportunities abroad or investors seeking out fresh investment prospects at home/abroad. Startuprad.io continues this with Startuprad.io keeping you up to date with the latest on the German-speaking startup scene in Germany. They focus on interviews with startups mostly around their Series B funding or even scale-ups from GSA.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 8800,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5662135.jpg?t=1693560680"
+    },
+    {
+      "title": "Startup Dorf Blog",
+      "feed_url": "https://www.startupdorf.de/feed/",
+      "website_url": "https://www.startupdorf.de/blog/",
+      "description": "Dusseldorf & RegBez DUS is an awesome startup hub! Since 2013 they have connected & supported the startup community. StartupDorf eV is a platform and access to the startup ecosystem of the digital economy in the government. Inside StartupDorf blog shares news, reports, and stories from Dusseldorf for the startup and founder scene on the Rhine and Ruhr.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 3000,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5662137.jpg?t=1693560695"
+    },
+    {
+      "title": "Deep Ecosystems",
+      "feed_url": "https://startupsandplaces.com/feed/",
+      "website_url": "https://startupsandplaces.com/",
+      "description": "The Startup Heatmap is mapping startup ecosystems based on how founders feel and what data tells us about them. Deep Ecosystems allows founders to share their favorite startup places and help others build their own transnational companies. Their blog shares the latest data & analysis on startup cities and founders' location choices in Europe and beyond.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 1800,
+        "instagram": 372
+      },
+      "image_url": "https://i1.feedspot.com/5662133.jpg?t=1693560667"
+    },
+    {
+      "title": "HTGF",
+      "feed_url": "https://www.htgf.de/en/feed/",
+      "website_url": "https://www.htgf.de/en/newsroom/",
+      "description": "As one of the leading seed investors in Europe, with around 1.4 billion euros under management, we are an important part of this ecosystem. HTGF want to strengthen it, which also involves providing information about our work. HTGF is the media's go-to contact for all matters relating to start-ups, venture capital and, of course, our portfolio companies. Their press pages provide up-to-date information on important developments at the High-Tech Gr\u00fcnderfonds and in the HTGF family.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 9600,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5654272.jpg?t=1692778688"
+    },
+    {
+      "title": "Andersberater Blog",
+      "feed_url": "https://andersberater.de/en/feed/",
+      "website_url": "https://andersberater.de/en/blog/",
+      "description": "Featuring interesting insights and commentary on topics like Career, Strategy, Business, Start-tup and more. Explore Andersberater's blog for in-depth thinking on how to unlock your creative as well as entrepreneurial side successfully.",
+      "followers": {
+        "facebook": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5643530.jpg?t=1691149859"
+    },
+    {
+      "title": "TechCrunch \u00bb Germany Startup",
+      "feed_url": "https://techcrunch.com/region/europe/germany/feed/",
+      "website_url": "https://techcrunch.com/region/europe/germany/",
+      "description": "Read the latest tech news in Germany on TechCrunch. They share start-up news, practical advice on business growth, tips & strategies, finances in start-ups, technological tools, industry insights, news, and more.",
+      "followers": {
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/5662139.jpg?t=1693560721"
+    },
+    {
+      "title": "EU-Startups",
+      "feed_url": "https://www.eu-startups.com/category/germany-startups/feed/",
+      "website_url": "https://www.eu-startups.com/category/germany-startups/",
+      "description": "EU-Startups.com is the leading online publication with a focus on startups in Europe. The website was founded in October of 2010.In their Germany startup section, They write about internet and tech startups out of Germany and provide their readers with data-driven analysis, interviews and startup-related news. In addition to their focus on young technology companies, they also publish other kinds of news out of the tech-space that has a commercial or cultural impact on startups in Germany .",
+      "followers": {
+        "facebook": 48800,
+        "twitter": 45400,
+        "instagram": 34500
+      },
+      "image_url": "https://i1.feedspot.com/5662129.jpg?t=1693560637"
+    },
+    {
+      "title": "Startup Port",
+      "feed_url": "https://startupport.de/en/feed/",
+      "website_url": "https://startupport.de/en/news/",
+      "description": "Get the knowledge and expertise of an entire region for your startup! At Startup Port, you get everything from a single source. No matter whether you already have a concrete start-up idea or simply feel the entrepreneurial spirit in you. They accompany, coach, and network with you. The Startup Port bundles the support services of nine universities and research institutions from the Hamburg metropolitan region for you.They also share News and activities for start-up support from nine universities and research institutions in the Hamburg metropolitan region.",
+      "followers": {
+        "facebook": 27,
+        "twitter": 445,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5662128.jpg?t=1693560628"
+    },
+    {
+      "title": "RootCamp Blog",
+      "feed_url": "https://www.root.camp/blog/rss.xml",
+      "website_url": "https://www.root.camp/blog",
+      "description": "RootCamp helps startups in AgTech and Bioeconomy of all stages who want to accelerate their paths to market and have a positive impact in the agriTech sector with disruptive solutions. They provide an acceleration curriculum for early-stage startups but also fuel later-stage startups. Follow their blog to keep up with the latest trends in the agriculture and food industries.",
+      "followers": {
+        "facebook": 74,
+        "instagram": 891
+      },
+      "image_url": "https://i1.feedspot.com/5662126.jpg?t=1693560611"
+    },
+    {
+      "title": "NTV \u00bb Startup",
+      "feed_url": "https://www.n-tv.de/wirtschaft/wirtschaft_startup/rss",
+      "website_url": "https://www.n-tv.de/wirtschaft/wirtschaft_startup/",
+      "description": "n-tv.de is the website of the German free-to-air television news channel n-tv. It covers a wide range of news topics, including politics, business, economy, sports, and world news. The news site also has a section for videos, which includes news clips, interviews, and documentaries. Their Startup section shares daily news, technological updates, industry insights, startup marketing strategies, useful advice, startup finance, and more related topics.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 959500,
+        "instagram": 495200
+      },
+      "image_url": "https://i1.feedspot.com/5662125.jpg?t=1693560603"
+    },
+    {
+      "title": "Berlin Startup School Blog",
+      "feed_url": "https://www.berlinstartupschool.com/blog-feed.xml",
+      "website_url": "https://www.berlinstartupschool.com/blog",
+      "description": "BERLIN STARTUP SCHOOL started as a side project of Entrepreneurship students at SRH Hochschule Berlin in 2018 who wanted to help people realize their ideas. They support you from the very beginning up to founding a company through workshops, coaching, and networking events to take your business to the next level. Explore their blog which sheds light on topics like Success Stories, startup struggles, business case studies, Discussions on the latest technologies and innovations and latest tools and resources.",
+      "followers": {
+        "facebook": 640,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5662138.jpg?t=1693560703"
+    },
+    {
+      "title": "firma.de \u00bb Company Formation",
+      "feed_url": "https://www.firma.de/en/company-formation/feed/",
+      "website_url": "https://www.firma.de/en/company-formation/",
+      "description": "firma.de is on a mission to transform Germany into a 'Founder Nation'. With the vision to make Germany a founder's paradise in mind, firma.de came into being in 2012. They support founders of all industries with a clear mission: To give businesses a fast, legally sound, and cost-effective start.Their company guide shares articles on business strategies, step-by-step guides, freelancing, fundamentals of the commercial register in Germany, Tax registration guide, and more similar topics.",
+      "followers": {
+        "facebook": 5700,
+        "instagram": 549
+      },
+      "image_url": "https://i1.feedspot.com/5662134.jpg?t=1693560670"
+    },
+    {
+      "title": "Munich Startup",
+      "feed_url": "https://en.munich-startup.de/feed/",
+      "website_url": "https://en.munich-startup.de/",
+      "description": "Munich Startup is the official startup portal for Munich and the surrounding region. The portal has become the standard initial point of (virtual) contact for startups in and around Munich. It strives to present both content and players objectively, independently, and transparently. Munich Startup sheds light on the regional ecosystem and encourages networking between entrepreneurs and potential partners, investors, and mentors.",
+      "followers": {
+        "facebook": 38000,
+        "twitter": 9100
+      },
+      "image_url": "https://i1.feedspot.com/5662141.jpg?t=1693560731"
+    }
+  ]
+}

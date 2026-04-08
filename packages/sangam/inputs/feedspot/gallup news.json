@@ -1,0 +1,40 @@
+{
+  "category": "Gallup News",
+  "source_url": "https://rss.feedspot.com/gallup_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of Gallup",
+      "feed_url": "https://www.gallupnm.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.gallupnm.gov/CivicAlerts.aspx",
+      "description": "Get the latest news, updates, important announcements, city alerts, upcoming events, and more from the official website of Gallup, NM.",
+      "followers": {
+        "facebook": 23700,
+        "twitter": 374
+      },
+      "image_url": "https://i1.feedspot.com/5158962.jpg?t=1594386828"
+    },
+    {
+      "title": "KRQE News 13 \u00bb Gallup",
+      "feed_url": "https://www.krqe.com/tag/gallup/feed/",
+      "website_url": "https://www.krqe.com/tag/gallup/",
+      "description": "KRQE, located in Albuquerque, is a leading news organization that covers the state of New Mexico over-the-air and online in breaking news, local and community news, weather, and sports. Follow this feed to read the latest news and updates in Gallup brought to you by KRQE.",
+      "followers": {
+        "facebook": 303300,
+        "twitter": 139200,
+        "instagram": 72600
+      },
+      "image_url": "https://i1.feedspot.com/5169925.jpg?t=1594383803"
+    },
+    {
+      "title": "Gallup Sun",
+      "feed_url": "https://www.gallupsun.com/index.php?option=com_content&view=section&layout=blog&id=16&Itemid=560&format=feed&type=rss",
+      "website_url": "https://gallupsun.com/index.php?option=com_content&view=section&layout=blog&id=16&Itemid=560",
+      "description": "Gallup Sun focuses on bringing local news and features to the readers with a fresh, modern perspective.",
+      "followers": {
+        "facebook": 22000,
+        "twitter": 348
+      },
+      "image_url": "https://i1.feedspot.com/5169935.jpg"
+    }
+  ]
+}

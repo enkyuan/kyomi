@@ -1,0 +1,64 @@
+{
+  "category": "Military Fitness",
+  "source_url": "https://rss.feedspot.com/military_fitness_rss_feeds",
+  "feeds": [
+    {
+      "title": "Stew Smith Fitness",
+      "feed_url": "https://www.stewsmithfitness.com/blogs/news.atom",
+      "website_url": "https://www.stewsmithfitness.com/blogs/news",
+      "description": "Stew Smith Fitness is a fitness information company focused on fitness testing programs for men and women in Tactical Fitness Profession like Special Ops, Military, Police, Fire Fighters, and the general population.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5313168.jpg?t=1629453238"
+    },
+    {
+      "title": "Boot Camp & Military Fitness Institute",
+      "feed_url": "https://bootcampmilitaryfitnessinstitute.com/feed/",
+      "website_url": "https://bootcampmilitaryfitnessinstitute.com/updates/",
+      "description": "We provide advice, guidance, support, and information on a wide range of military- and fitness-related topics. The Boot Camp and Military Fitness Institute is a knowledge management and information sharing platform for fitness and military enthusiasts & professionals.",
+      "followers": {
+        "facebook": 673,
+        "twitter": 196
+      },
+      "image_url": "https://i1.feedspot.com/5313267.jpg?t=1629290351"
+    },
+    {
+      "title": "The Human Performance Resources by CHAMP Blog",
+      "feed_url": "https://hprc-online.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://hprc-online.blogspot.com/",
+      "description": "The Human Performance Resources by CHAMP (HPRC) is an online, one-stop source of evidence-based information and key resources to help Warfighters and their families achieve total fitness and, ultimately, human performance optimization (HPO).",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 1700,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5313553.jpg?t=1629349851"
+    },
+    {
+      "title": "BMF Blog",
+      "feed_url": "https://www.bemilitaryfit.com/blog/rss.xml",
+      "website_url": "https://www.bemilitaryfit.com/blog",
+      "description": "At BMF you can experience the world's best outdoor workout. We are the first in military fitness and the leaders in outdoor training. We've been changing lives since 1999.",
+      "followers": {
+        "facebook": 78800,
+        "twitter": 12500,
+        "instagram": 27600
+      },
+      "image_url": "https://i1.feedspot.com/4918067.jpg?t=1629275126"
+    },
+    {
+      "title": "Grey Team News and Updates",
+      "feed_url": "https://www.greyteam.org/feed/",
+      "website_url": "https://www.greyteam.org/grey-team-news-and-updates/",
+      "description": "Grey Team provides veterans with personal training, nutrition therapy, and much more. It is a nonprofit organization whose sole mission is to support active-duty U.S. soldiers and military veterans.",
+      "followers": {
+        "facebook": 92000,
+        "twitter": 282,
+        "instagram": 9100
+      },
+      "image_url": "https://i1.feedspot.com/5313345.jpg?t=1629297711"
+    }
+  ]
+}

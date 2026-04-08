@@ -1,0 +1,250 @@
+{
+  "category": "Scrum",
+  "source_url": "https://rss.feedspot.com/scrum_rss_feeds",
+  "feeds": [
+    {
+      "title": "Rebel Scrum Blog",
+      "feed_url": "https://www.rebelscrum.site/blog-feed.xml",
+      "website_url": "https://www.rebelscrum.site/blog",
+      "description": "Insightful articles about Agile topics related to you. New Scrum Master articles are published weekly on topics related to Scrum and how it can solve real-work problems in business and technology environments. Rebel Scrum equips teams doing complex work with the tools, mindset, and approach to transform into an Agile force.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5481034.jpg?t=1671448655"
+    },
+    {
+      "title": "b-agile Blog",
+      "feed_url": "https://www.bagile.co.uk/feed/",
+      "website_url": "https://www.bagile.co.uk/blog/",
+      "description": "Are you passionate about agile, development, and XP? Then follow their blog to read the latest industry news and tips and tricks provided by our scrum masters. b-agile provides certified training for Scrum Masters, product owners, and development teams with professional agile transformation leadership and coaching.",
+      "followers": {
+        "facebook": 22,
+        "twitter": 8
+      },
+      "image_url": "https://i1.feedspot.com/5481213.jpg?t=1674190932"
+    },
+    {
+      "title": "Scrum Expert",
+      "feed_url": "https://www.scrumexpert.com/feed/",
+      "website_url": "https://www.scrumexpert.com/",
+      "description": "Scrum Expert provides Agile knowledge for the Scrum Masters, Product Owners and Agile Software Developers: Backlog, User Stories, Sprint, Retrospectives. Scrum Expert presents industry news, articles, blog posts, book reviews, tools, videos and other resources about agile software development project management with the Scrum approach.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/378372.jpg?t=1611064009"
+    },
+    {
+      "title": "Mountain Goat Software Blog",
+      "feed_url": "https://www.mountaingoatsoftware.com/blog/rss",
+      "website_url": "https://www.mountaingoatsoftware.com/blog",
+      "description": "Learn agile and Scrum tips and techniques from expert ScrumMaster, educator and author Mike Cohn and the staff of Mountain Goat Software. Mike's in-person training, coaching, and online video courses work together to give you everything you need to deliver the right product on time every time.",
+      "followers": {
+        "facebook": 13000,
+        "twitter": 59600
+      },
+      "image_url": "https://i1.feedspot.com/4623967.jpg?t=1615199285"
+    },
+    {
+      "title": "Scrum Master Toolbox Podcast",
+      "feed_url": "https://scrum-master-toolbox.org/feed/",
+      "website_url": "https://scrum-master-toolbox.org/",
+      "description": "Scrum Master Toolbox is a daily podcast for Scrum Masters and Agile Coaches. My name is Vasco Duarte and I try to give back to the community every single day in an effort to improve the IT and product industry all over the world. Product Manager, Scrum Master, Project Manager, Director, Agile Coach are only some of the roles that I've taken in software development organizations.",
+      "followers": {
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4836330.jpg?t=1611064705"
+    },
+    {
+      "title": "The Scrum Master UK Blog",
+      "feed_url": "https://www.thescrummaster.co.uk/feed/",
+      "website_url": "https://www.thescrummaster.co.uk/blog/",
+      "description": "The Scrum Master UK Blog provides a simple guide to Scrum where you can learn at your own pace, offline and for free. TheScrumMaster.co.uk is on a mission to simplify Scrum & Agile for 1 million people. We offer Scrum & Agile training, consulting and coaching in partnership with Scrum.org, the home of Scrum run by Scrum co-creator, Ken Schwaber.",
+      "followers": {
+        "twitter": 7300,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5481040.jpg?t=1671432646"
+    },
+    {
+      "title": "Agile and Scrum Blog",
+      "feed_url": "https://agile-scrum.com/feed/",
+      "website_url": "https://agile-scrum.com/",
+      "description": "Agile and Scrum help companies and individuals to be more successful. Teaching teams and their managers how to be more efficient, how to provide better quality, and how to communicate and organize teams so that people have fun, they are motivated, and have high commitment. Head straight to their blog to read more about Performance Review and Rewards System, Agile conferences to attend in 2023, Psychological Safety, Motivation, Growth, and more.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4837507.jpg?t=1611064710"
+    },
+    {
+      "title": "Learnovative Blog",
+      "feed_url": "https://www.learnovative.com/feed/",
+      "website_url": "https://www.learnovative.com/blog/",
+      "description": "Visit the Learnovative Blog to gain information on Scrum. We are a leading Agile & Scrum certification and consulting provider, established in 2013. We provide classroom and live virtual certification trainings for CSM, A-CSM, CSPO, A-CSPO, ICP-ACC and other project management certification training programs.",
+      "followers": {
+        "facebook": 431,
+        "twitter": 63,
+        "instagram": 136
+      },
+      "image_url": "https://i1.feedspot.com/5481032.jpg?t=1671432582"
+    },
+    {
+      "title": "Scrum.org Blog",
+      "feed_url": "https://www.scrum.org/resources/blog/rss.xml",
+      "website_url": "https://www.scrum.org/resources/blog",
+      "description": "The Scrum.org blog helps those new to Scrum and those who are experienced learn more from our Professional Scrum Trainer community. Scrum.org is on a mission to help people and teams solve complex problems. We do this by enabling people to apply Professional Scrum through training courses, certifications, and ongoing learning all based on a common competency model.",
+      "followers": {
+        "facebook": 21300,
+        "twitter": 49000
+      },
+      "image_url": "https://i1.feedspot.com/4836069.jpg?t=1611064005"
+    },
+    {
+      "title": "Universal Agile Blog",
+      "feed_url": "https://universalagile.com/feed/",
+      "website_url": "https://universalagile.com/blog/",
+      "description": "Get CSM Training & Certification from the certified Scrum Trainer. To know more read the latest blogs on Scrum & Agile methodology. Universal Agile was founded in 2016 by Gaurav Rastogi with a goal to have as bigger impact as possible in the world by imparting knowledge and training people as well as organisations in Agile. We offer various services including, Scrum Training, Coaching, and Consulting.",
+      "followers": {
+        "facebook": 52,
+        "twitter": 17,
+        "instagram": 88
+      },
+      "image_url": "https://i1.feedspot.com/5481036.jpg?t=1671432612"
+    },
+    {
+      "title": "Vitality Chicago Blog",
+      "feed_url": "https://www.vitalitychicago.com/feed/",
+      "website_url": "https://www.vitalitychicago.com/",
+      "description": "Stay up to date with the latest agile insights, tips and strategies to optimize your team's development process and deliver better customer solutions. Vitality Chicago provides the Agile Training, Scrum Certification, and Agile Coaching that organizations need to increase business agility.",
+      "followers": {
+        "facebook": 70,
+        "twitter": 41
+      },
+      "image_url": "https://i1.feedspot.com/5481028.jpg?t=1671432548"
+    },
+    {
+      "title": "Home Scrum Blog",
+      "feed_url": "https://homescrum.co.uk/feed/",
+      "website_url": "https://homescrum.co.uk/post-playlists/whole-blog-book-order/",
+      "description": "The Home Scrum Blog provides a guide to Scrum and is for neurodiverse families, couples or individuals who need a way to stay on top of life. My name is Sally Waters and I wrote this blog because I want other neurodivergent households, couples, families with children or teenagers, housemates, students, to be able to use Home Scrum too.",
+      "followers": {
+        "twitter": 350
+      },
+      "image_url": "https://i1.feedspot.com/5481033.jpg?t=1671432584"
+    },
+    {
+      "title": "Knoldus Blog",
+      "feed_url": "https://blog.knoldus.com/category/scrum/feed/",
+      "website_url": "https://blog.nashtechglobal.com/",
+      "description": "Read the blog to get insights and Perspectives to keep you updated on Scrum. Founded over 12 years ago and with a team of 350+ seasoned experts, Knoldus has the world's largest team of Functional Programming and Fast Data engineers focused on creating customized high-performance solutions.",
+      "followers": {
+        "facebook": 960,
+        "twitter": 814,
+        "instagram": 191
+      },
+      "image_url": "https://i1.feedspot.com/5481031.jpg?t=1671432579"
+    },
+    {
+      "title": "Serious Scrum",
+      "feed_url": "https://medium.com/feed/serious-scrum",
+      "website_url": "https://medium.com/serious-scrum",
+      "description": "Our blog gives you advice on how you can benefit from using Scrum and much more. We started Serious Scrum to create a great open place for Scrum practitioners to connect and share experiences. We aim to create a safe haven for people who take Scrum seriously. We strive for a place for those like us, desiring independent content and improving our understanding of Scrum from the trenches.",
+      "followers": {
+        "twitter": 593
+      },
+      "image_url": "https://i1.feedspot.com/5481030.jpg?t=1671432565"
+    },
+    {
+      "title": "Saat Network Blog",
+      "feed_url": "https://saat-network.ch/feed/",
+      "website_url": "https://saat-network.ch/blog/",
+      "description": "Check out the Peter Stevens Scrum Breakfast Blog and read the latest news, opinions, ideas, and thoughts, personal agility, Scrum and other details that are important on Saat Network. As a Swiss-American Scrum Trainer, my goal not just to teach Agile values and practices, but to live the values and share the passion that make Scrum special!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5481041.jpg?t=1671449222"
+    },
+    {
+      "title": "Growing Scrum Masters",
+      "feed_url": "https://www.growingscrummasters.com/feed/",
+      "website_url": "https://www.growingscrummasters.com/category/deploy-improve-scrum/",
+      "description": "This blog will help you learn how to Deploy and Improve Agile Scrum within your organisation or team. Its as exciting and motivating as it is daunting and overwhelming. John McFadyen has worked as an Agile coach, Scrum Coach, Scrum Master and Agile Leader in organisations as large as McKinsey & Co and organisations as significant as yours.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5481039.jpg?t=1671432632"
+    },
+    {
+      "title": "All Things Agile \u00bb Scrum",
+      "feed_url": "https://allthingsagile.ca/post/category/scrum/feed/",
+      "website_url": "https://allthingsagile.ca/post/category/scrum/",
+      "description": "All things Agile teaches you everything you need to know about Scrum and Agile. My name is Petula and with over 2 decades of experience in the technology industry and a passion for people and problem-solving, I am a no-nonsense Agilist. I truly believe in the power of collaboration and creativity to propel organizations to their next level in growth and performance.",
+      "followers": {
+        "facebook": 20,
+        "twitter": 32
+      },
+      "image_url": "https://i1.feedspot.com/5481212.jpg?t=1671444028"
+    },
+    {
+      "title": "Agile Learning Labs Blog",
+      "feed_url": "https://agilelearninglabs.com/feed/",
+      "website_url": "https://agilelearninglabs.com/blog/",
+      "description": "Follow the Agile Learning Labs Blog to find out how you can increase your productivity and be a Scrum Master. Chris Sims is a certified scrum trainer, agile coach, and recovering C++ developer who helps organizations improve their productivity and happiness.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5481211.jpg?t=1671449400"
+    },
+    {
+      "title": "Scrum Inc Blog",
+      "feed_url": "https://www.scruminc.com/feed/",
+      "website_url": "https://www.scruminc.com/scrum-blog/",
+      "description": "Scrum Inc. is the premier provider of Scrum training and consulting. We help companies and individuals dramatically increase productivity and quality. Scrum Inc. is the global authority on the most widely used Agile Framework.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4836158.jpg?t=1611064376"
+    },
+    {
+      "title": "Braintrust Blog",
+      "feed_url": "https://www.braintrustgroup.com/blog/",
+      "website_url": "https://www.braintrustgroup.com/blog/",
+      "description": "Braintrust is here to help you through every stage of your Agile journey. Find a ton of useful, organized information in the Braintrust Blog. Braintrust Group is a worldwide leader in Agile transformations. Through practical, hands-on training and enterprise and team coaching, we help our clients learn, plan, and implement Agile processes, such as Scrum and Kanban.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1300,
+        "instagram": 753
+      },
+      "image_url": "https://i1.feedspot.com/5481035.jpg?t=1671432595"
+    },
+    {
+      "title": "UC Agile Blog",
+      "feed_url": "https://ucagile.com/feed/",
+      "website_url": "https://www.simplilearn.com/resources/agile-and-scrum",
+      "description": "On the UC Agile blog, you can get to know about News, Advice and Best Practices from the World of Agile. UC Agile is an agile transformation organization focused on providing certification courses and training programs to empower individuals, teams and organizations with the knowledge and skills they need to achieve greater agility in their work and personal lives.",
+      "followers": {
+        "facebook": 292
+      },
+      "image_url": "https://i1.feedspot.com/5481038.jpg?t=1671449108"
+    },
+    {
+      "title": "Scrum Masteres Blog",
+      "feed_url": "https://scrummastered.com/blog/",
+      "website_url": "https://scrummastered.com/blog/",
+      "description": "Practical tips and insights for Scrum Masters. Watch how-to videos, answer powerful questions, read personal success stories from a practicing Scrum Master. My name is Daria Bagina and I want to share my passion for re-invented workplace, self-managing teams, innovation and continuous improvement.",
+      "followers": {
+        "facebook": 151,
+        "twitter": 115,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5481158.jpg?t=1671449536"
+    },
+    {
+      "title": "Orangescrum Blog",
+      "feed_url": "https://blog.orangescrum.com/feed/",
+      "website_url": "https://blog.orangescrum.com/",
+      "description": "Check out the Orangescrum Blog and find out how you can collaborate Team, Plan Projects, Assign Tasks, Track Time, Manage Resources & get more done with Orangescrum. As a software development company, we know the pain of managing projects via emails. Orangescrum is a simplified Project Management and Collaboration software for teams of all sizes.",
+      "followers": {
+        "facebook": 876,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5405354.jpg?t=1653999416"
+    }
+  ]
+}

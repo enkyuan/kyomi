@@ -1,0 +1,50 @@
+{
+  "category": "Meghan Markle Fashion",
+  "source_url": "https://rss.feedspot.com/meghan_markle_fashion_rss_feeds",
+  "feeds": [
+    {
+      "title": "Meghan's Mirror",
+      "feed_url": "http://www.meghansmirror.com/feed/",
+      "website_url": "http://www.meghansmirror.com/",
+      "description": "Meghan's Mirror was founded in 2016 and has Qu and her style. Since inception, Meghan's Mirror has been featured in major news outlets and a variety of publications around the world.ickly become the world's leading blog on all things Meghan Markle.",
+      "followers": {
+        "facebook": 11800,
+        "twitter": 16000
+      },
+      "image_url": "https://i1.feedspot.com/5015813.jpg?t=1622284192"
+    },
+    {
+      "title": "What Meghan Wore Blog",
+      "feed_url": "https://whatmeghanwore.net/feed/",
+      "website_url": "https://whatmeghanwore.net/",
+      "description": "The original What Meghan Wore site and part of the What Kate Wore family, covering Meghan's clothes, accessories, and charities.",
+      "followers": {
+        "facebook": 10600,
+        "twitter": 10100,
+        "instagram": 65500
+      },
+      "image_url": "https://i1.feedspot.com/5015814.jpg?t=1622284200"
+    },
+    {
+      "title": "Meghan's Fashion",
+      "feed_url": "https://www.meghansfashion.com/1/feed",
+      "website_url": "https://www.meghansfashion.com/style-file.html",
+      "description": "A fashion blog that chronicles the style of Meghan Markle, the Duchess of Sussex. Get outfit inspiration and mimic Meghan's look for less!",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5015997.jpg?t=1622284204"
+    },
+    {
+      "title": "Meghan Markle Style Blog",
+      "feed_url": "http://meghanstyle.org/feed/",
+      "website_url": "http://meghanstyle.org/",
+      "description": "This blog will explore The Duchess of Sussex's style (Meghan Markle's style) as she carries out public engagements on behalf of the British Royal Family. We'll look at HRH's fashion choices & discuss her charity work.",
+      "followers": {
+        "facebook": 17000
+      },
+      "image_url": "https://i1.feedspot.com/5015815.jpg?t=1622284220"
+    }
+  ]
+}

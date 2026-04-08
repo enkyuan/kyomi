@@ -1,0 +1,482 @@
+{
+  "category": "Estate Agent",
+  "source_url": "https://rss.feedspot.com/estate_agent_rss_feeds",
+  "feeds": [
+    {
+      "title": "Inman \u00bb Agent",
+      "feed_url": "https://feeds.feedburner.com/inmannews",
+      "website_url": "http://www.inman.com/category/agent/",
+      "description": "Inman provides the latest real estate agent news and information for real estate professionals, brokers, and homebuyers across the entire United States.",
+      "followers": {
+        "facebook": 228800,
+        "instagram": 131900
+      },
+      "image_url": "https://i1.feedspot.com/4622715.jpg?t=1616071144"
+    },
+    {
+      "title": "Elite Agent",
+      "feed_url": "https://eliteagent.com/feed/",
+      "website_url": "https://eliteagent.com/",
+      "description": "A new magazine for Real Estate Industry Professionals covering all topics: Sales, Leadership, PM.Professionals. We are the good news channel of real estate, helping real estate professionals to stay up to date with all the latest in the industry.",
+      "followers": {
+        "facebook": 20700,
+        "twitter": 3300,
+        "instagram": 11400
+      },
+      "image_url": "https://i1.feedspot.com/4622710.jpg?t=1609312027"
+    },
+    {
+      "title": "I am the agent Blog",
+      "feed_url": "https://www.iamtheagent.com/blog/syndication.axd",
+      "website_url": "https://www.iamtheagent.com/blog/",
+      "description": "I Am The Agent has sold and let thousands of properties throughout the UK giving us a unique insight into the property market. With experienced estate agents on hand and specialist call handlers it's no wonder we are the fastest growing online agent in the UK. We pride ourselves on making our customers happy, so we've made it our mission to be transparent, without any hidden fees.",
+      "followers": {
+        "facebook": 4900,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4621700.jpg?t=1616071152"
+    },
+    {
+      "title": "Easy Agent Pro Blog",
+      "feed_url": "https://www.easyagentpro.com/feed/",
+      "website_url": "https://www.easyagentpro.com/blog/",
+      "description": "Easy Agent Pro creates content that helps realtors market smarter. And provides some of the best websites available to realtors. Here at Easy Agent Pro We Connect Agents With Leads Though Content Writing, Website Design, SEO Services, And Even Logo Design!",
+      "followers": {
+        "facebook": 14200,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4622536.jpg?t=1616071155"
+    },
+    {
+      "title": "Estates IT News",
+      "feed_url": "https://www.estatesit.com/newsrss",
+      "website_url": "https://www.estatesit.com/news",
+      "description": "Multi Award Winning Software, Web Design and IT Services for Estate Agents and Letting Agents. We offer Estate Agent, Lettings Agent, Property Management and Client Accounting Software. Mission to identify, anticipate & satisfy all Estate Agents IT requirements in an ethical & profitable mann News from Estates IT Ltd for the property industry, Estate Agents, Letting Agents and Property Management.",
+      "followers": {
+        "facebook": 258,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4622604.jpg?t=1616071206"
+    },
+    {
+      "title": "Aldreds Estate Agents Blog",
+      "feed_url": "https://www.aldreds.co.uk/blog?format=feed&type=rss",
+      "website_url": "https://www.aldreds.co.uk/blog",
+      "description": "Aldreds is an independent estate agency based in East Norfolk and North East Suffolk. We specialise in the sale & letting of both residential & commercial property. We have a strong customer focus and are motivated to establish customers for life. The latest property news from East Norfolk and North East Suffolk with Aldreds Estate Agents.",
+      "followers": {
+        "facebook": 496,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4621733.jpg?t=1616071612"
+    },
+    {
+      "title": "Cardwells Estate Agents in Bolton, Bury, Whitefield, Walkden, Prestwich Blog",
+      "feed_url": "https://www.cardwells.co.uk/feed/",
+      "website_url": "https://www.cardwells.co.uk/category/blog/",
+      "description": "An independent Estate Agency operating across the north west of England. Providing Sales, Lettings, Property Management and whole of market Independent Financial Services. Cardwells estate agents and lettings agents offer a range of sale and rental services for property in Bolton, Bury, Whitefield, Walkden, and Prestwich and throughout the North West of England.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 921
+      },
+      "image_url": "https://i1.feedspot.com/4622404.jpg?t=1616071606"
+    },
+    {
+      "title": "Naylor Powell Estate Agents Blog",
+      "feed_url": "https://www.naylorpowell.com/property-rss.xml",
+      "website_url": "https://www.naylorpowell.com/blog/",
+      "description": "Naylor Powell is an independent Estate Agency dealing with the sales, lettings and management of residential property in Gloucestershire.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 317
+      },
+      "image_url": "https://i1.feedspot.com/4621789.jpg?t=1616071644"
+    },
+    {
+      "title": "Tortoise Property Blog",
+      "feed_url": "https://www.tortoiseproperty.co.uk/blog/feed/",
+      "website_url": "https://www.tortoiseproperty.co.uk/blog/",
+      "description": "We are a Peterborough based property agent offering a professional, yet personal service. Selling and letting services available across the Peterborough area.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 210
+      },
+      "image_url": "https://i1.feedspot.com/4622499.jpg?t=1616071818"
+    },
+    {
+      "title": "Real Estate Agent Magazine",
+      "feed_url": "https://realestateagentmagazine.com/feed",
+      "website_url": "https://realestateagentmagazine.com/",
+      "description": "Real Estate Agent Magazine (Real Estate Broker Magazine in some markets) is a magazine delivered free of charge to residential real estate agents and members of the local residential real estate community. Get marketing tips and business development insights to residential real estate agents.",
+      "followers": {
+        "facebook": 815,
+        "twitter": 324,
+        "instagram": 287
+      },
+      "image_url": "https://i1.feedspot.com/4622705.jpg?t=1616071631"
+    },
+    {
+      "title": "Dezrez Blog",
+      "feed_url": "https://dezrez.com/feed/",
+      "website_url": "https://dezrez.com/content-hub/",
+      "description": "Dezrez is a major supplier of online EstateAgency Sales and Lettings Software. In business since 1999, we were the first web-based solution. Blog designed to keep you up to date on industry news product updates services training and all the latest apps for estate agents and letting agents.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 3900,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4621770.jpg?t=1616071159"
+    },
+    {
+      "title": "Keatons",
+      "feed_url": "https://www.keatons.com/feed/",
+      "website_url": "https://www.keatons.com/",
+      "description": "Award Winning Estate Agent in East and North West London. The London property market is changing by the day. Need some tips to stay ahead of the curve? Here's what our industry experts have to say.",
+      "followers": {
+        "facebook": 1200,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4621706.jpg?t=1616071174"
+    },
+    {
+      "title": "Keywest",
+      "feed_url": "https://www.keywest-estateagents.co.uk/feed/",
+      "website_url": "https://www.keywest-estateagents.co.uk/latest-news/",
+      "description": "Leicester's first choice lettings and estate agent. We specialise in residential property sales and lettings, and student accommodation",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 310
+      },
+      "image_url": "https://i1.feedspot.com/4979354.jpg?t=1616071640"
+    },
+    {
+      "title": "Morton Reeves Blog",
+      "feed_url": "https://www.mortonreeves.co.uk/blog/feed/",
+      "website_url": "https://www.mortonreeves.co.uk/blog/",
+      "description": "Morton Reeves Norwich Estate Agents. We offer honest advice, excellent local knowledge and years of experience in the Norfolk and Suffolk property markets. Rightmove have released their most recent property price report and it makes rather interesting reading. The first thing that is noticed, is that prices in every single location in the UK have increased over the last month.",
+      "followers": {
+        "facebook": 61
+      },
+      "image_url": "https://i1.feedspot.com/4622472.jpg?t=1616071866"
+    },
+    {
+      "title": "Team Pinto Blog",
+      "feed_url": "https://www.teampintoblog.com/blog-feed.xml",
+      "website_url": "https://www.teampintoblog.com/",
+      "description": "Posts feature top tips, advice, and information for homesellers and homebuyers offered by real estate agents at Team Pinto. Team Pinto is an award-winning real estate duo - Aron and Angelica Pinto serving the Waterloo Region of Ontario.",
+      "followers": {
+        "facebook": 1800,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4709322.jpg?t=1616071648"
+    },
+    {
+      "title": "Leslie Benczik Markham Real Estate Agent Blog",
+      "feed_url": "https://bkteam.ca/feed/",
+      "website_url": "https://bkteam.ca/blog/",
+      "description": "A veteran real estate agent, Leslie Benczik brings not only his knowledge and expertise in Markham's real estate market but also his compassion and understanding of his clients' needs to the table.",
+      "followers": {
+        "facebook": 926,
+        "twitter": 144
+      },
+      "image_url": "https://i1.feedspot.com/4622659.jpg?t=1616071837"
+    },
+    {
+      "title": "Property Stream News",
+      "feed_url": "https://www.propertystream.co/feed",
+      "website_url": "https://www.propertystream.co/news",
+      "description": "Award-winning and estate agent marketing. Affordable or bespoke solutions for agents of any size looking for a professional approach.",
+      "followers": {
+        "facebook": 547,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4622597.jpg?t=1611745970"
+    },
+    {
+      "title": "Showami Blog",
+      "feed_url": "https://blog.showami.com/feed/",
+      "website_url": "https://blog.showami.com/",
+      "description": "The fastest, easiest way to manage real estate showings without giving up a cent of your commission. Showami connects you to other real estate professionals to show properties in a geographic area. We aim to be your showing agent service. Our sleek platform makes it easier than ever to have showings conducted by other agents, when you're unavailable.",
+      "followers": {
+        "facebook": 1900,
+        "instagram": 834
+      },
+      "image_url": "https://i1.feedspot.com/5488221.jpg?t=1672911784"
+    },
+    {
+      "title": "Keywest Leicester Estate Agents",
+      "feed_url": "https://www.keywest-estateagents.co.uk/feed/",
+      "website_url": "https://www.keywest-estateagents.co.uk/latest-news/",
+      "description": "Leicester's first choice lettings and estate agent. We specialise in residential property sales and lettings, and student accommodation. Keywest is the leading independent letting agents and estate agents Leicester. We specialise in residential property sales and lettings.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 310
+      },
+      "image_url": "https://i1.feedspot.com/4622558.jpg?t=1616071197"
+    },
+    {
+      "title": "Real Estate Agent Blog",
+      "feed_url": "https://www.realestateagent.com/blog/feed/",
+      "website_url": "https://www.realestateagent.com/blog/",
+      "description": "The OFFICIAL Real Estate Agent Directory \u00ae. Use our comprehensive database of the finest real estate agents around the country to help you find the home of your dreams or sell current home you have. We aim to build the bridges between people like you and your local real estate agent professional to ensure that you receive the help you need on a one on one basis.",
+      "followers": {
+        "facebook": 11400,
+        "twitter": 7300
+      },
+      "image_url": "https://i1.feedspot.com/4622619.jpg?t=1640169956"
+    },
+    {
+      "title": "Kyle Handy Blog",
+      "feed_url": "https://www.kylehandy.com/feed/",
+      "website_url": "https://www.kylehandy.com/blog/",
+      "description": "I'm a real estate agent, team leader, digital marketing expert, and blogger. What I love most is working with driven real estate agents, looking to achieve their dream life. My blog is a resource dedicated to motivated agents. Learn how to grow your business with my actionable blog posts.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 279,
+        "instagram": 13100
+      },
+      "image_url": "https://i1.feedspot.com/5304381.jpg?t=1664862685"
+    },
+    {
+      "title": "All About Real Estate Business, Agent, Buyer & Seller",
+      "feed_url": "https://samkuren.blogspot.com/feeds/posts/default",
+      "website_url": "https://samkuren.blogspot.com/",
+      "description": "Sam Kuren is a licensed real estate agent and via his blog provides helpful insights and ideas for Home-owners and potential Homeowners to get the best out of their property. Follow his tips for choosing the right real estate agent when buying or selling a property and what to look for in an agent.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5607847.jpg?t=1687778977"
+    },
+    {
+      "title": "Walton And Allen Blog",
+      "feed_url": "https://www.waltonandallen.co.uk/feed/",
+      "website_url": "https://www.waltonandallen.co.uk/blog/",
+      "description": "Estate agents in Nottingham, Walton & Allen, are local experts in providing property, for sale and to rent, and property management throughout Nottingham. Here you will find the Walton & Allen estate agents blog. Click here for the latest property news, how-to guides, new opportunities & more.",
+      "followers": {
+        "facebook": 414,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4621786.jpg?t=1616071602"
+    },
+    {
+      "title": "The Harrogate Property by Myrings Estate Agents Blog",
+      "feed_url": "https://www.myringsestateagents.com/feed/",
+      "website_url": "https://www.myringsestateagents.com/property-blog/",
+      "description": "Myrings is an independent family business with a high level of knowledge and experience, making us very much at the forefront of the property market in Harrogate & surrounding villages. Led by Simon Myring who has over 17 years experience selling homes in & around Harrogate, we strive to offer a professional and courteous service with each & every client, whether buying or selling a home with us.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4621715.jpg?t=1616071627"
+    },
+    {
+      "title": "OneBlue Real Estate School Blog",
+      "feed_url": "https://onebluerealestateschool.com/feed/",
+      "website_url": "https://onebluerealestateschool.com/blog/",
+      "description": "If you are a real estate agent or studying for your real estate license then you need to check out our real estate advice blog! Key topics covered are mortgage & financing, real estate news, and prep tips for real estate exams. OneBlue Real Estate school offers real estate classes to help you become the best realtor ever!",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 34,
+        "instagram": 460
+      },
+      "image_url": "https://i1.feedspot.com/5304379.jpg?t=1627379155"
+    },
+    {
+      "title": "Andrew Duncan Smart real estate without the B.S.",
+      "feed_url": "http://blog.andrewduncan.co.nz/feed/",
+      "website_url": "http://blog.andrewduncan.co.nz/",
+      "description": "Insider hints and tips on buying and selling real estate along with occasional 'off topic' ramblings. It is my mission to improve the standards of service in the New Zealand Real Estate industry. I am passionate about providing useful, genuine advice to home owners and buyers all over the country through my blog and other channels.",
+      "followers": {
+        "facebook": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4622452.jpg?t=1616071187"
+    },
+    {
+      "title": "Property Personnel - Estate Agent Jobs and Recruitment Blog",
+      "feed_url": "https://www.propertypersonnel.co.uk/blog/feed/",
+      "website_url": "https://www.propertypersonnel.co.uk/blog/",
+      "description": "Property Personnel is the UK's leading recruiter for Estate Agents. Find your perfect job in the rewarding world of property. Keep on top of the latest news and views in estate agency and property services from the UK's leading property recruitment specialists. Find out more.",
+      "followers": {
+        "facebook": 480,
+        "twitter": 1100,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4621801.jpg?t=1616071201"
+    },
+    {
+      "title": "Walker Laird Blog",
+      "feed_url": "https://walkerlaird.co.uk/feed/",
+      "website_url": "https://walkerlaird.co.uk/blog/",
+      "description": "Welcome to the blog. Here you can find some of the latest up to date news and information about Walker Laird. They are specialists in Family Law, Estate Agency, Conveyancing, Commercial Law, Wills, Personal Injury & Accident Claims. Their aim is to provide a comprehensive service to all their clients, whether individual or commercial.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 280
+      },
+      "image_url": "https://i1.feedspot.com/4622485.jpg?t=1616071623"
+    },
+    {
+      "title": "Spencer's Estate Agents #Sheffield",
+      "feed_url": "http://spencersagents.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://spencersagents.blogspot.com/",
+      "description": "Spencer is a passionate property expert in New Homes / Interiors / Rentals / Block & Residential Management Property Estate Agents in Sheffield since 1993.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4622515.jpg?t=1616071665"
+    },
+    {
+      "title": "Streets Ahead Estates Blog",
+      "feed_url": "https://streetsaheadestates.co.uk/blog/feed/",
+      "website_url": "https://streetsaheadestates.co.uk/blog/",
+      "description": "StreetsAhead Estates is an independent Estate Agency and Letting Agency, with over 30 years experience that specialise in Property Sales, Lettings & Property Management, both in Residential & Commercial fields. We help landlords to achieve their property goals by offering a secure and reliable management service.",
+      "followers": {
+        "facebook": 983,
+        "twitter": 193
+      },
+      "image_url": "https://i1.feedspot.com/4622544.jpg?t=1616071669"
+    },
+    {
+      "title": "Agents Diary",
+      "feed_url": "http://agentsdiary.blogspot.com/feeds/posts/default",
+      "website_url": "http://agentsdiary.blogspot.com/",
+      "description": "The weary musings of a time-served estate agent (realtor) somewhere in the UK. If you want advice on the property market, or alternative careers to this one, let me know, I might reply. In the meantime I'm plagued by cretinous idiots who I work with and for, and who may well feature in my diary at some time.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/324807.jpg?t=1611212252"
+    },
+    {
+      "title": "Minus The Agent - Real Estate News and Property Blog",
+      "feed_url": "https://minustheagent.com.au/feed/",
+      "website_url": "https://minustheagent.com.au/blog/",
+      "description": "Minus The Agent gives you the tools and advice to sell or rent your property without the need for a real estate agent. At Minus The Agent we have great knowledge of the real estate industry and we can help to provide you with everything you need to get your property sold or leased. Sell or Rent your home without an agent and save thousands through Australia's leading real estate website.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 258
+      },
+      "image_url": "https://i1.feedspot.com/4622674.jpg?t=1616071598"
+    },
+    {
+      "title": "Harry Harper Sales & Lettings Blog",
+      "feed_url": "https://harryharper.co.uk/blog/rss",
+      "website_url": "https://harryharper.co.uk/blog",
+      "description": "Read the latest property news and updates from Harry Harper Sales and Lettings. They are a family-run estate agency business, who have been operating in the area for over 10 years. With a genuine and invested love for the local community, they offer a highly personal and quality service for every client.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 1500,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4622582.jpg?t=1616071651"
+    },
+    {
+      "title": "FocalAgent Blog",
+      "feed_url": "https://www.focalagent.com/blog/feed",
+      "website_url": "https://www.focalagent.com/blog",
+      "description": "Get the ultimate marketing pack with FocalAgent's services. Also Equip listings with pro photography, floor plans, video trailers & 3D tours. FocalAgent is the UK's leading visual content partner for estate agents. They're transforming the way people buy and sell property with their innovative digital products including photo enhancements, Matterport 360\u00b0 tours, guided virtual viewing technology and game-changing GDPR software.",
+      "followers": {
+        "facebook": 569,
+        "twitter": 575,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4622428.jpg?t=1598537765"
+    },
+    {
+      "title": "The Good Estate Agent Blog",
+      "feed_url": "https://thegoodestateagent.co.uk/category/blog/feed/",
+      "website_url": "https://thegoodestateagent.co.uk/category/blog/",
+      "description": "The Good Estate Agent - Scotland is a family run business. We are a network of Estate & Letting agents covering Scotland to help you sell or let your property..",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 939
+      },
+      "image_url": "https://i1.feedspot.com/4622401.jpg?t=1616071791"
+    },
+    {
+      "title": "Welcome to House Tree's Blog House Tree | Online Estate Agents",
+      "feed_url": "https://housetree.co.uk/blog/feed/",
+      "website_url": "https://housetree.co.uk/blog/",
+      "description": "House Tree, is a unique combination of a traditional Estate Agent, with all the benefits of a local contact and a modern online estate agent with massive cost savings and up to date technology. We hope you enjoy reading our popular blog. Here you'll find property related articles packed full of useful tips and advice!",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 923
+      },
+      "image_url": "https://i1.feedspot.com/4621680.jpg?t=1616071210"
+    },
+    {
+      "title": "London property news and from estate agent Kubie Gold Blog",
+      "feed_url": "http://kubie-gold.co.uk/feed/",
+      "website_url": "https://kubie-gold.co.uk/blog/",
+      "description": "Kubie Gold Associates are an independent firm of Estate Agents specialising in the Rental, Sale and Management of Residential Property in prime Central London. Expert estate agents Kubie Gold keeps you up to date with all the house buying and selling news in London. We also write about things to do in your area of London and places to visit.",
+      "followers": {
+        "facebook": 378,
+        "twitter": 669
+      },
+      "image_url": "https://i1.feedspot.com/4622440.jpg?t=1616071620"
+    },
+    {
+      "title": "Your Move: Estate Agents and Letting Agents in the UK Blog",
+      "feed_url": "https://www.your-move.co.uk/blog/rss",
+      "website_url": "https://www.your-move.co.uk/blog",
+      "description": "The UK's most visited estate agents! Your Move estate agents can help you buy, sell, rent and let property with branches across the UK. Keep up to date with property trends and market analysis, brand news, articles and competitions.",
+      "followers": {
+        "facebook": 35300,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4455998.jpg?t=1611211913"
+    },
+    {
+      "title": "Reeds Rains - Reeds Rains Property Blog",
+      "feed_url": "https://www.reedsrains.co.uk/blog/rss",
+      "website_url": "https://www.reedsrains.co.uk/blog",
+      "description": "Reeds Rains Estate and Letting Agents with properties for sale and to let across England, Wales and Northern Ireland. The Reeds Rains blog publishing up to date property market news, and helpful articles for all stages of buying, selling, renting and letting.",
+      "followers": {
+        "facebook": 11800,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4621775.jpg?t=1611211970"
+    },
+    {
+      "title": "Eden Harper estate agents news blog",
+      "feed_url": "https://www.edenharper.com/news/feed",
+      "website_url": "https://www.edenharper.com/news#/",
+      "description": "We are independent estate agents for sales & lettings Brixton Battersea. Follow Eden Harper blog for all the news on the Brixton and Battersea property market.",
+      "followers": {
+        "facebook": 37,
+        "twitter": 399
+      },
+      "image_url": "https://i1.feedspot.com/4622510.jpg?t=1616071589"
+    },
+    {
+      "title": "Face2Face Estate Agents News",
+      "feed_url": "https://www.face2faceestateagents.co.uk/news",
+      "website_url": "https://www.face2faceestateagents.co.uk/news",
+      "description": "Face2face estate agents goal is very simple - to sell your home for the highest possible price in the shortest possible time. Based in Rochdale, Littleborough and Todmorden, we will assign you a personal account manager who will oversee every part of the process.",
+      "followers": {
+        "facebook": 529,
+        "twitter": 226
+      },
+      "image_url": "https://i1.feedspot.com/4621774.jpg?t=1616071616"
+    },
+    {
+      "title": "Monopoly Buy Sell Rent Blog",
+      "feed_url": "https://monopolybuysellrent.co.uk/blog/feed/",
+      "website_url": "https://monopolybuysellrent.co.uk/blog/",
+      "description": "The ethos of Monopoly is to reduce the fees for vendors, tenants and landlords by reducing unnecessary overheads, such as a high street shop. Are you looking for industry news tips, guides or just home selling advice? We'd love you to have a look at our estate agent blog.Check it out here.",
+      "followers": {
+        "facebook": 3800,
+        "instagram": 422
+      },
+      "image_url": "https://i1.feedspot.com/4622527.jpg?t=1616071743"
+    },
+    {
+      "title": "Lancasters Estate Agents - Estate Agents Horwich, Bolton & Surrounding Areas Blog",
+      "feed_url": "https://lancasters.property/feed/",
+      "website_url": "https://lancasters.property/blog/",
+      "description": "Lancasters Estate Agents Horwich are an independent, family run estate agent who, since opening in 1999, have become trusted local property experts. Lancasters Estate Agents in Horwich offer a wealth of experience to guide you through the process of buying or selling a property in Horwich, Bolton and the surrounding areas.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 229,
+        "instagram": 834
+      },
+      "image_url": "https://i1.feedspot.com/4622553.jpg?t=1616071656"
+    }
+  ]
+}

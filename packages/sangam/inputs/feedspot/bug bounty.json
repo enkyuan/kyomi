@@ -1,0 +1,86 @@
+{
+  "category": "Bug Bounty",
+  "source_url": "https://rss.feedspot.com/bug_bounty_rss_feeds",
+  "feeds": [
+    {
+      "title": "InfoSec Write-ups \u00bb Bug Bounty",
+      "feed_url": "https://medium.com/feed/bugbountywriteup/tagged/bug-bounty",
+      "website_url": "https://infosecwriteups.com/tagged/bug-bounty",
+      "description": "InfoSec Write-ups offers awesome write-ups from the world's best hackers intopics ranging from bug bounties, CTFs, Hack the Box walkthroughs, hardware challenges, and real-life encounters.",
+      "followers": {
+        "twitter": 52400
+      },
+      "image_url": "https://i1.feedspot.com/5544595.jpg?t=1681818001"
+    },
+    {
+      "title": "Intigriti Blog",
+      "feed_url": "https://www.intigriti.com/blog/feed",
+      "website_url": "https://www.intigriti.com/blog",
+      "description": "Intigriti is a rapidly growing cybersecurity company that specializes in crowdsourced security services to help organizations protect themselves from cybercrime. Our industry-leading bug bounty platform enables companies to tap into our global community of ethical hackers, who use their expertise to find and report vulnerabilities to protect businesses.",
+      "followers": {
+        "facebook": 8200
+      },
+      "image_url": "https://i1.feedspot.com/5221260.jpg?t=1681818086"
+    },
+    {
+      "title": "YesWeHack Blog",
+      "feed_url": "https://www.yeswehack.com/rss.xml",
+      "website_url": "https://www.yeswehack.com/blog/",
+      "description": "Welcome to our blog. You'll find our best practices, customer stories, new features, talent development, and more. YesWeHack's Bug Bounty platform complies with the strictest European standards and regulations to protect its customers' and hunters' interests.",
+      "followers": {
+        "twitter": 37600
+      },
+      "image_url": "https://i1.feedspot.com/5544596.jpg?t=1681818010"
+    },
+    {
+      "title": "The GitHub Blog \u00bb Bug Bounty",
+      "feed_url": "https://github.blog/tag/bug-bounty/feed/",
+      "website_url": "https://github.blog/tag/bug-bounty/",
+      "description": "Read up on bug bounty, product innovations, updates, company announcements, community spotlights, and more. Our platform drives innovation with tools that boost developer velocity. We provide unlimited repositories, best-in-class version control, and the world's most powerful open source community-so your team can work more efficiently together.",
+      "followers": {
+        "facebook": 319800,
+        "twitter": 2600000
+      },
+      "image_url": "https://i1.feedspot.com/5544589.jpg?t=1681817970"
+    },
+    {
+      "title": "Bug Hunt Blog",
+      "feed_url": "https://blog.bughunt.com.br/rss/",
+      "website_url": "https://blog.bughunt.com.br/",
+      "description": "BugHunt is the first Brazilian platform for the Bug Bounty, a reward program for identifying failures, which unites companies committed to the security of information and privacy of their users and/or customers with industry researchers. Focusing on innovation for the recognition and resolution of bugs and vulnerabilities, the startup aims to democratize access to data security.",
+      "followers": {
+        "facebook": 547,
+        "instagram": 5500
+      },
+      "image_url": "https://i1.feedspot.com/5544592.jpg?t=1681817996"
+    },
+    {
+      "title": "Open Bug Bounty Blog",
+      "feed_url": "https://www.openbugbounty.org/blog/feed/",
+      "website_url": "https://www.openbugbounty.org/blog/",
+      "description": "Started by a group of independent security researchers in June 2014, Open Bug Bounty is a non-profit platform designed to connect security researchers and website owners in a transparent, respectful and mutually valuable manner. Our purpose is to make the Web a safer place for everyone's benefit.",
+      "followers": {
+        "facebook": 7500
+      },
+      "image_url": "https://i1.feedspot.com/5544593.jpg?t=1681818351"
+    },
+    {
+      "title": "Bugbounter Blog",
+      "feed_url": "https://bugbounter.com/feed/",
+      "website_url": "https://bugbounter.com/blog/",
+      "description": "At Bugbounter, we have established an ecosystem of freelance researchers committed to discovering cybersecurity vulnerabilities so that organizations can always be prepared against cyber threats. Our aim is to set up a secure ecosystem where dedicated freelance security researchers from all around the world willingly gather their talent and energy to outsmart and outperform malicious cyber attacks.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5544594.jpg?t=1681817998"
+    },
+    {
+      "title": "Medium | Immunefi",
+      "feed_url": "https://medium.com/feed/immunefi",
+      "website_url": "https://medium.com/immunefi",
+      "description": "Immunefi is the premier bug bounty platform for smart contracts and DeFi projects, where security researchers review code, disclose vulnerabilities, get paid, and make crypto safer. Immunefi removes security risks through bug bounties and comprehensive security services. Medium is an open platform where over 100 million readers come to find insightful and dynamic thinking.",
+      "followers": {
+        "twitter": 56500
+      },
+      "image_url": "https://i1.feedspot.com/5544591.jpg?t=1681817979"
+    }
+  ]
+}

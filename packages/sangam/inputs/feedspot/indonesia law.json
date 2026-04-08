@@ -1,0 +1,44 @@
+{
+  "category": "Indonesia Law",
+  "source_url": "https://rss.feedspot.com/indonesia_law_rss_feeds",
+  "feeds": [
+    {
+      "title": "Lubis Santosa & Maramis Law Firm Blog",
+      "feed_url": "https://www.lsmlaw.co.id/index.php?option=com_content&view=section&layout=blog&id=1&Itemid=138&lang=en&format=feed&type=rss",
+      "website_url": "https://www.lsmlaw.co.id/index.php?option=com_content&view=section&layout=blog&id=1&Itemid=138&lang=en",
+      "description": "Articles on Indonesia Law. Lubis Santosa & Maramis is one of the leading law firms in Indonesia whose practice encompasses three major practice groups - Corporate and Commercial, Intellectual Property, and Dispute Resolution.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5331466.jpg?t=1634742302"
+    },
+    {
+      "title": "NP Consultant Indonesia Blog",
+      "feed_url": "https://www.np-consultant.com/blog-feed.xml",
+      "website_url": "https://www.np-consultant.com/indonesialawblog",
+      "description": "Covers posts on Prenuptial Agreement, Divorce, Business Law, and more. NP Consultant Indonesia is a one-stop service consultant providing law expertise service, market-entry service, and licensing service.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5331457.jpg?t=1634195880"
+    },
+    {
+      "title": "Indonesia Global Law Firm Blog",
+      "feed_url": "https://iglolaw.com/feed/",
+      "website_url": "https://iglolaw.com/law-news-blog/",
+      "description": "News & Articles on topics like Commercial Law, Immigration Law, Labour Law, and more. Indonesia Global Law Firm is a full-service law firm that provides legal services on corporate law, commercial litigation, intellectual property rights, international trade law, labor and employment law as well as criminal and private law.",
+      "followers": {
+        "facebook": 60,
+        "instagram": 820
+      },
+      "image_url": "https://i1.feedspot.com/5331393.jpg?t=1634741579"
+    },
+    {
+      "title": "Schinder Law Firm Blog",
+      "feed_url": "https://schinderlawfirm.com/feed/",
+      "website_url": "https://schinderlawfirm.com/blog/",
+      "description": "Covers blog posts on Dispute Resolution, Environmental Law, Intellectual Property and IP Dispute, and more. Schinder Law Firm provides you with a real-world practical legal solution that can add value to your business model.",
+      "followers": {
+        "facebook": 55,
+        "twitter": 82
+      },
+      "image_url": "https://i1.feedspot.com/5331392.jpg?t=1634193578"
+    }
+  ]
+}

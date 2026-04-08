@@ -1,0 +1,44 @@
+{
+  "category": "Hippie Mom",
+  "source_url": "https://rss.feedspot.com/hippie_mom_rss_feeds",
+  "feeds": [
+    {
+      "title": "A Happy Hippy Mom",
+      "feed_url": "https://feeds.feedburner.com/ahappyhippymom",
+      "website_url": "https://www.ahappyhippymom.com/",
+      "description": "A Happy Hippy Mom is dedicated to pure simple living, Recipes, there is plenty of yummy recipes to inspire you, articles on how to save money, info on beautiful traveling destinations, parenting advice, pet help, health and fitness recommendations, honest product reviews, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1717183.jpg?t=1665643637"
+    },
+    {
+      "title": "The Hippie Moms Blog",
+      "feed_url": "https://www.thehippiemoms.com/blog.rss",
+      "website_url": "https://www.thehippiemoms.com/blog/",
+      "description": "This is a community where women and moms are supported and guided to reclaim radical responsibility for their and their family's health and wellness. Hippie Moms offers the community different ways to connect with like-minded women and find their tribe! The blog is full of recipes, inspiration, and ideas to move yourself to optimal health and wellness.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5456106.jpg?t=1665642749"
+    },
+    {
+      "title": "Mama Hippie",
+      "feed_url": "https://www.mamahippie.com/feed/",
+      "website_url": "https://www.mamahippie.com/",
+      "description": "Hello, I'm Stephanie. I live in the United States with my husband, and 3 kids under 4. We're a cosleeping, babywearing, cloth diapering family. MamaHippie.com focuses on my love of pregnancy, birth, parenting and natural living; it's a labor of love.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 3200,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5181435.jpg?t=1665643047"
+    },
+    {
+      "title": "The Modern Hippie Mom Blog",
+      "feed_url": "https://themodernhippiemom.com/feed/",
+      "website_url": "https://themodernhippiemom.com/blog/",
+      "description": "I am Emily, and the way I do things is a little different. I don't put all my trust in doctors, influencers, celebrities, or government officials. I trust in God, my faith, my thorough research, and my intuition. I hope my blogs give you another look at things and help guide you to make your own decisions.",
+      "followers": {
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5456110.jpg?t=1665643680"
+    }
+  ]
+}

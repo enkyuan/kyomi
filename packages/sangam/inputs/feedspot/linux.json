@@ -1,0 +1,804 @@
+{
+  "category": "Linux",
+  "source_url": "https://rss.feedspot.com/linux_rss_feeds",
+  "feeds": [
+    {
+      "title": "Tecmint - Linux Howtos, Tutorials",
+      "feed_url": "https://www.tecmint.com/feed/",
+      "website_url": "https://www.tecmint.com/",
+      "description": "Tecmint blog shares Linux howtos, Tutorials, Guides, News, Tips and Tricks.",
+      "followers": {
+        "facebook": 364400,
+        "twitter": 90900
+      },
+      "image_url": "https://i1.feedspot.com/1084227.jpg"
+    },
+    {
+      "title": "It's F.O.S.S.",
+      "feed_url": "https://itsfoss.com/rss/",
+      "website_url": "https://itsfoss.com/",
+      "description": "It's FOSS is all about Open Source. You get the latest news, how-to tutorials and free learning materials. It's FOSS is the leading media portal in the niche of Linux and Open Source. It's FOSS reports on all the latest happenings in the Open Source world and published helpful tutorial, guides and suggestive articles to help people with Linux.",
+      "followers": {
+        "facebook": 137700,
+        "instagram": 92500
+      },
+      "image_url": "https://i1.feedspot.com/4612592.jpg?t=1615803023"
+    },
+    {
+      "title": "Linux Journal",
+      "feed_url": "https://www.linuxjournal.com/node/feed",
+      "website_url": "https://www.linuxjournal.com/",
+      "description": "Started in 1994, Linux Journal has become well-known asthe Linux community's most trusted-source of information. Inside every issue of Linux Journal you'll find tips and tricks, in-depth tutorials, concise product reviews, insights from leading Linux personalities and much more.",
+      "followers": {
+        "facebook": 29800,
+        "twitter": 56000
+      },
+      "image_url": "https://i1.feedspot.com/22886.jpg?t=1612613825"
+    },
+    {
+      "title": "Arch Linux",
+      "feed_url": "https://archlinux.org/feeds/news/",
+      "website_url": "https://archlinux.org/",
+      "description": "The latest and greatest news from the Arch Linux distribution. A lightweight and flexible Linux distribution that tries to Keep It Simple.",
+      "followers": {
+        "facebook": 14500
+      },
+      "image_url": "https://i1.feedspot.com/1113289.jpg"
+    },
+    {
+      "title": "Linux.com",
+      "feed_url": "https://www.linux.com/feed/",
+      "website_url": "https://www.linux.com/",
+      "description": "Linux.com is the go-to resource for open-source professionals to learn about the latest in Linux and open-source technology, careers, best practices, and industry trends. Get news, information, and tutorials to help advance your next project or career or just to simply stay informed.",
+      "followers": {
+        "facebook": 417500,
+        "twitter": 186300
+      },
+      "image_url": "https://i1.feedspot.com/130314.jpg?t=1669704244"
+    },
+    {
+      "title": "Slashdot - Linux News for nerds, stuff that matters",
+      "feed_url": "http://rss.slashdot.org/Slashdot/slashdotLinux",
+      "website_url": "https://linux.slashdot.org/",
+      "description": "Slashdot: News for nerds, stuff that matters. Timely news source for technology related news with a heavy slant towards Linux and Open Source issues.",
+      "followers": {
+        "facebook": 128900,
+        "twitter": 365300
+      },
+      "image_url": "https://i1.feedspot.com/22124.jpg?t=1615802994"
+    },
+    {
+      "title": "The Linux Foundation Blog",
+      "feed_url": "https://www.linuxfoundation.org/blog/rss.xml",
+      "website_url": "https://www.linuxfoundation.org/blog",
+      "description": "The Linux Foundation partners with the world's leading developers and companies to solve the hardest technology problems and accelerate open technology development and commercial adoption.",
+      "followers": {
+        "facebook": 417500,
+        "twitter": 577000,
+        "instagram": 40000
+      },
+      "image_url": "https://i1.feedspot.com/2204975.jpg?t=1612613821"
+    },
+    {
+      "title": "Pixelated Dwarf",
+      "feed_url": "https://pixelateddwarf.com/feed/",
+      "website_url": "https://pixelateddwarf.com/",
+      "description": "Pixelated Dwarf is dedicated to computers, operating systems, windows, macs, Linux, home networking, and home network security. I am excited to help teach you about computers, home networking, and home network security. I have been an associate professor in two technical colleges teaching students about networking, programming, security, and other computer-related subjects.",
+      "followers": {
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/5624449.jpg?t=1689224138"
+    },
+    {
+      "title": "GNU/Linux Aggregator and Surroundings Blog",
+      "feed_url": "https://www.laseroffice.it/blog/feed/",
+      "website_url": "https://www.laseroffice.it/blog/",
+      "description": "GNU/Linux Aggregator and Surroundings Blog brings you articles on ServerOne, PC GNU/Linux, Build your PC, Linux Shop, Guides, Safety, Promotions, Offers and Discounts on Amazon, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5695390.jpg?t=1698061177"
+    },
+    {
+      "title": "Linux Hint",
+      "feed_url": "https://linuxhint.com/feed/",
+      "website_url": "https://linuxhint.com/",
+      "description": "Linux Hint is an open-source blog that publishes Linux, FOSS guides and tutorials. We cover step by step guide to installing, updating latest software.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4811662.jpg?t=1615803034"
+    },
+    {
+      "title": "Manjaro Linux News",
+      "feed_url": "https://forum.manjaro.org/c/announcements/11.rss",
+      "website_url": "https://manjaro.org/news/",
+      "description": "Manjaro Linux is a Linux Distribution based on Arch Linux. Their aim is to create a light linux distribution, which is simple, up-to-date, fast and user friendly and which follows the K.I.S.S principle. They are using the Desktop Environment Xfce, which is light but powerfull.",
+      "followers": {
+        "facebook": 27200,
+        "twitter": 73600
+      },
+      "image_url": "https://i1.feedspot.com/4612493.jpg?t=1615803050"
+    },
+    {
+      "title": "Phoronix",
+      "feed_url": "https://www.phoronix.com/rss.php",
+      "website_url": "https://www.phoronix.com/",
+      "description": "GNU/Linux & Solaris Hardware Reviews",
+      "followers": {
+        "facebook": 20900,
+        "twitter": 43200
+      },
+      "image_url": "https://i1.feedspot.com/98533.jpg?t=1615803054"
+    },
+    {
+      "title": "CloudLinux Blog",
+      "feed_url": "https://blog.cloudlinux.com/rss.xml",
+      "website_url": "https://blog.cloudlinux.com/tag/technical-blog",
+      "description": "Updates, thoughts, and ideas about CloudLinux products and related technologies: CloudLinux OS, KernelCare, Imunify360 and Imunify Sensor. CloudLinux is an operating system (OS) that is commercially supported and interchangeable with the most popular RPM-based distribution on the market.",
+      "followers": {
+        "facebook": 9900,
+        "twitter": 12800
+      },
+      "image_url": "https://i1.feedspot.com/4612020.jpg?t=1615807011"
+    },
+    {
+      "title": "OSTechNix - Open Source Technology - Linux And Unix",
+      "feed_url": "https://ostechnix.com/feed/",
+      "website_url": "https://ostechnix.com/",
+      "description": "An ideal place where you can find the latest news, how-to articles, Tips & Tricks about Open Source, Technology, and Unix/Linux.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4612588.jpg?t=1623162341"
+    },
+    {
+      "title": "SUSE Blog",
+      "feed_url": "https://www.suse.com/c/feed/",
+      "website_url": "https://www.suse.com/c/blog/",
+      "description": "SUSE is the original provider of the enterprise Linux distribution and the most interoperable platform for mission-critical computing. It's the only Linux recommended by VMware, Microsoft and SAP.",
+      "followers": {
+        "twitter": 59500
+      },
+      "image_url": "https://i1.feedspot.com/4612034.jpg?t=1615806095"
+    },
+    {
+      "title": "Linux Handbook",
+      "feed_url": "https://linuxhandbook.com/rss/",
+      "website_url": "https://linuxhandbook.com/latest/",
+      "description": "Linux Handbook focuses on the server-side of Linux. At Linux Handbook, you'll learn Linux command line in detail along with tutorials on cloud-related technologies, DevOps tools, managing servers, and more such tips and tricks.",
+      "followers": {
+        "facebook": 49300,
+        "twitter": 98900,
+        "instagram": 28200
+      },
+      "image_url": "https://i1.feedspot.com/5291313.jpg?t=1623162312"
+    },
+    {
+      "title": "LinuxTechi",
+      "feed_url": "https://www.linuxtechi.com/feed/",
+      "website_url": "https://www.linuxtechi.com/",
+      "description": "LinuxTechi provides Linux tutorials, guides and Linux System admin interview Questions answers for Beginners and experience Professionals.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 530
+      },
+      "image_url": "https://i1.feedspot.com/3998188.jpg?t=1612613797"
+    },
+    {
+      "title": "LinuxWays",
+      "feed_url": "https://linuxways.net/feed/",
+      "website_url": "https://linuxways.net/",
+      "description": "LinuxWays publishes the updated Linux how-tos and tutorials for the sysadmin community. Check out the blog to know more.",
+      "followers": {
+        "facebook": 119,
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/5239108.jpg?t=1611576766"
+    },
+    {
+      "title": "Unixmen",
+      "feed_url": "https://www.unixmen.com/feed/",
+      "website_url": "https://www.unixmen.com/",
+      "description": "Unixmen blog provides Howtos, Tutorials, Tips & Tricks, Opensource news. They cover most popular distros like Ubuntu, LinuxMint, Fedora, Centos.",
+      "followers": {
+        "twitter": 11200
+      },
+      "image_url": "https://i1.feedspot.com/4612505.jpg?t=1615803071"
+    },
+    {
+      "title": "FOSS Linux",
+      "feed_url": "https://www.fosslinux.com/feed",
+      "website_url": "https://www.fosslinux.com/",
+      "description": "Your guide for the best Linux tutorials, open-source apps, news, and reviews! FOSS Linux covers Ubuntu, Linux Mint, Fedora, Arch Linux, and more.",
+      "followers": {
+        "facebook": 21200,
+        "twitter": 445
+      },
+      "image_url": "https://i1.feedspot.com/5180543.jpg"
+    },
+    {
+      "title": "Gaming On Linux",
+      "feed_url": "https://www.gamingonlinux.com/article_rss.php",
+      "website_url": "https://www.gamingonlinux.com/",
+      "description": "We are GamingOnLinux, the world's biggest Linux gaming news and community website.GamingOnLinux is the home of Linux and SteamOS gaming. Covering Linux games, SteamOS, reviews and more.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 66800
+      },
+      "image_url": "https://i1.feedspot.com/4402022.jpg?t=1609821922"
+    },
+    {
+      "title": "LWN.net",
+      "feed_url": "https://lwn.net/headlines/newrss",
+      "website_url": "https://lwn.net/",
+      "description": "LWN.net is a reader-supported news site dedicated to producing the best coverage from within the Linux and free software development communities. We provide comprehensive coverage of development, legal, commercial, and security issues.",
+      "followers": {
+        "twitter": 17300
+      },
+      "image_url": "https://i1.feedspot.com/4731597.jpg?t=1619439677"
+    },
+    {
+      "title": "DebugPoint.com",
+      "feed_url": "https://www.debugpoint.com/feed/",
+      "website_url": "https://www.debugpoint.com/",
+      "description": "Debugpoint.com is a website that features how-to guides, tutorials, and app highlights primarily concentrated on Ubuntu/Linux. It features various newsworthy information, programming tutorials as well. Follow for tutorials and how-to guides.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 861,
+        "instagram": 88
+      },
+      "image_url": "https://i1.feedspot.com/5291400.jpg?t=1623221102"
+    },
+    {
+      "title": "SparkyLinux",
+      "feed_url": "https://sparkylinux.org/feed/",
+      "website_url": "https://sparkylinux.org/",
+      "description": "SparkyLinux is a Debian-based Linux distribution which provides ready to use, out of the box operating system with a set of slightly customized lightweight desktops.",
+      "followers": {
+        "facebook": 155,
+        "twitter": 702
+      },
+      "image_url": "https://i1.feedspot.com/4612497.jpg"
+    },
+    {
+      "title": "LinuxLinks",
+      "feed_url": "https://www.linuxlinks.com/feed/",
+      "website_url": "https://www.linuxlinks.com/",
+      "description": "Linux Links is a collection of approximately 20,000 links to essential Linux web pages. Reviewers at Linux Links list the latest Linux sites through exhaustive searches on the net. Additional links are also provided from Linux enthusiasts",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/526313.jpg?t=1615806104"
+    },
+    {
+      "title": "Kernel Talks",
+      "feed_url": "https://kerneltalks.com/feed/",
+      "website_url": "https://kerneltalks.com/",
+      "description": "KernelTalks is blog about howto, tips, tricks, tutorials related to Unix, Linux and scripting.",
+      "followers": {
+        "facebook": 9200,
+        "twitter": 956
+      },
+      "image_url": "https://i1.feedspot.com/4710699.jpg?t=1615806178"
+    },
+    {
+      "title": "blackMORE Ops - Linux, InfoSec, Hacking",
+      "feed_url": "https://feeds.feedburner.com/bmofeed",
+      "website_url": "https://www.blackmoreops.com/",
+      "description": "blackMORE Ops is the leading source for Kali Linux, InfoSec, Hacking, Network and Cyber Security, How to, Guides and Tutorials with technical details.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4612604.jpg"
+    },
+    {
+      "title": "CentLinux Blog",
+      "feed_url": "https://centlinux.com/feed/",
+      "website_url": "https://centlinux.com/category/blog/",
+      "description": "CentLinux is a blog for System Administrators. CentLinux provides installation guides and howtos on installation and configuration of open source software on CentOS, Ubuntu and other Linux distros.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 35
+      },
+      "image_url": "https://i1.feedspot.com/5243645.jpg?t=1612940219"
+    },
+    {
+      "title": "LinuxInsider",
+      "feed_url": "https://www.linuxinsider.com/rss-feed",
+      "website_url": "https://www.linuxinsider.com/",
+      "description": "A publication by ECT News Network covering Linux News & Information from around the world. It provides articles on Software, Business, Community, Developers, Enterprise, Mobile, and Security.",
+      "followers": {
+        "facebook": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5315306.jpg?t=1629815059"
+    },
+    {
+      "title": "LXer",
+      "feed_url": "https://lxer.com/module/newswire/headlines.rss",
+      "website_url": "https://lxer.com/",
+      "description": "LXer Linux News is one of the most widely read Linux news and opinion sites on the Internet. People turn to LXer for its constantly updated news feed and comments. Our top-quality editors create, edit, and present information about GNU/Linux and free/open-source software via our frequently updated, 24/7 newswire.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 323
+      },
+      "image_url": "https://i1.feedspot.com/2672.jpg?t=1669703512"
+    },
+    {
+      "title": "LinuxCloudVPS.com Cloud Hosting Blog",
+      "feed_url": "https://www.linuxcloudvps.com/blog/feed/",
+      "website_url": "https://www.linuxcloudvps.com/blog/",
+      "description": "LinuxCloudVPS.com blog shares Information, tips and tricks, tutorials and more for Linux Cloud VPS Hosting.",
+      "followers": {
+        "facebook": 162,
+        "twitter": 183
+      },
+      "image_url": "https://i1.feedspot.com/4614595.jpg?t=1615806182"
+    },
+    {
+      "title": "LinuxBuz",
+      "feed_url": "https://feeds.feedburner.com/Linuxbuz",
+      "website_url": "https://linuxbuz.com/",
+      "description": "Linuxbuz is a tech site with a focus on Linux tutorials, Guides, Security, DevOps, Cloud Computing, Hacks, and Fixes. Our main motto is to make uncomplicated things easier.",
+      "followers": {
+        "facebook": 493,
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/5186693.jpg?t=1615806257"
+    },
+    {
+      "title": "Linux Scoop",
+      "feed_url": "https://linuxscoop.tumblr.com/rss",
+      "website_url": "https://linuxscoop.tumblr.com/",
+      "description": "Welcome to Linux Scoop. This blog is designed to provide members of the Linux and free open source software (FOSS) community with linux and open source videos It works by allowing members of the Linux Scoop to submit video relating to Linux and FOSS.",
+      "followers": {
+        "facebook": 11300,
+        "twitter": 4000,
+        "instagram": 7200
+      },
+      "image_url": "https://i1.feedspot.com/4614429.jpg"
+    },
+    {
+      "title": "LinuxGizmos.com",
+      "feed_url": "https://linuxgizmos.com/feed/",
+      "website_url": "https://linuxgizmos.com/",
+      "description": "LinuxGizmos.com is dedicated to bringing you timely news and analysis on the hardware, software, protocols, and standards used in embedded, mobile, and Internet of Things devices that are built around open source OSes such as Linux and derivatives (e.g. Android, Tizen, OpenWRT, Brillo, etc.).",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/708169.jpg?t=1615806174"
+    },
+    {
+      "title": "ThisHosting.Rocks",
+      "feed_url": "https://thishosting.rocks/feed/",
+      "website_url": "https://thishosting.rocks/",
+      "description": "Get the best Linux and web hosting resources for free! Top lists, reviews, tutorials on Linux, web hosting, and everything else (that rocks) in between.",
+      "followers": {
+        "facebook": 334,
+        "twitter": 322
+      },
+      "image_url": "https://i1.feedspot.com/4693284.jpg?t=1606204903"
+    },
+    {
+      "title": "Linux Magazine",
+      "feed_url": "https://www.linux-magazine.com/rss/feed/lmi_full",
+      "website_url": "https://www.linux-magazine.com/",
+      "description": "Linux Pro Magazine keeps the emphasis on real-life, practical techniques, which has helped make it one of the fastest growing Linux magazines worldwide.",
+      "followers": {
+        "facebook": 160800,
+        "twitter": 66900
+      },
+      "image_url": "https://i1.feedspot.com/433298.jpg?t=1612613897"
+    },
+    {
+      "title": "Lisenet.com",
+      "feed_url": "https://www.lisenet.com/feed/",
+      "website_url": "https://www.lisenet.com/",
+      "description": "I've been doing some interesting IT related stuff for the past few years and it seemed like a wise idea to document the things I went through, just to have it all in one place for future references. Shortly put, as you can probably guess by now, this website is my personal technical blog.",
+      "followers": {
+        "twitter": 46
+      },
+      "image_url": "https://i1.feedspot.com/4507306.jpg?t=1615806195"
+    },
+    {
+      "title": "Linux for freshers",
+      "feed_url": "https://www.linuxforfreshers.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.linuxforfreshers.com/",
+      "description": "Linux Administration, Interview Question, Tips And Tricks",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4639725.jpg?t=1615807274"
+    },
+    {
+      "title": "Linux Training Academy Blog",
+      "feed_url": "https://www.linuxtrainingacademy.com/blog/feed/",
+      "website_url": "https://www.linuxtrainingacademy.com/blog/",
+      "description": "Linux how-tos, tips, and tricks. The blog contains articles, videos, and guides for learning Linux and the command line.",
+      "followers": {
+        "facebook": 18300,
+        "twitter": 718
+      },
+      "image_url": "https://i1.feedspot.com/4611998.jpg?t=1615806109"
+    },
+    {
+      "title": "Linuxman",
+      "feed_url": "https://linuxman.co/feed/",
+      "website_url": "https://linuxman.co/",
+      "description": "Linuxman is a fantastic blog that is dedicated to helping people learn Linux in a fun and engaging way. This blog provides an excellent resource for anyone who is new to using Linux or who wants to take their skills to the next level. It offers a wide range of engaging content that is easy to follow and understand.",
+      "followers": {
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/5759324.jpg?t=1705926446"
+    },
+    {
+      "title": "2daygeek",
+      "feed_url": "https://www.2daygeek.com/feed/",
+      "website_url": "https://www.2daygeek.com/",
+      "description": "2dayGeek(2dG) is an online community that publishes practical and useful articles for aspirants like you to become experts. 2dayGeek articles cover Linux tips & tricks, Linux how-to tutorials, Linux practical guides, Linux practical examples, and much more.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 768
+      },
+      "image_url": "https://i1.feedspot.com/4614508.jpg?t=1615871568"
+    },
+    {
+      "title": "KaliLinuxIn",
+      "feed_url": "https://www.kalilinux.in/feeds/posts/default",
+      "website_url": "https://www.kalilinux.in/",
+      "description": "Kali Linux.in offers large number of Kali Linux tutorials and We cover all the tools are in Kali Linux and custom tools, So this is the Best place for penetration testers.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5266508.jpg?t=1617966160"
+    },
+    {
+      "title": "Trend Oceans",
+      "feed_url": "https://trendoceans.com/feed/",
+      "website_url": "https://trendoceans.com/blog/",
+      "description": "TrendOceans is the First Spot to Start your Journey in Linux, Programming, Networking, etc. You start we guide the world of FOSS. Linux tutorials on Networking, Administration, Complex Fundamental, Programming, Web Development at one single place.",
+      "followers": {
+        "facebook": 103,
+        "twitter": 25
+      },
+      "image_url": "https://i1.feedspot.com/5229227.jpg?t=1615806855"
+    },
+    {
+      "title": "The Ultimate Linux Newbie Guide",
+      "feed_url": "https://linuxnewbieguide.org/feed/",
+      "website_url": "https://linuxnewbieguide.org/quick-tips-blog/",
+      "description": "The Ultimate Linux Newbie Guide is dedicated to helping you make the most from Linux. They post regular hints and tips that are just short enough to give you the salient information",
+      "followers": {
+        "twitter": 67,
+        "instagram": 510
+      },
+      "image_url": "https://i1.feedspot.com/4612119.jpg?t=1615806954"
+    },
+    {
+      "title": "UX Techno",
+      "feed_url": "https://feeds.feedburner.com/linuxroutesFeed",
+      "website_url": "https://linuxroutes.com/",
+      "description": "UX Techno is platform for learning UNIX & LINUX technologies.",
+      "followers": {
+        "facebook": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4612636.jpg?t=1615806262"
+    },
+    {
+      "title": "Elinux.co.in",
+      "feed_url": "https://www.elinux.co.in/feed/",
+      "website_url": "https://www.elinux.co.in/",
+      "description": "Linux, CPanel and WHM | linux webhosting blog | Linux Security and Solutions.",
+      "followers": {
+        "facebook": 181
+      },
+      "image_url": "https://i1.feedspot.com/4661324.jpg?t=1615806870"
+    },
+    {
+      "title": "Sysads Gazette",
+      "feed_url": "https://sysads.co.uk/index.xml",
+      "website_url": "https://sysads.co.uk/",
+      "description": "Sysads Gazette is a Linux blog that contains the latest information and updates on Linux tutorials and software updates for newbies and experienced professionals. Whether you're an engineer, administrator, or beginner in Linux, anyone who has a keen interest in the fascinating world of Linux can get all the newest and most interesting updates on this blog.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 244
+      },
+      "image_url": "https://i1.feedspot.com/4614590.jpg?t=1615807003"
+    },
+    {
+      "title": "Explore Linux",
+      "feed_url": "https://www.explinux.com/feed",
+      "website_url": "https://www.explinux.com/",
+      "description": "We're dedicated to providing Linux related content to novice and professionals too. All articles and tutorials we write on our own research, practice,practical and experience. ExpLinux- Explore Linux How to, Tutorials, Unix, News, Updates, Technology.",
+      "followers": {
+        "facebook": 522,
+        "instagram": 31400
+      },
+      "image_url": "https://i1.feedspot.com/5271322.jpg?t=1618918304"
+    },
+    {
+      "title": "Linux Uprising Blog",
+      "feed_url": "https://www.linuxuprising.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.linuxuprising.com/",
+      "description": "Linux Uprising is your Linux and open-source toolbox. We post news from the Linux and open-source world, how-to articles, application reviews, tips, and tweaks.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5291311.jpg?t=1623162053"
+    },
+    {
+      "title": "Xmodulo",
+      "feed_url": "https://www.xmodulo.com/feed",
+      "website_url": "https://www.xmodulo.com/",
+      "description": "Hi! My name is Dan Nanni. I am the man behind Xmodulo.com, an online Linux knowledge base. I fall in love with Linux while I was studying for my Computer Science degree in the US. At Xmodulo, I'll provide you daily updated useful Linux tutorials, tips, and answers to FAQs on various Linux server and desktop environments.",
+      "followers": {
+        "twitter": 10400
+      },
+      "image_url": "https://i1.feedspot.com/5291312.jpg?t=1623162699"
+    },
+    {
+      "title": "Linux notes from DarkDuck",
+      "feed_url": "https://feeds.feedburner.com/LinuxNotesFromDarkduck",
+      "website_url": "http://linuxblog.darkduck.com/",
+      "description": "This is a fan page of blog Linux Notes from DarkDuck. It is dedicated to chosig and using of operating systems on your computer.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 739
+      },
+      "image_url": "https://i1.feedspot.com/905628.jpg"
+    },
+    {
+      "title": "Linux Master Desk",
+      "feed_url": "https://www.linuxmd.net/feed/",
+      "website_url": "https://www.linuxmd.net/",
+      "description": "A Linux Blog featuring articles on Linux, Linux Mint, Linux Ubuntu, NSlookup, Unix and much more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5291398.jpg?t=1623221375"
+    },
+    {
+      "title": "LinuxAdmin",
+      "feed_url": "https://linuxadmin.io/feed/",
+      "website_url": "https://linuxadmin.io/",
+      "description": "A site for linux admins - tutorials, tips and news.",
+      "followers": {
+        "twitter": 184
+      },
+      "image_url": "https://i1.feedspot.com/4655336.jpg?t=1615806270"
+    },
+    {
+      "title": "devconnected",
+      "feed_url": "https://devconnected.com/feed/",
+      "website_url": "https://devconnected.com/",
+      "description": "A community for developers, software engineers and IT professionals that want to take their knowledge to the next level.",
+      "followers": {
+        "twitter": 522
+      },
+      "image_url": "https://i1.feedspot.com/5070014.jpg?t=1615803047"
+    },
+    {
+      "title": "Linux Security Blog",
+      "feed_url": "https://linuxsecurityblog.com/feed/",
+      "website_url": "https://linuxsecurityblog.com/",
+      "description": "This blog will focus on online security. Cybersecurity is not possible without Linux and the open source community, so the name of the blog is Linux/Unix related.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4612150.jpg?t=1615807238"
+    },
+    {
+      "title": "Elinuxbook",
+      "feed_url": "http://elinuxbook.com/feed",
+      "website_url": "http://elinuxbook.com/",
+      "description": "ELinuxBook is a Linux Community Site who Provides Quality Linux Tutorials. Here we Discuss and writes articles for all kinds of Linux Distros.",
+      "followers": {
+        "facebook": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4623622.jpg?t=1615806859"
+    },
+    {
+      "title": "Kali Linux Hacking Tutorials",
+      "feed_url": "https://www.kalitutorials.net/feeds/posts/default",
+      "website_url": "https://www.kalitutorials.net/",
+      "description": "A blog dedicated to Kali Linux. They have beginner friendly tutorials on hacking and security.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 152
+      },
+      "image_url": "https://i1.feedspot.com/4507206.jpg?t=1615806951"
+    },
+    {
+      "title": "The Linux Mint Blog",
+      "feed_url": "https://blog.linuxmint.com/?feed=rss2",
+      "website_url": "https://blog.linuxmint.com/",
+      "description": "Linux Mint is one of the most popular desktop Linux distributions and used by millions of people. The purpose of Linux Mint is to produce a modern, elegant and comfortable operating system which is both powerful and easy to use.",
+      "followers": {
+        "facebook": 140200,
+        "twitter": 143200
+      },
+      "image_url": "https://i1.feedspot.com/74523.jpg"
+    },
+    {
+      "title": "Linux Today Blog",
+      "feed_url": "https://www.linuxtoday.com/biglt.rss",
+      "website_url": "https://www.linuxtoday.com/blog/",
+      "description": "Linux Today features the latest Linux and open source news and features from around the Web.",
+      "followers": {
+        "twitter": 322500
+      },
+      "image_url": "https://i1.feedspot.com/103707.jpg?t=1612613804"
+    },
+    {
+      "title": "Linux Today",
+      "feed_url": "https://www.linuxtoday.com/biglt.rss?x=1",
+      "website_url": "https://www.linuxtoday.com/",
+      "description": "LinuxPlanet -- a world of premium information for Linux newcomers. LinuxPlanet welcomes people jumping from Windows and other Operating Systems to the latest sensation based on the Open Source software model.",
+      "followers": {
+        "facebook": 266,
+        "twitter": 322500
+      },
+      "image_url": "https://i1.feedspot.com/235522.jpg?t=1615806199"
+    },
+    {
+      "title": "Kali Linux Blog",
+      "feed_url": "https://www.kali.org/feed/",
+      "website_url": "https://www.kali.org/blog/",
+      "description": "Kali Linux is an open source project that is maintained and funded by Offensive Security, a provider of world-class information security training and penetration testing services. In addition to Kali Linux, Offensive Security also maintains the Exploit Database and the free online course, Metasploit Unleashed.",
+      "followers": {
+        "twitter": 392500
+      },
+      "image_url": "https://i1.feedspot.com/4260214.jpg"
+    },
+    {
+      "title": "LinOxide - Linux / Opensource HowTos And Tutorials",
+      "feed_url": "https://linoxide.com/feed/",
+      "website_url": "https://www.cyberciti.biz/",
+      "description": "The LinOxide provides online tutorials and howto's on Linux. Learn about Linux , commands and configuration, troubleshooting, firewall, shell script ,opensource news, tools and more.",
+      "followers": {
+        "facebook": 15500,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/3927793.jpg"
+    },
+    {
+      "title": "nixCraft \u2014 Linux Tips, Hacks, Tutorials, And Ideas In Blog",
+      "feed_url": "https://www.cyberciti.biz/feed/",
+      "website_url": "https://www.cyberciti.biz/",
+      "description": "NixCraft is an online community of new and seasoned Linux / Unix sysadmins who want to make the most of sysadmin-hood.",
+      "followers": {
+        "facebook": 477900,
+        "twitter": 325300
+      },
+      "image_url": "https://i1.feedspot.com/4611941.jpg?t=1615802985"
+    },
+    {
+      "title": "Softpedia Linux",
+      "feed_url": "https://news.softpedia.com/newsRSS/Linux-7.xml",
+      "website_url": "https://linux.softpedia.com/",
+      "description": "A library of over 95,000 Linux applications and modules, mostly open source (free software).",
+      "followers": {
+        "facebook": 162800,
+        "twitter": 18800
+      },
+      "image_url": "https://i1.feedspot.com/105154.jpg?t=1618818708"
+    },
+    {
+      "title": "The Geek Stuff",
+      "feed_url": "https://www.thegeekstuff.com/feed/",
+      "website_url": "https://www.thegeekstuff.com/",
+      "description": "Hello, My name is Ramesh Natarajan. The Geek Stuff blog mainly focuses on Linux and Open Source Technologies. I will be posting instruction guides, How-Tos, troubleshooting tips and tricks Linux and open source technologies. My focus is to write articles that will either teach you or help you resolve a problem.",
+      "followers": {
+        "facebook": 16000,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5273067.jpg?t=1619438906"
+    },
+    {
+      "title": "LinuxBabe",
+      "feed_url": "https://www.linuxbabe.com/",
+      "website_url": "https://www.linuxbabe.com/",
+      "description": "Hi! My name is Xiao Guoan. I started using Linux in 2012 with Ubuntu being my first distro. This site is mostly about Debian, Ubuntu, Linux Mint, and other Deb-based distros. Here, you can read my articles about Linux guides, Linux Sysadmin, server, and more.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 854
+      },
+      "image_url": "https://i1.feedspot.com/4715129.jpg?t=1623219840"
+    },
+    {
+      "title": "Linux Ubuntu Apps Reviews",
+      "feed_url": "https://www.linuxandubuntu.com/feed",
+      "website_url": "https://www.linuxandubuntu.com/",
+      "description": "Linux/Ubuntu Applications reviews, Frequently asked questions on linux, ubuntu updates, Linux other distribution apps updates and news. Linux basic Tutorials and howtos for Linux newbies.",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4242192.jpg?t=1615806100"
+    },
+    {
+      "title": "Linux Stans",
+      "feed_url": "https://linuxstans.com/feed/rss/",
+      "website_url": "https://linuxstans.com/",
+      "description": "In this blog, you will get to read unique content by Linux stans - best distros lists, tutorials, comparisons, news, and more.",
+      "followers": {
+        "facebook": 18800
+      },
+      "image_url": "https://i1.feedspot.com/5245908.jpg?t=1613549553"
+    },
+    {
+      "title": "NoobsLab",
+      "feed_url": "https://www.noobslab.com/",
+      "website_url": "https://www.noobslab.com/",
+      "description": "Tutorials for Ubuntu, Linux Mint and other Linux Distributions. They serve huge themes collection, conky collection, Ubuntu Software/Applications, wallpapers, Ubuntu/Linux tweaks/tips, tutorial videos, they make everything easy for new users and offer many other stuff for Ubuntu/Linux distributions.",
+      "followers": {
+        "facebook": 16400,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4612189.jpg?t=1615806209"
+    },
+    {
+      "title": "itsfoss.net",
+      "feed_url": "https://www.itsfoss.net/feed/",
+      "website_url": "https://www.itsfoss.net/",
+      "description": "In this blog, you will find the latest Linux articles.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5214421.jpg?t=1615806926"
+    },
+    {
+      "title": "Freedom Penguin",
+      "feed_url": "https://freedompenguin.com/feed/",
+      "website_url": "https://freedompenguin.com/",
+      "description": "The absolute best Linux tutorials, insights, news, and thought provoking Linux articles.",
+      "followers": {
+        "facebook": 308,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4612634.jpg?t=1615806922"
+    },
+    {
+      "title": "The Linux Juggernaut",
+      "feed_url": "https://www.linuxnix.com/feed/",
+      "website_url": "https://www.linuxnix.com/",
+      "description": "The Linux Juggernaut is a blog deals with Linux system administration,Linux security, Shell/Perl Scripting, Virtulization, Cloud Computing, Clustering etc.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 691
+      },
+      "image_url": "https://i1.feedspot.com/1238287.jpg?t=1615806203"
+    },
+    {
+      "title": "Women in Linux",
+      "feed_url": "https://www.womeninlinux.com/index.php/feed/",
+      "website_url": "https://www.womeninlinux.org/",
+      "description": "Women In Linux is a non-profit organization supporting women in Linux-centric tech careers who want to obtain and sustain a thriving career in tech.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 7800,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4614599.jpg?t=1615806894"
+    },
+    {
+      "title": "Kenneth Navarro",
+      "feed_url": "https://kennyvn.com/blog/feed/",
+      "website_url": "https://kennyvn.com/blog/",
+      "description": "Kennyvn is a Kali Linux blog that provides detailed hacking tutorials, cheat sheets, and step-by-step guides on how to hack.",
+      "followers": {
+        "twitter": 284
+      },
+      "image_url": "https://i1.feedspot.com/4679378.jpg?t=1615807034"
+    },
+    {
+      "title": "Linuxsecrets Blog",
+      "feed_url": "http://feeds.feedburner.com/linuxsecrets",
+      "website_url": "https://credibledev.com/",
+      "description": "Linuxsecrets is source for Linux, RedHat, Linux Secrets, Linux, Information, ubuntu, debian, howto, videos, linux hardware, databases, Arch Linux, Slackware and Reviews.",
+      "followers": {
+        "twitter": 140
+      },
+      "image_url": "https://i1.feedspot.com/4612690.jpg?t=1615807040"
+    },
+    {
+      "title": "credibleDEV",
+      "feed_url": "https://credibledev.com/feed/",
+      "website_url": "https://credibledev.com/",
+      "description": "The credibleDEV blog is dedicated to the latest guides and information about the Linux operating system which includes Arch distros like Manjaro.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5494962.jpg?t=1673953742"
+    }
+  ]
+}

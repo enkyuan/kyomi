@@ -1,0 +1,86 @@
+{
+  "category": "France Health",
+  "source_url": "https://rss.feedspot.com/france_health_rss_feeds",
+  "feeds": [
+    {
+      "title": "Inserm",
+      "feed_url": "https://www.inserm.fr/en/news/feed/",
+      "website_url": "https://www.inserm.fr/actualite/",
+      "description": "Inserm is a public scientific research organization dedicated to human health. Our goal is to improve health through the advancement of knowledge on living organisms and diseases, innovation in treatments and public health research.",
+      "followers": {
+        "facebook": 53300,
+        "twitter": 153700,
+        "instagram": 25900
+      },
+      "image_url": "https://i1.feedspot.com/5349409.jpg?t=1638436444"
+    },
+    {
+      "title": "French Healthcare Association",
+      "feed_url": "https://frenchhealthcare-association.fr/actualite/feed/",
+      "website_url": "https://frenchhealthcare-association.fr/actualite/",
+      "description": "Latest health news and healthcare industry news by the French Healthcare Association.Within the French Healthcare system, french actors in the healthcare field are united around a non-profit association and pursue a collective objective: international promotion of the French healthcare expertise.",
+      "followers": {
+        "facebook": 104,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5349473.jpg?t=1638437675"
+    },
+    {
+      "title": "Healthy Mind Blog",
+      "feed_url": "https://healthymind.fr/en/feed/",
+      "website_url": "https://healthymind.fr/en/newsfeed/",
+      "description": "Read about e-Health, medical innovations, healthy mind, and more. Find out about the latest news in therapeutic virtual reality!We provide healthcare professionals with an evidence-based medical device that combines immersion through virtual reality technology, medical hypnosis, and advanced therapeutic principles to alleviate the pain and anxiety of patients.",
+      "followers": {
+        "facebook": 711,
+        "twitter": 218
+      },
+      "image_url": "https://i1.feedspot.com/5349395.jpg?t=1638431453"
+    },
+    {
+      "title": "Le Monde.fr \u00bb Health",
+      "feed_url": "https://www.lemonde.fr/sante/rss_full.xml",
+      "website_url": "https://www.lemonde.fr/sante/",
+      "description": "Discover all the articles, reports, videos, and more on the Health section on Le Monde.fr.",
+      "followers": {
+        "facebook": 5800000,
+        "twitter": 11000000,
+        "instagram": 2600000
+      },
+      "image_url": "https://i1.feedspot.com/3819339.jpg?t=1638428634"
+    },
+    {
+      "title": "Cardiawave Blog",
+      "feed_url": "https://cardiawave.com/feed/",
+      "website_url": "https://cardiawave.com/blog/",
+      "description": "Innovation prize winner of many contests, Cardiawave is a clinical-stage company that develops an innovative non-invasive image-guided medical device (MD) to treat aortic valve stenosis with ultrasound technology.",
+      "followers": {
+        "twitter": 456
+      },
+      "image_url": "https://i1.feedspot.com/5349392.jpg?t=1638429709"
+    },
+    {
+      "title": "Alan Blog",
+      "feed_url": "https://blog.alan.com/feed",
+      "website_url": "https://alan.com/fr-fr/blog",
+      "description": "Help you navigate the system and live full, healthier lives. Alan is the first digital health insurance company in Europe. We revolutionise health insurance by focusing on user experience with excellent price-quality ratio health plans.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 7400,
+        "instagram": 9700
+      },
+      "image_url": "https://i1.feedspot.com/5349138.jpg?t=1638361741"
+    },
+    {
+      "title": "The Local France \u00bb Health",
+      "feed_url": "https://www.thelocal.fr/tag/health/feed/",
+      "website_url": "https://www.thelocal.fr/tag/health",
+      "description": "The latest health news and practical advice from France.Daily news from France written in English by native English-speaking journalists. An entertaining blend of France's latest news headlines, politics, sport, business, and features.",
+      "followers": {
+        "facebook": 124100,
+        "twitter": 27700,
+        "instagram": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5349133.jpg?t=1638361240"
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "category": "Houston Food",
+  "source_url": "https://rss.feedspot.com/houston_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Eater Houston",
+      "feed_url": "https://houston.eater.com/rss/index.xml",
+      "website_url": "https://houston.eater.com/",
+      "description": "Food news and dining guides for Houston. Eater is the source for people who care about dining and drinking in the nation's most important food cities. Published by Vox Media, Eater is a favorite of industry pros and amateurs alike, with an uncanny knack for finding out what's opening where, who's serving what, and how it's all going down.",
+      "followers": {
+        "facebook": 45300,
+        "twitter": 39800,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/4819141.jpg?t=1610698356"
+    },
+    {
+      "title": "Bake at 350",
+      "feed_url": "https://www.bakeat350.net/feeds/posts/default",
+      "website_url": "https://www.bakeat350.net/",
+      "description": "I'm just a girl who loves cookies...and writes about them on the blog, Bake at 350. Established in 2007, baking blog Bake at 350 offers tips and step-by-step tutorials for cookie decorating plus favorite dessert recipes. Blog by Bridget Edwards.",
+      "followers": {
+        "facebook": 80400,
+        "twitter": 15700,
+        "instagram": 27300
+      },
+      "image_url": "https://i1.feedspot.com/315327.jpg?t=1615453322"
+    },
+    {
+      "title": "CopyKat Recipes",
+      "feed_url": "https://copykat.com/feed/",
+      "website_url": "https://copykat.com/",
+      "description": "Welcome to CopyKat.com, where you will find all of your favorite restaurant recipes recreated for you. You are going to find your favorite Olive Garden recipes, Panera Bread recipes, and so much more. There are almost two thousand recipes online, all have easy-to-follow instructions, and many have videos for you to follow. All of these recipes have been kitchen-tested, and are easy to prepare. So if you can't go out for dinner, you can still enjoy those familiar tastes at home.",
+      "followers": {
+        "facebook": 204300,
+        "twitter": 70900,
+        "instagram": 16300
+      },
+      "image_url": "https://i1.feedspot.com/993451.jpg?t=1654500736"
+    },
+    {
+      "title": "Black Girls Who Brunch",
+      "feed_url": "https://blackgirlswhobrunch.com/feed/",
+      "website_url": "https://blackgirlswhobrunch.com/",
+      "description": "Hi! I'm Erika and I am a Black Girl Who Brunches and lunches, goes to happy hours, and fancy dinners :)! I am an attorney by day who just loves food. I started this blog as a creative outlet and a means to share my favorite food finds!",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 826,
+        "instagram": 54400
+      },
+      "image_url": "https://i1.feedspot.com/4984137.jpg?t=1622122367"
+    },
+    {
+      "title": "Hangry Woman",
+      "feed_url": "https://hangrywoman.com/feed/",
+      "website_url": "https://hangrywoman.com/",
+      "description": "I am Mila Clarke-Buckley, a food writer, author, stigma slayer, and more. Living with diabetes sucks. So let's talk about food, self-care, and diabetes topics that sometimes feel like they're off-limits. This is an open and safe space for you.",
+      "followers": {
+        "facebook": 29400,
+        "twitter": 4600,
+        "instagram": 41100
+      },
+      "image_url": "https://i1.feedspot.com/4750355.jpg?t=1662446775"
+    },
+    {
+      "title": "Da'Stylish Foodie Blog",
+      "feed_url": "https://dastylishfoodie.com/feed/",
+      "website_url": "https://dastylishfoodie.com/blog/",
+      "description": "Hi, I am Angie Dumas a woman with a strong passion for Fashion and Food. I love to try new, up-and-coming restaurants. In addition, I love cooking and throwing down in my kitchen. Most of my blog posts will be related to Louisiana Cooking but with a twist. As well as Restaurant Reviews, Product Reviews, Food Parties we host, Travel Journeys, any Food Events I attend, and my own recipes.",
+      "followers": {
+        "facebook": 272,
+        "twitter": 1600,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5407709.jpg?t=1654490320"
+    },
+    {
+      "title": "Houstonia Magazine \u00bb Eat & Drink",
+      "feed_url": "https://www.houstoniamag.com/eat-and-drink/feed",
+      "website_url": "https://www.houstoniamag.com/eat-and-drink",
+      "description": "Find the best restaurants and bars in Houston, with restaurant listings by cuisine and neighborhood, along with daily food news and recent openings. Smart. Authoritative. Entertaining. With a bold design, eye-catching photography, and an editorial voice that's at once witty and in-the-know, Houstonia is our city's monthly indispensable news, culture, and lifestyle magazine.",
+      "followers": {
+        "facebook": 74100,
+        "twitter": 43500,
+        "instagram": 121400
+      },
+      "image_url": "https://i1.feedspot.com/5407713.jpg?t=1654490344"
+    },
+    {
+      "title": "Pilar's Chilean Food & Garden",
+      "feed_url": "https://www.chileanfoodandgarden.com/feed/",
+      "website_url": "https://www.chileanfoodandgarden.com/",
+      "description": "Hi, I'm Pilar Hernandez. I was born and raised in Chile and moved to Houston, Texas, in 2003 without knowing how to cook and speaking no English. Today, I'm a cookbook author and leader of 2 community gardens. I will show you how to cook Chilean food with ingredients you find in your supermarket. I'll challenge you to try exotic fruits like lucuma or maqui, our favorite cereals, wheat berries, and quinoa.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 8200,
+        "instagram": 5700
+      },
+      "image_url": "https://i1.feedspot.com/5172037.jpg?t=1645596132"
+    },
+    {
+      "title": "Dash of Jazz \u00bb Recipes",
+      "feed_url": "https://www.dashofjazz.com/feed/",
+      "website_url": "https://www.dashofjazz.com/recipes/",
+      "description": "Browse hundreds of easy, delicious recipes that will keep you satisfied from breakfast through dessert! Find fresh inspiration for your everyday. Dash of Jazz specializes in easy delicious recipes, attainable travel, and lifestyle tips to help you live well on your terms.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 623
+      },
+      "image_url": "https://i1.feedspot.com/4984128.jpg?t=1622122342"
+    },
+    {
+      "title": "The Corkscrew Concierge",
+      "feed_url": "https://thecorkscrewconcierge.com/feed/",
+      "website_url": "https://thecorkscrewconcierge.com/",
+      "description": "The Corkscrew Concierge is a blog featuring information about wine, travel, and experiences. Our mission is to share the wine world and make it accessible to all.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 8900,
+        "instagram": 7900
+      },
+      "image_url": "https://i1.feedspot.com/4948038.jpg?t=1605161148"
+    },
+    {
+      "title": "Stephano \u00bb Food Blog",
+      "feed_url": "https://stephano.me/blog/category/food/feed/",
+      "website_url": "https://stephano.me/blog/category/food/",
+      "description": "Eating with Stephano is a Houston-based food blogger and photographer. Her goal is to showcase Houston's diverse food scene. Stephano is a blogger and photographer in Houston, TX. She is a Japanese pop culture otaku with a huge appetite. Stephano first started blogging about her alternative fashion style inspired by Harajuku street fashion. She draws inspiration for her dark fantasy gothic style from lolita fashion, ouji fashion, androgynous style, and visual kei.",
+      "followers": {
+        "facebook": 272,
+        "twitter": 2700,
+        "instagram": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5407710.jpg?t=1654490330"
+    },
+    {
+      "title": "Hot In Houston Now \u00bb Foodie News",
+      "feed_url": "https://hotinhoustonnow.com/category/foodie-news/feed/",
+      "website_url": "https://hotinhoustonnow.com/category/foodie-news/",
+      "description": "Hot In Houston Now publishes restaurants, cafes, food, and more news and updates for the foodie here. I'm Valerie Sweeten, a native Houstonian and founder/editor of Hot In Houston Now. I hope to make this your source for the most up-to-date news in food, fashion, theatre, fine arts, family fun, and more. I look forward to sharing some of the most incredible news about opportunities, talents, and people behind the scenes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5407707.jpg?t=1654503508"
+    },
+    {
+      "title": "Houston Food Explorers",
+      "feed_url": "http://www.houstonfoodexplorers.com/feeds/posts/default",
+      "website_url": "http://www.houstonfoodexplorers.com/",
+      "description": "The primary intent of the Houston Food Explorers Blog is to find and report on the Houston food scene: dining, cooking, markets, etc.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5407706.jpg?t=1654516477"
+    },
+    {
+      "title": "Adam's Messy Kitchen",
+      "feed_url": "https://adamsmessykitchen.com/feed/",
+      "website_url": "https://adamsmessykitchen.com/",
+      "description": "Hi, my name is Adam, and I like to make a mess in the kitchen. Well, I don't like to make a mess necessarily, I just like to cook a lot. I'm going to have to take a pretty neat picture for each recipe, because of stupid Pinterest and Instagram. But I'll also talk about the steps along the way where things might get a little hairy, and your significant other might wonder how exactly you're going to clean it all up.",
+      "followers": {
+        "facebook": 218
+      },
+      "image_url": "https://i1.feedspot.com/5407705.jpg?t=1654502893"
+    },
+    {
+      "title": "Wholly Plants",
+      "feed_url": "https://www.wholly-plants.com/feed/",
+      "website_url": "https://www.wholly-plants.com/",
+      "description": "We're sisters, we're Registered Dietitians and we eat plants.. wholly plants. We now know that there is more than enough research to support a whole-food, plant-based diet for disease prevention, longevity, and overall health. We enjoy learning about the endless benefits of whole food, plant-based diet as well as experiencing the rewards. As we continue to learn, we will continue to share with hopes of doing our part to promote the power of Wholly Plants.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 90,
+        "instagram": 836
+      },
+      "image_url": "https://i1.feedspot.com/5407703.jpg?t=1654490288"
+    },
+    {
+      "title": "The Hurried Hostess \u00bb Recipes",
+      "feed_url": "https://hurriedhostess.com/category/recipes/feed/",
+      "website_url": "https://hurriedhostess.com/category/recipes/",
+      "description": "The following section of The Hurried Hostess features delicious recipes. Hi there! Stacy here. I'm a wife, mom of two kids, and well-trained by 2 fur children. I want to share this amazing world of food with you and hopefully inspire you to get out there, explore new places, and if you can't, then make something new for dinner in your own kitchen!",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 218
+      },
+      "image_url": "https://i1.feedspot.com/5407718.jpg?t=1654503148"
+    },
+    {
+      "title": "Urban Eats Blog",
+      "feed_url": "http://feasturbaneats.com/feed",
+      "website_url": "http://feasturbaneats.com/urban-blog",
+      "description": "Catering to a modern flavor-savvy customer, we provide delicious gourmet comfy food, in a welcoming and social environment. Affordable. Artisan. Fresh.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 165,
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5407715.jpg?t=1654490353"
+    },
+    {
+      "title": "Finding Inspiration",
+      "feed_url": "http://findinginspirationinfood.com/feed/",
+      "website_url": "http://findinginspirationinfood.com/recipes/",
+      "description": "Hi! I'm Allie. Welcome to my world! Come follow me to see what I'm cooking in my kitchen, where I'm traveling to, and the yummy places I've found to chow down! My goal with this blog is to share my experiences in hopes to inspire others that you can find inspiration in food.",
+      "followers": {
+        "facebook": 375,
+        "twitter": 155
+      },
+      "image_url": "https://i1.feedspot.com/5407712.jpg?t=1654490338"
+    },
+    {
+      "title": "Brend New Me \u00bb Food",
+      "feed_url": "https://brendnew.com/category/food/feed/",
+      "website_url": "https://brendnew.com/category/food/",
+      "description": "Read easy to follow, healthy, tasty recipes here. Hi there, I am Brenda. I am a 25-year-old Houstonian and I am very passionate about sharing my hobbies. The focus of this blog is on food, fitness, and beauty. So to all my hairlistas, food lovers and workout fanatics, welcome home!!!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5407716.jpg?t=1654499864"
+    },
+    {
+      "title": "The Drunken Diva Blog",
+      "feed_url": "https://www.thedrunkendiva.com/1/feed",
+      "website_url": "https://www.thedrunkendiva.com/blog",
+      "description": "I'm a native Houstonian who likes to drink, eat, and travel. Follow me on my journey as I explore some of the areas best places to wet your whistle.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5407704.jpg?t=1654751274"
+    },
+    {
+      "title": "Houston Food Finder",
+      "feed_url": "https://houstonfoodfinder.com/feed/",
+      "website_url": "https://houstonfoodfinder.com/",
+      "description": "Houston Food Finder exclusively focuses on restaurants, bars, dishes, drinks, and the people who make them. We offer trustworthy articles, a conscientious advertising policy, and a clean, easy-to-read website with big, beautiful photos.",
+      "followers": {
+        "facebook": 15700,
+        "twitter": 2500,
+        "instagram": 20300
+      },
+      "image_url": "https://i1.feedspot.com/4819809.jpg?t=1610700185"
+    },
+    {
+      "title": "Secret Houston \u00bb Food & Drink",
+      "feed_url": "https://secrethouston.com/food-drink/feed/",
+      "website_url": "https://secrethouston.com/food-drink/",
+      "description": "Your complete guide to the Houston food and drink scene. From pop-up bars and cute caf\u00e9s to Michelin restaurants, we've got all your foodie needs covered. Secret Houston tracks down the best things to do in the city, from quirky restaurants and hidden bars to the best exhibitions, shows, and nightlife in Houston.",
+      "followers": {
+        "facebook": 183100,
+        "instagram": 448700
+      },
+      "image_url": "https://i1.feedspot.com/5407714.jpg?t=1654491030"
+    }
+  ]
+}

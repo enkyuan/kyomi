@@ -1,0 +1,79 @@
+{
+  "category": "UK Drug",
+  "source_url": "https://rss.feedspot.com/uk_drug_rss_feeds",
+  "feeds": [
+    {
+      "title": "News-Medical.Net | Drug Trial News",
+      "feed_url": "https://www.news-medical.net/category/Drug-Trial-News.aspx/feed/feed/feeds/posts/default",
+      "website_url": "https://www.news-medical.net/category/Drug-Trial-News.aspx",
+      "description": "Latest Medical News and Research from Around the World.",
+      "followers": {
+        "facebook": 254300,
+        "twitter": 16300
+      },
+      "image_url": "https://i1.feedspot.com/4908525.jpg?t=1614077229"
+    },
+    {
+      "title": "UK Addiction Treatment Centres",
+      "feed_url": "https://www.ukat.co.uk/blog/feed/",
+      "website_url": "https://www.ukat.co.uk/blog/",
+      "description": "UKAT have a long history of helping people get well. We care about the people we help and have had a great success in treating addictions and other related conditions. Find out more about addiction & treatment options here.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 647
+      },
+      "image_url": "https://i1.feedspot.com/4908500.jpg?t=1614077233"
+    },
+    {
+      "title": "Cansford Labs | The Drug and Alcohol Testing Blog",
+      "feed_url": "https://blog.cansfordlabs.co.uk/rss.xml",
+      "website_url": "https://blog.cansfordlabs.co.uk/",
+      "description": "The UK's leading experts in hair, blood, urine and oral fluids drug and alcohol testing. Discover the answers to all of your drug and alcohol testing questions and queries.",
+      "followers": {
+        "facebook": 406,
+        "twitter": 709
+      },
+      "image_url": "https://i1.feedspot.com/4908784.jpg?t=1614077238"
+    },
+    {
+      "title": "Rehab 4 Addiction Blog | Drug Rehab & Alcohol Rehab",
+      "feed_url": "https://www.rehab4addiction.co.uk/blog/feed",
+      "website_url": "https://www.rehab4addiction.co.uk/blog",
+      "description": "Rehab 4 Addiction is an addiction advice service offering Drug Rehab & Alcohol Rehab. Follow us to keep up with the latest drug and alcohol rehab news.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4908697.jpg?t=1614077243"
+    },
+    {
+      "title": "The Guardian - Drugs",
+      "feed_url": "https://www.theguardian.com/science/drugs/rss",
+      "website_url": "https://www.theguardian.com/science/drugs",
+      "description": "Latest news and features from theguardian.com, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4554285.jpg?t=1614077225"
+    },
+    {
+      "title": "Drug Discovery Today Magazine",
+      "feed_url": "http://www.drugdiscoverytoday.com/rss/news",
+      "website_url": "http://www.drugdiscoverytoday.com/",
+      "description": "Drug Discovery Today is a review journal, that covers the whole of the preclinical drug discovery process, from target identification and validation, through hit identification, lead identification, and optimization, through to candidate selection. The reviews are at the cutting edge of the science underpinning drug discovery, written by experts in their respective fields.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1835517.jpg?t=1706091979"
+    },
+    {
+      "title": "International Drug Policy Consortium | The IDPC Blog",
+      "feed_url": "https://idpc.net/blog.rss",
+      "website_url": "https://idpc.net/blog",
+      "description": "IDPC aims to promote objective and open debate on the effectiveness, direction and content of national and international drug policy and to advance constructive recommendations for policy makers that lead to the adoption of more humane and effective drug policies.",
+      "followers": {
+        "facebook": 18900,
+        "twitter": 19400
+      },
+      "image_url": "https://i1.feedspot.com/4908509.jpg?t=1614077219"
+    }
+  ]
+}

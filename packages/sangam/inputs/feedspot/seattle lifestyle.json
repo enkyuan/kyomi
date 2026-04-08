@@ -1,0 +1,346 @@
+{
+  "category": "Seattle Lifestyle",
+  "source_url": "https://rss.feedspot.com/seattle_lifestyle_rss_feeds",
+  "feeds": [
+    {
+      "title": "Seattle Met",
+      "feed_url": "https://www.seattlemet.com/feed",
+      "website_url": "https://www.seattlemet.com/",
+      "description": "Smart. Authoritative. Entertaining. With a bold design, eye-catching photography, and an editorial voice that's at once witty and in-the-know, Seattle Metropolitan is our city's monthly indispensable news, culture, and lifestyle magazine.",
+      "followers": {
+        "facebook": 66600,
+        "twitter": 183100,
+        "instagram": 82800
+      },
+      "image_url": "https://i1.feedspot.com/4827539.jpg?t=1610961608"
+    },
+    {
+      "title": "Seattleite",
+      "feed_url": "https://seattleite.com/feed/",
+      "website_url": "https://seattleite.com/",
+      "description": "With a pulse on the latest in dining, travel, fashion, entertainment, events, and more, Seattleite is the premiere lifestyle resource to deliver the latest news and happenings around the city, showcasing the best that the Puget Sound region and the Pacific Northwest has to offer. Seattleite is the lifestyle news site for Seattle's young professionals who are in-the-know and on-the-go.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 10400,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/1184965.jpg?t=1678356558"
+    },
+    {
+      "title": "EatSeattle",
+      "feed_url": "https://www.eatinseattle.com/feed/",
+      "website_url": "https://www.eatinseattle.com/",
+      "description": "EatSeattle is a food & lifestyle publication that showcases Seattle's best places to eat, drink and play.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 9600
+      },
+      "image_url": "https://i1.feedspot.com/4827991.jpg?t=1610962371"
+    },
+    {
+      "title": "Visit Seattle Blog",
+      "feed_url": "https://visitseattle.org/blog/feed/",
+      "website_url": "https://visitseattle.org/blog/",
+      "description": "Welcome to the official source for information on visiting Seattle, Washington. Lodging, entertainment, food/drink, sports, attractions & more.",
+      "followers": {
+        "facebook": 420700,
+        "twitter": 44100,
+        "instagram": 208400
+      },
+      "image_url": "https://i1.feedspot.com/4902040.jpg?t=1612877171"
+    },
+    {
+      "title": "Gal Pal",
+      "feed_url": "https://galpal.net/feed/",
+      "website_url": "https://galpal.net/",
+      "description": "Dive into a world of inspiration with Lisa Marinkovich, your go-to lifestyle expert! Uncover the latest trends in home decorating, design, wellness, family, travel, and fashion on her captivating blog. Lisa, the proud owner of Galpalgoods.com, has curated a unique store just for women. As seen on Q13 in Seattle and featured in the Seattle Times and PNW Magazine, Lisa brings her expertise to life. Join the vibrant Gal Pal community and explore more for a lifestyle that's as fabulous as you are! Click here for a dose of inspiration.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 14
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/4611978/page/5058228/logo_1704298057.png"
+    },
+    {
+      "title": "Beach Drive Blog",
+      "feed_url": "http://beachdriveblog.com/feed",
+      "website_url": "https://beachdriveblog.com/",
+      "description": "All about the West Seattle neighborhood around Beach Drive.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 423
+      },
+      "image_url": "https://i1.feedspot.com/4902050.jpg?t=1678355647"
+    },
+    {
+      "title": "Just A Tina Bit",
+      "feed_url": "https://justatinabit.com/feed",
+      "website_url": "https://justatinabit.com/",
+      "description": "I am Tina. Welcome to my Seattle-based blog, where I share Just A Tina Bit glimpse of my fashion diary! I'm a lover of all things girly chic and an avid believer that being stylish doesn't mean you need to break the bank. Join me on this fashionable journey!",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 44,
+        "instagram": 167900
+      },
+      "image_url": "https://i1.feedspot.com/5082872.jpg?t=1612877186"
+    },
+    {
+      "title": "The Emerald Palate Blog",
+      "feed_url": "https://www.emeraldpalate.com/feed/",
+      "website_url": "https://www.emeraldpalate.com/blog/",
+      "description": "The Emerald Palate is a lifestyle blog covering food, fashion, decor, and more. Discover what it's like living tastefully in Seattle and beyond.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 883,
+        "instagram": 94700
+      },
+      "image_url": "https://i1.feedspot.com/4360178.jpg?t=1612877190"
+    },
+    {
+      "title": "Avec Amber",
+      "feed_url": "https://avecamber.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://avecamber.blogspot.com/",
+      "description": "A Seattle lifestyle blogger sharing fashion trends and globetrotting adventures. Amber is a corporate professional by day and enjoys blogging her style and travels in her personal time.",
+      "followers": {
+        "facebook": 614,
+        "twitter": 1200,
+        "instagram": 22900
+      },
+      "image_url": "https://i1.feedspot.com/4902086.jpg?t=1646115335"
+    },
+    {
+      "title": "Seattle Magazine",
+      "feed_url": "https://seattlemag.com/feed/",
+      "website_url": "https://seattlemag.com/",
+      "description": "Through award-winning photography and stories, Seattle magazine at once celebrates the city's status as the birthplace of technology, innovation, and trends; the surrounding natural beauty; and the pioneering spirit that draws and keeps us all here. Seattle magazine is the 'owner's manual' for active, urban-minded people who live in the Seattle area and want to feel connected to their community.",
+      "followers": {
+        "facebook": 36200,
+        "twitter": 301100,
+        "instagram": 84400
+      },
+      "image_url": "https://i1.feedspot.com/5518173.jpg?t=1678355962"
+    },
+    {
+      "title": "Poplin Style Direction Blog",
+      "feed_url": "https://www.poplinstyle.com/blog?format=rss",
+      "website_url": "https://www.poplinstyle.com/blog",
+      "description": "Hi! I'm Mellicia Marx. I think clothes should be fun. Regardless of weight or income, the way you present yourself to the world is how you express yourself without words. I help you understand silhouettes that flatter your figure, pieces that are functional for your life, and retailers that cater to your individual style.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5518175.jpg?t=1678356030"
+    },
+    {
+      "title": "YouLookFab",
+      "feed_url": "https://feeds.feedburner.com/youlookfab",
+      "website_url": "https://youlookfab.com/",
+      "description": "I am Angie Cox and together with my husband Greg, I created this site to help you look fab, feel fabulous, and above all, have fun with fashion. I have more than 20 years of experience in the fashion industry. Having been a designer, a buyer and now a fashion stylist, I have a lot to say on the topics of fashion and style.",
+      "followers": {
+        "facebook": 163700,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/775601.jpg?t=1678356049"
+    },
+    {
+      "title": "An Emerald City Life",
+      "feed_url": "https://anemeraldcitylife.com/feed/",
+      "website_url": "https://anemeraldcitylife.com/",
+      "description": "Hi there! I'm Terumi Pong, and I'm a Seattle blogger and mom of twin boys. I love finding new stories about the places I live in and the places we visit and the products we try out and buy and I post my finds frequently.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 10100,
+        "instagram": 27100
+      },
+      "image_url": "https://i1.feedspot.com/5319444.jpg?t=1630913700"
+    },
+    {
+      "title": "Natalie in the Northwest",
+      "feed_url": "https://natalieinthenorthwest.com/feed/",
+      "website_url": "https://natalieinthenorthwest.com/category/lifestyle/",
+      "description": "I'm Natalie, a 30-something living in the beautiful Pacific Northwest with my husband, our baby girl, and our pup. I created this space in the hopes of building a community of like-minded individuals and hope to provide valuable advice as you would get from a best friend or sister. Just like you would get from that kind of close relationship, I feel that no topic is 'off-limits'. I share things from all aspects of my life from the cute shoes I'm shopping for to my struggles with hyperhidrosis and everything in between.",
+      "followers": {
+        "instagram": 902
+      },
+      "image_url": "https://i1.feedspot.com/5518177.jpg?t=1678356108"
+    },
+    {
+      "title": "Ceriselle.org",
+      "feed_url": "https://www.ceriselle.org/feed/",
+      "website_url": "https://www.ceriselle.org/",
+      "description": "Welcome to my blog! Hi, I'm Hayley! I'm a Seattle-based fashion and lifestyle blogger sharing my experiences as a British ex-pat in the United States. Can't wait to have you follow along!",
+      "followers": {
+        "facebook": 176,
+        "twitter": 2300,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/62971.jpg?t=1678356117"
+    },
+    {
+      "title": "Emma's Edition Blog",
+      "feed_url": "https://www.emmasedition.com/feed",
+      "website_url": "https://www.emmasedition.com/blog",
+      "description": "Hi, I'm Emma! I'm a Seattle Content Creator. As a fashion and lifestyle blogger, I share everything from fashion trends to try each season to content creation tips. I love sharing posing ideas and travel recommendations, as well as my journey as a content creator.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 1100,
+        "instagram": 58400
+      },
+      "image_url": "https://i1.feedspot.com/5518180.jpg?t=1678356000"
+    },
+    {
+      "title": "Jojotastic",
+      "feed_url": "https://jojotastic.com/feed/",
+      "website_url": "https://jojotastic.com/lifestyle/",
+      "description": "Joanna Hawley-McBride is a Pacific Northwest digital influencer with a huge heart and a work-in-progress home. With a background in textile design and an eye for beautiful things, she created Jojotastic, a lifestyle blog focused on interior styling, finding the best pair of underwear through #UnderwearThesis, and empowering women to explore nature - all in her signature unfiltered style.",
+      "followers": {
+        "facebook": 6800,
+        "instagram": 126800
+      },
+      "image_url": "https://i1.feedspot.com/5518179.jpg?t=1678355994"
+    },
+    {
+      "title": "Marcie in Mommyland",
+      "feed_url": "https://www.marcieinmommyland.com/feed/",
+      "website_url": "https://www.marcieinmommyland.com/",
+      "description": "Welcome to Marcie in Mommyland. I started this blog because people are always telling me I'm so 'brave' for traveling with a baby or toddler and they want to know how I do it. The purpose of this blog is to share some of the tips and tricks that we've learned on our adventures so that you can set yourself up for success!",
+      "followers": {
+        "facebook": 17500,
+        "twitter": 1600,
+        "instagram": 10500
+      },
+      "image_url": "https://i1.feedspot.com/5319434.jpg?t=1630913004"
+    },
+    {
+      "title": "Kathryn Coffman Blog",
+      "feed_url": "https://kathryncoffman.com/blog?format=rss",
+      "website_url": "https://kathryncoffman.com/blog",
+      "description": "I'm a Pacific Northwest vlogger, blogger, and business owner. This is my personal space for all my fave things: food, drag, plus-size fashion, PNW travel, and home. I like to think I hit the jackpot being born Latinx and queer and aim to live vibrantly and heart-centered in all that I do.",
+      "followers": {
+        "instagram": 941
+      },
+      "image_url": "https://i1.feedspot.com/5518174.jpg?t=1678359632"
+    },
+    {
+      "title": "The Perfect Thing",
+      "feed_url": "https://www.theperfectthing.me/blog-feed.xml",
+      "website_url": "https://www.theperfectthing.me/",
+      "description": "Hello, my name is Caroline Gabbert, and welcome to The Perfect Thing! The Perfect Thing is a lifestyle blog originally based in Seattle, WA, and Los Angeles, CA. I hope to connect with individuals in a fun and inspiring way through my content on fashion, food, and travel.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 410300,
+        "instagram": 818600
+      },
+      "image_url": "https://i1.feedspot.com/5518178.jpg?t=1678356435"
+    },
+    {
+      "title": "Party til Dawn",
+      "feed_url": "https://partytildawnstyle.com/feed/",
+      "website_url": "https://partytildawnstyle.com/",
+      "description": "Dawn Parsons is the creator and stylist behind Party til Dawn, a lifestyle website focused on sharing inspiration for all the things that make our lives feel a little more styled, from your outfit of the day to home, recipes, and fitness.",
+      "followers": {
+        "facebook": 14300,
+        "instagram": 123300
+      },
+      "image_url": "https://i1.feedspot.com/5518248.jpg?t=1678356987"
+    },
+    {
+      "title": "I Am Style-ish",
+      "feed_url": "https://iamstyle-ish.com/feed",
+      "website_url": "https://iamstyle-ish.com/",
+      "description": "Hi there! I'm Tiffany and I live in Seattle with my husband and our two girls. As a small business owner and mom, I hope to inspire you here with my everyday fashion finds, how to decorate your home and how to live your best life as a busy mom!",
+      "followers": {
+        "facebook": 14400,
+        "twitter": 2200,
+        "instagram": 340700
+      },
+      "image_url": "https://i1.feedspot.com/4820113.jpg?t=1610693647"
+    },
+    {
+      "title": "Hey Pretty Thing",
+      "feed_url": "https://www.heyprettything.com/feed",
+      "website_url": "https://www.heyprettything.com/",
+      "description": "I'm Carolyn Yuen Marino. A lifestyle blog about personal style, fashion, food and drink, beauty, hair, makeup, and travel. In addition to blogging, I work full-time as a high school English teacher. For undergrad, I majored in English and Law, and I also received my Master in Teaching from the University of Washington.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 468,
+        "instagram": 17400
+      },
+      "image_url": "https://i1.feedspot.com/4746240.jpg?t=1612877178"
+    },
+    {
+      "title": "WhyToStop",
+      "feed_url": "https://whytostop.com/feed/",
+      "website_url": "https://whytostop.com/",
+      "description": "I am Rachna. This blog is based on my personal take on Fashion, beauty tips, travel ideas, lifestyle based posts(pregnancy, health, food, fitness, life, happiness and more). I am not an expert in any such field and have yet to discover my solid niche, henceforth, would love to share whatever I learn from my day to day activities, readings, and life experiences.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 597,
+        "instagram": 29900
+      },
+      "image_url": "https://i1.feedspot.com/4994673.jpg?t=1612877199"
+    },
+    {
+      "title": "Avec David Blog",
+      "feed_url": "https://www.avecdavid.com/blog?format=rss",
+      "website_url": "https://www.avecdavid.com/blog",
+      "description": "A destination for curious millennials to wonder, explore, ask, converse, learn, and share about all things mental health and wellness. We dive deep into both worlds - physical and emotional - covering topics that affect our entire wellbeing. Think: self care, therapy, relationships, food, home, beauty, and more.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5139045.jpg?t=1623763915"
+    },
+    {
+      "title": "Shaylyn Rae",
+      "feed_url": "https://www.shaylynrae.com/feed/",
+      "website_url": "https://www.shaylynrae.com/",
+      "description": "I'm Shay! I'm a designer, corgi lover, and wife blogging about fashion and Architecting buildings in the Northwest corner of the country.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 155,
+        "instagram": 10700
+      },
+      "image_url": "https://i1.feedspot.com/4902077.jpg?t=1612877250"
+    },
+    {
+      "title": "Hello Rigby",
+      "feed_url": "https://www.hellorigby.com/feed/",
+      "website_url": "https://www.hellorigby.com/",
+      "description": "Hello Rigby is a Seattle based fashion and beauty blog. Fashion doesn't have to be expensive! Look cheap on the chic with my style tips, attainable makeup looks, and easy to follow beauty tutorials for the everyday millennial woman.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 7800,
+        "instagram": 22600
+      },
+      "image_url": "https://i1.feedspot.com/4678911.jpg?t=1605105600"
+    },
+    {
+      "title": "I am the Maven",
+      "feed_url": "https://iamthemaven.com/feed/",
+      "website_url": "https://iamthemaven.com/",
+      "description": "Kerri Jablonski lives in Seattle WA with her husband, three kids, and house cats. What you'll find on this site are recipes we've enjoyed, movies we love, places we've been, the tech we've tinkered with, clothes we've worn, and more.",
+      "followers": {
+        "facebook": 10400,
+        "twitter": 80500,
+        "instagram": 5700
+      },
+      "image_url": "https://i1.feedspot.com/5518172.jpg?t=1678355957"
+    },
+    {
+      "title": "Little Tranquility",
+      "feed_url": "https://www.littletranquility.com/feed/",
+      "website_url": "https://www.littletranquility.com/",
+      "description": "Hi, I'm Amanda! I'm a Wisconsinite living in sunny Seattle, Washington. Little Tranquility is a place where I share my travels, photography, delicious food, bad jokes, and other musings.",
+      "followers": {
+        "facebook": 689,
+        "twitter": 489,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4902046.jpg?t=1646115137"
+    },
+    {
+      "title": "Living in Greater Seattle Blog",
+      "feed_url": "https://livingingreaterseattle.com/feed",
+      "website_url": "https://livingingreaterseattle.com/blog",
+      "description": "I have been in the real estate business for over fifteen years. This includes Property Management, Financial Health & Wellness, Investment Strategies, and then for the last several years a Seattle Relocation Specialist. It would be my honor to help as many people as I can find their next home or investment property!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5518171.jpg?t=1678356479"
+    }
+  ]
+}

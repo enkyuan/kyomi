@@ -1,0 +1,392 @@
+{
+  "category": "Seattle",
+  "source_url": "https://rss.feedspot.com/seattle_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Stranger",
+      "feed_url": "https://www.thestranger.com/seattle/Rss.xml",
+      "website_url": "https://www.thestranger.com/",
+      "description": "The Stranger, Seattle's Only Newspaper: Covering Seattle news, politics, music, film, and arts; plus movie times, club calendars, restaurant listings, forums, blogs, and Savage Love.",
+      "followers": {
+        "facebook": 122400,
+        "twitter": 137600,
+        "instagram": 127800
+      },
+      "image_url": "https://i1.feedspot.com/4828006.jpg?t=1610961602"
+    },
+    {
+      "title": "Seattle Met",
+      "feed_url": "https://www.seattlemet.com/feed",
+      "website_url": "https://www.seattlemet.com/",
+      "description": "Smart. Authoritative. Entertaining. With a bold design, eye-catching photography, and an editorial voice that's at once witty and in-the-know, Seattle Metropolitan is our city's monthly indispensable news, culture, and lifestyle magazine.",
+      "followers": {
+        "facebook": 66600,
+        "twitter": 183100,
+        "instagram": 82800
+      },
+      "image_url": "https://i1.feedspot.com/4827539.jpg?t=1610961608"
+    },
+    {
+      "title": "Eater Seattle",
+      "feed_url": "https://seattle.eater.com/rss/index.xml",
+      "website_url": "https://seattle.eater.com/",
+      "description": "Eater is the one-stop shop for food and restaurant obsessives, coming to you from 24 cities across North America with new adventures around the world. The mission is to bring the most delicious food content ever with features, explainers, animations, recipes, and much more.",
+      "followers": {
+        "facebook": 41200,
+        "twitter": 23600,
+        "instagram": 74800
+      },
+      "image_url": "https://i1.feedspot.com/4827521.jpg?t=1610961618"
+    },
+    {
+      "title": "West Seattle Blog",
+      "feed_url": "https://westseattleblog.com/feed/",
+      "website_url": "https://westseattleblog.com/",
+      "description": "Get West Seattle news, information, and discussion, updated multiple times daily, 24/7.",
+      "followers": {
+        "facebook": 37800,
+        "twitter": 67900
+      },
+      "image_url": "https://i1.feedspot.com/621.jpg?t=1610961623"
+    },
+    {
+      "title": "Seattle Art Museum Blog",
+      "feed_url": "https://samblog.seattleartmuseum.org/feed/",
+      "website_url": "https://samblog.seattleartmuseum.org/",
+      "description": "Seattle Art Museum is connecting Art to Life one blog post at a time. Learn more about our global collection, local community, and renowned exhibitions from anywhere in the world with the Seattle Art Museum Blog.",
+      "followers": {
+        "facebook": 132600,
+        "twitter": 75700,
+        "instagram": 116700
+      },
+      "image_url": "https://i1.feedspot.com/4571881.jpg?t=1610961633"
+    },
+    {
+      "title": "CHS Capitol Hill Seattle",
+      "feed_url": "https://www.capitolhillseattle.com/feed/",
+      "website_url": "https://www.capitolhillseattle.com/",
+      "description": "Community News For All the Hill. CHS Capitol Hill Seattle is a community site dedicated to the Capitol Hill neighborhood in lovely Seattle, Washington USA. We started as an independent, place-focused blog in January 2006 and have grown to incorporate voices from all over the Hill.",
+      "followers": {
+        "facebook": 20700,
+        "twitter": 54500
+      },
+      "image_url": "https://i1.feedspot.com/1390234.jpg?t=1610961647"
+    },
+    {
+      "title": "My Ballard",
+      "feed_url": "https://www.myballard.com/feed/",
+      "website_url": "https://www.myballard.com/",
+      "description": "News, events and restaurants for Seattle's Ballard neighborhood.",
+      "followers": {
+        "facebook": 26600,
+        "twitter": 24400,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/1088882.jpg?t=1610961862"
+    },
+    {
+      "title": "Seattle Transit Blog | Covering Transit and Land Use in the Greater Seattle Area",
+      "feed_url": "https://seattletransitblog.com/feed/",
+      "website_url": "https://seattletransitblog.com/",
+      "description": "Seattle Transit Blog is an independent, award-winning publication covering transit and land use issues in Seattle and the Puget Sound area since 2007.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 24600
+      },
+      "image_url": "https://i1.feedspot.com/4701311.jpg?t=1610961886"
+    },
+    {
+      "title": "Seattle Bike Blog",
+      "feed_url": "https://www.seattlebikeblog.com/feed/",
+      "website_url": "https://www.seattlebikeblog.com/",
+      "description": "Seattle Bike Blog is independent pedal-powered news and opinion since 2010. The Seattle Bike Blog is a daily, comprehensive look at bicycling in Seattle.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 14400
+      },
+      "image_url": "https://i1.feedspot.com/4827626.jpg?t=1610961891"
+    },
+    {
+      "title": "Seattle Opera Blog",
+      "feed_url": "http://feeds.feedburner.com/SeattleOperaBlog",
+      "website_url": "https://www.seattleoperablog.com/",
+      "description": "Seattle Opera serves the PNW with music, theater, and storytelling in McCaw Hall and beyond.",
+      "followers": {
+        "facebook": 92300,
+        "twitter": 25400,
+        "instagram": 30500
+      },
+      "image_url": "https://i1.feedspot.com/1184666.jpg?t=1610962355"
+    },
+    {
+      "title": "Seattleite",
+      "feed_url": "https://seattleite.com/feed/",
+      "website_url": "https://seattleite.com/",
+      "description": "With a pulse on the latest in dining, travel, fashion, entertainment, events, and more, Seattleite is the premiere lifestyle resource to deliver the latest news and happenings around the city, showcasing the best that the Puget Sound region and the Pacific Northwest has to offer. Seattleite is the lifestyle news site for Seattle's young professionals who are in-the-know and on-the-go.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 10400,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/1184965.jpg?t=1678356558"
+    },
+    {
+      "title": "Urban Living Blog",
+      "feed_url": "https://www.urbnlivn.com/blog/feed/",
+      "website_url": "https://www.urbnlivn.com/blog/",
+      "description": "Read the Urban Living blog for weekly wrap ups on listings, new home listings, and more. Urban Living started in 2006 as a blog about Seattle real estate with an emphasis on lofts, condos, new construction, and midcentury moderns. It is a boutique real estate brokerage helping clients in Seattle and on the Eastside buy amazing homes.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1500,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4827692.jpg?t=1639140447"
+    },
+    {
+      "title": "EatSeattle",
+      "feed_url": "https://www.eatinseattle.com/feed/",
+      "website_url": "https://www.eatinseattle.com/",
+      "description": "EatSeattle is a food & lifestyle publication that showcases Seattle's best places to eat, drink and play.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 9600
+      },
+      "image_url": "https://i1.feedspot.com/4827991.jpg?t=1610962371"
+    },
+    {
+      "title": "Explore Washington State",
+      "feed_url": "https://explorewashingtonstate.com/feed/",
+      "website_url": "https://explorewashingtonstate.com/",
+      "description": "Explore Washington State. Experience Washington from the cities to the mountains. Things to do, places to see, events to attend, and more!",
+      "followers": {
+        "facebook": 19300
+      },
+      "image_url": "https://i1.feedspot.com/5243442.jpg?t=1612869258"
+    },
+    {
+      "title": "350 Seattle",
+      "feed_url": "https://350seattle.org/feed/",
+      "website_url": "https://350seattle.org/",
+      "description": "350 Seattle is building a passionate grassroots movement for climate justice. We're a grassroots organization passionate about climate action and ecological justice. Everyone has skills and energy that we need.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4827973.jpg?t=1610962387"
+    },
+    {
+      "title": "Eat Seattle Blog",
+      "feed_url": "https://www.eatseattlefoodblog.com/eat-seattle?format=RSS",
+      "website_url": "https://www.eatseattlefoodblog.com/eat-seattle",
+      "description": "Eat Seattle, based in Seattle's iconic Pike Place Market, offers chef-guided food tours. We connect you to the farmers, fishermen, and producers that bring the Pacific NW to our tables. Led by founder and Cordon Bleu Paris graduate, Chef Liz Philpot, we are a team of chefs passionate about uniting both travelers and locals alike, cooking, tasting, and learning about seasonal food.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5053263.jpg?t=1677477838"
+    },
+    {
+      "title": "Vcare Corporation",
+      "feed_url": "https://www.vcarecorporation.com/blog.php/feed",
+      "website_url": "https://www.vcarecorporation.com/blog.php",
+      "description": "Vcare Corporation offers high quality customer database & call center services that can be used to organize a large volume of customer-generated data.",
+      "followers": {
+        "facebook": 658,
+        "twitter": 703
+      },
+      "image_url": "https://i1.feedspot.com/5040438.jpg?t=1610961880"
+    },
+    {
+      "title": "Seattle DogSpot",
+      "feed_url": "https://www.seattledogspot.com/feed/",
+      "website_url": "https://www.seattledogspot.com/",
+      "description": "Seattle DogSpot is a locally focused website that is the most comprehensive resource and online community for all things dog in Seattle.",
+      "followers": {
+        "facebook": 12900,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4476666.jpg?t=1602676604"
+    },
+    {
+      "title": "Seattle Bubble",
+      "feed_url": "http://feeds.feedburner.com/SeattleBubble",
+      "website_url": "https://seattlebubble.com/blog/",
+      "description": "Local real estate news, statistics, and commentary without the sales spin.",
+      "followers": {
+        "facebook": 708,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/376233.jpg?t=1610962346"
+    },
+    {
+      "title": "Love Licton | The Licton Springs Blog",
+      "feed_url": "https://lovelicton.com/feeds/all.rss.xml",
+      "website_url": "https://lovelicton.com/",
+      "description": "LoveLicton is a blog dedicated to everything happening in and around the Licton Springs neighborhood in Seattle, WA.",
+      "followers": {
+        "facebook": 205,
+        "twitter": 44
+      },
+      "image_url": "https://i1.feedspot.com/4921882.jpg?t=1610962399"
+    },
+    {
+      "title": "Romney S Humphrey",
+      "feed_url": "https://romneyshumphrey.com/feed/",
+      "website_url": "https://romneyshumphrey.com/blog/",
+      "description": "Seattle-based, author, playwright, new media producer/writer. Baby boomer 'chick lit' specialist. Just published: The Math Problem (e-book and soft cover)",
+      "followers": {
+        "twitter": 11
+      },
+      "image_url": "https://i1.feedspot.com/4981361.jpg?t=1610962435"
+    },
+    {
+      "title": "Town Construction and Development",
+      "feed_url": "https://townconstructionanddevelopment.com/feed/",
+      "website_url": "https://townconstructionanddevelopment.com/blogs/",
+      "description": "We strive to give our visitors helpful information on 'Custom Remodeling Ideas' for your home and share stories about construction renovation projects that may help you improve your own home for better designs, functionality and quality design/build ideas. We specialize in all custom home building and creative architectural design build solutions in the Seattle and Bellevue areas. We are your high end residential custom home builder.",
+      "followers": {
+        "facebook": 137
+      },
+      "image_url": "https://i1.feedspot.com/5033212.jpg?t=1610962413"
+    },
+    {
+      "title": "Discover the Eastside",
+      "feed_url": "https://discovertheeastside.com/feed/",
+      "website_url": "https://discovertheeastside.com/",
+      "description": "Discover the Eastside is a family-owned website, dedicated to creating the ultimate guide to Seattle's Eastside for residents, visitors, and those looking to move to the area. We write a variety of informational and opinion pieces focused primarily on five of the largest cities of East King County: Redmond, Bellevue, Kirkland, Sammamish, and Issaquah; but we love sharing about surrounding communities such as Woodinville and those in the Snoqualmie Valley as well!",
+      "followers": {
+        "facebook": 806
+      },
+      "image_url": "https://i1.feedspot.com/5221614.jpg?t=1606827501"
+    },
+    {
+      "title": "Curbed Seattle",
+      "feed_url": "https://seattle.curbed.com/rss/index.xml",
+      "website_url": "https://seattle.curbed.com/",
+      "description": "Every aspect of living in Seattle, for people who care about their city, their streets, and their homes.",
+      "followers": {
+        "facebook": 7700,
+        "instagram": 200500
+      },
+      "image_url": "https://i1.feedspot.com/4827525.jpg?t=1610962562"
+    },
+    {
+      "title": "Visit Seattle",
+      "feed_url": "https://visitseattle.org/feed/",
+      "website_url": "https://visitseattle.org/",
+      "description": "Welcome to the official source for information on visiting Seattle, Washington. Lodging, entertainment, food/drink, sports, attractions & more.",
+      "followers": {
+        "facebook": 420700,
+        "twitter": 44100,
+        "instagram": 208400
+      },
+      "image_url": "https://i1.feedspot.com/4827395.jpg?t=1610961613"
+    },
+    {
+      "title": "Field Gulls",
+      "feed_url": "https://www.fieldgulls.com/rss/index.xml",
+      "website_url": "https://www.fieldgulls.com/",
+      "description": "Your best source for quality Seattle Seahawks news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 34400,
+        "twitter": 65600
+      },
+      "image_url": "https://i1.feedspot.com/4755795.jpg?t=1607075621"
+    },
+    {
+      "title": "Lookout Landing",
+      "feed_url": "https://www.lookoutlanding.com/rss/index.xml",
+      "website_url": "https://www.lookoutlanding.com/",
+      "description": "Your best source for quality Seattle Mariners news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 43900,
+        "twitter": 37100
+      },
+      "image_url": "https://i1.feedspot.com/4827490.jpg?t=1610961642"
+    },
+    {
+      "title": "12th Man Rising",
+      "feed_url": "https://12thmanrising.com/feed/",
+      "website_url": "https://12thmanrising.com/",
+      "description": "The ultimate home for Seattle Seahawks news, rumors, updates, trades, signings, injuries, commentary, analysis, and more.",
+      "followers": {
+        "facebook": 15800,
+        "twitter": 6600,
+        "instagram": 38900
+      },
+      "image_url": "https://i1.feedspot.com/4757091.jpg?t=1610961874"
+    },
+    {
+      "title": "SoDo Mojo",
+      "feed_url": "https://sodomojo.com/feed/",
+      "website_url": "https://sodomojo.com/",
+      "description": "The ultimate home for Seattle Mariners news, rumors, updates, trades, signings, injuries, commentary, analysis, and more!",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 8500
+      },
+      "image_url": "https://i1.feedspot.com/4827681.jpg?t=1610961903"
+    },
+    {
+      "title": "Pan Pacific Seattle",
+      "feed_url": "https://www.panpacificseattle.com/feed/",
+      "website_url": "https://seattlecondoreview.com/",
+      "description": "Pan Pacific Seattle is a four-star Seattle luxury hotel that welcomes guests with exceptional hospitality and a distinct, Pacific Northwest vibe.",
+      "followers": {
+        "facebook": 14100,
+        "twitter": 1100,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4827949.jpg?t=1610962360"
+    },
+    {
+      "title": "Seattle Condo Blog",
+      "feed_url": "https://feeds.feedburner.com/Seattle-Condos",
+      "website_url": "https://seattlecondoreview.com/",
+      "description": "A guide to Seattle condos and Downtown Seattle condos for sale. Longest running Seattle condo blog since 2006.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 313
+      },
+      "image_url": "https://i1.feedspot.com/1184514.jpg?t=1610962381"
+    },
+    {
+      "title": "Seattle Art Blog",
+      "feed_url": "http://www.seattleartblog.com/feed/",
+      "website_url": "http://www.seattleartblog.com/",
+      "description": "The latest art gallery and museum news in Seattle and Western Washington including Seattle First Thursday, a weekly calendar of art walks, art festivals, and visual art events",
+      "followers": {
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/911249.jpg?t=1610962395"
+    },
+    {
+      "title": "Seattle Real Estate",
+      "feed_url": "http://seattleandrealestate.com/feed/",
+      "website_url": "http://seattleandrealestate.com/",
+      "description": "This Seattle Real Estate blog is meant to give an overview of all types of Seattle real estate including residential sales and rentals, commercial sales and leasing, and property management.",
+      "followers": {
+        "facebook": 962
+      },
+      "image_url": "https://i1.feedspot.com/4828011.jpg?t=1610962478"
+    },
+    {
+      "title": "McAuley Homes | Greater Seattle Real Estate",
+      "feed_url": "https://www.mcauleyhomes.com/feed/",
+      "website_url": "http://raincityguide.com/",
+      "description": "Find real estate in Greater Seattle. Use McAuley Homes search engine to find Greater Seattle real estate by price, bedrooms, and more. We have every listing from every real estate company in the Greater Seattle area.",
+      "followers": {
+        "facebook": 382
+      },
+      "image_url": "https://i1.feedspot.com/4828021.jpg?t=1610962488"
+    },
+    {
+      "title": "Rain City Guide",
+      "feed_url": "http://raincityguide.com/feed/atom/",
+      "website_url": "http://raincityguide.com/",
+      "description": "Seattle's original real estate blog. Talking online real estate since March 2005.",
+      "followers": {
+        "facebook": 602,
+        "twitter": 748
+      },
+      "image_url": "https://i1.feedspot.com/365459.jpg?t=1610962499"
+    }
+  ]
+}

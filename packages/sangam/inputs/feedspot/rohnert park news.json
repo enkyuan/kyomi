@@ -1,0 +1,18 @@
+{
+  "category": "Rohnert Park News",
+  "source_url": "https://rss.feedspot.com/rohnert_park_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "KSRO \u00bb Rohnert Park",
+      "feed_url": "https://www.ksro.com/tag/rohnert-park/feed/",
+      "website_url": "https://www.ksro.com/tag/rohnert-park/",
+      "description": "Find the latest breaking news, updates, entertainment, sports and more about Rohnert Park city and its surrounding areas at KSRO.",
+      "followers": {
+        "facebook": 12900,
+        "twitter": 4700,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5158049.jpg?t=1591009487"
+    }
+  ]
+}

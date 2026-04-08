@@ -1,0 +1,793 @@
+{
+  "category": "Whiskey",
+  "source_url": "https://rss.feedspot.com/whiskey_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Whiskey Wash",
+      "feed_url": "https://thewhiskeywash.com/feed/",
+      "website_url": "https://thewhiskeywash.com/",
+      "description": "Your one stop source for tasting notes, reviews and ratings of Bourbons, Scotches and Whiskies of the world. The Whiskey Wash was born to keep pace with the explosion of energy, innovation, and to track the rise of, the new whiskey lifestyle.",
+      "followers": {
+        "facebook": 82100,
+        "twitter": 5300,
+        "instagram": 17900
+      },
+      "image_url": "https://i1.feedspot.com/4585044.jpg?t=1614597848"
+    },
+    {
+      "title": "Whiskyfun",
+      "feed_url": "https://www.whiskyfun.com/whatsnew.xml",
+      "website_url": "https://www.whiskyfun.com/",
+      "description": "Daily single malt whisky and whiskey blog and tasting notes, various whisky information and musical tips plus thousands of whisky ratings by Malt Maniacs' Serge",
+      "followers": {
+        "facebook": 16200,
+        "twitter": 8700,
+        "instagram": 7100
+      },
+      "image_url": "https://i1.feedspot.com/328322.jpg?t=1614597872"
+    },
+    {
+      "title": "WhiskyNotes",
+      "feed_url": "https://www.whiskynotes.be/feed/",
+      "website_url": "https://www.whiskynotes.be/",
+      "description": "WhiskyNotes, an award-winning blog about whisky, with tasting notes, reviews, news and information. Scotch, bourbon, Irish whiskey and other types of whiskey.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 8700
+      },
+      "image_url": "https://i1.feedspot.com/4545969.jpg?t=1614597858"
+    },
+    {
+      "title": "Master of Malt Blog",
+      "feed_url": "https://www.masterofmalt.com/blog/feed/",
+      "website_url": "https://www.masterofmalt.com/blog/",
+      "description": "Master of Malt are Sa group of dedicated individuals trying to bring ever more delightful drink experiences to ever more people. There are lots of drink experiences that we can deliver - trying new things, learning about distilleries, choosing a perfect gift for a loved one, learning how to make a cocktail - and we're here to help make that happen, in the most delightful way imaginable. We are here to shorten the distance to amazing drink experiences.",
+      "followers": {
+        "facebook": 13800,
+        "twitter": 52500,
+        "instagram": 208100
+      },
+      "image_url": "https://i1.feedspot.com/4909100.jpg?t=1614145130"
+    },
+    {
+      "title": "The Whiskey Reviewer",
+      "feed_url": "https://whiskeyreviewer.com/feed/",
+      "website_url": "https://whiskeyreviewer.com/",
+      "description": "The Whiskey Reviewer is a web magazine covering the world of whiskey. Members of our staff are published journalists, spirits judges at conventions and conferences, and award-winning authors. Find more about the world of whiskey, brands, companies, reviews, news, recipes and more!",
+      "followers": {
+        "twitter": 1,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4545989.jpg?t=1614597989"
+    },
+    {
+      "title": "Amongst the Whiskey",
+      "feed_url": "https://www.amongstthewhiskey.com/blog-feed.xml",
+      "website_url": "https://www.amongstthewhiskey.com/",
+      "description": "Tune into a barrel full of whiskey reviews, history, and discussion! Bourbon, rye, and Irish whiskey primarily with a growing interest in exploring malts. The authors of Amongst The Whiskey strive to present honest whiskey reviews that come in many forms: neat pour notes, head-to-head competitions, and even blind tastings. Come read about your next favorite drink!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7257398.jpg?t=1708531958"
+    },
+    {
+      "title": "Bottle Raiders",
+      "feed_url": "https://bottleraiders.com/category/whiskey/feed/",
+      "website_url": "https://bottleraiders.com/whiskey/",
+      "description": "Comprehensive reviews and ratings for both whiskey aficionados and novices from Bottle Raiders along with the latest news, insights and more about whiskey on the website. Bottle Raiders is a one stop shop for whiskey reviews and coverage.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 2300,
+        "instagram": 108600
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/7028533/page/5452544/logo_1741047515.png"
+    },
+    {
+      "title": "Malt - Scotch & World Whisky Reviews, Features & News.",
+      "feed_url": "https://malt-review.com/feed/",
+      "website_url": "https://malt-review.com/",
+      "description": "Malt is a whisky blog dedicated to finding top Scotch and global whisky brands. There are plenty of whisky reviews, news and features.",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 4800,
+        "instagram": 9800
+      },
+      "image_url": "https://i1.feedspot.com/4549039.jpg?t=1614597894"
+    },
+    {
+      "title": "Drinkhacker > Whiskey",
+      "feed_url": "https://www.drinkhacker.com/category/whiskey/feed/",
+      "website_url": "https://www.drinkhacker.com/category/whiskey/",
+      "description": "The Essential Site for the Discriminating Whiskey Drinkers.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 2900,
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/1462673.jpg?t=1647237938"
+    },
+    {
+      "title": "& Viski",
+      "feed_url": "https://veviski.com/feed/",
+      "website_url": "https://veviski.com/",
+      "description": "veviski, the one of the most popular whisky blogs in Turkey, aims to explore and share the whisky culture with all enthusiasts. In veviski, you may find latest whisky news, discussions, Whisky 101 articles, fun facts and tasting notes. You may also explore different whisky pairings, whisky bars and events.",
+      "followers": {
+        "facebook": 2000,
+        "instagram": 1
+      },
+      "image_url": "https://i1.feedspot.com/4899565.jpg?t=1614598050"
+    },
+    {
+      "title": "GreatDrams",
+      "feed_url": "https://greatdrams.com/feed/",
+      "website_url": "https://greatdrams.com/category/whisky-in-the-press/",
+      "description": "Discover the best whiskies from around the world, browse and build your perfect cabinet. With hundreds of bottles featured. We're all about the best whiskies from around the world, something everyone will enjoy.",
+      "followers": {
+        "facebook": 12800,
+        "twitter": 5300,
+        "instagram": 164
+      },
+      "image_url": "https://i1.feedspot.com/4546714.jpg?t=1614145114"
+    },
+    {
+      "title": "TopWhiskies Blog",
+      "feed_url": "https://topwhiskies.com/blogs/whisky-blog.atom",
+      "website_url": "https://topwhiskies.com/blogs/whisky-blog",
+      "description": "A whisky blog and guide to help you understand whiskies: from single malt scotch, to cocktails, to world whiskey and bourbon.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 6300,
+        "instagram": 94900
+      },
+      "image_url": "https://i1.feedspot.com/4918905.jpg?t=1666859075"
+    },
+    {
+      "title": "DramStreet",
+      "feed_url": "https://dramstreet.com/feed/",
+      "website_url": "https://dramstreet.com/",
+      "description": "Dram Street is so excited you have decided to join them on their spirit-themed, Indiana Jones-style, treasure hunt for all liquids born from a cask. They are a team of spirits enthusiasts whose taste and knowledge within the spirit field range from the enthusiastic amateur to the savvy connoisseur. Visit their blog which is your go-to source for the latest alcohol prices, news, online sources, articles, reviews, and more.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 274,
+        "instagram": 6100
+      },
+      "image_url": "https://i1.feedspot.com/5165027.jpg?t=1614598054"
+    },
+    {
+      "title": "WhiskyCast - Podcast",
+      "feed_url": "https://whiskycast.com/category/stories/feed/",
+      "website_url": "https://whiskycast.com/category/stories/",
+      "description": "WhiskyCast is cask-strength conversation featuring news and interviews on whiskies from around the world with leading distillers and experts.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 17100
+      },
+      "image_url": "https://i1.feedspot.com/4974548.jpg?t=1614597879"
+    },
+    {
+      "title": "Bourbon Guy",
+      "feed_url": "https://www.bourbonguy.com/blog?format=rss",
+      "website_url": "https://www.bourbonguy.com/",
+      "description": "I'm Arok. I write about, think about, speak about, research & drink: bourbon. This is a bourbon blog with more than tasting notes.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5067392.jpg?t=1652176200"
+    },
+    {
+      "title": "Bourbon Inspector",
+      "feed_url": "https://bourboninspector.com/feed/",
+      "website_url": "https://bourboninspector.com/",
+      "description": "Covers bourbon reviews, best-of lists based on prices and taste, recommendations, and history behind bourbon for aficionados.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5311908.jpg?t=1647239369"
+    },
+    {
+      "title": "All American Whiskey",
+      "feed_url": "https://allamericanwhiskey.com/feed/",
+      "website_url": "https://allamericanwhiskey.com/",
+      "description": "All American Whiskey is dedicated to telling the stories behind the little whiskeys of America. We publish stories about the people who make whiskey, the whiskey they make, the people who pour it, and the people who drink it.",
+      "followers": {
+        "facebook": 43,
+        "twitter": 162
+      },
+      "image_url": "https://i1.feedspot.com/5427367.jpg"
+    },
+    {
+      "title": "Whiskey Blogger",
+      "feed_url": "https://whiskeyblogger.com/blog/feed/",
+      "website_url": "https://whiskeyblogger.com/",
+      "description": "Award Winning International Whiskey Blogger Stuart McNamara Blogs about Whisky and Whiskey.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5084484.jpg?t=1632751356"
+    },
+    {
+      "title": "The Pot Still Whiskey Blog",
+      "feed_url": "https://blog.thepotstill.irish/rss.xml",
+      "website_url": "https://blog.thepotstill.irish/",
+      "description": "The Pot Still, your source for tasting notes, reviews, and ratings of Irish, Bourbons, Scotches, and Whiskeys of the world. The Pot Still was created to follow the explosion of energy, innovation, and to track the rise of the new whiskey lifestyle, especially the Revival of the Irish Whiskey Industry.",
+      "followers": {
+        "facebook": 257,
+        "twitter": 589,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5285035.jpg?t=1622098486"
+    },
+    {
+      "title": "Noel on Whisky",
+      "feed_url": "https://noelonwhisky.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://noelonwhisky.blogspot.com/",
+      "description": "Keep up with articles from Noel on Whisky.",
+      "followers": {
+        "twitter": 56
+      },
+      "image_url": "https://i1.feedspot.com/5080370.jpg?t=1614599742"
+    },
+    {
+      "title": "Whisky and Wisdom",
+      "feed_url": "https://www.whiskyandwisdom.com/feed/",
+      "website_url": "https://www.whiskyandwisdom.com/",
+      "description": "Whisky and Wisdom is a resource and whisky blog for drinkers and enthusiasts worldwide. Get editorials, distillery feature pieces, reviews, news, and whisky humor.",
+      "followers": {
+        "twitter": 1400,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5279854.jpg?t=1620812744"
+    },
+    {
+      "title": "Words of Whisky",
+      "feed_url": "https://wordsofwhisky.com/feed/",
+      "website_url": "https://wordsofwhisky.com/",
+      "description": "Words of Whisky is a blog filled with tasting notes of (single) malt whisky, commentaries and travel reports on Scotland and it's distilleries.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4789985.jpg?t=1614598073"
+    },
+    {
+      "title": "WhiskyBoys",
+      "feed_url": "https://whiskyboys.com/feed/",
+      "website_url": "https://whiskyboys.com/",
+      "description": "We're Jim & Nicola, whisky bloggers & writers based in Glasgow, Scotland. We specialise in whisky reviews & tastings. Find news, tastings & reviews on all things Whisky, from Scotch to Japanese.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 4200,
+        "instagram": 919
+      },
+      "image_url": "https://i1.feedspot.com/4546675.jpg?t=1639997647"
+    },
+    {
+      "title": "Whisky Critic",
+      "feed_url": "https://feeds.feedburner.com/WhiskyCritic",
+      "website_url": "https://whiskycritic.com/",
+      "description": "Editorial and aficionado discussions of Whisky, Bourbon, Cognac, Craft Beer, Cigars and the good life.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/454351.jpg?t=1647241419"
+    },
+    {
+      "title": "Time for Whisky.com",
+      "feed_url": "http://www.timeforwhisky.com/feeds/posts/default",
+      "website_url": "http://www.timeforwhisky.com/",
+      "description": "Hong Kong & Australian whisky blog - tastings, whisky bars, events, Glenfiddich, Yamazaki, Suntory, Karuizawa and whiskey - casual and dram good fun!",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 1600,
+        "instagram": 7200
+      },
+      "image_url": "https://i1.feedspot.com/3378875.jpg?t=1647241575"
+    },
+    {
+      "title": "Angels portion",
+      "feed_url": "https://angelsportion.com/feed/",
+      "website_url": "https://angelsportion.com/",
+      "description": "Angels portion is a blog by Christopher I. Thoma who believes that if don't like whisky, it may only be because you haven't danced with the right bottle. Follow to get reviews of different whiskies.",
+      "followers": {
+        "facebook": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4948158.jpg?t=1614599562"
+    },
+    {
+      "title": "whiskyfacile",
+      "feed_url": "https://www.whiskyfacile.com/feed/",
+      "website_url": "https://www.whiskyfacile.com/",
+      "description": "We are Jacopo and Giacomo, two guys who, when they were still galloping around thirty, decided to drown in the whiskey the awareness that death approaches day after day (he jokes, eh). At various levels we are gravitating towards the cultural industry, university research and unlikely pre-publishing work. whiskey tasting notes, in English | 'do you drink to die, do not you think about the future?'",
+      "followers": {
+        "twitter": 599,
+        "instagram": 16000
+      },
+      "image_url": "https://i1.feedspot.com/4756023.jpg?t=1614599579"
+    },
+    {
+      "title": "It's just the booze dancing\u2026",
+      "feed_url": "https://boozedancing.com/feed/",
+      "website_url": "https://boozedancing.com/",
+      "description": "A collaborative blog about Craft Beer, Whisky, Cocktails, and so much more!",
+      "followers": {
+        "facebook": 533,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4546638.jpg?t=1647242816"
+    },
+    {
+      "title": "The Whisky Wire",
+      "feed_url": "https://thewhiskywire.com/feed/",
+      "website_url": "https://thewhiskywire.com/",
+      "description": "Creating a whole world of dramfotainment for a new generation of whiskey enthusiast.",
+      "followers": {
+        "twitter": 30600
+      },
+      "image_url": "https://i1.feedspot.com/1884113.jpg?t=1647243107"
+    },
+    {
+      "title": "Somerset Whisky Blog",
+      "feed_url": "https://somersetwhisky.com/feed/",
+      "website_url": "https://somersetwhisky.com/",
+      "description": "Reviews and opinions with a focus on Single Malt Scotch Whiskies since 2011.",
+      "followers": {
+        "facebook": 630,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4546703.jpg?t=1614599614"
+    },
+    {
+      "title": "A Scot on Scotch BLOG",
+      "feed_url": "https://ascotonscotch.com/feed/",
+      "website_url": "https://ascotonscotch.com/whisky-reviews-blog/",
+      "description": "Dedicated to reviewing affordable whisky, sharing some tips and some entertaining tales along the way. Whisky Reviews is a site by Neil Murphy, a whisky enthusiast, writing about his love for whisky.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4547383.jpg?t=1614599632"
+    },
+    {
+      "title": "Whisky Monster",
+      "feed_url": "https://www.whiskymonster.com/feed/",
+      "website_url": "https://www.whiskymonster.com/",
+      "description": "Whisky Monster is an independent whisky enthusiast writing about his experience in the whiskey world. The blog is owned and operated by Koray Ozdemir, a globetrotting, WSET Level 3 spirits certified whisky specialist, judge, and consultant, who has made his home in San Francisco by way of Turkey. Go through his blog where he shares whisky reviews, whisky news, and everything about whisky.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 4200,
+        "instagram": 26300
+      },
+      "image_url": "https://i1.feedspot.com/4940801.jpg?t=1614599637"
+    },
+    {
+      "title": "Whisky Fan Blog",
+      "feed_url": "https://www.whiskyfanblog.de/feed/",
+      "website_url": "https://www.whiskyfanblog.de/",
+      "description": "News und Infos aus der Welt des Single Malt Whisky",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4546009.jpg?t=1614599649"
+    },
+    {
+      "title": "Malted Blog",
+      "feed_url": "https://malted.blog/feed/",
+      "website_url": "https://malted.blog/",
+      "description": "An easy going blog for easy going malts",
+      "followers": {
+        "twitter": 264
+      },
+      "image_url": "https://i1.feedspot.com/4848873.jpg?t=1614599729"
+    },
+    {
+      "title": "WestmeathWhiskeyWorld",
+      "feed_url": "https://westmeathwhiskeyworld.wordpress.com/feed/",
+      "website_url": "https://westmeathwhiskeyworld.wordpress.com/",
+      "description": "A hopefully humorous, informative and enjoyable blog from, but not necessarily about Westmeath. Usually themed around whiskey, although other beverages may feature. Definitely covering the globe. Exploring the world of whiskey one step at a time.",
+      "followers": {
+        "facebook": 830,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5246918.jpg?t=1613745380"
+    },
+    {
+      "title": "Usgiba",
+      "feed_url": "https://usgiba.com/feed/",
+      "website_url": "https://usgiba.com/",
+      "description": "Usgiba is a whisky and writing blog. It's a personal blog in Turkish that combines the culture of whisky tasting notes with the concept of writing.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 576,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/5069573/page/5420507/logo_1671689596.jpg"
+    },
+    {
+      "title": "The Whisky Exchange Whisky Blog",
+      "feed_url": "https://blog.thewhiskyexchange.com/feed/",
+      "website_url": "https://blog.thewhiskyexchange.com/",
+      "description": "A blog about great drinks by the knowledgeable team at The Whisky Exchange. We are the world's number-one online specialist retailer of whisky, fine spirits and liqueurs.",
+      "followers": {
+        "facebook": 268500,
+        "twitter": 32500,
+        "instagram": 160500
+      },
+      "image_url": "https://i1.feedspot.com/2002089.jpg?t=1614597867"
+    },
+    {
+      "title": "The Whiskyphiles Blog",
+      "feed_url": "https://thewhiskyphiles.com/feed/?x=1",
+      "website_url": "https://thewhiskyphiles.com/blog/",
+      "description": "The premier blog for whisky reviews, new releases, and whisky news!",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 4800,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4585053.jpg?t=1614145103"
+    },
+    {
+      "title": "Guidance Whiskey Blog",
+      "feed_url": "https://guidancewhiskey.com/feed/",
+      "website_url": "https://guidancewhiskey.com/blog/",
+      "description": "Inspired by whiskey Culture and motivated by a deep concept of family and friendship, Jason Ridgel founded Guidance Whiskey in October of 2018. Aged for 2 years, this premium adult beverage was introduced, distilled in Iowa in a small batch, and housed in Nashville, TN. As an American whiskey Guidance is a careful blend of corn and rye with a touch of malted barley which accomplishes a smooth intense finish.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 18,
+        "instagram": 12200
+      },
+      "image_url": "https://i1.feedspot.com/5274171.jpg?t=1619678627"
+    },
+    {
+      "title": "Whisky For Everyone",
+      "feed_url": "https://whiskyforeveryone.blogspot.com/feeds/posts/default",
+      "website_url": "https://whiskyforeveryone.blogspot.com/",
+      "description": "Whisky For Everyone is a blog and website that is for all lovers of whisky - beginner, connoisseur or otherwise. It features regular updates on new releases, tasting notes and a weekly whisky news round-up.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 17600,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/328315.jpg?t=1614145118"
+    },
+    {
+      "title": "Adventures In Whiskey",
+      "feed_url": "https://adventuresinwhiskey.com/feed/",
+      "website_url": "https://adventuresinwhiskey.com/",
+      "description": "A blog for the novice whiskey enthusiast.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 786,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4546710.jpg?t=1614598096"
+    },
+    {
+      "title": "The Whisky Lady",
+      "feed_url": "https://thewhiskylady.net/feed/",
+      "website_url": "https://thewhiskylady.net/",
+      "description": "A blog about whisky, spirits, and other stories",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 14000
+      },
+      "image_url": "https://i1.feedspot.com/4546741.jpg?t=1614598101"
+    },
+    {
+      "title": "Jason's Scotch Whisky Reviews",
+      "feed_url": "https://feeds.feedburner.com/JasonsScotchWhiskyReviews",
+      "website_url": "https://jason-scotchreviews.blogspot.com/",
+      "description": "A blog devoted to providing independent ratings, reviews, musings and tasting notes of single malt scotch, blended scotch, bourbon and other whiskies. Cheers!",
+      "followers": {
+        "twitter": 932100
+      },
+      "image_url": "https://i1.feedspot.com/4546651.jpg?t=1614598109"
+    },
+    {
+      "title": "The Malt Impostor",
+      "feed_url": "http://maltimpostor.com/feed/",
+      "website_url": "https://maltimpostor.com/",
+      "description": "Purveyor of tasting notes for your favorite malts, ranging from the low-brow to the ridiculous.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4546634.jpg?t=1614599569"
+    },
+    {
+      "title": "Whisky Waffle",
+      "feed_url": "https://whiskywaffle.com/feed/",
+      "website_url": "https://whiskywaffle.com/",
+      "description": "Two Tassie boys talk whisky! Whisky Waffle is the musings of Alex 'Ted' Matthews and Nick 'Skreech' Turner.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 387
+      },
+      "image_url": "https://i1.feedspot.com/4546735.jpg?t=1614599590"
+    },
+    {
+      "title": "THE CASKS",
+      "feed_url": "https://thecasks.com/feed/",
+      "website_url": "https://thecasks.com/",
+      "description": "Thoughts on Whisky, its history, its drinkers, its ephemera, its books, and its events...and some other stuff.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 2600,
+        "instagram": 675
+      },
+      "image_url": "https://i1.feedspot.com/4545979.jpg?t=1647320406"
+    },
+    {
+      "title": "Whisky Israel",
+      "feed_url": "https://www.whiskyisrael.co.il/feed/",
+      "website_url": "https://www.whiskyisrael.co.il/",
+      "description": "The first, and only english only whisky blog, from Israel. Read by people world wide.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 3300,
+        "instagram": 389
+      },
+      "image_url": "https://i1.feedspot.com/4546001.jpg?t=1647243660"
+    },
+    {
+      "title": "The Dramble",
+      "feed_url": "https://www.thedramble.com/rss",
+      "website_url": "https://www.thedramble.com/",
+      "description": "The Dramble is an independent whisky review and opinion site focusing on connecting up the whisky blog ecosystem. Connecting up the whisky world one dram at a time. Follow us for eloquent but honest tasting notes, absorbing opinion pieces, or good-humoured malt chatter.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4740234.jpg?t=1661407806"
+    },
+    {
+      "title": "Malt Fascination",
+      "feed_url": "https://maltfascination.com/feed/",
+      "website_url": "https://maltfascination.com/",
+      "description": "Fascinated by booze for a decade, whisk(e)y in particular.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4546635.jpg?t=1614599628"
+    },
+    {
+      "title": "The Whisky Viking",
+      "feed_url": "http://thewhiskyviking.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://thewhiskyviking.blogspot.com/",
+      "description": "A blog about whisky, containing tasting notes & distillery-reviews. If there are any whiskies you would like me to review, don\u00b4t hesitate to ask.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 3500,
+        "instagram": 20900
+      },
+      "image_url": "https://i1.feedspot.com/4643490.jpg?t=1614599641"
+    },
+    {
+      "title": "Spokane Whiskey Club",
+      "feed_url": "https://spokanewhiskeyclub.com/feed/",
+      "website_url": "https://spokanewhiskeyclub.com/",
+      "description": "This is a catalog of our whiskey reviews and an online meeting place for our readers. We also from time to time will post opinion pieces and general use articles when useful or necessary.",
+      "followers": {
+        "facebook": 623
+      },
+      "image_url": "https://i1.feedspot.com/4952585.jpg?t=1614599871"
+    },
+    {
+      "title": "Dolcementewhisky - by Davide Steffenini & Sebastiano Segalla",
+      "feed_url": "https://dolcementewhisky.com/feed/",
+      "website_url": "https://dolcementewhisky.com/",
+      "description": "From an idea by Davide Steffenini and Sebastiano Segalla we offer thematic evenings on the combination of Whiskey & Food",
+      "followers": {
+        "facebook": 765,
+        "twitter": 7,
+        "instagram": 522
+      },
+      "image_url": "https://i1.feedspot.com/4826101.jpg?t=1614599712"
+    },
+    {
+      "title": "WhiskyDad",
+      "feed_url": "http://whiskydadblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://whiskydadblog.blogspot.com/",
+      "description": "An inclusive blog that discourages whisky snobbery and encourages whisky discovery.",
+      "followers": {
+        "facebook": 536,
+        "twitter": 2000,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4585060.jpg?t=1614599717"
+    },
+    {
+      "title": "Spirited Matters One man's excuse",
+      "feed_url": "https://spiritedmatters.com/feed/",
+      "website_url": "https://spiritedmatters.com/",
+      "description": "A blog about booze by Billy. As the name suggests. Billy's Booze Blog is an equal opportunities booze information source.",
+      "followers": {
+        "twitter": 4,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4545987.jpg?t=1647319424"
+    },
+    {
+      "title": "Angel's Share",
+      "feed_url": "https://www.angelshare.it/feed/",
+      "website_url": "https://www.angelshare.it/",
+      "description": "News and curiosities from whiskey planet.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 240
+      },
+      "image_url": "https://i1.feedspot.com/4546637.jpg?t=1647320963"
+    },
+    {
+      "title": "Whisky Buzz",
+      "feed_url": "http://whisky.buzz/blog?format=rss",
+      "website_url": "http://whisky.buzz/home",
+      "description": "Mark Bylok spends his time with whisky makers, brand ambassadors, bartenders, and whisky experts to bring an insider whisky industry view in his writing. Find consultations, insights, whisky podcasts, and whisky education series on Whisky Buzz by Mark Bylok.",
+      "followers": {
+        "twitter": 5000,
+        "instagram": 9700
+      },
+      "image_url": "https://i1.feedspot.com/5085801.jpg?t=1664974575"
+    },
+    {
+      "title": "WhiskeyBon",
+      "feed_url": "https://whiskeybon.com/feed/",
+      "website_url": "https://whiskeybon.com/",
+      "description": "We review whiskey, whisky, bourbon and rye from all around the world.",
+      "followers": {
+        "facebook": 146
+      },
+      "image_url": "https://i1.feedspot.com/4848878.jpg?t=1701866651"
+    },
+    {
+      "title": "Whisky Intelligence",
+      "feed_url": "https://www.whiskyintelligence.com/feed/",
+      "website_url": "http://www.whiskyintelligence.com/",
+      "description": "Welcome to WhiskyIntelligence.com where they'll be gathering information on the whisky industry and scotch whisky news in the form of press releases, newsletters, events, tasting notes and comments.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 21000
+      },
+      "image_url": "https://i1.feedspot.com/1133906.jpg?t=1614597854"
+    },
+    {
+      "title": "Spirited Zine",
+      "feed_url": "https://www.spiritedzine.com/feed/",
+      "website_url": "http://",
+      "description": "The ultimate destination for news and features about spirits. Whether you're interested in bottles, cocktails, or bars, Spirited Zine has the news, recipes, features, interviews, and more you're looking for.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5370726.jpg?t=1644489462"
+    },
+    {
+      "title": "Bourbon & Banter",
+      "feed_url": "https://www.bourbonbanter.com/rss/",
+      "website_url": "https://www.bourbonbanter.com/",
+      "description": "Bourbon & Banter, founded by Patrick Garrett, is your home for honest reviews, whiskey industry news, and all things related to America's native spirit. As a Chief Bourbon Drinker (CBD), Patrick's goal is to spread the bourbon gospel across the globe.",
+      "followers": {
+        "twitter": 37000,
+        "instagram": 20400
+      },
+      "image_url": "https://i1.feedspot.com/5274420.jpg?t=1652175428"
+    },
+    {
+      "title": "Meleklerin Pay\u0131",
+      "feed_url": "https://meleklerinpayi.com/feed/",
+      "website_url": "http://meleklerinpayi.com/",
+      "description": "Share of Angels The Whiskey Platform is the largest source of whiskey culture in Turkish. Whiskey production and whiskey varieties, as well as Turkey's only online whiskey dictionary and archives of the largest whiskey tasting notes archive site in 2015 in the United States in the International Whiskey Competition contest in Whiskey Blogger of the Year is among the five finalists.",
+      "followers": {
+        "facebook": 8500,
+        "twitter": 52400,
+        "instagram": 83600
+      },
+      "image_url": "https://i1.feedspot.com/4634001.jpg?t=1647238366"
+    },
+    {
+      "title": "Whisky Apostle",
+      "feed_url": "https://whiskeyapostle.com/feed/",
+      "website_url": "https://whiskeyapostle.com/",
+      "description": "Gary & co. proselytizing the way of the malt in Atlanta, GA.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4546734.jpg?t=1614598067"
+    },
+    {
+      "title": "Bourbon Blog",
+      "feed_url": "https://bourbonblog.com/feed/",
+      "website_url": "https://bourbonblog.com/",
+      "description": "Bringing a culture, a people, and a passion together in this blog. BourbonBlog.com covers stories that are unique to Bourbon, whiskey and spirits. An entire blog dedicated to Kentucky bourbon whiskey recipes, reviews and so much more!",
+      "followers": {
+        "facebook": 13000,
+        "twitter": 95400,
+        "instagram": 7500
+      },
+      "image_url": "https://i1.feedspot.com/1537095.jpg?t=1614598079"
+    },
+    {
+      "title": "Mark Littler Blog",
+      "feed_url": "https://www.marklittler.com/feed/",
+      "website_url": "https://www.marklittler.com/blog/",
+      "description": "The Mark Littler LTD blog is wealth of information relating to whisky collecting and investing. They have lots of practical advice about how to make a considered cask purchase including all of the pitfalls and problems you could encounter when buying a cask together with a unique cask calculator. They also have in depth guides and analysis of secondary market bottle sales, regular video guides and exhaustive distillery histories and timelines.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5280097.jpg?t=1679900722"
+    },
+    {
+      "title": "The Whiskey Jug",
+      "feed_url": "https://thewhiskeyjug.com/feed/",
+      "website_url": "https://thewhiskeyjug.com/",
+      "description": "A whiskey blog for whiskey reviews, whiskey cocktails and commentary. Whiskey reviews, whiskey cocktails, recipes, whiskey news and info.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 2800,
+        "instagram": 15400
+      },
+      "image_url": "https://i1.feedspot.com/5030129.jpg?t=1614597899"
+    },
+    {
+      "title": "The Scotch Noob",
+      "feed_url": "https://scotchnoob.com/feed/",
+      "website_url": "https://www.whiskysaga.com/blog",
+      "description": "The Scotch Noob is a newcomer to the venerable world of Scotch whisky. He hopes to provide a fresh outlook on whisky made in Scotland, as well as other whiskies and whiskeys made all over the world. Check out his blog and learn more about featured articles, reviews, and more.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4034558.jpg?t=1614598046"
+    },
+    {
+      "title": "dekant\u0101",
+      "feed_url": "https://diary.dekanta.com/feed/",
+      "website_url": "https://diary.dekanta.com/",
+      "description": "A blog about the Japanese whisky scene. Catch the latest scoop on up and coming brands, bottles and tasting notes. Dekanta is the world's largest specialist retailer of Japanese whisky. Check out our rare bottles and old favourites here.",
+      "followers": {
+        "facebook": 20700,
+        "twitter": 1600,
+        "instagram": 12400
+      },
+      "image_url": "https://i1.feedspot.com/5036385.jpg?t=1614597912"
+    },
+    {
+      "title": "Edinburgh Whisky Blog",
+      "feed_url": "https://www.edinburghwhiskyblog.com/feed/",
+      "website_url": "https://allthingswhisky.com/",
+      "description": "We're a small team of spirit geeks based in Edinburgh, Scotland. Edinburgh Whisky Blog offers a refreshing view on all things whisky. From brutally honest reviews to tongue-in-cheek news, we deliver opinions not PR.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 11300,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/941775.jpg?t=1608118515"
+    },
+    {
+      "title": "All Things Whisky",
+      "feed_url": "https://www.allthingswhisky.com/?feed=rss2",
+      "website_url": "https://allthingswhisky.com/",
+      "description": "All Things Whisky is simply a resource, not an authority.",
+      "followers": {
+        "twitter": 914
+      },
+      "image_url": "https://i1.feedspot.com/2224833.jpg?t=1647242018"
+    },
+    {
+      "title": "Jewmalt Whisky Reviews",
+      "feed_url": "https://jewmalt.com/feed/",
+      "website_url": "https://jewmalt.com/",
+      "description": "I drink booze, and sometimes I talk about it.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4545972.jpg?t=1614599914"
+    },
+    {
+      "title": "The Whisky Barrel Blog",
+      "feed_url": "https://www.thewhiskybarrel.com/blogs/news.atom",
+      "website_url": "https://www.thewhiskybarrel.com/blogs/news/",
+      "description": "Specialist online whisky shop retailing single malt Scotch whiskies, bourbon, Irish whiskey and Scottish gin with worldwide shipping including USA.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 9500,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4546690.jpg?t=1614599772"
+    }
+  ]
+}

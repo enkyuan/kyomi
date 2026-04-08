@@ -1,0 +1,60 @@
+{
+  "category": "Phlebotomy",
+  "source_url": "https://rss.feedspot.com/phlebotomy_rss_feeds",
+  "feeds": [
+    {
+      "title": "PhlebotomyU Blog",
+      "feed_url": "https://phlebotomyu.com/feed/",
+      "website_url": "https://phlebotomyu.com/phlebotomyu-blog/",
+      "description": "Our latest blog posts cover useful study tips and tricks, industry and PhlebotomyU-related news, and career service tips & tricks. PhlebotomyU's mission is to enhance students' careers, meet the needs of healthcare providers and improve patient care by providing high quality, cost-effective phlebotomy education through industry-leading curriculum, current technology, and extensive hands-on experience.",
+      "followers": {
+        "facebook": 442,
+        "twitter": 193,
+        "instagram": 110
+      },
+      "image_url": "https://i1.feedspot.com/5402102.jpg?t=1652935152"
+    },
+    {
+      "title": "My One Medical Source Blog",
+      "feed_url": "https://blog.myonemedicalsource.com/rss.xml",
+      "website_url": "https://blog.myonemedicalsource.com/",
+      "description": "My One Medical Source (MOMS) is the go-to resource for all of your testing-related needs. We are shifting the existing paradigm of specialized testing for those who need it and those who supply it to a new model that empowers both parties and makes healthcare more accessible.",
+      "followers": {
+        "facebook": 138,
+        "twitter": 266
+      },
+      "image_url": "https://i1.feedspot.com/5402103.jpg?t=1652936162"
+    },
+    {
+      "title": "National Association of Phlebotomy Technician Professionals Blog",
+      "feed_url": "https://naptp.com/feed/",
+      "website_url": "https://naptp.com/blog/",
+      "description": "The National Association of Phlebotomy Technician Professionals is the nation's leading organization for certifying phlebotomists and phlebotomy technicians. The NAPTP was founded in 1998 with the sole mission of establishing accepted guidelines and procedures to promote patient safety in the practice of phlebotomy and blood testing.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5402105.jpg?t=1652936109"
+    },
+    {
+      "title": "Berry Best Phlebotomy Training, LLC Blog",
+      "feed_url": "https://www.berrybestlabtechtraining.com/blog-feed.xml",
+      "website_url": "https://www.berrybestlabtechtraining.com/blog",
+      "description": "Incorporated in March of 2019, Berry Best Phlebotomy Training LLC. provides post-secondary education in Bio Laboratory Services, ie. Phlebotomy (Blood / Specimen Collection & Processing). The 48 Hour training course focuses on Practical Application rather than mere theory, creating a unique and engaging learning environment for future Lab Technicians.",
+      "followers": {
+        "facebook": 312,
+        "twitter": 4,
+        "instagram": 142
+      },
+      "image_url": "https://i1.feedspot.com/5402107.jpg?t=1652935597"
+    },
+    {
+      "title": "Phlebotomy on Wheels Blog",
+      "feed_url": "https://www.mobilebloodlabs.com/blog",
+      "website_url": "https://www.mobilebloodlabs.com/blog",
+      "description": "Phlebotomy On Wheels is a mobile lab service provider. Our goal is to deliver lab services to our customers in the comfort of their own homes. We have made it our priority to ensure convenience. If you are unable to visit the lab for a test for some reason, then don't worry. We can come to you. From blood draws to paternity tests and from picking up the specimens to delivering them, Phlebotomy On Wheels can do it all.",
+      "followers": {
+        "facebook": 25,
+        "twitter": 12
+      },
+      "image_url": "https://i1.feedspot.com/5402106.jpg?t=1652935171"
+    }
+  ]
+}

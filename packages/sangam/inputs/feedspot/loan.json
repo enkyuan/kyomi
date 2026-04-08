@@ -1,0 +1,622 @@
+{
+  "category": "Loan",
+  "source_url": "https://rss.feedspot.com/loan_rss_feeds",
+  "feeds": [
+    {
+      "title": "Santander Consumer USA Blog",
+      "feed_url": "https://santanderconsumerusa.com/feed",
+      "website_url": "https://santanderconsumerusa.com/blog",
+      "description": "Road Loans is a direct lender for car loans and auto refinance. They specialize in financing new and used car loans for customers with all types of credit.",
+      "followers": {
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4476224.jpg?t=1609575926"
+    },
+    {
+      "title": "The Truth About Mortgage",
+      "feed_url": "https://www.thetruthaboutmortgage.com/feed/atom/",
+      "website_url": "https://www.thetruthaboutmortgage.com/",
+      "description": "The Truth About Mortgage.com is a mortgage blog chock full of advice, tips, a mortgage dictionary to help you better understand key terms, and the latest mortgage news.",
+      "followers": {
+        "facebook": 773,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/1237025.jpg?t=1616416401"
+    },
+    {
+      "title": "SoFi Blog",
+      "feed_url": "https://www.sofi.com/blog/feed/",
+      "website_url": "https://www.sofi.com/blog/",
+      "description": "Check out our blog for the latest info on student loan refinancing, tips for your job search, mortgages, personal loans, and general financial advice. SoFi is a modern finance company. We partner with members to offer great service and low rates for student loan refinancing, mortgages and personal loans.",
+      "followers": {
+        "facebook": 281900,
+        "twitter": 162100,
+        "instagram": 141400
+      },
+      "image_url": "https://i1.feedspot.com/4806799.jpg?t=1610448478"
+    },
+    {
+      "title": "America's Loan Company",
+      "feed_url": "https://americasloancompany.com/feed",
+      "website_url": "https://americasloancompany.com/blog",
+      "description": "America's Loan Company is a trusted direct lender that provides online affordable personal loans in Columbus, Ohio, and throughout Ohio to people with less than perfect credit. Interested in learning more about managing your money and paying your loans on a timely basis? Our personal loans blog is all about effective money management.",
+      "followers": {
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/5571667.jpg?t=1684475100"
+    },
+    {
+      "title": "WikiLoan",
+      "feed_url": "https://wikiloan.org/feed/",
+      "website_url": "https://wikiloan.org/",
+      "description": "A quick loan is a form of short-term personal credit built for speed and convenience. Quick loan products are designed to provide fast solutions for cash emergencies. Get funds as quick as tomorrow with WikiLoan.Org",
+      "followers": {
+        "facebook": 347,
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/5257544.jpg?t=1615800909"
+    },
+    {
+      "title": "LoanTap Blog",
+      "feed_url": "https://loantap.in/blogs/feed/",
+      "website_url": "https://loantap.in/blogs/",
+      "description": "LoanTap is an online lending platform delivering customized loan products for salaried professionals, to meet different life stage requirements. LoanTap offers Personal Loan, EMI Free Loan, Personal Overdraft, Holiday Loan, Wedding Loan, and other loan products. Our blog covers a range of topics including information on flexible loan offerings such as EMI free loan, credit Line OD, personal loans, business loans, debt consolidation loans, and more.",
+      "followers": {
+        "facebook": 25600,
+        "twitter": 6000,
+        "instagram": 11100
+      },
+      "image_url": "https://i1.feedspot.com/5295987.jpg?t=1624519636"
+    },
+    {
+      "title": "National Mortgage News",
+      "feed_url": "https://www.nationalmortgagenews.com/feed?rss=true",
+      "website_url": "https://www.nationalmortgagenews.com/",
+      "description": "National Mortgage News, a SourceMedia brand, serves the entire mortgage industry including mortgage bankers, commercial bankers, savings institutions, brokerage firms, insurance companies, government enterprises and more.",
+      "followers": {
+        "facebook": 31000,
+        "twitter": 57000
+      },
+      "image_url": "https://i1.feedspot.com/4643663.jpg?t=1616416394"
+    },
+    {
+      "title": "Cornerstone Blog",
+      "feed_url": "https://www.houseloanblog.net/feed/",
+      "website_url": "https://www.houseloanblog.net/",
+      "description": "Cornerstone Home Lending, Inc. is a mortgage banker. With in-house processing, underwriting, and funding, Cornerstone's Mortgage professionals are committed to delivering on-time closings and streamlined, satisfying home-financing experiences. They exist to use and improve upon their God-given talents to make a positive difference in the lives of their team members, customers, shareholders, and the people who provide services to them.",
+      "followers": {
+        "facebook": 8100
+      },
+      "image_url": "https://i1.feedspot.com/4957297.jpg?t=1705563690"
+    },
+    {
+      "title": "Wise Loan Blog",
+      "feed_url": "https://wiseloan.com/feed/",
+      "website_url": "https://wiseloan.com/blog/",
+      "description": "Latest info on Installment loans with no credit, personal loans, and Quick cash loans consulting advice. Wise Loan is a leading provider of the best online installment loans for all types of credit.",
+      "followers": {
+        "facebook": 525,
+        "twitter": 45
+      },
+      "image_url": "https://i1.feedspot.com/5295984.jpg?t=1624520536"
+    },
+    {
+      "title": "Student Loan Borrowers Assistance News",
+      "feed_url": "https://studentloanborrowerassistance.org/feed/",
+      "website_url": "https://studentloanborrowerassistance.org/updates-news/latest-news/",
+      "description": "Stay informed about student loans and financial aid through the Student Loan Borrowers Assistance Blog. This blog provides valuable resources and updates on student loan programs, loan forgiveness options, and navigating loan repayment. Get insights into managing student loan debt and understanding your rights as a borrower.",
+      "followers": {
+        "facebook": 6600
+      },
+      "image_url": "https://i1.feedspot.com/4049535.jpg?t=1687240484"
+    },
+    {
+      "title": "Mortgage Strategy",
+      "feed_url": "https://www.mortgagestrategy.co.uk/feed/",
+      "website_url": "https://www.mortgagestrategy.co.uk/",
+      "description": "Mortgage Strategy is all about news and insight for mortgage specialists. Follow us to keep up with the latest updates.",
+      "followers": {
+        "twitter": 17200
+      },
+      "image_url": "https://i1.feedspot.com/4643624.jpg?t=1623752253"
+    },
+    {
+      "title": "Mortgage Fraud Blog",
+      "feed_url": "https://feeds.feedburner.com/MortgageFraudBlog",
+      "website_url": "http://www.mortgagefraudblog.com/",
+      "description": "Rachel Dollar, the editor of Mortgage Fraud Blog is a California attorney and Certified Mortgage Banker who handles litigation for mortgage lenders, servicers, and financial institutions. My mission is to raise awareness about the significant issues caused by mortgage fraud.",
+      "followers": {
+        "facebook": 724,
+        "twitter": 941
+      },
+      "image_url": "https://i1.feedspot.com/4640314.jpg?t=1669207877"
+    },
+    {
+      "title": "LendingCrowd Blog",
+      "feed_url": "https://www.lendingcrowd.com/feed",
+      "website_url": "https://www.lendingcrowd.com/blog",
+      "description": "LendingCrowd, Scotland's leading peer-to-peer lending platform matches small businesses seeking loans with investors looking for investment opportunities.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5048286.jpg?t=1621843277"
+    },
+    {
+      "title": "Badger Loans Blog",
+      "feed_url": "https://www.badgerloans.co.uk/feed/",
+      "website_url": "https://www.badgerloans.co.uk/blog/",
+      "description": "Covers articles about the latest news and trends on all things loans, both for good and bad credit. Badger Loans matches you to the best available short term loans, personal loans, instalment loans and home improvement loans.",
+      "followers": {
+        "twitter": 26
+      },
+      "image_url": "https://i1.feedspot.com/5375740.jpg?t=1645878091"
+    },
+    {
+      "title": "Capitalize Loans",
+      "feed_url": "https://capitalizeloans.com/feed/",
+      "website_url": "https://capitalizeloans.com/capitalize-blog/",
+      "description": "We provide business owners with the capital they need. Capitalize Loans is a business marketplace that offers financial solutions for your organization.",
+      "followers": {
+        "facebook": 32
+      },
+      "image_url": "https://i1.feedspot.com/5225881.jpg?t=1607435843"
+    },
+    {
+      "title": "BingoLoans",
+      "feed_url": "https://www.bingoloans.co.uk/articles/feed/",
+      "website_url": "https://www.bingoloans.co.uk/articles/",
+      "description": "Don't gamble on finding a Short Term Loan or Payday Loan, let direct lender, BingoLoans, find you a loan that suits you, even if you have Bad Credit",
+      "followers": {
+        "facebook": 54,
+        "twitter": 22
+      },
+      "image_url": "https://i1.feedspot.com/5090450.jpg?t=1621843357"
+    },
+    {
+      "title": "International Student Loan Blog",
+      "feed_url": "https://blog.internationalstudentloan.com/feed/",
+      "website_url": "https://blog.internationalstudentloan.com/",
+      "description": "Welcome to International Student Loan. They provide students with international financial aid to study around the world.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4806900.jpg?t=1610449188"
+    },
+    {
+      "title": "Guild Mortgage Blog",
+      "feed_url": "https://www.guildmortgage.com/feed/",
+      "website_url": "https://www.guildmortgage.com/blog/",
+      "description": "Cornerstone Mortgage, Inc. provides an innovative mix of mortgage products. Its mission is to make our customers feel at home with the home loan process!",
+      "followers": {
+        "facebook": 83
+      },
+      "image_url": "https://i1.feedspot.com/4636223.jpg?t=1616421592"
+    },
+    {
+      "title": "Alternative Funding Partners \u00bb Business Loan",
+      "feed_url": "https://alternativefundingpartners.com/category/business-loan-tips-understanding-financing/feed/",
+      "website_url": "https://alternativefundingpartners.com/category/business-loan-tips-understanding-financing/",
+      "description": "Alternative Funding Partners Blog covers topics on business loan tips, loan broker marketing, loan broker training, and understanding financing.Alternative Funding Partners provides access to direct capital through a diverse network of reputable lending sources. We are here to help you stay on top of a rapidly changing industry.",
+      "followers": {
+        "twitter": 262
+      },
+      "image_url": "https://i1.feedspot.com/5295988.jpg?t=1651148739"
+    },
+    {
+      "title": "The Student Loan Sherpa Blog",
+      "feed_url": "https://studentloansherpa.com/blog/feed/",
+      "website_url": "https://studentloansherpa.com/blog/",
+      "description": "Student Loan Expert Michael Lux blogs about student loan strategy, student loan news, and reviews refinance and consolidation companies.",
+      "followers": {
+        "facebook": 719
+      },
+      "image_url": "https://i1.feedspot.com/4806861.jpg?t=1610448458"
+    },
+    {
+      "title": "Biz2Credit Blog",
+      "feed_url": "https://www.biz2credit.com/articles/feed",
+      "website_url": "https://www.biz2credit.com/blog/",
+      "description": "Keep reading Biz2Credit's blog, it covers all the topics of the small business loan industry. Learn about small business ideas and news that help to start, manage, innovate and grow your business. Biz2Credit is an all-in-one financing solution for entrepreneurs to get a small business loan with a fast approval process. Explore various small business financing options with us.",
+      "followers": {
+        "facebook": 32900,
+        "twitter": 14500,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4957150.jpg?t=1621843225"
+    },
+    {
+      "title": "Reputable Loans Blog",
+      "feed_url": "https://reputableloans.com/rss/news",
+      "website_url": "https://reputableloans.com/blog",
+      "description": "Reputable Loans publishes news about finance and everything else you need to know about money.",
+      "followers": {
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/5512089.jpg?t=1677152146"
+    },
+    {
+      "title": "KreditBee Blog",
+      "feed_url": "https://blog.kreditbee.in/blog/rss/",
+      "website_url": "https://www.kreditbee.in/blog/",
+      "description": "KreditBee is an Instant Personal Loan Platform for Young Professionals in India, where they can apply for Cash Loan Online. Direct Transfer to Bank Account.",
+      "followers": {
+        "twitter": 38300,
+        "instagram": 154000
+      },
+      "image_url": "https://i1.feedspot.com/5083855.jpg?t=1621843264"
+    },
+    {
+      "title": "Home Credit India Blog",
+      "feed_url": "https://onlineapply.homecredit.co.in/feed/",
+      "website_url": "https://onlineapply.homecredit.co.in/blogs/",
+      "description": "Find out the latest news on Personal Loan, Credit Cards, Finance, Credit Score, Cibil Score, Personal Finance and Savings.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5139802.jpg?t=1621843650"
+    },
+    {
+      "title": "Clix Blog",
+      "feed_url": "https://www.clix.capital/clixblog/feed/",
+      "website_url": "https://www.clix.capital/clixblog/",
+      "description": "Clix Capital offers unique financing solutions to help people meet their financial needs. Getting a loan is just a matter of a few Clix. Follow to get updates.",
+      "followers": {
+        "facebook": 60900,
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5055538.jpg?t=1621843259"
+    },
+    {
+      "title": "Student Loan Planner Blog",
+      "feed_url": "https://www.studentloanplanner.com/blog/feed/",
+      "website_url": "https://www.studentloanplanner.com/blog/",
+      "description": "Student Loan Planner is a source of student loan advice and student loan refinancing cash back bonuses for professionals with huge student debt.",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 5700,
+        "instagram": 36200
+      },
+      "image_url": "https://i1.feedspot.com/4806813.jpg?t=1610448462"
+    },
+    {
+      "title": "Homespire Mortgage Blog",
+      "feed_url": "https://www.homespiremortgage.com/feed/",
+      "website_url": "https://www.homespiremortgage.com/blog/",
+      "description": "At Homespire Mortgage, their mission is to open the doors to homeownership by simplifying the mortgage process and provide affordable mortgage solutions.",
+      "followers": {
+        "facebook": 13700,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4957059.jpg?t=1621843282"
+    },
+    {
+      "title": "LittleLoans Blog",
+      "feed_url": "https://littleloans.co.za/blog/feed/",
+      "website_url": "https://littleloans.co.za/blog/",
+      "description": "Welcome to LittleLoans Blog. It is a South Africa based finance blog, with the articles on all things finance from investing, credit, debt, insurance and saving.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/4956979.jpg?t=1621843710"
+    },
+    {
+      "title": "TrueConnect Loan Blog",
+      "feed_url": "https://trueconnectloan.com/feed/",
+      "website_url": "https://trueconnectloan.com/blogs/",
+      "description": "TrueConnect exists to provide safe, affordable financial support and hope to employees in need of a helping hand that is an alternative to predatory lending products. You'll find blog posts crafted to help you understand the advantages of partnering with TrueConnect, tips, and tricks on business best practices, and current events in the financial benefits industry.",
+      "followers": {
+        "twitter": 199
+      },
+      "image_url": "https://i1.feedspot.com/5295986.jpg?t=1624520418"
+    },
+    {
+      "title": "Car Cash Point",
+      "feed_url": "https://www.carcashpoint.co.uk/feed/",
+      "website_url": "https://www.carcashpoint.co.uk/news/",
+      "description": "Car Cash Point has established itself as an ethical and responsible lender in the UK specializing in Logbook Loans online against vehicles. We are consistently providing proven and preferable solutions for people looking to raise short-term finance quickly with no credit checks. See how much you can borrow with a logbook loan, no credit checks, fast decision, cash in as little as 1 hour. Settle early and pay less interest. Keep up to date on the latest news from Car Cash Point and the short term lending market including Pay Day Loans.",
+      "followers": {
+        "facebook": 342,
+        "twitter": 45
+      },
+      "image_url": "https://i1.feedspot.com/5194356.jpg?t=1599487139"
+    },
+    {
+      "title": "Boston Student Loan Lawyer",
+      "feed_url": "https://bostonstudentloanlawyer.com/feed/",
+      "website_url": "https://bostonstudentloanlawyer.com/",
+      "description": "A blog about student loans from The Law Office of Adam S. Minsky. It features Student loan news, repayment plan information, and more. Adam S. Minsky is one of the nation's leading voices on student loan law and is a pioneer in his field. He established this firm shortly thereafter to help other borrowers who feel alone and overwhelmed by a student debt issue, and he has since helped hundreds of clients work through major problems with their student loans.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4806765.jpg?t=1610448481"
+    },
+    {
+      "title": "Friendly Finance",
+      "feed_url": "https://friendlyfinance.co.za/feed",
+      "website_url": "https://friendlyfinance.co.za/blog-home",
+      "description": "The Friendly Finance mission is to provide South African consumers with all the information they need to make better financial decisions. We provide hundreds of comparisons of common consumer finance products, such as personal loans, car loans, short-term loans and credit cards. Think of us as a helping hand in selecting consumer finance products.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5150210.jpg"
+    },
+    {
+      "title": "Spotya! Blog",
+      "feed_url": "https://www.spotya.com/feed/",
+      "website_url": "https://www.spotya.com/blog/",
+      "description": "Spotya! is here to make getting a payday loan simple and stress free. We promote responsible lending. Hope our tips help you make the best financial decision!",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 343
+      },
+      "image_url": "https://i1.feedspot.com/5158658.jpg"
+    },
+    {
+      "title": "MoneyGuru Blog by Loansolutions.ph | Philippines Financial Blog",
+      "feed_url": "https://www.loansolutions.ph/blog/feed/",
+      "website_url": "https://www.loansolutions.ph/blog/",
+      "description": "Loansolutions provides loans via our network of partner banks and lending companies. We simply connect you, as credit-worthy borrowers, to low interest lenders through our pre-qualification process. We are not a lending company; instead we serve as a bridge between you and financing companies.",
+      "followers": {
+        "facebook": 83200,
+        "twitter": 329,
+        "instagram": 142
+      },
+      "image_url": "https://i1.feedspot.com/4797960.jpg?t=1609835516"
+    },
+    {
+      "title": "First Home Mortgage Blog",
+      "feed_url": "https://firsthome.com/blog/feed/",
+      "website_url": "https://firsthome.com/blog/",
+      "description": "Mortgage blog depicts ways to manage loans & credit scores, as well as the top news in the mortgage lender industry. They develop, review and explain a variety of loan options with an individualized approach.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 239
+      },
+      "image_url": "https://i1.feedspot.com/4642788.jpg?t=1616417332"
+    },
+    {
+      "title": "Student Debt Relief News",
+      "feed_url": "https://www.studentdebtrelief.us/news/feed/",
+      "website_url": "https://www.studentdebtrelief.us/news/",
+      "description": "Student Debt Relief features information concerning student loans, general debt, and everything related to student debt relief. It also consists of student loan forgiveness and general debt related information.",
+      "followers": {
+        "facebook": 153,
+        "twitter": 603
+      },
+      "image_url": "https://i1.feedspot.com/4807249.jpg?t=1610521320"
+    },
+    {
+      "title": "Loans and International Financing",
+      "feed_url": "https://cmfinancials.wordpress.com/feed/",
+      "website_url": "https://cmfinancials.wordpress.com/",
+      "description": "CM financials provides with financial adviser, lease brokerage, consultant & mandate, bank instruments, funding and loans. To know more on these. follow us.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4964479.jpg?t=1613718157"
+    },
+    {
+      "title": "FlexiLoans Blog",
+      "feed_url": "https://flexiloans.com/feed",
+      "website_url": "https://flexiloans.com/blog/",
+      "description": "FlexiLoans is a technology based financing platform with an endeavour to solve the problem that SMEs face in accessing Quick, Flexible and Adequate funds. It features Knowledge zone for small business loans in India, tips to grow your business, manage business risks & more.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4957050.jpg?t=1621843386"
+    },
+    {
+      "title": "The Mortgage Reports",
+      "feed_url": "https://themortgagereports.com/",
+      "website_url": "https://themortgagereports.com/",
+      "description": "The Mortgage Reports covers mortgage rates, mortgage news, mortgage strategy, and real estate.",
+      "followers": {
+        "facebook": 42900,
+        "twitter": 15800,
+        "instagram": 10800
+      },
+      "image_url": "https://i1.feedspot.com/1229644.jpg?t=1616416389"
+    },
+    {
+      "title": "Sallie Resources",
+      "feed_url": "https://www.sallie.com/resources/rss.xml",
+      "website_url": "https://www.sallie.com/resources",
+      "description": "Paying for College? Looking for help? We've got you covered. FAFSA, Scholarships, Grants, and Student Loans. You've got questions. Nitro has answers. Behind the scenes, at Nitro, you'll find a staff of financial services, communications, and education professionals - with decades of experience to help you responsibly pay for college and once you have graduated help you pay down and save money on your student loans.",
+      "followers": {
+        "facebook": 35200
+      },
+      "image_url": "https://i1.feedspot.com/4954426.jpg?t=1610448466"
+    },
+    {
+      "title": "BNTouch Blog",
+      "feed_url": "https://bntouch.com/mortgage-blog/feed/",
+      "website_url": "https://bntouch.com/mortgage-blog/",
+      "description": "BNTouch Mortgage CRM is a marketing, sales management and partnership building solution for mortgage offices of any size. BNTouch Mortgage CRM blog will help you get information regarding various marketing solutions and new features of BNTouch!",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 243,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4643381.jpg?t=1616416599"
+    },
+    {
+      "title": "The Lenders Network Blog",
+      "feed_url": "https://thelendersnetwork.com/blog/feed/",
+      "website_url": "https://thelendersnetwork.com/blog/",
+      "description": "Compare Loan Offers Instantly with our network of Lenders. FHA Loans, VA Loans, Bad Credit Home Loans. Get matched with mortgage companies instantly.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 462
+      },
+      "image_url": "https://i1.feedspot.com/4668111.jpg"
+    },
+    {
+      "title": "Indiabulls Dhani Personal Loan Blog",
+      "feed_url": "https://www.mydhani.com/blog/feed/",
+      "website_url": "https://www.loanmani.com/blogs",
+      "description": "Indiabulls Dhani offers instant personal loans for marriage, travel, business expansion, medical emergency, education, and more. This blog is a complete guide to understanding Dhani and personal loans.",
+      "followers": {
+        "facebook": 126,
+        "twitter": 12900
+      },
+      "image_url": "https://i1.feedspot.com/4957069.jpg?t=1621843240"
+    },
+    {
+      "title": "ZipLoan Blog \u00bb Finance",
+      "feed_url": "https://blog.ziploan.in/category/finance/feed/",
+      "website_url": "https://www.forafinancial.com/blog/",
+      "description": "Ziploan is a business loans blog. They help businesses and individuals in getting short-term collateral-free loans in a simple and efficient manner. ZipLoan is an RBI-registered NBFC that digitally provides business loans of INR 1 to 7.5 lakhs to MSMEs within 3 business days.",
+      "followers": {
+        "facebook": 17800,
+        "twitter": 438,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4957160.jpg?t=1621843359"
+    },
+    {
+      "title": "CASH 1 Loans",
+      "feed_url": "https://www.cash1loans.com/DesktopModules/LiveBlog/API/Syndication/GetRssFeeds?mid=17715&PortalId=0&tid=2813&ItemCount=20",
+      "website_url": "https://www.cash1loans.com/blog-news.aspx",
+      "description": "CASH 1 knows money. We've been a financial institution for over 20 years. Read our blog to learn ways to manage your debt, loans and personal finances.",
+      "followers": {
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5250380.jpg?t=1614691855"
+    },
+    {
+      "title": "PinCap Blogs",
+      "feed_url": "http://blogs.pincap.in/feed/",
+      "website_url": "http://blogs.pincap.in/",
+      "description": "PinCap is an RBI registered NBFC providing Business Loans, Bill Discounting facility and innovative and customizable financial solutions to businesses.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 503
+      },
+      "image_url": "https://i1.feedspot.com/4957165.jpg?t=1621843286"
+    },
+    {
+      "title": "Buddy Loan Blog",
+      "feed_url": "https://www.buddyloan.com/blog/feed/",
+      "website_url": "https://www.buddyloan.com/blog/",
+      "description": "Our blog is related to personal loans, home loans, car loans, two-wheeler loans, medical loans, education loans, gold loans, business loans, etc.",
+      "followers": {
+        "facebook": 13100,
+        "twitter": 74
+      },
+      "image_url": "https://i1.feedspot.com/5140760.jpg?t=1621843695"
+    },
+    {
+      "title": "Loans Demand",
+      "feed_url": "https://loansdemand.com/feed/",
+      "website_url": "https://loansdemand.com/",
+      "description": "Covers articles related to payday loans, personal loans, and other types of loans. and information about loans from banks and online, interest rates, the different types of loans available, and how to avoid scams. The mission is to protect people from high-interest debt traps by providing them with all the necessary knowledge they need to make an informed decision about their personal finances.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5364642.jpg?t=1642749687"
+    },
+    {
+      "title": "EverydayLoanIndia",
+      "feed_url": "https://blogs.everydayloanindia.com/feed/",
+      "website_url": "https://blogs.everydayloanindia.com/",
+      "description": "We are a new-age Fin-Tech platform that aims to foster financial inclusion by leveraging technology to support borrowers with hassle-free loans. Check out our blog to read all the latest articles and updates related to loans.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5398980.jpg?t=1652092227"
+    },
+    {
+      "title": "Condemned to DEBT",
+      "feed_url": "https://www.condemnedtodebt.org/feeds/posts/default?alt=rss",
+      "website_url": "https://www.condemnedtodebt.org/",
+      "description": "Condemned to DEBT is a blog dedicated to the student-debt crisis and bankruptcy relief for student loan debtors.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4807205.jpg?t=1763366067"
+    },
+    {
+      "title": "Lendingkart Official Blog",
+      "feed_url": "https://www.lendingkart.com/feed/",
+      "website_url": "https://www.lendingkart.com/blog/",
+      "description": "Lendingkart is one stop blog guide to improve your financial knowledge. Their aim is to make working capital finance available at the fingertips of entrepreneurs, so that they can focus on business instead of worrying about the gaps in their cash-flows. Get into their blog and find updates for all kind of loans and finance essentials related queries like business loan, msme loan, working capital loan, and much more.",
+      "followers": {
+        "facebook": 351700,
+        "twitter": 4800,
+        "instagram": 14500
+      },
+      "image_url": "https://i1.feedspot.com/4950250.jpg?t=1617100647"
+    },
+    {
+      "title": "Bonsai Finance",
+      "feed_url": "https://bonsaifinance.com/feed/",
+      "website_url": "https://www.cartitleloanlenders.com/car-title-loans-blog/",
+      "description": "The idea behind Bonsai Finance is to help individuals with the need of a personal loan. Get advice for improving your financial situation and learn how personal loans can help you! .",
+      "followers": {
+        "twitter": 32
+      },
+      "image_url": "https://i1.feedspot.com/4956964.jpg?t=1621843706"
+    },
+    {
+      "title": "Car Title Loans Lenders Blog",
+      "feed_url": "https://www.cartitleloanlenders.com/feed/",
+      "website_url": "https://www.cartitleloanlenders.com/car-title-loans-blog/",
+      "description": "Our goal is to simplify the process of finding a direct lender in your state. A few companies in our database may also offer cash advance and payday loans. But our specialty and focus will always be on vehicle equity lenders.",
+      "followers": {
+        "twitter": 299
+      },
+      "image_url": "https://i1.feedspot.com/5135221.jpg?t=1621843399"
+    },
+    {
+      "title": "Havelet Finance Limited",
+      "feed_url": "https://www.havelet-finance.com/",
+      "website_url": "https://haveletfinance.blogspot.com/",
+      "description": "Covers articles on Loans, Finance, investment, and project finance. At Havelet Finance Limited, we provide international loans to our meaningful clients and alongside offer our international clients financial resources only possible with an institution possessing a global reach.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5387842.jpg?t=1649162133"
+    },
+    {
+      "title": "Loan Officer Hub Blog",
+      "feed_url": "https://loanofficerhub.com/feed/",
+      "website_url": "https://www.mymoneymantra.com/blog",
+      "description": "The Loan Officer Hub mortgage blog is designed to be a one-stop-shop for leading mortgage insights for loan officers who are interested in increasing their knowledge in areas related to mortgage trends, referral strategies, real estate insights, consumer content and social media tips. Discover valuable information on how you can increase your mortgage business with these exclusive loan officer blog insights.",
+      "followers": {
+        "twitter": 694
+      },
+      "image_url": "https://i1.feedspot.com/4957380.jpg?t=1621086805"
+    },
+    {
+      "title": "My Money Mantra Blog",
+      "feed_url": "https://www.mymoneymantra.com/blog/feed",
+      "website_url": "https://www.mymoneymantra.com/blog",
+      "description": "MyMoneyMantra provides various loan deals to customers across various financial products. These include Home Loans, Personal Loans, Loans Against Property, Business Loans and Credit Cards.",
+      "followers": {
+        "facebook": 135100,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4957026.jpg?t=1621843251"
+    },
+    {
+      "title": "Low VA Rates Blog",
+      "feed_url": "https://lowvarates.com/va-loan-blog/feed/",
+      "website_url": "https://lowvarates.com/va-loan-blog/",
+      "description": "As your VA Loan Specialists, we offer knowledge to veterans and military families across the nation so that they can make educated decisions in using their VA Benefits. Low VA Rates is a community of dedicated men and women that truly enjoy serving those that have bravely served our country.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 4800,
+        "instagram": 12800
+      },
+      "image_url": "https://i1.feedspot.com/5295985.jpg?t=1624520256"
+    },
+    {
+      "title": "RV Loan Providers",
+      "feed_url": "https://rvloanproviders.com/feed",
+      "website_url": "https://rvloanproviders.com/",
+      "description": "RV Loan Providers believes that transparency strengthens the trust between business partners. If companies have a good picture of the opportunities that exist and the risks they run, cooperation arises, deals are closed and ideas become reality.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4979435.jpg?t=1621843586"
+    },
+    {
+      "title": "Loanyantra Blog",
+      "feed_url": "https://loanyantra.com/blog/feed",
+      "website_url": "https://iloanca.com/blog/",
+      "description": "Loanyantra Blog is a path for organic loans. This is an online marketplace that gives instant customised rate quotes on loans products and solution for all loans.",
+      "followers": {
+        "facebook": 23000,
+        "twitter": 383
+      },
+      "image_url": "https://i1.feedspot.com/4957007.jpg?t=1621843390"
+    }
+  ]
+}

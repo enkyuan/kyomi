@@ -1,0 +1,52 @@
+{
+  "category": "Savannah Music",
+  "source_url": "https://rss.feedspot.com/savannah_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "Southern Mamas \u00bb Music",
+      "feed_url": "https://www.southernmamas.com/category/music/feed/",
+      "website_url": "https://www.southernmamas.com/category/music/",
+      "description": "Browse through their blog and learn more about the latest news, updates, events, videos, articles, and more on music. Southern Mamas is a source for savvy moms in Savannah, the Lowcountry, and beyond.",
+      "followers": {
+        "facebook": 15000,
+        "twitter": 1700,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5688608.jpg?t=1697185904"
+    },
+    {
+      "title": "Savannah Stopover Music Festival Blog",
+      "feed_url": "https://www.savannahstopover.com/blog?format=rss",
+      "website_url": "https://www.savannahstopover.com/blog/",
+      "description": "Go through the Savannah Stopover Music Festival Blog and learn more about the latest news, updates, playlists, articles, events, and much more on music.",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 4000,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5688609.jpg?t=1697185849"
+    },
+    {
+      "title": "Hissing Lawns",
+      "feed_url": "http://www.hissinglawns.com/feed/",
+      "website_url": "http://www.hissinglawns.com/",
+      "description": "Hissing Lawns is a music blog in Savannah, Georgia. It features a variety of contributors and includes posts of news, clips, photos, and other media related to Savannah-based bands and touring musicians stopping nearby.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 900
+      },
+      "image_url": "https://i1.feedspot.com/4902414.jpg?t=1697186026"
+    },
+    {
+      "title": "Xuluprophet Music Blog",
+      "feed_url": "https://www.xuluprophet.com/blog/feed",
+      "website_url": "https://www.xuluprophet.com/xpblog",
+      "description": "Xuluprophet Band - the ultimate destination for all music enthusiasts. They are thrilled to have you here, ready to embark on an extraordinary journey through the realms of psyrock, funk, and reggae. Prepare to be captivated by their unique sound and electrifying performances that will leave you craving for more. Explore more through their blog about videos, press releases, articles, events, and more.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 78
+      },
+      "image_url": "https://i1.feedspot.com/5688607.jpg?t=1697185882"
+    }
+  ]
+}

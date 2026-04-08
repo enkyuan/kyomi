@@ -1,0 +1,472 @@
+{
+  "category": "Data Visualization",
+  "source_url": "https://rss.feedspot.com/data_visualization_rss_feeds",
+  "feeds": [
+    {
+      "title": "FlowingData Blog",
+      "feed_url": "https://flowingdata.com/feed/",
+      "website_url": "https://flowingdata.com/",
+      "description": "FlowingData explores how statisticians, designers, and computer scientists are using data to help us understand more about ourselves and surroundings, mainly through visualization.",
+      "followers": {
+        "facebook": 22900,
+        "twitter": 83500
+      },
+      "image_url": "https://i1.feedspot.com/43384.jpg?t=1614935179"
+    },
+    {
+      "title": "AnyChart JS Charts Blog and DataViz Weekly",
+      "feed_url": "https://www.anychart.com/blog/feed/",
+      "website_url": "https://www.anychart.com/blog/",
+      "description": "One of the global leaders in data visualization, AnyChart offers an award-winning JavaScript charting library to help web developers easily visualize any data in any chart or dashboard, accessible on any platform and in any browser. In addition to tips and news, the blog is where they publish DataViz Weekly featuring the best new data visualization examples from around the web every week.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/5000582.jpg?t=1552550044"
+    },
+    {
+      "title": "Michael Sandberg's Data Visualization Blog",
+      "feed_url": "https://datavizblog.com/feed/",
+      "website_url": "https://datavizblog.com/",
+      "description": "A blog about Data Visualization, Infographics, Business Intelligence, Historical Aspects of Data Visualization (e.g., John Snow's Cholera Map) and Storytelling.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4668677.jpg"
+    },
+    {
+      "title": "Visual Capitalist - Rich Visual Content For The Modern Investor",
+      "feed_url": "https://www.visualcapitalist.com/feed/",
+      "website_url": "https://www.visualcapitalist.com/",
+      "description": "Visual Capitalist is a media site that creates and curates visual content focused on trends in business and investing.",
+      "followers": {
+        "facebook": 471500,
+        "twitter": 334200,
+        "instagram": 396500
+      },
+      "image_url": "https://i1.feedspot.com/3898427.jpg"
+    },
+    {
+      "title": "Depict Data Studio",
+      "feed_url": "https://depictdatastudio.com/feed/",
+      "website_url": "https://depictdatastudio.com/blog/",
+      "description": "Transform your technical information for non-technical audiences through better data visualizations, reports, slideshows, and dashboards. Depict Data Studio provides workshops, webinars, conference keynotes, coaching sessions, and custom design projects.",
+      "followers": {
+        "facebook": 177,
+        "twitter": 6000,
+        "instagram": 405
+      },
+      "image_url": "https://i1.feedspot.com/4219807.jpg?t=1615968076"
+    },
+    {
+      "title": "Storytelling With Data",
+      "feed_url": "https://www.storytellingwithdata.com/blog?format=RSS",
+      "website_url": "https://www.storytellingwithdata.com/",
+      "description": "At storytelling with data, we share practical tips and examples on how to effectively communicate with data. Storytelling With Data is a blog written by Cole Nussbaumer. Her goal is to provide practical tips to help bring data to life and use it to communicate a story to an audience, with a focus on simplicity and ease of interpretation.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 34100,
+        "instagram": 6100
+      },
+      "image_url": "https://i1.feedspot.com/65832.jpg?t=1540963302"
+    },
+    {
+      "title": "Infogram | Blog",
+      "feed_url": "https://infogram.com/blog/feed/",
+      "website_url": "https://infogram.com/blog/",
+      "description": "The Infogram Blog is where we share stories, data-driven content, data visualization tips and tricks, and cool charts and infographics. Infogram is a data visualization company that helps people create charts, infographics, maps, and reports.",
+      "followers": {
+        "facebook": 17700,
+        "twitter": 15400
+      },
+      "image_url": "https://i1.feedspot.com/4669206.jpg?t=1609571465"
+    },
+    {
+      "title": "Highcharts Blog",
+      "feed_url": "https://www.highcharts.com/blog/feed/",
+      "website_url": "https://www.highcharts.com/blog/",
+      "description": "Highcharts has quickly become one of the industry leaders in JavaScript based data visualization in web pages and web applications.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/4669106.jpg?t=1621403150"
+    },
+    {
+      "title": "BI connector Blog",
+      "feed_url": "https://www.biconnector.com/blog/feed/",
+      "website_url": "https://www.biconnector.com/blog/",
+      "description": "BI Connector offers a simple, secure connection from Tableau to OBIEE for business users, enabling powerful visualization and blending of OBIEE data. Discover all the latest news about BI Connector, BI, analytics, integration, and other trending topics.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 279
+      },
+      "image_url": "https://i1.feedspot.com/4669337.jpg?t=1582272217"
+    },
+    {
+      "title": "PromptCloud | Web Scraping Blog",
+      "feed_url": "https://www.promptcloud.com/blog/feed/",
+      "website_url": "https://www.promptcloud.com/blog/",
+      "description": "PromptCloud is a pioneer and global leader in Data-as-a-Service solutions. The integral part of their work is web data extraction using cloud computing technologies focused at helping enterprises acquire large scale structured data from the web.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4990236.jpg"
+    },
+    {
+      "title": "Policy Viz Blog",
+      "feed_url": "https://policyviz.com/blog/feed/",
+      "website_url": "https://policyviz.com/blog/",
+      "description": "Jon Schwabish maintains an excellent site of resources for newbies and professionals alike. One section of note is Remakes, where Schwabish takes an existing chart and offers critique by making a new version. But Schwabish might be known best for The PolicyViz Podcast, a series of interviews with practitioners in the field.",
+      "followers": {
+        "facebook": 636,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4668752.jpg?t=1540531857"
+    },
+    {
+      "title": "Stephanie Evergreen Data Blog",
+      "feed_url": "https://stephanieevergreen.com/blog/feed/",
+      "website_url": "http://stephanieevergreen.com/blog/",
+      "description": "A blog about Intentional Data Visualization & Evaluation Reporting.",
+      "followers": {
+        "twitter": 15400
+      },
+      "image_url": "https://i1.feedspot.com/4668813.jpg"
+    },
+    {
+      "title": "Juice Analytics",
+      "feed_url": "https://www.juiceanalytics.com/writing/?format=rss",
+      "website_url": "https://www.juiceanalytics.com/writing/",
+      "description": "Juicebox is a tool for visualizing data. It helps users gather more insights from their data. This blog delivers more insights to readers, by providing posts about using data, visualizing data, and gaining a better understanding of customers through data analysis.",
+      "followers": {
+        "facebook": 411,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/3764769.jpg?t=1612620058"
+    },
+    {
+      "title": "Eagereyes",
+      "feed_url": "https://eagereyes.org/feed",
+      "website_url": "https://eagereyes.org/",
+      "description": "EagerEyes is Robert Kosara's place to reflect on the world of information visualization and visual communication of data. The goal is to help digest things that are happening in the field and discuss developments that may be tangential or early, but that is likely to have an impact.",
+      "followers": {
+        "facebook": 859,
+        "twitter": 26400
+      },
+      "image_url": "https://i1.feedspot.com/1324674.jpg?t=1621417310"
+    },
+    {
+      "title": "The Data Visualisation Catalogue Blog",
+      "feed_url": "http://datavizcatalogue.com/blog/feed/",
+      "website_url": "http://datavizcatalogue.com/blog/",
+      "description": "The Data Visualization Catalogue, helping you find the right data visualization method for your data. The Data Visualization Catalogue is a project developed by Severino Ribecca to create a library of different information visualization types.",
+      "followers": {
+        "twitter": 6300
+      },
+      "image_url": "https://i1.feedspot.com/4669086.jpg"
+    },
+    {
+      "title": "Sharp Sight | Data Visualization Blog",
+      "feed_url": "https://www.sharpsightlabs.com/feed/",
+      "website_url": "https://www.sharpsightlabs.com/blog/",
+      "description": "Follow this blog to learn high value data science skills",
+      "followers": {
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4990240.jpg"
+    },
+    {
+      "title": "Boost Labs Blog - Insights and Trends in Data Visualization",
+      "feed_url": "http://boostlabs.com/feed/",
+      "website_url": "https://www.boostlabs.com/blog/",
+      "description": "Stay up-to-date in data visualization and big data by subscribing to the Boost Labs Blog.",
+      "followers": {
+        "facebook": 213,
+        "twitter": 287,
+        "instagram": 178
+      },
+      "image_url": "https://i1.feedspot.com/4669891.jpg"
+    },
+    {
+      "title": "Visual Cinnamon Blog",
+      "feed_url": "https://www.visualcinnamon.com/blog/index.xml",
+      "website_url": "https://www.visualcinnamon.com/blog/",
+      "description": "Nadieh Bremer is a freelancing data visualization designer and artist, working from Amsterdam, with a background in data science.",
+      "followers": {
+        "twitter": 46600,
+        "instagram": 11600
+      },
+      "image_url": "https://i1.feedspot.com/4670002.jpg"
+    },
+    {
+      "title": "Data Stories",
+      "feed_url": "https://datastori.es/feed/podcast/",
+      "website_url": "https://datastori.es/",
+      "description": "Enrico Bertini and Moritz Stefaner discuss the latest developments in data analytics, visualization and related topics.",
+      "followers": {
+        "twitter": 17600
+      },
+      "image_url": "https://i1.feedspot.com/71070.jpg?t=1752422872"
+    },
+    {
+      "title": "DoingData Blog",
+      "feed_url": "https://www.doingdata.org/blog?format=RSS",
+      "website_url": "https://www.doingdata.org/blog/",
+      "description": "Thoughts on data visualization, data engineering and data science using tools like Tableau, Python, GIS, Mapbox, Alteryx, Excel and Gapminder.",
+      "followers": {
+        "twitter": 2200,
+        "instagram": 14300
+      },
+      "image_url": "https://i1.feedspot.com/4669924.jpg"
+    },
+    {
+      "title": "Info We Trust - RJ Andrews",
+      "feed_url": "https://infowetrust.com/feed",
+      "website_url": "https://infowetrust.com/",
+      "description": "RJ Andrews is an American data storyteller based in San Francisco.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 10200,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/3714793.jpg"
+    },
+    {
+      "title": "Annual reports presented as 3D graphs",
+      "feed_url": "https://anrep3d.wordpress.com/feed/",
+      "website_url": "https://anrep3d.wordpress.com/",
+      "description": "Presents articles about all kinds of applications for different industries and periods. It's all about showing a large number of financial ratios in comparison: between companies and for different periods using 3D-graph generator.",
+      "followers": {
+        "twitter": 18
+      },
+      "image_url": "https://i1.feedspot.com/5305435.jpg?t=1627306574"
+    },
+    {
+      "title": "DataRemixed Blog",
+      "feed_url": "https://dataremixed.com/feed/",
+      "website_url": "https://dataremixed.com/",
+      "description": "Data Remixed is a blog dedicated to all things data: analytics, statistics, visualization, resources, how-to guides, critique and reviews.",
+      "followers": {
+        "facebook": 220,
+        "twitter": 14400
+      },
+      "image_url": "https://i1.feedspot.com/135815.jpg?t=1540963688"
+    },
+    {
+      "title": "BStreams",
+      "feed_url": "https://bstreams.io/feed/",
+      "website_url": "https://bstreams.io/blog/",
+      "description": "Covers new features, case studies, do & dont's about data visualization, and data analysis. BStreams helps you to collect and observe your data through visualizations to support your communication in a clear and effective way.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5329472.jpg"
+    },
+    {
+      "title": "Perceptual Edge Blog",
+      "feed_url": "https://www.perceptualedge.com/blog/?feed=rss2",
+      "website_url": "https://www.perceptualedge.com/blog/",
+      "description": "A Visual Business Intelligence blog by Stephen Few. This blog is written by Stephen Few, a leading expert in data visualisation and business intelligence. You won't find many glittering charts or rich infographics here, but you will find a decade's worth of well-written and thought provoking articles about statistics, analytics and 'data viz' tools.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4512191.jpg?t=1612884252"
+    },
+    {
+      "title": "Data Plus Science",
+      "feed_url": "https://www.dataplusscience.com/RSSfeed.xml",
+      "website_url": "https://www.dataplusscience.com/insights.html",
+      "description": "Welcome to Data Plus Science by Jeffrey A. Shaffer. He is a regular speaker at conferences, symposiums, universities and corporate training programs on the topic of data visualization, data mining, and Tableau.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 36500
+      },
+      "image_url": "https://i1.feedspot.com/4557889.jpg?t=1612619274"
+    },
+    {
+      "title": "Canonicalized",
+      "feed_url": "https://canonicalized.com/feed/",
+      "website_url": "https://canonicalized.com/blog/",
+      "description": "The Learning Center is the place where will always find in-depth, actionable content. We're focused on answering questions with data. If you are looking to do the same, start reading and make sure to come back! We are always working on getting you the most helpful ideas, insights, and guides.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4848644.jpg"
+    },
+    {
+      "title": "Drawing with Numbers",
+      "feed_url": "http://drawingwithnumbers.artisart.org/feed/",
+      "website_url": "http://drawingwithnumbers.artisart.org/",
+      "description": "This blog shares Thoughts on data visualization and Tableau by Jonathan Drummey.",
+      "followers": {
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/712660.jpg"
+    },
+    {
+      "title": "Daydreaming Numbers",
+      "feed_url": "http://daydreamingnumbers.com/feed/",
+      "website_url": "http://daydreamingnumbers.com/",
+      "description": "Follow Daydreaming Numbers to learn how to turn regular presentations and out-of-the box charts into a visual story from data visualization blogger Vidya",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4990245.jpg?t=1623052092"
+    },
+    {
+      "title": "Jim Vallandingham",
+      "feed_url": "https://feeds.feedburner.com/jim-vallandingham",
+      "website_url": "https://vallandingham.me/",
+      "description": "A Blog on data visualization & data science by Jim Vallandingham.",
+      "followers": {
+        "twitter": 6600
+      },
+      "image_url": "https://i1.feedspot.com/32073.jpg"
+    },
+    {
+      "title": "The Excel Charts - Data Visualization Blog",
+      "feed_url": "https://feeds.feedburner.com/JCCharts",
+      "website_url": "http://excelcharts.com/posts/",
+      "description": "The Excel Charts Blog helps you make sense of your data, shows you what effective charts really mean and offers tutorials on Excel dashboards.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4668686.jpg"
+    },
+    {
+      "title": "Tableau Blog",
+      "feed_url": "https://www.tableau.com/feed.rss",
+      "website_url": "https://www.tableau.com/blog",
+      "description": "Tableau is a visual analytics software for business intelligence. Get a collection of news, tips & tricks, training, entertainment, and happenings around Tableau.",
+      "followers": {
+        "facebook": 345100,
+        "twitter": 175000
+      },
+      "image_url": "https://i1.feedspot.com/4669966.jpg?t=1625555664"
+    },
+    {
+      "title": "Visme - Visual Learning Center",
+      "feed_url": "https://blog.visme.co/feed",
+      "website_url": "https://visme.co/blog/",
+      "description": "The resource to help you become a better Presenter, Communicator and Storyteller. The Visme blog is a Visual Learning Center. Their mission is to become a valuable resource for readers who want actionable information and expert advice on how to become better presenters, visual communicators and visual storytellers.",
+      "followers": {
+        "facebook": 18300,
+        "twitter": 67200,
+        "instagram": 14700
+      },
+      "image_url": "https://i1.feedspot.com/4668788.jpg"
+    },
+    {
+      "title": "iCharts",
+      "feed_url": "https://www.icharts.org/feed/",
+      "website_url": "https://www.icharts.org/",
+      "description": "iCharts is the leader in Collaborative Visual Intelligence. Cloud-based Visual Analytics Platform empowers rapid visualization. iCharts is a Cloud Business Intelligence Platform for SaaS providers that enables organizations to visualize and explore their data in real-time through natively embeddable analytics that are powerful and accessible to everyone.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4669218.jpg?t=1609571691"
+    },
+    {
+      "title": "Cool Infographics - Blog About Infographics and Data Visualization",
+      "feed_url": "https://coolinfographics.com/blog?format=rss",
+      "website_url": "https://coolinfographics.com/",
+      "description": "Infographics blog covering infographics, data visualization and visual thinking. Charts and graphs communicate data, infographics turn data into information.",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/36574.jpg?t=1617984555"
+    },
+    {
+      "title": "Linkurious",
+      "feed_url": "https://linkurious.com/blog/",
+      "website_url": "https://linkurious.com/blog/",
+      "description": "Linkurious regularly shares stories and use cases about graph visualization and how organizations are adopting this method to fight fraud, financial crime and cyber threats.",
+      "followers": {
+        "facebook": 997,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4990250.jpg"
+    },
+    {
+      "title": "Junk Charts - Kaiser Fung.",
+      "feed_url": "https://junkcharts.typepad.com/",
+      "website_url": "https://junkcharts.typepad.com/",
+      "description": "Junk Charts is made by Kaiser Fung, the Web's first data visualization critic. He discuss what makes graphics work, and how to make them better. Think chartjunk junk art.",
+      "followers": {
+        "twitter": 7900
+      },
+      "image_url": "https://i1.feedspot.com/32074.jpg"
+    },
+    {
+      "title": "Revolutions",
+      "feed_url": "https://blog.revolutionanalytics.com/atom.xml",
+      "website_url": "https://blog.revolutionanalytics.com/",
+      "description": "Revolutions is a blog dedicated to news and information of interest to members of the R community. Follow to keep up with daily news about using open source R for data analysis, predictive modeling, data science, and visualization.",
+      "followers": {
+        "twitter": 31000
+      },
+      "image_url": "https://i1.feedspot.com/57631.jpg?t=1612588519"
+    },
+    {
+      "title": "Lea Pica",
+      "feed_url": "https://leapica.com/feed/",
+      "website_url": "https://leapica.com/blog/",
+      "description": "Lea Pica equip digital analysts and marketers to deliver impactful presentations & data visualizations. Offer training, coaching and consulting services.",
+      "followers": {
+        "facebook": 121,
+        "twitter": 3000,
+        "instagram": 416
+      },
+      "image_url": "https://i1.feedspot.com/4669796.jpg"
+    },
+    {
+      "title": "The Information Lab",
+      "feed_url": "https://www.theinformationlab.co.uk/feed/",
+      "website_url": "https://www.theinformationlab.co.uk/",
+      "description": "The Information Lab is a team of passionate Tableau software professionals. They were recently named Tableau's 2013 EMEA Partner of the Year.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 10600
+      },
+      "image_url": "https://i1.feedspot.com/4669956.jpg"
+    },
+    {
+      "title": "Visualizing Economics",
+      "feed_url": "http://feeds.visualizingeconomics.com/visualizingeconomics&x=1",
+      "website_url": "https://www.visualizingeconomics.com/blog/",
+      "description": "Visualizing Economics is an web site run by Catherine Mulbrandon where she shares data visualizations about the economy.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/3887806.jpg?t=1540963672"
+    },
+    {
+      "title": "ZingSoft Blog",
+      "feed_url": "https://blog.zingsoft.com/rss/",
+      "website_url": "https://blog.zingsoft.com/",
+      "description": "ZingChart is a modern JavaScript charting library that provides web designers, software developers, and data visualizers with a solution to create flexible, interactive, and scalable charts inside web applications.",
+      "followers": {
+        "facebook": 410,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4668870.jpg"
+    },
+    {
+      "title": "Data Meets Media",
+      "feed_url": "http://datameetsmedia.com/feed/",
+      "website_url": "http://datameetsmedia.com/",
+      "description": "A blog on TV, movies, music, video games, and data science.",
+      "followers": {
+        "facebook": 66,
+        "twitter": 69
+      },
+      "image_url": "https://i1.feedspot.com/4686983.jpg"
+    },
+    {
+      "title": "Driven By Data",
+      "feed_url": "https://driven-by-data.net/feed",
+      "website_url": "https://driven-by-data.net/",
+      "description": "Collection of screenshots, links and notes about Gregor Aisch's work as New York Times graphics editor.",
+      "followers": {
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/4668778.jpg"
+    }
+  ]
+}

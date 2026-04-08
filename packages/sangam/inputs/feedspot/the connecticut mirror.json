@@ -1,0 +1,138 @@
+{
+  "category": "The Connecticut Mirror",
+  "source_url": "https://rss.feedspot.com/connecticut_mirror_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Connecticut Mirror",
+      "feed_url": "https://ctmirror.org/feed/",
+      "website_url": "https://ctmirror.org/",
+      "description": "Connecticut Mirror is an independent, nonpartisan, nonprofit online news organization created to reinvigorate coverage of Connecticut's state government, public policy, and politics. CT Mirror's mission is to produce original, in-depth, non-partisan journalism that informs Connecticut residents about the impact of public policy, holds government accountable, and amplifies diverse voices and perspectives.",
+      "followers": {
+        "facebook": 18900,
+        "twitter": 37100,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5130993.jpg?t=1585222437"
+    },
+    {
+      "title": "The Connecticut Mirror \u00bb Economic Development",
+      "feed_url": "https://ctmirror.org/news/economic-development/feed/",
+      "website_url": "https://ctmirror.org/news/economic-development/",
+      "description": "Get the latest news and updates about economic development only from The Connecticut Mirror.",
+      "followers": {
+        "facebook": 18900,
+        "twitter": 37100,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/8542728.jpg"
+    },
+    {
+      "title": "The Connecticut Mirror \u00bb Money",
+      "feed_url": "https://ctmirror.org/news/budget-economy/feed/",
+      "website_url": "https://ctmirror.org/news/budget-economy/",
+      "description": "Stories about the state budget, the federal budget, economic development, jobs and employment, transportation, state investments, and casinos from The",
+      "followers": {
+        "facebook": 18900,
+        "twitter": 37100,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/8542728.jpg"
+    },
+    {
+      "title": "The Connecticut Mirror \u00bb Investigations",
+      "feed_url": "https://ctmirror.org/news/investigations/feed/",
+      "website_url": "https://ctmirror.org/news/investigations/",
+      "description": "Keep up with the latest reporting from The Connecticut Mirror's investigative team.",
+      "followers": {
+        "facebook": 18900,
+        "twitter": 37100,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/8542728.jpg?t=1751018929"
+    },
+    {
+      "title": "The Connecticut Mirror \u00bb Energy & Environment",
+      "feed_url": "https://ctmirror.org/energy-environment/",
+      "website_url": "https://ctmirror.org/energy-environment/",
+      "description": "Stories about environmental legislation, energy, coastal resilience, pollution, land use, and climate change's impacts on Connecticut from The Connecticut Mirror.",
+      "followers": {
+        "facebook": 18900,
+        "twitter": 37100,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/8542728.jpg?t=1751019049"
+    },
+    {
+      "title": "The Connecticut Mirror \u00bb Education",
+      "feed_url": "https://ctmirror.org/all-news/education/feed/",
+      "website_url": "https://ctmirror.org/all-news/education/",
+      "description": "Stories about all approaches to PreK to 12 education, higher education, education spending, and child welfare from The Connecticut Mirror.",
+      "followers": {
+        "facebook": 18900,
+        "twitter": 37100,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/8542728.jpg?t=1751019039"
+    },
+    {
+      "title": "The Connecticut Mirror \u00bb Health",
+      "feed_url": "https://ctmirror.org/all-news/health-care/feed/",
+      "website_url": "https://ctmirror.org/all-news/health-care/",
+      "description": "Get updates on health access, affordability, quality, equity and disparities, social determinants of health, health system planning, infrastructure, processes, and information systems from The Connecticut Mirror.",
+      "followers": {
+        "facebook": 18900,
+        "twitter": 37100,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/8542728.jpg?t=1751019042"
+    },
+    {
+      "title": "The Connecticut Mirror \u00bb Justice",
+      "feed_url": "https://ctmirror.org/all-news/justice/feed/",
+      "website_url": "https://ctmirror.org/all-news/justice/",
+      "description": "Stories about the justice system in Connecticut: law enforcement, courts, prisons and incarceration, juvenile justice and public corruption from The Connecticut Mirror.",
+      "followers": {
+        "facebook": 18900,
+        "twitter": 37100,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/8542728.jpg?t=1751019046"
+    },
+    {
+      "title": "The Connecticut Mirror \u00bb Gambling",
+      "feed_url": "https://ctmirror.org/all-news/gambling/feed/",
+      "website_url": "https://ctmirror.org/all-news/gambling/",
+      "description": "Get the latest gambling news and updates only on The Connecticut Mirror.",
+      "followers": {
+        "facebook": 18900,
+        "twitter": 37100,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/8542728.jpg?t=1751019052"
+    },
+    {
+      "title": "The Connecticut Mirror \u00bb Transportation",
+      "feed_url": "https://ctmirror.org/all-news/transportation/feed/",
+      "website_url": "https://ctmirror.org/all-news/transportation/",
+      "description": "Discover the latest transportation news only on The Connecticut Mirror.",
+      "followers": {
+        "facebook": 18900,
+        "twitter": 37100,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/8542728.jpg?t=1751019057"
+    },
+    {
+      "title": "The Connecticut Mirror \u00bb COVID-19",
+      "feed_url": "https://ctmirror.org/other/covid-19/feed/",
+      "website_url": "https://ctmirror.org/other/covid-19/",
+      "description": "Discover the latest Covid 19 news, articles, advancements, and vaccine updates only on The Connecticut Mirror.",
+      "followers": {
+        "facebook": 18900,
+        "twitter": 37100,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/8542728.jpg?t=1751019059"
+    }
+  ]
+}

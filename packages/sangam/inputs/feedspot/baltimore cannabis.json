@@ -1,0 +1,35 @@
+{
+  "category": "Baltimore Cannabis",
+  "source_url": "https://rss.feedspot.com/baltimore_cannabis_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Baltimore Sun News \u00bb Marijuana",
+      "feed_url": "https://www.baltimoresun.com/news/marijuana/feed/",
+      "website_url": "https://www.baltimoresun.com/news/marijuana/",
+      "description": "Baltimore Sun: Your source for Baltimore breaking news, sports, business, entertainment, weather and traffic",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7300707.jpg?t=1713354704"
+    },
+    {
+      "title": "GreenLabs Blog",
+      "feed_url": "https://greenlabsmd.com/blogs/news.atom",
+      "website_url": "https://greenlabsmd.com/blogs/news",
+      "description": "GreenLabs is Baltimore's premier cannabis dispensary located in historic Fells Point.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/7300706.jpg?t=1713354683"
+    },
+    {
+      "title": "Explore Maryland Cannabis Blog",
+      "feed_url": "https://www.exploremarylandcannabis.com/blog?format=rss",
+      "website_url": "https://www.exploremarylandcannabis.com/blog",
+      "description": "Enjoy long-form articles, podcast episodes, and more to help you stay informed in the Maryland Cannabis ecosystem. Featuring interviews from movers and shakers across 23 counties and Baltimore City! Explore Maryland Cannabis is a community membership and outreach organization in Maryland.",
+      "followers": {
+        "facebook": 182,
+        "twitter": 489
+      },
+      "image_url": "https://i1.feedspot.com/7284549.jpg?t=1711546400"
+    }
+  ]
+}

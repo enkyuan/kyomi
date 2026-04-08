@@ -1,0 +1,954 @@
+{
+  "category": "Police",
+  "source_url": "https://rss.feedspot.com/police_rss_feeds",
+  "feeds": [
+    {
+      "title": "Law Officer",
+      "feed_url": "https://www.lawofficer.com/feed/",
+      "website_url": "https://www.lawofficer.com/",
+      "description": "As a collective team of current and former law enforcement professionals, we are dedicated to serving our audiences and following these core principles in everything we do. Law Officer is committed to providing news, editorials, books, and other media relevant to the law enforcement community.",
+      "followers": {
+        "facebook": 482900,
+        "twitter": 26600
+      },
+      "image_url": "https://i1.feedspot.com/4681931.jpg?t=1645186390"
+    },
+    {
+      "title": "American Police Beat Magazine",
+      "feed_url": "https://apbweb.com/feed/",
+      "website_url": "https://apbweb.com/",
+      "description": "For nearly three decades, American Police Beat has served as the trusted voice of the nation's law enforcement community. With every issue, APB strives to provide informative, entertaining and inspiring content on interesting and engaging topics affecting the law enforcement community. Offbeat funny stories, hard-hitting news features, informative guides to health and wellness issues, and more.",
+      "followers": {
+        "facebook": 143500,
+        "twitter": 21500,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4682493.jpg?t=1645184337"
+    },
+    {
+      "title": "Chant du D\u00e9part",
+      "feed_url": "https://oldafsarge.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://oldafsarge.blogspot.com/",
+      "description": "Chant du D\u00e9part is established in 2012. Read the musings & rants of 3 retired militaries (2 USAF, 1 USN), 1 former WSO, and 1 AF brat. Old AF Sarge, Juvat, Tuna, LUSH, and Beans.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4682535.jpg?t=1639388036"
+    },
+    {
+      "title": "Police Now News",
+      "feed_url": "https://www.policenow.org.uk/feed/",
+      "website_url": "https://www.policenow.org.uk/news/",
+      "description": "Police Now's mission is to transform communities, reduce crime and anti-social behaviour, and increase the public's confidence in the police service by recruiting, developing and inspiring outstanding and diverse individuals to be leaders in society and on the policing frontline.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 7600,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4682778.jpg?t=1639388112"
+    },
+    {
+      "title": "SPD Blotter",
+      "feed_url": "https://spdblotter.seattle.gov/feed/",
+      "website_url": "https://spdblotter.seattle.gov/",
+      "description": "The Seattle Police Department (SPD) prevents crime, enforces laws, and supports quality public safety by delivering respectful, professional, and dependable police services. Visit the website to read about the recent arrests and more.",
+      "followers": {
+        "facebook": 124100,
+        "twitter": 568100
+      },
+      "image_url": "https://i1.feedspot.com/5352084.jpg?t=1639369464"
+    },
+    {
+      "title": "Canadian Police Chaplain Association Blog",
+      "feed_url": "https://www.canadianpolicechaplainassociation.com/blog-feed.xml",
+      "website_url": "https://www.canadianpolicechaplainassociation.com/blog",
+      "description": "The Canadian Police Chaplain Association (CPCA) is a national organization that supports police chaplains and law enforcement services throughout Canada. It provides educational opportunities in annual training seminars. Members offer support and training to new chaplains through personal contact and mentoring. CPCA helps share information on law enforcement chaplaincy.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5352646.jpg?t=1639457002"
+    },
+    {
+      "title": "Fort Wayne Police Department News",
+      "feed_url": "https://www.fwpd.org/news?format=feed&type=rss",
+      "website_url": "https://www.fwpd.org/news",
+      "description": "The Fort Wayne Police Department, in partnership with our community, will strive to protect the life, property and personal liberties of all individuals. We believe that the overall quality of life for all residents will improve through the deterrence of criminal activity and an understanding of the diversity of cultures within this community. Furthermore, we recognize the need for fair and impartial enforcement of the law with attention given to the highest possible quality of service delivery to the community.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5352630.jpg?t=1639461002"
+    },
+    {
+      "title": "City of Columbia Police Department",
+      "feed_url": "https://columbiapd.net/feed/",
+      "website_url": "https://columbiapd.net/cpdnews/",
+      "description": "The Columbia Police Department will provide professional and ethical service in the protection of our citizens while preventing crime and reducing the fear of crime through problem-solving partnerships.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5352628.jpg?t=1639461064"
+    },
+    {
+      "title": "Defrosting Cold Cases",
+      "feed_url": "https://defrostingcoldcases.com/feed/",
+      "website_url": "https://defrostingcoldcases.com/",
+      "description": "Hi! I'm Alice de Sturler. I am not a law enforcement officer, not an investigative journalist. I am a true-crime writer. I analyse old, unsolved cases and raise awareness for those cases as they need renewed media attention. Defrosting Cold Cases (DCC) is my research website about unsolved homicides, missing persons, unidentified persons, wrongful convictions, and more.",
+      "followers": {
+        "facebook": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4682576.jpg?t=1639389135"
+    },
+    {
+      "title": "Cops Alive",
+      "feed_url": "https://www.copsalive.com/feed/",
+      "website_url": "https://www.copsalive.com/",
+      "description": "CopsAlive.com was founded to provide information and strategies to help police officers successfully survive their careers. We help law enforcement officers and their agencies prepare for the risks that threaten their existence. CopsAlive.com work with agencies and families to create environments that support healthy, happy and effective law enforcement professionals both on the job and at home.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4681615.jpg?t=1639392861"
+    },
+    {
+      "title": "Mental Health Cop",
+      "feed_url": "https://mentalhealthcop.wordpress.com/feed/",
+      "website_url": "https://mentalhealthcop.wordpress.com/",
+      "description": "Hi! I'm Michael. Welcome to my award-winning BLOG on policing, mental health and criminal justice. I've run this site for the last ten years and it's been used way more than two and a half million times around the world. Perhaps more importantly, it got me a job working full-time on the issues I've written about and a chance to influence the laws, policies and policing across the United Kingdom and the chance to work abroad, representing the UK to other countries",
+      "followers": {
+        "twitter": 36000
+      },
+      "image_url": "https://i1.feedspot.com/4682780.jpg?t=1639392661"
+    },
+    {
+      "title": "Improving Police Blog",
+      "feed_url": "https://improvingpolice.blog/feed/",
+      "website_url": "https://improvingpolice.blog/",
+      "description": "Blog author David C. Couper is a veteran police chief committed to improving police leadership, trust, effectiveness, and officer safety. He writes in-depth analyses focusing on leadership, organizational transformation, community-oriented policing, training, selection, uses of force, and control of crowds.",
+      "followers": {
+        "twitter": 648
+      },
+      "image_url": "https://i1.feedspot.com/4681589.jpg?t=1639392945"
+    },
+    {
+      "title": "Mesa Police Department",
+      "feed_url": "https://mesapd.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://mesapd.blogspot.com/",
+      "description": "Official Crime Blog of the Mesa Arizona Police Department. Follow to get updates on crimes, news, investigations and more.",
+      "followers": {
+        "twitter": 42900
+      },
+      "image_url": "https://i1.feedspot.com/5280615.jpg?t=1639391499"
+    },
+    {
+      "title": "Drug WarRant",
+      "feed_url": "https://www.drugwarrant.com/feed/",
+      "website_url": "https://www.drugwarrant.com/",
+      "description": "A blog from the front lines of the drug war with news, analysis, and the occasional rant by Pete Guither. The mission of Drug WarRant is to educate the public about the damage caused by prohibition, so together we can end this dangerous and misguided drug war.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/357611.jpg?t=1639393038"
+    },
+    {
+      "title": "Scott Silverii",
+      "feed_url": "https://scottsilverii.com/feed/",
+      "website_url": "https://scottsilverii.com/",
+      "description": "Hi, I'm Dr Scott Silverii. I do my best to love people the way God loves me. I'm a retired Chief of Police with a PhD in Cultural Anthropology, who now ministers to men struggling with trauma from past personal pain, abuse and addictions.",
+      "followers": {
+        "facebook": 986
+      },
+      "image_url": "https://i1.feedspot.com/4681661.jpg?t=1639394563"
+    },
+    {
+      "title": "A COP'S WATCH",
+      "feed_url": "http://acopswatch.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://acopswatch.blogspot.com/",
+      "description": "A Cop's Watch talks about Police Work, Politics and World Affairs, Football and the ongoing search for great Scotch Whiskey!",
+      "followers": {
+        "twitter": 175
+      },
+      "image_url": "https://i1.feedspot.com/4681865.jpg?t=1639394874"
+    },
+    {
+      "title": "Future of Policing Blog",
+      "feed_url": "https://futureofpolicing.blog/feed/",
+      "website_url": "https://futureofpolicing.blog/",
+      "description": "Read articles and more on all about Policing with a sprinkle of Criminal Justice. the blog posts are written and maintained by Secret Contrarian. Follow to get updates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5065784.jpg?t=1639396878"
+    },
+    {
+      "title": "Chris Grollnek Active Shooter Expert",
+      "feed_url": "https://www.chrisgrollnek.com/feed/",
+      "website_url": "https://www.chrisgrollnek.com/",
+      "description": "For over 29 years, security expert and law enforcement professional Chris Grollnek has been immersed in the study and application of protective measures in the military, police, and private sectors.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4682594.jpg?t=1606126026"
+    },
+    {
+      "title": "The Salty Sarge",
+      "feed_url": "https://thesaltysarge.com/feed/",
+      "website_url": "https://thesaltysarge.com/",
+      "description": "A Police Sergeant of 24 years who breaks down the job with satire, humor and commentary. If you get a moment, check out some of my articles here or on my site.",
+      "followers": {
+        "facebook": 10600,
+        "twitter": 53
+      },
+      "image_url": "https://i1.feedspot.com/4903911.jpg?t=1618819086"
+    },
+    {
+      "title": "Hopkinton Police Department",
+      "feed_url": "https://hopkintonpdnews.com/feed/",
+      "website_url": "https://hopkintonpdnews.com/",
+      "description": "Welcome to the Official News Blog of the Hopkinton Police Department. The purpose of this website is to post and display, in a timely fashion, all news and updates from the Hopkinton, Massachusetts Police Department. The Hopkinton Police Department is a progressive, disciplined and innovative public safety organization that believes in the principles of police legitimacy, community policing and relationship building.",
+      "followers": {
+        "facebook": 9000,
+        "twitter": 3700,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5352599.jpg?t=1639397667"
+    },
+    {
+      "title": "Queensland Police",
+      "feed_url": "https://mypolice.qld.gov.au/feed/",
+      "website_url": "https://mypolice.qld.gov.au/",
+      "description": "Read news, alerts, videos and community information from the Queensland Police Service and stay updated.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 242200,
+        "instagram": 210300
+      },
+      "image_url": "https://i1.feedspot.com/5352597.jpg?t=1639397778"
+    },
+    {
+      "title": "Brookline Police News",
+      "feed_url": "https://blog.brooklinepolice.com/feeds/posts/default?alt=rss",
+      "website_url": "https://blog.brooklinepolice.com/",
+      "description": "Brookline Police Blog brings you news and investigation reports on assault, fraud, theft, larceny, and more from Brookline",
+      "followers": {
+        "facebook": 9700
+      },
+      "image_url": "https://i1.feedspot.com/5352592.jpg?t=1639397992"
+    },
+    {
+      "title": "Holbrook Police Department",
+      "feed_url": "https://holbrookpolice.com/feed/",
+      "website_url": "https://holbrookpolice.com/news/",
+      "description": "The Mission of the Holbrook Police Department is to provide professional community policing services to all citizens. All members are committed to creating and maintaining community partnerships and working with residents of Holbrook in identifying, analyzing and solving problems that affect the quality of life issues. Officers are dedicated to providing fair and equal treatment to all our citizens and to protecting life, property and order maintenance.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 777
+      },
+      "image_url": "https://i1.feedspot.com/5352593.jpg?t=1639398146"
+    },
+    {
+      "title": "Dallas Police Department",
+      "feed_url": "https://dpdbeat.com/feed/",
+      "website_url": "https://dpdbeat.com/",
+      "description": "Since its creation more than 120 years ago, the Dallas Police Department has created an atmosphere of ethical, caring behaviour. As you explore this site, it is the department's hope that you will become increasingly aware of the services and information available through the Dallas Police Department. Please use the available posts to find out more about the department's organization, community partnerships, and more.",
+      "followers": {
+        "facebook": 302200,
+        "twitter": 371200
+      },
+      "image_url": "https://i1.feedspot.com/5352615.jpg?t=1639398927"
+    },
+    {
+      "title": "Fairfax County Police Department News",
+      "feed_url": "https://fcpdnews.wordpress.com/feed/",
+      "website_url": "https://fcpdnews.wordpress.com/",
+      "description": "Read official news and information from the Fairfax County Police Department. Welcome to the Fairfax County Police Department. The Department's vision is to provide ethical leadership through engagement with the community to prevent and fight crime, improve the culture of safety at work and within the community to preserve the sanctity of all human life, and keep pace with urbanization.",
+      "followers": {
+        "facebook": 263100,
+        "twitter": 278500,
+        "instagram": 69300
+      },
+      "image_url": "https://i1.feedspot.com/4832368.jpg?t=1639399017"
+    },
+    {
+      "title": "VSP News Releases",
+      "feed_url": "http://vtstatepolice.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://vtstatepolice.blogspot.com/",
+      "description": "The Vermont State Police disseminate press releases for significant criminal or public safety incidents and arrests, but it is not intended to document every public contact or response to a call-for-service.",
+      "followers": {
+        "facebook": 144400,
+        "twitter": 43600,
+        "instagram": 42000
+      },
+      "image_url": "https://i1.feedspot.com/5352611.jpg?t=1639399616"
+    },
+    {
+      "title": "ACT Policing",
+      "feed_url": "https://police.act.gov.au/news-rss",
+      "website_url": "https://police.act.gov.au/news",
+      "description": "Stay up to date with the latest from ACT Policing. Find out what's happening in your community, information from police and how you can help solve crime in your area. You can also subscribe to our latest community news and media releases",
+      "followers": {
+        "facebook": 175800,
+        "twitter": 45700,
+        "instagram": 32400
+      },
+      "image_url": "https://i1.feedspot.com/5352608.jpg?t=1639400462"
+    },
+    {
+      "title": "Montrose County Sheriff's Office News",
+      "feed_url": "https://montrosecountysheriffsoffice.com/feed/",
+      "website_url": "https://montrosecountysheriffsoffice.com/news-room/",
+      "description": "Our mission is to ensure a safe and secure environment for all residents in Montrose County by providing professional law enforcement through responsive, caring, and dedicated service. Montrose County Sheriff's Office (MCSO) has been serving Montrose and surrounding communities since 1876. At MCSO we respect the constitutional rights of liberty, equality, and justice for all men and women.s",
+      "followers": {
+        "facebook": 24500,
+        "twitter": 692,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5352617.jpg?t=1639401475"
+    },
+    {
+      "title": "Hull Police Department Blog",
+      "feed_url": "https://hullpolice.org/feed/",
+      "website_url": "https://hullpolice.org/news-blog/",
+      "description": "The mission of the Hull Police Department is to enhance the quality of life in the town of Hull by working in partnership with the community to enforce the law, preserve peace, reduce fear, and maintain order. The Department is committed to accomplishing its mission to protecting the lives and property of all citizens of the town of Hull by treating every citizen with courtesy, professionalism and respect.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/5352606.jpg?t=1639401610"
+    },
+    {
+      "title": "Mechanicsburg Police Department",
+      "feed_url": "https://mechanicsburgpolice.org/feed/",
+      "website_url": "https://mechanicsburgpolice.org/",
+      "description": "The mission of the Mechanicsburg Police Department is to enhance the quality of life by working cooperatively with all our citizens to preserve the peace, enforce the law, reduce the perception of fear, and provide a safe and caring environment.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 52,
+        "instagram": 379
+      },
+      "image_url": "https://i1.feedspot.com/5352610.jpg?t=1639401644"
+    },
+    {
+      "title": "Transit Police News",
+      "feed_url": "https://transitpolice.ca/feed/",
+      "website_url": "https://transitpolice.ca/news/news-releases/",
+      "description": "Metro Vancouver Transit Police is the only transit police service in Canada, a multi-jurisdictional policing agency dedicated to the provision of policing to the transit system in Metro Vancouver. Transit Police work to ensure that both the people using the system and TransLink resources receive appropriate police protection. We actively work to reduce crime and disorder by identifying hot spot locations.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 20000,
+        "instagram": 8000
+      },
+      "image_url": "https://i1.feedspot.com/5352643.jpg?t=1639458833"
+    },
+    {
+      "title": "CPPOM",
+      "feed_url": "https://cppom.ca/feed/",
+      "website_url": "https://cppom.ca/",
+      "description": "Canadian Police & Peace Officers' Memorial Blog is dedicated to officers and policemen who died in the line of duty. The blog features articles on memorial news and updates.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 3100,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5352638.jpg?t=1639457107"
+    },
+    {
+      "title": "City of Dover Police Department News",
+      "feed_url": "https://doverpolice.org/feed/",
+      "website_url": "https://doverpolice.org/category/news/",
+      "description": "They are committed to providing programs and services which at all times places public safety as our top priority, support the victim's rights, and recognize the value of human resources as represented by employees, volunteers, and the citizens and visitors of this City, develop relationships with community groups, residential and business organizations, and promote an environment receptive to residents, tourism, and visitors.",
+      "followers": {
+        "facebook": 58300,
+        "twitter": 4000,
+        "instagram": 6600
+      },
+      "image_url": "https://i1.feedspot.com/5352636.jpg?t=1639459218"
+    },
+    {
+      "title": "American Police Officers Alliance Blog",
+      "feed_url": "https://americanpoliceofficersalliance.com/feed/",
+      "website_url": "https://americanpoliceofficersalliance.com/blog/",
+      "description": "American Police Officers Alliance is a national political organization in Arlington, VA organized under Section 527 of the IRS Tax Code. Our mission is to fight for those who protect our nation's citizens. We will ensure that police officers maintain their benefits such as retirement pensions and protect their rights from government and politicians that are blatantly anti-police. We will work to ensure that our officers have the best local leadership possible.",
+      "followers": {
+        "facebook": 9100,
+        "twitter": 149
+      },
+      "image_url": "https://i1.feedspot.com/5352635.jpg?t=1639463938"
+    },
+    {
+      "title": "Gloucester Police Department Blog",
+      "feed_url": "https://gloucesterpd.com/feed/",
+      "website_url": "https://gloucesterpd.com/blog/",
+      "description": "The members of the Gloucester Police Department are committed to excellence in law enforcement and are dedicated to the people, traditions and diversity of our city. In order to protect life and property, prevent crime and reduce the fear of crime, we will provide service with understanding, response with compassion, performance with integrity and law enforcement with vision.",
+      "followers": {
+        "facebook": 23600,
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/5352641.jpg?t=1639460262"
+    },
+    {
+      "title": "National Police Chiefs' Council",
+      "feed_url": "https://news.npcc.police.uk/feed/rss",
+      "website_url": "https://news.npcc.police.uk/",
+      "description": "The NPCC brings police forces in the UK together to help policing coordinate operations, reform, improve and provide value for money. We're constantly adapting and reforming to keep people safe. We're always striving to improve the way we work and learn from when things go wrong to build people's confidence in us.",
+      "followers": {
+        "twitter": 56500
+      },
+      "image_url": "https://i1.feedspot.com/5352306.jpg?t=1639464106"
+    },
+    {
+      "title": "Lynchburg Police Department News",
+      "feed_url": "https://www.lynchburgvapolice.gov/news-updates/category/news-release/feed/",
+      "website_url": "https://www.lynchburgvapolice.gov/news-updates/category/news-release/",
+      "description": "We partner with our community and protect our citizens while respecting the rights and dignity of all persons. Everything we do is centred on this statement. Our intentional focus on accountability, buy-in and collaboration within the department and the community helps ensure our success.",
+      "followers": {
+        "facebook": 37400,
+        "twitter": 5400,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5352629.jpg?t=1639465003"
+    },
+    {
+      "title": "Windsor Police, CO",
+      "feed_url": "https://www.windsorpd.com/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.windsorpd.com/CivicAlerts.aspx?CID=1",
+      "description": "The Windsor Police Department is a dedicated, compassionate family of professionals whose unified purpose and calling are to advocate for justice and safeguard the well-being of all those we serve. By leveraging the strengths of our employees, core values and close community partnerships, we will establish ourselves as a regional leader providing exceptional police services and an enhanced quality of life in Windsor.",
+      "followers": {
+        "facebook": 22100,
+        "twitter": 2100,
+        "instagram": 6300
+      },
+      "image_url": "https://i1.feedspot.com/5352627.jpg?t=1639472615"
+    },
+    {
+      "title": "The New York Time \u00bb Police",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/topic/subject/police/rss.xml",
+      "website_url": "https://www.nytimes.com/topic/subject/police",
+      "description": "the New York Times Newspaper dedicates the following section to police reports, news, updates, investigations and more. The goal of The New York Times is to cover the news as impartially as possible - 'without fear or favour,' in the words of Adolph Ochs, our patriarch - and to treat readers, news sources, advertisers and others fairly and openly, and to be seen to be doing so.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000,
+        "instagram": 19600000
+      },
+      "image_url": "https://i1.feedspot.com/5352619.jpg?t=1639474325"
+    },
+    {
+      "title": "Maryland State Police",
+      "feed_url": "https://news.maryland.gov/msp/feed/",
+      "website_url": "https://news.maryland.gov/msp/press-releases/",
+      "description": "The mission of the Maryland State Police is to serve the people of Maryland and those who visit our State through purposed policing that protects our citizens, prevents criminal acts and traffic crashes, and provides the highest quality of law enforcement services available anywhere.",
+      "followers": {
+        "facebook": 156000,
+        "twitter": 83700
+      },
+      "image_url": "https://i1.feedspot.com/5352632.jpg?t=1639474513"
+    },
+    {
+      "title": "Dracut Police Department Blog",
+      "feed_url": "https://dracutpolice.org/feed/",
+      "website_url": "https://dracutpolice.org/news-blog/",
+      "description": "The mission of the Dracut Police Department is to provide the service of public safety to the community to whom we are sworn to protect. We strive to maintain order, protect life and property, and provide quality and efficient police response, in a manner that demonstrates respect and dignity for the citizenry we not only serve but from whom we ultimately derive our authority to do so.",
+      "followers": {
+        "facebook": 10900,
+        "twitter": 2100,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5352196.jpg?t=1639474527"
+    },
+    {
+      "title": "Metropolitan Police Department",
+      "feed_url": "https://mpdc.dc.gov/node/*/newsroom",
+      "website_url": "https://mpdc.dc.gov/newsroom",
+      "description": "One of the 10 largest local police agencies in the United States, the MPD is the primary law enforcement agency for the District of Columbia. Founded in 1861, the MPD of today is at the forefront of technological crime fighting advances, from highly developed advances in evidence analysis to state-of the-art-information technology.",
+      "followers": {
+        "facebook": 60200,
+        "instagram": 36400
+      },
+      "image_url": "https://i1.feedspot.com/5352307.jpg?t=1639130697"
+    },
+    {
+      "title": "Blackstone Police Department Blog",
+      "feed_url": "https://blackstonepolice.org/feed/",
+      "website_url": "https://blackstonepolice.org/news-blog/",
+      "description": "In partnership with our community, the Blackstone Police Department strives to provide the highest quality of protection, safety and well being for all of our residents, businesses and visitors. In furtherance of this goal, our Department implements a proactive approach in the prevention, detection and investigation of criminal activity. The most vital tool available to us is the assistance, involvement and interaction of the citizens we have pledged to serve.",
+      "followers": {
+        "facebook": 8800
+      },
+      "image_url": "https://i1.feedspot.com/5352195.jpg?t=1639129769"
+    },
+    {
+      "title": "Lakewood Police Department Blog",
+      "feed_url": "https://www.lakewoodpolicenj.com/feed/",
+      "website_url": "https://www.lakewoodpolicenj.com/lwpd-blog/",
+      "description": "The Lakewood Police Department will provide the highest level of service through the enforcement of law and the protection of life, property and constitutional rights of all. We will meet the present and future needs of the public through a continued partnership with our community.",
+      "followers": {
+        "facebook": 15800,
+        "twitter": 4300,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5352308.jpg?t=1639130083"
+    },
+    {
+      "title": "Blog Preston \u00bb Preston Police",
+      "feed_url": "https://www.blogpreston.co.uk/tag/preston-police/feed/",
+      "website_url": "https://www.blogpreston.co.uk/tag/preston-police/",
+      "description": "Blog Preston dedicates the following section of their blog to police reports, news, investigation, updates and more. Blog Preston is a Community Interest Company that seeks to provide community news and information about the city of Preston, Lancashire. From the latest breaking news to politics to new openings, community initiatives and charity campaigns - we seek to reflect all that goes on in the city.",
+      "followers": {
+        "facebook": 64599,
+        "twitter": 26300,
+        "instagram": 15600
+      },
+      "image_url": "https://i1.feedspot.com/5352089.jpg?t=1700735478"
+    },
+    {
+      "title": "Mesa Police Department Crime Blog",
+      "feed_url": "http://mesapd.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://mesapd.blogspot.com/",
+      "description": "Mesa Police Department Crime is dedicated to working with you, fighting crime, defending human rights and protecting life and property, to make our community safe for all.",
+      "followers": {
+        "facebook": 66000,
+        "twitter": 42900
+      },
+      "image_url": "https://i1.feedspot.com/4701698.jpg?t=1639370342"
+    },
+    {
+      "title": "UNC Police News",
+      "feed_url": "https://police.unc.edu/feed/",
+      "website_url": "https://police.unc.edu/news/",
+      "description": "UNC Police supports the University's core mission of teaching, research, and public service by developing partnerships that, through the encouragement of problem-solving and communications, seek to identify and address public safety needs with professionalism and integrity, all while protecting North Carolina's future.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 6000,
+        "instagram": 946
+      },
+      "image_url": "https://i1.feedspot.com/5352194.jpg?t=1639369767"
+    },
+    {
+      "title": "The International Association of Chiefs of Police Blog",
+      "feed_url": "https://www.theiacp.org/blog-news-releases/feed/rss.xml",
+      "website_url": "https://www.theiacp.org/blog",
+      "description": "The International Association of Chiefs of Police (IACP) is the world's largest and most influential professional association for police leaders. The IACP is known for its commitment to enhancing community safety by shaping the future of the police profession. Through timely research, programming, and unparalleled training opportunities, the IACP is preparing current and emerging police leaders.",
+      "followers": {
+        "facebook": 30600,
+        "twitter": 42200,
+        "instagram": 6500
+      },
+      "image_url": "https://i1.feedspot.com/5352083.jpg?t=1639127575"
+    },
+    {
+      "title": "Lee Lofland",
+      "feed_url": "https://leelofland.com/feed/",
+      "website_url": "https://leelofland.com/",
+      "description": "Lee Lofland provides in-depth details about crime, police procedures, & the tools used in investigations to help you develop better scenes and characters.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4682600.jpg?t=1639388145"
+    },
+    {
+      "title": "Grits for Breakfast",
+      "feed_url": "https://gritsforbreakfast.blogspot.com/feeds/posts/default?alt=atom",
+      "website_url": "https://gritsforbreakfast.blogspot.com/",
+      "description": "Scott Henson is presently interim Executive Director at Just Liberty, a 501(c)4 focused on justice reform in Texas. A former journalist and political opposition researcher, Scott have laboured for more than two decades in Texas' criminal-justice reform movement, having been involved in passing some of Texas' most celebrated 21st-century reform legislation. He created Grits for Breakfast in 2004, having before then operated a criminal-justice reform site hand-coded in HTML beginning in 1997.",
+      "followers": {
+        "twitter": 7600
+      },
+      "image_url": "https://i1.feedspot.com/1968796.jpg?t=1639388579"
+    },
+    {
+      "title": "Somerville Police Department",
+      "feed_url": "https://somervillepd.com/public-safety-news?format=feed&type=rss",
+      "website_url": "https://somervillepd.com/public-safety-news",
+      "description": "The Somerville Police Department, as part of, and empowered by, the community is committed to protecting the lives, property, and rights of all people, maintaining order, and enforcing the law impartially. To fulfill our mission, we will utilize innovative and proven crime prevention strategies and problem-solving partnerships with our community",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5352605.jpg?t=1639403783"
+    },
+    {
+      "title": "The Popehat Report",
+      "feed_url": "https://popehat.substack.com/feed",
+      "website_url": "https://popehat.substack.com/",
+      "description": "I'm Ken White. I'm an attorney in Los Angeles, California, where I'm a partner in a small firm practising criminal defence and civil litigation. I mostly write about criminal justice and free speech issues. I enjoy writing 'lawsplainers' - attempts to make somewhat esoteric legal issues clear and entertaining to non-lawyers",
+      "followers": {
+        "facebook": 7300,
+        "twitter": 270300
+      },
+      "image_url": "https://i1.feedspot.com/4682583.jpg?t=1639392779"
+    },
+    {
+      "title": "e-Roll Call Magazine",
+      "feed_url": "https://andragogytheory.com/feed/",
+      "website_url": "https://andragogytheory.com/",
+      "description": "Mark Bond worked in law enforcement and has been a firearms trainer for more than 30 years. His law enforcement experience includes the military, local, state, and federal levels as a police officer and criminal investigator.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4681772.jpg?t=1613044680"
+    },
+    {
+      "title": "Cop in the Hood",
+      "feed_url": "https://copinthehood.com/feed/",
+      "website_url": "https://copinthehood.com/",
+      "description": "Peter Moskos is a professor in the Department of Law, Police Science, and Criminal Justice Administration at John Jay College of Criminal Justice in New York City. A Princeton and Harvard trained sociologist, he was a Baltimore City Police Officer and is the director of John Jay College's NYPD Executive Master's Leadership Program.",
+      "followers": {
+        "twitter": 16000
+      },
+      "image_url": "https://i1.feedspot.com/1544336.jpg?t=1639394162"
+    },
+    {
+      "title": "Top Cop Leadership Blog",
+      "feed_url": "https://billyjgrogan.com/blog/feed/",
+      "website_url": "https://billyjgrogan.com/blog/",
+      "description": "Inspiring and equipping today's law enforcement leaders for tomorrow's opportunities.TCL was created to help aspiring leaders achieve their goals.",
+      "followers": {
+        "facebook": 794,
+        "twitter": 557
+      },
+      "image_url": "https://i1.feedspot.com/4812438.jpg?t=1618819090"
+    },
+    {
+      "title": "Joe Giacalone",
+      "feed_url": "https://josephgiacalone.com/feed/",
+      "website_url": "https://josephgiacalone.com/",
+      "description": "Joseph L. Giacalone is a retired NYPD Sergeant SDS (Supervisor Detective Squad) and internationally recognized expert. He has an extensive background in criminal investigations. He has held many prestigious positions in the NYPD. I'm a frequent guest on television, in print, on the radio, and online media providing expert opinions on law enforcement matters.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 3600,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/1719150.jpg?t=1639394661"
+    },
+    {
+      "title": "Modern Policing",
+      "feed_url": "https://gcordner.wordpress.com/feed/",
+      "website_url": "https://gcordner.wordpress.com/",
+      "description": "This blog is a resource for students and anyone else interested in keeping up with news and developments in modern policing. We are fortunate to live in interesting times.",
+      "followers": {
+        "twitter": 823
+      },
+      "image_url": "https://i1.feedspot.com/4681737.jpg?t=1639394921"
+    },
+    {
+      "title": "World Policing",
+      "feed_url": "https://worldpolicing.wordpress.com/feed/",
+      "website_url": "https://worldpolicing.wordpress.com/",
+      "description": "Hi! I'm Gary Cordner, Professor Emeritus, USA. This blog presents news items and developments related to police from all over the world, with no claim that the information is either representative or exhaustive.",
+      "followers": {
+        "twitter": 823
+      },
+      "image_url": "https://i1.feedspot.com/4681741.jpg?t=1639394991"
+    },
+    {
+      "title": "The Cream Puff Lady",
+      "feed_url": "https://ahop4pd.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://ahop4pd.blogspot.com/",
+      "description": "Hi! I'm Annie. By day, I am an executive assistant, and by night, a blogger, foodie, and amateur cook, documenting my adventures and showing my appreciation to the officers in the Charlotte-Mecklenburg Police Department (CMPD). The Cream Puff Lady continues to evolve to accommodate the officers I serve, and it has changed a lot in the last 12 years.",
+      "followers": {
+        "twitter": 18
+      },
+      "image_url": "https://i1.feedspot.com/4682487.jpg?t=1639395272"
+    },
+    {
+      "title": "Police Mental Health",
+      "feed_url": "http://feeds.feedburner.com/policementalhealth",
+      "website_url": "http://policementalhealth.blogspot.com/",
+      "description": "Mental Health for Cops by Jeff Shannon. This web site is exclusively for the purpose of education. It is not intended to render psychotherapy or be a replacement for counseling or psychotherapy.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3509689.jpg?t=1649767039"
+    },
+    {
+      "title": "Peaceful Existence",
+      "feed_url": "https://peacefullexistence.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://peacefullexistence.blogspot.com/",
+      "description": "Welcome, I've spent a good deal of my last 30 years in and around the law enforcement and security fields in between my bouts in the trucking industry which also allowed me to see the seamier side of city life. I think I have a good understanding of the subjects I write about.",
+      "followers": {
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/5191245.jpg?t=1639395428"
+    },
+    {
+      "title": "Square Cop In A Round World",
+      "feed_url": "https://squarecopinaroundworld.wordpress.com/feed/",
+      "website_url": "https://squarecopinaroundworld.wordpress.com/",
+      "description": "I'm Lisa Boeving-Learned, Sergeant (retired). We'll talk about issues relating to policing and the communities we serve. This is a no hate zone, but we may ruffle some feathers. My guiding principle is that integrity is the most important quality a police officer can have. The job is dangerous, but that does not change the need to serve the citizens that place their trust in us every day.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4681725.jpg?t=1639396973"
+    },
+    {
+      "title": "How 2 Love Our Cops",
+      "feed_url": "https://www.how2loveourcops.org/feed/",
+      "website_url": "https://www.how2loveourcops.org/",
+      "description": "Law Enforcement Families are faced with many challenges of a crisis-driven career. It is the goal and vision of How2LoveYourCop to create positive tools to equip and encourage cops, spouses, and kids to thrive despite these challenges.",
+      "followers": {
+        "facebook": 12300,
+        "twitter": 315
+      },
+      "image_url": "https://i1.feedspot.com/4681906.jpg?t=1618819126"
+    },
+    {
+      "title": "Walking the Social Media Beat",
+      "feed_url": "http://walkingthesocialmediabeat.com/feed/",
+      "website_url": "http://walkingthesocialmediabeat.com/",
+      "description": "Tim Burrows was a sworn police officer for 25 years with experience in front line operations, primary response, traffic, detective operations and supervision. He is regarded as a world leader in the use of Social Media for police and law enforcementNo More Bullies use.",
+      "followers": {
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/4065236.jpg?t=1606125846"
+    },
+    {
+      "title": "Happy Police Wife",
+      "feed_url": "http://1happypolicewife.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://1happypolicewife.blogspot.com/",
+      "description": "Encouragement for police wives who want to be good wives, good mothers, and good friends.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4681896.jpg?t=1618819646"
+    },
+    {
+      "title": "Police Test Study Guide Blog",
+      "feed_url": "https://policeteststudyguide.com/feed/",
+      "website_url": "https://policeteststudyguide.com/police-test-blog/",
+      "description": "Exceptional weekly blogs to help you pass the police officer exam. Our police test blog is a must-follow resource that keeps you up-to-date! Police Test Study Guide is the leading online platform that prepares you to pass the police test the first time, every time!",
+      "followers": {
+        "facebook": 3400,
+        "instagram": 454
+      },
+      "image_url": "https://i1.feedspot.com/5044901.jpg?t=1639397192"
+    },
+    {
+      "title": "The Boogie Man Is My Friend",
+      "feed_url": "https://theboogiemanismyfriend.wordpress.com/feed/",
+      "website_url": "https://theboogiemanismyfriend.wordpress.com/blog/",
+      "description": "I am a 40-something female: former police officer. Now working in academia, going back to college, and raising my daughter. I'm trying to adjust to civilian life.",
+      "followers": {
+        "twitter": 203
+      },
+      "image_url": "https://i1.feedspot.com/1360977.jpg?t=1620816549"
+    },
+    {
+      "title": "Salem Police News",
+      "feed_url": "https://salemnhpdnews.com/feed/",
+      "website_url": "https://salemnhpdnews.com/",
+      "description": "Read articles by dedicated professionals, open communication, anonymous tips, news, investigation reports, updates from the town, and more on Salem Police News.",
+      "followers": {
+        "facebook": 29100,
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5352601.jpg?t=1639397526"
+    },
+    {
+      "title": "Farmington Police Department Blog",
+      "feed_url": "https://fpdblog.com/feed/",
+      "website_url": "https://fpdblog.com/",
+      "description": "The Farmington Police Department is dedicated to a safe community through professional law enforcement. The Farmington Police Department continues to meet the standards to remain accredited through the Commission on Accreditation for Law Enforcement Agencies (CALEA). The department went through the re-accreditation process in 2012 and was awarded a Gold Standard Certificate of Re-accreditation.",
+      "followers": {
+        "facebook": 62700
+      },
+      "image_url": "https://i1.feedspot.com/5352598.jpg?t=1639397603"
+    },
+    {
+      "title": "Saugus Police Department News",
+      "feed_url": "https://sauguspd.com/feed/",
+      "website_url": "https://sauguspd.com/news/",
+      "description": "We, the members of the Saugus Police Department are Committed, take Pride, and are dedicated to the needs of our community in the delivery of quality police services in an effective, responsible and professional manner. Our objective is to improve the quality of life through community and interagency partnerships to thereby promote a safe and secure community for all.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 7300
+      },
+      "image_url": "https://i1.feedspot.com/5352631.jpg?t=1639464353"
+    },
+    {
+      "title": "Yakima Police Department News",
+      "feed_url": "https://yakimapolice.org/feed/",
+      "website_url": "https://yakimapolice.org/news/",
+      "description": "At the Yakima Police Department, we believe in building relationships-relationships between ourselves and the community we protect, relationships between our fellow officers and their families, and personal relationships to support us in what we do every day. At YPD we pride ourselves on taking care of those who take care of our community members every day and we know it makes all the difference.",
+      "followers": {
+        "facebook": 59400,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5352625.jpg?t=1639468324"
+    },
+    {
+      "title": "KCPD Chief",
+      "feed_url": "http://kcpdchief.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://kcpdchief.blogspot.com/",
+      "description": "The Official Blog of the Kansas City Missouri Police Chief Richard C. Smith. He joined KCPD as an officer in 1988. As he worked his way up the ranks, he has had assignments in three different patrol divisions, the Robbery and Homicide Units, Tactical Response Teams, Planning and Research Division and Kansas City No Violence Alliance.",
+      "followers": {
+        "twitter": 249800
+      },
+      "image_url": "https://i1.feedspot.com/5352085.jpg?t=1639369240"
+    },
+    {
+      "title": "Hampshire Police and Crime Commissioner Blog",
+      "feed_url": "https://www.hampshire-pcc.gov.uk/commissioner/my-blog/feed",
+      "website_url": "https://www.hampshire-pcc.gov.uk/commissioner/my-blog",
+      "description": "Police and Crime Commissioners are elected to make policing more accountable and give people a greater voice on police and crime matters. Setting the strategy for policing, crime and disorder reduction and victim support. Donna Jones was elected as Police and Crime Commissioner on 10 May 2021. Donna has been a Magistrate in Hampshire for sixteen years. This has helped her develop a strong background in criminal justice.",
+      "followers": {
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/5352087.jpg?t=1639128487"
+    },
+    {
+      "title": "Sheriff Carter's Newsletter",
+      "feed_url": "http://tracycarter.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://tracycarter.blogspot.com/",
+      "description": "Lee Country, North Carolina sheriff Tracy Carter blogs about current police issues and how the community can help. The posts are good examples of police/community relations and current law enforcement issues faced around the country.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4682630.jpg?t=1606126343"
+    },
+    {
+      "title": "The Director's Desk",
+      "feed_url": "http://lpd304.blogspot.com/feeds/posts/default",
+      "website_url": "http://lpd304.blogspot.com/",
+      "description": "I'm the public safety director in Lincoln (population 258,000). I became a police officer here in 1974, and except for a seven year detour to the Sheriff's Office, this is where I've been. I was the police chief from 1994 to 2011, when I assumed management responsibility for police, fire, and 911",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/119689.jpg?t=1606125887"
+    },
+    {
+      "title": "Police1",
+      "feed_url": "https://www.police1.com/law-enforcement-police-rss-feeds/most-popular-articles.xml",
+      "website_url": "https://www.police1.com/most-popular-police-articles/",
+      "description": "Police1 is revolutionizing the way the law enforcement community finds relevant news, identifies important training information, interacts online and researches product purchases and manufacturers. It's the most comprehensive and trusted online destination for law enforcement agencies and police departments worldwide.",
+      "followers": {
+        "facebook": 798600,
+        "twitter": 61600,
+        "instagram": 23300
+      },
+      "image_url": "https://i1.feedspot.com/4683307.jpg?t=1639387236"
+    },
+    {
+      "title": "Epic Recruiting Blog",
+      "feed_url": "https://pdrecruiting.com/feed/",
+      "website_url": "https://policinginsight.com/",
+      "description": "Epic Recruiting is designed to help law enforcement recruiters do their job more efficiently and with greater results. Epic Recruiting is the leader in #PoliceRecruiting and marketing solutions. The company is built around serving police and sheriff recruiters throughout the country. Read Ideas, tips, and tricks for recruiting in today's digital era.",
+      "followers": {
+        "facebook": 314,
+        "twitter": 333,
+        "instagram": 709
+      },
+      "image_url": "https://i1.feedspot.com/5280617.jpg?t=1639463814"
+    },
+    {
+      "title": "KINGSPORTTN.GOV Blog",
+      "feed_url": "https://www.kingsporttn.gov/category/police-department/police-blog/feed/",
+      "website_url": "https://www.kingsporttn.gov/category/police-department/police-blog/",
+      "description": "Kingsport Police Department Blog releases news and reports regularly on the crime happening and solved from the community on their blog. Follow and read to stay updated.",
+      "followers": {
+        "facebook": 24100,
+        "twitter": 3100,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5352613.jpg?t=1639399323"
+    },
+    {
+      "title": "Riley County Police Department",
+      "feed_url": "https://www.rileycountypolice.org/CivicAlerts.aspx?CID=1",
+      "website_url": "https://www.rileycountypolice.org/CivicAlerts.aspx?CID=1",
+      "description": "Riley County Police Department's mission is to reduce crime and improve the quality of life for the citizens we serve. The Riley County Police Department holds its employees to a high standard of service to the community and prides themselves on living and working by the following values.",
+      "followers": {
+        "facebook": 35900,
+        "twitter": 20200
+      },
+      "image_url": "https://i1.feedspot.com/5352624.jpg?t=1639472264"
+    },
+    {
+      "title": "LEO Affairs",
+      "feed_url": "https://leoaffairs.com/feed/",
+      "website_url": "https://leoaffairs.com/",
+      "description": "Leo Affairs talk candidly about law enforcement related topics without the fear of repercussion. Here you will find information about Internal Affairs, the Policeman's Bill of Rights, Whistle Blower laws, Public Corruption and an array of other informational areas.",
+      "followers": {
+        "facebook": 54100,
+        "twitter": 154
+      },
+      "image_url": "https://i1.feedspot.com/4681884.jpg?t=1639387362"
+    },
+    {
+      "title": "Police Magazine",
+      "feed_url": "https://www.policemag.com/rss/all.aspx",
+      "website_url": "https://www.policemag.com/",
+      "description": "With more than 45 years of service to law enforcement, POLICE Magazine is the most trusted media resource for law enforcement professionals looking to stay current on policing trends, technology, new products, legal issues, officer safety, and professional growth.",
+      "followers": {
+        "facebook": 77800,
+        "twitter": 33700,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4681838.jpg?t=1639387510"
+    },
+    {
+      "title": "Cop Block",
+      "feed_url": "https://www.copblock.org/feed/",
+      "website_url": "https://www.copblock.org/",
+      "description": "Cop Block is a decentralized project supported by a diverse group of individuals united by their shared goal of police accountability.",
+      "followers": {
+        "twitter": 23300
+      },
+      "image_url": "https://i1.feedspot.com/5280616.jpg?t=1620926417"
+    },
+    {
+      "title": "Kristen Ziman",
+      "feed_url": "https://kristenziman.com/feeds/posts/default?alt=rss",
+      "website_url": "https://kristenziman.com/",
+      "description": "I'm Chief Kristen Ziman. Since I was a kid, all I ever wanted to be was a police officer. I became a Cadet at age 17 and retired as the police Chief at 47. Now I've hung up my badge so I can create even more of an impact. I'm committed to sharing the lessons I've learned and wisdom I've gained during my 30 years in law enforcement to change the culture of policing, prevent mass shootings and cultivate leadership in our communities and organizations.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/4681654.jpg?t=1639397122"
+    },
+    {
+      "title": "City of Colorado Springs News",
+      "feed_url": "https://coloradosprings.gov/news/feed?department=436&featured=All",
+      "website_url": "https://coloradosprings.gov/news?department=436&featured=All",
+      "description": "Read City of Colorado Springs News and stay updated on the latest coverage and reports on crime, investigation, police, and more from the City of Colorado Spring.",
+      "followers": {
+        "facebook": 60800,
+        "twitter": 64800,
+        "instagram": 62000
+      },
+      "image_url": "https://i1.feedspot.com/5352596.jpg?t=1639398591"
+    },
+    {
+      "title": "Toronto Police Service",
+      "feed_url": "https://www.torontopolice.on.ca/newsreleases/rss.php",
+      "website_url": "http://www.torontopolice.on.ca/",
+      "description": "We are dedicated to delivering police services in partnership with our communities to keep Toronto the best and safest place to be. Read the latest news on TPSNews along with stories and blogs.",
+      "followers": {
+        "facebook": 92800,
+        "twitter": 436500,
+        "instagram": 125800
+      },
+      "image_url": "https://i1.feedspot.com/963240.jpg?t=1639404031"
+    },
+    {
+      "title": "Royal Canadian Mounted Police",
+      "feed_url": "https://www.rcmp-grc.gc.ca/install.php",
+      "website_url": "https://www.rcmp-grc.gc.ca/en/",
+      "description": "The Royal Canadian Mounted Police (RCMP) is more than just Canada's national police service. We have been part of the fabric of Canada since 1873 - almost 150 years. From coast-to-coast-to-coast, at the community, provincial, territorial and federal levels, we work to prevent crime, enforce the law, investigate offences, keep Canadians, and their interests, safe and secure, and assist Canadians in emergency situations/incidents.",
+      "followers": {
+        "facebook": 18200,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/1659948.jpg?t=1639462090"
+    },
+    {
+      "title": "Canada Police Report",
+      "feed_url": "https://www.canadapolicereport.ca/feed/",
+      "website_url": "https://www.cambs.police.uk/news-and-appeals/News-and-appeals",
+      "description": "Canada Police Report is a database of official media releases made public by police departments across Canada. All reports are written by police media departments. Reports are published unaltered, in the exact format submitted by police.",
+      "followers": {
+        "facebook": 92900,
+        "twitter": 8000
+      },
+      "image_url": "https://i1.feedspot.com/5352639.jpg?t=1639459407"
+    },
+    {
+      "title": "Birmingham Police Department",
+      "feed_url": "https://police.birminghamal.gov/feed/",
+      "website_url": "https://police.birminghamal.gov/press-release-newsroom/",
+      "description": "It is the mission of the Birmingham Police Department to provide the highest quality of police services by partnering with the community to build trust, reduce crime and improve the quality of life. We serve our citizens with respect and protect the lives, property and constitutional rights of all.",
+      "followers": {
+        "facebook": 128300,
+        "twitter": 19000,
+        "instagram": 9500
+      },
+      "image_url": "https://i1.feedspot.com/5352622.jpg?t=1639473161"
+    },
+    {
+      "title": "National Alliance for Law Enforcement Support",
+      "feed_url": "https://www.nalestough.org/feed/",
+      "website_url": "https://www.nalestough.org/",
+      "description": "National Alliance for Law Enforcement Support is dedicated to providing resources and emotional support to law enforcement families and serving as a positive voice for law enforcement in the community.",
+      "followers": {
+        "facebook": 129600,
+        "twitter": 167
+      },
+      "image_url": "https://i1.feedspot.com/4681673.jpg?t=1639394016"
+    }
+  ]
+}

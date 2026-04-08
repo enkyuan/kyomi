@@ -1,0 +1,107 @@
+{
+  "category": "UK Literature",
+  "source_url": "https://rss.feedspot.com/uk_literature_rss_feeds",
+  "feeds": [
+    {
+      "title": "Times Literary Supplement",
+      "feed_url": "https://www.the-tls.co.uk/feed",
+      "website_url": "https://www.the-tls.co.uk/categories/literature",
+      "description": "TLS is a journal for literature and ideas. We cover more than just literature, featuring major articles on subjects from anthropology to zoology, philosophy to politics, comedy to psychology and are the only major English-language publication to review books published in other languages.",
+      "followers": {
+        "facebook": 88000,
+        "twitter": 76700
+      },
+      "image_url": "https://i1.feedspot.com/4496731.jpg?t=1611302328"
+    },
+    {
+      "title": "The Literary Consultancy",
+      "feed_url": "https://literaryconsultancy.co.uk/feed/",
+      "website_url": "https://literaryconsultancy.co.uk/",
+      "description": "The Literary Consultancy is the UK's first and leading editorial and manuscript assessment service working nationally and internationally. Literary values in a digital age.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 14400
+      },
+      "image_url": "https://i1.feedspot.com/4496870.jpg?t=1611302580"
+    },
+    {
+      "title": "Royal Society of Literature",
+      "feed_url": "https://rsliterature.org/feed/",
+      "website_url": "https://rsliterature.org/category/news/",
+      "description": "The Royal Society of Literature nurtures, celebrates and defends Britain's outstanding tradition of writing.",
+      "followers": {
+        "facebook": 12600,
+        "twitter": 51800,
+        "instagram": 22200
+      },
+      "image_url": "https://i1.feedspot.com/4497304.jpg?t=1611302470"
+    },
+    {
+      "title": "A Little Blog of Books",
+      "feed_url": "https://alittleblogofbooks.com/feed/",
+      "website_url": "https://alittleblogofbooks.com/",
+      "description": "A Little Blog of Books is focused around Clare's favourite genres - contemporary, literary and translated fiction. The blog has detailed reviews split by A-Z and year, a list of the books to be read, and a variety of literature news and feature pieces.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4494706.jpg?t=1607163844"
+    },
+    {
+      "title": "Tredynas Days by Simon Lavery",
+      "feed_url": "https://tredynasdays.co.uk/feed/",
+      "website_url": "https://tredynasdays.co.uk/category/literature/",
+      "description": "A Literary Blog by Simon Lavery, Author, blogger, lecturer.",
+      "followers": {
+        "facebook": 74,
+        "twitter": 920
+      },
+      "image_url": "https://i1.feedspot.com/4496862.jpg?t=1611302614"
+    },
+    {
+      "title": "The Book Smugglers",
+      "feed_url": "https://www.thebooksmugglers.com/feed",
+      "website_url": "https://www.thebooksmugglers.com/",
+      "description": "The Book Smugglers was founded by Ana Grilo and Thea James as an outlet for their 'bottomless obsession with books', and features a variety of different reviews dedicated to sci-fi and fantasy short stories and novels. As well as providing readers with the latest must-reads that have caught their attention, the pair help to promote and publish short stories and authors through Book Smugglers Publishing, their independent digital publisher of SFF fiction and non-fiction.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 21300,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4845155.jpg?t=1613711530"
+    },
+    {
+      "title": "Litro Magazine",
+      "feed_url": "https://www.litromagazine.com/feed/",
+      "website_url": "https://www.litromagazine.com/",
+      "description": "Litro is one of UK's leading literary and creative arts magazines, and has been publishing new short fiction since 2006",
+      "followers": {
+        "twitter": 9400,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4905897.jpg?t=1613711522"
+    },
+    {
+      "title": "British Council Arts",
+      "feed_url": "https://arts.britishcouncil.org/what-we-do/literature",
+      "website_url": "https://arts.britishcouncil.org/what-we-do/literature",
+      "description": "Connecting British writers with readers and festival audiences internationally. Curating the best of British arts for a global audience.",
+      "followers": {
+        "facebook": 179200,
+        "twitter": 24400
+      },
+      "image_url": "https://i1.feedspot.com/4496778.jpg?t=1611302245"
+    },
+    {
+      "title": "Jericho Writers Blog",
+      "feed_url": "https://jerichowriters.com/jericho-writers/about-us/blog/feed/",
+      "website_url": "https://jerichowriters.com/jericho-writers/about-us/blog/",
+      "description": "A leading consultancy based in Jericho, Oxford, helping writers through manuscript feedback, publishing events, and access to literary agents. We've helped hundreds of writers finish their books, land literary agents, and go on to traditional or self-publishing success. Now, we want to help you.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 14000,
+        "instagram": 13500
+      },
+      "image_url": "https://i1.feedspot.com/4496953.jpg?t=1622025611"
+    }
+  ]
+}

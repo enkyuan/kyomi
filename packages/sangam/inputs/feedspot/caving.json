@@ -1,0 +1,102 @@
+{
+  "category": "Caving",
+  "source_url": "https://rss.feedspot.com/caving_rss_feeds",
+  "feeds": [
+    {
+      "title": "British Caving Association",
+      "feed_url": "https://british-caving.org.uk/feed/",
+      "website_url": "https://british-caving.org.uk/news/",
+      "description": "The British Caving Association is the national body for underground exploration in the United Kingdom. They represent individuals and groups with a genuine interest in caves, karst, and associated phenomena, whether from a strictly sporting viewpoint, a scientific viewpoint, or a combination of both.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 256
+      },
+      "image_url": "https://i1.feedspot.com/5305233.jpg?t=1627297487"
+    },
+    {
+      "title": "The Cave Rescue Organisation",
+      "feed_url": "https://cro.org.uk/feed/",
+      "website_url": "https://cro.org.uk/all-news/",
+      "description": "Covers articles on Mountain Rescue, Walking Rescues, Ambulance Rescues, Animal Rescue, Climbing Rescue, and General News.",
+      "followers": {
+        "facebook": 14900,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5305259.jpg?t=1627301171"
+    },
+    {
+      "title": "Darkness Below",
+      "feed_url": "https://darknessbelow.co.uk/feed/",
+      "website_url": "https://darknessbelow.co.uk/",
+      "description": "Your one-stop site for caving, mining, events, news, and other underground news and events. Darkness Below is the largest active online caving and underground news site worldwide.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 776,
+        "instagram": 141
+      },
+      "image_url": "https://i1.feedspot.com/4922363.jpg?t=1620820986"
+    },
+    {
+      "title": "South Wales Caving Club",
+      "feed_url": "https://swcc-blog.blogspot.com/feeds/posts/default",
+      "website_url": "https://swcc-blog.blogspot.com/",
+      "description": "SWCC is an active caving club based in Penwyllt having around 300 members from all around the UK as well as overseas. The primary focus is caving in South Wales but the club has frequent trips to other UK caving regions as well as expeditions worldwide.",
+      "followers": {
+        "facebook": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5305239.jpg?t=1627302728"
+    },
+    {
+      "title": "Caves & Caving in Thailand Blog",
+      "feed_url": "https://www.thailandcaves.shepton.org.uk/rss.xml",
+      "website_url": "http://thailandcaves.shepton.org.uk/blog",
+      "description": "Covers articles on Thailand Cave Survey, Caving Expeditions, Cave Fauna, Cave Survey Data, Caving Tours and Guides, and Cave Database.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5305287.jpg?t=1627301800"
+    },
+    {
+      "title": "Cascade Grotto Blog",
+      "feed_url": "https://cascadegrotto.org/feed/",
+      "website_url": "https://cascadegrotto.org/blog/",
+      "description": "Enjoying and conserving caves in the Pacific Northwest and beyond since 1951. Covers articles on Caving Education, Bats, Gear, Members, Resources, NSS, and more.",
+      "followers": {
+        "facebook": 1300,
+        "instagram": 566
+      },
+      "image_url": "https://i1.feedspot.com/5305318.jpg?t=1627304715"
+    },
+    {
+      "title": "The Florida Speleological Society Blog",
+      "feed_url": "http://www.floridacaving.com/feed/",
+      "website_url": "https://www.floridacaving.com/blog/",
+      "description": "The Florida Speleological Society (FSS) is a branch of the National Speleological Society (NSS) located in Gainesville/Williston FL. They hold monthly meetings, vertical rope lessons, caving trips, and cave conservation efforts.",
+      "followers": {
+        "facebook": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5308984.jpg?t=1628161022"
+    },
+    {
+      "title": "Derbyshire Caving Association",
+      "feed_url": "https://thedca.org.uk/news?format=feed&type=rss",
+      "website_url": "https://thedca.org.uk/news/",
+      "description": "The aim of the Derbyshire Caving Association is to foster the spirit of cooperation between organizations and individuals interested in any aspect of caving and kindred subjects in the area of Derbyshire and vicinity. The latest news concerning caving in the Peak District and the DCA.",
+      "followers": {
+        "facebook": 874,
+        "twitter": 563
+      },
+      "image_url": "https://i1.feedspot.com/5305324.jpg?t=1627305197"
+    },
+    {
+      "title": "Northern Rocky Mountain Grotto",
+      "feed_url": "https://nrmg.org/feed/",
+      "website_url": "https://nrmg.org/news-announcements/",
+      "description": "Caving in North America's Rocky Mountains and the World. Northern Rocky Mountain Grotto club purpose is to promote the discovery, exploration, scientific study, and conservation of caves and karst.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 7,
+        "instagram": 669
+      },
+      "image_url": "https://i1.feedspot.com/5309006.jpg?t=1628159903"
+    }
+  ]
+}

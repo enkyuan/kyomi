@@ -1,0 +1,96 @@
+{
+  "category": "Macaron",
+  "source_url": "https://rss.feedspot.com/macaron_rss_feeds",
+  "feeds": [
+    {
+      "title": "Pastreez",
+      "feed_url": "https://pastreez.com/blogs/news.atom",
+      "website_url": "https://pastreez.com/blogs/news",
+      "description": "I'm Anthony, co-founder of pastreez. I'm crazy about macarons for a very long time. But my soulmate is allergic to dairy products. Follow this blog for gluten-free & organic macarons.",
+      "followers": {
+        "facebook": 3300,
+        "instagram": 97700
+      },
+      "image_url": "https://i1.feedspot.com/4728960.jpg?t=1607690182"
+    },
+    {
+      "title": "Indulge With Mimi",
+      "feed_url": "https://www.indulgewithmimi.com/category/macarons/feed/",
+      "website_url": "https://www.indulgewithmimi.com/category/macarons/",
+      "description": "Indulge With Mimi is a blog all about baking macarons. Explains the proper macaronage techniques, how to use your oven, avoid hollow macarons and more.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 441,
+        "instagram": 49800
+      },
+      "image_url": "https://i1.feedspot.com/4725332.jpg?t=1607690144"
+    },
+    {
+      "title": "Boutique Point G",
+      "feed_url": "https://boutiquepointg.com/blogs/news.atom",
+      "website_url": "https://boutiquepointg.com/blogs/news",
+      "description": "Located in Montreal, Point G is a specialist in gourmet products recognized for the quality of its macarons on the North American market.",
+      "followers": {
+        "facebook": 16300,
+        "twitter": 2600,
+        "instagram": 7600
+      },
+      "image_url": "https://i1.feedspot.com/4725345.jpg?t=1607690158"
+    },
+    {
+      "title": "caramel factory \u00bb Macaron",
+      "feed_url": "https://caramelmoko.wordpress.com/tag/macaron/feed/",
+      "website_url": "https://caramelmoko.wordpress.com/tag/macaron/",
+      "description": "Caramel Factory is a baking school and patisserie located at Shah Alam, Selangor. Caramel Factory has all sorts of recipes, pictures and videos of my adventures in baking! I've always liked baking, mostly Japanese-style pastries and breads.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/4731547.jpg?t=1607690212"
+    },
+    {
+      "title": "The French Macaron Critic",
+      "feed_url": "http://thefrenchmacaroncritic.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://thefrenchmacaroncritic.blogspot.com/",
+      "description": "The French Macaron Critic is chronicling her journey to find and taste magnificent French macarons, help others to find their perfect one and support local businesses.",
+      "followers": {
+        "facebook": 75,
+        "twitter": 254
+      },
+      "image_url": "https://i1.feedspot.com/4728773.jpg?t=1607690220"
+    },
+    {
+      "title": "ANGEL BAKE Caf\u00e9",
+      "feed_url": "https://www.angelbk.com/feed/",
+      "website_url": "https://www.angelbk.com/learn-more/",
+      "description": "Baking traditional Macarons with Angel Bake products is amazingly simple. Follow this blog for French Macaron Recipes with Buttercram Filling.",
+      "followers": {
+        "facebook": 457,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4728733.jpg?t=1607690229"
+    },
+    {
+      "title": "Margot & Montanez",
+      "feed_url": "https://margotandmontanez.com/blogs/news.atom",
+      "website_url": "https://margotandmontanez.com/blogs/news",
+      "description": "Discover authentic South American Alfajores biscuits and sweet delicatessen created with great passion, made-to-order, and with high-quality ingredients to ensure the freshest taste. Gluten-free, vegan, and vegetarian produce also available.",
+      "followers": {
+        "facebook": 363,
+        "twitter": 371
+      },
+      "image_url": "https://i1.feedspot.com/5234928.jpg?t=1610348963"
+    },
+    {
+      "title": "Chantal Guillon",
+      "feed_url": "https://chantalguillonmacarons.tumblr.com/rss",
+      "website_url": "https://chantalguillonmacarons.tumblr.com/",
+      "description": "Chantal Guillon is above all a novel interpretation of the macaron, conceived as a unique, original, surprising creation. The selection includes both classic flavors and limited-edition macarons to be discovered according to the seasons and for special events. All created locally in San Francisco by a dedicated French and American team.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 262
+      },
+      "image_url": "https://i1.feedspot.com/4728922.jpg?t=1607690201"
+    }
+  ]
+}

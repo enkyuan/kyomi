@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>FeedLand hotlist in OPML</title>
+    <description>The most popular feeds on FeedLand, as an OPML subscription list.</description>
+    <dateCreated>Sat, 30 Jul 2022 22:02:31 GMT</dateCreated>
+    <dateModified>Mon, 01 Sep 2025 18:24:34 GMT</dateModified>
+  </head>
+  <body>
+    <outline type="rss" text="Wirecutter: Reviews for the Real World" xmlUrl="http://feeds.feedburner.com/TheWirecutter" htmlUrl="https://www.nytimes.com/wirecutter"/>
+    <outline type="rss" text="Memex 1.1" xmlUrl="http://memex.naughtons.org/feed" htmlUrl="https://memex.naughtons.org/"/>
+    <outline type="rss" text="On my Om" xmlUrl="http://om.co/feed/" htmlUrl="https://om.co/"/>
+    <outline type="rss" text="Humans of New York" xmlUrl="http://www.humansofnewyork.com/rss" htmlUrl="https://www.humansofnewyork.com/"/>
+    <outline type="rss" text="Marco.org" xmlUrl="http://www.marco.org/rss" htmlUrl="https://marco.org/"/>
+    <outline type="rss" text="BuzzMachine" xmlUrl="https://buzzmachine.com/feed/" htmlUrl="https://buzzmachine.com/"/>
+    <outline type="rss" text="aka Ken Smith" xmlUrl="http://oldschool.scripting.com/KenSmith/rss.xml" htmlUrl="http://oldschool.scripting.com/KenSmith/"/>
+    <outline type="rss" text="TechRepublic" xmlUrl="https://www.techrepublic.com/rssfeeds/articles/" htmlUrl="https://www.techrepublic.com/"/>
+    <outline type="rss" text="Political Wire" xmlUrl="https://politicalwire.com/feed/" htmlUrl="https://politicalwire.com/"/>
+    <outline type="rss" text="AVC" xmlUrl="http://feeds.feedburner.com/avc" htmlUrl="https://avc.com/"/>
+    <outline type="rss" text="Jason Fried" xmlUrl="https://world.hey.com/jason/feed.atom" htmlUrl="https://world.hey.com/jason"/>
+    <outline type="rss" text="Ars Technica - All content" xmlUrl="https://feeds.arstechnica.com/arstechnica/index" htmlUrl="https://arstechnica.com/"/>
+    <outline type="rss" text="inessential.com" xmlUrl="http://inessential.com/xml/rss.xml" htmlUrl="https://inessential.com/"/>
+    <outline type="rss" text="TorrentFreak" xmlUrl="http://feeds.feedburner.com/Torrentfreak" htmlUrl="https://torrentfreak.com/"/>
+    <outline type="rss" text="Paul Graham: Essays" xmlUrl="http://www.aaronsw.com/2002/feeds/pgessays.rss" htmlUrl="http://www.paulgraham.com/"/>
+    <outline type="rss" text="POLITICO" xmlUrl="https://www.politico.eu/feed/" htmlUrl="https://www.politico.eu/"/>
+    <outline type="rss" text="Daring Fireball" xmlUrl="https://daringfireball.net/feeds/main" htmlUrl="https://daringfireball.net/"/>
+    <outline type="rss" text="NYT &amp;gt; Most Recent Headlines" xmlUrl="http://nytimes.com/timeswire/feeds/" htmlUrl="https://www.nytimes.com/timeswire"/>
+    <outline type="rss" text="Dries Buytaert" xmlUrl="https://dri.es/rss.xml" htmlUrl="https://dri.es/"/>
+    <outline type="rss" text="NYT &amp;gt; Arts &amp;gt; Television" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Television.xml" htmlUrl="https://www.nytimes.com/section/arts/television"/>
+    <outline type="rss" text="Scientific American Content: Global" xmlUrl="http://rss.sciam.com/ScientificAmerican-Global" htmlUrl="https://www.scientificamerican.com/"/>
+    <outline type="rss" text="FeedLand likes for all users" xmlUrl="http://data.feedland.org/likes.xml" htmlUrl="http://feedland.org/?likes"/>
+    <outline type="rss" text="Seth Godin's Blog on marketing, tribes and respect" xmlUrl="http://feeds.feedblitz.com/SethsBlog" htmlUrl="https://seths.blog/"/>
+    <outline type="rss" text="Tech – Ars Technica" xmlUrl="https://feeds.arstechnica.com/arstechnica/gadgets" htmlUrl="https://arstechnica.com/"/>
+    <outline type="rss" text="WordPress News" xmlUrl="https://wordpress.org/news/feed/" htmlUrl="https://wordpress.org/news"/>
+    <outline type="rss" text="Julia Evans" xmlUrl="https://jvns.ca/atom.xml" htmlUrl="http://jvns.ca/"/>
+    <outline type="rss" text="SCOTUSblog" xmlUrl="http://www.scotusblog.com/feed/" htmlUrl="https://www.scotusblog.com/"/>
+    <outline type="rss" text="DER SPIEGEL - International" xmlUrl="http://www.spiegel.de/international/index.rss" htmlUrl="https://www.spiegel.de/"/>
+    <outline type="rss" text="The Daily" xmlUrl="https://feeds.simplecast.com/54nAGcIl" htmlUrl="https://www.nytimes.com/the-daily"/>
+    <outline type="rss" text="CNET" xmlUrl="http://feeds.feedburner.com/cnet/tcoc" htmlUrl="https://www.cnet.com/#ftag=CAD590a51e"/>
+    <outline type="rss" text="Nieman Journalism Lab: Fuego" xmlUrl="http://feeds.feedburner.com/NiemanLabFuego" htmlUrl="http://www.niemanlab.org/fuego/"/>
+    <outline type="rss" text="The Verge" xmlUrl="http://www.theverge.com/rss/index.xml" htmlUrl="https://www.theverge.com/"/>
+    <outline type="rss" text="NYT &amp;gt; Most Popular" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/MostEmailed.xml" htmlUrl="https://www.nytimes.com/"/>
+    <outline type="rss" text="The Adventures of Accordion Guy in the 21st Century" xmlUrl="https://www.joeydevilla.com/feed/" htmlUrl="https://www.joeydevilla.com/"/>
+    <outline type="rss" text="TechCrunch" xmlUrl="http://techcrunch.com/feed/" htmlUrl="https://techcrunch.com/"/>
+    <outline type="rss" text="Berkeleyside" xmlUrl="http://www.berkeleyside.com/feed/" htmlUrl="https://www.berkeleyside.org/"/>
+    <outline type="rss" text="Axios" xmlUrl="http://scripting.com/publicfolder/feedland/feeds/axios.xml" htmlUrl="https://www.axios.com/top/"/>
+    <outline type="rss" text="Blog - Ethan Zuckerman" xmlUrl="http://www.ethanzuckerman.com/blog/?feed=rss2" htmlUrl="https://ethanzuckerman.com/blog/"/>
+    <outline type="rss" text="CSS-Tricks" xmlUrl="https://css-tricks.com/feed/" htmlUrl="https://css-tricks.com/"/>
+    <outline type="rss" text="Stories by Donald G. McNeil Jr. on Medium" xmlUrl="https://donaldgmcneiljr1954.medium.com/feed" htmlUrl="https://medium.com/@donaldgmcneiljr1954?source=rss-d58b26425136------2"/>
+    <outline type="rss" text="Scripting News" xmlUrl="http://scripting.com/rss.xml" htmlUrl="http://scripting.com/"/>
+    <outline type="rss" text="BGR - Industry-Leading Insights In Tech And Entertainment" xmlUrl="http://feeds.feedburner.com/TheBoyGeniusReport" htmlUrl="https://www.bgr.com/"/>
+    <outline type="rss" text="PressThink" xmlUrl="https://pressthink.org/feed/" htmlUrl="https://pressthink.org/"/>
+    <outline type="rss" text="Laughing Squid" xmlUrl="http://laughingsquid.com/feed/" htmlUrl="https://laughingsquid.com/"/>
+    <outline type="rss" text="Gizmodo" xmlUrl="http://gizmodo.com/index.xml" htmlUrl="https://gizmodo.com/"/>
+    <outline type="rss" text="Matt Mullenweg" xmlUrl="https://ma.tt/feed/" htmlUrl="https://ma.tt/"/>
+    <outline type="rss" text="memeorandum" xmlUrl="http://www.memeorandum.com/feed.xml" htmlUrl="http://www.memeorandum.com/"/>
+    <outline type="rss" text="Techmeme" xmlUrl="http://www.techmeme.com/feed.xml" htmlUrl="http://www.techmeme.com/"/>
+    <outline type="rss" text="David Walsh Blog" xmlUrl="http://feeds2.feedburner.com/Bludice" htmlUrl="https://davidwalsh.name/"/>
+    <outline type="rss" text="Yahoo Tech" xmlUrl="https://www.yahoo.com/tech/rss" htmlUrl="https://finance.yahoo.com/tech"/>
+    <outline type="rss" text="STAT" xmlUrl="https://www.statnews.com/feed/" htmlUrl="https://www.statnews.com/"/>
+    <outline type="rss" text="Countdown with Keith Olbermann" xmlUrl="https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/4cab918b-b4e7-4a21-8300-aec3011bf3f1/e7682aaf-443f-41d8-945f-aec3011c5127/podcast.rss" htmlUrl="https://www.iheart.com/podcast/1119-countdown-with-keith-olbe-99705496/"/>
+    <outline type="rss" text="Jon Udell" xmlUrl="http://blog.jonudell.net/feed" htmlUrl="https://blog.jonudell.net/"/>
+    <outline type="rss" text="Dave's linkblog feed" xmlUrl="http://radio3.io/users/davewiner/rss.xml" htmlUrl="http://feedland.org/?river=http://data.feedland.org/feeds/davewiner.xml"/>
+    <outline type="rss" text="The Editorial Board." xmlUrl="https://www.editorialboard.com/feed/" htmlUrl="https://www.editorialboard.com/"/>
+    <outline type="rss" text="Radiolab" xmlUrl="http://feeds.wnyc.org/radiolab" htmlUrl="https://www.wnycstudios.org/podcasts/radiolab/projects/podcasts"/>
+    <outline type="rss" text="On the Media" xmlUrl="http://feeds.wnyc.org/onthemedia" htmlUrl="https://www.wnycstudios.org/podcasts/otm"/>
+    <outline type="rss" text="This American Life" xmlUrl="http://feeds.thisamericanlife.org/talpodcast" htmlUrl="https://www.thisamericanlife.org/podcast/rss.xml"/>
+    <outline type="rss" text="That Trippi Show" xmlUrl="https://feeds.megaphone.fm/trippishow" htmlUrl="https://redcircle.com/shows/that-trippi-show"/>
+    <outline type="rss" text="links.daveverse.org" xmlUrl="http://data.feedland.org/feeds/davewiner.xml" htmlUrl="https://links.daveverse.org"/>
+    <outline type="rss" text="Open Source with Christopher Lydon" xmlUrl="https://radioopensource.org/feed/" htmlUrl="https://radioopensource.org/"/>
+    <outline type="rss" text="The New Yorker Radio Hour" xmlUrl="http://feeds.wnyc.org/newyorkerradiohour" htmlUrl="https://www.wnycstudios.org/podcasts/tnyradiohour"/>
+    <outline type="rss" text="dsearls tweets" xmlUrl="http://tweetfeed.org/dsearls/rss.xml" htmlUrl="http://twitter.com/dsearls"/>
+    <outline type="rss" text="Smithsonian Insider" xmlUrl="https://insider.si.edu/feed/" htmlUrl="https://insider.si.edu/"/>
+    <outline type="rss" text="Web3 is Going Just Great" xmlUrl="https://web3isgoinggreat.com/feed.xml" htmlUrl="https://web3isgoinggreat.com/"/>
+    <outline type="rss" text="Stratechery by Ben Thompson" xmlUrl="https://stratechery.com/feed/" htmlUrl="https://stratechery.com/"/>
+    <outline type="rss" text="The Talk Show With John Gruber" xmlUrl="https://daringfireball.net/thetalkshow/rss" htmlUrl="https://daringfireball.net/thetalkshow"/>
+    <outline type="rss" text="Brain Pickings" xmlUrl="https://feedproxy.google.com/brainpickings/rss" htmlUrl="https://www.themarginalian.org/"/>
+    <outline type="rss" text="davewiner tweets" xmlUrl="http://tweetfeed.org/davewiner/rss.xml" htmlUrl="http://twitter.com/davewiner"/>
+    <outline type="rss" text="The NPR Politics Podcast" xmlUrl="http://www.npr.org/rss/podcast.php?id=510310" htmlUrl="https://www.npr.org/podcasts/510310/npr-politics-podcast"/>
+    <outline type="rss" text="A History of Rock Music in 500 Songs" xmlUrl="https://500songs.com/feed/podcast/" htmlUrl="https://500songs.com/series/a-history-of-rock-music-in-500-songs/"/>
+    <outline type="rss" text="Podnews Daily - podcast industry news" xmlUrl="https://podnews.net/rss" htmlUrl="https://podnews.net/"/>
+    <outline type="rss" text="Manton Reece" xmlUrl="http://www.manton.org/feed" htmlUrl="https://www.manton.org/"/>
+    <outline type="rss" text="Doc Searls Weblog" xmlUrl="https://blogs.harvard.edu/doc/feed/" htmlUrl="https://doc.searls.com/"/>
+    <outline type="rss" text="xkcd.com" xmlUrl="http://xkcd.com/rss.xml" htmlUrl="https://xkcd.com/"/>
+    <outline type="rss" text="NYT &amp;gt; Technology &amp;gt; Personal Tech" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/PersonalTech.xml" htmlUrl="https://www.nytimes.com/section/technology/personaltech"/>
+    <outline type="rss" text="9to5Linux" xmlUrl="https://9to5linux.com/feed" htmlUrl="https://9to5linux.com/"/>
+    <outline type="rss" text="CITP Blog" xmlUrl="https://freedom-to-tinker.com/feed/" htmlUrl="https://blog.citp.princeton.edu/"/>
+    <outline type="rss" text="kottke.org" xmlUrl="http://feeds.kottke.org/main" htmlUrl="https://kottke.org/"/>
+    <outline type="rss" text="Fresh Air" xmlUrl="https://feeds.npr.org/381444908/podcast.xml" htmlUrl="https://www.npr.org/podcasts/381444908/fresh-air"/>
+    <outline type="rss" text="FrameLab" xmlUrl="https://georgelakoff.substack.com/feed" htmlUrl="https://www.theframelab.org/"/>
+    <outline type="rss" text="Washington Post" xmlUrl="https://feeds.washingtonpost.com/rss/rss_nationals-journal?itid=lk_inline_manual_34" htmlUrl="https://www.washingtonpost.com/"/>
+    <outline type="rss" text="Editors’ Blog – Talking Points Memo" xmlUrl="http://feeds.feedburner.com/talking-points-memo" htmlUrl="https://talkingpointsmemo.com/"/>
+    <outline type="rss" text="Dave Winer ☕️" xmlUrl="https://mastodon.social/@davew.rss" htmlUrl="https://mastodon.social/@davew"/>
+    <outline type="rss" text="KenSmith tweets" xmlUrl="http://tweetfeed.org/KenSmith/rss.xml" htmlUrl="http://twitter.com/KenSmith"/>
+    <outline type="rss" text="Pluralistic: Daily links from Cory Doctorow" xmlUrl="https://pluralistic.net/feed/" htmlUrl="https://pluralistic.net/"/>
+    <outline type="rss" text="Hacker News" xmlUrl="https://news.ycombinator.com/rss" htmlUrl="https://news.ycombinator.com/"/>
+    <outline type="rss" text="BBC News" xmlUrl="http://feeds.bbci.co.uk/news/world/rss.xml" htmlUrl="https://www.bbc.co.uk/news/world"/>
+    <outline type="rss" text="NYT &amp;gt; Sports &amp;gt; Basketball" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/ProBasketball.xml" htmlUrl="https://www.nytimes.com/section/sports/basketball"/>
+    <outline type="rss" text="FeedLand" xmlUrl="http://data.feedland.org/changenotes/rss.xml" htmlUrl="http://data.feedland.org/changenotes/"/>
+    <outline type="rss" text="The Atlantic" xmlUrl="https://www.theatlantic.com/feed/all/" htmlUrl="https://www.theatlantic.com/"/>
+    <outline type="rss" text="NYT &amp;gt; Top Stories" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml" htmlUrl="https://www.nytimes.com/"/>
+    <outline type="rss" text="NASA Image of the Day" xmlUrl="https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss" htmlUrl="https://www.nasa.gov/image-of-the-day/"/>
+    <outline type="rss" text="Letters from an American" xmlUrl="https://heathercoxrichardson.substack.com/feed" htmlUrl="https://heathercoxrichardson.substack.com/"/>
+    <outline type="rss" text="MacRumors: Mac News and Rumors - All Stories" xmlUrl="https://feeds.macrumors.com/MacRumors-All" htmlUrl="https://www.macrumors.com/"/>
+    <outline type="rss" text="Longreads" xmlUrl="http://longreads.com/rss" htmlUrl="https://longreads.com/"/>
+    <outline type="rss" text="BBC News" xmlUrl="http://feeds.bbci.co.uk/news/uk/rss.xml" htmlUrl="https://www.bbc.co.uk/news/uk"/>
+    <outline type="rss" text="Anil Dash" xmlUrl="https://anildash.com/rss/" htmlUrl="https://anildash.com/"/>
+    <outline type="rss" text="Semafor" xmlUrl="https://www.semafor.com/rss.xml" htmlUrl="https://www.semafor.com/"/>
+    <outline type="rss" text="This Week in the IndieWeb" xmlUrl="https://indieweb.org/this-week/feed.xml" htmlUrl="https://indieweb.org/this-week"/>
+  </body>
+</opml>

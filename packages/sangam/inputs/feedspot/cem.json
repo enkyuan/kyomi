@@ -1,0 +1,860 @@
+{
+  "category": "CEM",
+  "source_url": "https://rss.feedspot.com/customer_experience_rss_feeds",
+  "feeds": [
+    {
+      "title": "LitmusWorld",
+      "feed_url": "https://www.litmusworld.com/feed/",
+      "website_url": "https://www.litmusworld.com/insights/",
+      "description": "LitmusWorld, an enterprise SaaS business, implements a platform to help large enterprises deliver contextual conversations that enable dramatic improvements in stakeholder experience. The platform is quick to setup, simple for stakeholders to respond and delivers actionable insights across touchpoints, all in real-time. Read this blog which is your single source of delightful stories on customer & employee experience and the latest insights from industry leaders.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 463
+      },
+      "image_url": "https://i1.feedspot.com/4928563.jpg"
+    },
+    {
+      "title": "Customer Experience Matrix",
+      "feed_url": "https://feeds.feedburner.com/blogspot/CxDS",
+      "website_url": "http://customerexperiencematrix.blogspot.com/",
+      "description": "This is the blog of David M. Raab, long-time marketing technology consultant and analyst. Mr. Raab is Principal at Raab Associates Inc. The blog is named for the Customer Experience Matrix, a tool to visualize marketing and operational interactions between a company and its customers.",
+      "followers": {
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/347887.jpg?t=1617736897"
+    },
+    {
+      "title": "1to1 Media",
+      "feed_url": "https://www.1to1media.com/feed",
+      "website_url": "https://www.1to1media.com/",
+      "description": "1to1 Media's award-winning editors produce in-depth and provocative features and case studies, as well as infographics, blogs, whitepapers, and e-books that cover the latest trends and insights in customer experience. Topics focus on customer service, marketing, employee engagement, sales effectiveness, and customer loyalty.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 6600
+      },
+      "image_url": "https://i1.feedspot.com/4661352.jpg?t=1617695735"
+    },
+    {
+      "title": "Rate My Service",
+      "feed_url": "https://medium.com/feed/@ratemyservice",
+      "website_url": "https://ratemyservice.medium.com/",
+      "description": "We help companies to deliver great experiences to their customers. Build loyalty, reduce churn. Read writing from Rate My Service on Medium.",
+      "followers": {
+        "twitter": 400
+      },
+      "image_url": "https://i1.feedspot.com/5203036.jpg?t=1647242630"
+    },
+    {
+      "title": "EXCO Blog",
+      "feed_url": "https://ecxo.org/feed/",
+      "website_url": "https://ecxo.org/blog/",
+      "description": "Read the latest communication and member insights from ECXO. The European Customer Experience Organization is a community of leaders and organizations that are committed to working and evolving together to raise the collective customer and employee experience across Europe.",
+      "followers": {
+        "twitter": 2800,
+        "instagram": 842
+      },
+      "image_url": "https://i1.feedspot.com/5264422.jpg?t=1696590072"
+    },
+    {
+      "title": "Lexden",
+      "feed_url": "https://lexdengroup.com/feed/",
+      "website_url": "https://lexdengroup.com/content-hub/",
+      "description": "Explore Lexden CX's free hub for all to access insights, ideas, and inspiration from its 20 years of experience of global customer-centricity engagements. Through these expert articles, guides, and podcasts, you'll learn how to develop a customer-centric culture. You'll also learn how to optimize the customer journey, measure customer satisfaction and loyalty, and much more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/fsppublisher/8570848/page/7302349/logo_1713948593.jpg"
+    },
+    {
+      "title": "CustomerThink",
+      "feed_url": "https://customerthink.com/feed/",
+      "website_url": "https://customerthink.com/",
+      "description": "CustomerThink is a global online community of business leaders striving to create profitable customer-centric enterprises. Major topics include Customer Experience, Customer Engagement, Leadership, and Technology.",
+      "followers": {
+        "twitter": 14500
+      },
+      "image_url": "https://i1.feedspot.com/4835599.jpg?t=1625038773"
+    },
+    {
+      "title": "Zonka Feedback Blog",
+      "feed_url": "https://www.zonkafeedback.com/blog/rss.xml",
+      "website_url": "https://www.zonkafeedback.com/blog",
+      "description": "Zonka Feedback is an omnichannel survey app enabling you to use CX metrics like Net Promoter Score (NPS Surveys), CES & CSAT to gather actionable feedback. Learn about Customer Feedback, Employee Feedback, Feedback Management Software, Net Promoter Score, Customer Satisfaction, taking feedback on Android Tablets, iPads, Online and Email & SMS.",
+      "followers": {
+        "facebook": 539,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5227230.jpg?t=1607927305"
+    },
+    {
+      "title": "Seth's Blog",
+      "feed_url": "https://seths.blog/feed/atom/",
+      "website_url": "https://seths.blog/",
+      "description": "Seth Godin shares articles on marketing, tribes, and respect Author of 17 books, inductee into the Direct Marketing Hall of Fame, and all-around customer experience guru, Godin's foresight for what customers want out of digital is unparalleled.",
+      "followers": {
+        "facebook": 521299,
+        "twitter": 739800,
+        "instagram": 412500
+      },
+      "image_url": "https://i1.feedspot.com/22158.jpg?t=1607490791"
+    },
+    {
+      "title": "SugarCRM - Get your daily dose of Sugar",
+      "feed_url": "https://www.sugarcrm.com/blog/feed/",
+      "website_url": "https://www.sugarcrm.com/resources/",
+      "description": "SugarCRM enables businesses to create extraordinary customer relationships with the most innovative and affordable CRM solution in the market.",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 21800,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4664400.jpg?t=1671436595"
+    },
+    {
+      "title": "Usersnap Blog",
+      "feed_url": "https://usersnap.com/blog/feed/",
+      "website_url": "https://usersnap.com/blog/",
+      "description": "Keep up with the latest trends on user-driven web development and customer centric strategies for product management. Exclusive interviews with SaaS through leaders published regularly.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 3000,
+        "instagram": 12
+      },
+      "image_url": "https://i1.feedspot.com/5046533.jpg?t=1616149830"
+    },
+    {
+      "title": "CallMiner Blog",
+      "feed_url": "https://callminer.com/blog/feed",
+      "website_url": "https://callminer.com/blog",
+      "description": "The CallMiner blog covers various topics including industry news, call center quality monitoring, best practices and customer experience management.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4664976.jpg"
+    },
+    {
+      "title": "Lightico Blog",
+      "feed_url": "https://www.lightico.com/feed/",
+      "website_url": "https://www.lightico.com/blog-3/",
+      "description": "Lightico is the ultimate customer experience software platform. Your customers are on the their mobile phones, you need new ways to sell and service them. The best blog to learn about the latest in CX for insurance, Fiserv, Teleco, and call centers form any industry. Tips to boost call center KPIs, NPS, ACW.",
+      "followers": {
+        "facebook": 339,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4977117.jpg?t=1617736934"
+    },
+    {
+      "title": "Execs In The Know Blog",
+      "feed_url": "https://execsintheknow.com/feed/",
+      "website_url": "https://execsintheknow.com/blog/",
+      "description": "Advocates of the customer experience industry, connecting people through knowledge sharing, in a worldwide community of over 50,000 service professionals.",
+      "followers": {
+        "facebook": 593,
+        "twitter": 9700
+      },
+      "image_url": "https://i1.feedspot.com/5065775.jpg"
+    },
+    {
+      "title": "Futurelab Blog",
+      "feed_url": "https://feeds.feedburner.com/Futurelab",
+      "website_url": "https://www.futurelab.net/blog/",
+      "description": "We help our clients profitably manage and improve their customer's experience, develop compelling new value propositions, and organize their business and culture in a customer-centric way. Follow the blog to know more about us.",
+      "followers": {
+        "facebook": 176,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/324467.jpg?t=1603270744"
+    },
+    {
+      "title": "C3Centricity Blog",
+      "feed_url": "https://c3centricity.com/feed/",
+      "website_url": "https://c3centricity.com/blog/",
+      "description": "The Art and Science of Adopting a Customer First Strategy. Helping organisations to Grow more Profitably through improved Business Focus, based upon Deep Customer Understanding & Engagement.",
+      "followers": {
+        "twitter": 870
+      },
+      "image_url": "https://i1.feedspot.com/5158047.jpg?t=1617737386"
+    },
+    {
+      "title": "DoingCXRight Blog",
+      "feed_url": "https://doingcxright.com/feed/",
+      "website_url": "https://doingcxright.com/blog/",
+      "description": "Stacy Sherman writes & speaks about humanizing business & creating loyal customers fueled by happy engaged employees. Learn about DoingCXRight. This blog informs how to humanize business & lead with a heart. Read articles & apply best practices to differentiate your brand.",
+      "followers": {
+        "facebook": 189,
+        "twitter": 2400,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5212922.jpg?t=1604398339"
+    },
+    {
+      "title": "Eglobalis",
+      "feed_url": "https://www.eglobalis.com/feed/",
+      "website_url": "https://www.eglobalis.com/",
+      "description": "We strategize and transform your organization, helping to develop your enterprise culture and strategies, your people, your customer experience, your service offerings excellence, and your product catalogs. The end goal is customer success and revenue generation. It's a co-created process the entire way.",
+      "followers": {
+        "facebook": 939,
+        "twitter": 12200
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/4681955/page/5029910/logo_1691529519.png"
+    },
+    {
+      "title": "PeopleMetrics Blog",
+      "feed_url": "https://www.peoplemetrics.com/blog/rss.xml",
+      "website_url": "https://www.peoplemetrics.com/blog",
+      "description": "PeopleMetrics helps you measure and improve the experience of your high-impact customers. We offer SaaS enterprise software, full implementation services, analysis/reporting, customer advisory boards, strategic market research, and workshops.",
+      "followers": {
+        "facebook": 532,
+        "twitter": 2500,
+        "instagram": 273
+      },
+      "image_url": "https://i1.feedspot.com/4664426.jpg?t=1617736975"
+    },
+    {
+      "title": "Steve Curtin Blog",
+      "feed_url": "https://www.stevecurtin.com/blog/feed/",
+      "website_url": "https://www.stevecurtin.com/blog/",
+      "description": "Steve is a customer enthusiast with 20 years of experience between hotel operations, sales, marketing, training and development, and customer service roles, and worked for Marriot International. His blog provides insights into the customer experience and how to maximize interactions in today's digital world.",
+      "followers": {
+        "twitter": 9000
+      },
+      "image_url": "https://i1.feedspot.com/4664964.jpg"
+    },
+    {
+      "title": "Innovative CX Solutions Blog",
+      "feed_url": "https://www.innovativecx.com/blog?format=rss",
+      "website_url": "https://www.innovativecx.com/blog",
+      "description": "Innovative CX is here to help you innovate your customer experience with a plan to set your business up for sucess.",
+      "followers": {
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5206988.jpg?t=1603109936"
+    },
+    {
+      "title": "Interaction Metrics Blog",
+      "feed_url": "https://interactionmetrics.com/feed/",
+      "website_url": "https://interactionmetrics.com/blog/",
+      "description": "Interaction Metrics is a Voice of the Customer listening agency staffed by expert Customer Experience Analysts. Interaction Metrics is different than other agencies and solutions because the use science to improve the customer experience. Methods include surveys, sentiment analysis, and customer service evaluations.Follow the blog to learn how to measure and improve the customer experience using scientific surveys and other kinds of rigorous customer listening.",
+      "followers": {
+        "twitter": 785
+      },
+      "image_url": "https://i1.feedspot.com/4665366.jpg?t=1617799158"
+    },
+    {
+      "title": "VereQuest Blog",
+      "feed_url": "https://www.verequest.com/blog-feed.xml",
+      "website_url": "https://www.verequest.com/contact-center-best-practice-blog",
+      "description": "VereQuest is a customer experience consulting and monitoring firm specializing in industries whose customers value their time, money and/or health. They have had much of their success in multi-channel environments where customer-to-employee engagement is critical to building loyalty and reducing costs.",
+      "followers": {
+        "twitter": 22
+      },
+      "image_url": "https://i1.feedspot.com/4664774.jpg?t=1617737897"
+    },
+    {
+      "title": "The Daniel Group Blog",
+      "feed_url": "https://thedanielgroup.com/feed/",
+      "website_url": "https://thedanielgroup.com/resources/blog/",
+      "description": "The Daniel Group provides a range of consulting and research services designed to help companies improve customer service. Our work is primarily with business-to-business companies.",
+      "followers": {
+        "facebook": 274,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5043094.jpg?t=1617737917"
+    },
+    {
+      "title": "CX Lab Blog",
+      "feed_url": "https://www.cxlab.co.uk/feed/",
+      "website_url": "https://www.cxlab.co.uk/blog/",
+      "description": "CX Lab are a leading customer experience consultancy using evidence, data and science to improve your customer experience.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4975958.jpg?t=1617738092"
+    },
+    {
+      "title": "Zahoree Blog",
+      "feed_url": "https://zahoree.com/feed/",
+      "website_url": "https://zahoree.com/cx-solutions-zahoree-blog/",
+      "description": "Infolink provides customer experience management services and consulting with an emphasis on customer support outsourcing, software and CX design.",
+      "followers": {
+        "facebook": 73,
+        "twitter": 390
+      },
+      "image_url": "https://i1.feedspot.com/4665100.jpg?t=1617737840"
+    },
+    {
+      "title": "Jeanne Bliss Blog",
+      "feed_url": "http://www.customerbliss.com/blog/feed/",
+      "website_url": "https://www.customerbliss.com/blog/",
+      "description": "Content, tools, tips, advice, and best practices to help you improve the customer experience and grow into a prosperous and beloved company.",
+      "followers": {
+        "twitter": 24300
+      },
+      "image_url": "https://i1.feedspot.com/4664460.jpg?t=1617736883"
+    },
+    {
+      "title": "Netomi Blog",
+      "feed_url": "https://www.netomi.com/feed",
+      "website_url": "https://www.netomi.com/blog",
+      "description": "Netomi is the market leader in AI-first customer experiences. Content featured helps enable companies to build deep engagement in a new era with conversations that are emotional, empathetic, intuitive, and on brand.",
+      "followers": {
+        "facebook": 286,
+        "twitter": 545
+      },
+      "image_url": "https://i1.feedspot.com/5516304.jpg?t=1677843114"
+    },
+    {
+      "title": "CX Accelerator Blog",
+      "feed_url": "https://www.cxaccelerator.com/blog-feed.xml",
+      "website_url": "https://www.cxaccelerator.com/blog",
+      "description": "CX Accelerator provides fuel to rising Customer Experience champions through a virtual community and unique resources.",
+      "followers": {
+        "twitter": 17
+      },
+      "image_url": "https://i1.feedspot.com/5043715.jpg"
+    },
+    {
+      "title": "Ameyo Callversations Blog",
+      "feed_url": "https://www.ameyo.com/blog/feed/",
+      "website_url": "https://www.ameyo.com/blog/",
+      "description": "customer experience Ameyo Callversations blog covers day to day challenges of Customer Experience and contact center professionals.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5124409.jpg?t=1620127899"
+    },
+    {
+      "title": "The CX Lead",
+      "feed_url": "https://thecxlead.com/topics/feed/",
+      "website_url": "https://thecxlead.com/topics/",
+      "description": "The CX Lead is on a mission to build better customer experiences. This is a CX community creating and designing people first services and experiences. Your place to find tips, tricks, how-to guides, and tools to develop your CX strategy and team.",
+      "followers": {
+        "facebook": 59,
+        "twitter": 137,
+        "instagram": 257
+      },
+      "image_url": "https://i1.feedspot.com/5447036.jpg?t=1663330907"
+    },
+    {
+      "title": "Transparent BPO Blog",
+      "feed_url": "https://transparentbpo.com/feed/",
+      "website_url": "https://transparentbpo.com/blog/",
+      "description": "Transparent has state-of-the-art system and IT support means they can deliver seamless integration with your brand, providing a transparent relationship between the contact center and the client. They exist to offer our clients a competitive advantage in their industry by providing advanced call center technological services and skilled human resources. Their blog, Outsourcing Insights, is written by members of our leadership team and provides practical, expert advice for contact center professionals.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 425
+      },
+      "image_url": "https://i1.feedspot.com/4977281.jpg?t=1617737371"
+    },
+    {
+      "title": "Steven Van Belleghem Blog",
+      "feed_url": "https://www.stevenvanbelleghem.com/blog/feed/",
+      "website_url": "https://www.stevenvanbelleghem.com/blog/",
+      "description": "Steven believes in a bright future where companies play the long-term game with their customers. His passion is spreading ideas about the future of customer experience. Steven believes in the combination of common sense, new technologies, an empathic human touch, playing the long-term game, and taking your social responsibility to win the hearts and business of customers over and over again.",
+      "followers": {
+        "twitter": 35800
+      },
+      "image_url": "https://i1.feedspot.com/5243863.jpg?t=1612965281"
+    },
+    {
+      "title": "Beyond Philosophy Blog",
+      "feed_url": "https://beyondphilosophy.com/blog/feed/",
+      "website_url": "https://beyondphilosophy.com/blog/",
+      "description": "Beyond Philosophy is the global leader in Customer Experience and is called upon by the world's largest organizations to take their CX to the next level.",
+      "followers": {
+        "facebook": 356,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4664442.jpg?t=1617737313"
+    },
+    {
+      "title": "cxservice360",
+      "feed_url": "https://cxservice360.com/feed/",
+      "website_url": "https://cxservice360.com/",
+      "description": "CXService360 is a knowledge sharing website focused on customer service & experience. It was created with the vision of making this knowledge easily accessible for businesses, customer service professionals and anyone who loves learn the art of service",
+      "followers": {
+        "facebook": 536,
+        "twitter": 1900,
+        "instagram": 740
+      },
+      "image_url": "https://i1.feedspot.com/4664500.jpg?t=1617737365"
+    },
+    {
+      "title": "Joseph Michelli Blog",
+      "feed_url": "http://www.josephmichelli.com/blog/feed/",
+      "website_url": "http://www.josephmichelli.com/blog/",
+      "description": "Joseph A. Michelli, Ph.D. is an international speaker, and chief experience officer at The Michelli Experience. A New York Times #1 bestselling author, Dr. Michelli and his team consult with some of the world's best customer experience companies",
+      "followers": {
+        "facebook": 640,
+        "twitter": 18300
+      },
+      "image_url": "https://i1.feedspot.com/4664489.jpg?t=1617737382"
+    },
+    {
+      "title": "Kerry Bodine Blog",
+      "feed_url": "http://kerrybodine.com/blog/feed/",
+      "website_url": "https://kerrybodine.com/blog",
+      "description": "Kerry Bodine & Co. is a customer experience consultancy with a passion for human-centered design.",
+      "followers": {
+        "twitter": 9000
+      },
+      "image_url": "https://i1.feedspot.com/4664864.jpg"
+    },
+    {
+      "title": "Conversation Agent - Valeria Maltoni",
+      "feed_url": "https://feeds.feedburner.com/ConversationAgent",
+      "website_url": "https://www.conversationagent.com/",
+      "description": "Conversation Agent is about strategizing at the intersection of business, technology, and digital media as seen through the lens of human behavior. It has been recognized among the world's 30 top online marketing blogs",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 30600
+      },
+      "image_url": "https://i1.feedspot.com/79280.jpg"
+    },
+    {
+      "title": "The Global Voice of CX",
+      "feed_url": "https://denniswakabayashi.com/feed/",
+      "website_url": "https://denniswakabayashi.com/blog-content/",
+      "description": "Contemporary marketing blog dedicated to customer experience (CX), digital strategy, and integrated marketing insights for those companies who compete in the new Experience Economy.",
+      "followers": {
+        "twitter": 53400
+      },
+      "image_url": "https://i1.feedspot.com/5206275.jpg?t=1602833180"
+    },
+    {
+      "title": "Smith Co Blog",
+      "feed_url": "https://www.smithcoconsultancy.com/feed/",
+      "website_url": "https://thisiscaffeine.com/customer-experience/",
+      "description": "Smith co helps you to create a customer experience that is consistent, and differentiated builds loyalty, and turns customers into advocates. We help you to define your purpose, translate it into a business strategy, make it meaningful for your customers and employees, and deliver measurable returns.",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4664830.jpg?t=1617738285"
+    },
+    {
+      "title": "Authenticinsight - Jana Sedivy Blog",
+      "feed_url": "https://authenticinsight.com/blog/feed/",
+      "website_url": "https://authenticinsight.com/blog",
+      "description": "Jana Sedivy is Founder and Principal of Authentic Insight, an award winning consulting practice specializing in Voice of Customer research and strategy for B2B tech companies. She is a recognized expert in Customer Experience research.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4664760.jpg?t=1617737876"
+    },
+    {
+      "title": "Curiosity - Dave Fish",
+      "feed_url": "https://curiositycx.com/feed/",
+      "website_url": "https://curiositycx.com/insights/",
+      "description": "Dave is the founder of CuriosityCX and is SVP for ORC International. Formerly he was the VP of Behavioral Sciences for The Mars Agency. He has 20 years of applied experience in understanding consumer behavior and consulting with Global 50 companies.",
+      "followers": {
+        "twitter": 583
+      },
+      "image_url": "https://i1.feedspot.com/4664480.jpg"
+    },
+    {
+      "title": "eTouchPoint - Blog",
+      "feed_url": "https://www.etouchpoint.com/feed/",
+      "website_url": "https://www.etouchpoint.com/blog/",
+      "description": "Chip James is President of eTouchPoint, a pioneering customer experience (CX) technology provider that has provided solutions to Fortune 500 leaders for 15 years. A CX industry veteran, Chip has been a leading CX advocate through speaking engagements and development of industry best practices.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4664791.jpg"
+    },
+    {
+      "title": "Digital Mortar Blog",
+      "feed_url": "https://digitalmortar.com/feed/",
+      "website_url": "https://digitalmortar.com/blog",
+      "description": "Digital Mortar is led by some of the leading customer analytics experts in the world. We spent decades optimizing customer experiences and honing the segmentation, journey and analytics techniques to make data understandable and useful.",
+      "followers": {
+        "twitter": 57
+      },
+      "image_url": "https://i1.feedspot.com/4664505.jpg?t=1617737909"
+    },
+    {
+      "title": "Ann Michaels & Assoc - Inside the Customer Experience",
+      "feed_url": "https://www.blog.annmichaelsltd.com/feed/",
+      "website_url": "https://www.blog.annmichaelsltd.com/",
+      "description": "Marianne Hynd is the Vice President of Operations at Ann Michaels & Associates, a customer experience measurement firm. The company specializes in mystery shopping, customer feedback, and interactive engagement kiosk programs.",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/4664744.jpg?t=1617737921"
+    },
+    {
+      "title": "LEXDEN",
+      "feed_url": "https://lexdengroup.wordpress.com/feed/",
+      "website_url": "https://lexdengroup.wordpress.com/",
+      "description": "LEXDEN blog is about Helping Clients to Profit from Customer Experience.",
+      "followers": {
+        "facebook": 167,
+        "twitter": 755
+      },
+      "image_url": "https://i1.feedspot.com/4664955.jpg"
+    },
+    {
+      "title": "Champs.AI Blog",
+      "feed_url": "https://champs.ai/feed/",
+      "website_url": "https://champs.ai/blog/",
+      "description": "Get articles on how to better customer support and success.",
+      "followers": {
+        "twitter": 556900
+      },
+      "image_url": "https://i1.feedspot.com/5090274.jpg?t=1617738052"
+    },
+    {
+      "title": "Dennis Snow Blog",
+      "feed_url": "https://feeds.feedburner.com/DennisSnowRssFeed",
+      "website_url": "https://snowassociates.com/blog",
+      "description": "My company, Snow & Associates, Inc., is dedicated to helping organizations create 'walk-through-fire' customer loyalty. Using what I learned during a 20-year career with Walt Disney World, including leading a division of the world-famous Disney Institute, I've assisted organizations around the world improve their customer service.",
+      "followers": {
+        "facebook": 652,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/932300.jpg"
+    },
+    {
+      "title": "Buyer Persona Tony Zambito Blog",
+      "feed_url": "https://tonyzambito.com/category/buyer-persona-blog/feed/",
+      "website_url": "https://tonyzambito.com/category/buyer-persona-blog/",
+      "description": "Tony Zambito is the founder and leading authority in buyer personas for B2B Marketing. In 2002, Tony established the first buyer persona development methodology designed specifically for B2B Marketing and Sales. This innovation has helped leading companies gain a deeper understanding of their buyers resulting in improved lead generation and revenue performance.",
+      "followers": {
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4664509.jpg"
+    },
+    {
+      "title": "Astute",
+      "feed_url": "https://emplifi.io",
+      "website_url": "https://emplifi.io/resources/",
+      "description": "We create intelligent software solutions to help the world's best brands enhance engagement with their customer communities by contextually blending human and artificial intelligence.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4664975.jpg?t=1620192350"
+    },
+    {
+      "title": "Win the Customer",
+      "feed_url": "https://winthecustomer.com/blog/feed/",
+      "website_url": "https://winthecustomer.com/blog/",
+      "description": "Winning Customers with technology by transforming the service experience. An award winning customer service blog discussing the latest trends and best practices of customer service experience in the call center.",
+      "followers": {
+        "twitter": 22400
+      },
+      "image_url": "https://i1.feedspot.com/4664908.jpg?t=1617737341"
+    },
+    {
+      "title": "Tatvam Blog",
+      "feed_url": "https://tatvaminsights.com/feed/",
+      "website_url": "https://tatvaminsights.com/blog/",
+      "description": "Any company that puts a focus on the customer experience and measuring the voice of the customer, will see an incredible value from utilizing Tatvam for Customer Feedback Analysis. Tatvam enables you to aggregate your social media mentions, online reviews, survey responses, email support logs, and more!",
+      "followers": {
+        "facebook": 145,
+        "twitter": 45
+      },
+      "image_url": "https://i1.feedspot.com/5206243.jpg?t=1602829205"
+    },
+    {
+      "title": "Customer Experience Consultancy Blog",
+      "feed_url": "https://ijgolding.com/feed/",
+      "website_url": "https://ijgolding.com/blog/",
+      "description": "Keep up to date with Ian Golding's latest news, articles, and leadership thoughts as a customer experience consultant. Founded in 2012, Customer Experience Consultancy has worked with, guided, mentored, and inspired, organizations and customer experience practitioners in over 35 countries worldwide.",
+      "followers": {
+        "facebook": 284,
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/4664438.jpg?t=1663655479"
+    },
+    {
+      "title": "CX Journey Blog",
+      "feed_url": "https://feeds.feedburner.com/CXJourney",
+      "website_url": "https://cx-journey.com/blog",
+      "description": "A blog about customer experience, employee experience, customer service, voice of the customer, and leadership.",
+      "followers": {
+        "facebook": 273,
+        "twitter": 13700
+      },
+      "image_url": "https://i1.feedspot.com/4039649.jpg?t=1663737350"
+    },
+    {
+      "title": "Customer Journey Marketer Blog",
+      "feed_url": "https://customerjourneymarketer.com/feed/",
+      "website_url": "https://customerjourneymarketer.com/",
+      "description": "A blog about leveraging the art and science of digital marketing and knowledge of the customer journey, turning anonymous visitors into brand advocates.",
+      "followers": {
+        "facebook": 108
+      },
+      "image_url": "https://i1.feedspot.com/4665090.jpg?t=1617738127"
+    },
+    {
+      "title": "Adrian Swinscoe",
+      "feed_url": "https://www.adrianswinscoe.com/feed/",
+      "website_url": "https://www.adrianswinscoe.com/",
+      "description": "Adrian Swinscoe brings over 16 years experience to focusing on helping companies large and small develop and implement customer focused, sustainable growth strategies. He is a huge fan of organisations that do great things for their customers and their employees and also a helper to many wanting to achieve their own level of greatness.",
+      "followers": {
+        "twitter": 8000,
+        "instagram": 806
+      },
+      "image_url": "https://i1.feedspot.com/3503995.jpg?t=1614145013"
+    },
+    {
+      "title": "QMATIC Blog",
+      "feed_url": "https://www.qmatic.com/blog/rss.xml",
+      "website_url": "https://www.qmatic.com/blog/",
+      "description": "Qmatic Group is the global leader in customer journey technology solutions and insights. They help organizations seamlessly integrate online and onsite touch points.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/4664466.jpg?t=1617736952"
+    },
+    {
+      "title": "Vpod News",
+      "feed_url": "https://vpod.com/feed/",
+      "website_url": "https://vpod.com/category/news/",
+      "description": "Vpod create unique tech solutions in digital visitor management, virtual reception, combining people and technology to drive customer satisfaction and profitability.",
+      "followers": {
+        "twitter": 93,
+        "instagram": 87
+      },
+      "image_url": "https://i1.feedspot.com/5209448.jpg?t=1603374139"
+    },
+    {
+      "title": "Fresh Nous",
+      "feed_url": "https://www.freshnous.com/feed/",
+      "website_url": "https://www.freshnous.com/the-download/",
+      "description": "We know that the term 'marketing agency' can encompass a multitude of disciplines and ways of working. At Fresh Nous we know what sets us apart - and that's our obsession with the customer.",
+      "followers": {
+        "facebook": 377,
+        "instagram": 305
+      },
+      "image_url": "https://i1.feedspot.com/5059603.jpg?t=1617737401"
+    },
+    {
+      "title": "Customer Experience Magazine",
+      "feed_url": "https://cxm.world/feed/",
+      "website_url": "https://cxm.world/",
+      "description": "Customer Experience Magazine is the online magazine packed full of industry news, blogs, features, reports, case studies, video bites and international stories all focusing on customer experience.",
+      "followers": {
+        "twitter": 8100,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4664970.jpg?t=1654257804"
+    },
+    {
+      "title": "Chattermill Blog",
+      "feed_url": "https://chattermill.com/blog/",
+      "website_url": "https://chattermill.com/blog/",
+      "description": "Chattermill applies artificial neural networks to customer feedback that learn from your data and help you make more customer centric decisions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4664960.jpg?t=1617738191"
+    },
+    {
+      "title": "XR Labs",
+      "feed_url": "https://xrlabs.co/feed/",
+      "website_url": "https://www.sprinklr.com/blog/",
+      "description": "We offer Augmented Reality development, Virtual Reality development, and Customer Experience Transformation services to enable your business to become a powerful identity in this digital era. XR Labs is on a mission to empower businesses to deliver digital experiences at scale. We are equipped to serve businesses belonging to niche industries and with specific business objectives.",
+      "followers": {
+        "facebook": 648,
+        "twitter": 46,
+        "instagram": 200
+      },
+      "image_url": "https://i1.feedspot.com/5498728.jpg?t=1674544288"
+    },
+    {
+      "title": "MyCustomer Experience",
+      "feed_url": "https://www.mycustomer.com/taxonomy/term/106/all/feed",
+      "website_url": "https://www.mycustomer.com/experience",
+      "description": "Tips for marketing, sales & service professionals to improve the customer journey and enhance customer experience.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 13400
+      },
+      "image_url": "https://i1.feedspot.com/4665094.jpg"
+    },
+    {
+      "title": "CX Network",
+      "feed_url": "https://www.cxnetwork.com/rss/articles",
+      "website_url": "https://www.cxnetwork.com/",
+      "description": "CX Network is an online community focused on building the intelligent enterprise. CXN provides relevant industry insights & benchmarks for global CX practitioners.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4665007.jpg?t=1617736888"
+    },
+    {
+      "title": "Qualtrics Blog",
+      "feed_url": "https://www.qualtrics.com/blog/feed/",
+      "website_url": "https://www.qualtrics.com/blog/",
+      "description": "Qualtrics makes sophisticated research simple and empowers users to capture customer, product, brand & employee experience insights in one place.",
+      "followers": {
+        "facebook": 53100,
+        "twitter": 44000
+      },
+      "image_url": "https://i1.feedspot.com/4664971.jpg"
+    },
+    {
+      "title": "Orbitrics Blog",
+      "feed_url": "https://www.orbitrics.com/blog/feed/",
+      "website_url": "http://",
+      "description": "This blog basically defines the power of surveying using which you can improve employee engagement. You'll find the latest updates of a business survey and other services. Orbitrics is an experience management platform that simplifies data collection, analysis, and review, to make data-driven decisions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5371260.jpg?t=1644575383"
+    },
+    {
+      "title": "SurveySensum Blog",
+      "feed_url": "https://www.surveysensum.com/feed",
+      "website_url": "https://www.surveysensum.com/blog",
+      "description": "Stay up-to-date with tips and tricks on experience management",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 727,
+        "instagram": 836
+      },
+      "image_url": "https://i1.feedspot.com/5040422.jpg?t=1617736942"
+    },
+    {
+      "title": "Knowmax Blog",
+      "feed_url": "https://knowmax.ai/feed/",
+      "website_url": "https://knowmax.ai/blog/",
+      "description": "Follow the knowmax blog to get insights on thought leadership and growth for enhanced CX and self service, along with regular dose of innovations in knowledge management and customer experience. Knowmax is a knowledge management platform created by customer experience professionals which acts as a single source of truth for all your knowledge management challenges.",
+      "followers": {
+        "facebook": 494,
+        "twitter": 39
+      },
+      "image_url": "https://i1.feedspot.com/5158522.jpg?t=1670496771"
+    },
+    {
+      "title": "John DiJulius Blog",
+      "feed_url": "https://blog.thedijuliusgroup.com/feed/",
+      "website_url": "https://thedijuliusgroup.com/blog/",
+      "description": "John DiJulius is an international customer experience consultant and author of two books on the topic. A successful entrepreneur, DiJulius has launched two businesses and strives to enable companies to provide exceptional customer experiences to boost results.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4664836.jpg?t=1617737346"
+    },
+    {
+      "title": "ForeSee Blog",
+      "feed_url": "https://www.foresee.com/blog/feed/",
+      "website_url": "https://www.verint.com/resources/?_resource_types=blog",
+      "description": "The ForeSee blog discusses the art and science of measuring the customer experience. Read on to learn more and join the conversation.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4664857.jpg?t=1617736908"
+    },
+    {
+      "title": "Waypoint Group",
+      "feed_url": "https://waypointgroup.org/feed/",
+      "website_url": "https://waypointgroup.org/resources/",
+      "description": "Waypoint Group is a collaborative, seasoned consultancy in the Bay Area that thrives on partnership. We help B2B teams act on customer feedback and increase the rate of profitable sales growth by linking insights to financials.",
+      "followers": {
+        "twitter": 334
+      },
+      "image_url": "https://i1.feedspot.com/4456075.jpg?t=1608278358"
+    },
+    {
+      "title": "Gold Research, Inc. - Gold Journey Mapping\u2122",
+      "feed_url": "https://goldresearchinc.com/gold-journey-mapping-feed",
+      "website_url": "https://goldresearchinc.com/blog/gold-journey-mapping/",
+      "description": "Gold Research has extensive experience in journey mapping (B2B, B2C), path-to-purchase research, deploying 'real-time' qualitative and quantitative research for new concept/marketing testing, satisfaction research, and customer insights. We also offer customer/employee journey mapping training that delivers foundational-to-advanced capability development at low costs and NO time away from work.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 29
+      },
+      "image_url": "https://i1.feedspot.com/4846132.jpg?t=1617737856"
+    },
+    {
+      "title": "Acquire Blog",
+      "feed_url": "https://www.acquire.io/blog/feed",
+      "website_url": "https://www.acquire.io/blog",
+      "description": "Acquire is the first to bring a multi-channel customer communication platform for businesses - empowering companies to deliver better experiences between customers and their sales and support team.",
+      "followers": {
+        "facebook": 598,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5044785.jpg?t=1617736905"
+    },
+    {
+      "title": "MattsenKumar",
+      "feed_url": "https://www.mattsenkumar.com/blog/feed/",
+      "website_url": "https://ujet.cx/blog",
+      "description": "MattsenKumar Business Process Outsourcing blog provides tips, tricks, and advice for improving business processes, contact centers, customer service, and experience. Sign up for the latest updates on Customer Experience Management",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 954
+      },
+      "image_url": "https://i1.feedspot.com/5074391.jpg?t=1617736924"
+    },
+    {
+      "title": "Customer Experience by UJET Blog",
+      "feed_url": "https://ujet.cx/feed",
+      "website_url": "https://ujet.cx/blog",
+      "description": "News, updates, and insights on all things customer experience.UJET is the world's first and only cloud contact center platform for smartphone era CX. By modernizing digital and in-app experiences, UJET unifies the enterprise brand experience across sales, marketing, and support, eliminating the frustration of channel switching between voice, digital, and self-service for consumers",
+      "followers": {
+        "facebook": 251,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4850773.jpg?t=1623131379"
+    },
+    {
+      "title": "Innovatus Marketers Touchpoint - Vidya Priya Rao Blog",
+      "feed_url": "https://marketerstouchpoint.com/feed/",
+      "website_url": "https://www.marketerstouchpoint.com/blog",
+      "description": "Get the latest updates and news related to the sales and marketing to use for your business getting more revenues and people engagement.",
+      "followers": {
+        "facebook": 142,
+        "twitter": 578
+      },
+      "image_url": "https://i1.feedspot.com/4664495.jpg"
+    },
+    {
+      "title": "The Center For Client Retention Blog",
+      "feed_url": "https://www.tcfcr.com/feed",
+      "website_url": "https://www.tcfcr.com/blog",
+      "description": "The Center For Client Retention provides research, training, and consulting services on how to improve the customer experience and increase loyalty.",
+      "followers": {
+        "facebook": 144,
+        "twitter": 2800,
+        "instagram": 63
+      },
+      "image_url": "https://i1.feedspot.com/4661546.jpg?t=1617738115"
+    },
+    {
+      "title": "Genroe 1 to 1 - Adam Ramshaw Blog",
+      "feed_url": "https://www.genroe.com/blog/feed",
+      "website_url": "https://www.genroe.com/blog",
+      "description": "Genroe help to improve the customer experience and generate higher life time value: customer feedback management and customer experience management services.",
+      "followers": {
+        "twitter": 987
+      },
+      "image_url": "https://i1.feedspot.com/4664892.jpg"
+    },
+    {
+      "title": "Neosperience Blog",
+      "feed_url": "https://www.neosperience.com/feed/",
+      "website_url": "https://www.neosperience.com/blog",
+      "description": "A blog by Neosperience to overview the advancements of digital customer experience in marketing, technology and society.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 903,
+        "instagram": 184
+      },
+      "image_url": "https://i1.feedspot.com/4664959.jpg"
+    },
+    {
+      "title": "Customer Experience Strategy - Michel Falcon Blog",
+      "feed_url": "https://www.michelfalcon.com/cgi-sys/suspendedpage.cgi",
+      "website_url": "https://michelfalcon.com/blog/",
+      "description": "Michel Falcon's Customer Experience Strategy blog covering the most actionable topics that will help your business deliver exceptional experiences.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4664897.jpg?t=1617738100"
+    }
+  ]
+}

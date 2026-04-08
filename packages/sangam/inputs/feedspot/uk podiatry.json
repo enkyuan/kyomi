@@ -1,0 +1,72 @@
+{
+  "category": "UK Podiatry",
+  "source_url": "https://rss.feedspot.com/uk_podiatry_rss_feeds",
+  "feeds": [
+    {
+      "title": "Compleet Feet Blog",
+      "feed_url": "https://www.compleetfeet.co.uk/feed/",
+      "website_url": "https://www.compleetfeet.co.uk/latest-podiatry-blogs-from-compleet-feet/",
+      "description": "Compleet Feet are an accredited progressive and advanced Podiatry Clinic based in Alton Hampshire.",
+      "followers": {
+        "facebook": 229,
+        "twitter": 77
+      },
+      "image_url": "https://i1.feedspot.com/4917731.jpg?t=1620625846"
+    },
+    {
+      "title": "The Podiatric Dermatology Blog",
+      "feed_url": "https://www.foot.expert/blog-feed.xml",
+      "website_url": "https://www.foot.expert/blog",
+      "description": "Welcome to the Podiatric Dermatology Blog site which contains information on all aspects of foot dermatology for podiatrists and other healthcare professionals. I am Ivan Bristow. I am passionate about dermatology and education so putting these two things together into the website is my mission.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4917729.jpg?t=1681990511"
+    },
+    {
+      "title": "Betafeet Podiatry Blog",
+      "feed_url": "https://www.betafeetpodiatry.co.uk/feed/rss2",
+      "website_url": "https://www.betafeetpodiatry.co.uk/blog",
+      "description": "Betafeet Podiatry offers expert assessments and treatments from fully qualified podiatrists. With over three decades of experience, our podiatry clinics in Tring and Hemel Hempstead have helped countless clients with accurate diagnoses of foot issues and innovative treatments, all performed with a friendly and professional manner.",
+      "followers": {
+        "facebook": 427,
+        "twitter": 432,
+        "instagram": 260
+      },
+      "image_url": "https://i1.feedspot.com/4732855.jpg?t=1607937701"
+    },
+    {
+      "title": "Sports Podiatry Info Blog",
+      "feed_url": "https://sportspodiatryinfo.co.uk/blog/feed/",
+      "website_url": "https://sportspodiatryinfo.co.uk/blog/",
+      "description": "Ian completed his BSc (Hons) degree in Podiatry in 2003 and went on to obtain a postgraduate certificate in Sports Podiatry and a Masters degree in Sports Injury. He has maintained an active interest in research, having published work in The British Journal of Sports Medicine, The Journal of Foot & Ankle Research and The Journal of the American Podiatric Medical Association.",
+      "followers": {
+        "facebook": 14400,
+        "twitter": 11900
+      },
+      "image_url": "https://i1.feedspot.com/4917701.jpg?t=1620625857"
+    },
+    {
+      "title": "Care For Feet Blog",
+      "feed_url": "https://careforfeetuk.co.uk/feed/",
+      "website_url": "https://careforfeetuk.co.uk/category/blog/",
+      "description": "Dedicated to improving foot health in the High Peak Welcome to Care For Feet an independent Podiatry and Chiropody business recently established.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 360,
+        "instagram": 918
+      },
+      "image_url": "https://i1.feedspot.com/4917718.jpg?t=1620625860"
+    },
+    {
+      "title": "My Newfeet Blog",
+      "feed_url": "https://mynewfeet.com/blog-feed.xml",
+      "website_url": "https://mynewfeet.com/blog/",
+      "description": "At Frederick Foot & Ankle Specialists, we are committed to providing the highest quality of podiatric medicine and surgery for each and every patient.",
+      "followers": {
+        "facebook": 5,
+        "twitter": 887,
+        "instagram": 758
+      },
+      "image_url": "https://i1.feedspot.com/4730647.jpg?t=1607934111"
+    }
+  ]
+}

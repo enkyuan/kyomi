@@ -1,0 +1,685 @@
+{
+  "category": "Hacker",
+  "source_url": "https://rss.feedspot.com/hacker_rss_feeds",
+  "feeds": [
+    {
+      "title": "Latest Hacking News",
+      "feed_url": "https://latesthackingnews.com/feed/",
+      "website_url": "https://latesthackingnews.com/",
+      "description": "Offers the latest hacking news, hacking tools, vulnerabilities, and cybersecurity courses for ethical hackers, penetration testers, IT security experts, and essentially anyone with hacker interests. Latest Hacking News is a leading source dedicated to promoting awareness for security experts & hackers.",
+      "followers": {
+        "facebook": 2000000,
+        "twitter": 43900
+      },
+      "image_url": "https://i1.feedspot.com/4710744.jpg?t=1619767645"
+    },
+    {
+      "title": "KnowBe4 Blog",
+      "feed_url": "https://blog.knowbe4.com/rss.xml",
+      "website_url": "https://blog.knowbe4.com/",
+      "description": "Security Awareness Training Blog. Keeps you informed about the latest in security including social engineering, ransomware, cybercrime, and phishing attacks. KnowBe4 is the world's first and largest New-school security awareness training and simulated phishing platform that helps you manage the ongoing problem of social engineering.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 15100
+      },
+      "image_url": "https://i1.feedspot.com/4419393.jpg?t=1763446923"
+    },
+    {
+      "title": "GBHackers on Security",
+      "feed_url": "https://gbhackers.com/feed/",
+      "website_url": "https://gbhackers.com/",
+      "description": "GBHackers on Security is a Cyber Security platform that covers daily Cyber Security News, Hacking News, Technology updates, and SOC Resources, Kali Linux tutorials. Their mission is to keep the community up to date with happenings in the Cyber World. Their blog features technological articles, cyber security, AI, and more.",
+      "followers": {
+        "facebook": 54700
+      },
+      "image_url": "https://i1.feedspot.com/4668131.jpg?t=1617631347"
+    },
+    {
+      "title": "Menlo Security Blog",
+      "feed_url": "https://www.menlosecurity.com/blog/rss.xml",
+      "website_url": "https://www.menlosecurity.com/blog",
+      "description": "Get insights on web isolation, cloud security, network cybersecurity, malware, threat research, and more on the Menlo Security Blog. Menlo Security protects productivity online with a one-of-a-kind, isolation-powered cloud security platform.",
+      "followers": {
+        "facebook": 742,
+        "twitter": 17900
+      },
+      "image_url": "https://i1.feedspot.com/4710787.jpg?t=1619767969"
+    },
+    {
+      "title": "HackRead",
+      "feed_url": "https://hackread.com/feed/",
+      "website_url": "https://hackread.com/",
+      "description": "HackRead is a news media organization based in London, United Kingdom that centers on InfoSec, Cyber Crime, Privacy, Surveillance, and Hacking News with full-scale reviews on Social Media Platforms & Technology trends.",
+      "followers": {
+        "facebook": 79500,
+        "twitter": 117100
+      },
+      "image_url": "https://i1.feedspot.com/4277770.jpg?t=1619767965"
+    },
+    {
+      "title": "Securelist",
+      "feed_url": "https://securelist.com/feed/",
+      "website_url": "https://securelist.com/",
+      "description": "The resource for Kaspersky Lab experts' technical research, analysis, and thoughts. Blog topics cover Industrial threats, DDoS reports, Malware descriptions, Security technologies, Software, Spam, and Phishing reports.",
+      "followers": {
+        "facebook": 27900,
+        "twitter": 19600,
+        "instagram": 107900
+      },
+      "image_url": "https://i1.feedspot.com/4025386.jpg?t=1617631356"
+    },
+    {
+      "title": "Hackers Arise Blog",
+      "feed_url": "https://www.hackers-arise.com/blog-feed.xml",
+      "website_url": "https://www.hackers-arise.com/blog/",
+      "description": "Hackers Arise was developed solely to help those who are interested in a career in cybersecurity. Here, you'll find tutorials on all forms of hacking, digital forensics, Linux, information security, and just about any subject related to cyber security.",
+      "followers": {
+        "twitter": 189200
+      },
+      "image_url": "https://i1.feedspot.com/4717890.jpg?t=1619768001"
+    },
+    {
+      "title": "Detectify Blog",
+      "feed_url": "https://blog.detectify.com/feed/",
+      "website_url": "https://blog.detectify.com/",
+      "description": "A web security blog from Detectify. Features Security Culture, Industry Insights, Product features, Vulnerabilities, User stories, and Life at Detectify. Detectify is a Swedish web security company founded by a team of the world's best security researchers.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 11500
+      },
+      "image_url": "https://i1.feedspot.com/4710652.jpg?t=1619767960"
+    },
+    {
+      "title": "Major League Hacking",
+      "feed_url": "http://news.mlh.io/posts/feed",
+      "website_url": "https://news.mlh.io/posts",
+      "description": "Your home for live coverage, news, and stats about the hackathons and hacker communities taking the world by storm! Major League Hacking's mission is to empower hackers through events, resources, and more!",
+      "followers": {
+        "facebook": 36900,
+        "twitter": 67900,
+        "instagram": 21400
+      },
+      "image_url": "https://i1.feedspot.com/4710857.jpg?t=1619767954"
+    },
+    {
+      "title": "KoDDoS Blog",
+      "feed_url": "https://blog.koddos.net/feed/",
+      "website_url": "https://blog.koddos.net/",
+      "description": "An informative news blog that focuses on Hacking, Information Security, Cyber Crime, Privacy, and Surveillance. KoDDoS is a premium hosting service that specializes in high-end hosting and anti-DDoS solutions.",
+      "followers": {
+        "facebook": 12,
+        "twitter": 79
+      },
+      "image_url": "https://i1.feedspot.com/4710929.jpg?t=1625837381"
+    },
+    {
+      "title": "HackerCombat",
+      "feed_url": "https://www.hackercombat.com/feed/",
+      "website_url": "https://www.hackercombat.com/",
+      "description": "Frequent updates on Access Control, Cyber Crime, Data Breach, Data Security, Firewall, Malware, Network Security, Ransomware, and Website Security. Hackercombat is a news site, which acts as a source of information for IT security professionals across the world.",
+      "followers": {
+        "facebook": 19400,
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/4740272.jpg?t=1619767992"
+    },
+    {
+      "title": "Hacking Tutorials - The best Step-by-Step Hacking Tutorials",
+      "feed_url": "https://www.hackingtutorials.org/feed/",
+      "website_url": "https://www.hackingtutorials.org/",
+      "description": "Follow this blog for step-by-step Hacking Tutorials about WiFi hacking, Kali Linux, Metasploit, exploits, ethical hacking, information security, malware analysis and scanning.",
+      "followers": {
+        "twitter": 45100
+      },
+      "image_url": "https://i1.feedspot.com/4371940.jpg?t=1619768476"
+    },
+    {
+      "title": "Bug Hacking",
+      "feed_url": "https://bughacking.com/feed/",
+      "website_url": "https://bughacking.com/",
+      "description": "Bughacking is a website that aims on educating about ethical hacking and how penetration testing skills can be used in a legal way. Bughacking explains different penetration testing tools, and techniques that might help to find bugs talk about leveling up your skills",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5421184.jpg?t=1657712106"
+    },
+    {
+      "title": "The Hacker Factor Blog",
+      "feed_url": "https://www.hackerfactor.com/blog/index.php?/feeds/index.rss2",
+      "website_url": "https://www.hackerfactor.com/blog/",
+      "description": "Hacker Factor, a leader in cutting-edge computer forensics research, provides custom software and services with a security focus to business customers. The Hacker Factor Blog is written by Dr. Neal Krawetz, computer security specialist & forensic researcher.",
+      "followers": {
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/51471.jpg?t=1619768055"
+    },
+    {
+      "title": "CQURE Academy Blog",
+      "feed_url": "https://cqureacademy.com/blog/feed/",
+      "website_url": "https://cqureacademy.com/blog/",
+      "description": "Expect topics like Windows Internals, Identity Theft Protection, Penetration Testing, Malware, Secure Server, Forensics, Server Monitoring, and Incident Response. CQURE Academy offers training, workshops & certification programs for Windows security professionals.",
+      "followers": {
+        "facebook": 14800,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4717688.jpg?t=1619768018"
+    },
+    {
+      "title": "Anonhack",
+      "feed_url": "https://www.anonhack.in/feed/",
+      "website_url": "http://www.anonhack.in/",
+      "description": "The Blog, Anonhack is for the readers who find hacking interesting. Features articles on Android, Hacking Basics, Challenges, Hacking with Python, Java, Linux, Shell Scripting, Cryptography, and Wireless Hacks.",
+      "followers": {
+        "twitter": 30
+      },
+      "image_url": "https://i1.feedspot.com/5039856.jpg?t=1619768383"
+    },
+    {
+      "title": "DefCamp",
+      "feed_url": "https://def.camp/feed/",
+      "website_url": "https://def.camp/blog/",
+      "description": "The latest hacking & security news, and interviews. DefCamp is the largest community of hackers and cybersecurity specialists from Romania and Eastern Europe who usually come together every fall for the annual conference.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5301077.jpg?t=1626090229"
+    },
+    {
+      "title": "0ut3r Space",
+      "feed_url": "https://0ut3r.space/atom.xml",
+      "website_url": "https://0ut3r.space/archives/",
+      "description": "A website full of interesting news, articles, and links on IT, security, guides, and hacks. Author Hoek is a cybersecurity consultant, bounty hunter, self-appointed gray hacker, and a fan of new technologies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5225733.jpg?t=1607420221"
+    },
+    {
+      "title": "HackingPassion.com",
+      "feed_url": "https://hackingpassion.com/index.xml",
+      "website_url": "https://hackingpassion.com/",
+      "description": "HackingPassion.com Learn Ethical Hacking and Cyber-Security. We help people become ethical hackers so they can test security systems. We love open-source and Linux.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 763
+      },
+      "image_url": "https://i1.feedspot.com/5166089.jpg?t=1619768049"
+    },
+    {
+      "title": "Hackercool Magazine Blog",
+      "feed_url": "https://www.hackercoolmagazine.com/feed/",
+      "website_url": "https://www.hackercoolmagazine.com/blog/",
+      "description": "Articles cover Forensics, Hacking, Installations, Networking, Server, Tweaking, and Vulnerabilities. A monthly magazine designed for absolute beginners and cybersecurity experts, dedicated to advanced penetration testing & practical ethical hacking in real-world hacking scenarios.",
+      "followers": {
+        "facebook": 385,
+        "twitter": 167,
+        "instagram": 119
+      },
+      "image_url": "https://i1.feedspot.com/5158051.jpg?t=1650977762"
+    },
+    {
+      "title": "Dancho Danchev's Blog",
+      "feed_url": "https://feeds.feedburner.com/DanchoDanchevOnSecurityAndNewMedia",
+      "website_url": "https://ddanchev.blogspot.com/",
+      "description": "Mind Streams of Information Security Knowledge. Blog by Dancho Danchev, DNS Threat Researcher at WhoisXML API and expert in the field of cybercrime fighting & threat intelligence.",
+      "followers": {
+        "twitter": 640
+      },
+      "image_url": "https://i1.feedspot.com/5001921.jpg?t=1619768319"
+    },
+    {
+      "title": "Tisiphone.net",
+      "feed_url": "https://tisiphone.net/feed/",
+      "website_url": "https://tisiphone.net/",
+      "description": "Tisiphone covers a range of topics including information security, hacking tools, malware, threat intelligence, incident response, digital forensics, OSINT, DFIR, and phishing. Written by Lesley Carhart, IT industry veteran & full spectrum cyber-warrior princess.",
+      "followers": {
+        "twitter": 158700
+      },
+      "image_url": "https://i1.feedspot.com/4710675.jpg?t=1619768082"
+    },
+    {
+      "title": "Hackingblogs.com",
+      "feed_url": "https://hackingblogs.com/feed/",
+      "website_url": "https://hackingblogs.com/",
+      "description": "Hacking Blogs On Security is one of the leading Information security blogs covering various security domains. Every week Hacking Blogs provide you latest information about Hacking News, Kali Linux Tutorials, Hacking Courses, and Cybersecurity.",
+      "followers": {
+        "twitter": 27
+      },
+      "image_url": "https://i1.feedspot.com/5051887.jpg?t=1619768039"
+    },
+    {
+      "title": "Hacker's King",
+      "feed_url": "https://www.hackersking.in/feeds/posts/default?alt=rss",
+      "website_url": "https://www.hackersking.in/",
+      "description": "Learn Ethical Hacking, Termux Tutorials, Virus creation, Android & Windows tricks, software, programming, phishing attacks, how-tos, exploitations, vulnerability analysis, and reverse engineering. Authored by Mohit Saran. He is a computer science student and Self Proclaimed Ethical Hacker.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5068238.jpg?t=1619770644"
+    },
+    {
+      "title": "Professional Hackers On Security",
+      "feed_url": "https://professionalhackers.in/feed/",
+      "website_url": "https://professionalhackers.in/",
+      "description": "Keep up with security updates, IT updates, Core Tools, Cyber Security, business updates, entertainment hacking updates, and techniques across the globe. Professional Hackers On Security (PHoS) is an Indian company and has been providing online knowledge-based solutions since 2014.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 779
+      },
+      "image_url": "https://i1.feedspot.com/5037686.jpg?t=1619768372"
+    },
+    {
+      "title": "ThreatNinja",
+      "feed_url": "https://threatninja.net/feed/",
+      "website_url": "https://threatninja.net/",
+      "description": "At Threatninja.net, we empower individuals to become ethical hackers by providing in-depth insights into the world of ethical hacking and cyber defense. Our hands-on tutorials and walkthroughs are designed to help beginners and seasoned professionals alike learn the skills they need to succeed in the dynamic field of cybersecurity.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4753204.jpg?t=1619768395"
+    },
+    {
+      "title": "E Hacking News",
+      "feed_url": "https://www.cysecurity.news/feeds/posts/default?alt=rss",
+      "website_url": "https://www.cysecurity.news/",
+      "description": "News on Cyber Attacks, Security Breaches, Malware, Cyber Crime, Data Breach, Mobile Security, Vulnerabilities, Exploits, Penetration Testing Tools, and other similar relevant issues. E Hacking News is recognized as one of the leading Information Security news portals.",
+      "followers": {
+        "facebook": 92900,
+        "twitter": 124300
+      },
+      "image_url": "https://i1.feedspot.com/436231.jpg?t=1619768065"
+    },
+    {
+      "title": "Hacker NT",
+      "feed_url": "https://hackerhubb.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://hackerhubb.blogspot.com/",
+      "description": "Anyone can learn to hack in my blog for absolutely free. This is only for educational purpose",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5120559.jpg?t=1751026161"
+    },
+    {
+      "title": "Hackaday",
+      "feed_url": "https://hackaday.com/feed/",
+      "website_url": "https://hackaday.com/",
+      "description": "Hackaday serves up Fresh Hacks Every Day from around the Internet. Our playful posts are the gold standard in entertainment for engineers and engineering enthusiasts. We educate those just learning the art of Hack, and provide inspiration for the seasoned veterans.",
+      "followers": {
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/46285.jpg?t=1746599740"
+    },
+    {
+      "title": "EC-Council Blogs \u00bb Ethical Hacking",
+      "feed_url": "https://www.eccouncil.org/cybersecurity-exchange/feed/",
+      "website_url": "https://www.eccouncil.org/cybersecurity-exchange/ethical-hacking/",
+      "description": "Checkout our recent ethical hacking blogs & articles to learn the basics of ethical hacking. It will guide you to start your career in ethical hacking.",
+      "followers": {
+        "facebook": 41000,
+        "twitter": 33900
+      },
+      "image_url": "https://i1.feedspot.com/7894757.jpg?t=1749629074"
+    },
+    {
+      "title": "HackerRank Blog",
+      "feed_url": "https://www.hackerrank.com/blog/feed/",
+      "website_url": "https://www.hackerrank.com/blog/",
+      "description": "HackerRank is the market-leading skills-based coding test and interview solution for hiring developers. Start hiring tech talent from anywhere!",
+      "followers": {
+        "facebook": 160100,
+        "twitter": 90900,
+        "instagram": 126500
+      },
+      "image_url": "https://i1.feedspot.com/8537119.jpg?t=1753086432"
+    },
+    {
+      "title": "Ethical Hacking Blog",
+      "feed_url": "https://www.ethicalhackingblog.com/feeds/posts/default",
+      "website_url": "https://www.ethicalhackingblog.com/",
+      "description": "Ethical Hacking Blog",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7315979.jpg?t=1749628529"
+    },
+    {
+      "title": "Perl Hacks Blog",
+      "feed_url": "https://perlhacks.com/feed/",
+      "website_url": "https://perlhacks.com/",
+      "description": "Dave Cross is a Perl hacker. A blog about all Perl things. Dave Cross and I'm a Perl hacker. In 1998 he started the London Perl Mongers, the first Perl User Group outside of North America. I've been heavily involved in the Perl community ever since.",
+      "followers": {
+        "facebook": 494,
+        "twitter": 484
+      },
+      "image_url": "https://i1.feedspot.com/4954359.jpg?t=1749624785"
+    },
+    {
+      "title": "Hacking Articles",
+      "feed_url": "https://www.hackingarticles.in/feed/",
+      "website_url": "https://www.hackingarticles.in/",
+      "description": "A comprehensive source of information on cybersecurity, ethical hacking, penetration testing, and other topics of interest for information security professionals. Authored by Raj Chandel. Chandel's primary interests lie in system exploitation and vulnerability research, but you'll find tools, resources, and tutorials on everything.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/242231.jpg?t=1617634740"
+    },
+    {
+      "title": "Insecure Lab Blog",
+      "feed_url": "https://www.insecure.in/blog/feed",
+      "website_url": "https://www.insecure.in/blog/",
+      "description": "Check out Insecure's best free ethical hacking tutorials online. Learn ethical hacking and boost your cyber security skills by subscribing to the Insecure Lab blog. Insecure is an online learning platform providing some of the best Ethical Hacking and Cyber Security Tutorials for beginners.",
+      "followers": {
+        "facebook": 360,
+        "twitter": 172,
+        "instagram": 41
+      },
+      "image_url": "https://i1.feedspot.com/5665326.jpg?t=1694003225"
+    },
+    {
+      "title": "Techncyber",
+      "feed_url": "https://feeds.feedburner.com/blogspot/bFCTfA",
+      "website_url": "https://www.techncyber.com/",
+      "description": "Techncyber is a blog about news, stories, ethical hacking tutorials, cyber technology, programming, Kali Linux, gadgets reviews. It is created with the purpose of educating people, especially we provide online safety tips, tricks, and news related to computers & the internet world.",
+      "followers": {
+        "twitter": 77
+      },
+      "image_url": "https://i1.feedspot.com/5067382.jpg?t=1625838368"
+    },
+    {
+      "title": "Hackology",
+      "feed_url": "https://blog.drhack.net/feed/",
+      "website_url": "https://blog.drhack.net/",
+      "description": "A source of Information Security, OS, Mobile, Cryptocurrency, Hacking News, Cyber Security, and Network Security with in-depth technical coverage of issues and events loved by Technophiles.",
+      "followers": {
+        "facebook": 13800,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4710850.jpg?t=1619768005"
+    },
+    {
+      "title": "Basics of Ethical Hacking",
+      "feed_url": "http://feeds.feedburner.com/learnhack",
+      "website_url": "https://www.basicsofhacking.com/",
+      "description": "Learn different Ethical Hacking techniques for beginner or intermediate with simple step by step tutorials and how to stay safe online.",
+      "followers": {
+        "facebook": 77400,
+        "twitter": 198
+      },
+      "image_url": "https://i1.feedspot.com/4718208.jpg?t=1619768354"
+    },
+    {
+      "title": "Hacker General",
+      "feed_url": "https://thehackergeneral.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://thehackergeneral.blogspot.com/",
+      "description": "Hacker General is all about the author's hacking experience. The posts are related to his thoughts on hacking and getting started with it.",
+      "followers": {
+        "facebook": 59
+      },
+      "image_url": "https://i1.feedspot.com/4742369.jpg?t=1619770049"
+    },
+    {
+      "title": "Top Hacking News Blog",
+      "feed_url": "http://top-hackingnews.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://top-hackingnews.blogspot.com/",
+      "description": "Covers Hacking News , Cyber Attacks and Security News.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4717846.jpg?t=1626089145"
+    },
+    {
+      "title": "Hack The World",
+      "feed_url": "https://htwhacker.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://htwhacker.blogspot.com/",
+      "description": "Learn free all about hacking with written post and hacking video tutorials.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5074119.jpg?t=1625052943"
+    },
+    {
+      "title": "Manish Bhardwaj Blog",
+      "feed_url": "https://manishbhardwajblog.wordpress.com/blog/feed/",
+      "website_url": "https://manishbhardwajblog.wordpress.com/blog/",
+      "description": "A blog by Manish Bhardwaj, an Ethical Hacker, Penetration Tester & Blogger.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4710875.jpg?t=1619768885"
+    },
+    {
+      "title": "Wholovehacking",
+      "feed_url": "http://feeds.feedburner.com/EnjoyHacking",
+      "website_url": "https://wholovehacking.blogspot.com/",
+      "description": "Learn about Hacker, Ethical Hacking, Hacking tools, CEH, Hacking Tricks, Latest Hacking News, Proxy Website, Hacking Simulator.",
+      "followers": {
+        "twitter": 225
+      },
+      "image_url": "https://i1.feedspot.com/5153331.jpg?t=1626077299"
+    },
+    {
+      "title": "Hackerzz",
+      "feed_url": "https://hackerzz01.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://hackerzz01.blogspot.com/",
+      "description": "A blog about Cyber Security and Ethical hacking. In this blog i will give you tutorials, tricks and information about hacking tools.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5160429.jpg?t=1751027503"
+    },
+    {
+      "title": "Penetration Testing Lab Blog",
+      "feed_url": "https://pentestlab.blog/feed/",
+      "website_url": "https://pentestlab.blog/",
+      "description": "Offensive Techniques & Methodologies. PenTestLab was designed with the idea of helping ethical penetration testers to build their own private lab, develop their skills in a safe environment, and learn existing and new exploitation techniques.",
+      "followers": {
+        "facebook": 11600,
+        "twitter": 23000
+      },
+      "image_url": "https://i1.feedspot.com/4717989.jpg?t=1612013889"
+    },
+    {
+      "title": "Extreme Hacking",
+      "feed_url": "http://blog.extremehacking.org/feed/",
+      "website_url": "http://blog.extremehacking.org/",
+      "description": "Extreme Hacking is a Research Institute for Ethical Hacking Training in India, providing certified training on Advanced Ethical Hacking and Computer Forensic.",
+      "followers": {
+        "facebook": 19900,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4710758.jpg?t=1619767669"
+    },
+    {
+      "title": "The Hacker Blog - Matthew Bryant",
+      "feed_url": "https://thehackerblog.com/feed.xml",
+      "website_url": "https://thehackerblog.com/",
+      "description": "A Hacker's Blog of Unintended Use and Insomnia. Matthew Bryant is a XSS Hunter author, security researcher, and caffeine addict.",
+      "followers": {
+        "twitter": 11600
+      },
+      "image_url": "https://i1.feedspot.com/4710645.jpg?t=1619768466"
+    },
+    {
+      "title": "Offensive Sec 3.0",
+      "feed_url": "https://offensivesec.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://offensivesec.blogspot.com/",
+      "description": "Covers Security of Information, Hacking, Offensive Security, Pentest, Open Source, and Hackers Tools.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4789456.jpg?t=1619768341"
+    },
+    {
+      "title": "Hacking Tutorials",
+      "feed_url": "https://ethicalhackx.com/rss.xml",
+      "website_url": "https://ethicalhackx.com/",
+      "description": "Learn Ethical Hacking, Pentesting, Website Hacking, Linux, and Windows Hacking, and WINDOWS hacking. Authored by Abhinav Kumar.",
+      "followers": {
+        "twitter": 12300,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4717916.jpg?t=1619768078"
+    },
+    {
+      "title": "Hackers Online Club (HOC)",
+      "feed_url": "https://blog.hackersonlineclub.com/feeds/posts/default?alt=rss",
+      "website_url": "https://blog.hackersonlineclub.com/",
+      "description": "Get Updates of latest Tools, Exploits, Security, Vulnerabilities and Hacking tutorials. HackersOnlineClub is a leading website for Information Security Ethical Hacking, Cyber Forensic, Website Security, VAPT, Mobile Security.",
+      "followers": {
+        "facebook": 70200,
+        "twitter": 27600
+      },
+      "image_url": "https://i1.feedspot.com/4710895.jpg?t=1619768462"
+    },
+    {
+      "title": "Freedom Hacker - Hacking News, Security News & Everything Cyber",
+      "feed_url": "https://freedomhacker.net/feed/",
+      "website_url": "https://freedomhacker.net/",
+      "description": "A leading source for security and hacking news. The latest on privacy, DDoS attacks, malware, NSA revelations and cyber crime related news across the web.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4399903.jpg"
+    },
+    {
+      "title": "The Hacker News",
+      "feed_url": "https://thehackernews.com/feeds/posts/default",
+      "website_url": "https://thehackernews.com/",
+      "description": "A leading cybersecurity news platform for IT professionals, researchers, hackers, technologists, and enthusiasts. Here, you'll find the latest cybersecurity news, hacking news, cyber attacks, computer security, and in-depth reports on current and future Infosec trends and how they are shaping the cyber world.",
+      "followers": {
+        "facebook": 1900000,
+        "twitter": 922200,
+        "instagram": 142900
+      },
+      "image_url": "https://i1.feedspot.com/349733.jpg?t=1617631309"
+    },
+    {
+      "title": "WeLiveSecurity",
+      "feed_url": "https://www.welivesecurity.com/feed/",
+      "website_url": "https://www.welivesecurity.com/en/",
+      "description": "The latest news, research, cyber threats, malware discoveries, mobile security, ransomware, and insight from the ESET experts. WeLiveSecurity comes from the brains at ESET - experienced researchers with in-depth knowledge of the latest threats & security trends.",
+      "followers": {
+        "facebook": 2100000,
+        "twitter": 7700
+      },
+      "image_url": "https://i1.feedspot.com/4648913.jpg?t=1619767649"
+    },
+    {
+      "title": "HackerOne Blog",
+      "feed_url": "https://www.hackerone.com/blog",
+      "website_url": "https://www.hackerone.com/blog",
+      "description": "The world's leading bug bounty and vulnerability coordination platform. Brings you articles on News, Events, Company Resources, Compliance, Data & Analysis, Expert Interviews, Hacker Resources, and Vulnerability Disclosure.",
+      "followers": {
+        "facebook": 75900,
+        "twitter": 314800
+      },
+      "image_url": "https://i1.feedspot.com/4710665.jpg?t=1619767653"
+    },
+    {
+      "title": "Hakin9",
+      "feed_url": "https://hakin9.org/",
+      "website_url": "https://hakin9.org/",
+      "description": "The monthly magazine and online training provider dedicated to hacking and cybersecurity. Our tutorials, case studies, and online courses will prepare you for the upcoming, potential threats in the cybersecurity world.",
+      "followers": {
+        "facebook": 202700,
+        "twitter": 71700
+      },
+      "image_url": "https://i1.feedspot.com/4710974.jpg?t=1650977525"
+    },
+    {
+      "title": "Netragard",
+      "feed_url": "https://netragard.com/feed/",
+      "website_url": "https://netragard.com/publications/",
+      "description": "Netragard, Inc is a research driven Network Penetration Testing firm. Their penetration testing deliverables are guaranteed to be free of false positives and the product of expert driven research.",
+      "followers": {
+        "facebook": 471,
+        "twitter": 925
+      },
+      "image_url": "https://i1.feedspot.com/4710845.jpg?t=1619768503"
+    },
+    {
+      "title": "Hackercool Blog",
+      "feed_url": "https://www.hackercoolmagazine.com/blog/feed/",
+      "website_url": "https://www.hackercoolmagazine.com/blog/",
+      "description": "This blog is dedicated for absolute beginners to learn hacking. That means there is no disabling firewall, turning of antivirus in articles",
+      "followers": {
+        "facebook": 803
+      },
+      "image_url": "https://i1.feedspot.com/4718203.jpg?t=1619768448"
+    },
+    {
+      "title": "Fortra Blog",
+      "feed_url": "https://www.fortra.com/blog",
+      "website_url": "https://www.fortra.com/blog",
+      "description": "SecuriTeam is a small group within Beyond Security dedicated to bringing the latest news and utilities in computer security. Having experience as Security Specialists, Programmers and System Administrators we appreciate your need for a 'Security Portal' - A central Security web site containing all the newest security information from various mailing lists, hacker channels.",
+      "followers": {
+        "twitter": 21100
+      },
+      "image_url": "https://i1.feedspot.com/126573.jpg?t=1619768059"
+    },
+    {
+      "title": "KitPloit",
+      "feed_url": "https://www.kitploit.com//feeds/posts/default",
+      "website_url": "https://www.kitploit.com/",
+      "description": "Leading source of security tools, hacking tools, cybersecurity, and network security. Blog posts cover exploits, malware, Windows, Linux, Android, iPhone, and MAC OS.",
+      "followers": {
+        "facebook": 46400,
+        "twitter": 112900
+      },
+      "image_url": "https://i1.feedspot.com/4963850.jpg?t=1619767663"
+    },
+    {
+      "title": "(ISC)\u00b2 Blog",
+      "feed_url": "https://feeds.feedburner.com/isc2Blog",
+      "website_url": "https://www.isc2.org/insights",
+      "description": "NEWS FROM THE GOLD STANDARD IN CYBERSECURITY ISC2 Insights The latest ISC2 updates, along with member views on global cybersecurity trends and issues, public policy, technology innovation and more.",
+      "followers": {
+        "facebook": 29700,
+        "twitter": 96100
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/8752152/page/664994/logo_1718223222.jpg"
+    },
+    {
+      "title": "Synack",
+      "feed_url": "https://www.synack.com/blog/",
+      "website_url": "https://www.synack.com/blog/",
+      "description": "Check out the Synack blog for the latest company events, news, and research. Synack is the premier crowdsourced platform for on-demand security expertise.",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 27300
+      },
+      "image_url": "https://i1.feedspot.com/4710772.jpg?t=1619767974"
+    },
+    {
+      "title": "Effect Hacking",
+      "feed_url": "https://feeds.feedburner.com/EffectHacking",
+      "website_url": "http://www.effecthacking.com/",
+      "description": "A dedicated blog for hackers. Learn about internet security, hacking, how-to guides, Windows, Linux, MAC OS, and security tools. Authored by Gokul G.",
+      "followers": {
+        "facebook": 43,
+        "twitter": 192
+      },
+      "image_url": "https://i1.feedspot.com/4710935.jpg?t=1619768485"
+    },
+    {
+      "title": "HackeRoyale",
+      "feed_url": "https://hackeroyale.com/feed/",
+      "website_url": "https://hackeroyale.com/",
+      "description": "HackeRoyale: a repository of information about hacking, penetration testing, and programming related topics.",
+      "followers": {
+        "twitter": 207,
+        "instagram": 113
+      },
+      "image_url": "https://i1.feedspot.com/4711213.jpg?t=1619768041"
+    },
+    {
+      "title": "Terry Cutler Blog",
+      "feed_url": "https://terrycutler.com/category/media/blog/feed/",
+      "website_url": "https://terrycutler.com/",
+      "description": "A complete & effective online learning program to keep up with the rapidly changing digital landscape. Terry Cutler is an international award-winning Certified Ethical Hacker and he'll show you how to Google yourself, search out fake profiles, recognize changes in the behaviors of family members, how to block objectionable material, create unbreakable passwords, encouraging us all to assume a mindset toward Internet safety.",
+      "followers": {
+        "facebook": 709,
+        "twitter": 2300,
+        "instagram": 986
+      },
+      "image_url": "https://i1.feedspot.com/4710897.jpg?t=1619768358"
+    },
+    {
+      "title": "HacksLand",
+      "feed_url": "https://hacksland.net/feed",
+      "website_url": "https://hacksland.net/",
+      "description": "Dedicated to specific subjects of interest such as Programming, How To Guides, Networking, Exploit development, Cryptography, Web application hacking, Computer Science, Linux, and Reverse Engineering. Authored by Thilan Dissanayaka, An undergraduate Engineering student of the University of Ruhuna, Sri Lanka.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5029472.jpg?t=1619768458"
+    },
+    {
+      "title": "Massive Alliance Blog",
+      "feed_url": "https://www.massivealliance.com/blog/feed/",
+      "website_url": "https://www.massivealliance.com/blog/",
+      "description": "Industry news, whitepapers, and technical insight into cybersecurity, hacks & exploits, Internet Security, cyber law, Government, and reputation management. Massive Alliance provides a unique approach to brand protection for high-profile public individuals, executives, SMEs, and enterprises.",
+      "followers": {
+        "facebook": 159,
+        "twitter": 154
+      },
+      "image_url": "https://i1.feedspot.com/4712073.jpg?t=1619768045"
+    }
+  ]
+}

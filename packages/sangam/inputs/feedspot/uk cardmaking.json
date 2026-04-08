@@ -1,0 +1,71 @@
+{
+  "category": "UK Cardmaking",
+  "source_url": "https://rss.feedspot.com/uk_cardmaking_rss_feeds",
+  "feeds": [
+    {
+      "title": "Daring Cardmakers",
+      "feed_url": "http://daringcardmakers.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://daringcardmakers.blogspot.com/",
+      "description": "The Daring Cardmakers Blog features a design team of card-makers from the UK and mainland Europe, whose aim is to inspire others by launching a new challenge every Friday.",
+      "followers": {
+        "facebook": 496
+      },
+      "image_url": "https://i1.feedspot.com/4634594.jpg?t=1613999699"
+    },
+    {
+      "title": "Spyder's Corner",
+      "feed_url": "https://spyder-spyderscorner.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://spyder-spyderscorner.blogspot.com/",
+      "description": "The ramblings of a completely insane crafter, where you can share tips, hints, picture tutorials, mostly card making,with links to freebies I've found!",
+      "followers": {
+        "twitter": 55
+      },
+      "image_url": "https://i1.feedspot.com/5246899.jpg?t=1613742756"
+    },
+    {
+      "title": "Handmade by Christine",
+      "feed_url": "http://cardsbychristine.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://cardsbychristine.blogspot.com/",
+      "description": "Hi and welcome to my cardmaker's blog. I am very lucky to live in a beautiful part of Yorkshire and I am a very young (at heart!) crafter who is supported by a very patient and wonderful. I've been a crafter for many years, but my love of papercraft has become almost an addiction! Like most crafters",
+      "followers": {
+        "twitter": 5,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4907782.jpg?t=1613999710"
+    },
+    {
+      "title": "Silverwolf Cards",
+      "feed_url": "https://silverwolfcards-shaz.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://silverwolfcards-shaz.blogspot.com/",
+      "description": "Here you will find everything related to cards.",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/4635156.jpg?t=1613999780"
+    },
+    {
+      "title": "Mitosu Crafts Blog",
+      "feed_url": "https://mitosucrafts.com/feed",
+      "website_url": "https://mitosucrafts.com/blog",
+      "description": "Card Making and Papercraft creative coaches based in Basingstoke UK. For project ideas, inspirations, classes, events and Stampin' Up!",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 168,
+        "instagram": 6200
+      },
+      "image_url": "https://i1.feedspot.com/4730848.jpg?t=1607160249"
+    },
+    {
+      "title": "CraftStash Inspiration",
+      "feed_url": "https://www.craftstash.co.uk/inspiration/feed/",
+      "website_url": "https://www.craftstash.co.uk/inspiration/",
+      "description": "CraftStash is a leading online store selling craft products such as dies, die-cutting machines, stamps, ink, card, embellishments, sewing patterns and more - everything you need for your card making and papercraft projects.",
+      "followers": {
+        "facebook": 52600,
+        "twitter": 1100,
+        "instagram": 20600
+      },
+      "image_url": "https://i1.feedspot.com/4767246.jpg?t=1613999695"
+    }
+  ]
+}

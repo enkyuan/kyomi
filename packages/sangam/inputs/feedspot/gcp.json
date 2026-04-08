@@ -1,0 +1,75 @@
+{
+  "category": "GCP",
+  "source_url": "https://rss.feedspot.com/gcp_rss_feeds",
+  "feeds": [
+    {
+      "title": "Google Cloud Blog",
+      "feed_url": "https://cloudblog.withgoogle.com/rss/",
+      "website_url": "https://cloud.google.com/blog",
+      "description": "Get official news, features, and announcements for all Google Cloud products including Google Cloud Platform, Workspace, and much more. The mission of the Google Cloud blog is to be your definitive, trusted source for news, guidance, and perspectives from Google on cloud computing. This blog covers a variety of Google Cloud products and services, including Google Cloud Platform, Workspace, Google Maps Platform, and Chrome Enterprise.",
+      "followers": {
+        "twitter": 522400,
+        "instagram": 364400
+      },
+      "image_url": "https://i1.feedspot.com/4969615.jpg?t=1659353695"
+    },
+    {
+      "title": "Google Cloud",
+      "feed_url": "https://medium.com/feed/google-cloud",
+      "website_url": "https://medium.com/google-cloud",
+      "description": "A collection of technical articles and blogs curated by Google Cloud Developer Advocates. The views expressed are those of the authors and don't necessarily reflect those of Google.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 1300000,
+        "instagram": 364400
+      },
+      "image_url": "https://i1.feedspot.com/5120687.jpg?t=1659355033"
+    },
+    {
+      "title": "Google Blog \u00bb Google Cloud",
+      "feed_url": "https://blog.google/products/google-cloud/rss/",
+      "website_url": "https://blog.google/products/google-cloud/",
+      "description": "Read the latest news and updates about Google Cloud in this segment. Google is a public and profitable company focused on search services. It is fast, accurate, and easy to use. The company also serves corporate clients, including advertisers, content publishers, and site managers with cost-effective advertising and a wide range of revenue-generating search services.",
+      "followers": {
+        "facebook": 34800000,
+        "twitter": 32799999,
+        "instagram": 15700000
+      },
+      "image_url": "https://i1.feedspot.com/5427374.jpg?t=1659353712"
+    },
+    {
+      "title": "InfoQ \u00bb Google Cloud Platform",
+      "feed_url": "https://feed.infoq.com/gcp/news/",
+      "website_url": "https://www.infoq.com/gcp/news/",
+      "description": "Catch the latest Google Cloud Platform News written by software developers for software developers in this space from InfoQ. You can also find info on AI, ML & Data Engineering, Dev Ops, and more. InfoQ is a Tech Journal that provides software engineers with the opportunity to share experiences gained using innovator and early adopter stage techniques and technologies with the wider industry.",
+      "followers": {
+        "facebook": 21500,
+        "twitter": 57100
+      },
+      "image_url": "https://i1.feedspot.com/5427376.jpg?t=1659353726"
+    },
+    {
+      "title": "Knoldus Blog \u00bb GCP",
+      "feed_url": "https://blog.knoldus.com/category/tech-blogs/gcp/feed/",
+      "website_url": "https://blog.knoldus.com/category/tech-blogs/gcp/",
+      "description": "This section of Knoldus blogs gives insight and perspectives to keep you updated on the current news, announcements, and features from Google Cloud. Other categories include Analytics, AI, Blockchain, and more. Founded over 12 years ago, Knoldus has the world's largest team of Functional Programming and Fast Data engineers focused on creating customized high-performance solutions.",
+      "followers": {
+        "facebook": 960,
+        "twitter": 814,
+        "instagram": 191
+      },
+      "image_url": "https://i1.feedspot.com/5427375.jpg?t=1659354963"
+    },
+    {
+      "title": "Google Cloud Fellow Blog",
+      "feed_url": "https://gcpfellow.com/feed/",
+      "website_url": "https://gcpfellow.com/blog-feed/",
+      "description": "Learn all about Google Cloud Platform's new and upcoming Google Cloud Swags, giveaways, and how to clear all the Google Cloud certifications as well as Anthos, new releases, installation and configuration guides and more.",
+      "followers": {
+        "facebook": 703,
+        "twitter": 128
+      },
+      "image_url": "https://i1.feedspot.com/5427377.jpg?t=1659355652"
+    }
+  ]
+}

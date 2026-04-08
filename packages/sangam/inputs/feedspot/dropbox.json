@@ -1,0 +1,51 @@
+{
+  "category": "Dropbox",
+  "source_url": "https://rss.feedspot.com/dropbox_rss_feeds",
+  "feeds": [
+    {
+      "title": "Dropbox Tech",
+      "feed_url": "https://dropbox.tech/feed",
+      "website_url": "https://dropbox.tech/",
+      "description": "A blog about Dropbox technology and tips. Read about the application, infrastructure, developers, and more. Dropbox is the world's first smart workspace that helps people and teams focus on the work that matters.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 3800000,
+        "instagram": 100200
+      },
+      "image_url": "https://i1.feedspot.com/4292301.jpg?t=1620714306"
+    },
+    {
+      "title": "Dropbox Blog",
+      "feed_url": "https://blog.dropbox.com/feed",
+      "website_url": "https://blog.dropbox.com/",
+      "description": "Dropbox is a technology company that builds simple, powerful products for people and businesses. We create products that are easy to use and are built on trust. Get all updates about Dropbox news, releases, features and more from the official Dropbox blog.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 3800000
+      },
+      "image_url": "https://i1.feedspot.com/4221699.jpg?t=1620714311"
+    },
+    {
+      "title": "Dropbox Design",
+      "feed_url": "https://medium.com/feed/dropbox-design",
+      "website_url": "https://medium.com/dropbox-design",
+      "description": "We believe joy is the engine that powers all the best ideas. We're designing an elegant and intuitive way of working, so you can love the way you work. Get more on dropbox.design from this feed.",
+      "followers": {
+        "facebook": 520799,
+        "twitter": 32400
+      },
+      "image_url": "https://i1.feedspot.com/4919874.jpg?t=1620714274"
+    },
+    {
+      "title": "Dropbox",
+      "feed_url": "https://dropboxbusinessblog.co.uk/feed/",
+      "website_url": "https://dropboxbusinessblog.co.uk/",
+      "description": "Brought to you by industry leaders and influencers, this blog delivers advice, insight and tips on growing your business faster, simpler and more securely.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 3800000
+      },
+      "image_url": "https://i1.feedspot.com/4919873.jpg?t=1620714280"
+    }
+  ]
+}

@@ -1,0 +1,377 @@
+{
+  "category": "UK Whiskey",
+  "source_url": "https://rss.feedspot.com/uk_whiskey_rss_feeds",
+  "feeds": [
+    {
+      "title": "GreatDrams",
+      "feed_url": "https://greatdrams.com/feed/",
+      "website_url": "https://greatdrams.com/category/whisky-in-the-press/",
+      "description": "Discover the best whiskies from around the world, browse and build your perfect cabinet. With hundreds of bottles featured. We're all about the best whiskies from around the world, something everyone will enjoy.",
+      "followers": {
+        "facebook": 12800,
+        "twitter": 5300,
+        "instagram": 164
+      },
+      "image_url": "https://i1.feedspot.com/4546714.jpg?t=1614145114"
+    },
+    {
+      "title": "The Whisky Wire",
+      "feed_url": "https://thewhiskywire.com/feed/",
+      "website_url": "https://thewhiskywire.com/",
+      "description": "Creating a whole world of dramfotainment for a new generation of whiskey enthusiast.",
+      "followers": {
+        "twitter": 30600
+      },
+      "image_url": "https://i1.feedspot.com/1884113.jpg?t=1647243107"
+    },
+    {
+      "title": "Master of Malt Blog",
+      "feed_url": "https://www.masterofmalt.com/blog/feed/",
+      "website_url": "https://www.masterofmalt.com/blog/",
+      "description": "Master of Malt are Sa group of dedicated individuals trying to bring ever more delightful drink experiences to ever more people. There are lots of drink experiences that we can deliver - trying new things, learning about distilleries, choosing a perfect gift for a loved one, learning how to make a cocktail - and we're here to help make that happen, in the most delightful way imaginable. We are here to shorten the distance to amazing drink experiences.",
+      "followers": {
+        "facebook": 13800,
+        "twitter": 52500,
+        "instagram": 208100
+      },
+      "image_url": "https://i1.feedspot.com/4909100.jpg?t=1614145130"
+    },
+    {
+      "title": "Whisky Boys",
+      "feed_url": "https://whiskyboys.com/feed/",
+      "website_url": "https://whiskyboys.com/",
+      "description": "Whisky news & reviews. Scotland based Whisky Bloggers & Writers - specialising in whisky reviews, distillery visits & whisky tastings.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4909109.jpg?t=1614145151"
+    },
+    {
+      "title": "Whisky Critic",
+      "feed_url": "https://feeds.feedburner.com/WhiskyCritic",
+      "website_url": "https://whiskycritic.com/",
+      "description": "Editorial and aficionado discussions of Whisky, Bourbon, Cognac, Craft Beer, Cigars and the good life.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/454351.jpg?t=1647241419"
+    },
+    {
+      "title": "Whisky.Auction Magazine",
+      "feed_url": "https://magazine.whisky.auction/feed/",
+      "website_url": "https://magazine.whisky.auction/",
+      "description": "The specialist whisky auction magazine for the informed spirits enthusiast, collector and seller. Whisky.Auction is the best resource for anyone buying and selling whisky and spirits online. It was founded and is managed by some of the industry's leading experts in rare and antique spirits. Buyers and sellers place bids and submit bottles from across the globe, while our experts inspect every bottle that appears in each auction to guarantee its authenticity.",
+      "followers": {
+        "facebook": 19100,
+        "twitter": 2000,
+        "instagram": 22400
+      },
+      "image_url": "https://i1.feedspot.com/5435310.jpg?t=1661347934"
+    },
+    {
+      "title": "Whisky Brokers Associates Blog",
+      "feed_url": "https://whiskybrokersassociates.co.uk/feed/",
+      "website_url": "https://whiskybrokersassociates.co.uk/latest-whisky-news/",
+      "description": "We aim to provide you with not only fantastic whisky at great prices but also a sense of assurance in your decision. Embark on a flavorful journey with our premium whisky selection. Discover tasting notes, cocktail recipes, and the latest news in the world of whisky on our blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7264156.jpg?t=1709270862"
+    },
+    {
+      "title": "Whisky-Online Blog",
+      "feed_url": "https://www.whisky-online.com/blogs/news.atom",
+      "website_url": "https://www.whisky-online.com/blogs/news",
+      "description": "Keep up-to-date with all the latest activities at Whisky-Online Shop. Including what new whiskies will be listed on the site as well as events we host such as virtual whisky tastings. We are a family-run business that specializes in selling and auctioning Old & Rare Whisky.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 8600
+      },
+      "image_url": "https://i1.feedspot.com/5435302.jpg?t=1661347879"
+    },
+    {
+      "title": "Dram Queen Blog",
+      "feed_url": "https://dramqueen.co.uk/feed/",
+      "website_url": "https://dramqueen.co.uk/blog/",
+      "description": "Ann Miller is a Scotch whisky expert, based in Speyside, who worked in the industry for over 30 years. She offers bespoke whisky experiences including tastings and shares her passion, knowledge and behind the scenes expertise. Following nearly 30 years working in Scotland and around the world as one of the first female International Brand Ambassadors for a wide range of single malt and premium blended whisky brands of one of the larger Scotch whisky companies, Ann Miller, the Dram Queen, is an acknowledged expert on the subject.",
+      "followers": {
+        "instagram": 753
+      },
+      "image_url": "https://i1.feedspot.com/5435307.jpg?t=1661405410"
+    },
+    {
+      "title": "Whisky Investment UK Blog",
+      "feed_url": "https://whiskyinvestmentuk.co.uk/feed/",
+      "website_url": "https://whiskyinvestmentuk.co.uk/blog-listing/",
+      "description": "If you would like to know how to spot a whisky that could turn out to be a worthwhile investment, read on. Whisky Investment UK is part of the Silvercrest Energy Group and is approved and licenced by HMRC to store both bulk and casked Whisky in duty suspense at any approved Scottish warehouse.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5435304.jpg?t=1679900853"
+    },
+    {
+      "title": "Two Whisky Bros Blog",
+      "feed_url": "https://twowhiskybros.co.uk/blogs/blog.atom",
+      "website_url": "https://twowhiskybros.co.uk/blogs/blog",
+      "description": "A personalised journey through whisky, one sip at a time. Grab a dram and explore our whisky reviews and articles. Two brothers with a passion for whisky sharing reviews, thoughts and stories about the water of life.",
+      "followers": {
+        "facebook": 490,
+        "twitter": 555,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5435294.jpg?t=1661347810"
+    },
+    {
+      "title": "Malt",
+      "feed_url": "https://malt-review.com/feed/",
+      "website_url": "https://malt-review.com/",
+      "description": "Malt is a whisky magazine dedicated to finding the best in single malt and blended whisky. Expect fierce independence and brutally honest opinion. Malt is a whisky and spirits blog, committed to critical evaluation within a price-sensitive scoring framework. We are guided by the principles of Independence, Diversity, and Humility.",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 4800,
+        "instagram": 9800
+      },
+      "image_url": "https://i1.feedspot.com/4982346.jpg?t=1630068817"
+    },
+    {
+      "title": "A Scot on Scotch BLOG",
+      "feed_url": "https://ascotonscotch.com/feed/",
+      "website_url": "https://ascotonscotch.com/whisky-reviews-blog/",
+      "description": "Dedicated to reviewing affordable whisky, sharing some tips and some entertaining tales along the way. Whisky Reviews is a site by Neil Murphy, a whisky enthusiast, writing about his love for whisky.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4547383.jpg?t=1614599632"
+    },
+    {
+      "title": "Old and Rare Whisky Blog",
+      "feed_url": "https://www.oldandrarewhisky.co.uk/blogs/news.atom",
+      "website_url": "https://www.oldandrarewhisky.co.uk/blogs/news",
+      "description": "Get the latest news and updates from the world of whiskey, auctions and more! Online boutique whisky retailer specialising in the old, the rare, and the collectable. With a range that includes Macallan, Balvenie, Ardbeg, Bowmore, Dalmore, and many more from over 100 distilleries.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 227,
+        "instagram": 8800
+      },
+      "image_url": "https://i1.feedspot.com/5435297.jpg?t=1661347833"
+    },
+    {
+      "title": "Scotty's Drams Blog",
+      "feed_url": "https://tastywhisky.home.blog/feed/",
+      "website_url": "https://tastywhisky.home.blog/",
+      "description": "This blog is all about the Whisky tasting and commentary on it. I am a Whisky geek living in the Speyside region.",
+      "followers": {
+        "facebook": 390,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5435298.jpg?t=1661405756"
+    },
+    {
+      "title": "TopWhiskies Blog",
+      "feed_url": "https://topwhiskies.com/blogs/whisky-blog.atom",
+      "website_url": "https://topwhiskies.com/blogs/whisky-blog",
+      "description": "A whisky blog and guide to help you understand whiskies: from single malt scotch, to cocktails, to world whiskey and bourbon.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 6300,
+        "instagram": 94900
+      },
+      "image_url": "https://i1.feedspot.com/4918905.jpg?t=1666859075"
+    },
+    {
+      "title": "The Whisky Explorer Blog",
+      "feed_url": "https://www.thewhiskyexplorer.co.uk/category/blog/feed/",
+      "website_url": "https://www.thewhiskyexplorer.co.uk/category/blog/",
+      "description": "A blog of tastings, learnings and ramblings from a journey through whisky. I started The Whisky Explorer in 2019, I thought it would be good to start to document my journey in a little more detail, giving like minded enthusiasts and anyone wanting to enhance their exploration of whisky, the opportunity to experience my journey with me.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 2400,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5460364.jpg?t=1666874092"
+    },
+    {
+      "title": "The Scotch Whisky Experience Blog",
+      "feed_url": "https://www.scotchwhiskyexperience.co.uk/feed/",
+      "website_url": "https://www.scotchwhiskyexperience.co.uk/about/blog/",
+      "description": "Read our Scotch Whisky Experience blog for all things whisky and Edinburgh-related. Our Whisky Collection comprises 3,384 bottles of Scotch Whisky, making it a priceless record of whisky history. Having first opened to the public in 1988, The Scotch Whisky Experience was created by the Scotch whisky industry to showcase Scotch to international visitors.",
+      "followers": {
+        "facebook": 25100,
+        "twitter": 11400,
+        "instagram": 13700
+      },
+      "image_url": "https://i1.feedspot.com/5435300.jpg?t=1666875390"
+    },
+    {
+      "title": "Glen Scotia Blog",
+      "feed_url": "https://www.glenscotia.com/blogs/news.atom",
+      "website_url": "https://www.glenscotia.com/blogs/news",
+      "description": "Keep updated on the latest news, updates and product releases from Glen Scotia Distillery, in Campbeltown.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 8100,
+        "instagram": 22200
+      },
+      "image_url": "https://i1.feedspot.com/5460418.jpg?t=1666875942"
+    },
+    {
+      "title": "The Whiskyphiles Blog",
+      "feed_url": "https://thewhiskyphiles.com/feed/?x=1",
+      "website_url": "https://thewhiskyphiles.com/blog/",
+      "description": "The premier blog for whisky reviews, new releases, and whisky news!",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 4800,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4585053.jpg?t=1614145103"
+    },
+    {
+      "title": "Whisky For Everyone",
+      "feed_url": "https://whiskyforeveryone.blogspot.com/feeds/posts/default",
+      "website_url": "https://whiskyforeveryone.blogspot.com/",
+      "description": "Whisky For Everyone is a blog and website that is for all lovers of whisky - beginner, connoisseur or otherwise. It features regular updates on new releases, tasting notes and a weekly whisky news round-up.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 17600,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/328315.jpg?t=1614145118"
+    },
+    {
+      "title": "The Dramble",
+      "feed_url": "https://www.thedramble.com/rss",
+      "website_url": "https://www.thedramble.com/",
+      "description": "The Dramble is an independent whisky review and opinion site focusing on connecting up the whisky blog ecosystem. Connecting up the whisky world one dram at a time. Follow us for eloquent but honest tasting notes, absorbing opinion pieces, or good-humoured malt chatter.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4740234.jpg?t=1661407806"
+    },
+    {
+      "title": "Give A Dram",
+      "feed_url": "https://www.giveadram.net/feed.rss",
+      "website_url": "https://www.giveadram.net/posts",
+      "description": "Whiskey enthusiasts Drew and Mandee blog about Whisky, Whiskey and Bourbon, and other unexplored Whisky facts. Whether you're a malt master or simply looking for a reason to dip your toe in the amber water of life for the first time, then dive into this blog and join them on an adventure exploring all things whiskey.",
+      "followers": {
+        "facebook": 1,
+        "twitter": 37,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5712911.jpg?t=1700055580"
+    },
+    {
+      "title": "Whiskybroker Blog",
+      "feed_url": "https://www.whiskybroker.co.uk/blog/feed/",
+      "website_url": "https://www.whiskybroker.co.uk/blog/",
+      "description": "Latest news and updates for all things Whisky. Since our formation in 2010, we've supplied casks and bottle directly to consumers and whisky shops. Casks can be stored at our warehousing site until ready for bottling.",
+      "followers": {
+        "facebook": 8800,
+        "twitter": 1400,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5435306.jpg?t=1661347904"
+    },
+    {
+      "title": "Whisky Investment Partners Blog",
+      "feed_url": "https://www.whiskyinvestmentpartners.com/feed/",
+      "website_url": "https://whiskypartners.com/learn/",
+      "description": "Learn more about whisky investment, market, cask ownership and more! Whisky Investment Partners is here to help you kick-start your cask ownership journey regardless of your knowledge level. Whisky Investment Partners are specialist whisky cask stockists.",
+      "followers": {
+        "facebook": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5435301.jpg?t=1661410726"
+    },
+    {
+      "title": "The Whisky Exchange Whisky Blog",
+      "feed_url": "https://blog.thewhiskyexchange.com/feed/",
+      "website_url": "https://blog.thewhiskyexchange.com/",
+      "description": "A blog about great drinks by the knowledgeable team at The Whisky Exchange. We are the world's number-one online specialist retailer of whisky, fine spirits and liqueurs.",
+      "followers": {
+        "facebook": 268500,
+        "twitter": 32500,
+        "instagram": 160500
+      },
+      "image_url": "https://i1.feedspot.com/2002089.jpg?t=1614597867"
+    },
+    {
+      "title": "Elite Wine & Whisky Blog",
+      "feed_url": "https://elitewineandwhisky.com/feed/",
+      "website_url": "https://elitewineandwhisky.com/blog/",
+      "description": "Elite Wine & Whisky is a Singapore-based company that specializes in rare and collectible wines and whiskies. Their blog features articles on wine and whisky education, reviews of rare and unique bottles, and industry news.",
+      "followers": {
+        "facebook": 1800,
+        "instagram": 7600
+      },
+      "image_url": "https://i1.feedspot.com/5351524.jpg?t=1679900086"
+    },
+    {
+      "title": "Dartmoor Whisky Distillery",
+      "feed_url": "https://dartmoorwhiskydistillery.co.uk/feed/",
+      "website_url": "https://dartmoorwhiskydistillery.co.uk/news/",
+      "description": "Inspired by the rugged landscape of Dartmoor on which we live and guided by our Master Distiller, Frank McHardy, our mission is to produce single malt English whisky of unrivalled quality that encapsulates the true spirit of Dartmoor National Park.",
+      "followers": {
+        "facebook": 10400,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5460365.jpg?t=1666873968"
+    },
+    {
+      "title": "The Whisky Barrel",
+      "feed_url": "https://www.thewhiskybarrel.com/blogs/news.atom",
+      "website_url": "https://www.thewhiskybarrel.com/blogs/news/",
+      "description": "TheWhiskyBarrel.com is a Queen's Award Winning online Scotch whisky retailer and bottling company located in the Kingdom of Fife, Scotland.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 9500,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/5460367.jpg?t=1666874173"
+    },
+    {
+      "title": "Distilled Events Blog",
+      "feed_url": "https://distilledevents.co.uk/feed/",
+      "website_url": "https://distilledevents.co.uk/blog/",
+      "description": "Fun and authentic whisky tastings for your party or corporate event. We hope that you will join us for one of our exclusive, bespoke single malt whisky tasting experiences or even on one of our very special week long Guided Distillery Experiences some time soon.",
+      "followers": {
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5460376.jpg?t=1666874569"
+    },
+    {
+      "title": "Mark Littler Blog",
+      "feed_url": "https://www.marklittler.com/feed/",
+      "website_url": "https://www.marklittler.com/blog/",
+      "description": "The Mark Littler LTD blog is wealth of information relating to whisky collecting and investing. They have lots of practical advice about how to make a considered cask purchase including all of the pitfalls and problems you could encounter when buying a cask together with a unique cask calculator. They also have in depth guides and analysis of secondary market bottle sales, regular video guides and exhaustive distillery histories and timelines.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5280097.jpg?t=1679900722"
+    },
+    {
+      "title": "Whisky Merchant Blog",
+      "feed_url": "https://www.whiskymerchant.com/blog/feed/",
+      "website_url": "https://blog.whiskymerchant.com/",
+      "description": "Explore more about whiskey, scotch, gin and much more! Your source for great whiskies at great prices, bringing you amazing whiskies, rums, and gins at amazing prices!",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 102,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5435309.jpg?t=1661405001"
+    },
+    {
+      "title": "Once Upon a Whisky Tours Blog",
+      "feed_url": "https://onceuponawhisky.co.uk/feed/",
+      "website_url": "https://onceuponawhisky.co.uk/blog/",
+      "description": "Discover the world of whisky with us. Read all about whisky distilleries, single malt whisky and the best whisky tours and whisky tastings in Scotland. Walking tours, whisky tours and virtual whisky tastings in Glasgow and Edinburgh. We connect people, cultures and whiskies through a storytelling experience while visiting the best whisky bars and whisky distilleries in both cities.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 893,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5435299.jpg?t=1661407834"
+    }
+  ]
+}

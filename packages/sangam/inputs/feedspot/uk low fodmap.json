@@ -1,0 +1,52 @@
+{
+  "category": "UK Low Fodmap",
+  "source_url": "https://rss.feedspot.com/uk_low_fodmap_rss_feeds",
+  "feeds": [
+    {
+      "title": "Low Fodmap",
+      "feed_url": "https://www.lowfodmapinspiration.com/feed/",
+      "website_url": "https://www.lowfodmapinspiration.com/",
+      "description": "Low FODMAP food blogger based in Hampshire following a gluten free, low lactose and nut free diet for IBS. Ideas and recipes for a happy, healthy gut.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 1100,
+        "instagram": 48900
+      },
+      "image_url": "https://i1.feedspot.com/4901130.jpg?t=1609928783"
+    },
+    {
+      "title": "She Can't Eat What?! Blog",
+      "feed_url": "https://shecanteatwhat.com/feed/",
+      "website_url": "https://shecanteatwhat.com/blog/",
+      "description": "She Can't Eat What?! is a health and wellness recipe blog dedicated to simple Low FODMAP living.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4368962.jpg?t=1609928606"
+    },
+    {
+      "title": "Bay's Kitchen",
+      "feed_url": "https://www.bayskitchen.com/blogs/ibs-diet.atom",
+      "website_url": "https://www.bayskitchen.com/blogs/ibs-diet",
+      "description": "Each month we will bring you the latest news which has caught our attention, regarding the Low FODMAP Diet, IBS and other gastrointestinal issues. Evidence suggests fructans, which are a type of sugar chain found in wheat, barley and rye, as well as onions, garlic, chickpeas, cabbage, and artichokes are actually what many are intolerant to - not gluten.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 949,
+        "instagram": 10800
+      },
+      "image_url": "https://i1.feedspot.com/4803204.jpg?t=1609928793"
+    },
+    {
+      "title": "Gluten Free Cuppa Tea",
+      "feed_url": "https://glutenfreecuppatea.co.uk/feed/",
+      "description": "Gluten free blog based in London, UK. Tried & tested award-winning recipes that are low FODMAP & dairy free too. Follow this blog for plenty of recipes & reviews that are applicable to those living gluten free, dairy free, sugar free, egg free & even living a vegan life style.",
+      "followers": {
+        "facebook": 320900,
+        "twitter": 33700,
+        "instagram": 411900
+      },
+      "image_url": "https://i1.feedspot.com/4860948.jpg?t=1609928677"
+    }
+  ]
+}

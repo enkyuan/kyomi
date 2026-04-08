@@ -1,0 +1,642 @@
+{
+  "category": "California Business",
+  "source_url": "https://rss.feedspot.com/california_business_rss_feeds",
+  "feeds": [
+    {
+      "title": "San Diego Business Journal",
+      "feed_url": "https://www.sdbj.com/feed/",
+      "website_url": "https://www.sdbj.com/",
+      "description": "San Diego Business Journal delivers the market's most complete package of business news and information on San Diego County's companies, industries, and business people. We cover commercial real estate, banking and finance, biotech, health care, technology, defense, and more.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 15200,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/5452797.jpg?t=1664962325"
+    },
+    {
+      "title": "Long Beach Business Journal",
+      "feed_url": "https://lbbusinessjournal.com/feed/",
+      "website_url": "https://lbbusinessjournal.com/",
+      "description": "Stay in the loop with the Long Beach Business Journal/ Get important business news breaks, real estate news snippets. The Long Beach Business Journal covers a wide range of business and community issues, with special focuses on international trade, real estate, and development, healthcare, tourism, aviation, and aerospace and many other sectors.",
+      "followers": {
+        "facebook": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5529144.jpg?t=1680071677"
+    },
+    {
+      "title": "dot.LA",
+      "feed_url": "https://dot.la/feeds/feed.rss",
+      "website_url": "https://dot.la/",
+      "description": "Stay up-to-date on the latest developments in the Start-up and Tech scene with dot.LA's nuanced, multifaceted analysis and coverage. Reporting funding rounds and other aspects of the Startup ecosystem, dot.LA is a news and events company with a mission of shining a light on innovation in the L.A. startup and tech community.",
+      "followers": {
+        "facebook": 26200,
+        "twitter": 25300,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5529143.jpg?t=1754313221"
+    },
+    {
+      "title": "Orange County Business Journal",
+      "feed_url": "https://www.ocbj.com/feed/",
+      "website_url": "https://www.ocbj.com/",
+      "description": "Orange County Business Journal delivers the most complete package of news and information on Orange County's companies, industries, and businesspeople. It is comprehensive, authoritative, concise, and entertaining.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 4300,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/5452794.jpg?t=1664949097"
+    },
+    {
+      "title": "Los Angeles Business Journal",
+      "feed_url": "https://labusinessjournal.com/feed/",
+      "website_url": "https://labusinessjournal.com/",
+      "description": "The Los Angeles Business Journal is an award-winning B2B media company that has been serving the Los Angeles Community of Business for more than 40 years. We feature, profiles and break news to keep readers informed of trends, market conditions, technological advances, and much more so that they can make informed decisions to grow their companies and careers.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 6900,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/5452793.jpg?t=1664949092"
+    },
+    {
+      "title": "Times of San Diego \u00bb Business",
+      "feed_url": "https://timesofsandiego.com/category/business/feed/",
+      "website_url": "https://timesofsandiego.com/category/business/",
+      "description": "Featuring independent and authoritative coverage of news about business, companies, finance, and investing for greater San Diego. Times of San Diego focuses on timely, comprehensive news about San Diego county. We cover politics and crime, business and sports, education and arts, military and science, health, life and opinion.",
+      "followers": {
+        "facebook": 11200,
+        "twitter": 6000,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5529140.jpg?t=1680071823"
+    },
+    {
+      "title": "California Governor's Office of Business and Economic Development",
+      "feed_url": "https://business.ca.gov/feed/",
+      "website_url": "https://business.ca.gov/newsroom/",
+      "description": "News & Press Releases recapping Trade and Business updates, Regulatory Updates, Deals and Approvals, and much more. GO-Biz is California's single point of contact for economic development and job creation efforts. It offers a range of services to business owners including attraction, retention, and expansion among other services.",
+      "followers": {
+        "facebook": 7300,
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/5529151.jpg?t=1680072138"
+    },
+    {
+      "title": "The Mercury News \u00bb Business",
+      "feed_url": "https://www.mercurynews.com/business/feed/",
+      "website_url": "https://www.mercurynews.com/business/",
+      "description": "Our business column covers trending Business News and updates from the Real Estate, Economy and Technology sectors.",
+      "followers": {
+        "facebook": 195900,
+        "twitter": 276900,
+        "instagram": 31900
+      },
+      "image_url": "https://i1.feedspot.com/5529136.jpg?t=1743158400"
+    },
+    {
+      "title": "SiliconValley.com \u00bb Business",
+      "feed_url": "https://www.siliconvalley.com/business/feed/",
+      "website_url": "https://www.siliconvalley.com/business/",
+      "description": "Silicon Valley Business and Technology news and opinion. Check out stories highlighting the Valley's Real Estate scene, Startup ecosystem, and emerging companies and technologies. SiliconValley.com is the tech blog for the San Jose Mercury News. Looking at the people, companies, and technologies that shape Silicon Valley.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5529142.jpg?t=1680072532"
+    },
+    {
+      "title": "Los Angeles Daily News \u00bb Business",
+      "feed_url": "https://www.dailynews.com/business/feed/",
+      "website_url": "https://www.dailynews.com/business/",
+      "description": "Los Angeles Daily News covers Los Angeles, with a committed focus on the San Fernando Valley. Here you will find the latest headlines that speed you up on the county as well as California's Economy, Real Estate, and Jobs. Stay informed about local businesses and emerging market trends.",
+      "followers": {
+        "facebook": 63000,
+        "twitter": 66000
+      },
+      "image_url": "https://i1.feedspot.com/5529137.jpg?t=1680072591"
+    },
+    {
+      "title": "Los Angeles Times \u00bb Business",
+      "feed_url": "https://www.latimes.com/business.rss",
+      "website_url": "https://www.latimes.com/business",
+      "description": "The Los Angeles Times is one of the largest metropolitan daily newspapers in the country covering Southern California and the Nation with a bold, investigative brand of journalism. This section at LA Times reports and analyzes the various changing dynamics in LA's business, real estate and tech industry.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 3800000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/5529147.jpg?t=1680072627"
+    },
+    {
+      "title": "ANA Business Marketing of Northern California Blog",
+      "feed_url": "https://norcalbusinessmarketing.org/blog/feed/",
+      "website_url": "https://norcalbusinessmarketing.org/blog/",
+      "description": "Blog shares the latest NorCal BMA event recaps, upcoming events, and news from the Northern California chapter of the ANA. ANA is the world's premier community devoted exclusively to advancing the B2B marketing profession. We connect you with peers, ideas, and resources.",
+      "followers": {
+        "facebook": 34,
+        "twitter": 436
+      },
+      "image_url": "https://i1.feedspot.com/5529135.jpg?t=1680072658"
+    },
+    {
+      "title": "California Green Business Network Blog",
+      "feed_url": "https://www.greenbusinessca.org/feed/",
+      "website_url": "https://www.greenbusinessca.org/blog/",
+      "description": "The California Green Business Program is a network of local programs operated by counties and cities throughout California. Our offers free resources and entrepreneurial insight on how to incorporate green practices into your own business and discover how to conserve resources along with other workplace tips.",
+      "followers": {
+        "facebook": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5529156.jpg?t=1680071557"
+    },
+    {
+      "title": "Pacific Business Advisors Blog",
+      "feed_url": "https://pacificbusinessadvisors.net/feed/",
+      "website_url": "https://pacificbusinessadvisors.net/business-sales-and-acquisitions-blog-california/",
+      "description": "Our Business Sales and Acquisitions Blog is updated regularly with informative, concisely written articles aimed at Buyers, Sellers, and Agents. Read more about our services and the market conditions here. Active since 1987, Pacific Business Advisors provides advisory services to sellers and buyers of large and small businesses throughout California.",
+      "followers": {
+        "facebook": 23
+      },
+      "image_url": "https://i1.feedspot.com/5529150.jpg?t=1680073446"
+    },
+    {
+      "title": "The Business Journal",
+      "feed_url": "https://thebusinessjournal.com/feed/",
+      "website_url": "https://thebusinessjournal.com/",
+      "description": "Latest local and state news touching upon current topics from Banking & Finance, Construction Development, Economy, Employment, and Energy & Environment. The Business Journal delivers exclusive local business news and is Central Valley's source for exclusive local business news.",
+      "followers": {
+        "facebook": 10200,
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/5322417.jpg?t=1631787992"
+    },
+    {
+      "title": "Google Small Business Blog",
+      "feed_url": "https://blog.google/outreach-initiatives/small-business/rss/",
+      "website_url": "https://blog.google/outreach-initiatives/small-business/",
+      "description": "Discover how Google helps small businesses succeed online and grow in the real world. Learn about Google's initiatives and products that support small businesses. Google's mission is to organize the world's information and make it universally accessible and useful.",
+      "followers": {
+        "facebook": 34800000,
+        "twitter": 32799999,
+        "instagram": 15700000
+      },
+      "image_url": "https://i1.feedspot.com/5420576.jpg?t=1657539344"
+    },
+    {
+      "title": "SoFi Blog",
+      "feed_url": "https://www.sofi.com/blog/feed/",
+      "website_url": "https://www.sofi.com/blog/",
+      "description": "Check out our blog for the latest info on student loan refinancing, tips for your job search, mortgages, personal loans, and general financial advice. SoFi is a modern finance company. We partner with members to offer great service and low rates for student loan refinancing, mortgages and personal loans.",
+      "followers": {
+        "facebook": 281900,
+        "twitter": 162100,
+        "instagram": 141400
+      },
+      "image_url": "https://i1.feedspot.com/4806799.jpg?t=1610448478"
+    },
+    {
+      "title": "VentureBeat",
+      "feed_url": "https://feeds.feedburner.com/venturebeat/SZYF",
+      "website_url": "https://venturebeat.com/",
+      "description": "A leading source for transformative tech news and events that provide the deep context to help business leaders make smart decisions & stay on top of breaking news. Features mainly industry-leading AI, machine learning, and coverage of the game industry.",
+      "followers": {
+        "facebook": 443000,
+        "twitter": 705000,
+        "instagram": 16600
+      },
+      "image_url": "https://i1.feedspot.com/4429940.jpg?t=1622707849"
+    },
+    {
+      "title": "TechCrunch",
+      "feed_url": "https://techcrunch.com/feed/",
+      "website_url": "https://techcrunch.com/",
+      "description": "TechCrunch is a leading technology media platform dedicated to profiling startups, reviewing new internet products, and breaking the latest tech news. Founded in 2005, it has established itself as a vital source of information for the tech industry. TechCrunch is spearheaded by Editor in Chief and General Manager Connie Loizos, who has a deep background in Silicon Valley journalism. The editorial team includes notable contributors like Matt Rosoff, Ingrid Lunden, Frederic Lardinois, and Kirsten Korosec, among others, who bring a wealth of experience and expertise to their respective beats.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/4447421.jpg?t=1634630003"
+    },
+    {
+      "title": "Entrepreneur.com",
+      "feed_url": "https://www.entrepreneur.com/latest.rss",
+      "website_url": "https://www.entrepreneur.com/latest",
+      "description": "Get the latest news, updates, and business affairs as they happen. Entrepreneur seeks to inspire, inform and celebrate entrepreneurs. We offer real solutions to the challenges you face as an entrepreneur, including tips, tools, and insider news to help build - and grow - your business.",
+      "followers": {
+        "twitter": 3600000,
+        "instagram": 4600000
+      },
+      "image_url": "https://i1.feedspot.com/4425104.jpg?t=1599311687"
+    },
+    {
+      "title": "Pacific Community Ventures Blog",
+      "feed_url": "https://www.pacificcommunityventures.org/feed/",
+      "website_url": "https://www.pacificcommunityventures.org/blog/",
+      "description": "The latest small business and impact investing news and resources. Pacific Community Ventures is a nonprofit impact investor and community development financial institution (CDFI) supporting thriving small business owners and their communities to achieve growth and equality.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 2300,
+        "instagram": 740
+      },
+      "image_url": "https://i1.feedspot.com/4526652.jpg?t=1611058865"
+    },
+    {
+      "title": "National Funding Blog",
+      "feed_url": "https://www.nationalfunding.com/blog/feed/",
+      "website_url": "https://www.nationalfunding.com/blog/",
+      "description": "The Small Business Blog from National Funding provides information on topics important to small business owners. National Funding is a respected and recognized financial services provider of choice nationwide, helping small businesses achieve the American dream.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4526794.jpg?t=1680073068"
+    },
+    {
+      "title": "CorpNet Blog",
+      "feed_url": "https://www.corpnet.com/feed/",
+      "website_url": "https://www.corpnet.com/blog/",
+      "description": "Browse through the CorpNet blog to discover expert-written articles for launching and growing your business. We deliver the information you need for success. CorpNet is a trusted resource and service provider for business incorporation, LLC filings, and corporate compliance services in all 50 states.",
+      "followers": {
+        "facebook": 45500,
+        "twitter": 5900,
+        "instagram": 6100
+      },
+      "image_url": "https://i1.feedspot.com/4524754.jpg?t=1618381383"
+    },
+    {
+      "title": "AllBusiness.com",
+      "feed_url": "https://www.allbusiness.com/feeds/feed.rss",
+      "website_url": "https://www.allbusiness.com/",
+      "description": "Explore today's stories in the AllBusiness blog discussing Business Ideas, Data analytics and Sales tips, Rebranding effectiveness, and many other trending topics. AllBusiness.com is one of the world's largest online resources for small businesses, providing essential tools and resources to start, grow, and manage your business.",
+      "followers": {
+        "facebook": 16900,
+        "twitter": 9900
+      },
+      "image_url": "https://i1.feedspot.com/5529139.jpg?t=1680071462"
+    },
+    {
+      "title": "Startup Steroid Blog",
+      "feed_url": "https://startupsteroid.com/feed/",
+      "website_url": "https://startupsteroid.com/blogs/",
+      "followers": {
+        "facebook": 93,
+        "twitter": 134
+      },
+      "image_url": "https://i1.feedspot.com/7252357.jpg?t=1707911764"
+    },
+    {
+      "title": "M-ACCELERATOR Blog",
+      "feed_url": "https://maccelerator.la/en/feed/",
+      "website_url": "https://maccelerator.la/en/blog/",
+      "description": "Design and Grow Your Business | Entrepreneurship Startup Program in Los Angeles and Online",
+      "followers": {
+        "facebook": 1700
+      },
+      "image_url": "https://i1.feedspot.com/7252354.jpg?t=1707912013"
+    },
+    {
+      "title": "Clover Blog",
+      "feed_url": "https://blog.clover.com/feed/",
+      "website_url": "https://blog.clover.com/",
+      "description": "The Green",
+      "followers": {
+        "facebook": 35500,
+        "twitter": 31800,
+        "instagram": 47900
+      },
+      "image_url": "https://i1.feedspot.com/7252349.jpg?t=1707981914"
+    },
+    {
+      "title": "Startup San Diego",
+      "feed_url": "https://startupsd.org/feed/",
+      "website_url": "https://startupsd.org/guides/",
+      "description": "Get the latest news and updates on the San Diego Startup community and learn about events, opportunities and initiatives. We also have various guides that will help early to late stage entrepreneurs. Whether you're just in the beginning stages of starting your own business, or you're a seasoned entrepreneur with multiple businesses in your portfolio, we have various blogs and articles to help you run and improve your company.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 56
+      },
+      "image_url": "https://i1.feedspot.com/4530662.jpg?t=1752654654"
+    },
+    {
+      "title": "SecureDocs Blog",
+      "feed_url": "https://www.securedocs.com/blog/rss.xml",
+      "website_url": "https://www.securedocs.com/blog",
+      "description": "Stay on top of the latest tips, trends and best practices for M&A, fundraising and other business events.",
+      "followers": {
+        "facebook": 813
+      },
+      "image_url": "https://i1.feedspot.com/7252352.jpg?t=1707912192"
+    },
+    {
+      "title": "Lean Startup Co.",
+      "feed_url": "https://leanstartup.co/feed/",
+      "website_url": "https://leanstartup.co/resources/articles/",
+      "description": "Keep up-to-date with the latest in startup news and lean thinking on the Lean Startup blog. Lean Startup Co offers content, courses, webinars and consulting to take your large or small business to the next level with Lean Startup methodology and techniques.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 143000,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4988251.jpg?t=1622113312"
+    },
+    {
+      "title": "Startup Sac",
+      "feed_url": "https://startupsac.com/feed/",
+      "website_url": "https://startupsac.com/",
+      "description": "Accelerating Sacramento's startup and innovation ecosystem by informing, educating, empowering, and connecting its startup founders and innovators.",
+      "followers": {
+        "facebook": 960,
+        "twitter": 2700,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4531501.jpg?t=1752654636"
+    },
+    {
+      "title": "StartUp Beat",
+      "feed_url": "https://startupbeat.com/feed/",
+      "website_url": "https://startupbeat.com/",
+      "description": "StartUp Beat is dedicated to shining a spotlight on the most innovative and creative technology startups from around the world. Through entrepreneur-authored company pitches, startup Q&As, and daily news about funding, acquisitions, and industry trends we provide a media platform where readers can discover the newest and most interesting new tech companies that often get ignored.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/1173374.jpg?t=1600243376"
+    },
+    {
+      "title": "Andreessen Horowitz",
+      "feed_url": "https://feeds.simplecast.com/XPOpH7r4",
+      "website_url": "https://a16z.com/news-content/",
+      "description": "Follow the latest news on founders, innovators, and entrepreneurs building the future with artificial intelligence, machine learning, blockchain, & crypto.",
+      "followers": {
+        "facebook": 14000,
+        "twitter": 815700,
+        "instagram": 60000
+      },
+      "image_url": "https://i1.feedspot.com/7251987.jpg?t=1707894720"
+    },
+    {
+      "title": "Steve Blank",
+      "feed_url": "https://steveblank.com/feed/",
+      "website_url": "https://steveblank.com/",
+      "description": "Steve is the co-inventor of the Lean Startup movement, a serial entrepreneur-turned-best selling author, and educator who has changed the way startups are built, how entrepreneurship is taught, and how big companies and the U.S. government innovate.",
+      "followers": {
+        "twitter": 235900
+      },
+      "image_url": "https://i1.feedspot.com/4430441.jpg?t=1600240908"
+    },
+    {
+      "title": "Fascinating Entrepreneurs",
+      "feed_url": "https://briansolis.com/category/articles/feed/",
+      "website_url": "https://briansolis.com/category/articles/",
+      "description": "Getting to the bottom of why entrepreneurs choose to do what they do, how they do it, and how they view and approach profitability.How do people end up becoming an Entrepreneur? How do they scale and grow their businesses? How do they plan for profit? Are they in it for life or are they building to exit? These and a myriad of other topics will be discussed to pull back the veil on the wizardry of successful and fascinating entrepreneurs. Listen to this podcast if you want to learn how to scale and grow your business, build a team, and increase your bottom line.",
+      "followers": {
+        "facebook": 60500,
+        "twitter": 271300,
+        "instagram": 64500
+      },
+      "image_url": "https://i1.feedspot.com/4723575.jpg?t=1745431002"
+    },
+    {
+      "title": "Startup Stories - Mixergy",
+      "feed_url": "https://mixergy.com/?feed=mixergy_feed",
+      "website_url": "https://mixergy.com/",
+      "description": "Andrew asks challenging questions, which leads to real stories behind how startups made it.",
+      "followers": {
+        "facebook": 15200,
+        "twitter": 36800
+      },
+      "image_url": "https://i1.feedspot.com/4528755.jpg?t=1745431026"
+    },
+    {
+      "title": "web3 with a16z crypto",
+      "feed_url": "https://theenneagraminbusiness.com/feed/",
+      "website_url": "https://theenneagraminbusiness.com/blog/",
+      "description": "'web3 with a16z' is a show about the next generation of the internet, and about how builders and users -- whether artists, coders, creators, developers, companies, organizations, or communities -- now have the ability to not just 'read' (web1) + 'write' (web2) but 'own' (web3) pieces of the internet, unlocking a new wave of creativity and entrepreneurship. Brought to you by a16z crypto, this show is the definitive resource for understanding and going deeper on all things crypto and web3...",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 1600,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5087748.jpg?t=1745505020"
+    },
+    {
+      "title": "Entrepreneurship Life",
+      "feed_url": "https://feeds.feedburner.com/entrepreneurshiplife/feed",
+      "website_url": "https://www.entrepreneurshiplife.com/",
+      "description": "Entrepreneurship Life is a blog dedicated to providing information, advice, and resources for entrepreneurs and small business owners. The blog covers a wide range of topics, including business finance, leadership, technology, and productivity. It aims to create a community of like-minded individuals, offering tools and insights to help them succeed in their entrepreneurial ventures. The focus on both business strategies and the entrepreneur's lifestyle makes it a comprehensive resource for aspiring and established entrepreneurs.",
+      "followers": {
+        "facebook": 637,
+        "twitter": 692
+      },
+      "image_url": "https://i1.feedspot.com/4529394.jpg?t=1752654540"
+    },
+    {
+      "title": "Classy Career Girl Blog",
+      "feed_url": "https://www.classycareergirl.com/feed/",
+      "website_url": "https://www.classycareergirl.com/blog/",
+      "description": "Classy Career Girl is now one of Forbes's 35 Most Influential Career Sites and a leading destination for ambitious women, currently reaching millions of women each week. They are passionate about helping women who want to make a difference in the world. They are providing an e-learning platform designed to be a one-stop-shop for all women in career transition. Visit their blog and learn more about articles, videos, podcasts, membership, and more.",
+      "followers": {
+        "facebook": 37300,
+        "twitter": 7400
+      },
+      "image_url": "https://i1.feedspot.com/2066199.jpg?t=1763124056"
+    },
+    {
+      "title": "Mycorporation Small Business Blog",
+      "feed_url": "https://blog.mycorporation.com/feed/",
+      "website_url": "https://blog.mycorporation.com/",
+      "description": "Legal Document Filings - Done Fast & Done Right. MyCorporation",
+      "followers": {
+        "facebook": 9100,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/7252355.jpg?t=1707912279"
+    },
+    {
+      "title": "Cebod Telecom Blog",
+      "feed_url": "https://www.cebodtelecom.com/voip-phone-system-blog/feed",
+      "website_url": "https://www.cebodtelecom.com/voip-phone-system-blog",
+      "description": "Discover how VoIP business phone services can transform communication with modern, cost-effective solutions. Explore tips, insights, and the benefits of white-label VoIP, enabling businesses to customize and brand their own services seamlessly.",
+      "followers": {
+        "facebook": 335
+      },
+      "image_url": "https://i1.feedspot.com/7252356.jpg?t=1707912300"
+    },
+    {
+      "title": "Argyros School of Business and Economics Blog",
+      "feed_url": "https://blogs.chapman.edu/business/feed/",
+      "website_url": "https://blogs.chapman.edu/business/",
+      "description": "Keep up to date with the latest news, events, and business industry happenings at the Argyros School of Business and Economics at Chapman University. Chapman is a top-rated US institution providing personalized education of distinction that leads to inquiring, ethical and productive lives as global citizens.",
+      "followers": {
+        "facebook": 43700,
+        "twitter": 18800,
+        "instagram": 53900
+      },
+      "image_url": "https://i1.feedspot.com/5529170.jpg?t=1680073271"
+    },
+    {
+      "title": "Small Bizla",
+      "feed_url": "https://smallbizla.org/category/news/feed/",
+      "website_url": "https://smallbizla.org/category/news/",
+      "description": "Explore News articles and features that highlight local Entrepreneur success stories. Read Interviews, Though Leadership, and more inspiring stuff. LA SBDC Network provides small business entrepreneurs with no-cost, confidential, business advising services and low-cost training opportunities, across Los Angeles, Santa Barbara, and Ventura Counties.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5529145.jpg?t=1680073362"
+    },
+    {
+      "title": "Reliant Funding Blog",
+      "feed_url": "https://reliantfunding.com/blog/feed/",
+      "website_url": "https://reliantfunding.com/blog/",
+      "description": "Blog shares the best Entrepreneurial practices, Business Insights, Tips for Fast Growth, Guides on tackling common challenges, and many more resources. Reliant Funding is a fast, easy Funding platform exclusively catering to small and mid-sized businesses in the California region.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 609,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5529155.jpg?t=1680073153"
+    },
+    {
+      "title": "Small Business Labs",
+      "feed_url": "https://feeds.feedburner.com/SmallBizLabs",
+      "website_url": "https://www.smallbizlabs.com/",
+      "description": "Small Business Labs, from Emergent Research, covers the key social, technology, and business trends impacting small businesses and the gig economy. Read articles and reports that focus on analyzing recent AI, Freelance, gig economy, Independent workers, self-employment, and Web/Tech trends.",
+      "followers": {
+        "twitter": 9500
+      },
+      "image_url": "https://i1.feedspot.com/454378.jpg?t=1680072991"
+    },
+    {
+      "title": "Success Harbor",
+      "feed_url": "https://www.successharbor.com/feed/",
+      "website_url": "https://www.successharbor.com/",
+      "description": "Business blog for small business owners and entrepreneurs. Our mission is to help you succeed in business and in life. We want to share with you what we have learned about business and life since becoming entrepreneurs.",
+      "followers": {
+        "facebook": 785,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4752623.jpg?t=1599485288"
+    },
+    {
+      "title": "Side Hustle Nation Blog",
+      "feed_url": "https://www.sidehustlenation.com/feed/",
+      "website_url": "https://www.sidehustlenation.com/blog/",
+      "description": "The web's leading blog, podcast, and community for aspiring and part-time entrepreneurs building meaningful income on their own terms. Explore legit ways to make money outside of your day job, build a business you love, and escape the rat race. Side Hustle Nation is the #1 community and resource for side hustle ideas and part-time entrepreneurs on the path to financial independence.",
+      "followers": {
+        "facebook": 36200,
+        "twitter": 22200,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/3767818.jpg?t=1648184094"
+    },
+    {
+      "title": "Synnovatia Blog",
+      "feed_url": "https://www.synnovatia.com/feed/",
+      "website_url": "https://www.synnovatia.com/business-coaching-blog/",
+      "description": "A small business coaching blog that gives you the tips, tools, resources, and advice you need grow your small business. Synnovatia is a Business Consultancy firm that blends entrepreneurial acumen and coaching skills with performance strategies to create a predictable methodology for you to achieve your goals.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5427578.jpg?t=1659503193"
+    },
+    {
+      "title": "Fascinating Entrepreneurs",
+      "feed_url": "https://feeds.captivate.fm/fascinatingentrepreneurs/",
+      "website_url": "https://startupgenome.com/articles",
+      "description": "Getting to the bottom of why entrepreneurs choose to do what they do, how they do it, and how they view and approach profitability.How do people end up becoming an Entrepreneur? How do they scale and grow their businesses? How do they plan for profit? Are they in it for life or are they building to exit? These and a myriad of other topics will be discussed to pull back the veil on the wizardry of successful and fascinating entrepreneurs. Listen to this podcast if you want to learn how to scale and grow your business, build a team, and increase your bottom line.",
+      "followers": {
+        "facebook": 260,
+        "twitter": 202
+      },
+      "image_url": "https://i1.feedspot.com/6128648.jpg?t=1707975981"
+    },
+    {
+      "title": "Startup Stories - Mixergy",
+      "feed_url": "https://startupgenome.com/rss.xml",
+      "website_url": "https://startupgenome.com/articles",
+      "description": "Andrew asks challenging questions, which leads to real stories behind how startups made it.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 8300
+      },
+      "image_url": "https://i1.feedspot.com/4531519.jpg?t=1745431026"
+    },
+    {
+      "title": "RankPay Blog",
+      "feed_url": "https://www.rankpay.com/feed/",
+      "website_url": "https://www.rankpay.com/blog/",
+      "description": "At RankPay Blog, learn how to apply SEO, online marketing and social media to transform your business and see #1 rankings in Google. Its mission is to provide effective and affordable Performance-based SEO Services for any business and while delivering consistent results and great customer service.",
+      "followers": {
+        "facebook": 868,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4471981.jpg?t=1605070373"
+    },
+    {
+      "title": "Los Angeles Business Journal",
+      "feed_url": "https://valley.labusinessjournal.com/feed/",
+      "website_url": "https://valley.labusinessjournal.com/",
+      "description": "The San Fernando Valley Business Journal serves the San Fernando Valley Community of Business. Our bi-weekly content developed for multiple platforms encompasses features, profiles, and breaking news to keep readers informed of trends, market conditions, technological advances, and much more",
+      "followers": {
+        "facebook": 709,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5529148.jpg?t=1680071515"
+    },
+    {
+      "title": "LAmag \u00bb Business",
+      "feed_url": "https://lamag.com/business/",
+      "website_url": "https://lamag.com/business/",
+      "description": "The definitive resource for Angelenos, Los Angeles covers the people, food, culture, arts and entertainment, fashion, lifestyle, and news that defines Southern California with a signature mix of feature-length writing, service journalism, investigative reporting, and design.",
+      "followers": {
+        "facebook": 179800,
+        "twitter": 484200,
+        "instagram": 304200
+      },
+      "image_url": "https://i1.feedspot.com/5529141.jpg?t=1680071631"
+    },
+    {
+      "title": "Connect Blog",
+      "feed_url": "https://connect.org/feed/",
+      "website_url": "https://connect.org/blog/",
+      "description": "SoCal's Innovation Community | Helping Tech & LifeSci Entrepreneurs Build Great Companies",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/7252353.jpg?t=1707982906"
+    },
+    {
+      "title": "Lofty Blog",
+      "feed_url": "https://learn.chime.me/blog/rss.xml",
+      "website_url": "https://lofty.com/blog",
+      "description": "Real estate tips, trends, guides, news, technology, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7252350.jpg?t=1707912238"
+    },
+    {
+      "title": "Homebase Blog",
+      "feed_url": "https://www.joinhomebase.com/blog/feed",
+      "website_url": "https://www.joinhomebase.com/blog",
+      "description": "Free tips and tricks for small businesses. Ideas for growing your local business and technology tips to help increase sales and efficiency. Homebase is a smart business assistance platform that helps small businesses manage their work schedules, time clocks, payroll, HR, and more.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 1700,
+        "instagram": 8300
+      },
+      "image_url": "https://i1.feedspot.com/5529134.jpg?t=1680073041"
+    },
+    {
+      "title": "StartupWind Blog",
+      "feed_url": "https://www.startupwind.com/blog/?feed=rss2",
+      "website_url": "https://startupwind.com/blog/",
+      "followers": {
+        "facebook": 2000
+      },
+      "image_url": "https://i1.feedspot.com/7252351.jpg?t=1707912033"
+    }
+  ]
+}

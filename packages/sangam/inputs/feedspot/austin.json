@@ -1,0 +1,326 @@
+{
+  "category": "Austin",
+  "source_url": "https://rss.feedspot.com/austin_rss_feeds",
+  "feeds": [
+    {
+      "title": "Austin Monthly",
+      "feed_url": "https://www.austinmonthly.com/feed/",
+      "website_url": "https://www.austinmonthly.com/",
+      "description": "From stories and columns to restaurant reviews, personal essays and listings about events, fashion, shopping, dining, the arts & business, AUSTIN MONTHLY depicts our home.",
+      "followers": {
+        "facebook": 81300,
+        "twitter": 97500,
+        "instagram": 193800
+      },
+      "image_url": "https://i1.feedspot.com/4821344.jpg?t=1671541586"
+    },
+    {
+      "title": "365 Things Austin",
+      "feed_url": "https://365thingsaustin.com/feed/",
+      "website_url": "https://365thingsaustin.com/",
+      "description": "We want to share the best things Austin has to offer each day! My goal isn't to tell you EVERYTHING there is to do in Austin on any particular day, I filter through all the noise to give you the BEST things to do for a given day.",
+      "followers": {
+        "facebook": 290600,
+        "twitter": 113800,
+        "instagram": 459600
+      },
+      "image_url": "https://i1.feedspot.com/1579811.jpg?t=1613475480"
+    },
+    {
+      "title": "Eater Austin",
+      "feed_url": "https://austin.eater.com/rss/index.xml",
+      "website_url": "https://austin.eater.com/",
+      "description": "Get the latest updates on food news and dining guides for Austin.",
+      "followers": {
+        "facebook": 61900,
+        "twitter": 44200,
+        "instagram": 151300
+      },
+      "image_url": "https://i1.feedspot.com/4821475.jpg?t=1610778513"
+    },
+    {
+      "title": "Tribeza",
+      "feed_url": "http://tribeza.com/feed/",
+      "website_url": "https://tribeza.com/",
+      "description": "TRIBEZA is Austin's leading independent arts & culture magazine and guide to the best restaurants, bars, shopping, music, arts, and entertainment.",
+      "followers": {
+        "facebook": 19300,
+        "twitter": 17600,
+        "instagram": 60500
+      },
+      "image_url": "https://i1.feedspot.com/4821496.jpg?t=1610778532"
+    },
+    {
+      "title": "Austin Film Festival Blog",
+      "feed_url": "https://austinfilmfestival.com/category/blog/feed/",
+      "website_url": "https://austinfilmfestival.com/category/blog/",
+      "description": "AFF furthers the art and craft of film by inspiring and championing the work of all artists who use the language of film and television to tell a story.",
+      "followers": {
+        "facebook": 69500,
+        "twitter": 37500,
+        "instagram": 42500
+      },
+      "image_url": "https://i1.feedspot.com/4780105.jpg?t=1610778635"
+    },
+    {
+      "title": "Austin Parks Foundation",
+      "feed_url": "https://austinparks.org/feed/",
+      "website_url": "https://austinparks.org/",
+      "description": "Austin Parks Foundation is devoted to building partnerships to develop and maintain outdoor spaces in Austin through grants, events, classes, and more.",
+      "followers": {
+        "facebook": 17100,
+        "twitter": 7200,
+        "instagram": 28500
+      },
+      "image_url": "https://i1.feedspot.com/4822275.jpg?t=1610778676"
+    },
+    {
+      "title": "Austin Woman Magazine",
+      "feed_url": "https://atxwoman.com/feed/",
+      "website_url": "https://atxwoman.com/",
+      "description": "Austin Woman magazine is the leading magazine for women in Austin and the ONLY women-centric publication of its kind.",
+      "followers": {
+        "facebook": 19500,
+        "twitter": 19500
+      },
+      "image_url": "https://i1.feedspot.com/4822252.jpg?t=1610778938"
+    },
+    {
+      "title": "Craft Beer Austin",
+      "feed_url": "https://craftbeeraustin.com/feed",
+      "website_url": "https://craftbeeraustin.com/",
+      "description": "Get the latest in Austin Craft Beer news & events: Jester King, 512 Brewing, Hops & Grain, Craft Pride, Pinthouse Pizza, Live Oak, Infamous and much more!",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 12400,
+        "instagram": 8900
+      },
+      "image_url": "https://i1.feedspot.com/4822358.jpg?t=1610778945"
+    },
+    {
+      "title": "Austin Food Magazine",
+      "feed_url": "http://austinfoodmagazine.com/feed/",
+      "website_url": "https://austinfoodmagazine.com/",
+      "description": "Austin Food Magazine is the premier online dining guide, featuring the best local restaurants, food trucks and events in Austin, Texas.",
+      "followers": {
+        "facebook": 117,
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4809748.jpg?t=1610778953"
+    },
+    {
+      "title": "Austin Real Estate Homes Blog",
+      "feed_url": "https://feeds.feedburner.com/AustinRealEstateHomes",
+      "website_url": "https://www.austinrealestatehomesblog.com/blog/",
+      "description": "Austin real estate blog focusing on homes and neighborhoods. Get buyer and seller tips, find things to do in Austin and learn about new developments. Eleven Oaks Realty is a Texas real estate firm. Eleven Oaks Realty provides a wide range of real estate services.",
+      "followers": {
+        "facebook": 113,
+        "twitter": 15
+      },
+      "image_url": "https://i1.feedspot.com/4164070.jpg?t=1610779117"
+    },
+    {
+      "title": "Austin Portfolio Real Estate Blog",
+      "feed_url": "https://www.austinportfoliorealestate.com/blog-feed.xml",
+      "website_url": "https://www.austinportfoliorealestate.com/blog",
+      "description": "Austin Portfolio Real Estate is the key which unlocks the door to distinct, elegant real estate in the most sought after neighborhoods in Austin, Texas. From reaching out to those in need to finding exquisite gifts, Austin Portfolio puts a little luxury into everyone's lives.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 261,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4822895.jpg?t=1610779125"
+    },
+    {
+      "title": "ATX FYI",
+      "feed_url": "https://atxfyi.com/austin?format=RSS",
+      "website_url": "https://atxfyi.com/",
+      "description": "ATX FYI is a collective of tips, events, restaurants, experiences that the incredible Austin, Texas has to offer presented to you by a passionate Austinite.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 37,
+        "instagram": 12700
+      },
+      "image_url": "https://i1.feedspot.com/5039064.jpg?t=1610779167"
+    },
+    {
+      "title": "Curbed Austin",
+      "feed_url": "https://austin.curbed.com/rss/index.xml",
+      "website_url": "https://austin.curbed.com/",
+      "description": "Every aspect of living in Austin, for people who care about their city, their streets, and their homes.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 5,
+        "instagram": 200500
+      },
+      "image_url": "https://i1.feedspot.com/4822256.jpg?t=1610778587"
+    },
+    {
+      "title": "Austin Pets Alive Blog",
+      "feed_url": "https://www.austinpetsalive.org/blogfeed.rss",
+      "website_url": "https://www.austinpetsalive.org/blog",
+      "description": "Austin Pets Alive! is a nonprofit organization dedicated to helping and rescuing animals. Austin Pets Alive provides the resources, education, and programs needed to eliminate the killing of companion animals. . The APA blog helps you discover Austin Pets Alive! behind the scenes-including impact stories from our community, APA! happenings, and letters from Dr. Jefferson.",
+      "followers": {
+        "facebook": 179400,
+        "twitter": 34200,
+        "instagram": 142300
+      },
+      "image_url": "https://i1.feedspot.com/4624812.jpg?t=1610778632"
+    },
+    {
+      "title": "TOWERS.net",
+      "feed_url": "https://austin.towers.net/feed/",
+      "website_url": "https://austin.towers.net/",
+      "description": "Get Austin real estate news from local insiders. Editorial analysis, building profiles, with up-to-date property listings. The TOWERS' writes for an audience passionate about city life, real estate, and urbanist culture. Since 2007, TOWERS has published commentary and news updates on the Austin real estate market, architecture, new development, and local urban issues.",
+      "followers": {
+        "facebook": 12700,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4822204.jpg?t=1610778639"
+    },
+    {
+      "title": "AQUILA Commercial",
+      "feed_url": "https://aquilacommercial.com/feed/",
+      "website_url": "https://aquilacommercial.com/",
+      "description": "AQUILA is an Austin, TX based commercial real estate firm offering tenant representation, project leasing, asset, property and project management services.",
+      "followers": {
+        "facebook": 426,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4822279.jpg?t=1610778924"
+    },
+    {
+      "title": "Ovrld | The Austin Music Blog",
+      "feed_url": "https://ovrld.com/feed/",
+      "website_url": "https://ovrld.com/",
+      "description": "We provide songs, interviews, reviews, podcasts and more, with hopes to expand over time to include even more ways for you to explore Austin music. Our goal is to help you sift through the vibrant music scene here to find whatever it is you're looking for. Whether you're an Austinite looking for a cool concert this weekend, or you've never been to the music capital of the world but want to get the latest on what's happening here, we are here for you.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4479354.jpg?t=1610778958"
+    },
+    {
+      "title": "Nauti Side Boat Rentals",
+      "feed_url": "https://www.nautisideboatrentals.com//feed/rss2",
+      "website_url": "https://www.nautisideboatrentals.com/boating-trends-and-insights",
+      "description": "Whether you want a day of sun and fun on our rental party boats or just some sight seeing around Austin, Texas. Check us out for ideas and recommendations.",
+      "followers": {
+        "facebook": 724,
+        "twitter": 2,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5029729.jpg?t=1610779163"
+    },
+    {
+      "title": "CultureMap Austin",
+      "feed_url": "https://austin.culturemap.com/feeds/news/",
+      "website_url": "https://austin.culturemap.com/",
+      "description": "CultureMap Austin is your daily source for local lifestyle news, including where to eat and what to do.",
+      "followers": {
+        "facebook": 58900,
+        "twitter": 63000
+      },
+      "image_url": "https://i1.feedspot.com/1764811.jpg?t=1610778507"
+    },
+    {
+      "title": "Austin.com",
+      "feed_url": "https://austin.com/feed/",
+      "website_url": "https://austin.com/",
+      "description": "Looking for things to do in Austin with kids that won't break the budget? Here is all the Austin fun your family can handle!",
+      "followers": {
+        "facebook": 159800,
+        "twitter": 12600,
+        "instagram": 36700
+      },
+      "image_url": "https://i1.feedspot.com/4821489.jpg?t=1610778519"
+    },
+    {
+      "title": "Burnt Orange Nation",
+      "feed_url": "https://www.burntorangenation.com/rss/index.xml",
+      "website_url": "https://www.burntorangenation.com/",
+      "description": "Dive deep into the burnt orange and white with in-depth analysis, player profiles, and exclusive content you won't find anywhere else. Celebrate victories, dissect losses, and fuel your passion for Texas Longhorn athletics. Burnt Orange Nation is your source for quality Texas Longhorns news, rumors, analysis, stats, and scores from the fan perspective.",
+      "followers": {
+        "facebook": 79100,
+        "twitter": 46600
+      },
+      "image_url": "https://i1.feedspot.com/4791881.jpg?t=1610778526"
+    },
+    {
+      "title": "Unlock MLS News",
+      "feed_url": "https://www.unlockmls.com/news?categories&searchText=&page=1",
+      "website_url": "https://www.unlockmls.com/news?categories&searchText=&page=1",
+      "description": "ABoR serves 11,000 members, promotes private property rights, and provides accurate, comprehensive property listing information for Central Texas.",
+      "followers": {
+        "facebook": 16700,
+        "twitter": 8900
+      },
+      "image_url": "https://i1.feedspot.com/4822914.jpg?t=1610778536"
+    },
+    {
+      "title": "Austin Startups",
+      "feed_url": "https://austinstartups.com/feed",
+      "website_url": "https://austinstartups.com/",
+      "description": "Austin Startups is a community platform founded in 2014 with a mission to connect and support entrepreneurs and startups in Austin. Their blog features articles on local business news, events, and resources, along with startup stories and interviews.",
+      "followers": {
+        "facebook": 770,
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/4531368.jpg?t=1600243572"
+    },
+    {
+      "title": "Wed Society Austin",
+      "feed_url": "https://austin.wedsociety.com/wedding-inspiration/",
+      "website_url": "https://austin.wedsociety.com/wedding-inspiration/",
+      "description": "Brides of Austin celebrates Austin weddings and connects brides planning to the best local Austin vendors the Hill Country has to offer.",
+      "followers": {
+        "facebook": 19100,
+        "twitter": 490
+      },
+      "image_url": "https://i1.feedspot.com/4822200.jpg?t=1610778962"
+    },
+    {
+      "title": "Spill the ATX",
+      "feed_url": "https://atxgossip.com/feed/",
+      "website_url": "https://atxgossip.com/all-posts/",
+      "description": "What started as a personal blog in 2008 has evolved into a pop-culture lifestyle-focused website and social media brand. Spilltheatx.com is the go-to for film, TV, and celebrity news as well as travel, events, and maybe even a little food and fashion. We're here to spill the tea on anything people are buzzing about!",
+      "followers": {
+        "facebook": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4681278.jpg?t=1618581834"
+    },
+    {
+      "title": "Reilly Realtors",
+      "feed_url": "https://www.austinhomelistings.com/blog/rss",
+      "website_url": "https://austinadventures.com/",
+      "description": "Get the latest Austin Real Estate News from the experts in Austin Texas real estate, Reilly Realtors. We post several blogs a week to keep you up to date on the latest Austin real estate market.",
+      "followers": {
+        "facebook": 28100,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4822352.jpg?t=1610778670"
+    },
+    {
+      "title": "Austin Adventures",
+      "feed_url": "https://austinadventures.com/feed/",
+      "website_url": "https://austinadventures.com/",
+      "description": "Austin Adventures is the true essence of active adventure travel & vacations. With 38 years of experience, you'\u2122ll have the perfect vacation with us.",
+      "followers": {
+        "facebook": 37300,
+        "twitter": 4100,
+        "instagram": 5900
+      },
+      "image_url": "https://i1.feedspot.com/4822237.jpg?t=1610778928"
+    },
+    {
+      "title": "Mueller Austin Homes",
+      "feed_url": "http://muellersilentmarket.com/blog/feed/",
+      "website_url": "https://muellersilentmarket.com/blog/",
+      "description": "Mueller Austin Homes For Sale. Mueller Development Resident Realtor - Mueller Austin Homes, Mueller Development Expert, Resident Realtor, Home Sales, New Construction - Mueller Austin Homes | Mueller Realtor | Mueller Development.",
+      "followers": {
+        "twitter": 8
+      },
+      "image_url": "https://i1.feedspot.com/4822340.jpg?t=1610779130"
+    }
+  ]
+}

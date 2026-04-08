@@ -1,0 +1,792 @@
+{
+  "category": "Hackaday",
+  "source_url": "https://rss.feedspot.com/hackaday_rss_feeds",
+  "feeds": [
+    {
+      "title": "Hackaday",
+      "feed_url": "https://hackaday.com/feed/",
+      "website_url": "https://hackaday.com/",
+      "description": "Hackaday serves up Fresh Hacks Every Day from around the Internet. Our playful posts are the gold standard in entertainment for engineers and engineering enthusiasts. We educate those just learning the art of Hack, and provide inspiration for the seasoned veterans.",
+      "followers": {
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/46285.jpg?t=1746599740"
+    },
+    {
+      "title": "Hackaday \u00bb Battery Hacks",
+      "feed_url": "https://hackaday.com/category/battery-hacks/feed/",
+      "website_url": "https://hackaday.com/category/battery-hacks/",
+      "description": "All latest articles about Battery Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524147.jpg?t=1753056817"
+    },
+    {
+      "title": "Hackaday \u00bb Blackberry Hacks",
+      "feed_url": "https://hackaday.com/category/blackberry-hacks/feed/",
+      "website_url": "https://hackaday.com/category/blackberry-hacks/",
+      "description": "All latest articles about Blackberry Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524148.jpg?t=1753056821"
+    },
+    {
+      "title": "Hackaday \u00bb Car Hacks",
+      "feed_url": "https://hackaday.com/category/car-hacks/feed/",
+      "website_url": "https://hackaday.com/category/car-hacks/",
+      "description": "All latest articles about Car Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524150.jpg?t=1753056830"
+    },
+    {
+      "title": "Hackaday \u00bb Cellphone Hacks",
+      "feed_url": "https://hackaday.com/category/cellphone-hacks/feed/",
+      "website_url": "https://hackaday.com/category/cellphone-hacks/",
+      "description": "All latest articles about Cellphone Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524143.jpg?t=1753056801"
+    },
+    {
+      "title": "Hackaday \u00bb Chemistry Hacks",
+      "feed_url": "https://hackaday.com/category/chemistry-hacks/feed/",
+      "website_url": "https://hackaday.com/category/chemistry-hacks/",
+      "description": "All latest articles about Chemistry Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524149.jpg?t=1753056825"
+    },
+    {
+      "title": "Hackaday \u00bb Classic Hacks",
+      "feed_url": "https://hackaday.com/category/classic-hacks/feed/",
+      "website_url": "https://hackaday.com/category/classic-hacks/",
+      "description": "All latest articles about Classic Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524162.jpg?t=1753056882"
+    },
+    {
+      "title": "Hackaday \u00bb Clock Hacks",
+      "feed_url": "https://hackaday.com/category/clock-hacks/feed/",
+      "website_url": "https://hackaday.com/category/clock-hacks/",
+      "description": "All latest articles about Clock Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524177.jpg?t=1753056953"
+    },
+    {
+      "title": "Hackaday \u00bb CNC Hacks",
+      "feed_url": "https://hackaday.com/category/cnc-hacks/feed/",
+      "website_url": "https://hackaday.com/category/cnc-hacks/",
+      "description": "Hackaday.com serves up fresh hacks each day, every day from around the web. Hackaday.io is a platform for people who like to make things. From electronics hacks to CNC hacks you can find all the hacks at one place here.",
+      "followers": {
+        "facebook": 202000,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/4637801.jpg?t=1746599510"
+    },
+    {
+      "title": "Hackaday \u00bb Computer Hacks",
+      "feed_url": "https://hackaday.com/category/computer-hacks/feed/",
+      "website_url": "https://hackaday.com/category/computer-hacks/",
+      "description": "computer hacks",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524183.jpg?t=1753056980"
+    },
+    {
+      "title": "Hackaday \u00bb Cooking Hacks",
+      "feed_url": "https://hackaday.com/category/cooking-hacks/feed/",
+      "website_url": "https://hackaday.com/category/cooking-hacks/",
+      "description": "All latest articles about Cooking Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524145.jpg?t=1753056808"
+    },
+    {
+      "title": "Hackaday \u00bb Digital Audio Hacks",
+      "feed_url": "https://hackaday.com/category/digital-audio-hacks/feed/",
+      "website_url": "https://hackaday.com/category/digital-audio-hacks/",
+      "description": "All latest articles about Digital Audio Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524141.jpg?t=1753056793"
+    },
+    {
+      "title": "Hackaday \u00bb Digital Cameras Hacks",
+      "feed_url": "https://hackaday.com/category/digital-cameras-hacks/feed/",
+      "website_url": "https://hackaday.com/category/digital-cameras-hacks/",
+      "description": "All latest articles about Digital Cameras Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/756558.jpg?t=1746599507"
+    },
+    {
+      "title": "Hackaday \u00bb Drone Hacks",
+      "feed_url": "https://hackaday.com/category/drone-hacks/feed/",
+      "website_url": "https://hackaday.com/category/drone-hacks/",
+      "description": "All latest articles about Drone Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524184.jpg?t=1753056984"
+    },
+    {
+      "title": "Hackaday \u00bb Engine Hacks",
+      "feed_url": "https://hackaday.com/category/engine-hacks/feed/",
+      "website_url": "https://hackaday.com/category/engine-hacks/",
+      "description": "All latest articles about Engine Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524168.jpg?t=1753056916"
+    },
+    {
+      "title": "Hackaday \u00bb GPS Hacks",
+      "feed_url": "https://hackaday.com/category/gps-hacks/feed/",
+      "website_url": "https://hackaday.com/category/gps-hacks/",
+      "description": "All latest articles about GPS Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524169.jpg?t=1753056918"
+    },
+    {
+      "title": "Hackaday \u00bb Green Hacks",
+      "feed_url": "https://hackaday.com/category/green-hacks/feed/",
+      "website_url": "https://hackaday.com/category/green-hacks/",
+      "description": "Fresh hacks every day",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524163.jpg"
+    },
+    {
+      "title": "Hackaday \u00bb Handhelds Hacks",
+      "feed_url": "https://hackaday.com/category/handhelds-hacks/feed/",
+      "website_url": "https://hackaday.com/category/handhelds-hacks/",
+      "description": "All latest articles about Handhelds Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524142.jpg?t=1753056797"
+    },
+    {
+      "title": "Hackaday \u00bb Home Hacks",
+      "feed_url": "https://hackaday.com/category/home-hacks/feed/",
+      "website_url": "https://hackaday.com/category/home-hacks/",
+      "description": "All latest articles about Home Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524158.jpg?t=1753056865"
+    },
+    {
+      "title": "Hackaday \u00bb Internet Hacks",
+      "feed_url": "https://hackaday.com/category/internet-hacks/feed/",
+      "website_url": "https://hackaday.com/category/internet-hacks/",
+      "description": "All latest articles about Internet Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524160.jpg?t=1753056874"
+    },
+    {
+      "title": "Hackaday \u00bb iPhone Hacks",
+      "feed_url": "https://hackaday.com/category/iphone-hacks/feed/",
+      "website_url": "https://hackaday.com/category/iphone-hacks/",
+      "description": "All latest articles about iPhone Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/864543.jpg?t=1746599499"
+    },
+    {
+      "title": "Hackaday \u00bb Kinect Hacks",
+      "feed_url": "https://hackaday.com/category/kinect-hacks/feed/",
+      "website_url": "https://hackaday.com/category/kinect-hacks/",
+      "description": "All latest articles about Kinect Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524174.jpg?t=1753056940"
+    },
+    {
+      "title": "Hackaday \u00bb Laptop Hacks",
+      "feed_url": "https://hackaday.com/category/laptops-hacks/feed/",
+      "website_url": "https://hackaday.com/category/laptops-hacks/",
+      "description": "All latest articles about Laptop Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524182.jpg?t=1753056976"
+    },
+    {
+      "title": "Hackaday \u00bb Laser Hacks",
+      "feed_url": "https://hackaday.com/category/laser-hacks/feed/",
+      "website_url": "https://hackaday.com/category/laser-hacks/",
+      "description": "All latest articles about Laser Hacks from Hackaday.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8524167.jpg?t=1753056910"
+    },
+    {
+      "title": "Hackaday \u00bb LED Hacks",
+      "feed_url": "https://hackaday.com/category/led-hacks/feed/",
+      "website_url": "https://hackaday.com/category/led-hacks/",
+      "description": "All latest articles about LED Hacks from Hackaday.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/320634.jpg?t=1746598793"
+    },
+    {
+      "title": "Hackaday \u00bb Linux Hacks",
+      "feed_url": "https://hackaday.com/category/linux-hacks/feed/",
+      "website_url": "https://hackaday.com/category/linux-hacks/",
+      "description": "All latest articles about Linux Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/756559.jpg?t=1746598793"
+    },
+    {
+      "title": "Hackaday \u00bb Lockpicking Hacks",
+      "feed_url": "https://hackaday.com/category/lockpicking-hacks/feed/",
+      "website_url": "https://hackaday.com/category/lockpicking-hacks/",
+      "description": "Hackaday serves up Fresh hacks everyday from around the web. This highly creative activity of lock picking can be highly technical, simply clever, or both. Follow to stay updated.",
+      "followers": {
+        "facebook": 202000,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/5042929.jpg?t=1746598791"
+    },
+    {
+      "title": "Hackaday \u00bb Mac Hacks",
+      "feed_url": "https://hackaday.com/category/macs-hacks/feed/",
+      "website_url": "https://hackaday.com/category/macs-hacks/",
+      "description": "All latest articles about Mac Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/864544.jpg?t=1746598791"
+    },
+    {
+      "title": "Hackaday \u00bb Medical Hacks",
+      "feed_url": "https://hackaday.com/category/medical-hacks/feed/",
+      "website_url": "https://hackaday.com/category/medical-hacks/",
+      "description": "All latest articles about Medical Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524153.jpg?t=1753056843"
+    },
+    {
+      "title": "Hackaday \u00bb Multitouch Hacks",
+      "feed_url": "https://hackaday.com/category/multitouch-hacks/feed/",
+      "website_url": "https://hackaday.com/category/multitouch-hacks/",
+      "description": "All latest articles about Multitouch Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524135.jpg?t=1753056767"
+    },
+    {
+      "title": "Hackaday \u00bb Musical Hacks",
+      "feed_url": "https://hackaday.com/category/musical-hacks/feed/",
+      "website_url": "https://hackaday.com/category/musical-hacks/",
+      "description": "All latest articles about Musical Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524173.jpg?t=1753056936"
+    },
+    {
+      "title": "Hackaday \u00bb Network Hacks",
+      "feed_url": "https://hackaday.com/category/network-hacks/feed/",
+      "website_url": "https://hackaday.com/category/network-hacks/",
+      "description": "All latest articles about Network Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524172.jpg?t=1753056931"
+    },
+    {
+      "title": "Hackaday \u00bb Beer Hacks",
+      "feed_url": "https://hackaday.com/category/beer-hacks/feed",
+      "website_url": "https://hackaday.com/category/beer-hacks/",
+      "description": "All latest articles about Beer Hacks from Hackaday.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3624291.jpg?t=1746599750"
+    },
+    {
+      "title": "Hackaday \u00bb Nintendo Game Boy Hacks",
+      "feed_url": "https://hackaday.com/category/nintendo-gameboy-hacks/feed/",
+      "website_url": "https://hackaday.com/category/nintendo-gameboy-hacks/",
+      "description": "nintendo gameboy hacks",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524188.jpg?t=1753057001"
+    },
+    {
+      "title": "Hackaday \u00bb Nintendo Hacks",
+      "feed_url": "https://hackaday.com/category/nintendo-hacks/feed/",
+      "website_url": "https://hackaday.com/category/nintendo-hacks/",
+      "description": "All latest articles about Nintendo Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524171.jpg?t=1753056927"
+    },
+    {
+      "title": "Hackaday \u00bb Nintendo Wii Hacks",
+      "feed_url": "https://hackaday.com/category/nintendo-wii-hacks/feed/",
+      "website_url": "https://hackaday.com/category/nintendo-wii-hacks/",
+      "description": "nintendo wii hacks",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524164.jpg?t=1753056891"
+    },
+    {
+      "title": "Hackaday \u00bb PCB Hacks",
+      "feed_url": "https://hackaday.com/category/pcb-hacks/feed/",
+      "website_url": "https://hackaday.com/category/pcb-hacks/",
+      "description": "All latest articles about PCB Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524165.jpg?t=1753056895"
+    },
+    {
+      "title": "Hackaday \u00bb Peripherals Hacks",
+      "feed_url": "https://hackaday.com/category/peripherals-hacks/feed/",
+      "website_url": "https://hackaday.com/category/peripherals-hacks/",
+      "description": "All latest articles about Peripherals Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524161.jpg?t=1753056878"
+    },
+    {
+      "title": "Hackaday \u00bb Phone Hacks",
+      "feed_url": "https://hackaday.com/category/phone-hacks/feed/",
+      "website_url": "https://hackaday.com/category/phone-hacks/",
+      "description": "All latest articles about Phone Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524166.jpg?t=1753056900"
+    },
+    {
+      "title": "Hackaday \u00bb Playstation Hacks",
+      "feed_url": "https://hackaday.com/category/playstation-hacks/feed/",
+      "website_url": "https://hackaday.com/category/playstation-hacks/",
+      "description": "All latest articles about Playstation Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524176.jpg?t=1753056949"
+    },
+    {
+      "title": "Hackaday \u00bb PSP Hacks",
+      "feed_url": "https://hackaday.com/category/psp-hacks/feed/",
+      "website_url": "https://hackaday.com/category/psp-hacks/",
+      "description": "All latest articles about PSP Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524179.jpg?t=1753056962"
+    },
+    {
+      "title": "Hackaday \u00bb Radio Hacks",
+      "feed_url": "https://hackaday.com/category/radio-hacks/feed/",
+      "website_url": "https://hackaday.com/category/radio-hacks/",
+      "description": "All latest articles about Radio Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524137.jpg?t=1753056774"
+    },
+    {
+      "title": "Hackaday \u00bb Repair Hacks",
+      "feed_url": "https://hackaday.com/category/repair-hacks/feed/",
+      "website_url": "https://hackaday.com/category/repair-hacks/",
+      "description": "All latest articles about Repair Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524156.jpg?t=1753056856"
+    },
+    {
+      "title": "Hackaday \u00bb Home Entertainment Hacks",
+      "feed_url": "https://hackaday.com/category/home-entertainment-hacks/feed/",
+      "website_url": "https://hackaday.com/category/home-entertainment-hacks/",
+      "description": "All latest articles about Home Entertainment Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524175.jpg?t=1753056945"
+    },
+    {
+      "title": "Hackaday \u00bb Holiday Hacks",
+      "feed_url": "https://hackaday.com/category/holiday-hacks/feed/",
+      "website_url": "https://hackaday.com/category/holiday-hacks/",
+      "description": "All latest articles about Holiday Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524152.jpg?t=1753056838"
+    },
+    {
+      "title": "Hackaday \u00bb Robots Hacks",
+      "feed_url": "https://hackaday.com/category/robots-hacks/feed/",
+      "website_url": "https://hackaday.com/category/robots-hacks/",
+      "description": "All latest articles about Robots Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524144.jpg?t=1753056805"
+    },
+    {
+      "title": "Hackaday \u00bb Security Hacks",
+      "feed_url": "https://hackaday.com/category/security-hacks/feed",
+      "website_url": "https://hackaday.com/category/security-hacks/",
+      "description": "All latest articles about Security Hacks from Hackaday.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3624299.jpg?t=1746598399"
+    },
+    {
+      "title": "Hackaday \u00bb Software Hacks",
+      "feed_url": "https://hackaday.com/category/software-hacks/feed/",
+      "website_url": "https://hackaday.com/category/software-hacks/",
+      "description": "All latest articles about Software Hacks from Hackaday.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/864547.jpg?t=1746598398"
+    },
+    {
+      "title": "Hackaday \u00bb Solar Hacks",
+      "feed_url": "https://hackaday.com/category/solar-hacks/feed/",
+      "website_url": "https://hackaday.com/category/solar-hacks/",
+      "description": "All latest articles about Solar Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524155.jpg?t=1753056852"
+    },
+    {
+      "title": "Hackaday \u00bb Tool Hacks",
+      "feed_url": "https://hackaday.com/category/tool-hacks/feed/",
+      "website_url": "https://hackaday.com/category/tool-hacks/",
+      "description": "All latest articles about Tool Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524138.jpg?t=1753056778"
+    },
+    {
+      "title": "Hackaday \u00bb Toy Hacks",
+      "feed_url": "https://hackaday.com/category/toy-hacks/feed/",
+      "website_url": "https://hackaday.com/category/toy-hacks/",
+      "description": "All latest articles about Toy Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524187.jpg?t=1753056997"
+    },
+    {
+      "title": "Hackaday \u00bb Transportation Hacks",
+      "feed_url": "https://hackaday.com/category/transportation-hacks/feed/",
+      "website_url": "https://hackaday.com/category/transportation-hacks/",
+      "description": "All latest articles about Transportation Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524170.jpg?t=1753056923"
+    },
+    {
+      "title": "Hackaday \u00bb Video Hacks",
+      "feed_url": "https://hackaday.com/category/video-hacks/feed/",
+      "website_url": "https://hackaday.com/category/video-hacks/",
+      "description": "All latest articles about Video Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524178.jpg?t=1753056958"
+    },
+    {
+      "title": "Hackaday \u00bb Weapons Hacks",
+      "feed_url": "https://hackaday.com/category/weapons-hacks/feed/",
+      "website_url": "https://hackaday.com/category/weapons-hacks/",
+      "description": "All latest articles about Weapons Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524136.jpg?t=1753056770"
+    },
+    {
+      "title": "Hackaday \u00bb Wearable Hacks",
+      "feed_url": "https://hackaday.com/category/wearable-hacks/feed",
+      "website_url": "https://hackaday.com/category/wearable-hacks/",
+      "description": "All latest articles about Wearable Hacks from Hackaday.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3624296.jpg?t=1746598390"
+    },
+    {
+      "title": "Hackaday \u00bb Wireless Hacks",
+      "feed_url": "https://hackaday.com/category/wireless-hacks/feed/",
+      "website_url": "https://hackaday.com/category/wireless-hacks/",
+      "description": "All latest articles about Wireless Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/864548.jpg?t=1746598390"
+    },
+    {
+      "title": "Hackaday \u00bb Xbox Hacks",
+      "feed_url": "https://hackaday.com/category/xbox-hacks/feed/",
+      "website_url": "https://hackaday.com/category/xbox-hacks/",
+      "description": "All latest articles about Xbox Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524140.jpg?t=1753056789"
+    },
+    {
+      "title": "Hackaday \u00bb ATtiny Hacks",
+      "feed_url": "https://hackaday.com/category/attiny-hacks/feed/",
+      "website_url": "https://hackaday.com/category/attiny-hacks/",
+      "description": "All latest articles about ATtiny Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524181.jpg?t=1753056970"
+    },
+    {
+      "title": "Hackaday \u00bb Arduino Hacks",
+      "feed_url": "https://hackaday.com/category/arduino-hacks/feed/",
+      "website_url": "https://hackaday.com/category/arduino-hacks/",
+      "description": "All latest articles about Arduino Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202000,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/4621783.jpg?t=1746599744"
+    },
+    {
+      "title": "Hackaday \u00bb Android Hacks",
+      "feed_url": "https://hackaday.com/category/android-hacks/feed/",
+      "website_url": "https://hackaday.com/category/android-hacks/",
+      "description": "All latest articles about Android Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/864541.jpg?t=1746599745"
+    },
+    {
+      "title": "Hackaday \u00bb 3D Printer Hacks",
+      "feed_url": "https://hackaday.com/category/3d-printer-hacks/feed/",
+      "website_url": "https://hackaday.com/category/3d-printer-hacks/",
+      "description": "All latest articles about 3D Printer Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524185.jpg?t=1753056989"
+    },
+    {
+      "title": "Hackaday \u00bb Nintendo DS Hacks",
+      "feed_url": "https://hackaday.com/category/nintendo-ds-hacks/feed/",
+      "website_url": "https://hackaday.com/category/nintendo-ds-hacks/",
+      "description": "nintendo ds hacks",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524157.jpg?t=1753056860"
+    },
+    {
+      "title": "Hackaday \u00bb Google Hacks",
+      "feed_url": "https://hackaday.com/category/google-hacks/feed",
+      "website_url": "https://hackaday.com/category/google-hacks/",
+      "description": "All latest articles about Google Hacks from Hackaday.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3624294.jpg?t=1746599504"
+    },
+    {
+      "title": "Hackaday \u00bb iPod Hacks",
+      "feed_url": "https://hackaday.com/category/ipod-hacks/feed/",
+      "website_url": "https://hackaday.com/category/ipod-hacks/",
+      "description": "All latest articles about iPod Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524146.jpg?t=1753056813"
+    },
+    {
+      "title": "Hackaday \u00bb Kindle Hacks",
+      "feed_url": "https://hackaday.com/category/kindle-hacks/feed/",
+      "website_url": "https://hackaday.com/category/kindle-hacks/",
+      "description": "hacks for amazon's kindle",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524159.jpg?t=1753056869"
+    },
+    {
+      "title": "Hackaday \u00bb Nook Hacks",
+      "feed_url": "https://hackaday.com/category/nook-hacks/feed/",
+      "website_url": "https://hackaday.com/category/nook-hacks/",
+      "description": "nook hacks",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524189.jpg?t=1753057005"
+    },
+    {
+      "title": "Hackaday \u00bb Palm Pre Hacks",
+      "feed_url": "https://hackaday.com/category/palm-pre-hacks/feed/",
+      "website_url": "https://hackaday.com/category/palm-pre-hacks/",
+      "description": "palm pre hacks",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524151.jpg?t=1753056836"
+    },
+    {
+      "title": "Hackaday \u00bb Portable Audio Hacks",
+      "feed_url": "https://hackaday.com/category/portable-audio-hacks/feed/",
+      "website_url": "https://hackaday.com/category/portable-audio-hacks/",
+      "description": "All latest articles about Portable Audio Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524154.jpg?t=1753056847"
+    },
+    {
+      "title": "Hackaday \u00bb Portable Video Hacks",
+      "feed_url": "https://hackaday.com/category/portable-video-hacks/feed/",
+      "website_url": "https://hackaday.com/category/portable-video-hacks/",
+      "description": "All latest articles about Portable Video Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524139.jpg?t=1753056783"
+    },
+    {
+      "title": "Hackaday \u00bb Tablet Hacks",
+      "feed_url": "https://hackaday.com/category/tablet-pcs-hacks/feed/",
+      "website_url": "https://hackaday.com/category/tablet-pcs-hacks/",
+      "description": "All latest articles about Tablet Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524186.jpg?t=1753056993"
+    },
+    {
+      "title": "Hackaday \u00bb Downloads Hacks",
+      "feed_url": "https://hackaday.com/category/downloads-hacks/feed",
+      "website_url": "https://hackaday.com/category/downloads-hacks/",
+      "description": "All latest articles about Downloads Hacks from Hackaday.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3624292.jpg?t=1746599749"
+    },
+    {
+      "title": "Hackaday \u00bb Firefox Hacks",
+      "feed_url": "https://hackaday.com/category/firefox-hacks/feed",
+      "website_url": "https://hackaday.com/category/firefox-hacks/",
+      "description": "All latest articles about Firefox Hacks from Hackaday.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3624293.jpg?t=1746599748"
+    },
+    {
+      "title": "Hackaday \u00bb G1 Hacks",
+      "feed_url": "https://hackaday.com/category/g1-hacks/feed/",
+      "website_url": "https://hackaday.com/category/g1-hacks/",
+      "description": "android g1 hacks",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/8524180.jpg?t=1753056967"
+    },
+    {
+      "title": "Hackaday \u00bb Netbook Hacks",
+      "feed_url": "https://hackaday.com/category/netbook-hacks/feed/",
+      "website_url": "https://hackaday.com/category/netbook-hacks/",
+      "description": "All latest articles about Netbook Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/864545.jpg?t=1746599747"
+    }
+  ]
+}

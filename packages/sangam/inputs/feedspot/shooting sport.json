@@ -1,0 +1,60 @@
+{
+  "category": "Shooting Sport",
+  "source_url": "https://rss.feedspot.com/shooting_sport_rss_feeds",
+  "feeds": [
+    {
+      "title": "NRA Blog",
+      "feed_url": "https://www.nrablog.com/rss",
+      "website_url": "https://www.nrablog.com/",
+      "description": "NRABlog is your connection to the firearm education, safety, and marksmanship training programs of the National Rifle Association. Founded on the premise of education & training, the NRA is the world's premier firearms organization. Our mission is to motivate the public on how to be educated, safe, and trained in the use of firearms while having fun pursuing the lifestyle.",
+      "followers": {
+        "facebook": 4500000,
+        "twitter": 103800
+      },
+      "image_url": "https://i1.feedspot.com/4337201.jpg?t=1660722881"
+    },
+    {
+      "title": "USA Shooting",
+      "feed_url": "https://usashooting.org/feed/",
+      "website_url": "https://usashooting.org/news/",
+      "description": "The USA Shooting is National Governing Body for international shooting sports. USA Shooting has a full-time staff dedicated to our sport. Our mission is to empower American athletes for Olympic and Paralympic success, grow the community's passion, and inspire devotion to shooting sports.",
+      "followers": {
+        "facebook": 94600,
+        "twitter": 53700,
+        "instagram": 49200
+      },
+      "image_url": "https://i1.feedspot.com/5432509.jpg?t=1660722730"
+    },
+    {
+      "title": "Pistol Shooting Sports Blog",
+      "feed_url": "https://pistolshootingsports.com/blog?format=rss",
+      "website_url": "https://pistolshootingsports.com/blog",
+      "description": "Get tips on firearm training, maintenance, events, and more. Pistol Shooting Sports is a comprehensive guide for firearms enthusiasts of all levels and skills. The book is designed to help you with the right tools so you can enjoy the sport and sharpen your skills. The book and its companion website are the best resources to get you started in practical shooting competitions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5433560.jpg?t=1660904964"
+    },
+    {
+      "title": "Berry Shooting Blog",
+      "feed_url": "https://berryshooting.com/category/blog/feed/",
+      "website_url": "https://berryshooting.com/category/blog/",
+      "description": "Read competitive shooting articles, and tips on the trade from USPSA, IPSC, and IDPA shooting sports. Ben Berry is a competitive shooter and this blog page belongs to him. You can see what Ben is up to these days with his match videos, or hear what is on his mind with the latest blog or an episode of his podcast.",
+      "followers": {
+        "facebook": 3100,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5433559.jpg?t=1660905033"
+    },
+    {
+      "title": "MidwayUSA Foundation Blog",
+      "feed_url": "https://www.midwayusafoundation.org/feed/",
+      "website_url": "https://www.midwayusafoundation.org/category/blog/",
+      "description": "Explore recent blogs, latest news, and updates. The MidwayUSA Foundation is changing the future of youth shooting sports. We help communities and organizations to raise funds to support their high school, collegiate, club, and other youth shooting teams and activities. Our purpose is to enhance youth shooting sports to improve their confidence and leadership skills through shooting sports education.",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 1400,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5433557.jpg?t=1660905174"
+    }
+  ]
+}

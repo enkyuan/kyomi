@@ -1,0 +1,61 @@
+{
+  "category": "South Carolina Education",
+  "source_url": "https://rss.feedspot.com/south_carolina_education_rss_feeds",
+  "feeds": [
+    {
+      "title": "Education Week",
+      "feed_url": "https://www.edweek.org/south-carolina.rss",
+      "website_url": "https://www.edweek.org/south-carolina",
+      "description": "Read and follow news, analysis, and opinions about K-12 education in South Carolina. Education Week has been America's most trusted resource for K-12 education news and information. From teachers to principals to district leaders across the country. Education Week's diverse audience turns up for the most up-to-date information on K-12 education in the U.S.",
+      "followers": {
+        "facebook": 277000,
+        "twitter": 889600,
+        "instagram": 45800
+      },
+      "image_url": "https://i1.feedspot.com/7250372.jpg?t=1707711160"
+    },
+    {
+      "title": "South Carolina ASCD Blog",
+      "feed_url": "https://www.scascd.org/blog-feed.xml",
+      "website_url": "https://www.scascd.org/blog",
+      "description": "South Carolina ASCD is a nonprofit, nonpartisan organization with a primary mission of improving the teaching and learning of all students. Gain insights into ongoing efforts to foster academic excellence, promote equity and inclusivity, and equip learners with the knowledge and skills necessary to thrive in an ever-evolving world.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/7250373.jpg?t=1707711168"
+    },
+    {
+      "title": "University of South Carolina School of Medicine Library Blog",
+      "feed_url": "https://uscmed.sc.libguides.com/rss/blog.php",
+      "website_url": "https://uscmed.sc.libguides.com/blog",
+      "description": "Discover the heart of knowledge through the University of South Carolina School of Medicine's library news blog. Explore captivating stories that unveil the latest acquisitions, spotlight pioneering research tools, and celebrate the transformative impact of information accessibility.",
+      "followers": {
+        "facebook": 38
+      },
+      "image_url": "https://i1.feedspot.com/7250369.jpg?t=1707711136"
+    },
+    {
+      "title": "Communities In Schools of South Carolina",
+      "feed_url": "https://cisofsc.org/blog/category/news-updates/feed/",
+      "website_url": "https://cisofsc.org/blog/category/news-updates/",
+      "description": "Read the latest news and updates from Communities In Schools of South Carolina. Communities In Schools (CIS) is a nationwide nonprofit organization that works to surround students with a community of support, empowering them to stay in school and achieve in life.",
+      "followers": {
+        "facebook": 6600,
+        "twitter": 719
+      },
+      "image_url": "https://i1.feedspot.com/7250371.jpg?t=1707711150"
+    },
+    {
+      "title": "South Carolina Art Education Association Blog",
+      "feed_url": "https://www.scaea.org/blog/feed",
+      "website_url": "https://www.scaea.org/blog",
+      "description": "The South Carolina Art Education Association, affiliated with the National Art Education Association (NAEA), champions visual arts education for human enrichment and global harmony. Through connectivity, resources, and opportunities, it empowers educators and artists, fostering creativity and community. Join a diverse network spanning K-12 educators, scholars, museum professionals, and beyond, united in their dedication to advancing art education worldwide.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 266
+      },
+      "image_url": "https://i1.feedspot.com/7250370.jpg?t=1707711144"
+    }
+  ]
+}

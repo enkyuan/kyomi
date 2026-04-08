@@ -1,0 +1,18 @@
+{
+  "category": "Super Bowl",
+  "source_url": "https://rss.feedspot.com/super_bowl_rss_feeds",
+  "feeds": [
+    {
+      "title": "FanSided \u00bb Super Bowl",
+      "feed_url": "https://fansided.com/nfl/super-bowl/feed/",
+      "website_url": "https://fansided.com/nfl/super-bowl/",
+      "description": "The latest Super Bowl news, rumors, GIFs, predictions, and more from FanSided. Dive into conversation-driving content on Superbowl Team, Player, and Match proceeding. FanSided is a leading digital network of 300+ Sites dedicated for Sports News, Entertainment, Lifestyle & Technology.",
+      "followers": {
+        "facebook": 973500,
+        "twitter": 46700,
+        "instagram": 38900
+      },
+      "image_url": "https://i1.feedspot.com/5554849.jpg?t=1683095898"
+    }
+  ]
+}

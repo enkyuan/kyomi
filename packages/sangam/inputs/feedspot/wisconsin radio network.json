@@ -1,0 +1,72 @@
+{
+  "category": "Wisconsin Radio Network",
+  "source_url": "https://rss.feedspot.com/wisconsin_radio_network_rss_feeds",
+  "feeds": [
+    {
+      "title": "Wisconsin Radio Network | Wisconsin News and Sports",
+      "feed_url": "https://feeds.feedburner.com/WrnNews",
+      "website_url": "https://www.wrn.com/",
+      "description": "Covering the legislature, state government and news from throughout Wisconsin.",
+      "followers": {
+        "facebook": 861,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/723024.jpg?t=1614859202"
+    },
+    {
+      "title": "Wisconsin Radio Network \u00bb Sports",
+      "feed_url": "https://www.wrn.com/category/sports/feed/",
+      "website_url": "https://www.wrn.com/category/sports/",
+      "description": "The latest scores, news, videos, photos, and standings in high school, college, and professional sports.",
+      "followers": {
+        "facebook": 861,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5252446.jpg?t=1614863001"
+    },
+    {
+      "title": "Wisconsin Radio Network \u00bb Politics-Government",
+      "feed_url": "https://www.wrn.com/category/politics-government/feed/",
+      "website_url": "https://www.wrn.com/category/politics-government/",
+      "description": "Essential political coverage from Wisconsin and the presidential campaign, including in-depth commentary, analysis, and election results.",
+      "followers": {
+        "facebook": 861,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5252417.jpg?t=1614859645"
+    },
+    {
+      "title": "Wisconsin Radio Network \u00bb Health / Medicine",
+      "feed_url": "https://www.wrn.com/category/health-medicine/feed/",
+      "website_url": "https://www.wrn.com/category/health-medicine/",
+      "description": "Get the latest news from the health care industry.",
+      "followers": {
+        "facebook": 861,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5252445.jpg?t=1614862902"
+    },
+    {
+      "title": "Wisconsin Radio Network \u00bb Legislature",
+      "feed_url": "https://www.wrn.com/category/legislature/feed/",
+      "website_url": "https://www.wrn.com/category/legislature/",
+      "description": "Get the latest legislature news and updates in the Wisconsin region only on Wisconsin Radio Network.",
+      "followers": {
+        "facebook": 861,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5252420.jpg?t=1614861614"
+    },
+    {
+      "title": "Wisconsin Radio Network \u00bb Crime / Courts",
+      "feed_url": "https://www.wrn.com/category/crime-courts/feed/",
+      "website_url": "https://www.wrn.com/category/crime-courts/",
+      "description": "Get the latest Crime news and updates only on the Wisconsin Radio Network.",
+      "followers": {
+        "facebook": 861,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5252439.jpg?t=1614862781"
+    }
+  ]
+}

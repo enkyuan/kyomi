@@ -1,0 +1,87 @@
+{
+  "category": "West Virginia Food",
+  "source_url": "https://rss.feedspot.com/west_virginia_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Candace Lately",
+      "feed_url": "https://www.candacelately.com/feeds/posts/default",
+      "website_url": "https://www.candacelately.com/",
+      "description": "Candace Lately is a blog about the local food culture in West Virginia. Its purpose is to speak to the community of foodies in town and provide a forum for discussion about local restaurants, food and people who embrace this Appalachian state's culture.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 2700,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5326568.jpg?t=1632910702"
+    },
+    {
+      "title": "The Food Guy",
+      "feed_url": "https://www.wvfoodguy.com//feed/blog-feed.xml",
+      "website_url": "https://www.wvfoodguy.com/",
+      "description": "Catch all the latest West Virginia food news, local restaurant reviews, culinary events and more. Steven Keith is a freelance food writer and restaurant critic for the Charleston Gazette-Mail newspaper, where his weekly column 'The Food Guy' has won top honors from the West Virginia Press Association as the best lifestyles/feature column in the state.",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 1200,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5327232.jpg?t=1633012257"
+    },
+    {
+      "title": "The Herald-Dispatch \u00bb Dining Guide",
+      "feed_url": "https://www.herald-dispatch.com/search/?f=rss&t=article&c=features_entertainment/dining_guide&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.herald-dispatch.com/features_entertainment/dining_guide/",
+      "description": "This section features articles on Dining Guide. The Herald-Dispatch in Huntington is a daily morning newspaper.",
+      "followers": {
+        "facebook": 45300,
+        "twitter": 20400,
+        "instagram": 5900
+      },
+      "image_url": "https://i1.feedspot.com/5327222.jpg?t=1633011573"
+    },
+    {
+      "title": "The West Virginia Hot Dog Blog",
+      "feed_url": "http://wvhotdogblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://wvhotdogblog.blogspot.com/",
+      "description": "A place to discuss the uniquely delectable gift from heaven known as the West Virginia Hot Dog.",
+      "followers": {
+        "facebook": 12800,
+        "twitter": 36
+      },
+      "image_url": "https://i1.feedspot.com/1044576.jpg?t=1632912851"
+    },
+    {
+      "title": "Visit Mountaineer Country \u00bb Food",
+      "feed_url": "https://www.visitmountaineercountry.com/category/blog/food/feed/",
+      "website_url": "https://www.visitmountaineercountry.com/category/blog/food/",
+      "description": "This section features articles on Food. Visit Mountaineer Country CVB can help plan your trip with events, activities, food, shop, & stay in Morgantown, Kingwood, Grafton, Fairmont and Clarksburg, WV areas!",
+      "followers": {
+        "facebook": 34600,
+        "twitter": 6300
+      },
+      "image_url": "https://i1.feedspot.com/5326584.jpg?t=1632910984"
+    },
+    {
+      "title": "Charleston WV \u00bb Food",
+      "feed_url": "https://charlestonwv.com/category/food/feed/",
+      "website_url": "https://charlestonwv.com/category/food/",
+      "description": "Restaurant reviews, recipes and things to do in Charleston WV. Get the latest info on music, food, arts, and recreation in Hip, Historic...Almost Heaven!",
+      "followers": {
+        "facebook": 28500,
+        "twitter": 6600,
+        "instagram": 24800
+      },
+      "image_url": "https://i1.feedspot.com/5326615.jpg?t=1632914027"
+    },
+    {
+      "title": "FarmFreshWV Blog",
+      "feed_url": "https://farmfreshwv.com/feed/",
+      "website_url": "https://farmfreshwv.com/blog/",
+      "description": "Find your new favorite WV food or farm business at FarmFreshWV. Our mission is to help West Virginians gain access to fresh, healthy, and local foods found at their nearby Farmers Markets.",
+      "followers": {
+        "facebook": 9900,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5326591.jpg?t=1632911620"
+    }
+  ]
+}

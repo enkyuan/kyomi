@@ -1,0 +1,33 @@
+{
+  "category": "Urban Ecology",
+  "source_url": "https://rss.feedspot.com/urban_ecology_rss_feeds",
+  "feeds": [
+    {
+      "title": "Urban Ecology Blog",
+      "feed_url": "https://www.urbanecology.org.au/feed/",
+      "website_url": "https://www.urbanecology.org.au/blog/",
+      "description": "Urban Ecology Australia exists to demonstrate and promote a more sustainable approach to the way we live. In the Urban Ecology Australia blog, you'll find updates on ecocity developments at Christie Walk and worldwide.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 645
+      },
+      "image_url": "https://i1.feedspot.com/5497376.jpg?t=1674210506"
+    },
+    {
+      "title": "The Urban Ecologist Blog",
+      "feed_url": "https://urban-ecologist.com/feed/",
+      "website_url": "https://urban-ecologist.com/blog/",
+      "description": "The Urban Ecologist Blog covers bio-diversity, climate change, ecosystem services, social science, urbanization, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5497375.jpg?t=1674210523"
+    },
+    {
+      "title": "Nature Portfolio \u00bb Urban Ecology",
+      "feed_url": "https://www.nature.com/subjects/urban-ecology.rss",
+      "website_url": "https://www.nature.com/subjects/urban-ecology",
+      "description": "Nature is a weekly international journal publishing the finest peer-reviewed research in all fields of science and technology on the basis of its originality, importance, interdisciplinary interest, timeliness, accessibility, elegance, and surprising conclusions. Thier blog publishes articles on Urban ecology covering topics such as urban agriculture, stormwater management, Green roofs and pollinators, and more informative topics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5497374.jpg?t=1674210603"
+    }
+  ]
+}

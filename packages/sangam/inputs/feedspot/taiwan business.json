@@ -1,0 +1,60 @@
+{
+  "category": "Taiwan Business",
+  "source_url": "https://rss.feedspot.com/taiwan_business_rss_feeds",
+  "feeds": [
+    {
+      "title": "Enspyre",
+      "feed_url": "https://www.enspyre.com/en/category/case-studies/feed/",
+      "website_url": "https://www.enspyre.com/en/category/case-studies/",
+      "description": "Dive into case studies and in-depth analyses of market trends, perspectives, and news stories. Stay informed and confident with Enspyre's cutting-edge insights. Enspyre International is a B2B agency that provides services ranging from phone answering to business development.",
+      "followers": {
+        "facebook": 2100
+      },
+      "image_url": "https://i1.feedspot.com/7273053.jpg?t=1710333044"
+    },
+    {
+      "title": "Premia TNC Taiwan Blog",
+      "feed_url": "https://premiatnc.com/tw/feed/",
+      "website_url": "https://premiatnc.com/tw/blog/",
+      "description": "Explore enlightening pieces covering Accounting, Auditing, Company Incorporation, and more. Premia TNC is a one-stop consulting and accounting firm that provides services such as corporate establishment, corporate management, accounting settlement and audit, and tax advisory Taiwan and many other countries.",
+      "followers": {
+        "facebook": 232,
+        "twitter": 14,
+        "instagram": 873
+      },
+      "image_url": "https://i1.feedspot.com/7273052.jpg?t=1710333852"
+    },
+    {
+      "title": "ANZCham Blog",
+      "feed_url": "https://www.anzcham.org.tw/blog-feed.xml",
+      "website_url": "https://www.anzcham.org.tw/blog",
+      "description": "Follow the latest updates, trade discussions nd announcements from ANZCham. The Australia and New Zealand Business Association (ANZBA) represents Australians and New Zealanders doing business in Taiwan, and complements other organizations promoting trade, investment, and general relations among the three nations.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 161
+      },
+      "image_url": "https://i1.feedspot.com/7273415.jpg?t=1710402884"
+    },
+    {
+      "title": "CrossBond Taiwan",
+      "feed_url": "https://crossbond.tw/en/category/news/feed/",
+      "website_url": "https://crossbond.tw/en/category/news/",
+      "description": "Get the latest insights and news from the forefront of brand consultancy. Dissect market trends, decode consumer behavior, and analyze the ever-evolving landscape of branding and marketing. CrossBond Taiwan is a brand consultant specializing in brand marketing, intellectual property consulting, and Southeast Asian and Indian marketing.",
+      "followers": {
+        "facebook": 968
+      },
+      "image_url": "https://i1.feedspot.com/7273416.jpg?t=1710418252"
+    },
+    {
+      "title": "Taiwan Business TOPICS",
+      "feed_url": "https://topics.amcham.com.tw/feed/",
+      "website_url": "https://topics.amcham.com.tw/",
+      "description": "Immerse yourself in the dynamic interplay of business, politics, and culture with Taiwan Business TOPICS, your premier source for incisive analysis, thought-provoking insights, and captivating storytelling. Dedicated to empowering readers with a comprehensive understanding of the forces shaping the global business landscape,",
+      "followers": {
+        "facebook": 6600,
+        "twitter": 6600
+      },
+      "image_url": "https://i1.feedspot.com/7273051.jpg?t=1710333940"
+    }
+  ]
+}

@@ -23,6 +23,36 @@ function xmlText(value: unknown): string {
   return "";
 }
 
+function textFromUnknown(value: unknown): string | null {
+  if (typeof value === "string") {
+    const trimmed = value.trim();
+    return trimmed || null;
+  }
+  if (!value || typeof value !== "object" || !("#text" in value)) {
+    return null;
+  }
+  const text = String((value as { "#text": unknown })["#text"]).trim();
+  return text || null;
+}
+
+function pickHrefFromAtomCandidate(
+  item: unknown,
+  relMatcher: (rel: unknown) => boolean,
+): string | null {
+  if (!item || typeof item !== "object") {
+    return null;
+  }
+  const rec = item as Record<string, unknown>;
+  const href = rec["@_href"];
+  if (typeof href !== "string" || !href) {
+    return null;
+  }
+  if (!relMatcher(rec["@_rel"])) {
+    return null;
+  }
+  return href;
+}
+
 function pickLinkFromRssChannel(link: unknown, fallback: string): string | null {
   if (typeof link === "string" && link.trim()) {
     return link.trim();
@@ -32,11 +62,9 @@ function pickLinkFromRssChannel(link: unknown, fallback: string): string | null 
       if (typeof item === "string" && item.trim()) {
         return item.trim();
       }
-      if (item && typeof item === "object" && "#text" in item) {
-        const t = String((item as { "#text": unknown })["#text"]).trim();
-        if (t) {
-          return t;
-        }
+      const text = textFromUnknown(item);
+      if (text) {
+        return text;
       }
     }
   }
@@ -50,23 +78,18 @@ function pickAtomLink(feed: Record<string, unknown>, fallback: string): string |
   }
   const candidates = Array.isArray(link) ? link : [link];
   for (const item of candidates) {
-    if (item && typeof item === "object") {
-      const rec = item as Record<string, unknown>;
-      const rel = rec["@_rel"];
-      const href = rec["@_href"];
-      if (typeof href === "string" && href) {
-        if (rel === "alternate" || rel === undefined || rel === "self") {
-          return href;
-        }
-      }
+    const href = pickHrefFromAtomCandidate(
+      item,
+      (rel) => rel === "alternate" || rel === undefined || rel === "self",
+    );
+    if (href) {
+      return href;
     }
   }
   for (const item of candidates) {
-    if (item && typeof item === "object") {
-      const href = (item as Record<string, unknown>)["@_href"];
-      if (typeof href === "string" && href) {
-        return href;
-      }
+    const href = pickHrefFromAtomCandidate(item, () => true);
+    if (href) {
+      return href;
     }
   }
   return fallback || null;

@@ -1,0 +1,170 @@
+{
+  "category": "Hadoop",
+  "source_url": "https://rss.feedspot.com/hadoop_rss_feeds",
+  "feeds": [
+    {
+      "title": "Hadoop and Spark by Leela Prasad",
+      "feed_url": "http://leelaprasadhadoop.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://leelaprasadhadoop.blogspot.com/",
+      "description": "Visit the blog to find useful articles on Hadoop and Spark by Leela Prasad.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4755832.jpg?t=1613031757"
+    },
+    {
+      "title": "SAS",
+      "feed_url": "https://blogs.sas.com/content/tag/hadoop/feed/",
+      "website_url": "https://blogs.sas.com/content/tag/hadoop/",
+      "description": "SAS has helped organizations across all industries realize the full potential of their greatest asset: data. The blog features articles that delivers proven solutions that drive innovation and improve performance.",
+      "followers": {
+        "facebook": 289100,
+        "twitter": 62400,
+        "instagram": 24100
+      },
+      "image_url": "https://i1.feedspot.com/4751295.jpg?t=1613031517"
+    },
+    {
+      "title": "Qubole Blog",
+      "feed_url": "https://www.qubole.com/blog/tag/apache-hadoop/feed",
+      "website_url": "https://www.qubole.com/blog",
+      "description": "Qubole's cloud data platform helps you fully leverage information stored in your cloud data lake. Qubole intelligently automates and scales big data workloads in the cloud for greater flexibility. The platform lowers the cost of building and operating your machine learning (ML), artificial intelligence (AI), and analytics projects.",
+      "followers": {
+        "facebook": 52300
+      },
+      "image_url": "https://i1.feedspot.com/4755171.jpg?t=1613031528"
+    },
+    {
+      "title": "Data Flair",
+      "feed_url": "https://data-flair.training/blogs/category/hadoop/feed/",
+      "website_url": "https://data-flair.training/blogs/category/hadoop/",
+      "description": "DataFlair is a leading provider of online training on niche Big Data technologies like Apache Flink, Apache Spark, Hadoop, HBase, Kafka etc. Read the blog to find useful articles on Hadoop.",
+      "followers": {
+        "facebook": 38000,
+        "twitter": 6800
+      },
+      "image_url": "https://i1.feedspot.com/4751261.jpg?t=1613031534"
+    },
+    {
+      "title": "Srinimf",
+      "feed_url": "https://srinimf.com/category/hadoop-2/feed/",
+      "website_url": "https://srinimf.com/category/hadoop-2/",
+      "description": "Posts about Hadoop written by Srini.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 270
+      },
+      "image_url": "https://i1.feedspot.com/4755952.jpg?t=1613031538"
+    },
+    {
+      "title": "Thomas Henson",
+      "feed_url": "https://www.thomashenson.com/category/hadoop/feed/",
+      "website_url": "https://www.thomashenson.com/category/hadoop/",
+      "description": "Thomas Henson is a Hadoop Guru and Big Data Course Author. Checkout website for all your Hadoop tips and tricks.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4755886.jpg?t=1613031544"
+    },
+    {
+      "title": "Curated SQL",
+      "feed_url": "https://curatedsql.com/category/hadoop/feed/",
+      "website_url": "https://curatedsql.com/category/hadoop/",
+      "description": "Curated SQL is a daily-updating compendium of resources in the broader data platform space, including SQL Server, database administration, database development, Hadoop, Power BI, R, security, and much more.",
+      "followers": {
+        "twitter": 460
+      },
+      "image_url": "https://i1.feedspot.com/4755947.jpg?t=1613031600"
+    },
+    {
+      "title": "HBase",
+      "feed_url": "http://hadoop-hbase.blogspot.com/feeds/posts/default",
+      "website_url": "http://hadoop-hbase.blogspot.com/",
+      "description": "HBase is called the Hadoop database because it is a NoSQL database that runs on top of Hadoop. This blog is about Apache HBase, the open source, distributed key value store.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/504491.jpg?t=1613035430"
+    },
+    {
+      "title": "SreeRam Hadoop Notes",
+      "feed_url": "http://sreeram-hadoop.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://sreeram-hadoop.blogspot.com/",
+      "description": "Read the blog to find useful hadoop notes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4753734.jpg?t=1613034919"
+    },
+    {
+      "title": "Hadoop Quiz",
+      "feed_url": "https://hadoopquiz.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://hadoopquiz.blogspot.com/",
+      "description": "Hadoop Quiz is blog about Hadoop framework, MCQs for freshers, A set of articles for the data analyzer. This blog is a complete package for beginners to explore Hadoop world.",
+      "followers": {
+        "facebook": 746
+      },
+      "image_url": "https://i1.feedspot.com/4755969.jpg?t=1613035379"
+    },
+    {
+      "title": "Hadoop (Proof of Concept) by Bhavesh",
+      "feed_url": "http://ybhavesh.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://ybhavesh.blogspot.com/",
+      "description": "A Hadoop blog by Bhavesh Bhadricha.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4755384.jpg?t=1613034888"
+    },
+    {
+      "title": "Satya's Hadoop Blog",
+      "feed_url": "http://feeds.feedburner.com/SachinsHadoopBlog",
+      "website_url": "https://satya-hadoop.blogspot.com/",
+      "description": "Find valuable insights on Hadoop technologies. Read the blog to know more.",
+      "followers": {
+        "facebook": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4755193.jpg?t=1613031626"
+    },
+    {
+      "title": "UNDERSTANDING HADOOP BY MAHESH MAHARANA",
+      "feed_url": "https://understanding-hadoop-by-mahesh.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://understanding-hadoop-by-mahesh.blogspot.com/",
+      "description": "Read the blog to find Hadoop usecases and other related components.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4755373.jpg?t=1613031799"
+    },
+    {
+      "title": "HADOOP SCHOOL",
+      "feed_url": "http://rajeshpatnana.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://rajeshpatnana.blogspot.com/",
+      "description": "A Hadoop blog by Rajeshkumar Patnana.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4755871.jpg?t=1613031715"
+    },
+    {
+      "title": "Hadoop In Real World Blog",
+      "feed_url": "http://www.hadoopinrealworld.com/blog/feed/",
+      "website_url": "https://www.bigdatainrealworld.com/blog/",
+      "description": "We are a group of Hadoop engineers who are passionate about Hadoop and related Big Data technologies. Read the blog to find helpful articles on Hadoop technologies.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 74
+      },
+      "image_url": "https://i1.feedspot.com/4751668.jpg?t=1613031478"
+    },
+    {
+      "title": "InfoWorld Hadoop",
+      "feed_url": "https://www.infoworld.com/category/hadoop/index.rss",
+      "website_url": "https://www.infoworld.com/analytics/",
+      "description": "InfoWorld, the leading voice in emerging enterprise technology, is the go-to resource for developers, architects, and business leaders. Read the articles to stay up to date with the latest hadoop news, information and how-to advice.",
+      "followers": {
+        "facebook": 72300,
+        "twitter": 88400
+      },
+      "image_url": "https://i1.feedspot.com/4756037.jpg?t=1613031523"
+    },
+    {
+      "title": "Kognitio | Kognitio On Hadoop",
+      "feed_url": "https://kognitio.com/blog/category/kognitio-on-hadoop/feed/",
+      "description": "Kognitio is a pioneer in scale-out, in-memory software for big data analytics. It provides ultra-fast, high-concurrency SQL on Hadoop & other data sources.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4753721.jpg?t=1613031596"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "category": "Leeds Music",
+  "source_url": "https://rss.feedspot.com/leeds_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "Leeds Living \u00bb Music & Dance",
+      "feed_url": "https://leedsliving.co.uk/category/music-dance/feed/",
+      "website_url": "https://leedsliving.co.uk/category/music-dance/",
+      "description": "Read insights and unbiased opinions for anyone who lives works, or plays in Leeds. Leeds Living is the only truly independent, not-for-profit lifestyle publication in Leeds. We provide insights into the fascinating people and places that make up this wonderful City. This is essential reading for anyone who lives, works, or plays in Leeds.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 5300,
+        "instagram": 7300
+      },
+      "image_url": "https://i1.feedspot.com/5535338.jpg?t=1680767207"
+    },
+    {
+      "title": "Lippy Magazine",
+      "feed_url": "https://www.lippymag.com/blog-feed.xml",
+      "website_url": "https://www.lippymag.com/",
+      "description": "Lippy is the University of Leeds' very own alternative magazine. We pride ourselves on witty, off-center journalism, based on our genuine interest in the discussion of issues that matter. We aim to challenge and inspire, and rarely shy away from the controversial.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 67,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5535341.jpg?t=1753870675"
+    },
+    {
+      "title": "Music House",
+      "feed_url": "https://www.music-house.org.uk/feed/",
+      "website_url": "https://www.music-house.org.uk/news/",
+      "description": "The Yorkshire College of Music is foundedThe College was the vision of a well-respected local family: The Haddocks who were part of the music-making scene in Leeds. We strongly believe in breaking down barriers to accessing music in our community.",
+      "followers": {
+        "facebook": 544,
+        "twitter": 63,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5535337.jpg?t=1680767200"
+    },
+    {
+      "title": "Bryan Guitar Blog",
+      "feed_url": "https://www.bryanguitar.co.uk/blog?format=rss",
+      "website_url": "https://www.bryanguitar.co.uk/blog",
+      "description": "Bryan is a guitarist and tutor based in Leeds, West Yorkshire. Check out Bryan's music qualifications, experience, and achievements.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 1,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5535339.jpg?t=1680767274"
+    },
+    {
+      "title": "Released Records Blog",
+      "feed_url": "https://released.co.uk/blogs/blog.atom",
+      "website_url": "https://released.co.uk/blogs/blog",
+      "description": "Released Records Blog is an independent record shop and labels selling new and pre-loved vinyl, based in the iconic Leeds Corn Exchange.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 428,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5535335.jpg?t=1680767196"
+    },
+    {
+      "title": "Made with Music Blog",
+      "feed_url": "https://www.madewithmusic.co.uk/blog-feed.xml",
+      "website_url": "https://www.madewithmusic.co.uk/blog",
+      "description": "Made with Music is an award-winning charity providing accessible live music for families of all ages and abilities through mini gigs, workshops, performances, and classes. It has always operated on a not-for-profit basis, providing access to music for a range of organizations and individuals.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 471,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5535340.jpg?t=1680767297"
+    },
+    {
+      "title": "Basesment Leeds",
+      "feed_url": "https://www.basementleeds.com/blog-feed.xml",
+      "website_url": "https://www.basementleeds.com/articles",
+      "description": "Our aim is to direct people to all aspects of the thriving music scene that Leeds has to offer. We wish to inform those who are lost in the bright lights of Leeds city center that whatever your taste is, Leeds can certainly provide it. We want to give those unsure of what they like, the avenue to explore the abundant talent that the city has to offer. We aspire to get to the heart of as many aspects of the scene as we can, by interviewing and reviewing Leeds-based artists whose noise contributes to the thriving vibrations of the city.",
+      "followers": {
+        "facebook": 121,
+        "instagram": 464
+      },
+      "image_url": "https://i1.feedspot.com/5535342.jpg?t=1680767335"
+    }
+  ]
+}

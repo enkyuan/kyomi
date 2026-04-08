@@ -1,0 +1,41 @@
+{
+  "category": "Bangkok Travel",
+  "source_url": "https://rss.feedspot.com/bangkok_travel_rss_feeds",
+  "feeds": [
+    {
+      "title": "Expique Blog",
+      "feed_url": "https://www.expique.com/feed/",
+      "website_url": "https://www.expique.com/blog/",
+      "description": "Expique is on a mission to develop a range of unique travel experiences in Bangkok and beyond. We offer a range of unique experiences include food tours, tuk-tuk tours, night tours, cooking classes and walking tours. On our blog, you will find a range of articles about Bangkok and Thailand to help you plan a visit and dig deeper into the local culture and way of life.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 2200,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4928053.jpg?t=1621057114"
+    },
+    {
+      "title": "Alex In Wanderland \u00bb Bangkok",
+      "feed_url": "https://www.alexinwanderland.com/tag/bangkok/feed/",
+      "website_url": "https://www.alexinwanderland.com/tag/bangkok/",
+      "description": "Alex in Wanderland is a top travel blog with a loyal readership of passionate travelers who love diving, adventure, culture and design.",
+      "followers": {
+        "facebook": 18100,
+        "twitter": 15600,
+        "instagram": 76600
+      },
+      "image_url": "https://i1.feedspot.com/4930276.jpg?t=1621262918"
+    },
+    {
+      "title": "The Guardian \u00bb Bangkok holidays",
+      "feed_url": "https://www.theguardian.com/travel/bangkok/rss",
+      "website_url": "https://www.theguardian.com/travel/bangkok",
+      "description": "Follow these blog entries and articles about Bangkok including travel tips, events, attractions, apartment and vacation rental tips from the Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4930274.jpg?t=1621262924"
+    }
+  ]
+}

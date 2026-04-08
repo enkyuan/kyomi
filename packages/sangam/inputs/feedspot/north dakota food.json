@@ -1,0 +1,52 @@
+{
+  "category": "North Dakota Food",
+  "source_url": "https://rss.feedspot.com/north_dakota_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Ramshackle Pantry",
+      "feed_url": "https://ramshacklepantry.com/feed/",
+      "website_url": "https://ramshacklepantry.com/",
+      "description": "A recipe and food blog that focuses on classic recipes and works on finding the history and heritage of traditional dishes. Our deep dives are meant to enrich your kitchen, mind, and spirit! Ben is a recipe developer, cookbook author, and eater who loves to write about food.",
+      "followers": {
+        "facebook": 568,
+        "twitter": 867
+      },
+      "image_url": "https://i1.feedspot.com/5322536.jpg?t=1631793823"
+    },
+    {
+      "title": "Recipe Diaries",
+      "feed_url": "https://www.recipe-diaries.com/feed/",
+      "website_url": "https://www.recipe-diaries.com/",
+      "description": "I am Jenna. I like to try different diets, but mostly I lean more towards Weight Watchers or Low Carb. My blog consists of mostly diet recipes from Weight Watchers or Low Carb, but every now and then I'll sneak in a not so healthy recipe.",
+      "followers": {
+        "facebook": 24700,
+        "twitter": 188,
+        "instagram": 31400
+      },
+      "image_url": "https://i1.feedspot.com/4341848.jpg?t=1608729663"
+    },
+    {
+      "title": "Sweet & Savory by Shinee",
+      "feed_url": "https://www.sweetandsavorybyshinee.com/feed/",
+      "website_url": "https://www.sweetandsavorybyshinee.com/",
+      "description": "Browse hundreds of incredible party food recipes perfect for entertaining! Find desserts, appetizers, cocktails and more all with step-by-step photos and instructions!",
+      "followers": {
+        "facebook": 107100,
+        "twitter": 648,
+        "instagram": 44500
+      },
+      "image_url": "https://i1.feedspot.com/4486216.jpg?t=1631794558"
+    },
+    {
+      "title": "SarahBakes",
+      "feed_url": "https://sarahbakesnd.com/feed/",
+      "website_url": "https://sarahbakesnd.com/",
+      "description": "Sarah is a storyteller, adventurer, wife, and mother. We are all about good food & words, sharing original stories and recipes, as well as giveaways and events.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 591
+      },
+      "image_url": "https://i1.feedspot.com/5322513.jpg?t=1631793029"
+    }
+  ]
+}

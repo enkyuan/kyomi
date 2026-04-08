@@ -1,0 +1,72 @@
+{
+  "category": "Halo",
+  "source_url": "https://rss.feedspot.com/halo_rss_feeds",
+  "feeds": [
+    {
+      "title": "Grifball Hub Blog",
+      "feed_url": "https://grifballhub.com/feed/",
+      "website_url": "https://grifballhub.com/blog/",
+      "description": "GrifballHub, LLC is the official home for Grifball, a sports game played within the Halo video game series. GrifballHub strives to be a welcoming community for all gamers, regardless of their sex, gender identity, race, religion, sexual orientation, age, experience, or other demographic characteristics. GrifballHub is a safe place for all gamers who love the sport of Grifball.",
+      "followers": {
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5543226.jpg?t=1681726584"
+    },
+    {
+      "title": "Pure Xbox",
+      "feed_url": "https://www.purexbox.com/feeds/latest/tags/halo",
+      "website_url": "https://www.purexbox.com/",
+      "description": "The world's most popular Xbox Series X|S News & Reviews website, covering everything Xbox Game Pass, Xbox Series X and Xbox Series S along with retro/classic Xbox gaming.",
+      "followers": {
+        "facebook": 73500,
+        "twitter": 17100,
+        "instagram": 6300
+      },
+      "image_url": "https://i1.feedspot.com/5543224.jpg?t=1753792167"
+    },
+    {
+      "title": "GameRevolution \u00bb Halo",
+      "feed_url": "https://www.gamerevolution.com/tag/halo/feed",
+      "website_url": "https://www.gamerevolution.com/tag/halo",
+      "description": "GameRevolution seeks to match the high-speed ambitions of the gaming industry with a contemporary voice for a modern audience. Read the honest coverage of the gaming industry possible in the Halo section that is updated regularly by our specialized writers.",
+      "followers": {
+        "facebook": 36100,
+        "twitter": 10100,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5543225.jpg?t=1681726806"
+    },
+    {
+      "title": "GameInfinitus \u00bb Halo",
+      "feed_url": "https://gameinfinitus.com/tag/halo/feed/",
+      "website_url": "https://gameinfinitus.com/tag/halo/",
+      "description": "GameInfinitus provides gaming guides, news, patch notes, and reviews. In the Halo section, you will get a deep insight into the game and reviews articles written by the players and writers from the industry.",
+      "followers": {
+        "facebook": 133,
+        "twitter": 121
+      },
+      "image_url": "https://i1.feedspot.com/5543227.jpg?t=1681726802"
+    },
+    {
+      "title": "Infinite News",
+      "feed_url": "https://www.haloinfinitenews.com/blog-feed.xml",
+      "website_url": "https://www.haloinfinitenews.com/news",
+      "description": "Infinite News you will find analyses and discussions of the latest Halo Infinite news and details. I would also like to integrate it with Halo Infinite's API to deliver a complete database of all customization items with the exact unlock criteria to earn them.",
+      "followers": {
+        "twitter": 815
+      },
+      "image_url": "https://i1.feedspot.com/5543232.jpg?t=1681726797"
+    },
+    {
+      "title": "Dexerto \u00bb Halo",
+      "feed_url": "https://www.dexerto.com/halo//feed",
+      "website_url": "https://www.dexerto.com/halo/",
+      "description": "Dexerto is an entertainment media group that keeps over 100 million monthly fans engaged in trending topics across gaming, esports, TV & movies, tech, and social media. Discover the latest news surrounding Halo on the website in the Halo section.",
+      "followers": {
+        "facebook": 97500,
+        "twitter": 256300
+      },
+      "image_url": "https://i1.feedspot.com/5543223.jpg?t=1681726809"
+    }
+  ]
+}

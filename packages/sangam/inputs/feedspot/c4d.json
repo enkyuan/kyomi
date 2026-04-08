@@ -1,0 +1,120 @@
+{
+  "category": "c4d",
+  "source_url": "https://rss.feedspot.com/c4d_rss_feeds",
+  "feeds": [
+    {
+      "title": "C4Dzone Blog",
+      "feed_url": "https://www.c4dzone.com/en/feed/",
+      "website_url": "https://www.c4dzone.com/en/blog/",
+      "description": "C4Dzone is an online community and marketplace for users of the 3D modeling and animation software, Cinema 4D. They offer a range of resources and services to help users learn, collaborate, and share their work with others in the community through their blog.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 903,
+        "instagram": 644
+      },
+      "image_url": "https://i1.feedspot.com/5514314.jpg?t=1677584968"
+    },
+    {
+      "title": "The Pixel Lab Blog",
+      "feed_url": "https://www.thepixellab.net/feed",
+      "website_url": "https://greyscalegorilla.com/category/articles/",
+      "description": "Our goal at The Pixel Lab is to gather experts who can bring you the best tools, training, and assets to help you grow in your design career. The blog contains information about the software and technologies that will make your work easy and help in designing.",
+      "followers": {
+        "facebook": 14500,
+        "twitter": 17000,
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/4365705.jpg?t=1677585169"
+    },
+    {
+      "title": "Greyscalegorilla",
+      "feed_url": "https://greyscalegorilla.com/category/articles/feed/",
+      "website_url": "https://greyscalegorilla.com/category/articles/",
+      "description": "Get access to the best 3D industry and Cinema 4D knowledge base with Greyscalegorilla. Get industry insights, step-by-step instructions, tutorials, news and updates through their blog.",
+      "followers": {
+        "facebook": 67400,
+        "twitter": 34800,
+        "instagram": 142900
+      },
+      "image_url": "https://i1.feedspot.com/5514310.jpg?t=1678280881"
+    },
+    {
+      "title": "Nitro4d Blog",
+      "feed_url": "https://nitro4d.com/feed/",
+      "website_url": "https://nitro4d.com/blog/",
+      "description": "The Nitro4d Blog is dedicated to providing news, updates, and tutorials related to 3D modeling and animation, with a focus on the Nitro4D plugin suite for Cinema 4D. The author of the blog is is Lazaros, aka nitroman in the c4d community.",
+      "followers": {
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5514312.jpg?t=1677585010"
+    },
+    {
+      "title": "Lester Banks \u00bb c4d",
+      "feed_url": "https://lesterbanks.com/category/c4dtutorials/feed/",
+      "website_url": "https://lesterbanks.com/category/c4dtutorials/",
+      "description": "Lester banks.com is a blog that shares a daily resource for 3D Artists, Motion Designers, VFX Artists, c4d and people who love their craft and love to share techniques and tips.",
+      "followers": {
+        "twitter": 11700,
+        "instagram": 546
+      },
+      "image_url": "https://i1.feedspot.com/5514309.jpg?t=1677585080"
+    },
+    {
+      "title": "Cinema Plugins",
+      "feed_url": "https://cinemaplugins.com/feed/",
+      "website_url": "https://cinemaplugins.com/developers-diary/",
+      "description": "Paul Everett has been developing plugins for over 15 years and worked as a software developer for MAXON Computer GmbH, on projects such as MoGraph and others. Paul's plugins aspire to provide the CINEMA4D user with the tools they need, to go beyond the scope of the inbuilt tool set. Follow the cinema plugins blog and learn more about serval software and technologies.",
+      "followers": {
+        "facebook": 552,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5514316.jpg?t=1677584951"
+    },
+    {
+      "title": "Premium Beat Blog \u00bb Cinema 4D",
+      "feed_url": "https://www.premiumbeat.com/blog/category/cinema-4d/feed/",
+      "website_url": "https://www.premiumbeat.com/blog/category/cinema-4d/",
+      "description": "PremiumBeat by Shutterstock is a curated royalty-free music website that provides exclusive, high-quality tracks and sound effects for use in new and traditional media projects, including videos, films, apps, games, and television programming. Head to their blog of cinema 4d and get Tutorials and tips for 3D modeling and animating in Cinema 4D.",
+      "followers": {
+        "facebook": 155400,
+        "twitter": 15100,
+        "instagram": 16500
+      },
+      "image_url": "https://i1.feedspot.com/5514311.jpg?t=1678281071"
+    },
+    {
+      "title": "4DM Works Blog",
+      "feed_url": "https://4dm-works.com/feed/",
+      "website_url": "https://4dm-works.com/blog/",
+      "description": "4DM Works is a company that provides 3D scanning, modeling, and printing services. The services offered by the company, include 3D scanning of physical objects, 3D modeling of objects and environments, and 3D printing of models and prototypes.",
+      "followers": {
+        "twitter": 326,
+        "instagram": 113
+      },
+      "image_url": "https://i1.feedspot.com/5514313.jpg?t=1677585292"
+    },
+    {
+      "title": "Redshift Render Blog",
+      "feed_url": "http://redshiftrender.cgrecord.net/feeds/posts/default",
+      "website_url": "http://redshiftrender.cgrecord.net/",
+      "description": "Redshift Render Blog features articles on product designs, uses of cinema 4d, redshift 4d, past projects, special works, different tool reviews, and their proper usage. The website is dedicated to Redshift Render, a GPU-accelerated rendering software used in the field of 3D animation and visual effects.",
+      "followers": {
+        "facebook": 853,
+        "twitter": 1100,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5514317.jpg?t=1677585332"
+    },
+    {
+      "title": "MAXON SDK Support Blog",
+      "feed_url": "https://developers.maxon.net/?feed=rss2",
+      "website_url": "https://developers.maxon.net/?page_id=1126",
+      "description": "MAXON's SDK Support team would like to give you a warm welcome. We invite every developer to come to our forum and exchange about Cinema 4D plugin development. Our goal is to make your plugin development as easy as possible. head to our blog and read all the information about latest designing software, cinema 4d, news and updates.",
+      "followers": {
+        "twitter": 80300,
+        "instagram": 158900
+      },
+      "image_url": "https://i1.feedspot.com/5514315.jpg?t=1677585139"
+    }
+  ]
+}

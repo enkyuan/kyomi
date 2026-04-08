@@ -1,0 +1,29 @@
+{
+  "category": "Garfield Heights News",
+  "source_url": "https://rss.feedspot.com/garfield_heights_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "fox8.com \u00bb Garfield Heights",
+      "feed_url": "https://fox8.com/tag/garfield-heights-news/feed/",
+      "website_url": "https://fox8.com/tag/garfield-heights-news/",
+      "description": "Cleveland's source for news, weather, Cleveland Browns, Cleveland Indians, and Cleveland Cavaliers team updates. Get the latest News and updates in Garfield Heights at fox8.com.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 293700,
+        "instagram": 217600
+      },
+      "image_url": "https://i1.feedspot.com/5172070.jpg"
+    },
+    {
+      "title": "AmericanTowns.com \u00bb Garfield Heights",
+      "feed_url": "https://www.americantowns.com/garfield-heights-oh/rss/news/",
+      "website_url": "https://www.americantowns.com/garfield-heights-oh/news/",
+      "description": "AmericanTowns is a virtual 'town square', connecting you to all the events and news happening in Garfield Heights Ohio. Whether it's town issues and community activism, or school calendars and sports schedules, AmericanTowns delivers the information faster and helps you use it better.",
+      "followers": {
+        "facebook": 44600,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5172076.jpg"
+    }
+  ]
+}

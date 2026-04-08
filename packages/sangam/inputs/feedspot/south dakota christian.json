@@ -1,0 +1,60 @@
+{
+  "category": "South Dakota Christian",
+  "source_url": "https://rss.feedspot.com/south_dakota_christian_rss_feeds",
+  "feeds": [
+    {
+      "title": "Our Savior's Lutheran Church News",
+      "feed_url": "https://oslchurch.com/category/osl-news/feed/",
+      "website_url": "https://oslchurch.com/category/osl-news/",
+      "description": "Connecting Faith to Everyday Life",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7256751.jpg?t=1708437789"
+    },
+    {
+      "title": "Luther House of Study News",
+      "feed_url": "https://lutherhouseofstudy.org/feed/",
+      "website_url": "https://lutherhouseofstudy.org/news/",
+      "description": "Luther House of Study News offers theological reflections, personal ministry stories, and seasonal insights rooted in Lutheran tradition, aimed at supporting faith formation and seminary education.",
+      "followers": {
+        "facebook": 3000
+      },
+      "image_url": "https://i1.feedspot.com/7256749.jpg?t=1708436624"
+    },
+    {
+      "title": "Pastor Dan in South Dakota",
+      "feed_url": "https://daninsouthdakota.com/feed/",
+      "website_url": "https://daninsouthdakota.com/",
+      "description": "Life on the reservation",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7256754.jpg?t=1708437813"
+    },
+    {
+      "title": "Gloria Dei Lutheran Church Blog",
+      "feed_url": "https://gloriadeisf.org/feed/",
+      "website_url": "https://gloriadeisf.org/media/blog/",
+      "description": "Gather. Grow. Give. Go.",
+      "followers": {
+        "facebook": 1400
+      },
+      "image_url": "https://i1.feedspot.com/7256753.jpg?t=1708436645"
+    },
+    {
+      "title": "End Times Berean Blog",
+      "feed_url": "https://endtimesberean.com/feed/",
+      "website_url": "https://endtimesberean.com/blog-2/",
+      "description": "Research on Bible Prophecy, Biblical Archaeology, and Apologetics from Author Dr. Christian Widener",
+      "followers": {
+        "facebook": 132,
+        "twitter": 495
+      },
+      "image_url": "https://i1.feedspot.com/7256752.jpg?t=1708436637"
+    },
+    {
+      "title": "the ABELSES Blog",
+      "feed_url": "https://www.abels.life/blog?format=rss",
+      "website_url": "https://www.abels.life/blog",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7256750.jpg?t=1708437829"
+    }
+  ]
+}

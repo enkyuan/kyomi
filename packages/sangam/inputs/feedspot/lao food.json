@@ -1,0 +1,29 @@
+{
+  "category": "Lao Food",
+  "source_url": "https://rss.feedspot.com/lao_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Saeng's Kitchen",
+      "feed_url": "https://www.saengskitchen.com/laorecipes?format=rss",
+      "website_url": "https://www.saengskitchen.com/laorecipes",
+      "description": "Learn how to make authentic Lao food with Saeng's Kitchen recipes. Saeng Douangdara is a Los Angeles-based chef, video producer, and published writer. His philosophy around cooking is to make it approachable, educational, and fun! He hopes to use food as a catalyst to teach people about the history and cultures of underrepresented communities",
+      "followers": {
+        "facebook": 340400,
+        "instagram": 193800
+      },
+      "image_url": "https://i1.feedspot.com/5422192.jpg?t=1657950777"
+    },
+    {
+      "title": "Lao Food Foundation Blog",
+      "feed_url": "https://laofood.org/blog?format=rss",
+      "website_url": "https://laofood.org/blog",
+      "description": "A foundation to connect, learn, and be inspired by food from Laos. Our vision is for the cuisine from Lao(s) to be enjoyed and recognized as one of the great food traditions of the world. We preserve, promote, and innovate Lao cuisine by gathering people to build knowledge and understanding through research and documentation.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 35,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5420197.jpg?t=1659076421"
+    }
+  ]
+}

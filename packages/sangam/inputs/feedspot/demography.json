@@ -1,0 +1,71 @@
+{
+  "category": "Demography",
+  "source_url": "https://rss.feedspot.com/demography_rss_feeds",
+  "feeds": [
+    {
+      "title": "Carolina Demography Blog",
+      "feed_url": "https://carolinademography.cpc.unc.edu/feed/",
+      "website_url": "https://carolinademography.cpc.unc.edu/blog/",
+      "description": "Carolina Demography is made up of demographic researchers, evaluators, spatial analysts, coders, designers, and storytellers. We specialize in population estimates, forecasts, trend analysis, and communicating our findings in a way that's easy to understand and act upon. Keep up with our latest demographic insights.",
+      "followers": {
+        "facebook": 827,
+        "twitter": 2900,
+        "instagram": 237400
+      },
+      "image_url": "https://i1.feedspot.com/5301433.jpg?t=1626178385"
+    },
+    {
+      "title": "The Overpopulation Project Blog",
+      "feed_url": "https://overpopulation-project.com/blog/feed/",
+      "website_url": "https://overpopulation-project.com/blog/",
+      "description": "The aim of The Overpopulation Project (TOP) is to study and highlight the environmental impacts of overpopulation, including humane policies to end population growth around the world. Initiated in 2017 with a generous two-year grant from the Global Challenges Foundation, TOP plans to continue its work through donations from supporters.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5301607.jpg?t=1626249854"
+    },
+    {
+      "title": "Wittgenstein Centre News",
+      "feed_url": "https://www.wittgensteincentre.org/en/rss/blog.rss",
+      "website_url": "https://www.wittgensteincentre.org/en/news.htm",
+      "description": "News updates from Wittgenstein Centre. The Wittgenstein Centre aspires to be a world leader in the advancement of demographic methods and their application to the analysis of human capital and population dynamics.",
+      "followers": {
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5304568.jpg?t=1626954767"
+    },
+    {
+      "title": "Demotrends",
+      "feed_url": "https://demotrends.org/feed/",
+      "website_url": "https://demotrends.org/",
+      "description": "Demographic trends, research, resources, news, articles, and population related issues. Demotrends is written and curated by population researchers and is aimed at those with similar interests.",
+      "followers": {
+        "facebook": 446,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5304559.jpg?t=1626951068"
+    },
+    {
+      "title": "The Conversation \u00bb Demography",
+      "feed_url": "https://theconversation.com/topics/demography-375/articles.atom",
+      "website_url": "https://theconversation.com/topics/demography-375/",
+      "description": "Browse Demography news, research and analysis from The Conversation. Curated by professional editors, The Conversation offers informed commentary and debate on the issues affecting our world.",
+      "followers": {
+        "facebook": 396000,
+        "twitter": 8000
+      },
+      "image_url": "https://i1.feedspot.com/5301463.jpg?t=1626183316"
+    },
+    {
+      "title": "Informed Decisions Blog",
+      "feed_url": "https://blog.id.com.au/feed/",
+      "website_url": "https://blog.id.com.au/",
+      "description": "Demographic insights, tips, and news from the experts. Our specialists have deep expertise in demographics, economics, housing and population forecasting. They work closely with our team of spatial analysts and software developers to uncover and communicate stories of people and places.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5301442.jpg?t=1626181259"
+    }
+  ]
+}

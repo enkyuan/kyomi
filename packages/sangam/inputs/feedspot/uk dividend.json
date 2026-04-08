@@ -1,0 +1,76 @@
+{
+  "category": "UK Dividend",
+  "source_url": "https://rss.feedspot.com/uk_dividend_rss_feeds",
+  "feeds": [
+    {
+      "title": "UK Dividend Stocks Blog",
+      "feed_url": "https://www.ukdividendstocks.com/blog.rss",
+      "website_url": "https://www.ukdividendstocks.com/blog",
+      "description": "Hi! I'm John Kingham. This website exists to help people who want to invest in high-quality UK dividend stocks. It does this by publishing educational, informative, and hopefully entertaining content covering both the theoretical and practical side of investing in quality dividend stocks.",
+      "followers": {
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/5354335.jpg?t=1639807814"
+    },
+    {
+      "title": "Steady \u00bb Dividend",
+      "feed_url": "https://steadyhq.com/dividends/rss",
+      "website_url": "https://steadyhq.com/en/dividends/posts",
+      "description": "Best Investment Site For Free Dividend Yield and Price to Earning Lists of High And Best Dividend Stocks.",
+      "followers": {
+        "facebook": 445
+      },
+      "image_url": "https://i1.feedspot.com/756014.jpg?t=1608269716"
+    },
+    {
+      "title": "Quietly Saving \u00bb Dividend Investing",
+      "feed_url": "http://quietlysaving.co.uk/category/dividend-investing/feed/",
+      "website_url": "http://quietlysaving.co.uk/category/dividend-investing/",
+      "description": "Read articles on Dividend Investing by Quietly Saving in this segment of the blog. Saving and investing so early retirement is an option. Balancing life enjoyment 'now' with investing for 'later'. Hi! I'm Weenie. This blog is not a 'how-to' guide and doesn't give advice, it's just a journal documenting my progress, plus some of my occasionally mad thoughts and ideas.",
+      "followers": {
+        "twitter": 943
+      },
+      "image_url": "https://i1.feedspot.com/4910549.jpg?t=1647415554"
+    },
+    {
+      "title": "Roland Head",
+      "feed_url": "https://www.rolandhead.com/rss/",
+      "website_url": "https://www.rolandhead.com/",
+      "description": "Searching for the best UK dividend stocks",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7317645.jpg"
+    },
+    {
+      "title": "Maynard Paton",
+      "feed_url": "https://maynardpaton.com/feed/",
+      "website_url": "https://maynardpaton.com/",
+      "description": "The investing blog of Maynard Paton. I look for respectable companies run by capable managers trading at modest valuations to hold for the long term.",
+      "followers": {
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4546768.jpg?t=1614746661"
+    },
+    {
+      "title": "UK Value Investor | For dividend-focused value investors",
+      "feed_url": "https://ukvalueinvestor.com/feed/",
+      "website_url": "https://ukvalueinvestor.com/",
+      "description": "Hello. My name is John Kingham and I'm the founder and editor of UK Value Investor. I publish a monthly investment newsletter for defensive and dividend-focused value investors. It's mission is to provide investors with tools and information to help them build high quality, high yield portfolios. Follow my website as I provide investors with dividend focused information.",
+      "followers": {
+        "facebook": 259,
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4749811.jpg?t=1608268160"
+    },
+    {
+      "title": "The Motley Fool UK \u00bb Dividends",
+      "feed_url": "https://www.fool.co.uk/tag/dividends/feed/",
+      "website_url": "https://www.fool.co.uk/tag/dividends/",
+      "description": "Stock market news on UK dividend shares. The Motley Fools publishes dozens of articles each week covering company results, share ideas, portfolio management, and asset allocation.",
+      "followers": {
+        "facebook": 13500,
+        "twitter": 19600
+      },
+      "image_url": "https://i1.feedspot.com/5354333.jpg?t=1639729490"
+    }
+  ]
+}

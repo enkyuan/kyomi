@@ -1,0 +1,353 @@
+{
+  "category": "Cloud Security",
+  "source_url": "https://rss.feedspot.com/cloud_security_rss_feeds",
+  "feeds": [
+    {
+      "title": "Help Net Security \u00bb Cloud security",
+      "feed_url": "https://www.helpnetsecurity.com/tag/cloud_security/feed/",
+      "website_url": "https://www.helpnetsecurity.com/tag/cloud_security/",
+      "description": "Information security news with a focus on cloud security. Discover what matters in the world of cloud security today by following our feed.",
+      "followers": {
+        "twitter": 58200
+      },
+      "image_url": "https://i1.feedspot.com/5039945.jpg?t=1622463402"
+    },
+    {
+      "title": "McAfee \u00bb Cloud Security",
+      "feed_url": "https://www.skyhighsecurity.com/feed",
+      "website_url": "https://www.skyhighsecurity.com/about/newsroom/blogs.html",
+      "description": "The most critical step of accelerating your business with cloud services is protecting your data. This blog category provides security professionals with information on the threats they face in the cloud, leading approaches to protecting data, and the latest technology built to secure the cloud. Follow our feed to know more.",
+      "followers": {
+        "facebook": 820900,
+        "twitter": 116900
+      },
+      "image_url": "https://i1.feedspot.com/5040085.jpg?t=1622463415"
+    },
+    {
+      "title": "Forrester \u00bb Cloud Security",
+      "feed_url": "https://go.forrester.com/blogs/category/cloud-security/feed/",
+      "website_url": "https://go.forrester.com/blogs/category/cloud-security/",
+      "description": "Posts on cloud security from Forrester. Follow to keep up with the latest updates.",
+      "followers": {
+        "facebook": 33200,
+        "twitter": 354300
+      },
+      "image_url": "https://i1.feedspot.com/5040089.jpg?t=1622463423"
+    },
+    {
+      "title": "The Equinix \u00bb Cloud Security",
+      "feed_url": "https://blog.equinix.com/blog/tag/cloud-security/feed/",
+      "website_url": "https://blog.equinix.com/blog/tag/cloud-security/",
+      "description": "Cloud Security related news updates from Equinix. Follow to get updates.",
+      "followers": {
+        "facebook": 41000,
+        "twitter": 26500
+      },
+      "image_url": "https://i1.feedspot.com/5039952.jpg?t=1622463434"
+    },
+    {
+      "title": "eSecurityPlanet",
+      "feed_url": "https://www.esecurityplanet.com/cloud/feed/",
+      "website_url": "https://www.esecurityplanet.com/cloud/",
+      "description": "Blog posts on cloud security from eSecurity Planet. eSecurityPlanet is the IT professional's top choice for Internet security news and analysis, technical tutorials, product reviews, and buying guides.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/5310217.jpg?t=1628319747"
+    },
+    {
+      "title": "Sysdig Blog",
+      "feed_url": "https://sysdig.com/feed/",
+      "website_url": "https://sysdig.com/blog/",
+      "description": "Only Sysdig has the deep visibility needed to see all threats, vulnerabilities, and suspicious activity. Sysdig is a SaaS platform built on an open-source stack. Explore Sysdig resources for whitepapers, videos, webinars, case studies, and more. Embed security, compliance, and monitoring into DevOps workflows.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 10100
+      },
+      "image_url": "https://i1.feedspot.com/5124694.jpg?t=1608094602"
+    },
+    {
+      "title": "Sonra\u00ed Security Blog",
+      "feed_url": "https://sonraisecurity.com/feed/",
+      "website_url": "https://sonraisecurity.com/blog/",
+      "description": "Sonrai Security delivers an enterprise security platform focused on identity and data protection inside AWS, Azure, and Google Cloud. We can show you all the ways data has been accessed in the past and can be accessed in the future.",
+      "followers": {
+        "facebook": 99,
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/5119227.jpg?t=1622463487"
+    },
+    {
+      "title": "Managed Methods",
+      "feed_url": "https://managedmethods.com/feed/",
+      "website_url": "https://managedmethods.com/blog/category/cloud-security/",
+      "description": "Explore the ManagedMethods blog to get the latest cloud security news, information, and tips. Subscribe this feed to get updates.",
+      "followers": {
+        "facebook": 68,
+        "twitter": 607,
+        "instagram": 254
+      },
+      "image_url": "https://i1.feedspot.com/5040090.jpg"
+    },
+    {
+      "title": "InfoQ \u00bb Cloud Security",
+      "feed_url": "https://feed.infoq.com/Cloud-Security",
+      "website_url": "https://www.infoq.com/cloud-security/",
+      "description": "Posts on cloud security news, Analysis from InfoQ. Follow to keep up with latest from this feed.",
+      "followers": {
+        "facebook": 21500,
+        "twitter": 57100
+      },
+      "image_url": "https://i1.feedspot.com/5040201.jpg?t=1622463430"
+    },
+    {
+      "title": "Qualys \u00bb Cloud security",
+      "feed_url": "https://blog.qualys.com/tag/cloud-security/feed",
+      "website_url": "https://blog.qualys.com/tag/cloud-security",
+      "description": "Guidance, news, and information from the cloud security experts on the Qualys research team. Follow to get notify.",
+      "followers": {
+        "facebook": 6600,
+        "twitter": 33000
+      },
+      "image_url": "https://i1.feedspot.com/5040092.jpg?t=1622463442"
+    },
+    {
+      "title": "Resilient Cyber",
+      "feed_url": "https://www.resilientcyber.io/feed",
+      "website_url": "https://www.resilientcyber.io/",
+      "description": "Cybersecurity, Cloud, DevSecOps and Software Supply Chain Security",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F71894ea3-c231-4d31-90a9-414d75111d0e_1280x1280.png"
+    },
+    {
+      "title": "Threatpost \u00bb Cloud Security",
+      "feed_url": "https://threatpost.com/category/cloud-security/feed/",
+      "website_url": "https://threatpost.com/category/cloud-security/",
+      "description": "Cloud security news, conversations, and analysis from around the world. Follow to keep up with the latest updates related to Cloud security.",
+      "followers": {
+        "facebook": 21800,
+        "twitter": 225000,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5039936.jpg?t=1622463380"
+    },
+    {
+      "title": "Hybrid Cloud Tech \u00bb Security",
+      "feed_url": "https://hybridcloudtech.com/category/security/feed/",
+      "website_url": "https://hybridcloudtech.com/category/security/",
+      "description": "We give you updates on how to protect digital content, mobile apps, connected cars, and your revenue! Info on different software security and business intelligence solutions.",
+      "followers": {
+        "facebook": 535,
+        "twitter": 580
+      },
+      "image_url": "https://i1.feedspot.com/5040185.jpg?t=1622463501"
+    },
+    {
+      "title": "Hacker Combat \u00bb Cloud Security",
+      "feed_url": "https://www.hackercombat.com/category/cloud-security/feed/",
+      "website_url": "https://www.hackercombat.com/category/cloud-security/",
+      "description": "Hacker combat provides frequent updates on cloud security, cyber attacks, hacking, and exclusive events. Explore the latest news and security stories from around the world.",
+      "followers": {
+        "facebook": 19400,
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/5040183.jpg?t=1622463455"
+    },
+    {
+      "title": "CloudCodes \u00bb Cloud Security",
+      "feed_url": "https://www.cloudcodes.com/blog/category/cloud-security/feed",
+      "website_url": "https://www.cloudcodes.com/blog/category/cloud-security",
+      "description": "Get the latest cloud security news and tips from CloudCodes. Follow to keep up with new updates.",
+      "followers": {
+        "facebook": 883,
+        "twitter": 386
+      },
+      "image_url": "https://i1.feedspot.com/5040193.jpg?t=1622463483"
+    },
+    {
+      "title": "CSO Online \u00bb Cloud Security",
+      "feed_url": "https://www.csoonline.com/cloud-security/",
+      "website_url": "https://www.csoonline.com/cloud-security/",
+      "description": "Cloud Security information, news and advice from CSO Online. Find out more about cloud security by following our feed.",
+      "followers": {
+        "facebook": 18000,
+        "twitter": 63400
+      },
+      "image_url": "https://i1.feedspot.com/5039937.jpg?t=1622463385"
+    },
+    {
+      "title": "SC Media",
+      "feed_url": "https://www.scworld.com/",
+      "website_url": "https://www.scworld.com/",
+      "description": "Find the latest news, analysis & opinions about cloud security at SC Media. Find out more about Cloud Security by following our feed.",
+      "followers": {
+        "facebook": 12000,
+        "twitter": 119900
+      },
+      "image_url": "https://i1.feedspot.com/5039939.jpg?t=1622463407"
+    },
+    {
+      "title": "SecureWorld News \u00bb Cloud Security",
+      "feed_url": "https://www.secureworldexpo.com/industry-news/topic/cloud-security/rss.xml",
+      "website_url": "https://www.secureworld.io/industry-news/topic/cloud-security",
+      "description": "SecureWorld News is your trusted source for the valuable cloud security information you depend on. Our coverage spans the InfoSec industry, with content ranging from breaking news and original articles to exclusive research and expert interviews.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/5040167.jpg?t=1622463463"
+    },
+    {
+      "title": "Dark Reading \u00bb Cloud Security",
+      "feed_url": "https://www.darkreading.com/rss_simple.asp?f_n=647&f_ln=Cloud",
+      "website_url": "https://www.darkreading.com/cloud-security",
+      "description": "Cloud security community discusses security threats and issues to cloud computing environments, including exploits and vulnerabilities in public cloud services, private, and hybrid networks. Follow to get more updates.",
+      "followers": {
+        "facebook": 27200,
+        "twitter": 338900
+      },
+      "image_url": "https://i1.feedspot.com/5039942.jpg?t=1622463389"
+    },
+    {
+      "title": "IBM Cloud computing news \u00bb Security",
+      "feed_url": "https://www.ibm.com/blogs/cloud-computing/category/security/feed/",
+      "website_url": "https://www.ibm.com/think/security",
+      "description": "All the latest news on cloud security from IBM Cloud computing. Follow to keep up with new updates.",
+      "followers": {
+        "facebook": 239300,
+        "twitter": 233800
+      },
+      "image_url": "https://i1.feedspot.com/5040078.jpg?t=1622463398"
+    },
+    {
+      "title": "Oracle \u00bb Cloud Security Perspectives and Insights",
+      "feed_url": "https://blogs.oracle.com/cloudsecurity/compendium/rss",
+      "website_url": "https://blogs.oracle.com/cloudsecurity/",
+      "description": "The Oracle Cloud Security blog features insights on industry trends and cybersecurity challenges. Discussing best practices and strategies to ensure comprehensive compliance and security for hybrid cloud. Follow to get updates.",
+      "followers": {
+        "facebook": 49300,
+        "twitter": 8100,
+        "instagram": 378500
+      },
+      "image_url": "https://i1.feedspot.com/5040081.jpg?t=1622463411"
+    },
+    {
+      "title": "Palo Alto Networks Blog \u00bb Cloud Security",
+      "feed_url": "https://www.paloaltonetworks.com/blog/tag/cloud-security/",
+      "website_url": "https://www.paloaltonetworks.com/blog/tag/cloud-security/",
+      "description": "Articles related to Cloud security from Palo Alto Networks. Follow to keep up with new updates.",
+      "followers": {
+        "facebook": 51800,
+        "twitter": 127100
+      },
+      "image_url": "https://i1.feedspot.com/5040146.jpg?t=1622463419"
+    },
+    {
+      "title": "Check Point Software \u00bb Cloud Security",
+      "feed_url": "https://blog.checkpoint.com/category/cloud-security/feed/",
+      "website_url": "https://blog.checkpoint.com/category/cloud-security/",
+      "description": "Cloud Security-related updates from Check Point Software. Follow to keep up with latest from this feed.",
+      "followers": {
+        "facebook": 55500,
+        "twitter": 71200
+      },
+      "image_url": "https://i1.feedspot.com/5040143.jpg?t=1622463427"
+    },
+    {
+      "title": "CDNetworks \u00bb Cloud Security",
+      "feed_url": "https://www.cdnetworks.com/category/cloud-security-blog/feed/",
+      "website_url": "https://www.cdnetworks.com/category/cloud-security-blog/",
+      "description": "All the latest CDNetworks content related to cloud security. Follow to get more updates.",
+      "followers": {
+        "facebook": 20800,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5040180.jpg?t=1622463446"
+    },
+    {
+      "title": "Bitglass \u00bb Cloud Security",
+      "feed_url": "https://www.forcepoint.com/rss.xml",
+      "website_url": "https://www.forcepoint.com/blog",
+      "description": "The Bitglass blog covers timely topics related to SaaS & cloud security for enterprises. Bitglass helps enterprise IT to enable cloud and mobile apps without sacrificing security. Follow to get updates.",
+      "followers": {
+        "facebook": 360,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5040096.jpg?t=1622463459"
+    },
+    {
+      "title": "Threat Stack \u00bb Cloud Security",
+      "feed_url": "https://www.threatstack.com/blog/tag/cloud-security/feed",
+      "website_url": "https://www.f5.com/company/blog",
+      "description": "Cloud security news, conversations, and analysis from around the world. Find out more about cloud security by following our feed.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5040080.jpg?t=1622463467"
+    },
+    {
+      "title": "Cloud Pro \u00bb Security",
+      "feed_url": "https://futureplc.com/",
+      "website_url": "https://www.itpro.com/cloud",
+      "description": "All of the latest news, features, articles, and information on Cloud Security. Follow to keep up with new updates.",
+      "followers": {
+        "facebook": 753,
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/5039940.jpg?t=1622463471"
+    },
+    {
+      "title": "Locuz Blog",
+      "feed_url": "https://cybersecurityminute.com/security-blogs/category/cloud-security/",
+      "website_url": "https://cybersecurityminute.com/security-blogs/category/cloud-security/",
+      "description": "Articles on Cloud compuing and security from Locuz. Locuz specializes in offering customized solutions in Virtualization, High-Performance Computing and Cloud Services.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 295
+      },
+      "image_url": "https://i1.feedspot.com/5307978.jpg?t=1627905473"
+    },
+    {
+      "title": "Cyber Security Minute \u00bb Cloud Security",
+      "feed_url": "https://cybersecurityminute.com/security-blogs/category/cloud-security/feed/",
+      "website_url": "https://cybersecurityminute.com/security-blogs/category/cloud-security/",
+      "description": "Cyber Security Minute delivers constantly updated press releases and blog posts covering today's cloud security issues. Whether you're looking for updates on the latest cloud security threats, or for new solutions to protect your business, our editorial team will keep you informed with a fresh stream of news. Find out more by following our feed.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5040179.jpg?t=1622463607"
+    },
+    {
+      "title": "RicksCloudAI \u00bb Cloud Security",
+      "feed_url": "https://rickscloud.ai/category/cloud-security/feed/",
+      "website_url": "https://rickscloud.ai/category/cloud-security/",
+      "description": "Learn about cloud security best practices and keep up to date with the latest news on cloud computing services and applications for enterprises.",
+      "followers": {
+        "facebook": 153,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5039949.jpg?t=1622463514"
+    },
+    {
+      "title": "ITcloud Demand \u00bb Cloud-Security",
+      "feed_url": "https://www.itclouddemand.com/tag/cloud-security/feed/",
+      "website_url": "https://www.itclouddemand.com/tag/cloud-security/",
+      "description": "ITcloud Demand is an online content publishing platform which encourages cloud technology users by providing a unique environment for gathering and sharing information concerning cloud security. Follow to keep up with latest from this feed.",
+      "followers": {
+        "facebook": 487
+      },
+      "image_url": "https://i1.feedspot.com/5040242.jpg?t=1622463779"
+    },
+    {
+      "title": "Nubeva \u00bb Cloud Security",
+      "feed_url": "https://www.nubeva.com/blog/tag/cloud-security/rss.xml",
+      "website_url": "https://www.nubeva.com/en/blog",
+      "description": "Nubeva provides all cloud security-related information. Follow to keep up with latest from this feed.",
+      "followers": {
+        "facebook": 118,
+        "twitter": 528
+      },
+      "image_url": "https://i1.feedspot.com/5040153.jpg?t=1622463808"
+    }
+  ]
+}

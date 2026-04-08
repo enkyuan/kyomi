@@ -1,0 +1,726 @@
+{
+  "category": "eSports",
+  "source_url": "https://rss.feedspot.com/esports_rss_feeds",
+  "feeds": [
+    {
+      "title": "Esports Insider",
+      "feed_url": "https://esportsinsider.com/feed",
+      "website_url": "https://esportsinsider.com/",
+      "description": "Esports Insider offers the latest news from across the esports industry including interviews, tournament previews, reviews, opinion pieces and events listings. It is the go-to for the esports business. Esports Insider covers esports industry news and produces features, podcasts, newsletters and insights.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 22100,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4911683.jpg?t=1620191781"
+    },
+    {
+      "title": "The Dotabuff Blog",
+      "feed_url": "https://www.dotabuff.com/blog.rss",
+      "website_url": "https://www.dotabuff.com/blog",
+      "description": "Dotabuff is the leading statistics and community website for Dota 2. It is the place where millions of Dota 2 players get in-depth statistics, share games, replays and better understand the game we all love.",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 66700
+      },
+      "image_url": "https://i1.feedspot.com/4921611.jpg?t=1620191785"
+    },
+    {
+      "title": "Toornament Blog",
+      "feed_url": "https://blog.toornament.com/feed/",
+      "website_url": "https://blog.toornament.com/",
+      "description": "Toornament is the perfect platform to connect the esports actors around a common passion! From the community tournaments to the pro events, we provide a solution for organizers to run tournaments, and give players a good experience while participating.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 7400
+      },
+      "image_url": "https://i1.feedspot.com/4956139.jpg?t=1620191789"
+    },
+    {
+      "title": "ESTNN",
+      "feed_url": "https://estnn.com/feed/",
+      "website_url": "https://estnn.com/",
+      "description": "We are dedicated to providing esports news, live streams, tournament coverage, event details and all aspects of esports to our users in a fast & friendly environment. We write breaking news articles, we provide tournament coverage, we share popular Twitch streams and aggregate esports news from the top publications at lightning speed.",
+      "followers": {
+        "facebook": 19400,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4953617.jpg?t=1642228682"
+    },
+    {
+      "title": "Esports News UK",
+      "feed_url": "https://esports-news.co.uk/feed/",
+      "website_url": "https://esports-news.co.uk/",
+      "description": "Esports News UK features the latest stories, match reports, interviews and videos covering the UK esports scene.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 10300,
+        "instagram": 855
+      },
+      "image_url": "https://i1.feedspot.com/4911872.jpg?t=1620191799"
+    },
+    {
+      "title": "Esportimes",
+      "feed_url": "https://esportimes.com/en/feed/",
+      "website_url": "https://esportimes.com/en/",
+      "description": "Esportimes was established to deliver news about hardware, software and the game world to visitors. Our aim is to contribute to the development of the sector in the most accurate way and to share the innovations, developments and breaking news with our valuable visitors.",
+      "followers": {
+        "facebook": 269,
+        "twitter": 5600,
+        "instagram": 24100
+      },
+      "image_url": "https://i1.feedspot.com/5362820.jpg?t=1642241538"
+    },
+    {
+      "title": "Esports.net",
+      "feed_url": "https://www.esports.net/feed/",
+      "website_url": "https://www.esports.net/",
+      "description": "At Esports.net we are determined to filter out all of the misleading information to give you all of the facts you need about your favourite esport title. Our resource is packed full of everything from the latest gaming rumours to the most exciting esports trends. We are committed to giving you everything you need to boost your understanding of competitive gaming.",
+      "followers": {
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/5362808.jpg?t=1642240991"
+    },
+    {
+      "title": "G2 Esports Blog",
+      "feed_url": "https://g2esports.com/blogs/news.atom",
+      "website_url": "https://g2esports.com/blogs/news",
+      "description": "G2 Esports is one of the leading entertainment assets in esports, bringing together some of the best competitive players in the world and the biggest personalities in gaming. Though we are competitors at heart, we strive to entertain and produce quality content for you.",
+      "followers": {
+        "facebook": 452900,
+        "twitter": 1600000
+      },
+      "image_url": "https://i1.feedspot.com/5362814.jpg?t=1642243693"
+    },
+    {
+      "title": "Global Esport News",
+      "feed_url": "https://www.global-esports.news/feed/",
+      "website_url": "https://www.global-esports.news/",
+      "description": "Global-esports news is your place to be for the latest esports news. Get the latest news on all Esport and Gaming Updates. The gaming news categories you can explore are general, call of duty, world of warcraft, and more.",
+      "followers": {
+        "facebook": 667,
+        "twitter": 55,
+        "instagram": 782
+      },
+      "image_url": "https://i1.feedspot.com/5362817.jpg?t=1642240964"
+    },
+    {
+      "title": "Sooner Esports News",
+      "feed_url": "https://sooneresports.org/news/feed/",
+      "website_url": "https://sooneresports.org/news/",
+      "description": "Sooner Esports is the Official Esports & Co-Curricular Innovation department at The University of Oklahoma. Showcasing articles, reviews, opinion pieces, debates, and events on esports from the team on Media & News.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 1700,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5362821.jpg?t=1642241678"
+    },
+    {
+      "title": "GameWatcher",
+      "feed_url": "https://www.gamewatcher.com/feeds/rss",
+      "website_url": "https://www.gamewatcher.com/",
+      "description": "GameWatcher is an online PC-based publication that offers PC gaming enthusiasts the latest news, reviews, and features with enthusiasm, integrity, and style. With the growing popularity of Steam and other distribution services, as well as the rise of YouTube and Twitch streaming, PC gaming has become the most exciting market in the industry.",
+      "followers": {
+        "facebook": 293,
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/4757907.jpg?t=1642246691"
+    },
+    {
+      "title": "Dot Esports",
+      "feed_url": "https://dotesports.com/feed",
+      "website_url": "https://dotesports.com/esports",
+      "description": "On Dot Esports you'll find quality breaking news, investigative reporting, tournament coverage, and analysis of every important event within the esports world. And also read high-quality gaming guides, reviews of gaming gear, and interviews with top streamers.",
+      "followers": {
+        "facebook": 966200,
+        "twitter": 52000,
+        "instagram": 19500
+      },
+      "image_url": "https://i1.feedspot.com/5242251.jpg?t=1642246430"
+    },
+    {
+      "title": "dbltap",
+      "feed_url": "https://www.dbltap.com/posts.rss",
+      "website_url": "https://www.dbltap.com/",
+      "description": "DBLTAP gives esports fans news from authentic and expert voices. We aim to help esports grow by being the most reliable source for news, features, videos and game updates. We go beyond stats and scores and find the most interesting and important aspects of esports to bring to our readers.",
+      "followers": {
+        "facebook": 21400,
+        "twitter": 63500
+      },
+      "image_url": "https://i1.feedspot.com/5362798.jpg?t=1642252417"
+    },
+    {
+      "title": "British Esports Association",
+      "feed_url": "https://britishesports.org/feed/",
+      "website_url": "https://britishesports.org/the-hub/news/",
+      "description": "British Esports is a not-for-profit national body established in 2016 to promote esports in the UK, increase its level of awareness, improve standards and inspire future talent. We help to educate parents, teachers, media, policymakers and government around what esports is and what its benefits are. Our aims are to support esports and provide expertise and advice.",
+      "followers": {
+        "twitter": 14500
+      },
+      "image_url": "https://i1.feedspot.com/5362810.jpg?t=1642245954"
+    },
+    {
+      "title": "European Gaming Media",
+      "feed_url": "https://europeangaming.eu/portal/feed/",
+      "website_url": "https://europeangaming.eu/",
+      "description": "At European Gaming Media, our mission is to provide premium news, compliance updates, live networking & educational events, interviews and services that empower gaming companies around the world to participate in the industry we are all building together. Read the latest daily news, press releases, compliance updates, interviews and more.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 2800,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5273439.jpg?t=1642246229"
+    },
+    {
+      "title": "The Game Haus",
+      "feed_url": "https://thegamehaus.com/feed/",
+      "website_url": "https://thegamehaus.com/",
+      "description": "The Game Haus is a one-stop shop for opinionated sports and esports coverage. Follow to get hot commentary on NBA, MLB, NFL, NCAAF, League of Legends, Hearthstone, Fortnite, Overwatch, and more.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5088617.jpg?t=1620191838"
+    },
+    {
+      "title": "Talk Esport",
+      "feed_url": "https://www.talkesport.com/feed/",
+      "website_url": "https://www.talkesport.com/",
+      "description": "TalkEsport, in brief is Indian eSports and videogaming media hub which covers news, entertainments, interactive interviews and important coverages from DotA II, CS:GO & LOL.",
+      "followers": {
+        "facebook": 142100,
+        "twitter": 1400,
+        "instagram": 96400
+      },
+      "image_url": "https://i1.feedspot.com/4911869.jpg?t=1620191821"
+    },
+    {
+      "title": "EsportsBets News",
+      "feed_url": "https://www.esportsbets.com/feed/",
+      "website_url": "https://www.esportsbets.com/news/",
+      "description": "Keep up with news and information from EsportsBets.com.",
+      "followers": {
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5069592.jpg?t=1620191881"
+    },
+    {
+      "title": "Esportsbetting News",
+      "feed_url": "https://esportsbetting.gg/feed",
+      "website_url": "https://esportsbetting.gg/news",
+      "description": "Esportsbetting.gg is your esports gambling guide. Get the best betting sites, odds, promotions, and predictions for successful esports bets. We offer the latest esports promotions and news from the biggest and most popular sportsbooks and media in the world. Don't miss out!",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/5225911.jpg?t=1607438458"
+    },
+    {
+      "title": "Esports Wales",
+      "feed_url": "https://esportswales.org/feed/",
+      "website_url": "https://esportswales.org/",
+      "description": "Esports Wales is a gaming organisation setup to help promote and grow esports and gaming in Wales.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 6000,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5036183.jpg?t=1642233217"
+    },
+    {
+      "title": "The Esports Advocate",
+      "feed_url": "https://esportsadvocate.net/feed/",
+      "website_url": "https://esportsadvocate.net/",
+      "description": "Esports business news and analysis are the DNA of The Esports Advocate. Investment | Sponsorship | Industry Insights | Executive Interviews",
+      "followers": {
+        "facebook": 23,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/8544972.jpg?t=1753108867"
+    },
+    {
+      "title": "National Esports Tournament",
+      "feed_url": "https://nesthq.ca/feed/",
+      "website_url": "https://nesthq.ca/blog/",
+      "description": "The NESTHQ blog from Canada's National Esports Tournament (NEST) delivers updates on gaming events, tournaments, community gatherings, and tech networking.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8544968.jpg?t=1753108859"
+    },
+    {
+      "title": "Kai Waehner \u00bb Esports",
+      "feed_url": "https://www.kai-waehner.de/feed/",
+      "website_url": "https://www.kai-waehner.de/blog/category/esports/",
+      "description": "Blog about architectures, best practices and use cases for data streaming, analytics, hybrid cloud infrastructure, internet of things, crypto, and more",
+      "followers": {
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/8544971.jpg?t=1753108865"
+    },
+    {
+      "title": "North Carolina Esports Academy Blog",
+      "feed_url": "https://ncesportsacademy.com/feed/",
+      "website_url": "https://ncesportsacademy.com/blog/",
+      "description": "North Carolina Esports Academy | Blog",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8544967.jpg?t=1753108859"
+    },
+    {
+      "title": "GRID Esports",
+      "feed_url": "https://blog.grid.gg/feed",
+      "website_url": "https://blog.grid.gg/",
+      "description": "GRID is a data platform specializing in esports data and technology. It provides an easily deployable in-game data infrastructure and a robust distribution and monetization network to game publishers and tournament organizers and official data to customers.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/8544969.jpg?t=1753108860"
+    },
+    {
+      "title": "Gaming Concepts",
+      "feed_url": "https://www.gamingconcepts.gg/blog-feed.xml",
+      "website_url": "https://www.gamingconcepts.gg/esports-blog/",
+      "description": "Enhance high school & middle school education with the Gaming Concepts Curriculum: Discover STEM and CTE curriculum integration, esports training, and tournament opportunities. Boost student engagement with our peer-approved video gaming courses, fostering life skills while competing for scholarships in a vibrant esports community.",
+      "followers": {
+        "facebook": 271,
+        "twitter": 119
+      },
+      "image_url": "https://i1.feedspot.com/8544961.jpg?t=1753108842"
+    },
+    {
+      "title": "Esports Commentator",
+      "feed_url": "https://esportscommentator.blogspot.com/feeds/posts/default",
+      "website_url": "https://esportscommentator.blogspot.com/#google_vignette/",
+      "description": "Mind Sports South Africa's (MSSA) blog on competitive gaming in South Africa from proto-computer gaming all the way through to the most modern. Here. you can learn and know about different championships like the African regional championship, Limpopo online esports championship, and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5439647.jpg?t=1663841438"
+    },
+    {
+      "title": "Esports Rambles",
+      "feed_url": "https://esportsrambles.com/blog?format=rss",
+      "website_url": "https://esportsrambles.com/blog/",
+      "description": "Browse through all the blogs regarding Counter-Strike, Dota 2 and more.",
+      "followers": {
+        "facebook": 21,
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/8544970.jpg?t=1753108862"
+    },
+    {
+      "title": "Esport Supply Blog",
+      "feed_url": "https://www.esportsupply.com/esports-resources/feed/",
+      "website_url": "https://www.esportsupply.com/esports-resources/",
+      "description": "Esport Supply offers some of the most comprehensive, authoritative esports resources available. Start exploring our content now!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8544955.jpg?t=1753108830"
+    },
+    {
+      "title": "Esports Gear Blog",
+      "feed_url": "https://esportsgear.uk/blogs/all.atom",
+      "website_url": "https://esportsgear.uk/blogs/all/",
+      "description": "Esports Gear UK is a community-driven resource featuring product reveals, buying guides, tech explainers, unboxings, and brand news",
+      "followers": {
+        "twitter": 4900,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/8544963.jpg?t=1753108849"
+    },
+    {
+      "title": "EsportsNext Magazine",
+      "feed_url": "https://esportsta.org/feed/",
+      "website_url": "https://esportsta.org/magazine/",
+      "description": "Discover the latest trends, insights, and industry news in the 2024 EsportsNext Magazine. Explore in-depth articles, expert interviews, and innovative strategies shaping the future of esports.",
+      "followers": {
+        "facebook": 581,
+        "instagram": 623
+      },
+      "image_url": "https://i1.feedspot.com/8544958.jpg?t=1753108836"
+    },
+    {
+      "title": "Esports Africa News",
+      "feed_url": "https://esportsafricanews.com/feed/",
+      "website_url": "https://esportsafricanews.com/",
+      "description": "Home to Esports News from all over Africa.",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/8544959.jpg?t=1753108839"
+    },
+    {
+      "title": "Inquirer.net \u00bb Esports",
+      "feed_url": "https://esports.inquirer.net/feed",
+      "website_url": "https://esports.inquirer.net/",
+      "description": "Get the latest esports news and pro-gaming tournament coverage for LoL, Dota 2 and Hearthstone.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 3800000,
+        "instagram": 347800
+      },
+      "image_url": "https://i1.feedspot.com/4962203.jpg?t=1760531597"
+    },
+    {
+      "title": "Traxion \u00bb Esports",
+      "feed_url": "https://traxion.gg/feed/",
+      "website_url": "https://traxion.gg/category/esports/",
+      "description": "Traxion is a collective of racing, esports, and gaming enthusiasts. Bringing you the latest news, reviews, updates, opinions, and insight from the most recognized and respected names from the world of racing games. Our mission is to build a positive community of likeminded gamers, sim racers, and fans supporting each other.",
+      "followers": {
+        "facebook": 23700,
+        "twitter": 25500,
+        "instagram": 12400
+      },
+      "image_url": "https://i1.feedspot.com/5456782.jpg?t=1665738910"
+    },
+    {
+      "title": "Irish Tech News \u00bb eSports",
+      "feed_url": "https://irishtechnews.ie/category/gaming/esports/feed/",
+      "website_url": "https://irishtechnews.ie/category/gaming/esports/",
+      "description": "The 'eSports' category on Irish Tech News offers timely updates on Ireland's competitive gaming scene\u2014covering events, talent academies, partnerships, and industry growth shaping the nation's esports ecosystem.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 43900,
+        "instagram": 482
+      },
+      "image_url": "https://i1.feedspot.com/8544957.jpg?t=1753108834"
+    },
+    {
+      "title": "techbuzzireland.com \u00bb eSports",
+      "feed_url": "https://techbuzzireland.com/category/esports/feed/",
+      "website_url": "https://techbuzzireland.com/category/esports/",
+      "description": "Tech Buzz Ireland is a leading independent award-winning news & tech review site featuring articles on engineering software solutions, startups, AI, and more.",
+      "followers": {
+        "facebook": 530,
+        "twitter": 1600,
+        "instagram": 739
+      },
+      "image_url": "https://i1.feedspot.com/8544956.jpg"
+    },
+    {
+      "title": "NOVOS Blog",
+      "feed_url": "https://blog.novos.gg/index.php/feed/",
+      "website_url": "https://blog.novos.gg/",
+      "description": "NOVOS is a training platform for gamers who want to pursue their dreams and take their gaming skills to a higher level. Unlike the existing coaching marketplaces and game analysis tools, NOVOS focuses on behaviour. By that, we create a long-term and effective training routine, helping the player improve all-round.",
+      "followers": {
+        "facebook": 863,
+        "twitter": 68,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5362815.jpg?t=1642243834"
+    },
+    {
+      "title": "Esports-Dude",
+      "feed_url": "https://esports-dude.com/feed/",
+      "website_url": "https://esports-dude.com/",
+      "description": "Esports has quickly become one of the biggest and most competitive sports in the world. Discover the ins and outs of Esports from our Blog Esports-Dude!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5362813.jpg?t=1642242908"
+    },
+    {
+      "title": "Business of Esports",
+      "feed_url": "https://thebusinessofesports.com/feed/",
+      "website_url": "https://thebusinessofesports.com/",
+      "description": "Business of Esports is the home of 'The official podcast of esports' and everything you need to know about the business of video games. Whether you are a lifelong gamer, a curious Fortnite parent, or a businessperson seeking to understand the marketing opportunities, we have everything for you.",
+      "followers": {
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/5362823.jpg?t=1642246832"
+    },
+    {
+      "title": "Challenger Mode Blog",
+      "feed_url": "https://blog.challengermode.com/feed",
+      "website_url": "https://blog.challengermode.com/",
+      "description": "Challengermode is an automated esports web platform where dedicated gamers can compete in League of Legends and Counter-Strike for real prizes like money, improve their skills and join a community of esports enthusiasts.",
+      "followers": {
+        "facebook": 45000,
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4956127.jpg?t=1620191834"
+    },
+    {
+      "title": "F1Esports News",
+      "feed_url": "https://f1esports.com/news/feed/",
+      "website_url": "https://f1esports.com/news/",
+      "description": "This is an official F1 Esports news portal which provides you with all the latest news in the esports scene.",
+      "followers": {
+        "facebook": 15500000,
+        "twitter": 11100000,
+        "instagram": 39400000
+      },
+      "image_url": "https://i1.feedspot.com/4956502.jpg?t=1620191868"
+    },
+    {
+      "title": "Snowball Esports",
+      "feed_url": "https://snowballesports.com/feed/",
+      "website_url": "https://snowballesports.com/",
+      "description": "The voice of Oceanic esports, Snowball Esports delivers the latest news and results on League of Legends, CS: GO, Overwatch and more.",
+      "followers": {
+        "facebook": 696,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5084524.jpg?t=1620191898"
+    },
+    {
+      "title": "Esports Wales News",
+      "feed_url": "https://esportsresults.com/feed/",
+      "website_url": "https://esportswales.org/news/",
+      "description": "Discover the world of competitive gaming. Insights about the best-known esports titles Valorant, CS:GO, Rocket League, Overwatch, League of Legends, Dota2, Fortnite, and Apex Legends.",
+      "followers": {
+        "twitter": 87
+      },
+      "image_url": "https://i1.feedspot.com/5226786.jpg?t=1630743386"
+    },
+    {
+      "title": "Pok\u00e9mon Blog \u00bb eSports",
+      "feed_url": "https://pokemonblog.com/tag/esports/feed/",
+      "website_url": "https://pokemonblog.com/tag/esports/",
+      "description": "Here, you will find eSports news, Pok\u00e9mon news, Pok\u00e9mon GO, Pok\u00e9mon Let's Go Pikachu & Eevee, TCG, videos and more.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4956294.jpg?t=1620191862"
+    },
+    {
+      "title": "eSports Group Blog",
+      "feed_url": "https://www.esportsgroup.net/feed/",
+      "website_url": "https://www.esportsgroup.net/blog/",
+      "description": "eSports Group is a leading strategic consulting agency focused on eSports. They help companies win in the world of eSports by delivering a strategic, comprehensive approach to your business and goals. This blog is your eSports industry's #1 source of weekly insight, commentary and analysis.",
+      "followers": {
+        "twitter": 862
+      },
+      "image_url": "https://i1.feedspot.com/4911678.jpg?t=1620191902"
+    },
+    {
+      "title": "eSportCloud For Gamers",
+      "feed_url": "https://esportcloud.blogspot.com/feeds/posts/default",
+      "website_url": "https://esportcloud.blogspot.com/",
+      "description": "eSport Cloud is a GPN, here to help you get rid of pesky online gaming problems and bid farewell to Fortnite lag, PUBG lag, Dota 2 lag, CSGO lag, LOL lag, and more than 1,000+ games. eSportCloud reduces ping lag latency jitter & packet loss. Follow the blog to know more about us.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5211785.jpg?t=1604040055"
+    },
+    {
+      "title": "Luckbox Blog",
+      "feed_url": "https://blog.luckbox.com/feed",
+      "website_url": "https://blog.luckbox.com/",
+      "description": "The first global esportsbook and esports-dedicated casino to legally capitalise on the potential of crypto & blockchain technology.",
+      "followers": {
+        "facebook": 16200,
+        "twitter": 9200
+      },
+      "image_url": "https://i1.feedspot.com/4956289.jpg?t=1620191858"
+    },
+    {
+      "title": "Galactic Warrior Empire News",
+      "feed_url": "https://galactic-warrior-empire.net/feed/",
+      "website_url": "https://galactic-warrior-empire.net/news/",
+      "description": "Galactic Warrior Empire thrives on eGames and lives for another day in eSports. We promote gamers and sponsor competitors in the growing eSports industry.",
+      "followers": {
+        "facebook": 48,
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/4988174.jpg?t=1620191990"
+    },
+    {
+      "title": "eSportsLane",
+      "feed_url": "https://esportslane.com/blog/feed/",
+      "website_url": "https://esportslane.com/blog/",
+      "description": "We cover the latest in the world of eSports with pertinent focus on eSports career options and education.",
+      "followers": {},
+      "image_url": "https://esportslane.com/wp-content/uploads/2020/05/350X350-Boy-with-Words-png-1.png?t=1751608568"
+    },
+    {
+      "title": "Esports Tower Talk Blog",
+      "feed_url": "https://esportstower.com/feed/",
+      "website_url": "https://esportstower.com/news/",
+      "description": "Current Events Featured News Tutorials & Guides",
+      "followers": {
+        "facebook": 248,
+        "twitter": 1800,
+        "instagram": 936
+      },
+      "image_url": "https://i1.feedspot.com/8544964.jpg?t=1753108850"
+    },
+    {
+      "title": "Generation Esports",
+      "feed_url": "https://www.generationesports.com/blog-feed.xml",
+      "website_url": "https://www.generationesports.com/blog/",
+      "description": "The Generation Esports blog serves as an official news hub covering press releases, tournament updates, product launches, partnerships, and educational resources\u2014all centered on empowering scholastic and community esports programs.",
+      "followers": {
+        "facebook": 671,
+        "twitter": 2800,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/8544962.jpg?t=1753108845"
+    },
+    {
+      "title": "Fraser Esports Blog",
+      "feed_url": "https://fraseresportsltd.com/feed/",
+      "website_url": "https://fraseresportsltd.com/blog/",
+      "description": "Esports consultant and director of Fraser Esports Ltd, James is a national award-winning Director of Learning and esports teacher with a demonstrated history of working in the education management industry.",
+      "followers": {
+        "twitter": 3200,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/8544966.jpg?t=1753108856"
+    },
+    {
+      "title": "Mark Weller",
+      "feed_url": "https://www.weller.consulting/blog?format=rss",
+      "website_url": "https://www.weller.consulting/blog/",
+      "description": "Explore news stories from my esports career, from global events, the Commonwealth Games through to Formula One. Dive into insights and thought pieces from an industry leader.",
+      "followers": {
+        "instagram": 36
+      },
+      "image_url": "https://i1.feedspot.com/8544960.jpg?t=1753108840"
+    },
+    {
+      "title": "Dexerto \u00bb Esports",
+      "feed_url": "https://www.dexerto.com/esports/feed/",
+      "website_url": "https://www.dexerto.com/esports/",
+      "description": "Esports news, opinion & live event coverage from the biggest tournaments of the year in Call of Duty, League of Legends, Counter-Strike, Valorant & more. Dexerto is an influencer, culture, gaming, and esports news portal.",
+      "followers": {
+        "facebook": 97500,
+        "twitter": 813400,
+        "instagram": 953800
+      },
+      "image_url": "https://i1.feedspot.com/5362799.jpg?t=1642244169"
+    },
+    {
+      "title": "Eurogamer",
+      "feed_url": "https://www.eurogamer.net/feed",
+      "website_url": "https://www.eurogamer.net/",
+      "description": "Read Eurogamer to stay updated and ahead on the latest gaming news, reviews, features, videos, and more. Categories to explore are PlayStation, Xbox, Nintendo, Digital Foundry, and more.",
+      "followers": {
+        "facebook": 379800,
+        "twitter": 394700
+      },
+      "image_url": "https://i1.feedspot.com/4978731.jpg?t=1642244318"
+    },
+    {
+      "title": "Gamer Style \u00bb Esports",
+      "feed_url": "https://gamerstyle.com.mx/category/esports/feed/",
+      "website_url": "https://gamerstyle.com.mx/category/esports/",
+      "description": "Gamer Style is a means of communication focused on covering issues pertaining to the field of video games, film, music, technology and everything that defines your gamer lifestyle. Profiled to achieve the highest prestige as a source of information, opinion and original creations.",
+      "followers": {
+        "facebook": 34700,
+        "twitter": 17200,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4956119.jpg?t=1620191893"
+    },
+    {
+      "title": "Mobile Wins",
+      "feed_url": "https://www.mobilewins.co.uk/feed/",
+      "website_url": "https://www.mobilewins.co.uk/",
+      "description": "Through this blog, you can gain insight into all your Favourite Games from LOL to CSGO and COD to FIFA.",
+      "followers": {
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/4956059.jpg?t=1620191971"
+    },
+    {
+      "title": "GamblingNerd.com Esports Blog",
+      "feed_url": "https://www.gamblingnerd.com/blog/esports/",
+      "website_url": "https://www.gamblingnerd.com/blog/esports/",
+      "description": "Rankings of the best online gambling sites for real money by category. Read their top rated site reviews to ensure a safe and reliable gambling experience. You will find top options and informative guides to all forms of online gambling including casinos, sports betting, esports and more.",
+      "followers": {
+        "twitter": 29
+      },
+      "image_url": "https://i1.feedspot.com/4956058.jpg?t=1642230740"
+    },
+    {
+      "title": "Esports",
+      "feed_url": "https://esports.gg/feed/",
+      "website_url": "https://esports.gg/",
+      "description": "Esports is a destination connecting esports fans to their passions. We create news and analysis for all gamers, esports fans and streaming enthusiasts into expert-led content featuring some of the best analysts, players, thinkers and writers in the history of esports.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 103400,
+        "instagram": 43200
+      },
+      "image_url": "https://i1.feedspot.com/5324104.jpg?t=1642243954"
+    },
+    {
+      "title": "Esports Charts News Blog",
+      "feed_url": "https://escharts.com/storage/app/uploads/public/rss.xml",
+      "website_url": "https://escharts.com/blog",
+      "description": "Esports Charts is a unique analytical service that provides comprehensive metrics for esports broadcasts and live streams. Our mission is to increase transparency and trust towards esports viewership data. Read about the latest news covering tournaments, events, games, organizers and much more from the esports world.",
+      "followers": {
+        "facebook": 22900,
+        "twitter": 40800,
+        "instagram": 12600
+      },
+      "image_url": "https://i1.feedspot.com/5362804.jpg?t=1642240709"
+    },
+    {
+      "title": "Bitcoin Casino Blog \u00bb Esports",
+      "feed_url": "https://bitcasino.io/blog/esports",
+      "website_url": "https://bitcasino.io/blog/esports",
+      "description": "Enjoy the esports at Bitcasino. Get the latest news from your favourite esports games, teams and players, and get advice on how to place esports bets using your preferred cryptocurrency. Updated weekly, you'll have plenty of information to help you bet with confidence.",
+      "followers": {
+        "twitter": 55100
+      },
+      "image_url": "https://i1.feedspot.com/5362797.jpg?t=1642249734"
+    },
+    {
+      "title": "EGamersWorld Blog",
+      "feed_url": "https://egamersworld.com/blog.rss",
+      "website_url": "https://egamersworld.com/blog",
+      "description": "Egamersworld provides guides, video records, live streams, market news, surveys of betting providers, and other information for your deep understanding of e-sports. Our main focus is the leaders of e-sports including DotA 2, Hearthstone, Heroes of the Storm, Counter-Strike, and League of Legends.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5362807.jpg?t=1642245796"
+    },
+    {
+      "title": "Win.gg",
+      "feed_url": "https://feeds.win.gg/news/rss",
+      "website_url": "https://win.gg/",
+      "description": "The most comprehensive esports resource on the web. Read the latest news in the Esports world, check out the recent results of your favorite team, or see what tournaments are currently going on. Win.gg is everything you need for Esports!",
+      "followers": {
+        "facebook": 73200,
+        "twitter": 6000,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5210965.jpg?t=1603810477"
+    },
+    {
+      "title": "Esports One Blog",
+      "feed_url": "https://esportsone.com/feed/",
+      "website_url": "https://blog.esportsone.com/",
+      "description": "The Esports One team share their thoughts, tips and insights from years of industry experience, building communities and gaming!",
+      "followers": {
+        "facebook": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5162562.jpg?t=1620192437"
+    },
+    {
+      "title": "Blog of Legends \u00bb Esports",
+      "feed_url": "https://blogoflegends.com/league-of-legends-esports/feed/",
+      "website_url": "https://blogoflegends.com/league-of-legends-esports/",
+      "description": "The ultimate site for League of Legends news, rumors, updates, opinions, and more.",
+      "followers": {
+        "facebook": 973500,
+        "twitter": 46700,
+        "instagram": 38900
+      },
+      "image_url": "https://i1.feedspot.com/4956055.jpg?t=1620191850"
+    },
+    {
+      "title": "High Score eSports Blog",
+      "feed_url": "https://highscoreesports.com/blog/feed/",
+      "website_url": "https://highscoreesports.com/blog/",
+      "description": "High Score Lounge has Gaming leagues, tournaments, console, PC, and VR reservations, private parties and everything you are looking for. The latest consoles, high-end gaming PCs, and retro arcades. They have a killer sound and lighting system that makes everything in the lounge pop.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4956501.jpg?t=1620191919"
+    },
+    {
+      "title": "EdTech Magazine \u00bb Esports",
+      "feed_url": "https://edtechmagazine.com/k12/esports/",
+      "website_url": "https://edtechmagazine.com/k12/esports/",
+      "description": "Read about the benefits of introducing esports culture to school-going children with EdTech Magazine. EdTech: Focus on K-12 explores technology and education issues that IT leaders and educators face when they're evaluating and implementing a solution.",
+      "followers": {
+        "facebook": 116300
+      },
+      "image_url": "https://i1.feedspot.com/7284804.jpg?t=1711606367"
+    }
+  ]
+}

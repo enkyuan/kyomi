@@ -1,0 +1,39 @@
+{
+  "category": "GAMSAT",
+  "source_url": "https://rss.feedspot.com/gamsat_rss_feeds",
+  "feeds": [
+    {
+      "title": "Gamsat Review Blog",
+      "feed_url": "https://www.gamsatreviewblog.com/rss/",
+      "website_url": "https://www.gamsatreviewblog.com/",
+      "description": "The Gamsat Review Blog is run by Dr Peter Griffiths and contains advice for students sitting the GAMSAT test - the Graduate Medical School Admissions Test for entry to medicine and dental graduate entry courses. Hello I'm Dr Peter Griffiths. I took GAMSAT for myself back in 2005, passing first time and scoring in the top 10%. Since then as well as working as a doctor I've helped countless students pass the test.",
+      "followers": {
+        "facebook": 208,
+        "twitter": 723,
+        "instagram": 268
+      },
+      "image_url": "https://i1.feedspot.com/5209275.jpg?t=1605766716"
+    },
+    {
+      "title": "90plusgamsat",
+      "feed_url": "https://www.90plusgamsat.com/feed/",
+      "website_url": "https://www.90plusgamsat.com/",
+      "description": "Explore our free resources to get better understanding of GAMSAT and how to achieve your goals. Get GAMSAT's best-reviewed and only 90+ scoring Section II resources at a once-off discount, with free personal support from Michael himself. Understand exactly how to come up with ideas, what to write and why, and how to deal with pressure - or your money back.",
+      "followers": {
+        "facebook": 576
+      },
+      "image_url": "https://i1.feedspot.com/5406366.jpg?t=1654262917"
+    },
+    {
+      "title": "GAMSAT English Tutor Blog",
+      "feed_url": "https://gamsatenglishtutor.com/feed/",
+      "website_url": "https://gamsatenglishtutor.com/blog/",
+      "description": "My name is Alison and I'm a Doctor of Dental Surgery student who was just like you a few years ago, stressing about postgraduate studies and about doing well in the GAMSAT. I found it very difficult to find excellent resources for GAMSAT Section 1 and 2, with a dearth of fantastic essays and advice available on the Internet. Thus, I've made it my goal to create effective and exemplary resources that will give you everything you need to score a fantastic mark in the GAMSAT.",
+      "followers": {
+        "facebook": 52,
+        "instagram": 143
+      },
+      "image_url": "https://i1.feedspot.com/5406367.jpg?t=1654262386"
+    }
+  ]
+}

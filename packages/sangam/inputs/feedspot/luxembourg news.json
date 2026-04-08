@@ -1,0 +1,64 @@
+{
+  "category": "Luxembourg News",
+  "source_url": "https://rss.feedspot.com/luxembourg_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Le Quotidien",
+      "feed_url": "https://lequotidien.lu/feed/",
+      "website_url": "https://lequotidien.lu/",
+      "description": "Le Quotidien is an independent daily Luxembourg news newspaper, founded in 2001. Covering information and comments on politics, social issues, international, economic, cultural and sporting news.",
+      "followers": {
+        "facebook": 38500,
+        "twitter": 10600,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5357599.jpg?t=1640694836"
+    },
+    {
+      "title": "Luxemburger Wort",
+      "feed_url": "https://www.wort.lu/rss",
+      "website_url": "https://www.wort.lu/",
+      "description": "Luxemburger Wort is a digital news service providing high-quality, in-depth business and political journalism in Luxembourg.",
+      "followers": {
+        "facebook": 88000,
+        "twitter": 34400,
+        "instagram": 19400
+      },
+      "image_url": "https://i1.feedspot.com/4955837.jpg?t=1621839897"
+    },
+    {
+      "title": "Luxembourg Times",
+      "feed_url": "https://www.luxtimes.lu/rss",
+      "website_url": "https://www.luxtimes.lu/",
+      "description": "The Luxembourg Times is the country's leading quality online newspaper in English. It covers all the news the world needs to know about Luxembourg, and all that Luxembourg needs to know about the world. At the Luxembourg Times, we work hard to bring you reliable news every day - news that informs your decisions and shapes your view of the world.",
+      "followers": {
+        "facebook": 86200,
+        "twitter": 16500
+      },
+      "image_url": "https://i1.feedspot.com/5357762.jpg?t=1640694957"
+    },
+    {
+      "title": "Contacto",
+      "feed_url": "https://www.wort.lu/rss/pt",
+      "website_url": "https://www.contacto.lu/",
+      "description": "Contacto is the Portuguese-speaking community newspaper in Luxembourg.",
+      "followers": {
+        "facebook": 72900,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5357763.jpg?t=1640694278"
+    },
+    {
+      "title": "RTL Today",
+      "feed_url": "https://today.rtl.lu/",
+      "website_url": "https://today.rtl.lu/",
+      "description": "RTL Today is your everyday news site to stay updated on national and international news on Business, Sci-Tech, Culture, Entertainment, Politics, Music, Finance, and more.",
+      "followers": {
+        "facebook": 37000,
+        "twitter": 2400,
+        "instagram": 22000
+      },
+      "image_url": "https://i1.feedspot.com/5357784.jpg?t=1640697479"
+    }
+  ]
+}

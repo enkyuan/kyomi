@@ -1,0 +1,109 @@
+{
+  "category": "Nebraska Music",
+  "source_url": "https://rss.feedspot.com/nebraska_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "Maha Festival News",
+      "feed_url": "https://mahafestival.com/news/feed/",
+      "website_url": "https://mahafestival.com/news/",
+      "description": "Founded as Maha Music Festival in 2009, the event has evolved from humble beginnings on the Omaha riverfront. Maha, a nonprofit entity, unites people through music. Stay informed on the latest news, events, and announcements from the Maha Festival to join the celebration of community and music.",
+      "followers": {
+        "facebook": 20000,
+        "twitter": 8200,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5328252.jpg?t=1633351466"
+    },
+    {
+      "title": "Omaha Symphony Blog",
+      "feed_url": "https://www.omahasymphony.org/feed.rss",
+      "website_url": "https://www.omahasymphony.org/blog",
+      "description": "The Omaha Symphony, a non-profit entity, hosts over 100 live orchestral performances annually, enriching lives through the power of music. Their mission centres on community enrichment via exhilarating orchestral experiences. Stay connected for updates, stories, and insights, transcending the concert stage.",
+      "followers": {
+        "facebook": 18600,
+        "twitter": 5200,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/5328206.jpg?t=1673246395"
+    },
+    {
+      "title": "Lazy-i Blog",
+      "feed_url": "https://lazy-i.com/feed/",
+      "website_url": "https://lazy-i.com/category/blog/",
+      "description": "Lazy-i is an online music magazine that includes feature interviews, reviews, and news. The focus is on the indie music scene with a special emphasis on the best original bands in the Omaha area, but Lazy-i also offers interviews, stories and reviews about national indie bands.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5328231.jpg?t=1633502058"
+    },
+    {
+      "title": "Omaha World-Herald \u00bb Music",
+      "feed_url": "https://omaha.com/search/?f=rss",
+      "website_url": "https://omaha.com/life-entertainment/nation-world/music/",
+      "description": "Find the latest music news, concerts, shows, videos, and reviews by Omaha World-Herald.Omaha World-Herald provides the latest local weather, crime, politics, events, and more.",
+      "followers": {
+        "facebook": 130900,
+        "twitter": 171200,
+        "instagram": 32800
+      },
+      "image_url": "https://i1.feedspot.com/5328227.jpg?t=1633348725"
+    },
+    {
+      "title": "Yandas Music Blog",
+      "feed_url": "https://www.yandasmusic.com/blogs/yandas-connect-blog.atom",
+      "website_url": "https://www.yandasmusic.com/blogs/yandas-connect-blog",
+      "description": "Latest News and Articles from Yandas Music.Yandas Music provides exceptional products, customer service, and education to individuals and organizations in realizing their music and audio/visual needs and dreams.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 297,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5328230.jpg?t=1633349756"
+    },
+    {
+      "title": "Jocelyn Music Blog",
+      "feed_url": "https://www.jocelynmusic.com/blog/feed/blog-feed.xml",
+      "website_url": "https://www.jocelynmusic.com/blog",
+      "description": "Get the latest Jocelyn music, news, social media, event updates, and merchandise.Jocelyn, at an astounding twenty-one years of age, combines her observant and mature outlook on life, love, and music to write amazing, memorable songs that stick in your head.",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 8600,
+        "instagram": 28200
+      },
+      "image_url": "https://i1.feedspot.com/5328348.jpg?t=1633413196"
+    },
+    {
+      "title": "The Reader \u00bb Music",
+      "feed_url": "https://thereader.com/category/culture/music/feed/",
+      "website_url": "https://thereader.com/category/culture/music/",
+      "description": "Find the latest music news, concert news, events, music releases and reviews by The Reader.The Reader is Nebraska's only nationally-recognized alternative news monthly, part of the Pioneer Publishing family covering local news, art, film, music, food and events in Omaha.",
+      "followers": {
+        "facebook": 8500,
+        "twitter": 10600,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5328210.jpg?t=1633347095"
+    },
+    {
+      "title": "Omaha Conservatory of Music Blog",
+      "feed_url": "https://omahacm.org/blog/feed/",
+      "website_url": "https://omahacm.org/blog/",
+      "description": "Omaha Conservatory of Music, a nonprofit institution, fosters a diverse musical community through education and performance. They instil lifelong inspiration in students and families, emphasizing passion and excellence. Explore teaching tips, community programs, and media mentions to uncover the impact of OCM.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 446,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5328344.jpg?t=1633412526"
+    },
+    {
+      "title": "KIOS \u00bb Music",
+      "feed_url": "https://www.kios.org/music-2.rss",
+      "website_url": "https://www.kios.org/music-2/",
+      "description": "Content from KIOS staff relating to jazz, blues, and all kinds of music. We are Omaha Public Radio, KIOS-FM, the NPR member station serving the Omaha-Council Bluffs area. We're a news, information, and jazz source for eastern Nebraska and western Iowa.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/5328209.jpg?t=1633346767"
+    }
+  ]
+}

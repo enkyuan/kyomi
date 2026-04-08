@@ -1,0 +1,179 @@
+{
+  "category": "LMS",
+  "source_url": "https://rss.feedspot.com/lms_rss_feeds",
+  "feeds": [
+    {
+      "title": "Power School Blog",
+      "feed_url": "https://www.powerschool.com/feed/",
+      "website_url": "https://www.powerschool.com/resources/?filter_resource_types=post",
+      "description": "PowerSchool give you the opportunity to connect and interact with us and other people. We empower teachers and drive student growth through innovative digital classroom capabilities, and we engage families through real-time communications across any device. Follow the official PowerSchool posts for helpful tips, great resources and all of the latest news.",
+      "followers": {
+        "facebook": 16600,
+        "twitter": 12800
+      },
+      "image_url": "https://i1.feedspot.com/4846134.jpg?t=1621302846"
+    },
+    {
+      "title": "Tovuti LMS Blog",
+      "feed_url": "https://www.tovutilms.com/blog/rss.xml",
+      "website_url": "https://www.tovutilms.com/blog",
+      "description": "Check out the Tovuti LMS blog to learn more about creating courses, engaging learners, tracking and reporting, security and compliance, integrations and more! Tovuti's all-in-one cloud-based learning management system (LMS) gives you all the tools you need to create, deliver, and track the effectiveness of your eLearn",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 313
+      },
+      "image_url": "https://i1.feedspot.com/5518111.jpg?t=1678354500"
+    },
+    {
+      "title": "LMS.org Blog",
+      "feed_url": "https://www.lms.org/feed/",
+      "website_url": "https://www.lms.org/blog/",
+      "description": "LMS.org is a FREE service. We empower software buyers with the information to find the best Learning Management Systems. Explore the best LMS companies, news, insights in our blog.",
+      "followers": {
+        "twitter": 540
+      },
+      "image_url": "https://i1.feedspot.com/5518113.jpg?t=1678359993"
+    },
+    {
+      "title": "eLearning Industry \u00bb LMS",
+      "feed_url": "https://elearningindustry.com/subjects/learning-management-systems-lms/feed",
+      "website_url": "https://elearningindustry.com/subjects/learning-management-systems-lms",
+      "description": "Here you can find the top articles about Learning Management Systems, their benefits, concepts, features and many more from the best eLearning authors. eLI is a leading publishing platform that delivers inspiring, industry-specific content to eLearning professionals. As a top-tier eLearning marketplace, we offer a plethora of sophisticated, online marketing solutions to corporate training companies to empower and help them grow.",
+      "followers": {
+        "facebook": 395900,
+        "twitter": 122200
+      },
+      "image_url": "https://i1.feedspot.com/5518110.jpg?t=1678360607"
+    },
+    {
+      "title": "Edly Blog",
+      "feed_url": "https://edly.io/feed/",
+      "website_url": "https://edly.io/resources/blog/",
+      "description": "Get insightful content from the world of eLearning, learning management systems, and educational technology on Edly's blog. Edly is an all-in-one eLearning ecosystem designed to get your hands on all the tools you need for your courses at the lowest cost and fastest turnaround.",
+      "followers": {
+        "facebook": 5700,
+        "instagram": 366
+      },
+      "image_url": "https://i1.feedspot.com/5518115.jpg?t=1678360330"
+    },
+    {
+      "title": "MapleLMS Blog",
+      "feed_url": "https://www.maplelms.com/feed/",
+      "website_url": "https://www.maplelms.com/blog/",
+      "description": "MapleLMS is a scalable, AI-powered, secure, mobile-friendly, modern-day Salesforce learning management system (LMS) offering online and offline learning. MapleLMS Blog features up to date news, tips, updates, and latest LMS Trends.",
+      "followers": {
+        "facebook": 24,
+        "twitter": 135,
+        "instagram": 24
+      },
+      "image_url": "https://i1.feedspot.com/5518114.jpg?t=1678360172"
+    },
+    {
+      "title": "Paradiso Blog",
+      "feed_url": "https://www.paradisosolutions.com/blog/feed/",
+      "website_url": "https://www.paradisosolutions.com/blog/",
+      "description": "Step into the new world of online training and delve into Paradiso eLearning Blogs to find ideas for creating and outsourcing eLearning solutions. Paradiso LMS is an award-winning Enterprise Learning Management System (LMS). We specialize in e-learning software, virtual classroom, and learning management system solutions. Check this blog out!",
+      "followers": {
+        "facebook": 842,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5211690.jpg?t=1605788345"
+    },
+    {
+      "title": "Talent LMS Blog",
+      "feed_url": "https://www.talentlms.com/blog/feed/",
+      "website_url": "https://www.talentlms.com/blog/",
+      "description": "Top eLearning blog by TalentLMS with articles about Instructional Design and Development, Online Courses, Gamification, Tin Can API, SCORM, mLearning. TalentLMS is the LMS built for success; where great teams go to grow. We're on a mission to democratize training. To deliver a premium learning experience that's accessible, affordable, and actually enjoyable.",
+      "followers": {
+        "facebook": 35100,
+        "twitter": 47300
+      },
+      "image_url": "https://i1.feedspot.com/4636063.jpg?t=1605788194"
+    },
+    {
+      "title": "TOPYX Blog",
+      "feed_url": "https://www.topyx.com/lms-blog/rss.xml",
+      "website_url": "https://www.topyx.com/lms-blog",
+      "description": "The TOPYX LMS Blog brings together ideas on learning management systems (LMS), eLearning, social learning, remote training, and more. Interactyx is a global learning management software company providing engaging and interactive learning experiences to learners, businesses, associations, and nonprofit organizations of any size, anywhere in the world.",
+      "followers": {
+        "twitter": 8700
+      },
+      "image_url": "https://i1.feedspot.com/5518112.jpg?t=1678359929"
+    },
+    {
+      "title": "Bytecasting Blog",
+      "feed_url": "https://bytecasting.com/home/feed/",
+      "website_url": "https://bytecasting.com/home/blog/",
+      "description": "At Stratbeans, we bring learning innovation that drives productivity and business growth through intuitive AI-based learning platforms (LMS / LXP) and highly engaging interactive video-based learning modules and eLearning Services.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5558347.jpg?t=1683543591"
+    },
+    {
+      "title": "Wahoo Learning Blog",
+      "feed_url": "https://wahoolearning.com/feed/",
+      "website_url": "https://wahoolearning.com/blog/",
+      "description": "More than just an LMS vendor, our core value is to work as your partner and closely collaborate with you, using our suite of services to deliver a tailored training program that easily integrates with your existing infrastructure. Explore our resources on LMS, insights, news, the latest trends and more!",
+      "followers": {
+        "facebook": 97,
+        "twitter": 132
+      },
+      "image_url": "https://i1.feedspot.com/5523127.jpg?t=1679300254"
+    },
+    {
+      "title": "Smarter U Blog",
+      "feed_url": "https://www.smarteru.com/blog/rss.xml",
+      "website_url": "https://www.smarteru.com/lms-blog",
+      "description": "Stay up-to-date with the latest SmarterU news and feature updates, practical employee training tips, and best practices for using an LMS as part of your digital learning ecosystem. SmarterU.com is a fully featured online LMS with an integrated course creation suite, interactive SMARTERGAMES and full quiz & testing functionality. Our executive dashboards and reporting functionality allows for intense drill-down for all levels of oversight from the learner to the C-Suite.",
+      "followers": {
+        "facebook": 146,
+        "twitter": 362,
+        "instagram": 227
+      },
+      "image_url": "https://i1.feedspot.com/5518109.jpg?t=1678360562"
+    },
+    {
+      "title": "Better Buys Blog",
+      "feed_url": "https://gritbrokerage.com/inquiry/feed/",
+      "website_url": "https://www.betterbuys.com/lms/blog/",
+      "description": "Get the latest news, insights, and advice on Learning Management Software. Compare top LMS solutions and find the right fit for your organization. For more than 20 years, Better Buys has been helping organizations of all sizes make smarter purchasing decisions. Part of the Catalyst Media, Better Buys has become a trusted authority for delivering unbiased, expert insights on the software and technology that businesses rely on.",
+      "followers": {
+        "facebook": 561,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5298476.jpg?t=1625214158"
+    },
+    {
+      "title": "Docebo Blog",
+      "feed_url": "https://www.docebo.com/feed/",
+      "website_url": "https://www.docebo.com/learning-network/blog/",
+      "description": "Best articles on e-learning, social learning, informal learning, L&D, SCORM, Tin Can, Talent Development, Performance Support by Docebo. Docebo's multi-product learning suite helps enterprises around the world tackle any learning challenge and create a successful learning culture.",
+      "followers": {
+        "facebook": 31500,
+        "twitter": 6900,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4635057.jpg?t=1605788303"
+    },
+    {
+      "title": "Innform Blog",
+      "feed_url": "https://www.innform.io/feed/",
+      "website_url": "https://www.innform.io/blog/",
+      "description": "Innform is the trusted LMS for modern enterprises. Create and deliver high-quality online training to learners worldwide. Learn more about LMS, how it can help organizations in training, study cases and more!",
+      "followers": {
+        "facebook": 182,
+        "twitter": 78
+      },
+      "image_url": "https://i1.feedspot.com/5518116.jpg?t=1678360070"
+    },
+    {
+      "title": "UpsideLMS Blog",
+      "feed_url": "https://www.upsidelms.com/blog/feed/",
+      "description": "UpsideLMS is one of the most awarded & best Learning Management Systems that has been building a legacy of innovation and best value for the past 15 years. The UpsideLMS Blog helps your organization with corporate training. We share best practice advice so you can deliver learning and development as it should be.",
+      "followers": {
+        "facebook": 420,
+        "twitter": 578
+      },
+      "image_url": "https://i1.feedspot.com/4735256.jpg?t=1605788360"
+    }
+  ]
+}

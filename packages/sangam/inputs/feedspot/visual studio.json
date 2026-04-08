@@ -1,0 +1,81 @@
+{
+  "category": "Visual Studio",
+  "source_url": "https://rss.feedspot.com/visual_studio_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Visual Studio Blog",
+      "feed_url": "https://devblogs.microsoft.com/visualstudio/feed/",
+      "website_url": "https://devblogs.microsoft.com/visualstudio/",
+      "description": "The official source of product insight from the Visual Studio Engineering Team. Microsoft Visual Studio is a powerful IDE that ensures quality code throughout the entire application lifecycle, from design to deployment. Whether you're developing applications for SharePoint, the web, Windows, Windows Phone, and beyond, Visual Studio is your ultimate all-in-one solution.",
+      "followers": {
+        "facebook": 38,
+        "twitter": 536400
+      },
+      "image_url": "https://i1.feedspot.com/4457144.jpg?t=1616391165"
+    },
+    {
+      "title": "Visual Studio Magazine",
+      "feed_url": "https://visualstudiomagazine.com/rss-feeds/news.aspx",
+      "website_url": "https://visualstudiomagazine.com/Home.aspx",
+      "description": "Visual Studio Magazine is the world's leading independent Microsoft development magazine. It is the leading site for enterprise .NET developers. Stay tuned to get the latest updates.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 9700
+      },
+      "image_url": "https://i1.feedspot.com/4634428.jpg?t=1645619161"
+    },
+    {
+      "title": "Visual Studio Code",
+      "feed_url": "https://code.visualstudio.com/feed.xml?format=xml",
+      "website_url": "https://code.visualstudio.com/blogs/2017/04/10/sublime-text-roundup",
+      "description": "Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications. Visual Studio Code is free and available on your favorite platform - Linux, macOS, and Windows.",
+      "followers": {
+        "twitter": 773100
+      },
+      "image_url": "https://i1.feedspot.com/4414753.jpg"
+    },
+    {
+      "title": "Stack Overflow \u00bb Visual Studio",
+      "feed_url": "https://stackoverflow.com/feeds/tag?tagnames=visual-studio&sort=newest?format=xml",
+      "website_url": "https://stackoverflow.com/questions/tagged/visual-studio",
+      "description": "Stack Overflow is the largest online community for programmers to learn, share their knowledge, and advance their careers.",
+      "followers": {
+        "facebook": 528800,
+        "twitter": 251500
+      },
+      "image_url": "https://i1.feedspot.com/4634528.jpg"
+    },
+    {
+      "title": "Visual Studio Geeks",
+      "feed_url": "https://www.visualstudiogeeks.com/rss.xml",
+      "website_url": "https://www.visualstudiogeeks.com/",
+      "description": "Visual Studio Geeks will make you more productive by sharing tips n tricks through on Visual Studio, Team Foundation Server and Application Lifecycle Management.",
+      "followers": {
+        "facebook": 207,
+        "twitter": 643
+      },
+      "image_url": "https://i1.feedspot.com/4634396.jpg?t=1616391177"
+    },
+    {
+      "title": "The Entrian Solutions Blog",
+      "feed_url": "http://entrian.com/blog/feed/",
+      "website_url": "http://entrian.com/blog/",
+      "description": "The blog of Richie Hindle and Entrian Solutions, creators of Entrian Source Search, a full-text search add-in for Visual Studio.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 154
+      },
+      "image_url": "https://i1.feedspot.com/51697.jpg?t=1616391189"
+    },
+    {
+      "title": "Visual Studio Extensibility (VSX)",
+      "feed_url": "https://www.visualstudioextensibility.com/feed/",
+      "website_url": "https://www.visualstudioextensibility.com/",
+      "description": "Carlos Quintero is a Microsoft Most Valuable Professional (MVP) since 2004 and specialist in Visual Studio Extensibility (VSX).",
+      "followers": {
+        "twitter": 254
+      },
+      "image_url": "https://i1.feedspot.com/4634397.jpg?t=1698132119"
+    }
+  ]
+}

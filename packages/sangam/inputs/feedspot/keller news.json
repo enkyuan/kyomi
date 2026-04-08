@@ -1,0 +1,29 @@
+{
+  "category": "Keller News",
+  "source_url": "https://rss.feedspot.com/keller_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Keller BubbleLife",
+      "feed_url": "https://keller.bubblelife.com/rss?c=35660524",
+      "website_url": "https://keller.bubblelife.com/",
+      "description": "Keller BubbleLife is a digital newspaper, bringing together all of the local news and events in Keller, Texas.",
+      "followers": {
+        "facebook": 134,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5148873.jpg?t=1588931642"
+    },
+    {
+      "title": "CBS News \u00bb Texas",
+      "feed_url": "https://www.cbsnews.com/latest/rss/main",
+      "website_url": "https://www.cbsnews.com/texas/",
+      "description": "Welcome to CBSDFW, your home for the latest news, weather, traffic and sports along with great lifestyle content. CBS 11 is part of CBS Television Stations, a division of CBS Corporation, and is one of the largest network-owned station groups in the country. Follow this feed to get all the local news and information you need in Keller, TX.",
+      "followers": {
+        "facebook": 591600,
+        "twitter": 167300,
+        "instagram": 602
+      },
+      "image_url": "https://i1.feedspot.com/5148875.jpg?t=1588932476"
+    }
+  ]
+}

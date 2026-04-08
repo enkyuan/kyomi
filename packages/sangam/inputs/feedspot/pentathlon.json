@@ -1,0 +1,66 @@
+{
+  "category": "Pentathlon",
+  "source_url": "https://rss.feedspot.com/pentathlon_rss_feeds",
+  "feeds": [
+    {
+      "title": "Scottish Pentathlon News",
+      "feed_url": "https://scottishpentathlon.org/feed/",
+      "website_url": "https://scottishpentathlon.org/latest-news/",
+      "description": "Scottish Pentathlon is the National Governing Body for Modern Pentathlon in Scotland. Find more about what's happening in Pentathlon in Scotland and across the world.",
+      "followers": {
+        "twitter": 238
+      },
+      "image_url": "https://i1.feedspot.com/5462883.jpg?t=1667542469"
+    },
+    {
+      "title": "PentathlonEU",
+      "feed_url": "https://www.pentathloneu.org/feed/",
+      "website_url": "https://www.pentathloneu.org/",
+      "description": "We are two best friends who have been pentathlon enthusiasts for as long as we can remember. After years and years of experience, we decided to share what we know with you guys. And, rest assured, there is plenty that we have to say. Along with Penthalon, we'll also discuss fitness, other sports, but also sports betting.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5462878.jpg?t=1667542724"
+    },
+    {
+      "title": "Wolfpack Pentathlon Club Blog",
+      "feed_url": "https://wolfpackpentathlon.com/feed/",
+      "website_url": "https://wolfpackpentathlon.com/blog/",
+      "description": "A USA Modern Pentathlon Club centralized in the South Bay of Northern California. Wolfpack Pentathlon Club is organized with the purpose to exclusively foster national or international amateur sports competition and primarily to conduct national or international competition in the sport of Modern Pentathlon and to support and develop amateur athletes for national or international competition in the sport of Modern Pentathlon. Browse through the blog for the latest news and updates on our athletes, club and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5462877.jpg?t=1667541932"
+    },
+    {
+      "title": "SportBusiness \u00bb Modern Pentathlon",
+      "feed_url": "https://www.sportbusiness.com/sport/modern-pentathlon/feed/",
+      "website_url": "https://www.sportbusiness.com/sport/modern-pentathlon/",
+      "description": "Stay up to date with insight, analysis and data for top decision-makers in Modern Pentathlon. SportBusiness is the most trusted global intelligence service, providing unique news, analysis, data, consulting and events which deliver competitive advantage to executives in the business of sport.",
+      "followers": {
+        "twitter": 51400,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5462880.jpg?t=1667545149"
+    },
+    {
+      "title": "Cheyenne Fencing Society & Modern Pentathlon Center Blog",
+      "feed_url": "https://www.coloradofencing.com/blog-feed.xml",
+      "website_url": "https://www.coloradofencing.com/news-blog",
+      "description": "Check out the news on Denver fencing and pentathlon from local Denver fencing competitions to Olympic fencing in pentathlon all over the world. The Cheyenne Fencing Society and Modern Pentathlon Center offers a broad range of classes which teach the fundamentals of fencing.",
+      "followers": {
+        "facebook": 445,
+        "twitter": 98
+      },
+      "image_url": "https://i1.feedspot.com/5462881.jpg?t=1667545310"
+    },
+    {
+      "title": "Modern Pentathlon Australia News",
+      "feed_url": "https://modernpentathlon.org.au/feed",
+      "website_url": "https://modernpentathlon.org.au/news",
+      "description": "Modern Pentathlon Australia is the peak body for the Olympic sport of Modern Pentathlon in Australia and is recognised by the world governing body, the UIPM. Stay in touch with what's happening in the Modern Pentathlon here in Australia and across the world.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 118,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5462882.jpg?t=1667542218"
+    }
+  ]
+}

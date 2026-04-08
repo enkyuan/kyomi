@@ -1,0 +1,89 @@
+{
+  "category": "Alteryx",
+  "source_url": "https://rss.feedspot.com/alteryx_rss_feeds",
+  "feeds": [
+    {
+      "title": "Alteryx Community",
+      "feed_url": "https://community.alteryx.com/pvsmt99345/rss/board?board.id=community-news",
+      "website_url": "https://community.alteryx.com/t5/Community-News/bg-p/community-news",
+      "description": "Connect with a community of data science and analytic experts to discover new solutions to complex challenges, contribute fresh ideas, and gain valuable perspective on the rapidly developing industry. Follow to get community news, customer stories, and more!",
+      "followers": {
+        "facebook": 11000,
+        "twitter": 26800
+      },
+      "image_url": "https://i1.feedspot.com/5127929.jpg?t=1625565901"
+    },
+    {
+      "title": "Alteryx Community \u00bb Analytics Blog",
+      "feed_url": "https://community.alteryx.com/pvsmt99345/rss/board?board.id=Analytics-Blog",
+      "website_url": "https://community.alteryx.com/t5/Analytics/bg-p/Analytics-Blog",
+      "description": "Connect with a community of data science and analytic experts to discover new solutions to complex challenges. Get articles on news, events, thought leadership and more.",
+      "followers": {
+        "facebook": 11000,
+        "twitter": 26800
+      },
+      "image_url": "https://i1.feedspot.com/5129411.jpg?t=1625565913"
+    },
+    {
+      "title": "Alteryx Community \u00bb Engine Works Blog",
+      "feed_url": "https://community.alteryx.com/pvsmt99345/rss/board?board.id=Engine-Works-Blog",
+      "website_url": "https://community.alteryx.com/t5/Engine-Works/bg-p/Engine-Works-Blog",
+      "description": "Alteryx is revolutionizing business through data science and analytics, offering an end-to-end analytics platform for data scientists and analysts alike. Follow to get tips and tricks on alteryx.",
+      "followers": {
+        "facebook": 11000,
+        "twitter": 26800
+      },
+      "image_url": "https://i1.feedspot.com/5129412.jpg?t=1625565917"
+    },
+    {
+      "title": "Capitalize Analytics \u00bb Alteryx",
+      "feed_url": "https://capitalizeconsulting.com/category/alteryx/feed/",
+      "website_url": "https://capitalizeconsulting.com/category/alteryx/",
+      "description": "An IBM premier partner, we turn your data into business intelligence. Our Consulting and Analytics Services can help you reach your goals. Follow to get articles on alteryx.",
+      "followers": {
+        "twitter": 234
+      },
+      "image_url": "https://i1.feedspot.com/5127939.jpg?t=1625565931"
+    },
+    {
+      "title": "The Analytics Corner \u00bb Alteryx",
+      "feed_url": "https://www.bigmountainanalytics.com/category/alteryx/feed/",
+      "website_url": "https://www.bigmountainanalytics.com/category/alteryx/",
+      "description": "Alteryx is data wrangling software commonly deployed with other applications like Spotfire and Tableau. This category will contain articles on Alteryx best practices, tips, tricks, and learnings.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5127936.jpg?t=1625565977"
+    },
+    {
+      "title": "InterWorks \u00bb Alteryx",
+      "feed_url": "https://interworks.com/blog/channel/alteryx/feed",
+      "website_url": "https://interworks.com/blog/channel/alteryx/",
+      "description": "InterWorks is a people-focused tech consultancy that guides clients with premier service and expertise. From foundation to the vision and every step in between, we're committed to helping others get further faster with their IT, analytics, and data strategy.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 5900,
+        "instagram": 953
+      },
+      "image_url": "https://i1.feedspot.com/5127937.jpg?t=1625565927"
+    },
+    {
+      "title": "None of your vizness \u00bb Alteryx",
+      "feed_url": "https://noneofyourvizness.co.uk/category/alteryx/feed/",
+      "website_url": "https://noneofyourvizness.co.uk/category/alteryx/",
+      "description": "A collection of blog posts focussing on Tableau and Alteryx written by Jack Parry, a Data Analyst at The Information Lab's Data School.",
+      "followers": {
+        "twitter": 798
+      },
+      "image_url": "https://i1.feedspot.com/5127931.jpg?t=1625565942"
+    },
+    {
+      "title": "James Dunkerley's Blog \u00bb Alteryx",
+      "feed_url": "https://jdunkerley.co.uk/category/alteryx/feed/",
+      "website_url": "https://jdunkerley.co.uk/category/alteryx/",
+      "description": "James Dunkerley's Blog posts about alteryx written by James Dunkerley.",
+      "followers": {
+        "twitter": 657
+      },
+      "image_url": "https://i1.feedspot.com/5127930.jpg?t=1625565950"
+    }
+  ]
+}

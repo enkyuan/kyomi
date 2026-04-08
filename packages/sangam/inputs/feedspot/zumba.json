@@ -1,0 +1,36 @@
+{
+  "category": "Zumba",
+  "source_url": "https://rss.feedspot.com/zumba_rss_feeds",
+  "feeds": [
+    {
+      "title": "My Zumba Body Blog",
+      "feed_url": "https://myzumbabody.com/feed/",
+      "website_url": "https://myzumbabody.com/blog/",
+      "description": "My Zumba Body is designed to be the most time efficient workout possible. Within a Zumba class you will get the benefits of a cardio and body toning workout all in one.",
+      "followers": {
+        "facebook": 2200,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4543328.jpg"
+    },
+    {
+      "title": "Studio 108 Fitness Blog",
+      "feed_url": "http://studio108fitness.com/blog-studio-108/feed/",
+      "website_url": "http://studio108fitness.com/blog-studio-108/",
+      "description": "Blog by Stephanie Justine specializing in Zumba Fitness, Aqua Zumba, Zumba Toning, Zumba Step and Zumba Kids",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4543405.jpg"
+    },
+    {
+      "title": "Confessions of a Fitness Instructor \u00bb Zumba",
+      "feed_url": "https://confessionsofafitnessinstructor.com/category/zumba/feed/",
+      "website_url": "https://confessionsofafitnessinstructor.com/category/zumba/",
+      "description": "Confessions of a Fitness Instructor,is a blog about zumba, fitness, nutrition, weight loss and more by Suzi. Suzi Fevens is a self employed certified fitness instructor, nutrition and weight loss coach and blogger living in Nova Scotia, Canada.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4543251.jpg?t=1614583929"
+    }
+  ]
+}

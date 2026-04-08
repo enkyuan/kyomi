@@ -1,0 +1,17 @@
+{
+  "category": "Kinston News",
+  "source_url": "https://rss.feedspot.com/kinston_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "kinston.com",
+      "feed_url": "https://www.kinston.com/news?template=rss&mime=xml",
+      "website_url": "https://www.kinston.com/",
+      "description": "Kinston.com delivers up-to-the-minute news and information on the latest top stories, weather, entertainment, politics and more.",
+      "followers": {
+        "facebook": 15000,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5153776.jpg?t=1589976115"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "category": "Rainier Climbing",
+  "source_url": "https://rss.feedspot.com/rainier_climbing_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mount Rainier Climbing",
+      "feed_url": "http://mountrainierclimbing.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://mountrainierclimbing.blogspot.com/",
+      "description": "Information on Climbing in Mount Rainier National Park. Maintained by Park Service Climbing Rangers. Its mission is to provide professional emergency services, mountaineering information, and resource protection for the mountain while supporting the greater mission of the National Park Service.",
+      "followers": {
+        "twitter": 93800
+      },
+      "image_url": "https://i1.feedspot.com/4556520.jpg?t=1625496040"
+    },
+    {
+      "title": "Visit Rainier",
+      "feed_url": "https://visitrainier.com/feed/",
+      "website_url": "https://visitrainier.com/blog/",
+      "description": "The official website for Mt. Rainier travel and vacations. Your source for information on Mt. Rainier lodging, hiking, activities, news, events, and more!",
+      "followers": {
+        "facebook": 165000,
+        "twitter": 11400,
+        "instagram": 33300
+      },
+      "image_url": "https://i1.feedspot.com/5404402.jpg?t=1653644821"
+    }
+  ]
+}

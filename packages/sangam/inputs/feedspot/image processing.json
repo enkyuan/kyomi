@@ -1,0 +1,71 @@
+{
+  "category": "Image Processing",
+  "source_url": "https://rss.feedspot.com/image_processing_rss_feeds",
+  "feeds": [
+    {
+      "title": "Imagga Blog",
+      "feed_url": "https://imagga.com/blog/feed/",
+      "website_url": "https://imagga.com/blog/",
+      "description": "Imagga is an Image Recognition Platform-as-a-Service providing Image Tagging APIs for developers & businesses to build scalable, image-intensive cloud apps.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 1400,
+        "instagram": 302
+      },
+      "image_url": "https://i1.feedspot.com/4959459.jpg?t=1621858290"
+    },
+    {
+      "title": "IPOL Journal - Image Processing On Line",
+      "feed_url": "https://www.ipol.im/feed/articles.rss",
+      "website_url": "https://www.ipol.im/",
+      "description": "IPOL is an Open Science and Reproducible Research journal. IPOL is a research journal of image processing and image analysis which emphasizes the role of mathematics as a source for algorithm design and the reproducibility of the research.",
+      "followers": {
+        "twitter": 238
+      },
+      "image_url": "https://i1.feedspot.com/4961592.jpg"
+    },
+    {
+      "title": "Image Sensors World",
+      "feed_url": "http://image-sensors-world.blogspot.com/feeds/posts/default",
+      "website_url": "http://image-sensors-world.blogspot.com/",
+      "description": "News and discussions about image sensors. Follow this blog on the innovations and everything in the field of image sensors.",
+      "followers": {
+        "twitter": 552
+      },
+      "image_url": "https://i1.feedspot.com/125859.jpg?t=1621858330"
+    },
+    {
+      "title": "PyImage Search \u00bb Image Processing",
+      "feed_url": "https://pyimagesearch.com/category/image-processing/feed/",
+      "website_url": "https://pyimagesearch.com/category/image-processing/",
+      "description": "Read Adrian Rosebrock's image processing guides to learn the fundamentals of Computer Vision using the OpenCV library. Adrian Rosebrock is a professional Computer Vision/Deep Learning developer and researcher.",
+      "followers": {
+        "facebook": 26600,
+        "twitter": 25400
+      },
+      "image_url": "https://i1.feedspot.com/5296330.jpg?t=1624602030"
+    },
+    {
+      "title": "MathWorks",
+      "feed_url": "https://feeds.feedburner.com/SteveOnImageProcessing",
+      "website_url": "https://blogs.mathworks.com/steve/",
+      "description": "Get a better understanding of image processing and the use of MATLAB from Steve Eddins at MathWorks. Steve's blog covers Image processing concepts, algorithms, and MATLAB. MathWorks is the leading developer of mathematical computing software for engineers & scientists.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 94600,
+        "instagram": 136500
+      },
+      "image_url": "https://i1.feedspot.com/1180478.jpg?t=1624602975"
+    },
+    {
+      "title": "Nature \u00bb Image processing",
+      "feed_url": "https://www.nature.com/subjects/image-processing.rss",
+      "website_url": "https://www.nature.com/subjects/image-processing",
+      "description": "Image processing is the manipulation of an image that has been digitized and uploaded into a computer. Software programs modify the image to make it more useful, and can, for example, be used to enable image recognition.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4961585.jpg?t=1621858302"
+    }
+  ]
+}

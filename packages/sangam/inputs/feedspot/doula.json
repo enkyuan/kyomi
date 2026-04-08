@@ -1,0 +1,606 @@
+{
+  "category": "Doula",
+  "source_url": "https://rss.feedspot.com/doula_rss_feeds",
+  "feeds": [
+    {
+      "title": "ChicagoFamilyDoulas Blog",
+      "feed_url": "https://chicagofamilydoulas.com/feed/",
+      "website_url": "https://chicagofamilydoulas.com/blog/",
+      "description": "Chicago Family Doulas has an amazing staff of qualified Doulas who are committed to your family. Our Doulas provide your family with compassionate support during birth and postpartum. Our highly trained doulas are passionate about providing you with high quality support that is tailored to you and your family's needs. Follow this blog to get information on labor and postpartum doula support, childbirth education and placenta encapsulation.",
+      "followers": {
+        "facebook": 21500,
+        "twitter": 178,
+        "instagram": 9300
+      },
+      "image_url": "https://i1.feedspot.com/4717830.jpg?t=1608108456"
+    },
+    {
+      "title": "Buddha Belly Birth - Doulas For Your Growing Family Blog",
+      "feed_url": "https://buddhabellybirth.com/feed",
+      "website_url": "https://buddhabellybirth.com/blog",
+      "description": "Buddha Belly - a full-service doula agency serving pregnant & postpartum families in Tampa Bay. Experienced, professional, certified. Follow blog and get updates on birth and postpartum doula support, childbirth education classes, Hypnobirthing classes, lactation support, placenta services and professional artistic belly casting in the Tampa Bay Area.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 67
+      },
+      "image_url": "https://i1.feedspot.com/4739557.jpg?t=1608108490"
+    },
+    {
+      "title": "New Beginnings Doula Blog",
+      "feed_url": "https://www.trainingdoulas.com/new-beginnings-blog/feed/",
+      "website_url": "https://www.trainingdoulas.com/new-beginnings-blog/",
+      "description": "A blog offers tips, advice, extra ideas, and fun thoughts on birth, doula, and labor. New Beginnings Doula provides exclusively online doula training and certification.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 106
+      },
+      "image_url": "https://i1.feedspot.com/5299208.jpg?t=1625472210"
+    },
+    {
+      "title": "Gold Coast Doulas Blog",
+      "feed_url": "https://www.goldcoastdoulas.com/feed/",
+      "website_url": "https://www.goldcoastdoulas.com/blog/",
+      "description": "Covers information on birth and babies. Gold Coast Doulas is the premier bedrest, birth, and postpartum doula agency serving West Michigan and the Lakeshore.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 52,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5388489.jpg?t=1649331143"
+    },
+    {
+      "title": "Birthing Advocacy Doula Trainings Blog",
+      "feed_url": "https://www.badoulatrainings.org/blog?format=rss",
+      "website_url": "https://www.badoulatrainings.org/blog",
+      "description": "Articles that are solely about Doula and related topics. Birthing Advocacy Doula Trainings is a Black-owned, queer-run doula training organization whose mission is to be socially conscious, culturally appropriate, diverse, and action-oriented.",
+      "followers": {
+        "facebook": 6900,
+        "instagram": 28000
+      },
+      "image_url": "https://i1.feedspot.com/5299211.jpg?t=1625471248"
+    },
+    {
+      "title": "ProDoula Blog",
+      "feed_url": "https://www.prodoula.com/feed/",
+      "website_url": "https://www.prodoula.com/blog/",
+      "description": "A Doula Blog to educate and inspire you on your journey through birth work. Find resources & information about Doula Training, Doula Certification, Doula Business, Doula Self-Care, and Doula Inspiration. ProDoula is a Doula Certification Agency for the Modern Doula.",
+      "followers": {
+        "facebook": 12300,
+        "twitter": 643,
+        "instagram": 11000
+      },
+      "image_url": "https://i1.feedspot.com/5299213.jpg?t=1625469980"
+    },
+    {
+      "title": "Doulas of Orange County - Musings From OC's Best Doulas Blog",
+      "feed_url": "https://www.doulasoforangecounty.com/blog?format=RSS",
+      "website_url": "https://www.doulasoforangecounty.com/blog/",
+      "description": "Doulas of Orange County is a full service agency in Orange County, California. Offering Birth and Postpartum Doulas, Placenta Encapsulation Baby Care and Childbirth Education, Breastfeeding Support and Maternity Concierge Services. Formerly known as OC Doula Collective.",
+      "followers": {
+        "facebook": 1700,
+        "instagram": 7500
+      },
+      "image_url": "https://i1.feedspot.com/4739581.jpg?t=1608108529"
+    },
+    {
+      "title": "The Best Birth and Postpartum Doulas in Greater Cincinnati Blog",
+      "feed_url": "https://www.doulasofcincinnati.com/blog?format=RSS",
+      "website_url": "https://www.doulasofcincinnati.com/blog",
+      "description": "Doulas of Cincinnati is proud to be Greater Cincinnati's Premier Full Service Doula Agency, providing birth and postpartum doula support, placenta encapsulation, childbirth education, lactation support, birth photography (and more) to tri-state families. Follow this blog and get all the information you require on postpartum and doulas.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 16,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4716061.jpg?t=1608108514"
+    },
+    {
+      "title": "Doulas of Capitol Hill Blog",
+      "feed_url": "https://www.doulasofcapitolhill.com/blog?format=RSS",
+      "website_url": "https://www.doulasofcapitolhill.com/blog/",
+      "description": "Doulas of Capitol Hill is a concierge, full service company that provides pregnancy, birth, postpartum, breastfeeding and newborn day and night support for families in Washington, D.C., Northern Virginia, and parts of Maryland.",
+      "followers": {
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/4717721.jpg?t=1608109404"
+    },
+    {
+      "title": "Doulas of Raleigh Blog",
+      "feed_url": "https://www.doulasofraleigh.com/blog?format=RSS",
+      "website_url": "https://www.doulasofraleigh.com/blog/",
+      "description": "Doulas of Raleigh is the Triangle Area's premier, full-service doula agency. We are proud to support you from every angle.",
+      "followers": {
+        "facebook": 1400,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4738897.jpg?t=1608109415"
+    },
+    {
+      "title": "Tucson Doulas Blog",
+      "feed_url": "https://tucsondoulas.com/feed/",
+      "website_url": "https://tucsondoulas.com/blog/",
+      "description": "The work we do with Tucson Doulas allows us to support the efforts of our future non-profit, Desert Doulas. Desert Doulas is a long-standing pillar in the Tucson birth community and has been known as a respected resource for families seeking prenatal, birth, and postpartum support beyond what is provided by local healthcare providers.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 59,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4717907.jpg?t=1608109427"
+    },
+    {
+      "title": "High Country Doulas Blog",
+      "feed_url": "https://www.highcountrydoulas.com/blog?format=RSS",
+      "website_url": "https://www.highcountrydoulas.com/blog/",
+      "description": "Parenting groups family resources, baby, mom groups, Boone, NC. We provide the best professional Doula services in the area including birth, placenta, placenta encapsulation, placenta prints, placenta tinctures, Nanny, and Placenta Encapsulation services for Boone, NC, Hickory, NC, Watauga Medical Center, Harmony Center for Women, Jefferson, Todd, Wilkes",
+      "followers": {
+        "facebook": 1200,
+        "instagram": 820
+      },
+      "image_url": "https://i1.feedspot.com/4738856.jpg?t=1608109438"
+    },
+    {
+      "title": "Annapolis Area Doulas Blog",
+      "feed_url": "http://www.annapolisareadoulas.com/blog/feed/",
+      "website_url": "http://www.annapolisareadoulas.com/blog/",
+      "description": "We can help you navigate the waters, every step of the way: Annapolis Area Doulas supports pregnant women during their journey to motherhood and beyond with the utmost in training, professionalism, and expertise in the field of birth and newborn care.",
+      "followers": {
+        "facebook": 2200,
+        "instagram": 950
+      },
+      "image_url": "https://i1.feedspot.com/4716138.jpg?t=1608109442"
+    },
+    {
+      "title": "Bridgetown Baby Blog",
+      "feed_url": "https://www.bridgetownbaby.com/blog?format=RSS",
+      "website_url": "https://www.bridgetownbaby.com/blog/",
+      "description": "Postpartum doulas and lactation consultants working in Portland, Oregon. We support newborns, breastfeeding, bottle feeding and infant sleep.",
+      "followers": {
+        "facebook": 817,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4717772.jpg?t=1608109637"
+    },
+    {
+      "title": "Baby Caravan - NYC Doulas Blog",
+      "feed_url": "https://www.babycaravan.com/blog?format=RSS",
+      "website_url": "https://www.babycaravan.com/blog/",
+      "description": "Baby Caravan offers exceptional Birth & Postpartum Doula services for families in New York City. If you're looking for day of birth labor support, our team can help you have a satisfying birth experience.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 295,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4717874.jpg?t=1608110112"
+    },
+    {
+      "title": "Great Expectations Birth Blog",
+      "feed_url": "https://www.greatexpectationsbirth.com/feed/",
+      "website_url": "https://www.greatexpectationsbirth.com/blog/",
+      "description": "Welcome to Great Expectations! We are sure you have great expectations for your little one(s) and we would love to be a part of your big day. Our doulas have been serving expecting and post partum families in DFW since 2007 and have helped thousands of babies arrive. Birth Classes, Placenta Encapsulation, Belly Binding, Doulas in Dallas. Follow this blog and know about pregnancy, birth and postpartum as well as the latest and coolest things about having a baby in Dallas.",
+      "followers": {
+        "twitter": 127,
+        "instagram": 7100
+      },
+      "image_url": "https://i1.feedspot.com/4717912.jpg?t=1608108473"
+    },
+    {
+      "title": "Best Doula Training Blog",
+      "feed_url": "https://bestdoulatraining.com/blog?format=RSS",
+      "website_url": "https://bestdoulatraining.com/blog/",
+      "description": "If you have an interest in women's health, enjoy supporting families, or have a passion for birth, you can be a BEST doula. Become a Certified Doula and change the world! BEST Doula Training is the BEST way to become a professional doula. Follow this blog to get more information on Doula Training, Business, Ethics, Sustainability and much more.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 114,
+        "instagram": 10100
+      },
+      "image_url": "https://i1.feedspot.com/4738756.jpg?t=1625472531"
+    },
+    {
+      "title": "Childbirth and Postpartum Professional Association",
+      "feed_url": "https://cappa.net/blog/feed/",
+      "website_url": "https://cappa.net/category/postpartum/",
+      "description": "Childbirth and Postpartum Professional Association (CAPPA) is a non-profit organization dedicated to training and certifying labor doulas, antepartum doulas, postpartum doulas, childbirth educators, and lactation educators. Find more information on postpartum on this blog.",
+      "followers": {
+        "facebook": 39700,
+        "twitter": 4400,
+        "instagram": 7900
+      },
+      "image_url": "https://i1.feedspot.com/4716038.jpg?t=1608108494"
+    },
+    {
+      "title": "Helping Hands Doula Blog",
+      "feed_url": "https://www.helpinghandsdoula.com/blog/feed/",
+      "website_url": "https://www.helpinghandsdoula.com/blog/",
+      "description": "Serving Families Across Toronto. With over 10 years of experience, our hands are here for you. Our Doulas provide physical and emotional support during childbirth and early postpartum.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 483,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4738828.jpg?t=1608108504"
+    },
+    {
+      "title": "YourDoulaBag",
+      "feed_url": "https://www.yourdoulabag.com/blogs/yourdoulabag.atom",
+      "website_url": "https://www.yourdoulabag.com/blogs/yourdoulabag",
+      "description": "Being a doula and a childbirth educator is the best profession in the world! The source for doula bag tools, doula gear and information ranging from doula training to running your doula business.",
+      "followers": {
+        "facebook": 12100,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4716072.jpg?t=1608108498"
+    },
+    {
+      "title": "Doula Training Canada Blog",
+      "feed_url": "https://doulatraining.ca/blog/feed/",
+      "website_url": "https://doulatraining.ca/blog/",
+      "description": "Doula Training Canada has been offering a variety of opportunities to develop and grow as a Birth and Postpartum professional since 2001. Our team of dedicated instructors and school of passionate students improve Canadian birth and parenting culture in confident ways. Doula Canada is set upon creating Canada's most confident and caring Doulas and Childbirth Educators. Follow our blog to get insights on doula training.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 784,
+        "instagram": 7800
+      },
+      "image_url": "https://i1.feedspot.com/4738728.jpg?t=1608108508"
+    },
+    {
+      "title": "Calm Confident Doula Blog",
+      "feed_url": "https://www.calmconfidentdoula.com/blog?format=RSS",
+      "website_url": "https://www.calmconfidentdoula.com/blog/",
+      "description": "Birth and Postpartum Doula Support. Helping new and expectant parents move from confused and overwhelmed to Calm and Confident. Serving Seattle, Everett and the Eastside, including Kirkland, Edmonds, Lynnwood, Bellevue, Redmond, Bothell and Mill Creek.",
+      "followers": {
+        "facebook": 603,
+        "twitter": 86
+      },
+      "image_url": "https://i1.feedspot.com/4717601.jpg?t=1608108518"
+    },
+    {
+      "title": "Hamilton Family Doulas Blog",
+      "feed_url": "https://hamiltonfamilydoulas.com/feed/",
+      "website_url": "https://hamiltonfamilydoulas.com/blog/",
+      "description": "Serving Hamilton, Halton, Niagara, Brant & Beyond. A pregnancy, birth and parenting support agency making parents happier, calmer and better rested with compassion, experience and care for over a decade. Making new parents happier, calmer and better rested with compassion, experience and care.",
+      "followers": {
+        "facebook": 105,
+        "twitter": 294,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4717610.jpg?t=1608109381"
+    },
+    {
+      "title": "Doula Care Blog",
+      "feed_url": "http://doulacare.com/feed/",
+      "website_url": "http://doulacare.com/blog/",
+      "description": "Doula Care provides professional postpartum assistance to families with newborns in New York city reliable, certified, breastfeeding knowledgeable experienced doulas day and overnight care.",
+      "followers": {
+        "facebook": 967,
+        "twitter": 473,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4610288.jpg?t=1608109385"
+    },
+    {
+      "title": "Tulsa Family Doulas Blog",
+      "feed_url": "https://www.tulsafamilydoulas.com/blog?format=RSS",
+      "website_url": "https://www.tulsafamilydoulas.com/blog/",
+      "description": "Tulsa Family Doulas is a full service agency providing exceptional services in Hypnobabies natural childbirth classes, Your Birth Experience childbirth education, antepartum doulas, birth doulas, and postpartum doulas, placenta encapsulation and Happiest Baby on the Block classes.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 253,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4716298.jpg?t=1608109395"
+    },
+    {
+      "title": "Birthing Stone Doula Blog",
+      "feed_url": "https://www.birthingstone.com/feed/",
+      "website_url": "https://www.birthingstone.com/portland-doulas-blog/",
+      "description": "Professional and experienced labor doulas for all births from epidurals to home births in the Portland metro area. Birth | Postpartum | Placenta | Classes",
+      "followers": {
+        "facebook": 959,
+        "twitter": 88,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4739539.jpg?t=1608109400"
+    },
+    {
+      "title": "Northwest PA Doulas Blog",
+      "feed_url": "http://nwpadoulas.com/blog?format=RSS",
+      "website_url": "http://nwpadoulas.com/blog/",
+      "description": "At Northwest PA Doulas, we are here to make a difference in your pregnancy, birth and postpartum journey. We provide evidence based, judgement free support whether you have a natural vaginal birth, a scheduled cesarean, or any of the many options in between! Upon hiring us or attending our childbirth education classes, your needs will be met to the absolute best of our ability.",
+      "followers": {
+        "facebook": 1200,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4717745.jpg?t=1608109409"
+    },
+    {
+      "title": "Thrive Birth Blog",
+      "feed_url": "https://feeds.feedburner.com/thrivebirth/iWsl",
+      "website_url": "http://www.thrivebirth.org/blog/",
+      "description": "THRIVE is a full service doula agency providing birth and postpartum doula services, placenta encapsulation, and childbirth education on the Eastern Shore.",
+      "followers": {
+        "facebook": 2100,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4717671.jpg?t=1608109419"
+    },
+    {
+      "title": "Doulas of Northern Virginia Blog",
+      "feed_url": "http://www.doulasofnorthernva.com/blog/feed/",
+      "website_url": "http://www.doulasofnorthernva.com/blog/",
+      "description": "At Doulas of Northern Virginia, we pride ourselves on providing the most professional and personalized doula care. You can rest assured that you'll receive nothing less than stellar service and unconditional support from our incredible team of doulas and placenta specialists",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 57,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4739456.jpg?t=1608109431"
+    },
+    {
+      "title": "Metro Detroit Doula Services Blog",
+      "feed_url": "https://metrodetroitdoulaservices.com/blog/feed/",
+      "website_url": "https://metrodetroitdoulaservices.com/blog/",
+      "description": "Birth and Postpartum Professionals serving Southeast Michigan. Our professional doulas hold themselves to the highest of standards and offer constant assistance to all families.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 31,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4717195.jpg?t=1608109446"
+    },
+    {
+      "title": "Family Ways",
+      "feed_url": "https://www.family-ways.com/blog-feed.xml",
+      "website_url": "https://www.family-ways.com/blog",
+      "description": "Our team of dedicated doulas is honored to support you and your family through life's transitions. We provide custom-tailored education and support services to help your family through birth, postpartum, end-of-life, and other important transitions.",
+      "followers": {
+        "facebook": 994,
+        "twitter": 90
+      },
+      "image_url": "https://i1.feedspot.com/4717123.jpg?t=1608109453"
+    },
+    {
+      "title": "Little Prince Doula Services Blog",
+      "feed_url": "https://www.littleprincedoulaservices.com/blog/feed",
+      "website_url": "https://www.littleprincedoulaservices.com/blog",
+      "description": "Astrid Hufnagel is a Birth and Postpartum Doula/ Night Nurse living in Montclair, NJ and serving the following counties in Northern NJ: Essex, Union, Morris, Passaic, Bergen, Hudson, Somerset and Middlesex",
+      "followers": {
+        "facebook": 151
+      },
+      "image_url": "https://i1.feedspot.com/4739567.jpg?t=1608109559"
+    },
+    {
+      "title": "Wichita Doula Blog",
+      "feed_url": "https://www.wichitadoula.com/blog?format=RSS",
+      "website_url": "http://www.wichitadoula.com/blog/",
+      "description": "Wichita Doula is the leading provider of labor doulas, postpartum & overnight doulas, placenta encapsulation, and childbirth classes in Wichita, KS. This blog provides information on postpartum and doulas.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 44,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4717836.jpg?t=1608109568"
+    },
+    {
+      "title": "Doulawoman.com",
+      "feed_url": "https://doulawomancom.wordpress.com/feed/",
+      "website_url": "https://doulawomancom.wordpress.com/",
+      "description": "Doula in Milwaukee: birth, postpartum, and full-spectrum doulas. We have now served as doula to women in a wide variety of births: home-birth, natural childbirth in-hospital, premature births, high-risks mom, long labors, births with medical intervention and more.",
+      "followers": {
+        "facebook": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4739442.jpg?t=1608109591"
+    },
+    {
+      "title": "Conscious Birth Iowa Blog",
+      "feed_url": "https://www.consciousbirthiowa.com/blog/feed",
+      "website_url": "https://www.consciousbirthiowa.com/blog",
+      "description": "The mission of Conscious Birth Iowa is to help new and expectant parents make informed choices about childbirth and the transformation to parenting through education.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4717808.jpg?t=1608109904"
+    },
+    {
+      "title": "Bloomington Family Wellness Blog",
+      "feed_url": "https://www.btownwell.com/blog-feed.xml",
+      "website_url": "https://www.btownwell.com/blog",
+      "description": "The Bloomington Family Wellness Team works as a group to provide you the best support and services possible for general family wellness and for the birth and parenting experience. Full spectrum support and services for Birth, Postpartum, Family Wellness, & Massage",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 11,
+        "instagram": 208
+      },
+      "image_url": "https://i1.feedspot.com/4738668.jpg?t=1608109618"
+    },
+    {
+      "title": "Calgary Doula Association Blog",
+      "feed_url": "https://www.calgarydoulas.ca/blog?format=RSS",
+      "website_url": "https://www.calgarydoulas.ca/blog/",
+      "description": "Our Mission Statement The Calgary Doula Association believes that every woman and family deserve a doula. The Calgary Doula Association strives to increase the quality of prenatal, birth and postpartum support by promoting access to doulas that adhere to a strict standard of practice.",
+      "followers": {
+        "facebook": 1400,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4717847.jpg?t=1608109979"
+    },
+    {
+      "title": "Cloud Nine Birth Services - Postpartum Doula Services Blog",
+      "feed_url": "http://cloudninebirths.com/blog?format=RSS",
+      "website_url": "http://cloudninebirths.com/blog/",
+      "description": "Premier Birth Doula Services, Postpartum Doula Services and Evidence Based Birth\u00ae and Bradley Method\u00ae Courses located in Chicago and Chicagoland. The ultimate prenatal, birth and postpartum support experience, tailored to you.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 73,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4716285.jpg?t=1608110013"
+    },
+    {
+      "title": "Ridge Meadows Doula Services",
+      "feed_url": "https://ridgemeadowsdoulaservices.com/feed/",
+      "website_url": "https://ridgemeadowsdoulaservices.com/category/doula/",
+      "description": "Over the years, postpartum doulas, placenta encapsulation and childbirth education were added making Ridge Meadows Doula Services a one stop shop for all things prenatal to postpartum.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 301
+      },
+      "image_url": "https://i1.feedspot.com/4717792.jpg?t=1608110029"
+    },
+    {
+      "title": "Piedmont Doula Blog",
+      "feed_url": "https://piedmontdoulas.com/blog/feed/",
+      "website_url": "https://piedmontdoulas.com/blog/",
+      "description": "Piedmont Doulas offers birth doula services, postpartum doula services, childbirth classes in Greensboro, Winston-Salem, High Point, Salisbury, Statesville.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 1,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4717715.jpg?t=1608110033"
+    },
+    {
+      "title": "Bluegrass Doulas Blog",
+      "feed_url": "https://www.bluegrassdoulas.com/blog-feed.xml",
+      "website_url": "https://www.bluegrassdoulas.com/blog",
+      "description": "Bluegrass Doulas provide birth doula, postpartum doula, childbirth education services to Louisville KY, Southern Indiana, Frankfort, and Lexington Kentucky.",
+      "followers": {
+        "facebook": 1300,
+        "instagram": 818600
+      },
+      "image_url": "https://i1.feedspot.com/4739433.jpg?t=1608110040"
+    },
+    {
+      "title": "Lancaster Doulas Blog",
+      "feed_url": "https://www.lancasterdoulas.com/feed/",
+      "website_url": "https://www.lancasterdoulas.com/blog/",
+      "description": "Our mission at Lancaster Doulas is to provide doula support to families who wish to enhance their birth and postpartum experience. Lancaster Doulas was created to bring together the best doulas in one place so that birthing families have a wealth of knowledge at their fingertips.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 329
+      },
+      "image_url": "https://i1.feedspot.com/4739500.jpg?t=1608110045"
+    },
+    {
+      "title": "Coastal Doulas of Palm Beach Blog",
+      "feed_url": "https://coastaldoulas.com/feed/",
+      "website_url": "https://coastaldoulas.com/blog/",
+      "description": "Your Body. Your Birth. Your Baby. Coastal Doulas provides professional birth and postpartum doula support, placenta encapsulation, & childbirth classes to families throughout Palm Beach county.",
+      "followers": {
+        "facebook": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4738811.jpg?t=1608110088"
+    },
+    {
+      "title": "New World Doula",
+      "feed_url": "https://newworlddoula.com/category/news-from-your-doula/feed/",
+      "website_url": "https://newworlddoula.com/category/news-from-your-doula/",
+      "description": "New World Doula Services offers childbirth education, professional birth and postpartum doula services, placenta encapsulation and breastfeeding support to families on the South Shore of Massachusetts. New World Doula is certified via DONA, Lamaze, ProDoula, and Rebozo.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4717635.jpg?t=1608110092"
+    },
+    {
+      "title": "Bay Area Doulas",
+      "feed_url": "http://www.bayareadoulas.com/feed/",
+      "website_url": "http://www.bayareadoulas.com/articles/",
+      "description": "Katherine has always been looked to for advice and support from her friends as they experience pregnancy and prepare for their births. Becoming a doula was a natural transition for her after becoming involved in many support organizations for mothers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4739504.jpg?t=1608110857"
+    },
+    {
+      "title": "Wild World Mama",
+      "feed_url": "https://www.wildworldmama.com/feed/",
+      "website_url": "https://www.wildworldmama.com/my-thoughts/",
+      "description": "Graphic design services for doulas, midwives, and other wellness professionals to support them in their efforts towards improving birth.",
+      "followers": {
+        "facebook": 732,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5088796.jpg?t=1608110105"
+    },
+    {
+      "title": "Megan the Doula - Montreal Doula Services Blog",
+      "feed_url": "https://meganthedoula.com/blog/feed/",
+      "website_url": "https://meganthedoula.com/blog/",
+      "description": "Megan the Doula is the page of Montreal based doula Megan Howarth. Megan is a birth and postpartum doula, co-founder of Birds and Bees Prenatal Classes, featured Huffington Post contributor, blogger and public speaker. We are pleased to offer you professional and reliable Montreal doulas. Prenatal classes, birth support, new baby help and much more.",
+      "followers": {
+        "facebook": 705,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4717742.jpg?t=1608110025"
+    },
+    {
+      "title": "Nurturing Birth Blog",
+      "feed_url": "https://courses.nurturingbirth.co.uk/blog.rss",
+      "website_url": "https://courses.nurturingbirth.co.uk/blog/",
+      "description": "Latest stories on birth support training from Nurturing Birth Doula News. Blog posts cover Doulaing, Doula Mentoring, Training to be a Doula, Doula Business, Pregnancy & Birth, and more. Nurturing Birth offers doula courses for anyone interested in working with women & their families around the time of birth.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 1500,
+        "instagram": 6400
+      },
+      "image_url": "https://i1.feedspot.com/5330398.jpg?t=1633955941"
+    },
+    {
+      "title": "Northeast Doulas Blog",
+      "feed_url": "https://northeastdoulas.com/blog/feed/",
+      "website_url": "https://northeastdoulas.com/blog/",
+      "description": "How do I find a Labor Doula? What is a Postpartum Doula? Should I hire a Baby Nurse? They often seek the help of the experts at Northeast Doulas! As business minded women with a passion for birth, Northeast Doulas owners, Randy Patterson & Debbie Aglietti have a deep understanding of all things associated with pregnancy, birth and the postpartum period. Follow this blog to gain information on postpartum and doula.",
+      "followers": {
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4717782.jpg?t=1608108464"
+    },
+    {
+      "title": "Arkansas Family Doulas Blog",
+      "feed_url": "http://arkansasfamilydoulas.com/blog?format=RSS",
+      "website_url": "https://arkansasdoulas.com/blog/",
+      "description": "We are Arkansas' first state wide full service Doula agency. We are the only agency who is identically trained by a recognized Professional Doula Certifying Agency thorough the state of Arkansas to offer you consistency no matter who is supporting you.",
+      "followers": {
+        "facebook": 5600
+      },
+      "image_url": "https://i1.feedspot.com/4717819.jpg?t=1608108525"
+    },
+    {
+      "title": "Bywater Birth",
+      "feed_url": "https://bywaterbirth.com/blog/feed/",
+      "website_url": "https://bywaterbirth.com/",
+      "description": "Birth and Postpartum Doula Services, Hypnobabies Classes, Placenta Encapsulation, Evidence Based Birth Workshops",
+      "followers": {
+        "facebook": 797,
+        "twitter": 34
+      },
+      "image_url": "https://i1.feedspot.com/4717684.jpg?t=1608109565"
+    },
+    {
+      "title": "My Meadville Doula Blog",
+      "feed_url": "http://www.mymeadvilledoula.com/blog/feed/",
+      "website_url": "https://www.dublindoula.com/",
+      "description": "Professional Labor & Postpartum Doula Support. My Meadville Doula - Birth & Postpartum Assistance in Crawford County Pennsylvania and Surrounding Areas",
+      "followers": {
+        "facebook": 251,
+        "instagram": 179
+      },
+      "image_url": "https://i1.feedspot.com/4739579.jpg?t=1608109610"
+    },
+    {
+      "title": "DUBLIN DOULA SERVICES",
+      "feed_url": "https://www.dublindoula.com/feed/",
+      "website_url": "https://www.dublindoula.com/",
+      "description": "I offer all my clients homoeopathy support during pregnancy and labour and the post partum period. Dublin doula. Birth services. Birth Mentoring, Birth Doula, placenta encapsulation, homeopathic services, mother blessings postpartum doula",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4717246.jpg?t=1608109993"
+    },
+    {
+      "title": "Portland Doula Collaborative Blog",
+      "feed_url": "https://www.portlanddoulacollaborative.com/blog-feed.xml",
+      "website_url": "https://www.portlanddoulaco.com/blog",
+      "description": "Portland Doula Collaborative offers a variety of labor and postpartum services for families in the southern and central Maine regions.Our unique and integrative approach offers quality care with a guarantee that one of our providers will be present for your birth. Owners Mary Latendresse, Jennifer Merriman, and Alison VanDerburgh are excited to offer their vast knowledge to the birthing community.",
+      "followers": {
+        "facebook": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4738884.jpg"
+    }
+  ]
+}

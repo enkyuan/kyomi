@@ -1,0 +1,162 @@
+{
+  "category": "ZDNET",
+  "source_url": "https://rss.feedspot.com/zdnet_rss_feeds",
+  "feeds": [
+    {
+      "title": "ZDNET",
+      "feed_url": "https://zdnet.com/news/rss.xml",
+      "website_url": "https://www.zdnet.com/",
+      "description": "ZDNET news and advice keep professionals prepared to embrace innovation and ready to build a better future.",
+      "followers": {
+        "facebook": 281300,
+        "twitter": 456200,
+        "instagram": 19200
+      },
+      "image_url": "https://i1.feedspot.com/8535624.jpg"
+    },
+    {
+      "title": "ZDNET \u00bb Apple",
+      "feed_url": "https://www.zdnet.com/topic/apple/rss.xml",
+      "website_url": "https://www.zdnet.com/topic/apple/",
+      "description": "The world's largest technology company, creator of the iPhone, iPad and Mac, continues to expand services offerings such as Apple+.",
+      "followers": {
+        "facebook": 281300,
+        "twitter": 456200,
+        "instagram": 19200
+      },
+      "image_url": "https://i1.feedspot.com/4499489.jpg?t=1686814200"
+    },
+    {
+      "title": "ZDNET \u00bb Security",
+      "feed_url": "https://www.zdnet.com/topic/security/rss.xml",
+      "website_url": "https://www.zdnet.com/topic/security/",
+      "description": "Software has holes, and hackers will exploit the new vulnerabilities that appear daily. Keep tabs on the latest threats.",
+      "followers": {
+        "facebook": 281300,
+        "twitter": 456200,
+        "instagram": 19200
+      },
+      "image_url": "https://i1.feedspot.com/4499489.jpg?t=1686814200"
+    },
+    {
+      "title": "ZDNET \u00bb Artificial Intelligence",
+      "feed_url": "https://www.zdnet.com/topic/artificial-intelligence/rss.xml",
+      "website_url": "https://www.zdnet.com/topic/artificial-intelligence/",
+      "description": "All articles about Artificial Intelligence from ZDNET.",
+      "followers": {
+        "facebook": 281300,
+        "twitter": 456200,
+        "instagram": 19200
+      },
+      "image_url": "https://i1.feedspot.com/4499489.jpg?t=1686814200"
+    },
+    {
+      "title": "ZDNET \u00bb Microsoft",
+      "feed_url": "https://www.zdnet.com/topic/microsoft/rss.xml",
+      "website_url": "https://www.zdnet.com/topic/microsoft/",
+      "description": "All articles about Microsoft from ZDNET.",
+      "followers": {
+        "facebook": 281300,
+        "twitter": 456200,
+        "instagram": 19200
+      },
+      "image_url": "https://i1.feedspot.com/4499489.jpg?t=1686814200"
+    },
+    {
+      "title": "ZDNET \u00bb Google",
+      "feed_url": "https://www.zdnet.com/topic/google/rss.xml",
+      "website_url": "https://www.zdnet.com/topic/google/",
+      "description": "News and updates about Google from ZDNet. ZDNet is the online destination for professionals seeking to solve business technology problems and find new opportunities.",
+      "followers": {
+        "facebook": 3,
+        "twitter": 456200,
+        "instagram": 19200
+      },
+      "image_url": "https://i1.feedspot.com/5042563.jpg?t=1686814207"
+    },
+    {
+      "title": "ZDNET \u00bb Amazon",
+      "feed_url": "https://www.zdnet.com/topic/amazon/rss.xml",
+      "website_url": "https://www.zdnet.com/topic/amazon/",
+      "description": "Technology giant and industry disrupter Amazon is both the world's largest e-commerce provider and the world's largest cloud computing platform.",
+      "followers": {
+        "facebook": 281300,
+        "twitter": 456200,
+        "instagram": 19200
+      },
+      "image_url": "https://i1.feedspot.com/5598634.jpg?t=1686814448"
+    },
+    {
+      "title": "ZDNET \u00bb Business",
+      "feed_url": "https://www.zdnet.com/topic/business/rss.xml",
+      "website_url": "https://www.zdnet.com/topic/business/",
+      "description": "Disruptive technologies coupled with the pandemic-accelerated work-from-home movement have transformed the way business gets done.",
+      "followers": {
+        "facebook": 281300,
+        "twitter": 456200,
+        "instagram": 19200
+      },
+      "image_url": "https://i1.feedspot.com/5598633.jpg?t=1686814241"
+    },
+    {
+      "title": "ZDNET \u00bb Cyber Threats",
+      "feed_url": "https://www.zdnet.com/topic/cyber-threats/rss.xml",
+      "website_url": "https://www.zdnet.com/topic/cyber-threats/",
+      "description": "From malware and ransomware to phishing and DDoS attacks, cyber threats against our critical networks and personal devices demand ever-increasing vigilance.",
+      "followers": {
+        "facebook": 281300,
+        "twitter": 456200,
+        "instagram": 19200
+      },
+      "image_url": "https://i1.feedspot.com/5598637.jpg?t=1686814427"
+    },
+    {
+      "title": "ZDNET \u00bb Social Media",
+      "feed_url": "https://www.zdnet.com/topic/social-media/rss.xml",
+      "website_url": "https://www.zdnet.com/topic/social-media/",
+      "description": "Stay up-to-date on all things social media. Discover the latest news, how-tos, and in-depth analysis on Facebook, Instagram, and Twitter. ZDNET has the inside scoop and tips and tricks.",
+      "followers": {
+        "facebook": 281300,
+        "twitter": 456200,
+        "instagram": 19200
+      },
+      "image_url": "https://i1.feedspot.com/5598636.jpg?t=1686814467"
+    },
+    {
+      "title": "ZDNET \u00bb Education",
+      "feed_url": "https://www.zdnet.com/topic/education/rss.xml",
+      "website_url": "https://www.zdnet.com/topic/education/",
+      "description": "Explore traditional, hybrid, and online learning options for upskilling, advancing your career, and enhancing your professional development.",
+      "followers": {
+        "facebook": 281300,
+        "twitter": 456200,
+        "instagram": 19200
+      },
+      "image_url": "https://i1.feedspot.com/5598635.jpg?t=1686814481"
+    },
+    {
+      "title": "ZDNET \u00bb Health",
+      "feed_url": "https://www.zdnet.com/topic/health/rss.xml",
+      "website_url": "https://www.zdnet.com/topic/health/",
+      "description": "For both experts and laypeople looking to improve their well-being, this area provides thorough coverage of the most recent innovations, discoveries, and insights in the subject of health.",
+      "followers": {
+        "facebook": 281300,
+        "twitter": 456200,
+        "instagram": 19200
+      },
+      "image_url": "https://i1.feedspot.com/5598638.jpg?t=1686814570"
+    },
+    {
+      "title": "ZDNET \u00bb Finance",
+      "feed_url": "https://www.zdnet.com/topic/finance/rss.xml",
+      "website_url": "https://www.zdnet.com/topic/finance/",
+      "description": "ZDNET covers all money matters, from corporate news and crypto developments to the financial products and services that help support your bottom line.",
+      "followers": {
+        "facebook": 281300,
+        "twitter": 456200,
+        "instagram": 19200
+      },
+      "image_url": "https://i1.feedspot.com/5598639.jpg?t=1686814591"
+    }
+  ]
+}

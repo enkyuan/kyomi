@@ -1,0 +1,22 @@
+{
+  "category": "Mexico Trading",
+  "source_url": "https://rss.feedspot.com/mexico_trading_rss_feeds",
+  "feeds": [
+    {
+      "title": "Trading Academy M\u00e9xico Blog",
+      "feed_url": "https://www.tradingacademy.mx/blog-feed.xml",
+      "website_url": "https://www.tradingacademy.mx/blog",
+      "description": "At Trading Academy M\u00e9xico Blog, traders, whether novice or intermediate, discover answers to a myriad of questions, fostering growth and proficiency in trading endeavors.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7268246.jpg?t=1709789182"
+    },
+    {
+      "title": "Bolsa Mexicana de Valores Blog",
+      "feed_url": "https://blog.bmv.com.mx/feed/",
+      "website_url": "https://blog.bmv.com.mx/",
+      "description": "Bolsa Mexicana de Valores, the official blog of the Mexican Stock Exchange, offers the latest news, articles, and analysis on trading. Stay updated with valuable insights and information crucial for navigating the financial markets.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7268245.jpg?t=1710913006"
+    }
+  ]
+}

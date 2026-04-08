@@ -1,0 +1,449 @@
+{
+  "category": "LA Food",
+  "source_url": "https://rss.feedspot.com/la_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Eater Los Angeles",
+      "feed_url": "https://la.eater.com/rss/index.xml",
+      "website_url": "https://la.eater.com/",
+      "description": "Eater LA is an online publication that covers the food and dining scene in Los Angeles. It provides city maps and travel dining guides marking all the best places to eat, punchy editorials exploring the cultural significance of what and how we eat, in-depth industry investigations, and light-hearted ruminations on food fads and cooking tips and tricks.",
+      "followers": {
+        "facebook": 222700,
+        "twitter": 284300,
+        "instagram": 585200
+      },
+      "image_url": "https://i1.feedspot.com/4786725.jpg?t=1609401186"
+    },
+    {
+      "title": "Eat Drink LA",
+      "feed_url": "https://www.eatdrinkla.com/feed/",
+      "website_url": "https://www.eatdrinkla.com/",
+      "description": "A site with the best places to eat and drink in Los Angeles! Here you will find lots of round-ups, guides where to eat every day of the week in Los Angeles.",
+      "followers": {
+        "twitter": 24
+      },
+      "image_url": "https://i1.feedspot.com/4787018.jpg?t=1612773148"
+    },
+    {
+      "title": "Culinary Hill",
+      "feed_url": "https://www.culinaryhill.com/feed/",
+      "website_url": "https://www.culinaryhill.com/",
+      "description": "At Culinary Hill, we make recipes that are deliciously modern without sacrificing their authenticity. Every recipe is developed, tested, and approved just for you.",
+      "followers": {
+        "facebook": 363300,
+        "twitter": 7800,
+        "instagram": 47900
+      },
+      "image_url": "https://i1.feedspot.com/4899595.jpg?t=1612773152"
+    },
+    {
+      "title": "A Cozy Kitchen",
+      "feed_url": "https://www.acozykitchen.com/feed",
+      "website_url": "https://www.acozykitchen.com/",
+      "description": "Adrianna shares easy pastry recipes, bakery-style desserts and cakes, and the absolute best breakfast recipes! Her Latin-inspired recipes are cozy comfort food.",
+      "followers": {
+        "facebook": 81900,
+        "twitter": 7200,
+        "instagram": 634400
+      },
+      "image_url": "https://i1.feedspot.com/1085250.jpg?t=1600346225"
+    },
+    {
+      "title": "Healthy Happy Life",
+      "feed_url": "https://healthyhappylife.com/feed/",
+      "website_url": "https://healthyhappylife.com/",
+      "description": "Kathy Patalsky is a content creator, artist and author. Kathy founded the recipe and vegan lifestyle blog, HealthyHappyLife.com est. 2007. Kathy is the author and photographer of two cookbooks, 365 Vegan Smoothies and Healthy Happy Vegan Kitchen.",
+      "followers": {
+        "facebook": 77700,
+        "twitter": 1300,
+        "instagram": 22600
+      },
+      "image_url": "https://i1.feedspot.com/593621.jpg?t=1654520106"
+    },
+    {
+      "title": "Gastronomy Blog",
+      "feed_url": "https://gastronomyblog.com/feed/",
+      "website_url": "https://gastronomyblog.com/",
+      "description": "My name is Cathy Chaplin. I serve up restaurant reviews in Los Angeles and The World. I was born in La Mesa, California, educated in Swarthmore, Pennsylvania, and cultured in Saigon, Vietnam. Now based in Los Angeles. My writing and photography have appeared in numerous publications including Saveur, Los Angeles Times, Bon App\u00e9tit, and Cond\u00e9 Nast Traveler.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 7200
+      },
+      "image_url": "https://i1.feedspot.com/4710013.jpg?t=1612773156"
+    },
+    {
+      "title": "Detoxinista",
+      "feed_url": "https://detoxinista.com/feed/",
+      "website_url": "https://detoxinista.com/",
+      "description": "I'm Megan Gilmore, a former fast-food junkie turned Certified Nutritionist Consultant (CNC). I love creating healthy recipes that taste like my comfort food favorites! From recipes to meal plans to eating guides, eating well has never been easier!",
+      "followers": {
+        "facebook": 374600,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4899589.jpg?t=1612773160"
+    },
+    {
+      "title": "Ev's Eats",
+      "feed_url": "https://evseats.com/feed/",
+      "website_url": "https://evseats.com/",
+      "description": "Hey! I'm Evi from the food blog Ev's Eats. Ev's Eats is a food and lifestyle blog showcasing my adventures in food; creating simple, flavorful recipes, and your guide to the best places to eat in Los Angeles.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 710,
+        "instagram": 34000
+      },
+      "image_url": "https://i1.feedspot.com/4899705.jpg?t=1612773163"
+    },
+    {
+      "title": "The Amateur Gourmet",
+      "feed_url": "https://www.amateurgourmet.com/blog?format=rss",
+      "website_url": "https://www.amateurgourmet.com/",
+      "description": "I am Adam Roberts and I created this here food blog back in 2004 to share recipes, cooking tips, and restaurant reviews. I am an author of two books and produce web content for The Food Network. Upon graduating, I moved to New York to get an MFA in dramatic writing at NYU's Tisch School of the Arts. It was there that I met my future husband, Craig Johnson.",
+      "followers": {
+        "facebook": 13700,
+        "twitter": 3,
+        "instagram": 89400
+      },
+      "image_url": "https://i1.feedspot.com/4887322.jpg?t=1702026569"
+    },
+    {
+      "title": "Sweet Potato Soul",
+      "feed_url": "https://sweetpotatosoul.com/feed/",
+      "website_url": "https://sweetpotatosoul.com/",
+      "description": "A vegan food and lifestyle blog, cookbook, and cooking show! Featuring easy, delicious, and healthy vegan recipes. Hi, I'm Jenn\u00e9! On Sweet Potato Soul you'll discover hundreds of delicious and easy-to-make vegan recipes. I also share lots of cooking videos and healthy eating tips.",
+      "followers": {
+        "facebook": 95400,
+        "twitter": 8400,
+        "instagram": 362300
+      },
+      "image_url": "https://i1.feedspot.com/4241979.jpg?t=1609842588"
+    },
+    {
+      "title": "Plant Based Los Angeles",
+      "feed_url": "https://plantbasedlosangeles.org/feed/",
+      "website_url": "https://plantbasedlosangeles.org/",
+      "description": "Plant based diet for your health and the planet. Dr. Sirisha Potluri is a medical doctor and dietary/lifestyle medicine coach certified in plant-based nutrition through ECornell. She co-founded and currently manages 'Plant-Based Thursdays', which is a social network consisting of 1000+ active participants. Along with illness prevention and disease reversal, her passion is to craft whole-food plant-based recipes, which she constantly updates to this blog.",
+      "followers": {
+        "facebook": 594
+      },
+      "image_url": "https://i1.feedspot.com/5419750.jpg?t=1657197626"
+    },
+    {
+      "title": "L.A.'s The Place Magazine \u00bb Food & Spirits",
+      "feed_url": "https://lastheplace.com/category/food-and-spirits/feed/",
+      "website_url": "https://lastheplace.com/category/food-and-spirits/",
+      "description": "L.A.'s The Place Magazine is for people who love this inspired trendsetting metropolis of fun, sun, fashion, show business, and beautiful people called Los Angeles. It brings you all-original content, interviews with celebrities and legendary people, coverage of celebrity and charity events, reviews, and more. The magazine features the spirit of LA's best places to eat and try a variety of delicious food and spirits.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5723239.jpg?t=1701170444"
+    },
+    {
+      "title": "Resy Blog \u00bb Los Angeles",
+      "feed_url": "https://blog.resy.com/city/los-angeles/feed/",
+      "website_url": "https://blog.resy.com/city/los-angeles/",
+      "description": "Resy powers the world's best restaurants, using technology to imagine the future of hospitality.",
+      "followers": {
+        "facebook": 9000,
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/5749448.jpg?t=1704441160"
+    },
+    {
+      "title": "Kristie Hang",
+      "feed_url": "https://www.kristiehang.com/home?format=rss",
+      "website_url": "https://www.kristiehang.com/",
+      "description": "Blog of Host,\u00a0Food & Travel Expert, & Journalst",
+      "followers": {
+        "instagram": 49300
+      },
+      "image_url": "https://i1.feedspot.com/5749453.jpg?t=1704441201"
+    },
+    {
+      "title": "Shelly's Humble Kitchen",
+      "feed_url": "https://www.shellyshumblekitchen.com/feed/",
+      "website_url": "https://www.shellyshumblekitchen.com/",
+      "description": "Smart Vegetable Recipes",
+      "followers": {
+        "facebook": 754
+      },
+      "image_url": "https://i1.feedspot.com/5749456.jpg?t=1704441223"
+    },
+    {
+      "title": "Todo Verde Blog",
+      "feed_url": "https://todoverde.org/blogs/recipes-1.atom",
+      "website_url": "https://todoverde.org/blogs/recipes-1",
+      "description": "Browse plant-based Mexican Abuelita-approved recipes for the whole familia created by Chef Jocelyn, author of bestselling cookbook, La Vida Verde, and New York Times Cooking recipe contributor.",
+      "followers": {
+        "facebook": 3900,
+        "instagram": 44700
+      },
+      "image_url": "https://i1.feedspot.com/5749452.jpg?t=1704441194"
+    },
+    {
+      "title": "Vegan Anj Blog",
+      "feed_url": "https://vegananj.com/feed/",
+      "website_url": "https://vegananj.com/blog/",
+      "description": "Anj is here to share ways in which we can live more consciously through plant-forward eating and make small shifts in our daily rituals to make a tangible impact on our individual and collective health - all in ways that are attainable, and, most importantly, delicious. In addition to sharing her experience through FFI's culinary school, you can also find #VeganAnj's original dishes, plant-based adaptations of her favorite foods, and family recipes.",
+      "followers": {
+        "facebook": 38,
+        "twitter": 8,
+        "instagram": 590
+      },
+      "image_url": "https://i1.feedspot.com/5419342.jpg?t=1695880127"
+    },
+    {
+      "title": "Cooking Therapy",
+      "feed_url": "https://www.cooking-therapy.com/feed/",
+      "website_url": "https://www.cooking-therapy.com/",
+      "description": "Hello! I'm Rebecca. I am a home cook that is obsessed with food. Through this blog, I hope to inspire the everyday home cook as well as share stories from my own food adventures.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 152,
+        "instagram": 19300
+      },
+      "image_url": "https://i1.feedspot.com/4900576.jpg?t=1612788191"
+    },
+    {
+      "title": "What's Gaby Cooking",
+      "feed_url": "https://whatsgabycooking.com/feed/",
+      "website_url": "https://whatsgabycooking.com/",
+      "description": "I'm Gaby, a cookbook author, chef, and food/lifestyle writer. Here you can expect the best recipes, videos, and travel guides to make your life even easier and more delicious!",
+      "followers": {
+        "facebook": 429400,
+        "twitter": 29000,
+        "instagram": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/4795000.jpg?t=1628151914"
+    },
+    {
+      "title": "101 Cookbooks",
+      "feed_url": "https://www.101cookbooks.com/feed",
+      "website_url": "https://www.101cookbooks.com/",
+      "description": "101 Cookbooks is a food blog focused on healthy recipes for everyday. It features over 700 vegetarian recipes, whole foods recipes, and vegan recipes, plus the occasional sweet treat. It is written by New York Times best selling author Heidi Swanson. She started 101 cookbooks in early 2003.",
+      "followers": {
+        "facebook": 189100,
+        "twitter": 133800,
+        "instagram": 128400
+      },
+      "image_url": "https://i1.feedspot.com/5016738.jpg?t=1628512173"
+    },
+    {
+      "title": "L.A. Taco",
+      "feed_url": "https://lataco.com/feed",
+      "website_url": "https://lataco.com/",
+      "description": "An independent, member-driven food and news source that looks at Los Angeles from the street up, including breaking discoveries in the world of L.A. street food. They are a source of news and information covering food, culture, and community in the metropolitan area. L.A. TACO was founded in late 2006 by its founders' simple desire to document the things they love about the city.",
+      "followers": {
+        "facebook": 43800,
+        "twitter": 56800,
+        "instagram": 314200
+      },
+      "image_url": "https://i1.feedspot.com/5423956.jpg?t=1658400395"
+    },
+    {
+      "title": "Toddrickallen",
+      "feed_url": "https://toddrickallen.com/feed/",
+      "website_url": "https://toddrickallen.com/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3593248.jpg?t=1704454494"
+    },
+    {
+      "title": "Lindsey Eats",
+      "feed_url": "https://lindseyeatsla.com/feed/",
+      "website_url": "https://lindseyeatsla.com/",
+      "description": "Hi, my name is Lindsey and I'm so happy you're here! I am the photographer, recipe developer, writer, and cook behind Lindsey Eats! This is a website dedicated to all things recipes, entertainment, travel & lifestyle. Here you'll find the classics, as well as all my go-to weeknight dinner recipes, snacks & appetizers, and more with seasonality in mind! My mission is to share good food that inspires you to cook while creating recipes that are simple and approachable.",
+      "followers": {
+        "facebook": 24900,
+        "twitter": 106
+      },
+      "image_url": "https://i1.feedspot.com/5749455.jpg?t=1704441217"
+    },
+    {
+      "title": "California to Italy Blog",
+      "feed_url": "https://fromcaliforniatoitaly.com/feed/",
+      "website_url": "https://fromcaliforniatoitaly.com/blog/",
+      "followers": {
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/5749451.jpg?t=1704454571"
+    },
+    {
+      "title": "Food GPS",
+      "feed_url": "https://foodgps.com/feed/",
+      "website_url": "https://foodgps.com/",
+      "description": "Pinpointing the best tasting food and drink, regardless of price or cuisine, and sharing personal stories of the people behind the flavor. Josh grew up in suburban New Jersey, his passion for food really exploded during his college summers, when he drove west to work in Los Angeles.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 15600,
+        "instagram": 49300
+      },
+      "image_url": "https://i1.feedspot.com/5310685.jpg?t=1628512963"
+    },
+    {
+      "title": "Los Angeles Times \u00bb Food",
+      "feed_url": "https://www.latimes.com/food.rss",
+      "website_url": "https://www.latimes.com/food",
+      "description": "Food",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 3800000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/5749454.jpg?t=1704441214"
+    },
+    {
+      "title": "Immaculate Bites",
+      "feed_url": "https://www.africanbites.com/feed/",
+      "website_url": "https://www.africanbites.com/",
+      "description": "Immaculate Bites is a food blog founded by Imma, a self-taught cook and recipe developer. Our focus is on comfort food with a Caribbean twist, featuring dishes like jerk chicken and rice and peas. The blog has a collection of blog posts covering topics such as Caribbean comfort food and Southern-inspired dishes.",
+      "followers": {
+        "facebook": 852000,
+        "twitter": 1000,
+        "instagram": 239200
+      },
+      "image_url": "https://i1.feedspot.com/4978050.jpg?t=1673354003"
+    },
+    {
+      "title": "Honest Cooking",
+      "feed_url": "https://honestcooking.com/feed/",
+      "website_url": "https://honestcooking.com/",
+      "description": "Find the most inspiring recipes, interviews and travel tips in the magically delicious world of Honest Cooking Magazine.",
+      "followers": {
+        "facebook": 521299,
+        "twitter": 16400,
+        "instagram": 10800
+      },
+      "image_url": "https://i1.feedspot.com/1118116.jpg?t=1600345954"
+    },
+    {
+      "title": "The Los Angeles Food Blog",
+      "feed_url": "http://www.consumingla.com/feed/",
+      "website_url": "http://www.consumingla.com/",
+      "description": "Howard Meyers dedicates his time curating lists and guides introducing his favorite restaurants and food discoveries in L.A. His love for the diverse cuisine of the city has given him a lot of material to work within his journey to uncover all of the yummiest eateries in Los Angeles.",
+      "followers": {
+        "facebook": 2600,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/2267517.jpg?t=1612773143"
+    },
+    {
+      "title": "ChooseVeg Blog",
+      "feed_url": "https://chooseveg.com/feed/",
+      "website_url": "https://chooseveg.com/blog/",
+      "description": "Latest vegan meal tips, vegetarian restaurant reviews, and breaking vegan news to help you move toward a vegetarian or vegan diet. ChooseVeg is a project of Mercy For Animals, dedicated to promoting compassionate food choices & policies.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 315000,
+        "instagram": 519799
+      },
+      "image_url": "https://i1.feedspot.com/5291699.jpg?t=1657190718"
+    },
+    {
+      "title": "Local Food Eater",
+      "feed_url": "https://localfoodeater.com/feed/",
+      "website_url": "https://localfoodeater.com/latest-posts/",
+      "description": "Find best Places to Eat food",
+      "followers": {
+        "facebook": 789
+      },
+      "image_url": "https://i1.feedspot.com/5749449.jpg?t=1704441174"
+    },
+    {
+      "title": "We Like LA \u00bb Food",
+      "feed_url": "https://www.welikela.com/losangeles/food/feed/",
+      "website_url": "https://www.welikela.com/losangeles/food/",
+      "description": "We help you find the best food in L.A. through our lists and news bites (pun intended!).",
+      "followers": {
+        "facebook": 254400,
+        "twitter": 5900,
+        "instagram": 63600
+      },
+      "image_url": "https://i1.feedspot.com/5749445.jpg?t=1704441127"
+    },
+    {
+      "title": "Chloe's Kitchen",
+      "feed_url": "https://www.chloecharlotteskitchen.com/blog-feed.xml",
+      "website_url": "https://www.chloecharlotteskitchen.com/",
+      "description": "Mysite",
+      "followers": {
+        "facebook": 613,
+        "instagram": 114600
+      },
+      "image_url": "https://i1.feedspot.com/5749460.jpg?t=1704441249"
+    },
+    {
+      "title": "Craving California",
+      "feed_url": "https://cravingcalifornia.com/feed/",
+      "website_url": "https://cravingcalifornia.com/",
+      "description": "Welcome to Craving California where I'm sharing flavorful, smiple, down-to-earth recipes and all the culinary tips and tricks I've learned as a classicly trained professional chef. I've been obsessed with cooking (and eating!) since I was really young. I grew up making Kraft mac and cheese, and every recipe on the side of the Bisquick box. My brothers and I loved to play restaurant, and I proudly made dinner for my family a few nights a week. I knew early on that I was going to be a chef.",
+      "followers": {
+        "facebook": 764,
+        "twitter": 4,
+        "instagram": 15500
+      },
+      "image_url": "https://i1.feedspot.com/5310643.jpg?t=1628509835"
+    },
+    {
+      "title": "Hungry In LA",
+      "feed_url": "https://www.imhungryinla.com/feeds/posts/default",
+      "website_url": "https://www.imhungryinla.com/",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 8400,
+        "instagram": 191800
+      },
+      "image_url": "https://i1.feedspot.com/5749447.jpg?t=1704441155"
+    },
+    {
+      "title": "Jessie Eats",
+      "feed_url": "https://jessieeats.com/feed/",
+      "website_url": "https://jessieeats.com/category/all/",
+      "description": "Satisfy Your Hunger",
+      "followers": {
+        "twitter": 764,
+        "instagram": 26700
+      },
+      "image_url": "https://i1.feedspot.com/5749459.jpg?t=1704441239"
+    },
+    {
+      "title": "DandyEats",
+      "feed_url": "https://dandyeats.com/feed/",
+      "website_url": "https://dandyeats.com/",
+      "description": "spice is life",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5749457.jpg?t=1704441227"
+    },
+    {
+      "title": "WhatNow \u00bb Los Angeles",
+      "feed_url": "https://whatnow.com/los-angeles/feed/",
+      "website_url": "https://whatnow.com/los-angeles/",
+      "description": "What Now Los Angeles is the premier news source for planned restaurants, retail, and real estate in the Los Angeles, CA area. Learn what's trending in LA today!",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5749446.jpg?t=1704444371"
+    },
+    {
+      "title": "The Infatuation \u00bb Restaurant Reviews",
+      "feed_url": "https://www.theinfatuation.com/los-angeles/feed",
+      "website_url": "https://www.theinfatuation.com/los-angeles",
+      "description": "All your latest food news",
+      "followers": {
+        "facebook": 67600,
+        "twitter": 79600,
+        "instagram": 811500
+      },
+      "image_url": "https://i1.feedspot.com/5749458.jpg?t=1704441237"
+    },
+    {
+      "title": "LA Weekly \u00bb Food",
+      "feed_url": "https://www.laweekly.com/category/food/feed/",
+      "website_url": "https://www.laweekly.com/category/food/",
+      "followers": {
+        "facebook": 366200,
+        "twitter": 705400,
+        "instagram": 208800
+      },
+      "image_url": "https://i1.feedspot.com/5749450.jpg?t=1704441179"
+    }
+  ]
+}

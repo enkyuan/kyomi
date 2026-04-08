@@ -1,0 +1,42 @@
+{
+  "category": "Formula Feeding",
+  "source_url": "https://rss.feedspot.com/formula_feeding_rss_feeds",
+  "feeds": [
+    {
+      "title": "Baby Feeding Coach Blog",
+      "feed_url": "https://www.babyfeedingcoach.com/blog.rss",
+      "website_url": "https://www.babyfeedingcoach.com/blog/",
+      "description": "Baby Feeding Coach Blog is essentially a nurse guide on How to prepare Baby Formula, and take care of your Newborn and Toddlers. Baby Feeding Coach by Erin uses evidence-based information to help you feed your baby by using infant formula, combining breastmilk and formula, and starting solids. Erin is a nurse practitioner to babies and kids and a lactation counselor.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5450101.jpg?t=1664256792"
+    },
+    {
+      "title": "Mommy Formula",
+      "feed_url": "https://mommyformula.com/blogs/news.atom",
+      "website_url": "https://mommyformula.com/blogs/news",
+      "description": "Get the latest news and information about European Baby Formula and more. Mommy Formula shares important health tips about infant formula and other resources for your baby. Mommy Formula delivers affordable, high-quality, and accessible organic formulas to help and support breast-feeding mothers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5450096.jpg?t=1664257101"
+    },
+    {
+      "title": "Fed Is Best Blog",
+      "feed_url": "https://fedisbest.org/feed/",
+      "website_url": "https://fedisbest.org/blog/",
+      "description": "Fed is Best provides resources for safe infant feeding for breastfeeding, formula-feeding, and combo-feeding families. Check out the latest posts to see our safe infant feeding resources and help. The Fed Is Best Foundation is a non-profit, volunteer organization of health professionals, and parents focusing on filling the gaps in Breast-feeding and Formula-feeding education.",
+      "followers": {
+        "facebook": 939200,
+        "twitter": 2400,
+        "instagram": 18900
+      },
+      "image_url": "https://i1.feedspot.com/5450099.jpg?t=1664256691"
+    },
+    {
+      "title": "Feed \u00bb Formula Feeding",
+      "feed_url": "https://www.feeduk.org/blog/category/Formula%20Feeding?format=rss",
+      "website_url": "https://www.feeduk.org/blog/category/Formula+Feeding",
+      "description": "The Feed blog provides informative content and guides on breastfeeding, Formula feeding, and other Parental care. Read more to become informed and health-conscious. Feed is an independent charity aimed at supporting parents with compassionate science-based infant feeding information.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5450100.jpg?t=1664257977"
+    }
+  ]
+}

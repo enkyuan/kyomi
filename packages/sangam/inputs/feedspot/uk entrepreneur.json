@@ -1,0 +1,84 @@
+{
+  "category": "UK Entrepreneur",
+  "source_url": "https://rss.feedspot.com/uk_entrepreneur_rss_feeds",
+  "feeds": [
+    {
+      "title": "Entrepreneur Handbook",
+      "feed_url": "https://entrepreneurhandbook.co.uk/feed/",
+      "website_url": "https://entrepreneurhandbook.co.uk/",
+      "description": "Follow Entrepreneur Handbook to discover everything you need to know to start, manage and grow a successful business. With in-depth guides for aspiring and established entrepreneurs on topics including leadership, finance, marketing, technology, human resources, operations and more.",
+      "followers": {
+        "facebook": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4833997.jpg?t=1613652768"
+    },
+    {
+      "title": "The Fun Entrepreneur",
+      "feed_url": "https://www.thefunentrepreneur.com/feed/",
+      "website_url": "https://www.thefunentrepreneur.com/",
+      "description": "If you want to find out how to make running a business more fun then check out The Fun Entrepreneur's handy advice to start, grow and run a business.",
+      "followers": {
+        "facebook": 389,
+        "twitter": 107
+      },
+      "image_url": "https://i1.feedspot.com/4528649.jpg?t=1600235213"
+    },
+    {
+      "title": "Entrepreneurs Hub",
+      "feed_url": "https://www.entrepreneurshub.co.uk/feed/",
+      "website_url": "https://www.entrepreneurshub.co.uk/news/",
+      "description": "EH provides expert advice to business owners and shareholders in order to maximise the value of their businesses.",
+      "followers": {
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4905697.jpg?t=1613652790"
+    },
+    {
+      "title": "The Entrepreneurs Network Blog",
+      "feed_url": "https://www.tenentrepreneurs.org/blog?format=rss",
+      "website_url": "https://www.tenentrepreneurs.org/blog/",
+      "description": "The Entrepreneurs Network is a think tank for Britain's most ambitious entrepreneurs. We bridge the gap between entrepreneurs and policymakers, with the aim of making Britain the best place in the world to start and grow a business.",
+      "followers": {
+        "facebook": 602,
+        "twitter": 7400
+      },
+      "image_url": "https://i1.feedspot.com/5330369.jpg?t=1633954994"
+    },
+    {
+      "title": "Just Entrepreneurs Blog",
+      "feed_url": "https://feeds.feedburner.com/JustEntrepreneursBlog",
+      "website_url": "https://justentrepreneurs.co.uk/",
+      "description": "Just Entrepreneurs is a media and content marketing platform created for start-ups, small business owners and entrepreneurs. Follow us to keep up with amazing tips, guides and advice.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 3200,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4905626.jpg?t=1613652880"
+    },
+    {
+      "title": "The Entrepreneurship Centre Blog",
+      "feed_url": "https://entrepreneurship.blog.jbs.cam.ac.uk/feed/",
+      "website_url": "https://entrepreneurship.blog.jbs.cam.ac.uk/",
+      "description": "The Entrepreneurship Centre at Cambridge Judge Business School aims to inspire, enable & research entrepreneurship. The Centre encompasses the full entrepreneurial journey - starting with the empowerment of aspiring entrepreneurs through to the creation & development of early-stage ventures, all the way to small & medium size enterprise growth.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5340693.jpg?t=1636443364"
+    },
+    {
+      "title": "Centre for Entrepreneurs",
+      "feed_url": "https://www.centreforentrepreneurs.org/feed/",
+      "website_url": "https://www.centreforentrepreneurs.org/",
+      "description": "Welcome to the Centre for Entrepreneurs, the new home of CFE and NEF. The Centre for Entrepreneurs (CFE) is the UK's leading entrepreneurship foundation. We support the doers and makers who change lives and grow Britain.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4905647.jpg?t=1612607277"
+    },
+    {
+      "title": "Alison Edgar - The Entrepreneur's Godmother Blog",
+      "feed_url": "https://www.alisonedgar.com/blog/feed/",
+      "website_url": "https://www.alisonedgar.com/blog/",
+      "description": "Alison Edgar, The Entrepreneur's Godmother is one of the UK's Top 10 Business Advisors working with some of Britain's most promising entrepreneurs. Alison works with start-ups, micros, owner manages businesses and sales teams to help them transform their sales and increase revenue.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4905657.jpg"
+    }
+  ]
+}

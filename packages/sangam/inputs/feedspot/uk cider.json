@@ -1,0 +1,71 @@
+{
+  "category": "UK Cider",
+  "source_url": "https://rss.feedspot.com/uk_cider_rss_feeds",
+  "feeds": [
+    {
+      "title": "The National Association of Cider Makers",
+      "feed_url": "https://cideruk.com/feed/",
+      "website_url": "https://cideruk.com/cider-news/",
+      "description": "We are the National Association of Cider Makers (NACM). Keep up to date with latest news and articles from Cider News.",
+      "followers": {
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4913150.jpg?t=1620305993"
+    },
+    {
+      "title": "Crafty Nectar Blog",
+      "feed_url": "https://craftynectar.com/blogs/cider.atom",
+      "website_url": "https://craftynectar.com/blogs/cider",
+      "description": "Discover the best craft ciders from artisan cider makers. Enjoy a selection of delicious new ciders each month from the UK's top artisan producers. CraftyNectar is cider drinking made easy! Follow this blog and get cider news, latest cider products and cider industry news.",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 32400,
+        "instagram": 15800
+      },
+      "image_url": "https://i1.feedspot.com/4836276.jpg?t=1611065988"
+    },
+    {
+      "title": "Real Cider",
+      "feed_url": "https://www.real-cider.co.uk/feed/",
+      "website_url": "https://www.real-cider.co.uk/",
+      "description": "Together with you, we're championing the 'Real' Cider movement! Supporting cider makers, pubs, and cider fans by providing the latest information on how to enjoy traditional 'Real' Cider. Discover the wonderful world of 'Real' cider by learning about and appreciating some of the best cider's and perries for your company, club or party.",
+      "followers": {
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/4836303.jpg?t=1611065605"
+    },
+    {
+      "title": "Mill House Cider Museum Blog",
+      "feed_url": "https://www.millhousecider.com/blog-feed.xml",
+      "website_url": "https://www.millhousecider.com/blog",
+      "description": "Mill House Cider Museum shows you exactly how this traditional drink was made. You can tour around the displays and equipment that shows the importance of cider as a drink over the years. Find the hidden Smiley Apples around the museum to discover some unusual fun facts about cider and its traditions!",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4913149.jpg?t=1620306029"
+    },
+    {
+      "title": "The Cider Blog",
+      "feed_url": "https://theciderblog.wordpress.com/feed/",
+      "website_url": "https://theciderblog.wordpress.com/",
+      "description": "Welcome to ! I am Nick Morris, a 31 year old cider enthusiast from Bristol. This blog is here to record my thoughts and feelings about anything cider related. This will range from my pub reviews to even making my own cider. I do like to write a good cider review along the way, which are usually straight to the point and try to add a little bit of fun/humour when I can.",
+      "followers": {
+        "facebook": 249,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4913118.jpg?t=1620305909"
+    },
+    {
+      "title": "Hogan's Cider Blog",
+      "feed_url": "https://www.hoganscider.co.uk/news?format=RSS",
+      "website_url": "https://www.hoganscider.co.uk/news/",
+      "description": "Hogan's Cider crafts proper cider and perry from 100% English cider apples and perry pears. Innovative ciders alongside tradition. Find latest news and articles from this blog.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/4913121.jpg?t=1620305937"
+    }
+  ]
+}

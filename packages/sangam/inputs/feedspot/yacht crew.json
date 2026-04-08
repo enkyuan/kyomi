@@ -1,0 +1,41 @@
+{
+  "category": "Yacht Crew",
+  "source_url": "https://rss.feedspot.com/yacht_crew_rss_feeds",
+  "feeds": [
+    {
+      "title": "Wilsonhalligan \u00bb Crew Tips",
+      "feed_url": "https://www.wilsonhalligan.com/category/crew-tips/feed/",
+      "website_url": "https://www.wilsonhalligan.com/category/crew-tips/",
+      "description": "Are you a passionate and intuitive member of a yacht crew? Refine your skills and service with our vast array of articles focused around tips for crew.",
+      "followers": {
+        "facebook": 13000,
+        "twitter": 1500,
+        "instagram": 11200
+      },
+      "image_url": "https://i1.feedspot.com/5196846.jpg?t=1600175030"
+    },
+    {
+      "title": "Quay Crew",
+      "feed_url": "https://quaycrew.com/blog/feed/",
+      "website_url": "https://quaycrew.com/blog/",
+      "description": "With 14 years experience in yachting and recruitment we are the market leaders at supplying super yacht crew worldwide. Get the latest news and updates of yacht crew at Quay Crew blog.",
+      "followers": {
+        "facebook": 21800,
+        "twitter": 686,
+        "instagram": 22300
+      },
+      "image_url": "https://i1.feedspot.com/5037730.jpg"
+    },
+    {
+      "title": "Yacht Friend",
+      "feed_url": "https://www.yachtfriend.com/articles?format=feed",
+      "website_url": "https://www.yachtfriend.com/articles",
+      "description": "Yacht Friend is an article platform and online community for yacht people around the world, including a directory of services for the yacht industry.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 556
+      },
+      "image_url": "https://i1.feedspot.com/5196826.jpg?t=1600174036"
+    }
+  ]
+}

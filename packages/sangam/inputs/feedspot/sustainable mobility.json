@@ -1,0 +1,64 @@
+{
+  "category": "Sustainable Mobility",
+  "source_url": "https://rss.feedspot.com/sustainable_mobility_rss_feeds",
+  "feeds": [
+    {
+      "title": "pointA Blog",
+      "feed_url": "https://pointa.ca/feed/",
+      "website_url": "https://pointa.ca/blog/",
+      "description": "Get to know about transportation options for businesses that can help with improved sustainability. Affordable programs to help you reach your sustainability goals. Shifting to more sustainable transportation modes reduces the negative impacts of congestion and creates a healthier and happier workforce.",
+      "followers": {
+        "facebook": 25,
+        "twitter": 542
+      },
+      "image_url": "https://i1.feedspot.com/5346172.jpg?t=1637674796"
+    },
+    {
+      "title": "Sustainable Mobility Consulting Blog",
+      "feed_url": "https://sustainmobility.co/blog?format=rss",
+      "website_url": "https://sustainmobility.co/blog",
+      "description": "Find out how changes in our daily mobility can affect sustainability with our blog. Sustainable Mobility Consulting provides consulting, advising, and advocating for private, public, and non-profit organizations focused on growing sustainable mobility solutions in communities across the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5524281.jpg?t=1679400498"
+    },
+    {
+      "title": "ICLEI Sustainable Mobility",
+      "feed_url": "https://sustainablemobility.iclei.org/feed/",
+      "website_url": "https://sustainablemobility.iclei.org/updates/",
+      "description": "Visit our website for updates related to sustainable mobility and get news about transportation changes from various parts of the world. Through the Sustainable Mobility agenda, ICLEI supports its Members to provide access to safe, affordable, accessible, resilient, low-emission and sustainable mobility systems to create livable cities that fulfill the mobility needs of all.",
+      "followers": {
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5524283.jpg?t=1679399304"
+    },
+    {
+      "title": "Evectra Blog",
+      "feed_url": "https://evectra.com/en/feed/",
+      "website_url": "https://evectra.com/en/electric-mobility-blog/",
+      "description": "Learn about the benefits of electric mobility with the Evectra Blog. We are a leading and reference company in the development of vehicle recharging infrastructures, collaborating in promoting sustainable mobility and respect for the environment. We respond to the paradigm shift in mobility, carrying out reports and projects to define the infrastructures that best suit the needs of our clients.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5524284.jpg?t=1679400683"
+    },
+    {
+      "title": "National Center for Sustainable Transportation",
+      "feed_url": "https://ncst.ucdavis.edu/news.rss",
+      "website_url": "https://ncst.ucdavis.edu/news",
+      "description": "Stay up to date with the latest news from the National Center for Sustainable Transportation. The National Center for Sustainable Transportation (NCST) provides national leadership in advancing environmentally sustainable transportation through cutting-edge research, direct policy engagement, and education of our future leaders.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5524279.jpg?t=1679399277"
+    },
+    {
+      "title": "Global Railway Review \u00bb Sustainability",
+      "feed_url": "https://www.globalrailwayreview.com/core_topic/sustainability/feed/",
+      "website_url": "https://www.globalrailwayreview.com/core_topic/sustainability/",
+      "description": "Know about the news, stories and articles referencing Sustainable Urban Transport on Intelligent Transport. Serving the transport industry for more than 15 years, Intelligent Transport is the leading source for information in the urban public transport sector. With articles from across the globe, we explore how and why industry decision makers operate the way they do, and examine how technology is changing the dynamics of transport.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 8700
+      },
+      "image_url": "https://i1.feedspot.com/5524278.jpg?t=1679399272"
+    }
+  ]
+}

@@ -1,0 +1,657 @@
+{
+  "category": "Trauma",
+  "source_url": "https://rss.feedspot.com/trauma_rss_feeds",
+  "feeds": [
+    {
+      "title": "PACEsConnection",
+      "feed_url": "https://pacesconnection.crowdstack.io/blog?rss=true",
+      "website_url": "https://pacesconnection.crowdstack.io/blog/",
+      "description": "Articles on childhood trauma, resilience-building practices and becoming trauma-informed. PACEsConnection share's the nuts and bolts of becoming a trauma-informed organization and their struggles, questions, and successes too.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 10900,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5264812.jpg?t=1617616898"
+    },
+    {
+      "title": "Beating Trauma Blog",
+      "feed_url": "https://beatingtrauma.com/feed/",
+      "website_url": "https://beatingtrauma.com/beating-trauma-blog/",
+      "description": "A blog by Elisabeth Corey on beating trauma and childhood trauma recovery journey. Elisabeth is a survivor of family-controlled child sex trafficking and abuse.",
+      "followers": {
+        "facebook": 137200,
+        "twitter": 20200
+      },
+      "image_url": "https://i1.feedspot.com/5264761.jpg?t=1617608902"
+    },
+    {
+      "title": "Birth Trauma Blog",
+      "feed_url": "https://birthtrauma.org.au/feed/",
+      "website_url": "https://birthtrauma.org.au/the-blog/",
+      "description": "In this blog, women and their families share their experiences of birth trauma. These stories are shared in their own voice and may be distressing to some readers. We tell these stories because many people find them helpful and it informs us all of the wide range of birth experiences families undergo.",
+      "followers": {
+        "facebook": 9100,
+        "twitter": 272,
+        "instagram": 11700
+      },
+      "image_url": "https://i1.feedspot.com/5264887.jpg?t=1617626591"
+    },
+    {
+      "title": "Coalition for National Trauma Research Blog",
+      "feed_url": "https://www.nattrauma.org/feed/",
+      "website_url": "https://www.nattrauma.org/kt-tools/trauma-blog/",
+      "description": "Get latest new, press release, articles on trauma research. The Coalition for National Trauma Research (CNTR) is a non-profit organization that brings the trauma community together with a unified focus to address the critical need to coordinate our efforts to achieve federal research funding commensurate with the burden of disease and to enhance the infrastructure supporting high-impact, multidisciplinary clinical trials.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5265116.jpg?t=1617697450"
+    },
+    {
+      "title": "The Center for Trauma, Stress, and Anxiety Blog",
+      "feed_url": "https://www.ctsatherapy.com/feed/",
+      "website_url": "https://www.ctsatherapy.com/blog/",
+      "description": "The Center for Trauma, Stress, and Anxiety is not your average therapy and wellness center. We offer a variety of evidence-based and alternative medicine approaches that can be individually tailored to support and heal those struggling with anxiety, trauma, and stress. Through collaboration, we work with our individual clients, couples, and families to provide custom-tailored, comprehensive treatment services designed to heal all aspects of mind, body, and spirit.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 16,
+        "instagram": 703
+      },
+      "image_url": "https://i1.feedspot.com/5522195.jpg?t=1679030459"
+    },
+    {
+      "title": "Wind Haven Foundation Blog",
+      "feed_url": "https://windhavenfoundation.org/feed/",
+      "website_url": "https://windhavenfoundation.org/blog/",
+      "description": "Wind Haven is an empowering and uplifting non-sectarian community outreach, offering an online Abusive Relationship Trauma Recovery program as well as encouragement and empowerment for abuse survivors.",
+      "followers": {
+        "facebook": 23300,
+        "twitter": 105
+      },
+      "image_url": "https://i1.feedspot.com/5471048.jpg?t=1669205963"
+    },
+    {
+      "title": "Trauma System News",
+      "feed_url": "https://trauma-news.com/feed/",
+      "website_url": "https://trauma-news.com/",
+      "description": "Trauma System News provides trauma programs and trauma system leaders with information to help them develop more effective systems of care for injured patients.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5522189.jpg?t=1679030427"
+    },
+    {
+      "title": "The Trauma & Mental Health Report",
+      "feed_url": "https://trauma.blog.yorku.ca/feed/",
+      "website_url": "https://trauma.blog.yorku.ca/",
+      "description": "Read about interviews with survivors, therapists, researchers, and other professionals in the fields of interpersonal trauma and mental health. The Trauma & Mental Health Report is a weekly online magazine published out of York University in Toronto. Our aim is to share research-based knowledge on the treatment, prevention, and implications of trauma and mental illness in a manner that can be readily understood by readers.",
+      "followers": {
+        "facebook": 37100,
+        "twitter": 7500,
+        "instagram": 69700
+      },
+      "image_url": "https://i1.feedspot.com/5272030.jpg?t=1619014041"
+    },
+    {
+      "title": "CPTSD Foundation Blog",
+      "feed_url": "https://cptsdfoundation.org/feed/",
+      "website_url": "https://cptsdfoundation.org/trauma-informed-blog/",
+      "description": "Read about content that focuses on complex trauma research, as well as survivor stories & poetry, and featured articles from clinicians and thought leaders in the world of trauma recovery.",
+      "followers": {
+        "facebook": 104700,
+        "twitter": 12500,
+        "instagram": 45300
+      },
+      "image_url": "https://i1.feedspot.com/5264911.jpg?t=1617629643"
+    },
+    {
+      "title": "Brickel and Associates LLC Blog",
+      "feed_url": "https://brickelandassociates.com/feed/",
+      "website_url": "https://brickelandassociates.com/blog/",
+      "description": "Read this blog to get a trauma informed care approach to individual and family therapy. Brickel and Associates, LLC brings a strengths-based, trauma-informed, systems approach to the treatment of individuals (adolescents and adults), couples and families.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 2300,
+        "instagram": 929
+      },
+      "image_url": "https://i1.feedspot.com/5278156.jpg?t=1620373148"
+    },
+    {
+      "title": "Trauma Specialists Training Institute Blog",
+      "feed_url": "https://www.traumaspecialiststraining.com/blog.rss",
+      "website_url": "https://www.traumaspecialiststraining.com/blog/",
+      "description": "Hi, I'm Rachel, As a therapist, I quickly learned that so much of what my clients were experiencing could be traced back to traumatic experiences in their lives. And although talk therapy was helpful, it was not enough. I believe that every therapist needs to know how to do EMDR Therapy because nothing works quite like it to treat trauma and move clients toward healing. Now we have a whole team of trainers and consultants who have gone far beyond what I could ever do myself.",
+      "followers": {
+        "facebook": 455,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5522196.jpg?t=1679030466"
+    },
+    {
+      "title": "Attachment and Trauma Network Blog",
+      "feed_url": "https://www.attachmenttraumanetwork.org/feed/",
+      "website_url": "https://www.attachmenttraumanetwork.org/blog/",
+      "description": "Touching Trauma at Its Heart is a blog written by Attachment & Trauma Network's voices a collection of trauma-informed parents, professionals, and educators.",
+      "followers": {
+        "facebook": 72800,
+        "twitter": 2200,
+        "instagram": 13700
+      },
+      "image_url": "https://i1.feedspot.com/5264782.jpg?t=1617611756"
+    },
+    {
+      "title": "Child Trauma Sherpa Blog",
+      "feed_url": "https://www.childtraumasherpa.com/feed/",
+      "website_url": "https://www.childtraumasherpa.com/blog/",
+      "description": "Child Trauma Sherpa provides resources, encouragement, and support to parents and families on the journey with their adopted and foster children with Trauma.",
+      "followers": {
+        "facebook": 647,
+        "instagram": 275
+      },
+      "image_url": "https://i1.feedspot.com/5522204.jpg?t=1679030504"
+    },
+    {
+      "title": "Arielle Schwartz Blog",
+      "feed_url": "https://drarielleschwartz.com/feed/",
+      "website_url": "https://drarielleschwartz.com/arielles-blog/",
+      "description": "Read articles on trauma recovery, resilience, embodiment and yoga therapy by Arielle Schwartz. Dr. Schwartz has a private practice in Boulder, Colorado providing Psychotherapy, Supervision, and Consultation in Resilience Informed Therapy which applies research on trauma recovery, EMDR Therapy, and Somatic Psychology to form a strength-based, trauma treatment model.",
+      "followers": {
+        "facebook": 39300,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5265012.jpg?t=1617776082"
+    },
+    {
+      "title": "Mindful Living Counseling Blog",
+      "feed_url": "https://www.mindfullivingcounselingservices.com/blog?format=rss",
+      "website_url": "https://www.mindfullivingcounselingservices.com/blog",
+      "description": "At Mindful Living Counseling, our Orlando Therapists help you make sense of all that is going on so that you can have clarity and confidence. We can help you create an individualized toolkit for managing your life's stressors so that you can let go of anxiety and feel in control again.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5522202.jpg?t=1679030489"
+    },
+    {
+      "title": "Christian Trauma Healing Network Blog",
+      "feed_url": "https://christiantraumahealingnetwork.org/feed/",
+      "website_url": "https://christiantraumahealingnetwork.org/blog/",
+      "description": "We are a nonprofit organization for Christians who serve trauma survivors. Join hundreds of others who are receiving valuable resources, training, and collaboration. We aim to make the Christian community the best place on earth for healing the wounds of trauma.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5522192.jpg?t=1679030894"
+    },
+    {
+      "title": "Gretchen Schmelzer Blog",
+      "feed_url": "http://gretchenschmelzer.com/blog-1?format=rss",
+      "website_url": "http://gretchenschmelzer.com/blog-1",
+      "description": "Read about innovative integration and healing of long term trauma and PTSD. The Trail Guide is a Web-mag intended to support the healing of repeated trauma. It is inspired by exploration, research, learning, development, nature, art, writing, community work, and all therapeutic activities.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 816
+      },
+      "image_url": "https://i1.feedspot.com/5264804.jpg?t=1617615688"
+    },
+    {
+      "title": "Dart Center",
+      "feed_url": "https://dartcenter.org/rss.xml",
+      "website_url": "https://dartcenter.org/",
+      "description": "The Dart Center for Journalism and Trauma, a project of the Columbia University Graduate School of Journalism, is dedicated to informed, innovative, and ethical news reporting on violence, conflict, and tragedy. Whether the topic is street crime, family violence, natural disaster, war, or human rights, effective news reporting on traumatic events demands knowledge, skill, and support.",
+      "followers": {
+        "facebook": 11300,
+        "twitter": 17800
+      },
+      "image_url": "https://i1.feedspot.com/4776704.jpg?t=1679465621"
+    },
+    {
+      "title": "Trauma Therapist Network Blog",
+      "feed_url": "https://traumatherapistnetwork.com/feed/",
+      "website_url": "https://traumatherapistnetwork.com/blog/",
+      "description": "Welcome to the Trauma Therapist Network! We hope you will find resources, information, and support in our counseling directory whether you hope to learn about trauma or you're looking to find a trauma therapist.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5522201.jpg?t=1679030692"
+    },
+    {
+      "title": "Thrive Therapy Blog",
+      "feed_url": "https://thrivetherapyinc.com/feed/",
+      "website_url": "https://thrivetherapyinc.com/blog/",
+      "description": "Thrive is a practice dedicated to treating Post-Traumatic Stress Disorder or PTSD. Our clinicians are highly specialized, and we understand how PTSD can affect every facet of your life. We also understand how difficult it can be to reach out for help when related to past trauma.",
+      "followers": {
+        "facebook": 470,
+        "instagram": 849
+      },
+      "image_url": "https://i1.feedspot.com/5522197.jpg?t=1679030472"
+    },
+    {
+      "title": "Trauma Counseling Center of Los Angeles Blog",
+      "feed_url": "https://traumacounseling.com/trauma-therapy-blog/feed/",
+      "website_url": "https://traumacounseling.com/trauma-therapy-blog/",
+      "description": "Read articles on trauma counseling and anxiety treatment. The Trauma Counseling Center of Los Angeles uses innovative therapy techniques to help people heal traumatic experiences and understand their thoughts, feelings, and behaviors.",
+      "followers": {
+        "facebook": 523
+      },
+      "image_url": "https://i1.feedspot.com/5271941.jpg?t=1619007857"
+    },
+    {
+      "title": "Montgomery Counseling Group Blog",
+      "feed_url": "https://montgomerycg.net/feed/",
+      "website_url": "https://montgomerycg.net/blog/",
+      "description": "Read about quick tips on anxiety, trauma and depression therapy. Montgomery Counseling serves individuals & families in Charlotte, NC.",
+      "followers": {
+        "twitter": 7
+      },
+      "image_url": "https://i1.feedspot.com/5265111.jpg?t=1617693312"
+    },
+    {
+      "title": "Trauma Healing NW Blog",
+      "feed_url": "https://traumahealing-nw.com/feed/",
+      "website_url": "https://traumahealing-nw.com/blog/",
+      "description": "Trauma Healing Northwest is a specialty therapy clinic for trauma healing therapy and stress-related disorders and their impacts on our thoughts, emotions, body, and behavior. We are committed to providing the highest quality psychological and neurobiological therapies to help you learn about the impacts of trauma and stress, grow ineffective coping and grounding skills, and heal by reducing or eliminating symptoms of trauma and stress in your life.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5522199.jpg?t=1679030479"
+    },
+    {
+      "title": "Amanda Ann Gregory",
+      "feed_url": "https://www.amandaanngregory.com/feed/",
+      "website_url": "https://www.amandaanngregory.com/blog-complex-trauma-amanda-ann-gregory/",
+      "description": "Amanda Ann Gregory, is a trauma psychotherapist, national speaker, and author. Gregory has provided individual, group, and family therapy for more than 15 years in outpatient and residential settings and is currently in private practice.",
+      "followers": {
+        "facebook": 2700,
+        "instagram": 9300
+      },
+      "image_url": "https://i1.feedspot.com/5522208.jpg?t=1679030528"
+    },
+    {
+      "title": "Trauma and Beyond Center Blog",
+      "feed_url": "https://www.traumaandbeyondcenter.com/feed/",
+      "website_url": "https://www.traumaandbeyondcenter.com/blog/",
+      "description": "Trauma and Beyond blog offer information about childhood trauma, relationship issues, sexual trauma, and many more topics related to trauma. Trauma and Beyond is a holistic treatment center where trauma focused therapy can help you to address what is at the bottom of keeping you from living a better life.",
+      "followers": {
+        "twitter": 96
+      },
+      "image_url": "https://i1.feedspot.com/5265203.jpg?t=1617708782"
+    },
+    {
+      "title": "The Trauma Pro Blog",
+      "feed_url": "https://thetraumapro.com/feed/",
+      "website_url": "https://thetraumapro.com/blog/",
+      "description": "My name is Michael McGonigal, and I'm the Emeritus Director of Trauma Services for the adult. Through this site my goal is to share the tips and tricks I've picked up over the years, let you know about new and interesting ideas, warn you about bad ones, and in general, just have fun spreading practical knowledge about trauma.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4475816.jpg?t=1679461366"
+    },
+    {
+      "title": "Trauma Research Notes Blog",
+      "feed_url": "https://traumaresearchnotes.blog/feed/",
+      "website_url": "https://traumaresearchnotes.blog/posts/",
+      "description": "Welcome to Trauma Research Notes, the online home of the Traumatic Stress Studies (TSS) Group in the Department of Psychology at the University of Denver. As community-engaged researchers, we are committed to building and deepening community-university partnerships to do research that matters for public problem-solving. We know that research can only make a difference when it gets to the people who can use it, and that good communication is key to successful partnerships. That's why this site brings you regular blog posts from our team and other ways to connect with us and our work.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5522191.jpg?t=1679030760"
+    },
+    {
+      "title": "ScienceDaily \u00bb PTSD News",
+      "feed_url": "https://www.sciencedaily.com/rss/mind_brain/ptsd.xml",
+      "website_url": "https://www.sciencedaily.com/news/mind_brain/ptsd/",
+      "description": "Read about the latest research findings regarding post-traumatic stress disorder including common causes and new treatments. ScienceDaily features breaking news about the latest scientific discoveries on everything from astrophysics to zoology from the world's leading universities and research organizations.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 306500
+      },
+      "image_url": "https://i1.feedspot.com/4741354.jpg?t=1606452865"
+    },
+    {
+      "title": "Dr. Susanne Babbel Blog",
+      "feed_url": "https://www.drbabbel.com/blog?format=rss",
+      "website_url": "https://www.drbabbel.com/blog",
+      "description": "A blog that brings awareness to what trauma is but also to help people with innovative techniques to fight trauma symptoms.",
+      "followers": {
+        "facebook": 543,
+        "twitter": 646
+      },
+      "image_url": "https://i1.feedspot.com/5265006.jpg?t=1617686108"
+    },
+    {
+      "title": "Trauma-Informed Teaching & Learning Blog",
+      "feed_url": "https://traumainformedteaching.blog/feed/",
+      "website_url": "https://traumainformedteaching.blog/",
+      "description": "Read articles, research, and resources related to trauma-informed approch. Trauma-Informed Teaching and Learning (TITL) is an umbrella term to understand the role that violence and victimization have played in the lives of many individuals and to use that understanding to improve policies and practices in order to accommodate the needs of trauma survivors.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5265090.jpg?t=1617691542"
+    },
+    {
+      "title": "Trauma Services Blog",
+      "feed_url": "https://www.traumaservices.com/feed/",
+      "website_url": "https://www.traumaservices.com/blog/",
+      "description": "Articles on Biohazard Cleaning & Remediation by Trauma services. Trauma Services is a dedicated biohazard cleaning company committed to helping families, businesses, and property owners with remedial situations. The company brings over 20 years of knowledge, dedication, and experience in the industry, along with professional and certified technicians to serve you in your time of need.",
+      "followers": {
+        "facebook": 764,
+        "twitter": 10
+      },
+      "image_url": "https://i1.feedspot.com/5264863.jpg?t=1617623004"
+    },
+    {
+      "title": "Phoenix Center for Experiential Trauma Therapy Blog",
+      "feed_url": "https://www.phoenixtraumacenter.com/blog/feed/",
+      "website_url": "https://www.phoenixtraumacenter.com/blog/",
+      "description": "Post on trauma therapies, EMDR, psychodrama, and somatic psychotherapy. The Phoenix Center for Experiential Trauma Therapy offers counseling services specialized in trauma, substance use, and grief/loss.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 2400,
+        "instagram": 909
+      },
+      "image_url": "https://i1.feedspot.com/5271982.jpg?t=1619010661"
+    },
+    {
+      "title": "PTSD USA Blog",
+      "feed_url": "https://ptsdusa.org/feed/",
+      "website_url": "https://ptsdusa.org/blog/",
+      "description": "Read about organization dedicated to mentoring combat veterans and their families with post-traumatic stress at PTSD UAS. Their mission is to combat Post Traumatic Stress and bring healing to our military community. Follow this website as we combat Post Traumatic Stress and bring healing to our military community.",
+      "followers": {
+        "facebook": 22200,
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/4741807.jpg?t=1617707611"
+    },
+    {
+      "title": "Beauty After Bruises Blog",
+      "feed_url": "https://www.beautyafterbruises.org/blog?format=RSS",
+      "website_url": "https://www.beautyafterbruises.org/blog",
+      "description": "We are dedicated to providing survivors of childhood traumawith both access and funding to receive therapy and/or inpatient care - while creating professional and public awareness for Complex PTSD and Dissociative Disorders.",
+      "followers": {
+        "facebook": 10800,
+        "twitter": 1200,
+        "instagram": 7900
+      },
+      "image_url": "https://i1.feedspot.com/4742870.jpg?t=1608188258"
+    },
+    {
+      "title": "Therapeutic Center for Anxiety and Trauma Blog",
+      "feed_url": "http://www.anxietytraumatherapy.com/blog?format=RSS",
+      "website_url": "http://www.anxietytraumatherapy.com/blog",
+      "description": "We are a team of therapists that work extensively with anxiety-provoking issues. These could be about relationships, life events, or any negative experience that is holding you back. If you are struggling with moving past a traumatic incident or finding it difficult to overcome the anxiety of any sort, please contact us. We will have one of our experienced therapists contact you as soon as possible.",
+      "followers": {
+        "facebook": 582,
+        "twitter": 18,
+        "instagram": 242
+      },
+      "image_url": "https://i1.feedspot.com/4605685.jpg?t=1606453354"
+    },
+    {
+      "title": "Attachment and Trauma Therapy Blog",
+      "feed_url": "https://attachmentandtraumatherapy.com/feed/",
+      "website_url": "https://attachmentandtraumatherapy.com/blog/",
+      "description": "Read stories and tips about mental health, anxiety and trauma at Attachment and Trauma Therapy. The team at Attachment and Trauma Therapy provide a warm, positive, and family-oriented style, allowing children, teens, and families a safe place to work through their challenges. Our areas of focus include adoption, attachment, anxiety, attention deficit hyperactivity disorder (ADHD), autism spectrum disorder (ASD), depression, sensory processing disorder (SPD), post traumatic stress disorder (PTSD), selective mutism, and trauma.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5265427.jpg?t=1617773088"
+    },
+    {
+      "title": "The Birth Trauma Mama",
+      "feed_url": "https://thebirthtraumamama.com/feed/",
+      "website_url": "https://thebirthtraumamama.com/hi-there/",
+      "description": "Hello! I'm Kayleigh. I provide in our sessions through a strengths-based, humanistic lens. Trauma doesn't just go away, it stays with us unless treated. I include body-based coping skills in our work together, as I believe the body-mind connection is integral to the treatment of birth trauma.",
+      "followers": {
+        "instagram": 203000
+      },
+      "image_url": "https://i1.feedspot.com/5522194.jpg?t=1679467026"
+    },
+    {
+      "title": "Karen's Blogs \u00bb Abuse and Trauma",
+      "feed_url": "https://www.karenrkoenig.com/blog/categories/abuse-and-trauma?format=feed&type=rss",
+      "website_url": "https://www.karenrkoenig.com/blog/categories/abuse-and-trauma",
+      "description": "This section of the blog features articles that have to do exclusively with trauma and abuse. Karen R. Koenig, LCSW, M.Ed., is a licensed psychotherapist, motivational speaker, and international author who has specialized in the field of compulsive, emotional, and restrictive eating for more than 30 years.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 571
+      },
+      "image_url": "https://i1.feedspot.com/5264765.jpg?t=1617610075"
+    },
+    {
+      "title": "Student Behavior Blog \u00bb Trauma",
+      "feed_url": "https://studentbehaviorblog.org/category/topic/social-emotional-and-behavioral-challenges/trauma/feed/",
+      "website_url": "https://studentbehaviorblog.org/category/topic/social-emotional-and-behavioral-challenges/trauma/",
+      "description": "Read latest information about evidence-based approaches to support all student's positive behavior, mental health, and well-being at SRI Education. The blog posts focus on district, school, classroom, and student-based interventions and impacts, including informal tips, interviews, and findings from research and evaluation projects, as well as perspectives from partners on the ground.",
+      "followers": {
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5264850.jpg?t=1617621315"
+    },
+    {
+      "title": "Khiron Clinics Blog",
+      "feed_url": "https://khironclinics.com/feed/",
+      "website_url": "https://khironclinics.com/blog/",
+      "description": "Articles on therapy for psychological trauma, stress, and breakdown.Khiron Clinics mission is to help people who go round and round in treatment to find their path towards health and recovery. They aim to be that change through providing effective therapy.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 233,
+        "instagram": 6900
+      },
+      "image_url": "https://i1.feedspot.com/5272041.jpg?t=1619014393"
+    },
+    {
+      "title": "Trauma Resource Institute Blog",
+      "feed_url": "https://www.traumaresourceinstitute.com/blog?format=rss",
+      "website_url": "https://www.traumaresourceinstitute.com/blog",
+      "description": "The Trauma Resource Institute (TRI) is a nonprofit organization devoted to cultivating trauma-informed and resiliency-focused individuals and communities throughout the world. The vision is to create trauma-informed and resiliency-informed individuals and communities internationally, respecting the wisdom of cultural diversity.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 472,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5522200.jpg?t=1679030485"
+    },
+    {
+      "title": "Trauma Sensitive Schools",
+      "feed_url": "https://traumasensitiveschools.org/feed/",
+      "website_url": "https://traumasensitiveschools.org/category/learning-community/",
+      "description": "The Learning Community Blog features guest contributors and an ongoing discussion with Learning Community Members. The Trauma and Learning Policy Initiative's (TLPI) mission is to ensure that children traumatized by exposure to family violence and other adverse childhood experiences succeed in school.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 332
+      },
+      "image_url": "https://i1.feedspot.com/5265027.jpg?t=1617688895"
+    },
+    {
+      "title": "The Center for Trauma & Resilience Blog",
+      "feed_url": "https://traumahealth.org/category/blog/feed/",
+      "website_url": "https://traumahealth.org/category/blog/",
+      "description": "Read about culturally and linguistically responsive programs, health promotion, and crime prevention education at The Center for Trauma & Resilience.",
+      "followers": {
+        "twitter": 99
+      },
+      "image_url": "https://i1.feedspot.com/5264928.jpg?t=1625486921"
+    },
+    {
+      "title": "Woven Trauma Therapy Blog",
+      "feed_url": "https://woventraumatherapy.com/blog?format=rss",
+      "website_url": "https://woventraumatherapy.com/blog",
+      "description": "Welcome to Woven Together Trauma Therapy! We specialize in helping you understand your trauma history and take control of your life again. We are a collective of therapists that want to help you make sense of your confusing trauma history in digestible, safe, and supportive ways.",
+      "followers": {
+        "facebook": 306,
+        "twitter": 91,
+        "instagram": 18700
+      },
+      "image_url": "https://i1.feedspot.com/5522198.jpg?t=1679030477"
+    },
+    {
+      "title": "Worthit2bme",
+      "feed_url": "https://worthit2bme.com/feed/",
+      "website_url": "https://worthit2bme.com/",
+      "description": "A blog by Crystal Arber. Crystal graduated from the University of British Columbia with a master's degree in social work. Crystal is an educator and has facilitated workshops about Trauma-Informed Practice in both the public and private sectors.",
+      "followers": {
+        "twitter": 51
+      },
+      "image_url": "https://i1.feedspot.com/4741935.jpg?t=1606453535"
+    },
+    {
+      "title": "Trauma and Philosophy Blog",
+      "feed_url": "https://www.traumaandphilosophy.com/blog-1?format=rss",
+      "website_url": "https://www.traumaandphilosophy.com/blog-1",
+      "description": "Articles by Philosopher Frank Seeburger's reflections on trauma as it relates to contemporary philosophical issues, especially those of truth, temporality, sovereignty, representation, politics, and the nature of philosophy itself.",
+      "followers": {
+        "facebook": 156
+      },
+      "image_url": "https://i1.feedspot.com/5272019.jpg?t=1619013740"
+    },
+    {
+      "title": "POST TRAUMATIC STRESS DISORDER",
+      "feed_url": "https://post-traumatic-stress-disorder.org/feed/",
+      "website_url": "https://post-traumatic-stress-disorder.org/",
+      "description": "Get news, stories, treatments and updates on Post Traumatic Stress Disorder by Philippe Izmailov. He is an author, NLP practitioner, computer programmer, economist, and teacher. He was born in Russia where he spent his childhood, which was frequently influenced by severe traumatic experiences, together with his single mother, who suffered from mental disorders. He applies his knowledge to develop a self-help method, which he defines as Mindfulness Based Trauma Treatment.",
+      "followers": {
+        "facebook": 509,
+        "twitter": 550
+      },
+      "image_url": "https://i1.feedspot.com/4743071.jpg?t=1606453332"
+    },
+    {
+      "title": "Trauma Recovery Lab",
+      "feed_url": "https://trauma-recovery.net/feed/",
+      "website_url": "https://trauma-recovery.net/",
+      "description": "Articles on mental health, trauma recovery and childhood trauma. Eva's interest in 'children and trauma' was born when she worked at the Childline, an anonymous Dutch telephone service. She was intrigued by children's resilience and perspectives on life. Trauma Recovery Lab is based at the Child and Community Wellbeing Unit of the University of Melbourne's School of Population and Global Health, in Australia.",
+      "followers": {
+        "facebook": 129,
+        "twitter": 224
+      },
+      "image_url": "https://i1.feedspot.com/5264826.jpg?t=1617618725"
+    },
+    {
+      "title": "Traumatic Birth Recovery Blog",
+      "feed_url": "https://traumaticbirthrecovery.com/blog/feed/",
+      "website_url": "https://traumaticbirthrecovery.com/blog/",
+      "description": "Covers birth trauma, its symptoms & treatment. Problems with trauma symptoms, anxiety and depression are unsurprisingly common for parents navigating the choppy waters of fertility, pregnancy, birth, post natal recovery and the first year. Traumatic Birth Recovery love supporting parents so that they can navigate these challenges and go on and thrive with their families.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 234,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5272046.jpg?t=1619015511"
+    },
+    {
+      "title": "Arizona Trauma Institute Blog",
+      "feed_url": "https://aztrauma.org/category/blog/feed/",
+      "website_url": "https://aztrauma.org/blog/",
+      "description": "Welcome to our health blog at Arizona trauma Institute. This blog will cover articles related to treatment of trauma, trauma training, consultation, education, seminars and community.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 482
+      },
+      "image_url": "https://i1.feedspot.com/5264874.jpg?t=1617625017"
+    },
+    {
+      "title": "New Synapse",
+      "feed_url": "https://www.new-synapse.com/aps/wordpress/?feed=rss2",
+      "website_url": "https://www.new-synapse.com/aps/wordpress/",
+      "description": "My name is Heidi Hanson. I developed PTSD in 2008 after two serious medical accidents, and I have been creating drawings, paintings, and poetry about my process of recovery. The purpose of this website is to help trauma survivors put effective self-therapy exercises into practice in their daily lives. Another purpose is to help readers gain insight, clarity, and understanding regarding trauma & PTSD.",
+      "followers": {
+        "facebook": 12600,
+        "twitter": 14
+      },
+      "image_url": "https://i1.feedspot.com/4360250.jpg?t=1606453147"
+    },
+    {
+      "title": "Healing From Complex Trauma & PTSD/CPTSD",
+      "feed_url": "https://healingfromcomplextraumaandptsd.wordpress.com/feed/",
+      "website_url": "https://healingfromcomplextraumaandptsd.wordpress.com/",
+      "description": "I am a survivor of multiple, severe, complex trauma and abuse. It is my hope this blog helps many on the same journey to healing as I am. At the age of 40, my healing journey began, when following a near breakdown in 2012, I was forced to acknowledge and deal with my past, after many years of avoiding, minimizing and denying the severity of the abuse, due to fear and complete lack of support. Follow my blog and join me on my journey to healing from complex trauma.",
+      "followers": {
+        "facebook": 153900,
+        "twitter": 20800
+      },
+      "image_url": "https://i1.feedspot.com/4713369.jpg?t=1606453194"
+    },
+    {
+      "title": "Marisol Erlacher Blog",
+      "feed_url": "https://www.marisolerlacher.com/blog?format=rss",
+      "website_url": "https://www.marisolerlacher.com/blog",
+      "description": "A blog on topics a Denver EMDR trauma therapist frequently answers. Are you interested in learning more about mental health? An experienced counselor & EMDR consultant's words may help!",
+      "followers": {
+        "facebook": 492,
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/5265204.jpg?t=1617766258"
+    },
+    {
+      "title": "Relias \u00bb Trauma-Informed Care",
+      "feed_url": "https://www.relias.com/blog/topic/trauma-informed-care/feed",
+      "website_url": "https://www.relias.com/blog/topic/trauma-informed-care",
+      "description": "Blog posts and articles about Trauma-Informed Care. We're passionate about helping healthcare organizations get better. Relias' software solutions offer unrivaled content and allows for the demonstration of skill and performance that results in better patient, resident, and client outcomes leading to improved financial results.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 1700,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5264955.jpg?t=1617633191"
+    },
+    {
+      "title": "Psychotherapy Networker \u00bb Trauma",
+      "feed_url": "https://www.psychotherapynetworker.org/taxonomy/term/36/feed",
+      "website_url": "https://www.psychotherapynetworker.org/topics/trauma/",
+      "description": "For more than 40 years, we've been an education nonprofit dedicated to offering practical guidance and creative inspiration to therapists around the world. Our mission is to provide you with indispensable resources for your professional growth. Browse through the Trauma blog and find informative articles that will give you new ideas in the field, and read the shared challenges and personal insights of colleagues.",
+      "followers": {
+        "facebook": 40900,
+        "twitter": 17500,
+        "instagram": 23100
+      },
+      "image_url": "https://i1.feedspot.com/5522188.jpg?t=1679030426"
+    },
+    {
+      "title": "The Minds Journal",
+      "feed_url": "https://themindsjournal.com/",
+      "website_url": "https://teentrauma.com/blogs/",
+      "description": "The Minds Journal is a mental and emotional wellness platform that encourages individuals to improve their mental and emotional health by offering a wide range of high-quality resources. Read the best trauma blogs covering different types of trauma and how to free yourself from traumatic flashbacks, nightmares, past trauma, and loss.",
+      "followers": {
+        "facebook": 1900000,
+        "twitter": 11600,
+        "instagram": 319200
+      },
+      "image_url": "https://i1.feedspot.com/5522193.jpg?t=1679030450"
+    },
+    {
+      "title": "Teen Trauma Blog",
+      "feed_url": "https://teentrauma.com/feed/",
+      "website_url": "https://teentrauma.com/blogs/",
+      "description": "Teen Trauma was created to educate, provide resources and create awareness of the impact of teen trauma, specifically on survivors of traumatic experiences such as physical or emotional abuse, sexual assault, or the sudden death of a loved one. The mission is to raise awareness and educate all people about the growing crisis of commercial sexual exploitation on teenagers and its impact on their lives.",
+      "followers": {
+        "facebook": 15
+      },
+      "image_url": "https://i1.feedspot.com/5522190.jpg?t=1679030434"
+    },
+    {
+      "title": "Trauma Thrivers Blog",
+      "feed_url": "https://traumathrivers.com/feed/",
+      "website_url": "https://bettyeastman.com/blog/",
+      "description": "I'm Lou Lebentz, founder of Trauma Thrivers and between myself and the team, we would love to be a part of your unique transformation and look forward to assisting you in thriving through your trauma. Trauma Thrivers was set up for those of us who have experienced childhood trauma whether it be sexual, emotional, physical but also any form of neglect.",
+      "followers": {
+        "instagram": 12000
+      },
+      "image_url": "https://i1.feedspot.com/5522214.jpg?t=1679030731"
+    },
+    {
+      "title": "Betty Eastman Blog",
+      "feed_url": "https://bettyeastman.com/blog/feed/",
+      "website_url": "https://bettyeastman.com/blog/",
+      "description": "Read articles by Betty Eastman & Associates with information to help families with emotional pain, behavioral issues, addiction and trauma.",
+      "followers": {
+        "facebook": 307,
+        "twitter": 36
+      },
+      "image_url": "https://i1.feedspot.com/5272044.jpg?t=1619015130"
+    },
+    {
+      "title": "Growing Branches Blog",
+      "feed_url": "https://growingbranches.net/blog/feed/",
+      "website_url": "https://growingbranches.net/blog/",
+      "description": "Read more about managing your mental health and get your life back on track. Amy Wagner is a mom, dog lover, travel junkie, wellness striver and relationship curator.",
+      "followers": {
+        "facebook": 391,
+        "twitter": 31,
+        "instagram": 396
+      },
+      "image_url": "https://i1.feedspot.com/5272007.jpg?t=1619012178"
+    },
+    {
+      "title": "Trauma Solutions Blog",
+      "feed_url": "https://traumasolutions.com/blog/",
+      "website_url": "https://traumasolutions.com/blog/",
+      "description": "Posts on Adult Attachment and Trauma Resolution by Diane. Diane Poole Heller Ph.D. is an internationally recognized speaker, author, and expert in the field of child and adult attachment theory as well as trauma resolution. Her expertise in trauma healing has benefitted survivors and families of 9/11 and the Columbine shootings.",
+      "followers": {
+        "facebook": 33200,
+        "twitter": 241
+      },
+      "image_url": "https://i1.feedspot.com/5265061.jpg?t=1617690328"
+    }
+  ]
+}

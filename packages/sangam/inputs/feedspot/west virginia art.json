@@ -1,0 +1,90 @@
+{
+  "category": "West Virginia Art",
+  "source_url": "https://rss.feedspot.com/west_virginia_art_rss_feeds",
+  "feeds": [
+    {
+      "title": "Art by Linda Blog",
+      "feed_url": "https://artbylinda.org/feed/",
+      "website_url": "https://artbylinda.org/blog/",
+      "description": "Linda, a passionate watercolour, acrylic, and pastel artist, initially pursued a career in teaching due to a lack of confidence in her artistic abilities. However, her 32-year tenure as a schoolteacher provided ample opportunities for creativity, solidifying her love for teaching and nurturing her artistic aspirations.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7272216.jpg?t=1710310801"
+    },
+    {
+      "title": "Sally Jane Brown Blog",
+      "feed_url": "https://sallyjanebrown.com/feed",
+      "website_url": "https://sallyjanebrown.com/blog",
+      "description": "Sally Brown, an artist, curator, and writer, resides in Morgantown, WV. Her diverse artwork delves into themes of womanhood, motherhood, and the body through drawing, painting, and performance. With exhibitions across the US and UK, she's garnered awards for illustration and her writing has been featured in prominent publications. Brown's curatorial endeavours span multiple cities, showcasing her multifaceted talent.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7272218.jpg?t=1710310576"
+    },
+    {
+      "title": "Berkeley Arts Council",
+      "feed_url": "https://berkeleyartswv.org/feed/",
+      "website_url": "https://berkeleyartswv.org/",
+      "description": "The Berkeley Arts Council fosters communication, collaboration, and opportunities for Berkeley County's arts community in West Virginia. Established in 2009, it serves as an independent umbrella organization, advocating for unified support, promotion, and cooperation within the local arts scene.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7272217.jpg?t=1710310610"
+    },
+    {
+      "title": "Charleston Gazette-Mail \u00bb Arts & Entertainment",
+      "feed_url": "https://www.wvgazettemail.com/search/?f=rss&t=article&c=arts_and_entertainment&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.wvgazettemail.com/arts_and_entertainment/",
+      "description": "Charleston Gazette-Mail, owned by HD Media, has been a staple in Charleston, WV, and West Virginia since 1873. Its Arts and Entertainment section is the go-to guide for local entertainment, offering a comprehensive look at the vibrant cultural scene in the region.",
+      "followers": {
+        "facebook": 88600,
+        "twitter": 69500,
+        "instagram": 14300
+      },
+      "image_url": "https://i1.feedspot.com/7288976.jpg?t=1712088882"
+    },
+    {
+      "title": "thosewhobloom Blog",
+      "feed_url": "https://thosewhobloom.com/blogs/news.atom",
+      "website_url": "https://thosewhobloom.com/blogs/news",
+      "description": "Since 2014, Those Who Bloom, nestled in Thomas, WV, offers a diverse array of art prints, books, apparel, and more, showcasing the work of 50+ artists from Appalachia and beyond. From animal illustration to fantasy, they cater to varied tastes, helping patrons find art that resonates with their unique style, both in-store and online.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7272214.jpg?t=1710307727"
+    },
+    {
+      "title": "ArtWools Studio of Susan Feller Blog",
+      "feed_url": "https://artwools.com/feed/",
+      "website_url": "https://artwools.com/blog/",
+      "description": "ArtWools Studio, led by Susan Feller, delves into traditional textile techniques in the modern era. Drawing from a rich background shaped by family teachings and rural living, Susan's self-taught journey celebrates the spirit of artisan craftsmanship. Through fibre work, she connects with generational wisdom, reflecting on nature and her rural roots in West Virginia.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7272211.jpg?t=1710309727"
+    },
+    {
+      "title": "Rosalie Haizlett Illustration Blog",
+      "feed_url": "https://rosaliehaizlett.com/blogs/news.atom",
+      "website_url": "https://rosaliehaizlett.com/blogs/news",
+      "description": "Rosalie Haizlett, an artist from West Virginia, finds inspiration in her rural upbringing, using art as a means to observe and commemorate the natural world. Through vibrant watercolour prints, nature books, and online classes, she shares her passion for the Appalachian Mountains, encouraging others to connect with their environment creatively.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7272215.jpg?t=1710309807"
+    },
+    {
+      "title": "Susan Feller Blog",
+      "feed_url": "https://susanfeller.com/feed/",
+      "website_url": "https://susanfeller.com/blog/",
+      "description": "Susan Feller finds solace in working with her hands, a practice that grounds her in the present moment. Raised in rural America during the 1960s and 70s, she learned invaluable 'make-do' skills from her grandmother and mother, fostering a deep appreciation for craftsmanship. Girl Scouting further enriched her life with lessons in compassion and resilience, shaping her into the caring individual she is today.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7272212.jpg?t=1710309867"
+    },
+    {
+      "title": "Joseph Lupo",
+      "feed_url": "https://josephlupo.com/feed/",
+      "website_url": "https://josephlupo.com/",
+      "description": "Joseph Lupo, Professor of Art and Graduate Studies Coordinator at West Virginia University, showcases his artwork globally, with exhibitions spanning prestigious venues like the International Print Center of New York and the Denver Art Museum. His pieces are featured in esteemed collections worldwide, including Duke University and the Spencer Museum of Art.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7272210.jpg?t=1710310512"
+    },
+    {
+      "title": "MarisaMade Blog",
+      "feed_url": "https://www.marisamade.com/blogs/marisamade-journal.atom",
+      "website_url": "https://www.marisamade.com/blogs/marisamade-journal",
+      "description": "MarisaMade, led by artist Marisa Jackson, offers a charming array of stationery, art prints, and small gifts, all crafted with care in West Virginia. Marisa's watercolour paintings and calligraphy talents infuse each piece with delightful home decor charm. With a focus on hand-painted designs, MarisaMade brings joy to homes with its WV-inspired creations.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7272213.jpg?t=1710310545"
+    }
+  ]
+}

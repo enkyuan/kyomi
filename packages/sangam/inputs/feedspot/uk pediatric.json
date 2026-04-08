@@ -1,0 +1,78 @@
+{
+  "category": "UK Pediatric",
+  "source_url": "https://rss.feedspot.com/uk_pediatric_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Royal College of Paediatrics and Child Health",
+      "feed_url": "https://www.rcpch.ac.uk/rss.xml",
+      "website_url": "https://www.rcpch.ac.uk/",
+      "description": "The Royal College of Paediatrics and Child Health works to ensure that children in the UK and overseas receive the best possible standards of care. To transform child health through knowledge, innovation and expertise.",
+      "followers": {
+        "facebook": 25100,
+        "twitter": 34100,
+        "instagram": 6900
+      },
+      "image_url": "https://i1.feedspot.com/4912882.jpg?t=1620287188"
+    },
+    {
+      "title": "Department of Paediatrics | News",
+      "feed_url": "https://www.paediatrics.ox.ac.uk/news/RSS",
+      "website_url": "https://www.paediatrics.ox.ac.uk/news",
+      "description": "The Department of Paediatrics is a world leader in child health research and hosts internationally renowned research programmes in gastroenterology, haematology, HIV, immunology, neuroimaging and vaccinology. Our work spans from early proof-of-concept fundamental science all the way up to its application in clinical settings.",
+      "followers": {
+        "twitter": 18300
+      },
+      "image_url": "https://i1.feedspot.com/4912855.jpg?t=1620287117"
+    },
+    {
+      "title": "London School of Paediatrics",
+      "feed_url": "https://londonpaediatrics.co.uk/feed/",
+      "website_url": "https://londonpaediatrics.co.uk/",
+      "description": "Stay up to date on events and news for Paediatricians in London.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 6300
+      },
+      "image_url": "https://i1.feedspot.com/4912856.jpg?t=1620287193"
+    },
+    {
+      "title": "BSPR | We are experts in paediatric health",
+      "feed_url": "https://bspr.org.uk/feed/",
+      "website_url": "https://bspr.org.uk/",
+      "description": "Welcome to BSPR magazine, your resource platform on paediatric health. We are an online magazine that is run by a team of experts who are passionate and dedicated to matters of paediatric health.",
+      "followers": {
+        "twitter": 857
+      },
+      "image_url": "https://i1.feedspot.com/4912894.jpg?t=1620287165"
+    },
+    {
+      "title": "Paediatric Pearls Blog",
+      "feed_url": "https://paediatricpearls.co.uk/blog/feed/",
+      "website_url": "https://paediatricpearls.co.uk/blog/",
+      "description": "CPD website aimed at GPs and other health professionals working with children. Put together by a London paediatric consultant.",
+      "followers": {
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/4912852.jpg?t=1620287102"
+    },
+    {
+      "title": "Paediatrics for Primary Care (and anyone else)",
+      "feed_url": "http://gppaedstips.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://gppaedstips.blogspot.com/",
+      "description": "A combination of commentary and clinical content for primary care clinicians, giving useful medical morsels about child health care.",
+      "followers": {
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4912853.jpg"
+    },
+    {
+      "title": "Paediatric Intensive Care Society",
+      "feed_url": "https://picsociety.uk/feed/",
+      "description": "A multidisciplinary forum for those involved and interested in paediatric intensive care in the United Kingdom.",
+      "followers": {
+        "twitter": 9200
+      },
+      "image_url": "https://i1.feedspot.com/4912877.jpg?t=1620287143"
+    }
+  ]
+}

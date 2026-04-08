@@ -1,0 +1,28 @@
+{
+  "category": "Council Bluffs News",
+  "source_url": "https://rss.feedspot.com/council_bluffs_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Daily Nonpareil",
+      "feed_url": "https://nonpareilonline.com/search/?f=rss&t=article&l=50&s=start_time&sd=desc&c=news",
+      "website_url": "https://nonpareilonline.com/",
+      "description": "The Daily Nonpareil is serving the Council Bluffs since 1857 with 24/7 breaking news, weather, and other alerts.",
+      "followers": {
+        "facebook": 21400,
+        "twitter": 7200
+      },
+      "image_url": "https://i1.feedspot.com/5146964.jpg"
+    },
+    {
+      "title": "City of Council Bluffs, IA",
+      "feed_url": "https://www.councilbluffs-ia.gov/RSSFeed.aspx?ModID=1&CID=Latest-News-1",
+      "website_url": "https://www.councilbluffs-ia.gov/CivicAlerts.aspx",
+      "description": "Get news and updates regarding city projects, programs, and services from the official website of Council Bluffs, IA.",
+      "followers": {
+        "facebook": 23600,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5146954.jpg?t=1625731432"
+    }
+  ]
+}

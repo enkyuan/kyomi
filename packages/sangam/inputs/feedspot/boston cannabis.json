@@ -1,0 +1,50 @@
+{
+  "category": "Boston Cannabis",
+  "source_url": "https://rss.feedspot.com/boston_cannabis_rss_feeds",
+  "feeds": [
+    {
+      "title": "Pure Oasis Blog",
+      "feed_url": "https://www.mypureoasis.com/blog/feed/",
+      "website_url": "https://www.mypureoasis.com/blog/",
+      "description": "Welcome to Pure Oasis, Boston's FIRST recreational cannabis dispensary!Our Boston dispensaries offer a user-friendly experience, with knowledgeable staff here to guide you with information and advice on all of our high-quality products.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7300645.jpg?t=1713351925"
+    },
+    {
+      "title": "New D\u00eda Cannabis Co. Blog",
+      "feed_url": "https://www.newdia.co/feed/",
+      "website_url": "https://www.newdia.co/blog/",
+      "description": "New Dia Cannabis Co., located in the heart of Boston's Fenway Park area, prides itself on being the East Coast's first cannabis mall. This unique establishment offers a one-of-a-kind experience for both locals and tourists. New Dia's mission is to revolutionize the cannabis retail sector by providing an immersive shopping experience coupled with an events space, all designed to foster a collaborative, inclusive, and progressive environment\u200b\u200b.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7300646.jpg?t=1713352130"
+    },
+    {
+      "title": "The Heritage Club Blog",
+      "feed_url": "https://heritageclubthc.com/feed/",
+      "website_url": "https://heritageclubthc.com/blog/",
+      "description": "The Heritage Club is a mission-driven, premium adult recreational dispensary. Go through their The Heritage Club Blog and Stay up to date with cannabis news, education for both new and experienced users, and updates about our cannabis dispensary in Boston.",
+      "followers": {
+        "facebook": 129
+      },
+      "image_url": "https://i1.feedspot.com/7300647.jpg?t=1713351934"
+    },
+    {
+      "title": "Devine Wellness Blog",
+      "feed_url": "https://www.devineboston.com/blogs/blogs.atom",
+      "website_url": "https://www.devineboston.com/blogs/blogs",
+      "description": "deVINE Wellness, established in 2019, proudly stands as South Boston's first and only natural health and wellness apothecary. With a commitment to holistic practices, we have earned our reputation as a premier south boston cannabis, magic mushroom, and CBD store in the South Boston area.",
+      "followers": {
+        "facebook": 33
+      },
+      "image_url": "https://i1.feedspot.com/7300649.jpg?t=1713352246"
+    },
+    {
+      "title": "Apex Noire Blog",
+      "feed_url": "https://apexnoire.com/feed/",
+      "website_url": "https://apexnoire.com/blog/",
+      "description": "Follow this educational cannabis blog of Apex Noire and learn more about opening a cannabis business, investing, or are simply curious about the industry, this is a great introduction",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7300648.jpg?t=1714742281"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "category": "Racquetball",
+  "source_url": "https://rss.feedspot.com/racquetball_rss_feeds",
+  "feeds": [
+    {
+      "title": "Daily Racquetball",
+      "feed_url": "https://dailyracquetball.com/feed/",
+      "website_url": "https://dailyracquetball.com/",
+      "description": "DailyRacquetball.com celebrates racquetball news, events, and video from around the world.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 251,
+        "instagram": 772
+      },
+      "image_url": "https://i1.feedspot.com/5017875.jpg?t=1622286078"
+    },
+    {
+      "title": "The Racquetball Blog",
+      "feed_url": "http://theracquetballblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://theracquetballblog.blogspot.com/",
+      "description": "The Racquetball Blog aims to provide independent writing and reporting on all aspects of racquetball professional and amateur, in North America and abroad.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5017874.jpg?t=1622286082"
+    },
+    {
+      "title": "Pro Racquetball Stats Blog",
+      "feed_url": "https://blog.proracquetballstats.com/index.php/feed/",
+      "website_url": "https://blog.proracquetballstats.com/",
+      "description": "The Pro Racquetball Stats Blog has tourney previews, tourney wrap-ups, and new site content announcements.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 438,
+        "instagram": 157
+      },
+      "image_url": "https://i1.feedspot.com/5018279.jpg?t=1622286086"
+    },
+    {
+      "title": "Team USA \u00bb USA Racquetball",
+      "feed_url": "https://www.teamusa.org/USA-Racquetball?rss=1",
+      "website_url": "https://www.usaracquetball.com/news",
+      "description": "USA Racquetball is the National Governing Body for the sport of racquetball. Get the latest in news, rulings, event listings, national rankings, publications, and programs.",
+      "followers": {
+        "facebook": 20900,
+        "twitter": 4800,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5017878.jpg?t=1622286089"
+    }
+  ]
+}

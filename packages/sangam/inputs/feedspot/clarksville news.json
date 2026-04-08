@@ -1,0 +1,40 @@
+{
+  "category": "Clarksville News",
+  "source_url": "https://rss.feedspot.com/clarksville_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Clarksville Online",
+      "feed_url": "https://www.clarksvilleonline.com/feed/",
+      "website_url": "https://www.clarksvilleonline.com/",
+      "description": "Clarksville Online covers local news, events, information, opinion, politics, and sports for the Clarksville-Montgomery County area. The voice of Clarksville Tennessee.",
+      "followers": {
+        "facebook": 34800,
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5139255.jpg?t=1586929694"
+    },
+    {
+      "title": "WKRN News 2 \u00bb Clarksville",
+      "feed_url": "https://www.wkrn.com/tag/clarksville/feed/",
+      "website_url": "https://www.wkrn.com/tag/clarksville/",
+      "description": "We tell local Nashville news & weather stories, and we do what we do to make Nashville & Tennessee a better place to live. The Latest News and Updates in Clarksville brought to you by the team at WKRN News 2.",
+      "followers": {
+        "facebook": 604500,
+        "twitter": 216200,
+        "instagram": 58900
+      },
+      "image_url": "https://i1.feedspot.com/5139253.jpg?t=1586929476"
+    },
+    {
+      "title": "The Leaf-Chronicle",
+      "feed_url": "http://rssfeeds.theleafchronicle.com/clarksville/news",
+      "website_url": "https://www.theleafchronicle.com/",
+      "description": "Your one-stop shop for news, weather, and activities in and around Clarksville, Montgomery County and Fort Campbell. The Leaf-Chronicle is a newspaper in the state of Tennessee, founded, officially, in 1808.",
+      "followers": {
+        "facebook": 71400,
+        "twitter": 9200
+      },
+      "image_url": "https://i1.feedspot.com/5499411.jpg?t=1674632768"
+    }
+  ]
+}

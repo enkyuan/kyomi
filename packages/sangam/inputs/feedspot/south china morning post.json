@@ -1,0 +1,94 @@
+{
+  "category": "South China Morning Post",
+  "source_url": "https://rss.feedspot.com/southchinamorningpost_rss_feeds",
+  "feeds": [
+    {
+      "title": "South China Morning Post \u00bb World",
+      "feed_url": "https://www.scmp.com/rss/5/feed/",
+      "website_url": "https://www.scmp.com/news/world",
+      "description": "Latest news and headlines from around the world. Analysis and opinions on breaking news, politics, international affairs and the economy.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5511104.jpg?t=1676985854"
+    },
+    {
+      "title": "South China Morning Post \u00bb This Week in Asia",
+      "feed_url": "https://www.scmp.com/rss/3/feed/",
+      "website_url": "https://www.scmp.com/week-asia",
+      "description": "Exclusive updates and special features on Singapore, Malaysia, Philippines, India and Australasia, as well as analysis of China's relations with Asian countries",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5511104.jpg?t=1676985854"
+    },
+    {
+      "title": "South China Morning Post \u00bb Hong Kong",
+      "feed_url": "https://www.scmp.com/rss/2/feed/",
+      "website_url": "https://www.scmp.com/news/hong-kong",
+      "description": "Latest Hong Kong news, updates, opinions and analysis, including on Hong Kong politics, the national security law, economy, society and weather.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5511104.jpg?t=1676985854"
+    },
+    {
+      "title": "South China Morning Post \u00bb China",
+      "feed_url": "https://www.scmp.com/rss/4/feed/",
+      "website_url": "https://www.scmp.com/news/china",
+      "description": "Latest China news, opinions and analysis, covering Xi Jinping, Beijing's relations with Taiwan and China's tensions with the US.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5511104.jpg?t=1676985854"
+    },
+    {
+      "title": "South China Morning Post \u00bb Property",
+      "feed_url": "https://www.scmp.com/rss/96/feed/",
+      "website_url": "https://www.scmp.com/property",
+      "description": "Latest updates on commercial and retail property, luxury apartments and land sales news in Hong Kong, mainland China and Asia.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5511104.jpg?t=1676985854"
+    },
+    {
+      "title": "South China Morning Post \u00bb Sport",
+      "feed_url": "https://www.scmp.com/rss/95/feed/",
+      "website_url": "https://www.scmp.com/sport",
+      "description": "Latest sports news and commentary on Hong Kong Sevens, horse racing, NBA, rugby, tennis and trail running. We also cover MMA updates including UFC fight reports and kung fu news.",
+      "followers": {
+        "facebook": 5000000,
+        "twitter": 1000000,
+        "instagram": 541600
+      },
+      "image_url": "https://i1.feedspot.com/7838129.jpg"
+    },
+    {
+      "title": "South China Morning Post \u00bb People & Culture",
+      "feed_url": "https://www.scmp.com/rss/318202/feed/",
+      "website_url": "https://www.scmp.com/news/people-culture",
+      "description": "The latest society, public affairs and community news from China.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5511104.jpg?t=1676985854"
+    },
+    {
+      "title": "South China Morning Post \u00bb Lifestyle",
+      "feed_url": "https://www.scmp.com/rss/94/feed/",
+      "website_url": "https://www.scmp.com/lifestyle",
+      "description": "All the latest lifestyle articles including food, fashion, travel and art.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5511104.jpg?t=1676985854"
+    },
+    {
+      "title": "South China Morning Post \u00bb Tech",
+      "feed_url": "https://www.scmp.com/rss/36/feed/",
+      "website_url": "https://www.scmp.com/tech",
+      "description": "Latest China tech news, including latest on the chips industry, semiconductors, start-ups, e-commerce and blockchain, and updates from tech giants like Alibaba, Baidu, Bytedance, Huawei, OnePlus, SMIC, Tencent and Xiaomi.",
+      "followers": {
+        "facebook": 5000000,
+        "twitter": 1000000,
+        "instagram": 541600
+      },
+      "image_url": "https://i1.feedspot.com/7838128.jpg"
+    },
+    {
+      "title": "South China Morning Post \u00bb Business",
+      "feed_url": "https://www.scmp.com/rss/92/feed/",
+      "website_url": "https://www.scmp.com/business",
+      "description": "Latest China and Hong Kong business and financial news, exclusive reporting and analysis on the Hang Seng Index, the Shanghai stock index, company earnings, IPOs and banking news.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5511104.jpg?t=1676985854"
+    }
+  ]
+}

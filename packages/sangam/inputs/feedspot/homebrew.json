@@ -1,0 +1,348 @@
+{
+  "category": "Homebrew",
+  "source_url": "https://rss.feedspot.com/homebrew_rss_feeds",
+  "feeds": [
+    {
+      "title": "Brulosophy",
+      "feed_url": "https://brulosophy.com/feed/",
+      "website_url": "https://brulosophy.com/",
+      "description": "Brulosophy provides tips and news for the home brewing community. The articles here report some of our experiments, new brewing ideas, and results. Brulosophy is a website by a group of beer enthusiast friends for sharing, creating, and supporting innovation in brewing methods for beer.",
+      "followers": {
+        "facebook": 34200,
+        "twitter": 5900,
+        "instagram": 32600
+      },
+      "image_url": "https://i1.feedspot.com/3740632.jpg?t=1610111870"
+    },
+    {
+      "title": "Homebrew Finds",
+      "feed_url": "https://www.homebrewfinds.com/feed/",
+      "website_url": "https://www.homebrewfinds.com/",
+      "description": "Scouring the web for homebrewing deals and finds!",
+      "followers": {
+        "facebook": 28200,
+        "twitter": 33300
+      },
+      "image_url": "https://i1.feedspot.com/123280.jpg?t=1610111877"
+    },
+    {
+      "title": "BeerSmith Home Brewing Blog",
+      "feed_url": "https://beersmith.com/blog/feed/",
+      "website_url": "https://beersmith.com/blog/",
+      "description": "Covers brewing tutorials, homebrewing techniques, product and book reviews, articles on brewing popular beer styles and brewing news. The BeerSmith Home Brewing Blog is all about making beer at home.",
+      "followers": {
+        "twitter": 22500
+      },
+      "image_url": "https://i1.feedspot.com/4488645.jpg?t=1610112182"
+    },
+    {
+      "title": "Craft Beer & Brewing Magazine",
+      "feed_url": "https://feeds.feedburner.com/CraftBeerAndBrewingMagazine",
+      "website_url": "https://beerandbrewing.com/",
+      "description": "Craft Beer and Brewing Magazine is a collaboration between a group of homebrewers and beer lovers from Fort Collins, Colorado. Craft Beer and Brewing is a magazine and online community for people who love to drink and make great beer.",
+      "followers": {
+        "facebook": 88900,
+        "twitter": 13100
+      },
+      "image_url": "https://i1.feedspot.com/4487683.jpg?t=1610111882"
+    },
+    {
+      "title": "Get Er Brewed Blog",
+      "feed_url": "https://www.geterbrewed.com/blog/feed/",
+      "website_url": "https://www.geterbrewed.com/blog/",
+      "description": "Home brew shop with huge range of all grain brewing supplies,beer kits,cider kits & wine kits. Professional micro-brewery equipment & advice. A new generation of home brewers are starting a home brew revolution.",
+      "followers": {
+        "facebook": 16900,
+        "twitter": 3700,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/5000614.jpg?t=1610111899"
+    },
+    {
+      "title": "Homebrew Academy",
+      "feed_url": "https://homebrewacademy.com/feed/",
+      "website_url": "https://homebrewacademy.com/",
+      "description": "Every beer lover has a great homebrewer inside. At the Homebrew Academy, we support that with Homebrewing education and resources for home brewing.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5162225.jpg?t=1610112111"
+    },
+    {
+      "title": "Homebrew Emporium Online! Blog",
+      "feed_url": "https://beerbrew.com/category/blog/feed/",
+      "website_url": "https://beerbrew.com/category/blog/",
+      "description": "With five retail locations in Massachusetts and New York, and an online shop, we are America's largest homebrew chain. We sell supplies for making beer, wine, and cheese. We cater to all levels of brewing, from Master Brewers to First Timers.",
+      "followers": {
+        "facebook": 986,
+        "twitter": 155
+      },
+      "image_url": "https://i1.feedspot.com/4802604.jpg"
+    },
+    {
+      "title": "Brew Dudes",
+      "feed_url": "https://www.brew-dudes.com/feed",
+      "website_url": "https://www.brew-dudes.com/",
+      "description": "Homebrewing blog and resource created for homebrewers by homebrewers. Includes journal of beer making and information on brewing ingredients and equipment.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/322034.jpg?t=1610112264"
+    },
+    {
+      "title": "Minnesota Home Brewers Association",
+      "feed_url": "https://mnbrewers.com/feed/",
+      "website_url": "https://mnbrewers.com/",
+      "description": "We are a collection of homebrewers of all levels of experience located in the greater Minneapolis/St. Paul metropolitan area. Our member's interests run the gamut from those who brew using extract kits, to all-grain mashers, to those who simply appreciate and enjoy good beer.",
+      "followers": {
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4802690.jpg?t=1610112297"
+    },
+    {
+      "title": "Andy's Brewing Blog",
+      "feed_url": "https://andybrews.com/feed/",
+      "website_url": "https://andybrews.com/",
+      "description": "My personal voyage through the world of homebrew, with recipes, reviews, and exploration of the intersections between beer and paleontology.",
+      "followers": {
+        "facebook": 215,
+        "twitter": 7200
+      },
+      "image_url": "https://i1.feedspot.com/4802643.jpg?t=1610112535"
+    },
+    {
+      "title": "West Coast Brewer",
+      "feed_url": "https://www.westcoastbrewer.com/feed/",
+      "website_url": "https://www.westcoastbrewer.com/",
+      "description": "West Coast Brewer is a website dedicated to the craft of home beer brewing. Here you will find everything from home brewing beer recipes, reviews on homebrew hardware, promo codes and coupon codes and how to guides on home brewing hardware modifications and beer brewing techniques.",
+      "followers": {
+        "facebook": 131,
+        "twitter": 52
+      },
+      "image_url": "https://i1.feedspot.com/4960676.jpg?t=1610112538"
+    },
+    {
+      "title": "Brewer's Friend Blog",
+      "feed_url": "https://www.brewersfriend.com/feed/",
+      "website_url": "https://www.brewersfriend.com/blog/",
+      "description": "Brewer's Friend is a complete homebrew beer recipe designer with brewing calculators, brew day planner, journal & more. Through this blog, we provide articles on Homebrew Recipes, Fermentables, Hops, Beer Styles, and Other Ingredients.",
+      "followers": {
+        "twitter": 1900,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/248451.jpg?t=1629989284"
+    },
+    {
+      "title": "Maltose Falcons",
+      "feed_url": "https://www.maltosefalcons.com/blogs/news.atom",
+      "website_url": "https://www.maltosefalcons.com/blogs/news",
+      "description": "America's Oldest Homebrewing Club - Brewing in Los Angeles since 1974. We're a dedicated loony bunch of beer drinkers and brewers constantly looking for that next great beer.",
+      "followers": {
+        "twitter": 405
+      },
+      "image_url": "https://i1.feedspot.com/4492512.jpg?t=1610112010"
+    },
+    {
+      "title": "The Would-Be Brewmaster Blog",
+      "feed_url": "https://wouldbebrewmaster.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://wouldbebrewmaster.blogspot.com/",
+      "description": "The Would-Be Brewmaster by Jason Chalifour is a blog about home brewing beer which features the highs, the lows and the hangovers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5496518.jpg?t=1674127400"
+    },
+    {
+      "title": "Winning Homebrew",
+      "feed_url": "https://www.winning-homebrew.com/feed",
+      "website_url": "https://www.winning-homebrew.com/",
+      "description": "Your ultimate guide to brewing better beer at home. Features Beer Recipes, Beer Reviews, Brewing Science, Fermentation, Wine Making, Testing, and Equipment. Authored by Bobby Don Johnson.",
+      "followers": {
+        "facebook": 98,
+        "twitter": 26
+      },
+      "image_url": "https://i1.feedspot.com/5315945.jpg?t=1629982726"
+    },
+    {
+      "title": "Home Brew Answers",
+      "feed_url": "https://homebrewanswers.com/feed/",
+      "website_url": "https://homebrewanswers.com/",
+      "description": "Home Brew Answers is a mission. A mission to get more people home brewing. If your already making beer yourself there are loads of stuff here to help you out and get your beer related information fix.",
+      "followers": {
+        "facebook": 992,
+        "twitter": 571,
+        "instagram": 111
+      },
+      "image_url": "https://i1.feedspot.com/4799868.jpg?t=1610111925"
+    },
+    {
+      "title": "52 Brews",
+      "feed_url": "https://52brews.com/feed/",
+      "website_url": "https://52brews.com/",
+      "description": "Your online resource on all things craft beer and homebrewing! Craft beer reviews, beer of the month club and subscription reviews, homebrewing equipment reviews, homebrewing tips, overall craft beer knowledge.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 24,
+        "instagram": 19900
+      },
+      "image_url": "https://i1.feedspot.com/5087312.jpg?t=1611036443"
+    },
+    {
+      "title": "Learning to Homebrew",
+      "feed_url": "https://learningtohomebrew.com/feed/",
+      "website_url": "https://learningtohomebrew.com/beer-recipes/",
+      "description": "A homebrew beer blog to answer your homebrewing questions as well as explore beer culture, lifestyle, and history!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5380191.jpg?t=1646979039"
+    },
+    {
+      "title": "KegThat Blog",
+      "feed_url": "https://kegthat.com/feed/",
+      "website_url": "https://kegthat.com/blog/",
+      "description": "A growing range of guides, videos, and everything about brewing beer! KegThat is a small, family-owned UK business that's driven by a true passion for home brewing.",
+      "followers": {
+        "facebook": 744,
+        "twitter": 44,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5405315.jpg?t=1653997410"
+    },
+    {
+      "title": "BrewGinner",
+      "feed_url": "https://www.brewginner.com/feed/",
+      "website_url": "https://www.brewginner.com/",
+      "description": "BrewGinner is a blog for home brewing beginners. A place where home brewing is not meant to be complicated, but rather something you can enjoy.",
+      "followers": {
+        "facebook": 62,
+        "twitter": 83
+      },
+      "image_url": "https://i1.feedspot.com/4998596.jpg?t=1610111904"
+    },
+    {
+      "title": "Homebrewing Deal",
+      "feed_url": "https://homebrewingdeal.com/feed/",
+      "website_url": "https://homebrewingdeal.com/",
+      "description": "Homebrewing Deal is the best source for homebrewing deals on the web. Save money and learn about home brewing with helpful reviews, beer brewing coupons and promo codes.",
+      "followers": {
+        "facebook": 399,
+        "twitter": 117
+      },
+      "image_url": "https://i1.feedspot.com/4488585.jpg?t=1610112287"
+    },
+    {
+      "title": "Brain Sparging on Brewing",
+      "feed_url": "https://feeds.feedburner.com/BrainSpargingOnBrewing",
+      "website_url": "https://homebrewingfun.blogspot.com/",
+      "description": "Homebrewing, homebrew, saison, sour beer, lambic, kettle sour, solera, IPA, beer, brewing, one gallon homebrew",
+      "followers": {
+        "facebook": 67
+      },
+      "image_url": "https://i1.feedspot.com/3961560.jpg?t=1610112308"
+    },
+    {
+      "title": "The Not So Professional Beer Blog",
+      "feed_url": "https://www.notsoprofessionalbeer.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.notsoprofessionalbeer.com/",
+      "description": "The Not So Professional Beer Blog is all about an amateur's explorations of craft beer, homebrewing, and Portland beer culture. Follow us to keep up with the articles on The Not So Professional Beer Blog.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4488599.jpg?t=1610112317"
+    },
+    {
+      "title": "Home-Brew-Online Blog",
+      "feed_url": "https://homebrewonlinebrewblog.wordpress.com/feed/",
+      "website_url": "https://homebrewonlinebrewblog.wordpress.com/",
+      "description": "Articles on Home Brewing.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4802698.jpg"
+    },
+    {
+      "title": "Hazy and Hoppy",
+      "feed_url": "https://hazyandhoppy.com/feed/",
+      "website_url": "https://hazyandhoppy.com/",
+      "description": "Hazy and Hoppy is my latest venture focused around craft beer and homebrewing. While we're just getting started, this blog will focus on my homebrew journey in the past 7-8 years and everything I've learned along the way. My hope is that this blog will be a helpful resource and an inspiration to both beginner and intermediate homebrewers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5216075.jpg?t=1605769514"
+    },
+    {
+      "title": "At Home Brewer",
+      "feed_url": "https://athomebrewer.com/feed/",
+      "website_url": "https://athomebrewer.com/",
+      "description": "Covers articles about reviewing equipment, beer clubs, and different styles of beer. At Home Brewer is a website about homebrewing and beer in general.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5149824.jpg?t=1611036477"
+    },
+    {
+      "title": "Scott Janish Blog",
+      "feed_url": "https://scottjanish.com/blog/feed/",
+      "website_url": "https://scottjanish.com/blog/",
+      "description": "Collection of homebrew recipes, hop oil information, database of homebrew results and analytical analysis of beer.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4802553.jpg?t=1610112022"
+    },
+    {
+      "title": "BrewHQ",
+      "feed_url": "https://brewhq.ca/blogs/academy.atom",
+      "website_url": "https://brewhq.ca/blogs/academy",
+      "description": "BrewHQ is your Canadian headquarters for homebrewing. BrewHQ has everything you need to brew your own beer. homebrewing, beer, brewing, malt, grain, homebrew",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 97,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5047906.jpg?t=1610112757"
+    },
+    {
+      "title": "How to Start Homebrewing",
+      "feed_url": "https://www.howtostarthomebrewing.com/feed/",
+      "website_url": "https://www.howtostarthomebrewing.com/",
+      "description": "How to Start Homebrewing is the ultimate homebrewing resource! Learn how to start homebrewing today without feeling overwhelmed. Find tips, product reviews, recipes, and so much more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5491590.jpg?t=1673434872"
+    },
+    {
+      "title": "Experimental Homebrewing",
+      "feed_url": "https://www.experimentalbrew.com/rss.xml",
+      "website_url": "https://www.experimentalbrew.com/",
+      "description": "Join Denny and Drew as they explore the world of experimental beer - both the wacky and the scientific!",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 1100,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4492514.jpg?t=1610112253"
+    },
+    {
+      "title": "The Mad Fermentationist - Homebrewing Blog",
+      "feed_url": "https://feeds.feedburner.com/TheMadFermentationist",
+      "website_url": "https://www.themadfermentationist.com/",
+      "description": "A log of the homebrewing experiments Michael Tonsmeire, The Mad Fermentationist. Author of American Sour Beers. Flavor Developer for Modern Times Beer.",
+      "followers": {
+        "facebook": 16900,
+        "twitter": 9200
+      },
+      "image_url": "https://i1.feedspot.com/4801669.jpg?t=1610111809"
+    },
+    {
+      "title": "Singing Boys Brewing Blog",
+      "feed_url": "https://www.singingboysbrewing.com/~site/Scripts_BlogElement/BlogElement.dll?cmd=CMDGetFeed&handle=1753958127&path=/the-blog.html/feed/feed/index.html&domain=www.singingboysbrewing.com&format=rss&type=entries",
+      "website_url": "https://www.singingboysbrewing.com/blog",
+      "description": "This site is dedicated to our home brewery, where we make and bottle small batches of beer and cider for ourselves and friends.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4802509.jpg?t=1610112080"
+    },
+    {
+      "title": "A Life of Faff Blog",
+      "feed_url": "https://www.alifeoffaff.com/blog",
+      "website_url": "https://www.alifeoffaff.com/blog",
+      "description": "Follow my journey into the world of homebrewing beer, baking and any other bits of my life outside of science.",
+      "followers": {
+        "facebook": 69,
+        "instagram": 208
+      },
+      "image_url": "https://i1.feedspot.com/5157468.jpg?t=1610112804"
+    }
+  ]
+}

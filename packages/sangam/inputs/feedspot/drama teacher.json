@@ -1,0 +1,51 @@
+{
+  "category": "Drama Teacher",
+  "source_url": "https://rss.feedspot.com/drama_teacher_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Drama Teacher",
+      "feed_url": "https://thedramateacher.com/feed/",
+      "website_url": "https://thedramateacher.com/",
+      "description": "The Drama Teacher is a blog created and maintained by Justin Cash and is packed with resources for drama and theatre teachers at all levels of education. Most of the information on this website will be relevant to you no matter where you teach drama as the basics of our profession are common to us all, regardless of geography or curriculum.",
+      "followers": {
+        "facebook": 540,
+        "twitter": 102
+      },
+      "image_url": "https://i1.feedspot.com/4693453.jpg?t=1606801577"
+    },
+    {
+      "title": "DramaMommaSpeaks",
+      "feed_url": "https://dramamommaspeaks.com/feed/",
+      "website_url": "https://dramamommaspeaks.com/",
+      "description": "Hello, I'm Deborah Baldwin(Deb) a drama teacher and director for forty years. In addition, she directed and produced over 350 plays and musicals with adults and children alike. Now a curriculum author, I've created drama education resources (in all theater subjects) for over 11,000 teachers educating thousand of students. In my blog you'll find my teaching tips, helpful advice too boost student engagement, teaching strategies, classroom management and improving success among students.",
+      "followers": {
+        "facebook": 568,
+        "twitter": 175
+      },
+      "image_url": "https://i1.feedspot.com/5306139.jpg?t=1627479929"
+    },
+    {
+      "title": "Burt's Drama Blog",
+      "feed_url": "https://burtsdrama.com/feed/",
+      "website_url": "https://burtsdrama.com/blog-2/",
+      "description": "A website by Keith Burt for all Drama teachers, a place for inspiration, insight, and information on everything to do with Drama. Find out more about different Drama techniques, terminology, teaching ideas, or just come for some inspiration.",
+      "followers": {
+        "facebook": 499,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5306199.jpg?t=1627537442"
+    },
+    {
+      "title": "The Theatrefolk Blog",
+      "feed_url": "https://www.theatrefolk.com/blog/feed/",
+      "website_url": "https://www.theatrefolk.com/blog/",
+      "description": "Find all the resources for the drama teachers. Covers resources on acting, directing, playwriting, production, teaching drama, and technical theatre. We are the creators of the Drama Teacher Academy (DTA), a provider of curriculum materials, educational resources, and professional development designed just for middle school and high school drama teachers.",
+      "followers": {
+        "facebook": 56600,
+        "twitter": 2000,
+        "instagram": 7400
+      },
+      "image_url": "https://i1.feedspot.com/4700317.jpg?t=1672990998"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "category": "Fargo News",
+  "source_url": "https://rss.feedspot.com/fargo_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "InForum",
+      "feed_url": "https://www.inforum.com/index.rss",
+      "website_url": "https://www.inforum.com/",
+      "description": "INFORUM your best local source for news, sports, and weather in the Fargo-Moorhead area.",
+      "followers": {
+        "facebook": 60800,
+        "twitter": 46800
+      },
+      "image_url": "https://i1.feedspot.com/5133726.jpg?t=1670562067"
+    },
+    {
+      "title": "KVRR",
+      "feed_url": "https://www.kvrr.com/feed/",
+      "website_url": "https://www.kvrr.com/",
+      "description": "KVRR is your leading source of local news, weather, and sports for Fargo, North Dakota, Moorhead, Minnesota, and the Red River Valley. KVRR signed on in 1983 as an independent station KVNJ-TV. It was the first independent station in the Dakotas, as well as the first new full-fledged commercial station in the Fargo-Moorhead market in 29 years.",
+      "followers": {
+        "facebook": 42100,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4827309.jpg?t=1670562106"
+    },
+    {
+      "title": "Fargo Inc! Business magazine",
+      "feed_url": "https://fargoinc.com/feed/",
+      "website_url": "https://fargoinc.com/",
+      "description": "Fargo Inc! focuses on the unique business community in Fargo-Moorhead and provides exclusive resources and profiles of local professionals. Each month, they cover a variety of topics, ranging from entrepreneurship and startups to business resources to general economic development.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5133740.jpg?t=1670562127"
+    },
+    {
+      "title": "WDAY",
+      "feed_url": "https://www.wday.com/feed/",
+      "website_url": "https://www.wday.com/",
+      "description": "WDAY is a leading media technology company in Fargo and the surrounding region. Their website is an online source of Latest Local news, Weather alerts, Contests, Classifieds, Great deals on Products, and many more useful links. WDAY is affiliated to ABC and owned by OneCMS Media.",
+      "followers": {
+        "facebook": 136200
+      },
+      "image_url": "https://i1.feedspot.com/5133730.jpg?t=1670562170"
+    }
+  ]
+}

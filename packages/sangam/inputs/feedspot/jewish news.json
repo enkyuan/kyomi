@@ -1,0 +1,523 @@
+{
+  "category": "Jewish News",
+  "source_url": "https://rss.feedspot.com/jewish_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Forward",
+      "feed_url": "https://forward.com/feed/",
+      "website_url": "https://forward.com/",
+      "description": "A leading source of news, opinion, culture, and more through a Jewish lens. The Forward delivers incisive coverage of the issues, ideas and institutions that matter to American Jews. Its rigorous reporting and balanced commentary on politics, arts and culture have won numerous awards year after year, including repeated recognition by the Society of Professional Journalists.",
+      "followers": {
+        "facebook": 105000,
+        "twitter": 68000,
+        "instagram": 23600
+      },
+      "image_url": "https://i1.feedspot.com/5426115.jpg?t=1659004620"
+    },
+    {
+      "title": "The Jerusalem Post",
+      "feed_url": "https://rss.jpost.com/rss/rssfeedsfrontpage.aspx",
+      "website_url": "https://www.jpost.com/",
+      "description": "The Jerusalem Post is Israel's most-read English news website and best-selling English newspaper bringing breaking news, world news & middle east news.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 807900
+      },
+      "image_url": "https://i1.feedspot.com/5426114.jpg?t=1744611666"
+    },
+    {
+      "title": "Haaretz",
+      "feed_url": "https://www.haaretz.com/srv/haaretz-latest-headlines",
+      "website_url": "https://www.haaretz.com/",
+      "description": "Breaking News, Analysis and Opinion From Israel, the Middle East and the Jewish World. Haaretz is an independent daily newspaper with a broadly liberal outlook both on domestic issues and on international affairs.",
+      "followers": {
+        "facebook": 491000,
+        "twitter": 566400
+      },
+      "image_url": "https://i1.feedspot.com/5426119.jpg?t=1749730722"
+    },
+    {
+      "title": "Jewish Telegraphic Agency",
+      "feed_url": "https://www.jta.org/feed",
+      "website_url": "https://www.jta.org/",
+      "description": "JTA is the definitive, trusted global source of breaking news, investigative reporting, in-depth analysis, opinion and features on current events and issues of interest to the Jewish people.",
+      "followers": {
+        "facebook": 64900,
+        "twitter": 121600,
+        "instagram": 38000
+      },
+      "image_url": "https://i1.feedspot.com/3068975.jpg?t=1659005652"
+    },
+    {
+      "title": "Jewish Currents",
+      "feed_url": "https://jewishcurrents.org/feed",
+      "website_url": "https://jewishcurrents.org/",
+      "description": "Jewish Currents is a magazine committed to the rich tradition of thought, activism, and culture of the Jewish left, and the left more broadly. As an award-winning magazine of politics, culture, and ideas, they publish quarterly in print and daily online. They have received acclaim for their in-depth reporting, trenchant analysis, and rigorous cultural criticism, and for their attention to literary quality and style.",
+      "followers": {
+        "facebook": 12500,
+        "twitter": 42100,
+        "instagram": 49100
+      },
+      "image_url": "https://i1.feedspot.com/5223563.jpg?t=1659005750"
+    },
+    {
+      "title": "Globes",
+      "feed_url": "https://en.globes.co.il/WebService/Rss/RssFeeder.asmx/FeederNode?iID=942",
+      "website_url": "https://en.globes.co.il/en/",
+      "description": "Business news and analysis from Israeli financial daily 'Globes', covering the economy, finance, information technology, healthcare, defense, real estate, and more, updated throughout Israel's working week.",
+      "followers": {
+        "facebook": 75500,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5162004.jpg?t=1645108828"
+    },
+    {
+      "title": "Jewish Journal",
+      "feed_url": "https://jewishjournal.com/feed/",
+      "website_url": "https://jewishjournal.com/",
+      "description": "Your source for nuanced news about Jewish people, places, and things. The Jewish Journal of Greater Los Angeles has served the world's third largest Jewish community with award-winning journalism, breaking news, Hollywood Schmooze, and provocative columns.",
+      "followers": {
+        "facebook": 31000,
+        "twitter": 47600,
+        "instagram": 67600
+      },
+      "image_url": "https://i1.feedspot.com/5426147.jpg?t=1659007456"
+    },
+    {
+      "title": "Algemeiner",
+      "feed_url": "https://www.algemeiner.com/feed/",
+      "website_url": "https://www.algemeiner.com/",
+      "description": "The fastest growing Jewish newspaper in America. Your one stop source for all news and commentary from Israel and the Jewish world, Jewish art, Jewish culture, Jewish music, analysis, opinion, blogs. The Algemeiner, a global news destination published online and in print, serves as an independent media voice covering the Middle East, Israel and matters of Jewish interest around the world.",
+      "followers": {
+        "facebook": 130800,
+        "twitter": 24500,
+        "instagram": 10200
+      },
+      "image_url": "https://i1.feedspot.com/5426148.jpg?t=1659007549"
+    },
+    {
+      "title": "Jewish News",
+      "feed_url": "https://www.jewishnews.co.uk/feed/",
+      "website_url": "https://www.jewishnews.co.uk/",
+      "description": "Jewish News is a former Press Gazette free newspaper of the year and the only newspaper to exclusively serve the Jewish communities of Greater London. It is at the heart of this thriving, educated, and affluent community, providing a weekly mix of local, national, and international Jewish news, features, sport, and entertainment.",
+      "followers": {
+        "facebook": 117200,
+        "twitter": 58600,
+        "instagram": 32700
+      },
+      "image_url": "https://i1.feedspot.com/5426154.jpg?t=1659009561"
+    },
+    {
+      "title": "The Jewish Chronicles",
+      "feed_url": "https://www.thejc.com/rss",
+      "website_url": "https://www.thejc.com/",
+      "description": "News coverage ranges from investigations to reports of communal activities, with context provided by leading commentators and cultural figures. The Jewish Chronicle's features and lifestyle cover everything from arts and food to fashion and travel. The world's oldest and most influential Jewish newspaper.",
+      "followers": {
+        "facebook": 80600,
+        "twitter": 81300,
+        "instagram": 66800
+      },
+      "image_url": "https://i1.feedspot.com/5426152.jpg?t=1659009765"
+    },
+    {
+      "title": "Jewish Insider",
+      "feed_url": "https://jewishinsider.com/feed/",
+      "website_url": "https://jewishinsider.com/",
+      "description": "All the latest news from the Jewish political & business worlds. We are here to bring you new ideas and information. We're not advocacy news. We're not here to confirm your views or challenge your beliefs.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 12800
+      },
+      "image_url": "https://i1.feedspot.com/4659558.jpg?t=1678967900"
+    },
+    {
+      "title": "The Canadian Jewish News",
+      "feed_url": "https://thecjn.ca/feed/",
+      "website_url": "https://thecjn.ca/",
+      "description": "Daily breaking news, podcasts, newsletters and events that matter to the Canadian Jewish community. The Canadian Jewish News is a not-for-profit, award-winning media organization producing content that matters to the diverse community of Jews in Canada, through articles, podcasts and events.",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 13100,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5426153.jpg?t=1681719023"
+    },
+    {
+      "title": "American Jewish World News",
+      "feed_url": "https://www.ajwnews.com/feed/",
+      "website_url": "https://www.ajwnews.com/",
+      "description": "Since 1912, the AJW has served as an important news resource for the Jewish community throughout Minnesota. The Jewish World unites the main Jewish communities in St. Paul and Minneapolis, as well as those in Duluth, Rochester, and smaller cities, and bridges the divides between the various Jewish religious streams.",
+      "followers": {
+        "facebook": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5426206.jpg?t=1659011574"
+    },
+    {
+      "title": "Atlanta Jewish Times",
+      "feed_url": "https://www.atlantajewishtimes.com/feed/",
+      "website_url": "https://www.atlantajewishtimes.com/",
+      "description": "Atlanta Jewish Times is a local newspaper connecting the Southeastern Jewish community. The mission of the Atlanta Jewish Times is to create a sense of community throughout the geographically dispersed Jewish people of greater Atlanta. It accomplishes its mission through the timely dissemination of local news and important national Jewish and Israeli interests.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5426198.jpg?t=1669619110"
+    },
+    {
+      "title": "The Jewish World News",
+      "feed_url": "https://jewishworldnews.org/feed/",
+      "website_url": "https://jewishworldnews.org/",
+      "description": "Your gateway to Jewish life! Albany's only Jewish newspaper, sharing news stories relevant to you! The Jewish World publishes news of events for the Capital District Jewish community, and carries stories on events affecting Jewish people all over the world.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 31
+      },
+      "image_url": "https://i1.feedspot.com/5426204.jpg?t=1659013156"
+    },
+    {
+      "title": "Texas Jewish Post",
+      "feed_url": "https://tjpnews.com/feed/",
+      "website_url": "https://tjpnews.com/",
+      "description": "The TJP has been serving the North Texas Jewish Community weekly since 1947. With its broad subscriber base in North Texas, the TJP is the most efficient way to reach one of North Texas' most affluent communities. We are a trusted and respected source of news for our readers.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 186,
+        "instagram": 758
+      },
+      "image_url": "https://i1.feedspot.com/5426200.jpg?t=1659013359"
+    },
+    {
+      "title": "+972 Magazine",
+      "feed_url": "https://www.972mag.com/feed/",
+      "website_url": "https://www.972mag.com/",
+      "description": "Independent commentary and news from Israel & Palestine. 972 Magazine is an independent, online, nonprofit magazine run by a group of Palestinian and Israeli journalists. Founded in 2010, their mission is to provide in-depth reporting, analysis, and opinions from the ground in Israel-Palestine.",
+      "followers": {
+        "facebook": 101300,
+        "twitter": 136100,
+        "instagram": 92600
+      },
+      "image_url": "https://i1.feedspot.com/5426314.jpg?t=1755608414"
+    },
+    {
+      "title": "Commentary",
+      "feed_url": "https://www.commentary.org/feed/",
+      "website_url": "https://www.commentary.org/",
+      "description": "Commentary is America's premier monthly magazine of opinion and a pivotal voice in American intellectual life. Since its inception in 1945, and increasingly after it emerged as the flagship of neoconservatism in the 1970s, the magazine has been consistently engaged with several large, interrelated questions.",
+      "followers": {
+        "facebook": 55100,
+        "twitter": 43400,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5420424.jpg?t=1659693225"
+    },
+    {
+      "title": "Jewish News",
+      "feed_url": "https://jewishnewsva.org/feed/",
+      "website_url": "https://jewishnewsva.org/",
+      "description": "Jewish News connects the Tidewater Jewish community with news of Jewish interest from local, national, and global spheres. We offer news on topics like nearly half of U.S. adults believe America should be a 'Christian nation', it's time to start thinking about end-of-year planning, and more!",
+      "followers": {
+        "facebook": 726
+      },
+      "image_url": "https://i1.feedspot.com/5426313.jpg?t=1762145527"
+    },
+    {
+      "title": "Heritage Florida Jewish News",
+      "feed_url": "https://www.heritagefl.com/rss",
+      "website_url": "https://www.heritagefl.com/",
+      "description": "Central Florida's Independent Jewish Voice. The Heritage was founded to help to unify a scattered community by focusing on Jewish issues. It is published independently of any outside agency and depends solely on subscribers and advertisers for support.",
+      "followers": {
+        "facebook": 807
+      },
+      "image_url": "https://i1.feedspot.com/5426309.jpg?t=1659072010"
+    },
+    {
+      "title": "The Yeshiva World",
+      "feed_url": "https://www.theyeshivaworld.com/feed",
+      "website_url": "https://www.theyeshivaworld.com/",
+      "description": "There's News, and There's Yeshiva World News. Breaking news in live time, 24 hours a day for 18 years!",
+      "followers": {
+        "facebook": 16700,
+        "twitter": 73400,
+        "instagram": 123200
+      },
+      "image_url": "https://i1.feedspot.com/5058020.jpg?t=1659074687"
+    },
+    {
+      "title": "Baltimore Jewish Times",
+      "feed_url": "https://www.jewishtimes.com/feed/",
+      "website_url": "https://www.jewishtimes.com/",
+      "description": "Baltimore Jewish Times is a powerhouse of Jewish journalism, earning national and international acclaim, today the JT is a cornerstone of the Jewish community, delivering in print and on jewishtimes.com a wealth of important local, national and international news and opinion, plus entertaining features and profiles and convenient, useful advertising content.",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 6800,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5426400.jpg?t=1669622469"
+    },
+    {
+      "title": "5 Towns Jewish Times",
+      "feed_url": "https://www.5tjt.com/feed/",
+      "website_url": "https://www.5tjt.com/",
+      "description": "The 5 Towns Jewish Times is committed to showing the best of our Orthodox Jewish community, while reflecting reality. It is committed to address all matters of note from a position of intelligence, integrity, and accuracy; and to report difficult social, political, and religious issues from all viewpoints without bias, whitewashing, or journalistic oversimplification.",
+      "followers": {
+        "facebook": 70700,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5426402.jpg?t=1659074945"
+    },
+    {
+      "title": "Jewish Ledger",
+      "feed_url": "https://www.jewishledger.com/feed/",
+      "website_url": "https://www.jewishledger.com/",
+      "description": "For 90 years the Jewish Ledger has served CT by providing breaking news, insightful editorials, and provocative pictures. It is Connecticut's only weekly Jewish newspaper. The Hartford newspaper also has a monthly edition serving the Greater Hartford and western Massachusetts area.",
+      "followers": {
+        "twitter": 551
+      },
+      "image_url": "https://i1.feedspot.com/5426404.jpg?t=1669634034"
+    },
+    {
+      "title": "Washington Jewish Week",
+      "feed_url": "https://www.washingtonjewishweek.com/feed/",
+      "website_url": "https://www.washingtonjewishweek.com/",
+      "description": "Washington Jewish Week is the Jewish newspaper of record in the nation's capital since 1930. WJW strives, in its award-winning coverage in print and online, to be an indispensable source of news about politics, religion, international affairs, science and health and the arts, all while working to build and strengthen Jewish community.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 4900,
+        "instagram": 557
+      },
+      "image_url": "https://i1.feedspot.com/4536648.jpg?t=1659075242"
+    },
+    {
+      "title": "Kansas City Jewish Chronicle",
+      "feed_url": "https://www.kcjc.com/?format=feed&type=rss",
+      "website_url": "https://www.kcjc.com/",
+      "description": "Since 1920, the Kansas City Jewish Chronicle has provided its readers with Jewish news and opinion from a variety of perspectives - local, regional, national and international.",
+      "followers": {
+        "facebook": 1300,
+        "instagram": 710
+      },
+      "image_url": "https://i1.feedspot.com/5426401.jpg?t=1659075372"
+    },
+    {
+      "title": "Jewish Community Voice",
+      "feed_url": "https://www.jewishvoicesnj.org/feed/",
+      "website_url": "https://www.jewishvoicesnj.org/",
+      "description": "The Jewish Voice has grown to serve an expanding and diverse Jewish community. Its mission is to be the communications hub for the Southern New Jersey Jewish community and to support the goals of the Jewish Federation of Southern New Jersey.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 281,
+        "instagram": 743
+      },
+      "image_url": "https://i1.feedspot.com/5426405.jpg?t=1659076582"
+    },
+    {
+      "title": "Ami Magazine",
+      "feed_url": "https://amimagazine.org/feed/",
+      "website_url": "https://amimagazine.org/",
+      "description": "Ami Magazine, a weekly publication distributed worldwide, sets a new standard in Jewish media. Ami Magazine offers readers investigative and intriguing features as well as inviting, and professional columns.",
+      "followers": {
+        "facebook": 187,
+        "twitter": 64200,
+        "instagram": 21300
+      },
+      "image_url": "https://i1.feedspot.com/4952808.jpg?t=1754637499"
+    },
+    {
+      "title": "Jewish Press",
+      "feed_url": "https://www.jewishpress.com/feed/",
+      "website_url": "https://www.jewishpress.com/",
+      "description": "Breaking news, opinions, analysis, and more on Israel and the Jewish world. The Jewish Press is the largest independent weekly Jewish newspaper in the United States.",
+      "followers": {
+        "facebook": 214100,
+        "twitter": 18500,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/1747591.jpg?t=1636989437"
+    },
+    {
+      "title": "Jewish Exponent",
+      "feed_url": "https://www.jewishexponent.com/feed/",
+      "website_url": "https://www.jewishexponent.com/",
+      "description": "The Jewish Exponent is the second-oldest continuously published Jewish newspaper in the United States, it has evolved from its roots as a voice for prominent businessmen to a multimedia platform for delivering Jewish news and information and stimulating community dialogue. All the news and information of how it feels and means to be Jewish in Philadelphia.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 2900,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5426389.jpg?t=1659073921"
+    },
+    {
+      "title": "Crescent City Jewish News",
+      "feed_url": "https://www.crescentcityjewishnews.com/feed/",
+      "website_url": "https://www.crescentcityjewishnews.com/",
+      "description": "The Voice of New Orleans' Jewish Community. The mission of the Crescent City Jewish News (CCJN) is to provide continuous coverage of news that will inform, support and promote the Greater New Orleans Jewish community and all extended families located throughout the United States, Israel and the world.",
+      "followers": {
+        "facebook": 673,
+        "twitter": 170
+      },
+      "image_url": "https://i1.feedspot.com/5426310.jpg?t=1659072078"
+    },
+    {
+      "title": "St. Louis Jewish Light",
+      "feed_url": "https://stljewishlight.org/feed/rss/",
+      "website_url": "https://stljewishlight.org/",
+      "description": "A nonprofit, independent news source to inform, inspire, educate and connect the St. Louis Jewish community. The St. Louis Jewish Light is the award-winning newspaper of the Jewish community of St. Louis, serving its readers with both a biweekly print edition and an online edition, updated daily.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 1500,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5426391.jpg?t=1659073394"
+    },
+    {
+      "title": "Jewish Cincinnati News",
+      "feed_url": "https://www.jewishcincinnati.org/jewish-cincinnati-news",
+      "website_url": "https://www.jewishcincinnati.org/jewish-cincinnati-news",
+      "description": "The Jewish Federation of Cincinnati develops and connects leaders, contributors, organizations and ideas to build an inclusive Jewish community that cares for people in need, supports Israel and assures a vibrant Jewish future.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 1300,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4536773.jpg?t=1659073862"
+    },
+    {
+      "title": "The Times of Israel",
+      "feed_url": "https://www.timesofisrael.com/feed/",
+      "website_url": "https://www.timesofisrael.com/",
+      "description": "Keep up with the latest news from Israel, the Middle East and the Jewish World. The Times of Israel is a Jerusalem-based online newspaper founded in 2012 to document developments in Israel, the Middle East and around the Jewish world. It was established by veteran UK-born, Israeli journalist David Horovitz and his US-based capital partner Seth Klarman. Horovitz is the founding editor, responsible for the site's editorial content.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 619300
+      },
+      "image_url": "https://i1.feedspot.com/584634.jpg?t=1659003536"
+    },
+    {
+      "title": "Jewish News Syndicate",
+      "feed_url": "https://www.jns.org/feed/",
+      "website_url": "https://www.jns.org/",
+      "description": "Jewish News Syndicate (JNS) is the fastest-growing news agency covering Israel and the Jewish world. We provide briefs, news, features, opinions, and analysis to as many as 100 print newspapers and digital publications on a daily basis.",
+      "followers": {
+        "facebook": 231200,
+        "twitter": 16000,
+        "instagram": 35200
+      },
+      "image_url": "https://i1.feedspot.com/5388085.jpg?t=1659005114"
+    },
+    {
+      "title": "The Detroit Jewish News",
+      "feed_url": "https://www.thejewishnews.com/feed/",
+      "website_url": "https://www.thejewishnews.com/",
+      "description": "The Detroit Jewish News is a pro-Zionist newspaper that has been serving Metro Detroit's Jewish community since 1942. It is a trusted source for news, stories and opinions that affect the Metro Detroit Jewish community and beyond.",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 3100,
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/5426117.jpg?t=1659005221"
+    },
+    {
+      "title": "I24NEWS",
+      "feed_url": "https://www.i24news.tv/en",
+      "website_url": "https://www.i24news.tv/en",
+      "description": "I24NEWS brings you the biggest news and stories from the Middle East, Israel and around the world. i24NEWS mission is to cover the latest international news from a new perspective",
+      "followers": {
+        "facebook": 746100,
+        "twitter": 157400,
+        "instagram": 101000
+      },
+      "image_url": "https://i1.feedspot.com/5426149.jpg?t=1659007358"
+    },
+    {
+      "title": "Israel National News",
+      "feed_url": "https://www.israelnationalnews.com/",
+      "website_url": "https://www.israelnationalnews.com/",
+      "description": "The Israel National News brings you news from Israel, the Diaspora, and the world - 24 hours a day. News, economy, culture, food, health, and more.",
+      "followers": {
+        "facebook": 171300,
+        "twitter": 46200,
+        "instagram": 26500
+      },
+      "image_url": "https://i1.feedspot.com/5426150.jpg?t=1659009917"
+    },
+    {
+      "title": "J. The Jewish News of Northern California",
+      "feed_url": "https://jweekly.com/feed/",
+      "website_url": "https://jweekly.com/",
+      "description": "Today, The Jewish News of Northern California is a nonprofit publication with a website that reaches more than a million people each year and a biweekly print edition that serves nearly 20,000 homes throughout Northern California.",
+      "followers": {
+        "facebook": 13900,
+        "twitter": 8900,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5426197.jpg?t=1669637759"
+    },
+    {
+      "title": "All Israel News",
+      "feed_url": "https://allisrael.com/",
+      "website_url": "https://allisrael.com/",
+      "description": "All Israel News is a news and commentary site based in Jerusalem that is focused on Israel and the broader Middle East, bringing together in one place all of the most important events and trends in the region from a wide range of existing news sites, as well as providing fresh, original and exclusive reporting, polls, interviews and analysis.",
+      "followers": {
+        "facebook": 54000,
+        "twitter": 17100
+      },
+      "image_url": "https://i1.feedspot.com/5426205.jpg?t=1659012819"
+    },
+    {
+      "title": "American Israelite",
+      "feed_url": "https://americanisraelite.com/",
+      "website_url": "https://americanisraelite.com/",
+      "description": "The American Israelite has played a significant role in the history of Cincinnati's Jewish community, as well as in the American Jewish community. Founded as The Israelite on July 15, 1854, by Rabbi Isaac Mayer Wise, the paper today is the oldest English-Jewish weekly in America and the second oldest in the world.",
+      "followers": {
+        "facebook": 785,
+        "twitter": 200
+      },
+      "image_url": "https://i1.feedspot.com/5426203.jpg?t=1659013266"
+    },
+    {
+      "title": "Jewish News",
+      "feed_url": "https://www.jewishaz.com/",
+      "website_url": "https://www.jewishaz.com/",
+      "description": "The Jewish News provides free, unlimited access to all articles. Jewish News is a nonprofit publication that is owned by the community and relies on community support.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 3000,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5426312.jpg?t=1659071016"
+    },
+    {
+      "title": "New Jersey Jewish News",
+      "feed_url": "https://njjewishnews.timesofisrael.com/feed/",
+      "website_url": "https://njjewishnews.timesofisrael.com/",
+      "description": "New Jersey Jewish News has been an influential voice in the New Jersey Jewish community for nearly 70 years. Published by the New Jersey Rockland Jewish Media Group, NJJN is committed to providing coverage of local, national and world events; explorations of the world of Jewish culture and the arts; supplements for the holidays, celebrations and other topics of interest; and a wide array of feature stories.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4824582.jpg?t=1612612717"
+    },
+    {
+      "title": "Intermountain Jewish News",
+      "feed_url": "https://www.ijn.com/feed/",
+      "website_url": "https://www.ijn.com/",
+      "description": "The Intermountain Jewish News is a weekly independent newspaper founded in 1913, covering the Jewish communities of the Front Range. The IJN has garnered many first-place awards in news writing, features, profiles, arts and criticism, editorial writing, special sections, and graphic design.",
+      "followers": {
+        "facebook": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5426311.jpg?t=1669634879"
+    },
+    {
+      "title": "Columbus Jewish News",
+      "feed_url": "https://www.columbusjewishnews.com/",
+      "website_url": "https://www.columbusjewishnews.com/",
+      "description": "Breaking News, Local News, National News, World News, Events and Features covering Central Ohio. The Columbus Jewish Publication Company is the publisher of the biweekly Columbus Jewish News.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 358,
+        "instagram": 892
+      },
+      "image_url": "https://i1.feedspot.com/5426393.jpg?t=1659073035"
+    }
+  ]
+}

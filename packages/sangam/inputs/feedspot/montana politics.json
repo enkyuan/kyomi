@@ -1,0 +1,118 @@
+{
+  "category": "Montana Politics",
+  "source_url": "https://rss.feedspot.com/montana_politics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Montana Republican Party",
+      "feed_url": "https://mtgop.org/feed/",
+      "website_url": "https://mtgop.org/news/",
+      "description": "The Montana Republican Party is dedicated to advocating for smaller government, lower taxes, and stronger families. Stay informed on MTGOP news, press releases, and events by signing up for updates. Join the movement for a stronger nation through the principles of the GOP.",
+      "followers": {
+        "facebook": 17200,
+        "twitter": 11000
+      },
+      "image_url": "https://i1.feedspot.com/5316672.jpg?t=1630307415"
+    },
+    {
+      "title": "Missoulian Politics & Government",
+      "feed_url": "https://missoulian.com/search/?f=rss",
+      "website_url": "https://missoulian.com/news/state-regional/government-politics/#tracking-source=menu-nav",
+      "description": "Breaking Missoula News, Sports, Advertising, Events and Information from Western Montana. This section covers political and government updates and news.",
+      "followers": {
+        "facebook": 69600,
+        "twitter": 42300
+      },
+      "image_url": "https://i1.feedspot.com/5316624.jpg?t=1630304782"
+    },
+    {
+      "title": "KPAX Missoula News Montana Politics",
+      "feed_url": "https://www.kpax.com/news/montana-politics.rss",
+      "website_url": "https://www.kpax.com/news/montana-politics",
+      "description": "Continuous News Coverage for Western Montana. This section of the news website covers Montana political updates and news.",
+      "followers": {
+        "facebook": 131500,
+        "twitter": 32100,
+        "instagram": 16100
+      },
+      "image_url": "https://i1.feedspot.com/5316626.jpg?t=1630304964"
+    },
+    {
+      "title": "The Bozeman Daily Chronicle Politics",
+      "feed_url": "https://www.bozemandailychronicle.com/search/?f=rss&t=article&c=news/politics&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.bozemandailychronicle.com/news/politics/",
+      "description": "Covers Montana political news. The Bozeman Daily Chronicle is committed to innovation, maintaining our independence, and being a leader in providing information while maintaining truth, integrity, and quality.",
+      "followers": {
+        "facebook": 60300,
+        "twitter": 22500,
+        "instagram": 19800
+      },
+      "image_url": "https://i1.feedspot.com/5316636.jpg?t=1630305298"
+    },
+    {
+      "title": "Montana Public Radio Montana Politics",
+      "feed_url": "https://www.mtpr.org/montana-politics.rss",
+      "website_url": "https://www.mtpr.org/montana-politics",
+      "description": "Listener supported Montana news, arts, and hand-picked music. Covers the latest Montana politics, elections, and Legislature news.",
+      "followers": {
+        "facebook": 15000,
+        "twitter": 16900
+      },
+      "image_url": "https://i1.feedspot.com/5316650.jpg?t=1630305439"
+    },
+    {
+      "title": "Daily Montanan Politics & Government",
+      "feed_url": "https://dailymontanan.com/category/politics-gov/feed/",
+      "website_url": "https://dailymontanan.com/category/politics-gov/",
+      "description": "The Daily Montanan is a nonprofit, nonpartisan source for trusted news, commentary, and insight into statewide policy and politics beneath the Big Sky. Covers the Latest News and Updates in Politics and Government.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5316655.jpg?t=1630306078"
+    },
+    {
+      "title": "The Missoula Current Government",
+      "feed_url": "https://missoulacurrent.com/category/government/feed/",
+      "website_url": "https://missoulacurrent.com/category/government/",
+      "description": "The Missoula Current is a daily news magazine based in Missoula, Montana. It Covers government updates and news under this section.",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5316675.jpg?t=1630307564"
+    },
+    {
+      "title": "Montana Political",
+      "feed_url": "https://montanapolitical.com/f.rss",
+      "website_url": "https://montanapolitical.com/",
+      "description": "Wild speculation about Montana Politics, but grounded in reality. The Goal of Montana Political is to provide a place for discussion and speculation on Montana Politics. Too often the focus in Montana is on the high-level political races, and justifiably so.",
+      "followers": {
+        "facebook": 2,
+        "twitter": 479
+      },
+      "image_url": "https://i1.feedspot.com/5316665.jpg?t=1630307198"
+    },
+    {
+      "title": "Big Sky Political Analysis",
+      "feed_url": "http://bigskypolitics.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://bigskypolitics.blogspot.com/",
+      "description": "Created and maintained by professors of political science at Montana State University, this website seeks to bring political science analysis to current political events in Montana, the United States, and across the globe. The main aim is to provide nonpartisan analysis and commentary in a political world replete with punditry and partisanship.",
+      "followers": {
+        "facebook": 56,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4704720.jpg?t=1619178358"
+    },
+    {
+      "title": "Montana Democratic Party",
+      "feed_url": "https://www.montanademocrats.org/feed/",
+      "website_url": "https://www.montanademocrats.org/news/",
+      "description": "Updates from the official Montana Democratic Party. The Montana Democratic Party is the party of the people. Get the party insider news.",
+      "followers": {
+        "facebook": 18300,
+        "twitter": 9100
+      },
+      "image_url": "https://i1.feedspot.com/5316657.jpg?t=1630306619"
+    }
+  ]
+}

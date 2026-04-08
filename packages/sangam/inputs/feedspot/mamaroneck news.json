@@ -1,0 +1,39 @@
+{
+  "category": "Mamaroneck News",
+  "source_url": "https://rss.feedspot.com/mamaroneck_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mamaroneck Daily Voice",
+      "feed_url": "https://dailyvoice.com/new-york/mamaroneck/rss/",
+      "website_url": "https://dailyvoice.com/new-york/mamaroneck/",
+      "description": "Discover the best local stories, latest breaking news and current events happening in Mamaroneck.",
+      "followers": {
+        "facebook": 20900
+      },
+      "image_url": "https://i1.feedspot.com/5164700.jpg?t=1593001345"
+    },
+    {
+      "title": "The Mamaroneck Review",
+      "feed_url": "https://www.mamaroneckreview.com/category/news/feed/",
+      "website_url": "https://www.mamaroneckreview.com/category/news/",
+      "description": "Your source for Larchmont and Mamaroneck news.",
+      "followers": {
+        "facebook": 672,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5164833.jpg?t=1626442323"
+    },
+    {
+      "title": "theLoop \u00bb Mamaroneck",
+      "feed_url": "https://larchmontloop.com/category/mamaroneck/feed/",
+      "website_url": "https://larchmontloop.com/category/mamaroneck/",
+      "description": "Follow Mamaroneck local news, Investigative reports, special op-eds, photos, and videos at theLoop.com. Stay afresh on all new and exciting developments from Mamaroneck. Founded in 2007, theLoop is a hyperlocal digital news hub for Larchmont, Mamaroneck, and Lower Westchester, NY.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 1500,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5505922.jpg?t=1676269187"
+    }
+  ]
+}

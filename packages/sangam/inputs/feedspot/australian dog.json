@@ -1,0 +1,73 @@
+{
+  "category": "Australian Dog",
+  "source_url": "https://rss.feedspot.com/australian_dog_rss_feeds",
+  "feeds": [
+    {
+      "title": "Pretty Fluffy",
+      "feed_url": "https://www.prettyfluffy.com/feed",
+      "website_url": "https://www.prettyfluffy.com/",
+      "description": "The ultimate lifestyle blog for the modern pet owner. Featuring celebrity dogs, DIY pet projects, dog photography, luxury pet accessories, and more.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 1500,
+        "instagram": 14300
+      },
+      "image_url": "https://i1.feedspot.com/4910323.jpg"
+    },
+    {
+      "title": "Petz Park Blog",
+      "feed_url": "https://petzpark.com.au/blogs/petz-park-blog.atom",
+      "website_url": "https://petzpark.com.au/blogs/petz-park-blog",
+      "description": "Started with a vision to keep Aussie families and their pets together for a longer time. Today, Petz Park is surrounded by thousands of like-minded pet owners that have joined them on their journey. Keep up to date with Petz Park's dog health care tips, stories, and products. Understand your dog and the canine world better with Petz Park!",
+      "followers": {
+        "facebook": 15300,
+        "instagram": 11700
+      },
+      "image_url": "https://i1.feedspot.com/5062965.jpg?t=1620047605"
+    },
+    {
+      "title": "We Know Pets Blog",
+      "feed_url": "https://www.weknowpets.com.au/blogs/news.atom",
+      "website_url": "https://www.weknowpets.com.au/blogs/news",
+      "description": "Keep up-to-date with pet news, information, tips, and hints. Subscribe to our Blog so you don't miss out!",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 28,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5061682.jpg"
+    },
+    {
+      "title": "Bay Side Dog Owners Group Blog",
+      "feed_url": "https://www.baysidedogownersgroup.com.au/blog-feed.xml",
+      "website_url": "https://www.baysidedogownersgroup.com.au/blog",
+      "description": "We are a group of dog lovers called the Bayside Dog Owners Group who happen to live and/or work in the Bayside Area of Melbourne.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4910345.jpg"
+    },
+    {
+      "title": "Australian Dog Lover",
+      "feed_url": "https://www.australiandoglover.com/feeds/posts/default",
+      "website_url": "https://www.australiandoglover.com/",
+      "description": "Australian Dog Lover is a digital monthly magazine and website for dog lovers everywhere. We cover Dog Health, Dog Nutrition, Dog Behaviour; Dog Training Advice, Dog Events, the latest Dog Products and Services in Australia, Dog Product Reviews, Lifestyle, Gift Guides, Rescue Dog Stories, Dog Lovers Book Club, etc.",
+      "followers": {
+        "facebook": 68400,
+        "twitter": 1800,
+        "instagram": 8700
+      },
+      "image_url": "https://i1.feedspot.com/5385589.jpg?t=1688119489"
+    },
+    {
+      "title": "DOGUE",
+      "feed_url": "https://www.dogue.com.au/blogs/club-dogue.atom",
+      "website_url": "https://www.dogue.com.au/blogs/club-dogue/",
+      "description": "DOGUE is at the forefront of canine fashion, dog accessories, dog grooming, day care and luxury dog boarding in Australia. Our very own dog blog where me and my pals will blow you away with exciting articles and doggy DIY.",
+      "followers": {
+        "facebook": 24300,
+        "twitter": 1200,
+        "instagram": 35600
+      },
+      "image_url": "https://i1.feedspot.com/4910316.jpg?t=1620047610"
+    }
+  ]
+}

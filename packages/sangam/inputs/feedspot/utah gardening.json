@@ -1,0 +1,91 @@
+{
+  "category": "Utah Gardening",
+  "source_url": "https://rss.feedspot.com/utah_gardening_rss_feeds",
+  "feeds": [
+    {
+      "title": "Ali's Organics and Garden Supply Blog",
+      "feed_url": "https://www.alisorganics.com/blogs/news.atom",
+      "website_url": "https://www.alisorganics.com/blogs/news",
+      "description": "A blog with plenty of good gardening and homesteading advice if you have the taste for more learning! Ali's Organics and Garden Supply is a small family-owned business located in Southern Utah, dedicated to preserving our environment by providing growers with earth-friendly organic gardening products and Non-GMO organic seeds.",
+      "followers": {
+        "facebook": 6200
+      },
+      "image_url": "https://i1.feedspot.com/5326459.jpg?t=1632901235"
+    },
+    {
+      "title": "The Dirt Bag Blog",
+      "feed_url": "https://thedirtbag.com/feed/",
+      "website_url": "https://thedirtbag.com/blog/",
+      "description": "Read The Dirt Bag blog for tips and tricks for gardening and landscaping. The Dirt Bag is your trusted source of quality gardening products, including topsoil, mulch, sand, and compost.",
+      "followers": {
+        "facebook": 376,
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/5326460.jpg?t=1632901439"
+    },
+    {
+      "title": "The Wealthy Earth",
+      "feed_url": "https://thewealthyearth.com/feed/",
+      "website_url": "https://thewealthyearth.com/",
+      "description": "A square foot gardening blog. My site discusses composting, organic, and sustainable practices that go along seamlessly with the square foot gardening method.",
+      "followers": {
+        "facebook": 778,
+        "twitter": 224
+      },
+      "image_url": "https://i1.feedspot.com/4457190.jpg?t=1611917472"
+    },
+    {
+      "title": "Huskie'z Landscaping Blog",
+      "feed_url": "https://huskiezlandscaping.com/feed/",
+      "website_url": "https://huskiezlandscaping.com/blog/",
+      "description": "Follow Huskie'z Landscaping blog to get helpful tips, tricks & information about landscaping. Huskie'z Landscaping Inc. is here to provide quality landscaping services and maintenance to customers who need them.",
+      "followers": {
+        "facebook": 1100,
+        "instagram": 184
+      },
+      "image_url": "https://i1.feedspot.com/5326458.jpg?t=1632902343"
+    },
+    {
+      "title": "Misfit Gardening",
+      "feed_url": "https://misfitgardening.com/feed/",
+      "website_url": "https://misfitgardening.com/category/gardening/",
+      "description": "I'm Emma the Misfit Gardener. I have a passion for growing and raising organic food on my suburban homestead in my backyard and making homebrew!",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 749
+      },
+      "image_url": "https://i1.feedspot.com/4859067.jpg?t=1611917105"
+    },
+    {
+      "title": "Spectrum Landscaping Blog",
+      "feed_url": "https://spectrumlandscaping.co/feed/",
+      "website_url": "https://spectrumlandscaping.co/our-blog/",
+      "description": "Read our posts for tips on taking care of your plants, some fun DIY projects, and ideas on how to make your landscape the best it can be! Spectrum Landscaping Services strives to be the best landscaping service in the Midway, Heber, Utah Valley, and Park City Valley areas. We're dedicated to meeting your needs, whether you need help with a small project or need to re-do your entire commercial property.",
+      "followers": {
+        "facebook": 103,
+        "twitter": 23,
+        "instagram": 60
+      },
+      "image_url": "https://i1.feedspot.com/5326562.jpg?t=1632910883"
+    },
+    {
+      "title": "New Utah Gardener",
+      "feed_url": "http://www.newutahgardener.com/feeds/posts/default",
+      "website_url": "http://www.newutahgardener.com/",
+      "description": "I'm Katy. I live, I garden, I write!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5326457.jpg?t=1632900941"
+    },
+    {
+      "title": "Aeroscape Blog",
+      "feed_url": "https://www.aeroscapeutah.com/feed/",
+      "website_url": "https://www.aeroscapeutah.com/blog/",
+      "description": "Follow Aeroscape to learn about landscaping, property maintenance, and design, lawn care, tree & shrubs care, and more. Aeroscape Property Maintenance and Landscaping is a full-service landscape company that has been a leader in the residential and commercial landscape industry throughout the Wasatch front for the last fifteen years.",
+      "followers": {
+        "facebook": 563,
+        "twitter": 11
+      },
+      "image_url": "https://i1.feedspot.com/5326598.jpg?t=1632912083"
+    }
+  ]
+}

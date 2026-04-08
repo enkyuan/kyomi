@@ -1,0 +1,69 @@
+{
+  "category": "Yogurt",
+  "source_url": "https://rss.feedspot.com/yogurt_rss_feeds",
+  "feeds": [
+    {
+      "title": "NPSelection Blog",
+      "feed_url": "https://www.yogurtathome.com/blog-feed.xml",
+      "website_url": "https://www.yogurtathome.com/blog",
+      "description": "NPSelection is a food company that specializes in healthy and organic products. Their blog includes information on their yogurt products, as well as recipes and nutritional advice. Follow them for latest articles and tips on how to make yogurt and its benefits.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 4800,
+        "instagram": 22300
+      },
+      "image_url": "https://i1.feedspot.com/5536356.jpg?t=1680854894"
+    },
+    {
+      "title": "Positively Probiotic Blog \u00bb Yogurt Recipes",
+      "feed_url": "https://www.positivelyprobiotic.com/the-bacteria-blog?format=rss",
+      "website_url": "https://www.positivelyprobiotic.com/the-bacteria-blog/category/Yogurt+Recipes",
+      "description": "Positively Probiotic is a health and wellness blog founded by registered dietitian Marisa Moore. The yogurt subpage offers recipes featuring yogurt and other probiotic-rich foods, as well as nutrition tips and product reviews.",
+      "followers": {
+        "twitter": 55
+      },
+      "image_url": "https://i1.feedspot.com/5536352.jpg?t=1680854799"
+    },
+    {
+      "title": "Peachwave Yogurt Blog",
+      "feed_url": "https://peachwaveyogurt.com/feed/",
+      "website_url": "https://peachwaveyogurt.com/news/",
+      "description": "Peachwave is a self-serve frozen yogurt chain with locations in several US states. The blog features news and promotions for the stores, as well as recipes and lifestyle tips. Keep updated with their latest news!",
+      "followers": {
+        "facebook": 8600,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5536354.jpg?t=1680854739"
+    },
+    {
+      "title": "Cultures For Health Blog \u00bb Yogurt",
+      "feed_url": "https://culturesforhealth.com/blogs/learn.atom",
+      "website_url": "https://culturesforhealth.com/blogs/learn/yogurt",
+      "description": "This blog provides information and resources related to yogurt making, including recipes, troubleshooting tips, and product reviews. It was founded in 2007 and aims to educate and empower people to make cultured foods at home.",
+      "followers": {
+        "twitter": 10200
+      },
+      "image_url": "https://i1.feedspot.com/5536353.jpg?t=1680854876"
+    },
+    {
+      "title": "Beary Bliss Frozen Yogurt Blog",
+      "feed_url": "https://bearybliss.com/feed/",
+      "website_url": "https://bearybliss.com/blog/",
+      "description": "Beary Bliss is a frozen yogurt chain with locations in Arizona and Nevada. The blog features news and promotions for the stores, as well as recipes and lifestyle tips.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5536358.jpg?t=1680854962"
+    },
+    {
+      "title": "Nancy's Yogurt Blog",
+      "feed_url": "https://nancysyogurt.com/feed/",
+      "website_url": "https://nancysyogurt.com/blog/",
+      "description": "This blog is run by Nancy's Yogurt, a company that produces organic and probiotic-rich yogurt. The blog features recipes, health tips, and information on the company's products.",
+      "followers": {
+        "facebook": 63500,
+        "twitter": 1600,
+        "instagram": 21100
+      },
+      "image_url": "https://i1.feedspot.com/5536355.jpg?t=1680854754"
+    }
+  ]
+}

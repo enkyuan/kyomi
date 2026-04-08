@@ -1,0 +1,536 @@
+{
+  "category": "Parkinson",
+  "source_url": "https://rss.feedspot.com/parkinson_rss_feeds",
+  "feeds": [
+    {
+      "title": "Parkinson's News Today",
+      "feed_url": "https://parkinsonsnewstoday.com/feed/",
+      "website_url": "https://parkinsonsnewstoday.com/",
+      "description": "Web's only site exclusively dedicated to covering the latest research and news related to Parkinson's Disease.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4583078.jpg?t=1624088792"
+    },
+    {
+      "title": "Twitchy woman",
+      "feed_url": "https://twitchywoman.com/feed/",
+      "website_url": "https://twitchywoman.com/",
+      "description": "Living well with Parkinson's Disease is possible. Twitchy Woman seeks to educate readers about living with PD and encourage them to take charge of their lives.",
+      "followers": {
+        "twitter": 593,
+        "instagram": 881
+      },
+      "image_url": "https://i1.feedspot.com/4583034.jpg?t=1615195129"
+    },
+    {
+      "title": "Brian Grant Foundation",
+      "feed_url": "https://briangrant.org/feed/",
+      "website_url": "https://briangrant.org/blog/",
+      "description": "The Brian Grant Foundation believes that people aren't defined by a diagnosis. Armed with the right tools and resources, people impacted by Parkinson's can live active and fulfilling lives. That's why our programs focus on exercise, nutrition, and emotional support to empower people with Parkinson's to get moving, eat well, and feel their best.",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 6400,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4583098.jpg?t=1615195120"
+    },
+    {
+      "title": "Parking Suns",
+      "feed_url": "https://www.parkingsuns.com/feed/",
+      "website_url": "https://www.parkingsuns.com/",
+      "description": "Blog by Bruce Ballard. I started this blog to promote an 'enriched environment' for people with Parkinson's disease, including myself.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4582767.jpg"
+    },
+    {
+      "title": "The Perky Parkie",
+      "feed_url": "https://www.perkyparkie.com/feed/",
+      "website_url": "https://www.perkyparkie.com/",
+      "description": "The Perky Parkie Blog, with the hopes of expanding her reach into the Parkinson's community. Allison is a personal trainer certified through National Academy of Sports Medicine and holds a certification in Parkinson's PWR! Moves.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4582740.jpg?t=1615195141"
+    },
+    {
+      "title": "Karl Robb",
+      "feed_url": "https://karlrobb.com/feed/",
+      "website_url": "https://karlrobb.com/",
+      "description": "Young-onset Parkinson's usually starts at middle age, but for Karl Robb, the blogger behind A Soft Voice in a Noisy World, it began much, much earlier. Though he was diagnosed at age 23, he believes he has been living with the disease since age 17. On his blog, Karl coaches readers to let go of anger and frustration, writes about medication management and therapeutic techniques.",
+      "followers": {
+        "facebook": 241,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4582928.jpg?t=1615195244"
+    },
+    {
+      "title": "Stanford PD Community Blog",
+      "feed_url": "https://parkinsonsblog.stanford.edu/feed/",
+      "website_url": "https://parkinsonsblog.stanford.edu/",
+      "description": "Stanford Parkinson's Community Blog by Stanford School of Medicine. Read this blog for the latest news, research on Parkinson's, exercise, monthly webinars, and much more. A leader in the biomedical revolution, Stanford Medicine is a pioneer in advancing research, creative teaching protocols, and effective clinical therapies.",
+      "followers": {
+        "facebook": 57300,
+        "twitter": 40000
+      },
+      "image_url": "https://i1.feedspot.com/5281091.jpg?t=1621074723"
+    },
+    {
+      "title": "The American Parkinson Disease Association",
+      "feed_url": "https://www.apdaparkinson.org/doctor-blogs/a-closer-look/feed/",
+      "website_url": "https://www.apdaparkinson.org/doctor-blogs/a-closer-look/",
+      "description": "The American Parkinson Disease Association (APDA) is the largest grassroots network dedicated to fighting Parkinson's disease (PD). A Closer Look by Dr. Rebecca Gilbert aims to address both timely and timeless topics related to Parkinson's disease (PD). In addition, we focus on practical, take-home tips that can be gleaned from the information discussed. We encourage you to subscribe to the blog and suggest blog topics.",
+      "followers": {
+        "facebook": 33100,
+        "twitter": 4500,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5281097.jpg?t=1621072843"
+    },
+    {
+      "title": "Parkinsonsrecovery.com",
+      "feed_url": "https://www.blog.parkinsonsrecovery.com/feed/",
+      "website_url": "https://www.blog.parkinsonsrecovery.com/",
+      "description": "Parkinsons Recovery is a clearinghouse of information about treatments and therapies for persons diagnosed with Parkinson's disease. This blog is to provide support, information and resources to families with a member currently experiencing the symptoms of Parkinsons.",
+      "followers": {
+        "twitter": 284
+      },
+      "image_url": "https://i1.feedspot.com/4582726.jpg?t=1615194762"
+    },
+    {
+      "title": "Journey with Parkinson's",
+      "feed_url": "https://journeywithparkinsons.com/feed/",
+      "website_url": "https://journeywithparkinsons.com/",
+      "description": "A blog for Parkinson's education, research advances, new treatment strategies, and personal reflection: the goal is to provide support and information/resources to anyone with Parkinson's.",
+      "followers": {
+        "twitter": 508
+      },
+      "image_url": "https://i1.feedspot.com/4582789.jpg"
+    },
+    {
+      "title": "The Parkinson Foundation of the National Capital Area",
+      "feed_url": "https://parkinsonfoundation.org/feed",
+      "website_url": "https://parkinsonfoundation.org/",
+      "description": "The Parkinson Foundation of the National Capital Area improves the quality of life of those impacted by Parkinson's disease, their care partners and families, and fosters a sense of community to ensure that no one battles this disease alone. PFNCA offers exercise, communication and education programs to strengthen the physical and emotional health of people impacted by Parkinson's.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 214
+      },
+      "image_url": "https://i1.feedspot.com/4582785.jpg?t=1615194800"
+    },
+    {
+      "title": "Charco Neurotech Blog",
+      "feed_url": "https://charconeurotech.com/feed/",
+      "website_url": "https://charconeurotech.com/blog/",
+      "description": "Charco Neurotech offers Device CUE1. Developed by a team of engineers, doctors, and neuroscientists, CUE1 offers a novel, non-invasive approach to increasing the quality of life for people with Parkinson's. Our blog covers news & updates from the Parkinson's community, including articles featuring Parkinson's and movement specialists.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5281104.jpg?t=1621065615"
+    },
+    {
+      "title": "Out-Thinking Parkinson's",
+      "feed_url": "http://www.outthinkingparkinsons.com/articles?format=rss",
+      "website_url": "http://www.outthinkingparkinsons.com/articles/",
+      "description": "Dr. Gary Sharpe, Ph.D., a scientist & engineer by background, diagnosed with Early Onset Parkinson's Disease in 2009. After six years of dying inside, he started 'Out-Thinking Parkinson's' in January 2016 in order to pursue pragmatic & practical solutions towards progressive symptom reduction for people with Parkinson's Disease. Today, Out-Thinking Parkinson's has become a major resource, where Gary & colleagues from around the world share their knowledge, philosophies, & experience of living well with PD, & also record their stories of recovery.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 8100
+      },
+      "image_url": "https://i1.feedspot.com/5281099.jpg?t=1621073639"
+    },
+    {
+      "title": "Fighting Parkinson's Drug Free Blog",
+      "feed_url": "https://www.fightingparkinsonsdrugfree.com/blog/feed/",
+      "website_url": "https://www.fightingparkinsonsdrugfree.com/blog/",
+      "description": "Fighting Parkinson's Drug Free shares with you what I did to recover from Parkinson's Disease without medications or supplements by using a holistic approach that I developed. My story is chronicled on my web site.",
+      "followers": {
+        "twitter": 723
+      },
+      "image_url": "https://i1.feedspot.com/4582820.jpg?t=1607066427"
+    },
+    {
+      "title": "Parkinson's Ireland",
+      "feed_url": "https://www.parkinsons.ie/feed/",
+      "website_url": "https://www.parkinsons.ie/ways-to-help/news/",
+      "description": "The Parkinson's Association of Ireland is a charity, based in Dublin with branches throughout the country. Our aim is to assist people with Parkinson's, their families and carers, health professionals, and other interested people by offering support, a listening ear, and information on any aspect of living with Parkinson's.",
+      "followers": {
+        "facebook": 8500,
+        "twitter": 4100,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5281098.jpg?t=1621064077"
+    },
+    {
+      "title": "Life Through The Lens of Parkinson's",
+      "feed_url": "https://lensofparkinsons.blog/feed/",
+      "website_url": "https://lensofparkinsons.blog/",
+      "description": "Hello, I'm Teresa Swartz Roberts, I was diagnosed with Parkinson's Disease a year ago. I usually write about life and how Parkinson's fits into it. Join me on this journey as I live my life through the lens of Parkinson's.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5281092.jpg?t=1621083102"
+    },
+    {
+      "title": "Just Shake It Off",
+      "feed_url": "https://www.justshakeitoff.com/feed/",
+      "website_url": "https://www.justshakeitoff.com/",
+      "description": "With equal parts authenticity and sarcasm, wife and mom of 4, Nikki Louiselle, writes candidly and without apology about Mental Health and life with Parkinson's Disease.",
+      "followers": {
+        "facebook": 465,
+        "instagram": 802
+      },
+      "image_url": "https://i1.feedspot.com/5301680.jpg?t=1626262166"
+    },
+    {
+      "title": "Parkinson Support and Wellness",
+      "feed_url": "http://parkinsoncincinnati.org/blog-feed?format=rss",
+      "website_url": "http://parkinsoncincinnati.org/blog",
+      "description": "Parkinson Support & Wellness helps people in the greater Cincinnati area to find the resources they need to deal with Parkinson's disease. We offer educational events, exercise programs, medical research, stories, and support network for anyone dealing with Parkinson's Disease.",
+      "followers": {
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/5298825.jpg?t=1625306473"
+    },
+    {
+      "title": "Mari\u00ebtte Robijn \u00bb Parkinson's",
+      "feed_url": "https://marietterobijn.com/parkinsons/feed/",
+      "website_url": "https://marietterobijn.com/parkinsons/",
+      "description": "A unique series of blogs about Parkinson's Disease.",
+      "followers": {
+        "facebook": 360,
+        "twitter": 642
+      },
+      "image_url": "https://i1.feedspot.com/4583085.jpg?t=1615195281"
+    },
+    {
+      "title": "CIRM \u00bb Parkinson's Disease",
+      "feed_url": "https://blog.cirm.ca.gov/tag/parkinsons-disease/feed/",
+      "website_url": "https://blog.cirm.ca.gov/tag/parkinsons-disease/",
+      "description": "CIRM is California's Stem Cell Agency. Our mission is to accelerate stem cell treatments for patients with unmet medical needs by funding promising stem cell research in California.",
+      "followers": {
+        "facebook": 11600,
+        "twitter": 14800
+      },
+      "image_url": "https://i1.feedspot.com/4583091.jpg?t=1615194765"
+    },
+    {
+      "title": "Parkinsons Recovery",
+      "feed_url": "http://www.blogtalkradio.com/parkinsons-recovery/podcast",
+      "website_url": "https://www.blogtalkradio.com/parkinsons-recovery",
+      "description": "Parkinsons Recovery was founded in 2004 by Robert Rodgers, PhD to provide support, information and resources to persons who currently experience the symptoms of Parkinson's disease.",
+      "followers": {
+        "facebook": 64500,
+        "twitter": 33600
+      },
+      "image_url": "https://i1.feedspot.com/4582692.jpg?t=1615194746"
+    },
+    {
+      "title": "Living with Young Onset Parkinson's",
+      "feed_url": "https://shakingsteven.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://shakingsteven.blogspot.com/",
+      "description": "A blog about living with young onset Parkinson's disease.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4964203.jpg?t=1615195458"
+    },
+    {
+      "title": "Defeat Parkinson's",
+      "feed_url": "https://defeatparkinsons.com/feed/",
+      "website_url": "https://defeatparkinsons.com/",
+      "description": "The mission of Defeatparkinsons is to encourage, support, and impart my expertise as a Parkinson's specialist and patient with those who like me might be trying to make the most out of life with PD.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 604
+      },
+      "image_url": "https://i1.feedspot.com/4582956.jpg?t=1615195117"
+    },
+    {
+      "title": "Parkinson's Secrets Blog",
+      "feed_url": "https://www.parkinsonsecrets.com/blog?format=rss",
+      "website_url": "https://www.parkinsonsecrets.com/",
+      "description": "Parkinson's Secrets Blog by Michael Okun - Parkinson's Foundation Medical Advisor, Author of 13 books including Living with PD and Ending Parkinson's. The purpose of this blog is to create a simple forum for Parkinson's disease patients to learn and exchange the secrets that can help them to live a happier life.",
+      "followers": {
+        "twitter": 36500
+      },
+      "image_url": "https://i1.feedspot.com/5281096.jpg?t=1621072987"
+    },
+    {
+      "title": "Living Well With Parkinsons Disease",
+      "feed_url": "https://livingwellwithparkinsonsdisease.com/feed/",
+      "website_url": "https://livingwellwithparkinsonsdisease.com/",
+      "description": "Hi there! I started this personal blog to share my experience as a person living with young-onset Parkinson's disease & facing two total knee replacements. I was diagnosed with young-onset Parkinson's disease 20 years ago at age 44. My hope is that the lessons I've learned on my own personal journey will inspire & empower others to chart their own course to living well with Parkinson's & whatever other life-changing events come their way.",
+      "followers": {
+        "facebook": 626
+      },
+      "image_url": "https://i1.feedspot.com/5281094.jpg?t=1621085213"
+    },
+    {
+      "title": "Strength In Weakness",
+      "feed_url": "https://www.strengthwithparkinsons.com/blog-feed.xml",
+      "website_url": "https://www.strengthwithparkinsons.com/",
+      "description": "Hello! My name is Jeremy Likness, and this blog is about my personal journey with Parkinson's Disease. I started this blog to document my journey and make a difference.",
+      "followers": {
+        "twitter": 52,
+        "instagram": 455
+      },
+      "image_url": "https://i1.feedspot.com/5281102.jpg?t=1621065100"
+    },
+    {
+      "title": "Parkinsons Diva",
+      "feed_url": "https://parkinsonsdiva.org/feed/",
+      "website_url": "https://parkinsonsdiva.org/",
+      "description": "Hi! I'm Dr. Maria De Le\u00f3n aka Parkinson's Diva. I'm a board-certified retired Movement disorder specialist, National Keynote Speaker, and author of bestseller Parkinson's Diva. My mission is to offer moral support, encouragement, fashion tips, career and family advice, as well as offer camaraderie for women who have Parkinson's Disease.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 604
+      },
+      "image_url": "https://i1.feedspot.com/5281093.jpg?t=1621082288"
+    },
+    {
+      "title": "Pd Wise",
+      "feed_url": "https://pdwise.com/feed/",
+      "website_url": "https://pdwise.com/",
+      "description": "PD WISE was created as a hub for sharing personal stories, experiences, and wisdom gained from living with Parkinson's and aims to encourage these connections and opportunities for learning.",
+      "followers": {
+        "facebook": 736,
+        "twitter": 784
+      },
+      "image_url": "https://i1.feedspot.com/5281101.jpg?t=1621065451"
+    },
+    {
+      "title": "The Parkinson's Blueprint Blog",
+      "feed_url": "https://theparkinsonsblueprint.com/feed/",
+      "website_url": "https://theparkinsonsblueprint.com/the-parkinsons-blueprint/",
+      "description": "Hello! My name is Zeljko Ribicic. This blog is a personal insight through a challenge called Parkinson's disease. I plan to explain all about the disease (give blueprint) and how to fight it and eventually fully recover from it.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5265936.jpg?t=1617874615"
+    },
+    {
+      "title": "LIM Yoga Blog",
+      "feed_url": "https://leverrier.com/feed/",
+      "website_url": "https://leverrier.com/yoga/yoga-blog/",
+      "description": "Yoga for Parkinson's Disease and movement disorders. Blog by Renee Le Verrier.",
+      "followers": {
+        "twitter": 278
+      },
+      "image_url": "https://i1.feedspot.com/4582715.jpg?t=1615195135"
+    },
+    {
+      "title": "The Parkinson's Fitness Project",
+      "feed_url": "https://theparkinsonsfitnessproject.com/feed/",
+      "website_url": "https://theparkinsonsfitnessproject.com/blog/",
+      "description": "Providing people with Parkinson's Disease access to Physical Therapy and Neurofitness through group classes and online training.",
+      "followers": {
+        "facebook": 2700,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4583002.jpg?t=1615194814"
+    },
+    {
+      "title": "Blogging with Parkinson's",
+      "feed_url": "https://bloggingwithparkinsons.wordpress.com/feed/",
+      "website_url": "https://bloggingwithparkinsons.wordpress.com/",
+      "description": "This blog is about living with Parkinson's disease. Although many people with this condition are older (symptoms most commonly appear after the age of 50), it is possible to get Parkinson's at a younger age; this is known as Young Onset Parkinson's. Here you will find my personal perspective on young onset Parkinson's. Blog by Zalamanda.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4578230.jpg?t=1615195623"
+    },
+    {
+      "title": "Bloody Parkinsons",
+      "feed_url": "http://bloodyparkinsons.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://bloodyparkinsons.blogspot.com/",
+      "description": "This is a mainly true look at PD from the inside. My name is Peter Jackson and in June 2013 I was diagnosed with Parkinson's Disease or PD or Bloody Parkinson's or BP.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4583042.jpg?t=1615195333"
+    },
+    {
+      "title": "The Journey Unexpected",
+      "feed_url": "https://stephanie-thejourney.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://stephanie-thejourney.blogspot.com/",
+      "description": "Stephanie Parker is a homeschooling mother who was diagnosed with Parkinson's disease at age 42. Her blog is a place to discuss parenting, recipes, homeschooling, music, and of course, Parkinson's. Her family also copes with Asperger's and gluten intolerance, so the themes of perseverance are not only tied to her own disease.",
+      "followers": {
+        "facebook": 242,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4577229.jpg?t=1615195123"
+    },
+    {
+      "title": "Sitting Comfortably?",
+      "feed_url": "https://andydaly.blog/feed/",
+      "website_url": "https://andydaly.blog/",
+      "description": "Reflections on life without Parkinson's Disease.",
+      "followers": {
+        "twitter": 53
+      },
+      "image_url": "https://i1.feedspot.com/4582939.jpg?t=1615195471"
+    },
+    {
+      "title": "Off and On",
+      "feed_url": "http://offandonakpdrag.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://offandonakpdrag.blogspot.com/",
+      "description": "Welcome to all with an interest in Parkinson's Disease. This blog was to be an information clearinghouse for the Anchorage Parkinson's Disease Support Group, where meeting schedules, agendas, speakers etc could be found. It's still that, but has also become a sort of therapeutic hobby. So I invite you to join in the discussion and experience a little therapy as well.",
+      "followers": {
+        "twitter": 760
+      },
+      "image_url": "https://i1.feedspot.com/4577236.jpg?t=1615195250"
+    },
+    {
+      "title": "The Predict-Pd Blog",
+      "feed_url": "https://predictpd.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://predictpd.blogspot.com/",
+      "description": "Welcome to the blog for the PREDICT-PD project. We are working to understand the risk factors for Parkinson's Disease and blogging about advances made in prediction and early detection of the disease.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4583104.jpg?t=1651576146"
+    },
+    {
+      "title": "The Parkinson Alliance",
+      "feed_url": "https://www.parkinsonalliance.org/feed/",
+      "website_url": "https://www.parkinsonalliance.org/blog/",
+      "description": "The Parkinson Alliance (based in Kingston, NJ) is a national non-profit organization dedicated to raising funds to help finance the most promising research to find the cause and cure for Parkinson's disease.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4582695.jpg?t=1615195297"
+    },
+    {
+      "title": "Parkinson FIT",
+      "feed_url": "https://parkinson.fit/feed/",
+      "website_url": "https://parkinson.fit/",
+      "description": "Parkinson FIT provides and promotes content to inspire and educate people living with Parkinson's disease, with a focus on exercise, fitness and active lifestyles.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 441
+      },
+      "image_url": "https://i1.feedspot.com/5042522.jpg?t=1615194788"
+    },
+    {
+      "title": "Shake It Up Australia Foundation",
+      "feed_url": "https://shakeitup.org.au/feed/",
+      "website_url": "https://shakeitup.org.au/news/",
+      "description": "Shake It Up Australia Foundation is the largest non-government funder of Parkinson's research across multiple institutes in Australia.",
+      "followers": {
+        "facebook": 19000,
+        "twitter": 1300,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4583009.jpg?t=1615194792"
+    },
+    {
+      "title": "Deep Brain Thoughts",
+      "feed_url": "https://www.deepbrainthoughts.com/feed/",
+      "website_url": "https://www.deepbrainthoughts.com/",
+      "description": "Sharing thoughts on my journey with Parkinson's. I am a 64 year old former Software Engineer and computer geek, and have spent the majority of my life working in the computer programming field. Deep Brain Thoughts is one of my ways to help others live life with Parkinson's (PD)",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/5451075.jpg?t=1664444589"
+    },
+    {
+      "title": "Parkinsons.Me",
+      "feed_url": "https://www.parkinsons.me/blog-feed.xml",
+      "website_url": "https://www.parkinsons.me/parkinsons-me-blog",
+      "description": "Parkinsons.Me UK based charity offering support, advice and information to the worldwide Parkinsons community.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 1600,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4582992.jpg?t=1615194785"
+    },
+    {
+      "title": "Kate Kelsall",
+      "feed_url": "https://feeds.feedburner.com/ShakeRattleAndRoll",
+      "website_url": "https://katekelsall.typepad.com/",
+      "description": "Blog by Kate Kelsall. I'm a 60 year old shaky accordionist and aspiring writer who was diagnosed with Parkinson's Disease 14 years ago. Get an insider's view of Parkinson's Disease and DBS.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4582752.jpg?t=1615195660"
+    },
+    {
+      "title": "Life in Parkinson's Wake",
+      "feed_url": "http://lifeinparkinsonswake.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://lifeinparkinsonswake.blogspot.com/",
+      "description": "Sometimes You're the Dog, Sometimes You're the Fire Hydrant - Life in Parkinson's WakeGoing Backwards To Go Downwards",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4583102.jpg?t=1615195594"
+    },
+    {
+      "title": "The Science of Parkinson's Disease",
+      "feed_url": "https://scienceofparkinsons.com/tag/blog/feed/",
+      "website_url": "https://scienceofparkinsons.com/",
+      "description": "Information about Parkinson's disease provided by scientists doing the research.",
+      "followers": {
+        "twitter": 10900
+      },
+      "image_url": "https://i1.feedspot.com/4583018.jpg?t=1615194776"
+    },
+    {
+      "title": "Davis Phinney Foundation",
+      "feed_url": "https://davisphinneyfoundation.org/feed/",
+      "website_url": "https://www.pcla.org/education/blog",
+      "description": "The Davis Phinney Foundation is dedicated to helping people living with Parkinson's to live well today. Our mission is to help people with Parkinson's to live well today.",
+      "followers": {
+        "facebook": 20700,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4582792.jpg?t=1615194751"
+    },
+    {
+      "title": "9zest Blog",
+      "feed_url": "https://9zest.com/blog/feed/",
+      "website_url": "https://www.pcla.org/education/blog",
+      "description": "9zest offers Personalized Therapy Programs for Parkinson's disease, Stroke Rehabilitation and Pain Management. We leverage neuroplasticity principles to improve the quality of life. Mission is to Enhance quality of life and health by leveraging global network of health, fitness and nutrition coaches that are affordable and available anywhere, anytime.",
+      "followers": {
+        "facebook": 5900,
+        "instagram": 94
+      },
+      "image_url": "https://i1.feedspot.com/4766063.jpg?t=1615194769"
+    },
+    {
+      "title": "Cure Parkinson's Trust",
+      "feed_url": "https://cureparkinsons.org.uk/feed/",
+      "website_url": "https://cureparkinsons.org.uk/latest/",
+      "description": "The Cure Parkinson's Trust is a patient led charity which funds research that will have an impact on the lives of the 10 million people living with Parkinson's, with the hope of an eventual cure for the condition. We fund trials into potential new treatments to slow, halt or reverse Parkinson's. Our mission is to obliterate Parkinson's once and for all.",
+      "followers": {
+        "facebook": 10800,
+        "twitter": 21800
+      },
+      "image_url": "https://i1.feedspot.com/4582891.jpg?t=1615194773"
+    },
+    {
+      "title": "My Parkinson's Life Blog",
+      "feed_url": "https://myparkinsonslife.com/feed/",
+      "website_url": "https://tomspdblog.com/",
+      "description": "Hello, My name is Darren, and eight months after my 40th birthday, March 2019, I was sent a three-line letter from the NHS. It was news, that my DaTscan points to an underlying young-onset Parkinsonian disorder. So, after talking with my better half, I decided to write this blog about my journey with Parkinson's, in the hope this blog accomplishes a few things.",
+      "followers": {
+        "twitter": 53
+      },
+      "image_url": "https://i1.feedspot.com/5281100.jpg?t=1621064940"
+    },
+    {
+      "title": "It Is What It Is!",
+      "feed_url": "https://feeds.feedburner.com/blogspot/JSVmTZ",
+      "website_url": "https://tomspdblog.com/",
+      "description": "Diagnosed as a PWP (Person with Parkinson's) in 2013, I advocate for PD research and care on this blog and anywhere else I can!",
+      "followers": {
+        "twitter": 586
+      },
+      "image_url": "https://i1.feedspot.com/4582979.jpg?t=1615195263"
+    },
+    {
+      "title": "Parkinson's Unity Walk Blog",
+      "feed_url": "https://www.unitywalk.org/weblog/?feed=rss2",
+      "website_url": "https://www.medicalnewstoday.com/categories/parkinsons_disease",
+      "description": "The Parkinson's Unity Walk (PUW), a grassroots organization, began in 1994 through the dedicated efforts of patients, families, support groups, and friends who were affected by Parkinson's disease. Their main goal was to raise awareness and funds for research to find a cure for Parkinson's.",
+      "followers": {
+        "facebook": 10200,
+        "twitter": 3300,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4577248.jpg?t=1615195301"
+    }
+  ]
+}

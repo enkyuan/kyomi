@@ -1,0 +1,49 @@
+{
+  "category": "Oakland Park News",
+  "source_url": "https://rss.feedspot.com/oakland_park_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of Oakland Park, FL",
+      "feed_url": "https://oaklandparkfl.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://oaklandparkfl.gov/CivicAlerts.aspx",
+      "description": "Keep up with the latest local and breaking news, alerts etc about Oakland Park, FL.",
+      "followers": {
+        "facebook": 10000,
+        "twitter": 2100,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5155532.jpg?t=1590128967"
+    },
+    {
+      "title": "New Pelican \u00bb Oakland Park",
+      "feed_url": "https://www.newpelican.com/category/news/oakland-park/feed/",
+      "website_url": "https://www.newpelican.com/category/news/oakland-park/",
+      "description": "The Most Popular Weekly Newspaper in Northeast Broward County. Stay in touch with the latest news, entertainment, weather, alerts in Oakland Park from New Pelican.",
+      "followers": {
+        "facebook": 6000
+      },
+      "image_url": "https://i1.feedspot.com/5155533.jpg?t=1590129200"
+    },
+    {
+      "title": "Sun Sentinel \u00bb Oakland Park",
+      "feed_url": "https://www.sun-sentinel.com/location/florida/broward-county/oakland-park/feed/",
+      "website_url": "https://www.sun-sentinel.com/location/florida/broward-county/oakland-park/",
+      "description": "Gran Oakland Park Breaking News stories, Weather reports, and Live updates on Current situations reported by Sun Sentinel here. Focusing on stories that matter to the local communities, The South Florida Sun Sentinel, founded in 1910, serves Broward, Palm Beach and Miami-Dade counties.",
+      "followers": {
+        "facebook": 188900
+      },
+      "image_url": "https://i1.feedspot.com/5504608.jpg?t=1675758337"
+    },
+    {
+      "title": "CBS Miami \u00bb Oakland Park Boulevard",
+      "feed_url": "https://miami.cbslocal.com/tag/oakland-park/feed/",
+      "website_url": "https://www.cbsnews.com/miami/tag/oakland-park-boulevard/",
+      "description": "Get Oakland Park News, Sports, Weather, Traffic and Miami's Best from CBS4 Miami.",
+      "followers": {
+        "facebook": 319200,
+        "twitter": 128300
+      },
+      "image_url": "https://i1.feedspot.com/5155534.jpg?t=1590129312"
+    }
+  ]
+}

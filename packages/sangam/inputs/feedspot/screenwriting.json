@@ -1,0 +1,602 @@
+{
+  "category": "Screenwriting",
+  "source_url": "https://rss.feedspot.com/screenwriting_rss_feeds",
+  "feeds": [
+    {
+      "title": "ScreenCraft",
+      "feed_url": "https://screencraft.org/feed/",
+      "website_url": "https://screencraft.org/screenwriting/",
+      "description": "Provides insight into the craft of screenwriting and the business of Hollywood, and by connecting emerging talent with working industry professionals. ScreenCraft is dedicated to helping screenwriters and filmmakers succeed.",
+      "followers": {
+        "facebook": 94800,
+        "twitter": 89600,
+        "instagram": 129400
+      },
+      "image_url": "https://i1.feedspot.com/4524193.jpg?t=1606744829"
+    },
+    {
+      "title": "Go Into The Story Blog",
+      "feed_url": "https://gointothestory.blcklst.com/feed",
+      "website_url": "https://gointothestory.blcklst.com/",
+      "description": "Scott Myers shares articles about screenwriting, movies, Hollywood, and the creative life.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 84900
+      },
+      "image_url": "https://i1.feedspot.com/4523714.jpg?t=1606744836"
+    },
+    {
+      "title": "John August",
+      "feed_url": "https://johnaugust.com/feed",
+      "website_url": "https://johnaugust.com/",
+      "description": "John August shares a ton of useful information about screenwriting. John's screenwriting credits include Go, Big Fish, Corpse Bride, Charlie's Angels, and Charlie and the Chocolate Factory.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 85600
+      },
+      "image_url": "https://i1.feedspot.com/24022.jpg?t=1606744832"
+    },
+    {
+      "title": "Save The Cat",
+      "feed_url": "https://savethecat.com/feed",
+      "website_url": "https://savethecat.com/",
+      "description": "Covers beat sheets, tips and tactics, informative blogs and guidance for writers - along with sharing the successes of both our teachers and students. Save The Cat provides writers the resources they need to develop their screenplays and novels based on the best-selling books of screenwriter Blake Snyder.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4225324.jpg?t=1606744847"
+    },
+    {
+      "title": "Bang2Write",
+      "feed_url": "https://bang2write.com/feed",
+      "website_url": "https://bang2write.com/",
+      "description": "Hattie shares writing craft and networking tips for screenwriters and novelists. She is a script editor, author & blogger.",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 18800,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/3985476.jpg?t=1606744853"
+    },
+    {
+      "title": "StudioBinder",
+      "feed_url": "https://www.studiobinder.com/category/scriptwriting/feed/",
+      "website_url": "https://www.studiobinder.com/category/scriptwriting/",
+      "description": "Covers articles about script breakdown and scriptwriting. StudioBinder is the leading film production management platform for video creatives, production companies, brands, and agencies.",
+      "followers": {
+        "facebook": 223100,
+        "twitter": 10400,
+        "instagram": 306100
+      },
+      "image_url": "https://i1.feedspot.com/5294461.jpg?t=1624101630"
+    },
+    {
+      "title": "Final Draft Blog",
+      "feed_url": "https://blog.finaldraft.com/rss.xml",
+      "website_url": "https://blog.finaldraft.com/",
+      "description": "Covers all the tips, tricks, and information you need to inspire your screenwriting, interviews with Hollywood professionals, industry news, writing advice, and more.",
+      "followers": {
+        "facebook": 51900,
+        "twitter": 35000,
+        "instagram": 46400
+      },
+      "image_url": "https://i1.feedspot.com/5294104.jpg?t=1624000351"
+    },
+    {
+      "title": "Screenwriting Staffing's Blog",
+      "feed_url": "https://www.screenwritingstaffing.com/blog-feed.xml",
+      "website_url": "https://www.screenwritingstaffing.com/blog",
+      "description": "Screenwriting Staffing is an online community that connects screenwriters with film/tv industry professionals. Access screenplay requests and jobs. Follow to learn how to write a screenwriting resume, sell your screenplay, land a literary agent, submit to screenplay contests, and more!",
+      "followers": {
+        "facebook": 7800,
+        "twitter": 13900,
+        "instagram": 11800
+      },
+      "image_url": "https://i1.feedspot.com/5294107.jpg?t=1624002777"
+    },
+    {
+      "title": "Bulletproof Screenwriting Blog",
+      "feed_url": "https://bulletproofscreenwriting.tv/feed/",
+      "website_url": "https://bulletproofscreenwriting.tv/blog/",
+      "description": "Covers articles about character development, screenwriting business, and television writing. By interviewing film industry leaders, successful screenwriters, and story editors, Alex breaks down the screenwriting and storytelling process. Alex Ferrari is a director, author, speaker, and screenwriter who has been taking shrapnel in the film industry for over 25 years.",
+      "followers": {
+        "facebook": 16600,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5269896.jpg?t=1618560106"
+    },
+    {
+      "title": "Selling Your Screenplay",
+      "feed_url": "http://www.sellingyourscreenplay.com/feed/",
+      "website_url": "http://www.sellingyourscreenplay.com/",
+      "description": "Ashley shares practical tips and advice to help you sell your screenplay.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 2700,
+        "instagram": 482
+      },
+      "image_url": "https://i1.feedspot.com/4359398.jpg?t=1606744903"
+    },
+    {
+      "title": "Script Angel",
+      "feed_url": "https://scriptangel.com/feed/",
+      "website_url": "https://scriptangel.com/news/",
+      "description": "Posts feature insider advice, support, analysis, and tools to help you elevate your screenwriting craft, develop your voice, and navigate your screenwriting career. Script Angel offers professional, tailored script development support to emerging and developing writers.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 11800
+      },
+      "image_url": "https://i1.feedspot.com/5269897.jpg?t=1618559948"
+    },
+    {
+      "title": "flying wrestler Blog",
+      "feed_url": "https://feeds.feedburner.com/FlyingWrestler",
+      "website_url": "https://www.flyingwrestler.com/blog/",
+      "description": "Thoughts on screenwriting from writer-producer Erik Bork. Erik is best known for his work on the HBO miniseries BAND OF BROTHERS.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 2600,
+        "instagram": 813
+      },
+      "image_url": "https://i1.feedspot.com/4523713.jpg?t=1639813018"
+    },
+    {
+      "title": "Screenwriting from Iowa",
+      "feed_url": "https://screenwritingfromiowa.wordpress.com/feed/",
+      "website_url": "https://screenwritingfromiowa.wordpress.com/",
+      "description": "For a more off-beat look at writing, the Screenwriting from Iowa blog provides screenwriters with a slightly removed take from the Hollywood norm. Scott Smith blogs about how people outside of Los Angeles can have their stories told and sold for production in TinselTown. It's inspiring for those of us around the world who aspire to Hollywood magic without having to live in Hollywood itself.",
+      "followers": {
+        "facebook": 524,
+        "twitter": 991
+      },
+      "image_url": "https://i1.feedspot.com/4524192.jpg?t=1606744886"
+    },
+    {
+      "title": "Script Gods Must Die",
+      "feed_url": "https://www.scriptgodsmustdie.com/feed/",
+      "website_url": "https://www.scriptgodsmustdie.com/",
+      "description": "Script Gods Must Die is home to Chicago writer, teacher and screenwriting consultant, Paul Peditto. Mr. Peditto is currently teaching screenwriting at Columbia College and Chicago Filmmakers, and professionally consulting on thousands of screenplays since 2002.",
+      "followers": {
+        "facebook": 182,
+        "twitter": 702
+      },
+      "image_url": "https://i1.feedspot.com/5269898.jpg?t=1618559822"
+    },
+    {
+      "title": "Maximum Z Blog",
+      "feed_url": "https://maximumz.blog/feed/",
+      "website_url": "https://maximumz.blog/",
+      "description": "The ongoing saga of a screenwriter who also works in radio and really, really likes pie",
+      "followers": {
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/4524197.jpg?t=1606745344"
+    },
+    {
+      "title": "The Bitter Script Reader",
+      "feed_url": "https://feeds.feedburner.com/TheBitterScriptReader",
+      "website_url": "http://thebitterscriptreader.blogspot.com/",
+      "description": "The advice and rantings of a Hollywood script reader tired of seeing screenwriters make the same mistakes, saving the world from bad writing one screenplay at a time. Learn what it takes to get your script past one of these mythical Gatekeepers.",
+      "followers": {
+        "twitter": 53000
+      },
+      "image_url": "https://i1.feedspot.com/332579.jpg?t=1606744877"
+    },
+    {
+      "title": "My Blank Page",
+      "feed_url": "https://scriptcat.wordpress.com/feed/",
+      "website_url": "https://scriptcat.wordpress.com/",
+      "description": "A 'how to' guide to surviving as a working screenwriter in Hollywood./ Script Magazine's pick for 'Website of the Week' (May 2012)",
+      "followers": {
+        "facebook": 273,
+        "twitter": 11000,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4524194.jpg"
+    },
+    {
+      "title": "Complications Ensue: The Crafty TV and Screenwriting Blog",
+      "feed_url": "https://feeds.feedburner.com/ComplicationsEnsueTheCraftyTvAndScreenwritingBlog",
+      "website_url": "https://complicationsensue.blogspot.com/",
+      "description": "The craft of screenwriting for TV and movies, by a working screenwriter (with forays into life and political theatre)...by Alex Epstein.",
+      "followers": {
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/1119244.jpg?t=1606745361"
+    },
+    {
+      "title": "Howard Casner Rantings and Ravings",
+      "feed_url": "https://howardcasner.wordpress.com/feed/",
+      "website_url": "https://howardcasner.wordpress.com/",
+      "description": "Rantings and Ravings on all things Screenwriting and Movies",
+      "followers": {
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4524204.jpg?t=1606745370"
+    },
+    {
+      "title": "ProPath Screenwriting Blog",
+      "feed_url": "https://propathscreenwriting.com/feed/",
+      "website_url": "https://propathscreenwriting.com/resources/blog/",
+      "description": "ProPath Screenwriting provides inspiration, guidance, and How-Tos to improve your writing. The path to screenwriting success can be daunting, but with Linda and Tim guiding you, the road to professional screenwriting success is clearer and closer than ever. Linda and Tim have over 50 years of experience teaching the world's best screenwriters at UCLA's MFA and Professional Programs.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 706,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5294105.jpg?t=1624001977"
+    },
+    {
+      "title": "Re:Writing",
+      "feed_url": "https://benblacker.substack.com/feed",
+      "website_url": "https://benblacker.substack.com/",
+      "description": "What I've learned from talking with over 2000 professional writers and writing professionally for twenty years.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F296d8e9b-386f-4427-8268-3e3ecf8c888c_500x500.png"
+    },
+    {
+      "title": "The Script Lab",
+      "feed_url": "https://thescriptlab.com/feed/",
+      "website_url": "https://thescriptlab.com/",
+      "description": "Covers screenwriting news, interviews and discussions with writers, filmmakers, and film school educators.",
+      "followers": {
+        "facebook": 51700,
+        "twitter": 104400
+      },
+      "image_url": "https://i1.feedspot.com/4941346.jpg?t=1614235432"
+    },
+    {
+      "title": "Script Reader Pro Blog",
+      "feed_url": "https://www.scriptreaderpro.com/script-writing-blog/feed/",
+      "website_url": "https://www.scriptreaderpro.com/script-writing-blog/",
+      "description": "Covers the best screenwriting tips, tricks and hacks, script coverage services and more. Script Reader Pro helps you get a working Hollywood screenwriter's perspective on your screenplay.",
+      "followers": {
+        "facebook": 13400,
+        "twitter": 12500
+      },
+      "image_url": "https://i1.feedspot.com/5029203.jpg?t=1606744846"
+    },
+    {
+      "title": "The Black List",
+      "feed_url": "https://blog.blcklst.com/feed",
+      "website_url": "https://blog.blcklst.com/",
+      "description": "Covers art and craft of screenwriting, film history, and beyond. The Black List is where moviemakers find great screenplays to make and screenplays find moviemakers to make them.",
+      "followers": {
+        "facebook": 50500,
+        "twitter": 167100
+      },
+      "image_url": "https://i1.feedspot.com/1827735.jpg?t=1618560584"
+    },
+    {
+      "title": "Character Driven Blog",
+      "feed_url": "https://industrialscripts.com/feed/",
+      "website_url": "https://industrialscripts.com/blog/",
+      "description": "Covers articles about screenplay, screenwriting and script analysis and feedback. Industrial Scripts is a London-based story analysis company founded by some of the UK's leading experts, delivering feedback services and training to authors, writers and filmmakers.",
+      "followers": {
+        "twitter": 16500,
+        "instagram": 100400
+      },
+      "image_url": "https://i1.feedspot.com/4524200.jpg?t=1606745314"
+    },
+    {
+      "title": "WeScreenplay Blog",
+      "feed_url": "https://www.wescreenplay.com/feed/",
+      "website_url": "https://www.wescreenplay.com/blog/",
+      "description": "Features screenwriting tips and guides, industry news and editorials, and WeScreenplay competition updates.",
+      "followers": {
+        "facebook": 21800,
+        "twitter": 15600,
+        "instagram": 34700
+      },
+      "image_url": "https://i1.feedspot.com/5269895.jpg?t=1618560209"
+    },
+    {
+      "title": "Michael Hauge's Story Mastery",
+      "feed_url": "https://storymastery.com/articles/feed/",
+      "website_url": "https://storymastery.com/articles/",
+      "description": "Covers informative articles for screenwriters, novelists, public speakers, marketers & attorneys by story expert, lecturer and best-selling author Michael Hauge.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4524242.jpg?t=1631885933"
+    },
+    {
+      "title": "WriterDuet's Blog",
+      "feed_url": "https://writerduet.wpcomstaging.com/feed/",
+      "website_url": "https://www.writerduet.com/blog",
+      "description": "Covers the latest screenwriting news and industry updates. WriterDuet is a real-time collaborative screenwriting tool, that features real-time collaboration, seamless online/offline writing, and infinite revision tracking.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 4600,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4524217.jpg?t=1616674884"
+    },
+    {
+      "title": "The Story Department",
+      "feed_url": "https://www.thestorydepartment.com/feed/",
+      "website_url": "https://www.thestorydepartment.com/",
+      "description": "Screenwriting blog about the story, script, and sales for writers and screenwriters who are ever hungry to learn. Blog by Karel Segers.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 25500
+      },
+      "image_url": "https://i1.feedspot.com/71837.jpg?t=1616675852"
+    },
+    {
+      "title": "Screenplay Readers Blog",
+      "feed_url": "https://screenplayreaders.com/blog/feed/",
+      "website_url": "https://screenplayreaders.com/blog/",
+      "description": "Script coverage articles, tips, tricks, and tutorials for screenwriters and filmmakers.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 14000,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4524220.jpg"
+    },
+    {
+      "title": "Alexandra Sokoloff",
+      "feed_url": "http://feeds.feedburner.com/AlexandraSokoloff",
+      "website_url": "https://screenwritingtricksforauthors.com/",
+      "description": "Thriller Award-winning author of the Huntress/FBI series, the Haunted thrillers and screenwriting tricks for authors; recovering screenwriter.",
+      "followers": {
+        "twitter": 8000
+      },
+      "image_url": "https://i1.feedspot.com/1291552.jpg"
+    },
+    {
+      "title": "CJ Walley Blog",
+      "feed_url": "https://cjwalley.com/blog/feed/",
+      "website_url": "https://cjwalley.com/blog/",
+      "description": "My thoughts on the craft of screenplay writing featuring articles on Stage 32 and what I've learned about writing women as a man.",
+      "followers": {
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5042110.jpg?t=1606745330"
+    },
+    {
+      "title": "Eric Edson The Story Solution | Screenwriting Blog",
+      "feed_url": "https://www.thestorysolution.com/feed/",
+      "website_url": "https://www.thestorysolution.com/blog/",
+      "description": "The Story solution offers a completely new approach to building powerful screen stories that keep producers, agents and audiences glued to their chairs.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 597
+      },
+      "image_url": "https://i1.feedspot.com/4524213.jpg?t=1639812770"
+    },
+    {
+      "title": "Patrice Williams Marks",
+      "feed_url": "https://www.patricewilliamsmarks.com/feed/",
+      "website_url": "https://www.patricewilliamsmarks.com/blog/",
+      "description": "Blog of Patrice Williams Marks; Sensitivity Reader, Screenwriter, Novelist, How-to books.",
+      "followers": {
+        "twitter": 1800,
+        "instagram": 399
+      },
+      "image_url": "https://i1.feedspot.com/5042813.jpg?t=1606745326"
+    },
+    {
+      "title": "Story Into Screenplay",
+      "feed_url": "http://www.storyintoscreenplay.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.storyintoscreenplay.com/",
+      "description": "In this blog, you will learn how to turn ideas, concepts and stories into screenplays.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 10
+      },
+      "image_url": "https://i1.feedspot.com/4524208.jpg?t=1670389497"
+    },
+    {
+      "title": "Doug Richardson's Blog",
+      "feed_url": "https://dougrichardson.com/category/blog/feed/",
+      "website_url": "https://dougrichardson.com/category/blog/",
+      "description": "Official website of author/screenwriter, Doug Richardson. Featuring news, blog, biography, book excerpts, and more.",
+      "followers": {
+        "facebook": 571,
+        "twitter": 7500,
+        "instagram": 620
+      },
+      "image_url": "https://i1.feedspot.com/4266318.jpg?t=1606745340"
+    },
+    {
+      "title": "Screenwriters Daily Dose",
+      "feed_url": "https://screenwritersdailydose.com/feed/",
+      "website_url": "https://screenwritersdailydose.com/",
+      "description": "We deliver great tips and news that all screenwriters should see. Our goal is to find the cool stuff out there that you just don't have time to find. After all, you should be writing! We'll try not to duplicate what you get from those great screenwriting websites you love, who deliver articles right to your email box. But what we post, DAILY, will be vetted by screenwriters.",
+      "followers": {
+        "twitter": 404
+      },
+      "image_url": "https://i1.feedspot.com/4524205.jpg"
+    },
+    {
+      "title": "Script Counseling | Providing Professional Screenplay services to Studios and Production companies",
+      "feed_url": "https://www.scriptcounseling.com/blog-feed.xml",
+      "website_url": "https://www.scriptcounseling.com/blog",
+      "description": "As a Story Analyst and Script Developer for American and European studios, I have contributed to the development of about 60 produced, theatrical features and tv projects. My clients include such diverse studios as Focus Features (Universal Pictures) Timeless Films (UK), New Line Cinema (Warner Bros), to name a few.",
+      "followers": {
+        "twitter": 14
+      },
+      "image_url": "https://i1.feedspot.com/5085712.jpg?t=1614235447"
+    },
+    {
+      "title": "Scriptwriting and Prose",
+      "feed_url": "https://x32792.wordpress.com/feed/",
+      "website_url": "https://x32792.wordpress.com/",
+      "description": "Keep up with Not too serious and hopefully amusing.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5051690.jpg?t=1606745617"
+    },
+    {
+      "title": "Four Star Feedback",
+      "feed_url": "https://www.fourstarfeedback.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.fourstarfeedback.com/",
+      "description": "Blog by Doug Davidson, Produced Screenwriter and Screenplay Consultant. Doug is a credited writer on two direct-to-video animated features for Lionsgate: Elephant Kingdom starring Cary Elwes, Patrick Warburton and Alexa PenaVega and The Giant King starring Bella Thorne and Russell Peters.",
+      "followers": {
+        "twitter": 156
+      },
+      "image_url": "https://i1.feedspot.com/4524203.jpg?t=1606745484"
+    },
+    {
+      "title": "Your Screenplay Sucks!",
+      "feed_url": "https://yourscreenplaysucks.wordpress.com/feed/",
+      "website_url": "https://yourscreenplaysucks.wordpress.com/",
+      "description": "Every few days, thoughts on screenwriting",
+      "followers": {
+        "twitter": 180
+      },
+      "image_url": "https://i1.feedspot.com/4523725.jpg"
+    },
+    {
+      "title": "buzz mclaughlin / on scriptwriting",
+      "feed_url": "http://buzzmclaughlinscripts.blogspot.com/feeds/posts/default",
+      "website_url": "http://buzzmclaughlinscripts.blogspot.com/",
+      "description": "where I share tips, news, and ideas about scriptwriting--both plays and screenplays--and muse about the place of the writer in the rapidly evolving entertainment industry...",
+      "followers": {
+        "facebook": 181
+      },
+      "image_url": "https://i1.feedspot.com/2570049.jpg?t=1606745379"
+    },
+    {
+      "title": "One perfect line-tribute to the screenwriter",
+      "feed_url": "http://oneperfectline.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://oneperfectline.blogspot.com/",
+      "description": "Journalist, writer and screenwriter trying to convert the country of the stars in the country of the stars. A tour of the best lines of screenwriters throughout the history of cinema. Blog by Iv\u00e1n Calder\u00f3.",
+      "followers": {
+        "twitter": 177
+      },
+      "image_url": "https://i1.feedspot.com/4762930.jpg?t=1606745390"
+    },
+    {
+      "title": "Script Butcher Screenplay Consultant",
+      "feed_url": "https://scriptbutcher.com/blog/feed/",
+      "website_url": "https://scriptbutcher.com/blog/",
+      "description": "Improving scripts... one hack at a time",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4524253.jpg"
+    },
+    {
+      "title": "Writesofluid",
+      "feed_url": "https://writesofluid.com/feed/",
+      "website_url": "https://writesofluid.com/",
+      "description": "Writing advice, critique and editing services by Michelle Goode. Trained in scriptreading and proofreading/copy-editing, Michelle is a proofreader for Universal Film Magazine & charity anthologies, a reviewer for Raindance Film Festival & We Love Films (More Than You) and writes articles for the the Brit Writers blog, Literary UK & What The Dickens? magazine.",
+      "followers": {
+        "facebook": 266
+      },
+      "image_url": "https://i1.feedspot.com/4523726.jpg"
+    },
+    {
+      "title": "Slugline. Simply Screenwriting. Blog",
+      "feed_url": "https://www.slugline.co/blog?format=RSS",
+      "website_url": "https://www.slugline.co/blog/",
+      "description": "News, events and ideas about storytelling in plain text. Slugline is a simple, elegant Mac app for writing screenplays. It uses Fountain, a plain-text screenwriting format.",
+      "followers": {
+        "facebook": 569,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4524219.jpg"
+    },
+    {
+      "title": "Atlanta Screenplay Awards | Screenwrting Competition Blog",
+      "feed_url": "https://atlscreenplayawards.com/feed/",
+      "website_url": "https://atlscreenplayawards.com/screenwriting-competition-blog/",
+      "description": "Atlanta Screenplay Awards' goal is to award the hottest up-and-coming screenwriter. We are professionals with our fingers on the pulse of the industry. We are working with producers, directors, and writers who understand the evolving landscape of the film industry. In our blog, you will find key information and tips to prepare you for our screenwriting competition.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5269899.jpg?t=1618559274"
+    },
+    {
+      "title": "Gideon's Screenwriting Tips: Now You're a Screenwriter",
+      "feed_url": "https://gideonsway.wordpress.com/feed/",
+      "website_url": "https://gideonsway.wordpress.com/",
+      "description": "GIdeon's screenwriting tips are designed to improve your scriptwriting craft for Film & TV and learn about the movie biz.",
+      "followers": {
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4523715.jpg?t=1606744863"
+    },
+    {
+      "title": "OutWrd Blog",
+      "feed_url": "https://www.outwrd.media/blog-feed.xml",
+      "website_url": "https://www.outwrd.media/blog",
+      "description": "The Script Department is an essay blog that looks at films from a screenwriting perspective. I also give screenwriting tips and advice.",
+      "followers": {
+        "facebook": 141,
+        "twitter": 481,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4977997.jpg?t=1606745365"
+    },
+    {
+      "title": "The Logline Blog",
+      "feed_url": "https://logline.it/feed/",
+      "website_url": "https://loglineit.com/blog/",
+      "description": "Learn how to write loglines and improve your story or screenplay.",
+      "followers": {
+        "twitter": 25500
+      },
+      "image_url": "https://i1.feedspot.com/4918721.jpg?t=1606744897"
+    },
+    {
+      "title": "Script Magazine",
+      "feed_url": "https://scriptmag.com/.rss/full",
+      "website_url": "https://scriptmag.com/",
+      "description": "Your source of information on the craft and business of writing for film and television. Also covers inside information, articles written by working writers and filmmakers, and in-depth interviews.",
+      "followers": {
+        "facebook": 117400,
+        "twitter": 66000,
+        "instagram": 16600
+      },
+      "image_url": "https://i1.feedspot.com/815049.jpg?t=1606831774"
+    },
+    {
+      "title": "ScriptShadow",
+      "feed_url": "http://scriptshadow.net/",
+      "website_url": "http://scriptshadow.net/",
+      "description": "Covers screenwriting and screenplay reviews for helping amateur writers to learn directly from those who'd already made it. Blog by Carson Reeves.",
+      "followers": {
+        "twitter": 12700
+      },
+      "image_url": "https://i1.feedspot.com/267932.jpg?t=1631884286"
+    },
+    {
+      "title": "Marilyn Horowitz Blog",
+      "feed_url": "https://www.marilynhorowitz.com/category/blog/feed/",
+      "website_url": "https://www.marilynhorowitz.com/category/blog/",
+      "description": "Screenwriting Classes, Coaching, and Resources by Marilyn Horowitz.Marilyn Horowitz is an award-winning New York University professor, TV show creator, producer, and Manhattan-based writing coach, who works with successful novelists, produced screenwriters, and award-winning filmmakers.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4524238.jpg?t=1606745355"
+    },
+    {
+      "title": "Arc Studio Blog",
+      "feed_url": "https://www.arcstudiopro.com/blog/feed",
+      "website_url": "https://www.arcstudiopro.com/blog",
+      "description": "Covers articles about character development, story, technique, formatting, and interviews. Arc Studio is the industry's fastest-growing screenwriting software with cloud backup and real-time collaboration.",
+      "followers": {
+        "facebook": 641,
+        "twitter": 1100,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5294103.jpg?t=1623999616"
+    },
+    {
+      "title": "LA Screenwriter",
+      "feed_url": "https://la-screenwriter.com/feed/",
+      "website_url": "https://la-screenwriter.com/",
+      "description": "Articles, news, and resources for working and aspiring screenwriters",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 40400
+      },
+      "image_url": "https://i1.feedspot.com/4524198.jpg"
+    }
+  ]
+}

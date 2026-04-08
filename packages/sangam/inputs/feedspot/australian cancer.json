@@ -1,0 +1,89 @@
+{
+  "category": "Australian Cancer",
+  "source_url": "https://rss.feedspot.com/australian_cancer_rss_feeds",
+  "feeds": [
+    {
+      "title": "Oncology News",
+      "feed_url": "https://oncologynews.com.au/feed/",
+      "website_url": "https://oncologynews.com.au/",
+      "description": "Welcome to the Oncology Network Australia! We are a small group of academic publishing, communications and digital professionals building resources for the oncology profession. We aim to bring you quality, appropriate and independent digital resources through our suite of websites and publications.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 105
+      },
+      "image_url": "https://i1.feedspot.com/4907570.jpg?t=1613994040"
+    },
+    {
+      "title": "Skin Cancer Centres Blog",
+      "feed_url": "https://www.skincancercentres.com.au/blog/rss.xml",
+      "website_url": "https://www.skincancercentres.com.au/blog",
+      "description": "The National Skin Cancer Centres are Australia's leading provider of skin cancer services, dedicated to delivering effective, quick and low-cost access to diagnosis and treatment. Our unique skin cancer facilities have been changing the medical landscape for nearly a decade.",
+      "followers": {
+        "facebook": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4797971.jpg?t=1610015527"
+    },
+    {
+      "title": "Australian Thyroid Foundation News",
+      "feed_url": "https://www.thyroidfoundation.org.au/news/RSS/feed",
+      "website_url": "https://www.thyroidfoundation.org.au/news",
+      "description": "The Australian Thyroid Foundation (ATF) is a member-based organisation, with membership fees and donations used to support and educate members with the most up-to-date, research, treatment and medications.",
+      "followers": {
+        "facebook": 7300,
+        "twitter": 380
+      },
+      "image_url": "https://i1.feedspot.com/4907552.jpg?t=1613993929"
+    },
+    {
+      "title": "Skin Cancer College Blog",
+      "feed_url": "https://www.skincancercollege.org/feed/",
+      "website_url": "https://www.skincancercollege.org/member-services/blog/",
+      "description": "The Skin Cancer College Australasia is the peak body representing skin cancer practitioners in both Australia and New Zealand. Our goal is the development of health professionals who provide accessible, affordable, accurate skin cancer diagnosis and management.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4798073.jpg?t=1610015261"
+    },
+    {
+      "title": "RCD Foundation",
+      "feed_url": "https://rcdfoundation.org/brain-matters/feed/",
+      "website_url": "https://rcdfoundation.org/brain-matters/",
+      "description": "The Robert Connor Dawes Foundation is a registered charity supporting pediatric brain tumour matters in the areas of Research, Care & Development.",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 633,
+        "instagram": 7600
+      },
+      "image_url": "https://i1.feedspot.com/4641973.jpg"
+    },
+    {
+      "title": "My Healing Community Blog",
+      "feed_url": "https://myhealingcommunity.com/feed/",
+      "website_url": "https://myhealingcommunity.com/blog/",
+      "description": "A cancer community that is hope focused, science driven. Blog articles covers a range of healing cancer support topics including chemotherapy resistance and research summaries on cancer related supplements (especially ones that can target cancer stem cells signalling pathways).",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5558572.jpg?t=1683549311"
+    },
+    {
+      "title": "HealthCert Blog",
+      "feed_url": "https://www.healthcert.com/blog/rss.xml",
+      "website_url": "https://www.healthcert.com/blog",
+      "description": "HealthCert is an international company dedicated to enhancing high quality medical knowledge by delivering high quality medical education programs to medical practitioners across Australia. Subscribe the Skin Cancer Blog for the latest skin cancer research, products and services, case discussions and video tutorials on various treatments.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 234
+      },
+      "image_url": "https://i1.feedspot.com/4447013.jpg?t=1610015050"
+    },
+    {
+      "title": "Children's Cancer Institute News",
+      "feed_url": "https://www.ccia.org.au/feed/",
+      "website_url": "https://www.ccia.org.au/news",
+      "description": "Children's Cancer Institute is the only independent medical research institute in Australia wholly dedicated to putting an end to childhood cancer. Stay up to date with our blog on latest research news, meet our researchers and hear what's happening in our labs and beyond.",
+      "followers": {
+        "facebook": 179400,
+        "twitter": 8400,
+        "instagram": 40200
+      },
+      "image_url": "https://i1.feedspot.com/4643423.jpg?t=1613993924"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "category": "Chopper",
+  "source_url": "https://rss.feedspot.com/chopper_rss_feeds",
+  "feeds": [
+    {
+      "title": "ZZ chop",
+      "feed_url": "http://zzchop.blogspot.com/feeds/posts/default",
+      "website_url": "http://zzchop.blogspot.com/",
+      "description": "ZZ chop is a magazines another world of chopper 1970s harley superglide. Subscribe to keep up with new updates from ZZ chop.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/83757.jpg?t=1612356611"
+    },
+    {
+      "title": "Xs650chopper",
+      "feed_url": "https://xs650chopper.com/feed/",
+      "website_url": "https://xs650chopper.com/",
+      "description": "XS650 Chopper Blog is all about the awesome Yamaha XS650 Motorcycle.",
+      "followers": {
+        "facebook": 63900,
+        "twitter": 1300,
+        "instagram": 30900
+      },
+      "image_url": "https://i1.feedspot.com/342084.jpg?t=1612356356"
+    },
+    {
+      "title": "L&L Choppers",
+      "feed_url": "https://www.l-l-choppers.com/feed/",
+      "website_url": "https://www.l-l-choppers.com/?lang=en",
+      "description": "L&L Choppers are Specialized in choppers, chopper parts for everyone who's building, customizing his chopper.",
+      "followers": {
+        "facebook": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4879209.jpg?t=1612356360"
+    },
+    {
+      "title": "MARCOS CHOPPER Blog",
+      "feed_url": "https://marcoschopper.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://marcoschopper.blogspot.com/",
+      "description": "Follow marcos chopper to find updates on choppers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4873180.jpg?t=1612356573"
+    },
+    {
+      "title": "Rogues MC",
+      "feed_url": "https://rogues-mc.com/feed/",
+      "website_url": "https://rogues-mc.com/",
+      "description": "The Rogues MC is a true chopperbuilding and riding oldschool motorcycle club. Follow the blog to find updates on choppers.",
+      "followers": {
+        "twitter": 92
+      },
+      "image_url": "https://i1.feedspot.com/4873201.jpg?t=1612356369"
+    },
+    {
+      "title": "Custom Choppers Blog",
+      "feed_url": "https://www.custom-choppers-guide.com/custom-choppers.xml",
+      "website_url": "https://www.custom-choppers-guide.com/custom-choppers-blog.html",
+      "description": "The Chopper Blog keeps you up-to-date with all additions and changes to the custom-choppers-guide.com Web site on how custom choppers are built, tips and reviews of bobbers motorcycles, vintage bikes, gear and more.",
+      "followers": {
+        "facebook": 14400
+      },
+      "image_url": "https://i1.feedspot.com/4873191.jpg?t=1612356340"
+    },
+    {
+      "title": "Chopper Fest",
+      "feed_url": "https://chopperfest.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://chopperfest.blogspot.com/",
+      "description": "Subscribe to keep up with new updates from the Chopper Fest Magazine.",
+      "followers": {
+        "facebook": 15,
+        "instagram": 57000
+      },
+      "image_url": "https://i1.feedspot.com/4878946.jpg?t=1612356478"
+    },
+    {
+      "title": "Chopperkingz",
+      "feed_url": "http://chopperkingz.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://chopperkingz.blogspot.com/",
+      "description": "Follow Chopperkingz to find more about choppers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4873057.jpg?t=1612356672"
+    }
+  ]
+}

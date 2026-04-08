@@ -1,0 +1,117 @@
+{
+  "category": "Everton FC",
+  "source_url": "https://rss.feedspot.com/everton_fc_rss_feeds",
+  "feeds": [
+    {
+      "title": "Royal Blue Mersey",
+      "feed_url": "https://royalbluemersey.sbnation.com/rss/current.xml",
+      "website_url": "https://royalbluemersey.sbnation.com/",
+      "description": "Everton FC blog for the SBNation family, run by Blues. Covering all aspects of Everton football.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 25900,
+        "instagram": 586
+      },
+      "image_url": "https://i1.feedspot.com/5178673.jpg?t=1626500066"
+    },
+    {
+      "title": "Echo Everton FC",
+      "feed_url": "https://www.liverpoolecho.co.uk/all-about/everton-fc?service=rss",
+      "website_url": "https://www.liverpoolecho.co.uk/all-about/everton-fc",
+      "description": "Everton FC news from the Liverpool Echo. Everton FC are one of Britain's greatest, most historic, and most decorated clubs, with nine league titles and five FA Cups to their illustrious name.",
+      "followers": {
+        "twitter": 79000
+      },
+      "image_url": "https://i1.feedspot.com/5178768.jpg?t=1597139658"
+    },
+    {
+      "title": "ToffeeWeb",
+      "feed_url": "https://www.toffeeweb.com/rss/",
+      "website_url": "https://www.toffeeweb.com/",
+      "description": "Started in 1994, ToffeeWeb is the longest-running, most comprehensive and up-to-date Everton FC website around with a thriving community of Blues. The site provides an independent forum delivering unparalleled coverage of one of England's greatest football clubs to a global audience.",
+      "followers": {
+        "facebook": 10500,
+        "twitter": 41300,
+        "instagram": 920
+      },
+      "image_url": "https://i1.feedspot.com/4465878.jpg?t=1608624289"
+    },
+    {
+      "title": "GrandOldTeam",
+      "feed_url": "https://www.grandoldteam.com/feed/",
+      "website_url": "https://www.grandoldteam.com/",
+      "description": "GrandOldTeam is a popular destination for fans of the Everton Football Club, containing the most active Everton FC forum online. Follow GrandOldTeam for daily Everton news, video, analysis, and opinion.",
+      "followers": {
+        "facebook": 183100,
+        "twitter": 97100,
+        "instagram": 42700
+      },
+      "image_url": "https://i1.feedspot.com/5035285.jpg?t=1626500072"
+    },
+    {
+      "title": "Vital Everton",
+      "feed_url": "https://everton.vitalfootball.co.uk/category/everton-news/feed/",
+      "website_url": "https://everton.vitalfootball.co.uk/",
+      "description": "Vital Everton, bringing all the latest Everton FC Football News, Transfers and Opinion.",
+      "followers": {
+        "twitter": 556
+      },
+      "image_url": "https://i1.feedspot.com/5179156.jpg"
+    },
+    {
+      "title": "Read Everton",
+      "feed_url": "https://readeverton.com/feed",
+      "website_url": "https://readeverton.com/",
+      "description": "Everton FC transfer news, opinions, articles, and interviews.",
+      "followers": {
+        "facebook": 572,
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/5179081.jpg?t=1597134545"
+    },
+    {
+      "title": "Everton Forum",
+      "feed_url": "https://www.theevertonforum.co.uk/feed/",
+      "website_url": "https://www.theevertonforum.co.uk/",
+      "description": "Everton Forum for Evertonians from around the world to discuss the greatest Football Club in the world.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 21900
+      },
+      "image_url": "https://i1.feedspot.com/5179062.jpg?t=1597135125"
+    },
+    {
+      "title": "Prince Rupert's Tower",
+      "feed_url": "https://princerupertstower.com/feed/",
+      "website_url": "https://princerupertstower.com/",
+      "description": "The ultimate home for Everton FC news, rumors, updates, transfers, signings, injuries, commentary, analysis, and more!",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5178831.jpg?t=1597138197"
+    },
+    {
+      "title": "Football Insider \u00bb Everton News",
+      "feed_url": "https://www.footballinsider247.com/likes/everton-news/feed/",
+      "website_url": "https://www.footballinsider247.com/tag/everton/",
+      "description": "Football Insider breaks exclusive news on the biggest stories in football & delivers insight through our stable of top pundits. Find the latest news of Everton FC in the Everton News section.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 106700,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5178969.jpg?t=1597139209"
+    },
+    {
+      "title": "Everton Heritage Society",
+      "feed_url": "https://efcheritagesociety.com/?feed=rss2",
+      "website_url": "https://efcheritagesociety.com/",
+      "description": "The EFC Heritage Society is a voluntary group researching and chronicling the rich history of Everton Football Club. The Society was founded by Dr David France in 2008 to promote and preserve the rich heritage of our great football club.",
+      "followers": {
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/5179141.jpg?t=1597135226"
+    }
+  ]
+}

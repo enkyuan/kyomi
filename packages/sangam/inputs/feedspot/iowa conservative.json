@@ -1,0 +1,51 @@
+{
+  "category": "Iowa Conservative",
+  "source_url": "https://rss.feedspot.com/iowa_conservative_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Iowa Federation of Republican Women Blog",
+      "feed_url": "https://iowafrw.org/blog/feed/",
+      "website_url": "https://iowafrw.org/blog/",
+      "description": "Engaging Republican women of Iowa in the political process since 1939. The Iowa Federation of Republican Women (IowaFRW) was founded in 1939 in Tama County. One club quickly spread into a vast expansion of clubs throughout the state of Iowa.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5767254.jpg?t=1706595576"
+    },
+    {
+      "title": "The Republican Party of Iowa",
+      "feed_url": "https://www.iowagop.org/press.rss",
+      "website_url": "https://www.iowagop.org/press",
+      "description": "RPI works to elect all GOP candidates in Iowa. Paid for by the Republican Party of Iowa and not authorized by any candidate or candidate committee.",
+      "followers": {
+        "facebook": 48700,
+        "twitter": 19700,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5767253.jpg?t=1706595929"
+    },
+    {
+      "title": "The Iowa Standard",
+      "feed_url": "https://theiowastandard.com/feed/",
+      "website_url": "https://theiowastandard.com/",
+      "description": "The Iowa Standard covers politics from a conservative point of view. Fighting the Lying Liberal Fake News! Iowa's Leading Conservative Political News Website! Download our app! Sign up for our email newsletter!",
+      "followers": {
+        "facebook": 62000,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5767251.jpg?t=1706595559"
+    },
+    {
+      "title": "Iowa Senate Republicans Blog",
+      "feed_url": "https://iowasenaterepublicans.com/feed/",
+      "website_url": "https://iowasenaterepublicans.com/blog/",
+      "description": "Iowa Senate Republicans is an online platform that focuses on promoting the competitiveness of Iowa. Their goal is to enhance Iowa's standing among neighbouring states, making it an excellent place to live, work, and raise a family.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/5767252.jpg?t=1706595564"
+    }
+  ]
+}

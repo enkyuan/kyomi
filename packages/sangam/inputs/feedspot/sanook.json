@@ -1,0 +1,71 @@
+{
+  "category": "Sanook",
+  "source_url": "https://rss.feedspot.com/sanook_rss_feeds",
+  "feeds": [
+    {
+      "title": "Sanook \u00bb Daily News",
+      "feed_url": "https://rssfeeds.sanook.com/rss/feeds/sanook/news.index.xml",
+      "website_url": "https://www.sanook.com/",
+      "description": "All latest articles about Daily News from Sanook.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8534026.jpg?t=1753077747"
+    },
+    {
+      "title": "Sanook \u00bb Political News",
+      "feed_url": "https://rssfeeds.sanook.com/rss/feeds/sanook/news.politic.xml",
+      "website_url": "https://www.sanook.com/news/politic/",
+      "description": "All latest articles about Political News from Sanook.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8534027.jpg?t=1753077757"
+    },
+    {
+      "title": "Sanook \u00bb Crime News",
+      "feed_url": "https://rssfeeds.sanook.com/rss/feeds/sanook/news.crime.xml",
+      "website_url": "https://www.sanook.com/news/crime/",
+      "description": "All latest articles about Crime News from Sanook.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8534025.jpg?t=1753077736"
+    },
+    {
+      "title": "Sanook \u00bb World News",
+      "feed_url": "https://rssfeeds.sanook.com/rss/feeds/sanook/news.world.xml",
+      "website_url": "https://www.sanook.com/news/world/",
+      "description": "All latest articles about World News from Sanook.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8534021.jpg?t=1753077696"
+    },
+    {
+      "title": "Sanook \u00bb Economic News",
+      "feed_url": "https://rssfeeds.sanook.com/rss/feeds/sanook/news.economic.xml",
+      "website_url": "https://www.sanook.com/news/economic/",
+      "description": "All latest articles about Economic News from Sanook.",
+      "followers": {
+        "facebook": 3900000,
+        "instagram": 319300
+      },
+      "image_url": "https://i1.feedspot.com/8534024.jpg?t=1753077726"
+    },
+    {
+      "title": "Sanook \u00bb Entertainment News",
+      "feed_url": "https://rssfeeds.sanook.com/rss/feeds/sanook/news.entertain.xml",
+      "website_url": "https://www.sanook.com/news/entertain/",
+      "description": "\u0e23\u0e27\u0e21\u0e02\u0e48\u0e32\u0e27\u0e1a\u0e31\u0e19\u0e40\u0e17\u0e34\u0e07 \u0e14\u0e32\u0e23\u0e32 \u0e19\u0e31\u0e01\u0e41\u0e2a\u0e14\u0e07 \u0e41\u0e27\u0e14\u0e27\u0e07\u0e44\u0e2e\u0e42\u0e0b \u0e02\u0e48\u0e32\u0e27\u0e2d\u0e31\u0e1e\u0e40\u0e14\u0e15 \u0e27\u0e07\u0e01\u0e32\u0e23\u0e21\u0e32\u0e22\u0e32 Gossip \u0e0b\u0e38\u0e1a\u0e0b\u0e34\u0e1a\u0e14\u0e32\u0e23\u0e32 \u0e23\u0e39\u0e1b\u0e20\u0e32\u0e1e\u0e14\u0e32\u0e23\u0e32 \u0e42\u0e14\u0e22\u0e17\u0e35\u0e21\u0e07\u0e32\u0e19\u0e02\u0e48\u0e32\u0e27\u0e1a\u0e31\u0e19\u0e40\u0e17\u0e34\u0e07",
+      "followers": {
+        "facebook": 3900000,
+        "instagram": 319300
+      },
+      "image_url": "https://i1.feedspot.com/8534023.jpg?t=1753077718"
+    },
+    {
+      "title": "Sanook \u00bb Thailand",
+      "feed_url": "https://rssfeeds.sanook.com/rss/feeds/sanook/travel.index.xml",
+      "website_url": "https://www.sanook.com/travel/thailand/",
+      "description": "\u0e40\u0e17\u0e35\u0e48\u0e22\u0e27\u0e44\u0e17\u0e22 \u0e2a\u0e16\u0e32\u0e19\u0e17\u0e35\u0e48\u0e17\u0e48\u0e2d\u0e07\u0e40\u0e17\u0e35\u0e48\u0e22\u0e27\u0e44\u0e17\u0e22 \u0e41\u0e2b\u0e25\u0e48\u0e07\u0e17\u0e48\u0e2d\u0e07\u0e40\u0e17\u0e35\u0e48\u0e22\u0e27\u0e43\u0e19\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22 \u0e40\u0e01\u0e32\u0e30 \u0e20\u0e39\u0e40\u0e02\u0e32 \u0e17\u0e30\u0e40\u0e25 \u0e02\u0e49\u0e2d\u0e21\u0e39\u0e25 77 \u0e08\u0e31\u0e07\u0e2b\u0e27\u0e31\u0e14 \u0e02\u0e49\u0e2d\u0e21\u0e39\u0e25\u0e40\u0e17\u0e35\u0e48\u0e22\u0e27\u0e17\u0e31\u0e48\u0e27\u0e44\u0e17\u0e22 \u0e41\u0e22\u0e01\u0e15\u0e32\u0e21\u0e08\u0e31\u0e07\u0e2b\u0e27\u0e31\u0e14 \u0e20\u0e32\u0e04\u0e40\u0e2b\u0e19\u0e37\u0e2d \u0e01\u0e25\u0e32\u0e07 \u0e2d\u0e35\u0e2a\u0e32\u0e19 \u0e43\u0e15\u0e49",
+      "followers": {
+        "facebook": 3900000,
+        "instagram": 319300
+      },
+      "image_url": "https://i1.feedspot.com/8534022.jpg?t=1753077707"
+    }
+  ]
+}

@@ -1,0 +1,914 @@
+{
+  "category": "Fintech",
+  "source_url": "https://rss.feedspot.com/fintech_rss_feeds",
+  "feeds": [
+    {
+      "title": "Tom Groenfeldt",
+      "feed_url": "https://www.forbes.com/sites/tomgroenfeldt/feed/",
+      "website_url": "https://www.forbes.com/sites/tomgroenfeldt/#3566f5550040",
+      "description": "Tom Groenfeldt's stories. Describes about latest news and updates on Digital Finance and Technology",
+      "followers": {
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4618486.jpg?t=1625830604"
+    },
+    {
+      "title": "The Fintech Times",
+      "feed_url": "https://thefintechtimes.com/feed/",
+      "website_url": "https://thefintechtimes.com/category/exclusive-content/fintech-ecosystems/",
+      "description": "The Fintech Times is the world's first and only newspaper dedicated to fintech. Published monthly, The Fintech Times explores the explosive world of financial technology, blending first hand insight, opinion and expertise with observational journalism to provide a balanced and comprehensive perspective of this rapidly evolving industry.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 19400,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4649115.jpg?t=1633525601"
+    },
+    {
+      "title": "Finance Magnates \u00bb FinTech",
+      "feed_url": "https://www.financemagnates.com/fintech/feed/",
+      "website_url": "https://www.financemagnates.com/fintech/",
+      "description": "Fintech at Finance Magnates provides breaking news, product reviews and more in this emerging field. Find out all there is to know about the disruptive space.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 38600,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4649238.jpg?t=1617100260"
+    },
+    {
+      "title": "Fintech Singapore",
+      "feed_url": "https://fintechnews.sg/feed/",
+      "website_url": "https://fintechnews.sg/",
+      "description": "Fintech News Singapore, established in 2015, offers timely insights and updates on fintech locally and globally. The dedicated team provides diverse fintech-centric content, including event updates, expert opinions, insider analysis, and breaking news, catering to an audience seeking fintech knowledge and market alerts.",
+      "followers": {
+        "facebook": 17900,
+        "twitter": 19300
+      },
+      "image_url": "https://i1.feedspot.com/4649294.jpg?t=1617100706"
+    },
+    {
+      "title": "Australian FinTech - Connecting the Australian FinTech industry to the world",
+      "feed_url": "https://australianfintech.com.au/blog/feed/",
+      "website_url": "https://australianfintech.com.au/newsfeed-page/",
+      "description": "Australian FinTech - the number one source of Australian FinTech news, including a comprehensive list of Australian FinTech companies and helpful resources.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 9900
+      },
+      "image_url": "https://i1.feedspot.com/4649288.jpg?t=1617100737"
+    },
+    {
+      "title": "Fintech Review",
+      "feed_url": "https://fintechreview.net/feed/",
+      "website_url": "https://fintechreview.net/",
+      "description": "Insights, reviews and analysis of Fintech topics. From explaining basic concepts to analysing major trends, including reviewing companies and products, you will find everything you need to become a Fintech expert in no time.",
+      "followers": {
+        "facebook": 345,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5091813.jpg?t=1617101744"
+    },
+    {
+      "title": "Relevantz Blog",
+      "feed_url": "https://relevantz.com/feed/",
+      "website_url": "https://relevantz.com/blog/",
+      "description": "Stay ahead of the fintech world with the latest Data trends and insights discussed in the Relevantz Blog. Relevantz is an international product development company that builds software that is scalable, robust, secure, cloud-native, and accessible across multi-experience environments.",
+      "followers": {
+        "twitter": 581
+      },
+      "image_url": "https://i1.feedspot.com/5725641.jpg?t=1701424206"
+    },
+    {
+      "title": "eToro",
+      "feed_url": "https://www.etoro.com/news-and-analysis/feed/",
+      "website_url": "https://www.etoro.com/news-and-analysis/",
+      "description": "Covers Crypto, eToro Updates, eToroX Exchange, Investing, Market Insights, Stocks and Trading. eToro has been a leader in the global Fintech revolution. It is a leading social trading network.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 340000,
+        "instagram": 152300
+      },
+      "image_url": "https://i1.feedspot.com/4838321.jpg?t=1611137568"
+    },
+    {
+      "title": "TechCrunch Fintech",
+      "feed_url": "https://techcrunch.com/tag/fintech/feed/",
+      "website_url": "https://techcrunch.com/tag/fintech/",
+      "description": "TechCrunch is a leading technology media property, dedicated to obsessively profiling startups, reviewing new Internet products, and breaking tech news.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/4649129.jpg?t=1617100255"
+    },
+    {
+      "title": "Techbullion",
+      "feed_url": "https://techbullion.com/feed/",
+      "website_url": "https://techbullion.com/tech-news/",
+      "description": "TechBullion is a Financial Technology News Website, focusing on Global Fintech News and Market. Get the latest tech news and articles on TechBullion. Follow this blog for the latest news and updates.",
+      "followers": {
+        "facebook": 208500,
+        "twitter": 13800
+      },
+      "image_url": "https://i1.feedspot.com/4649827.jpg?t=1710165989"
+    },
+    {
+      "title": "FintechLinks",
+      "feed_url": "https://www.linklaters.com/en/rss-feeds/fintechlinks",
+      "website_url": "https://www.linklaters.com/en/insights/blogs/fintechlinks",
+      "description": "Welcome to our fintech blog, where you will find insights, updates and news from our dedicated fintech lawyers. Linklaters is a global law firm focused on bringing legal certainty in a changing world.",
+      "followers": {
+        "twitter": 26200
+      },
+      "image_url": "https://i1.feedspot.com/4976532.jpg?t=1644926273"
+    },
+    {
+      "title": "Amount Blog",
+      "feed_url": "https://www.amount.com/blog/rss.xml",
+      "website_url": "https://www.amount.com/blog",
+      "description": "Amount enables growth for financial institutions with a suite of products and services that deliver a seamless digital and mobile customer experience. The leader in digital financial services. Fraud and Risk | Lending | Product | Insights | Culture.",
+      "followers": {
+        "facebook": 105,
+        "twitter": 330
+      },
+      "image_url": "https://i1.feedspot.com/5216373.jpg?t=1605253349"
+    },
+    {
+      "title": "Bobsguide News",
+      "feed_url": "https://www.bobsguide.com/category/bankingtech/fintech/feed/",
+      "website_url": "https://www.bobsguide.com/category/bankingtech/fintech/",
+      "description": "Bobsguide provides the latest financial technology news and insights. There are articles, blog posts and insights from contributing editors. Also, you can find here a list of industry events.",
+      "followers": {
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/551604.jpg?t=1614083530"
+    },
+    {
+      "title": "Finovate Blog",
+      "feed_url": "https://finovate.com/feed/",
+      "website_url": "https://finovate.com/blog/",
+      "description": "Tracking financial technology & innovations. The latest developments in fintech & financial services, DIgital finance, banking & investment management.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 54100
+      },
+      "image_url": "https://i1.feedspot.com/4644068.jpg?t=1616745834"
+    },
+    {
+      "title": "Payments Cards & Mobile \u00bb FinTech",
+      "feed_url": "https://www.paymentscardsandmobile.com/category/fintech/feed/",
+      "website_url": "https://www.paymentscardsandmobile.com/category/fintech/",
+      "description": "Payments Cards & Mobile is a hub for global payments news. Find out what's new in the mobile payments, contactless, m-banking, e-commerce and fraud & security industry.",
+      "followers": {
+        "facebook": 2100,
+        "instagram": 99
+      },
+      "image_url": "https://i1.feedspot.com/4650517.jpg?t=1673240797"
+    },
+    {
+      "title": "Fintech News Switzerland",
+      "feed_url": "https://fintechnews.ch/feed/",
+      "website_url": "https://fintechnews.ch/",
+      "description": "Launched in 2014, Fintech News Switzerland provides a source of timely, deep insights and the latest local and global news about Fintech. Fintech News Network team works very hard to deliver fintech-centric content in various forms to an audience looking for updates on fintech events and webinars.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 23100,
+        "instagram": 760
+      },
+      "image_url": "https://i1.feedspot.com/4649929.jpg?t=1617100731"
+    },
+    {
+      "title": "ATM Marketplace Blog",
+      "feed_url": "https://www.atmmarketplace.com/rss/",
+      "website_url": "https://www.atmmarketplace.com/blogs/",
+      "description": "ATMmarketplace.com has long been the leader in providing need-to-know information to all sectors of the ATM market. ATM Marketplace provides free news and information about the business of Automated Teller Machines. ATM Marketplace has been the leader in covering the ATM industry for more than a decade.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4650501.jpg?t=1664972509"
+    },
+    {
+      "title": "Lemnisk Blog",
+      "feed_url": "https://www.lemnisk.co/blog/feed/",
+      "website_url": "https://www.lemnisk.co/blog/",
+      "description": "An Intelligent and Secure Customer Data Platform for Financial Services that drives digital engagements & conversions by orchestrating customer experiences.",
+      "followers": {
+        "facebook": 122,
+        "twitter": 192
+      },
+      "image_url": "https://i1.feedspot.com/5024341.jpg?t=1644924872"
+    },
+    {
+      "title": "NCFA Canada",
+      "feed_url": "https://ncfacanada.org/feed/",
+      "website_url": "https://ncfacanada.org/",
+      "description": "The National Crowdfunding & Fintech Association (NCFA Canada) is a financial innovation ecosystem that provides education, networking, access to capital, market intel, and other services, and works closely with industry, government, partners and affiliates to create a vibrant and innovative fintech and funding industry in Canada. NCFA is engaged with global stakeholders and helps incubate projects and investment in fintech, alternative finance, peer-to-peer finance, payments, digital assets and tokens, blockchain, crypto, artificial intelligence, regtech, and insurtech sectors.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 6600,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4697714.jpg?t=1617101376"
+    },
+    {
+      "title": "Financial Servcies : Global Lending",
+      "feed_url": "https://globallending.fortunellc.us/feeds/posts/default?alt=rss",
+      "website_url": "https://globallending.fortunellc.us/",
+      "description": "A blog on Financial Services Lending and Leasing Technology. Experienced product leader, passionate about building financial products that delight the customers. Functional and technical expertise in building high-performance systems for the financial industry. Background in technology, cloud, and agile software development.",
+      "followers": {
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/5066011.jpg?t=1617101734"
+    },
+    {
+      "title": "DigFin",
+      "feed_url": "https://www.digfingroup.com/feed/",
+      "website_url": "https://www.digfingroup.com/news/",
+      "description": "We have a global outlook from a Hong Kong base. DigFin is a boutique. We provide in-depth analysis on business models, covering financial institutions, technology companies, and their interactions. To talk about fintech, you first have to understand the 'fin'.",
+      "followers": {
+        "facebook": 350,
+        "twitter": 558
+      },
+      "image_url": "https://i1.feedspot.com/5010176.jpg?t=1617101392"
+    },
+    {
+      "title": "Lendfoundry",
+      "feed_url": "https://lendfoundry.com/feed/",
+      "website_url": "https://lendfoundry.com/category/fintech/",
+      "description": "A FinTech Lending Operating System which provides accelerators & a complete Digital #lending solution from loan origination to servicing.",
+      "followers": {
+        "facebook": 26,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4649619.jpg?t=1617101875"
+    },
+    {
+      "title": "Clarus Financial Technology Blog",
+      "feed_url": "https://www.clarusft.com/feed/",
+      "website_url": "https://www.clarusft.com/blog/",
+      "description": "Clarus Financial Technology provides applications, software, and services to the Global Derivatives market. Our goal is to help our customers operate successfully in the new post-regulatory reform world, in a more connected and transparent world.",
+      "followers": {
+        "facebook": 11,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4649890.jpg?t=1683014713"
+    },
+    {
+      "title": "FinTecBuzz",
+      "feed_url": "https://fintecbuzz.com/feed/",
+      "website_url": "https://fintecbuzz.com/news/",
+      "description": "FinTecBuzz is one of the world's leading Fintech-based media publications with our content strategized and synthesized to fit right into the expanding ecosystem of Finance professionals. Be it fintech live news, finance press releases, tech articles from Fintech evangelists or interviews from top leaders from global fintech firms, we give the best slice of knowledge topped up with the aptest trends. Our sole mission is to help tech and finance professionals step up with the rapidly emerging Fintech civilization and gain better insights to emerge victorious in every possible way.",
+      "followers": {
+        "facebook": 128,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5282657.jpg?t=1621514929"
+    },
+    {
+      "title": "RegtechTimes",
+      "feed_url": "https://regtechtimes.com/feed/",
+      "website_url": "https://regtechtimes.com/",
+      "description": "The RegtechTimes Team brings you news, stories of regtech entrepreneurs and regtech influencers, regtech startups, resource pieces and the first glimpse of emerging trends from the entrepreneurial ecosystem of regulatory technologies.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 41
+      },
+      "image_url": "https://i1.feedspot.com/5039823.jpg?t=1670389493"
+    },
+    {
+      "title": "Fintech InShorts \u00bb FinTech",
+      "feed_url": "https://www.fintechinshorts.com/fintech/feed/",
+      "website_url": "https://www.fintechinshorts.com/fintech/",
+      "description": "Latest financial technology news, fintech news, fin tech news, retail banking news, blogs, analysis, jobs, videos, announcements and features",
+      "followers": {
+        "facebook": 203,
+        "twitter": 378,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5152400.jpg?t=1617101401"
+    },
+    {
+      "title": "The Fintech Marketing Hub",
+      "feed_url": "https://www.fintechmarketinghub.com/blog-feed.xml",
+      "website_url": "https://www.fintechmarketinghub.com/",
+      "description": "The Fintech Marketing Hub is the first online community platform exclusively dedicated to the world of #fintech marketing. Sign up to get the latest marketing trends, insights and ideas in the world of fintech.",
+      "followers": {
+        "twitter": 361
+      },
+      "image_url": "https://i1.feedspot.com/5170786.jpg?t=1617101850"
+    },
+    {
+      "title": "PSP Lab Blog",
+      "feed_url": "https://psplab.com/fintech-blog/feed/",
+      "website_url": "https://psplab.com/fintech-blog/",
+      "description": "PSP Lab is an international FinTech UK consulting firm which advises its clients on licensing, compliance, software, and business development. The blog covers the latest news from the world of FinTech compliance together with the most recent developments and industry insights from the FinTech sector.",
+      "followers": {
+        "facebook": 274,
+        "twitter": 26
+      },
+      "image_url": "https://i1.feedspot.com/5282663.jpg?t=1621513636"
+    },
+    {
+      "title": "FinTechtris Blog",
+      "feed_url": "https://www.fintechtris.com/blog?format=rss",
+      "website_url": "https://www.fintechtris.com/blog",
+      "description": "FinTechtris is an industry forum discussing all things Fintech, from digital banking, blockchain, cryptocurrency, machine learning, and artificial intelligence.",
+      "followers": {
+        "facebook": 102,
+        "twitter": 167
+      },
+      "image_url": "https://i1.feedspot.com/5031386.jpg?t=1617101396"
+    },
+    {
+      "title": "Osborne Clarke Fintech",
+      "feed_url": "https://www.osborneclarke-fintech.com/feed/",
+      "website_url": "https://www.osborneclarke-fintech.com/category/article/",
+      "description": "News and developments in the FinTech sector in particular regarding Crypto Currencies (including ICOs / STOs), Payments, Crowdfunding/Crowdinvesting/Peer-to-Peer Lending, and Anti-Money-Laundering.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5282662.jpg?t=1621514760"
+    },
+    {
+      "title": "Fintech News Hong Kong",
+      "feed_url": "https://fintechnews.hk/feed/",
+      "website_url": "https://fintechnews.hk/",
+      "description": "Fintech News Hong Kong provides a source of timely, deep insights and the latest local and global news about Fintech.",
+      "followers": {
+        "facebook": 8700,
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/4649860.jpg?t=1610454628"
+    },
+    {
+      "title": "FinTech and Blockchain Law Watch",
+      "feed_url": "https://www.fintechlawblog.com/feed/",
+      "website_url": "https://www.fintechlawblog.com/tag/fintech/",
+      "description": "Their fully integrated firm is poised to provide strategic and efficient legal solutions that are representative of the FinTech industry's constantly evolving platforms, services, and technologies. Our progressive approach to the FinTech space ensures that we are able to provide our clients with legal advice that is line with the cutting-edge advancements typically seen in the industry.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4649226.jpg?t=1704451040"
+    },
+    {
+      "title": "Chris Skinner's blog \u00bb Fintech",
+      "feed_url": "https://thefinanser.com/category/fintech/feed",
+      "website_url": "https://thefinanser.com/category/fintech",
+      "description": "Chris Skinner is known as one of the most influential people in technology. He is an independent commentator on the financial markets and fintech. In his blog, he discusses all things FinTech, finance, banking, technology and, most importantly, the future.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 594
+      },
+      "image_url": "https://i1.feedspot.com/4649192.jpg?t=1617100749"
+    },
+    {
+      "title": "Bank Automation News",
+      "feed_url": "https://bankautomationnews.com/feed/",
+      "website_url": "https://bankautomationnews.com/category/allposts/",
+      "description": "The Definitive Source for Insights and News Surrounding Automation in Financial Services. Formerly Bank Innovation, since 2009 Bank Automation News has been at the forefront of tracking the evolution of digital banking. With the future of innovation pointing to opportunities in automation, we have transitioned the focus of our coverage to continue to provide insights and information that guide industry professionals to better results.",
+      "followers": {
+        "facebook": 429,
+        "twitter": 45600,
+        "instagram": 945
+      },
+      "image_url": "https://i1.feedspot.com/1261143.jpg?t=1616745935"
+    },
+    {
+      "title": "Oliver*",
+      "feed_url": "https://thisisoliver.co/feed/",
+      "website_url": "https://thisisoliver.co/",
+      "description": "Oliver* is a blog updated daily with a very clear focus on all things crowdfunding and alternative finance. Here you will find news, interviews, reports and insights industry experts.",
+      "followers": {
+        "twitter": 768
+      },
+      "image_url": "https://i1.feedspot.com/4650546.jpg?t=1617101724"
+    },
+    {
+      "title": "FinTech Silicon Valley Blog",
+      "feed_url": "http://www.fintechsv.com/feed/",
+      "website_url": "http://www.fintechsv.com/blog/",
+      "description": "FinTech Silicon Valley San Francisco Blockchain Investors Founders Panels Livestreaming Video Photography Events. FinTech Events & Media in Silicon Valley!",
+      "followers": {
+        "facebook": 983,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4649779.jpg"
+    },
+    {
+      "title": "Bankloch",
+      "feed_url": "https://bankloch.blogspot.com/feeds/posts/default",
+      "website_url": "https://bankloch.blogspot.com/",
+      "description": "A weekly blog with articles on the future of financial services sector and more particular specifically Fintech, but also on topics, like IT and digitalization and its impact on the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5287683.jpg?t=1622618007"
+    },
+    {
+      "title": "PYMNTS",
+      "feed_url": "https://www.pymnts.com/feed/",
+      "website_url": "https://www.pymnts.com/topic/fintech/",
+      "description": "Founded in 2009, PYMNTS is the source that decision-makers turn to when seeking a balanced, curated, and informed point of view on the role of payments, connected devices, and new tech in transforming how people and businesses pay, get paid and monetize their interactions. It is a recognized global leader for data, news, and insights on innovation in payments and the platforms powering the connected economy.",
+      "followers": {
+        "facebook": 7800,
+        "twitter": 63300,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/3931364.jpg?t=1671021482"
+    },
+    {
+      "title": "Alessandro Rocco Pietrocola Blog",
+      "feed_url": "https://www.alepietrocola.com/en/feed/",
+      "website_url": "https://www.alepietrocola.com/en/alex-blog/",
+      "description": "Entrepreneur, Fintech Specialist, Investor, World Citizen, Cigar Lover, Dapper Man, Gentleman's Style Guru, Amateur Golfer, Globetrotter and Dreamer who believes in turning ideas into reality!",
+      "followers": {
+        "twitter": 6200,
+        "instagram": 334600
+      },
+      "image_url": "https://i1.feedspot.com/5140812.jpg?t=1617100643"
+    },
+    {
+      "title": "Scientific Financial Systems Blog",
+      "feed_url": "https://scifinsys.com/feed/",
+      "website_url": "https://scifinsys.com/blog/",
+      "description": "Discover the latest product updates, resources, tutorials and insights for quantitative investment practitioners right here. Scientific Financial Systems is an entrepreneurial team of quantitative investment practitioners and data scientists motivated to improve investment technology.",
+      "followers": {
+        "twitter": 3,
+        "instagram": 87
+      },
+      "image_url": "https://i1.feedspot.com/5545366.jpg?t=1681900568"
+    },
+    {
+      "title": "Wallet Factory Blog",
+      "feed_url": "https://walletfactory.com/feed/",
+      "website_url": "https://walletfactory.com/blog/",
+      "description": "Read our blog articles on the latest FinTech trends to always stay current with fresh industry news and insights. Find more on how analytics and global partnerships are changing the Fintech landscape. Wallet Factory is a reliable FinTech provider empowering financial companies worldwide with credible technology-driven capabilities.",
+      "followers": {
+        "facebook": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5624469.jpg?t=1689225020"
+    },
+    {
+      "title": "Wharton FinTech - Medium",
+      "feed_url": "https://medium.com/feed/wharton-fintech",
+      "website_url": "https://medium.com/wharton-fintech",
+      "description": "We are FinTech thought leaders connecting innovators, academics, and investors with the ideas and companies that are reinventing global financial services.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 13300
+      },
+      "image_url": "https://i1.feedspot.com/4649284.jpg?t=1644920857"
+    },
+    {
+      "title": "Finsight.news",
+      "feed_url": "https://www.finsight.news/feed/",
+      "website_url": "https://www.finsight.news/category/breaking-news/",
+      "description": "Finsight.news is an independent media brand of Finsight Media Inc based in the United States of America. Launched in 2021, Finsight.news reports on fintech, financial markets, blockchain, cryptocurrency and brings together global experts to analyze the current events.",
+      "followers": {
+        "twitter": 532,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5393818.jpg?t=1650887598"
+    },
+    {
+      "title": "Grow VC Group",
+      "feed_url": "https://group.growvc.com/news/feed",
+      "website_url": "https://group.growvc.com/news",
+      "description": "This is the blog of the Grow VC Group, the global leader of fintech innovations, digital and distributed finance services, and digital infrastructures, of which Crowd Valley is part. Private transactions, both private equity and debt, have been inefficient and littered with information asymmetry due to the way the transactions have been made.",
+      "followers": {
+        "twitter": 6800
+      },
+      "image_url": "https://i1.feedspot.com/4587558.jpg?t=1615289984"
+    },
+    {
+      "title": "FinTech Rising",
+      "feed_url": "http://fintechrising.co/feed/",
+      "website_url": "http://fintechrising.co/",
+      "description": "FinTech Rising summarizes the week's financial technology news and provides analysis through interesting, informative, inspiring, and (sometimes) entertaining articles selected and edited by Collin and Christina Canright. We seek to help financial executives understand the range of technologies and opinions changing the financial services marketplace.",
+      "followers": {
+        "twitter": 796
+      },
+      "image_url": "https://i1.feedspot.com/5018331.jpg?t=1617101753"
+    },
+    {
+      "title": "RiskSave",
+      "feed_url": "https://risksave.com/news?format=RSS",
+      "website_url": "https://risksave.com/news",
+      "description": "Digital Asset Management Solutions. Leveraging technology to deliver a complete multi-asset alpha and beta solution. Our promise is to make cutting-edge risk management accessible to retail investors. Our aims are to eliminate the high fees and lack of transparency that has given the financial services industry such a bad name.",
+      "followers": {
+        "facebook": 433,
+        "twitter": 335
+      },
+      "image_url": "https://i1.feedspot.com/4859599.jpg?t=1614084140"
+    },
+    {
+      "title": "FinTech Update",
+      "feed_url": "https://www.fintechupdate.com/feed/",
+      "website_url": "https://www.fintechupdate.com/",
+      "description": "FinTech Update is written by the Reed Smith financial services lawyers and offers insights on the FinTech legal space. The FinTech Update will draw upon the firm's extensive experience in financial services to keep you informed of legal and regulatory developments relevant to the FinTech space.",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 174
+      },
+      "image_url": "https://i1.feedspot.com/4649723.jpg?t=1617101720"
+    },
+    {
+      "title": "Fintech Europe",
+      "feed_url": "https://eufintech.blogspot.com/feeds/posts/default",
+      "website_url": "https://eufintech.blogspot.com/",
+      "description": "European fintechs to follow in 2020.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5128417.jpg"
+    },
+    {
+      "title": "Faisal Khan - Banking, Payments & Fintech",
+      "feed_url": "https://blog.faisalkhan.com/feed",
+      "website_url": "https://blog.faisalkhan.com/",
+      "description": "Aggregated space for all things banking, payments, remittances, fintech, money transfer licenses, msb banking, e/m-commerce, mobile payments and crypto/bitcoin.",
+      "followers": {
+        "twitter": 15000
+      },
+      "image_url": "https://i1.feedspot.com/4462150.jpg"
+    },
+    {
+      "title": "Disruptive Finance and Fintech by Huy Nguyen Trieu",
+      "feed_url": "http://www.disruptivefinance.co.uk/feed/",
+      "website_url": "http://www.disruptivefinance.co.uk/",
+      "description": "Disruptive Finance is a personal blog about the technology revolution that is transforming finance.",
+      "followers": {
+        "twitter": 8300
+      },
+      "image_url": "https://i1.feedspot.com/4387714.jpg?t=1614084086"
+    },
+    {
+      "title": "PaymentEye \u00bb Fintech",
+      "feed_url": "http://www.paymenteye.com/category/fintech/feed/",
+      "website_url": "https://www.paymenteye.com/category/fintech/",
+      "description": "PaymentEye is a global news intelligence and analysis tool for a network of professionals involved in the payments sector worldwide.",
+      "followers": {
+        "facebook": 955,
+        "twitter": 15800
+      },
+      "image_url": "https://i1.feedspot.com/4650507.jpg?t=1614084116"
+    },
+    {
+      "title": "GEO Protocol",
+      "feed_url": "https://medium.com/feed/geoprotocol",
+      "website_url": "https://medium.com/geoprotocol",
+      "description": "Decentralized P2P protocol for value transfer. GEO is an open source overlay protocol that enables creation and interoperability of value transfer networks in a lightweight, cost-efficient, and scalable.",
+      "followers": {
+        "twitter": 501
+      },
+      "image_url": "https://i1.feedspot.com/5011164.jpg?t=1617103566"
+    },
+    {
+      "title": "Tap2Pay Blog",
+      "feed_url": "https://tap2pay.me/blog/feed/",
+      "website_url": "https://tap2pay.me/blog/",
+      "description": "Tap2Pay.me is the platform for accepting payments on all online channels. Follow to get updates.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 534,
+        "instagram": 505
+      },
+      "image_url": "https://i1.feedspot.com/5059086.jpg?t=1617100755"
+    },
+    {
+      "title": "Finextra",
+      "feed_url": "https://www.finextra.com/rss/headlines.aspx",
+      "website_url": "https://optimus.tech/blogs",
+      "description": "Finextra also publishes a wide range of research articles, features, white papers, and case studies. Finextra is the leading independent newswire and information source for the worldwide financial technology community. For latest fintech news, retail banking news, wholesale banking news, blogs opinion, analysis, jobs, videos, announcements and features, check out our blog.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 61000
+      },
+      "image_url": "https://i1.feedspot.com/4434319.jpg?t=1627384752"
+    },
+    {
+      "title": "CloudBankin Blog",
+      "feed_url": "https://cloudbankin.com/feed/",
+      "website_url": "https://cloudbankin.com/blog/",
+      "description": "Habile Technologies is the Technology Service provider to Fintech companies. They provide continuous support and help the fintech ecosystem in Singapore, India and UK. They frequently publish articles related to fintech, factoring, lending, trade finance and also write about the technology which transforms and drive the finance sector.",
+      "followers": {
+        "facebook": 631,
+        "twitter": 137
+      },
+      "image_url": "https://i1.feedspot.com/4649578.jpg?t=1617101368"
+    },
+    {
+      "title": "Zoot Solutions",
+      "feed_url": "https://zootsolutions.com/feed/",
+      "website_url": "https://zootsolutions.com/resources/",
+      "description": "While some might not consider the lending process to be much of a hoot, Zoot, a software solutions provider for the lending industry, aspires to at least make it easy and automated. The company hosts ZootBlog, which serves as 'a community for financial industry executives to connect on relevant topics and discuss valuable insights and ideas.",
+      "followers": {
+        "facebook": 501,
+        "twitter": 524
+      },
+      "image_url": "https://i1.feedspot.com/4650565.jpg?t=1617101884"
+    },
+    {
+      "title": "Payments Dive",
+      "feed_url": "https://www.paymentsdive.com/feeds/news/",
+      "website_url": "https://www.paymentsdive.com/",
+      "description": "Mobile Payments Today provides insights on mobile payments technology and trends. Some of the topics we cover are: Contactless Payments, Near Field Communications (NFC), Mobile Banking, Mobile Money Transfers, Mobile POS, and Security.",
+      "followers": {
+        "facebook": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4650494.jpg?t=1617101307"
+    },
+    {
+      "title": "Imarticus Blog",
+      "feed_url": "https://imarticus.org/blog/feed/",
+      "website_url": "https://imarticus.org/blog/",
+      "description": "Imarticus learning offers a comprehensive range of professional financial services and analytics programs that are designed to cater to an aspiring group of professionals who want a tailored program on making them career ready. Their programs are driven by a constant need to be job relevant and stimulating, taking into consideration the dynamic nature of the financial services. Explore more from their blog about latest and relevant content and careers in finance, analytics, marketing, technology, and more.",
+      "followers": {
+        "facebook": 805500,
+        "twitter": 7900,
+        "instagram": 93400
+      },
+      "image_url": "https://i1.feedspot.com/5010173.jpg?t=1617100667"
+    },
+    {
+      "title": "IntelAlley",
+      "feed_url": "https://www.intelalley.com/feed/",
+      "website_url": "https://www.marketsmedia.com/",
+      "description": "IntelAlley provides cutting-edge, professionally edited content with open distribution. IntelAlley's content includes news, data and analysis, and thought leadership supplemented by various forms of new-age media and infotainment.",
+      "followers": {
+        "facebook": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5010167.jpg?t=1617103493"
+    },
+    {
+      "title": "Medius Blog",
+      "feed_url": "https://www.medius.com/blog/",
+      "website_url": "https://www.medius.com/blog/",
+      "description": "Articles related to Payments, E-Payments & Vendor Database Management for business-to-business (B2B) payments.",
+      "followers": {
+        "facebook": 201,
+        "twitter": 889,
+        "instagram": 159
+      },
+      "image_url": "https://i1.feedspot.com/5014069.jpg?t=1617101380"
+    },
+    {
+      "title": "Bud Blog",
+      "feed_url": "https://www.thisisbud.com/en-us/company/blog/",
+      "website_url": "https://www.thisisbud.com/en-us/company/blog/",
+      "description": "All you need to know about finance, fintech and Bud.",
+      "followers": {
+        "facebook": 598,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4754565.jpg?t=1614084080"
+    },
+    {
+      "title": "FinTech Futures \u00bb Banking",
+      "feed_url": "https://www.fintechfutures.com/category/banking/feed/",
+      "website_url": "https://www.fintechfutures.com/category/banking/",
+      "description": "FinTech Futures is the definitive source of intelligence for the global fintech sector. We provide daily news, in-depth analysis and expert commentary across a comprehensive range of areas including: fintech, bankingtech, paytech, regtech, wealthtech, lendtech and insurtech.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 84000
+      },
+      "image_url": "https://i1.feedspot.com/4644180.jpg?t=1644917339"
+    },
+    {
+      "title": "The Financial Brand",
+      "feed_url": "https://thefinancialbrand.com/news/fintech-banking/feed/",
+      "website_url": "https://thefinancialbrand.com/",
+      "description": "The Financial Brand is a digital publication that focuses on marketing and strategy issues affecting retail banks and credit unions. It provides the financial and banking technology news with strategic analysis and real-world examples.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 28800
+      },
+      "image_url": "https://i1.feedspot.com/4650212.jpg?t=1649681137"
+    },
+    {
+      "title": "Hardbacon Blog",
+      "feed_url": "https://hardbacon.ca/en/feed/",
+      "website_url": "https://hardbacon.ca/en/blog/",
+      "description": "Covers articles containing lots of stories, tips and tricks that will help you better manage your personal finances and invest better. Hardbacon helps Canadians make better financial decisions and to become wealthier day after day.",
+      "followers": {
+        "facebook": 8800,
+        "twitter": 2800,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5258883.jpg?t=1616064559"
+    },
+    {
+      "title": "Shift4 Blog",
+      "feed_url": "https://securionpay.com/feed/",
+      "website_url": "https://www.shift4.com/blog",
+      "description": "Shift4 is a New York Stock Exchange traded company founded in 1999 and based in North America. Take your online payments experience to the next level with robust functionality, flexible integration options, ready-to-use code, and a powerful API.We protect our customers' data with ironclad security technology.",
+      "followers": {
+        "facebook": 589,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4754567.jpg?t=1617100690"
+    },
+    {
+      "title": "Cosaic Blog",
+      "feed_url": "https://cosaic.io/category/fintech/feed/",
+      "website_url": "https://interop.io/blog/",
+      "description": "At Cosaic, our mission is to make state-of-the-art software for firms that want to promote ingenuity, evolve intelligently, and improve end-user efficiency. View the latest FinTech news and information from Cosaic's product experts in this Fintech section.",
+      "followers": {
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/4650816.jpg?t=1609327804"
+    },
+    {
+      "title": "FinTech Australia",
+      "feed_url": "https://www.fintechaustralia.org.au/feed/",
+      "website_url": "https://www.fintechaustralia.org.au/newsroom/",
+      "description": "FinTech Australia is a member driven organisation that is building an ecosystem for Australian fintechs to advance the global economy and culture. All updates about the fintech ecosystem in Australia.",
+      "followers": {
+        "twitter": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5284093.jpg?t=1621947313"
+    },
+    {
+      "title": "Holland FinTech",
+      "feed_url": "https://hollandfintech.com/feed/",
+      "website_url": "https://hollandfintech.com/insights/",
+      "description": "Since 2014, we've provided access to knowledge, a network, investments, and talent to +300 companies. We connect people and organizations in the financial value chain, enabling consumers and businesses to profit from innovation and development. Read All Analyses, Company Announcements, Events, News, Event Recap, Fintech News, Funding News, and more on BlogHF.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 12800,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4649629.jpg?t=1617101700"
+    },
+    {
+      "title": "Earnix Blog",
+      "feed_url": "https://earnix.com/blog/feed/",
+      "website_url": "https://earnix.com/blog/",
+      "description": "Provides advanced insurance software, banking analytics and customer analytics software designed for the financial services industry, integrating real-time decision-making capabilities into the business process and delivering significant results. The Earnix Insurance & Banking Blog is a community blog for professionals that share a passion for transforming the financial world",
+      "followers": {
+        "facebook": 442,
+        "twitter": 862
+      },
+      "image_url": "https://i1.feedspot.com/5305572.jpg?t=1627367561"
+    },
+    {
+      "title": "FinTech Ranking",
+      "feed_url": "http://fintechranking.com/category/news/feed/",
+      "website_url": "https://www.divido.com/blog/",
+      "description": "Life.SREDA is a venture capital firm focusing on investments in FinTech mobile and Internet projects. Our strategy is determined by the deep understanding of the rapidly growing FinTech 2.0 industry and the narrow investment focus.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4650808.jpg?t=1673241027"
+    },
+    {
+      "title": "Divido Blog",
+      "feed_url": "https://www.divido.com/blog/feed/",
+      "website_url": "https://www.divido.com/blog/",
+      "description": "Divido is a fast and flexible platform for lenders, retailers and partners to deliver and scale their retail finance programme, with proven technology and expertise.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5447424.jpg?t=1663582737"
+    },
+    {
+      "title": "Lendingkart Official Blog",
+      "feed_url": "https://www.lendingkart.com/feed/",
+      "website_url": "https://www.lendingkart.com/blog/",
+      "description": "Lendingkart is one stop blog guide to improve your financial knowledge. Their aim is to make working capital finance available at the fingertips of entrepreneurs, so that they can focus on business instead of worrying about the gaps in their cash-flows. Get into their blog and find updates for all kind of loans and finance essentials related queries like business loan, msme loan, working capital loan, and much more.",
+      "followers": {
+        "facebook": 351700,
+        "twitter": 4800,
+        "instagram": 14500
+      },
+      "image_url": "https://i1.feedspot.com/4950250.jpg?t=1617100647"
+    },
+    {
+      "title": "15Mb",
+      "feed_url": "https://blog.dgwbirch.com/?feed=rss2",
+      "website_url": "https://dgwbirch.com/news/",
+      "description": "Analysis and comment on the future of digital financial services and more. David G.W. Birch is an Author and advisor on digital financial services, recognised thought leader in digital identity, global keynote speaker and Forbes contributor.",
+      "followers": {
+        "twitter": 26500
+      },
+      "image_url": "https://i1.feedspot.com/5272341.jpg?t=1619095763"
+    },
+    {
+      "title": "FintekNews",
+      "feed_url": "https://finteknews.com/feed",
+      "website_url": "https://www.fa-mag.com/technology/technology",
+      "description": "Welcome to FintekNews, the definitive quick source for information regarding the world of Fintech.",
+      "followers": {
+        "facebook": 70
+      },
+      "image_url": "https://i1.feedspot.com/4716121.jpg?t=1617102022"
+    },
+    {
+      "title": "Castlight Financial",
+      "feed_url": "https://castlightfinancial.com/feed/",
+      "website_url": "https://www.experian.co.uk/blogs/latest-thinking/industry/banking-financial-services/",
+      "description": "Castlight is a FinTech company that aggregates consumers transactional and credit data to provide real time, affordability & financial capability analysis. We are an innovative financial technology company with a successful track history of providing financial retailers with a range of digital tools to enhance the way they do business with their customers.",
+      "followers": {
+        "facebook": 47,
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/4649793.jpg?t=1617101870"
+    },
+    {
+      "title": "Bilderlings Blog",
+      "feed_url": "https://bilderlings.com/blog/feed/",
+      "website_url": "https://bilderlings.com/blog/",
+      "description": "Bilderlings offers the most popular banking services. We open current accounts for businesses and individuals, process online payments and provide payments to cards. At Bilderlings a better, faster and more convenient way to innovate, grow and succeed. We aspire to stay one step ahead of the fast-moving payment world and constantly adapt our offer to customer evolving needs.",
+      "followers": {
+        "facebook": 12600,
+        "twitter": 129
+      },
+      "image_url": "https://i1.feedspot.com/5024879.jpg?t=1617100741"
+    },
+    {
+      "title": "Kantox: Currency and Risk Management Solutions Blog",
+      "feed_url": "https://www.kantox.com/en/feed",
+      "website_url": "https://www.kantox.com/blog",
+      "description": "Kantox is a multinational fintech company offering FX management solutions. Technology and expertise to solve your currency-related business problems. We believe that the financial industry, known for its opacity and lack of innovation, needs a radical change. We believe it is time to redefine the industry, adopting more transparent, efficient and fairer models.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4650589.jpg?t=1614083517"
+    },
+    {
+      "title": "Fintech Finance",
+      "feed_url": "https://ffnews.com/",
+      "website_url": "https://ffnews.com/",
+      "description": "Here at Fintech Finance, we work with renowned executives in the industry to provide key decision-makers globally within leading financial services organizations with reliable and accurate intelligence on emerging trends and breakthrough technologies, helping them to make informed decisions.",
+      "followers": {
+        "twitter": 32200
+      },
+      "image_url": "https://i1.feedspot.com/4462158.jpg?t=1614083499"
+    },
+    {
+      "title": "PaymentsSource",
+      "feed_url": "https://www.paymentssource.com/feed?rss=true",
+      "website_url": "https://www.americanbanker.com/fintech",
+      "description": "PaymentsSource is the leading independent resource for professionals who need to stay ahead of trends shaping the global payments landscape. Get comprehensive coverage and analysis of the rapidly changing payments business, including digital wallets, investments, compliance and global trends.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 28600
+      },
+      "image_url": "https://i1.feedspot.com/4650499.jpg?t=1617100242"
+    },
+    {
+      "title": "XTRM",
+      "feed_url": "https://blog.xtrm.com/category/feed/Blog",
+      "website_url": "https://blog.xtrm.com/",
+      "description": "Global Payment Platform. Grow your business globally. Save time and money. Advanced API and Digital Wallet",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5211530.jpg?t=1603966549"
+    },
+    {
+      "title": "MeaWallet",
+      "feed_url": "https://www.meawallet.com/blog/feed",
+      "website_url": "https://www.meawallet.com/en/news",
+      "description": "Mea has built a Digital Payment Platform to enable a range of digital payment services, such as Tokenization, HCE, OEM Pays and Secure Remote Commerce. Built to support any payment schemes, the platform enables card digitization to any wallet application and wearable device for mobile and digital payments; all through a single connection. In our blog we share our thoughts about the latest innovations, changes in the market, regulatory changes and their impact and much more.",
+      "followers": {
+        "facebook": 135,
+        "twitter": 286
+      },
+      "image_url": "https://i1.feedspot.com/4867493.jpg?t=1617101692"
+    },
+    {
+      "title": "Envestnet Blog",
+      "feed_url": "https://www.yodlee.com/feed",
+      "website_url": "https://www.yodlee.com/company/blog",
+      "description": "A leading data aggregation and analytics platform powering dynamic, cloud-based innovation for digital financial services. Follow our blog for valuable insight and news on fintech events, trends, and tips for startups, developers, and financial institutions.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 11100
+      },
+      "image_url": "https://i1.feedspot.com/4649716.jpg?t=1617103544"
+    },
+    {
+      "title": "Fintech Ventures Fund",
+      "feed_url": "https://www.fintechv.com/feed/",
+      "website_url": "https://www.fintechv.com/news/",
+      "description": "Fintech Ventures is investing in start-up and growth companies, which are developing promising non-banking lending, payments, and insuretech companies. We are focused on investing in financial technology companies, from venture-backing to their growth/mature stages of development.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4650791.jpg?t=1617103562"
+    },
+    {
+      "title": "Fintech Americas",
+      "feed_url": "https://www.fintechamericas.co/feed/",
+      "website_url": "https://blog.fintechamericas.co/",
+      "description": "Fintech americas will host over 400 fintech leaders including financial executives, IT Professionals and Entrepreneurs running the banks charged with implementing or competing with the disruptive innovations poised to transform the financial sector.",
+      "followers": {
+        "facebook": 27400,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4649735.jpg?t=1617103570"
+    }
+  ]
+}

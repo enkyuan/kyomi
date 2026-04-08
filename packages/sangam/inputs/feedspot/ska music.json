@@ -1,0 +1,62 @@
+{
+  "category": "Ska Music",
+  "source_url": "https://rss.feedspot.com/ska_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Hard Times \u00bb Ska",
+      "feed_url": "https://thehardtimes.net/music/ska/feed/",
+      "website_url": "https://thehardtimes.net/music/ska/",
+      "description": "The Hard Times is a very real punk news site that you should not question. Just absorb the information as truth and move on. The historic satire site was founded in December 1976. It's made by a group of punk and hardcore kids from all the different sub-genres of the DIY hardcore scene.",
+      "followers": {
+        "facebook": 429500,
+        "twitter": 118100,
+        "instagram": 849500
+      },
+      "image_url": "https://i1.feedspot.com/5159125.jpg?t=1625818039"
+    },
+    {
+      "title": "Reggae Steady Ska Blog",
+      "feed_url": "https://reggae-steady-ska.com/feed/",
+      "website_url": "https://reggae-steady-ska.com/blog/",
+      "description": "Reggae Steady Ska is a music magazine and community dedicated to the best ska music around the world.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 4200,
+        "instagram": 946
+      },
+      "image_url": "https://i1.feedspot.com/5010028.jpg?t=1622268621"
+    },
+    {
+      "title": "The Duff Guide to Ska",
+      "feed_url": "http://duffguidetoska.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://duffguidetoska.blogspot.com/",
+      "description": "You should know that we are old school and prefer music in tangible formats (plus I might use your music when I DJ ska events). The Duff Guide to Ska Album, Single, Book, and Gig Reviews!",
+      "followers": {
+        "facebook": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5089911.jpg?t=1625818035"
+    },
+    {
+      "title": "Skabook.com Blog",
+      "feed_url": "https://skabook.com/feed/",
+      "website_url": "https://skabook.com/blog/",
+      "description": "Heather Augustyn is a journalist and writing teacher living in Chesterton, one hour outside of Chicago. She is the author of Ska: An Oral History, McFarland, 2010, with a foreword by Cedella Marley which was nominated for the ARSC Award for Excellence; Don Drummond: The Genius and Tragedy of the World's Greatest Trombonist, McFarland, 2013, with a foreword by Delfeayo Marsalis.",
+      "followers": {
+        "twitter": 657
+      },
+      "image_url": "https://i1.feedspot.com/5159191.jpg?t=1625818050"
+    },
+    {
+      "title": "BrooklynVegan \u00bb Ska",
+      "feed_url": "https://www.brooklynvegan.com/tags/ska/feed/",
+      "website_url": "https://www.brooklynvegan.com/tags/ska/",
+      "description": "A NYC-based music blog providing show listings, pictures, up to date artist information, and more. Subscribe to get recent updates about ska-punk genre.",
+      "followers": {
+        "facebook": 131200,
+        "twitter": 185400,
+        "instagram": 245400
+      },
+      "image_url": "https://i1.feedspot.com/5159180.jpg?t=1625818044"
+    }
+  ]
+}

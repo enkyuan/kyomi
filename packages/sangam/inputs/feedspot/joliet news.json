@@ -1,0 +1,52 @@
+{
+  "category": "Joliet News",
+  "source_url": "https://rss.feedspot.com/joliet_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Times Weekly \u00bb Joliet",
+      "feed_url": "https://thetimesweekly.com/category/news/local/joliet/feed/",
+      "website_url": "https://thetimesweekly.com/category/news/local/joliet/",
+      "description": "The Times Weekly is an online news site and print newspaper dedicated to covering all of the news that occurs in Joliet and the surrounding Will County communities of Plainfield, Romeoville, New Lenox, Lockport, Shorewood, Crest Hill, Bolingbrook and Homer Glen.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 941
+      },
+      "image_url": "https://i1.feedspot.com/5140767.jpg?t=1587369244"
+    },
+    {
+      "title": "NBC Chicago \u00bb Joliet",
+      "feed_url": "https://www.nbcchicago.com/tag/joliet/feed/",
+      "website_url": "https://www.nbcchicago.com/tag/joliet/",
+      "description": "This section on NBC Chicago shows stories and articles covering the city of Joliet, Illinois. Read the latest updates to stay up-to-date. NBCChicago provides in-depth local news coverage of Chicagoland. Get to know Chicago and its surrounding region like never before at nbcchicago.com.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 495000,
+        "instagram": 372900
+      },
+      "image_url": "https://i1.feedspot.com/5511080.jpg?t=1676985557"
+    },
+    {
+      "title": "WGN-TV \u00bb Joliet",
+      "feed_url": "https://wgntv.com/news/joliet/feed/",
+      "website_url": "https://wgntv.com/news/joliet/",
+      "description": "Grab The Latest News and Updates in Joliet brought to you by the team at WGN-TV - Chicago's Very Own source for breaking news, weather, sports, and entertainment. This page will feature the top Joliet headlines and articles to keep readers informed on Joliet communities.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 431800,
+        "instagram": 224700
+      },
+      "image_url": "https://i1.feedspot.com/5511081.jpg?t=1676985534"
+    },
+    {
+      "title": "Shaw Local News",
+      "feed_url": "https://www.shawlocal.com/arc/outboundfeeds/rss/?outputType=xml",
+      "website_url": "https://www.shawlocal.com/the-herald-news/news/",
+      "description": "The Herald-News is your best source for local daily news and sports in Joliet and its neighboring communities in Will and Grundy counties.",
+      "followers": {
+        "facebook": 48600,
+        "twitter": 10700
+      },
+      "image_url": "https://i1.feedspot.com/5140785.jpg?t=1587370836"
+    }
+  ]
+}

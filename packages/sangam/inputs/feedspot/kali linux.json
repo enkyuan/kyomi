@@ -1,0 +1,59 @@
+{
+  "category": "Kali Linux",
+  "source_url": "https://rss.feedspot.com/kali_linux_rss_feeds",
+  "feeds": [
+    {
+      "title": "Danny Da \u00bb Kali Linux",
+      "feed_url": "https://dannyda.com/tag/kali-linux/feed/",
+      "website_url": "https://dannyda.com/tag/kali-linux/",
+      "description": "Read How-to Guides, cool effects and various other tricks you need to know about the Kali Linux Distribution in this category of Danny Da's blog. He also writes about cyber security, servers, virtualization, computers, cloud computing, guides, tips, DevOps, coding, and everything technology.",
+      "followers": {
+        "twitter": 275,
+        "instagram": 48
+      },
+      "image_url": "https://i1.feedspot.com/5426467.jpg?t=1659589574"
+    },
+    {
+      "title": "Cyber Security News \u00bb Kali Linux",
+      "feed_url": "https://cybersecuritynews.com/category/kali-linux/feed/",
+      "website_url": "https://cybersecuritynews.com/category/kali-linux/",
+      "description": "Latest Hacker and Security News",
+      "followers": {
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/7315982.jpg"
+    },
+    {
+      "title": "KaliTut",
+      "feed_url": "https://kalitut.com/feed/",
+      "website_url": "https://kalitut.com/",
+      "description": "KaliTut's Linux and pentesting blog offers you Tutorials on the Penetration and Testing of your system, Dark web articles, GitHub tools, and compact start-to-end guides to learn & understand Ethical Hacking, Prevention against Viruses, and many other features that can be used on Kali Linux.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 19100
+      },
+      "image_url": "https://i1.feedspot.com/5426468.jpg?t=1716215111"
+    },
+    {
+      "title": "Kali Linux Blog",
+      "feed_url": "https://www.kali.org/rss.xml",
+      "website_url": "https://www.kali.org/blog/",
+      "description": "Read all about our latest updates, features, and tools on our official blog for Kali Linux. We dissect new releases, Virtual machines, Build Scripts on Kali, and much more. Kali Linux is an Advanced Penetration Testing Linux distribution used for Penetration Testing, Ethical Hacking, and network security assessments. What makes our platform better is our selection of useful and relevant features that it offers to security professionals.",
+      "followers": {
+        "facebook": 112900,
+        "twitter": 392500
+      },
+      "image_url": "https://i1.feedspot.com/5426472.jpg?t=1659076633"
+    },
+    {
+      "title": "Kali Linux",
+      "feed_url": "https://www.kalilinux.in/feeds/posts/default?alt=rss",
+      "website_url": "https://www.kalilinux.in/",
+      "description": "Our blog offers a large number of Kali Linux tutorials to learn Cybersecurity. Find out more on how to detect malware on android apps, ethical hacking, VPNs, and other tech-related topics. We cover all the tools that are in Kali Linux and customizations to be as resourceful as possible for penetration testers and aim to eventually cover pentest on wireless networks, web apps, and faults in software programs.",
+      "followers": {
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5426470.jpg?t=1659076449"
+    }
+  ]
+}

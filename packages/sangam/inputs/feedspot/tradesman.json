@@ -1,0 +1,86 @@
+{
+  "category": "Tradesman",
+  "source_url": "https://rss.feedspot.com/tradesman_rss_feeds",
+  "feeds": [
+    {
+      "title": "Sonnhalter Blog",
+      "feed_url": "https://www.sonnhalter.com/feed/",
+      "website_url": "https://www.sonnhalter.com/blog/",
+      "description": "Sonnhalter is the leading B2T marketing communications firm to companies that target professional tradesmen in construction, industrial and MRO markets.",
+      "followers": {
+        "facebook": 246,
+        "twitter": 604,
+        "instagram": 583
+      },
+      "image_url": "https://i1.feedspot.com/5570126.jpg?t=1693572561"
+    },
+    {
+      "title": "Tradesmen.ie Blog",
+      "feed_url": "http://blog.tradesmen.ie/feed/",
+      "website_url": "http://blog.tradesmen.ie/",
+      "description": "Tradesmen.ie is a free Irish online service. We help you to find local tradesmen along with a number quotes for your job.",
+      "followers": {
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5570121.jpg?t=1684491587"
+    },
+    {
+      "title": "Tradesman Saver",
+      "feed_url": "https://www.tradesmansaver.co.uk/tradesman-insights/feed/",
+      "website_url": "https://www.tradesmansaver.co.uk/tradesman-insights/",
+      "description": "Tradesman Saver offers specialist tradesmen insurance policies, including public liability insurance. Industry specialists in insurance for tradespeople, supporting the trades that are building Britain.",
+      "followers": {
+        "facebook": 16100,
+        "twitter": 173,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5570124.jpg?t=1684491973"
+    },
+    {
+      "title": "Tradesmen Online Blog",
+      "feed_url": "https://tradesmenonline.co.uk/feed/",
+      "website_url": "https://tradesmenonline.co.uk/blog/",
+      "description": "Tradesmen Online seeks to connect homeowners with quality and trusted tradespeople local to you. Our online service is designed with homeowners and tradespeople in mind. Customers will get quotes for their job quick and easy. While tradespeople are able to find local work to support their business and grow their customer base.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5570122.jpg?t=1684393813"
+    },
+    {
+      "title": "PeopleReady Skilled Trades",
+      "feed_url": "https://skilled.peopleready.com/feed/",
+      "website_url": "https://skilled.peopleready.com/staffing-resources/",
+      "description": "Skilled trades staffing isn't just what we do it's who we are. Since 1987, PeopleReady Skilled Trades has connected tradespeople and work. Our Respect the Craft program rewards hardworking tradespeople for their talent. We're sharing insights from the construction and energy staffing industries via articles, infographics, case studies, videos and more.",
+      "followers": {
+        "facebook": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5570119.jpg?t=1684493845"
+    },
+    {
+      "title": "Tradesman Digital Marketing Blog",
+      "feed_url": "https://tradesmandigitalmarketing.ca/feed/",
+      "website_url": "https://tradesmandigitalmarketing.ca/blog/",
+      "description": "Tradesman Digital Marketing is a Google Ads Agency that specializes in servicing companies in the skilled trades.Stay Up To Date Will All The Latest Tips And Tricks For Running A Successful Google Ads Campaign!og:Description -",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5570125.jpg?t=1684393791"
+    },
+    {
+      "title": "Xemplar",
+      "feed_url": "https://xemplar.com/feed/",
+      "website_url": "https://xemplar.com/resources/",
+      "description": "America's tradesmen recruiting experts. Serving top industrial pros and the companies that employ them. XEMPLAR is a premier, nationwide industrial skilled workforce recruiting company. Welcome mechanics, machinists, welders, and electricians! Our blog offers the latest news, reports, and articles for tradesmen and trades employers",
+      "followers": {
+        "twitter": 122
+      },
+      "image_url": "https://i1.feedspot.com/5570120.jpg?t=1684415844"
+    },
+    {
+      "title": "BUILT Blog",
+      "feed_url": "https://www.builtfortrades.co.uk/feed",
+      "website_url": "https://www.builtfortrades.co.uk/blog",
+      "description": "Building the tools to get trades found online. We offer expert advice and teach you all the tips and tricks we have learnt over the years to help your website rank and win more work!",
+      "followers": {
+        "facebook": 971
+      },
+      "image_url": "https://i1.feedspot.com/5570127.jpg?t=1684393749"
+    }
+  ]
+}

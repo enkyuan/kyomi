@@ -1,0 +1,71 @@
+{
+  "category": "UK Bisexual",
+  "source_url": "https://rss.feedspot.com/uk_bisexual_rss_feeds",
+  "feeds": [
+    {
+      "title": "Bi Community News",
+      "feed_url": "https://bicommunitynews.co.uk/feed/",
+      "website_url": "https://bicommunitynews.co.uk/",
+      "description": "Britain's biggest-selling bisexual magazine, out every two months with a big dollop of news, opinion and community information about bi life across the UK. Follow this community news to get opinions on bi life.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 10600,
+        "instagram": 736
+      },
+      "image_url": "https://i1.feedspot.com/4759151.jpg?t=1608553283"
+    },
+    {
+      "title": "BiBloggers",
+      "feed_url": "http://bimedia.org/blogs/feed/",
+      "website_url": "http://bimedia.org/blogs/",
+      "description": "Bringing bisexual voices together. Bi Bloggers is a 'blog aggregator' website, bringing together blogs about bisexual themes by writers across the UK and Ireland. It was set up with the aim of fostering a sense of a bi blogging community, and lets you read all the best writing in the UK bi-blogosphere in a single page or feed. Follow this blog and get posts and articles on bisexuals.",
+      "followers": {
+        "facebook": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4758571.jpg?t=1608553292"
+    },
+    {
+      "title": "Either / And",
+      "feed_url": "https://jenyockney.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://jenyockney.blogspot.com/",
+      "description": "Lefty bisexual activist talk. I'm a bi activist in the UK - editor at Bi Community News, and behind projects like Bi Bloggers (which brings together people writing about bi life in the UK) and BiPhoria, the UK's longest-running bi group.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4758590.jpg?t=1608554145"
+    },
+    {
+      "title": "BiPhoria",
+      "feed_url": "http://biphoria.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://biphoria.blogspot.com/",
+      "description": "BiPhoria is the UK's longest-running bisexual community project, building social / support space, doing research, giving policy input and arranging speakers on bi issues for events.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/4758605.jpg?t=1608554056"
+    },
+    {
+      "title": "Here NI",
+      "feed_url": "https://hereni.org/feed/",
+      "website_url": "https://hereni.org/",
+      "description": "A place for lesbian and bisexual women. HERe NI is a charity that works on a regional basis to improve the quality of life for lesbian and bisexual women and their families.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4761324.jpg?t=1608554052"
+    },
+    {
+      "title": "PinkNews \u00bb Bisexual",
+      "feed_url": "https://www.pinknews.co.uk/topic/bisexual/feed/",
+      "website_url": "https://www.pinknews.co.uk/topic/bisexual/",
+      "description": "News, reviews and comment on Bisexual for the gay, lesbian, bisexual and transgender community from PinkNews, Europe's largest gay news service.Follow this site and get insights on bisexuals and bisexuality.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 302400
+      },
+      "image_url": "https://i1.feedspot.com/4761262.jpg?t=1608553295"
+    }
+  ]
+}

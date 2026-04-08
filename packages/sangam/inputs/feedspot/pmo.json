@@ -1,0 +1,93 @@
+{
+  "category": "PMO",
+  "source_url": "https://rss.feedspot.com/pmo_rss_feeds",
+  "feeds": [
+    {
+      "title": "PMO Advisory",
+      "feed_url": "https://www.pmoadvisory.com/feed/",
+      "website_url": "https://www.pmoadvisory.com/blog/",
+      "description": "Covers articles on Chief Project Officer, PMO, PMP, PfMP, PgMP, Portfolio Management, Risk Management, Talent Management, Social Consciousness, Scrum, Leadership and more. PMO Advisory is on mission to provide world-class project management consulting and training.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 1000,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5301510.jpg?t=1626245900"
+    },
+    {
+      "title": "Zalando PMO",
+      "feed_url": "https://pmo.zalando.com/atom.xml",
+      "website_url": "https://pmo.zalando.com/",
+      "description": "Covers articles on Portfolio, Stakeholder Management, Governance, Change Management, Methodology, Communication, Program Management and Roles Collaboration. Zalando is Europe's leading online platform for fashion and lifestyle.",
+      "followers": {
+        "twitter": 13000,
+        "instagram": 16900
+      },
+      "image_url": "https://i1.feedspot.com/5301512.jpg?t=1626247330"
+    },
+    {
+      "title": "HotPMO",
+      "feed_url": "https://www.hotpmo.com/blog/feed/",
+      "website_url": "https://www.hotpmo.com/blog/",
+      "description": "Find out what's happening in our business, and in the world of PMO. In our blog and news section we keep you up to date with what is happening at HotPMO, whilst bringing you hot takes on the latest news from industry. Also covers articles for PMO and Project Management professionals.",
+      "followers": {
+        "facebook": 50,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5301509.jpg?t=1626245505"
+    },
+    {
+      "title": "PMO Tech Consulting Blog",
+      "feed_url": "https://www.pmotechconsulting.com/feed/",
+      "website_url": "https://www.pmotechconsulting.com/blogs/",
+      "description": "PMO Tech Consultancy was established to assist clients during their large scale transformation programmes, by providing a Project Management Office (PMO) service, leading to improved project performance and providing significant business benefits.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5301511.jpg?t=1626246731"
+    },
+    {
+      "title": "ITS Project Management Office",
+      "feed_url": "https://pmo.its.uconn.edu/feed/",
+      "website_url": "https://pmo.its.uconn.edu/blog/",
+      "description": "Covers PMO, Risk Management, Quality Assurance, Testing, Project lifecycle, and Project Management. The ITS Project Management Office (PMO) executes a portfolio of IT projects that contribute to the goals and initiatives of ITS and support the institutional mission.",
+      "followers": {
+        "facebook": 130400,
+        "twitter": 108900,
+        "instagram": 164600
+      },
+      "image_url": "https://i1.feedspot.com/5301515.jpg?t=1626250750"
+    },
+    {
+      "title": "PMO Partners Blog",
+      "feed_url": "https://pmopartners.com/feed/",
+      "website_url": "https://pmopartners.com/blog/",
+      "description": "Covers Career Tips, Project Management, Management Best Practices, Hiring Advice, Corporate, Speaker Spotlight and News. PMO Partners is a leader among IT project management companies providing talent for critical initiatives.",
+      "followers": {
+        "facebook": 464,
+        "twitter": 127
+      },
+      "image_url": "https://i1.feedspot.com/5301514.jpg?t=1626249671"
+    },
+    {
+      "title": "PMO Professionals",
+      "feed_url": "https://www.thepmoprofessionals.com/articles/",
+      "website_url": "https://www.thepmoprofessionals.com/articles/",
+      "description": "Covers PMO, Stakeholder management, Schedule Monitoring, Change Management, Schedule Setup, Lessons Learned, and Book reviews. Pragmatic PMO is an independent management consultancy company which helps an organizations to deliver their projects and programmes, better.",
+      "followers": {
+        "facebook": 1,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5301516.jpg?t=1626251263"
+    },
+    {
+      "title": "Exceptional PPM",
+      "feed_url": "https://exceptional-pmo.com/blog/files/feed.xml",
+      "website_url": "http://exceptional-pmo.com/blog/blog.html",
+      "description": "World-class project leadership inclusive of project, program, portfolio, and PMO management in agile, traditional, and hybrid environments. Also covers articles on Scrum Artifacts, Agile Transformation, Professional Development, Team Development, Global PMO and more.",
+      "followers": {
+        "facebook": 581,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5301513.jpg?t=1626248252"
+    }
+  ]
+}

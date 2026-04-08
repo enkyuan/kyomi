@@ -1,0 +1,792 @@
+{
+  "category": "Nursing",
+  "source_url": "https://rss.feedspot.com/nursing_rss_feeds",
+  "feeds": [
+    {
+      "title": "AJN Off The Charts",
+      "feed_url": "https://ajnoffthecharts.com/feed/",
+      "website_url": "https://ajnoffthecharts.com/",
+      "description": "The official blog of the American Journal of Nursing, we publish short, engaging posts by working nurses and experts on quality improvement projects, patient care stories, nursing education and career issues, health care technology, and important health care policy.",
+      "followers": {
+        "facebook": 213500,
+        "twitter": 55200
+      },
+      "image_url": "https://i1.feedspot.com/4550343.jpg?t=1614667750"
+    },
+    {
+      "title": "FreshRN Blog",
+      "feed_url": "https://www.freshrn.com/feed/",
+      "website_url": "https://www.freshrn.com/blog/",
+      "description": "Kati Kleber, MSN RN is a nurse educator, author, national speaker, host of the FreshRN Podcast, and owner of FreshRN - an online platform created to educate, encourage, and motivate newly licensed nurses in innovative ways.",
+      "followers": {
+        "twitter": 22700,
+        "instagram": 36700
+      },
+      "image_url": "https://i1.feedspot.com/4550468.jpg?t=1670588369"
+    },
+    {
+      "title": "Advances in Nursing Science Blog",
+      "feed_url": "https://ansjournalblog.com/feed/",
+      "website_url": "https://ansjournalblog.com/",
+      "description": "The journal Editor is Peggy L. Chinn, RN, Ph.D., FAAN.The ANS Blog provides a forum for discussing issues raised in the articles published in Advances in Nursing Science.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 417
+      },
+      "image_url": "https://i1.feedspot.com/4550444.jpg?t=1626267594"
+    },
+    {
+      "title": "The Correctional Nurse Blog",
+      "feed_url": "https://correctionalnurse.net/feed/",
+      "website_url": "https://correctionalnurse.net/blog/",
+      "description": "The Correctional Nurse Blog was started in 2009 and acquired by Lori Roscoe, DNP, Ph.D., APRN, ANP-C, CCHP-RN, and a clinical nurse practitioner and nurse educator specializing in the field of correctional nursing and healthcare, in 2019. It is dedicated to inspiring professional correctional nursing practice.",
+      "followers": {
+        "facebook": 1300,
+        "instagram": 116
+      },
+      "image_url": "https://i1.feedspot.com/4550420.jpg?t=1659330996"
+    },
+    {
+      "title": "Registered Nurse RN Blog",
+      "feed_url": "https://feeds.feedburner.com/rnlife",
+      "website_url": "https://www.registerednursern.com/blog/",
+      "description": "Registered Nurse RN, Nurse Sarah's official website offers nursing video lectures, study notes, quizzes, and templates. We aim to help aspiring nurses, nursing students, and new nurses.",
+      "followers": {
+        "facebook": 916200,
+        "twitter": 9500,
+        "instagram": 846600
+      },
+      "image_url": "https://i1.feedspot.com/5425356.jpg?t=1658834788"
+    },
+    {
+      "title": "Nurse Nacole",
+      "feed_url": "https://feeds.feedburner.com/nursenacole",
+      "website_url": "http://www.nursenacole.com/",
+      "description": "Nacole Riccaboni is a board-certified registered nurse, blogs about advanced nursing education and being a new nurse. She posts daily nursing tips, bedside nursing resources, practices, along with advice on nursing academics, licensing exams, professionalism, and nursing school success.",
+      "followers": {
+        "facebook": 30600,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4274827.jpg?t=1614668830"
+    },
+    {
+      "title": "Nurses Advocates Blog",
+      "feed_url": "https://nursesadvocates.com/feed/",
+      "website_url": "https://nursesadvocates.com/blog/",
+      "description": "The Nurses Advocates blog is written by Anne Allewellyn, a registered nurse with years of experience. The blog provides information and resources for nurses, patients, and their caregivers. Anne's goal is to help people better understand the complex world of healthcare and to empower them to be their own best advocates.",
+      "followers": {
+        "facebook": 818,
+        "twitter": 813
+      },
+      "image_url": "https://i1.feedspot.com/5593558.jpg?t=1686286694"
+    },
+    {
+      "title": "The Nurse Shark Academy Blog",
+      "feed_url": "https://www.thenursesharkacademy.biz/blog-feed.xml",
+      "website_url": "https://www.thenursesharkacademy.biz/blog",
+      "description": "Nurse Shark Academy's blog shares insights into achieving your goals for your business. It discusses topics in healthcare and nursing including practice issues, economics, and nursing news. Author Tina M. Baxter is an advanced practice registered nurse and a board-certified gerontological nurse practitioner provides legal nurse consulting services for attorneys and insurance professionals.",
+      "followers": {
+        "twitter": 80
+      },
+      "image_url": "https://i1.feedspot.com/7303007.jpg?t=1713777270"
+    },
+    {
+      "title": "Nurse.org",
+      "feed_url": "https://nurse.org/articles/feed/",
+      "website_url": "https://nurse.org/articles/",
+      "description": "The go-to source for nursing news and career resources. From the top nursing programs to how to become a nurse, Nurse.org has the information nurses need.",
+      "followers": {
+        "facebook": 138800,
+        "instagram": 228400
+      },
+      "image_url": "https://i1.feedspot.com/4550832.jpg?t=1614667641"
+    },
+    {
+      "title": "Daily Nurse",
+      "feed_url": "http://www.dailynurse.com/feed/",
+      "website_url": "https://www.dailynurse.com/",
+      "description": "DailyNurse.com is a nursing news, reviews, and career site that provides nurses with the latest information and resources to help them succeed in their careers. It is a great resource for any nurse who wants to stay up-to-date on the latest nursing news, learn new skills, and connect with other nurses.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 2200,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4550960.jpg?t=1614667680"
+    },
+    {
+      "title": "Nursing Times",
+      "feed_url": "https://www.nursingtimes.net/feed/",
+      "website_url": "https://www.nursingtimes.net/news/",
+      "description": "Nursing Times is the independent voice of nursing. We educate, inform and support the nursing profession through our award-winning peer-reviewed journal, online learning resources, and website.",
+      "followers": {
+        "facebook": 93200,
+        "twitter": 153300,
+        "instagram": 18100
+      },
+      "image_url": "https://i1.feedspot.com/4550830.jpg?t=1613715434"
+    },
+    {
+      "title": "Minority Nurse Blog",
+      "feed_url": "http://minoritynurse.com/blog/feed/",
+      "website_url": "https://minoritynurse.com/blog-page/",
+      "description": "MinorityNurse is the leading career resource for nurses and the largest dedicated diversity nursing jobs board. We provide a wide range of free career articles, advice, and information for nurses.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 9100,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4550366.jpg?t=1626186165"
+    },
+    {
+      "title": "The Relentless School Nurse Blog",
+      "feed_url": "https://relentlessschoolnurse.com/feed/",
+      "website_url": "https://relentlessschoolnurse.com/therelentlessblog/",
+      "description": "The Relentless School Nurse by Robin Cogan is a Blog & a website curated to explore, learn & build community. Robin Cogan, MEd, RN, NCSN is a Nationally Certified School Nurse (NCSN), currently in her 22nd year as a New Jersey school nurse in the Camden City School District.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 13800,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5322451.jpg?t=1657716748"
+    },
+    {
+      "title": "Evidence-Based Nursing Blog",
+      "feed_url": "https://blogs.bmj.com/ebn/feed/",
+      "website_url": "https://blogs.bmj.com/ebn/",
+      "description": "Analysis and discussion of developments in Evidence-Based Nursing. EBN publishes critical commentaries and summaries of the most valid research in nursing, from other international healthcare journals.",
+      "followers": {
+        "twitter": 491600
+      },
+      "image_url": "https://i1.feedspot.com/2047531.jpg?t=1613715439"
+    },
+    {
+      "title": "Diversity Nursing Blog",
+      "feed_url": "https://blog.diversitynursing.com/blog/rss.xml",
+      "website_url": "https://blog.diversitynursing.com/blog",
+      "description": "DiversityNursing is the nation's leading online service for diversity nurse recruitment and career development- providing top-quality recruitment services and networking opportunities while linking under-represented nursing candidates to healthcare employers around the country.",
+      "followers": {
+        "facebook": 69900,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4550316.jpg?t=1626250633"
+    },
+    {
+      "title": "Straight A Nursing Blog",
+      "feed_url": "https://straightanursingstudent.com/feed/",
+      "website_url": "https://straightanursingstudent.com/blog/",
+      "description": "I'm Nurse Mo, an experienced critical care RN with about 8 years of titrating vasopressors under my belt. Straight A Nursing Student is your online resource for all things nursing. Here you'll find study aids, lecture notes, and tons of great information you can use to succeed in nursing school, in your prerequisite courses, and on the job.",
+      "followers": {
+        "facebook": 15100,
+        "twitter": 2700,
+        "instagram": 13400
+      },
+      "image_url": "https://i1.feedspot.com/4550845.jpg?t=1614667688"
+    },
+    {
+      "title": "Getting Older: Charting the Uncharted",
+      "feed_url": "https://nursingstories.org/feed/",
+      "website_url": "https://nursingstories.org/grid-of-posts-3x2/",
+      "description": "Nursing Stories is a heartfelt blog about one woman's experiences in nursing. Marianna Crane, a blogger & nurse for over 40 years, shares her stories from the past and present. The goal is to encourage nurses to boast",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4550439.jpg?t=1626262526"
+    },
+    {
+      "title": "Elizabeth Scala Blog",
+      "feed_url": "https://elizabethscala.com/feed/",
+      "website_url": "https://elizabethscala.com/blog/",
+      "description": "Elizabeth Scala, MSN/MBA, RN, HNB-BC, YTT, is a board-certified holistic nurse, certified coach, reiki master, yoga instructor, and qigong facilitator. She helps you achieve a greater range of motion after your elbow injury so you can get back to the things you loved prior to your accident. Subscribe for her latest health tips.",
+      "followers": {
+        "twitter": 9300
+      },
+      "image_url": "https://i1.feedspot.com/4550896.jpg?t=1614667990"
+    },
+    {
+      "title": "NURSING.com Blog",
+      "feed_url": "https://blog.nursing.com/rss.xml",
+      "website_url": "https://blog.nursing.com/",
+      "description": "NURSING.com's blog is filled with helpful posts on getting into nursing school, passing your classes as well as the NCLEX. NURSING.com is the best place to learn nursing via learner-focused education for all stages of the nursing journey.",
+      "followers": {
+        "facebook": 282900,
+        "instagram": 95200
+      },
+      "image_url": "https://i1.feedspot.com/4550838.jpg?t=1617435818"
+    },
+    {
+      "title": "The Nurse Speak Blog",
+      "feed_url": "https://thenursespeak.com/feed/",
+      "website_url": "https://thenursespeak.com/blog/",
+      "description": "Find a variety of articles written on Nursing Education, NCLEX Prep Strategies, Test-Taking Tips, Professional Development & Entrepreneurship! Damion Jenkins, RN, MSN, is the Lead Educational Specialist and NCLEX Prep Expert at The Nurse Speak.",
+      "followers": {
+        "facebook": 917,
+        "twitter": 826
+      },
+      "image_url": "https://i1.feedspot.com/5269665.jpg?t=1618557677"
+    },
+    {
+      "title": "Emerging Nurse Leader Blog",
+      "feed_url": "https://emergingrnleader.com/feed/",
+      "website_url": "https://emergingrnleader.com/home-blog/",
+      "description": "Blog topics cover Career Tips, Communication, Conflict Management, Leading Others, Business of Healthcare, Charge Nurse Role, and Future of Healthcare. Emerging Nurse Leader is a leadership development blog for new & experienced nurse leaders authored by Dr. Rose O. Sherman, EdD, RN, FAAN.",
+      "followers": {
+        "facebook": 758
+      },
+      "image_url": "https://i1.feedspot.com/4445239.jpg?t=1607491379"
+    },
+    {
+      "title": "Healthy Workforce Institute Blog",
+      "feed_url": "https://healthyworkforceinstitute.com/feed/",
+      "website_url": "https://healthyworkforceinstitute.com/hwi-blog/",
+      "description": "The Healthy Workforce Institute is the global leader in addressing disruptive behavior in healthcare. Through our cadre of services, we provide the strategies, skills, and solutions to address any incidences of disruptive behaviors that show up in healthcare.",
+      "followers": {
+        "facebook": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5421231.jpg?t=1657714440"
+    },
+    {
+      "title": "NexNURSE Blog",
+      "feed_url": "https://www.nexnurse.com/rss/",
+      "website_url": "https://www.nexnurse.com/blog",
+      "description": "Covers articles about career advice, employers news, healthcare industry news, travel nursing, and more. NexNURSE is the hub for Next Generation Nurses & Clinicians to research and connect with healthcare facilities.",
+      "followers": {
+        "facebook": 142,
+        "twitter": 6,
+        "instagram": 191
+      },
+      "image_url": "https://i1.feedspot.com/5300820.jpg?t=1626419304"
+    },
+    {
+      "title": "The Nurse Break Blog",
+      "feed_url": "https://www.thenursebreak.org/feed/",
+      "website_url": "https://www.thenursebreak.org/blog/",
+      "description": "The Nurse Break is a platform that allows for sharing of experience and breaking down of public and societal misconceptions about the diverse role of a nurse. The Nurse Break offers you content for all nurses and midwives from students through to Directors or Nursing and Professors on the one website.",
+      "followers": {
+        "facebook": 18400,
+        "twitter": 451,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5260313.jpg?t=1616480008"
+    },
+    {
+      "title": "Nurse Practitioners In Business",
+      "feed_url": "https://feeds.feedburner.com/NursePractitionersInBusiness",
+      "website_url": "https://npbusiness.org/",
+      "description": "The business blog for Advance Practice Clinicians. Provides business and marketing education, resources, and support to entrepreneurial clinicians. Read articles on NP practice, practice management, professional development, and NP interviews. Founded by Barbara Phillips, APRN, GNP, FNP-BC FAANP.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 7900,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4550268.jpg?t=1614667790"
+    },
+    {
+      "title": "Nursing Review",
+      "feed_url": "https://www.nursingreview.com.au/feed/",
+      "website_url": "https://www.nursingreview.com.au/",
+      "description": "The latest news, features, clinical practice, and opinions on nursing in Australia and the world. Nursing Review is essential reading for anyone involved in the health care sector in Australia, and is the only magazine in the country dedicated to reporting issues of importance to nurses.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4550984.jpg?t=1614667911"
+    },
+    {
+      "title": "VantheNP \u00bb Nursing",
+      "feed_url": "https://vanthenp.com/category/nursing/feed/",
+      "website_url": "https://vanthenp.com/category/nursing/",
+      "description": "I'm Junette. I am a mother, MSN holder, traveler, cook, foodie, baker, and an untrained photographer. This blog shares all the things I love with you.So stay tuned to my life as a nurse while going to school to be a Nurse Practitioner, being a Clinical Instructor, and wanting to specialize in OBGYN and Cosmetics.",
+      "followers": {
+        "facebook": 303,
+        "twitter": 313
+      },
+      "image_url": "https://i1.feedspot.com/5315888.jpg?t=1629975778"
+    },
+    {
+      "title": "Dear Nurses",
+      "feed_url": "http://dearnurses.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://dearnurses.blogspot.com/",
+      "description": "This blog is a helpful clinical resource for nurses. we make no claims to being a nursing program, or of having any affiliation to any nursing program. Please stay posted on how to improve your clinical skills and patient & family communication skills.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5421221.jpg?t=1657713962"
+    },
+    {
+      "title": "Diary Of A School Nurse",
+      "feed_url": "https://feeds.feedburner.com/DiaryOfASchoolNurse",
+      "website_url": "https://diaryofaschoolnurse.blogspot.com/",
+      "description": "Diary Of A School Nurse was founded in 2011 as a place to write about 'what really happens in the nurse's office'; a place to document and share those unbelievable stories that might someday be turned into a book. In addition to sharing HIPAA-approved stories, it is also a place to write for other school nurses. A place to share another perspective and read about office ideas, and paperwork challenges. Mostly a place to find (hopefully) helpful tips and tricks for other school nurses.",
+      "followers": {
+        "facebook": 10000,
+        "twitter": 302,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5322448.jpg?t=1631802036"
+    },
+    {
+      "title": "Exceptional Nurse",
+      "feed_url": "http://exceptionalnurse.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://exceptionalnurse.blogspot.com/",
+      "description": "Welcome to the Exceptional Nurse Blog! I am Donna Maheady, EdD, ARNP, founder of www.ExceptionalNurse.com, the nonprofit resource committed to the inclusion of people with disabilities in nursing. We facilitate the inclusion of students with disabilities in nursing education programs and foster resilience and continued practice for nurses who are or become, disabled. We celebrate abilities, and share resources and examples of nurses with disabilities who work with and without accommodations.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5421250.jpg?t=1657716635"
+    },
+    {
+      "title": "Nurse Alice",
+      "feed_url": "https://asknursealice.com/feed/",
+      "website_url": "https://asknursealice.com/",
+      "description": "Alice Benjamin is a board-certified Clinical Nurse Specialist and Family Nurse PractitionerShe has extensive nursing experience specializing in cardiovascular health, critical care, and emergency medicine. She has worked at some of the world's most prestigious academic tertiary centers as well as some of the most underserved community hospitals taking care of some of the sickest patients on the planet.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 7600,
+        "instagram": 47800
+      },
+      "image_url": "https://i1.feedspot.com/5124085.jpg?t=1658841922"
+    },
+    {
+      "title": "linkPAs Blog",
+      "feed_url": "https://linkpas.com/feed/",
+      "website_url": "https://linkpas.com/blog/",
+      "description": "Covers a range of nursing topics with a focus on these core areas: Physician Assistant, Nurse Practitioner, and Resources for Healthcare Providers. linkPAs is a recruiting company that promotes the Physician Assistant and Nurse Practitioner professions through career strategy and resources.",
+      "followers": {
+        "facebook": 172,
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/5174864.jpg?t=1614668834"
+    },
+    {
+      "title": "Marsha Battee Blog",
+      "feed_url": "https://thebossynurse.com/feed/",
+      "website_url": "https://thebossynurse.com/the-blog/",
+      "description": "Transform your ideas into your dream business.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5425434.jpg?t=1658841784"
+    },
+    {
+      "title": "Your Favorite School Nurse Blog",
+      "feed_url": "https://yourfavoriteschoolnurse.wordpress.com/blog-feed/feed/",
+      "website_url": "https://yourfavoriteschoolnurse.wordpress.com/blog-feed/",
+      "description": "I'm talking about the real things you need to know as a school nurse. I write a blog about being a school nurse. It started out as a way to convey information to my parents at school but developed into a blog about how to be a school nurse for the school nurses. I do some deep research into various topics we deal with as school nurses so I can give the most detailed information to other school nurses.",
+      "followers": {
+        "facebook": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5488875.jpg?t=1672997916"
+    },
+    {
+      "title": "The Nerdy Nurse",
+      "feed_url": "https://thenerdynurse.com/feed/",
+      "website_url": "https://thenerdynurse.com/",
+      "description": "Brittney Wilson, BSN, RN.The Nerdy Nurse is your ultimate resource for all things nursing, providing an extensive collection of articles, product guides, and resources to help nurses at all stages of their careers. Whether you're aspiring to become a nurse, looking to enhance your nursing skills, or seeking to balance your nurse lifestyle, our platform offers insights on everything from nursing education and career paths to technology trends and essential nursing products.",
+      "followers": {
+        "facebook": 21100,
+        "twitter": 32900,
+        "instagram": 11800
+      },
+      "image_url": "https://i1.feedspot.com/4550349.jpg?t=1614667692"
+    },
+    {
+      "title": "Donna Cardillo , RN Blog",
+      "feed_url": "https://donnacardillo.com/feed/",
+      "website_url": "https://donnacardillo.com/blog/",
+      "description": "Donna Cardillo, RN, is The Inspiration Nurse, a transformational keynote speaker, humorist, master motivator, and entertainer. She travels the world helping individuals to be happy in their lives and careers and to reach their full potential.",
+      "followers": {
+        "facebook": 8100,
+        "twitter": 24100,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4550305.jpg?t=1614667745"
+    },
+    {
+      "title": "Nursingwritingservices.com",
+      "feed_url": "https://nursingwritingservices.blogspot.com/feeds/posts/default",
+      "website_url": "https://nursingwritingservices.blogspot.com/",
+      "description": "Nursing writing service is an online nursing writing company that has been operating since the year 2002. We have professional writers who write original nursing papers on any topic. We are well known for our great writing service. Nursingwritingservices.com is your academic nursing writing helper.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5635223.jpg?t=1690286187"
+    },
+    {
+      "title": "The RN Network Blog",
+      "feed_url": "https://www.rnnet.org/blog-feed.xml",
+      "website_url": "https://www.rnnet.org/my-blog",
+      "description": "Read about the latest news, information, and career trends happening in the nursing profession today! Since 2009, the RN Network has been connecting nursing professionals for education, useful articles, career advise, career opportunities, and more!",
+      "followers": {
+        "facebook": 108,
+        "twitter": 26
+      },
+      "image_url": "https://i1.feedspot.com/5675743.jpg?t=1695291173"
+    },
+    {
+      "title": "RNByline Blog",
+      "feed_url": "https://www.rnbyline.com/blog-feed.xml",
+      "website_url": "https://www.rnbyline.com/blog",
+      "description": "In RNByline, registered nurse and educator Teresa Burgess writes easy-to-understand health content for all types of publications. Her aim is to guide people through their health and wellness journeys by using my nursing experience and master's degree in education to make complicated medical jargon easy to understand.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7279315.jpg?t=1711022896"
+    },
+    {
+      "title": "Scrubs Magazine",
+      "feed_url": "https://scrubsmag.com/feed/",
+      "website_url": "https://scrubsmag.com/",
+      "description": "Scrubs Magazine is the best place to find tips and resources for nurses. From the latest nurse news, travel nursing, and information to wild nursing stories that are just too crazy to believe, you'll find it all right here on Scrubs Mag.",
+      "followers": {
+        "facebook": 362000,
+        "twitter": 22400,
+        "instagram": 109600
+      },
+      "image_url": "https://i1.feedspot.com/379363.jpg?t=1614667645"
+    },
+    {
+      "title": "NurseBuff",
+      "feed_url": "https://www.nursebuff.com/feed/",
+      "website_url": "https://www.nursebuff.com/",
+      "description": "Nursing Humor and Lifestyle Blog. It is written by a registered nurse who is passionate about helping other nurses succeed.",
+      "followers": {
+        "facebook": 145,
+        "twitter": 402
+      },
+      "image_url": "https://i1.feedspot.com/4550346.jpg?t=1626185268"
+    },
+    {
+      "title": "Nurse Keith's Digital Doorway",
+      "feed_url": "http://digitaldoorway.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://digitaldoorway.blogspot.com/",
+      "description": "I've been a nurse since 1996, and I've worked in a variety of clinical settings, including home health, community health, case management, public health, hospice, and nursing education. I've also held management and executive positions, including Chief Nursing Officer and Director of Nursing.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 10400,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5421218.jpg?t=1657713300"
+    },
+    {
+      "title": "The Nursing Site",
+      "feed_url": "https://thenursingsite.com/feed/",
+      "website_url": "https://thenursingsite.com/",
+      "description": "Kathy is the owner, CEO, and publisher of TheNursingSite.com. She has been an RN for over 35 years. The Nursing Site is a valuable resource for nurses at all stages of their careers. It provides up-to-date information on a wide range of topics, and it offers practical advice that can help nurses improve their skills and knowledge.",
+      "followers": {
+        "facebook": 3400,
+        "instagram": 319
+      },
+      "image_url": "https://i1.feedspot.com/5421219.jpg?t=1657713669"
+    },
+    {
+      "title": "ATI Nursing Blog",
+      "feed_url": "https://atinursingblog.com/feed/",
+      "website_url": "https://atinursingblog.com/all-posts/",
+      "description": "ATI is committed to innovative solutions in nursing education by providing consistently reliable delivery of high-quality assessment, remediation, and educational products.",
+      "followers": {
+        "facebook": 125000,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5377376.jpg?t=1646379090"
+    },
+    {
+      "title": "Nursing@Georgetown Blog",
+      "feed_url": "https://online.nursing.georgetown.edu/blog/feed/",
+      "website_url": "https://online.nursing.georgetown.edu/blog/",
+      "description": "Georgetown University School of Nursing & Health Studies (NHS) is a value-based organization that educates the health workforce and advances practice, research, and scholarship with a strong focus on reducing health disparities and promoting health equity.",
+      "followers": {
+        "facebook": 24200,
+        "twitter": 2100,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4550345.jpg?t=1626270159"
+    },
+    {
+      "title": "Nurse Recruiter Blog",
+      "feed_url": "https://blog.nurserecruiter.com/feed/",
+      "website_url": "https://blog.nurserecruiter.com/",
+      "description": "Get the latest insights on Nurse Employers, Nurse Marketing, Nursing Jobs, Nursing News, Nursing Stories, Scholarships, and Travel Nursing. NurseRecruiter is a nursing job board & nurse recruitment resource designed to connect nurses with employers and to facilitate the hiring process for both sides.",
+      "followers": {
+        "twitter": 340
+      },
+      "image_url": "https://i1.feedspot.com/5081659.jpg?t=1614667765"
+    },
+    {
+      "title": "NurseDeck",
+      "feed_url": "https://nursedeck.com/knowledge?format=rss",
+      "website_url": "https://nursedeck.com/knowledge",
+      "description": "A community where nurses share stories, resources & guides to help inspire and motivate. Whether you're a student, new to the field, seasoned scrub, or retired - our community involves you.",
+      "followers": {
+        "facebook": 8100,
+        "twitter": 1200,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5381976.jpg?t=1647510308"
+    },
+    {
+      "title": "ER Nurses Blog",
+      "feed_url": "https://ernursey.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://ernursey.blogspot.com/",
+      "description": "An exploration into the health industry with a particular focus on the men and women battling and saving lives in our ERs. Topics covered are news, stories, and popular topics for ER nurses.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4293500.jpg?t=1614668381"
+    },
+    {
+      "title": "YogaNurse Blog",
+      "feed_url": "https://yoganurse.com/blog-entries/feed/",
+      "website_url": "https://yoganurse.com/blog-entries/",
+      "description": "Yoga Nurse, Annette, is focused on creating a safe environment for Nurses and patients alike through the practice of safe medical yoga, which attempts to relieve symptoms of chronic diseases, as well as emotional burnout.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 10900,
+        "instagram": 5400
+      },
+      "image_url": "https://i1.feedspot.com/4550907.jpg"
+    },
+    {
+      "title": "JParadisiRN.com",
+      "feed_url": "https://jparadisirn.com/feed/",
+      "website_url": "https://jparadisirn.com/",
+      "description": "Science, Humanity, and Art Converge. JParadisi's RN blog offers the writing of an oncology nurse navigator, awarding-winning artist, and cancer survivor whose paintings have appeared in various publications and galleries, and who writes for other online publications as well.",
+      "followers": {
+        "twitter": 572
+      },
+      "image_url": "https://i1.feedspot.com/4550310.jpg?t=1626263225"
+    },
+    {
+      "title": "My Adventures In Writing Blog",
+      "feed_url": "https://www.tcrandall.net/tcrandalls-blog?format=rss",
+      "website_url": "https://www.tcrandall.net/tcrandalls-blog",
+      "description": "Insights on PTSD in nurses. Authored by T.C. Randall, who was a former emergency room nurse with PTSD.",
+      "followers": {
+        "facebook": 145
+      },
+      "image_url": "https://i1.feedspot.com/5144931.jpg?t=1614667985"
+    },
+    {
+      "title": "Death Nurse",
+      "feed_url": "http://www.deathnurse.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.deathnurse.com/",
+      "description": "Expert nurse for patients and families facing serious illness and end of life. Certified in palliative care and hospice. Experienced in multiple settings, including specialty intensive care (high-risk bone marrow transplant, neuroscience), hemodialysis, inpatient palliative care, and hospice care in the community.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5421241.jpg?t=1657715942"
+    },
+    {
+      "title": "Nurse Abnormalities Blog",
+      "feed_url": "https://www.nurseabnormalities.com/blog?format=rss",
+      "website_url": "https://www.nurseabnormalities.com/blog",
+      "description": "Danielle LeVeck is a dual board-certified Adult Geriatric Acute Care Nurse Practitioner and Clinical Nurse Specialist who is currently practicing in a busy Cardiovascular Surgical Intensive Care Unit. Upon becoming a nurse, Ms. LeVeck instantly recognized the beautiful quirks of nursing culture and healthcare in general. She was driven to share these stories and began her blog. Through her authentic writing and storytelling, Ms. LeVeck strives to inspire, empower and educate the next generation of nurses and renew the previous generation.",
+      "followers": {
+        "facebook": 19500,
+        "instagram": 125300
+      },
+      "image_url": "https://i1.feedspot.com/5365551.jpg?t=1657716065"
+    },
+    {
+      "title": "New Thing Nurse Blog",
+      "feed_url": "https://www.newthingnurse.com/thenewthingnurseblog?format=rss",
+      "website_url": "https://www.newthingnurse.com/thenewthingnurseblog",
+      "description": "New Thing Nurse was created for veteran nurses, nursing students, and those dreaming of being nurses who want to expand their horizons but are having trouble navigating their next step. Whether trying to get your first job, going back to school, or just wanting to make a change, sometimes you need a little help to find your way",
+      "followers": {
+        "facebook": 3600,
+        "instagram": 11500
+      },
+      "image_url": "https://i1.feedspot.com/5421247.jpg?t=1657716385"
+    },
+    {
+      "title": "Feminist Midwife Blog",
+      "feed_url": "https://www.feministmidwife.com/fmblog?format=rss",
+      "website_url": "https://www.feministmidwife.com/fmblog",
+      "description": "Ponderings on women, health, and care. Welcome to Feminist Midwife! I'm a midwife working in urban America. Currently in my third year of practice, I'm constantly considering the roles of reproductive rights, women, and healthcare in the States and abroad. I hope to find in this blog a space to process, learn, and grow. I'm fired-up, emotional, excited, and thrilled about it all.",
+      "followers": {
+        "facebook": 21500,
+        "twitter": 7200,
+        "instagram": 26100
+      },
+      "image_url": "https://i1.feedspot.com/4777812.jpg?t=1657716858"
+    },
+    {
+      "title": "Visionary Nurse Blog",
+      "feed_url": "https://www.visionarynurse.com/blog-feed.xml",
+      "website_url": "https://www.visionarynurse.com/blog",
+      "description": "I am the Owner of Antonette Montalvo Consulting and Coaching Services - where I serve as a Community Health Consultant and Coach and Mentor for Nurses, board-certified Pediatric Nurse practitioners, educators, and authors. I founded the Visionary Nurse brand and Co-founded Montalvo International Community Health Initiative - a community-focused grassroots effort committed to innovatively and collaboratively addressing the health disparities seen in vulnerable communities.",
+      "followers": {
+        "facebook": 426,
+        "twitter": 257
+      },
+      "image_url": "https://i1.feedspot.com/5425437.jpg?t=1658842412"
+    },
+    {
+      "title": "The Traveling Nurse Blog",
+      "feed_url": "https://thetravelingnurse.blog/feed/",
+      "website_url": "https://thetravelingnurse.blog/",
+      "description": "I hope to provide inspiration and guidance for nursing school, nursing, and medical missions. The Traveling Nurse strives to make this big world seem a bit smaller by expanding pediatric healthcare access one kiddo at a time and aims to bring pediatric nursing beyond the bedside.",
+      "followers": {
+        "instagram": 102000
+      },
+      "image_url": "https://i1.feedspot.com/5325065.jpg?t=1673357180"
+    },
+    {
+      "title": "Simmons University Blog \u00bb Nursing",
+      "feed_url": "https://online.simmons.edu/blog/category/nursing/feed/",
+      "website_url": "https://online.simmons.edu/blog/category/nursing/",
+      "description": "This section of our blog features articles for nurses & nursing students. Since 1902, Simmons College's School of Nursing and Health Sciences has been empowering nurses by preparing them with the skills & knowledge needed to become effective leaders in the health care industry.",
+      "followers": {
+        "facebook": 32200,
+        "twitter": 623
+      },
+      "image_url": "https://i1.feedspot.com/4550301.jpg?t=1614667997"
+    },
+    {
+      "title": "GomerBlog \u00bb Nursing",
+      "feed_url": "https://gomerblog.com/category/nursing/feed/",
+      "website_url": "https://gomerblog.com/category/nursing/",
+      "description": "GomerBlog is a satirical medical news website created by a bunch of wannabes stand-up comedians who ended up in healthcare. GomerBlog is dedicated to bringing you funny medical satire for Healthcare Professionals. Many are already calling us 'The Onion' for doctors, nurses, and all health care professionals. Our goal is to provide comic relief to our hard-working healthcare professionals.",
+      "followers": {
+        "facebook": 184000,
+        "twitter": 48400,
+        "instagram": 65600
+      },
+      "image_url": "https://i1.feedspot.com/5425431.jpg?t=1658841238"
+    },
+    {
+      "title": "Nursing Uncensored Blog",
+      "feed_url": "https://www.nursinguncensored.com/blog?format=rss",
+      "website_url": "https://www.nursinguncensored.com/blog",
+      "description": "I try to create content that is raw, real, and relevant to life on and off the clock. I want to use this platform to educate in an informal setting, using humor and storytelling as meaningful teaching tools. I may not remember something I read in a book, but I will probably remember a specific patient care story passionately told by a veteran nurse. This is the spirit I bring to the content I create and share.",
+      "followers": {
+        "facebook": 581,
+        "twitter": 285
+      },
+      "image_url": "https://i1.feedspot.com/5425433.jpg?t=1658841582"
+    },
+    {
+      "title": "Travel Nursing Central Blog",
+      "feed_url": "https://travelnursingcentral.com/blog/feed/",
+      "website_url": "https://travelnursingcentral.com/blog/",
+      "description": "Travel Nursing Central.com is your resource for the travel nurse industry with travel nursing company rankings and reviews, hospital rankings and reviews and the latest travel nursing news.",
+      "followers": {
+        "twitter": 185
+      },
+      "image_url": "https://i1.feedspot.com/4551084.jpg?t=1614752139"
+    },
+    {
+      "title": "Mother Nurse Love Blog",
+      "feed_url": "https://mothernurselove.com/feed/",
+      "website_url": "https://mothernurselove.com/blog/",
+      "description": "On this blog my passion manifests itself as posts about being a nurse and mom on topics such as nurse health, managing nurse burnout, work-life balance, being a working mom, breastfeeding during 12-hour shifts, and nurse money goals, just to name a few. I am constantly trying to make my life a little easier on myself. (On another note, I just discovered that joining a gym with childcare on site has been a total game-changer for my quality of life!).",
+      "followers": {
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5425435.jpg?t=1658842102"
+    },
+    {
+      "title": "Infusion Nurse",
+      "feed_url": "https://infusionnurse.org/feed/",
+      "website_url": "https://infusionnurse.org/",
+      "description": "An informative platform for discussion and sharing ideas related to infusion nursing, vascular access, and infusion therapies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4550284.jpg?t=1614667978"
+    },
+    {
+      "title": "Nurses Educator",
+      "feed_url": "https://www.nurseseducator.com/feeds/posts/default",
+      "website_url": "https://nurseseducator.com/",
+      "description": "Welcome to Nurses Educator, your number-one source for all things Nursing Education. We're dedicated to providing you with the very best of Nursing Study Material, with an emphasis on Nursing Research, Nursing Statistics, and Nursing Care.",
+      "followers": {
+        "facebook": 11300,
+        "twitter": 50
+      },
+      "image_url": "https://i1.feedspot.com/5600024.jpg?t=1686896387"
+    },
+    {
+      "title": "Nursejournal.org",
+      "feed_url": "https://nursejournal.org/feed/",
+      "website_url": "https://nursejournal.org/resources/",
+      "description": "NurseJournal.org is a blog and resource site for nurses of all levels. This site offers resources for prospective nursing students on financial aid, news & trends in nursing, the application process, how to prepare for testing, and advice from nurses.",
+      "followers": {
+        "facebook": 7300,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5301765.jpg?t=1626272933"
+    },
+    {
+      "title": "Nurse.com Blog",
+      "feed_url": "https://www.nurse.com/blog/feed/",
+      "website_url": "https://www.nurse.com/blog/",
+      "description": "A leading source of nursing jobs, local & national nursing news, nursing stories, nursing specialties, educational trends, and continuing nursing education with CEs & webinars. Nurse.com is the trusted go-to resource for nurses all over the world.",
+      "followers": {
+        "facebook": 525800
+      },
+      "image_url": "https://i1.feedspot.com/4550827.jpg?t=1614667638"
+    },
+    {
+      "title": "Marian University ABSN Blog",
+      "feed_url": "https://onlineabsn.marian.edu/blog/feed/",
+      "website_url": "https://onlineabsn.marian.edu/blog/",
+      "description": "Marian University's ABSN blog is about its accelerated Bachelor of Science in Nursing (BSN) program for non-nurses. ABSN is a second-degree nursing program by Marian University designed for career changers in Tennessee and Oklahoma.",
+      "followers": {
+        "facebook": 8200,
+        "instagram": 272
+      },
+      "image_url": "https://i1.feedspot.com/5279955.jpg?t=1620814056"
+    },
+    {
+      "title": "All Nursing Schools",
+      "feed_url": "https://www.allnursingschools.com/feed/",
+      "website_url": "https://www.allnursingschools.com/articles/",
+      "description": "This blog provides information about nursing careers and degrees to help prospective students make decisions about their education. All Nursing Schools is committed to helping you advance your career and improve your life through education. It's our mission to empower you on your career path by being a trusted resource for information that will help you achieve your goal for a better future.",
+      "followers": {
+        "facebook": 66400
+      },
+      "image_url": "https://i1.feedspot.com/5279956.jpg?t=1620813736"
+    },
+    {
+      "title": "Nurse Barb",
+      "feed_url": "https://www.nursebarb.com/feed/",
+      "website_url": "https://nursebarb.com/",
+      "description": "Barb Dehn is a practicing Women's Health Nurse Practitioner, award-winning author, and nationally recognized health expert. She shares tips and her expertise on everyday health topics including Birth Control, Breast & Ovarian Cancer, Fertility, Infections, Menopause, PCOS, Pelvic Health, Pregnancy, and Sexuality.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 27700,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4550293.jpg?t=1614667925"
+    },
+    {
+      "title": "Nurse Salary Guide Blog",
+      "feed_url": "https://nursesalaryguide.net/feed/",
+      "website_url": "https://nursesalaryguide.net/blog/",
+      "description": "In depth guides for nursing salaries, nurse careers, schools and education. Always up to date nurse information - accurate and reliable from trusted sources.",
+      "followers": {
+        "twitter": 344
+      },
+      "image_url": "https://i1.feedspot.com/5124412.jpg"
+    },
+    {
+      "title": "uPaged Blog",
+      "feed_url": "https://www.upaged.com/blog?format=RSS",
+      "website_url": "https://upaged.com/blog/",
+      "description": "Everything from agency nursing, casual nursing, and permanent work, as well as issues facing registered nurses. uPaged connects healthcare facilities, nursing agencies, and compliant clinicians in a single, fully integrated ecosystem.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 80,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5041245.jpg?t=1614667904"
+    },
+    {
+      "title": "Nurselly",
+      "feed_url": "https://feeds.feedburner.com/nurselly/",
+      "website_url": "https://www.nurselly.com/",
+      "description": "Tips, Advice and WTF moments for the nursing community.",
+      "followers": {
+        "facebook": 524,
+        "twitter": 23
+      },
+      "image_url": "https://i1.feedspot.com/4908533.jpg?t=1614667769"
+    },
+    {
+      "title": "Minding The Bedside \u00bb Nursing",
+      "feed_url": "https://www.mindingthebedside.com/category/nursing-2/feed/",
+      "website_url": "https://www.mindingthebedside.com/category/nursing-2/",
+      "description": "I'm a Registered Nurse with over thirty years of experience in a variety of healthcare settings, including pain management, hospice care, ICU, and research in complementary and alternative medicine. I'm also a long-time practitioner of meditation, with an emphasis on the study and practice of Tibetan Buddhism and an interest in Christian and Kabbalistic contemplation.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5425399.jpg?t=1658840908"
+    }
+  ]
+}

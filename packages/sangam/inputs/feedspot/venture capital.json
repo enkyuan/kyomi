@@ -1,0 +1,456 @@
+{
+  "category": "Venture Capital",
+  "source_url": "https://rss.feedspot.com/venture_capital_rss_feeds",
+  "feeds": [
+    {
+      "title": "Tomasz Tunguz",
+      "feed_url": "https://tomtunguz.com/index.xml",
+      "website_url": "https://tomtunguz.com/",
+      "description": "Tomasz Tunguz is a venture capitalist at Redpoint since 2008. He was a PM on the Ads team at Google and worked at Appian before. He loves to learn about how businesses are created and aim to share those learnings here.",
+      "followers": {
+        "twitter": 112100
+      },
+      "image_url": "https://i1.feedspot.com/4096872.jpg?t=1607512747"
+    },
+    {
+      "title": "Hunter Walk",
+      "feed_url": "https://hunterwalk.com/feed/",
+      "website_url": "https://hunterwalk.com/",
+      "description": "Hunter Walk's blog focusses mainly on how to create a start-up, get the ball rolling and guarantee success in your chosen field. He was also previously a product manager at Google. His blogs offers conversations with other leaders in the product management world as well as his own frank take on the issues facing product management in the current market.",
+      "followers": {
+        "twitter": 259399
+      },
+      "image_url": "https://i1.feedspot.com/4587526.jpg?t=1615289871"
+    },
+    {
+      "title": "This is going to be BIG Blog",
+      "feed_url": "https://www.thisisgoingtobebig.com/blog?format=rss",
+      "website_url": "https://www.thisisgoingtobebig.com/blog",
+      "description": "Personal blog on startups, venture capital, entrepreneurship, etc. of Charlie O'Donnell of Brooklyn Bridge Ventures.",
+      "followers": {
+        "twitter": 44200
+      },
+      "image_url": "https://i1.feedspot.com/20867.jpg?t=1600243971"
+    },
+    {
+      "title": "Red Rocket Ventures Blog",
+      "feed_url": "http://redrocketvc.blogspot.com/feeds/posts/default",
+      "website_url": "http://redrocketvc.blogspot.com/",
+      "description": "A place for entrepreneurs to learn and engage on various topics and lessons with the Partners at Red Rocket Ventures. The blog is an executive's strategic 'playbook', with actionable 'how-to' lessons on a wide range of startup and digital-related topics, including business, strategy, sales, marketing, technology, operations, human resources, finance, fund raising and more.",
+      "followers": {
+        "facebook": 178,
+        "twitter": 879
+      },
+      "image_url": "https://i1.feedspot.com/3404865.jpg"
+    },
+    {
+      "title": "Playfair Ventures Blog",
+      "feed_url": "https://medium.com/feed/playfair-capital-blog",
+      "website_url": "https://medium.com/playfair-capital-blog",
+      "description": "We're a leading seed-stage venture capital firm backing the founders of 50+ companies inc CryptoFacilities, Mapillary, Ravelin, Stripe, Thought Machine & Trouva. This publication features the articles written by the Playfair Capital team and friends. - Medium",
+      "followers": {
+        "twitter": 9500
+      },
+      "image_url": "https://i1.feedspot.com/5121488.jpg?t=1615290331"
+    },
+    {
+      "title": "CFA Institute Enterprising Investor Blogs",
+      "feed_url": "https://blogs.cfainstitute.org/investor/feed/",
+      "website_url": "https://blogs.cfainstitute.org/investor/",
+      "description": "Find the latest articles on alternative investments, behavioral finance, corporate finance, equity investments, financial statement analysis, fixed income, and more. Get the practical analysis for investment professionals. The Enterprising Investor is a forum for provocative and useful analysis of current issues in finance and investing.",
+      "followers": {
+        "facebook": 527200,
+        "twitter": 363500,
+        "instagram": 146500
+      },
+      "image_url": "https://i1.feedspot.com/4523142.jpg?t=1658833775"
+    },
+    {
+      "title": "Matt Turck",
+      "feed_url": "https://mattturck.com/feed/",
+      "website_url": "https://mattturck.com/",
+      "description": "Thoughts on the tech startup world and other things I find interesting",
+      "followers": {
+        "twitter": 82200
+      },
+      "image_url": "https://i1.feedspot.com/18430.jpg?t=1650871429"
+    },
+    {
+      "title": "Sam Altman Blog",
+      "feed_url": "https://blog.samaltman.com/posts.atom",
+      "website_url": "https://blog.samaltman.com/",
+      "description": "Sam Altman Blog covers articles on finance, investment, venture capital and more.",
+      "followers": {
+        "twitter": 3100000
+      },
+      "image_url": "https://i1.feedspot.com/1457764.jpg?t=1658838542"
+    },
+    {
+      "title": "David Teten Blog \u00bb Venture Capital",
+      "feed_url": "https://teten.com/feed/",
+      "website_url": "https://teten.com/blog/category/asset-classes/vc/",
+      "description": "Keep up with articles from David Teten.",
+      "followers": {
+        "twitter": 12600
+      },
+      "image_url": "https://i1.feedspot.com/5057403.jpg?t=1615289911"
+    },
+    {
+      "title": "LifeSciVC",
+      "feed_url": "https://lifescivc.com/feed/",
+      "website_url": "https://lifescivc.com/",
+      "description": "I'm Bruce Booth. I'm an early-stage venture capitalist. Like my partners at Atlas Venture, I enjoy working with great scientists and entrepreneurs to start new biotech companies. Blog covers articles on all facets of early stage biotech.",
+      "followers": {
+        "twitter": 52400
+      },
+      "image_url": "https://i1.feedspot.com/4587938.jpg?t=1615289922"
+    },
+    {
+      "title": "VC Cafe",
+      "feed_url": "https://www.vccafe.com/feed/",
+      "website_url": "https://www.vccafe.com/",
+      "description": "Founded in 2005 by Eze Vidra, VC Cafe is a popular blog on technology and venture capital, dedicated to new Internet products and companies, venture capital funding, and deal flow with a spotlight on Israel, the Silicon Wadi. In addition to covering industry news, VC Cafe aims to bring founders valuable resources and thought leadership content.",
+      "followers": {
+        "twitter": 19700
+      },
+      "image_url": "https://i1.feedspot.com/122607.jpg?t=1613627641"
+    },
+    {
+      "title": "Gotham Gal",
+      "feed_url": "https://gothamgal.com/feed/",
+      "website_url": "https://gothamgal.com/",
+      "description": "Joanne Wilson is an angel investor who bets on companies founded and run by women. She also founded the Women's Entrepreneur Festival, an annual event in New York City dedicated to supporting a community of women entrepreneurs. In her blog, Wilson writes about investing, women in tech, food, art and other topics she is passionate about.",
+      "followers": {
+        "twitter": 26000
+      },
+      "image_url": "https://i1.feedspot.com/4587940.jpg?t=1610697668"
+    },
+    {
+      "title": "Nanalyze",
+      "feed_url": "https://www.nanalyze.com/feed/",
+      "website_url": "https://www.nanalyze.com/",
+      "description": "Investing in disruptive technologies for retail and institutional investors. No tech jargon. No BS. No politics. Just incredibly smart insights. Founded in 2003, Nanalyze started as a forum where investors could share information on companies involved in the nanotechnology space.",
+      "followers": {
+        "facebook": 88200,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4682894.jpg?t=1614694230"
+    },
+    {
+      "title": "Mark Bivens Blog",
+      "feed_url": "https://markbivens.com/m/feed/",
+      "website_url": "https://markbivens.com/m/",
+      "description": "I am passionate about reggae music, sumo, and triathlons. For my day job, I pretend to be a VC, investing in promising digital media, mobile, and software ventures.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/1448434.jpg?t=1652443797"
+    },
+    {
+      "title": "Become a Better Investor Blog",
+      "feed_url": "https://becomeabetterinvestor.net/blog/feed/",
+      "website_url": "https://becomeabetterinvestor.net/blog/",
+      "description": "Become a Better Investor.net is run by investors for investors and was founded by the team behind A. Stotz Investment Research (ASIR). At ASIR we live by a motto to 'Never stop learning' and we want to share this learning about investments with you.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5425312.jpg?t=1658833192"
+    },
+    {
+      "title": "Seth Levine",
+      "feed_url": "https://www.sethlevine.com/feed",
+      "website_url": "https://www.sethlevine.com/",
+      "description": "Hi, I'm Seth Levine, a Boulder, CO based technology investor and managing director at Foundry Group. While I love technology I'm also a husband, father, avid cyclist, snowboarder and outdoors guy.",
+      "followers": {
+        "twitter": 19400
+      },
+      "image_url": "https://i1.feedspot.com/4587955.jpg?t=1652443756"
+    },
+    {
+      "title": "National Venture Capital Association - NVCA",
+      "feed_url": "https://nvca.org/feed/",
+      "website_url": "https://nvca.org/blog/",
+      "description": "Venture capitalists are committed to funding America's most innovative entrepreneurs and working alongside them to transform breakthrough ideas into emerging growth companies that drive U.S. job creation and economic growth.",
+      "followers": {
+        "facebook": 6600,
+        "twitter": 23300
+      },
+      "image_url": "https://i1.feedspot.com/4423898.jpg?t=1652447685"
+    },
+    {
+      "title": "AVC",
+      "feed_url": "https://avc.com/feed/",
+      "website_url": "https://avc.com/",
+      "description": "Hello, I'm Fred Wilson. I am a VC. I have been since 1986. I write something here every weekday and sometimes on the weekends too. I've been doing that since September 2003. I hope to keep doing it as long as I can write. This is my diary where you'll get musings of a VC in NYC.",
+      "followers": {
+        "twitter": 673800
+      },
+      "image_url": "https://i1.feedspot.com/5294492.jpg?t=1658841380"
+    },
+    {
+      "title": "Both Sides of the Table",
+      "feed_url": "https://bothsidesofthetable.com/feed",
+      "website_url": "https://bothsidesofthetable.com/",
+      "description": "Perspectives of a 2x entrepreneur turned VC at @UpfrontVC, the largest and most active early-stage fund in Southern California. Authored by Mark Suster.",
+      "followers": {
+        "twitter": 333500
+      },
+      "image_url": "https://i1.feedspot.com/21823.jpg?t=1615290359"
+    },
+    {
+      "title": "Aleph VC",
+      "feed_url": "https://medium.com/feed/aleph-vc",
+      "website_url": "https://medium.com/aleph-vc",
+      "description": "Aleph is a venture capital fund focused on partnering with great entrepreneurs to help scale them into large, meaningful companies and globally recognized brands. It is an Equal Partnership of Eden Shochat, Michael Eisenberg and Aaron Rosenson.",
+      "followers": {
+        "facebook": 9000,
+        "twitter": 7400,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4587570.jpg?t=1618319224"
+    },
+    {
+      "title": "FinMasters",
+      "feed_url": "https://finmasters.com/feed/",
+      "website_url": "https://finmasters.com/",
+      "description": "FinMasters covers advice to fix your finances and take charge of your money, information and tools that help you understand everything you need to set you on a path to financial success. FinMasters' mission is to give you the right information, resources & tools to reach your financial goals.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 2000,
+        "instagram": 295
+      },
+      "image_url": "https://i1.feedspot.com/5303891.jpg?t=1626783180"
+    },
+    {
+      "title": "The Venture Alley News",
+      "feed_url": "https://www.theventurealley.com/category/news-and-recent-events/feed/",
+      "website_url": "https://www.theventurealley.com/category/news-and-recent-events/",
+      "description": "A blog about business and legal issues important to entrepreneurs, startups, venture capitalists and angel investors. The Venture Alley is written by the Corporate & Securities Lawyers at DLA Piper and offers updates & legal insights in the VC space.",
+      "followers": {
+        "facebook": 164,
+        "twitter": 443,
+        "instagram": 19100
+      },
+      "image_url": "https://i1.feedspot.com/4587909.jpg?t=1610698077"
+    },
+    {
+      "title": "Grow VC Group",
+      "feed_url": "https://group.growvc.com/news/feed",
+      "website_url": "https://group.growvc.com/news",
+      "description": "This is the blog of the Grow VC Group, the global leader of fintech innovations, digital and distributed finance services, and digital infrastructures, of which Crowd Valley is part. Private transactions, both private equity and debt, have been inefficient and littered with information asymmetry due to the way the transactions have been made.",
+      "followers": {
+        "twitter": 6800
+      },
+      "image_url": "https://i1.feedspot.com/4587558.jpg?t=1615289984"
+    },
+    {
+      "title": "ithaca VC - VC and startup thoughts from Ithaca....",
+      "feed_url": "https://ithacavc.com/feed/",
+      "website_url": "https://ithacavc.com/",
+      "description": "Zach Shulman is a partner at Cayuga Venture Fund in Ithaca, NY.",
+      "followers": {
+        "twitter": 700
+      },
+      "image_url": "https://i1.feedspot.com/4587565.jpg?t=1615290019"
+    },
+    {
+      "title": "David G. Cohen",
+      "feed_url": "https://feeds.feedburner.com/DavidGCohen",
+      "website_url": "https://davidgcohen.com/",
+      "description": "Thoughts from a geeky ex-hacker turned investor and founder of TechStars.",
+      "followers": {
+        "twitter": 176100
+      },
+      "image_url": "https://i1.feedspot.com/128404.jpg?t=1658831179"
+    },
+    {
+      "title": "Jalak Jobanputra",
+      "feed_url": "http://thebarefootvc.com/feed/",
+      "website_url": "http://thebarefootvc.com/",
+      "description": "Global Perspectives from a Female VC in NYC",
+      "followers": {
+        "twitter": 17800
+      },
+      "image_url": "https://i1.feedspot.com/18747.jpg?t=1615290156"
+    },
+    {
+      "title": "vcwithme",
+      "feed_url": "https://vcwithme.co/feed/",
+      "website_url": "https://vcwithme.co/",
+      "description": "Share the journey with a learning VC",
+      "followers": {
+        "twitter": 115
+      },
+      "image_url": "https://i1.feedspot.com/4587933.jpg?t=1650883759"
+    },
+    {
+      "title": "280.vc |",
+      "feed_url": "https://280.vc/rss",
+      "website_url": "https://280.vc/",
+      "description": "Authored by Rob Coneybeer, Founder of Shasta Ventures, a Sand Hill Road based venture capital firm investing in early-stage technology companies. Connected hardware investor.",
+      "followers": {
+        "twitter": 10600
+      },
+      "image_url": "https://i1.feedspot.com/8626.jpg?t=1652446778"
+    },
+    {
+      "title": "The Business of Venture Capital",
+      "feed_url": "http://feeds.feedburner.com/thebusinessofvc",
+      "website_url": "https://www.thebusinessofvc.com/blog/",
+      "description": "Blog by Mahendra R, Author, Optimist.....Igniting Security Startups.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4587559.jpg?t=1615290123"
+    },
+    {
+      "title": "Christoph Janz The angel VC",
+      "feed_url": "http://christophjanz.blogspot.com/feeds/posts/default",
+      "website_url": "http://christophjanz.blogspot.com/",
+      "description": "Thoughts on Internet startups, SaaS and early-stage investing from Christoph Janz @ Point Nine Capital.",
+      "followers": {
+        "twitter": 40900
+      },
+      "image_url": "https://i1.feedspot.com/58457.jpg?t=1610698071"
+    },
+    {
+      "title": "For Entrepreneurs Blog",
+      "feed_url": "https://feeds.feedburner.com/forentrepreneurs",
+      "website_url": "https://www.forentrepreneurs.com/",
+      "description": "Wisdom & advice for founders & execs of B2B SaaS startups. Avoid the most common startup mistakes, learn about SaaS metrics, go-to-market, etc.My name is David Skok, and I am a serial entrepreneur turned VC. I have a great passion for helping entrepreneurs and startups.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1245402.jpg?t=1658834466"
+    },
+    {
+      "title": "Startup Funding Book",
+      "feed_url": "https://startupfundingbook.com/feed/",
+      "website_url": "https://startupfundingbook.com/blog/",
+      "description": "Startup Funding Book is the ultimate guide to getting your startup financed (VC, angels, crowdfunding).",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5425374.jpg?t=1658837896"
+    },
+    {
+      "title": "Boost VC",
+      "feed_url": "https://medium.com/feed/boost-vc",
+      "website_url": "https://medium.com/boost-vc",
+      "description": "We are a Family of Founders making Sci-Fi a Reality! VR, blockchain, bots, space, AI - Medium",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 34000
+      },
+      "image_url": "https://i1.feedspot.com/4587569.jpg?t=1652445926"
+    },
+    {
+      "title": "Academic VC",
+      "feed_url": "http://academicvc.com/feed/",
+      "website_url": "http://academicvc.com/",
+      "description": "Stephen Fleming's blog about academia, venture capital, and spaceships. As a venture capitalist, Stephen has over 15 years of private equity experience at the General Partner level. Prior to his venture capital career, he spent 15 years in operations roles at AT&T Bell Laboratories, Nortel Networks, and LICOM (a venture-funded startup).",
+      "followers": {
+        "twitter": 11100
+      },
+      "image_url": "https://i1.feedspot.com/4587917.jpg?t=1652446159"
+    },
+    {
+      "title": "VatorNews",
+      "feed_url": "https://vator.tv/feed/",
+      "website_url": "https://vator.tv/",
+      "description": "Vator (short for innovator) aims to help great entrepreneurs find funding, and for investors to get in on the ground floor of tomorrow's leading companies. Founded and run by award-winning journalist Bambi Francisco, Vator has a vibrant social network, events and news platform.",
+      "followers": {
+        "facebook": 596,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/197894.jpg?t=1650867671"
+    },
+    {
+      "title": "Venture Capital Journal",
+      "feed_url": "https://www.venturecapitaljournal.com/feed/",
+      "website_url": "https://www.venturecapitaljournal.com/",
+      "description": "Venture Capital Journal is a premium intelligence service covering early-stage investments, insights into deal terms and conditions, fundraising, IPO exits, and fund performance data.",
+      "followers": {
+        "twitter": 6800
+      },
+      "image_url": "https://i1.feedspot.com/5212829.jpg?t=1618986492"
+    },
+    {
+      "title": "Peak Blog",
+      "feed_url": "https://peak.capital/rss",
+      "website_url": "https://peak.capital/blog/",
+      "description": "Looking for startup funding? We're Peak Capital, a venture capital fund 100% funded and ran by experienced entrepreneurs. We back early-stage SaaS and Marketplace companies in Europe led by charismatic founders. We value eye-level conversation and boots on the ground cooperation. Founders, knock on our door.",
+      "followers": {
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5228038.jpg?t=1608116319"
+    },
+    {
+      "title": "Hatcher+ | The Data-Driven Venture Investment Platform",
+      "feed_url": "https://hq.hatcher.com/rss",
+      "website_url": "https://hq.hatcher.com/blog",
+      "description": "Hatcher+ is a next-generation, data-driven venture firm that uses AI/ML-based technologies to identify early-stage opportunities in partnership with leading accelerators and investors, worldwide.",
+      "followers": {
+        "facebook": 166,
+        "twitter": 495
+      },
+      "image_url": "https://i1.feedspot.com/5003628.jpg?t=1615289926"
+    },
+    {
+      "title": "Paul Graham",
+      "feed_url": "https://paulgraham.com/rss.html",
+      "website_url": "https://paulgraham.com/articles.html",
+      "description": "Paul Graham is a programmer, writer, and investor. Paul Graham was one-half of the duo behind Viaweb, arguably the very first software as a service company. Since then, he's gone on to co-found Y Combinator, a start-up incubator. Paul Graham's Essays collates his long-form insights into developing SaaS businesses, and provides developers a wonderful insight into their role within the wider business world.",
+      "followers": {
+        "twitter": 1900000
+      },
+      "image_url": "https://i1.feedspot.com/4146554.jpg?t=1658830530"
+    },
+    {
+      "title": "First Round Review",
+      "feed_url": "https://review.firstround.com/feed.xml/",
+      "website_url": "https://review.firstround.com/",
+      "description": "Investing at the earliest possible stage, First Round offers a growing number of services and products to help founders build companies from scratch. We don't split angel, seed, and pre-seed funding into separate categories - we're interested in providing the same support across the board.",
+      "followers": {
+        "twitter": 218300,
+        "instagram": 12800
+      },
+      "image_url": "https://i1.feedspot.com/4397422.jpg?t=1615289884"
+    },
+    {
+      "title": "Martin Varsavsky",
+      "feed_url": "https://english.martinvarsavsky.net/",
+      "website_url": "https://english.martinvarsavsky.net/",
+      "description": "Who? Martin Varsavsky is an Argentine/Spanish entrepreneur. Currently, he is CEO of global wifi network Fon, an angel investor and a professor at Columbia University. What? Over the past two decades, he has founded seven companies and invested in several others..",
+      "followers": {
+        "twitter": 133300
+      },
+      "image_url": "https://i1.feedspot.com/122470.jpg?t=1610698086"
+    },
+    {
+      "title": "Ciaran O'Leary Berlin VC",
+      "feed_url": "http://www.berlinvc.com/feed",
+      "website_url": "http://www.berlinvc.com/",
+      "description": "Berlin-based Ciaran O'Leary is Partner of Earlybird, a European venture capital firm focusing on technology ventures, and has over eight years of experience as an investor. A few of his Investments include 6wunderkinder, madvertise, Moped, simfy and Peak Games",
+      "followers": {
+        "twitter": 10300
+      },
+      "image_url": "https://i1.feedspot.com/4587540.jpg?t=1650882294"
+    },
+    {
+      "title": "Thomas Grota A personal view on venture capital",
+      "feed_url": "https://thomasgr.tumblr.com/rss",
+      "website_url": "https://thomasgr.tumblr.com/",
+      "description": "A personal view on Venture Capital - Opinions, Research and News about Corporate Venture Capital. Thomas Grota is Investment Director at the Corporate Venture Capital firm of Deutschte Telekom AG....",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1718553.jpg?t=1650884526"
+    },
+    {
+      "title": "Jason Ball's TechBytes Technology & Venture Capital",
+      "feed_url": "https://www.jasonball.com/feed/",
+      "website_url": "https://www.jasonball.com/",
+      "description": "Jason Ball is Director at Qualcomm Ventures Europe and is based in London. Previously he worked at London Seed Capital as the Investment Director. Ball has been working with internet and mobile startups for eight years.He currently serves as a board member or observer for Bitbar, Blippar, Cambridge Temperature Concepts, Grand Cru, Videoplaza, Wonder PL and Wrapp.",
+      "followers": {
+        "twitter": 15700
+      },
+      "image_url": "https://i1.feedspot.com/4587530.jpg?t=1652446253"
+    }
+  ]
+}

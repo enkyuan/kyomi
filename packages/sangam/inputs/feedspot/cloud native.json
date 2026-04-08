@@ -1,0 +1,118 @@
+{
+  "category": "Cloud Native",
+  "source_url": "https://rss.feedspot.com/cloud_native_rss_feeds",
+  "feeds": [
+    {
+      "title": "Daniel's Tech Blog",
+      "feed_url": "https://www.danielstechblog.io/feed/",
+      "website_url": "https://www.danielstechblog.io/",
+      "description": "Daniel's Tech covers blog posts about technology. Hi, my name is Daniel Neumann, I am a Microsoft Professional and this is my blog where I am writing down my thoughts about Microsoft Azure, Kubernetes, and Cloud Native technologies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4957523.jpg?t=1660891236"
+    },
+    {
+      "title": "Tigera Blog",
+      "feed_url": "https://www.tigera.io/feed/",
+      "website_url": "https://www.tigera.io/blog/",
+      "description": "Get the latest updates about security and observability for containers, Kubernetes, and all things cloud native. Tigera provides an active Cloud-Native application platform for containers and Kubernetes. At Tigera we prevent, detect, and mitigate security breaches in cloud-native applications.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5429535.jpg?t=1659705153"
+    },
+    {
+      "title": "InfraCloud Blog",
+      "feed_url": "https://www.infracloud.io/feed.xml",
+      "website_url": "https://www.infracloud.io/blogs/",
+      "description": "Find blogs and articles written by our engineers on cloud-native, Kubernetes, serverless, DevOps, observability, and many more. InfraCloud is a cloud infrastructure services company. We help companies modernize their infrastructure by adopting cloud-native technologies.",
+      "followers": {
+        "facebook": 518,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5429534.jpg?t=1659704556"
+    },
+    {
+      "title": "IEEE ComSoc Tech Blog \u00bb Cloud Native",
+      "feed_url": "https://techblog.comsoc.org/category/cloud-native/feed/",
+      "website_url": "https://techblog.comsoc.org/category/cloud-native/",
+      "description": "The ComSoc Tech Blog provides the latest news about Cloud Native along with other networking information suitable for communications professionals. We are ComSoc, the IEEE Communications Society. We promote technological innovation and foster the creation by sharing information among the global technical community.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5429533.jpg?t=1659704499"
+    },
+    {
+      "title": "Jenkins X Blog",
+      "feed_url": "https://jenkins-x.io/blog/index.xml",
+      "website_url": "https://jenkins-x.io/blog/",
+      "description": "Read the recent content in the Jenkins X blog on Tekton Cloud Native, Kubernetesbuilt with Jenkins X, reviews, and more. Jenkins X automates and accelerates continuous integration and continuous delivery for developers on the cloud, so they can focus on building awesome software.",
+      "followers": {
+        "twitter": 10200
+      },
+      "image_url": "https://i1.feedspot.com/5429536.jpg?t=1660118369"
+    },
+    {
+      "title": "Aqua Security Blog",
+      "feed_url": "https://blog.aquasec.com/rss.xml",
+      "website_url": "https://www.aquasec.com/blog/",
+      "description": "Aqua Security blog gives expert insight, best practices, and advice on cloud-native security, trends, threat intelligence, and compliance. Aqua Security, the cloud-native security company, helps customers create applications that are secure by design, enabling agile DevOps and hybrid cloud deployment with no compromise on security or compliance.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 7700
+      },
+      "image_url": "https://i1.feedspot.com/4800477.jpg?t=1659704892"
+    },
+    {
+      "title": "Container Solutions Blog",
+      "feed_url": "https://blog.container-solutions.com/rss.xml",
+      "website_url": "https://blog.container-solutions.com/",
+      "description": "Read the latest thinking, news, and research from the team at Container Solutions in our Cloud Native Blog. We are a professional services company that specializes in Cloud Native transformation. We help enterprises adopt new technology that enables them to work on the cloud in a sustainable way.",
+      "followers": {
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/5429540.jpg?t=1659705086"
+    },
+    {
+      "title": "Altoros Blog",
+      "feed_url": "https://www.altoros.com/blog/feed/",
+      "website_url": "https://www.altoros.com/blog/",
+      "description": "Find blogs on digital transformation with cloud-native, blockchain, and AI technologies. We are a consultancy and professional IT services provider that offers strategy consulting, full-cycle project support & management, and comprehensive training to help our customers meet their business goals through cloud automation and transformation.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5429537.jpg?t=1659704762"
+    },
+    {
+      "title": "The Cloud Blog",
+      "feed_url": "https://thecloudblog.net/index.xml",
+      "website_url": "https://thecloudblog.net/",
+      "description": "Hi, my name is Rahul, a versatile Cloud Architect. I share my thoughts, tips, and experiments with the cloud on this blog. I promote innovation, collaboration, and processes to bring efficiency to enterprise technology operations.",
+      "followers": {
+        "twitter": 643
+      },
+      "image_url": "https://i1.feedspot.com/5196900.jpg?t=1660890823"
+    },
+    {
+      "title": "Palo Alto Networks Blog \u00bb Cloud Security",
+      "feed_url": "https://www.paloaltonetworks.com/blog/cloud-security/feed/",
+      "website_url": "https://www.paloaltonetworks.com/blog/cloud-security/",
+      "description": "Read Palo Alto Networks Blog to know about Prisma Cloud which secures hybrid and multi-cloud environments for the world's most innovative companies. Palo Alto Networks, the global cybersecurity leader, is shaping the cloud-centric future with technology and continuous innovation.",
+      "followers": {
+        "facebook": 51800,
+        "twitter": 127100
+      },
+      "image_url": "https://i1.feedspot.com/5429545.jpg?t=1659704539"
+    },
+    {
+      "title": "Cloud Native Community Blog \u00bb Computing/Kubernetes/Containerization",
+      "feed_url": "https://www.cloudnativecommunity.com/category/blogs-on-cloud-native-computing-kubernetes-and-containerization/feed/",
+      "website_url": "https://www.cloudnativecommunity.com/category/blogs-on-cloud-native-computing-kubernetes-and-containerization/",
+      "description": "Read our blogs on Cloud Native Computing, Kubernetes, containerization, Azure Red Hat OpenShift, and Azure Kubernetes Service. Cloud-native Community is an initiative of the Microsoft and Red Hat partner's ecosystem. We provide guides and tutorials for online businesses that use WordPress to run their operations.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 1600,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5429543.jpg?t=1660884950"
+    }
+  ]
+}

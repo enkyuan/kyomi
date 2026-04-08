@@ -1,0 +1,163 @@
+{
+  "category": "Enterprise Architecture",
+  "source_url": "https://rss.feedspot.com/enterprise_architecture_rss_feeds",
+  "feeds": [
+    {
+      "title": "EA Voices",
+      "feed_url": "https://eavoices.com/feed/",
+      "website_url": "https://eavoices.com/",
+      "description": "A river of news and opinions about enterprise architecture, EA Voices is a thematic aggregator of enterprise architecture blog feeds by John G\u00f8tze. The database contains over 7800 posts and over 5 million words. Around 75 new posts are added every month.",
+      "followers": {
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5357696.jpg?t=1640679728"
+    },
+    {
+      "title": "Enterprise Architecture Professional Journal",
+      "feed_url": "https://eapj.org/feed/",
+      "website_url": "https://eapj.org/",
+      "description": "Welcome to the interactive blog for the EA Practice Advisor. This EA Practice Advisor was established as part of the EAPJ, and in the tradition of advice columns from the past, will allow readers to submit questions and receive advice from the team. We've got some great people here at the Journal, and we're looking forward to offering some helping words.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5378827.jpg?t=1646720240"
+    },
+    {
+      "title": "The Open Group Blog",
+      "feed_url": "https://blog.opengroup.org/feed/",
+      "website_url": "https://blog.opengroup.org/",
+      "description": "Our blog is a hub for thought leadership and commentary, written by and for technology and business professionals on topics about Enterprise and Business Reference Architectures",
+      "followers": {
+        "twitter": 13900
+      },
+      "image_url": "https://i1.feedspot.com/5000162.jpg?t=1646721918"
+    },
+    {
+      "title": "BiZZdesign Blogs",
+      "feed_url": "https://bizzdesign.com/blog/feed",
+      "website_url": "https://bizzdesign.com/blog/",
+      "description": "World-class enterprise architecture software. BiZZdesign is a software company that supports organizations in designing business change. We are a global organization with 1,000+ customers on six continents and offices in many countries across the globe. The Blog provides a complete overview to easily access documentation.",
+      "followers": {
+        "facebook": 697,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5378831.jpg?t=1646658247"
+    },
+    {
+      "title": "Forrester \u00bb Enterprise Architecture",
+      "feed_url": "https://www.forrester.com/blogs/category/enterprise-architecture/feed/",
+      "website_url": "https://www.forrester.com/blogs/category/enterprise-architecture/",
+      "description": "Constructing a great enterprise architecture is key to making technology work for businesses. Read insights for enterprise architecture professionals. Forrester helps business and technology leaders use customer obsession to accelerate growth. That means empowering you to put the customer at the center of everything you do: your leadership, strategy, and operations.",
+      "followers": {
+        "twitter": 354300
+      },
+      "image_url": "https://i1.feedspot.com/5378828.jpg?t=1646658229"
+    },
+    {
+      "title": "LeanIX Blog \u00bb Enterprise Architecture",
+      "feed_url": "https://www.leanix.net/en/blog/rss.xml",
+      "website_url": "https://www.leanix.net/en/blog/topic/enterprise-architecture",
+      "description": "Get Enterprise Architecture News and industry expertise from the world of continuous transformation. SaaS management, enterprise architecture, cloud infrastructure, DevOps and more. LeanIX offers Software-as-a-Service (SaaS) for managing Enterprise Architecture and multi-cloud environments to enable organizations to take faster, data-driven decisions in their IT.",
+      "followers": {
+        "facebook": 890,
+        "twitter": 3100,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5378833.jpg?t=1646658254"
+    },
+    {
+      "title": "Architecture & Governance Magazine \u00bb Elevating EA",
+      "feed_url": "https://www.architectureandgovernance.com/elevating-ea/feed/",
+      "website_url": "https://www.architectureandgovernance.com/elevating-ea/",
+      "description": "Get to know more about Enterprise architecture, benefits, risks, trends in the industry, new technologies, experts' opinions and more! Architecture and Governance Magazine is the leading online magazine covering business alignment and IT transformation. We are a voice of confidence for many emerging IT strategic programs and a beacon of leadership for global IT organizations looking to reduce costs, mitigate risks, and plan successful investments that grow their businesses.",
+      "followers": {
+        "facebook": 970,
+        "twitter": 195
+      },
+      "image_url": "https://i1.feedspot.com/5378826.jpg?t=1646658218"
+    },
+    {
+      "title": "Kai Waehner \u00bb Enterprise Architecture",
+      "feed_url": "https://www.kai-waehner.de/blog/category/enterprise-architecture/feed/",
+      "website_url": "https://www.kai-waehner.de/blog/category/enterprise-architecture/",
+      "description": "Get articles on enterprise architecture, apache Kafta, big data, middleware and more! Kai Waehner builds cloud-native event streaming infrastructures for real-time data processing and analytics",
+      "followers": {
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5378832.jpg?t=1646716061"
+    },
+    {
+      "title": "Hyperonomy",
+      "feed_url": "https://hyperonomy.com/feed/",
+      "website_url": "https://hyperonomy.com/",
+      "description": "Explore the blog for articles on enterprise architecture, product management, change management and business transformation. I'm Michael Herman, a technology veteran and enterprise architect, originally from Calgary, Alberta.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5378822.jpg?t=1646722435"
+    },
+    {
+      "title": "R&A IT Strategy & Architecture",
+      "feed_url": "https://ea.rna.nl/category/all-posts/feed/",
+      "website_url": "https://ea.rna.nl/category/all-posts/",
+      "description": "Find articles about IT, IT Strategy, and Enterprise Architecture. R&A is the publisher of the Mastering ArchiMate book and the Chess and the Art of Enterprise Architecture book",
+      "followers": {
+        "twitter": 823
+      },
+      "image_url": "https://i1.feedspot.com/5378820.jpg?t=1646658187"
+    },
+    {
+      "title": "Doug Newdick's Blog",
+      "feed_url": "https://dougnewdick.wordpress.com/feed/",
+      "website_url": "https://dougnewdick.wordpress.com/",
+      "description": "This is Doug Newdick's blog on business and technology. I am interested in, and write about, the application of philosophical, architectural and strategic thinking to business problems and technology solutions. I currently work as an enterprise architect in the New Zealand government. I have a particular interest in the telecommunications industry and its business support systems (BSS).",
+      "followers": {
+        "twitter": 720
+      },
+      "image_url": "https://i1.feedspot.com/5378825.jpg?t=1646658214"
+    },
+    {
+      "title": "Technology Articles Blog \u00bb Enterprise Architecture",
+      "feed_url": "https://www.getallarticles.com/category/enterprise-architecture/feed/",
+      "website_url": "https://www.getallarticles.com/category/enterprise-architecture/",
+      "description": "Get to know more about Enterprise architecture, benefits, risks, trends in the industry, new technologies, experts' opinions and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5378824.jpg?t=1646722156"
+    },
+    {
+      "title": "Abhishek Srivastava",
+      "feed_url": "https://abhisrivastava.com/feed/",
+      "website_url": "https://abhisrivastava.com/",
+      "description": "Started this blog to share my thoughts, knowledge, and ideas on Enterprise Architecture discipline, and to connect and interact with EA community. Solutions-focused. Innovative. Enterprise architecture expert. These are just a few of the qualities that Abhishek Srivastava holds. With more than 2 decades of technical management achievements with F500 companies (AmEx, American Airlines), he continues to deliver exceptional enterprise architecture buildout, revamp, and modernization efforts.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 723
+      },
+      "image_url": "https://i1.feedspot.com/5378821.jpg?t=1646658194"
+    },
+    {
+      "title": "Tom Graves Blog",
+      "feed_url": "https://weblog.tetradian.com/feed/",
+      "website_url": "https://weblog.tetradian.com/",
+      "description": "Find articles on mainly 'work in progress' pieces on idea-development and methods-development for various forms of enterprise-architecture - including organisational structure, service-architecture, business-architecture, business-models and some aspects of IT-architecture - and also large-scale social change from an enterprise-architecture perspective. Tom Graves is a seventy-year-old enterprise architect having worked in the industry for decades.",
+      "followers": {
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/773431.jpg?t=1646721618"
+    },
+    {
+      "title": "Conexiam Blog",
+      "feed_url": "https://conexiam.com/feed/",
+      "website_url": "https://conexiam.com/blog/",
+      "description": "We share our success stories, crash and burn stories along with our approach to enterprise architecture and professional development. Conexiam is a vanguard enterprise architecture consulting organization.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5378829.jpg?t=1646715723"
+    },
+    {
+      "title": "Leo de Sousa",
+      "feed_url": "https://leodesousa.ca/feed/",
+      "website_url": "https://leodesousa.ca/",
+      "description": "I will be posting and sharing our work in Leadership, Enterprise Architecture, Strategy and IT Service Management here. Hello, my name is Leo de Sousa. I actively participate in IT sector beyond my day job by regularly speaking/educating at provincial, national and international conferences as well as representing my organization in strategic partnerships with public sector organizations and vendors.",
+      "followers": {
+        "twitter": 809
+      },
+      "image_url": "https://i1.feedspot.com/537309.jpg?t=1646718036"
+    }
+  ]
+}

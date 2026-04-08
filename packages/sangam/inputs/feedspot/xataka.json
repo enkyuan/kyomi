@@ -1,0 +1,17 @@
+{
+  "category": "Xataka",
+  "source_url": "https://rss.feedspot.com/xataka_rss_feeds",
+  "feeds": [
+    {
+      "title": "Xataka",
+      "feed_url": "https://www.xataka.com/feedburner.xml",
+      "website_url": "https://www.xataka.com/",
+      "description": "Publicaci\u00f3n de noticias sobre gadgets y tecnolog\u00eda. \u00daltimas tecnolog\u00edas en electr\u00f3nica de consumo y novedades tecnol\u00f3gicas en m\u00f3viles, tablets, inform\u00e1tica, etc",
+      "followers": {
+        "twitter": 1400000,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/7896921.jpg?t=1744288425"
+    }
+  ]
+}

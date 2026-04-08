@@ -1,0 +1,910 @@
+{
+  "category": "Mountain Bike",
+  "source_url": "https://rss.feedspot.com/mountain_bike_rss_feeds",
+  "feeds": [
+    {
+      "title": "Enduro Mountainbike Magazine",
+      "feed_url": "https://enduro-mtb.com/en/feed/",
+      "website_url": "https://enduro-mtb.com/en/",
+      "description": "The most exciting mountain bike magazine of all time. digital, free and open-minded. Unbiased bike reviews and equipment tests. High quality mtb content.",
+      "followers": {
+        "facebook": 354800,
+        "twitter": 15900,
+        "instagram": 150900
+      },
+      "image_url": "https://i1.feedspot.com/1550775.jpg?t=1608366918"
+    },
+    {
+      "title": "Vital MTB",
+      "feed_url": "http://feeds.vitalmtb.com/VitalMtbSpotlights",
+      "website_url": "https://www.vitalmtb.com/",
+      "description": "Watch mountain bike videos, browse our huge product guide, and more. Bikes, parts, and gear reviews and ratings from other mountain bike riders.",
+      "followers": {
+        "facebook": 233400,
+        "twitter": 89100,
+        "instagram": 624100
+      },
+      "image_url": "https://i1.feedspot.com/1044501.jpg?t=1608366925"
+    },
+    {
+      "title": "Mountain Bike Magazine",
+      "feed_url": "https://www.mtb-mag.com/en/feed/",
+      "website_url": "https://www.mtb-mag.com/en/",
+      "description": "Mountain Bike Magazine is the only mountain bike website in English, Italian and Spanish. Find posts on mountain biking, racing, news and reviews.",
+      "followers": {
+        "facebook": 146200,
+        "twitter": 7800,
+        "instagram": 104700
+      },
+      "image_url": "https://i1.feedspot.com/4756885.jpg?t=1709296332"
+    },
+    {
+      "title": "Mountain Bike Rider",
+      "feed_url": "https://www.mbr.co.uk/feed",
+      "website_url": "https://www.mbr.co.uk/",
+      "description": "If you ride a mountain bike, Mountain Bike Rider is for you. Mountain Bike Rider features trail guides, trail centres, bike and gear reviews, workshop advice. Find posts related to mountain bike rides.",
+      "followers": {
+        "facebook": 82900,
+        "twitter": 88000
+      },
+      "image_url": "https://i1.feedspot.com/4591047.jpg?t=1608366936"
+    },
+    {
+      "title": "Singletracks",
+      "feed_url": "https://www.singletracks.com/articles/feed/",
+      "website_url": "https://www.singletracks.com/articles/",
+      "description": "Singletracks.com is home of the 1 mountain bike blog and the largest online catalog of GPS mountain bike trail maps. Mountain bikers can also find MTB videos, trail photos, reviews, and directions. Hundreds of mountain bike reviews and active forums. Find Mountain bike news, trails, travels, and dirt.",
+      "followers": {
+        "facebook": 221900,
+        "twitter": 5400,
+        "instagram": 89600
+      },
+      "image_url": "https://i1.feedspot.com/4752714.jpg?t=1608366941"
+    },
+    {
+      "title": "The Mount Bike Blog",
+      "feed_url": "https://themountbike.com/feed/",
+      "website_url": "https://themountbike.com/blog/",
+      "description": "The Mount Bike is a blog where you will get many tips and tricks about mounting bikes. Those who are very passionate about outdoor activities, especially mount biking, should follow this blog. Anything related to biking is available here.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5517414.jpg"
+    },
+    {
+      "title": "Two Wheeled Wanderer",
+      "feed_url": "https://www.twowheeledwanderer.com/feed/",
+      "website_url": "https://www.twowheeledwanderer.com/mountain-biking/",
+      "description": "Find the best mountain biking blog posts including mountain biking destination guides, mountain biking tips, and mountain biking gear reviews and round-ups. I'm Becky - the girl behind Two Wheeled Wanderer. I'm a mountain bike coach, world traveler, coffee snob, and animal lover. It is my hope to inspire you to get outdoors and live your very best adventurous life.",
+      "followers": {
+        "facebook": 464,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5510161.jpg?t=1676878386"
+    },
+    {
+      "title": "Zesty Life",
+      "feed_url": "https://zestylife.ca/feed/",
+      "website_url": "https://zestylife.ca/",
+      "description": "Zesty Life started a spark of an idea that I hope will catch as a way of living for Zesters to uncover their zest factor, pursue their passions and be in flow with a spirited, healthy, and enthusiastic life. By combining my heartfelt passion for helping others with my experience as a branding expert, health enthusiast, foodie, graphic designer, writer, athlete, and artist I take a unique approach to help and inspire you to align with your truth, so you may live and experience your life in pure authentic resonance.",
+      "followers": {
+        "facebook": 449
+      },
+      "image_url": "https://i1.feedspot.com/5510167.jpg?t=1676878355"
+    },
+    {
+      "title": "RAAW Mountain Bikes Blog",
+      "feed_url": "https://raawmtb.com/blogs/stories.atom",
+      "website_url": "https://raawmtb.com/blogs/stories",
+      "description": "RAAW Mountain Bikes is a company based in the south of Germany, making high-end mountain bikes, focusing on durability and sendability. Stay up to date with the latest updates on product launches, availability and everything that happens in the world of RAAW!",
+      "followers": {
+        "instagram": 45500
+      },
+      "image_url": "https://i1.feedspot.com/5510164.jpg?t=1676878819"
+    },
+    {
+      "title": "Dynamic Cycling Adventures Blog",
+      "feed_url": "https://www.dynamiccyclingadventures.com//feed/rss2",
+      "website_url": "https://www.dynamiccyclingadventures.com/blog",
+      "description": "Dynamic Cycling Adventures is here to help you to improve your mountain biking skills. Check out some of our blogs for helpful tips and tricks to help you. We are a group of passionate, dirt-loving riders who want to share the stoke of riding by crafting unique adventures that lead to new experiences, new friends, and long lasting memories.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 13,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5510163.jpg?t=1676878579"
+    },
+    {
+      "title": "Fanatik Bike Company Blog",
+      "feed_url": "https://www.fanatikbike.com/blogs/engage.atom",
+      "website_url": "https://www.fanatikbike.com/blogs/engage",
+      "description": "From our humble beginnings in a car garage, Fanatik is now an award-winning brick-and-mortar bike shop, with a world-renowned online presence. We are dedicated to providing the best products and service for you and your bike. Our blog is where you can find everything from product suggestions to tips on some of the best local rides.",
+      "followers": {
+        "facebook": 37100,
+        "instagram": 103500
+      },
+      "image_url": "https://i1.feedspot.com/5510160.jpg?t=1676878635"
+    },
+    {
+      "title": "More Dirt",
+      "feed_url": "https://www.moredirt.com/rss.xml",
+      "website_url": "https://www.moredirt.com/news_events.php",
+      "description": "Read all about the latest and exciting mountain bike trail developments, along with mountain bike events and race news from throughout the UK and Ireland. Discover the very best mountain bike trails to ride near you. Whether you're looking to ride only the best mountain bike trails or if you're new to mountain biking and want to ride suitable for beginners, MoreDirt has you covered.",
+      "followers": {
+        "facebook": 7800,
+        "twitter": 3700,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5510169.jpg?t=1676876755"
+    },
+    {
+      "title": "The MTB Lab",
+      "feed_url": "http://feeds.feedburner.com/TheMtbLab",
+      "website_url": "https://themtblab.com/",
+      "description": "We mainly write, test, and review mountain bike-related products, which cover a full breadth of the outdoor and bicycle industry and include products used during bike riding and pre and post-rides.",
+      "followers": {
+        "facebook": 651,
+        "twitter": 295
+      },
+      "image_url": "https://i1.feedspot.com/5510162.jpg?t=1676877328"
+    },
+    {
+      "title": "Spoke Magazine",
+      "feed_url": "https://spokemagazine.com/feed/",
+      "website_url": "https://spokemagazine.com/",
+      "description": "Spoke is you. The riders, writers, and ratbags set out on their bikes no matter the weather to push the boundaries. You set the challenge, take the photos and write the article. Spoke would be pretty dull without you. Spoke has put the power in the hands of the riders of NZ since 2001 and is set for another 20 more years. Every Spoke issue is a documentation of the weird and wonderful you won't find online. More detail to inspire you to challenge yourself just like those featured in every issue. More stories of local legends going global with their hard earned talents.",
+      "followers": {
+        "instagram": 13600
+      },
+      "image_url": "https://i1.feedspot.com/5507733.jpg?t=1676877455"
+    },
+    {
+      "title": "Muddymoles",
+      "feed_url": "https://feeds.feedburner.com/muddymoles",
+      "website_url": "https://muddymoles.org.uk/",
+      "description": "The Muddymoles are a group of mountain bike (MTB) riders that do most of their mountain biking in the Surrey Hills and Mole valley, basically around Leith Hill, Pitch Hill and Holmbury Hill and all points in between. Keep up to date with the latest news, reviews, chat and ride reports from the Muddymoles.",
+      "followers": {
+        "facebook": 220,
+        "twitter": 397
+      },
+      "image_url": "https://i1.feedspot.com/5510165.jpg?t=1676878166"
+    },
+    {
+      "title": "Revolution Mountain Bike Magazine",
+      "feed_url": "https://revolutionmtb.com.au/feed/",
+      "website_url": "https://revolutionmtb.com.au/",
+      "description": "Published quarterly Revolution is a magazine of pure quality in production - from our editorial content right through to the stunning high-stock paper that we are printed on. Revolution stands apart from other MTB magazines on the shelf. Inside each issue you will find a balanced yet dynamic mix of highly creative editorial content, focused on the true all-mountain side of riding.",
+      "followers": {
+        "facebook": 13100,
+        "instagram": 22800
+      },
+      "image_url": "https://i1.feedspot.com/5510159.jpg?t=1676979580"
+    },
+    {
+      "title": "Worldwide Cyclery Blog",
+      "feed_url": "https://www.worldwidecyclery.com/blogs/worldwide-cyclery-blog.atom",
+      "website_url": "https://www.worldwidecyclery.com/blogs/worldwide-cyclery-blog",
+      "description": "The Worldwide Cyclery Blog covers all things in the mountain bike world. From videos & articles of new products, reviews written by us and by real riders, product overviews and much more. It is truly, all things MTB.",
+      "followers": {
+        "facebook": 63000,
+        "instagram": 188900
+      },
+      "image_url": "https://i1.feedspot.com/5510158.jpg?t=1676877750"
+    },
+    {
+      "title": "Vague Idea Racing",
+      "feed_url": "http://teamdicky.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://teamdicky.blogspot.com/",
+      "description": "Explore Rich Dillen- Unprofessional Cyclist's opinions on various mountain bikes, websites, products, dirt roads and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5510156.jpg?t=1676877844"
+    },
+    {
+      "title": "Bikerumor \u00bb Mountain Bike",
+      "feed_url": "https://bikerumor.com/bike-types/mountain-bike/feed/",
+      "website_url": "https://bikerumor.com/bike-types/mountain-bike/",
+      "description": "Bikerumor.com is the world's largest cycling tech blog. All the best cycling news, reviews, rumors and tech, covering all the latest road, mountain, commuter bicycles and gear, plus advocacy, events, in-depth reviews and provide all the bike news and info you might actually care about. Find posts on Mountain Bike.",
+      "followers": {
+        "facebook": 222600,
+        "twitter": 68200
+      },
+      "image_url": "https://i1.feedspot.com/4753765.jpg?t=1608366985"
+    },
+    {
+      "title": "Radnut",
+      "feed_url": "https://radnut.com/feed/",
+      "website_url": "https://radnut.com/",
+      "description": "Radnut features articles on mountain bike, motorcross, snow sports etc.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5046978.jpg?t=1608367068"
+    },
+    {
+      "title": "E-Mountainbike Magazine",
+      "feed_url": "https://ebike-mtb.com/en/feed/",
+      "website_url": "https://ebike-mtb.com/en/",
+      "description": "Find E-mountain bike reviews, current news, exciting travel stories, and practical tips from E-Mountainbike in our latest articles. E-Mountainbike Magazine is the world's leading e-mountain bike magazine devoted to beginners and experts and regular readers interested in Mountain biking sustainably.",
+      "followers": {
+        "facebook": 29700,
+        "instagram": 47000
+      },
+      "image_url": "https://i1.feedspot.com/4756891.jpg?t=1653566343"
+    },
+    {
+      "title": "North Shore Mountain Biking",
+      "feed_url": "https://nsmb.com/articles/rss/",
+      "website_url": "https://nsmb.com/",
+      "description": "North Shore Mountain Biking started in a Vancouver apartment with nothing more than an idea and a couple of guys looking to have some fun. NSMB.com is an authentic mountain bike media with an irreverent edge.",
+      "followers": {
+        "facebook": 145000,
+        "twitter": 7600,
+        "instagram": 37400
+      },
+      "image_url": "https://i1.feedspot.com/4756868.jpg?t=1608367146"
+    },
+    {
+      "title": "Mountain Bike Action",
+      "feed_url": "https://mbaction.com/feed/",
+      "website_url": "https://mbaction.com/",
+      "description": "Mountain Bike Action is a monthly magazine about mountain biking that includes in-depth tests of mountain bikes (over 50 bikes a year), components and riding gear. Find information on the best riding destinations because that is what it is all about; riding our mountain bikes in beautiful places.",
+      "followers": {
+        "facebook": 327300,
+        "twitter": 48700,
+        "instagram": 95100
+      },
+      "image_url": "https://i1.feedspot.com/4755743.jpg?t=1608367157"
+    },
+    {
+      "title": "Bermstyle",
+      "feed_url": "https://bermstyle.com/feed/",
+      "website_url": "https://bermstyle.com/",
+      "description": "Bermstyle features gear reviews, single track trail destinations and cycling news. Find Cycling and Gear Review Site and MTB Skills Coaching.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1200,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4699742.jpg?t=1608367168"
+    },
+    {
+      "title": "Wideopen Magazine",
+      "feed_url": "https://www.wideopenmountainbike.com/feed",
+      "website_url": "https://www.wideopenmountainbike.com/",
+      "description": "Wideopen Magazine is a UK mountain bike magazine. Wideopenmag showcases the greatest bits of UK mountain bike racing, product and riders. Find Mountain bike lifestyle, reviews and videos.",
+      "followers": {
+        "facebook": 23500,
+        "twitter": 7000,
+        "instagram": 23400
+      },
+      "image_url": "https://i1.feedspot.com/4756806.jpg?t=1608367188"
+    },
+    {
+      "title": "H+I Adventures",
+      "feed_url": "https://www.mountainbikeworldwide.com/feed",
+      "website_url": "https://www.mountainbikeworldwide.com/stories",
+      "description": "Across our 'H+I Stories' you'll find travel inspiration and advice to help you towards your next E-MTB tour or mountain bike adventure. We also have great tips to improve your bike handling, maintenance skills, and fitness; from our outstanding team of international guiding experts. H I Adventures Delivers the world's best mountain bike tours around the globe.",
+      "followers": {
+        "facebook": 6200,
+        "instagram": 10300
+      },
+      "image_url": "https://i1.feedspot.com/4753835.jpg?t=1608367202"
+    },
+    {
+      "title": "Bike198",
+      "feed_url": "https://www.bike198.com/feed/",
+      "website_url": "https://www.bike198.com/",
+      "description": "Bike198 was started back in 2008 by Robb Sutton with one purpose provide the best reviews, tutorials and opinion articles for the mountain bike community. From extreme mountain biking to century road rides to urban commutes, we handle everything from bike and component reviews to riding tips and industry news.Find Mountain biking videos, reviews, tutorials and news from the crew at Bike198.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 2100,
+        "instagram": 534
+      },
+      "image_url": "https://i1.feedspot.com/4752616.jpg?t=1608367182"
+    },
+    {
+      "title": "UNDER BLUE Magazine",
+      "feed_url": "https://www.underblue.com/feed/",
+      "website_url": "https://www.underblue.com/category/outdoors/",
+      "description": "Articles on gravel cycling, mountain biking, industry news and lifestyle. Begin your backroad gravel cycling adventures with Carbon+Grit.",
+      "followers": {
+        "twitter": 60
+      },
+      "image_url": "https://i1.feedspot.com/5174240.jpg?t=1608367211"
+    },
+    {
+      "title": "MountainBikeBill Blog",
+      "feed_url": "http://www.mountainbikebill.com/blog/?feed=rss2",
+      "website_url": "http://www.mountainbikebill.com/blog/",
+      "description": "Bill Porter started the MountainBikeBill blog to share mountain bike trail reviews, photos, maps, and videos from his rides.",
+      "followers": {
+        "facebook": 186,
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/5318739.jpg?t=1630655809"
+    },
+    {
+      "title": "Road and Mountain Bike Reviews",
+      "feed_url": "https://roadandmountainbikereviews.co.uk/feed/",
+      "website_url": "https://roadandmountainbikereviews.co.uk/",
+      "description": "Keep up with Road and Mountain Bike Reviews.",
+      "followers": {
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/5096486.jpg"
+    },
+    {
+      "title": "Chasing Epic Blog",
+      "feed_url": "https://chasingepicmtb.com/feed/",
+      "website_url": "https://chasingepicmtb.com/blog/",
+      "description": "Welcome to Chasing Epic, a new breed of adventure travel company providing all-inclusive, guided mountain bike trips across the Rocky Mountains and Desert Southwest. Our guides are consummate professionals who are passionate about mountain biking, and dedicated to having fun.",
+      "followers": {
+        "facebook": 4100,
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/4753778.jpg?t=1608367503"
+    },
+    {
+      "title": "Vermont 50 Blog",
+      "feed_url": "https://vermont50.com/blog/feed/",
+      "website_url": "https://vermont50.com/blog/",
+      "description": "The Vermont 50 Mountain Bike or Ultra Run was started in 1993 by Laura Farrell. Vermont 50 Mountain Bike or Ultra-Run, 50 K Run, Team Relay, Free Kids Fun Race! Ascutney Mountain Resort, Brownsville VT. Find posts on Mountain Bike.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 561,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4757030.jpg?t=1608367515"
+    },
+    {
+      "title": "TREAD Magazine",
+      "feed_url": "https://www.treadmtb.co.za/feed/",
+      "website_url": "https://www.treadmtb.co.za/",
+      "description": "TREAD MTB Magazine is a premium quality mountain bike magazine that caters for anyone that enjoys riding a mountain bike, but with particular emphasis on the increasingly large segment of intermediate and experienced mountain bikers. Topics include objective, authoritative gear reviews and bike tests; trends; advice on buying and maintenance; indepth trail review within the mountain bike market.",
+      "followers": {
+        "facebook": 17500,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4756857.jpg?t=1608367531"
+    },
+    {
+      "title": "Woolly Bike Club",
+      "feed_url": "https://www.woollybikeclub.com/?feed=rss2",
+      "website_url": "https://www.woollybikeclub.com/",
+      "description": "Woolly Bike Club exists to grow mountain biking in the St. Croix River Valley through advocacy, community, events, and an ever expanding sustainable network of maintained trails. Find posts on mountain bikes.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 643
+      },
+      "image_url": "https://i1.feedspot.com/4756949.jpg?t=1608367567"
+    },
+    {
+      "title": "Highland Mountain Bike Park",
+      "feed_url": "https://highlandmountain.com/feed/",
+      "website_url": "https://highlandmountain.com/explore-highland/events-news/news/",
+      "description": "Highland Mountain Bike Park is the world's only lift access mountain entirely dedicated to biking. Highland offers lessons and camps for all abilities and is home to the Ayr Academy, a week long, overnight camp taught by the best celebrity pros in the business. Highland Mountain Bike Park is America's Bike Park.",
+      "followers": {
+        "facebook": 38300,
+        "twitter": 1600,
+        "instagram": 45300
+      },
+      "image_url": "https://i1.feedspot.com/1044504.jpg?t=1608367650"
+    },
+    {
+      "title": "Pinkbike",
+      "feed_url": "https://www.pinkbike.com/pinkbike_xml_feed.php",
+      "website_url": "https://www.pinkbike.com/",
+      "description": "Check out PinkBike blog for the latest in cycling and mountain biking news, freeride videos, photos, events, and more. Submit your own biking pictures and videos online. Buy the latest biking DVDs and videos. Check race results. Pinkbike is the largest Mountain Bike community in the world.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 114000,
+        "instagram": 1900000
+      },
+      "image_url": "https://i1.feedspot.com/4673941.jpg?t=1676966336"
+    },
+    {
+      "title": "International Mountain Bike Association Canada",
+      "feed_url": "https://imbacanada.com/feed/",
+      "website_url": "https://imbacanada.com/news/",
+      "description": "The International Mountain Bicycling Association (Canada) is a national not for profit organization that advocates for mountain bike, and trail access across Canada. Our mission is to create, enhance, and preserve great trail experiences for mountain bikers across Canada.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 1700,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4753982.jpg?t=1608367221"
+    },
+    {
+      "title": "Dirt Mountain Bike",
+      "feed_url": "https://dirtmountainbike.com/news/feed",
+      "website_url": "https://dirtmountainbike.com/news",
+      "description": "Dirt Mountain Bike News, Reviews & MTB Videos with the latest from the Mountain Biking World Cup.",
+      "followers": {
+        "facebook": 840500,
+        "twitter": 61400,
+        "instagram": 183500
+      },
+      "image_url": "https://i1.feedspot.com/4756085.jpg?t=1608366922"
+    },
+    {
+      "title": "International Mountain Bike Magazine",
+      "feed_url": "https://www.imbikemag.com/feed/",
+      "website_url": "https://www.imbikemag.com/",
+      "description": "Mountain bike magazine IMB is the number one online mountain bike magazine. Find mix of mountain bike news, travel and interviews from around the globe and you have everything you will ever need to keep you up to date with mountain biking.",
+      "followers": {
+        "facebook": 457700,
+        "twitter": 4100,
+        "instagram": 14200
+      },
+      "image_url": "https://i1.feedspot.com/4756111.jpg?t=1608366949"
+    },
+    {
+      "title": "Enduroway Blog",
+      "feed_url": "https://www.enduroway.com/feed/",
+      "website_url": "https://www.enduroway.com/blog/",
+      "description": "Enduroway was founded with the vision to make Veria a world-renowned hub for enduro and adventure sports. We embrace the thrill, the adrenaline, and the unyielding quest for adventure that drives every enduro enthusiast.Our journey is about sharing the pure joy and exhilaration that comes with conquering the untamed trails of the beautiful Greek landscape.",
+      "followers": {
+        "facebook": 1700,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5737168.jpg?t=1702624812"
+    },
+    {
+      "title": "SickLines",
+      "feed_url": "https://www.sicklines.com/feed/",
+      "website_url": "https://www.sicklines.com/",
+      "description": "The latest and greatest mountain biking content with a focus on Gravity. We have a passion for progression at SickLines. We pride ourselves on curating unique mountain bike content for our worldwide audience.",
+      "followers": {
+        "facebook": 8100,
+        "twitter": 1700,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/1084238.jpg?t=1676875988"
+    },
+    {
+      "title": "The Loam Wolf",
+      "feed_url": "https://theloamwolf.com/feed/",
+      "website_url": "https://theloamwolf.com/",
+      "description": "The Loam Wolf provides trusted mountain bikes and EMTB news. We test the latest products in the industry to offer you a reliable review. The Loam Wolf is a mountain bike and dirt bike media outlet whose focus is to present honest, straightforward reviews and a community of readers.",
+      "followers": {
+        "facebook": 28600,
+        "instagram": 149700
+      },
+      "image_url": "https://i1.feedspot.com/5074027.jpg?t=1676876639"
+    },
+    {
+      "title": "BetterRide Blog",
+      "feed_url": "https://betterride.net/feed/",
+      "website_url": "https://betterride.net/blog/category/mtb-skills-articles-tips-advice/",
+      "description": "Gene Hamilton provides MTB Skills Articles, Tips & Advice as well as Instructional videos to help you become the best rider you can be! BetterRide MTB Skills Courses with Gene Hamilton, will help you ride Faster, more Efficient, Balanced, and in Control.",
+      "followers": {
+        "facebook": 33500,
+        "twitter": 689,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5510166.jpg?t=1676877705"
+    },
+    {
+      "title": "Mountain Bike Man \u00bb Youtube",
+      "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCuD9dxnofeZDScoCVOcT0Uw",
+      "website_url": "https://www.youtube.com/channel/UCuD9dxnofeZDScoCVOcT0Uw/videos",
+      "description": "Welcome to Mountain Bike Man! Follow me as I ride, work on, and review mountain bikes and bike parts. If I get to ride, you get to ride with me. Join the adventure and fun!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4757289.jpg?t=1608368641"
+    },
+    {
+      "title": "Cycling Canada \u00bb Mountain Bike News",
+      "feed_url": "https://cyclingcanada.ca/sport/mountain-bike/news/feed/",
+      "website_url": "https://cyclingcanada.ca/sport/mountain-bike/news/",
+      "description": "Cycling Canada Cyclisme is a National Sport Organization whose main reason for being is the organization and promotion of cycling in Canada. Find posts on mountain bike by Cycling Canada.",
+      "followers": {
+        "facebook": 24100,
+        "twitter": 14400,
+        "instagram": 28800
+      },
+      "image_url": "https://i1.feedspot.com/4756162.jpg?t=1608367191"
+    },
+    {
+      "title": "Everyday MTB",
+      "feed_url": "https://everydaymtb.com/feed/",
+      "website_url": "https://everydaymtb.com/",
+      "description": "EverydayMTB is dedicated to bringing you news, reviews and more that all mountain bikers can relate to.",
+      "followers": {
+        "facebook": 450,
+        "twitter": 44,
+        "instagram": 448
+      },
+      "image_url": "https://i1.feedspot.com/4873070.jpg?t=1608367208"
+    },
+    {
+      "title": "Alaska Dirt Divas",
+      "feed_url": "https://alaskadirtdivas.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://alaskadirtdivas.blogspot.com/",
+      "description": "Mountain biking women in the last frontier.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4757013.jpg?t=1608367850"
+    },
+    {
+      "title": "MTB Threads - The best in Mountain Bike clothing",
+      "feed_url": "https://mtb-threads.com/feed",
+      "website_url": "https://mtb-threads.com/",
+      "description": "My goal with this website is to give mountain bikers the best information about our sport. I do this by writing guides on clothing, accessories, destinations and anything else I can think of.",
+      "followers": {
+        "twitter": 42,
+        "instagram": 262
+      },
+      "image_url": "https://i1.feedspot.com/4948815.jpg?t=1608367178"
+    },
+    {
+      "title": "Adele Mitchell \u00bb Mountain Biking",
+      "feed_url": "https://adelemitchell.com/tag/mountain-biking/feed/",
+      "website_url": "https://adelemitchell.com/tag/mountain-biking/",
+      "description": "Adele Mitchell is a award winning writer, mountain biking and women's cycling blogger. I am a keen mountain biker and road cyclist and, having written a piece on women and mountain biking for Dirt. Posts about mountain biking written by adele mitchell.",
+      "followers": {
+        "twitter": 4700,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4754092.jpg?t=1608367217"
+    },
+    {
+      "title": "Ride eMTB",
+      "feed_url": "https://rideemtb.com/feed/",
+      "website_url": "https://rideemtb.com/",
+      "description": "e-MTB news, reviews. Rideemtb is the home of e-MTB and e-Bike news, reviews, and tips. Follow the latest breaking news right here.",
+      "followers": {
+        "twitter": 22,
+        "instagram": 221
+      },
+      "image_url": "https://i1.feedspot.com/5044830.jpg?t=1676971029"
+    },
+    {
+      "title": "Chamonix Bike Blog",
+      "feed_url": "https://chamonixbikeblog.com/feed/",
+      "website_url": "https://chamonixbikeblog.com/",
+      "description": "Chamonix Bike Blog is a Mountain bike blog for Chamonix and the Western Alps. This blog is here to give you information on mountain biking in and around Chamonix, conditions, routes, and goings on.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4754110.jpg?t=1608368709"
+    },
+    {
+      "title": "RIDESTOKE",
+      "feed_url": "https://www.ridestoke.com/feed/",
+      "website_url": "https://www.ridestoke.com/article/",
+      "description": "Ridestoke collective brings best mountain bike MTB videos, downhill bike, trials MTB, trail dog, gopro hero4, 5 entertainment that will get stoked to ride.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 590,
+        "instagram": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4873171.jpg?t=1608367492"
+    },
+    {
+      "title": "Mtn Bike Riders",
+      "feed_url": "https://www.mtnbikeriders.com/feed/",
+      "website_url": "https://www.mtnbikeriders.com/",
+      "description": "Mtn Bike Riders was founded by two avid mountain bikers, RL Policar and Moe Ramirez of Southern California. MtnBikeRiders.com is a site that provides news, articles, how to's, product reviews and anything else related to mountain biking.",
+      "followers": {
+        "facebook": 2400
+      },
+      "image_url": "https://i1.feedspot.com/541851.jpg?t=1608367510"
+    },
+    {
+      "title": "The Mountain Bike Association of Arizona",
+      "feed_url": "https://mbaa.net/feed/",
+      "website_url": "https://mbaa.net/",
+      "description": "MBAA promotes, protects and preserves the Arizona trail experience through advocacy, education and responsible recreational and competitive mountain biking.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 356,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4752849.jpg?t=1608367520"
+    },
+    {
+      "title": "Marathon MTB",
+      "feed_url": "https://marathonmtb.com/feed/",
+      "website_url": "https://marathonmtb.com/",
+      "description": "MarathonMTB.com presents news, reports, blogs and information from the world of marathon mountain-biking. We deliver the latest information from the world of endurance mountain biking. Marathon MTB is your first feed zone for all news, dates, results and blogs from the world of marathon mountain-biking.",
+      "followers": {
+        "facebook": 13700,
+        "twitter": 3400,
+        "instagram": 13200
+      },
+      "image_url": "https://i1.feedspot.com/4754393.jpg?t=1608367541"
+    },
+    {
+      "title": "Red Wolf Mountain Bike Tours Blog",
+      "feed_url": "https://www.redwolftours.com/blog?format=RSS",
+      "website_url": "https://www.redwolftours.com/blog/",
+      "description": "Red Wolf Mountain Bike Tours is a full service mountain bike guide service in Brevard, North Carolina offering guided rides in Pisgah & Dupont. Find our local mountain bike guides which will help you to safely enjoy the trails of Pisgah and Dupont!",
+      "followers": {
+        "facebook": 688,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4756059.jpg?t=1608367551"
+    },
+    {
+      "title": "Overland Mountain Bike Club Blog",
+      "feed_url": "https://overlandmtb.org/blog/feed/",
+      "website_url": "https://overlandmtb.org/blog/",
+      "description": "OMBC is Northern Colorado's & Southern Wyoming's premier mountain biking resource and promotes the sport through education and advocacy. We promote the active, healthy sport of mountain biking by providing education and assistance to all trail users, and by working to build and maintain quality, sustainable trails that enhance the mountain biking experience.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 159,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4756040.jpg?t=1608367555"
+    },
+    {
+      "title": "All Mountain Next",
+      "feed_url": "http://all-mountain-next.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://all-mountain-next.blogspot.com/",
+      "description": "Welcome to the All Mountain Next blog! I'm a passionate all mountain biker. I keep this blog techy but light hearted all the way. This is a place where I get to put spot on All-Mountain biking, certain gadgets and news and always have fun doing it.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4756923.jpg?t=1608368504"
+    },
+    {
+      "title": "Krista Rust",
+      "feed_url": "https://kristarust.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://kristarust.blogspot.com/",
+      "description": "Hi I'm Krista Rust. I'm a Professional Mountain Bike Racer. After working for Motorola as an Electrical Engineer for 7 years, I quit my job, sold my home and begin traveling full-time as a cross-country mountain bike racer. Find blogs on Mountain Bikes.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 337
+      },
+      "image_url": "https://i1.feedspot.com/4756939.jpg?t=1608367584"
+    },
+    {
+      "title": "Dept.26 Bude",
+      "feed_url": "http://dept26.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://dept26.blogspot.com/",
+      "description": "Dept 26 is a Mountain Bike Club based in Bude, Cornwall. Find posts on Bude mountain biking, MTB, dept26, tiscott woods, ride guide.",
+      "followers": {
+        "facebook": 563,
+        "twitter": 66
+      },
+      "image_url": "https://i1.feedspot.com/4756998.jpg?t=1608367588"
+    },
+    {
+      "title": "Ore\u00e1dMary's Mountain Bike Musings",
+      "feed_url": "https://marymetcalf.wordpress.com/feed/",
+      "website_url": "https://marymetcalf.wordpress.com/",
+      "description": "Ore\u00e1dMary's Mountain Bike Musings is the musings of a mom, cyclist, artist and adventurer, Mary Metcalf. Mary Metcalf is a Mountain Biker and Cycling marketer. Mary Metcalf is the First woman to race the entire Great Divide Mountain Bike Route.",
+      "followers": {
+        "twitter": 643
+      },
+      "image_url": "https://i1.feedspot.com/4753929.jpg?t=1608367593"
+    },
+    {
+      "title": "Single Trail Verbier",
+      "feed_url": "https://www.singletrailverbier.com/blog-feed.xml",
+      "website_url": "https://www.singletrailverbier.com/news",
+      "description": "Whether you a looking for technical improvement for your mountain biking skills, a guide that knows Verbier inside out, a coach who is patient and experienced helping you to overcome your fears. We have the right mountain bike coaches and guides for you. Find Mountain Bike Guiding and Holidays in Verbier.",
+      "followers": {
+        "facebook": 549,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4756069.jpg?t=1608367599"
+    },
+    {
+      "title": "Sticks and Stones",
+      "feed_url": "http://sticksandstonesmountainbiking.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://sticksandstonesmountainbiking.blogspot.com/",
+      "description": "Creating a fun and educational introductory mountain biking experience for children on the local trails of State College.",
+      "followers": {
+        "facebook": 256
+      },
+      "image_url": "https://i1.feedspot.com/4757020.jpg?t=1608367602"
+    },
+    {
+      "title": "Carrbridge Mountain Bikers",
+      "feed_url": "http://carrbridgebikers.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://carrbridgebikers.blogspot.com/",
+      "description": "Carrbridge Mountain Bikers is a group of mountain bikers who head out at 6:30 every Wednesday night from somewhere in Badenoch & Strathspey. Anyone is welcome to come along but please note this is not an organised guided run, riders should be capable of fending for themselves.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4756963.jpg?t=1608368461"
+    },
+    {
+      "title": "Black Mountain Cycles \u00bb Black Mountain Cycles frames",
+      "feed_url": "https://blackmtncycles.com/category/black-mountain-cycles-frames/feed/",
+      "website_url": "https://blackmtncycles.com/category/black-mountain-cycles-frames/",
+      "description": "Welcome to Black Mountain Cycles where we strive to embrace the unmistakable 'feel' of the traditional bike shop. Find Road, cyclocross, mountain, gravel, mixed-terrain adventures await you. Find Black Mountain Cycles frames.",
+      "followers": {
+        "facebook": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4754530.jpg?t=1608368402"
+    },
+    {
+      "title": "CANADA MTB",
+      "feed_url": "http://canadamtb.com/feed/",
+      "website_url": "http://canadamtb.com/",
+      "description": "CanadaMTB is an informational source to provide mountain bikers with an extensive list of MTB shops, companies, trails, races, parks, and resorts throughout Canada.",
+      "followers": {
+        "facebook": 784
+      },
+      "image_url": "https://i1.feedspot.com/5126588.jpg?t=1608368290"
+    },
+    {
+      "title": "Total Women's Cycling \u00bb MTB",
+      "feed_url": "https://totalwomenscycling.com/mountain-biking/feed",
+      "website_url": "https://totalwomenscycling.com/mountain-biking",
+      "description": "The Total Women's Cycling mountain bike section is here up to offer tips, information and advice on all things related to mountain biking. Take a look through the specific mountain bike categories to pick up new trail skills, learn the basics of bike maintenance and read our in depth reviews across mountain bikes, accessories and clothing.",
+      "followers": {
+        "facebook": 41400,
+        "twitter": 14700
+      },
+      "image_url": "https://i1.feedspot.com/4755925.jpg?t=1608367153"
+    },
+    {
+      "title": "Mountain Bikes Pro",
+      "feed_url": "http://mountainbikespro.com/feed/",
+      "website_url": "http://mountainbikespro.com/reviews/",
+      "description": "Howdy Folks, I am Donny. I am Tech Enthusiastic, Outdoors Freak & Traveler. I love to write reviews on Bikes. Specially, mountain bikes as its one of the coolest riding experience you can get in your bike. I have developed this platform with some experts on Mountain Biking to help my fellow bike lovers easily find the best value. Find Mountain Bike Reviews, Comparison, Deals , Tricks & Trails.",
+      "followers": {
+        "facebook": 72,
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/4753217.jpg?t=1608367696"
+    },
+    {
+      "title": "Mountain Bikes Apart",
+      "feed_url": "https://www.mountainbikesapart.com/feed/",
+      "website_url": "https://www.mountainbikesapart.com/",
+      "description": "Hi I'm Colin Gray, and this is my website, Mountain Bikes Apart. This blog is all about my adventures in mountain biking, from great trails and trips to outright fiascos and racing disasters. We're all about finding the right mountain bike for you, whether it's buying your first, your newest, or upgrading an old steed.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4753189.jpg?t=1608367685"
+    },
+    {
+      "title": "Sacred Rides",
+      "feed_url": "https://sacredrides.com/blog/feed/",
+      "website_url": "https://sacredrides.com/the-daily-dirt/",
+      "description": "Since 1996, we've helped over 10,000 people from around the world get more out of life through heart-pounding, fist-pumping, soul-fulfilling mountain bike adventures in some of the most spectacular places on Earth. The Daily Dirt is Sacred Rides' weekly blog full of inspiration and tips for mountain bikers who want to travel the world.",
+      "followers": {
+        "facebook": 32500,
+        "twitter": 2300,
+        "instagram": 9700
+      },
+      "image_url": "https://i1.feedspot.com/4753280.jpg?t=1608367610"
+    },
+    {
+      "title": "SauserWind",
+      "feed_url": "https://www.sauserwind.com/feed/",
+      "website_url": "https://www.sauserwind.com/",
+      "description": "We review all the latest mountain bike accessories, parts, and clothing. We also review some bikes we have tested.",
+      "followers": {
+        "facebook": 26,
+        "instagram": 445
+      },
+      "image_url": "https://i1.feedspot.com/5060664.jpg?t=1608367675"
+    },
+    {
+      "title": "Diary of Scott Morris",
+      "feed_url": "http://topofusion.com/diary/feed/",
+      "website_url": "http://topofusion.com/diary/",
+      "description": "TopoFusion is GPS Mapping software for Windows. Hi I'm Scott Morris and I'm a lifelong mountain biker, trail mapper and programmer. Diary of Scott Morris is a Mountain bike obsession from the author of TopoFusion / Trackleaders.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4754477.jpg?t=1608367975"
+    },
+    {
+      "title": "Bike James Mountain Bike Strength Training Blog",
+      "feed_url": "https://www.bikejames.com/blog/feed/",
+      "website_url": "https://www.bikejames.com/blog/",
+      "description": "My name is James Wilson and like you I live to ride my bikes. I am just a regular guy who loves to ride his mountain bike. MTB Strength Training Systems is the leading Mountain Bike Cardio and Strength Training website. I live to ride my mountain bike and help people have more fun on the trail.",
+      "followers": {
+        "facebook": 11700,
+        "twitter": 900
+      },
+      "image_url": "https://i1.feedspot.com/4753299.jpg?t=1608367691"
+    },
+    {
+      "title": "All Mountaindinger",
+      "feed_url": "https://allmountaindinger.com/feed/",
+      "website_url": "https://allmountaindinger.com/",
+      "description": "Allmountaindinger's mountain bike meccas.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4753200.jpg?t=1657703669"
+    },
+    {
+      "title": "One Track Mind Magazine",
+      "feed_url": "https://onetrackmind.bike/feed/",
+      "website_url": "https://onetrackmind.bike/",
+      "description": "We are a UK-based online mountain bike media magazine providing you with the latest reviews and insights into the MTB community. This Website is offering news, stories, and reviews for all things Cycling and MTB.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 6,
+        "instagram": 5400
+      },
+      "image_url": "https://i1.feedspot.com/5280353.jpg?t=1676878972"
+    },
+    {
+      "title": "Velo \u00bb Mountain",
+      "feed_url": "https://velo.outsideonline.com/category/mountain/feed/",
+      "website_url": "https://velo.outsideonline.com/category/mountain/?scope=anon",
+      "description": "Velo Magazine brings you inside the sport of bike racing, with exclusive features, race analysis, expert training advice, unbiased gear reviews and the absolute best cycling photography. Find Mountain Bike News, Analysis and Commentary",
+      "followers": {
+        "facebook": 288300,
+        "twitter": 213
+      },
+      "image_url": "https://i1.feedspot.com/4756123.jpg?t=1608366989"
+    },
+    {
+      "title": "Bike Magazine",
+      "feed_url": "https://www.bikemag.com/feed/",
+      "website_url": "https://www.bikemag.com/",
+      "description": "Bike Magazine showcases the sport of mountain biking like no other publication. It captures the sport's personalities, trends, and issues with a style all its own. With insightful features, columns and gear reviews coupled with the best photography, Bike is sure to make you want to get outside and ride.",
+      "followers": {
+        "facebook": 507000,
+        "twitter": 76000,
+        "instagram": 477600
+      },
+      "image_url": "https://i1.feedspot.com/3653.jpg?t=1608366998"
+    },
+    {
+      "title": "Australian Mountain Bike Magazine",
+      "feed_url": "https://www.ambmag.com.au/rss",
+      "website_url": "https://www.ambmag.com.au/",
+      "description": "Australian Mountain Bike magazine blog is Australia's oldest and most respected mountain bike magazine, inspiring and informing riders around the country in print and online. We inform and inspire Australian mountain bikers about everything that makes our sport what it is.",
+      "followers": {
+        "facebook": 28900,
+        "twitter": 759,
+        "instagram": 29800
+      },
+      "image_url": "https://i1.feedspot.com/4756830.jpg?t=1608367162"
+    },
+    {
+      "title": "Mountain Biking UK",
+      "feed_url": "https://www.mbuk.com/feed/atom",
+      "website_url": "https://www.mbuk.com/",
+      "description": "MBUK is Britain's best-selling mountain biking magazine. Subscribe to Mountain Biking UK to get the biggest savings! MBUK tells the whole truth about mountain biking, bikes, and equipment in an uncompromising manner. We want our FB page to be a happy place. Abusive behavior will get you banned.",
+      "followers": {
+        "facebook": 346000,
+        "twitter": 59800,
+        "instagram": 78300
+      },
+      "image_url": "https://i1.feedspot.com/5510155.jpg?t=1676878234"
+    },
+    {
+      "title": "International Mountain Bicycling Association Blog",
+      "feed_url": "https://www.imba.com/explore-imba/blog-feed",
+      "website_url": "https://www.imba.com/blog",
+      "description": "IMBA is the worldwide leader in mountain bike advocacy, and the only organization in the United States focused entirely on trails, access, education and experiences for all types of mountain bikers in all parts of the country. We are mountain bikers from everywhere with knowledge, expertise and passion for riding mountain bikes on great trails.",
+      "followers": {
+        "facebook": 91100,
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/4753953.jpg?t=1608367165"
+    },
+    {
+      "title": "Sklar Blog",
+      "feed_url": "https://www.sklarbikes.com/blog?format=RSS",
+      "website_url": "https://sklarbikes.com/blogs/blog",
+      "description": "Inspiring epic adventures, spontaneous exploration and serious fun though kick-butt bikes. Find Handmade Bicycle Frames. Mountain, Cyclocross bikes built to order.",
+      "followers": {
+        "facebook": 4600,
+        "instagram": 50000
+      },
+      "image_url": "https://i1.feedspot.com/4755775.jpg?t=1608367536"
+    },
+    {
+      "title": "Developing Mountain Biking in Scotland \u00bb News",
+      "feed_url": "https://dmbins.com/riders/news.rss",
+      "website_url": "https://dmbins.com/blog/",
+      "description": "DMBinS is a project, hosted within Scottish Cycling, which is delivering the National strategic framework for sustainable mountain biking in Scotland. Developing Mountain Biking in Scotland is your ultimate resource for mountain biking - packed full of info on trails, clubs, events, courses, resources and toolkits. Find news on mountain biking in Scotland.",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4756789.jpg?t=1608367547"
+    },
+    {
+      "title": "Emerald MTB Magazine",
+      "feed_url": "https://emerald-mtb.com/feed.xml",
+      "website_url": "https://emerald-mtb.com/",
+      "description": "Emerald MTB is an online magazine covering all aspects of mountain biking in Ireland. It contains tales and reviews of mountain bike trails ridden, official and unofficial, and of bike parts, components and accessories that have been tried and tested.",
+      "followers": {
+        "facebook": 9000,
+        "twitter": 257,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4873066.jpg?t=1608367575"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "category": "New Zealand Rugby",
+  "source_url": "https://rss.feedspot.com/new_zealand_rugby_rss_feeds",
+  "feeds": [
+    {
+      "title": "Rugby News",
+      "feed_url": "https://rugbynews.co.nz/feed/",
+      "website_url": "https://waibush.co.nz/wp/latest-news/",
+      "description": "New Zealand Rugby World is the premier authority on our national game; with sharp analysis and irreverent humor the two key components. In both style and content, the writing is award-winning and provides an unparalleled depth of insight into the people.",
+      "followers": {
+        "facebook": 162200,
+        "twitter": 1600,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5466671.jpg?t=1668430536"
+    },
+    {
+      "title": "MediaWorks Wairarapa",
+      "feed_url": "https://waibush.co.nz/wp/latest-news/feed/",
+      "website_url": "https://waibush.co.nz/wp/latest-news/",
+      "description": "The Wairarapa Bush Rugby Union was formed in 1971 with the amalgamation of the Wairarapa Rugby Football Union and Bush Rugby Football Union. Our mission is to provide up-to-date information on and about Wairarapa Rugby, both club fixtures as well as representative teams.",
+      "followers": {
+        "facebook": 12500
+      },
+      "image_url": "https://i1.feedspot.com/4746148.jpg?t=1668430613"
+    },
+    {
+      "title": "Blues Rugby News",
+      "feed_url": "https://www.blues.rugby/blues-rugby-news?format=rss",
+      "website_url": "https://www.blues.rugby/blues-rugby-news",
+      "description": "We are the Blues. We carry the hopes and dreams of our people, from the top of the country to its largest city. We strive for success, act with compassion and humility, and have pride in our performance both on and off the field. Get the latest news on players, games, and everything you need to know about the Blues super rugby team.",
+      "followers": {
+        "facebook": 332500,
+        "twitter": 84900,
+        "instagram": 351000
+      },
+      "image_url": "https://i1.feedspot.com/5466659.jpg?t=1668431302"
+    },
+    {
+      "title": "Rugby World \u00bb New Zealand",
+      "feed_url": "https://www.rugbyworld.com/countries/new-zealand-countries/feed",
+      "website_url": "https://www.rugbyworld.com/countries/new-zealand-countries",
+      "description": "Stay posted on New Zealand, its sports, and more. Rugby World is the world's leading multi-platform rugby union media brand. Our coverage spans all levels of the sport, from Rugby World Cups to grass roots, and our experts provide advice and analysis that you can employ in your own game.",
+      "followers": {
+        "facebook": 200600,
+        "twitter": 142000,
+        "instagram": 45600
+      },
+      "image_url": "https://i1.feedspot.com/5466655.jpg?t=1668430405"
+    },
+    {
+      "title": "Radio New Zealand News \u00bb Live Sport",
+      "feed_url": "https://www.rnz.co.nz/rss/live-sport.xml",
+      "website_url": "https://www.rnz.co.nz/news/live-sport",
+      "description": "Track your favorite sports live with us. RNZ is New Zealand's independent public service multimedia organization and is a Crown entity established under the Radio New Zealand Act 1995. It provides audiences with trusted and independent news and current affairs, a range of diverse programs, podcasts, and series both on-air and online.",
+      "followers": {
+        "facebook": 457000,
+        "twitter": 93200,
+        "instagram": 152300
+      },
+      "image_url": "https://i1.feedspot.com/5466658.jpg?t=1668430428"
+    },
+    {
+      "title": "Huge Rugby \u00bb New Zealand",
+      "feed_url": "https://www.hugerugby.news/tag/new-zealand/feed/",
+      "website_url": "https://www.hugerugby.news/tag/new-zealand/",
+      "description": "We bring you the latest news of New Zealand's rugby. HugeRugby.news is a new rugby news website that has grown from one of the world's most reputable and well-known rugby stores - HugeRugby.com. We are rugby people, who like rugby and write about it.",
+      "followers": {
+        "facebook": 44600,
+        "twitter": 6700,
+        "instagram": 15600
+      },
+      "image_url": "https://i1.feedspot.com/5466656.jpg?t=1668430413"
+    },
+    {
+      "title": "Sumner Rugby Blog",
+      "feed_url": "https://www.sumnerrugby.co.nz/blog-feed.xml",
+      "website_url": "https://www.sumnerrugby.co.nz/blog",
+      "description": "Catch up with the latest news and club updates on Rugby. Summer Rugby is a website that tracks the game to the core, from schedules to games.",
+      "followers": {
+        "facebook": 3100,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5466661.jpg?t=1668432126"
+    }
+  ]
+}

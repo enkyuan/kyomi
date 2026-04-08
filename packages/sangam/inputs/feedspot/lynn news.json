@@ -1,0 +1,26 @@
+{
+  "category": "Lynn News",
+  "source_url": "https://rss.feedspot.com/lynn_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Lynn Journal",
+      "feed_url": "https://feeds.feedburner.com/LynnJournal",
+      "website_url": "http://lynnjournal.com/",
+      "description": "Lynn Journal is the Lynn Massachusetts Newspaper. Find the latest news, editorials, obituaries, police briefs, sports, etc.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5146175.jpg"
+    },
+    {
+      "title": "CBS Boston \u00bb Lynn",
+      "feed_url": "https://boston.cbslocal.com/tag/lynn-news/feed/",
+      "website_url": "https://www.cbsnews.com/boston/tag/lynn-news/",
+      "description": "Breaking News, Weather, Sports, and some interesting extras from Boston's WBZ-TV.",
+      "followers": {
+        "facebook": 782500,
+        "twitter": 238000,
+        "instagram": 96700
+      },
+      "image_url": "https://i1.feedspot.com/5146180.jpg?t=1588227704"
+    }
+  ]
+}

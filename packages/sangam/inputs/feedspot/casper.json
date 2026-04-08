@@ -1,0 +1,127 @@
+{
+  "category": "Casper",
+  "source_url": "https://rss.feedspot.com/casper_rss_feeds",
+  "feeds": [
+    {
+      "title": "Oil City News",
+      "feed_url": "https://oilcity.news/feed/",
+      "website_url": "https://oilcity.news/",
+      "description": "Oil City News is Casper, Wyoming's source for breaking news. Get the latest local news fast, first and free. Read about Crime, Community, Business, Obituaries, and more. Oil City News LLC is a nonpartisan media organization and Central Wyoming's largest locally owned, independent news platform.",
+      "followers": {
+        "facebook": 67600,
+        "twitter": 1600,
+        "instagram": 10100
+      },
+      "image_url": "https://i1.feedspot.com/5146232.jpg?t=1667807313"
+    },
+    {
+      "title": "Casper Star-Tribune",
+      "feed_url": "https://trib.com/search/?f=rss&t=article&c=news/state-and-regional&l=50&s=start_time&sd=desc",
+      "website_url": "https://trib.com/",
+      "description": "Casper Star-Tribune Communications provides the first and best state-wide news coverage of the state of Wyoming.",
+      "followers": {
+        "facebook": 55300,
+        "twitter": 15000
+      },
+      "image_url": "https://i1.feedspot.com/5131432.jpg?t=1623731615"
+    },
+    {
+      "title": "I'M NOT A BARISTA News",
+      "feed_url": "https://notabarista.org/feed/",
+      "website_url": "https://notabarista.org/news/",
+      "description": "Get updates on the brewing guide, special discounts, and more. We're a not-for-profit organization that aims to celebrate the coffee community by empowering baristas to reach their fullest potential.",
+      "followers": {
+        "facebook": 634,
+        "twitter": 214,
+        "instagram": 24800
+      },
+      "image_url": "https://i1.feedspot.com/5387505.jpg?t=1649069109"
+    },
+    {
+      "title": "Casper Star-Tribune",
+      "feed_url": "https://trib.com/search/?f=rss&t=article&c=news&l=50&s=start_time&sd=desc",
+      "website_url": "https://trib.com/news/",
+      "description": "The Casper Star-Tribune is Wyoming's premiere source for news and information.",
+      "followers": {
+        "facebook": 55300,
+        "twitter": 15000
+      },
+      "image_url": "https://i1.feedspot.com/5146245.jpg?t=1623731611"
+    },
+    {
+      "title": "K2 Radio",
+      "feed_url": "https://k2radio.com/feed/",
+      "website_url": "https://k2radio.com/",
+      "description": "K2 Radio, a Townsquare Media station, has the best news coverage in Casper, Wyoming. Know the latest news, weather and more. K2 Radio is Wyoming's Radio Station, consisting of Wyoming's largest radio news team. Get the news you need to know, here in the Cowboy State and around the world, 24-7.",
+      "followers": {
+        "facebook": 52900,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5360513.jpg?t=1669269507"
+    },
+    {
+      "title": "Wyoming Anglers | Wyoming Fly Fishing Blog",
+      "feed_url": "https://wyominganglers.com/wyoming-fly-fishing-blog/feed/",
+      "website_url": "https://wyominganglers.com/wyoming-fly-fishing-blog/",
+      "description": "Wyoming Anglers guide blog provides useful fishing tips, videos and the latest wyoming fly fishing news.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 236,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4927376.jpg?t=1621003402"
+    },
+    {
+      "title": "Eat Wyoming",
+      "feed_url": "https://eatwyoming.com/feed/",
+      "website_url": "https://eatwyoming.com/recipes/",
+      "description": "Great dishes crafted from healthy, local foods and kitchen staples.Eat Wyoming is a collaborative effort to match Wyoming's producers to Wyoming consumers, in the name of bringing local, healthy foods with ease and efficiency to buyers while building strong and sustainable farms.",
+      "followers": {
+        "facebook": 6200,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5316357.jpg?t=1630070826"
+    },
+    {
+      "title": "Oil and Gas Employees",
+      "feed_url": "https://www.oilandgasemployees.com/feeds/posts/default",
+      "website_url": "https://www.oilandgasemployees.com/",
+      "description": "My name is Howard Lee Shaw, Jr. I have been in the oil and gas industry for over 28 years. The last 22 have been associated with the inspection side of the industry. My years involved with the industry actually extends beyond 30 given the fact that I am third-generation oil and gas. I wanted to start a blog and share my experiences and knowledge and hope that some of what I have to offer may be of value to others not only in the oil and gas industry but in other professions as well.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5212984.jpg?t=1604405556"
+    },
+    {
+      "title": "SNS Outfitters \u00bb Elk Blog",
+      "feed_url": "https://www.huntwyo.com/blog/category/elk/feed/",
+      "website_url": "http://www.huntwyo.com/blog/category/elk/",
+      "description": "SNS is Wyoming's 1 hunting outfitter and the top antelope outfitter in North America. We offer antelope, mule deer, elk and black bear hunting.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 137,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5132151.jpg?t=1623731606"
+    },
+    {
+      "title": "Trust Capital USA Blog",
+      "feed_url": "https://www.trustcapitalusa.com/blog/rss.xml",
+      "website_url": "https://www.trustcapitalusa.com/blog",
+      "description": "Trust Capital was established with the mission to provide competitive financing for businesses. Trust Capital is a national finance company dedicated to helping manufacturers, vendors, and dealers be more successful and keep their customers. We strive to provide our customers with industry leading finance programs, delivered the only way we know how, ethically.",
+      "followers": {
+        "twitter": 135
+      },
+      "image_url": "https://i1.feedspot.com/4763065.jpg?t=1599486122"
+    },
+    {
+      "title": "Beauty From The Ashes Blog",
+      "feed_url": "https://beauty-from-the-ashes.blog/feed/",
+      "website_url": "https://beauty-from-the-ashes.blog/",
+      "description": "Katie Caldwell-Burchett is a wife and mother of 3 who has experienced unimaginable tragedy. Her daughter Olivia, was diagnosed with an aggressive form of brain cancer at just 4 months old. She watched her daughter fight fearlessly for 16 months before the cancer stole her life. However, the loss of her daughter was only the beginning. She hopes that in sharing her story she can inspire others to know that there is life after loss. And sometimes that life can turn into a beautiful thing. There is beauty after all that can come from the ashes of a life that comes down in flames.",
+      "followers": {
+        "facebook": 13400,
+        "twitter": 237
+      },
+      "image_url": "https://i1.feedspot.com/4642021.jpg?t=1616652560"
+    }
+  ]
+}

@@ -1,0 +1,833 @@
+{
+  "category": "Poker",
+  "source_url": "https://rss.feedspot.com/poker_rss_feeds",
+  "feeds": [
+    {
+      "title": "PokerNews",
+      "feed_url": "https://www.pokernews.com/rss.php?subset=q1ZKVLJS0lLSUSpRsjLQUSotBnKLiouVagE=",
+      "website_url": "https://www.pokernews.com/",
+      "description": "PokerNews is the world's leading source for international poker news, live tournament reporting, exclusive photos and videos, strategy tutorials, freerolls and bonuses.",
+      "followers": {
+        "facebook": 214000,
+        "twitter": 176800
+      },
+      "image_url": "https://i1.feedspot.com/4716911.jpg?t=1604731168"
+    },
+    {
+      "title": "Card Player News",
+      "feed_url": "https://www.cardplayer.com/poker-news.rss",
+      "website_url": "https://www.cardplayer.com/poker-news",
+      "description": "Card Player is the world's oldest and most well respected poker magazine and online poker guide. Since 1988, CardPlayer has provided poker players with poker strategy, poker news, and poker results. Today, CardPlayer.com is the best poker information portal for free poker content, offering online poker site reviews and exclusive online poker bonus deals.",
+      "followers": {
+        "facebook": 67200,
+        "twitter": 23800
+      },
+      "image_url": "https://i1.feedspot.com/709736.jpg?t=1604728933"
+    },
+    {
+      "title": "PokerTube",
+      "feed_url": "https://www.pokertube.com/rss",
+      "website_url": "https://www.pokertube.com/",
+      "description": "Watch poker videos, TV shows & documentaries on PokerTube. With over 20,000 Poker related movies like High Stakes Poker, PokerTube is the world's largest site to watch anything about poker.",
+      "followers": {
+        "twitter": 10300,
+        "instagram": 859
+      },
+      "image_url": "https://i1.feedspot.com/4969020.jpg?t=1682591746"
+    },
+    {
+      "title": "CardsChat News",
+      "feed_url": "https://www.cardschat.com/news/feed/",
+      "website_url": "https://www.cardschat.com/news/",
+      "description": "CardsChat is Internet's leading poker forum. They strive to provide the highest quality news in the poker industry and be the friendliest online poker forum with over 200,000 members. You can learn from pros, ask questions, receive advice or simply chew the fat with other poker players.",
+      "followers": {
+        "facebook": 53000,
+        "twitter": 27500,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4715941.jpg?t=1604728942"
+    },
+    {
+      "title": "My Poker Coaching",
+      "feed_url": "https://www.mypokercoaching.com/feed/",
+      "website_url": "https://www.mypokercoaching.com/",
+      "description": "Free strategy tips, advanced video courses and many poker coaching options that will make you a winner. If you want to find interesting reads, strategy tips and much more this poker blog is for you. My Poker Coaching is one of the fastest-growing poker media companies offering up-to-date information and covering the most interesting topics from the poker world.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 1900,
+        "instagram": 222
+      },
+      "image_url": "https://i1.feedspot.com/4969009.jpg?t=1604729028"
+    },
+    {
+      "title": "Seminole Hard Rock Hollywood Poker",
+      "feed_url": "https://www.seminolehardrockpokeropen.com/feed/",
+      "website_url": "https://www.seminolehardrockpokeropen.com/",
+      "description": "Seminole Hard Rock Hollywood Poker brings you all the tournament poker action from the Seminole Hard Rock Hotel & Casino in Hollywood, FL.",
+      "followers": {
+        "twitter": 12400
+      },
+      "image_url": "https://i1.feedspot.com/4716102.jpg?t=1604729175"
+    },
+    {
+      "title": "BlackRain79",
+      "feed_url": "https://feeds.feedburner.com/LegalRobbery",
+      "website_url": "https://www.blackrain79.com/",
+      "description": "Nathan Williams is a poker player, DragTheBar coach and the author of 'Crushing The Microstakes' and 'Modern Small Stakes'.",
+      "followers": {
+        "facebook": 32500,
+        "twitter": 4100,
+        "instagram": 14000
+      },
+      "image_url": "https://i1.feedspot.com/709734.jpg?t=1604729006"
+    },
+    {
+      "title": "Red Chip Poker",
+      "feed_url": "https://redchippoker.com/feed/",
+      "website_url": "https://redchippoker.com/articles/",
+      "description": "Red Chip Poker is the best place to learn how to play smarter poker. Red Chip Poker is a team of established poker coaches with one goal in mind; to help you find your edge on the tables. Follow them for podcast, articles, and videos that will help you reach your poker goals.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 8000,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4717004.jpg?t=1604729002"
+    },
+    {
+      "title": "Professional RakeBack",
+      "feed_url": "https://professionalrakeback.com/rss.xml",
+      "website_url": "https://professionalrakeback.com/",
+      "description": "Online poker rakeback affiliate specializing in all things related to real money play on AU and US poker sites. In business since 2006 - owned and managed by professional poker players.",
+      "followers": {
+        "twitter": 282
+      },
+      "image_url": "https://i1.feedspot.com/4951340.jpg?t=1604729020"
+    },
+    {
+      "title": "VIP-Grinders",
+      "feed_url": "https://www.vip-grinders.com/feed/",
+      "website_url": "https://www.vip-grinders.com/",
+      "description": "VIP-Grinders.com is run by passionate online poker professionals and our website serves as a multi network and multi affiliate tier tracking, reporting and payment backoffice. Read the latest poker news, industry rumors, hottest promos, watch live streams and follow poker blogs from professional online players.",
+      "followers": {
+        "facebook": 308,
+        "twitter": 2000,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4715325.jpg?t=1604729123"
+    },
+    {
+      "title": "Cardplayer Lifestyle",
+      "feed_url": "https://feeds.feedburner.com/cplifestyle",
+      "website_url": "https://cardplayerlifestyle.com/",
+      "description": "Cardplayer Lifestyle, as the Web's leading poker blog, is dedicated to bringing you the latest news, op-eds, and lifestyle pieces from the world of live and online poker. They also feature coverage of top-tier poker events, like the World Series of Poker, as well as stories about fascinating lesser-known happenings in the poker world.",
+      "followers": {
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/4715038.jpg?t=1604729115"
+    },
+    {
+      "title": "Poker News Daily",
+      "feed_url": "https://www.pokernewsdaily.com/feed/",
+      "website_url": "https://www.pokernewsdaily.com/",
+      "description": "Poker News Daily is a leading source of news for the poker and gaming industry, spearheaded by a team of professional writers, content managers and celebrity guest columnists. Follow Poker News Daily to stay up to date with what's happening in the poker world by reading our up to date news.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 13400
+      },
+      "image_url": "https://i1.feedspot.com/4715931.jpg?t=1604729129"
+    },
+    {
+      "title": "Ante Up Magazine",
+      "feed_url": "https://anteupmagazine.com/feed/",
+      "website_url": "https://anteupmagazine.com/",
+      "description": "Ante Up Magazine features fresh poker news, interview with famous poker players, reports from poker events. Ante Up Poker Media LLC is poker media company founded by Scott Long and Christopher Cosenza, to inform, entertain and unite the poker communities of the United States and the world.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/4716971.jpg?t=1684310902"
+    },
+    {
+      "title": "Jonathan Little",
+      "feed_url": "https://jonathanlittlepoker.com/feed/",
+      "website_url": "https://jonathanlittlepoker.com/",
+      "description": "Jonathan Little is a Poker player and author.",
+      "followers": {
+        "facebook": 23600,
+        "twitter": 60000,
+        "instagram": 44600
+      },
+      "image_url": "https://i1.feedspot.com/4715050.jpg?t=1604729146"
+    },
+    {
+      "title": "Thinking Poker Blog",
+      "feed_url": "https://www.thinkingpoker.net/blog/feed/",
+      "website_url": "https://www.thinkingpoker.net/blog/",
+      "description": "ThinkingPoker.net is a poker resource for online and live-play poker competitors featuring hand reviews, strategy articles, book reviews and more. Content for everyone from beginner to pro.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 12000
+      },
+      "image_url": "https://i1.feedspot.com/4717037.jpg?t=1604729165"
+    },
+    {
+      "title": "Online Poker News",
+      "feed_url": "https://www.onlinepokernews.in/feed/",
+      "website_url": "https://www.onlinepokernews.in/",
+      "description": "Online Poker News is India's largest online poker news site. They cover the latest poker news and provide poker related information. Here you can find the latest news and views on poker in India and globally, poker room reviews and players profiles. Their aim is to spread awareness of Poker in India and showcase India on top of the Poker podium.",
+      "followers": {
+        "facebook": 51900,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4714991.jpg?t=1604729134"
+    },
+    {
+      "title": "Advanced Poker Training Blog",
+      "feed_url": "https://www.advancedpokertraining.com/poker/blog/feed/",
+      "website_url": "https://www.advancedpokertraining.com/poker/blog/",
+      "description": "Advanced Poker Training is the best way to improve your poker game. Improve your poker game while playing up to 500 hands an hour against the smartest artificially intelligent poker players ever designed. Discover amazing Texas No-Limit Holdem Poker training articles and tutorial for beginners, intermediate & advanced poker players.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 936
+      },
+      "image_url": "https://i1.feedspot.com/4716999.jpg?t=1604728990"
+    },
+    {
+      "title": "World Casino News \u00bb Poker",
+      "feed_url": "https://news.worldcasinodirectory.com/poker/feed",
+      "website_url": "https://news.worldcasinodirectory.com/poker",
+      "description": "World Casino News is your source for breaking casino news. Learn more about poker tournaments, online poker legislation, poker law and poker news from around the world by following this website.",
+      "followers": {
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4716282.jpg?t=1604729011"
+    },
+    {
+      "title": "Bar Poker Open Blog",
+      "feed_url": "https://blog.barpokeropen.com/?feed=rss2",
+      "website_url": "https://blog.barpokeropen.com/",
+      "description": "The Bar Poker Open Tournament Series and National Championship bring bar poker players from across the country to Vegas once again. It is the First World Class Championship for all of the Bar Poker Community.",
+      "followers": {
+        "facebook": 28700,
+        "twitter": 608
+      },
+      "image_url": "https://i1.feedspot.com/4715538.jpg?t=1604729109"
+    },
+    {
+      "title": "Tommy Angelo",
+      "feed_url": "https://www.tommyangelo.com/feed/",
+      "website_url": "https://www.tommyangelo.com/poker-articles/",
+      "description": "I'm Tommy Angelo. I played poker to support my poker-playing habit. Now I write books to support my book-writing habit.",
+      "followers": {
+        "facebook": 584,
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/4719015.jpg?t=1604729457"
+    },
+    {
+      "title": "PokerPilgrims Blog",
+      "feed_url": "https://www.pokerpilgrims.com/feed/",
+      "website_url": "https://www.pokerpilgrims.com/blog/",
+      "description": "Welcome to Poker Pilgrims. On this site you will find our musings on poker, travel, poker rooms, and our plans for a full-time poker lifestyle. For more about us and what we're doing here, check out the Our Pilgrimage page.",
+      "followers": {
+        "facebook": 190,
+        "twitter": 865
+      },
+      "image_url": "https://i1.feedspot.com/5046298.jpg?t=1604729483"
+    },
+    {
+      "title": "Poker 52",
+      "feed_url": "https://www.poker52.fr/category/actus-breves/feed/",
+      "website_url": "https://www.poker52.fr/actus-breves/",
+      "description": "Poker 52 , the leading magazine of the poker press in France, was created in January 2008 by Bruno Fitoussi. Follow this magazine for coverage, article, news about the game of poker.",
+      "followers": {
+        "facebook": 15000,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4716915.jpg?t=1604729656"
+    },
+    {
+      "title": "Mutant Poker",
+      "feed_url": "https://www.mutantpoker.com/?feed=rss2",
+      "website_url": "https://www.mutantpoker.com/",
+      "description": "Mutant Poker is a journal of poker tournament triumph and loss and statistics.",
+      "followers": {
+        "twitter": 676
+      },
+      "image_url": "https://i1.feedspot.com/4715386.jpg?t=1682593973"
+    },
+    {
+      "title": "Parx Poker Room Blog",
+      "feed_url": "https://parxbigstax.blog/feed/",
+      "website_url": "https://parxbigstax.blog/",
+      "description": "The largest, most exciting casino and racetrack in Pennsylvania. Parx Casino\u00ae features bustling 24 hour gaming with 3,500 slot machines, over 130 table games, including a world class poker room, electronic table games and action-packed thoroughbred horse racing.",
+      "followers": {
+        "facebook": 122900,
+        "twitter": 5900
+      },
+      "image_url": "https://i1.feedspot.com/4716088.jpg?t=1682596564"
+    },
+    {
+      "title": "tbc's blog about grinding low stakes poker",
+      "feed_url": "http://sevencard2003.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://sevencard2003.blogspot.com/",
+      "description": "Tony bigcharles's blog about grinding low stakes poker.",
+      "followers": {
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4714930.jpg?t=1604729685"
+    },
+    {
+      "title": "Venetian Poker Room Blog",
+      "feed_url": "https://venetianpokerroom.blog/feed/",
+      "website_url": "https://venetianpokerroom.blog/",
+      "description": "Venetian Poker Room is the best poker room in Las Vegas. For them, poker is more than just a game.",
+      "followers": {
+        "facebook": 11400,
+        "twitter": 24400,
+        "instagram": 405000
+      },
+      "image_url": "https://i1.feedspot.com/4716091.jpg?t=1604729728"
+    },
+    {
+      "title": "Seminole Coconut Creek Poker",
+      "feed_url": "https://www.seminolecoconutcreekpoker.com/feed/",
+      "website_url": "https://www.seminolecoconutcreekpoker.com/",
+      "description": "Seminole Casino Coconut Creek offers the market's most fully-integrated, energized, stylish and upscale local's casino experience.",
+      "followers": {
+        "facebook": 74700,
+        "twitter": 11
+      },
+      "image_url": "https://i1.feedspot.com/4717067.jpg?t=1604729894"
+    },
+    {
+      "title": "Story of an Aspiring Poker Player",
+      "feed_url": "https://happyriverpoker.blogspot.com/feeds/posts/default",
+      "website_url": "https://happyriverpoker.blogspot.com/",
+      "description": "Follow me on my journey as a fish to playing around the world. Read about my hands, people I've met, adventures I have taken and my life in poker.",
+      "followers": {
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5502231.jpg?t=1675245935"
+    },
+    {
+      "title": "Bizzy's Poker Blog",
+      "feed_url": "https://bizzypoker.com/feed/",
+      "website_url": "https://bizzypoker.com/blog/",
+      "description": "Grinding a poker journey",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8539934.jpg?t=1753096355"
+    },
+    {
+      "title": "Upswing Poker Blog",
+      "feed_url": "https://upswingpoker.com/feed/",
+      "website_url": "https://upswingpoker.com/blog/",
+      "description": "Take your skills to the next level with poker strategy guides & quizzes. Learn valuable poker tips & tactics that will help you win the next time you play. The Upswing Poker blog is the best place to improve your own poker skills to the next level. This poker blog features articles on cash games, tournaments, and more.",
+      "followers": {
+        "facebook": 72900,
+        "instagram": 66600
+      },
+      "image_url": "https://i1.feedspot.com/4958204.jpg?t=1683703555"
+    },
+    {
+      "title": "BetMGM Poker Blog",
+      "feed_url": "https://poker.betmgm.com/en/blog/feed/",
+      "website_url": "https://poker.betmgm.com/en/blog/",
+      "description": "The BetMGM Poker Blog features the latest online poker strategy guides, instructional articles, poker tournament news, updates, and bonus offers.",
+      "followers": {
+        "twitter": 12200
+      },
+      "image_url": "https://i1.feedspot.com/8539929.jpg?t=1753096333"
+    },
+    {
+      "title": "Conscious Poker",
+      "feed_url": "https://www.consciouspoker.com/feed/",
+      "website_url": "https://www.consciouspoker.com/blog/",
+      "description": "Unlock elite poker strategies, sharpen your mindset, and make smarter decisions. Take your game to the next level and crush your poker goals.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 695
+      },
+      "image_url": "https://i1.feedspot.com/8539941.jpg?t=1753096388"
+    },
+    {
+      "title": "Poker Coaching Blog",
+      "feed_url": "https://pokercoaching.com/blog/feed/",
+      "website_url": "https://pokercoaching.com/blog/",
+      "description": "Free 19-video course by WPT Champion Jonathan Little for beginners covering poker basics, preflop strategy, and post-flop play.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8539936.jpg?t=1753096360"
+    },
+    {
+      "title": "The Bike Poker Feed Blog",
+      "feed_url": "https://thebikepokerfeed.com/feed/",
+      "website_url": "https://thebikepokerfeed.com/blog/",
+      "description": "Tournament Updates",
+      "followers": {
+        "facebook": 24700,
+        "twitter": 10400,
+        "instagram": 11400
+      },
+      "image_url": "https://i1.feedspot.com/8539926.jpg?t=1753096324"
+    },
+    {
+      "title": "Tight Poker",
+      "feed_url": "https://www.tightpoker.com/blogs/feed/",
+      "website_url": "https://www.tightpoker.com/blogs/",
+      "description": "Your go-to hub for poker strategy, pop culture, tech, and more. Get expert insights and analysis on everything poker on Tight Poker blog.",
+      "followers": {
+        "facebook": 6300,
+        "twitter": 281,
+        "instagram": 10600
+      },
+      "image_url": "https://i1.feedspot.com/8539927.jpg?t=1753096328"
+    },
+    {
+      "title": "PokerDivas",
+      "feed_url": "https://www.pokerdivas.com/feed/",
+      "website_url": "https://www.pokerdivas.com/resources/",
+      "description": "PokerDivas is a New\u202fYork\u2011based platform that uses poker strategies to teach leadership, negotiation, communication, and confidence\u2014especially for corporations, women's leadership, D&I programs, legal CLE, team-building, and even virtual community events",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8539931.jpg?t=1753096341"
+    },
+    {
+      "title": "Beasts of Poker",
+      "feed_url": "https://beastsofpoker.com/feed/",
+      "website_url": "https://beastsofpoker.com/poker-articles/",
+      "description": "Beast of poker was created to inspire its users and help them in their journey to financial independence via mastering poker. Get inspired by our lifestyle section or learn poker by chatting with our pro-team in the forum. Become a beast with us today.",
+      "followers": {
+        "facebook": 406,
+        "twitter": 320,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5121744.jpg?t=1604731498"
+    },
+    {
+      "title": "CLC Poker Blog",
+      "feed_url": "https://clcpoker.com/feed/",
+      "website_url": "https://clcpoker.com/blog/",
+      "description": "Stay updated with the latest poker strategies, tips, and industry news on the CLC Poker blog. Elevate your game today!",
+      "followers": {
+        "facebook": 1600
+      },
+      "image_url": "https://i1.feedspot.com/8539930.jpg?t=1753096340"
+    },
+    {
+      "title": "Magazine Poker",
+      "feed_url": "https://magazinepoker.com/feed/",
+      "website_url": "https://magazinepoker.com/",
+      "description": "The ultimate resource for everything online poker! You'll find reviews of the best games and casinos as well as guides, tips and tricks.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8539933.jpg?t=1753096351"
+    },
+    {
+      "title": "Vegas Advantage \u00bb Poker",
+      "feed_url": "https://vegasadvantage.com/category/poker/feed/",
+      "website_url": "https://vegasadvantage.com/category/poker/",
+      "description": "Vegas Advantage's poker section delivers Las\u202fVegas poker-room updates\u2014including openings, tournament announcements, cash game structures, rake details, and promotional insight\u2014backed by on-the-ground visits and player-focused strategy for those playing live in Sin City.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 10800,
+        "instagram": 384
+      },
+      "image_url": "https://i1.feedspot.com/8539940.jpg?t=1753096384"
+    },
+    {
+      "title": "SplitSuit",
+      "feed_url": "https://www.splitsuit.com/feed",
+      "website_url": "https://www.splitsuit.com/",
+      "description": "Get high-quality free poker articles written by author James 'SplitSuit' Sweeney. Each article focuses on important strategies to keep your game strong. Poker player, coach, and author, James Sweeney is the creator of Splitsuit.com and helps poker players learn more, learn quicker, and ultimately win more.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 6200,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5555205.jpg?t=1683109638"
+    },
+    {
+      "title": "Lightning Strikes",
+      "feed_url": "https://lightning36.blogspot.com/feeds/posts/default",
+      "website_url": "https://lightning36.blogspot.com/",
+      "description": "Lightning36 is a personal poker and travel blog by an Arizona-based amateur grinder who shares candid trip reports from Vegas\u2014including session hand analysis, lifestyle updates, weight-loss efforts, and heartfelt family insights\u2014blending raw vulnerability with down-to-earth storytelling",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8539935.jpg?t=1753096357"
+    },
+    {
+      "title": "Jared Tendler \u00bb Poker",
+      "feed_url": "https://jaredtendler.com/category/poker/feed/",
+      "website_url": "https://jaredtendler.com/category/poker/",
+      "description": "Jared Tendler's poker category on his blog focuses on the mental game of poker, authored by an expert performance coach. It features deep-dive posts on topics like confidence, tilt control, mental endurance, and mindset strategies essential for high-level play.",
+      "followers": {
+        "twitter": 28200
+      },
+      "image_url": "https://i1.feedspot.com/8539939.jpg?t=1753096373"
+    },
+    {
+      "title": "Poker Bankroll Blog",
+      "feed_url": "https://www.pokerbankrollblog.com/feed",
+      "website_url": "https://www.pokerbankrollblog.com/",
+      "description": "Having trouble building your poker bankroll? Learn the secrets that players have used for over a decade to build a massive bankroll just by playing online.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8539937.jpg?t=1753096363"
+    },
+    {
+      "title": "Beasts Of Poker \u00bb Gambler's Diary",
+      "feed_url": "https://beastsofpoker.com/gamblers-diary/feed/",
+      "website_url": "https://beastsofpoker.com/gamblers-diary/",
+      "description": "Beasts of Poker offers free poker training resources and finds you the best rakeback deals and bonuses available on online poker sites. Gambler's Diary is all about the poker journey & memories of TheJudas, an aspiring poker player who goes on wild poker & gambling adventures regularly around the globe. In Gambler's Diary, the hero's bankroll is never completely safe and the dust rarely settles - action is on 24/7, and it's high-stakes. Dive in the journey of the TheJudas by reading more!",
+      "followers": {
+        "facebook": 406,
+        "twitter": 320,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5167388.jpg?t=1604729096"
+    },
+    {
+      "title": "Ace Poker Solutions Blog",
+      "feed_url": "https://acepokersolutions.com/poker-blog/feed/",
+      "website_url": "https://acepokersolutions.com/poker-blog/",
+      "description": "Ace Poker Solutions is a company that develops and distributes online poker training software, books, coaching, and instructional courses. Their aim is to develop and provide top tier poker training, and poker training utilities to the continuously evolving online poker community.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 2000,
+        "instagram": 938
+      },
+      "image_url": "https://i1.feedspot.com/4715569.jpg?t=1604729139"
+    },
+    {
+      "title": "OnlinePoker.net News",
+      "feed_url": "http://www.onlinepoker.net/poker-news/feed",
+      "website_url": "http://www.onlinepoker.net/poker-news",
+      "description": "Since 2004, OnlinePoker.net has become the most comprehensive website about online poker and playing poker in general. Our mission is to provide readers with the most accurate information about poker along with details on the best poker sites online.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4715976.jpg?t=1604729190"
+    },
+    {
+      "title": "Rob's Vegas and Poker Blog",
+      "feed_url": "https://feeds.feedburner.com/RobsVegasPokerBlog",
+      "website_url": "http://robvegaspoker.blogspot.com/",
+      "description": "A blog about poker and fun things that happen in Vegas.",
+      "followers": {
+        "facebook": 70,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/1393516.jpg?t=1604729461"
+    },
+    {
+      "title": "Poker Night in America Blog",
+      "feed_url": "https://pokernight.com/category/blog/feed/",
+      "website_url": "https://pokernight.com/category/blog/",
+      "description": "Poker Night in America is a new televised poker series. PNIA is the brainchild of former Heartland Poker Tour co-founder, and current Rush Street Productions President, Todd Anderson. Anderson recently partnered with Chicago-based Rush Street Gaming, one of the fastest growing gaming companies in North America, to form a production company that is creating something new and exciting for poker TV.",
+      "followers": {
+        "facebook": 56400,
+        "twitter": 14300
+      },
+      "image_url": "https://i1.feedspot.com/4716131.jpg?t=1604729467"
+    },
+    {
+      "title": "Reading Poker Tells Blog",
+      "feed_url": "https://www.readingpokertells.com/feed/",
+      "website_url": "https://www.readingpokertells.com/blog/",
+      "description": "Zachary Elwood is the author of the books Reading Poker Tells (2012) and Verbal Poker Tells (2014). He has also worked as a behavior consultant for two WSOP Main Event final table players.",
+      "followers": {
+        "facebook": 538,
+        "twitter": 17300,
+        "instagram": 16100
+      },
+      "image_url": "https://i1.feedspot.com/1539621.jpg?t=1604729652"
+    },
+    {
+      "title": "SugarHouse Casino Poker Room",
+      "feed_url": "https://sugarhousepokerblog.wordpress.com/feed/",
+      "website_url": "https://sugarhousepokerblog.wordpress.com/",
+      "description": "SugarHouse Poker Blog is the blog for Philadelphia's Poker Room, SugarHouse Casino Poker Room.",
+      "followers": {
+        "facebook": 1
+      },
+      "image_url": "https://i1.feedspot.com/4715009.jpg?t=1604729712"
+    },
+    {
+      "title": "The Poker Monkey",
+      "feed_url": "https://feeds.feedburner.com/ThePokerMonkeyyourSourceForInsanity",
+      "website_url": "http://pokermonkeytalk.blogspot.com/",
+      "description": "Will Souther is a Poker Philosopher and Philantropist. Giving to the Poker Community, one thought at a time!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4715327.jpg?t=1604729871"
+    },
+    {
+      "title": "Grosvenor Casinos Blog \u00bb Poker",
+      "feed_url": "https://blog.grosvenorcasinos.com/category/poker/feed",
+      "website_url": "https://blog.grosvenorcasinos.com/category/poker",
+      "description": "Grosvenor Casinos are more than just a great place to play your favourite slots, casino games and card games. Grosvenor Casinos blog brings you in-depth previews, betting odds for the biggest sporting events and expert tips on poker & casino games.",
+      "followers": {
+        "facebook": 100700,
+        "twitter": 88700,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4715324.jpg?t=1604728998"
+    },
+    {
+      "title": "Poker News Report",
+      "feed_url": "https://www.pokernewsreport.com/feed",
+      "website_url": "https://www.pokernewsreport.com/poker-news",
+      "description": "Poker News Report brings you the latest poker news from both the live and online poker events, information on latest promotions and more.",
+      "followers": {
+        "twitter": 97
+      },
+      "image_url": "https://i1.feedspot.com/4715949.jpg?t=1604729906"
+    },
+    {
+      "title": "Daniel Negreanu Blog",
+      "feed_url": "https://danielnegreanu.com/feed/",
+      "website_url": "https://danielnegreanu.com/poker-blog/",
+      "description": "Daniel is arguably one of the best and most influential poker players in the world. He was named the 2013 WSOP Player of the Year, the 2013 Bluff Player of the Year and the 2013 Card Player Magazine Player of the Year and was ranked #1 on the GPI rankings to finish the year. He is a performer at heart and has acted in movies along with appearing on numerous TV Shows both poker & non-poker related.",
+      "followers": {
+        "facebook": 238700,
+        "twitter": 572800,
+        "instagram": 414000
+      },
+      "image_url": "https://i1.feedspot.com/4715553.jpg?t=1604729912"
+    },
+    {
+      "title": "Top 10 Poker Websites Blog",
+      "feed_url": "https://www.top10pokerwebsites.net/blog/feed",
+      "website_url": "https://www.top10pokerwebsites.net/blog",
+      "description": "Top10PokerWebsites.net bring you all the information you need to find reliable poker sites, great poker promotions and scoops from the online poker industry. Our poker blog covers a wide range of topics whether you looking for the latest tips or the best poker experiences",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4969066.jpg?t=1682597436"
+    },
+    {
+      "title": "Safest Poker Sites Blog",
+      "feed_url": "https://www.safestpokersites.com/feed/",
+      "website_url": "https://www.safestpokersites.com/blog/",
+      "description": "Safest poker sites is an honest guide to US online poker sites. Get the latest online poker news and weekly updates from our gambling expert, John Mehaffey. Stay up to date on everything related to online poker.",
+      "followers": {
+        "twitter": 11900
+      },
+      "image_url": "https://i1.feedspot.com/4717026.jpg?t=1604729212"
+    },
+    {
+      "title": "TexasHoldemPokerOnline.com",
+      "feed_url": "https://www.texasholdempokeronline.com/feed/",
+      "website_url": "https://www.texasholdempokeronline.com/poker-news/",
+      "description": "TexasHoldemPokerOnline.com is your number one resource to learn how to play Texas Holdem Poker Online, strategy, news and the best Holdem Poker Sites.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4949092.jpg?t=1604729930"
+    },
+    {
+      "title": "How To Play PokerInfo Blog",
+      "feed_url": "https://howtoplaypokerinfo.com/blog/feed/",
+      "website_url": "https://howtoplaypokerinfo.com/blog/",
+      "description": "The latest blog posts from HowToPlayPokerInfo where you will find the best information for learning to play poker, including poker tips, poker training, and reviews.",
+      "followers": {
+        "facebook": 230,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4969053.jpg?t=1604729442"
+    },
+    {
+      "title": "The Poker People",
+      "feed_url": "https://thepokerpeople.com/feed/",
+      "website_url": "https://thepokerpeople.com/blog/",
+      "description": "Looking to enjoy poker at a home game, fundraising event, or company party. Fake Money. Real Fun. The Poker People. (310) 402-3838",
+      "followers": {
+        "instagram": 378
+      },
+      "image_url": "https://i1.feedspot.com/8539932.jpg?t=1753096348"
+    },
+    {
+      "title": "Low Stake Hands",
+      "feed_url": "https://lowstakeshands.blogspot.com/feeds/posts/default",
+      "website_url": "https://lowstakeshands.blogspot.com/",
+      "description": "Yet another hand history of interesting Texas Holdem poker hands and comments upon them. Also, more than likely, a healthy helping of complaining about bad beats and bad players.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8539928.jpg?t=1753096330"
+    },
+    {
+      "title": "Bluff The Spot",
+      "feed_url": "https://www.bluffthespot.com/blog.rss",
+      "website_url": "https://www.bluffthespot.com/blog/",
+      "description": "Learn winning poker strategies from top pros. Our blog covers in-depth tips, hand breakdowns, and advice to help you boost your poker performance",
+      "followers": {
+        "facebook": 1300,
+        "instagram": 9200
+      },
+      "image_url": "https://i1.feedspot.com/8539938.jpg?t=1753096369"
+    },
+    {
+      "title": "PokerStrategy.com",
+      "feed_url": "https://www.pokerstrategy.com/rss/allnews/",
+      "website_url": "https://www.pokerstrategy.com/news/",
+      "description": "PokerStrategy.com is a leading online poker school website with the most comprehensive poker strategy guides, professional software & tools and vibrant poker forum community. Learn poker online, understand hands charts, check our Texas Hold'em lessons and launch your poker career.",
+      "followers": {
+        "facebook": 53000,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4715945.jpg?t=1604730070"
+    },
+    {
+      "title": "PokerStake",
+      "feed_url": "https://www.pokerstake.com/news",
+      "website_url": "https://www.pokerstake.com/news",
+      "description": "PocketFives is a community dedicated to online poker players. Our goal is to serve the online poker community through our Poker Discussion Board, Online Poker Tournament Rankings, Articles, and other features.",
+      "followers": {
+        "facebook": 15000,
+        "twitter": 7
+      },
+      "image_url": "https://i1.feedspot.com/4715329.jpg?t=1604729949"
+    },
+    {
+      "title": "Bonus.com",
+      "feed_url": "https://www.bonus.com/news/",
+      "website_url": "https://www.bonus.com/news/",
+      "description": "Online Poker Report is an online poker news site with breaking stories and in-depth analysis related to the legal, regulated online poker and gambling market in the United States.",
+      "followers": {
+        "facebook": 739,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4715934.jpg?t=1604729120"
+    },
+    {
+      "title": "32Red Blog",
+      "feed_url": "https://www.32red.com/blog/feed",
+      "website_url": "https://www.32red.com/blog",
+      "description": "Online poker at 32Red Poker. Enjoy Texas HoldEm Poker, Omaha and more. Keep up to date with the latest poker promotions, poker freeroll tournament and more.",
+      "followers": {
+        "facebook": 15000,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4969063.jpg?t=1604729437"
+    },
+    {
+      "title": "Partypoker Blog",
+      "feed_url": "https://www.partypoker.com/blog/en/feed",
+      "website_url": "https://www.partypoker.com/blog/en/",
+      "description": "Partypoker is one of the pioneers of the online poker industry. The partypoker Blog is your premier source of Online poker news, tournament updates and industry insights. Partypoker is the leading poker brand of GVC Holding PLC (LSE: GVC), a global online gaming company. GVC Holdings PLC is a leading e-gaming operator in both b2c and b2b markets.",
+      "followers": {
+        "facebook": 169700,
+        "twitter": 59800,
+        "instagram": 63700
+      },
+      "image_url": "https://i1.feedspot.com/4716897.jpg?t=1604728913"
+    },
+    {
+      "title": "Poker Guru Blog",
+      "feed_url": "https://pokergurublog.com/rss.xml",
+      "website_url": "https://pokergurublog.com/",
+      "description": "Poker Guru Blog is a news site for the latest events of the world of online and live poker, the most interesting players and most exciting action. Learn poker strategy tips, news, gossip and much more by following this blog.",
+      "followers": {
+        "twitter": 284
+      },
+      "image_url": "https://i1.feedspot.com/4717050.jpg?t=1604759881"
+    },
+    {
+      "title": "High On Poker",
+      "feed_url": "http://www.highonpoker.com/feed",
+      "website_url": "http://www.highonpoker.com/",
+      "description": "High on Poker is a poker blog by Jordan, a NYC poker player and day-time lawyer. HoP got its start when Jordan realized that if he talked about poker in his daily life as much as he was thinking about it, he would be branded a gambling addict and looked down upon by his peers. Hence, the blog, part journal, part news, and part strategy, with a liberal dose of whatever else is on Jordan's mind.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4716932.jpg?t=1682595997"
+    },
+    {
+      "title": "Your Hand Sucks",
+      "feed_url": "https://www.yourhandsucks.com/feed/",
+      "website_url": "https://www.yourhandsucks.com/",
+      "description": "YourHandSuck is an online poker magazine. Read in depth poker articles to improve your game or just for your entertainment.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 430
+      },
+      "image_url": "https://i1.feedspot.com/4951334.jpg?t=1604729186"
+    },
+    {
+      "title": "Allin1",
+      "feed_url": "https://allin1.sk/en/feed/",
+      "website_url": "https://allin1.sk/en/",
+      "description": "Allin1 is first Slovak Casino and Poker blog. Everything in one under one roof. Another look at the casino and the world of poker",
+      "followers": {
+        "facebook": 864,
+        "twitter": 8,
+        "instagram": 527
+      },
+      "image_url": "https://i1.feedspot.com/4715491.jpg?t=1604729516"
+    },
+    {
+      "title": "Poker News Boy",
+      "feed_url": "https://pokernewsboy.com/feed",
+      "website_url": "https://easternpokeropen.com/blog/",
+      "description": "Poker News Boy prides itself on delivering up to date Poker News straight to your computer.",
+      "followers": {
+        "twitter": 310
+      },
+      "image_url": "https://i1.feedspot.com/4716287.jpg?t=1604729677"
+    },
+    {
+      "title": "Eastern Poker Open Blog",
+      "feed_url": "https://easternpokeropen.com/blog/feed/",
+      "website_url": "https://easternpokeropen.com/blog/",
+      "description": "The Eastern Poker Open is a season ending celebration for the Eastern Poker Tour players along side a series of events open to the general public at Foxwoods Resort and Casino.",
+      "followers": {
+        "facebook": 13400,
+        "twitter": 481
+      },
+      "image_url": "https://i1.feedspot.com/4715378.jpg?t=1604729724"
+    },
+    {
+      "title": "The Pokeriety",
+      "feed_url": "https://www.thepokeriety.com/feed/",
+      "website_url": "https://resipsapoker.com/",
+      "description": "The Pokeriety is all about feel good poker. Sharing poker information, tips and links to improve everyone's poker game.",
+      "followers": {
+        "facebook": 318
+      },
+      "image_url": "https://i1.feedspot.com/4715396.jpg?t=1604729741"
+    },
+    {
+      "title": "Resipsa Poker",
+      "feed_url": "https://resipsapoker.com/feed",
+      "website_url": "https://resipsapoker.com/",
+      "description": "Best Poker Tips and Ideas",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4969058.jpg?t=1604729809"
+    },
+    {
+      "title": "Pokerfuse",
+      "feed_url": "http://feeds.pokerfuse.com/pokerfuse?format=xml",
+      "website_url": "https://pokerfuse.com/",
+      "description": "Pokerfuse is a independent news organization dedicated to the world of poker. Pokerfuse has been built by online professional poker players and their goal is to cater to professionals, semi-professionals, and dedicated recreational players who care about their industry.",
+      "followers": {
+        "facebook": 10,
+        "twitter": 7400
+      },
+      "image_url": "https://i1.feedspot.com/4403392.jpg?t=1604729092"
+    },
+    {
+      "title": "US Gambling News",
+      "feed_url": "https://www.usgamblingsites.com/feed/",
+      "website_url": "https://www.usgamblingsites.com/category/news/",
+      "description": "There are a lot of online poker sites, not all of them are US friendly. On our site you find out which are the best US poker sites in 2018. Find out the latest poker news on federal and state legislation, and the best bonus promos from the poker sites.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4949094.jpg?t=1604729354"
+    },
+    {
+      "title": "BankrollMob",
+      "feed_url": "https://feeds.feedburner.com/bankrollmob",
+      "website_url": "https://www.bankrollmob.com/poker-news",
+      "description": "BankrollMob's ambition is to be the preferred website for free bankrolls and bonusses for online poker and casino websites. BankRollMob.com is owned and run from Malta by a team of 11 fulltime employees with many years of experience from within the online gaming industy. Since 1999 we have given thousands of players from around the globe free bankrolls for the leading gamingsites in the world.",
+      "followers": {
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4715952.jpg?t=1604729916"
+    },
+    {
+      "title": "BitcoinsPoker.com",
+      "feed_url": "https://www.bitcoinspoker.com/feed/",
+      "website_url": "https://www.bitcoinspoker.com/news/",
+      "description": "Play online poker with Bitcoins, find out how it works , how to buy and sell Bitcoins, and where you can find the best online Bitcoin Poker Rooms.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4949093.jpg?t=1604729926"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "category": "Blender",
+  "source_url": "https://rss.feedspot.com/blender_rss_feeds",
+  "feeds": [
+    {
+      "title": "Bforartists",
+      "feed_url": "https://www.bforartists.de/feed/",
+      "website_url": "https://www.bforartists.de/news/",
+      "description": "Get the latest news and updates on our software, features and more. Bforartists is a fork of the popular open source 3D software Blender focused on UI and usability.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5423554.jpg?t=1658297899"
+    },
+    {
+      "title": "Blender Nation",
+      "feed_url": "https://www.blendernation.com/feed/",
+      "website_url": "https://www.blendernation.com/",
+      "description": "Explore Daily news art and tutorial about Blender, the open source 3D content creation suite.",
+      "followers": {
+        "facebook": 29000,
+        "twitter": 90800
+      },
+      "image_url": "https://i1.feedspot.com/4587120.jpg?t=1658299875"
+    },
+    {
+      "title": "Blenderloop",
+      "feed_url": "https://www.blenderloop.com/feeds/posts/default",
+      "website_url": "https://www.blenderloop.com/",
+      "description": "Blenderloop is a website for blender 3D CG artists who look for blender tutorials, blender geometry nodes, blender 3D modeling tips, and more about blender animation and rendering.",
+      "followers": {
+        "facebook": 90100,
+        "instagram": 241100
+      },
+      "image_url": "https://i1.feedspot.com/5547159.jpg?t=1682056395"
+    },
+    {
+      "title": "CG Cookie",
+      "feed_url": "https://cgcookie.com/feeds/blog.rss",
+      "website_url": "https://cgcookie.com/",
+      "description": "Check back often for Blender beginner training tips, tutorials, course trailers, and live streams. CG Cookie helps you learn Blender. Our community is making awesome stuff with the guided help of our professional instructors. CG Cookie launched in 2008 as a software agnostic content site built with WordPress and a purchased theme. Featuring tutorials, art gallery and conversations on various software.",
+      "followers": {
+        "twitter": 41800,
+        "instagram": 122600
+      },
+      "image_url": "https://i1.feedspot.com/5423552.jpg?t=1658300567"
+    },
+    {
+      "title": "3D Blendered",
+      "feed_url": "https://www.3dblendered.com/feed/",
+      "website_url": "https://www.3dblendered.com/",
+      "description": "A Magazine on Blender 3D where we publish articles about Blender World, interviews on 3D artists, add-ons, and news. We are 'blendered'. We are fascinated by the open-source Blender 3D and all its potentiality. We are an independent Magazine about Blender and 3D in general.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 899,
+        "instagram": 188800
+      },
+      "image_url": "https://i1.feedspot.com/5423559.jpg?t=1658297920"
+    },
+    {
+      "title": "Learn with a Poster Blog",
+      "feed_url": "https://store.giudansky.com/category/blog/feed/",
+      "website_url": "https://store.giudansky.com/category/blog/",
+      "description": "Read our blogs for our latest projects and more. We want to create mindmap artboards, the perfect notes, everything on a single sheet. An infographic poster that must be both useful and beautiful.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5423560.jpg?t=1658299608"
+    },
+    {
+      "title": "Blendamator Blog",
+      "feed_url": "https://blendamator.com/feed/",
+      "website_url": "https://blendamator.com/blog/",
+      "description": "Browse the blog for the coolest tips on Blender software. Welcome, I'm Davy! I strive to be able to provide all the answers to the questions addressed by 3D enthusiasts through tutorials and articles, each as enriching as the next.",
+      "followers": {
+        "instagram": 582
+      },
+      "image_url": "https://i1.feedspot.com/5423553.jpg?t=1658311909"
+    },
+    {
+      "title": "Blender Hub Blog",
+      "feed_url": "https://blenderhub.net/feed/",
+      "website_url": "https://blenderhub.net/",
+      "description": "Blender Hub is a blog with the goal of storing quality knowledge related to Blender in an easy-to-read website, with simple navigation, and no distractions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5423556.jpg?t=1658301337"
+    },
+    {
+      "title": "Blender 3D Architect",
+      "feed_url": "https://feeds.feedburner.com/Blender3dArchitect",
+      "website_url": "https://www.blender3darchitect.com/",
+      "description": "Blender 3D Architect is the place to find news, tutorials, resources, and training related to architectural visualization using Blender. We have a passion for architecture and technology and all the possibilities that Blender can offer to new and experienced artists. Here you will find on a regular basis, resources, and artwork from artists from all around the world. My name is Allan Brito, and I'm an architect living in Brazil.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1579585.jpg?t=1658312764"
+    },
+    {
+      "title": "Evan Coates 3D Blog",
+      "feed_url": "http://www.evancoates.com/blog?format=rss",
+      "website_url": "http://www.evancoates.com/blog",
+      "description": "Explore my blog on 3D with articles on blender, designing, projects and more. Hi, I'm a 3D generalist that specializes in hard surface asset development, environments, and lighting.",
+      "followers": {
+        "instagram": 269
+      },
+      "image_url": "https://i1.feedspot.com/5423557.jpg?t=1658465668"
+    }
+  ]
+}

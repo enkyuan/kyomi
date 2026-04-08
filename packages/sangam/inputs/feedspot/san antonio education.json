@@ -1,0 +1,52 @@
+{
+  "category": "San Antonio Education",
+  "source_url": "https://rss.feedspot.com/san_antonio_education_rss_feeds",
+  "feeds": [
+    {
+      "title": "Pre-K 4 SA Blog",
+      "feed_url": "https://prek4sa.com/feed/",
+      "website_url": "https://prek4sa.com/news-events/blog/",
+      "description": "Pre-K 4 SA was established to change the trajectory of education in San Antonio. Through high-quality early childhood education, it will create a world-class workforce in one generation. Its Professional Learning Program hosts resourceful workshops, seminars, training, and certification opportunities for ECE professionals. Get the latest news on our programs, events, and more!",
+      "followers": {
+        "facebook": 20900,
+        "twitter": 3100,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5547299.jpg?t=1682058633"
+    },
+    {
+      "title": "IDEA Public Schools Blog",
+      "feed_url": "https://ideapublicschools.org/feed/",
+      "website_url": "https://ideapublicschools.org/blog/",
+      "description": "IDEA Public Schools believes that each and every child can go to college. Since 2000, IDEA Public Schools has grown from a small school with 150 students to a national network of tuition-free, K-12 public charter schools in the United States. We put the best interests of the IDEA Team & Family and most importantly our students at the forefront of all our decisions and actions, taking personal responsibility to model the honest and ethical behavior we want our students and each other to demonstrate every day.",
+      "followers": {
+        "facebook": 77600,
+        "twitter": 8900,
+        "instagram": 17300
+      },
+      "image_url": "https://i1.feedspot.com/5547300.jpg?t=1682058642"
+    },
+    {
+      "title": "San Antonio Charter Moms Blog",
+      "feed_url": "https://sachartermoms.com/feed/",
+      "website_url": "https://sachartermoms.com/blog/",
+      "description": "San Antonio Charter Moms helps parents and caregivers learn about lots of different schools - charter, private, magnet, and more - and how to get their kids enrolled. Find helpful information on education news, schools, and helpful tips so your child can be successful in school and at home.",
+      "followers": {
+        "facebook": 10500,
+        "twitter": 3200,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5536616.jpg?t=1680865675"
+    },
+    {
+      "title": "Country Kids Academy Blog",
+      "feed_url": "https://countrykidsacademy.com/feed/",
+      "website_url": "https://countrykidsacademy.com/blog/",
+      "description": "Founder and owner Karen Braswell always worked in the service of children: as a NICU and pediatric nurse, home daycare operator, and Girl Scout Leader. Our attentive team assesses your child's development to determine where they may need extra guidance, and where they may need an extra challenge, and crafts an individualized plan to fulfill their potential. Explore more about our center and services, tips for engaging with your kid and more!",
+      "followers": {
+        "facebook": 686
+      },
+      "image_url": "https://i1.feedspot.com/5547301.jpg?t=1682058649"
+    }
+  ]
+}

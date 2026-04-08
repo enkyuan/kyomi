@@ -1,0 +1,120 @@
+{
+  "category": "Dallas News",
+  "source_url": "https://rss.feedspot.com/dallas_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "NBC 5 Dallas-Fort Worth",
+      "feed_url": "https://www.nbcdfw.com/?rss=y",
+      "website_url": "https://www.nbcdfw.com/",
+      "description": "Local news, weather, and sports for the Dallas-Fort Worth area from NBC 5. Get the latest about North Texas news, weather, sports, business, lifestyle, traffic, and heath on NBC 5 DFW, the destination to go for exclusive local stories, the latest breaking news, weather updates & everything Dallas-Fort Worth.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 526900,
+        "instagram": 174400
+      },
+      "image_url": "https://i1.feedspot.com/4821798.jpg?t=1667481337"
+    },
+    {
+      "title": "Wylie News",
+      "feed_url": "https://wylienews.com/feed/",
+      "website_url": "https://wylienews.com/",
+      "description": "The Wylie News has been covering Wylie and the surrounding area for almost 65 years. Get the latest local news, information, sports, education, life and style, opinion, events and everything that matters to you in the city Wylie, TX.",
+      "followers": {
+        "facebook": 14800,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4833858.jpg?t=1625637151"
+    },
+    {
+      "title": "WFAA",
+      "feed_url": "http://rssfeeds.wfaa.com/wfaa/home",
+      "website_url": "https://www.wfaa.com/",
+      "description": "Local news, weather, traffic, and sports for Dallas-Fort Worth, Texas! For nearly 75 years WFAA has been serving the community of North Texas. Our service is storytelling and any story worth telling takes courage to tell it right.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 673800
+      },
+      "image_url": "https://i1.feedspot.com/4833769.jpg?t=1625739145"
+    },
+    {
+      "title": "Dallas City News",
+      "feed_url": "https://www.dallascitynews.net/feed",
+      "website_url": "https://www.dallascitynews.net/",
+      "description": "Dallas City News is the official media outlet for the City of Dallas. This website contains coverage of City events, services, politics and community updates.",
+      "followers": {
+        "facebook": 77500,
+        "twitter": 204800
+      },
+      "image_url": "https://i1.feedspot.com/4833781.jpg?t=1516865072"
+    },
+    {
+      "title": "The Dallas Post",
+      "feed_url": "https://www.mydallaspost.com/feed",
+      "website_url": "https://www.mydallaspost.com/",
+      "description": "Dallas News, Sports, Classified, and Events!",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 165
+      },
+      "image_url": "https://i1.feedspot.com/4833794.jpg?t=1516866021"
+    },
+    {
+      "title": "The Sachse News",
+      "feed_url": "https://sachsenews.com/feed/",
+      "website_url": "https://sachsenews.com/",
+      "description": "The Sachse News has been covering Sachse and the surrounding area for almost 25 years. Read the latest news and breaking headlines on what's happening in Sachse city and community by following this feed.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4833882.jpg?t=1590065926"
+    },
+    {
+      "title": "CBS Texas",
+      "feed_url": "https://www.cbsnews.com/texas/",
+      "website_url": "https://www.cbsnews.com/texas/",
+      "description": "CBS Dallas Fort Worth is your online source for local news, weather and sports. CBS DFW is part of CBS Television Stations, a division of CBS Corporation, and is one of the largest network-owned station groups in the United States.",
+      "followers": {
+        "facebook": 591600,
+        "twitter": 181000,
+        "instagram": 602
+      },
+      "image_url": "https://i1.feedspot.com/3276.jpg?t=1603896094"
+    },
+    {
+      "title": "FOX 4",
+      "feed_url": "https://www.fox4news.com/feeds/rssFeed?obfType=RSS_FEED&siteId=200007",
+      "website_url": "https://www.fox4news.com/",
+      "description": "Fox 4 News Dallas-Fort Worth, Texas, news, headlines, weather, sports, traffic.",
+      "followers": {
+        "facebook": 2700000,
+        "twitter": 731600,
+        "instagram": 299000
+      },
+      "image_url": "https://i1.feedspot.com/4822086.jpg?t=1516863734"
+    },
+    {
+      "title": "Fort Worth Star-Telegram",
+      "feed_url": "https://www.star-telegram.com/?widgetName=rssfeed&widgetContentId=714290&getXmlFeed=true/feed",
+      "website_url": "https://www.dallasobserver.com/",
+      "description": "Follow the Star-Telegram newspaper for headlines on Dallas-Fort Worth news. Find local breaking news, opinion columns, videos and community events.",
+      "followers": {
+        "facebook": 227800,
+        "twitter": 234200
+      },
+      "image_url": "https://i1.feedspot.com/4821697.jpg?t=1625739097"
+    },
+    {
+      "title": "Dallas Observer",
+      "feed_url": "https://www.dallasobserver.com/index.rss",
+      "website_url": "https://www.dallasobserver.com/",
+      "description": "Dallas Observer is the definitive source of information for news, music, movies, restaurants, reviews, and events in Dallas.",
+      "followers": {
+        "facebook": 180400,
+        "twitter": 231400,
+        "instagram": 137800
+      },
+      "image_url": "https://i1.feedspot.com/4820148.jpg?t=1610777387"
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "category": "Toronto Real Estate",
+  "source_url": "https://rss.feedspot.com/toronto_real_estate_rss_feeds",
+  "feeds": [
+    {
+      "title": "Toronto Realty Blog",
+      "feed_url": "https://torontorealtyblog.com/feed/",
+      "website_url": "https://torontorealtyblog.com/",
+      "description": "The Realty Blog is a platform to describe the Toronto real estate market through my eyes, with my witty opinions, perceptions and descriptions of my day-to-day interactions with buyers, sellers, agents, and the entire cast of characters I come across in this thriving industry.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 5600,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4619794.jpg?t=1609566214"
+    },
+    {
+      "title": "Toronto Storeys",
+      "feed_url": "https://storeys.com/feeds/feed.rss",
+      "website_url": "https://storeys.com/",
+      "description": "Toronto Storeys is the home for the City's real estate industry. From a look into our market's foundations to the views from its penthouse suites, TOS opens doors and takes readers inside to see the sites and meet the people behind Toronto's red-hot real estate sector. Toronto Storeys is your place for news, narratives, and advice on Toronto real estate.",
+      "followers": {
+        "facebook": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4885686.jpg?t=1612519682"
+    },
+    {
+      "title": "Better Dwelling",
+      "feed_url": "https://betterdwelling.com/feed/",
+      "website_url": "https://betterdwelling.com/",
+      "description": "Better Dwelling is Canada's largest independent housing news outlet, a distinction we've acquired in a very short time. We provide a balanced, data-driven perspective to help millennials understand complex issues surrounding housing - a topic that impacts all of us. Although we're fairly young, our readership has grown quickly, proving that there's a need for data-driven journalism in Canada.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 17400,
+        "instagram": 763
+      },
+      "image_url": "https://i1.feedspot.com/4621226.jpg?t=1603804402"
+    },
+    {
+      "title": "The Julie Kinnear Team of Toronto Real Estate Agents",
+      "feed_url": "https://juliekinnear.com/feed",
+      "website_url": "https://juliekinnear.com/blogs",
+      "description": "Toronto real estate with personality. Helping people in Toronto sell and buy their homes for over 25 years. Become one of our happy clients and book a free consultation today.",
+      "followers": {
+        "facebook": 863,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4885700.jpg?t=1612520455"
+    },
+    {
+      "title": "The BREL Team Blog",
+      "feed_url": "https://www.getwhatyouwant.ca/feed",
+      "website_url": "https://www.getwhatyouwant.ca/blog",
+      "description": "We're the BREL team and we're obsessed with Toronto, real estate, design trends, statistics and more. Follow this page to stay on top of what's REALLY happening in the real estate market. The most comprehensive resource for Toronto Buyers and Sellers, brought to you by the BREL team.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 1600,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4886438.jpg?t=1612519674"
+    },
+    {
+      "title": "Chestnut Park Blog",
+      "feed_url": "https://blog.chestnutpark.com/feed/",
+      "website_url": "https://blog.chestnutpark.com/",
+      "description": "Chestnut Park Chestnut Park Real Estate Limited is the leading provider of Toronto real estate. View the latest in Toronto real estate and Toronto luxury homes.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 2700,
+        "instagram": 11800
+      },
+      "image_url": "https://i1.feedspot.com/4885732.jpg?t=1612519725"
+    },
+    {
+      "title": "BK Real Estate Team Blog",
+      "feed_url": "https://bkteam.ca/feed/",
+      "website_url": "https://bkteam.ca/blog/",
+      "description": "Leslie Benczik is a real estate agent in Markham, Ontario. With a proven track record of home and condominium sales, Leslie puts his clients first.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 144
+      },
+      "image_url": "https://i1.feedspot.com/4886581.jpg?t=1609566416"
+    },
+    {
+      "title": "Imaginahome Blog",
+      "feed_url": "https://imaginahome.com/feed/",
+      "website_url": "https://imaginahome.com/news-blog/",
+      "description": "Imaginahome offers high-end real estate photos and marketing in Toronto. Servicing agents for over 10 years and providing services like photography, feature sheets, virtual tours, web design, branding, postcards, business cards, stationery and much more.",
+      "followers": {
+        "facebook": 275,
+        "twitter": 133,
+        "instagram": 254
+      },
+      "image_url": "https://i1.feedspot.com/5063714.jpg?t=1612525954"
+    },
+    {
+      "title": "The MASH - The best in Canadian Real Estate Gossip.",
+      "feed_url": "https://themash.ca/realestategossip?format=RSS",
+      "website_url": "https://themash.ca/",
+      "description": "The MASH was started in the late summer of 2011 to gossip about real estate listings in Toronto and Canada just as one would gossip with family and friends in their living room.",
+      "followers": {
+        "twitter": 1600,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4885855.jpg?t=1612520418"
+    },
+    {
+      "title": "Condos HQ Blog",
+      "feed_url": "https://www.condoshq.com/feed",
+      "website_url": "https://www.condoshq.com/blog",
+      "description": "Condos HQ is a real estate marketing agency based in Toronto, Ontario. With over 15 years of experience, we specialize in the sale of pre-construction condos and homes in the Greater Toronto Area. Our ultimate goal is to not only provide Platinum Access but to ensure that our clients have a VIP experience.",
+      "followers": {
+        "facebook": 268,
+        "twitter": 65,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5460195.jpg?t=1666862509"
+    },
+    {
+      "title": "Passive House Toronto",
+      "feed_url": "https://www.dittschlag.com/blog-feed.xml",
+      "website_url": "https://www.dittschlag.com/",
+      "description": "We are a couple building our young family in the Mimico neighborhood of Toronto. Insights to our new custom home build in Toronto sharing useful information, tips and hopefully many good news.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5193589.jpg?t=1599286295"
+    },
+    {
+      "title": "Bay Street Blog \u00bb Real Estate",
+      "feed_url": "https://www.baystreetblog.com/category/real-estate/feed/",
+      "website_url": "https://www.baystreetblog.com/category/real-estate/",
+      "description": "Bay Street Blog is a platform for Millennial Finance with a focus on Personal Finance, and Self Directed Investing topics. Real Estate for Millennials keep up to date with the latest real estate news, tips & tricks.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4885829.jpg?t=1612523032"
+    },
+    {
+      "title": "Alex Beauregard Blog",
+      "feed_url": "https://www.alexbeauregard.com/toronto-real-estate-blog/feed",
+      "website_url": "https://www.alexbeauregard.com/toronto-real-estate-blog",
+      "description": "In my Toronto real estate blog, you'll find the best expert advice, neighbourhood expertise, and local Toronto real estate market information. Get all the latest in-depth insights here.",
+      "followers": {
+        "facebook": 244,
+        "twitter": 1300,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4843316.jpg?t=1603806387"
+    },
+    {
+      "title": "Harvey Kalles Real Estate Blog",
+      "feed_url": "https://harveykalles.com/feed/",
+      "website_url": "https://www.cityoftorontorealestate.ca/post/blog",
+      "description": "For over 50 years, Harvey Kalles Real Estate Ltd., Brokerage has been dedicated to offering professional real estate services to all of our customers in Toronto. Toronto real estate news articles about the latest news and information in the Toronto and GTA real estate market.",
+      "followers": {
+        "facebook": 5000,
+        "instagram": 14600
+      },
+      "image_url": "https://i1.feedspot.com/4885751.jpg?t=1612520451"
+    },
+    {
+      "title": "Torontoism Blog",
+      "feed_url": "https://torontoism.com/feed/",
+      "website_url": "https://www.cityoftorontorealestate.ca/post/blog",
+      "description": "Toronto Real Estate with Torontoism. A step-by-step guide to buying and selling real estate by Toronto's top realtors. Get top value for your home with Torontoism.",
+      "followers": {
+        "twitter": 9600,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4885678.jpg?t=1640161554"
+    },
+    {
+      "title": "The Christensen Real Estate Group Blog",
+      "feed_url": "https://christensengroup.ca/feed/",
+      "website_url": "https://www.cityoftorontorealestate.ca/post/blog",
+      "description": "The Christensen Team has over 30 years of experience and is recognized as one of the top RE/MAX teams in Canada. The communities, the people, and the local real estate market; read our real estate blog to stay up to date on everything going on in the city we call home.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4886541.jpg?t=1612523040"
+    },
+    {
+      "title": "TAYCAP Properties Blog",
+      "feed_url": "https://michaelmaxwellhomes.com/feed/",
+      "website_url": "https://www.cityoftorontorealestate.ca/post/blog",
+      "description": "Buying, selling & investing in Toronto's most beautiful luxury real estate and homes for over 10 years, giving us the experience to help you. Committed to a perfect high-end service, choose Michael Maxwell Homes. Want to stay up to date on the Toronto real estate market? From high-end homes to the Toronto lifestyle get the inside scoop in our luxury real estate blog.",
+      "followers": {
+        "facebook": 306
+      },
+      "image_url": "https://i1.feedspot.com/4886600.jpg?t=1612521498"
+    },
+    {
+      "title": "Toronto Life \u00bb Real Estate",
+      "feed_url": "https://torontolife.com/category/real-estate/feed/",
+      "website_url": "https://torontolife.com/category/real-estate/",
+      "description": "Toronto Life is the destination for people who care about Toronto, the country's most vibrant city, and want to get the most out of it. Everything you need to know about Toronto's real estate market, including house, condo and cottage sales, office buildings, trends, analysis and more.",
+      "followers": {
+        "facebook": 208200,
+        "twitter": 479400,
+        "instagram": 522200
+      },
+      "image_url": "https://i1.feedspot.com/4886269.jpg?t=1612519659"
+    },
+    {
+      "title": "Urban Toronto News \u00bb Real Estate",
+      "feed_url": "https://urbantoronto.ca/news/feed/real-estate/feed/feed",
+      "website_url": "https://urbantoronto.ca/news/real-estate",
+      "description": "UrbanToronto is Toronto's premier website focused on condos, architecture, urban development and real estate.",
+      "followers": {
+        "facebook": 23600,
+        "twitter": 50700
+      },
+      "image_url": "https://i1.feedspot.com/4885834.jpg?t=1612519664"
+    },
+    {
+      "title": "Urbaneer Blog",
+      "feed_url": "https://urbaneer.com/feed",
+      "website_url": "https://urbaneer.com/blog",
+      "description": "Engaging Dashing Clever Wordsmith Who Promotes Unique Character Urban Housing In Toronto. Steven Fudge, Sales Representative Bosley Real Estate Ltd. Brokerage.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4788948.jpg?t=1609566328"
+    },
+    {
+      "title": "Jacobson Fernandez",
+      "feed_url": "https://www.jacobsonfernandez.com/modernrealtyblog?format=rss",
+      "website_url": "https://www.jfre.ca/library",
+      "description": "The Jacobson Fernandez Real Estate Team works in and around the GTA and is the managing team behind Forest Hill Boutique Brokerage. Residential to Commercial. Luxury to International. We've got you covered. Follow to get updates.",
+      "followers": {
+        "facebook": 198,
+        "twitter": 160,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5178360.jpg?t=1612525957"
+    },
+    {
+      "title": "TRREB Wire",
+      "feed_url": "https://www.trrebwire.ca/index.php/feed/",
+      "website_url": "https://therealestatehouse.ca/blog",
+      "description": "Toronto Real Estate Board Canada's largest real estate board, serving more than 59,000 Members in & about the GTA. The Official Blog of the Toronto Regional Real Estate Board. The purpose of this blog is to provide useful information for REALTORS, home owners, new and prospective buyers, as well as real estate investors at any level.",
+      "followers": {
+        "facebook": 29700,
+        "twitter": 28100,
+        "instagram": 14400
+      },
+      "image_url": "https://i1.feedspot.com/4886551.jpg?t=1612522111"
+    },
+    {
+      "title": "The Real Estate House Blog",
+      "feed_url": "https://therealestatehouse.ca/feed",
+      "website_url": "https://therealestatehouse.ca/blog",
+      "description": "Providing Unforgettable Real Estate Experiences in Toronto. Award winning Toronto real estate team.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4886558.jpg?t=1612521596"
+    },
+    {
+      "title": "PSR Brokerage Blog",
+      "feed_url": "https://psrbrokerage.com/feed",
+      "website_url": "https://psrbrokerage.com/blog",
+      "description": "Toronto's premier full-service real estate brokerage. Not your average real estate brokerage. We are recognized as Toronto's premium boutique full-service real estate brokerage, aiming to fulfill all of our clients needs through professionalism, integrity, and unparalleled market knowledge.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 849,
+        "instagram": 15800
+      },
+      "image_url": "https://i1.feedspot.com/4885847.jpg?t=1612520441"
+    }
+  ]
+}

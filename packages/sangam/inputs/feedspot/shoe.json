@@ -1,0 +1,860 @@
+{
+  "category": "Shoe",
+  "source_url": "https://rss.feedspot.com/shoe_rss_feeds",
+  "feeds": [
+    {
+      "title": "Sneaker News",
+      "feed_url": "https://sneakernews.com/feed/",
+      "website_url": "https://sneakernews.com/",
+      "description": "Sneaker News, a Liquidrice Inc. company, was founded out of a desire to provide the sneakerhead community with a singular source that served up all the relevant news in the footwear world. It has since evolved into the web's premiere destination for sneakerheads-gathering release dates, previews of upcoming projects, NBA sneaker wears, and more in one premium channel.",
+      "followers": {
+        "facebook": 804200,
+        "twitter": 1400000,
+        "instagram": 10100000
+      },
+      "image_url": "https://i1.feedspot.com/183.jpg?t=1669278399"
+    },
+    {
+      "title": "Footwear News",
+      "feed_url": "https://footwearnews.com/feed/",
+      "website_url": "https://footwearnews.com/",
+      "description": "Footwear News is a leading shoe magazine bringing you the latest in shoe industry business, trends, runway and street fashion as well as key influencers.",
+      "followers": {
+        "facebook": 232100,
+        "twitter": 27900,
+        "instagram": 228800
+      },
+      "image_url": "https://i1.feedspot.com/4585165.jpg?t=1660217649"
+    },
+    {
+      "title": "Running Shoes Guru Blog",
+      "feed_url": "https://www.runningshoesguru.com/feed/",
+      "website_url": "https://www.runningshoesguru.com/blog/",
+      "description": "The purpose of this blog is to help both the novice and the experienced runner find their way to the best running shoe for their needs. We share reviews, buying guides, and price comparisons on all running shoes plus hundreds of opinions from other runners. Running Shoes Guru was founded in 2009 and is the place to go for independent, unbiased, expert reviews on running shoes and GPS running watches.",
+      "followers": {
+        "facebook": 38000,
+        "twitter": 21000,
+        "instagram": 18400
+      },
+      "image_url": "https://i1.feedspot.com/323781.jpg?t=1603432053"
+    },
+    {
+      "title": "The Shoe Snob Blog",
+      "feed_url": "https://theshoesnobblog.com/feed/",
+      "website_url": "https://theshoesnobblog.com/",
+      "description": "Welcome to The Shoe Snob Blog! This blog was created to not only show the journey of one man, Justin FitzPatrick, who wanted to make the shoe industry the best it could be but also the share all of the knowledge gained along the way. Ultimately this blog is about seeing men wearing better shoes through education and sharing what is out there that deserves recognition.",
+      "followers": {
+        "facebook": 126800,
+        "twitter": 8200,
+        "instagram": 166400
+      },
+      "image_url": "https://i1.feedspot.com/4577244.jpg?t=1638874572"
+    },
+    {
+      "title": "Your Next Shoes",
+      "feed_url": "https://www.yournextshoes.com/feed/",
+      "website_url": "https://www.yournextshoes.com/",
+      "description": "Your Next Shoes delivers the biggest celebrity moments, the hottest shoe trends, and the best tips on how to wear and where to buy shoes.",
+      "followers": {
+        "facebook": 2400000,
+        "twitter": 7900,
+        "instagram": 19000
+      },
+      "image_url": "https://i1.feedspot.com/1443610.jpg?t=1603432026"
+    },
+    {
+      "title": "BarkingDogShoes.com",
+      "feed_url": "https://feeds.feedburner.com/Barkingdogshoescom",
+      "website_url": "https://www.barkingdogshoes.com/",
+      "description": "The world's leading blog on comfortable, stylish shoes for women by Kirsten Borrink.",
+      "followers": {
+        "facebook": 17900,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4588171.jpg?t=1603432109"
+    },
+    {
+      "title": "RoadTek",
+      "feed_url": "https://roadtekshoes.com/feed/",
+      "website_url": "https://roadtekshoes.com/news/",
+      "description": "RoadTek Shoes is a family-owned leading manufacturer of vulcanized footwear, specializing in the production of high-quality shoes. Here they present informative articles that delve into the fascinating art of Shoe-making. Uncover new styles, trends, and fashion ideas in the latest updates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5742587.jpg?t=1703586434"
+    },
+    {
+      "title": "Footwear Plus Magazine",
+      "feed_url": "https://footwearplusmagazine.com/feed/",
+      "website_url": "https://footwearplusmagazine.com/",
+      "description": "The leading B-2-B fashion publication of the footwear industry. It is our mission to propel the footwear market forward in all that we do by communicating the dedication and passion that manufacturers and retailers have for delivering greater style, performance, comfort and service. It is a mission delivered with equal dedication and passion.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 2300,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4582998.jpg?t=1660217558"
+    },
+    {
+      "title": "Shoeaholics Anonymous",
+      "feed_url": "https://shoeaholicsanonymous.com/feed/",
+      "website_url": "https://shoeaholicsanonymous.com/",
+      "description": "Shoeaholics Anonymous by Kim Rowley is a fellowship of women (and some men) who wish to share their shoeaholism. Their primary purpose is help other shoeaholics embrace their shoe addiction.",
+      "followers": {
+        "facebook": 13600,
+        "twitter": 164,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4582896.jpg?t=1603372027"
+    },
+    {
+      "title": "Shoegazing",
+      "feed_url": "https://shoegazing.com/feed/",
+      "website_url": "https://shoegazing.com/",
+      "description": "Shoegazing is a blog about classical quality shoes, or to be fully correct: quality shoes made with traditional construction methods. Articles about shoe care, shopping tips, guides, reviews, and more, several times a week.",
+      "followers": {
+        "facebook": 11300,
+        "instagram": 152600
+      },
+      "image_url": "https://i1.feedspot.com/4408816.jpg?t=1603432220"
+    },
+    {
+      "title": "ShoeRazzi",
+      "feed_url": "https://shoerazzi.com/feed/",
+      "website_url": "https://shoerazzi.com/",
+      "description": "Ashley a globetrotting fashion writer with a base (aka shoe closet) in Miami Beach, shares her passion for designer footwear and celebrity style with collection of shoes finding the best styles currently available.",
+      "followers": {
+        "facebook": 218400,
+        "twitter": 8500,
+        "instagram": 19600
+      },
+      "image_url": "https://i1.feedspot.com/916604.jpg?t=1603432229"
+    },
+    {
+      "title": "B Street Shoes",
+      "feed_url": "https://bstreetshoes.com/blogs/news.atom",
+      "website_url": "https://bstreetshoes.com/blogs/news",
+      "description": "B Street Shoes was founded in 2010 out of a desire to provide the finest hand-painted sneakers to art and sneaker lovers around the world. Lead artist Blake Barash and his team have become internationally known as the top destination for custom hand-painted sneakers.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 481,
+        "instagram": 52800
+      },
+      "image_url": "https://i1.feedspot.com/5283794.jpg?t=1621927131"
+    },
+    {
+      "title": "Shoes Master",
+      "feed_url": "https://www.shoesmaster.jp/news/feed/",
+      "website_url": "https://www.shoesmaster.jp/news/",
+      "description": "'Shoes \u00b7 Master' is a specialized magazine of shoes and sneakers. Shoes Master will continue to bring the latest about shoes andsneaker culture through various forms of media, including books,magazines and the web.",
+      "followers": {
+        "instagram": 22900
+      },
+      "image_url": "https://i1.feedspot.com/4588737.jpg?t=1603432188"
+    },
+    {
+      "title": "Shoes & Accessories Magazine",
+      "feed_url": "https://shoesandaccessories.in/feed/",
+      "website_url": "https://shoesandaccessories.in/",
+      "description": "Launched with the objective to lend a formidable voice, Shoes & Accessories magazine is a leading publication with exclusive focus on India's ever growing shoes and accessories industry. g shoes and accessories industry. Today, it is a platform where one can find brands, retailers, manufacturers, wholesalers, designers, trend-forecasters and other key professionals of the niche industry to share knowledge and their best practices.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 104
+      },
+      "image_url": "https://i1.feedspot.com/4589454.jpg?t=1603432206"
+    },
+    {
+      "title": "The Barefoot Shoe Reviews Blog",
+      "feed_url": "https://www.thebarefootshoereview.com/blog-feed.xml",
+      "website_url": "https://www.thebarefootshoereview.com/blog",
+      "description": "At The Barefoot Shoe Reviews, we test and review barefoot shoe brands from around the world to help you choose the right shoe for you. The Barefoot Shoe Review was established in 2018, resulting from an ankle injury that Alex sustained. Once he found some relief in his footwear, he felt the need to spread the word to others, and that's what brings us here.",
+      "followers": {
+        "facebook": 359,
+        "instagram": 53900
+      },
+      "image_url": "https://i1.feedspot.com/5208363.jpg?t=1603432736"
+    },
+    {
+      "title": "Mukishoes Blog",
+      "feed_url": "https://mukishoes.com/feed/",
+      "website_url": "https://mukishoes.com/blog/",
+      "description": "A shoe blog by Madlen and Marta, the founders of the sustainable barefoot shoe MUKI, writes articles on shoe productions, inspirations, and visions. Mukishoes are sustainable Barefoot Shoes made in Portugal with a minimalist design for your health & for the environment.",
+      "followers": {
+        "facebook": 9600,
+        "instagram": 86100
+      },
+      "image_url": "https://i1.feedspot.com/5300751.jpg?t=1626524825"
+    },
+    {
+      "title": "Shoeperwoman",
+      "feed_url": "https://www.shoeperwoman.com/feed/",
+      "website_url": "https://www.shoeperwoman.com/",
+      "description": "ShoeperWoman's shoe blog is a fashion blog focusing on shoes, style and shopping. Shoepewoman finds great shoes, and styles them for you with fashion picks.",
+      "followers": {
+        "facebook": 12100,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/1479250.jpg?t=1605598594"
+    },
+    {
+      "title": "Lizzy's Latest",
+      "feed_url": "http://lizzyslatest.com/feed/",
+      "website_url": "http://lizzyslatest.com/",
+      "description": "My name is Elizabeth and I love shoes! I must confess that although the majority of this blog will focus on my shoe style, I would be remiss if I didn't share my other loves of lifestyle, history, and travel. This unique blend of interests keeps me engaged and exploring.",
+      "followers": {
+        "facebook": 210,
+        "twitter": 10
+      },
+      "image_url": "https://i1.feedspot.com/4588736.jpg?t=1630910732"
+    },
+    {
+      "title": "Gemma Kenward Shoes Blog",
+      "feed_url": "http://gemmakenwardshoes.com/the-shoe-blog?format=RSS",
+      "website_url": "http://gemmakenwardshoes.com/the-shoe-blog/",
+      "description": "Gemma Kenward's blog is all bout detailing special hand painted wedding shoes, wedding tips and general wonderings of an artist.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 213,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4588599.jpg?t=1603432617"
+    },
+    {
+      "title": "Shoe Zero Blog",
+      "feed_url": "https://shoezero.com/blogs/news.atom",
+      "website_url": "https://shoezero.com/blogs/news/",
+      "description": "Step into Style: Shoe Zero Blogs Unveils the Ultimate Custom Shoes Trends! Discover How to Build Your Own Branded Perfect Pair for Every Occasion.",
+      "followers": {
+        "facebook": 157,
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/8539508.jpg?t=1753094654"
+    },
+    {
+      "title": "The Shoe Mill Blog",
+      "feed_url": "https://shoemill.com/blogs/the-shoe-mill-blog.atom",
+      "website_url": "https://shoemill.com/blogs/the-shoe-mill-blog/",
+      "description": "Come visit the finest retail shoe stores throughout Portland OR. Shoe Mill has been making customers happy for over 40 years with our products.",
+      "followers": {
+        "facebook": 8000
+      },
+      "image_url": "https://i1.feedspot.com/8539501.jpg?t=1753094620"
+    },
+    {
+      "title": "dmodot Shoes Blog",
+      "feed_url": "https://www.dmodot.com/blogs/shblog.atom",
+      "website_url": "https://www.dmodot.com/blogs/shblog/",
+      "description": "dmodot Shoes Blog shares Unique, Modern & elegant Leather footwear designs for men and women. Stay ahead of the fashion cycle and become the trendsetter with dmodot Shoes Blog.",
+      "followers": {
+        "facebook": 26800,
+        "instagram": 59400
+      },
+      "image_url": "https://i1.feedspot.com/5660675.jpg?t=1694520960"
+    },
+    {
+      "title": "Barefoot Shoe Guide",
+      "feed_url": "https://barefootshoeguide.com/feed/",
+      "website_url": "https://barefootshoeguide.com/",
+      "description": "Let us be your guide to healthier feet and comfortable shoes. Learn more on the Barefoot Shoe Guide.",
+      "followers": {
+        "facebook": 509,
+        "instagram": 244300
+      },
+      "image_url": "https://i1.feedspot.com/8539500.jpg?t=1753094614"
+    },
+    {
+      "title": "John Fluevog Blog",
+      "feed_url": "https://www.fluevog.com/feed/",
+      "website_url": "https://www.fluevog.com/flueblog/",
+      "description": "Read the latest news and updates about Fluevog shoes on the Flueblog. See what the celebrities are wearing, browse social media photos, events, and more.",
+      "followers": {
+        "facebook": 174300,
+        "twitter": 26500
+      },
+      "image_url": "https://i1.feedspot.com/8539509.jpg?t=1753094657"
+    },
+    {
+      "title": "The Shoe Spa Blog",
+      "feed_url": "https://blog.shoespausa.com/feed/",
+      "website_url": "https://blog.shoespausa.com/",
+      "description": "Designer Shoes for Women",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/8539497.jpg?t=1750230039"
+    },
+    {
+      "title": "Anya's Reviews",
+      "feed_url": "https://anyasreviews.com/feed/",
+      "website_url": "https://anyasreviews.com/",
+      "description": "Your guide to looking and feeling your best in minimalist footwear. Find detailed barefoot shoe reviews, complete lists by category, and more. Hi, I am Anya, I first discovered barefoot shoes after a long history of foot issues. By changing my footwear and strengthening my body I was able to completely transform my life.",
+      "followers": {
+        "facebook": 15700,
+        "instagram": 224900
+      },
+      "image_url": "https://i1.feedspot.com/5417453.jpg?t=1656682208"
+    },
+    {
+      "title": "The Noble Shoe Blog",
+      "feed_url": "https://www.thenobleshoe.com/blogs/the-noble-shoe-blog.atom",
+      "website_url": "https://www.thenobleshoe.com/blogs/the-noble-shoe-blog/",
+      "description": "A Blog Space for guides and tips from The Noble Shoe for everyone that wants to learn more about shoes, leather and the technical capabilities of each shoe when it comes to fit, quality and more.",
+      "followers": {
+        "facebook": 5300
+      },
+      "image_url": "https://i1.feedspot.com/8539503.jpg?t=1753094628"
+    },
+    {
+      "title": "Ian's Shoes for Women Blog",
+      "feed_url": "https://www.iansshoes.com.au/blogs/news.atom",
+      "website_url": "https://www.iansshoes.com.au/blogs/news/",
+      "description": "Read our blog for the latest news, shoe style tips and fashion advice from the team at Ian's Shoes for Women. Browse our range of women's heels, sandals, flats, boots and and orthotic-friendly shoes online.",
+      "followers": {
+        "facebook": 4500
+      },
+      "image_url": "https://i1.feedspot.com/8539507.jpg?t=1753094649"
+    },
+    {
+      "title": "Shoebacca Blog",
+      "feed_url": "https://www.shoebacca.com/blogs/blog.atom",
+      "website_url": "https://www.shoebacca.com/blogs/blog/",
+      "description": "Shoebacca's blog delivers seasonal shoe guides, style inspiration, and expert tips to help shoppers find the perfect footwear for any occasion.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8539506.jpg?t=1753094645"
+    },
+    {
+      "title": "Shoe Palace Blog",
+      "feed_url": "https://www.shoepalace.com/blogs/all.atom",
+      "website_url": "https://www.shoepalace.com/blogs/all/",
+      "description": "Shoe Palace carries the very best from Nike, Jordan Brand, adidas, and more. Because of our strong relationships with icons in our industry, we are in a unique position to tell their stories and celebrate their histories. The Shoe Palace Blog will keep you up to date on the latest releases and cultural moments.",
+      "followers": {
+        "facebook": 125200,
+        "twitter": 225400,
+        "instagram": 509000
+      },
+      "image_url": "https://i1.feedspot.com/8539504.jpg?t=1753094633"
+    },
+    {
+      "title": "Trail & Kale \u00bb Shoe Reviews",
+      "feed_url": "https://trailandkale.com/shoe-reviews/feed/",
+      "website_url": "https://trailandkale.com/shoe-reviews/",
+      "description": "All new running shoe reviews are now exclusively available on my Youtube Channel. Subscribe, and I'll see you over there! -Alastair",
+      "followers": {
+        "instagram": 71600
+      },
+      "image_url": "https://i1.feedspot.com/8539494.jpg?t=1753094590"
+    },
+    {
+      "title": "Permanent Style \u00bb Shoes",
+      "feed_url": "https://www.permanentstyle.com/category/menu-categories/shoes/feed",
+      "website_url": "https://www.permanentstyle.com/category/shoes/",
+      "description": "Permanent Style is the leading British blog on tailoring, luxury and men's shoes and style.",
+      "followers": {
+        "facebook": 10000,
+        "twitter": 8800,
+        "instagram": 207500
+      },
+      "image_url": "https://i1.feedspot.com/4722598.jpg?t=1619156516"
+    },
+    {
+      "title": "Freet Blog",
+      "feed_url": "https://freetbarefoot.com/blogs/news.atom",
+      "website_url": "https://freetbarefoot.com/blogs/news/",
+      "description": "Freedom for feet - Barefoot shoes, helping you move like nature intended",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 26,
+        "instagram": 16900
+      },
+      "image_url": "https://i1.feedspot.com/8539502.jpg?t=1753094624"
+    },
+    {
+      "title": "Footwear Magazine",
+      "feed_url": "https://footwearmagazine.com/feed/",
+      "website_url": "https://footwearmagazine.com/",
+      "description": "Footwear Magazine provides well-curated, market research-driven footwear news and shoe trends in the fashion industry at footwearmagazine.com",
+      "followers": {
+        "facebook": 81,
+        "twitter": 3,
+        "instagram": 46900
+      },
+      "image_url": "https://i1.feedspot.com/8539498.jpg?t=1750232290"
+    },
+    {
+      "title": "Sneaker Files",
+      "feed_url": "https://www.sneakerfiles.com/feed/",
+      "website_url": "https://www.sneakerfiles.com/",
+      "description": "Sneaker news & release dates, the latest news on brands such as Air Jordans, Nike, Reebok, Adidas, and more. Sneaker Files is an online magazine specializing in sneaker news since 2006. The creation of Sneaker Files started with the passion for sneakers and sharing our knowledge throughout the years of collecting.",
+      "followers": {
+        "facebook": 887000,
+        "twitter": 283600,
+        "instagram": 506100
+      },
+      "image_url": "https://i1.feedspot.com/248.jpg?t=1669278713"
+    },
+    {
+      "title": "Just Fresh Kicks",
+      "feed_url": "https://justfreshkicks.com/feed/",
+      "website_url": "https://justfreshkicks.com/",
+      "description": "Find all the latest Sneaker News. JustFreshKicks is your premier online source for the latest sneaker news, sneaker release dates, sneaker links, restock alerts & more. We the first and only international footwear magazine.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 419100,
+        "instagram": 447900
+      },
+      "image_url": "https://i1.feedspot.com/4585918.jpg?t=1669278618"
+    },
+    {
+      "title": "Sneaker Bar Detroit",
+      "feed_url": "https://sneakerbardetroit.com/feed/",
+      "website_url": "https://sneakerbardetroit.com/",
+      "description": "Keep it locked to Sneaker Bar Detroit (SBD) for the latest sneaker news and sneaker release dates right here in one place.",
+      "followers": {
+        "facebook": 176400,
+        "twitter": 121500,
+        "instagram": 437700
+      },
+      "image_url": "https://i1.feedspot.com/4953458.jpg?t=1697433963"
+    },
+    {
+      "title": "JMJ Magazine",
+      "feed_url": "https://jumpmanjournals.com/f.atom",
+      "website_url": "https://jumpmanjournals.com/",
+      "description": "Discover the latest sneaker, basketball news featuring exclusive content & interviews for every sneaker & basketball enthusiast. Basketball magazines",
+      "followers": {
+        "facebook": 631,
+        "instagram": 16200
+      },
+      "image_url": "https://i1.feedspot.com/8539496.jpg?t=1753094605"
+    },
+    {
+      "title": "LIBERTYZENO Blog",
+      "feed_url": "https://www.libertyzeno.com/blogs/news.atom",
+      "website_url": "https://www.libertyzeno.com/blogs/news",
+      "description": "Liberty Footwear has always ensured that our collections are not just trendy and in various fashionable vibrant colors and attractive prints, but are also pocket friendly in terms of being suitable to all seasons and varied occasions. Explore the shoe style and fashion blog by LIBERTYZENO. Read the articles on men, women, and kids' shoe types, styles, outfits, and more.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 12
+      },
+      "image_url": "https://i1.feedspot.com/5573951.jpg?t=1684829316"
+    },
+    {
+      "title": "Shoe Blogging by Anastasia",
+      "feed_url": "https://www.shoeblogging.com/en/?format=feed&type=rss",
+      "website_url": "https://www.shoeblogging.com/en/shoes",
+      "description": "My name is Anastasia and as a shoe designer I start blogging and search for shoes, trends around the word for your dose of fabulous footwear I hope to enjoy it!",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 22
+      },
+      "image_url": "https://i1.feedspot.com/5014616.jpg?t=1603432345"
+    },
+    {
+      "title": "Indestructible Shoes Blog",
+      "feed_url": "https://indestructibleshoes.com/blogs/news.atom",
+      "website_url": "https://indestructibleshoes.com/blogs/news",
+      "description": "Indestructible Shoes are the newest footwear solution to hit the market, and with tremendous excitement and energy behind them. Why? Because Indestructible",
+      "followers": {
+        "facebook": 102300,
+        "instagram": 78500
+      },
+      "image_url": "https://i1.feedspot.com/4967145.jpg?t=1603432049"
+    },
+    {
+      "title": "En Brogue",
+      "feed_url": "https://enbrogue.com/feed/",
+      "website_url": "https://enbrogue.com/",
+      "description": "En Brogue is a blog about stylish flat shoes written and illustrated by Hannah Rochell, Fashion Features Editor at InStyle magazine in London. You'll find nothing on here but stylish flat shoes and inspiration on how to wear them, along with a few of my illustrations to boot.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4578238.jpg?t=1603432348"
+    },
+    {
+      "title": "Simple Shoemaking Blog",
+      "feed_url": "https://simpleshoemaking.com/blog/feed/",
+      "website_url": "https://simpleshoemaking.com/blog/",
+      "description": "All of Simple Shoemaking footwear is made ecologically, which means that all its processes avoid toxic shoe cements and new petroleum-based soling. Sharon's goal is to help people make shoes for themselves, their families and frends, and start shoemaking businesses if this is their goal.",
+      "followers": {
+        "facebook": 1800,
+        "instagram": 963
+      },
+      "image_url": "https://i1.feedspot.com/4588611.jpg?t=1603432423"
+    },
+    {
+      "title": "Jameson Ward Premium Shoe Cleaner",
+      "feed_url": "https://www.jamesonward.com/blogs/news.atom",
+      "website_url": "https://www.jamesonward.com/blogs/news",
+      "description": "Jameson Ward Premium Shoe Cleaner was developed by a 15 year old Sneaker Head who wanted to provide a premium shoe cleaner for a fair & competitive price.",
+      "followers": {
+        "facebook": 786,
+        "twitter": 3,
+        "instagram": 448
+      },
+      "image_url": "https://i1.feedspot.com/4989893.jpg?t=1603432541"
+    },
+    {
+      "title": "The Shoe Fits Blog",
+      "feed_url": "http://www.theshoefitsonline.com/shoe-blog?format=RSS",
+      "website_url": "http://www.theshoefitsonline.com/shoe-blog/",
+      "description": "The Shoe Fits welcomes you to upgrade your shoe shopping experience. Their knowledgeable staff will assist you in finding the best fit, highest quality, comfort shoe according to your style, size,& need. Carrying top brands Red Wing, Merrell, Clarks, Dansko, NAOT, New Balance, Florsheim, SAS, Ecco, Muck, Dunham, Waldlaufer, Beautifeel, Cloud Nine, Sebago, Wolky, Arcop\u00e9dico, Toe Warmer & Wanderlust",
+      "followers": {
+        "facebook": 423
+      },
+      "image_url": "https://i1.feedspot.com/4588473.jpg?t=1603432387"
+    },
+    {
+      "title": "The Right Shoe Blog",
+      "feed_url": "https://therightshoe.net/feed/",
+      "website_url": "https://therightshoe.net/category/blog/",
+      "description": "At The Right Shoe, their team believes you should not have to sacrifice style or performance for function and comfort. All of their brands and styles are carefully chosen to offer the latest in fashion, highest in performance, best in comfort, and are recommended by the podiatrists and physical therapists of Martin Foot and Ankle.",
+      "followers": {
+        "facebook": 721,
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4588552.jpg?t=1603432433"
+    },
+    {
+      "title": "Bespoke Shoes Unlaced",
+      "feed_url": "https://carreducker.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://carreducker.blogspot.com/",
+      "description": "This blog is for people who want to make shoes by hand; or those who aspire to it; or those who simply share our interest in shoemaking. Carreducker's mission is to make the most beautiful, must-have men's shoes, traditionally crafted in England with a contemporary aesthetic.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 912
+      },
+      "image_url": "https://i1.feedspot.com/4577249.jpg?t=1603432440"
+    },
+    {
+      "title": "ShoeWonk Shoe Blog",
+      "feed_url": "https://www.shoewonk.com/rss",
+      "website_url": "https://www.shoewonk.com/",
+      "description": "ShoeWonk is a Shoe Blog with a mix of shoe picures, shoe history, shoe sale info & shoe DIY written by a shoe lover Natasha.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4583064.jpg?t=1603372365"
+    },
+    {
+      "title": "Laura Hayden Blog",
+      "feed_url": "https://www.laurahayden.com/blog/feed/",
+      "website_url": "https://www.laurahayden.com/blog/",
+      "description": "A shoe blog by Laura Hayden.",
+      "followers": {
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4583083.jpg?t=1603372613"
+    },
+    {
+      "title": "Through the Sole: A shoe blog",
+      "feed_url": "https://feeds.feedburner.com/ThroughTheSoleAShoeBlog",
+      "website_url": "http://throughthesole.blogspot.com/",
+      "description": "Through the Sole is the all things shoe related blog written by Jennifer Schlesinger. A shoe-lover's thoughts and research on the wonderful world of shoes",
+      "followers": {
+        "facebook": 81,
+        "twitter": 33
+      },
+      "image_url": "https://i1.feedspot.com/4588574.jpg?t=1603432530"
+    },
+    {
+      "title": "Irregular Thinking",
+      "feed_url": "https://irregular-thinking.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://irregular-thinking.blogspot.com/",
+      "description": "A Blog about Irregular Choice shoes, bags and accessories. Shoe reviews, sizing help and heel height.",
+      "followers": {
+        "twitter": 34
+      },
+      "image_url": "https://i1.feedspot.com/4903657.jpg?t=1603432605"
+    },
+    {
+      "title": "LA Shoegirl",
+      "feed_url": "https://naliniarora.com/journal?format=rss",
+      "website_url": "https://naliniarora.com/journal",
+      "description": "LA Shoegirl is a platform to share what inspires Nalini Arora as a freelance footwear designer. Nalini is a Footwear and Accessory Designer, and Fashion Illustrator collaborating with luxury and global brands. Making shoe dreams come true.",
+      "followers": {
+        "facebook": 167,
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/4578228.jpg?t=1603372531"
+    },
+    {
+      "title": "Frank Wright Shoes Blog",
+      "feed_url": "https://www.frankwrightshoes.com/blog/feed/",
+      "website_url": "https://www.frankwrightshoes.com/blog/",
+      "description": "The latest fashion tips & advice provided by Frank Wright, a leading mens footwear provider. Frank Wright - men's footwear brand with a rich British heritage dating back to 1885.",
+      "followers": {
+        "facebook": 57700,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4583038.jpg?t=1603432728"
+    },
+    {
+      "title": "OfferDispose - Shoes Online",
+      "feed_url": "https://www.offerdispose.com/feed/",
+      "website_url": "https://www.offerdispose.com/blogs/",
+      "description": "Shoes are so much more than a covering for a foot. Shoes are art and creativity. Shoes are distinction and class. Shoes can be an accessory or a lifestyle.",
+      "followers": {
+        "facebook": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4763832.jpg?t=1603432761"
+    },
+    {
+      "title": "Shoegal",
+      "feed_url": "https://feeds.feedburner.com/blogspot/xRMe",
+      "website_url": "http://shoegalfi.blogspot.com/",
+      "description": "Shoegal brings you style diary and the best of the British high street for shoe lovers. The style blogger is based in Leeds, West Yorkshire.",
+      "followers": {
+        "facebook": 193,
+        "twitter": 587
+      },
+      "image_url": "https://i1.feedspot.com/4588198.jpg?t=1603432521"
+    },
+    {
+      "title": "PurseBlog Shoes",
+      "feed_url": "https://www.purseblog.com/shoes/feed/",
+      "website_url": "https://www.purseblog.com/shoes/",
+      "description": "PurseBlog reviews luxury designer shoes and accessories in a daily editorial.",
+      "followers": {
+        "facebook": 168500,
+        "twitter": 60400,
+        "instagram": 597200
+      },
+      "image_url": "https://i1.feedspot.com/4588506.jpg?t=1603432755"
+    },
+    {
+      "title": "Solely Original Blog",
+      "feed_url": "https://solelyoriginal.com/blog/index.php/feed/",
+      "website_url": "https://solelyoriginal.com/blog/",
+      "description": "Stay up on the latest shoe style, accessories, and how-to guides. Solely Original allows you to design your own shoes and have custom made to fit the specifications of your feet.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 305,
+        "instagram": 847
+      },
+      "image_url": "https://i1.feedspot.com/5300752.jpg?t=1626524149"
+    },
+    {
+      "title": "Runblogger",
+      "feed_url": "https://runblogger.com/feed",
+      "website_url": "https://runblogger.com/",
+      "description": "Runblogger Running Shoes, Gear Reviews, and Posts on the Science of the Sport by Peter Larson.",
+      "followers": {
+        "facebook": 8900,
+        "twitter": 6900,
+        "instagram": 921
+      },
+      "image_url": "https://i1.feedspot.com/3772556.jpg?t=1603432748"
+    },
+    {
+      "title": "Aurora Shoe Co. - Blog",
+      "feed_url": "https://www.aurorashoeco.com/blogs/blog.atom",
+      "website_url": "https://www.aurorashoeco.com/blogs/blog",
+      "description": "The Aurora Shoe Company was founded on the principles of quality handmade craftsmanship. They make all of our shoes by hand, one step at a time. It's an art form and a tradition that they are proud to be a part of.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 242
+      },
+      "image_url": "https://i1.feedspot.com/4588677.jpg?t=1603432325"
+    },
+    {
+      "title": "Schuler Shoes Blog",
+      "feed_url": "https://blog.schulershoes.com/feed/",
+      "website_url": "https://blog.schulershoes.com/",
+      "description": "Information about Schuler Shoes, shoe news and other posts about the larger footwear world. Schuler Shoes is the destination for comfortable shoes for men, women and kids from top brands.",
+      "followers": {
+        "facebook": 29300,
+        "twitter": 616,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4577267.jpg?t=1603432104"
+    },
+    {
+      "title": "Oka-B Blog",
+      "feed_url": "https://www.oka-b.com/blogs/news.atom",
+      "website_url": "https://www.oka-b.com/blogs/news",
+      "description": "Fashionable, fun and uniquely comfortable, Oka-B footwear is designed for stepping out in style. With sophisticated lines and innovative construction, the shoes are inspired by the latest runway looks yet crafted to pamper the feet with every step. Offering signature styles for women, men and children.",
+      "followers": {
+        "facebook": 35300,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4588503.jpg?t=1603432739"
+    },
+    {
+      "title": "Unboxed with Shoe Carnival Blog",
+      "feed_url": "https://blog.shoecarnival.com/feed/",
+      "website_url": "https://blog.shoecarnival.com/",
+      "description": "Read about the latest shoe trends, top-rated footwear, how to wear the hottest styles, and shopping tips from footwear experts!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8539499.jpg?t=1753094610"
+    },
+    {
+      "title": "Shoe Tease Blog",
+      "feed_url": "https://www.shoe-tease.com/feed/",
+      "website_url": "https://www.shoe-tease.com/shoetease-blogroll/",
+      "description": "Welcome to ShoeTease: A Toronto-based shoe blog about shoes & where they take the author! I created ShoeTease in 2010 to answer your questions about current shoe trends, shoe accessories, shoe styling, shoe care & more! Find advice on how to wear shoes, heels, boots, and sandals and how to care for them,",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4578212.jpg?t=1669101976"
+    },
+    {
+      "title": "Campus Shoes Blog",
+      "feed_url": "https://www.campusshoes.com/blogs/news.atom",
+      "website_url": "https://www.campusshoes.com/blogs/news/",
+      "description": "Campus is India's largest sports and athleisure footwear brand. Incorporated in 2006, Campus Activewear is one of the leading players in organized sports & casual footwear sector in India. Since 2016, the flagship brand 'Campus', has been the largest sports and athleisure footwear brand in India, in both volume and value terms.",
+      "followers": {
+        "facebook": 400000,
+        "twitter": 4600,
+        "instagram": 152400
+      },
+      "image_url": "https://i1.feedspot.com/5660681.jpg?t=1693459966"
+    },
+    {
+      "title": "Guido Maggi Blog",
+      "feed_url": "https://www.guidomaggi.com/blog-en/feed/",
+      "website_url": "https://www.guidomaggi.com/blog-en/",
+      "description": "GuidoMaggi provides handmade luxury Italian elevator shoes will give you the benefit of becoming taller and enjoying style and comfort all at the same time. Their exclusive elevator shoes are the latest in fashion, and are designed and handmade by italian designers with the highest quality until the last detail.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 365,
+        "instagram": 14300
+      },
+      "image_url": "https://i1.feedspot.com/4588687.jpg?t=1603432203"
+    },
+    {
+      "title": "Lord's Shoes Blog",
+      "feed_url": "https://www.lordsshoes.ca/blogs/news.atom",
+      "website_url": "https://shoplords.ca/blogs/news",
+      "description": "Inspired from a profound conviction that women deserve shoes and boots that feel as beautiful as they look, Lord's Shoes has been proudly 'heeling' women and enhancing their 'soles' since 1930; built on family tradition and a premise that no women should ever find herself barefoot.",
+      "followers": {
+        "twitter": 855,
+        "instagram": 11200
+      },
+      "image_url": "https://i1.feedspot.com/4588704.jpg?t=1603432516"
+    },
+    {
+      "title": "R-A-W Shoes Blog",
+      "feed_url": "https://r-a-wshoesblog.com/feed/",
+      "website_url": "https://r-a-wshoesblog.com/",
+      "description": "Women and Men shoes from established and emerging designers from around the world. Christian Louboutin, Giuseppe Zanotti, Nicholas Kirkwood and Pierre Hardy.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 1600,
+        "instagram": 507
+      },
+      "image_url": "https://i1.feedspot.com/4582713.jpg?t=1603432356"
+    },
+    {
+      "title": "Birthday Shoes",
+      "feed_url": "https://feeds.feedburner.com/birthdayshoes",
+      "website_url": "https://birthdayshoes.com/",
+      "description": "The site for Vibram FiveFingers toe shoes aka barefoot shoes or 'birthday shoes.' Most popular as barefoot running shoes, the thin five-toed sole allows for natural movement and healthy feet.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/827995.jpg?t=1603432751"
+    },
+    {
+      "title": "Fotoshoe Magazine",
+      "feed_url": "https://fotoshoemagazine.com/feed/",
+      "website_url": "https://fotoshoemagazine.com/",
+      "description": "The leading source of information for shoe wholesale and retail",
+      "followers": {
+        "facebook": 819
+      },
+      "image_url": "https://i1.feedspot.com/4998713.jpg?t=1761915365"
+    },
+    {
+      "title": "OFFICE Shoes Blog",
+      "feed_url": "https://www.office.co.uk/blog/feed/",
+      "website_url": "https://www.office.co.uk/blog/",
+      "description": "Presenting all the latest high street fashion footwear trends. OFFICE is a firm favourite with the fashion-pack. Both the men's and women's ranges encompass the whole style spectrum, from designer to sports. Own label designs offer affordable yet directional fashion, reflecting the massive legacy of a company founded on London style.",
+      "followers": {
+        "facebook": 411200,
+        "twitter": 115600,
+        "instagram": 490500
+      },
+      "image_url": "https://i1.feedspot.com/2239857.jpg?t=1603432036"
+    },
+    {
+      "title": "It's A Shoe Thing! - Hotter Shoes",
+      "feed_url": "https://www.hotter.com/blog/feed/",
+      "website_url": "https://shoebox.hotter.com/",
+      "description": "Enjoy great British design and quality with our stylish and comfortable range of footwear for men and women - Hotter Shoes.",
+      "followers": {
+        "facebook": 108100,
+        "twitter": 20400,
+        "instagram": 35000
+      },
+      "image_url": "https://i1.feedspot.com/4588149.jpg?t=1603432101"
+    },
+    {
+      "title": "Shoes Fame",
+      "feed_url": "https://www.shoesfame.com/feed",
+      "website_url": "https://www.shoegarden.com.au/blogs/news",
+      "description": "Covers reviews of the best stability running shoes, best lightweight running shoes, best cheap running shoes for both men and women.",
+      "followers": {
+        "facebook": 14,
+        "twitter": 30,
+        "instagram": 4
+      },
+      "image_url": "https://i1.feedspot.com/5320327.jpg?t=1631170785"
+    },
+    {
+      "title": "Shoe Harbour",
+      "feed_url": "https://shoehabour.com/feed/",
+      "website_url": "https://www.shoegarden.com.au/blogs/news",
+      "description": "Do you want to make the right choice of a pair of shoes for any activity? We promise to help you pick the best, no matter what purpose you intend to get the shoes for.",
+      "followers": {
+        "twitter": 13
+      },
+      "image_url": "https://i1.feedspot.com/5205330.jpg?t=1603432335"
+    },
+    {
+      "title": "The Shoe Garden",
+      "feed_url": "https://blog.shoegarden.com.au/feed/",
+      "website_url": "https://www.shoegarden.com.au/blogs/news",
+      "description": "The Shoe Garden is the only shop in Brisbane to exclusively stock women's shoes in Size 10 and up.",
+      "followers": {
+        "facebook": 6600,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4588658.jpg?t=1603432235"
+    },
+    {
+      "title": "Naot Footwear",
+      "feed_url": "https://mynaotstory.wordpress.com/feed/",
+      "website_url": "https://mynaotstory.wordpress.com/",
+      "description": "Naot Footwear Blog contains a unique combination of quality, comfort and fashion. NAOT was founded in 1942. The small shoe factory that made simple work shoes and sandals has become an international business and is now Israel's leading manufacturer and exporter of shoes.",
+      "followers": {
+        "facebook": 3,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4583080.jpg?t=1603432453"
+    },
+    {
+      "title": "Chiko Shoes Blog",
+      "feed_url": "https://www.chikoshoes.com/",
+      "website_url": "https://www.chikoshoes.com/blog/",
+      "description": "Latest women fashion shoes and men shoes in fashion at Chiko with vast variety of sandals, boots, pumps, oxfords, loafers, flatforms and sneakers.",
+      "followers": {
+        "facebook": 71500,
+        "twitter": 290
+      },
+      "image_url": "https://i1.feedspot.com/4582900.jpg?t=1603432120"
+    },
+    {
+      "title": "Houser Shoes Blog",
+      "feed_url": "https://housershoes.com/blogs/news.atom",
+      "website_url": "https://housershoes.com/blogs/news",
+      "description": "HouserShoes has a huge selection of Women's Shoes, Men's Shoes, and Children's Shoes, all under one roof featuring brands like Dansko, Sperry Top-Sider, Cole Haan, Reebok, Clarks of England, Nunn Bush and more.",
+      "followers": {
+        "facebook": 31000,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4588541.jpg?t=1603432772"
+    }
+  ]
+}

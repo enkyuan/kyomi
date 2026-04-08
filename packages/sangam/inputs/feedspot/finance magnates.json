@@ -1,0 +1,67 @@
+{
+  "category": "Finance Magnates",
+  "source_url": "https://rss.feedspot.com/financemagnates_rss_feeds",
+  "feeds": [
+    {
+      "title": "Finance Magnates \u00bb FinTech",
+      "feed_url": "https://www.financemagnates.com/fintech/feed/",
+      "website_url": "https://www.financemagnates.com/fintech/",
+      "description": "Fintech at Finance Magnates provides breaking news, product reviews and more in this emerging field. Find out all there is to know about the disruptive space.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 38600,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4649238.jpg?t=1617100260"
+    },
+    {
+      "title": "Finance Magnates \u00bb CryptoCurrency",
+      "feed_url": "https://www.financemagnates.com/cryptocurrency/feed/",
+      "website_url": "https://www.financemagnates.com/cryptocurrency/",
+      "description": "Finance Magnates CryptoCurrency is your home for breaking news, analysis, data and coverage on the world of cryptocurrencies. From Bitcoin to blockchains, find it all here.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 38600
+      },
+      "image_url": "https://i1.feedspot.com/4838147.jpg?t=1611137153"
+    },
+    {
+      "title": "Finance Magnates \u00bb Retail FX",
+      "feed_url": "https://www.financemagnates.com/forex/feed/",
+      "website_url": "https://www.financemagnates.com/forex/",
+      "description": "All articles about Retail FX from Finance Magnates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4649238.jpg?t=1617100260"
+    },
+    {
+      "title": "Finance Magnates \u00bb Executives",
+      "feed_url": "https://www.financemagnates.com/executives/feed/",
+      "website_url": "https://www.financemagnates.com/executives/",
+      "description": "Executives at Finance Magnates is your source for news on executive moves, deals and insights. Get it straight-from-the-source before it breaks anywhere else.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 38600
+      },
+      "image_url": "https://i1.feedspot.com/4649238.jpg?t=1617100260"
+    },
+    {
+      "title": "Finance Magnates \u00bb Binary Options",
+      "feed_url": "https://www.financemagnates.com/binary-options/feed",
+      "website_url": "https://www.financemagnates.com/binary-options/",
+      "description": "Finance Magnates Binary Options gives you all the latest on binary options trading, from breaking news and trends to exclusive insights and data, we have you covered. Our mission is to provide in-depth, actionable knowledge, geared toward education and business opportunities.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 38600
+      },
+      "image_url": "https://i1.feedspot.com/5470299.jpg?t=1669611946"
+    },
+    {
+      "title": "Finance Magnates \u00bb Institutional FX",
+      "feed_url": "https://www.financemagnates.com/institutional-forex/feed",
+      "website_url": "https://www.financemagnates.com/institutional-forex/",
+      "description": "All articles about Institutional FX from Finance Magnates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4649238.jpg?t=1617100260"
+    }
+  ]
+}

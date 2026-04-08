@@ -1,0 +1,62 @@
+{
+  "category": "UK Sports Nutrition",
+  "source_url": "https://rss.feedspot.com/uk_sports_nutrition_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mysportscience",
+      "feed_url": "https://www.mysportscience.com/blog-feed.xml",
+      "website_url": "https://www.mysportscience.com/blogs",
+      "description": "Founded by Asker Jeukendrup, a sports nutritionist, in 2014. Makes sports science and sports nutrition easy to understand and busts myths in the process. The blog's mission is to provide athletes and coaches with the latest research and practical information on sports nutrition.",
+      "followers": {
+        "facebook": 12200,
+        "twitter": 63700,
+        "instagram": 131900
+      },
+      "image_url": "https://i1.feedspot.com/4308909.jpg?t=1658477083"
+    },
+    {
+      "title": "Motion Nutrition",
+      "feed_url": "https://www.outdoorgearcoach.co.uk/blog-feed.xml",
+      "website_url": "https://motionnutrition.com/blogs/blog",
+      "description": "Motion Nutrition is here to provide you with nutritional support all along your journey of an active and healthy life. From brain health nootropics that support your mental wellbeing to organic sports supplements that revitalise your body, we fuel life in Motion.",
+      "followers": {
+        "facebook": 478,
+        "twitter": 1400,
+        "instagram": 12400
+      },
+      "image_url": "https://i1.feedspot.com/4915678.jpg?t=1620368560"
+    },
+    {
+      "title": "Cardiff Sports Nutrition Blog",
+      "feed_url": "https://www.cardiffsportsnutrition.co.uk/blogs/articles.atom",
+      "website_url": "https://www.cardiffsportsnutrition.co.uk/blogs/articles",
+      "description": "Cardiff Sports Nutrition supply the finest sports nutrition, bodybuilding supplements and sports supplements from the biggest brands in the industry for proven results! Find all the latest news on supplements, recipes, workouts and more.",
+      "followers": {
+        "facebook": 37700,
+        "twitter": 23600
+      },
+      "image_url": "https://i1.feedspot.com/4754106.jpg?t=1608378414"
+    },
+    {
+      "title": "Anita Bean Blog",
+      "feed_url": "https://anitabean.co.uk/feed/",
+      "website_url": "https://anitabean.co.uk/blog/",
+      "description": "Anita Bean is a Sports Nutritionist. She set up her nutrition consultancy in 1990, specializing in sport and exercise nutrition. Over the years she has written more than 20 books and hundreds of articles and continued to build my knowledge and expertise in sport and exercise nutrition.",
+      "followers": {
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4754503.jpg?t=1608378706"
+    },
+    {
+      "title": "The Sports Dietitian",
+      "feed_url": "https://www.thesportsdietitian.co.uk/blog-feed.xml",
+      "website_url": "https://www.thesportsdietitian.co.uk/blog-1",
+      "description": "The Sports Dietitian is a sports nutrition consultancy specialising in endurance sports. It is your go to resource for athletes of all levels to maximise performance through up to date, evidenced based nutrition advice. The main aim is to help athletes achieve personal sporting goals through refining their nutrition for training, competition and day to day life.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4915659.jpg?t=1608378808"
+    }
+  ]
+}

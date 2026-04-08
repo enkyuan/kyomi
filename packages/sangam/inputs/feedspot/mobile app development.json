@@ -1,0 +1,628 @@
+{
+  "category": "Mobile App Development",
+  "source_url": "https://rss.feedspot.com/mobile_app_development_rss_feeds",
+  "feeds": [
+    {
+      "title": "BuildFire Blog",
+      "feed_url": "https://buildfire.com/feed/",
+      "website_url": "https://buildfire.com/blog/",
+      "description": "Find out all you need to know about mobile app development, mobile app marketing, and more with BuildFire. Our platform enables non-technical professionals to rapidly build mobile apps with a minimum of custom coding or development. BuildFire makes it easy for you to create your own mobile app in minutes.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5085704.jpg?t=1624086626"
+    },
+    {
+      "title": "Android Developers Blog",
+      "feed_url": "https://feeds.feedburner.com/blogspot/hsDu",
+      "website_url": "https://android-developers.googleblog.com/",
+      "description": "Get the latest Android news, best practices, live videos, demonstrations, tutorials, and more on Android Developers Blog. The platform is focused on bringing the best experiences and latest innovations to users. This page includes best practices and resources to help developers design and implement safe, secure, and private apps.",
+      "followers": {
+        "twitter": 105800
+      },
+      "image_url": "https://i1.feedspot.com/26339.jpg?t=1660895433"
+    },
+    {
+      "title": "MindInventory Blog",
+      "feed_url": "https://www.mindinventory.com/blog/feed/",
+      "website_url": "https://www.mindinventory.com/blog/",
+      "description": "Discover cutting-edge insights and trends in technology with Mindinventory's blog. Stay informed with expert analysis, industry news, and innovative solutions. MindInventory is a leading IT solutions company providing services in terms of Enterprise Web Development, Startup Consulting, Mobility Solutions, and UI/UX Consulting.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 2500,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4616019.jpg?t=1710327178"
+    },
+    {
+      "title": "Techugo Blog \u00bb Mobile App Development",
+      "feed_url": "https://www.techugo.com/blog/category/blog/mobile-app-development/feed/",
+      "website_url": "https://www.techugo.com/blog/category/mobile-app-development/",
+      "description": "Techugo shares updated news, research reports, and other mobile marketing insights. Read our blog for an in-depth analysis of mobile app design and development. We are mobile app developers catering to the global mobile app industry. Our strategists foster innovative mobile application development solutions to bridge the world digitally.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 519,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5294383.jpg?t=1624086943"
+    },
+    {
+      "title": "Daffodil Blog \u00bb Mobile App Development",
+      "feed_url": "https://insights.daffodilsw.com/blog/topic/mobile-app-development/rss.xml",
+      "website_url": "https://insights.daffodilsw.com/blog/topic/mobile-app-development",
+      "description": "The Daffodil blog covers all aspects of Mobile App and software development to help you choose the best tech, tips, tricks, and best practices from industry leaders. Daffodil is a trusted IT service provider that enables enterprises and software companies to build great solutions around Mobile, Web, and Cloud.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5294509.jpg?t=1660903132"
+    },
+    {
+      "title": "Comfygen Blog",
+      "feed_url": "https://www.comfygen.com/blog/feed/",
+      "website_url": "https://www.comfygen.com/blog/",
+      "description": "Comfygen is a reliable Crypto Currency Development Company in India. We provide Blockchain Development, Crypto Coin, MLM, Wallet, and Smart Contract Development Services. Check out our recent blog articles to find out more about our technology, services, and news updates from the world of cryptocurrencies.",
+      "followers": {
+        "twitter": 36,
+        "instagram": 189
+      },
+      "image_url": "https://i1.feedspot.com/5599046.jpg?t=1686829731"
+    },
+    {
+      "title": "Abservetech Blog",
+      "feed_url": "https://www.abservetech.com/blog/feed/",
+      "website_url": "https://www.abservetech.com/blog/",
+      "description": "Abservetech is a team of expert developers of website and mobile app development. Abservetech provides creative websites, native mobile apps, innovative technology services, and custom web mobile app solutions, from startup companies to huge organizations.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 314,
+        "instagram": 387
+      },
+      "image_url": "https://i1.feedspot.com/5602014.jpg?t=1687172639"
+    },
+    {
+      "title": "Nichetechsolution Blog",
+      "feed_url": "https://www.nichetechsolutions.com/blog/feed/",
+      "website_url": "https://www.nichetechsolutions.com/blog/",
+      "description": "Stay up-to-date in the fast-paced world of web development with Nichetech Solution's comprehensive blog! Dive into the dynamic realm of coding, design, and innovation as articles unravel the latest trends, tools, and techniques shaping the digital landscape.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5723274.jpg?t=1701173502"
+    },
+    {
+      "title": "ProAndroidDev",
+      "feed_url": "https://proandroiddev.com/feed",
+      "website_url": "https://proandroiddev.com/",
+      "description": "ProAndroidDev is a publication collecting blog posts by Android professionals and Google developer experts. Read the latest articles on these categories; Android App Development, Android Architecture, Animation, Layoutanimation, and many more.",
+      "followers": {
+        "facebook": 52600,
+        "twitter": 15900
+      },
+      "image_url": "https://i1.feedspot.com/5133095.jpg?t=1659961593"
+    },
+    {
+      "title": "Sparx IT Solutions Blog \u00bb Development",
+      "feed_url": "https://www.sparxitsolutions.com/blog/category/development/feed/",
+      "website_url": "https://www.sparxitsolutions.com/blog/category/development/",
+      "description": "Read all web development blogs by Sparx IT. As a website development company, we provide the best web development services to startups, SMEs, and enterprises around the world. We aspire to bring in result-oriented strategies to carve the strategies for product design and creation.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 726,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5429969.jpg?t=1659965015"
+    },
+    {
+      "title": "Apptunix Blog",
+      "feed_url": "https://www.apptunix.com/blog/feed/",
+      "website_url": "https://www.apptunix.com/blog/",
+      "description": "Read the latest trends, and ideas to gain insights into mobile app development, website development & more. Apptunix offers Android and Hybrid App development services. Our ultimate goal is to become the most innovative and trend-setting mobile app development firm.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5090065.jpg?t=1659960454"
+    },
+    {
+      "title": "Propelrr Blog \u00bb Mobile App Development",
+      "feed_url": "https://propelrr.com/blog/category/mobile-app-development/feed",
+      "website_url": "https://propelrr.com/blog/category/mobile-app-development",
+      "description": "Make your mobile app the best in the app store and read up on the Proplerr blog. Visit our mobile app development articles for more helpful articles. We are a digital innovation and marketing agency, aimed to deliver excellent digital marketing strategies and tactics focused on modification and revenue increase for our partner brands and clients.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 434,
+        "instagram": 410
+      },
+      "image_url": "https://i1.feedspot.com/5429928.jpg?t=1659961249"
+    },
+    {
+      "title": "Concetto Labs Blog",
+      "feed_url": "https://www.concettolabs.com/blog/feed/",
+      "website_url": "https://www.concettolabs.com/blog/",
+      "description": "Read our latest blogs and update your knowledge about web & mobile app development news. We are a leading Web and Cross Platform App Development Company and possess a dedicated and experienced team of experts involved in satisfying the diverse needs of the clients.",
+      "followers": {
+        "facebook": 430,
+        "twitter": 514
+      },
+      "image_url": "https://i1.feedspot.com/5429931.jpg?t=1659960878"
+    },
+    {
+      "title": "The One Technologies Blog \u00bb Azure Data Factory",
+      "feed_url": "https://theonetechnologies.com/blog/feed/rss/",
+      "website_url": "https://theonetechnologies.com/blog/category/azure-data-factory/",
+      "description": "Covers Software Development, Mobile App Development, Software Outsourcing, Angular Development, Website Development, Social Media API Integration, and more. The One Technologies is a mobile app development and software development company in India.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 909,
+        "instagram": 567
+      },
+      "image_url": "https://i1.feedspot.com/5383524.jpg?t=1647863791"
+    },
+    {
+      "title": "Fluper Blog \u00bb Mobile App Development",
+      "feed_url": "https://www.fluper.com/blog/category/industries/mobile-app-development/feed/",
+      "website_url": "https://www.fluper.com/blog/category/industries/mobile-app-development/",
+      "description": "The blog will provide you with all the latest news alerts, tips, and tricks on Mobile App Development, Web Development, and Digital Marketing. Fluper, being the top-rated mobile app development and design platform has the potential to bring specialized and optimized solutions for you.",
+      "followers": {
+        "facebook": 11200,
+        "twitter": 4900,
+        "instagram": 5500
+      },
+      "image_url": "https://i1.feedspot.com/5429942.jpg?t=1661145206"
+    },
+    {
+      "title": "SwiftLee",
+      "feed_url": "https://www.avanderlee.com/feed/",
+      "website_url": "https://www.avanderlee.com/",
+      "description": "On SwiftLee learn all basics and advanced topics with weekly new blog posts including iOS, and Xcode development tips and tricks to build better mobile. All those articles belong to Antoine van der Lee, an iOS Engineer.",
+      "followers": {
+        "twitter": 61000
+      },
+      "image_url": "https://i1.feedspot.com/4951157.jpg?t=1659964823"
+    },
+    {
+      "title": "Deorwine Blog \u00bb Mobile App Development",
+      "feed_url": "https://deorwine.com/blog/category/mobile-app-development/feed/",
+      "website_url": "https://deorwine.com/blog/category/mobile-app-development/",
+      "description": "We have summarized here the best mobile app development blogs that have lots of ideas for how a company has developed your app with features cost & more. At Deorwine, we strive to excel in the invention and development of the industry's advanced technologies including mobile apps, web, IoT, and alike. We assist our customers in modernizing technology, reimagining processes, and transforming experiences.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 83
+      },
+      "image_url": "https://i1.feedspot.com/5429935.jpg?t=1659954160"
+    },
+    {
+      "title": "Maxtra Technologies Blog \u00bb Android App Development",
+      "feed_url": "https://maxtratechnologies.com/blog/android-app-development/feed/",
+      "website_url": "https://maxtratechnologies.com/blog/android-app-development/",
+      "description": "This blog section covers stories on Android App Development, Blockchain Development, Travel App Development, and many more. Maxtra Technologies is well-known for providing IT Software and Development solutions. Our team strives to understand customers' requirements, pilot their visions, and architect their dreams.",
+      "followers": {
+        "facebook": 125100,
+        "twitter": 1700,
+        "instagram": 19400
+      },
+      "image_url": "https://i1.feedspot.com/5429945.jpg?t=1659958118"
+    },
+    {
+      "title": "Use Your Loaf Blog",
+      "feed_url": "https://useyourloaf.com/blog/rss.xml",
+      "website_url": "https://useyourloaf.com/blog/",
+      "description": "Read regular articles about iOS development, Xcode, Objective-C, Swift, Auto Layout, WWDC, and more. Hi, I am Keith Harrison, I have worked in the software and I.T. services industry for many years. This is the place where I have been writing about my experiences learning and developing for iOS since 2010.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4888636.jpg?t=1660021430"
+    },
+    {
+      "title": "Messapps Blog",
+      "feed_url": "https://messapps.com/feed/",
+      "website_url": "https://messapps.com/blog/",
+      "description": "The blog is covered with all your app needs & questions, read to learn more about app development. Messapps is a full-service app development company that provides innovative app development, design, and consulting services for those who want to be successful.",
+      "followers": {
+        "facebook": 691,
+        "twitter": 279,
+        "instagram": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5294374.jpg?t=1664952663"
+    },
+    {
+      "title": "MoveoApps Blog",
+      "feed_url": "https://www.moveoapps.com/blog/feed/",
+      "website_url": "https://www.moveoapps.com/blog/",
+      "description": "MoveoApps Blog covers updates on mobile app development, iPhone app development, hybrid app development, and many more. We are a mobile app design & development company creating definitive mobile experiences for iOS and Android. We started Moveoapps to advance awareness of apps through our strategic mobile apps marketing services.",
+      "followers": {
+        "facebook": 347,
+        "twitter": 1800,
+        "instagram": 278
+      },
+      "image_url": "https://i1.feedspot.com/5429924.jpg?t=1659956806"
+    },
+    {
+      "title": "Donny Wals Blog",
+      "feed_url": "https://www.donnywals.com/the-blog/feed/",
+      "website_url": "https://www.donnywals.com/the-blog/",
+      "description": "Learn about iOS development, Swift, Unit Testing, Xcode, and everything else you need to know to be a successful iOS developer. Hi, my name is Donny, an iOS Engineer, blogger, and author. Here you will find me sharing articles about my everyday coding problems and solutions.",
+      "followers": {
+        "twitter": 32100
+      },
+      "image_url": "https://i1.feedspot.com/5429963.jpg?t=1660914545"
+    },
+    {
+      "title": "CommonsWare Blog",
+      "feed_url": "https://commonsware.com/blog/feed.atom",
+      "website_url": "https://commonsware.com/blog/",
+      "description": "The CommonsWare blog covers everything to do with Android and updates every couple of days. It can show you how to achieve a number of visual effects for Android and has also published a number of books on the topic of Android development.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4368015.jpg?t=1659958709"
+    },
+    {
+      "title": "Swift with Majid",
+      "feed_url": "https://swiftwithmajid.com/feed",
+      "website_url": "https://swiftwithmajid.com/",
+      "description": "Hi there! My name is Majid, an iOS developer, and SwiftUI addict. This is the place where I write weekly posts about Swift's development. Topics include functional core Imperative shell in Swift, Micro apps architecture in Swift, GraphQL in Swift, Building type-safe networking in Swift, and more.",
+      "followers": {
+        "twitter": 28600
+      },
+      "image_url": "https://i1.feedspot.com/5429965.jpg?t=1660913310"
+    },
+    {
+      "title": "Appetiser App Development Blog \u00bb Development",
+      "feed_url": "https://appetiser.com.au/blog/category/development/feed/",
+      "website_url": "https://appetiser.com.au/blog/category/development/",
+      "description": "Read posts on Web and Mobile App Development. Appetiser is an app development company, built by entrepreneurs looking to push the boundaries of what an app development partner can be on a local and global level. We lead with your vision to get the best results.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5429943.jpg?t=1659959057"
+    },
+    {
+      "title": "AppStudio Blog",
+      "feed_url": "https://www.appstudio.ca/blog/feed/",
+      "website_url": "https://www.appstudio.ca/blog/",
+      "description": "Check out the latest blogs post, business news, trends, and technology launches related to Mobile & web application development and other services. At AppStudio, we are a full-service software design and development firm, dedicated to providing innovative solutions and services for your technology requirements.",
+      "followers": {
+        "facebook": 658,
+        "twitter": 26,
+        "instagram": 112
+      },
+      "image_url": "https://i1.feedspot.com/5335528.jpg?t=1635164565"
+    },
+    {
+      "title": "Top Mobile App Development Companies Blog",
+      "feed_url": "https://www.topmobileappdevelopmentcompany.com/feed/",
+      "website_url": "https://www.topmobileappdevelopmentcompany.com/blog/",
+      "description": "Discover all trending blog updates about Mobile app development, Web Design & Development, technology, Social media, Tips, and tricks. Stay connected with us.",
+      "followers": {
+        "facebook": 19
+      },
+      "image_url": "https://i1.feedspot.com/5429949.jpg?t=1664947270"
+    },
+    {
+      "title": "RichestSoft Blog",
+      "feed_url": "https://richestsoft.com/blog/feed/",
+      "website_url": "https://richestsoft.com/blog/",
+      "description": "Covers App Development, Internet Marketing, Marketing Automation, Mobile App Development, SEO Services, Web Design, and overall Web Development. RichestSoft is a top-notch mobile app development company founded in 2009.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5384991.jpg?t=1654774819"
+    },
+    {
+      "title": "Appikr Blog",
+      "feed_url": "https://www.appikr.com/blog/feed/",
+      "website_url": "https://www.appikr.com/blog/",
+      "description": "Appikr blogs cover all trending tech news, feeds, web technology, and the latest mobile app development updates in detail. Appikr is a trusted App Development Company. With 10+ years of industry experience in designing & development, the company serves end-to-end business solutions to global clients.",
+      "followers": {
+        "facebook": 496,
+        "twitter": 52
+      },
+      "image_url": "https://i1.feedspot.com/5429922.jpg?t=1659964060"
+    },
+    {
+      "title": "Matteo Manferdini Blog",
+      "feed_url": "https://matteomanferdini.com/blog/feed/",
+      "website_url": "https://matteomanferdini.com/blog/",
+      "description": "Matteo Manferdini Blog will provide you best Swift and iOS Development techniques. Hi, I am Matteo Manferdini, the person behind this website. I help people who want to learn iOS development understand where to start, what is important to learn, and how to be able to make iOS apps all by themselves.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5429964.jpg?t=1660022247"
+    },
+    {
+      "title": "Appboxer Blog",
+      "feed_url": "https://appboxer.com.au/feed/",
+      "website_url": "https://appboxer.com.au/blogs/",
+      "description": "Discover the latest Appboxer company news and industry-related articles. App Boxer is a Sydney-based app development agency with a passion for innovation. We develop Android, iPhone & iPad Apps of all types. We pay close attention to detail every step of the way.",
+      "followers": {
+        "facebook": 836,
+        "instagram": 200
+      },
+      "image_url": "https://i1.feedspot.com/5429967.jpg?t=1659964294"
+    },
+    {
+      "title": "MAADI Blog",
+      "feed_url": "https://www.mobile-app-development-india.com/feed/",
+      "website_url": "https://www.mobile-app-development-india.com/blog/",
+      "description": "Mobile App Development India is growing fast in the world of mobile apps by creating its prime position in the App world. MAADI provides iPhone app development, Android app development, windows app development, and blackberry app development solutions. Our skilled app developers are here to cater to your app development requirements.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 333,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5429941.jpg?t=1659961917"
+    },
+    {
+      "title": "1 new message",
+      "feed_url": "https://www.uplogictech.com/blog/feed/",
+      "website_url": "https://www.uplogictech.com/blog/",
+      "description": "Uplogic Technologies build and customize mobile and web app for startups, enterprises, entrepreneurs, and on-demand startups. Our mission is to meet everyone's technology demands for the advancement of society by offering outstanding app development services. The blog covers the latest Updates on On-Demand Industry, Tips, Trends, and Growth Stats.",
+      "followers": {
+        "facebook": 174,
+        "twitter": 30
+      },
+      "image_url": "https://i1.feedspot.com/5388495.jpg?t=1649331180"
+    },
+    {
+      "title": "Zazz Blog",
+      "feed_url": "https://www.zazz.io/blog/feed/",
+      "website_url": "https://www.zazz.io/blog/",
+      "description": "Zazz is a San-Francisco-based mobile app development agency powered by a passionate team of thinkers and doers, and we are disrupting the status quo. In their blog they have covered latest news, updates, technology launches in the field of Mobile as well as web application development.",
+      "followers": {
+        "facebook": 982,
+        "twitter": 21,
+        "instagram": 9800
+      },
+      "image_url": "https://i1.feedspot.com/5217885.jpg?t=1606109381"
+    },
+    {
+      "title": "IDAP Blog",
+      "feed_url": "https://idapgroup.com/blog/feed/",
+      "website_url": "https://idapgroup.com/blog/",
+      "description": "Read IDAP's blog posts related to Mobile App Development, technology, industry, business, and many more. IDAP is a full-cycle software development company specializing in mobile and web-based solutions. Our goal is to help businesses improve by using our tech expertise and understanding of the industry.",
+      "followers": {
+        "facebook": 470,
+        "twitter": 71,
+        "instagram": 182
+      },
+      "image_url": "https://i1.feedspot.com/4927051.jpg?t=1620991946"
+    },
+    {
+      "title": "AppClues Infotech",
+      "feed_url": "https://www.appcluesinfotech.com/feed/",
+      "website_url": "https://www.appcluesinfotech.com/blog/",
+      "description": "Get the latest updates & insights on the trending technologies and innovations related to web & mobile app development, digital marketing, and more. AppClues Infotech is renowned for delivering the best, unbeatable, and unparalleled mobile app solutions in this trend of technology.",
+      "followers": {
+        "facebook": 681,
+        "twitter": 614,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5523106.jpg?t=1679299241"
+    },
+    {
+      "title": "Quick Startapps",
+      "feed_url": "https://quickstartappss.com/feed/",
+      "website_url": "https://quickstartappss.com/posts/",
+      "description": "Take a break and read all about the future of Mobile App Development in Quick Startapps's article feed. Stay on top of news, trends, and cutting-edge technologies. Quick Startapps is an internet company that specializes in developing custom mobile applications for iOS and Android platforms.",
+      "followers": {
+        "facebook": 431
+      },
+      "image_url": "https://i1.feedspot.com/5746789.jpg?t=1704188953"
+    },
+    {
+      "title": "Fluper Blog",
+      "feed_url": "https://www.fluper.com/blog/feed/",
+      "website_url": "https://www.fluper.com/blog/",
+      "description": "Fluper is one of the Top-rated Mobile app development companies in the world, bringing optimized and specialized solutions to clients. Stay on top of the latest app trends, industry events, and articles Blockchain, Remotes Jobs and more.",
+      "followers": {
+        "facebook": 11200,
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5124378.jpg?t=1713776936"
+    },
+    {
+      "title": "CodeWithChris Blog",
+      "feed_url": "https://codewithchris.com/blog/feed/",
+      "website_url": "https://codewithchris.com/blog/",
+      "description": "We are helping beginners to learn Swift and iOS app development with our free affordable and high-quality coding education blogs and iOS tutorials. Our mission is to empower people to reach the full potential of their ambitions through coding and creativity.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 13900,
+        "instagram": 14400
+      },
+      "image_url": "https://i1.feedspot.com/5429970.jpg?t=1660908329"
+    },
+    {
+      "title": "MobileCoderz Blog \u00bb Mobile App Development",
+      "feed_url": "https://mobilecoderz.com/blog/category/mobile-app-development/feed/",
+      "website_url": "https://mobilecoderz.com/blog/category/mobile-app-development/",
+      "description": "View all the latest posts under the Mobile App Development category. The blogs are shared by technology-experienced writers. MobileCoderz Technologies is a web app and mobile app development service provider. We offer end-to-end solutions and services in web design, mobile design, web development, and mobile development domains for global clients.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 686,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5429927.jpg?t=1660915285"
+    },
+    {
+      "title": "SarunW.",
+      "feed_url": "https://sarunw.com/feed.xml",
+      "website_url": "https://sarunw.com/posts/",
+      "description": "Find in-depth articles about iOS programming, techniques, language features, architectural patterns, and beyond. Hi, I'm Sarun, an iOS developer. On this blog, I share my working processes, tips, tricks, tools, and problems I found along the way.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5152832.jpg?t=1661156303"
+    },
+    {
+      "title": "Clearbridge Mobile",
+      "feed_url": "https://clearbridgemobile.com/feed/",
+      "website_url": "https://clearbridgemobile.com/news-and-insights/",
+      "description": "News and insights",
+      "followers": {
+        "facebook": 544,
+        "twitter": 1500,
+        "instagram": 180
+      },
+      "image_url": "https://i1.feedspot.com/5429925.jpg?t=1659961989"
+    },
+    {
+      "title": "Trank Technologies Blog",
+      "feed_url": "https://www.tranktechnologies.com/blog/feed/",
+      "website_url": "https://www.tranktechnologies.com/blog/",
+      "description": "Trank Technologies",
+      "followers": {
+        "facebook": 555,
+        "twitter": 10,
+        "instagram": 259
+      },
+      "image_url": "https://i1.feedspot.com/5429938.jpg?t=1659960619"
+    },
+    {
+      "title": "MindSea \u00bb Mobile App Development",
+      "feed_url": "https://mindsea.com/category/mobile-app-development/feed/",
+      "website_url": "https://mindsea.com/category/mobile-app-development/",
+      "description": "We are a Design & Development agency. We deliver mobile app experiences that are planned & created to win. Our portfolio includes app development for Android, iPhone, iPad, and Apple wearables. Our goal is to build mobile products that drive business value and improve lives.",
+      "followers": {
+        "facebook": 600,
+        "twitter": 908,
+        "instagram": 235
+      },
+      "image_url": "https://i1.feedspot.com/5429934.jpg?t=1659954153"
+    },
+    {
+      "title": "Armia Systems Blog",
+      "feed_url": "https://www.armia.com/blog/feed/",
+      "website_url": "https://www.armia.com/blog/",
+      "description": "Read articles on Web and Mobile Application Development. Armia Systems develops web and mobile applications. It also offers remote infrastructure management services to small and medium-sized businesses. Armia seeks to create an environment where everyone can equally enjoy the benefits of a networked society.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5429940.jpg?t=1659961047"
+    },
+    {
+      "title": "Mr. Mobile App Developer Blogs",
+      "feed_url": "https://www.mrmobileappdeveloper.com/feed/",
+      "website_url": "https://www.mrmobileappdeveloper.com/blogs/",
+      "description": "Blog covers insights on Android app development, iOS app development, social media app and more. Mr. Mobile app developer is a blog by a freelance mobile app developer who specializes in native, as well as hybrid app development for platforms like Android and IOS in Java, swift, objective C, flutter, ReactNative.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/5455260.jpg?t=1665482759"
+    },
+    {
+      "title": "14 Oranges \u00bb App Development",
+      "feed_url": "https://www.14oranges.com/category/app-development/feed/",
+      "website_url": "https://www.14oranges.com/category/app-development/",
+      "description": "14 Oranges help organizations achieve success with their mobile app and web development needs. We are a leader in application development. Our services include mobile app development, UI/UX and Design, web application development, SEO and Security, and website development.",
+      "followers": {
+        "facebook": 111,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5429962.jpg?t=1660020528"
+    },
+    {
+      "title": "Grey Chain Blog",
+      "feed_url": "https://greychaindesign.com/feed/",
+      "website_url": "https://greychaindesign.com/blog/",
+      "description": "Development Company in New Delhi, India",
+      "followers": {
+        "facebook": 467,
+        "instagram": 117
+      },
+      "image_url": "https://i1.feedspot.com/5452885.jpg?t=1664955195"
+    },
+    {
+      "title": "Appsinvo Blog \u00bb Mobile App Development",
+      "feed_url": "https://www.appsinvo.com/blog/category/mobile-app-development/feed/",
+      "website_url": "https://www.appsinvo.com/blog/category/mobile-app-development/",
+      "description": "Mobile App Development Company",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5429946.jpg?t=1659960385"
+    },
+    {
+      "title": "AppSquadz Blog",
+      "feed_url": "https://www.appsquadz.com/blog/feed/",
+      "website_url": "https://www.appsquadz.com/blog/",
+      "description": "Get updates on IT Apps Design & development, startup ideas, tech news, reviews, and much more. As an application development company, AppSquadz offers exclusive app development services for Web, Mobile, OTT, EdTech, and many others with AWS features. AppSquadz is focused to solve complex problems with innovation and creativity.",
+      "followers": {
+        "facebook": 18600,
+        "twitter": 666,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4849047.jpg?t=1624085972"
+    },
+    {
+      "title": "Web & Mobile App Development Blog, Technology News & Updates - JumpGrowth",
+      "feed_url": "https://jumpgrowth.com/feed/",
+      "website_url": "https://jumpgrowth.com/blog/",
+      "description": "Check out our mobile & web app Design and Development blog to get the latest tips and insights about mobile apps. JumpGrowth provides complete consulting and apps development services to Startups and highly Innovative teams across businesses.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 49,
+        "instagram": 124
+      },
+      "image_url": "https://i1.feedspot.com/5294372.jpg?t=1658399895"
+    },
+    {
+      "title": "Enfin Technologies Blog",
+      "feed_url": "https://www.enfintechnologies.com/feed/",
+      "website_url": "https://www.enfintechnologies.com/blog/",
+      "description": "Read Enfin's best blogs on WebRTC, Telemedicine, Mobile app development, hiring dedicated developers. Enfin Technologies is a leading solution provider of custom web and mobile application development services with a focus on multi-platform video streaming and real-time communication solutions.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 179
+      },
+      "image_url": "https://i1.feedspot.com/5509128.jpg?t=1676549500"
+    },
+    {
+      "title": "Moon Technolabs Blog",
+      "feed_url": "https://www.moontechnolabs.com/blog/feed/",
+      "website_url": "https://www.moontechnolabs.com/blog/",
+      "description": "Learn and experience the latest information about thelatest trends and updates in information technology. Moon Technolabs software company mainly works on mobile development (iOS, Android, Windows Phone, Blackberry) and web development. We are concentrating on providing high-quality services to our clients.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 2000,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5429968.jpg?t=1660023531"
+    },
+    {
+      "title": "OBJC Blog",
+      "feed_url": "https://www.objc.io/blog/",
+      "website_url": "https://www.objc.io/blog/",
+      "description": "Objc.io publishes books, videos, and articles on advanced techniques for iOS and macOS development. It provides a user-friendly and beautifully designed page with more than 20 issues on such topics as debugging, security, games, MVVM, and more. We also teach workshops, focusing on advanced Swift and SwiftUI topics.",
+      "followers": {
+        "twitter": 38900
+      },
+      "image_url": "https://i1.feedspot.com/4542001.jpg?t=1659960682"
+    },
+    {
+      "title": "Quokka Labs Blog \u00bb Mobile App Development",
+      "feed_url": "https://quokkalabs.com/blog/category/mobile-app-development/feed/",
+      "website_url": "https://quokkalabs.com/blog/category/mobile-app-development/",
+      "description": "Read stories on Developing and designing an app involving Mobile App Development, web development, and more. Quokka Labs is a Web/Mobile App Development Company founded by a team of Technology enthusiasts, with a goal to create digital products of the highest quality & stability while providing clients with a delightful experience every single time.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 462,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5429926.jpg?t=1659958889"
+    },
+    {
+      "title": "Zestminds Blog \u00bb Mobile App Development",
+      "feed_url": "https://www.zestminds.com/blog/category/mobile-app-development/feed/",
+      "website_url": "https://www.zestminds.com/blog/category/mobile-app-development/",
+      "description": "You will find the updates regarding Mobile App Development, React Native, Swift, Kotlin, and Progressive web apps. Zestminds is an IT consulting and services provider, providing end-to-end solutions for global clients. Our vision is to help our clients grow.",
+      "followers": {
+        "facebook": 543,
+        "instagram": 892
+      },
+      "image_url": "https://i1.feedspot.com/5429950.jpg?t=1659962195"
+    },
+    {
+      "title": "Droids On Roids Blog",
+      "feed_url": "https://www.thedroidsonroids.com/blog/feed",
+      "website_url": "https://www.thedroidsonroids.com/blog",
+      "description": "Droids On Roids Blog provides tech blogs and tutorials about mobile & web app development mobile & web app developers. Droids On Roids is a mobile and web development company that is constantly focused on offering full-stack mobile, web, and backend services.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 568,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5429939.jpg?t=1659956955"
+    }
+  ]
+}

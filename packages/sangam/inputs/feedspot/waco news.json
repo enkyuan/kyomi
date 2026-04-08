@@ -1,0 +1,53 @@
+{
+  "category": "Waco News",
+  "source_url": "https://rss.feedspot.com/waco_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "KCEN TV Local News",
+      "feed_url": "https://feeds.feedblitz.com/kcen/local",
+      "website_url": "https://www.kcentv.com/local",
+      "description": "Waco's source for the latest local news, weather information, sports, events and everything that matters to you in the city.",
+      "followers": {
+        "facebook": 111900,
+        "twitter": 93
+      },
+      "image_url": "https://i1.feedspot.com/5139769.jpg?t=1587103747"
+    },
+    {
+      "title": "KWKT FOX 44 \u00bb Waco",
+      "feed_url": "https://www.fox44news.com/tag/waco/feed/",
+      "website_url": "https://www.fox44news.com/tag/waco/",
+      "description": "We tell local Waco, Texas news and weather stories, and we do what we do to make Waco, Temple, Killeen, Byran, College Station and the rest of Texas a better place to live. The Latest News and Updates in Waco brought to you by the team at KWKT - FOX 44.",
+      "followers": {
+        "facebook": 52400,
+        "twitter": 7100,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5139783.jpg?t=1587106063"
+    },
+    {
+      "title": "25NewsKXXV",
+      "feed_url": "https://www.kxxv.com/index.rss",
+      "website_url": "https://www.kxxv.com/",
+      "description": "25NewsKXXV Homepage features news coverage and analysis of public events, and activities in the Waco, Temple, and Killeen areas. Browse new updates and stories to be informed and connected to the local communities. 25 News KXXV ABC News leader for Local news serving Waco, Temple, and Killeen.",
+      "followers": {
+        "facebook": 307000,
+        "twitter": 49100,
+        "instagram": 30500
+      },
+      "image_url": "https://i1.feedspot.com/5510554.jpg?t=1676898703"
+    },
+    {
+      "title": "Waco Tribune-Herald",
+      "feed_url": "https://wacotrib.com/",
+      "website_url": "https://wacotrib.com/",
+      "description": "The Waco Tribune-Herald provides readers with the latest breaking local news, sports, business, education, crime, obituaries, events and more.",
+      "followers": {
+        "facebook": 53500,
+        "twitter": 36800,
+        "instagram": 7800
+      },
+      "image_url": "https://i1.feedspot.com/5139786.jpg?t=1587106548"
+    }
+  ]
+}

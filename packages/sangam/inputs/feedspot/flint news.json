@@ -1,0 +1,30 @@
+{
+  "category": "Flint News",
+  "source_url": "https://rss.feedspot.com/flint_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Flint Beat",
+      "feed_url": "https://flintbeat.com/feed/",
+      "website_url": "https://flintbeat.com/",
+      "description": "Flint Beat, launched in 2017, is a hyperlocal digital news outlet that covers everything Flint including local news, politics, education and community leaders.",
+      "followers": {
+        "facebook": 14300,
+        "twitter": 1300,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5136049.jpg?t=1586441538"
+    },
+    {
+      "title": "The Flint Courier News",
+      "feed_url": "https://theflintcouriernews.com/feed/",
+      "website_url": "https://theflintcouriernews.com/",
+      "description": "The inspirations and ideas for the Courier newspaper grew out of the need to provide a voice for the ecumenical community. The Flint Courier is respected as one of the oldest and most prestigious newspapers in this region, serving this community for over 40 years with local news, business, church news, obituaries and more.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 130,
+        "instagram": 763
+      },
+      "image_url": "https://i1.feedspot.com/5136064.jpg?t=1586440812"
+    }
+  ]
+}

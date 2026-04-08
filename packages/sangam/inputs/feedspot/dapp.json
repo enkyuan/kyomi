@@ -1,0 +1,61 @@
+{
+  "category": "dApp",
+  "source_url": "https://rss.feedspot.com/dapp_rss_feeds",
+  "feeds": [
+    {
+      "title": "DappRadar Blog",
+      "feed_url": "https://dappradar.com/blog/feed",
+      "website_url": "https://dappradar.com/blog/category/blockchains",
+      "description": "DappRadar provides information and insights about all the existing dapps! At the tap of your finger, find the most successful and used decentralized games, casinos, and marketplaces, among others. In the blogs discover the latest news and trends on everything decentralized. Find reports on DeFi, blockchain games, NFTs, and more here on the world's dapp store.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 208500,
+        "instagram": 9800
+      },
+      "image_url": "https://i1.feedspot.com/5150928.jpg?t=1612001017"
+    },
+    {
+      "title": "DAPPX Blog",
+      "feed_url": "https://dappstore.me/blog/feed/",
+      "website_url": "https://dappstore.me/blog/",
+      "description": "DAPPX intends to disrupt the prevalent play-to-earn (P2E) industry trend by publishing high-performing applications in a Steam-like format via the Acent Metaweb OS interface, where P2E games are downloaded while compensating all platform users including gamers, non-gamers, and developers in easy and direct payment rewards.",
+      "followers": {
+        "facebook": 10800,
+        "twitter": 18200,
+        "instagram": 241
+      },
+      "image_url": "https://i1.feedspot.com/5501536.jpg?t=1675161018"
+    },
+    {
+      "title": "Bunzz Blog",
+      "feed_url": "https://blog.bunzz.dev/feed/",
+      "website_url": "https://blog.bunzz.dev/",
+      "description": "In a world where businesses are starting to shift into blockchain solutions to adapt to upcoming new standards in tech and user experience, the path to that goal has been very complicated, complex, and costly until the appearance of Bunzz on the scene. Bunzz is the world's first platform that allows software developers and businesses to develop DApps (Decentralized Applications) in a few minutes without knowing how to code or any prior knowledge of blockchain and Web3.",
+      "followers": {
+        "twitter": 8800
+      },
+      "image_url": "https://i1.feedspot.com/5501539.jpg?t=1675161263"
+    },
+    {
+      "title": "Cointelegraph Magazine \u00bb dapp",
+      "feed_url": "https://cointelegraph.com/magazine/tag/dapp/feed/",
+      "website_url": "https://cointelegraph.com/magazine/tag/dapp/",
+      "description": "Cointelegraph Magazine is a new publication that goes beyond the daily news and delves much more deeply into the stories, trends, and personalities that inspire cryptocurrency and blockchain conversations around the world. Read the latest news and updates articles written by the editorial staff about the industry in the dapp section to keep yourselves updated.",
+      "followers": {
+        "facebook": 873500,
+        "twitter": 10600
+      },
+      "image_url": "https://i1.feedspot.com/5501537.jpg?t=1675161023"
+    },
+    {
+      "title": "Arc Block Blog",
+      "feed_url": "https://www.arcblock.io/blog/rss.xml",
+      "website_url": "https://www.arcblock.io/blog/tags/en/dapps",
+      "description": "ArcBlock is your new decentralized developer platform that simplifies the development of DApps, DLT, and Blockchains. To enable mass adoption of DApps, DLT, and Blockchain, developers need a better way to build. ArcBlock is solving those challenges and giving creators everything they need to power the decentralized web.",
+      "followers": {
+        "twitter": 42600
+      },
+      "image_url": "https://i1.feedspot.com/5501538.jpg?t=1675161246"
+    }
+  ]
+}

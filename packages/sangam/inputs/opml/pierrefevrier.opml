@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<opml version="1.0">
+    <head>
+        <title>Pierre subscriptions in feedly Cloud</title>
+    </head>
+    <body>
+        <outline text="Maison" title="Maison">
+            <outline type="rss" text="Jeedom – Le Blog" title="Jeedom – Le Blog" xmlUrl="https://blog.jeedom.com/feed/" htmlUrl="https://blog.jeedom.com"/>
+        </outline>
+        <outline text="Deals" title="Deals">
+            <outline type="rss" text="Dealabs" title="Dealabs" xmlUrl="https://www.dealabs.com/rssx/keyword-alarm/f696c25dde8785e6259ff7aa209f2a00" htmlUrl="https://www.dealabs.com"/>
+        </outline>
+        <outline text="Auto" title="Auto">
+            <outline type="rss" text="L'Automobile Magazine" title="L'Automobile Magazine" xmlUrl="http://www.automobile-magazine.fr/automagazine/export_rss.xml" htmlUrl="https://www.automobile-magazine.fr/rss.xml"/>
+        </outline>
+        <outline text="Devs" title="Devs">
+            <outline type="rss" text="Blog Ippon - Ippon Technologies" title="Blog Ippon - Ippon Technologies" xmlUrl="http://blog.ippon.fr/feed/" htmlUrl="https://blog.ippon.fr/"/>
+            <outline type="rss" text="Release notes from obsidian-jira-issue" title="Release notes from obsidian-jira-issue" xmlUrl="https://github.com/marc0l92/obsidian-jira-issue/releases.atom" htmlUrl="https://github.com/marc0l92/obsidian-jira-issue/releases"/>
+            <outline type="rss" text="News on MapStruct" title="News on MapStruct" xmlUrl="https://mapstruct.org/news/index.xml" htmlUrl="http://mapstruct.org/news/"/>
+            <outline type="rss" text="Release notes from obsidian-git" title="Release notes from obsidian-git" xmlUrl="https://github.com/denolehov/obsidian-git/releases.atom" htmlUrl="https://github.com/denolehov/obsidian-git/releases"/>
+            <outline type="rss" text="The IntelliJ IDEA Blog : IntelliJ IDEA – the Leading Java and Kotlin IDE, by JetBrains | The JetBrains Blog" title="The IntelliJ IDEA Blog : IntelliJ IDEA – the Leading Java and Kotlin IDE, by JetBrains | The JetBrains Blog" xmlUrl="https://blog.jetbrains.com/idea/feed/" htmlUrl="https://blog.jetbrains.com"/>
+            <outline type="rss" text="Blog Devoteam Revolve" title="Blog Devoteam Revolve" xmlUrl="http://blog.d2-si.fr/feed/" htmlUrl="https://blog.revolve.team/"/>
+            <outline type="rss" text="Publicis Sapient France - Medium" title="Publicis Sapient France - Medium" xmlUrl="https://medium.com/feed/publicis-sapient-france" htmlUrl="https://medium.com/publicis-sapient-france?source=rss----8729dce955f9---4"/>
+            <outline type="rss" text="Blog Zenika" title="Blog Zenika" xmlUrl="http://blog.zenika.com/feed/" htmlUrl="https://blog.zenika.com"/>
+            <outline type="rss" text="DevOps &amp; SRE" title="DevOps &amp; SRE" xmlUrl="https://cloudblog.withgoogle.com/products/devops-sre/rss/" htmlUrl="https://cloud.google.com/blog/products/devops-sre/"/>
+            <outline type="rss" text="Jira Software - Atlassian Blog" title="Jira Software - Atlassian Blog" xmlUrl="https://www.atlassian.com/blog/jira-software/feed" htmlUrl="https://www.atlassian.com/blog/jira-software"/>
+            <outline type="rss" text="GC easy – Universal Java GC Log Analyser" title="GC easy – Universal Java GC Log Analyser" xmlUrl="https://blog.gceasy.io/feed/" htmlUrl="https://blog.gceasy.io"/>
+            <outline type="rss" text="Human Coders News" title="Human Coders News" xmlUrl="http://news.humancoders.com/items/feed.rss" htmlUrl="https://news.humancoders.com/"/>
+            <outline type="rss" text="Postman Blog" title="Postman Blog" xmlUrl="https://blog.postman.com/feed/" htmlUrl="https://blog.postman.com/"/>
+            <outline type="rss" text="OCTO Talks !" title="OCTO Talks !" xmlUrl="http://blog.octo.com/feed/" htmlUrl="https://blog.octo.com"/>
+            <outline type="rss" text="Visual Studio Code - Code Editing. Redefined." title="Visual Studio Code - Code Editing. Redefined." xmlUrl="https://code.visualstudio.com/feed.xml" htmlUrl="https://code.visualstudio.com/"/>
+            <outline type="rss" text="ByteByteGo Newsletter" title="ByteByteGo Newsletter" xmlUrl="https://blog.bytebytego.com/feed" htmlUrl="https://blog.bytebytego.com"/>
+            <outline type="rss" text="Crowd Technical Announcements" title="Crowd Technical Announcements" xmlUrl="https://confluence.atlassian.com/createrssfeed.action?types=page&amp;types=blogpost&amp;spaces=CROWDKB&amp;title=Crowd+Technical+Announcements&amp;sort=modified&amp;maxResults=50&amp;timeSpan=365&amp;showContent=true" htmlUrl="https://confluence.atlassian.com"/>
+            <outline type="rss" text="draw.io" title="draw.io" xmlUrl="https://about.draw.io/feed/" htmlUrl="https://drawio-app.com/"/>
+            <outline type="rss" text="Spring" title="Spring" xmlUrl="http://spring.io/blog.atom" htmlUrl="https://spring.io"/>
+            <outline type="rss" text="Blog &amp; Média | WeScale" title="Blog &amp; Média | WeScale" xmlUrl="https://blog.wescale.fr/rss.xml" htmlUrl="https://blog.wescale.fr"/>
+            <outline type="rss" text="Release notes from tag-wrangler" title="Release notes from tag-wrangler" xmlUrl="https://github.com/pjeby/tag-wrangler/releases.atom" htmlUrl="https://github.com/pjeby/tag-wrangler/releases"/>
+            <outline type="rss" text="Mkyong.com" title="Mkyong.com" xmlUrl="http://www.mkyong.com/feed/" htmlUrl="https://mkyong.com"/>
+            <outline type="rss" text="Baeldung" title="Baeldung" xmlUrl="http://feeds.feedburner.com/Baeldung" htmlUrl="https://www.baeldung.com"/>
+            <outline type="rss" text="Release notes from obsidian-dataview" title="Release notes from obsidian-dataview" xmlUrl="https://github.com/blacksmithgu/obsidian-dataview/releases.atom" htmlUrl="https://github.com/blacksmithgu/obsidian-dataview/releases"/>
+            <outline type="rss" text="Obsidian Iceberg" title="Obsidian Iceberg" xmlUrl="https://obsidianroundup.org/blog/rss/" htmlUrl="https://www.eleanorkonik.com/"/>
+            <outline type="rss" text="Google Kubernetes Engine Regular Channel - Release notes" title="Google Kubernetes Engine Regular Channel - Release notes" xmlUrl="https://cloud.google.com/feeds/kubernetes-engine-regular-channel-release-notes.xml"/>
+            <outline type="rss" text="Release notes from obsidian-copy-block-link" title="Release notes from obsidian-copy-block-link" xmlUrl="https://github.com/mgmeyers/obsidian-copy-block-link/releases.atom" htmlUrl="https://github.com/mgmeyers/obsidian-copy-block-link/releases"/>
+            <outline type="rss" text="Flux Java Developpez" title="Flux Java Developpez" xmlUrl="http://java.developpez.com/rss.php" htmlUrl="https://java.developpez.com/index/rss"/>
+            <outline type="rss" text="Release notes from advanced-tables-obsidian" title="Release notes from advanced-tables-obsidian" xmlUrl="https://github.com/tgrosinger/advanced-tables-obsidian/releases.atom" htmlUrl="https://github.com/tgrosinger/advanced-tables-obsidian/releases"/>
+            <outline type="rss" text="Confluence - Atlassian Blog" title="Confluence - Atlassian Blog" xmlUrl="https://www.atlassian.com/blog/confluence/feed" htmlUrl="https://www.atlassian.com/blog/confluence"/>
+            <outline type="rss" text="Release notes from openapi-generator" title="Release notes from openapi-generator" xmlUrl="https://github.com/OpenAPITools/openapi-generator/releases.atom" htmlUrl="https://github.com/OpenAPITools/openapi-generator/releases"/>
+            <outline type="rss" text="Martin Fowler" title="Martin Fowler" xmlUrl="https://martinfowler.com/feed.atom" htmlUrl="https://martinfowler.com"/>
+            <outline type="rss" text="Release notes from cucumber-jvm" title="Release notes from cucumber-jvm" xmlUrl="https://github.com/cucumber/cucumber-jvm/releases.atom" htmlUrl="https://github.com/cucumber/cucumber-jvm/releases"/>
+            <outline type="rss" text="Release notes from spring-boot" title="Release notes from spring-boot" xmlUrl="https://github.com/spring-projects/spring-boot/releases.atom" htmlUrl="https://github.com/spring-projects/spring-boot/releases"/>
+            <outline type="rss" text="Release notes from obsidian-tasks" title="Release notes from obsidian-tasks" xmlUrl="https://github.com/obsidian-tasks-group/obsidian-tasks/releases.atom" htmlUrl="https://github.com/obsidian-tasks-group/obsidian-tasks/releases"/>
+            <outline type="rss" text="GitLab" title="GitLab" xmlUrl="https://about.gitlab.com/atom.xml" htmlUrl="https://about.gitlab.com/blog/"/>
+        </outline>
+        <outline text="iTech" title="iTech">
+            <outline type="rss" text="01net. Actualités" title="01net. Actualités" xmlUrl="http://www.01net.com/rss/actus.xml" htmlUrl="https://www.01net.com/"/>
+            <outline type="rss" text="Presse-Citron" title="Presse-Citron" xmlUrl="http://www.presse-citron.net/feed" htmlUrl="https://www.presse-citron.net/"/>
+            <outline type="rss" text="1Password Blog" title="1Password Blog" xmlUrl="https://blog.1password.com/index.xml" htmlUrl="https://blog.1password.com/"/>
+            <outline type="rss" text="The Official Google Blog" title="The Official Google Blog" xmlUrl="http://googleblog.blogspot.com/atom.xml" htmlUrl="https://blog.google/"/>
+            <outline type="rss" text="Blog articles" title="Blog articles" xmlUrl="https://www.googlenestcommunity.com/unqkr23473/rss/board?board.id=blog" htmlUrl="https://www.googlenestcommunity.com/t5/Blog/bg-p/blog"/>
+            <outline type="rss" text="Obsidian Changelog" title="Obsidian Changelog" xmlUrl="https://obsidian.md/changelog.xml" htmlUrl="https://obsidian.md/"/>
+            <outline type="rss" text="Google Workspace" title="Google Workspace" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCBmwzQnSoj9b6HzNmFrg_yw" htmlUrl="https://www.youtube.com/channel/UCBmwzQnSoj9b6HzNmFrg_yw"/>
+            <outline type="rss" text="Korben" title="Korben" xmlUrl="http://feeds.feedburner.com/KorbensBlog-UpgradeYourMind" htmlUrl="https://korben.info"/>
+            <outline type="rss" text="Google Workspace Updates" title="Google Workspace Updates" xmlUrl="http://feeds.feedburner.com/GoogleAppsUpdates" htmlUrl="http://workspaceupdates.googleblog.com/"/>
+        </outline>
+        <outline text="Apple" title="Apple">
+            <outline type="rss" text="iGeneration.fr" title="iGeneration.fr" xmlUrl="http://rss.igeneration.fr/" htmlUrl="https://cdn.mgig.fr/rss/igen/light_rss_igen.xml"/>
+            <outline type="rss" text="Mac4Ever.com" title="Mac4Ever.com" xmlUrl="http://www.mac4ever.com/syndication/news.rss" htmlUrl="https://www.mac4ever.com"/>
+            <outline type="rss" text="MacGeneration" title="MacGeneration" xmlUrl="http://rss.macgeneration.com/" htmlUrl="https://cdn.mgig.fr/rss/macg/light_rss_macg.mxl"/>
+        </outline>
+    </body>
+</opml>

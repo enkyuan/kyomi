@@ -1,0 +1,18 @@
+{
+  "category": "Mount Pleasant News",
+  "source_url": "https://rss.feedspot.com/mount_pleasant_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Town of Mount Pleasant",
+      "feed_url": "https://www.tompsc.com/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.tompsc.com/CivicAlerts.aspx",
+      "description": "Get the latest news, updates, information and important announcements from the official website of Mount Pleasant, SC.",
+      "followers": {
+        "facebook": 70800,
+        "twitter": 5700,
+        "instagram": 28400
+      },
+      "image_url": "https://i1.feedspot.com/5146882.jpg?t=1626330499"
+    }
+  ]
+}

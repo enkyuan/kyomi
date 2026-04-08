@@ -1,0 +1,447 @@
+{
+  "category": "HIV",
+  "source_url": "https://rss.feedspot.com/hiv_rss_feeds",
+  "feeds": [
+    {
+      "title": "Aidsmap",
+      "feed_url": "https://www.aidsmap.com/feeds/latest-hiv-news",
+      "website_url": "https://www.aidsmap.com/",
+      "description": "NAM works to change lives by sharing information about HIV and AIDS. We believe independent, clear and accurate information is vital in the fight against HIV and AIDS. Our mission is to support people living with HIV to live longer, healthier lives.",
+      "followers": {
+        "facebook": 11100,
+        "twitter": 15300,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/237122.jpg?t=1614832363"
+    },
+    {
+      "title": "POZ",
+      "feed_url": "https://www.poz.com/rss/category/newsfeed",
+      "website_url": "https://www.poz.com/",
+      "description": "POZ serves the community of people living with and those affected by HIV/AIDS with daily news, treatment updates, personal profiles, investigative features, videos, blogs, forums, personals and an extensive online social network.",
+      "followers": {
+        "facebook": 44400,
+        "twitter": 28200
+      },
+      "image_url": "https://i1.feedspot.com/4553965.jpg?t=1614832368"
+    },
+    {
+      "title": "ScienceDaily \u00bb HIV and AIDS News",
+      "feed_url": "https://www.sciencedaily.com/rss/health_medicine/hiv_and_aids.xml",
+      "website_url": "https://www.sciencedaily.com/news/health_medicine/hiv_and_aids/",
+      "description": "HIV and AIDS information and facts. Read latest medical articles and view educational videos on AIDS and HIV symptoms and treatments. Stay informed about new developments on the AIDS/HIV front.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 306500
+      },
+      "image_url": "https://i1.feedspot.com/4553982.jpg?t=1614832377"
+    },
+    {
+      "title": "HIV Plus Mag",
+      "feed_url": "https://www.hivplusmag.com/customfeeds/js/feed/rss",
+      "website_url": "https://www.hivplusmag.com/",
+      "description": "The country's largest publication aimed at people with HIV and people who care about them. Get articles on HIV/AIDS Treatment, Research, Stigma, Cure, Vaccine, Just Diagnosed.",
+      "followers": {
+        "facebook": 17800,
+        "twitter": 9500,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4987722.jpg?t=1614832390"
+    },
+    {
+      "title": "magazin.hiv",
+      "feed_url": "https://magazin.hiv/feed/",
+      "website_url": "https://magazin.hiv/",
+      "description": "magazin.hiv provides information on HIV / AIDS and sexually transmitted infections.",
+      "followers": {
+        "facebook": 51900,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4554234.jpg?t=1614832394"
+    },
+    {
+      "title": "My Fabulous Disease",
+      "feed_url": "https://marksking.com/feed/",
+      "website_url": "https://marksking.com/",
+      "description": "Mark S. King is a nationally recognized HIV/AIDS advocate who has been working to raise awareness about the disease for decades. King is also a recovering addict. On his blog, you'll find HIV news, as well as personal reflections and profiles of game-changers in the HIV/AIDS community. We like visiting this blog to see what's happening in the social world of activism.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 10500
+      },
+      "image_url": "https://i1.feedspot.com/4338357.jpg"
+    },
+    {
+      "title": "Inquirer News",
+      "feed_url": "https://newsinfo.inquirer.net/tag/hiv/feed",
+      "website_url": "https://newsinfo.inquirer.net/tag/hiv",
+      "description": "Latest HIV News for Filipinos. Inquirer News is the leading Philippine online news and information website.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 3800000
+      },
+      "image_url": "https://i1.feedspot.com/4554052.jpg?t=1614832407"
+    },
+    {
+      "title": "BC Centre for Excellence in HIV/AIDS Blog",
+      "feed_url": "https://bccfe.ca/blog/feed/",
+      "website_url": "https://bccfe.ca/blog/",
+      "description": "The BC Centre for Excellence in HIV/AIDS is dedicated to improving the health of British Columbians with HIV through the development, ongoing monitoring and dissemination of comprehensive research and treatment programs for HIV and related diseases.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 7600,
+        "instagram": 754
+      },
+      "image_url": "https://i1.feedspot.com/4554152.jpg?t=1614832416"
+    },
+    {
+      "title": "Elizabeth Glaser Pediatric AIDS Foundation Blog",
+      "feed_url": "https://pedaids.org/blog/feed/",
+      "website_url": "https://pedaids.org/blog/",
+      "description": "The Elizabeth Glaser Pediatric AIDS Foundation (EGPAF) is a nonprofit organization dedicated to preventing pediatric HIV infection and eliminating pediatric AIDS through research, advocacy, and prevention, care, and treatment programs. Founded in 1988, EGPAF works in 15 countries around the world.",
+      "followers": {
+        "facebook": 71600,
+        "twitter": 18900,
+        "instagram": 11200
+      },
+      "image_url": "https://i1.feedspot.com/4554168.jpg?t=1614832428"
+    },
+    {
+      "title": "HIV Cure",
+      "feed_url": "https://hivcure.com.au/feed/",
+      "website_url": "https://hivcure.com.au/",
+      "description": "Developed by NAPWHA in association with the Doherty Institute and the Alfred Hospital, HIV Cure will collate all the latest research news and scientific developments as they happen so that people living with HIV in Australia can be educated, engaged and gain access to the successes being made.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4553967.jpg?t=1614833534"
+    },
+    {
+      "title": "Positive Peers",
+      "feed_url": "https://positivepeers.org/feed/",
+      "website_url": "https://positivepeers.org/",
+      "description": "Positive Peers is a private app for teens and young adults living with HIV (ages 13-34) featuring information, social networking and self-management tools to support HIV-related holistic care.",
+      "followers": {
+        "facebook": 113,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4554204.jpg"
+    },
+    {
+      "title": "Hiv Positive Dating Sites",
+      "feed_url": "https://www.hivpositivedatingsites.org/feed/",
+      "website_url": "https://www.hivpositivedatingsites.org/",
+      "description": "Hivpositivedatingsites.org is designed for reviews of AIDS/ HIV Positive dating sites. We help people living with HIV. Find the best one for you to join now. Follow us to know more.",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 270,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5194652.jpg?t=1614832514"
+    },
+    {
+      "title": "HIV Justice Network",
+      "feed_url": "https://www.hivjustice.net/feed/",
+      "website_url": "https://www.hivjustice.net/",
+      "description": "The HIV Justice Network is a global information and advocacy hub for individuals and organisations working to end the inappropriate use of the criminal law to regulate and punish people living with HIV.",
+      "followers": {
+        "facebook": 189,
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/4554148.jpg"
+    },
+    {
+      "title": "HIV Blogger",
+      "feed_url": "https://hivblogger.com/feed/",
+      "website_url": "https://hivblogger.com/",
+      "description": "Living positively.",
+      "followers": {
+        "facebook": 469,
+        "twitter": 2500,
+        "instagram": 565
+      },
+      "image_url": "https://i1.feedspot.com/5072334.jpg?t=1614832556"
+    },
+    {
+      "title": "AIDSVu",
+      "feed_url": "https://aidsvu.org/feed/",
+      "website_url": "https://aidsvu.org/",
+      "description": "Stay up to date with new data releases, maps, educational resources, infographics, and blog posts to help you better understand the HIV epidemic. AIDSVu is an interactive online mapping tool that visualizes the impact of the HIV epidemic on communities across the United States to increase disease awareness and promote data-driven public health decision-making.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5367182.jpg?t=1643789935"
+    },
+    {
+      "title": "American Academy of HIV Medicine Blog",
+      "feed_url": "https://aahivm.org/feed/",
+      "website_url": "https://aahivm.org/blog/",
+      "description": "The American Academy of HIV Medicine is the nation's leading independent organization of healthcare professionals dedicated to providing excellence in HIV care and prevention. Our membership of practitioners and credentialed providers manage the health of the majority of people with and at risk for HIV in the United States.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 2000
+      },
+      "image_url": "https://graph.facebook.com/American-Academy-of-HIV-Medicine/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77?t=1643776733"
+    },
+    {
+      "title": "The Well Project",
+      "feed_url": "https://www.thewellproject.org/rss.xml",
+      "website_url": "https://www.thewellproject.org/",
+      "description": "The Well Project is a global resource for women living with HIV, their caregivers and health care providers. It is an initiative conceived, developed, and administered by HIV women and those who are affected by this disease.",
+      "followers": {
+        "facebook": 10800,
+        "twitter": 10500,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4554139.jpg?t=1614832433"
+    },
+    {
+      "title": "HIV/AIDS Skeptic",
+      "feed_url": "https://hivskeptic.wordpress.com/feed/",
+      "website_url": "https://hivskeptic.wordpress.com/",
+      "description": "A blog by Henery Bauer is pointing to evidence that HIV is not the necessary and sufficient cause of AIDS. The purpose of this blog is to examine such issues and to show that what is puzzling for people who believe that HIV causes AIDS is readily explainable under alternative views soundly based on published research studies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4554188.jpg?t=1614833439"
+    },
+    {
+      "title": "I'm Still Josh",
+      "feed_url": "https://imstilljosh.com/feed/",
+      "website_url": "https://imstilljosh.com/",
+      "description": "HIV blog and HIV positive activist Josh Robbins shares his journey living with HIV plus related news. Robbins mission is to offer encouragement to those living with HIV for the purpose of engaging them to become fierce advocates of others living with this virus and become vocal missiles against the stigma surrounding HIV.",
+      "followers": {
+        "facebook": 12200,
+        "twitter": 16100,
+        "instagram": 11200
+      },
+      "image_url": "https://i1.feedspot.com/4553713.jpg?t=1614832509"
+    },
+    {
+      "title": "HIV Prevention England",
+      "feed_url": "https://www.hivpreventionengland.org.uk/blog/feed/",
+      "website_url": "https://www.hivpreventionengland.org.uk/",
+      "description": "HIV Prevention England (HPE) is the national HIV prevention programme for England. It delivers a nationally co-ordinated programme of HIV prevention work with UK-based black African people and with gay men/men who have sex with men (MSM).",
+      "followers": {
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4554180.jpg?t=1614832539"
+    },
+    {
+      "title": "Aaron Matthew Laxton Journey",
+      "feed_url": "https://aaronlaxton.tumblr.com/rss",
+      "website_url": "https://aaronlaxton.tumblr.com/",
+      "description": "Follow me as I progress from day 1 since being diagnosed with HIV. I am a social advocate, student, writer/photographer. I advocate for children and against social injustices.",
+      "followers": {
+        "facebook": 652,
+        "twitter": 42400
+      },
+      "image_url": "https://i1.feedspot.com/4554110.jpg"
+    },
+    {
+      "title": "Neuropathy and HIV",
+      "feed_url": "http://neuropathyandhiv.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://neuropathyandhiv.blogspot.com/",
+      "description": "Information blog for people suffering from both Neuropathy and HIV. An opportunity to exchange experiences, tips and opinions.This site is non-funded, non-commercial and free of advertising.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4554268.jpg?t=1614833371"
+    },
+    {
+      "title": "Office Of HIV Planning",
+      "feed_url": "http://hivphilly.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://hivphilly.blogspot.com/",
+      "description": "Office Of HIV Planning is Supporting community planning for HIV/AIDS services in the greater Philadelphia area.",
+      "followers": {
+        "facebook": 587
+      },
+      "image_url": "https://i1.feedspot.com/4554284.jpg?t=1614833655"
+    },
+    {
+      "title": "kody shiv blog",
+      "feed_url": "https://kodyshivblog.tumblr.com/rss",
+      "website_url": "https://kodyshivblog.tumblr.com/",
+      "description": "Kody is a HIV Writer and Blogger sharing His experience and educating the world about HIV.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4554246.jpg"
+    },
+    {
+      "title": "Justin's HIV Journal",
+      "feed_url": "http://justinshivjournal.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://justinshivjournal.blogspot.com/",
+      "description": "When Justin B. Terry-Smith was diagnosed with HIV over 10 years ago, his outlook was grim. Today, he's married with two sons. An Air Force veteran who has been involved in activism since 1999, his blog posts and video journals cover the latest HIV-related news, information about treatments and therapies like PrEP, nonprofits that are making a difference, and his children and travels.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4554095.jpg?t=1614833333"
+    },
+    {
+      "title": "HIV Support South Africa",
+      "feed_url": "http://hivsupportsa.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://hivsupportsa.blogspot.com/",
+      "description": "HIV Support in South Africa - bringing information, Dr Gail Ashford's thoughts and opinions to people affected by or living with HIV.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4554230.jpg?t=1614832575"
+    },
+    {
+      "title": "You. Me. Hiv.",
+      "feed_url": "http://youmehiv.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://youmehiv.blogspot.com/",
+      "description": "Read This Red Blog is an online community for family, friends, and loving strangers who want to know and do more to help those affected by HIV/AIDS. By educating ourselves together and taking action, we will become the change!",
+      "followers": {
+        "facebook": 51,
+        "twitter": 57
+      },
+      "image_url": "https://i1.feedspot.com/4554278.jpg?t=1614832581"
+    },
+    {
+      "title": "Life with HIV",
+      "feed_url": "https://lifewithhiv-peter.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://lifewithhiv-peter.blogspot.com/",
+      "description": "A blog by Peter about being Hiv positive and living in Australia.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4554275.jpg?t=1614832547"
+    },
+    {
+      "title": "searcHIV",
+      "feed_url": "https://searchiv.web.unc.edu/feed/",
+      "website_url": "https://searchiv.web.unc.edu/",
+      "description": "searcHIV is a multi-site, multi-disciplinary working group focusing on investigating the biosocial implications of curing HIV infection. mission of searcHIV is Develop a theoretical framework about HIV cure research and early implementation using historical, conceptual and ethical data, Determine HIV cure stakeholder perspectives on cure research and early implementation.",
+      "followers": {
+        "facebook": 229,
+        "twitter": 326
+      },
+      "image_url": "https://i1.feedspot.com/4554223.jpg?t=1614833541"
+    },
+    {
+      "title": "The Project Red Ribbon",
+      "feed_url": "http://pozziepinoy.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://pozziepinoy.blogspot.com/",
+      "description": "The official site of The Project Red Ribbon Care Management Foundation, Inc. To improve the quality of life of persons living with HIV (PLHIV) through awareness, resources, treatment, care and support.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4554266.jpg?t=1614833544"
+    },
+    {
+      "title": "EpiC Blog",
+      "feed_url": "https://epicproject.blog/feed/",
+      "website_url": "https://epicproject.blog/",
+      "description": "EpiC is a five-year global initiative that provides strategic technical assistance and directs service delivery to achieve HIV epidemic control and promote self-reliant management of national HIV programs by improving HIV case finding, prevention, treatment programming, and viral load suppression.",
+      "followers": {
+        "facebook": 9000,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5367180.jpg?t=1643776688"
+    },
+    {
+      "title": "EndHIV901 Blog",
+      "feed_url": "https://endhiv901.org/feed/",
+      "website_url": "https://endhiv901.org/blog/",
+      "description": "The Ending the HIV Epidemic (EHE) Initiative is a community-based collaborative effort to lower Shelby County's new HIV infection rates to 90% by 2030. We have also created a website to provide community resources like HIV testing, care, HIV treatment centres, supportive programming, and listings for related services for anyone in Memphis and Shelby County, TN.",
+      "followers": {
+        "facebook": 374,
+        "twitter": 63,
+        "instagram": 504
+      },
+      "image_url": "https://i1.feedspot.com/5367185.jpg?t=1643776738"
+    },
+    {
+      "title": "Huffington Post on HIV & AIDS",
+      "feed_url": "https://www.huffpost.com/topic/hiv-and-aids/feed",
+      "website_url": "https://www.huffpost.com/life/topic/hiv-and-aids",
+      "description": "Breaking News and Opinion on The Huffington Post about HIV & AIDS.",
+      "followers": {
+        "facebook": 11700000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4554022.jpg?t=1614832403"
+    },
+    {
+      "title": "Beta Blog",
+      "feed_url": "https://www.sfaf.org/collections/beta/feed/",
+      "website_url": "https://www.sfaf.org/collections/beta/",
+      "description": "Your bright and brainy source on new developments in HIV prevention, evolving approaches to HIV treatment, and strategies for living well with the virus.",
+      "followers": {
+        "facebook": 39800
+      },
+      "image_url": "https://i1.feedspot.com/4554163.jpg?t=1614832442"
+    },
+    {
+      "title": "TeachAIDS",
+      "feed_url": "https://teachaids.org/feed/",
+      "website_url": "https://teachaids.org/",
+      "description": "TeachAIDS is a social venture that creates breakthrough software to solve persistent problems in HIV prevention used in more than 70 countries. You will get Free, Research-Based, Culturally-Tailored, HIV/AIDS Tutorials.",
+      "followers": {
+        "facebook": 86000,
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4554126.jpg?t=1614832436"
+    },
+    {
+      "title": "The Center For HIV Law & Policy Blog",
+      "feed_url": "https://www.hivlawandpolicy.org/blog/feed/30",
+      "website_url": "https://www.hivlawandpolicy.org/blog",
+      "description": "The Center for HIV Law and Policy (CHLP) is a national legal and policy resource and strategy center for people with HIV and their advocates. CHLP works to reduce the impact of HIV on vulnerable and marginalized communities and to secure the human rights of people affected by HIV.",
+      "followers": {
+        "facebook": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4554195.jpg?t=1614832518"
+    },
+    {
+      "title": "AIDS United",
+      "feed_url": "https://www.aidsunited.org/RssFeedGen.aspx?rss=blog",
+      "website_url": "https://aidsunited.org/news/",
+      "description": "AIDS United envisions a time when all people, governments, and organizations committed to ending the epidemic and strengthening the health, well-being, and human rights of everyone impacted by HIV. Learn more about AIDS United and their work by following this blog feed.",
+      "followers": {
+        "facebook": 34800,
+        "twitter": 146
+      },
+      "image_url": "https://i1.feedspot.com/5283409.jpg?t=1621840377"
+    },
+    {
+      "title": "HIV Community Link",
+      "feed_url": "https://hivcl.org/feed/",
+      "website_url": "https://safelinkalberta.ca/tag/hiv/",
+      "description": "HCL promotes the healthy choices people can make to reduce their risk of getting or spreading HIV/AIDS. mission is to reduce the harm associated with HIV/AIDS and hepatitis C for all individuals and communities that we serve.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 33
+      },
+      "image_url": "https://i1.feedspot.com/4554240.jpg?t=1614832552"
+    },
+    {
+      "title": "HIV Then & Now",
+      "feed_url": "https://hivthenandnow.tumblr.com/rss",
+      "website_url": "https://hivthenandnow.tumblr.com/",
+      "description": "The digital journal, scrapbook, photo album and video library to document the past 30 plus years of the HIV epidemic. Whether you are HIV positive yourself, have a loved one who is positive or who has died from complications of HIV infection or you work/volunteer or have worked/volunteered for an HIV related organization this is your space. Add your story in words, pictures or video.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4554259.jpg"
+    },
+    {
+      "title": "Zee News",
+      "feed_url": "https://zeenews.india.com/taxonomy/term/226119/feed",
+      "website_url": "https://zeenews.india.com/tags/hiv-vaccine.html",
+      "description": "Read all latest HIV vaccine news from India & world. Zee Media Corporation Ltd (ZMCL), India's largest news network, touches the lives of over 150 million Indians through a clutch of national and regional news channels.",
+      "followers": {
+        "facebook": 24000000,
+        "twitter": 7000000
+      },
+      "image_url": "https://i1.feedspot.com/4554041.jpg?t=1614832412"
+    },
+    {
+      "title": "AIDS Education and Training Center Blog",
+      "feed_url": "https://aidsetc.org/sharespot-rss-feed.xml",
+      "website_url": "https://aidsetc.org/blog",
+      "description": "The AIDS Education and Training Center (AETC) Program is the training arm of the Ryan White HIV/AIDS Program. The AETC Program is a national network of leading HIV experts who provide locally-based, tailored education, clinical consultation and technical assistance to healthcare professionals and healthcare organizations to integrate high quality, comprehensive care for those living with or affected by HIV.",
+      "followers": {
+        "twitter": 997
+      },
+      "image_url": "https://i1.feedspot.com/5367181.jpg?t=1643790649"
+    }
+  ]
+}

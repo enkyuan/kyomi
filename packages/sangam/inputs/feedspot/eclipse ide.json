@@ -1,0 +1,69 @@
+{
+  "category": "Eclipse IDE",
+  "source_url": "https://rss.feedspot.com/eclipse_ide_rss_feeds",
+  "feeds": [
+    {
+      "title": "Eclipse Foundation Blog",
+      "feed_url": "https://blogs.eclipse.org/blog/feed",
+      "website_url": "https://blogs.eclipse.org/",
+      "description": "Eclipse is a community for individuals and organizations who wish to collaborate on commercially-friendly open source software. The Eclipse Foundation provides our global community of individuals and organizations with a mature, scalable, and business-friendly environment for open source software collaboration and innovation.",
+      "followers": {
+        "facebook": 85400,
+        "twitter": 32299
+      },
+      "image_url": "https://i1.feedspot.com/4974571.jpg?t=1621946982"
+    },
+    {
+      "title": "Planet Eclipse",
+      "feed_url": "https://planeteclipse.org/planet/rss20.xml",
+      "website_url": "https://planeteclipse.org/planet/",
+      "description": "Planet Eclipse is a window into the world, work and lives of Eclipse hackers and contributors. The Eclipse Foundation provides individuals and organizations with a business-friendly environment for open source software collaboration and innovation.",
+      "followers": {
+        "facebook": 85400,
+        "twitter": 32299
+      },
+      "image_url": "https://i1.feedspot.com/437323.jpg?t=1621946986"
+    },
+    {
+      "title": "Eclipse OpenJ9 Blog",
+      "feed_url": "https://blog.openj9.org/feed/",
+      "website_url": "https://blog.openj9.org/",
+      "description": "Eclipse OpenJ9 is a high performance, scalable, Java virtual machine implementation that is fully compliant with the Java Virtual Machine Specification. Follow Eclipse OpenJ9 blog, where we hope to share some interesting insights and information about the Eclipse OpenJ9 project.",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4974592.jpg?t=1621947023"
+    },
+    {
+      "title": "Wayne's Eclipse Blog",
+      "feed_url": "https://waynebeaton.wordpress.com/feed/",
+      "website_url": "https://waynebeaton.wordpress.com/",
+      "description": "Wayne is the Director of Open Source Projects at the Eclipse Foundation, a former Minor Hockey Chauffeur, a Martial Artist, and a huge fan of the Oxford Comma.",
+      "followers": {
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4974574.jpg?t=1621947060"
+    },
+    {
+      "title": "CDT Doug",
+      "feed_url": "https://cdtdoug.ca/feed",
+      "website_url": "https://cdtdoug.ca/",
+      "description": "Doug Schaefer is the Eclipse CDT project lead and a Software Architect at QNX, a BlackBerry company, working on the Momentics IDE.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4974687.jpg?t=1621946995"
+    },
+    {
+      "title": "EclipseSource",
+      "feed_url": "https://eclipsesource.com/feed",
+      "website_url": "https://eclipsesource.com/blogs/",
+      "description": "EclipseSource is a company run by people who are passionate about tools and technology for developers. Our focus is on cross-platform mobile development and the Eclipse IDE.",
+      "followers": {
+        "facebook": 367,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4974577.jpg?t=1621946990"
+    }
+  ]
+}

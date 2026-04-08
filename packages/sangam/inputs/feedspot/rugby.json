@@ -1,0 +1,1083 @@
+{
+  "category": "Rugby",
+  "source_url": "https://rss.feedspot.com/rugby_rss_feeds",
+  "feeds": [
+    {
+      "title": "BBC Sport - Rugby Union",
+      "feed_url": "https://feeds.bbci.co.uk/sport/rugby-union/rss.xml",
+      "website_url": "https://www.bbc.com/sport/rugby-union",
+      "description": "BBC Sport - Rugby Union, The best of the BBC, with the latest news and sport headlines, weather, TV & radio highlights and much more from across the whole of BBC Online.",
+      "followers": {
+        "facebook": 61300000,
+        "twitter": 15400000
+      },
+      "image_url": "https://i1.feedspot.com/4483843.jpg?t=1627447540"
+    },
+    {
+      "title": "Mail Online Rugby",
+      "feed_url": "https://www.dailymail.co.uk/sport/rugbyunion/index.rss",
+      "website_url": "https://www.dailymail.co.uk/sport/rugbyunion/index.html",
+      "description": "Get all the recent updates of your favourite sport rugby from the famous news paper daily mail, and all the latest US news, showbiz, science, sport and health stories from the Daily Mail and Mail on Sunday newspapers.",
+      "followers": {
+        "facebook": 23200000,
+        "twitter": 797200
+      },
+      "image_url": "https://i1.feedspot.com/4018844.jpg?t=1627447575"
+    },
+    {
+      "title": "WalesOnline - Rugby News",
+      "feed_url": "https://www.walesonline.co.uk/sport/rugby/rugby-news/?service=rss",
+      "website_url": "https://www.walesonline.co.uk/sport/rugby/rugby-news/",
+      "description": "WalesOnline brings you all the latest news related to rugby.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 433400,
+        "instagram": 145000
+      },
+      "image_url": "https://i1.feedspot.com/3513820.jpg?t=1627447579"
+    },
+    {
+      "title": "Le French Rugby Podcast",
+      "feed_url": "https://www.rugbypass.com/feeds/rss/",
+      "website_url": "https://www.rugbypass.com/",
+      "description": "Johnnie Beattie, Tim Groves and some big name co-hosts take you inside the world of French rugby with big stars and juicy stories. Available on RugbyPass as well as all your usual podcast platforms. Hosted on Acast. See acast.com/privacy for more information.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 126200
+      },
+      "image_url": "https://i1.feedspot.com/4759245.jpg?t=1746035642"
+    },
+    {
+      "title": "Rugby World Magazine",
+      "feed_url": "https://www.rugbyworld.com/feed",
+      "website_url": "https://www.rugbyworld.com/",
+      "description": "The world's best-selling rugby magazine.The brainchild of Charlie Buchan (a footballer no less) started life in swinging sixties, with Cecil Bear as the first Editor. Since then, Rugby World has come a long way, as has the game, but our mission remains the same - to bring you amazing pictures, in depth interviews and the best technical advice.The latest news, views, videos and fixtures from the team that brings you Rugby World Magazine.",
+      "followers": {
+        "facebook": 200600,
+        "twitter": 142000,
+        "instagram": 45600
+      },
+      "image_url": "https://i1.feedspot.com/2189443.jpg?t=1627447595"
+    },
+    {
+      "title": "SA Rugby Magazine",
+      "feed_url": "https://www.sarugbymag.co.za/feed/",
+      "website_url": "https://www.sarugbymag.co.za/",
+      "description": "Highbury Safika Media launched SA Rugby magazine to provide rugby fans with the latest news, opinion and analysis, video, match previews and reports, logs and fixtures, and more. Find South African rugby news, fixtures, results, video, interviews, and more, as well as schools and club rugby.",
+      "followers": {
+        "facebook": 673300,
+        "twitter": 112500
+      },
+      "image_url": "https://i1.feedspot.com/4488580.jpg?t=1685008857"
+    },
+    {
+      "title": "Paloise B\u00e9arn Pyrenees Rugby Club",
+      "feed_url": "https://www.section-paloise.com/actualites/news?format=feed",
+      "website_url": "https://www.section-paloise.com/actualites/news",
+      "description": "The section paloise is the rugby section XV of the French sports club section paloise, based in Pau in the Pyrenees-Atlantiques.",
+      "followers": {
+        "facebook": 77600,
+        "twitter": 27700
+      },
+      "image_url": "https://i1.feedspot.com/4483819.jpg?t=1627447661"
+    },
+    {
+      "title": "On Rugby",
+      "feed_url": "https://www.onrugby.it/feed/",
+      "website_url": "https://www.onrugby.it/",
+      "description": "On Rugby covers news, events, and updates related to rugby in Italy and around the world. It provides articles, interviews, and analysis of rugby matches, teams, players, and tournaments, including the Six Nations, Rugby World Cup, Pro14, Top 14, and Premiership Rugby.",
+      "followers": {
+        "facebook": 59500,
+        "twitter": 7500,
+        "instagram": 20300
+      },
+      "image_url": "https://i1.feedspot.com/344033.jpg?t=1683219031"
+    },
+    {
+      "title": "Irish Rugby - Ulster Bank League News",
+      "feed_url": "https://www.irishrugby.ie/?feed=rss",
+      "website_url": "https://www.irishrugby.ie/",
+      "description": "The Official website of the Irish Rugby Football Union - covering International, Provincial and Club Rugby",
+      "followers": {
+        "facebook": 686100,
+        "twitter": 840700,
+        "instagram": 947200
+      },
+      "image_url": "https://i1.feedspot.com/4482921.jpg?t=1627447625"
+    },
+    {
+      "title": "Munster Rugby",
+      "feed_url": "https://www.munsterrugby.ie/rss",
+      "website_url": "https://www.munsterrugby.ie/news/",
+      "description": "The official site of Munster Rugby with news, online ticket sales, merchandise, live match commentary, video highlights, player profiles, mobile content, wallpapers and forums",
+      "followers": {
+        "facebook": 131700,
+        "twitter": 276900,
+        "instagram": 215900
+      },
+      "image_url": "https://i1.feedspot.com/1367190.jpg?t=1627447639"
+    },
+    {
+      "title": "Saracens Rugby Club",
+      "feed_url": "https://saracens.com/feed/?projection=58",
+      "website_url": "https://saracens.com/",
+      "description": "Club History Established in 1876, Saracens Rugby Club are London's premier rugby club competing in the Aviva Premiership, the European Champions Cup and the Anglo-Welsh Cup. From humble beginnings, 'Sarries' have developed into one of world rugby's most respected, renowned and recognisable teams.",
+      "followers": {
+        "facebook": 145700,
+        "twitter": 121600
+      },
+      "image_url": "https://i1.feedspot.com/4483504.jpg?t=1627447644"
+    },
+    {
+      "title": "Periodismo-Rugby Blog by Jorge B\u00fasico",
+      "feed_url": "https://www.periodismo-rugby.com.ar/feed/",
+      "website_url": "https://www.periodismo-rugby.com.ar/",
+      "description": "Co - director of TEA and Deportea. Columnist La Nacion. Blog author journalism-rugby. Author of The Roar and co - author of Being and National Sport Puma.",
+      "followers": {
+        "facebook": 46300,
+        "instagram": 69900
+      },
+      "image_url": "https://i1.feedspot.com/3501310.jpg?t=1623221799"
+    },
+    {
+      "title": "Americas Rugby",
+      "feed_url": "http://www.americasrugbynews.com/feed/",
+      "website_url": "https://www.americasrugbynews.com/",
+      "description": "Rugby news from across the Americas!",
+      "followers": {
+        "facebook": 7800,
+        "twitter": 7100
+      },
+      "image_url": "https://i1.feedspot.com/4482938.jpg?t=1627447670"
+    },
+    {
+      "title": "The Sharks",
+      "feed_url": "https://sharksrugby.co.za/feed/",
+      "website_url": "https://sharksrugby.co.za/news/",
+      "description": "The Sharks brand is internationally renowned and has evolved from a provincial rugby brand to a commercially recognised sporting brand. Read about the different tournament cups, match and rugby news, press release, Sharks juniors, sharksXV and more.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 215700,
+        "instagram": 269600
+      },
+      "image_url": "https://i1.feedspot.com/4483540.jpg?t=1685360985"
+    },
+    {
+      "title": "SchoolBoyRugby Blog",
+      "feed_url": "http://schoolboyrugby.co.za/?feed=rss2",
+      "website_url": "http://schoolboyrugby.co.za/",
+      "description": "SchoolBoyRugby's aim is for everybody to be proud of being associated with school rugby, and for every school playing rugby to be entitled to equal exposure. We strive to have the most recent results available. Find school Rugby fixtures & results and the latest articles and news on Rugby in NZ.",
+      "followers": {
+        "twitter": 27800
+      },
+      "image_url": "https://i1.feedspot.com/4482003.jpg?t=1627447683"
+    },
+    {
+      "title": "Raiders Newswire",
+      "feed_url": "https://raidersnewswire.com/feed/",
+      "website_url": "https://raidersnewswire.com/",
+      "description": "keep up with Raiders News Rumors, Videos, Schedule, Roster, Salaries And More.",
+      "followers": {
+        "facebook": 14900,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5160892.jpg?t=1648187192"
+    },
+    {
+      "title": "Rams Newswire",
+      "feed_url": "https://ramsnewswire.com/feed/",
+      "website_url": "https://ramsnewswire.com/",
+      "description": "Keep up with Rams News, Rumors, Videos, Schedule, Roster, Salaries And More.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 554
+      },
+      "image_url": "https://i1.feedspot.com/5160894.jpg?t=1627448167"
+    },
+    {
+      "title": "Scrummage",
+      "feed_url": "https://scrummage.co.ke/feed/",
+      "website_url": "https://scrummage.co.ke/",
+      "description": "Rugby is our Passion. In this blog, you will find the latest news, articles, and updates on rugby. Follow the blog to know more.",
+      "followers": {
+        "facebook": 19600,
+        "twitter": 3200,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5212638.jpg?t=1604316842"
+    },
+    {
+      "title": "Rugby Wrap Up",
+      "feed_url": "http://rugbywrapup.com/feed/",
+      "website_url": "https://rugbywrapup.com/",
+      "description": "Rugby Wrap Up has a weekly on-camera Studio Show & Podcast from NYC, on-camera interviews with the game's biggest names, breaking stories, and informative columns, and they are growing on a daily basis. Follow to get updates from Rugby Wrap Up.",
+      "followers": {
+        "twitter": 8700,
+        "instagram": 23500
+      },
+      "image_url": "https://i1.feedspot.com/1530975.jpg?t=1599234392"
+    },
+    {
+      "title": "Blackheath Rugby Club",
+      "feed_url": "https://blackheathrugby.co.uk/feed/",
+      "website_url": "https://blackheathrugby.co.uk/",
+      "description": "Where Club Rugby Started, Official feed of Blackheath Rugby, oldest open club in the world. 1st XV plays in Nat 1 and we field 4 other men's teams, 2 women's & a thriving youth section.",
+      "followers": {
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4483514.jpg?t=1627447904"
+    },
+    {
+      "title": "Toyota Cheetahs Rugby",
+      "feed_url": "https://www.fscheetahs.co.za/rss-feed",
+      "website_url": "https://www.fscheetahs.co.za/news",
+      "description": "Official website of the Toyota Free State Cheetahs rugby team offering news, teams, profiles, fixtures and results.",
+      "followers": {
+        "facebook": 107600,
+        "twitter": 65500,
+        "instagram": 52300
+      },
+      "image_url": "https://i1.feedspot.com/4483538.jpg?t=1627447919"
+    },
+    {
+      "title": "Garryowen Rugby",
+      "feed_url": "https://garryowenrugby.com/feed/",
+      "website_url": "https://garryowenrugby.com/",
+      "description": "The white five-pointed star on the left breast of the Garryowen jersey represents the then five mediaeval parishes of Limerick",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/4483557.jpg"
+    },
+    {
+      "title": "Benetton Rugby",
+      "feed_url": "https://benettonrugby.it/category/news/feed/",
+      "website_url": "https://benettonrugby.it/category/news/",
+      "description": "Rugby Company founded in Treviso in 1932. He has made the conquest of the following trophies: 15 Italian Championships, four Italian Cups, two Italian Super Cups. Participate in the PRO12 and the Challenge Cup",
+      "followers": {
+        "facebook": 61800,
+        "twitter": 16900,
+        "instagram": 110800
+      },
+      "image_url": "https://i1.feedspot.com/4483835.jpg?t=1625489586"
+    },
+    {
+      "title": "Scottish Rugby Blog",
+      "feed_url": "http://feeds.scottishrugbyblog.co.uk/ScottishRugbyBlog",
+      "website_url": "https://www.scottishrugbyblog.co.uk/",
+      "description": "Scottish Rugby Blog - A Scottish rugby news and opinion website for rugby fans",
+      "followers": {
+        "twitter": 15500
+      },
+      "image_url": "https://i1.feedspot.com/4409550.jpg"
+    },
+    {
+      "title": "Coventry Rugby News",
+      "feed_url": "https://www.coventryrugby.co.uk/feed/",
+      "website_url": "https://www.coventryrugby.co.uk/news/",
+      "description": "Coventry Rugby is the home Rugby team of Coventry city. Check out the latest news coverage, games news, scores, players and more!",
+      "followers": {
+        "twitter": 11900,
+        "instagram": 18200
+      },
+      "image_url": "https://i1.feedspot.com/4483518.jpg?t=1670915973"
+    },
+    {
+      "title": "Il Nero il Rugby",
+      "feed_url": "https://ilneroilrugby.it/feed/",
+      "website_url": "https://ilneroilrugby.it/",
+      "description": "Stefano Franceschi is not a young man, much more: he is 52, he deals with ICT, he has a beautiful, colorful and definitely oval family.If life, to be loved, puts at the disposal of the accessories he chose two of them: rugby and good wine.",
+      "followers": {
+        "twitter": 325
+      },
+      "image_url": "https://i1.feedspot.com/4759234.jpg?t=1694581605"
+    },
+    {
+      "title": "Petrarca Rugby",
+      "feed_url": "https://petrarcarugby.it/feed/",
+      "website_url": "https://petrarcarugby.it/news/",
+      "description": "The Petrarca Rugby and the city of Padua. An inseparable pair. Petrarca Rugby Padova and Padua is the Petrarca Rugby.",
+      "followers": {
+        "facebook": 18500
+      },
+      "image_url": "https://i1.feedspot.com/4483837.jpg"
+    },
+    {
+      "title": "Old Wesley Rugby Club",
+      "feed_url": "https://www.oldwesley.ie/feed/",
+      "website_url": "https://www.oldwesley.ie/all-news/news-archives/",
+      "description": "Old Wesley Rugby Football Club was founded in 1891 and has been a prominent club in Irish Rugby ever since. Located in the heart of Dublin",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 3900,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4483553.jpg?t=1627449981"
+    },
+    {
+      "title": "Wairarapa Bush Rugby Union",
+      "feed_url": "https://waibush.co.nz/wp/feed/",
+      "website_url": "https://waibush.co.nz/wp/latest-news/",
+      "description": "The Wairarapa Bush Rugby Football Union was formed in 1971 with the amalgamation of the Wairarapa Rugby Football Union and Bush Rugby Football Union.The Wairarapa Bush team play from Trust House Memorial Park, Masterton.",
+      "followers": {
+        "facebook": 12500
+      },
+      "image_url": "https://i1.feedspot.com/4483488.jpg?t=1627450015"
+    },
+    {
+      "title": "Shannon R.F.C",
+      "feed_url": "https://shannonrfc.com/feed/",
+      "website_url": "https://shannonrfc.com/news-blog/",
+      "description": "Shannon RFC was founded on the 18th of February 1884, in the Shamrock Bar, by the old Park Bridge, Corbally Road, in the historic island parish of St. Mary",
+      "followers": {
+        "facebook": 7700
+      },
+      "image_url": "https://i1.feedspot.com/4483562.jpg"
+    },
+    {
+      "title": "Clontarf Rugby",
+      "feed_url": "https://www.clontarfrugby.com/feed/",
+      "website_url": "https://www.clontarfrugby.com/category/news/",
+      "description": "Founded in 1876, has an extensive rugby playing membership including Senior Rugby, Junior Rugby, Women's Rugby, Golden Oldies Rugby, Youth Rugby and Mini Rugby.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 7700,
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/4483568.jpg?t=1627450025"
+    },
+    {
+      "title": "Dublin University Football Club \u00bb Rugby News",
+      "feed_url": "https://dufc.ie/feed/",
+      "website_url": "https://dufc.ie/rugby-news/",
+      "description": "Get all the latest Rugby news, plays, and more! Established in 1854, Dublin University Football Club is the oldest rugby club in the world in continuous existence. We have a responsibility as part of the wider rugby community to promote the values and ethos of the game and to ensure that inclusivity for all in our community is a core D.U.F.C. value.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4483551.jpg?t=1668504247"
+    },
+    {
+      "title": "Old Crescent RFC",
+      "feed_url": "https://www.oldcrescentrfc.com/feed/",
+      "website_url": "https://www.oldcrescentrfc.com/",
+      "description": "Club Origins In the mid 1940s Rev. J.G. Guinane S J. arrived to teach in Crescent College S.J. Limerick. A charismatic individual with a whiff of excitement about him, he had been in action during the war as a Chaplain with the Royal Ulster Rifles. He was passionate about the game of rugby and probably Old Crescent Rugby Football Club owes its existence to 'The Ginner' as he came to be called.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4483559.jpg?t=1627450070"
+    },
+    {
+      "title": "Play Rugby USA",
+      "feed_url": "https://playrugbyusa.org/feed/",
+      "website_url": "https://playrugbyusa.org/",
+      "description": "Play Rugby USA's mission is 'Developing Youth Through Rugby'. We run flag and tackle rugby programs in schools in New York and California.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 5600,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4482021.jpg?t=1627450073"
+    },
+    {
+      "title": "Buccaneers Rugby Club Athlone",
+      "feed_url": "https://buccaneersrfc.com/feed/",
+      "website_url": "https://buccaneersrfc.com/news-events/",
+      "description": "Buccaneers Rugby Club Athlone, The premier rugby club in the Midlands. Competing in UBL Division 1B.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4483549.jpg?t=1627450077"
+    },
+    {
+      "title": "Ampthill Rugby",
+      "feed_url": "https://www.ampthillrufc.com/feed/",
+      "website_url": "https://www.ampthillrufc.com/news/",
+      "description": "The playing of the game of rugby in Ampthill can be traced back, via local news archives, to as far as 1881, reformed after WWII in 1950 the current club, Ampthill & District Rugby Union Football Club Ltd was incorporated in 1959 as a company limited by guarantee.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 5900
+      },
+      "image_url": "https://i1.feedspot.com/4483507.jpg?t=1627450566"
+    },
+    {
+      "title": "Americas Rugby News",
+      "feed_url": "https://www.americasrugbynews.com/feed/",
+      "website_url": "https://www.americasrugbynews.com/",
+      "description": "The Americas Rugby News website delivers up-to-date coverage of rugby events, teams, and tournaments across North and South America.",
+      "followers": {
+        "facebook": 7800,
+        "twitter": 7100
+      },
+      "image_url": "https://i1.feedspot.com/8835844.jpg"
+    },
+    {
+      "title": "RUCK.co.uk",
+      "feed_url": "https://www.ruck.co.uk/feed/",
+      "website_url": "https://www.ruck.co.uk/",
+      "description": "We are the leading rugby union news and content network delivering you the latest news, views, and all the moves in Rugby Union.",
+      "followers": {
+        "facebook": 301500,
+        "twitter": 4600,
+        "instagram": 68500
+      },
+      "image_url": "https://i1.feedspot.com/4850544.jpg?t=1611565989"
+    },
+    {
+      "title": "Green And Gold Rugby",
+      "feed_url": "https://greenandgoldrugby.com/feed/",
+      "website_url": "https://greenandgoldrugby.com/",
+      "description": "Green and Gold Rugby (G&GR) is the home on the web for passionate followers of Australian rugby. Through its online audio and video media, Green And Gold Rugby are focused on promoting Aussie Rugby from a unique and independent viewpoint.",
+      "followers": {
+        "facebook": 29600,
+        "twitter": 9900,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5452183.jpg?t=1664795022"
+    },
+    {
+      "title": "Draft Rugby",
+      "feed_url": "https://blog.draftrugby.com/feed",
+      "website_url": "https://blog.draftrugby.com/",
+      "description": "The Draft Rugby show is run by three rugby mad lads, Cargie, Harry & Nelson who discuss rugby union and fantasy rugby. Particularly focusing on the Super Rugby Competition.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/8835846.jpg"
+    },
+    {
+      "title": "Harpin' On Rugby",
+      "feed_url": "https://harpinonrugby.blog/feed/",
+      "website_url": "https://harpinonrugby.blog/",
+      "description": "Harpin' On Rugby is a rugby-focused blog featuring detailed content such as match previews, team lineups, and expert commentary.",
+      "followers": {
+        "twitter": 814,
+        "instagram": 803
+      },
+      "image_url": "https://i.postimg.cc/B6k9Vh3d/image.png?t=1764658984"
+    },
+    {
+      "title": "Scottish Rugby Blog",
+      "feed_url": "http://feeds.scottishrugbyblog.co.uk/ScottishRugbyBlog",
+      "website_url": "https://www.scottishrugbyblog.co.uk/",
+      "description": "The original Scottish rugby union news and opinion website for Scotland rugby union fans worldwide.",
+      "followers": {
+        "facebook": 768
+      },
+      "image_url": "https://i1.feedspot.com/4849678.jpg?t=1611558225"
+    },
+    {
+      "title": "Rugby World",
+      "feed_url": "https://www.rugbyworld.com/feed",
+      "website_url": "https://www.rugbyworld.com/blog/",
+      "description": "The Rugby World blog offers comprehensive coverage of international and domestic rugby union through news updates, in-depth features, expert analysis, and opinion pieces.",
+      "followers": {
+        "facebook": 200600,
+        "twitter": 142000,
+        "instagram": 45600
+      },
+      "image_url": "https://i1.feedspot.com/4949104.jpg?t=1764657905"
+    },
+    {
+      "title": "Keo",
+      "feed_url": "https://www.keo.co.za/feed/",
+      "website_url": "https://www.keo.co.za/",
+      "description": "KEO.co.za - Springbok, Currie Cup and Super rugby opinion from Mark Keohane. Our news wire brings you the latest rugby news and stories from most major international rugby union leagues and cup tournaments. Read opinions, videos, more news, & more.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 27500
+      },
+      "image_url": "https://i1.feedspot.com/1757006.jpg?t=1662622032"
+    },
+    {
+      "title": "The Rugby Breakdown",
+      "feed_url": "https://therugbybreakdown.com/feed/",
+      "website_url": "https://therugbybreakdown.com/",
+      "description": "The Rugby Breakdown (TRB) is a specialized platform focusing on girls' and women's rugby in the United States. It provides in-depth, original content including interviews, features, and news coverage spanning from high school and college rugby to senior clubs and the USA Eagles national teams.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/8835845.jpg"
+    },
+    {
+      "title": "Mother Lode Rugby",
+      "feed_url": "https://motherloderugby.org/feed/",
+      "website_url": "https://motherloderugby.org/news/",
+      "description": "Mother Lode Rugby is a community-focused youth rugby club based in California, offering programs for boys and girls ages 6 to 18. The club emphasizes core values of respect, commitment, integrity, and fun while fostering personal growth, teamwork, and sportsmanship through rugby.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/8835843.jpg"
+    },
+    {
+      "title": "BBC Sport \u00bb Rugby Union",
+      "feed_url": "https://feeds.bbci.co.uk/sport/rugby-union/rss.xml",
+      "website_url": "https://www.bbc.com/sport/rugby-union/",
+      "description": "The home of Rugby Union on BBC Sport online. Includes the latest news stories, results, fixtures, video and audio.",
+      "followers": {
+        "facebook": 15300000,
+        "twitter": 10600000,
+        "instagram": 3600000
+      },
+      "image_url": "https://i1.feedspot.com/3418323.jpg?t=1764657904"
+    },
+    {
+      "title": "The Guardian \u00bb Rugby Union",
+      "feed_url": "https://www.theguardian.com/sport/rugby-union/rss",
+      "website_url": "https://www.theguardian.com/sport/rugby-union",
+      "description": "All articles about Rugby Union from The Guardian.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4483852.jpg?t=1627447570"
+    },
+    {
+      "title": "Emerald Warriors Rugby Football Club - Blog",
+      "feed_url": "https://ewrfc.ie/feed/",
+      "website_url": "https://ewrfc.ie/news/",
+      "description": "All inclusive rugby club based in Dublin.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 2500,
+        "instagram": 9200
+      },
+      "image_url": "https://i1.feedspot.com/4483574.jpg?t=1627447894"
+    },
+    {
+      "title": "Ngati Porou East Coast RFU",
+      "feed_url": "https://npec.co.nz/wp/feed/",
+      "website_url": "https://npec.co.nz/wp/latest-news/",
+      "description": "Get all the recent updates of your favourite Ngati Porou East Coast RFU.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4483490.jpg?t=1627447898"
+    },
+    {
+      "title": "Jaguares Rugby Club",
+      "feed_url": "https://www.jaguares.com.ar/feed/",
+      "website_url": "https://www.jaguares.com.ar/",
+      "description": "Official Account of Jaguares, Argentine team in the Super Rugby / Official account of Jaguares, the Argentine team in Super Rugby.",
+      "followers": {
+        "facebook": 63500,
+        "twitter": 123900,
+        "instagram": 183900
+      },
+      "image_url": "https://i1.feedspot.com/4483587.jpg?t=1623221820"
+    },
+    {
+      "title": "Charles River Rugby",
+      "feed_url": "https://www.charlesriverrugby.com/feed/",
+      "website_url": "https://www.charlesriverrugby.com/",
+      "description": "Charles River Rugby | Boston Rugby | Men's & Women's Rugby. Since 1973, Charles River Rugby Football Club has been dedicated to playing and advancing rugby in New England. Fielding a competitive men's and women's side.",
+      "followers": {
+        "twitter": 225,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4482314.jpg?t=1627447909"
+    },
+    {
+      "title": "Barnhall RFC",
+      "feed_url": "http://mubarnhall.com/feed/",
+      "website_url": "http://mubarnhall.com/category/news/",
+      "description": "Offical site of M.U. Barnhall RFC. You may just know us as Barnhall ! Its all about rugby !!",
+      "followers": {
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4483569.jpg"
+    },
+    {
+      "title": "Gordon Rugby Club",
+      "feed_url": "https://gordonrugby.com.au/highlander_news/rss.xml",
+      "website_url": "https://gordonrugby.com.au/highlander_news",
+      "description": "Gordon Rugby Football Club is based on Sydney's North Shore. Gordon Rugby competes in the NSW Shute Shield Competition.",
+      "followers": {
+        "facebook": 8900,
+        "instagram": 12700
+      },
+      "image_url": "https://i1.feedspot.com/4483327.jpg"
+    },
+    {
+      "title": "Lansdowne Football Club",
+      "feed_url": "https://lansdownerugby.com/feed/",
+      "website_url": "https://lansdownerugby.com/news-events/",
+      "description": "Lansdowne Rugby Club | Historic Dublin rugby club based in Lansdowne Road stadium, the oldest international rugby ground in the world",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 5900,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4483547.jpg"
+    },
+    {
+      "title": "Rugby-Talk",
+      "feed_url": "https://www.rugby-talk.com/feed/",
+      "website_url": "https://www.rugby-talk.com/",
+      "description": "We run a Rugby News web site and Rugby Blog. We focus on SA Rugby News and provide a platform for rugby supporters to voice their opinion as well.",
+      "followers": {
+        "facebook": 921,
+        "twitter": 497
+      },
+      "image_url": "https://i1.feedspot.com/1530969.jpg"
+    },
+    {
+      "title": "Dolphin RFC",
+      "feed_url": "https://dolphinrfc.com/feed/",
+      "website_url": "https://dolphinrfc.com/news/",
+      "description": "Dophin RFC. Official home of Dolphin RFC (Dolphin Rugby Football Club), Musgrave Park, Cork.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 3800,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4483571.jpg"
+    },
+    {
+      "title": "Eastern Province Rugby",
+      "feed_url": "https://www.eprugby.co.za/feed/",
+      "website_url": "https://www.eprugby.co.za/",
+      "description": "Kings were born to rule. EP Rugby is bringing world class rugby back home to the Eastern Cape. EP on the Rise!",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4483537.jpg?t=1627447990"
+    },
+    {
+      "title": "Life West Rugby - Gladiators",
+      "feed_url": "http://www.lifewestrugby.com/feed/",
+      "website_url": "https://www.lifewestrugby.com/",
+      "description": "Go Gladiators! Life West Rugby 2016 Women's and 2015 Men's Division II National Champions. National Championship D1 Semi-Finalists 2016.",
+      "followers": {
+        "facebook": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4482286.jpg?t=1627449985"
+    },
+    {
+      "title": "rugbyghughes57",
+      "feed_url": "https://rugbyghughes57.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://rugbyghughes57.blogspot.com/",
+      "description": "Keep up with news and articles from rugbyghughes57.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5029927.jpg"
+    },
+    {
+      "title": "Out On The Full by Emma Thurston",
+      "feed_url": "http://outonthefullrugby.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://outonthefullrugby.blogspot.com/",
+      "description": "Emma Thurston | Rugby Union Writer. Out On The Full is a rugby blog that focuses on the Aviva Premiership & England Rugby bringing a wealth of player interviews, match reports & more.",
+      "followers": {
+        "facebook": 92,
+        "twitter": 6800
+      },
+      "image_url": "https://i1.feedspot.com/4482002.jpg?t=1627450134"
+    },
+    {
+      "title": "Nathan Cubitt Rugby Blog",
+      "feed_url": "http://nathancubittrugby.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://nathancubittrugby.blogspot.com/",
+      "description": "This is the events Blog for Nathan Cubitt, who broke his neck playing for Keighley Rugby Union Club on 6th November 2011. Nathan is being supported by his club, family, friends and the wider rugby community, with some great events great event.",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4482325.jpg?t=1627450083"
+    },
+    {
+      "title": "Coach Terry's Rugby Blog PowerHouse Rugby",
+      "feed_url": "https://www.powerhouserugby.com/coach-terrys-rugby-blog/feed/",
+      "website_url": "https://www.powerhouserugby.com/coach-terrys-rugby-blog/",
+      "description": "PowerHouseRugby is a college business project created by Brian Cox to share quality & easily accessible power rugby training tips for new rugby players.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 51
+      },
+      "image_url": "https://i1.feedspot.com/4863065.jpg?t=1627450096"
+    },
+    {
+      "title": "The Italian Rugby Blog",
+      "feed_url": "https://theitalianrugbyblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://theitalianrugbyblog.blogspot.com/",
+      "description": "A blog about Italian rugby. From the national team through to Benetton and Zebre in the Pro14. as well as the domestic Top12 league and youth teams.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5094455.jpg"
+    },
+    {
+      "title": "Rugby Reader",
+      "feed_url": "https://rugbyreader.com/feed/",
+      "website_url": "http://rugbyreader.com/",
+      "description": "The goal of RugbyReader.com is to share our passion for and knowledge of the game of rugby. We especially welcome those who are new to this great game. We were all rugby rookies at one point.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5050016.jpg?t=1627450577"
+    },
+    {
+      "title": "Rugby Club Toulonnais RCT",
+      "feed_url": "https://rctoulon.com/en/feed/",
+      "website_url": "https://rctoulon.com/accueil/",
+      "description": "The RCT was born in 1908 following the merger of the sports Star Var founded in 1902 and Toulon fraction of the Var Stadium. Toulon Rugby Club moved to Stade Mayol early in the 1920-21 season. In 1931, it is the recognition with the first league title in France against the university Olympic Lyon.",
+      "followers": {
+        "facebook": 432200,
+        "twitter": 207900,
+        "instagram": 217600
+      },
+      "image_url": "https://i1.feedspot.com/4483803.jpg?t=1627450582"
+    },
+    {
+      "title": "RugbyDump",
+      "feed_url": "https://www.rugbydump.com/rss/",
+      "website_url": "https://www.rugbydump.com/",
+      "description": "Rugby video archive with the best rugby video clips of highlights, tackles, big hits, tries, and controversial rugby clips.",
+      "followers": {
+        "facebook": 399300,
+        "twitter": 59400,
+        "instagram": 130900
+      },
+      "image_url": "https://i1.feedspot.com/8835850.jpg"
+    },
+    {
+      "title": "The Rugby Paper",
+      "feed_url": "https://www.therugbypaper.co.uk/feed/",
+      "website_url": "https://www.therugbypaper.co.uk/",
+      "description": "News, features, and match report from The Rugby Paper, the UK-based newspaper which specializes in rugby union at all levels ready for your viewing every Sunday of the year.",
+      "followers": {
+        "facebook": 21400,
+        "twitter": 69100,
+        "instagram": 7100
+      },
+      "image_url": "https://i1.feedspot.com/1530986.jpg?t=1627447652"
+    },
+    {
+      "title": "The Stormers",
+      "feed_url": "https://stormers.co.za/news/feed/",
+      "website_url": "https://stormers.co.za/news/",
+      "description": "The official website for the DHL Stormers",
+      "followers": {
+        "facebook": 398200,
+        "twitter": 282600,
+        "instagram": 239000
+      },
+      "image_url": "https://i1.feedspot.com/4483543.jpg?t=1627447674"
+    },
+    {
+      "title": "7 Bamboos Rugby Blog",
+      "feed_url": "https://7bamboosrugby.com/feed/",
+      "website_url": "https://7bamboosrugby.com/blog/",
+      "description": "We support others in their skill and personality development through rugby sevens.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1900,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4482275.jpg"
+    },
+    {
+      "title": "Rugby Americas North",
+      "feed_url": "https://www.americasnorth.rugby/",
+      "website_url": "https://www.americasnorth.rugby/",
+      "description": "Rugby Americas North is one of six regions of World Rugby, the global governing body for Rugby Union Football. Its eleven full Rugby Americas North Member Unions and 2 Associate Member Unions declared 1,605,383 players in 2015.",
+      "followers": {
+        "facebook": 16000,
+        "twitter": 295,
+        "instagram": 10600
+      },
+      "image_url": "https://i1.feedspot.com/4483297.jpg?t=1627447964"
+    },
+    {
+      "title": "Galwegians RFC",
+      "feed_url": "https://galwegians.ie/feed/",
+      "website_url": "https://www.salfordreddevils.com/",
+      "description": "Galwegians RFC is a rugby club in Galway, Ireland. Our club fields over 16 squads for adult, women, youth and mini players from our Crowley Park grounds.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4483560.jpg?t=1627450000"
+    },
+    {
+      "title": "Salford Red Devils",
+      "feed_url": "https://www.salfordreddevils.com/",
+      "website_url": "https://www.salfordreddevils.com/",
+      "description": "Rugby for the modern fan, Salford Red Devils official page, offering you the latest #RedDevilution news and behind the scenes action from around the club.",
+      "followers": {
+        "facebook": 40500,
+        "twitter": 47400,
+        "instagram": 25400
+      },
+      "image_url": "https://i1.feedspot.com/4482339.jpg?t=1625480258"
+    },
+    {
+      "title": "TimesLIVE - Rugby",
+      "feed_url": "https://www.timeslive.co.za/sport/rugby/?service=rss",
+      "website_url": "https://www.timeslive.co.za/sport/rugby/",
+      "description": "Get all the latest news about rugby through the columns of Times LIVE. Times LIVE is where you will find breaking SA and international news and leading opinion. You'll also find all the news from our newspapers: the Sunday Times and The Times.",
+      "followers": {
+        "facebook": 1900000,
+        "twitter": 2200000,
+        "instagram": 73100
+      },
+      "image_url": "https://i1.feedspot.com/4483863.jpg"
+    },
+    {
+      "title": "The Roar \u00bb Rugby Union",
+      "feed_url": "https://www.theroar.com.au/rugby-union/feed/",
+      "website_url": "https://www.theroar.com.au/rugby-union/",
+      "description": "Read up on the latest Rugby Union news coverage, headlines, and opinion. The Roar is Australia's leading sports opinion website, mixing expert commentary with reader-written articles.",
+      "followers": {
+        "facebook": 142500,
+        "twitter": 23700,
+        "instagram": 16200
+      },
+      "image_url": "https://i1.feedspot.com/4482016.jpg?t=1664797967"
+    },
+    {
+      "title": "Welsh Rugby Union",
+      "feed_url": "https://www.wru.wales/rss",
+      "website_url": "https://www.wru.wales/",
+      "description": "The Official website of the Welsh Rugby Union with news, fixture and ticket information, player profiles, community rugby, development, merchandise and hospitality.",
+      "followers": {
+        "facebook": 598200,
+        "twitter": 16800,
+        "instagram": 454600
+      },
+      "image_url": "https://i1.feedspot.com/4482019.jpg?t=1611566034"
+    },
+    {
+      "title": "Yorkshire Carnegie",
+      "feed_url": "https://yorkshirecarnegie.com/RSS_Latest_News.xml",
+      "website_url": "https://rugbyleagueplanet.com/",
+      "description": "The official website of Yorkshire Carnegie Rugby Club including results, fixtures, match reports, player profiles and ticket information",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 11900,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4483582.jpg"
+    },
+    {
+      "title": "Rugby League Planet",
+      "feed_url": "https://rugbyleagueplanet.com/?format=feed",
+      "website_url": "https://rugbyleagueplanet.com/",
+      "description": "Home of international rugby league news.",
+      "followers": {
+        "facebook": 72100,
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/4483259.jpg"
+    },
+    {
+      "title": "Rugby365",
+      "feed_url": "https://rugby365.com/content/162-homepage.xml/",
+      "website_url": "https://rugby365.com/",
+      "description": "The world's biggest rugby website has it all, whether it's just hard news, fixtures or results you're after, rugby365 is your place.",
+      "followers": {
+        "facebook": 197700,
+        "twitter": 37100
+      },
+      "image_url": "https://i1.feedspot.com/3618163.jpg?t=1627447609"
+    },
+    {
+      "title": "The Rugby Blog",
+      "feed_url": "https://www.therugbyblog.com/feed/",
+      "website_url": "https://www.therugbyblog.com/",
+      "description": "Rugby Union opinion and discussion, for the fans, by the fans. Rugby union blog - Autumn Internationals, Six Nations, Rugby World Cup, Aviva Premiership, Pro12 and more.",
+      "followers": {
+        "facebook": 7800,
+        "twitter": 18800
+      },
+      "image_url": "https://i1.feedspot.com/4481999.jpg?t=1611566010"
+    },
+    {
+      "title": "Leinster Rugby",
+      "feed_url": "https://www.leinsterrugby.ie/category/news/feed",
+      "website_url": "https://www.leinsterrugby.ie/",
+      "description": "The Official website of Leinster Rugby with news, match reports, player profiles, merchandise, ticket and hospitality information",
+      "followers": {
+        "facebook": 224200,
+        "twitter": 286200,
+        "instagram": 271600
+      },
+      "image_url": "https://i1.feedspot.com/4409553.jpg?t=1627447845"
+    },
+    {
+      "title": "Doha Rugby",
+      "feed_url": "https://doharfc.com/?format=feed",
+      "website_url": "https://doharfc.com/",
+      "description": "The club had the typical start of many Gulf expatriate clubs. Some like-minded, mainly British expatriate workers started throwing a rugby ball around. An 'official' club was formed in 1974 and was known as the Qatar Rugby Union Football Club. It is one of the oldest clubs of any type in Qatar and one of the oldest rugby clubs in the Arabian Gulf.",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 976,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4482961.jpg"
+    },
+    {
+      "title": "Darlington Mowden Park R.F.C.",
+      "feed_url": "https://www.mowdenpark.com/rss/news",
+      "website_url": "https://www.mowdenpark.com/",
+      "description": "The Latest News Articles From From Darlington Mowden Park R.F.C. National 1 Rugby Team, Premiership ladies team, thriving junior & Mini section - Great family club.",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/4483520.jpg?t=1627447946"
+    },
+    {
+      "title": "Plymouth Albion RFC",
+      "feed_url": "https://plymouthalbion.com/feed/",
+      "website_url": "https://plymouthalbion.com/",
+      "description": "Plymouth Albion RFC A Team for the City of Plymouth, UK",
+      "followers": {
+        "facebook": 14100,
+        "twitter": 10200,
+        "instagram": 9000
+      },
+      "image_url": "https://i1.feedspot.com/4483525.jpg"
+    },
+    {
+      "title": "Northern Suburbs Rugby",
+      "feed_url": "https://northsrugby.com.au/feed/",
+      "website_url": "https://northsrugby.com.au/news/",
+      "description": "Formed in 1900, NSRFC is one Sydney's most historic rugby clubs competing in Sydney's Premier Shute Shield Competition.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 893,
+        "instagram": 8900
+      },
+      "image_url": "https://i1.feedspot.com/4483336.jpg"
+    },
+    {
+      "title": "The Woods Blog",
+      "feed_url": "https://www.woods.rugby/",
+      "website_url": "https://www.woods.rugby/blog-feed.xml",
+      "description": "Rugby has been played in Eastwood since the latter part of last century and although the club did not achieve first division status in Sydney until 1947 the district has a long Rugby history. Prior to the First World War, a number of local sides existed playing in a local competition.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4483323.jpg"
+    },
+    {
+      "title": "Randwick District Rugby Union Football Club (RDRUFC)",
+      "feed_url": "https://randwickrugby.com.au/?format=feed",
+      "website_url": "https://randwickrugby.com.au/",
+      "description": "Randwick Rugby Club - est. 1882 - Home ground Coogee Oval - Up The Wicks.",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 3300,
+        "instagram": 12600
+      },
+      "image_url": "https://i1.feedspot.com/4483470.jpg?t=1627447997"
+    },
+    {
+      "title": "Blackrock College Rugby Football Club (RFC)",
+      "feed_url": "https://www.blackrockcollegerfc.ie/feed.xml",
+      "website_url": "https://www.blackrockcollegerfc.ie/",
+      "description": "Blackrock College RFC founded in 1882 is one of the oldest senior rugby clubs in Ireland. Here we will keep you up to date on games, results and upcoming events",
+      "followers": {
+        "facebook": 733,
+        "twitter": 4500,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4483556.jpg?t=1627449975"
+    },
+    {
+      "title": "Sligo RFC",
+      "feed_url": "https://www.sligorfc.ie/feed/",
+      "website_url": "https://www.scotlandrugbynews.com/",
+      "description": "The Home of Sligo Rugby",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 53
+      },
+      "image_url": "https://i1.feedspot.com/4483565.jpg"
+    },
+    {
+      "title": "Scotland Rugby",
+      "feed_url": "https://www.newsquest.co.uk/",
+      "website_url": "https://www.scotlandrugbynews.com/",
+      "description": "The home of Scotland Rugby News. Includes the latest independant Scottish rugby news, views, gossip, blogs, highlights and features.",
+      "followers": {
+        "facebook": 117500,
+        "twitter": 430700,
+        "instagram": 12000
+      },
+      "image_url": "https://i1.feedspot.com/4483861.jpg?t=1627450010"
+    },
+    {
+      "title": "Hartpury RFC",
+      "feed_url": "https://hartpuryrfc.co.uk/feed/",
+      "website_url": "https://hartpuryrfc.co.uk/",
+      "description": "National 1 Rugby Team",
+      "followers": {
+        "twitter": 10700
+      },
+      "image_url": "https://i1.feedspot.com/4483522.jpg"
+    },
+    {
+      "title": "Crowborough RFC News",
+      "feed_url": "https://www.crowboroughrugby.com/rss/news",
+      "website_url": "https://www.crowboroughrugby.com/",
+      "description": "The Latest News Articles From From Crowborough RFC Rugby Union Club East Sussex. Play entertaining, high quality rugby and be a great social venue for the local community.",
+      "followers": {
+        "facebook": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4482012.jpg?t=1627450043"
+    },
+    {
+      "title": "Boroughmuir Rugby Club",
+      "feed_url": "http://www.boroughmuirsports.co.uk/rss.xml",
+      "website_url": "https://www.connachtrugby.ie/",
+      "description": "Latest news from Boroughmuir Rugby and Community Sports Club - Edinburgh, Scotland. Boroughmuir Rugby, one of Scotland's Top Rugby Clubs, the only one to fly the Saltire.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4483595.jpg"
+    },
+    {
+      "title": "Guinness PRO12 Rugby Blog",
+      "feed_url": "https://www.pro14rugby.org/feed",
+      "website_url": "https://www.connachtrugby.ie/",
+      "description": "The official website for the Guinness PRO12 comprising of Irish, Welsh, Scottish and Italian clubs",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4482946.jpg?t=1627450230"
+    },
+    {
+      "title": "Connacht Rugby",
+      "feed_url": "https://www.connachtrugby.ie/feed/",
+      "website_url": "https://www.connachtrugby.ie/",
+      "description": "Connacht Rugby is one of four professional rugby teams in Ireland playing in both the GUINNESS PRO12 and the European Champions Cup.",
+      "followers": {
+        "facebook": 114700,
+        "twitter": 100200,
+        "instagram": 110600
+      },
+      "image_url": "https://i1.feedspot.com/4483561.jpg"
+    },
+    {
+      "title": "Rugby Shirt Watch",
+      "feed_url": "https://rugbyshirtwatch.com/feed/",
+      "website_url": "https://rugbyshirtwatch.com/",
+      "description": "Since 2013, Rugby Shirt Watch has been your home for the latest news and reviews of rugby shirts from every corner of the globe and both codes of the game. With high-quality images and reviews that blend in-depth knowledge of the game, rugby shirt lore and a fair dose of snark and sarcasm, Rugby Shirt Watch is your home for the new rugby stash.",
+      "followers": {
+        "facebook": 747,
+        "twitter": 62
+      },
+      "image_url": "https://i1.feedspot.com/4482328.jpg?t=1627447648"
+    },
+    {
+      "title": "Glasgow Hawks RFC",
+      "feed_url": "https://www.glasgowhawks.com/rss/news",
+      "website_url": "https://www.glasgowhawks.com/",
+      "description": "Glasgow Hawks is one of Scotland's leading rugby clubs. It provides the latest all types of news and articles from Glasgow Hawks RFC.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4483599.jpg?t=1611558264"
+    }
+  ]
+}

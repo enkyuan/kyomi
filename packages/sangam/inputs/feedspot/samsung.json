@@ -1,0 +1,121 @@
+{
+  "category": "Samsung",
+  "source_url": "https://rss.feedspot.com/samsung_rss_feeds",
+  "feeds": [
+    {
+      "title": "Samsung Global Newsroom",
+      "feed_url": "https://news.samsung.com/global/feed",
+      "website_url": "https://news.samsung.com/global/",
+      "description": "The official communications channel of Samsung Electronics, which provides the latest stories regarding its products, people and businesses.",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 682900
+      },
+      "image_url": "https://i1.feedspot.com/4475789.jpg?t=1762250637"
+    },
+    {
+      "title": "Samsung Developers Blog",
+      "feed_url": "https://developer.samsung.com/feed",
+      "website_url": "https://developer.samsung.com/blog/en-us",
+      "description": "The Samsung Developer Program is your gateway to design, development, and monetization of your content in the Samsung ecosystem. Join now to learn more about SDKs and APIs.",
+      "followers": {
+        "facebook": 229100,
+        "twitter": 38300,
+        "instagram": 11800
+      },
+      "image_url": "https://i1.feedspot.com/4902150.jpg?t=1668777463"
+    },
+    {
+      "title": "Samsung US Newsroom",
+      "feed_url": "https://news.samsung.com/us/feed/",
+      "website_url": "https://news.samsung.com/us/",
+      "description": "News and analysis about Samsung's world-changing ideas and innovations.",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 11200
+      },
+      "image_url": "https://i1.feedspot.com/5283081.jpg?t=1621604083"
+    },
+    {
+      "title": "Medium",
+      "feed_url": "https://medium.com/feed/samsung-internet-dev",
+      "website_url": "https://medium.com/samsung-internet-dev",
+      "description": "We are web developers who write articles, tutorials and opinions about web technologies primarily of interest to other web developers, along with other developer-relevent features for Samsung Internet and related products/services.",
+      "followers": {
+        "facebook": 229100,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5283080.jpg?t=1621603336"
+    },
+    {
+      "title": "Samsung Next Blog",
+      "feed_url": "https://www.samsungnext.com/blog?format=rss",
+      "website_url": "https://www.samsungnext.com/blog",
+      "description": "We focus broadly on these technology areas, but invest opportunistically in founders pursuing the imagined and impossible.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 37100
+      },
+      "image_url": "https://i1.feedspot.com/5283082.jpg?t=1621604687"
+    },
+    {
+      "title": "SamMobile",
+      "feed_url": "https://www.sammobile.com/feed/",
+      "website_url": "https://www.sammobile.com/news/",
+      "description": "SamMobile.com is a community for true Samsung fans sharing news, reviews, tutorials, hands-on, Kies Firmware, and much more.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 198600,
+        "instagram": 89900
+      },
+      "image_url": "https://i1.feedspot.com/4902144.jpg?t=1612934774"
+    },
+    {
+      "title": "Samsung Mobile Press",
+      "feed_url": "https://feeds.feedburner.com/samsungmobilepress/press",
+      "website_url": "https://www.samsungmobilepress.com/feature-stories/",
+      "description": "Samsung mobile press official site, Checking all information about the latest Samsung Smartphone, Tablet pc, Smartwatch, etc.",
+      "followers": {
+        "facebook": 61,
+        "twitter": 12400000,
+        "instagram": 2000000
+      },
+      "image_url": "https://i1.feedspot.com/4905628.jpg?t=1612934767"
+    },
+    {
+      "title": "Samsung Galaxy S7 and S7 Edge",
+      "feed_url": "http://samsungalaxysvii.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://samsungalaxysvii.blogspot.com/",
+      "description": "Know everything about Samsung's upcoming Galaxy Series Smartphones here. Here we are going to update you with all new concepts and rumors of next-generation high-end mobile devices.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4905662.jpg?t=1612935175"
+    },
+    {
+      "title": "Inside Galaxy",
+      "feed_url": "http://inside-galaxy.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://inside-galaxy.blogspot.com/",
+      "description": "Follow this blog to get tips, tricks, and resources on Samsung Galaxy.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4905786.jpg?t=1612935311"
+    },
+    {
+      "title": "Samsung Recovery Transfer",
+      "feed_url": "https://restore-samsung-contacts.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://restore-samsung-contacts.blogspot.com/",
+      "description": "Follow this blog to find some useful Samsung data recovery solutions, Samsung data transfer tips and Samsung backup restore tutorial to fix your problem.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4905790.jpg?t=1612935210"
+    },
+    {
+      "title": "Samsung Rumors",
+      "feed_url": "https://samsungrumors.net/feed/",
+      "website_url": "https://samsungrumors.net/",
+      "description": "Samsung Rumors provides every piece of interesting Samsung related news, rumors, updates and guides. It aims to bring you the very latest and greatest Samsung news every day. It provides breaking coverage for the Galaxy phone, tablet, Smart TV and much more.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 213
+      },
+      "image_url": "https://i1.feedspot.com/4905707.jpg?t=1612934786"
+    }
+  ]
+}

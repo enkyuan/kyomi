@@ -1,0 +1,74 @@
+{
+  "category": "Terraform",
+  "source_url": "https://rss.feedspot.com/terraform_rss_feeds",
+  "feeds": [
+    {
+      "title": "HashiCorp Blog \u00bb Terraform",
+      "feed_url": "https://www.hashicorp.com/blog/products/terraform/feed.xml",
+      "website_url": "https://www.hashicorp.com/blog/products/terraform",
+      "description": "Terraform is a platform for building, changing, and managing infrastructure in a safe, repeatable way. At HashiCorp, we believe infrastructure enables innovation, and we are helping organizations to operate that infrastructure in the cloud. Mitchell Hashimoto and Armon Dadgar founded HashiCorp in 2012 with the goal of solving some of the hardest, most important problems in infrastructure management.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 99500
+      },
+      "image_url": "https://i1.feedspot.com/5430806.jpg?t=1660114554"
+    },
+    {
+      "title": "Build5Nines \u00bb Terraform",
+      "feed_url": "https://build5nines.com/category/devops/terraform/feed/",
+      "website_url": "https://build5nines.com/category/terraform/",
+      "description": "HashiCorp Terraform is an IaC tool to help you more reliably deploy and manage infrastructure deployments across one or more clouds, or even on-premise. Our blog updates you with the latest Terraform news and information. Build5Nines is a showcase of unique and aggregated content that focuses on everything within the Cloud & Enterprise technology space.",
+      "followers": {
+        "facebook": 681,
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/5438531.jpg?t=1662373084"
+    },
+    {
+      "title": "Nico Vibert \u00bb Terraform",
+      "feed_url": "https://nicovibert.com/category/automation/terraform/feed/",
+      "website_url": "https://nicovibert.com/category/automation/terraform/",
+      "description": "Nico Vibert gives us his insight about Terraform and how it integrates with other products and software. Nico is a Senior Technical Marketing Engineer and he covers topics on his blog that interest him, revolving around networking, cloud and automation. He has worked at HashiCorp, VMware and Cisco, and has a strong technical background with 17 certifications.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5430805.jpg?t=1660114849"
+    },
+    {
+      "title": "John Folberth Blog \u00bb Terraform",
+      "feed_url": "https://blog.johnfolberth.com/category/professional/terraform/feed/",
+      "website_url": "https://blog.johnfolberth.com/category/professional/terraform/",
+      "description": "Read blogs by John Folberth where he discusses his experience with using Terraform and also provides a study guide for it. He is a well rounded DevOps/Cloud Architect as well as a Microsoft Certified Trainer (MCT) holding numerous Azure and AWS certifications.",
+      "followers": {
+        "twitter": 195
+      },
+      "image_url": "https://i1.feedspot.com/5430811.jpg?t=1660114651"
+    },
+    {
+      "title": "LifeOfBrianOC \u00bb Terraform",
+      "feed_url": "https://lifeofbrianoc.com/category/terraform/feed/",
+      "website_url": "https://lifeofbrianoc.com/category/terraform/",
+      "description": "My name is Brian O'Connell and my blog consists of posts titled Terraform Learnings. I work for VMware as part of the Cloud Infrastructure Business Group working on VMware Validated Designs, VMware Validated Solutions & VMware Cloud Foundation. I am an IT geek at heart and love playing with new technologies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5430808.jpg?t=1660115500"
+    },
+    {
+      "title": "Middleware Inventory Blog \u00bb Terraform",
+      "feed_url": "https://www.middlewareinventory.com/blog/category/terraform/feed/",
+      "website_url": "https://www.middlewareinventory.com/blog/category/terraform/",
+      "description": "Get an inventory of information on Terraform and how to use it. Middleware inventory is an IT solution provider and a brand owned by Gritfy Technologies. They primarily work with Cloud Infrastructure Consulting and Support, DevSecOps Consulting and Support, WebServices and Applications Development, and Mobile Application Development.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5430812.jpg?t=1660115888"
+    },
+    {
+      "title": "Weekly.tf",
+      "feed_url": "https://www.weekly.tf/?format=rss",
+      "website_url": "https://www.weekly.tf/",
+      "description": "Read regular updates, information and tips on Terraform. Weekly.tf is a weekly newsletter dedicated to the Terraform ecosystem curated by Anton Babenko.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5430809.jpg?t=1660114949"
+    }
+  ]
+}

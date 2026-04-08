@@ -1,0 +1,95 @@
+{
+  "category": "UK UX",
+  "source_url": "https://rss.feedspot.com/uk_ux_rss_feeds",
+  "feeds": [
+    {
+      "title": "UX Connections Blog",
+      "feed_url": "https://www.uxconnections.com/feed/",
+      "website_url": "https://www.uxconnections.com/blog/",
+      "description": "Read all the latest news about UX design and tech, alongside our UX consultants' thoughts on industry happenings. UX Connections is a user experience research and design agency based in London, UK and Gothenburg, Sweden.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 7300,
+        "instagram": 567
+      },
+      "image_url": "https://i1.feedspot.com/5676995.jpg?t=1695386319"
+    },
+    {
+      "title": "Experience UX Blog",
+      "feed_url": "https://www.experienceux.co.uk/feed/",
+      "website_url": "https://www.experienceux.co.uk/ux-blog/",
+      "description": "Read the latest User Experience insights and blog articles from our team of User Researchers and UX Consultants. We're a team of researchers and consultants committed to simplifying digital experiences by understanding user behaviour.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5385029.jpg?t=1695388119"
+    },
+    {
+      "title": "Creative Navy",
+      "feed_url": "https://medium.com/feed/@creativenavy",
+      "website_url": "https://lab.interface-design.co.uk/",
+      "description": "Read insightful, enlightening writings from Creative Navy on Medium. Creative Navy is a UX/UI design agency specializing in medical and embedded GUI. By combining extensive knowledge of cognitive science and rigorous research methods, their team crafts intuitive solutions for complex design problems.",
+      "followers": {
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5215200.jpg?t=1697458851"
+    },
+    {
+      "title": "Bunnyfoot Blog",
+      "feed_url": "https://www.bunnyfoot.com/feed/",
+      "website_url": "https://www.bunnyfoot.com/blog/",
+      "description": "Bunnyfoot is the UK's leading UX consultancy. We help our clients to create positive, profitable, and superior user experiences both online and off. Make sure you're up to date with all the latest thoughts, articles & musings from the team to help you get ahead in your digital ventures with their UX blog.",
+      "followers": {
+        "facebook": 943,
+        "twitter": 2400,
+        "instagram": 428
+      },
+      "image_url": "https://i1.feedspot.com/5676996.jpg?t=1695386371"
+    },
+    {
+      "title": "UX Academy Blog",
+      "feed_url": "https://myuxacademy.com/feed/",
+      "website_url": "https://myuxacademy.com/ux-design-blogs/",
+      "description": "UX Academy delivers UX & UI design courses in London covering user experience, user research, user interface, and conversational design. Read their UX design blogs and find out the reasons to choose us and why we are different from the other UX Design Courses Academies.",
+      "followers": {
+        "facebook": 2700,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5676994.jpg?t=1695386217"
+    },
+    {
+      "title": "UX Digital Blog",
+      "feed_url": "https://blog.ux-digital.co.uk/rss.xml",
+      "website_url": "https://blog.ux-digital.co.uk/",
+      "description": "UX Digital is a digital marketing blog covering HubSpot, Inbound Marketing, Social Media Marketing, SEO, Website Design, Conversational Marketing, and more. Discover successful web design strategies, marketing insights, and throughout leadership on digital marketing innovation throughout this feed.",
+      "followers": {
+        "facebook": 138,
+        "twitter": 2400,
+        "instagram": 495
+      },
+      "image_url": "https://i1.feedspot.com/5676992.jpg?t=1695386057"
+    },
+    {
+      "title": "UserLab Blog",
+      "feed_url": "https://www.userlab.co.uk/ux-blog?format=rss",
+      "website_url": "https://www.userlab.co.uk/ux-blog",
+      "description": "Articles about user-experience (UX) research, usability and user testing from our specialist user-research team. We use design research to help you understand more about your customers so that you can build products that meet real user needs.",
+      "followers": {
+        "twitter": 141,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5385023.jpg?t=1648212449"
+    },
+    {
+      "title": "UX Global Blog",
+      "feed_url": "https://www.uxglobal.co.uk/feed/",
+      "website_url": "https://www.uxglobal.co.uk/uxg-blog-2/",
+      "description": "Stay up-to-date with UX Global highlights. UX Global is a Leeds-based digital display specialist, that uses cutting-edge technology to enable retailers, developers, architects, specifiers, ad agencies, and others to create memorable and engaging customer and employee experiences for brands big and small.",
+      "followers": {
+        "twitter": 227,
+        "instagram": 518
+      },
+      "image_url": "https://i1.feedspot.com/5676993.jpg?t=1695386116"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "category": "Medicare",
+  "source_url": "https://rss.feedspot.com/medicare_rss_feeds",
+  "feeds": [
+    {
+      "title": "Medicare Rights Center",
+      "feed_url": "https://www.medicarerights.org/feed",
+      "website_url": "https://www.medicarerights.org/latest",
+      "description": "Visit the Medicare Rights blog for the latest information about Medicare and the Medicare Rights Center. The Medicare Rights Center is a national, nonprofit consumer service organization, dedicated to ensuring that older adults and people with disabilities get the quality health care they need.",
+      "followers": {
+        "facebook": 13700,
+        "twitter": 7300
+      },
+      "image_url": "https://i1.feedspot.com/5434458.jpg?t=1661231258"
+    },
+    {
+      "title": "SHIP Medicare Blog",
+      "feed_url": "https://www.shiphelp.org/rss/blog",
+      "website_url": "https://www.shiphelp.org/about-medicare/blog",
+      "description": "Read interesting Medicare-specific content in SHIPs' Blog. SHIP provides training, technical assistance, and promotions in support of the national State Health Insurance Assistance Program. The SHIP Mission is to empower, educate, and assist Medicare-eligible individuals, their families, and caregivers through objective outreach, counseling, and training.",
+      "followers": {
+        "facebook": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5434461.jpg?t=1661231369"
+    },
+    {
+      "title": "340 & Resources From Ravin Consultants Blog",
+      "feed_url": "https://www.ravinconsultants.com/feed/",
+      "website_url": "https://www.ravinconsultants.com/340b-resources/340blog/",
+      "description": "Your go-to resource for staying informed and empowered in the ever-evolving landscape of 340B. Ravin's 340Blog explores a wealth of expert insights, industry hot topics, and invaluable tips for maximizing success in the 340B program. Stay ahead of the curve with the latest trends and join our community dedicated to navigating the intricacies of 340B with finesse.",
+      "followers": {
+        "facebook": 369,
+        "twitter": 56
+      },
+      "image_url": "https://i1.feedspot.com/7284399.jpg?t=1711543145"
+    },
+    {
+      "title": "Gentle Medicare Guide",
+      "feed_url": "https://gentlemedicareguide.com/news/rss.xml",
+      "website_url": "https://gentlemedicareguide.com/news",
+      "description": "Explore Medicare coverage, costs, and enrollment tools to make confident healthcare decisions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/fsppublisher/9267835/page/8798937/logo_1762955941.png"
+    },
+    {
+      "title": "Medicare Hero Blog",
+      "feed_url": "https://medicarehero.com/feed/",
+      "website_url": "https://medicarehero.com/blog/",
+      "description": "Learn about Medicare options on the Medicare Hero Blog. Medicare Hero is a family-owned insurance agency dedicated to helping seniors find the best Medicare coverage for the lowest price available. Our mission is to provide you with the information, guidance, and excellent customer service",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 19,
+        "instagram": 556
+      },
+      "image_url": "https://i1.feedspot.com/5434456.jpg?t=1661232107"
+    },
+    {
+      "title": "Medicare Architect Blog",
+      "feed_url": "https://themedicarearchitect.com/feed/",
+      "website_url": "https://themedicarearchitect.com/blog/",
+      "description": "Stay up-to-date on the latest happenings with Medicare. Medicare Architects, is a company focused on providing employers with the team, tools, and technology. We are the Medicare Blueprint Builder. We are not here to sell you a product. We are here to help you make a fact-based Medicare decision.",
+      "followers": {
+        "facebook": 22
+      },
+      "image_url": "https://i1.feedspot.com/5434460.jpg?t=1661231880"
+    },
+    {
+      "title": "Medicare Portal Blog",
+      "feed_url": "https://medicareportal.org/feed/",
+      "website_url": "https://mpgroup.org/medicare-portal-blog/",
+      "description": "Get updated information about Medicare benefits. Medicare Portal is your trusted guide and resource for Medicare education, enrollment, and services for beneficiaries. We offer lifetime support to our clients by providing updates on changes in Medicare. We strive to advance the platform for assisting seniors.",
+      "followers": {
+        "facebook": 227,
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/5434457.jpg?t=1661231316"
+    },
+    {
+      "title": "Medicare Today News",
+      "feed_url": "https://www.medicaretoday.org/news/feed/",
+      "website_url": "https://www.medicaretoday.org/news/",
+      "description": "The Healthcare Leadership Council, a team of chief executives from all disciplines within the healthcare system, has launched Medicare Today to reach out to Medicare beneficiaries who needed reliable information. We convene and educate healthcare stakeholders. Medicare Today is dedicated to ensuring beneficiaries have the resources they need to obtain healthcare and prescription medications.",
+      "followers": {
+        "twitter": 442
+      },
+      "image_url": "https://i1.feedspot.com/5434459.jpg?t=1661232078"
+    },
+    {
+      "title": "Braden Medicare Blog",
+      "feed_url": "https://www.bradenmedicare.com/blog/f.atom",
+      "website_url": "https://www.bradenmedicare.com/blog",
+      "description": "We are a Full-Service Insurance company and although we specialize in Medicare Insurance, including Medicare Supplement plans which are also known as Medigap plans. We also offer Medicare Part C (Medicare Advantage plans) and Medicare Prescription Drug Plans. Our Braden Medicare Blog contains helpful, timely, and useful Information for Medicare beneficiaries and their families throughout Arizona.",
+      "followers": {
+        "twitter": 8
+      },
+      "image_url": "https://i1.feedspot.com/5555127.jpg?t=1683106203"
+    },
+    {
+      "title": "Senior Advisors Medicare Blog",
+      "feed_url": "https://senior-advisors.com/blog/",
+      "website_url": "https://senior-advisors.com/blog/",
+      "description": "Get the latest news on medicare. At Senior Advisors, we offer a wide range of Medicare Plans to seniors. We want to help our clients to better understand the ins and outs of their Medicare coverage. Our top priority is to reduce stress for Medicare beneficiaries, by providing education, and an overview of medicare.",
+      "followers": {
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/5434468.jpg?t=1661231978"
+    }
+  ]
+}

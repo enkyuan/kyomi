@@ -1,0 +1,74 @@
+{
+  "category": "CFL",
+  "source_url": "https://rss.feedspot.com/cfl_rss_feeds",
+  "feeds": [
+    {
+      "title": "CFL.ca News",
+      "feed_url": "https://www.cfl.ca/feed/rss/",
+      "website_url": "https://www.cfl.ca/",
+      "description": "Official site of the Canadian Football League",
+      "followers": {
+        "facebook": 281500,
+        "twitter": 315200,
+        "instagram": 255600
+      },
+      "image_url": "https://i1.feedspot.com/5476087.jpg?t=1670311246"
+    },
+    {
+      "title": "CFLPA News",
+      "feed_url": "https://cflpa.com/feed",
+      "website_url": "https://cflpa.com/category/news",
+      "description": "The Canadian Football League Players Association was established in 1965 and has since that time represented the professional football players in the Canadian Football League with the objective of establishing fair and reasonable working conditions for the players.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 13100,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5476077.jpg?t=1670311672"
+    },
+    {
+      "title": "3DownNation",
+      "feed_url": "https://3downnation.com/feed/",
+      "website_url": "https://3downnation.com/",
+      "description": "3DownNation is a website dedicated to covering all things Canadian football. Founded in 2015 by veteran CFL writer Drew Edwards while reporting for the Hamilton Spectator, ownership of the site was transferred from Torstar Corporation to its contributors in January 2019 and subsequently sold to Catena Media in March 2022.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 21100,
+        "instagram": 7600
+      },
+      "image_url": "https://i1.feedspot.com/5049594.jpg?t=1670401149"
+    },
+    {
+      "title": "CFLAA Blog",
+      "feed_url": "https://www.cflaa.ca/feed/",
+      "website_url": "https://www.cflaa.ca/blog/",
+      "description": "Founded in 2008, The CFLAA supports former CFL players, Canadian football, and other communities of interest while fostering collaborative relationships with CFL stakeholders and others that enhance the well-being of our members and friends. We strive to unite all local CFL Alumni Associations and their membership of former players.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 3100,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5476079.jpg?t=1670311914"
+    },
+    {
+      "title": "613 Sports Blog \u00bb CFL",
+      "feed_url": "https://613sportsblog.com/tag/cfl/feed/",
+      "website_url": "https://613sportsblog.com/tag/cfl/",
+      "description": "Ottawa Sports Live Here",
+      "followers": {
+        "facebook": 235,
+        "twitter": 1200,
+        "instagram": 467
+      },
+      "image_url": "https://i1.feedspot.com/5476078.jpg?t=1670311323"
+    },
+    {
+      "title": "SportsNet \u00bb CFL",
+      "feed_url": "https://www.sportsnet.ca/football/cfl/",
+      "website_url": "https://www.sportsnet.ca/football/cfl/",
+      "description": "Get minute-to-minute updates on CFL. Sportsnet connects Canadian sports fans to their favorite teams and athletes, using four platforms: TV, radio, online, and mobile. As Canada's no.1 Sports Media Brand, Sportsnet delivers storytelling on a local, regional, national and global level. Sportsnet also offers an exciting sports lineup including the Toronto Raptors, NBA, Grand Slam of Curling, Rogers Cup, CHL, the MasterCard Memorial Cup, WWE, IndyCar, and extensive soccer programming including Premier League, Bundesliga, FA Cup, and 2018 FIFA World Cup European Qualifiers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5476085.jpg?t=1670311879"
+    }
+  ]
+}

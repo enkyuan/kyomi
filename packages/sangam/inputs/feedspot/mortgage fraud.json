@@ -1,0 +1,38 @@
+{
+  "category": "Mortgage Fraud",
+  "source_url": "https://rss.feedspot.com/mortgage_fraud_rss_feeds",
+  "feeds": [
+    {
+      "title": "Point Predictive Blog",
+      "feed_url": "https://pointpredictive.com/feed/",
+      "website_url": "https://pointpredictive.com/blog/",
+      "description": "We focus on helping our clients leverage their data in combination with powerful industry fraud consortium data to mine historical fraud patterns and build production-ready models. Our expertise is in predictive science.",
+      "followers": {
+        "twitter": 130
+      },
+      "image_url": "https://i1.feedspot.com/5471066.jpg?t=1669207810"
+    },
+    {
+      "title": "Mortgage Fraud Blog",
+      "feed_url": "https://feeds.feedburner.com/MortgageFraudBlog",
+      "website_url": "http://www.mortgagefraudblog.com/",
+      "description": "Rachel Dollar, the editor of Mortgage Fraud Blog is a California attorney and Certified Mortgage Banker who handles litigation for mortgage lenders, servicers, and financial institutions. My mission is to raise awareness about the significant issues caused by mortgage fraud.",
+      "followers": {
+        "facebook": 724,
+        "twitter": 941
+      },
+      "image_url": "https://i1.feedspot.com/4640314.jpg?t=1669207877"
+    },
+    {
+      "title": "First American Data & Analytics \u00bb Mortgage Fraud",
+      "feed_url": "https://dna.firstam.com/insights-blog/tag/mortgage-fraud/rss.xml",
+      "website_url": "https://dna.firstam.com/insights-blog/tag/mortgage-fraud",
+      "description": "Our broad and innovative datasets demonstrate our commitment to a comprehensive data strategy. With the deepest title data assets in the industry - the best information on ownership - and the largest collection of public record documents, First American Data & Analytics empowers customers to make informed data-driven business, compliance, and risk decisions. Stay up-to-date on property data insights, real estate industry trends, and product news.",
+      "followers": {
+        "facebook": 60,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5471068.jpg?t=1669208561"
+    }
+  ]
+}

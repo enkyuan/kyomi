@@ -1,0 +1,79 @@
+{
+  "category": "Scala",
+  "source_url": "https://rss.feedspot.com/scala_rss_feeds",
+  "feeds": [
+    {
+      "title": "Haoyi's Programming Blog",
+      "feed_url": "https://www.lihaoyi.com/feed.xml",
+      "website_url": "https://www.lihaoyi.com/",
+      "description": "Li Haoyi is currently with the Scala, Python and Javascript programming languages, and am interested in the static analysis, compilers, web development, and developer tools.",
+      "followers": {
+        "twitter": 9900
+      },
+      "image_url": "https://i1.feedspot.com/4481127.jpg?t=1612263203"
+    },
+    {
+      "title": "Scalac Blog",
+      "feed_url": "https://scalac.io/blog/feed/",
+      "website_url": "https://scalac.io/blog/",
+      "description": "Scalac is a custom software development, training and consulting company specializing in Scala, Akka, Clojure, and wearable technologies. Learn about technologies, functional programming, find solutions to your challenges.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4868767.jpg?t=1612263225"
+    },
+    {
+      "title": "Jetbrains \u00bb The Scala Plugin",
+      "feed_url": "https://blog.jetbrains.com/scala/feed/",
+      "website_url": "https://blog.jetbrains.com/scala/",
+      "description": "JetBrains is a cutting-edge software vendor specializing in the creation of intelligent development tools, including IntelliJ IDEA - the leading Java IDE, and the Kotlin programming language. With this major version, we've focused primarily on the performance and overall quality of the plugin. We've still added a number of new features to help with day-to-day Scala programming.",
+      "followers": {
+        "facebook": 117500,
+        "twitter": 201100,
+        "instagram": 112700
+      },
+      "image_url": "https://i1.feedspot.com/5286581.jpg?t=1622454907"
+    },
+    {
+      "title": "Scala Prof",
+      "feed_url": "http://scalaprof.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://scalaprof.blogspot.com/",
+      "description": "Typically this blog will show the solutions to various problems, expressed in Scala. This is essentially a follow-on blog from 'Robin's Software Blog' which is generally about Java.",
+      "followers": {
+        "twitter": 57
+      },
+      "image_url": "https://i1.feedspot.com/4868706.jpg?t=1612263216"
+    },
+    {
+      "title": "Scala Documentation",
+      "feed_url": "https://scala-lang.org/feed/index.xml",
+      "website_url": "https://docs.scala-lang.org/getting-started/scala-ides.html/",
+      "description": "Scala IDE provides advanced editing and debugging support for the development of pure Scala and mixed Scala-Java applications. This blog is to get news from the free and open-source Scala IDE for Eclipse.",
+      "followers": {
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/480039.jpg?t=1612263221"
+    },
+    {
+      "title": "Akka Blog",
+      "feed_url": "https://akka.io/atom.xml",
+      "website_url": "https://akka.io/blog",
+      "description": "Build powerful reactive, concurrent, and distributed applications in Java and Scala through Akka.",
+      "followers": {
+        "twitter": 16200
+      },
+      "image_url": "https://i1.feedspot.com/4868762.jpg?t=1612263190"
+    },
+    {
+      "title": "The Scala Programming Language Blog",
+      "feed_url": "https://www.scala-lang.org/feed/blog.xml",
+      "website_url": "https://www.scala-lang.org/blog/",
+      "description": "Scala combines object-oriented and functional programming in one concise, high-level language. Scala's static types help avoid bugs in complex applications, and its JVM and JavaScript runtimes let you build high-performance systems with easy access to huge ecosystems of libraries.",
+      "followers": {
+        "twitter": 31600
+      },
+      "image_url": "https://i1.feedspot.com/4868124.jpg?t=1612263206"
+    }
+  ]
+}

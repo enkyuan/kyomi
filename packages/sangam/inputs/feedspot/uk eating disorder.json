@@ -1,0 +1,55 @@
+{
+  "category": "UK Eating Disorder",
+  "source_url": "https://rss.feedspot.com/uk_eating_disorder_rss_feeds",
+  "feeds": [
+    {
+      "title": "National Centre for Eating Disorders",
+      "feed_url": "https://eating-disorders.org.uk/feed/",
+      "website_url": "https://eating-disorders.org.uk/news/",
+      "description": "National Centre for Eating Disorders offer professional treatment and help for eating disorders in London and the UK. And also offer counselling for anorexia, bulimia, binge eating, etc",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 605
+      },
+      "image_url": "https://i1.feedspot.com/4906059.jpg?t=1613717235"
+    },
+    {
+      "title": "Rebecca Quinlan Blog",
+      "feed_url": "https://www.bexquinlan.com/feed",
+      "website_url": "https://www.bexquinlan.com/blog",
+      "description": "Bex's blog shares her anorexia recovery journey & discusses eating disorders & mental health. Rebecca Quinlan's aim is to talk about the little things that make a BIG difference for those who are suffering or have suffered from Anorexia.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4672309.jpg?t=1611066451"
+    },
+    {
+      "title": "Eleven and anorexic",
+      "feed_url": "http://www.elevenandanorexic.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.elevenandanorexic.com/",
+      "description": "A blog about anorexia authored by the Undulating Runner.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4836228.jpg?t=1611066776"
+    },
+    {
+      "title": "Bev Mattocks | Mother, Writer & Eating Disorders Awareness Advocate",
+      "feed_url": "https://anorexiaboyrecovery.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://anorexiaboyrecovery.blogspot.com/",
+      "description": "Boys get eating disorders, too, just like girls. In 2009 Bev Mattocks Osborne's 15-year old son developed anorexia. Now, aged 23 and studying for a Masters Degree at university, he is thankfully recovered. This blog is her story. Bev is a 57-year old freelance copywriter lives in Yorkshire, UK.",
+      "followers": {
+        "twitter": 24
+      },
+      "image_url": "https://i1.feedspot.com/4669882.jpg?t=1611066411"
+    },
+    {
+      "title": "Schoen Clinic News",
+      "feed_url": "https://www.schoen-clinic.co.uk/news-press-media/feed/blog-feed.xml",
+      "website_url": "https://www.schoen-clinic.co.uk/news-press-media",
+      "description": "Newbridge House Blog is focused on children and young people with eating disorders. Newbridge House provide specialist treatments for anorexia nervosa, bulimia and binge eating.",
+      "followers": {
+        "twitter": 717
+      },
+      "image_url": "https://i1.feedspot.com/4670700.jpg?t=1613717251"
+    }
+  ]
+}

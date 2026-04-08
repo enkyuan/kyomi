@@ -1,0 +1,569 @@
+{
+  "category": "SQL",
+  "source_url": "https://rss.feedspot.com/sql_rss_feeds",
+  "feeds": [
+    {
+      "title": "SQLServerCentral Blog",
+      "feed_url": "https://www.sqlservercentral.com/blogs/feed",
+      "website_url": "https://www.sqlservercentral.com/blogs",
+      "description": "SQLServerCentral is the #1 education & community site for SQL Server, featuring Articles, News, Forums, Q&A, Scripts, Tutorials & Book Reviews.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 14100
+      },
+      "image_url": "https://i1.feedspot.com/46444.jpg?t=1616046253"
+    },
+    {
+      "title": "SQL Authority Blog",
+      "feed_url": "https://blog.sqlauthority.com/feed/",
+      "website_url": "https://blog.sqlauthority.com/",
+      "description": "Pinal Dave is an SQL Server Performance Tuning Expert and independent consultant with over 20 years of hands-on experience. His Blog covers latest news, and information on SQL Server Performance Tuning Issues.",
+      "followers": {
+        "facebook": 70800,
+        "twitter": 20300
+      },
+      "image_url": "https://i1.feedspot.com/4619244.jpg?t=1662379338"
+    },
+    {
+      "title": "Brent Ozar Blog",
+      "feed_url": "https://www.brentozar.com/blog/feed/",
+      "website_url": "https://www.brentozar.com/blog/",
+      "description": "The Brent Ozar Unlimited\u00ae blog covers SQL server news and free SQL Server training tips about clustering, AlwaysOn, performance tuning, T-SQL, and more.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 34000,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4431822.jpg?t=1616046278"
+    },
+    {
+      "title": "Glenn's SQL Server Performance Blog",
+      "feed_url": "https://glennsqlperformance.com/feed/",
+      "website_url": "https://glennsqlperformance.com/glenns-blog/",
+      "description": "Glenn's SQL Server Performance blog is focused on improving SQL Server performance and scalability.",
+      "followers": {
+        "twitter": 9600
+      },
+      "image_url": "https://i1.feedspot.com/1881037.jpg?t=1630069545"
+    },
+    {
+      "title": "SQL Server with Mr. Denny",
+      "feed_url": "https://www.dcac.co/author/admin/feed/",
+      "website_url": "https://www.dcac.co/author/admin/",
+      "description": "Interesting tidbits about Microsoft SQL Server (and lots of other stuff about IT) that will help you build a rock solid database server and keep it running for many years to come.",
+      "followers": {
+        "facebook": 501,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/1117831.jpg?t=1616046286"
+    },
+    {
+      "title": "Redgate Software Blog",
+      "feed_url": "https://www.red-gate.com/blog/feed",
+      "website_url": "https://www.red-gate.com/blog",
+      "description": "Redgate makes ingeniously simple tools used by over 600,000 SQL Server, .NET, and Oracle professionals worldwide.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 18400
+      },
+      "image_url": "https://i1.feedspot.com/4619371.jpg?t=1616046290"
+    },
+    {
+      "title": "SQL Server Log Explorer",
+      "feed_url": "https://www.sqlserverlogexplorer.com/feed/",
+      "website_url": "https://www.sqlserverlogexplorer.com/",
+      "description": "Know about the latest blogs and recent product updates. SQL Server Log Explorer is an instructive blog site that targets the most inquisitive and intrusive queries concerning SQL Server Log Files. The site shares all expert-level solutions and advice related to - fixing, troubleshooting, exploring, and looking into the Server Log files.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5661086.jpg?t=1693480602"
+    },
+    {
+      "title": "SQL Studies",
+      "feed_url": "https://sqlstudies.com/feed/",
+      "website_url": "https://sqlstudies.com/",
+      "description": "This blog is to share some of the interesting bits and pieces I've either learned over the years or that I'm just now learning.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4649748.jpg?t=1616046419"
+    },
+    {
+      "title": "Oracle",
+      "feed_url": "https://blogs.oracle.com/sql/rss",
+      "website_url": "https://blogs.oracle.com/sql/",
+      "description": "This is the Oracle SQL blog celebrating the joy and power of Oracle SQL with the Oracle Developer Advocate team. Follow to get daily Oracle SQL tips from the Oracle Developer Advocates for SQL.",
+      "followers": {
+        "facebook": 256100,
+        "twitter": 25300
+      },
+      "image_url": "https://i1.feedspot.com/5292088.jpg?t=1623332137"
+    },
+    {
+      "title": "MSSQLTips",
+      "feed_url": "https://feeds.feedburner.com/MSSQLTips-LatestSqlServerTips",
+      "website_url": "https://www.mssqltips.com/",
+      "description": "MSSQLTips.com solves real-world problems and improves the careers of SQL Server DBAs, Developers, Business Intelligence Pros, and Cloud Pros with free tips, tutorials, webcasts, videos, and more. Check out the latest articles related to SQL Server.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 20900
+      },
+      "image_url": "https://i1.feedspot.com/5287012.jpg?t=1622530720"
+    },
+    {
+      "title": "{coding}Sight",
+      "feed_url": "https://codingsight.com/feed/",
+      "website_url": "https://codingsight.com/",
+      "description": "Codingsight is the learning platform for .NET developers, SQL Server DBAs, programmers, web specialists, and all who is involved in a software development",
+      "followers": {
+        "facebook": 536,
+        "twitter": 910
+      },
+      "image_url": "https://i1.feedspot.com/4874114.jpg?t=1616046317"
+    },
+    {
+      "title": "ThatJeffSmith",
+      "feed_url": "http://www.thatjeffsmith.com/feed/",
+      "website_url": "http://www.thatjeffsmith.com/",
+      "description": "ThatJeffSmith blog is about tips and tricks for Oracle SQL Developer, SQLcl, SQL Developer Data Modeler, and Oracle REST Data Services. My primary goal is to help you save time when working with Oracle Database. If I can ALSO make what you're currently doing a little more fun, then that's a big bonus for me.",
+      "followers": {
+        "twitter": 16200
+      },
+      "image_url": "https://i1.feedspot.com/1473217.jpg?t=1616046330"
+    },
+    {
+      "title": "SQLpassion Blog",
+      "feed_url": "https://www.sqlpassion.at/feed/",
+      "website_url": "https://www.sqlpassion.at/blog/",
+      "description": "Hi! I'm Klaus Aschenbrenner. With my company, SQLpassion, I provide high-quality SQL Server consulting services across Europe. I'm specialized in optimizing SQL Server installations, implementing performance improvements and high availability options, and provide consulting services across the whole SQL Server platform. I help people around the world to understand, implement, and run SQL Server installations in their environments.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5291870.jpg?t=1623314105"
+    },
+    {
+      "title": "Straight Path Solutions - SQL Server Consulting Blog",
+      "feed_url": "https://straightpathsql.com/feed/",
+      "website_url": "https://straightpathsql.com/blog/",
+      "description": "Straight Path Solutions is a team of SQL Server consultants with many years of experience and a drive to help clients succeed. They help you make your data and performance problems go away while teaching you tips and tricks to solve them on your.",
+      "followers": {
+        "facebook": 255,
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/4619461.jpg?t=1616046756"
+    },
+    {
+      "title": "SQL Server Fast Blog",
+      "feed_url": "https://sqlserverfast.com/feed/",
+      "website_url": "https://sqlserverfast.com/blog/",
+      "description": "Hi! I'm Hugo Kornelis. SQLServerFast is your online resource for SQL Server query tuning. I have spent the last years specializing in SQL Server development, with a specific deep specialization in query performance tuning. I have a broad understanding of SQL Server outside my main specialization, so I can also help with many related tasks.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5291878.jpg?t=1623314826"
+    },
+    {
+      "title": "TomazTsql",
+      "feed_url": "https://tomaztsql.wordpress.com/feed/",
+      "website_url": "https://tomaztsql.wordpress.com/",
+      "description": "Tomaz Kastrun is a BI / DEV developer and data analyst. With more than 15 years of experience in the field of databases, business warehouses, and development, with a focus on T-SQL programming and query optimization. Follow this blog to get articles on BI & DEV with SQL Server and R, Python, Power BI, Azure, and beyond.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4889371.jpg?t=1612588695"
+    },
+    {
+      "title": "The SQL Herald",
+      "feed_url": "https://joeydantoni.com/feed/",
+      "website_url": "https://joeydantoni.com/",
+      "description": "Hello, My name is Joey D'Antoni. The SQL Herald is a blog about SQL Server, Cloud Computing, and Enterprise IT. Follow to get the latest articles.",
+      "followers": {
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5291868.jpg?t=1623310538"
+    },
+    {
+      "title": "Niko Neugebauer | SQL Server, Data Platform & Community",
+      "feed_url": "https://www.nikoport.com/feed/",
+      "website_url": "https://www.nikoport.com/",
+      "description": "Hi! My name is Niko Neugebauer and I am a Software Designer, living in Portugal. I work as a Senior Program Manager at Microsoft. In recent years, I am being fascinated by data and its analysis. Especially I enjoy working with SQL Server & Azure SQL Database, which have become the main tool of my daily job. Read my blog covering articles about SQL server, columnstore, data platform & community.",
+      "followers": {
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5291879.jpg?t=1623318943"
+    },
+    {
+      "title": "A Shot of SQLEspresso",
+      "feed_url": "https://sqlespresso.com/feed/",
+      "website_url": "https://sqlespresso.com/",
+      "description": "Monica Rathbun is a Microsoft MVP for Data Platform, VMWare vExpert, and Microsoft Certified Solutions Expert. She has nearly two decades of experience working with a wide variety of database platforms with a focus on SQL Server and the Microsoft Data Platform. She is passionate about SQL Server and the SQL Server community and shares her thoughts & opinions on her blog SQLEspresso.",
+      "followers": {
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/5291876.jpg?t=1623313702"
+    },
+    {
+      "title": "JBs Wiki",
+      "feed_url": "https://jbswiki.com/feed/",
+      "website_url": "https://jbswiki.com/",
+      "description": "12+ years in IT; development of conceptual, logical, and physical data models; data quality; SQL; performance tuning; replication; and solving object-relational mapping challenges; analysis of business and technical requirements, and mapping them to implementation strategies and design (system/application architecture).",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5058286.jpg?t=1616048083"
+    },
+    {
+      "title": "Sql Governor Blog",
+      "feed_url": "https://www.sqlgovernor.com/en/blog/rss.xml",
+      "website_url": "https://www.sqlgovernor.com/en/blog",
+      "description": "SQL Governor helps companies to modernize their Microsoft data platforms and ease migration to the cloud. It offers an unbeatable, fact-based solution for managing and forecasting the SQL Server platform's capacity and performance. Follow our SQL Server blog to get the latest news and expert insights around SQL Server performance monitoring, capacity planning, optimization, and migration projects.",
+      "followers": {
+        "facebook": 56,
+        "twitter": 165
+      },
+      "image_url": "https://i1.feedspot.com/5291869.jpg?t=1623311016"
+    },
+    {
+      "title": "SQL TECH BLOG",
+      "feed_url": "https://sqltechblog.com/feed/",
+      "website_url": "https://sqltechblog.com/",
+      "description": "SQL Tech Blog is a personal blog for Microsoft SQL Server database tips, tricks, training, events, news, and much more.",
+      "followers": {
+        "twitter": 424
+      },
+      "image_url": "https://i1.feedspot.com/4619309.jpg?t=1616048111"
+    },
+    {
+      "title": "No Column Name Blog",
+      "feed_url": "https://nocolumnname.blog/feed/",
+      "website_url": "https://nocolumnname.blog/",
+      "description": "My learnings and thoughts on SQL Server and PowerShell.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4899306.jpg?t=1616047717"
+    },
+    {
+      "title": "SQL SERVER DBA and Azure",
+      "feed_url": "https://www.sqldbanow.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.sqldbanow.com/",
+      "description": "This blog is to learn and share SQL DBA and Azure knowledge among people by Bandaru Ajeyudu",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5089805.jpg"
+    },
+    {
+      "title": "IT Tutorials",
+      "feed_url": "https://ittutorial.org/feed/",
+      "website_url": "https://ittutorial.org/",
+      "description": "English & Turkish Database, Application, Operating System, Network, Artifical Intelligence, Programming Languages Tutorials & Useful Scripts",
+      "followers": {
+        "twitter": 141
+      },
+      "image_url": "https://i1.feedspot.com/5069308.jpg?t=1616061077"
+    },
+    {
+      "title": "Welcome To TechBrothersIT",
+      "feed_url": "https://www.techbrothersit.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.techbrothersit.com/",
+      "description": "TechBrothersIT is the blog spot and a video (Youtube) Channel to learn and share Information, scenarios, real time examples about SQL Server, Transact-SQL (TSQL), SQL Server Database Administration (SQL DBA), Business Intelligence (BI), SQL Server Integration Services (SSIS), SQL Server Reporting Services (SSRS), Data Warehouse (DWH) Concepts, Microsoft Dynamics AX.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 50
+      },
+      "image_url": "https://i1.feedspot.com/4619504.jpg?t=1616047755"
+    },
+    {
+      "title": "Technology with Vivek Johari",
+      "feed_url": "http://www.techmixing.com/feed?x=1",
+      "website_url": "https://www.techmixing.com/",
+      "description": "Learn database in a simple and easy way.",
+      "followers": {
+        "facebook": 155,
+        "twitter": 180
+      },
+      "image_url": "https://i1.feedspot.com/4810518.jpg?t=1616047830"
+    },
+    {
+      "title": "Paul Turley's SQL Server BI Blog",
+      "feed_url": "https://sqlserverbi.blog/feed/",
+      "website_url": "https://sqlserverbi.blog/",
+      "description": "Paul Turley sharing his experiences with thee Microsoft data platform, SQL Server BI, Data Modeling, SSAS Design, Power Pivot, Power BI, SSRS Advanced Design, Power BI, Dashboards & Visualization.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4619341.jpg?t=1616046736"
+    },
+    {
+      "title": "All About SQL Blog",
+      "feed_url": "https://blobeater.blog/feed/",
+      "website_url": "https://blobeater.blog/",
+      "description": "My launch pad area to discuss all things around MS Data Technologies.",
+      "followers": {
+        "twitter": 318
+      },
+      "image_url": "https://i1.feedspot.com/4675740.jpg?t=1616048316"
+    },
+    {
+      "title": "SQLRx Blog",
+      "feed_url": "https://www.sqlrx.com/blog/feed/",
+      "website_url": "https://www.sqlrx.com/blog/",
+      "description": "SQLRx provides expertise and assistance to companies needing SQL Server Database Administration services and/or Performance Tuning Analysis assistance. The Daily Dose is a popular blog serving as Your Prescription for SQL Server. Join in as SQL Server experts help tackle some of your toughest SQL Server performance issues.",
+      "followers": {
+        "facebook": 47,
+        "twitter": 27
+      },
+      "image_url": "https://i1.feedspot.com/4619405.jpg?t=1616047745"
+    },
+    {
+      "title": "SQL Shack",
+      "feed_url": "https://www.sqlshack.com/feed/",
+      "website_url": "https://www.sqlshack.com/",
+      "description": "SQL Shack is a new SQL server blog with articles about database auditing, server performance, data recovery and more\ufeff. Share SQL knowledge, help you learn about SQL and communicate with people from SQL world.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4894223.jpg?t=1616046273"
+    },
+    {
+      "title": "EverSQL Blog",
+      "feed_url": "https://www.eversql.com/feed/",
+      "website_url": "https://www.eversql.com/blog/",
+      "description": "EverSQL is an online SQL query optimizer for developers and database administrators. EverSQL will automatically optimize MySQL, MariaDB, PerconaDB queries and suggest the optimal indexes to boost your query and database performance. 30,000 programmers already optimize SQL queries using EverSQL Query Optimizer.",
+      "followers": {
+        "twitter": 492
+      },
+      "image_url": "https://i1.feedspot.com/5136230.jpg?t=1616046313"
+    },
+    {
+      "title": "SentryOne | SQLPerformance.com",
+      "feed_url": "https://sqlperformance.com/feed",
+      "website_url": "https://sqlperformance.com/",
+      "description": "This blog delivers innovative and practical solutions for improving SQL Server performance. We're dedicated to covering the 'how' and 'why' of your performance conundrums. Our guidance will provide you with functional knowledge to improve performance whether or not you are in control of your database development.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4516238.jpg?t=1662381043"
+    },
+    {
+      "title": "Database Tutorials",
+      "feed_url": "https://dbtut.com/index.php/feed/",
+      "website_url": "https://dbtut.com/",
+      "description": "Database Tutorials features articles on MSSQL, Oracle, PostgreSQL, MySQL, MariaDB, DB2, Sybase, Teradata, Big Data, NOSQL, MongoDB, Couchbase, Cassandra, Windows, Linux and more...",
+      "followers": {
+        "twitter": 15
+      },
+      "image_url": "https://i1.feedspot.com/5128458.jpg?t=1622958928"
+    },
+    {
+      "title": "If Exists Blog",
+      "feed_url": "https://ifexists.blog/feed/",
+      "website_url": "https://ifexists.blog/",
+      "description": "Welcome to my blog, for SQL Server, PowerShell and other things",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5064680.jpg"
+    },
+    {
+      "title": "Ryan Adams Blog",
+      "feed_url": "https://feeds.feedburner.com/RyanAdamsBlog",
+      "website_url": "https://www.ryanjadams.com/",
+      "description": "Ryan Adams Blog consists of SQL, Active Directory, Scripting.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/1059357.jpg?t=1616047750"
+    },
+    {
+      "title": "MsSQLGirl",
+      "feed_url": "https://www.mssqlgirl.com/feed/",
+      "website_url": "https://www.mssqlgirl.com/blog/",
+      "description": "Hi! I'm Julie Koesmarno (MsSQLGirl) - a blogger, a presenter, and a Program Manager in Azure Data at Microsoft. I currently work in the SQL Tools and Experiences team at Microsoft, as a Principal Program Manager. It's been an enormous opportunity for me to grow & sharpen my craft in a Program Management role at Microsoft, from my past consultant role. I have learned so much and am still learning from SQL Community. So this blog is one of my ways of sharing my knowledge and helping out the community.",
+      "followers": {
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5291877.jpg?t=1623317740"
+    },
+    {
+      "title": "A SQL Server Blog by - Mohammad Darab",
+      "feed_url": "https://mohammaddarab.com/feed/",
+      "website_url": "https://mohammaddarab.com/",
+      "description": "This blog is all about SQL server. Mohammad Darab is SQL Server consultant.",
+      "followers": {
+        "twitter": 1100,
+        "instagram": 145
+      },
+      "image_url": "https://i1.feedspot.com/4619386.jpg"
+    },
+    {
+      "title": "Dave Bland",
+      "feed_url": "https://davebland.com/feed",
+      "website_url": "https://davebland.com/",
+      "description": "My blog about SQL Server and related technologies. My current position is as a Data Architect at Stericycle prior to that I supervised the Shared Services DBA team for 4 years. I have worked as a DBA in a number of industries including casino industry, insurance industry as well as the transportation industry.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5176257.jpg"
+    },
+    {
+      "title": "Steven Feuerstein on Oracle PL/SQL",
+      "feed_url": "http://stevenfeuersteinonplsql.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://stevenfeuersteinonplsql.blogspot.com/",
+      "description": "This blog is all about Oracle PL/SQL. PL/SQL Evangelist at Oracle Corporation Lives in Chicago, IL, United States.",
+      "followers": {
+        "twitter": 9200
+      },
+      "image_url": "https://i1.feedspot.com/4619305.jpg?t=1616046717"
+    },
+    {
+      "title": "Improving my SQL BI Skills",
+      "feed_url": "https://msbiskills.com/feed/",
+      "website_url": "https://msbiskills.com/",
+      "description": "Blog by Pawan Kumar Khowal. T-SQL, SQL Server, MDX, DAX Specialist, Reporting Services (SSRS), Integration Services, Analysis Services (SSAS), Tabular Model.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 64
+      },
+      "image_url": "https://i1.feedspot.com/4767514.jpg?t=1616046776"
+    },
+    {
+      "title": "Dinesh's Blog :::: Being Compiled ::::",
+      "feed_url": "http://dinesql.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://dinesql.blogspot.com/",
+      "description": "Microsoft SQL Server blog posts.",
+      "followers": {
+        "twitter": 311
+      },
+      "image_url": "https://i1.feedspot.com/4655321.jpg?t=1616046792"
+    },
+    {
+      "title": "SQL Server Geeks",
+      "feed_url": "https://www.sqlservergeeks.com/feed/",
+      "website_url": "https://www.sqlservergeeks.com/",
+      "description": "SQLServerGeeks is a community portal on Microsoft SQL Server. Led by SQL Server obsessives, SQLServerGeeks provides knowledge about SQL, Azure & related technologies through blogs, webcasts & in-person events.",
+      "followers": {
+        "facebook": 14100,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4619337.jpg?t=1616048605"
+    },
+    {
+      "title": "Database Research & Development Blog",
+      "feed_url": "https://www.dbrnd.com/feed/",
+      "website_url": "https://www.dbrnd.com/",
+      "description": "I'm Anvesh Patel, a Database Engineer certified by Oracle and IBM. I'm working as a Database Architect, Database Optimizer, Database Administrator, Database Developer. Providing the best articles and solutions for different problems in the best manner through my blogs is my passion. I have more than six years of experience with various RDBMS products like MSSQL Server, PostgreSQL, MySQL, Greenplum and currently learning and doing research on BIGData and NoSQL technology.",
+      "followers": {
+        "facebook": 16000,
+        "twitter": 132
+      },
+      "image_url": "https://i1.feedspot.com/4897696.jpg?t=1616047761"
+    },
+    {
+      "title": "MyTechMantra",
+      "feed_url": "https://www.mytechmantra.com/feed/",
+      "website_url": "https://www.mytechmantra.com/",
+      "description": "SQL Server Articles, Tips, Tutorials, FAQs, News, White Papers etc with real world example to solve daily problems faced by DBAs, Developers, Business Intelligence Professional all for free.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 989
+      },
+      "image_url": "https://i1.feedspot.com/4619479.jpg?t=1616046325"
+    },
+    {
+      "title": "Thomas LaRock - Author, Speaker, Data Expert, and SQLRockstar Blog",
+      "feed_url": "https://feeds.feedburner.com/SQLRockstar",
+      "website_url": "https://thomaslarock.com/blog/",
+      "description": "Thomas LaRock is a Head Geek at SolarWinds and a Microsoft\u00ae Certified Master, SQL Server\u00ae MVP, VMware\u00ae vExpert, and a Microsoft Certified Trainer. He has over 15 years' experience in the IT industry in roles including programmer, developer, analyst, and database administrator.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 16300
+      },
+      "image_url": "https://i1.feedspot.com/4619355.jpg?t=1616046350"
+    },
+    {
+      "title": "TroubleshootingSQL",
+      "feed_url": "https://troubleshootingsql.com/feed/",
+      "website_url": "https://troubleshootingsql.com/",
+      "description": "This blog is explaining the bits and bytes of SQL Server and Azure.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 905
+      },
+      "image_url": "https://i1.feedspot.com/4619378.jpg"
+    },
+    {
+      "title": "samirbehara | SQL Server",
+      "feed_url": "https://samirbehara.com/category/sql-server/feed/",
+      "website_url": "https://samirbehara.com/category/sql-server/",
+      "description": "Samir Behara has a Bachelor Degree in Computer Science and has been part of the IT Industry since he graduated in 2006. He has worked on large-scale enterprise applications involving complex business functions, web integration, and data management. Amidst working in a wide range of technologies his love for SQL Server is unchanged. He is passionate about developing his SQL skills, contributing to the SQL Server community, and keeping in pace with the new technologies and advancements.",
+      "followers": {
+        "twitter": 607
+      },
+      "image_url": "https://i1.feedspot.com/4660796.jpg?t=1608790607"
+    },
+    {
+      "title": "Microsoft SQL Server Blog",
+      "feed_url": "https://cloudblogs.microsoft.com/sqlserver/feed/",
+      "website_url": "https://www.microsoft.com/en-us/sql-server/blog/",
+      "description": "A Microsoft SQL Server Blog. Learn how to unleash the power in your data and get the latest Microsoft SQL Server news, updates, and best practices from our Microsoft experts.",
+      "followers": {
+        "facebook": 179600,
+        "twitter": 723100
+      },
+      "image_url": "https://i1.feedspot.com/5291871.jpg?t=1623311357"
+    },
+    {
+      "title": "Kendra Little Blog",
+      "feed_url": "https://kendralittle.com/blog/rss.xml",
+      "website_url": "https://kendralittle.com/blog/",
+      "description": "Kendra Little writes about code, query optimization, and database management using Microsoft SQL Server. She specializes in indexes, TSQL, and doodling.",
+      "followers": {
+        "twitter": 13700
+      },
+      "image_url": "https://i1.feedspot.com/4619331.jpg?t=1616046726"
+    },
+    {
+      "title": "SolarWinds Blog",
+      "feed_url": "https://www.solarwinds.com/blog",
+      "website_url": "https://www.solarwinds.com/blog",
+      "description": "SentryOne empowers Microsoft data professionals to monitor, diagnose, and optimize performance across physical, virtual, and cloud resources.",
+      "followers": {
+        "facebook": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4619299.jpg?t=1616047806"
+    },
+    {
+      "title": "SQL Server DBA",
+      "feed_url": "https://www.sqlserver-dba.com/atom.xml",
+      "website_url": "https://www.sqlserver-dba.com/",
+      "description": "Learn about SQL Server DBA, SQL Server database performance,SQL Server optimisation,database tuning,t-sql,ssis,powershell.",
+      "followers": {
+        "twitter": 891
+      },
+      "image_url": "https://i1.feedspot.com/1037479.jpg?t=1616046356"
+    },
+    {
+      "title": "Red9 Blog",
+      "feed_url": "https://red9.com/feed/",
+      "website_url": "https://jasonbrimhall.info/",
+      "description": "Your business depends on your Microsoft SQL Server infrastructure. We are the database services, support, or consulting firm you will need to provide SQL Services to your business. We take pride in learning about your SQL needs, sharing ideas we believe would help your business improve.",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/5291872.jpg?t=1623312051"
+    },
+    {
+      "title": "SQL Server Citation Blog",
+      "feed_url": "https://blog.sqlservercitation.com/feed/",
+      "website_url": "https://sqlservercitation.com/blogs/",
+      "description": "Articles on SQL Administration, Configuration, Troubleshooting and HADR by Hemantgiri S Goswami. He is trained and experienced professionals in SQL Server database administration, performance tuning and database problem-solving.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 881
+      },
+      "image_url": "https://i1.feedspot.com/4871445.jpg?t=1616047823"
+    },
+    {
+      "title": "SqlBak Blog",
+      "feed_url": "https://sqlbak.com/blog/feed/",
+      "website_url": "https://sqlbak.com/blog/",
+      "description": "Allow systems administrators to maintain SQL Server databases from any place on the Earth.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 120
+      },
+      "image_url": "https://i1.feedspot.com/4681861.jpg?t=1616046338"
+    }
+  ]
+}

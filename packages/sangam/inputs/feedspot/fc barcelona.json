@@ -1,0 +1,121 @@
+{
+  "category": "FC Barcelona",
+  "source_url": "https://rss.feedspot.com/fc_barcelona_rss_feeds",
+  "feeds": [
+    {
+      "title": "Barca Blaugranes",
+      "feed_url": "https://www.barcablaugranes.com/rss/current.xml",
+      "website_url": "https://www.barcablaugranes.com/",
+      "description": "Barca Blaugranes, SB Nation's FC Barcelona blog run by, and for, Cules. Stay up-to-date with all the latest news, opinion and rumours relating to FC Barcelona.",
+      "followers": {
+        "facebook": 168900,
+        "twitter": 28100
+      },
+      "image_url": "https://i1.feedspot.com/5181314.jpg?t=1597390712"
+    },
+    {
+      "title": "Barca Universal",
+      "feed_url": "https://barcauniversal.com/feed/",
+      "website_url": "https://barcauniversal.com/",
+      "description": "The number one independent FC Barcelona website. All the latest news, opinions, stats, transfers, match reviews, podcasts, interviews, match coverage, and much more on FC Barcelona.",
+      "followers": {
+        "facebook": 439,
+        "twitter": 868500,
+        "instagram": 78300
+      },
+      "image_url": "https://i1.feedspot.com/5181375.jpg"
+    },
+    {
+      "title": "BarcaBlog",
+      "feed_url": "https://barcablog.com/feed",
+      "website_url": "https://barcablog.com/",
+      "description": "Delivering honest and well-researched pieces on FC Barcelona. Bringing you the Latest Breaking News, Expert Opinions, videos, player news, and Latest Transfer Rumours.",
+      "followers": {
+        "facebook": 619600,
+        "twitter": 10300,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5181343.jpg?t=1635309602"
+    },
+    {
+      "title": "All About FC Barcelona",
+      "feed_url": "https://www.allaboutfcbarcelona.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.allaboutfcbarcelona.com/",
+      "description": "A Blog dedicated to the Most prestigous Club in the world, FC Barcelona by an ardent fan. All the fc Barcelona latest news, events, rumours and pictures from football club Barca.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5181357.jpg?t=1597323205"
+    },
+    {
+      "title": "Barcelona Football Blog",
+      "feed_url": "https://barcelonafootballblog.com/feed/atom/",
+      "website_url": "https://barcelonafootballblog.com/",
+      "description": "Dedicated to analyzing and discussing FC Barcelona's football/soccer team from differing perspectives in order to foster a better sense of community and greater understanding about the beautiful game we all love so much.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/1522063.jpg?t=1597317038"
+    },
+    {
+      "title": "Sports Mole \u00bb Barcelona",
+      "feed_url": "https://www.sportsmole.co.uk/football/barcelona.xml",
+      "website_url": "https://www.sportsmole.co.uk/football/barcelona/",
+      "description": "Latest Barcelona Fixtures, results, live scores, news, rumours, transfers and gossip from Sports Mole, updated around the clock.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 39000,
+        "instagram": 11100
+      },
+      "image_url": "https://i1.feedspot.com/5181505.jpg?t=1635322486"
+    },
+    {
+      "title": "Barca News Network",
+      "feed_url": "https://barcanewsnetwork.com/feed/",
+      "website_url": "https://barcanewsnetwork.com/",
+      "description": "Barca News Network is the best independent source for the latest news, match previews, reviews, stats, opinions, and transfer updates from FC Barcelona.",
+      "followers": {
+        "facebook": 151300,
+        "twitter": 23500,
+        "instagram": 596
+      },
+      "image_url": "https://i1.feedspot.com/5455882.jpg?t=1665571856"
+    },
+    {
+      "title": "The Guardian \u00bb Barcelona",
+      "feed_url": "https://www.theguardian.com/football/barcelona/rss",
+      "website_url": "https://www.theguardian.com/football/barcelona",
+      "description": "Latest Barcelona News, fixtures, table updates, analysis, and much more on the Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 354300,
+        "twitter": 906200,
+        "instagram": 96800
+      },
+      "image_url": "https://i1.feedspot.com/5181569.jpg?t=1597394199"
+    },
+    {
+      "title": "Barcelona FC Blog",
+      "feed_url": "https://www.barcelonafcblog.com/feed/",
+      "website_url": "https://www.barcelonafcblog.com/",
+      "description": "Barcelona FC Blog fansite for all the latest Barcelona football club news with top stories, transfer rumors, and football gossip from one of Spain's top teams.",
+      "followers": {
+        "facebook": 50800,
+        "twitter": 233
+      },
+      "image_url": "https://i1.feedspot.com/5181497.jpg?t=1597381215"
+    },
+    {
+      "title": "Everything Barca",
+      "feed_url": "https://everythingbarca.com/feed/",
+      "website_url": "https://everythingbarca.com/",
+      "description": "The ultimate home for FC Barcelona news, rumors, updates, transfers, signings, injuries, commentary, analysis, and all things Barca!",
+      "followers": {
+        "facebook": 23600,
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/5181322.jpg?t=1597319584"
+    }
+  ]
+}

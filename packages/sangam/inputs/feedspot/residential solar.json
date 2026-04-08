@@ -1,0 +1,396 @@
+{
+  "category": "Residential Solar",
+  "source_url": "https://rss.feedspot.com/residential_solar_rss_feeds",
+  "feeds": [
+    {
+      "title": "Northwind Solar Blog",
+      "feed_url": "https://www.northwindre.com//feed/rss2",
+      "website_url": "https://www.northwindre.com/blog",
+      "description": "Northwind Solar is central Wisconsin's most trusted and renewable energy solution provider, specializing in the design and installation of solar electric systems for residential, commercial, agricultural, and governmental customers. Visit our blog to see the latest news and updates from Northwind Solar.",
+      "followers": {
+        "facebook": 2400,
+        "instagram": 487
+      },
+      "image_url": "https://i1.feedspot.com/5451685.jpg?t=1664540615"
+    },
+    {
+      "title": "Solar Power World Online \u00bb Residential",
+      "feed_url": "https://www.solarpowerworldonline.com/category/markets/residential/feed/",
+      "website_url": "https://www.solarpowerworldonline.com/category/markets/residential/",
+      "description": "Covering the world of solar power technology, development and installation. Solar Power World produces daily online news content, weekly e-newsletters, bimonthly print issues, regular webinars, podcasts, videos and social media. Solar Power World publishes the annual Top Solar Contractors list, the most recognized listing of solar companies in the United States.",
+      "followers": {
+        "facebook": 421800,
+        "twitter": 69900,
+        "instagram": 17100
+      },
+      "image_url": "https://i1.feedspot.com/5451672.jpg?t=1664540517"
+    },
+    {
+      "title": "PV Magazine USA \u00bb Residential",
+      "feed_url": "https://pv-magazine-usa.com/category/installations/residential-pv/feed/",
+      "website_url": "https://pv-magazine-usa.com/category/installations/residential-pv/",
+      "description": "pv magazine USA offers daily updates of the latest photovoltaics news. We also offer comprehensive global coverage of the most important solar markets worldwide. Get the latest updates on solar technology in residential.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 6800
+      },
+      "image_url": "https://i1.feedspot.com/5451687.jpg?t=1664540629"
+    },
+    {
+      "title": "Scoop Solar Blog \u00bb Residential Solar",
+      "feed_url": "https://www.scoop.solar/residential-solar/feed/",
+      "website_url": "https://www.scoop.solar/residential-solar/",
+      "description": "Learn about Residential Solar Installation as it relates to renewable, solar, battery storage, and EV charger installers and service providers. Scoop is the ultimate software solution for solar project management, sales/operations, data management, and workflow automation. We are a comprehensive mobile platform with 500+ integrations across all business functions: solar sales, accounting & finance, design, planning, and more.",
+      "followers": {
+        "facebook": 166,
+        "twitter": 393
+      },
+      "image_url": "https://i1.feedspot.com/5451679.jpg?t=1664778338"
+    },
+    {
+      "title": "LGCY Power Blog",
+      "feed_url": "https://www.lgcypower.com/feed/",
+      "website_url": "https://www.lgcypower.com/blog/",
+      "description": "Our blog provides the foundation you need to make a smart decision about going solar. Read more here. We'll be with you every step of the way to make sure you not only find the perfect solar solution for your property, but also make the most out of your investment for a long, long time. Our mission is to provide an extraordinary customer experience while becoming the best version of ourselves and helping others do the same.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 827,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5451686.jpg?t=1664541374"
+    },
+    {
+      "title": "PEP Solar Blog",
+      "feed_url": "https://www.pepsolar.com/feed/",
+      "website_url": "https://www.pepsolar.com/blog/",
+      "description": "PEP Solar is a leader in solar energy installation in Arizona & takes pride in educating all its customers. Find the latest solar news inside. Phoenix Energy Products, LLC DBA PEP Solar is a privately owned company dedicated to providing our customers and neighbors with advanced energy product solutions designed to meet your energy solution requirements. PEP Solar's system solutions not only save you money but also provide a return on your investment while saving and producing energy for your home or business.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 244
+      },
+      "image_url": "https://i1.feedspot.com/5451680.jpg?t=1664540578"
+    },
+    {
+      "title": "West Coast Solar Blog",
+      "feed_url": "https://www.westcoastsolar.com/blog/feed/",
+      "website_url": "https://www.westcoastsolar.com/blog/",
+      "description": "Follow the West Coast Solar blog to learn more about residential and commercial solar panels, as well as handy energy-saving tips and more! Since 2007, West Coast Solar has helped property owners across Northern California save big on utility expenses with solar energy. We provide the highest quality products, excellent customer service, and the most competitive pricing on the market.",
+      "followers": {
+        "facebook": 966,
+        "twitter": 303,
+        "instagram": 333
+      },
+      "image_url": "https://i1.feedspot.com/5451678.jpg?t=1664540559"
+    },
+    {
+      "title": "Exact Solar Blog",
+      "feed_url": "https://exactsolar.com/feed/",
+      "website_url": "https://exactsolar.com/blog/",
+      "description": "We believe in a well-informed customer and the free exchange of ideas and information. Find out more about solar power, installations, industry news and more! In business since 2005, Exact Solar is a leading installer of residential and small commercial solar energy systems in Pennsylvania and New Jersey and the only company with extensive experience in solar PV (photovoltaic), solar water heating and solar pool heating systems.",
+      "followers": {
+        "facebook": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5451669.jpg?t=1664779546"
+    },
+    {
+      "title": "Baker Electric Home Energy Blog",
+      "feed_url": "https://bakerhomeenergy.com/blog/feed/",
+      "website_url": "https://bakerhomeenergy.com/blog/",
+      "description": "A blog about news and events in the solar and energy industry. Baker Electric Home Energy, part of the Baker Electric family, has supplied Southern California with energy solutions for 84 years. Baker enables Southern California homeowners to generate, manage and use their power to save money, enhance their family's lifestyle and protect the planet.",
+      "followers": {
+        "facebook": 3900,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5451666.jpg?t=1664772895"
+    },
+    {
+      "title": "Seal Solar Blog",
+      "feed_url": "https://sealsolar.com/feed/",
+      "website_url": "https://sealsolar.com/blog-learn-about-solar-energy/",
+      "description": "Deciding to go solar in Arkansas is a major decision. That's why we've created this blog to help you learn about the benefits of solar power. Our solar and storage design + install team here at Seal Solar has over 50 years of combined experience in the industry, and can help you make the switch to a solar photovoltaic (PV) system. Seal Solar conducts a solar analysis of your property to design an appropriately-sized PV system for your property's specific energy needs.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 317,
+        "instagram": 840
+      },
+      "image_url": "https://i1.feedspot.com/5451668.jpg?t=1664774040"
+    },
+    {
+      "title": "Solarise Solar Blog",
+      "feed_url": "https://www.solarisesolar.com/blog/feed/",
+      "website_url": "https://www.solarisesolar.com/blog/",
+      "description": "Solarise Solar is one of the best-rated solar panel installation companies in Colorado. We are built around a commitment to business that offers benefits to the customer, environment, and employee satisfaction. Residential solar is one of the few enterprises that truly benefits all involved. Know more about residential solar panels, solar technology, installations, maintenance tips and more!",
+      "followers": {
+        "facebook": 141
+      },
+      "image_url": "https://i1.feedspot.com/5451667.jpg?t=1664540479"
+    },
+    {
+      "title": "Simply Solar Blog",
+      "feed_url": "https://simplysolar.com/feed/",
+      "website_url": "https://simplysolar.com/blog/",
+      "description": "Since 2014, Simply Solar has quickly established ourselves as the premiere Bay Area solar power company. By offering high-quality products and services, we help residential and commercial customers save on their electric bills and divest from dirty energy. Explore our blog to learn more about solar technologies in residential, installations, products and more about our services.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 190,
+        "instagram": 843
+      },
+      "image_url": "https://i1.feedspot.com/5451670.jpg?t=1664540504"
+    },
+    {
+      "title": "Sundawg Solar Blog",
+      "feed_url": "https://www.sundawgs.com/feed/",
+      "website_url": "https://www.sundawgs.com/blog/",
+      "description": "Sometimes, all you need is the right information. As Saskatchewan's most reputed solar panel contractors, we offer a blog to help eliminate some of your queries. Sundwag Solar provides clean renewable energy in the province of Saskatchewan. We are passionate about making the environment clean and helping preserve it for future generations. We take pride in our 40-year commitment and experience of serving in the industry.",
+      "followers": {
+        "facebook": 611,
+        "twitter": 6,
+        "instagram": 108
+      },
+      "image_url": "https://i1.feedspot.com/5451704.jpg?t=1664541016"
+    },
+    {
+      "title": "Better Tomorrow Solar Blog",
+      "feed_url": "https://www.bettertomorrowsolar.com/about-us/blogs/feed/",
+      "website_url": "https://www.bettertomorrowsolar.com/about-us/blogs/",
+      "description": "Better Tomorrow Solar provides affordable solar panel installation for home and business owners in Charlotte, NC. Find more about solar installation for residential & commercial properties, industry news, tips and more!",
+      "followers": {
+        "facebook": 129,
+        "twitter": 85
+      },
+      "image_url": "https://i1.feedspot.com/5451710.jpg?t=1664541053"
+    },
+    {
+      "title": "Brooklyn SolarWorks Blog",
+      "feed_url": "https://brooklynsolarworks.com/blog/feed/",
+      "website_url": "https://brooklynsolarworks.com/blog/",
+      "description": "Visit our solar panel blog to learn more about going solar in NYC, tax incentives available, and the latest news on solar in NYC. Brooklyn SolarWorks was founded in 2015 by three seasoned industry professionals who shared a common mission: to make solar appealing, easy and available for Brooklyn's urban homeowners. As a business Brooklyn SolarWorks has been built from top to bottom to close this gap, and to extend to local homeowners the convenience, environmental impact and attractive financial return that solar ownership promises.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 529,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5451707.jpg?t=1664777938"
+    },
+    {
+      "title": "Stellar Solar Blog",
+      "feed_url": "https://stellarsolar.net/feed/",
+      "website_url": "https://stellarsolar.net/blog/",
+      "description": "Learn more about solar power or interested in getting a system installed. Find all the information you need in our SunPower by Stellar Solar blog. Stellar Solar is the premiere solar installer in San Diego, having installed on over 14,000 rooftops in the area.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4552167.jpg?t=1614671521"
+    },
+    {
+      "title": "Solar Alternatives Blog",
+      "feed_url": "https://www.solalt.com/blog/feed/",
+      "website_url": "https://www.solalt.com/category/residential/",
+      "description": "Stay up to date with Solar Alternatives, Inc when you follow our blog. Learn about what services we provide and what advantages there are to going solar. As the Gulf Coast region's most trusted solar and energy management firm, Solar Alternatives offers turnkey engineering, consultation, and construction services for commercial, industrial, utility and residential clients.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 231,
+        "instagram": 375
+      },
+      "image_url": "https://i1.feedspot.com/5451702.jpg?t=1664541003"
+    },
+    {
+      "title": "A&R Solar Blog",
+      "feed_url": "https://www.a-rsolar.com/feed/",
+      "website_url": "https://www.a-rsolar.com/blog/",
+      "description": "A&R Solar is a solar and battery backup installer serving all of Washington and Oregon. In business since 2007, we proudly operate as an employee-owned B corporation. Explore our blog to get more information on solar technology, tips, industry news and more!",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 1100,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5451695.jpg?t=1664540956"
+    },
+    {
+      "title": "Renewable Energy Design Group Blog",
+      "feed_url": "https://redgroupnc.com/feed/",
+      "website_url": "https://redgroupnc.com/blog/",
+      "description": "Read articles about solar energy and stay up-to-date on the latest news from Renewable Energy Design Group on our blog. Renewable Energy Design Group is dedicated to promoting renewable energy and exceeding our clients' expectations. Since 2012, our team has helped residential and commercial customers in the Carolinas take advantage of the sun's energy and the abundant financial benefits that go with it.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 288,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5451692.jpg?t=1664540672"
+    },
+    {
+      "title": "EmPower Solar Blog \u00bb Home Solar",
+      "feed_url": "https://www.empower-solar.com/en/blog/category/home-solar/feed/",
+      "website_url": "https://www.empower-solar.com/en/blog/category/home-solar/",
+      "description": "ACE Solar offers turn-key solar solutions and handles all aspects of your project including design, permitting, financing and installation for both residential and commercial clients in the Massachusetts area. Check out examples of our commercial and residential work, informational solar resources in our blog.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 299,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5451691.jpg?t=1664541868"
+    },
+    {
+      "title": "SunPower Blog",
+      "feed_url": "http://feeds.feedburner.com/sunpower/blog-rss/",
+      "website_url": "https://us.sunpower.com/blog",
+      "description": "Sharing our thoughts about solar energy and sustainable future. As solar continues to become a mainstream source of energy, SunPower is blogging to inspire this evolution and facilitate a global discussion. We believe clean energy and storage should be accessible to everybody. That's why SunPower designs all-in-one residential solutions backed by personal customer service and the industry's most comprehensive warranty. And with over 35 years of dedicated solar experience, we're the only U.S.-based solar company that's been around longer than our 25-year warranty.",
+      "followers": {
+        "facebook": 116000,
+        "twitter": 62700,
+        "instagram": 38800
+      },
+      "image_url": "https://i1.feedspot.com/5451688.jpg?t=1664540635"
+    },
+    {
+      "title": "All American Solar Blog",
+      "feed_url": "https://allamericansolar.com/feed/",
+      "website_url": "https://allamericansolar.com/blogs/",
+      "description": "Unlike most solar providers, All American Solar is family owned and operated. We treat our customers like family and provide the best solar installation in the industry. Learn more about solar panels, technology, installations, our services and get the industry news and more!",
+      "followers": {
+        "facebook": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5451677.jpg?t=1664779327"
+    },
+    {
+      "title": "Affordable Solar Blog",
+      "feed_url": "https://affordable-solar.com/feed/",
+      "website_url": "https://affordable-solar.com/our-blog/",
+      "description": "For the latest news, tips and articles related to solar be sure to read our Affordable Solar blog for the latest and greatest resources. Having started in an Airstream trailer in 1998, Affordable Solar's roots trace back to a passion for renewable energy, a strong commitment to community, and having fun. With many hundreds of megawatts of solar and energy storage projects underway and 150+ employees, Affordable Solar has outgrown the Airstream but remains committed to the principles on which the company was founded.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 996,
+        "instagram": 905
+      },
+      "image_url": "https://i1.feedspot.com/5451675.jpg?t=1664540537"
+    },
+    {
+      "title": "The Solar Professionals Blog",
+      "feed_url": "https://professionals.solar/feed/",
+      "website_url": "https://professionals.solar/blog/",
+      "description": "If you want to know more about solar system installation, follow our blog written by industry experts. The Solar Professionals are an Orlando-based solar company serving Central Florida, all the way down to South Florida, with the knowledge and experience to match you with the solar system install that best fits your budget and power requirements.",
+      "followers": {
+        "facebook": 155
+      },
+      "image_url": "https://i1.feedspot.com/5451712.jpg?t=1664776439"
+    },
+    {
+      "title": "Revolution Solar Blog",
+      "feed_url": "https://revolutionsolarenergy.com/feed/",
+      "website_url": "https://revolutionsolarenergy.com/blog/",
+      "description": "Revolution Solar is committed to building a greener world through solar. Trust us with solar installation throughout DC, Baltimore, and surrounding areas! Check out our blog to know more about the solar industry, installations, maintenance and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5451709.jpg?t=1664774216"
+    },
+    {
+      "title": "Solar Pathways Blog",
+      "feed_url": "https://www.solarpathways.com/blog/feed/",
+      "website_url": "https://www.solarpathways.com/blog/",
+      "description": "Solar Pathways offers a highly experienced team of electricians for your next residential or commercial project. You can count on our team to provide thorough and safe electrical services, including new builds, remodels, lighting installation, service panel upgrades and more. Breowse through our blog articles to know more about solar technology, news, laws, our services and products and more!",
+      "followers": {
+        "facebook": 35,
+        "instagram": 117
+      },
+      "image_url": "https://i1.feedspot.com/5451705.jpg?t=1664541023"
+    },
+    {
+      "title": "Solar Solutions Blog",
+      "feed_url": "https://solarsolutions-texas.com/blog/feed/",
+      "website_url": "https://solarsolutions-texas.com/blog/",
+      "description": "In 2006 Gad Ronat, the founder of Solar Solutions brought to Texas the solar industry from the Holy Land of Israel where the solar panels are mandatory for over 40 years. Fourteen (14) years later, we are one of the most experienced companies in residential and commercial solar applications, showing a history of excellence with a 5-star reputation! Know more about our solar-based products, generators, solar energy and more!",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 8800
+      },
+      "image_url": "https://i1.feedspot.com/5451701.jpg?t=1664774161"
+    },
+    {
+      "title": "Green House Solar Blog",
+      "feed_url": "https://greenhouse.solar/blog/feed/",
+      "website_url": "https://greenhouse.solar/blog/",
+      "description": "Explore our guide for residential solar installation for everything you need to know about solar panels, technology, laws and more! We are a New Jersey small business, but we have been doing this work for over a decade and it is what we love, bringing this amazing green energy solution to regular people just like us. Saving you money, getting off the grid, and saving the planet: we really, really like that.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 131
+      },
+      "image_url": "https://i1.feedspot.com/5451699.jpg?t=1664540986"
+    },
+    {
+      "title": "Infinite Energy Blog \u00bb Residential",
+      "feed_url": "https://www.infiniteenergy.com.au/blog/residential/feed/",
+      "website_url": "https://www.infiniteenergy.com.au/blog/residential",
+      "description": "Infinite Energy is one of Australia's leading providers of residential and commercial solar PV systems, battery storage, contestable electricity, embedded networks & microgrids, and electric vehicle chargers. Stay up to date on our residential solar products and services, industry news, solar technology and more!",
+      "followers": {
+        "facebook": 12600,
+        "twitter": 889
+      },
+      "image_url": "https://i1.feedspot.com/5451698.jpg?t=1664540981"
+    },
+    {
+      "title": "8MSolar Blog",
+      "feed_url": "https://www.8msolar.com//feed/rss2",
+      "website_url": "https://8msolar.com/blogs/",
+      "description": "There are a lot of policy, technological and design changes happening in solar photovoltaics. Our blogs list our experiences with the latest in Solar.",
+      "followers": {
+        "facebook": 850,
+        "twitter": 84,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5451689.jpg?t=1664540647"
+    },
+    {
+      "title": "ACE Solar Blog",
+      "feed_url": "https://www.myacesolar.com/who-we-are/ace-solar-blog/feed/",
+      "website_url": "https://www.myacesolar.com/who-we-are/ace-solar-blog/",
+      "description": "Ipsun Solar Blog is about solar panel installations in Virginia, Washington DC and Maryland. Ipsun Solar offers the ability to make a quick, easy change: By producing your own power from solar, you will lock in low electricity costs from a cleaner source of energy, and you will add value to your home or business.",
+      "followers": {
+        "facebook": 623,
+        "twitter": 548,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5451694.jpg?t=1664540950"
+    },
+    {
+      "title": "Memmo Interiors Blog",
+      "feed_url": "https://www.memmointeriors.com/blog-resources?format=rss",
+      "website_url": "https://www.memmointeriors.com/blog-resources/",
+      "description": "EmPower Solar develops, engineers, installs, and services solar and battery systems for residential and commercial clients. Since 2003, EmPower Solar has empowered thousands of New York homeowners and businesses in the Long Island and greater NYC area with 50 megawatts of distributed solar. GEt more information on home solar systems, installations, advantages, news and more!",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 2500,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5451682.jpg?t=1664778581"
+    },
+    {
+      "title": "Solar Power of Oklahoma Blog",
+      "feed_url": "https://www.solarpowerok.com//feed/rss2",
+      "website_url": "https://solarpowerok.com/blog/",
+      "description": "Read the latest Solar Power of Oklahoma company news & updates, solar energy news, and write ups on sustainable energy in Oklahoma. Solar Power of Oklahoma is the premier solar energy provider in the state of Oklahoma. We are devoted to renewables in Oklahoma! Our team is filled with vibrant individuals who love what they do and choose the solar industry because they love getting to help people save money and help the earth be a little bit cleaner - panel by panel.",
+      "followers": {
+        "facebook": 5600,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5451673.jpg?t=1664540524"
+    },
+    {
+      "title": "Purelight Power Blog",
+      "feed_url": "https://purelightpower.com/blog/feed/",
+      "website_url": "https://purelightpower.com/blog/",
+      "description": "Purelight Power offers advice on all your solar needs. Are you looking for information in regards to solar installation? Check us out today! Purelight Power is the affordable solution that saves you money, increases the value of your home, and costs zero down and nothing out of pocket. The leading solar panel company in Oregon, Iowa, and Montana, Purelight Power can help you stop renting your power and save today!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5451703.jpg?t=1664777034"
+    },
+    {
+      "title": "Moment Solar Blog",
+      "feed_url": "https://momentsolar.com/blog/feed/",
+      "website_url": "https://momentsolar.com/blog/",
+      "description": "Locally owned and operated, we are a company that is committed to delivering excellence to our neighbors in the greater Treasure Valley area. We are also partnered with some of the most respected experts in solar to give our clients the best experience possible. Get the latest information and updates from solar installation industry, tips, installation and maintenance tips and more!",
+      "followers": {
+        "facebook": 18
+      },
+      "image_url": "https://i1.feedspot.com/5451697.jpg?t=1664540967"
+    }
+  ]
+}

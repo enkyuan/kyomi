@@ -1,0 +1,41 @@
+{
+  "category": "UK Dressage",
+  "source_url": "https://rss.feedspot.com/uk_dressage_rss_feeds",
+  "feeds": [
+    {
+      "title": "Horse & Hound \u00bb Dressage",
+      "feed_url": "https://www.horseandhound.co.uk/dressage/feed",
+      "website_url": "https://www.horseandhound.co.uk/dressage",
+      "description": "Stay up to date with the latest dressage news, read updates from our dressage bloggers and columnists, plus get training tips from top riders and enjoy our exclusive picture galleries and video interviews.",
+      "followers": {
+        "facebook": 598200,
+        "twitter": 133100,
+        "instagram": 120700
+      },
+      "image_url": "https://i1.feedspot.com/4800196.jpg?t=1609908531"
+    },
+    {
+      "title": "Diane Followell Blog",
+      "feed_url": "https://www.dianefollowell.com/blog/feed",
+      "website_url": "https://www.dianefollowell.com/blog",
+      "description": "Authentic classical dressage with one of the most respected trainers in the UK, with structured, horse-led training and detailed feedback to help you progress towards a deeper relationship with your horse.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 5900,
+        "instagram": 366
+      },
+      "image_url": "https://i1.feedspot.com/4800282.jpg?t=1609909441"
+    },
+    {
+      "title": "Out and About Dressage",
+      "feed_url": "https://outandaboutdressage.co.uk/feed/",
+      "website_url": "https://outandaboutdressage.co.uk/",
+      "description": "The online magazine about dressage and riders competing in Kent, Surrey, and Sussex, we bring you news, results, opinion, features, and much much more. The online magazine about dressage and riders competing in the South of England.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 25
+      },
+      "image_url": "https://i1.feedspot.com/4800577.jpg?t=1609908730"
+    }
+  ]
+}

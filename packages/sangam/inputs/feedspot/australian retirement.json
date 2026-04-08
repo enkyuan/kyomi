@@ -1,0 +1,67 @@
+{
+  "category": "Australian Retirement",
+  "source_url": "https://rss.feedspot.com/australian_retirement_rss_feeds",
+  "feeds": [
+    {
+      "title": "64 Plus Blog",
+      "feed_url": "https://www.64plus.com.au/blog?format=rss",
+      "website_url": "https://www.64plus.com.au/blog",
+      "description": "64 PLUS can help you in retirement from work. subscribe to keep up with the latest updates from this blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4924304.jpg?t=1611146077"
+    },
+    {
+      "title": "Realise Your Dream Blog",
+      "feed_url": "https://blog.centrepointalliance.com.au/realiseyourdream/rss.xml",
+      "website_url": "https://blog.centrepointalliance.com.au/realiseyourdream/tag/retirement",
+      "description": "This blog is authored by Peter Kelly and Mark Teale. Peter provides technical advice to financial advisers and accountants on superannuation, retirement planning and estate planning. Tealey's ambition is to change how people think about their retirement, he wants people to dream, plan and realize retirement is not defined by a magical age prescribed by the legislation.",
+      "followers": {
+        "facebook": 815,
+        "twitter": 504
+      },
+      "image_url": "https://i1.feedspot.com/4574960.jpg?t=1611146013"
+    },
+    {
+      "title": "Aussie Firebug Blog",
+      "feed_url": "https://www.aussiefirebug.com/feed/",
+      "website_url": "https://www.aussiefirebug.com/blog/",
+      "description": "Aussie Firebug is an anonymous blog detailing the journey to financial independence through investing in real estate, low-cost index funds, and Super. By investing at a young age and consistently it is possible to reach a point where your investments pay you enough money to live off forever.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4576411.jpg?t=1635163275"
+    },
+    {
+      "title": "The FI Explorer",
+      "feed_url": "https://www.thefiexplorer.com/feed/",
+      "website_url": "https://www.thefiexplorer.com/",
+      "description": "This is a blog about my personal journey toward financial independence, with explorations in investment strategy, finance, and portfolio design issues. It also features occasional discussions of new financial products and emerging fintech issues.",
+      "followers": {
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4924366.jpg?t=1670399490"
+    },
+    {
+      "title": "Retirement Essentials",
+      "feed_url": "https://retirementessentials.com.au/updates/feed/",
+      "website_url": "https://retirementessentials.com.au/updates/",
+      "description": "Latest Australia age pension news & expert insights from pension specialists through Retirement Essentials. Read news articles & post your comments. Retirement Essentials was founded by Paul Rogan 2017 and is based in Sydney. Paul was concerned that a large number of Australians entering retirement without the support they need to make the most of their hard earned savings.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 38
+      },
+      "image_url": "https://i1.feedspot.com/5041024.jpg?t=1611146023"
+    },
+    {
+      "title": "Greenfields Living Blog",
+      "feed_url": "https://www.greenfieldsliving.com.au/feed/",
+      "website_url": "https://www.greenfieldsliving.com.au/blog/",
+      "description": "Greenfields Living provide safe and secure retirement village environments. Their sole focus is to develop first class Seniors Living Communities in Darwin.",
+      "followers": {
+        "facebook": 156
+      },
+      "image_url": "https://i1.feedspot.com/4924352.jpg?t=1611146043"
+    }
+  ]
+}

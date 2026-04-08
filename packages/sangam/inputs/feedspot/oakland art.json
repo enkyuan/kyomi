@@ -1,0 +1,98 @@
+{
+  "category": "Oakland Art",
+  "source_url": "https://rss.feedspot.com/oakland_art_rss_feeds",
+  "feeds": [
+    {
+      "title": "pt.2gallery Blog",
+      "feed_url": "https://www.part2gallery.com/blog?format=rss",
+      "website_url": "https://www.part2gallery.com/blog",
+      "description": "Founded in 2018, pt.2 Gallery in downtown Oakland showcases influential emerging artists from the Bay Area and beyond, challenging art world norms. With low-cost studios for over 20 creatives, pt.2 fosters a diverse, vibrant art scene while providing affordable, safe spaces amid closures.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5738588.jpg?t=1702898857"
+    },
+    {
+      "title": "Oakland Voices \u00bb Arts & Culture",
+      "feed_url": "https://oaklandvoices.us/category/arts/feed/",
+      "website_url": "https://oaklandvoices.us/category/arts/",
+      "description": "Led by the Maynard Institute for Journalism Education, Oakland Voices empowers residents to become storytellers in their neighbourhoods. Correspondents undergo training in digital media, mastering various mediums to shed light on community issues through blogs, online pieces, photos, videos, and social media engagement.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 4100,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5738586.jpg?t=1702898598"
+    },
+    {
+      "title": "East Bay Express \u00bb Arts & Culture",
+      "feed_url": "https://eastbayexpress.com/arts-and-culture/feed/",
+      "website_url": "https://eastbayexpress.com/arts-and-culture/",
+      "description": "The East Bay Express serves as the paramount source for well-educated global travellers, offering exclusive content tailored to their interests since 1978. From authoritative cover stories to comprehensive arts, dining, and event coverage, it remains the voice of the vibrant East Bay region. With reviews and previews spanning various media, it continues to be a trusted cultural compass.",
+      "followers": {
+        "facebook": 20000,
+        "twitter": 61600,
+        "instagram": 16900
+      },
+      "image_url": "https://i1.feedspot.com/5738591.jpg?t=1702962604"
+    },
+    {
+      "title": "OC Art Blog",
+      "feed_url": "https://www.ocartblog.com/feed/",
+      "website_url": "https://www.ocartblog.com/",
+      "description": "The OC Art Blog, initiated by Chris Hoff in 2004, aims to uplift Orange County's vibrant yet overlooked art community. Chris, an accomplished artist and curator, champions local talent through exhibitions like Hidden Treasures at John Wayne Airport. Additionally, he spearheads the Hoff Foundation, dedicated to nurturing artistic endeavours since 2008.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5738590.jpg?t=1702898783"
+    },
+    {
+      "title": "Felicia Liang Blog",
+      "feed_url": "https://www.felicia-liang.com/blog?format=rss",
+      "website_url": "https://www.felicia-liang.com/blog",
+      "description": "Felicia Liang, an artist, illustrator, and printmaker, delves into identity and emotion through her work, influenced by her communities and cultures. She showcases her art at California art markets and zine fests, runs an online shop, and offers talks on storytelling. Follow for insights into her projects, musings, and travel recommendations.",
+      "followers": {
+        "twitter": 145
+      },
+      "image_url": "https://i1.feedspot.com/5738585.jpg?t=1702898958"
+    },
+    {
+      "title": "Favianna Rodriguez",
+      "feed_url": "https://www.faviannablog.com/feed/",
+      "website_url": "https://www.faviannablog.com/",
+      "description": "Favianna Rodriguez, an interdisciplinary contemporary artist and social justice activist, drives profound societal transformation. Through her art, she fearlessly challenges current norms and addresses historical injustices, aiming to reshape cultural narratives and practices for a better future.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5738575.jpg?t=1702898922"
+    },
+    {
+      "title": "Chris Miles Art Blog",
+      "feed_url": "https://www.chrismiles.com/chris-miles-painting-blog?format=rss",
+      "website_url": "https://www.chrismiles.com/chris-miles-painting-blog",
+      "description": "Since relocating to the West in 2000, Chris Miles has honed his craft in fine art painting, cultivating his unique style known as Magical Realism. Drawing inspiration from nature, literature, and both Old Master and contemporary artists, he crafts imaginative works that captivate. Stay updated on Chris's latest art, painting process, inspirations, upcoming shows, and news.",
+      "followers": {
+        "facebook": 193
+      },
+      "image_url": "https://i1.feedspot.com/5738587.jpg?t=1702898904"
+    },
+    {
+      "title": "Visit Oakland Blog \u00bb Arts & Culture",
+      "feed_url": "https://www.visitoakland.com/blog/category/arts-&-culture/59a4a594e5832abcf4f55604/rss/",
+      "website_url": "https://www.visitoakland.com/blog/category/arts-%26-culture/59a4a594e5832abcf4f55604/",
+      "description": "Visit Oakland, a private, not-for-profit organization, serves as the official guide to Oakland, California. With a dedicated board of directors and full-time staff, they invite visitors to discover the city's rich arts, culture, cuisine, and beyond. Explore their Arts and Culture blog for insights and inspiration.",
+      "followers": {
+        "facebook": 41400,
+        "instagram": 84000
+      },
+      "image_url": "https://i1.feedspot.com/5738584.jpg?t=1702962281"
+    },
+    {
+      "title": "Oakland Arts Review Blog",
+      "feed_url": "https://oaklandartsreview.wordpress.com/feed/",
+      "website_url": "https://oaklandartsreview.wordpress.com/blog/",
+      "description": "The Oakland Arts Review (OAR) showcases undergraduate literature from global contributors, both in print and online. Submit your work for consideration and stay tuned for future issues, as OAR continues its commitment to promoting emerging voices in the literary world.",
+      "followers": {
+        "facebook": 496
+      },
+      "image_url": "https://i1.feedspot.com/5738589.jpg?t=1702898836"
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "category": "CNET",
+  "source_url": "https://rss.feedspot.com/cnet_rss_feeds",
+  "feeds": [
+    {
+      "title": "CNET",
+      "feed_url": "https://www.cnet.com/rss/all/",
+      "website_url": "https://www.cnet.com/",
+      "description": "CNET is the world's leader in tech product reviews, news, prices, videos, forums, how-tos, and more.",
+      "followers": {
+        "facebook": 4000000,
+        "twitter": 1700000,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/4692541.jpg?t=1616418072"
+    },
+    {
+      "title": "CNET \u00bb News",
+      "feed_url": "https://www.cnet.com/rss/news/",
+      "website_url": "https://www.cnet.com/news/",
+      "description": "CNET news editors and reporters provide top technology news, with investigative reporting and in-depth coverage of tech issues and events.",
+      "followers": {
+        "facebook": 4000000,
+        "twitter": 1700000,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/4685954.jpg?t=1751432857"
+    },
+    {
+      "title": "CNET \u00bb Roadshow",
+      "feed_url": "https://feed.cnet.com/feed/roadshow/all",
+      "website_url": "https://www.cnet.com/roadshow/",
+      "description": "Find and research the best new cars, get the best pricing on your next vehicle, and stay up to date with industry news, auto shows, and more from Roadshow by CNET.",
+      "followers": {
+        "facebook": 4000000,
+        "twitter": 1700000,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/4685954.jpg?t=1751432857"
+    },
+    {
+      "title": "CNET \u00bb Smart Home",
+      "feed_url": "https://www.cnet.com/rss/smart-home/",
+      "website_url": "https://www.cnet.com/home/smart-home/",
+      "description": "Find the best tech products for your home with CNET's Smart home reviews for appliances, automation, security, lighting, HVAC, and much, much more.",
+      "followers": {
+        "facebook": 4000000,
+        "twitter": 1700000,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/4685954.jpg?t=1751432857"
+    },
+    {
+      "title": "CNET \u00bb How To",
+      "feed_url": "https://www.cnet.com/rss/how-to/",
+      "website_url": "https://www.cnet.com/how-to/",
+      "description": "CNET editors and users share the top tech 'how to' tips and tricks with advice for getting the most out of all your gadgets.",
+      "followers": {
+        "facebook": 4000000,
+        "twitter": 1700000,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/4685954.jpg?t=1751432857"
+    },
+    {
+      "title": "CNET \u00bb Tech Industry",
+      "feed_url": "https://feed.cnet.com/feed/topics/tech-industry",
+      "website_url": "https://www.cnet.com/topics/tech-industry/",
+      "description": "CNET news reporters and editors cover the latest in Tech Industry, with in-depth stories on issues and events.",
+      "followers": {
+        "facebook": 4000000,
+        "twitter": 1700000,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/4685954.jpg?t=1751432857"
+    },
+    {
+      "title": "CNET \u00bb Gaming",
+      "feed_url": "https://www.cnet.com/tech/gaming/",
+      "website_url": "https://www.cnet.com/tech/gaming/",
+      "description": "Get video game news, game release dates, and expert reviews for top games & consoles. XBOX One, PS4, PC, Wii-U, Xbox 360, PS3, Wii, 3DS, PS Vita & iPhone from CNET.",
+      "followers": {
+        "facebook": 4000000,
+        "twitter": 1700000,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/4685954.jpg?t=1751432857"
+    },
+    {
+      "title": "CNET \u00bb Best Products",
+      "feed_url": "https://www.cnet.com/best/",
+      "website_url": "https://www.cnet.com/best/",
+      "description": "Make the best decisions about how to spend your money on products to make life better and more fun.",
+      "followers": {
+        "facebook": 4000000,
+        "twitter": 1700000,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/4685954.jpg?t=1751432857"
+    },
+    {
+      "title": "CNET \u00bb Kitchen & Household",
+      "feed_url": "https://www.cnet.com/home/kitchen-and-household/",
+      "website_url": "https://www.cnet.com/home/kitchen-and-household/",
+      "description": "From coffee makers to robot vacuums, we tackle what you need to know to keep your home running smoothly from CNET.",
+      "followers": {
+        "facebook": 4000000,
+        "twitter": 1700000,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/4685954.jpg?t=1751432857"
+    },
+    {
+      "title": "CNET \u00bb Mobile Accessories",
+      "feed_url": "https://www.cnet.com/tech/mobile/accessories/",
+      "website_url": "https://www.cnet.com/tech/mobile/accessories/",
+      "description": "Learn about Mobile Accessories on CNET.",
+      "followers": {
+        "facebook": 4000000,
+        "twitter": 1700000,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/4685954.jpg?t=1751432857"
+    }
+  ]
+}

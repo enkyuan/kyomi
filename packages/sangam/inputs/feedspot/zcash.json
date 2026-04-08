@@ -1,0 +1,34 @@
+{
+  "category": "Zcash",
+  "source_url": "https://rss.feedspot.com/zcash_rss_feeds",
+  "feeds": [
+    {
+      "title": "Electric Coin Blog",
+      "feed_url": "https://electriccoin.co/blog/feed/",
+      "website_url": "https://electriccoin.co/blog/",
+      "description": "A catalog of internal and external news and announcements about the Electric Coin Company and Zcash development.",
+      "followers": {
+        "twitter": 86900
+      },
+      "image_url": "https://i1.feedspot.com/4941588.jpg?t=1671626937"
+    },
+    {
+      "title": "Crypto News Flash \u00bb ZCash",
+      "feed_url": "https://www.crypto-news-flash.com/tag/zcash-2/feed/",
+      "website_url": "https://www.crypto-news-flash.com/tag/zcash-2/",
+      "description": "On this subpage of Crypto News Flash you will find all articles, information and news on the topic ZCash. Crypto News Flash is your number-one source for the latest news and information from the world of cryptocurrencies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5482354.jpg?t=1671627145"
+    },
+    {
+      "title": "The Zcash Foundation Blog",
+      "feed_url": "https://zfnd.org/feed.xml",
+      "website_url": "https://zfnd.org/blog/",
+      "description": "The Zcash Foundation is a financial privacy nonprofit. Our mission is to build and support the technology infrastructure that will enable people to control their own financial data.",
+      "followers": {
+        "twitter": 22200
+      },
+      "image_url": "https://i1.feedspot.com/4941607.jpg?t=1612770374"
+    }
+  ]
+}

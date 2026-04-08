@@ -1,0 +1,59 @@
+{
+  "category": "UK Drum",
+  "source_url": "https://rss.feedspot.com/uk_drum_rss_feeds",
+  "feeds": [
+    {
+      "title": "Drum Shop Blog",
+      "feed_url": "https://www.drumshop.co.uk/blogs/news.atom",
+      "website_url": "https://www.drumshop.co.uk/blogs/news",
+      "description": "Drum Shop UK have been in business for over 25 years and are one of the UK's leading suppliers of Drum Kits, Cymbals and Latin & Samba Percussion. Subscribe to keep up with latest updates from this blog.",
+      "followers": {
+        "facebook": 10000,
+        "twitter": 5600,
+        "instagram": 10900
+      },
+      "image_url": "https://i1.feedspot.com/4607275.jpg?t=1615548774"
+    },
+    {
+      "title": "Jobeky Drum Blog",
+      "feed_url": "https://jobekydrums.co.uk/blog/feed/",
+      "website_url": "https://jobekydrums.co.uk/blog/",
+      "description": "Jobeky Drum is a company specialising in electronic drums, electro acoustic drum kits, that look and feel like an acoustic kit, no more compromise. from individual electronic drums to complete kits, cymbals and accessories. Subscribe to keep updated with the latest product news and events.",
+      "followers": {
+        "facebook": 25000,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4919436.jpg?t=1620647619"
+    },
+    {
+      "title": "Sevenoaks Drum School Blog",
+      "feed_url": "https://sevenoaksdrumschool.com/feed/",
+      "website_url": "https://sevenoaksdrumschool.com/blog/",
+      "description": "Sevenoaks Drum School is a thriving school for drum tuition based in the borough of Sevenoaks, Kent, UK run by renowned drum teacher Billy Cunningham. Follow this blog for all the latest SDS news, info, practise tips for students, photos, videos and more.",
+      "followers": {
+        "facebook": 151,
+        "twitter": 101
+      },
+      "image_url": "https://i1.feedspot.com/4919427.jpg?t=1620647632"
+    },
+    {
+      "title": "Dave's Drums Blog",
+      "feed_url": "https://www.daves-drums.co.uk/blog-feed.xml",
+      "website_url": "https://www.daves-drums.co.uk/blog",
+      "description": "Dave Harris is a drum teacher, online retailer of quality new and refurbished drums and accessories, also offering a repair service for drums and hardware. Subscribe to keep up with latest updates from this blog.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 658
+      },
+      "image_url": "https://i1.feedspot.com/4919457.jpg?t=1620647623"
+    },
+    {
+      "title": "Drum Teachers Blog",
+      "feed_url": "https://www.drumteachers.co.uk/feed/",
+      "website_url": "https://www.drumteachers.co.uk/blog/",
+      "description": "Drum Teachers search for your local drumming tutor all around the UK, Scotland, Wales and Northern Ireland. Subscribe to get latest updates from this blog in your inbox.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4607288.jpg?t=1615549036"
+    }
+  ]
+}

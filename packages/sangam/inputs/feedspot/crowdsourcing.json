@@ -1,0 +1,55 @@
+{
+  "category": "Crowdsourcing",
+  "source_url": "https://rss.feedspot.com/crowdsourcing_rss_feeds",
+  "feeds": [
+    {
+      "title": "Crowdsourcing Week Blog",
+      "feed_url": "https://crowdsourcingweek.com/feed/",
+      "website_url": "https://crowdsourcingweek.com/blog/",
+      "description": "Insights on all things crowdsourcing, crowdfunding, and open innovation. Collaborative or decentralized models of finance and investing, including equity crowdfunding, reward crowdfunding, crowd currencies, peer-to-peer lending, and peer-to-peer commerce. Follow this blog and get all things crowdsourcing and crowdfunding, with insights from our expert editorial team.",
+      "followers": {
+        "facebook": 10900,
+        "twitter": 14600
+      },
+      "image_url": "https://i1.feedspot.com/4822261.jpg?t=1610782499"
+    },
+    {
+      "title": "Innovation Observer",
+      "feed_url": "https://innovationobserver.com/feed/",
+      "website_url": "https://innovationobserver.com/",
+      "description": "Eugene Ivanov's blog is dedicated to helping people understand Open Innovation & Crowdsourcing. In 2020, he released his first book, 'We the People of the Crowd...', which is a collection of true stories about crowdsourcing based on his own work with corporate & nonprofit clients.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5351333.jpg?t=1638939205"
+    },
+    {
+      "title": "FromThePage",
+      "feed_url": "https://content.fromthepage.com/feed/",
+      "website_url": "https://content.fromthepage.com/",
+      "description": "Crowd-sourcing transcriptions tips from professionals. Learn how to minimize errors and balance volunteer engagement. FromThePage is an open-source software for collaborating on texts. The tool supports projects from simple, plain-text transcription through bilingual digital editions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5499395.jpg?t=1674630913"
+    },
+    {
+      "title": "Massachusetts Institute of Technology \u00bb Crowdsourcing",
+      "feed_url": "https://news.mit.edu/rss/topic/crowdsourcing",
+      "website_url": "https://news.mit.edu/topic/crowdsourcing",
+      "description": "MIT news feed about Crowdsourcing features new and archived articles covering crowdsourced projects, reports, public collaborations, and many more quirky, insightful reads. MIT News brings together inspiring, intuitive and globally impactful stories happening on the MIT campus as well as around the world.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 1400000,
+        "instagram": 500
+      },
+      "image_url": "https://i1.feedspot.com/5499394.jpg?t=1674630910"
+    },
+    {
+      "title": "Chris Jones Filmmaker Blog \u00bb Crowdsourcing",
+      "feed_url": "https://chrisjonesblog.com/category/crowdsourcing/feed",
+      "website_url": "https://chrisjonesblog.com/category/crowdsourcing",
+      "description": "Crowdsourcing Guidance and tips. Chris Jones's Filmmaker Blog unravels the basics and crucial ideas behind Crowdsourcing and how to use it effectively to fund your creative project. Chris Jones is an acclaimed Filmmaker and through this blog documents his work and shares genuine insights with aspiring filmmakers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5499396.jpg?t=1674631203"
+    }
+  ]
+}

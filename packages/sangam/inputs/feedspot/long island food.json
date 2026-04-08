@@ -1,0 +1,60 @@
+{
+  "category": "Long Island Food",
+  "source_url": "https://rss.feedspot.com/long_island_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Long Island Food Council",
+      "feed_url": "https://longislandfoodcouncil.com/feed/",
+      "website_url": "https://longislandfoodcouncil.com/news/",
+      "description": "We are advocates for the Long Island Food and Beverage industry, an information hub, and a catalyst for networking. We are committed to offering meaningful benefits and resources you need to grow and run a profitable business. Our members and partners are leaders in their field providing a network of experts and experience. These valuable connections enable the council to provide a platform for education and dialogue at monthly meetings and events.",
+      "followers": {
+        "facebook": 934,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5507684.jpg?t=1676365773"
+    },
+    {
+      "title": "Long Island Cares Blog",
+      "feed_url": "https://www.licares.org/news/blog/feed/",
+      "website_url": "https://www.licares.org/news/blog/",
+      "description": "Long Island Cares - The Harry Chapin Food Bank has been on a mission to feed Long Island's food insecure and stamp out the root causes of hunger since our founding by the late Harry Chapin in 1980. We provide nutritional food and support services for a network of more than 374 community-based member agencies, including food pantries, soup kitchens, emergency shelters, child care programs, disability organizations, veterans' services programs and more.",
+      "followers": {
+        "facebook": 15300,
+        "twitter": 5800,
+        "instagram": 7400
+      },
+      "image_url": "https://i1.feedspot.com/5507679.jpg?t=1676365557"
+    },
+    {
+      "title": "Real Long Island \u00bb Food & Restaurants",
+      "feed_url": "https://www.reallongisland.com/category/food-and-restaurants/feed/",
+      "website_url": "https://www.reallongisland.com/category/food-and-restaurants/",
+      "description": "Real Long Island shares food and restaurants around Long Island, from North Shore to South Shore, East End to West. We share popular food and restaurants for visitors and unique local recommendations. It is our goal to show you that Long Island is more than just the Hamptons and there is truly something for everyone.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5507681.jpg?t=1676365938"
+    },
+    {
+      "title": "Discover Long Island Blog \u00bb Food",
+      "feed_url": "https://www.discoverlongisland.com/blog/stories/category/food-%26-drink/6351965cf39bc17a4e50ca95/",
+      "website_url": "https://www.discoverlongisland.com/blog/stories/category/food-%26-drink/6351965cf39bc17a4e50ca95/",
+      "description": "Discover Long Island is the region's official and only accredited destination marketing organization, charged with furthering Long Island's thriving $6.3 billion visitor economy, for more than 40 years. As a private, not-for-profit our organization works to ensure Long Island's coveted quality of life, flourishing industries, and dynamic destination assets are promoted on a global level, supporting economic activity and development, and benefiting residents and businesses throughout the region.",
+      "followers": {
+        "facebook": 277000,
+        "twitter": 4000,
+        "instagram": 159900
+      },
+      "image_url": "https://i1.feedspot.com/5507688.jpg?t=1676365432"
+    },
+    {
+      "title": "LI Press \u00bb food-leisure",
+      "feed_url": "https://www.longislandpress.com/tag/food-leisure/?utm_source=longislandweekly.com/",
+      "website_url": "https://www.longislandpress.com/tag/food-leisure/?utm_source=longislandweekly.com/",
+      "description": "Our articles present engaging views on food and leisure life. Long Island Weekly is your go-to source for news, entertainment, arts, music, sports, and more. Our team of award-winning reporters and columnists provide you with the latest breaking local news, tackling issues that are vital to Long Island residents and providing information and insight available nowhere else.",
+      "followers": {
+        "facebook": 2600,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5507678.jpg?t=1676365984"
+    }
+  ]
+}

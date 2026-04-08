@@ -1,0 +1,47 @@
+{
+  "category": "Finnish Interior Design",
+  "source_url": "https://rss.feedspot.com/finnish_interior_design_rss_feeds",
+  "feeds": [
+    {
+      "title": "Urakkamaailma Blog",
+      "feed_url": "https://blogi.urakkamaailma.fi/feed/",
+      "website_url": "http://blogi.urakkamaailma.fi/",
+      "description": "Urakkamaailma publishes renovation and home-related blog posts, articles, and studies. In the blog, we give advice and instructions on everything related to the home; from decorating to renovation. We are a marketplace for contractors and people with various renovation needs such as homeowners and property managers.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5429803.jpg?t=1659943146"
+    },
+    {
+      "title": "Helsinki Design Blog",
+      "feed_url": "https://blog.helsinki-design.ch/feed/",
+      "website_url": "https://blog.helsinki-design.ch/",
+      "description": "Take a read on our blog posts that carries a range of Helsinki Design products including design furniture, lamps, home accessories, crockery, textiles, and table decorations. We have specialized in Finnish and Scandinavian design. Our products are high quality, functional, natural, and sustainable.",
+      "followers": {
+        "facebook": 2700,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5429806.jpg?t=1660824397"
+    },
+    {
+      "title": "Villa Lume Blog",
+      "feed_url": "https://www.villalume.com/blogi?format=rss",
+      "website_url": "https://www.villalume.com/blogi",
+      "description": "Villa Lume is a blog about home building, interior decoration and traveling. Follow along for inspiration about organic minimalism and beautiful escapes. * Villa Lume on blogi talounelmasta, sisustushaaveista ja matkailusta. Lue ja inspiroidu orgaanisesta minimalismista sek\u00e4 lifestyle-teemoista.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5755277.jpg?t=1705391712"
+    },
+    {
+      "title": "Dezeen \u00bb Finland",
+      "feed_url": "https://www.dezeen.com/tag/finland/feed/",
+      "website_url": "https://www.dezeen.com/tag/finland/",
+      "description": "Explore here the new architecture and design projects from Finland. Dezeen is a popular and influential architecture, interiors, and design magazine aimed to carry a carefully edited selection of the best architecture, design, and interiors projects from all over the world.",
+      "followers": {
+        "facebook": 1200000,
+        "instagram": 3600000
+      },
+      "image_url": "https://i1.feedspot.com/5429802.jpg?t=1659943101"
+    }
+  ]
+}

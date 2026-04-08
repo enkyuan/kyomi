@@ -1,0 +1,54 @@
+{
+  "category": "Madrid Entertainment",
+  "source_url": "https://rss.feedspot.com/madrid_entertainment_rss_feeds",
+  "feeds": [
+    {
+      "title": "Citylife Madrid Blog",
+      "feed_url": "https://www.citylifemadrid.com/feed/",
+      "website_url": "https://www.citylifemadrid.com/blog/",
+      "description": "Citylife Madrid provides you with everything you need during your stay in Madrid, from accommodation & events to cultural activities, trips and parties! The Citylife Madrid Blog helps you to explore and enjoy the city of Madrid. get the best out of here: be part of it!",
+      "followers": {
+        "facebook": 38400,
+        "twitter": 420,
+        "instagram": 19100
+      },
+      "image_url": "https://i1.feedspot.com/5334721.jpg?t=1646138305"
+    },
+    {
+      "title": "Cats Hostels",
+      "feed_url": "https://catshostels.com/feed/",
+      "website_url": "https://catshostels.com/news/",
+      "description": "Cats Hostels isn't just a place to sleep. We are SO much more than that. They are a family of hostels with a mission: to make sure your trip is an unforgettable EXPERIENCE. They have been hosting genuine backpackers for fifteen years now, so we know what we're doing.",
+      "followers": {
+        "facebook": 26500
+      },
+      "image_url": "https://i1.feedspot.com/7280249.jpg?t=1711100559"
+    },
+    {
+      "title": "Ego Confidential Club Blog",
+      "feed_url": "https://egoclub.es/feed/",
+      "website_url": "https://egoclub.es/blog/",
+      "description": "Ego Confidential Club Nocturno is about a nightclub called Ego Confidential Club. It discusses what makes a good night out, including music and clothes. The club is located in Madrid, Spain.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7280246.jpg?t=1711115701"
+    },
+    {
+      "title": "Bar Tula Blog",
+      "feed_url": "https://bartula.es/feed/",
+      "website_url": "https://bartula.es/blog/",
+      "description": "Bar Tula opened our doors on January 28, 1980, at the height of the cultural and nightlife movement 'La movida'.Juan Ramos and Julia Puente, just out of adolescence, managed to turn a small place in the Salamanca neighborhood into a benchmark for Madrid nightlife for young and not so young.",
+      "followers": {
+        "facebook": 713
+      },
+      "image_url": "https://i1.feedspot.com/7280247.jpg?t=1711100924"
+    },
+    {
+      "title": "Local para Fiestas Blog",
+      "feed_url": "https://localparafiestasmadrid.es/feed/",
+      "website_url": "https://localparafiestasmadrid.es/blog/",
+      "description": "Local para Fiestas is a blog about a company that rents out spaces for events in Madrid. It discusses what services the company offers and how to contact them. The company highlights that its venues are suited for a variety of events, including corporate events, birthday parties, and graduations. They boast a variety of locations throughout Madrid.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7280248.jpg?t=1711100442"
+    }
+  ]
+}

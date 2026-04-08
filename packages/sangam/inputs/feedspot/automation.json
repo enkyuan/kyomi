@@ -1,0 +1,644 @@
+{
+  "category": "Automation",
+  "source_url": "https://rss.feedspot.com/automation_rss_feeds",
+  "feeds": [
+    {
+      "title": "Robotics & Automation News",
+      "feed_url": "https://roboticsandautomationnews.com/feed/",
+      "website_url": "https://roboticsandautomationnews.com/tag/robot/",
+      "description": "Robotics and Automation News covers the robotics and automation industries around the world. We mainly concentrate on robotic and automation technologies in industrial sectors such as logistics and manufacturing.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4606449.jpg?t=1670239671"
+    },
+    {
+      "title": "Automation World",
+      "feed_url": "https://www.automationworld.com/__rss/website-scheduled-content.xml?input={\"sectionAlias\":\"home\"}",
+      "website_url": "https://www.automationworld.com/",
+      "description": "Automation World is the leading publication for automation professionals working in discrete, batch and process manufacturing industries. Readers will discover the latest new products and technologies, articles on management issues, Industrial Ethernet, Packaging Automation, and other topics that matter now to automation professionals.",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 35300,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4604204.jpg"
+    },
+    {
+      "title": "Automated Home",
+      "feed_url": "https://automatedhome.com/feed/",
+      "website_url": "https://automatedhome.com/",
+      "description": "Automated Home is the Centre of the Home Automation Community with home automation news, reviews, forums, wiring guides, and tutorials. Read, learn about, and shop innovatively designed products and smart systems within the Automated Home blog page.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 36600,
+        "instagram": 33
+      },
+      "image_url": "https://i1.feedspot.com/4604338.jpg?t=1619531766"
+    },
+    {
+      "title": "Robohub",
+      "feed_url": "https://robohub.org/feed/",
+      "website_url": "https://robohub.org/category/news/",
+      "description": "Robohub is a non-profit online communication platform that brings together experts in robotics research, start-ups, business, and education with news, views from around the world.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 23900
+      },
+      "image_url": "https://i1.feedspot.com/319475.jpg?t=1614944255"
+    },
+    {
+      "title": "Robotics Business Review",
+      "feed_url": "https://www.therobotreport.com/feed/",
+      "website_url": "https://www.therobotreport.com/category/news/",
+      "description": "Robotics Business Review provides breaking news, informed opinion, and deep analysis focused on the robotics, automation, and intelligent systems sector. Gain a competitive edge in the global robotics industry.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 11800
+      },
+      "image_url": "https://i1.feedspot.com/4607329.jpg?t=1615469878"
+    },
+    {
+      "title": "UiPath Blog",
+      "feed_url": "https://www.uipath.com/blog/rss.xml",
+      "website_url": "https://www.uipath.com/blog/automation",
+      "description": "UiPath is the leading Robotic Process Automation vendor providing a complete software platform to help you efficiently automate business processes. Follow our blog to get the latest in Robotic Process Automation orchestrate your technology and focus on what matters most.",
+      "followers": {
+        "facebook": 50800,
+        "twitter": 101500,
+        "instagram": 19200
+      },
+      "image_url": "https://i1.feedspot.com/4607093.jpg?t=1615469882"
+    },
+    {
+      "title": "Redwood Blog",
+      "feed_url": "https://www.redwood.com/feed/",
+      "website_url": "https://www.redwood.com/blog/",
+      "description": "Redwood is the global business and IT process automation expert. They increase the value of existing information technology, information management and infrastructure investments.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 852
+      },
+      "image_url": "https://i1.feedspot.com/4607144.jpg"
+    },
+    {
+      "title": "SmartThings Blog",
+      "feed_url": "https://blog.smartthings.com/feed/",
+      "website_url": "https://blog.smartthings.com/",
+      "description": "SmartThings lets you easily monitor, control, and secure your home from anywhere. You can stay connected to loved ones when you're on the go; control and program lights, temperature, and more; and protect your home more affordably than with a traditional home security system.",
+      "followers": {
+        "facebook": 96,
+        "twitter": 50900
+      },
+      "image_url": "https://i1.feedspot.com/4605056.jpg?t=1615469896"
+    },
+    {
+      "title": "Automation Direct Blog",
+      "feed_url": "https://library.automationdirect.com/feed/",
+      "website_url": "https://library.automationdirect.com/the-automationdirect-blog/",
+      "description": "Follow this blog for industry & product news. Updated weekly with posts on helpful application stories, white papers, e-books and more. In business since 1994, AutomationDirect is a distributor offering thousands of industrial automation products for electrical control systems, including PLCs, operator interfaces, AC drives, motors, stepper systems, sensors, motor controls, enclosures and more.",
+      "followers": {
+        "facebook": 17300,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4604231.jpg?t=1615469900"
+    },
+    {
+      "title": "AppViewX Blog",
+      "feed_url": "https://www.appviewx.com/blogs/feed/",
+      "website_url": "https://www.appviewx.com/blogs/",
+      "description": "Articles feature the latest insights and updates on the developments in application delivery, certificate lifecycle, and network security automation. AppViewX is the next-gen Machine Identity Management, Automation, and Orchestration platform for Enterprise IT.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 851
+      },
+      "image_url": "https://i1.feedspot.com/5057610.jpg?t=1615470006"
+    },
+    {
+      "title": "GIL Automations Blog",
+      "feed_url": "https://www.gilautomation.com/blogs/news.atom",
+      "website_url": "https://www.gilautomation.com/blogs/news/tagged/automation",
+      "description": "GIL Automation is an international systems integrator that partners with our customers to provide systems that work. They have core competence in Metering, Instrumentation, Control, Panel Building, Electrical, Safety Systems and Technical training to Industrial clients.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 2400,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4606268.jpg?t=1629180319"
+    },
+    {
+      "title": "Plataine - People-smart Manufacturing Automation Blog",
+      "feed_url": "https://www.plataine.com/feed/",
+      "website_url": "https://www.plataine.com/blog/",
+      "description": "Your Intelligent Manufacturing Automation Partner, Delivering the Factory of the Future. Plataine is an award-winning leading provider of Intelligent Automation solutions for advanced manufacturing of various industries.",
+      "followers": {
+        "facebook": 471
+      },
+      "image_url": "https://i1.feedspot.com/4607378.jpg?t=1615470069"
+    },
+    {
+      "title": "Granta Automation",
+      "feed_url": "https://www.granta-automation.co.uk/news/feed/",
+      "website_url": "https://www.granta-automation.co.uk/news/",
+      "description": "The experts at Granta Automation share their depth of knowledge in the pelletizing industry, discussing important points, issues, and tricks. Granta Automation are specialist in bespoke automation, control systems, and robotics for a wide range of industries from pharmaceutical to industrial automation.",
+      "followers": {
+        "facebook": 421,
+        "twitter": 141
+      },
+      "image_url": "https://i1.feedspot.com/4607338.jpg?t=1615470126"
+    },
+    {
+      "title": "WorkFusion Blog",
+      "feed_url": "https://www.workfusion.com/feed/",
+      "website_url": "https://www.workfusion.com/blog/",
+      "description": "WorkFusion is the leading provider of Intelligent Automation solutions for Fortune 500 enterprises, banks, insurance, and financial services companies. Blogs on disruptive technologies such as RPA, AI, Intelligent Automation, Hyperautomation and more.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4607161.jpg?t=1615469997"
+    },
+    {
+      "title": "Loxone Blog",
+      "feed_url": "https://www.loxone.com/enen/feed/",
+      "website_url": "https://www.loxone.com/enen/blog/",
+      "description": "The destination for smart home news. Discover the latest product and software news, tips for building a smart home, real life case studies and more.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 4700,
+        "instagram": 53900
+      },
+      "image_url": "https://i1.feedspot.com/4604968.jpg?t=1615470002"
+    },
+    {
+      "title": "QSR Automations Blog",
+      "feed_url": "https://qsrautomations.com/feed/",
+      "website_url": "https://qsrautomations.com/blog/",
+      "description": "QSR Automations is the global leader in restaurant technology, serving up solutions that range from kitchen display systems to table management & hardware. Follow the latest & greatest news in restaurant technology on the QSR Automations blog.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 1900,
+        "instagram": 622
+      },
+      "image_url": "https://i1.feedspot.com/4637380.jpg?t=1602509648"
+    },
+    {
+      "title": "At Home in the Future",
+      "feed_url": "https://athomeinthefuture.com/feed/",
+      "website_url": "https://athomeinthefuture.com/archives/",
+      "description": "A smart home blog documenting journey to find the perfect solutions to make home safer, more organized, and a better place to live.",
+      "followers": {
+        "facebook": 200,
+        "twitter": 617,
+        "instagram": 361
+      },
+      "image_url": "https://i1.feedspot.com/4572193.jpg?t=1615470034"
+    },
+    {
+      "title": "Polytron Blog",
+      "feed_url": "https://info.polytron.com/blog/rss.xml",
+      "website_url": "https://info.polytron.com/blog",
+      "description": "Polytron's Industrial Automation and Manufacturing Intelligence Engineers post regular updates and articles on trends, automation news and insights in the industry.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 28500
+      },
+      "image_url": "https://i1.feedspot.com/4606381.jpg?t=1615470200"
+    },
+    {
+      "title": "Quantum Automation Blog",
+      "feed_url": "https://www.quantumautomation.com/blog/feed",
+      "website_url": "https://www.quantumautomation.com/blog",
+      "description": "Quantum automation is dedicated to providing the highest quality networking and control products available, on time, to the utility, petrochemical, food, maritime, water/wastewater, and related industrial industries.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 253
+      },
+      "image_url": "https://i1.feedspot.com/4607427.jpg?t=1615470233"
+    },
+    {
+      "title": "The Door Industry Journal",
+      "feed_url": "https://feeds.feedburner.com/TheDoorIndustryJournal",
+      "website_url": "https://blog.doorindustryjournal.co.uk/",
+      "description": "The Door Industry Journal is an independently produced trade journal, published by Avalon Innovations LLP on behalf of the door, security, lock, ironmongery and automated gate industries. Their printed and online content features news from the Industrial Door, Garage Door, Entrance Door, Fire Door, Timber & Metal Doorset, Domestic and Commercial Powered Gate, Fire and Security, Building Hardware.",
+      "followers": {
+        "facebook": 889,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4607370.jpg?t=1615470237"
+    },
+    {
+      "title": "Home Tech Experts (HTE) Blog",
+      "feed_url": "https://hteny.com/news?format=RSS",
+      "website_url": "https://hteny.com/news/",
+      "description": "HTE designs elite systems, incorporating the functionality of luxury technology into high-end decor. HTE has been providing automation and entertainment systems to discerning clients since 2004.",
+      "followers": {
+        "facebook": 650,
+        "twitter": 2,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4607407.jpg"
+    },
+    {
+      "title": "LEAPWORK Blog",
+      "feed_url": "https://www.leapwork.com/blog/rss.xml",
+      "website_url": "https://www.leapwork.com/blog",
+      "description": "At LEAPWORK, we believe in the transformative power of technology to set us free; to make us happier, more productive, and to connect people and businesses better. We want to give the common employee and every company around the globe the power to automate any and every software process. Check out the blog for getting Automation insights and productivity tips from LEAPWORK.",
+      "followers": {
+        "facebook": 776,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4717024.jpg?t=1607679867"
+    },
+    {
+      "title": "Learn SCADA",
+      "feed_url": "https://learnscada.com/f.atom",
+      "website_url": "https://learnscada.com/",
+      "description": "My goal is to provide you with quality tutorials on a consistent basis, to become a reliable source of detailed information on topics that equip you to be better a programmer and developer.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5048327.jpg?t=1615471720"
+    },
+    {
+      "title": "Ellard Blog",
+      "feed_url": "https://www.ellard.co.uk/blog-feed.xml",
+      "website_url": "https://www.ellard.co.uk/blog",
+      "description": "All the latest news and product information from Ellard including the latest products and developments from the world of gate automation. Ellard is the UK's largest supplier of drives and controls used to automate industrial doors, shutters, garage doors, blinds and gates.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 1400,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4607306.jpg?t=1696436509"
+    },
+    {
+      "title": "Softwear Automation",
+      "feed_url": "http://softwearautomation.com/feed/",
+      "website_url": "https://softwearautomation.com/press/",
+      "description": "SoftWear Automation is disrupting the $100B sewn products industry by replacing sewing labor with cutting edge robots. SoftWear Automation strives to be the first & sole supplier of general case robotic sewing machines that are capable of automatically sewing garments both accurately and reliably.",
+      "followers": {
+        "facebook": 830,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4607324.jpg?t=1615472292"
+    },
+    {
+      "title": "Cisco Industrial Automation Blog",
+      "feed_url": "https://blogs.cisco.com/tag/industrial-automation/feed",
+      "website_url": "https://blogs.cisco.com/tag/industrial-automation",
+      "description": "Cisco (NASDAQ: CSCO) is the worldwide technology leader that has been making the Internet work since 1984. Their people, products, and partners help society securely connect and seize tomorrow's digital opportunity today.",
+      "followers": {
+        "facebook": 2600000,
+        "instagram": 569200
+      },
+      "image_url": "https://i1.feedspot.com/4606205.jpg?t=1615471793"
+    },
+    {
+      "title": "Delta Sigma Company",
+      "feed_url": "https://deltasigmacompany.com/feed/",
+      "website_url": "https://deltasigmacompany.com/learn/",
+      "description": "Delta Sigma Company (DSC) specializes in designing and building custom systems used to automate precision manufacturing and complex assembly tasks. Learn from eye-opening technical articles simplifying a range of Automation topics. Explore in-depth automated assembly, machining, and test systems.",
+      "followers": {
+        "facebook": 89
+      },
+      "image_url": "https://i1.feedspot.com/7261731.jpg?t=1708959373"
+    },
+    {
+      "title": "Wink Blog",
+      "feed_url": "https://www.blog.wink.com/wink-blog?format=RSS",
+      "website_url": "https://www.blog.wink.com/",
+      "description": "Wink is the smarter way to a simpler home. The Wink app is a beautifully designed platform that keeps you connected to your home\u2014no matter where you are. Simple controls allow you to monitor and manage everything in your home.",
+      "followers": {
+        "facebook": 27800,
+        "twitter": 21200
+      },
+      "image_url": "https://i1.feedspot.com/4496438.jpg?t=1615471785"
+    },
+    {
+      "title": "Eclipse Automation Inc. Blog",
+      "feed_url": "https://www.eclipseautomation.com/feed/",
+      "website_url": "https://www.eclipseautomation.com/news-resources/blog/",
+      "description": "Eclipse Automation Inc. is a leading supplier of custom automated manufacturing equipment and engineering services to energy, life sciences, transportation, and other manufacturing industries.",
+      "followers": {
+        "facebook": 956,
+        "twitter": 863
+      },
+      "image_url": "https://i1.feedspot.com/4606336.jpg?t=1615472357"
+    },
+    {
+      "title": "Automation Airmanship Blog \u00bb Convergent Performance",
+      "feed_url": "https://convergentperformance.com/category/automation-airmanship/feed/",
+      "website_url": "https://convergentperformance.com/category/automation-airmanship/",
+      "description": "Posts feature articles on Airmanship automation. Convergent Performance applies the latest in human factors research to high-risk industries wanting to reduce error, increase professionalism, and optimize the human/machine interface.",
+      "followers": {
+        "facebook": 333,
+        "twitter": 219
+      },
+      "image_url": "https://i1.feedspot.com/4606284.jpg?t=1615471746"
+    },
+    {
+      "title": "Breathe Technologies News",
+      "feed_url": "https://breathetech.co.uk/feed/",
+      "website_url": "https://breathetech.co.uk/resource_categories/insights/",
+      "description": "Articles feature the latest news, company updates, projects, and other useful insights. Breathe Technologies provides smart warehouse technology that enables frictionless growth, making the journey to achieving a smart warehouse simpler.",
+      "followers": {
+        "twitter": 385
+      },
+      "image_url": "https://i1.feedspot.com/4607291.jpg?t=1615472156"
+    },
+    {
+      "title": "Digitized House",
+      "feed_url": "https://digitized.house/feed/",
+      "website_url": "https://digitized.house/",
+      "description": "Guide to a smart, sustainable, healthy house. home. House Digitized House Magazine is the all-digital, original-content source for engaged homeowners, exploring the convergence of the smart house, the sustainable house, and the zero energy house.",
+      "followers": {
+        "facebook": 777,
+        "twitter": 15700
+      },
+      "image_url": "https://i1.feedspot.com/4605585.jpg?t=1619531479"
+    },
+    {
+      "title": "IVISYS",
+      "feed_url": "https://ivisys.com/feed/",
+      "website_url": "https://ivisys.com/insights/",
+      "description": "IVISYS is a machine vision company providing fully automated quality control inspection machines & industrial vision systems.",
+      "followers": {
+        "facebook": 253,
+        "twitter": 178
+      },
+      "image_url": "https://i1.feedspot.com/5201679.jpg?t=1601285636"
+    },
+    {
+      "title": "The Automation Code",
+      "feed_url": "https://theautomationcode.com/feed/",
+      "website_url": "https://theautomationcode.com/",
+      "description": "Hi, This is Chirag Nagrekar, author and writer of this blog. I have more than 9 years of experience in managing and implementing IT Infrastructure and primarily working and focusing on Infrastructure Automation Projects. This blog is for System Admins and novice automation developers to help them for Automation and Simplification of processes and make their life easier. This blog primarily focuses on Automation with PowerShell and other automation scripting tools.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5198066.jpg?t=1600682558"
+    },
+    {
+      "title": "999 Automation Blog",
+      "feed_url": "https://blog.999automation.com/feed/",
+      "website_url": "https://blog.999automation.com/",
+      "description": "999 Automation is a single on-line resource for your automation and control product requirements. Visit their blog for industry news and developments. Stay ahead of the curve with detailed coverage of groundbreaking advancements in robotics technology.",
+      "followers": {
+        "twitter": 384
+      },
+      "image_url": "https://i1.feedspot.com/4606343.jpg?t=1615472364"
+    },
+    {
+      "title": "Ridgetech Automation Inc. News",
+      "feed_url": "http://ridgetech.com/news/feed/",
+      "website_url": "http://ridgetech.com/news/",
+      "description": "RidgeTech Automation Inc. was built to specialize in control systems integration, with a keen understanding that there is a much bigger picture. The control system is the nerve centre of a much larger entity, and we work hard to ensure that our solutions consider every aspect of the machine or system.",
+      "followers": {
+        "facebook": 49,
+        "twitter": 31
+      },
+      "image_url": "https://i1.feedspot.com/4607309.jpg?t=1615471696"
+    },
+    {
+      "title": "Balluff Blog",
+      "feed_url": "https://automation-insights.blog/feed/",
+      "website_url": "https://www.balluff.com/en-us/blog-automation-insights",
+      "description": "This blog is sponsored and administered by Balluff, a leading global supplier of sensors for automation. Although they certainly have a vested interest in selling sensor products to the market, they are dedicated to the successful implementation of sensor technology by the automation community at large.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 7200
+      },
+      "image_url": "https://i1.feedspot.com/4606407.jpg"
+    },
+    {
+      "title": "Jalubro Consulting Blog",
+      "feed_url": "http://jalubro.com/feed/",
+      "website_url": "https://jalubro.com/thinking/",
+      "description": "Jalubro Consulting is a fast growing and highly competent UK based IT services and business solutions provider. They partners with clients to identify, deliver and sustain business improvement through the implementation of new strategies, processes and technologies.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 22
+      },
+      "image_url": "https://i1.feedspot.com/4607172.jpg?t=1615471751"
+    },
+    {
+      "title": "Princites.com",
+      "feed_url": "https://princites.com/feed/",
+      "website_url": "https://princites.com/",
+      "description": "Read the most updated blog on Robotics, AI, Automation, and advanced technologies. Stay ahead in the field of robotics and read the industry trends.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5185970.jpg?t=1598345666"
+    },
+    {
+      "title": "Professional Control Corporation Blog",
+      "feed_url": "http://www.pccweb.com/news/feed/",
+      "website_url": "https://www.pccweb.com/news/",
+      "description": "PCC News provides the latest in industrial automation and manufacturing industry news, product features, whitepapers and educational events.",
+      "followers": {
+        "facebook": 260,
+        "twitter": 659
+      },
+      "image_url": "https://i1.feedspot.com/4606332.jpg?t=1615470061"
+    },
+    {
+      "title": "Gray Matter Systems Blog",
+      "feed_url": "https://graymattersystems.com/blog-page/feed/",
+      "website_url": "https://graymattersystems.com/blog-page/",
+      "description": "Gray Matter Systems is committed to providing hardware and software solutions, training, consulting, and domain expertise giving industries the power to identify problems, reduce risk, and take action to deliver significantly better outcomes.",
+      "followers": {
+        "twitter": 738
+      },
+      "image_url": "https://i1.feedspot.com/4606325.jpg?t=1615470083"
+    },
+    {
+      "title": "AX Control, Inc. Blog",
+      "feed_url": "https://www.axcontrol.com/blog/feed/",
+      "website_url": "https://www.axcontrol.com/blog/",
+      "description": "AX Control has new, remanufactured, & obsolete PLC, HMI, turbine control boards, drives & more by GE, Reliance Electric, Fuji, Horner, Pro Face, Square D, and others. Massive inventory - Repair available on all product lines. Our focus is industrial automation, robotics, and technology. But sometimes our blog posts wander a little off-topic, so we've covered everything from the NFL to the destruction of a diamond engagement ring to Princess Twilight Sparkle.",
+      "followers": {
+        "facebook": 4600,
+        "instagram": 88
+      },
+      "image_url": "https://i1.feedspot.com/5242339.jpg?t=1612510325"
+    },
+    {
+      "title": "PanelShop Blog",
+      "feed_url": "https://info.panelshop.com/blog/rss.xml",
+      "website_url": "https://info.panelshop.com/blog",
+      "description": "Stay up-to-date on industry-related trends, topics, and technology. Everything in industrial automation, manufacturing, and control panels.",
+      "followers": {
+        "facebook": 306,
+        "twitter": 2100,
+        "instagram": 932
+      },
+      "image_url": "https://i1.feedspot.com/4606214.jpg"
+    },
+    {
+      "title": "The Material Handling Automation Blog",
+      "feed_url": "https://www.bastiansolutions.com/rss/blogs.aspx",
+      "website_url": "https://www.bastiansolutions.com/blog/",
+      "description": "Your go-to source for material handling automation and supply chain information.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/4606357.jpg?t=1615469913"
+    },
+    {
+      "title": "Grid Connect Blog",
+      "feed_url": "https://www.gridconnect.com/blogs/news.atom",
+      "website_url": "https://www.gridconnect.com/blogs/news",
+      "description": "ConnectSense is the perfect solution for automating your home or business, allowing you to control everything from your living room to your server room. Their line of wireless products is steeped in the technology of the Internet of Things.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 2400,
+        "instagram": 195
+      },
+      "image_url": "https://i1.feedspot.com/4604886.jpg?t=1615470052"
+    },
+    {
+      "title": "HomeToys News",
+      "feed_url": "https://hometoys.com/",
+      "website_url": "https://hometoys.com/",
+      "description": "A News and Information Resource for the Automation, Security & A/V Systems Industry. Daily News Stories, Products, Industry Tools, Hundreds of Articles and more.",
+      "followers": {
+        "facebook": 402,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/1710980.jpg?t=1615469874"
+    },
+    {
+      "title": "Automation.com - Real time Information for the Automation Professional",
+      "feed_url": "https://www.automation.com/automation-news/rss",
+      "website_url": "https://www.automation.com/en-us/automation-news",
+      "description": "Providing automation professionals with news and information to automate manufacturing factories and processes, solve problems, improve production efficiencies. Follow to keep up with News & Resources for Manufacturing, Factory & Industrial Automation; Process Control; Motion Control & Instrumentation.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 26100
+      },
+      "image_url": "https://i1.feedspot.com/3484519.jpg?t=1615469846"
+    },
+    {
+      "title": "Design News",
+      "feed_url": "https://www.designnews.com/rss.xml",
+      "website_url": "https://www.designnews.com/automation",
+      "description": "Design News owns the largest trusted community of design engineers in the horizontal engineering space. Coverage at Design News is based on four key pillars, which are the backbone of just about every design project: Electronics & Test, Automation & Control, Materials & Assembly, and Design Hardware & Software.",
+      "followers": {
+        "facebook": 42900,
+        "twitter": 20400
+      },
+      "image_url": "https://i1.feedspot.com/4605448.jpg?t=1615469904"
+    },
+    {
+      "title": "Wolf Automation Blog",
+      "feed_url": "https://www.wolfautomation.com/blog/feed/",
+      "website_url": "https://www.wolfautomation.com/blog/",
+      "description": "Marshall Wolf Automation is first, and obvious, choice for industrial automation products and services. Authorized industrial automation distributor with amazing customer service, in-house tech support and great pricing",
+      "followers": {
+        "facebook": 886,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4606347.jpg?t=1615470013"
+    },
+    {
+      "title": "Universal Robots Blog",
+      "feed_url": "https://www.universal-robots.com/blog/",
+      "website_url": "https://www.universal-robots.com/blog/",
+      "description": "Robotics within Reach - that's what this blog is all about. Here you'll find inspiring stories on how collaborative robots - or cobots - are lowering the automation barrier. And learn how the UR cobots can benefit your business.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 26900,
+        "instagram": 114900
+      },
+      "image_url": "https://i1.feedspot.com/4567765.jpg?t=1617795828"
+    },
+    {
+      "title": "CADCAMGURU",
+      "feed_url": "https://cadcamguru.com/cadcamguru-ace-automation-courses/feed/",
+      "website_url": "https://cadcamguru.com/blogs/",
+      "description": "CADCAMGURU PLC SCADA Automation Training is a Value Added Training program giving exciting career opportunities to engineers in Industrial Automation and it is designed by industry experts and academicians. Plc Scada Training Institute viz. CADCAMGURU Solutions Pvt. Ltd. a leading organization in the field of CAD, CAE and Mechanical engineering design training.",
+      "followers": {
+        "facebook": 13100,
+        "twitter": 75,
+        "instagram": 316
+      },
+      "image_url": "https://i1.feedspot.com/5246861.jpg?t=1613740703"
+    },
+    {
+      "title": "KEB America Blog",
+      "feed_url": "https://kebblog.com/feed/",
+      "website_url": "https://www.kebamerica.com/blog/",
+      "description": "This is KEB America's homepage. KEB manufactures electromagnetic clutches and brakes, integral gearmotors, drives, HMIs, and industrial controls.",
+      "followers": {
+        "facebook": 745,
+        "twitter": 593,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4754143.jpg?t=1546939936"
+    },
+    {
+      "title": "SSON Analytics - Robotic Process Automation Blog",
+      "feed_url": "https://www.sson-analytics.com/taxonomy/term/55/feed",
+      "website_url": "https://www.sson-analytics.com/blog",
+      "description": "SSON Analytics is the global analytics centre of the Shared Services & Outsourcing Network (SSON), the world's largest shared services, outsourcing and business transformation community. SSON Analytics provides digestible data-driven insights into the shared services and outsourcing industry.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 8900
+      },
+      "image_url": "https://i1.feedspot.com/4607109.jpg?t=1615470227"
+    },
+    {
+      "title": "Smarter Home Automation",
+      "feed_url": "https://www.smarterhomeautomation.com/articles/feed/",
+      "website_url": "https://www.smarterhomeautomation.com/articles/",
+      "description": "Posts feature articles on new smart home or home automation industry trends, new technologies, products updates, reviews, and more. Smarter Home Automation provides you with information on creating your own Smart Home.",
+      "followers": {
+        "facebook": 180,
+        "twitter": 292,
+        "instagram": 191
+      },
+      "image_url": "https://i1.feedspot.com/4605726.jpg?t=1615472286"
+    },
+    {
+      "title": "Automation Design Blog - Entertainment News & Education",
+      "feed_url": "https://www.automation-design.com/blog/feed/rss/blog?format=feed",
+      "website_url": "https://www.automation-design.com/blog?tag=automation",
+      "description": "Automation Design Entertainment is a full service Residential and Commercial Automation company servicing Michigan. For lighting control, motorized shades, security, or networking needs.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 498
+      },
+      "image_url": "https://i1.feedspot.com/4607392.jpg?t=1615472254"
+    },
+    {
+      "title": "Insights In Automation Blog",
+      "feed_url": "https://theautomationblog.com/feed/",
+      "website_url": "https://theautomationblog.com/category/content-type/article/",
+      "description": "Insights In Automation is dedicated to sharing automation know-how and experience via blogs, podcasts, videos, and affordable training courses.",
+      "followers": {
+        "facebook": 280
+      },
+      "image_url": "https://i1.feedspot.com/4604211.jpg?t=1615472038"
+    },
+    {
+      "title": "Control Global Blog",
+      "feed_url": "https://www.controlglobal.com/blogs/rss",
+      "website_url": "https://www.controlglobal.com/blogs",
+      "description": "CONTROL is the only magazine exclusively dedicated to the global process automation market with a readership of 65,000 plus engineering, operations and management professionals. The publication reports on developing trends, illustrates successful applications, and updates the basic skills and knowledge base that provide the profession's foundation.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 11800
+      },
+      "image_url": "https://i1.feedspot.com/4604246.jpg?t=1615470018"
+    },
+    {
+      "title": "Smart Industry Blog - Accelerating Digital Transformation",
+      "feed_url": "https://www.smartindustry.com/blog/rss",
+      "website_url": "https://www.smartindustry.com/",
+      "description": "Smart Industry is a conference & expo, print publication and online information resource created to accelerate the ongoing digital transformation of manufacturing and related industries, as represented by the convergence of information and operational technologies and industrywide movements such as the Industrial Internet of Things (IIoT), Industrie 4.0 and big data analytics.",
+      "followers": {
+        "facebook": 404,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4606362.jpg?t=1615470026"
+    }
+  ]
+}

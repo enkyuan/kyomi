@@ -1,0 +1,29 @@
+{
+  "category": "Bel Air News",
+  "source_url": "https://rss.feedspot.com/bel_air_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Bel Air News & Views",
+      "feed_url": "http://www.belairnewsandviews.com/feed",
+      "website_url": "http://www.belairnewsandviews.com/",
+      "description": "Bel Air News & Views highlights news and events in Bel Air and Harford County, Md. Stay in touch with Bel Air News & Views to know more about happenings.",
+      "followers": {
+        "facebook": 13900,
+        "twitter": 942,
+        "instagram": 118
+      },
+      "image_url": "https://i1.feedspot.com/5155269.jpg?t=1626515071"
+    },
+    {
+      "title": "Town of Bel Air, MD",
+      "feed_url": "https://www.belairmd.org/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.belairmd.org/CivicAlerts.aspx?CID=1",
+      "description": "Get the latest news and updates about Bel Air, MD.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5155267.jpg?t=1626515067"
+    }
+  ]
+}

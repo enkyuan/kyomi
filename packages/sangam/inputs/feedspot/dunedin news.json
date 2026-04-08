@@ -1,0 +1,17 @@
+{
+  "category": "Dunedin News",
+  "source_url": "https://rss.feedspot.com/dunedin_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Tampa Bay Newspapers \u00bb Dunedin",
+      "feed_url": "https://www.tbnweekly.com/search/?f=rss&t=article&c=north_county/dunedin_beacon&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.tbnweekly.com/north_county/dunedin_beacon/",
+      "description": "Tampa Bay Newspapers Inc. has served the communities of Pinellas County for more than 36 years. Get the latest local news and updates about Dunedin, FL.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5157531.jpg?t=1590827086"
+    }
+  ]
+}

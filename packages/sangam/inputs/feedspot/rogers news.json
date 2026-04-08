@@ -1,0 +1,28 @@
+{
+  "category": "Rogers News",
+  "source_url": "https://rss.feedspot.com/rogers_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of Rogers, AR",
+      "feed_url": "https://www.rogersar.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.rogersar.gov/CivicAlerts.aspx?CID=9",
+      "description": "Get the latest news and happenings in Rogers, AR.",
+      "followers": {
+        "facebook": 34000,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5148551.jpg?t=1626701575"
+    },
+    {
+      "title": "KNWA FOX24 News \u00bb Rogers",
+      "feed_url": "https://www.nwahomepage.com/tag/rogers/feed/",
+      "website_url": "https://www.nwahomepage.com/tag/Rogers/",
+      "description": "KNWA FOX24 News is your source for local news in Northwest Arkansas & the River Valley. The Latest News and Updates in Rogers brought to you by the team at KNWA FOX24.",
+      "followers": {
+        "facebook": 175500,
+        "twitter": 52100
+      },
+      "image_url": "https://i1.feedspot.com/5148550.jpg?t=1588837064"
+    }
+  ]
+}

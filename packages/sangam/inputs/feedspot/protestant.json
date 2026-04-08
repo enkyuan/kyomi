@@ -1,0 +1,719 @@
+{
+  "category": "Protestant",
+  "source_url": "https://rss.feedspot.com/protestant_rss_feeds",
+  "feeds": [
+    {
+      "title": "Sabbath School Network",
+      "feed_url": "https://ssnet.org/feed/",
+      "website_url": "https://ssnet.org/",
+      "description": "Seventh-day Adventist Bible lessons online, teacher helps, Sabbath School resources for adults, youth, children. Daily blog discussion. Other posts of interest.",
+      "followers": {
+        "facebook": 222100,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4779281.jpg?t=1609140576"
+    },
+    {
+      "title": "Anglican Journal",
+      "feed_url": "https://anglicanjournal.com/feed/",
+      "website_url": "https://anglicanjournal.com/",
+      "description": "The Anglican Journal is the national newspaper of the Anglican Church of Canada. It is published 10 times a year and carries 23 regional newspapers that provide important local information for Anglican dioceses.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 9100
+      },
+      "image_url": "https://i1.feedspot.com/4766094.jpg?t=1608624135"
+    },
+    {
+      "title": "Adventist Today",
+      "feed_url": "https://atoday.org/feed/",
+      "website_url": "https://atoday.org/",
+      "description": "Adventist Today (AT) is an independent journalism ministry serving the global Adventist community and readers interested in a reliable source of information about the Adventist faith and institutions.",
+      "followers": {
+        "facebook": 26100,
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4779228.jpg?t=1609140588"
+    },
+    {
+      "title": "Evangelical Lutheran Church in America Blog",
+      "feed_url": "https://blogs.elca.org/feed/",
+      "website_url": "https://blogs.elca.org/",
+      "description": "The Evangelical Lutheran Church in America (ELCA) is one of the largest Christian denominations in the United States. We are the church that shares a living, daring confidence in God's grace. Liberated by our faith, we embrace you as a whole person--questions, complexities and all. Join us as we do God's work in Christ's name for the life of the world.",
+      "followers": {
+        "facebook": 163900,
+        "twitter": 25100,
+        "instagram": 24700
+      },
+      "image_url": "https://i1.feedspot.com/4778027.jpg?t=1609586181"
+    },
+    {
+      "title": "Living Lutheran",
+      "feed_url": "https://www.livinglutheran.org/feed/",
+      "website_url": "https://www.livinglutheran.org/",
+      "description": "Living Lutheran is your source for news, reflections and stories from the Evangelical Lutheran Church in America (ELCA) and its local and global companions. We cover religious news and social issues, congregational life, global and domestic mission, family matters, spiritual practices and resources, and more.",
+      "followers": {
+        "facebook": 22100,
+        "twitter": 12000,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4777925.jpg?t=1609586157"
+    },
+    {
+      "title": "United Methodist Insight",
+      "feed_url": "https://um-insight.net/api/rss/content.rss",
+      "website_url": "https://um-insight.net/",
+      "description": "United Methodist Insight seeks to provide information and perspectives for concerned United Methodists and decision-makers who will shape the future of The United Methodist Church and the communities in which they live and serve. A news-and-views forum for United Methodist leaders and influencers to discern communally God's will for the global United Methodist Church.",
+      "followers": {
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4780005.jpg?t=1609140658"
+    },
+    {
+      "title": "First United Methodist Church Fort Worth Texas Blog",
+      "feed_url": "https://fumcfw.org/feed/",
+      "website_url": "https://fumcfw.org/blog/",
+      "description": "First United Methodist Church of Fort Worth began in 1874. We recognize four sources and criteria for theological thinking: Scripture, Tradition, Experience and Reason. Serving the Fort Worth, Texas community by providing cutting edge worship experiences, offering outstanding children's, singles, music, youth, adult ministries, community outreach and mission programs.",
+      "followers": {
+        "facebook": 13600,
+        "twitter": 3000,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4780009.jpg?t=1609856356"
+    },
+    {
+      "title": "Anglicans Ablaze",
+      "feed_url": "https://anglicansablaze.blogspot.com/feeds/posts/default",
+      "website_url": "https://anglicansablaze.blogspot.com/",
+      "description": "Anglicans Ablaze is committed to building up Christ's Church in North America and beyond.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3294826.jpg?t=1608625259"
+    },
+    {
+      "title": "Anglican Church League",
+      "feed_url": "https://acl.asn.au/feed/",
+      "website_url": "https://acl.asn.au/",
+      "description": "Based in Sydney, Australia, the ACL is an association of evangelical Australian Anglican Christians who desire to maintain the reformed, protestant and evangelical character of the Anglican Church.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/950353.jpg?t=1608625309"
+    },
+    {
+      "title": "Thinking Anglicans",
+      "feed_url": "http://www.thinkinganglicans.org.uk/feed/rdf/",
+      "website_url": "http://www.thinkinganglicans.org.uk/",
+      "description": "Thinking Anglicans is a website for thoughtful contributions to the proclamation of the gospel message. Here writers reflect on what it means to be a Christian, particularly in Britain today.",
+      "followers": {
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/1092323.jpg?t=1608624277"
+    },
+    {
+      "title": "Baptist Standard",
+      "feed_url": "https://baptiststandard.com/news/baptists/feed/",
+      "website_url": "https://baptiststandard.com/news/baptists/",
+      "description": "Baptist news and opinions for Texas Baptists, Cooperative Baptist Fellowship, Southern Baptist Convention and more. Trusted Baptist news source since 1888.",
+      "followers": {
+        "facebook": 16600,
+        "twitter": 4800,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4780256.jpg?t=1610016423"
+    },
+    {
+      "title": "Paul Chappell",
+      "feed_url": "https://paulchappell.com/feed/",
+      "website_url": "https://paulchappell.com/",
+      "description": "Dr. Paul Chappell is the senior pastor of the Lancaster Baptist Church and president of West Coast Baptist College in Lancaster, California. His biblical vision has led the church to become one of the most dynamic independent Baptist churches in the nation.",
+      "followers": {
+        "facebook": 57100,
+        "twitter": 26200,
+        "instagram": 11000
+      },
+      "image_url": "https://i1.feedspot.com/4780231.jpg?t=1610016083"
+    },
+    {
+      "title": "Anglican Compass",
+      "feed_url": "https://anglicancompass.com/feed/",
+      "website_url": "https://anglicancompass.com/",
+      "description": "The goal of Anglican Compass is to explain Anglican experience, and provide the Anglican Compass perspective on worship, faith, and life. Writers for this site are active Anglican priests, and the focus and scope of the material is based on experience in the parish.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 5500,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4587831.jpg?t=1655445354"
+    },
+    {
+      "title": "Good News Magazine",
+      "feed_url": "https://goodnewsmag.org/feed/",
+      "website_url": "https://goodnewsmag.org/latest-articles/",
+      "description": "Since 1967, Good News has been the classical evangelical witness and ministry for renewal and reform within The United Methodist Church. The mission is to lead all people within The United Methodist Church to the faithful and vibrant practice of orthodox Wesleyan Christianity.",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 2800,
+        "instagram": 932
+      },
+      "image_url": "https://i1.feedspot.com/4780125.jpg?t=1609856328"
+    },
+    {
+      "title": "The Evangelical Calvinist",
+      "feed_url": "https://growrag.wordpress.com/feed/",
+      "website_url": "https://growrag.wordpress.com/",
+      "description": "Hello my name is Bobby Grow, and I author this blog, The Evangelical Calvinist. Find new and emerging voices join senior Reformed scholars in presenting a coherent and impassioned articulation of Calvinism for today's world. Evangelical Calvinism represents a mood within current Reformed theology. The various contributors are in different ways articulating that mood, of which their very diversity is a significant element.",
+      "followers": {
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/4781258.jpg?t=1609141760"
+    },
+    {
+      "title": "davidould.net",
+      "feed_url": "https://davidould.net/feed/",
+      "website_url": "https://davidould.net/",
+      "description": "I'm the Rector of Glenquarie Anglican Church in Sydney, Australia. As a Christian, this site is a mixture of my thoughts on life and Jesus, and in particular how those things are worked out in the Anglican Church into which I was ordained in 2008.",
+      "followers": {
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4765509.jpg?t=1608625637"
+    },
+    {
+      "title": "Esgetology",
+      "feed_url": "https://www.esgetology.com/blog?format=rss",
+      "website_url": "https://www.esgetology.com/",
+      "description": "Weelcome! I am the pastor at Immanuel Evangelical-Lutheran Church in Alexandria, Virginia. You will find here some of my sermons, along with theological ideas and quotations.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2659859.jpg?t=1609586359"
+    },
+    {
+      "title": "Canadian Lutheran",
+      "feed_url": "https://www.canadianlutheran.ca/feed/",
+      "website_url": "https://www.canadianlutheran.ca/",
+      "description": "The national magazine of Lutheran Church Canada.",
+      "followers": {
+        "facebook": 849,
+        "twitter": 1500,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4779025.jpg?t=1609141207"
+    },
+    {
+      "title": "Lutheran Core",
+      "feed_url": "https://www.lutherancore.website/feed/",
+      "website_url": "https://www.lutherancore.website/communications/newsletters/newsletter-articles/",
+      "description": "The over-arching goal of Lutheran CORE is to be a voice for the Word of God and a shelter for those who cling to this Word in the church. We seek the renewal of Lutheran congregations according to Holy Scripture and the Lutheran Confessions, and we endorse the Common Confession as a summary of Lutheran convictions for our time and place.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 12400
+      },
+      "image_url": "https://i1.feedspot.com/4782019.jpg?t=1609587082"
+    },
+    {
+      "title": "John Meunier",
+      "feed_url": "https://johnmeunier.wordpress.com/feed/",
+      "website_url": "https://johnmeunier.wordpress.com/",
+      "description": "This blog started in 2007 as a place to explore Wesleyan theology and raise questions about United Methodism.",
+      "followers": {
+        "twitter": 952
+      },
+      "image_url": "https://i1.feedspot.com/4780079.jpg?t=1609856389"
+    },
+    {
+      "title": "Pastoral Meanderings",
+      "feed_url": "http://pastoralmeanderings.blogspot.com/feeds/posts/default",
+      "website_url": "http://pastoralmeanderings.blogspot.com/",
+      "description": "I am Pastor Peters. I have been a Lutheran Pastor for more than 37 years, serving in the Lutheran Church Missouri Synod, and the Pastor of Grace Lutheran Church in Clarksville, TN, in my 25th year here. I have a lot of thoughts and this place is where you meet some of those meandering thoughts from this pastoral mind.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1310042.jpg?t=1609141720"
+    },
+    {
+      "title": "Reformed Baptist Blog",
+      "feed_url": "https://reformedbaptistblog.com/feed/",
+      "website_url": "https://reformedbaptistblog.com/",
+      "description": "Get Pastoral Insights from a Reformed Baptist Perspective. The Reformed Baptist Blog seeks to maintain a pastoral focus, with a balance of teaching the Church. Reformed Baptist focuses on the Biblical basis for and the distinctiveness of Reformed Baptist Federalism. The blog also seeks to inform, especially within the Reformed Baptist community about matters of interest to them.",
+      "followers": {
+        "twitter": 13
+      },
+      "image_url": "https://i1.feedspot.com/4780305.jpg?t=1610016719"
+    },
+    {
+      "title": "First Lutheran Church",
+      "feed_url": "https://www.flcsf.org/vlog?format=rss",
+      "website_url": "https://www.flcsf.org/vlog",
+      "description": "Welcome to First Lutheran Church. We live, serve, reach out, and worship in the name of Jesus Christ. We give God's Word in Jesus Christ for the forgiveness of sinners, and teach how to share the good news while serving our neighbors' needs, and building up the community of faith.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 67,
+        "instagram": 353
+      },
+      "image_url": "https://i1.feedspot.com/4778179.jpg?t=1609586650"
+    },
+    {
+      "title": "Weedon's Blog",
+      "feed_url": "https://weedon.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://weedon.blogspot.com/",
+      "description": "Homilies, Musings, and What-not from a Lutheran Chaplain",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4777995.jpg?t=1613454815"
+    },
+    {
+      "title": "Redeemer Lutheran Church \u00bb News",
+      "feed_url": "https://redeemer-fortwayne.org/news/feed/",
+      "website_url": "https://redeemer-fortwayne.org/news/",
+      "description": "Redeemer Lutheran Church, Fort Wayne, is a congregation of the Lutheran Church\u2014Missouri Synod (LCMS) and is committed to the doctrine of the Lutheran Church. We are devoted to liturgical worship, to catechesis, and to the centrality of the Holy Communion and other Sacraments in the life of the Christian.",
+      "followers": {
+        "facebook": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4777804.jpg?t=1609586371"
+    },
+    {
+      "title": "Anglican Alliance",
+      "feed_url": "https://anglicanalliance.org/feed/",
+      "website_url": "https://anglicanalliance.org/news/",
+      "description": "The Anglican Alliance for development relief and advocacy brings together the Anglican family of churches and agencies to work for a world free of poverty and injustice, to be a voice for the voiceless, to reconcile those in conflict, and to safeguard the earth.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4766157.jpg?t=1608625174"
+    },
+    {
+      "title": "Augustana Lutheran Church of Hyde\u00a0Park Blog",
+      "feed_url": "https://augustanahydepark.org/blog/feed/",
+      "website_url": "https://augustanahydepark.org/blog/",
+      "description": "Welcome to Augustana Lutheran Church of Hyde\u00a0Park. Augustana is a community that worships, sings, plays, learns, creates, proclaims, builds community and works for justice. Bringing people into relationship with Jesus Christ through Word and sacrament, service and fellowship.",
+      "followers": {
+        "facebook": 628
+      },
+      "image_url": "https://i1.feedspot.com/4778997.jpg?t=1609586672"
+    },
+    {
+      "title": "Preachrblog",
+      "feed_url": "http://preachrblog.blogspot.com/feeds/posts/default",
+      "website_url": "http://preachrblog.blogspot.com/",
+      "description": "I am Tom. I am an Associate Pastor at Messiah Lutheran Church, Keller, Texas. Former Missionary to Singapore.",
+      "followers": {
+        "twitter": 257
+      },
+      "image_url": "https://i1.feedspot.com/1434968.jpg?t=1609586327"
+    },
+    {
+      "title": "Lutheran Mission",
+      "feed_url": "http://lutheranmission.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://lutheranmission.blogspot.com/",
+      "description": "I am Richard, the pastor of the Sydney Lutheran Parish. This blog is about exploring, experimenting, sharing and living out ways of bringing the Good News to people of all nations.",
+      "followers": {
+        "facebook": 129
+      },
+      "image_url": "https://i1.feedspot.com/4781321.jpg?t=1609587109"
+    },
+    {
+      "title": "Liberation Theology Lutheran",
+      "feed_url": "http://liberationtheologylutheran.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://liberationtheologylutheran.blogspot.com/",
+      "description": "I'm a lifelong Lutheran, and although I'm aware of some of the problems with Liberation Theology, it has spoken to me for much of my adolescent and adult life. All of the thoughts on this blog are mine, and I don't intend to speak for any other Lutherans or Liberation Theologians.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4678003.jpg?t=1613454696"
+    },
+    {
+      "title": "Mark Daniels",
+      "feed_url": "http://markdaniels.blogspot.com/feeds/posts/default",
+      "website_url": "http://markdaniels.blogspot.com/",
+      "description": "I'm a sinner, no better than any other human being. I have no personal bragging rights. My only boast is that, in spite of my many sins and my numerous faults, through God's grace, given in Jesus Christ, my sins are forgiven and I have a new life.",
+      "followers": {
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4106305.jpg?t=1609142295"
+    },
+    {
+      "title": "Lutheran Subject (Schroeder's blog)",
+      "feed_url": "http://lutheransubject.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://lutheransubject.blogspot.com/",
+      "description": "I am Thomas Schroeder, a Lutheran pastor serving at Good Shepherd Evangelical Lutheran Church in Novi, Michigan. Sermons, ramblings, and maybe an occasional rant from a Lutheran subject of Jesus Christ.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4781344.jpg?t=1609142281"
+    },
+    {
+      "title": "Wesley Methodist Church - Church Blog",
+      "feed_url": "https://wesleymethodist.org.uk/blog/feed/",
+      "website_url": "https://wesleymethodist.org.uk/blog/",
+      "description": "Wesley Methodist Church is a member of the Southend and Leigh Methodist Circuit. For over 100 years Wesley has stood at the centre of Leigh-on-Sea, Essex, and has played a vital role in the spiritual and community life of the area.",
+      "followers": {
+        "facebook": 327,
+        "twitter": 182
+      },
+      "image_url": "https://i1.feedspot.com/4539922.jpg?t=1609856665"
+    },
+    {
+      "title": "Young Calvinists Blog",
+      "feed_url": "https://youngcalvinists.org/feed/",
+      "website_url": "https://youngcalvinists.org/blog/",
+      "description": "Young Calvinists is a committee formed under the oversight of the Young People's Federation Board that seeks to connect young people from different Protestant Reformed congregations and to foster spiritual growth and fellowship with one another. Our main goal in all of our activities is to further unite Protestant Reformed young people, to foster friendship and Christian fellowship.",
+      "followers": {
+        "facebook": 764
+      },
+      "image_url": "https://i1.feedspot.com/4777261.jpg?t=1609142185"
+    },
+    {
+      "title": "Christian Protestant Blog",
+      "feed_url": "http://blog-confessant.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://blog-confessant.blogspot.com/",
+      "description": "Welcome to the Confessing Christian Blog, or Protestant, which aims to testify to the faith transmitted to the saints once and for all.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4777334.jpg?t=1609142235"
+    },
+    {
+      "title": "St. Stephen's Lutheran Church Blog",
+      "feed_url": "https://www.saintstephenslutheranchurch.org/blog-feed.xml",
+      "website_url": "https://www.saintstephenslutheranchurch.org/blog",
+      "description": "St. Stephen's Evangelical Lutheran Church was established in October of 1888. The mission of St. Stephen's Lutheran Church is TO deepen our LOVE for God and for each other; TO INVITE others into the Good News of Jesus Christ; and TO SERVE those in need.",
+      "followers": {
+        "facebook": 701,
+        "instagram": 282
+      },
+      "image_url": "https://i1.feedspot.com/4778962.jpg?t=1609142624"
+    },
+    {
+      "title": "St. Paul Lutheran Church",
+      "feed_url": "https://www.stpaullutheranchurch.net/feed/",
+      "website_url": "https://www.stpaullutheranchurch.net/news/",
+      "description": "Welcome to St. Paul Lutheran Church. Responding to God's grace in Christ, we welcome all people, prepare disciples, and live faithfully through worship, spiritual growth, and action.",
+      "followers": {
+        "facebook": 518
+      },
+      "image_url": "https://i1.feedspot.com/4779121.jpg?t=1609142645"
+    },
+    {
+      "title": "Protestant Reformed Blogs",
+      "feed_url": "https://protestantreformed.wordpress.com/feed/",
+      "website_url": "https://protestantreformed.wordpress.com/",
+      "description": "To build a community to share and discuss Gods word so that we may continue to learn and gain direction.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4777236.jpg?t=1609143160"
+    },
+    {
+      "title": "Christian Nature Poetry",
+      "feed_url": "https://jesusrhymetime.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://jesusrhymetime.blogspot.com/",
+      "description": "A blend of original and existing poetry (from literature & straight from the Bible) that speaks the Christian message through the idioms of nature. Old posts never become 'old news.'",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4777772.jpg?t=1609143021"
+    },
+    {
+      "title": "Lutheran Reformation",
+      "feed_url": "https://lutheranreformation.org/blog/feed/",
+      "website_url": "https://lutheranreformation.org/blog/",
+      "description": "When the Reformation began in 1517, the Church and culture were soon to change forever. But centuries haven't changed one thing: it's still all about Jesus!",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 387
+      },
+      "image_url": "https://i1.feedspot.com/4777919.jpg?t=1609586199"
+    },
+    {
+      "title": "Detroit Baptist Theological Seminary Blog",
+      "feed_url": "https://dbts.edu/blog/feed/",
+      "website_url": "https://dbts.edu/blog/",
+      "description": "Detroit Baptist Theological Seminary is committed to glorifying God by training men to fulfill the Great Commission, read posts from the Seminary on their blog. Detroit Baptist Theological Seminary exists for the glory of God to serve local churches by shaping faithful men for the gospel ministry through the word of God.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4678046.jpg?t=1610016437"
+    },
+    {
+      "title": "Hacking Christianity Blog",
+      "feed_url": "https://feeds.feedburner.com/HackingChristianity",
+      "website_url": "https://hackingchristianity.net/blog",
+      "description": "Hacking Christianity is a United Methodist pastor Rev. Jeremy Smith's blog that uses the tenets of hacking to debug and update contemporary expressions of Christianity so that the faith operates more smoothly, holistically, and justly today.",
+      "followers": {
+        "facebook": 8900,
+        "twitter": 7500
+      },
+      "image_url": "https://i1.feedspot.com/4779986.jpg?t=1609856350"
+    },
+    {
+      "title": "Kiwianglo's Blog",
+      "feed_url": "https://kiwianglo.wordpress.com/feed/",
+      "website_url": "https://kiwianglo.wordpress.com/",
+      "description": "Being a retired (though active) priest in the Anglican Church of Aotearoa/New Zealand, and an advocate of justice toward the LBGT community in the Church and the world at large, my interest in entering the WWW. landscape at this juncture is to do what I can to further the cause of inclusivity for a class of persons who have hitherto been either vilified or kept in the background of the Church - despite the fact of their differences in sexuality being intrinsic and God-given.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4766962.jpg?t=1655458408"
+    },
+    {
+      "title": "Pacific Northwest UMC News Blog",
+      "feed_url": "http://www.pnwumc.org/news/feed/",
+      "website_url": "https://www.pnwumc.org/news/",
+      "description": "The Pacific Northwest Conference of The United Methodist Church is called to be a community, diverse and united in God's saving love, sent out in vital life-giving ministry for and with Jesus Christ. Find Coverage & Conversation about United Methodists News in the PNW!",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 1600,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4780113.jpg?t=1609856346"
+    },
+    {
+      "title": "David F. Watson",
+      "feed_url": "https://davidfwatson.me/feed/",
+      "website_url": "https://davidfwatson.me/",
+      "description": "A United Methodist Blog by David Watson.",
+      "followers": {
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/4780190.jpg?t=1609141219"
+    },
+    {
+      "title": "A Lutheran Layman",
+      "feed_url": "http://www.lutheranlayman.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.lutheranlayman.com/",
+      "description": "I am Jeffrey. An Ex-Evangelical-Non-Denom-Christian Turned Confessional Lutheran. A Lutheran Layman is a Confessional Lutheran Christian Blog without all the NONSENSE so common to Christianity today.",
+      "followers": {
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4778037.jpg?t=1609586665"
+    },
+    {
+      "title": "Vision Baptist Church Blog",
+      "feed_url": "https://visionbaptist.com/feed/",
+      "website_url": "https://visionbaptist.com/blog/",
+      "description": "Vision Baptist Church is an independent Baptist church pastored by Austin Gardner. We are located in Alpharetta, GA, in the southern end of Forsyth County. We are a missions-minded church with a goal of fully honoring God and helping families draw closer to Him.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 658
+      },
+      "image_url": "https://i1.feedspot.com/4781930.jpg?t=1610017074"
+    },
+    {
+      "title": "St. Peter's Lutheran Church Blog",
+      "feed_url": "https://www.stpeterslutheran.org/blog/feed/",
+      "website_url": "https://www.stpeterslutheran.org/blog/",
+      "description": "St. Peter's Evangelical Lutheran Church is an inclusive family of faith, unified in Spirit. As members, we are called to worship God, learn and teach God's Word, and serve humanity, near and far.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 87
+      },
+      "image_url": "https://i1.feedspot.com/4779086.jpg?t=1609586654"
+    },
+    {
+      "title": "Grace Lutheran Church",
+      "feed_url": "http://graceneligh.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://graceneligh.blogspot.com/",
+      "description": "A lutheran blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4781390.jpg?t=1609141622"
+    },
+    {
+      "title": "St. Andrew's Lutheran Church Blog",
+      "feed_url": "http://feeds.feedburner.com/StAndrewsLutheran",
+      "website_url": "https://standrewslutheran.com/welcome-to-saint-andrews-church-in-audubon-pa/pastors-blog/",
+      "description": "Our mission is to lift up Jesus in Worship, Education and Service.",
+      "followers": {
+        "facebook": 488,
+        "twitter": 70
+      },
+      "image_url": "https://i1.feedspot.com/4782013.jpg?t=1609586312"
+    },
+    {
+      "title": "Lutheran Confessions",
+      "feed_url": "https://feeds.feedburner.com/LutheranConfessions",
+      "website_url": "http://lutheranconfessions.blogspot.com/",
+      "description": "Welcome to Lutheran Confessions. Reverend Doctor Clint Schnekloth, pastor at Good Shepherd Lutheran Church, Fayetteville, Arkansas.",
+      "followers": {
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/2063890.jpg?t=1609587098"
+    },
+    {
+      "title": "Andrew K. Gabriel",
+      "feed_url": "https://www.andrewkgabriel.com/feed/",
+      "website_url": "https://www.andrewkgabriel.com/",
+      "description": "Hi, I'm Dr. Andrew, a Pentecostal Theologian. I write to invite Christians to think well so that they can affirm and live out their faith with biblical and spiritual integrity. Sometimes my posts will inspire you. Sometimes they will challenge your thinking.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 506
+      },
+      "image_url": "https://i1.feedspot.com/4781112.jpg?t=1652763671"
+    },
+    {
+      "title": "The Contemporary Calvinist",
+      "feed_url": "http://www.contemporarycalvinist.com/feeds/posts/default",
+      "website_url": "http://www.contemporarycalvinist.com/",
+      "description": "The purpose of this blog is to defend and promote not just the principles of Calvinism but the gospel of Christ. We are followers of Christ. We believe in the teachings of Jesus and the Apostles. 'Calvinism is nothing more than a label to show what view one holds upon the Scriptures, not upon a certain man.' The Contemporary Calvinist seeks to defend and promote the gospel of Christ, all for the glory of God.",
+      "followers": {
+        "twitter": 96
+      },
+      "image_url": "https://i1.feedspot.com/1330846.jpg?t=1609141300"
+    },
+    {
+      "title": "Park Road Baptist Church - Still Christian for a Reason Blog",
+      "feed_url": "https://www.parkroadbaptist.org/blog?format=RSS",
+      "website_url": "https://www.parkroadbaptist.org/blog/",
+      "description": "Welcome to the Park Road Baptist church blog - where we share thoughts and commentary on topics ranging from faith, to current events, to life. This is a progressive Baptist church that emphasizes independent thought, community service, social justice, and interfaith understanding.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 230
+      },
+      "image_url": "https://i1.feedspot.com/4781017.jpg?t=1610017132"
+    },
+    {
+      "title": "Thinking Faith",
+      "feed_url": "http://thinkfaithfully.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://thinkfaithfully.blogspot.com/",
+      "description": "I am Bill Trench, the Pastor of the East Greenwich United Methodist Church. At East Greenwich Methodist Church, we really believe in the United Methodist slogan of 'Open Hearts, Open Minds, Open Doors.",
+      "followers": {
+        "facebook": 566
+      },
+      "image_url": "https://i1.feedspot.com/4781852.jpg?t=1609856652"
+    },
+    {
+      "title": "Pentecostal Life Church Blog",
+      "feed_url": "https://pentecostallifechurch.com/feed/",
+      "website_url": "https://pentecostallifechurch.com/pastors-blog/",
+      "description": "Pentecostal Life Church first met in a small meeting room on Highway 78 that soon filled up. Then God opened the door to a bigger facility. Pastor Slayter's motto is, 'We are not a small church but a great church in infancy.' If you are looking for a church that you will feel loved, needed, and wanted, then Pentecostal Life Church is the right place for you.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 151
+      },
+      "image_url": "https://i1.feedspot.com/4781090.jpg?t=1609142173"
+    },
+    {
+      "title": "Brighton First Updates",
+      "feed_url": "http://brightonfumc.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://brightonfumc.blogspot.com/",
+      "description": "Sherry is the senior pastor at First United Methodist Church of Brighton, Michigan. She is currently leading the church through a revitalization process that involves aligning the church's purpose and vision with its worship experiences, faith formation programs, community outreach and mission.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 55
+      },
+      "image_url": "https://i1.feedspot.com/4781429.jpg?t=1609856676"
+    },
+    {
+      "title": "Liturgy, Hymnody, and Pulpit Quarterly Book Review",
+      "feed_url": "https://lhpqbr.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://lhpqbr.blogspot.com/",
+      "description": "Critical reviews by Lutheran pastors and church musicians of books and other resources for Christian worship, preaching, and church music from a perspective rooted in Holy Scripture, the Lutheran Confessions and good common sense.",
+      "followers": {
+        "facebook": 33,
+        "twitter": 402
+      },
+      "image_url": "https://i1.feedspot.com/4777905.jpg?t=1609142203"
+    },
+    {
+      "title": "Father Hollywood",
+      "feed_url": "http://fatherhollywood.blogspot.com/atom.xml",
+      "website_url": "http://fatherhollywood.blogspot.com/",
+      "description": "I'm a Lutheran pastor (Missouri Synod) in the New Orleans area.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1210699.jpg?t=1613454725"
+    },
+    {
+      "title": "The Scrupe Blog",
+      "feed_url": "https://thescrupeblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://thescrupeblog.blogspot.com/",
+      "description": "A Confessional Lutheran blog on the distinction between the Law and the Gospel, and scrupulosity- also known as religious OCD.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4778082.jpg?t=1609143099"
+    },
+    {
+      "title": "Claimed, gathered and sent",
+      "feed_url": "http://claimedgatheredandsent.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://claimedgatheredandsent.blogspot.com/",
+      "description": "I'm Ivy, a Lutheran seminary student. 'Marked with the cross of Christ forever, we are claimed, gathered, and sent for the sake of the world.'",
+      "followers": {
+        "twitter": 26
+      },
+      "image_url": "https://i1.feedspot.com/4777787.jpg?t=1609142728"
+    },
+    {
+      "title": "Liberal Adventist Pastor",
+      "feed_url": "http://liberaladventist.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://liberaladventist.blogspot.com/",
+      "description": "Commentary on the life and work of Adventist pastors by an old, White, liberal Adventist pastor. Most of these posts are sermon manuscripts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4779275.jpg?t=1612248393"
+    },
+    {
+      "title": "Bishop's Blog",
+      "feed_url": "http://bishoppeggyjohnson.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://bishoppeggyjohnson.blogspot.com/",
+      "description": "Bishop Johnson believes in the inclusion of persons with disabilities, 'not just to receive, but to be co-ministers with us in the priesthood of all believers!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4781436.jpg?t=1609142926"
+    },
+    {
+      "title": "A Defrosted Calvinist",
+      "feed_url": "http://defrostedcalvinist.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://defrostedcalvinist.blogspot.com/",
+      "description": "Seeking a Passionate Warm Hearted Reformed Theology.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4781974.jpg?t=1609142898"
+    },
+    {
+      "title": "Strand Baptist Church Blog",
+      "feed_url": "https://www.strandbaptist.org.za/blog/feed",
+      "website_url": "https://www.strandbaptist.org.za/blog",
+      "description": "Our church is part of a story\u2014an ancient story of God, who loves the world so much that He gave his only Son, that whoever believes in Him should not perish but have eternal life. \u200bWe are witnesses to this amazing news in the community of Strand.\u200b",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4781950.jpg?t=1610017020"
+    },
+    {
+      "title": "Anglican Mainstream",
+      "feed_url": "https://anglicanmainstream.org/feed/",
+      "website_url": "https://anglicanmainstream.org/",
+      "description": "Anglican Mainstream began as part of a united international response of Anglicans from different backgrounds. Our WEBSITE provides a daily digest of articles and news items from around the world helping us to think clearly about our faith and interaction with our culture, especially relating to issues of marriage and sexuality, human identity, and religious freedom.",
+      "followers": {},
+      "image_url": "?t=1609141125"
+    },
+    {
+      "title": "Baptist21",
+      "feed_url": "https://baptist21.com/blog-posts/feed/",
+      "website_url": "https://www.virtueonline.org/news",
+      "description": "Baptist21 is a pastor-led network that seeks to be a positive voice for the future, promoting the centrality of the gospel, the primacy of the local church, a focus on all nations, and Southern Baptist distinctives.",
+      "followers": {
+        "twitter": 15000
+      },
+      "image_url": "https://i1.feedspot.com/4780963.jpg?t=1610016809"
+    },
+    {
+      "title": "Steadfast Lutherans Blog",
+      "feed_url": "http://steadfastlutherans.org/feed/",
+      "website_url": "https://www.virtueonline.org/news",
+      "description": "An international fraternity of confessional Lutheran laymen and pastors, supporting proclamation of Christian doctrine in the new media.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 750
+      },
+      "image_url": "https://i1.feedspot.com/4410871.jpg?t=1609586169"
+    },
+    {
+      "title": "VirtueOnline The Voice for Global Orthodox Anglicanism",
+      "feed_url": "https://www.virtueonline.org/rss.xml",
+      "website_url": "https://www.virtueonline.org/news",
+      "description": "The global source for independent news on the Anglican Communion from a biblical evangelical worldview.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 959
+      },
+      "image_url": "https://i1.feedspot.com/4765492.jpg?t=1608624131"
+    },
+    {
+      "title": "Anglicanorum Coetibus Society",
+      "feed_url": "https://www.acsociety.org/newsRSS",
+      "website_url": "https://www.acsociety.org/news",
+      "description": "Anglicanorum Coetibus Society promotes the Anglican tradition and common identity within the Catholic Church in order to share the Gospel, educate men and women in the beauty of the Catholic faith, and form disciples of Jesus Christ for the glory of God.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4766017.jpg?t=1608626045"
+    },
+    {
+      "title": "Extreme Center Blog",
+      "feed_url": "https://www.extremecenter.com/feed/",
+      "website_url": "https://www.extremecenter.com/blog/",
+      "description": "Scott Jameson Jones currently serves as the resident bishop of the Texas Conference of the United Methodist Church with offices in Houston.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4780031.jpg?t=1609856672"
+    }
+  ]
+}

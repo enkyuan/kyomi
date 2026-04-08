@@ -1,0 +1,86 @@
+{
+  "category": "Digital Pathology",
+  "source_url": "https://rss.feedspot.com/digital_pathology_rss_feeds",
+  "feeds": [
+    {
+      "title": "Tissuepathology.",
+      "feed_url": "https://tissuepathology.com/feed/",
+      "website_url": "https://tissuepathology.com/",
+      "description": "This blog was started in 2007 to educate and inform the pathology and laboratory community about emerging technologies in pathology. Since its inception, they strive to provide relevant news items, product information and commentary on issues of relevance to healthcare and the practice of pathology and laboratory medicine with an emphasis on technology.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/2850172.jpg?t=1607521040"
+    },
+    {
+      "title": "Corista Blog",
+      "feed_url": "https://blog.corista.com/corista-digital-pathology-blog/rss.xml",
+      "website_url": "https://blog.corista.com/corista-digital-pathology-blog",
+      "description": "Since its founding in 2005, Corista has been dedicated to the goal of a digital clinical pathology workflow platform that delivers speed, accuracy, and ease of use that far surpasses traditional pathology workflow. Corista provides Image Centric Digital Pathology for physicians and patients, in real-time.",
+      "followers": {
+        "twitter": 9900
+      },
+      "image_url": "https://i1.feedspot.com/4720895.jpg?t=1677791758"
+    },
+    {
+      "title": "Lumea Blog",
+      "feed_url": "https://lumeadigital.com/feed/",
+      "website_url": "https://lumeadigital.com/blog/",
+      "description": "Lumea, founded in 2013 by Matthew O. Leavitt, is a digital pathology tech company with a blog that provides insights and perspectives on how digital pathology is transforming research, education, and clinical practice. The blog covers topics such as image analysis, big data, and deep learning in the field of pathology.",
+      "followers": {
+        "twitter": 190,
+        "instagram": 123
+      },
+      "image_url": "https://i1.feedspot.com/5512759.jpg?t=1677233163"
+    },
+    {
+      "title": "Proscia Blog",
+      "feed_url": "https://proscia.com/feed/",
+      "website_url": "https://proscia.com/blog/",
+      "description": "Proscia Blog is a digital pathology blog that offers insights and perspectives on the latest advancements in the field. Founded in 2014 by David West and Coleman Stavish, Proscia's blog covers a wide range of topics, including artificial intelligence, machine learning, and image analysis.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5512755.jpg?t=1677233242"
+    },
+    {
+      "title": "Motic Digital Pathology",
+      "feed_url": "https://moticdigitalpathology.com/feed/",
+      "website_url": "https://moticdigitalpathology.com/news-events/#",
+      "description": "Motic Digital Pathology, founded in 1988 by David Woolford, provides end-to-end digital pathology solutions for education, research, and clinical applications. The company's products range from high-resolution scanning systems to web-based image management software and are designed to improve laboratory efficiency, accuracy, and patient care.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 477
+      },
+      "image_url": "https://i1.feedspot.com/5512756.jpg?t=1677791628"
+    },
+    {
+      "title": "PathologyWatch Blog",
+      "feed_url": "https://pathologywatch.com/feed/",
+      "website_url": "https://pathologywatch.com/blog/",
+      "description": "PathologyWatch Blog is a digital pathology blog that offers insights and perspectives on how digital pathology is transforming the field of pathology. Founded in 2019 by Dr. Mark Boguski and Dr. Joel Mortensen, PathologyWatch's blog covers topics such as AI-powered diagnostics, lab automation, and cloud-based image management.",
+      "followers": {
+        "facebook": 582,
+        "twitter": 76
+      },
+      "image_url": "https://i1.feedspot.com/5318729.jpg?t=1630652826"
+    },
+    {
+      "title": "Aiforia",
+      "feed_url": "https://www.aiforia.com/resource-library/rss.xml",
+      "website_url": "https://www.aiforia.com/resource-library/",
+      "description": "Aiforia Blog, founded in 2013 by Juha Kesseli and Artur Kaczmarczyk, is a digital pathology blog that focuses on the application of artificial intelligence and deep learning in pathology. The blog provides insights and perspectives on the latest advancements in image analysis, including AI-powered diagnostics and automated tissue recognition.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5512757.jpg?t=1677233151"
+    },
+    {
+      "title": "OptraSCAN Blog",
+      "feed_url": "https://www.optrascan.com/feed",
+      "website_url": "https://www.optrascan.com/blogs/",
+      "description": "OptraSCAN Blog, founded in 2015 by Abhi Gholap, is a digital pathology blog that covers topics related to digital pathology technology, trends, and best practices. The blog provides insights and perspectives on how digital pathology is transforming the field of pathology, including improving diagnostic accuracy, increasing laboratory efficiency, and enhancing patient care.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5512758.jpg?t=1677233050"
+    }
+  ]
+}

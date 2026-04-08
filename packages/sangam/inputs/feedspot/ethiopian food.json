@@ -1,0 +1,41 @@
+{
+  "category": "Ethiopian Food",
+  "source_url": "https://rss.feedspot.com/ethiopian_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Amaarech",
+      "feed_url": "https://www.amaarech.com/blog-feed.xml",
+      "website_url": "https://www.amaarech.com/stories/",
+      "description": "We are a small-batch Ethiopian spice company. We run our business on a social model that ensures everyone gets their fair share. Our spices come in small quantities and are sustainably produced. We are on a mission to make high-quality, hand-sourced Ethiopian spices available to everyone!",
+      "followers": {
+        "facebook": 43,
+        "instagram": 600
+      },
+      "image_url": "https://i1.feedspot.com/5522264.jpg?t=1679033258"
+    },
+    {
+      "title": "Vegan Richa \u00bb Ethiopian Recipes",
+      "feed_url": "https://www.veganricha.com/category/ethiopian/feed/",
+      "website_url": "https://www.veganricha.com/category/ethiopian/",
+      "description": "Hi, I'm Richa! I create flavorful plant-based recipes that are inspired by my Indian upbringing, including many gluten-free, soy-free, and oil-free options. Explore my Ethiopian Recipes where all the recipes are tried and tested along with a guide on how you can make it home easily.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5522263.jpg?t=1679033420"
+    },
+    {
+      "title": "Eleni's Kitchen Blog",
+      "feed_url": "https://www.eleniskitchen.com/blog?format=rss",
+      "website_url": "https://www.eleniskitchen.com/blog",
+      "description": "Hello, I'm Eleni - Welcome to my kitchen. My hope is to share my love for Ethiopian food and culture and make it accessible to others whether they are buying online, at a retail store, or getting it straight from 'my kitchen' at the Farmers' Market.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5522261.jpg?t=1679033532"
+    },
+    {
+      "title": "The Ethiopian Food",
+      "feed_url": "https://theethiopianfood.com/feed/",
+      "website_url": "https://theethiopianfood.com/",
+      "description": "Welcome to The Ethiopian Food - an online platform dedicated to promoting Ethiopian Food, and Ethiopian Restaurants from around the world. Ethiopian Food is an easy-to-use, one-stop online platform to find Ethiopian Restaurants, and learn about their establishment, and the types of food they serve.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5522262.jpg?t=1679033469"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "category": "Junior Tennis",
+  "source_url": "https://rss.feedspot.com/junior_tennis_rss_feeds",
+  "feeds": [
+    {
+      "title": "ZooTennis",
+      "feed_url": "https://feeds.feedburner.com/blogspot/sIQOA",
+      "website_url": "http://tenniskalamazoo.blogspot.com/",
+      "description": "Zootennis.com, a website devoted to junior and college tennis, has become the primary source of news for over 40,000 unique visitors per month. In addition to daily news posts on topics of interest junior and college tennis, zootennis.com's editor Colette Lewis provides live coverage of approximately 18 tournaments annually, with match reports accompanied by photos and videos.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 11000
+      },
+      "image_url": "https://i1.feedspot.com/4185319.jpg?t=1603202316"
+    },
+    {
+      "title": "JTCC News",
+      "feed_url": "https://www.jtcc.org/feed/",
+      "website_url": "https://www.jtcc.org/latest-news/",
+      "description": "Junior Tennis Champions Center (JTCC) is a world-class training program offering opportunities for junior players from all backgrounds to reach their full potential on the court and in the classroom.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5409782.jpg?t=1655105284"
+    },
+    {
+      "title": "Celsius Tennis Academy Blog",
+      "feed_url": "https://celsiustennis.com/feed/",
+      "website_url": "https://celsiustennis.com/blog/",
+      "description": "Articles and information about Celsius Tennis Academy, tennis, junior tennis and competitive tennis. Celsius Tennis Academy offers comprehensive junior tennis programs for competitive players from 8 to 18 including summer, after-school and day programs for international athletes.",
+      "followers": {
+        "facebook": 790,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5409769.jpg?t=1655104031"
+    },
+    {
+      "title": "Aubone Tennis Blog",
+      "feed_url": "https://www.aubonetennis.com/blog?format=rss",
+      "website_url": "https://www.aubonetennis.com/blogs",
+      "description": "I'm Jean-Yves Aubone. I'm a tennis coach living in Atlanta. I spent 4 years working with the USTA Player Development as a coach, where my priority was to travel with Reilly Opelka. Now I offer the most personalized online tennis coaching available.",
+      "followers": {
+        "facebook": 309,
+        "twitter": 682,
+        "instagram": 9600
+      },
+      "image_url": "https://i1.feedspot.com/5409731.jpg?t=1655099940"
+    },
+    {
+      "title": "Wildflower Tennis \u00bb Junior Tennis News",
+      "feed_url": "https://www.wildflowertennis.com/blog-feed.xml",
+      "website_url": "https://www.wildflowertennis.com/jr-tennis-news",
+      "description": "Stay up to date with all the Jr Tennis Programming at Wildflower Country Club. Come join us for drills, clinics, mixers, fundays, leagues, tournaments, and so much more. Wildflower offers programming for every level of play for both adults and juniors.",
+      "followers": {
+        "twitter": 57
+      },
+      "image_url": "https://i1.feedspot.com/5409781.jpg?t=1655105502"
+    },
+    {
+      "title": "Long Island Tennis Magazine \u00bb Junior Tennis",
+      "feed_url": "https://longislandtennismagazine.com/topics/junior-tennis/feed/",
+      "website_url": "https://longislandtennismagazine.com/topics/junior-tennis/",
+      "description": "Articles on junior tennis. The mission of Long Island Tennis Magazine is to recognize, support and encourage Long Island tennis players, as well as the businesses and industries that support them and their families, toward the common goal of celebrating the great sport of tennis and promoting the expansion of the sport to interested parties looking to become part of the community.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5409784.jpg?t=1655106005"
+    },
+    {
+      "title": "New York Tennis Magazine \u00bb Junior Tennis",
+      "feed_url": "https://newyorktennismagazine.com/taxonomy/term/282/feed",
+      "website_url": "https://newyorktennismagazine.com/topics/junior-tennis/",
+      "description": "New York Tennis Magazine will feature articles written by New York tennis professionals and our editorial staff who write with a passion and have a true understanding of the New York tennis community",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 994
+      },
+      "image_url": "https://i1.feedspot.com/5409770.jpg?t=1655103728"
+    },
+    {
+      "title": "Norfolk Tennis \u00bb Junior Tennis Blog",
+      "feed_url": "http://norfolktennis.org/feed/",
+      "website_url": "https://clubspark.lta.org.uk/NorfolkTennis/News",
+      "description": "Updates on all aspects of Norfolk Tennis. Norfolk LTA is responsible for the development and promotion of tennis in Norfolk, from those just thinking of taking up the game to tournament players of all levels.",
+      "followers": {
+        "facebook": 936,
+        "twitter": 1100,
+        "instagram": 818
+      },
+      "image_url": "https://i1.feedspot.com/5409771.jpg?t=1655104111"
+    },
+    {
+      "title": "USTA Southern California \u00bb Junior News",
+      "feed_url": "https://www.ustasocal.com/category/junior-news/feed/",
+      "website_url": "https://www.ustasocal.com/news/archives/#junior",
+      "description": "Our extraordinary juniors are among the best in the nation and across the globe. USTA SoCal programs are platforms for athletic achievement, physical development, and personal growth. Junior tournaments set the stage for players to compete and excel among their peers and build the skills and character that can carry them into college and beyond.",
+      "followers": {
+        "facebook": 10200,
+        "twitter": 2000,
+        "instagram": 21100
+      },
+      "image_url": "https://i1.feedspot.com/5409768.jpg?t=1655104155"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "category": "UK Foreign Policy",
+  "source_url": "https://rss.feedspot.com/uk_foreign_policy_rss_feeds",
+  "feeds": [
+    {
+      "title": "British Foreign Policy Group",
+      "feed_url": "https://bfpg.co.uk/feed/",
+      "website_url": "https://bfpg.co.uk/",
+      "description": "The British Foreign Policy Group is a new not for profit organization committed to improving the quality of national debate on the UK's international choices and decisions.",
+      "followers": {
+        "facebook": 743,
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4917385.jpg?t=1761561033"
+    },
+    {
+      "title": "LSE International Relations Blog",
+      "feed_url": "https://blogs.lse.ac.uk/internationalrelations/feed/",
+      "website_url": "https://blogs.lse.ac.uk/internationalrelations/",
+      "description": "LSE International Relations is a forum for those interested in increasing the impact of social sciences on government policy, society, and business.",
+      "followers": {
+        "facebook": 11800,
+        "twitter": 58500
+      },
+      "image_url": "https://i1.feedspot.com/2222120.jpg?t=1612856854"
+    },
+    {
+      "title": "The Foreign Policy Centre",
+      "feed_url": "https://fpc.org.uk/feed/",
+      "website_url": "https://fpc.org.uk/articles/",
+      "description": "The Foreign Policy Centre (FPC) is an outward-looking, non-partisan international affairs think tank based in the UK. We provide an open & accessible space for the exchange of ideas, knowledge, and experience so that the voices of experts and advocates can be heard and acted upon.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5353447.jpg?t=1639564979"
+    },
+    {
+      "title": "The Guardian \u00bb Foreign policy",
+      "feed_url": "https://www.theguardian.com/politics/foreignpolicy/rss",
+      "website_url": "https://www.theguardian.com/politics/foreignpolicy",
+      "description": "Subscribe this blog to keep up with the latest US news, world news, sports, business, opinion, analysis and reviews from the Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4722514.jpg?t=1607514760"
+    },
+    {
+      "title": "Foreign, Commonwealth & Development Office Blogs",
+      "feed_url": "https://blogs.fcdo.gov.uk/feed/",
+      "website_url": "https://blogs.fcdo.gov.uk/",
+      "description": "Foreign Office Blogs provide a place for officials and Ministers to engage in a direct and informal dialogue with public audiences about international affairs and the work of the Foreign and Commonwealth Office. A unique insight into UK foreign policy.",
+      "followers": {
+        "facebook": 142
+      },
+      "image_url": "https://i1.feedspot.com/4553508.jpg?t=1607514874"
+    }
+  ]
+}

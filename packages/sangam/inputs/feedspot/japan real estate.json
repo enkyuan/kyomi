@@ -1,0 +1,69 @@
+{
+  "category": "Japan Real Estate",
+  "source_url": "https://rss.feedspot.com/japan_real_estate_rss_feeds",
+  "feeds": [
+    {
+      "title": "Real Estate Japan",
+      "feed_url": "https://resources.realestate.co.jp/feed/",
+      "website_url": "https://resources.realestate.co.jp/",
+      "description": "Covers real estate news and articles on area guides, buying, renting, housing service, living and more.RealEstate.co.jp's aim is to help people interested in investing or moving to Japan to become more informed about the market here. They also provide guides on renting and buying in Japan.",
+      "followers": {
+        "facebook": 88600,
+        "twitter": 621
+      },
+      "image_url": "https://i1.feedspot.com/4621134.jpg?t=1626845146"
+    },
+    {
+      "title": "Housing Japan Blog",
+      "feed_url": "https://housingjapan.com/blog/feed/",
+      "website_url": "https://housingjapan.com/blog/",
+      "description": "Get Tokyo Property News and Listings. Housing Japan is the premier high-end Real Estate firm targeted to non-residents interested in leasing and investing in Japanese Real Estate.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 59,
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/5331061.jpg?t=1635918771"
+    },
+    {
+      "title": "Sun Realty Blog",
+      "feed_url": "https://www.sunrealty.co.jp/blog/feed/",
+      "website_url": "https://www.sunrealty.co.jp/blog/",
+      "description": "Sun Realty has been providing rental apartments and investment properties for expats from all around the world for more than 60 years. Thanks to our considerable knowledge and experience, we are well known for luxury properties in Tokyo, especially Homat properties, for which we have been the exclusive agent since we were established.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5331060.jpg?t=1636440712"
+    },
+    {
+      "title": "Living Tokyo",
+      "feed_url": "http://feeds.feedburner.com/livingtokyonet",
+      "website_url": "https://livingtokyo.net/",
+      "description": "The blog covers articles on Real Estate, Listings, and Lifestyle.Living Tokyo is a Real Estate Agency in Tokyo, Japan.",
+      "followers": {
+        "facebook": 48,
+        "twitter": 4,
+        "instagram": 84
+      },
+      "image_url": "https://i1.feedspot.com/5331063.jpg?t=1634879106"
+    },
+    {
+      "title": "Hokkaido Real Estate Blog",
+      "feed_url": "https://hokkaidorealestate.net/blog/feed/",
+      "website_url": "https://hokkaidorealestate.net/blog/",
+      "description": "The blog covers articles on Hokkaido, Japan, and Real Estate.Deal and team will support the purchase, construction and management of the houses when you visit Japan.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5331058.jpg?t=1634880145"
+    },
+    {
+      "title": "The Japan Times \u00bb Real Estate",
+      "feed_url": "https://www.japantimes.co.jp/tag/real-estate/feed/",
+      "website_url": "https://www.japantimes.co.jp/tag/real-estate/",
+      "description": "This section of the website focuses on Real Estate articles and news. The website also covers news on Japan, Business News, Opinion, Sports, Entertainment, Politics, Life & Style, and More. The Japan Times is Japan's largest and oldest English-language daily newspaper.",
+      "followers": {
+        "facebook": 900500,
+        "twitter": 467800,
+        "instagram": 123100
+      },
+      "image_url": "https://i1.feedspot.com/5331062.jpg?t=1634112073"
+    }
+  ]
+}

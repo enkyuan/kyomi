@@ -1,0 +1,73 @@
+{
+  "category": "Diabetes Mom",
+  "source_url": "https://rss.feedspot.com/diabetes_mom_rss_feeds",
+  "feeds": [
+    {
+      "title": "T1D Living",
+      "feed_url": "https://www.t1dliving.com/feed/",
+      "website_url": "https://www.t1dliving.com/",
+      "description": "I'm Rachel and I'm passionate about living healthy with type 1 diabetes. Follow along for T1D tips, tricks, and recipes every single week.",
+      "followers": {
+        "facebook": 1800,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5366166.jpg?t=1643437478"
+    },
+    {
+      "title": "Diabetogenic Blog",
+      "feed_url": "https://diabetogenic.blog/feed/",
+      "website_url": "https://diabetogenic.blog/",
+      "description": "Diabetogenic is a blog about real life with type 1 diabetes. I'm Renza Scibilia and I live in inner-Melbourne, Australia. I speak a lot about diabetes. This site is for anyone who wants to learn more about the everyday, somewhat mundane realities of living a pretty everyday, somewhat mundane life with type 1 diabetes.",
+      "followers": {
+        "facebook": 972,
+        "twitter": 12200,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5084695.jpg?t=1643443591"
+    },
+    {
+      "title": "Blood Sugar Trampoline Blog",
+      "feed_url": "https://bloodsugartrampoline.com/blog?format=rss",
+      "website_url": "https://bloodsugartrampoline.com/blog",
+      "description": "My name is Gr\u00e1inne. Blood Sugar Trampoline is a combination of my diary about living with diabetes in Ireland and sharing information about the health services available in Ireland. I am one of the founding members of Thriveabetes; the first Irish type 1 diabetes conference organised by people with diabetes whose mission is to inform, motivate, and inspire all people living with diabetes.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 2800,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5366168.jpg?t=1643437487"
+    },
+    {
+      "title": "Small Stories",
+      "feed_url": "https://sixuntilme.com/feed/",
+      "website_url": "https://kerrisparling.substack.com/",
+      "description": "I'm Kerri Morrone Sparling and I was diagnosed with type 1 diabetes in September of 1986. I started Six Until Me in May of 2005 because I was tired of Googling 'diabetes' and coming up with little more than a list of complications and frightening stories.",
+      "followers": {
+        "facebook": 8500,
+        "twitter": 24400,
+        "instagram": 8100
+      },
+      "image_url": "https://i1.feedspot.com/5322090.jpg?t=1631699620"
+    },
+    {
+      "title": "Erin Palinski-Wade Blog",
+      "feed_url": "https://erinpalinski.com/feed/",
+      "website_url": "https://erinpalinski.com/blog/",
+      "description": "Healthy Mom, Happy Family with Erin Palinski-Wade, RD CDE nutrition and diabetes expert, busy mom of 2- Showing busy moms how to make time for health, even when they have no time for themselves. Get daily tips, recipes, and advice on making time for health even when it feels like you have no time for yourself.",
+      "followers": {
+        "facebook": 16700,
+        "twitter": 19900,
+        "instagram": 41900
+      },
+      "image_url": "https://i1.feedspot.com/4888163.jpg?t=1612534555"
+    },
+    {
+      "title": "Lilly News",
+      "feed_url": "https://www.t1everydaymagic.com/category/blog/feed/",
+      "website_url": "https://www.lilly.com/news",
+      "description": "Our type 1 diabetes blog features stories from two moms of kids with diabetes, plus expert advice and more. Lilly is an expert in type 1 diabetes, and no one knows families like Disney. Together, Lilly's expertise in type 1 diabetes and Disney's magic can help keep your child and your family feeling inspired and empowered to live a full, active life with type 1 diabetes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5366158.jpg?t=1643442020"
+    }
+  ]
+}

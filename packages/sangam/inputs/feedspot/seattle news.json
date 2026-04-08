@@ -1,0 +1,209 @@
+{
+  "category": "Seattle News",
+  "source_url": "https://rss.feedspot.com/seattle_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "KING 5",
+      "feed_url": "https://rssfeeds.king5.com/king5/home",
+      "website_url": "https://www.king5.com/",
+      "description": "KING 5 is one of the strongest, most trusted local news brands in the country, delivering the largest audiences across all screens among its peers in Seattle. Follow this news website to get the latest news, weather stories, traffic, sports, politics and more.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 727100
+      },
+      "image_url": "https://i1.feedspot.com/5130501.jpg?t=1585315003"
+    },
+    {
+      "title": "The Stranger",
+      "feed_url": "https://www.thestranger.com/seattle/Rss.xml",
+      "website_url": "https://www.thestranger.com/",
+      "description": "The Stranger, Seattle's Only Newspaper: Covering Seattle news, politics, music, film, and arts; plus movie times, club calendars, restaurant listings, forums, blogs, and Savage Love.",
+      "followers": {
+        "facebook": 122400,
+        "twitter": 137600,
+        "instagram": 127800
+      },
+      "image_url": "https://i1.feedspot.com/4828006.jpg?t=1610961602"
+    },
+    {
+      "title": "Westside Seattle",
+      "feed_url": "https://www.westsideseattle.com/rss.xml",
+      "website_url": "https://www.westsideseattle.com/",
+      "description": "Local daily newspaper website covering West Seattle neighborhoods since 1923 with latest news and information.",
+      "followers": {
+        "facebook": 93,
+        "twitter": 9300
+      },
+      "image_url": "https://i1.feedspot.com/5130583.jpg?t=1694066205"
+    },
+    {
+      "title": "CHS Capitol Hill Seattle",
+      "feed_url": "https://www.capitolhillseattle.com/feed/",
+      "website_url": "https://www.capitolhillseattle.com/",
+      "description": "Community news for all the hill. CHS Capitol Hill Seattle is a community site dedicated to the Capitol Hill neighborhood in lovely Seattle, Washington USA. It started as an independent, place-focused blog in January 2006 and have grown to incorporate voices from all over the Hill.",
+      "followers": {
+        "facebook": 20700,
+        "twitter": 54500
+      },
+      "image_url": "https://i1.feedspot.com/5132180.jpg?t=1585316141"
+    },
+    {
+      "title": "West Seattle Blog",
+      "feed_url": "https://westseattleblog.com/feed/",
+      "website_url": "https://westseattleblog.com/",
+      "description": "Get West Seattle news, information, and discussion, updated multiple times daily, 24/7.",
+      "followers": {
+        "facebook": 37800,
+        "twitter": 67900
+      },
+      "image_url": "https://i1.feedspot.com/621.jpg?t=1610961623"
+    },
+    {
+      "title": "MyNorthwest",
+      "feed_url": "https://mynorthwest.com/feed",
+      "website_url": "https://mynorthwest.com/",
+      "description": "Seattle news, sports, weather, traffic, talk and community.",
+      "followers": {
+        "facebook": 43300,
+        "twitter": 45100
+      },
+      "image_url": "https://i1.feedspot.com/5130577.jpg?t=1669968641"
+    },
+    {
+      "title": "The Seattle Medium",
+      "feed_url": "https://seattlemedium.com/feed/",
+      "website_url": "https://seattlemedium.com/",
+      "description": "The Seattle Medium is the largest African American owned and operated newspaper in the Pacific Northwest. Get local, regional, and national news affecting the African American community.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 1100,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5132167.jpg?t=1585309304"
+    },
+    {
+      "title": "Seattle Polish News",
+      "feed_url": "https://www.seattlepolishnews.org/feed/",
+      "website_url": "https://www.seattlepolishnews.org/",
+      "description": "Seattle Polish News is an Independent news website serving Seattle and the Pacific Northwest. Our news follows anything Polish anywhere in the city and the region. We cover events at the Polish Cultural Center on Capitol Hill, of course, but also events with Polish themes or Polish artists",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5518346.jpg?t=1678366391"
+    },
+    {
+      "title": "Seattle Gay News",
+      "feed_url": "https://www.sgn.org/rss/rss_seattle_gay_news_0_0.xml",
+      "website_url": "https://www.sgn.org/",
+      "description": "Explore the latest news, podcasts, and special issues covering the LGBTQIA community. The Seattle Gay News (SGN) is one of the largest Gay/Lesbian/LGBTQ newspapers in the world, serving the Washington and Pacific Northwest USA with arts, entertainment, local, international, and equality news for over 45 years.",
+      "followers": {
+        "facebook": 13200,
+        "twitter": 6200,
+        "instagram": 6300
+      },
+      "image_url": "https://i1.feedspot.com/5475017.jpg?t=1669967243"
+    },
+    {
+      "title": "Seattle 24\u00d77",
+      "feed_url": "https://www.seattle24x7.com/feed/",
+      "website_url": "https://www.seattle24x7.com/",
+      "description": "Seattle24x7 is a local Puget Sound online business community and the one-and-only, dot-com combination of Company Directory, Community, and Commentary. Explore the vibrant Pacific Northwest Experience with fresh, inspiring stories of People, Places, Businesses and Local issues.",
+      "followers": {
+        "twitter": 133
+      },
+      "image_url": "https://i1.feedspot.com/5518347.jpg?t=1678366328"
+    },
+    {
+      "title": "Seattle Met",
+      "feed_url": "https://www.seattlemet.com/feed",
+      "website_url": "https://www.seattlemet.com/",
+      "description": "Smart. Authoritative. Entertaining. With a bold design, eye-catching photography, and an editorial voice that's at once witty and in-the-know, Seattle Metropolitan is our city's monthly indispensable news, culture, and lifestyle magazine.",
+      "followers": {
+        "facebook": 66600,
+        "twitter": 183100,
+        "instagram": 82800
+      },
+      "image_url": "https://i1.feedspot.com/4827539.jpg?t=1610961608"
+    },
+    {
+      "title": "Converge Media",
+      "feed_url": "https://www.whereweconverge.com/post?format=rss",
+      "website_url": "https://www.whereweconverge.com/",
+      "description": "Get your daily briefing on Seattle's cultural movement and communities here. Converge Media is a leading producer of culturally relevant content in Seattle and across the Pacific Northwest. We create videos, editorial and creative writing, podcasts, and local news coverage curated specifically for an urban audience.",
+      "followers": {
+        "facebook": 45400,
+        "twitter": 6600
+      },
+      "image_url": "https://i1.feedspot.com/5518348.jpg?t=1678366147"
+    },
+    {
+      "title": "GeekWire",
+      "feed_url": "https://www.geekwire.com/feed/",
+      "website_url": "https://www.geekwire.com/",
+      "description": "GeekWire is a fast-growing, national technology news site with strong roots in the Seattle region and a large audience of loyal, tech-savvy readers around the globe, who follow the site for breaking news, expert analysis, and unique insights into the technology industry.",
+      "followers": {
+        "facebook": 141300,
+        "twitter": 169200,
+        "instagram": 10300
+      },
+      "image_url": "https://i1.feedspot.com/4462539.jpg?t=1689250135"
+    },
+    {
+      "title": "Seattle Weekly",
+      "feed_url": "https://www.seattleweekly.com/feed/",
+      "website_url": "https://www.seattleweekly.com/",
+      "description": "The preferred online destination for all Seattle news, events, music, movies, restaurants, and reviews. Seattle Weekly connects its readers to the doers, thinkers, businesses, and entertainers that shape this city through deeply reported stories, stirring critiques, and insightful interviews.",
+      "followers": {
+        "facebook": 40400,
+        "twitter": 148900,
+        "instagram": 19900
+      },
+      "image_url": "https://i1.feedspot.com/5475011.jpg?t=1669966754"
+    },
+    {
+      "title": "FOX 13 Seattle",
+      "feed_url": "https://www.fox13seattle.com/rss/category/apps",
+      "website_url": "https://www.fox13seattle.com/",
+      "description": "Seattle source for breaking news, weather, and sports. Home of Washington's Most Wanted and the Seattle Seahawks.",
+      "followers": {
+        "facebook": 779900,
+        "instagram": 152800
+      },
+      "image_url": "https://i1.feedspot.com/5130500.jpg?t=1694071040"
+    },
+    {
+      "title": "Cascade PBS News",
+      "feed_url": "https://www.cascadepbs.org/articles.xml",
+      "website_url": "https://www.cascadepbs.org/",
+      "description": "Crosscut is the Northwest's independent, nonprofit news site that serves the public with in-depth local stories, politics, opinions, and culture.",
+      "followers": {
+        "facebook": 32400,
+        "twitter": 4,
+        "instagram": 10600
+      },
+      "image_url": "https://i1.feedspot.com/4389383.jpg?t=1585313212"
+    },
+    {
+      "title": "The Seattle Times",
+      "feed_url": "https://www.seattletimes.com/feed/",
+      "website_url": "https://www.seattletimes.com/",
+      "description": "As the Northwest's comprehensive news source, The Seattle Times provides local news, sports, business, politics, entertainment, travel, restaurants and opinion for Seattle and the Pacific Northwest.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/4366653.jpg?t=1603896192"
+    },
+    {
+      "title": "Puget Sound Business Journal",
+      "feed_url": "https://www.bizjournals.com/seattle/",
+      "website_url": "https://www.bizjournals.com/seattle/",
+      "description": "The Puget Sound Business Journal (Seattle) features local business news about Seattle. Read top headlines and stories covering Banking, Technology, Healthcare, Commercial Real Estate, and other sectors updated throughput the day. We also provide tools to help businesses grow, network, and hire.",
+      "followers": {
+        "facebook": 30700,
+        "twitter": 35100,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5475026.jpg?t=1669967365"
+    }
+  ]
+}

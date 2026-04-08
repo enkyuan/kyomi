@@ -1,0 +1,81 @@
+{
+  "category": "UK Weather",
+  "source_url": "https://rss.feedspot.com/uk_weather_rss_feeds",
+  "feeds": [
+    {
+      "title": "University of Reading Blog",
+      "feed_url": "https://blogs.reading.ac.uk/weather-and-climate-at-reading/feed/",
+      "website_url": "https://blogs.reading.ac.uk/weather-and-climate-at-reading/",
+      "description": "The University of Reading is a global university that enjoys a world-class reputation for teaching, research and enterprise. Subscribe us to keep up with Latest news from the Department of Meteorology.",
+      "followers": {
+        "facebook": 89700,
+        "twitter": 60500
+      },
+      "image_url": "https://i1.feedspot.com/4820763.jpg?t=1610712414"
+    },
+    {
+      "title": "Daily Express",
+      "feed_url": "https://feeds.feedburner.com/daily-express-weather",
+      "website_url": "https://www.express.co.uk/news/weather",
+      "description": "Follow us to keep up with the latest UK Weather Forecast from the Daily Express.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/4911341.jpg?t=1620123698"
+    },
+    {
+      "title": "Royal Meteorological Society News",
+      "feed_url": "https://www.rmets.org/news/rss.xml",
+      "website_url": "https://www.rmets.org/news",
+      "description": "The Royal Meteorological Society is the professional and learned society for weather and climate. The Society serves not only those in academia and professional meteorologists, but also those whose work is affected in some way or other by the weather or climate, or simply have a general interest in the weather. The membership includes scientists, practitioners and a broad range of weather enthusiasts.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 15200,
+        "instagram": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4911256.jpg?t=1620123707"
+    },
+    {
+      "title": "The Guardian \u00bb UK Weather",
+      "feed_url": "https://www.theguardian.com/uk/weather/rss",
+      "website_url": "https://www.theguardian.com/uk/weather/",
+      "description": "Subscribe us to keep up with the Latest news and features on Weather from theguardian.com, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4911334.jpg?t=1756794086"
+    },
+    {
+      "title": "A Gardener's Weather Diary",
+      "feed_url": "http://ossettweather.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://ossettweather.blogspot.com/",
+      "description": "This blog records the local weather details near to my allotment plot in Wakefield. The details are gathered from a weather station which I set up in my garden during October 2009. Follow us to keep up with Records of temperature, rainfall and wind speeds.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4911276.jpg"
+    },
+    {
+      "title": "Met Office Blog",
+      "feed_url": "https://www.metoffice.gov.uk/blog/",
+      "website_url": "https://www.metoffice.gov.uk/blog/",
+      "description": "The Met Office is the National Weather Service for the UK, providing well-renowned weather and climate science and services to support the public, government and businesses. The blog will post latest news releases and related content, news diary and information.",
+      "followers": {
+        "facebook": 691900,
+        "twitter": 943200
+      },
+      "image_url": "https://i1.feedspot.com/4820877.jpg?t=1610712428"
+    },
+    {
+      "title": "Oxford Climate Society",
+      "feed_url": "https://oxfordclimatesociety.com/2/feed",
+      "website_url": "https://oxfordclimatesociety.com/blog",
+      "description": "An Oxford based society dedicated to developing informed climate leaders, thinkers, movers and shakers. Our new Analysis and Outreach team will produce high quality analysis of new developments in climate policy and science.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4911300.jpg?t=1620123703"
+    }
+  ]
+}

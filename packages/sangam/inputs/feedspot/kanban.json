@@ -1,0 +1,129 @@
+{
+  "category": "Kanban",
+  "source_url": "https://rss.feedspot.com/kanban_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kanban University Blog",
+      "feed_url": "https://kanban.university/feed/",
+      "website_url": "https://kanban.university/blog/",
+      "description": "Stay up to date on the latest Kanban News and Resources. Kanban University provides global training and certification in the Kanban Method, ESP Enterprise Service Planning & Leadership Development. Kanban University provides global training and certification in the Kanban Method, Enterprise Service Planning & Leadership Development.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5399448.jpg?t=1652185020"
+    },
+    {
+      "title": "Nave Blog",
+      "feed_url": "https://getnave.com/blog/feed/",
+      "website_url": "https://getnave.com/blog/",
+      "description": "Get the most out of your Kanban system with our expert tips and guidelines on how to become more efficient. We help agile practitioners build predictable delivery workflows. Our primary focus is to help you make reliable data-driven forecasts and deliver on your commitments without overburdening your teams.",
+      "followers": {
+        "facebook": 229,
+        "twitter": 554
+      },
+      "image_url": "https://i1.feedspot.com/5399447.jpg?t=1652185013"
+    },
+    {
+      "title": "AvailAgility Blog",
+      "feed_url": "https://availagility.co.uk/feed/",
+      "website_url": "https://availagility.co.uk/blog/",
+      "description": "My name is Karl Scotland and I help businesses become Learning Organisations. Over the last 15 years I have been an advocate of Lean and Agile approaches to achieve this, working with companies including the BBC, Yahoo!, EMC Consulting, Rally Software, Cisco and Legal & General. During this time, I have been a pioneer of using Kanban Systems and Strategy Deployment for product development, a founding member of both the Lean Systems Society and Limited WIP Society, as well as being active in the community and a regular conference speaker.",
+      "followers": {
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/1351166.jpg?t=1627735443"
+    },
+    {
+      "title": "Personal Kanban",
+      "feed_url": "https://www.personalkanban.com/pk?format=rss",
+      "website_url": "https://www.personalkanban.com/pk",
+      "description": "The Thrive blog covers everything there is to know about Personal Kanban. Check it to find engaging how-to guides, read opinions by the leading experts in the field and much more. Personal Kanban is a tool to visualize your work and limit your work in progress.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5399443.jpg?t=1652184993"
+    },
+    {
+      "title": "David J. Anderson School of Management \u00bb Kanban",
+      "feed_url": "https://djaa.com/category/kanban/feed/",
+      "website_url": "https://djaa.com/category/kanban/",
+      "description": "Founded in 2008 the David J Anderson School of Management gives managers a fresh way of interpreting the world around them and equips managers with the skills they need in order to lead with confidence and manage with competence.",
+      "followers": {
+        "twitter": 900
+      },
+      "image_url": "https://i1.feedspot.com/5399438.jpg?t=1652184969"
+    },
+    {
+      "title": "KaiNexus Blog \u00bb Kanban",
+      "feed_url": "https://blog.kainexus.com/topic/kanban/rss.xml",
+      "website_url": "https://blog.kainexus.com/topic/kanban",
+      "description": "The KaiNexus team shares important information regarding Kanban. KaiNexus is a web-based improvement platform that empowers leading organizations in every industry to start, spread and sustain their improvement cultures.",
+      "followers": {
+        "facebook": 608,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5399441.jpg?t=1652184983"
+    },
+    {
+      "title": "Matt Philip's Blog",
+      "feed_url": "https://mattphilip.wordpress.com/feed/",
+      "website_url": "https://mattphilip.wordpress.com/",
+      "description": "Know more about Kanban, agility and more. As a capability cultivator, organizational fitness coach and workplace activist, Matt helps organizations and teams continuously become fit for their purpose. He is especially passionate about building learning organizations and creating humanizing and engaging work environments.",
+      "followers": {
+        "twitter": 935
+      },
+      "image_url": "https://i1.feedspot.com/5399442.jpg?t=1652184987"
+    },
+    {
+      "title": "Kanban.cat Blog",
+      "feed_url": "https://www.kanban.cat/blog-feed.xml",
+      "website_url": "https://www.kanban.cat/blog",
+      "description": "Read All about Kanban in Catalan. There is a lot of literature and documentation on Kanban, in English and other languages, but almost nothing in Catalan. This is the motivation of this website. We want it to be a quality benchmark for all those people who want to know more about the Kanban Method without having to be translating content into languages other than their own.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5399449.jpg?t=1652331961"
+    },
+    {
+      "title": "Businessmap Blog",
+      "feed_url": "https://businessmap.io/blog/",
+      "website_url": "https://businessmap.io/blog/",
+      "description": "Check out what's happening around Kanbanize and what's fresh. Kanbanize is online Portfolio Kanban software for Lean Management. Kanban boards, flow analytics and automation bring visibility and help you deliver on time.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4987987.jpg?t=1652704647"
+    },
+    {
+      "title": "Kanban Zone Blog",
+      "feed_url": "https://kanbanzone.com/feed/",
+      "website_url": "https://kanbanzone.com/blog/",
+      "description": "Read this blog for the latest insights on productivity with Kanban. Topics include Kanban, Lean Thinking, Agile methods, Scrumban, Kaizen and more. Kanban Zone is a visual process management solution that leverages every aspect of the Kanban methodology. We promote prioritization, focus and clarity.",
+      "followers": {
+        "facebook": 16000,
+        "twitter": 1400,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5129936.jpg?t=1611064370"
+    },
+    {
+      "title": "Blue Agile \u00bb Kanban",
+      "feed_url": "https://www.blueagile.com/category/kanban/feed/",
+      "website_url": "https://www.blueagile.com/category/kanban/",
+      "description": "Read the best Kanban blog written by Srinivas Saripalli, which contains all archived articles. Here you will find new content for everything related to Kanban. I am an Agile and a Professional Coach working with leaders at all levels during times of transition and transformation, exhibiting courage, focus, devotion, respect, and openness in my relationships with people.",
+      "followers": {
+        "twitter": 21
+      },
+      "image_url": "https://i1.feedspot.com/5399444.jpg?t=1652184998"
+    },
+    {
+      "title": "ProKanban.org Blog",
+      "feed_url": "https://www.prokanban.org/feed",
+      "website_url": "https://www.prokanban.org/blog",
+      "description": "ProKanban.org provides learning material, training, and assessments to help people and teams find practical starting points for optimizing the way they deliver what their customers want when they want it. ProKanban.org is an inclusive Kanban learning community focused on forward progress.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5399440.jpg?t=1652424137"
+    }
+  ]
+}

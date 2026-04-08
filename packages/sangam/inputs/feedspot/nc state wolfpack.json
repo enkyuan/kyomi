@@ -1,0 +1,41 @@
+{
+  "category": "NC State Wolfpack",
+  "source_url": "https://rss.feedspot.com/nc_state_wolfpack_rss_feeds",
+  "feeds": [
+    {
+      "title": "Pack Insider",
+      "feed_url": "https://packinsider.com/feed/",
+      "website_url": "https://packinsider.com/",
+      "description": "PackInsider is a news source dedicated to bringing up-to-the-minute news on the past, present, and future of NC State Athletics and team recruits. Pack Insider provides the top stories from NC State Wolfpack Sports, consisting of Football and Basketball updates, Schedules, Stats, and Recruiting news.",
+      "followers": {
+        "facebook": 13900,
+        "twitter": 19600,
+        "instagram": 14600
+      },
+      "image_url": "https://i1.feedspot.com/4920589.jpg?t=1668154662"
+    },
+    {
+      "title": "Backing The Pack",
+      "feed_url": "https://www.backingthepack.com/rss/index.xml",
+      "website_url": "https://www.backingthepack.com/",
+      "description": "Your best source for quality N.C. State Wolfpack news, rumors, analysis, stats, and scores from the fan perspective. Stay in the loop with live updates, trending stories, and social media. Backing The Pack by Fansided.com is a community dedicated to NC State Wolfpack fans.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4920604.jpg?t=1668154798"
+    },
+    {
+      "title": "Sports Illustrated \u00bb NC State Wolfpack",
+      "feed_url": "https://www.si.com/college/ncstate/.rss/full/",
+      "website_url": "https://www.si.com/college/ncstate/",
+      "description": "AllWolfpack is a Sports Illustrated channel featuring Brett Friedlander to bring you the latest News, Highlights, Analysis, and Recruiting surrounding the NC State Wolfpack. Sports Illustrated is an American Global sports news brand with a dedicated magazine and web portal covering the most happening sports events in the country.",
+      "followers": {
+        "facebook": 3500000,
+        "twitter": 1900000,
+        "instagram": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/5465550.jpg?t=1668154578"
+    }
+  ]
+}

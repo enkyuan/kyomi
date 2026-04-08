@@ -1,0 +1,53 @@
+{
+  "category": "Facebook Stock",
+  "source_url": "https://rss.feedspot.com/facebook_stock_rss_feeds",
+  "feeds": [
+    {
+      "title": "Stocktwits \u00bb META",
+      "feed_url": "https://www.stocktwits.com/sitemap/rss_feed.xml",
+      "website_url": "https://stocktwits.com/symbol/META/news/",
+      "description": "Find Meta Platforms Inc (META) news, corporate events, press releases, latest company updates and headlines",
+      "followers": {
+        "facebook": 50400,
+        "twitter": 1100000,
+        "instagram": 329100
+      },
+      "image_url": "https://i1.feedspot.com/8654161.jpg?t=1753957629"
+    },
+    {
+      "title": "Barchart \u00bb META",
+      "feed_url": "https://www.barchart.com/news/authors/rss",
+      "website_url": "https://www.barchart.com/stocks/quotes/META/",
+      "description": "The META stock page on Barchart.com provides real-time quotes, charts, technical analysis, and key financial data to help investors track and evaluate Meta Platforms Inc.",
+      "followers": {
+        "facebook": 142200,
+        "twitter": 360200,
+        "instagram": 50400
+      },
+      "image_url": "https://i1.feedspot.com/5272097.jpg?t=1753957842"
+    },
+    {
+      "title": "Investing.com \u00bb Meta Stock",
+      "feed_url": "https://www.investing.com/equities/facebook-inc",
+      "website_url": "https://www.investing.com/equities/facebook-inc",
+      "description": "View the real-time Meta Platforms Inc (FB) stock price and historical data. Investing.com is a leading financial platform which offers real-time quotes, streaming charts, up-to-date financial news, technical analysis and more.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/5403024.jpg?t=1653139634"
+    },
+    {
+      "title": "CNBC \u00bb Facebook",
+      "feed_url": "https://www.cnbc.com/quotes/FB",
+      "website_url": "https://www.cnbc.com/quotes/FB",
+      "description": "Get Meta Platforms Inc (FB:NASDAQ) real-time stock quotes, news, price and financial information from CNBC. CNBC is the internationally recognized world leader in business. We serve approximately 385 million homes worldwide with news and around-the-clock financial market coverage, including more than 95 million households in the United States and Canada.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/5403019.jpg?t=1653139602"
+    }
+  ]
+}

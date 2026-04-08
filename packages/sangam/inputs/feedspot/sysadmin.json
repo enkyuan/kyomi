@@ -1,0 +1,332 @@
+{
+  "category": "Sysadmin",
+  "source_url": "https://rss.feedspot.com/sysadmin_rss_feeds",
+  "feeds": [
+    {
+      "title": "4sysops For SysAdmins and DevOps",
+      "feed_url": "https://4sysops.com/feed/",
+      "website_url": "https://4sysops.com/",
+      "description": "4sysops is an online community for IT professionals.In our weblog, experienced IT pros cover the latest technologies in system administration.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4828073.jpg?t=1610970477"
+    },
+    {
+      "title": "Slipstick Systems",
+      "feed_url": "https://www.slipstick.com/feed/",
+      "website_url": "https://www.slipstick.com/",
+      "description": "Help for Beginners to Advanced Outlook users and Exchange Administrators at the Microsoft Outlook and Exchange Server Solutions Center. VBA Code samples.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 295
+      },
+      "image_url": "https://i1.feedspot.com/4828688.jpg?t=1610970501"
+    },
+    {
+      "title": "Davoud Teimouri",
+      "feed_url": "https://www.teimouri.net/feed/",
+      "website_url": "https://www.teimouri.net/",
+      "description": "Follow this blog to get updates about virtualization and datacenter.",
+      "followers": {
+        "facebook": 95,
+        "twitter": 455,
+        "instagram": 149
+      },
+      "image_url": "https://i1.feedspot.com/5004752.jpg"
+    },
+    {
+      "title": "Mike F Robbins Scripting",
+      "feed_url": "https://mikefrobbins.com/index.xml",
+      "website_url": "https://mikefrobbins.com/",
+      "description": "Mike F Robbins is a Microsoft MVP on Windows PowerShell and a SAPIEN Technologies MVP. He is a co-author of Windows PowerShell TFM 4th Edition and is a contributing author of a chapter in the PowerShell Deep Dives book.",
+      "followers": {
+        "twitter": 7600
+      },
+      "image_url": "https://i1.feedspot.com/1514658.jpg?t=1610970752"
+    },
+    {
+      "title": "Adam, the Automator - Automate all the things.",
+      "feed_url": "https://adamtheautomator.com/feed/",
+      "website_url": "https://adamtheautomator.com/",
+      "description": "Focused on automation using software, Adam the Automator is the blog and personal brand of Adam Bertram. Adam evangelizes all things DevOps, scripting, automation and software.",
+      "followers": {
+        "facebook": 77,
+        "twitter": 13800
+      },
+      "image_url": "https://i1.feedspot.com/4828972.jpg?t=1610970758"
+    },
+    {
+      "title": "RDR-IT",
+      "feed_url": "https://rdr-it.com/feed/",
+      "website_url": "https://rdr-it.io/",
+      "description": "RDR-IT offers tutorials, scripts and troubleshooting on IT technologies for professionals (Technicians, Administrators ...)",
+      "followers": {
+        "facebook": 88
+      },
+      "image_url": "https://i1.feedspot.com/5034422.jpg?t=1610970960"
+    },
+    {
+      "title": "The Random Admin",
+      "feed_url": "https://therandomadmin.com/feed/",
+      "website_url": "https://therandomadmin.com/",
+      "description": "The Random Admin is a hub for system administrators passionate about teaching and leveraging technology to support local businesses. Explore diverse topics. Using the insights gained from their career journeys, the author merges mental health and IT through engaging stories, offering a unique blend of knowledge and self-understanding.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5758473.jpg?t=1705662193"
+    },
+    {
+      "title": "TechDirectArchive",
+      "feed_url": "https://techdirectarchive.com/feed/",
+      "website_url": "https://techdirectarchive.com/",
+      "description": "This blog posts cover instruction guides, how-to, troubleshooting tips on Windows, Linux, Mac, Databases, hardware, Cloud, Network and Information security.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/5165336.jpg?t=1610970797"
+    },
+    {
+      "title": "PC\u27173",
+      "feed_url": "https://pcx3.com/feed/",
+      "website_url": "https://pcx3.com/",
+      "description": "SysAdmin blog from a hosting perspective: WordPess, SQL, VMware, Linux.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5362454.jpg?t=1642146031"
+    },
+    {
+      "title": "Spam Resource",
+      "feed_url": "https://www.spamresource.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.spamresource.com/",
+      "description": "Spam Resource blog contains coverage of email, spam prevention and deliverability.",
+      "followers": {
+        "facebook": 103,
+        "twitter": 773
+      },
+      "image_url": "https://i1.feedspot.com/4828830.jpg?t=1610970817"
+    },
+    {
+      "title": "Wahl Network - Technical Solutions for Technical People",
+      "feed_url": "https://feeds.feedburner.com/WahlNetwork",
+      "website_url": "https://wahlnetwork.com/",
+      "description": "Wahl Network - Technical Solutions for Technical People covers a wide range of technologies SysAdmins have to deal with.",
+      "followers": {
+        "twitter": 161
+      },
+      "image_url": "https://i1.feedspot.com/4828938.jpg?t=1610970831"
+    },
+    {
+      "title": "vInfrastructure Blog - Virtualization, Cloud and Storage",
+      "feed_url": "https://vinfrastructure.it/feed/",
+      "website_url": "https://vinfrastructure.it/",
+      "description": "Virtualization expert and architect, System Administrator on Linux and Windows OS, network and storage specialist, and teacher. Follow this blog to get information on Virtualization, Cloud and Storage.",
+      "followers": {
+        "facebook": 268,
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4831843.jpg?t=1610970803"
+    },
+    {
+      "title": "SuperTechman",
+      "feed_url": "https://supertechman.com.au/feed/",
+      "website_url": "https://supertechman.com.au/category/sys-admin/",
+      "description": "SuperTechman is a unique blog that is aimed to provide Systems and Network administrators technical solutions and documentation based on the knowledge from a seasoned professional in the field of Systems and Network administration.",
+      "followers": {
+        "facebook": 115
+      },
+      "image_url": "https://i1.feedspot.com/5008314.jpg?t=1610970812"
+    },
+    {
+      "title": "Dan Tsekhanskiy Blog",
+      "feed_url": "https://tseknet.com/feed.xml",
+      "website_url": "https://tseknet.com/blog/",
+      "description": "Windows Systems Administrator with an unhealthy addiction to automation and SRE practices. With over five years of experience in IT, my primary areas of focus are PowerShell, Python, automation, continuous integration/continuous delivery, infrastructure as code, imaging/provisioning, configuration management, and championing SRE practices.",
+      "followers": {
+        "twitter": 94
+      },
+      "image_url": "https://i1.feedspot.com/5187076.jpg?t=1598601949"
+    },
+    {
+      "title": "Sysadmin1138 Blog",
+      "feed_url": "https://feeds.feedburner.com/Sysadmin1138",
+      "website_url": "https://sysadmin1138.net/mt/blog/",
+      "description": "Tribulations of a systems administrator (Windows, Linux, and formerly NetWare). Formerly academic, currently private sector.",
+      "followers": {
+        "twitter": 604
+      },
+      "image_url": "https://i1.feedspot.com/85656.jpg?t=1610971297"
+    },
+    {
+      "title": "Practical System Administration",
+      "feed_url": "https://feeds.feedburner.com/PracticalSystemAdministration",
+      "website_url": "https://thepracticalsysadmin.com/",
+      "description": "A blog dedicated to sharing the knowledge and resources in a broad range of categories in the area of system administration.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 561
+      },
+      "image_url": "https://i1.feedspot.com/4829014.jpg?t=1610970841"
+    },
+    {
+      "title": "xkln.net Blog",
+      "feed_url": "https://xkln.net/rss.xml",
+      "website_url": "https://xkln.net/blog/",
+      "description": "A mix of system administration, networking, security, and development",
+      "followers": {
+        "twitter": 190
+      },
+      "image_url": "https://i1.feedspot.com/5406416.jpg?t=1654250592"
+    },
+    {
+      "title": "System Admin Share",
+      "feed_url": "https://feeds.feedburner.com/SystemAdminShare",
+      "website_url": "https://ny55.blogspot.com/",
+      "description": "This blog provides useful Information for System Administrators on various topics such as Windows,Unix,Vmware,AIX,Veritas,Networking,Cluster,Troubleshooting,Daily Hacks etc.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4828775.jpg?t=1610971380"
+    },
+    {
+      "title": "Artur Tyksinski - Sysadmin Blog",
+      "feed_url": "https://tyksinski.com/rss/",
+      "website_url": "https://tyksinski.com/",
+      "description": "System Administration Blog by Artur Tyksinski. I talk about anything and everything technology. Mostly Virtualization, MSP, Cyber Security and Linux.",
+      "followers": {
+        "facebook": 15100
+      },
+      "image_url": "https://i1.feedspot.com/5066983.jpg"
+    },
+    {
+      "title": "LazyWinAdmin",
+      "feed_url": "https://lazywinadmin.com/feed",
+      "website_url": "https://lazywinadmin.com/",
+      "description": "I'm Francois-Xavier Cat and I'm a Systems Engineer focusing mostly on Microsoft and VMware technologies. I created this blog mainly for the purpose of documenting my day-to-day work. Often I find myself referring back to old posts on troubleshooting issues or previous implementations to help me resolve current problems or tasks.LazyWinAdmin is a blog about my day to day SysAdmin life.",
+      "followers": {
+        "facebook": 646,
+        "twitter": 8
+      },
+      "image_url": "https://i1.feedspot.com/4637786.jpg?t=1610971075"
+    },
+    {
+      "title": "Server Trouble",
+      "feed_url": "https://www.servertrouble.com/feed/",
+      "website_url": "https://www.servertrouble.com/",
+      "description": "Follow Server Trouble to get updates about system administration",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5009637.jpg"
+    },
+    {
+      "title": "cloud-topics",
+      "feed_url": "https://cloud-topics.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://cloud-topics.blogspot.com/",
+      "description": "Blog about cloud and system administration",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5009642.jpg"
+    },
+    {
+      "title": "TECHBUNNY Random Thoughts About Tech",
+      "feed_url": "https://blog.techbunny.com/feed/",
+      "website_url": "https://blog.techbunny.com/",
+      "description": "TECHBUNNY contains content regarding technology and solutions for IT Pros which Sysadmins should follow.",
+      "followers": {
+        "facebook": 19,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4828928.jpg?t=1610971089"
+    },
+    {
+      "title": "SysAdvent",
+      "feed_url": "http://feeds.feedburner.com/sysadvent",
+      "website_url": "https://sysadvent.blogspot.com/",
+      "description": "Systems Administration Advent Calendar provide great articles about systems administration topics written by fellow sysadmins.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/587861.jpg?t=1610971110"
+    },
+    {
+      "title": "MSExchangeGuru.com",
+      "feed_url": "https://msexchangeguru.com/feed/",
+      "website_url": "https://msexchangeguru.com/",
+      "description": "Follow this blog to get regular updates on infrastructure-related products. The blog provides high-quality articles which would help us turn to a one-stop site for all your Exchange related queries to be Exchanged.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/712366.jpg?t=1610971098"
+    },
+    {
+      "title": "The Lone Sysadmin - Rounding Up IT Outlaws",
+      "feed_url": "https://lonesysadmin.net/feed/",
+      "website_url": "https://lonesysadmin.net/",
+      "description": "Hi, I'm Bob Plankers. I am a virtualization architect, system administrator, storage administrator, network administrator, end user, project manager, and developer. I write for various technology outlets, and serve as a analyst with The Virtualization Practice. Follow this blog to get information on sysadmin.",
+      "followers": {
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/722299.jpg?t=1610970836"
+    },
+    {
+      "title": "Windows OS Hub",
+      "feed_url": "https://woshub.com/feed/",
+      "website_url": "https://woshub.com/",
+      "description": "Windows knowledge and IT Knowledge base for system administrators.",
+      "followers": {
+        "facebook": 916,
+        "twitter": 321
+      },
+      "image_url": "https://i1.feedspot.com/4022754.jpg?t=1610970733"
+    },
+    {
+      "title": "SC Media",
+      "feed_url": "https://www.scworld.com/",
+      "website_url": "https://www.scworld.com/",
+      "description": "Security Weekly is the best podcast network created for security professionals, by security professionals. We features interviews with security luminaries, how-to technical segments and security news coverage.",
+      "followers": {
+        "facebook": 10800,
+        "twitter": 75500
+      },
+      "image_url": "https://i1.feedspot.com/4660479.jpg?t=1610970807"
+    },
+    {
+      "title": "A Windows System Admin's Blog",
+      "feed_url": "https://www.winsysadminblog.com/feed/",
+      "website_url": "https://www.winsysadminblog.com/",
+      "description": "A Windows System Admin's Blog Covers Server Administration, Endpoint Management, Scripting and Network Management.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3313622.jpg?t=1610971166"
+    },
+    {
+      "title": "High Scalability Blog",
+      "feed_url": "https://highscalability.com/rss.xml/",
+      "website_url": "https://highscalability.com/",
+      "description": "High Scalability articles are your source of web scalability articles. This blog tries to bring together all the lore, art, science, practice, and experience of building scalable websites into one place so you can learn how to build your website with confidence.",
+      "followers": {
+        "facebook": 456,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/58745.jpg?t=1610970738"
+    },
+    {
+      "title": "Faris The SysAdmin",
+      "feed_url": "https://www.powershellcenter.com/feed/",
+      "website_url": "https://www.powershellcenter.com/",
+      "description": "This is a blog by Faris who writes about automating admin tasks and issues and how to solve them using PowerShell. Faris believes sharing knowledge is an essential key for progressing and learning for everyone. The more the technology is advancing, the more help and contribution is needed, so he decided to be part of this community and share the knowledge of what he knows through this blog.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 19,
+        "instagram": 264
+      },
+      "image_url": "https://i1.feedspot.com/5276550.jpg?t=1620209861"
+    },
+    {
+      "title": "StreamTipz",
+      "feed_url": "https://streamtipz.com/feed/",
+      "website_url": "https://streamtipz.com/",
+      "description": "My name is Carlo and I am a Senior Systems Administrator with close to 15 years experience in designing, scripting, monitoring and performance tuning Microsoft environments, starting from Windows 3.1/95/NT4 to Windows 2008 R2. Follow this blog for Resources, solutions and tips for system administrators.",
+      "followers": {
+        "facebook": 14,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/962110.jpg?t=1610971103"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "category": "Mansion Wedding",
+  "source_url": "https://rss.feedspot.com/mansion_wedding_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Mansion on Main Street Blog",
+      "feed_url": "https://mansiononmainstreet.com/feed/",
+      "website_url": "https://mansiononmainstreet.com/blog/",
+      "description": "The Mansion on Main Street is a contemporary events center draped in the elegance and grandeur of the French Renaissance. Situated amidst exquisite manicured grounds in Voorhees, New Jersey, this breathtaking property is ideal for weddings, corporate events, celebrations, and gatherings of any kind. In this blog, you will find our latest articles on things related to weddings.",
+      "followers": {
+        "facebook": 15300,
+        "instagram": 16100
+      },
+      "image_url": "https://i1.feedspot.com/5168884.jpg?t=1626087170"
+    },
+    {
+      "title": "Kohl Mansion Blog",
+      "feed_url": "https://kohlmansion.com/feed/",
+      "website_url": "https://kohlmansion.com/blog/",
+      "description": "Hold your ceremony on a sprawling lawn, take portraits in the rose garden or host a cocktail hour on the terrace. Let your guests dance the night away in our distinctive wood-paneled Great Hall and stand in awe of the grand staircase. Intimate or epic, indoors or under the stars, with private and exclusive use of the entire mansion, the choice is yours. This is your day, your vision and this is the place that can make it a reality. Follow our blog, to know more about us and the weddings that take place here.",
+      "followers": {
+        "twitter": 52
+      },
+      "image_url": "https://i1.feedspot.com/5168744.jpg"
+    },
+    {
+      "title": "Wadsworth Mansion Blog",
+      "feed_url": "https://www.wadsworthmansion.com/feed/",
+      "website_url": "https://www.wadsworthmansion.com/blog/",
+      "description": "The Wadsworth Mansion, a nineteenth-century Beaux Art style mansion, hosting weddings, celebrations, and events. Graced by expansive lawns and surrounded by 103 acres of wooded parklands the Mansion reflects an era of grandeur and elegance. In this blog, you will find their latest news, updates, and details about the weddings that took place there.",
+      "followers": {
+        "facebook": 10500,
+        "twitter": 256,
+        "instagram": 7900
+      },
+      "image_url": "https://i1.feedspot.com/5168729.jpg?t=1626087156"
+    },
+    {
+      "title": "Riverwood Mansion Blog",
+      "feed_url": "https://www.riverwoodmansion.com/blog?format=rss",
+      "website_url": "https://www.riverwoodmansion.com/blog",
+      "description": "Riverwood Mansion is one of the Top Wedding Venues, Reception Venues, and Event Venues in Nashville Tennessee. Weddings at Riverwood Mansion are classic, elegant, and inspired by the South. As one of the largest historical venues within minutes of downtown Nashville. It is a premier event venue specializing in elegant Southern weddings with a historic mansion, lush gardens, and grand pavilion on 8 acres. In this blog, you will find their latest news, updates, and details about the weddings that took place there.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 1200,
+        "instagram": 10100
+      },
+      "image_url": "https://i1.feedspot.com/5168739.jpg?t=1626087180"
+    },
+    {
+      "title": "The Historic Longview Mansion Blog",
+      "feed_url": "https://www.longviewmansion.com//feed/rss2",
+      "website_url": "https://www.longviewmansion.com/blog/",
+      "description": "The Historic Longview Mansion is an all-inclusive, premier wedding venue located on a private 10-acre estate near Kansas City, MO, and Overland Park, KS. From the manicured gardens, to the historic library and pavilion, The Historic Longview Mansion has what you're looking for to create your dream wedding.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 47,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5168890.jpg?t=1626087202"
+    }
+  ]
+}

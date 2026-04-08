@@ -1,0 +1,110 @@
+{
+  "category": "Chicago Fire FC",
+  "source_url": "https://rss.feedspot.com/chicago_fire_fc_rss_feeds",
+  "feeds": [
+    {
+      "title": "Chicago Sun Times \u00bb Chicago Fire FC",
+      "feed_url": "https://chicago.suntimes.com/rss/fire/index.xml",
+      "website_url": "https://chicago.suntimes.com/fire",
+      "description": "Get the latest Chicago Fire FC news, analysis, stats, rumors, and more.",
+      "followers": {
+        "facebook": 414400,
+        "twitter": 540500,
+        "instagram": 103200
+      },
+      "image_url": "https://i1.feedspot.com/5184496.jpg?t=1597906471"
+    },
+    {
+      "title": "WGN TV \u00bb Chicago Fire FC",
+      "feed_url": "https://wgntv.com/sports/fire/feed/",
+      "website_url": "https://wgntv.com/sports/fire/",
+      "description": "WGN TV coverage of the Chicago Fire FC. Get the latest news, analysis, stats, rumors, and more.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 431800,
+        "instagram": 224700
+      },
+      "image_url": "https://i1.feedspot.com/5184475.jpg?t=1597904620"
+    },
+    {
+      "title": "Yahoo Sports \u00bb Chicago Fire FC",
+      "feed_url": "https://sports.yahoo.com/soccer/teams/chicago-fire/rss/",
+      "website_url": "https://sports.yahoo.com/soccer/teams/chicago-fire/",
+      "description": "The latest Chicago Fire news from Yahoo Sports. Find Chicago Fire fixtures, results, top scorers, transfer rumors, and player profiles, with exclusive photos and video highlights.",
+      "followers": {
+        "facebook": 4099999,
+        "twitter": 573300,
+        "instagram": 478000
+      },
+      "image_url": "https://i1.feedspot.com/5184612.jpg?t=1597921189"
+    },
+    {
+      "title": "SportSpyder.com \u00bb Chicago Fire FC",
+      "feed_url": "https://sportspyder.com/mls/chicago-fire/news.xml",
+      "website_url": "https://sportspyder.com/mls/chicago-fire/news",
+      "description": "The latest Chicago Fire FC MLS news articles from around the web.",
+      "followers": {
+        "facebook": 701,
+        "twitter": 873
+      },
+      "image_url": "https://i1.feedspot.com/5184615.jpg?t=1597921810"
+    },
+    {
+      "title": "SBI Soccer \u00bb Chicago Fire FC",
+      "feed_url": "https://sbisoccer.com/category/mls-chicago-fire/feed",
+      "website_url": "https://sbisoccer.com/category/mls-chicago-fire",
+      "description": "SBI Soccer is the soccer news website covering the sport from an American perspective, while also providing news and analysis on the international game as well. Get updates on Chicago Fire FC.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 8800,
+        "instagram": 662
+      },
+      "image_url": "https://i1.feedspot.com/5184508.jpg?t=1597908762"
+    },
+    {
+      "title": "The Athletic \u00bb Chicago Fire",
+      "feed_url": "https://www.nytimes.com/athletic/rss/football/fire/",
+      "website_url": "https://www.nytimes.com/athletic/football/team/fire/",
+      "description": "Welcome to The Athletic. Get access to smart, in-depth Chicago Fire FC sports coverage from an all-star team of writers.",
+      "followers": {
+        "facebook": 707100,
+        "twitter": 473800
+      },
+      "image_url": "https://i1.feedspot.com/5184585.jpg?t=1597918032"
+    },
+    {
+      "title": "Chicago Fire FC",
+      "feed_url": "https://www.chicagofirefc.com/rss/en.xml",
+      "website_url": "https://www.chicagofirefc.com/",
+      "description": "Your best source for the Chicago Fire FC news, analysis, stats, schedule, tickets, and more.",
+      "followers": {
+        "facebook": 380100,
+        "twitter": 184400,
+        "instagram": 217700
+      },
+      "image_url": "https://i1.feedspot.com/5184322.jpg?t=1597845914"
+    },
+    {
+      "title": "Hot Time In Old Town",
+      "feed_url": "https://www.hottimeinoldtown.com/rss/index.xml",
+      "website_url": "https://www.hottimeinoldtown.com/",
+      "description": "Your best source for quality Chicago Fire news, rumors, analysis, stats, and scores from the fan perspective.",
+      "followers": {
+        "facebook": 540,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5184407.jpg?t=1597847092"
+    },
+    {
+      "title": "MLS Multiplex \u00bb Chicago Fire FC",
+      "feed_url": "https://mlsmultiplex.com/mls-eastern-conference/chicago-fire/feed/",
+      "website_url": "https://mlsmultiplex.com/mls-eastern-conference/chicago-fire/",
+      "description": "The latest Chicago Fire news, rumors, GIFs, predictions, and more from MLS Multiplex.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5184537.jpg?t=1597912002"
+    }
+  ]
+}

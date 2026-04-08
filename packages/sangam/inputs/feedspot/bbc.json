@@ -1,0 +1,158 @@
+{
+  "category": "BBC",
+  "source_url": "https://rss.feedspot.com/bbc_rss_feeds",
+  "feeds": [
+    {
+      "title": "BBC News",
+      "feed_url": "https://feeds.bbci.co.uk/news/rss.xml",
+      "website_url": "https://www.bbc.com/news",
+      "description": "Visit BBC News for the latest news, breaking news, video, audio and analysis. BBC News provides trusted World, U.S. and U.K. news as well as local and regional perspectives. Also entertainment, climate, business, science, technology and health news.",
+      "followers": {
+        "facebook": 61300000,
+        "twitter": 15400000,
+        "instagram": 29600000
+      },
+      "image_url": "https://i1.feedspot.com/236623.jpg?t=1752666204"
+    },
+    {
+      "title": "BBC News \u00bb World",
+      "feed_url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+      "website_url": "https://www.bbc.com/news/world",
+      "description": "Get the latest BBC World News: international news, features, and analysis from Africa, the Asia-Pacific, Europe, Latin America, the Middle East, South Asia, and the United States and Canada.",
+      "followers": {
+        "facebook": 61300000,
+        "twitter": 42100000,
+        "instagram": 29600000
+      },
+      "image_url": "https://i1.feedspot.com/15793.jpg?t=1612778230"
+    },
+    {
+      "title": "BBC News \u00bb Asia",
+      "feed_url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
+      "website_url": "https://www.bbc.com/news/world/asia",
+      "description": "Get the latest Asian news from BBC News in Asia: breaking news, features, analysis, and special reports plus audio and video from across the Asian continent.",
+      "followers": {
+        "facebook": 61300000,
+        "twitter": 42100000,
+        "instagram": 29600000
+      },
+      "image_url": "https://i1.feedspot.com/236623.jpg?t=1752666204"
+    },
+    {
+      "title": "BBC News \u00bb UK",
+      "feed_url": "https://feeds.bbci.co.uk/news/uk/rss.xml",
+      "website_url": "https://www.bbc.com/news/uk",
+      "description": "Get the latest BBC News: breaking news, features, analysis, and debate plus audio and video content from England, Scotland, Wales, and Northern Ireland.",
+      "followers": {
+        "facebook": 61300000,
+        "twitter": 15400000,
+        "instagram": 29600000
+      },
+      "image_url": "https://i1.feedspot.com/236623.jpg?t=1752666204"
+    },
+    {
+      "title": "BBC News \u00bb Health",
+      "feed_url": "https://feeds.bbci.co.uk/news/health/rss.xml",
+      "website_url": "https://www.bbc.com/news/health",
+      "description": "Get the latest BBC Health News: breaking health and medical news from the UK and around the world, with in-depth features on well-being and lifestyle.",
+      "followers": {
+        "facebook": 61300000,
+        "twitter": 15400000,
+        "instagram": 29600000
+      },
+      "image_url": "https://i1.feedspot.com/236623.jpg?t=1752666204"
+    },
+    {
+      "title": "BBC News \u00bb Business",
+      "feed_url": "https://feeds.bbci.co.uk/news/business/rss.xml",
+      "website_url": "https://www.bbc.com/business",
+      "description": "The latest BBC Business News: breaking personal finance, company, financial and economic news, plus insight and analysis into the UK and global markets.",
+      "followers": {
+        "facebook": 61300000,
+        "twitter": 15400000,
+        "instagram": 29600000
+      },
+      "image_url": "https://i1.feedspot.com/236623.jpg?t=1752666204"
+    },
+    {
+      "title": "BBC News \u00bb Technology",
+      "feed_url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+      "website_url": "https://www.bbc.com/innovation/technology",
+      "description": "Get the latest BBC Technology News: breaking news and analysis on computing, the web, blogs, games, gadgets, social media, broadband, and more.",
+      "followers": {
+        "facebook": 463,
+        "twitter": 911200,
+        "instagram": 29600000
+      },
+      "image_url": "https://i1.feedspot.com/236623.jpg?t=1752666204"
+    },
+    {
+      "title": "BBC News \u00bb Science & Environment",
+      "feed_url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml?edition=uk",
+      "website_url": "https://www.bbc.com/news/science_and_environment",
+      "description": "Get the latest BBC Science and Environment News: breaking news, analysis, and debate on science and nature in the UK and around the world.",
+      "followers": {
+        "facebook": 61300000,
+        "twitter": 42100000,
+        "instagram": 29600000
+      },
+      "image_url": "https://i1.feedspot.com/236623.jpg?t=1752666204"
+    },
+    {
+      "title": "BBC News \u00bb Entertainment & Arts",
+      "feed_url": "https://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml",
+      "website_url": "https://www.bbc.com/culture/entertainment-news",
+      "description": "Get the latest BBC Entertainment and Arts news: breaking news, views, and analysis on celebrities, music, film, theatre, books, and literature, TV and radio including audio-video content.",
+      "followers": {
+        "facebook": 61300000,
+        "twitter": 15400000,
+        "instagram": 29600000
+      },
+      "image_url": "https://i1.feedspot.com/236623.jpg?t=1752666204"
+    },
+    {
+      "title": "BBC Sport - Scores, Fixtures, News - Live Sport",
+      "feed_url": "https://feeds.bbci.co.uk/sport/rss.xml",
+      "website_url": "https://www.bbc.com/sport/",
+      "description": "Breaking news & live sports coverage including results, video, audio, and analysis on Football, F1, Cricket, Rugby Union, Rugby League, Golf, Tennis, and all the main world sports, plus major events such as the Olympic Games.",
+      "followers": {
+        "facebook": 61300000,
+        "twitter": 15400000,
+        "instagram": 3600000
+      },
+      "image_url": "https://i1.feedspot.com/236623.jpg?t=1752666204"
+    },
+    {
+      "title": "BBC News \u00bb Travel",
+      "feed_url": "https://www.bbc.com/travel/feed.rss",
+      "website_url": "https://www.bbc.com/travel",
+      "description": "BBC Travel brings you the latest travel news and coverage from around the world, including culture, identity, food & drink, sustainability, adventure, experiences, destinations and more.",
+      "followers": {
+        "facebook": 61300000,
+        "twitter": 42100000,
+        "instagram": 29600000
+      },
+      "image_url": "https://i1.feedspot.com/236623.jpg?t=1752666204"
+    },
+    {
+      "title": "BBC News \u00bb Culture",
+      "feed_url": "https://www.bbc.com/culture/feed.rss",
+      "website_url": "https://www.bbc.com/culture",
+      "description": "BBC Culture brings you the latest in Arts and Culture news and coverage from around the world, including film and TV reviews, books, art, music, style and more.",
+      "followers": {
+        "facebook": 61300000,
+        "twitter": 2400000,
+        "instagram": 29600000
+      },
+      "image_url": "https://i1.feedspot.com/1756980.jpg?t=1612782809"
+    },
+    {
+      "title": "BBC \u00bb Innovation",
+      "feed_url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+      "website_url": "https://www.bbc.com/innovation",
+      "description": "BBC Innovation brings you the latest in Technology news and coverage from around the world, including health, environment, AI, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/236623.jpg?t=1752666204"
+    }
+  ]
+}

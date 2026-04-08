@@ -1,0 +1,53 @@
+{
+  "category": "Mazda",
+  "source_url": "https://rss.feedspot.com/mazda_rss_feeds",
+  "feeds": [
+    {
+      "title": "Auto Express \u00bb Mazda",
+      "feed_url": "https://www.autoexpress.co.uk/mazda/feed",
+      "website_url": "https://www.autoexpress.co.uk/mazda",
+      "description": "Auto Express is the UK's favorite weekly car magazine. Every new car is reviewed and rated by Auto Express road test experts. Find Mazda's new and Used Car Reviews, News, Advice, and in-depth video reviews. Auto Express is the UK's favourite car magazine and website for car buyers, car enthusiasts, and car owners.",
+      "followers": {
+        "facebook": 113200,
+        "twitter": 145900,
+        "instagram": 60400
+      },
+      "image_url": "https://i1.feedspot.com/4917714.jpg?t=1620624477"
+    },
+    {
+      "title": "Inside Mazda",
+      "feed_url": "https://www.insidemazda.co.uk/latest-news/feed/",
+      "website_url": "https://www.insidemazda.co.uk/latest-news/",
+      "description": "Inside Mazda is the home of Mazda UK's official blog. Get to the heart of our world with the latest Mazda news, opinions, reviews, videos and pictures.",
+      "followers": {
+        "facebook": 147700,
+        "twitter": 21800
+      },
+      "image_url": "https://i1.feedspot.com/4917693.jpg?t=1620624481"
+    },
+    {
+      "title": "Autoblog \u00bb Mazda News and Reviews",
+      "feed_url": "https://www.autoblog.com/category/mazda/rss.xml",
+      "website_url": "https://www.autoblog.com/mazda/",
+      "description": "Autoblog brings you car news; expert reviews of cars, trucks, crossovers, and SUVs; and pictures and video. Get Mazda news, press releases and expert reviews along with detailed photos, spy shots and road tests of new Mazda vehicles.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 449300,
+        "instagram": 165900
+      },
+      "image_url": "https://i1.feedspot.com/4917711.jpg?t=1620624588"
+    },
+    {
+      "title": "Inside Mazda",
+      "feed_url": "https://insidemazda.mazdausa.com/feed/",
+      "website_url": "https://news.mazdausa.com/media-home",
+      "description": "Who is Mazda and what do they do? Go behind the scenes and read the latest Mazda news and stories. Learn why everything they do is about celebrating driving. Get updates about the latest Mazda news, stories, car launches, reviews, photos, videos, and more.",
+      "followers": {
+        "facebook": 2100000,
+        "twitter": 357800,
+        "instagram": 528200
+      },
+      "image_url": "https://i1.feedspot.com/4917696.jpg?t=1620624474"
+    }
+  ]
+}

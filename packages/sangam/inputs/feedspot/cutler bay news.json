@@ -1,0 +1,28 @@
+{
+  "category": "Cutler Bay News",
+  "source_url": "https://rss.feedspot.com/cutler_bay_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "AmericanTowns.com \u00bb Cutler Bay",
+      "feed_url": "https://www.americantowns.com/cutler-bay-fl/rss/news/",
+      "website_url": "https://www.americantowns.com/cutler-bay-fl/news/",
+      "description": "AmericanTowns is a virtual 'town square', connecting you to all the events and news happening in Cutler Bay Florida. Whether it's town issues and community activism, or school calendars and sports schedules, AmericanTowns delivers the information faster and helps you use it better.",
+      "followers": {
+        "facebook": 44600,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5156596.jpg"
+    },
+    {
+      "title": "CBS News \u00bb Cutler Bay",
+      "feed_url": "https://www.cbsnews.com/latest/rss/main",
+      "website_url": "https://www.cbsnews.com/miami/tag/cutler-bay/",
+      "description": "Read the latest Cutler Bay news. Get breaking news, events and information on sports, weather, entertainment, lifestyles and everything about the city at CBS Miami.",
+      "followers": {
+        "facebook": 319200,
+        "twitter": 128300
+      },
+      "image_url": "https://i1.feedspot.com/5156588.jpg?t=1626165015"
+    }
+  ]
+}

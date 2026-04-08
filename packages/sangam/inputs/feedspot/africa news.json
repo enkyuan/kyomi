@@ -1,0 +1,66 @@
+{
+  "category": "Africa News",
+  "source_url": "https://rss.feedspot.com/africanews_rss_feeds",
+  "feeds": [
+    {
+      "title": "Africanews",
+      "feed_url": "https://www.africanews.com/feed/rss?themes=news",
+      "website_url": "https://www.africanews.com/",
+      "description": "Africanews is a media for all views and voices, ideas, and perspectives. Get daily news and breaking news and latest news reports in Africa on African politics, business, sports, health, and technology.",
+      "followers": {
+        "facebook": 273000,
+        "twitter": 80000,
+        "instagram": 66400
+      },
+      "image_url": "https://i1.feedspot.com/5060435.jpg?t=1615211260"
+    },
+    {
+      "title": "Africanews \u00bb Sport",
+      "feed_url": "https://www.africanews.com/feed/rss?themes=sport",
+      "website_url": "https://www.africanews.com/sport/",
+      "description": "Live Sports Updates, Breaking News, African and international League Results, Video, Audio and Analysis on Football, Rugby Union, Rugby League, Rallies, Athletics, Tennis.",
+      "followers": {
+        "facebook": 241500,
+        "twitter": 80000,
+        "instagram": 66400
+      },
+      "image_url": "https://i1.feedspot.com/5598550.jpg?t=1686812524"
+    },
+    {
+      "title": "Africanews \u00bb Business",
+      "feed_url": "https://www.africanews.com/feed/rss?themes=business",
+      "website_url": "https://www.africanews.com/business/",
+      "description": "Find out all about latest breaking news, daily news and hot news in Africa. View the latest developments in African business, all news about markets, African economy and more.",
+      "followers": {
+        "facebook": 273000,
+        "twitter": 80000,
+        "instagram": 66400
+      },
+      "image_url": "https://i1.feedspot.com/5199254.jpg?t=1686813504"
+    },
+    {
+      "title": "Africanews \u00bb Culture",
+      "feed_url": "https://www.africanews.com/feed/rss?themes=culture",
+      "website_url": "https://www.africanews.com/culture/",
+      "description": "Find all African arts, music, cinema, all African culture also available on VOD on Africanews.com",
+      "followers": {
+        "facebook": 241500,
+        "twitter": 80000,
+        "instagram": 66400
+      },
+      "image_url": "https://i1.feedspot.com/5598551.jpg?t=1686813203"
+    },
+    {
+      "title": "Africanews \u00bb Science and Technology",
+      "feed_url": "https://www.africanews.com/feed/rss?themes=science_technology",
+      "website_url": "https://www.africanews.com/science-technology/",
+      "description": "Get coverage of the latest technology trends & headlines and science breakthroughs and discoveries from Africanews.",
+      "followers": {
+        "facebook": 241500,
+        "twitter": 80000,
+        "instagram": 66400
+      },
+      "image_url": "https://i1.feedspot.com/5598552.jpg?t=1686812536"
+    }
+  ]
+}

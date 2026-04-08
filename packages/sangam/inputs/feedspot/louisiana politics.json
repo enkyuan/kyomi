@@ -1,0 +1,89 @@
+{
+  "category": "Louisiana Politics",
+  "source_url": "https://rss.feedspot.com/louisiana_politics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Louisiana Voice",
+      "feed_url": "https://louisianavoice.com/feed/",
+      "website_url": "https://louisianavoice.com/",
+      "description": "Tom Aswell, a native of Ruston, has lived in the Baton Rouge area for 30 years and for 10 of those years, ran Capitol News Service, covering state government for about 40 weekly and small daily newspapers throughout the state. Louisiana Voice blog was created to provide the citizens of Louisiana an inside look at how your legislators and other elected officials carry on the state's business and how your tax dollars are spent.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4930220.jpg?t=1668404278"
+    },
+    {
+      "title": "The Hayride",
+      "feed_url": "https://thehayride.com/feed/",
+      "website_url": "https://thehayride.com/category/elections/",
+      "description": "Since its founding in December 2009, The Hayride has been Louisiana's premier conservative political commentary site. They are a group blog covering Louisiana and national politics and current affairs. Their work has been referenced in many national websites.",
+      "followers": {
+        "facebook": 24200,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4928923.jpg?t=1669637909"
+    },
+    {
+      "title": "Between The Lines",
+      "feed_url": "http://jeffsadow.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://jeffsadow.blogspot.com/",
+      "description": "Jeffrey D. Sadow is an associate professor of political science at Louisiana State University Shreveport and columnist for various Louisiana newspapers and blogger about Louisiana politics.",
+      "followers": {
+        "twitter": 381
+      },
+      "image_url": "https://i1.feedspot.com/4929842.jpg?t=1621231939"
+    },
+    {
+      "title": "JMC Analytics Blog",
+      "feed_url": "https://winwithjmc.com/feed",
+      "website_url": "https://winwithjmc.com/blog",
+      "description": "JMC Enterprises of Louisiana is a data analytics/political consulting firm that offers the following services: voter targeting, development of vote goals, demographic consulting, polling, and redistricting.",
+      "followers": {
+        "facebook": 611
+      },
+      "image_url": "https://i1.feedspot.com/5314353.jpg?t=1629694299"
+    },
+    {
+      "title": "WWNO \u00bb Politics",
+      "feed_url": "https://www.wwno.org/politics.rss",
+      "website_url": "https://www.wwno.org/politics",
+      "description": "WWNO is the source of local news, NPR News, music, and culture in New Orleans and throughout Southeast Louisiana. It covers everything you need to know about the latest elections, policy debates, and political events.",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 15000,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5314362.jpg?t=1629694570"
+    },
+    {
+      "title": "NOLA Politics",
+      "feed_url": "https://www.nola.com/search/?f=rss&t=article&c=news/politics&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.nola.com/news/politics/",
+      "description": "The Times-Picayune is New Orleans' source for news, information, and online interaction. This section of the news website covers political updates and news.",
+      "followers": {
+        "twitter": 312300
+      },
+      "image_url": "https://i1.feedspot.com/5314377.jpg?t=1629694828"
+    },
+    {
+      "title": "New Orleans CityBusiness Government and Politics",
+      "feed_url": "https://neworleanscitybusiness.com/blog/category/news/government-and-politics/feed/",
+      "website_url": "https://neworleanscitybusiness.com/blog/category/news/government-and-politics/",
+      "description": "New Orleans CityBusiness provides essential business, real estate, and banking news to its readers. This section of the news website covers political and government updates and news.",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 23800
+      },
+      "image_url": "https://i1.feedspot.com/5314509.jpg?t=1629695065"
+    },
+    {
+      "title": "The Louisiana Weekly Politics",
+      "feed_url": "http://www.louisianaweekly.com/category/politics/feed/",
+      "website_url": "http://www.louisianaweekly.com/category/politics",
+      "description": "The Louisiana Weekly endeavors to connect communities of color to news, information, and resources of interest to foster community outreach and development, education and research, cultural preservation, and socio-political and socio-economic awareness. This section covers the latest updates in Politics.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 11600
+      },
+      "image_url": "https://i1.feedspot.com/5314393.jpg?t=1629694960"
+    }
+  ]
+}

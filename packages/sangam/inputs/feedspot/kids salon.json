@@ -1,0 +1,51 @@
+{
+  "category": "Kids Salon",
+  "source_url": "https://rss.feedspot.com/kids_salon_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kids Hair Play Blog",
+      "feed_url": "https://kidshairplay.co.uk/feed/",
+      "website_url": "https://kidshairplay.co.uk/blog/",
+      "description": "We are a salon designed exclusively for young people, from babies to teens. Our child-friendly environment takes the stress out of haircuts and instead turns them from a chore into a fun experience. Being child-centered means not only having play areas, toys, games, entertainment, and specially themed chairs, but we also want all our clients to feel safe and special - from the moment they walk through our doors until they leave looking forward to their next visit.",
+      "followers": {
+        "facebook": 10500,
+        "instagram": 10600
+      },
+      "image_url": "https://i1.feedspot.com/5575493.jpg?t=1684991699"
+    },
+    {
+      "title": "Snip Its Blog",
+      "feed_url": "https://snipits.com/feed/",
+      "website_url": "https://snipits.com/news/",
+      "description": "Snip-Its is a magical place for kids and a place moms and dads trust for great haircuts. Kids love going to Snip-its because there's so much to see and do, and parents feel great knowing their children are in good hands with our talented, kid-focused stylists.",
+      "followers": {
+        "facebook": 13600,
+        "twitter": 1000,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5575362.jpg?t=1684931381"
+    },
+    {
+      "title": "Sit Still Kids Blog",
+      "feed_url": "https://sitstillkids.com/blog-posts?format=rss",
+      "website_url": "https://sitstillkids.com/blog-posts",
+      "description": "We believe that awesome haircuts and good times can be had by all. At Sit Still, it's our mission to provide the whole family with positive experiences and high-quality styles in a welcoming, inclusive environment filled with all things cool.",
+      "followers": {
+        "facebook": 2000,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5575359.jpg?t=1684931263"
+    },
+    {
+      "title": "KidSnips Blog",
+      "feed_url": "https://kidsnips.com/kidsnips-blog/feed/",
+      "website_url": "https://kidsnips.com/kidsnips-blog/",
+      "description": "KidSnips is the Chicago area's top hair salon for kids' haircuts, special services, and kid-friendly hair products. It's locally-owned and Mom-owned. And because it's also mom-run we know kids. So, we have car-shaped styling chairs, tablets loaded with fun stuff for kids to do, and we only hire stylists who love children and who make getting a kid's haircut an awesome experience for ALL.",
+      "followers": {
+        "facebook": 5700,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5575358.jpg?t=1684931062"
+    }
+  ]
+}

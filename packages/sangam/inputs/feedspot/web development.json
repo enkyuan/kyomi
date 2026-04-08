@@ -1,0 +1,1419 @@
+{
+  "category": "Web Development",
+  "source_url": "https://rss.feedspot.com/web_development_rss_feeds",
+  "feeds": [
+    {
+      "title": "Smashing Magazine",
+      "feed_url": "https://www.smashingmagazine.com/feed",
+      "website_url": "https://www.smashingmagazine.com/articles/",
+      "description": "Smashing Magazine provides information on CSS, JavaScript, front-end, accessibility, UX and design. For developers, designers and front-end engineers. Founded in September 2006 in Germany, Smashing Magazine delivers reliable, useful, but most importantly practical articles to web designers and developers.",
+      "followers": {
+        "facebook": 268500,
+        "twitter": 875200
+      },
+      "image_url": "https://i1.feedspot.com/4398932.jpg?t=1643430987"
+    },
+    {
+      "title": "Codrops",
+      "feed_url": "https://tympanus.net/codrops/feed/",
+      "website_url": "https://tympanus.net/codrops/",
+      "description": "Creative front-end resources and inspiration for web professionals. Codrops is a web design and development blog that publishes articles and tutorials about the latest web trends, techniques and new possibilities.",
+      "followers": {
+        "facebook": 81800,
+        "twitter": 180200,
+        "instagram": 12300
+      },
+      "image_url": "https://i1.feedspot.com/90418.jpg?t=1606107963"
+    },
+    {
+      "title": "Tutsplus Code",
+      "feed_url": "https://code.tutsplus.com/posts.atom",
+      "website_url": "https://code.tutsplus.com/",
+      "description": "Thousands of free tutorials and online courses to help you learn software development from mobile devices to web applications and everything in between. Follow this blog to improve your coding skills and workflow.",
+      "followers": {
+        "twitter": 138100
+      },
+      "image_url": "https://i1.feedspot.com/3942460.jpg?t=1606107978"
+    },
+    {
+      "title": "DZone \u00bb JavaScript Zone",
+      "feed_url": "https://feeds.dzone.com/javascript",
+      "website_url": "https://dzone.com/javascript",
+      "description": "DZone.com is one of the world's largest online communities and a leading publisher of knowledge resources for software engineering professionals. It is a source for programming, web development, and DevOps news, tutorials, and tools for beginners to experts.",
+      "followers": {
+        "facebook": 49500,
+        "twitter": 47
+      },
+      "image_url": "https://i1.feedspot.com/4421278.jpg?t=1746087077"
+    },
+    {
+      "title": "CodePen Blog",
+      "feed_url": "https://blog.codepen.io/feed/",
+      "website_url": "https://blog.codepen.io/",
+      "description": "CodePen is a social development environment. In this blog, the CodePen team talks about the ins and outs of running a web software business. They focus primarily on front-end languages like HTML, CSS, JavaScript, and preprocessing syntaxes that turn into those things.",
+      "followers": {
+        "twitter": 186800,
+        "instagram": 64300
+      },
+      "image_url": "https://i1.feedspot.com/4540948.jpg?t=1606109385"
+    },
+    {
+      "title": "Webdesigner Depot",
+      "feed_url": "https://feeds2.feedburner.com/webdesignerdepot",
+      "website_url": "https://www.webdesignerdepot.com/",
+      "description": "Webdesigner Depot is one of the most popular blogs about web design trends, tutorials, and much more. We include tutorials, plugins, and web development tools.",
+      "followers": {
+        "facebook": 250700,
+        "twitter": 620600
+      },
+      "image_url": "https://i1.feedspot.com/31572.jpg?t=1606107967"
+    },
+    {
+      "title": "CSS-Tricks",
+      "feed_url": "https://css-tricks.com/feed/",
+      "website_url": "https://css-tricks.com/",
+      "description": "Find the Tips, Tricks, and Techniques on using Cascading Style Sheets.",
+      "followers": {
+        "facebook": 75700,
+        "twitter": 276,
+        "instagram": 8800
+      },
+      "image_url": "https://i1.feedspot.com/4487476.jpg?t=1741339328"
+    },
+    {
+      "title": "Ben Nadel",
+      "feed_url": "https://www.bennadel.com/rss",
+      "website_url": "https://www.bennadel.com/",
+      "description": "Ben Nadel is a passionate web developer with 24 years of experience. He writes blog posts covering JavaScript, User Experience (UX), ColdFusion, Node.js, and other topics.",
+      "followers": {
+        "twitter": 21600
+      },
+      "image_url": "https://i1.feedspot.com/5599307.jpg?t=1686825597"
+    },
+    {
+      "title": "Christian Heilmann",
+      "feed_url": "https://christianheilmann.com/feed/",
+      "website_url": "https://christianheilmann.com/",
+      "description": "Christian Heilmann's blog is a place where he shares his thoughts on web development, accessibility, and other topics. He is a highly skilled Front End Architect, Manager, and Team Lead with over 25 years of experience in web technologies.",
+      "followers": {
+        "twitter": 69300
+      },
+      "image_url": "https://i1.feedspot.com/5599305.jpg?t=1686826999"
+    },
+    {
+      "title": "Stefan Judis Blog",
+      "feed_url": "https://www.stefanjudis.com/rss.xml",
+      "website_url": "https://www.stefanjudis.com/blog/",
+      "description": "Stefan Judis' blog is a place where he shares his thoughts on web development, including JavaScript, CSS, HTML, React, and more. He also writes about his experiences as a developer, speaker, and writer.",
+      "followers": {
+        "twitter": 12500
+      },
+      "image_url": "https://i1.feedspot.com/5152785.jpg?t=1686826506"
+    },
+    {
+      "title": "Austin Gil Blog",
+      "feed_url": "https://austingil.com/feed/",
+      "website_url": "https://austingil.com/blog/",
+      "description": "Hi! my name is Austin Gil. I'm a web developer & educator, and I want to help you build better websites. Over the last ten years, I've built projects for award-winning agencies, innovative start-ups, government organizations, and more. Today, I build fun stuff for the web and share what I've learned through writing, open-source, videos, presentations, and workshops.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5599306.jpg?t=1686825956"
+    },
+    {
+      "title": "Maxime Heckel's Blog",
+      "feed_url": "https://blog.maximeheckel.com/rss.xml",
+      "website_url": "https://blog.maximeheckel.com/",
+      "description": "Hi I'm Maxime, and this is my blog. Here, I share through my writing my experience as a frontend engineer and everything I'm learning about on React, Typescript, SwiftUI, Serverless, and testing.",
+      "followers": {
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/5599304.jpg?t=1686825559"
+    },
+    {
+      "title": "Jens Oliver Meiert Blog",
+      "feed_url": "https://meiert.com/en/feed/",
+      "website_url": "https://meiert.com/en/",
+      "description": "I'm Jens Oliver Meiert, an engineering lead and author. I'm a long-time contributor to the craft of front-end development. This blog is my place to share articles and books on the craft of web development, with a focus on HTML and CSS minimization and optimization.",
+      "followers": {
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4944154.jpg?t=1606108586"
+    },
+    {
+      "title": "Semidot Infotech Blog",
+      "feed_url": "https://semidotinfotech.com/blog/feed/",
+      "website_url": "https://semidotinfotech.com/blog/",
+      "description": "SemiDot Infotech is a Top rated multi-award winning software development company providing a full suite of services and solutions. We are a software development company, SemiDot Infotech originated from our passion to make the world a better place.",
+      "followers": {
+        "facebook": 515,
+        "twitter": 376
+      },
+      "image_url": "https://i1.feedspot.com/5068374.jpg?t=1677842508"
+    },
+    {
+      "title": "DY Kraf Blog",
+      "feed_url": "https://dykraf.com/feed.xml",
+      "website_url": "https://dykraf.com/blog/",
+      "description": "Hi, I am Dy, an experienced Web Developer, currently working in the banking industry. Dive into detailed articles exploring React, Vue, Next.js, Nuxt.js, JavaScript, Databases, CMS platforms, and other vital topics on web development.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5640394.jpg?t=1690876669"
+    },
+    {
+      "title": "Globe Tech Soft Blog",
+      "feed_url": "https://globetechsoft.com/feed/",
+      "website_url": "https://globetechsoft.com/blogs-and-news/",
+      "description": "Globe Tech Soft is a web and mobile app development company headquartered in Croydon London, UK, and offices located at Atlanta(GA) & Eden Prairie(MN) in the US. Delivers high-quality IT consultancy services and Business IT support from startups to organizations of any size. We can help lead your organization with advanced IT strategies and creative solutions with top-notch IT consultancy services.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7285124.jpg?t=1711623164"
+    },
+    {
+      "title": "Lea Verou",
+      "feed_url": "https://feeds.feedburner.com/leaverou",
+      "website_url": "https://lea.verou.me/",
+      "description": "My name is Lea Verou. I love sharing knowledge and have given over 100 invited talks at web design/web development conferences around the world. If you are a web developer, this blog is a source for you to use bits of my work daily.",
+      "followers": {
+        "twitter": 120200
+      },
+      "image_url": "https://i1.feedspot.com/97528.jpg?t=1686826318"
+    },
+    {
+      "title": "OpenSource Technologies Blog",
+      "feed_url": "https://blogs.ost.agency/feed/",
+      "website_url": "https://blogs.ost.agency/",
+      "description": "OpenSource Technologies is a leading Web & Mobile Application Solution Provider in the USA. Read the Blog to know our views on ios & Android App Development, Software App Development, Digital Marketing, etc. Stay updated with relevant News, Startups, Industry-transforming technologies, and much more.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5607849.jpg?t=1687784883"
+    },
+    {
+      "title": "Techcronus Business Solutions Blog",
+      "feed_url": "https://www.techcronus.com/blog/feed/",
+      "website_url": "https://www.techcronus.com/blog/",
+      "description": "Techcronus is a global provider of Enterprise Business Solutions and modern-day technology services since 2010. We take complete responsibility for our customer's software development needs, ensuring top-quality results at all times. Our value proposition is the strength that distinguishes us in providing industry-specific services, multi-platform technology expertise, strategic alliances with professional consultants and business experts, and long-term partnership commitments.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 34,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5614672.jpg?t=1688124214"
+    },
+    {
+      "title": "iSmart Apps Blog",
+      "feed_url": "https://ismartapps.io/feed/",
+      "website_url": "https://ismartapps.io/category/blogs/",
+      "description": "Dive into the iSmart Apps Blog for Oracle Fusion Apps insights. Benefit from implementation expertise and gain confidence in your business transformation with Oracle Cloud technology. iSmart Apps is a trusted technology company delivering innovative digital solutions and web products.",
+      "followers": {
+        "facebook": 36,
+        "instagram": 62
+      },
+      "image_url": "https://i1.feedspot.com/7246117.jpg?t=1707292152"
+    },
+    {
+      "title": "Hongkiat Blog",
+      "feed_url": "https://www.hongkiat.com/blog/feed/",
+      "website_url": "https://www.hongkiat.com/blog/",
+      "description": "Hongkiat is a design-focused blog based in Malaysia and founded by Lim Hong Kiat. At Hongkiat, we cover helpful tips and tutorials for web designers, developers, freelance web workers, and novice users.",
+      "followers": {
+        "facebook": 104100,
+        "twitter": 34100
+      },
+      "image_url": "https://i1.feedspot.com/76785.jpg?t=1617108458"
+    },
+    {
+      "title": "Excellent Webworld Blog",
+      "feed_url": "https://www.excellentwebworld.com/feed/",
+      "website_url": "https://www.excellentwebworld.com/blog/",
+      "description": "Stay updated with mobile and web app development news, business tips, technology news and everything happening across the tech and development arena.",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4968151.jpg?t=1606108253"
+    },
+    {
+      "title": "freeCodeCamp",
+      "feed_url": "https://www.freecodecamp.org/news/rss",
+      "website_url": "https://www.freecodecamp.org/news/",
+      "description": "Browse thousands of programming tutorials written by experts. Learn Web Development, Data Science, DevOps, Security, and get developer career advice. We're a nonprofit community that helps you learn to code by building projects.",
+      "followers": {
+        "facebook": 275500,
+        "twitter": 836300
+      },
+      "image_url": "https://i1.feedspot.com/5060843.jpg?t=1657173235"
+    },
+    {
+      "title": "Speckyboy",
+      "feed_url": "https://speckyboy.com/feed/",
+      "website_url": "https://speckyboy.com/",
+      "description": "Speckyboy is an online magazine for designers with its focus on sharing helpful resources, exploring new techniques, sharing useful tips, and inspiring you to build a better web.",
+      "followers": {
+        "facebook": 49100,
+        "twitter": 68600
+      },
+      "image_url": "https://i1.feedspot.com/4423038.jpg?t=1606110703"
+    },
+    {
+      "title": "Design Shack",
+      "feed_url": "https://feedpress.me/designshack",
+      "website_url": "https://designshack.net/",
+      "description": "Design Shack is a daily source of helpful resources, articles, inspiration, tips, and tutorials for the design community. We publish articles about web and graphic design, trends, business, mobile, UX, typography, and how to work in the design industry.",
+      "followers": {
+        "facebook": 48300,
+        "twitter": 21300
+      },
+      "image_url": "https://i1.feedspot.com/4459757.jpg?t=1608799618"
+    },
+    {
+      "title": "LogRocket Blog",
+      "feed_url": "https://blog.logrocket.com/feed/",
+      "website_url": "https://blog.logrocket.com/",
+      "description": "A blog for front-end developers and web app engineers. LogRocket was founded in 2016 by Matthew Arbesfeld and Ben Edelstein, a computer science duo who have been building products together since the 3rd grade. Frustrated by how difficult it was to understand their customers' experiences, Arbesfeld and Edelstein set out towards an audacious goal: make every experience on the web as perfect as possible. It combines session replay, performance monitoring, and product analytics empowering software teams to create the ideal product experience.",
+      "followers": {
+        "facebook": 884,
+        "twitter": 15200
+      },
+      "image_url": "https://i1.feedspot.com/5289563.jpg?t=1623071585"
+    },
+    {
+      "title": "UXPin Blog",
+      "feed_url": "https://www.uxpin.com/studio/feed/",
+      "website_url": "https://www.uxpin.com/studio/blog/",
+      "description": "UXPin is the premier code-based UX design tool for prototyping, documentation, and design systems. UXPin Blog is the place to learn about design and development. It writes articles on designOps, processes, and more.",
+      "followers": {
+        "facebook": 139000,
+        "twitter": 41100
+      },
+      "image_url": "https://i1.feedspot.com/4540980.jpg?t=1606108035"
+    },
+    {
+      "title": "Codecondo",
+      "feed_url": "https://codecondo.com/feed/",
+      "website_url": "https://codecondo.com/",
+      "description": "CodeCondo is an aspiring community for developers, designers, and business people. It aims to explore, collect, as well as share useful news, tutorials, tips, resources, and tools, on design, development, and other inspirational topics.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/3643432.jpg?t=1606108217"
+    },
+    {
+      "title": "CSS Wizardry",
+      "feed_url": "https://feeds.feedburner.com/csswizardry",
+      "website_url": "https://csswizardry.com/",
+      "description": "Hi there, I'm Harry Roberts. I am an award-winning Consultant Web Performance Engineer, designer, developer, writer, and speaker from the UK. I write, tweet, speak, and share code about measuring and improving site speed.",
+      "followers": {
+        "facebook": 617,
+        "twitter": 69900
+      },
+      "image_url": "https://i1.feedspot.com/91858.jpg?t=1606108560"
+    },
+    {
+      "title": "Official jQuery Blog",
+      "feed_url": "https://blog.jquery.com/feed/",
+      "website_url": "https://blog.jquery.com/",
+      "description": "News and articles on jQuery, jQuery UI and Projects. The definitive source of news about one of the web's most popular front-end tools.",
+      "followers": {
+        "twitter": 7900
+      },
+      "image_url": "https://i1.feedspot.com/4541014.jpg?t=1605851793"
+    },
+    {
+      "title": "Webkul Blog",
+      "feed_url": "https://webkul.com/blog/feed/",
+      "website_url": "https://webkul.com/blog/",
+      "description": "Articles on eCommerce, ERP, Web, Mobile, Design, Development, Strategy and Docs for OpenSource Webkul Apps and Products.Webkul is the hook for enterprise businesses and helps enterprises to upscale easily with a wider range of ready to use and highly customizable eCommerce centric products.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5098687.jpg?t=1606110707"
+    },
+    {
+      "title": "ColorWhistle",
+      "feed_url": "https://colorwhistle.com/blog/feed/",
+      "website_url": "https://colorwhistle.com/blog/",
+      "description": "ColorWhistle is a Web development company that offers web design, branding, digital marketing and much more.",
+      "followers": {
+        "facebook": 590,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4718826.jpg?t=1606108203"
+    },
+    {
+      "title": "A List Apart",
+      "feed_url": "https://alistapart.com/main/feed/",
+      "website_url": "https://alistapart.com/",
+      "description": "Articles on Design, Process, User Experience, Responsive Design, Career, Creativity, Content Strategy, Usability, Code, JavaScript and more. A List Apart explores the design, development, and meaning of web content, with a special focus on web standards and best practices.",
+      "followers": {
+        "facebook": 36100,
+        "twitter": 133600
+      },
+      "image_url": "https://i1.feedspot.com/129498.jpg?t=1617284444"
+    },
+    {
+      "title": "CyberNaira",
+      "feed_url": "https://cybernaira.com/feed/",
+      "website_url": "https://cybernaira.com/",
+      "description": "Articles on Affiliate Marketng, Product Review, SEO and WordPress tutorials. Welcome to CyberNaira, a blog that has helped many beginners online entrepreneur starts their blog on the path to success.",
+      "followers": {
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5042676.jpg?t=1606108215"
+    },
+    {
+      "title": "BR Softech Blog",
+      "feed_url": "https://www.brsoftech.com/blog/feed/",
+      "website_url": "https://www.brsoftech.com/blog/",
+      "description": "Blog posts on App Development, Blockchain Development, Game Development, Infographic, Startups, Technology, Web Development and more. BR Softech is one of the top web and mobile app development company in India & Globally. We Develop Custom Android Apps To Satisfy Evolving Demand Of Modern Business Era.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5035726.jpg?t=1606108200"
+    },
+    {
+      "title": "MindK.com Blog",
+      "feed_url": "https://www.mindk.com/blog/feed/",
+      "website_url": "https://www.mindk.com/blog/",
+      "description": "The Web and Mobile Development blog. Get insights you'll need for your web or mobile application success going forward. MindK is a web and mobile app development company that builds reliable solutions for businesses and startups.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 551,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5271803.jpg?t=1618991028"
+    },
+    {
+      "title": "XB Software Blog",
+      "feed_url": "https://xbsoftware.com/blog/feed",
+      "website_url": "https://xbsoftware.com/blog",
+      "description": "Key technologies: Webix, ReactJS, WebRTC, Node and PHP. Read the recent updates and news on web development and implemented projects. XB Software is a custom software development company with a focus on web & mobile app development, testing, QA & staff augmentation.",
+      "followers": {
+        "facebook": 27,
+        "twitter": 303,
+        "instagram": 366
+      },
+      "image_url": "https://i1.feedspot.com/5273773.jpg?t=1619594024"
+    },
+    {
+      "title": "Weichie",
+      "feed_url": "https://weichie.com/feed/",
+      "website_url": "https://weichie.com/blog/",
+      "description": "Weichie.com blogs about both the technical aspects of your website and how you can fix them and provides SEO tips and tricks on how you could improve the online visibility of your website.",
+      "followers": {
+        "facebook": 239
+      },
+      "image_url": "https://i1.feedspot.com/5388135.jpg?t=1649232228"
+    },
+    {
+      "title": "Zazz Blog",
+      "feed_url": "https://www.zazz.io/blog/feed/",
+      "website_url": "https://www.zazz.io/blog/",
+      "description": "Zazz is a San-Francisco-based mobile app development agency powered by a passionate team of thinkers and doers, and we are disrupting the status quo. In their blog they have covered latest news, updates, technology launches in the field of Mobile as well as web application development.",
+      "followers": {
+        "facebook": 982,
+        "twitter": 21,
+        "instagram": 9800
+      },
+      "image_url": "https://i1.feedspot.com/5217885.jpg?t=1606109381"
+    },
+    {
+      "title": "Inexture",
+      "feed_url": "https://www.inexture.com/feed/",
+      "website_url": "https://www.inexture.com/blog/",
+      "description": "Covers the latest digital trends, insights & software development, mobile app development, and web development best practices from the leading tech experts. Inexture is the foremost Top Software Development Company with highly experienced developers.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 1500,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5314898.jpg?t=1629724658"
+    },
+    {
+      "title": "RichestSoft Blog",
+      "feed_url": "https://richestsoft.com/blog/feed/",
+      "website_url": "https://richestsoft.com/blog/",
+      "description": "Covers App Development, Internet Marketing, Marketing Automation, Mobile App Development, SEO Services, Web Design, and overall Web Development. RichestSoft is a top-notch mobile app development company founded in 2009.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5384991.jpg?t=1654774819"
+    },
+    {
+      "title": "Echo JS",
+      "feed_url": "https://www.echojs.com/rss",
+      "website_url": "https://www.echojs.com/",
+      "description": "Echo JS is a community-driven news site entirely focused on JavaScript development, HTML5, and front-end news.",
+      "followers": {
+        "twitter": 11400
+      },
+      "image_url": "https://i1.feedspot.com/106117.jpg?t=1606108550"
+    },
+    {
+      "title": "NetMaxims",
+      "feed_url": "https://netmaxims.com/blog/feed/",
+      "website_url": "https://netmaxims.com/blog/",
+      "description": "Covers articles ranging from Web Development to Mobile Apps, Digital Marketing to Graphic Design. NetMaxims is a leading Web & Mobile App technology firm started in 2003. It helps businesses by providing desktop, mobile, and web-based app development to global SME clients looking forward to growing.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/5324883.jpg?t=1632464940"
+    },
+    {
+      "title": "AppVerticals Blog",
+      "feed_url": "https://www.appverticals.com/blog/feed/",
+      "website_url": "https://www.appverticals.com/blog/",
+      "description": "Boost up your tech knowledge with our well-researched technology write-ups. You can find some latest technology updates and in-depth information in our articles. AppVerticals is a leading mobile app development company in Dallas. We offer complex Mobile applications and Interactive Consumer and Enterprise Apps.",
+      "followers": {
+        "facebook": 103,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5248419.jpg?t=1614232891"
+    },
+    {
+      "title": "1 new message",
+      "feed_url": "https://www.uplogictech.com/blog/feed/",
+      "website_url": "https://www.uplogictech.com/blog/",
+      "description": "Uplogic Technologies build and customize mobile and web app for startups, enterprises, entrepreneurs, and on-demand startups. Our mission is to meet everyone's technology demands for the advancement of society by offering outstanding app development services. The blog covers the latest Updates on On-Demand Industry, Tips, Trends, and Growth Stats.",
+      "followers": {
+        "facebook": 164,
+        "twitter": 30
+      },
+      "image_url": "https://i1.feedspot.com/5388495.jpg?t=1649331180"
+    },
+    {
+      "title": "DNG",
+      "feed_url": "https://www.dngwebdeveloper.com/blog/feed/",
+      "website_url": "https://www.dngwebdeveloper.com/blog/",
+      "description": "Articles on CRM software, Digital Marketing, eCommerce Website, MLM Software, Mobile App Development, Retail management software, Software Development, Web Developer, Website Designing and WordPress. DNG is Ahmedabad Based one of the best website Developer and Software development Companies in India.",
+      "followers": {
+        "facebook": 717,
+        "twitter": 33
+      },
+      "image_url": "https://i1.feedspot.com/5121487.jpg?t=1606108613"
+    },
+    {
+      "title": "Tech4States",
+      "feed_url": "https://www.tech4states.com/blogs/feed/",
+      "website_url": "https://www.tech4states.com/blogs/",
+      "description": "Features articles that have to do exclusively with web development and related topics. Tech4States is a full-cycle design hub that offers solutions from initial research to post-launch.",
+      "followers": {
+        "facebook": 163,
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/5399714.jpg?t=1652263535"
+    },
+    {
+      "title": "C-Metric.com",
+      "feed_url": "https://www.c-metric.com/feed/",
+      "website_url": "https://www.c-metric.com/blog/",
+      "description": "Get quick updates on Web development and programming tips and techniques and new projects to stay up-to-date in the information and technology industry.",
+      "followers": {
+        "facebook": 439,
+        "twitter": 880,
+        "instagram": 116
+      },
+      "image_url": "https://i1.feedspot.com/5093155.jpg?t=1606109013"
+    },
+    {
+      "title": "Krishang Technolab",
+      "feed_url": "https://www.krishangtechnolab.com/feed/",
+      "website_url": "https://www.krishangtechnolab.com/blog/",
+      "description": "Articles on Web Development, HubSpot, Ecommerce, WordPress, Custom Web Apps, Mobile Apps, and Digital Marketing. Krishang Technolab Blog is a place to learn about design and development. We are a team of experienced technocrats who have strong experience in Custom web development, Ecommerce Development, HubSpot Development, and Mobile Apps Development.",
+      "followers": {
+        "facebook": 228,
+        "twitter": 462
+      },
+      "image_url": "https://i1.feedspot.com/5384662.jpg?t=1648124415"
+    },
+    {
+      "title": "Sataware Technologies Blog",
+      "feed_url": "https://www.sataware.com/feed/",
+      "website_url": "https://www.sataware.com/blogs/",
+      "description": "Articles on Mobile App Development, Android App Development, iPhone App Development, AR App Development, VR App Development, Wearable App Development and Mobile App Development. Sataware is one of the Top Rated Mobile App Development Company and a global brand offering reliable and result-driven IT solutions.",
+      "followers": {
+        "facebook": 680,
+        "twitter": 42
+      },
+      "image_url": "https://i1.feedspot.com/5057389.jpg?t=1605851782"
+    },
+    {
+      "title": "Zobi Web Solutions Private Limited",
+      "feed_url": "https://www.zobiwebsolutions.com/feed/",
+      "website_url": "https://www.zobiwebsolutions.com/blog/",
+      "description": "Zobi is a Web and Mobile app development company that is one of the most promising start-ups and is a leading IT solutions provider and ITES Company. Read articles about the different technologies, we are happy to share the latest technical knowledge with you!",
+      "followers": {
+        "facebook": 155,
+        "twitter": 494
+      },
+      "image_url": "https://i1.feedspot.com/5418443.jpg?t=1656935449"
+    },
+    {
+      "title": "Brickweb Blog",
+      "feed_url": "https://www.brickweb.co.uk/rss.xml",
+      "website_url": "https://www.brickweb.co.uk/blog",
+      "description": "Check out the latest news from Brick technology. Building Websites for worldwide clients to exemplary standards since 1995! Their creative design studio and web development team produce websites to the very highest standards offering Web Design, Mobile Applications and Internet Marketing Services.",
+      "followers": {
+        "facebook": 284,
+        "twitter": 1200,
+        "instagram": 162
+      },
+      "image_url": "https://i1.feedspot.com/5217068.jpg?t=1606109377"
+    },
+    {
+      "title": "Ibiixo Technologies",
+      "feed_url": "https://www.ibiixo.com/feed/",
+      "website_url": "https://www.ibiixo.com/blog/",
+      "description": "Blog posts cover articles on Web development, Android application, IOS development and Technology. Ibiixo is a web development, Mobile App, and VR Development company.",
+      "followers": {
+        "facebook": 811,
+        "twitter": 1000,
+        "instagram": 926
+      },
+      "image_url": "https://i1.feedspot.com/5123147.jpg?t=1606108959"
+    },
+    {
+      "title": "G4 Design House",
+      "feed_url": "https://www.g4designhouse.com/feed/",
+      "website_url": "https://www.g4designhouse.com/our-blog/",
+      "description": "Provides professional, custom, affordable web design and development services as well as marketing plans that will improve your web presence. We are a trusted and professional website design company.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4975298.jpg?t=1606109428"
+    },
+    {
+      "title": "Elvira",
+      "feed_url": "https://elvirainfotech.com/feed/",
+      "website_url": "https://elvirainfotech.com/blog/",
+      "description": "Learn digital marketing strategies, custom web development tips, web design, app development and many more from our blog page. Elvira Infotech is a web development company offering a range of products and services including website design, App development, SEO services & more.",
+      "followers": {
+        "facebook": 563,
+        "twitter": 12,
+        "instagram": 112
+      },
+      "image_url": "https://i1.feedspot.com/5059103.jpg?t=1606109434"
+    },
+    {
+      "title": "DevelopersTroop",
+      "feed_url": "https://developerstroop.com/feed/",
+      "website_url": "https://developerstroop.com/website-blog/",
+      "description": "DevelopersTroop may be called an expertized factory of websites where they are designed, developed, customized and also fix websites problems and work on various kind websites and give them a unique touch of novelty and development with our own way.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 13
+      },
+      "image_url": "https://i1.feedspot.com/5121949.jpg?t=1605851807"
+    },
+    {
+      "title": "AnyAlpha Blog",
+      "feed_url": "https://www.anyalpha.com/blog/feed/",
+      "website_url": "https://www.anyalpha.com/blog/",
+      "description": "Anyalpha offers latest Tech News, Blog Posts and recent updates of Mobile and Web Application Development Services For brands, business, enterprise and startups. Anyalpha is a custom software development company. We Develop Web and mobile app custom software solutions and deliver them globally.",
+      "followers": {
+        "facebook": 115,
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/5192509.jpg?t=1606109320"
+    },
+    {
+      "title": "Magneto IT Solutions Blog",
+      "feed_url": "https://magnetoitsolutions.com/feed",
+      "website_url": "https://magnetoitsolutions.com/blog/category/web-application",
+      "description": "Explore the latest trends and updates what's new at Magneto, IoT, chatbots, eCommerce, mobile app, web design & development, and digital marketing. Magneto IT Solutions is a top-rated eCommerce development agency with over 10+ years of technical expertise.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5294132.jpg?t=1624007760"
+    },
+    {
+      "title": "Onextrapixel",
+      "feed_url": "https://feeds.feedburner.com/onextrapixel",
+      "website_url": "https://cmolds.com/blog/",
+      "description": "A digital community devoted in sharing web design and development freebies, great tutorials, useful Internet resources, online tips and tricks for web designers.",
+      "followers": {
+        "facebook": 59900,
+        "twitter": 47500
+      },
+      "image_url": "https://i1.feedspot.com/36847.jpg?t=1606108209"
+    },
+    {
+      "title": "CMOLDS",
+      "feed_url": "https://cmolds.com/blog/feed/",
+      "website_url": "https://cmolds.com/blog/",
+      "description": "Cmolds offer top of line app design and development services in the USA, UK, and all over the world. It is a very reliable app development company in the world today. Learn the latest stories, insights, and articles on the mobile app and game development industry. Stay updated through our blog and acquire quality development.",
+      "followers": {
+        "facebook": 297,
+        "twitter": 215,
+        "instagram": 77
+      },
+      "image_url": "https://i1.feedspot.com/5217035.jpg?t=1606108605"
+    },
+    {
+      "title": "Bootsgrid Blog",
+      "feed_url": "https://blog.bootsgrid.com/feed/",
+      "website_url": "https://blog.bootsgrid.com/",
+      "description": "Bootsgrid technologies serves the customers with innovative ideas via digital mechanisms and also analyzing, finding exact solutions for the customers. Bootsgrid is the best PHP development company and expert magento development.",
+      "followers": {
+        "facebook": 269,
+        "twitter": 49,
+        "instagram": 95
+      },
+      "image_url": "https://i1.feedspot.com/5279703.jpg?t=1620742221"
+    },
+    {
+      "title": "David Walsh",
+      "feed_url": "https://davidwalsh.name/feed",
+      "website_url": "https://davidwalsh.name/",
+      "description": "A blog featuring tutorials about JavaScript, HTML5, AJAX, PHP, CSS, WordPress, and everything else development. David Walsh is Mozilla's senior web developer and the core developer for the MooTools Javascript Framework.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 86400
+      },
+      "image_url": "https://i1.feedspot.com/4431048.jpg?t=1606110743"
+    },
+    {
+      "title": "Web Design Ledger",
+      "feed_url": "https://webdesignledger.com/feed/",
+      "website_url": "https://webdesignledger.com/",
+      "description": "The Web Design Ledger is a publication written by web designers for web designers. The primary purpose of this site is to act as a platform for sharing web design-related knowledge and resources.",
+      "followers": {
+        "facebook": 90100,
+        "twitter": 171100
+      },
+      "image_url": "https://i1.feedspot.com/4479595.jpg?t=1608799656"
+    },
+    {
+      "title": "Kent C. Dodds Blog",
+      "feed_url": "https://kentcdodds.com/blog/rss.xml",
+      "website_url": "https://kentcdodds.com/blog",
+      "description": "Hi, I'm Kent C. Dodds, a software engineer and instructor. I help people make the world better through quality software. On this blog, you'll find blogs about JavaScript, TypeScript, React, Testing, your career, and more.",
+      "followers": {
+        "twitter": 226700
+      },
+      "image_url": "https://i1.feedspot.com/5152731.jpg?t=1623325040"
+    },
+    {
+      "title": "Mon-Code",
+      "feed_url": "https://www.mon-code.net/feeds-en/rssGlobale",
+      "website_url": "https://www.mon-code.net/en",
+      "description": "Personal tech blog about software development with PHP language and Symfony Framework using Mysql, Elasticsearch or RabbitMQ but also Linux Debian usage.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5546276.jpg?t=1682589094"
+    },
+    {
+      "title": "Jason Watmore's Blog",
+      "feed_url": "https://jasonwatmore.com/rss",
+      "website_url": "https://jasonwatmore.com/",
+      "description": "Jason Watmore is a web developer in Sydney, Australia and she has been building websites and web applications since 1998. In this blog, she is focusing on Angular, React, Vue, Node, and NET Technologies. She finds it extremely rewarding to contribute to the web development community and help other developers from around the world.",
+      "followers": {
+        "facebook": 257,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5305301.jpg?t=1691565011"
+    },
+    {
+      "title": "WebAppers",
+      "feed_url": "https://feeds.feedburner.com/Webappers",
+      "website_url": "https://www.webappers.com/",
+      "description": "Dedicated to sharing top-quality open-source resources for web developers and web designers daily. These resources include plugins, themes, graphics, code, and more.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/33526.jpg?t=1605851796"
+    },
+    {
+      "title": "Website Learners",
+      "feed_url": "https://websitelearners.com/feed/",
+      "website_url": "https://websitelearners.com/blog/",
+      "description": "Learn about how to make and maintain WordPress and E-commerce websites in an easy way. At WebsiteLearners we help people who are trying to create their own website, with the help of our 'easy-to-follow' tutorial videos.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 664,
+        "instagram": 16200
+      },
+      "image_url": "https://i1.feedspot.com/5389633.jpg?t=1649757818"
+    },
+    {
+      "title": "Acodez IT Solutions - Web Design & Web Development Blog",
+      "feed_url": "https://acodez.in/blog/feed/",
+      "website_url": "https://acodez.in/blog/",
+      "description": "Acodez is an international award-winning Web design & SEO agency based in India, with satisfied clients across 22 countries.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 818,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4741434.jpg?t=1606108206"
+    },
+    {
+      "title": "Vyrazu Labs Blog",
+      "feed_url": "https://vyrazu.com/feed/",
+      "website_url": "https://vyrazu.com/blog/",
+      "description": "Keep yourself updated with trends and innovation. We provide all the best and genuine tech information. Being one of the best software application development companies, Vyrazu Labs is offering a wide range of app development services!",
+      "followers": {
+        "facebook": 976,
+        "twitter": 815
+      },
+      "image_url": "https://i1.feedspot.com/5051628.jpg?t=1606108256"
+    },
+    {
+      "title": "Esferasoft Solutions",
+      "feed_url": "https://www.esferasoft.com/blog/feed/",
+      "website_url": "https://www.esferasoft.com/blog/",
+      "description": "We design & develop conversion-focused websites including ecommerce stores & online portals. Get the latest insights and trending updates on Web development, Artificial Intelligence, App Development and On-demand Industry businesses.",
+      "followers": {
+        "facebook": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5050041.jpg?t=1606108539"
+    },
+    {
+      "title": "HBWebsol",
+      "feed_url": "https://www.hbwebsol.com/feed/",
+      "website_url": "https://www.hbwebsol.com/blog/",
+      "description": "Get insight into the newest trends and innovations happening in the software industry with our highly informative blogs. HBWebsol is a world-class Software Company which provides custom software & mobile app development service for all business in Indore India.",
+      "followers": {
+        "facebook": 50,
+        "twitter": 76
+      },
+      "image_url": "https://i1.feedspot.com/5209226.jpg?t=1606109055"
+    },
+    {
+      "title": "VA Media Box",
+      "feed_url": "https://vamediabox.com/feed/",
+      "website_url": "https://vamediabox.com/blog/",
+      "description": "A blog for digital marketing, website design, and development of updated trends also get the latest news on PCC or online ads. Learn web design and development new tricks for implementation. VA Media Box is a growing web design and development organization in India.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 391,
+        "instagram": 971
+      },
+      "image_url": "https://i1.feedspot.com/5399716.jpg?t=1652263545"
+    },
+    {
+      "title": "Prime Inspire",
+      "feed_url": "https://primeinspire.com/blog/feed",
+      "website_url": "https://primeinspire.com/blog",
+      "description": "Advanced Tips, Tricks & Tutorials with Modern Technologies Like Websites, Android, Apps & more. Get the latest updates and tips tricks and some amazing learning videos.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 18
+      },
+      "image_url": "https://i1.feedspot.com/5395793.jpg?t=1651323203"
+    },
+    {
+      "title": "Petre Popescu",
+      "feed_url": "https://petrepopescu.tech/feed/",
+      "website_url": "https://petrepopescu.tech/",
+      "description": "Blog posts on Java, JavaScript, Security and System Design. A developer blog with medium and advanced tutorials and articles on Java, web development and programming tips.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5246748.jpg?t=1613731638"
+    },
+    {
+      "title": "Crio Blog",
+      "feed_url": "https://www.crio.do/blog/rss/",
+      "website_url": "https://www.crio.do/blog/",
+      "description": "Covers activity-based learning content and career guidance for developers looking to grow their skills in software development. Also includes the latest trends in tech and candid career journeys of placed graduates.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5312836.jpg?t=1629193359"
+    },
+    {
+      "title": "Pontikis.net Blog",
+      "feed_url": "https://www.pontikis.net/feed",
+      "website_url": "https://www.pontikis.net/blog",
+      "description": "Blog posts on Angular, Digital Marketing, SEO, Linux Administration, Mobile Development, Python and more. Pontikis.net is a technology and how-to blog. Web labs is the space where open source projects are presented (demo, docs, tutorials). The purpose of the site is to review web technology, its business and culture and to provide breaking tech news.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 566
+      },
+      "image_url": "https://i1.feedspot.com/4203736.jpg?t=1657175495"
+    },
+    {
+      "title": "Maven Ecommerce",
+      "feed_url": "https://www.mavenecommerce.com/feed/",
+      "website_url": "https://www.mavenecommerce.com/blog/",
+      "description": "Cover topics related to web development and eCommerce in general. Find fresh tips, guides, reviews and news. Maven is a eCommerce development company working as a globally distributed team of developers and designers.",
+      "followers": {
+        "facebook": 132,
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/4791605.jpg?t=1606108590"
+    },
+    {
+      "title": "INDGLOBA - Web Designing And Development Company",
+      "feed_url": "http://indglobalconsultingsolution.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://indglobalconsultingsolution.blogspot.com/",
+      "description": "Ind Global have lot of work success and stars so long from the leading clients and it will expected always that our client will recommend our service to their friends and official friends. Indglobal is a best web development by covering a different aspects of designing issues.",
+      "followers": {
+        "facebook": 50900
+      },
+      "image_url": "https://i1.feedspot.com/4741423.jpg?t=1606109960"
+    },
+    {
+      "title": "Xeodev Blog",
+      "feed_url": "https://www.xeodev.com/rss/feed",
+      "website_url": "https://www.xeodev.com/blog/",
+      "description": "Know about Startup, MVP, WEB, APP, SEO. Find the latest from XeoDev of Florida on web development trends and the world of mobile apps. XeoDev is a top fast growing Orlando Florida Web Design, Software Development Company and mobile app agency delivering results for the clients.",
+      "followers": {
+        "facebook": 700,
+        "twitter": 103,
+        "instagram": 60
+      },
+      "image_url": "https://i1.feedspot.com/5148861.jpg?t=1606109407"
+    },
+    {
+      "title": "Front End Dev",
+      "feed_url": "https://frontenddev1.blogspot.com/feeds/posts/default",
+      "website_url": "https://frontenddev1.blogspot.com/",
+      "description": "A Road Map To Becoming A Successful Front End Developer.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5167425.jpg?t=1606109906"
+    },
+    {
+      "title": "Designs By Dave O. Blog",
+      "feed_url": "https://designsbydaveo.com/feed/",
+      "website_url": "https://designsbydaveo.com/blog/",
+      "description": "Long Island's leading Website Development Agency. Specializing in Web Design, Web Development, Logo Design & Brand Identity, SEO, Social Media Marketing.",
+      "followers": {
+        "facebook": 446,
+        "instagram": 748
+      },
+      "image_url": "https://i1.feedspot.com/5007713.jpg?t=1606109475"
+    },
+    {
+      "title": "ND. Design",
+      "feed_url": "https://nddesign.ca/feed/",
+      "website_url": "https://nddesign.ca/blog/",
+      "description": "Articles on Book Design, Branding, Digital Marketing, Emotional Design, Google AdWords (PPC), Graphic Design, SEO, Website Design, Website Development, Website Marketing and Website Security. Helps you to reach your business goals mainly through branding, website design, online marketing, and book design. New Dimension Design helps small to medium size businesses define, build and expand.",
+      "followers": {
+        "facebook": 85
+      },
+      "image_url": "https://i1.feedspot.com/4993457.jpg?t=1606109468"
+    },
+    {
+      "title": "Blog - Captivix Blogs",
+      "feed_url": "https://www.captivix.com/feed/",
+      "website_url": "https://www.captivix.com/blogs/",
+      "description": "Keep up with the latest in the field of WordPress, web, and mobile application development and get pro tips from the top developers, consultants, and marketers!",
+      "followers": {
+        "facebook": 66,
+        "twitter": 127
+      },
+      "image_url": "https://i1.feedspot.com/5120819.jpg?t=1612178016"
+    },
+    {
+      "title": "Lucid Softech",
+      "feed_url": "https://lucidsoftech.com/blog/feed",
+      "website_url": "https://lucidsoftech.com/blog",
+      "description": "Get the latest news, tips & trends for Web Development & Internet Marketing.",
+      "followers": {
+        "facebook": 480,
+        "twitter": 890
+      },
+      "image_url": "https://i1.feedspot.com/5053622.jpg?t=1605851760"
+    },
+    {
+      "title": "Insane",
+      "feed_url": "https://www.blogger.com/feeds/4337944176527214538/posts/default",
+      "website_url": "https://www.theinsaneapp.com/web-development",
+      "description": "At Insane, You will find Rare, Worthy, Informative & Funny Stuff on AI, ML, Data Science, App development, Web development, and Programming!",
+      "followers": {
+        "facebook": 220600,
+        "twitter": 13800,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5287010.jpg?t=1622528782"
+    },
+    {
+      "title": "Huptech Web",
+      "feed_url": "https://www.huptechweb.com/feed/",
+      "website_url": "https://www.huptechweb.com/blogs/",
+      "description": "Learn more about digital marketing, SEO, e-commerce & conversion optimization. Check out Huptech Web's marketing blogs & Know how to generate more e-commerce sales.",
+      "followers": {
+        "facebook": 506,
+        "twitter": 47,
+        "instagram": 712
+      },
+      "image_url": "https://i1.feedspot.com/4973408.jpg?t=1606108579"
+    },
+    {
+      "title": "ArtDriver",
+      "feed_url": "https://artdriver.com/blog/feed",
+      "website_url": "https://artdriver.com/blog",
+      "description": "Read about the latest web development, game development, graphic design, technology and company news and SEO trends on the ArtDriver's official Inbound marketing blog.",
+      "followers": {
+        "facebook": 136,
+        "twitter": 266
+      },
+      "image_url": "https://i1.feedspot.com/4541029.jpg?t=1606109038"
+    },
+    {
+      "title": "In'saneLab | Web development, software development, and more!",
+      "feed_url": "https://insanelab.com/blog/feed/",
+      "website_url": "https://insanelab.com/blog/",
+      "description": "Usability audits, UX and web design, front-end development, WordPress development, and more. All that helps to create a better online presence - for you.",
+      "followers": {
+        "facebook": 1500,
+        "instagram": 464
+      },
+      "image_url": "https://i1.feedspot.com/4541021.jpg?t=1606109952"
+    },
+    {
+      "title": "Internetdevels Blog",
+      "feed_url": "https://internetdevels.com/rss.xml",
+      "website_url": "https://internetdevels.com/blog",
+      "description": "Blog posts on Drupal Development, Drupal , Web Design, Project Management, SEO and more. Recent blog posts on Drupal sites creation and development in Drupal.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 1000,
+        "instagram": 323
+      },
+      "image_url": "https://i1.feedspot.com/4541042.jpg?t=1606108575"
+    },
+    {
+      "title": "TalkersCode.com - Web development Blog",
+      "feed_url": "https://talkerscode.com/rss.xml",
+      "website_url": "https://talkerscode.com/",
+      "description": "Learn HTML CSS JavaScript jQuery PHP MySQL tutorials, references, web building examples, web question and answers, web tips and tricks",
+      "followers": {
+        "facebook": 10100
+      },
+      "image_url": "https://i1.feedspot.com/4710033.jpg?t=1605851800"
+    },
+    {
+      "title": "Tutorialzine",
+      "feed_url": "https://tutorialzine.com/feed",
+      "website_url": "https://tutorialzine.com/",
+      "description": "Tutorialzine is the one place for high quality web development tutorials. Learn cutting edge techniques in web development and design, download open source components and participate in the community.",
+      "followers": {
+        "facebook": 21300,
+        "twitter": 28800
+      },
+      "image_url": "https://i1.feedspot.com/84339.jpg"
+    },
+    {
+      "title": "CatsWhoCode",
+      "feed_url": "https://catswhocode.com/feed/",
+      "website_url": "https://catswhocode.com/",
+      "description": "CatsWhoCode is a website dedicated to those who create and maintain websites: web developers, web designers, webmasters, and so on. Our aim is to make web development easier and more fun by providing high-quality resources and useful tutorials to our readers.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 15400
+      },
+      "image_url": "https://i1.feedspot.com/5046042.jpg?t=1605851825"
+    },
+    {
+      "title": "ariya.io",
+      "feed_url": "https://ariya.io/index.xml",
+      "website_url": "https://ariya.io/",
+      "description": "Blog on software craftsmanship, JavaScript, HTML5, CSS3, and general web technologies authored by Ariya Hidayat.",
+      "followers": {
+        "twitter": 12400
+      },
+      "image_url": "https://i1.feedspot.com/4540999.jpg?t=1606108621"
+    },
+    {
+      "title": "MyWebProgrammer",
+      "feed_url": "https://www.mywebprogrammer.com/blog/feed/",
+      "website_url": "https://www.mywebprogrammer.com/blog/",
+      "description": "My Web Programmer is a full-service web and software development firm that specializes in custom web, mobile, and enterprise applications. We develop results-driven custom web applications, website design, and custom software tailored to individual client's needs to improve business outcomes and generate extra value.",
+      "followers": {
+        "twitter": 20
+      },
+      "image_url": "https://i1.feedspot.com/5191634.jpg?t=1606108982"
+    },
+    {
+      "title": "Web Development Zone",
+      "feed_url": "https://medium.com/feed/web-development-zone",
+      "website_url": "https://medium.com/web-development-zone",
+      "description": "We write about #techwriting #webhelp #webdesign #webdev #html #css",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4540848.jpg?t=1606108127"
+    },
+    {
+      "title": "AHOM Technologies Private Limited",
+      "feed_url": "https://ahomtechnologies.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://ahomtechnologies.blogspot.com/",
+      "description": "AHOM Technologies Private Limited is a Gurgaon based privately held company. We offer web development, web designing, graphic designing, App developments like Android App development, iOS App development, PhoneGap Development & Digital Marketing services to clients globally.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5029278.jpg?t=1606110419"
+    },
+    {
+      "title": "Medium \u00bb Stories by 4kCode",
+      "feed_url": "https://medium.com/feed/@4kcode",
+      "website_url": "https://medium.com/@4kcode",
+      "description": "Read writing from 4kCode on Medium. The 4 keys to write successful code are vision, team-work, innovation and communication. Every day, 4kCode and thousands of other voices read, write, and share important stories on Medium.",
+      "followers": {
+        "facebook": 409,
+        "twitter": 97
+      },
+      "image_url": "https://i1.feedspot.com/4971277.jpg?t=1606109981"
+    },
+    {
+      "title": "chsakell's Blog",
+      "feed_url": "https://chsakell.com/feed/",
+      "website_url": "https://chsakell.com/",
+      "description": "Follow to get web application development tutorials with open-source projects",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5051104.jpg?t=1606110096"
+    },
+    {
+      "title": "web.dev Blog",
+      "feed_url": "https://web.dev/feed.xml",
+      "website_url": "https://web.dev/blog/",
+      "description": "Web.dev provides web developers with news, tutorials, and best practices on how to build and maintain high-quality websites. The blog covers a wide range of topics, including HTML, CSS, JavaScript, performance, accessibility, and more.",
+      "followers": {
+        "twitter": 392900
+      },
+      "image_url": "https://i1.feedspot.com/5273774.jpg?t=1619593934"
+    },
+    {
+      "title": "SitePoint Blog",
+      "feed_url": "https://www.sitepoint.com/feed/",
+      "website_url": "https://www.sitepoint.com/blog/",
+      "description": "The web's best resource for web developers and designers to keep up-to-date and learn JavaScript, CSS, UX, WordPress, PHP, and more. SitePoint is one of the largest online communities of web professionals.",
+      "followers": {
+        "facebook": 91700,
+        "twitter": 114600
+      },
+      "image_url": "https://i1.feedspot.com/4459886.jpg?t=1608799601"
+    },
+    {
+      "title": "Css Author Blog",
+      "feed_url": "https://cssauthor.com/feed/",
+      "website_url": "https://cssauthor.com/",
+      "description": "CSS Author is a Design and Development related blog for Web Designers and Developers. We offer free PSD Design Resources, Daily Design Inspirations, Articles, Roundups, Tutorials, and the latest Web Trends and Techniques.",
+      "followers": {
+        "facebook": 41700,
+        "twitter": 27200
+      },
+      "image_url": "https://i1.feedspot.com/2246644.jpg?t=1623936693"
+    },
+    {
+      "title": "MindStick Blogs \u00bb Developersection",
+      "feed_url": "https://www.mindstick.com/developersection/blog/",
+      "website_url": "https://www.mindstick.com/developersection/blog/",
+      "description": "MindStick is a software product development and programming services company in India. Blogs section consists of an invaluable series of programing blogs and tutorials for software developers, programmers and coders.",
+      "followers": {
+        "facebook": 27000,
+        "twitter": 124
+      },
+      "image_url": "https://i1.feedspot.com/5041291.jpg?t=1606108194"
+    },
+    {
+      "title": "Web Designer News",
+      "feed_url": "https://www.webdesignernews.com/rss",
+      "website_url": "https://webdesignernews.com/",
+      "description": "A curated collection of the best news for designers each day. Web Designer News provides web designers and developers with a single location to discover the latest and most significant stories on the Web. It searches through hundreds of posts on blogs, social media, and news channels, to deliver the most essential stories of the day.",
+      "followers": {
+        "facebook": 856
+      },
+      "image_url": "https://i1.feedspot.com/4391142.jpg?t=1606108247"
+    },
+    {
+      "title": "JavaScript Weekly",
+      "feed_url": "https://javascriptweekly.com/rss",
+      "website_url": "https://javascriptweekly.com/",
+      "description": "A free, once-weekly e-mail round-up of JavaScript articles, news and cool projects.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/114551.jpg?t=1606108642"
+    },
+    {
+      "title": "GrayCell Tech Blog",
+      "feed_url": "https://www.graycelltech.com/blogs/",
+      "website_url": "https://www.graycelltech.com/blogs/",
+      "description": "Developing and delivering innovative Web, Mobile and Cloud based solutions to a Global clientele of Startups, SME's and Enterprises for over a decade.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4686735.jpg?t=1606108593"
+    },
+    {
+      "title": "WDP Technologies Blog",
+      "feed_url": "https://www.wdptechnologies.com/feed/",
+      "website_url": "https://www.wdptechnologies.com/blog/",
+      "description": "We Provide web design, web development, i phone app development, graphics design, dynamic web page design, Responsive web design services. WDP Technologies is a team of web design experts can create a website for your company at affordable website design cost, we provide website and software easy solutions.",
+      "followers": {
+        "facebook": 467,
+        "twitter": 109
+      },
+      "image_url": "https://i1.feedspot.com/5037862.jpg?t=1606109400"
+    },
+    {
+      "title": "247webdevs",
+      "feed_url": "https://247webdevs.blogspot.com/feeds/posts/default",
+      "website_url": "https://247webdevs.blogspot.com/",
+      "description": "Developer support blog. Get dev news and life hack information articles through this blog.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5398974.jpg?t=1652088637"
+    },
+    {
+      "title": "Swizec Teller's Blog",
+      "feed_url": "https://swizec.com/blog/",
+      "website_url": "https://swizec.com/blog/",
+      "description": "Swizec writes about JavaScript, ReactJS, and technical skills that will boost your career. He helps coders turn into high-value JavaScript experts with books, articles, talks, and workshops.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 16000,
+        "instagram": 859
+      },
+      "image_url": "https://i1.feedspot.com/105323.jpg?t=1606111760"
+    },
+    {
+      "title": "React Blog",
+      "feed_url": "https://reactjs.org/feed.xml",
+      "website_url": "https://reactjs.org/blog/all.html",
+      "description": "React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It is an important source material for anyone who creates apps with the framework.",
+      "followers": {
+        "facebook": 138100,
+        "twitter": 704800
+      },
+      "image_url": "https://i1.feedspot.com/4509584.jpg?t=1606108025"
+    },
+    {
+      "title": "WebFX \u00bb Web Design",
+      "feed_url": "https://www.webfx.com/blog/web-design/feed/",
+      "website_url": "https://www.webfx.com/blog/web-design/",
+      "description": "A Web Design & Development Blog for designers and digital artists where you can find and learn design tips and tricks.",
+      "followers": {
+        "instagram": 9200
+      },
+      "image_url": "https://i1.feedspot.com/97627.jpg?t=1624089882"
+    },
+    {
+      "title": "WisdmLabs Blog",
+      "feed_url": "https://wisdmlabs.com/feed/",
+      "website_url": "https://wisdmlabs.com/blog/",
+      "description": "WordPress Development Experts, Custom Plugin Solutions, Magento Ecommerce Solutions, User Experience Design and more. Keep up with the experience of the WordPress Developers, which make for some awesome tips and tricks, and WordPress-based solutions.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5186623.jpg?t=1606108039"
+    },
+    {
+      "title": "Code Convoy",
+      "feed_url": "https://codeconvey.com/feed/",
+      "website_url": "https://codeconvey.com/",
+      "description": "Provides articles on HTML5, CSS3, Javascript, Jquery, and many more creations to help out frontend developers and designers. Codeconvey is a web design & development blog that provides tutorials, inspiration, articles, and the latest web trends.",
+      "followers": {
+        "twitter": 53
+      },
+      "image_url": "https://i1.feedspot.com/5271385.jpg?t=1618926304"
+    },
+    {
+      "title": "Web & Mobile App Development Blog, Technology News & Updates - JumpGrowth",
+      "feed_url": "https://jumpgrowth.com/feed/",
+      "website_url": "https://jumpgrowth.com/blog/",
+      "description": "Check out our mobile & web app Design and Development blog to get the latest tips and insights about mobile apps. JumpGrowth provides complete consulting and apps development services to Startups and highly Innovative teams across businesses.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 49,
+        "instagram": 124
+      },
+      "image_url": "https://i1.feedspot.com/5294372.jpg?t=1658399895"
+    },
+    {
+      "title": "Sloboda studio",
+      "feed_url": "https://sloboda-studio.com/feed/rss",
+      "website_url": "https://sloboda-studio.com/blog/",
+      "description": "Articles on Entrepreneurship, Guides, Marketplaces, Real Estate and Technology. Sloboda-studio is a Ruby on Rails Web Development Company. We offer web development services for startups, small and medium business.",
+      "followers": {
+        "facebook": 673,
+        "twitter": 56
+      },
+      "image_url": "https://i1.feedspot.com/5156895.jpg?t=1606108536"
+    },
+    {
+      "title": "Trioangle Blog",
+      "feed_url": "https://www.trioangle.com/404/",
+      "website_url": "https://www.trioangle.com/blog/",
+      "description": "Stay updated with the latest blogs, news, developments and business ideas. Trioangle Technologies is the best web and mobile application development company.",
+      "followers": {
+        "facebook": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5053819.jpg?t=1606108260"
+    },
+    {
+      "title": "Hiteshi",
+      "feed_url": "https://www.hiteshi.com/feed/",
+      "website_url": "https://www.hiteshi.com/blog/",
+      "description": "Hiteshi blog helps you to keep yourself up to date by the latest web technology trends and top web and mobile app development industry news. Hiteshi is a top web and mobile app development company building reliable solutions for businesses in the USA, Australia & India. We offer top-notch services, including enterprise solution, UI-UX, Big Data, iPhone (iOS) & Android app development services.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 507
+      },
+      "image_url": "https://i1.feedspot.com/5052205.jpg?t=1605851763"
+    },
+    {
+      "title": "ITH Blog",
+      "feed_url": "https://www.ithands.com/feed/",
+      "website_url": "https://www.letscms.com/blog",
+      "description": "ITH develops a deep understanding of your business, skill sets, and working style to provide solutions to larger and complex business requirements. ITH is a company specializing in Web and mobile app development.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5294969.jpg?t=1624275578"
+    },
+    {
+      "title": "Technocrats Horizons",
+      "feed_url": "https://technocratshorizons.com/feed/",
+      "website_url": "https://technocratshorizons.com/blogs/",
+      "description": "Technocrats is the leading company for providing creative web designing, custom web development, graphic design, e-commerce solutions & mobile applications.",
+      "followers": {
+        "facebook": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5035253.jpg?t=1606109031"
+    },
+    {
+      "title": "Techtic Solutions",
+      "feed_url": "https://www.techtic.com/feed",
+      "website_url": "https://www.techtic.com/blog/",
+      "description": "Get the latest updates on technology tips and trends about Mobile Apps Development, Web Development, UX/UI and Digital Marketing. Techtic Solutions is an award-winning, highly regarded Custom Software & Mobile App Development Company having expertise in building awesome digital products.",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 7800
+      },
+      "image_url": "https://i1.feedspot.com/5192533.jpg?t=1606108554"
+    },
+    {
+      "title": "Uisort Technologies",
+      "feed_url": "https://www.uisort.com/blog/feed/",
+      "website_url": "https://www.uisort.com/blog/",
+      "description": "Articles on AI and ML App Development, android app development, Android Application, AR App Development, Artificial Intelligence, Cloud-Based Products, Cross Platforms, Ecommerce Solutions, Events, News and more. UiSort Technologies is one of the leading web and mobile application development company.",
+      "followers": {
+        "facebook": 58,
+        "twitter": 11
+      },
+      "image_url": "https://i1.feedspot.com/5254813.jpg?t=1615287623"
+    },
+    {
+      "title": "Position Absolute",
+      "feed_url": "https://feeds.feedburner.com/position-absolute/nyJv",
+      "website_url": "https://wdrl.info/",
+      "description": "Waves of front-end development and entrepreneurship articles",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/98386.jpg?t=1606108964"
+    },
+    {
+      "title": "Web Development Reading List",
+      "feed_url": "https://wdrl.info/feed",
+      "website_url": "https://wdrl.info/",
+      "description": "A handcrafted, carefully selected list of web development related resources. Published usually every week.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4366045.jpg?t=1606109034"
+    },
+    {
+      "title": "fiveaday.co",
+      "feed_url": "http://fiveaday.co/feed/",
+      "website_url": "https://fiveaday.co/",
+      "description": "Get the articles, news and tutorials. Rather than be overwhelmed by too much information, get your daily five articles or tutorials on web design & development everyday at fiveaday.co",
+      "followers": {
+        "facebook": 536,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/1946319.jpg?t=1606108994"
+    },
+    {
+      "title": "JSdevs",
+      "feed_url": "https://blog.jsdevs.dev/rss",
+      "website_url": "https://www.siddhiinfosoft.com/blog/",
+      "description": "Find the best JavaScript developers & engineers in React, Vue, Nuxt, Next, Angular, TypeScript and many other technologies.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 106
+      },
+      "image_url": "https://i1.feedspot.com/5183720.jpg?t=1606109064"
+    },
+    {
+      "title": "Siddhi Infosoft Blog",
+      "feed_url": "https://www.siddhiinfosoft.com/blog/feed/",
+      "website_url": "https://www.siddhiinfosoft.com/blog/",
+      "description": "Siddhi Infosoft is a leading Web and Mobile App Development Company in the USA, UK, and Canada offering top-notch web and app development services that connect, perform & inspire.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 326,
+        "instagram": 236
+      },
+      "image_url": "https://i1.feedspot.com/5123162.jpg?t=1606108221"
+    },
+    {
+      "title": "WNA Infotech LLC",
+      "feed_url": "https://wna-infotech.com/feed/",
+      "website_url": "https://wna-infotech.com/blog/",
+      "description": "Read the latest web design, website development, SEO and digital marketing trends Blog. WNA InfoTech is a leading creative web design company in Delaware.",
+      "followers": {
+        "facebook": 181,
+        "twitter": 79,
+        "instagram": 235
+      },
+      "image_url": "https://i1.feedspot.com/5127962.jpg?t=1606109043"
+    },
+    {
+      "title": "Tut Gurus",
+      "feed_url": "https://tutgurus.com/feed/",
+      "website_url": "https://tutgurus.com/",
+      "description": "We are dedicated to educating and helping people learn how to build their own websites and start making money online.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5391885.jpg?t=1650280709"
+    },
+    {
+      "title": "2muchcoffee",
+      "feed_url": "https://2muchcoffee.com/blog/rss/",
+      "website_url": "https://2muchcoffee.com/blog/",
+      "description": "Find tips, insights, news, and best practices on software development, design, and business growth. A full-stack web and hybrid mobile app development company specializing in frontend and backend JS frameworks for startups and big brands.",
+      "followers": {
+        "facebook": 243,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5008061.jpg?t=1606108596"
+    },
+    {
+      "title": "Jster's Blog",
+      "feed_url": "http://feeds.feedburner.com/jster",
+      "website_url": "https://jster.net/blog/",
+      "description": "JSter attempts to be a comprehensive collection of JavaScript libraries. It also includes news articles, tutorials and links to handy resources that might make it easier to keep up with compatibility issues and other common stumbling blocks.",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/1520509.jpg?t=1606108978"
+    },
+    {
+      "title": "S3 tech blog",
+      "feed_url": "https://techblog.s3corp.com.vn/?feed=rss2",
+      "website_url": "http://techblog.s3corp.com.vn/",
+      "description": "S3corp is a leading #software #outsourcing service provider based in Vietnam. Customers are world-leading companies: SingTel, NetGear, Pepsico, and much more.",
+      "followers": {
+        "twitter": 34
+      },
+      "image_url": "https://i1.feedspot.com/5197891.jpg?t=1606109059"
+    },
+    {
+      "title": "Imaginary Cloud Blog",
+      "feed_url": "https://www.imaginarycloud.com/blog/rss",
+      "website_url": "https://www.imaginarycloud.com/blog",
+      "description": "ead by more than 500.000 developers every year, our blog delivers top-quality content for IT professionals, Designers and Digital Product Owners. Imaginary Cloud is one of the leading Web, Mobile and AI Software Development and UX/UI Design companies in Europe. We helped design, build, launch, and scale 300+ web & mobile applications in the last 12 years.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 532,
+        "instagram": 15500
+      },
+      "image_url": "https://i1.feedspot.com/5501502.jpg?t=1675160121"
+    }
+  ]
+}

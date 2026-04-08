@@ -1,0 +1,26 @@
+{
+  "category": "JAMA Network",
+  "source_url": "https://rss.feedspot.com/jamanetwork_rss_feeds",
+  "feeds": [
+    {
+      "title": "JAMA Network",
+      "feed_url": "https://jamanetwork.com/rss/site_3/67.xml",
+      "website_url": "https://jamanetwork.com/journals/jama/currentissue",
+      "description": "Home of JAMA and the Specialty Journals of the American Medical Association. Stay up to date, maintain your CME with the latest research, author interviews, apps, and learning courses from JAMA and the Specialty Journals.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 19200,
+        "instagram": 153600
+      },
+      "image_url": "https://i1.feedspot.com/5215818.jpg?t=1744801770"
+    },
+    {
+      "title": "JAMA Network \u00bb Network Open",
+      "feed_url": "https://jamanetwork.com/rss/site_214/mostReadArticles.xml",
+      "website_url": "https://jamanetwork.com/journals/jamanetworkopen",
+      "description": "The Most Read articles published by JAMA Network Open.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7898748.jpg?t=1744801754"
+    }
+  ]
+}

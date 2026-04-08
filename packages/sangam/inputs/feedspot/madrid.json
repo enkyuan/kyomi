@@ -1,0 +1,492 @@
+{
+  "category": "Madrid",
+  "source_url": "https://rss.feedspot.com/madrid_rss_feeds",
+  "feeds": [
+    {
+      "title": "Madrid City Council",
+      "feed_url": "https://diario.madrid.es/feed/",
+      "website_url": "https://diario.madrid.es/",
+      "description": "Madrid City Council News portal provides you with current news from Madrid and the world, business news, sports news, weather forecasts, video reports, analyzes and comments. Official news channel of the Madrid City Council.",
+      "followers": {
+        "facebook": 252300,
+        "twitter": 856100,
+        "instagram": 268600
+      },
+      "image_url": "https://i1.feedspot.com/5373715.jpg?t=1645271125"
+    },
+    {
+      "title": "Madrid Free",
+      "feed_url": "https://madridfree.com/feed/",
+      "website_url": "https://madridfree.com/",
+      "description": "You can find all the information about the free and cheap activities in Madrid here.",
+      "followers": {
+        "facebook": 41600,
+        "twitter": 24100,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5373743.jpg?t=1645449623"
+    },
+    {
+      "title": "Madrid Diferente Blog",
+      "feed_url": "https://madriddiferente.com/blog/feed/",
+      "website_url": "https://madriddiferente.com/blog/",
+      "description": "This blog is a Guide to the most original bars, restaurants and shops in Madrid. Explore the Mdrid city with us.",
+      "followers": {
+        "facebook": 121700,
+        "twitter": 89400,
+        "instagram": 262800
+      },
+      "image_url": "https://i1.feedspot.com/5373711.jpg?t=1645271104"
+    },
+    {
+      "title": "Vida de Madrid",
+      "feed_url": "https://www.vidademadrid.com/es/feed/",
+      "website_url": "https://www.vidademadrid.com/es/",
+      "description": "Vida de Madrid is an editorial project that wants to tell the day-to-day life of the city, the most interesting events and recommend plans, restaurants, activities to do... and much more. The objective is to communicate and tell in an innovative way everything that happens in the city, providing useful and interesting information about Madrid for citizens and tourists .",
+      "followers": {
+        "facebook": 98500,
+        "twitter": 10300,
+        "instagram": 253900
+      },
+      "image_url": "https://i1.feedspot.com/5373722.jpg?t=1645430768"
+    },
+    {
+      "title": "Managing Madrid",
+      "feed_url": "https://www.managingmadrid.com/rss/current.xml",
+      "website_url": "https://www.managingmadrid.com/",
+      "description": "Your best source for quality Real Madrid news, rumors, analysis, stats, and scores from the fan perspective. They are committed to bringing intelligent, insightful, and respectfully biased analysis on Real Madrid CF and the sport of football.",
+      "followers": {
+        "facebook": 220800,
+        "twitter": 91900
+      },
+      "image_url": "https://i1.feedspot.com/5336952.jpg?t=1635309182"
+    },
+    {
+      "title": "It's For Madrid",
+      "feed_url": "https://feeds.feedburner.com/espormadrid",
+      "website_url": "https://www.espormadrid.es/",
+      "description": "The Madrid blog and its news, projects, transport, mobility, architecture, participation, environment, education, employment, etc.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 6200
+      },
+      "image_url": "https://i1.feedspot.com/1041387.jpg?t=1645436767"
+    },
+    {
+      "title": "Cycling Through Madrid",
+      "feed_url": "https://feeds.feedburner.com/EnBiciPorMadrid",
+      "website_url": "https://www.enbicipormadrid.es/",
+      "description": "Blog about cycling and mobility in Madrid. Analysis, participation, proposals, testimonials, MTB routes. The blog enbicipormadrid.es was created in February 2010 from the articles on cycling published in recent years on the blog espormadrid.es",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 21700
+      },
+      "image_url": "https://i1.feedspot.com/2449970.jpg?t=1645428872"
+    },
+    {
+      "title": "EL PA\u00cdS \u00bb Madrid",
+      "feed_url": "https://feeds.elpais.com/mrss-s/list/ep/site/elpais.com/section/espana/subsection/madrid",
+      "website_url": "https://elpais.com/espana/madrid/",
+      "description": "All the latest news from Madrid. Get news from the autonomous community of Madrid and its towns with EL PA\u00cdS. El Pa\u00eds is the global newspaper in Spanish.",
+      "followers": {
+        "facebook": 6900000,
+        "twitter": 8900000,
+        "instagram": 2500000
+      },
+      "image_url": "https://i1.feedspot.com/5373723.jpg?t=1645271184"
+    },
+    {
+      "title": "Bernab\u00e9u Digital",
+      "feed_url": "https://www.bernabeudigital.com/rss/",
+      "website_url": "https://www.bernabeudigital.com/",
+      "description": "EVERYTHING about Real Madrid, 24 hours a day. News, press review, exclusives, opinions, columns with international firms, photos, etc.",
+      "followers": {
+        "facebook": 317200,
+        "twitter": 9600,
+        "instagram": 64200
+      },
+      "image_url": "https://i1.feedspot.com/5373741.jpg?t=1645271300"
+    },
+    {
+      "title": "DFLAT Madrid Blog",
+      "feed_url": "https://blog.dflatmadrid.com/feed/",
+      "website_url": "https://blog.dflatmadrid.com/",
+      "description": "Articles and real estate news specialized in seasonal rental in Madrid. DFLAT Madrid was created by two Executive MBA's from the Instituto de Empresa after finding out about the difficulties of professionals and expatriates when looking for an apartment in Madrid that is suited to their needs.",
+      "followers": {
+        "facebook": 824,
+        "twitter": 144
+      },
+      "image_url": "https://i1.feedspot.com/5373737.jpg?t=1645271278"
+    },
+    {
+      "title": "Madrid Travel Blog",
+      "feed_url": "https://madride.net/feed/",
+      "website_url": "https://madride.net/blog/",
+      "description": "In our travel tours blog, you can discover everything about events, secrets, history and more about Madrid. We know how much you value your time when traveling. Therefore, we offer you all the necessary elements to get the most out of your trip.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 1100,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5373714.jpg?t=1645271120"
+    },
+    {
+      "title": "Proinca Madrid",
+      "feed_url": "https://www.flatsmadridproinca.com/madridfansblog/feed/",
+      "website_url": "https://www.flatsmadridproinca.com/madridfansblog/",
+      "description": "Madrid Fans Blog is an initiative of Proinca Apartments where you can find leisure proposals in Madrid to make your stay unforgettable! PROINCA, over 350 furnished rental apartments and studios in Madrid. Located in the prime areas of Azca, Tetu\u00e1n y Chamber\u00ed. So that nothing is missing during your stay.",
+      "followers": {
+        "facebook": 339,
+        "twitter": 56,
+        "instagram": 352
+      },
+      "image_url": "https://i1.feedspot.com/5373745.jpg?t=1645271348"
+    },
+    {
+      "title": "COGAM Blog",
+      "feed_url": "https://cogam.es/feed/",
+      "website_url": "https://cogam.es/blog/",
+      "description": "Welcome to the COGAM blog. You will find all the news and positioning of our group on the issues that interest us. We are the group of Lesbians, Gays, Transsexuals and Bisexuals from Madrid. Since 1986 we work for our rights.",
+      "followers": {
+        "facebook": 15500,
+        "twitter": 34600,
+        "instagram": 18300
+      },
+      "image_url": "https://i1.feedspot.com/5373705.jpg?t=1645271066"
+    },
+    {
+      "title": "Bungalows Madrid Arco Iris Blog",
+      "feed_url": "https://www.bungalowsarcoiris.com/feed/",
+      "website_url": "https://www.bungalowsarcoiris.com/blog/",
+      "description": "Follow the blog to get informtion on events held in Madrid, plays, fairs and carnivals along with other tourist destinations. Camping Madrid Arco Iris is a trusted family campsite to enjoy a natural environment very close to Madrid.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 717,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5373706.jpg?t=1645271078"
+    },
+    {
+      "title": "Writers Madrid Blog",
+      "feed_url": "https://www.writersmadrid.es/blog-writers/feed/",
+      "website_url": "https://www.writersmadrid.es/blog-writers/",
+      "description": "Writers Madrid's official blog where we share the latest graffiti news and events and information on graffiti products. Writers Madrid is a project born from within Madrid's Graffiti. With the idea of promoting something in which we believe and from the hand of writers who, after having traveled throughout Europe and the rest of the world, experience a void in their city.",
+      "followers": {
+        "facebook": 14100,
+        "instagram": 58100
+      },
+      "image_url": "https://i1.feedspot.com/5373724.jpg?t=1645271188"
+    },
+    {
+      "title": "Estate One Blog",
+      "feed_url": "https://www.estateone.biz/blog/feed/",
+      "website_url": "https://www.estateone.biz/blog/",
+      "description": "We are a company with extensive knowledge of the real estate market in Spain. We offer luxury real estate and the most exclusive properties. Estate One is a company with extensive knowledge of the real estate market in Spain.",
+      "followers": {
+        "facebook": 224,
+        "twitter": 667,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5339755.jpg?t=1635935206"
+    },
+    {
+      "title": "Aora Life Blog",
+      "feed_url": "https://aoralife.com/feed/",
+      "website_url": "https://aoralife.com/blog/",
+      "description": "Read about How to improve digestion, Routines and tips, How to get rid of bone and joint pain, Catechins: what they are, benefits and properties and more. Our mission is to improve people's well-being, bringing scientific research closer to the greatest possible number of consumers.",
+      "followers": {
+        "facebook": 2700,
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/5373738.jpg?t=1645271283"
+    },
+    {
+      "title": "Cardamomo Blog",
+      "feed_url": "https://cardamomo.com/en/blog/feed/",
+      "website_url": "https://cardamomo.com/en/blog/",
+      "description": "Explore the blog to know more about the upcoming shows and artists, Spanish culture and more! Cardamomo is a flamenco house where both national and international great artists and promising young talent pass through. You will find a different show each day, where the musicians, guided by their artistic impulse, search for new means to surprise the audience.",
+      "followers": {
+        "facebook": 16800,
+        "twitter": 3800,
+        "instagram": 24700
+      },
+      "image_url": "https://i1.feedspot.com/5373703.jpg?t=1645430144"
+    },
+    {
+      "title": "Madrid For Refugees",
+      "feed_url": "https://madridforrefugees.org/feed/",
+      "website_url": "https://madridforrefugees.org/news/",
+      "description": "Get the latest news and udates from Madrid For Refugees, their initiatives and more! Madrid For Refugees (MFR) is a non-profit, volunteer-run organization focused on supporting and empowering refugees, migrants and asylum seekers.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 803,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5373748.jpg?t=1645271369"
+    },
+    {
+      "title": "BAFRE Blog",
+      "feed_url": "https://www.bafreinmobiliaria.es/feed/",
+      "website_url": "https://www.bafreinmobiliaria.es/blog-inmobiliario/",
+      "description": "Madrid real estate blog about the market for renting and selling flats and commercial premises in Madrid. BAFRE is a company specialized in the real estate and real estate sector with experience in the sector since 2004.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5339762.jpg?t=1635934409"
+    },
+    {
+      "title": "IDEO Legal Blog",
+      "feed_url": "https://www.ideolegal.com/feed/",
+      "website_url": "https://www.ideolegal.com/blog/",
+      "description": "IDEO Legal is an independent law firm and economist specialized in highly complex cases in TaxLaw and the Public Sector. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.",
+      "followers": {
+        "facebook": 34,
+        "twitter": 189
+      },
+      "image_url": "https://i1.feedspot.com/5373735.jpg?t=1645271267"
+    },
+    {
+      "title": "Madrid Travel gers Blog",
+      "feed_url": "https://madridtb.com/feed/",
+      "website_url": "https://madridtb.com/blog/",
+      "description": "Discover Madrid TB, an association of travel bloggers passionate about exploring Spain and beyond. With a wealth of travel experience and a tight-knit community, they share insider insights on tourist destinations worldwide. Join their journey as they uncover hidden gems and travel the world with enthusiasm and wanderlust.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 8300,
+        "instagram": 7800
+      },
+      "image_url": "https://i1.feedspot.com/5373731.jpg?t=1645271235"
+    },
+    {
+      "title": "Residencias Nebrija",
+      "feed_url": "https://www.nebrija.com/medios/residenciasnebrija/feed/",
+      "website_url": "https://www.nebrija.com/medios/residenciasnebrija/",
+      "description": "Through this blog, you will be able to learn about the activities that we carry out at Nebrija Residences throughout the course. Nebrija Residences manages 276 places in Madrid for students from Nebrija University and the rest of Madrid's universities.",
+      "followers": {
+        "facebook": 52200,
+        "twitter": 21100,
+        "instagram": 51800
+      },
+      "image_url": "https://i1.feedspot.com/5373712.jpg?t=1645276946"
+    },
+    {
+      "title": "AIL Madrid Blog",
+      "feed_url": "https://ailmadrid.com/blog/feed/",
+      "website_url": "https://ailmadrid.com/blog/",
+      "description": "Welcome to our blog! A site full of tips, activities, guides, news and curiosities of Madrid: language, culture, and history. Our mission is to provide the highest possible standard of teaching and accommodation in the best kind of environment for our students. We cater to both advanced and complete beginner students, while sharing the excitement and energy of daily life in the Spanish capital!",
+      "followers": {
+        "facebook": 53000,
+        "twitter": 7100,
+        "instagram": 9100
+      },
+      "image_url": "https://i1.feedspot.com/5373730.jpg?t=1645271230"
+    },
+    {
+      "title": "The Principal Madrid Hotel Blog",
+      "feed_url": "https://www.theprincipalmadridhotel.com/feed/es/",
+      "website_url": "https://www.theprincipalmadridhotel.com/es/blog/",
+      "description": "Enter and discover the latest news, relevant information about the city and everything you need for your visit to Madrid. The Principal Hotel Madrid is much more than just a modern luxury boutique hotel.",
+      "followers": {
+        "facebook": 11300,
+        "instagram": 21700
+      },
+      "image_url": "https://i1.feedspot.com/5373719.jpg?t=1645271154"
+    },
+    {
+      "title": "MadridEsTeatro Blog",
+      "feed_url": "https://madridesteatro.com/feed/",
+      "website_url": "https://madridesteatro.com/blog-teatro/",
+      "description": "Get All theatrical news from Madrid, The theater of Madrid, the Billboard, tickets and much more.",
+      "followers": {
+        "facebook": 52700,
+        "twitter": 47800,
+        "instagram": 8200
+      },
+      "image_url": "https://i1.feedspot.com/4245223.jpg?t=1645435145"
+    },
+    {
+      "title": "Naked Madrid",
+      "feed_url": "https://www.nakedmadrid.com/feed/",
+      "website_url": "https://www.nakedmadrid.com/",
+      "description": "Naked Madrid is a long-running online publication led by writers who love the city and want to share its rich cultural offerings with our community and the world. We strive to empower local businesses and artists by telling their stories.",
+      "followers": {
+        "facebook": 5400,
+        "instagram": 6500
+      },
+      "image_url": "https://i1.feedspot.com/5373744.jpg?t=1645440535"
+    },
+    {
+      "title": "BeMadrid Blog",
+      "feed_url": "https://bemadrid.com/feed/",
+      "website_url": "https://bemadrid.com/blog/",
+      "description": "In our blog, you can find up-to-date, interesting and useful information for international students who come to Madrid. Be Madrid Exchange Students Community helps young international people to have an easy arrival and to get the best out of their stay in Madrid.",
+      "followers": {
+        "facebook": 29500,
+        "twitter": 601
+      },
+      "image_url": "https://i1.feedspot.com/5373717.jpg?t=1645271145"
+    },
+    {
+      "title": "ShMadrid Blog",
+      "feed_url": "https://www.shmadrid.com/blog/en/feed/",
+      "website_url": "https://www.shmadrid.com/blog/en/",
+      "description": "A travel blog dedicated to Madrid, 100% written by locals; guide to find nice activities, cultural anecdotes and tips for restaurants, bars and events. ShMadrid is a real estate company dealing with all kinds of residences including finest apartments, studios, lofts, penthouses or duplex flats.",
+      "followers": {
+        "facebook": 1,
+        "twitter": 106
+      },
+      "image_url": "https://i1.feedspot.com/5373702.jpg?t=1645271054"
+    },
+    {
+      "title": "Dreampeaks Blog",
+      "feed_url": "https://dreampeaks.com/feed/",
+      "website_url": "https://dreampeaks.com/blog/",
+      "description": "Get more information along with tips and advice for Adventure, Hiking & Outdoor Activities in Madrid. Dreampeaks is a company of Mountain Guides, Adventure Sports and Active Tourism. Dreampeaks is a leading Outdoor Company specialized in Hiking, Trekking and Adventure Tours in Madrid.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 250,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5373707.jpg?t=1645436002"
+    },
+    {
+      "title": "Extranjer\u00eda Asociaci\u00f3n Progesti\u00f3n Blog",
+      "feed_url": "https://blogextranjeriaprogestion.org/feed/",
+      "website_url": "https://blogextranjeriaprogestion.org/",
+      "description": "Learn more about asylums provided for people at risk, social exclusion, legalities in immigration, rehabilitation for homeless, drug dependents and women and more! Since 1990 we have been working with people who, for various reasons, are in a situation or at risk of social exclusion.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5373713.jpg?t=1645271114"
+    },
+    {
+      "title": "Santita Blog",
+      "feed_url": "https://www.santita.es/feed/",
+      "website_url": "https://www.santita.es/blog/",
+      "description": "Find Mexican cuisine and Mexican inspired restaurants, vendors and bars in Madrid. Santita is a tribute to Mexican smoke cuisine and, above all, to the women who bring it to life.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5373733.jpg?t=1645426700"
+    },
+    {
+      "title": "Procolped Madrid Blog",
+      "feed_url": "https://www.procolpedmadrid.org/feed/",
+      "website_url": "https://www.procolpedmadrid.org/blog/",
+      "description": "The PROCOLPED blog offers you the opportunity to express opinions and concerns about issues that confer pedagogy and psychopedagogy, cheer up! We are an Association of Pedagogues and Psychopedagogues that brings together people who are committed and capable of promoting, through teamwork, the constitution of the Official College of Pedagogy and Psychopedagogy of the Community of Madrid.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 689,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5373726.jpg?t=1645437494"
+    },
+    {
+      "title": "Cooltourspain Blog",
+      "feed_url": "https://cooltourspain.com//feed/",
+      "website_url": "https://cooltourspain.com/street-art-blog/",
+      "description": "Cooltourspain street art blog will offer you insider information about the industry, as well as local tips to discover Madrid in an alternative & different way. Cooltourspain differentiates between what tourists and travelers do! We are proud to not only show you the best Street art in Madrid, but also the problems that our society is facing.",
+      "followers": {
+        "facebook": 1300,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5373710.jpg?t=1645437577"
+    },
+    {
+      "title": "Madrimasd Foundation",
+      "feed_url": "https://www.madrimasd.org/notiweb/agenda/feed",
+      "website_url": "https://www.madrimasd.org/",
+      "description": "At Madrimasd we work with all the universities and public research organizations in the Community of Madrid, as well as with technology-based companies and entrepreneurs in Madrid, with the aim of helping to articulate an innovative regional ecosystem-based on efficient knowledge and integrated into the European Union.",
+      "followers": {
+        "facebook": 11700,
+        "twitter": 29300,
+        "instagram": 5500
+      },
+      "image_url": "https://i1.feedspot.com/5373708.jpg?t=1645435126"
+    },
+    {
+      "title": "Madrid Secreto",
+      "feed_url": "https://madridsecreto.co/feed/",
+      "website_url": "https://madridsecreto.co/",
+      "description": "Discover what to do in Madrid with Secret Madrid. Your guide to the best restaurants, bars and cafes, exhibitions, concerts and plans in Madrid. At Madrid Secreto we turn you into a true insider of your city. Discover the secrets you didn't know, get inspired and find the best plans.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 11300,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/5373709.jpg?t=1645271093"
+    },
+    {
+      "title": "Aprendizaje Viajero Blog",
+      "feed_url": "https://aprendizajeviajero.com/feed/",
+      "website_url": "https://aprendizajeviajero.com/",
+      "description": "The travel blog contains the best tourist guides and routes. Includes tips for traveling around Spain, Europe and the World. We are Pablo and Let and this is our Aprendizaje Viajero, a travel blog in which a very Cantabrian Cantabrian and a very Madrilenian from Salamanca joined together to travel the world.",
+      "followers": {
+        "facebook": 15600,
+        "twitter": 2100,
+        "instagram": 14300
+      },
+      "image_url": "https://i1.feedspot.com/5373728.jpg?t=1645437281"
+    },
+    {
+      "title": "Castellana Norte Blog",
+      "feed_url": "https://distritocastellananorte.com/feed/",
+      "website_url": "http://",
+      "description": "REad articles on urbanisation, projects by company, urban lifestyle and more! Distrito Castellana Norte Madrid aspires to be the icon of the new city model by improving with modern, sustainable developments and a central and accessible location.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5373716.jpg?t=1645271132"
+    },
+    {
+      "title": "EMT Madrid",
+      "feed_url": "https://www.emtmadrid.es/Noticias",
+      "website_url": "https://www.emtmadrid.es/Noticias",
+      "description": "Get the latest news and updates from EMT Madrid about public transport in the city. EMT's commitment is to provide an effective and efficient public transport service with the highest quality standards. In this sense, the EMT is subject to a continuous process of modernization and improvement of its bus fleet and its management systems and equipment.",
+      "followers": {
+        "facebook": 55600,
+        "twitter": 209200,
+        "instagram": 21200
+      },
+      "image_url": "https://i1.feedspot.com/5373934.jpg?t=1645456740"
+    },
+    {
+      "title": "Campus Experience Blog",
+      "feed_url": "https://campusexperiencermf.com/feed/",
+      "website_url": "https://campusexperiencermf.com/blog/",
+      "description": "Read articles on campus activities, football games, information and tips on the game and more! Real Madrid Foundation project that offers the opportunity to live a team experience to discover and share the values of Real Madrid.",
+      "followers": {
+        "facebook": 68000,
+        "twitter": 3000,
+        "instagram": 20500
+      },
+      "image_url": "https://i1.feedspot.com/5373720.jpg?t=1645271163"
+    },
+    {
+      "title": "Time For Fashion",
+      "feed_url": "https://timeforfashion.es/feed/",
+      "website_url": "https://timeforfashion.es/",
+      "description": "Time for Fashion continues its independent journey on this platform, hoping to continue informing, inspiring and exciting through fashion, trends, decoration, film and series styling or feminism. I'm Adriana Rodr\u00edguez, editor of Time for Fashion. I describe myself as an enthusiast of fashion, but above all, of the editorial world and fashion journalism.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5373732.jpg?t=1645766371"
+    },
+    {
+      "title": "Hotel Puerta de Toledo Blog",
+      "feed_url": "https://www.hotelpuertadetoledo.com/blog/feed/",
+      "website_url": "https://www.hotelpuertadetoledo.com/en/blog/",
+      "description": "Explore the blog to know more about Madrid, Spain and tourism in the country along with services offered by the hotel and more! Opened in 1968 and renovated in 2015, this traditional, comfortable and comfortable Hotel offers personalized treatment within a family atmosphere.",
+      "followers": {
+        "facebook": 24100,
+        "twitter": 3200,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5373721.jpg?t=1645271174"
+    },
+    {
+      "title": "Urban History of Madrid",
+      "feed_url": "https://historia-urbana-madrid.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://historia-urbana-madrid.blogspot.com/",
+      "description": "Historia Urbana Madrid is the page of the group 'Urban History of Madrid'. In both, content about Madrid and its history is published, which also includes stories from the people of Madrid before.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5373725.jpg?t=1645271193"
+    }
+  ]
+}

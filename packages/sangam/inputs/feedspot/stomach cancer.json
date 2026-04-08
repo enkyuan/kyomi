@@ -1,0 +1,50 @@
+{
+  "category": "Stomach Cancer",
+  "source_url": "https://rss.feedspot.com/stomach_cancer_rss_feeds",
+  "feeds": [
+    {
+      "title": "Gastric Cancer Foundation",
+      "feed_url": "https://gastriccancer.org/feed/",
+      "website_url": "https://gastriccancer.org/",
+      "description": "Gastric Cancer Foundation is dedicated to improving the lives of people affected by stomach cancer and to working with leading researchers to find a cure. Follow the recent gastric cancer research news, clinical trials, new treatments for stomach cancer",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4684114.jpg?t=1618830493"
+    },
+    {
+      "title": "News Medical \u00bb Stomach Cancer",
+      "feed_url": "https://www.news-medical.net/tag/feed/Stomach-Cancer.aspx",
+      "website_url": "https://www.news-medical.net/?tag=/Stomach-Cancer",
+      "description": "News-Medical.Net is your source for medical news and articles you can trust from around the world. Stomach cancer is difficult to detect in the early stages because the initial symptoms are also seen in less serious conditions such as persistent indigestion, heartburn, trapped wind, burping, and stomach ache.",
+      "followers": {
+        "facebook": 254300,
+        "twitter": 16300
+      },
+      "image_url": "https://i1.feedspot.com/4689617.jpg?t=1618830503"
+    },
+    {
+      "title": "Nature \u00bb gastric cancer",
+      "feed_url": "https://www.nature.com/subjects/gastric-cancer.rss",
+      "website_url": "https://www.nature.com/subjects/gastric-cancer",
+      "description": "Nature is the world's foremost international weekly scientific journal and is the flagship journal for Nature Research. Our purpose is to champion and support scientific work and to advance discovery.",
+      "followers": {
+        "facebook": 792300,
+        "twitter": 2600000
+      },
+      "image_url": "https://i1.feedspot.com/4684012.jpg?t=1618830499"
+    },
+    {
+      "title": "No Stomach For Cancer News",
+      "feed_url": "https://www.nostomachforcancer.org/news?format=feed",
+      "website_url": "https://nostomachforcancer.org/news/",
+      "description": "No Stomach For Cancer, Inc. is an approved nonprofit organization. Our mission is to support research and unite the caring power of people worldwide affected by stomach cancer.",
+      "followers": {
+        "facebook": 12000,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4689643.jpg?t=1618830524"
+    }
+  ]
+}

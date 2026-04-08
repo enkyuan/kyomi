@@ -1,0 +1,40 @@
+{
+  "category": "Spring Valley News",
+  "source_url": "https://rss.feedspot.com/spring_valley_california_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "NBC 7 San Diego \u00bb Spring Valley",
+      "feed_url": "https://www.nbcsandiego.com/tag/spring-valley/feed/",
+      "website_url": "https://www.nbcsandiego.com/tag/spring-valley/",
+      "description": "Get Spring Valley News, Local News, Weather, Traffic, Entertainment, Breaking News and important updates from NBC 7 San Diego.",
+      "followers": {
+        "facebook": 552000,
+        "twitter": 262500
+      },
+      "image_url": "https://i1.feedspot.com/5159998.jpg?t=1591596387"
+    },
+    {
+      "title": "ABC 10 News \u00bb Spring Valley",
+      "feed_url": "https://www.10news.com/news/east-county/spring-valley.rss",
+      "website_url": "https://www.10news.com/news/east-county/spring-valley",
+      "description": "Keep up with Spring Valley news headlines, weather, traffic, sports, and entertainment & lifestyle from San Diego's leading news source, ABC 10 News.",
+      "followers": {
+        "facebook": 689400,
+        "twitter": 191300
+      },
+      "image_url": "https://i1.feedspot.com/5159997.jpg"
+    },
+    {
+      "title": "FOX 5 San Diego \u00bb Spring Valley",
+      "feed_url": "https://fox5sandiego.com/tag/spring-valley/feed/",
+      "website_url": "https://fox5sandiego.com/tag/spring-valley/",
+      "description": "FOX 5 San Diego provides the latest Spring Valley news, breaking news, weather, traffic, sports, entertainment and updates.",
+      "followers": {
+        "facebook": 659200,
+        "twitter": 217500,
+        "instagram": 158000
+      },
+      "image_url": "https://i1.feedspot.com/5138752.jpg?t=1591596733"
+    }
+  ]
+}

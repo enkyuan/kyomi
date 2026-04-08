@@ -1,0 +1,50 @@
+{
+  "category": "NCLEX",
+  "source_url": "https://rss.feedspot.com/nclex_rss_feeds",
+  "feeds": [
+    {
+      "title": "UWorld Nursing Blog",
+      "feed_url": "https://nursing.uworld.com/feed/",
+      "website_url": "https://nursing.uworld.com/blog/",
+      "description": "Articles on NCLEX, NCLEX-PN, NCLEX-RN, Nursing, and more. UWorld is the students' choice for licensing exam preparation for a reason - our detailed explanations include the clinical reasoning behind the correct and incorrect answers \u00ad- so you learn as you practice.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 1100,
+        "instagram": 28900
+      },
+      "image_url": "https://i1.feedspot.com/5377375.jpg?t=1646896413"
+    },
+    {
+      "title": "The NCLEX Tutor Blog",
+      "feed_url": "https://thenclextutor.com/feed/",
+      "website_url": "https://thenclextutor.com/blog/",
+      "description": "I'm Justine Buick- a Registered Nurse and passionate tutor. I wade through all the NCLEX prep resources out there to simplify your learning and get you to pass tests. Learn tips and tricks, get guidance and inspiraton to pass the NCLEX Nursing Exam.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5379839.jpg?t=1646896676"
+    },
+    {
+      "title": "NCLEX Education Blog",
+      "feed_url": "https://nclexeducation.ca/nclex-blog/f.atom",
+      "website_url": "https://nclexeducation.ca/nclex-blog",
+      "description": "Find NCLEX test tips, updates, and videos on our NCLEX Blog: strategies to pass the NCLEX-RN exam, testing changes related to COVID-19 and more. Our team is passionate about nursing education and facilitating nursing students from around the globe in successfully passing the NCLEX-RN examination.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 21,
+        "instagram": 894
+      },
+      "image_url": "https://i1.feedspot.com/5342568.jpg?t=1636724169"
+    },
+    {
+      "title": "NCLEX High Yield Blog",
+      "feed_url": "https://nclexhighyield.com/blogs/news.atom",
+      "website_url": "https://nclexhighyield.com/blogs/news",
+      "description": "NCLEX High Yield is your latest source to prepare for your NCLEX exam. Find content for your exam, tips and tricks that the boards love to ask, and overall general information on how to study, what to study, and complex topics broken down for you.",
+      "followers": {
+        "facebook": 32500,
+        "twitter": 358,
+        "instagram": 71300
+      },
+      "image_url": "https://i1.feedspot.com/5379837.jpg?t=1646894708"
+    }
+  ]
+}

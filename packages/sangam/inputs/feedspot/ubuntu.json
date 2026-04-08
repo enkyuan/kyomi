@@ -1,0 +1,327 @@
+{
+  "category": "Ubuntu",
+  "source_url": "https://rss.feedspot.com/ubuntu_rss_feeds",
+  "feeds": [
+    {
+      "title": "Ubuntu Insights Blog",
+      "feed_url": "https://ubuntu.com/blog/feed",
+      "website_url": "https://ubuntu.com/blog",
+      "description": "Ubuntu Insights believe in fast, effective computing for everyone. Created by the open-source community and Canonical, Ubuntu is free to use and share, at home and in business.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 31300
+      },
+      "image_url": "https://i1.feedspot.com/4129537.jpg?t=1642073484"
+    },
+    {
+      "title": "OMG! Ubuntu",
+      "feed_url": "https://www.omgubuntu.co.uk/feed",
+      "website_url": "https://www.omgubuntu.co.uk/",
+      "description": "OMG! Ubuntu! is an online news site covering Ubuntu and related activities in the Linux and open-source eco-systems in an approachable and engaging way. They also cover items of interest that happen within the wider technology sector from the context of Ubuntu, relaying what those changes may mean for the OS, the community, and their readers.",
+      "followers": {
+        "facebook": 243500,
+        "twitter": 172100,
+        "instagram": 19400
+      },
+      "image_url": "https://i1.feedspot.com/5001721.jpg?t=1746425101"
+    },
+    {
+      "title": "Xubuntu Blog",
+      "feed_url": "https://xubuntu.org/blog/feed/",
+      "website_url": "https://xubuntu.org/blog/",
+      "description": "Xubuntu is a community developed operating system that is well-suited for laptops and desktops. Whether you use it at home, at school or at work Xubuntu contains all the applications you'll ever need, from word processing and email applications, to web server software and programming tools.",
+      "followers": {
+        "facebook": 17200,
+        "twitter": 12000
+      },
+      "image_url": "https://i1.feedspot.com/4614573.jpg?t=1642073898"
+    },
+    {
+      "title": "Planet Ubuntu",
+      "feed_url": "https://planet.ubuntu.com/rss20.xml",
+      "website_url": "https://planet.ubuntu.com/",
+      "description": "Planet Ubuntu is a window into the world, work and lives of Ubuntu developers and contributors.",
+      "followers": {
+        "twitter": 48100
+      },
+      "image_url": "https://i1.feedspot.com/99326.jpg?t=1612613793"
+    },
+    {
+      "title": "UbuntuHandbook - News, Tutorials, Howtos for Ubuntu Linux",
+      "feed_url": "https://feeds.feedburner.com/UbuntuhandbookNewsTutorialsHowtosForUbuntuLinux",
+      "website_url": "https://ubuntuhandbook.org/",
+      "description": "At UbuntuHandbook you'll find news, howtos, tutorials, useful tips, and app reviews of Ubuntu.",
+      "followers": {
+        "twitter": 673
+      },
+      "image_url": "https://i1.feedspot.com/2083750.jpg?t=1642074434"
+    },
+    {
+      "title": "Ubuntu Buzz",
+      "feed_url": "https://feeds.feedburner.com/Ubuntubuzz",
+      "website_url": "https://www.ubuntubuzz.com/",
+      "description": "ubuntubuzz.com is another ubuntu fan blog which wanna share, learn, and talk about ubuntu, computer security, and digital forensic.",
+      "followers": {
+        "facebook": 601,
+        "twitter": 290
+      },
+      "image_url": "https://i1.feedspot.com/223110.jpg?t=1615871579"
+    },
+    {
+      "title": "TecAdmin",
+      "feed_url": "https://tecadmin.net/feed/",
+      "website_url": "https://tecadmin.net/",
+      "description": "Hello, I'm Rahul Kumar, founder & chief editor of TecAdmin.net. I am a Red Hat Certified Engineer (RHCE) and working as an IT professional since 2009. TecAdmin blog was started with the goal of providing easy how-to guides for Linux/Windows system administrators. Follow for how-to guides, tutorials, open source news, and more.",
+      "followers": {
+        "facebook": 9100,
+        "twitter": 941,
+        "instagram": 157
+      },
+      "image_url": "https://i1.feedspot.com/5291399.jpg?t=1623220406"
+    },
+    {
+      "title": "RoseHosting \u00bb Ubuntu",
+      "feed_url": "https://www.rosehosting.com/blog/category/ubuntu/feed/",
+      "website_url": "https://www.rosehosting.com/blog/category/ubuntu/",
+      "description": "The following section of RoseHosting is dedicated to articles on Ubuntu. RoseHosting is a leading VPS hosting provider, serving thousands of clients world-wide.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5356589.jpg?t=1640246886"
+    },
+    {
+      "title": "OMG! Ubuntu - Ubuntu Linux News, Apps and Reviews",
+      "feed_url": "https://www.omgubuntu.co.uk/feed",
+      "website_url": "https://unixtutorial.org/",
+      "description": "An online Ubuntu magazine bringing you the latest Ubuntu news, apps, interview and reviews.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/92315.jpg?t=1642076512"
+    },
+    {
+      "title": "Ubuntu Cinnamon Remix Blog",
+      "feed_url": "https://ubuntucinnamon.org/?feed=rss2",
+      "website_url": "https://ubuntucinnamon.org/?page_id=834",
+      "description": "Ubuntu Cinnamon Remix is a new distribution that utilizes Linux Mint's Cinnamon desktop environment. Ubuntu Cinnamon Remix gives you the most standardized and traditional software, that allows the user to remove the application and then choose a different application over it as they wish.",
+      "followers": {
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5291428.jpg?t=1623223367"
+    },
+    {
+      "title": "Ubuntu Studio",
+      "feed_url": "https://ubuntustudio.org/feed/",
+      "website_url": "https://ubuntustudio.org/news/",
+      "description": "News from the Ubuntu Studio. Ubuntu Studio is a community effort, created by volunteers, targeted towards all skill levels, from beginner to pro, and aims to be easy to install and easy to use, as well as provide all the tools necessary for any type of media content creation.",
+      "followers": {
+        "facebook": 16900,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5356675.jpg?t=1642077796"
+    },
+    {
+      "title": "Its Ubuntu",
+      "feed_url": "https://itsubuntu.com/feed/",
+      "website_url": "https://itsubuntu.com/",
+      "description": "Its Ubuntu is an exclusive Linux Ubuntu blog. Follow to get regular Ubuntu tutorials, how to Ubuntu, Linux Tips, freebies, and more.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 14
+      },
+      "image_url": "https://i1.feedspot.com/5291426.jpg?t=1642135786"
+    },
+    {
+      "title": "Ubuntu-Server.com \u00bb Ubuntu",
+      "feed_url": "https://www.ubuntu-server.com/ubuntu/feed/",
+      "website_url": "https://www.ubuntu-server.com/ubuntu/",
+      "description": "Ubuntu Server Administration Guides from Ubuntu-Server.com.",
+      "followers": {
+        "twitter": 659
+      },
+      "image_url": "https://i1.feedspot.com/5356593.jpg?t=1642135909"
+    },
+    {
+      "title": "Ubuntu Fridge",
+      "feed_url": "https://ubuntu-news.org/feed/",
+      "website_url": "https://ubuntu-news.org/",
+      "description": "The Fridge is an information hub for the Ubuntu community, bringing together news, grassroots marketing, advocacy, team collaboration, and great original content about Ubuntu.",
+      "followers": {
+        "twitter": 526
+      },
+      "image_url": "https://i1.feedspot.com/300332.jpg?t=1642136174"
+    },
+    {
+      "title": "Ubuntu MATE Blog",
+      "feed_url": "https://ubuntu-mate.org/rss.xml",
+      "website_url": "https://ubuntu-mate.org/blog/",
+      "description": "Ubuntu MATE is a stable, easy-to-use operating system with a configurable desktop environment. Ideal for those who want the most out of their desktops, laptops and netbooks and prefer a traditional desktop metaphor. With modest hardware requirements it is suitable for modern workstations and older hardware alike.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 15000
+      },
+      "image_url": "https://i1.feedspot.com/4399675.jpg?t=1640243110"
+    },
+    {
+      "title": "2daygeek",
+      "feed_url": "https://www.2daygeek.com/feed/",
+      "website_url": "https://www.2daygeek.com/",
+      "description": "2dayGeek(2dG) is an online community that publishes practical and useful articles for aspirants like you to become experts. 2dayGeek articles cover Linux tips & tricks, Linux how-to tutorials, Linux practical guides, Linux practical examples, and much more.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 768
+      },
+      "image_url": "https://i1.feedspot.com/4614508.jpg?t=1615871568"
+    },
+    {
+      "title": "Ubuntu on Big Iron",
+      "feed_url": "http://ubuntu-on-big-iron.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://ubuntu-on-big-iron.blogspot.com/",
+      "description": "Find posts on Ubuntu Server for IBM Z and LinuxONE (in Linux terms the s390x architecture).",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5356652.jpg?t=1641807854"
+    },
+    {
+      "title": "LinuxHostSupport \u00bb Ubuntu",
+      "feed_url": "https://linuxhostsupport.com/blog/category/ubuntu/feed/",
+      "website_url": "https://linuxhostsupport.com/blog/category/ubuntu/",
+      "description": "We love Linux and we love servers. We also love fast websites and applications, thus our passion for overturning slow servers to faster ones. Let us make your end users happy.Use our extensive experience with various server setups and Linux distros to make your server flourish. Say goodbye to your server struggles and focus on your business.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 12
+      },
+      "image_url": "https://i1.feedspot.com/5356591.jpg?t=1640327920"
+    },
+    {
+      "title": "Terence Eden's Blog \u00bb Ubuntu",
+      "feed_url": "https://shkspr.mobi/blog/tag/ubuntu/feed/",
+      "website_url": "https://shkspr.mobi/blog/tag/ubuntu/",
+      "description": "I'm Terence - a standards nerd, technology enthusiast, Linux fiddler, and so much more. This is my personal blog where I write about everything I know or have learned on various topics of my interest. Find posts on how-tos, guides, articles, and other resources on Ubuntu in this section of my blog.",
+      "followers": {
+        "twitter": 11700
+      },
+      "image_url": "https://i1.feedspot.com/5356657.jpg?t=1642078199"
+    },
+    {
+      "title": "LinuxCloudVPS \u00bb Ubuntu",
+      "feed_url": "https://www.linuxcloudvps.com/blog/category/ubuntu/feed/",
+      "website_url": "https://www.linuxcloudvps.com/blog/category/ubuntu/",
+      "description": "Read guides, how-tos articles, tips & tricks, tutorials, and more on Ubuntu in this section of LinuxCloudVPS. LinuxCloudVPS.com is a service of Rose Web Services LLC, which has been building complex hosting setups and providing enterprise-grade hosting solutions for public and private clouds since 2001. Our cloud setups can be customized to fit your business needs while saving you money.",
+      "followers": {
+        "facebook": 162,
+        "twitter": 183
+      },
+      "image_url": "https://i1.feedspot.com/5356592.jpg?t=1642078498"
+    },
+    {
+      "title": "matrixpost.net \u00bb Ubuntu",
+      "feed_url": "https://blog.matrixpost.net/tag/ubuntu/feed/",
+      "website_url": "https://blog.matrixpost.net/tag/ubuntu/",
+      "description": "Hi! I'm Marcus Rath. The main purpose of this blog is to use it as my own knowledge base. You can read articles on .Net, C#, Office365, Linux, Ubuntu, Windows, and more on my blog.",
+      "followers": {
+        "twitter": 30
+      },
+      "image_url": "https://i1.feedspot.com/5356655.jpg?t=1642079587"
+    },
+    {
+      "title": "Wimantis blog \u00bb Ubuntu",
+      "feed_url": "https://wimantis.ninja/tag/ubuntu/rss/",
+      "website_url": "https://wimantis.ninja/tag/ubuntu/",
+      "description": "William McMurray shares his knowledge on Unbuntu in the following section of his blog. His blog is all about Coding, Linux, cryptos, woodworking and electronics.",
+      "followers": {
+        "twitter": 392,
+        "instagram": 95
+      },
+      "image_url": "https://i1.feedspot.com/5356653.jpg?t=1640252743"
+    },
+    {
+      "title": "apt-get install debian-wizard",
+      "feed_url": "https://feeds.feedburner.com/RaphaelHertzogCom",
+      "website_url": "https://raphaelhertzog.com/#",
+      "description": "This blog collects all writings about the Debian and Ubuntu projects and the larger free software ecosystem.",
+      "followers": {
+        "facebook": 655,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/578846.jpg?t=1642137041"
+    },
+    {
+      "title": "Ubuntu Geek",
+      "feed_url": "https://feeds.feedburner.com/UbuntuGeek",
+      "website_url": "http://www.ubuntugeek.com/",
+      "description": "Ubuntu Geek blog shares Ubuntu Linux Tutorials,Howtos,Tips & News.",
+      "followers": {
+        "twitter": 60400
+      },
+      "image_url": "https://i1.feedspot.com/81277.jpg?t=1642138481"
+    },
+    {
+      "title": "UbuntuHak",
+      "feed_url": "https://ubuntuhak.blogspot.com/feeds/posts/default",
+      "website_url": "https://ubuntuhak.blogspot.com/",
+      "description": "A blog about using Ubuntu Linux, a web log of learning experience.",
+      "followers": {
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/3588866.jpg?t=1642138575"
+    },
+    {
+      "title": "UbuntuPIT",
+      "feed_url": "https://www.instagram.com/ubuntupit/",
+      "website_url": "https://www.ubuntupit.com/",
+      "description": "UbuntuPIT is a leading technology blog on Ubuntu Linux news, software, tutorials, Linux Distro Reviews, Chromebook Tutorials, Linux games, coding & programming, and open-source trends including IoT, machine learning, data science, artificial intelligence, cloud computing, cybersecurity, deep learning, etc. UbuntuPIT loves open-source software.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 939,
+        "instagram": 60
+      },
+      "image_url": "https://i1.feedspot.com/5273411.jpg?t=1619520136"
+    },
+    {
+      "title": "Linux Ubuntu Apps Reviews",
+      "feed_url": "https://www.linuxandubuntu.com/feed",
+      "website_url": "https://www.linuxandubuntu.com/",
+      "description": "Linux/Ubuntu Applications reviews, Frequently asked questions on linux, ubuntu updates, Linux other distribution apps updates and news. Linux basic Tutorials and howtos for Linux newbies.",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4242192.jpg?t=1615806100"
+    },
+    {
+      "title": "Fedingo \u00bb Ubuntu",
+      "feed_url": "https://fedingo.com/category/ubuntu/feed/",
+      "website_url": "https://www.linuxuprising.com/search/label/ubuntu?max-results=14",
+      "description": "In this section, Fedingo brings you tutorials, how to's, user guides, and more on Ubuntu. Fedingo provides high quality tech tutorials, user guides and how to articles to help tech professionals become better at what they do.",
+      "followers": {
+        "facebook": 119,
+        "twitter": 20
+      },
+      "image_url": "https://i1.feedspot.com/5356590.jpg?t=1640246387"
+    },
+    {
+      "title": "linuxium.com.au",
+      "feed_url": "https://linuxiumcomau.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://linuxiumcomau.blogspot.com/",
+      "description": "Linuxium blog shares news related to ubuntu.",
+      "followers": {
+        "facebook": 562,
+        "twitter": 250
+      },
+      "image_url": "https://i1.feedspot.com/4614581.jpg?t=1642076858"
+    },
+    {
+      "title": "Full Circle Magazine",
+      "feed_url": "https://fullcirclemagazine.org/feed/",
+      "website_url": "https://fullcirclemagazine.org/",
+      "description": "Full Circle is a free, independent, monthly PDF magazine dedicated to the Ubuntu family of Linux operating systems. Each month, it contains helpful how-to articles and reader-submitted stories.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/34781.jpg?t=1640328023"
+    }
+  ]
+}

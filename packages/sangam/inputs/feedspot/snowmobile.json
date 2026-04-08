@@ -1,0 +1,50 @@
+{
+  "category": "Snowmobile",
+  "source_url": "https://rss.feedspot.com/snowmobile_rss_feeds",
+  "feeds": [
+    {
+      "title": "Rockymountainsnowmobile.com",
+      "feed_url": "https://blog.rockymountainsnowmobile.com/feed/",
+      "website_url": "https://blog.rockymountainsnowmobile.com/",
+      "description": "The Rocky Mountains, the birth place of our business and our premier riding spot. Rocky Mountain Snowmobile defines our sport, our business, our hobby, and our stomping grounds.",
+      "followers": {
+        "facebook": 3300,
+        "instagram": 842
+      },
+      "image_url": "https://i1.feedspot.com/5194228.jpg?t=1599478987"
+    },
+    {
+      "title": "Northeast Minnesota Snowmobiling Blog",
+      "feed_url": "http://blog.snowmobiletrail.com/mn/feed/",
+      "website_url": "http://blog.snowmobiletrail.com/mn/",
+      "description": "Northeast Minnesota Snowmobiling Blog provides latest news and updates about snowmobiles.",
+      "followers": {
+        "facebook": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5194223.jpg?t=1599476497"
+    },
+    {
+      "title": "AMSOIL Blog \u00bb Snowmobile Racing",
+      "feed_url": "https://blog.amsoil.com/category/racing/snowmobile-racing/feed/",
+      "website_url": "https://blog.amsoil.com/category/events/snowmobile-racing/",
+      "description": "AMSOIL is 'The First in Synthetics' and worldwide leader in synthetic lubrication technologies. Fundamental to this great success is a commitment to quality and constant improvement. AMSOIL offers a broad range of automotive and industrial lubricants and filtration equipment which exceed industry performance specifications by a wide margin. Know about Snowmobile racing news and updates here.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 12900,
+        "instagram": 129199
+      },
+      "image_url": "https://i1.feedspot.com/5194227.jpg?t=1599476979"
+    },
+    {
+      "title": "Lofty Peaks Adventures \u00bb Snowmobiling",
+      "feed_url": "https://www.loftypeaks.com/blog/category/snowmobiling/feed/",
+      "website_url": "https://www.loftypeaks.com/blog/category/snowmobiling/",
+      "description": "Lofty Peaks Adventures offers snowmobile rentals and tours, and ATV rentals and tours in Heber City, Park City, Snowbird, and the nearby Utah areas. Stay tuned to get the latest updates about Snowmobiling.",
+      "followers": {
+        "facebook": 882,
+        "twitter": 56
+      },
+      "image_url": "https://i1.feedspot.com/5194255.jpg?t=1599479936"
+    }
+  ]
+}

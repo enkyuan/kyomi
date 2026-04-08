@@ -1,0 +1,334 @@
+{
+  "category": "Education News",
+  "source_url": "https://rss.feedspot.com/education_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Inside Higher Ed Blog",
+      "feed_url": "https://www.insidehighered.com/rss.xml",
+      "website_url": "https://www.insidehighered.com/",
+      "description": "Inside Higher Ed is the daily news website for people who care about higher education. Offering higher education news, jobs, career advice, and events for college and university faculty, adjuncts, graduate students, and administrators.",
+      "followers": {
+        "facebook": 124900,
+        "twitter": 244900
+      },
+      "image_url": "https://i1.feedspot.com/4218253.jpg?t=1613482299"
+    },
+    {
+      "title": "EdSurge",
+      "feed_url": "https://www.edsurge.com/articles_rss",
+      "website_url": "https://www.edsurge.com/news",
+      "description": "EdSurge is an independent education technology information resource and community. Find blog posts on K12 and HigherEd Edtech News, Research, Jobs, Products, and Events. We root our journalism in the lives of educators and learners, sharing stories that elevate their voices and experiences.",
+      "followers": {
+        "facebook": 37200,
+        "twitter": 156400
+      },
+      "image_url": "https://i1.feedspot.com/4387022.jpg?t=1608183011"
+    },
+    {
+      "title": "The 74",
+      "feed_url": "https://www.the74million.org/feed/",
+      "website_url": "https://www.the74million.org/",
+      "description": "The 74 is a nonprofit news organization covering America's education system from early childhood through college and career. read their blog site and get information about their work, education policies, the status of education in America, teachers, students, and more.",
+      "followers": {
+        "facebook": 144000,
+        "twitter": 58400,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4700588.jpg?t=1688381060"
+    },
+    {
+      "title": "eSchool News",
+      "feed_url": "https://www.eschoolnews.com/feed/",
+      "website_url": "https://www.eschoolnews.com/it-leadership/k-12-tech-innovation-news/",
+      "description": "eSchool News covers education technology in all its aspects, from legislation and litigation, to best practices, to lessons learned and new products. First published in March of 1998, eSchool News is a monthly print and digital newspaper providing the news and information necessary to help K-20 decision-makers successfully use technology and the internet to transform North America's schools and colleges and achieve their educational goals.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 118000
+      },
+      "image_url": "https://i1.feedspot.com/4929708.jpg?t=1675152437"
+    },
+    {
+      "title": "Higher Ed Dive",
+      "feed_url": "https://www.highereddive.com/feeds/news/",
+      "website_url": "https://www.highereddive.com/",
+      "description": "Higher Ed Dive provides in-depth journalism and insight into the most impactful news and trends shaping higher education. The newsletters and website cover topics such as online learning, policy, legal, leadership, enrollment and more.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5272568.jpg?t=1619173909"
+    },
+    {
+      "title": "The Hechinger Report",
+      "feed_url": "https://hechingerreport.org/feed/",
+      "website_url": "https://hechingerreport.org/",
+      "description": "We cover inequality and innovation in education with in-depth journalism that uses research, data and stories from classrooms and campuses to show the public how education can be improved and why it matters.",
+      "followers": {
+        "facebook": 11800,
+        "twitter": 45100,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4928960.jpg?t=1688380773"
+    },
+    {
+      "title": "K-12 Dive",
+      "feed_url": "https://www.k12dive.com/feeds/news/",
+      "website_url": "https://www.k12dive.com/",
+      "description": "K-12 Dive is a leading publication operated by Industry Dive and provides news and analysis for leaders in k-12 education. We cover topics like classroom tech, policy, school systems, personalized learning, and more. Catch the latest disruptive stories and articles in the Educational sector here. K-12 Dive is a leading publication operated by Industry Dive.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 22300
+      },
+      "image_url": "https://i1.feedspot.com/5501377.jpg?t=1675153402"
+    },
+    {
+      "title": "News Decoder",
+      "feed_url": "https://news-decoder.com/feed/",
+      "website_url": "https://news-decoder.com/",
+      "description": "News Decoder is a global educational news service for young people. We help schools fulfill their mission to create better global citizens.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 799,
+        "instagram": 878
+      },
+      "image_url": "https://i1.feedspot.com/5615849.jpg?t=1688380574"
+    },
+    {
+      "title": "Education and Career News",
+      "feed_url": "https://www.educationandcareernews.com/feed/",
+      "website_url": "https://www.educationandcareernews.com/",
+      "description": "Education and Career News is a news website that features articles on various topics related to education, such as education technology, investing in arts education, women in STEM, and the future of education. The blog site also features interviews with experts in the field of education.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5615847.jpg?t=1688380560"
+    },
+    {
+      "title": "The Independent \u00bb Education",
+      "feed_url": "http://www.independent.co.uk/news/education/rss",
+      "website_url": "https://www.independent.co.uk/news/education",
+      "description": "News, comment and features from The Independent on Education related topics and issues.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/1038790.jpg?t=1688478781"
+    },
+    {
+      "title": "The Indian Express \u00bb Education",
+      "feed_url": "https://indianexpress.com/section/india/education/feed/",
+      "website_url": "https://indianexpress.com/section/education/",
+      "description": "Education in India: Find Education news from India. Get Educational news, Career and job information from India and latest education news on IndianExpress.com.",
+      "followers": {
+        "facebook": 7600000,
+        "twitter": 4300000,
+        "instagram": 1600000
+      },
+      "image_url": "https://i1.feedspot.com/4929773.jpg?t=1688541328"
+    },
+    {
+      "title": "Chalkbeat",
+      "feed_url": "https://www.chalkbeat.org/arc/outboundfeeds/rss/",
+      "website_url": "https://www.chalkbeat.org/",
+      "description": "Chalkbeat is a nonprofit news organization committed to covering one of America's most important stories: the effort to improve schools for all children, especially those who have historically lacked access to a quality education.",
+      "followers": {
+        "facebook": 13300,
+        "twitter": 21000,
+        "instagram": 9300
+      },
+      "image_url": "https://i1.feedspot.com/4928980.jpg?t=1688381150"
+    },
+    {
+      "title": "The PIE News",
+      "feed_url": "https://thepienews.com/feed/",
+      "website_url": "https://thepienews.com/news/",
+      "description": "The PIE News is a media, recruitment and consultancy platform for Professionals in International Education. Subscribe us to keep up with News and business analysis for Professionals in International Education.",
+      "followers": {
+        "facebook": 12700,
+        "twitter": 22300,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4655010.jpg?t=1607330785"
+    },
+    {
+      "title": "Education Next Blog",
+      "feed_url": "https://www.educationnext.org/feed/",
+      "website_url": "https://www.educationnext.org/",
+      "description": "Education Next is a journal of opinion and research about education policy. Education Next is a scholarly journal committed to careful examination of evidence relating to school reform, published by the Education Next Institute and the Harvard Program on Education Policy and Governance at the Harvard Kennedy School.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 147800,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4929778.jpg?t=1679477309"
+    },
+    {
+      "title": "Schools Week",
+      "feed_url": "https://schoolsweek.co.uk/feed/",
+      "website_url": "https://schoolsweek.co.uk/",
+      "description": "Schools Week is a leading digital newspaper providing In-depth, investigative education Journalism, determined to get past the bluster and explain the facts. Get the latest school and education news, investigations, expert columns, book reviews, explainers of research, and policy documents for England.",
+      "followers": {
+        "facebook": 30300,
+        "twitter": 112000
+      },
+      "image_url": "https://i1.feedspot.com/4930136.jpg?t=1679486157"
+    },
+    {
+      "title": "Nursery World",
+      "feed_url": "https://www.nurseryworld.co.uk/umbraco/surface/newsletterfeed/RssFeed?id=211762",
+      "website_url": "https://www.nurseryworld.co.uk/",
+      "description": "Nursery World is the leading title for the early years community, in print and online. Discover, share and discuss all the latest news and best practice about early years education and childcare with us.",
+      "followers": {
+        "twitter": 37600,
+        "instagram": 8300
+      },
+      "image_url": "https://i1.feedspot.com/4804286.jpg?t=1610352855"
+    },
+    {
+      "title": "Eduwonk",
+      "feed_url": "https://www.eduwonk.com/feed",
+      "website_url": "https://www.eduwonk.com/",
+      "description": "Education News, Analysis, and Commentary. Eduwonk is a blog written by Andrew J. Rotherham, that mainly focuses on education policy & politics. Eduwonk is a blog written by Andrew J. Rotherham, Co-founder and Partner at Bellwether Education Partners. The blog focuses mostly on education policy and politics.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 23200
+      },
+      "image_url": "https://i1.feedspot.com/351929.jpg?t=1605679538"
+    },
+    {
+      "title": "The College Fix",
+      "feed_url": "https://www.thecollegefix.com/feed/",
+      "website_url": "https://www.thecollegefix.com/",
+      "description": "The Student Free Press Association is a nonprofit organization run by veteran journalists to help beginning journalists. With our higher-education news website, The College Fix, we work with college-aged writers with the purpose of identifying and supporting young people who seek to improve campus journalism, explore careers in the media, and commit themselves to the principles of a free society.",
+      "followers": {
+        "facebook": 69600,
+        "twitter": 22300
+      },
+      "image_url": "https://i1.feedspot.com/5017266.jpg?t=1664518396"
+    },
+    {
+      "title": "In The Margins",
+      "feed_url": "https://www.diverseeducation.com/feed",
+      "website_url": "https://www.diverseeducation.com/",
+      "description": "Achieving equality in higher education. The stakes have never been higher. The issues never more complex. Who graduates, and why? Who is getting hired as faculty and what is their experience?In each episode, we will look at issues surrounding students, faculty, diversity and inclusion, and skyrocketing college costs. From critical conversation to news, numbers, and analysis \u2014 we've got you covered. You can count on Diverse's In The Margins to bring you the latest, most relevant thought leadership as it pertains to diversity, inclusion, and equity in higher education...",
+      "followers": {
+        "facebook": 39800,
+        "twitter": 20300,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5465501.jpg?t=1745504226"
+    },
+    {
+      "title": "Education Beat",
+      "feed_url": "https://edsource.org/feed/atom",
+      "website_url": "https://edsource.org/",
+      "description": "A podcast that gets to the heart of schools in California and beyond, bringing you the personal stories behind the headlines, from preschool to college. Join the team at EdSource each week to hear the voices that are too often drowned out in the broader conversation: parents, teachers, and the students themselves.",
+      "followers": {
+        "facebook": 16400,
+        "twitter": 22300,
+        "instagram": 6300
+      },
+      "image_url": "https://i1.feedspot.com/1102797.jpg?t=1745431146"
+    },
+    {
+      "title": "We Are Teachers",
+      "feed_url": "https://www.weareteachers.com/feed/",
+      "website_url": "https://www.weareteachers.com/",
+      "description": "WeAreTeachers is more than a website, it is a proud community of educators - 3 million strong - who share ideas, resources, and stories of the amazing things happening in classrooms around the country. Our mission is to promote innovation in education through collaboration and connection to the most effective classroom resources.",
+      "followers": {
+        "facebook": 2000000,
+        "twitter": 641800,
+        "instagram": 635300
+      },
+      "image_url": "https://i1.feedspot.com/4527836.jpg?t=1605677708"
+    },
+    {
+      "title": "In The Margins",
+      "feed_url": "https://njedreport.com/feed/",
+      "website_url": "https://njedreport.com/",
+      "description": "Achieving equality in higher education. The stakes have never been higher. The issues never more complex. Who graduates, and why? Who is getting hired as faculty and what is their experience?In each episode, we will look at issues surrounding students, faculty, diversity and inclusion, and skyrocketing college costs. From critical conversation to news, numbers, and analysis \u2014 we've got you covered. You can count on Diverse's In The Margins to bring you the latest, most relevant thought leadership as it pertains to diversity, inclusion, and equity in higher education...",
+      "followers": {
+        "facebook": 17200,
+        "twitter": 5800,
+        "instagram": 150
+      },
+      "image_url": "https://i1.feedspot.com/5504387.jpg?t=1745423422"
+    },
+    {
+      "title": "Idaho Education News Blog",
+      "feed_url": "https://www.idahoednews.org/feed/",
+      "website_url": "https://www.idahoednews.org/category/kevins-blog/",
+      "description": "Idaho's source for all its education news and updates. Idaho Education News is a comprehensive collection of online sources that provides information about public education in Idaho. The website, IdahoEdNews.org, features stories, news, and commentary about education policies and practices and the people who create and implement them.",
+      "followers": {
+        "facebook": 23300,
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/5464593.jpg?t=1667981363"
+    },
+    {
+      "title": "New York Times \u00bb Education",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/education/rss.xml",
+      "website_url": "https://www.nytimes.com/section/education",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000,
+        "instagram": 19600000
+      },
+      "image_url": "https://i1.feedspot.com/4608628.jpg"
+    },
+    {
+      "title": "New Mexico Education",
+      "feed_url": "https://nmeducation.org/feed/",
+      "website_url": "https://nmeducation.org/",
+      "description": "New Mexico Education is a blog site dedicated to keeping New Mexico leaders and citizens informed on key education issues. With a focus on highlighting the challenges and success within our public school system, we hope to inspire change to improve New Mexico's education system.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 163
+      },
+      "image_url": "https://i1.feedspot.com/5615848.jpg?t=1688380567"
+    },
+    {
+      "title": "The Chronicle of Higher Education",
+      "feed_url": "https://www.chronicle.com/section/Home/5/rss",
+      "website_url": "https://www.chronicle.com/",
+      "description": "The Chronicle of Higher Education, published since 1966, is the leading source of news, information, and jobs for college and university faculty members and administrators.",
+      "followers": {
+        "facebook": 190800,
+        "twitter": 263100
+      },
+      "image_url": "https://i1.feedspot.com/4929783.jpg?t=1688473002"
+    },
+    {
+      "title": "Education Dive",
+      "feed_url": "https://www.educationdive.com/feeds/news/",
+      "website_url": "https://www.educationdive.com/",
+      "description": "Education Dive provides news and analysis for higher ed and k-12 leaders. We cover topics like online learning, policy, ed tech, MOOCs, admissions, blended learning and more.",
+      "followers": {
+        "facebook": 8100,
+        "twitter": 101
+      },
+      "image_url": "https://i1.feedspot.com/4773280.jpg?t=1688380761"
+    },
+    {
+      "title": "University World News",
+      "feed_url": "https://www.universityworldnews.com/page.php?page=UW_Main",
+      "website_url": "https://www.universityworldnews.com/page.php?page=UW_Main",
+      "description": "University World News is the first high-quality truly international newspaper and website, dedicated to providing weekly emailed newspapers plus access to a dedicated news website. They are the first truly global independent higher education publication.",
+      "followers": {
+        "facebook": 26300,
+        "twitter": 22600
+      },
+      "image_url": "https://i1.feedspot.com/1159828.jpg?t=1617200928"
+    },
+    {
+      "title": "NEA",
+      "feed_url": "https://www.nea.org/nea-today/all-news-articles?",
+      "website_url": "https://www.nea.org/nea-today/all-news-articles?",
+      "description": "The National Education Association, the nation's largest professional employee organization, is committed to advancing the cause of public education.",
+      "followers": {
+        "facebook": 261399,
+        "twitter": 245300,
+        "instagram": 97800
+      },
+      "image_url": "https://i1.feedspot.com/3822239.jpg?t=1608184507"
+    }
+  ]
+}

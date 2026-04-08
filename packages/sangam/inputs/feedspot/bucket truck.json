@@ -1,0 +1,47 @@
+{
+  "category": "Bucket Truck",
+  "source_url": "https://rss.feedspot.com/bucket_truck_rss_feeds",
+  "feeds": [
+    {
+      "title": "Van Ladder Bucket Trucks Blog",
+      "feed_url": "https://www.vanladder.com/feed/",
+      "website_url": "https://www.vanladder.com/blog/",
+      "description": "The Van Ladder Bucket Trucks Blog covers a wide range of topics related to these specialized vehicles and their applications. Some of which include general information, buying guides, product launches, and many more.",
+      "followers": {
+        "facebook": 174
+      },
+      "image_url": "https://i1.feedspot.com/5618854.jpg?t=1688631428"
+    },
+    {
+      "title": "Versalift Blog",
+      "feed_url": "https://versalift.com/blog/feed/",
+      "website_url": "https://versalift.com/blog/",
+      "description": "Learn about Bucket truck and aerial lift news, innovations, and explanations - the Versalift blog keeps you current with updates, and press releases. Versalift is a leading manufacturer of bucket trucks, digger derricks, cable placers, and high-reach aerial lifts for power generation, transmission, and distribution industries.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 167
+      },
+      "image_url": "https://i1.feedspot.com/5618853.jpg?t=1688631363"
+    },
+    {
+      "title": "Utility Equipment Parts Blog",
+      "feed_url": "https://utilityequipmentparts.com/feed/",
+      "website_url": "https://utilityequipmentparts.com/blog/",
+      "description": "Keeping readers informed about the latest developments in the bucket truck industry and how they may impact businesses, Utility Equipment Parts Blog is a useful source of information and news for Bucket Truck professionals. Get the best tips & tricks about Bucket Truck use and applications here.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5618852.jpg?t=1688631500"
+    },
+    {
+      "title": "TruckMax Blog \u00bb Bucket Trucks",
+      "feed_url": "https://www.truckmaxhomestead.com/blog/category/bucket-trucks/feed/",
+      "website_url": "https://www.truckmaxhomestead.com/blog/category/bucket-trucks/",
+      "description": "Get in-depth Trucking and maintenance insights with detailed parts breakdowns for Bucket Trucks in the TruckMax Blog. TruckMax Homestead is a full-service commercial truck dealer for truck sales, parts, and service. TruckMax stocks the largest selection of new and used commercial trucks in South Florida.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 9,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5618851.jpg?t=1688631459"
+    }
+  ]
+}

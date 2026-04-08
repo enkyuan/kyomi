@@ -1,0 +1,70 @@
+{
+  "category": "UK Parkinson",
+  "source_url": "https://rss.feedspot.com/uk_parkinson_rss_feeds",
+  "feeds": [
+    {
+      "title": "South London Younger Parkinson's Network Blog",
+      "feed_url": "https://slypn.org.uk/feed/",
+      "website_url": "https://slypn.org.uk/blog/",
+      "description": "South London Younger Parkinson's Network (SLYPN) is a support network for younger people, who are working age and live with Parkinson's in South London. We provide a valuable support network to people diagnosed with Parkinson's at a young/working age. We know how it feels to be diagnosed and together we can make each other stronger!",
+      "followers": {
+        "facebook": 556,
+        "twitter": 206
+      },
+      "image_url": "https://i1.feedspot.com/4910526.jpg?t=1620051157"
+    },
+    {
+      "title": "Parkinson's UK",
+      "feed_url": "https://medium.com/feed/parkinsons-uk",
+      "website_url": "https://medium.com/parkinsons-uk",
+      "description": "We're the Parkinson's charity that drives better care, treatments and quality of life. Because we're here, no one has to face Parkinson's alone. Get the latest research news, discover more about Parkinson's and read about how others are getting involved.",
+      "followers": {
+        "facebook": 109200,
+        "twitter": 74800
+      },
+      "image_url": "https://i1.feedspot.com/4910519.jpg?t=1620051111"
+    },
+    {
+      "title": "Parkinsons.Me Blog",
+      "feed_url": "https://www.parkinsons.me/blog-feed.xml",
+      "website_url": "https://www.parkinsons.me/parkinsons-me-blog",
+      "description": "Parkinsons.Me UK based charity offering support, advice and information to families affected by Parkinson's disease.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 1600,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4910520.jpg?t=1620051119"
+    },
+    {
+      "title": "My Positive Parkinality",
+      "feed_url": "https://www.parkinality.co.uk/feed/",
+      "website_url": "https://www.parkinality.co.uk/",
+      "description": "A predominantly positive personal blog about living with early onset Parkinson's.",
+      "followers": {
+        "facebook": 273,
+        "twitter": 10
+      },
+      "image_url": "https://i1.feedspot.com/4910528.jpg?t=1620051130"
+    },
+    {
+      "title": "Cure Parkinson's Trust",
+      "feed_url": "https://cureparkinsons.org.uk/feed/",
+      "website_url": "https://cureparkinsons.org.uk/latest/",
+      "description": "The Cure Parkinson's Trust is a patient led charity which funds research that will have an impact on the lives of the 10 million people living with Parkinson's, with the hope of an eventual cure for the condition. We fund trials into potential new treatments to slow, halt or reverse Parkinson's. Our mission is to obliterate Parkinson's once and for all.",
+      "followers": {
+        "facebook": 10800,
+        "twitter": 21800
+      },
+      "image_url": "https://i1.feedspot.com/4582891.jpg?t=1615194773"
+    },
+    {
+      "title": "Parkinson's UK, Amersham and High Wycombe Branch",
+      "feed_url": "https://parkinsonsahw.org.uk/news/feed/",
+      "website_url": "https://parkinsonsahw.org.uk/news/",
+      "description": "This is the website for the local branch and support group of Parkinson's UK in the Amersham, High Wycombe and surrounding area of Buckinghamshire. We aim to bring together people with Parkinson's, their partners, carers and other family members to improve the well-being of everyone in our area affected by the condition.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4910544.jpg?t=1620051178"
+    }
+  ]
+}

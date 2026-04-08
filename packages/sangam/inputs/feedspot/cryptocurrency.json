@@ -1,0 +1,2725 @@
+{
+  "category": "Cryptocurrency",
+  "source_url": "https://rss.feedspot.com/cryptocurrency_rss_feeds",
+  "feeds": [
+    {
+      "title": "Cointelegraph",
+      "feed_url": "https://cointelegraph.com/rss",
+      "website_url": "https://cointelegraph.com/",
+      "description": "Latest news about Bitcoin, Ethereum, Blockchain, Altcoin, Litecoin, Ripple, Mining, Policy and Regulations, Cryptocurrency prices, and Technology.",
+      "followers": {
+        "facebook": 873500,
+        "twitter": 2400000,
+        "instagram": 425600
+      },
+      "image_url": "https://i1.feedspot.com/4648551.jpg?t=1611137121"
+    },
+    {
+      "title": "Bitcoinist",
+      "feed_url": "https://bitcoinist.com/feed/",
+      "website_url": "https://bitcoinist.com/",
+      "description": "Bitcoinist is a Bitcoin news portal providing breaking news, guides, price, and analysis about decentralized digital money and blockchain technology. It is the ultimate resource for bitcoin and blockchain industry news, reviews, and education.",
+      "followers": {
+        "facebook": 42800,
+        "twitter": 67500
+      },
+      "image_url": "https://i1.feedspot.com/4697983.jpg?t=1665725333"
+    },
+    {
+      "title": "NewsBTC",
+      "feed_url": "https://www.newsbtc.com/feed/",
+      "website_url": "https://www.newsbtc.com/",
+      "description": "NewsBTC is a cryptocurrency news service that covers bitcoin news, bitcoin exchanges, bitcoin mining, technical analysis & forecasts for bitcoin price and other altcoins.",
+      "followers": {
+        "facebook": 24500,
+        "twitter": 61900
+      },
+      "image_url": "https://i1.feedspot.com/4837758.jpg?t=1611137139"
+    },
+    {
+      "title": "CryptoPotato",
+      "feed_url": "https://cryptopotato.com/feed/",
+      "website_url": "https://cryptopotato.com/",
+      "description": "CryptoPotato is the ultimate gate to the cryptocurrency world that covers the latest Bitcoin and crypto news, price analysis, trading, and how-to guides for beginners and experts.",
+      "followers": {
+        "facebook": 47600,
+        "twitter": 37400
+      },
+      "image_url": "https://i1.feedspot.com/4769281.jpg?t=1752819075"
+    },
+    {
+      "title": "99Bitcoins News",
+      "feed_url": "https://99bitcoins.com/feed/",
+      "website_url": "https://99bitcoins.com/news/",
+      "description": "99Bitcoins supplies up-to-date tutorials on how to buy Bitcoin, Bitcoin mining, Bitcoin wallets, and reviews about the best Bitcoin exchanges. 99Bitcoins is a website dedicated to helping people get started with Bitcoin.",
+      "followers": {
+        "facebook": 17800,
+        "twitter": 16600
+      },
+      "image_url": "https://i1.feedspot.com/4648371.jpg?t=1611137609"
+    },
+    {
+      "title": "CryptoBriefing",
+      "feed_url": "https://cryptobriefing.com/feed/",
+      "website_url": "https://cryptobriefing.com/",
+      "description": "Daily crypto briefings and updates on Bitcoin, Ethereum, and the future of finance. Crypto Briefing exists to advocate for the safe and responsible integration of blockchain and cryptocurrency into mainstream life.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 28300,
+        "instagram": 689
+      },
+      "image_url": "https://i1.feedspot.com/4869943.jpg?t=1752818313"
+    },
+    {
+      "title": "Crypto.News",
+      "feed_url": "https://crypto.news/feed/",
+      "website_url": "https://crypto.news/",
+      "description": "Cryptonews is a leading name in the cryptocurrency news space, providing the latest and most relevant updates on Bitcoin, Ethereum, and Ripple ecosystems. Setting the industry standard in journalism, Crypto news covers a wide array of topics ranging from Bitcoin, Ethereum, altcoins, regulations, NFTs, Defi, Metaverse, and blockchain technology.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 66800,
+        "instagram": 47400
+      },
+      "image_url": "https://i1.feedspot.com/5423940.jpg?t=1752755601"
+    },
+    {
+      "title": "BITRSS Crypto and Bitcoin Worldwide News",
+      "feed_url": "https://bitrss.com/rss.xml",
+      "website_url": "https://bitrss.com/",
+      "description": "Search and discover the lates BTC Stories in Categories, follow the top Crypto articles on the Web.",
+      "followers": {
+        "facebook": 832,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4837818.jpg?t=1611139405"
+    },
+    {
+      "title": "Bitcointe",
+      "feed_url": "https://bitcointe.com/feed/",
+      "website_url": "https://bitcointe.com/",
+      "description": "We provide the latest news about Bitcoin and news from 50+ other cryptocurrency. We also have trading and guide videos for learning more about crypto.",
+      "followers": {
+        "facebook": 490,
+        "twitter": 1500,
+        "instagram": 77
+      },
+      "image_url": "https://i1.feedspot.com/5121219.jpg"
+    },
+    {
+      "title": "ZyCrypto",
+      "feed_url": "https://zycrypto.com/feed/",
+      "website_url": "https://zycrypto.com/category/bitcoin/",
+      "description": "ZyCrypto is a leading cryptocurrency news and information website focusing on daily news, expert opinions, coins analysis, and reviews.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 5400,
+        "instagram": 6200
+      },
+      "image_url": "https://i1.feedspot.com/4746335.jpg?t=1611137738"
+    },
+    {
+      "title": "CoolWallet Blog",
+      "feed_url": "https://www.coolwallet.io/blogs/blog.atom",
+      "website_url": "https://www.coolwallet.io/blogs/blog/",
+      "description": "Covers News Guides from CoolWallet. CoolWallet is the most secure crypto hardware wallet for Bitcoin, Ethereum, Litecoin, Bitcoin Cash, and ERC20 Token.",
+      "followers": {
+        "facebook": 23200,
+        "twitter": 18600
+      },
+      "image_url": "https://i1.feedspot.com/4950858.jpg?t=1611138688"
+    },
+    {
+      "title": "The Bitcoin News",
+      "feed_url": "https://thebitcoinnews.com/feed/",
+      "website_url": "https://thebitcoinnews.com/",
+      "description": "TheBitcoinNews - the leading source for Bitcoin News, Cryptocurrency, and Blockchain news - visit us now for the latest Blockchain & Bitcoin News.",
+      "followers": {
+        "facebook": 11700,
+        "twitter": 70900,
+        "instagram": 81
+      },
+      "image_url": "https://i1.feedspot.com/4648769.jpg?t=1671602965"
+    },
+    {
+      "title": "TronWeekly",
+      "feed_url": "https://www.tronweekly.com/feed/",
+      "website_url": "https://www.tronweekly.com/",
+      "description": "The latest news about the crypto industry at TronWeekly. Breaking news about TRX, Ripple, Bitcoin, Blockchain, cryptocurrency prices, mining, and more. TronWeekly is an endeavour to bring all Tron world news under one umbrella.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 65600,
+        "instagram": 55
+      },
+      "image_url": "https://i1.feedspot.com/5208345.jpg?t=1671603997"
+    },
+    {
+      "title": "Zodeak Blog",
+      "feed_url": "https://www.cryptocurrencyscript.com/blog/feed",
+      "website_url": "https://www.cryptocurrencyscript.com/blog/",
+      "description": "Stay ahead of the curve with Zodeak's comprehensive coverage of the dynamic cryptocurrency landscape, delivering timely news, in-depth analysis, and expert insights. Zodeak is a premier firm, specializing in Bitcoin Exchange Development, offering cutting-edge solutions for cryptocurrency trading platforms. and empowering businesses to establish robust and efficient exchanges, catering to the growing demand for digital asset trading.",
+      "followers": {
+        "facebook": 35,
+        "twitter": 49,
+        "instagram": 81
+      },
+      "image_url": "https://i1.feedspot.com/7301213.jpg?t=1713433912"
+    },
+    {
+      "title": "Crypto Giggle",
+      "feed_url": "https://cryptogiggle.com/feed/",
+      "website_url": "https://cryptogiggle.com/",
+      "description": "Covers crypto memes and moonshots. The most shareable crypto humor & real time cryptocurrency news this side of the moon. Our main goal is produce interesting content about this space we love, with a lighthearted twist whenever possible.",
+      "followers": {
+        "twitter": 76200
+      },
+      "image_url": "https://i1.feedspot.com/5350633.jpg?t=1638775916"
+    },
+    {
+      "title": "E-Crypto News",
+      "feed_url": "https://e-cryptonews.com/feed/",
+      "website_url": "https://e-cryptonews.com/",
+      "description": "Acccess buzzing Crypto News, Events, Global market trends and Market speculation in byte-sized articles. E-Crypto News is a cryptocurrency based news portal offering the latest in all updates in global cryptocurrency markets. Visit our website today to learn more.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 296,
+        "instagram": 84
+      },
+      "image_url": "https://i1.feedspot.com/5063709.jpg?t=1611138746"
+    },
+    {
+      "title": "CoinIdol",
+      "feed_url": "https://coinidol.com/rss2/",
+      "website_url": "https://coinidol.com/",
+      "description": "We are an international crypto and currencies media outlet focusing on the latest news about Bitcoin and altcoins, Blockchain and distributed ledger technology solutions, FinTech, and financial innovations on the world's market. Our mission is to form and inform next-gen FinTech and the digital currency community.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5091203.jpg?t=1658404307"
+    },
+    {
+      "title": "ZebPay Blog",
+      "feed_url": "https://zebpay.com/feed",
+      "website_url": "https://zebpay.com/blog/",
+      "description": "Covers the latest articles on Bitcoin, Ethereum, and other cryptos. Learn everything about blockchain technology and stay updated with the trends in the crypto world. ZebPay is a one-stop shop to invest in Bitcoin and other digital currencies.",
+      "followers": {
+        "facebook": 35600,
+        "twitter": 83400,
+        "instagram": 27900
+      },
+      "image_url": "https://i1.feedspot.com/5293080.jpg?t=1623751726"
+    },
+    {
+      "title": "Coin Checkup Blog",
+      "feed_url": "https://coincheckup.com/blog/feed/",
+      "website_url": "https://coincheckup.com/blog/",
+      "description": "Covers cryptocurrency resources, analysis, news & guides, crypto predictions, and press releases. Coincheckup is a cryptocurrency analysis & research platform designed to offer you transparent information on each cryptocurrency and help your investment decisions.",
+      "followers": {
+        "facebook": 13000,
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/4950852.jpg?t=1611137720"
+    },
+    {
+      "title": "Cryptoverze",
+      "feed_url": "https://cryptoverze.com/feed/",
+      "website_url": "https://cryptoverze.com/",
+      "description": "Covers crypto news, reviews, views & opinions, beginner's guide, how-tos, ICOs, and Infographics. Cryptoverze is the advanced cryptocurrency community.",
+      "followers": {
+        "facebook": 8200,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4862162.jpg?t=1611139470"
+    },
+    {
+      "title": "Trustnodes",
+      "feed_url": "https://www.trustnodes.com/feed",
+      "website_url": "https://www.trustnodes.com/",
+      "description": "Trustnodes is widely recognized for its high-quality reporting on digital finance, trusted to provide accurate, impartial, independent, and fair coverage of developments in a fast-moving and highly innovative space. We are committed to achieving the highest standards of accuracy and impartiality and strive to avoid knowingly or materially misleading our audience.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4860097.jpg?t=1658481742"
+    },
+    {
+      "title": "Bitfinex blog",
+      "feed_url": "https://blog.bitfinex.com/feed/",
+      "website_url": "https://blog.bitfinex.com/",
+      "description": "Bitfinex is the world's leading Bitcoin, Litecoin and Ethereum Exchange, and Margin Trading Platform. Bitfinex is a digital asset trading platform offering state-of-the-art services for digital currency traders. We offer spot trading, margin trading, advanced order types, and margin funding for low-risk returns.",
+      "followers": {
+        "facebook": 25800,
+        "twitter": 940900
+      },
+      "image_url": "https://i1.feedspot.com/4648360.jpg?t=1616769110"
+    },
+    {
+      "title": "Bitcoinik",
+      "feed_url": "https://bitcoinik.com/feed/",
+      "website_url": "https://bitcoinik.com/",
+      "description": "Bitcoinik is the one of the best Bitcoin and Cryptocurrency news source out there that provide alerts about Bitcoin tech, Cryptocurrency markets, Blockchain, and Finance. Find Press releases, Trading guides, Analyses and other Critical Information on recent developments.",
+      "followers": {
+        "facebook": 586,
+        "twitter": 566
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/3917491/page/5121658/logo_1690733108.png"
+    },
+    {
+      "title": "BitDegree Tutorials",
+      "feed_url": "https://www.bitdegree.org/crypto/news/rss",
+      "website_url": "https://www.bitdegree.org/crypto/news",
+      "description": "BitDegree - The world's first blockchain based education platform with token scholarships & talent networking. Smart incentives based. The world's best online courses. Powered by the Ethereum blockchain.",
+      "followers": {
+        "facebook": 86400,
+        "twitter": 3800,
+        "instagram": 14600
+      },
+      "image_url": "https://i1.feedspot.com/4910945.jpg?t=1611148142"
+    },
+    {
+      "title": "The Coins Post",
+      "feed_url": "https://www.thecoinspost.com/feed/",
+      "website_url": "https://www.thecoinspost.com/",
+      "description": "Keep up with latest Bitcoin and Crypto News from The Coins Post.",
+      "followers": {
+        "facebook": 49
+      },
+      "image_url": "https://i1.feedspot.com/5036969.jpg?t=1675160055"
+    },
+    {
+      "title": "Bitcoin & Ethereum News",
+      "feed_url": "https://bitcoinethereumnews.com/feed/",
+      "website_url": "https://bitcoinethereumnews.com/",
+      "description": "Latest news related to Bitcoin, Ethereum, Crypto, Blockchain, Economy.",
+      "followers": {
+        "twitter": 49
+      },
+      "image_url": "https://i1.feedspot.com/5129883.jpg?t=1638873883"
+    },
+    {
+      "title": "U.Today",
+      "feed_url": "https://u.today/rss",
+      "website_url": "https://u.today/",
+      "description": "U.Today covers blockchain and crypto news, stories, price analysis, opinions, and interviews. U.Today is a global media organization dedicated to helping you understand the new generation of tech and the future it brings to society.",
+      "followers": {
+        "facebook": 10600,
+        "twitter": 90000
+      },
+      "image_url": "https://i1.feedspot.com/5259299.jpg?t=1616153523"
+    },
+    {
+      "title": "Coinwink Blog",
+      "feed_url": "https://coinwink.com/blog/feed",
+      "website_url": "https://coinwink.com/blog/",
+      "description": "Find news, tips, tricks, and other useful information relevant to the cryptocurrency industry. Coinwink is a cryptocurrency price alerts, watchlist, and portfolio tracking app.",
+      "followers": {
+        "facebook": 137,
+        "twitter": 569
+      },
+      "image_url": "https://i1.feedspot.com/5238988.jpg?t=1611560206"
+    },
+    {
+      "title": "Bitcoin.com",
+      "feed_url": "https://news.bitcoin.com/feed/",
+      "website_url": "https://news.bitcoin.com/",
+      "description": "Bitcoin News is the world's premier 24/7 news feed covering everything bitcoin-related, including the world economy, exchange rates, industry news, regulations and money politics. Also covers handy DIY tips, links to useful tools, unbiased reviews and opinions revolving around Bitcoin.",
+      "followers": {
+        "facebook": 327000,
+        "twitter": 3100000,
+        "instagram": 38200
+      },
+      "image_url": "https://i1.feedspot.com/4446705.jpg?t=1639749010"
+    },
+    {
+      "title": "Blockchain.News",
+      "feed_url": "https://blockchain.news/rss",
+      "website_url": "https://blockchain.news/",
+      "description": "Find the latest Bitcoin, Ethereum, blockchain, and crypto news, interviews, and price analyses at Blockchain.News. We aim to educate the world on the true value of blockchain technology and the reason why it is the future.",
+      "followers": {
+        "facebook": 11600,
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/5089827.jpg?t=1611137734"
+    },
+    {
+      "title": "CurrencyCrypt",
+      "feed_url": "https://currencycrypt.net/feed/",
+      "website_url": "https://currencycrypt.net/",
+      "description": "BlockChain projects and technology, Bitcoin and Altcoins revealed. We are concerned with and interested in providing you with accurate, useful information and opportunities to participate with today's exciting Cryptocurrencies, from trusted journalists and experts across the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5286079.jpg?t=1622276705"
+    },
+    {
+      "title": "Medium \u00bb Coinmonks",
+      "feed_url": "https://medium.com/feed/coinmonks",
+      "website_url": "https://medium.com/coinmonks",
+      "description": "Coinmonks is a Non-profit Crypto educational publication.",
+      "followers": {
+        "facebook": 923,
+        "twitter": 5000,
+        "instagram": 718
+      },
+      "image_url": "https://i1.feedspot.com/5005342.jpg?t=1658402078"
+    },
+    {
+      "title": "The Market's Compass Technical View",
+      "feed_url": "https://themarketscompass.substack.com/feed",
+      "website_url": "https://themarketscompass.substack.com/",
+      "description": "Publishes in-depth multi-time frame technical analysis of crypto currencies and other financial markets to aid both short and long term investors in their investment decisions.",
+      "followers": {
+        "twitter": 902
+      },
+      "image_url": "https://i1.feedspot.com/5254194.jpg?t=1615181663"
+    },
+    {
+      "title": "Crypto News Australia",
+      "feed_url": "https://cryptonews.com.au/feed/",
+      "website_url": "https://cryptonews.com.au/news/?_categories=ftx",
+      "description": "Crypto News Australia is an online Magazine that brings you all the latest news on Crypto Currencies and Blockchain Technology. The mission is to inform & educate readers so they have the knowledge to better understand the crypto space.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 16900
+      },
+      "image_url": "https://i1.feedspot.com/5308521.jpg?t=1627999218"
+    },
+    {
+      "title": "CoinGeek",
+      "feed_url": "https://coingeek.com/feed/",
+      "website_url": "https://coingeek.com/",
+      "description": "CoinGeek.com pride itself on providing fair, unbiased, coverage of the entire digital currency industry and highlights people and companies doing their part to live up to the true vision of the Satoshi Nakamoto whitepaper. CoinGeek offers the latest Bitcoin News and Blockchain Information. Gain insights into the true Vision of Satoshi Nakamoto.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 33900,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4818307.jpg?t=1665726759"
+    },
+    {
+      "title": "Moonwhale",
+      "feed_url": "https://moonwhale.io/feed/",
+      "website_url": "https://moonwhale.io/blog/",
+      "description": "Moonwhale is an STO Financial Advisory that offers companies strategic advise on STO process & structure.",
+      "followers": {
+        "facebook": 61,
+        "instagram": 272
+      },
+      "image_url": "https://i1.feedspot.com/5009196.jpg?t=1611142565"
+    },
+    {
+      "title": "BiteMyCoin.com",
+      "feed_url": "https://bitemycoin.com/feed/",
+      "website_url": "https://bitemycoin.com/",
+      "description": "BiteMyCoin.com is a news portal designed to show you all you need to know to get started with the crypto currency future of tomorrow.",
+      "followers": {
+        "facebook": 489,
+        "twitter": 198
+      },
+      "image_url": "https://i1.feedspot.com/4948027.jpg?t=1611139487"
+    },
+    {
+      "title": "BitMEX Blog",
+      "feed_url": "https://blog.bitmex.com/feed/",
+      "website_url": "https://blog.bitmex.com/",
+      "description": "BitMEX Blog is your resource for the latest news and developments at BitMEX. It is a P2P crypto-products trading platform. Our industry never stops moving. Our mission is to become one of the world's largest regulated crypto derivatives exchanges and a powerful catalyst for change in the financial services industry.",
+      "followers": {
+        "twitter": 157300
+      },
+      "image_url": "https://i1.feedspot.com/5005554.jpg?t=1661169027"
+    },
+    {
+      "title": "Blockmanity",
+      "feed_url": "https://blockmanity.com/feed/",
+      "website_url": "https://blockmanity.com/",
+      "description": "Blockmanity is one of the fastest growing online publications on the new industry of Blockchain. We cover the latest news on Blockchain technology, regulations, and the cryptocurrency markets. It was started in March 2018 by Ishan Garg, Shrikar Parashar, and Abhishek Ajit with the aim of providing the latest, accurate, and most unbiased news in the blockchain space.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4949230.jpg?t=1703151082"
+    },
+    {
+      "title": "FullyCrypto",
+      "feed_url": "https://fullycrypto.com/feed",
+      "website_url": "https://fullycrypto.com/cryptocurrency-news",
+      "description": "FullyCrypto is the true one-stop shop for crypto news, reports, and exclusive interviews. Covering blockchain, cryptocurrency, decentralization, and digital finance industries, we have earned a reputation for going the extra mile to uncover important stories.",
+      "followers": {
+        "facebook": 198,
+        "twitter": 506,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5308522.jpg?t=1671602538"
+    },
+    {
+      "title": "Cryptonews",
+      "feed_url": "https://cryptonews.com/news/feed/",
+      "website_url": "https://cryptonews.com/news/",
+      "description": "Cryptonews.com offers original coverage of the global blockchain and cryptocurrency news, provides opinions, reviews, guides, and introduces to Crypto people with an aim to help the general public understand and successfully use these technologies now and in the future. Cryptocurrency News is a one-stop-shop destination for all the latest news in crypto. Cryptocurrency News today plays an important role in the awareness and expansion of the crypto industry.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 138600,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5312698.jpg?t=1654500212"
+    },
+    {
+      "title": "Crypto Adventure",
+      "feed_url": "https://cryptoadventure.com/feed/",
+      "website_url": "https://cryptoadventure.com/guides/",
+      "description": "Covers the latest Crypto news on Bitcoin, Ethereum, Altcoins, Blockchain, Web3 and Crypto Market. Stay informed with daily cryptocurrency updates.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 92400,
+        "instagram": 90
+      },
+      "image_url": "https://i1.feedspot.com/5367909.jpg?t=1643980557"
+    },
+    {
+      "title": "Crypto Breaking News",
+      "feed_url": "https://www.cryptobreaking.com/feed/",
+      "website_url": "https://www.cryptobreaking.com/",
+      "description": "Get real-time cryptocurrency news, blockchain updates, market analysis, and expert insights. Explore the latest trends in Bitcoin, Ethereum, DeFi, and Web3.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 2800,
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/4099191/page/5139794/logo_1743693298.png"
+    },
+    {
+      "title": "Cryptela Blog",
+      "feed_url": "https://www.cryptela.com/blog-rss",
+      "website_url": "https://www.cryptela.com/en/blog",
+      "description": "Cryptela is an information platform that focuses on all things digital currency, and we're dedicated to providing our readers with the latest news, advice, and reviews from an impartial perspective. Cryptela also gives you access to Cryptonews, our in-house community of experts and cryptocurrency enthusiasts who work with us to create informative pieces about their favorite cryptocurrencies. Whether you're just learning about cryptocurrency or you're already an expert, there's something here for everyone!",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 2500,
+        "instagram": 17100
+      },
+      "image_url": "https://i1.feedspot.com/5411573.jpg?t=1655460898"
+    },
+    {
+      "title": "Inside Bitcoins",
+      "feed_url": "https://insidebitcoins.com/feed",
+      "website_url": "https://insidebitcoins.com/news",
+      "description": "Covers all notable crypto news stories daily, including cryptocurrency price fluctuations, and regulatory stories. Inside Bitcoins is a team of cryptocurrency investing and trading experts, reviewing exchanges, brokers, and bot software, plus news on the latest altcoins.",
+      "followers": {
+        "twitter": 474
+      },
+      "image_url": "https://i1.feedspot.com/4838093.jpg?t=1671520490"
+    },
+    {
+      "title": "Coin Journal News",
+      "feed_url": "https://coinjournal.net/feed/",
+      "website_url": "https://coinjournal.net/news/",
+      "description": "Coinjournal News is your home of the best & latest crypto news. Most recent news & guidance about Bitcoin, Ethereum, mining, cryptocurrency prices, and more. CoinJournal's mission is to educate our readers about the emerging crypto economy through high-quality news journalism and accessible content.",
+      "followers": {
+        "facebook": 12200,
+        "twitter": 12900
+      },
+      "image_url": "https://i1.feedspot.com/4818321.jpg?t=1611138368"
+    },
+    {
+      "title": "AMBCrypto",
+      "feed_url": "https://ambcrypto.com/feed/",
+      "website_url": "https://ambcrypto.com/",
+      "description": "Read the latest Bitcoin & Crypto news and exclusive report. AMBCrypto is browsed by more than 5 Million readers monthly, across the globe.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 46000,
+        "instagram": 12100
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/1927724/page/5303059/logo_1720443956.png"
+    },
+    {
+      "title": "Platinum Crypto Academy | Crypto Blog",
+      "feed_url": "https://www.platinumcryptoacademy.com/feed/",
+      "website_url": "https://www.platinumcryptoacademy.com/crypto-blog/",
+      "description": "Platinum Crypto Academy provides training to individuals who wish to take advantage of the phenomenal digital currency revolution. Learn how to trade Bitcoin Cryptocurrency like a professional",
+      "followers": {
+        "facebook": 10000,
+        "twitter": 12400,
+        "instagram": 49800
+      },
+      "image_url": "https://i1.feedspot.com/4905254.jpg?t=1613630835"
+    },
+    {
+      "title": "Decrypt News",
+      "feed_url": "https://decrypt.co/feed",
+      "website_url": "https://decrypt.co/news",
+      "description": "Read the latest Bitcoin and Ethereum news from Decrypt. Get the latest on cryptocurrency prices, breaking news, and more about Bitcoin and blockchain. Decrypt was founded in 2018 with a simple mission: to demystify the decentralized web. Our aim is to highlight to our readers what really matters, whilst providing a toolkit to understand the fundamentals. We are a map for the doers of Web3, to help navigate the space and uncover the expertise and resources they need to shape the industry for themselves.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 201200,
+        "instagram": 12700
+      },
+      "image_url": "https://i1.feedspot.com/5322464.jpg?t=1631797990"
+    },
+    {
+      "title": "Moralis for Developers",
+      "feed_url": "https://developers.moralis.com/blog/feed",
+      "website_url": "https://developers.moralis.com/blog/",
+      "description": "The number one blog for Web3 development. Join hundreds of thousands of readers in unraveling Web3 and learn how to build apps at blazing speeds with Moralis!",
+      "followers": {
+        "twitter": 42300
+      },
+      "image_url": "https://i1.feedspot.com/5424025.jpg?t=1658405826"
+    },
+    {
+      "title": "Cryptomaton",
+      "feed_url": "https://www.cryptomaton.org/feed/",
+      "website_url": "https://www.cryptomaton.org/",
+      "description": "Automated Cryptocurrency Trading - Crypto-trading bot building projects, guides and inspiration. A place to learn cryptocurrency algorithmic trading, crypto bot analysis, testing and more!",
+      "followers": {
+        "twitter": 610
+      },
+      "image_url": "https://i1.feedspot.com/5270581.jpg?t=1618655464"
+    },
+    {
+      "title": "Multicoin Capital",
+      "feed_url": "https://multicoin.capital/rss.xml",
+      "website_url": "https://multicoin.capital/",
+      "description": "Multicoin Capital is a thesis-driven investment firm that invests in cryptocurrencies, tokens, and blockchain companies reshaping trillion-dollar markets. We manage a hedge fund and a venture fund, investing across both public and private markets.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5402079.jpg?t=1658404170"
+    },
+    {
+      "title": "Crypto Daily",
+      "feed_url": "https://cryptodaily.co.uk/feed",
+      "website_url": "https://cryptodaily.co.uk/",
+      "description": "Crypto Daily is a leading news website that provides diverse coverage of all things relating to crypto and blockchain. Crypto Daily bridges the gap between companies, users, and enthusiasts.",
+      "followers": {
+        "facebook": 81100,
+        "twitter": 94300
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/7083643/page/4954871/logo_1673824359.png"
+    },
+    {
+      "title": "BuyUcoin Blog",
+      "feed_url": "https://www.buyucoin.com/crypto-labs/feed/",
+      "website_url": "https://www.buyucoin.com/crypto-labs/",
+      "description": "Read the latest cryptocurrency news, market update, and price analysis. BuyUcoin is a crypto wallet and exchange platform where merchants & consumers can transact with digital assets.",
+      "followers": {
+        "facebook": 13400,
+        "twitter": 8000,
+        "instagram": 10400
+      },
+      "image_url": "https://i1.feedspot.com/5198696.jpg?t=1600853931"
+    },
+    {
+      "title": "AllinCrypto News",
+      "feed_url": "https://allincrypto.com/feed/",
+      "website_url": "https://allincrypto.com/",
+      "description": "Explore the world of cryptocurrencies with Allincrypto news - your ultimate destination for the latest crypto news, insights, and articles on everything crypto. AllinCrypto 's team of dedicated professionals meticulously curates the latest developments, trends, and insights within the cryptocurrency industry. Stay well-informed and make confident decisions.",
+      "followers": {
+        "twitter": 7800
+      },
+      "image_url": "https://i1.feedspot.com/5673500.jpg?t=1695024528"
+    },
+    {
+      "title": "Cryptocoin Spy",
+      "feed_url": "https://cryptocoinspy.com/feed/",
+      "website_url": "https://cryptocoinspy.com/",
+      "description": "Established in November 2017, cryptocoinspy.com is an independent website focused on providing unbiased reporting of the latest news from the cryptocurrency world. We are dedicated to offering accurate and thorough information on all stories covered from across the globe, focusing on a variety of topics central to this rapidly developing industry.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4855821.jpg?t=1611139480"
+    },
+    {
+      "title": "CoinCentral",
+      "feed_url": "https://coincentral.com/news/feed/",
+      "website_url": "https://coincentral.com/news/",
+      "description": "Keep up with all CoinCentral articles, guides, news, press releases, and reviews. CoinCentral is an independent publication covering information on cryptocurrencies such as Bitcoin, Ethereum, and their underlying blockchain technology.",
+      "followers": {
+        "facebook": 14400,
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/4950956.jpg?t=1611142500"
+    },
+    {
+      "title": "CoinStats Blog",
+      "feed_url": "https://coinstats.app/blog/feed/",
+      "website_url": "https://coinstats.app/blog/",
+      "description": "Covers the latest news and updates on bitcoin, other cryptocurrencies, tokens, and blockchain. CoinStats helps you manage all your crypto holdings together from one place.",
+      "followers": {
+        "facebook": 75000,
+        "twitter": 245,
+        "instagram": 27400
+      },
+      "image_url": "https://i1.feedspot.com/5023236.jpg?t=1671602606"
+    },
+    {
+      "title": "CoinSutra Blog",
+      "feed_url": "https://coinsutra.com/blog/feed/",
+      "website_url": "https://coinsutra.com/blog/",
+      "description": "A source of Cryptocurrency Guides & Tutorials. CoinSutra is a community of Bitcoin, Altcoins, Cryptocurrency users from around the globe. The mission is to educate the world about Bitcoin and Blockchain applications.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 7500,
+        "instagram": 7200
+      },
+      "image_url": "https://i1.feedspot.com/4838117.jpg?t=1611137709"
+    },
+    {
+      "title": "Crypto News Flash",
+      "feed_url": "https://www.crypto-news-flash.com/feed/",
+      "website_url": "https://www.crypto-news-flash.com/news-3/",
+      "description": "Crypto News Flash is your number one source for the latest news and information from the world of cryptocurrencies.",
+      "followers": {
+        "twitter": 20000
+      },
+      "image_url": "https://i1.feedspot.com/5301288.jpg?t=1655467383"
+    },
+    {
+      "title": "CoinPedia",
+      "feed_url": "https://coinpedia.org/feed/",
+      "website_url": "https://coinpedia.org/news/",
+      "description": "Coinpedia is Cryptocurrency Encyclopedia offering crypto-related comprehensive information, news,product Review, PR, and Bitcoin event info. It is a trusted crypto service agency for blockchain technology and overall digital assets.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 6200,
+        "instagram": 894
+      },
+      "image_url": "https://i1.feedspot.com/4818237.jpg?t=1623306496"
+    },
+    {
+      "title": "Funex Club Blog",
+      "feed_url": "https://blog.funexclub.com/feed/",
+      "website_url": "https://blog.funexclub.com/",
+      "description": "Funex is an all-new ultra-modern Crypto Ecosystem that has a Decentralized wallet and a digital coin, enabling easy, safe, & fast cryptographic operations.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 7100,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5517354.jpg?t=1678260935"
+    },
+    {
+      "title": "Alexa Blockchain",
+      "feed_url": "https://alexablockchain.com/feed/",
+      "website_url": "https://alexablockchain.com/",
+      "description": "AlexaBlockchain is a Blockchain Media Firm - a leading source of breaking news on blockchain, Bitcoin, cryptocurrency, Defi, Web3, metaverse, and NFTs.",
+      "followers": {
+        "facebook": 191,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5392962.jpg?t=1650532959"
+    },
+    {
+      "title": "Bits On Blocks",
+      "feed_url": "https://bitsonblocks.net/feed/",
+      "website_url": "https://bitsonblocks.net/",
+      "description": "Bits on Blocks is a blog on blockchain technology. Bits on Blocks was launched in 2015 by Antony Lewis. Bits on Blocks is based in Singapore with a focus on Asia. Bits on Blocks strives for clear, practical articles that are accessible to business people. Bits on Blocks believes that cryptocurrencies and distributed ledger technology can make the world better.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4818220.jpg?t=1658908628"
+    },
+    {
+      "title": "Coindoo",
+      "feed_url": "https://coindoo.com/feed/",
+      "website_url": "https://coindoo.com/",
+      "description": "Coindoo offers crypto-related comprehensive information, cryptocurrency guides, reviews, and the latest regarding blockchain technology. 'Coindoo' is a digital media and information services website operating in the cryptocurrency & blockchain industry.",
+      "followers": {
+        "facebook": 11600,
+        "twitter": 810
+      },
+      "image_url": "https://i1.feedspot.com/4818187.jpg?t=1671603413"
+    },
+    {
+      "title": "BTC Ethereum Crypto Currency Blog",
+      "feed_url": "https://www.btcethereum.com/blog/feed/",
+      "website_url": "https://www.btcethereum.com/blog/",
+      "description": "Full crypto currency market outlook and real time monitoring. Blockchain Initial Coin Offering ICO information.",
+      "followers": {
+        "facebook": 1300,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4838340.jpg?t=1611148039"
+    },
+    {
+      "title": "DailyCoin",
+      "feed_url": "https://dailycoin.com/feed/",
+      "website_url": "https://dailycoin.com/exchanges/ftx-news/",
+      "description": "Covers news, opinions, trends and helpful articles on Fintech, digital assets, blockchain technology and other related technologies. DailyCoin was founded with a sole mission in mind - to introduce market newcomers with high quality relevant content.",
+      "followers": {
+        "facebook": 943,
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5313084.jpg?t=1671603591"
+    },
+    {
+      "title": "TheNewsCrypto",
+      "feed_url": "https://thenewscrypto.com/feed/",
+      "website_url": "https://thenewscrypto.com/",
+      "description": "TheNewsCrypto is Cryptocurrency and Blockchain News publication media offering information, Cryptocurrency News, Events, PR, and Bitcoin Event info.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 24900
+      },
+      "image_url": "https://i1.feedspot.com/5283775.jpg?t=1623675509"
+    },
+    {
+      "title": "CEX.IO Official Blog",
+      "feed_url": "https://blog.cex.io/feed",
+      "website_url": "https://blog.cex.io/",
+      "description": "The corporate blog of CEX.IO Bitcoin exchange. Find the latest announcements of CEX.IO, recent Bitcoin price, and cryptocurrency news.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 131100
+      },
+      "image_url": "https://i1.feedspot.com/4837773.jpg?t=1611137593"
+    },
+    {
+      "title": "CryptoExchange4U",
+      "feed_url": "https://cryptoexchange4u.com/feed/",
+      "website_url": "https://cryptoexchange4u.com/blog/",
+      "description": "Covers articles and blogs on Block chain Technology, Crypto Currency Market and Trends. CryptoExchange4U develops apps and tools for Cryptocurrency Exchange, ICO Token Sales and ICO Promotional and Marketing Tools",
+      "followers": {
+        "facebook": 25,
+        "twitter": 231
+      },
+      "image_url": "https://i1.feedspot.com/5328816.jpg?t=1633503597"
+    },
+    {
+      "title": "Crypto Infos",
+      "feed_url": "https://cryptoinfos.eu/feed/",
+      "website_url": "https://cryptoinfos.eu/",
+      "description": "The Swiss-based agency specialized in Blockchain technology adoption, Cryptocurrency news, and Web3 jobs. Blockchain, Cryptocurrency, and Fintech News website.",
+      "followers": {
+        "facebook": 254,
+        "twitter": 85,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5255617.jpg?t=1671606269"
+    },
+    {
+      "title": "Finance Magnates \u00bb CryptoCurrency",
+      "feed_url": "https://www.financemagnates.com/cryptocurrency/feed/",
+      "website_url": "https://www.financemagnates.com/cryptocurrency/",
+      "description": "Finance Magnates CryptoCurrency is your home for breaking news, analysis, data and coverage on the world of cryptocurrencies. From Bitcoin to blockchains, find it all here.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 38600
+      },
+      "image_url": "https://i1.feedspot.com/4838147.jpg?t=1611137153"
+    },
+    {
+      "title": "BitPinas",
+      "feed_url": "https://bitpinas.com/feed/",
+      "website_url": "https://bitpinas.com/",
+      "description": "An up and coming bitcoin and cryptocurrency blog in the Philippines. Learn about digital currency and how it can help you in your life.",
+      "followers": {
+        "facebook": 152300,
+        "twitter": 12400
+      },
+      "image_url": "https://i1.feedspot.com/4838190.jpg?t=1611139411"
+    },
+    {
+      "title": "NOWPayments",
+      "feed_url": "https://nowpayments.io/blog/feed",
+      "website_url": "https://nowpayments.io/blog/",
+      "description": "Covers articles about crypto, blockchain, crypto payments: history, fun facts, how-to guides, opinion pieces and more. NOWPayments is the easiest and cheapest way to accept cryptocurrency payments like Bitcoin, Litecoin, Ethereum, stablecoins, and many more cryptocurrencies.",
+      "followers": {
+        "facebook": 793,
+        "twitter": 66700
+      },
+      "image_url": "https://i1.feedspot.com/5321723.jpg?t=1631601460"
+    },
+    {
+      "title": "CoinFunda",
+      "feed_url": "https://coinfunda.com/feed/",
+      "website_url": "https://coinfunda.com/",
+      "description": "Founded in Q1 2017, CoinFunda is a blockchain and cryptocurrency blog that aims to provide the most reliable, useful, and accurate information to our audience. Coinfunda is committed to delivering unbiased articles related to the area of Cryptocurrencies, Wallets, Exchanges, Mining, Crypto tools, and more.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4809272.jpg?t=1611138374"
+    },
+    {
+      "title": "Komodo Platform Blog",
+      "feed_url": "https://komodoplatform.com/en/blog/rss/",
+      "website_url": "https://komodoplatform.com/en/blog/",
+      "description": "Blockchain News, Crypto News, User Guides, Coin Guides, Announcements, & more. Komodo is an open-source technology workshop backed by a community of validators, researchers, and builders who are creating blockchain assets and decentralized applications.",
+      "followers": {
+        "twitter": 118400
+      },
+      "image_url": "https://i1.feedspot.com/5295146.jpg?t=1624343607"
+    },
+    {
+      "title": "Global Crypto Press",
+      "feed_url": "https://www.globalcryptopress.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.globalcryptopress.com/",
+      "description": "Crypto's home for live, breaking real-time cryptocurrency news. Covering Bitcoin, Ethereum, ICO's and Blockchain Technology along with current prices.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5041120.jpg?t=1611139438"
+    },
+    {
+      "title": "WebsCrypto",
+      "feed_url": "https://webscrypto.com/feed/",
+      "website_url": "https://webscrypto.com/",
+      "description": "WebsCrypto brings the latest crypto news and opinions on cryptocurrencies, Bitcoin, Ethereum, NFTs, Metaverse, and more.",
+      "followers": {
+        "facebook": 802,
+        "twitter": 5500,
+        "instagram": 69
+      },
+      "image_url": "https://i1.feedspot.com/5421185.jpg?t=1657709957"
+    },
+    {
+      "title": "BitcoinNews",
+      "feed_url": "https://bitcoinnews.com/feed/",
+      "website_url": "https://bitcoinnews.com/",
+      "description": "We see the bitcoin community as a highly effective movement to outclass the 'fiat system' with open source software. As a news platform, we provide a space to observe and support this revolution and allow the community to speak and spread bitcoin news where it matters. We give a voice to small projects and help underground news go around the world. We aim to be a strong partner for brands and businesses in the bitcoin industry by sticking to the truth.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 234200,
+        "instagram": 19600
+      },
+      "image_url": "https://i1.feedspot.com/5005194.jpg?t=1650631020"
+    },
+    {
+      "title": "Changelly Blog",
+      "feed_url": "https://changelly.com/blog/feed/",
+      "website_url": "https://changelly.com/blog/",
+      "description": "Covers cryptocurrency News & Trading Tips. Changelly is an instant cryptocurrency exchange with a clear interface that provides the best prices for Bitcoin, Litecoin, Ethereum, and other altcoins.",
+      "followers": {
+        "facebook": 11700,
+        "twitter": 69800
+      },
+      "image_url": "https://i1.feedspot.com/4648351.jpg?t=1611137600"
+    },
+    {
+      "title": "The Crypto Basic",
+      "feed_url": "https://thecryptobasic.com/feed/",
+      "website_url": "https://thecryptobasic.com/category/latest-crypto-news/",
+      "description": "The Crypto Basic is focused on covering the most important topics of cryptocurrency for beginners.",
+      "followers": {
+        "facebook": 29900,
+        "twitter": 60400
+      },
+      "image_url": "https://i1.feedspot.com/5164175.jpg?t=1611139816"
+    },
+    {
+      "title": "CryptoNewsZ",
+      "feed_url": "https://www.cryptonewsz.com/feed/",
+      "website_url": "https://www.cryptonewsz.com/tag/cryptocurrency/",
+      "description": "CryptoNewsZ is a one-stop platform that provides news stories on cryptocurrency & blockchain along with live coin prices, analysis, exchange reviews, & more.",
+      "followers": {
+        "facebook": 21100,
+        "twitter": 1400,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5014405.jpg?t=1631800493"
+    },
+    {
+      "title": "CryptoShrypto",
+      "feed_url": "https://cryptoshrypto.com/feed/",
+      "website_url": "https://cryptoshrypto.com/",
+      "description": "Learning material on crypto covering everything from the basics of blockchain to predicting the trend of coins. Whether you are a newcomer in crypto investment or a pro-investor, there is something for everyone.",
+      "followers": {
+        "facebook": 20500,
+        "instagram": 10200
+      },
+      "image_url": "https://i1.feedspot.com/5426645.jpg?t=1659092744"
+    },
+    {
+      "title": "CoinChapter Blog",
+      "feed_url": "https://coinchapter.com/feed/",
+      "website_url": "https://coinchapter.com/news/",
+      "description": "Your #1 Source for Cryptocurrency. CoinChapter is a crypto news portal providing breaking news, guides, price, and information about decentralized digital money and blockchain technology.",
+      "followers": {
+        "facebook": 889,
+        "twitter": 8000,
+        "instagram": 7300
+      },
+      "image_url": "https://i1.feedspot.com/5250792.jpg?t=1651314927"
+    },
+    {
+      "title": "Coingape",
+      "feed_url": "https://coingape.com/feed/",
+      "website_url": "https://coingape.com/category/news/",
+      "description": "CoinGape is the homepage for World's Blockchain Leaders. Features an exhaustive coverage of blockchain trends, cryptocurrency price analysis, exclusive crypto project reviews, interviews with industry experts, and a dedicated editorial section where we cover stories that help understand the impact of cryptocurrencies in various communities.",
+      "followers": {
+        "facebook": 1300,
+        "instagram": 56600
+      },
+      "image_url": "https://i1.feedspot.com/4846880.jpg?t=1639749640"
+    },
+    {
+      "title": "CryptoNinjas",
+      "feed_url": "https://www.cryptoninjas.net/feed/",
+      "website_url": "https://www.cryptoninjas.net/",
+      "description": "Founded in 2016, CryptoNinjas is a global news and research portal that supplies market and industry information on the cryptocurrency space, bitcoin, blockchains, and distributed ledger technology (DLT). CryptoNinjas aims to expand knowledge and understanding of the cryptocurrency and blockchain space.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 7400
+      },
+      "image_url": "https://i1.feedspot.com/4653407.jpg?t=1671603474"
+    },
+    {
+      "title": "Aabey LLC | Crypto News",
+      "feed_url": "https://crypto.aabeyllc.com/feed/",
+      "website_url": "https://crypto.aabeyllc.com/",
+      "description": "Crypto Aabey LLC promises to be a fair and objective portal, where readers can find the best information, recent cryptocurrency news and spread awareness about crypto trends and latest worldwide developments in blockchain.",
+      "followers": {
+        "facebook": 21,
+        "twitter": 3,
+        "instagram": 61
+      },
+      "image_url": "https://i1.feedspot.com/5485053.jpg?t=1672306441"
+    },
+    {
+      "title": "Live Bitcoin News",
+      "feed_url": "https://www.livebitcoinnews.com/feed/",
+      "website_url": "https://www.livebitcoinnews.com/",
+      "description": "Live Bitcoin News is a global, market-leading news portal designed to offer unique, cutting-edge, and relevant news and information in the cryptocurrency space. Get views, trends, and important updates in the cryptocurrency market.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 905
+      },
+      "image_url": "https://i1.feedspot.com/4648800.jpg?t=1665725671"
+    },
+    {
+      "title": "Crypto Currency News | Breaking Cryptocurrency News, Prices & Charts",
+      "feed_url": "https://cryptocurrencynews.com/feed/",
+      "website_url": "https://cryptocurrencynews.com/",
+      "description": "Get latest news on bitcoin, ethereum, initial coin offerings, ICOs, ethereum and all other cryptocurrencies. Learn how to trade on cryptocurrency exchanges.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4838271.jpg?t=1611138741"
+    },
+    {
+      "title": "Wunderbit Blog",
+      "feed_url": "https://wunderbit.co/en/rss",
+      "website_url": "https://wunderbit.co/en/blog",
+      "description": "News, articles, opinions, and education materials on bitcoin and other cryptocurrencies. Wunderbit is a financial technology (fintech) company that strives to facilitate the real-world use of cryptocurrencies through a number of products and solutions.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 2500,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5084932.jpg?t=1611138709"
+    },
+    {
+      "title": "StealthEX Blog",
+      "feed_url": "https://stealthex.io/blog/feed/",
+      "website_url": "https://stealthex.io/blog/",
+      "description": "Learn about crypto with StealthEX. Here, you'll find out what is cryptocurrencies, how to buy cryptocurrency, how cryptocurrency works, and how to get free Bitcoins. StealthEX is an instant cryptocurrency exchange for limitless swaps.",
+      "followers": {
+        "twitter": 42600
+      },
+      "image_url": "https://i1.feedspot.com/5295147.jpg?t=1624342951"
+    },
+    {
+      "title": "Null TX",
+      "feed_url": "https://nulltx.com/feed/",
+      "website_url": "https://nulltx.com/category/crypto/",
+      "description": "NullTX's mission is to be the no 1 information source when it comes to solving your cryptocurrency problems. They provide the latest news in crypto along with educational articles regarding Bitcoin, Ethereum, and much much more.",
+      "followers": {
+        "facebook": 586,
+        "twitter": 33900,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4950917.jpg?t=1611138769"
+    },
+    {
+      "title": "Block News Media",
+      "feed_url": "https://blocknewsmedia.com/feed/",
+      "website_url": "https://blocknewsmedia.com/",
+      "description": "Block news media is the best source to get all the news, updates and insights related to cryptocurrency, blockchain, bitcoin and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5487571.jpg?t=1672827541"
+    },
+    {
+      "title": "Bitrates",
+      "feed_url": "https://www.bitrates.com/feed/rss",
+      "website_url": "https://www.bitrates.com/",
+      "description": "Real-time news updates about Bitcoin (BTC), Ethereum (ETH), Bitcoin Cash (BCH), and other altcoins and Blockchain assets from Bitrates. We also cover ICO news, coin scams, crypto mining, and the changing status of cryptocurrency taxes around the world. Bitrates is a cryptocurrency news and market data resource.",
+      "followers": {
+        "facebook": 295,
+        "twitter": 393,
+        "instagram": 22
+      },
+      "image_url": "https://i1.feedspot.com/4908093.jpg?t=1611138717"
+    },
+    {
+      "title": "Crypto Economy",
+      "feed_url": "https://crypto-economy.com/feed/",
+      "website_url": "https://crypto-economy.com/",
+      "description": "Covers the latest news of bitcoin, blockchain and cryptocurrencies, news, as well as guides and tutorials on exchanges and wallets, ICOs and prices.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5253737.jpg?t=1643029811"
+    },
+    {
+      "title": "Blockonomi",
+      "feed_url": "https://blockonomi.com/feed/",
+      "website_url": "https://blockonomi.com/bitcoin/",
+      "description": "Blockonomi's blog aims to cover all aspects of Cryptocurrencies, Fintech, and the blockchain economy. We focus on bringing you the latest unbiased news, information articles, reviews, and tutorials to help you gain an understanding of this new technology.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 10300
+      },
+      "image_url": "https://i1.feedspot.com/4801227.jpg?t=1671520425"
+    },
+    {
+      "title": "coinbackyard",
+      "feed_url": "https://www.coinbackyard.com/feed/",
+      "website_url": "https://www.coinbackyard.com/",
+      "description": "At Coinbackyard, we provide information about Crypto, Trading, Investment, Blockchain, technology, and the Crypto market. Our mission is to accelerate the world's transition to cryptocurrency. We are concise and articulate, putting effort into making things simple and easy to understand.",
+      "followers": {
+        "twitter": 49,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5569070.jpg?t=1684308684"
+    },
+    {
+      "title": "The Daily Hodl",
+      "feed_url": "https://dailyhodl.com/feed/",
+      "website_url": "https://dailyhodl.com/news/",
+      "description": "Cryptocurrency news and analysis, covering Bitcoin, Ethereum, Ripple, XRP, altcoins, and blockchain technology. The latest crypto news, analysis, and insight. Covering Bitcoin, Ethereum, altcoins, Defi, NFTs, and blockchain technology.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4789210.jpg?t=1658481093"
+    },
+    {
+      "title": "Tokensensei Blog",
+      "feed_url": "https://www.tokensensei.net/blog-feed.xml",
+      "website_url": "https://www.tokensensei.net/blog",
+      "description": "Bitcoin, Ethereum, & Crypto News Today: Empower your crypto learning journey with easy-to-understand guides and credible insights for informed decisions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8683640.jpg?t=1759475080"
+    },
+    {
+      "title": "GAME OF SATOSHI",
+      "feed_url": "https://gameofsatoshi.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://gameofsatoshi.blogspot.com/",
+      "description": "Follow this blog to get updates and information about cryptocurrency.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5085598.jpg?t=1638858009"
+    },
+    {
+      "title": "Coinlabz",
+      "feed_url": "https://coinlabz.com/feed/",
+      "website_url": "https://coinlabz.com/",
+      "description": "Welcome to Coinlabz a crypto blog where we delve into the world of blockchain technologies and their potential impact on the world of payments. Our team of experts is dedicated to researching and bringing you the latest information on the topic. We believe that cryptocurrencies have the power to revolutionize the financial industry and make payment transactions faster, more secure, and accessible to people around the world. Our goal is to educate and inform individuals, businesses, and governments about the potential benefits and challenges of this new and exciting technology.",
+      "followers": {
+        "facebook": 11,
+        "twitter": 23
+      },
+      "image_url": "https://i1.feedspot.com/5750841.jpg?t=1704718925"
+    },
+    {
+      "title": "ThePiachu's Bitcoin Blog",
+      "feed_url": "http://tpbit.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://tpbit.blogspot.com/",
+      "description": "A blog about Bitcoin, Ripple, Crypto 2.0 and everything related.",
+      "followers": {
+        "twitter": 988
+      },
+      "image_url": "https://i1.feedspot.com/4838385.jpg?t=1611140262"
+    },
+    {
+      "title": "CryptoZink | Latest Cryptocurrency Market News & Analysis",
+      "feed_url": "https://cryptozink.io/feed/",
+      "website_url": "https://cryptozink.io/",
+      "description": "CryptoZink covers the latest cryptocurrency market news, coins & tokens analysis, predictions, how-to tutorials for all trading experience levels.",
+      "followers": {
+        "instagram": 755
+      },
+      "image_url": "https://i1.feedspot.com/5075336.jpg?t=1611139955"
+    },
+    {
+      "title": "CryptoPurview",
+      "feed_url": "https://cryptopurview.com/feed/",
+      "website_url": "https://cryptopurview.com/",
+      "description": "CryptoPurview, a publication that provides market news and insights on Bitcoin, Cryptocurrency, and new developments in the blockchain realm. We also cover educational posts on cryptography, blockchain use case, and business cases of blockchain start-ups.",
+      "followers": {
+        "facebook": 294,
+        "twitter": 780
+      },
+      "image_url": "https://i1.feedspot.com/5046838.jpg?t=1611139476"
+    },
+    {
+      "title": "Talk Crypto Blog",
+      "feed_url": "http://www.talkcrypto.org/blog/feed/",
+      "website_url": "https://www.talkcrypto.org/blog/",
+      "description": "Talk Crypto Blog discusses about trending Digital Currencies in the amrket and gives tips on how to make money smartly.",
+      "followers": {
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/4950863.jpg?t=1611140769"
+    },
+    {
+      "title": "Crypto World SEO",
+      "feed_url": "http://cryptoworldseo.com/feed/",
+      "website_url": "https://cryptoworldseo.com/",
+      "description": "We are a popular blockchain PR agency,that provides result oriented PR service. We've been able to publish your product on top media websites.",
+      "followers": {
+        "facebook": 562,
+        "twitter": 145
+      },
+      "image_url": "https://i1.feedspot.com/5034352.jpg?t=1611148179"
+    },
+    {
+      "title": "TradeCrypto",
+      "feed_url": "https://tradecrypto.com/feed/",
+      "website_url": "https://tradecrypto.com/",
+      "description": "Read daily news and stay up-to-date about crypto, blockchain technology, non Fundable tokens, Bitcoins, Ethereum, DeFi and Metaverse on Trade Crypto. Trade Crypto is a trusted media designed for the community involved with the decentralized economy and the transformation of the financial system.",
+      "followers": {
+        "facebook": 40,
+        "twitter": 1200,
+        "instagram": 7
+      },
+      "image_url": "https://tradecrypto.com/wp-content/uploads/2022/06/circle.svg?t=1668166802"
+    },
+    {
+      "title": "Bitcoin Warrior",
+      "feed_url": "https://bitcoinwarrior.net/feed/",
+      "website_url": "https://bitcoinwarrior.net/",
+      "description": "Bitcoin Warrior is a blog dedicated to exploring the possibilities of Bitcoin. Our posts are designed to provide indepth and insightful Education, News, and Strategies to the average Crypto enthusiast looking to trade and increase their financial balance.",
+      "followers": {
+        "facebook": 571,
+        "twitter": 11900
+      },
+      "image_url": "https://i1.feedspot.com/4507380.jpg?t=1617083917"
+    },
+    {
+      "title": "CryptoCurrency Blog | News & hourly reports",
+      "feed_url": "https://walletinvestor.com/blog/feed/",
+      "website_url": "https://walletinvestor.com/blog/",
+      "description": "Machine Learning (AI) price forecasts. CryptoCurrency marketcap and statistics, news and analysis. Everything you need for Bitcoin and Altcoins in one place.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4838136.jpg?t=1611137589"
+    },
+    {
+      "title": "Vestorportal",
+      "feed_url": "https://vestorportal.com/rss/",
+      "website_url": "https://vestorportal.com/",
+      "description": "Get up-to-date Cryptocurrency news, analysis, guides, tutorials, and insight. Covering Bitcoin, Ethereum, altcoins, NFTs, and blockchain technology.",
+      "followers": {
+        "facebook": 52,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5376117.jpg?t=1647320683"
+    },
+    {
+      "title": "LATOKEN Blog",
+      "feed_url": "https://blog.latoken.com/feed",
+      "website_url": "https://blog.latoken.com/",
+      "description": "Keep up with the latest news from LATOKEN. LATOKEN is a simple, fast, and secure way to exchange crypto and tokenize assets. It enables asset owners to unlock the value of assets by creating and selling their asset tokens.",
+      "followers": {
+        "facebook": 282100,
+        "twitter": 378900,
+        "instagram": 183900
+      },
+      "image_url": "https://i1.feedspot.com/4948039.jpg?t=1611137605"
+    },
+    {
+      "title": "CoinRegWatch",
+      "feed_url": "https://coinregwatch.com/feed/",
+      "website_url": "https://coinregwatch.com/category/cryptocurrency-news/",
+      "description": "Covers latest breaking news on cryptocurrency, top gainers and losers in the crypto world, analysis markets with live charts and much more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5343838.jpg?t=1637135515"
+    },
+    {
+      "title": "Master The Crypto",
+      "feed_url": "https://masterthecrypto.com/feed/",
+      "website_url": "https://masterthecrypto.com/",
+      "description": "A knowledge & resource center for all things blockchain & cryptocurrency related. Our mission is to empower you to learn more about crypto currencies and to learn how to pick the winning cryptos.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 906,
+        "instagram": 117
+      },
+      "image_url": "https://i1.feedspot.com/4801233.jpg?t=1611148146"
+    },
+    {
+      "title": "Marco Wutzer Blog",
+      "feed_url": "https://www.marcowutzer.com/blog/rss/",
+      "website_url": "https://www.marcowutzer.com/blog/",
+      "description": "Marco Wutzer is a speculator and pioneering investor in bitcoin and other cryptocurrencies. He has over 12 years of experience in the crypto market and is a true expert in blockchain technology. He's one of the very few people that helped to establish cryptocurrencies as a new asset class since their inception.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5435238.jpg?t=1661337294"
+    },
+    {
+      "title": "Blokt",
+      "feed_url": "https://blokt.com/feed",
+      "website_url": "https://blokt.com/news",
+      "description": "Blokt was founded in 2017 by Greg Adams, a crypto enthusiast, with a background in security, web journalism, media, and marketing. After building an extensive list of contacts in the blockchain space, Greg put together a team that would later become essential to Blokt's success. Whether you are interested in privacy, blockchain, security, or any of the various cryptocurrencies, we have content that will keep you informed, and safe, and guide you through the complex processes involved in using cryptocurrencies.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 7000,
+        "instagram": 434
+      },
+      "image_url": "https://i1.feedspot.com/4900954.jpg?t=1658485751"
+    },
+    {
+      "title": "Paxful",
+      "feed_url": "https://medium.com/feed/@paxful",
+      "website_url": "https://medium.com/@paxful",
+      "description": "Read writing from Paxful on Medium. Building for 100%, one Bitcoin at a time. Buy, sell, and trade Bitcoin with over 350 ways to pay. Visit Paxful to learn more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5424364.jpg?t=1658482991"
+    },
+    {
+      "title": "CointradeIndia",
+      "feed_url": "https://medium.com/feed/@cointradeIndia",
+      "website_url": "https://medium.com/@cointradeIndia",
+      "description": "Cryptocurrency Blog covering crypto news, updates, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5425657.jpg?t=1658924565"
+    },
+    {
+      "title": "BuyUcoin Talks",
+      "feed_url": "https://medium.com/feed/buyucoin-talks",
+      "website_url": "https://medium.com/buyucoin-talks",
+      "description": "Covers crypto industry news in India. BuyUcoin is India's first multi-cryptocurrency Wallet and Exchange.",
+      "followers": {
+        "twitter": 8000
+      },
+      "image_url": "https://i1.feedspot.com/5267836.jpg?t=1618398718"
+    },
+    {
+      "title": "Blockduo",
+      "feed_url": "https://blockduo.com/feed/",
+      "website_url": "https://blockduo.com/category/blog/",
+      "description": "Read the latest Cryptocurrency and Blockchain news with our updated live feed of breaking stories surrounding Bitcoin, Ethereum, XRP, and all other cryptos.",
+      "followers": {
+        "twitter": 9600
+      },
+      "image_url": "https://i1.feedspot.com/5099075.jpg?t=1611138827"
+    },
+    {
+      "title": "DC Forecasts",
+      "feed_url": "https://www.dcforecasts.com/feed/",
+      "website_url": "https://www.dcforecasts.com/",
+      "description": "Browse latest bitcoin news about business, technology, company and regulations of bitcoin. Latest crypto currency news, talks and new start up related to bitcoin and other crypto currency.",
+      "followers": {
+        "facebook": 11100,
+        "twitter": 303,
+        "instagram": 121
+      },
+      "image_url": "https://i1.feedspot.com/4824490.jpg?t=1611138779"
+    },
+    {
+      "title": "robokoin.com",
+      "feed_url": "https://robokoin.com/feed/",
+      "website_url": "https://robokoin.com/",
+      "description": "ROBOkoin is a groundbreaking Meme coin, the alpha and omega, the beginning and the end of all meme coins. Built on the BNB blockchain, Robokoin is conceptualized around M.I.T. (Mankind Immortality Technology) for TWO reasons. While many meme coins focus solely on entertainment, ROBOkoin focuses on our immortality via a priceless utility called M.I.T., which stands for Mankind Immortality Technology, to be developed shortly in the future. Therefore, every unit token of ROBOkoin is backed by a measure of immortality reserved in the future by M.I.T.",
+      "followers": {
+        "twitter": 690
+      },
+      "image_url": "https://i1.feedspot.com/7325975.jpg?t=1720080565"
+    },
+    {
+      "title": "The BitPay Blog",
+      "feed_url": "https://bitpay.com/blog/rss/",
+      "website_url": "https://www.bitpay.com/blog",
+      "description": "A staff-driven look into enterprise bitcoin development. Accept bitcoin, store and spend bitcoin securely, or turn bitcoin into dollars with the BitPay Card.",
+      "followers": {
+        "facebook": 48300,
+        "twitter": 370100
+      },
+      "image_url": "https://i1.feedspot.com/4648742.jpg?t=1616769119"
+    },
+    {
+      "title": "FreeBTCTap",
+      "feed_url": "https://freebtctap.wordpress.com/feed/",
+      "website_url": "https://freebtctap.wordpress.com/",
+      "description": "Tap In And Get Some Knowledge On Cryptocurrency. Follow the blog to get the latest news, articles, updates, and much more.",
+      "followers": {
+        "twitter": 379
+      },
+      "image_url": "https://i1.feedspot.com/5210877.jpg?t=1611142559"
+    },
+    {
+      "title": "Crypto Bulls Club",
+      "feed_url": "https://cryptobullsclub.com/feed/",
+      "website_url": "https://cryptobullsclub.com/category/news/",
+      "description": "A crypto blog from India that publishes detailed guide, reviews and news on cryptocurrencies. It is your one stop destination for technical analysis and news from the world of Bitcoin and other cryptocurrencies.",
+      "followers": {
+        "twitter": 621,
+        "instagram": 201
+      },
+      "image_url": "https://i1.feedspot.com/5284550.jpg?t=1622013067"
+    },
+    {
+      "title": "Crypto What",
+      "feed_url": "https://cryptowhat.com/feed/",
+      "website_url": "https://cryptowhat.com/",
+      "description": "CryptoWhat is your reliable resource to help you navigate Bitcoin and Cryptocurrency. Follow us for breaking news about cryptocurrency.",
+      "followers": {
+        "facebook": 81,
+        "twitter": 360
+      },
+      "image_url": "https://i1.feedspot.com/5165017.jpg?t=1611140243"
+    },
+    {
+      "title": "UK Bitcoin Blog",
+      "feed_url": "https://www.ukbitcoinblog.com/category/bitcoin-mining/feed/",
+      "website_url": "https://www.ukbitcoinblog.com/category/bitcoin-mining/",
+      "description": ", is a blog about Cryptocurrencies such as Bitcoin, Etherium, Dogecoin and Mining Bitcoins. Get Cryptocurrency News and Views from the UK",
+      "followers": {
+        "facebook": 265,
+        "twitter": 341,
+        "instagram": 165
+      },
+      "image_url": "https://i1.feedspot.com/4803287.jpg?t=1611142581"
+    },
+    {
+      "title": "CryptoComes - Bitcoin, Etherium, Blockchain, ICO news 24/7",
+      "feed_url": "https://cryptocomes.com/rss_feed",
+      "website_url": "https://cryptocomes.com/",
+      "description": "is a news platform that covers the crypto industry and community, , AI and all new generation tech. Keeping you tuned to the latest, we also run price analyses and forecasts, reviews, opinions, interviews, feature stories and investigations. Our CryptoTips and reference information will help you cope with crypto economics and learn more.",
+      "followers": {
+        "facebook": 622
+      },
+      "image_url": "https://i1.feedspot.com/4858346.jpg?t=1611138735"
+    },
+    {
+      "title": "Cryptooa",
+      "feed_url": "https://cryptooa.com/blog/feed/",
+      "website_url": "https://cryptooa.com/blog/",
+      "description": "Cryptooa is a community of Bitcoin, Blockchain, Altcoins, Cryptocurrency users from around the world. Find exclusive Bitcoin tips, tutorials & guides to make money.",
+      "followers": {
+        "facebook": 545,
+        "twitter": 37
+      },
+      "image_url": "https://i1.feedspot.com/5252567.jpg?t=1614923118"
+    },
+    {
+      "title": "LocalCoinSwap Blog",
+      "feed_url": "https://blog.localcoinswap.com/rss/",
+      "website_url": "https://blog.localcoinswap.com/",
+      "description": "Covers Bitcoin, Polkadot, Ethereum, NFT, crypto mining, and p2p trading. LocalCoinSwap is the P2P cryptocurrency marketplace that connects anyone, anywhere, to buy and sell bitcoin and altcoins.",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 6200,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5179400.jpg?t=1611138221"
+    },
+    {
+      "title": "The Crypto Staunch Blog",
+      "feed_url": "https://cryptostaunch.com/feed",
+      "website_url": "https://cryptostaunch.com/blog",
+      "description": "Find investment guides on digital assets. The Crypto Staunch is a blog dedicated to educating anyone with a desire to start investing in cryptocurrency to earn money fast online, especially from the ground up, as well as honing cryptopreneurial mindsets.",
+      "followers": {
+        "twitter": 419
+      },
+      "image_url": "https://i1.feedspot.com/5155921.jpg?t=1710935952"
+    },
+    {
+      "title": "TradingBrowser",
+      "feed_url": "https://tradingbrowser.com/feed/",
+      "website_url": "https://tradingbrowser.com/",
+      "description": "TradingBrowser is a crypto trading portal for beginner and advanced traders. The goal with TradingBrowser is to make it easy for Crypto traders to find the exchange they are looking for.",
+      "followers": {
+        "twitter": 40
+      },
+      "image_url": "https://i1.feedspot.com/5165828.jpg?t=1611142538"
+    },
+    {
+      "title": "FortuneZ",
+      "feed_url": "https://fortunez.com/feed/",
+      "website_url": "https://fortunez.com/",
+      "description": "FortuneZ.com is a global media publication covering Crypto news, Markets, and iGaming, founded in the year 2000, written especially for the industry's professionals, aficionados, and enthusiasts alike.",
+      "followers": {
+        "facebook": 63600,
+        "twitter": 8000
+      },
+      "image_url": "https://i1.feedspot.com/5163810.jpg?t=1611137980"
+    },
+    {
+      "title": "BoxMining",
+      "feed_url": "https://boxmining.com/feed/",
+      "website_url": "https://boxmining.com/category/latest-news/",
+      "description": "Boxmining is the leading provider of insights and resources on digital assets, decentralized finance, and blockchain technology. We are dedicated to obsessively identifying and profiling the latest trends in digital assets, as well as providing educational resources for complete beginners to seasoned enthusiasts.",
+      "followers": {
+        "twitter": 178600,
+        "instagram": 24900
+      },
+      "image_url": "https://i1.feedspot.com/5005616.jpg?t=1669967410"
+    },
+    {
+      "title": "Coinotizia",
+      "feed_url": "https://coinotizia.com/feed/",
+      "website_url": "https://coinotizia.com/",
+      "description": "A leader in Bitcoin, Ethereum, Ripple, NEO, ICO, and Cryptocurrency News, Coinotizia covers all cryptocurrencies bringing you the latest news and analyses on the future of money.",
+      "followers": {
+        "facebook": 282,
+        "twitter": 157
+      },
+      "image_url": "https://i1.feedspot.com/5115637.jpg?t=1611140788"
+    },
+    {
+      "title": "Cryptocurrency Coins",
+      "feed_url": "https://cryptocurrency-coins.blogspot.com/feeds/posts/default",
+      "website_url": "https://cryptocurrency-coins.blogspot.com/",
+      "description": "Cryptocurrency-coins.blogspot.com is a biggest latest news and updates provider website about cryptocurrency.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5432952.jpg?t=1660819589"
+    },
+    {
+      "title": "CryptoNoob Blog | Bitcoin, Ethereum, Mining and Passive Income",
+      "feed_url": "https://cryptonoob.co.uk/feed/",
+      "website_url": "https://cryptonoob.co.uk/",
+      "description": "Our sole aim is to ensure blockchain technology and cryptocurrencies are understood easily by anyone, regardless of their exposure to technology or finance.",
+      "followers": {
+        "twitter": 321
+      },
+      "image_url": "https://i1.feedspot.com/4950860.jpg"
+    },
+    {
+      "title": "BUXCOIN CRYPTOCURRENCY",
+      "feed_url": "https://buxcoindigicrypto.blogspot.com/feeds/posts/default",
+      "website_url": "https://buxcoindigicrypto.blogspot.com/",
+      "description": "In this blog, I am sharing the latest updates about buxcoin rates and related information.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5237169.jpg?t=1610979234"
+    },
+    {
+      "title": "Coin Press The latest crypto news and information on crypto currencies",
+      "feed_url": "https://coinpress.io/feed/",
+      "website_url": "https://coinpress.io/",
+      "description": "Coinpress.io is a newspaper, a devoted cryptocurrency enlargement and advisory enterprise that is driven by the mission of providing assistance to bitcoin traders. The informative newspaper is one of the many ways in which this enterprise hopes to improve the crypto space.",
+      "followers": {
+        "facebook": 81,
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/4744735.jpg?t=1611140804"
+    },
+    {
+      "title": "CoinTikka",
+      "feed_url": "https://cointikka.com/feed/",
+      "website_url": "https://cointikka.com/",
+      "description": "Cointikka is a Cryptocurrency blog. You will find here Guides, Offers and Resource about Bitcoin & Alt Coins. Add Spice to your Wealth.",
+      "followers": {
+        "twitter": 110
+      },
+      "image_url": "https://i1.feedspot.com/5041981.jpg"
+    },
+    {
+      "title": "CryptoDeFix",
+      "feed_url": "https://cryptodefix.com/rss?type=&tag=",
+      "website_url": "https://cryptodefix.com/articles",
+      "description": "Covers crypto project news and best practices across multiple industries, and also reviews of companies, pros and cons of products.",
+      "followers": {
+        "facebook": 1,
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/5311624.jpg?t=1628752638"
+    },
+    {
+      "title": "Cryptocurrency the next Bitcoin or Ethereum Futurenet and Futuro Coin",
+      "feed_url": "https://futurenetafrica.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://futurenetafrica.blogspot.com/",
+      "description": "The next Bitcoin or Ethereum, good cryptocurrencies Starting with the Futurocoin and getting rich.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4838369.jpg?t=1611142232"
+    },
+    {
+      "title": "bitFlyer Europe Blog",
+      "feed_url": "https://blog-eu.bitflyer.com/rss/",
+      "website_url": "https://blog-eu.bitflyer.com/",
+      "description": "Learn more about us and our products, as well as various information about cryptocurrencies and blockhain technology. bitFlyer is the simplest and safest way to buy and sell Bitcoin, Ethereum, and more.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5072101.jpg?t=1671603821"
+    },
+    {
+      "title": "A Crypto Guide",
+      "feed_url": "https://acryptoguide.com/feed/",
+      "website_url": "https://acryptoguide.com/",
+      "description": "Acryptoguide.com serves as a dedicated platform offering comprehensive and beginner-friendly information on cryptocurrency and blockchain technology. The blog is committed to educating newcomers to the crypto world through high-quality content, addressing common questions, trends, and insights. Its goal is to assist individuals in navigating the complexities of digital currencies and blockchain innovations.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7327955.jpg?t=1722400721"
+    },
+    {
+      "title": "Freecryptoinfo",
+      "feed_url": "https://freecryptoinfo.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://freecryptoinfo.blogspot.com/",
+      "description": "Keep up with articles from Freecryptoinfo.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5057600.jpg?t=1611141670"
+    },
+    {
+      "title": "The rise of the digital currency (Cryptocurrency)",
+      "feed_url": "http://mycriptocurrency.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://mycriptocurrency.blogspot.com/",
+      "description": "This blog focus mainly on different types of digital currencies, update on digital currencies, how tos on different cryptocurrencies and provide adequate information on the need and the use of the future currency",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4838378.jpg?t=1611140364"
+    },
+    {
+      "title": "The Daily Encrypt",
+      "feed_url": "https://www.thedailyencrypt.com/feed/",
+      "website_url": "https://www.thedailyencrypt.com/",
+      "description": "Get the latest news on crypto, blockchain, Bitcoin & Ethereum straight from The Daily Encrypt. We have everything you need to know about cryptocurrency. Stay informed with our daily updates!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5394577.jpg?t=1651561250"
+    },
+    {
+      "title": "CCx News.com",
+      "feed_url": "https://ccxnews.com/feed/",
+      "website_url": "http://ccxnews.com/",
+      "description": "Welcome to CCXNews.com! We serve the Cryptocurrency world with our daily news posts and market reports. We have seen a strong growth of visitors to our website and our social media posts since we started because we focus on useful information and market trends.",
+      "followers": {
+        "twitter": 18
+      },
+      "image_url": "https://i1.feedspot.com/5069796.jpg?t=1638793646"
+    },
+    {
+      "title": "Coinfeeds AI Blog \u00bb Crypto",
+      "feed_url": "https://www.coinfeeds.ai/crypto-blog/rss.xml",
+      "website_url": "https://www.coinfeeds.ai/crypto-blog",
+      "description": "Coinfeeds AI offers well-researched, concise articles on cryptocurrency topics \u2014 such as ETFs, tokenization, blockchain mechanisms, DeFi protocols and regulation.",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/8785507.jpg?t=1762328367"
+    },
+    {
+      "title": "Fintech.ca",
+      "feed_url": "https://www.fintech.ca/feed/",
+      "website_url": "https://www.fintech.ca/",
+      "description": "Gather news, and rich insights through interviews with thought leaders operating in areas such as cryptocurrency, decentralized finance, investing, insurance, lending, payments, and traditional finance. As Canada's fintech publication of record, Fintech.ca provides real-time reporting and analysis of emerging financial technology news across Canada.",
+      "followers": {
+        "facebook": 31,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5568652.jpg?t=1752835849"
+    },
+    {
+      "title": "Investing.com \u00bb Cryptocurrency News",
+      "feed_url": "https://www.investing.com/rss/news_301.rss",
+      "website_url": "https://www.investing.com/news/cryptocurrency-news",
+      "description": "The latest cryptocurrency news - stay up-to-date with breaking news on major cryptocurrencies, including Bitcoin, Ethereum, Litecoin, Ripple, and ICOs from Investing.com",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/4819235.jpg?t=1754377746"
+    },
+    {
+      "title": "The Defiant",
+      "feed_url": "https://thedefiant.io/api/feed",
+      "website_url": "https://thedefiant.io/",
+      "description": "Disciver the latest DeFi, Ethereum, and Web3 news from The Defiant. In-depth DeFi guides and analysis to help you find the important developments in DeFi. The Defiant is an independent and unbiased news portal covering Crypto and Blockchain applications to help investors create an informed opinions and strategies.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 115800,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/5515832.jpg?t=1752837709"
+    },
+    {
+      "title": "Kiplinger \u00bb Cryptocurrency",
+      "feed_url": "https://www.kiplinger.com/feeds/tag/cryptocurrency",
+      "website_url": "https://www.kiplinger.com/investing/cryptocurrency",
+      "description": "News, insights and expert analysis on cryptocurrency from the team at Kiplinger.",
+      "followers": {
+        "twitter": 56500
+      },
+      "image_url": "https://i1.feedspot.com/8655429.jpg?t=1754377252"
+    },
+    {
+      "title": "FF News \u00bb Cryptocurrency",
+      "feed_url": "https://ffnews.com/category/newsarticle/cryptocurrency/feed",
+      "website_url": "https://ffnews.com/category/newsarticle/cryptocurrency",
+      "description": "All latest articles about Cryptocurrency from FF News.",
+      "followers": {
+        "twitter": 32200
+      },
+      "image_url": "https://i1.feedspot.com/8655430.jpg?t=1754377396"
+    },
+    {
+      "title": "Boston University \u00bb Cryptocurrency",
+      "feed_url": "https://www.bu.edu/pardeeschool/tag/cryptocurrency/feed/",
+      "website_url": "https://www.bu.edu/pardeeschool/tag/cryptocurrency",
+      "description": "All latest articles about Cryptocurrency from Boston University.",
+      "followers": {
+        "facebook": 25400
+      },
+      "image_url": "https://i1.feedspot.com/8655431.jpg?t=1754377460"
+    },
+    {
+      "title": "PeerJ Publishing \u00bb Cryptocurrency",
+      "feed_url": "https://peerj.com/articles/index.atom?subject=12860&journal=cs",
+      "website_url": "https://peerj.com/subjects/cryptocurrency",
+      "description": "PeerJ articles, preprints, editors, authors and reviewers in the cryptocurrency overlay. Like subject journals, overlays are a filter for discovering your community.",
+      "followers": {
+        "twitter": 20800
+      },
+      "image_url": "https://i1.feedspot.com/8655432.jpg?t=1754377718"
+    },
+    {
+      "title": "Pennsylvania Capital-Star \u00bb Cryptocurrency",
+      "feed_url": "https://penncapital-star.com/tag/cryptocurrency/feed",
+      "website_url": "https://penncapital-star.com/tag/cryptocurrency",
+      "description": "All latest articles about Cryptocurrency from Pennsylvania Capital-Star.",
+      "followers": {
+        "facebook": 6000
+      },
+      "image_url": "https://i1.feedspot.com/8655433.jpg?t=1754377507"
+    },
+    {
+      "title": "Traders Magazine \u00bb Cryptocurrencies",
+      "feed_url": "https://www.tradersmagazine.com/category/departments/cryptocurrencies/feed",
+      "website_url": "https://www.tradersmagazine.com/category/departments/cryptocurrencies",
+      "description": "Read about Bitcoin, Litecoin and other cryptos, tokens and exchanges and the happenings in the sector.",
+      "followers": {
+        "facebook": 2500
+      },
+      "image_url": "https://i1.feedspot.com/8655434.jpg?t=1754377210"
+    },
+    {
+      "title": "Geopolitical Monitor \u00bb Cryptocurrency",
+      "feed_url": "https://www.geopoliticalmonitor.com/tag/cryptocurrency/feed/",
+      "website_url": "https://www.geopoliticalmonitor.com/tag/cryptocurrency",
+      "description": "The latest Cryptocurrency news and risk analysis. The Geopolitical Monitor provides objective and critical insights into the most pressing issues shaping global geopolitics, helping you keep pace with a changing world.",
+      "followers": {
+        "facebook": 6600
+      },
+      "image_url": "https://i1.feedspot.com/8655435.jpg?t=1754377770"
+    },
+    {
+      "title": "BQ Magazine \u00bb Cryptocurrency",
+      "feed_url": "https://bq-magazine.com/category/cryptocurrency/feed/",
+      "website_url": "https://bq-magazine.com/category/cryptocurrency",
+      "description": "All latest articles about Cryptocurrency from BQ Magazine.",
+      "followers": {},
+      "image_url": "https://bq-magazine.com/wp-content/uploads/2024/09/cropped-BQ-Magazine.com-Logo-4.png?t=1754375282"
+    },
+    {
+      "title": "Australian Cyber Security \u00bb Cryptocurrency",
+      "feed_url": "https://australiancybersecuritymagazine.com.au/category/cryptocurrency/feed/",
+      "website_url": "https://australiancybersecuritymagazine.com.au/category/cryptocurrency",
+      "description": "All latest articles about Cryptocurrency from Australian Cyber Security.",
+      "followers": {
+        "facebook": 761,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/8655437.jpg?t=1754374023"
+    },
+    {
+      "title": "Executive Magazine \u00bb Cryptocurrency",
+      "feed_url": "https://www.executive-magazine.com/category/cover-story/cryptocurrency/feed",
+      "website_url": "https://www.executive-magazine.com/category/cover-story/cryptocurrency",
+      "description": "All latest articles about Cryptocurrency from Executive Magazine.",
+      "followers": {
+        "facebook": 24100
+      },
+      "image_url": "https://i1.feedspot.com/8655438.jpg?t=1754377138"
+    },
+    {
+      "title": "Engineering and Technology \u00bb Cryptocurrency",
+      "feed_url": "https://eandt.theiet.org/rss.xml/326",
+      "website_url": "https://eandt.theiet.org/categories/topics/cryptocurrency",
+      "description": "All latest articles about Cryptocurrency from Engineering and Technology.",
+      "followers": {
+        "twitter": 8500
+      },
+      "image_url": "https://i1.feedspot.com/8655439.jpg?t=1754373647"
+    },
+    {
+      "title": "The MortgagePoint \u00bb Cryptocurrency",
+      "feed_url": "https://themortgagepoint.com/tag/cryptocurrency/feed/",
+      "website_url": "https://themortgagepoint.com/tag/cryptocurrency",
+      "description": "All latest articles about Cryptocurrency from The MortgagePoint.",
+      "followers": {
+        "facebook": 5000
+      },
+      "image_url": "https://i1.feedspot.com/8655440.jpg?t=1754377597"
+    },
+    {
+      "title": "ProMarket \u00bb Cryptocurrencies",
+      "feed_url": "https://www.promarket.org/tag/cryptocurrencies/feed",
+      "website_url": "https://www.promarket.org/tag/cryptocurrencies",
+      "description": "All latest articles about Cryptocurrencies from ProMarket.",
+      "followers": {
+        "facebook": 1900
+      },
+      "image_url": "https://i1.feedspot.com/8655441.jpg?t=1754377650"
+    },
+    {
+      "title": "tradersdna \u00bb Cryptocurrencies",
+      "feed_url": "https://www.tradersdna.com/category/cryptocurrencies/feed/",
+      "website_url": "https://www.tradersdna.com/category/cryptocurrencies",
+      "description": "All latest articles about Cryptocurrencies from tradersdna",
+      "followers": {
+        "facebook": 21500
+      },
+      "image_url": "https://i1.feedspot.com/8655442.jpg?t=1754377340"
+    },
+    {
+      "title": "Bitcoin Magazine",
+      "feed_url": "https://bitcoinmagazine.com/.rss/full/",
+      "website_url": "https://bitcoinmagazine.com/",
+      "description": "The most trusted voice in bitcoin, Bitcoin Magazine provides news, analysis, information, commentary, and price data about Bitcoin blockchain tech, and other cryptocurrencies through articles, podcasts, research, and events.",
+      "followers": {
+        "facebook": 558500,
+        "twitter": 3700000,
+        "instagram": 374200
+      },
+      "image_url": "https://i1.feedspot.com/4691675.jpg?t=1611138048"
+    },
+    {
+      "title": "CoinDesk \u00bb Cryptocurrency",
+      "feed_url": "https://www.coindesk.com/arc/outboundfeeds/rss",
+      "website_url": "https://www.coindesk.com/tag/cryptocurrency",
+      "description": "Leader in Cryptocurrency, Bitcoin, Ethereum, XRP, blockchain, digital finance, and Web 3.0 news with analysis, video and live price updates. CoinDesk is the media platform for the next generation of investors exploring how cryptocurrencies and digital assets are contributing to the evolution of the global financial system. Its mandate is to inform, educate, and connect the global investment community through news, data, events, and education.",
+      "followers": {
+        "facebook": 295100,
+        "twitter": 3200000
+      },
+      "image_url": "https://i1.feedspot.com/4738989.jpg?t=1611137125"
+    },
+    {
+      "title": "Coinspeaker",
+      "feed_url": "https://www.coinspeaker.com/feed/",
+      "website_url": "https://www.coinspeaker.com/news/crypto/",
+      "description": "CoinSpeaker is the speaker in Finance World covering everything from Bitcoin, Altcoins, and Blockchain to Fintech and Stock Markets. We're featuring a mix of regular news, tech wraps, daily and weekly Market Updates, expert interviews, and much more.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4769568.jpg?t=1611137730"
+    },
+    {
+      "title": "CryptoApe Blog",
+      "feed_url": "https://www.thecryptoape.com/feed",
+      "website_url": "https://www.thecryptoape.com/blog",
+      "description": "CryptoApe Technologies is an exclusive blockchain and cryptocurrency development company that offers instant and complete crypto solutions to kickstart your business. We offer customizable solutions for your business so that you can craft your crypto platform as per your business requirement.",
+      "followers": {
+        "twitter": 17,
+        "instagram": 68
+      },
+      "image_url": "https://i1.feedspot.com/5557030.jpg?t=1683278753"
+    },
+    {
+      "title": "CryptoTicker.io News",
+      "feed_url": "https://cryptoticker.io/en/feed",
+      "website_url": "https://cryptoticker.io/en/crypto-news/",
+      "description": "CryptoTicker is a platform for the most important Bitcoin, Ethereum and Blockchain news. Here, you'll find DeFi analyses, price predictions, and everything you need to get started with bitcoin.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 3000,
+        "instagram": 338
+      },
+      "image_url": "https://i1.feedspot.com/4888195.jpg?t=1611138211"
+    },
+    {
+      "title": "Aragon's Blog",
+      "feed_url": "https://blog.aragon.org/feed",
+      "website_url": "https://blog.aragon.org/",
+      "description": "Aragon's Blog covers announcements, associations, developers, education, events, grants, and Vocdoni. Aragon is the leading platform for decentralized governance and DAOs.",
+      "followers": {
+        "twitter": 105100
+      },
+      "image_url": "https://i1.feedspot.com/4950859.jpg?t=1611148110"
+    },
+    {
+      "title": "CoinScribble",
+      "feed_url": "https://coinscribble.com/feed",
+      "website_url": "https://coinscribble.com/",
+      "description": "CoinScribble is a 100% free and anonymous social journalism platform focused on the cryptocurrency industry. Anyone can post to the platform and the platform can be used to post press releases, news, opinions, article bounties, and other forms of content. Posting to the platform creates an easy backlink and article that can be shared.",
+      "followers": {
+        "facebook": 424,
+        "twitter": 331
+      },
+      "image_url": "https://i1.feedspot.com/4963799.jpg?t=1611139395"
+    },
+    {
+      "title": "Coin Push",
+      "feed_url": "https://coinpush.app/feed/",
+      "website_url": "https://www.coinjar.com/global/blog/",
+      "description": "Welcome to Coin Push Trading School, where we offer invaluable trading tips and tricks to help you navigate the complex world of cryptocurrency trading. Our biweekly content is carefully crafted to provide you with actionable insights and quick answers to your most pressing questions about trading. At Coin Push Trading School, we understand that the crypto market can be daunting, especially for beginners. That's why our team of experts works tirelessly to generate informative and educational content that caters to traders of all skill levels.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7285120.jpg?t=1711621506"
+    },
+    {
+      "title": "Brave New Coin",
+      "feed_url": "https://bravenewcoin.com/insights/rss",
+      "website_url": "https://bravenewcoin.com/insights/latest",
+      "description": "Latest Insights from Brave New Coin. The coverage spans every aspect of the Cryptocurrency & Blockchain Ecosystem, including its impact on the greater FinTech and Payments space. Brave New Coin (BNC) is a data and research company focused on the blockchain and cryptographic assets industry.",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 39900,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4648377.jpg?t=1610013760"
+    },
+    {
+      "title": "UseTheBitcoin.com",
+      "feed_url": "https://usethebitcoin.com/feed/",
+      "website_url": "https://usethebitcoin.com/",
+      "description": "Most Important Bitcoin & Cryptocurrency News. UseTheBitcoin.com is a blog about the cryptocurrency industry and how can you use cryptocurrency in day-to-day life.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4837785.jpg?t=1611138252"
+    },
+    {
+      "title": "Ethereum Blog",
+      "feed_url": "https://blog.ethereum.org/feed.xml",
+      "website_url": "https://blog.ethereum.org/",
+      "description": "Get the latest news and announcements from the Ethereum Foundation. Ethereum can be used to codify, decentralize, secure and trade just about anything: voting, domain names, financial exchanges, crowdfunding, company governance, contracts and agreements of most kind, intellectual property, and even smart property thanks to hardware integration.",
+      "followers": {
+        "facebook": 240600,
+        "twitter": 3100000
+      },
+      "image_url": "https://i1.feedspot.com/4950662.jpg?t=1609933274"
+    },
+    {
+      "title": "CoinFabrik",
+      "feed_url": "https://www.coinfabrik.com/feed/",
+      "website_url": "https://www.coinfabrik.com/blog/",
+      "description": "Blockchain Technologies, FinTech and Smart Contracts Development",
+      "followers": {
+        "facebook": 522,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4691699.jpg?t=1611139400"
+    },
+    {
+      "title": "Kraken Blog",
+      "feed_url": "https://blog.kraken.com/feed/",
+      "website_url": "https://blog.kraken.com/",
+      "description": "News and market reports from Kraken Digital Asset Exchange.Kraken is a Bitcoin exchange for converting to and from US dollars, euros, British pounds and Japanese yen.",
+      "followers": {
+        "facebook": 60100,
+        "twitter": 1700000,
+        "instagram": 178200
+      },
+      "image_url": "https://i1.feedspot.com/4950855.jpg?t=1611137572"
+    },
+    {
+      "title": "FXOpen Forex Blog | Forex trading, cryptocurrency trading",
+      "feed_url": "https://www.fxopen.blog/feed/",
+      "website_url": "https://www.fxopen.blog/",
+      "description": "Forex market insights, fx news, cryptocurrency news, Forex and cryptocurrency analytics, trading tips and strategies by FXOpen forex broker.",
+      "followers": {
+        "facebook": 149200,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4399244.jpg?t=1611139799"
+    },
+    {
+      "title": "Visionary Financial",
+      "feed_url": "https://visionary-finance.com/feed/gn",
+      "website_url": "https://visionary-finance.com/category/news/",
+      "description": "One of the top PR agencies in crypto and blockchain, delivering powerful exposure for emerging projects. Through tailored strategies and AI-powered content distribution, we drive global visibility and position your brand for maximum impact.",
+      "followers": {
+        "twitter": 15900,
+        "instagram": 884
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/3382777/page/5046600/logo_1744288589.jpg"
+    },
+    {
+      "title": "CoinGate Blog",
+      "feed_url": "https://coingate.com/feed",
+      "website_url": "https://coingate.com/blog/",
+      "description": "Stories from the easiest and most trusted place to buy, sell, and use crypto. Coinbase is a digital currency wallet and platform where merchants and consumers can transact with new digital currencies like bitcoin and ethereum.",
+      "followers": {
+        "facebook": 415500,
+        "twitter": 6500000
+      },
+      "image_url": "https://i1.feedspot.com/4648314.jpg?t=1611148034"
+    },
+    {
+      "title": "Blockchain News",
+      "feed_url": "https://www.the-blockchain.com/",
+      "website_url": "https://www.the-blockchain.com/",
+      "description": "Founded by online technology publisher Richard Kastelein. Blockchain News is the first online publication that focuses solely on Blockchain technology and theory. Our aim is to become the number one source online for Blockchain news.",
+      "followers": {
+        "facebook": 28700,
+        "twitter": 25900,
+        "instagram": 75
+      },
+      "image_url": "https://i1.feedspot.com/4512182.jpg?t=1612001062"
+    },
+    {
+      "title": "Devcoin | Cryptocurrency News | Bitcoin | Litecoin | Dogecoin",
+      "feed_url": "https://devcoins.org/",
+      "website_url": "https://devcoins.org/",
+      "description": "Devcoin is an ethically inspired cryptocurrency created in 2011 to support open source programmers and writers worldwide. They bring you news, prices, and more!",
+      "followers": {
+        "facebook": 55,
+        "twitter": 174
+      },
+      "image_url": "https://i1.feedspot.com/4648887.jpg?t=1611140737"
+    },
+    {
+      "title": "Coin24h \u00bb Cryptocurrency",
+      "feed_url": "https://coin24h.com/feed/",
+      "website_url": "https://coin24h.com/category/shiba/",
+      "description": "Covers the latest news and blogs on crypto currency , ICO, Market, Regulation Meta, NFT, Exchanges and Technical analysis.",
+      "followers": {
+        "facebook": 1
+      },
+      "image_url": "https://i1.feedspot.com/5371272.jpg?t=1644842801"
+    },
+    {
+      "title": "Airdrop Alert Blog",
+      "feed_url": "https://airdropalert.com/feed/",
+      "website_url": "https://airdropalert.com/blogs/",
+      "description": "Delivers news about crypto exchanges, crypto airdrops, market cap, ICO's, IEO's, trading, and blockchain. Airdrop Alert is a resource for people to find trusted airdrops & giveaway campaigns from across the crypto industry.",
+      "followers": {
+        "facebook": 38500,
+        "twitter": 169300,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5009822.jpg?t=1671602060"
+    },
+    {
+      "title": "CryptoSlate",
+      "feed_url": "https://cryptoslate.com/feed/",
+      "website_url": "https://cryptoslate.com/",
+      "description": "Features blockchain news, coin rankings, and a directory for people, companies, products, and events. CryptoSlate is a hub for cryptocurrency researchers and blockchain enthusiasts.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 227,
+        "instagram": 102800
+      },
+      "image_url": "https://i1.feedspot.com/4870596.jpg?t=1752814941"
+    },
+    {
+      "title": "Bake Blog",
+      "feed_url": "https://blog.bake.io/rss/",
+      "website_url": "https://blog.bake.io/",
+      "description": "Less banking, more baking. Learn all about the world of crypto, passive income opportunities, and a high yield / low-risk strategies from the official Cake DeFi Blog. Cake is a platform that empowers you to be in control of your finances by creating cashflow and harnessing the potentials of Decentralized Finance.",
+      "followers": {
+        "facebook": 31900,
+        "twitter": 45600
+      },
+      "image_url": "https://i1.feedspot.com/5273722.jpg?t=1619587327"
+    },
+    {
+      "title": "ForkLog | Bitcoin Magazine",
+      "feed_url": "https://forklog.media/feed/",
+      "website_url": "https://forklog.media/",
+      "description": "ForkLog is the online journal covering various cryptocurrency and decentralized technology related topics.",
+      "followers": {
+        "facebook": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4648772.jpg?t=1611142329"
+    },
+    {
+      "title": "Coin Spectator Blog",
+      "feed_url": "https://blog.coinspectator.com/feed/",
+      "website_url": "https://blog.coinspectator.com/",
+      "description": "Cryptocurrency news, insight, and everything in between. Coin Spectator is a real-time news aggregator covering the crypto industry.",
+      "followers": {
+        "facebook": 823,
+        "twitter": 11500
+      },
+      "image_url": "https://i1.feedspot.com/4732975.jpg?t=1611138702"
+    },
+    {
+      "title": "CoinDiligent",
+      "feed_url": "https://coindiligent.com/feed",
+      "website_url": "https://www.cryptomesh.net/",
+      "description": "In the cryptocurrency space, it pays to be diligent. CoinDiligent is your trusted source for the latest cryptocurrency news, analysis and opinions.",
+      "followers": {
+        "facebook": 599,
+        "twitter": 228
+      },
+      "image_url": "https://i1.feedspot.com/5035557.jpg?t=1656576248"
+    },
+    {
+      "title": "Cryptocurrency & Trading Blog",
+      "feed_url": "https://cryptocurrency-blog.com/feed/",
+      "website_url": "https://cryptomining-blog.com/",
+      "description": "A reference for everyone who wants to know any information about cryptocurrency. Key topics covered are mining and using Bitcoin (BTC) and other alternative cryptocurrencies, news, tips, reviews, and industry insights.",
+      "followers": {
+        "twitter": 7400
+      },
+      "image_url": "https://i1.feedspot.com/5306574.jpg?t=1627630690"
+    },
+    {
+      "title": "The Trading Bay",
+      "feed_url": "https://thetradingbay.com/feed/",
+      "website_url": "https://thetradingbay.com/",
+      "description": "TheTradingBay was launched in 2021 to streamline and convey the latest blockchain, cryptocurrency, forex, and finance news to its readers. TheTradingBay covers all the topics starting from Stocks, Crypto, Blockchain, Forex, Investing, Trading, and personal finance.",
+      "followers": {
+        "facebook": 13,
+        "twitter": 5,
+        "instagram": 587
+      },
+      "image_url": "https://i1.feedspot.com/5388411.jpg?t=1649319094"
+    },
+    {
+      "title": "Ox-currencies",
+      "feed_url": "https://ox-currencies.com/feed",
+      "website_url": "https://ox-currencies.com/",
+      "description": "Covers latest market reviews, trading tools and information about investing in digital assets like cryptocurrencies & currencies. Ox-currencies is a cryptocurrency content-driven site providing informational articles of cryptocurrency investing.",
+      "followers": {
+        "facebook": 688,
+        "twitter": 195
+      },
+      "image_url": "https://i1.feedspot.com/5344742.jpg?t=1638790949"
+    },
+    {
+      "title": "Ledgernomic",
+      "feed_url": "https://ledgernomic.com/feed/",
+      "website_url": "https://ledgernomic.com/",
+      "description": "Bringing you the most relevant DLT and blockchain news and analysis, and the latest developments regarding policy, enterprise blockchain, cryptocurrencies, and CBDCs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5327635.jpg?t=1633090467"
+    },
+    {
+      "title": "CipherTrace Blog",
+      "feed_url": "https://ciphertrace.com/feed/",
+      "website_url": "https://www.mastercard.com/news/perspectives/featured-topics/digital-currencies/",
+      "description": "Stay up to date with CipherTrace and see how CipherTrace detects money laundering, powers law enforcement investigations, and enables regulatory supervision. CipherTrace develops cryptocurrency Anti-Money Laundering, cryptocurrency forensics, and blockchain threat intelligence solutions.",
+      "followers": {
+        "facebook": 396,
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/5285937.jpg?t=1622264030"
+    },
+    {
+      "title": "Currency Times",
+      "feed_url": "https://www.currencytimes.co.in/feed/",
+      "website_url": "https://www.currencytimes.co.in/",
+      "description": "Currency Times is the best stage to distribute and read most recent news about trending topics, blockchains, business world, and technology.",
+      "followers": {
+        "facebook": 336,
+        "twitter": 39
+      },
+      "image_url": "https://i1.feedspot.com/5171931.jpg?t=1611139807"
+    },
+    {
+      "title": "Miner Gate | Crypto Mining Blog",
+      "feed_url": "https://minergate.com/blog/feed/",
+      "website_url": "https://minergate.com/blog/",
+      "description": "MinerGate is a multi-currency mining pool created by a group of cryptocoin enthusiasts. It has the most convenient GPU miner and provides merged mining service. Our pool is friendly to newbies as well as to experienced miners.",
+      "followers": {
+        "facebook": 15200,
+        "twitter": 14700,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4944569.jpg?t=1611137134"
+    },
+    {
+      "title": "Mindless Crypto News",
+      "feed_url": "https://mindlesscryptonews.com/feed/",
+      "website_url": "https://mindlesscryptonews.com/",
+      "description": "Mindless Crypto News is a website focused on the Cryptocurrency market, presenting the latest crypto headlines from all across the internet. We have tons of great articles on everything crypto-related, from Bitcoin, Ethereum, Dogecoin, and more. Stay up to date with the crypto market and never miss anything important crypto-related.",
+      "followers": {
+        "twitter": 256
+      },
+      "image_url": "https://i1.feedspot.com/5393816.jpg?t=1650887589"
+    },
+    {
+      "title": "CryptoCoinZone | Blog",
+      "feed_url": "https://www.cryptocoinzone.com/cryptocurrency-blog/feed/",
+      "website_url": "https://cryptotradingreview.com/",
+      "description": "Cryptocurrency blog covers news, facts and start-ups. We write about news, explain cryptocurrencies, reviews start-ups, investments, passive income, exchanges",
+      "followers": {
+        "facebook": 133,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4909034.jpg?t=1611139454"
+    },
+    {
+      "title": "Crypto Trading Reviews",
+      "feed_url": "https://cryptotradingreview.com/feed/",
+      "website_url": "https://cryptotradingreview.com/",
+      "description": "Everything you may need in Crypto world is here. Crypto Trading Reviews creates a responsible cryptocurrency ecosystem that puts traders best interests first.",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/4948046.jpg?t=1611148421"
+    },
+    {
+      "title": "Blockvila",
+      "feed_url": "https://blockvila.com/blog/feed/",
+      "website_url": "https://blockvila.com/blog/",
+      "description": "Blockvila is a leading and most trusted Blockchain service provider in Nigeria, specializing in the buying, selling, trading, and exchange of digital currency as well as Providing Cryptocurrency wallet services and Blockchain Education. Check out the blog to know more.",
+      "followers": {
+        "facebook": 20500,
+        "twitter": 24
+      },
+      "image_url": "https://i1.feedspot.com/4950849.jpg?t=1611139389"
+    },
+    {
+      "title": "BlockTribune",
+      "feed_url": "https://blocktribune.com/feed/",
+      "website_url": "https://blocktribune.com/",
+      "description": "BlockTribune is a daily news and information site devoted to bitcoin and blockchain technology. Founded in 2015, the BlockTribune covers not only bitcoin and altcoins themselves but also the regulatory environment for cryptocurrencies and the people who use them. We investigate the opportunities for commercial activity, investing in bitcoin as a commodity, the functionality of the blockchain, and the uses of this new technology beyond its function as a medium for transactions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5424397.jpg?t=1658484298"
+    },
+    {
+      "title": "Sweatcoin Guide",
+      "feed_url": "https://sweatcoinguide.com/feed/",
+      "website_url": "https://sweatcoinguide.com/blog/",
+      "description": "Sweatcoin Guide is a financial blog with all the latest news related to cryptocurrencies, stock market, finance, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5196915.jpg?t=1611139729"
+    },
+    {
+      "title": "CoinMetro Blog",
+      "feed_url": "https://coinmetro.com/blog/feed",
+      "website_url": "https://coinmetro.com/blog",
+      "description": "CoinMetro Blog brings you all the news from CoinMetro and the Crypto Community. Keep up to date with blockchain news and learn about crypto assets and markets. Coinmetro delivers the power of community to ensure everyone can better their lives by having access to the same opportunities.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 22300,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4950857.jpg?t=1671601653"
+    },
+    {
+      "title": "Crypto and Blockchain Talk",
+      "feed_url": "https://cryptoandblockchaintalk.com/rss",
+      "website_url": "https://research.binance.com/en/analysis",
+      "description": "Crypto and Blockchain Talk is a podcast for everyone who is new to the crypto and blockchain space. If you are you lost in the world of cryptocurrencies and you dont know the difference between a chain-gang and the blockchain then this online podcast is for you.",
+      "followers": {
+        "facebook": 536
+      },
+      "image_url": "https://i1.feedspot.com/4948064.jpg?t=1611140793"
+    },
+    {
+      "title": "Crypto Guide",
+      "feed_url": "https://crypto-guide.info/feed/",
+      "website_url": "https://crypto-guide.info/",
+      "description": "All Crypto-Related Information. We are on a mission of creating a complete and trusted crypto guide for cryptocurrency enthusiasts all over the world.",
+      "followers": {
+        "facebook": 16,
+        "twitter": 84
+      },
+      "image_url": "https://i1.feedspot.com/5395111.jpg?t=1651313402"
+    },
+    {
+      "title": "Valor Exchange",
+      "feed_url": "https://cryptoonnews.xyz/",
+      "website_url": "https://cryptoonnews.xyz/",
+      "description": "Explore the latest cryptocurrency news and updates from Valor Exchange. Valorexchange is a P2P marketplace for cryptocurrencies. It is an online trading platform that connects buyers and sellers to exchange cryptocurrency for better value.",
+      "followers": {
+        "facebook": 462,
+        "twitter": 728,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5403369.jpg?t=1653310835"
+    },
+    {
+      "title": "CryptoonNews",
+      "feed_url": "https://cryptoonnews.xyz/",
+      "website_url": "https://cryptoonnews.xyz/",
+      "description": "Find the latest news on Blockchain and cryptocurrency. The goal of this website is to help you find the most useful news and resources on Blockchain and cryptocurrency in one place.",
+      "followers": {
+        "facebook": 2,
+        "twitter": 10
+      },
+      "image_url": "https://i1.feedspot.com/5388410.jpg?t=1649319078"
+    },
+    {
+      "title": "TheCryptoAssociate",
+      "feed_url": "https://www.thecryptoassociate.com/feed/",
+      "website_url": "https://sludgefeed.com/category/cryptocurrency/",
+      "description": "The Crypto Associate provides you the best and latest cryptocurrency news, guides, and much more, with a focus on small-market cap cryptocurrency.",
+      "followers": {
+        "twitter": 458
+      },
+      "image_url": "https://i1.feedspot.com/5084797.jpg?t=1611139827"
+    },
+    {
+      "title": "SludgeFeed Cryptocurrency Blog",
+      "feed_url": "https://sludgefeed.com/category/cryptocurrency/feed/",
+      "website_url": "https://sludgefeed.com/category/cryptocurrency/",
+      "description": "Independent news, opinions, and reviews covering Technology, Blockchain, Altcoins, Internet, Business, Apps, Startups and anything else worth reading about.",
+      "followers": {
+        "twitter": 100
+      },
+      "image_url": "https://i1.feedspot.com/4946618.jpg?t=1611140292"
+    },
+    {
+      "title": "CryptoNewsia | Cryptocurrency News",
+      "feed_url": "https://cryptonewsia.com/feed/",
+      "website_url": "https://cryptonewsia.com/",
+      "description": "CryptoNewsia.com is a media website covering the latest news in the cryptocurrency and blockchain industry. At CryptoNewsia, the dedicated team covers the latest updates, future trends, detailed analysis, and insight. Our aim is to assist the crypto people to understand and with success use these technologies now and within the future.",
+      "followers": {
+        "facebook": 111,
+        "twitter": 83
+      },
+      "image_url": "https://i1.feedspot.com/5277720.jpg?t=1620298439"
+    },
+    {
+      "title": "CoinGecko",
+      "feed_url": "https://www.coingecko.com/en/news",
+      "website_url": "https://www.coingecko.com/en/news",
+      "description": "CoinGecko provides a fundamental analysis of the crypto market. In addition to tracking price, volume, and market capitalization, CoinGecko tracks community growth, open-source code development, major events, and on-chain metrics. CoinGecko News gives you the best cryptocurrency and blockchain news in one place. Get updating feed of top news, market insights, and expert opinions across the globe.",
+      "followers": {
+        "facebook": 189100,
+        "twitter": 1700000,
+        "instagram": 566000
+      },
+      "image_url": "https://i1.feedspot.com/5425586.jpg?t=1658908015"
+    },
+    {
+      "title": "BitsOnline",
+      "feed_url": "https://bitsonline.com/feed/",
+      "website_url": "https://cryptocointrade.com/crypto-market-trading-news-info/",
+      "description": "Bitsonline presents the latest news and informed commentary on Bitcoin, blockchain, cryptocurrency, fintech, and technology. It also presents opinions from industry insiders and covers related issues, such as smart contracts and ICOs / token sales, privacy and regulation, and security. We aim to serve stakeholders with fair and factual reporting on the important stories in our industry while fostering a community based on interaction with our audience and listening to feedback.",
+      "followers": {
+        "facebook": 8900,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4716409.jpg?t=1658910140"
+    },
+    {
+      "title": "Cryptocointrade",
+      "feed_url": "https://cryptocointrade.com/feed/",
+      "website_url": "https://cryptocointrade.com/crypto-market-trading-news-info/",
+      "description": "Cryptocointrade is an informational site for overall cryptocurrency trading. Here, you'll find cryptocurrency news, tips, education, analysis, and trading platforms reviews.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4959267.jpg?t=1611138730"
+    },
+    {
+      "title": "Cryptocurrency Freak Blog | Cryptocurrency Guides And News",
+      "feed_url": "https://www.cryptocurrencyfreak.com/feed/",
+      "website_url": "https://www.cryptocurrencyfreak.com/",
+      "description": "Cryptocurrency blog covering Bitcoin & Cryptocurrency news around the globe and providing Cryptocurrency how to guides & tutorials.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4838177.jpg?t=1611140086"
+    },
+    {
+      "title": "Monetran | Moneda Cryptocurrency",
+      "feed_url": "https://www.monetran.com/feed/",
+      "website_url": "https://cryptocorral.com/",
+      "description": "Our mission is to establish a digital currency for everyday use in Internet commerce. We intend to ensure that the currency has tangible value and that people everywhere will find it desirable for transactions.",
+      "followers": {
+        "facebook": 165,
+        "twitter": 136,
+        "instagram": 55
+      },
+      "image_url": "https://i1.feedspot.com/5002932.jpg?t=1611140819"
+    },
+    {
+      "title": "Crypto Corral",
+      "feed_url": "https://cryptocorral.com/~api/papers/3b72a8ab-c509-4ee8-ac07-51abbc142a0e/rss",
+      "website_url": "https://cryptocorral.com/",
+      "description": "Daily roundup of crypto news. Subscribe to our newsletter, RSS feeds, and other channels for the latest in blockchain technology news.",
+      "followers": {
+        "twitter": 631
+      },
+      "image_url": "https://i1.feedspot.com/5205656.jpg?t=1602593560"
+    },
+    {
+      "title": "Boss95rnd",
+      "feed_url": "https://medium.com/feed/@nikita-monastyrskiy",
+      "website_url": "https://nikita-monastyrskiy.medium.com/",
+      "description": "Cryptocurrencies reviewer. Altcoins believer. Searching for great crypto projects and delivering them to the readers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5217049.jpg?t=1605615599"
+    },
+    {
+      "title": "Crypto News Exchange",
+      "feed_url": "https://cryptonews.exchange/",
+      "website_url": "https://crypto-academy.org/",
+      "description": "This blog is your source of All Things Crypto. Get all the latest crypto news.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5217987.jpg?t=1611140559"
+    },
+    {
+      "title": "Crypto Academy",
+      "feed_url": "https://crypto-academy.org/feed/",
+      "website_url": "https://crypto-academy.org/",
+      "description": "Articles related to crypto and blockchain education, and crypto trading courses.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 2300,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5370800.jpg?t=1655467283"
+    },
+    {
+      "title": "SimpleSwap",
+      "feed_url": "https://simpleswap.io/blog/feed",
+      "website_url": "https://simpleswap.io/blog",
+      "description": "Covers articles about blockchain, cryptocurrencies, cryptocurrency wallets, cryptocurrency price predictions for Bitcoin, Ethereum and other altcoins. SimpleSwap is an instant easy-to-use cryptocurrency exchange with 300+ crypto and fiat currencies.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 54100
+      },
+      "image_url": "https://i1.feedspot.com/5306230.jpg?t=1627539468"
+    },
+    {
+      "title": "Crypto Investor Pro",
+      "feed_url": "https://cryptoinvestorpro.com/feed",
+      "website_url": "http://cryptoinvestorpro.com/",
+      "description": "A team of cryptocurrency enthusiasts, blockchain technology supporters and investors, we aim to provide a steady stream of reliable information that will help you navigate the exciting world of cryptocurrency. If you're simply curious about the tech or need an in-depth analysis of the current market trends, our contributors are happy to help.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5044928.jpg?t=1656577118"
+    },
+    {
+      "title": "CryptoSteem",
+      "feed_url": "https://www.cryptosteem.com/feed/",
+      "website_url": "https://www.helenabitcoinmining.com/",
+      "description": "The Blog of Bitcoins & Cryptocurrencies News, Guides, Tutorials, Tech and much more.",
+      "followers": {
+        "facebook": 275
+      },
+      "image_url": "https://i1.feedspot.com/4989866.jpg?t=1611142494"
+    },
+    {
+      "title": "Helena Bitcoin Mining",
+      "feed_url": "https://www.helenabitcoinmining.com/feed/",
+      "website_url": "https://www.helenabitcoinmining.com/",
+      "description": "Helena Bitcoin Mining, LLC ,a digital cryptocurrency mining company; Sharing the latest bitcoin news, bitcoin mining news & cryptocurrency industry updates.",
+      "followers": {
+        "facebook": 760,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4648781.jpg?t=1611142529"
+    },
+    {
+      "title": "ChangeNOW Blog",
+      "feed_url": "https://changenow.io/blog/feed",
+      "website_url": "https://changenow.io/blog",
+      "description": "Blog topics cover crypto news, guides, tech, coins, market, and ChangeNOW updates. ChangeNOW is a simple and fast instant cryptocurrency exchange service.",
+      "followers": {
+        "facebook": 8900,
+        "twitter": 62400,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5295145.jpg?t=1624366518"
+    },
+    {
+      "title": "DIAM Circle Blog",
+      "feed_url": "https://diamcircle.io/feed/",
+      "website_url": "http://www.thecryptoquartet.com/",
+      "description": "DiamCircle is a global decentralized platform for digital finance and dApps. Purchase DIAM and start utilising our applications. It is an intersection of blockchain and cryptocurrencies.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 1900,
+        "instagram": 67700
+      },
+      "image_url": "https://i1.feedspot.com/5263865.jpg?t=1671603451"
+    },
+    {
+      "title": "The Crypto Quartet",
+      "feed_url": "http://www.thecryptoquartet.com/feed/",
+      "website_url": "http://www.thecryptoquartet.com/",
+      "description": "The Crypto Quartet focuses on Cryptocurrency Crowdfunding, Cryptocurrency Education, CryptoPhone, and Cryptocurrency Trading. We compile articles written by other journalists along with original content to give the reader different viewpoints.",
+      "followers": {
+        "facebook": 116
+      },
+      "image_url": "https://i1.feedspot.com/5260364.jpg?t=1616484159"
+    },
+    {
+      "title": "Crypto-Tokens",
+      "feed_url": "https://crypto-tokens.net/feed/",
+      "website_url": "https://crypto-tokens.net/",
+      "description": "Crypto-Tokens is a blog about Cryptocurrency and services related to it. News articles, coin reviews, and general project reviews are published several times per month.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5239119.jpg?t=1611577471"
+    },
+    {
+      "title": "Coin Colony | Your Cryptocurrency News and Topic Source",
+      "feed_url": "https://coincolony.net/feed/",
+      "website_url": "https://boxmining.com/",
+      "description": "Coin Colony brings you updates on the newest alt coins, market highs and lows, exchange and mining reviews, and the tools you need to become a cryptocurrency pro.",
+      "followers": {
+        "facebook": 49
+      },
+      "image_url": "https://i1.feedspot.com/4900591.jpg?t=1611140892"
+    },
+    {
+      "title": "MCC.EXCHANGE",
+      "feed_url": "https://mcc.exchange/feed/",
+      "website_url": "https://boxmining.com/",
+      "description": "Check out MCC.EXCHANGE to get the latest Crypto News & Discussions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5241482.jpg?t=1612273581"
+    },
+    {
+      "title": "Crypto News Monitor | Crypto news from the worlds most reputable sources",
+      "feed_url": "https://cryptonewsmonitor.com/feed/",
+      "website_url": "https://cryptonewsmonitor.com/",
+      "description": "Crypto News Monitor brings you the best Cryptocurrency and Blockchain news, analysis, and research from around world every single day. Get informed!",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 3000,
+        "instagram": 45
+      },
+      "image_url": "https://i1.feedspot.com/4838275.jpg?t=1611148142"
+    },
+    {
+      "title": "Plezna",
+      "feed_url": "https://plezna.com/rss/",
+      "website_url": "https://coinprologue.com/",
+      "description": "Covers articles related to block chain, crypto trading, and provides a deep R&D for an up-to-date analysis to cater to the needs of our blockchain and crypto industry. Plezna is a crypto knowledge and service hub.",
+      "followers": {
+        "facebook": 90,
+        "twitter": 292
+      },
+      "image_url": "https://i1.feedspot.com/5350265.jpg?t=1638612403"
+    },
+    {
+      "title": "CryptosRUs",
+      "feed_url": "https://cryptosrus.com/feed/",
+      "website_url": "https://cryptosrus.com/",
+      "description": "Providing the latest news, articles, and how-to guides about Cryptocurrencies including Bitcoin, Ethereum, Cardano, and other Altcoins.",
+      "followers": {
+        "facebook": 239300,
+        "twitter": 238600,
+        "instagram": 67700
+      },
+      "image_url": "https://i1.feedspot.com/5005321.jpg?t=1626176725"
+    },
+    {
+      "title": "ashleyknowles.net",
+      "feed_url": "https://ashleyknowles.net/feed/",
+      "website_url": "https://ashleyknowles.net/",
+      "description": "Cloud Infrastructure Architect (Windows/SQL Server/Azure/Office 365). BInfoTech, MCITP, MCSE, MBA Student and Crypto Enthusiast.",
+      "followers": {
+        "twitter": 258
+      },
+      "image_url": "https://i1.feedspot.com/4663954.jpg?t=1611140825"
+    },
+    {
+      "title": "cryptocoindude.com | One dude and his cryptocurrency blog",
+      "feed_url": "http://cryptocoindude.com/feed/",
+      "website_url": "https://cryptovest.com/",
+      "description": "This blog charts the crypto coin adventures, learnings and general ruminations of Crypto Coin Dude. Ruminations of the Dude are stricktly of opinion only.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4838220.jpg?t=1611148155"
+    },
+    {
+      "title": "Cryptovest | Cryptocurrency News, Reviews & Education",
+      "feed_url": "https://cryptovest.com/feed/",
+      "website_url": "https://cryptovest.com/",
+      "description": "Cryptovest is your source for the latest cryptocurrency news, updates, reviews and guides from industry experts. Staffed with a team of cryptocurrency experts, we are committed to providing sound recommendations on the best and safest coins to invest in.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/4801231.jpg?t=1611148142"
+    },
+    {
+      "title": "CryptoZen",
+      "feed_url": "https://cryptozen.today/feed/",
+      "website_url": "https://cryptozen.today/",
+      "description": "Cryptozen serves as the primary source for all information related to #crypto, offering the latest news updates, market analyses, and expert commentary on the world of blockchain and digital currencies. Follow this platform to stay informed and up-to-date with the latest happenings in the dynamic field of cryptocurrency.",
+      "followers": {
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/5565740.jpg?t=1683886406"
+    },
+    {
+      "title": "Cryptoground News",
+      "feed_url": "https://www.cryptoground.com/feeds.xml?format=xml",
+      "website_url": "https://www.cryptoground.com/news",
+      "description": "Get the latest cryptocurrencies and blockchain news from the internet here. Cryptoground is a platform for all kinds of blockchain & cryptocurrency news updates, prices, charts, guides, tools & trade simulators.",
+      "followers": {
+        "facebook": 961,
+        "twitter": 707,
+        "instagram": 5400
+      },
+      "image_url": "https://i1.feedspot.com/4916065.jpg?t=1611138247"
+    },
+    {
+      "title": "1DayDude A journey into Cryptocurrencies, Bitcoin, Ethereum & Trading",
+      "feed_url": "https://www.1daydude.com/feed/",
+      "website_url": "https://www.1daydude.com/blog/",
+      "description": "Welcome to 1DayDude.com the one-stop shop for beginners and those who wish to learn more about cryptocurrencies and blockchain. This is the missing manual the dummies guide that will allow anyone to quickly and easily learn about cryptocurrencies such as Bitcoin and Ethereum.",
+      "followers": {
+        "twitter": 111
+      },
+      "image_url": "https://i1.feedspot.com/4864079.jpg?t=1611140764"
+    },
+    {
+      "title": "Crypto101 | Cryptocurrency Reviews & News",
+      "feed_url": "https://crypto101.com/feed/",
+      "website_url": "https://crypto101.com/",
+      "description": "is your information hub for cryptocurrency reviews and news. Browse our platform reviews, latest industry news and up-to-date crypto price charts and inform your trading strategy.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 282
+      },
+      "image_url": "https://i1.feedspot.com/4862940.jpg?t=1611140809"
+    },
+    {
+      "title": "TheCryptoGarage",
+      "feed_url": "https://thecryptogarage.com/feed/",
+      "website_url": "https://thecryptogarage.com/",
+      "description": "TheCryptoGarage provides the what, how and where in the world of Crypto, Cryptocurrency and Blockchain Technology in a clean and easy way. Covering core topic areas such as how to earn crypto through various means. Primarily focused on technical aspects providing guides, how-to posts, reviews and documented technical projects.",
+      "followers": {
+        "facebook": 427,
+        "twitter": 886,
+        "instagram": 242
+      },
+      "image_url": "https://i1.feedspot.com/5293009.jpg?t=1623738988"
+    },
+    {
+      "title": "Ethereum World News | Bitcoin & Ethereum Blockchain News",
+      "feed_url": "https://ethereumworldnews.com/feed/",
+      "website_url": "https://www.crypto-news.net/",
+      "description": "EWN Provides breaking news towards topics with relation to Ethereum, Bitcoin, Litecoin, Cryptocurrency, start-off ICO's and the Blockchain ecosystem.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 9200
+      },
+      "image_url": "https://i1.feedspot.com/4838330.jpg?t=1611148140"
+    },
+    {
+      "title": "Crypto-News.net",
+      "feed_url": "https://www.crypto-news.net/feed/",
+      "website_url": "https://www.crypto-news.net/",
+      "description": "News from the world of crypto. Read what is happening with Bitcoin, Ethereum, Dogecoin, Litecoin, and other altcoins. A very trusted and reliable source of objective fact within the frontiers of crypto, Crypto-News.net is a vibrant community for publishers of blockchain, cryptocurrency, and web3 news and opinion.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 193
+      },
+      "image_url": "https://i1.feedspot.com/4838280.jpg?t=1671520615"
+    },
+    {
+      "title": "CryptoNetworkLIVE",
+      "feed_url": "https://www.cryptonetworklive.online/feeds/posts/default",
+      "website_url": "https://www.coinsclone.com/blog/",
+      "description": "Stay up-to-date with real-time cryptocurrency prices, charts, and market analysis on CryptoNetworkLive. Explore live coin prices, order books, whale trades, and receive alerts. Your go-to source for crypto insights.",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/7651765/page/7287488/logo_1712314915.jpg"
+    },
+    {
+      "title": "Coinsclone Blog",
+      "feed_url": "https://www.coinsclone.com/feed/",
+      "website_url": "https://www.coinsclone.com/blog/",
+      "description": "Coinsclone is one of the leading blockchain development companies with 7 years of experience in the market. We assist you to innovate your dream cryptocurrency business into reality by providing first-class blockchain development solutions. Check the latest blog News updates on Bitcoin and white-label Cryptocurrency Software, Payment Gateway to start your own crypto trading platform.",
+      "followers": {
+        "facebook": 174,
+        "twitter": 343
+      },
+      "image_url": "https://i1.feedspot.com/5594789.jpg?t=1686545886"
+    },
+    {
+      "title": "Go Cryptowise",
+      "feed_url": "https://gocryptowise.com/blog/feed/",
+      "website_url": "https://cryptoandfire.com/blog/",
+      "description": "Guides to cryptocurrencies and blockchain. Bitcoin, Ethereum & cryptocurrency exchanges, wallets & products - news - reviews & comparisons",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 312
+      },
+      "image_url": "https://i1.feedspot.com/5031482.jpg?t=1611139381"
+    },
+    {
+      "title": "CryptoandFire",
+      "feed_url": "https://cryptoandfire.com/feed/",
+      "website_url": "https://cryptoandfire.com/blog/",
+      "description": "CryptoandFire is a blog authored by CryptoFIRE about building income streams through investing in traditional assets, cryptocurrencies, blogging, optimizing taxes by going Digital Nomad and using the right Credit Cards to help reach your dream of Financial Independence easier.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5201593.jpg?t=1601390817"
+    },
+    {
+      "title": "Stratus Crypto - Bitcoin Education to Onboard the Next Billion",
+      "feed_url": "https://blog.stratus.io/feed/",
+      "website_url": "https://stratus.io/blog/",
+      "description": "We started Stratus because we believe Bitcoin is one of the great innovations of our lifetime. Our plans include products and services designed to onboard the next billion users onto the blockchain. We started where we always do with our products, by building something for ourselves. Stratus DCA Bots are free for basic setups. They are designed with simplicity but also extra flexibility to control your dollar-cost-average strategy to acquire as much Bitcoin as possible, for the best price.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7287214.jpg?t=1711966407"
+    },
+    {
+      "title": "CryptoCanucks | Cryptocurrency News, Research & Insights",
+      "feed_url": "https://cryptocanucks.com/feed/",
+      "website_url": "https://cryptocanucks.com/",
+      "description": "is a digital currency hub to learn, research, and understand Cryptocurrencies, Bitcoin, Ethereum, Altcoin, Blockchain Technology & more.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 2500,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4838261.jpg?t=1611148241"
+    },
+    {
+      "title": "Blockchain24 | News about Cryptocurrency - Bitcoin, Ethereum and more",
+      "feed_url": "https://www.blockchain24.co/feed/",
+      "website_url": "https://www.blockchain24.co/",
+      "description": "Want to keep-up-to-date with Cryptocurrencies? Check out the latest news, find out how to buy s and how to use it. News, Tips, Course, Exchange.",
+      "followers": {
+        "facebook": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4838292.jpg?t=1611148143"
+    },
+    {
+      "title": "CryptoDisrupt",
+      "feed_url": "https://cryptodisrupt.com/feed/",
+      "website_url": "https://cryptodisrupt.com/",
+      "description": "CryptoDisrupt was founded in 2017 with the aim to deliver the reliable, timely information from the cryptocurrency & blockchain world that you need in a format that is accessible to beginners and experts alike. Read the latest news, events, price analysis, price predictions and step-by-step guides to get started with cryptocurrency trading and investment.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4910442.jpg?t=1661236516"
+    },
+    {
+      "title": "Bitfalls",
+      "feed_url": "https://www.bitfalls.com/feed",
+      "website_url": "https://www.bitfalls.com/",
+      "description": "Bitfalls is an Ethereum smart contract development and security auditing firm which also covers blockchain consulting and technical education.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/4818392.jpg?t=1658909738"
+    },
+    {
+      "title": "Coinparative",
+      "feed_url": "https://www.coinparative.com/feed/",
+      "website_url": "https://productiveplac1.wordpress.com/",
+      "description": "Coinparative was launched with the aim of covering all aspects of Cryptocurrencies, digital assets, and the blockchain economy. We focus on bringing you the latest news, information articles, reviews, and tutorials to help you gain an understanding of this new technology.",
+      "followers": {
+        "facebook": 713,
+        "twitter": 1400,
+        "instagram": 53
+      },
+      "image_url": "https://i1.feedspot.com/5414176.jpg?t=1656065303"
+    },
+    {
+      "title": "Moneycrypts",
+      "feed_url": "https://www.moneycrypts.com/feeds/posts/default",
+      "website_url": "https://www.moneycrypts.com/",
+      "description": "Welcome to Moneycrypts, your number one source for all money matters. We're dedicated to providing you the very best of the articles on How To Make Money Online, with an emphasis on informative videos related to How To Make Money Online.",
+      "followers": {
+        "facebook": 6100,
+        "instagram": 10000
+      },
+      "image_url": "https://i1.feedspot.com/5503521.jpg?t=1675423028"
+    },
+    {
+      "title": "Theycallitcrypto",
+      "feed_url": "https://theycallitcrypto.com/feed/",
+      "website_url": "https://theycallitcrypto.com/blog/",
+      "description": "Our search tool shows you the best crypto exchange to buy, sell or trade your coins. Search by payment method, country and the coin you want.",
+      "followers": {
+        "facebook": 252,
+        "twitter": 185
+      },
+      "image_url": "https://i1.feedspot.com/4962784.jpg?t=1611140783"
+    }
+  ]
+}

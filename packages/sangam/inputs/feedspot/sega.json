@@ -1,0 +1,74 @@
+{
+  "category": "Sega",
+  "source_url": "https://rss.feedspot.com/sega_rss_feeds",
+  "feeds": [
+    {
+      "title": "SEGAbits",
+      "feed_url": "http://segabits.com/feed/",
+      "website_url": "http://segabits.com/",
+      "description": "SEGAbits is a fansite that is not in any way officially affiliated with SEGA. Sonic the Hedgehog and all other SEGA related trademarks SEGA. Find SEGA news, reviews, articles, interviews, videos and much more - by SEGA fans, for SEGA fans.",
+      "followers": {
+        "facebook": 29400,
+        "twitter": 33600,
+        "instagram": 20700
+      },
+      "image_url": "https://i1.feedspot.com/4919676.jpg?t=1620712414"
+    },
+    {
+      "title": "SEGA Nerds",
+      "feed_url": "https://feeds.feedburner.com/seganerds",
+      "website_url": "https://www.seganerds.com/",
+      "description": "Mega Visions Magazine is the world's only indie physical SEGA magazine, designed by SEGA Nerds for SEGA Nerds. The best source for SEGA news, reviews, opinions, and features!",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 1300,
+        "instagram": 508
+      },
+      "image_url": "https://i1.feedspot.com/1104902.jpg?t=1620712448"
+    },
+    {
+      "title": "Sega-16",
+      "feed_url": "https://www.sega-16.com/feed/",
+      "website_url": "https://www.sega-16.com/",
+      "description": "Sega-16.com is the world's premier resource for everything Genesis/Mega Drive, Master System, and Game Gear. Over 1,600 articles are available for reading, including comprehensive reviews and features, as well as exclusive interviews with people from within the video game industry.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 6200
+      },
+      "image_url": "https://i1.feedspot.com/866560.jpg?t=1651486732"
+    },
+    {
+      "title": "Sonic Retro",
+      "feed_url": "https://sonicretro.org/feed/",
+      "website_url": "https://sonicretro.org/",
+      "description": "Welcome to Sonic Retro, get information about Sonic the Hedgehog, Sega Hardware and general video game history and more!",
+      "followers": {
+        "facebook": 13300,
+        "twitter": 27200
+      },
+      "image_url": "https://i1.feedspot.com/4919701.jpg?t=1620712508"
+    },
+    {
+      "title": "Sonic HQ",
+      "feed_url": "https://www.sonichq.net/rss",
+      "website_url": "https://sonichq.net/",
+      "description": "The Ultimate Sonic Source! SHQ features extensive news, game information, comics and cartoon information, music, downloads, and fan art.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 575
+      },
+      "image_url": "https://i1.feedspot.com/4919715.jpg?t=1620712460"
+    },
+    {
+      "title": "The Sonic Stadium",
+      "feed_url": "https://www.sonicstadium.org/feed/",
+      "website_url": "https://www.sonicstadium.org/",
+      "description": "The best place for Sonic Mania, Team Sonic Racing and Sonic news, opinion and community. Get the latest Sonic the Hedgehog news, reviews, features, and discussion!",
+      "followers": {
+        "facebook": 22800,
+        "twitter": 50200
+      },
+      "image_url": "https://i1.feedspot.com/4919698.jpg?t=1620712456"
+    }
+  ]
+}

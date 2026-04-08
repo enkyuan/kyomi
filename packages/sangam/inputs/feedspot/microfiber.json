@@ -1,0 +1,48 @@
+{
+  "category": "Microfiber",
+  "source_url": "https://rss.feedspot.com/microfiber_rss_feeds",
+  "feeds": [
+    {
+      "title": "Microfiber Magic Blog",
+      "feed_url": "https://microfibermagic.com/blogs/cleaning.atom",
+      "website_url": "https://microfibermagic.com/blogs/cleaning",
+      "description": "Microfiber magic is made with billions of tiny wedge-shaped fibers finer than 1/100th of a human hair. The Microfiber Magic cloth is pressed, not woven like other cloths so you can cut it into different shapes and sizes, it won't unravel and it is very durable.",
+      "followers": {
+        "facebook": 184,
+        "twitter": 3,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4948008.jpg?t=1621412196"
+    },
+    {
+      "title": "Microfiber Wholesale \u00bb Clean Like A Pro",
+      "feed_url": "https://www.microfiberwholesale.com/blogs/clean-like-a-pro.atom",
+      "website_url": "https://www.microfiberwholesale.com/blogs/clean-like-a-pro",
+      "description": "Our variety of articles written by cleaning experts give you insights on the best professional house cleaning tips and tricks. Wholesale microfiber cleaning supplies and microfiber cleaning products for commercial and janitorial use.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4948012.jpg?t=1621412431"
+    },
+    {
+      "title": "Custom Cleaning Cloth Store",
+      "feed_url": "https://www.customcleaningclothstore.com/blog/feed/",
+      "website_url": "https://www.customcleaningclothstore.com/blog/",
+      "description": "Custom Cleaning Cloth Store is your one-stop, e-commerce solution for the largest variety of custom cleaning cloth available on the web.",
+      "followers": {
+        "facebook": 5600
+      },
+      "image_url": "https://i1.feedspot.com/4947920.jpg"
+    },
+    {
+      "title": "TowelPros Microfiber",
+      "feed_url": "https://www.towelpros.com/article.rss",
+      "website_url": "https://www.towelpros.com/blog",
+      "description": "TowelPros Microfiber imports high-quality microfiber cleaning cloths for the auto and home cleaning industries.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 45,
+        "instagram": 622
+      },
+      "image_url": "https://i1.feedspot.com/4948002.jpg?t=1621412275"
+    }
+  ]
+}

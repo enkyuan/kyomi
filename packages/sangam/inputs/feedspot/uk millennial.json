@@ -1,0 +1,93 @@
+{
+  "category": "UK Millennial",
+  "source_url": "https://rss.feedspot.com/uk_millennial_rss_feeds",
+  "feeds": [
+    {
+      "title": "Lucky Attitude",
+      "feed_url": "https://luckyattitude.co.uk/feed/",
+      "website_url": "https://luckyattitude.co.uk/",
+      "description": "The first Millennial blog in the UK helping twenty-somethings to navigate life and career.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 373
+      },
+      "image_url": "https://i1.feedspot.com/4906485.jpg?t=1613971811"
+    },
+    {
+      "title": "The Millennial Runaway",
+      "feed_url": "http://www.themillennialrunaway.com/feed/",
+      "website_url": "http://www.themillennialrunaway.com/",
+      "description": "Welcome to the Millennial Runaway. I'm a part-time traveller sticking the middle finger up to societal pressures and travelling by whatever means necessary. I hope that in recounting my experiences I will encourage others in my position to travel, and not be overcome with social pressures and media trends.",
+      "followers": {
+        "facebook": 320,
+        "twitter": 469,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4900435.jpg?t=1612787257"
+    },
+    {
+      "title": "GirlDreamer Blog",
+      "feed_url": "https://girldreamer.co.uk/feed/",
+      "website_url": "https://girldreamer.co.uk/blog/",
+      "description": "GirlDreamer is an empowerment platform for millennial women of colour to do, be and achieve more.",
+      "followers": {
+        "facebook": 531,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4906553.jpg?t=1613971782"
+    },
+    {
+      "title": "Pommie Travels Blog",
+      "feed_url": "https://www.pommietravels.com/blog/feed/",
+      "website_url": "https://www.pommietravels.com/blog/",
+      "description": "Pommie Travels is award-winning travel blog established in 2009, featuring inspiration and tips for anyone wishing to travel the world. I'm here to give you all the best tips I have learned from all these years of travel, and to help you save money while you're at it!",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 13900,
+        "instagram": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4513714.jpg?t=1606474420"
+    },
+    {
+      "title": "Elite Daily",
+      "feed_url": "https://www.elitedaily.com/rss",
+      "website_url": "https://www.elitedaily.com/",
+      "description": "Elite Daily is the premier online news platform for and by millennials, the leading source for breaking news and entertainment for the future leaders of our generation. Our tagline, 'The Voice of Generation-Y,' not only reflects our commitment to delivering content specifically targeted for Generation-Y, but also content shaped by talented media professionals of the same demographic.",
+      "followers": {
+        "facebook": 3400000,
+        "twitter": 173900,
+        "instagram": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/4946231.jpg?t=1613971784"
+    },
+    {
+      "title": "Thoroughly Modern Millennial",
+      "feed_url": "http://thoroughlymodernmillennial.com/feed/",
+      "website_url": "http://thoroughlymodernmillennial.com/",
+      "description": "Thoroughly Modern Millennial is a no-nonsense outpost talking popular culture, diversity, feminism, and politics with a dash of lifestyle, cruelty free beauty, and creative writing all with a generous heap of personal opinions.",
+      "followers": {
+        "twitter": 628
+      },
+      "image_url": "https://i1.feedspot.com/4738701.jpg?t=1606894569"
+    },
+    {
+      "title": "young savers Blog",
+      "feed_url": "https://youngsaversuk.wordpress.com/blog/feed/",
+      "website_url": "https://youngsaversuk.wordpress.com/blog/",
+      "description": "The #1 personal finance blog for young people",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4908216.jpg?t=1606457356"
+    },
+    {
+      "title": "VICE",
+      "feed_url": "https://www.vice.com/en_uk/rss",
+      "website_url": "https://www.vice.com/en/",
+      "description": "Follow the blog to know everything with the topic 'Millennials' on VICE.",
+      "followers": {
+        "facebook": 6900000,
+        "twitter": 428500
+      },
+      "image_url": "https://i1.feedspot.com/4708021.jpg?t=1613971799"
+    }
+  ]
+}

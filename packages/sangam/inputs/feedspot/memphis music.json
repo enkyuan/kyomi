@@ -1,0 +1,70 @@
+{
+  "category": "Memphis Music",
+  "source_url": "https://rss.feedspot.com/memphis_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "Memphis Bangerz",
+      "feed_url": "http://memphisbangerz.blogspot.com/feeds/posts/default",
+      "website_url": "http://memphisbangerz.blogspot.com/",
+      "description": "Memphis Bangerz is a music blog that focuses on the local hip-hop and rap scene in Memphis. The blog features interviews, music reviews, and news related to local artists and events. The blog aims to promote the Memphis music scene and help local artists gain more recognition.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5549919.jpg?t=1682410222"
+    },
+    {
+      "title": "We Are Memphis | Music",
+      "feed_url": "https://wearememphis.com/feed/",
+      "website_url": "https://wearememphis.com/music/",
+      "description": "We Are Memphis Music is a website that showcases the diverse music scene in Memphis. The website features profiles of local musicians, as well as news and reviews of upcoming concerts and events. The website also offers resources for musicians and music lovers, such as a directory of local music venues.",
+      "followers": {
+        "facebook": 342200,
+        "twitter": 8200,
+        "instagram": 39100
+      },
+      "image_url": "https://i1.feedspot.com/4901532.jpg?t=1682410219"
+    },
+    {
+      "title": "K97 \u00bb Music",
+      "feed_url": "https://k97fm.iheart.com/topic/music-news.rss/",
+      "website_url": "https://k97fm.iheart.com/topic/music-news/",
+      "description": "K97 is a popular radio station in Memphis that specializes in urban music, including hip-hop and R&B. The station features a mix of national and local DJs, as well as regular interviews with local musicians. K97 also sponsors concerts and events that showcase the best of Memphis music.",
+      "followers": {
+        "facebook": 75200
+      },
+      "image_url": "https://i1.feedspot.com/5549918.jpg?t=1682410217"
+    },
+    {
+      "title": "Memphis Music Initiative Blog",
+      "feed_url": "https://memphismusicinitiative.org//default.aspx?p=189109&feed=rss",
+      "website_url": "https://memphismusicinitiative.org/blog",
+      "description": "Memphis Music Initiative invests in youth through transformative music engagement, creating equitable",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 711,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5557695.jpg?t=1683524024"
+    },
+    {
+      "title": "Rock102 \u00bb Music",
+      "feed_url": "https://rock102memphis.iheart.com/topic/music-news.rss/",
+      "website_url": "https://rock102memphis.iheart.com/topic/music-news/",
+      "description": "Discover the latest Music News on ROCK 102",
+      "followers": {
+        "facebook": 526800
+      },
+      "image_url": "https://i1.feedspot.com/5557693.jpg?t=1683523957"
+    },
+    {
+      "title": "Memphis in May International Festival Blog",
+      "feed_url": "https://memphisinmay.org/feed/",
+      "website_url": "https://memphisinmay.org/blogs/",
+      "description": "Month-long civic festival taking place in Memphis, TN featuring Beale Street Music Festival",
+      "followers": {
+        "facebook": 69000,
+        "twitter": 26100,
+        "instagram": 34300
+      },
+      "image_url": "https://i1.feedspot.com/5557694.jpg?t=1683524055"
+    }
+  ]
+}

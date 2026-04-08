@@ -1,0 +1,105 @@
+{
+  "id": "weather",
+  "display_name": "Weather",
+  "feeds": [
+    {
+      "id": "feed:https://cloudappreciationsociety.org/feed/",
+      "title": "The Cloud Appreciation Society",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://cloudappreciationsociety.org/feed/",
+      "summary": "The society for people who love the sky.",
+      "details": "Science > Earth Science > Atmospheric Science",
+      "cleaned_title": "The Cloud Appreciation Society",
+      "cleaned_author": null,
+      "tags": [
+        "Science",
+        "Weather"
+      ],
+      "language": "en",
+      "keywords": [
+        "clouds",
+        "sky",
+        "atmosphere",
+        "nature"
+      ],
+      "top_level_category": "Science & Nature"
+    },
+    {
+      "id": "feed:https://www.realclimate.org/index.php/feed/langswitch_lang/en/",
+      "title": "RealClimate",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://www.realclimate.org/index.php/feed/langswitch_lang/en/",
+      "summary": "Climate science from climate scientists...",
+      "details": "Science > Earth Science > Atmospheric Science",
+      "cleaned_title": "RealClimate",
+      "cleaned_author": null,
+      "tags": [
+        "Science",
+        "Climate & Environment",
+        "Weather"
+      ],
+      "language": "en",
+      "keywords": [
+        "climate change",
+        "research",
+        "scientific studies"
+      ],
+      "top_level_category": "Science & Nature"
+    },
+    {
+      "id": "feed:https://wansteadmeteo.com/feed/",
+      "title": "Wanstead Meteo",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://wansteadmeteo.com/feed/",
+      "summary": "Meteorology-based musings about east London and beyond.",
+      "details": "Countries > UK > London > Areas",
+      "cleaned_title": "Wanstead Meteo",
+      "cleaned_author": null,
+      "tags": [
+        "Local",
+        "Weather"
+      ],
+      "language": "en",
+      "keywords": [
+        "meteorology",
+        "East London",
+        "weather forecasts"
+      ],
+      "top_level_category": "Regional & Local"
+    },
+    {
+      "id": "feed:https://weatherwest.com/feed",
+      "title": "Weather West",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://weatherwest.com/feed",
+      "summary": "California weather and climate perspectives.",
+      "details": "Science > Earth Science > Atmospheric Science",
+      "cleaned_title": "Weather West",
+      "cleaned_author": null,
+      "tags": [
+        "Science",
+        "Weather"
+      ],
+      "language": "en",
+      "keywords": [
+        "California",
+        "weather systems",
+        "climate impact"
+      ],
+      "top_level_category": "Science & Nature"
+    }
+  ],
+  "child_categories": []
+}

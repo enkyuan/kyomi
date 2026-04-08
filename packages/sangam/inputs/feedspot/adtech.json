@@ -1,0 +1,423 @@
+{
+  "category": "AdTech",
+  "source_url": "https://rss.feedspot.com/adtech_rss_feeds",
+  "feeds": [
+    {
+      "title": "Ad Tech Daily",
+      "feed_url": "https://adtechdaily.com/feed/",
+      "website_url": "https://adtechdaily.com/",
+      "description": "Ad Tech Daily is a news publication dedicated to all things ad tech, with a particular focus on advertising operations (ad ops), launched in 2008. It features news, interviews, events, and commentaries aimed at serving an audience of primarily ad tech professionals.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 20200
+      },
+      "image_url": "https://i1.feedspot.com/4623745.jpg?t=1616050936"
+    },
+    {
+      "title": "AdExchanger",
+      "feed_url": "https://www.adexchanger.com/feed/",
+      "website_url": "https://www.adexchanger.com/",
+      "description": "Since 2008, AdExchanger has engaged readers with award-winning and trendsetting coverage of programmatic advertising and the data-driven marketing technology ecosystem. Our award-winning publication facilitates the exchange of ideas between all members of the ecosystem, including marketers, agencies, publishers, data providers, advertising and marketing technology companies, analysts, the investment community, and the press.",
+      "followers": {
+        "facebook": 53600,
+        "twitter": 60900
+      },
+      "image_url": "https://i1.feedspot.com/1114566.jpg?t=1654172323"
+    },
+    {
+      "title": "Verve",
+      "feed_url": "https://verve.com/feed/",
+      "website_url": "https://verve.com/resource-library/?content_types=blog/",
+      "description": "Read the latest blog posts from Verve Group covering topics across ad tech and the digital advertising ecosystem. Verve Group was formed to unite advertising technologies in one combined offering - a privacy-first omnichannel ad platform for advertisers and publishers. We want to build an ecosystem for the open internet that fuels growth for businesses globally.",
+      "followers": {
+        "facebook": 110,
+        "twitter": 2300,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5405795.jpg?t=1654158819"
+    },
+    {
+      "title": "Roq.ad Blog",
+      "feed_url": "https://www.roq.ad/feed/",
+      "website_url": "https://www.roq.ad/blog/",
+      "description": "A blog for the post-IDFA, post-cookie era. Articles by identity resolution software SaaS professionals for adtech, eCommerce companies. Roq.ad is devoted to helping revolutionize digital advertising through actionable insights about anonymized users.",
+      "followers": {
+        "facebook": 288,
+        "twitter": 357
+      },
+      "image_url": "https://i1.feedspot.com/5405799.jpg?t=1654166455"
+    },
+    {
+      "title": "AdPushup Blog",
+      "feed_url": "https://www.adpushup.com/blog/feed/",
+      "website_url": "https://www.adpushup.com/blog/",
+      "description": "News and insights for web publishers. We cover ad layout testing, revenue optimization, AdSense, DFP, AdX, header bidding, ad blocking, and all things ad tech. We help content creators across the globe generate more revenue by connecting them to 50+ premium advertising exchanges, deploying cutting-edge ad serving technology, and providing hands-on ad operations expertise.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/3840478.jpg?t=1654171527"
+    },
+    {
+      "title": "Adtelligent Blog \u00bb Ad Tech",
+      "feed_url": "https://adtelligent.com/blog/ad-tech-insights/feed/",
+      "website_url": "https://adtelligent.com/blog/ad-tech-insights/",
+      "description": "Adtelligent is a sell-side ad technology company providing holistic demand management and intermediation solutions for publishers. By integrating ad serving for display and video, header wrapper capabilities, and outstream functionality into one holistic stack, Adtelligent has established a new standard for selling inventory to programmatic buyers.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 2400,
+        "instagram": 698
+      },
+      "image_url": "https://i1.feedspot.com/5405805.jpg?t=1654158878"
+    },
+    {
+      "title": "Adweek \u00bb AdTech",
+      "feed_url": "https://www.adweek.com/category/ad-tech/feed/",
+      "website_url": "https://www.adweek.com/category/ad-tech/",
+      "description": "Adweek is the leading source of news and insight serving the brand marketing ecosystem. As a touchstone of the advertising and marketing community, Adweek is an unparalleled resource for leaders across multiple industries who rely on its content to help them do their jobs better. Read the latest ad tech news. Find insights from our trusted team at Adweek on the advertising trends most impacting the ad tech industry.",
+      "followers": {
+        "facebook": 624000,
+        "twitter": 676200,
+        "instagram": 598500
+      },
+      "image_url": "https://i1.feedspot.com/5405787.jpg?t=1654158777"
+    },
+    {
+      "title": "Basis Technologies Blog",
+      "feed_url": "https://basis.com/blog/feed",
+      "website_url": "https://basis.com/blog",
+      "description": "Basis Technologies Advertising Blog - a fusion of Basis stories, best practices, and ad tech industry happenings. Since 2001, Basis Technologies (formerly Centro) has provided unified software and services to simplify and automate digital media operations and drive increased profitability and greater efficiency for marketing organizations.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 5100,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5405778.jpg?t=1654158733"
+    },
+    {
+      "title": "OpenX Blog",
+      "feed_url": "https://blog.openx.com/feed/",
+      "website_url": "https://blog.openx.com/",
+      "description": "Read about the latest innovations, insights, and trends in ad tech. We are the world's leading ad exchange for data and identity. With industry-leading technology, premium service, and huge scale, we bring greater reach for buyers and higher revenue for publishers - across every format, from mobile to CTV.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 18000,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5405782.jpg?t=1654158753"
+    },
+    {
+      "title": "MNTN Blog",
+      "feed_url": "https://mountain.com/blog/feed/",
+      "website_url": "https://mountain.com/blog/",
+      "description": "Online advertising news, guides, and research directly from the experts at MNTN. MNTN builds advertising software for brands to drive measurable conversions, revenue, site visits, and more through the power of television. MNTN Performance TV is the world's first and only Connected TV advertising platform optimized for direct-response marketing goals.",
+      "followers": {
+        "facebook": 35200,
+        "twitter": 31300,
+        "instagram": 16100
+      },
+      "image_url": "https://i1.feedspot.com/5405779.jpg?t=1654158739"
+    },
+    {
+      "title": "MediaRadar Blog",
+      "feed_url": "https://www.mediaradar.com/blog/rss.xml",
+      "website_url": "https://www.mediaradar.com/blog",
+      "description": "Read the MediaRadar blog to stay connected to the newest trends and news in advertising - with insights and data you can ONLY get from MediaRadar! MediaRadar is an award-winning advertising intelligence solution that is used by media planning, buying, and selling teams.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 4500,
+        "instagram": 206
+      },
+      "image_url": "https://i1.feedspot.com/5405801.jpg?t=1654158855"
+    },
+    {
+      "title": "Magnite Blog",
+      "feed_url": "https://www.magnite.com/blog/feed/",
+      "website_url": "https://www.magnite.com/blog/",
+      "description": "We're Magnite, your global alternative to ad tech's walled gardens - and the giants who live there. Magnite was born in 2020 when the programmatic ad pioneers at Rubicon Project teamed up with the CTV experts at Telaria. Now, Magnite is the industry's largest scaled, independent CTV/video ad platform.",
+      "followers": {
+        "facebook": 372,
+        "twitter": 37200,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5405783.jpg?t=1654158756"
+    },
+    {
+      "title": "More About Advertising \u00bb Ad Tech",
+      "feed_url": "https://www.moreaboutadvertising.com/category/ad-tech/feed/",
+      "website_url": "https://www.moreaboutadvertising.com/category/ad-tech/",
+      "description": "The following section of More About Advertising features articles on Ad Tech. At More About Advertising, we aim to bring you the inside track on what really matters in the world of advertising, marketing and media. MAA doesn't set out just to report the news or display people's opinions but, at all times, tries to show why things are happening in the industry and what the consequences are for every stakeholder.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/5405794.jpg?t=1654158814"
+    },
+    {
+      "title": "AlikeAudience Blog",
+      "feed_url": "https://www.alikeaudience.com/feed/",
+      "website_url": "https://www.alikeaudience.com/blog/",
+      "description": "Get the latest AdTech news, insights, and case studies from the AlikeAudience blog. We are AlikeAudience! Our vision is that empowering marketers to reach the right customers through the connection of data and media will be as easy as autopilot. We accelerate the connection between consumer identity and the digital universe through the continuous augmentation of trusted data.",
+      "followers": {
+        "facebook": 237,
+        "twitter": 75
+      },
+      "image_url": "https://i1.feedspot.com/5405793.jpg?t=1654158807"
+    },
+    {
+      "title": "AdExchanger",
+      "feed_url": "https://www.adexchanger.com/feed/",
+      "website_url": "https://www.adexchanger.com/",
+      "description": "AdExchanger provides news, analysis and events dedicated to the data-driven marketing space. Since 2008, AdExchanger has engaged readers with award-winning and trendsetting coverage of programmatic advertising and the data-driven marketing technology ecosystem. It has earned a spot as the leading voice covering how technology and data are transforming digital media and advertising.",
+      "followers": {
+        "facebook": 53600,
+        "twitter": 60900
+      },
+      "image_url": "https://i1.feedspot.com/129369.jpg?t=1681733158"
+    },
+    {
+      "title": "Xapads",
+      "feed_url": "https://blog.xapads.com/feed/",
+      "website_url": "https://blog.xapads.com/",
+      "description": "Stay ahead with expert insights on programmatic advertising, CTV trends, mobile marketing strategies & industry developments from Xapads.",
+      "followers": {
+        "facebook": 7500
+      },
+      "image_url": "https://i1.feedspot.com/8666883.jpg"
+    },
+    {
+      "title": "Doc Searls Weblog \u00bb Adtech",
+      "feed_url": "https://doc.searls.com/category/adtech/feed/",
+      "website_url": "https://doc.searls.com/category/adtech/",
+      "description": "Doc Searls' 'AdTech' section unpacks how tracking-based advertising undermines privacy and journalism, advocating for human-centered online economies through essays on surveillance, consent, and restoring trust in media.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8666879.jpg?t=1757053772"
+    },
+    {
+      "title": "AdTech Holding",
+      "feed_url": "https://adtechholding.com/blog/feed/",
+      "website_url": "https://adtechholding.com/blog/",
+      "description": "AdTech Holding's blog features expert insights on ad and marketing technology\u2014from AI innovation, fraud prevention, and product lifecycle management in adtech to community initiatives, sustainability efforts, hackathon highlights, and company milestones.",
+      "followers": {
+        "facebook": 271
+      },
+      "image_url": "https://i1.feedspot.com/8666878.jpg?t=1757053841"
+    },
+    {
+      "title": "Prebid",
+      "feed_url": "https://prebid.org/feed/",
+      "website_url": "https://prebid.org/blog/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8666880.jpg"
+    },
+    {
+      "title": "Adtech Today",
+      "feed_url": "https://adtechtoday.com/feed/",
+      "website_url": "https://adtechtoday.com/category/technology/",
+      "description": "Stay ahead with the newest technology breakthroughs in adtech, martech, and digital tools. Explore expert reviews and analysis on Adtech Today.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8666887.jpg"
+    },
+    {
+      "title": "AlphaAdTech",
+      "feed_url": "https://alphaadtech.com/feed/",
+      "website_url": "https://alphaadtech.com/blogs/",
+      "description": "Latest trends in digital marketing of our Latest Blogs, SEO, web design, and advertising through AlphaAdTech Blogs. Expert tips, insights, and strategies grow",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8666882.jpg?t=1757054392"
+    },
+    {
+      "title": "Index Exchange",
+      "feed_url": "https://www.indexexchange.com/blog/feed",
+      "website_url": "https://www.indexexchange.com/blog/",
+      "description": "Stay up to date with the latest advertising news, trends, and expert opinions with the Index Exchange ad technology and marketplace blog.",
+      "followers": {
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/8666877.jpg"
+    },
+    {
+      "title": "Adsterra Blog",
+      "feed_url": "https://adsterra.com/blog/feed/",
+      "website_url": "https://adsterra.com/blog/",
+      "description": "Adsterra affiliate blog gives practical tips for promoting CPA offers, monetizing a website, or enhancing traffic monetization with high-paying ads.",
+      "followers": {
+        "facebook": 190300,
+        "instagram": 12200
+      },
+      "image_url": "https://i1.feedspot.com/8835395.jpg?t=1764581951"
+    },
+    {
+      "title": "Headerbidding",
+      "feed_url": "https://headerbidding.co/feed/",
+      "website_url": "https://headerbidding.co/",
+      "description": "HeaderBidding.co stands at the forefront of the ad tech industry as a distinguished media company dedicated to serving publishers. With a rich legacy spanning over a decade, it has established itself as the first-ever publisher-centric platform in the advertising technology sector. HeaderBidding.co prides itself on delivering invaluable insights and information tailored to web publishers of all sizes, aiming to enhance their monetization strategies and amplify ad revenue.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7267597.jpg?t=1709719006"
+    },
+    {
+      "title": "dJAX Technologies Blog",
+      "feed_url": "https://www.djaxtech.com/blog/feed/",
+      "website_url": "https://www.djaxtech.com/blog/",
+      "description": "dJAX has been a front-runner in the Ad-serving realm for the better part of this decade. With a wide range of Ad server solutions and products to choose from; providing prompt and user-friendly live assistance and support by a team of experts. Our happy clients stretch across all directions globally. dJAX technologies have emerged as a prominent service provider in the world of ad serving technology. Our specialty and pioneering in the ad server technology field has strongly positioned dJAX as a market leader.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7275184.jpg?t=1710739106"
+    },
+    {
+      "title": "TechCrunch \u00bb Advertising Tech",
+      "feed_url": "https://techcrunch.com/tag/advertising-tech/feed/",
+      "website_url": "https://techcrunch.com/tag/advertising-tech/",
+      "description": "Read articles featuring topics and points related to Advertising Tech in this segment of TechCrunch. Technology news and analysis with a focus on founders and startup teams. We cover the pulse of the tech industry. Home to Disrupt, TC Sessions, and the world-renowned Startup Battlefield competition.",
+      "followers": {
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/5132265.jpg?t=1654168757"
+    },
+    {
+      "title": "Equativ Blog",
+      "feed_url": "https://equativ.com/feed/",
+      "website_url": "https://equativ.com/blog/",
+      "description": "Get the scoop on the latest in ad tech here. Programmatic, quality, mobile, video, gaming, innovative formats, ad serving, and more. Smart covers it all! Since our founding in 2001, we have never abandoned our mission to create the best solutions in order to meet the strategic shifts in the market and allow our clients to optimize their success.",
+      "followers": {
+        "facebook": 5,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5405792.jpg?t=1654158800"
+    },
+    {
+      "title": "OKO Digital Blog",
+      "feed_url": "https://oko.uk/feed/",
+      "website_url": "https://oko.uk/blog/",
+      "description": "Discover the latest industry news, updates, and essential insights for digital publishers. The OKO blog covers all things Ad Tech and programmatic advertising. We offer five core solutions to give website and app publishers everything they need to maximize their ad revenue. As Google certified experts in ad monetization, we'll give you access to premium demand, exclusive data-driven optimization opportunities, and expert one-on-one support.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 1400,
+        "instagram": 246
+      },
+      "image_url": "https://i1.feedspot.com/5405789.jpg?t=1654158786"
+    },
+    {
+      "title": "Clearcode Blog",
+      "feed_url": "https://clearcode.cc/feed/",
+      "website_url": "https://clearcode.cc/blog/",
+      "description": "Learn about the platforms, technical processes, and inner workings of the AdTech and MarTech industries with our ever-growing knowledge base. Clearcode helps educate people about AdTech & MarTech platforms, technical processes, and inner workings of the AdTech and MarTech industries with the ever-growing knowledge base.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 871
+      },
+      "image_url": "https://i1.feedspot.com/4241269.jpg?t=1622010306"
+    },
+    {
+      "title": "MindK Blog \u00bb AdTech",
+      "feed_url": "https://www.mindk.com/blog/adtech/feed/",
+      "website_url": "https://www.mindk.com/blog/adtech/",
+      "description": "MindK Blog covers everything on AdTech from the latest news and trends to industry insight all in one place. MindK Ltd. is a full-cycle web and mobile development company. We build software solutions that help clients transform their businesses by unleashing hidden potential with technology.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 551,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5405802.jpg?t=1654158860"
+    },
+    {
+      "title": "Kritter Blog",
+      "feed_url": "https://kritter.in/feed/",
+      "website_url": "https://kritter.in/kritterblog/",
+      "description": "We talk about WhiteLabeling in AdTech, the Programmatic ad buying industry, AdTech for enterprises, the latest technological innovations in the space, and more. Kritter Software Technology is a digital advertising technology company that can provide you with a ready-to-go ad trading stack (ATS), and also data management (DMP) infrastructure to harness your first-party and third-party data.",
+      "followers": {
+        "twitter": 169
+      },
+      "image_url": "https://i1.feedspot.com/5405781.jpg?t=1654158747"
+    },
+    {
+      "title": "Adwatch",
+      "feed_url": "https://theadwatch.com/feed/",
+      "website_url": "https://theadwatch.com/latest-news/",
+      "description": "Adwatch is an Ad fraud prevention platform that helps advertisers, who cannot afford or are not willing to accept the current ad fraud losses as inevitable, by employing blockchain technology to seal the gaps which currently exist in ad data processing and integrity checks.",
+      "followers": {
+        "facebook": 19,
+        "twitter": 37,
+        "instagram": 98
+      },
+      "image_url": "https://i1.feedspot.com/5405809.jpg?t=1654158900"
+    },
+    {
+      "title": "Advance Adtech",
+      "feed_url": "https://www.advance-adtech.com/blogs?format=rss",
+      "website_url": "https://www.advance-adtech.com/blogs/",
+      "description": "Advance Adtech's blog showcases expert insights on the future of advertising through content covering AI driven data analysis, unified marketing measurement, partnerships that boost ad effectiveness, and strategic approaches to turning data into advantage.",
+      "followers": {},
+      "image_url": "https://images.squarespace-cdn.com/content/v1/65bbc9d8dc73933d191b7663/13a5d6a3-de96-4d7c-b49f-d62d9df033c2/LOGO-DESKTOP-GIGANTE.png?format=1500w?t=1757054141"
+    },
+    {
+      "title": "Azerion News",
+      "feed_url": "https://www.azerion.com/feed/",
+      "website_url": "https://adalytics.io/blog",
+      "description": "Sublime (Azerion group) creates and delivers tailor-made solutions that perform at scale for our premium brands and publishers. Since our launch in 2012, our impactful, user-friendly, and scalable formats have changed the digital advertising industry. Today we invent new market standards and execute premium creative content on behalf of the brands we work with.",
+      "followers": {
+        "facebook": 897
+      },
+      "image_url": "https://i1.feedspot.com/5405808.jpg?t=1654170238"
+    },
+    {
+      "title": "SmartyAds Blog",
+      "feed_url": "https://smartyads.com/blog/rss",
+      "website_url": "https://smartyads.com/blog",
+      "description": "Discover the latest industry news, Adtech news, corporate events, and guides on how to take advantage of programmatic advertising. SmartyAds is a global digital advertising software developer that creates cutting-edge programmatic solutions for digital advertisers, publishers, ad agencies, and enterprises worldwide. Finding new possibilities within Machine Learning, AI, and other smart technologies we are reshaping the future of programmatic advertising, making it surprisingly simple and profitable for everyone.",
+      "followers": {
+        "twitter": 351,
+        "instagram": 533
+      },
+      "image_url": "https://i1.feedspot.com/5405786.jpg?t=1654158770"
+    },
+    {
+      "title": "Ad Tech Explained",
+      "feed_url": "https://adtechexplained.com/rss/",
+      "website_url": "https://www.adtechexplained.com/",
+      "description": "My name is Trey Titone, and I created Ad Tech Explained to make complex digital advertising topics, specifications, and news easier to understand. Ad Tech Explained provides explainers, insights, and analysis on the latest trends in advertising technology.",
+      "followers": {
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5405803.jpg?t=1654158866"
+    },
+    {
+      "title": "Venatus Blog",
+      "feed_url": "https://www.venatus.com/blog",
+      "website_url": "https://www.venatus.com/blog",
+      "description": "The latest news, opinions, and updates from the Venatus team. Venatus is an award-winning, global ad-tech platform that connects advertisers to the exclusive audiences of 250+, world-renowned gaming and entertainment publishers. We are tech-first. We are gamers.",
+      "followers": {
+        "facebook": 100
+      },
+      "image_url": "https://i1.feedspot.com/5405777.jpg?t=1654173268"
+    },
+    {
+      "title": "ReBid.co Blog",
+      "feed_url": "https://www.rebid.co/feed/",
+      "website_url": "https://www.rebid.co/blog/",
+      "description": "ReBid Madtech Blogs on Martech Adtech And Deeptech giving you deep insights into digital media marketing advertising future. RD&X Network is a technology company offering transformational products and solutions in martech, adtech, and deep tech to drive creative, media, data, and business transformation, helping global businesses become real-time, disruptive and thereby achieve exponential growth.",
+      "followers": {
+        "twitter": 197
+      },
+      "image_url": "https://i1.feedspot.com/5405800.jpg?t=1654158852"
+    },
+    {
+      "title": "Netric News",
+      "feed_url": "https://www.netricsales.com/news?format=rss",
+      "website_url": "https://www.netricsales.com/news",
+      "description": "News, product updates, and interviews with key figures across the Nordic advertising tech industry. Netric supports the market with a superior service layer, including support, training, analysis, and advice.",
+      "followers": {
+        "twitter": 183
+      },
+      "image_url": "https://i1.feedspot.com/5405780.jpg?t=1654158743"
+    },
+    {
+      "title": "Ad Tech Nation",
+      "feed_url": "https://adtechnation.com/feed/",
+      "website_url": "https://adtechnation.com/",
+      "description": "AdTechNation.com fuels the growth of game-changing founders, leaders, and scaling companies so they can positively transform societies and economies. We provide them with the coaching, content, and community they need for their journey in designing the future.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5405791.jpg?t=1654166696"
+    }
+  ]
+}

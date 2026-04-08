@@ -1,0 +1,52 @@
+{
+  "category": "UK Newborn Baby",
+  "source_url": "https://rss.feedspot.com/uk_newborn_baby_rss_feeds",
+  "feeds": [
+    {
+      "title": "Baba Bing",
+      "feed_url": "https://bababing.com/blogs/news.atom",
+      "website_url": "https://bababing.com/blogs/news",
+      "description": "Our award-winning changing bags are perfect for both mums and dads. We also provide a great range of baby bouncers and high chairs.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 720,
+        "instagram": 11600
+      },
+      "image_url": "https://i1.feedspot.com/4910518.jpg?t=1609856189"
+    },
+    {
+      "title": "Little Crumpets Photography Blog",
+      "feed_url": "https://www.littlecrumpetsphotography.com/feed/",
+      "website_url": "https://www.littlecrumpetsphotography.com/blog/",
+      "description": "I specialize in newborn, baby and family photography and I'm professionally trained in newborn safety and posing by UK leading experts in the field. These end up being some of my favourite shots because it is so magical to see how entranced parents are by their little newborn!",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 137
+      },
+      "image_url": "https://i1.feedspot.com/4609669.jpg?t=1607583860"
+    },
+    {
+      "title": "Baby Budgeting",
+      "feed_url": "https://feeds.feedburner.com/BabyBudgeting",
+      "website_url": "https://www.babybudgeting.co.uk/category/parenting/",
+      "description": "Hi I'm Becky - Welcome to my award-winning budgeting blog which is full of creative tips for raising a family on a budget",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 79,
+        "instagram": 8900
+      },
+      "image_url": "https://i1.feedspot.com/4910535.jpg?t=1528190566"
+    },
+    {
+      "title": "Balham Bumps & Babies Blog",
+      "feed_url": "https://www.balhambumpsandbabies.co.uk/blog-feed.xml",
+      "website_url": "https://www.balhambumpsandbabies.co.uk/blog",
+      "description": "Balham Bumps & Babies Photography provides fun, natural photography for maternity, newborn baby and children's family photographs.",
+      "followers": {
+        "facebook": 147,
+        "twitter": 841
+      },
+      "image_url": "https://i1.feedspot.com/4910538.jpg"
+    }
+  ]
+}

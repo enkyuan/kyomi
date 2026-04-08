@@ -1,0 +1,64 @@
+{
+  "category": "San Luis Obispo News",
+  "source_url": "https://rss.feedspot.com/san_luis_obispo_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "KSBY News",
+      "feed_url": "https://www.ksby.com/news.rss",
+      "website_url": "https://www.ksby.com/",
+      "description": "KSBY-TV is the NBC affiliate for San Luis Obispo and Santa Barbara counties. KSBY News brings you breaking and developing news, weather, and sports coverage from California's Central Coast.",
+      "followers": {
+        "facebook": 156000,
+        "twitter": 55400,
+        "instagram": 43700
+      },
+      "image_url": "https://i1.feedspot.com/5153727.jpg?t=1589967342"
+    },
+    {
+      "title": "CalCoastNews",
+      "feed_url": "https://feeds.feedburner.com/CalCoastNews",
+      "website_url": "https://calcoastnews.com/",
+      "description": "San Luis Obispo County's on-line independent news source producing in-depth investigative news in the public interest.",
+      "followers": {
+        "facebook": 20600,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4517599.jpg?t=1589967587"
+    },
+    {
+      "title": "New Times San Luis Obispo",
+      "feed_url": "https://www.newtimesslo.com/sanluisobispo/Rss.xml?oid=2896479",
+      "website_url": "https://www.newtimesslo.com/",
+      "description": "New Times has been publishing for more than 30 years in San Luis Obispo County, CA and is the largest circulated paper in the region covering local news and entertainment each week.",
+      "followers": {
+        "facebook": 12100,
+        "twitter": 10600,
+        "instagram": 10600
+      },
+      "image_url": "https://i1.feedspot.com/5153728.jpg?t=1589967828"
+    },
+    {
+      "title": "News Channel 3-12 \u00bb San Luis Obispo County",
+      "feed_url": "https://keyt.com/category/news/san-luis-obispo-county/feed/",
+      "website_url": "https://keyt.com/category/news/san-luis-obispo-county/",
+      "description": "Latest news, weather, traffic and more from San Luis Obispo County.",
+      "followers": {
+        "facebook": 115,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5153731.jpg?t=1589968203"
+    },
+    {
+      "title": "Mustang News",
+      "feed_url": "https://mustangnews.net/feed/",
+      "website_url": "https://mustangnews.net/",
+      "description": "Follow Mustang News for the latest headlines from San Luis Obispo and Cal Poly. Dive into the Top stories, News articles throughout the day as well as insightful commentary on recent events, local life, culture, community, education, and many more current topics.",
+      "followers": {
+        "facebook": 15700,
+        "twitter": 11100,
+        "instagram": 23400
+      },
+      "image_url": "https://i1.feedspot.com/5504572.jpg?t=1675757290"
+    }
+  ]
+}

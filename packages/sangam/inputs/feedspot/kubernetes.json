@@ -1,0 +1,393 @@
+{
+  "category": "Kubernetes",
+  "source_url": "https://rss.feedspot.com/kubernetes_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kubernetes Blog",
+      "feed_url": "https://kubernetes.io/feed.xml",
+      "website_url": "https://kubernetes.io/blog/",
+      "description": "Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications. Follow this blog to get articles on Kubernetes.",
+      "followers": {
+        "facebook": 22700,
+        "twitter": 309000
+      },
+      "image_url": "https://i1.feedspot.com/4894176.jpg?t=1681217265"
+    },
+    {
+      "title": "The Giant Swarm Blog",
+      "feed_url": "https://www.giantswarm.io/blog/rss.xml",
+      "website_url": "https://www.giantswarm.io/blog",
+      "description": "Giant Swarm is a simple microservice infrastructure, built for developers. Follow this blog to know more about Kubernetes.",
+      "followers": {
+        "facebook": 907,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4894284.jpg?t=1612618592"
+    },
+    {
+      "title": "Yobitel Blog",
+      "feed_url": "https://www.yobitel.com/blog-feed.xml",
+      "website_url": "https://www.yobitel.com/blog",
+      "description": "Yobitel a UK based Cloud-Native Service provider and SaaS managed Multi-Cloud Service provider, Microservices & Serverless, Containerized Application Services.",
+      "followers": {
+        "facebook": 348,
+        "twitter": 235,
+        "instagram": 44
+      },
+      "image_url": "https://i1.feedspot.com/5029629.jpg?t=1612618604"
+    },
+    {
+      "title": "KodeKloud Blog \u00bb Kubernetes",
+      "feed_url": "https://kodekloud.com/blog/tag/kubernetes/rss/",
+      "website_url": "https://kodekloud.com/blog/tag/kubernetes/",
+      "description": "Read our latest thoughts and learn tips on all things related to DevOps, including Azure, Docker to Kubernetes. Learn all about DevOps and read about ways to improve your skills. KodeKloud is used by hundreds of thousands of people around the world.",
+      "followers": {
+        "twitter": 7700,
+        "instagram": 33500
+      },
+      "image_url": "https://i1.feedspot.com/5539041.jpg?t=1681217217"
+    },
+    {
+      "title": "The kube guy",
+      "feed_url": "https://medium.com/feed/@thekubeguy",
+      "website_url": "https://thekubeguy.medium.com/",
+      "description": "The Kube Guy is your gateway to becoming a Kubernetes pro. This series covers everything from the basics to advanced topics, helping you become a Kubernetes pro. Whether you're new to Kubernetes or looking to level up your skills, this adventure has something for everyone. Let's dive in and explore the exciting world of Kubernetes together!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7279314.jpg?t=1711026407"
+    },
+    {
+      "title": "Kubernetes Contributors Blog",
+      "feed_url": "https://www.kubernetes.dev/blog/index.xml",
+      "website_url": "https://www.kubernetes.dev/blog/",
+      "description": "This site is the home of contributor documentation and serves as a starting point for your journey as a Kubernetes contributor. It is intended to be the hub for all things related to the Kubernetes Contributor experience. We all are -Whether you're writing docs, reviewing code, participating in the community and its many SIGs, everyone is welcome. We hope this site will be a pathway to success for our 35000+ Kubernetes contributors, providing current, up-to-date information on community events, contributor resources, Kubernetes SIGs, and more.",
+      "followers": {
+        "twitter": 13200
+      },
+      "image_url": "https://i1.feedspot.com/5539035.jpg?t=1681217191"
+    },
+    {
+      "title": "Kubeflow Blog",
+      "feed_url": "https://blog.kubeflow.org/feed.xml",
+      "website_url": "https://blog.kubeflow.org/",
+      "description": "This blog is hosted on GitHub Pages, via the kubeflow/blog repo. We are helping make ML on Kubernetes easy, portable and scalable, everywhere with our informative articles.",
+      "followers": {
+        "twitter": 6300
+      },
+      "image_url": "https://i1.feedspot.com/5539039.jpg?t=1681217210"
+    },
+    {
+      "title": "Grafana Labs \u00bb Kubernetes",
+      "feed_url": "https://grafana.com/tags/kubernetes/index.xml",
+      "website_url": "https://grafana.com/tags/kubernetes/",
+      "description": "Explore the latest news, announcements, articles, metrics & more on Kubernetes. Query, visualize, alert on, and understand your data no matter where it's stored. With Grafana you can create, explore, and share all of your data through beautiful, flexible dashboards.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5539033.jpg?t=1681217429"
+    },
+    {
+      "title": "Blogs, Ideas, Train of Thoughts",
+      "feed_url": "https://belowthemalt.com/feed/",
+      "website_url": "https://belowthemalt.com/",
+      "description": "Join to decipher the latest technology trends, providing insights into the rapidly changing tech ecosystem. From emerging tools and frameworks to innovative solutions, our blog is your go-to resource for staying ahead in the fast-paced world of technology. Whether you're a seasoned developer, a DevOps enthusiast, or simply curious about the future of tech, our blog is your gateway to understanding and harnessing the power of Kafka, Docker, Containers, Kubernetes, and beyond.",
+      "followers": {
+        "twitter": 146
+      },
+      "image_url": "https://i1.feedspot.com/5727622.jpg?t=1701689069"
+    },
+    {
+      "title": "The New Stack \u00bb Kubernetes",
+      "feed_url": "https://thenewstack.io/kubernetes/feed/",
+      "website_url": "https://thenewstack.io/kubernetes/",
+      "description": "The New Stack covers developer issues, DevOps, open source movements and the impact of app development and back end services on our life and work. Follow this blog to get in depth knowledge on Kubernetes.",
+      "followers": {
+        "facebook": 27900,
+        "twitter": 38500
+      },
+      "image_url": "https://i1.feedspot.com/4894983.jpg?t=1612618618"
+    },
+    {
+      "title": "Cloud Native Computing Foundation Blog",
+      "feed_url": "https://www.cncf.io/feed/",
+      "website_url": "https://www.cncf.io/blog/",
+      "description": "The Cloud Native Computing Foundation (CNCF) hosts critical components of the global technology infrastructure. CNCF brings together the world's top developers, end users, and vendors and runs the largest open source developer conferences. CNCF is part of the nonprofit Linux Foundation. Get the latest updates, event info, webinars, and the latest community news.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 108100
+      },
+      "image_url": "https://i1.feedspot.com/5294427.jpg?t=1663216978"
+    },
+    {
+      "title": "Learnk8s Blog",
+      "feed_url": "https://learnk8s.io/rss.xml",
+      "website_url": "https://learnk8s.io/blog",
+      "description": "In-depth technical articles with a focus on mastering the fundamentals and visual explanations. Learnk8s helps you get started on your Kubernetes journey through comprehensive online, in person or remote training.",
+      "followers": {
+        "twitter": 68800
+      },
+      "image_url": "https://i1.feedspot.com/5274092.jpg?t=1663218422"
+    },
+    {
+      "title": "Kubernetes Urolime Blog",
+      "feed_url": "https://www.urolime.com/blogs/category/kubernetes/feed/",
+      "website_url": "https://www.urolime.com/blogs/category/kubernetes/",
+      "description": "The place for DevOps, Cloud, Kubernetes News and Updates. Urolime is one of the leading DevOps consulting company with a handful of experience in supporting customers around the globe in adopting DevOps practices. As an AWS and Cloud consulting partner, Urolime not only has experience in Cloud Migrations but also support the vast customer base to enable scalable and highly available architecture on AWS, Azure, and GCP.",
+      "followers": {
+        "facebook": 20600,
+        "twitter": 657,
+        "instagram": 270
+      },
+      "image_url": "https://i1.feedspot.com/5441878.jpg?t=1663216207"
+    },
+    {
+      "title": "Nirmata Blog",
+      "feed_url": "https://nirmata.com/feed/",
+      "website_url": "https://nirmata.com/blog/",
+      "description": "Visit the Nirmata blog to learn about the use of Kubernetes anywhere and Kubernetes deployment for enterprise-wide apps management in the cloud. Nirmata provides a platform for development and operations of cloud services. With the Nirmata Platform, an application is designed as a set of loosely coupled cloud services. Each cloud service has pluggable modules for common features such as uniform AP.",
+      "followers": {
+        "facebook": 146,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5441872.jpg?t=1663216169"
+    },
+    {
+      "title": "Sidero Labs Blog",
+      "feed_url": "https://www.siderolabs.com/feed/",
+      "website_url": "https://www.siderolabs.com/resource-hub/blog/",
+      "description": "All you need to know about Kubernetes: From basic Kubernetes knowledge to Kubernetes install procedures, you can find it the Sidero Blog. Sidero Labs makes Talos OS - an immutable OS for secure and easy Kubernetes deployments, consistently, across any cloud, bare metal, or hypervisor, and Sidero Metal, that lets you easily deploy and manage Kubernetes on bare metal to create your own clusters in moments.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5441875.jpg?t=1663216188"
+    },
+    {
+      "title": "Palark Blog",
+      "feed_url": "https://blog.palark.com/feed/",
+      "website_url": "https://blog.palark.com/",
+      "description": "DevOps & SRE articles from Palark engineers revealing their recent experience with Kubernetes, sysadmin tools, CI/CD, databases, security, etc.",
+      "followers": {
+        "facebook": 96,
+        "twitter": 71
+      },
+      "image_url": "https://i1.feedspot.com/5470458.jpg?t=1669105147"
+    },
+    {
+      "title": "Last Week in Kubernetes Development",
+      "feed_url": "https://lwkd.info/feed.xml",
+      "website_url": "https://lwkd.info/",
+      "description": "Stay up-to-date on Kubernetes development in 15 minutes a week. LWKD is a weekly newsletter summarizing code activity in the Kubernetes project: merges, PRs, deprecations, version updates, release schedules, and community meetings.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5441869.jpg?t=1663216148"
+    },
+    {
+      "title": "Flant",
+      "feed_url": "https://medium.com/feed/flant-com",
+      "website_url": "https://medium.com/flant-com",
+      "description": "Professional DevOps outsourcing services with a strong passion for Kubernetes.",
+      "followers": {
+        "twitter": 539
+      },
+      "image_url": "https://i1.feedspot.com/5064897.jpg?t=1681217311"
+    },
+    {
+      "title": "Anthony Nocentino's Blog \u00bb Kubernetes",
+      "feed_url": "https://www.nocentino.com/categories/kubernetes/rss.xml",
+      "website_url": "https://www.nocentino.com/categories/kubernetes/",
+      "description": "Anthony is a Principal Field Solutions Architect at Pure Storage as well as a Pluralsight Author, and a Microsoft Data Platform MVP. Anthony designs solutions, deploys the technology, and provides expertise on business system performance, architecture, and security. Check out his anecdotes on Kubernetes, news, tips and more!",
+      "followers": {
+        "twitter": 3100,
+        "instagram": 311
+      },
+      "image_url": "https://i1.feedspot.com/5539038.jpg?t=1681217206"
+    },
+    {
+      "title": "Platform9 Blog \u00bb Kubernetes Planning",
+      "feed_url": "https://platform9.com/blog/category/kubernetes-planning/feed/",
+      "website_url": "https://platform9.com/blog/category/kubernetes-planning/",
+      "description": "Learn about from Platform9 - the leader in OpenStack private cloud as a service. Learn more today. Platform9 was founded to bring Open Source technologies in an easy consumable service to the market. Open Source offers flexibility, extensibility and avoids lock-in. Over the years we have proudly contributed to many open-source projects and have been a part of Cloud Native Computing Foundation, OpenInfra Foundation, Magma Core and LF Edge.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5539044.jpg?t=1681217459"
+    },
+    {
+      "title": "ionir Blog",
+      "feed_url": "https://ionir.com/feed/",
+      "website_url": "https://ionir.com/blog/",
+      "description": "Read the latest blog content from the ionir team, a group dedicated to enterprise-level data services for Kubernetes applications. ionir Is the Industry's Leading Kubernetes Data Services Platform.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5539042.jpg?t=1681217661"
+    },
+    {
+      "title": "Container Solutions \u00bb Kubernetes",
+      "feed_url": "https://blog.container-solutions.com/tag/kubernetes/rss.xml",
+      "website_url": "https://blog.container-solutions.com/tag/kubernetes",
+      "description": "Container Solutions supports clients with cloud migrations. Follow this blog to learn more about Kubernetes from experts.",
+      "followers": {
+        "facebook": 636,
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/4895089.jpg?t=1612618614"
+    },
+    {
+      "title": "D2iQ Blog",
+      "feed_url": "https://d2iq.com/feed",
+      "website_url": "https://d2iq.com/blog",
+      "description": "Get the latest news and updates on all things Kubernetes from the D2iQ blog to help you innovate faster, scale smarter, and stay secure. The journey to the cloud is filled with an abundance of decisions to be made - from the technologies, you select to the frameworks you decide on, to the management tools you'll use. What you need is a trusted guide that's been down this path before. That's where D2iQ can help.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 50800,
+        "instagram": 331
+      },
+      "image_url": "https://i1.feedspot.com/5441873.jpg?t=1663216176"
+    },
+    {
+      "title": "Blogs, Ideas, Train of Thoughts \u00bb Kubernetes",
+      "feed_url": "https://belowthemalt.com/category/kubernetes/feed/",
+      "website_url": "https://belowthemalt.com/category/kubernetes/",
+      "description": "Technology leader with 18+ years of experience in global team leadership, application development and consulting services. I am passionate about creating and leading high performing teams in the development of solutions that generate measurable customer success. Explore my articles on Kubernetes, insights and more!",
+      "followers": {
+        "twitter": 146
+      },
+      "image_url": "https://i1.feedspot.com/5441870.jpg?t=1663216153"
+    },
+    {
+      "title": "Data on Kubernetes Community Blog",
+      "feed_url": "https://dok.community/feed/",
+      "website_url": "https://dok.community/blog/",
+      "description": "After discussions with thousands of companies and individuals running data workloads on Kubernetes we've come to see that there is a need for a sharing of patterns and concerns about how to build and operate data-centric applications on Kubernetes. As a result, the Data on Kubernetes Community (DoKC) was born. Follow our blog where technologists share their stories, wisdom, and practical advice for running data on Kubernetes.",
+      "followers": {
+        "twitter": 7500
+      },
+      "image_url": "https://i1.feedspot.com/5441879.jpg?t=1663216215"
+    },
+    {
+      "title": "Heptio Blog",
+      "feed_url": "https://blog.heptio.com/feed",
+      "website_url": "https://blog.heptio.com/",
+      "description": "Heptio's products and services realize the full potential of Kubernetes and transform IT into a business accelerator. Follow this blog to know more about Kubernetes.",
+      "followers": {
+        "facebook": 91,
+        "twitter": 9100
+      },
+      "image_url": "https://i1.feedspot.com/4894963.jpg?t=1612618660"
+    },
+    {
+      "title": "VMware Cloud Blog \u00bb Kubernetes",
+      "feed_url": "https://blogs.vmware.com/cloud/kubernetes/feed/",
+      "website_url": "https://blogs.vmware.com/cloud/kubernetes/",
+      "description": "VMware is a leading provider of multi-cloud services for all apps, enabling digital innovation with enterprise control. Learn more about Kubernetes, automation, cloud and more!",
+      "followers": {
+        "facebook": 391400,
+        "twitter": 328200
+      },
+      "image_url": "https://i1.feedspot.com/5441880.jpg?t=1663216233"
+    },
+    {
+      "title": "Ambassador API Gateway Blog",
+      "feed_url": "https://blog.getambassador.io/feed",
+      "website_url": "https://blog.getambassador.io/",
+      "description": "Ambassador API Gateway is an open-source, Kubernetes-native API Gateway built on Envoy medium. Follow this blog to know more. Code, ship, and run apps for Kubernetes faster and easier than ever - powered by our industry-leading developer experience.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5056467.jpg?t=1622695395"
+    },
+    {
+      "title": "Codefresh",
+      "feed_url": "https://codefresh.io/feed/",
+      "website_url": "https://codefreshnew.wpengine.com/blog/",
+      "description": "Codefresh platform is specifically for microservices and container-based apps. It is the first continuous integration and delivery platform that puts the container image at the center. Follow this blog to get tutorials on Kubernetes.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/4894148.jpg?t=1612618580"
+    },
+    {
+      "title": "Rancher Blog",
+      "feed_url": "https://www.suse.com/c/rancherblog/",
+      "website_url": "https://www.suse.com/c/rancherblog/",
+      "description": "Rancher Labs builds innovative, open source container management software for enterprises leveraging containers to accelerate software development and improve IT operations. Follow this blog to know about Kubernetes API and much more.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 25900
+      },
+      "image_url": "https://i1.feedspot.com/4894288.jpg?t=1612618588"
+    },
+    {
+      "title": "Rafay Blog",
+      "feed_url": "https://rafay.co/feed/",
+      "website_url": "https://www.spectrocloud.com/blog",
+      "description": "Learn about Kubernetes and stay up to date with Rafay's Kubernetes solutions and company. The Rafay Kubernetes Operations Platform is a turnkey offering that automates Kubernetes cluster management, modern application deployment and operations at scale. The platform enables development and Platform teams to govern, manage and monitor multiple Kubernetes clusters and distros, and operating applications in Kubernetes environments running on-premise, in the cloud or at the Edge.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5539040.jpg?t=1681217490"
+    },
+    {
+      "title": "Spectro Cloud Blog",
+      "feed_url": "https://www.spectrocloud.com/feed.xml",
+      "website_url": "https://www.spectrocloud.com/blog",
+      "description": "Discover our blogs about all things Kubernetes. From bare metal to edge, learn tips and tricks for getting the most out of K8s at scale. Spectro Cloud provides scalable, policy-based cluster management of Kubernetes for enterprises that need a high degree of control over their infrastructure, whether it is in the public cloud, private cloud, bare metal or any combination. Enterprises can define the enterprise Kubernetes stack they need while still gaining the efficiencies of automation at scale.",
+      "followers": {
+        "facebook": 124,
+        "twitter": 874
+      },
+      "image_url": "https://i1.feedspot.com/5539034.jpg?t=1681217187"
+    },
+    {
+      "title": "Simplyblock.io Blog",
+      "feed_url": "https://www.simplyblock.io/blog-feed.xml",
+      "website_url": "https://www.simplyblock.io/blog/",
+      "description": "SimplyBlock.io is a platform offering blockchain development services and solutions. They claim to simplify the process of building and deploying blockchain applications by providing various tools and resources. Their services include blockchain consulting, development, and integration, catering to businesses and developers looking to leverage blockchain technology for their projects.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7300149.jpg?t=1713270510"
+    },
+    {
+      "title": "Veeam Blog \u00bb Kubernetes",
+      "feed_url": "https://www.veeam.com/blog/?s=kubernetes/",
+      "website_url": "https://www.veeam.com/blog/?s=kubernetes/",
+      "description": "Kubernetes blog from Kasten by Veeam. All Things Kubernetes and Data Management. Kasten by Veeam is the leader in Kubernetes backup. Kasten K10 is a Cloud Native data management platform for Day 2 operations. It provides enterprise DevOps teams with backup/restore, disaster recovery and application mobility for Kubernetes applications.",
+      "followers": {
+        "facebook": 69,
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/5441874.jpg?t=1663216183"
+    },
+    {
+      "title": "Open Hybrid Cloud",
+      "feed_url": "https://www.redhat.com/en/blog/channel/hybrid-cloud-infrastructure/",
+      "website_url": "https://www.redhat.com/en/blog/channel/hybrid-cloud-infrastructure/",
+      "description": "CoreOS is a leader in the open source community and creator of CoreOS Tectonic, a secure and complete platform that extends Kubernetes with key enterprise features that ease container orchestration. Follow this blog to know more about Kubernetes.",
+      "followers": {
+        "facebook": 434,
+        "twitter": 86500
+      },
+      "image_url": "https://i1.feedspot.com/4894191.jpg?t=1612618622"
+    },
+    {
+      "title": "Kubernauts",
+      "feed_url": "https://nicsell.com/en/domain/news.kubernauts.io",
+      "website_url": "http://news.kubernauts.io/",
+      "description": "Keeping you up to date about all things around Cloud-Native and Open Source Technology.",
+      "followers": {
+        "twitter": 10000
+      },
+      "image_url": "https://i1.feedspot.com/5539043.jpg?t=1681217224"
+    },
+    {
+      "title": "Komodor Blog \u00bb Kubernetes",
+      "feed_url": "https://komodor.com/blog/category/kubernetes/feed/",
+      "website_url": "https://komodor.com/blog/category/kubernetes/",
+      "description": "Komodor takes the complexity out of K8s troubleshooting, providing all of the tools you need to troubleshoot with confidence. Read more about Kubernetes, tutorials, features, how-tos and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5539036.jpg?t=1681217192"
+    },
+    {
+      "title": "ARMO Blog",
+      "feed_url": "https://www.armosec.io/feed/",
+      "website_url": "https://www.armosec.io/blog/",
+      "description": "Check out what's new in the world of Kubernetes security, and read what experts have to say. Browse through our insightful blog posts here! ARMO is building Kubernetes Security products, made for developers. Our patented technology and tools fit natively within the CI/CD pipeline and existing development tools, assuring DevOps, DevSecOps, and developers that every Kubernetes's cluster, container, and microservice is born and remains secure, from development to production and from configuration to run-time, every time.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5441877.jpg?t=1663216886"
+    }
+  ]
+}

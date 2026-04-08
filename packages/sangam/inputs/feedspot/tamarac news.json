@@ -1,0 +1,16 @@
+{
+  "category": "Tamarac News",
+  "source_url": "https://rss.feedspot.com/tamarac_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Tamarac Talk",
+      "feed_url": "https://feeds.feedburner.com/TamaracTalk",
+      "website_url": "https://tamaractalk.com/",
+      "description": "Tamarac Talk is part of Talk Media and provides news, views, and reviews for the city of Tamarac Florida.",
+      "followers": {
+        "twitter": 13300
+      },
+      "image_url": "https://i1.feedspot.com/5152511.jpg?t=1626163245"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "category": "Hot Wheels",
+  "source_url": "https://rss.feedspot.com/hot_wheels_rss_feeds",
+  "feeds": [
+    {
+      "title": "Julian's Hot Wheels Blog",
+      "feed_url": "https://www.jhotwheels.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.jhotwheels.com/",
+      "description": "Julian is a die-hard fan of Hot Wheels and a Hot Wheels collector. This blog is for those who love Hot Wheels! Follow this blog where he shares articles and resources on his various collections.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4919467.jpg?t=1620709612"
+    },
+    {
+      "title": "Orange Track Diecast",
+      "feed_url": "https://orangetrackdiecast.com/feed/",
+      "website_url": "https://orangetrackdiecast.com/",
+      "description": "Orange Track Diecast is a must for all Hot Wheels fanatics. The site focuses on the joys of Hot Wheels collecting by showcasing specific releases & series, while keeping you up-to-date on the latest Hot Wheels news and events.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 735
+      },
+      "image_url": "https://i1.feedspot.com/4919519.jpg?t=1620709547"
+    },
+    {
+      "title": "My Custom Hotwheels",
+      "feed_url": "https://mycustomhotwheels.com/feed/",
+      "website_url": "https://mycustomhotwheels.com/",
+      "description": "Alex has been collecting and customizing Hotwheels for over 2 years started customizing around 9 months ago. Follow this blog where he provides the largest catalog of how-to guides and customizing hints and tips for Hotwheels.",
+      "followers": {
+        "facebook": 9100
+      },
+      "image_url": "https://i1.feedspot.com/4919488.jpg?t=1620709552"
+    },
+    {
+      "title": "HOT WHEELS",
+      "feed_url": "https://hotwheelscollectionmattel.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://hotwheelscollectionmattel.blogspot.com/",
+      "description": "HOT WHEELS collection Publishings under Brasspineapple Productions LLC ( Marketing & Sales ) Cape Coral Florida the USA.",
+      "followers": {
+        "facebook": 352,
+        "twitter": 121
+      },
+      "image_url": "https://i1.feedspot.com/5184045.jpg?t=1597762846"
+    },
+    {
+      "title": "Super Fun Hot Wheels Blog",
+      "feed_url": "http://superfunhotwheels.blogspot.com/feeds/posts/default",
+      "website_url": "http://superfunhotwheels.blogspot.com/",
+      "description": "Super Fun Hot Wheels Blog is a hot wheel fan blog that articles on different Hot wheels race cars, games, collections, reviews and much more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3918417.jpg?t=1620709563"
+    },
+    {
+      "title": "The Toy Peddler Blog",
+      "feed_url": "https://blog.thetoypeddler.com/feed/",
+      "website_url": "https://blog.hobbydb.com/tag/hot-wheels/",
+      "description": "Your source for Diecast and other Collectible Toys. If you are looking for Hot Wheels, Redline Hotwheels, Matchbox, Johnny Lightning, NASCAR, diecast cars, or other collectible toys, The Toy Peddler is the place for you.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5310529.jpg?t=1628492151"
+    }
+  ]
+}

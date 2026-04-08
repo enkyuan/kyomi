@@ -1,0 +1,96 @@
+{
+  "category": "Kentucky Politics",
+  "source_url": "https://rss.feedspot.com/kentucky_politics_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Bottom Line",
+      "feed_url": "https://kychamberbottomline.com/feed/",
+      "website_url": "https://kychamberbottomline.com/category/politics/",
+      "description": "The Bottom Line is a news site published by the Kentucky Chamber of Commerce with the goal of closely monitoring the progress and facts of business-related legislation in Kentucky, and delivering behind the scenes knowledge of state government, and political news.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 19100,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5314105.jpg?t=1629532244"
+    },
+    {
+      "title": "Forward Kentucky",
+      "feed_url": "https://forwardky.com/latest/rss/",
+      "website_url": "https://forwardky.com/",
+      "description": "The progressive voice for Kentucky politics. Forward Kentucky covers objective news, effective policy, progressive commentary.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5314204.jpg?t=1629533919"
+    },
+    {
+      "title": "89.3 WFPL News Kentucky Politics",
+      "feed_url": "https://www.lpm.org/news/kentucky-politics.rss",
+      "website_url": "https://www.lpm.org/news/kentucky-politics",
+      "description": "89.3 WFPL News is an independent, nonpartisan news outlet that reports without fear or favor. They do fact-based reporting that is free from political and corporate influence. This section of the news website covers Kentucky political updates and news.",
+      "followers": {
+        "facebook": 20500,
+        "twitter": 20900
+      },
+      "image_url": "https://i1.feedspot.com/5314124.jpg?t=1629533117"
+    },
+    {
+      "title": "WDRB News Politics",
+      "feed_url": "https://www.wdrb.com/search/?f=rss&t=article&c=news/politics&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.wdrb.com/news/politics/",
+      "description": "WDRB News is the Number One local news source in Louisville providing news from the strongest journalism team in Kentucky. Covers the Latest News and Updates in Politics.",
+      "followers": {
+        "facebook": 544900,
+        "twitter": 162700,
+        "instagram": 65300
+      },
+      "image_url": "https://i1.feedspot.com/5314180.jpg?t=1629533256"
+    },
+    {
+      "title": "Kentucky Fried Politics",
+      "feed_url": "https://www.kentuckyfried.com/feed/",
+      "website_url": "https://www.kentuckyfried.com/",
+      "description": "Kentucky Fried Politics serves you what you need to know about Kentucky. At KFP they go beyond the headlines to tell you what's really cooking in state politics, and how that is going to affect you.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5314310.jpg?t=1629531855"
+    },
+    {
+      "title": "KFTC Blog",
+      "feed_url": "https://archive.kftc.org/blog/rss",
+      "website_url": "https://archive.kftc.org/blog",
+      "description": "Kentuckians For The Commonwealth is a community of people, inspired by a Vision, building New Power and a better future for all of us. New Power means thousands of new jobs, healthy communities and opportunities for our children.",
+      "followers": {
+        "facebook": 34400,
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/5314099.jpg?t=1629531459"
+    },
+    {
+      "title": "Richmond Register Politics",
+      "feed_url": "https://www.richmondregister.com/search/?f=rss&t=article&c=news/politics&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.richmondregister.com/news/politics/",
+      "description": "A community newspaper serving Madison and surrounding counties since 1917. This section of the news website covers political updates and news.",
+      "followers": {
+        "facebook": 26100,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5314207.jpg?t=1629534177"
+    },
+    {
+      "title": "Bluegrass Institute Blog",
+      "feed_url": "https://www.bipps.org/blog?format=rss",
+      "website_url": "https://www.bipps.org/blog",
+      "description": "The Bluegrass Institute is an independent research and educational institution offering free-market solutions to Kentucky's most pressing public policy issues. Their vision at the Bluegrass Institute for Public Policy Solutions is to move Kentucky from dependency to prosperity by leading their commonwealth forward on the policy issues that advance free markets, expand liberty and result in smaller, more transparent government.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5314183.jpg?t=1707222808"
+    }
+  ]
+}

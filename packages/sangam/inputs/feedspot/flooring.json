@@ -1,0 +1,852 @@
+{
+  "category": "Flooring",
+  "source_url": "https://rss.feedspot.com/flooring_rss_feeds",
+  "feeds": [
+    {
+      "title": "Floor Trends & Installation Magazine",
+      "feed_url": "https://www.floortrendsmag.com/rss/articles?x=1",
+      "website_url": "https://www.floortrendsmag.com/",
+      "description": "Definitive resources for flooring news and information on trends, inspirations, best practices in flooring and flooring installation for industry professionals. Floor Trends includes carpet; wood; tile; laminate; resilient and other flooring products for commercial & residential markets.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 10000
+      },
+      "image_url": "https://i1.feedspot.com/4651136.jpg?t=1622185244"
+    },
+    {
+      "title": "Flooring.org Blog",
+      "feed_url": "https://www.flooring.org/blog/feed/",
+      "website_url": "https://www.flooring.org/blog/",
+      "description": "Welcome to Flooring. Our goal at Flooring.org is to be your #1 source for all things flooring on the internet. We carry hardwood flooring, laminate, bamboo, cork, vinyl, area rugs and more.",
+      "followers": {
+        "facebook": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4720958.jpg?t=1607413874"
+    },
+    {
+      "title": "Urbanfloor Blog",
+      "feed_url": "https://www.urbanfloor.com/blog/feed",
+      "website_url": "https://www.urbanfloor.com/blog/",
+      "description": "Urbanfloor offers quality Wood Flooring, including stylish hardwood flooring, engineered hardwood floors, premium solid wood floors, and wide plank hardwood flooring.",
+      "followers": {
+        "facebook": 42300,
+        "twitter": 7300,
+        "instagram": 41000
+      },
+      "image_url": "https://i1.feedspot.com/4718870.jpg?t=1607413879"
+    },
+    {
+      "title": "Luxury Flooring",
+      "feed_url": "https://luxuryflooring.co.uk/news//feed/",
+      "website_url": "https://luxuryflooring.co.uk/news/",
+      "description": "The Luxury Flooring blog consists of articles written by our expert advisors on a variety of topics. The articles will inform you about which floor will suit, how to install a floor and also how you are able to maintain the beauty of your floor. There are many opinions and lots to learn about flooring, the blog will teach you new information, as well as refine ideas that already exist.",
+      "followers": {
+        "facebook": 17300,
+        "twitter": 1600,
+        "instagram": 48700
+      },
+      "image_url": "https://i1.feedspot.com/4720681.jpg?t=1607413910"
+    },
+    {
+      "title": "In Home Flooring Blog",
+      "feed_url": "https://inhomeflooring.com/feed/",
+      "website_url": "https://inhomeflooring.com/blog/",
+      "description": "Discover valuable flooring information and tips to make informed decisions for your next home improvement project. The articles published here will expose you to tons of Pros and Cons of various aspects of Flooring you did not know before. In-Home Flooring is a design and installation company for all types of flooring for homes in Denver.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5628043.jpg?t=1689591872"
+    },
+    {
+      "title": "Strong Roofing Blog",
+      "feed_url": "https://strongroofingsrq.com/feed/",
+      "website_url": "https://strongroofingsrq.com/blog/",
+      "description": "Read the Strong Roofing blog for helpful tips and useful information about roofs. Learn from the roofing experts in Florida. Strong Roofing is a fully licensed and insured roofing company, offering full-service roofing solutions, including roof repairs and replacements in the Sarasota, Manatee, and Charlotte areas.",
+      "followers": {
+        "facebook": 4700,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5670806.jpg?t=1694601579"
+    },
+    {
+      "title": "Panel Town & Floors Blog",
+      "feed_url": "https://www.paneltown.com/feed/",
+      "website_url": "https://www.paneltown.com/blog/",
+      "description": "Panel Town and Floors, a family-owned enterprise, excels in offering top-quality unfinished and pre-finished hardwood flooring from leading manufacturers. With unmatched expertise and service, they bring your vision to fruition. Explore a wealth of tips, inspiration, and company updates to ensure your flooring project is a success.",
+      "followers": {
+        "twitter": 521
+      },
+      "image_url": "https://i1.feedspot.com/7264243.jpg?t=1710237371"
+    },
+    {
+      "title": "Hardwood Floors Magazine",
+      "feed_url": "https://hardwoodfloorsmag.com/feed/",
+      "website_url": "https://hardwoodfloorsmag.com/",
+      "description": "The Hardwood Floors Magazine provides training, technical schools, technical support, education and networking to the wood flooring industry as well as the general public.",
+      "followers": {
+        "twitter": 6200,
+        "instagram": 8100
+      },
+      "image_url": "https://i1.feedspot.com/4719836.jpg?t=1622185413"
+    },
+    {
+      "title": "Hallmark Floors",
+      "feed_url": "https://feeds.feedburner.com/hallmark-blog",
+      "website_url": "https://hallmarkfloors.com/news/",
+      "description": "Hallmark Floors Blog is the easiest way to stay informed on Hallmark Floors products, dealers, designers, photos, articles. We make beautiful, quaility floors for any living space.",
+      "followers": {
+        "facebook": 14400,
+        "twitter": 643,
+        "instagram": 18600
+      },
+      "image_url": "https://i1.feedspot.com/4726291.jpg?t=1607413922"
+    },
+    {
+      "title": "ESB Flooring Blog",
+      "feed_url": "https://esbflooring.com/blog/feed/",
+      "website_url": "https://esbflooring.com/blog/",
+      "description": "ESB Flooring stocks an unprecedented selection of wood flooring and accessories. ESB Flooring is responsible for sourcing our wood from sustainable forests. In this, they also have a huge selection of certified wood floors. Learn Tips, tricks, and guides from flooring professionals in the ESB Flooring Blog. Find out everything you need to know.",
+      "followers": {
+        "facebook": 432,
+        "twitter": 669,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4720678.jpg?t=1607415696"
+    },
+    {
+      "title": "Flack's Flooring",
+      "feed_url": "https://flacksflooring.com/feed/",
+      "website_url": "https://flacksflooring.com/blog/",
+      "description": "Articles cover tips & tricks for choosing the right flooring for your home. Flacks Flooring is a flooring store offering carpet, carpet tile, and hardwoods.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 244,
+        "instagram": 656
+      },
+      "image_url": "https://i1.feedspot.com/5289684.jpg?t=1623131394"
+    },
+    {
+      "title": "City Floor Supply Blog",
+      "feed_url": "https://blog.cityfloorsupply.com/feed/",
+      "website_url": "https://blog.cityfloorsupply.com/",
+      "description": "City Floor Supply is a family-owned and operated business with a national reach. We offer a variety of hardwood floor and sport floor products and serve clients throughout the United States and abroad.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 596,
+        "instagram": 6000
+      },
+      "image_url": "https://i1.feedspot.com/4720813.jpg?t=1607414133"
+    },
+    {
+      "title": "Source Floor Blog",
+      "feed_url": "https://sourcefloor.com/blog/feed/",
+      "website_url": "https://sourcefloor.com/blog/",
+      "description": "Source Floor & Specialties covers Latest News & Information on the World of Flooring.",
+      "followers": {
+        "facebook": 746,
+        "twitter": 326,
+        "instagram": 528
+      },
+      "image_url": "https://i1.feedspot.com/4720980.jpg?t=1607414477"
+    },
+    {
+      "title": "Floorsave Blog",
+      "feed_url": "https://www.floorsave.co.uk/blog/rss/feed/",
+      "website_url": "https://www.floorsave.co.uk/blog/",
+      "description": "The Floorsave blog is here to help you with your wood flooring buying decision and to give you lots of great information on engineered wood and laminate flooring",
+      "followers": {
+        "facebook": 256,
+        "twitter": 410,
+        "instagram": 392
+      },
+      "image_url": "https://i1.feedspot.com/5146889.jpg?t=1607414487"
+    },
+    {
+      "title": "Alternative Flooring Blog",
+      "feed_url": "https://www.alternativeflooring.com/blog/feed/",
+      "website_url": "https://www.alternativeflooring.com/blog/",
+      "description": "Alternative Flooring is a British company with a spark of curiosity that inspires flooring to be different. It is the first exclusively floor company to be a CoolBrand, chosen for its style, desirability, authenticity, uniqueness, originality and innovation.",
+      "followers": {
+        "facebook": 12300,
+        "twitter": 4500,
+        "instagram": 48400
+      },
+      "image_url": "https://i1.feedspot.com/4720803.jpg?t=1607414513"
+    },
+    {
+      "title": "Commercial Flooring and Interior Concepts Blog",
+      "feed_url": "https://www.commercialflooringnj.com/feed/",
+      "website_url": "https://www.commercialflooringnj.com/blog/",
+      "description": "Completely Floored! A blog by Commercial Flooring & Interior Concepts, shows examples of commercial flooring products and solves flooring problems.",
+      "followers": {
+        "facebook": 169,
+        "twitter": 208,
+        "instagram": 218
+      },
+      "image_url": "https://i1.feedspot.com/4719044.jpg?t=1622899003"
+    },
+    {
+      "title": "Chaunceys Timber Flooring",
+      "feed_url": "https://chauncey.co.uk/category/journal/feed/",
+      "website_url": "https://chauncey.co.uk/category/post-category/journal/",
+      "description": "Chaunceys Timber Flooring Ltd are a family run company, based in Bristol UK, supplying solid oak and engineered floors to trade and retail customers. Find a collection of regularly updated stories and articles of interest collated into a blog by our team at Chaunceys.",
+      "followers": {
+        "facebook": 568
+      },
+      "image_url": "https://i1.feedspot.com/4720884.jpg?t=1607414539"
+    },
+    {
+      "title": "Creative Carpet & Flooring Blog",
+      "feed_url": "https://www.creativecarpetinc.com/blog/feed/",
+      "website_url": "https://www.creativecarpetinc.com/blog/",
+      "description": "Creative Carpet is family owned and operated and has been serving many satisfied customers since 1990, We offer all types of flooring for all tastes and styles.",
+      "followers": {
+        "facebook": 628,
+        "twitter": 129
+      },
+      "image_url": "https://i1.feedspot.com/4719014.jpg?t=1607414564"
+    },
+    {
+      "title": "SVB Wood Floors Blog",
+      "feed_url": "https://www.svbwoodfloors.com/blog/feed/",
+      "website_url": "https://www.svbwoodfloors.com/blog/",
+      "description": "VB Wood Floors in Kansas City specializes in hardwood floor installation, dustless sanding, dustless refinishing and wood floor restoration for homes.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 51
+      },
+      "image_url": "https://i1.feedspot.com/4726104.jpg?t=1607414578"
+    },
+    {
+      "title": "Nadine Floor Company Blog",
+      "feed_url": "http://www.nadinefloors.com/feed/",
+      "website_url": "https://www.nadinefloors.com/blog/",
+      "description": "Nadine Floor Company is your perfect choice for all your hard flooring and remodeling projects. Our collection offers exceptional value, elegance, and high quality products for your home designs; Modern Designs, Eclectic or Traditional, We Have It All.",
+      "followers": {
+        "facebook": 268,
+        "twitter": 24,
+        "instagram": 226
+      },
+      "image_url": "https://i1.feedspot.com/4719964.jpg?t=1607414776"
+    },
+    {
+      "title": "CFI University",
+      "feed_url": "https://www.cfiu.org/feed/",
+      "website_url": "https://www.cfiu.org/category/articles/",
+      "description": "Certified Flooring Inspectors University provides the highest level training so its members can offer the highest level of expertise for neutral flooring inspections.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5172447.jpg?t=1607415537"
+    },
+    {
+      "title": "Invision Hardwood Decor Blog",
+      "feed_url": "https://invisionhardwooddecor.com/blog/feed/",
+      "website_url": "https://invisionhardwooddecor.com/blog/",
+      "description": "We offer solid hardwood flooring, engineered hardwood flooring, laminate flooring and more. We even have cork flooring, leather flooring and bamboo flooring!",
+      "followers": {
+        "facebook": 615,
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/4721800.jpg?t=1610602497"
+    },
+    {
+      "title": "Just Wood Blog",
+      "feed_url": "https://justwood.co.uk/feed/",
+      "website_url": "https://justwood.co.uk/blog/",
+      "description": "Just Wood Flooring Blog provides Advice and tips on choosing and maintaining hardwood flooring. Just Wood a leading wood flooring company for over 25 years they supply & fit or only all hardwood flooring, and renovate your old flooring systems.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 1800,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4719090.jpg?t=1607415665"
+    },
+    {
+      "title": "Floor City Blog",
+      "feed_url": "https://www.floorcity.com/blogs/flooring-expert.atom",
+      "website_url": "https://www.floorcity.com/blogs/flooring-expert",
+      "description": "Floor City supplies Armstrong commercial grade flooring options: resilient vinyl tile vct, sheet, plank, rubber wall base cove molding, linoleum, wood laminate.",
+      "followers": {
+        "twitter": 45,
+        "instagram": 777
+      },
+      "image_url": "https://i1.feedspot.com/4720994.jpg?t=1607415660"
+    },
+    {
+      "title": "Oshkosh Designs Blog",
+      "feed_url": "https://oshkoshdesigns.com/feed/",
+      "website_url": "https://oshkoshdesigns.com/blog/",
+      "description": "Oshkosh Designs creates parquet flooring, floor medallions, borders & inlays, wood wall panels, stone & metal backsplashes, room dividers, fireplace mantles & kitchen accessories.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 527,
+        "instagram": 967
+      },
+      "image_url": "https://i1.feedspot.com/4726366.jpg?t=1607415692"
+    },
+    {
+      "title": "Rustico Tile & Stone Blog",
+      "feed_url": "https://rusticotile.com/blog/feed/",
+      "website_url": "https://rusticotile.com/blog/",
+      "description": "Rustico Tile & Stone is your source for Mexican Tile and Stone Inspiration. National supplier for Mexican tile and stone including: Saltillo tile, Terra Cotta Floor tile, Encaustic Tile, Cement Tile, Talavera, and Cantera Stone.",
+      "followers": {
+        "instagram": 12800
+      },
+      "image_url": "https://i1.feedspot.com/4721782.jpg?t=1607414448"
+    },
+    {
+      "title": "Carpet Reviewed",
+      "feed_url": "https://www.carpetreviewed.com/feed/",
+      "website_url": "https://www.carpetreviewed.com/guides/",
+      "description": "The team of www.carpetreviewed.com welcomes you on this platform. If I am not wrong then you are here to find the carpet for your home. We are here for helping all those people who want reliable information about the features and specifications of different carpets available in the market.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4790119.jpg?t=1607414490"
+    },
+    {
+      "title": "All Things Flooring",
+      "feed_url": "https://allthingsflooring.com/feed/",
+      "website_url": "https://allthingsflooring.com/",
+      "description": "All Things Flooring is a space for B2B decision makers to learn, lust after and discuss all things related to the specification, installation and service life of different polymer flooring materials. A Handy Blog for Flooring News, Advice, Ideas & Inspiration.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4718970.jpg?t=1607414337"
+    },
+    {
+      "title": "Discount Flooring Depot Blog",
+      "feed_url": "https://www.discountflooringdepot.co.uk/blog/feed/",
+      "website_url": "https://www.discountflooringdepot.co.uk/blog/",
+      "description": "Discount Flooring Depot offers the best solid wood, laminate and engineered wood flooring around. With underlay and accessories too, we have something for everyone!",
+      "followers": {
+        "facebook": 22200,
+        "twitter": 275,
+        "instagram": 8700
+      },
+      "image_url": "https://i1.feedspot.com/4719162.jpg?t=1607413883"
+    },
+    {
+      "title": "Flooring Demand Blog",
+      "feed_url": "https://flooringdemand.com/feed/",
+      "website_url": "https://flooringdemand.com/blog/",
+      "description": "The Flooring Demand blog is your source for everything flooring, from flooring tools, installation cost, flooring options to flooring business guide for laminate, hardwood and more. Flooring Demand is a marketing agency committed to providing exclusively goal-oriented marketing solutions tailored for flooring companies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7288966.jpg?t=1712089617"
+    },
+    {
+      "title": "Bestlaminate Blog",
+      "feed_url": "https://www.bestlaminate.com/blog/feed/",
+      "website_url": "https://www.bestlaminate.com/blog/",
+      "description": "Bestlaminate is your go-to source for DIY projects, offering instructions and ideas to enhance your home. With a focus on beauty and functionality, they provide top flooring options like laminate, hardwood, and vinyl, along with accessories. Explore their blog for education, inspiration, and home tours.",
+      "followers": {
+        "facebook": 120100,
+        "twitter": 2100,
+        "instagram": 15900
+      },
+      "image_url": "https://i1.feedspot.com/4719921.jpg?t=1607415753"
+    },
+    {
+      "title": "Flooring Direct Blog",
+      "feed_url": "https://www.flooringdirect.co.uk/blog/feed/",
+      "website_url": "https://www.flooringdirect.co.uk/blog/",
+      "description": "Online flooring retailer selling carpets, vinyl flooring, artificial grass, underlay, and accessories.",
+      "followers": {
+        "facebook": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5084282.jpg?t=1609943735"
+    },
+    {
+      "title": "Alliance Flooring Directory",
+      "feed_url": "https://www.allflooringdirectory.com/feed/",
+      "website_url": "https://www.allflooringdirectory.com/flooring-tips/",
+      "description": "At Alliance Flooring Companies Directory we will help you find flooring stores or carpet cleaners in USA, Canada, UK, Australia, New Zealand or Ireland.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5054045.jpg"
+    },
+    {
+      "title": "The Carpet Guys Blog",
+      "feed_url": "http://www.carpetguys.com/blog/feed/",
+      "website_url": "http://www.carpetguys.com/blog/",
+      "description": "The Carpet Guys offer flooring from vinyl, laminate and hardwood at every free in-home estimate.Learn all you need to know about flooring, our company, Carpet installation and flooring.",
+      "followers": {
+        "facebook": 12300
+      },
+      "image_url": "https://i1.feedspot.com/4720972.jpg?t=1607414140"
+    },
+    {
+      "title": "Global Alliance Home Improvement Products Blog",
+      "feed_url": "https://www.globalallianceon.com/rss/blog",
+      "website_url": "https://www.globalallianceon.com/blog-1/",
+      "description": "Interesting and educational information about laminate and hardwood flooring. Laminate Flooring, Hardwood, Carpet, Vinyl, Paint, Baseboards, decks and fences.\ufeff",
+      "followers": {
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/4719938.jpg?t=1607414466"
+    },
+    {
+      "title": "Pro! Flooring Blog",
+      "feed_url": "https://pro-flooring.com/feed/",
+      "website_url": "https://pro-flooring.com/blog/",
+      "description": "Stay at the forefront of flooring design! Whether you yearn for the timeless elegance of hardwood or crave bold and innovative approaches, Pro! Flooring Brokers blog is your one-stop shop for inspiration. Dive into the latest trends, from the enduring appeal of classic materials to the cutting-edge advancements in luxury vinyl and laminate.",
+      "followers": {
+        "facebook": 404
+      },
+      "image_url": "https://i1.feedspot.com/4618060.jpg?t=1607414470"
+    },
+    {
+      "title": "Action Floor Systems Blog",
+      "feed_url": "http://www.actionfloors.com/blog/feed/",
+      "website_url": "https://www.actionfloors.com/blog/",
+      "description": "Action Floor Systems manufactures a wide variety of permanent and portable hardwood sports floor systems to accommodate any application. They specialize in high-performance sports floors.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 268,
+        "instagram": 470
+      },
+      "image_url": "https://i1.feedspot.com/4719916.jpg?t=1607414507"
+    },
+    {
+      "title": "Superior Hardwoods Blog",
+      "feed_url": "https://superior-hardwoods.com/feed/",
+      "website_url": "https://superior-hardwoods.com/blog/",
+      "description": "Superior Hardwoods of Montana is a reclaimed lumber company selling flooring, siding, timbers, engineered hardwood flooring, and more. Our main focus has been to provide the finest wide plank flooring and unique building materials available in the market place.",
+      "followers": {
+        "facebook": 20100,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4720100.jpg?t=1607414525"
+    },
+    {
+      "title": "JW Flooring Blog",
+      "feed_url": "https://jwflooringusa.com/feed/",
+      "website_url": "https://jwflooringusa.com/blog/",
+      "description": "We are a family owned business here to serve DFW and the surrounding areas. Bringing well deserved innovation to the flooring world. We bring the showroom right to your front door.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5120879.jpg?t=1607414529"
+    },
+    {
+      "title": "Tampa Flooring Company Blog",
+      "feed_url": "https://www.tampaflooringcompany.com/feed/",
+      "website_url": "https://www.tampaflooringcompany.com/blog/",
+      "description": "As a mobile flooring company, we bring the showroom to you with the quality and selection of a warehouse right outside your front door. Whether you're contemplating the best flooring options for your new home or business, or looking to renovate with the latest trends in carpet, hardwood, tile, or vinyl, Go Mobile Flooring leads the Tampa floor installation service market.",
+      "followers": {
+        "facebook": 403,
+        "twitter": 78
+      },
+      "image_url": "https://i1.feedspot.com/4720870.jpg?t=1607414543"
+    },
+    {
+      "title": "Goodwin Company",
+      "feed_url": "https://heartpine.com/feed/",
+      "website_url": "https://heartpine.com/news/",
+      "description": "Goodwin Company has specialises in recovering antique heart pine and heart cypress from rivers and old buildings to produce luxury flooring, stair parts and mill work. Goodwin offers additional fine wood species, including wild black cherry, and produces a 'Precision Engineered' wood flooring, which looks and lasts like a solid.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 262,
+        "instagram": 57
+      },
+      "image_url": "https://i1.feedspot.com/4726298.jpg?t=1607414551"
+    },
+    {
+      "title": "Elegant Floors Blog",
+      "feed_url": "https://elegant-floors.com/news-blog/feed/",
+      "website_url": "https://elegant-floors.com/news-blog/",
+      "description": "Elegant Floors is a Bay Area leader in hardwood floor refinishing, installation, and old floor restoration. Learn the latest and greatest in hardwood flooring. Get cleaning and repair tips.",
+      "followers": {
+        "facebook": 254,
+        "twitter": 773
+      },
+      "image_url": "https://i1.feedspot.com/4720672.jpg?t=1607414582"
+    },
+    {
+      "title": "Jim Boyd's Flooring America Blog",
+      "feed_url": "https://jimboydsflooringamerica.com/blog/feed/",
+      "website_url": "https://jimboydsflooringamerica.com/blog/",
+      "description": "Since 1970, our Baltimore area carpet & flooring store has been serving the needs of homeowners and business customers, including designers, interior decorators and builders. Check out Jim Boyd's Flooring America blog for resources and tips on Room Design Ideas, Flooring Design Ideas, Remodeling ideas & Latest Trends in Flooring.",
+      "followers": {
+        "facebook": 616,
+        "twitter": 200
+      },
+      "image_url": "https://i1.feedspot.com/4718919.jpg"
+    },
+    {
+      "title": "Parquet Parquet Blog",
+      "feed_url": "https://parquet-parquet.co.uk/parquet-blog/feed/",
+      "website_url": "https://parquet-parquet.co.uk/parquet-blog/",
+      "description": "Parquet Parquet suppliers of quality reclaimed parquet flooring carrying the largest range of timber species. Reclaimed parquet wood-block flooring is our speciality. It is a sustainable product because it is reclaimed - that has to be good for the planet!",
+      "followers": {
+        "facebook": 752,
+        "twitter": 334,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4727912.jpg?t=1607414765"
+    },
+    {
+      "title": "Pyramid Carpets News",
+      "feed_url": "https://www.pyramidcarpets.co.uk/feed/",
+      "website_url": "https://www.pyramidcarpets.co.uk/news/",
+      "description": "Follow us to keep up with articles on Carpets and flooring from Pyramid Carpets.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 86
+      },
+      "image_url": "https://i1.feedspot.com/4720706.jpg?t=1607414769"
+    },
+    {
+      "title": "Floor Craft Sanding Blog",
+      "feed_url": "https://www.floorcraftsanding.com/blog/feed/",
+      "website_url": "https://www.floorcraftsanding.com/blog/",
+      "description": "Floor Craft Sanding provides wood flooring installation and refinishing to Indianapolis and the surrounding areas.",
+      "followers": {
+        "facebook": 412,
+        "twitter": 31
+      },
+      "image_url": "https://i1.feedspot.com/4726127.jpg?t=1607414772"
+    },
+    {
+      "title": "Rhodium Floors Blog",
+      "feed_url": "https://rhodiumfloors.com/blog/feed/",
+      "website_url": "https://rhodiumfloors.com/blog/",
+      "description": "Rhodium Flooring specializes in high end wood and ceramic floors as well as wall coverings.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 444,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4726320.jpg?t=1607414779"
+    },
+    {
+      "title": "GC Flooring Pros Blog",
+      "feed_url": "https://gcflooringpros.com/blog/feed/",
+      "website_url": "https://gcflooringpros.com/blog/",
+      "description": "GC Flooring Pros supplies Frisco and the entire Dallas area with Premium Floors and Quality Installation. It offer a great variety of flooring materials including engineered and solid wood, laminate, tile, natural stone, carpet, vinyl.",
+      "followers": {
+        "facebook": 232,
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/4726359.jpg?t=1607414844"
+    },
+    {
+      "title": "Luna Carpet and Flooring",
+      "feed_url": "https://www.lunacarpetflooring.com/feed/",
+      "website_url": "https://www.lunacarpetflooring.com/",
+      "description": "Luna Carpet and Flooring provides Quality carpet, hardwood, laminate, vinyl, and tile Flooring for Every Room.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 395,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4726354.jpg?t=1607414852"
+    },
+    {
+      "title": "Norvic Tilling Blog",
+      "feed_url": "https://www.norvictiling.com.au/feed/",
+      "website_url": "https://www.norvictiling.com.au/norvic-tiling-blog/",
+      "description": "Norvic Tiling is about quality, your average tiling company. We aim to provide quality. Also with our commitment to not only quality workmanship but to each and every aspect of our job. Because this commitment allows us to work collectively in designing and delivering our best work.",
+      "followers": {
+        "instagram": 36
+      },
+      "image_url": "https://i1.feedspot.com/5067040.jpg?t=1607415638"
+    },
+    {
+      "title": "Area Floors Blog",
+      "feed_url": "https://www.areafloorsonline.com/blog/feed/",
+      "website_url": "https://www.areafloorsonline.com/blog/",
+      "description": "See what's new at Area Floors! Visit our blog for updates, inspiration, and an inside look at innovative flooring and countertop products. understanding a home is more than a house and that floor is more than a surface is what drives to AREA Floors.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 539,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4720086.jpg?t=1607415673"
+    },
+    {
+      "title": "Pro Flooring Blog",
+      "feed_url": "http://www.proflooringtx.com/feed/",
+      "website_url": "https://www.proflooringtx.com/blog/",
+      "description": "Pro Flooring LLC company Lewisville, TX the best flooring installation services and selling flooring materials like tiles, carpet, limestone, and hardwood.",
+      "followers": {
+        "facebook": 213,
+        "twitter": 142,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4726350.jpg?t=1607415677"
+    },
+    {
+      "title": "M Craft Blog",
+      "feed_url": "https://www.mcraft.com/feed/",
+      "website_url": "https://www.mcraft.com/blog/",
+      "description": "M Craft offers high-quality and luxurious hardwood flooring options to Naperville and Chicagoland area residents, including staircases, railings, custom details and accents to create a unique home. Learn all the tips and tricks there is to know about wood flooring options, maintenance, design and accents from our team of experts.",
+      "followers": {
+        "facebook": 17
+      },
+      "image_url": "https://i1.feedspot.com/4726137.jpg?t=1607415685"
+    },
+    {
+      "title": "TORLYS Blog",
+      "feed_url": "https://blog.torlys.com/feed/",
+      "website_url": "https://blog.torlys.com/",
+      "description": "TORLYS, founded in 1988, is a flooring company specializing in beautiful, easy to maintain, smart and green flooring. TORLYS Cork, Hardwood, Laminate and Leather floors are available through a worldwide network of specialized dealers.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 1500,
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/4720841.jpg?t=1607415749"
+    },
+    {
+      "title": "Best At Flooring Blog",
+      "feed_url": "https://www.bestatflooring.co.uk/feed/",
+      "website_url": "https://www.bestatflooring.co.uk/blog/",
+      "description": "Follow Best At Flooring Blog to keep up with articles on flooring from Best at Flooring, the UK's largest online flooring store. With hundreds of flooring companies across the UK both online and on your high street, it is sometimes hard to decide who's the right company for you. Read about the latest flooring trends, get expert knowledge and insight and learn about new products and ranges on the Best at Flooring blog!",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1300,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4721048.jpg?t=1607415688"
+    },
+    {
+      "title": "Sumbra Blog",
+      "feed_url": "https://theflooring.pro/feed/",
+      "website_url": "https://theflooring.pro/blog/",
+      "description": "Covers articles about woven vinyl flooring specifications, manufacturing techniques, woven vinyl flooring information, and reviews. ECO Beauty is a leading manufacturer of woven vinyl flooring, wall covering, area rugs, mats in China.",
+      "followers": {
+        "facebook": 89,
+        "twitter": 7
+      },
+      "image_url": "https://i1.feedspot.com/5298366.jpg?t=1625727322"
+    },
+    {
+      "title": "The Imagine Blog",
+      "feed_url": "https://imaginefloors.com.au/feed/",
+      "website_url": "https://imaginefloors.com.au/blogs/",
+      "description": "At Imagine Floors by Airstep, we believe that your design should reflect your personality and that you should have easy access to all the information that you may need to be able to make an informed decision about which flooring is best for your home. Our blog covers design inspiration and ideas, details about the different types of flooring, DIY installation, and which flooring is best for your home.",
+      "followers": {
+        "facebook": 260,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5364338.jpg?t=1642671271"
+    },
+    {
+      "title": "Gaylord Hardwood Flooring Blog",
+      "feed_url": "https://www.gaylordhardwoodflooring.com/blogs/gaylord-hardwood-flooring.atom",
+      "website_url": "https://www.gaylordhardwoodflooring.com/blogs/gaylord-hardwood-flooring",
+      "description": "Gaylord Hardwood Flooring features the longest lengths and most durable finish in the industry. We manufacture and sell high quality wide plank hardwood flooring in the United States, Canada, and all over the world.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 1000,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4720743.jpg?t=1607415681"
+    },
+    {
+      "title": "Hardwood Floors Fort Worth Blog",
+      "feed_url": "https://hardwoodfloorsfortworth.com/blog/feed/",
+      "website_url": "https://hardwoodfloorsfortworth.com/blog/",
+      "description": "Hardwood Floors Fort Worth features Hardwood flooring installation, refinishing, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4725458.jpg?t=1610602601"
+    },
+    {
+      "title": "Conestoga Tile Blog",
+      "feed_url": "https://www.conestogatile.com/blog/feed/",
+      "website_url": "https://www.conestogatile.com/blog/",
+      "description": "Conestoga Tile is a distributor of porcelain, ceramic, natural stone, glass and metal tiles. Whether we are working on a residential or commercial project we are focused on providing professionalism, expertise and guidance throughout the project and beyond.",
+      "followers": {
+        "facebook": 848,
+        "twitter": 482
+      },
+      "image_url": "https://i1.feedspot.com/4727958.jpg"
+    },
+    {
+      "title": "Ferma Flooring Blog",
+      "feed_url": "https://fermaflooring.com/feed/",
+      "website_url": "https://fermaflooring.com/blog/",
+      "description": "FERMA Flooring offers a wide variety of flooring, including Hardwood, Engineered, Bamboo, Laminate, and Luxury Vinyl, at compatible prices.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 72
+      },
+      "image_url": "https://i1.feedspot.com/4721892.jpg?t=1607415758"
+    },
+    {
+      "title": "FlooringStores Blog",
+      "feed_url": "https://floorhawk.wpengine.com/feed",
+      "website_url": "https://www.flooringstores.com/a/blog/",
+      "description": "FlooringStores is the most trusted online destination in flooring. We help consumers find products from verified flooring retailers & manufacturers. Need inspiration for your next home renovation? Get buying guides & ideas from our hardwood, vinyl, tile, carpet, lvt & laminate flooring blog.",
+      "followers": {
+        "facebook": 614,
+        "twitter": 267,
+        "instagram": 243
+      },
+      "image_url": "https://i1.feedspot.com/5287149.jpg?t=1622531301"
+    },
+    {
+      "title": "Choices Flooring Blogs",
+      "feed_url": "https://www.choicesflooring.com.au/feed",
+      "website_url": "https://www.choicesflooring.com.au/blogs",
+      "description": "The Choices story began in 1993 when Newfurn Limited, a co-operative group of independent furniture retailers established in 1959. With so many elements to consider in your decorating project, we help you design your interior from the floor up. Our holistic approach ensures we support you in creating the perfect space for your lifestyle.",
+      "followers": {
+        "facebook": 28600,
+        "instagram": 14200
+      },
+      "image_url": "https://i1.feedspot.com/4719022.jpg?t=1607413886"
+    },
+    {
+      "title": "FlooringInc Blog",
+      "feed_url": "https://www.flooringinc.com/blog/feed",
+      "website_url": "https://www.flooringinc.com/blog",
+      "description": "We are an online flooring superstore. We offer engineered wood, laminate, vinyl, carpet tiles, specialty flooring, and installation accessories.",
+      "followers": {
+        "facebook": 10200
+      },
+      "image_url": "https://i1.feedspot.com/4902530.jpg?t=1607413890"
+    },
+    {
+      "title": "Direct Wood Flooring Blog",
+      "feed_url": "https://www.directwoodflooring.co.uk/dwfblog/feed/",
+      "website_url": "https://www.directwoodflooring.co.uk/dwfblog",
+      "description": "Direct Wood Flooring Blog is the home for great quality wood flooring. We're here to help you find the perfect flooring for your project.",
+      "followers": {
+        "facebook": 15400,
+        "twitter": 218
+      },
+      "image_url": "https://i1.feedspot.com/4720919.jpg?t=1607413906"
+    },
+    {
+      "title": "Kajaria Ceramics Blog",
+      "feed_url": "https://kajariaceramics.com/blog/feed",
+      "website_url": "https://www.kajariaceramics.com/blog.php",
+      "description": "Kajaria Ceramics is the largest manufacturer of ceramic/vitrified tiles in India. These tiles come in a wide range of colours and textures to complement bathrooms, living rooms, corridors, study rooms & kitchen, born our of an inspired creativity of those who feel that rooms should be an extension of the beauty reflected.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 49100
+      },
+      "image_url": "https://i1.feedspot.com/4721009.jpg?t=1607413918"
+    },
+    {
+      "title": "Sherwin-Williams High Performance Flooring Blog",
+      "feed_url": "https://www.florock.net/blog/feed/",
+      "website_url": "https://industrial.sherwin-williams.com/na/us/en/resin-flooring.html",
+      "description": "Serving a wide range of facilities across the globe, Florock Polymer Flooring is a leader in the research and development, production, and installation of solutions-oriented flooring systems for commercial, industrial, and institutional applications. Get the latest industrial flooring news & resources on the Florock polymer flooring blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4720862.jpg?t=1660884830"
+    },
+    {
+      "title": "Flooring Xtra Blog",
+      "feed_url": "https://www.flooringxtra.com.au/blog/feed/",
+      "website_url": "https://www.flooringxtra.com.au/blog/",
+      "description": "Flooring Xtra are Australia's Experts when it comes to Flooring. Providing extensive range of floorings. Our tree is a symbol of generational longevity, strength and service.",
+      "followers": {
+        "instagram": 9600
+      },
+      "image_url": "https://i1.feedspot.com/4719143.jpg?t=1607414173"
+    },
+    {
+      "title": "Unique Wood Floors Blog",
+      "feed_url": "https://www.thesolidwoodflooringcompany.com/blog/rss",
+      "website_url": "https://www.uniquewoodfloor.com/blog",
+      "description": "The Solid Wood Flooring manufactures and supplies high quality, hardwood flooring material across the UK. With a wide range of solid wood and engineered wood choices, a free sample service and two showrooms across the country.",
+      "followers": {
+        "facebook": 436,
+        "twitter": 1500,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4725444.jpg?t=1607415669"
+    },
+    {
+      "title": "ReallyCheapFloors Blog",
+      "feed_url": "https://www.reallycheapfloors.com/blog/feed/",
+      "website_url": "https://www.reallycheapfloors.com/blog/",
+      "description": "The best hands-on information on flooring products & trends. Get advice on Flooring Options, Bathroom Floors, Bedroom Floors, Luxury Vinyl Products, and more. ReallyCheapFloors provides hardwood flooring products and flooring services in the USA.",
+      "followers": {
+        "facebook": 4600,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5343495.jpg?t=1637067026"
+    },
+    {
+      "title": "Woodfloors4u Blog",
+      "feed_url": "https://www.woodfloors4u.co.uk/blog/feed/",
+      "website_url": "https://woodfloors4u.co.uk/category/blog/",
+      "description": "Woodfloors4u is a wood flooring specialist that delivers not only just quality but cutting edge designs coupled with finishes and colours to match everyone's idea of a perfect floor.",
+      "followers": {
+        "facebook": 809,
+        "twitter": 837,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4719894.jpg?t=1607414510"
+    },
+    {
+      "title": "Wood Floor Sanding Professionals Blog",
+      "feed_url": "https://www.woodfloorsandingprofessionals.co.uk/",
+      "website_url": "https://www.woodfloorsandingprofessionals.co.uk/blog/",
+      "description": "Sanding wood floors for Leeds provides information on how best to sand wooden floors with wood floor sanding tips and pictures of sanded wooden flooring. Services provided by reputable floor sanders.",
+      "followers": {
+        "facebook": 171,
+        "twitter": 94
+      },
+      "image_url": "https://i1.feedspot.com/4726322.jpg?t=1607414547"
+    },
+    {
+      "title": "Crystal Carpet & Flooring Company Blog",
+      "feed_url": "https://www.csmflooring.com/feed",
+      "website_url": "https://www.csmflooring.com/blog",
+      "description": "The Crystal Carpet & Flooring Company has been serving greater Wilmington, NC for over 20 years with professional carpet and flooring solutions at fair prices.",
+      "followers": {
+        "facebook": 820
+      },
+      "image_url": "https://i1.feedspot.com/4720930.jpg?t=1607414575"
+    },
+    {
+      "title": "Rock & Wood Interiors Blog",
+      "feed_url": "https://www.rockandwoodinteriors.com/blog?format=RSS",
+      "website_url": "https://rockandwoodinteriors.com/blog/",
+      "description": "Rock and Wood interiors are suppliers of high quality natural stone floor tiles and oak flooring for the home interior.",
+      "followers": {
+        "facebook": 248
+      },
+      "image_url": "https://i1.feedspot.com/4726332.jpg?t=1607414794"
+    },
+    {
+      "title": "AAI Flooring",
+      "feed_url": "https://amoreinteriorsllc.com/feed/",
+      "website_url": "https://www.hoyflooring.com/news",
+      "description": "AAI Flooring Specialists in Orange, Connecticut offer carpet, hardwood, ceramic, mosaic, tile, wool, vinyl, laminate, bamboo, cork and more in CT!",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 407
+      },
+      "image_url": "https://i1.feedspot.com/4720696.jpg?t=1607414800"
+    },
+    {
+      "title": "Big Bro Hardwood Blog",
+      "feed_url": "https://bigbrohardwood.com/feed/",
+      "website_url": "https://bigbrohardwood.com/blog/",
+      "description": "Big Bro Hardwood is a hardwood floor installation, refinishing, staining company. Get updates on how to choose the right hardwood floor installation service.",
+      "followers": {
+        "facebook": 89,
+        "instagram": 492
+      },
+      "image_url": "https://i1.feedspot.com/5293210.jpg?t=1623764999"
+    },
+    {
+      "title": "Avalon Flooring Blog",
+      "feed_url": "https://www.avalonflooring.com/feed",
+      "website_url": "https://www.avalonflooring.com/blogs/blog",
+      "description": "Avalon Flooring was founded in 1963 by John Millar. Visit an Avalon Flooring store for all of your home & commercial flooring needs. Browse our selection of carpeting, hardwood, laminate, and ceramic flooring. Get inspired and informed with the Avalon Flooring Knowledge Center, our flooring blog. Find posts on home design ideas and important flooring information.",
+      "followers": {
+        "facebook": 189,
+        "twitter": 774,
+        "instagram": 6400
+      },
+      "image_url": "https://i1.feedspot.com/4718886.jpg?t=1607414127"
+    },
+    {
+      "title": "Just Around the Corner Flooring Blog",
+      "feed_url": "https://www.jatcwoodfloors.com/feed",
+      "website_url": "https://www.jatcwoodfloors.com/blog",
+      "description": "Read about St. Louis flooring and hardwood on the Just Around the Corner blog. You'll learn great tips on cleaning floors and the latest home decor trends. You can have anything from simple wood floors, factory finished or site finished to extravagant designs and exotic species; low maintenance, pet friendly/ family friendly; or state of the art Luxury vinyl wood.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 24
+      },
+      "image_url": "https://i1.feedspot.com/4726093.jpg?t=1607415721"
+    }
+  ]
+}

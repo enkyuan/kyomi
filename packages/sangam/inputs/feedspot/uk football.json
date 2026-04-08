@@ -1,0 +1,496 @@
+{
+  "category": "UK Football",
+  "source_url": "https://rss.feedspot.com/uk_football_rss_feeds",
+  "feeds": [
+    {
+      "title": "Football Talk",
+      "feed_url": "https://football-talk.co.uk/feed/",
+      "website_url": "https://football-talk.co.uk/",
+      "description": "Football-Talk is an independent website made up of a team of football-loving contributors that provide news and views on Arsenal, Chelsea, Liverpool, Man Utd, Man City and Tottenham.",
+      "followers": {
+        "facebook": 39000,
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/417338.jpg?t=1613723286"
+    },
+    {
+      "title": "The 72 - We Love the Football League",
+      "feed_url": "https://the72.co.uk/feed/",
+      "website_url": "https://the72.co.uk/",
+      "description": "The 72 is an online outlet dedicated to The Football League. With over 100 different writers, we publish opinion and feature pieces, match reports, statistics and the like.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4906170.jpg?t=1613723292"
+    },
+    {
+      "title": "The London Football Guide",
+      "feed_url": "http://www.tlfg.uk/feeds/posts/default?alt=rss",
+      "website_url": "http://www.tlfg.uk/",
+      "description": "This blog aims to promote football in England's capital city. On a weekly basis I hope to list all games taking place inside the M25 motorway within the top 10 levels of the national system and also give a few recommendations of matches that I think could be worth your while.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4906177.jpg?t=1613723301"
+    },
+    {
+      "title": "Football Blog",
+      "feed_url": "https://footballblog.co.uk/feed/",
+      "website_url": "https://footballblog.co.uk/",
+      "description": "Here you can find the latest stories written by our football journalists.",
+      "followers": {
+        "twitter": 566
+      },
+      "image_url": "https://i1.feedspot.com/1724955.jpg?t=1689161603"
+    },
+    {
+      "title": "LE GROVE",
+      "feed_url": "https://www.le-grove.co.uk/feed",
+      "website_url": "https://www.le-grove.co.uk/blog/",
+      "description": "The site was set up in late 2007 by Geoff and Pedro. They set out to create a place where Arsenal fans could talk about whatever they liked football wise without the fear of aggressive recriminations. Four and a bit years on, the site has posted over 1600 times and has over 1,000,000 comments approved and published.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 106900
+      },
+      "image_url": "https://i1.feedspot.com/1077303.jpg?t=1608624296"
+    },
+    {
+      "title": "Roker Report",
+      "feed_url": "https://rokerreport.sbnation.com/rss/index.xml",
+      "website_url": "https://rokerreport.sbnation.com/",
+      "description": "Roker Report is a dedicated Sunderland AFC fan site and podcast delivering daily news, analysis, opinion, and community-focused coverage of the club from a supporter's perspective",
+      "followers": {
+        "facebook": 40600,
+        "twitter": 58100
+      },
+      "image_url": "https://i1.feedspot.com/8643871.jpg?t=1753080669"
+    },
+    {
+      "title": "Liverpool Echo",
+      "feed_url": "https://www.liverpoolecho.co.uk/sport/football/rss.xml",
+      "website_url": "https://www.liverpoolecho.co.uk/sport/football/",
+      "description": "The latest football news from across Liverpool and Merseyside covering Liverpool FC, Everton FC and Tranmere Rovers.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 589900,
+        "instagram": 245900
+      },
+      "image_url": "https://i1.feedspot.com/8643870.jpg?t=1753076588"
+    },
+    {
+      "title": "The Non-League Football Paper",
+      "feed_url": "https://www.thenonleaguefootballpaper.com/feed/",
+      "website_url": "https://www.thenonleaguefootballpaper.com/",
+      "description": "The Non-League Paper is a weekly English sports newspaper based on Non-League football. The publication features match reports from the top four levels of English football with round-ups of Step 5 divisions. Results and tables from Steps 6 and 7 are also featured as is football in Wales as well as a results round-up from the previous week's midweek matches.",
+      "followers": {
+        "facebook": 16700,
+        "twitter": 82000,
+        "instagram": 7800
+      },
+      "image_url": "https://i1.feedspot.com/5695148.jpg?t=1698049797"
+    },
+    {
+      "title": "Nottinghamshire Live",
+      "feed_url": "https://www.nottinghampost.com/sport/football/?service=rss",
+      "website_url": "https://www.nottinghampost.com/sport/football/",
+      "description": "Get the latest football news with Nottinghamshire Live. Breaking news, fixtures, results, previews, match reports and transfer news from the Nottinghamshire Live team.",
+      "followers": {
+        "facebook": 357700,
+        "twitter": 191700
+      },
+      "image_url": "https://i1.feedspot.com/8643872.jpg?t=1753078801"
+    },
+    {
+      "title": "Arsenal Mania",
+      "feed_url": "https://arsenal-mania.com/feed/",
+      "website_url": "https://arsenal-mania.com/",
+      "description": "The largest Arsenal fan forum in the world along with all the latest news and views surrounding the mighty Gunners.",
+      "followers": {
+        "facebook": 633,
+        "instagram": 365
+      },
+      "image_url": "https://i1.feedspot.com/4765580.jpg?t=1608629172"
+    },
+    {
+      "title": "HITC",
+      "feed_url": "https://www.hitc.com/news/feed/",
+      "website_url": "https://www.hitc.com/news/",
+      "description": "HITC has been an established and trusted source of news since 2000. Having initially launched with a focus on financial news, the website evolved into a multi-topic platform that delivered news across the football, entertainment and gaming sectors.",
+      "followers": {
+        "facebook": 193000,
+        "twitter": 21900,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/8643867.jpg?t=1753080939"
+    },
+    {
+      "title": "CaughtOffside",
+      "feed_url": "https://www.caughtoffside.com/feed/",
+      "website_url": "https://www.caughtoffside.com/",
+      "description": "Football transfer rumours, news, and Gossip from the English Premier League and beyond. Caughtoffside is a leading player in the transfer gossip and football news sector, providing sensationalism (with editorial integrity), insight, and a commitment to stand up to (or poke fun at) the players, managers, clubs, leagues, broadcasters, and owners.",
+      "followers": {
+        "facebook": 14,
+        "twitter": 192500,
+        "instagram": 10500
+      },
+      "image_url": "https://i1.feedspot.com/212.jpg?t=1608624178"
+    },
+    {
+      "title": "Arseblog",
+      "feed_url": "https://arseblog.com/feed",
+      "website_url": "https://arseblog.com/",
+      "description": "The award winning, original Arsenal blog. Home of the Arsecast, the Arsenal podcast. The best Arsenal news, opinion, transfer stories, podcasts, videos and content 24/7.",
+      "followers": {
+        "facebook": 448500,
+        "twitter": 435400,
+        "instagram": 73400
+      },
+      "image_url": "https://i1.feedspot.com/4765081.jpg?t=1753081149"
+    },
+    {
+      "title": "Vital Football",
+      "feed_url": "https://vitalfootball.co.uk/feed/",
+      "website_url": "https://vitalfootball.co.uk/",
+      "description": "Vital Football is a site run by passionate fans, for passionate fans of the beautiful game in the lower leagues. We focus on the clubs and communities that don't always get the spotlight in mainstream media, primarily covering the English Football",
+      "followers": {
+        "twitter": 14500
+      },
+      "image_url": "https://i1.feedspot.com/8643868.jpg?t=1753352243"
+    },
+    {
+      "title": "Stretty News",
+      "feed_url": "https://strettynews.com/feed/",
+      "website_url": "https://strettynews.com/",
+      "description": "The award winning Manchester United blog and news site. Home of the Strettycast, a Manchester United podcast.",
+      "followers": {
+        "facebook": 5200000,
+        "twitter": 66900
+      },
+      "image_url": "https://i1.feedspot.com/3993346.jpg?t=1608556957"
+    },
+    {
+      "title": "We all follow united",
+      "feed_url": "https://weallfollowunited.com/feed/",
+      "website_url": "https://weallfollowunited.com/",
+      "description": "We All Follow United - Get all the latest Manchester United news, transfer News, match reports, analysis and opinions.",
+      "followers": {
+        "facebook": 44,
+        "twitter": 4300,
+        "instagram": 6
+      },
+      "image_url": "https://i1.feedspot.com/8643869.jpg?t=1753083030"
+    },
+    {
+      "title": "Arsedevils",
+      "feed_url": "https://arsedevils.com/feed/",
+      "website_url": "https://arsedevils.com/",
+      "description": "Latest Arsenal and Manchester United News, Transfer Updates, Match Day previews and reviews of EPL and Champions League. Blog by passionate supporters of Arsenal and Manchester United..",
+      "followers": {},
+      "image_url": "https://i0.wp.com/arsedevils.com/wp-content/uploads/2020/11/cropped-New-Logo-1.png?fit=32%2C32&ssl=1"
+    },
+    {
+      "title": "Arsenal News",
+      "feed_url": "https://arsenalnews.co.uk/feed/",
+      "website_url": "https://arsenalnews.co.uk/",
+      "description": "Arsenal News, Transfers News & Rumours",
+      "followers": {
+        "facebook": 55200,
+        "twitter": 82100
+      },
+      "image_url": "https://i1.feedspot.com/7280403.jpg?t=1711104343"
+    },
+    {
+      "title": "The Mag",
+      "feed_url": "https://www.themag.co.uk/feed/",
+      "website_url": "https://www.themag.co.uk/",
+      "description": "Get the latest Newcastle United news, stats, and commentary at The Mag - the independent voice of NUFC since 1988. Check out the latest news, match reports, videos, opinions, club, and player updates.",
+      "followers": {
+        "facebook": 8200,
+        "twitter": 29100
+      },
+      "image_url": "https://i1.feedspot.com/3654454.jpg?t=1608624209"
+    },
+    {
+      "title": "Newcastle United Football Club Blog",
+      "feed_url": "https://www.nufcblog.co.uk/feed/",
+      "website_url": "https://www.nufcblog.co.uk/",
+      "description": "NUFC Blog provides news, opinion and debate on NUFC fixtures and other Newcastle United gossip. It is the new place for banter and for fans to discuss their team.",
+      "followers": {
+        "facebook": 41600,
+        "twitter": 23800
+      },
+      "image_url": "https://i1.feedspot.com/1927874.jpg?t=1608624201"
+    },
+    {
+      "title": "The Fighting Cock",
+      "feed_url": "https://thefightingcock.co.uk/feed/",
+      "website_url": "https://thefightingcock.co.uk/nmtb/",
+      "description": "Never Mind The B*llocks (the NMTB section of The\u202fFighting\u202fCock) is a fan\u2011run blog offering sharp, reactionary articles and commentary exclusively on Tottenham Hotspur football club performance and matches.",
+      "followers": {
+        "facebook": 11300,
+        "twitter": 82400,
+        "instagram": 10900
+      },
+      "image_url": "https://i1.feedspot.com/8643873.jpg?t=1753076184"
+    },
+    {
+      "title": "ICfootballnews",
+      "feed_url": "https://icfootballnews.com/feed/",
+      "website_url": "https://icfootballnews.com/",
+      "description": "Welcome to ICFootballNews.com, the website dedicated to giving you upto date news, transfers and gossip from across the Premier League. We're dedicated to bringing all the latest premier league news on a daily basis",
+      "followers": {
+        "facebook": 8900,
+        "twitter": 481
+      },
+      "image_url": "https://i1.feedspot.com/4951329.jpg?t=1608624301"
+    },
+    {
+      "title": "Real Football Man",
+      "feed_url": "http://realfootballman.com/feed/",
+      "website_url": "http://realfootballman.com/",
+      "description": "A website which brings you 'All Of The Football, All Of The Time' from the Premier League to the Champions League and every thing in between.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 19400
+      },
+      "image_url": "https://i1.feedspot.com/4647233.jpg?t=1608624661"
+    },
+    {
+      "title": "The Ball is Round",
+      "feed_url": "https://theballisround.co.uk/feed/",
+      "website_url": "https://theballisround.co.uk/",
+      "description": "The trials and tribulations of watching the beautiful game in 20 different languages. The Ball is Round follows Stuart Fuller, an ardent football fan and the author of the book The Football Tourist as he travels and covers distinct games and football leagues across the world.",
+      "followers": {
+        "twitter": 7600
+      },
+      "image_url": "https://i1.feedspot.com/4466180.jpg?t=1608625525"
+    },
+    {
+      "title": "Football Action",
+      "feed_url": "https://footballaction.co.uk/feed",
+      "website_url": "https://footballaction.co.uk/",
+      "description": "Keeping you an up to date with latest football stories and transfer speculations across the European leagues - Premiership, La Liga, Serie A and Bundesliga.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 81
+      },
+      "image_url": "https://i1.feedspot.com/4466141.jpg?t=1613726175"
+    },
+    {
+      "title": "Softfootball",
+      "feed_url": "https://www.softfootball.com/feed/",
+      "website_url": "https://www.softfootball.com/",
+      "description": "Stay ahead in the world of football with Softfootball! We bring you the latest news, live scores, and real-time updates from matches around the globe.",
+      "followers": {
+        "facebook": 62400,
+        "instagram": 17
+      },
+      "image_url": "https://i1.feedspot.com/7841804.jpg?t=1764316590"
+    },
+    {
+      "title": "Matchfit Football Blog",
+      "feed_url": "https://www.matchfitfootballblog.com/blog-feed.xml",
+      "website_url": "https://www.matchfitfootballblog.com/",
+      "description": "Here at Matchfit our goal is simple, we want to enable players of all backgrounds and ages to benefit from the strength & conditioning techniques that the pros use at top clubs. We want to make the world of football specific strength & conditioning accessible to everyone, not just those at professional clubs or who are able to afford a personal fitness coach.",
+      "followers": {
+        "facebook": 53300
+      },
+      "image_url": "https://i1.feedspot.com/5235191.jpg?t=1610376483"
+    },
+    {
+      "title": "RedMancunian",
+      "feed_url": "https://redmancunian.com/feed/",
+      "website_url": "https://redmancunian.com/news/",
+      "description": "RedMancunian is your number one source for all Man Utd news, previews, reports, fixtures, squad, transfers and more.",
+      "followers": {
+        "facebook": 30900,
+        "twitter": 272500
+      },
+      "image_url": "https://i1.feedspot.com/4759313.jpg?t=1608556905"
+    },
+    {
+      "title": "La Liga Blog",
+      "feed_url": "http://laligablog.com/feed/",
+      "website_url": "http://laligablog.com/",
+      "description": "Your daily source of Spanish La Liga football results, and La Liga Soccer news, views, league tables, fixtures, results and opinion.",
+      "followers": {
+        "facebook": 11800,
+        "twitter": 17300
+      },
+      "image_url": "https://i1.feedspot.com/4465923.jpg?t=1618470907"
+    },
+    {
+      "title": "A Different League",
+      "feed_url": "https://www.adifferentleague.co.uk/feed/",
+      "website_url": "https://www.adifferentleague.co.uk/",
+      "description": "A Different League was launched in April 2009 with the goal of providing news, opinion and comment on Premier League and international football.",
+      "followers": {
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/311855.jpg?t=1613723320"
+    },
+    {
+      "title": "Natter Football",
+      "feed_url": "http://natterfootball.co.uk/feed/",
+      "website_url": "https://natterfootball.co.uk/",
+      "description": "Football fans are the forgotten people of the beautiful game. Ignored by club owners and administrators and a media which frequently focuses on the sensational and trivial, supporters have few opportunities to influence issues affecting their teams and the game we all love. That's why Natter Football was established to provide a platform for the ordinary fan to have his or her say.",
+      "followers": {
+        "facebook": 339,
+        "twitter": 10600
+      },
+      "image_url": "https://i1.feedspot.com/4466202.jpg?t=1653476870"
+    },
+    {
+      "title": "Up The Hammers West Ham United FC News",
+      "feed_url": "https://feeds.feedburner.com/WestHamUnitedFootballClub-LatestHammersNews",
+      "website_url": "https://www.upthehammers.co.uk/",
+      "description": "All the latest & breaking West Ham United news headlines coming out of Upton Park. Whether it be breaking news, transfer gossip, thoughts about the last game, or even the next game, rants or raves, we want to hear it and publish your thoughts on our main site.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4465901.jpg?t=1608625550"
+    },
+    {
+      "title": "West Ham United Blog",
+      "feed_url": "https://westhamunitedblog.co.uk/feed/",
+      "website_url": "https://westhamunitedblog.co.uk/",
+      "description": "West Ham United Blog is an unofficial fansite, featuring WHUFC news, results, analysis, match recaps, reports, stats, predictions, and a way to have a chat about anything West Ham Utd related with fellow supporters.",
+      "followers": {
+        "facebook": 661,
+        "twitter": 169
+      },
+      "image_url": "https://i1.feedspot.com/4465904.jpg?t=1608625570"
+    },
+    {
+      "title": "Fantasy Football Scout",
+      "feed_url": "https://www.fantasyfootballscout.co.uk/feed/",
+      "website_url": "https://www.fantasyfootballscout.co.uk/",
+      "description": "Find Fantasy Football Tips, News and Advice for fantasy games based on the English Premier League.",
+      "followers": {
+        "facebook": 96500,
+        "twitter": 357800
+      },
+      "image_url": "https://i1.feedspot.com/4906173.jpg?t=1613723295"
+    },
+    {
+      "title": "Football Shoot",
+      "feed_url": "https://www.footballshoot.com/feed/",
+      "website_url": "https://www.fantasyfootballgeek.co.uk/",
+      "description": "Bringing the latest football news, reactions, and rumor from the UK papers. The newest football stories and blogs from the premier league, Bundesliga, la Liga & much more! We are dedicated to providing top-notch football news, views, and much more. We also serve as a community for like-minded football fans to come together to showcase their passion. The aim of the FootballShoot blog is to provide an unbiased view and analyze the ' beautiful game ' with a degree of balance.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 97
+      },
+      "image_url": "https://i1.feedspot.com/4466145.jpg?t=1608625466"
+    },
+    {
+      "title": "Fantasy Football Geek - The only fantasy football site with tips",
+      "feed_url": "https://www.fantasyfootballgeek.co.uk/feed/",
+      "website_url": "https://www.fantasyfootballgeek.co.uk/",
+      "description": "The only fantasy football site with tips, advice and strategy for all formats. To help fantasy premier league mangers finish higher than they would without the site. To allow fantasy managers the chance to share their interest.",
+      "followers": {
+        "facebook": 7000
+      },
+      "image_url": "https://i1.feedspot.com/2166642.jpg?t=1609589604"
+    },
+    {
+      "title": "The Football Blogging Awards Blog",
+      "feed_url": "https://www.footballbloggingawards.co.uk/feed",
+      "website_url": "https://www.footballbloggingawards.co.uk/blogs/",
+      "description": "The Football Blogging Awards blog is designed to educate, enlighten and entertain.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 77
+      },
+      "image_url": "https://i1.feedspot.com/4906143.jpg?t=1613723305"
+    },
+    {
+      "title": "Football Talk",
+      "feed_url": "https://www.footballtalk.org/feed/",
+      "website_url": "https://www.footballtalk.org/",
+      "description": "On FootballTalk.org, you can check out the latest football news, interesting football stories, transfer news and gossips from the major football leagues.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 91,
+        "instagram": 31
+      },
+      "image_url": "https://i1.feedspot.com/5003312.jpg"
+    },
+    {
+      "title": "Index Scholar Blog",
+      "feed_url": "https://indexscholar.co.uk/feed/",
+      "website_url": "https://soccerwhizz.com/blog-posts/",
+      "description": "The Index Scholar blog aims to serve as the ultimate football learning academy for casual, semi-professional and world class footballers through depth and breadth of top notch quality guides, statistics, general information about the beautiful game and a handful of product recommendations.",
+      "followers": {
+        "twitter": 99
+      },
+      "image_url": "https://i1.feedspot.com/5299416.jpg?t=1625489269"
+    },
+    {
+      "title": "Chelseadaft - A Chelsea fans blog",
+      "feed_url": "https://www.chelseadaft.org/feeds/posts/default?alt=rss",
+      "website_url": "https://www.chelseadaft.org/",
+      "description": "A Chelsea fans blog is one of the leading Chelsea blogs on the planet and the site has had over 44 MILLION page views with an average of 1m views per month.",
+      "followers": {
+        "facebook": 19100
+      },
+      "image_url": "https://i1.feedspot.com/153707.jpg?t=1608550022"
+    },
+    {
+      "title": "24/7 Football",
+      "feed_url": "https://247-football.com/feed/",
+      "website_url": "https://247-football.com/",
+      "description": "24/7 Football aims to be the front runner in football news and content. Bringing you news from Premier League and Football League clubs. We aim to give the fans the latest news and opinions, as well as a platform to have their say on all football matters from England's top four divisions.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 508
+      },
+      "image_url": "https://i1.feedspot.com/5211928.jpg?t=1604057427"
+    },
+    {
+      "title": "The Football Manc Cave",
+      "feed_url": "https://thefootballmancave.com/feed/",
+      "website_url": "https://thefootballmancave.wordpress.com/",
+      "description": "The Football Manc Cave is a site providing news, views and opinions from the fans for the fans of the current 13 Greater Manchester borough teams. The website was created by Ian Foran to bring news to the football fans who support clubs within the Greater Manchester borough and to highlight the lower league teams as much as the top tiers.",
+      "followers": {
+        "facebook": 149
+      },
+      "image_url": "https://i1.feedspot.com/5000895.jpg?t=1613723407"
+    },
+    {
+      "title": "Clean Sheets All Round",
+      "feed_url": "http://www.cleansheetsallround.co.uk/feed",
+      "website_url": "http://www.cleansheetsallround.co.uk/",
+      "description": "The Alternative Football Web Site - Clean Sheets is your number one site for the latest transfer rumours and opinion! CSAR cover the Premier League, European and international competitions.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 974
+      },
+      "image_url": "https://i1.feedspot.com/4465908.jpg?t=1608625415"
+    },
+    {
+      "title": "Football Views",
+      "feed_url": "https://www.footballviews.co.uk/feed/",
+      "website_url": "https://footyblog.net/",
+      "description": "Latest Football Transfer, Match Analysis, Transfer Window, Speculations, and more. Football Views is a news blog, founded in 2012 that serves as a one-stop source for every football fan in the universe. We usually publish articles and scoops that help fans keep updated with the latest football transfers, news, gossip, opinions, reviews, and much more.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 220
+      },
+      "image_url": "https://i1.feedspot.com/4466188.jpg?t=1653484697"
+    },
+    {
+      "title": "FootyBlog.net",
+      "feed_url": "https://footyblog.net/feed/",
+      "website_url": "https://footyblog.net/",
+      "description": "Get the latest football news from FootyBlog.net - we're one of the UK's best Soccer news websites with the latest Transfer Rumours and Football Videos!",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/3661846.jpg?t=1653566326"
+    }
+  ]
+}

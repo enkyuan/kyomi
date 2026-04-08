@@ -1,0 +1,28 @@
+{
+  "category": "RV Cooking",
+  "source_url": "https://rss.feedspot.com/rv_cooking_rss_feeds",
+  "feeds": [
+    {
+      "title": "Camp And RV Cook",
+      "feed_url": "https://campandrvcook.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://campandrvcook.blogspot.com/",
+      "description": "Camp And RV Cook provide tips on how to save time, fuel, work and water when you prepare meals in your RV, pop-up camper, tent site or boat galley. Janet Groene cooks quick, easy, good, clean and green RV meals. She has lived, traveled, earned while living full-time 10 years in RV and boat.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/200/4493980.jpg?t=1605956146"
+    },
+    {
+      "title": "Camping World Blog \u00bb Cooking",
+      "feed_url": "https://blog.campingworld.com/tag/cooking/feed/",
+      "website_url": "https://blog.campingworld.com/tag/cooking/",
+      "description": "Get the information you need to travel the world in your RV. From location insights to maintenance requirements, learn more about RV travel today. Camping World has proudly offered specialized products and accessories, expert advice, and professional service to recreational vehicle owners and campers.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 412800,
+        "instagram": 439700
+      },
+      "image_url": "https://i1.feedspot.com/5306082.jpg?t=1627472529"
+    }
+  ]
+}

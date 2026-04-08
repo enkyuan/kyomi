@@ -1,0 +1,51 @@
+{
+  "category": "Vietnam Photography",
+  "source_url": "https://rss.feedspot.com/vietnam_photography_rss_feeds",
+  "feeds": [
+    {
+      "title": "Matca",
+      "feed_url": "https://matca.vn/feed/",
+      "website_url": "https://matca.vn/",
+      "description": "A gathering space for photographers & visual artists in Vietnam. Matca is an independent project promoting the role of photography as a visual art form.",
+      "followers": {
+        "facebook": 19300,
+        "twitter": 15,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/5344733.jpg?t=1637321507"
+    },
+    {
+      "title": "Binh Dang Blog",
+      "feed_url": "https://binhdang.me/feed/",
+      "website_url": "https://binhdang.me/blog/",
+      "description": "Binh Dang is a Photographer based in Vietnam. Currently, Binh works in the fields of documentary photography, industrial, corporate, editorial, commercial and personal projects.",
+      "followers": {
+        "facebook": 879,
+        "instagram": 38600
+      },
+      "image_url": "https://i1.feedspot.com/5344573.jpg?t=1637332388"
+    },
+    {
+      "title": "Tin Wedding Photography",
+      "feed_url": "https://www.tinweddingphotography.com/vietnam-wedding-photographers?format=rss",
+      "website_url": "https://www.tinweddingphotography.com/vietnam-wedding-photographers",
+      "description": "Hey, I'm Tin Nguyen! I've been a professional photographer since 2011. My style in wedding photography is a combination of respect for authenticity, a documentary outlook, and creative expression. Check out the blog to view my latest work.",
+      "followers": {
+        "facebook": 2600,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5335408.jpg?t=1635157154"
+    },
+    {
+      "title": "Hoi An Photographer",
+      "feed_url": "https://fernandesphotographer.com/feed",
+      "website_url": "https://fernandesphotographer.com/en/blog/",
+      "description": "I'm Tam, a Vietnam wedding photographer. I love taking pictures and love to capture happy couples on the wedding day. If you want to find the best photographer in Vietnam, I am confident of being one of them.",
+      "followers": {
+        "twitter": 126,
+        "instagram": 10900
+      },
+      "image_url": "https://i1.feedspot.com/5344574.jpg?t=1637310558"
+    }
+  ]
+}

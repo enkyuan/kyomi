@@ -1,0 +1,28 @@
+{
+  "category": "Fitchburg News",
+  "source_url": "https://rss.feedspot.com/fitchburg_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of Fitchburg, WI",
+      "feed_url": "https://www.fitchburgwi.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.fitchburgwi.gov/CivicAlerts.aspx",
+      "description": "The City of Fitchburg, Wisconsin is dedicated to keeping residents informed and up to date with the latest news and information about city services, community events, government policy and more.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5156362.jpg"
+    },
+    {
+      "title": "Fitchburg Star",
+      "feed_url": "https://www.fitchburgstar.com/",
+      "website_url": "https://www.fitchburgstar.com/",
+      "description": "The Fitchburg Star, a community newspaper that has been proudly serving the Fitchburg area since 1974. It remains the definitive source of news for the community, covering city government, business, and features.",
+      "followers": {
+        "facebook": 948,
+        "twitter": 712
+      },
+      "image_url": "https://i1.feedspot.com/5156364.jpg?t=1590490189"
+    }
+  ]
+}

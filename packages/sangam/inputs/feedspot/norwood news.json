@@ -1,0 +1,17 @@
+{
+  "category": "Norwood News",
+  "source_url": "https://rss.feedspot.com/norwood_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "WCPO 9 \u00bb Norwood",
+      "feed_url": "https://www.wcpo.com/news/local-news/hamilton-county/norwood.rss",
+      "website_url": "https://www.wcpo.com/news/local-news/hamilton-county/norwood",
+      "description": "Norwood breaking news, weather, traffic, and more from WCPO 9.",
+      "followers": {
+        "facebook": 412900,
+        "twitter": 223000
+      },
+      "image_url": "https://i1.feedspot.com/5167765.jpg?t=1679632132"
+    }
+  ]
+}

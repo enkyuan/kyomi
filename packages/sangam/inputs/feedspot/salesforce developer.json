@@ -1,0 +1,1120 @@
+{
+  "category": "Salesforce Developer",
+  "source_url": "https://rss.feedspot.com/salesforce_developer_rss_feeds",
+  "feeds": [
+    {
+      "title": "Salesforce Developers Blog",
+      "feed_url": "https://developer.salesforce.com/blogs/feed",
+      "website_url": "https://developer.salesforce.com/blogs",
+      "description": "Elevating developer skills and connecting with the Salesforce Developers community. Salesforce Developers is a free community-based online portal for developers, where developers can learn, access key resources, and discuss a diverse set of topics anchored around the Salesforce AppCloud.",
+      "followers": {
+        "facebook": 299200,
+        "twitter": 121600,
+        "instagram": 32800
+      },
+      "image_url": "https://i1.feedspot.com/4773837.jpg?t=1608784575"
+    },
+    {
+      "title": "Salesforce Admins Blog",
+      "feed_url": "https://admin.salesforce.com/feed",
+      "website_url": "https://admin.salesforce.com/blog",
+      "description": "This is a community for Salesforce Admins to learn, connect and be inspired. It contains Webinars, blog posts and events for Salesforce Administrators.",
+      "followers": {
+        "facebook": 82400,
+        "twitter": 61500
+      },
+      "image_url": "https://i1.feedspot.com/4919556.jpg?t=1608784580"
+    },
+    {
+      "title": "Cloud for Good Blog",
+      "feed_url": "https://cloud4good.com/feed/",
+      "website_url": "https://cloud4good.com/blog/",
+      "description": "Cloud for Good is a certified B Corporation and a Premium Salesforce.Org Partner specializing in donor management, case management, and marketing automation implementations for nonprofit organizations and higher education institutions. We help nonprofit organizations and higher education institutions create transformational value with Salesforce.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 6100,
+        "instagram": 438
+      },
+      "image_url": "https://i1.feedspot.com/4777117.jpg?t=1608784594"
+    },
+    {
+      "title": "Bob Buzzard Blog",
+      "feed_url": "http://bobbuzzard.blogspot.com/feeds/posts/default",
+      "website_url": "http://bobbuzzard.blogspot.com/",
+      "description": "The Blog is written by Keir Bowden. He is five times Salesforce Developer MVP, author of the Visualforce Development Cookbook, fanboy and also Salesforce Certified Technical Architect.",
+      "followers": {
+        "twitter": 27900
+      },
+      "image_url": "https://i1.feedspot.com/348114.jpg?t=1608784600"
+    },
+    {
+      "title": "Algoworks Blog",
+      "feed_url": "https://www.algoworks.com/blog/feed/",
+      "website_url": "https://www.algoworks.com/blog/",
+      "description": "Algoworks is a leading software development company, offering complete services in Salesforce, Alfresco, CRM and ECM, including consulting, customization, integration and migration.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 4900,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4959873.jpg?t=1608784616"
+    },
+    {
+      "title": "Automation Champion",
+      "feed_url": "https://automationchampion.com/feed/",
+      "website_url": "https://automationchampion.com/",
+      "description": "Learn Salesforce process Builder, Visual Workflow, Apex and get Salesforce online training from the \u200bindustry expert.",
+      "followers": {
+        "facebook": 542,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4775814.jpg?t=1608784621"
+    },
+    {
+      "title": "Concretio Blog",
+      "feed_url": "https://www.concret.io/blog?format=rss",
+      "website_url": "https://www.concret.io/blog",
+      "description": "Concretio was founded in 2013 by Abhinav Gupta (8 times Salesforce MVP), with a motive to build a team of passionate individuals, who want to develop high-quality solutions and enjoy challenges. We exist to accelerate our customers' progress, keeping them relevant and directly contributing to their success via Salesforce.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5609641.jpg?t=1687861030"
+    },
+    {
+      "title": "Latest Salesforce Updates And News - Explore Kcloud Blog",
+      "feed_url": "https://kcloudtechnologies.com/feed/",
+      "website_url": "https://kcloudtechnologies.com/blog-salesforce-latest-update-news/",
+      "description": "Kcloud is a Salesforce Consulting Company in USA delivering high-end customer services and solutions. Our mission is to help our customers improve and grow their businesses. We offer technical support as well as quality assurance in your Salesforce CRM environment. We help in making the business profitable with our client-focused, intricate, and encrypted cloud computing services.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 315,
+        "instagram": 531
+      },
+      "image_url": "https://i1.feedspot.com/5691500.jpg?t=1697546989"
+    },
+    {
+      "title": "Techdicer",
+      "feed_url": "https://techdicer.com/feed/",
+      "website_url": "https://techdicer.com/",
+      "description": "Techdicer is a salesforce blog for Apex, lightning, LWC, Tricks, Code Debugging, code optimizations, metadata, integration, REST APIs, and new technologies. The best way to code in Salesforce & download source code.",
+      "followers": {
+        "facebook": 34,
+        "twitter": 10,
+        "instagram": 28
+      },
+      "image_url": "https://i1.feedspot.com/5723248.jpg?t=1701172674"
+    },
+    {
+      "title": "Salesforce Shastras: The Ultimate Learning Hub for Newcomers",
+      "feed_url": "https://salesforceshastras.com/feed/",
+      "website_url": "https://salesforceshastras.com/",
+      "description": "I am a Technical Lead at Silverline with a strong focus on Salesforce technologies. With 9 years of experience and 20 Salesforce certifications under my belt, including Certified Application & System Architecture, I am well-versed in leveraging the platform's capabilities to drive successful implementations for clients across industries.",
+      "followers": {
+        "twitter": 27
+      },
+      "image_url": "https://i1.feedspot.com/7271581.jpg?t=1710236921"
+    },
+    {
+      "title": "Salesforce Geek",
+      "feed_url": "https://salesforcegeek.in/feed/",
+      "website_url": "https://salesforcegeek.in/",
+      "description": "Salesforce Geek is a platform that offers resources and articles on Salesforce certifications, courses, and various topics such as admin, flow, developer tools, CPQ, and more. It features insights from different authors on subjects like Salesforce Prompt Builder, User Access Management, Pricing Methods in Salesforce CPQ, Apex features like ReadOnly Annotation and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7282579.jpg?t=1711446946"
+    },
+    {
+      "title": "Blogs - Ignite Your Salesforce Journey",
+      "feed_url": "https://sfdclesson.com/feed/",
+      "website_url": "https://sfdclesson.com/blogs/",
+      "description": "My name is Arun Kumar and I am a certified Salesforce developer with 7 years of experience in the field. I have a passion for using my skills to help businesses make the most out of their Salesforce implementation. I specialize in Apex development, Lightning web component development, integration, and complex data manipulation using Salesforce. On this website, you can find various Salesforce tutorials and tips that I have written to help beginners and experienced developers alike. I also share my experience and knowledge on Salesforce best practices, troubleshooting, and optimization.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 424
+      },
+      "image_url": "https://i1.feedspot.com/7284398.jpg?t=1711618565"
+    },
+    {
+      "title": "Forcetalks",
+      "feed_url": "https://www.forcetalks.com/feed/",
+      "website_url": "https://www.forcetalks.com/blog-tag/time-management/",
+      "description": "Forcetalks is a team of Salesforce lovers driven by the passion of creating a one-stop solution for all of your Salesforce needs. Here, you'll find a collection of Salesforce articles written by well-qualified & experienced Salesforce professionals just like you.",
+      "followers": {
+        "facebook": 10900,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5280536.jpg?t=1620912413"
+    },
+    {
+      "title": "SalesforceCodex",
+      "feed_url": "https://salesforcecodex.com/feed/",
+      "website_url": "https://salesforcecodex.com/",
+      "description": "Lightning, Lightning Web Component, Einstein, Apex, API, AI, Salesforce Integration, Salesforce APIs, Salesforce Security and Community Portal. SalesforceCodex is focused on helping salesforce developers improve their careers.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 541
+      },
+      "image_url": "https://i1.feedspot.com/4999535.jpg?t=1678357010"
+    },
+    {
+      "title": "Salesforce Codex Stories",
+      "feed_url": "https://stories.salesforcecodex.com/feed/",
+      "website_url": "https://stories.salesforcecodex.com/",
+      "description": "Salesforce Developer Tips. Salesforce Codex Stories is focused on helping salesforce developers, programmers and other IT professionals improve their careers. We are helping developers in integrating other technologies, coding best practice etc.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 541
+      },
+      "image_url": "https://i1.feedspot.com/5428034.jpg?t=1659443794"
+    },
+    {
+      "title": "Fexle Services",
+      "feed_url": "https://www.fexle.com/blogs/feed/",
+      "website_url": "https://www.fexle.com/blogs/",
+      "description": "Official Blog of Fexle- A leading Salesforce Consulting company providing a broad range of custom salesforce development solutions. The company recognized with the salesforce silver consulting partner badge for their quality oriented solutions.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 71
+      },
+      "image_url": "https://i1.feedspot.com/5234522.jpg?t=1610092206"
+    },
+    {
+      "title": "DYDC",
+      "feed_url": "https://dineshyadav.com/feed/",
+      "website_url": "https://dineshyadav.com/",
+      "description": "Covers Salesforce Tutorials, Certification Guides & More. Authored by Dinesh Yadav, 30x Certified Salesforce Solution Architect.",
+      "followers": {
+        "twitter": 260,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5421047.jpg?t=1657697470"
+    },
+    {
+      "title": "Techila Global Servises Blog",
+      "feed_url": "https://techilaservices.com/feed/",
+      "website_url": "https://techilaservices.com/blog/",
+      "description": "Check out Salesforce news, announcements, best practices, tips, and tricks on Salesforce development, cloud computing, Salesforce consulting, etc. in our blogs! Techila Global Services is a provider of Salesforce consulting, technology, outsourcing services, and local professional services.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 1900,
+        "instagram": 351
+      },
+      "image_url": "https://i1.feedspot.com/5374033.jpg?t=1645447568"
+    },
+    {
+      "title": "SimplySfdc",
+      "feed_url": "https://www.simplysfdc.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.simplysfdc.com/",
+      "description": "A Salesforce blog for tips. Authored by Johan Yu, 15x Salesforce Certified and Salesforce MVP. Blog posts cover Formula Field, Forecast, Process Builder, Validation Rule, Workflow, Approval Process, and more.",
+      "followers": {
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5324369.jpg?t=1632318310"
+    },
+    {
+      "title": "Ashish Agarwal Blog",
+      "feed_url": "https://www.asagarwal.com/feed/",
+      "website_url": "https://www.asagarwal.com/blog/",
+      "description": "I am a Salesforce.com Architect & Consultant working with Salesforce in Singapore as Program Architect. I love technology and I love Salesforce.",
+      "followers": {
+        "facebook": 864,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4777340.jpg?t=1608784916"
+    },
+    {
+      "title": "Mirketa Inc Blog",
+      "feed_url": "https://mirketa.com/feed/",
+      "website_url": "https://mirketa.com/blog/",
+      "description": "Mirketa Inc Blog is Perspective on Agile Practices, Cloud Governance and Salesforce, Microsoft Dynamics and Atlassian product implementation and customization.",
+      "followers": {
+        "twitter": 133
+      },
+      "image_url": "https://i1.feedspot.com/4775862.jpg?t=1608785558"
+    },
+    {
+      "title": "Sfdc-lightning",
+      "feed_url": "https://www.sfdc-lightning.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.sfdc-lightning.com/",
+      "description": "I am working as a developer having around 3 years of experience. I like blogging which motivates me to create blog on various Salesforce topics. I believe in sharing knowledge,the more you share the more you learn.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4956837.jpg?t=1608794950"
+    },
+    {
+      "title": "Salesforce Bolt",
+      "feed_url": "https://www.salesforcebolt.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.salesforcebolt.com/",
+      "description": "Salesforce Bolt is a vlog by Kapil Batra. You can find some really useful content, Tips & Tricks, Tutorials & Training videos here.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5175921.jpg?t=1608785028"
+    },
+    {
+      "title": "Manras Technologies Blog",
+      "feed_url": "https://www.manras.com/feed/",
+      "website_url": "https://www.manras.com/blogs/",
+      "description": "Check out Manras Technologies for the latest blogs, news & Salesforce updates. Improve your proficiency in CRM and other industry subjects with the experts. Manras Technologies is a Platinum Salesforce Consulting Partner committed to delivering quality services and achieving 100% customer satisfaction.",
+      "followers": {
+        "facebook": 787,
+        "twitter": 411,
+        "instagram": 652
+      },
+      "image_url": "https://i1.feedspot.com/5460720.jpg?t=1666953052"
+    },
+    {
+      "title": "eShopSync Blog",
+      "feed_url": "https://eshopsync.com/feed/",
+      "website_url": "https://eshopsync.com/blog/",
+      "description": "eShopSync is the next generation application to extend the limits of eCommerce to the CRM boundaries. eShopSync integrates eCommerce with Salesforce to provide an enhanced and streamlined perspective for B2B and B2C Marketing.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 137
+      },
+      "image_url": "https://i1.feedspot.com/5461236.jpg?t=1667210672"
+    },
+    {
+      "title": "CertifyCRM Blog",
+      "feed_url": "https://certifycrm.com/feed/",
+      "website_url": "https://certifycrm.com/certifycrm-blog/",
+      "description": "Certify CRM Blog is a collection of useful tools. tips and helpful advice for Salesforce Administrators. We provide affordable online Salesforce training courses for administrators, app builders and Salesforce consultants.",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5435255.jpg?t=1661338373"
+    },
+    {
+      "title": "Salesforce Devops",
+      "feed_url": "https://salesforcedevops.net/index.php/feed/",
+      "website_url": "https://salesforcedevops.net/",
+      "description": "The only independent source of news and analysis on Salesforce Devops. Get frequent news, analysis, product reviews, videos, and podcasts on Salesforce Devops from Senior Industry Analyst Vernon Keenan in Oakland, California.",
+      "followers": {
+        "twitter": 934
+      },
+      "image_url": "https://i1.feedspot.com/5299791.jpg?t=1625567848"
+    },
+    {
+      "title": "SFDC Blog | Salesforce Tips & Tricks",
+      "feed_url": "https://www.sfdcpoint.com/feed/",
+      "website_url": "https://www.sfdcpoint.com/",
+      "description": "SFDCPoint provides Salesforce Tips & Tricks. Topics of Apex, Visualforce, SOQL, DataLoader, salesforce interview questions, salesforce certification.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 114
+      },
+      "image_url": "https://i1.feedspot.com/4786957.jpg?t=1608784637"
+    },
+    {
+      "title": "Exploring on Salesforce",
+      "feed_url": "http://santanuboral.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://santanuboral.blogspot.com/",
+      "description": "Santanu Boral is Salesforce MVP and 15 times certified. He is Salesforce certified Application Architect, System Architect, Platform Developer II, Sales Cloud Consultant, Service Cloud Consultant and much more. Follow this Salesforce Developer blog to get tips and tricks for learning Salesforce.",
+      "followers": {
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4900614.jpg?t=1608785070"
+    },
+    {
+      "title": "Enrico Murru",
+      "feed_url": "https://blog.enree.co/feed",
+      "website_url": "https://blog.enree.co/",
+      "description": "My name is Enrico Murru, also known as Enreeco. I'm a (ultra geek tech lover) mercenary software developer and Salesforce enthusiast.I'm also a Spring '16 Salesforce MVP, the first Italian ever nominated.",
+      "followers": {
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4775650.jpg?t=1608784950"
+    },
+    {
+      "title": "Salesforce Learning Buddy",
+      "feed_url": "https://salesforcebuddy.com/feed/",
+      "website_url": "https://salesforcebuddy.com/",
+      "description": "I am an experienced salesforce developer based out of Toronto, Canada.",
+      "followers": {
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/5140538.jpg?t=1608785799"
+    },
+    {
+      "title": "Sarfaraj's Blog",
+      "feed_url": "https://sarfarajey.com/feed/",
+      "website_url": "https://sarfarajey.wordpress.com/",
+      "description": "Follow this blog to get information on salesforce developer.",
+      "followers": {
+        "twitter": 269
+      },
+      "image_url": "https://i1.feedspot.com/5130359.jpg?t=1608786054"
+    },
+    {
+      "title": "Desynit Blog",
+      "feed_url": "https://www.desynit.com/feed/",
+      "website_url": "https://www.desynit.com/blog/",
+      "description": "Our team of certified Advanced Sales force developers and technical architects can provide the skills and experience you need for your Sales force customization project. Using Apex, Visual Force and the Force.com platform, no solution is too complex.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4778077.jpg?t=1608785017"
+    },
+    {
+      "title": "My Tutorial Rack Blog",
+      "feed_url": "https://www.mytutorialrack.com/feed/",
+      "website_url": "https://www.mytutorialrack.com/blog/",
+      "description": "Get Access to 1000+ tutorials related to salesforce admin, salesforce developer, Platform developer certification and other salesforce related topics. Salesforce admin 201 certification course helps you to prepare and pass your certification in first attempt. So Let's Get Started with 1-month Free Trial!",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 288
+      },
+      "image_url": "https://i1.feedspot.com/5016613.jpg?t=1608784679"
+    },
+    {
+      "title": "SFDCAmplified Blog",
+      "feed_url": "https://www.sfdcamplified.com/feed/",
+      "website_url": "https://www.sfdcamplified.com/blog/",
+      "description": "A platform to learn salesforce, web development, crack interviews and excel in job.",
+      "followers": {
+        "facebook": 701,
+        "twitter": 234
+      },
+      "image_url": "https://i1.feedspot.com/4972415.jpg?t=1608785225"
+    },
+    {
+      "title": "Andy in the Cloud | From BBC Basic to Force.com and beyond",
+      "feed_url": "https://andyinthecloud.com/feed/",
+      "website_url": "https://andyinthecloud.com/",
+      "description": "I am currently working for FinancialForce.com as CTO. Enjoying working and at times coding hard with everyone to make this new startup company a raging success! Along with our friends at Salesforce.com and UNIT4. I am pleased to have been selected as a Force.com MVP!",
+      "followers": {
+        "twitter": 7200
+      },
+      "image_url": "https://i1.feedspot.com/4774687.jpg?t=1608786578"
+    },
+    {
+      "title": "Salesforce World",
+      "feed_url": "https://salesforceworld.blogspot.com/feeds/posts/default",
+      "website_url": "https://salesforceworld.blogspot.com/",
+      "description": "Salesforce Code Samples, Tips and Tricks",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/348229.jpg?t=1608784990"
+    },
+    {
+      "title": "SFDC Developers | Salesforce Tips & Tricks",
+      "feed_url": "https://sfdcdevelopers.com/feed/",
+      "website_url": "https://sfdcdevelopers.com/",
+      "description": "Hello all! This is Vinay Vernekar, a young Entrepreneur and a Technology blogger, working as a Salesforce developer. Right from the campus selection process, I got selected for Salesforce as my career. Since then, I have 5.5 years of experience (+ Counting). Willing to learn and dig down further to find awesomeness of Salesforce and yes I love Salesforce!",
+      "followers": {
+        "facebook": 507
+      },
+      "image_url": "https://i1.feedspot.com/5096113.jpg?t=1608784970"
+    },
+    {
+      "title": "ScienceSoft | Salesforce Blogs",
+      "feed_url": "https://www.scnsoft.com/blog/category/salesforce/atom",
+      "website_url": "https://www.scnsoft.com/blog/category/salesforce",
+      "description": "We are keen to bring our knowledge and practical expertise of Salesforce to you. Preparing the content, we focus on business owners, sales and marketing leaders as well as IT managers, and outline business problems that can be solved with Salesforce's key functionality. With every Salesforce article, you will dive deeper in the potential of this smart CRM platform and learn to employ it for business benefits.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 915
+      },
+      "image_url": "https://i1.feedspot.com/4959145.jpg?t=1608784611"
+    },
+    {
+      "title": "Abhinav Gupta",
+      "feed_url": "https://abhinav.fyi/feed/",
+      "website_url": "https://abhinav.fyi/",
+      "description": "Abhinav Gupta is a tech leader specializing in Salesforce and Web3 technologies. He's been delivering software for worldwide enterprises businesses since 2004 and is a frequent speaker at various domestic and international tech events. Abhinav was the first Salesforce MVP from India, a title he's held for eight years. In 2022, he focused on learning Web3 and earned a Blockchain certification from IIT Kanpur. He co-authored the book 'Force.com Tips & Tricks' and has made notable open-source contributions.",
+      "followers": {
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/7282768.jpg?t=1711451930"
+    },
+    {
+      "title": "Cyntexa",
+      "feed_url": "https://cyntexa.com/feed/",
+      "website_url": "https://cyntexa.com/blogs/",
+      "description": "Look at our blogs on different domains of Salesforce, including Salesforce Marketing Cloud; and live the Life at Cyntexa through our cultural blogs.",
+      "followers": {
+        "facebook": 592,
+        "twitter": 308,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5085701.jpg?t=1608784911"
+    },
+    {
+      "title": "SalesforceTutorial",
+      "feed_url": "https://www.salesforcetutorial.com/feed/",
+      "website_url": "https://www.salesforcetutorial.com/",
+      "description": "Salesforce is a Number one on demand CRM. Salesforce.com was officially launched in 1999 with vision of becoming worldwide leader on demand CRM",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4775707.jpg?t=1608784805"
+    },
+    {
+      "title": "Jayakrishna Ganjikunta",
+      "feed_url": "https://jayakrishnasfdc.wordpress.com/feed/",
+      "website_url": "https://jayakrishnasfdc.wordpress.com/",
+      "description": "This is Jayakrishna Ganjikunta (Jaya). I am a salesforce Developer & Senior Admin(4x Salesforce Certified, Trailhead Ranger). Currently Working in Michelin India, Pune.",
+      "followers": {
+        "twitter": 115
+      },
+      "image_url": "https://i1.feedspot.com/5090273.jpg?t=1608784957"
+    },
+    {
+      "title": "Salesforce coding lessons | Finally, Salesforce Apex tutorials for point-and-click admins",
+      "feed_url": "https://www.sfdc99.com/feed/",
+      "website_url": "https://www.sfdc99.com/",
+      "description": "Salesforce coding lessons for the 99%.Finally, Apex tutorials for point-and-click admins! Written by a self-taught Google engineer.",
+      "followers": {
+        "twitter": 14700
+      },
+      "image_url": "https://i1.feedspot.com/4209022.jpg?t=1608784653"
+    },
+    {
+      "title": "Salesforce Flowsome!",
+      "feed_url": "https://salesforce-flowsome.com/feed/",
+      "website_url": "https://salesforce-flowsome.com/",
+      "description": "Salesforce Flowsome provides an easy guide for admins and an awesome place to learn everything about flow. The goal is to present the content in the easiest way so everyone can understand even without a developer background. Free flow solution building is also available for those who find it hard to kickstart with flow!",
+      "followers": {
+        "twitter": 295
+      },
+      "image_url": "https://i1.feedspot.com/5252301.jpg?t=1614840834"
+    },
+    {
+      "title": "sfdcFanBoy",
+      "feed_url": "https://sfdcfanboy.com/feed/",
+      "website_url": "https://sfdcfanboy.com/",
+      "description": "Manish aka. sfdcFanBoy, is a new MVP on the block but not new to Salesforce, with 11+ years of Salesforce experience, 7x certified, currently a Salesforce Technical Architect by profession. It is mostly about Marketing Cloud, also find lots on Flows, Visualforce and Apex.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4919711.jpg?t=1608784945"
+    },
+    {
+      "title": "Salesforce by Annappa Ph",
+      "feed_url": "http://annappaph.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://annappaph.blogspot.com/",
+      "description": "Annappa Ph is Working as a sales force developer in India. Follow this blog to get more information on Salesforce.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4859619.jpg?t=1608786750"
+    },
+    {
+      "title": "SFDC Stop",
+      "feed_url": "https://www.sfdcstop.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.sfdcstop.com/",
+      "description": "Follow to get articles on the latest about Salesforce.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 765
+      },
+      "image_url": "https://i1.feedspot.com/5068459.jpg?t=1608784929"
+    },
+    {
+      "title": "I Love Coding.....You?",
+      "feed_url": "https://www.srinivas4sfdc.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.srinivas4sfdc.com/",
+      "description": "A blog all about the salesforce coding and administration stuff",
+      "followers": {
+        "facebook": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5098747.jpg?t=1671429782"
+    },
+    {
+      "title": "Salesforce News Technology Stuff",
+      "feed_url": "https://newstechnologystuff.com/feed/",
+      "website_url": "https://newstechnologystuff.com/",
+      "description": "A blog on Salesforce, Lightning, Lightning Web Components, Einstein and all the new technology related to Salesforce.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5150974.jpg?t=1608784922"
+    },
+    {
+      "title": "Never Stop Learning",
+      "feed_url": "https://www.santanuatonline.com/feed/",
+      "website_url": "https://www.santanuatonline.com/",
+      "description": "My name is Santanu Pal. I am working on Salesforce since 2009. I have completed Salesforce System Architect and Application Architect certifications. This blog is dedicated to all enthusiastic Salesforce Admins, Developers and all.",
+      "followers": {
+        "twitter": 227
+      },
+      "image_url": "https://i1.feedspot.com/5148610.jpg?t=1608785149"
+    },
+    {
+      "title": "Amul Baranwal Salesforce Blog",
+      "feed_url": "http://amulhai.blogspot.com/feeds/posts/default",
+      "website_url": "http://amulhai.blogspot.com/",
+      "description": "Salesforce Stuff",
+      "followers": {
+        "twitter": 178
+      },
+      "image_url": "https://i1.feedspot.com/4775545.jpg?t=1608785061"
+    },
+    {
+      "title": "Cloud Galacticos Salesforce Consultants since 2004 Blog",
+      "feed_url": "https://www.cloudgalacticos.co.uk/feed/",
+      "website_url": "https://www.cloudgalacticos.co.uk/blog/",
+      "description": "Migrating to Sales force from legacy systems, or needing some enhancements to your current configuration, let us help you! We have been a key part of the Sales force Eco-system for 14 years, and in that time we have found a lot of great resources that we think everyone should be aware of.",
+      "followers": {
+        "twitter": 3700,
+        "instagram": 251
+      },
+      "image_url": "https://i1.feedspot.com/4777177.jpg?t=1608785536"
+    },
+    {
+      "title": "CafeForce",
+      "feed_url": "http://cafeforce.com/feed/",
+      "website_url": "https://cafeforce.com/",
+      "description": "A salesforce blog for lightning, LWC, Tricks, Code Debugging, code optimizations, metadata, integration, API's, new technologies. An easy way to code in salesforce & download source code.",
+      "followers": {
+        "twitter": 281
+      },
+      "image_url": "https://i1.feedspot.com/5205795.jpg?t=1608785540"
+    },
+    {
+      "title": "Salesforce4U",
+      "feed_url": "http://salesforceworld4u.blogspot.com/feeds/posts/default",
+      "website_url": "http://salesforceworld4u.blogspot.com/",
+      "description": "Salesforce4u is a technical forum ,a key solutions provider for all development issues, provides services and support.",
+      "followers": {
+        "twitter": 252
+      },
+      "image_url": "https://i1.feedspot.com/4777419.jpg?t=1608785569"
+    },
+    {
+      "title": "Salesforce Everywhere | All about Salesforce",
+      "feed_url": "https://sfdceverywhere.com/feed/",
+      "website_url": "https://sfdceverywhere.com/",
+      "description": "My name is ManiBalan and I am working as a Lead Salesforce Developer in a start-up company based out of Sydney, Australia. I have been in CRM for the past 10 years and having work experience in Siebel and Salesforce CRM packages. I am a Salesforce Certified Force.com Developer",
+      "followers": {
+        "twitter": 74
+      },
+      "image_url": "https://i1.feedspot.com/4777368.jpg?t=1608785574"
+    },
+    {
+      "title": "Audit9 - Cloud Architects",
+      "feed_url": "https://audit9.blog/feed/",
+      "website_url": "https://audit9.blog/",
+      "description": "The Audit9 blog is for cloud architects and developers interested in Salesforce, the Force.com cloud platform and related mobile and social technology.Blog authored by Mark Cane, Salesforce Certified Technical Architect, Certified Scrum Professional and former salesforce.com Principal Consultant.",
+      "followers": {
+        "twitter": 151
+      },
+      "image_url": "https://i1.feedspot.com/4777394.jpg?t=1608792428"
+    },
+    {
+      "title": "Paul Battisson | A Salesforce Developer",
+      "feed_url": "https://paulbattisson.com/blog/feed.atom",
+      "website_url": "https://paulbattisson.com/blog/",
+      "description": "I am a Force.com MVP and experience Technical Architect who has worked for a number of leading ISVs and Consulting partners. I am a Cetified Salesforce Developer, Advanced Developer, Platform App Builder, Platform Developer I and Platform Developer II.",
+      "followers": {
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4774809.jpg?t=1608785605"
+    },
+    {
+      "title": "CloudAnswers",
+      "feed_url": "https://cloudanswers.com/feed",
+      "website_url": "https://cloudanswers.com/blog",
+      "description": "Salesforce apps, powerful components, development and consulting. Our experienced team helps you to create and modify workflow processes in salesforce.",
+      "followers": {
+        "facebook": 196,
+        "twitter": 135,
+        "instagram": 22
+      },
+      "image_url": "https://i1.feedspot.com/5036432.jpg?t=1608785608"
+    },
+    {
+      "title": "Sara Has No Limits",
+      "feed_url": "https://saramorgan.net/feed/",
+      "website_url": "https://saramorgan.net/",
+      "description": "Sara Morgan Nettles is a Member of Team Trailhead/Pluralsight Author/Enhanced Computing Enthusiast. The goal of this blog is to support ALL developers wanting to explore the exciting world of cloud-based development on the Force.com platform.",
+      "followers": {
+        "twitter": 999
+      },
+      "image_url": "https://i1.feedspot.com/4444211.jpg?t=1608785613"
+    },
+    {
+      "title": "Nitin Gupta Just One Idea",
+      "feed_url": "https://nitinguptasalesforce.wordpress.com/feed/",
+      "website_url": "https://nitinguptasalesforce.wordpress.com/",
+      "description": "I am 3x Salesforce Certified: Salesforce Administrator, Pardot Specialist, Marketing Cloud Email Specialist, I did my first certification before my graduation. Speaker at Salesforce Developer and User Groups.Follow this blog to get more information on salesforce.",
+      "followers": {
+        "facebook": 830,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4859603.jpg?t=1608785629"
+    },
+    {
+      "title": "SF Ninjas",
+      "feed_url": "http://sf-ninjas.com/?format=feed&type=rss",
+      "website_url": "http://sf-ninjas.com/",
+      "description": "Welcome to my blog about Salesforce. Here you can find interesting articles, investigations and funny quizzes.",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/5022606.jpg?t=1608785642"
+    },
+    {
+      "title": "Nitin Indora",
+      "feed_url": "https://nitinindora.wordpress.com/feed/",
+      "website_url": "https://nitinindora.wordpress.com/",
+      "description": "I am a Salesforce Developer/Consultant I have 2.5 Years of Experience in IT Product Development.",
+      "followers": {
+        "twitter": 27
+      },
+      "image_url": "https://i1.feedspot.com/4777358.jpg?t=1608785648"
+    },
+    {
+      "title": "Matt McGuire | Salesforce",
+      "feed_url": "https://mattmcguire.ca/category/salesforce/feed/",
+      "website_url": "https://mattmcguire.ca/category/salesforce/",
+      "description": "A Salesforce guy & cloud evangelist and a Salesforce expert.",
+      "followers": {
+        "facebook": 382600,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4776301.jpg?t=1608786014"
+    },
+    {
+      "title": "Scott VonSchilling - Experimenting with the Salesforce Platform",
+      "feed_url": "https://scottvonschilling.com/feed/",
+      "website_url": "https://scottvonschilling.com/",
+      "description": "Lead Developer at @CRMScience. Certified Salesforce advanced developer. Aspiring to be a @forcedotcom MVP!",
+      "followers": {
+        "twitter": 585
+      },
+      "image_url": "https://i1.feedspot.com/4775969.jpg?t=1608786030"
+    },
+    {
+      "title": "Sagar Sindhi Certified Salesforce Developer",
+      "feed_url": "https://sagarsindhiblog.wordpress.com/feed/",
+      "website_url": "https://sagarsindhiblog.wordpress.com/",
+      "description": "My name is Sagar Sindhi.I Started Working as Salesforce Developer Just Few Months ago and Trust me , Now I am Living for Salesforce .The Most Important Part that I like in Salesforce is Community.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4774785.jpg?t=1608786035"
+    },
+    {
+      "title": "Salesforce Development & Technical Architecture",
+      "feed_url": "http://www.radnip.com/feed/",
+      "website_url": "https://www.radnip.com/",
+      "description": "Salesforce one step at a time.Salesforce Development & Technical Architecture. News, tutorials and help for people developing in Salesforce",
+      "followers": {
+        "facebook": 242,
+        "twitter": 8200,
+        "instagram": 420
+      },
+      "image_url": "https://i1.feedspot.com/348119.jpg?t=1608786043"
+    },
+    {
+      "title": "Blog at Salesforce.com & Force.com",
+      "feed_url": "http://blogatsalesforce.blogspot.com/feeds/posts/default",
+      "website_url": "http://blogatsalesforce.blogspot.com/p/salesforce-advanced-developer.html",
+      "description": "The On Demand Model: Multi-tenancy & Subscription. The benefit of coding in the CLOUD is that you learn how to write more efficient code and waste fewer resources.",
+      "followers": {
+        "twitter": 783
+      },
+      "image_url": "https://i1.feedspot.com/4775896.jpg?t=1608786059"
+    },
+    {
+      "title": "salesforce knowledge",
+      "feed_url": "https://sfdc-lightning-lwc-topics.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://sfdc-lightning-lwc-topics.blogspot.com/",
+      "description": "salesforce knowledge",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5165374.jpg?t=1671431969"
+    },
+    {
+      "title": "Vinay Chaturvedi Salesforce Evangelist | Salesforce concepts",
+      "feed_url": "https://vinaychaturvedi.com/blog/feed/",
+      "website_url": "http://vinaychaturvedi.com/blog/",
+      "description": "The blog contains description about API in salesforce , Salesforce Lighting and many other things. The author has Salesforce experts trying to help the community, Vinay has outstanding understanding of Salesforce concepts and implementation experience of several Salesforce projects.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 8900
+      },
+      "image_url": "https://i1.feedspot.com/4774832.jpg?t=1608786862"
+    },
+    {
+      "title": "Salesforce Developer Beginner Series",
+      "feed_url": "https://meenalsankhla.blogspot.com/feeds/posts/default",
+      "website_url": "https://meenalsankhla.blogspot.com/",
+      "description": "This is the salesforce CRM blog where you will learn about the basics of salesforce, Triggers, Apex, integration, and lightning components: LWC and also interview questions with scenarios that will guide you to crack salesforce developer interviews.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5217216.jpg?t=1605685130"
+    },
+    {
+      "title": "SaaSnic Technologies Blog",
+      "feed_url": "https://saasnic.com/blog/home/blog/feed/",
+      "website_url": "https://saasnic.com/blog/home/blog/",
+      "description": "SaaSnic is Partner of Salesforce providing Salesforce apps and product development services and trainings. We specialize in salesforce integration, development and consulting Services dedicated to help the clients. Follow this blog to know more about Salesforce.",
+      "followers": {
+        "facebook": 537,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4900617.jpg?t=1608786155"
+    },
+    {
+      "title": "WIPDeveloper.com - Developing as a Developer",
+      "feed_url": "https://wipdeveloper.com/rss.xml",
+      "website_url": "https://wipdeveloper.com/",
+      "description": "My Name is Brett Nelson and I am a software developer chronicling my journey of learning and experimenting with new software development tools here at the WIPDeveloper.com. Follow this blog to get articles on Salesforce.",
+      "followers": {
+        "facebook": 250,
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/4859641.jpg?t=1608785034"
+    },
+    {
+      "title": "SFDC Coder",
+      "feed_url": "https://sfdccoder.wordpress.com/feed/",
+      "website_url": "https://sfdccoder.wordpress.com/",
+      "description": "Salesforce learner, Salesforce enthusiastic, Trailblazer, love learning and exploring new trails from the trailhead by salesforce.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5056139.jpg"
+    },
+    {
+      "title": "Amit Blog 4Salesforce",
+      "feed_url": "http://amitsalesforce.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://amitsalesforce.blogspot.com/",
+      "description": "I am Amit Chaudhary working on Salesforce Platform since 2011 and have 7 Salesforce Certificates.Working as Salesorce CRM Consultant. Expertise in Salesforce customization, Data Migration on Salesforce Org using Tools (Apex Data Loader, CLI) ,apex programing, work-flow,visual force,automated email alerts, dedicated workflow engine, administration, App Exchange Integration and much more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4508090.jpg?t=1608784691"
+    },
+    {
+      "title": "Brahmanaidu salesforce blog",
+      "feed_url": "https://sfdcscenarios.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://sfdcscenarios.blogspot.com/",
+      "description": "Keep up with articles from Brahmanaidu salesforce blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5069586.jpg?t=1671433472"
+    },
+    {
+      "title": "The Welkin Suite IDE for Force.com",
+      "feed_url": "https://welkinsuite.com/feed",
+      "website_url": "https://welkinsuite.com/blog",
+      "description": "The Welkin Suite is a new Force.com IDE providing powerful features for increased development productivity and comfort. Start using it today for free!",
+      "followers": {
+        "facebook": 700,
+        "twitter": 7300
+      },
+      "image_url": "https://i1.feedspot.com/4777390.jpg?t=1608786109"
+    },
+    {
+      "title": "How To Do It In Salesforce",
+      "feed_url": "https://www.blogger.com/feeds/1648695980109089382/posts/default",
+      "website_url": "https://howtodoitinsalesforce.blogspot.com/p/welcome.html",
+      "description": "Concepts or coding lessons of Salesforce that you can implement easily.",
+      "followers": {
+        "facebook": 602
+      },
+      "image_url": "https://i1.feedspot.com/5131112.jpg?t=1608786119"
+    },
+    {
+      "title": "Douglas C. Ayers My journey with Salesforce and Technology",
+      "feed_url": "https://douglascayers.com/feed/",
+      "website_url": "https://douglascayers.com/",
+      "description": "I'm a Salesforce MVP, passionate about all things at Salesforce, Nashville Developer Group Leader and SalesforceU Certified.",
+      "followers": {
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/4775946.jpg?t=1608786149"
+    },
+    {
+      "title": "Cloud Analogy",
+      "feed_url": "https://cloudanalogy.com/blog/feed/",
+      "website_url": "https://blog.cloudanalogy.com/",
+      "description": "Get access to top Salesforce blogs on Salesforce admin, Salesforce consultancy, Salesforce customization, and Salesforce integration.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5049192.jpg?t=1608786141"
+    },
+    {
+      "title": "Salesforce Ben",
+      "feed_url": "https://www.salesforceben.com/feed/",
+      "website_url": "https://www.salesforceben.com/category/developers/",
+      "description": "Salesforce Ben is the leading Salesforce blog in the world, dedicated to covering news, tricks, certifications and career advice.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 14400
+      },
+      "image_url": "https://i1.feedspot.com/4773887.jpg?t=1608784589"
+    },
+    {
+      "title": "Salesforce Blog",
+      "feed_url": "https://www.salesforce.com/blog/feed/",
+      "website_url": "https://www.salesforce.com/blog/",
+      "description": "New tips, trends, and insights from the world's leading enterprise cloud ecosystem. Salesforce has sought to change the world for the better through technology that builds stronger relationships. Between companies and their customers. Between employees and far-flung teams. Between governments and their citizens. Between people who want to make a difference.",
+      "followers": {
+        "twitter": 583600,
+        "instagram": 286300
+      },
+      "image_url": "https://i1.feedspot.com/5287651.jpg?t=1633002334"
+    },
+    {
+      "title": "Salesforce Blog",
+      "feed_url": "https://www.salesforce.com/blog/feed/",
+      "website_url": "https://www.salesforce.com/blog/",
+      "description": "Salesforce.org puts the world's best technology into the hands of nonprofits so they can create more impact.",
+      "followers": {
+        "facebook": 30700,
+        "twitter": 118100
+      },
+      "image_url": "https://i1.feedspot.com/4919551.jpg?t=1608784630"
+    },
+    {
+      "title": "GetOnCRM",
+      "feed_url": "https://getoncrm.com/feed/",
+      "website_url": "https://getoncrm.com/blog/",
+      "description": "Welcome to the GetOnCRM blog section. It is all about Salesforce news, updates & information. Read our latest blog about Salesforce customization, community cloud services.",
+      "followers": {
+        "facebook": 245,
+        "twitter": 887,
+        "instagram": 222
+      },
+      "image_url": "https://i1.feedspot.com/5098716.jpg?t=1608784940"
+    },
+    {
+      "title": "Salesforce Blog \u00bb Marketing",
+      "feed_url": "https://www.salesforce.com/blog/feed/",
+      "website_url": "https://www.salesforce.com/blog/marketing/",
+      "description": "Pardot B2B marketing automation by Salesforce helps marketers create more leads, generate more pipeline, and empower sales to close more deals. Follow this blog to know more about Pardot.",
+      "followers": {
+        "facebook": 33500,
+        "twitter": 65700
+      },
+      "image_url": "https://i1.feedspot.com/4919741.jpg"
+    },
+    {
+      "title": "SFDC Monkey - A Blog On Salesforce Lightning",
+      "feed_url": "https://sfdcmonkey.com/feed/",
+      "website_url": "https://sfdcmonkey.com/",
+      "description": "My Name is Piyush Soni, A High Spirited Salesforce Admin, Developer and a Blogger.The goal of this blog is to provide tips and tricks/workarounds for salesforce developer and admins I am just a guy who uses and loves Salesforce, and wants to help other people who use and developer Salesforce.com.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 302,
+        "instagram": 519
+      },
+      "image_url": "https://i1.feedspot.com/4731186.jpg?t=1608784606"
+    },
+    {
+      "title": "Jitendra Zaa's Blog",
+      "feed_url": "http://www.jitendrazaa.com/blog/feed/",
+      "website_url": "https://www.jitendrazaa.com/blog/",
+      "description": "I'm Jitendra Zaa, a Salesforce MVP working on Salesforce Platform since 2008 and have 17 Salesforce Certificates in my arsenal.I have been a technical reviewer of many Salesforce books like Enterprise patterns in Salesforce, Introduction to Chatter, Visualforce cookbook, Mastering Salesforce CRM Administration etc.",
+      "followers": {
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/4138298.jpg?t=1671436007"
+    },
+    {
+      "title": "Spekit",
+      "feed_url": "https://www.spekit.com/feed",
+      "website_url": "https://www.spekit.com/blog",
+      "description": "Eliminate the noise and friction that results from process change by giving your team bite-sized, accessible help from any application or workflow.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5058820.jpg?t=1608785010"
+    },
+    {
+      "title": "Metillium Salesforce Tech Consulting Blog",
+      "feed_url": "https://metillium.com/blog/feed/",
+      "website_url": "https://metillium.com/blog/",
+      "description": "Metillium was founded in August 2016 after Luke worked as a Salesforce Technical Consultant and Tech Lead. Follow this blog where Luke shares his knowledge on salesforce.",
+      "followers": {
+        "twitter": 420
+      },
+      "image_url": "https://i1.feedspot.com/4900606.jpg?t=1608785508"
+    },
+    {
+      "title": "SFDCPanther",
+      "feed_url": "https://www.sfdcpanther.com/feed/",
+      "website_url": "https://laceysnr.com/",
+      "description": "A single salesforce stop for the latest update about salesforce technology & integration tutorials by a salesforce enthusiast, Amit Singh. He is a Certified Salesforce Application Architect & 14X Salesforce Certified Professional who loves to solve queries in the salesforce community.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 857
+      },
+      "image_url": "https://i1.feedspot.com/5323548.jpg?t=1632141970"
+    },
+    {
+      "title": "SUCCEED WITH SALESFORCE",
+      "feed_url": "https://succeedwithsalesforce.com/feed/",
+      "website_url": "https://salesforcecody.com/",
+      "description": "A place where you find answers to the most common Salesforce related questions.",
+      "followers": {
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4429854.jpg?t=1608785514"
+    },
+    {
+      "title": "SalesforceCody",
+      "feed_url": "https://salesforcecody.com/cgi-sys/suspendedpage.cgi",
+      "website_url": "https://salesforcecody.com/",
+      "description": "Salesforce Cody was intended to showcase the latest Salesforce Blogs and Provides complex business solutions.",
+      "followers": {
+        "facebook": 840,
+        "twitter": 52
+      },
+      "image_url": "https://i1.feedspot.com/5214571.jpg?t=1608784966"
+    },
+    {
+      "title": "Jesse Altman Blog",
+      "feed_url": "https://jessealtman.com/feed/",
+      "website_url": "https://salesforcecodes.com/",
+      "description": "Hi, my name is Jesse Altman. I am a certified Salesforce.com Developer. My main focus at this point is Salesforce. I absolutely love the Force.com platform and spend as much time as possible developing in Apex and Visualforce.",
+      "followers": {
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4775613.jpg?t=1608785523"
+    },
+    {
+      "title": "World Of Salesforce",
+      "feed_url": "https://www.worldofsalesforce.com/feeds/posts/default?alt=rss",
+      "website_url": "https://salesforcecodes.com/",
+      "description": "Everything about Salesforce. App Store with exiting applications, Daily updated posts to help developers.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 24
+      },
+      "image_url": "https://i1.feedspot.com/4787030.jpg?t=1608785548"
+    },
+    {
+      "title": "Salesforce Codes",
+      "feed_url": "https://salesforcecodes.com/feed/",
+      "website_url": "https://salesforcecodes.com/",
+      "description": "In this website we are going to implement salesforce codes like visualforce pages, lightning components, triggers. It is most useful for the begginers who are interested in learning salesforce and also it will be useful to the people who already known salesforce.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5178054.jpg?t=1613128274"
+    },
+    {
+      "title": "Topalovich | Freelance Salesforce Technical Architect & Lightning Developer in Chicago",
+      "feed_url": "https://topalovich.com/feed",
+      "website_url": "https://topalovich.com/",
+      "description": "Mike Topalovich is a 9x certified Salesforce architect, developer and part time CTO in Chicago available for design & development initiatives on retainer.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4773909.jpg?t=1608785597"
+    },
+    {
+      "title": "Hamza Siddiqui",
+      "feed_url": "https://www.mhamzas.com/blog/feed/",
+      "website_url": "https://www.mhamzas.com/",
+      "description": "M Hamza Siddiqui is a Salesforce Certified Application Architect, UI/UX Designer, PHP Developer & Frontend Developer.",
+      "followers": {
+        "twitter": 463
+      },
+      "image_url": "https://i1.feedspot.com/5084420.jpg?t=1608786010"
+    },
+    {
+      "title": "Advanced Apex Programming for Salesforce.com and Force.com 20",
+      "feed_url": "https://advancedapex.com/feed/",
+      "website_url": "https://advancedapex.com/blog/",
+      "description": "Advanced Apex Programming for Salesforce.com and Force.com' is the first truly advanced book on Apex, the native language for the Salesforce.com and Force.com platform",
+      "followers": {
+        "facebook": 2200
+      },
+      "image_url": "https://i1.feedspot.com/3351168.jpg?t=1608786025"
+    },
+    {
+      "title": "SFDC247",
+      "feed_url": "https://sfdc247.com/feeds/posts/default",
+      "website_url": "https://sfdc247.com/",
+      "description": "A blog about sharing knowledge articles on salesforce CRM Products, SFDC Administration, Salesforce Development and Salesforce Release Management.",
+      "followers": {
+        "twitter": 439
+      },
+      "image_url": "https://i1.feedspot.com/5132433.jpg?t=1671429975"
+    },
+    {
+      "title": "salesforce4ever",
+      "feed_url": "https://www.salesforce4ever.com/feed/",
+      "website_url": "https://www.salesforce4ever.com/",
+      "description": "Salesforce blog sharing with the Salesforce Community scalable and sustainable designs over time, driven by experience, hands-on as well as passion!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5216847.jpg?t=1605791568"
+    },
+    {
+      "title": "AkshayDhiman .Com | Salesforce Developer & Consultant",
+      "feed_url": "https://www.adhiman.com/feed/",
+      "website_url": "https://www.adhiman.com/",
+      "description": "This Salesforce Blog is a developer's experience in the Journey of Force.com development and customization. Akshay Dhiman is CTO of the company. He is responsible for all technical aspects of the company.He works with Executive Management looking forward the company's growth.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4775722.jpg?t=1608785052"
+    },
+    {
+      "title": "Keep It Simple",
+      "feed_url": "https://blog.lkatney.com/rss/",
+      "website_url": "https://amansfdc.com/",
+      "description": "Saleforce architect by profession but I like to work with various technologies.I blog about Architecture, Force.com, Mobile Apps, Angular, JavaScript in general. I am a Salesforce, Angular & NodeJS fan.",
+      "followers": {
+        "twitter": 131
+      },
+      "image_url": "https://i1.feedspot.com/5143209.jpg?t=1671435127"
+    },
+    {
+      "title": "Salesforce Nick | Salesforce Developer Blog",
+      "feed_url": "https://salesforcenick.com/feed/",
+      "website_url": "https://amansfdc.com/",
+      "description": "This is a Salesforce blog dedicated to helping others in Salesforce Development. I've been a Salesforce Developer and consultant for over 4 years so far. I'm a Certified Salesforce Developer, Administrator and Service Cloud Consultant. Thanks to many online resources detailing advanced Salesforce topics I'd like to show my appreciation by logging and sharing examples, tricks, and solutions for other developers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5025203.jpg"
+    },
+    {
+      "title": "Salesforce Learners",
+      "feed_url": "https://amansfdc.com/feed/",
+      "website_url": "https://amansfdc.com/",
+      "description": "Salesforce Learners is the ultimate resource for Salesforce-related insights and offers a variety of valuable blogs dedicated to Salesforce, for both freshers and experienced professionals. Stay ahead of the game with our informative articles, tutorials, and industry updates, all designed to enhance your Salesforce knowledge and expertise.",
+      "followers": {
+        "twitter": 538,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5471769.jpg?t=1694530973"
+    },
+    {
+      "title": "Miraforce",
+      "feed_url": "http://www.miraforce.net/feed/",
+      "website_url": "http://www.miraforce.net/blog/",
+      "description": "Hi! My name is Mira Shah. I was born in India and moved to Brisbane, Australia in 2010. I am a qualified IT professional and currently a National CRM Project Manager (Salesforce Solution Architect + Web Developer). I assist companies solve complex business problems by leveraging the Salesforce platform.",
+      "followers": {
+        "twitter": 256
+      },
+      "image_url": "https://i1.feedspot.com/5048537.jpg"
+    },
+    {
+      "title": "Ajay Dubedi | Salesforce Blog",
+      "feed_url": "https://ajaydubedi.com/category/salesforce-blog/feed/",
+      "website_url": "https://ajaydubedi.com/category/salesforce-blog/",
+      "description": "Ajay is known to his colleagues by AJ. Being one of the several Salesforce experts trying to help the community, AJ has the exceptional understanding of Salesforce concepts and implementation experience of several salesforce projects",
+      "followers": {
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4776613.jpg?t=1608785039"
+    },
+    {
+      "title": "Accidental Coder - A Salesforce Blog",
+      "feed_url": "https://www.accidentalcodersf.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.accidentalcodersf.com/",
+      "description": "Experienced Salesforce Consultant. Rookie Blogger. I was introduced to Salesforce Platform by accident and luck but I started loving it by choice! I am now trying to share my experience and passion for this great platform.",
+      "followers": {
+        "twitter": 535
+      },
+      "image_url": "https://i1.feedspot.com/5172369.jpg?t=1671435340"
+    },
+    {
+      "title": "Biswajeet Samal - The Programmer",
+      "feed_url": "http://www.biswajeetsamal.com/blog/feed/",
+      "description": "I'm Biswajeet Samal. I'm a certified Salesforce professional and an experienced consultant.",
+      "followers": {
+        "facebook": 951,
+        "twitter": 284
+      },
+      "image_url": "https://i1.feedspot.com/4778090.jpg?t=1608784665"
+    }
+  ]
+}

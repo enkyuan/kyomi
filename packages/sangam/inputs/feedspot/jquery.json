@@ -1,0 +1,73 @@
+{
+  "category": "jQuery",
+  "source_url": "https://rss.feedspot.com/jquery_rss_feeds",
+  "feeds": [
+    {
+      "title": "jQuery Script Blog",
+      "feed_url": "https://feeds.feedburner.com/jquery-script",
+      "website_url": "https://www.jqueryscript.net/blog/",
+      "description": "One of the BEST jQuery websites that provide web designers and developers with a simple way to preview and download a variety of Free jQuery Plugins.",
+      "followers": {
+        "facebook": 36200,
+        "twitter": 928
+      },
+      "image_url": "https://i1.feedspot.com/4012974.jpg"
+    },
+    {
+      "title": "jQuery-az.com",
+      "feed_url": "https://www.jquery-az.com/feed/",
+      "website_url": "https://www.jquery-az.com/",
+      "description": "The blog aims at covering the topic related to jQuery methods, events using the jQuery library, Bootstrap, CSS, HTML, PHP, and other technologies and languages.",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/4689440.jpg?t=1619077853"
+    },
+    {
+      "title": "jQuery Blog",
+      "feed_url": "https://blog.jquery.com/feed/",
+      "website_url": "http://blog.jquery.com/",
+      "description": "An Official jquery blog about learning Qlikview, with basic lessons for beginners and discussing best practice.",
+      "followers": {
+        "twitter": 7900
+      },
+      "image_url": "https://i1.feedspot.com/38504.jpg?t=1619077876"
+    },
+    {
+      "title": "Learning jQuery",
+      "feed_url": "https://feeds2.feedburner.com/LearningJquery",
+      "website_url": "https://learningjquery.com/",
+      "description": "Tips, techniques, and tutorials for the jQuery JavaScript library. Learning jQuery is a multi-author weblog providing jQuery tutorials, demos, and announcements. They have tutorials for all skill levels, and each entry is categorized by level of difficulty.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/84330.jpg?t=1619078047"
+    },
+    {
+      "title": "Amazing jQuery Plugins",
+      "feed_url": "https://amazing-jquery-plugins.tumblr.com/rss",
+      "website_url": "https://amazing-jquery-plugins.tumblr.com/",
+      "description": "A collection of Amazing jQuery Plugins all over the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4689549.jpg"
+    },
+    {
+      "title": "jQuery Mobile",
+      "feed_url": "https://blog.jquerymobile.com/feed/",
+      "website_url": "https://blog.jquerymobile.com/",
+      "description": "jQuery Mobile is an HTML5-based user interface system designed to make responsive web sites and apps that are accessible on all smartphones, tablet and desktop devices.",
+      "followers": {
+        "twitter": 12600
+      },
+      "image_url": "https://i1.feedspot.com/4036163.jpg"
+    },
+    {
+      "title": "jQuery UI Blog",
+      "feed_url": "https://blog.jqueryui.com/feed/",
+      "website_url": "https://blog.jqueryui.com/",
+      "description": "jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is a perfect choice.",
+      "followers": {
+        "twitter": 23800
+      },
+      "image_url": "https://i1.feedspot.com/28258.jpg"
+    }
+  ]
+}

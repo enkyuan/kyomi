@@ -1,0 +1,87 @@
+{
+  "category": "Australian Science",
+  "source_url": "https://rss.feedspot.com/australian_science_rss_feeds",
+  "feeds": [
+    {
+      "title": "Cosmos Magazine",
+      "feed_url": "https://cosmosmagazine.com/feed/",
+      "website_url": "https://cosmosmagazine.com/",
+      "description": "Cosmos Magazine is a popular science magazine, which treats the field as a part of culture. The site includes back issues, selected articles and different topics such as social science.",
+      "followers": {
+        "facebook": 465600,
+        "twitter": 20800,
+        "instagram": 7700
+      },
+      "image_url": "https://i1.feedspot.com/4478231.jpg?t=1605770451"
+    },
+    {
+      "title": "Lab Down Under",
+      "feed_url": "https://labdownunder.com/feed/",
+      "website_url": "https://labdownunder.com/",
+      "description": "Lab Down Under is a science blog that aims at highlighting the best Australian science being conducted in an in-depth, accurate and non-hyped manner.",
+      "followers": {
+        "facebook": 386,
+        "twitter": 444
+      },
+      "image_url": "https://i1.feedspot.com/5164220.jpg?t=1620113532"
+    },
+    {
+      "title": "On A Clear Day",
+      "feed_url": "https://www.clearairday.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.clearairday.com/",
+      "description": "I'm an ARC Future Fellow and Lecturer at the University of Melbourne, in Chemical Engineering. My research focuses on the chemistry of air pollution, and I'm interested in all things environmental science and engineering. A blog about air quality and environmental science, with a focus on the chemical processes leading to air pollution and engineering solutions.",
+      "followers": {
+        "facebook": 18,
+        "twitter": 844
+      },
+      "image_url": "https://i1.feedspot.com/4902475.jpg?t=1605773277"
+    },
+    {
+      "title": "It's Rocket Science Adventures Blog",
+      "feed_url": "https://itsrocketscience.com.au/feed/",
+      "website_url": "https://itsrocketscience.com.au/blog/",
+      "description": "In this blog, you will get the latest news, stories, and updates from It's Rocket Science Adventures. Championing STEM education, aerospace, aviation and rocketry.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 142,
+        "instagram": 805
+      },
+      "image_url": "https://i1.feedspot.com/5246311.jpg?t=1613633404"
+    },
+    {
+      "title": "ScienceAlert",
+      "feed_url": "https://feeds.feedburner.com/sciencealert-latestnews",
+      "website_url": "https://www.sciencealert.com/",
+      "description": "ScienceAlert features cool and interesting science news and entertainment worth sharing. It provides the latest science news, opinions, and features from Australia & New Zealand.",
+      "followers": {
+        "facebook": 8700000,
+        "twitter": 110600,
+        "instagram": 919200
+      },
+      "image_url": "https://i1.feedspot.com/783237.jpg?t=1605769517"
+    },
+    {
+      "title": "CSIRO",
+      "feed_url": "https://www.csiro.au/en/news/",
+      "website_url": "https://www.csiro.au/en/news/",
+      "description": "Be entertained, informed and inspired by a dose of all the latest and greatest science from Australia's national science organisation, the CSIRO.",
+      "followers": {
+        "facebook": 299700,
+        "twitter": 399,
+        "instagram": 198200
+      },
+      "image_url": "https://i1.feedspot.com/4688576.jpg?t=1620113519"
+    },
+    {
+      "title": "Australasian Science Magazine",
+      "feed_url": "https://australasianscience.com.au/rss.xml",
+      "website_url": "https://australasianscience.com.au/",
+      "description": "Australasian Science magazine online is an independent source of news and commentary on scientific developments. Each month scientists and science journalists write about the latest research in plain language and offer opinions and analysis of topical scientific issues.",
+      "followers": {
+        "facebook": 466,
+        "twitter": 648
+      },
+      "image_url": "https://i1.feedspot.com/4478668.jpg?t=1605771214"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "category": "Wired",
+  "source_url": "https://rss.feedspot.com/wired_rss_feeds",
+  "feeds": [
+    {
+      "title": "WIRED",
+      "feed_url": "https://www.wired.com/feed/rss",
+      "website_url": "https://www.wired.com/",
+      "description": "Wired is a renowned technology and culture magazine, founded in 1993 by Louis Rossetto and Jane Metcalfe. Known for its deep dives into the impact of technology on society, Wired covers a broad spectrum of topics from science and business to design and politics. The magazine, owned by Cond\u00e9 Nast, features contributions from influential writers and editors such as Nicholas Thompson, its former editor-in-chief. Wired's innovative approach has earned it numerous accolades, including National Magazine Awards for General Excellence.",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 9700000
+      },
+      "image_url": "https://i1.feedspot.com/4724360.jpg?t=1721210902"
+    },
+    {
+      "title": "WIRED \u00bb Business",
+      "feed_url": "https://www.wired.com/feed/category/business/latest/rss",
+      "website_url": "https://www.wired.com/category/business/",
+      "description": "Get in-depth coverage of business news and trends at WIRED including technology, startups, and Silicon Valley. The WIRED conversation illuminates how technology is changing every aspect of our lives - from culture to business, science to design.",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 9700000
+      },
+      "image_url": "https://i1.feedspot.com/4724356.jpg?t=1751375300"
+    },
+    {
+      "title": "Wired \u00bb Science",
+      "feed_url": "https://www.wired.com/feed/category/science/latest/rss",
+      "website_url": "https://www.wired.com/category/science/",
+      "description": "Get in-depth science coverage at WIRED including news, the latest research and discoveries and how technology is shaping the world of science.",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 9700000
+      },
+      "image_url": "https://i1.feedspot.com/4724356.jpg?t=1751375300"
+    },
+    {
+      "title": "WIRED \u00bb Politics",
+      "feed_url": "https://www.wired.com/category/politics/feed",
+      "website_url": "https://www.wired.com/category/politics/",
+      "description": "All articles about Politics from WIRED.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8544057.jpg"
+    },
+    {
+      "title": "Wired \u00bb Gear",
+      "feed_url": "https://www.wired.com/feed/category/gear/latest/rss",
+      "website_url": "https://www.wired.com/category/gear/",
+      "description": "Get in-depth tech gear coverage at WIRED including news and reviews of the latest gadgets.",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 9700000
+      },
+      "image_url": "https://i1.feedspot.com/4724356.jpg?t=1751375300"
+    },
+    {
+      "title": "Wired \u00bb Culture",
+      "feed_url": "https://www.wired.com/feed/category/culture/latest/rss",
+      "website_url": "https://www.wired.com/category/culture/",
+      "description": "Get in-depth entertainment and culture news coverage at Wired including news and reviews of the latest movies, TV shows, podcasts, books, games and pop culture.",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 9700000
+      },
+      "image_url": "https://i1.feedspot.com/4724356.jpg?t=1751375300"
+    },
+    {
+      "title": "Wired \u00bb Security",
+      "feed_url": "https://www.wired.com/feed/category/security/latest/rss",
+      "website_url": "https://www.wired.com/category/security/",
+      "description": "Get in-depth security coverage at WIRED including cyber, IT and national security news.",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 9700000
+      },
+      "image_url": "https://i1.feedspot.com/4724356.jpg?t=1751375300"
+    },
+    {
+      "title": "Wired \u00bb Backchannel",
+      "feed_url": "https://www.wired.com/feed/category/backchannel/latest/rss",
+      "website_url": "https://www.wired.com/category/backchannel/",
+      "description": "Find the latest backchannel news from WIRED. See related science and technology articles, photos, slideshows and videos.",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 9700000
+      },
+      "image_url": "https://i1.feedspot.com/4724356.jpg?t=1751375300"
+    },
+    {
+      "title": "Wired \u00bb Ideas",
+      "feed_url": "https://www.wired.com/feed/category/ideas/latest/rss",
+      "website_url": "https://www.wired.com/category/ideas/",
+      "description": "Get in-depth opinions and commentaries on the latest science and technology news and future trends from WIRED.",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 9700000
+      },
+      "image_url": "https://i1.feedspot.com/4724356.jpg?t=1751375300"
+    }
+  ]
+}

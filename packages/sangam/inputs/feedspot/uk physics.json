@@ -1,0 +1,75 @@
+{
+  "category": "UK Physics",
+  "source_url": "https://rss.feedspot.com/uk_physics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Physics from the edge",
+      "feed_url": "https://physicsfromtheedge.blogspot.com/feeds/posts/default",
+      "website_url": "https://physicsfromtheedge.blogspot.com/",
+      "description": "Blog by Mike McCulloch. I chose the title Physics from the Edge because the theory of inertia I have suggested (MiHsC) assumes that local inertia is affected by the far-off Hubble-edge. I've written a book called Physics from the Edge",
+      "followers": {
+        "twitter": 13200
+      },
+      "image_url": "https://i1.feedspot.com/3298167.jpg?t=1605275812"
+    },
+    {
+      "title": "Lincoln School Maths & Physics Blog",
+      "feed_url": "https://lincolnmathsphys.wordpress.com/feed/",
+      "website_url": "https://lincolnmathsphys.wordpress.com/category/physics/",
+      "description": "Lincoln School of Mathematics & Physics Blog. The School offers undergraduate and postgraduate degrees in a range of fundamental and applied mathematics and physics.",
+      "followers": {
+        "twitter": 833
+      },
+      "image_url": "https://i1.feedspot.com/4470176.jpg?t=1608213101"
+    },
+    {
+      "title": "Helpmyphysics",
+      "feed_url": "http://helpmyphysics.co.uk/wordpress/?feed=rss2",
+      "website_url": "http://helpmyphysics.co.uk/wordpress/",
+      "description": "Welcome to Mr Mallon`s website. I am currently teaching physics & science in Saint Andrew`s RC High School Coatbridge. This website is designed to help you with your physics & science.If you are studying physics at school whether it be at Standard Grade, Intermediate or Higher then I hope it helps you get the best grades possible.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4907836.jpg?t=1614001831"
+    },
+    {
+      "title": "ThinkPhysics Blog",
+      "feed_url": "https://nustem.uk/feed/",
+      "website_url": "https://nustem.uk/blog/",
+      "description": "Physics is about exploring the world, and we think those explorations can be delightful, surprising and satisfying. We believe physics should be accessible to everyone, for study and pleasure, from early years through school to employment and beyond.",
+      "followers": {
+        "facebook": 134,
+        "twitter": 640
+      },
+      "image_url": "https://i1.feedspot.com/4505479.jpg?t=1605277401"
+    },
+    {
+      "title": "The Physics Detective",
+      "feed_url": "https://physicsdetective.com/feed/",
+      "website_url": "http://physicsdetective.com/",
+      "description": "The physics detective is a fundamental physics blog referring to historical and contemporary papers and hard scientific evidence to break the current impasse. It refers to physics and cosmology news, and contains articles like 'How gravity works', 'What charge is', 'How a magnet works', 'The nuclear force', 'The mystery of the missing antimatter', 'Dark matter', and 'There is no quantum entanglement'. As Bert Schroer said: 'Perhaps the past, if looked upon with care and hindsight, may teach us where we possibly took a wrong turn'.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/fsppublisher/2196556/page/4917911/logo_1756807325.png"
+    },
+    {
+      "title": "Physics and Astronomy outreach",
+      "feed_url": "https://blogs.cardiff.ac.uk/physicsoutreach/feed/",
+      "website_url": "https://blogs.cardiff.ac.uk/physicsoutreach/",
+      "description": "Covers astronomy, pythagorean astronomy, physics and more. We have a large outreach programme made possible by members of the School volunteering their own time. As part of this programme, we offer a range of talks on cutting edge scientific research from academics in the School.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 1800,
+        "instagram": 96800
+      },
+      "image_url": "https://i1.feedspot.com/4505484.jpg?t=1605784120"
+    },
+    {
+      "title": "Physics World",
+      "feed_url": "https://physicsworld.com/feed/",
+      "description": "News, views and information for the global physics community from Institute of Physics Publishing. It contains features from the world's leading physicists and science writers, comprehensive news and analysis, incisive opinion pieces, sound careers advice, reviews of the best new books and multimedia.",
+      "followers": {
+        "facebook": 587700,
+        "twitter": 420700
+      },
+      "image_url": "https://i1.feedspot.com/4859839.jpg?t=1605784124"
+    }
+  ]
+}

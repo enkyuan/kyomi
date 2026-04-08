@@ -1,0 +1,44 @@
+{
+  "category": "Sales Engineer",
+  "source_url": "https://rss.feedspot.com/sales_engineer_rss_feeds",
+  "feeds": [
+    {
+      "title": "North American Association of Sales Engineers Blog",
+      "feed_url": "https://sales-engineering.org/feed/",
+      "website_url": "https://sales-engineering.org/blog/",
+      "description": "NAASE's Blog page will periodically feature different, related, and relevant articles - some from NAASE members directly, and others from other sources. We invite you, regardless of your membership status, to submit an article for consideration. This page is also where you will find relevant Job Postings from NAASE member companies. The North American Association of Sales Engineers (NAASE), is the brainchild of a long-time sales engineer and industry consultant/writer, Ken Lambert.",
+      "followers": {
+        "twitter": 128
+      },
+      "image_url": "https://i1.feedspot.com/5406380.jpg?t=1654247590"
+    },
+    {
+      "title": "Sales Process Engineering",
+      "feed_url": "https://salesprocessengineering.net/feed/",
+      "website_url": "https://salesprocessengineering.net/",
+      "description": "Sales Process Engineering is a radical approach to the design and management of the sales function. Read hundreds of articles on all things related to Sales Process Engineering.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5406382.jpg?t=1654261299"
+    },
+    {
+      "title": "Mastering Technical Sales",
+      "feed_url": "http://masteringtechnicalsales.blogspot.com/feeds/posts/default",
+      "website_url": "http://masteringtechnicalsales.blogspot.com/",
+      "description": "Musings and thoughts about the ever-changing role of Pre-Sales Engineers. Blog for hints and tips around the life of a Sales Engineer. Mastering Technical Sales started as a vision shared by John Care and Aron Bohlig back in 2000. Tired of struggling through yet another 'sales' class and reading yet another sales book focused entirely upon Account Executives they thought 'what if we wrote the definitive handbook for Sales Engineers?'",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/454354.jpg?t=1654250526"
+    },
+    {
+      "title": "The Sales Engineer Guy",
+      "feed_url": "https://www.blogger.com/feeds/3916583436425959237/posts/default",
+      "website_url": "https://www.salesengineerguy.com/",
+      "description": "Explore articles on Presales & sales advisory, coaching, training and improvement. Greg has worked in Presales for over 20 years, in several countries and roles including Individual and Managerial. His current role at Apptio is expanding their presales team into Europe.",
+      "followers": {
+        "twitter": 871
+      },
+      "image_url": "https://i1.feedspot.com/5129870.jpg?t=1654259314"
+    }
+  ]
+}

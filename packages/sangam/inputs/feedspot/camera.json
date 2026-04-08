@@ -1,0 +1,836 @@
+{
+  "category": "Camera",
+  "source_url": "https://rss.feedspot.com/camera_rss_feeds",
+  "feeds": [
+    {
+      "title": "Digital Photography Review",
+      "feed_url": "https://www.dpreview.com/feeds/news.xml",
+      "website_url": "https://www.dpreview.com/",
+      "description": "DPReview.com, also known as Digital Photography Review, is a comprehensive resource for digital photography enthusiasts and professionals, established in 1998 by Phil Askey. The site offers in-depth reviews of cameras, lenses, and accessories, along with buying guides and user forums. Known for its thorough technical reviews and extensive comparison tools, DPReview has become a go-to source for the latest in digital photography. The site, now managed by Scott Everett, continues to provide valuable insights and updates under its new ownership by Gear Patrol.",
+      "followers": {
+        "facebook": 107300,
+        "twitter": 150600,
+        "instagram": 90300
+      },
+      "image_url": "https://i1.feedspot.com/32383.jpg?t=1609304596"
+    },
+    {
+      "title": "PetaPixel - Photography and Camera Reviews",
+      "feed_url": "https://petapixel.com/topic/reviews/feed/",
+      "website_url": "https://petapixel.com/topic/reviews/",
+      "description": "PetaPixel has all the photography and camera news, reviews, and inspiration. It is web's leading blog about photography. PetaPixel's goal is to inform, educate, and inspire in all things photography-related.",
+      "followers": {
+        "facebook": 491500,
+        "twitter": 998200
+      },
+      "image_url": "https://i1.feedspot.com/4585664.jpg?t=1615196524"
+    },
+    {
+      "title": "Canon Rumors",
+      "feed_url": "https://feeds.feedburner.com/canonrumors/rss",
+      "website_url": "https://www.canonrumors.com/",
+      "description": "A web site dedicated to current and future Canon imaging products, canon camera reviews and details etc.",
+      "followers": {
+        "facebook": 108500,
+        "twitter": 65200,
+        "instagram": 9100
+      },
+      "image_url": "https://i1.feedspot.com/32381.jpg?t=1615196528"
+    },
+    {
+      "title": "New Camera",
+      "feed_url": "https://thenewcamera.com/feed/atom/",
+      "website_url": "https://thenewcamera.com/",
+      "description": "New camera is about camera news, rumors and reviews. It also has camera comparison review and expert buying guide for any new DSLR, mirrorless and compact camera.",
+      "followers": {
+        "facebook": 57500,
+        "twitter": 1600,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4584075.jpg?t=1615196531"
+    },
+    {
+      "title": "Steve Huff Photos",
+      "feed_url": "https://feeds.feedburner.com/SteveHuffPhotos",
+      "website_url": "https://www.stevehuffphoto.com/",
+      "description": "Camera and Lens Reviews of Leica, Pentax, Sony, Olympus, Canon, Nikon and more. Photography articles and lessons as well as Daily Inspiration posts by Steve Huff.",
+      "followers": {
+        "facebook": 44900,
+        "twitter": 17000
+      },
+      "image_url": "https://i1.feedspot.com/187161.jpg?t=1615196535"
+    },
+    {
+      "title": "Photography Blog",
+      "feed_url": "https://feeds.feedburner.com/photographyblog",
+      "website_url": "https://www.photographyblog.com/",
+      "description": "Photography Blog brings you the latest and greatest camera and photography news, both film and digital, both global and UK-based. They have expert reviews of all the latest cameras, lenses, smartphones and accessories, since 2003.",
+      "followers": {
+        "facebook": 15600,
+        "twitter": 9900,
+        "instagram": 43400
+      },
+      "image_url": "https://i1.feedspot.com/171360.jpg?t=1615196539"
+    },
+    {
+      "title": "News Shooter",
+      "feed_url": "https://www.newsshooter.com/feed/",
+      "website_url": "https://www.newsshooter.com/category/cameras/",
+      "description": "Newsshooter is a place for professionals, educators, students and industry figures to discuss the practice and art of cinema in documenting the real world. It has all the cameras and equipment details needed for documentation of any cinema.",
+      "followers": {
+        "facebook": 6600,
+        "twitter": 26200,
+        "instagram": 11800
+      },
+      "image_url": "https://i1.feedspot.com/1453313.jpg?t=1615196542"
+    },
+    {
+      "title": "Nice Notes",
+      "feed_url": "https://www.notes.nicefilmclub.com/posts?format=rss",
+      "website_url": "https://www.notes.nicefilmclub.com/",
+      "description": "Nice Film Club's blog on all things film photography, film development, film scanning, and printing. We provide niche film photography content to a large group of active readers. Content includes reviews, interviews, recommendations, and how-tos. Author Gabe Ginsburg has also guest-written for blogs such as moment.com and 35mmc.",
+      "followers": {
+        "facebook": 1500,
+        "instagram": 39000
+      },
+      "image_url": "https://i1.feedspot.com/5691498.jpg?t=1697605213"
+    },
+    {
+      "title": "Razorback Drain Pros Blog",
+      "feed_url": "https://razorbackdrains.au/feed/",
+      "website_url": "https://razorbackdrains.au/blog/",
+      "description": "Explore drain camera insights - Your go-to source for tips, reviews, and more! Discover the world of drain cameras today. Read through Razorback's blogs here. Razorback Drain Pros specializes in the supply of good quality imported Drain Cameras and aims to transform the way people approach drain maintenance and troubleshooting.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 11,
+        "instagram": 350
+      },
+      "image_url": "https://i1.feedspot.com/5745793.jpg?t=1704138183"
+    },
+    {
+      "title": "Brian Smith Blog",
+      "feed_url": "https://briansmith.com/blog/feed/",
+      "website_url": "https://briansmith.com/blog/",
+      "description": "Brian Smith's blog has all the latest news about camera, camera lens and accessories. It also has reviews of the camera and tips and trick about portrait photography.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 10200
+      },
+      "image_url": "https://i1.feedspot.com/810512.jpg"
+    },
+    {
+      "title": "Cambo Blog",
+      "feed_url": "https://blog.cambo.com/feed/",
+      "website_url": "https://blog.cambo.com/",
+      "description": "Digital photography for view cameras, an extensive range of studio stands, specialist architectural and landscape wide cameras, shooting tables and other studio accessories - or an exciting range of compact, portable video booms, jibs and shoulder rigs for today's videographer.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 489
+      },
+      "image_url": "https://i1.feedspot.com/4585107.jpg?t=1615196724"
+    },
+    {
+      "title": "Canny Cameras",
+      "feed_url": "https://austerityphoto.co.uk/feed/",
+      "website_url": "https://austerityphoto.co.uk/",
+      "description": "Canny Cameras is all about Point & Shoot cameras that we all used in the 70's and 80's before the arrival of auto-focus and later digital.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4584062.jpg?t=1615196749"
+    },
+    {
+      "title": "gordy's camera straps gallery",
+      "feed_url": "https://gordyscamerastraps.tumblr.com/rss",
+      "website_url": "https://gordyscamerastraps.tumblr.com/",
+      "description": "Gordy's straps makes different and a variety of starps for camera.",
+      "followers": {
+        "facebook": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4585114.jpg"
+    },
+    {
+      "title": "Photography & Vintage Film Cameras",
+      "feed_url": "https://connealy.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://connealy.blogspot.com/",
+      "description": "A blog by Mike Connealy about old cameras and its details with sample photographs from the camera.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4583933.jpg?t=1615197595"
+    },
+    {
+      "title": "Rangefinder Chronicles",
+      "feed_url": "http://rangefinderchronicles.blogspot.com/feeds/posts/default",
+      "website_url": "http://rangefinderchronicles.blogspot.com/",
+      "description": "This blog is about different cameras and their capture shots through which difference between each camera model can be seen.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1406275.jpg?t=1615197563"
+    },
+    {
+      "title": "SonyAlphaRumors - News",
+      "feed_url": "https://www.sonyalpharumors.com/category/miscellaneous/feed/",
+      "website_url": "https://www.sonyalpharumors.com/category/miscellaneous/",
+      "description": "A blog about news, reviews, details, tip and tricks about camera and camera accessories.",
+      "followers": {
+        "facebook": 113900,
+        "twitter": 33600
+      },
+      "image_url": "https://i1.feedspot.com/4584055.jpg?t=1615196613"
+    },
+    {
+      "title": "Shotkit",
+      "feed_url": "https://shotkit.com/feed/",
+      "website_url": "https://shotkit.com/newsletter/",
+      "description": "Shotkit.com is a premier online resource for photographers, offering an inside look at the gear and techniques used by top professionals across various genres. Founded by Mark Condon in 2014, Shotkit provides in-depth camera gear reviews, photography tutorials, and business advice, all aimed at helping photographers enhance their craft. The blog is renowned for its authentic and detailed content, contributed by experienced photographers from around the world. With a mission to inspire and educate, Shotkit has become a trusted name in the photography community.",
+      "followers": {
+        "facebook": 43300,
+        "twitter": 9600,
+        "instagram": 24700
+      },
+      "image_url": "https://i1.feedspot.com/4896799.jpg?t=1639636173"
+    },
+    {
+      "title": "Imaging Resource News",
+      "feed_url": "https://www.imaging-resource.com/rss/news",
+      "website_url": "https://www.imaging-resource.com/news",
+      "description": "Your source for objective photography news and camera, lens, camera specifications & comparison, and accessory reviews. Imaging Resource seeks to lead photographers to positive experiences with their cameras. You'll find in-depth reviews backed by exhaustive lab tests, as well as extensive coverage of photo news.",
+      "followers": {
+        "facebook": 17400,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5333404.jpg?t=1634644192"
+    },
+    {
+      "title": "35mmc",
+      "feed_url": "https://www.35mmc.com/feed/",
+      "website_url": "https://www.35mmc.com/",
+      "description": "35mmc is a complete website about camera, camera reviews, rangefinders, lenses, compact cameras thoughts & experiences. It has cameras from vintage manual focus cameras to auto focus point and shoots and everything in between.",
+      "followers": {
+        "facebook": 11400,
+        "twitter": 6100,
+        "instagram": 69700
+      },
+      "image_url": "https://i1.feedspot.com/4442183.jpg?t=1645077234"
+    },
+    {
+      "title": "Phillip Reeve Blog",
+      "feed_url": "https://phillipreeve.net/blog/feed/",
+      "website_url": "https://phillipreeve.net/blog/",
+      "description": "Follow this blog where Phillip Reeve and his team share their thoughts and reviews on mirrorless Sony Alphas, manual Lenses and much more.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 32
+      },
+      "image_url": "https://i1.feedspot.com/4583962.jpg?t=1611912334"
+    },
+    {
+      "title": "Philip Bloom Blog",
+      "feed_url": "https://philipbloom.net/blog/feed/",
+      "website_url": "https://philipbloom.net/blog/",
+      "description": "Award winning filmmaker trying to share the knowledge about camera & give back whilst trying to find my place in the world. Philip Bloom is a British DP, Director and Filmmaker known for his DSLR filmmaking, blog and workshops.",
+      "followers": {
+        "facebook": 201900,
+        "twitter": 128900,
+        "instagram": 190400
+      },
+      "image_url": "https://i1.feedspot.com/4585134.jpg?t=1605599449"
+    },
+    {
+      "title": "Robin Wong",
+      "feed_url": "https://feeds.feedburner.com/robinwong",
+      "website_url": "https://robinwong.blogspot.com/",
+      "description": "Malaysia based photography blog, reviews cameras & lenses, shares photography tips & tricks. Specializes in Micro Four Thirds System",
+      "followers": {
+        "facebook": 20800
+      },
+      "image_url": "https://i1.feedspot.com/214176.jpg?t=1615196706"
+    },
+    {
+      "title": "Albert Dros Blog",
+      "feed_url": "https://www.albertdros.com/blog-feed.xml",
+      "website_url": "https://www.albertdros.com/blog",
+      "description": "Albert Dros is a Award winning photographer & Sony Global Ambassador from the Netherlands. This blog has photography techniques, camera and lens review, camera filter review etc.",
+      "followers": {
+        "facebook": 347400,
+        "twitter": 15000,
+        "instagram": 615800
+      },
+      "image_url": "https://i1.feedspot.com/4584072.jpg?t=1615198325"
+    },
+    {
+      "title": "Random Camera Blog",
+      "feed_url": "https://randomphoto.blogspot.com/feeds/posts/default",
+      "website_url": "https://randomphoto.blogspot.com/",
+      "description": "have been photographing since I was about 12 years old. My first camera was a Kodak 126 Instamatic and I still have all the negatives from those early days. I really enjoy shooting with older manual film-based equipment. For me, photography is an ongoing journey. I don't know where I will end up, but I am always changing routes and finding my way around.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1077223.jpg?t=1608188675"
+    },
+    {
+      "title": "HD Warrior",
+      "feed_url": "https://www.hdwarrior.co.uk/feed/",
+      "website_url": "https://www.hdwarrior.co.uk/",
+      "description": "Pro HD video blog about hd videos, video camera, reviews of video cameras etc by Philip Johnston.",
+      "followers": {
+        "twitter": 298
+      },
+      "image_url": "https://i1.feedspot.com/4584109.jpg"
+    },
+    {
+      "title": "DIY Photography - Reviews",
+      "feed_url": "https://www.diyphotography.net/category/reviews/feed/",
+      "website_url": "https://www.diyphotography.net/category/reviews/",
+      "description": "DIY Photography is a place for gear lusting photographers for inspiration, education, gear chat and a place to hang out. They have a strong focus on educational content, also they feature some of the best and most inspiring photography found worldwide, exciting behind the scenes footage, gear reviews and the best photography tutorials to be found on the web.",
+      "followers": {
+        "facebook": 88400,
+        "twitter": 241000,
+        "instagram": 83800
+      },
+      "image_url": "https://i1.feedspot.com/4584096.jpg"
+    },
+    {
+      "title": "The Phoblographer - News",
+      "feed_url": "https://www.thephoblographer.com/category/news/feed/",
+      "website_url": "https://www.thephoblographer.com/category/news/",
+      "description": "The psychology of creative photography and all the news and reviews about different cameras, photography software etc.",
+      "followers": {
+        "facebook": 249800,
+        "twitter": 31200,
+        "instagram": 34800
+      },
+      "image_url": "https://i1.feedspot.com/4584038.jpg?t=1615196624"
+    },
+    {
+      "title": "Mike's Camera Blog",
+      "feed_url": "https://mikescamera.blog/feed/",
+      "website_url": "https://mikescamera.blog/",
+      "description": "Imaging superstores in Colorado and Northern California. Offering a complete selection of cameras, accessories & comprehensive photo processing services.",
+      "followers": {
+        "twitter": 737,
+        "instagram": 32700
+      },
+      "image_url": "https://i1.feedspot.com/5083683.jpg?t=1615197058"
+    },
+    {
+      "title": "Camera Go Camera",
+      "feed_url": "https://cameragocamera.com/feed/",
+      "website_url": "https://cameragocamera.com/",
+      "description": "A camera lover with the heart of a Womble. Peggy Marsh is a teacher who loves film photography, walking, and cycling. Her blog posts cover finding & testing film cameras, thoughts & musings, junk camera finds, and other life stuff.",
+      "followers": {
+        "twitter": 167
+      },
+      "image_url": "https://i1.feedspot.com/5012119.jpg?t=1631886528"
+    },
+    {
+      "title": "Bjorn Moerman Photography",
+      "feed_url": "https://bjornmoerman.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://bjornmoerman.blogspot.com/",
+      "description": "Blog by a Belgian Flying Photographer based in Dubai (UAE) specializing in Architectural, Travel and Aviation photography with all the camera details and equipment details.",
+      "followers": {
+        "facebook": 962,
+        "twitter": 757,
+        "instagram": 5900
+      },
+      "image_url": "https://i1.feedspot.com/4144402.jpg?t=1615197081"
+    },
+    {
+      "title": "Back and Front the (compact) camera with Daniel M",
+      "feed_url": "https://photodanielm.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://photodanielm.blogspot.com/",
+      "description": "A blog by Daniel M about camera, compact camera and camera reviews.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4584961.jpg?t=1615197364"
+    },
+    {
+      "title": "Kintronics",
+      "feed_url": "https://kintronics.blogspot.com/feeds/posts/default",
+      "website_url": "http://kintronics.blogspot.com/",
+      "description": "Kintronics blog provides technical information about IP Cameras, Video Management Software (VMS), Network Video software (NVR), PA over IP Systems, door access control and other high technology products.",
+      "followers": {
+        "facebook": 316,
+        "twitter": 299
+      },
+      "image_url": "https://i1.feedspot.com/4585093.jpg?t=1615197132"
+    },
+    {
+      "title": "The Cotswold Photographer - Photography News, Reviews, tips and more",
+      "feed_url": "https://thecotswoldphotographer.com/feed/",
+      "website_url": "https://thecotswoldphotographer.com/",
+      "description": "David Fleet is a travelling photographer blogging about gear and stuff. Make sure to like and subscribe for all the latest gear reviews and articles.",
+      "followers": {
+        "facebook": 46
+      },
+      "image_url": "https://i1.feedspot.com/4603720.jpg?t=1615197335"
+    },
+    {
+      "title": "Lens And Shutter",
+      "feed_url": "https://lensandshutter.com/feed/",
+      "website_url": "https://lensandshutter.com/",
+      "description": "Welcome to Lens and Shutter, the number one camera and photography resource. We cater to photographers of all levels from beginners to professionals, and even kids and teens. Within the site, you will find a blog full of the latest photography tips and advice, as well as reviews of the latest cameras and accessories. Our team of experts carefully reviews every product presented on the site, so you can easily find the best on the market. Whatever you are looking for and no matter what style of photography you are most interested in, you can find it all here at Lens and Shutter.",
+      "followers": {
+        "twitter": 146
+      },
+      "image_url": "https://i1.feedspot.com/5291159.jpg?t=1624532127"
+    },
+    {
+      "title": "Leica Camera Blog",
+      "feed_url": "https://leica-camera.blog/feed/",
+      "website_url": "https://leica-camera.blog/",
+      "description": "The Leica Camera Blog, available at leica-camera.blog, is a dedicated platform celebrating the art of photography through the lens of Leica cameras. The blog features captivating stories, artist interviews, and showcases of photography projects that span genres such as street, nature, and architecture. Leica Camera, a renowned name in the photography industry, curates content that highlights the works of both established and emerging photographers. The blog serves as an inspirational and educational resource for photography enthusiasts and professionals alike.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 277100,
+        "instagram": 1600000
+      },
+      "image_url": "https://i1.feedspot.com/211581.jpg?t=1620805303"
+    },
+    {
+      "title": "Mozaik Underwater Cameras Blog - Product Reviews",
+      "feed_url": "https://www.housingcamera.com/blog/category/product-reviews/feed",
+      "website_url": "https://www.housingcamera.com/blog/category/product-reviews",
+      "description": "Mozaik Underwater Cameras offer professional , top of the line, Underwater Housings / Underwater Strobes/ Flashes and video lights for Nikon, Canon, Olympus, JVC, Sony, Samsung and Panasonic still photo and video Cameras.",
+      "followers": {
+        "facebook": 12100,
+        "twitter": 454
+      },
+      "image_url": "https://i1.feedspot.com/4583723.jpg?t=1615196717"
+    },
+    {
+      "title": "Bigheadtaco",
+      "feed_url": "http://www.bigheadtaco.com/feeds/posts/default",
+      "website_url": "http://www.bigheadtaco.com/",
+      "description": "Bigheadtaco focuses on camera reviews of all types (film, digital, instant, etc.), as well as photography how to's and tips.",
+      "followers": {
+        "facebook": 528,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/2412487.jpg?t=1615196734"
+    },
+    {
+      "title": "Canon Camera News",
+      "feed_url": "https://www.canoncameranews-capetown.info/feeds/posts/default",
+      "website_url": "https://www.canoncameranews-capetown.info/",
+      "description": "Canon Camera News is a proprietary digital camera / photography news and photography sharing website. Domain owner Vernon Chalmers is a professional photographer, training facilitator and online publisher with a keen interest in Canon digital camera technology and various photography genres.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5430933.jpg?t=1660130260"
+    },
+    {
+      "title": "VlogTribe",
+      "feed_url": "https://vlogtribe.com/feed/",
+      "website_url": "https://vlogtribe.com/",
+      "description": "Vlogtribe.com is the blog about video editing, vlogging, and tips on becoming a popular Vlogger on YouTube. The primary purpose of Vlogtribe.com is to provide detailed tips and reviews about the best vlogging cameras, various gadgets, ideas for your first video blog, challenges, and other tips for being a well-known blogger.",
+      "followers": {
+        "facebook": 374,
+        "twitter": 66
+      },
+      "image_url": "https://i1.feedspot.com/5201263.jpg?t=1601019395"
+    },
+    {
+      "title": "Music Photo Life - Camera",
+      "feed_url": "https://musicphotolife.com/category/camera/feed/",
+      "website_url": "https://musicphotolife.com/category/camera/",
+      "description": "This blog is about reviews of different types of camera from different brands.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 1000,
+        "instagram": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4583960.jpg"
+    },
+    {
+      "title": "CameraReviews.com",
+      "feed_url": "https://www.camerareviews.com/feed/",
+      "website_url": "https://www.camerareviews.com/",
+      "description": "CameraReviews showcases cameras and photography equipment in an easy but comprehensive way, so you get your money's worth. Our site is for beginners looking for their first camera, enthusiasts looking to upgrade, and professionals looking for the best cameras out there. Our content is created by photographers for photographers. We give you our honest opinion on what we think are the best cameras from each brand or niche for this year.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5439356.jpg?t=1662545641"
+    },
+    {
+      "title": "Best Photography Gear",
+      "feed_url": "https://bestphotographygear.com/feed/",
+      "website_url": "https://bestphotographygear.com/",
+      "description": "Blog on best photography gear and help you choose the right products. We help you understand the terms and decipher the numbers so you can make the best decisions with your gear.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5196595.jpg?t=1609305063"
+    },
+    {
+      "title": "DSLR Buzz",
+      "feed_url": "https://dslrbuzz.com/feed/",
+      "website_url": "https://dslrbuzz.com/",
+      "description": "DSLR Buzz featuring DSLR camera news, reviews, best buys, buying guide, lenses reviews, news, photography how-to's and photography.",
+      "followers": {
+        "facebook": 17400,
+        "twitter": 1000,
+        "instagram": 32
+      },
+      "image_url": "https://i1.feedspot.com/4649962.jpg"
+    },
+    {
+      "title": "Mark Hawk Cam",
+      "feed_url": "http://www.markhawkcam.com/feed/",
+      "website_url": "http://www.markhawkcam.com/",
+      "description": "Mark founded and runs the channel MarkHawkCam on Youtube, works as a Digital Compositor for over 5 years in Hollywood on Movies and TV, and is an avid enthusiast of hanging out in mountains. He creates informative or entertainment based videos in the Action Camera community.",
+      "followers": {
+        "twitter": 909,
+        "instagram": 720
+      },
+      "image_url": "https://i1.feedspot.com/4585048.jpg?t=1615197077"
+    },
+    {
+      "title": "BD-CLICKS Photography",
+      "feed_url": "http://feeds.feedburner.com/Bd-clicks",
+      "website_url": "https://bd-clicks.blogspot.com/",
+      "description": "We provides digital camera buying guide and ideas about photography. we also offer detail technical specifications of different types of cameras and Reviews. We give you lot more information from step-by-step guide about what is the best digital camera or Top DSLR Cameras you should buy.",
+      "followers": {
+        "twitter": 30
+      },
+      "image_url": "https://i1.feedspot.com/4756873.jpg?t=1615197085"
+    },
+    {
+      "title": "Fotopia Gallery & Camera Equipment",
+      "feed_url": "https://fotopiahk.tumblr.com/rss",
+      "website_url": "https://fotopiahk.tumblr.com/",
+      "description": "Fotopia is a camera shop in Hong Kong specialized in Leica rangefinder cameras and lenses.",
+      "followers": {
+        "facebook": 11600,
+        "twitter": 252
+      },
+      "image_url": "https://i1.feedspot.com/4585123.jpg"
+    },
+    {
+      "title": "Mark Hilliard Atelier's Blog",
+      "feed_url": "https://markhilliardatelier-blog.com/feed/",
+      "website_url": "https://markhilliardatelier-blog.com/",
+      "description": "A Landscape, Wildlife & Fine Art Photographer for 50 years, Mark has extensively traveled the world chasing his photographic visions. Mark is best known for his ultra high speed hummingbird photography, Long Exposure Ocean Scenes, ultra high speed water drop collisions and espcecially his advanced infrared work and workshops!",
+      "followers": {
+        "facebook": 976
+      },
+      "image_url": "https://i1.feedspot.com/4584086.jpg?t=1607682057"
+    },
+    {
+      "title": "ManOnDaMoon's blog",
+      "feed_url": "https://manondamoon.com/en/feed/",
+      "website_url": "https://manondamoon.com/en/",
+      "description": "Laurent is a film photography amateur, vintage cameras collector, precision DIY hobbyist.",
+      "followers": {
+        "twitter": 440,
+        "instagram": 385
+      },
+      "image_url": "https://i1.feedspot.com/4584090.jpg?t=1615197155"
+    },
+    {
+      "title": "AV-TEST - IP Cameras",
+      "feed_url": "https://www.iot-tests.org/category/ip-cams/feed/",
+      "website_url": "https://www.iot-tests.org/category/ip-cams/",
+      "description": "AV-TEST Internet of Things Security Testing Blog is about Ip cameras, security cameras etc.",
+      "followers": {
+        "facebook": 45600,
+        "twitter": 13100
+      },
+      "image_url": "https://i1.feedspot.com/4585098.jpg"
+    },
+    {
+      "title": "Micro 4/3rds Photography",
+      "feed_url": "https://feeds.feedburner.com/Micro4/3rdsPhotography",
+      "website_url": "http://m43photo.blogspot.com/",
+      "description": "This blog is about the user's perspective on the Micro Four Thirds camera system.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/442197.jpg?t=1615197625"
+    },
+    {
+      "title": "Kim Letkeman Blog",
+      "feed_url": "https://feeds.feedburner.com/blogspot/eRjmd",
+      "website_url": "http://kimletkeman.blogspot.com/",
+      "description": "A blog by Kim Letkeman about all the camera details, launches and camera news.",
+      "followers": {
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/1971555.jpg?t=1615196853"
+    },
+    {
+      "title": "Photography Bay",
+      "feed_url": "http://feeds.feedburner.com/PhotographyBay",
+      "website_url": "http://photographybay.com/",
+      "description": "The latest in digital photography and camera reviews, news and rumors for Canon, Nikon, Sony, Olympus and more.",
+      "followers": {
+        "facebook": 11100,
+        "twitter": 13200
+      },
+      "image_url": "https://i1.feedspot.com/9120.jpg"
+    },
+    {
+      "title": "Vlogging Pro",
+      "feed_url": "https://vloggingpro.com/feed/",
+      "website_url": "https://vloggingpro.com/",
+      "description": "VloggingPro is the ultimate resource for everything about vlogging. Learn how to start vlogging, what camera to use and much more.",
+      "followers": {
+        "facebook": 119,
+        "twitter": 321
+      },
+      "image_url": "https://i1.feedspot.com/4583947.jpg?t=1615198486"
+    },
+    {
+      "title": "Super Digital City Photo Blog",
+      "feed_url": "http://blog.superdigitalcity.com/feeds/posts/default?alt=rss",
+      "website_url": "http://blog.superdigitalcity.com/",
+      "description": "Super Digital City has best professional photography equipment. Whether you need lenses, lighting equipment, camera tripods, or camera bags and cases, you'll find it here.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 972
+      },
+      "image_url": "https://i1.feedspot.com/4584057.jpg?t=1615196741"
+    },
+    {
+      "title": "Sans Mirror",
+      "feed_url": "https://sansmirror.com/newsviews/index.xml",
+      "website_url": "https://www.sansmirror.com/newsviews/",
+      "description": "News and commentary on mirrorless ILC cameras, Mirror covers mirrorless cameras, such as the EOS, m4/3, NEX, NX, and Nikon products by Thom Hogan.",
+      "followers": {
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/435887.jpg?t=1615198317"
+    },
+    {
+      "title": "The Photography Blogger - All You Need To Know About Photography",
+      "feed_url": "https://www.the-photography-blogger.com/category/reviews/feed/",
+      "website_url": "https://www.the-photography-blogger.com/category/reviews/",
+      "description": "Spreading knowledge, tips & tricks and sharing the latest trends and news in the world of photography.",
+      "followers": {
+        "facebook": 241
+      },
+      "image_url": "https://i1.feedspot.com/4585000.jpg"
+    },
+    {
+      "title": "Leica News",
+      "feed_url": "https://leicanews.tumblr.com/rss",
+      "website_url": "https://leicanews.tumblr.com/",
+      "description": "All about Leica. News, history, world photographers, photos, articles, reviews, posters, prints and much more.",
+      "followers": {
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4585133.jpg"
+    },
+    {
+      "title": "Chanson Camera",
+      "feed_url": "https://chansoncamera.tumblr.com/rss",
+      "website_url": "https://chansoncamera.tumblr.com/",
+      "description": "Chanson Camera is a retail business specialized in high-end photographic equipment.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4585130.jpg"
+    },
+    {
+      "title": "CineD",
+      "feed_url": "https://www.cinema5d.com/feed/",
+      "website_url": "https://www.cined.com/",
+      "description": "CineD is a leading digital filmmaking news, reviews, and community platform, covering the latest in cinematography, video DSLR & large sensor technology.",
+      "followers": {
+        "facebook": 130699,
+        "twitter": 18
+      },
+      "image_url": "https://i1.feedspot.com/4587202.jpg?t=1658733885"
+    },
+    {
+      "title": "Alex Luyckx - Blog",
+      "feed_url": "http://www.alexluyckx.com/blog/index.php/feed/",
+      "website_url": "http://www.alexluyckx.com/blog/",
+      "description": "In this blog Alex Luyckx reviews all the classic cameras with photographs. He is a Film photographer in a digital world.",
+      "followers": {
+        "facebook": 521,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4583924.jpg?t=1615196849"
+    },
+    {
+      "title": "Japancamerahunter",
+      "feed_url": "https://japancamerahunter.tumblr.com/rss",
+      "website_url": "https://japancamerahunter.tumblr.com/",
+      "description": "JapanCameraHunter is a blog on a collection of classic cameras, film photography news and sales, lens and accessory sourcing. Let me help you find the camera of your dreams.",
+      "followers": {
+        "facebook": 55000,
+        "twitter": 18200,
+        "instagram": 167300
+      },
+      "image_url": "https://i1.feedspot.com/1084697.jpg?t=1645076142"
+    },
+    {
+      "title": "Vadzo Imaging Blog",
+      "feed_url": "https://www.vadzoimaging.com/feed/",
+      "website_url": "https://www.vadzoimaging.com/embedded-camera-blog/",
+      "description": "Stay updated with the latest in embedded camera technology - Vadzo Imaging. Discover insights now. Vadzo Imaging has a rich and diverse off-the-shelf camera portfolio comprising USB 3.0 Cameras, USB 2.0 Cameras, MIPI cameras, and Parallel Cameras. Additionally, It also offers customization services to support new sensors as well as additional interfaces to achieve different utility cameras.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5676191.jpg?t=1706873302"
+    },
+    {
+      "title": "KEH Camera",
+      "feed_url": "https://www.keh.com/expert-advice/feed/",
+      "website_url": "https://www.keh.com/expert-advice/",
+      "description": "The official blog of KEH Camera features spotlights, gear reviews, tips & tools, culture, video field testing, and more. KEH is the original reseller of professional, collectible, and everyday gear for camera lovers everywhere.",
+      "followers": {
+        "facebook": 133600,
+        "twitter": 5500,
+        "instagram": 94600
+      },
+      "image_url": "https://i1.feedspot.com/5322841.jpg?t=1631887610"
+    },
+    {
+      "title": "Samy's Camera Photo Blog - Camera Reviews",
+      "feed_url": "https://blog.samys.com/category/camera-reviews/feed/",
+      "website_url": "https://www.networkwebcams.co.uk/blog/",
+      "description": "Samy's Camera photo blog is about camera and photography News, Reviews, Tips and Tutorials. Samy's Camera offers the best in imaging products, with stores in LA, Pasadena, Culver City, Santa Ana, San Francisco & Santa Barbara.",
+      "followers": {
+        "facebook": 27500,
+        "twitter": 5000,
+        "instagram": 36200
+      },
+      "image_url": "https://i1.feedspot.com/4583716.jpg?t=1615198347"
+    },
+    {
+      "title": "Network Webcams Blog",
+      "feed_url": "https://www.networkwebcams.co.uk/blog/feed/",
+      "website_url": "https://www.networkwebcams.co.uk/blog/",
+      "description": "Network Webcams are specialist supplier and integrator of IP-based CCTV & Security Systems. As recognised leaders in our industry, we pride ourselves on being at the forefront of digital technology developments particularly in IP video and security surveillance. NW Systems will make the best security recommendations to you based on your business requirements.",
+      "followers": {
+        "facebook": 90,
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/3892166.jpg?t=1615196657"
+    },
+    {
+      "title": "Pevly",
+      "feed_url": "https://pevly.com/blog/feed/",
+      "website_url": "https://pevly.com/blog/",
+      "description": "Pevly is an ultimate resource for anything action camera related. Reviews, tests, comparisons and guides. It will help you to choose the best action camera.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 57,
+        "instagram": 452
+      },
+      "image_url": "https://i1.feedspot.com/4583712.jpg?t=1615196745"
+    },
+    {
+      "title": "DigiCam Lens",
+      "feed_url": "https://digicamlens.com/feed/",
+      "website_url": "https://www.parkcameras.com/blog/",
+      "description": "Camera lenses are the backbone of photography. In my blog, I will help you to get the right camera lens for your photography. Stay connected.",
+      "followers": {
+        "facebook": 2,
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/5276824.jpg?t=1620212773"
+    },
+    {
+      "title": "Park Cameras",
+      "feed_url": "https://blog.parkcameras.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.parkcameras.com/blog/",
+      "description": "Reviews, News, Advice, Guides & Inspiration on Cameras & Photography from the Team at Park Cameras",
+      "followers": {
+        "facebook": 21200,
+        "twitter": 7900
+      },
+      "image_url": "https://i1.feedspot.com/4584024.jpg?t=1615196637"
+    },
+    {
+      "title": "TheTechy - Cameras",
+      "feed_url": "https://www.exhibit.tech/cameras/feed",
+      "website_url": "https://photographylife.com/reviews",
+      "description": "TheTechy is a Technology blog which is been active since a decade. The main purpose was to provide high-quality articles on Mobiles, Cameras, Laptop and other consumer electronics news and reviews etc",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 1900,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4584963.jpg"
+    },
+    {
+      "title": "CAMERA LEADS",
+      "feed_url": "https://cameraleads.com/feed/",
+      "website_url": "https://photographylife.com/reviews",
+      "description": "CAMERALEADS.COM is a collection of unbiased buying guides and reviews of cameras. We help people to find the camera of their need by researching everywhere and concluding the final choices in our website (cameraleads.com).",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5201176.jpg?t=1600955698"
+    },
+    {
+      "title": "Photography Life - Reviews",
+      "feed_url": "https://photographylife.com/reviews/feed",
+      "website_url": "https://photographylife.com/reviews",
+      "description": "Photography Life provides various digital photography and camera reviews, articles, tips, tutorials and guides to photographers of all levels.",
+      "followers": {
+        "facebook": 327000,
+        "twitter": 19300,
+        "instagram": 10600
+      },
+      "image_url": "https://i1.feedspot.com/4583900.jpg?t=1615198300"
+    },
+    {
+      "title": "Competitive Cameras",
+      "feed_url": "https://competitivecameras.com/blog/feed",
+      "website_url": "https://competitivecameras.com/blog",
+      "description": "Competitive Cameras is one of the largest camera specialty retailers in the United States serving the Dallas/Ft.They stock the best brands including Canon, Fujifilm, Olympus, Nikon, Sigma, Sony, Tamron, Tokina, Manfrotto, Gitzo, Mefoto, Profoto, Elinchrome, Bowens, JTL, Epson, Lexar, Sandisk and many more.",
+      "followers": {
+        "facebook": 13100,
+        "twitter": 163
+      },
+      "image_url": "https://i1.feedspot.com/4585111.jpg?t=1611912340"
+    },
+    {
+      "title": "USpyStore Blog",
+      "feed_url": "https://blog.uspystore.com/feed/",
+      "website_url": "https://bensoftware.com/blog/",
+      "description": "U-Spy Store is a premier source of Video Surveillance, Safety, and Security Products in Chicago. This blog is about the reviews of different surveillance camera and spy cameras.",
+      "followers": {
+        "facebook": 919,
+        "instagram": 438
+      },
+      "image_url": "https://i1.feedspot.com/4585017.jpg?t=1615198337"
+    },
+    {
+      "title": "The Ben Software Blog",
+      "feed_url": "https://bensoftware.com/blog/feed/",
+      "website_url": "https://bensoftware.com/blog/",
+      "description": "The Ben Software is a high-quality video software for the Mac, including our popular video surveillance NVR software SecuritySpy.",
+      "followers": {
+        "facebook": 227,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4583699.jpg?t=1615198312"
+    },
+    {
+      "title": "Fujifilm Global News",
+      "feed_url": "https://www.fujifilm.com/rss/newsfeed.xml",
+      "website_url": "https://www.fujifilm.com/jp/en/news/list",
+      "description": "Fujifilm creates innovative products and delivers effective solutions in a wide variety of fields to serve society, contribute to the quality of life, and enhance environmental sustainability. This blog has all the latest news about Fujifilm cameras, all the latest addition in the products and much more.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 25500
+      },
+      "image_url": "https://i1.feedspot.com/1036938.jpg?t=1615196610"
+    },
+    {
+      "title": "Photo Madd",
+      "feed_url": "https://photomadd.com/feed/",
+      "website_url": "https://shutterpluslight.tumblr.com/",
+      "description": "Blog for Mirrorless camera systems, reviews, hint and tips about camera and its brands like Fujifilm, Sony, Sigma, Olympus, Panasonic.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/3661236.jpg?t=1615198329"
+    },
+    {
+      "title": "Shutter Plus Light",
+      "feed_url": "https://shutterpluslight.tumblr.com/rss",
+      "website_url": "https://shutterpluslight.tumblr.com/",
+      "description": "Shutter Light is a vintage ANALOG camera boutique. We focus on analog photography, Concentrating on Refurbished Polaroid, 35mm, and Medium Format CAMERAS.",
+      "followers": {
+        "facebook": 809,
+        "twitter": 606
+      },
+      "image_url": "https://i1.feedspot.com/4585120.jpg"
+    },
+    {
+      "title": "MAARTECH - Blog",
+      "feed_url": "https://heilbron.com/category/blog/feed/",
+      "description": "Maarten Heilbron posts honest and detailed camera and other tech reviews. Maarten produced and directed TV, wrote reviews for daily newspapers in Toronto and developed interactive television applications and services.",
+      "followers": {
+        "twitter": 361
+      },
+      "image_url": "https://i1.feedspot.com/4585054.jpg?t=1615198493"
+    }
+  ]
+}

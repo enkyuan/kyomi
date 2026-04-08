@@ -1,0 +1,56 @@
+{
+  "category": "Mesa Cannabis",
+  "source_url": "https://rss.feedspot.com/mesa_cannabis_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Flower Shop Blog",
+      "feed_url": "https://theflowershopusa.com/feed/",
+      "website_url": "https://theflowershopusa.com/blog/",
+      "description": "The Flower Shop, a multi-state cannabis operator, specializes in offering the widest flower selection in Arizona and Utah. They prioritize artisan and craft cannabis products, aiming to cater to diverse customer needs. Their mission is to provide clean cannabis products enhancing health and well-being. Explore their blog for expert insights, legal updates, and lifestyle tips, staying informed on all things cannabis.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7299339.jpg?t=1713244744"
+    },
+    {
+      "title": "Best Dispensary Blog",
+      "feed_url": "https://bestdispensary.com/feed/",
+      "website_url": "https://bestdispensary.com/blog/",
+      "description": "At Best Dispensary, customer well-being is paramount. Their expert team, boasting diverse backgrounds in biochemistry, science, business management, and microbiology, crafts products aimed at elevating every aspect of life. With a commitment to quality and expertise, they ensure each offering reflects their dedication to enhancing the overall experience for their valued clientele.",
+      "followers": {
+        "facebook": 979
+      },
+      "image_url": "https://i1.feedspot.com/7299340.jpg?t=1715001595"
+    },
+    {
+      "title": "Kind Meds Blog",
+      "feed_url": "https://kindmedsaz.com/blog/feed/",
+      "website_url": "https://kindmedsaz.com/blog/",
+      "description": "Kind Meds, a licensed dispensary, shares its passion for cannabis through top-shelf products and a commitment to quality. Offering both medical and recreational options, they prioritize an elevated experience. Their blog covers legal facts, recipes, medical uses, and product trends, providing comprehensive marijuana resources.",
+      "followers": {
+        "facebook": 805,
+        "twitter": 468
+      },
+      "image_url": "https://i1.feedspot.com/5564627.jpg?t=1683791740"
+    },
+    {
+      "title": "Greenpharms Cannabis Blog",
+      "feed_url": "https://greenpharms.com/feed/",
+      "website_url": "https://greenpharms.com/greenpharms-cannabis-blog/",
+      "description": "GreenPharms, a family-owned enterprise in Arizona, cultivates, processes, and sells top-tier cannabis products. Catering to both medical and recreational needs, they offer a diverse range. Explore their Cannabis Blog for the latest insights and comprehensive information, delving deep into the world of cannabis.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/7278803.jpg?t=1710996237"
+    },
+    {
+      "title": "My MMJ Doctor Blog",
+      "feed_url": "https://mymmjdoctor.com/blog/feed/",
+      "website_url": "https://mymmjdoctor.com/blog/",
+      "description": "My MMJ Doctor facilitates easy access to cannabis education and medical evaluations online. With a mission to promote its medicinal benefits, they connect patients with qualified doctors for treatment recommendations. Their blog offers the latest marijuana insights, tips, and recipes, serving as a valuable resource for the cannabis community.",
+      "followers": {
+        "facebook": 622,
+        "twitter": 131
+      },
+      "image_url": "https://i1.feedspot.com/7278815.jpg?t=1714711641"
+    }
+  ]
+}

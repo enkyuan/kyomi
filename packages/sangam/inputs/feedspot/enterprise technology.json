@@ -1,0 +1,391 @@
+{
+  "category": "Enterprise Technology",
+  "source_url": "https://rss.feedspot.com/enterprise_technology_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Register",
+      "feed_url": "https://www.theregister.com/headlines.atom",
+      "website_url": "https://search.theregister.com/?q=technology",
+      "description": "The Register is a leading global online enterprise technology news publication for IT decision-makers and professionals. Covers the latest stories, white papers, and forums on software, personal tech, AI & ML, security, networks, and science.",
+      "followers": {
+        "facebook": 28700,
+        "twitter": 102100
+      },
+      "image_url": "https://i1.feedspot.com/8119.jpg?t=1622707951"
+    },
+    {
+      "title": "CIO Dive",
+      "feed_url": "https://www.ciodive.com/feeds/news/",
+      "website_url": "https://www.ciodive.com/",
+      "description": "CIO Dive provides news and analysis for IT executives. We cover big data, IT strategy, cloud computing, security, mobile technology, infrastructure, software, and more.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/4944961.jpg?t=1627297820"
+    },
+    {
+      "title": "Forrester Blog",
+      "feed_url": "https://go.forrester.com/blogs/feed/?x=1",
+      "website_url": "https://go.forrester.com/blogs/",
+      "description": "One of the best Market Research blogs on the web. Forrester supports your critical business and technology decisions with proprietary research, consumer and business data, custom consulting, worldwide events, and peer executive programs. Forrester is one of the most influential research and advisory firms in the world.",
+      "followers": {
+        "facebook": 33200,
+        "twitter": 354300
+      },
+      "image_url": "https://i1.feedspot.com/5010.jpg?t=1615010948"
+    },
+    {
+      "title": "VentureBeat",
+      "feed_url": "https://feeds.feedburner.com/venturebeat/SZYF",
+      "website_url": "https://venturebeat.com/",
+      "description": "VentureBeat is the leading source for transformative tech news and events that provide deep context to help business leaders make smart decisions and stay on top of breaking news. Founded in 2006, it is recognized as the leading media authority in artificial intelligence and machine learning. It also offers the most incisive coverage of the game industry. Dive into their blog and learn more about their tips, services, AI tools, and more.",
+      "followers": {
+        "facebook": 443000,
+        "twitter": 705000,
+        "instagram": 16600
+      },
+      "image_url": "https://i1.feedspot.com/5119372.jpg?t=1627296490"
+    },
+    {
+      "title": "Enterprise Security Tech",
+      "feed_url": "https://www.enterprisesecuritytech.com/blog-feed.xml",
+      "website_url": "https://www.enterprisesecuritytech.com/",
+      "description": "Enterprise Security Tech is a cybersecurity blog for CISOs, CIOs, and CEOs that brings together critical news, expert insights, and product information to help leaders make informed business decisions. It is a technology magazine that speaks about security solutions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5308690.jpg?t=1628079848"
+    },
+    {
+      "title": "IT World Canada",
+      "feed_url": "https://www.itworldcanada.com/feed",
+      "website_url": "https://www.itworldcanada.com/news",
+      "description": "IT World Canada is the leading Canadian online resource for IT professionals working in medium to large enterprises.Daily tech news, product reviews, videos, technology podcasts and features IT professionals who blog on topics of industry interest. They are a privately-owned digital media and content marketing services company. Building on over three decades of solid relationships with Canada's technology decision-makers through award-winning excellence in journalism.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 11800
+      },
+      "image_url": "https://i1.feedspot.com/4969629.jpg?t=1681719011"
+    },
+    {
+      "title": "TechRepublic \u00bb CXO",
+      "feed_url": "https://www.techrepublic.com/rssfeeds/topic/cxo/?feedType=rssfeeds",
+      "website_url": "https://www.techrepublic.com/topic/cxo/",
+      "description": "From breaking IT news to best practices, advice, and how-tos, our global team of tech journalists, industry analysts and real-world IT professionals has the tech market covered like no other site. The TechRepublic team has one simple goal: helping you make great decisions about technology. They help business decision-makers identify technologies and strategies to empower workers and streamline business.",
+      "followers": {
+        "facebook": 886200,
+        "twitter": 220200
+      },
+      "image_url": "https://i1.feedspot.com/4530699.jpg?t=1627294676"
+    },
+    {
+      "title": "R 'Ray' Wang Blog",
+      "feed_url": "https://www.raywang.org/blog/rss.xml",
+      "website_url": "https://www.raywang.org/blog",
+      "followers": {
+        "twitter": 144200
+      },
+      "image_url": "https://i1.feedspot.com/5246566.jpg?t=1712922058"
+    },
+    {
+      "title": "Centre Technologies Blog",
+      "feed_url": "https://blog.centretechnologies.com/rss.xml",
+      "website_url": "https://blog.centretechnologies.com/",
+      "description": "Learn more about innovative technologies, how to overcome IT challenges, and best practices for your business through the assortment of blog articles below.",
+      "followers": {
+        "facebook": 456,
+        "twitter": 260
+      },
+      "image_url": "https://i1.feedspot.com/7297586.jpg?t=1712921463"
+    },
+    {
+      "title": "WEI Blog \u00bb Enterprise Technology",
+      "feed_url": "https://blog.wei.com/rss.xml",
+      "website_url": "https://blog.wei.com/topic/enterprise-technology",
+      "description": "Welcome to the WEI Tech Exchange blog where our subject matter experts exchange ideas, best practices, and insights on enterprise IT technologies and trends.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 620
+      },
+      "image_url": "https://i1.feedspot.com/7297589.jpg?t=1712921485"
+    },
+    {
+      "title": "Enstep Technology Solutions Blog",
+      "feed_url": "https://www.enstep.com/feed/",
+      "website_url": "https://www.enstep.com/blog/",
+      "description": "IT Services, Computer Tech Support,",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 271,
+        "instagram": 60
+      },
+      "image_url": "https://i1.feedspot.com/7297592.jpg?t=1712921509"
+    },
+    {
+      "title": "Prosource Blog",
+      "feed_url": "https://blog.totalprosource.com/rss.xml",
+      "website_url": "https://blog.totalprosource.com/",
+      "description": "Get expert insights and actionable advice on how to leverage technology for your business to improve productivity & security and make your operations more effective, efficient, and competitive.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 751
+      },
+      "image_url": "https://i1.feedspot.com/7297593.jpg?t=1712921515"
+    },
+    {
+      "title": "System Soft Technologies Blog",
+      "feed_url": "https://sstech.us/blogs/feed/",
+      "website_url": "https://sstech.us/blogs/",
+      "description": "Critical Thinking + Collaboration = Success",
+      "followers": {
+        "facebook": 534,
+        "twitter": 361
+      },
+      "image_url": "https://i1.feedspot.com/7297583.jpg?t=1712921450"
+    },
+    {
+      "title": "Innovative Inc. Blog",
+      "feed_url": "https://blog.innovativeinc.net/blog/rss.xml",
+      "website_url": "https://blog.innovativeinc.net/blog",
+      "description": "Learn how technology can maximize your business with a comprehensive IT strategy and support plan.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 314
+      },
+      "image_url": "https://i1.feedspot.com/7297587.jpg?t=1712927136"
+    },
+    {
+      "title": "LTIMindtree Blog",
+      "feed_url": "https://www.ltimindtree.com/feed/",
+      "website_url": "https://www.ltimindtree.com/blogs/",
+      "description": "LTIMindtree",
+      "followers": {
+        "facebook": 61700,
+        "twitter": 157300,
+        "instagram": 35100
+      },
+      "image_url": "https://i1.feedspot.com/7297597.jpg?t=1712927398"
+    },
+    {
+      "title": "Cprime \u00bb Enterprise Technology & Financial Management",
+      "feed_url": "https://www.cprime.com/resources/blog/category/enterprise-technology-financial-management/feed/",
+      "website_url": "https://www.cprime.com/resources/blog/category/enterprise-technology-financial-management/",
+      "description": "Agile Consulting | Agile Coaching | Agile Training | Services | Cprime",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 520
+      },
+      "image_url": "https://i1.feedspot.com/7297582.jpg?t=1712921438"
+    },
+    {
+      "title": "Anderson Technologies Blog",
+      "feed_url": "https://andersontech.com/feed/",
+      "website_url": "https://andersontech.com/blog/",
+      "description": "Enlightened Solutions | Information Technology and System Administration Consultants",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7297594.jpg?t=1712927720"
+    },
+    {
+      "title": "Infinidat Blog",
+      "feed_url": "https://www.infinidat.com/en/rss.xml",
+      "website_url": "https://www.infinidat.com/en/blog",
+      "followers": {
+        "facebook": 796,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/7297595.jpg?t=1712921578"
+    },
+    {
+      "title": "CXOTech Magazine",
+      "feed_url": "https://cxotechmagazine.com/feed/",
+      "website_url": "https://cxotechmagazine.com/",
+      "description": "Explore the Technology Magazine for IT Leaders & Enterprise Solutions. Insight TechMedia Inc. is the parent company of this website. CXOTech is a leading technology magazine that explores the technology and industry issues and shares success stories relevant to IT leaders and managers at industry and organizations evaluating and implementing solutions.",
+      "followers": {
+        "twitter": 905
+      },
+      "image_url": "https://i1.feedspot.com/7296904.jpg?t=1712902927"
+    },
+    {
+      "title": "Enterprise Viewpoint",
+      "feed_url": "https://enterpriseviewpoint.com/feed/",
+      "website_url": "https://enterpriseviewpoint.com/",
+      "description": "Get to know the viewpoints, advice, success stories and original insights from aspiring business leaders across the globe. Home of Enterprise Viewpoint Magazine, they aim to provide a comprehensive platform that supports the growth of young and ambitious entrepreneurs through unique insights and valuable networks.",
+      "followers": {
+        "twitter": 466
+      },
+      "image_url": "https://i1.feedspot.com/7296910.jpg?t=1712902972"
+    },
+    {
+      "title": "Red Herring \u00bb Enterprise",
+      "feed_url": "https://www.redherring.com/category/enterprise/feed/",
+      "website_url": "https://www.redherring.com/category/enterprise/",
+      "description": "Red Herring provides an insider's access to the global innovation economy, featuring unparalleled insights on the emerging enterprise technologies driving the economy. It is a global media company which unites the world's best high technology innovators, venture investors and business decision makers in a variety of forums: a leading innovation magazine, an online daily technology news service, technology newsletters and major events for technology leaders around the globe.",
+      "followers": {
+        "facebook": 28,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5305332.jpg?t=1627297318"
+    },
+    {
+      "title": "Enterprise CIO",
+      "feed_url": "https://www.enterprise-cio.com/feed/",
+      "website_url": "http://www.enterprise-cio.com/",
+      "description": "Enterprise CIO provides news, analysis and opinion on enterprise applications and mobility, MBaaS, BYOD and EMM, as well as CIO strategy. They provide access to the latest thought leadership and operational and strategic developments from across the global apps industry covering mobile security and enterprise mobility management.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5308643.jpg?t=1628061481"
+    },
+    {
+      "title": "ETech 7 Blog",
+      "feed_url": "https://blog.etech7.com/rss.xml",
+      "website_url": "https://blog.etech7.com/",
+      "description": "ETech 7's blog for the latest news, advice, and tips on scaling and automating a business by leveraging the power of information technology.",
+      "followers": {
+        "facebook": 324,
+        "twitter": 561
+      },
+      "image_url": "https://i1.feedspot.com/7297585.jpg?t=1712921457"
+    },
+    {
+      "title": "Enterprise Software Musings by Holger Mueller",
+      "feed_url": "https://enswmu.blogspot.com/feeds/posts/default",
+      "website_url": "https://enswmu.blogspot.com/",
+      "description": "... blogging on what is happening in enterprise software, with a focus on Future of Work and Next Generation Applications, sparkled with occasional musings on the the state of the industry and outlooks where we are heading.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7297590.jpg?t=1712922144"
+    },
+    {
+      "title": "Enterprise Applications Consulting Blog",
+      "feed_url": "https://eaconsult.com/feed/",
+      "website_url": "https://eaconsult.com/mason-blog-page/",
+      "description": "Enterprise Applications Consulting Josh Greenbaum",
+      "followers": {
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/7297588.jpg?t=1712924391"
+    },
+    {
+      "title": "IFS Blog \u00bb Business Technology",
+      "feed_url": "https://blog.ifs.com/topics/business-technology/feed/",
+      "website_url": "https://blog.ifs.com/topics/business-technology/",
+      "description": "Blogs on Technology, Innovation and Creativity",
+      "followers": {
+        "facebook": 25000,
+        "twitter": 10600,
+        "instagram": 43
+      },
+      "image_url": "https://i1.feedspot.com/7297598.jpg?t=1712921555"
+    },
+    {
+      "title": "Linksoft Blog",
+      "feed_url": "https://www.linksft.com/blog-feed.xml",
+      "website_url": "https://www.linksft.com/blogs",
+      "description": "Linksft",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7297591.jpg?t=1712921953"
+    },
+    {
+      "title": "InfoWorld",
+      "feed_url": "https://www.infoworld.com/feed/",
+      "website_url": "https://www.infoworld.com/",
+      "description": "InfoWorld, the leading voice in emerging enterprise technology, is the go-to resource for developers, architects, and business leaders launching next-generation initiatives on scalable cloud platforms, where such future-focused tech as AI or machine learning, big data analytics, and NoSQL databases evolve continuously. Go through their blog and learn more about their careers, events, analytics, and more.",
+      "followers": {
+        "facebook": 72300,
+        "twitter": 88400
+      },
+      "image_url": "https://i1.feedspot.com/4204729.jpg?t=1609393412"
+    },
+    {
+      "title": "TechCrunch \u00bb Enterprise",
+      "feed_url": "https://techcrunch.com/category/enterprise/feed/",
+      "website_url": "https://techcrunch.com/category/enterprise/",
+      "description": "Read the latest enterprise news, from large SaaS providers to funding for small SaaS companies, and products that help startups build their own SaaS from Techcrunch.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/4822258.jpg?t=1752730078"
+    },
+    {
+      "title": "CIO \u00bb IT Strategy",
+      "feed_url": "https://www.cio.com/feed/",
+      "website_url": "https://www.cio.com/it-strategy/",
+      "description": "News, how-tos, features, reviews, and videos. This blog covers topics including big data, cloud, project management, mobile and security. CIO attracts the highest concentration of enterprise CIOs and business technology executives with unparalleled peer insight and expertise on business strategy, innovation, and leadership. CIO readers gain key insights on career development for themselves and their employees, including certifications, hiring practices, and skills development, along with a strong foundation in digital transformation of their businesses.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5305269.jpg?t=1627292904"
+    },
+    {
+      "title": "ZDNET \u00bb Business",
+      "feed_url": "https://www.zdnet.com/topic/business/rss.xml",
+      "website_url": "https://www.zdnet.com/topic/business/",
+      "description": "Disruptive technologies coupled with the pandemic-accelerated work-from-home movement have transformed the way business gets done.",
+      "followers": {
+        "facebook": 281300,
+        "twitter": 456200,
+        "instagram": 19200
+      },
+      "image_url": "https://i1.feedspot.com/5598633.jpg?t=1686814241"
+    },
+    {
+      "title": "Enterprise Technology International Blog",
+      "feed_url": "https://enterpriseti.com/feed/",
+      "website_url": "https://enterpriseti.com/blog/",
+      "description": "Digital solutions for your enterprise",
+      "followers": {
+        "facebook": 305,
+        "twitter": 334
+      },
+      "image_url": "https://i1.feedspot.com/7297584.jpg?t=1712927846"
+    },
+    {
+      "title": "Entrepreneur \u00bb Enterprise Tech",
+      "feed_url": "https://www.entrepreneur.com/topic/enterprise-tech.rss",
+      "website_url": "https://www.entrepreneur.com/topic/enterprise-tech",
+      "description": "The latest news, videos, and discussion topics on Enterprise Tech. Advice, insight, profiles and guides for established and aspiring entrepreneurs worldwide by Entrepreneur. They seeks to inspire, inform and celebrate entrepreneurs and offer real solutions to the challenges you face.",
+      "followers": {
+        "facebook": 42,
+        "twitter": 3600000
+      },
+      "image_url": "https://i1.feedspot.com/5305367.jpg?t=1627301671"
+    },
+    {
+      "title": "Enterprise IT World Blog",
+      "feed_url": "https://www.enterpriseitworld.com/feed/",
+      "website_url": "http://www.enterpriseitworld.com/blog/",
+      "description": "India's Leading IT news #magazine for #CIOs. Follow us to get latest news on Technologies & Solutions influencing the growth of Enterprises. The objective of the company is to support the industry across world and empower by collating right and updated tech information and trends.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5308688.jpg?t=1628070207"
+    },
+    {
+      "title": "TRooTech Blog",
+      "feed_url": "https://www.trootech.com/feed",
+      "website_url": "https://www.trootech.com/blog",
+      "description": "Precisely combining our demonstrated knowledge for Startups & Enterprises through this blog, to make them understand digital strategies, native mobile apps, and the beneficial shape of digital business. TRooTech is home to the best developers for frontend and backend technologies.",
+      "followers": {
+        "facebook": 511,
+        "twitter": 1400,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5388304.jpg?t=1649308189"
+    },
+    {
+      "title": "The Channelist",
+      "feed_url": "https://thechannelist.com/feed/",
+      "website_url": "https://aspencore.com/news/",
+      "description": "Visit The Channelist for fresh IT distribution, enterprise computing and technology news for solution providers. The Channelist's mission is to provide the how to guide for technology providers so that they can build their businesses in this new era of business and technology.",
+      "followers": {
+        "facebook": 27,
+        "twitter": 38
+      },
+      "image_url": "https://i1.feedspot.com/5447406.jpg?t=1664280446"
+    }
+  ]
+}

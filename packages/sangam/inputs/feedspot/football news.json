@@ -1,0 +1,851 @@
+{
+  "category": "Football News",
+  "source_url": "https://rss.feedspot.com/football_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "101 Great Goals",
+      "feed_url": "https://www.101greatgoals.com/feed/",
+      "website_url": "https://www.101greatgoals.com/",
+      "description": "Football news, video, social media news, goal clips, Golazos, match highlights, viral videos, official football videos, transfer news & transfer gossip.",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 183000
+      },
+      "image_url": "https://i1.feedspot.com/4782274.jpg"
+    },
+    {
+      "title": "90min",
+      "feed_url": "https://www.90min.com/posts.rss",
+      "website_url": "https://www.90min.com/",
+      "description": "90min is the world's largest football media platform, bringing you the latest news, fixtures, scores, highlights, stats, transfer rumours, videos and more from the best football events. 90min is the world's largest football community delivering authentic content in 11 languages to more than 50 million fans globally.",
+      "followers": {
+        "facebook": 3900000,
+        "twitter": 262300,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/4592430.jpg?t=1660807242"
+    },
+    {
+      "title": "Soccer News",
+      "feed_url": "https://www.soccernews.com/feed/",
+      "website_url": "https://www.soccernews.com/",
+      "description": "Soccernews.com is more than an ordinary soccer-dedicated website. Whether it is the latest news of the general nature you are after or the transfer dealings you can find in our transfer news and rumors section, filled with up-to-the-minute transfer stories from local sources, Soccernews.com is the place to visit.",
+      "followers": {
+        "facebook": 560200,
+        "instagram": 6700
+      },
+      "image_url": "https://i1.feedspot.com/4448050.jpg?t=1511601410"
+    },
+    {
+      "title": "FootballFanCast",
+      "feed_url": "https://www.footballfancast.com/feed/",
+      "website_url": "https://www.caughtoffside.com/",
+      "description": "The latest football news and blogs from the Premiership, Championship, Serie A, La Liga & International Football.",
+      "followers": {
+        "facebook": 245400,
+        "twitter": 68700,
+        "instagram": 1
+      },
+      "image_url": "https://i1.feedspot.com/4782187.jpg?t=1653126447"
+    },
+    {
+      "title": "CaughtOffside",
+      "feed_url": "https://www.caughtoffside.com/feed/",
+      "website_url": "https://www.caughtoffside.com/",
+      "description": "Football transfer rumours, news, and Gossip from the English Premier League and beyond. Caughtoffside is a leading player in the transfer gossip and football news sector, providing sensationalism (with editorial integrity), insight, and a commitment to stand up to (or poke fun at) the players, managers, clubs, leagues, broadcasters, and owners.",
+      "followers": {
+        "facebook": 14,
+        "twitter": 192500,
+        "instagram": 10500
+      },
+      "image_url": "https://i1.feedspot.com/212.jpg?t=1608624178"
+    },
+    {
+      "title": "Sportslens",
+      "feed_url": "https://sportslens.com/feed/",
+      "website_url": "https://sportslens.com/",
+      "description": "Started in April 2006, Soccerlens was built for football fans who want more than 'just the news'. We aim to entertain, provoke and stimulate, and above all, to celebrate the beautiful game in all its contradictory and passionate glory.",
+      "followers": {
+        "facebook": 281300,
+        "twitter": 21300,
+        "instagram": 619
+      },
+      "image_url": "https://i1.feedspot.com/4782217.jpg?t=1511601270"
+    },
+    {
+      "title": "DasFootball",
+      "feed_url": "https://dasfootball.com/feed/",
+      "website_url": "https://dasfootball.com/",
+      "description": "DasFootball is a premier destination for the latest Football updates, Transfer News Rumours & Football Highlights, all in one place",
+      "followers": {
+        "facebook": 29600,
+        "twitter": 365
+      },
+      "image_url": "https://i1.feedspot.com/5584999.jpg?t=1685421601"
+    },
+    {
+      "title": "Football Post",
+      "feed_url": "https://footballpost.com/feed/",
+      "website_url": "https://footballpost.com/",
+      "description": "Get the latest news and stories as they unfold in the world of football including breaking transfer news and quizzes! Football Post is a news platform providing the latest football news, transfers, and stats daily at your fingertips. Delivering quality content without the typical clickbait which you see too often on the internet these days!",
+      "followers": {
+        "facebook": 128500,
+        "twitter": 10,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/7249011.jpg?t=1707455000"
+    },
+    {
+      "title": "MARCA",
+      "feed_url": "https://e00-marca.uecdn.es/rss/en/index.xml",
+      "website_url": "https://www.marca.com/en/",
+      "description": "Latest sports news, videos, and scores. Everything you need to know about Real Madrid, Barcelona, Messi, Cristiano Ronaldo, and more, can be found on Marca.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 221800
+      },
+      "image_url": "https://i1.feedspot.com/4786824.jpg?t=1635248269"
+    },
+    {
+      "title": "Manchester United",
+      "feed_url": "https://www.manutd.com/Feeds/NewsSecondRSSFeed",
+      "website_url": "https://www.manutd.com/en/news",
+      "description": "Welcome to the Official Manchester United Site. Keep up to date with the latest news and content, engage with the club and fellow supporters.",
+      "followers": {
+        "facebook": 85600000,
+        "twitter": 36500000,
+        "instagram": 65300000
+      },
+      "image_url": "https://i1.feedspot.com/16347.jpg?t=1511602003"
+    },
+    {
+      "title": "Football Italia",
+      "feed_url": "https://football-italia.net/feed/",
+      "website_url": "https://football-italia.net/",
+      "description": "Football Italia is the number one resource for Italian football news in English, along with the best in Calcio blogging. Italian football news, analysis, fixtures and results for the latest from Serie A, Serie B and the Azzurri.",
+      "followers": {
+        "facebook": 24100,
+        "twitter": 196200
+      },
+      "image_url": "https://i1.feedspot.com/4782140.jpg?t=1628747730"
+    },
+    {
+      "title": "Arseblog",
+      "feed_url": "https://arseblog.com/feed",
+      "website_url": "https://arseblog.com/",
+      "description": "The award winning, original Arsenal blog. Home of the Arsecast, the Arsenal podcast. The best Arsenal news, opinion, transfer stories, podcasts, videos and content 24/7.",
+      "followers": {
+        "facebook": 448500,
+        "twitter": 435400,
+        "instagram": 73400
+      },
+      "image_url": "https://i1.feedspot.com/4765081.jpg?t=1753081149"
+    },
+    {
+      "title": "Ghanasoccernet.com",
+      "feed_url": "https://ghanasoccernet.com/rss",
+      "website_url": "https://ghanasoccernet.com/",
+      "description": "Ghana football, Ghana soccer, Ghana football news, scores, stats, and features from the Ghana's leading football website, Ghanasoccernet.com.",
+      "followers": {
+        "facebook": 393400,
+        "twitter": 245900
+      },
+      "image_url": "https://i1.feedspot.com/2204697.jpg?t=1544174648"
+    },
+    {
+      "title": "Fan Banter",
+      "feed_url": "https://fanbanter.co.uk/feed/",
+      "website_url": "https://fanbanter.co.uk/",
+      "description": "The latest news, videos and banter from the English football terraces includes fan videos and reaction to the hottest talking points.",
+      "followers": {
+        "twitter": 13600,
+        "instagram": 583
+      },
+      "image_url": "https://i1.feedspot.com/5089862.jpg?t=1653137214"
+    },
+    {
+      "title": "My Football Facts",
+      "feed_url": "https://www.myfootballfacts.com/feed/",
+      "website_url": "https://www.myfootballfacts.com/articles/",
+      "description": "My Football Facts & Stats is the leading source of football stats for all your football trivia, football results, football scores, and football news.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5121639.jpg?t=1582002049"
+    },
+    {
+      "title": "SBI Soccer",
+      "feed_url": "https://sbisoccer.com/feed",
+      "website_url": "https://sbisoccer.com/",
+      "description": "Soccer news website covering the sport from an American perspective, while also providing news and analysis on the international game as well.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 8800,
+        "instagram": 662
+      },
+      "image_url": "https://i1.feedspot.com/4465586.jpg?t=1608624306"
+    },
+    {
+      "title": "The Cult of Calcio",
+      "feed_url": "https://cultofcalcio.com/feed/",
+      "website_url": "https://cultofcalcio.com/",
+      "description": "If you are passionate about football in Italy, here's your privileged window on its stories, brought to you in English by Italians themselves. We Italians look at football just the way we look at food: It's a sublime pleasure, a matter of life and death, and a source of countless discussions.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 579,
+        "instagram": 606
+      },
+      "image_url": "https://i1.feedspot.com/5128012.jpg?t=1583748470"
+    },
+    {
+      "title": "Browns Nation",
+      "feed_url": "https://www.brownsnation.com/feed/",
+      "website_url": "https://www.brownsnation.com/",
+      "description": "Your #1 Resource for Cleveland Browns news, updates, rumors, trades, signings, injuries, commentary, analysis, and more!",
+      "followers": {
+        "facebook": 39900,
+        "twitter": 8400,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5076996.jpg?t=1620985795"
+    },
+    {
+      "title": "World Soccer",
+      "feed_url": "https://www.worldsoccer.com/feed",
+      "website_url": "https://www.worldsoccer.com/",
+      "description": "The best writers, analytical features and the ability to deliver the inside-track on domestic and world football have made World Soccer an institution.",
+      "followers": {
+        "facebook": 118700,
+        "twitter": 27000
+      },
+      "image_url": "https://i1.feedspot.com/1109883.jpg"
+    },
+    {
+      "title": "e360hub",
+      "feed_url": "https://www.e360hubs.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.e360hubs.com/",
+      "description": "All Nigeria Football Accurate Latest news, transfer news today website, preview, Music/Video Live streaming, and highlight. Founded in 2018 by Henry, E360hub is the best sporting site in the world, we bring you the best of football news both countries and clubs, players' lifestyles, transfer news, and more. Stay updated on Football news and Betting Tips prediction, match day previews, and highlights, transfer news, livescore.",
+      "followers": {
+        "facebook": 140100,
+        "twitter": 40700
+      },
+      "image_url": "https://i1.feedspot.com/5040972.jpg?t=1603896852"
+    },
+    {
+      "title": "CheapGoals",
+      "feed_url": "https://cheapgoals.com/feed/",
+      "website_url": "https://cheapgoals.com/",
+      "description": "Cheapgoals focus on simple access to the latest football articles, news & live score. You can also find accurate soccer predictions.",
+      "followers": {
+        "facebook": 502,
+        "twitter": 451,
+        "instagram": 240
+      },
+      "image_url": "https://i1.feedspot.com/5241231.jpg?t=1613633089"
+    },
+    {
+      "title": "Talk Chelsea",
+      "feed_url": "https://www.talkchelsea.net/feed/",
+      "website_url": "https://www.talkchelsea.net/",
+      "description": "The number one Chelsea blog for news, fan based opinions, transfer stories, stats, videos and much more.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 243300,
+        "instagram": 864000
+      },
+      "image_url": "https://i1.feedspot.com/4757448.jpg?t=1608549757"
+    },
+    {
+      "title": "RossoneriBlog",
+      "feed_url": "https://www.rossoneriblog.com/feed/",
+      "website_url": "https://www.rossoneriblog.com/",
+      "description": "Rossoneri Blog is the leading website for Milan news in English, providing daily updates to thousands of readers each day.",
+      "followers": {
+        "facebook": 35100,
+        "twitter": 47200
+      },
+      "image_url": "https://i1.feedspot.com/2393059.jpg?t=1608624258"
+    },
+    {
+      "title": "Equalizer Soccer \u00bb USWNT",
+      "feed_url": "https://equalizersoccer.com/feed/",
+      "website_url": "https://equalizersoccer.com/category/uswnt/",
+      "description": "The Equalizer was founded in 2009 with a goal of bringing first-class media coverage to women's soccer. Since then we've brought you breaking news, in-depth analysis and everything you need to follow Women's Professional Soccer, the U.S. Women's National Team and more.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 35700,
+        "instagram": 12100
+      },
+      "image_url": "https://i1.feedspot.com/804440.jpg?t=1617702252"
+    },
+    {
+      "title": "13Football",
+      "feed_url": "https://13football.com/feed/",
+      "website_url": "https://13football.com/",
+      "description": "Find all the latest football news,fixtures, transfer news and all the football videos on this site.",
+      "followers": {
+        "facebook": 17300
+      },
+      "image_url": "https://i1.feedspot.com/4786413.jpg"
+    },
+    {
+      "title": "The Women's Game",
+      "feed_url": "https://thewomensgame.com/rss",
+      "website_url": "https://thewomensgame.com/",
+      "description": "Women's football news from Australia",
+      "followers": {
+        "facebook": 19600,
+        "twitter": 18600,
+        "instagram": 11300
+      },
+      "image_url": "https://i1.feedspot.com/4784972.jpg?t=1653137640"
+    },
+    {
+      "title": "Sahara Football",
+      "feed_url": "https://www.saharafootball.net/feed/",
+      "website_url": "https://www.saharafootball.net/",
+      "description": "Get the Latest on the Ghana Premier League and Football news all around the world. News, Highlights, and football activities.",
+      "followers": {
+        "facebook": 129100,
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5409881.jpg?t=1655118643"
+    },
+    {
+      "title": "Realmadridnews.com",
+      "feed_url": "http://www.realmadridnews.com/feed",
+      "website_url": "https://www.realmadridnews.com/",
+      "description": "Real Madrid news, transfer rumours, schedules, videos, blogs, and more. Our aim is to provide an up-to-date resource, and we'll bring you news, match reports, analysis, commentaries, and more. We hope to bring fans together from all different walks of life from all over the world to share their views on all things Los Merengues.",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4465750.jpg?t=1608624649"
+    },
+    {
+      "title": "This Is Anfield",
+      "feed_url": "https://www.thisisanfield.com/feed/",
+      "website_url": "https://www.thisisanfield.com/",
+      "description": "Liverpool FC news, opinion and videos updated daily with LFC photographs, fixtures, match reports, football quizzes, features and discussion from Anfield.",
+      "followers": {
+        "facebook": 1900000,
+        "twitter": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/4763132.jpg?t=1608636667"
+    },
+    {
+      "title": "JuveFC",
+      "feed_url": "https://www.juvefc.com/feed/",
+      "website_url": "https://www.juvefc.com/",
+      "description": "All the latest Juventus news, Juventus transfer updates, match reports, statistics, fixtures, and much more - Made for Juve fans for Juve fans.",
+      "followers": {
+        "facebook": 122000,
+        "twitter": 147600
+      },
+      "image_url": "https://i1.feedspot.com/4465757.jpg?t=1608624193"
+    },
+    {
+      "title": "1000Goals",
+      "feed_url": "https://www.1000goals.com/feed/",
+      "website_url": "https://www.1000goals.com/",
+      "description": "Football highlights & scores, soccer news, and betting blog. 1000Goals is a one-stop-shop for all general Football as well as betting experts, featuring thorough global Football coverage as well as insightful Betting strategies and tricks.",
+      "followers": {
+        "facebook": 7300,
+        "twitter": 92
+      },
+      "image_url": "https://i1.feedspot.com/226.jpg?t=1608624508"
+    },
+    {
+      "title": "Premier League News Now",
+      "feed_url": "https://premierleaguenewsnow.com/feed/",
+      "website_url": "https://premierleaguenewsnow.com/",
+      "description": "At Premier League News Now, we provide you with the latest English Premier League club updates. We consistently update about EPL fixtures, player injuries, transfer news & rumours and much more. Stay tuned with us for all happenings in England.",
+      "followers": {
+        "facebook": 883,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5319774.jpg?t=1630997084"
+    },
+    {
+      "title": "The Mag",
+      "feed_url": "https://www.themag.co.uk/feed/",
+      "website_url": "https://www.themag.co.uk/",
+      "description": "The Mag is the independent voice of Newcastle United Football Club(NUFC). Follow to keep up with news, opinion, match reports, videos, and statistics about NUFC.",
+      "followers": {
+        "facebook": 8200,
+        "twitter": 29100
+      },
+      "image_url": "https://i1.feedspot.com/4784778.jpg?t=1534827556"
+    },
+    {
+      "title": "Nigeria Football Federation",
+      "feed_url": "https://thenff.com/feed/",
+      "website_url": "https://thenff.com/",
+      "description": "This is the official website of the Nigeria Football Federation. Find the latest news, interact and discuss about happenings in the Nigeria Football Scene.",
+      "followers": {
+        "facebook": 618600,
+        "twitter": 575600
+      },
+      "image_url": "https://i1.feedspot.com/4784958.jpg"
+    },
+    {
+      "title": "Shoot Magazine",
+      "feed_url": "https://www.shoot.co.uk/feed/",
+      "website_url": "https://www.shoot.co.uk/",
+      "description": "Shoot first hit the shelves as a weekly publication on August 16th, 1969, and quickly became the UK's most popular football magazine. Currently the UK's leading football Annual, we have a new website with news, features, interviews, profiles, videos, quizzes, competitions, and great features.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 13400
+      },
+      "image_url": "https://i1.feedspot.com/4786842.jpg?t=1628747748"
+    },
+    {
+      "title": "Footiehound",
+      "feed_url": "https://footiehound.com/feed/",
+      "website_url": "https://footiehound.com/",
+      "description": "Enjoy football news from around the world and win big from one of the football predictions sites that predicts football matches correctly.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 194
+      },
+      "image_url": "https://i1.feedspot.com/4969522.jpg"
+    },
+    {
+      "title": "Footballys",
+      "feed_url": "https://www.footballys.com/feeds/posts/default",
+      "website_url": "https://www.footballys.com/",
+      "description": "The latest football transfer news, fixtures, scores, breaking transfer rumours and news updates. Find all the latest transfer news here from around the world, and much more.",
+      "followers": {
+        "facebook": 63200,
+        "twitter": 741
+      },
+      "image_url": "https://i1.feedspot.com/5228133.jpg?t=1608128032"
+    },
+    {
+      "title": "Filipino Football",
+      "feed_url": "https://feeds.feedburner.com/blogspot/Fkjku",
+      "website_url": "http://filipinofootball.blogspot.com/",
+      "description": "Filipino Football covers Philippines Football. Get Football news from Philippines since 7 years on Filipino Football",
+      "followers": {
+        "twitter": 6300
+      },
+      "image_url": "https://i1.feedspot.com/4465566.jpg?t=1672729107"
+    },
+    {
+      "title": "Scottish Womens Football",
+      "feed_url": "https://scotwomensfootball.com/feed/",
+      "website_url": "https://scotwomensfootball.com/",
+      "description": "The official site of Scottish Women's Football. Latest news from the girl's and women's game in Scotland.",
+      "followers": {
+        "twitter": 19500
+      },
+      "image_url": "https://i1.feedspot.com/4784936.jpg?t=1611915578"
+    },
+    {
+      "title": "Get German Football News",
+      "feed_url": "https://www.getfootballnewsgermany.com/feed/",
+      "website_url": "https://www.getfootballnewsgermany.com/",
+      "description": "Get German Football News is your home for English Language coverage of all things German Football.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 69200,
+        "instagram": 750
+      },
+      "image_url": "https://i1.feedspot.com/4784895.jpg?t=1511338139"
+    },
+    {
+      "title": "Football Action",
+      "feed_url": "https://footballaction.co.uk/feed",
+      "website_url": "https://footballaction.co.uk/",
+      "description": "Keeping you an up to date with latest football stories and transfer speculations across the European leagues - Premiership, La Liga, Serie A and Bundesliga.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 81
+      },
+      "image_url": "https://i1.feedspot.com/4466141.jpg?t=1613726175"
+    },
+    {
+      "title": "Up The Hammers",
+      "feed_url": "https://feeds.feedburner.com/WestHamUnitedFootballClub-LatestHammersNews",
+      "website_url": "https://www.upthehammers.co.uk/",
+      "description": "All the latest & breaking news for West Ham United FC.Find breaking news, transfer gossip, thoughts about the last game, or even the next game on this site.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4786660.jpg"
+    },
+    {
+      "title": "Football Team News",
+      "feed_url": "https://www.footballteamnews.com/rss",
+      "website_url": "https://www.footballteamnews.com/football-blog/all",
+      "description": "Football Team News. Providing comprehensive match previews, reports, analysis, news and statistics. Discover more now!",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 380
+      },
+      "image_url": "https://i1.feedspot.com/4981511.jpg?t=1608625560"
+    },
+    {
+      "title": "On The Ponty End",
+      "feed_url": "https://feeds.feedburner.com/otpe",
+      "website_url": "https://www.onthepontyend.com/",
+      "description": "A blog dedicated to Barnsley Football Club. Featuring news, opinions and regular contributions from genuine supporters. Join the Super Reds debate.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5042540.jpg"
+    },
+    {
+      "title": "GoalBall",
+      "feed_url": "https://goalballlive.com/feed/",
+      "website_url": "https://goalballlive.com/",
+      "description": "Goalball is Nigeria's most accurate football news website, bringing all Nigeria football news, football updates, live scores, transfer news,etc.",
+      "followers": {
+        "facebook": 289
+      },
+      "image_url": "https://i1.feedspot.com/4978819.jpg?t=1546854806"
+    },
+    {
+      "title": "FootTheBall",
+      "feed_url": "https://www.foottheball.com/feed/",
+      "website_url": "https://www.foottheball.com/",
+      "description": "FootTheBall (FTB) Brings You Latest Football Soccer News, English Premier League, La Liga News, Transfer, Gossip, WAGs News, Live Scores, Results, Fixtures, Videos & More.",
+      "followers": {
+        "facebook": 333700,
+        "twitter": 392,
+        "instagram": 70000
+      },
+      "image_url": "https://i1.feedspot.com/4835984.jpg?t=1517227514"
+    },
+    {
+      "title": "Dirty South Soccer",
+      "feed_url": "https://www.dirtysouthsoccer.com/rss/current.xml",
+      "website_url": "https://www.dirtysouthsoccer.com/",
+      "description": "Dirty South Soccer blog is a source for Atlanta United news, analysis, rumors, and banter.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 24200
+      },
+      "image_url": "https://i1.feedspot.com/4785108.jpg?t=1610692910"
+    },
+    {
+      "title": "Howler Magazine",
+      "feed_url": "https://www.whatahowler.com/feed/",
+      "website_url": "https://www.whatahowler.com/",
+      "description": "A magazine about soccer.It was established in the year July 2012.Find all the recent and latest news, updates of soccer on this site.",
+      "followers": {
+        "facebook": 8100,
+        "twitter": 22900,
+        "instagram": 15000
+      },
+      "image_url": "https://i1.feedspot.com/4785746.jpg?t=1511517931"
+    },
+    {
+      "title": "La Liga Blog",
+      "feed_url": "http://laligablog.com/feed/",
+      "website_url": "http://laligablog.com/",
+      "description": "Your daily source of Spanish La Liga football results, and La Liga Soccer news, views, league tables, fixtures, results and opinion.",
+      "followers": {
+        "facebook": 11800,
+        "twitter": 17300
+      },
+      "image_url": "https://i1.feedspot.com/4465923.jpg?t=1618470907"
+    },
+    {
+      "title": "The Spoiler",
+      "feed_url": "https://thespoiler.co.uk/feed/",
+      "website_url": "https://thespoiler.co.uk/news/",
+      "description": "Thespoiler.co.uk provides daily football news and opens the world of football betting like never before.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4785755.jpg"
+    },
+    {
+      "title": "Football Weeks",
+      "feed_url": "https://www.footballweeks.com/feed/",
+      "website_url": "https://www.footballweeks.com/",
+      "description": "Football Weeks is an online football news portal updated with insightful opinions and analysis related to top football leagues.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 56
+      },
+      "image_url": "https://i1.feedspot.com/4771629.jpg?t=1608625211"
+    },
+    {
+      "title": "Wild East Football",
+      "feed_url": "https://wildeastfootball.net/feed/",
+      "website_url": "https://wildeastfootball.net/",
+      "description": "A website about Chinese football, in English. Wild East Football offers news, views and analysis of Chinese football in English from a fairly unique perspective.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 6200
+      },
+      "image_url": "https://i1.feedspot.com/4766822.jpg?t=1664530330"
+    },
+    {
+      "title": "Ogbongefootballnews we talk Football",
+      "feed_url": "https://ogbongeboy.blogspot.com/feeds/posts/default",
+      "website_url": "https://ogbongeboy.blogspot.com/",
+      "description": "This is the place for your latest transfer news, football articles, latest Chelsea news, latest football scores,we talk Chelsea,we talk football.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5221982.jpg?t=1606916515"
+    },
+    {
+      "title": "A Different League",
+      "feed_url": "https://www.adifferentleague.co.uk/feed/",
+      "website_url": "https://www.adifferentleague.co.uk/",
+      "description": "A Different League was launched in April 2009 with the goal of providing news, opinion and comment on Premier League and international football.",
+      "followers": {
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4785696.jpg?t=1511417457"
+    },
+    {
+      "title": "Goal.com",
+      "feed_url": "https://www.goal.com/en?ICID=HP",
+      "website_url": "https://www.goal.com/en?ICID=HP",
+      "description": "The latest football news, live scores, results, rumours, transfers, fixtures, tables and player profiles from around the world, including World Cup.",
+      "followers": {
+        "facebook": 24400000,
+        "twitter": 10100000
+      },
+      "image_url": "https://i1.feedspot.com/2446120.jpg?t=1608624377"
+    },
+    {
+      "title": "GhanaSoccernet",
+      "feed_url": "https://ghanasoccernet.com/feed",
+      "website_url": "https://ghanasoccernet.com/football-ghana",
+      "description": "FootballGhana.com brings to you the latest news on Ghana soccer, soccer, Ghana league, league Sunday, England league, league fantasy, Spain league, Italy league, France league, Nigeria league, Germany league, Egypt league, fantasy football, English football, English football league, football, world football, football news, etc.",
+      "followers": {
+        "facebook": 51400,
+        "twitter": 30100
+      },
+      "image_url": "https://i1.feedspot.com/4793717.jpg?t=1623397416"
+    },
+    {
+      "title": "Sambafoot",
+      "feed_url": "https://www.sambafoot.com/",
+      "website_url": "https://www.sambafoot.com/",
+      "description": "All About Brazilian Football. Sambafoot is an international association football news website for all things Brazilian football. We are the number one resource for Brazilian football fans to stay updated through the latest news, live scores, pictures, interviews, and videos. Our aim is to remain the most complete database on Brazilian football as always.",
+      "followers": {
+        "facebook": 331100,
+        "twitter": 6900,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5218607.jpg?t=1606126075"
+    },
+    {
+      "title": "Man City News",
+      "feed_url": "https://mancitynews.com/feed/",
+      "website_url": "https://mancitynews.com/",
+      "description": "The latest Manchester City FC news, match previews and reports, man city transfer news plus Manchester City FC blog posts from around the world, updated 24 hours a day.",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 201
+      },
+      "image_url": "https://i1.feedspot.com/4785979.jpg?t=1626088595"
+    },
+    {
+      "title": "CalcioMercato.com",
+      "feed_url": "https://www.calciomercato.com/en/feed",
+      "website_url": "https://www.calciomercato.com/",
+      "description": "Calciomercato.com is the best italian site about football: transfer market news and rumors, focus on italian football teams matches.",
+      "followers": {
+        "facebook": 435000,
+        "twitter": 217000
+      },
+      "image_url": "https://i1.feedspot.com/4785041.jpg"
+    },
+    {
+      "title": "Ivisionsport",
+      "feed_url": "https://ivisionsport.com/feed/",
+      "website_url": "https://www.teamtalk.com/",
+      "description": "Here you will find the latest football news, fixtures, videos, scores, teams, and more. Stay up-to-date with the latest football news.",
+      "followers": {
+        "facebook": 15
+      },
+      "image_url": "https://i1.feedspot.com/5239096.jpg?t=1611576047"
+    },
+    {
+      "title": "TEAMtalk",
+      "feed_url": "https://www.teamtalk.com/",
+      "website_url": "https://www.teamtalk.com/",
+      "description": "Teamtalk is a leading UK football destination for fans of seeking latest Football News, Results and Fixtures",
+      "followers": {
+        "facebook": 210900,
+        "twitter": 92500
+      },
+      "image_url": "https://i1.feedspot.com/4749996.jpg?t=1511591127"
+    },
+    {
+      "title": "SoccerGator",
+      "feed_url": "https://soccergator.io/feed/",
+      "website_url": "https://soccergator.io/",
+      "description": "SoccerGator is a sports website covering soccer from the top leagues around the world. The site covers the Champions League, Premier League, La Liga, Serie A, and other top teams through a mix of long-form content, short-form content, and original reporting. We aim to provide sports fans with accurate and entertaining soccer stories.",
+      "followers": {
+        "facebook": 590,
+        "instagram": 9400
+      },
+      "image_url": "https://i1.feedspot.com/5609645.jpg?t=1687861055"
+    },
+    {
+      "title": "Football Talk",
+      "feed_url": "https://www.footballtalk.org/feed/",
+      "website_url": "https://www.footballtalk.org/",
+      "description": "On FootballTalk.org, you can check out the latest football news, interesting football stories, transfer news and gossips from the major football leagues.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 91,
+        "instagram": 31
+      },
+      "image_url": "https://i1.feedspot.com/5003312.jpg"
+    },
+    {
+      "title": "MLSsoccer.com",
+      "feed_url": "https://www.mlssoccer.com/",
+      "website_url": "https://www.mlssoccer.com/",
+      "description": "Major League Soccer is a men's professional soccer league, sanctioned by U.S. Soccer, that represents the sport's highest level in both the United States and Canada.Find all the latest news, stories, highlights, videos on this site.",
+      "followers": {
+        "facebook": 100,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/4786581.jpg?t=1653133458"
+    },
+    {
+      "title": "Squawka",
+      "feed_url": "https://www.squawka.com/en/news/",
+      "website_url": "https://www.squawka.com/en/news/",
+      "description": "The home of Football news, Transfer and Club news.Football stats, graphics and analysis covering the Premier League, Championship, La Liga, Bundesliga, Serie A, Ligue 1 and more.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1200000,
+        "instagram": 555000
+      },
+      "image_url": "https://i1.feedspot.com/4784868.jpg?t=1614668337"
+    },
+    {
+      "title": "Southampton FC",
+      "feed_url": "https://www.southamptonfc.com/en/news/latest-news",
+      "website_url": "https://www.southamptonfc.com/en/news/latest-news",
+      "description": "The latest news from Southampton FC. Check fixtures, tickets, league table, club shop & more. Plus, listen to live match commentary.",
+      "followers": {
+        "facebook": 3500000,
+        "twitter": 1600000,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/4786048.jpg?t=1626095338"
+    },
+    {
+      "title": "Who Ate all the Pies",
+      "feed_url": "http://www.whoateallthepies.tv/feed",
+      "website_url": "https://whoateallthepies.tv/",
+      "description": "Catch the most recent Premier League football news, photos, rumors, gossip, WAGs, transfers, and all at whoateallthepies.tv, football-centric news, and gossip website dedicated to uncovering any and everything juicy about league football.",
+      "followers": {
+        "facebook": 14500,
+        "twitter": 18500
+      },
+      "image_url": "https://i1.feedspot.com/68489.jpg?t=1608624372"
+    },
+    {
+      "title": "Football Extras",
+      "feed_url": "https://www.footballextras.net/feed/",
+      "website_url": "https://www.football365.com/",
+      "description": "Football Extras is a football blog features the top football news and transfer rumours from around the world.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 186
+      },
+      "image_url": "https://i1.feedspot.com/4466136.jpg?t=1608624632"
+    },
+    {
+      "title": "Football Shoot",
+      "feed_url": "https://www.footballshoot.com/feed/",
+      "website_url": "https://www.football365.com/",
+      "description": "Bringing the latest football news, reactions, and rumor from the UK papers. The newest football stories and blogs from the premier league, Bundesliga, la Liga & much more! We are dedicated to providing top-notch football news, views, and much more. We also serve as a community for like-minded football fans to come together to showcase their passion. The aim of the FootballShoot blog is to provide an unbiased view and analyze the ' beautiful game ' with a degree of balance.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 97
+      },
+      "image_url": "https://i1.feedspot.com/4466145.jpg?t=1608625466"
+    },
+    {
+      "title": "Football365",
+      "feed_url": "https://www.football365.com/",
+      "website_url": "https://www.football365.com/",
+      "description": "Football365.com covers British and European football. Find Football News, Views, Gossip and much more.",
+      "followers": {
+        "facebook": 529100,
+        "twitter": 76700
+      },
+      "image_url": "https://i1.feedspot.com/4750057.jpg?t=1511601492"
+    },
+    {
+      "title": "Sporting Post",
+      "feed_url": "https://www.sportingpost.com/",
+      "website_url": "https://www.sportingpost.com/",
+      "description": "Football news, views, rumour and humour: All the latest football news, transfer gossip, videos and photos from the Premier League and beyond.",
+      "followers": {
+        "facebook": 18300,
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/952192.jpg"
+    },
+    {
+      "title": "The Football Saga",
+      "feed_url": "https://thefootballsaga.com/feed/",
+      "website_url": "https://authory.com/MarkPitman",
+      "description": "Our aim is to make sure to come up with the exclusive footy news and the latest happenings on the football. Moreover, this blog allows you to keep up to date with latest news and headlines of football world.",
+      "followers": {
+        "twitter": 156
+      },
+      "image_url": "https://i1.feedspot.com/4466183.jpg"
+    },
+    {
+      "title": "Mark Pitman",
+      "feed_url": "https://authory.com/MarkPitman",
+      "website_url": "https://authory.com/MarkPitman",
+      "description": "Mark Pitman is a Freelance football correspondent | columnist | journalist. Reporter for the Football Association of Wales and UEFA.com.",
+      "followers": {
+        "facebook": 339,
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/5031697.jpg?t=1560928939"
+    },
+    {
+      "title": "Maldivesoccer.com",
+      "feed_url": "http://maldivesoccer.com/feed",
+      "website_url": "http://maldivesoccer.com/",
+      "description": "Being the very first website dedicated exclusively to football in the Maldives, we aim to bring the best and the latest news to our readers.",
+      "followers": {
+        "facebook": 21200,
+        "twitter": 247
+      },
+      "image_url": "https://i1.feedspot.com/4786620.jpg?t=1511516768"
+    },
+    {
+      "title": "ScoreRush",
+      "feed_url": "https://scorerush.blogspot.com/feeds/posts/default",
+      "website_url": "https://scorerush.blogspot.com/",
+      "description": "ScoreRush is a football score provider and live news website that gives accurate news and live scores. Stay up-to-date on all your favorite football leagues, friendlies, and tournaments.",
+      "followers": {
+        "twitter": 318
+      },
+      "image_url": "https://i1.feedspot.com/5401123.jpg?t=1652790319"
+    },
+    {
+      "title": "TottenhamBlog",
+      "feed_url": "https://www.tottenhamblog.com/feed/",
+      "website_url": "http://www.tottenhamblog.com/",
+      "description": "Find all the latest news, transfers, opinions, and much more on this site. TottenhamBlog.com exists as the comprehensive onde-stop destination for all Spurs aficionados to come together and learn of the latest development regarding the team. Find news, opinion articles, and more content.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 836
+      },
+      "image_url": "https://i1.feedspot.com/718078.jpg?t=1608624264"
+    }
+  ]
+}

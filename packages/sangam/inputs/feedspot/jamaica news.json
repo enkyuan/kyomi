@@ -1,0 +1,93 @@
+{
+  "category": "Jamaica News",
+  "source_url": "https://rss.feedspot.com/jamaica_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Loop News \u00bb Jamaica",
+      "feed_url": "https://www.loopnews.com/news/feed/",
+      "website_url": "https://www.loopnews.com/news/jamaica/",
+      "description": "Loop News is the number one source for Caribbean-wide, local and global content. We provide the best coverage of news, sports, entertainment, lifestyle, business, community and events. With our dedicated team of journalists working locally in each market, we strive to bring all the breaking and most up-to-date coverage from a team you can trust.",
+      "followers": {
+        "facebook": 222200,
+        "twitter": 123400,
+        "instagram": 152200
+      },
+      "image_url": "https://i1.feedspot.com/5354584.jpg?t=1639728887"
+    },
+    {
+      "title": "Jamaica Information Service",
+      "feed_url": "https://jis.gov.jm/feed/",
+      "website_url": "https://jis.gov.jm/",
+      "description": "The Jamaica Information Service (JIS) keeps you in the know about Government's policies and programmes. You can depend on us to cover the work of Ministries, Departments and Agencies right across the island.",
+      "followers": {
+        "facebook": 324900,
+        "twitter": 99600,
+        "instagram": 154500
+      },
+      "image_url": "https://i1.feedspot.com/5354582.jpg?t=1639727584"
+    },
+    {
+      "title": "Jamaicans.com",
+      "feed_url": "https://jamaicans.com/feed/",
+      "website_url": "https://jamaicans.com/",
+      "description": "Jamaicans.com is the leading website covering news, travel, culture, and politics in Jamaica and the Caribbean. Explore the best Jamaica has to offer with Top culture articles, Random Jamaican recipes, and Language articles. Stay up-to-date on the latest news, events, and culture from the island.",
+      "followers": {
+        "facebook": 246100,
+        "twitter": 13200
+      },
+      "image_url": "https://i1.feedspot.com/4980264.jpg?t=1639729618"
+    },
+    {
+      "title": "McKoysNews",
+      "feed_url": "https://mckoysnews.com/feed/",
+      "website_url": "https://mckoysnews.com/",
+      "description": "McKoysNews.com is the number one Jamaican online news portal. We bring you the latest news as they happen from around Jamaica and all over the world.",
+      "followers": {
+        "facebook": 28200,
+        "twitter": 579
+      },
+      "image_url": "https://i1.feedspot.com/5354580.jpg?t=1639728722"
+    },
+    {
+      "title": "Jamaican Times",
+      "feed_url": "http://feeds.jamaicantimes.com/rss/8fdef8065235cb7f",
+      "website_url": "https://www.jamaicantimes.com/",
+      "description": "Jamaican Times is a major online newspaper in Jamaica focusing on local events and developments in one of the most popular island nations in the Caribbean, with a dual focus on local readers, as well as international readers.",
+      "followers": {
+        "facebook": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5354578.jpg?t=1639728632"
+    },
+    {
+      "title": "Jamaica News.Net",
+      "feed_url": "http://feeds.jamaicanews.net/rss/8fdef8065235cb7f",
+      "website_url": "https://www.jamaicanews.net/",
+      "description": "Jamaica News.Net takes all the news produced on or in Jamaica and collates it online so that readers have an easily accessible daily digest of news relevant to their country of interest.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 33
+      },
+      "image_url": "https://i1.feedspot.com/5354577.jpg?t=1639728488"
+    },
+    {
+      "title": "Jamaica Inquirer",
+      "feed_url": "https://jamaicainquirer.com/feed/",
+      "website_url": "https://jamaicainquirer.com/",
+      "description": "Your source for daily news from Jamaica, the Caribbean and the world.",
+      "followers": {
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/5354579.jpg?t=1639729726"
+    },
+    {
+      "title": "ABENG365",
+      "feed_url": "https://abengnews.com/feed/",
+      "website_url": "https://abengnews.com/",
+      "description": "We are a Caribbean-centric electronic publication with a global focus, that targets a community of discerning readers on every continent. The weekly online publication showcases features, news analysis, commentary and the arts from a growing global network of correspondents, with a decidedly Caribbean/Jamaican flavor.",
+      "followers": {
+        "facebook": 245
+      },
+      "image_url": "https://i1.feedspot.com/5354583.jpg?t=1639728437"
+    }
+  ]
+}

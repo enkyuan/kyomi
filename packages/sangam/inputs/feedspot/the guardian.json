@@ -1,0 +1,526 @@
+{
+  "category": "The Guardian",
+  "source_url": "https://rss.feedspot.com/theguardian_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Guardian \u00bb World",
+      "feed_url": "https://www.theguardian.com/world/rss",
+      "website_url": "https://www.theguardian.com/world",
+      "description": "Latest World news news, comment, and analysis from the Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4469575.jpg?t=1615377416"
+    },
+    {
+      "title": "The Guardian \u00bb UK",
+      "feed_url": "https://www.theguardian.com/uk-news/rss",
+      "website_url": "https://www.theguardian.com/uk-news",
+      "description": "The Guardian's UK news section covers a wide range of topics pertinent to the United Kingdom, including breaking news, politics, business, technology, culture, and more. It provides in-depth reporting and analysis on national events, political developments, and societal issues. The section also features opinions and editorials, offering diverse perspectives on current affairs.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4455856.jpg?t=1615377370"
+    },
+    {
+      "title": "The Guardian \u00bb US Politics",
+      "feed_url": "https://www.theguardian.com/us-news/us-politics/rss",
+      "website_url": "https://www.theguardian.com/us-news/us-politics",
+      "description": "Latest US politics news, comment and analysis from the Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Coronavirus Outbreak",
+      "feed_url": "https://www.theguardian.com/world/coronavirus-outbreak/rss",
+      "website_url": "https://www.theguardian.com/world/coronavirus-outbreak",
+      "description": "Latest Coronavirus outbreak news, comment, and analysis from the Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/5130356.jpg?t=1625560054"
+    },
+    {
+      "title": "The Guardian \u00bb UK",
+      "feed_url": "https://www.theguardian.com/uk-news/rss",
+      "website_url": "https://www.theguardian.com/uk-news",
+      "description": "Latest news, breaking news and current affairs coverage from across the UK from theguardian.com",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Europe",
+      "feed_url": "https://www.theguardian.com/world/europe-news/rss",
+      "website_url": "https://www.theguardian.com/world/europe-news",
+      "description": "Latest Europe news, comment, and analysis from the Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb US",
+      "feed_url": "https://www.theguardian.com/us-news/rss",
+      "website_url": "https://www.theguardian.com/us-news",
+      "description": "Latest US news, breaking news, and current affairs coverage from theguardian.com.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Americas",
+      "feed_url": "https://www.theguardian.com/world/americas/rss",
+      "website_url": "https://www.theguardian.com/world/americas",
+      "description": "Latest Americas news, breaking news, and current affairs coverage from theguardian.com.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Asia",
+      "feed_url": "https://www.theguardian.com/world/asia/rss",
+      "website_url": "https://www.theguardian.com/world/asia",
+      "description": "Latest news, breaking news, and current affairs coverage from across Asia from theguardian.com.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Australia",
+      "feed_url": "https://www.theguardian.com/australia-news/rss",
+      "website_url": "https://www.theguardian.com/australia-news",
+      "description": "Latest news, breaking news, and current affairs coverage from across the US from theguardian.com.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Money",
+      "feed_url": "https://www.theguardian.com/uk/money/rss",
+      "website_url": "https://www.theguardian.com/uk/money",
+      "description": "Latest personal finance and money news, comment and information on your property, mortgages, insurance, savings, and investments from the Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Football",
+      "feed_url": "https://www.theguardian.com/football/rss",
+      "website_url": "https://www.theguardian.com/football",
+      "description": "Football news, results, fixtures, blogs, podcasts, and comments on the Premier League, European, and World football from the Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 96800
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Cricket",
+      "feed_url": "https://www.theguardian.com/sport/cricket/rss",
+      "website_url": "https://www.theguardian.com/sport/cricket",
+      "description": "All articles about Cricket from The Guardian.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4589642.jpg?t=1657542867"
+    },
+    {
+      "title": "The Guardian \u00bb Business",
+      "feed_url": "https://www.theguardian.com/uk/business/rss",
+      "website_url": "https://www.theguardian.com/uk/business",
+      "description": "Get the latest financial, market & economic news and analysis from The Guardian.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Middle East and North Africa",
+      "feed_url": "https://www.theguardian.com/world/middleeast/rss",
+      "website_url": "https://www.theguardian.com/world/middleeast",
+      "description": "Latest Middle east news, business, opinion, analysis, and reviews from the Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Global Development",
+      "feed_url": "https://www.theguardian.com/global-development/rss",
+      "website_url": "https://www.theguardian.com/global-development",
+      "description": "Latest Global development news, investigations, and analysis from the Guardian.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Sport",
+      "feed_url": "https://www.theguardian.com/uk/sport/rss",
+      "website_url": "https://www.theguardian.com/uk/sport",
+      "description": "Sports news, results, fixtures, blogs, and comments on UK and world sport from the Guardian.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 96800
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Lifestyle",
+      "feed_url": "https://www.theguardian.com/uk/lifeandstyle/rss",
+      "website_url": "https://www.theguardian.com/uk/lifeandstyle",
+      "description": "Food, homes and lifestyle news, video and pictures from the Guardian.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 356900
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Technology",
+      "feed_url": "https://www.theguardian.com/uk/technology/rss",
+      "website_url": "https://www.theguardian.com/uk/technology",
+      "description": "Latest Technology news, comment, and analysis from the Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Culture",
+      "feed_url": "https://www.theguardian.com/uk/culture/rss",
+      "website_url": "https://www.theguardian.com/uk/culture",
+      "description": "Culture news, comment, video, and pictures from The Guardian.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Inequality",
+      "feed_url": "https://www.theguardian.com/inequality/rss",
+      "website_url": "https://www.theguardian.com/inequality",
+      "description": "Latest inequality news and features from theguardian.com, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Environment",
+      "feed_url": "https://www.theguardian.com/uk/environment/rss",
+      "website_url": "https://www.theguardian.com/uk/environment",
+      "description": "Latest Environment news, comment and analysis from the Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Wildlife",
+      "feed_url": "https://www.theguardian.com/environment/wildlife/rss",
+      "website_url": "https://www.theguardian.com/environment/wildlife",
+      "description": "Top stories, special features, live blogs, and more on wildlife from theguardian.com.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Pollution",
+      "feed_url": "https://www.theguardian.com/environment/pollution/rss",
+      "website_url": "https://www.theguardian.com/environment/pollution",
+      "description": "Discover the latest pollution news and updates only on The Guardian.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Science",
+      "feed_url": "https://www.theguardian.com/science/rss",
+      "website_url": "https://www.theguardian.com/science",
+      "description": "Latest Science News, comment, and analysis from the Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Obituaries",
+      "feed_url": "https://www.theguardian.com/tone/obituaries/rss",
+      "website_url": "https://www.theguardian.com/tone/obituaries",
+      "description": "Latest Obituaries news, comment, and analysis from the Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Books",
+      "feed_url": "https://www.theguardian.com/books/rss",
+      "website_url": "https://www.theguardian.com/books",
+      "description": "Latest books news, comments, reviews, and analysis from the Guardian.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Travel",
+      "feed_url": "https://www.theguardian.com/uk/travel/rss",
+      "website_url": "https://www.theguardian.com/uk/travel",
+      "description": "Latest travel news and reviews on the UK and world holidays travel guides to global destinations, city breaks, hotels, and restaurant information from the Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Music",
+      "feed_url": "https://www.theguardian.com/music/rss",
+      "website_url": "https://www.theguardian.com/music",
+      "description": "Latest music news, comments, reviews, and analysis from the Guardian.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb TV and Radio",
+      "feed_url": "https://www.theguardian.com/uk/tv-and-radio/rss",
+      "website_url": "https://www.theguardian.com/uk/tv-and-radio",
+      "description": "Latest TV and radio news, comment, and analysis from the Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Art and Design",
+      "feed_url": "https://www.theguardian.com/artanddesign/rss",
+      "website_url": "https://www.theguardian.com/artanddesign",
+      "description": "Latest art and design news, comment, and analysis from the Guardian.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Film",
+      "feed_url": "https://www.theguardian.com/uk/film/rss",
+      "website_url": "https://www.theguardian.com/uk/film",
+      "description": "Latest Film news, comment, and analysis from the Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Fashion",
+      "feed_url": "https://www.theguardian.com/fashion/rss",
+      "website_url": "https://www.theguardian.com/fashion",
+      "description": "The latest fashion news, advice, and comment from the Guardian.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 102700
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Crosswords",
+      "feed_url": "https://www.theguardian.com/crosswords/rss",
+      "website_url": "https://www.theguardian.com/crosswords",
+      "description": "Free crosswords that can be completed online by mobile, tablet and desktop, and are printable. Daily easy, quick, and cryptic crosswords puzzles.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Games",
+      "feed_url": "https://www.theguardian.com/games/rss",
+      "website_url": "https://www.theguardian.com/games",
+      "description": "Latest Games news, comment and analysis from the Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Stage",
+      "feed_url": "https://www.theguardian.com/stage/rss",
+      "website_url": "https://www.theguardian.com/stage",
+      "description": "Latest stage news, reviews, comments, and analysis from the Guardian.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Family",
+      "feed_url": "https://www.theguardian.com/lifeandstyle/family/rss",
+      "website_url": "https://www.theguardian.com/lifeandstyle/family",
+      "description": "Latest Family news, comment and analysis from the Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Health & Fitness",
+      "feed_url": "https://www.theguardian.com/lifeandstyle/health-and-wellbeing/rss",
+      "website_url": "https://www.theguardian.com/lifeandstyle/health-and-wellbeing",
+      "description": "Latest Health & wellbeing news, comment and analysis from the Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Golf",
+      "feed_url": "https://www.theguardian.com/sport/golf/rss",
+      "website_url": "https://www.theguardian.com/sport/golf",
+      "description": "Latest news and features about golf from theguardian.com, the world's leading liberal voice.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Formula One",
+      "feed_url": "https://www.theguardian.com/sport/formulaone/rss",
+      "website_url": "https://www.theguardian.com/sport/formulaone",
+      "description": "All articles about Formula One from The Guardian.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4480497.jpg?t=1609306622"
+    },
+    {
+      "title": "The Guardian \u00bb Cycling",
+      "feed_url": "https://www.theguardian.com/sport/cycling/rss",
+      "website_url": "https://www.theguardian.com/sport/cycling",
+      "description": "Articles published by guardian.co.uk Sport about: Cycling.",
+      "followers": {
+        "facebook": 9200000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    },
+    {
+      "title": "The Guardian \u00bb Tennis",
+      "feed_url": "https://www.theguardian.com/sport/tennis/rss",
+      "website_url": "https://www.theguardian.com/sport/tennis",
+      "description": "All articles about Tennis from The Guardian.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 906200,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4477207.jpg?t=1603202149"
+    },
+    {
+      "title": "The Guardian \u00bb Rugby Union",
+      "feed_url": "https://www.theguardian.com/sport/rugby-union/rss",
+      "website_url": "https://www.theguardian.com/sport/rugby-union",
+      "description": "All articles about Rugby Union from The Guardian.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4483852.jpg?t=1627447570"
+    },
+    {
+      "title": "The Guardian \u00bb Climate Crisis",
+      "feed_url": "https://www.theguardian.com/environment/climate-crisis/rss",
+      "website_url": "https://www.theguardian.com/environment/climate-crisis",
+      "description": "Latest Climate crisis news, comment and analysis from the Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4882028.jpg?t=1752494249"
+    }
+  ]
+}

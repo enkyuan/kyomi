@@ -1,0 +1,38 @@
+{
+  "category": "UK Poker",
+  "source_url": "https://rss.feedspot.com/uk_poker_rss_feeds",
+  "feeds": [
+    {
+      "title": "Baltic Blonde Poker",
+      "feed_url": "https://balticblonde.wordpress.com/feed/",
+      "website_url": "https://balticblonde.wordpress.com/",
+      "description": "I'm a professional poker player from Lithuania currently residing in London. This is my blog covering my adventures in poker, travel, and food.",
+      "followers": {
+        "twitter": 4800,
+        "instagram": 160200
+      },
+      "image_url": "https://i1.feedspot.com/4917378.jpg?t=1620388027"
+    },
+    {
+      "title": "Partypoker Blog",
+      "feed_url": "https://www.partypoker.com/blog/en/feed",
+      "website_url": "https://www.partypoker.com/blog/en/",
+      "description": "Partypoker is one of the pioneers of the online poker industry. The partypoker Blog is your premier source of Online poker news, tournament updates and industry insights. Partypoker is the leading poker brand of GVC Holding PLC (LSE: GVC), a global online gaming company. GVC Holdings PLC is a leading e-gaming operator in both b2c and b2b markets.",
+      "followers": {
+        "facebook": 169700,
+        "twitter": 59800,
+        "instagram": 63700
+      },
+      "image_url": "https://i1.feedspot.com/4716897.jpg?t=1604728913"
+    },
+    {
+      "title": "The Pokeriety",
+      "feed_url": "https://www.thepokeriety.com/feed/",
+      "description": "The Pokeriety is all about feel good poker. Sharing poker information, tips and links to improve everyone's poker game.",
+      "followers": {
+        "facebook": 318
+      },
+      "image_url": "https://i1.feedspot.com/4715396.jpg?t=1604729741"
+    }
+  ]
+}

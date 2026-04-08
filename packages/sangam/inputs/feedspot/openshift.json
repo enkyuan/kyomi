@@ -1,0 +1,33 @@
+{
+  "category": "OpenShift",
+  "source_url": "https://rss.feedspot.com/openshift_rss_feeds",
+  "feeds": [
+    {
+      "title": "My OpenShift Blog",
+      "feed_url": "https://myopenshiftblog.com/rss/",
+      "website_url": "https://myopenshiftblog.com/",
+      "description": "The blog features many helpful tips and tricks related to red hat openshift. My Openshift Blog is an independent publication and a personal blog launched by Keith Calligan.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5482953.jpg?t=1671776260"
+    },
+    {
+      "title": "Upstream - Without A Paddle",
+      "feed_url": "https://upstreamwithoutapaddle.com/feed.xml",
+      "website_url": "https://upstreamwithoutapaddle.com/",
+      "description": "This site is dedicated to sharing the work that I do in my home lab. I am a huge fan of cloud native application delivery on Kubernetes based platforms. I specifically focus on OpenShift Container Platform, and its subscription free (community supported) sibling, OKD.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5511992.jpg?t=1677140878"
+    },
+    {
+      "title": "OpenShift Official Blog",
+      "feed_url": "https://www.openshift.com/blog/rss.xml",
+      "website_url": "https://www.redhat.com/en/blog/channel/hybrid-cloud-infrastructure",
+      "description": "Red Hat OpenShift is an open-source container application platform based on the Kubernetes container orchestrator for enterprise application development and deployment.",
+      "followers": {
+        "facebook": 19300,
+        "twitter": 71400
+      },
+      "image_url": "https://i1.feedspot.com/4128376.jpg?t=1621942890"
+    }
+  ]
+}

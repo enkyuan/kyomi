@@ -1,0 +1,71 @@
+{
+  "category": "Fairfax County Education",
+  "source_url": "https://rss.feedspot.com/fairfax_county_education_rss_feeds",
+  "feeds": [
+    {
+      "title": "Fairfax Schools Monitor Blog",
+      "feed_url": "https://fairfaxschoolsmonitor.com/feed/",
+      "website_url": "https://fairfaxschoolsmonitor.com/blog/",
+      "description": "The county's school system has been in national as well as local headlines, with conflicting claims and denials about what is and isn't being taught. Rather than relying on sensational news reports, this blog will expose the truth about the policies and curriculum of the public school system. Fairfax Schools Monitor Blog will dig into the facts and will reveal official documents, including policy statements and curriculum outlines. They will monitor the activities of the Fairfax County School Board. They will solicit knowledgeable input from parents and mature students.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5648669.jpg?t=1692183428"
+    },
+    {
+      "title": "Fairfax County Public Schools",
+      "feed_url": "https://www.fcps.edu/feeds/news.rss",
+      "website_url": "https://www.fcps.edu/news",
+      "description": "FCPS serves a diverse student population of more than 181,000 students. Fairfax County Public Schools (FCPS) is a catalyst that transforms our community's most valuable potential - children - and shapes a thriving future. They are the community's gathering place where, together, they foster creative thinking, a culture of caring, and lifelong connections. Explore their news section to learn more about their school, their students, the activities, events, and other informative articles.",
+      "followers": {
+        "facebook": 118200,
+        "twitter": 358800,
+        "instagram": 41100
+      },
+      "image_url": "https://i1.feedspot.com/5648673.jpg?t=1692182191"
+    },
+    {
+      "title": "Fairfax County Special Education PTA Blog",
+      "feed_url": "https://fairfaxcountysepta.org/feed/",
+      "website_url": "https://fairfaxcountysepta.org/blog/",
+      "description": "Empowering and connecting families, students and educators to ensure students with disabilities develop their full potential as individuals and community members. A Special Education PTA serving all residents of Fairfax County. Providing resources and advocacy.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 512
+      },
+      "image_url": "https://i1.feedspot.com/5648674.jpg?t=1692182196"
+    },
+    {
+      "title": "Fairfaxconnection \u00bb Fairfax Education",
+      "feed_url": "https://www.fairfaxconnection.com/rss/headlines/Fairfax/Education/",
+      "website_url": "https://www.fairfaxconnection.com/news/Fairfax/Education/",
+      "description": "Connection Newspapers publishes 15 award-winning weekly newspapers in Northern Virginia and suburban Maryland, dedicated to public service.",
+      "followers": {
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5648675.jpg?t=1692182201"
+    },
+    {
+      "title": "Fairfax Education Association",
+      "feed_url": "https://www.fairfaxea.org/news?format=rss",
+      "website_url": "https://www.fairfaxea.org/news",
+      "description": "The history of the Fairfax Education Association (FEA) as a labor union is one of long and proud service to the students and educators of Fairfax CountyThe mission of the Fairfax Education Association is to provide leadership regarding all decisions affecting public education in Fairfax County and to serve as the collective voice of our members. The Fairfax Education Association advances conditions of teaching, learning, and working within Fairfax County Public Schools through informed advocacy and promotion of the highest standards of professionalism.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 3300,
+        "instagram": 434
+      },
+      "image_url": "https://i1.feedspot.com/5648670.jpg?t=1692182171"
+    },
+    {
+      "title": "ILS Blog",
+      "feed_url": "http://www.ilsalexandria.org/blog?format=rss",
+      "website_url": "http://www.ilsalexandria.org/blog",
+      "description": "The mission of Immanuel Lutheran School is to nurture the minds, hearts, and bodies of students in grades Jr. Kindergarten through Eight with classical education and Lutheran Catechesis. Follow their blog to read articles on the schools, education system, students, staff, feature stories and more.",
+      "followers": {
+        "facebook": 749,
+        "twitter": 261,
+        "instagram": 819
+      },
+      "image_url": "https://i1.feedspot.com/5648672.jpg?t=1692182180"
+    }
+  ]
+}

@@ -1,0 +1,325 @@
+{
+  "category": "VMware",
+  "source_url": "https://rss.feedspot.com/vmware_rss_feeds",
+  "feeds": [
+    {
+      "title": "VMware Blogs",
+      "feed_url": "https://blogs.vmware.com/wprss",
+      "website_url": "https://blogs.vmware.com/",
+      "description": "Follow this blog to get the latest and up-to-date information on VMware. VMware is a leading provider of multi-cloud services for all apps, enabling digital innovation with enterprise control.",
+      "followers": {
+        "facebook": 391400,
+        "twitter": 328200
+      },
+      "image_url": "https://i1.feedspot.com/4800363.jpg?t=1610082764"
+    },
+    {
+      "title": "VMiss.net",
+      "feed_url": "https://vmiss.net/feed/",
+      "website_url": "https://vmiss.net/category/vmware/",
+      "description": "Melissa is a virtualization, converged infrastructure, and OpenStack enthusiast, as well as a Solutions Architect/Technical Marketing Engineer at NetApp. In 2016, Melissa achieved VMware's highest certification, VMware Certified Design Expert (VCDX 236). This blog represent's Melissa's thoughts and ideas, and are her own. Follow this blog to learn about virtualization and vmware.",
+      "followers": {
+        "twitter": 11600
+      },
+      "image_url": "https://i1.feedspot.com/4225747.jpg?t=1610082782"
+    },
+    {
+      "title": "Digital Thought Disruption",
+      "feed_url": "https://digitalthoughtdisruption.com/feed/",
+      "website_url": "https://digitalthoughtdisruption.com/category/azure/",
+      "description": "The Digital Thought Disruption features articles and tutorials by Paul Bryant, focusing on automating IT infrastructure tasks. The content primarily covers topics related to Nutanix, such as snapshot management, cluster expansion, and VM provisioning using tools like Ansible and Bash.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5037201.jpg?t=1754041748"
+    },
+    {
+      "title": "VxPlanet",
+      "feed_url": "https://vxplanet.com/feed/",
+      "website_url": "https://vxplanet.com/",
+      "description": "My name is Harikrishnan and I currently work as Systems Development Engineer at DellEMC. I started my career in 2009 as a Corporate Trainer in Microsoft and Cisco Technologies. I joined DellEMC in 2017 and have previously held roles in Service Delivery, Infrastructure Management and Project Delivery.",
+      "followers": {
+        "twitter": 941
+      },
+      "image_url": "https://i1.feedspot.com/5047568.jpg?t=1610082884"
+    },
+    {
+      "title": "ProVirtualzone",
+      "feed_url": "https://www.provirtualzone.com/feed/",
+      "website_url": "https://www.provirtualzone.com/category/vmware-posts/",
+      "description": "ProVirtualZone is a personal blog about Virtual Infrastructures maintained by Luciano Patr\u00e3o. The primary focus of this blog is on VMware and Hyper-V products, solutions, and services with the associated Storage and Virtual Backup solutions. The purpose of these write-ups is to review, provide break-fix information and also design How-To guides for implementing various virtualization solutions.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4983686.jpg?t=1622098828"
+    },
+    {
+      "title": "vmexplorer",
+      "feed_url": "https://vmexplorer.com/feed/",
+      "website_url": "https://vmexplorer.com/blog-posts/",
+      "description": "My name is Matt Mancini also largely known in the VMware virtualization community as vmexplorer. I've operated this blog since 2010 and choose its name, vmexplorer, to represent the technology journey we are all on. Here you'll find no-nonsense information on VM Ware Virtualization.",
+      "followers": {
+        "facebook": 21,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/339887.jpg?t=1650020793"
+    },
+    {
+      "title": "vrcloud24x7",
+      "feed_url": "https://www.vrcloud24x7.com/feeds/posts/default",
+      "website_url": "https://www.vrcloud24x7.com/search/label/Vmware",
+      "description": "Hi There I am Randir Chaubey. I am currently working with IBM GTS Labs as Cloud Solution Architect Hybrid Cloud (Vra). I have 12+ Year's of IT experience and have exposure on VMware vSphere, vRealize Automation, VMware NSX, vSphere Replication and Windows Server Administration. I am a CMA Certified. I have been recognized as VMware vExpert Cloud 2018 2019 2020. My blog is all about Vmware cloud and SDDC.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5124589.jpg?t=1619442812"
+    },
+    {
+      "title": "Baking Clouds Blog",
+      "feed_url": "https://bakingclouds.com/feed/",
+      "website_url": "https://bakingclouds.com/blog/",
+      "description": "Baking Clouds is a technical Blog based around Virtualization. We use this Blog as a place to store useful information that can be handy to us and readers.",
+      "followers": {
+        "facebook": 135,
+        "twitter": 54,
+        "instagram": 83
+      },
+      "image_url": "https://i1.feedspot.com/5227583.jpg?t=1610082878"
+    },
+    {
+      "title": "LAB2PROD",
+      "feed_url": "https://www.lab2prod.com.au/feed",
+      "website_url": "https://www.lab2prod.com.au/",
+      "description": "Shank Mohan is a Senior Consultant working in the Professional Services Organisation (PSO) at VMware. He spends too much time in his home lab and has created a platform to share what he's learned, collaborate on new ideas, and help troubleshoot PITA problems in virtual infrastructure and software-defined networks.",
+      "followers": {
+        "twitter": 160
+      },
+      "image_url": "https://i1.feedspot.com/5210405.jpg?t=1611225633"
+    },
+    {
+      "title": "VMWARE LAB",
+      "feed_url": "https://vmwarelab.org/feed/",
+      "website_url": "https://vmwarelab.org/",
+      "description": "Just Another VMware Cloud Management Blogger! In June, 2013 I had the pleasure and the opportunity to join VMware as a Cloud Management Specialist.",
+      "followers": {
+        "twitter": 199
+      },
+      "image_url": "https://i1.feedspot.com/4800907.jpg?t=1610082930"
+    },
+    {
+      "title": "Virtualization Velocity",
+      "feed_url": "https://www.virtualizationvelocity.com/3/feed",
+      "website_url": "https://www.virtualizationvelocity.com/home/category/vmware",
+      "description": "Virtualization Velocity is a personal Blog about virtualization (mainly VMware related) maintained by me, Brandon Seymour.",
+      "followers": {
+        "twitter": 655
+      },
+      "image_url": "https://i1.feedspot.com/4800233.jpg?t=1610082948"
+    },
+    {
+      "title": "My Software Defined Data Center",
+      "feed_url": "https://my-sddc.net/feed/",
+      "website_url": "https://my-sddc.net/",
+      "description": "Senior SDDC Consultant at @PQRNL. Specialized in SDDC, mainly VMware vSphere, NSX and vSAN. vExpert 2016-2019 and vExpert NSX 2017-2018",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5049342.jpg?t=1610082953"
+    },
+    {
+      "title": "VMware Blogs \u00bb Load Balancing & WAF",
+      "feed_url": "https://blogs.vmware.com/load-balancing/feed",
+      "website_url": "https://blogs.vmware.com/load-balancing/",
+      "description": "All latest articles about Load Balancing & WAF from VMware Blogs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1391899.jpg?t=1762420985"
+    },
+    {
+      "title": "Cloud Blogger",
+      "feed_url": "https://cloudblogger.co.in/feed/",
+      "website_url": "https://cloudblogger.co.in/",
+      "description": "Blog around vRealize Orchestrator and related stuff. Authored by Mayank Goyal, Cloud Engineer.",
+      "followers": {
+        "twitter": 81
+      },
+      "image_url": "https://i1.feedspot.com/5381196.jpg?t=1647407235"
+    },
+    {
+      "title": "Mastering VMware",
+      "feed_url": "https://masteringvmware.com/feed/",
+      "website_url": "https://masteringvmware.com/category/vmware/",
+      "description": "Learn the Cloud Technology VMware vSphere from scratch to Advance. Here we will help you with all the basic to advance VMware vSphere features which will help you to become master in VMware vSphere. Follow this site and be the Learner & Enhance your knowledge with Cloud Leader VMware. A Guide to Make u Successful VMware Admin.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 798
+      },
+      "image_url": "https://i1.feedspot.com/4800519.jpg?t=1610082768"
+    },
+    {
+      "title": "VMware AirWatch",
+      "feed_url": "https://blogs.vmware.com/euc/mobility/feed",
+      "website_url": "https://blogs.vmware.com/euc/mobility",
+      "description": "Connecting you to what's new in business mobility and EMM. VMware AirWatch is the leading unified endpoint management (UEM) technology.",
+      "followers": {
+        "facebook": 11,
+        "twitter": 12
+      },
+      "image_url": "https://i1.feedspot.com/4800490.jpg?t=1610082869"
+    },
+    {
+      "title": "vExpert Consultancy",
+      "feed_url": "https://www.vexpertconsultancy.com/feed/",
+      "website_url": "https://www.vexpertconsultancy.com/",
+      "description": "This is the personal blog of Mohamad Alhussein. It is dedicated to my views and opinions on the various areas of the datacenter while emphasizing virtualization. It also serves as a learning tool for me to document deployments, configurations, and share possible solutions for the issues I encounter.",
+      "followers": {
+        "twitter": 729
+      },
+      "image_url": "https://i1.feedspot.com/5124938.jpg?t=1610082909"
+    },
+    {
+      "title": "VMinstall: Best Guide To A Rewarding Career In VMware, DevOps & Cloud",
+      "feed_url": "http://feeds.feedburner.com/vminstall",
+      "website_url": "https://www.vminstall.com/vmware/",
+      "description": "Get immediate access to the 175 VMware, DevOps & Cloud guides & tips about strategy. On VMinstall, beginners learn to think big picture.",
+      "followers": {
+        "facebook": 537
+      },
+      "image_url": "https://i1.feedspot.com/4800472.jpg?t=1610083871"
+    },
+    {
+      "title": "esxsi.com",
+      "feed_url": "https://esxsi.com/feed/",
+      "website_url": "https://esxsi.com/",
+      "description": "Follow to get updates on virtualisation journey by Simon Cranney.",
+      "followers": {
+        "twitter": 100
+      },
+      "image_url": "https://i1.feedspot.com/5058482.jpg"
+    },
+    {
+      "title": "CloudHat.eu",
+      "feed_url": "https://cloudhat.eu/feed/",
+      "website_url": "https://cloudhat.eu/category/vmware/",
+      "description": "Blog focused on VMware virtualization solutions and on Amazon Web Services (AWS). Playing with vRealize Automation, vRealize Orchestrator and AWS, VMUG RO Leader, vExpert 2018. Follow this blog to get to know more on vmware virtualization.",
+      "followers": {
+        "facebook": 17,
+        "twitter": 337
+      },
+      "image_url": "https://i1.feedspot.com/4800411.jpg?t=1610082892"
+    },
+    {
+      "title": "vXpress - Expressing Virtual Experiences!",
+      "feed_url": "https://feeds.feedburner.com/vxpress",
+      "website_url": "http://vxpresss.blogspot.com/",
+      "description": "vXpress is a leading VMware / Virtualization blog which holds a worldwide ranking of 28 as per the recent polls done for TOP Virtualization & VMware Blogs. The motivation behind vXpress is to share the best practices & experiences which are gained during Deployment & Use of VMware products.",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/3654370.jpg?t=1610083608"
+    },
+    {
+      "title": "The Wifi-Cable",
+      "feed_url": "https://thewificable.com/feed/",
+      "website_url": "https://thewificable.com/",
+      "description": "I'm a new blogger and the purpose of my site is to share my experience and expertise in all areas of information technology with an enhanced focus on virtualization. I have had the pleasure of working alongside many architects and engineers over the years. They have helped me grow and develop my skill sets which have to lead to a very successful career. My goal is to pay it forward by helping others learn and succeed.",
+      "followers": {
+        "twitter": 646
+      },
+      "image_url": "https://i1.feedspot.com/5064852.jpg"
+    },
+    {
+      "title": "VMware Trainer",
+      "feed_url": "http://vmwaretrainer.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://vmwaretrainer.blogspot.com/",
+      "description": "Corporate VMware Virtualization Trainer & IT Consultant.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4800588.jpg?t=1610083293"
+    },
+    {
+      "title": "Virtualization 24/7",
+      "feed_url": "https://virtualization247.com/feed/rss/",
+      "website_url": "https://virtualization247.com/",
+      "description": "A blog on cloud and on-prem technologies using virtualization with full-length tutorials, too.",
+      "followers": {
+        "facebook": 1,
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/5126784.jpg?t=1610083826"
+    },
+    {
+      "title": "Cloud Village",
+      "feed_url": "https://cloudvillage.in/index.php/feed/",
+      "website_url": "https://cloudvillage.in/",
+      "description": "Cloud Village is a personal blog about my learning in the journey which I started in virtualization and cloud. I am currently working as a Consultant at VMware and am responsible for End User Computing solution design and delivery. I specialize in VMware Horizon Suite, VMware Workspace One Access as well as VMware vSphere Suite. I had 3x VMware Certified Implementation Expert for VMware vSphere, NSX and DTM as well as earned vExpert 2019-2020. I am writing this blog to share my knowledge with the community members who are there to learn along with everyone else.",
+      "followers": {
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5124828.jpg?t=1610083925"
+    },
+    {
+      "title": "vconfig.pl",
+      "feed_url": "https://vconfig.pl/feed/",
+      "website_url": "https://vconfig.pl/category/vmware/",
+      "description": "Hi there, I'm Maciej Losek, and welcome to the blog dedicated to IT issues I have encountered every day, news, and tips and tricks- primary focus on virtualization. I'm from Poland and I've been working at Atos as a Cloud System Architect and assist with a private cloud environment.",
+      "followers": {
+        "twitter": 106
+      },
+      "image_url": "https://i1.feedspot.com/5125148.jpg?t=1610083885"
+    },
+    {
+      "title": "Virtual Maestro",
+      "feed_url": "https://blogs.virtualmaestro.in/feed/",
+      "website_url": "https://blogs.virtualmaestro.in/category/vmware/",
+      "description": "My primary area of expertise is VMware Virtualization and Cloud Solutions. This blog is an attempt to share the knowledge I gained over the years, also this keeps me busy and updated. I will ensure and try my best to keep the information accurate and updated.",
+      "followers": {
+        "facebook": 52,
+        "twitter": 73
+      },
+      "image_url": "https://i1.feedspot.com/5125120.jpg?t=1610083857"
+    },
+    {
+      "title": "All about VMware",
+      "feed_url": "https://vmwareaddicted.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://vmwareaddicted.blogspot.com/",
+      "description": "Sharing our Learning on VMware...All about VMware - ESX, ESXi, Vcenter, HA, DRS, VMotion, SV. Follow this blog to get more information on vmware and much more.",
+      "followers": {
+        "twitter": 45
+      },
+      "image_url": "https://i1.feedspot.com/4800565.jpg?t=1610082799"
+    },
+    {
+      "title": "VMware Snapshots",
+      "feed_url": "https://vsnapshots.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://vsnapshots.blogspot.com/",
+      "description": "Posts on various VMware & Virtualization Topics of interest",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4800594.jpg?t=1610083909"
+    },
+    {
+      "title": "VMWare Cloud Blog",
+      "feed_url": "https://cloud.vmware.com/community/feed/",
+      "website_url": "https://blogs.vmware.com/",
+      "description": "VMware Cloud enables you the freedom and flexibility to choose the development platform, environments and architecture that fit your business' unique needs in a way that increases agility and lowers costs. Run, manage, connect and secure your entire portfolio on any cloud to any device.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 27300
+      },
+      "image_url": "https://i1.feedspot.com/4800427.jpg?t=1610082803"
+    },
+    {
+      "title": "vSphere-land!",
+      "feed_url": "https://feeds2.feedburner.com/vSphere-land",
+      "website_url": "http://vsphere-land.com/",
+      "description": "Your ultimate VMware information destination. My name is Eric Siebert and I am a Senior Systems Administator specializing in Virtualization and Windows Server administration.",
+      "followers": {
+        "twitter": 9800
+      },
+      "image_url": "https://i1.feedspot.com/108691.jpg?t=1610082811"
+    },
+    {
+      "title": "vmwarethiru",
+      "feed_url": "https://www.blogger.com/feeds/3847514362285752366/posts/default",
+      "website_url": "http://vmwarethiru.blogspot.com/",
+      "description": "Let's Virtualize and Move Everything to the Cloud! I am a solution Architect offering 16 Years of hands-on experience in hybrid cloud, virtualization, Microsoft technologies, and network infrastructure. I bring an innovative and pragmatic approach to analyze complex business needs, to enable conceptualize, design, and implement cutting edge solutions based on the latest Public Cloud and virtualization technologies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5124981.jpg?t=1610083785"
+    }
+  ]
+}

@@ -1,0 +1,803 @@
+{
+  "category": "San Francisco",
+  "source_url": "https://rss.feedspot.com/san_francisco_rss_feeds",
+  "feeds": [
+    {
+      "title": "SFist",
+      "feed_url": "https://sfist.com/rss/",
+      "website_url": "https://sfist.com/",
+      "description": "SFist is San Francisco's source for fun, witty, & serious news. With updates about restaurants, events, sports, politics & more, we give you everything you need to know about San Francisco and the Bay Area.",
+      "followers": {
+        "facebook": 58000,
+        "twitter": 274900
+      },
+      "image_url": "https://i1.feedspot.com/26493.jpg?t=1667381770"
+    },
+    {
+      "title": "7x7 Magazine",
+      "feed_url": "https://www.7x7.com/feeds/feed.rss",
+      "website_url": "https://www.7x7.com/",
+      "description": "7x7 is the region's premier editorial voice since 2001, sharing local insider stories and tip with residents and visitors alike. It is 7x7's mission to celebrate the San Francisco Bay Area's trailblazing spirit and to maximize every moment of our lives in this magnificent place. View our content on food, drink, arts, fitness, travel, style, tech, the great outdoors, and more.",
+      "followers": {
+        "facebook": 72200,
+        "twitter": 191800,
+        "instagram": 82800
+      },
+      "image_url": "https://i1.feedspot.com/4785660.jpg?t=1609393225"
+    },
+    {
+      "title": "Eater San Francisco",
+      "feed_url": "https://sf.eater.com/rss/index.xml",
+      "website_url": "https://sf.eater.com/",
+      "description": "Eater SF is the San Francisco Restaurant, Bar, and Nightlife Blog. Get the best food news and dining guides for San Francisco. Check out the maps and neighborhoods for the best places to eat in San Francisco, and well as the hottest new openings in the city.",
+      "followers": {
+        "facebook": 110800,
+        "twitter": 134400,
+        "instagram": 142400
+      },
+      "image_url": "https://i1.feedspot.com/4785620.jpg?t=1667303632"
+    },
+    {
+      "title": "FunCheapSF | Free & Cheap Events",
+      "feed_url": "https://feeds.feedburner.com/funcheapsf_recent_added_events/",
+      "website_url": "https://sf.funcheap.com/",
+      "description": "A hand-picked recommendation list and events calendar of upwards of 50 cheap, fun and unique San Francisco Bay Area events each week.",
+      "followers": {
+        "facebook": 92400,
+        "twitter": 12900,
+        "instagram": 33500
+      },
+      "image_url": "https://i1.feedspot.com/34396.jpg?t=1609393236"
+    },
+    {
+      "title": "Streetsblog San Francisco",
+      "feed_url": "https://sf.streetsblog.org/feed",
+      "website_url": "https://sf.streetsblog.org/",
+      "description": "Streetsblog San Francisco is a daily news source connecting people to information about the movement for sustainable transportation and livable streets in San Francisco and the Bay Area.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 58600
+      },
+      "image_url": "https://i1.feedspot.com/4785692.jpg?t=1609393387"
+    },
+    {
+      "title": "MyFitnessPal Blog",
+      "feed_url": "https://blog.myfitnesspal.com/feed/",
+      "website_url": "https://blog.myfitnesspal.com/",
+      "description": "My Fitness Pal is the leading app for tracking - and conquering - your nutrition and fitness goals. With recipes, workout routines, and a variety of expert-guided meal and workout plans, you'll have the support you need for your entire health and fitness journey. Get into their blog that shares advice and articles on weight loss, nutrition, recipes, fitness, and more.",
+      "followers": {
+        "facebook": 1500000,
+        "twitter": 184500,
+        "instagram": 429700
+      },
+      "image_url": "https://i1.feedspot.com/3362979.jpg?t=1600750306"
+    },
+    {
+      "title": "Just One Cookbook",
+      "feed_url": "https://www.justonecookbook.com/feed/",
+      "website_url": "https://www.justonecookbook.com/",
+      "description": "Just One Cookbook is a Japanese food blog with 1000+ authentic home-style recipes. Learn the cuisine with easy step-by-step photo instructions and videos. Founder of Just One Cookbook Shares easy Japanese recipes with step-by-step photos on the blog and video tutorials on the YouTube channel.",
+      "followers": {
+        "facebook": 798400,
+        "twitter": 9200,
+        "instagram": 341700
+      },
+      "image_url": "https://i1.feedspot.com/4621625.jpg?t=1600345322"
+    },
+    {
+      "title": "Simplilearn",
+      "feed_url": "https://www.simplilearn.com/feed/",
+      "website_url": "https://www.simplilearn.com/resources",
+      "description": "Simplilearn, one of the world's leading certification providers, offers short-term online training courses to help professionals get certified and get ahead. Get access to its latest resources articles, videos, eBooks & webinars catering to all sectors and fast-track your career.",
+      "followers": {
+        "facebook": 377600,
+        "twitter": 43400,
+        "instagram": 125800
+      },
+      "image_url": "https://i1.feedspot.com/5056913.jpg?t=1689828770"
+    },
+    {
+      "title": "Whimsy Soul",
+      "feed_url": "https://whimsysoul.com/feed/",
+      "website_url": "https://whimsysoul.com/",
+      "description": "Life is short and we believe life is better when you fill it with whimsy. At Whimsy Soul, you can find anything from detailed weekend guides to help you take that last minute road trip, curated style items for all shapes and sizes, easy beauty hacks that make a big difference, even the occasional wine or Netflix recommendation.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 2900,
+        "instagram": 118100
+      },
+      "image_url": "https://i1.feedspot.com/4785779.jpg?t=1609394089"
+    },
+    {
+      "title": "Food Wishes",
+      "feed_url": "https://feeds.feedburner.com/blogspot/sBff",
+      "website_url": "https://foodwishes.blogspot.com/",
+      "description": "Covers video recipes on African cuisine, Asian cuisine, appetizer, barbecue, beef, breakfast, chicken, dessert, French cuisine, pasta, bread, pork, sandwiches, sauces and more by Chef John.",
+      "followers": {
+        "twitter": 73800
+      },
+      "image_url": "https://i1.feedspot.com/63133.jpg?t=1600345452"
+    },
+    {
+      "title": "Bon Traveler",
+      "feed_url": "https://www.bontraveler.com/feed/",
+      "website_url": "https://www.bontraveler.com/",
+      "description": "A San Francisco Based Travel and Lifestyle Blog by Jessica Wright. On the website you will find guides on how to get the most out of your travels whether it is a weekend away or an itinerary through Europe. You will also find tips on how to pack, accommodation reviews and all-around travel advise.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 1700,
+        "instagram": 298000
+      },
+      "image_url": "https://i1.feedspot.com/4785852.jpg?t=1609394144"
+    },
+    {
+      "title": "The Bold Italic",
+      "feed_url": "https://thebolditalic.com/feed",
+      "website_url": "https://thebolditalic.com/",
+      "description": "The Bold Italic is a publication from Medium that covers culture and life in San Francisco and the Bay Area. Explore San Francisco's best restaurants, museums, events, neighborhoods, and more with help from The Bold Italic's editors.",
+      "followers": {
+        "facebook": 75100,
+        "twitter": 99200,
+        "instagram": 29600
+      },
+      "image_url": "https://i1.feedspot.com/4785589.jpg?t=1609393424"
+    },
+    {
+      "title": "Nom Nom Paleo",
+      "feed_url": "https://nomnompaleo.com/feed",
+      "website_url": "https://nomnompaleo.com/",
+      "description": "Paleo, gluten-free, grain-free, dairy-free, and Whole30-friendly recipes from New York Times bestselling author Michelle Tam, creator of Nom Nom Paleo.",
+      "followers": {
+        "facebook": 425900,
+        "twitter": 55400
+      },
+      "image_url": "https://i1.feedspot.com/342187.jpg?t=1600345984"
+    },
+    {
+      "title": "A Side of Sweet",
+      "feed_url": "https://asideofsweet.com/feed/",
+      "website_url": "https://asideofsweet.com/",
+      "description": "A Side of Sweet is a San Francisco life and style blog founded by Kelly Huibregtse. Here you'll find recipes, DIYs, style, travel, fitness, and design that fit into your busy lifestyle.",
+      "followers": {
+        "facebook": 30400,
+        "twitter": 8100,
+        "instagram": 137000
+      },
+      "image_url": "https://i1.feedspot.com/4785748.jpg?t=1646051464"
+    },
+    {
+      "title": "Trips With Tykes - San Francisco Bay Area Family Travel Blog",
+      "feed_url": "https://tripswithtykes.com/feed/",
+      "website_url": "https://tripswithtykes.com/",
+      "description": "San Francisco Bay Area Family Travel Blog. Less stress travel with kids. Tips & tricks to make family travel easier.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 17900,
+        "instagram": 6800
+      },
+      "image_url": "https://i1.feedspot.com/4785897.jpg?t=1609394012"
+    },
+    {
+      "title": "Spoke Art Blog",
+      "feed_url": "https://spoke-art.com/blogs/news.atom",
+      "website_url": "https://spoke-art.com/blogs/news",
+      "description": "Established in 2010, Spoke Art is an exhibition space and curatorial venture specializing in new contemporary painting, sculpture, and illustration. The gallery puts on pop-up shows and participates in conventions and art fairs around the country. Get regular updates on exhibitions, releases, and special events.",
+      "followers": {
+        "facebook": 170600,
+        "twitter": 16200,
+        "instagram": 155600
+      },
+      "image_url": "https://i1.feedspot.com/4476153.jpg?t=1602849934"
+    },
+    {
+      "title": "Dependable Movers SF",
+      "feed_url": "https://dependablemoverssf.com/feed/",
+      "website_url": "https://dependablemoverssf.com/blog/",
+      "description": "Covers topics like family activities and traditions, the best neighborhoods in San Francisco, and other useful tips about living in the Bay Area. Dependable Movers San Francisco is a full-service moving company that has experience with everything to do with the Bay Area.",
+      "followers": {
+        "facebook": 77,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5343269.jpg?t=1662014197"
+    },
+    {
+      "title": "9to5Chic",
+      "feed_url": "https://9to5chic.com/feed",
+      "website_url": "https://9to5chic.com/",
+      "description": "I am Anh, wife of an OCD cutie, and mother to a little girl named Lucia.9to5Chic. This is my way of expressing my personal style at work. But it wouldn't be a personal style diary unless I shared some fun weekend outfits when I'm off the clock too.",
+      "followers": {
+        "facebook": 48000,
+        "twitter": 11000,
+        "instagram": 346500
+      },
+      "image_url": "https://i1.feedspot.com/3967112.jpg?t=1662634561"
+    },
+    {
+      "title": "HighTechDad",
+      "feed_url": "https://www.hightechdad.com/feed/",
+      "website_url": "https://www.hightechdad.com/",
+      "description": "HighTechDad (Michael Sheehan) is a dad who reviews technology products and writes about consumer electronics, software, hardware, and various tips and tricks related to gadgets & being a parent & FamilyTech. He is a tech & digital influencer, content producer, journalist, writer, father, and husband -High Tech Dad",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 10400,
+        "instagram": 721
+      },
+      "image_url": "https://i1.feedspot.com/4724175.jpg?t=1607577039"
+    },
+    {
+      "title": "Eat The Love",
+      "feed_url": "https://www.eatthelove.com/feed/",
+      "website_url": "https://www.eatthelove.com/",
+      "description": "Recipes, Photographs, and Stories about Desserts, Baked Goods and Food in general, with a healthy dose of humor and happiness for the food-obsessed authored by critically acclaimed cookbook author Irvin Lin.",
+      "followers": {
+        "facebook": 10900,
+        "twitter": 8400,
+        "instagram": 11200
+      },
+      "image_url": "https://i1.feedspot.com/4785745.jpg?t=1609394573"
+    },
+    {
+      "title": "San Francisco Classical Voice",
+      "feed_url": "https://feeds.feedburner.com/sfcv/uqkO",
+      "website_url": "https://www.sfcv.org/",
+      "description": "San Francisco Classical Voice is the go-to place for comprehensive coverage of music in the SF Bay Area and Los Angeles. Our mission is to engage audiences, artists, and arts organizations, and forge meaningful connections through music journalism.",
+      "followers": {
+        "facebook": 8100,
+        "twitter": 5000,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4785857.jpg?t=1597732901"
+    },
+    {
+      "title": "The San Francisco Foundation - Building a Better Bay Area",
+      "feed_url": "http://sff.org/feed/",
+      "website_url": "https://sff.org/",
+      "description": "The San Francisco Foundation develops and mobilizes resources and acts as a catalyst for change to build stronger communities, foster civic leadership, and promote philanthropy.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 8700
+      },
+      "image_url": "https://i1.feedspot.com/4785878.jpg?t=1609394557"
+    },
+    {
+      "title": "Julia Berolzheimer \u00bb Blog",
+      "feed_url": "https://juliaberolzheimer.com/feed/",
+      "website_url": "https://juliaberolzheimer.com/",
+      "description": "Covers posts on fashion, daily looks, summer favorites, smocked styles, and more. Julia stands for curated discovery for those driven and inspired by aesthetics. The blog brings together a community of women through its classic, feminine aesthetic.",
+      "followers": {
+        "twitter": 35600,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/779687.jpg?t=1621945129"
+    },
+    {
+      "title": "Mission Mission",
+      "feed_url": "http://www.missionmission.org/feed/",
+      "website_url": "http://www.missionmission.org/",
+      "description": "It keeps thousands of readers enthralled daily with news, video, political analysis, photos, personal anecdotes, event announcements, oddities and more, with help from new contributors.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 8500
+      },
+      "image_url": "https://i1.feedspot.com/34399.jpg?t=1609394665"
+    },
+    {
+      "title": "Table hopper",
+      "feed_url": "https://feeds.feedburner.com/Tablehopper",
+      "website_url": "https://www.tablehopper.com/",
+      "description": "Tablehopper is a weekly insider e-column about the San Francisco dining and drinking scene. Get all the latest on what's new, opening, closing, and changing, plus cool food/wine/booze events!",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 17200,
+        "instagram": 24200
+      },
+      "image_url": "https://i1.feedspot.com/30568.jpg?t=1609394639"
+    },
+    {
+      "title": "Skimble Blog",
+      "feed_url": "https://blog.skimble.com/feed/",
+      "website_url": "https://blog.skimble.com/",
+      "description": "Skimble is a wellness platform of fun & dynamic coaching applications for everyone. It is a mobile fitness company that strives to empower people to achieve their health & fitness goals anytime, anywhere. The company's blog gives you fun and easy workouts to do at home, fun activities, and tips to develop better fitness.",
+      "followers": {
+        "facebook": 24100,
+        "twitter": 4800,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4542509.jpg?t=1609394065"
+    },
+    {
+      "title": "The Front Steps Blog",
+      "feed_url": "https://thefrontsteps.com/feed/",
+      "website_url": "https://thefrontsteps.com/san-francisco-real-estate/blog/",
+      "description": "Representing Buyers & Sellers Of Residential Real Estate In San Francisco. TheFrontSteps.com combines experiences and modern and innovative technology approaches to deliver highly personalized service and stellar results for our clients. Learn all about Real Estate and life in the San Francisco bay area.",
+      "followers": {
+        "twitter": 946,
+        "instagram": 941
+      },
+      "image_url": "https://i1.feedspot.com/4785937.jpg?t=1680072273"
+    },
+    {
+      "title": "Shefali Parekh Photography Blog",
+      "feed_url": "https://shefaliparekh.com/feed/",
+      "website_url": "https://shefaliparekh.com/blog-san-francisco-family-photographer/",
+      "description": "San Francisco photographer, Shefali Parekh, specializes in lifestyle newborn, baby, maternity, family, and engagement photography. Her passion for photography and love for kids stemmed at a young age as she began taking photos for her mom's daycare. Visit Shefali's blog to read about her recent works.",
+      "followers": {
+        "facebook": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4988303.jpg?t=1609394735"
+    },
+    {
+      "title": "A Place To Talk About Giants Baseball",
+      "feed_url": "https://oneflapdown77.com/feed/",
+      "website_url": "https://oneflapdown77.com/",
+      "description": "THE San Francisco Giants Blog is the place to talk about Giants Baseball. Subscribe for the latest updates.",
+      "followers": {
+        "twitter": 156
+      },
+      "image_url": "https://i1.feedspot.com/4785828.jpg?t=1609394796"
+    },
+    {
+      "title": "Curbed SF",
+      "feed_url": "https://sf.curbed.com/rss/index.xml",
+      "website_url": "https://sf.curbed.com/",
+      "description": "Every aspect of living in San Francisco, for people who care about their city, their streets, and their homes.",
+      "followers": {
+        "facebook": 23600,
+        "instagram": 200500
+      },
+      "image_url": "https://i1.feedspot.com/4716450.jpg?t=1609393322"
+    },
+    {
+      "title": "Edible San Francisco",
+      "feed_url": "https://ediblesanfrancisco.com/feed/",
+      "website_url": "https://ediblesanfrancisco.com/",
+      "description": "Edible San Francisco is a food magazine that covers local food and drink makers, restaurants, farmers markets, food culture and events in San Francisco. They celebrate the food that feeds their community. They connect people to their food\u2014where it comes from, how it's produced and who makes it.",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 49900,
+        "instagram": 25600
+      },
+      "image_url": "https://i1.feedspot.com/4786417.jpg?t=1611841813"
+    },
+    {
+      "title": "Apartment34",
+      "feed_url": "https://apartment34.com/feed/",
+      "website_url": "https://apartment34.com/",
+      "description": "Apartment 34 offers inspiring tips and ideas for an intentional approach to modern living. We share sophisticated d\u00e9cor, style, travel, and entertaining - all the moments that help you relax in your daily life. Our elevated aesthetic and intentional approach to modern living has made the site a must-read for the style-savvy around the globe.",
+      "followers": {
+        "facebook": 21600,
+        "twitter": 17700,
+        "instagram": 86100
+      },
+      "image_url": "https://i1.feedspot.com/4786047.jpg?t=1657860020"
+    },
+    {
+      "title": "The Fancy Pants Report",
+      "feed_url": "https://thefancypantsreport.com/feed/",
+      "website_url": "https://thefancypantsreport.com/",
+      "description": "A San Francisco Style Blog by Kate Ogata.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 2300,
+        "instagram": 122800
+      },
+      "image_url": "https://i1.feedspot.com/3769156.jpg?t=1605157226"
+    },
+    {
+      "title": "San Francisco Tourism Tips Blog",
+      "feed_url": "https://www.sftourismtips.com/san-francisco-tourism.xml",
+      "website_url": "https://www.sftourismtips.com/index.html",
+      "description": "Discover San Francisco like a local, from a local. Uncover tips to visit top attractions, attend popular events, find hidden gems, and save money along the way.",
+      "followers": {
+        "facebook": 62400,
+        "twitter": 361
+      },
+      "image_url": "https://i1.feedspot.com/4785933.jpg?t=1609393990"
+    },
+    {
+      "title": "Cookies & Clogs",
+      "feed_url": "https://www.cookiesandclogs.com/feed/",
+      "website_url": "https://www.cookiesandclogs.com/",
+      "description": "Launched May 7, 2010, Cookies & Clogs has become a valuable resource for parents, both far and near. Located in the San Francisco Bay Area of California, our family loves sharing about our favorite places to go, things to do, and products to try.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 50100,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4785986.jpg?t=1609394634"
+    },
+    {
+      "title": "Miss Cheesemonger",
+      "feed_url": "http://misscheesemonger.com/feed/",
+      "website_url": "http://misscheesemonger.com/",
+      "description": "A San Francisco-based blog celebrating artisan cheese, food, and living. Veronique Kherian's creativity, entrepreneurship, and skill are the cornerstones of both cheesemaking and the art.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 945,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4651749.jpg?t=1609394752"
+    },
+    {
+      "title": "49 Miles",
+      "feed_url": "https://49miles.com/feed/",
+      "website_url": "https://49miles.com/",
+      "description": "49 Miles: The SF Guide is an online lifestyle resource for locals and visitors. Find out where to eat, drink, shop, play, and more in San Francisco's 7x7.",
+      "followers": {
+        "facebook": 254,
+        "twitter": 233,
+        "instagram": 11300
+      },
+      "image_url": "https://i1.feedspot.com/4786038.jpg?t=1609394675"
+    },
+    {
+      "title": "Muni Diaries",
+      "feed_url": "https://www.munidiaries.com/feed/",
+      "website_url": "https://www.munidiaries.com/",
+      "description": "A slice of life in San Francisco, as documented by everyday Muni riders. Unaffiliated with any transit agency.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 18500,
+        "instagram": 6300
+      },
+      "image_url": "https://i1.feedspot.com/34400.jpg?t=1609394695"
+    },
+    {
+      "title": "Bernalwood | Broadcasting from glamorous Bernal Heights, San Francisco",
+      "feed_url": "https://bernalwood.com/feed/",
+      "website_url": "https://bernalwood.com/",
+      "description": "An Internet weblog broadcasting live from Bernal Heights, San Francisco (Elevation 433 ft.)",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4785594.jpg?t=1609394745"
+    },
+    {
+      "title": "The Richmond District Blog of San Francisco",
+      "feed_url": "https://richmondsfblog.com/feed/",
+      "website_url": "https://richmondsfblog.com/",
+      "description": "Information, news, events, photos and video about the Richmond District neighborhood in San Francisco.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4785968.jpg?t=1609394562"
+    },
+    {
+      "title": "Britt Whit | A San Francisco Fashion Blog",
+      "feed_url": "https://whitwanders.com/feed/",
+      "website_url": "https://whitwanders.com/",
+      "description": "Britt Whit are two fashion bloggers from San Francisco that work in media but love to play dress-up. They are obsessed with the more fashionable things in life and love to show off the latest styles, whether at work or out on the town. They love to promote local designers and the unique sense of style San Francisco has to offer.",
+      "followers": {
+        "twitter": 2,
+        "instagram": 41000
+      },
+      "image_url": "https://i1.feedspot.com/4465790.jpg?t=1609394879"
+    },
+    {
+      "title": "Kriste Michelini Interiors | San Francisco Interior Design",
+      "feed_url": "https://kristemichelini.com/feed/",
+      "website_url": "https://kristemichelini.com/",
+      "description": "Kriste Michelini Interiors is a San Francisco Bay Area interior design firm. The firms focuses on residential and commercial interior spaces.",
+      "followers": {
+        "facebook": 11600,
+        "twitter": 541,
+        "instagram": 37400
+      },
+      "image_url": "https://i1.feedspot.com/4785890.jpg?t=1609394724"
+    },
+    {
+      "title": "Indian Simmer",
+      "feed_url": "http://www.indiansimmer.com/feed",
+      "website_url": "https://www.indiansimmer.com/",
+      "description": "A website dedicated to bringing the Indian food lovers together, around one community table. Indian Simmer has since been featured in a multitude of publications and received numerous recognitions, most notably as a winner of Saveur Best Food Blog awards in 2014. In 2015, expanding on the idea of creating a space for Indian food lovers around the world, it had a rebirth for Indian recipes.",
+      "followers": {
+        "facebook": 47900,
+        "twitter": 2500,
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/4666762.jpg?t=1609395309"
+    },
+    {
+      "title": "The San Francisco Standard",
+      "feed_url": "https://sfstandard.com/feed",
+      "website_url": "https://sfstandard.com/",
+      "description": "The San Francisco Bay Area's essential source for daily news, politics, business, food, tech and culture coverage.",
+      "followers": {
+        "facebook": 46700,
+        "twitter": 34600,
+        "instagram": 176000
+      },
+      "image_url": "https://i1.feedspot.com/7862969.jpg?t=1753941825"
+    },
+    {
+      "title": "ABC7 San Francisco",
+      "feed_url": "https://abc7news.com/feed/",
+      "website_url": "https://abc7news.com/",
+      "description": "The Bay Area's source for music news stories, get the latest updates from ABC7. Covering San Francisco, Oakland and San Jose and all of the greater Bay Area.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 589000,
+        "instagram": 375500
+      },
+      "image_url": "https://i1.feedspot.com/4418692.jpg?t=1753942363"
+    },
+    {
+      "title": "San Francisco 49ers",
+      "feed_url": "https://www.49ers.com/rss/news",
+      "website_url": "https://www.49ers.com/news/",
+      "description": "The official source of the latest 49ers headlines, news, roster transactions, injury updates, key matchups, and more from San Francisco 49ers.",
+      "followers": {
+        "facebook": 4099999,
+        "twitter": 2500000,
+        "instagram": 3900000
+      },
+      "image_url": "https://i1.feedspot.com/5159660.jpg?t=1753942292"
+    },
+    {
+      "title": "Giants365.com",
+      "feed_url": "https://feeds.feedburner.com/giants365-news",
+      "website_url": "https://www.giants365.com/",
+      "description": "Your best resource for San Francisco Giants baseball news. Includes a forum, chat, multimedia, and much more.",
+      "followers": {
+        "facebook": 958,
+        "twitter": 589,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/5180426.jpg?t=1753942919"
+    },
+    {
+      "title": "48 Hills",
+      "feed_url": "https://48hills.org/feed/",
+      "website_url": "https://48hills.org/",
+      "description": "48 Hills is San Francisco's largest daily, independent community news and culture site, launched by the editors of the legendary SF Bay Guardian alternative weekly newspaper. 48 Hills has covered local and global music, arts, nightlife, and cultural events from a deep and fiercely independent point of view, as well as reporting on vital news stories and issues, with a diverse array of community voices.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 8900,
+        "instagram": 9700
+      },
+      "image_url": "https://i1.feedspot.com/5461874.jpg?t=1753944429"
+    },
+    {
+      "title": "Federal Reserve Bank of San Francisco",
+      "feed_url": "https://www.frbsf.org/feed/",
+      "website_url": "https://www.frbsf.org/news-and-media/news/",
+      "description": "All articles from Federal Reserve Bank of San Francisco.",
+      "followers": {
+        "facebook": 11300,
+        "twitter": 66600,
+        "instagram": 6000
+      },
+      "image_url": "https://i1.feedspot.com/8653862.jpg?t=1753942001"
+    },
+    {
+      "title": "The Business Journals \u00bb San Francisco",
+      "feed_url": "https://feeds.bizjournals.com/sanfrancisco",
+      "website_url": "https://www.bizjournals.com/sanfrancisco",
+      "description": "The San Francisco Business Times features local business news about San Francisco. We also provide tools to help businesses grow, network and hire.",
+      "followers": {
+        "facebook": 18200,
+        "twitter": 44000,
+        "instagram": 5900
+      },
+      "image_url": "https://i1.feedspot.com/8653863.jpg?t=1753942727"
+    },
+    {
+      "title": "Good News Network \u00bb San Francisco",
+      "feed_url": "https://www.goodnewsnetwork.org/tag/san-francisco/feed/",
+      "website_url": "https://www.goodnewsnetwork.org/tag/san-francisco/",
+      "description": "All articles about San Francisco from Good News Network.",
+      "followers": {
+        "facebook": 610300,
+        "twitter": 38100,
+        "instagram": 47100
+      },
+      "image_url": "https://i1.feedspot.com/8653864.jpg?t=1753944188"
+    },
+    {
+      "title": "The Epoch Times \u00bb San Francisco",
+      "feed_url": "https://www.theepochtimes.com/us/nor-cal-san-francisco/feed",
+      "website_url": "https://www.theepochtimes.com/us/nor-cal-san-francisco",
+      "description": "The Epoch Times is an independent voice in print and on the web. We report news responsibly and truthfully so that readers can improve their own lives and increase their understanding and respect for their neighbors next door and around the globe.",
+      "followers": {
+        "facebook": 8700000,
+        "twitter": 828700,
+        "instagram": 375900
+      },
+      "image_url": "https://i1.feedspot.com/8653865.jpg?t=1753944070"
+    },
+    {
+      "title": "Bay Area Reporter",
+      "feed_url": "https://www.ebar.com/rss/23/News",
+      "website_url": "https://www.ebar.com/",
+      "description": "All articles from Bay Area Reporter.",
+      "followers": {
+        "facebook": 16100,
+        "twitter": 7200,
+        "instagram": 6700
+      },
+      "image_url": "https://i1.feedspot.com/8653866.jpg?t=1753942567"
+    },
+    {
+      "title": "Niners Nation",
+      "feed_url": "https://www.ninersnation.com/rss/index.xml",
+      "website_url": "https://www.ninersnation.com/",
+      "description": "Your best source for quality San Francisco 49ers news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 165500,
+        "twitter": 155500,
+        "instagram": 138900
+      },
+      "image_url": "https://i1.feedspot.com/4756153.jpg?t=1607075331"
+    },
+    {
+      "title": "Eddie's List: San Francisco Events & Things To Do This Week",
+      "feed_url": "https://eddieh.substack.com/feed",
+      "website_url": "https://eddieh.substack.com/",
+      "description": "Read about food, art, shows, music, comedy, sip and paint, career workshops, classes, cultural events, drinks, craft beer, tech events, plant fairs, artisan fairs, festivals, communal dinners, pop-ups, speaker series, volunteer opportunities, free events, news, activities and unique, random quirky stuff in and around the San Francisco Bay Area, Silicon Valley.",
+      "followers": {
+        "twitter": 87,
+        "instagram": 6100
+      },
+      "image_url": "https://i1.feedspot.com/5688846.jpg?t=1710162594"
+    },
+    {
+      "title": "InfoWorld",
+      "feed_url": "https://www.infoworld.com/feed/",
+      "website_url": "https://www.infoworld.com/",
+      "description": "InfoWorld, the leading voice in emerging enterprise technology, is the go-to resource for developers, architects, and business leaders launching next-generation initiatives on scalable cloud platforms, where such future-focused tech as AI or machine learning, big data analytics, and NoSQL databases evolve continuously. Go through their blog and learn more about their careers, events, analytics, and more.",
+      "followers": {
+        "facebook": 72300,
+        "twitter": 88400
+      },
+      "image_url": "https://i1.feedspot.com/4204729.jpg?t=1609393412"
+    },
+    {
+      "title": "101 Cookbooks",
+      "feed_url": "https://feeds.101cookbooks.com/101cookbooks",
+      "website_url": "https://www.101cookbooks.com/",
+      "description": "Focused on healthy recipes for everyday. Covers vegetarian recipes, whole foods recipes, and vegan recipes, plus the occasional sweet treat, written by New York Times best selling author Heidi Swanson.",
+      "followers": {
+        "facebook": 189000,
+        "twitter": 133800,
+        "instagram": 128400
+      },
+      "image_url": "https://i1.feedspot.com/22958.jpg?t=1600345754"
+    },
+    {
+      "title": "Bend Law Group Blog",
+      "feed_url": "https://www.bendlawgroup.com/blog",
+      "website_url": "https://www.bendlawgroup.com/blog",
+      "description": "Recognized as one of California's top law firms, Bend Law Group helps small business owners, entrepreneurs and startups start and grow their businesses.",
+      "followers": {
+        "facebook": 507,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4785869.jpg?t=1609394567"
+    },
+    {
+      "title": "Hoodline | Daily news from San Francisco",
+      "feed_url": "http://feeds.hoodline.com/",
+      "website_url": "https://hoodline.com/",
+      "description": "Hoodline.com is a main source of neighborhood news in San Francisco, where we reach around half the citywide readership, as well as in Oakland and the wider Bay Area. It's also where we test new ideas in local media, data and products for the world.",
+      "followers": {
+        "facebook": 36200,
+        "twitter": 17100
+      },
+      "image_url": "https://i1.feedspot.com/4785596.jpg?t=1609393392"
+    },
+    {
+      "title": "Save The Bay Blog - San Francisco Bay's leading champion since 1961",
+      "feed_url": "https://blog.savesfbay.org/feed/",
+      "website_url": "https://www.sassyredlipstick.com/",
+      "description": "Save The Bay is the largest regional organization working to protect, restore and celebrate San Francisco Bay. As its leading champion since 1961, Save The Bay protects the Bay from pollution and inappropriate shoreline development, making it cleaner and healthier for people and wildlife.",
+      "followers": {
+        "facebook": 14900,
+        "twitter": 7400,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4785802.jpg?t=1609395297"
+    },
+    {
+      "title": "sassy red lipstick | a San Francisco style blog by Sarah Tripp",
+      "feed_url": "https://www.sassyredlipstick.com/feed/",
+      "website_url": "https://www.sassyredlipstick.com/",
+      "description": "sassy red lipstick // a San Francisco style blog by Sarah Tripp - confident style & body positivity.",
+      "followers": {
+        "facebook": 39200,
+        "twitter": 1300,
+        "instagram": 992400
+      },
+      "image_url": "https://i1.feedspot.com/4785945.jpg?t=1609394543"
+    },
+    {
+      "title": "SF Citizen",
+      "feed_url": "https://www.sfcitizen.com/feed/",
+      "website_url": "https://www.sfcitizen.com/",
+      "description": "San Francisco Citizen Blog",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/83899.jpg"
+    },
+    {
+      "title": "SPOTTED SF",
+      "feed_url": "https://spottedsf.com/feed/",
+      "website_url": "https://spottedsf.com/",
+      "description": "Sharing local gems around San Francisco on the road, too.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4785861.jpg?t=1609395146"
+    },
+    {
+      "title": "ChasingKendall",
+      "feed_url": "https://chasingkendall.com/feed/",
+      "website_url": "https://chasingkendall.com/",
+      "description": "A San Francisco based Fashion and Lifestyle Blog by Kendall Chase. Covering looks, travel, beer recommendations and cocktail recipes.",
+      "followers": {
+        "facebook": 569,
+        "twitter": 229,
+        "instagram": 23900
+      },
+      "image_url": "https://i1.feedspot.com/4785843.jpg?t=1609394649"
+    },
+    {
+      "title": "Wannabe Fashion Blogger",
+      "feed_url": "https://www.wannabefashionblogger.com/feed/",
+      "website_url": "https://www.wannabefashionblogger.com/",
+      "description": "I live in the best city in the world (San Francisco!) where fashion experimentation is highly encouraged and supported. I started this blog as a creative outlet away from my hectic life as a graduate student. The name 'Wannabe Fashion Blogger' came to life when I would use it to describe the Instagram pictures I snapped of myself in my latest fashion finds.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 494,
+        "instagram": 35300
+      },
+      "image_url": "https://i1.feedspot.com/4786012.jpg?t=1609394689"
+    },
+    {
+      "title": "Chowhound",
+      "feed_url": "https://www.chowhound.com/food-news/feed/",
+      "website_url": "https://www.chowhound.com/",
+      "description": "Discover the best recipes and resources for cooking, eating, growing and making food. Find tips, tricks, and support by connecting to a community of food contributors.",
+      "followers": {
+        "facebook": 220100,
+        "twitter": 243300,
+        "instagram": 87600
+      },
+      "image_url": "https://i1.feedspot.com/4675850.jpg?t=1600345197"
+    },
+    {
+      "title": "SF Etsy - San Francisco Bay Area Etsy Street",
+      "feed_url": "https://www.etsysf.com/1/feed",
+      "website_url": "https://pavementrunner.com/",
+      "description": "SF Etsy is the street team for local Etsy sellers in the San Francisco Bay Area.",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 2900,
+        "instagram": 9600
+      },
+      "image_url": "https://i1.feedspot.com/4786044.jpg?t=1609394761"
+    },
+    {
+      "title": "The Bay Bridged",
+      "feed_url": "https://thebaybridged.com/feed/",
+      "website_url": "https://pavementrunner.com/",
+      "description": "The leading source for the best in San Francisco Bay Area independent music.The Bay Bridged is a nonprofit arts organization utilizing new media and presenting live events to support the San Francisco Bay Area's indie rock, folk, and pop music communities.",
+      "followers": {
+        "facebook": 9000,
+        "twitter": 10400,
+        "instagram": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4066974.jpg?t=1597646382"
+    },
+    {
+      "title": "Pavement Runner",
+      "feed_url": "https://pavementrunner.com/feed/",
+      "website_url": "https://pavementrunner.com/",
+      "description": "The PavementRunner blog is created by a runner named Brian Hill that features articles on various topics related to running, fitness, and wellness. The blog also includes personal stories and experiences of the author, as well as tips and advice on topics such as training, nutrition, and injury prevention.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 21200,
+        "instagram": 12800
+      },
+      "image_url": "https://i1.feedspot.com/7227.jpg?t=1599815087"
+    }
+  ]
+}

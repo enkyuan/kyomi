@@ -1,0 +1,53 @@
+{
+  "category": "Sink",
+  "source_url": "https://rss.feedspot.com/sink_rss_feeds",
+  "feeds": [
+    {
+      "title": "All Portable Sinks Blog",
+      "feed_url": "https://allportablesinks.com/blogs/news.atom",
+      "website_url": "https://allportablesinks.com/blogs/news",
+      "description": "Allportablesinks.com is part of Brentpoint LLC, a family-owned company dedicated to superior customer service. Our goal is to provide our customers with high-quality portable sinks and accessories that are both convenient and well-designed. These sinks will help you provide a clean, safe environment for those who matter the most to you - your own children, and clients.",
+      "followers": {
+        "facebook": 813,
+        "twitter": 2,
+        "instagram": 97
+      },
+      "image_url": "https://i1.feedspot.com/5514518.jpg?t=1677649533"
+    },
+    {
+      "title": "The Sink Boutique Blog",
+      "feed_url": "https://thesinkboutique.com/blogs/news.atom",
+      "website_url": "https://thesinkboutique.com/blogs/news",
+      "description": "The Sink Boutique is a premier destination for showstopper sinks for your new house, remodel or redesign project. We are a woman/family-owned business located in Northern Virginia, USA. Our ever-growing collection has been carefully selected from the best manufacturers and brands. We share a passion for homes that echo a personality. We want to provide sinks that transform bland rooms into stunning spaces.",
+      "followers": {
+        "facebook": 552,
+        "twitter": 11,
+        "instagram": 905
+      },
+      "image_url": "https://i1.feedspot.com/5514519.jpg?t=1677649540"
+    },
+    {
+      "title": "Direct Sinks Blog",
+      "feed_url": "https://directsinks.com/blogs/general.atom",
+      "website_url": "https://directsinks.com/blogs/general",
+      "description": "We've been in business since 1996, and in the industry for over 50 years. Our background in kitchen and bath design and experience working with countertop fabricators is a huge assets to our customers. We will find you a sink that fits and functions the way you need it to. And if it happens to be beautiful, then that's just a bonus! In our blog, our knowledgeable staff explores today's trends, gives honest product reviews, and releases information about industry innovations, sales, and more!",
+      "followers": {
+        "facebook": 700,
+        "twitter": 418,
+        "instagram": 866
+      },
+      "image_url": "https://i1.feedspot.com/5514520.jpg?t=1677649680"
+    },
+    {
+      "title": "ArtisanCrafted.com Blog",
+      "feed_url": "https://artisancrafted.com/blog",
+      "website_url": "https://artisancrafted.com/blog",
+      "description": "Sinks Gallery offers a breathtaking selection of artisan-crafted designer sinks for unique kitchen and bath interiors. We are the valued resource of designers, architects, builders, and discerning homeowners. Our focus is handcrafted functional and architectural works of art for residential and commercial products.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 544
+      },
+      "image_url": "https://i1.feedspot.com/5514523.jpg?t=1677649705"
+    }
+  ]
+}

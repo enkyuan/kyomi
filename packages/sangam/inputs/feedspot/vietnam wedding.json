@@ -1,0 +1,40 @@
+{
+  "category": "Vietnam Wedding",
+  "source_url": "https://rss.feedspot.com/vietnam_wedding_rss_feeds",
+  "feeds": [
+    {
+      "title": "Tin Wedding Photography",
+      "feed_url": "https://www.tinweddingphotography.com/vietnam-wedding-photographers?format=rss",
+      "website_url": "https://www.tinweddingphotography.com/vietnam-wedding-photographers",
+      "description": "Hey, I'm Tin Nguyen! I've been a professional photographer since 2011. My style in wedding photography is a combination of respect for authenticity, a documentary outlook, and creative expression. Check out the blog to view my latest work.",
+      "followers": {
+        "facebook": 2600,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5335408.jpg?t=1635157154"
+    },
+    {
+      "title": "Junebug Weddings \u00bb Vietnam Wedding",
+      "feed_url": "https://junebugweddings.com/wedding-blog/category/locations-international/vietnam-wedding/feed/",
+      "website_url": "https://junebugweddings.com/wedding-blog/category/locations-international/vietnam-wedding/",
+      "description": "Junebug Weddings is the essential guide to planning a stylish wedding. Find the best photographers, planners, venues, and wedding professionals worldwide.",
+      "followers": {
+        "facebook": 172300,
+        "twitter": 56500,
+        "instagram": 539000
+      },
+      "image_url": "https://i1.feedspot.com/5335407.jpg?t=1635157938"
+    },
+    {
+      "title": "Bayla Wedding Planner Blog",
+      "feed_url": "https://baylaplanner.com/feed/",
+      "website_url": "https://baylaplanner.com/blog/",
+      "description": "A professional wedding consultancy planning company providing vendor, decoration, engagement, and wedding planning services. Bayla Planner brings out the personality of couples and creates a beautiful moment on their day.",
+      "followers": {
+        "facebook": 8100,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5335409.jpg?t=1635157663"
+    }
+  ]
+}

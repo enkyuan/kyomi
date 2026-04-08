@@ -1,0 +1,767 @@
+{
+  "category": "Furniture",
+  "source_url": "https://rss.feedspot.com/furniture_rss_feeds",
+  "feeds": [
+    {
+      "title": "Ana White Blog",
+      "feed_url": "https://www.ana-white.com/feed",
+      "website_url": "https://www.ana-white.com/blog",
+      "description": "Your source for great DIY furniture and woodworking projects. Author Ana White helps people improve their homes with basic tools on limited budgets. She has spent the last decade designing and building furniture plans and sharing those plans on her website.",
+      "followers": {
+        "facebook": 416400,
+        "twitter": 12900,
+        "instagram": 293400
+      },
+      "image_url": "https://i1.feedspot.com/4477713.jpg?t=1606482377"
+    },
+    {
+      "title": "Furniture Fashion",
+      "feed_url": "https://furniturefashion.com/feed/",
+      "website_url": "https://furniturefashion.com/",
+      "description": "Modern Furniture from Famous Manufacturers and Designers Offering the Finest Furnishings for Every Room of Your Home or Office From Around the World",
+      "followers": {
+        "facebook": 264400,
+        "twitter": 9200
+      },
+      "image_url": "https://i1.feedspot.com/4505755.jpg"
+    },
+    {
+      "title": "FineWoodworking Blog",
+      "feed_url": "https://www.finewoodworking.com/section/blog/feed",
+      "website_url": "https://www.finewoodworking.com/section/blog",
+      "description": "Expert advice on woodworking and furniture making, with thousands of how-to videos, step-by-step articles, project plans, photo galleries, tool reviews, blogs, and more",
+      "followers": {
+        "facebook": 134500,
+        "twitter": 132200,
+        "instagram": 383900
+      },
+      "image_url": "https://i1.feedspot.com/4504402.jpg?t=1606482369"
+    },
+    {
+      "title": "New Pacific Direct Blog",
+      "feed_url": "https://blog.newpacificdirect.com/rss.xml",
+      "website_url": "https://blog.newpacificdirect.com/",
+      "description": "New Pacific Direct is a leading resource for on-trend and reasonably priced furniture that spans transitional design to modern styling. Founded nearly 20 years ago, our California-based company has grown to become a trusted resource for lifestyle design, especially in the dining, upholstery, bedroom and accent furniture categories.",
+      "followers": {
+        "facebook": 993,
+        "twitter": 256,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5127532.jpg?t=1608110355"
+    },
+    {
+      "title": "VT Woods Studios Blog",
+      "feed_url": "https://vermontwoodsstudios.com/blogs/recent-articles.atom",
+      "website_url": "https://vermontwoodsstudios.com/blogs/recent-articles",
+      "description": "Vermont Woods Studios Blog is about conservation of forests while providing the customers with the best selection & quality available for VT made wood furniture.",
+      "followers": {
+        "facebook": 23900,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4505799.jpg?t=1676466585"
+    },
+    {
+      "title": "Creative Furniture",
+      "feed_url": "https://creativefurniturestore.wordpress.com/feed/",
+      "website_url": "https://creativefurniturestore.wordpress.com/",
+      "description": "We have something for everyone in our store. Explore a wide range of living room, bedroom, dining room & office furniture only at Creative Furniture Store.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 1300,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5022247.jpg?t=1608110481"
+    },
+    {
+      "title": "FOH Furniture Blog",
+      "feed_url": "https://fohfurniture.com/feed/",
+      "website_url": "https://fohfurniture.com/furniture-blog/",
+      "description": "Restaurant furniture, office furniture, bar furniture,hotel apartment furniture one stop solution",
+      "followers": {
+        "facebook": 524,
+        "twitter": 79
+      },
+      "image_url": "https://i1.feedspot.com/5128410.jpg?t=1676466744"
+    },
+    {
+      "title": "Lakdi Blog",
+      "feed_url": "https://www.lakdi.com/blogs/news.atom",
+      "website_url": "https://www.lakdi.com/blogs/news",
+      "description": "Covers articles related to furniture and related topics. Lakdi.com is a certified furniture site in India that offers a vast variety of all types of furniture including office, home, school, and commercial furniture.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 294
+      },
+      "image_url": "https://i1.feedspot.com/5421139.jpg?t=1657704268"
+    },
+    {
+      "title": "Obsession Outlet Blog",
+      "feed_url": "https://obsessionoutlet.com/feed/",
+      "website_url": "https://obsessionoutlet.com/blog/",
+      "description": "At Obsession Outlet, we are focused on helping our clients make a lovely home by offering a wide range of furniture styles, proficient advice, and service.",
+      "followers": {
+        "facebook": 110700,
+        "instagram": 67300
+      },
+      "image_url": "https://i1.feedspot.com/5196620.jpg?t=1608110378"
+    },
+    {
+      "title": "FSH Furniture Blog",
+      "feed_url": "https://fshfurniture.ae/feed/",
+      "website_url": "https://fshfurniture.ae/blog/",
+      "description": "Discover the best furniture-related articles and tips for your home. Five Star Home Furniture Trading LLC is the Online Furniture Store in Dubai.",
+      "followers": {
+        "facebook": 12500,
+        "twitter": 138,
+        "instagram": 19500
+      },
+      "image_url": "https://i1.feedspot.com/5426158.jpg?t=1659006849"
+    },
+    {
+      "title": "Vox Furniture Blog",
+      "feed_url": "https://www.voxfurniture.ae/blogs/posts.atom",
+      "website_url": "https://www.voxfurniture.ae/blogs/posts/",
+      "description": "We are a Furniture Supplier in Dubai, UAE. VOX Furniture helps you to buy the best premium collections of home furniture online.",
+      "followers": {
+        "facebook": 813,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5140778.jpg?t=1608110526"
+    },
+    {
+      "title": "Furniture Today",
+      "feed_url": "https://www.furnituretoday.com/feed/",
+      "website_url": "https://www.furnituretoday.com/",
+      "description": "From breaking news to daily headline-grabbing information, Furniture Today is the site to read in the furniture industry. Complete information source for the furniture industry featuring retailer and manufacturing news, plus product trends and market analysis.",
+      "followers": {
+        "facebook": 43200,
+        "twitter": 34900,
+        "instagram": 10100
+      },
+      "image_url": "https://i1.feedspot.com/5455878.jpg?t=1665991798"
+    },
+    {
+      "title": "Marco Furniture Blog",
+      "feed_url": "https://www.marcofurniture.com.au/blogs/news.atom",
+      "website_url": "https://www.marcofurniture.com.au/blogs/news",
+      "description": "Marco Furniture was founded with an idea and a dream. Eleven years later we are still fulfilling our commitments to the community, our customers, and the furniture industry. As a family-owned business, Marco Furniture cares deeply for the local consumer and your experience. From humble beginnings, Marco Furniture has blossomed into a well-recognized brand shipping furniture all across Australia.",
+      "followers": {
+        "facebook": 5200,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/8474740/page/7254804/logo_1736161234.jpg"
+    },
+    {
+      "title": "Luxury Italian Furniture Blog",
+      "feed_url": "https://blog.luxury-italianfurniture.com/rss.xml",
+      "website_url": "https://blog.luxury-italianfurniture.com/",
+      "description": "Our articles will suggest new ways of envisioning luxury Italian furniture, offering solutions and tips to make your living room and your bedroom a place of luxury and character. We intend to suggest the most suitable styles for your personality, guiding you in the choice of the best solution. This website Luxury Italian Furniture is entirely about design, luxury, and style.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5366191.jpg?t=1643779405"
+    },
+    {
+      "title": "Club Furniture Blog",
+      "feed_url": "https://www.clubfurniture.com/blogs/news.atom",
+      "website_url": "https://www.clubfurniture.com/blogs/news",
+      "description": "Hi, we're Darrin and Jeff King! For over 20 years we've been offering high-quality, hand-crafted, custom home furnishings online at incredible North Carolina factory direct prices! If you love the style, comfort, and quality of the furniture found at high-end retailers but not their 'sky-high' prices and 'less than helpful' customer service, then you've come to the right place. Stay up to date with the top furniture and interior design trends for your home!",
+      "followers": {
+        "facebook": 13700,
+        "twitter": 678,
+        "instagram": 6000
+      },
+      "image_url": "https://i1.feedspot.com/5508614.jpg?t=1676523980"
+    },
+    {
+      "title": "Daydream Leisure Furniture Blog",
+      "feed_url": "https://www.daydreamleisure.com.au/feed/",
+      "website_url": "https://www.daydreamleisure.com.au/blogs/",
+      "description": "DAYDREAM LEISURE FURNITURE caters to both the DOMESTIC and COMMERCIAL market. Situated in a coastal area, we only sell furniture that will stand the test of time in such harsh climatic conditions. Quality and reliability is our priority when choosing furniture in our show rooms. We want you to be assured your purchase not only looks spectacular, it won't be a problem.",
+      "followers": {
+        "facebook": 1000,
+        "instagram": 905
+      },
+      "image_url": "https://i1.feedspot.com/5508613.jpg?t=1676467719"
+    },
+    {
+      "title": "Lost & Found Decor Blog",
+      "feed_url": "https://www.lostandfounddecor.com/feed/",
+      "website_url": "https://www.lostandfounddecor.com/blog/",
+      "description": "Hi, I'm Melanie Alexander. My goal for Lost & Found continues to be to offer unique decorative accessories and furnishings that can fit into even the tightest budget. I also try to pass along skills and encouragement to others that are looking to start their own small business, specifically other moms working to balance their creative endeavors with the demands of family life.",
+      "followers": {
+        "facebook": 49800,
+        "instagram": 30000
+      },
+      "image_url": "https://i1.feedspot.com/5508599.jpg?t=1676467632"
+    },
+    {
+      "title": "Big Furniture Group",
+      "feed_url": "https://www.bigfurnituregroup.com/feed/",
+      "website_url": "https://www.bigfurnituregroup.com/",
+      "description": "Our mission at Big Furniture Group is to cover the latest industry news and provide insightful information to our users, while maintaining committed to accurate reporting and offering our content for FREE.",
+      "followers": {
+        "facebook": 209,
+        "twitter": 161,
+        "instagram": 404
+      },
+      "image_url": "https://i1.feedspot.com/5508608.jpg?t=1676523360"
+    },
+    {
+      "title": "Stoney Creek Furniture Blog",
+      "feed_url": "https://www.stoneycreekfurnitureblog.com/feed/",
+      "website_url": "https://www.stoneycreekfurnitureblog.com/",
+      "description": "Be Inspired! Stoney Creek Furniture offers you the largest and latest selection of designer furniture, from contemporary to cottage, and everything in between.",
+      "followers": {
+        "facebook": 5100,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4505930.jpg?t=1608110556"
+    },
+    {
+      "title": "Nilkamal Furniture Blog",
+      "feed_url": "https://www.nilkamalfurniture.com/blogs/blog.atom",
+      "website_url": "https://www.nilkamalfurniture.com/blogs/blog",
+      "description": "We bring to you a compelling mix of blogs on the latest furniture designs, home d\u00e9cor tips, seasonal interior d\u00e9cor trends, design ideas, and more - you're a one-stop to read all about furniture. Nilkamalfurniture.com is designed to be your one-stop-shop for quality, trendy, and budget-friendly furniture range.",
+      "followers": {
+        "facebook": 181600,
+        "twitter": 3500,
+        "instagram": 69300
+      },
+      "image_url": "https://i1.feedspot.com/5508605.jpg?t=1676523095"
+    },
+    {
+      "title": "Cute Furniture",
+      "feed_url": "https://www.cute-furniture.com/feed/",
+      "website_url": "https://www.cute-furniture.com/",
+      "description": "Cute Furniture is a blog that brings you daily collections of interesting contemporary furniture that can be ordered online from US based etailers.",
+      "followers": {
+        "facebook": 243,
+        "twitter": 171
+      },
+      "image_url": "https://i1.feedspot.com/4507610.jpg?t=1608110545"
+    },
+    {
+      "title": "MidinMod Blog",
+      "feed_url": "https://midinmod.com/blogs/mid-century-modern-design-blog.atom",
+      "website_url": "https://midinmod.com/blogs/mid-century-modern-design-blog",
+      "description": "Discussing Mid-Century Modern Design Ideas & Tips for Apartments Living, Loft Life, & Home Owners. Also, view the latest Mid Mod Sofas, Dining, etc. With over 25 years of experience in handling, selling, and distributing modern Texas furniture, MidinMod's mission is to give customers stylish and affordable furniture and dining sets. We have cut out the middle man by working directly with the manufacturers, and as a result, have passed those savings on to you in the form of high-quality and affordable furniture.",
+      "followers": {
+        "facebook": 9200
+      },
+      "image_url": "https://i1.feedspot.com/5533662.jpg?t=1680612638"
+    },
+    {
+      "title": "Styylish Blog",
+      "feed_url": "https://styylish.com/feed/",
+      "website_url": "https://styylish.com/blog/",
+      "description": "Styylish offers you the very best in European antique furniture and Design Objects from the 18th to the 20th century.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5123034.jpg?t=1608110475"
+    },
+    {
+      "title": "Furniture Bank",
+      "feed_url": "https://www.furniturebank.org/feed/",
+      "website_url": "https://www.furniturebank.org/category/learning-centre/",
+      "description": "Furniture Bank is a charity & social enterprise that collects used furniture from the community and transfers it to families in need. Creating homes since 1998!",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 4100,
+        "instagram": 8600
+      },
+      "image_url": "https://i1.feedspot.com/4505753.jpg?t=1676466661"
+    },
+    {
+      "title": "AMB Furniture Blog",
+      "feed_url": "https://www.ambfurniture.com/blog/feed/",
+      "website_url": "https://www.ambfurniture.com/blog/",
+      "description": "Welcome to AMB furniture and Design. We specialize in sectional sofas and sofa sets and we carry a wide variety to choose from. We also feature a large dining room selection from Retro modern to rustic country style with natural wood edges.",
+      "followers": {
+        "facebook": 180,
+        "twitter": 511
+      },
+      "image_url": "https://i1.feedspot.com/4960389.jpg?t=1607149438"
+    },
+    {
+      "title": "European Leather Gallery Blog",
+      "feed_url": "https://europeanleathergallery.com/feed/",
+      "website_url": "https://europeanleathergallery.com/blog/",
+      "description": "Welcome to the blog of European Leather Gallery - Florida's #1 Ekornes Stressless Furniture Dealer. Keep current on new arrivals,great deals and design tips",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5021434.jpg?t=1676466610"
+    },
+    {
+      "title": "Resource Furniture Blog",
+      "feed_url": "https://resourcefurniture.com/blogs/blog.atom",
+      "website_url": "https://resourcefurniture.com/blogs/blog",
+      "description": "For over 20 years, Resource Furniture has defined multi-functional design. We specialize in transforming and space-maximizing furniture that solves some of the most common problems in the home - limited room for a family to grow, a lack of storage, no space to entertain or work from home, and a need for greater functionality overall.",
+      "followers": {
+        "facebook": 263000,
+        "twitter": 8800,
+        "instagram": 53800
+      },
+      "image_url": "https://i1.feedspot.com/5508606.jpg?t=1676523923"
+    },
+    {
+      "title": "Modern Studio Furnishings Blog",
+      "feed_url": "https://www.modernfurnishings.com/blogs/news.atom",
+      "website_url": "https://www.modernfurnishings.com/blogs/news",
+      "description": "On our Modern Studio Furnishings Blog, we explore the latest trends and styles in the world of interior design. From contemporary chic to minimalist elegance, we showcase the best in modern furniture design, offering tips, ideas, and inspiration for making your home look and feel amazing. Modern Studio Furnishings provides contemporary furniture solutions for today's modern living.",
+      "followers": {
+        "facebook": 14500,
+        "twitter": 596,
+        "instagram": 310
+      },
+      "image_url": "https://i1.feedspot.com/5509017.jpg?t=1676544910"
+    },
+    {
+      "title": "Oakavia Blog",
+      "feed_url": "https://www.oakavia.com/blogs/news.atom",
+      "website_url": "https://www.oakavia.com/blogs/news/",
+      "description": "We offer one of the best selections of Furniture in the UK. Our ranges include modern and innovative, as well as more classic and traditional designs.",
+      "followers": {
+        "facebook": 146,
+        "twitter": 7,
+        "instagram": 502
+      },
+      "image_url": "https://i1.feedspot.com/5565463.jpg?t=1683877673"
+    },
+    {
+      "title": "Mesquemobles Blog",
+      "feed_url": "https://mueblesmesquemobles.com/blog/feed/",
+      "website_url": "https://mueblesmesquemobles.com/blog/",
+      "description": "Tus Muebles al Mejor Precio",
+      "followers": {
+        "facebook": 7300,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/8536517.jpg?t=1753084337"
+    },
+    {
+      "title": "Leisure Lounge Blog",
+      "feed_url": "https://www.leisurelounge.co.za/feed/",
+      "website_url": "https://www.leisurelounge.co.za/blog/",
+      "description": "Our Leisure Lounge blog is packed with interesting furniture news and information - freshly pressed just for you!",
+      "followers": {
+        "facebook": 5600,
+        "instagram": 7400
+      },
+      "image_url": "https://i1.feedspot.com/5022253.jpg?t=1608110519"
+    },
+    {
+      "title": "Corn Upholstery Blog",
+      "feed_url": "https://www.cornupholstery.com/furniture-blog?format=rss",
+      "website_url": "https://www.cornupholstery.com/furniture-blog",
+      "description": "Corn Upholstery was established in 1946 with the goal of creating the highest quality, contract grade furniture. Follow to read blog posts about custom booth seating, banquette benches, and commercial seating.",
+      "followers": {
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5191554.jpg?t=1598949195"
+    },
+    {
+      "title": "Home Of Cozy",
+      "feed_url": "https://homeofcozy.com/feed/",
+      "website_url": "https://homeofcozy.com/",
+      "description": "Home of Cozy is all about improving the furniture buying experience. Expert reviews, shopping advice and deep discounts for all furniture purchases. We help you make informed buying decisions.",
+      "followers": {
+        "facebook": 5
+      },
+      "image_url": "https://i1.feedspot.com/5173380.jpg?t=1608110419"
+    },
+    {
+      "title": "Insider's Guide to Furniture",
+      "feed_url": "https://insidersguidetofurniture.com/buyers-guide-to-furniture/feed/",
+      "website_url": "https://insidersguidetofurniture.com/buyers-guide-to-furniture/",
+      "description": "Learn all the tips and tricks from a real furniture industry insider with the help of our blog. Insider's Guide to Furniture is your go-to source for furniture news, information, and reviews.",
+      "followers": {
+        "facebook": 31,
+        "twitter": 13
+      },
+      "image_url": "https://i1.feedspot.com/5440118.jpg?t=1676466769"
+    },
+    {
+      "title": "Thakeham Furniture Blog",
+      "feed_url": "https://blog.thakehamfurniture.co.uk/feed/",
+      "website_url": "https://blog.thakehamfurniture.co.uk/",
+      "description": "Antique Furniture Blog. Thakeham Furniture is a small, family business, established by Tim and Belinda Chavasse in 1987.",
+      "followers": {
+        "facebook": 440,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4505805.jpg?t=1608110530"
+    },
+    {
+      "title": "Morgan Furniture Blog",
+      "feed_url": "https://morganfurniture.co.uk/blog/feed/",
+      "website_url": "https://morganfurniture.co.uk/blog/",
+      "description": "Morgan Furniture - Designers and Manufacturers of Contemporary Chairs, Sofas and Tables in the Hospitality, Workplace and Cruise Ship sectors",
+      "followers": {
+        "twitter": 2900,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4505779.jpg?t=1676466832"
+    },
+    {
+      "title": "The Painted Drawer Blog",
+      "feed_url": "https://thepainteddrawer.com/feed/",
+      "website_url": "https://thepainteddrawer.com/blog/",
+      "description": "The Painted Drawer is full of up-cycled, design on a dime inspiration with fantastic paint and decorating tips and tutorials for your home! From how-to posts on flipping furniture, thrifting for finds, home DIY, recipes to share and beauty tips and tricks, it is all here to share!",
+      "followers": {
+        "facebook": 2,
+        "twitter": 562
+      },
+      "image_url": "https://i1.feedspot.com/4507570.jpg?t=1676466593"
+    },
+    {
+      "title": "Jacob Bespoke Furniture Blog",
+      "feed_url": "https://jacobuk.co.uk/feed/",
+      "website_url": "https://jacobuk.co.uk/blog/",
+      "description": "Jacob Bespoke Furniture is a creatively driven, bespoke furniture-making specialist. Using an incredible array of materials, machinery, and skills, we bring elegant and unique designs to life, creating true, quality custom furniture. Stay updated with furniture and interior design news as well as updates on our latest bespoke furniture crafting, renovation, and upholstery with our blogs.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 989,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5508609.jpg?t=1676467689"
+    },
+    {
+      "title": "Brian Boggs Chairmakers News",
+      "feed_url": "https://brianboggschairmakers.com/feed/",
+      "website_url": "https://brianboggschairmakers.com/news/",
+      "description": "Brian and Melanie have built a company that is focused on the support of fine craftsmanship and education, giving back to the world, forest management and materials sustainability, and the pursuit of absolute quality. If you are selecting a table, decide how many people you'll be seating and the shape of the tabletop. This information will help us define the dimensions of your piece.",
+      "followers": {
+        "facebook": 8400,
+        "instagram": 29000
+      },
+      "image_url": "https://i1.feedspot.com/5482726.jpg?t=1671706138"
+    },
+    {
+      "title": "Harmoor Furniture",
+      "feed_url": "https://harmoor.com/feed/",
+      "website_url": "https://harmoor.com/new/",
+      "description": "Harmoor Furniture is a leading manufacturer and supplier of Italian-style table and chair furniture, exporting to all locations in the world from America. Browse their catalog of High-class furniture design and other essential tips to keep in mind when buying furniture in this blog.",
+      "followers": {
+        "facebook": 281,
+        "twitter": 6,
+        "instagram": 21
+      },
+      "image_url": "https://i1.feedspot.com/7117975.jpg?t=1707204526"
+    },
+    {
+      "title": "Article Blog",
+      "feed_url": "https://www.article.com/blog/feed/",
+      "website_url": "https://www.article.com/blog/",
+      "description": "Since launching in 2013, we've made it our mission to make great style easy, long-lasting, and well-priced. We work directly with our manufacturers to produce unique, durable pieces using high-quality materials. This direct relationship means we can bring you beautiful modern furniture and decor at unrivaled value.",
+      "followers": {
+        "facebook": 425400,
+        "twitter": 3300,
+        "instagram": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/5508612.jpg?t=1676524058"
+    },
+    {
+      "title": "Wood Furniture Blog",
+      "feed_url": "https://woodfurniture.com/blogs/news.atom",
+      "website_url": "https://woodfurniture.com/blogs/news",
+      "description": "Wood Furniture was created with the intention of offering you an array of certified sustainably sourced materials for wood furniture, lighting and decor. We strive to be as eco-friendly as possible and are a proud partner of the National Forest Foundation.",
+      "followers": {
+        "instagram": 6300
+      },
+      "image_url": "https://i1.feedspot.com/5508607.jpg?t=1676522959"
+    },
+    {
+      "title": "Hooker Furniture Blog",
+      "feed_url": "http://feeds.feedburner.com/hookerfurniture",
+      "website_url": "http://blog.hookerfurniture.com/",
+      "description": "Get ideas about effective home office furniture designs, or get inspired by living room decorating styles on our blog. Hooker Furniture wants to enrich your life through innovative, beautiful home furnishings of exceptional value.",
+      "followers": {
+        "facebook": 85200
+      },
+      "image_url": "https://i1.feedspot.com/4505750.jpg?t=1676467277"
+    },
+    {
+      "title": "Autonomous Furniture Blog",
+      "feed_url": "https://www.autonomousfurniture.com/blogs/blog.atom",
+      "website_url": "https://www.autonomousfurniture.com/blogs/blog",
+      "description": "Autonomous Furniture designs and produces all of its products in Victoria, BC in our downtown studio and showroom. Our furniture line is made up of around 20 pieces at any given time, updated with a new piece approximately every six months. We are designers and craftsmen, disrupting the modern home with dramatically contemporary furnishings, built from the finest wood in the world.",
+      "followers": {
+        "facebook": 679,
+        "twitter": 220,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4505924.jpg?t=1676466838"
+    },
+    {
+      "title": "Just the Woods \u00bb Painted Furniture",
+      "feed_url": "https://www.justthewoods.com/category/painted-furniture/feed/",
+      "website_url": "https://www.justthewoods.com/category/painted-furniture/",
+      "description": "Just the Woods, LLC is a veteran owned business specializing in hand painted furniture. We use only high end non toxic products.",
+      "followers": {
+        "facebook": 13200,
+        "twitter": 304,
+        "instagram": 13500
+      },
+      "image_url": "https://i1.feedspot.com/4588635.jpg?t=1608110401"
+    },
+    {
+      "title": "Gainsville Blog",
+      "feed_url": "https://gainsville.com.au/blogs/luxe-living.atom",
+      "website_url": "https://gainsville.com.au/blogs/luxe-living",
+      "description": "Gainsville is one of the leading home furniture stores in Melbourne and prides itself on providing the highest quality Australian and International Designer Lounge Furniture, Modern Fabric and Leather Sofas, Designer Bedroom Furniture, Modern Dining Furniture, Indoor Roller Blinds, Contemporary TV Units, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5508600.jpg?t=1676522908"
+    },
+    {
+      "title": "Vimercati Blog",
+      "feed_url": "https://www.vimercatimeda.com/blog/en/feed",
+      "website_url": "https://www.vimercatimeda.com/blog/en/",
+      "description": "Vimercati Meda is a company specialized in the production of classic luxury furniture. The classic furniture produced is: classic and luxury bedrooms, classic and luxury living rooms, living furniture groups, luxury sofas, classic wardrobes, complements and boiserie.",
+      "followers": {
+        "facebook": 30300,
+        "twitter": 262,
+        "instagram": 47500
+      },
+      "image_url": "https://i1.feedspot.com/4505789.jpg"
+    },
+    {
+      "title": "David Barron Furniture",
+      "feed_url": "http://davidbarronfurniture.blogspot.com/feeds/posts/default",
+      "website_url": "http://davidbarronfurniture.blogspot.com/",
+      "description": "A Woodworking furniture blog by David Barron. I am married with two children and am a woodworking fanatic! I make fine furniture as well as a range of very popular hand tools which I demonstrate and sell at shows. I teach woodworking courses at West Dean College as well as write regular articles for Furniture and Cabinetmaking magazine.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1878601.jpg?t=1606482910"
+    },
+    {
+      "title": "Kernow Furniture Blog",
+      "feed_url": "https://kernowfurniture.co.uk/blogs/news.atom",
+      "website_url": "https://kernowfurniture.co.uk/blogs/news",
+      "description": "Kernow Furniture is a huge online store based in Cornwall for vintage, retro & antique furniture, gifts & home accessories, and quirky Christmas presents. We specialize in good quality 19th and 20th century furniture & have 100s of items for your home and garden in stock now.",
+      "followers": {
+        "facebook": 9100,
+        "twitter": 283,
+        "instagram": 11700
+      },
+      "image_url": "https://i1.feedspot.com/5508602.jpg?t=1676467646"
+    },
+    {
+      "title": "Modern Furniture Retail Store Canberra",
+      "feed_url": "https://furniturestorescanberra.blogspot.com/feeds/posts/default",
+      "website_url": "https://furniturestorescanberra.blogspot.com/",
+      "description": "In this blog, you will find various tricks and tips on how to choose the best furniture, information on modern furniture, and much more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5171590.jpg?t=1676467105"
+    },
+    {
+      "title": "Birite Furniture",
+      "feed_url": "https://www.blogger.com/feeds/7535827611835847478/posts/default",
+      "website_url": "https://biritefurnitureonline.blogspot.com/",
+      "description": "Bi-Rite Furniture is the go-to provider for the affordable bedroom, dining room, and living room furniture in the Greater Houston area.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5206077.jpg?t=1602750875"
+    },
+    {
+      "title": "Painted Furniture Ideas",
+      "feed_url": "https://paintedfurnitureideas.com/feed/",
+      "website_url": "https://paintedfurnitureideas.com/",
+      "description": "Hello!! I'm Genevre and I Love DIY projects and furniture makeovers. Check out my painted furniture, tips and tutorials on my website.",
+      "followers": {
+        "facebook": 28400
+      },
+      "image_url": "https://i1.feedspot.com/3094283.jpg?t=1606396661"
+    },
+    {
+      "title": "Ruby Furniture Blog",
+      "feed_url": "https://rubyfurniture.co.uk/blogs/news.atom",
+      "website_url": "https://rubyfurniture.co.uk/blogs/news",
+      "description": "A family-run business, that strives to achieve top-quality customer service and products. Ruby Furniture excels in offering top-quality handmade furniture. Keep up to date with the latest furniture trends, news, and deals with Ruby Furniture. Including top tips and installation guides.",
+      "followers": {
+        "facebook": 2
+      },
+      "image_url": "https://i1.feedspot.com/5508615.jpg?t=1676523048"
+    },
+    {
+      "title": "The Home Dekor Blog",
+      "feed_url": "https://www.thehomedekor.in/blog/rss/1",
+      "website_url": "https://www.thehomedekor.in/blog",
+      "description": "The Home dekor manufacture solid wood, Iron, Upholstery, Bone Inlay furniture at our Ramgarh Shekhawati manufacturing unit, we work in Sheesham & Mango Wood. Follow to get the updates.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 59
+      },
+      "image_url": "https://i1.feedspot.com/5055845.jpg?t=1608110373"
+    },
+    {
+      "title": "Cult Furniture Blog",
+      "feed_url": "https://www.cultfurniture.com/blog/feed/",
+      "website_url": "https://www.cultfurniture.com/blog/",
+      "description": "Find an excellent choice of designer chairs, modern furniture & lighting for home, restaurant or office on Cult Furniture UK.",
+      "followers": {
+        "facebook": 151700,
+        "twitter": 2100,
+        "instagram": 197900
+      },
+      "image_url": "https://i1.feedspot.com/4505793.jpg?t=1608110351"
+    },
+    {
+      "title": "Flippin Furniture Blog",
+      "feed_url": "https://flippinfurnitureblog.com/feed/",
+      "website_url": "https://flippinfurnitureblog.com/",
+      "description": "My name is Tammy. I have been painting furniture for the last 10+ years or so. In 2017, I opened up a cute little store with my painted furniture and some home d\u00e9cor and some local vendors. I am excited to share my passion for all things home, crafting, painting, redecorating, etc. here on our family farm near Basco, IL!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5508610.jpg?t=1676522796"
+    },
+    {
+      "title": "Groove Furniture Blog",
+      "feed_url": "https://www.groovefurniture.com.au/blogs/blog.atom",
+      "website_url": "https://www.groovefurniture.com.au/blogs/blog",
+      "description": "t Groove Furniture, we're passionate about curating stylish, affordable furniture. From neutral white and woodgrain to bold black and blue, you'll find the color and style you need to create an inviting, beautiful space in your home or office. For a touch of inspiration and to find out how easy it is to elevate your space, read the Groove Furniture blog today.",
+      "followers": {
+        "facebook": 74,
+        "instagram": 251
+      },
+      "image_url": "https://i1.feedspot.com/5508611.jpg?t=1676467707"
+    },
+    {
+      "title": "Furniture World Magazine",
+      "feed_url": "https://www.furninfo.com/Feed/FullFeed/feed",
+      "website_url": "https://www.furninfo.com/",
+      "description": "Furniture World Magazine brings current news, information, trends, and analysis for furniture retailers and furniture manufacturers.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4966948.jpg?t=1608110318"
+    },
+    {
+      "title": "Home Accents Today Blog",
+      "feed_url": "https://www.homeaccentstoday.com/feed/",
+      "website_url": "https://www.homeaccentstoday.com/people/blogs/",
+      "description": "The furniture section of Furniture, Lighting & Decor covers new introductions and news relating to furniture and home furnishings. This includes all styles, such as contemporary, farmhouse, and industrial to name a few, as well as multiple product categories, such as upholstery, case goods, and casual furniture.",
+      "followers": {
+        "facebook": 27100,
+        "twitter": 1000,
+        "instagram": 6500
+      },
+      "image_url": "https://i1.feedspot.com/5222482.jpg?t=1676523321"
+    },
+    {
+      "title": "Furniture in Fashion Blog",
+      "feed_url": "https://blog.furnitureinfashion.net/feed/",
+      "website_url": "https://blog.furnitureinfashion.net/",
+      "description": "Welcome to Furniture in Fashion Blog. We've got hundreds of style and interior design tips and ideas for your modern living room, dining room, kitchen and bedroom.",
+      "followers": {
+        "facebook": 156700,
+        "twitter": 5100,
+        "instagram": 16400
+      },
+      "image_url": "https://i1.feedspot.com/4804070.jpg?t=1676466892"
+    },
+    {
+      "title": "Sohomod Blog",
+      "feed_url": "https://www.sohomod.com/blog/feed/",
+      "website_url": "https://www.sohomod.com/blog/",
+      "description": "SohoMod is the Best Place to Buy Furniture Online! Great variety of modern and classic furniture!",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 279
+      },
+      "image_url": "https://i1.feedspot.com/5021430.jpg?t=1676466928"
+    },
+    {
+      "title": "Kittle's Furniture Blog",
+      "feed_url": "https://www.kittles.com/blog/feed/",
+      "website_url": "https://www.kittles.com/blog/",
+      "description": "Kittle's offers the most and newest styles, for every budget, providing more furniture choices for your Living Room, Bedroom, Dining Room, and Home Office, plus the largest selection of Mattresses from all the major brands. Whether you want something as-shown from our enormous inventory, or custom design your own creation and have exactly what you want in about 30 days, Kittle's gives you the best value and the most personal service before, during, and after the sale.",
+      "followers": {
+        "facebook": 4800,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5508597.jpg?t=1676524316"
+    },
+    {
+      "title": "Couch Potatoes Furniture Blog",
+      "feed_url": "https://couchpotatoes.com/blogs/news.atom",
+      "website_url": "https://couchpotatoes.com/blogs/news",
+      "description": "Covers articles about modern, mid century, rustic furniture, interior design trends, home d\u00e9cor tips and more. Austin's Couch Potatoes exists to provide comfortable, quality, and stylish furniture, with a crazy level of service.",
+      "followers": {
+        "facebook": 16200,
+        "twitter": 137,
+        "instagram": 6600
+      },
+      "image_url": "https://i1.feedspot.com/5306253.jpg?t=1627541864"
+    },
+    {
+      "title": "Fairdeal Furniture Blog",
+      "feed_url": "https://fairdealfurniture.co.ke/feed/",
+      "website_url": "https://fairdealfurniture.co.ke/blog/",
+      "description": "Fairdeal Furniture recommends some simple and easy tips to decorate your office with office accessories. These tips are applicable to nearly all offices - be it small, large, or home office. Try any of these ideas to fashion a healthier, happier, and productive workspace for yourself.",
+      "followers": {
+        "facebook": 195900,
+        "twitter": 4800,
+        "instagram": 39800
+      },
+      "image_url": "https://i1.feedspot.com/5267399.jpg?t=1618308183"
+    },
+    {
+      "title": "Cherrypick India Blog",
+      "feed_url": "https://www.cherrypickindia.in/cgi-sys/suspendedpage.cgi",
+      "website_url": "https://www.cherrypickindia.in/blog/",
+      "description": "Cherrypick India Blog will keep you up to date on current trends and modern furniture collections. A beautiful segment of luxury furniture adds a trendy look to any house. Cherrypick India is a luxury furniture showroom with the expertise of 15 years in the imported furniture business that serves the requirements of home furnishings. Our range of living room, dining room, and bedroom furniture bring comfort and style into your home.",
+      "followers": {
+        "facebook": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5252247.jpg?t=1614833798"
+    },
+    {
+      "title": "Furniture & Accessories USA",
+      "feed_url": "https://www.furniture-magazine.us/feed/",
+      "website_url": "https://www.furniture-magazine.us/",
+      "description": "Furniture & Accessories USA, the first e-zine of its kind, is aspiring to be the favorite of the furniture industry of America. Get to know the latest updates about furniture at Furniture & Accessories USA magazine.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5222485.jpg?t=1676523294"
+    },
+    {
+      "title": "Chosen Furniture Blog",
+      "feed_url": "https://chosenfurniture.com/feed/",
+      "website_url": "https://chosenfurniture.com/blog/",
+      "description": "Read the Chosen Furniture blog and shape your house in an epic way with timeless furniture fashion guides, traditional, styles, and more. Everything from furniture reviews to buyers' guides, can be found right here at Chosen Furniture - a comprehensive, all-in-one resource for everything you need to know about furnishings both in-home and outdoor use.",
+      "followers": {
+        "facebook": 540,
+        "twitter": 75
+      },
+      "image_url": "https://i1.feedspot.com/6700731.jpg?t=1707128541"
+    },
+    {
+      "title": "Decorium Blog",
+      "feed_url": "https://decorium.com/blog/feed",
+      "website_url": "https://decorium.com/pages/blog",
+      "description": "Blog by Decorium Furniture - Toronto's largest furniture showroom with a huge variety of styles to fit every taste. Decorium is a leader and trend setter in the home fashions industry.",
+      "followers": {
+        "facebook": 10900,
+        "twitter": 1900,
+        "instagram": 15700
+      },
+      "image_url": "https://i1.feedspot.com/4505900.jpg?t=1608110406"
+    },
+    {
+      "title": "Ashley Furniture Blog",
+      "feed_url": "https://blog.ashleyfurniture.com/feed/",
+      "website_url": "https://blog.ashleyfurniture.com/",
+      "description": "Shopping for your home should be seamless and straightforward. That's why we bring you the latest styles, priced right, so you can create spaces that reflect you, asoften as you like. Ashley offers an easy shopping experience both in-store and online. You'll always find products, services, resources, and support on your terms.",
+      "followers": {
+        "facebook": 59,
+        "twitter": 20100,
+        "instagram": 776100
+      },
+      "image_url": "https://i1.feedspot.com/5508603.jpg?t=1676523962"
+    },
+    {
+      "title": "Ashley News",
+      "feed_url": "https://ashley.biz/feed/",
+      "website_url": "https://ashley.biz/news/",
+      "description": "Ashley Furniture Industries aligns with business owners from all over the world to maximize profits and cut costs. Our global presence and incredible team have made us the #1 selling furniture store brand in the world - and that's because of business owners like you.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5508604.jpg?t=1676523347"
+    }
+  ]
+}

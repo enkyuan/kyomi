@@ -1,0 +1,552 @@
+{
+  "category": "Genetics",
+  "source_url": "https://rss.feedspot.com/genetics_rss_feeds",
+  "feeds": [
+    {
+      "title": "The 23andMe Blog",
+      "feed_url": "https://blog.23andme.com/feed",
+      "website_url": "https://blog.23andme.com/",
+      "description": "23andMe is a web-based service that helps you read and understand your DNA along with Personal genetics for health, ancestry and research discoveries. 23andMe's mission is to help people access, understand and benefit from the human genome.",
+      "followers": {
+        "facebook": 500400,
+        "twitter": 92200,
+        "instagram": 136300
+      },
+      "image_url": "https://i1.feedspot.com/4621702.jpg?t=1616069975"
+    },
+    {
+      "title": "GenomeWeb",
+      "feed_url": "https://www.genomeweb.com/section/rss/news",
+      "website_url": "https://www.genomeweb.com/",
+      "description": "GenomeWeb is an online news organization serving the global community of scientists, technology professionals, and executives who use and develop the latest advanced tools in molecular biology research and molecular diagnostics. Covering Genetics News, Genome, DNA, and more.",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 23700
+      },
+      "image_url": "https://i1.feedspot.com/4622684.jpg?t=1636539090"
+    },
+    {
+      "title": "GEN",
+      "feed_url": "https://feeds.feedburner.com/GenGeneticEngineeringAndBiotechnologyNews",
+      "website_url": "https://www.genengnews.com/",
+      "description": "Get the latest news and information on genetic engineering and biotechnology including analysis, features, webinars, podcasts, and more.Genetic Engineering & Biotechnology News (GEN) has retained its position as the number one biotech publisher around the globe.",
+      "followers": {
+        "facebook": 536000,
+        "twitter": 87500
+      },
+      "image_url": "https://i1.feedspot.com/4051782.jpg?t=1624444981"
+    },
+    {
+      "title": "News Medical - Latest Genetics News and Research",
+      "feed_url": "https://www.news-medical.net/tag/feed/Genetics.aspx",
+      "website_url": "https://www.news-medical.net/condition/Genetics",
+      "description": "News-Medical aims to segment, profile and distribute medical news to the widest possible audience of potential beneficiaries worldwide and to provide a forum for ideas, debate and learning, and to facilitate interaction between all parts of the medical health sciences community worldwide.",
+      "followers": {
+        "facebook": 254300,
+        "twitter": 778
+      },
+      "image_url": "https://i1.feedspot.com/4622688.jpg?t=1616069992"
+    },
+    {
+      "title": "PLOS Blogs",
+      "feed_url": "https://dnascience.plos.org/feed/",
+      "website_url": "https://dnascience.plos.org/",
+      "description": "Geneticist Ricki Lewis blogs from the cutting edge of genomics, including genetic testing, stem cells, gene therapy and more.",
+      "followers": {
+        "facebook": 98500
+      },
+      "image_url": "https://i1.feedspot.com/696954.jpg?t=1616069996"
+    },
+    {
+      "title": "Science Daily -- Genetics News",
+      "feed_url": "https://rss.sciencedaily.com/plants_animals/genetically_modified.xml",
+      "website_url": "https://www.sciencedaily.com/news/plants_animals/genetics/",
+      "description": "Read the latest news on plant and animal genetics from universities and research institutes around the world. Also covers genetically modified food, crops and GMO issues. It also includes current science articles on genetic engineering including mice with glowing hearts, disease-resistant mosquitos, GM bacteria chips and more.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 306500
+      },
+      "image_url": "https://i1.feedspot.com/4622607.jpg?t=1616070004"
+    },
+    {
+      "title": "MIT News - Genetics",
+      "feed_url": "https://news.mit.edu/rss/topic/genetics",
+      "website_url": "https://news.mit.edu/topic/genetics",
+      "description": "MIT News is dedicated to communicating to the media and the public the Genetics news of the students, faculty, staff and the greater MIT community.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 1400000,
+        "instagram": 500
+      },
+      "image_url": "https://i1.feedspot.com/4624204.jpg?t=1616070016"
+    },
+    {
+      "title": "The UCLA Institute for Society and Genetics Blog",
+      "feed_url": "https://socgen.ucla.edu/feed/",
+      "website_url": "https://socgen.ucla.edu/?s=blog",
+      "description": "The UCLA Institute for Society and Genetics incorporates scientists fully in the process of understanding ethical, legal, and societal impacts of the applications of their genetic and genomic research. We aim to educate the public to understand, discuss, and make informed decisions about issues in biotechnology, genetics and genomics.",
+      "followers": {
+        "facebook": 153,
+        "twitter": 143
+      },
+      "image_url": "https://i1.feedspot.com/4622467.jpg?t=1616070030"
+    },
+    {
+      "title": "Frontiers Journals",
+      "feed_url": "https://www.frontiersin.org/journals/genetics/sections/genetics-of-common-and-rare-diseases/rss",
+      "website_url": "https://www.frontiersin.org/journals/genetics/sections/genetics-of-common-and-rare-diseases",
+      "description": "The section publishes high-quality human genetic studies of a wide range of disorders or disease-relevant traits and research probing the genetic basis of disease, including novel computational approaches and translational studies.",
+      "followers": {
+        "facebook": 190100,
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/4623900.jpg?t=1612506210"
+    },
+    {
+      "title": "JMG - Genetics Recent issues",
+      "feed_url": "https://jmg.bmj.com/rss/recent.xml",
+      "website_url": "https://jmg.bmj.com/content/early/recent",
+      "description": "Journal of Medical Genetics is a leading international publication covering original research in human genetics, including reviews of and opinion on the latest developments. Articles cover the genetic basis of human disease including germline cancer genetics, the clinical manifestations of genetic disorders, applications of molecular genetics to medical practice.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/2042816.jpg?t=1616070039"
+    },
+    {
+      "title": "Medical Xpress",
+      "feed_url": "https://medicalxpress.com/rss-feed/genetics-news/",
+      "website_url": "https://medicalxpress.com/genetics-news/",
+      "description": "Medical Xpress provides the latest news on genetics, genetic science, genetic research, genetic engineering, genetic studies and genes.",
+      "followers": {
+        "facebook": 183500,
+        "twitter": 170600
+      },
+      "image_url": "https://i1.feedspot.com/4622660.jpg?t=1616070043"
+    },
+    {
+      "title": "Science News \u00bb Genetics",
+      "feed_url": "https://www.sciencenews.org/topic/genetics/feed",
+      "website_url": "https://www.sciencenews.org/topic/genetics",
+      "description": "Science News online features daily news, blogs, feature stories, reviews and more about Genetics. Science News was founded in 1921 as an independent, nonprofit source of accurate information on the latest news of science, medicine and technology. Today, our mission remains the same: to empower people to evaluate the news and the world around them.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 5300000,
+        "instagram": 102400
+      },
+      "image_url": "https://i1.feedspot.com/4622647.jpg?t=1616070737"
+    },
+    {
+      "title": "SciTech Daily Genetics",
+      "feed_url": "https://scitechdaily.com/tag/genetics/feed/",
+      "website_url": "https://scitechdaily.com/tag/genetics/",
+      "description": "SciTechDaily provides all the genetics related discoveries, Research and news from around the globe.",
+      "followers": {
+        "facebook": 167700,
+        "twitter": 11400
+      },
+      "image_url": "https://i1.feedspot.com/4622714.jpg?t=1616070070"
+    },
+    {
+      "title": "Genetic Literacy Project",
+      "feed_url": "https://geneticliteracyproject.org/feed/",
+      "website_url": "https://geneticliteracyproject.org/",
+      "description": "Explore the intersection of genetic research and real world applications of genetics with the media and policy worlds. Disentangle science from ideology.",
+      "followers": {
+        "facebook": 58400,
+        "twitter": 19700
+      },
+      "image_url": "https://i1.feedspot.com/4850216.jpg?t=1616070061"
+    },
+    {
+      "title": "Kitty Cooper's Blog",
+      "feed_url": "http://blog.kittycooper.com/feed/",
+      "website_url": "http://blog.kittycooper.com/",
+      "description": "Musings on Genealogy, Genetics, and Gardening.",
+      "followers": {
+        "twitter": 368
+      },
+      "image_url": "https://i1.feedspot.com/696961.jpg?t=1616070085"
+    },
+    {
+      "title": "Genetic Education",
+      "feed_url": "https://geneticeducation.co.in/feed/",
+      "website_url": "https://geneticeducation.co.in/",
+      "description": "At Genetic Education Inc., we believe that there is a better way of learning, rather gain only the knowledge you can also be a part of our team by sharing your knowledge with us. We will share our knowledge with you, our personal experiences in research and each and every small information that will increase your research power.",
+      "followers": {
+        "twitter": 29
+      },
+      "image_url": "https://i1.feedspot.com/5040767.jpg?t=1616070105"
+    },
+    {
+      "title": "Research Stash",
+      "feed_url": "https://www.researchstash.com/feed/",
+      "website_url": "https://www.researchstash.com/",
+      "description": "Research Stash is a curated collection of tools & News for S.T.E.M researchers.",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 618,
+        "instagram": 288
+      },
+      "image_url": "https://i1.feedspot.com/4690452.jpg?t=1616070652"
+    },
+    {
+      "title": "APHL - Newborn Screening and Genetics | Lab Blog",
+      "feed_url": "https://www.aphlblog.org/category/newborn-screening-and-genetics/feed/",
+      "website_url": "https://www.aphlblog.org/category/newborn-screening-and-genetics/",
+      "description": "Association of Public Health (APHL) Laboratories works to strengthen labs serving the public's health. The Newborn Screening and Genetics provides recent and upcoming discoveries and updates on genology.",
+      "followers": {
+        "facebook": 9400,
+        "twitter": 8100
+      },
+      "image_url": "https://i1.feedspot.com/4622447.jpg?t=1616070532"
+    },
+    {
+      "title": "Genetics Society of America",
+      "feed_url": "https://genestogenomes.org/feed/",
+      "website_url": "https://genestogenomes.org/",
+      "description": "Genetics Society of America is a professional scientific society representing more than 5,700 genetics researchers & educators around the world. The purposes of is to facilitate communication between geneticists, promote research that will bring new discoveries in genetics, to educate the public and their government representatives about advances in genetics.",
+      "followers": {
+        "facebook": 20700,
+        "twitter": 27800
+      },
+      "image_url": "https://i1.feedspot.com/4468340.jpg?t=1646633320"
+    },
+    {
+      "title": "Eurogenes Blog",
+      "feed_url": "https://eurogenes.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://eurogenes.blogspot.com/",
+      "description": "Focusing on European population genetics and modern anthropology.",
+      "followers": {
+        "twitter": 360
+      },
+      "image_url": "https://i1.feedspot.com/793299.jpg?t=1616070713"
+    },
+    {
+      "title": "A Steak in Genomics",
+      "feed_url": "http://blog.steakgenomics.org/feeds/posts/default?alt=rss",
+      "website_url": "http://blog.steakgenomics.org/",
+      "description": "A blog for stakeholders in beef cattle and genomics by Jared Decker, He is the MU Extension State Beef Genetics Specialist and uses computational genomics to research cattle genetics. He is passionate about beef cattle genetics and helping beef farmers and ranchers adopt new technologies and best practices.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4622469.jpg?t=1607326143"
+    },
+    {
+      "title": "Beyond the Ion Channel",
+      "feed_url": "https://epilepsygenetics.blog/feed/",
+      "website_url": "http://epilepsygenetics.net/",
+      "description": "Epilepsies or seizure disorders are common diseases of the brain. Many types of epilepsies have a genetic etiology. Finding these genes and characterizing them will lead to insights about the physiology of epilepsies and -hopefully- novel treatment options. In our blog Beyond the Ion Channel, we try to make our research more understandable, digestable and interpretable.",
+      "followers": {
+        "twitter": 470
+      },
+      "image_url": "https://i1.feedspot.com/4621718.jpg?t=1616070752"
+    },
+    {
+      "title": "Ricki Lewis Blog",
+      "feed_url": "https://www.rickilewis.com/blog.rss",
+      "website_url": "https://www.rickilewis.com/blog",
+      "description": "I started writing new textbook editions (human genetics, human anatomy & physiology) interspersed with other books. I also contribute to Rare Disease Reports and the Genetic Literacy Project, and have published hundreds of articles for Medscape Medical News.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4622481.jpg?t=1616070891"
+    },
+    {
+      "title": "Cruwys news",
+      "feed_url": "https://feeds.feedburner.com/Cruwysnews",
+      "website_url": "https://cruwys.blogspot.com/",
+      "description": "This blog is a personal blog written and edited by me Debbie Kennett. The day-to-day activities of the Cruwys/Cruse one-name study with occasional diversions into other topics of interest such as DNA testing and personal genomics.",
+      "followers": {
+        "twitter": 6200
+      },
+      "image_url": "https://i1.feedspot.com/4622402.jpg?t=1616070717"
+    },
+    {
+      "title": "DNAeXplained",
+      "feed_url": "https://dna-explained.com/feed/",
+      "website_url": "https://dna-explained.com/",
+      "description": "Roberta Estes has been a professional scientist and business owner. She been writing Personalized DNA Reports, publishing articles in newsletters about genetic genealogy.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4623695.jpg?t=1616070089"
+    },
+    {
+      "title": "The DNA Exchange",
+      "feed_url": "https://thednaexchange.com/feed/",
+      "website_url": "https://thednaexchange.com/",
+      "description": "Group blog created by genetic counselors with an interest in public discussion of genetics-related issues",
+      "followers": {
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4623704.jpg?t=1616070539"
+    },
+    {
+      "title": "Eurasian Genetics",
+      "feed_url": "https://eurasiandna.com/feed/",
+      "website_url": "https://eurasiandna.com/",
+      "description": "Welcome to Eurasian Genetics. This site is dedicated to furthering the understanding of Eurasian population histories with an emphasis on West and South Asian demography. I do this by presenting my own research findings.",
+      "followers": {
+        "twitter": 104
+      },
+      "image_url": "https://i1.feedspot.com/4977141.jpg?t=1616070683"
+    },
+    {
+      "title": "Hartley DNA & Genealogy Blog",
+      "feed_url": "http://www.jmhartley.com/HBlog/feed/",
+      "website_url": "http://www.jmhartley.com/HBlog/",
+      "description": "This is a blog about DNA and Genealogy sharing latest research and theories about the same.",
+      "followers": {
+        "twitter": 40
+      },
+      "image_url": "https://i1.feedspot.com/4623728.jpg?t=1616070692"
+    },
+    {
+      "title": "Sanger Institute Blog",
+      "feed_url": "https://sangerinstitute.blog/feed/",
+      "website_url": "https://sangerinstitute.blog/",
+      "description": "This blog gives a glimpse inside the Wellcome Trust Sanger Institute. A leader in the Human Genome Project, we are now focused on understanding the role of genetics in health and disease by using the latest genomic and genetic techniques. Our passion for discovery drives our quest to uncover the basis of genetic and infectious disease.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 72700
+      },
+      "image_url": "https://i1.feedspot.com/4622496.jpg?t=1616070732"
+    },
+    {
+      "title": "American Genetic Association Blog",
+      "feed_url": "https://blog.theaga.org/feed/",
+      "website_url": "https://blog.theaga.org/",
+      "description": "American Genetic Association (AGA) disseminates achievements in genetics through the Journal of Heredity - the Journal, in print for over 100 years, publishes organismal research in areas of general interest to the genetics & genomics community. The AGA Blog publishes posts by our authors & members on recent papers in the Journal of Heredity, by AGA awardees on their research, & on other topics in line with the AGA mission to encourage the study of comparative genetics & genomics in order to document, conserve, & manage organismal diversity.",
+      "followers": {
+        "facebook": 959,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5288081.jpg?t=1622702945"
+    },
+    {
+      "title": "Genetically Wrapped",
+      "feed_url": "https://geneticallywrapped.com/feed/",
+      "website_url": "https://geneticallywrapped.com/",
+      "description": "Genetically Wrapped is a blog that focuses on humanity, our evolution, and society. Genetically Wrapped seeks to offer a thought-provoking, insightful and accessible understanding of the relationship between our genes, ourselves, and society.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5289395.jpg?t=1623048832"
+    },
+    {
+      "title": "The Guardian | Genetics",
+      "feed_url": "https://www.theguardian.com/science/genetics/rss",
+      "website_url": "https://www.theguardian.com/science/genetics",
+      "description": "Latest news and features about Genetics from The Guardian.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4622620.jpg?t=1616070008"
+    },
+    {
+      "title": "Biomedical Beat Blog",
+      "feed_url": "https://biobeat.nigms.nih.gov/category/genes/feed/",
+      "website_url": "https://biobeat.nigms.nih.gov/category/genes/",
+      "description": "National Institute of General Medical Sciences (NIGMS) supports basic research that increases understanding of biological processes and lays the foundation for advances in disease diagnosis, treatment and prevention.",
+      "followers": {
+        "facebook": 40200,
+        "twitter": 20100,
+        "instagram": 18700
+      },
+      "image_url": "https://i1.feedspot.com/4624172.jpg?t=1646637079"
+    },
+    {
+      "title": "CDC",
+      "feed_url": "https://blogs.cdc.gov/genomics/feed/",
+      "website_url": "https://blogs.cdc.gov/genomics/",
+      "description": "A blog devoted to discussing best practices and questions about the role of genomics in disease prevention, health promotion and healthcare.",
+      "followers": {
+        "facebook": 4200000,
+        "twitter": 5500000
+      },
+      "image_url": "https://i1.feedspot.com/4622546.jpg?t=1616070021"
+    },
+    {
+      "title": "Biobeef Blog",
+      "feed_url": "https://biobeef.faculty.ucdavis.edu/feed/",
+      "website_url": "https://biobeef.faculty.ucdavis.edu/",
+      "description": "Dr. Alison Van Eenennaam is a Cooperative Extension Specialist in the field of Animal Genomics and Biotechnology in the Department of Animal Science at University of California, Davis. The mission of her extension program is 'to provide research and education on the use of animal genomics and biotechnology in livestock production systems'.",
+      "followers": {
+        "twitter": 10400
+      },
+      "image_url": "https://i1.feedspot.com/4622538.jpg?t=1646630342"
+    },
+    {
+      "title": "Invitae",
+      "feed_url": "https://blog.invitae.com/feed",
+      "website_url": "https://blog.invitae.com/",
+      "description": "Invitae is a genetic information company whose mission is to bring genetic information into routine medical practice to improve the quality of healthcare for billions of people. The Invitae Blog updates timely discoveries in field genetics.",
+      "followers": {
+        "facebook": 29900,
+        "twitter": 13200
+      },
+      "image_url": "https://i1.feedspot.com/4621724.jpg?t=1616070495"
+    },
+    {
+      "title": "DNA Genotek's",
+      "feed_url": "https://blog.dnagenotek.com/rss.xml",
+      "website_url": "https://blog.dnagenotek.com/",
+      "description": "DNA Genotek develops products that optimize ease of collection and provide superior samples and proven performance for those requiring high-quality biological samples for nucleic acid testing.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4621734.jpg?t=1616070510"
+    },
+    {
+      "title": "Genomics, Medicine, and Pseudoscience",
+      "feed_url": "https://feeds.feedburner.com/GenomicsEvolutionAndPseudoscience",
+      "website_url": "http://genome.fieldofscience.com/",
+      "description": "This is Steven Salzberg's blog on genomics, pseudoscience, medical breakthroughs, higher education, and other topics, including skepticism about unscientific medical practices.",
+      "followers": {
+        "twitter": 19400
+      },
+      "image_url": "https://i1.feedspot.com/808719.jpg?t=1616070506"
+    },
+    {
+      "title": "DNA Barcoding",
+      "feed_url": "http://dna-barcoding.blogspot.com/feeds/posts/default",
+      "website_url": "http://dna-barcoding.blogspot.com/",
+      "description": "A blog about DNA Barcoding and Biodiversity Research.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2015043.jpg?t=1616070642"
+    },
+    {
+      "title": "CoreGenomics",
+      "feed_url": "http://core-genomics.blogspot.com/feeds/posts/default",
+      "website_url": "http://core-genomics.blogspot.com/",
+      "description": "This blog by James Hadfield provides some comments and analysis from the exciting and fast moving world of Genomics. It focusses on next-generation sequencing and microarray technologies, although it is likely to go off on tangents from time-to-time.",
+      "followers": {
+        "twitter": 7200
+      },
+      "image_url": "https://i1.feedspot.com/1305556.jpg?t=1607347457"
+    },
+    {
+      "title": "gcbias",
+      "feed_url": "https://gcbias.org/feed/",
+      "website_url": "https://gcbias.org/",
+      "description": "The Coop lab, which is in the Department of Evolution and Ecology at UC Davis, and the Center for Population Biology. We work on a number of different aspects of evolutionary and population genetics.",
+      "followers": {
+        "twitter": 19600
+      },
+      "image_url": "https://i1.feedspot.com/4622379.jpg?t=1616070919"
+    },
+    {
+      "title": "DNA - Genealem's Genetic Genealogy",
+      "feed_url": "https://genealem-geneticgenealogy.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://genealem-geneticgenealogy.blogspot.com/",
+      "description": "DNA Testing - know the In's and Out's of it. Genetic Genealogy, a new branch of genealogy combining genetics and traditional genealogy research, is the most accurate tool for the family historian. Family connections can be proven or disproven. DNA testing can support a paper trail which is often in question given the lack of surviving records.",
+      "followers": {
+        "twitter": 259
+      },
+      "image_url": "https://i1.feedspot.com/4622392.jpg?t=1616070727"
+    },
+    {
+      "title": "Mainstreaming Cancer Genetics",
+      "feed_url": "https://mcgprogramme.com/blog/feed/",
+      "website_url": "https://mcgprogramme.com/blog/",
+      "description": "The goal of the Mainstreaming Cancer Genetics Programme is to make genetic testing part of routine cancer patient care.Genetic tests can provide information about the cause of the cancer and can aid decisions about the best treatments and drugs to use. It can also identify relatives of cancer patients at increased risk of cancer and gives them a window of opportunity to decrease their cancer risk.",
+      "followers": {
+        "twitter": 164
+      },
+      "image_url": "https://i1.feedspot.com/4622430.jpg?t=1646637754"
+    },
+    {
+      "title": "Endeavor DNA Blog",
+      "feed_url": "https://endeavordna.com/blog/feed/",
+      "website_url": "https://endeavordna.com/blog/",
+      "description": "Endeavor DNA Laboratories is your full-service genetic identity laboratory specializing in human relationship testing. Utilizing state-of-the-art genetic analysis instrumentation, Endeavor DNA strives to bring you the most accurate test results available on the market today.",
+      "followers": {
+        "twitter": 20
+      },
+      "image_url": "https://i1.feedspot.com/4623773.jpg?t=1616070744"
+    },
+    {
+      "title": "it is NOT junk Blog",
+      "feed_url": "https://www.michaeleisen.org/blog/?feed=rss2",
+      "website_url": "https://www.michaeleisen.org/blog/",
+      "description": "I'm Michael Eisen, a biologist at UC Berkeley and an Investigator of the Howard Hughes Medical Institute. I work primarily on flies, and my research encompases evolution, development, genetics, genomics, chemical ecology and behavior. This blog is about genomes, DNA, evolution, open science and other important things.",
+      "followers": {
+        "twitter": 63200
+      },
+      "image_url": "https://i1.feedspot.com/72905.jpg?t=1616070519"
+    },
+    {
+      "title": "Ethics And Genetics",
+      "feed_url": "https://www.ethicsandgenetics.org/blog?format=rss",
+      "website_url": "https://www.ethicsandgenetics.org/blog/",
+      "description": "This Blog Showcases Genetics and Ethics hand in hand along with genomics and medicine.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4621776.jpg?t=1616070704"
+    },
+    {
+      "title": "Sci-News",
+      "feed_url": "http://www.sci-news.com/news/genetics/feed",
+      "website_url": "http://www.sci-news.com/news/genetics",
+      "description": "Genetics news from across the world provided by Sci-News, an independent source for the latest news on science.",
+      "followers": {
+        "facebook": 27600,
+        "twitter": 8300
+      },
+      "image_url": "https://i1.feedspot.com/4622664.jpg?t=1616070057"
+    },
+    {
+      "title": "The DNA Geek Blog",
+      "feed_url": "https://thednageek.com/blog/feed/",
+      "website_url": "https://thednageek.com/blog/",
+      "description": "Dr. Leah Larkin uses genealogical DNA results to help adoptees and others find biological family. Full-Service Family Search Whether you are investigating your own unknown parentage or a more distant brick wall in your genealogy, we have the knowledge and expertise to use your DNA results to address your questions.",
+      "followers": {
+        "facebook": 9300
+      },
+      "image_url": "https://i1.feedspot.com/4622422.jpg?t=1616070500"
+    },
+    {
+      "title": "The Golden Helix Blog",
+      "feed_url": "https://www.goldenhelix.com/blog/feed/",
+      "website_url": "https://www.goldenhelix.com/blog/",
+      "description": "Golden Helix is a global bioinformatics company with an industry-leading clinical platform for Next-Gen Sequencing data interpretation and clinical reporting.We develop and sell an industry-leading clinical solution that supports the analysis of sequencing data and the creation of clinical reports.",
+      "followers": {
+        "facebook": 512,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5119091.jpg?t=1616070514"
+    },
+    {
+      "title": "New Scientist",
+      "feed_url": "https://www.newscientist.com/article-topic/genetics/feed/",
+      "website_url": "https://www.newscientist.com/article-topic/genetics/",
+      "description": "New Scientist is the best place to find out what's new in Genetics.",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 4400000
+      },
+      "image_url": "https://i1.feedspot.com/4622635.jpg?t=1616070000"
+    },
+    {
+      "title": "DNA Testing Update",
+      "feed_url": "https://www.dna-testing-adviser.com/dna-testing.xml",
+      "website_url": "https://www.dna-testing-adviser.com/dna-testing-blog.html",
+      "description": "My name is Richard Hill. I am the founder and sole author of DNA Testing Adviser.com. My DNA Testing Update blog alerts you to new and updated articles on the DNA Testing Adviser web site and news about genetic genealogy.",
+      "followers": {
+        "facebook": 23200
+      },
+      "image_url": "https://i1.feedspot.com/772216.jpg?t=1616070523"
+    },
+    {
+      "title": "MassGenomics - Medical genomics in the post-genome era",
+      "feed_url": "http://massgenomics.org/feed",
+      "website_url": "http://massgenomics.org/",
+      "description": "I am Dan Koboldt, the author of MassGenomics. I started the Massgenomics blog in 2008 to write about next-generation sequencing and medical genomics in the post-genome era. My primary research interests are human genetics and cancer genomics, and the content of my blog reflects that.",
+      "followers": {
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/1841353.jpg?t=1646634140"
+    }
+  ]
+}

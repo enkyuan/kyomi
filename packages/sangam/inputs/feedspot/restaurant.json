@@ -1,0 +1,867 @@
+{
+  "category": "Restaurant",
+  "source_url": "https://rss.feedspot.com/restaurant_rss_feeds",
+  "feeds": [
+    {
+      "title": "Grub Street",
+      "feed_url": "https://feeds.feedburner.com/nymag/grubstreet",
+      "website_url": "https://www.grubstreet.com/",
+      "description": "Featuring articles about restaurant reviews, chef interviews, restaurant-openings news, and food-trend coverage.",
+      "followers": {
+        "facebook": 270900,
+        "twitter": 403500,
+        "instagram": 2300000
+      },
+      "image_url": "https://i1.feedspot.com/571957.jpg?t=1608298615"
+    },
+    {
+      "title": "Restaurant Business Magazine",
+      "feed_url": "https://www.restaurantbusinessonline.com/feed/",
+      "website_url": "https://www.restaurantbusinessonline.com/",
+      "description": "Industry analysis and trends from Restaurant Business Magazine. The latest news, expert advice, and growth strategies for restaurant owners.",
+      "followers": {
+        "facebook": 60400,
+        "twitter": 23200,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5085110.jpg?t=1627900061"
+    },
+    {
+      "title": "RestaurantNews.com",
+      "feed_url": "https://www.restaurantnews.com/feed/",
+      "website_url": "http://www.restaurantnews.com/",
+      "description": "RestaurantNews.com offers an affordable, dependable, effective outlet for your restaurant news.The Essential Resource for Online Restaurant News.",
+      "followers": {
+        "facebook": 10000,
+        "twitter": 19100
+      },
+      "image_url": "https://i1.feedspot.com/4336926.jpg"
+    },
+    {
+      "title": "QSR Web",
+      "feed_url": "https://www.qsrweb.com/rss/",
+      "website_url": "https://www.qsrweb.com/",
+      "description": "QSRweb provides quick service restaurant/fast food B2B news, articles, and research. We are the #1 place to turn for all the information you want regarding QSR industry insights.",
+      "followers": {
+        "facebook": 539,
+        "twitter": 9100,
+        "instagram": 622
+      },
+      "image_url": "https://i1.feedspot.com/4634461.jpg?t=1602509491"
+    },
+    {
+      "title": "Fast Casual Magazine",
+      "feed_url": "https://www.fastcasual.com/rss/",
+      "website_url": "https://www.fastcasual.com/",
+      "description": "As the top online source for the latest news, events, trends, and people in the Fast Casual restaurant industry segment, FastCasual.com provides news, articles, and in-depth research regarding the B2B Fast Casual industry. We help franchises grow and connect with potential franchisees. We also help restaurants connect with industry suppliers.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 15100
+      },
+      "image_url": "https://i1.feedspot.com/4634445.jpg?t=1602509578"
+    },
+    {
+      "title": "Modern Restaurant Management",
+      "feed_url": "https://modernrestaurantmanagement.com/feed",
+      "website_url": "https://modernrestaurantmanagement.com/",
+      "description": "Modern Restaurant Management is a website that will help any entrepreneur who is truly serious about improving their restaurant. Some of the topics discussed on this website include operations, marketing, equipment, design, law, and finance.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4636120.jpg?t=1602509372"
+    },
+    {
+      "title": "Restaurant News Release - Restaurant News and Press Release Distribution",
+      "feed_url": "https://www.restaurantnewsrelease.com/feed/",
+      "website_url": "https://www.restaurantnewsrelease.com/",
+      "description": "Restaurant News Release is in the business of restaurant news. We provide restaurants, large and small, chain and independents, an outlet for their latest news,",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4636170.jpg?t=1602510896"
+    },
+    {
+      "title": "Quieteating",
+      "feed_url": "https://quieteating.com/feed/",
+      "website_url": "https://quieteating.com/",
+      "description": "Enjoy peaceful, mindful nourishing food and recipes sourced from across a bevy of unique local places. Quiet eating is where you can find witty London restaurant reviews, travel blogs with plenty of photos, and wedding photography services",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7251450.jpg?t=1707817515"
+    },
+    {
+      "title": "Hotkhana.com Blog",
+      "feed_url": "https://www.hotkhana.com/blog/?format=feed&type=rss",
+      "website_url": "https://www.hotkhana.com/blog",
+      "description": "Hotkhana.com is a Digital Marketing services for F&B businesses, restaurants and bars. This blog has subjects which can help restaurateurs learn about Digital Marketing and how to use various internet technologies for marketing.",
+      "followers": {
+        "facebook": 492,
+        "twitter": 27
+      },
+      "image_url": "https://i1.feedspot.com/4635827.jpg?t=1602509702"
+    },
+    {
+      "title": "Grubhub Blog",
+      "feed_url": "https://get.grubhub.com/feed/",
+      "website_url": "https://get.grubhub.com/blog/",
+      "description": "Grubhub is the nation's leading online and mobile food-ordering company dedicated to moving eating forward and connecting diners with the food they love from their favorite local restaurants. This restaurant blog features marketing best practices, innovative restaurant technologies and important industry trends.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 229600,
+        "instagram": 172400
+      },
+      "image_url": "https://i1.feedspot.com/4634434.jpg?t=1672034613"
+    },
+    {
+      "title": "The ChowNow Blog",
+      "feed_url": "https://get.chownow.com/blog/feed/",
+      "website_url": "https://get.chownow.com/blog/",
+      "description": "ChowNow is an online food ordering system. The ChowNow Blog is the only source for the latest in restaurant marketing, technology and takeout. Learn how you can modernize your restaurant technology and marketing strategy with tips from the industry's leading experts.",
+      "followers": {
+        "facebook": 11100,
+        "twitter": 3300,
+        "instagram": 25000
+      },
+      "image_url": "https://i1.feedspot.com/4635152.jpg?t=1602511738"
+    },
+    {
+      "title": "The Eat Restaurant Management Blog",
+      "feed_url": "https://restaurant.eatapp.co/blog/rss.xml",
+      "website_url": "https://restaurant.eatapp.co/blog",
+      "description": "We believe that restaurants provide better hospitality when they use data and digital tools to improve the guest experience. We write about how restaurants succeed in today's connected world. Eat App is your ultimate destination for restaurant discovery and real-time reservations.",
+      "followers": {
+        "facebook": 63000,
+        "instagram": 14100
+      },
+      "image_url": "https://i1.feedspot.com/5120565.jpg?t=1602509559"
+    },
+    {
+      "title": "Rewards Network Blog",
+      "feed_url": "https://www.rewardsnetwork.com/feed/",
+      "website_url": "https://www.rewardsnetwork.com/blog/",
+      "description": "Rewards Network is a leading provider of capital and marketing services to the restaurant industry and offers innovative rewards programs.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4634500.jpg?t=1602509598"
+    },
+    {
+      "title": "Restaurant Engine Blog",
+      "feed_url": "https://restaurantengine.com/feed/",
+      "website_url": "https://restaurantengine.com/blog/",
+      "description": "Restaurant Web Marketing blog, offering tips, strategies, and ideas for restaurant owners looking to attract more customers with a strong web presence. Restaurant Engine offer website solutions for restaurants, cafes, and food truck owners.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 848
+      },
+      "image_url": "https://i1.feedspot.com/5280607.jpg?t=1629268717"
+    },
+    {
+      "title": "Restaurant Den Blog",
+      "feed_url": "https://restaurantden.com/feed/",
+      "website_url": "https://restaurantden.com/blog/",
+      "description": "Restaurant Den is an all-in-one website design and online ordering solution for restaurants, food trucks and more; free setup and unlimited updates included",
+      "followers": {
+        "facebook": 387,
+        "twitter": 768
+      },
+      "image_url": "https://i1.feedspot.com/4635100.jpg?t=1672034680"
+    },
+    {
+      "title": "Boston Restaurant Talk",
+      "feed_url": "https://bostonrestaurants.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://bostonrestaurants.blogspot.com/",
+      "description": "Boston Restaurant Talk is a news-based journal on the Boston restaurant scene. The owner of this blog, Marc, is also the founder of Boston's Hidden Restaurants, a website that focuses on local dining spots.",
+      "followers": {
+        "facebook": 42300,
+        "twitter": 120900
+      },
+      "image_url": "https://i1.feedspot.com/805271.jpg?t=1639121567"
+    },
+    {
+      "title": "Great Kosher Restaurants Magazine Blog",
+      "feed_url": "https://www.greatkosherrestaurants.com/category/blog/feed/",
+      "website_url": "https://www.greatkosherrestaurants.com/category/blog/",
+      "description": "GreatKosherRestaurants.com is packed with restaurant photos, menus, information and news of the restaurant industry as well as weekly specials and events.",
+      "followers": {
+        "facebook": 9900,
+        "instagram": 49800
+      },
+      "image_url": "https://i1.feedspot.com/4635607.jpg?t=1602509843"
+    },
+    {
+      "title": "RestoBiz",
+      "feed_url": "https://www.restobiz.ca/feed/",
+      "website_url": "https://www.restobiz.ca/",
+      "description": "The official online home of Canadian restaurant & Foodservice news.RestoBiz delivers practical, relevant, timely, and engaging information that helps foodservice operators improve and grow their business while connecting them to Canada's foodservice supply chain.",
+      "followers": {
+        "facebook": 438,
+        "twitter": 8100,
+        "instagram": 761
+      },
+      "image_url": "https://i1.feedspot.com/4771164.jpg?t=1602509690"
+    },
+    {
+      "title": "On Point Blog",
+      "feed_url": "https://www.speedlinesolutions.com/blog/rss.xml",
+      "website_url": "https://www.speedlinesolutions.com/blog",
+      "description": "We cover topics pertinent to pizza and delivery restaurants from technology, operations, labor management, to marketing.",
+      "followers": {
+        "facebook": 479,
+        "twitter": 1600,
+        "instagram": 257
+      },
+      "image_url": "https://i1.feedspot.com/5291275.jpg?t=1623158655"
+    },
+    {
+      "title": "St. Petersburg Foodies",
+      "feed_url": "https://stpetersburgfoodies.com/feed/",
+      "website_url": "https://stpetersburgfoodies.com/",
+      "description": "Restaurant reviews of the best local St. Pete restaurants done by local foodies. Exclusive recipes using local ingredients.",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 424,
+        "instagram": 32100
+      },
+      "image_url": "https://i1.feedspot.com/5158906.jpg?t=1602509652"
+    },
+    {
+      "title": "Restaurant & Caf\u00e9",
+      "feed_url": "https://restaurantandcafe.co.nz/feed/",
+      "website_url": "https://restaurantandcafe.co.nz/",
+      "description": "The foodservice industry is a cornerstone of the New Zealand economy with an annual turnover of over $6 billion, employing over 100,000 workers. It is visited by 340,000 diners each week and serves another 1.15 million takeaway customers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4636171.jpg?t=1602511017"
+    },
+    {
+      "title": "Erika Eats",
+      "feed_url": "https://www.erikaeatseverything.com/blog-feed.xml",
+      "website_url": "https://www.erikaeatseverything.com/",
+      "description": "A candid and sometimes Kinky look into my day to day food faves...And NOT so Faves in the St. Louis and Surrounding area... This Blog is Black owned and operated!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5063824.jpg"
+    },
+    {
+      "title": "Eater",
+      "feed_url": "https://www.eater.com/rss/index.xml",
+      "website_url": "https://www.eater.com/",
+      "description": "Food news and dining guides from across the country, finding out what's opening where, who's serving what, and how it's all going down. Eater is the source for people who care about dining and drinking in the nation's most important food cities.",
+      "followers": {
+        "facebook": 3600000,
+        "twitter": 563000,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/4674424.jpg?t=1600344855"
+    },
+    {
+      "title": "Marilyn Wolf's Food and Restaurant Blog",
+      "feed_url": "http://foodwolfblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://foodwolfblog.blogspot.com/",
+      "description": "Marilyn Wolf thoughts on the Atlanta food scene, with occasional forays into the world beyond. Find restaurant reviews and recipes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4635808.jpg?t=1602511171"
+    },
+    {
+      "title": "Thr!ve Blog",
+      "feed_url": "https://www.thrivepos.com/blog/rss.xml",
+      "website_url": "https://www.thrivepos.com/blog",
+      "description": "Thr!ve blog covers topics about restaurant technology including point-of-sale, online ordering, mobile apps and more.",
+      "followers": {
+        "facebook": 296,
+        "twitter": 235
+      },
+      "image_url": "https://i1.feedspot.com/4637389.jpg?t=1602509830"
+    },
+    {
+      "title": "QSR Automations Blog",
+      "feed_url": "https://qsrautomations.com/feed/",
+      "website_url": "https://qsrautomations.com/blog/",
+      "description": "QSR Automations is the global leader in restaurant technology, serving up solutions that range from kitchen display systems to table management & hardware. Follow the latest & greatest news in restaurant technology on the QSR Automations blog.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 1900,
+        "instagram": 622
+      },
+      "image_url": "https://i1.feedspot.com/4637380.jpg?t=1602509648"
+    },
+    {
+      "title": "Cheese and Biscuits",
+      "feed_url": "https://cheesenbiscuits.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://cheesenbiscuits.blogspot.com/",
+      "description": "A place to find hyperbolic, ill-researched but hopefully entertaining reviews of mainly London restaurants.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 33000
+      },
+      "image_url": "https://i1.feedspot.com/1048881.jpg?t=1607505529"
+    },
+    {
+      "title": "Amsterdam Foodie Blog",
+      "feed_url": "http://www.amsterdamfoodie.nl/feed/",
+      "website_url": "https://www.amsterdamfoodie.nl/blog/",
+      "description": "Here you'll find reviews, featured food posts, foode travel guides and more. You can also search for restaurant recommendations by price, location and type of cuisine. Find out about the best (and worst!) food and places to eat here.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 3400,
+        "instagram": 14000
+      },
+      "image_url": "https://i1.feedspot.com/4634456.jpg?t=1602509817"
+    },
+    {
+      "title": "Pierreblake",
+      "feed_url": "https://pierreblake.com/feed/",
+      "website_url": "https://pierreblake.com/",
+      "description": "Pierreblake is a luxury travel, food and lifestyle magazine which features the hottest travel, dining options and more worldwide. Best Hotel Reviews and Best Restaurant Reviews Worldwide on the Pierreblake Travel and Food Blog",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 39400
+      },
+      "image_url": "https://i1.feedspot.com/4635582.jpg?t=1602509859"
+    },
+    {
+      "title": "Luxury Restaurant Guide Blog",
+      "feed_url": "https://blog.luxuryrestaurantguide.com/feed/",
+      "website_url": "https://www.luxuryrestaurantguide.com/blog/",
+      "description": "The Luxury Restaurant Guide stands as the premier online destination for elite dining experiences in the UK. Renowned for its curated selection of top restaurants, it offers a gateway to gastronomic delights, culinary events, and culinary insights. With an unparalleled focus on luxury hospitality, its blog is a treasure trove of fine dining updates, exclusive offers, and stylish gourmet trends, captivating aficionados of the culinary arts.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 2900,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4634447.jpg?t=1701940644"
+    },
+    {
+      "title": "Foodie Eshe",
+      "feed_url": "https://foodieeshe.com/feed/",
+      "website_url": "https://foodieeshe.com/",
+      "description": "Hello, I'm Esh\u00e9 the lady behind the blog. Foodie Eshe is a Brighton food blog and insider's guide to where to eat across Brighton & Hove, with a focus on independent restaurants. On this blog, you'll find honest reviews of restaurants, cafes, supper clubs, takeaways, and pop-up restaurants in Brighton, as well as all the latest news on the new openings.",
+      "followers": {
+        "facebook": 947
+      },
+      "image_url": "https://i1.feedspot.com/4635131.jpg?t=1602510037"
+    },
+    {
+      "title": "The Picky Glutton",
+      "feed_url": "https://pickyglutton.com/feed/",
+      "website_url": "https://pickyglutton.com/",
+      "description": "I am sPicky Glutton and this is my restaurant reviews blog where I aim to review every restaurant I dine at. With so many places to eat, the last place you want to go is somewhere deeply disappointing or, perhaps even worse, somewhere forgettably mediocre and yawningly average. To help you out, I will endeavour to finish each review with a firm recommendation either way and a rating out of 5.",
+      "followers": {
+        "twitter": 1800,
+        "instagram": 960
+      },
+      "image_url": "https://i1.feedspot.com/4634629.jpg?t=1639475817"
+    },
+    {
+      "title": "Food For Thought Miami",
+      "feed_url": "https://www.foodforthoughtmiami.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.foodforthoughtmiami.com/",
+      "description": "A Miami food blog with reviews of restaurants in South Florida and elsewhere.",
+      "followers": {
+        "facebook": 185,
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4635224.jpg?t=1602510110"
+    },
+    {
+      "title": "Zonal",
+      "feed_url": "https://www.zonal.co.uk/resources/feed/",
+      "website_url": "https://www.zonal.co.uk/resources/",
+      "description": "With 40 years experience, Zonal is the UK's No.1 supplier of connected technology solutions for the hospitality industry.Explore our blogs, case studies, guides, and whitepapers to learn how Zonal's integrated technology can benefit your hospitality business.",
+      "followers": {
+        "facebook": 716,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4635753.jpg?t=1613366354"
+    },
+    {
+      "title": "Her Favourite Food",
+      "feed_url": "http://www.herfavfood.com/blog?format=RSS",
+      "website_url": "http://www.herfavfood.com/",
+      "description": "London based restaurant, food and travel blog. A London food blog that features reviews of restaurants, foodie events, travel, pop-up dining experiences, food festivals, food markets, food tours and so much more",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 8900,
+        "instagram": 12000
+      },
+      "image_url": "https://i1.feedspot.com/4635822.jpg?t=1602511115"
+    },
+    {
+      "title": "Triangle Food Blog",
+      "feed_url": "https://trianglefoodblog.com/?feed=rss2",
+      "website_url": "https://trianglefoodblog.com/",
+      "description": "A native of Raleigh, I've been in and around the restaurant scene all my life and doing catering here in the Triangle for the last 18 yearsKeeping up with the latest Triangle restaurant news has become a hobby that I share with you here at Triangle Food Blog.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 13600,
+        "instagram": 145
+      },
+      "image_url": "https://i1.feedspot.com/4411110.jpg?t=1602510679"
+    },
+    {
+      "title": "ArubaRestaurants.com",
+      "feed_url": "https://www.visitaruba.com/news/category/restaurants/feed/",
+      "website_url": "https://www.visitaruba.com/news/category/restaurants/",
+      "description": "ArubaRestaurants mission is to provide credible, dependable and fair ratings for all restaurants in Aruba. In addition we aim to facilitate reservations for each restaurant and be the most complete and extensive resource for restaurant information on Aruba.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4636165.jpg?t=1602510682"
+    },
+    {
+      "title": "Restaurant Tech News",
+      "feed_url": "https://restauranttech.co/feed/",
+      "website_url": "https://restauranttech.co/",
+      "description": "Restaurant Tech is the hospitality industry's premier source of records and insights associated to Technological Innovation at the world's leading quick service, fast casual and full service restaurants.",
+      "followers": {
+        "facebook": 49,
+        "instagram": 134
+      },
+      "image_url": "https://i1.feedspot.com/5029938.jpg?t=1602510686"
+    },
+    {
+      "title": "Newcastle Eats",
+      "feed_url": "https://newcastleeats.co.uk/feed/",
+      "website_url": "https://newcastleeats.co.uk/",
+      "description": "Newcastle Eats is a Newcastle food and drink blog with restaurant reviews on eating out in Newcastle.",
+      "followers": {
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4635212.jpg?t=1602510691"
+    },
+    {
+      "title": "Restaurant365 Blog",
+      "feed_url": "https://www.restaurant365.com/resource-category/blog/feed/",
+      "website_url": "https://www.restaurant365.com/resource-category/blog/",
+      "description": "Restaurant365 is a complete restaurant management solution specializing in multi-unit restaurant businesses of all concepts full service, fast casual, quick serve, family dining, etc. We offer complete integration to your current point of sale and seamlessly pulls detailed data.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4637814.jpg?t=1602510699"
+    },
+    {
+      "title": "Fliptable Blog",
+      "feed_url": "https://fliptable.io/feed/",
+      "website_url": "https://fliptable.io/the-fliptable-tip-jar-blog/",
+      "description": "The place to go to find bartender and restaurant jobs or hire restaurant staff. Fliptable is a new restaurant job listing app. We have FT and PT line cook positions, dishwasher and waitress jobs, chef and bartender roles and more. Land a better gig today!",
+      "followers": {
+        "facebook": 430,
+        "instagram": 333
+      },
+      "image_url": "https://i1.feedspot.com/5129260.jpg?t=1602510708"
+    },
+    {
+      "title": "Five Star Plugins Blog",
+      "feed_url": "https://www.fivestarplugins.com/category/blog/feed/",
+      "website_url": "https://www.fivestarplugins.com/category/blog/",
+      "description": "Five Star Plugins focuses on creating high-quality, easy-to-use WordPress plugins centered around the restaurant, hospitality, and business industries. With over 50,000 active users worldwide, our plugins bring a great amount of value to many websites and business owners every day, by offering them solutions that are simple to implement and that provide powerful functionality necessary for their operations.",
+      "followers": {
+        "facebook": 48,
+        "twitter": 302,
+        "instagram": 66
+      },
+      "image_url": "https://i1.feedspot.com/4635637.jpg?t=1602511320"
+    },
+    {
+      "title": "Upserve Blog",
+      "feed_url": "https://www.lightspeedhq.com/feed/",
+      "website_url": "https://www.lightspeedhq.com/blog/",
+      "description": "A one-stop-shop for restaurateurs to gather the latest news, trends, stories, and advice to help you stay on top of the restaurant industry. Upserve is the restaurant management platform serving up everything you need to know to run a smoother operation and exceed guest expectations.",
+      "followers": {
+        "twitter": 5900
+      },
+      "image_url": "https://i1.feedspot.com/4635843.jpg?t=1602509545"
+    },
+    {
+      "title": "Retail Design Blog \u00bb Restaurant",
+      "feed_url": "https://retaildesignblog.net/category/hotels-and-restaurants/restaurant/feed/",
+      "website_url": "https://retaildesignblog.net/category/hotels-and-restaurants/restaurant/",
+      "description": "Retail Design Blog Professional retail and interior design, material and lighting blog. With this blog, they want to assist the retail designers and visual merchandisers to provide news and information about retail trends, solutions.",
+      "followers": {
+        "facebook": 76900,
+        "twitter": 8500
+      },
+      "image_url": "https://i1.feedspot.com/4634667.jpg?t=1602510827"
+    },
+    {
+      "title": "The Restaurant Manifesto",
+      "feed_url": "https://www.restaurantmanifesto.com/feed/",
+      "website_url": "https://www.restaurantmanifesto.com/",
+      "description": "The Restaurant Manifesto is not your typical food blog. We are not all about bitchy waitresses or server rants either. Our goal is to help improve your dining experiences by giving you the tools you need to engage with waitstaff more productively. Becoming a more conscientious diner will result in better service and more successful meals.",
+      "followers": {
+        "twitter": 6500,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5264737.jpg?t=1617605092"
+    },
+    {
+      "title": "Restaurants-in",
+      "feed_url": "https://restaurants-in.com/feed/",
+      "website_url": "https://restaurants-in.com/",
+      "description": "Restaurants-in articles reviews numerous restaurants in various countries and cities and would detail the food, vibe, location, and other attractive features of those places. You can decide based on our reviews whether those places are perfect for you or not.",
+      "followers": {
+        "facebook": 21
+      },
+      "image_url": "https://i1.feedspot.com/5519425.jpg?t=1678696125"
+    },
+    {
+      "title": "The Restaurant Times",
+      "feed_url": "https://www.posist.com/restaurant-times/feed",
+      "website_url": "https://www.posist.com/restaurant-times/",
+      "description": "The Restaurant Times powered by POSist Technologies Pvt Ltd is an online publication for everyone who is interested in the Restaurant and F&B Industry. Get all the latest updates and trending news from the world of restaurants. Discover how you can grow your restaurant business, overcome different challenges while running your business and find extensive solutions to all your queries, all at a single platform!",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 13
+      },
+      "image_url": "https://i1.feedspot.com/4635301.jpg?t=1602510830"
+    },
+    {
+      "title": "Tundra Restaurant Supply",
+      "feed_url": "https://blog.etundra.com/feed/",
+      "website_url": "https://blog.etundra.com/",
+      "description": "Tundra Restaurant Supply is the leading distributor of food service equipment, supplies and parts to innovative restaurant concepts. In this blof you will find latest restaurant news, resources, recipes & more.",
+      "followers": {
+        "facebook": 6
+      },
+      "image_url": "https://i1.feedspot.com/3806958.jpg?t=1602511414"
+    },
+    {
+      "title": "Roamilicious",
+      "feed_url": "https://roamilicious.com/category/restaurant-reviews/feed/",
+      "website_url": "https://roamilicious.com/category/restaurant-reviews/",
+      "description": "Roamilicious is the guide to the best restaurants, markets, breweries and more. Atlanta Restaurant Blog keeps you up to date on the latest about Restaurants and Foodie News.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 1300,
+        "instagram": 50000
+      },
+      "image_url": "https://i1.feedspot.com/4634675.jpg?t=1602510822"
+    },
+    {
+      "title": "Bottleneck Management Restaurant Group Blog",
+      "feed_url": "http://www.bottleneckmgmt.com/blog/feed/",
+      "website_url": "https://www.bottleneckmgmt.com/blog/",
+      "description": "Bottleneck Management was formed with the mission to operate vibrant, high energy, approachable restaurants in the most dynamic neighborhoods and locations. Follow for restaurant industry news, and company culture highlights.",
+      "followers": {
+        "facebook": 785,
+        "twitter": 239
+      },
+      "image_url": "https://i1.feedspot.com/4634472.jpg?t=1608021710"
+    },
+    {
+      "title": "Service that Sells Blog",
+      "feed_url": "https://www.servicethatsells.com/feed/",
+      "website_url": "https://www.servicethatsells.com/blog/",
+      "description": "Service That Sells is a full line of training, marketing, and management tools designed specifically for the ever-changing world of hospitality. Read restaurant management and training articles from Service That Sells for tips on how to increase restaurant sales and improve service.",
+      "followers": {
+        "twitter": 510
+      },
+      "image_url": "https://i1.feedspot.com/4637742.jpg?t=1602509970"
+    },
+    {
+      "title": "Jonathan's Ristorante Blog",
+      "feed_url": "https://jonathansristorante.com/category/blog/feed/",
+      "website_url": "https://jonathansristorante.com/category/blog/",
+      "description": "There are many restaurants in Huntington NY coming and going, but Jonathan's has been a landmark in the village of Huntington since its opening in 1994. Jonathan's delightful atmosphere combines European flavour with a casual yet sophisticated look, contemporary Italian menu.",
+      "followers": {
+        "facebook": 8400,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5067977.jpg?t=1602510741"
+    },
+    {
+      "title": "Paris by Mouth",
+      "feed_url": "https://parisbymouth.com/feed/",
+      "website_url": "https://parisbymouth.com/",
+      "description": "Paris by Mouth is a flabbergasting collaborative website about eating & drinking in Paris. A guide to food & wine in Paris, France including reviews of restaurants, bistros, wine bars, bakeries & shops selling cheese, wine, pastry, chocolate.",
+      "followers": {
+        "facebook": 33900,
+        "twitter": 16600,
+        "instagram": 55300
+      },
+      "image_url": "https://i1.feedspot.com/4634581.jpg?t=1602509836"
+    },
+    {
+      "title": "Restaurant Girl",
+      "feed_url": "http://www.restaurantgirl.com/feed/atom/",
+      "website_url": "http://www.restaurantgirl.com/",
+      "description": "Here youll find whole-food recipes for the busy home cook. My approach to food and cooking is simple and stress-free. This blog was created in 2012 to document my journey towards a more healthy and balanced lifestyle. My work has been featured in Oprah Magazine, Redbook Magazine, Clean Eating, Women Health Magazine, The Huffington Post, Food 52, Saveur, Food & Wine, Today Food, and in the pages of Artful Blogging Magazine.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 10500
+      },
+      "image_url": "https://i1.feedspot.com/4634577.jpg?t=1602509966"
+    },
+    {
+      "title": "Hanover Tavern Blog",
+      "feed_url": "https://hanovertavern.org/feed/",
+      "website_url": "https://hanovertavern.org/blog/",
+      "description": "Hanover Tavern is a restored historic landmark offering group tours, an on-site pub with fine dining & performances by Va-Rep Theatre. Here you will find restarant news, strategies and management tips.",
+      "followers": {
+        "facebook": 10400,
+        "twitter": 572
+      },
+      "image_url": "https://i1.feedspot.com/4636795.jpg?t=1602510091"
+    },
+    {
+      "title": "Jacksonville Restaurant Reviews",
+      "feed_url": "http://feeds.feedburner.com/JacksonvilleRestaurantReviews",
+      "website_url": "https://www.jaxrestaurantreviews.com/",
+      "description": "Jax Restaurant Reviews specializes in reviewing unique and interesting restaurants in and around Jacksonville. We are passionate about connecting with friends and family over a good meal.",
+      "followers": {
+        "facebook": 26900,
+        "twitter": 6900,
+        "instagram": 63600
+      },
+      "image_url": "https://i1.feedspot.com/4634489.jpg?t=1602510142"
+    },
+    {
+      "title": "HOW TO BUILD A RESTAURANT",
+      "feed_url": "https://buildrestaurant.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://buildrestaurant.blogspot.com/",
+      "description": "Helping you making your dream come true.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5062878.jpg?t=1602510713"
+    },
+    {
+      "title": "What to Eat in Birmingham",
+      "feed_url": "http://whattoeatinbirmingham.com/feed/",
+      "website_url": "https://whattoeatinbirmingham.com/",
+      "description": "The purpose of this blog is to talk about our favorite foods at our favorite places in town. These places include restaurants, food trucks, grocery stores, farmers markets, and food festivals. Here you will find interviews with owners and chefs at our favorite places, to learn more about why they chose to open a restaurant in Birmingham also the reviews of the restaurant.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/4635558.jpg?t=1602510734"
+    },
+    {
+      "title": "Welcome Table Blog",
+      "feed_url": "http://www.welcome-table.co.uk/feed/",
+      "website_url": "https://www.welcome-table.co.uk/blog/",
+      "description": "Welcome Table is a UK based all-inclusive online table booking system for restaurants of all sizes. It empowers restaurateurs to better manage their bookings, diary and capacity as well as providing would-be diners with real-time booking availability.",
+      "followers": {
+        "facebook": 610,
+        "twitter": 138
+      },
+      "image_url": "https://i1.feedspot.com/4636116.jpg"
+    },
+    {
+      "title": "Bonji Foods Blog",
+      "feed_url": "https://www.bonjifoods.com/blog-feed.xml",
+      "website_url": "https://www.bonjifoods.com/blog",
+      "description": "Bonji Blogs is an acai wholesaler, here to provide business & marketing tips for the restaurant & plant-based industries, as well as common lifestyle tips.",
+      "followers": {
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5379865.jpg?t=1646898776"
+    },
+    {
+      "title": "Food Bloggers of Canada",
+      "feed_url": "https://www.foodbloggersofcanada.com/category/food-drink/restaurant-roundup-2/feed/",
+      "website_url": "https://www.foodbloggersofcanada.com/category/food-drink/restaurant-roundup-2/",
+      "description": "Food Bloggers of Canada is friendly home for Canadian food bloggers to network, share their knowledge and provide food blogging resources with a Canadian. In this blog you will find a list of great dining recommendations for you to check out from fancy to hole in the wall and everything in between.",
+      "followers": {
+        "facebook": 12900,
+        "twitter": 43300,
+        "instagram": 19700
+      },
+      "image_url": "https://i1.feedspot.com/4635020.jpg?t=1602509593"
+    },
+    {
+      "title": "VSAG",
+      "feed_url": "https://www.vsag.com/category/restaurant-industry-news/feed/",
+      "website_url": "https://www.vsag.com/category/restaurant-industry-news/",
+      "description": "VSAG is a restaurant and hospitality consulting firm with teams of experts to help grow your restaurant business. Here you will find news related to restaurant industry.",
+      "followers": {
+        "facebook": 604,
+        "twitter": 172
+      },
+      "image_url": "https://i1.feedspot.com/4635810.jpg"
+    },
+    {
+      "title": "Uncorkd Blog",
+      "feed_url": "https://www.uncorkd.biz/feed/",
+      "website_url": "https://www.uncorkd.biz/blog/",
+      "description": "Uncorkd is Helping restaurants improve their beverage program and making wine and alcoholic beverages accessible to the everyday consumer There are weekly roundups about the restaurant industry. That way, restaurateurs don't need to waste time searching the Internet for the latest news in the restaurant industry.",
+      "followers": {
+        "facebook": 879,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4636123.jpg?t=1608021059"
+    },
+    {
+      "title": "The Restaurant Expert Blog",
+      "feed_url": "https://therestaurantexpert.com/feed/",
+      "website_url": "https://restaurantsystemspro.net/blog/",
+      "description": "The Restaurant Expert is a coaching and teaching company for independent restaurant owners, offering several tools that will find the hidden profits in your restaurant. To teach independent restaurant owners how to operate with systems to help them make more money and live a balanced life, and to bring them together to share ideas, challenges and successes in a safe, friendly environment.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4635108.jpg?t=1602509357"
+    },
+    {
+      "title": "Michael Hartzell Blog",
+      "feed_url": "https://www.michaelhartzell.com/restaurant-blog/rss.xml",
+      "website_url": "https://www.michaelhartzell.com/restaurant-blog",
+      "description": "Restaurant Marketing Ideas is a blog for restaurateurs, managers and anyone about to jump into the restaurant business. Here you will find creative restaurant marketing ideas to improve sales and profits from award winning restaurant marketing coach. This blog is excellent for readers who want to remain updated about events and trends in the industry.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 10000
+      },
+      "image_url": "https://i1.feedspot.com/4636127.jpg?t=1602509570"
+    },
+    {
+      "title": "Aaron Allen Blog",
+      "feed_url": "https://aaronallen.com/blog/feed",
+      "website_url": "https://aaronallen.com/blog",
+      "description": "Aaron Allen is widely recognized as one of the world's most sought-after restaurant consultants for restaurant marketing, restaurant branding, and Restaurant Design.",
+      "followers": {
+        "twitter": 25900
+      },
+      "image_url": "https://i1.feedspot.com/4635800.jpg"
+    },
+    {
+      "title": "Secret Sauce - The Restaurant Marketing Podcast",
+      "feed_url": "https://secretsauce.libsyn.com/rss",
+      "website_url": "https://marketing4restaurants.com/secret-sauce/",
+      "description": "We discover the ingredients of your Restaurant's secret sauce. SEO, Facebook, Twitter, emails, coupons, yield utilization, USPs, Menu engineering, direct mail, Instagram, partnerships - there are many ingredients for creating your Secret Sauce and with the right Secret Sauce you can find more customers and turn them into repeat customers. We deconstruct the recipes, so you can increase increase turnover, increase profit and maybe decrease the amount of time you spend working in your Restaurant.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 335
+      },
+      "image_url": "https://i1.feedspot.com/5226600.jpg?t=1752296743"
+    },
+    {
+      "title": "The WEBstaurant Store s Blog",
+      "feed_url": "https://www.webstaurantstore.com/blog/rss/",
+      "website_url": "https://www.webstaurantstore.com/blog/",
+      "description": "The WEBstaurant Store is an online leader in restaurant supplies and equipment. Our mission is to provide busy food service professionals superior service and selection, at the lowest price.",
+      "followers": {
+        "facebook": 207100,
+        "twitter": 7200,
+        "instagram": 68700
+      },
+      "image_url": "https://i1.feedspot.com/4014476.jpg"
+    },
+    {
+      "title": "The Infatuation",
+      "feed_url": "https://www.theinfatuation.com/feed/atom",
+      "website_url": "https://www.theinfatuation.com/",
+      "description": "The Infatuation is a website, app, newsletter, and recommendation platform designed to help you find the perfect restaurant for every situation. Our restaurant reviews and guides are all written by a small group of highly trained, highly opinionated writers and editors. Our mission is very simple - to bring you the most honest and trustworthy opinions on where to eat around the world.",
+      "followers": {
+        "facebook": 67600,
+        "twitter": 79600,
+        "instagram": 811500
+      },
+      "image_url": "https://i1.feedspot.com/4634586.jpg?t=1602509533"
+    },
+    {
+      "title": "Andy Hayler's Restaurant Guide Blog",
+      "feed_url": "https://www.andyhayler.com/blog/rss",
+      "website_url": "https://www.andyhayler.com/blog",
+      "description": "Welcome to food critic Andy Hayler's restaurant reviews. My weekly blog covers my recent dining and restaurant news. Follow to keep up with Independent reviews of restaurants and hotels from a professional food writer.",
+      "followers": {
+        "twitter": 28600
+      },
+      "image_url": "https://i1.feedspot.com/4634421.jpg?t=1602509986"
+    },
+    {
+      "title": "Total Food Service",
+      "feed_url": "https://totalfood.com/",
+      "website_url": "https://totalfood.com/",
+      "description": "Since 1990, Total Food Service has been serving the Metro New York foodservice industry, including restaurant operators, chefs, dealers, consultants, suppliers, and distributors. Each month, we deliver the latest news, insights, and interviews focused exclusively on the world's largest food service and hospitality capital of the word, Metro New York.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 5100,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4871901.jpg?t=1612270533"
+    },
+    {
+      "title": "Next Restaurants Blog",
+      "feed_url": "https://nextrestaurants.com/feed/",
+      "website_url": "https://nextrestaurants.com/BLOG/",
+      "description": "Next Restaurants is the only source for innovative restaurant marketing ideas and intros to new restaurant tech tools. Here you will find free updates on next-generation tools, tactics and trends for digital restaurant marketing.",
+      "followers": {
+        "facebook": 229,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4634652.jpg?t=1602509499"
+    },
+    {
+      "title": "Texas Restaurant Association",
+      "feed_url": "https://www.txrestaurant.org/rss",
+      "website_url": "https://www.recipe-costing.com/blog/",
+      "description": "The Texas Restaurant Association serves, educates and supports the restaurant industry in Texas. We ensure our members have the resources to succeed and grow.",
+      "followers": {
+        "facebook": 12000,
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/4636162.jpg?t=1609855120"
+    },
+    {
+      "title": "Restaurant Real Estate Advisors Blog",
+      "feed_url": "https://restaurantrealestateadvisors.com/feed/",
+      "website_url": "https://pos.toasttab.com/blog",
+      "description": "Restaurant Real Estate Advisors specializes in providing first-time restaurateurs and national chains alike with the ideal location and an advisory process that carefully vets every facet of your transaction.",
+      "followers": {
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4634481.jpg?t=1602510838"
+    },
+    {
+      "title": "Smart Restaurants Blog",
+      "feed_url": "http://www.smart-restaurants.co.uk/blog/feed/",
+      "website_url": "https://pos.toasttab.com/blog",
+      "description": "mart Restaurants is an affordable Restaurant App / Takeaway App solution. Developed for iPhone iOs and Android OS by our dedicated Mobile App Developers. Here you will find tips and strategies to grow your business.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4637727.jpg?t=1602510070"
+    },
+    {
+      "title": "Toast Blog",
+      "feed_url": "https://pos.toasttab.com/blog/rss.xml",
+      "website_url": "https://pos.toasttab.com/blog",
+      "description": "Toast is a point-of-sale and restaurant management platform. Built exclusively for foodservice businesses on an affordable cloud-based platform. Here you can Stay up to date with the latest foodservice trends and restaurant management resources.",
+      "followers": {
+        "facebook": 60700,
+        "twitter": 9800
+      },
+      "image_url": "https://i1.feedspot.com/4635812.jpg"
+    },
+    {
+      "title": "Restolabs Blog",
+      "feed_url": "https://www.restolabs.com/blog/feed",
+      "website_url": "https://www.restolabs.com/blog",
+      "description": "Restolabs is an online food ordering system for restaurants to feed their hungry customers anytime and anywhere. Follow to get updates.",
+      "followers": {
+        "facebook": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4940483.jpg?t=1602509627"
+    },
+    {
+      "title": "Allergy Eats",
+      "feed_url": "https://www.allergyeats.com/category/restaurants/feed/",
+      "website_url": "https://inresto.com/blog/",
+      "description": "AllergyEats is a crowd-sourced U.S. restaurant guide for the food allergy community. AllergyEats user rates a restaurant, it helps the entire food allergy community make more informed and comfortable dining decisions",
+      "followers": {
+        "facebook": 26600,
+        "twitter": 11000,
+        "instagram": 6000
+      },
+      "image_url": "https://i1.feedspot.com/4635660.jpg?t=1602510817"
+    },
+    {
+      "title": "Torqus Blog",
+      "feed_url": "https://inresto.com/feed",
+      "website_url": "https://inresto.com/blog/",
+      "description": "Restaurant management system software that integrates with POS to take care of online orders, delivery tracking, restaurant billing and accounting, inventory and more. In this blog you will find restaurant marketing strategies, importance of supply chain management, restaurant trends and much more.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 101
+      },
+      "image_url": "https://i1.feedspot.com/4636070.jpg?t=1602509619"
+    }
+  ]
+}

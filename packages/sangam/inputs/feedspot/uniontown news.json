@@ -1,0 +1,28 @@
+{
+  "category": "Uniontown News",
+  "source_url": "https://rss.feedspot.com/uniontown_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Herald-Standard",
+      "feed_url": "https://www.heraldstandard.com/",
+      "website_url": "https://www.heraldstandard.com/",
+      "description": "Herald-Standard - Uniontown Newspapers, Inc., is an independent family-owned media company located in Fayette County, Southwestern PA providing local news in Uniontown and around areas.",
+      "followers": {
+        "facebook": 19700,
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5153737.jpg"
+    },
+    {
+      "title": "CBS Pittsburgh \u00bb Uniontown",
+      "feed_url": "https://pittsburgh.cbslocal.com/tag/uniontown/feed/",
+      "website_url": "https://www.cbsnews.com/pittsburgh/tag/uniontown/",
+      "description": "Get Uniontown News, Sports, Weather, Traffic and the Best of Pittsburgh from CBS Pittsburgh.",
+      "followers": {
+        "facebook": 572500,
+        "twitter": 235600
+      },
+      "image_url": "https://i1.feedspot.com/5153738.jpg?t=1589969907"
+    }
+  ]
+}

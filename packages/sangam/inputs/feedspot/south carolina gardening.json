@@ -1,0 +1,75 @@
+{
+  "category": "South Carolina Gardening",
+  "source_url": "https://rss.feedspot.com/south_carolina_gardening_rss_feeds",
+  "feeds": [
+    {
+      "title": "Jenks Farmer Blog",
+      "feed_url": "https://jenksfarmer.com/feed/",
+      "website_url": "https://jenksfarmer.com/gardening-blog/",
+      "description": "Gardening blog by Augustus Jenkins Farmer III. Augustus Jenkins Farmer III is a renaissance plantsman. Born into a family of artists, musicians, and farmers, he fell in love with the natural world early in his childhood and later went on to pursue a formal education in Plant and Environmental Sciences at Clemson University and Botanical Garden Design at the University of Washington.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 336
+      },
+      "image_url": "https://i1.feedspot.com/5325135.jpg?t=1632490758"
+    },
+    {
+      "title": "Wingard's Market Blog",
+      "feed_url": "https://wingardsmarket.com/feed/",
+      "website_url": "https://wingardsmarket.com/blog/",
+      "description": "Inspiring tips and ideas from our gardening professionals at Wingard's Market. Wingard's Market is a destination garden center.",
+      "followers": {
+        "facebook": 13800,
+        "twitter": 2100,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5325054.jpg?t=1632485980"
+    },
+    {
+      "title": "LowCo Gardeners Blog",
+      "feed_url": "https://lowcogardeners.com/feed/",
+      "website_url": "https://lowcogardeners.com/blog/",
+      "description": "Find the best planting & landscaping articles from LowCo Gardeners and get tips and information from experts. LowCo Gardeners are a retail nursery and landscaping installation company in Beaufort, SC.",
+      "followers": {
+        "facebook": 5200,
+        "instagram": 696
+      },
+      "image_url": "https://i1.feedspot.com/5325105.jpg?t=1632487775"
+    },
+    {
+      "title": "Alex Calamia Blog",
+      "feed_url": "https://alexcalamia.com/feed/",
+      "website_url": "https://alexcalamia.com/alexs-garden-blog/",
+      "description": "I'm Alex Calamia. I'm a meteorologist with a passion for sharing science and gardening tidbits every morning on TV. I was 13 years old when I first started turning my parent's garden in New York City into a tropical oasis. Now I have a garden of my own, and an organic garden at work that's featured on TV every morning. On this blog, I'll share photos of my garden and tips about how I keep it looking its best through wild weather in South Carolina and New York!",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5325106.jpg?t=1632488116"
+    },
+    {
+      "title": "Saluda Hill Landscapes Blog",
+      "feed_url": "https://www.saludahill.com/the-leaf-blog?format=rss",
+      "website_url": "https://www.saludahill.com/the-leaf-blog",
+      "description": "Follow Saluda Hill Landscapes and read about landscaping ideas to enhance your yard. Saluda Hill Landscapes is a multi-level company that has been serving the Lexington and Columbia, SC areas since 1991. We pride ourselves in offering comprehensive, and high-quality landscaping services to home and business owners throughout the Midlands.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 318,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5325094.jpg?t=1632486413"
+    },
+    {
+      "title": "Gregory Landscaping Blog",
+      "feed_url": "https://www.gregorylandscapeservices.com/blog/feed/",
+      "website_url": "https://www.gregorylandscapeservices.com/blog/",
+      "description": "Follow Gregory Landscaping and learn more about landscaping from their resourceful articles. Gregory Landscape Services, Inc. is full-service commercial landscape maintenance company serving the greater Columbia/Lexington SC area.",
+      "followers": {
+        "facebook": 570,
+        "twitter": 548,
+        "instagram": 754
+      },
+      "image_url": "https://i1.feedspot.com/5325150.jpg?t=1632492433"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "category": "UK CRM",
+  "source_url": "https://rss.feedspot.com/uk_crm_rss_feeds",
+  "feeds": [
+    {
+      "title": "The CRM Consultant Blog",
+      "feed_url": "http://www.mareeba.co.uk/blog/feed",
+      "website_url": "http://www.mareeba.co.uk/blog/",
+      "description": "Richard Boardman is founder of Mareeba CRM Consulting, a UK based independent CRM consultancy. He works with mid-sized organisations to help them increase efficiencies and growth through the more effective use of CRM technology.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/1773180.jpg?t=1528714410"
+    },
+    {
+      "title": "Hosk's Dynamic CRM Blog",
+      "feed_url": "https://crmbusiness.wordpress.com/feed/",
+      "website_url": "https://crmbusiness.wordpress.com/",
+      "description": "I'm the Marvellous Hosk, this blog is all about my adventures in the world of Microsoft Dynamics CRM.",
+      "followers": {
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4151139.jpg?t=1611137876"
+    },
+    {
+      "title": "Mohamed Mostafa's Blog",
+      "feed_url": "https://www.mohamedmostafa.co.uk/blog/feed/",
+      "website_url": "https://www.mohamedmostafa.co.uk/blog/",
+      "description": "Mohamed Mostafa's Blog is about MSDynCRM Resources, Information, best practices & help on Microsoft Dynamics CRM, Scribe, .NET (C# & ASP), Integration, ECommerce, Business Transfomration and more.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4663969.jpg?t=1617700640"
+    },
+    {
+      "title": "ANS Insights",
+      "feed_url": "https://www.ans.co.uk/insights/",
+      "website_url": "https://www.ans.co.uk/insights/",
+      "description": "Preact is working hard to help businesses achieve outstanding CRM results with Microsoft Dynamics 365 and exceed customer expectations.",
+      "followers": {
+        "facebook": 60,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4912333.jpg?t=1528715226"
+    },
+    {
+      "title": "Spotler",
+      "feed_url": "https://spotler.com/en-gb/resources/",
+      "website_url": "https://spotler.com/en-gb/resources/",
+      "description": "Read our CRM Blog about all things related to Customer Relationship Management - CRM Software, Online CRM, Cloud CRM, GDPR and Email Marketing.",
+      "followers": {
+        "facebook": 498,
+        "twitter": 1300,
+        "instagram": 149
+      },
+      "image_url": "https://i1.feedspot.com/4912318.jpg"
+    },
+    {
+      "title": "FiveCRM Blog",
+      "feed_url": "https://www.fivecrm.com/feed/",
+      "website_url": "https://www.fivecrm.com/blog/",
+      "description": "The FIVE CRM suite of products give a range of options for CRM, email marketing, outbound calling, marketing automation & website tracking. This is a suite of fully customisable sales & marketing solutions, dedicated to helping organizations develop and grow.",
+      "followers": {
+        "facebook": 375,
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/4664241.jpg?t=1617695705"
+    }
+  ]
+}

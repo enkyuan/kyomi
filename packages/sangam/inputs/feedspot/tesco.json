@@ -1,0 +1,27 @@
+{
+  "category": "Tesco",
+  "source_url": "https://rss.feedspot.com/tesco_rss_feeds",
+  "feeds": [
+    {
+      "title": "Tesco PLC news",
+      "feed_url": "https://www.tescoplc.com/",
+      "website_url": "https://www.tescoplc.com/",
+      "description": "Tesco PLC is one of the world's largest retailers of consumer goods from food to fashion. Serving customers a little better every day in our stores and online is at the heart of everything we do. This site provides all the news and information about Tesco PLC.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 55000
+      },
+      "image_url": "https://i1.feedspot.com/4924137.jpg?t=1611142140"
+    },
+    {
+      "title": "Tesco Labs",
+      "feed_url": "https://www.tescolabs.com/feed/",
+      "website_url": "https://www.tescolabs.com/",
+      "description": "Tesco Technology is made up of people from several different backgrounds with a shared interest in harnessing innovations in technology. Tesco Labs is here to help you experience the future. We are here to envisage, design and create the future Tesco.",
+      "followers": {
+        "twitter": 43
+      },
+      "image_url": "https://i1.feedspot.com/4924156.jpg?t=1611142179"
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "category": "Coffee Beans",
+  "source_url": "https://rss.feedspot.com/coffee_beans_rss_feeds",
+  "feeds": [
+    {
+      "title": "Coffee Bean Corral Blog",
+      "feed_url": "https://www.coffeebeancorral.com/blog/syndication.axd",
+      "website_url": "https://www.coffeebeancorral.com/blog/",
+      "description": "Coffee Bean Corral is the first green coffee bean store on the internet. We offer everything you need for great coffee in-store or at home, from a wide selection of home coffee roasters to a huge selection of unroasted coffee beans, including organic green coffee, decaffeinated coffee, Hawaiian coffees, and other specialty coffees from around the world.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 641,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5397636.jpg?t=1651911596"
+    },
+    {
+      "title": "Backyard Beans Coffee Co. Blog",
+      "feed_url": "https://backyardbeans.com/blogs/all.atom",
+      "website_url": "https://backyardbeans.com/blogs/all",
+      "description": "Backyard Beans Coffee blog covers brewing techniques, geeky coffee information, new roasts, and what's in the box (our monthly coffee subscription information). Backyard Beans Coffee Co.is a small-batch, craft coffee roaster based in Lansdale, PA.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 729,
+        "instagram": 12800
+      },
+      "image_url": "https://i1.feedspot.com/5404224.jpg?t=1653627137"
+    },
+    {
+      "title": "African Coffee Club Blog",
+      "feed_url": "https://www.joro.coffee/blog?format=rss",
+      "website_url": "https://www.joro.coffee/blog",
+      "description": "Learn why African coffee is so unique and get behind the scenes with how our farmers run their businesses, process coffee by hand, and put love into each crop. We created African Coffee Club because everyone wishes they had more time to learn about the world. Africa has some of the best coffee beans on the planet and we have scoured the Dark Continent to offer you exclusively sourced single-origin coffee beans from some of the world's most successful independent growers.",
+      "followers": {
+        "facebook": 1100,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5397642.jpg?t=1651901569"
+    },
+    {
+      "title": "Bay Beans Blog",
+      "feed_url": "https://www.baybeans.com.au/1/feed",
+      "website_url": "https://www.baybeans.com.au/coffee-blog",
+      "description": "Welcome to the Bay Beans coffee blog. James hopes you enjoy reading about the wonderful world of coffee and the adventures of Bay Beans coffee beans.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5397641.jpg?t=1651925472"
+    },
+    {
+      "title": "Aveek Coffee Co Blog",
+      "feed_url": "https://aveekcoffeeco.com/blogs/the-whole-bean-blog.atom",
+      "website_url": "https://aveekcoffeeco.com/blogs/the-whole-bean-blog",
+      "description": "Two coffee-addicted lovers, not looking for any roads to recovery. We took our addiction to another level of either insanity or passion, you be the judge! But Aveek Coffee Co. was born and branded out of love and gratitude for the brown bean. Coffee should put you in a great mood. You should feel relaxed, and less anxious. The smell, taste, and aromas are all part of the experience. And that's exactly what we are, Aveek is an experience.",
+      "followers": {
+        "instagram": 234
+      },
+      "image_url": "https://i1.feedspot.com/5397638.jpg?t=1651926180"
+    },
+    {
+      "title": "Bean Box Blog",
+      "feed_url": "https://beanbox.com/blog/atom",
+      "website_url": "https://beanbox.com/blog",
+      "description": "Wake up to better coffee with tips, how-tos, and gear recommendations from our coffee experts. We founded Bean Box to share the joy of small-batch, locally-roasted beans with coffee lovers around the country, leveraging our technology and expertise to help you discover your next favorite cup.",
+      "followers": {
+        "facebook": 30200,
+        "twitter": 24800,
+        "instagram": 48000
+      },
+      "image_url": "https://i1.feedspot.com/5397643.jpg?t=1651901573"
+    },
+    {
+      "title": "Coffee Beans Delivered Blog",
+      "feed_url": "https://coffeebeansdelivered.com.au/blogs/news.atom",
+      "website_url": "https://coffeebeansdelivered.com.au/blogs/news",
+      "description": "In a world where coffee has become an elitist and over-the-top hipster, Ryd is on a mission to make specialty coffee inviting and undiscriminating; creating a community of coffee lovers who want to share their thoughts, ask questions and appreciate that we are all on a journey uncovering the delights of home-brewed coffee.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 119,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5364975.jpg?t=1643028674"
+    },
+    {
+      "title": "The Specialty Coffee Beans Blog",
+      "feed_url": "https://www.thespecialtycoffeebeans.com/feed/",
+      "website_url": "https://www.thespecialtycoffeebeans.com/blogs/",
+      "description": "I'm Charlie, an IT professional with over 20 years in the industry. Family man and passionate about Specialty Coffee. The reason behind this site is to share my journey through Specialty Coffee, its different flavors, and aromas.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5397646.jpg?t=1651925309"
+    },
+    {
+      "title": "CuppaBean \u00bb Bean",
+      "feed_url": "https://cuppabean.com/feed/",
+      "website_url": "https://cuppabean.com/",
+      "description": "One cup at a time, the world is changing. Our team of experts sifts through all the best coffee beans so you don't have to. Check out our recommended guide on our blog page. We offer reviews, guides, and advice to aspiring home cooks who want to buy the best coffee.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5397803.jpg?t=1651926862"
+    },
+    {
+      "title": "Purely Coffee Beans Blog",
+      "feed_url": "https://www.purelycoffeebeans.com/coffee-beans-blog/feed/",
+      "website_url": "https://www.purelycoffeebeans.com/coffee-beans-blog/",
+      "description": "This coffee beans blog is my personal account of my search for Purely Coffee Beans in unfamiliar stores, coffee shops, and traditions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5397649.jpg?t=1651926111"
+    },
+    {
+      "title": "BUZZ Coffee Blog",
+      "feed_url": "https://buzzcoffee.com.au/blogs/blog.atom",
+      "website_url": "https://buzzcoffee.com.au/blogs/blog",
+      "description": "BUZZ Coffee is an Australian family-owned coffee company that began trading in 2003. It supplies coffee to caffeine addicts all over Australia, retail and wholesale. Check out our range of quality beans",
+      "followers": {
+        "facebook": 346,
+        "instagram": 509
+      },
+      "image_url": "https://i1.feedspot.com/5397637.jpg?t=1651901552"
+    },
+    {
+      "title": "Coffeedesk \u00bb Beans",
+      "feed_url": "https://www.coffeedesk.com/blog/category/coffee/beans/feed/",
+      "website_url": "https://www.coffeedesk.com/blog/category/coffee/beans/",
+      "description": "The following section of Coffeedesk features articles on coffee beans. Our goal is to introduce you to the world of great coffee and reach all coffee lovers out there. Our online shop is the right place for those looking for top-notch products and quick delivery to every EU country.",
+      "followers": {
+        "facebook": 75600,
+        "twitter": 4300,
+        "instagram": 54200
+      },
+      "image_url": "https://i1.feedspot.com/5397650.jpg?t=1651901606"
+    },
+    {
+      "title": "Caruso's Coffee, Inc. Blog",
+      "feed_url": "https://shop.carusoscoffee.com/blogs/news.atom",
+      "website_url": "https://shop.carusoscoffee.com/blogs/news",
+      "description": "Read our blog to learn more about high-quality coffee, fresh coffee beans anr more. At Caruso's, we understand there are many ways to enjoy a cup of coffee, so we do our best to give you the options to do so. With a mix of whole bean, ground, and single-serve products, you can brew fresh coffee the way you like.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 35
+      },
+      "image_url": "https://i1.feedspot.com/5397640.jpg?t=1651901561"
+    },
+    {
+      "title": "Uhuru Coffee Co Blog",
+      "feed_url": "https://www.uhurucoffeeco.com/feed/",
+      "website_url": "https://www.uhurucoffeeco.com/blog/",
+      "description": "We want Uhuru Coffee Co. to bring the freedom of a beautiful cup of coffee, enjoyed at your leisure, refreshing you to do whatever you enjoy. Most importantly, we want to use our coffee to introduce people to the true freedom found in Jesus Christ, both in Africa and right here in the UK.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5397651.jpg?t=1651925977"
+    },
+    {
+      "title": "Coffee How Blog",
+      "feed_url": "https://coffeehow.co/coffee-beans/feed/",
+      "website_url": "https://coffeehow.co/coffee-blog/",
+      "description": "Hi, I'm Sasha and this blog is about coffee. I love everything and anything about coffee. In my blog, you can learn more about coffee beans and where to buy them, coffee recipes, tips and tricks, coffee bean reviews, equipment recommendations, and more.",
+      "followers": {
+        "facebook": 5000,
+        "instagram": 255
+      },
+      "image_url": "https://i1.feedspot.com/5397645.jpg?t=1651924035"
+    }
+  ]
+}

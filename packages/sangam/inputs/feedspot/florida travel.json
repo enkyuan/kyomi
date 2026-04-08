@@ -1,0 +1,431 @@
+{
+  "category": "Florida Travel",
+  "source_url": "https://rss.feedspot.com/florida_travel_rss_feeds",
+  "feeds": [
+    {
+      "title": "Visit Central Florida Blog",
+      "feed_url": "https://visitcentralflorida.org/feed/",
+      "website_url": "https://visitcentralflorida.org/blog/",
+      "description": "Ready to explore Central Florida? Close to the area's top attractions, but far from the crowds. Let us help you plan your vacation.",
+      "followers": {
+        "facebook": 101300,
+        "twitter": 19800,
+        "instagram": 37700
+      },
+      "image_url": "https://i1.feedspot.com/5313787.jpg?t=1629374140"
+    },
+    {
+      "title": "Florida Hikes",
+      "feed_url": "https://floridahikes.com/feed/",
+      "website_url": "https://floridahikes.com/",
+      "description": "Thousands of miles of hiking trails, biking, paddling, camping, and more! Explore Florida's outdoors with hiking experts and authors Sandra Friend and John Keatley.",
+      "followers": {
+        "facebook": 42300,
+        "twitter": 1800,
+        "instagram": 18000
+      },
+      "image_url": "https://i1.feedspot.com/4492348.jpg?t=1610630502"
+    },
+    {
+      "title": "Florida Back Roads Travel",
+      "feed_url": "https://www.florida-backroads-travel.com/florida-off-the-beaten-path.xml",
+      "website_url": "https://www.florida-backroads-travel.com/",
+      "description": "This Florida travel guide focuses on off the beaten path towns, attractions, culture, history, and things to do. More than 200 regional and local maps.",
+      "followers": {
+        "facebook": 129600,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4816971.jpg?t=1629375424"
+    },
+    {
+      "title": "Florida's Adventure Coast Blog",
+      "feed_url": "https://floridasadventurecoast.com/feed/",
+      "website_url": "https://floridasadventurecoast.com/blog/",
+      "description": "Hernando County is Florida's Adventure Coast. Explore the vacation destination with mermaids, manatees, and endless outdoor adventures. Florida's Adventure Coast is a wonderland of outdoor amenities, active family fun, centuries of history, Southern hospitality, and vibrant local color.",
+      "followers": {
+        "facebook": 58600,
+        "twitter": 1300,
+        "instagram": 5900
+      },
+      "image_url": "https://i1.feedspot.com/4817103.jpg?t=1610631339"
+    },
+    {
+      "title": "SoooBoca",
+      "feed_url": "https://soooboca.com/feed/",
+      "website_url": "https://soooboca.com/",
+      "description": "Discover all things fun and fabulous in Boca Raton, Florida! Explore our beautiful beaches, real estate, decadent dining, shop till you drop stores, entertainment, and lifestyle destination in the heart of South Florida! Michele Bellisari is a Realtor and founder of SoooBoca, a lifestyle guide about Boca Raton, South Florida, and Florida.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 2000,
+        "instagram": 10700
+      },
+      "image_url": "https://i1.feedspot.com/5294862.jpg?t=1624891501"
+    },
+    {
+      "title": "Traveling Lifestyle \u00bb Florida",
+      "feed_url": "https://www.travelinglifestyle.net/category/florida/feed/",
+      "website_url": "https://www.travelinglifestyle.net/category/florida/",
+      "description": "Digital Nomad & Travel News",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 10500,
+        "instagram": 8700
+      },
+      "image_url": "https://i1.feedspot.com/5711092.jpg?t=1699948608"
+    },
+    {
+      "title": "Authentic Florida",
+      "feed_url": "https://authenticflorida.com/feed/",
+      "website_url": "https://authenticflorida.com/",
+      "description": "Authentic Florida is an award-winning travel website that celebrates the Sunshine State's unique and kitschy treasures. The mission of AuthenticFlorida.com is to enhance one's appreciation of Florida through travel and lifestyle tips, and to encourage our readers to explore the hidden treasures of the Sunshine State.",
+      "followers": {
+        "facebook": 72400,
+        "twitter": 5200,
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/5389917.jpg?t=1662466678"
+    },
+    {
+      "title": "Naples Florida Travel Guide",
+      "feed_url": "https://www.naplesfloridatravelguide.com/blog?format=rss",
+      "website_url": "https://www.naplesfloridatravelguide.com/blog/",
+      "description": "Lori & Angelo are travel writers, photographers, content creators, and year-round Naples Florida residents who love sharing all the exciting things there are to do in paradise. Their Southwest Florida travel blog is dedicated to the Naples traveler interested in planning a Florida vacation to Naples and Marco Island with a twist of SWFL in Charlotte, Lee, and Collier counties.",
+      "followers": {
+        "facebook": 2500,
+        "instagram": 18900
+      },
+      "image_url": "https://i1.feedspot.com/5711089.jpg?t=1699948591"
+    },
+    {
+      "title": "Wander Florida Blog",
+      "feed_url": "https://wanderflorida.net/feed/",
+      "website_url": "https://wanderflorida.net/blog/",
+      "description": "An native Floridian's introverted guide to the Sunshine State. Wander Florida explores the paths less traveled in Florida. Think nature, history, and small towns which exemplify 'old' Florida.",
+      "followers": {
+        "facebook": 3300,
+        "instagram": 42
+      },
+      "image_url": "https://i1.feedspot.com/5355603.jpg?t=1699948737"
+    },
+    {
+      "title": "Florida Seminole Tourism Blog",
+      "feed_url": "https://floridaseminoletourism.com/feed/",
+      "website_url": "https://floridaseminoletourism.com/blog/",
+      "description": "The Seminole Tribe of Florida is a federally recognized Indian Tribe comprised of over 4,000 Tribal Members. We demonstrate our history's sustainability and share our traditions that have been handed down through generations. Read our Florida Everglades travel tour blog to get a taste of the amazing adventures you can experience when you plan a vacation with Florida Seminole Tourism!",
+      "followers": {
+        "facebook": 4000,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5365943.jpg?t=1643708594"
+    },
+    {
+      "title": "Jetset Jansen \u00bb Florida",
+      "feed_url": "https://jetsetjansen.com/florida/feed/",
+      "website_url": "https://jetsetjansen.com/florida/",
+      "description": "Uncover the diverse tapestry of Florida state. Delve into its thriving arts scene, enjoy family-friendly attractions, and savor a fusion of cultures through its culinary delights and waterfront views. Jetset Jansen follows Ashley, a Midwest blogger who travels the world in search of amazing experinces.",
+      "followers": {
+        "facebook": 187,
+        "instagram": 11200
+      },
+      "image_url": "https://i1.feedspot.com/5711096.jpg?t=1699948632"
+    },
+    {
+      "title": "Florida Travel With Kids",
+      "feed_url": "https://floridatravelwithkids.com/feed/",
+      "website_url": "https://floridatravelwithkids.com/",
+      "description": "Florida Travel with Kids was started by a family who has been traveling all over Florida for years. Mom Blogger Amy shares her kids' adventures with you and plenty of family-friendly things to do in Florida.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5711094.jpg?t=1700025884"
+    },
+    {
+      "title": "The Walking Mermaid \u00bb Florida",
+      "feed_url": "https://thewalkingmermaid.com/blog/category/destinations/united-states/florida/feed",
+      "website_url": "https://thewalkingmermaid.com/blog/category/destinations/united-states/florida",
+      "description": "The Walking Mermaid focuses on blog author Jessica's love for the ocean and the mountains; Inspiring families to travel more together by creating memories that will last a lifetime and sharing family-friendly travel tips and sustainable lifestyle tips. Explore the Florida springs, beautiful beaches, and amusement parks.",
+      "followers": {
+        "facebook": 659,
+        "twitter": 21,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5711090.jpg?t=1699948597"
+    },
+    {
+      "title": "All Around the Bend",
+      "feed_url": "https://allaroundthebend.com/feed/",
+      "website_url": "https://allaroundthebend.com/",
+      "description": "Hi, I'm Jeff Younglove. I was a Television News Photographer that ended up teaching High School students Television Production. I have just recently retired, put away the big cameras, picked up my iPhone, and started this hobby of Visual Storytelling. My goal is to inspire you to visit the places that I write about.",
+      "followers": {
+        "facebook": 618
+      },
+      "image_url": "https://i1.feedspot.com/5416654.jpg?t=1656565824"
+    },
+    {
+      "title": "Florida Beyond",
+      "feed_url": "https://floridabeyond.com/feed/",
+      "website_url": "https://floridabeyond.com/",
+      "description": "Your best vacation in Florida starts here. We're two experienced, Florida-based travel writers who've been sharing our tips and advice for years in top publications. We know exactly where to have the most fun and biggest adventures in the Sunshine State, and we'll share it all with you here.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 25
+      },
+      "image_url": "https://i1.feedspot.com/5365939.jpg?t=1643356987"
+    },
+    {
+      "title": "Florida Hipster",
+      "feed_url": "https://www.floridahipster.com/feed/",
+      "website_url": "https://www.floridahipster.com/",
+      "description": "My name is Nikky J. I'm a wife, a mother, a pharmacist turned theme park blogger and a writer who loves exploring all the hidden gems of Florida for everyone to discover! I've always loved using my imagination and there's no wonder why I gravitated so heavily to the magic of Disney-inspired films leading me down the path of a travel blogger. I have lived in the beautiful sunshine state my whole life which has made me want to share my love for it with you.",
+      "followers": {
+        "twitter": 419
+      },
+      "image_url": "https://i1.feedspot.com/5365940.jpg?t=1643369929"
+    },
+    {
+      "title": "SoFLA Vacations Blog",
+      "feed_url": "https://soflavacations.com/feed/",
+      "website_url": "https://soflavacations.com/blog/",
+      "description": "As one of the rarest of creatures known to the world today, Native South Floridian, we have lived the South Florida experience our entire lives and are passing that along to our guests. We are committed to making your vacation or business trip to Greater Miami or the Florida Keys special, affordable and memorable.",
+      "followers": {
+        "facebook": 725
+      },
+      "image_url": "https://i1.feedspot.com/5365942.jpg?t=1643370084"
+    },
+    {
+      "title": "Central Florida Clean Cities",
+      "feed_url": "https://centralfloridacleancities.com/feed/",
+      "website_url": "https://centralfloridacleancities.com/",
+      "description": "Find travel information on everything to do with tourism and vacations in the Sunshine State, from destinations and places to events and festivals. Florida Free Fun Guide covers all Florida regions including the most popular central and southwest Florida areas.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5313920.jpg?t=1629441119"
+    },
+    {
+      "title": "Florida Water Tours Blog",
+      "feed_url": "https://floridawatertour.com/feed/",
+      "website_url": "https://floridawatertour.com/blog/",
+      "description": "Enjoy an eco-tour on the waters of St. Augustine with Florida Water Tours, a local pioneer in adventure travel. Our tours include the Dolphin Tour and Wildlife Adventure, Sunset Cruise, Wine Tasting Cruise, Nights of Lights, private charters, and much more! We are deeply committed to promoting various St. Augustine attractions and historical landmarks.",
+      "followers": {
+        "facebook": 10900,
+        "instagram": 9800
+      },
+      "image_url": "https://i1.feedspot.com/5365944.jpg?t=1643357009"
+    },
+    {
+      "title": "Beach Condos in Destin Blog",
+      "feed_url": "https://www.beachcondosindestin.com/feed/",
+      "website_url": "https://www.beachcondosindestin.com/blog/",
+      "description": "Whether it is just a quick Destin beach get-away for the weekend, a beach family reunion, or a Destin wedding, we will do our best to help you in any way possible. Find things to do, local favourites, and updates from our Destin Travel Blog.",
+      "followers": {
+        "facebook": 12500
+      },
+      "image_url": "https://i1.feedspot.com/5365945.jpg?t=1643709460"
+    },
+    {
+      "title": "Visit Tampa Bay Blog",
+      "feed_url": "https://www.visittampabay.com/blog/archive/rss/",
+      "website_url": "https://www.visittampabay.com/blog/archive/",
+      "description": "Discover Tampa Bay for your next Florida vacation. Book a hotel, find a restaurant, or explore things to do with Visit Tampa Bay as your official guide.",
+      "followers": {
+        "facebook": 102900,
+        "twitter": 127600,
+        "instagram": 90900
+      },
+      "image_url": "https://i1.feedspot.com/4901120.jpg?t=1612863075"
+    },
+    {
+      "title": "The Florida Travel Girl",
+      "feed_url": "https://thefloridatravelgirl.com/feed/",
+      "website_url": "https://thefloridatravelgirl.com/",
+      "description": "A Floridian sharing tips for venturing around the state and more on her Florida travel blog, along with coastal lifestyle inspiration. My name is Amy. I am twenty something living on Florida's Space Coast with my husband Andrew and our corgi Charlie.",
+      "followers": {
+        "facebook": 11900,
+        "twitter": 177,
+        "instagram": 13800
+      },
+      "image_url": "https://i1.feedspot.com/5313726.jpg?t=1629368819"
+    },
+    {
+      "title": "Visit Natural North Florida Blog",
+      "feed_url": "https://www.naturalnorthflorida.com/blog/feed/",
+      "website_url": "https://www.naturalnorthflorida.com/blog/",
+      "description": "Natural North Florida is home to the largest collection of natural springs in the world, amazing gulf coast sunsets, world-class fishing, pristine rivers for paddling excursions, and peaceful trails to hike on. Check out our Travel Blog for more information.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 606
+      },
+      "image_url": "https://i1.feedspot.com/4817198.jpg?t=1610630905"
+    },
+    {
+      "title": "Florida Wanderers",
+      "feed_url": "https://floridawanderers.com/feed/",
+      "website_url": "https://floridawanderers.com/",
+      "description": "John and Megan are the voices behind Florida Wanderers. Having traveled and lived in Florida for 8 years, they love the sunshine state and want to spread the word about how great Florida is by sharing travel tips and guides with you. Enjoy!",
+      "followers": {
+        "instagram": 98
+      },
+      "image_url": "https://i1.feedspot.com/5684709.jpg?t=1696591328"
+    },
+    {
+      "title": "TravelMag.com \u00bb Florida",
+      "feed_url": "https://www.travelmag.com/destinations/florida/feed/",
+      "website_url": "https://www.travelmag.com/destinations/florida/",
+      "description": "Discover pristine beaches, party-hardy spring breakers, and world-renowned theme parks in the sunshine state of Florida. TravelMag.com offers fresh, unique perspectives in the form of travel essays and in-depth local guides that go beyond the guidebook.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5711086.jpg?t=1699949061"
+    },
+    {
+      "title": "Florida Beach Break Blog",
+      "feed_url": "https://www.floridabeachbreak.com/rss",
+      "website_url": "https://www.floridabeachbreak.com/blog",
+      "description": "Florida Beach Break is a Space Coast vacationer's go-to resource for accommodations, dining, attractions, beaches, tours, water sports, nightlife, and more in Cape Canaveral, Cocoa Beach, Satellite Beach, Indian Harbour, Indialantic, and Melbourne Beach.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 4,
+        "instagram": 599
+      },
+      "image_url": "https://i1.feedspot.com/5247156.jpg?t=1613821238"
+    },
+    {
+      "title": "The Daily Adventures of Me \u00bb Florida",
+      "feed_url": "https://thedailyadventuresofme.com/home/category/us-travel/florida/feed",
+      "website_url": "https://thedailyadventuresofme.com/home/category/us-travel/florida",
+      "description": "Discover the world-class aquariums, day trips, thriving culinary scene, and waterfront adventures that make this destination a must-visit gem in Florida. Jamie Italiane-DeCubellis is a dentist and travel blogger who loves to travel and inspire her readers to go out themselves and enjoy this world.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 13800,
+        "instagram": 10300
+      },
+      "image_url": "https://i1.feedspot.com/5711087.jpg?t=1699948582"
+    },
+    {
+      "title": "Naples Travel Blog",
+      "feed_url": "https://naples.travel/feed/",
+      "website_url": "https://naples.travel/travel-blog/",
+      "description": "Explore the sandy shores and the pure luxuries of Naples, Florida. This blog lists hidden gems and useful travel guides for the city. Naples.Travel is a premier boutique company in Naples, Florida, specializing in modern and upscale vacation experiences.",
+      "followers": {
+        "facebook": 42,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5711088.jpg?t=1699949007"
+    },
+    {
+      "title": "Discover West Central Florida",
+      "feed_url": "https://discoverwestcentralflorida.com/feed/",
+      "website_url": "https://discoverwestcentralflorida.com/",
+      "description": "Discover West Central Florida provides an immersive guide to the hidden gems and vibrant communities of the region, offering readers a rich tapestry of experiences that capture the area's unique charm. From pristine beaches and lush natural parks to bustling cultural hotspots and historic landmarks, the platform unveils the diverse allure of West Central Florida. It combines detailed travel tips, local insights, and personal stories that highlight the authentic flavors, adventures, and traditions that make this region a must-visit destination...",
+      "followers": {
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/7330166.jpg?t=1724063857"
+    },
+    {
+      "title": "Curb Free with Cory Lee \u00bb Florida",
+      "feed_url": "https://curbfreewithcorylee.com/category/where-have-i-been/usa/florida/feed/",
+      "website_url": "https://curbfreewithcorylee.com/category/where-have-i-been/usa/florida/",
+      "description": "Explore Florida's breathtaking beauty from a wheel-chair's perspective in these archives. Curb Free with Cory Lee recounts the adventures of Cory Lee, a disabled traveler, who wanders the world and shares his experiences, tips and inspiration to travel the globe.",
+      "followers": {
+        "facebook": 100900,
+        "twitter": 22100,
+        "instagram": 56500
+      },
+      "image_url": "https://i1.feedspot.com/5711095.jpg?t=1699948628"
+    },
+    {
+      "title": "VickyFlipFlopTravels \u00bb Florida",
+      "feed_url": "https://vickyflipfloptravels.com/category/north-america/florida/feed/",
+      "website_url": "https://vickyflipfloptravels.com/category/north-america/florida/",
+      "description": "Dive into the vibrant heart of the Sunshine State, as UK-based Travel blogger Vicki takes you on a virtual tour of amazing Beaches, Road trips, Local attractions, and Food & Drink spots across Florida. Vicky is a travel writer and adventurer, and the creator of vickyflipfloptravels.com.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 19100,
+        "instagram": 10600
+      },
+      "image_url": "https://i1.feedspot.com/5711093.jpg?t=1699948614"
+    },
+    {
+      "title": "Fun Florida Hotels Blog",
+      "feed_url": "https://funfloridahotels.com/feed/",
+      "website_url": "https://funfloridahotels.com/blog/",
+      "description": "Whether you're planning your next family getaway, a beach trip, or a Disney adventure, we offer some of the best deals on Florida attractions, Orlando hotels near Disney and many other leading hotels around Florida. Our website offers all of the best deals from world-class hotels, making it easier than ever to plan an epic vacation.",
+      "followers": {
+        "facebook": 748,
+        "instagram": 72
+      },
+      "image_url": "https://i1.feedspot.com/5365948.jpg?t=1643704157"
+    },
+    {
+      "title": "The Weekend Fox Blog",
+      "feed_url": "https://theweekendfox.com/feed/",
+      "website_url": "https://theweekendfox.com/blog/",
+      "description": "The Weekend Fox is a New Symrna, Florida based Travel & Lifestyle Blog for wanderlust millennials. I'm a weekend lover & happy traveler. My adventures have taken me around the world & taught me so much. From the best vacation spots to the highs & lows of being a divorced millennial, I'm sharing it all.",
+      "followers": {
+        "facebook": 967,
+        "twitter": 1300,
+        "instagram": 13000
+      },
+      "image_url": "https://i1.feedspot.com/5313732.jpg?t=1629369225"
+    },
+    {
+      "title": "Be My Travel Muse \u00bb Florida",
+      "feed_url": "https://www.bemytravelmuse.com/category/destinations/north-america/united-states/florida/feed/",
+      "website_url": "https://www.bemytravelmuse.com/category/destinations/north-america/united-states/florida/",
+      "description": "Embark on a journey through Florida's hidden retreats and thrilling escapades. Join Kristin Addis as she explores the Sunshine State. Her blog, Be My Travel Muse is one of the top female travel blogs in the world, sharing tips and advice so that readers can have the adventure of a lifetime in an easy, fun, approachable way.",
+      "followers": {
+        "facebook": 57800,
+        "twitter": 26600,
+        "instagram": 131300
+      },
+      "image_url": "https://i1.feedspot.com/5711097.jpg?t=1699948637"
+    },
+    {
+      "title": "Florida Rental by Owners Blog",
+      "feed_url": "https://www.floridarentalbyowners.com/blog/index.php/feed/",
+      "website_url": "https://www.floridarentalbyowners.com/blog/",
+      "description": "Search and find your dream vacation on Florida Rentals By Owner. Florida Rental by Owners was launched in May 2017. We are committed to connecting travelers with their dream vacation rental.",
+      "followers": {
+        "facebook": 16500,
+        "twitter": 200,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4897912.jpg?t=1699014928"
+    },
+    {
+      "title": "Wherever I May Roam Blog \u00bb FLORIDA",
+      "feed_url": "https://www.whereverimayroamblog.com/food/",
+      "website_url": "https://www.whereverimayroamblog.com/food/",
+      "description": "Wherever I May Roam is written by the mother-daughter team of Melody Pittman and Taylor Pittman Hardy. Together, they write about luxury travel, culture, and food on adventures around the world.",
+      "followers": {
+        "facebook": 13200,
+        "twitter": 38900
+      },
+      "image_url": "https://i1.feedspot.com/5313910.jpg?t=1629440476"
+    },
+    {
+      "title": "Florida Travel + Life",
+      "feed_url": "https://www.floridatravellife.com/feeds/blogs",
+      "website_url": "https://www.floridatravellife.com/",
+      "description": "Plan a Florida weekend getaway and find regional Florida events and festivals. We'll help you find the best Florida restaurants and bars, theme park tips, and outdoor Florida activities.",
+      "followers": {
+        "facebook": 51800,
+        "twitter": 545,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4109041.jpg?t=1629438846"
+    },
+    {
+      "title": "2TravelDads \u00bb Florida",
+      "feed_url": "https://2traveldads.com/category/southeastern-us/florida/feed/",
+      "website_url": "https://2traveldads.com/category/southeastern-us/florida/",
+      "description": "Enjoy the oldest city in the USA. From perfect beaches to the oldest history in the USA relating to settlement by Western countries, the 2TravelDads travel blog informs and entertains readers about all the interesting places to visit and things to do in the Sunshine State.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5711091.jpg?t=1699948891"
+    },
+    {
+      "title": "Florida Travel Blog",
+      "feed_url": "https://floridatravel.blog/feed/",
+      "website_url": "https://floridatravel.blog/",
+      "description": "We feature our travels in Florida plus the Florida lifestyle. From the Atlantic Ocean to the Gulf of Mexico, we document history, food, attractions, beaches, and bars. The places, people, and natural surroundings can be found in these articles.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5392612.jpg?t=1650453665"
+    }
+  ]
+}

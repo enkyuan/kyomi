@@ -1,0 +1,41 @@
+{
+  "category": "Lace Knitting",
+  "source_url": "https://rss.feedspot.com/lace_knitting_rss_feeds",
+  "feeds": [
+    {
+      "title": "Doilyhead's Blog",
+      "feed_url": "https://doilyhead.wordpress.com/feed/",
+      "website_url": "https://doilyhead.wordpress.com/",
+      "description": "Follow Doilyhead's Blog to get Adventures in Lace Knitting.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4846397.jpg?t=1611309817"
+    },
+    {
+      "title": "Lafayette Lacemakers",
+      "feed_url": "https://lafayettelacemakers.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://lafayettelacemakers.blogspot.com/",
+      "description": "Lafayette Lacemakers, Inc., is a charter of the International Organization of Lace, Inc. Our goal is to educate and develop an appreciation for lace the fine art of lacemaking.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4705529.jpg?t=1611309789"
+    },
+    {
+      "title": "Alessandrina machine knitting and more \u00bb Lace",
+      "feed_url": "https://alessandrina.com/category/machine-knitting/lace/feed/",
+      "website_url": "https://alessandrina.com/category/lace/",
+      "description": "Hello! I am Alessandrina. I am interested in nearly all things fiber. My main focus is on machine knitting. I construct my wearables using a variety of on and off the loom techniques to produce one of a kind and limited edition items.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4846893.jpg?t=1611309757"
+    },
+    {
+      "title": "A passion for knitted Lace",
+      "feed_url": "http://bridgetsbrei.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://bridgetsbrei.blogspot.com/",
+      "description": "Hi! I am MoniqueB. Fine lacework is really my passion. I not only knit on commission but also make designs for you to knit.",
+      "followers": {
+        "twitter": 628,
+        "instagram": 8700
+      },
+      "image_url": "https://i1.feedspot.com/4846396.jpg?t=1611309683"
+    }
+  ]
+}

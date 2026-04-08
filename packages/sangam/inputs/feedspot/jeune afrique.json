@@ -1,0 +1,78 @@
+{
+  "category": "Jeune Afrique",
+  "source_url": "https://rss.feedspot.com/jeune_afrique_rss_feeds",
+  "feeds": [
+    {
+      "title": "Jeune Afrique",
+      "feed_url": "https://www.jeuneafrique.com/feed/",
+      "website_url": "https://www.jeuneafrique.com/",
+      "description": "Suivez en temps r\u00e9el toute l'actualit\u00e9 des 54 pays africains (RDC, Alg\u00e9rie, S\u00e9n\u00e9gal, Maroc...) et internationaux (politique, \u00e9conomie, sport, soci\u00e9t\u00e9).",
+      "followers": {
+        "facebook": 3200000,
+        "twitter": 4000000,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/5095558.jpg?t=1685945064"
+    },
+    {
+      "title": "Jeune Afrique \u00bb Politique",
+      "feed_url": "https://www.jeuneafrique.com/rubriques/politique/feed/",
+      "website_url": "https://www.jeuneafrique.com/rubriques/politique/",
+      "description": "Le Groupe Jeune Afrique pr\u00e9sente Jeuneafrique.com, premier journal sur l'actualit\u00e9 africaine : politique, \u00e9conomie, sport, soci\u00e9t\u00e9, culture... Retrouvez votre actualit\u00e9 pays par pays.",
+      "followers": {
+        "facebook": 3200000,
+        "twitter": 4000000,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/693774.jpg?t=1685944208"
+    },
+    {
+      "title": "Jeune Afrique \u00bb Societe",
+      "feed_url": "https://www.jeuneafrique.com/rubriques/societe/feed/",
+      "website_url": "https://www.jeuneafrique.com/rubriques/societe/",
+      "description": "Jeune Afrique publie des news & insights sur diverses entreprises dans diff\u00e9rents domaines.",
+      "followers": {
+        "facebook": 3200000,
+        "twitter": 4000000,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/5589684.jpg?t=1685944299"
+    },
+    {
+      "title": "Jeune Afrique \u00bb Culture",
+      "feed_url": "https://www.jeuneafrique.com/rubriques/culture/feed/",
+      "website_url": "https://www.jeuneafrique.com/rubriques/culture/",
+      "description": "Retrouvez dans cette rubrique l'actualit\u00e9 culturelle publi\u00e9e par Jeune Afrique.",
+      "followers": {
+        "facebook": 3200000,
+        "twitter": 4000000,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/5589683.jpg?t=1685944724"
+    },
+    {
+      "title": "Jeune Afrique \u00bb \u00c9conomie",
+      "feed_url": "https://www.jeuneafrique.com/rubriques/economie/feed/",
+      "website_url": "https://www.jeuneafrique.com/rubriques/economie/",
+      "description": "Toute l'actualit\u00e9 \u00e9conomique et financi\u00e8re du continent avec Jeune Afrique",
+      "followers": {
+        "facebook": 3200000,
+        "twitter": 4000000,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/693773.jpg?t=1685944749"
+    },
+    {
+      "title": "Jeune Afrique \u00bb Sport",
+      "feed_url": "https://www.jeuneafrique.com/rubriques/sport/feed/",
+      "website_url": "https://www.jeuneafrique.com/rubriques/sport/",
+      "description": "Lisez les derni\u00e8res mises \u00e0 jour et actualit\u00e9s sur divers sports produites par Jeune Afrique.",
+      "followers": {
+        "facebook": 3200000,
+        "twitter": 4000000,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/2204306.jpg?t=1685945102"
+    }
+  ]
+}

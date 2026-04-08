@@ -1,0 +1,92 @@
+{
+  "category": "Jailbreak",
+  "source_url": "https://rss.feedspot.com/jailbreak_rss_feeds",
+  "feeds": [
+    {
+      "title": "iDevice Central",
+      "feed_url": "https://idevicecentral.com/feed/",
+      "website_url": "https://idevicecentral.com/",
+      "description": "Get the latest iOS 16.4 Jailbreak News, Tutorials, guides, and walkthroughs. Apple News, leaks, and guides. Provided by jailbreak developer GeoSnow.",
+      "followers": {
+        "twitter": 121300
+      },
+      "image_url": "https://i1.feedspot.com/5531273.jpg?t=1680258166"
+    },
+    {
+      "title": "iOS Repo Update",
+      "feed_url": "https://www.ios-repo-updates.com/feed/",
+      "website_url": "https://www.ios-repo-updates.com/",
+      "description": "Browse iOS jailbreak repositories. iOS Repo Update posts about jailbreaking, news, packages, and more.",
+      "followers": {
+        "twitter": 17800
+      },
+      "image_url": "https://i1.feedspot.com/5531272.jpg?t=1680258070"
+    },
+    {
+      "title": "IDB Blog \u00bb Jailbreak Apps Tweaks",
+      "feed_url": "https://www.idownloadblog.com/tag/jailbreak-apps-tweaks/feed/",
+      "website_url": "https://www.idownloadblog.com/tag/jailbreak-apps-tweaks/",
+      "description": "Check out the latest jailbreak apps and tweaks available for your iPhone or iPad. iDownloadBlog.com (iDB) was founded in May 2008 as a weblog focused on delivering Apple news, reviews, and editorials, as well as guides and tutorials about Apple products and services. The site is updated daily by knowledgeable editors with decades of combined experience with Apple products and services.",
+      "followers": {
+        "facebook": 127500,
+        "twitter": 165500,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5531275.jpg?t=1680258546"
+    },
+    {
+      "title": "QuickPWN \u00bb Jailbreak",
+      "feed_url": "https://www.quickpwn.com/category/iphones/iphone/jailbreak/feed/",
+      "website_url": "https://www.quickpwn.com/category/iphones/iphone/jailbreak/",
+      "description": "Explore our blog for jailbreak articles. QuickPWN has articles about business, good experiences, lifestyle, health, technology, and the environment.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 15100
+      },
+      "image_url": "https://i1.feedspot.com/5531278.jpg?t=1680258203"
+    },
+    {
+      "title": "The iDevice Blog",
+      "feed_url": "https://theideviceblog.com/feed/",
+      "website_url": "https://theideviceblog.com/",
+      "description": "Welcome to The iDevice Blog. This website was created to further extend my content beyond YouTube and social media. This is the centralized location for my content. I cover mainly iOS & Apple-related topics from jailbreaks to apps.",
+      "followers": {
+        "facebook": 45,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5531274.jpg?t=1680258287"
+    },
+    {
+      "title": "Elcomsoft Blog \u00bb Jailbreak",
+      "feed_url": "https://blog.elcomsoft.com/tag/jailbreak/feed/",
+      "website_url": "https://blog.elcomsoft.com/tag/jailbreak/",
+      "description": "Our blog offers articles on jailbreak. Founded in 1990, ElcomSoft Co. Ltd. is a leading developer of digital forensics tools. The company offers state-of-the-art solutions for businesses, and forensic and law enforcement specialists, and provides training and consulting services on mobile and computer forensics.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 11100,
+        "instagram": 779
+      },
+      "image_url": "https://i1.feedspot.com/5531277.jpg?t=1680258474"
+    },
+    {
+      "title": "iOS Hacker \u00bb Cydia",
+      "feed_url": "https://ioshacker.com/category/cydia/feed",
+      "website_url": "https://ioshacker.com/category/cydia",
+      "description": "Read blog articles about Cydia. iOSHacker is a place where people who immensely love Apple and its devices share their passion with the rest of the community. The website covers news, tutorials, tips and tricks, apps, games, hacks, and reviews related to iPhone, iPad, Mac, Apple Watch, and Apple TV delivering fresh, useful, and interesting articles to our readers.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5531271.jpg?t=1680258053"
+    },
+    {
+      "title": "Repo Hack Your Iphone",
+      "feed_url": "https://repo.hackyouriphone.org/feedrss.php",
+      "description": "The best repo in the world for iPhone, iPad and iPod touch. Download for free the best tweaks, applications and themes for your iPhone, iPad or iPod touch from our repo in Cydia. And explore all our packages on HackYouriPhone Repo.",
+      "followers": {
+        "facebook": 16800,
+        "twitter": 27700
+      },
+      "image_url": "https://i1.feedspot.com/5531276.jpg?t=1680258671"
+    }
+  ]
+}

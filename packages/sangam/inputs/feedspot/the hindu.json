@@ -1,0 +1,478 @@
+{
+  "category": "The Hindu",
+  "source_url": "https://rss.feedspot.com/the_hindu_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Hindu",
+      "feed_url": "https://www.thehindu.com/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/",
+      "description": "Get today's news headlines, breaking news & the latest news from India and the world, and news from politics, sports, business, arts, and entertainment. The Hindu started in 1878 as a weekly and became a daily, its independent editorial stand and its reliable and balanced presentation of the news have over the years, won the serious attention and regard of the people who matter in India and abroad.",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000
+      },
+      "image_url": "https://i1.feedspot.com/5022730.jpg?t=1664445074"
+    },
+    {
+      "title": "The Hindu \u00bb World News",
+      "feed_url": "https://www.thehindu.com/news/international/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/news/international/",
+      "description": "International news & headlines from around the world with live updates on breaking global events from The Hindu",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/5043375.jpg?t=1686811585"
+    },
+    {
+      "title": "The Hindu \u00bb India News",
+      "feed_url": "https://www.thehindu.com/news/national/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/news/national/",
+      "description": "National news and headlines from within or around India with live updates on major breaking events from The Hindu.",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/5598486.jpg?t=1686811604"
+    },
+    {
+      "title": "The Hindu \u00bb Opinions",
+      "feed_url": "https://www.thehindu.com/opinion/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/opinion/",
+      "description": "The Hindu's opinion section featuring a wide range of articles, editorials, and analysis covering various topics such as current affairs, politics, social issues, and more.",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/5161542.jpg?t=1686811617"
+    },
+    {
+      "title": "The Hindu \u00bb Sports",
+      "feed_url": "https://www.thehindu.com/sport/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/sport/",
+      "description": "Stay Up To Date With The Latest Sports News & Updates From The World Of Cricket, Football, Tennis, Badminton & Much More At The Hindu.",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000
+      },
+      "image_url": "https://i1.feedspot.com/5598489.jpg?t=1753342708"
+    },
+    {
+      "title": "The Hindu \u00bb Business",
+      "feed_url": "https://www.thehindu.com/business/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/business/",
+      "description": "Catch All The Latest News And Updates On Business, Finance, Economy, Stock Market, BSE, NSE, Nifty, Sensex & Much More At The Hindu.",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/5598483.jpg?t=1686811646"
+    },
+    {
+      "title": "The Hindu \u00bb Entertainment",
+      "feed_url": "https://www.thehindu.com/entertainment/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/entertainment/",
+      "description": "Discover the latest news, reviews, interviews, and features covering movies, music, theatre, art, and more. Stay informed and entertained with captivating content from the entertainment section of The Hindu.",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/5598487.jpg?t=1686811674"
+    },
+    {
+      "title": "The Hindu \u00bb Lifestyle",
+      "feed_url": "https://www.thehindu.com/life-and-style/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/life-and-style/",
+      "description": "Stay Up To Date With All The Latest Lifestyle News, Fashion News, Health Tips, Fitness News, Restaurant Reviews & Much More At The Hindu.",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/5029341.jpg?t=1686811691"
+    },
+    {
+      "title": "The Hindu \u00bb Society",
+      "feed_url": "https://www.thehindu.com/society/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/society/",
+      "description": "News and features on society, religion, history, monuments, temples, culture, personality, communities.",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/5598493.jpg?t=1686811648"
+    },
+    {
+      "title": "The Hindu \u00bb Sci-Tech",
+      "feed_url": "https://www.thehindu.com/sci-tech//feeder/default.rss",
+      "website_url": "https://www.thehindu.com/sci-tech/",
+      "description": "Stay informed with the latest sci-tech news and technological developments from The Hindu.",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/5598492.jpg?t=1686811641"
+    },
+    {
+      "title": "The Hindu \u00bb Movies",
+      "feed_url": "https://www.thehindu.com/entertainment/movies/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/entertainment/movies/",
+      "description": "Stay updated with the latest movie news, reviews, and updates from The Hindu. Explore articles, features, and interviews on Bollywood, Hollywood, and regional cinema. Get insights into the latest releases, industry trends, and celebrity updates.",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/5598485.jpg?t=1686811842"
+    },
+    {
+      "title": "The Hindu \u00bb Tech",
+      "feed_url": "https://www.thehindu.com/sci-tech/technology/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/sci-tech/technology/",
+      "description": "Latest Tech News, smartphones, specifications, reviews, prices, Android, Apple, Windows, operating systems, browsers, cameras.",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/5598491.jpg?t=1686811634"
+    },
+    {
+      "title": "The Hindu \u00bb Food",
+      "feed_url": "https://www.thehindu.com/life-and-style/food/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/life-and-style/food/",
+      "description": "Read News & Articles About Food Like Recipes, Restaurant Reviews, Food Reviews, Cooking Tips, Health Tips & Much More At The Hindu.",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/5598481.jpg?t=1686811568"
+    },
+    {
+      "title": "The Hindu \u00bb Children",
+      "feed_url": "https://www.thehindu.com/children//feeder/default.rss",
+      "website_url": "https://www.thehindu.com/children/",
+      "description": "The website's specialised platform for children's content, which includes articles, tales, activities, and tools to foster learning and curiosity, is found in this area.",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/5598484.jpg?t=1686811979"
+    },
+    {
+      "title": "The Hindu \u00bb Data",
+      "feed_url": "https://www.thehindu.com/data//feeder/default.rss",
+      "website_url": "https://www.thehindu.com/data/",
+      "description": "Interactive and static graphics, data stories, data analysis and correlation.",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/5598490.jpg?t=1686812004"
+    },
+    {
+      "title": "The Hindu \u00bb Books",
+      "feed_url": "https://www.thehindu.com/books/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/books/",
+      "description": "News and reviews of books, authors, interviews, book releases, fiction, non-fiction, Indian writers in English, regional language literature, children's books.",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/5598488.jpg?t=1686812042"
+    },
+    {
+      "title": "The Hindu \u00bb Brandhub",
+      "feed_url": "https://www.thehindu.com/brandhub/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/brandhub/",
+      "description": "This area of the website has a carefully chosen selection of branded material, including articles, campaigns, and insights from different sectors, giving marketers a platform to meaningfully connect with their audience.",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/5598482.jpg?t=1686811575"
+    },
+    {
+      "title": "The Hindu \u00bb Motoring",
+      "feed_url": "https://www.thehindu.com/life-and-style/motoring/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/life-and-style/motoring/",
+      "description": "Follow All The News And Updates About Cars And Bikes With Latest Vehicle Reviews, Car Reviews, Bike Reviews, Driving Tips & Much More",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/8535728.jpg"
+    },
+    {
+      "title": "The Hindu \u00bb History & Culture",
+      "feed_url": "https://www.thehindu.com/society/history-and-culture/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/society/history-and-culture/",
+      "description": "News and features on religion, history, monuments, temples, culture, personality, communities",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/8535727.jpg?t=1753081538"
+    },
+    {
+      "title": "The Hindu \u00bb Cities",
+      "feed_url": "https://www.thehindu.com/news/cities/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/news/cities/",
+      "description": "Explore the latest news and updates from various cities across India on The Hindu. Stay informed about local events, developments, and significant happenings in different cities, including Hyderabad, Chennai, Mumbai, Delhi, and more.",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/8535711.jpg"
+    },
+    {
+      "title": "The Hindu \u00bb Health",
+      "feed_url": "https://www.thehindu.com/sci-tech/health/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/sci-tech/health/",
+      "description": "News and information on medical treatment, diets, cancer, lifestyle diseases, communicable diseases, hospitals, organ donation, blood donation, AIDS, old age, mental health.",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000
+      },
+      "image_url": "https://i1.feedspot.com/5022730.jpg?t=1664445074"
+    },
+    {
+      "title": "The Hindu \u00bb Hockey",
+      "feed_url": "https://www.thehindu.com/sport/hockey/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/sport/hockey/",
+      "description": "Catch All The Latest Hockey News, Live Scores, News, Fixtures, Results, Statistics, Highlights & More From Major Tournaments At The Hindu",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/8535718.jpg"
+    },
+    {
+      "title": "The Hindu \u00bb Cricket",
+      "feed_url": "https://www.thehindu.com/sport/cricket/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/sport/cricket/",
+      "description": "Follow All The Latest News From The World Of Cricket, Live Scores, Schedules, Cricket News, Results & Much More At The Hindu.",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000
+      },
+      "image_url": "https://i1.feedspot.com/5022730.jpg?t=1664445074"
+    },
+    {
+      "title": "The Hindu \u00bb Football",
+      "feed_url": "https://www.thehindu.com/sport/football/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/sport/football/",
+      "description": "Get Football News, Updates, Fixtures, Commentary & Live Scores From Top Leagues Like The Premier League, La Liga, ISL & Bundesliga At The Hindu",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/8535723.jpg"
+    },
+    {
+      "title": "The Hindu \u00bb Agriculture",
+      "feed_url": "https://www.thehindu.com/sci-tech/agriculture/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/sci-tech/agriculture/",
+      "description": "News and updates on agricultural technology, irrigation, fertilizers, organic farming, harvesting, farm equipments",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/8535726.jpg"
+    },
+    {
+      "title": "The Hindu \u00bb Education",
+      "feed_url": "https://www.thehindu.com/education/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/education/",
+      "description": "Today's Education News: Get the latest news on higher education, board exams, results, admit cards, entrance exams, and admission news from The Hindu",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/8535720.jpg"
+    },
+    {
+      "title": "The Hindu \u00bb Agri-Business",
+      "feed_url": "https://www.thehindu.com/business/agri-business/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/business/agri-business/",
+      "description": "Business News Today: Catch the latest news updates on business, banking, finance, indian economy, global market and much more from The Hindu",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/8535713.jpg"
+    },
+    {
+      "title": "The Hindu \u00bb Industry",
+      "feed_url": "https://www.thehindu.com/business/Industry/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/business/Industry/",
+      "description": "Catch All The Latest News & Updates On National & International Industries, Service Industries & Manufacturing Industries At The Hindu",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/8535716.jpg"
+    },
+    {
+      "title": "The Hindu \u00bb Markets",
+      "feed_url": "https://www.thehindu.com/business/markets/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/business/markets/",
+      "description": "Stay up to date with all the latest news about Sensex, Nifty, BSE, NSE, indian Stock market, global stock market from The Hindu.",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000
+      },
+      "image_url": "https://i1.feedspot.com/8535719.jpg?t=1753182041"
+    },
+    {
+      "title": "The Hindu \u00bb Economy",
+      "feed_url": "https://www.thehindu.com/business/Economy/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/business/Economy/",
+      "description": "Get All The Latest About Indian Economy, World Economy, GDP News, Economic News, Economic Growth Rate And Much More At The Hindu.",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000
+      },
+      "image_url": "https://i1.feedspot.com/5022730.jpg?t=1664445074"
+    },
+    {
+      "title": "The Hindu \u00bb Real Estate",
+      "feed_url": "https://www.thehindu.com/real-estate/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/real-estate/",
+      "description": "All articles about Real Estate from The Hindu.",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/8535725.jpg"
+    },
+    {
+      "title": "The Hindu \u00bb Science",
+      "feed_url": "https://www.thehindu.com/sci-tech/science/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/sci-tech/science/",
+      "description": "Stay updated with the latest science news and discoveries. Explore articles covering scientific advancements, research breakthroughs, and more. Expand your knowledge with The Hindu Science",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000
+      },
+      "image_url": "https://i1.feedspot.com/8535715.jpg?t=1753679175"
+    },
+    {
+      "title": "The Hindu \u00bb Gadgets",
+      "feed_url": "https://www.thehindu.com/sci-tech/technology/gadgets/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/sci-tech/technology/gadgets/",
+      "description": "Gadgets News, Latest smartphones, tech-specs, reviews, prices, Android, Apple, cameras, software tips",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/8535721.jpg"
+    },
+    {
+      "title": "The Hindu \u00bb Fashion",
+      "feed_url": "https://www.thehindu.com/life-and-style/fashion/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/life-and-style/fashion/",
+      "description": "Stay Up To Date With News From The World Of Fashion Including Trending Brands, Latest Fashion Trends, Designer News, Styling Tips & Much More",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/8535717.jpg"
+    },
+    {
+      "title": "The Hindu \u00bb Fitness",
+      "feed_url": "https://www.thehindu.com/life-and-style/fitness/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/life-and-style/fitness/",
+      "description": "Get All The Latest Fitness News, Health Tips, Diet Plans, Articles, Exercise And Workout Tips, Bodybuilding Advice & Much More At The Hindu.",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000
+      },
+      "image_url": "https://i1.feedspot.com/5022730.jpg?t=1664445074"
+    },
+    {
+      "title": "The Hindu \u00bb Environment",
+      "feed_url": "https://www.thehindu.com/sci-tech/energy-and-environment/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/sci-tech/energy-and-environment/",
+      "description": "Latest environment news and updates on climate science, climate deals, solar energy, wind energy, el nino effect, INDC, UNFCCC, IPCC",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/8535712.jpg"
+    },
+    {
+      "title": "The Hindu \u00bb Music",
+      "feed_url": "https://www.thehindu.com/entertainment/music/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/entertainment/music/",
+      "description": "Get Updates From The World Of Music With News About Indian, Carnatic, Classical Music & Latest Music News. Visit The Hindu",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/8535724.jpg"
+    },
+    {
+      "title": "The Hindu \u00bb Art",
+      "feed_url": "https://www.thehindu.com/entertainment/art/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/entertainment/art/",
+      "description": "Visit The Hindu For Up To Date News From The World Of Art Like Reviews, Exhibitions, Art Galleries, Art Festivals, Modern Paintings & More",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/8535722.jpg"
+    },
+    {
+      "title": "The Hindu \u00bb Travel",
+      "feed_url": "https://www.thehindu.com/life-and-style/travel/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/life-and-style/travel/",
+      "description": "The Hindu Provides News And Reviews About Travel With Articles About Vacation & Holiday Destinations, Travel Tips, Ideas And Much More",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/8535714.jpg"
+    },
+    {
+      "title": "The Hindu \u00bb Luxury",
+      "feed_url": "https://www.thehindu.com/life-and-style/luxury/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/life-and-style/luxury/",
+      "description": "Read All The Latest News, Articles And Reviews About Luxury Fashion Brands, Luxury Dress, Shopping And Much More At The Hindu",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/8535710.jpg"
+    }
+  ]
+}

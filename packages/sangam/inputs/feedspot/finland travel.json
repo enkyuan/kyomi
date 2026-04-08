@@ -1,0 +1,86 @@
+{
+  "category": "Finland Travel",
+  "source_url": "https://rss.feedspot.com/finland_travel_rss_feeds",
+  "feeds": [
+    {
+      "title": "Lapland Welcome Blog",
+      "feed_url": "https://laplandwelcome.fi/anthonys-blog/feed/",
+      "website_url": "https://laplandwelcome.fi/anthonys-blog/",
+      "description": "Lapland Welcome is a program service company authorized by the Finnish Competition and Consumer Authority. Our safari office is situated in Rovaniemi city. Our most popular programs are snowmobile-, husky-, reindeer, and Northern Lights programs in the wintertime and midnight sun- and wildlife safari programs in the summertime.",
+      "followers": {
+        "facebook": 8900,
+        "twitter": 113,
+        "instagram": 11400
+      },
+      "image_url": "https://i1.feedspot.com/4826966.jpg?t=1610959364"
+    },
+    {
+      "title": "Helsinki.com Blog",
+      "feed_url": "https://www.helsinki.com/blog/feed/",
+      "website_url": "https://www.helsinki.com/blog/",
+      "description": "Helsinki Tourist Information and Travel Guide. Travel Reservation, Hotel Accommodation, Car hire, Attractions in Helsinki, Finland and more. News and analysis of Helsinki and Finland's current events.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 324
+      },
+      "image_url": "https://i1.feedspot.com/4825311.jpg?t=1610945901"
+    },
+    {
+      "title": "Engineer On Tour Blog",
+      "feed_url": "https://engineerontour.com/blog/feed/",
+      "website_url": "https://engineerontour.com/blog/",
+      "description": "Welcome aboard! My blog will bring you to the Nordic countries and the rest of the world. Being an ex-pat in Finland, I am exploring Scandinavia. This blog is about Travelling, life in Finland and a bit of Engineering.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 356
+      },
+      "image_url": "https://i1.feedspot.com/4824207.jpg?t=1610959359"
+    },
+    {
+      "title": "Ticket to Adventures \u00bb Finland",
+      "feed_url": "https://tickettoadventures.wordpress.com/category/finland/feed/",
+      "website_url": "https://tickettoadventures.wordpress.com/category/finland/",
+      "description": "Travel blog from around the world, near and far. Posts about Finland written by Piia.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 1400,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4833602.jpg?t=1610959393"
+    },
+    {
+      "title": "Visit Turku",
+      "feed_url": "https://www.visitturku.fi/en/section/109269/rss.xml",
+      "website_url": "https://en.visitturku.fi/",
+      "description": "Tourist and Convention Bureau Visit Turku offers versatile tourist services in the heart of Turku. Visit Turku maintains tourist information and portal, publishes leaflets and campaigns, rents cottages and bicycles, organizes excursions and sightseeing tours, carries ticket and hotel packages, sells souvenirs and other Turku products.",
+      "followers": {
+        "facebook": 66900,
+        "twitter": 7400
+      },
+      "image_url": "https://i1.feedspot.com/4826880.jpg?t=1621485809"
+    },
+    {
+      "title": "Gofinland Blog",
+      "feed_url": "https://www.gofinland.fi/blog/feed/",
+      "website_url": "https://www.nettimokki.com/tietopankki/",
+      "description": "Gofinland offers all of Finland's rental cottages and the most interesting holiday experiences under one roof. All about how to travel to Finland, how to get around, and what to see and what to do.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 550
+      },
+      "image_url": "https://i1.feedspot.com/4825212.jpg?t=1610959399"
+    },
+    {
+      "title": "VisitFinland.com",
+      "feed_url": "https://www.visitfinland.com/feed/",
+      "website_url": "https://www.visitfinland.com/en/articles/",
+      "description": "Become inspired to travel to Finland. Discover fantastic things to do, places to go and more. Visit the official Travel Guide of Finland here.",
+      "followers": {
+        "facebook": 517900,
+        "twitter": 77900,
+        "instagram": 461700
+      },
+      "image_url": "https://i1.feedspot.com/4636205.jpg?t=1610959403"
+    }
+  ]
+}

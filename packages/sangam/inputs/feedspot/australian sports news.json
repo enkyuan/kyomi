@@ -1,0 +1,327 @@
+{
+  "category": "Australian Sports News",
+  "source_url": "https://rss.feedspot.com/australian_sports_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Cricket.com.au",
+      "feed_url": "https://www.cricket.com.au/news/rss",
+      "website_url": "https://www.cricket.com.au/news",
+      "description": "Keep track of Cricket news from Australia and around the world. Coverage includes Test Matches, ODIs, T20s, ICC World Cup tournaments, and Australian domestic cricket. Cricket.com.au provides Live cricket coverage, live streaming, cricket highlights, live scores, breaking news, video, analysis, and expert opinions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4425450.jpg?t=1663591470"
+    },
+    {
+      "title": "Sport Inclusion Australia",
+      "feed_url": "https://sportinclusionaustralia.org.au/feed/",
+      "website_url": "https://sportinclusionaustralia.org.au/latest-news/",
+      "description": "Discover breaking news and reports from Sports Inclusion Australia. Stay updated with fresh inputs on upcoming Events, Athletes, and more. Sport Inclusion Australia is a national sporting organization that assists in the inclusion of people with an intellectual disability into the mainstream community using sport as the medium.",
+      "followers": {
+        "twitter": 423
+      },
+      "image_url": "https://i1.feedspot.com/5447508.jpg?t=1663591567"
+    },
+    {
+      "title": "Ministry Of Sport",
+      "feed_url": "https://ministryofsport.com/feed/",
+      "website_url": "https://ministryofsport.com/",
+      "description": "Ministry of Sport is a centralized sports business news website providing the latest essential news and views for all sporting decision makers, stakeholders, and aspirants. From the latest news, deals, and signings to game-changing innovation and technology, MOS will deliver directly to you.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 830,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5447505.jpg?t=1663589988"
+    },
+    {
+      "title": "The West Australian \u00bb Sport",
+      "feed_url": "https://thewest.com.au/sport/feed",
+      "website_url": "https://thewest.com.au/sport",
+      "description": "Dive into sports news, events, updates, team news, stats, analyses, results, commentary, and a lot more from The West Australian. The West Australian is a leading news source in Perth and Western Australia covering breaking local and world news from sports and business to lifestyle and current affairs.",
+      "followers": {
+        "facebook": 412700,
+        "twitter": 197500,
+        "instagram": 62100
+      },
+      "image_url": "https://i1.feedspot.com/5447504.jpg?t=1663589978"
+    },
+    {
+      "title": "The Sporting News",
+      "feed_url": "https://www.sportingnews.com/au/rss",
+      "website_url": "https://www.sportingnews.com/au",
+      "description": "Grab the latest news, videos, scores, and more on the biggest sports, including NRL, AFL, Cricket, NBA, and more with Sporting News Australia. The Sporting News is one of the oldest sports publications in the United States and a global digital media company covering a wide array of sports - basketball, pro football, college sports, boxing, and motor racing.",
+      "followers": {
+        "facebook": 523500,
+        "twitter": 14600,
+        "instagram": 34800
+      },
+      "image_url": "https://i1.feedspot.com/5447496.jpg?t=1663589893"
+    },
+    {
+      "title": "Yahoo Sport Australia",
+      "feed_url": "https://au.sports.yahoo.com/rss",
+      "website_url": "https://au.sports.yahoo.com/",
+      "description": "Read expert opinions, analyses, and commentary on sports news now. Watch the latest sports updates with Yahoo Sport. We cover everything from AFL, NRL, Cricket, Tennis, Football, Olympics, NBA basketball plus more. Yahoo Sports by Yahoo is a website offering comprehensive coverage of all sports from across the globes.",
+      "followers": {
+        "facebook": 645100,
+        "twitter": 746
+      },
+      "image_url": "https://i1.feedspot.com/5447501.jpg?t=1663589943"
+    },
+    {
+      "title": "Inside Sport",
+      "feed_url": "https://www.insidesport.com.au/rss",
+      "website_url": "https://www.insidesport.com.au/",
+      "description": "Inside Sport is a Sports news website covering AFL, Cricket, Cycling, Football, Golf, and other major sports. Inside Sports is a premier source for Australian sports news, intelligent journalism, and stunning photography. Get the inside story on the biggest names and issues in sports through high-quality long-form feature articles.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 4100,
+        "instagram": 707
+      },
+      "image_url": "https://i1.feedspot.com/5370072.jpg?t=1644384884"
+    },
+    {
+      "title": "Sports News Australia",
+      "feed_url": "https://www.sportsnews.com.au/feed",
+      "website_url": "https://www.sportsnews.com.au/",
+      "description": "Read up on by-the-minute sports updates and discussions. Sports News aims to provide readers with the latest Australian & International sports news including AFL, NRL, A-League, Cricket, Tennis, Motor Sport, Basketball, Golf, and many more.",
+      "followers": {
+        "facebook": 302,
+        "twitter": 246
+      },
+      "image_url": "https://i1.feedspot.com/4528635.jpg?t=1753338758"
+    },
+    {
+      "title": "Soccerscene",
+      "feed_url": "https://www.soccerscene.com.au/feed/",
+      "website_url": "https://www.soccerscene.com.au/",
+      "description": "The Soccerscene website covers Soccer, football, and sports industry news in Australia and Asia. This site showcases features, interviews, products, and Industry 4.0 technologies. Soccerscene is the online business platform for the football industry of Australia and Asia, serving as a practical guide to all those involved in running a football club at every level.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 2300,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5447557.jpg?t=1663590447"
+    },
+    {
+      "title": "Tennis Australia",
+      "feed_url": "https://www.tennis.com.au/feed",
+      "website_url": "https://www.tennis.com.au/news-and-events/news-and-features/all-news",
+      "description": "Catch the latest news and events on Australian players and tournaments along with features from Australian Tennis Magazine. We write about upcoming and trending news stories from the Tennies world. Tennis Australia facilitates player development, stages local and international events, and invests in tennis facilities around Australia.",
+      "followers": {
+        "facebook": 253000,
+        "twitter": 82700
+      },
+      "image_url": "https://i1.feedspot.com/5060797.jpg?t=1663592040"
+    },
+    {
+      "title": "Golf Australia Magazine",
+      "feed_url": "https://www.golfaustralia.com.au/rss",
+      "website_url": "https://www.golfaustralia.com.au/",
+      "description": "Golf Australia is Australia's most-read golf magazine and the premiere digital golf magazine with all the latest from the Tour, exclusive previews, new equipment reviews, video content, and the best images from the world of golf.",
+      "followers": {
+        "facebook": 21800,
+        "twitter": 4100,
+        "instagram": 11100
+      },
+      "image_url": "https://i1.feedspot.com/5373668.jpg?t=1645271435"
+    },
+    {
+      "title": "7NEWS Australia \u00bb Sport",
+      "feed_url": "https://7news.com.au/sport/feed",
+      "website_url": "https://7news.com.au/sport",
+      "description": "7News brings you the latest Sport news from Australia and around the world. Stay up to date with all of the breaking Sports headlines & results. Today's sporting news, live updates & all of the latest breaking news stories from 7Sport, AFL, Cricket, Olympics, NRL, Soccer & More.",
+      "followers": {
+        "facebook": 2900000,
+        "twitter": 305500,
+        "instagram": 606500
+      },
+      "image_url": "https://i1.feedspot.com/5447540.jpg?t=1663590314"
+    },
+    {
+      "title": "Commonwealth Games Australia",
+      "feed_url": "https://commonwealthgames.com.au/news/feed/",
+      "website_url": "https://commonwealthgames.com.au/news/",
+      "description": "The official website for all information on Australia's Commonwealth Games Campaign. Browse the latest athlete and sports news as our athletes prepare for the Birmingham 2022 Commonwealth Games. Commonwealth Games Australia (CGA) is a member-based organization, which exists to administer, control and coordinate the participation of program sports and their respective athletes and officials in the Commonwealth Games.",
+      "followers": {
+        "facebook": 49800,
+        "twitter": 18300,
+        "instagram": 48400
+      },
+      "image_url": "https://i1.feedspot.com/5447542.jpg?t=1663590327"
+    },
+    {
+      "title": "PerthNow \u00bb Sport",
+      "feed_url": "https://www.perthnow.com.au/sport/feed",
+      "website_url": "https://www.perthnow.com.au/sport",
+      "description": "The latest Sports news stories and updated articles from Perth Now. Find news surrounding AFL, Basketball, Cricket, NRL, Rugby, Football, and more. PerthNow delivers Western Australia's latest news and stories from categories including business, sport, entertainment, international and more.",
+      "followers": {
+        "facebook": 601700,
+        "twitter": 170200,
+        "instagram": 98000
+      },
+      "image_url": "https://i1.feedspot.com/5447544.jpg?t=1663590348"
+    },
+    {
+      "title": "Paralympics Australia",
+      "feed_url": "https://www.paralympic.org.au/feed/",
+      "website_url": "https://www.paralympic.org.au/news/",
+      "description": "Stay informed about current events with news articles from Paralympics Australia. Paralympics Australia helps with disabilities participate in sports and compete at the Paralympic Games through a wide variety of partnerships. We are responsible for preparing the Australian Paralympic Summer and Winter Teams for the Paralympic Games.",
+      "followers": {
+        "facebook": 108000,
+        "twitter": 36800,
+        "instagram": 50100
+      },
+      "image_url": "https://i1.feedspot.com/5447548.jpg?t=1663591956"
+    },
+    {
+      "title": "AthletesVoice",
+      "feed_url": "https://www.athletesvoice.com.au/feed/",
+      "website_url": "https://www.athletesvoice.com.au/",
+      "description": "Get Inspired by exceptional and motivating stories of athletes giving their best in sports. AthletesVoice is the future of rich and relatable sports storytelling. For sportspeople - for fans, our focus is on The Human Behind The Headline.",
+      "followers": {
+        "facebook": 77200,
+        "twitter": 6300,
+        "instagram": 17100
+      },
+      "image_url": "https://i1.feedspot.com/5447507.jpg?t=1663590006"
+    },
+    {
+      "title": "News.com.au \u00bb Sports",
+      "feed_url": "https://www.news.com.au/content-feeds/latest-news-sport/",
+      "website_url": "https://www.news.com.au/sport",
+      "description": "Read up on the latest sports news, including live coverage of NRL, AFL, Cricket, Football, Tennis, Motorsport, and the Olympic Games at news.com.au. We are one of Australia's top commercial news site, delivering extensive breaking news and national interest stories put together by our team of dedicated journalists.",
+      "followers": {
+        "facebook": 3400000,
+        "twitter": 711600,
+        "instagram": 320200
+      },
+      "image_url": "https://i1.feedspot.com/5447500.jpg?t=1663589937"
+    },
+    {
+      "title": "Basketball Australia News",
+      "feed_url": "https://www.australia.basketball/news",
+      "website_url": "https://www.australia.basketball/news",
+      "description": "Basketball Australia (BA) is the governing body for the sport of basketball in Australia and is responsible for Australian national teams, the Centre of Excellence, the WNBL, NWBL, Australian Junior Championships, and Aussie Hoops. Read the latest news and updates from BA in this space.",
+      "followers": {
+        "facebook": 133800,
+        "twitter": 53700,
+        "instagram": 111500
+      },
+      "image_url": "https://i1.feedspot.com/4478768.jpg?t=1603268590"
+    },
+    {
+      "title": "The Roar \u00bb Cricket",
+      "feed_url": "https://www.theroar.com.au/feed/",
+      "website_url": "https://www.theroar.com.au/cricket/",
+      "description": "Get expert & fan-submitted sports opinion and video, plus the latest news, scores, live coverage, and must-see sports video highlights. The Roar is Australia's leading sports opinion website, mixing expert commentary with reader-generated articles. We focus on sports opinion and engaging conversation amongst our passionate community of readers.",
+      "followers": {
+        "facebook": 142500,
+        "twitter": 23700,
+        "instagram": 16200
+      },
+      "image_url": "https://i1.feedspot.com/1420305.jpg?t=1603354605"
+    },
+    {
+      "title": "Herald Sun \u00bb Sport",
+      "feed_url": "https://www.heraldsun.com.au/sport/feed",
+      "website_url": "https://www.heraldsun.com.au/sport",
+      "description": "The Herald Sun brings you Breaking Sports News and reports from Melbourne and Victoria and the rest of the world. Dive into articles and reports on your favorite sport. The Herald Sun is Victoria's home for breaking news, footy, and hard-hitting opinion and is one of Australia's most-read newspapers.",
+      "followers": {
+        "facebook": 528400,
+        "twitter": 368900,
+        "instagram": 102700
+      },
+      "image_url": "https://i1.feedspot.com/5447503.jpg?t=1663589966"
+    },
+    {
+      "title": "Daily Telegraph \u00bb Sport",
+      "feed_url": "https://www.dailytelegraph.com.au/sport/feed",
+      "website_url": "https://www.dailytelegraph.com.au/sport",
+      "description": "Access breaking news and current updates from all major sports and sporting events in www.DailyTelegraph.com.au is one of Australia's fastest updating news platforms. Live streaming delivers the most up-to-the-minute global, national and local news to a highly-engaged digital audience.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 227500,
+        "instagram": 240900
+      },
+      "image_url": "https://i1.feedspot.com/5447506.jpg?t=1663590001"
+    },
+    {
+      "title": "NT News \u00bb Sport",
+      "feed_url": "https://www.ntnews.com.au/sport/feed",
+      "website_url": "https://www.ntnews.com.au/sport",
+      "description": "Get the latest breaking news in Sports events happening in the Northern Territory. The NT News represents the people of the Territory with fair, investigative, and quirky journalism. We encourage our readers to interact with us across different platforms so we can campaign to improve and celebrate the Territory's way of life.",
+      "followers": {
+        "facebook": 470000,
+        "twitter": 51300,
+        "instagram": 67300
+      },
+      "image_url": "https://i1.feedspot.com/5447502.jpg?t=1663589953"
+    },
+    {
+      "title": "Sky News Australia \u00bb Sport",
+      "feed_url": "https://www.skynews.com.au/australia-news/sport/feed",
+      "website_url": "https://www.skynews.com.au/australia-news/sport",
+      "description": "Presenting breaking Australian Sports News and Updates straight from the field. Explore by-the-minute coverage of all the popular sports, teams, and leagues. Sky News Australia's broadcast and digital news content features exclusive insights, ground-breaking special investigations, and live breaking news, sport, and weather.",
+      "followers": {
+        "facebook": 2000000,
+        "twitter": 788100
+      },
+      "image_url": "https://i1.feedspot.com/5447497.jpg?t=1663589906"
+    },
+    {
+      "title": "Fox Sports Australia",
+      "feed_url": "https://www.foxsports.com.au/feed",
+      "website_url": "https://www.foxsports.com.au/",
+      "description": "Read the latest sports news, and find live scores & fixtures for your favorite sports from around the world on FOX SPORTS. FOX SPORTS is Australia's leading producer of sports coverage and is home to Australia's favorite subscription television sports channels as well as Australia's premiere multi-sports website.",
+      "followers": {
+        "facebook": 1900000,
+        "twitter": 236500
+      },
+      "image_url": "https://i1.feedspot.com/5447499.jpg?t=1663589927"
+    },
+    {
+      "title": "KidsNews \u00bb Sport",
+      "feed_url": "https://www.kidsnews.com.au/sport/feed",
+      "website_url": "https://www.kidsnews.com.au/sport",
+      "description": "Informative sports news articles from Kids News Australia. Kids News is a free, news-based literacy resource for teachers using current daily news stories for students in the classroom. Here you will find special features, top stories, and educational material on Health, Science, and Animals. Indigenous People and many more Key topics..",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5447535.jpg?t=1663593776"
+    },
+    {
+      "title": "The Advertiser \u00bb Sport",
+      "feed_url": "https://www.adelaidenow.com.au/sport/feed",
+      "website_url": "https://www.adelaidenow.com.au/sport",
+      "description": "Breaking Sports News and Results from Adelaide and SA including AFL and NRL, Cricket, Soccer Rugby, Golf and Motorsports. Read more about Sports Results and Sports News at The Advertiser. The Advertiser is a daily newspaper and a 24/7 news publishing powerhouse with an audience that spans the globe.",
+      "followers": {
+        "facebook": 510700,
+        "twitter": 150400,
+        "instagram": 102500
+      },
+      "image_url": "https://i1.feedspot.com/5447534.jpg?t=1663590259"
+    },
+    {
+      "title": "1116 Sen \u00bb Sports",
+      "feed_url": "https://www.sen.com.au/feeds/45PJotndJlEZaf9qLV4yoe/rss.xml",
+      "website_url": "https://www.sen.com.au/news/sports-news",
+      "description": "Read the latest sports news, matches, teams, and player news from SEN 1116 - Melbourne's Home of Sport. SEN is a national sports radio network covering the news of AFL, NRL, Cricket, BBL, NFL, NBA, Racing, Football, and more.",
+      "followers": {
+        "facebook": 176300,
+        "twitter": 167700,
+        "instagram": 91800
+      },
+      "image_url": "https://i1.feedspot.com/5447537.jpg?t=1663590283"
+    },
+    {
+      "title": "The New Daily \u00bb Sport",
+      "feed_url": "https://www.thenewdaily.com.au/sport/feed",
+      "website_url": "https://www.thenewdaily.com.au/sport",
+      "description": "A regularly updated rundown of breaking sports news from Australia. Read brief but informative news articles on Athletics, Basketball, AFL, Cricket, Football, Golf, and other major sports in Australia. The New Daily is an online Newspaper published by Motion Publishing Pty Limited focusing on Local Australian issues.",
+      "followers": {
+        "facebook": 46300,
+        "twitter": 30300,
+        "instagram": 7200
+      },
+      "image_url": "https://i1.feedspot.com/5447538.jpg?t=1663590298"
+    }
+  ]
+}

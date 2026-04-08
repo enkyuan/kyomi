@@ -1,0 +1,109 @@
+{
+  "category": "Kentucky Food",
+  "source_url": "https://rss.feedspot.com/kentucky_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "JCP Eats",
+      "feed_url": "https://jcpeats.com/feed/",
+      "website_url": "https://jcpeats.com/",
+      "description": "JC is a consultant by day and a Louisville, Kentucky-based blogger by night. Here at JCP Eats, my southern food and lifestyle blog, you'll learn about top restaurants, delicious recipes, and the best way to live life below the Mason-Dixon.",
+      "followers": {
+        "facebook": 25500,
+        "twitter": 1200,
+        "instagram": 38200
+      },
+      "image_url": "https://i1.feedspot.com/4901985.jpg?t=1760521863"
+    },
+    {
+      "title": "LouisvilleHotBytes.com",
+      "feed_url": "https://www.louisvillehotbytes.com/feed",
+      "website_url": "https://www.louisvillehotbytes.com/",
+      "description": "LouisvilleHotBytes is the city's top spot for comprehensive, accurate, and unbiased reviews of Louisville restaurants, food and drink, and its most vibrant interactive community of food-and-dining enthusiasts, consumers, and food-industry professionals.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/572936.jpg?t=1612353103"
+    },
+    {
+      "title": "Be Creative Catering Blog",
+      "feed_url": "https://becreativecatering.com/feed/",
+      "website_url": "https://becreativecatering.com/northern-kentucky-catering-blog/",
+      "description": "A catering blog by Be Creative Catering. Be Creative Catering is a full service catering company specializing in; weddings, social events, graduation parties, and corporate functions.",
+      "followers": {
+        "facebook": 425
+      },
+      "image_url": "https://i1.feedspot.com/5315245.jpg?t=1629809400"
+    },
+    {
+      "title": "Kentucky Taste Buds",
+      "feed_url": "https://www.kytastebuds.com/tastebuds/feed/blog-feed.xml",
+      "website_url": "https://www.kytastebuds.com/tastebuds",
+      "description": "Kentucky Taste Buds is a lifestyle blog and collaborative effort between two best 'buds' who are committed to 'tasting' all that the beautiful Bluegrass State has to offer from its delectable food, Southern-inspired fashion, craft brews & world-class bourbon, and the many events offered year-round.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 9700,
+        "instagram": 8300
+      },
+      "image_url": "https://i1.feedspot.com/5315298.jpg?t=1629814113"
+    },
+    {
+      "title": "Lex Eats",
+      "feed_url": "https://lexeats.com/feed/",
+      "website_url": "https://lexeats.com/",
+      "description": "I'm Leela, a Kentuckian food-lover and blogger. Born and raised in the Bluegrass. I love to share food recipes, lifestyle, and local content through my blog.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 261,
+        "instagram": 14000
+      },
+      "image_url": "https://i1.feedspot.com/5315229.jpg?t=1631690016"
+    },
+    {
+      "title": "The Kentucky Gent",
+      "feed_url": "https://thekentuckygent.com/feed/",
+      "website_url": "https://thekentuckygent.com/",
+      "description": "Hey, my name is Josh Johnson. The Kentucky Gent started as a way for me to show that Southern boys have style too. Since the site's inception, it has expanded into a fully fledged men's life and style blog. Consider it the worldwide web's Gateway to the South where I share my passions for fashion, food, grooming, and travel.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 5600,
+        "instagram": 28900
+      },
+      "image_url": "https://i1.feedspot.com/5303620.jpg?t=1626701656"
+    },
+    {
+      "title": "Good Foods Co-op Blog",
+      "feed_url": "https://goodfoods.coop/category/blog/feed/",
+      "website_url": "https://goodfoods.coop/category/blog/",
+      "description": "Collection of our thoughts, stories, new products, and recipes. Good Foods Co-op is a locally owned and operated cooperative grocery and cafe where everyone is welcome to shop.",
+      "followers": {
+        "facebook": 21100,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5315295.jpg?t=1629813874"
+    },
+    {
+      "title": "Kentucky Fresh Harvest Blog",
+      "feed_url": "https://www.kyfreshharvest.com/blog?format=rss",
+      "website_url": "https://www.kyfreshharvest.com/blog",
+      "description": "The Future of Farming is more than a slogan - it's our vision for a healthier, more sustainable and equitable world. A world in which access to fresh, nutritious food is no longer a luxury afforded only to a lucky few, where we can feed a growing population without harming the environment, and one in which the communities who grow our food are treated with dignity and respect they deserve.",
+      "followers": {
+        "facebook": 941,
+        "twitter": 91,
+        "instagram": 470
+      },
+      "image_url": "https://i1.feedspot.com/5315184.jpg?t=1629805008"
+    },
+    {
+      "title": "Joe Pastry",
+      "feed_url": "https://joepastry.com/feed/",
+      "website_url": "http://joepastry.com/",
+      "description": "Joe's Blog is all about baking, science, and history. It is not, nor does it aspire to be, the last word on anything. The recipes it contains are uncreative by design as the emphasis of the blog is techniques. Frequently inauthentic (often proudly so) the recipes are offered as examples of classic preparations, simplified where possible in hopes of making them accessible to the aspiring pastry maker.",
+      "followers": {
+        "facebook": 644,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5315242.jpg?t=1629808336"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "category": "Cayman Compass",
+  "source_url": "https://rss.feedspot.com/caymancompass_rss_feeds",
+  "feeds": [
+    {
+      "title": "Cayman Compass",
+      "feed_url": "https://www.caymancompass.com/feed/",
+      "website_url": "https://www.caymancompass.com/",
+      "description": "The Cayman Islands' Most Trusted News Source",
+      "followers": {
+        "facebook": 53200,
+        "twitter": 10300,
+        "instagram": 26900
+      },
+      "image_url": "https://i1.feedspot.com/7883918.jpg?t=1741258822"
+    },
+    {
+      "title": "Cayman Compass \u00bb Local News",
+      "feed_url": "https://www.caymancompass.com/category/localnews/feed/",
+      "website_url": "https://www.caymancompass.com/category/localnews/",
+      "description": "All Local News articles from Cayman Compass.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7883918.jpg?t=1741258822"
+    },
+    {
+      "title": "Cayman Compass \u00bb Business",
+      "feed_url": "https://www.caymancompass.com/category/business/feed/",
+      "website_url": "https://www.caymancompass.com/business/",
+      "description": "The latest business news from the Cayman Islands. Headlines on financial and economic news, plus insight and analysis into the global markets.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7883918.jpg?t=1741258822"
+    },
+    {
+      "title": "Cayman Compass \u00bb Tourism",
+      "feed_url": "https://www.caymancompass.com/category/tourism/feed/",
+      "website_url": "https://www.caymancompass.com/category/tourism/",
+      "description": "All articles about Tourism from Cayman Compass.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7883918.jpg?t=1741258822"
+    },
+    {
+      "title": "Cayman Compass \u00bb Lifestyle",
+      "feed_url": "https://www.caymancompass.com/category/life/feed/",
+      "website_url": "https://www.caymancompass.com/living/",
+      "description": "All articles about Lifestyle from Cayman Compass.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7883918.jpg?t=1741258822"
+    },
+    {
+      "title": "Cayman Compass \u00bb Sports",
+      "feed_url": "https://www.caymancompass.com/category/sports/feed/",
+      "website_url": "https://www.caymancompass.com/sports/",
+      "description": "All articles about Sports from Cayman Compass.",
+      "followers": {
+        "facebook": 53200,
+        "twitter": 10300,
+        "instagram": 26900
+      },
+      "image_url": "https://i1.feedspot.com/7883918.jpg?t=1741258822"
+    },
+    {
+      "title": "Cayman Compass \u00bb Crime & Courts",
+      "feed_url": "https://www.caymancompass.com/category/crime-and-courts/feed/",
+      "website_url": "https://www.caymancompass.com/crime-and-courts/",
+      "description": "All articles about Crime & Courts from Cayman Compass.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7883918.jpg?t=1741258822"
+    },
+    {
+      "title": "Cayman Compass \u00bb Weather",
+      "feed_url": "https://www.caymancompass.com/category/weather/feed/",
+      "website_url": "https://www.caymancompass.com/weather/",
+      "description": "All articles about Weather from Cayman Compass.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7883918.jpg?t=1741258822"
+    },
+    {
+      "title": "Cayman Compass \u00bb District Days",
+      "feed_url": "https://www.caymancompass.com/category/localnews/districtdays/feed/",
+      "website_url": "https://www.caymancompass.com/category/localnews/districtdays/",
+      "description": "All articles about District Days from Cayman Compass.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7883918.jpg?t=1741258822"
+    }
+  ]
+}

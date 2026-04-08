@@ -1,0 +1,63 @@
+{
+  "category": "Vegan Yoga",
+  "source_url": "https://rss.feedspot.com/vegan_yoga_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mostly Am\u00e9lie",
+      "feed_url": "https://mostlyamelie.com/feed/",
+      "website_url": "https://mostlyamelie.com/travel/",
+      "description": "Hi, I'm Am\u00e9lie. This is a yoga blog, a wellness travel and veganism diary, an attempt at a conscious lifestyle, and some tips on life as an expat in Berlin.",
+      "followers": {
+        "facebook": 10200,
+        "twitter": 4600,
+        "instagram": 11000
+      },
+      "image_url": "https://i1.feedspot.com/5165635.jpg?t=1689328855"
+    },
+    {
+      "title": "Warm Hearts Yoga Blog",
+      "feed_url": "https://www.warmheartsyoga.co.uk/blog?format=rss",
+      "website_url": "https://www.warmheartsyoga.co.uk/blog",
+      "description": "Hi, I'm Sarah Brannen. I'm a yoga teacher and family yoga teacher based in St Andrews, Fife. I help people of all ages to practice yoga together so they can feel healthier and happier.",
+      "followers": {
+        "facebook": 1600,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5366111.jpg?t=1643432153"
+    },
+    {
+      "title": "MACROVegan Blog",
+      "feed_url": "https://macrovegan.org/blog/feed/",
+      "website_url": "https://macrovegan.org/blog/",
+      "description": "The MACROVegan Vision defines a clear and practical guide for the future of food ethical, environmental and social impact of what we eat. We can do this.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 2200,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5366114.jpg?t=1643432168"
+    },
+    {
+      "title": "Don't Waste Your Taste blog",
+      "feed_url": "https://dontwasteyourtaste.com/en/category/personal-blog/feed/",
+      "website_url": "https://dontwasteyourtaste.com/en/category/personal-blog/",
+      "description": "My Name is Rahel Lutz and I am a vegan Food Blogger from Basel in Switzerland. 'Don't Waste Your Taste' is my creative output where I get to share all the yummy recipes with you. My wish is to inspire as many people as possible with healthy plant based recipes which I create in my little kitchen that I share with my two flat mates.",
+      "followers": {
+        "facebook": 211,
+        "instagram": 415
+      },
+      "image_url": "https://i1.feedspot.com/5366110.jpg?t=1643432149"
+    },
+    {
+      "title": "Julia K Healthy Living",
+      "feed_url": "https://juliakhealthyliving.com/blog/",
+      "website_url": "https://juliakhealthyliving.com/blog/",
+      "description": "I'm Julia, I teach yoga classes online and around Bedford, along with one to one yoga sessions, retreats, workshops and on demand classes. I write about yoga and food which relates to and enhance your yoga.",
+      "followers": {
+        "facebook": 216,
+        "instagram": 16700
+      },
+      "image_url": "https://i1.feedspot.com/5366113.jpg?t=1643432163"
+    }
+  ]
+}

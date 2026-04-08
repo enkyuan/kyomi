@@ -1,0 +1,30 @@
+{
+  "category": "Quinoa",
+  "source_url": "https://rss.feedspot.com/quinoa_rss_feeds",
+  "feeds": [
+    {
+      "title": "Keen One Quinoa Blog",
+      "feed_url": "https://wildzora.com/blogs/news.atom",
+      "website_url": "https://wildzora.com/blogs/news",
+      "description": "Hi, I'm Christopher Algea founder of Keen One Quinoa. Our blog shares a range of exciting quinoa recipes and all of our recipes are full of protein & nutrition and are organic. Keen One Quinoa is a Colorado-based company specializing in organic quinoa products. We strive to promote creativity, sustainability, and healthy living through our unique offerings.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 634,
+        "instagram": 5900
+      },
+      "image_url": "https://i1.feedspot.com/5413771.jpg?t=1655969708"
+    },
+    {
+      "title": "Norquin Quinoa Blog",
+      "feed_url": "https://quinoa.com/feed/",
+      "website_url": "https://quinoa.com/blog/",
+      "description": "Norquin Quinoa blog shares articles related to the health benefits, different recipes, and specialty of Quinoa. Norquin Quinoa was founded in 1912 as a specialty grain and food processing company and is North America's Largest Quinoa Producer and Supplier!",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 404,
+        "instagram": 545
+      },
+      "image_url": "https://i1.feedspot.com/5413772.jpg?t=1655969713"
+    }
+  ]
+}

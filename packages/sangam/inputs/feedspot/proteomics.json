@@ -1,0 +1,132 @@
+{
+  "category": "Proteomics",
+  "source_url": "https://rss.feedspot.com/proteomics_rss_feeds",
+  "feeds": [
+    {
+      "title": "News in Proteomics Research",
+      "feed_url": "https://proteomicsnews.blogspot.com/feeds/posts/default",
+      "website_url": "https://proteomicsnews.blogspot.com/",
+      "description": "In this blog Ben gives information about proteomics and metabolomics.",
+      "followers": {
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/2665041.jpg"
+    },
+    {
+      "title": "G-Biosciences Blog",
+      "feed_url": "https://info.gbiosciences.com/blog/rss.xml",
+      "website_url": "https://info.gbiosciences.com/blog",
+      "description": "G-Biosciences is a world supplier of research tools and products and specializes in the development of innovative products for life science research. G-Biosciences gives information about proteomics products in this blog.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 216
+      },
+      "image_url": "https://i1.feedspot.com/4880309.jpg?t=1612423953"
+    },
+    {
+      "title": "BMC Clinical Proteomics",
+      "feed_url": "https://clinicalproteomicsjournal.biomedcentral.com/articles/most-recent/rss.xml",
+      "website_url": "https://clinicalproteomicsjournal.biomedcentral.com/",
+      "description": "Clinical Proteomics encompasses all aspects of translational proteomics. Special emphasis will be placed on the application of proteomic technology to all aspects of clinical research and molecular medicine.",
+      "followers": {
+        "facebook": 107100,
+        "twitter": 76200
+      },
+      "image_url": "https://i1.feedspot.com/4880377.jpg?t=1612423961"
+    },
+    {
+      "title": "MDPI \u00bb Proteomes",
+      "feed_url": "https://www.mdpi.com/rss/journal/proteomes",
+      "website_url": "https://www.mdpi.com/journal/proteomes",
+      "description": "Proteomes is an open access, peer reviewed journal on all aspects of proteome science. Proteomes covers the multi-disciplinary topics of structural and functional biology, protein chemistry, cell biology, methodology used for protein analysis, including mass spectrometry, protein arrays, bioinformatics, HTS assays, etc.",
+      "followers": {
+        "facebook": 80200,
+        "twitter": 45100
+      },
+      "image_url": "https://i1.feedspot.com/4880394.jpg?t=1612423965"
+    },
+    {
+      "title": "Journal of Proteomics & Bioinformatics",
+      "feed_url": "https://www.longdom.org/rss/proteomics-bioinformatics.xml",
+      "website_url": "https://www.longdom.org/proteomics-bioinformatics/current-issue.html",
+      "description": "OMICS International is an online publishing house, promoting scientific research via its open access journals and by organizing international conferences. Find information on Proteomics and Bioinformatics from this journal.",
+      "followers": {
+        "facebook": 98000
+      },
+      "image_url": "https://i1.feedspot.com/4695416.jpg?t=1612423969"
+    },
+    {
+      "title": "The Human Protein Atlas News",
+      "feed_url": "https://www.proteinatlas.org/news/rss",
+      "website_url": "https://www.proteinatlas.org/news",
+      "description": "The Human Protein Atlas portal is a publicly available database with millions of high-resolution images showing the spatial distribution of proteins.",
+      "followers": {
+        "facebook": 1300,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4880331.jpg?t=1612423976"
+    },
+    {
+      "title": "BMC Proteome Science",
+      "feed_url": "https://proteomesci.biomedcentral.com/articles/most-recent/rss.xml",
+      "website_url": "https://proteomesci.biomedcentral.com/articles",
+      "description": "Proteome Science is an open-access journal publishing research in the area of systems studies. It considers manuscripts based on all aspects of functional and structural proteomics, genomics, metabolomics, systems analysis, and metabiome analysis.",
+      "followers": {
+        "facebook": 107100,
+        "twitter": 76200
+      },
+      "image_url": "https://i1.feedspot.com/5346127.jpg?t=1637660653"
+    },
+    {
+      "title": "Oxford Protein Informatics Group Blog",
+      "feed_url": "https://www.blopig.com/blog/feed/",
+      "website_url": "https://www.blopig.com/blog/",
+      "description": "Oxford Protein Informatics Group is a research group in the Department of Statistics at the University of Oxford focusing on aspects of protein modelling, homology modelling, membrane proteins, sequence alignment, antibodies, and drug discovery. Find information on Protein Informatics from Prof. Charlotte M. Deane and her team.",
+      "followers": {
+        "twitter": 633500
+      },
+      "image_url": "https://i1.feedspot.com/4880886.jpg?t=1612424485"
+    },
+    {
+      "title": "Creative Proteomics Blog",
+      "feed_url": "https://www.creative-proteomics.com/blog/index.php/feed/",
+      "website_url": "https://www.creative-proteomics.com/blog/",
+      "description": "Creative Proteomics is a company dedicated to providing specialized analysis services in various fields of biological research. Their core areas of expertise include proteomics, metabolomics, glycomics, and bioinformatics. Here they share their knowledge and expertise of the bio-industry via informative blogs and analyses.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 645
+      },
+      "image_url": "https://i1.feedspot.com/5346126.jpg?t=1713239575"
+    },
+    {
+      "title": "Matrix Science Blog",
+      "feed_url": "https://www.matrixscience.com/feed",
+      "website_url": "https://www.matrixscience.com/blog.html",
+      "description": "Matrix Science blog on Mascot software, protein identification from mass spectrometry data, protein characterization, peptide mass fingerprint, ms/ms, ms-ms, LCMS, proteomics, and bioinformatics. Matrix Science is the home of Mascot software where you can learn about the tools developed by Matrix Science to get the best out of your data.",
+      "followers": {
+        "twitter": 246
+      },
+      "image_url": "https://i1.feedspot.com/5346128.jpg?t=1637661263"
+    },
+    {
+      "title": "Biognosys Blog",
+      "feed_url": "https://biognosys.com/feed/",
+      "website_url": "https://biognosys.com/blog/",
+      "description": "Biognosys is the leading proteomics company offering innovative services and products for highly multiplexed protein quantification. Biognosys gives information about the same in this blog.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4880819.jpg?t=1612424003"
+    },
+    {
+      "title": "NuSep Blog",
+      "feed_url": "https://nusep.com/feed/",
+      "website_url": "https://nusep.com/about-us/nusep-blog/",
+      "description": "We work hard to develop new products to help advance innovation and discovery in the life sciences industry. We make our products meaningful and strive to make a difference in the community. Our goal is to provide labs and researchers with the resources they need to help them efficiently achieve results and accelerate development in science and healthcare.",
+      "followers": {
+        "twitter": 7
+      },
+      "image_url": "https://i1.feedspot.com/4998340.jpg?t=1612423980"
+    }
+  ]
+}

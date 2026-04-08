@@ -1,0 +1,38 @@
+{
+  "category": "CDIC",
+  "source_url": "https://rss.feedspot.com/cdic_rss_feeds",
+  "feeds": [
+    {
+      "title": "CDIC \u00bb News",
+      "feed_url": "https://www.cdic.ca/cdic-news/feed/",
+      "website_url": "https://www.cdic.ca/cdic-news/",
+      "description": "All latest news articles about CDIC.",
+      "followers": {
+        "facebook": 8700,
+        "twitter": 11200,
+        "instagram": 981
+      },
+      "image_url": "https://i1.feedspot.com/7883369.jpg?t=1741177925"
+    },
+    {
+      "title": "CDIC \u00bb Articles",
+      "feed_url": "https://www.cdic.ca/articles/feed/",
+      "website_url": "https://www.cdic.ca/articles/",
+      "description": "All latest articles from CDIC.",
+      "followers": {
+        "facebook": 8700,
+        "twitter": 11200,
+        "instagram": 981
+      },
+      "image_url": "https://i1.feedspot.com/7883371.jpg?t=1741177923"
+    },
+    {
+      "title": "CDIC \u00bb Speeches",
+      "feed_url": "https://www.cdic.ca/speeches/feed/",
+      "website_url": "https://www.cdic.ca/speeches/",
+      "description": "All latest articles about Speeches from CDIC.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7883370.jpg?t=1741177918"
+    }
+  ]
+}

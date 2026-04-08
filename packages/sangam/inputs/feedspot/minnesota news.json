@@ -1,0 +1,303 @@
+{
+  "category": "Minnesota News",
+  "source_url": "https://rss.feedspot.com/minnesota_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Star Tribune",
+      "feed_url": "https://www.startribune.com/local/index.rss2",
+      "website_url": "https://www.startribune.com/",
+      "description": "Your source for Minnesota news today. Read articles, view photos or watch videos about news in Minneapolis, St. Paul, Duluth, St. Cloud, Rochester, and beyond.",
+      "followers": {
+        "facebook": 275700,
+        "twitter": 431600,
+        "instagram": 211600
+      },
+      "image_url": "https://i1.feedspot.com/10911.jpg?t=1611032551"
+    },
+    {
+      "title": "West Central Tribune",
+      "feed_url": "https://www.wctrib.com/index.rss",
+      "website_url": "https://www.wctrib.com/",
+      "description": "Find news, sports, entertainment, life, live-it, obituaries, opinion, local video and milestones for Willmar, Minnesota.",
+      "followers": {
+        "facebook": 18800,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4826526.jpg?t=1516254708"
+    },
+    {
+      "title": "Austin Daily Herald",
+      "feed_url": "https://www.austindailyherald.com/feed/",
+      "website_url": "https://www.austindailyherald.com/",
+      "description": "Austin Minnesota breaking news, weather, obituaries, classifieds, sports, and Austin Packers news.",
+      "followers": {
+        "facebook": 10400,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4826498.jpg?t=1585202486"
+    },
+    {
+      "title": "Duluth News Tribune",
+      "feed_url": "https://www.duluthnewstribune.com/news.rss",
+      "website_url": "https://www.duluthnewstribune.com/",
+      "description": "Find news, business, sports, features, milestones, obituaries, opinion, outdoors and community for Duluth, Minnesota.",
+      "followers": {
+        "facebook": 68800,
+        "twitter": 42300
+      },
+      "image_url": "https://i1.feedspot.com/4826610.jpg?t=1675157188"
+    },
+    {
+      "title": "Pioneer Press",
+      "feed_url": "https://www.twincities.com/feed/",
+      "website_url": "https://www.twincities.com/",
+      "description": "Twin Cities news, sports, politics, entertainment and business from the St. Paul Pioneer Press, Minnesota's first newspaper.",
+      "followers": {
+        "facebook": 115300,
+        "twitter": 183400
+      },
+      "image_url": "https://i1.feedspot.com/4826140.jpg?t=1611032542"
+    },
+    {
+      "title": "MinnPost",
+      "feed_url": "https://www.minnpost.com/feed/",
+      "website_url": "https://www.minnpost.com/",
+      "description": "MinnPost is an independent, nonprofit newsroom that produces thoughtful, in-depth journalism about civic and cultural affairs impacting Minnesota. As a community-focused enterprise, they publish this coverage and make it available to readers through their website and offer re-publications. Through their reporting, they take readers beyond the headlines and deep into the issues that matter through their public-service journalism, empowering them to engage in the politics and policy-making shaping Minnesota's future.",
+      "followers": {
+        "facebook": 30100,
+        "twitter": 98300,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4634511.jpg?t=1681300224"
+    },
+    {
+      "title": "St. Louis Post-Dispatch",
+      "feed_url": "https://www.stltoday.com/search/?f=rss&t=article&c=news&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.stltoday.com/",
+      "description": "Coverage of St. Louis, St. Charles, Metro East, Illinois and Missouri crime, weather, traffic, breaking news and investigative reports from the St. Louis Post-Dispatch & STLtoday.com",
+      "followers": {
+        "facebook": 294700,
+        "twitter": 307400,
+        "instagram": 93100
+      },
+      "image_url": "https://i1.feedspot.com/4826949.jpg?t=1516280463"
+    },
+    {
+      "title": "Brainerd Dispatch",
+      "feed_url": "https://www.brainerddispatch.com/index.rss",
+      "website_url": "https://www.brainerddispatch.com/",
+      "description": "Find news, business, sports, opinion, outdoors, lifestyles, entertainment, milestones, obituaries and more!",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/4826614.jpg?t=1694174512"
+    },
+    {
+      "title": "Aitkin Independent Age",
+      "feed_url": "https://www.messagemedia.co/search/?q=&t=article&l=100&d=&d1=&d2=&s=start_time&sd=desc&nsa=eedition&c[]=aitkin/news/government_meetings,aitkin/news/government_meetings/*&f=rss",
+      "website_url": "https://www.messagemedia.co/aitkin/",
+      "description": "Central Minnesota Lakes No. 1 News and Advertising Source.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 168
+      },
+      "image_url": "https://i1.feedspot.com/4826599.jpg?t=1516259077"
+    },
+    {
+      "title": "ABC Newspapers",
+      "feed_url": "https://www.hometownsource.com/search/?f=rss&t=article&c=abc_newspapers&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.hometownsource.com/abc_newspapers/",
+      "description": "ABC Newspapers features are all local to you and include news, sports, events, arts & entertainment, classifieds, coupons and more.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4826644.jpg?t=1626333678"
+    },
+    {
+      "title": "Mankato Free Press",
+      "feed_url": "https://www.mankatofreepress.com/search/?f=rss&t=article&c=news&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.mankatofreepress.com/",
+      "description": "This page is for communication with the fans and members of The Free Press Media. We will share stories, polls and general ideas and suggestions for and from our friends.",
+      "followers": {
+        "facebook": 31000,
+        "twitter": 10000,
+        "instagram": 65
+      },
+      "image_url": "https://i1.feedspot.com/4827258.jpg?t=1589267885"
+    },
+    {
+      "title": "Southern Minnesota News",
+      "feed_url": "https://www.southernminnesotanews.com/feed/",
+      "website_url": "https://www.southernminnesotanews.com/",
+      "description": "SouthernMinnesotaNews.com is your source for news & events in Greater Mankato & across the region.",
+      "followers": {
+        "facebook": 24900,
+        "twitter": 827
+      },
+      "image_url": "https://i1.feedspot.com/4826187.jpg?t=1516195103"
+    },
+    {
+      "title": "Red Lake Nation News",
+      "feed_url": "https://www.redlakenationnews.com/rss",
+      "website_url": "https://www.redlakenationnews.com/",
+      "description": "The mission of Red Lake Nation News (RLNN) is to objectively report, build, promote, and provide quality news, timely information and entertainment from a Native American perspective about American Indians on the Red Lake Indian Reservation and their friends everywhere in the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4826888.jpg?t=1516277429"
+    },
+    {
+      "title": "KVRR",
+      "feed_url": "https://www.kvrr.com/feed/",
+      "website_url": "https://www.kvrr.com/",
+      "description": "KVRR is your leading source of local news, weather, and sports for Fargo, North Dakota, Moorhead, Minnesota, and the Red River Valley. KVRR signed on in 1983 as an independent station KVNJ-TV. It was the first independent station in the Dakotas, as well as the first new full-fledged commercial station in the Fargo-Moorhead market in 29 years.",
+      "followers": {
+        "facebook": 42100,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4827309.jpg?t=1670562106"
+    },
+    {
+      "title": "Minnesota Lawyer",
+      "feed_url": "https://minnlawyer.com/feed/",
+      "website_url": "https://minnlawyer.com/",
+      "description": "Covering the latest legal issues facing lawyers, elected officials and all Minnesotans. An independent newspaper dedicated to providing court opinions, verdicts, settlements, appellate decisions, and legal news to enhance the practice of law.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4826165.jpg?t=1516194036"
+    },
+    {
+      "title": "St. Louis Call",
+      "feed_url": "https://callnewspapers.com/feed/",
+      "website_url": "https://callnewspapers.com/",
+      "description": "Call Newspapers Is Your #1 Source for News in South County: The Concord Call, Green Park Call, Mail Call, Oakville Call and SunCrest Call. Our mission is to dedicate ourselves to the public, holding its welfare in the highest regard and standing firmly in opposition to any who would oppose it. Get the latest news and updates of St Louis city at Call Newspapers.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 941,
+        "instagram": 414
+      },
+      "image_url": "https://i1.feedspot.com/4826961.jpg?t=1689662227"
+    },
+    {
+      "title": "Pipestone County Star",
+      "feed_url": "https://www.pipestonestar.com/feed/",
+      "website_url": "https://www.pipestonestar.com/",
+      "description": "Local and regional news & marketing provider for Pipestone, Minnesota. The community source for news, events, sports, classifieds, advertising, and more.",
+      "followers": {
+        "facebook": 8500,
+        "twitter": 636
+      },
+      "image_url": "https://i1.feedspot.com/4826869.jpg?t=1516276026"
+    },
+    {
+      "title": "Minnesota News Network",
+      "feed_url": "https://minnesotanewsnetwork.com/feed/",
+      "website_url": "https://minnesotanewsnetwork.com/",
+      "description": "The Minnesota News Network is your source for information across the state.",
+      "followers": {
+        "facebook": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4826191.jpg?t=1516195452"
+    },
+    {
+      "title": "North Wright County Today",
+      "feed_url": "http://northwrightcounty.today/feed/",
+      "website_url": "https://northwrightcounty.today/",
+      "description": "Find Local news, sports, and community events for St. Michael, Albertville, Otsego, and Hanover, Minnesota.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 776
+      },
+      "image_url": "https://i1.feedspot.com/4827230.jpg?t=1516337355"
+    },
+    {
+      "title": "GMD Media Inc.",
+      "feed_url": "https://www.gmdmedia.net/rss.xml",
+      "website_url": "http://www.gmdmedia.net/",
+      "description": "The Tri-County News/Augusta Area Times are weekly WI publications. We cover local news, including the surrounding areas of Augusta, Eleva, Strum and Fall Creek.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4827220.jpg?t=1516336419"
+    },
+    {
+      "title": "McLeod County Chronicle",
+      "feed_url": "https://www.glencoenews.com/taxonomy/term/2/*/feed/",
+      "website_url": "https://www.glencoenews.com/category/section/news/",
+      "description": "The McLeod County Chronicle is a weekly newspaper with the main emphasis in the GSL school district which includes the communities of Glencoe, Plato, Brownton, Silver Lake, New Auburn, Biscay, and some areas of Lester Prairie.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 252
+      },
+      "image_url": "https://i1.feedspot.com/4826835.jpg?t=1516346725"
+    },
+    {
+      "title": "WCCO & CBS News Minnesota",
+      "feed_url": "https://www.cbsnews.com/minnesota/",
+      "website_url": "https://www.cbsnews.com/minnesota/",
+      "description": "News, Sports, Weather, Traffic, and the Best of Minnesota, and the Twin Cities of Minneapolis-St. Paul.",
+      "followers": {
+        "facebook": 484700,
+        "twitter": 269700,
+        "instagram": 87900
+      },
+      "image_url": "https://i1.feedspot.com/3092.jpg?t=1603896089"
+    },
+    {
+      "title": "Daily Norseman",
+      "feed_url": "https://www.dailynorseman.com/rss/index.xml",
+      "website_url": "https://www.dailynorseman.com/",
+      "description": "Your best source for quality Minnesota Vikings news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 32700,
+        "twitter": 32900
+      },
+      "image_url": "https://i1.feedspot.com/4756141.jpg?t=1607075626"
+    },
+    {
+      "title": "Alpha News",
+      "feed_url": "https://alphanews.org/feed/",
+      "website_url": "https://alphanews.org/",
+      "description": "Alpha News is a Minnesota media outlet focusing on politics and social issues you may not see in traditional media.",
+      "followers": {
+        "facebook": 262000,
+        "twitter": 50100
+      },
+      "image_url": "https://i1.feedspot.com/4826567.jpg?t=1516256422"
+    },
+    {
+      "title": "St. Cloud Times",
+      "feed_url": "http://rssfeeds.sctimes.com/stcloud/news",
+      "website_url": "https://www.sctimes.com/",
+      "description": "St. Cloud Times founded in 1861. Today, we are Central Minnesota's largest news organization for online, mobile print and tablet platforms. We are the winner of Minnesota Newspaper Association Vance Trophy for Outstanding Daily Newspaper:1985-89;'90-'94; '97-'99; 2002-03, ;05-08,'10-'13, 2016. Get the latest breaking news and continuing news updates from Central Minnesota.",
+      "followers": {
+        "facebook": 41700,
+        "twitter": 15800
+      },
+      "image_url": "https://i1.feedspot.com/4826504.jpg?t=1587386375"
+    },
+    {
+      "title": "KSTP",
+      "feed_url": "https://kstp.com/",
+      "website_url": "https://kstp.com/",
+      "description": "Find News, Weather and Sports Reports of Minneapolis and St. Paul cities from KSTP TV.",
+      "followers": {
+        "facebook": 360500,
+        "twitter": 204800,
+        "instagram": 47900
+      },
+      "image_url": "https://i1.feedspot.com/1146280.jpg?t=1670238610"
+    },
+    {
+      "title": "The Clay County News",
+      "feed_url": "https://www.theclaycountynews.com/taxonomy/term/2/feed",
+      "website_url": "https://www.theclaycountynews.com/",
+      "description": "The Clay County News is a weekly newspaper that covers schools and communities in Clay County Nebraska.",
+      "followers": {
+        "facebook": 626,
+        "twitter": 645
+      },
+      "image_url": "https://i1.feedspot.com/4826697.jpg?t=1516267432"
+    }
+  ]
+}

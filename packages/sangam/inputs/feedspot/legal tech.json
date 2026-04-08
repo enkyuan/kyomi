@@ -1,0 +1,770 @@
+{
+  "category": "Legal Tech",
+  "source_url": "https://rss.feedspot.com/legal_tech_rss_feeds",
+  "feeds": [
+    {
+      "title": "Technology & Marketing Law Blog",
+      "feed_url": "https://blog.ericgoldman.org/feed",
+      "website_url": "https://blog.ericgoldman.org/",
+      "description": "Eric Goldman is a Professor of Law at Santa Clara University School of Law. Eric teaches and publishes in the areas of Internet Law, Intellectual Property and Advertising & Marketing Law. He blogs on these topics at the Technology & Marketing Law Blog, which has been inducted into the ABA Journal's 'Blawg Hall of Fame.'",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4872477.jpg?t=1646378406"
+    },
+    {
+      "title": "Legal IT Professionals",
+      "feed_url": "https://www.legalitprofessionals.com/?format=feed&type=rss",
+      "website_url": "https://www.legalitprofessionals.com/",
+      "description": "Legal IT Professionals is the leading global source of independent legal technology news, information, and expert commentary. We serve the international legal technology community: law firm IT staff, legal software & services vendors, consultants, paralegals, knowledge management experts, and lawyers interested in the technology that facilitates their work.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 17900
+      },
+      "image_url": "https://i1.feedspot.com/4901551.jpg?t=1654518689"
+    },
+    {
+      "title": "Vogel IT Law Blog",
+      "feed_url": "https://www.vogelitlawblog.com/feed/",
+      "website_url": "https://www.vogelitlawblog.com/",
+      "description": "Peter is renowned as both a trial and transactional lawyer who deeply understands technology, science and intellectual property, and the opportunities and problems they pose for clients. In this blog he advises on cyber-security and identity protection, international privacy laws and global technology disputes.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 761
+      },
+      "image_url": "https://i1.feedspot.com/4832844.jpg?t=1612857330"
+    },
+    {
+      "title": "Reed Smith | Technology Law Dispatch",
+      "feed_url": "https://www.technologylawdispatch.com/feed/",
+      "website_url": "https://www.technologylawdispatch.com/category/tech-outsourcing/",
+      "description": "Technology Law Dispatch is authored by Reed Smith's IP, Information & Innovation and offers updates on technology law.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 18900
+      },
+      "image_url": "https://i1.feedspot.com/4901307.jpg?t=1612857339"
+    },
+    {
+      "title": "Legal Tech Blog",
+      "feed_url": "https://legal-tech.blog/feed",
+      "website_url": "https://legal-tech.blog/",
+      "description": "The Legal Tech Blog is for startups, investors, lawyers and law firms who want to know everything about Legal Tech and Legal Startups. The Legal Tech Blog has been founded by Micha-Manuel Bues in 2015 and has grown to a major platform for legal tech and innovation with international reach since then. Our blog strives to help to navigate our readers through the fundamental changes in the legal industry and to inspire them to pursue their own projects.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5377520.jpg?t=1646399229"
+    },
+    {
+      "title": "The Time Blawg",
+      "feed_url": "https://thetimeblawg.com/feed/",
+      "website_url": "https://thetimeblawg.com/",
+      "description": "Brian Inkster is a Lawyer with an active interest in entrepreneurship, marketing and technology in relation to running a law firm. Through The Time Blawg Brian expresses his views on the past, present and future practice of law.",
+      "followers": {
+        "twitter": 5900
+      },
+      "image_url": "https://i1.feedspot.com/4988589.jpg?t=1612858212"
+    },
+    {
+      "title": "BTLJ Blog",
+      "feed_url": "https://btlj.org/category/btljblog/feed/",
+      "website_url": "https://btlj.org/category/btljblog/",
+      "description": "The Berkeley Technology Law Journal is a student-run publication of the Boalt Hall School of Law, University of California at Berkeley. It covers emerging issues of law in the areas of intellectual property, high-tech and biotech.",
+      "followers": {
+        "facebook": 637,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4901352.jpg?t=1612858251"
+    },
+    {
+      "title": "Debevoise Data Blog",
+      "feed_url": "https://www.debevoisedatablog.com/feed/",
+      "website_url": "https://www.debevoisedatablog.com/",
+      "description": "Articles to help clients identify and respond to emerging issues in areas including cybersecurity, data governance, machine learning, AI applications and M&A diligence. Debevoise & Plimpton LLP is a premier law firm with market-leading practices, a global perspective and strong New York roots.",
+      "followers": {
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5356205.jpg?t=1640155889"
+    },
+    {
+      "title": "Relativity Blog \u00bb Education & Certification",
+      "feed_url": "https://feeds.feedburner.com/relativity/blog",
+      "website_url": "https://www.relativity.com/blog-sections/education-certification/",
+      "description": "Your single source for new lessons on legal technology, e-discovery, compliance, and the people innovating behind the scenes. Relativity makes software to help users organize data, discover the truth and act on it. Its SaaS platform RelativityOne manages large volumes of data and quickly identifies key issues during litigation and internal investigations.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 6500,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5377524.jpg?t=1688121708"
+    },
+    {
+      "title": "BizTech Law Blog",
+      "feed_url": "https://www.michiganitlaw.com/rss",
+      "website_url": "https://www.michiganitlaw.com/",
+      "description": "Blog features Articles on Cybersecurity, Employee Benefits, Tax Disputes, Intellectual Property, and more. Foster Swift Collins & Smith, P.C. serves as legal counsel to corporations, local governments, community organizations, families, and individuals across the state of Michigan.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 647
+      },
+      "image_url": "https://i1.feedspot.com/4901094.jpg?t=1612858321"
+    },
+    {
+      "title": "Hanzo",
+      "feed_url": "https://hanzo.co/feed/",
+      "website_url": "https://hanzo.co/blog/",
+      "description": "Keep up with blog articles from our resident experts on website archiving for regulatory compliance, dynamic content ediscovery, and web and social media investigations",
+      "followers": {
+        "twitter": 558
+      },
+      "image_url": "https://i1.feedspot.com/5031678.jpg?t=1612857364"
+    },
+    {
+      "title": "TechLaw Crossroads",
+      "feed_url": "https://www.techlawcrossroads.com/feed/",
+      "website_url": "https://www.techlawcrossroads.com/",
+      "description": "A national litigator offers commentary on the clash of cultures between tech and innovation and the traditional, precedent grounded legal profession. TechLaw Crossroads is a no-bullshit blog written mainly by me, a lawyer who practiced as a partner with a large law firm for the better part of 30 years. I was a trial lawyer, mostly in mass tort and, later, in data breach, privacy, and cyber insurance areas.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5377511.jpg?t=1646395087"
+    },
+    {
+      "title": "Technology's Legal Edge",
+      "feed_url": "https://www.technologyslegaledge.com/feed/",
+      "website_url": "https://www.technologyslegaledge.com/",
+      "description": "Technology's Legal Edge is written by attorneys Jennifer Kashatus and Anne Friedman on global technology, sourcing and privacy issues.",
+      "followers": {
+        "facebook": 16900,
+        "twitter": 42000
+      },
+      "image_url": "https://i1.feedspot.com/4901403.jpg?t=1612858224"
+    },
+    {
+      "title": "Washington Journal of Law, Technology & Arts",
+      "feed_url": "https://wjlta.com/feed/",
+      "website_url": "https://wjlta.com/",
+      "description": "This blog analyzes key emerging legal issues in IP, technology, commerce, and the arts. Also this blog showcases research being developed by authors at the Journal. The Journal's core mission is to publish clear and concise analysis. This blog helps the Journal to continue to carry out this mission by quickly transmitting current legal information to busy attorneys and industry leaders.",
+      "followers": {
+        "facebook": 459,
+        "twitter": 216
+      },
+      "image_url": "https://i1.feedspot.com/4901301.jpg?t=1680497949"
+    },
+    {
+      "title": "Tech4Law",
+      "feed_url": "https://www.tech4law.co.za/feed/",
+      "website_url": "https://www.tech4law.co.za/",
+      "description": "Tech4Law is an independent and unbiased technology journal focused on helping lawyers to save money on all types of technology. Our quest is to help attorneys in South Africa use technology better, whether it be social media, technology advancements in the field, billings ideas or just generally helping them make more money in their practice.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5015948.jpg?t=1621510255"
+    },
+    {
+      "title": "MatterSuite Blog",
+      "feed_url": "https://www.mattersuite.com/blog/feed/",
+      "website_url": "https://www.mattersuite.com/blog/",
+      "description": "MatterSuite Blog is about the legal industry, legal technology, legal AI and law marketing. Here legal professionals can get the latest news and updates about the legal industry.",
+      "followers": {
+        "facebook": 128,
+        "twitter": 880,
+        "instagram": 819
+      },
+      "image_url": "https://i1.feedspot.com/5494948.jpg?t=1673953262"
+    },
+    {
+      "title": "SimpleLegal Blog",
+      "feed_url": "https://www.simplelegal.com/feed",
+      "website_url": "https://www.simplelegal.com/blog",
+      "description": "SimpleLegal provides legal operations software that transforms the way legal teams run their department and manage their operations, finances, matters, vendors, and more. Follow to get insights and best practices from the world of legal operations and legal technology from the SimpleLegal team and other industry leaders.",
+      "followers": {
+        "facebook": 258,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5271171.jpg?t=1618905325"
+    },
+    {
+      "title": "New Media and Technology Law Blog",
+      "feed_url": "https://newmedialaw.proskauer.com/feed/",
+      "website_url": "https://newmedialaw.proskauer.com/",
+      "description": "The New Media & Technology Law Blog offers insight on Trademark & Patent law.",
+      "followers": {
+        "twitter": 79
+      },
+      "image_url": "https://i1.feedspot.com/4901098.jpg?t=1612857397"
+    },
+    {
+      "title": "Internet & Social Media Law Blog",
+      "feed_url": "https://www.internetandtechnologylaw.com/feed/",
+      "website_url": "https://www.internetandtechnologylaw.com/",
+      "description": "Internet & Social Media Law Blog addresses business and legal issues that affect the social media and game industries. Contributors are members of a legal team ranked top three in the country for video game law by Interactive Age. Published by Pillsbury Winthrop Shaw Pittman LLP",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4536694.jpg?t=1646399795"
+    },
+    {
+      "title": "Real Lawyers Have Blogs",
+      "feed_url": "https://kevin.lexblog.com/feed/",
+      "website_url": "https://kevin.lexblog.com/",
+      "description": "LexBlog helps lawyers build a name for themselves with the most comprehensive blog publishing software in the legal industry. The world's largest & most comprehensive legal news and information network by drawing on bloggers worldwide. I am a trial lawyer, turned legal tech entrepreneur, now leading the largest community of legal publishers in the world at LexBlog, Inc.",
+      "followers": {
+        "twitter": 24500
+      },
+      "image_url": "https://i1.feedspot.com/4842476.jpg?t=1646400384"
+    },
+    {
+      "title": "Goodmans LLP Blog",
+      "feed_url": "https://www.goodmanstech.ca/blog-feed.xml",
+      "website_url": "https://www.goodmanstech.ca/blog",
+      "description": "Goodmans understands the technology industry. Our lawyers know its special needs; its high-energy and fast tempo; its underlying technologies; its risks and unlimited opportunities. We share everything we know on our blog. To assist clients in the technology sector, Goodmans brings together our acknowledged expertise in corporate/commercial, private equity, corporate finance, mergers and acquisitions, outsourcing and many other sectors.",
+      "followers": {
+        "twitter": 20
+      },
+      "image_url": "https://i1.feedspot.com/5377522.jpg?t=1646395149"
+    },
+    {
+      "title": "Legodesk Blog",
+      "feed_url": "https://legodesk.com/feed/",
+      "website_url": "https://legodesk.com/category/blog/",
+      "description": "Covers the latest legal technology news and developments, law firm, legal documents management and insights. Legodesk is a cloud-based legal case management software designed to help lawyers manage their legal practice, save time and maintain client relationship. Our mission is to make the lives of lawyers easier and help lawyers to serve their clients more efficiently with our legal management software",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 119,
+        "instagram": 230
+      },
+      "image_url": "https://i1.feedspot.com/5353474.jpg?t=1639552772"
+    },
+    {
+      "title": "Triage Health Law \u00bb Technology",
+      "feed_url": "https://www.triagehealthlawblog.com/technology/feed/",
+      "website_url": "https://www.triagehealthlawblog.com/technology/",
+      "description": "Find technological aspects of legal activities in health sector, news, digital health and more! Triage is written by the Squire Patton Boggs Health Care team and provides insights on Healthcare reform updates and law.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 11600,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5377516.jpg?t=1646395118"
+    },
+    {
+      "title": "Richmond Journal of Law and Technology",
+      "feed_url": "https://jolt.richmond.edu/feed/",
+      "website_url": "https://jolt.richmond.edu/",
+      "description": "The Journal focuses on the impact that computer-related and other emerging technologies have on the law.",
+      "followers": {
+        "facebook": 379,
+        "twitter": 336
+      },
+      "image_url": "https://i1.feedspot.com/4901432.jpg?t=1612857349"
+    },
+    {
+      "title": "Walsh Pizzi O'Reilly Falanga LLP Blog \u00bb Technology Law",
+      "feed_url": "https://walsh.law/feed/",
+      "website_url": "https://walsh.law/blog/technology-law/",
+      "description": "Find out more about What Matters Most In Cyber-Security & Technology Law. Walsh lawyers strive to provide what matters most to clients with a team of seasoned attorneys bringing together over 150 years of combined experience in a law firm poised to deliver high-quality, sophisticated legal services, with the personal attention and responsiveness more common to smaller organizations.",
+      "followers": {
+        "twitter": 120
+      },
+      "image_url": "https://i1.feedspot.com/5377518.jpg?t=1646395128"
+    },
+    {
+      "title": "National Society for Legal Technology Blog",
+      "feed_url": "https://legaltechsociety.wildapricot.org/Blog/RSS",
+      "website_url": "https://legaltechsociety.wildapricot.org/Blog",
+      "description": "National Society for Legal Technology is dedicated to helping students and legal professionals learn about and explore legal technology software programs. Doug is the founder and CEO of National Society for Legal Technology (NSLT). Doug first launched the NSLT as a student club in 2015 at the start of his 2L year of law school.",
+      "followers": {
+        "facebook": 711,
+        "twitter": 310
+      },
+      "image_url": "https://i1.feedspot.com/5377519.jpg?t=1646395130"
+    },
+    {
+      "title": "Legal Tech Daily",
+      "feed_url": "https://www.legaltechdaily.com/feed/",
+      "website_url": "https://www.legaltechdaily.com/",
+      "description": "Providing coverage on the intersection of law and technology in its many forms. Legal Technology covers a broad range of specialties. Legal Tech Daily is an open service that aggregates and syndicates information about Legal Tech in whatever shape it might take so that it can be more easily found and shared.",
+      "followers": {
+        "twitter": 994
+      },
+      "image_url": "https://i1.feedspot.com/5377530.jpg?t=1646395183"
+    },
+    {
+      "title": "Law \u00bb New Jersey Law Journal",
+      "feed_url": "https://feeds.feedblitz.com/law/legal-news/",
+      "website_url": "https://www.law.com/njlawjournal/",
+      "description": "New Jersey Law Journal delivers news, insights, and resources that allow legal professionals to anticipate opportunities, adapt to change, and prepare for future success. It delivers resources that allow legal professionals to anticipate opportunities, adapt to change, and prepare for future success.",
+      "followers": {
+        "facebook": 13300,
+        "twitter": 59600
+      },
+      "image_url": "https://i1.feedspot.com/5271167.jpg?t=1658314947"
+    },
+    {
+      "title": "Nordic Legal Tech Day News",
+      "feed_url": "https://nordiclegaltechday.com/feed/",
+      "website_url": "https://nordiclegaltechday.com/news/",
+      "description": "Catch up on the latest news from Nordic Legal Tech Day 2020/2021 and the world of #legaltech. Nordic Legal Tech Day is a day full of interactions and knowledge sharing about the world of legal tech tools and the future role of legal departments and lawyers. This is a full-day event where you get to network with thought leaders, entrepreneurs and legal techies that are ready to transform the legal industry and the work life of lawyers.",
+      "followers": {
+        "facebook": 98,
+        "twitter": 105,
+        "instagram": 356
+      },
+      "image_url": "https://i1.feedspot.com/5377532.jpg?t=1646398222"
+    },
+    {
+      "title": "Legal Marketing & Technology Blog",
+      "feed_url": "https://onward.justia.com/feed/",
+      "website_url": "https://onward.justia.com/",
+      "description": "Justia is an online platform that provides the community with open access to the law, legal information and lawyers. Justia delivers premium marketing solutions to lawyers seeking to expand their online marketing reach.",
+      "followers": {
+        "facebook": 132100,
+        "twitter": 29800
+      },
+      "image_url": "https://i1.feedspot.com/4872360.jpg?t=1612346044"
+    },
+    {
+      "title": "Ethical AI Law Institute Blog",
+      "feed_url": "https://ethicalailawinstitute.org/feed/",
+      "website_url": "https://ethicalailawinstitute.org/blog/",
+      "description": "The Ethical AI Law Institute's blog has grown from a support tool to keep students up-to-date on new developments in AI, to a premier platform for AI news and analysis. We work to educate attorneys and legal professionals on topics of artificial intelligence in the legal profession, we endeavor to prepare lawyers for the artificial intelligence revolution.",
+      "followers": {
+        "facebook": 8,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5760070.jpg?t=1706004783"
+    },
+    {
+      "title": "Artificial Lawyer",
+      "feed_url": "https://www.artificiallawyer.com/feed/",
+      "website_url": "https://www.artificiallawyer.com/",
+      "description": "Artificial Lawyer is all about changing the business of law, often through the use of technology, but also through the better deployment of people inside organizations and within new business structures, as well as innovation around process improvement. At the heart of this is a focus on the economic aspects of the law and the related areas of efficiency in the production of legal work, and the increased insight into the data that is produced by all legal activity and how that insight, in turn, adds new value to legal work and helps drive efficiency.",
+      "followers": {
+        "twitter": 13000
+      },
+      "image_url": "https://i1.feedspot.com/4611544.jpg?t=1658922244"
+    },
+    {
+      "title": "Inside Tech Law Blog",
+      "feed_url": "https://www.insidetechlaw.com/blog/rss",
+      "website_url": "https://www.insidetechlaw.com/blog",
+      "description": "Inside Tech Law is our global technology resource and blog. Norton Rose Fulbright is a global law firm. We provide the world's preeminent corporations and financial institutions with a full business law service.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 19000,
+        "instagram": 7400
+      },
+      "image_url": "https://i1.feedspot.com/5226047.jpg?t=1646398540"
+    },
+    {
+      "title": "Xakia Tech Blog",
+      "feed_url": "https://www.xakiatech.com/blog/rss.xml",
+      "website_url": "https://www.xakiatech.com/blog",
+      "description": "Xakia's blog covers insightful articles and best practice tips and tricks on legal matter management, legal operations, and LegalTech. Xakia Technologies is a global legal matter management platform for connected and impactful in-house teams of any size and any industry, located anywhere, bringing together all your technology tools in a single interface. It is painless, yet powerful and removes the need for spreadsheets to manage workloads, deadlines and reporting, driving productivity, optimizing impact, and improving collaboration.",
+      "followers": {
+        "twitter": 710
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/6111814/page/5357749/logo_1675457390.png"
+    },
+    {
+      "title": "Golbal Legal Tech Hub Blog",
+      "feed_url": "https://www.hublegaltech.com/blog-feed.xml",
+      "website_url": "https://www.hublegaltech.com/blog",
+      "description": "Golbal Legal Tech Hub is a place where members share their experience & knowledge on Technology in law industry. GLTHub is an initiative that brings together different operators from the sector, to embrace a new era of legal and technological services.",
+      "followers": {
+        "twitter": 1700,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5377527.jpg?t=1646395169"
+    },
+    {
+      "title": "WardblawG",
+      "feed_url": "https://wardblawg.com/feed/",
+      "website_url": "https://wardblawg.com/",
+      "description": "WardBlawg's mission is to be one of the world's leading resources on law, digital, legal technology and innovation, helping law firms, lawyers and other legal professionals share the greatest amount of useful legal advice, legal technology and innovation information and insights online.",
+      "followers": {
+        "twitter": 10000
+      },
+      "image_url": "https://i1.feedspot.com/5432579.jpg?t=1660734029"
+    },
+    {
+      "title": "Legal Planet",
+      "feed_url": "https://legal-planet.org/feed/",
+      "website_url": "https://legal-planet.org/",
+      "description": "Legal Planet provides insight and analysis on energy and environmental law. Our goal is to fill a unique space in the blogosphere. We write about court decisions, regulatory actions, and state and legislation that affect climate change policy, water resource management, toxic waste disposal, renewable energy, air quality, land use, and more.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4698962.jpg?t=1661495565"
+    },
+    {
+      "title": "Global IP & Technology Law Blog",
+      "feed_url": "https://www.iptechblog.com/feed/",
+      "website_url": "https://www.iptechblog.com/",
+      "description": "Intellectual property and technology attorneys at Squire Sanders covering legal trends and developments around the world.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 11600
+      },
+      "image_url": "https://i1.feedspot.com/4901104.jpg?t=1612857342"
+    },
+    {
+      "title": "DennisKennedy.Blog",
+      "feed_url": "https://www.denniskennedy.com/feed/",
+      "website_url": "https://www.denniskennedy.com/",
+      "description": "Lawyer, author, blogger, speaker and podcaster Dennis Kennedy offers insights on the application of technology in the practice of law.",
+      "followers": {
+        "twitter": 7600
+      },
+      "image_url": "https://i1.feedspot.com/4901337.jpg?t=1612858230"
+    },
+    {
+      "title": "3 Geeks and a Law Blog",
+      "feed_url": "https://www.geeklawblog.com/feed",
+      "website_url": "https://www.geeklawblog.com/",
+      "description": "A law blog addressing the foci of 3 intrepid law geeks, specializing in their respective fields of knowledge management, internet marketing and library sciences, melding together to form the Dynamic Trio.",
+      "followers": {
+        "facebook": 511,
+        "twitter": 11900
+      },
+      "image_url": "https://i1.feedspot.com/5377512.jpg?t=1646395098"
+    },
+    {
+      "title": "iPhone J.D.",
+      "feed_url": "https://feeds.feedburner.com/iphonejd/kBay",
+      "website_url": "https://www.iphonejd.com/",
+      "description": "iPhone J.D. is the oldest and largest website for lawyers using iPhones and iPads. iPhone J.D. is published by Jeff Richardson, an attorney in New Orleans, Louisiana.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/96236.jpg?t=1646400535"
+    },
+    {
+      "title": "Legal Tech Monitor",
+      "feed_url": "https://www.legaltechmonitor.com/feed/",
+      "website_url": "https://www.legaltechmonitor.com/",
+      "description": "Legal Tech News & Commentary from the greatest publications in legal technology. Covering the legal issues concerning new technology and providing news and updates from around the world. LegalTech Monitor is the one-stop source of the latest legal tech news from around the globe.",
+      "followers": {
+        "twitter": 187
+      },
+      "image_url": "https://i1.feedspot.com/5377521.jpg?t=1654518550"
+    },
+    {
+      "title": "The North Carolina Journal of Law & Technology Blog",
+      "feed_url": "https://ncjolt.org/feed/",
+      "website_url": "https://ncjolt.org/category/blogs/",
+      "description": "JOLT takes a broad view of the term 'technology.' As such, topics in many seemingly divergent areas of the law can qualify for publication in JOLT, provided there is a relationship to a field of technology. In recent past, articles have dealt with ethics, privacy, bankruptcy, civil rights, tax law, and criminal law, as well as more traditional 'tech' areas such as intellectual property and emerging technologies.",
+      "followers": {
+        "facebook": 214,
+        "twitter": 284
+      },
+      "image_url": "https://i1.feedspot.com/4901478.jpg?t=1612858234"
+    },
+    {
+      "title": "PIT IP Tech Law Blog and Podcasts",
+      "feed_url": "https://pitiptechblog.com/feed/",
+      "website_url": "https://pitiptechblog.com/",
+      "description": "Law, Intellectual Property, CyberSecurity, Trade Secret, DTSALaw, Technology, Blog by Houston Harbaugh",
+      "followers": {
+        "twitter": 654
+      },
+      "image_url": "https://i1.feedspot.com/4659892.jpg?t=1646400028"
+    },
+    {
+      "title": "Centerbase",
+      "feed_url": "https://blog.centerbase.com/rss.xml",
+      "website_url": "https://centerbase.com/resources/",
+      "description": "LegalSource is a blog by Centerbase, a legal practice management software provider, for innovative legal professionals seeking to run a lean and highly-profitable practice.",
+      "followers": {
+        "facebook": 209,
+        "twitter": 368
+      },
+      "image_url": "https://i1.feedspot.com/5122225.jpg?t=1612858277"
+    },
+    {
+      "title": "Technology Law Source",
+      "feed_url": "https://www.technologylawsource.com/feed/",
+      "website_url": "https://www.technologylawsource.com/",
+      "description": "Technology Law Source offers updates on legal issues on data security, intellectual property, technology and social media addressing evolving and current technologies.",
+      "followers": {
+        "facebook": 757
+      },
+      "image_url": "https://i1.feedspot.com/4901115.jpg?t=1612858397"
+    },
+    {
+      "title": "Metacept",
+      "feed_url": "https://metacept.com/feed/",
+      "website_url": "https://metacept.com/",
+      "description": "Metacept has been created with the objective of developing and sustaining a platform for a productive discussion on the ever-evolving fields of Information Technology [InfoTech] and Intellectual Property Rights [IPR] Laws. Follow the blog to know more about us.",
+      "followers": {
+        "facebook": 624,
+        "twitter": 70,
+        "instagram": 343
+      },
+      "image_url": "https://i1.feedspot.com/5193870.jpg?t=1599316612"
+    },
+    {
+      "title": "Futurelawyer",
+      "feed_url": "https://futurelawyer.typepad.com/futurelawyer/atom.xml",
+      "website_url": "https://futurelawyer.typepad.com/futurelawyer/",
+      "description": "Find articles on laws in Florida, technology in law, legal tech and more! Lawyer,Poet, author, educator. Practices real property, corporation, wills, trusts and estates law in Pinellas County, Florida. Writes the FutureLawyer column. Gives seminars on technology and the law.",
+      "followers": {
+        "twitter": 890
+      },
+      "image_url": "https://i1.feedspot.com/1674414.jpg?t=1646457711"
+    },
+    {
+      "title": "Apps in Law",
+      "feed_url": "https://appsinlaw.com/feed/",
+      "website_url": "https://appsinlaw.com/",
+      "description": "Apps in Law highlights the best apps for lawyers in mercifully short, finely-detailed video reviews. Brett Burney is passionate about technology in the law. He's a highly-sought after trainer for lawyers and law firms looking to get the most out of their iOS-based devices.",
+      "followers": {
+        "twitter": 155
+      },
+      "image_url": "https://i1.feedspot.com/5214741.jpg?t=1646457631"
+    },
+    {
+      "title": "lawtomated",
+      "feed_url": "https://lawtomated.com/feed/",
+      "website_url": "https://lawtomated.com/",
+      "description": "Lawtomated is a collaborative legaltech learning resource. It's aimed at lawyer and non-lawyer alike interested in, using or wanting to understand legaltech.",
+      "followers": {
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5045959.jpg?t=1612858272"
+    },
+    {
+      "title": "Legal Innovation Lab Wales",
+      "feed_url": "https://www.legaltech.wales/researcher-blogs?format=rss",
+      "website_url": "https://www.legaltech.wales/researcher-blogs",
+      "description": "Find news and updates from the legal tech industry, information on how to incorporate legal tech in businesses, various technologies and more! The Legal Innovation Lab Wales is here to accelerate advancements in the industry and invigorate growth in Legal Tech in Wales and beyond.",
+      "followers": {
+        "twitter": 467
+      },
+      "image_url": "https://i1.feedspot.com/5377525.jpg?t=1646396874"
+    },
+    {
+      "title": "The Legal Technology Blog",
+      "feed_url": "http://legaltechblog.com/feed/",
+      "website_url": "http://legaltechblog.com/",
+      "description": "The Legal Tech Blog focuses on law, technology, and ethics, written by the experts from Law Offices of Daniel J. Siegel and Integrated Technology Services, LLC.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1726193.jpg?t=1646397202"
+    },
+    {
+      "title": "KLoBot Blog",
+      "feed_url": "https://www.klobot.ai/feed/",
+      "website_url": "https://www.klobot.ai/blog/",
+      "description": "KLoBot is a DIY Bot Builder Platform that allows your organization to create text+voice based conversational chatbots within minutes using an easy drag+drop skill interface, giving your bot instant superpowers to use across your favorite channels.",
+      "followers": {
+        "facebook": 198,
+        "twitter": 83,
+        "instagram": 252
+      },
+      "image_url": "https://i1.feedspot.com/5250406.jpg?t=1614694086"
+    },
+    {
+      "title": "Bigfork Technologies, LLC Blog",
+      "feed_url": "https://www.bigforktech.com/feed/",
+      "website_url": "https://www.bigforktech.com/blog/",
+      "description": "Explore articles on Contract lifecycle management solutions by in-house legal experts. Team Bigfork Tech continues to innovate and provide solutions that are responsive to your needs. We deliver a complete solution that can save more than ten hours per person per week.",
+      "followers": {
+        "facebook": 215,
+        "twitter": 170,
+        "instagram": 139
+      },
+      "image_url": "https://i1.feedspot.com/5377523.jpg?t=1646395152"
+    },
+    {
+      "title": "DennisKennedy.Blog \u00bb Legal Technology",
+      "feed_url": "https://www.denniskennedy.com/blog/category/legal-technology/feed/",
+      "website_url": "https://www.denniskennedy.com/blog/category/legal-technology/",
+      "description": "This section features articles on Legal technology, technology law and other musings. Dennis Kennedy is a well-known legal tech and innovation advisor, adjunct law professor, infotech lawyer, professional speaker, author, and podcaster. He is widely-praised for his ability to communicate complex technological and legal issues in ways into that non-experts can easily understand.",
+      "followers": {
+        "twitter": 7600
+      },
+      "image_url": "https://i1.feedspot.com/5377529.jpg?t=1646395179"
+    },
+    {
+      "title": "Sensei Enterprises, Inc.",
+      "feed_url": "https://senseient.com/feed/?post_type=ride-the-lightning",
+      "website_url": "https://senseient.com/ride-the-lightning/",
+      "description": "Your Trusted Managed Service Provider For Information Technology Support, Cybersecurity, and Digital Forensics. Cybersecurity and Future of Law Practice Blog by Sharon D. Nelson Esq., President of Sensei Enterprises, Inc.",
+      "followers": {
+        "facebook": 559,
+        "twitter": 1000,
+        "instagram": 174
+      },
+      "image_url": "https://i1.feedspot.com/5377514.jpg?t=1646395105"
+    },
+    {
+      "title": "LawSites",
+      "feed_url": "https://www.lawsitesblog.com/feed",
+      "website_url": "https://www.lawnext.com/",
+      "description": "This blog is about legal technology and social media. I am a lawyer and consultant who has been writing and speaking about the Internet, social media and legal technology for nearly 20 years.",
+      "followers": {
+        "twitter": 34600
+      },
+      "image_url": "https://i1.feedspot.com/4862214.jpg?t=1612857319"
+    },
+    {
+      "title": "Legal IT Insider",
+      "feed_url": "https://legaltechnology.com/feed/",
+      "website_url": "https://legaltechnology.com/",
+      "description": "Get updates about legal technology news, views, analysis, jobs, events, and more. Since 1995 Legal IT Insider has been the number one resource worldwide for breaking news in the legal technology sector.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4901441.jpg?t=1612857321"
+    },
+    {
+      "title": "The Cyber India Blog",
+      "feed_url": "https://cyberblogindia.in/feed/",
+      "website_url": "https://cyberblogindia.in/blog/",
+      "description": "Internationally acclaimed social initiative and award-winning blog. They write about issues and topics that matter in a common netizen's internet life. They try to be precise and to the point. The blog features Splinternet, which governs the internet, Digital India, AI, and more.",
+      "followers": {
+        "facebook": 10800,
+        "twitter": 316
+      },
+      "image_url": "https://i1.feedspot.com/5196617.jpg?t=1688369166"
+    },
+    {
+      "title": "Vanderbilt JETLaw",
+      "feed_url": "https://www.vanderbilt.edu/jetlaw/feed/",
+      "website_url": "https://www.vanderbilt.edu/jetlaw/",
+      "description": "The Vanderbilt Journal of Entertainment & Technology Law (JETLaw) is an official, highly ranked, student-run publication of Vanderbilt Law School focusing on technology, intellectual property, and entertainment law.",
+      "followers": {
+        "twitter": 306
+      },
+      "image_url": "https://i1.feedspot.com/4901107.jpg?t=1646394042"
+    },
+    {
+      "title": "Tech Law Blog",
+      "feed_url": "https://www.irelandip.com/feed/",
+      "website_url": "https://www.techlaw.ie/",
+      "description": "Ireland IP & Technology Law Blog provides the information you need to know about Intellectual property & technology law in Ireland. A&L Goodbody is an Irish law firm providing expert legal advice across every aspect of business law.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/4481124.jpg?t=1638277918"
+    },
+    {
+      "title": "Consilio Blog",
+      "feed_url": "https://www.consilio.com/blog/",
+      "website_url": "https://www.consilio.com/blog/",
+      "description": "The blog features articles on legal tech, advantages, disadvantages, contracts and more! SYKE is a legal technology and operations consultancy that helps corporate customers to transform their legal teams. Legal technology has now reached a level of sophistication where it can be a game-changer for lawyers overwhelmed by the demand for pace and cost-efficiency.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5377531.jpg?t=1646396407"
+    },
+    {
+      "title": "Global IP & Technology Law Blog",
+      "feed_url": "https://www.iptechblog.com/feed/",
+      "website_url": "https://www.iptechblog.com/",
+      "description": "A source for news & insights into international legal issues involving intellectual property & technology such as trademark & brand protection, patent prosecution & protection; trade secrets, data protection & privacy; and advertising & media issues. Brought to by Intellectual property & technology attorneys at Squire Patton Boggs.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 11600,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4481126.jpg?t=1625486633"
+    },
+    {
+      "title": "TechnoLlama",
+      "feed_url": "https://www.technollama.co.uk/feed",
+      "website_url": "https://www.technollama.co.uk/",
+      "description": "TechnoLlama covers several Cyberlaw topics, with emphasis on open licensing, digital rights, software protection, virtual worlds, and llamas. While the blog tackles these issues in a light-hearted and nonchalant manner, some serious points filter through from time to time.",
+      "followers": {
+        "facebook": 320
+      },
+      "image_url": "https://i1.feedspot.com/4901147.jpg?t=1612858220"
+    },
+    {
+      "title": "Mills & Reeve \u00bb Technology",
+      "feed_url": "https://www.mills-reeve.com/blogs/technology/",
+      "website_url": "https://www.mills-reeve.com/blogs/technology/",
+      "description": "Our technology law blog gives up to date news and views on legal, regulation and policy affecting the technology sector. Mills & Reeve is a dynamic, modern, and thought-provoking firm. We're personal and passionate about the law.",
+      "followers": {
+        "twitter": 727
+      },
+      "image_url": "https://i1.feedspot.com/5377517.jpg?t=1646395122"
+    },
+    {
+      "title": "American Bar \u00bb Law Technology Today",
+      "feed_url": "https://www.americanbar.org/groups/law_practice/resources/law-technology-today/",
+      "website_url": "https://www.americanbar.org/groups/law_practice/resources/law-technology-today/",
+      "description": "Law Technology Today is a blog from the ABA Legal Technology Resource Center. Get the latest news in technology and law that you need to know. The ABA's LTRC provides extensive legal technology resources on topics such as cloud computing, software, marketing, mobile, and security.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 16700
+      },
+      "image_url": "https://i1.feedspot.com/4216917.jpg?t=1610514200"
+    },
+    {
+      "title": "FindLaw Legal Blog \u00bb Technologist",
+      "feed_url": "https://blogs.findlaw.com/technologist/atom.xml",
+      "website_url": "https://www.findlaw.com/legalblogs/technologist/",
+      "description": "The FindLaw legal technology blog features the latest legal technology news and developments for attorneys and legal professionals.",
+      "followers": {
+        "facebook": 47900
+      },
+      "image_url": "https://i1.feedspot.com/4901346.jpg?t=1612857470"
+    },
+    {
+      "title": "TopLaw Blog",
+      "feed_url": "https://blog.technolawyer.com/tlatomfeed.xml",
+      "website_url": "https://www.toplaw.news/blog/index.html",
+      "description": "Get all the legal technology and practice management news from TechnoLawyer Blog.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4901081.jpg?t=1612857335"
+    },
+    {
+      "title": "Colin S. Levy Blog",
+      "feed_url": "https://www.colinslevy.com/feed/",
+      "website_url": "https://www.colinslevy.com/blog-page",
+      "description": "I am a seasoned in-house corporate lawyer. In addition to being a corporate lawyer with a focus on commercial transactions, I am also adept with technology and a passionate advocate for legal technology and legal innovation. My blog is devoted to posts from the front lines of legal innovation featuring interviews with thought leaders as well as those who, like me, are passionate about legal technology and/or legal innovation.",
+      "followers": {
+        "twitter": 15800
+      },
+      "image_url": "https://i1.feedspot.com/4904259.jpg?t=1612858241"
+    },
+    {
+      "title": "new tech law blog",
+      "feed_url": "https://newtech.law/en/feed",
+      "website_url": "https://newtech.law/en",
+      "description": "For us, the new technologies are primarily new legal challenges. On the blog we write about the most interesting legal aspects of new technologies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4901126.jpg?t=1612858267"
+    },
+    {
+      "title": "FindLaw Blog \u00bb Technologist",
+      "feed_url": "https://www.findlaw.com/feed/",
+      "website_url": "https://www.findlaw.com/legalblogs/technologist/",
+      "description": "FindLaw, a Thomson Reuters business, provides consumers and lawyers with a range of case law, statutes, legal news, online career center, blogs, and a variety of community-oriented tools. Technologist covers the latest legal technology news and developments.",
+      "followers": {
+        "facebook": 35900,
+        "twitter": 17900,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/649586.jpg?t=1622721386"
+    },
+    {
+      "title": "Ikigai Law",
+      "feed_url": "https://www.ikigailaw.com/feed/",
+      "website_url": "https://www.ikigailaw.com/writings",
+      "description": "If you want to know more about Data Protection, Data Localisation, White Paper, Privacy Consultation Paper, Security of Telecommunications Infrastructure and Digital Ecosystem, Draft National Digital Communications Policy and Session on legal mistakes startups. Our mission is to enable the future. We do this by enabling innovation, technology and entrepreneurship to make the world smarter, inclusive and fun. A full service law firm with focus on technology sector.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5377515.jpg?t=1646395113"
+    },
+    {
+      "title": "AXDRAFT Blog",
+      "feed_url": "https://blog.axdraft.com/feed/",
+      "website_url": "https://blog.axdraft.com/",
+      "description": "Latest news from AXDRAFT and the world of legal technology. Topics cover Legal Tips, Contract Management, Legal trends, Document Automation Magic, and more. AXDRAFT is a document automation platform that helps users draft legal documents faster and remove routine from daily workflows.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5408632.jpg?t=1654768631"
+    }
+  ]
+}

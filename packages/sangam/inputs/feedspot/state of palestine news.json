@@ -1,0 +1,75 @@
+{
+  "category": "State of Palestine News",
+  "source_url": "https://rss.feedspot.com/state_of_palestine_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Palestine Chronicle",
+      "feed_url": "https://www.palestinechronicle.com/feed/",
+      "website_url": "https://www.palestinechronicle.com/",
+      "description": "The Palestine Chronicle is a non-profit organization whose mission is to educate the general public by providing a forum that strives to highlight issues of relevance to human rights, national struggles, freedom, and democracy in the form of daily news, commentary, features, book reviews, photos, art, and more.",
+      "followers": {
+        "facebook": 58300,
+        "twitter": 56500,
+        "instagram": 27200
+      },
+      "image_url": "https://i1.feedspot.com/5347512.jpg?t=1638262200"
+    },
+    {
+      "title": "Palestine TV",
+      "feed_url": "https://www.pbc.ps/feed/",
+      "website_url": "https://www.pbc.ps/",
+      "description": "Local news on politics, economics, culture, sports, health, technology, and more.",
+      "followers": {
+        "facebook": 6100000,
+        "twitter": 4600,
+        "instagram": 244700
+      },
+      "image_url": "https://i1.feedspot.com/5347494.jpg?t=1638262192"
+    },
+    {
+      "title": "The Palestinian Information Center",
+      "feed_url": "https://palinfo.com/feed/",
+      "website_url": "https://palinfo.com/",
+      "description": "The Palestinian Information Center is a media website specialized in the Palestinian issue in its human, human, political, and cultural dimensions. The website was founded in 1997, and it was the first to cover Palestinian news.",
+      "followers": {
+        "facebook": 81,
+        "twitter": 561900
+      },
+      "image_url": "https://i1.feedspot.com/5347498.jpg?t=1638262194"
+    },
+    {
+      "title": "The New York Times \u00bb Palestinian Authority",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/topic/organization/the-palestinian-authority/rss.xml",
+      "website_url": "https://www.nytimes.com/topic/organization/the-palestinian-authority",
+      "description": "The latest news and daily updates from Palestinian.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000,
+        "instagram": 19600000
+      },
+      "image_url": "https://i1.feedspot.com/5347816.jpg?t=1643469471"
+    },
+    {
+      "title": "Watan News",
+      "feed_url": "https://www.wattan.net/ar/",
+      "website_url": "https://www.wattan.net/ar/",
+      "description": "An independent news site that seeks to present democratic national media and is part of a media system.",
+      "followers": {
+        "facebook": 3600000,
+        "twitter": 8200,
+        "instagram": 55500
+      },
+      "image_url": "https://i1.feedspot.com/5347500.jpg?t=1638262195"
+    },
+    {
+      "title": "WAFA News",
+      "feed_url": "https://english.wafa.ps/",
+      "website_url": "https://english.wafa.ps/",
+      "description": "WAFA seeks to produce and disseminate news and information on Palestine worldwide as well as to provide readers with insight into events from a Palestinian perspective. WAFA strives to influence public opinion at the local and international levels, with a focus on the religious, geographic, and historical importance of Palestine.",
+      "followers": {
+        "twitter": 11900
+      },
+      "image_url": "https://i1.feedspot.com/5347499.jpg?t=1638262195"
+    }
+  ]
+}

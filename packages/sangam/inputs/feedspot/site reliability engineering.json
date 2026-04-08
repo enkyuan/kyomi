@@ -1,0 +1,47 @@
+{
+  "category": "Site Reliability Engineering",
+  "source_url": "https://rss.feedspot.com/site_reliability_engineering_rss_feeds",
+  "feeds": [
+    {
+      "title": "Brendan Gregg's Blog",
+      "feed_url": "https://www.brendangregg.com/blog/rss.xml",
+      "website_url": "https://www.brendangregg.com/blog/index.html",
+      "description": "Hi, I am Brendan Gregg. I use this site to share various things, mostly my work with computers, specifically, computer performance analysis and methodology. Follow these highly technical blog posts about Systems Internals, Performance and SRE.",
+      "followers": {
+        "twitter": 44600
+      },
+      "image_url": "https://i1.feedspot.com/4053466.jpg?t=1622103474"
+    },
+    {
+      "title": "SRE WEEKLY",
+      "feed_url": "https://sreweekly.com/feed/",
+      "website_url": "https://sreweekly.com/",
+      "description": "SRE Weekly is a newsletter devoted to everything related to keeping a site or service available as consistently as possible. It's about a holistic view of reliability that takes into account everything from servers to human factors to processes to automation and more.",
+      "followers": {
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4994470.jpg?t=1622103480"
+    },
+    {
+      "title": "Coding For Life",
+      "feed_url": "https://www.johnroach.io/rss/",
+      "website_url": "https://www.johnroach.io/",
+      "description": "John Roach is a site reliability engineer at Zapier. This blog covers topics like DevOps, software development and tech written by John Roach.",
+      "followers": {
+        "twitter": 305
+      },
+      "image_url": "https://i1.feedspot.com/4994509.jpg?t=1622103484"
+    },
+    {
+      "title": "High Scalability Blog",
+      "feed_url": "https://highscalability.com/rss.xml/",
+      "website_url": "https://highscalability.com/",
+      "description": "High Scalability articles are your source of web scalability articles. This blog tries to bring together all the lore, art, science, practice, and experience of building scalable websites into one place so you can learn how to build your website with confidence.",
+      "followers": {
+        "facebook": 456,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/58745.jpg?t=1610970738"
+    }
+  ]
+}

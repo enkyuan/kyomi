@@ -1,0 +1,66 @@
+{
+  "category": "Thailand Business",
+  "source_url": "https://rss.feedspot.com/thailand_business_rss_feeds",
+  "feeds": [
+    {
+      "title": "Thailand Business News",
+      "feed_url": "https://www.thailand-business-news.com/top-news/business/feed",
+      "website_url": "https://www.thailand-business-news.com/top-news/business",
+      "description": "Latest breaking business news, opinion and analysis from Thailand, including personal finance, farming, property, and the economy.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5344398.jpg?t=1637229765"
+    },
+    {
+      "title": "StartUp in Thailand Blog",
+      "feed_url": "https://startupinthailand.com/feed/",
+      "website_url": "https://startupinthailand.com/all-blogs/",
+      "description": "Startup in Thailand is a single-window information and service portal for any business startup and expansion requirements in Thailand.",
+      "followers": {
+        "facebook": 10500,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5344396.jpg?t=1637229403"
+    },
+    {
+      "title": "The Phuket News \u00bb Business News",
+      "feed_url": "https://www.thephuketnews.com/rss-xml/news-business.xml",
+      "website_url": "https://www.thephuketnews.com/news-business.php",
+      "description": "Up-to-the-minute news, breaking news, video, audio, feature stories, weather, business, entertainment, politics, and analysis on Phuket, Thailand, Asia, and the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5344399.jpg?t=1637229614"
+    },
+    {
+      "title": "Thailand Business News",
+      "feed_url": "https://thaibiznews.wordpress.com/feed/",
+      "website_url": "https://thaibiznews.wordpress.com/",
+      "description": "Thailand Business News is a comprehensive news service about Thailand with a business and financial perspective edited in Bangkok.",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5344397.jpg?t=1637229352"
+    },
+    {
+      "title": "Thaiger \u00bb Business",
+      "feed_url": "https://thethaiger.com/news/business/feed",
+      "website_url": "https://www.relianceconsulting.co.th/blog/",
+      "description": "The Thaiger is a Thailand news & information portal. The Thaiger is a Singapore company with a Thai subsidiary employing staff living and working in Thailand. Read fast, accurate news, information, and entertainment on Thailand's most responsive and fresh media portal.",
+      "followers": {
+        "facebook": 265200,
+        "twitter": 14900
+      },
+      "image_url": "https://i1.feedspot.com/5344395.jpg?t=1637412277"
+    },
+    {
+      "title": "Reliance Consulting Co. Ltd Blog",
+      "feed_url": "https://www.relianceconsulting.co.th/feed/",
+      "website_url": "https://www.relianceconsulting.co.th/blog/",
+      "description": "Need to know the latest tax and its implications or how many corporate taxes you should pay when running a business in Thailand? Get the latest news and updates on informative articles that can help you manage your Thailand business in a more efficient manner. Reliance Consulting provides business services in Thailand, focusing on company registration, outsourced accounting, withholding tax and payroll services.",
+      "followers": {
+        "facebook": 7,
+        "twitter": 16
+      },
+      "image_url": "https://i1.feedspot.com/5344400.jpg?t=1637229658"
+    }
+  ]
+}

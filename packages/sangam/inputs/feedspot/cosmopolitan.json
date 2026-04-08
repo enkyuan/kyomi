@@ -1,0 +1,17 @@
+{
+  "category": "Cosmopolitan",
+  "source_url": "https://rss.feedspot.com/cosmopolitan_rss_feeds",
+  "feeds": [
+    {
+      "title": "Cosmopolitan",
+      "feed_url": "https://www.cosmopolitan.com/rss/all.xml/",
+      "website_url": "https://www.cosmopolitan.com/",
+      "description": "Your source for the latest sex tips, celebrity news, dating and relationship help, beauty tutorials, fashion trends, and more.",
+      "followers": {
+        "twitter": 1500000,
+        "instagram": 4300000
+      },
+      "image_url": "https://i1.feedspot.com/1588932.jpg?t=1744790804"
+    }
+  ]
+}

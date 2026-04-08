@@ -1,0 +1,274 @@
+{
+  "category": "Software Architecture",
+  "source_url": "https://rss.feedspot.com/software_architecture_rss_feeds",
+  "feeds": [
+    {
+      "title": "Ben Morris Software Architecture Blog",
+      "feed_url": "https://www.ben-morris.com/rss.xml",
+      "website_url": "https://www.ben-morris.com/",
+      "description": "I'm, Ben Morris. I am a London-based technical architect who has spent more than twenty five years leading development across start-ups, digital agencies, software houses and corporates. Over the years I have built a lot of stuff including web sites and services, systems integrations, data platforms and middleware. My current focus is on providing architectural leadership in agile environments.",
+      "followers": {
+        "twitter": 845
+      },
+      "image_url": "https://i1.feedspot.com/5357618.jpg?t=1640672959"
+    },
+    {
+      "title": "The Architect Elevator Blog",
+      "feed_url": "https://architectelevator.com/feed.xml",
+      "website_url": "https://architectelevator.com/blog/",
+      "description": "Modern architects look beyond UML and design patterns to transform IT by connecting the strategy 'penthouse' with the technology 'engine room'. Gregor Hohpe help enterprises with their architecture strategy and cloud transformation journey by connecting the penthouse with the engine room.",
+      "followers": {
+        "twitter": 16000
+      },
+      "image_url": "https://i1.feedspot.com/5327527.jpg?t=1640674052"
+    },
+    {
+      "title": "R&A IT Strategy & Architecture",
+      "feed_url": "https://ea.rna.nl/feed/",
+      "website_url": "https://ea.rna.nl/",
+      "description": "Hi I am Gerben Wierda, I write about Enterprise Architecture, IT and IT Strategy, IT Technology (mainly AI/QM), and the effect of IT on us (persons, organisations, society).",
+      "followers": {
+        "twitter": 823
+      },
+      "image_url": "https://i1.feedspot.com/1795611.jpg?t=1640680345"
+    },
+    {
+      "title": "Mathias Verraes Blog",
+      "feed_url": "https://verraes.net/feed.atom",
+      "website_url": "https://verraes.net/#blog",
+      "description": "This blog is run by Mathias Verraes, founder of Domain-Driven Design Belgium. Mathias Verraes runs a boutique consultancy that advises organisations on designing and modelling software for complex environments, including architecture, analysis, testing, and refactoring 'unmaintainable' systems.",
+      "followers": {
+        "twitter": 13200
+      },
+      "image_url": "https://i1.feedspot.com/3639074.jpg?t=1618409921"
+    },
+    {
+      "title": "Software Architecture Monday",
+      "feed_url": "https://www.developertoarchitect.com/lessons/index.xml",
+      "website_url": "https://www.developertoarchitect.com/lessons/",
+      "description": "Software Architecture Monday with Mark Richards is a free bi-weekly software architecture lesson containing a short video about some aspects of software architecture. These lessons contain tips, techniques, and advice to help you in your journey from developer to architect.",
+      "followers": {
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5357657.jpg?t=1640675132"
+    },
+    {
+      "title": "InfoQ \u00bb Architecture",
+      "feed_url": "https://feed.infoq.com/architecture/articles/",
+      "website_url": "https://www.infoq.com/architecture/",
+      "description": "All latest articles about Architecture from InfoQ.",
+      "followers": {
+        "facebook": 21500,
+        "twitter": 57100
+      },
+      "image_url": "https://i1.feedspot.com/5357598.jpg?t=1746095154"
+    },
+    {
+      "title": "AWS Architecture Blog",
+      "feed_url": "https://aws.amazon.com/blogs/architecture/feed/",
+      "website_url": "https://aws.amazon.com/blogs/architecture/",
+      "description": "The goal of the AWS Architecture Blog is to highlight best practices and provide architectural guidance. We publish thought leadership and how-to pieces that encourage readers to discover other technical documentation such as solutions and managed solutions, other AWS blogs, videos, reference architectures, whitepapers, and guides, training and certification, case studies, and the AWS Architecture.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/5001714.jpg?t=1640668697"
+    },
+    {
+      "title": "Microservices.io",
+      "feed_url": "https://microservices.io/feed.xml",
+      "website_url": "https://microservices.io/",
+      "description": "Microservices.io is brought to you by Chris Richardson. Experienced software architect, author of POJOs in Action, the creator of the original CloudFoundry.com, and the author of Microservices patterns.Chris helps clients around the world adopt the microservice architecture through consulting engagements, and training classes and workshops.",
+      "followers": {
+        "twitter": 5900
+      },
+      "image_url": "https://i1.feedspot.com/5126877.jpg?t=1640673375"
+    },
+    {
+      "title": "DZone \u00bb Microservices Zone",
+      "feed_url": "https://feeds.dzone.com/microservices",
+      "website_url": "https://dzone.com/microservices",
+      "description": "The Microservices Zone will take you through breaking down the monolith step-by-step and designing microservices architecture from scratch. It covers everything from scalability to patterns and anti-patterns. It digs deeper than just containers to give you practical applications and business use cases.",
+      "followers": {
+        "facebook": 49500,
+        "twitter": 74000
+      },
+      "image_url": "https://i1.feedspot.com/5099223.jpg?t=1746087071"
+    },
+    {
+      "title": "EA Voices",
+      "feed_url": "https://eavoices.com/feed/",
+      "website_url": "https://eavoices.com/",
+      "description": "A river of news and opinions about enterprise architecture, EA Voices is a thematic aggregator of enterprise architecture blog feeds by John G\u00f8tze. The database contains over 7800 posts and over 5 million words. Around 75 new posts are added every month.",
+      "followers": {
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5357696.jpg?t=1640679728"
+    },
+    {
+      "title": "Microsoft Community Hub \u00bb Azure Architecture Blog",
+      "feed_url": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=AzureArchitectureBlog",
+      "website_url": "https://techcommunity.microsoft.com/category/azure/blog/azurearchitectureblog/",
+      "description": "This section features articles on Azure Architecture. Microsoft Tech Community is the Official Tech Community for conversations about Microsoft products with experts.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 38100
+      },
+      "image_url": "https://i1.feedspot.com/5357745.jpg?t=1640687118"
+    },
+    {
+      "title": "System Design Newsletter",
+      "feed_url": "https://newsletter.systemdesign.one/feed",
+      "website_url": "https://newsletter.systemdesign.one/",
+      "description": "A weekly newsletter to help you pass system design interview and become good at work",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc2f21e38-5233-45c3-98b9-abd229da2423_256x256.png"
+    },
+    {
+      "title": "System Design Codex",
+      "feed_url": "https://newsletter.systemdesigncodex.com/feed",
+      "website_url": "https://newsletter.systemdesigncodex.com/",
+      "description": "The best place to learn practical System Design with concepts and case studies",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1adf652d-a848-4f3c-9100-3f025578ae11_256x256.png"
+    },
+    {
+      "title": "System Design Classroom",
+      "feed_url": "https://newsletter.systemdesignclassroom.com/feed",
+      "website_url": "https://newsletter.systemdesignclassroom.com/",
+      "description": "A System Design Newsletter to help you build better software.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcdb90e4a-4569-433d-93c4-a4863e3d54ef_69x69.png"
+    },
+    {
+      "title": "Architecture Weekly",
+      "feed_url": "https://www.architecture-weekly.com/feed",
+      "website_url": "https://www.architecture-weekly.com/",
+      "description": "Weekly Software Architecture resources to boost your knowledge and developer skills.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F3ab6cef1-9ce5-47fa-9306-17854b383dc1_358x358.png"
+    },
+    {
+      "title": "Better Engineers",
+      "feed_url": "https://betterengineers.substack.com/feed",
+      "website_url": "https://betterengineers.substack.com/",
+      "description": "A Programmer's Journey of Perfections Follow LinkedIn: https://www.linkedin.com/in/devd04/X : https://x.com/BetterEngineer1",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe9f6f64c-988c-4216-9573-74644d110448_500x500.png"
+    },
+    {
+      "title": "S.Lott-Software Architect",
+      "feed_url": "https://slott-softwarearchitect.blogspot.com/feeds/posts/default",
+      "website_url": "https://slott-softwarearchitect.blogspot.com/",
+      "description": "Rants on the daily grind of building software architecture by Steven Lott. He has been programming since computers were large, expensive, and rare. Working for decades in high tech has given him exposure to a lot of ideas and techniques, some bad, but most are useful and helpful to others.",
+      "followers": {
+        "twitter": 722
+      },
+      "image_url": "https://i1.feedspot.com/256452.jpg?t=1640676671"
+    },
+    {
+      "title": "Allen Holub Blog",
+      "feed_url": "https://holub.com/feed/",
+      "website_url": "https://holub.com/blog/",
+      "description": "This blog is run by Allen Holub. Allen Holub is an internationally recognized software architect and Agile coach. Allen speaks all over the planet about these topics and agile-friendly implementation technology like microservices and incremental/evolutionary architecture.",
+      "followers": {
+        "twitter": 64000
+      },
+      "image_url": "https://i1.feedspot.com/5150309.jpg?t=1640671124"
+    },
+    {
+      "title": "Effective Software Design",
+      "feed_url": "https://effectivesoftwaredesign.com/feed/",
+      "website_url": "https://effectivesoftwaredesign.com/",
+      "description": "Enthusiastic Software Developer, Hayim Makabee posting on Effective Software Design, Software Architecture, Big Data, Machine Learning and Predictive Analytics. Born in Rio de Janeiro and immigrated to Israel in 1992, He has completed his M.Sc. studies on Computer Sciences at the Technion.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4427404.jpg?t=1640672441"
+    },
+    {
+      "title": "Software Architecture & Design",
+      "feed_url": "https://www.umlzone.com/feed/",
+      "website_url": "https://www.umlzone.com/",
+      "description": "Dedicated to presenting industry news, articles, blog posts, book reviews, tools presentations, videos and other resources about the Unified Modeling Language (UML), software architecture, software design and other software modeling / data modeling techniques and software architecture approaches.",
+      "followers": {
+        "facebook": 737,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5357668.jpg?t=1640675638"
+    },
+    {
+      "title": "Michael Feathers",
+      "feed_url": "https://michaelfeathers.silvrback.com/feed",
+      "website_url": "https://michaelfeathers.silvrback.com/",
+      "description": "Articles on Software Architecture by Michael Feathers. He is the founder and Director of R7K Research & Conveyance, acompany specializing in software and organization design. He is also the author of the book Working Effectively with Legacy Code (Prentice Hall, 2004).",
+      "followers": {
+        "twitter": 38400
+      },
+      "image_url": "https://i1.feedspot.com/3819396.jpg?t=1640670478"
+    },
+    {
+      "title": "Apium Academy Blog",
+      "feed_url": "https://apiumacademy.com/feed/",
+      "website_url": "https://apiumacademy.com/blog/",
+      "description": "Apium Academy offers high-quality software development courses focusing on best practices, working software and practical solutions for current issues. Some of the recent topics discussed in this blog are: Designing object models, Refactoring to Patterns, Policy as Code, Staging Environment, Log Management Software Tools, Kafka use cases, Analyzing Architecture, Micro-Frontends, etc.",
+      "followers": {
+        "twitter": 293,
+        "instagram": 64
+      },
+      "image_url": "https://i1.feedspot.com/5357610.jpg?t=1640671883"
+    },
+    {
+      "title": "SEI Blog \u00bb Software Architecture",
+      "feed_url": "https://insights.sei.cmu.edu/blog/feeds/topic/software-architecture/atom/",
+      "website_url": "https://insights.sei.cmu.edu/blog/topics/software-architecture/",
+      "description": "This section features articles on Software Architecture. The SEI is a federally funded research and development center (FFRDC) conducting research in a variety of software engineering practices.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 74
+      },
+      "image_url": "https://i1.feedspot.com/5358604.jpg?t=1640947785"
+    },
+    {
+      "title": "Random Acts of Architecture",
+      "feed_url": "https://randomactsofarchitecture.com/feed/",
+      "website_url": "https://randomactsofarchitecture.com/",
+      "description": "Tales of an architect trying to bring order to the chaos that is modern information technology. Anthony Langsworth is self-motivated, adaptable, outcome-focused enterprise and solution architect who gravitates toward technical leadership roles.",
+      "followers": {
+        "twitter": 207
+      },
+      "image_url": "https://i1.feedspot.com/1125768.jpg?t=1640678054"
+    },
+    {
+      "title": "Architecture, Data and Intelligence",
+      "feed_url": "https://www.blogger.com/feeds/6106782/posts/default",
+      "website_url": "https://rvsoapbox.blogspot.com/",
+      "description": "A blog on the structural challenges of achieving a viable service-based business ecosystem with organizational intelligence. Richard Veryard is a business architect, based in London, specializing in Data and Intelligence.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5357721.jpg?t=1640683494"
+    },
+    {
+      "title": "Vedcraft",
+      "feed_url": "https://vedcraft.com/feed/",
+      "website_url": "https://vedcraft.com/",
+      "description": "A place for software architects to learn, grow & share knowledge in architecture, design, code & technology trends like Cloud, DevOps, Microservices.",
+      "followers": {
+        "twitter": 320
+      },
+      "image_url": "https://i1.feedspot.com/5357609.jpg?t=1640669934"
+    },
+    {
+      "title": "codecentric \u00bb Architecture",
+      "feed_url": "https://blog.codecentric.de/en/category/architecture/feed/",
+      "website_url": "https://www.codecentric.de/wissens-hub/blog",
+      "description": "This section has posts about Software Architecture by codecentric. With us, top talent meet innovative technologies and modern methods. This is how our customers become pioneers in the digital world.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5357681.jpg?t=1640677778"
+    }
+  ]
+}

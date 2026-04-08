@@ -1,0 +1,68 @@
+{
+  "category": "Fortinet",
+  "source_url": "https://rss.feedspot.com/fortinet_rss_feeds",
+  "feeds": [
+    {
+      "title": "Fortinet",
+      "feed_url": "https://feeds.fortinet.com/fortinet/blogs",
+      "website_url": "https://www.fortinet.com/blog",
+      "description": "Explore the latest cybersecurity trends and innovations, leading edge threat intelligence from FortiGuard Labs, Fortinet executive insights, and customer perspectives. Fortinet makes possible a digital world that we can always trust through its mission to protect people, devices, and data everywhere.",
+      "followers": {
+        "facebook": 116700,
+        "twitter": 152300,
+        "instagram": 383
+      },
+      "image_url": "https://i1.feedspot.com/5423466.jpg?t=1747832670"
+    },
+    {
+      "title": "Fortinet \u00bb Business & Technology",
+      "feed_url": "https://feeds.fortinet.com/fortinet/blog/business-and-technology",
+      "website_url": "https://www.fortinet.com/blog/business-and-technology",
+      "description": "All latest articles about Business & Technology from Fortinet.",
+      "followers": {
+        "facebook": 116700
+      },
+      "image_url": "https://i1.feedspot.com/8531259.jpg?t=1753071236"
+    },
+    {
+      "title": "Fortinet \u00bb Threat Research",
+      "feed_url": "https://feeds.fortinet.com/fortinet/blog/threat-research",
+      "website_url": "https://www.fortinet.com/blog/threat-research",
+      "description": "All latest articles about Threat Research from Fortinet.",
+      "followers": {
+        "facebook": 116700
+      },
+      "image_url": "https://i1.feedspot.com/5478471.jpg?t=1747832672"
+    },
+    {
+      "title": "Fortinet \u00bb Industry Trends",
+      "feed_url": "https://feeds.fortinet.com/fortinet/blog/industry-trends",
+      "website_url": "https://www.fortinet.com/blog/industry-trends",
+      "description": "All latest articles about Industry Trends from Fortinet.",
+      "followers": {
+        "facebook": 116700
+      },
+      "image_url": "https://i1.feedspot.com/8531258.jpg?t=1753071233"
+    },
+    {
+      "title": "Fortinet \u00bb Partners",
+      "feed_url": "https://feeds.fortinet.com/fortinet/blog/partners",
+      "website_url": "https://www.fortinet.com/blog/partners",
+      "description": "All latest articles about Partners from Fortinet.",
+      "followers": {
+        "facebook": 116700
+      },
+      "image_url": "https://i1.feedspot.com/8531260.jpg?t=1753071239"
+    },
+    {
+      "title": "Fortinet \u00bb PSIRT Blogs",
+      "feed_url": "https://feeds.fortinet.com/fortinet/blog/psirt",
+      "website_url": "https://www.fortinet.com/blog/psirt-blogs",
+      "description": "All latest articles about PSIRT Blogs from Fortinet.",
+      "followers": {
+        "facebook": 116700
+      },
+      "image_url": "https://i1.feedspot.com/8531257.jpg?t=1753071230"
+    }
+  ]
+}

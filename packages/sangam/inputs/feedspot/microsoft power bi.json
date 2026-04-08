@@ -1,0 +1,413 @@
+{
+  "category": "Microsoft Power BI",
+  "source_url": "https://rss.feedspot.com/microsoft_power_bi_rss_feeds",
+  "feeds": [
+    {
+      "title": "Microsoft Power BI Blog",
+      "feed_url": "https://powerbi.microsoft.com/en-us/blog/feed/",
+      "website_url": "https://powerbi.microsoft.com/en-us/blog/",
+      "description": "Keep up with the latest Power BI updates, announcements, information, and new features on the Power BI blog. Search by category or date published.",
+      "followers": {
+        "facebook": 99500,
+        "twitter": 169200
+      },
+      "image_url": "https://i1.feedspot.com/4477455.jpg?t=1620902975"
+    },
+    {
+      "title": "Chris Webb's BI Blog",
+      "feed_url": "https://blog.crossjoin.co.uk/feed/",
+      "website_url": "https://blog.crossjoin.co.uk/",
+      "description": "My name's Chris Webb, and I'm a specialist in Analysis Services, MDX, Power Pivot, DAX, Power Query and Power BI in general. I've been blogging about Microsoft BI for over 10 years, and racked up over 1000 posts here!",
+      "followers": {
+        "twitter": 16800
+      },
+      "image_url": "https://i1.feedspot.com/4477456.jpg?t=1641359338"
+    },
+    {
+      "title": "Excelerator BI",
+      "feed_url": "https://exceleratorbi.com.au/feed/",
+      "website_url": "https://exceleratorbi.com.au/blogs/",
+      "description": "Matt Allington is a career expert in BI in using data to deliver business value. Matt is a Microsoft MVP that specializes in Power BI, Power Pivot and Power Query.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 8900
+      },
+      "image_url": "https://i1.feedspot.com/4924908.jpg?t=1620902988"
+    },
+    {
+      "title": "Fourmoo Blog",
+      "feed_url": "https://www.fourmoo.com/blog/feed/",
+      "website_url": "https://www.fourmoo.com/blog/",
+      "description": "FourMoo detailing how it uses Microsoft Power BI as their platform of choice for all reporting capabilities. A blog on Power BI by Microsoft MVP Gilbert Quevauvillie",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4924936.jpg?t=1620902993"
+    },
+    {
+      "title": "Power BI Tips and Tricks",
+      "feed_url": "https://powerbi.tips/feed/",
+      "website_url": "https://powerbi.tips/",
+      "description": "Power BI Tips and Tricks provides Free Tutorials to users of Power BI. Find all the great and free Tutorials provided by PowerBI. Tips to help make you an effective data analyst.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 20200
+      },
+      "image_url": "https://i1.feedspot.com/4924928.jpg?t=1620903006"
+    },
+    {
+      "title": "Goodly Blog",
+      "feed_url": "https://goodly.co.in/feed/",
+      "website_url": "https://goodly.co.in/blog/",
+      "description": "A comprehensive course to learn DAX step by step & solve real-time problems in Power BI. Blog posts cover Power Query, Excel Tips & Tricks, Excel Challenges, Vlookup, Dashboards & Visualizations, Pivot Tables, and Financial Modeling. Authored by Chandeep Chhabra.",
+      "followers": {
+        "facebook": 687
+      },
+      "image_url": "https://i1.feedspot.com/5285980.jpg?t=1622275663"
+    },
+    {
+      "title": "Analytics Vidhya \u00bb Power BI",
+      "feed_url": "https://www.analyticsvidhya.com/blog/category/power-bi/feed/",
+      "website_url": "https://www.analyticsvidhya.com/blog/category/power-bi/",
+      "description": "Read expert-written articles on Power BI only on Analytics Vidhya. Analytics Vidhya provides a community-based knowledge portal for Analytics and Data Science professionals. The aim of the platform is to become a complete portal serving all knowledge and career needs of Data Science Professionals.",
+      "followers": {
+        "facebook": 95600,
+        "twitter": 30600
+      },
+      "image_url": "https://i1.feedspot.com/5395649.jpg?t=1651306685"
+    },
+    {
+      "title": "BI Polar \u00bb Power BI",
+      "feed_url": "https://ssbipolar.com/category/power-bi/feed/",
+      "website_url": "https://ssbipolar.com/category/power-bi/",
+      "description": "Read posts about Power BI written by Matthew Roche in the following segment of the blog. This is my personal blog. I'll probably post about Power BI, Azure, and general data-related topics. I'll probably post about cooking and baking. I'll probably post about mental health and diversity. I'll almost certainly post about heavy metal and swords. The tone will likely be irreverent because the voice will be mine - as will all the opinions.",
+      "followers": {
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5395644.jpg?t=1651306662"
+    },
+    {
+      "title": "Inforiver Blog",
+      "feed_url": "https://inforiver.com/feed/",
+      "website_url": "https://inforiver.com/blogs/",
+      "description": "Let's explore Inforiver blogs and learn how Inforiver delivers the best of both worlds, spreadsheets, and standardized reporting & visualization software through a low-code / no-code architecture. Inforiver delivers the simplicity, flexibility, and power of spreadsheets right within Microsoft Power BI. It offers a comprehensive solution for BI + EPM + CPM.",
+      "followers": {
+        "facebook": 50,
+        "twitter": 106
+      },
+      "image_url": "https://i1.feedspot.com/5395647.jpg?t=1651306674"
+    },
+    {
+      "title": "ThinkBI",
+      "feed_url": "https://www.thinkbi.de/category/english-posts/feed/",
+      "website_url": "https://www.thinkbi.de/category/english-posts/",
+      "description": "Hi, I'm Marcus Wegener. Due to my job, my heart beats for the topic of Business Intelligence from Microsoft and especially for the topic of Power BI. I hope you find something useful in my blog or just enjoy it. Otherwise, it's just another business intelligence blog.",
+      "followers": {
+        "twitter": 674
+      },
+      "image_url": "https://i1.feedspot.com/5395648.jpg?t=1651306678"
+    },
+    {
+      "title": "Power BI Kingdom",
+      "feed_url": "https://excelkingdom.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://excelkingdom.blogspot.com/",
+      "description": "The Power BI Blog for Professional Learning of the Microsoft Power BI, SQL Server, T-SQL, ETL, R Programming, and Excel VBA Macros",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4777480.jpg?t=1651316117"
+    },
+    {
+      "title": "Carl de Souza",
+      "feed_url": "https://carldesouza.com/feed/",
+      "website_url": "https://carldesouza.com/",
+      "description": "Hi, I'm Carl. I am a Microsoft developer with 20 years of experience helping businesses become better. My focus has been on Dynamics 365, Power BI, Azure, and Power Apps, and over the years I have built applications using several other Microsoft technologies. I hope you save some time resolving problems by using my site, while also building fantastic products and accelerating your career.",
+      "followers": {
+        "twitter": 841
+      },
+      "image_url": "https://i1.feedspot.com/5325303.jpg?t=1651316692"
+    },
+    {
+      "title": "Addend Analytics Blog",
+      "feed_url": "https://addendanalytics.com/feed",
+      "website_url": "https://addendanalytics.com/blog",
+      "description": "Keep up with the latest power bi, announcements, information, and new features on our blog. We are a young and rapidly growing Data Analytics consultancy. We specialize in the application of Business Intelligence and Data Science tools to solve business challenges. From our office in Mumbai, India, we provide end-to-end solutions to our global clients.",
+      "followers": {
+        "twitter": 25
+      },
+      "image_url": "https://i1.feedspot.com/5325293.jpg?t=1651315869"
+    },
+    {
+      "title": "Power BI Weekly",
+      "feed_url": "https://powerbiweekly.info/rss.xml",
+      "website_url": "https://powerbiweekly.info/",
+      "description": "Power BI Weekly is a collation of the week's top news and articles from the Power BI ecosystem, all presented to you in one place.",
+      "followers": {
+        "twitter": 12100
+      },
+      "image_url": "https://i1.feedspot.com/5092448.jpg?t=1651318565"
+    },
+    {
+      "title": "Christian Steven Bi- Blog",
+      "feed_url": "https://go.christiansteven.com/bi-blog/rss.xml",
+      "website_url": "https://go.christiansteven.com/bi-blog",
+      "description": "ChristianSteven Software delivers advanced Business Intelligence (BI) solutions that solve mission-critical large enterprise needs and includes reporting, distribution, scheduling, dashboards and automating business processes.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 3900,
+        "instagram": 93
+      },
+      "image_url": "https://i1.feedspot.com/4511969.jpg?t=1612884211"
+    },
+    {
+      "title": "Paul Turley's SQL Server BI Blog",
+      "feed_url": "https://sqlserverbi.blog/feed/",
+      "website_url": "https://sqlserverbi.blog/",
+      "description": "Sharing my experiences with SQL Server BI, Data Modeling, SSAS Design, Power Pivot, Power BI, SSRS Advanced Design, Dashboards & Visualization",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4512229.jpg?t=1651314898"
+    },
+    {
+      "title": "BARC Reviews",
+      "feed_url": "https://barc.com/feed/",
+      "website_url": "https://barc.com/reviews/",
+      "description": "Based on a sample of over 2,400 survey responses, The BI & Analytics Survey 22 offers an unsurpassed level of user feedback on 30 leading business intelligence solutions. Our research covers issues ranging from the purchase cycle right through to deployment, including critical information on performance levels, scalability and problems encountered.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5395638.jpg?t=1651306630"
+    },
+    {
+      "title": "SQLBI",
+      "feed_url": "https://feeds.feedburner.com/sqlbi_blog",
+      "website_url": "https://www.sqlbi.com/articles/",
+      "description": "Articles and whitepapers about BI technologies from renowned experts and book authors. We are a small team of experts in Business Intelligence technologies and data presentation.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 490
+      },
+      "image_url": "https://i1.feedspot.com/5012121.jpg?t=1651314878"
+    },
+    {
+      "title": "RADACAD Blog",
+      "feed_url": "https://radacad.com/feed",
+      "website_url": "https://radacad.com/blog",
+      "description": "Learn Power BI from tons of free easy-to-read and comprehensive articles with live demos and samples, beginner to advanced levels. RADACAD was founded by a group of highly specialized consultants and mentors with many years of experience in Data Analytics training and consulting. We provide Consulting and Training services for companies worldwide with their Business Intelligence solutions, Data Analytics, Information Management, Master Data Management, Power BI, and Azure Data Solutions.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5395639.jpg?t=1651306636"
+    },
+    {
+      "title": "Perficient Blogs \u00bb Power-Bi",
+      "feed_url": "https://blogs.perficient.com/tag/power-bi/feed/",
+      "website_url": "https://blogs.perficient.com/tag/power-bi/",
+      "description": "Stay tuned with the experts of Perficient Blogs to read more about Power-Bi. We're a global digital consultancy transforming how the world's biggest brands connect with customers and grow their business. With Perficient, you get experience and expertise, speed and agility, and a healthy dose of pragmatism to drive your business forward.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/5395640.jpg?t=1651306643"
+    },
+    {
+      "title": "Data Chant",
+      "feed_url": "https://datachant.com/feed/",
+      "website_url": "https://datachant.com/",
+      "description": "DataChant.com is your next step in mastering Power Query and Power BI. Join DataChant's exploration into Microsoft's best and most comprehensive data analytics stack.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5298740.jpg?t=1651313313"
+    },
+    {
+      "title": "Prathy's Blog",
+      "feed_url": "https://prathy.com/feed/",
+      "website_url": "https://prathy.com/",
+      "description": "A blog on Power BI by Microsoft MVP Prathyusha Kamasani.",
+      "followers": {
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4924913.jpg?t=1620903034"
+    },
+    {
+      "title": "Insight Quest \u00bb Power BI",
+      "feed_url": "https://insightsquest.com/category/power-bi/feed/",
+      "website_url": "https://insightsquest.com/category/power-bi/",
+      "description": "A blog on Power BI by BI Consultant, Brett Powell.",
+      "followers": {
+        "twitter": 401
+      },
+      "image_url": "https://i1.feedspot.com/4924915.jpg?t=1620902998"
+    },
+    {
+      "title": "DataVeld",
+      "feed_url": "https://dataveld.com/feed/",
+      "website_url": "https://dataveld.com/",
+      "description": "A blog on Power BI by Microsoft MVP David Eldersveld. Where David Eldersveld intended to showcase Data Analysis but now primarily writes about Microsoft Power BI.",
+      "followers": {
+        "twitter": 9600
+      },
+      "image_url": "https://i1.feedspot.com/4924923.jpg?t=1620903002"
+    },
+    {
+      "title": "The BIccountant",
+      "feed_url": "https://www.thebiccountant.com/feed/",
+      "website_url": "https://www.thebiccountant.com/",
+      "description": "Hello and welcome to my blog! My name is Imke Feldmann and here I will share my ideas and concepts about utilizing Microsoft's cool new BI tools primarily in the Finance and Accounting area.",
+      "followers": {
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/4924919.jpg?t=1620903010"
+    },
+    {
+      "title": "Kasper On BI",
+      "feed_url": "https://www.kasperonbi.com/feed/",
+      "website_url": "https://www.kasperonbi.com/",
+      "description": "A blog on Power BI by passionate BI practitioner and Microsoft Power BI specialized Kasper de Jonge.",
+      "followers": {
+        "twitter": 10300
+      },
+      "image_url": "https://i1.feedspot.com/4924912.jpg?t=1620903014"
+    },
+    {
+      "title": "workingondata \u00bb Power BI",
+      "feed_url": "https://workingondata.wordpress.com/category/powerbi/feed/",
+      "website_url": "https://workingondata.wordpress.com/category/powerbi/",
+      "description": "The following section of Working On Data features articles on Power BI. Hello, my name is Wolfgang Strasser and I am a Data Consultant living in Austria. This blog site features my thoughts about data-related technologies, Power BI, data processing, databases, SSIS (those are SQL Server Integration Services), ETL, and everything data-related in general.",
+      "followers": {
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5395645.jpg?t=1651306667"
+    },
+    {
+      "title": "PBI Guy Blog",
+      "feed_url": "https://pbi-guy.com/feed/",
+      "website_url": "https://pbi-guy.com/blog/",
+      "description": "My name is Kristian Bubalo and I'm a specialist in Microsoft Power BI. Working for Microsoft I help a lot of customers understand what Power BI is, how they can use it, what are the benefits of the tool and how to integrate it into their landscape. I created a blog to elaborate on challenges everyone is facing, share some tips and tricks, and talk about best practices I see.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5395637.jpg?t=1651319346"
+    },
+    {
+      "title": "The Self-Service-Bi Blog",
+      "feed_url": "https://ssbi-blog.de/blog/technical-topics-english/feed/",
+      "website_url": "https://ssbi-blog.de/blog/technical-topics-english/",
+      "description": "I'm Lars Schreiber. While all the other posts on this blog are in German, the Technical Topics are my way to contribute to the international Power BI community. The intention is to help others with these great tools and to learn from getting your comments. I am a freelance Power BI consultant, developer, and trainer and have received multiple MVP awards from Microsoft. I work with a competent network of freelance and ambitious colleagues.",
+      "followers": {
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5395653.jpg?t=1651306702"
+    },
+    {
+      "title": "Power BI Influential Blog",
+      "feed_url": "https://www.powerbi-influential.com/feed/",
+      "website_url": "https://www.powerbi-influential.com/blog/",
+      "description": "Influential has been providing BI expertise to the UK's leading organizations since 1993. We're a Microsoft Gold Partner and Power BI agency with offices in London and Kent.",
+      "followers": {
+        "facebook": 497,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5395646.jpg?t=1651306672"
+    },
+    {
+      "title": "Ben's Blog \u00bb Power BI",
+      "feed_url": "https://datakuity.com/category/power-bi/feed/",
+      "website_url": "https://datakuity.com/category/power-bi/",
+      "description": "Follow and read Ben's articles on Power BI here. I'm Ben Fedit, a business intelligence consultant who helps people better understand their data and use it to learn and make better decisions. I mainly focus on Microsoft technology, doing data modeling, data warehouse design, Analysis Services, Power BI, and data visualization.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5395652.jpg?t=1651316201"
+    },
+    {
+      "title": "Microsoft Power BI Consulting Blog",
+      "feed_url": "https://powerbiconsulting.com/feed/",
+      "website_url": "https://debbiesmspowerbiazureblog.home.blog/",
+      "description": "Microsoft Power BI Dashboards Step by Step guides you through creating world-class business analysis dashboards that integrate today's most widely-used data sources, using any of Microsoft's Power BI platforms, including the new Power BI Premium.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5395650.jpg?t=1651316456"
+    },
+    {
+      "title": "Debbies Microsoft Power BI, SQL and Azure Blog",
+      "feed_url": "https://debbiesmspowerbiazureblog.home.blog/feed/",
+      "website_url": "https://debbiesmspowerbiazureblog.home.blog/",
+      "description": "My name is Debbie Edwards and I'm passionate about Business Intelligence and how it can take data to the next level. I have been working in Business Intelligence for over 17 years and have delivered many projects. As far as I'm concerned, no matter how long you have been in the Business Intelligence industry there is still lots to learn so I thought I would set up a blog to share any new knowledge or things to watch out for with everyone.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5325183.jpg?t=1651317683"
+    },
+    {
+      "title": "Enterprise DNA Blog",
+      "feed_url": "https://blog.enterprisedna.co/feed/",
+      "website_url": "https://blog.enterprisedna.co/",
+      "description": "At Enterprise DNA, we are empowering the most valuable Power BI users to expand their analytical thinking and insight generation possibilities. We have all the training, tools, and guidance to unify and upskill the Power BI analysts in your workplace",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5298745.jpg?t=1651314475"
+    },
+    {
+      "title": "phData \u00bb Microsoft Power Platform Insights",
+      "feed_url": "https://www.phdata.io/microsoft-power-platform-insights/",
+      "website_url": "https://www.phdata.io/microsoft-power-platform-insights/",
+      "description": "The following section of phData is dedicated to Power BI. Founded in 2014 by three leading cloud engineers, phData focuses on solving real-world business data and analytics problems with the best cloud platforms and products. phData brings together the world's most talented data scientists, consultants, engineers, and architects for expert cloud services.",
+      "followers": {
+        "facebook": 252,
+        "twitter": 1200,
+        "instagram": 428
+      },
+      "image_url": "https://i1.feedspot.com/5395642.jpg?t=1651306653"
+    },
+    {
+      "title": "Seer Interactive Blog \u00bb Data Visualization",
+      "feed_url": "https://www.seerinteractive.com/insights/tag/data-visualization/",
+      "website_url": "https://www.seerinteractive.com/insights/tag/data-visualization/",
+      "description": "the following section of Seer Interactive features articles on Power-Bi. We're a team of passionate, data-driven digital marketers committed to connecting communities around common purpose and innovative solutions. We are a digital marketing agency leveraging big data to find valuable insights that impact our clients' bottom line at scale.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 20200,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5395655.jpg?t=1651315271"
+    },
+    {
+      "title": "SA Technologies Blog",
+      "feed_url": "https://www.satincorp.com/feed",
+      "website_url": "https://www.satincorp.com/blog",
+      "description": "SA Technologies is an IT Consulting company with 17+ years of experience and a team of 600 experts. Read Our Latest Blogs related to Google Cloud, AI, Microsoft, Azure, and more.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 521
+      },
+      "image_url": "https://i1.feedspot.com/5282928.jpg?t=1621582206"
+    },
+    {
+      "title": "Ruki's Blog",
+      "feed_url": "https://rukiatu.com/feed/",
+      "website_url": "https://rukiatu.com/",
+      "description": "I'm Ruki Collier, currently working as a Power BI Customer Engineer at Microsoft. I am very passionate about data and I believe data technology can help us make better business decisions. This blog is all about data and a new way of learning new analytics technologies in addition to having fun.",
+      "followers": {
+        "facebook": 992
+      },
+      "image_url": "https://i1.feedspot.com/5395651.jpg?t=1651319167"
+    },
+    {
+      "title": "Kerry Kolosko",
+      "feed_url": "https://kerrykolosko.com/feed",
+      "website_url": "https://kerrykolosko.com/",
+      "description": "A data viz enthusiast residing in Australia, I share my journey and learnings in reporting, data viz, and data storytelling. As someone with an educational background in business and the social sciences, along with a strong passion for the arts, this blog contains a mix of How-Tos, creative experimentations, interpretations of the psychology of design, and general philosophical ramblings.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5325199.jpg?t=1651312533"
+    },
+    {
+      "title": "Guy in a Cube",
+      "feed_url": "https://guyinacube.com/feed/",
+      "description": "Weekly videos to help you master business intelligence on the Microsoft stack! We share tips and tricks, answer questions, and are more focused on Power BI, Reporting Services, and Analysis Services. Guy in a Cube is all about helping you master business analytics on the Microsoft Business analytics stack to allow you to drive business growth.",
+      "followers": {
+        "facebook": 8200,
+        "twitter": 28700
+      },
+      "image_url": "https://i1.feedspot.com/5065324.jpg?t=1651319460"
+    }
+  ]
+}

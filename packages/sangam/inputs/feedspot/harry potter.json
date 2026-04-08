@@ -1,0 +1,198 @@
+{
+  "category": "Harry Potter",
+  "source_url": "https://rss.feedspot.com/harry_potter_rss_feeds",
+  "feeds": [
+    {
+      "title": "Muggle Net",
+      "feed_url": "https://www.mugglenet.com/feed/",
+      "website_url": "https://www.mugglenet.com/",
+      "description": "Muggle Net is the world's #1 Harry Potter site. It is your source for everything Harry Potter, the Wizarding World, and J.K. Rowling. Find the latest Harry Potter news, images, videos, discussion including Pottermore, The Wizarding World of Harry Potter and much more.",
+      "followers": {
+        "facebook": 848600,
+        "twitter": 329300
+      },
+      "image_url": "https://i1.feedspot.com/4730521.jpg?t=1607952225"
+    },
+    {
+      "title": "The Leaky Cauldron",
+      "feed_url": "http://www.the-leaky-cauldron.org/feed/",
+      "website_url": "http://www.the-leaky-cauldron.org/",
+      "description": "The Leaky Cauldron is an all-purpose site for the Harry Potter enthusiast. It started in 2000 as a badly designed one-page roll of news; it has now turned into a destination for fan entertainment and discussion, and has become the Harry Potter site of record, hosting the oldest and most comprehensive Potter news archive on the Web.",
+      "followers": {
+        "facebook": 274000,
+        "twitter": 156500
+      },
+      "image_url": "https://i1.feedspot.com/4730526.jpg?t=1607952229"
+    },
+    {
+      "title": "Hogwarts Professor",
+      "feed_url": "https://www.hogwartsprofessor.com/feed/",
+      "website_url": "https://www.hogwartsprofessor.com/",
+      "description": "Here you'll find a more serious take on the lessons and stories shared in the Harry Potter books for the discriminating Potter scholar.",
+      "followers": {
+        "twitter": 641
+      },
+      "image_url": "https://i1.feedspot.com/2112188.jpg?t=1607952209"
+    },
+    {
+      "title": "The Sun - Harry Potter",
+      "feed_url": "https://www.thesun.co.uk/topic/harry-potter/feed/",
+      "website_url": "https://www.thesun.co.uk/topic/harry-potter/",
+      "description": "Get the latest Harry Potter news, exclusives, showbiz and discussions from The Sun",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 2100000
+      },
+      "image_url": "https://i1.feedspot.com/4730849.jpg?t=1607952259"
+    },
+    {
+      "title": "Harry Potter Database Blog",
+      "feed_url": "https://www.harrypotterdatabase.com/blog?format=rss",
+      "website_url": "https://www.harrypotterdatabase.com/blog/",
+      "description": "Harry Potter Database is a website where fans and collectors can learn about the different Harry Potter books, movies, video games, figures, and many other collectibles.",
+      "followers": {
+        "facebook": 22,
+        "twitter": 12
+      },
+      "image_url": "https://i1.feedspot.com/5323525.jpg?t=1632138833"
+    },
+    {
+      "title": "Harry Potter Daily",
+      "feed_url": "https://harrypotterdailly.tumblr.com/rss",
+      "website_url": "https://harrypotterdailly.tumblr.com/",
+      "description": "Welcome to Harry Potter Daily. Harry Potter Daily is your daily dose of anything related to the Harry Potter series and its incredible cast. Here you'll find the latest news, photos, graphics, gifs and so much more",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4730572.jpg"
+    },
+    {
+      "title": "The Guardian - Harry Potter",
+      "feed_url": "https://www.theguardian.com/film/harrypotter/rss",
+      "website_url": "https://www.theguardian.com/film/harrypotter",
+      "description": "Get the latest Harry Potter news and features from Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4730747.jpg?t=1607952213"
+    },
+    {
+      "title": "Magical Menagerie",
+      "feed_url": "http://magical-menagerie.com/feed/",
+      "website_url": "http://magical-menagerie.com/",
+      "description": "Magical Menagerie is your one stop shop for the latest Harry Potter news, information, photos and the careers of it's actors.",
+      "followers": {
+        "facebook": 254,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4730535.jpg?t=1607952205"
+    },
+    {
+      "title": "Harry Potter Fan Zone",
+      "feed_url": "https://www.harrypotterfanzone.com/feed/",
+      "website_url": "https://www.harrypotterfanzone.com/",
+      "description": "Harry Potter Fan Zone is a J.K. Rowling 'Fan Site Award' winner with Fantastic Beasts Cursed Child news, information, pictures, videos, editorials, exclusive interviews, set reports and much more.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 3000,
+        "instagram": 218
+      },
+      "image_url": "https://i1.feedspot.com/4730543.jpg?t=1607952209"
+    },
+    {
+      "title": "Daily Potter",
+      "feed_url": "https://dailypotter.tumblr.com/rss",
+      "website_url": "https://dailypotter.tumblr.com/",
+      "description": "Daily Potter is a fan page about the Harry Potter series by J.K Rowling. Here you will find everything you need to know and remember this story how it deserves. Graphics, quotes, news, and so much more. We will never let the magic die.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1108283.jpg"
+    },
+    {
+      "title": "The Setup Wizard",
+      "feed_url": "https://thesetupwizard.tumblr.com/rss",
+      "website_url": "https://thesetupwizard.tumblr.com/",
+      "description": "The Setup Wizard is a work of Fan Fiction based on characters, locations, and events created by and creditied to J.K. Rowling. The characters are original creations, and all chronicled events are about as canon as 'My Immortal'.",
+      "followers": {
+        "facebook": 7200
+      },
+      "image_url": "https://i1.feedspot.com/4409878.jpg"
+    },
+    {
+      "title": "Harry Potter for Writers",
+      "feed_url": "http://harrypotterforwriters.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://harrypotterforwriters.blogspot.com/",
+      "description": "Welcome to my writing cave, where myth, magic, and mystery collide. Please come on in, step closer to the fire, and let's share some stories. For five years, writers and fans from all continents have used A Writer's Guide to Harry Potter to delve beneath J.K. Rowling pages' surface to discover the skill and artistry which created a story that enchanted audiences across generations.",
+      "followers": {
+        "facebook": 227,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4730565.jpg?t=1607952278"
+    },
+    {
+      "title": "A Muggle Meddling in Magic",
+      "feed_url": "http://feeds.feedburner.com/AMuggleMeddlingInMagic",
+      "website_url": "https://meddling-in-magic.blogspot.com/",
+      "description": "Jeff Gilbert knows little about the Harry Potter series of books by J.K. Rowling, only what he's heard here and there at home. He has taken up his daughters' challenge to spend his first free summer as a professor reading and commenting on the series.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4978552.jpg?t=1607952786"
+    },
+    {
+      "title": "Harry Potter and the Genderbending Blog",
+      "feed_url": "https://hpandthegenderbendingblog.tumblr.com/rss",
+      "website_url": "https://hpandthegenderbendingblog.tumblr.com/",
+      "description": "A blog for fans of genderbent Harry Potter, whether it be just one character or the entire crew, cis or trans. From graphics to fan-fiction, and perhaps even a splash of roleplaying, we're your one-stop shop for a fix of everything HP",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4730727.jpg?t=1504611523"
+    },
+    {
+      "title": "BuzzFeed",
+      "feed_url": "https://www.buzzfeed.com/tag/harry_potter.xml",
+      "website_url": "https://www.buzzfeed.com/topic/harry-potter",
+      "description": "BuzzFeed is building the defining news and entertainment company for the social mobile age. Catch the latest Harry Potter Buzz on BuzzFeed",
+      "followers": {
+        "facebook": 13300000,
+        "twitter": 6100000
+      },
+      "image_url": "https://i1.feedspot.com/4730840.jpg?t=1607952217"
+    },
+    {
+      "title": "The Real Harry",
+      "feed_url": "https://potterheadcanon.tumblr.com/rss",
+      "website_url": "https://potterheadcanon.tumblr.com/",
+      "description": "We are a blog dedicated to sharing personal headcanons of the Harry Potter world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4730703.jpg?t=1504173438"
+    },
+    {
+      "title": "Harry Potter Confessions",
+      "feed_url": "https://harrypotterconfessions.tumblr.com/rss",
+      "website_url": "https://harrypotterconfessions.tumblr.com/",
+      "description": "Harry Potter Confessions collects confessions from fans around tumblr who have something they'd like to say.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4730721.jpg"
+    },
+    {
+      "title": "Potter Talk",
+      "feed_url": "https://www.pottertalk.net/feeds/posts/default?alt=rss",
+      "website_url": "https://www.pottertalk.net/",
+      "description": "Potter Talk is a Harry Potter blog conjuring discussions and news about J.K Rowling's wizarding books, movies, theme parks, Fantastic Beasts spin-off, the Cursed Child Play and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4730597.jpg?t=1607952877"
+    },
+    {
+      "title": "Funny Harry Potter",
+      "feed_url": "https://funnyharrypotter.tumblr.com/rss",
+      "website_url": "https://funnyharrypotter.tumblr.com/",
+      "description": "I probably started this blog before I knew what a meme was, but look here I am still going strong.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4730833.jpg"
+    },
+    {
+      "title": "ACCIORON",
+      "feed_url": "https://accioron.tumblr.com/rss",
+      "website_url": "https://accioron.tumblr.com/",
+      "description": "I'm Christine and I love Harry Potter. ACCIORON is basically about Harry Potter.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4730715.jpg?t=1504173932"
+    }
+  ]
+}

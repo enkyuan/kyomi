@@ -1,0 +1,79 @@
+{
+  "category": "Pulmonology",
+  "source_url": "https://rss.feedspot.com/pulmonology_rss_feeds",
+  "feeds": [
+    {
+      "title": "Pulmonary Hypertension News",
+      "feed_url": "https://pulmonaryhypertensionnews.com/feed/",
+      "website_url": "https://pulmonaryhypertensionnews.com/",
+      "description": "Pulmonary Hypertension News is a digital news publication dedicated to offering comprehensive daily news coverage of PH.",
+      "followers": {
+        "facebook": 12900,
+        "twitter": 4800,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4980193.jpg?t=1622038007"
+    },
+    {
+      "title": "Pulmonary Hypertension Blog",
+      "feed_url": "http://pulmonaryhypertensionrn.com/blog/feed/",
+      "website_url": "https://pulmonaryhypertensionrn.com/blog/",
+      "description": "Pulmonary Hypertension RN is an educational resource for patients, caregivers, friends, and family members interested in learning about PAH. Pulmonary Arterial Hypertension Blog, where you can find the latest information on PAH and daily living with Pulmonary Hypertension.",
+      "followers": {
+        "twitter": 28
+      },
+      "image_url": "https://i1.feedspot.com/4980185.jpg?t=1622038013"
+    },
+    {
+      "title": "Fluidda Blog",
+      "feed_url": "https://www.fluidda.com/feed/",
+      "website_url": "https://www.fluidda.com/blog/",
+      "description": "Fluidda is all about understanding lung pathology and physiology. Fluidda is the world leader in the field of Functional Respiratory Imaging (FRI) research and development.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 355
+      },
+      "image_url": "https://i1.feedspot.com/4980189.jpg?t=1622038020"
+    },
+    {
+      "title": "MXBowen Physician, P.C Blog \u00bb Pulmonologist",
+      "feed_url": "https://www.mxbowenppc.com/blog/feed/",
+      "website_url": "https://www.mxbowenppc.com/category/pulmonologist/",
+      "description": "Get the latest news on pulmonary and respiratory conditions and treatment options on NYC pulmonologist Dr. Marc Bowen's breathing & healthcare blog.",
+      "followers": {
+        "facebook": 484,
+        "twitter": 35
+      },
+      "image_url": "https://i1.feedspot.com/4980102.jpg?t=1622038024"
+    },
+    {
+      "title": "Sabari Lung Care Clinic",
+      "feed_url": "https://www.sabarilungcareclinic.com/all-posts/feed/",
+      "website_url": "https://www.sabarilungcareclinic.com/all-posts/",
+      "description": "Dr. Sabarinath Ravichandar is one of the best Pulmonologists in Chennai. He is specialized in Asthma, Lung Cancer, Sinus, TB and other pulmonary diseases. As a leading Pulmonologist in Velachery, he delivers the best healthcare to the patients.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5042886.jpg?t=1622038066"
+    },
+    {
+      "title": "PulmCCM Blog",
+      "feed_url": "https://pulmccm.org/feed/",
+      "website_url": "https://www.pulmccm.org/",
+      "description": "PulmCCM Journal is an online peer-reviewed journal offering clinical reviews of topics in critical care and respiratory medicine. All the best in pulmonary and critical care: a literature review, board review questions, and more.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 11900
+      },
+      "image_url": "https://i1.feedspot.com/4980105.jpg?t=1622038093"
+    },
+    {
+      "title": "Action for Pulmonary Fibrosis",
+      "feed_url": "https://www.actionpf.org/",
+      "description": "APF is a charity dedicated to supporting people with pulmonary fibrosis including IPF (Idiopathic Pulmonary Fibrosis). A world in which everyone living with Pulmonary Fibrosis has a better future.",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/4980197.jpg?t=1622038061"
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "category": "Evening Standard",
+  "source_url": "https://rss.feedspot.com/evening_standard_rss_feeds",
+  "feeds": [
+    {
+      "title": "Evening Standard",
+      "feed_url": "https://www.standard.co.uk/rss",
+      "website_url": "https://www.standard.co.uk/",
+      "description": "Latest London news, business, sport, showbiz and entertainment from the London Evening Standard.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 687600,
+        "instagram": 221300
+      },
+      "image_url": "https://i1.feedspot.com/4896210.jpg?t=1686554985"
+    },
+    {
+      "title": "Evening Standard \u00bb News",
+      "feed_url": "https://www.standard.co.uk/news/rss",
+      "website_url": "https://www.standard.co.uk/news",
+      "description": "All the latest news in London, around the UK and the world from the London Evening Standard",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 687600
+      },
+      "image_url": "https://i1.feedspot.com/149312.jpg?t=1686555011"
+    },
+    {
+      "title": "Evening Standard \u00bb World News",
+      "feed_url": "https://www.standard.co.uk/news/world/rss",
+      "website_url": "https://www.standard.co.uk/news/world",
+      "description": "International breaking news, features and analysis from the Evening Standard.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 687600
+      },
+      "image_url": "https://i1.feedspot.com/4886934.jpg?t=1686555098"
+    },
+    {
+      "title": "Evening Standard \u00bb UK News",
+      "feed_url": "https://www.standard.co.uk/news/uk/rss",
+      "website_url": "https://www.standard.co.uk/news/uk",
+      "description": "Latest news, features and breaking headlines from around the UK from the Evening Standard.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 687600
+      },
+      "image_url": "https://i1.feedspot.com/5323253.jpg?t=1686555161"
+    },
+    {
+      "title": "Evening Standard \u00bb London",
+      "feed_url": "https://www.standard.co.uk/news/london/rss",
+      "website_url": "https://www.standard.co.uk/news/london",
+      "description": "Latest London news, headlines and breaking updates in the capital from the Evening Standard",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 687600
+      },
+      "image_url": "https://i1.feedspot.com/5595316.jpg?t=1686555142"
+    },
+    {
+      "title": "London Evening Standard \u00bb Sport",
+      "feed_url": "https://www.standard.co.uk/sport/rss",
+      "website_url": "https://www.standard.co.uk/sport",
+      "description": "Sports news and breaking stories including football, tennis, F1, golf, boxing, cricket and rugby.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 191300
+      },
+      "image_url": "https://i1.feedspot.com/4918556.jpg?t=1686555207"
+    },
+    {
+      "title": "Evening Standard \u00bb Business",
+      "feed_url": "https://www.standard.co.uk/business/rss",
+      "website_url": "https://www.standard.co.uk/business",
+      "description": "Business news, interviews, FTSE latest and features from the City desk of the London Evening Standard.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 687600
+      },
+      "image_url": "https://i1.feedspot.com/586832.jpg?t=1686555046"
+    },
+    {
+      "title": "Evening Standard \u00bb Politics",
+      "feed_url": "https://www.standard.co.uk/news/politics/rss",
+      "website_url": "https://www.standard.co.uk/news/politics",
+      "description": "Latest breaking news and political analysis from Westminster from the London Evening Standard.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 687600
+      },
+      "image_url": "https://i1.feedspot.com/5323267.jpg?t=1686555181"
+    },
+    {
+      "title": "Evening Standard \u00bb Crime",
+      "feed_url": "https://www.standard.co.uk/news/crime/rss",
+      "website_url": "https://www.standard.co.uk/news/crime",
+      "description": "Latest crime headlines, news and breaking stories from the London Evening Standard.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 687600
+      },
+      "image_url": "https://i1.feedspot.com/5323261.jpg?t=1686555063"
+    },
+    {
+      "title": "Evening Standard \u00bb Health",
+      "feed_url": "https://www.standard.co.uk/news/health/rss",
+      "website_url": "https://www.standard.co.uk/news/health",
+      "description": "Latest health news, NHS updates and medical stories from London, the UK and around the world from the Evening Standard.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 687600
+      },
+      "image_url": "https://i1.feedspot.com/5595315.jpg?t=1686554984"
+    },
+    {
+      "title": "Evening Standard \u00bb Showbiz",
+      "feed_url": "https://www.standard.co.uk/showbiz/rss",
+      "website_url": "https://www.standard.co.uk/showbiz",
+      "description": "Get the latest London news, business, sport, showbiz, entertainment, and more. Evening Standard is a news publishing company. It delivers news from all sectors of the world. From sports to culture to business and politics.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 687600
+      },
+      "image_url": "https://i1.feedspot.com/586836.jpg?t=1686555118"
+    },
+    {
+      "title": "London Evening Standard \u00bb Homes & Property",
+      "feed_url": "https://www.standard.co.uk/homesandproperty/rss",
+      "website_url": "https://www.standard.co.uk/homesandproperty",
+      "description": "Uncover news, area guides, latest house prices, interiors, and features for the London property market. Visit now for the latest news direct from Evening Standard Homes & Property and updated throughout the day. London Evening Standard is an award-winning publication covering the city with poise and comprehensiveness.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 687600,
+        "instagram": 221300
+      },
+      "image_url": "https://i1.feedspot.com/5688822.jpg?t=1697199058"
+    },
+    {
+      "title": "London Evening Standard \u00bb Music",
+      "feed_url": "https://www.standard.co.uk/culture/music/rss",
+      "website_url": "https://www.standard.co.uk/culture/music",
+      "description": "All the latest music news and reviews from new songs and festivals to London gigs, concerts and tour tickets",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 687600,
+        "instagram": 221300
+      },
+      "image_url": "https://i1.feedspot.com/8535944.jpg"
+    },
+    {
+      "title": "London Evening Standard \u00bb Cricket",
+      "feed_url": "https://www.standard.co.uk/sport/cricket/rss",
+      "website_url": "https://www.standard.co.uk/sport/cricket",
+      "description": "Latest London news, business, sport, showbiz and entertainment from the London Evening Standard.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 687600,
+        "instagram": 221300
+      },
+      "image_url": "https://i1.feedspot.com/8535943.jpg"
+    },
+    {
+      "title": "London Evening Standard \u00bb Football",
+      "feed_url": "https://www.standard.co.uk/sport/football/rss",
+      "website_url": "https://www.standard.co.uk/sport/football",
+      "description": "All the latest football news, scores, fixtures, results, gossip and transfer news from around the world.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 687600,
+        "instagram": 221300
+      },
+      "image_url": "https://i1.feedspot.com/4896210.jpg?t=1686554985"
+    },
+    {
+      "title": "London Evening Standard \u00bb Going Out",
+      "feed_url": "https://www.standard.co.uk/going-out/rss",
+      "website_url": "https://www.standard.co.uk/going-out",
+      "description": "Restaurant reviews in London, things to do in the capital, guides and the best bars and pubs from The London Standard",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 687600,
+        "instagram": 221300
+      },
+      "image_url": "https://i1.feedspot.com/8535942.jpg"
+    },
+    {
+      "title": "London Evening Standard \u00bb Culture",
+      "feed_url": "https://www.standard.co.uk/culture/rss",
+      "website_url": "https://www.standard.co.uk/culture",
+      "description": "Theatre, film, TV, music and visual arts news, reviews and features from The Standard's arts desk",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 687600,
+        "instagram": 221300
+      },
+      "image_url": "https://i1.feedspot.com/8535945.jpg"
+    },
+    {
+      "title": "London Evening Standard \u00bb Lifestyle",
+      "feed_url": "https://www.standard.co.uk/lifestyle/rss",
+      "website_url": "https://www.standard.co.uk/lifestyle",
+      "description": "Travel news & destination reviews plus fashion, people, wellness and beauty guides from The Standard.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 687600,
+        "instagram": 221300
+      },
+      "image_url": "https://i1.feedspot.com/4896210.jpg?t=1686554985"
+    }
+  ]
+}

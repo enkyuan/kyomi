@@ -1,0 +1,40 @@
+{
+  "category": "Africa Military",
+  "source_url": "https://rss.feedspot.com/africa_military_rss_feeds",
+  "feeds": [
+    {
+      "title": "DefenceWeb",
+      "feed_url": "https://www.defenceweb.co.za/feed/",
+      "website_url": "https://www.defenceweb.co.za/",
+      "description": "defenceWeb is Africa's largest and most trusted online source of news, information, research and insight on aerospace, defence and security matters.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 11300,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5402443.jpg?t=1653024713"
+    },
+    {
+      "title": "The Defense Post \u00bb Africa",
+      "feed_url": "https://thedefensepost.com/category/africa/feed/",
+      "website_url": "https://thedefensepost.com/category/africa/",
+      "description": "Find the latest defense news, updates, analysis, opinions and more in Africa by the The Defense Post. The Defense Post is a leading independent security and defense news publication dedicated defense-related news, reports and developments from the United States and around the world.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 16100
+      },
+      "image_url": "https://i1.feedspot.com/5402442.jpg?t=1653024598"
+    },
+    {
+      "title": "General Military Surplus Blog",
+      "feed_url": "https://gmsmilitarysurplus.co.za/blogs/news.atom",
+      "website_url": "https://gmsmilitarysurplus.co.za/blogs/news",
+      "description": "General Military Surplus specializes in new and used military surplus parkas, field jackets, shirts, and accessories. These are highly sought-after items as protective outerwear as well for anyone looking for good quality, highly durable, flexible outdoor garment or even a fashion statement.",
+      "followers": {
+        "facebook": 5300,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5399247.jpg?t=1652159108"
+    }
+  ]
+}

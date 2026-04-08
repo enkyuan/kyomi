@@ -1,0 +1,700 @@
+{
+  "category": "Database",
+  "source_url": "https://rss.feedspot.com/database_rss_feeds",
+  "feeds": [
+    {
+      "title": "Oracle Database Blog",
+      "feed_url": "https://blogs.oracle.com/database/rss",
+      "website_url": "https://blogs.oracle.com/database/",
+      "description": "The official blog of Oracle Corporation. This blog shares News from Oracle's Database Team. They use this space to tell you the latest about the #1 database in the industry helping you optimize your move from on-premises to the cloud.",
+      "followers": {
+        "facebook": 256100,
+        "twitter": 188100
+      },
+      "image_url": "https://i1.feedspot.com/4621181.jpg?t=1616060405"
+    },
+    {
+      "title": "Planet MySQL Blog",
+      "feed_url": "https://planet.mysql.com/rss20.xml",
+      "website_url": "https://planet.mysql.com/",
+      "description": "The official blog of MySQL. The World's Most Popular Open Source Database. Oracle is investing in making better everyday - both products and community. MySQL powers the most demanding Web, E-commerce and Online Transaction Processing (OLTP) applications.",
+      "followers": {
+        "facebook": 530300,
+        "twitter": 223900
+      },
+      "image_url": "https://i1.feedspot.com/4431811.jpg?t=1616048696"
+    },
+    {
+      "title": "AWS Database Blog",
+      "feed_url": "https://aws.amazon.com/blogs/database/feed/",
+      "website_url": "https://aws.amazon.com/blogs/database/",
+      "description": "Amazon Web Services (AWS) delivers a set of services that together form a reliable, scalable, and inexpensive computing platform 'in the cloud'.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/4478149.jpg?t=1616060414"
+    },
+    {
+      "title": "MongoDB Blog",
+      "feed_url": "https://www.mongodb.com/blog/rss",
+      "website_url": "https://www.mongodb.com/blog",
+      "description": "MongoDB is the next-generation database that helps businesses transform their industries by harnessing the power of data. The world's most sophisticated organizations, from cutting-edge startups to the largest companies, use MongoDB to create applications never before possible at a fraction of the cost of legacy databases.",
+      "followers": {
+        "facebook": 250100,
+        "twitter": 499000,
+        "instagram": 140800
+      },
+      "image_url": "https://i1.feedspot.com/4457209.jpg?t=1608215611"
+    },
+    {
+      "title": "dbdev01555",
+      "feed_url": "https://dbdev01555.wordpress.com/feed/",
+      "website_url": "https://dbdev01555.wordpress.com/",
+      "description": "All things Oracle. APEX, Oracle Cloud, SQL, PL/SQL.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5568367.jpg?t=1684236166"
+    },
+    {
+      "title": "AMIS Oracle and Java Blog",
+      "feed_url": "https://technology.amis.nl/feed/",
+      "website_url": "https://technology.amis.nl/",
+      "description": "Welcome to the he most referred to Oracle technology knowledge base outside the oracle.com domain. Read our 3000 articles on Oracle and Java Technology.",
+      "followers": {
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4461911.jpg"
+    },
+    {
+      "title": "DBA Kevlar",
+      "feed_url": "https://dbakevlar.com/feed/",
+      "website_url": "https://dbakevlar.com/",
+      "description": "Tips, tricks, (and maybe a few rants) so more DBA's become bulletproof.",
+      "followers": {
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/847831.jpg?t=1616060553"
+    },
+    {
+      "title": "DBA survival BLOG",
+      "feed_url": "https://www.ludovicocaldara.net/dba/feed/",
+      "website_url": "https://www.ludovicocaldara.net/dba/",
+      "description": "Ludovico is an Oracle ACE Director, frequent speaker and community contributor, working as Senior Database Specialist for Trivadis, Switzerland.",
+      "followers": {
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/2423803.jpg"
+    },
+    {
+      "title": "Soumya's Database Blog",
+      "feed_url": "https://dbasoumya.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://dbasoumya.blogspot.com/",
+      "description": "A blog related to Different Databases i.e. Oracle, SQL Server , Mysql , Postgresql , Mongodb , Hadoop.",
+      "followers": {
+        "facebook": 216
+      },
+      "image_url": "https://i1.feedspot.com/4621281.jpg?t=1616060693"
+    },
+    {
+      "title": "Percona Database Performance Blog",
+      "feed_url": "https://www.percona.com/blog/feed/",
+      "website_url": "https://www.percona.com/blog/",
+      "description": "MySQL performance tips from Percona data performance experts. Learn to build and maintain high-performing MySQL, NoSQL, MongoDB, big data, cloud deployments.",
+      "followers": {
+        "facebook": 43500,
+        "twitter": 16500
+      },
+      "image_url": "https://i1.feedspot.com/4431810.jpg?t=1616048704"
+    },
+    {
+      "title": "SingleStore DB Blog",
+      "feed_url": "https://www.singlestore.com/blog/feed.xml",
+      "website_url": "https://www.singlestore.com/blog/",
+      "description": "The Database of Now. The cloud-native operational database for speed, scale, and SQL. SingleStore helps businesses adapt more quickly, embrace diverse data and accelerate digital innovation by operationalizing all data through one platform for all of their moments that matter.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 15600
+      },
+      "image_url": "https://i1.feedspot.com/1150224.jpg?t=1622098017"
+    },
+    {
+      "title": "Virtual-DBA - Remote Database Administration Blog",
+      "feed_url": "https://virtual-dba.com/blog/feed/",
+      "website_url": "https://virtual-dba.com/blog/",
+      "description": "A collection of blog posts from expert database DBA professionals that are the best in the business working for Virtual-DBA.",
+      "followers": {
+        "twitter": 166
+      },
+      "image_url": "https://i1.feedspot.com/4621712.jpg?t=1616060610"
+    },
+    {
+      "title": "DBsGuru",
+      "feed_url": "https://dbsguru.com/feed/",
+      "website_url": "https://dbsguru.com/",
+      "description": "DBsGuru is a group of experienced DBA professionals and serves the database and its related community by providing technical blogs, projects, training. Technical blogs are the source of vast information not about databases but its related product like middleware, PL/SQL, replication methodology, and so on. We are ready to accept all challenges.",
+      "followers": {
+        "twitter": 20
+      },
+      "image_url": "https://i1.feedspot.com/5196612.jpg?t=1607604645"
+    },
+    {
+      "title": "ThatJeffSmith",
+      "feed_url": "http://www.thatjeffsmith.com/feed/",
+      "website_url": "http://www.thatjeffsmith.com/",
+      "description": "ThatJeffSmith blog is about tips and tricks for Oracle SQL Developer, SQLcl, SQL Developer Data Modeler, and Oracle REST Data Services. My primary goal is to help you save time when working with Oracle Database. If I can ALSO make what you're currently doing a little more fun, then that's a big bonus for me.",
+      "followers": {
+        "twitter": 16200
+      },
+      "image_url": "https://i1.feedspot.com/1473217.jpg?t=1616046330"
+    },
+    {
+      "title": "Make DBA Life Easy Blog",
+      "feed_url": "https://dbalifeeasy.com/feed/",
+      "website_url": "https://dbalifeeasy.com/blog/",
+      "description": "Make DBA Life Easy Blog provides databases administrators, databases support, databases management, and databases users with valuable posts for Oracle Database, Microsoft SQL Server, AWS PostgreSQL RDS, etc.Each post is from real life, which includes useful step by step explanations that help you truly understand the issues you may encounter in real life.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5469320.jpg?t=1668774344"
+    },
+    {
+      "title": "Effective Database Management Blog",
+      "feed_url": "https://effectivedatabase.com/feed/",
+      "website_url": "https://effectivedatabase.com/blog/",
+      "description": "Effective Database Management (EDM) was founded by Wes Trochlil. For more than 30 years, Wes has provided a range of consulting services, from general consulting on data management issues to various organizations. This blog is all about Wes's thoughts, articles, and insights on Database Management.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5297690.jpg?t=1627396935"
+    },
+    {
+      "title": "Erman Arslan's Oracle Blog",
+      "feed_url": "http://ermanarslan.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://ermanarslan.blogspot.com/",
+      "description": "This blog reflects experiences of Erman Arslan gained from various Oracle projects that he has been involved in.",
+      "followers": {
+        "facebook": 101,
+        "twitter": 299
+      },
+      "image_url": "https://i1.feedspot.com/4638233.jpg"
+    },
+    {
+      "title": "Volt Active Data Blog",
+      "feed_url": "https://www.voltactivedata.com/feed/",
+      "website_url": "https://www.voltactivedata.com/blog/",
+      "description": "VoltDB is the only in-memory transactional database for modern applications that require an unprecedented combination of data scale, volume, and accuracy.",
+      "followers": {
+        "facebook": 861,
+        "twitter": 5800,
+        "instagram": 50
+      },
+      "image_url": "https://i1.feedspot.com/4623662.jpg?t=1616060547"
+    },
+    {
+      "title": "Data and Technology Today",
+      "feed_url": "https://datatechnologytoday.wordpress.com/feed/",
+      "website_url": "https://datatechnologytoday.wordpress.com/",
+      "description": "This blog is all about Data and Database Related News, Views, and Issues.",
+      "followers": {
+        "twitter": 8100
+      },
+      "image_url": "https://i1.feedspot.com/4621607.jpg"
+    },
+    {
+      "title": "Franck Pachot",
+      "feed_url": "https://dev.to/feed/franckpachot",
+      "website_url": "https://dev.to/franckpachot",
+      "description": "Covers posts about databases, SQL, PostgreSQL, YugabyteDB. Franck Pachot has experience of 20 years in databases from dev to prod - Oracle Certified Master, AWS Data Hero, PostgreSQL and YugabyteDB fan, loves to learn and share, and scale databases.",
+      "followers": {
+        "twitter": 14600
+      },
+      "image_url": "https://i1.feedspot.com/5337531.jpg?t=1635407455"
+    },
+    {
+      "title": "Pete Finnigan's Oracle security weblog",
+      "feed_url": "https://www.petefinnigan.com/weblog/entries/petefinnigan.rdf",
+      "website_url": "http://www.petefinnigan.com/weblog/entries/",
+      "description": "PeteFinnigan.com's weblog is the only weblog dedicated to Oracle security.",
+      "followers": {
+        "facebook": 531,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/696109.jpg?t=1616060697"
+    },
+    {
+      "title": "Technology Geek",
+      "feed_url": "https://osamaoracle.com/feed/",
+      "website_url": "https://osamaoracle.com/",
+      "description": "Osama Mustafa is a database specialist, Oracle ACE Director , Certified Oracle Professional (10g, 11g), Certified Ethical hacker (Penetration testing), and Sun System Administrator.",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/3610621.jpg?t=1616060702"
+    },
+    {
+      "title": "Julian Dontcheff's Database Blog",
+      "feed_url": "https://juliandontcheff.wordpress.com/feed/",
+      "website_url": "https://juliandontcheff.wordpress.com/",
+      "description": "The good DBA is one who learns from his mistakes, the best DBA is one who learns from other DBA's mistakes.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4621177.jpg"
+    },
+    {
+      "title": "Neil Chandler's DBA Blog",
+      "feed_url": "https://chandlerdba.com/feed/",
+      "website_url": "https://chandlerdba.com/",
+      "description": "A resource for Database Professionals.",
+      "followers": {
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4621327.jpg?t=1616061085"
+    },
+    {
+      "title": "IT Tutorials",
+      "feed_url": "https://ittutorial.org/feed/",
+      "website_url": "https://ittutorial.org/",
+      "description": "English & Turkish Database, Application, Operating System, Network, Artifical Intelligence, Programming Languages Tutorials & Useful Scripts",
+      "followers": {
+        "twitter": 141
+      },
+      "image_url": "https://i1.feedspot.com/5069308.jpg?t=1616061077"
+    },
+    {
+      "title": "ScaleGrid Blog",
+      "feed_url": "https://scalegrid.io/blog/feed/",
+      "website_url": "https://scalegrid.io/blog/",
+      "description": "ScaleGrid is a fully managed database hosting service for MongoDB, Redis, MySQL, and PostgreSQL on public & private clouds. Follow for database tips, articles, and the latest news by ScaleGrid.",
+      "followers": {
+        "facebook": 183,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4952588.jpg?t=1616048713"
+    },
+    {
+      "title": "Database Technology",
+      "feed_url": "http://alter-database.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://alter-database.blogspot.com/",
+      "description": "Sharing DBA experience to all. Blog topics cover Oracle, MS SQL, DB2, Netezza DBA, PostgreSQL, and AWS Redshift.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5297688.jpg?t=1631019055"
+    },
+    {
+      "title": "SQL Shack",
+      "feed_url": "https://www.sqlshack.com/feed/",
+      "website_url": "https://www.sqlshack.com/",
+      "description": "SQL Shack is a new SQL server blog with articles about database auditing, server performance, data recovery and more\ufeff.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4507650.jpg?t=1616060453"
+    },
+    {
+      "title": "My Experiences with Databases & More",
+      "feed_url": "https://ramoradba.com/feed/",
+      "website_url": "https://ramoradba.com/",
+      "description": "Hi there, This is SCP Ranga Rao Sanka working as (A product Manager/Principal DBA)., I have a broad range of Experience in Administration and Implementation in the areas of Databases, Cloud, and Other Servers. I am one of the moderators at ORAFAQ. The primary purpose of this blog is to share knowledge.",
+      "followers": {
+        "twitter": 315,
+        "instagram": 28
+      },
+      "image_url": "https://i1.feedspot.com/5452816.jpg?t=1687438601"
+    },
+    {
+      "title": "DB-Engines Blog",
+      "feed_url": "https://db-engines.com/en/rss/blog.xml",
+      "website_url": "https://db-engines.com/en/blog",
+      "description": "DB-Engines is an initiative to collect and present information on relational and NoSQL database management systems (DBMS).",
+      "followers": {
+        "facebook": 451,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/3643533.jpg?t=1616060439"
+    },
+    {
+      "title": "Severalnines Blog",
+      "feed_url": "https://severalnines.com/blog/feed/",
+      "website_url": "https://severalnines.com/blog",
+      "description": "Severalnines provides open-source database automation & management systems for highly available MySQL, MongoDB, and PostgreSQL database environments. On the blog, We share news and how-to's to get the most out of your open source database deployments. Whether you are working with MySQL-based technologies like MySQL Replication, MariaDB, NDB Cluster, or Galera Cluster we've got you covered.",
+      "followers": {
+        "facebook": 645,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4619943.jpg?t=1608034263"
+    },
+    {
+      "title": "Whatisdbms.com Blog",
+      "feed_url": "https://whatisdbms.com/feed/",
+      "website_url": "https://whatisdbms.com/",
+      "description": "Whatisdbms.com ensures that you get everything about Database Management System. They will give you all the topics that are related to DBMS, Normalization, Data Mining, Data Warehouses and RDBMS etc.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4621324.jpg?t=1616060560"
+    },
+    {
+      "title": "eWEEK - Database Software and DB Hardware",
+      "feed_url": "https://www.eweek.com/database/feed/",
+      "website_url": "https://www.eweek.com/database/",
+      "description": "Get the latest database news from eWEEK, featuring news, trends, and analysis about the rapidly evolving DBMS space, including graph and NoSQL databases.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 22700
+      },
+      "image_url": "https://i1.feedspot.com/4621345.jpg?t=1616060443"
+    },
+    {
+      "title": "Database Tutorials",
+      "feed_url": "https://dbtut.com/index.php/feed/",
+      "website_url": "https://dbtut.com/",
+      "description": "Database Tutorials features articles on MSSQL, Oracle, PostgreSQL, MySQL, MariaDB, DB2, Sybase, Teradata, Big Data, NOSQL, MongoDB, Couchbase, Cassandra, Windows, Linux and more...",
+      "followers": {
+        "twitter": 15
+      },
+      "image_url": "https://i1.feedspot.com/5128458.jpg?t=1622958928"
+    },
+    {
+      "title": "SysAdminXpert",
+      "feed_url": "https://sysadminxpert.com/feed/",
+      "website_url": "https://sysadminxpert.com/",
+      "description": "SysAdminXpert is a tutorial blog for all kind of Linux, AWS, Database stuff, we as a team spend a lot of time and put efforts for creating articles which is easy to understand for all our readers.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 69
+      },
+      "image_url": "https://i1.feedspot.com/4992914.jpg?t=1616060483"
+    },
+    {
+      "title": "Richard Foote's Oracle Blog",
+      "feed_url": "https://richardfoote.wordpress.com/feed/",
+      "website_url": "https://richardfoote.wordpress.com/",
+      "description": "Focusing Specifically On Oracle Indexes, Database Administration and Some Great Music.",
+      "followers": {
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4623744.jpg?t=1616060632"
+    },
+    {
+      "title": "SQLMaria",
+      "feed_url": "https://sqlmaria.com/feed/",
+      "website_url": "https://sqlmaria.com/",
+      "description": "SQLMaria blog, which shares what's new with Oracle Database and the best practices for incorporating it into your environment.",
+      "followers": {
+        "facebook": 718,
+        "twitter": 9800
+      },
+      "image_url": "https://i1.feedspot.com/4624268.jpg?t=1616060614"
+    },
+    {
+      "title": "Michael J. Swart | Database Whisperer",
+      "feed_url": "https://michaeljswart.com/feed/",
+      "website_url": "https://michaeljswart.com/",
+      "description": "Hi! I'm Michael J. Swart. I'm a Database Developer working in Kitchener, Canada. As a Database Developer, I get to design databases and tune SQL so that an application makes the best use of its database given the hardware that's available. I love working for this stuff and so I've also turned it into a hobby: this blog. In my spare time, I write and draw and the results are the weekly articles you see here.",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5286888.jpg?t=1622473703"
+    },
+    {
+      "title": "Geeks Insight",
+      "feed_url": "https://db.geeksinsight.com/feed/",
+      "website_url": "https://db.geeksinsight.com/",
+      "description": "Suresh Gandhi is database evangelist, blogger, speaker and Oracle ACE. All about Database Administration, Tips & Tricks.",
+      "followers": {
+        "twitter": 319
+      },
+      "image_url": "https://i1.feedspot.com/5155906.jpg?t=1616061474"
+    },
+    {
+      "title": "ChoudharySumit.com",
+      "feed_url": "https://www.choudharysumit.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.choudharysumit.com/",
+      "description": "I, Sumit Choudhary, work primarily as DB2 LUW Database Administrator. I have a considerable amount of experience in managing the MSSQL database as well. I created this blog to share my experience with the universe. I believe whatever I am is due to the universe and I must give it back to the universe.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5205562.jpg?t=1602573201"
+    },
+    {
+      "title": "Kevin Closson's Blog | Platforms, Databases and Storage",
+      "feed_url": "https://kevinclosson.net/feed/",
+      "website_url": "https://kevinclosson.net/",
+      "description": "A blog about a wide array of topics that should be of interest to data center professionals interested in Platforms, Databases and Storage.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4621286.jpg?t=1616061338"
+    },
+    {
+      "title": "rajdbaworld",
+      "feed_url": "http://rajdbaworld.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://rajdbaworld.blogspot.com/",
+      "description": "rajdbaworld offers a A Complete solution for Database administration",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5052391.jpg"
+    },
+    {
+      "title": "OracleDBPro - Pini Dibask Blog",
+      "feed_url": "http://oracledbpro.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://oracledbpro.blogspot.com/",
+      "description": "Pini Dibask Oracle Database Blog shares Articles, Tips & Tricks, Sample Code, Videos and more.",
+      "followers": {
+        "twitter": 273
+      },
+      "image_url": "https://i1.feedspot.com/4621255.jpg?t=1616061072"
+    },
+    {
+      "title": "ORACLE-HELP - Oracle DBA and Cloud Articles",
+      "feed_url": "http://oracle-help.com/feed/",
+      "website_url": "http://oracle-help.com/",
+      "description": "Oracle-Help.com is website for sharing knowledge in Oracle Databases and Oracle Cloud.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 880
+      },
+      "image_url": "https://i1.feedspot.com/4738381.jpg?t=1616060571"
+    },
+    {
+      "title": "Hevo Blog",
+      "feed_url": "https://hevodata.com/blog/feed/",
+      "website_url": "https://hevodata.com/blog/",
+      "description": "Get the latest stories and practical tips on all technologies that concern Data Analytics, Big Data Management, Data Migration, Data Integration, Data Pipelines, Data Modelling, and more.",
+      "followers": {
+        "facebook": 463,
+        "twitter": 751
+      },
+      "image_url": "https://i1.feedspot.com/5064909.jpg?t=1614925174"
+    },
+    {
+      "title": "Chowdari's Oracle DBA Blog",
+      "feed_url": "https://mbc-dba.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://mbc-dba.blogspot.com/",
+      "description": "This Blog is intended to share minimum knowledge and experience related on Oracle Technology to others.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4621332.jpg?t=1616061443"
+    },
+    {
+      "title": "Easy to Learn Oracle Database and Solve Your Problem",
+      "feed_url": "https://rajiboracle.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://rajiboracle.blogspot.com/",
+      "description": "A blog about database administrator,pl sql,sql,oracle tutorial,sql programming,oracle certification path,oracle certification.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4621230.jpg"
+    },
+    {
+      "title": "The Last Pickle - Apache Cassandra Consulting & Services",
+      "feed_url": "http://feeds.feedburner.com/thelastpickle",
+      "website_url": "https://thelastpickle.com/blog/",
+      "description": "The Last Pickle team enjoy learning and shares knowledge through open source community involvement. Read this blog posts to reup your Apache Cassandra knowledge.",
+      "followers": {
+        "twitter": 892
+      },
+      "image_url": "https://i1.feedspot.com/4621657.jpg"
+    },
+    {
+      "title": "DBmaestro Blog",
+      "feed_url": "https://www3.dbmaestro.com/blog/rss.xml",
+      "website_url": "https://www3.dbmaestro.com/blog",
+      "description": "DBmaestro is a pioneer and leading DevOps for database solution provider. Our database development solution, TeamWork, enables agile development and continuous Integration and Delivery for the Database.",
+      "followers": {
+        "facebook": 375,
+        "twitter": 7100
+      },
+      "image_url": "https://i1.feedspot.com/4621147.jpg?t=1616060575"
+    },
+    {
+      "title": "DBMS\u00a02 : DataBase Management System Services",
+      "feed_url": "https://feeds.feedburner.com/dbms2/feed",
+      "website_url": "http://www.dbms2.com/",
+      "description": "A blog about DBMS (database management) and analytic technologies -- especially disruptive ones -- by Curt Monash, the industry's premier analyst.",
+      "followers": {
+        "twitter": 7200
+      },
+      "image_url": "https://i1.feedspot.com/130690.jpg?t=1616060827"
+    },
+    {
+      "title": "Planet DB2 Blog",
+      "feed_url": "https://planetdb2.com/feed/",
+      "website_url": "https://www.teradata.com/insights",
+      "description": "Planet DB2 blog shares best practices and innovative approaches to the continually evolving world of IBM mainframe database and Db2 technology.",
+      "followers": {
+        "twitter": 301
+      },
+      "image_url": "https://i1.feedspot.com/206790.jpg?t=1617432288"
+    },
+    {
+      "title": "Teradata Blog",
+      "feed_url": "https://www.teradata.com/rss/Blogs",
+      "website_url": "https://www.teradata.com/insights",
+      "description": "Teradata is dedicated to helping enterprise businesses around the globe use data analytics to tackle the problems they face every day. At Teradata, we transform how businesses work and people live through the power of data. Our company focuses its efforts on providing our customers with best-in-class products and services that are environmentally sustainable.",
+      "followers": {
+        "facebook": 23900,
+        "twitter": 54300,
+        "instagram": 5400
+      },
+      "image_url": "https://i1.feedspot.com/4621694.jpg?t=1670400869"
+    },
+    {
+      "title": "Mydbops Blog",
+      "feed_url": "https://www.mydbops.com/blog/feed/",
+      "website_url": "https://www.mydbops.com/blog",
+      "description": "Discover the latest enhancements and features in the world of MySQL and Database operations. Explore the world of secure MySQL connections with SSL/TLS encryption. Learn how SSL certificates, server configurations, and SSL modes can enhance the security of your MySQL database. Mydbops delivers enterprise class support on MySQL and its forks.",
+      "followers": {
+        "facebook": 705,
+        "twitter": 438,
+        "instagram": 208
+      },
+      "image_url": "https://i1.feedspot.com/5677849.jpg?t=1695643945"
+    },
+    {
+      "title": "Dbi Services Blog",
+      "feed_url": "https://blog.dbi-services.com/feed/",
+      "website_url": "https://www.dbi-services.com/blog/",
+      "description": "The dbi services blog represents the point of view of consultants regarding various IT technologies.",
+      "followers": {
+        "facebook": 282,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4621299.jpg?t=1616060467"
+    },
+    {
+      "title": "MariaDB Blog",
+      "feed_url": "https://mariadb.com/feed/",
+      "website_url": "https://www.couchbase.com/blog/",
+      "description": "MariaDB is an open-source database that supports continuity and open collaboration. MariaDB Platform drives transactional and analytical workloads at any scale. Follow to get the latest posts about popular database topics from MariaDB.",
+      "followers": {
+        "facebook": 35700,
+        "twitter": 471300
+      },
+      "image_url": "https://i1.feedspot.com/4621306.jpg?t=1616060425"
+    },
+    {
+      "title": "Couchbase Blog",
+      "feed_url": "https://blog.couchbase.com/feed/",
+      "website_url": "https://www.couchbase.com/blog/",
+      "description": "Couchbase is a leading provider of NoSQL database technology and the company behind the Couchbase open source project. Couchbase Server, the company's flagship product, is a NoSQL document-oriented database with production deployments at AOL, Cisco, Concur, LinkedIn, Orbitz, Salesforce.com, Shuffle Master, Zynga and hundreds of other household names worldwide.",
+      "followers": {
+        "facebook": 8100,
+        "twitter": 146100,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4621639.jpg?t=1616060449"
+    },
+    {
+      "title": "YUGABYTE Blog",
+      "feed_url": "https://www.yugabyte.com/blog/feed/",
+      "website_url": "https://www.yugabyte.com/blog/",
+      "description": "Covers articles on distributed databases, open source and cloud native. Creator of YugabyteDB, the open source high-performance distributed SQL database for global, internet-scale applications.",
+      "followers": {
+        "facebook": 478,
+        "twitter": 9500
+      },
+      "image_url": "https://i1.feedspot.com/5337528.jpg?t=1635407181"
+    },
+    {
+      "title": "OpenText Blog",
+      "feed_url": "https://blogs.opentext.com/feed/",
+      "website_url": "https://blogs.opentext.com/",
+      "description": "Vertica is the unified analytics data warehouse, based on a massively scalable architecture with the broadest set of analytical functions spanning event and time series, pattern matching, geospatial and end-to-end in-database machine learning.",
+      "followers": {
+        "twitter": 12000
+      },
+      "image_url": "https://i1.feedspot.com/4621772.jpg?t=1612005292"
+    },
+    {
+      "title": "Learn DBA : A Life Long Learning Experience",
+      "feed_url": "https://oracle-dba-help.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://oracle-dba-help.blogspot.com/",
+      "description": "A place for Beginners and Experience to Learn Oracle DBA. A smarter way to learn Oracle DBA , with latest contents.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4623727.jpg?t=1616061397"
+    },
+    {
+      "title": "Database Journal",
+      "feed_url": "https://www.databasejournal.com/icom_includes/feeds/dbjournal/xml_front-10.xml?/icom_includes/feeds/dbjournal/xml_front-10.xml",
+      "website_url": "https://www.databasejournal.com/",
+      "description": "Discover Database Journal for all of your database professional needs. Offers daily database news, articles, and tutorials for major databases including Oracle, SQL Server, DB2, and MS Access.",
+      "followers": {
+        "facebook": 876,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/652953.jpg?t=1616060395"
+    },
+    {
+      "title": "Datavail Blog",
+      "feed_url": "https://www.datavail.com/feed/",
+      "website_url": "https://www.datavail.com/blog/",
+      "description": "Datavail is a company of over 1,000 professionals helping clients build and manage applications and data via a world-class tech-enabled delivery platform and software solutions across all leading technologies. Check out Datavail's Blog, where you can read the latest insights, tips, and opinions of our experts on all things database, cloud, infrastructure, data management, business intelligence, and more.",
+      "followers": {
+        "facebook": 981,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5286887.jpg?t=1622473395"
+    },
+    {
+      "title": "DBA DB2",
+      "feed_url": "https://www.dba-db2.com/index.rdf",
+      "website_url": "https://www.dba-db2.com/",
+      "description": "Learn about DB2. Performance Tuning,High Availability,Security Management,Back and Restore,sql programming",
+      "followers": {
+        "twitter": 891
+      },
+      "image_url": "https://i1.feedspot.com/4621617.jpg?t=1616060855"
+    },
+    {
+      "title": "OptimaData",
+      "feed_url": "https://www.optimadata.nl/index.php/page/blog_feeds/blogfeed/list/cat/497/feed",
+      "website_url": "https://www.optimadata.nl/blogs/",
+      "description": "Blog about databases, maintenance, management, installation and tuning of open source DBMS. Experiences from our DBAs and a glimpse into our database knowledge and expertise center.",
+      "followers": {
+        "facebook": 62,
+        "twitter": 150,
+        "instagram": 105
+      },
+      "image_url": "https://i1.feedspot.com/4857883.jpg?t=1616060738"
+    },
+    {
+      "title": "BangDB",
+      "feed_url": "https://bangdb.com/feed",
+      "website_url": "https://bangdb.com/blog",
+      "description": "Covers NoSQL Database Use-Cases and Tutorials. BangDB is a converged high performance NoSQL Database which natively integrates AI, Streaming, Graph, analytics within the DB itself to enable users to deal with complex data.",
+      "followers": {
+        "twitter": 470
+      },
+      "image_url": "https://i1.feedspot.com/5324896.jpg?t=1632466028"
+    },
+    {
+      "title": "Peasland Database Blog",
+      "feed_url": "https://www.peasland.net/feed/",
+      "website_url": "http://www.peasland.net/",
+      "description": "This blog is about databases, mostly Oracle, and any other technology.",
+      "followers": {
+        "twitter": 558
+      },
+      "image_url": "https://i1.feedspot.com/4623631.jpg"
+    },
+    {
+      "title": "Oracle Database Development",
+      "feed_url": "https://oradbdev.mathiasmagnusson.com/feed/",
+      "website_url": "https://oradbdev.mathiasmagnusson.com/",
+      "description": "Things in the Oracle database development space that I fancy.",
+      "followers": {
+        "twitter": 278
+      },
+      "image_url": "https://i1.feedspot.com/1115646.jpg?t=1686298382"
+    },
+    {
+      "title": "Dbvisit",
+      "feed_url": "https://dbvisit.com/blog/feed",
+      "website_url": "https://dbvisit.com/blog",
+      "description": "Dbvisit Standby was developed as an off-the-shelf, low-cost, high performance disaster recovery solution for Oracle Standard Edition (SE) database users. In 2011, Dbvisit Replicate was introduced to solve the challenge of synchronizing, reporting, and sharing data across the enterprise. Today, over 1300 business, academic, and public sector organizations in 110 countries trust Dbvisit products.",
+      "followers": {
+        "facebook": 575,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4623645.jpg?t=1608526824"
+    },
+    {
+      "title": "Dbatools blog",
+      "feed_url": "https://dbatools.io/feed/",
+      "website_url": "https://dbatools.io/blog/",
+      "description": "Community driven SQL Server DBA best practices and migration PowerShell module.",
+      "followers": {
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4621703.jpg"
+    }
+  ]
+}

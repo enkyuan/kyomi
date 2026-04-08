@@ -1,0 +1,41 @@
+{
+  "category": "Fitness Photography",
+  "source_url": "https://rss.feedspot.com/fitness_photography_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mark Ruddick Photography Blog",
+      "feed_url": "https://www.markruddick.com/blog?format=rss",
+      "website_url": "https://www.markruddick.com/blog",
+      "description": "Articles on Fitness & Bodybuilding Photography. Mark is a London, Ontario photographer who specializes in boxing, MMA, and fitness photography. He loves shooting the action and has great respect for the hard work and dedication each athlete brings to their respective sport.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 30,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5303623.jpg?t=1626702146"
+    },
+    {
+      "title": "Arsenik Studios Blog",
+      "feed_url": "http://blog.arsenik.com/feed/",
+      "website_url": "http://blog.arsenik.com/",
+      "description": "A Fitness Photography Blog. Arsenik Studios is an award winning brand development and packaging design company. It is an internationally published fitness and commercial photography studio.",
+      "followers": {
+        "facebook": 8800,
+        "twitter": 1100,
+        "instagram": 26200
+      },
+      "image_url": "https://i1.feedspot.com/5303630.jpg?t=1626702473"
+    },
+    {
+      "title": "Matt Thomas Photography Blog",
+      "feed_url": "https://www.matt-thomas-photography.co.uk/feed/",
+      "website_url": "https://www.matt-thomas-photography.co.uk/blog/",
+      "description": "Keep up to date with the latest blog news, reviews and updates. Find out about current projects and informative posts about everything photographic. Matt is a professional freelance fitness, events and commercial photographer based in Gloucester, Gloucestershire.",
+      "followers": {
+        "facebook": 1400,
+        "instagram": 15300
+      },
+      "image_url": "https://i1.feedspot.com/5303639.jpg?t=1626703563"
+    }
+  ]
+}

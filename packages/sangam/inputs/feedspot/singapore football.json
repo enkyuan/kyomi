@@ -1,0 +1,63 @@
+{
+  "category": "Singapore Football",
+  "source_url": "https://rss.feedspot.com/singapore_football_rss_feeds",
+  "feeds": [
+    {
+      "title": "Bolasepako.com Blog",
+      "feed_url": "https://www.bolasepako.com/feeds/posts/default",
+      "website_url": "https://www.bolasepako.com/",
+      "description": "Bolasepako by Ko Po Hui is a renowned football news blog, dedicated to covering Singapore National Football Team, Singapore Premier League, and soccer history. With a focus on generating awareness and passion reminiscent of the Malaysia Cup era, it has become a go-to source for fans seeking insightful coverage and analysis.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5301434.jpg?t=1684324497"
+    },
+    {
+      "title": "Singapore Football Club",
+      "feed_url": "https://singaporefootballclub.com/feed/",
+      "website_url": "https://singaporefootballclub.com/news/",
+      "description": "Stay up to date with the latest news from Singapore's leading football club and football academy. Keep the pulse of all the local footballing activities, events, games, and more. Singapore Football Club is Singapore's fastest-growing football club committed to developing Singaporean grassroots football.",
+      "followers": {
+        "facebook": 1700,
+        "instagram": 7200
+      },
+      "image_url": "https://i1.feedspot.com/5569678.jpg?t=1684324495"
+    },
+    {
+      "title": "Football Association of Singapore",
+      "feed_url": "https://www.fas.org.sg/feed/",
+      "website_url": "https://www.fas.org.sg/",
+      "description": "The Football Association of Singapore oversees football development at all levels and ensures the game's growth. Stay updated with the latest football news in Singapore on their site, reflecting their commitment to advancing the sport's structure and governance.",
+      "followers": {
+        "facebook": 173100,
+        "twitter": 11900,
+        "instagram": 69100
+      },
+      "image_url": "https://i1.feedspot.com/4868092.jpg?t=1684324494"
+    },
+    {
+      "title": "Lion City Sailors FC",
+      "feed_url": "https://www.lioncitysailorsfc.sg/feed/",
+      "website_url": "https://www.lioncitysailorsfc.sg/stories/",
+      "description": "Discover exclusive insights into the Lion City Sailors FC community through news and media stories. Dive into match analyses, opinions, and fan discussions, offering an insider's view of LCSFC. As a professional football club in the Singapore Premier League, LCSFC thrives on engaging its fans through informative content.",
+      "followers": {
+        "facebook": 59100,
+        "twitter": 2800,
+        "instagram": 52200
+      },
+      "image_url": "https://i1.feedspot.com/5569679.jpg?t=1684324494"
+    },
+    {
+      "title": "Geylang International FC",
+      "feed_url": "https://gifc.org.sg/feed/",
+      "website_url": "https://gifc.org.sg/news/",
+      "description": "Find all of Geylang International FC's latest News and Videos on their official site. Read more about Geylang's upcoming fixtures, team news, match observations, records, and more exciting football stuff in the latest posts. the Geylang International Football Club is a premier football club playing the National Football League of Singapore.",
+      "followers": {
+        "facebook": 19100,
+        "instagram": 13600
+      },
+      "image_url": "https://i1.feedspot.com/5569680.jpg?t=1684324493"
+    }
+  ]
+}

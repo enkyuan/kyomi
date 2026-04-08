@@ -1,0 +1,29 @@
+{
+  "category": "Auburn News",
+  "source_url": "https://rss.feedspot.com/auburn_washington_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Auburn Reporter",
+      "feed_url": "https://www.auburn-reporter.com/feed/",
+      "website_url": "https://www.auburn-reporter.com/",
+      "description": "The Auburn Reporter is a daily online and weekly print newspaper. The Reporter is Auburn's first choice for local news and happenings covers top issues and interesting people in the community.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5146220.jpg?t=1626325011"
+    },
+    {
+      "title": "Auburn Examiner",
+      "feed_url": "https://auburnexaminer.com/category/news/feed/",
+      "website_url": "https://auburnexaminer.com/",
+      "description": "The Auburn Examiner is a local independent hyperlocal news source focused on educating, raising awareness and empowering through the stories of Auburn, Washington.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 665,
+        "instagram": 895
+      },
+      "image_url": "https://i1.feedspot.com/5146219.jpg?t=1626325006"
+    }
+  ]
+}

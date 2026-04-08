@@ -1,0 +1,25 @@
+{
+  "category": "Bangladesh Business",
+  "source_url": "https://rss.feedspot.com/bangladesh_business_rss_feeds",
+  "feeds": [
+    {
+      "title": "Business Bangladesh",
+      "feed_url": "https://businessbangladesh.com.bd/feed",
+      "website_url": "https://businessbangladesh.com.bd/",
+      "description": "Business Bangladesh is Business Online News Portal in Bangladesh. We provide the latest National, Sports, Entertainment, Features & more.",
+      "followers": {
+        "facebook": 233400
+      },
+      "image_url": "https://i1.feedspot.com/5343518.jpg?t=1637070944"
+    },
+    {
+      "title": "Bangla Preneur \u00bb Business",
+      "feed_url": "https://banglapreneur.com/category/business-in-bangladesh/feed/",
+      "description": "Latest breaking business news, opinion, and analysis from Bangladesh, including personal finance, farming, property, and the economy.",
+      "followers": {
+        "facebook": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5343517.jpg?t=1638182341"
+    }
+  ]
+}

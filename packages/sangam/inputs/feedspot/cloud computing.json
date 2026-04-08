@@ -1,0 +1,613 @@
+{
+  "category": "Cloud Computing",
+  "source_url": "https://rss.feedspot.com/cloud_computing_rss_feeds",
+  "feeds": [
+    {
+      "title": "CloudTech",
+      "feed_url": "https://www.cloudcomputing-news.net/feed/",
+      "website_url": "https://www.cloudcomputing-news.net/cloud-tech-news/",
+      "description": "Covers SaaS news, cloud computing jobs, virtualization strategy, cloud apps and enterprise IT, private and public cloud, system security, cloud apps, CRM, and cloud communications. Cloud Tech provides the latest insight that enables CIOs to make informed decisions about IT strategy.",
+      "followers": {
+        "facebook": 24000,
+        "twitter": 21500
+      },
+      "image_url": "https://i1.feedspot.com/794656.jpg?t=1623160395"
+    },
+    {
+      "title": "CIOReview",
+      "feed_url": "https://feeds.feedburner.com/cioreview/fvHK",
+      "website_url": "https://cloud.cioreview.com/",
+      "description": "An expert's opinion, the best way to defend against scam spam, trending articles, and technology innovation of the Cloud Computing industry. CIOReview is a technology magazine that talks about enterprise solutions.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 15400,
+        "instagram": 863
+      },
+      "image_url": "https://i1.feedspot.com/5034295.jpg?t=1605848484"
+    },
+    {
+      "title": "TechRepublic \u00bb Cloud",
+      "feed_url": "https://www.techrepublic.com/rssfeeds/topic/cloud/",
+      "website_url": "https://www.techrepublic.com/topic/cloud/",
+      "description": "All latest articles about Cloud from TechRepublic.",
+      "followers": {
+        "facebook": 886200,
+        "twitter": 220200
+      },
+      "image_url": "https://i1.feedspot.com/4072438.jpg?t=1605848451"
+    },
+    {
+      "title": "AWS News Blog",
+      "feed_url": "https://aws.amazon.com/blogs/aws/feed/",
+      "website_url": "https://aws.amazon.com/blogs/aws/",
+      "description": "Latest news and information on AWS. Amazon Web Services offers reliable, scalable, and inexpensive cloud computing services.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/4206637.jpg?t=1605848431"
+    },
+    {
+      "title": "CloudTweaks",
+      "feed_url": "https://cloudtweaks.com/feed/",
+      "website_url": "https://cloudtweaks.com/category/cloud-computing/",
+      "description": "Covers cloud computing, SaaS, Big Data, Wearable Tech, and the Internet of Everything news and information. CloudTweaks connects brands to an influential audience made of business owners and managers of growing businesses, entrepreneurs, and early adopters.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 16400
+      },
+      "image_url": "https://i1.feedspot.com/4176329.jpg?t=1656582761"
+    },
+    {
+      "title": "VMware Blogs \u00bb Cloud Providers",
+      "feed_url": "https://blogs.vmware.com/cloudprovider/feed",
+      "website_url": "https://blogs.vmware.com/cloudprovider/",
+      "description": "The blog about VMware cloud services, products, news, and updates.",
+      "followers": {
+        "facebook": 391400,
+        "twitter": 328200
+      },
+      "image_url": "https://i1.feedspot.com/1391899.jpg?t=1762420985"
+    },
+    {
+      "title": "All Things Distributed",
+      "feed_url": "https://www.allthingsdistributed.com/atom.xml",
+      "website_url": "https://www.allthingsdistributed.com/articles.html",
+      "description": "A blog about building scalable and robust distributed systems. Authored by Werner Vogels, a Chief Technology Officer at Amazon.com.",
+      "followers": {
+        "twitter": 338700
+      },
+      "image_url": "https://i1.feedspot.com/22054.jpg?t=1625642223"
+    },
+    {
+      "title": "Hewlett Packard Enterprise",
+      "feed_url": "https://community.hpe.com/hpeb/rss/board?board.id=TransformingIT",
+      "website_url": "https://community.hpe.com/t5/the-cloud-experience-everywhere/bg-p/TransformingIT",
+      "description": "Get the latest cloud insights, news, and recommendations from the HPE GreenLake blog. Hewlett Packard Enterprise is an industry-leading enterprise technology company that simplifies Hybrid IT",
+      "followers": {
+        "facebook": 308200,
+        "twitter": 83000
+      },
+      "image_url": "https://i1.feedspot.com/5255710.jpg?t=1615372477"
+    },
+    {
+      "title": "Thrive CFO",
+      "feed_url": "https://thrivecfo.co.za/feed/",
+      "website_url": "https://thrivecfo.co.za/resource-centre/",
+      "description": "ThriveCFO is a South African accounting firm that provides a wide range of services to consultancies, professional services, and creative agencies. They are a modern cloud-based accounting firm that utilizes the latest technology to provide their clients with real-time financial data and make the financial management process as efficient as possible. ThriveCFO is committed to providing personalized financial solutions that help their clients succeed.",
+      "followers": {
+        "facebook": 266
+      },
+      "image_url": "https://i1.feedspot.com/5712366.jpg?t=1700041719"
+    },
+    {
+      "title": "CHARBEL NEMNOM MVP",
+      "feed_url": "https://charbelnemnom.com/feed/",
+      "website_url": "https://charbelnemnom.com/",
+      "description": "Charbel Nemnom is a Cloud Solutions Architect and Microsoft MVP and a totally fan of the latest's IT platform solutions. Keep up with updates on data center management solutions and a lot more.",
+      "followers": {
+        "facebook": 266,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4968107.jpg?t=1605848565"
+    },
+    {
+      "title": "CloudAlly Blog",
+      "feed_url": "https://www.cloudally.com/feed/",
+      "website_url": "https://www.cloudally.com/blog/",
+      "description": "Founded in 2011 as one of the world's first cloud-to-cloud backup services for Google Apps and Salesforce, CloudAlly led the industry and pioneered the first commercially available Microsoft Office 365 cloud backup in 2014. The blog provides cloud to cloud backup solutions for Office 365, G Suite, Sharepoint, Box.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5291156.jpg?t=1623154313"
+    },
+    {
+      "title": "Build 5 Nines",
+      "feed_url": "https://build5nines.com/feed/",
+      "website_url": "https://build5nines.com/category/cloud/",
+      "description": "Build5Nines is your trusted source for cloud and enterprise technology information and all the tutorials, articles and videos are focused on helping you to be more productive with it.",
+      "followers": {
+        "facebook": 681,
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/5246362.jpg?t=1662985844"
+    },
+    {
+      "title": "Compare the Cloud",
+      "feed_url": "https://www.comparethecloud.net/feed/",
+      "website_url": "https://www.comparethecloud.net/articles/cloud/",
+      "description": "Compare the Cloud is the web's premier resource for researching cloud computing and associated technologies ranging from AI to Machine learning and IoT.",
+      "followers": {
+        "facebook": 405,
+        "twitter": 33200
+      },
+      "image_url": "https://i1.feedspot.com/4511393.jpg?t=1625654827"
+    },
+    {
+      "title": "CloudKatha",
+      "feed_url": "https://cloudkatha.com/feed/",
+      "website_url": "https://cloudkatha.com/",
+      "description": "Welcome to CloudKatha - A platform, where we will be sharing our experience of designing, developing, and deploying applications into the AWS cloud environment.",
+      "followers": {
+        "facebook": 238,
+        "twitter": 671,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5230208.jpg?t=1608637389"
+    },
+    {
+      "title": "Rapyder Blog",
+      "feed_url": "https://www.rapyder.com/feed/",
+      "website_url": "https://www.rapyder.com/blogs/",
+      "description": "Stay up-to-date on the latest technology trends and best practices on Amazon Web Services (AWS). Also read articles and resources on AWS Digital transformation. Rapyder Cloud Solutions is Cloud Company, with expertise in Cloud Computing Solutions, Big Data, Marketing & Commerce, DevOps and Managed Service.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 210
+      },
+      "image_url": "https://i1.feedspot.com/5084294.jpg?t=1605849146"
+    },
+    {
+      "title": "Blazeclan",
+      "feed_url": "https://blazeclan.com/feed/",
+      "website_url": "https://blazeclan.com/blog/category/cloud-computing/",
+      "description": "Blazeclan is a born-in-cloud, strategic partner of choice to organizations that want to deliver business excellence using the cloud as a tool. Read the Blazeclan Blog for new ideas, the latest updates, and discussion around cloud computing from leading industry experts.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5212607.jpg?t=1605848570"
+    },
+    {
+      "title": "Jonny Chipz",
+      "feed_url": "https://jonnychipz.com/feed/",
+      "website_url": "https://jonnychipz.com/blog-articles/",
+      "description": "My name is John Lunn and I am a Microsoft Technical Architect focussed on Microsoft's Cloud Services of Azure and M365 for BT Enterprise who are my full time employer. I have always been a Science and Technology enthusiast, so working with Technology is a great way to get paid to do your hobby! I have over 20 years working experience within IT ranging from analyst to developer, from consulting to architecture.",
+      "followers": {
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5205432.jpg?t=1611031550"
+    },
+    {
+      "title": "Silvio Di Benedetto",
+      "feed_url": "https://www.silviodibenedetto.com/feed/",
+      "website_url": "https://www.silviodibenedetto.com/",
+      "description": "Silvio Di Benedetto is founder and CEO at Inside Technologies. He provides latest insight on Microsoft, Azure, Windows Server, Active Directory, Data Protection Manager, Veeam Backup & Replication, Virtualization, Windows Server 2016. His experience includes leading and managing process and operations for different kind of projects.",
+      "followers": {
+        "facebook": 92,
+        "twitter": 560
+      },
+      "image_url": "https://i1.feedspot.com/4978808.jpg?t=1629887931"
+    },
+    {
+      "title": "1CloudHub Blog",
+      "feed_url": "https://www.1cloudhub.com/feed/",
+      "website_url": "https://www.1cloudhub.com/blog/",
+      "description": "We are cloud thinkers, engineers and transformation enablers. Having pioneered cloud transformation and migration projects for multi-billion dollar businesses across the globe, we bring you the best of cloud practices, frameworks and domain knowledge. We are cloud thinkers, engineers and transformation enablers. As a born-in-cloud company, everyone in the team thinks 'cloud-first'.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5036411.jpg"
+    },
+    {
+      "title": "Anto Online",
+      "feed_url": "https://anto.online/feed/",
+      "website_url": "https://anto.online/category/cloud-101/",
+      "description": "Anto Online, the anything Cloud related blog! Learn about PHP, Linux, AWS and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4989874.jpg?t=1605848865"
+    },
+    {
+      "title": "Cloud Matters",
+      "feed_url": "https://cloudmatters.cloud/feed/",
+      "website_url": "https://cloudmatters.cloud/",
+      "description": "Content on this site covers Cloud and all its variations of SaaS, PaaS, IaaS, Public, Private & Hybrid and its uses such as IOT (Internet of Things) and a little on sales sometimes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4917922.jpg?t=1605849034"
+    },
+    {
+      "title": "Google Cloud Blog",
+      "feed_url": "https://cloudblog.withgoogle.com/rss/",
+      "website_url": "https://cloud.google.com/blog/",
+      "description": "Google Cloud Platform's blog contains hundreds of articles written by Google cloud experts and actually dates back to 2008. This vast blog discusses the products, customers, and technical features of Google's cloud solution, while articles can range from product blurbs to extremely detailed technical explanations.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 522400
+      },
+      "image_url": "https://i1.feedspot.com/1505497.jpg?t=1605848883"
+    },
+    {
+      "title": "CBR Digital",
+      "feed_url": "http://www.cbrdigital.com/feed",
+      "website_url": "http://www.cbrdigital.com/blog.html",
+      "description": "Cloud business reviews, trends, solutions, applications and services.",
+      "followers": {
+        "facebook": 202,
+        "twitter": 472
+      },
+      "image_url": "https://i1.feedspot.com/4511820.jpg?t=1605848859"
+    },
+    {
+      "title": "AVOA",
+      "feed_url": "https://avoa.com/feed/",
+      "website_url": "https://avoa.com/category/cloud/",
+      "description": "We are a CIO strategic advisory firm leading companies through business and digital transformation while leveraging emerging technologies. AVOA is a research and advisory services firm that works with both enterprise end-users and vendors focusing on the intersection of business & technology.",
+      "followers": {
+        "twitter": 312
+      },
+      "image_url": "https://i1.feedspot.com/4511453.jpg?t=1605848897"
+    },
+    {
+      "title": "CloudWithEase",
+      "feed_url": "https://cloudwithease.com/feed/",
+      "website_url": "https://cloudwithease.com/category/cloud-technologies/",
+      "description": "Everything you want to know about cloud and virtualization. Keep yourself updated with the latest cloud technologies.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 182
+      },
+      "image_url": "https://i1.feedspot.com/5423628.jpg?t=1658310677"
+    },
+    {
+      "title": "System Design Newsletter",
+      "feed_url": "https://newsletter.systemdesign.one/feed",
+      "website_url": "https://newsletter.systemdesign.one/",
+      "description": "A weekly newsletter to help you pass system design interview and become good at work",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc2f21e38-5233-45c3-98b9-abd229da2423_256x256.png"
+    },
+    {
+      "title": "Cisco \u00bb Cloud",
+      "feed_url": "https://blogs.cisco.com/cloud/feed",
+      "website_url": "https://blogs.cisco.com/cloud",
+      "description": "This section of our blog features articles that have to do exclusively with cloud computing. Cisco is the worldwide leader in IT, networking, and cybersecurity solutions.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 4700,
+        "instagram": 569200
+      },
+      "image_url": "https://i1.feedspot.com/4511816.jpg?t=1616393196"
+    },
+    {
+      "title": "WatServ Blog",
+      "feed_url": "https://watserv.com/feed/",
+      "website_url": "https://watserv.com/blog/",
+      "description": "Covers cloud technology insights from cloud experts. WatServ is an IT solutions provider that helps clients digitally transform their business through cloud technologies and managed services.",
+      "followers": {
+        "facebook": 2,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5343540.jpg?t=1637069081"
+    },
+    {
+      "title": "Think Strategies",
+      "feed_url": "http://thinkstrategies.com/feed/",
+      "website_url": "http://thinkstrategies.com/blog/#",
+      "description": "The innovative THINKstrategies blog is written by Jeff Kaplan, who is its Managing Director. A leading expert in cloud computing, Jeff is a frequent guest blogger and keynote speaker on SaaS, managed services, and IOT.",
+      "followers": {
+        "twitter": 7600
+      },
+      "image_url": "https://i1.feedspot.com/51295.jpg?t=1607513310"
+    },
+    {
+      "title": "Idexcel Blog",
+      "feed_url": "https://www.idexcel.com/blog/feed/",
+      "website_url": "https://www.idexcel.com/blog/",
+      "description": "Idexcel is a professional IT services and AWS cloud consulting company specializing in aws cloud services, application services and data services.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 549
+      },
+      "image_url": "https://i1.feedspot.com/4954448.jpg?t=1605848556"
+    },
+    {
+      "title": "Tech Wizard",
+      "feed_url": "https://techwizard.cloud/category/cloud/feed/",
+      "website_url": "https://techwizard.cloud/category/cloud/",
+      "description": "Posts about Cloud written by Tech Wizard (Sukhija Vikas)",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 155
+      },
+      "image_url": "https://i1.feedspot.com/4754149.jpg?t=1605848917"
+    },
+    {
+      "title": "George Markou",
+      "feed_url": "https://www.markou.me/feed/",
+      "website_url": "https://www.markou.me/",
+      "description": "Keep up with articles from George Markou.",
+      "followers": {
+        "twitter": 627
+      },
+      "image_url": "https://i1.feedspot.com/5049677.jpg"
+    },
+    {
+      "title": "CloudPundit",
+      "feed_url": "https://cloudpundit.com/feed/",
+      "website_url": "https://cloudpundit.com/",
+      "description": "Cloud Pundit is the blog of Lydia Leong, who covers cloud computing for Gartner as a Distinguished Analyst. This in-depth blog often discusses the findings and opinions that Lydia generates from her professional analyses, and is updated approximately once a month.",
+      "followers": {
+        "twitter": 19200
+      },
+      "image_url": "https://i1.feedspot.com/4511396.jpg?t=1605849060"
+    },
+    {
+      "title": "Cloud Computing Today",
+      "feed_url": "https://cloud-computing-today.com/feed/",
+      "website_url": "https://cloud-computing-today.com/",
+      "description": "The industry's keenest insights on all news related to contemporary cloud computing.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4511865.jpg"
+    },
+    {
+      "title": "The Cloud Blog",
+      "feed_url": "https://thecloudblog.in/feed/",
+      "website_url": "https://thecloudblog.in/",
+      "description": "The cloud blog is a place where you can find all the information related to cloud transformation into the real world.",
+      "followers": {
+        "instagram": 44
+      },
+      "image_url": "https://i1.feedspot.com/5054408.jpg"
+    },
+    {
+      "title": "NthaCloud Blog",
+      "feed_url": "https://www.nthacloud.com/blog-feed.xml",
+      "website_url": "https://www.nthacloud.com/blog",
+      "description": "Nthacloud provides enterprise class private cloud technology at a per user price including hardware, operating software, support, internet service, remote desktop, data protection, and compliance requirements all for a fixed monthly price.",
+      "followers": {
+        "facebook": 63,
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/5009451.jpg?t=1605849095"
+    },
+    {
+      "title": "Nasuni Blog",
+      "feed_url": "https://www.nasuni.com/blog/feed/",
+      "website_url": "https://www.nasuni.com/blog/",
+      "description": "Blog posts cover industry news, cloud security, enterprise cloud storage, cloud backup, and product updates. Nasuni is the leading provider of cloud file services.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5316074.jpg?t=1630039886"
+    },
+    {
+      "title": "Cloud Mantra",
+      "feed_url": "https://www.cloudmantra.net/feed/",
+      "website_url": "https://www.cloudmantra.net/blogs/",
+      "description": "cloudmantra is a 'born in the cloud' company that brings power of the cloud to organizations and consumers. As a leading technology services company, cloudmantra brings cutting-edge yet meaningful products & services to business and consumers globally.",
+      "followers": {
+        "facebook": 367,
+        "twitter": 632
+      },
+      "image_url": "https://i1.feedspot.com/5170413.jpg?t=1605848801"
+    },
+    {
+      "title": "Cisco Cloud Computing Blog",
+      "feed_url": "https://blogs.cisco.com/tag/cloud-computing/feed",
+      "website_url": "https://blogs.cisco.com/tag/cloud-computing",
+      "description": "Cisco is the worldwide technology leader that has been making the Internet work. Our people, products, and partners help society securely connect and seize tomorrow's digital opportunity today. Follow to keep up with cloud computing articles from Cisco.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 740700,
+        "instagram": 569200
+      },
+      "image_url": "https://i1.feedspot.com/4954445.jpg?t=1605848476"
+    },
+    {
+      "title": "Applied Innovations Blog",
+      "feed_url": "https://www.appliedi.net/blog/feed/",
+      "website_url": "https://www.appliedi.net/blog/",
+      "description": "The blog covers a range of topics, including Amazon AWS, Azure, Cloud Hosting, Windows Cloud Servers, Windows VPS Hosting, and Hosting Enhancements. Applied Innovations is a cloud services provider specializing in Microsoft server cloud technologies.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5035826.jpg?t=1605849133"
+    },
+    {
+      "title": "Cloud Musings",
+      "feed_url": "https://feeds.feedburner.com/kevinljackson",
+      "website_url": "http://kevinljackson.blogspot.com/",
+      "description": "Kevin Jackson is a renowned thought leader, speaker, and consultant for cloud-related technologies and business strategies. Kevin's blog discusses issues related to cloud computing and cyber security, and includes news on product launches, acquisition, and conferences.",
+      "followers": {
+        "twitter": 87900
+      },
+      "image_url": "https://i1.feedspot.com/84534.jpg?t=1605849152"
+    },
+    {
+      "title": "Cloudwards Blog",
+      "feed_url": "https://www.cloudwards.net/articles/feed/",
+      "website_url": "https://www.infoworld.com/cloud-computing/",
+      "description": "Covers best news, articles, tips & reviews all around the cloud. Cloudwards reviews software & privacy tools to keep your data and identity safe.",
+      "followers": {
+        "facebook": 829,
+        "twitter": 784
+      },
+      "image_url": "https://i1.feedspot.com/4511825.jpg?t=1605848427"
+    },
+    {
+      "title": "InfoWorld \u00bb Cloud Computing",
+      "feed_url": "https://www.infoworld.com/feed/",
+      "website_url": "https://www.infoworld.com/cloud-computing/",
+      "description": "This section of the website features articles that have to do exclusively with cloud computing news. InfoWorld is a technology media company that provides analysis and hands-on expertise in the form of reviews and how-to articles.",
+      "followers": {
+        "facebook": 72300,
+        "twitter": 88400
+      },
+      "image_url": "https://i1.feedspot.com/4437519.jpg?t=1605848481"
+    },
+    {
+      "title": "Cloud Security Alliance Blog",
+      "feed_url": "https://cloudsecurityalliance.org/blog/feed/",
+      "website_url": "https://cloudsecurityalliance.org/blog",
+      "description": "The Cloud Security Alliance (CSA) leads the industry in offering cloud security-specific research, education, certification, events, and best practices.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 18600
+      },
+      "image_url": "https://i1.feedspot.com/5307973.jpg?t=1628319219"
+    },
+    {
+      "title": "Sutherland Blog",
+      "feed_url": "https://www.sutherlandglobal.com/insights/blog",
+      "website_url": "https://www.sutherlandglobal.com/insights/blog",
+      "description": "Updates on enterprise insights, agile business, digital reimagination, and assurance from the cloud leader. Suneratech is a leading cloud-based platforms and enterprise solutions provider specializing in Oracle applications and technologies.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 509,
+        "instagram": 394
+      },
+      "image_url": "https://i1.feedspot.com/5246523.jpg?t=1613657302"
+    },
+    {
+      "title": "Rick's Cloud",
+      "feed_url": "https://rickscloud.com/feed",
+      "website_url": "https://rickscloud.ai/",
+      "description": "Rick's Cloud is a Cloud Computing Blog by Rick Blaisdell.",
+      "followers": {
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4954441.jpg"
+    },
+    {
+      "title": "QA Blog",
+      "feed_url": "https://www.qa.com/resources/blog/",
+      "website_url": "https://www.qa.com/resources/blog/",
+      "description": "Stay up-to-date on the latest technology trends and best practices on everything cloud with technical cloud feature announcements, industry trends, and training material. Cloud Academy is a technology training platform for enterprise multi-cloud infrastructure.",
+      "followers": {
+        "facebook": 18500,
+        "twitter": 16000
+      },
+      "image_url": "https://i1.feedspot.com/5255705.jpg?t=1615371751"
+    },
+    {
+      "title": "Computerworld \u00bb Cloud Computing",
+      "feed_url": "https://www.computerworld.com/feed/",
+      "website_url": "https://www.computerworld.com/cloud-computing/",
+      "description": "Find cloud computing News, how-tos, features, reviews, and videos on Computerworld.",
+      "followers": {
+        "facebook": 865000,
+        "twitter": 244800
+      },
+      "image_url": "https://i1.feedspot.com/4423875.jpg?t=1622804519"
+    },
+    {
+      "title": "Computerworld \u00bb Cloud Computing",
+      "feed_url": "https://www.computerworld.com/feed/",
+      "website_url": "https://www.computerworld.com/uk/cloud-computing/",
+      "description": "Our aim is to assist IT professionals to navigate an increasingly cluttered information landscape by understanding the real issues and consistently delivering relevant, high-quality content to enrich knowledge and expertise. Subscribe us to keep up with latest Cloud Computing Articles from ComputerworldUK",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 14000
+      },
+      "image_url": "https://i1.feedspot.com/4954437.jpg?t=1605848902"
+    },
+    {
+      "title": "Snowflake Blog",
+      "feed_url": "https://www.snowflake.com/en/blog/",
+      "website_url": "https://www.snowflake.com/en/blog/",
+      "description": "Snowflake's blog Inside the Cloud Data gives you details about around the company, thought leadership, their product and technology, data warehousing, and much more. Snowflake's founders engineered Snowflake to power the Data Cloud, where thousands of organizations have seamless access to explore, share, and unlock the true value of their data.",
+      "followers": {
+        "facebook": 20000,
+        "twitter": 56100
+      },
+      "image_url": "https://i1.feedspot.com/5272538.jpg?t=1658293373"
+    },
+    {
+      "title": "VEXXHOST Blog",
+      "feed_url": "https://vexxhost.com/blog/",
+      "website_url": "https://vexxhost.com/blog/",
+      "description": "This blog includes launches, basic cloud computing articles, and any news or updates on their CloudConsole. VEXXHOST is a leading Canadian OpenStack cloud infrastructure as a service (IaaS) provider for private, public, and hybrid clouds.",
+      "followers": {
+        "facebook": 997,
+        "twitter": 10800,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5081358.jpg?t=1605848523"
+    },
+    {
+      "title": "Devrims Blog",
+      "feed_url": "https://devrims.com/feed/",
+      "website_url": "https://devrims.com/blog/",
+      "description": "At Devrims official blog, we cover all relevant Cloud Industry news, insights, App tutorials, tips, and useful resources for our users & readers. Devrims is an Aggregator of the Website Hosting Solutions with an advanced Managed Cloud Hosting Platform where users can host their websites on their Own Terms.",
+      "followers": {
+        "facebook": 263,
+        "twitter": 126
+      },
+      "image_url": "https://i1.feedspot.com/5421875.jpg?t=1657864813"
+    },
+    {
+      "title": "Ntirety Blog",
+      "feed_url": "https://www.ntirety.com/feed/",
+      "website_url": "https://www.ntirety.com/blog/",
+      "description": "Data Security and Regulatory Compliance Leader. Ntirety has revolutionized data/network cybersecurity and regulatory compliance in all IT environments. It is a leader in delivering secure managed hybrid and multi-cloud solutions to more than 2,500 enterprise customers around the globe.",
+      "followers": {
+        "facebook": 202,
+        "twitter": 266
+      },
+      "image_url": "https://i1.feedspot.com/4511457.jpg?t=1629888499"
+    },
+    {
+      "title": "The Apiculus Blog",
+      "feed_url": "https://www.apiculus.com/blog/feed/",
+      "website_url": "https://www.apiculus.com/blog/",
+      "description": "We help businesses stay ahead of the curve by building solutions that enable smarter convergence of technology.",
+      "followers": {
+        "twitter": 243
+      },
+      "image_url": "https://i1.feedspot.com/5168800.jpg?t=1605848740"
+    },
+    {
+      "title": "Cloud Computing Technologies Blog",
+      "feed_url": "https://cloudcomputingtechnologies.com/feed/",
+      "website_url": "https://itopia.com/blog/",
+      "description": "Blog Posts and Technical Articles from Cloud Computing Technologies on topics of Agile Software Development, Microservices, and Kubernetes.",
+      "followers": {
+        "twitter": 8
+      },
+      "image_url": "https://i1.feedspot.com/5405869.jpg?t=1654167461"
+    },
+    {
+      "title": "IBM Cloud computing",
+      "feed_url": "https://www.ibm.com/blogs/cloud-computing/feed/",
+      "website_url": "https://www.ibm.com/think/cloud",
+      "description": "Thoughts on Cloud is a leading source of insights, news and analysis for the cloud community, presented by IBM and powered by exclusive commentary from IBM thought leaders and industry experts, along with curated, relevant cloud computing news from around the globe.",
+      "followers": {
+        "facebook": 239300,
+        "twitter": 233800
+      },
+      "image_url": "https://i1.feedspot.com/4511436.jpg?t=1605848437"
+    },
+    {
+      "title": "INAP",
+      "feed_url": "https://www.inap.com/blog/category/cloud/feed/",
+      "website_url": "https://www.inap.com/blog/category/cloud/",
+      "description": "We empower purposeful, performance-driven IT transformation through our portfolio of high-density colocation, managed cloud hosting, and network services. Check out quality cloud related articles here.",
+      "followers": {
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4745828.jpg?t=1611559868"
+    }
+  ]
+}

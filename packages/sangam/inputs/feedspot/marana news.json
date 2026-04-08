@@ -1,0 +1,16 @@
+{
+  "category": "Marana News",
+  "source_url": "https://rss.feedspot.com/marana_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "TucsonLocalMedia.com \u00bb Marana",
+      "feed_url": "https://www.tucsonlocalmedia.com/search/?f=rss&t=article&c=marana&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.tucsonlocalmedia.com/marana/",
+      "description": "TucsonLocalMedia.com delivers up-to-the-minute news and information on the latest top stories, weather, entertainment, politics and more.",
+      "followers": {
+        "facebook": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5156618.jpg?t=1590662543"
+    }
+  ]
+}

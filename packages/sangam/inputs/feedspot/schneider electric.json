@@ -1,0 +1,30 @@
+{
+  "category": "Schneider Electric",
+  "source_url": "https://rss.feedspot.com/schneider_electric_rss_feeds",
+  "feeds": [
+    {
+      "title": "Schneider Electric Blog",
+      "feed_url": "https://blog.se.com/feed/",
+      "website_url": "https://blog.se.com/",
+      "description": "This blog site aims to ignite the conversation of innovative individuals to help us make the most of our energy while using less of our common planet. Schneider Electric is leading the Digital Transformation of Energy Management and Automation in Homes, Buildings, Data Centers, Infrastructure and Industries.",
+      "followers": {
+        "facebook": 2000000,
+        "twitter": 45600,
+        "instagram": 177800
+      },
+      "image_url": "https://i1.feedspot.com/5423382.jpg?t=1658232128"
+    },
+    {
+      "title": "Schneider Electric Blog",
+      "feed_url": "https://blog.se.com/datacenter/feed/",
+      "website_url": "https://blog.se.com/datacenter/",
+      "description": "Discover how Schneider Electric and our APC offers and EcoStruxure IT solutions provide certainty in a connected world. The American Power Conversion Corporation was started in a garage in 1981. Through years of innovation, we've grown to be a flagship brand of Schneider Electric and the industry leader in physical infrastructure and software solutions.",
+      "followers": {
+        "facebook": 110100,
+        "twitter": 13300,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5435493.jpg?t=1661415894"
+    }
+  ]
+}

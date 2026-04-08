@@ -1,0 +1,272 @@
+{
+  "category": "Swift Programming",
+  "source_url": "https://rss.feedspot.com/swift_programming_rss_feeds",
+  "feeds": [
+    {
+      "title": "AppCoda - Learn Swift & iOS Programming by Doing",
+      "feed_url": "https://feeds.feedburner.com/appcoda",
+      "website_url": "https://www.appcoda.com/",
+      "description": "AppCoda is an educational startup that focuses on teaching people how to learn Swift & iOS programming blog. Our mission is to develop high quality and easy-to-read iOS programming tutorials in both Swift and Objective-C for anyone who want to learn iOS programming and pursue app development.",
+      "followers": {
+        "facebook": 19400,
+        "twitter": 5200,
+        "instagram": 925
+      },
+      "image_url": "https://i1.feedspot.com/4950916.jpg?t=1621508198"
+    },
+    {
+      "title": "NSHipster",
+      "feed_url": "https://nshipster.com/feed.xml",
+      "website_url": "https://nshipster.com/",
+      "description": "NSHipster is a journal of the overlooked bits in Objective-C, Swift, and Cocoa. Updated weekly.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 30200
+      },
+      "image_url": "https://i1.feedspot.com/4950930.jpg?t=1621508203"
+    },
+    {
+      "title": "Hacking with Swift - Swift Developer News",
+      "feed_url": "https://www.hackingwithswift.com/articles/rss",
+      "website_url": "https://www.hackingwithswift.com/articles",
+      "description": "A blog shares News, tips, and tutorials from Hacking with Swift. Paul Hudson is the creator of Hacking with Swift, the most comprehensive series of Swift books in the world. He's also the editor of Swift Developer News, the maintainer of the Swift Knowledge Base, and Mario Kart world champion.",
+      "followers": {
+        "twitter": 101800
+      },
+      "image_url": "https://i1.feedspot.com/4950982.jpg?t=1621508207"
+    },
+    {
+      "title": "SwiftLee",
+      "feed_url": "https://www.avanderlee.com/feed/",
+      "website_url": "https://www.avanderlee.com/",
+      "description": "On SwiftLee learn all basics and advanced topics with weekly new blog posts including iOS, and Xcode development tips and tricks to build better mobile. All those articles belong to Antoine van der Lee, an iOS Engineer.",
+      "followers": {
+        "twitter": 61000
+      },
+      "image_url": "https://i1.feedspot.com/4951157.jpg?t=1659964823"
+    },
+    {
+      "title": "The.Swift.Dev.",
+      "feed_url": "https://theswiftdev.com/rss.xml",
+      "website_url": "https://theswiftdev.com/",
+      "description": "Another great Swift blog created by Tibor Bodecs, a proud iOS mobile app developer based on Budapest, Hungary. Here Tibor kindly shares his coding experiences in Swift with his readers. One of his favorite 'Swiftish' quotes is, 'If you are still writing Objective-C day-to-day, you're writing legacy code.' - Jameson Quave.",
+      "followers": {
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4542476.jpg?t=1606112761"
+    },
+    {
+      "title": "Point-Free Blog",
+      "feed_url": "https://www.pointfree.co/feed/atom.xml?format=xml",
+      "website_url": "https://www.pointfree.co/blog",
+      "description": "Point-Free is a video series about functional programming and the Swift programming language. Each episode covers a topic that may seem complex and academic at first, but turns out to be quite simple.",
+      "followers": {
+        "twitter": 14300
+      },
+      "image_url": "https://i1.feedspot.com/4951072.jpg?t=1621508254"
+    },
+    {
+      "title": "SwiftRocks - Bruno Rocha",
+      "feed_url": "https://swiftrocks.com/rss.xml",
+      "website_url": "https://swiftrocks.com/",
+      "description": "Follow Bruno Rocha's SwiftRocks blog for iOS Articles and Tutorials.",
+      "followers": {
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/4951153.jpg?t=1621508619"
+    },
+    {
+      "title": "Oh my Swift Blog",
+      "feed_url": "https://ohmyswift.com/blog/feed.xml",
+      "website_url": "https://ohmyswift.com/blog/",
+      "description": "Ohmyswift.com focuses on delivering latest articles about Swift and iOS development.",
+      "followers": {
+        "facebook": 26,
+        "twitter": 137
+      },
+      "image_url": "https://i1.feedspot.com/5194391.jpg?t=1599491349"
+    },
+    {
+      "title": "App Makers",
+      "feed_url": "https://appmakers.dev/feed/",
+      "website_url": "https://appmakers.dev/",
+      "description": "AppMakers.Dev is a resource dedicated to App Development. It contains posts and resources about Mobile App Development, App Marketing and App Development Tutorials.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5040425.jpg"
+    },
+    {
+      "title": "Making App Pie - Adventures in Swift and iOS App Development",
+      "feed_url": "https://makeapppie.com/feed/",
+      "website_url": "https://makeapppie.com/",
+      "description": "Making App Pie is the blog of Steven Lipton in his adventures and misadventures in developing Apps for the iPhone and the iPad. Making App Pie has a collection of Swift posts covering a wide range of topics, offers a free e-book on Swift, and has a short video tutorial series, KinderSwift, for Swift beginners.",
+      "followers": {
+        "twitter": 420
+      },
+      "image_url": "https://i1.feedspot.com/4950939.jpg?t=1621508357"
+    },
+    {
+      "title": "Jacob\u00e2\u0080\u0099s Tech Tavern",
+      "feed_url": "https://blog.jacobstechtavern.com/feed",
+      "website_url": "https://blog.jacobstechtavern.com/",
+      "description": "Dad doing iOS @ London Startups. Every week, I'll send you ludicrously in-depth articles about iOS, Swift, tech, & indie projects.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9139e374-44b3-428c-b903-6c5ad1fe8113_842x842.png"
+    },
+    {
+      "title": "Ole Begemann's Blog",
+      "feed_url": "https://oleb.net/blog/atom.xml",
+      "website_url": "https://oleb.net/",
+      "description": "Ole is an iOS and Mac developer from Berlin. He's written about software development on Apple platforms since 2009. Though he publishes only a few articles a year, all of them are worthwhile reading. You can subscribe to get notified once he updates a new one.",
+      "followers": {
+        "twitter": 22600
+      },
+      "image_url": "https://i1.feedspot.com/4542415.jpg?t=1606112700"
+    },
+    {
+      "title": "Andrew Bancroft",
+      "feed_url": "https://www.andrewcbancroft.com/index.xml",
+      "website_url": "https://www.andrewcbancroft.com/",
+      "description": "Andrew Bancroft is passionate about discovery and about sharing new insights that come his way. Here, he writes about technology and software development with a primary emphasis on iOS development in Swift, and .Net development in C#.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4888576.jpg?t=1621508239"
+    },
+    {
+      "title": "YASB",
+      "feed_url": "https://www.vadimbulavin.com/feed.xml",
+      "website_url": "https://www.vadimbulavin.com/",
+      "description": "A blog about Swift development by Vadim Bulavin.",
+      "followers": {
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/4951164.jpg?t=1621508230"
+    },
+    {
+      "title": "Benoit Pasquier - Swift, Data and more",
+      "feed_url": "https://benoitpasquier.com/index.xml",
+      "website_url": "https://benoitpasquier.com/",
+      "description": "Benoit Pasquier is a iOS Software engineer writing about Swift, Data and more.",
+      "followers": {
+        "twitter": 597
+      },
+      "image_url": "https://i1.feedspot.com/5169385.jpg?t=1621508234"
+    },
+    {
+      "title": "Khawer Khaliq Blog",
+      "feed_url": "https://khawerkhaliq.com/feed/",
+      "website_url": "https://khawerkhaliq.com/",
+      "description": "Khawer Khaliq is a Product director, iOS developer and blogger. Swift enthusiast.",
+      "followers": {
+        "twitter": 142
+      },
+      "image_url": "https://i1.feedspot.com/4951052.jpg?t=1621508349"
+    },
+    {
+      "title": "Khanlou",
+      "feed_url": "https://khanlou.com/feed",
+      "website_url": "https://khanlou.com/",
+      "description": "Soroush KhanlouI writes about programming, primarily Swift and Objective-C and learning what he can from other languages, like Ruby and Haskell.",
+      "followers": {
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/93478.jpg?t=1621508353"
+    },
+    {
+      "title": "agostini.tech - Dejan Agostini",
+      "feed_url": "https://agostini.tech/feed/",
+      "website_url": "https://agostini.tech/",
+      "description": "Dejan Agostini is an iOS developer .",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4951015.jpg?t=1621508361"
+    },
+    {
+      "title": "Big Mountain Studio's Swift Quickstart Guide",
+      "feed_url": "http://swiftquickstart.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://swiftquickstart.blogspot.com/",
+      "description": "Big Mountain Studio is a place where developers and artists can learn how to create beautiful UI using Apple's Xcode and other tools.",
+      "followers": {
+        "facebook": 708,
+        "twitter": 15700
+      },
+      "image_url": "https://i1.feedspot.com/4951258.jpg?t=1621508317"
+    },
+    {
+      "title": "Swift.org Blog",
+      "feed_url": "https://www.swift.org/atom.xml?format=xml",
+      "website_url": "https://www.swift.org/blog/",
+      "description": "Swift is a general-purpose programming language built using a modern approach to safety, performance, and software design patterns.",
+      "followers": {
+        "facebook": 601,
+        "twitter": 75200
+      },
+      "image_url": "https://i1.feedspot.com/4950898.jpg?t=1621508189"
+    },
+    {
+      "title": "Ray Wenderlich - iOS & Swift Tutorials",
+      "feed_url": "https://www.raywenderlich.com/ios/feed",
+      "website_url": "https://www.kodeco.com/ios",
+      "description": "The highest quality iOS and Swift tutorials on the web - over 3,000 and counting!",
+      "followers": {
+        "facebook": 15700,
+        "twitter": 167
+      },
+      "image_url": "https://i1.feedspot.com/4950905.jpg?t=1621508194"
+    },
+    {
+      "title": "Envato Tuts+ \u00bb iOS Development",
+      "feed_url": "https://code.tutsplus.com/c/mobile-development/s/ios-development/",
+      "website_url": "https://code.tutsplus.com/c/mobile-development/s/ios-development/",
+      "description": "Envato Tuts is home to an enormous range of tutorials, courses, articles, eBooks, news and community to help you learn fun and useful new skills. Whether you're looking at learning to design, code, compose or create, there's something to help you.",
+      "followers": {
+        "facebook": 497800,
+        "twitter": 105900
+      },
+      "image_url": "https://i1.feedspot.com/4950959.jpg?t=1621508214"
+    },
+    {
+      "title": "My Day To-Do Blog",
+      "feed_url": "https://mydaytodo.com/feed/",
+      "website_url": "https://mydaytodo.com/blog/",
+      "description": "Keep up with articles from My Day To-Do.",
+      "followers": {
+        "twitter": 287
+      },
+      "image_url": "https://i1.feedspot.com/5054759.jpg?t=1621508560"
+    },
+    {
+      "title": "iOScreator",
+      "feed_url": "https://www.ioscreator.com/tutorials?format=RSS",
+      "website_url": "https://www.ioscreator.com/",
+      "description": "iOScreator has one of the largest collections of Swift posts of the blogs in this list, posting on many topics consistently each month since Jun 2014.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4950927.jpg"
+    },
+    {
+      "title": "LearnAppMaking \u00bb Swift Tutorials",
+      "feed_url": "https://learnappmaking.com/tag/swift-tutorials/feed/",
+      "website_url": "https://www.appypie.com/blog/",
+      "description": "Hi, I'm Reinder. At LearnAppMaking.com, I help app developers to build and launch awesome apps. Want to learn Swift, the powerful programming language for iOS and macOS? Check out these tutorials, and improve your Swift skills starting right now!",
+      "followers": {
+        "facebook": 869,
+        "twitter": 56
+      },
+      "image_url": "https://i1.feedspot.com/5294984.jpg?t=1624275193"
+    },
+    {
+      "title": "Ben Scheirman Blog",
+      "feed_url": "https://benscheirman.com/rss/",
+      "website_url": "https://benscheirman.com/",
+      "description": "Ben Scheirman is an experienced software developer from Houston, TX. He spends most of his time these days writing Swift and Ruby and recording screencasts.",
+      "followers": {
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/4951028.jpg?t=1621508259"
+    }
+  ]
+}

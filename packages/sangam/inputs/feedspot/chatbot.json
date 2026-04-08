@@ -1,0 +1,521 @@
+{
+  "category": "Chatbot",
+  "source_url": "https://rss.feedspot.com/chatbot_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kore.ai",
+      "feed_url": "https://blog.kore.ai/rss.xml",
+      "website_url": "https://blog.kore.ai/",
+      "description": "Kore.ai is an enterprise software provider of an all-in-one Chatbots Platform (as-a-service) and cutting-edge smart technology for enterprises to build and deploy out-of-the-box or completely customized chatbots for their customers and workforce.",
+      "followers": {
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4893815.jpg?t=1610790983"
+    },
+    {
+      "title": "Herbie Blog",
+      "feed_url": "https://herbie.ai/feed/",
+      "website_url": "https://herbie.ai/blog/",
+      "description": "Herbie is a full time, multicultural, multi-ethnic, multilingual and multi-voice culture digital smart assistant who can speak to your customers and support them by resolving their queries, purchases and so on. Herbie digitally transforms your business by interacting with your customers in their preferred language.",
+      "followers": {
+        "facebook": 176,
+        "twitter": 133,
+        "instagram": 9000
+      },
+      "image_url": "https://i1.feedspot.com/5508259.jpg?t=1676455217"
+    },
+    {
+      "title": "Forrester Blog \u00bb Chatbot",
+      "feed_url": "https://www.forrester.com/blogs/category/chatbots/feed/",
+      "website_url": "https://www.forrester.com/blogs/category/chatbots/",
+      "description": "Forrester's chatbot blog provides guidance on the capabilities and limits of chatbots in customer service and beyond.",
+      "followers": {
+        "twitter": 354300
+      },
+      "image_url": "https://i1.feedspot.com/5546755.jpg?t=1681992485"
+    },
+    {
+      "title": "Ometrics Blog",
+      "feed_url": "https://ochatbot.com/feed/",
+      "website_url": "https://ochatbot.com/blog/",
+      "description": "Learn more about chatbots, artificial intelligence, machine learning and how to build a chatbot in our ochatbot blog. Chatbots are the future of marketing.",
+      "followers": {
+        "facebook": 186,
+        "twitter": 29,
+        "instagram": 127
+      },
+      "image_url": "https://i1.feedspot.com/5546743.jpg?t=1681992394"
+    },
+    {
+      "title": "Pro Profs Blog",
+      "feed_url": "https://www.proprofschat.com/blog//feed/",
+      "website_url": "https://www.proprofschat.com/blog/",
+      "description": "ProProfs Chat blog is the best online resource for tips, best practices, guides, expert interviews & news articles about customer service.",
+      "followers": {
+        "facebook": 24000,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5546747.jpg?t=1681992427"
+    },
+    {
+      "title": "Manychat Blog",
+      "feed_url": "https://manychat.com/blog/feed/",
+      "website_url": "https://manychat.com/blog/",
+      "description": "Discover strategies for creators and influencers on the Manychat Blog. Learn to boost engagement, grow your audience, and optimize social media interactions.",
+      "followers": {
+        "facebook": 196400,
+        "twitter": 3100,
+        "instagram": 522500
+      },
+      "image_url": "https://i1.feedspot.com/5214981.jpg?t=1681992725"
+    },
+    {
+      "title": "Servis BOT Blog",
+      "feed_url": "https://servisbot.com/blog/feed/",
+      "website_url": "https://servisbot.com/blog/",
+      "description": "Our AI blog brings you the latest insights, best practices, and use cases for Conversational and Generative AI to help your business embrace the future of AI-led enterprise solutions.",
+      "followers": {
+        "facebook": 88,
+        "twitter": 199
+      },
+      "image_url": "https://i1.feedspot.com/5546749.jpg?t=1681992439"
+    },
+    {
+      "title": "CEQUENS Blog",
+      "feed_url": "https://www.cequens.com/blog/rss.xml",
+      "website_url": "https://www.cequens.com/blog",
+      "description": "CEQUENS is a global communication and CPass provider in Egypt, helping organizations communicate efficiently and reliably. As a result, we earned the trust of prestigious public and private sector organizations to deliver communications at scale. Our APIs support multiple interfaces, requiring minimal management effort and no IT infrastructure.",
+      "followers": {
+        "facebook": 9400,
+        "twitter": 559,
+        "instagram": 963
+      },
+      "image_url": "https://i1.feedspot.com/7274604.jpg?t=1710501663"
+    },
+    {
+      "title": "Chatimize Blog",
+      "feed_url": "https://chatimize.com/feed/",
+      "website_url": "https://chatimize.com/blog/",
+      "description": "Chatimize is a blog focusing on the value of chatbots, what they are, how to make them, which software to use, and lots more.",
+      "followers": {
+        "facebook": 485,
+        "twitter": 28,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5187186.jpg?t=1598612523"
+    },
+    {
+      "title": "BotsCrew Blog",
+      "feed_url": "https://botscrew.com/feed/",
+      "website_url": "https://botscrew.com/blog/",
+      "description": "BotsCrew is the global leader in Chatbots Development with offices located in London, England and Lviv, Ukraine. This blog talks about its development and its application in various field.",
+      "followers": {
+        "facebook": 885,
+        "twitter": 337,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4893663.jpg?t=1612613526"
+    },
+    {
+      "title": "BOTfriends Blog",
+      "feed_url": "https://botfriends.de/feed/",
+      "website_url": "https://botfriends.de/en/blog/",
+      "description": "We are specialized in the development and design of Conversational Interfaces. Our focus is the programming of chatbots on multiple platforms such as Facebook Messenger, Skype, websites, etc.",
+      "followers": {
+        "facebook": 584,
+        "twitter": 118,
+        "instagram": 628
+      },
+      "image_url": "https://i1.feedspot.com/4894091.jpg?t=1612613637"
+    },
+    {
+      "title": "Chatbots Magazine",
+      "feed_url": "https://chatbotsmagazine.com/feed",
+      "website_url": "https://chatbotsmagazine.com/",
+      "description": "Chatbots Magazine is the place to learn about Chatbots, AI, NLP, Facebook Messenger, Slack, Telegram, and more.",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 11500
+      },
+      "image_url": "https://i1.feedspot.com/4470814.jpg?t=1612613471"
+    },
+    {
+      "title": "Kevit Technologies",
+      "feed_url": "https://kevit.io/feed/",
+      "website_url": "https://kevit.io/category/category-chatbot/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5546757.jpg?t=1681992516"
+    },
+    {
+      "title": "SocialNowa Blog",
+      "feed_url": "https://socialnowa.io/feed/",
+      "website_url": "https://socialnowa.io/blog/",
+      "description": "We are proving a great value to our customers from our SocialNowa blog and to increasing their business ratio more fast.",
+      "followers": {
+        "facebook": 784,
+        "instagram": 662
+      },
+      "image_url": "https://i1.feedspot.com/5546748.jpg?t=1681992653"
+    },
+    {
+      "title": "Umni's AI Blog",
+      "feed_url": "https://umni.bg/en/feed/",
+      "website_url": "https://umni.bg/en/blog/",
+      "description": "Your #1 resource for AI chatbot tips, trends, and strategies to help you build an exceptional customer and employee experience.",
+      "followers": {
+        "facebook": 870,
+        "instagram": 229
+      },
+      "image_url": "https://i1.feedspot.com/5546756.jpg?t=1681992497"
+    },
+    {
+      "title": "Yellow.ai Blog",
+      "feed_url": "https://yellow.ai/feed/",
+      "website_url": "https://yellow.ai/blog/",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 1500,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5546752.jpg?t=1681992460"
+    },
+    {
+      "title": "Visor.ai Blog",
+      "feed_url": "https://www.visor.ai/feed/",
+      "website_url": "https://www.visor.ai/blog/",
+      "description": "Learn more about Customer Service Automation, AI, Machine Learning, NLP and much more on Visor.ai Blog. Take a look!",
+      "followers": {
+        "facebook": 760,
+        "instagram": 417
+      },
+      "image_url": "https://i1.feedspot.com/5546750.jpg?t=1681992446"
+    },
+    {
+      "title": "The Chatbot",
+      "feed_url": "https://thechatbot.net/feed/",
+      "website_url": "https://thechatbot.net/",
+      "description": "The online chatbot magazine for all things chatbot, artificial intelligence, and related tech. Get thoughtful content about chatbot technology.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5413470.jpg?t=1655885183"
+    },
+    {
+      "title": "Bot Core Blog",
+      "feed_url": "https://botcore.ai/feed/",
+      "website_url": "https://botcore.ai/blog/",
+      "followers": {
+        "facebook": 76,
+        "twitter": 243
+      },
+      "image_url": "https://i1.feedspot.com/5546745.jpg?t=1681992411"
+    },
+    {
+      "title": "ubisend - Your chatbot and mobile messaging resource",
+      "feed_url": "https://blog.ubisend.com/discover-chatbots/rss.xml",
+      "website_url": "https://blog.ubisend.com/",
+      "description": "Learn all about chatbots, conversational commerce, and artificial intelligence through industry-leading content.",
+      "followers": {
+        "facebook": 241,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4893630.jpg?t=1612613530"
+    },
+    {
+      "title": "Friendly Agent Bot Blog",
+      "feed_url": "https://www.friendlyagentbot.com/blog/feed/",
+      "website_url": "https://www.friendlyagentbot.com/blog/",
+      "description": "Find information about friendly bot from this blog as it helps in Insurance Industry, serve customers and grow your business exponentially.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4894124.jpg?t=1612613617"
+    },
+    {
+      "title": "Chatamo Blog",
+      "feed_url": "https://chatamo.com/blog/feed/",
+      "website_url": "https://chatamo.com/blog/",
+      "description": "With Chatamo you can create bots for free for intelligent voice and chat bots for marketing, sales and support in minutes. This blog gives information about the same.",
+      "followers": {
+        "facebook": 523
+      },
+      "image_url": "https://i1.feedspot.com/4894147.jpg?t=1612613641"
+    },
+    {
+      "title": "Bot Llibre!",
+      "feed_url": "https://botlibre.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://botlibre.blogspot.com/",
+      "description": "Bot Libre is a free open platform for bots and artificial intelligence for the web, mobile, and social media.",
+      "followers": {
+        "twitter": 528
+      },
+      "image_url": "https://i1.feedspot.com/4894177.jpg"
+    },
+    {
+      "title": "KLoBot Blog",
+      "feed_url": "https://www.klobot.ai/feed/",
+      "website_url": "https://www.klobot.ai/blog/",
+      "description": "KLoBot is a DIY Bot Builder Platform that allows your organization to create text+voice based conversational chatbots within minutes using an easy drag+drop skill interface, giving your bot instant superpowers to use across your favorite channels.",
+      "followers": {
+        "facebook": 198,
+        "twitter": 83,
+        "instagram": 252
+      },
+      "image_url": "https://i1.feedspot.com/5250406.jpg?t=1614694086"
+    },
+    {
+      "title": "SmartBot360 Blog",
+      "feed_url": "https://smartbot360.com/blog?format=rss",
+      "website_url": "https://smartbot360.com/blog",
+      "description": "Smartbot360 - Patient engagement and conversion using AI-powered chatbots. Blog on healthcare chatbots, covering both technical and practical issues, such as HIPAA-compliance, AI, patient conversion, best practices, and patient engagement.",
+      "followers": {
+        "facebook": 44
+      },
+      "image_url": "https://i1.feedspot.com/5204511.jpg?t=1602149205"
+    },
+    {
+      "title": "TOPBOTS",
+      "feed_url": "https://www.topbots.com/feed/",
+      "website_url": "https://www.topbots.com/category/research-summaries/",
+      "description": "TOPBOTS create and source the best content about applied artificial intelligence for business.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 8300
+      },
+      "image_url": "https://i1.feedspot.com/4797146.jpg?t=1615870623"
+    },
+    {
+      "title": "Chatbots Journal",
+      "feed_url": "https://chatbotsjournal.com/feed",
+      "website_url": "https://chatbotsjournal.com/",
+      "description": "Stay tuned to get the latest updates on chatbots. Chatbots Journal is the happy place for all chatbot enthusiasts to learn and share about chatbots.",
+      "followers": {
+        "twitter": 270
+      },
+      "image_url": "https://i1.feedspot.com/5214961.jpg?t=1655885907"
+    },
+    {
+      "title": "Chatbot's Life",
+      "feed_url": "https://rss.beehiiv.com/feeds/W0866OdVPj.xml",
+      "website_url": "https://www.chatbotslife.com/",
+      "description": "Best place to learn about Conversational AI. We share the latest News, Info, AI & NLP, Tools, Tutorials & More. Our mission is to help people understand the value of chatbots, AI, Voice technologies and to help them implement it in their business.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4504512.jpg?t=1655890599"
+    },
+    {
+      "title": "Customers.ai BLOG",
+      "feed_url": "https://customers.ai/feed",
+      "website_url": "https://customers.ai/blog/",
+      "description": "Mobile Monkey is a platform for Marketers to create, manage and promote their brands with AI Chatbots, one of the most exciting and disruptive new Marketing technologies today. We believe the personalized IA is future of Digital Marketing and we are partnering with the best Marketers and Digital Agencies on the planet.",
+      "followers": {
+        "facebook": 8300
+      },
+      "image_url": "https://i1.feedspot.com/4897800.jpg?t=1612613497"
+    },
+    {
+      "title": "BotSpice Blog",
+      "feed_url": "http://www.botspice.com/blogs/feed/",
+      "website_url": "https://www.botspice.com/blogs/",
+      "followers": {
+        "facebook": 229,
+        "instagram": 57
+      },
+      "image_url": "https://i1.feedspot.com/5546754.jpg?t=1681992484"
+    },
+    {
+      "title": "Quiq's Blog",
+      "feed_url": "https://quiq.com/feed/",
+      "website_url": "https://quiq.com/blog/",
+      "description": "Snaps helps brands like Nike, Marriott, VICE & more acquire new customers, increase LTV and remove customer service costs using automated chat. This blog tells about brand marketing using chatbots.",
+      "followers": {
+        "facebook": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4893717.jpg?t=1612613534"
+    },
+    {
+      "title": "Chatfuel Blog",
+      "feed_url": "https://blog.chatfuel.com/feed",
+      "website_url": "https://chatfuel.com/blog",
+      "description": "Chatfuel is a leading platform for making bots on Messenger. Find news, tips and information related to chatbots from this blog.",
+      "followers": {
+        "facebook": 28100,
+        "twitter": 25900
+      },
+      "image_url": "https://i1.feedspot.com/4894107.jpg?t=1612613482"
+    },
+    {
+      "title": "Acquire Blog",
+      "feed_url": "https://www.acquire.io/feed",
+      "website_url": "https://www.acquire.io/blog",
+      "description": "Covers everything you need to know about chatbots - how to build, script, design, implement, and track performance of chatbots. Find out exactly how these conversational AI bots can increase sales, improve customer experience, and grow your business. Acquire is the first to bring a multi-channel customer communication platform for businesses - empowering companies to deliver better experiences between customers and their sales and support team.",
+      "followers": {
+        "facebook": 600,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5043455.jpg?t=1634194427"
+    },
+    {
+      "title": "BotPenguin",
+      "feed_url": "https://botpenguin.com/feed/",
+      "website_url": "https://botpenguin.com/blogs/category/chatbot",
+      "description": "BotPenguin is an AI-powered free chatbot maker for website & FB messenger. Create your own website chatbot to generate leads, book appointments, and answer customer queries instantly. Follow the blog to know more about us.",
+      "followers": {
+        "facebook": 626,
+        "twitter": 398,
+        "instagram": 962
+      },
+      "image_url": "https://i1.feedspot.com/5213795.jpg?t=1604649636"
+    },
+    {
+      "title": "Inbenta Blog",
+      "feed_url": "https://www.inbenta.com/en/feed",
+      "website_url": "https://www.inbenta.com/tag/chatbot/",
+      "description": "Discover how to enhance customer experience while maintaining compliance with conversational AI, and learn from expert insights on building successful chatbots.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5214966.jpg?t=1681992507"
+    },
+    {
+      "title": "Heyday Blog",
+      "feed_url": "https://heyday.hootsuite.com/feed/",
+      "website_url": "https://blog.hootsuite.com/",
+      "description": "Hootsuite's social media marketing blog has the latest tools, strategies and insights for X, Facebook, Instagram, and more.",
+      "followers": {
+        "facebook": 525,
+        "twitter": 901,
+        "instagram": 423
+      },
+      "image_url": "https://i1.feedspot.com/5546753.jpg?t=1681992469"
+    },
+    {
+      "title": "Ada Blog",
+      "feed_url": "https://www.ada.cx/posts/rss.xml",
+      "website_url": "https://www.ada.cx/blog/",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5546744.jpg?t=1681992407"
+    },
+    {
+      "title": "Appy Pie Blog",
+      "feed_url": "https://www.appypie.com/feed",
+      "website_url": "https://www.appypie.com/blog/",
+      "followers": {
+        "facebook": 159800,
+        "twitter": 18500,
+        "instagram": 170100
+      },
+      "image_url": "https://i1.feedspot.com/5546742.jpg?t=1681992388"
+    },
+    {
+      "title": "Maruti Techlabs Blog",
+      "feed_url": "https://marutitech.com/feed/",
+      "website_url": "https://marutitech.com/blog/",
+      "description": "The Maruti Techlabs team shares their insights & tips on Chatbot Development, AI, Big Data Analytics, Machine Learning, Mobile & Web Apps development.",
+      "followers": {
+        "facebook": 643,
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5126930.jpg?t=1612613511"
+    },
+    {
+      "title": "Inbenta Blog",
+      "feed_url": "https://www.inbenta.com/en/blog/feed/",
+      "website_url": "https://www.inbenta.com/resources/articles/",
+      "description": "Inbenta is a leader in natural language processing and artificial intelligence for customer support, e-commerce and conversational chatbots, providing an easy-to-deploy solution that improves customer satisfaction, reduces support costs, and increases revenue.",
+      "followers": {
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4611136.jpg?t=1612613522"
+    },
+    {
+      "title": "Enterprise Bot",
+      "feed_url": "https://blog.enterprisebot.ai/feed",
+      "website_url": "https://articles.noodlefactory.ai/",
+      "description": "We create AI-powered chatbots and e-mail bots to automate customer interactions and provide enterprises with a readily accessible digital agent.",
+      "followers": {
+        "facebook": 391,
+        "twitter": 331
+      },
+      "image_url": "https://i1.feedspot.com/5156917.jpg?t=1612613591"
+    },
+    {
+      "title": "The BOT Forge",
+      "feed_url": "https://www.thebotforge.io/feed/",
+      "website_url": "https://articles.noodlefactory.ai/",
+      "description": "Welcom to our team blog. The BOT Forge are UK based chatbot developers and AI specialists. We design, build and develop intelligent chatbots. Discover chatbot best practices, ideas and AI related news by the BOT Forge team!",
+      "followers": {
+        "facebook": 56,
+        "twitter": 80,
+        "instagram": 109
+      },
+      "image_url": "https://i1.feedspot.com/4894266.jpg?t=1612613604"
+    },
+    {
+      "title": "Noodle Factory",
+      "feed_url": "https://articles.noodlefactory.ai/rss.xml",
+      "website_url": "https://articles.noodlefactory.ai/",
+      "description": "Get articles that are essential reading for any managers, including new managers and seasoned managers. They cover a range of topics including AI, Chatbots, User Experience, Customer Experience, Future of Work and more.",
+      "followers": {
+        "facebook": 11300,
+        "twitter": 2700,
+        "instagram": 358
+      },
+      "image_url": "https://i1.feedspot.com/5121956.jpg?t=1612613627"
+    },
+    {
+      "title": "Artificial Solutions Blog",
+      "feed_url": "https://www.artificial-solutions.com/feed",
+      "website_url": "https://www.teneo.ai/blog",
+      "description": "With our Conversational AI Platform for Enterprise - Teneo, you can engage your customers across any channel, device or service, in any language, anywhere.",
+      "followers": {
+        "facebook": 740,
+        "twitter": 206
+      },
+      "image_url": "https://i1.feedspot.com/5146519.jpg?t=1612613515"
+    },
+    {
+      "title": "PragnaKalp Blog",
+      "feed_url": "https://www.pragnakalp.com/blog/feed/",
+      "website_url": "https://www.pragnakalp.com/blog/",
+      "description": "At Pragnakalp, we are developing cutting-edge solutions using latest tech. Machine Learning, Natural Language Processing (NLP), Chatbots and Python development.",
+      "followers": {
+        "facebook": 607,
+        "twitter": 67
+      },
+      "image_url": "https://i1.feedspot.com/4958746.jpg?t=1612613600"
+    },
+    {
+      "title": "Tangowork Blog",
+      "feed_url": "https://tangowork.com/feed/",
+      "website_url": "https://tangowork.com/blog/",
+      "description": "Tangowork is a digital workplace consultancy specializing in chatbots and intranets. Are you starting an enterprise chatbot project? A new corporate intranet? Or an enhanced system for policies and procedures? Our blog will help you get started.",
+      "followers": {
+        "facebook": 93,
+        "twitter": 449
+      },
+      "image_url": "https://i1.feedspot.com/4893799.jpg?t=1610609006"
+    },
+    {
+      "title": "ebo",
+      "feed_url": "https://www.ebo.ai/blog/feed/",
+      "website_url": "https://www.ebo.ai/news/",
+      "description": "Discover everything you need to know about chatbots, AI and intelligent conversation design from this blog.",
+      "followers": {
+        "facebook": 723
+      },
+      "image_url": "https://i1.feedspot.com/4893765.jpg?t=1612613653"
+    },
+    {
+      "title": "Living Actor Blog",
+      "feed_url": "https://corporate.livingactor.com/feed",
+      "description": "Living Actor is a company specialized in chatbots, Virtual Assistants and 3D avatar technologies. It gives information about the same in this blog.",
+      "followers": {
+        "facebook": 93,
+        "twitter": 466
+      },
+      "image_url": "https://i1.feedspot.com/4893827.jpg?t=1610444668"
+    }
+  ]
+}

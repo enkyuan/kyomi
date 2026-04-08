@@ -1,0 +1,58 @@
+{
+  "category": "Xiaomi",
+  "source_url": "https://rss.feedspot.com/xiaomi_rss_feeds",
+  "feeds": [
+    {
+      "title": "XiaomiToday",
+      "feed_url": "https://xiaomitoday.com/feed/",
+      "website_url": "https://xiaomitoday.com/category/news/",
+      "description": "XiaomiToday is the #1 community for Xiaomi users and Mi fans! We also do share the latest deals and tech news every day. Our blog focused on the latest Techs, Gadgets, News, Reviews, Videos, Giveaways and more!",
+      "followers": {
+        "facebook": 576,
+        "twitter": 466
+      },
+      "image_url": "https://i1.feedspot.com/4909036.jpg?t=1614090561"
+    },
+    {
+      "title": "Tech Sarjan",
+      "feed_url": "https://techsarjan.com/feed",
+      "website_url": "https://techsarjan.com/",
+      "description": "Techsarjan provides a step by step tutorials on tech topics. We mostly focus on Linux tutorials & Xiaomi Mobiles and Products. You can find all tutorial collection for you Redmi 2, Prime, Redmi note , Mi pad, Mi pad, Mi 3, Mi 4, Mi 5, MIUI 7, MIUI 8 etc.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5135927.jpg"
+    },
+    {
+      "title": "Xiaomi Advices",
+      "feed_url": "https://feeds.feedburner.com/xiaomiadvices",
+      "website_url": "https://xiaomiadvices.com/",
+      "description": "XiaomiAdvices is the best community for Xiaomi & Redmi News, MIUI Firmware Update, Android Apps, and Root. We also share tutorials on Samsung, Google Pixel devices.",
+      "followers": {
+        "facebook": 13000,
+        "twitter": 442
+      },
+      "image_url": "https://i1.feedspot.com/4909009.jpg?t=1614090575"
+    },
+    {
+      "title": "Xiaomi Global",
+      "feed_url": "https://www.mi.com/global/discover/newsroom",
+      "website_url": "https://www.mi.com/global/discover/newsroom",
+      "description": "Xiaomi was founded in 2010 by serial entrepreneur Lei Jun, who believes that high-quality technology doesn't need to cost a fortune. We create remarkable hardware, software and Internet services for and with the help of our Mi fans.",
+      "followers": {
+        "facebook": 16900000,
+        "twitter": 4400000
+      },
+      "image_url": "https://i1.feedspot.com/4758807.jpg?t=1608387775"
+    },
+    {
+      "title": "Xiaomi Global Community",
+      "feed_url": "https://xiaomi-mi.com/rss/",
+      "website_url": "https://www.mi.com/in/discover/news/",
+      "description": "Xiaomi Community is a global community site dedicated to everything Xiaomi. It is a place where fans of the brand can find the latest rumors, timely news, helpful how-tos, full device descriptions and photos, honest reviews, etc. We aim to inspire you by showing how drastically our life can change via Xiaomi technologies.",
+      "followers": {
+        "facebook": 75,
+        "twitter": 4400000
+      },
+      "image_url": "https://i1.feedspot.com/4908985.jpg?t=1614090555"
+    }
+  ]
+}

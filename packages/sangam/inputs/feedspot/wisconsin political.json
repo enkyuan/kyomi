@@ -1,0 +1,52 @@
+{
+  "category": "Wisconsin Political",
+  "source_url": "https://rss.feedspot.com/wisconsin_political_rss_feeds",
+  "feeds": [
+    {
+      "title": "Wisconsin Public Radio \u00bb Politics",
+      "feed_url": "https://www.wpr.org/topic/politics/feed",
+      "website_url": "https://www.wpr.org/topic/politics",
+      "description": "Covering breaking news, headlines, providing commentary on the ongoing issues and reports, Wisconsin Public Radio brings you all political news in one place. Since 1917, Wisconsin Public Radio has been a pioneer in radio broadcasting. Educating, informing, and evoking thought have been at the forefront of WPR since its inception.",
+      "followers": {
+        "facebook": 79900,
+        "twitter": 28500,
+        "instagram": 16700
+      },
+      "image_url": "https://i1.feedspot.com/5348782.jpg?t=1638342335"
+    },
+    {
+      "title": "Spectrum News 1 \u00bb Politics",
+      "feed_url": "https://spectrumlocalnews.com/services/contentfeed.wi%7Cmadison%7Cpolitics.hero.rss",
+      "website_url": "https://spectrumnews1.com/wi/madison/politics",
+      "description": "Spectrum News brings you the latest political reports, analysis, news, and more. Spectrum News 1 is a 24/7 statewide network, focused on delivering news and information on the issues that are important to Wisconsin residents.",
+      "followers": {
+        "facebook": 32900,
+        "twitter": 3600,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5348784.jpg?t=1638343419"
+    },
+    {
+      "title": "WIZM News \u00bb Politics",
+      "feed_url": "https://www.wizmnews.com/category/news/wisconsin/politics-wisconsin/feed/",
+      "website_url": "https://www.wizmnews.com/category/news/wisconsin/politics-wisconsin/",
+      "description": "Get news and updates on political events, policies, strategies, and more on WIZM News's Political section. Major topics to explore are Sports, Weather, Live Events, and more.",
+      "followers": {
+        "facebook": 12700,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5348780.jpg?t=1638343873"
+    },
+    {
+      "title": "La Crosse Tribune \u00bb Govt & Politics",
+      "feed_url": "https://lacrossetribune.com/search/?f=rss&t=article&c=news/local/govt-and-politics&l=50&s=start_time&sd=desc",
+      "website_url": "https://lacrossetribune.com/news/local/govt-and-politics/",
+      "description": "The Latest News and Updates in Govt & Politics are brought to you by the team at La Crosse Tribune covering government news, elections, health, and more.",
+      "followers": {
+        "facebook": 44100,
+        "twitter": 9800
+      },
+      "image_url": "https://i1.feedspot.com/5348781.jpg?t=1638344372"
+    }
+  ]
+}

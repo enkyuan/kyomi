@@ -1,0 +1,99 @@
+{
+  "category": "Australian Cruise",
+  "source_url": "https://rss.feedspot.com/australian_cruise_rss_feeds",
+  "feeds": [
+    {
+      "title": "My Cruises News Blog",
+      "feed_url": "https://mycruises.com.au/feed/",
+      "website_url": "https://mycruises.com.au/blog/",
+      "description": "My Cruises is a specialist cruising brand by My Holiday Centre. They've been handcrafting the best cruise deals for Australian cruisers, taking them all around the globe! Their brand thrives on quality, innovation and unbeatable value for money. Subscribe to keep up with the latest cruise news on this blog.",
+      "followers": {
+        "facebook": 320500,
+        "instagram": 70300
+      },
+      "image_url": "https://i1.feedspot.com/4923253.jpg?t=1611031464"
+    },
+    {
+      "title": "The Cruise Express Blog",
+      "feed_url": "https://cruiseexpress.com.au/blog/feed/",
+      "website_url": "https://cruiseexpress.com.au/blog/",
+      "description": "Cruise Express International is a multi-award-winning travel agency specialising in cruise travel and hosting Escorted Voyages for Australians. This blog covers the wide world of cruising and features everything from top 10 tips to favorite destinations to news on cruising.",
+      "followers": {
+        "facebook": 58300,
+        "twitter": 366,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4923237.jpg?t=1611031466"
+    },
+    {
+      "title": "Australian Cruising News Blog",
+      "feed_url": "https://www.australiancruisingnews.com.au/cruise-blog/latest?format=feed&type=rss",
+      "website_url": "https://www.australiancruisingnews.com.au/cruise-blog",
+      "description": "Australian Cruising News.com.au is Australia's only dedicated website promoting the cruise ships that are based, and home ported in Australian waters every Australian cruising season.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 919,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4592210.jpg?t=1611031456"
+    },
+    {
+      "title": "Vision Cruise Australia Blog",
+      "feed_url": "https://www.visioncruise.com.au/feed/",
+      "website_url": "https://www.visioncruise.com.au/category/the-cruise-blog/",
+      "description": "Vision Cruise has more than 25 years' experience in the travel industry and remains one of the leading cruise agencies in the Australia. Their dedicated team of cruise specialists are here to offer the best possible rates, so you can see the difference when booking with Vision Cruise.",
+      "followers": {
+        "facebook": 54600,
+        "twitter": 426,
+        "instagram": 287
+      },
+      "image_url": "https://i1.feedspot.com/4923138.jpg?t=1611031470"
+    },
+    {
+      "title": "Cruise Passenger Magazine",
+      "feed_url": "https://cruisepassenger.com.au/feed/",
+      "website_url": "https://cruiseweekly.com.au/",
+      "description": "Cruise Passenger is Australasia's #1 destination for cruise enthusiasts. Keep up with the latest ship reviews, destinations and cruise news!",
+      "followers": {
+        "facebook": 61900,
+        "twitter": 1400,
+        "instagram": 16000
+      },
+      "image_url": "https://i1.feedspot.com/4923118.jpg?t=1611031452"
+    },
+    {
+      "title": "Cruise Weekly",
+      "feed_url": "https://cruiseweekly.com.au/feed",
+      "website_url": "https://cruiseweekly.com.au/",
+      "description": "Cruise Weekly is Australia's favourite cruising website which is updated daily with the latest cruise news and deals. Subscribe to keep up with all the latest cruise information.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 1400,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4923109.jpg?t=1611031459"
+    },
+    {
+      "title": "Cruise1st.com.au Blog",
+      "feed_url": "https://www.cruise1st.com.au/blog/feed/",
+      "website_url": "https://blog.cruise1st.com.au/",
+      "description": "Cruise1st Australia provides Australia's largest range of quality cruises and a broad range of available flights, hotels, land tours and travel extras to create an easy travel experience. Subscribe to keep up with the latest updates from this blog.",
+      "followers": {
+        "facebook": 72700,
+        "twitter": 404
+      },
+      "image_url": "https://i1.feedspot.com/4923096.jpg?t=1611031450"
+    },
+    {
+      "title": "Shoalhaven River Cruise Blog",
+      "feed_url": "https://shoalhavenrivercruise.com.au/feed/",
+      "website_url": "https://shoalhavenrivercruise.com.au/blog/",
+      "description": "Shoalhaven River Cruise has been operating since 1996 providing tranquil cruises showcasing the breathtaking scenery along the banks of the Shoalhaven River. Join us onboard the Shoalhaven Explorer and experience amazing rocky outcrops, spectacular bushland, impressive industry and beautiful farming land.",
+      "followers": {
+        "facebook": 3400,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4923143.jpg?t=1611031472"
+    }
+  ]
+}

@@ -1,0 +1,816 @@
+{
+  "category": "Math",
+  "source_url": "https://rss.feedspot.com/math_rss_feeds",
+  "feeds": [
+    {
+      "title": "Stephen Wolfram Blog",
+      "feed_url": "https://writings.stephenwolfram.com/feed/",
+      "website_url": "https://writings.stephenwolfram.com/",
+      "description": "Stephen Wolfram's Personal Blog - Founder & CEO of Wolfram Research. Creator of Mathematica, Wolfram|Alpha & the Wolfram Language. Author of A New Kind of Science",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 168500
+      },
+      "image_url": "https://i1.feedspot.com/77992.jpg?t=1608212145"
+    },
+    {
+      "title": "Math with Bad Drawings",
+      "feed_url": "https://mathwithbaddrawings.com/feed/",
+      "website_url": "https://mathwithbaddrawings.com/category/math-2/",
+      "description": "Math, teaching, copious metaphors, and drawings that will never ever earn a spot on the fridge. Math Blog by Ben Orlin.",
+      "followers": {
+        "facebook": 37300,
+        "twitter": 17900
+      },
+      "image_url": "https://i1.feedspot.com/4470101.jpg?t=1661506535"
+    },
+    {
+      "title": "What's new",
+      "feed_url": "https://terrytao.wordpress.com/feed/",
+      "website_url": "https://terrytao.wordpress.com/",
+      "description": "What's New is the work of Terence Tao, a mathematician whose work is frequently relevant for computer scientists and computational theorists. Updates on his research and expository papers, discussion of open problems, and other maths-related topics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1187123.jpg?t=1627631052"
+    },
+    {
+      "title": "Surrey Mathematics Research Blog",
+      "feed_url": "https://blogs.surrey.ac.uk/mathsresearch/feed/",
+      "website_url": "https://blogs.surrey.ac.uk/mathsresearch/",
+      "description": "The blog on research in mathematics at the University of Surrey. It will be reporting on events, news and the research environment in the Department.",
+      "followers": {
+        "facebook": 178400,
+        "twitter": 64599
+      },
+      "image_url": "https://i1.feedspot.com/4410994.jpg?t=1686909015"
+    },
+    {
+      "title": "Basic Mathematics Blog",
+      "feed_url": "https://www.basic-mathematics.com/basic-mathematics.xml",
+      "website_url": "https://www.basic-mathematics.com/basic-mathematics-blog.html",
+      "description": "Basic-mathematics provides free arithmetic, algebra, geometry, and consumer math lessons. Find also math games, math worksheets, and an algebra solver.",
+      "followers": {
+        "facebook": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4470107.jpg?t=1608212027"
+    },
+    {
+      "title": "Wolfram Blog \u00bb Mathematics",
+      "feed_url": "https://blog.wolfram.com/category/mathematics/feed/",
+      "website_url": "https://blog.wolfram.com/category/mathematics/",
+      "description": "Posts about 'Mathematics' on the Wolfram Blog. Read the latest announcements, events, news and developer insights. Founded by Stephen Wolfram in 1987, Wolfram Research is one of the world's most respected computer, web and cloud software companies - as well as a powerhouse of scientific and technical innovation. As a pioneer in computation and computational knowledge, we have pursued a long-term vision to develop the science, technology and tools to make computation an ever-more-potent force in today's and tomorrow's world.",
+      "followers": {
+        "facebook": 58500,
+        "twitter": 65800
+      },
+      "image_url": "https://i1.feedspot.com/4470157.jpg?t=1611825705"
+    },
+    {
+      "title": "New York Times The Learning Network Blog on Mathematics",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/spotlight/learning-science-math/rss.xml",
+      "website_url": "https://www.nytimes.com/spotlight/learning-science-math",
+      "description": "Teaching and Learning With The New York Times. Teachers can use or adapt our lessons across subject areas and levels. Students can respond to our daily Opinion question, take our News Quiz, learn the Word of the Day, try our Test Yourself questions, complete a Fill-In or read our Poetry Pairings. Our mission is to offer rich and imaginative materials for teaching and learning using New York Times",
+      "followers": {
+        "facebook": 87000,
+        "twitter": 31300
+      },
+      "image_url": "https://i1.feedspot.com/4470066.jpg?t=1608212060"
+    },
+    {
+      "title": "Mathematics, Learning and Technology",
+      "feed_url": "https://colleenyoung.org/feed/",
+      "website_url": "https://colleenyoung.org/",
+      "description": "Math Blog by Colleen Young - AHT & Maths teacher, interested in great methods and resources for learning. I update my blog regularly with information on excellent free maths resources.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 7100
+      },
+      "image_url": "https://i1.feedspot.com/4470168.jpg?t=1608212771"
+    },
+    {
+      "title": "Lincoln School Maths & Physics Blog",
+      "feed_url": "https://lincolnmathsphys.wordpress.com/feed/",
+      "website_url": "https://lincolnmathsphys.wordpress.com/category/physics/",
+      "description": "Lincoln School of Mathematics & Physics Blog. The School offers undergraduate and postgraduate degrees in a range of fundamental and applied mathematics and physics.",
+      "followers": {
+        "twitter": 833
+      },
+      "image_url": "https://i1.feedspot.com/4470176.jpg?t=1608213101"
+    },
+    {
+      "title": "The Mathletics Blog",
+      "feed_url": "https://www.mathletics.com/blog/feed/",
+      "website_url": "https://www.mathletics.com/blog/",
+      "description": "Mathletics fosters confidence via individualized instruction, fun games, and mastery tasks. It offers the ideal balance of help and difficulty to ensure that every student succeeds. They are always looking for ways to improve both their teaching strategies and the educational experiences of their pupils. Browse the blog to discover updates, math articles, teaching ideas, and much more.",
+      "followers": {
+        "facebook": 152100,
+        "twitter": 6200,
+        "instagram": 10400
+      },
+      "image_url": "https://i1.feedspot.com/4969750.jpg?t=1606288189"
+    },
+    {
+      "title": "Nuomegamath",
+      "feed_url": "https://nuomegamath.wordpress.com/feed/",
+      "website_url": "https://nuomegamath.wordpress.com/",
+      "description": "A maths blog for Advanced Computing, a blog on Computer Algebra, Mathematics, and Systems Engineering.",
+      "followers": {
+        "twitter": 41
+      },
+      "image_url": "https://i1.feedspot.com/5015928.jpg?t=1608213107"
+    },
+    {
+      "title": "Mean Green Math",
+      "feed_url": "https://meangreenmath.com/feed/",
+      "website_url": "https://meangreenmath.com/",
+      "description": "This blog aims to address the whys of mathematics, providing readers with deeper content knowledge of mathematics that probably goes well beyond the expectations of most textbooks. Math blog by John Quintanilla.",
+      "followers": {
+        "facebook": 102
+      },
+      "image_url": "https://i1.feedspot.com/4470590.jpg?t=1608212745"
+    },
+    {
+      "title": "Mathematical Enchantments",
+      "feed_url": "https://mathenchant.wordpress.com/feed/",
+      "website_url": "https://mathenchant.wordpress.com/",
+      "description": "Mathematical Enchantments is written by James Propp, a mathematician at the University of Massachusetts, Lowell. It is a monthly column devoted to popularizing mathematics, especially the kind of math that takes us into fantastic realms.",
+      "followers": {
+        "facebook": 177,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4470205.jpg?t=1608212766"
+    },
+    {
+      "title": "Intersections -- Poetry with Mathematics",
+      "feed_url": "https://poetrywithmathematics.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://poetrywithmathematics.blogspot.com/",
+      "description": "Mathematical language can heighten the imagery of a poem; mathematical structure can deepen its effect. Feast here on an international menu of poems made rich by mathematical ingredients . . . . . . . gathered by JoAnne Growney.",
+      "followers": {
+        "twitter": 447
+      },
+      "image_url": "https://i1.feedspot.com/4470096.jpg?t=1661748237"
+    },
+    {
+      "title": "Illustrative Math Blog",
+      "feed_url": "https://illustrativemathematics.blog/feed/",
+      "website_url": "https://illustrativemathematics.blog/",
+      "description": "Illustrative Mathematics is a non-profit organization committed to creating a world where learners know, use, and enjoy mathematics. IM authors high-quality, problem-based curricula and professional learning that fully supports teachers and students.",
+      "followers": {
+        "facebook": 16900,
+        "twitter": 31200
+      },
+      "image_url": "https://i1.feedspot.com/5262951.jpg?t=1617107768"
+    },
+    {
+      "title": "Unizor | Creative Mind through Art of Mathematics",
+      "feed_url": "http://unizor.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://unizor.blogspot.com/",
+      "description": "Unizor is a site where students can learn the high school math (and in the future some other subjects) in a thorough and rigorous way. It allows parents to enroll their children in educational programs and to control the learning process.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5015924.jpg?t=1661519565"
+    },
+    {
+      "title": "Mathbabe",
+      "feed_url": "https://mathbabe.org/feed/",
+      "website_url": "https://mathbabe.org/",
+      "description": "Math Blog by Cathy O'Neil - Exploring and venting about quantitative issues. Cathy O'Neil earned a Ph.D. in math from Harvard, was a postdoc at the MIT math department, and a professor at Barnard College where she published a number of research papers in arithmetic algebraic geometry. She then switched over to the private sector, working as a quant for the hedge fund D.E.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4470361.jpg?t=1608212279"
+    },
+    {
+      "title": "Opinionated History of Mathematics",
+      "feed_url": "https://intellectualmathematics.com/feed/podcast/",
+      "website_url": "https://intellectualmathematics.com/opinionated-history-of-mathematics/",
+      "description": "Cracking tales of historical mathematics and its interplay with science, philosophy, and culture. Revisionist history galore. Contrarian takes on received wisdom. Implications for teaching. Informed by current scholarship. By Dr Viktor Bl\u00e5sj\u00f6.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7022633.jpg?t=1738828659"
+    },
+    {
+      "title": "Abstract Algebra Blog",
+      "feed_url": "https://ysharifi.wordpress.com/feed/",
+      "website_url": "https://ysharifi.wordpress.com/",
+      "description": "Blog covers mathematical topics including basic Algebra, number theory, ring theory and more. Abstract Algebra is a blog by Yaghoub Sharifi, a Iranian-Canadian with PhD in mathematics from Simon Fraser University, Canada.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5442229.jpg?t=1663239902"
+    },
+    {
+      "title": "Ganit Charcha",
+      "feed_url": "https://www.ganitcharcha.com/feed/",
+      "website_url": "https://www.ganitcharcha.com/",
+      "description": "Ganit Charcha does not teach Mathematics, it ensures growth of mathematical mind so that we learn to enjoy Mathematics.",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 320
+      },
+      "image_url": "https://i1.feedspot.com/5015927.jpg?t=1608213420"
+    },
+    {
+      "title": "Joel David Hamkins",
+      "feed_url": "https://jdh.hamkins.org/feed/",
+      "website_url": "https://jdh.hamkins.org/",
+      "description": "My main research interest lies in mathematical and philosophical logic, particularly set theory, with a focus on the mathematics and philosophy of the infinite. I have worked particularly with forcing and large cardinals, those strong axioms of infinity, and have investigated the interaction of these two central set-theoretic concepts.",
+      "followers": {
+        "twitter": 25300
+      },
+      "image_url": "https://i1.feedspot.com/3518504.jpg?t=1608212734"
+    },
+    {
+      "title": "Online Math 4 All",
+      "feed_url": "https://www.onlinemath4all.com/best-way-to-learn-mathematics.xml",
+      "website_url": "https://www.onlinemath4all.com/",
+      "description": "This is a website which gives you valuable math content, solutions to math books written by famous authors, many math calculators etc.",
+      "followers": {
+        "facebook": 89
+      },
+      "image_url": "https://i1.feedspot.com/4861684.jpg?t=1608212102"
+    },
+    {
+      "title": "John D. Cook Consulting Blog",
+      "feed_url": "https://www.johndcook.com/blog/feed/",
+      "website_url": "https://www.johndcook.com/blog/",
+      "description": "The Endeavor gives readers a sense of how they might combine their programming skills with business, and/or use those skills to solve real-world problems. It is the popular computer science-themed blog of John Cook, a former math professor and programmer who has transitioned into consulting. He helps companies make better decisions by taking advantage of the data they have, combining it with expert opinion, creating mathematical models, overcoming computational difficulties, and interpreting the results.",
+      "followers": {
+        "twitter": 48600
+      },
+      "image_url": "https://i1.feedspot.com/103679.jpg?t=1665146302"
+    },
+    {
+      "title": "Natural Math Blog",
+      "feed_url": "https://naturalmath.com/feed/",
+      "website_url": "https://naturalmath.com/blog/",
+      "description": "Natural Math is a company and a community of parents, teachers, and students who want to make mathematics their own, and make their own mathematics. Join us in open online courses, local events, crowdsourced books, and other ways to reinvent mathematics education with and for children.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4470095.jpg?t=1608213415"
+    },
+    {
+      "title": "Coolmath Games Blog",
+      "feed_url": "https://www.coolmathgames.com/blog/feed",
+      "website_url": "https://www.coolmathgames.com/blog",
+      "description": "Explore new revamped games and cool tricks via the Coolmath blog. Coolmath Games is a brain-training site, for everyone, where logic & thinking meet fun & games. Featuring thousands of strategy, logic, trivia, and numbers games for everyone to explore. All of these games have been carefully selected to be both fun to play and mentally stimulating.",
+      "followers": {
+        "facebook": 130000
+      },
+      "image_url": "https://i1.feedspot.com/7303879.jpg?t=1713865963"
+    },
+    {
+      "title": "Math Tutor",
+      "feed_url": "https://mathtutory.com/feed/",
+      "website_url": "https://mathtutory.com/",
+      "description": "Math Tutor is an online mathematics learning website. Step by step easy method to solve math problems. Learn mathematics and practice with worksheets.",
+      "followers": {
+        "facebook": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5090398.jpg?t=1608213128"
+    },
+    {
+      "title": "Math = Love",
+      "feed_url": "https://mathequalslove.net/feed/",
+      "website_url": "https://mathequalslove.net/",
+      "description": "I'm Sarah Carter, a high school math teacher who passionately believes math equals love. Through this blog, I'm on a mission to equip other teachers to create inviting and engaging classrooms where learning mathematics is fun. I currently teach AP Calculus AB, AP Precalculus, and Statistics at Coweta High School in Coweta, OK. Over my thirteen-year teaching career, I have taught both math and science at the secondary level. I enjoy creating free printable puzzles and hands-on math activities for the secondary classroom.",
+      "followers": {
+        "facebook": 15800,
+        "twitter": 29000,
+        "instagram": 14300
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/1327676/page/5263061/logo_1674529336.jpg"
+    },
+    {
+      "title": "Mister Marx's Math Corner",
+      "feed_url": "https://www.mistermarx.com/blog?format=rss",
+      "website_url": "https://www.mistermarx.com/blog",
+      "description": "Dive into the latest episodes and insights from Mister Marx. The Mister Marx Math Adventures is a Youtube channel all about breaking down complex math topics into digestible segments. These videos are conversational, and designed to keep you actively engaged in the learning process.",
+      "followers": {
+        "facebook": 276,
+        "twitter": 133
+      },
+      "image_url": "https://i1.feedspot.com/5751069.jpg?t=1704789077"
+    },
+    {
+      "title": "Worldviews Limit Perspective",
+      "feed_url": "https://81018.com/feed/",
+      "website_url": "https://81018.com/",
+      "description": "The site focuses on the foundations of physics, cosmology, and mathematics, particularly the concepts of space, time, finite-infinite, the start of the universe, natural units, dimensionless constants, and mathematical physics.",
+      "followers": {
+        "twitter": 218
+      },
+      "image_url": "https://i1.feedspot.com/5706860.jpg?t=1699354392"
+    },
+    {
+      "title": "Math Doubts",
+      "feed_url": "https://www.mathdoubts.com/feed/",
+      "website_url": "https://www.mathdoubts.com/",
+      "description": "Learn mathematics online from basics to very advanced level with proofs of formulas, math video tutorials and maths practice problems with solutions.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 94,
+        "instagram": 82
+      },
+      "image_url": "https://i1.feedspot.com/5098115.jpg?t=1627449783"
+    },
+    {
+      "title": "My Math Education Blog",
+      "feed_url": "https://blog.mathed.page/feed/?alt=rss",
+      "website_url": "https://blog.mathed.page/blog/",
+      "description": "I have retired from the classroom after 42 years as a math teacher in K-12 from counting to calculus. I now work with teachers and schools, and I continue to develop curriculum. I share instructional materials and my views on math education on this blog.",
+      "followers": {
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/1059027.jpg?t=1608212739"
+    },
+    {
+      "title": "ThatsMaths",
+      "feed_url": "https://thatsmaths.com/feed/",
+      "website_url": "https://thatsmaths.com/",
+      "description": "ThatsMaths is the blog for a series of articles on mathematics to be published in the Irish Times, starting on 19 July 2012. Among the goals of the articles are to Demystify Mathematics, Show the breathtaking power of the subject, Discuss a range of technological applications, Explain recent advances and developments and more!",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4470370.jpg?t=1661516614"
+    },
+    {
+      "title": "Math Geek Mama",
+      "feed_url": "https://mathgeekmama.com/feed/",
+      "website_url": "https://mathgeekmama.com/",
+      "description": "I'm Bethany, a child of God who also happens to be passionate about math & making it accessible and maybe even *gasp* likable by my students! To help you do the same, I share fun and free math teaching resources and games!",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4470596.jpg?t=1608212119"
+    },
+    {
+      "title": "Math Coach's Corner Blog",
+      "feed_url": "https://www.mathcoachscorner.com/feed/",
+      "website_url": "https://www.mathcoachscorner.com/blog/",
+      "description": "Donna Bouche is a K-5 curriculum coordinator, co-author of the guided math workshop, and blogger at Math Coach's Corner. Her goal is to math fun and engaging for all students and ease the stress that some teachers associate with teaching math by providing highly interactive sessions and resources teachers can use.",
+      "followers": {
+        "facebook": 82800,
+        "twitter": 22300,
+        "instagram": 7200
+      },
+      "image_url": "https://i1.feedspot.com/4470120.jpg?t=1697030470"
+    },
+    {
+      "title": "The Aperiodical",
+      "feed_url": "https://aperiodical.com/feed/",
+      "website_url": "https://aperiodical.com/",
+      "description": "The Aperiodical is an online maths magazine blog, for people who are interested in maths and want to read interesting stuff.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 12900
+      },
+      "image_url": "https://i1.feedspot.com/109678.jpg?t=1608212363"
+    },
+    {
+      "title": "Peter Cameron's Blog",
+      "feed_url": "https://cameroncounts.wordpress.com/feed/",
+      "website_url": "https://cameroncounts.wordpress.com/",
+      "description": "always busy counting, doubting every figured guess . . .Peter Jephson Cameron (born 23 January 1947) is an Australian mathematician who works in group theory, combinatorics, coding theory, and model theory.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4470181.jpg?t=1608212352"
+    },
+    {
+      "title": "Denise Gaskins' Let's Play Math Blog",
+      "feed_url": "https://denisegaskins.com/feed/",
+      "website_url": "https://denisegaskins.com/blog/",
+      "description": "Math is a game, playing with ideas. My Let's Play Math blog is about the ongoing adventure of learning, teaching, and playing around with mathematics from preschool to Precalculus.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4470339.jpg?t=1653885885"
+    },
+    {
+      "title": "Teaching High School Math",
+      "feed_url": "https://teachinghighschoolmath.blogspot.com/feeds/posts/default",
+      "website_url": "https://teachinghighschoolmath.blogspot.com/",
+      "description": "Teaching High School Math is a blog offering classroom tips, teaching ideas, and resources for high school mathematics educators. The blog features creative activities like logic puzzles, mystery mosaics, and brain breaks to enhance student engagement.",
+      "followers": {
+        "facebook": 5600,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4237240.jpg?t=1608212244"
+    },
+    {
+      "title": "Tanya Khovanova's Math Blog",
+      "feed_url": "https://blog.tanyakhovanova.com/feed/",
+      "website_url": "https://blog.tanyakhovanova.com/",
+      "description": "I want to share some ideas about mathematics and about my life as a mathematician. In this blog, you'll read about such things as the properties of numbers and sequences and how mathematicians approach practical things. I started my life as a genius girl mathematician, winning silver and gold medals at the International Math Olympiad (IMO) as a teenager. My PhD is from Moscow State University.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4410991.jpg?t=1608212217"
+    },
+    {
+      "title": "RightStart Math Blog",
+      "feed_url": "https://rightstartmath.com/feed/",
+      "website_url": "https://rightstartmath.com/blog/",
+      "description": "Articles cover card games for facts practice, maths lessons, tips for struggling learners, and maths news. RightStart Math uses the AL Abacus to help children understand, apply, and enjoy Mathematics.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 250,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5295493.jpg?t=1624371453"
+    },
+    {
+      "title": "Math For Love Blog",
+      "feed_url": "https://mathforlove.com/feed/",
+      "website_url": "https://mathforlove.com/blog/",
+      "description": "We are Dan Finkel and Katherine Cook, a husband and wife team devoted to transforming how math is taught and learned. We develop math games and curriculum, including tons of free lesson plans that we give away here. We train teachers and produce professional learning materials. And we write puzzles, produce math-art shows, and do whatever we can to show people how playful, beautiful, and life-changing mathematics can be.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 20800
+      },
+      "image_url": "https://i1.feedspot.com/5262950.jpg?t=1652347735"
+    },
+    {
+      "title": "Abakcus",
+      "feed_url": "https://abakcus.com/feed/",
+      "website_url": "https://abakcus.com/",
+      "description": "Abakcus is the best curation site for math and science. We work hard and curate the best articles, books, products, videos, and projects.",
+      "followers": {
+        "facebook": 865,
+        "twitter": 80600
+      },
+      "image_url": "https://i1.feedspot.com/5202131.jpg?t=1601381935"
+    },
+    {
+      "title": "Eddie's Math and Calculator Blog",
+      "feed_url": "http://edspi31415.blogspot.com/feeds/posts/default",
+      "website_url": "http://edspi31415.blogspot.com/",
+      "description": "A blog is that is all about mathematics and calculators, two of my passions in life. By Edward Shore. Went to Cal Poly Pomona. Degrees: Accounting (Bachelor of Science), Mathematics (Masters of Science).",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/157149.jpg?t=1608212136"
+    },
+    {
+      "title": "Interactive Mathematics",
+      "feed_url": "https://www.intmath.com/blog/feed",
+      "website_url": "https://www.intmath.com/blog/",
+      "description": "IntMath's mission is to inspire and educate people about the wonders of mathematics. It accomplishes this through the use of clear examples, analogies to the 'real world,' and interactive applets that allow the user to explore mathematical concepts.",
+      "followers": {
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/336212.jpg?t=1608212006"
+    },
+    {
+      "title": "CUNYMath Blog - The City University of New York",
+      "feed_url": "https://cunymathblog.commons.gc.cuny.edu/feed/",
+      "website_url": "https://cunymathblog.commons.gc.cuny.edu/",
+      "description": "The CUNYMath Blog is intended as a sounding board by and for the mathematics educators, researchers and graduate students at CUNY. We are here to write about and discuss the things we find important - mathematics, education, CUNY, New York City and so This blog was formed out of a collaboration between the CUNYMath website (the blog's home), and the Math Matters group here on the faculty commons.",
+      "followers": {
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4470085.jpg?t=1608212068"
+    },
+    {
+      "title": "Early Math Counts Blog",
+      "feed_url": "https://earlymathcounts.org/feed/",
+      "website_url": "https://earlymathcounts.org/blog/",
+      "description": "Bringing out the mathematician in every child. View posts by our current and past bloggers to gain valuable insights into the developing brain and learn about activities that you can easily incorporate into your early childhood curriculum to foster the development of early math skills in young learners.",
+      "followers": {
+        "facebook": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5555592.jpg?t=1683176367"
+    },
+    {
+      "title": "IntoMath Blog",
+      "feed_url": "https://intomath.org/feed/",
+      "website_url": "https://intomath.org/math-blog",
+      "description": "IntoMath blog is a source of unique math recources, math learning strategies and math related information for students, teachers and parents.",
+      "followers": {
+        "facebook": 967,
+        "twitter": 63
+      },
+      "image_url": "https://i1.feedspot.com/5555627.jpg?t=1683178519"
+    },
+    {
+      "title": "Unifying Quantum and Relativistic Theories",
+      "feed_url": "https://www.theimagineershome.com/blog/feed/",
+      "website_url": "https://www.theimagineershome.com/blog/",
+      "description": "The purpose of this blog is to show how changing ones perspective on the physical structure of the universe will allow one to unite the abstract concepts of Quantum Mechanics with the observable realities of both Einstein's Special and General Theories of Relativity",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5161851.jpg?t=1608213830"
+    },
+    {
+      "title": "mathgarage",
+      "feed_url": "https://mathgarage.wordpress.com/feed/",
+      "website_url": "https://mathgarage.wordpress.com/",
+      "description": "Most men and women, by birth or nature, lack the means to advance in wealth and power, but all have the ability to advance in knowledge. Get more understanding about math from this blog.",
+      "followers": {
+        "facebook": 287
+      },
+      "image_url": "https://i1.feedspot.com/4296849.jpg?t=1608213276"
+    },
+    {
+      "title": "NCERT SOLUTIONS",
+      "feed_url": "https://www.msipg.com/feed/",
+      "website_url": "https://www.msipg.com/",
+      "description": "NCERT Maths Solutions Provided by MSIPG. This material is helpful for CBSE Board, UP Board, and other state boards which followed the NCERT Textbooks.",
+      "followers": {
+        "facebook": 73
+      },
+      "image_url": "https://i1.feedspot.com/5051233.jpg?t=1608212162"
+    },
+    {
+      "title": "Aman's Maths Blog",
+      "feed_url": "https://www.amansmathsblogs.com/feed/",
+      "website_url": "https://www.amansmathsblogs.com/blogs/",
+      "description": "Hi, I am AMAN RAJ. I am founder of AMANS MATHS BLOGS and a Maths faculty of IIT Foundation Courses. I started this website to share my knowledge of Mathematics.",
+      "followers": {
+        "facebook": 11300,
+        "twitter": 713
+      },
+      "image_url": "https://i1.feedspot.com/5015932.jpg?t=1608212148"
+    },
+    {
+      "title": "mathlibra",
+      "feed_url": "https://mathlibra.com/feed/",
+      "website_url": "https://mathlibra.com/",
+      "description": "mathlibra is an online math library. We make serious efforts to arrange our contents in order to be the End of Mathematics. Follow to get the latest updates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5051266.jpg?t=1608213607"
+    },
+    {
+      "title": "The Center of Math blog | DO the math. DON'T overpay.",
+      "feed_url": "https://centerofmathematics.blogspot.com/feeds/posts/default",
+      "website_url": "https://centerofmathematics.blogspot.com/",
+      "description": "The Worldwide Center of Mathematics is making high-quality, low-cost math resources a reality. DO the math, DON'T overpay. We make high quality, low-cost math resources a reality.",
+      "followers": {
+        "facebook": 19000,
+        "twitter": 73700
+      },
+      "image_url": "https://i1.feedspot.com/4091680.jpg?t=1661518685"
+    },
+    {
+      "title": "Math Misery?",
+      "feed_url": "http://mathmisery.com/wp/feed/",
+      "website_url": "http://mathmisery.com/wp/",
+      "description": "This blog is not about how miserable math is. Math is not misery! Math is fun, beautiful, practical, useful, and true. Instead, the title 'Math Misery' aims to convey the general feeling that the majority of people have when it comes to working with mathematics.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4470204.jpg?t=1661755890"
+    },
+    {
+      "title": "MIND Research Institute Blog",
+      "feed_url": "https://blog.mindresearch.org/blog/rss.xml",
+      "website_url": "https://blog.mindresearch.org/blog",
+      "description": "MIND Research is a nonprofit working institute. Their blogs are bringing Math to Life for students, parents, teachers and communities. Find here ST Math tips, STEM insights, classroom technology implementation strategies and more. Our mission is to ensure that all students are mathematically equipped to solve the world's most challenging problems.",
+      "followers": {
+        "facebook": 11200,
+        "twitter": 11900
+      },
+      "image_url": "https://i1.feedspot.com/5015936.jpg?t=1659442504"
+    },
+    {
+      "title": "Math1089",
+      "feed_url": "https://math1089.in/feed/",
+      "website_url": "https://math1089.in/",
+      "description": "At Math1089, we have a variety of content for everyone's taste and needs. We believe that learning should not be limited to textbooks and lectures but instead, it should be a fun and engaging experience. Our aim is to make mathematics appealing and accessible to everyone, and we strive to achieve this through our diverse range of resources. From informative blog posts to fun-filled number games, from practice model papers to topical questions, from educational videos to Olympiad resources and their weekly solutions, you're sure to find something that suits you.",
+      "followers": {
+        "facebook": 15200,
+        "twitter": 2100,
+        "instagram": 14200
+      },
+      "image_url": "https://i1.feedspot.com/5501550.jpg?t=1675162400"
+    },
+    {
+      "title": "Thinking Mathematically",
+      "feed_url": "https://buildingmathematicians.wordpress.com/feed/",
+      "website_url": "https://buildingmathematicians.wordpress.com/",
+      "description": "Hello everyone and welcome to my blog. My name is Mark and I write about Mathematics education. I am a Teacher, Instructional Coach, and Life-long Learner. Passionately curious about education. As a classroom teacher, I have taught grades 5-8.",
+      "followers": {
+        "twitter": 12500
+      },
+      "image_url": "https://i1.feedspot.com/4709271.jpg?t=1605681233"
+    },
+    {
+      "title": "Marilyn Burns Math Blog",
+      "feed_url": "https://marilynburnsmath.com/feed/",
+      "website_url": "https://marilynburnsmath.com/blog/",
+      "description": "Math Solutions is dedicated to improving students' learning of mathematics by providing educators with the highest quality professional development services, products, and resources. Follow this blog that offers author Marilyn's current thinking about math education and her ongoing classroom experiences and learning.",
+      "followers": {
+        "facebook": 15700,
+        "twitter": 40600
+      },
+      "image_url": "https://i1.feedspot.com/4199231.jpg?t=1622784336"
+    },
+    {
+      "title": "Math Magic Mystery",
+      "feed_url": "https://mahmoodmathmagic.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://mahmoodmathmagic.blogspot.com/",
+      "description": "My name is Rana Mahmood ul Haq, I am not a mathematician, it's just God-gifted. The purpose of writing this is to inquire about the methods and solutions to the mathematical problems known as magic squares.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5121030.jpg?t=1661751736"
+    },
+    {
+      "title": "Jeffrey Watson - Secondary mathematics blog",
+      "feed_url": "https://www.jeff-watson-critical-math-thinking.com/mathematics-teaching-blog/feed",
+      "website_url": "https://www.jeff-watson-critical-math-thinking.com/mathematics-teaching-blog",
+      "description": "Explore articles on mathematics, explaining various concepts, questions and more! Currently, I am teaching Mathematics at the International Academy in Troy.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4746697.jpg?t=1608213062"
+    },
+    {
+      "title": "Engaging Maths",
+      "feed_url": "https://engagingmaths.com/feed/",
+      "website_url": "https://engagingmaths.com/",
+      "description": "Engaging Maths is managed by Dr. Catherine Attard. She combines great dedication for teaching engaging mathematics with her own experiences as a primary classroom teacher to motivate and inspire pre-service and qualified teachers. She focuses on student engagement with mathematics and issues surrounding the pedagogical practices that influence students' engagement. Check out the blog to know about resources, books, facilities, teachings, workshops, videos, etc.",
+      "followers": {
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4470158.jpg?t=1691062650"
+    },
+    {
+      "title": "Blog - The Mathematics Master",
+      "feed_url": "https://themathematicsmaster.com/feed/",
+      "website_url": "https://themathematicsmaster.com/blog/",
+      "description": "The Mathematics Master is a startup where you not only polish your mathematical skills but come across hundreds of different calculators. There is not a single math problem on the planet that we cannot help you solve, and the same goes for calculators. Our custom-made calculators make sure that you get the answer to all and any of your problems on different levels. Your problems can be solved in seconds and you will experience the most fun and easy way to break them.",
+      "followers": {
+        "facebook": 11
+      },
+      "image_url": "https://i1.feedspot.com/7257616.jpg?t=1708517410"
+    },
+    {
+      "title": "Mathematics Rising",
+      "feed_url": "https://mathrising.com/?feed=rss2",
+      "website_url": "https://mathrising.com/",
+      "description": "Mathematics Rising is about the emergence of mathematics, which grows out of the body's contact with the world, and is as much a part of nature as we are. Vision, memory, intuition and reasoning touch each other in ways there is much to learn about. I'm intrigued by what we're doing when we do mathematics.",
+      "followers": {
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/353879.jpg"
+    },
+    {
+      "title": "Wonder In Mathematics",
+      "feed_url": "https://amiealbrecht.com/feed/",
+      "website_url": "https://amiealbrecht.com/",
+      "description": "Wonder in mathematics is authorized by E.B. White. She frequently wonders about teaching mathematics, how her pupils learn, and how to assist others in helping their kids learn. Take a walk through her blog and learn more about mathematical stories, articles, workshops, teaching, and more.",
+      "followers": {
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4470338.jpg?t=1691062605"
+    },
+    {
+      "title": "The Fancy Maths",
+      "feed_url": "https://thefancymaths.blogspot.com/feeds/posts/default",
+      "website_url": "https://thefancymaths.blogspot.com/",
+      "description": "The Fancy Maths blog helps the students who want to become an expert in mathematics subject. If you want to clear your concept in mathematics or if you want to learn the techniques to solve different kind of examples, my blog definitely help you to learn mathematics. On my blog, you get different courses which starts from class 9 and up to class 12. We provide chapter wise formula sheet, question bank, our notes, and guidelines.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5648406.jpg?t=1692183573"
+    },
+    {
+      "title": "Math Medicine",
+      "feed_url": "https://mathecine.wordpress.com/feed/",
+      "website_url": "https://mathecine.wordpress.com/",
+      "description": "Math Medicine is aimed to be your first-aid kit in Mathematics. Like a one-stop site, it hopes to contain as many classroom activities, math projects, worksheets, revision and assessment papers, posts, and information about the Mathematics subject.",
+      "followers": {
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/5639856.jpg?t=1690872206"
+    },
+    {
+      "title": "Thinkster Math",
+      "feed_url": "https://hellothinkster.com/blog/feed/",
+      "website_url": "https://hellothinkster.com/blog/",
+      "description": "Covers math tips & tricks, tips for parents, benefits of online tutoring, and fun math activities. Thinkster Math creates personalized math learning programs by combining human interaction and cutting-edge artificial intelligence.",
+      "followers": {
+        "facebook": 70800
+      },
+      "image_url": "https://i1.feedspot.com/5295494.jpg?t=1624372300"
+    },
+    {
+      "title": "Math Tech Connections",
+      "feed_url": "https://mathtechconnections.com/feed/",
+      "website_url": "https://mathtechconnections.com/archives/",
+      "description": "Welcome to Math Tech Connections by Mrs. Santillana! This is where I am able to share with you my love of teaching and technology \ud83d\ude42 I have 9 years of teaching experience (5 of those in 3rd grade). I have always enjoyed 'building websites' and think it's amazing that I get to combine two things that I love!",
+      "followers": {
+        "facebook": 22000,
+        "twitter": 116,
+        "instagram": 32200
+      },
+      "image_url": "https://i1.feedspot.com/4470595.jpg?t=1608212697"
+    },
+    {
+      "title": "Robert Kaplinsky - Glenrock Consulting Blog",
+      "feed_url": "http://robertkaplinsky.com/feed/",
+      "website_url": "http://robertkaplinsky.com/blog/",
+      "description": "Educational consultant specializing in the Common Core State Standards for Mathematics and real-world problem-based learning. I do this while continuing to work full time for a K-12 school district in Southern California as a mathematics teacher specialist.",
+      "followers": {
+        "facebook": 23500,
+        "twitter": 58600,
+        "instagram": 6500
+      },
+      "image_url": "https://i1.feedspot.com/1099684.jpg?t=1661753749"
+    },
+    {
+      "title": "Math Only Math Blog",
+      "feed_url": "https://www.math-only-math.com/Math.xml",
+      "website_url": "https://www.math-only-math.com/math-blog.html",
+      "description": "Math Blog by Priyanka Ghosh having experience in teaching Mathematics for the past ten years in Kolkata, India. Presenting math-only-math to kids, students, and children. Mathematical ideas have been explained in the simplest possible way. Here you will have plenty of math help and lots of fun while learning and teaching math step-by-step.",
+      "followers": {
+        "facebook": 12600,
+        "twitter": 257
+      },
+      "image_url": "https://i1.feedspot.com/4470588.jpg?t=1608211712"
+    },
+    {
+      "title": "Flying Colours Maths",
+      "feed_url": "https://www.flyingcoloursmaths.co.uk/feed.xml",
+      "website_url": "https://www.flyingcoloursmaths.co.uk/blog/",
+      "description": "My aim is to make maths easy for everyone. Any kind of question you have, ask away! Well, probably best to stick to maths. Colin Beveridge is the author of several maths For Dummies books, and a friendly, professional maths tutor based in Weymouth, Dorset.",
+      "followers": {
+        "facebook": 146,
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/1062687.jpg?t=1608212710"
+    },
+    {
+      "title": "ALTEREDZINE",
+      "feed_url": "https://alteredzine.blogspot.com/feeds/posts/default",
+      "website_url": "https://alteredzine.blogspot.com/",
+      "description": "The purpose of this blog is to teach Math subjects : Calculus, Pre-calculus, Algebra and Basic Math. Now it focuses on Higher Math. You can also find posts on learning theories, study skills and web resources for learning.",
+      "followers": {
+        "facebook": 154
+      },
+      "image_url": "https://i1.feedspot.com/7278360.jpg?t=1710935975"
+    },
+    {
+      "title": "Mr-Mathematics.com Blog",
+      "feed_url": "https://mr-mathematics.com/feed/",
+      "website_url": "https://mr-mathematics.com/maths-blog/",
+      "description": "Maths Resources for Teachers. Mr-mathematics.com is dedicated to developing and sharing outstanding teaching and learning resources for conceptual and engaging mathematics education.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4470357.jpg?t=1608212227"
+    },
+    {
+      "title": "Aleph Zero Categorical",
+      "feed_url": "https://blog.jpolak.org/?feed=rss2",
+      "website_url": "https://blog.jpolak.org/",
+      "description": "I am a Canadian mathematician. My interests started out in ring theory, module theory, p-adic groups, automorphic representations, logic, and combinatorics. I started Aleph Zero Categorical in 2011 when I was started my PhD in mathematics at McGill University. The primary purpose of this blog is to showcase mathematical abstraction and its beauty in the realm of pure mathematics, especially in algebra. Most of this blog is written to be comprehensible by someone who has taken algebra in graduate school, and much of it can be read with even fewer prerequisites.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2265802.jpg?t=1614606602"
+    },
+    {
+      "title": "I Speak Math",
+      "feed_url": "https://ispeakmath.org/",
+      "website_url": "https://ispeakmath.org/",
+      "description": "Hi! I am Julie. I am currently teaching Algebra 2 at a private school in North Carolina. I spend every spare moment planning, researching new ways to teach math, and reading blogs.",
+      "followers": {
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4470352.jpg?t=1608212294"
+    },
+    {
+      "title": "William College Mathematics & Statistics Blog",
+      "feed_url": "https://math.williams.edu/category/blog/feed/",
+      "website_url": "https://math.williams.edu/category/blog/",
+      "description": "A group blog by students and faculty at Williams College. Posts are generally thoughtful and well written, with a good mix of math, stats and education focused pieces.",
+      "followers": {
+        "facebook": 29700,
+        "twitter": 20500,
+        "instagram": 34100
+      },
+      "image_url": "https://i1.feedspot.com/4470065.jpg?t=1638445558"
+    },
+    {
+      "title": "What If Spreadsheet Math - Learn Math as a Creative Experience",
+      "feed_url": "https://whatifmath.org/feed/",
+      "website_url": "https://whatifmath.org/blog-2/",
+      "description": "What If your students had the opportunity to see mathematics in new ways, explore patterns, experience connections between representations, and generate their own novel solutions to problems? What if students could learn math creatively, develop spreadsheet skills, enjoy the rewards of coding, and use math to solve interesting problems?",
+      "followers": {
+        "facebook": 40,
+        "twitter": 84
+      },
+      "image_url": "https://i1.feedspot.com/4470616.jpg?t=1608212721"
+    },
+    {
+      "title": "Brian Hayes Blog",
+      "feed_url": "http://bit-player.org/",
+      "website_url": "http://bit-player.org/",
+      "description": "I'm the lucky dog who has been able to spend a lifetime exploring math, science, computing, and technology, then writing about my adventures.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/22085.jpg?t=1627625554"
+    },
+    {
+      "title": "Yummy Math",
+      "feed_url": "https://www.yummymath.com/",
+      "website_url": "https://www.yummymath.com/",
+      "description": "Brian Marks is presently a math coach, specialist, and coordinator in Newton, Massachusetts. He taught math for ten years before his present role. He is the co-creator of YummyMath.com, a resource that provides teachers with engaging real-world math problems. His own childhood math education consisted of boring, meaningless skill and drill work. He is interested in how we can increase student engagement, critical thinking, and discourse in the math classroom.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 32700
+      },
+      "image_url": "https://i1.feedspot.com/700564.jpg?t=1608212425"
+    }
+  ]
+}

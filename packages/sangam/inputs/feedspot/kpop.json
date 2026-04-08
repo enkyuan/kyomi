@@ -1,0 +1,533 @@
+{
+  "category": "kpop",
+  "source_url": "https://rss.feedspot.com/kpop_rss_feeds",
+  "feeds": [
+    {
+      "title": "Soompi",
+      "feed_url": "https://www.soompi.com/feed",
+      "website_url": "https://www.soompi.com/",
+      "description": "Soompi is one of the world's largest and longest-running English online media providing complete coverage of Korean pop culture. Founded in 1998, Soompi has become the ultimate authority for all the latest news on Korean celebrities, music, TV shows, movies, and style.",
+      "followers": {
+        "facebook": 8199999,
+        "twitter": 3600000,
+        "instagram": 311100
+      },
+      "image_url": "https://i1.feedspot.com/4667209.jpg?t=1660719711"
+    },
+    {
+      "title": "Koreaboo",
+      "feed_url": "https://www.koreaboo.com/feed/",
+      "website_url": "https://www.koreaboo.com/news/",
+      "description": "Koreaboo is an entertainment and media company dedicated to creating and promoting Korean pop culture worldwide. Find breaking k-pop news, Korean viral videos, and exclusive content from the biggest k-pop idols - creators of KCON and the biggest k-pop site in the world.",
+      "followers": {
+        "facebook": 7000000,
+        "twitter": 2500000
+      },
+      "image_url": "https://i1.feedspot.com/4278400.jpg?t=1660719656"
+    },
+    {
+      "title": "Go K-pop",
+      "feed_url": "https://www.gokpop.co/feeds/posts/default?alt=rss",
+      "website_url": "https://www.gokpop.co/",
+      "description": "Your one-stop exclusive Korean Entertainment News in Malaysia & Singapore.",
+      "followers": {
+        "facebook": 218000,
+        "twitter": 36400,
+        "instagram": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5018289.jpg?t=1607407563"
+    },
+    {
+      "title": "Netizen Buzz",
+      "feed_url": "https://feeds.feedburner.com/NetizenBuzz",
+      "website_url": "http://netizenbuzz.blogspot.com/",
+      "description": "Netizen Buzz was started out of a desire to bridge the gap between what happens in K-Entertainment and why it had to happen. Unlike any other entertainment industry in the world, netizens (internet citizens) play a pivotal role in the decision making process of Korean entertainment companies, and their power and influence simply just cannot be ignored.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 128400
+      },
+      "image_url": "https://i1.feedspot.com/1045044.jpg?t=1607407571"
+    },
+    {
+      "title": "Korean Indie",
+      "feed_url": "https://www.koreanindie.com/feed/",
+      "website_url": "https://www.koreanindie.com/",
+      "description": "Korean Indie is dedicated to helping you discover new Korean artists and bands around the world. Track and keep up with your favorite artist, bands, musical works, upcoming tours, and other important events. We also publish album and song reviews, trending playlists, and other music-related digital content.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4763008.jpg?t=1684321782"
+    },
+    {
+      "title": "Kpoppie.com",
+      "feed_url": "https://kpoppie.com/feed/",
+      "website_url": "https://kpoppie.com/",
+      "description": "Enjoy breaking Kpop news, opinions, and the most exclusive coverage on the hottest K-pop members' Profiles from the Kpoppie Breaking Newsroom Today. Kpoppie is a website devoted to breaking the latest K-pop news. Keep exploring the latest stories.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 117
+      },
+      "image_url": "https://i1.feedspot.com/5750866.jpg?t=1704717922"
+    },
+    {
+      "title": "KpopStarz",
+      "feed_url": "https://www.kpopstarz.com/rss/archives/archives.xml",
+      "website_url": "https://www.kpopstarz.com/news",
+      "description": "Stay in the loop with Kpopstarz on the latest Kpop and Kdrama news. KpopStarz is considered the top source for Korean pop music news in the US. Kpopstarz is a leading news source for the latest K-pop news, photos, videos, and breaking news worldwide.",
+      "followers": {
+        "facebook": 2400000,
+        "twitter": 138700
+      },
+      "image_url": "https://i1.feedspot.com/5286370.jpg?t=1660719986"
+    },
+    {
+      "title": "Asian Junkie",
+      "feed_url": "https://www.asianjunkie.com/category/k-entertainment/feed/",
+      "website_url": "https://www.asianjunkie.com/category/k-entertainment/",
+      "description": "Asian Junkie serves as a place for a collection of individuals to mock, analyze, and satirize the comings and goings of the Asian entertainment world. Needless to say, there's a lot of content worthy of it. Remember to have fun while you're here, because entertainment is meant to be.",
+      "followers": {
+        "twitter": 25800
+      },
+      "image_url": "https://i1.feedspot.com/4717926.jpg?t=1607407605"
+    },
+    {
+      "title": "The Bias List",
+      "feed_url": "https://thebiaslist.com/feed/",
+      "website_url": "https://thebiaslist.com/",
+      "description": "K-Pop reviews and discussion with just a hint of bias. Each week, Nick will be taking a listen to the newest kpop releases and giving his thoughts.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4667326.jpg?t=1668660847"
+    },
+    {
+      "title": "Daily Naver",
+      "feed_url": "https://dailynaver.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://dailynaver.blogspot.com/",
+      "description": "Daily Naver is a blog that is dedicated to translating Korean articles about KPOP, Korean drama, variety shows, and other relevant things in the Korean entertainment industry posted on Naver. I'll mostly translate articles posted on Naver because they're known for being the most trafficked and more civil. I'll also occasionally translate posts from community sites like Nate because they're the next most trafficked news portal in Korea after Naver.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5084514.jpg?t=1607407754"
+    },
+    {
+      "title": "HELLOKPOP \u00bb K-Pop",
+      "feed_url": "https://www.hellokpop.com/category/kpop/feed/",
+      "website_url": "https://www.hellokpop.com/category/kpop/",
+      "description": "Read the hottest updates and trending rumors from the k-pop, K-drama, and K-entertainment industries. HELLOKPOP is an online news publication in Korea serving as an indispensable news source for thousands of K-pop fans and observers of the industry.",
+      "followers": {
+        "facebook": 184000,
+        "twitter": 22400,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5470040.jpg?t=1669027191"
+    },
+    {
+      "title": "KPOPALYPSE",
+      "feed_url": "https://kpopalypse.com/feed/",
+      "website_url": "https://kpopalypse.com/",
+      "description": "KPOPALYPSE is a blog about k-pop related stuff. Some content is related to the k-pop radio show that the author hosts, some of it is draft content for the blog site Asian Junkie, while the rest is casual thoughts and opinions about the K-pop industry.",
+      "followers": {
+        "twitter": 3200,
+        "instagram": 203
+      },
+      "image_url": "https://i1.feedspot.com/4717850.jpg?t=1669287254"
+    },
+    {
+      "title": "Seoulbeats",
+      "feed_url": "https://seoulbeats.com/feed/",
+      "website_url": "https://seoulbeats.com/",
+      "description": "Seoulbeats is an ongoing project of discussion and dissection. It is also a collection of many authors with many different opinions, united by a love of writing and taking apart and facilitating discussion on a deeper level of everything associated with K-pop.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 10600,
+        "instagram": 228
+      },
+      "image_url": "https://i1.feedspot.com/1121729.jpg?t=1607407626"
+    },
+    {
+      "title": "K Crush America Magazine",
+      "feed_url": "https://www.kcrush.com/feed/",
+      "website_url": "https://www.kcrush.com/category/music/",
+      "description": "Founded in 2014, KCRUSH America Magazine is working toward bringing you information on your favorite Asian pop culture stars, beauty products, culture and etc. Whether you're interested in K-Pop, Asian cuisine, or wondering about life in Asia, we got you covered!",
+      "followers": {
+        "facebook": 15800,
+        "twitter": 4400,
+        "instagram": 9900
+      },
+      "image_url": "https://i1.feedspot.com/5037285.jpg?t=1607407635"
+    },
+    {
+      "title": "Kpopreviewed",
+      "feed_url": "https://kpopreviewed.com/feed/",
+      "website_url": "https://kpopreviewed.com/",
+      "description": "New and personal reviews of KPOP releases, ranging from the song, music video, and performances. Kpopreviewed is a Pop critic blog where the author analyses and shares their opinion/review of recently releases songs/music videos in the Kpop Industry.",
+      "followers": {
+        "twitter": 121
+      },
+      "image_url": "https://i1.feedspot.com/4718223.jpg?t=1669026543"
+    },
+    {
+      "title": "K-Popped.com",
+      "feed_url": "https://k-popped.com/feed/",
+      "website_url": "https://k-popped.com/",
+      "description": "Malaysia's number one k-pop website. We blog about all things Korean. And we are passionate about Korean pop culture. We started off as a little blog, with great aspirations. We are a bunch of Malaysians who love Korean pop culture!",
+      "followers": {
+        "facebook": 46900,
+        "twitter": 16100,
+        "instagram": 12300
+      },
+      "image_url": "https://i1.feedspot.com/1439925.jpg?t=1607407714"
+    },
+    {
+      "title": "KBopped",
+      "feed_url": "https://kbopped.com/feed/",
+      "website_url": "https://kbopped.com/",
+      "description": "The Kbopped blog provides refreshing takes and unbiased reviews of the latest suggested K-pop and J-pop songs and albums. View weekly charts ranked singles and more fan stuff on K-pop in the archives.",
+      "followers": {
+        "twitter": 138
+      },
+      "image_url": "https://i1.feedspot.com/5470036.jpg?t=1669026109"
+    },
+    {
+      "title": "\u266b Radio Kpop Replay \u266b",
+      "feed_url": "https://www.kpopreplay.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.kpopreplay.com/",
+      "description": "The best of Kpop 24/7, Online radio, the latest news, interesting notes and much more! Only in Kpop Replay.",
+      "followers": {
+        "facebook": 63500,
+        "twitter": 905
+      },
+      "image_url": "https://i1.feedspot.com/4718442.jpg?t=1607407671"
+    },
+    {
+      "title": "Ulzza Style",
+      "feed_url": "https://ulzza.com/feed/",
+      "website_url": "https://ulzza.com/",
+      "description": "Ulzza is a k-pop blogger community to bring you the latest breaking news and videos straight from the K-Pop industry. We want to support the k-pop music!",
+      "followers": {
+        "facebook": 335700,
+        "twitter": 656,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5241372.jpg?t=1612262268"
+    },
+    {
+      "title": "SNSD Fansite",
+      "feed_url": "https://www.wgsnsdfx.com/feeds/posts/default",
+      "website_url": "https://www.wgsnsdfx.com/",
+      "description": "Get the latest news about the best girl group from South Korea!",
+      "followers": {
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/5135728.jpg"
+    },
+    {
+      "title": "Tokki Star",
+      "feed_url": "https://tokkistar.com/feed/",
+      "website_url": "https://tokkistar.com/category/articles/",
+      "description": "Get all the latest tea on your favorite kpop celebrities.",
+      "followers": {
+        "facebook": 10000,
+        "twitter": 83
+      },
+      "image_url": "https://i1.feedspot.com/5194894.jpg?t=1607408047"
+    },
+    {
+      "title": "Allysse Tv",
+      "feed_url": "https://allyssetv.com/feed/",
+      "website_url": "https://allyssetv.com/",
+      "description": "Im a Kpop Musician and content creator. I created Allysse TV to give Kpop fans an insight on the K-pop world and what I think and know about South Korea.",
+      "followers": {
+        "facebook": 450,
+        "twitter": 613,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5018288.jpg?t=1607408052"
+    },
+    {
+      "title": "Kpop Wise",
+      "feed_url": "https://www.kpopwise.com/feeds/posts/default",
+      "website_url": "https://www.kpopwise.com/",
+      "description": "Exclusive interviews, Hot Gossip, Upcoming tour details, and more stuff from your favorite K-pop artists. Kpop Wise strives to be a reliable and unbiased K-pop news source curated by experienced journalists and K-pop fans. Our objective is to provide updates about K-pop artists, especially those without much international coverage.",
+      "followers": {
+        "facebook": 242,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5173552.jpg?t=1607408104"
+    },
+    {
+      "title": "Ash Talks Kpop",
+      "feed_url": "https://ashtalkskpop.net/feed/",
+      "website_url": "https://ashtalkskpop.net/",
+      "description": "Ash Talks Kpop is a collection of Ashliegh's opinions on music video fashion, Seoul Fashion Week, and everything else that happens in the world of Kpop and sometimes other Asian artists, actors, and models she feels like talking about.",
+      "followers": {
+        "twitter": 36
+      },
+      "image_url": "https://i1.feedspot.com/5187484.jpg?t=1607408109"
+    },
+    {
+      "title": "K-Culture with Jae-Ha Kim",
+      "feed_url": "https://jaehakim.substack.com/feed",
+      "website_url": "https://jaehakim.substack.com/",
+      "description": "Journalist Jae-Ha Kim writes about Korean culture, with a strong emphasis on K-dramas, K-pop and immigrant life. SUBSCRIBE for FREE, won't you?",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F59faddaa-b1d0-438f-8aac-62c692483693_800x800.png"
+    },
+    {
+      "title": "Kpop Planet",
+      "feed_url": "https://k-pop-planet.com/blogs/latest-news.atom",
+      "website_url": "https://k-pop-planet.com/blogs/latest-news/",
+      "description": "Kpop Planet is the premier supplier of Kpop albums and merchandises to Kpop wholesalers, fan clubs and suppliers. Stray Kids Le Sserafim BTS Seventeen?BLACKPINK?NewJeans TXT?Twice NCT 127 Hateo Chart?Weverse SM TOWN JYP Shop YG Select Jin Suga Jimin V Jungkook Treasure Jisoo Lisa photocard cokodive cocodive ktown4u",
+      "followers": {
+        "facebook": 723,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/7902497.jpg"
+    },
+    {
+      "title": "K-POP, K-FANS",
+      "feed_url": "https://feeds.feedburner.com/KpopKfans",
+      "website_url": "http://kpopkfans.blogspot.com/",
+      "description": "This website, 'K-POP, K-FANS', will focus on how K-fans (Korean fans) live in the K-pop world.",
+      "followers": {
+        "twitter": 63400
+      },
+      "image_url": "https://i1.feedspot.com/4005785.jpg?t=1607407567"
+    },
+    {
+      "title": "BTSDiary",
+      "feed_url": "https://btsdiary.com/feed/",
+      "website_url": "https://btsdiary.com/",
+      "description": "Dairy of famous seven-member South Korean boy band formed by Big Hit Entertainment. Wanna Know more about them check out this blog!",
+      "followers": {
+        "twitter": 745900
+      },
+      "image_url": "https://i1.feedspot.com/4718250.jpg?t=1607407578"
+    },
+    {
+      "title": "Igeo K-Pop Blog",
+      "feed_url": "http://feeds.feedburner.com/igeokpop",
+      "website_url": "https://koreanmusicblog1.wordpress.com/",
+      "description": "Get all the latest Kpop Songs, Drama and more all at one place.",
+      "followers": {
+        "facebook": 885
+      },
+      "image_url": "https://i1.feedspot.com/4795611.jpg?t=1607408034"
+    },
+    {
+      "title": "Korean Music | Kdrama Original Soundtracks And Kpop",
+      "feed_url": "https://koreanmusicblog1.wordpress.com/feed/",
+      "website_url": "https://koreanmusicblog1.wordpress.com/",
+      "description": "I am Alain W. and I am an avid fan of kdrama and thoroughly enjoy the music soundtracks. This site will primarily focus on kdrama original soundtracks, but I will also post various kpop music.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 261
+      },
+      "image_url": "https://i1.feedspot.com/4667308.jpg?t=1607408043"
+    },
+    {
+      "title": "Blogs By Nerissa",
+      "feed_url": "https://blogsbynerissa.com/feed/",
+      "website_url": "https://blogsbynerissa.com/",
+      "description": "Nerissa is a Toronto-based blogger, researcher, social media copywriter, and content creator who writes about life in Canada and Korean entertainment (music and drama).",
+      "followers": {
+        "twitter": 258
+      },
+      "image_url": "https://i1.feedspot.com/5051346.jpg?t=1607408058"
+    },
+    {
+      "title": "AtrocityCL's K-Pop Review Blog",
+      "feed_url": "https://atrocitycl.wordpress.com/feed/",
+      "website_url": "https://atrocitycl.wordpress.com/",
+      "description": "This blog reviews about Korean pop songs, Korean pop albums, Korean shows and at times Chinese pop songs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4718961.jpg?t=1607408647"
+    },
+    {
+      "title": "K-POP VESTI",
+      "feed_url": "https://kpop-vesti.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://kpop-vesti.blogspot.com/",
+      "description": "Latest news about your favorite k-pop idols! Follow to get updates from K-POP VESTI.",
+      "followers": {
+        "twitter": 63400,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5054931.jpg?t=1607408144"
+    },
+    {
+      "title": "KPOP FIRE",
+      "feed_url": "https://kpopfire.com/feed/",
+      "website_url": "https://kpopfire.com/",
+      "description": "Your #1 Source For The Latest KPOP & KDRAMA News. Bookmark us to never miss a beat.",
+      "followers": {
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/5018293.jpg?t=1607408147"
+    },
+    {
+      "title": "LoveKpopSubs",
+      "feed_url": "https://lovekpopsubs.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://lovekpopsubs.blogspot.com/",
+      "description": "I found kpop in 2010, and after falling in love with the music and the music videos that were so (visually) appealing, i came across subbed videos from other subbers at the time. And then i thought it would be fun to sub videos myself so i started messing around video editors and figured out how to do it.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4718368.jpg?t=1607408162"
+    },
+    {
+      "title": "One In A Million",
+      "feed_url": "https://one-in-a-million-kpop.blogspot.com/feeds/posts/default",
+      "website_url": "https://one-in-a-million-kpop.blogspot.com/",
+      "description": "A blog specifically about the magnificent girl groups and female solo artists of K-pop.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5259124.jpg?t=1616134765"
+    },
+    {
+      "title": "KIMCHISLAP",
+      "feed_url": "https://kimchislap.com/feed",
+      "website_url": "https://kimchislap.com/",
+      "description": "Website dedicated to Korean Entertainment News, K-Pop memes, K-drama, videos, pictures, rumors, scandals and viral content from across Asia. Mission is K-Pop To The World!",
+      "followers": {
+        "facebook": 38100
+      },
+      "image_url": "https://i1.feedspot.com/4746481.jpg?t=1607408214"
+    },
+    {
+      "title": "Kpoply | Kpop Lyrics, Music Video, Romanization",
+      "feed_url": "https://kpoply.com/feed",
+      "website_url": "https://kpoply.com/",
+      "description": "We update every New Kpop music videos, Kpop English translation lyrics and Pronunciation.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 692
+      },
+      "image_url": "https://i1.feedspot.com/4718898.jpg?t=1607408177"
+    },
+    {
+      "title": "KPop Universe Space",
+      "feed_url": "https://kpopuniversespace.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://kpopuniversespace.blogspot.com/",
+      "description": "KPop Universe Space provides all things Kpop, from music to drama you will find everything about Kpop.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5018292.jpg?t=1609939800"
+    },
+    {
+      "title": "Kpop-Khop",
+      "feed_url": "https://kpop-khop.music.blog/feed/",
+      "website_url": "https://kpop-khop.music.blog/",
+      "description": "I have fallen in love with korean music and am on a quest to share my favorites and any new discoveries as they may come.",
+      "followers": {
+        "twitter": 47
+      },
+      "image_url": "https://i1.feedspot.com/4717994.jpg?t=1607408299"
+    },
+    {
+      "title": "KpopBehind l All the Stories Behind Kpop Stars",
+      "feed_url": "https://www.kpopbehind.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.kpopbehind.com/",
+      "description": "I'm UK Jung. You can call me either UK or Jung. \ud83d\ude42 I've been working as a entertainment journalist in Korea since 2010. I want to share all the stories behind Kpop stars. Ask me anything you are curious about Kpop stars!",
+      "followers": {
+        "facebook": 35700,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4718001.jpg?t=1607408020"
+    },
+    {
+      "title": "ALL-KPOP",
+      "feed_url": "https://www.allkpopmag.com/blogs/all-kpop.atom",
+      "website_url": "https://www.allkpopmag.com/blogs/all-kpop/",
+      "description": "Discover the latest K-Pop news, trends, and updates on ALL-KPOP blogs.with exclusive stories, music reviews, and insider tips. explore the world of K-Pop today!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7902498.jpg?t=1745410419"
+    },
+    {
+      "title": "Debaser Magazine",
+      "feed_url": "https://debasermagazine.com/music?format=rss",
+      "website_url": "https://debasermagazine.com/music",
+      "description": "Explore captivating stories and op-ed features on Korea's thriving Pop genre in this column. Platform Magazine is dedicated to showcasing the global footprint of music and art coming out of South Korea's alternative scene.",
+      "followers": {
+        "facebook": 929,
+        "twitter": 481,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5569635.jpg?t=1684321640"
+    },
+    {
+      "title": "The K-POP Gossip",
+      "feed_url": "https://thekpopgossip.tumblr.com/rss",
+      "website_url": "https://thekpopgossip.tumblr.com/",
+      "description": "News, Reviews and Gossip around K-POP.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4718449.jpg"
+    },
+    {
+      "title": "KLyrics",
+      "feed_url": "https://klyrics.net/",
+      "website_url": "https://klyrics.net/",
+      "description": "KLyrics is a lyrics blog, We provide you with the latest K-Pop and C-Pop lyrics with translation.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 200
+      },
+      "image_url": "https://i1.feedspot.com/4718012.jpg?t=1607407574"
+    },
+    {
+      "title": "KpopLeak",
+      "feed_url": "https://www.kpopleak.com/feed/",
+      "website_url": "https://www.kpopleak.com/",
+      "description": "Breaking Kpop news, idol gossips and video musics. KpopLeak is an independent blogger with neither financial backing nor controlled or owned by enterprises with restrictive editorial output. We aim to feed our everyday readers with entertaining and engaging posts wherever you are located.",
+      "followers": {
+        "facebook": 8,
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/5434201.jpg?t=1661162171"
+    },
+    {
+      "title": "Big B Radio",
+      "feed_url": "https://bigbradio.net/feed",
+      "website_url": "https://bigbradio.net/",
+      "description": "Big B Radio is an internet radio station dedicated on playing a wide variety of Asian Pop music ranging from Kpop, Jpop and Cpop.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 3900,
+        "instagram": 454
+      },
+      "image_url": "https://i1.feedspot.com/4667297.jpg?t=1607408219"
+    },
+    {
+      "title": "Kpopfans",
+      "feed_url": "https://kpopfans.net/",
+      "website_url": "https://kpopfans.net/",
+      "description": "A Latest source for k-pop news, photos and videos.",
+      "followers": {
+        "facebook": 717
+      },
+      "image_url": "https://i1.feedspot.com/4718879.jpg?t=1607408841"
+    },
+    {
+      "title": "Mykpopconfession",
+      "feed_url": "https://mykpopconfession.tumblr.com/rss",
+      "website_url": "https://mykpopconfession.tumblr.com/",
+      "description": "Welcome to mykpopconfession. Here you can confess your kpop related confessions!",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/4717992.jpg"
+    },
+    {
+      "title": "Your #1 Source For All Things Kpop!",
+      "feed_url": "https://thekpopnet.tumblr.com/rss",
+      "website_url": "https://thekpopnet.tumblr.com/",
+      "description": "This network was designed to unite all k-pop fandoms! For everyone to come together and interact with one another! If you're new to the k-pop world, this is a great place to start making friends, interact with people with the same interests as you, and learn more about different groups!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4719115.jpg?t=1609939411"
+    },
+    {
+      "title": "KPop Fan",
+      "feed_url": "https://kpop.blogberth.com/feed/",
+      "website_url": "https://kpop.blogberth.com/",
+      "description": "This blog is a Kpop Fan Blog. The author post about all the Kpop related things.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4718846.jpg?t=1607407614"
+    }
+  ]
+}

@@ -1,0 +1,371 @@
+{
+  "category": "Journal of Commerce",
+  "source_url": "https://rss.feedspot.com/journalofcommerce_rss_feeds",
+  "feeds": [
+    {
+      "title": "Journal of Commerce \u00bb Maritime",
+      "feed_url": "https://www.joc.com/api/rssfeed/8876",
+      "website_url": "https://www.joc.com/maritime",
+      "description": "News and analysis of ocean containerized cargo movement, logistics, supply chains, technology, and end-to-end connectivity. Maritime news and analysis of containerized ocean cargo movement, breakbulk and roll-on and roll-off shipping from origin to destination.",
+      "followers": {
+        "facebook": 48000,
+        "twitter": 31900
+      },
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Surface",
+      "feed_url": "https://www.joc.com/api/rssfeed/24519",
+      "website_url": "https://www.joc.com/surface",
+      "description": "Explore the world of ground transport news - from trucks to railroads, intermodal connections, and port ties. Daily insights on US and global shipments.",
+      "followers": {
+        "facebook": 48000
+      },
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Supply Chain",
+      "feed_url": "https://www.joc.com/api/rssfeed/24517",
+      "website_url": "https://www.joc.com/supply-chain",
+      "description": "Stay updated on supply chain strategies, cargo visibility, inventory trends and more with our comprehensive supply chain news and analysis.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Breakbulk News",
+      "feed_url": "https://www.joc.com/api/rssfeed/22871",
+      "website_url": "https://www.joc.com/maritime/breakbulk-news",
+      "description": "All Breakbulk News from Journal of Commerce.",
+      "followers": {
+        "facebook": 48000
+      },
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Trucking News",
+      "feed_url": "https://www.joc.com/api/rssfeed/8877",
+      "website_url": "https://www.joc.com/surface/trucking-news",
+      "description": "Discover comprehensive trucking news and trends with Journal of Commerce - from trucking LTL to regulation and trucking supply and demand.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Air Cargo Forwarder News",
+      "feed_url": "https://www.joc.com/api/rssfeed/8924",
+      "website_url": "https://www.joc.com/air-cargo/air-cargo-forwarder-news",
+      "description": "Journal of Commerce offers extensive air freight forwarder news and analysis of air cargo forwarding, including topics such as strategies, capacity, services.",
+      "followers": {
+        "facebook": 48000
+      },
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Transport, Trade and Regulation News",
+      "feed_url": "https://www.joc.com/api/rssfeed/8880",
+      "website_url": "https://www.joc.com/supply-chain/transport-trade-and-regulation-news",
+      "description": "Stay informed with the latest regulation news and trade updates. Explore comprehensive transportation news and trade regulations today.",
+      "followers": {
+        "facebook": 48000
+      },
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Breakbulk Carriers",
+      "feed_url": "https://www.joc.com/api/rssfeed/23746",
+      "website_url": "https://www.joc.com/maritime/breakbulk-news/breakbulk-carriers",
+      "description": "All articles about Breakbulk Carriers from Journal of Commerce.",
+      "followers": {
+        "facebook": 48000
+      },
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb LTL",
+      "feed_url": "https://www.joc.com/api/rssfeed/8900",
+      "website_url": "https://www.joc.com/surface/trucking-news/ltl",
+      "description": "All articles about LTL from Journal of Commerce.",
+      "followers": {
+        "facebook": 48000
+      },
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Air Cargo Carriers News",
+      "feed_url": "https://www.joc.com/api/rssfeed/8926",
+      "website_url": "https://www.joc.com/air-cargo/air-cargo-carriers-news",
+      "description": "Stay informed with air cargo carriers news. Journal of Commerce covers updates on air cargo carriers, air craft carrier capacity, rates routings and technology.",
+      "followers": {
+        "facebook": 48000
+      },
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Logistics Technology News",
+      "feed_url": "https://www.joc.com/api/rssfeed/23011",
+      "website_url": "https://www.joc.com/supply-chain/logistics-technology-news",
+      "description": "Our logistics technology news include logistics technology startups, solutions, and the impact of technology on logistics and supply chain management.",
+      "followers": {
+        "facebook": 48000
+      },
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Ro/ro Cargo",
+      "feed_url": "https://www.joc.com/api/rssfeed/23781",
+      "website_url": "https://www.joc.com/maritime/breakbulk-news/roro-cargo",
+      "description": "All articles about Ro/ro Cargo from Journal of Commerce.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Truckload",
+      "feed_url": "https://www.joc.com/api/rssfeed/8990",
+      "website_url": "https://www.joc.com/surface/trucking-news/truckload",
+      "description": "All articles about Truckload from Journal of Commerce.",
+      "followers": {
+        "facebook": 48000
+      },
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Cool Cargo News",
+      "feed_url": "https://www.joc.com/api/rssfeed/8950",
+      "website_url": "https://www.joc.com/supply-chain/cool-cargo-news",
+      "description": "A thorough cool cargoes news by Journal of Commerce. Learn about the latest trends in refrigerated cargo transportation, weight capacity, technology, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Energy Projects",
+      "feed_url": "https://www.joc.com/api/rssfeed/23771",
+      "website_url": "https://www.joc.com/maritime/breakbulk-news/energy-projects",
+      "description": "All articles about Energy Projects from Journal of Commerce.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Truck Brokers",
+      "feed_url": "https://www.joc.com/api/rssfeed/8903",
+      "website_url": "https://www.joc.com/surface/trucking-news/truck-brokers",
+      "description": "All articles about Truck Brokers from Journal of Commerce.",
+      "followers": {
+        "facebook": 48000
+      },
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Last Mile News",
+      "feed_url": "https://www.joc.com/api/rssfeed/24527",
+      "website_url": "https://www.joc.com/supply-chain/last-mile-news",
+      "description": "Journal of Commerce keeps you informed on the latest last mile news with comprehensive coverage of carriers, logistics, and last mile transportation solutions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Heavy-haul Transport",
+      "feed_url": "https://www.joc.com/api/rssfeed/23916",
+      "website_url": "https://www.joc.com/maritime/breakbulk-news/heavy-haul-transport",
+      "description": "All articles about Heavy-haul Transport from Journal of Commerce.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Flatbed",
+      "feed_url": "https://www.joc.com/api/rssfeed/24525",
+      "website_url": "https://www.joc.com/surface/trucking-news/flatbed",
+      "description": "All articles about Flatbed from Journal of Commerce.",
+      "followers": {
+        "facebook": 48000
+      },
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Longshore Labor",
+      "feed_url": "https://www.joc.com/api/rssfeed/10690",
+      "website_url": "https://www.joc.com/maritime/port-news/longshore-labor",
+      "description": "All articles about Longshore Labor from Journal of Commerce.",
+      "followers": {
+        "facebook": 48000
+      },
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb International Ports",
+      "feed_url": "https://www.joc.com/api/rssfeed/8986",
+      "website_url": "https://www.joc.com/maritime/port-news/international-ports",
+      "description": "Journal of Commerce - International shipping and logistics news, analysis, and business intelligence.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Marine Terminals",
+      "feed_url": "https://www.joc.com/api/rssfeed/8989",
+      "website_url": "https://www.joc.com/maritime/port-news/marine-terminals",
+      "description": "All articles about Marine Terminals from Journal of Commerce.",
+      "followers": {
+        "facebook": 48000
+      },
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb North American Ports",
+      "feed_url": "https://www.joc.com/api/rssfeed/8980",
+      "website_url": "https://www.joc.com/maritime/port-news/north-american-ports",
+      "description": "All articles about North American Ports from Journal of Commerce.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Port Infrastructure",
+      "feed_url": "https://www.joc.com/api/rssfeed/8987",
+      "website_url": "https://www.joc.com/maritime/port-news/port-infrastructure",
+      "description": "All articles about Port Infrastructure from Journal of Commerce.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Drayage",
+      "feed_url": "https://www.joc.com/api/rssfeed/8908",
+      "website_url": "https://www.joc.com/maritime/port-news/drayage",
+      "description": "All articles about Drayage from Journal of Commerce.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Port News",
+      "feed_url": "https://www.joc.com/api/rssfeed/24516",
+      "website_url": "https://www.joc.com/maritime/port-news",
+      "description": "Stay informed on port news worldwide with Journal of Commerce. From decarbonization to labor updates, get insights on global developments.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Trans-Pacific",
+      "feed_url": "https://www.joc.com/api/rssfeed/24521",
+      "website_url": "https://www.joc.com/maritime/container-shipping-news/trans-pacific",
+      "description": "All articles about Trans-Pacific from Journal of Commerce.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Asia-Europe",
+      "feed_url": "https://www.joc.com/api/rssfeed/24523",
+      "website_url": "https://www.joc.com/maritime/container-shipping-news/asia-europe",
+      "description": "All articles about Asia-Europe from Journal of Commerce.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Intermodal Providers",
+      "feed_url": "https://www.joc.com/api/rssfeed/8992",
+      "website_url": "https://www.joc.com/surface/rail-news/intermodal-providers",
+      "description": "All articles about Intermodal Providers from Journal of Commerce.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Forwarding",
+      "feed_url": "https://www.joc.com/api/rssfeed/8884",
+      "website_url": "https://www.joc.com/maritime/container-shipping-news/forwarding",
+      "description": "All articles about Forwarding from Journal of Commerce.",
+      "followers": {
+        "facebook": 48000
+      },
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb International Rail",
+      "feed_url": "https://www.joc.com/api/rssfeed/8991",
+      "website_url": "https://www.joc.com/surface/rail-news/international-rail",
+      "description": "All articles about International Rail from Journal of Commerce.",
+      "followers": {
+        "facebook": 48000
+      },
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Trans-Atlantic",
+      "feed_url": "https://www.joc.com/api/rssfeed/24522",
+      "website_url": "https://www.joc.com/maritime/container-shipping-news/trans-atlantic",
+      "description": "All articles about Trans-Atlantic from Journal of Commerce.",
+      "followers": {
+        "facebook": 48000
+      },
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb North-American Rail",
+      "feed_url": "https://www.joc.com/api/rssfeed/8914",
+      "website_url": "https://www.joc.com/surface/rail-news/north-american-rail",
+      "description": "All articles about North-American Rail from Journal of Commerce.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Container Lines",
+      "feed_url": "https://www.joc.com/api/rssfeed/8883",
+      "website_url": "https://www.joc.com/maritime/container-shipping-news/container-lines",
+      "description": "All articles about Container Lines from Journal of Commerce.",
+      "followers": {
+        "facebook": 48000
+      },
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Rail News",
+      "feed_url": "https://www.joc.com/api/rssfeed/8878",
+      "website_url": "https://www.joc.com/surface/rail-news",
+      "description": "Stay updated with our rail transport news and trends. Journal of Commerce covers intermodal news, and port connectivity news in the container rail transport sector.",
+      "followers": {
+        "facebook": 48000
+      },
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Container Shipping News",
+      "feed_url": "https://www.joc.com/api/rssfeed/24515",
+      "website_url": "https://www.joc.com/maritime/container-shipping-news",
+      "description": "Container shipping news and analysis of ocean container shipping, logistics, supply chains, technology and end-to-end connectivity.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Trucking Labor",
+      "feed_url": "https://www.joc.com/api/rssfeed/8909",
+      "website_url": "https://www.joc.com/surface/trucking-news/trucking-labor",
+      "description": "All articles about Trucking Labor from Journal of Commerce.",
+      "followers": {
+        "facebook": 48000
+      },
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Project Cargo",
+      "feed_url": "https://www.joc.com/api/rssfeed/23776",
+      "website_url": "https://www.joc.com/maritime/breakbulk-news/project-cargo",
+      "description": "All articles about Project Cargo from Journal of Commerce.",
+      "followers": {
+        "facebook": 48000
+      },
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Industrial Real Estate News",
+      "feed_url": "https://www.joc.com/api/rssfeed/8983",
+      "website_url": "https://www.joc.com/supply-chain/industrial-real-estate-news",
+      "description": "Discover the latest industrial real estate news and trends. Covering projects, real estate supply chain, logistics, pricing, cross dock facilities, and more.",
+      "followers": {
+        "facebook": 48000
+      },
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    },
+    {
+      "title": "Journal of Commerce \u00bb Breakbulk Ports",
+      "feed_url": "https://www.joc.com/api/rssfeed/24524",
+      "website_url": "https://www.joc.com/maritime/port-news/breakbulk-ports",
+      "description": "All articles about Breakbulk Ports from Journal of Commerce.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880565.jpg?t=1740488308"
+    }
+  ]
+}

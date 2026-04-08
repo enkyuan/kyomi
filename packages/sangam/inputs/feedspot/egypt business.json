@@ -1,0 +1,30 @@
+{
+  "category": "Egypt Business",
+  "source_url": "https://rss.feedspot.com/egypt_business_rss_feeds",
+  "feeds": [
+    {
+      "title": "Egyptian Streets \u00bb Business & Technology",
+      "feed_url": "https://egyptianstreets.com/category/business-technology/feed/",
+      "website_url": "https://egyptianstreets.com/category/business-technology/",
+      "description": "Business & Technology news from Egyptian Streets. Egyptian Streets is Egypt's leading independent English media outlet for news, society, culture, travel, and more.",
+      "followers": {
+        "facebook": 472500,
+        "twitter": 45700,
+        "instagram": 190400
+      },
+      "image_url": "https://i1.feedspot.com/5344426.jpg?t=1637232102"
+    },
+    {
+      "title": "Identity Magazine \u00bb Business",
+      "feed_url": "https://identity-mag.com/category/business/feed/",
+      "website_url": "https://identity-mag.com/category/business/",
+      "description": "Identity Magazine is an online magazine that is the voice of entertainment for Egyptian youth. Read articles and updates about various big names in business industries, upcoming entrepreneurs, and more.",
+      "followers": {
+        "facebook": 2400000,
+        "twitter": 5600,
+        "instagram": 958900
+      },
+      "image_url": "https://i1.feedspot.com/5344427.jpg?t=1637232044"
+    }
+  ]
+}

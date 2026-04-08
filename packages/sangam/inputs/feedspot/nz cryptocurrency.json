@@ -1,0 +1,28 @@
+{
+  "category": "NZ Cryptocurrency",
+  "source_url": "https://rss.feedspot.com/nz_cryptocurrency_rss_feeds",
+  "feeds": [
+    {
+      "title": "Easy Crypto",
+      "feed_url": "https://hub.easycrypto.com/feed",
+      "website_url": "https://hub.easycrypto.com/news",
+      "description": "Easy Crypto wants to make it easy for anyone to get into the crypto market no matter how much they have to invest. Their mission at Easy Crypto is to simplify the cryptocurrency experience and make it easy for anyone to get into crypto. within their Easy Crypto blog, you will find information related to Cryptocurrency, market news, daily updates, the latest policies, safety measures, investment ideas, and more.",
+      "followers": {
+        "facebook": 22500,
+        "twitter": 3400,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5641968.jpg?t=1691039188"
+    },
+    {
+      "title": "Cryptocurrency Tax NZ Blog",
+      "feed_url": "https://www.cryptocurrencytax.co.nz/feed/",
+      "website_url": "https://cryptocurrencytax.co.nz/blog/",
+      "description": "Cryptocurrency Tax NZ are Chartered Accountants who specialize in cryptocurrency taxation. They have a range of services available for investors, traders, miners, and businesses involved with cryptocurrency. On Cryptocurrency Tax NZ Blog, they write about different things like yearly financial statements, Crypto activities, Tax Implication, market news and updates.",
+      "followers": {
+        "twitter": 272
+      },
+      "image_url": "https://i1.feedspot.com/5641967.jpg?t=1691039197"
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "category": "Barcelona Music",
+  "source_url": "https://rss.feedspot.com/barcelona_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "Red Mango Music",
+      "feed_url": "https://redmangomusic.es/feed/",
+      "website_url": "https://redmangomusic.es/noticias/",
+      "description": "Contrataci\u00f3n de artistas y producci\u00f3n de conciertos y giras",
+      "followers": {
+        "facebook": 1900
+      },
+      "image_url": "https://i1.feedspot.com/7290287.jpg?t=1712159367"
+    },
+    {
+      "title": "Binaural",
+      "feed_url": "https://www.binaural.es/feed/",
+      "website_url": "https://www.binaural.es/",
+      "description": "Binaural is an online magazine focused largely on the world of music. News, album reviews, Spotify lists, new bands, etc.",
+      "followers": {
+        "facebook": 48000,
+        "twitter": 14800,
+        "instagram": 10100
+      },
+      "image_url": "https://i1.feedspot.com/2612316.jpg?t=1663068428"
+    },
+    {
+      "title": "Museu de la M\u00fasica de Barcelona Blog",
+      "feed_url": "https://ajuntament.barcelona.cat/museumusica/en/blog/blog_rss",
+      "website_url": "https://ajuntament.barcelona.cat/museumusica/en/blog",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 6200
+      },
+      "image_url": "https://i1.feedspot.com/7290288.jpg?t=1712159371"
+    },
+    {
+      "title": "Shine Music School Blog",
+      "feed_url": "https://www.shinemusicschool.es/es/feed/",
+      "website_url": "https://www.shinemusicschool.es/es/blog-es/",
+      "description": "Abre las orejas a la m\u00fasica!",
+      "followers": {
+        "facebook": 532
+      },
+      "image_url": "https://i1.feedspot.com/7290289.jpg?t=1712159376"
+    },
+    {
+      "title": "BCA Music Blog",
+      "feed_url": "https://www.bca-music.com/feed/",
+      "website_url": "https://www.bca-music.com/blog/",
+      "description": "Productora musical y estudio de grabaci\u00f3n",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 47
+      },
+      "image_url": "https://i1.feedspot.com/7290295.jpg?t=1712159422"
+    },
+    {
+      "title": "BMAT Blog",
+      "feed_url": "https://www.bmat.com/feed/",
+      "website_url": "https://www.bmat.com/blog/",
+      "description": "Music Innovators",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/7290290.jpg?t=1712160193"
+    },
+    {
+      "title": "BeatBurguer \u00bb M\u00fasica",
+      "feed_url": "https://beatburguer.com/category/musica/feed/",
+      "website_url": "https://beatburguer.com/category/musica/",
+      "description": "BeatBurger is a specialized music medium open to other artistic disciplines that offers a window to the future, but without forgetting the past.",
+      "followers": {
+        "facebook": 50100,
+        "twitter": 8600,
+        "instagram": 15400
+      },
+      "image_url": "https://i1.feedspot.com/5441477.jpg?t=1663136917"
+    },
+    {
+      "title": "RockProgresivo feat. What The Prog?!",
+      "feed_url": "https://musicarockprogresivo.wordpress.com/feed/",
+      "website_url": "https://musicarockprogresivo.wordpress.com/",
+      "description": "Get Progressive Rock News, Album Reviews, and More! RockProgresivo is dedicated to the dissemination of Progressive Rock, Prog Rock, Sympho prog, Neo Prog, Crossover Prog, AOR prog, Prog Metal, and their variants.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 3400,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5125287.jpg?t=1634541220"
+    },
+    {
+      "title": "Music Tech Hub Barcelona",
+      "feed_url": "https://barcelonamusictech.com/en/feed/",
+      "website_url": "https://barcelonamusictech.com/en/latest-news/",
+      "description": "Music Tech Hub Barcelona",
+      "followers": {
+        "twitter": 37
+      },
+      "image_url": "https://i1.feedspot.com/7290294.jpg?t=1712160211"
+    },
+    {
+      "title": "ShBarcelona \u00bb M\u00fasic",
+      "feed_url": "https://www.shbarcelona.com/blog/en/trends/events/music/feed/",
+      "website_url": "https://www.shbarcelona.com/blog/en/trends/events/music/",
+      "description": "Welcome to Barcelona by Shbarcelona",
+      "followers": {
+        "facebook": 11000,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/7290292.jpg?t=1712160236"
+    },
+    {
+      "title": "Aulart Blog",
+      "feed_url": "https://www.aulart.com/feed/",
+      "website_url": "https://www.aulart.com/blog/",
+      "description": "We offer you unlimited access to a knowledge center of exclusive videos, interviews, and tutorials of the most important and current engineers, mixers, and producers in the world so that you are able to create your own music.",
+      "followers": {
+        "facebook": 16200,
+        "instagram": 66100
+      },
+      "image_url": "https://i1.feedspot.com/5330337.jpg?t=1633961131"
+    },
+    {
+      "title": "La Cupula Music Blog",
+      "feed_url": "https://www.lacupulamusic.com/blog/feed/",
+      "website_url": "https://www.lacupulamusic.com/blog/",
+      "description": "At La Cupula Music we offer all kinds of services to independent musicians and labels to help you in all phases of your musical career. We are the ideal partner to accompany you on the path to success.",
+      "followers": {
+        "facebook": 9400,
+        "twitter": 3700,
+        "instagram": 8300
+      },
+      "image_url": "https://i1.feedspot.com/5441266.jpg?t=1663068234"
+    },
+    {
+      "title": "fantasticmag \u00bb Music",
+      "feed_url": "https://www.fantasticmag.es/category/musica/feed/",
+      "website_url": "https://www.fantasticmag.es/category/musica/",
+      "description": "Magazine post-hipster",
+      "followers": {
+        "facebook": 8800,
+        "twitter": 4900,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/7290291.jpg?t=1712159389"
+    },
+    {
+      "title": "Unison Blog",
+      "feed_url": "https://www.unisonrights.es/feed/",
+      "website_url": "https://www.unisonrights.es/blog/",
+      "description": "United for Music",
+      "followers": {
+        "facebook": 648,
+        "twitter": 584
+      },
+      "image_url": "https://i1.feedspot.com/7290293.jpg?t=1712159404"
+    }
+  ]
+}

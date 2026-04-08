@@ -1,0 +1,41 @@
+{
+  "category": "UK Burger",
+  "source_url": "https://rss.feedspot.com/uk_burger_rss_feeds",
+  "feeds": [
+    {
+      "title": "Burger Anarchy",
+      "feed_url": "http://burgeranarchy.com/reviews?format=RSS",
+      "website_url": "http://burgeranarchy.com/reviews/",
+      "description": "A food blog curated by Simon Doggett and Robert Pooke. The best, funniest and most useful reviews, features and videos about burgers in London, New York, LA and beyond.",
+      "followers": {
+        "facebook": 95,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4907872.jpg?t=1614003504"
+    },
+    {
+      "title": "James vs. Burger | Glasgow's Burger Blog",
+      "feed_url": "https://jamesvsburger.com/feed/",
+      "website_url": "https://jamesvsburger.com/",
+      "description": "James vs. Burger is the Ultimate Burger Journey; on a quest to uncover Scotland's Greatest Burger and Great Burgers further afield. From reviews to recipes, James vs Burger is your one-stop Burger resource.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 2,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4759417.jpg?t=1608118612"
+    },
+    {
+      "title": "Hello Burger News",
+      "feed_url": "https://www.helloburger.co.uk/news?format=rss",
+      "website_url": "https://www.helloburger.co.uk/news/",
+      "description": "Read our Hello Burger news and blog posts to keep informed of all that is happening with us, and sign up to receive our newsletter for the latest information on our events and offers.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 557,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4907879.jpg?t=1614003500"
+    }
+  ]
+}

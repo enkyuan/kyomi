@@ -1,0 +1,123 @@
+{
+  "category": "Bayesian Statistics",
+  "source_url": "https://rss.feedspot.com/bayesian_statistics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Probably Overthinking It Blog",
+      "feed_url": "https://www.allendowney.com/blog/feed/",
+      "website_url": "https://www.allendowney.com/blog/",
+      "description": "Learn more about data science, bayesian statistics, and other ideas. Allen Downey is a Staff Scientist at DrivenData, a former Professor at Olin College, and an author. He is currently writing a book called Probably Overthinking It, which is all about using evidence and reason to answer questions and guide decision-making.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5152646.jpg?t=1667801509"
+    },
+    {
+      "title": "Doing Bayesian Data Analysis",
+      "feed_url": "https://doingbayesiandataanalysis.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://doingbayesiandataanalysis.blogspot.com/",
+      "description": "Doing Bayesian Data Analysis by author John K. Kruschke gives an introduction to Bayesian statistics and provides an accessible approach, as all mathematics is explained intuitively and with concrete examples. It also delivers a tutorial Introduction with R and BUGS, for first year graduate students or advanced undergraduates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5439786.jpg?t=1662634844"
+    },
+    {
+      "title": "All Your Bayes",
+      "feed_url": "https://allyourbayes.com/index.xml",
+      "website_url": "https://allyourbayes.com/",
+      "description": "Dom Di Francesco is a Data-Centric Engineer and DigitalTwin researcher, and the author at All Your Bayes website. Dom write about his research projects here. His research interests include multi-level Bayesian modeling (for partial pooling of information) and its decision-theoretic applications, such as quantification of the expected value of information. He also works in football analytics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5439787.jpg?t=1662634796"
+    },
+    {
+      "title": "Bayesian Spectacles",
+      "feed_url": "https://www.bayesianspectacles.org/feed/",
+      "website_url": "https://www.bayesianspectacles.org/",
+      "description": "Bayesian Spectacles is powered by JASP, a free, friendly, and flexible software package for conducting statistical analyses. We wish to improve current research practices and consequently our goal is to promote Bayesian methods and facilitate their use in concrete applications. Through this blog, we hope to deliver Bayesian stories and ideas that are fun, interesting, and educational.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5439789.jpg?t=1663766721"
+    },
+    {
+      "title": "JASP Blog",
+      "feed_url": "https://jasp-stats.org/feed/",
+      "website_url": "https://jasp-stats.org/blog/",
+      "description": "Get updates about JASP including our latest blog posts, JASP articles, example analyses, new features, interviews with team members, and more. JASP is an open-source statistics program that is free, friendly, and flexible. Armed with an easy-to-use GUI, JASP offers standard analysis procedures in their classical and Bayesian form.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 10300
+      },
+      "image_url": "https://i1.feedspot.com/5439790.jpg?t=1663766558"
+    },
+    {
+      "title": "Andrew Heiss Blog",
+      "feed_url": "https://www.andrewheiss.com/atom.xml",
+      "website_url": "https://www.andrewheiss.com/blog/",
+      "description": "Learn more about data science & economics. Andrew Heiss is an assistant professor at Georgia State University, researching international NGOs and teaching data science & economics. He does research in public administration and policy, nonprofit management, international relations, and comparative politics. Andrew is a certified RStudio instructor and mentor and loves teaching how to use R and the tidyverse.",
+      "followers": {
+        "twitter": 14800
+      },
+      "image_url": "https://i1.feedspot.com/5439792.jpg?t=1663764053"
+    },
+    {
+      "title": "Darren Wilkinson's Blog",
+      "feed_url": "https://darrenjw.wordpress.com/feed/",
+      "website_url": "https://darrenjw.wordpress.com/",
+      "description": "This blog by Darren Wilkinson intended to cover his reflections on mathematics, statistics, computing, and biology, and especially their interactions, and relationship with 'big data' and data science. He will write about computational material relating to statistics and systems biology, and anything else that is a bit geeky and in some way related to my research interests. Read to know more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/586542.jpg?t=1663764674"
+    },
+    {
+      "title": "Theoretical Ecology",
+      "feed_url": "https://theoreticalecology.wordpress.com/feed/",
+      "website_url": "https://theoreticalecology.wordpress.com/",
+      "description": "Find notes from ecology, biogeography and evolution by Florian Hartig. I am Prof. Dr. Florian Hartig. On this blog you can find out more about my recent activities on my research projects. My research concentrates on theory, simulation models, statistical methods and data science / AI in ecology, evolution and conservation.",
+      "followers": {
+        "twitter": 485
+      },
+      "image_url": "https://i1.feedspot.com/771606.jpg?t=1663766954"
+    },
+    {
+      "title": "Count Bayesie Blog",
+      "feed_url": "https://www.countbayesie.com/blog?format=RSS",
+      "website_url": "https://www.countbayesie.com/blog",
+      "description": "I am Will Kurt, the author of Count Bayesie Blog. I created this blog as a vehicle to help people understand what makes probability theory immensely important in how we understand the world as well as a delight to study in its own right. The posts here will explore issues in Bayesian and Frequentist statistics. The aim will be to minimize rigor and maximize insight.",
+      "followers": {
+        "twitter": 7100
+      },
+      "image_url": "https://i1.feedspot.com/4827057.jpg?t=1664363233"
+    },
+    {
+      "title": "Shravan Vasishth's Slog",
+      "feed_url": "https://vasishth-statistics.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://vasishth-statistics.blogspot.com/",
+      "description": "This blog is a repository of cool things relating to statistical computing, simulation and stochastic modeling.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5439785.jpg?t=1662635569"
+    },
+    {
+      "title": "Analytix Thinking Blog \u00bb Bayesian Thinking",
+      "feed_url": "https://analytixthinking.blog/category/bayesian-thinking/feed/",
+      "website_url": "https://analytixthinking.blog/category/bayesian-thinking/",
+      "description": "Bayesian thinking is about answering the right question, the probability of a hypothesis being true of false. The Analytix Thinking Blog belongs to Dr. Steve Ruberg. He has published widely and lectured internationally on a variety of topics relevant to pharmaceutical research on The Analytix Thinking Blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5439788.jpg?t=1662635402"
+    },
+    {
+      "title": "Statistical Thinking",
+      "feed_url": "https://www.fharrell.com/post/index.xml",
+      "website_url": "https://www.fharrell.com/post/",
+      "description": "This blog is devoted to statistical thinking and its impact on science and everyday life. Emphasis is given to maximizing the use of information, avoiding statistical pitfalls, describing problems caused by the frequentist approach to statistical inference, describing advantages of Bayesian and likelihood methods, and discussing intended and unintended differences between statistics and data science. It will also cover regression modeling strategies, clinical trials, drug evaluation, medical diagnosis, and decision-making.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5439784.jpg?t=1662634716"
+    },
+    {
+      "title": "Statistical Modeling, Causal Inference, and Social Science \u00bb Bayesian Statistics",
+      "feed_url": "https://statmodeling.stat.columbia.edu/category/bayesian-statistics/feed/",
+      "website_url": "https://statmodeling.stat.columbia.edu/category/bayesian-statistics/",
+      "description": "The Statistical Modeling, Causal Inference, and Social Science Blog, hosted by Andrew Gelman, is a blog that focuses on the use of statistical methods in social science research. The blog covers a wide range of topics related to statistical modeling, causal inference, and data analysis, including Bayesian statistics, hierarchical modeling, data visualization, and machine learning.",
+      "followers": {
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5439791.jpg?t=1662634577"
+    }
+  ]
+}

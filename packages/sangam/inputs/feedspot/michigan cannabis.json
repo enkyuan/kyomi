@@ -1,0 +1,36 @@
+{
+  "category": "Michigan Cannabis",
+  "source_url": "https://rss.feedspot.com/michigan_cannabis_rss_feeds",
+  "feeds": [
+    {
+      "title": "WXYZ Detroit \u00bb Marijuana in Michigan",
+      "feed_url": "https://www.wxyz.com/news/marijuana-in-michigan.rss",
+      "website_url": "https://www.wxyz.com/news/marijuana-in-michigan",
+      "description": "Unpacking the pot: Dive deep into the world of cannabis with WXYZ Detroit's marijuana news section. The team covers legalization updates, medical research, and industry trends, all in one place. Tune in to WXYZ-TV Detroit, the ABC affiliate leading Southeast Michigan in breaking news and weather coverage.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7288626.jpg?t=1712058772"
+    },
+    {
+      "title": "High Minded Cannabis Blog",
+      "feed_url": "https://highmindedcannabisco.com/feed/",
+      "website_url": "https://highmindedcannabisco.com/blog/",
+      "description": "Read real stories celebrating positive changes brought by Weeed. Explore different strains and scientific information. High Minded is a cannabis cultivation company or grower operating in the Midwest region, dedicated to creating superior quality infused products and making them accessible to those who need them.",
+      "followers": {
+        "facebook": 302
+      },
+      "image_url": "https://i1.feedspot.com/7288624.jpg?t=1712058629"
+    },
+    {
+      "title": "MJBizDaily \u00bb Michigan",
+      "feed_url": "https://mjbizdaily.com/news-by-state/michigan/feed/",
+      "website_url": "https://mjbizdaily.com/news-by-state/michigan/",
+      "description": "Get Michigan Cannabis Industry News and Marijuana legislation updates at Marijuana Business Daily, the leading publication in the cannabis world. Founded in 2011, MJBiz\u2122 is the most trusted, independent publisher and event producer serving America's cannabis industry entrepreneurs and investors.",
+      "followers": {
+        "facebook": 33200,
+        "twitter": 77900,
+        "instagram": 73600
+      },
+      "image_url": "https://i1.feedspot.com/7288625.jpg?t=1712058633"
+    }
+  ]
+}

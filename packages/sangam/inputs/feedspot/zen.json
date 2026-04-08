@@ -1,0 +1,496 @@
+{
+  "category": "Zen",
+  "source_url": "https://rss.feedspot.com/zen_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kwan Um School of Zen Blog",
+      "feed_url": "https://kwanumzen.org/teaching-blog?format=rss",
+      "website_url": "https://kwanumzen.org/teaching-blog",
+      "description": "The Kwan Um School of Zen supports over 100 Zen centers around the world teaching you the practices and forms of traditional Zen training.",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5161782.jpg?t=1625832810"
+    },
+    {
+      "title": "Empty Gate Zen Center Blog",
+      "feed_url": "https://www.emptygatezen.com/blog.rss",
+      "website_url": "https://www.emptygatezen.com/blog",
+      "description": "This blog is a teaching blog brought to you by Empty Gate Zen Center, which provides training in Zen meditation affiliated with The Kwan Um School of Zen.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5161732.jpg?t=1668500742"
+    },
+    {
+      "title": "Patheos Blog \u00bb Monkey Mind",
+      "feed_url": "https://www.patheos.com/blogs/monkeymind/feed",
+      "website_url": "https://www.patheos.com/blogs/monkeymind/",
+      "description": "Patheos is the world's leading multi-faith site dedicated to hosting the conversation on faith. This blog is written by James Ford, who is a Zen Buddhist priest and author, which mostly addresses aspects of the Zen life.",
+      "followers": {
+        "twitter": 946
+      },
+      "image_url": "https://i1.feedspot.com/5161164.jpg?t=1625832836"
+    },
+    {
+      "title": "San Francisco Zen Center \u00bb Zen Practice",
+      "feed_url": "https://blogs.sfzc.org/blog/category/zen-practice/feed/",
+      "website_url": "https://blogs.sfzc.org/blog/category/zen-practice/",
+      "description": "San Francisco Zen Center is a Soto Zen community where the offerings of zazen, study and work practice are available to a diverse population of students, visitors, lay people, priests, and monks.",
+      "followers": {
+        "facebook": 20800,
+        "twitter": 12000,
+        "instagram": 12900
+      },
+      "image_url": "https://i1.feedspot.com/5161656.jpg?t=1625832839"
+    },
+    {
+      "title": "Buddhism now \u00bb Chan / Seon / Zen",
+      "feed_url": "https://buddhismnow.com/category/chan-seon-zen/feed/",
+      "website_url": "https://buddhismnow.com/category/chan-seon-zen/",
+      "description": "Buddhism Now is an online Buddhist magazine, giving advice on how to practice Buddhism. Here you will find Posts about Chan / Seon / Zen written by Buddhism Now.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 220900
+      },
+      "image_url": "https://i1.feedspot.com/5161790.jpg?t=1625832844"
+    },
+    {
+      "title": "Zen Healing Studio Blog",
+      "feed_url": "https://www.zenhealingstudio.com/feed/",
+      "website_url": "https://www.zenhealingstudio.com/blog/",
+      "description": "Embrace a world of insights: a journey into Zen Healing Studio's extensive blog. Zen Healing Studio is a personal transformation service that guides individuals on a profound journey toward attaining a serene state of mind, even amidst life's uncontrollable circumstances.",
+      "followers": {
+        "facebook": 918,
+        "instagram": 856
+      },
+      "image_url": "https://i1.feedspot.com/5725647.jpg?t=1701428811"
+    },
+    {
+      "title": "The Existential Buddhist",
+      "feed_url": "https://feeds.feedburner.com/theexistentialbuddhist",
+      "website_url": "https://www.existentialbuddhist.com/",
+      "description": "The Existential Buddhist is non-sectarian, exploring Buddhism from the point of view of reason and lived experience, rather than from adherence to dogma and/or spiritual authority.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 620
+      },
+      "image_url": "https://i1.feedspot.com/4765100.jpg?t=1606734167"
+    },
+    {
+      "title": "Infinite Quantum Zen",
+      "feed_url": "https://www.infinitequantumzen.info/feeds/posts/default",
+      "website_url": "https://www.infinitequantumzen.info/",
+      "description": "Infinite Quantum Zen Website is a Central Hub for Crystallized Wisdom of Spirituality, Consciousness, Awareness, Mindfulness, Happiness, Inspiration and Motivation, Simplicity and Stillness, Non-Duality, Advaita Vedanta, Buddhism, Taoism, Zen, and the Mysteries of the Quantum World. This website is for those who have become aware that there is more to life than what they have been taught or experienced. This website is a glimpse into a way of seeing - it may be summed up as an attempt to see and help others see.",
+      "followers": {
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/5242054.jpg?t=1612435274"
+    },
+    {
+      "title": "Karen Maezen Miller",
+      "feed_url": "http://karenmaezenmiller.com/feed/",
+      "website_url": "https://karenmaezenmiller.com/",
+      "description": "Cheerio Road is a blog brought to you by Karen Maezen Miller. I'm a wife and mother as well as a Zen Buddhist priest at the Hazy Moon Zen Center in Los Angeles. I write about spirituality in everyday life.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5161132.jpg?t=1668500697"
+    },
+    {
+      "title": "Zen Center of Denver Blog",
+      "feed_url": "https://zencenterofdenver.org/blog/feed/",
+      "website_url": "https://zencenterofdenver.org/blog/",
+      "description": "The Zen Center of Denver offers meditation instruction, daily meditation and retreats with authentic Zen teachers and a community of seasoned meditation practitioners.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5161663.jpg?t=1668500648"
+    },
+    {
+      "title": "Zenwest Buddhist Society",
+      "feed_url": "https://www.zenwest.ca/feed/",
+      "website_url": "https://www.zenwest.ca/",
+      "description": "Zenwest offers Zen Meditation and Mindfulness training, courses, workshops, classes, and retreats. A variety of inclusive activities for the Sangha and broader community.",
+      "followers": {
+        "twitter": 139
+      },
+      "image_url": "https://i1.feedspot.com/5161724.jpg?t=1668500586"
+    },
+    {
+      "title": "Jason Quinn Zen Blog",
+      "feed_url": "https://www.jasonquinnzen.com/blog.rss",
+      "website_url": "https://www.jasonquinnzen.com/blog/",
+      "description": "Blog by Jason Quinn, author of No-Nonsense Zen for Beginners, about Zen, meditation, life, and purpose. This website is dedicated to Zen, meditation, and life. He hopes that this can be valuable for anyone looking to investigate life, understand themselves, and respond to this world clearly and helpfully.",
+      "followers": {
+        "facebook": 215,
+        "twitter": 495,
+        "instagram": 464
+      },
+      "image_url": "https://i1.feedspot.com/5467180.jpg?t=1668509739"
+    },
+    {
+      "title": "Turning Words",
+      "feed_url": "https://turningwords.org/feed/",
+      "website_url": "https://turningwords.org/",
+      "description": "Hi, I'm Jeff Kogen Seul, a teacher at the Greater Boston Zen Center. I post my talks and other musings about Zen here. Turning words in Zen prompts realization. Your mileage may vary, but I thought it was a catchy name for a Zen blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5467169.jpg?t=1668510963"
+    },
+    {
+      "title": "Turn Up Your Zen Blog",
+      "feed_url": "https://turnupyourzen.com/feed/",
+      "website_url": "https://turnupyourzen.com/blog/",
+      "description": "Turn UP Your Zen blog shares meditation and mindfulness practices to help you reduce stress, to live a calm, relaxed & present life. It was created by Tania to help people when she observed the growing number of well-educated, overly busy men and women feeling stressed out, reactive, numb, overwhelmed, anxious &/or depressed.",
+      "followers": {
+        "facebook": 380,
+        "instagram": 530
+      },
+      "image_url": "https://i1.feedspot.com/5467182.jpg?t=1669122136"
+    },
+    {
+      "title": "One Time, One Meeting",
+      "feed_url": "https://practiceofzen.com/feed/",
+      "website_url": "https://practiceofzen.com/",
+      "description": "One Time, One Meeting is a monthly column on the practice of Zen meditation. Here you can find articles like the dignity of stillness, Good for nothing, becoming ancestors, the pleasures of inscription and many more like this!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3328617.jpg?t=1669121977"
+    },
+    {
+      "title": "Zen Fellowship of Bakersfield Blog",
+      "feed_url": "https://zenbakersfield.blogspot.com/feeds/posts/default",
+      "website_url": "https://zenbakersfield.blogspot.com/",
+      "description": "Dedicated to the practice of zazen, or Zen meditation, in the Soto tradition of Taisen Deshimaru and Kodo Sawaki. We are an American Zen Association member organization affiliated with the New Orleans Zen Temple, the Zen Fellowship of Alexandria, Louisiana, and more. Go through our blog to know more about us, and how we work.",
+      "followers": {
+        "facebook": 508,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5467170.jpg?t=1669121532"
+    },
+    {
+      "title": "Open Gate Zen Collective Blog",
+      "feed_url": "https://www.ogzen.org/blog?format=rss",
+      "website_url": "https://www.ogzen.org/blog",
+      "description": "OG (Open Gate) Zen collective is a group of people that share, and are motivated, by the practice of Zen to achieve a more harmonious world. Our mission is to gather and practice zazen (Zen meditation) and develop Zen training. We practice to realize and embody what our Zen ancestors have done for centuries, to realize our Buddha nature, to awaken, and serve others.",
+      "followers": {
+        "instagram": 450
+      },
+      "image_url": "https://i1.feedspot.com/5467181.jpg?t=1669121281"
+    },
+    {
+      "title": "Plum Village",
+      "feed_url": "https://plumvillage.org/feed",
+      "website_url": "https://plumvillage.org/",
+      "description": "A global community of mindfulness practice centers and monasteries offering retreats and teachings on engaged Buddhism and the art of mindful living. Our beloved teacher Thich Nhat Hanh, the founder of the International Plum Village Community of Engaged Buddhism, passed away on 22nd January 2022. We have been commemorating his life with ceremonies and spiritual practice.",
+      "followers": {
+        "facebook": 160300,
+        "twitter": 219,
+        "instagram": 95400
+      },
+      "image_url": "https://i1.feedspot.com/5467177.jpg?t=1669123311"
+    },
+    {
+      "title": "No Gate Zen Center Blog",
+      "feed_url": "https://nogatezencenter.org/feed/",
+      "website_url": "https://nogatezencenter.org/blog/",
+      "description": "No Gate Zen Center is a traditional and not-so-traditional Zen Buddhist sangha. Our lineage is Soto and Rinzai Zen and we engage in Dream-Koan* practice as well as other beautiful and inspirational, diverse Buddhist practices. Our practices are relevant, vibrant, and deeply meaningful in today's world. Read our blog to know more about our practices.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5467174.jpg?t=1669179344"
+    },
+    {
+      "title": "New Orleans Zen Temple",
+      "feed_url": "https://www.neworleanszentemple.org/new-blog?format=rss",
+      "website_url": "https://www.neworleanszentemple.org/",
+      "description": "New Orleans Zen Temple practices traditional Zen practices in the heart of New Orleans. Sam Kearley leads the group with great commitment, and the university has been very supportive, dedicating space in the Meditation Chapel of the beautiful All Saints' Chapel.",
+      "followers": {
+        "facebook": 873,
+        "instagram": 113
+      },
+      "image_url": "https://i1.feedspot.com/5467173.jpg?t=1669178723"
+    },
+    {
+      "title": "Brooklyn Zen Center",
+      "feed_url": "https://brooklynzen.org/category/news/feed/",
+      "website_url": "https://brooklynzen.org/category/news/",
+      "description": "Brooklyn Zen Center (BZC) is an embodied training community in the Soto Zen tradition. We aspire to offer opportunities to realize personal and collective liberation through the cultivation of intimate, ethical, and just relationships with ourselves and all beings. Our vow to practice undoing harmful and oppressive conditioning compassionately transforms our world.",
+      "followers": {
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5467184.jpg?t=1669178547"
+    },
+    {
+      "title": "Patheos Blog \u00bb Wild Fox Zen",
+      "feed_url": "https://www.patheos.com/blogs/wildfoxzen/feed",
+      "website_url": "https://www.patheos.com/blogs/wildfoxzen/",
+      "description": "Patheos is the world's leading multi-faith site dedicated hosting the conversation on faith. Explore the world's faith through different perspectives on religion and spirituality! At Patheos, Buddhist Dosho Port writes his blog Wild Fox Zen.",
+      "followers": {
+        "facebook": 96100,
+        "twitter": 14500
+      },
+      "image_url": "https://i1.feedspot.com/1698610.jpg?t=1606733801"
+    },
+    {
+      "title": "Hardcore Zen",
+      "feed_url": "http://hardcorezen.info/feed",
+      "website_url": "http://hardcorezen.info/",
+      "description": "Hardcore Zen is a blog managed by Brad Warner, an author and ordained Zen priest. He released a book with the same name, which serves as both an autobiography and an introduction to Soto Zen philosophy.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 8500
+      },
+      "image_url": "https://i1.feedspot.com/37803.jpg?t=1625832814"
+    },
+    {
+      "title": "Tim Burkett's Blog | Zen Buddhist Teachings",
+      "feed_url": "https://www.mnzencenter.org/tim-burketts-blog/feed",
+      "website_url": "https://www.mnzencenter.org/tim-burketts-blog",
+      "description": "This blog is written by Tim Burkett who is psychologist, author, and Guiding Teacher at the Minnesota Zen Meditation Center.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 32
+      },
+      "image_url": "https://i1.feedspot.com/5161496.jpg?t=1625832847"
+    },
+    {
+      "title": "The Same Old Zen",
+      "feed_url": "https://sameoldzen.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://sameoldzen.blogspot.com/",
+      "description": "This blog is written by Sensei Alex Kakuyo, a lay Buddhist minister and former Marine. He serves as a teacher in the Bright Dawn Center of Oneness Buddhism; a nonsectarian Buddhist sangha that encourages students to find Dharma teachings in everyday life.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5087780.jpg?t=1605691907"
+    },
+    {
+      "title": "Mountain Record",
+      "feed_url": "https://www.mountainrecord.org/feed/",
+      "website_url": "https://www.mountainrecord.org/",
+      "description": "Mountain Record is the oldest American Zen quarterly, a spiritual journal by the Zen Mountain Monastery with Rinzai & Soto Zen Buddhism teachings, poems & more. For nearly four decades, Mountain Record quarterly journal offered spiritual seekers of all faiths a unique journey through words and images.",
+      "followers": {
+        "facebook": 842,
+        "twitter": 209
+      },
+      "image_url": "https://i1.feedspot.com/4956653.jpg?t=1625832855"
+    },
+    {
+      "title": "The Zen Garland Order",
+      "feed_url": "https://zengarland.org/feed/",
+      "website_url": "https://zengarland.org/",
+      "description": "A Community and Order for Zen Practice, Education, and Service.",
+      "followers": {
+        "facebook": 900,
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/5161336.jpg?t=1625832865"
+    },
+    {
+      "title": "Jade Mountain Buddha Hall",
+      "feed_url": "https://www.jademountains.net/feed/",
+      "website_url": "https://www.jademountains.net/",
+      "description": "This blog is written by Rev. Mugo, who has practiced Soto Zen within the OBC first hand. Jade Mountains contains, and points to, various sources of Buddhist teachings.",
+      "followers": {
+        "twitter": 881
+      },
+      "image_url": "https://i1.feedspot.com/5161653.jpg?t=1625832879"
+    },
+    {
+      "title": "Blog by Esther Neela M.",
+      "feed_url": "https://estherneela.blog/feed/",
+      "website_url": "https://estherneela.blog/",
+      "description": "This is a blog from a Zen living enthusiast. The author practices Meditation, Reiki, Yoga, Qigong, and Natural Therapies such as Ayurveda.",
+      "followers": {
+        "facebook": 4500,
+        "instagram": 148
+      },
+      "image_url": "https://i1.feedspot.com/5161426.jpg?t=1625832886"
+    },
+    {
+      "title": "The One Open Door",
+      "feed_url": "https://theoneopendoor.org/feed/",
+      "website_url": "https://theoneopendoor.org/",
+      "description": "This website is dedicated to the practice of Zen Buddhist Meditation and to the work of ending suffering.",
+      "followers": {
+        "facebook": 179,
+        "twitter": 40
+      },
+      "image_url": "https://i1.feedspot.com/5161717.jpg?t=1625721015"
+    },
+    {
+      "title": "Firefly Hall Blog",
+      "feed_url": "http://fireflyhall.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://fireflyhall.blogspot.com/",
+      "description": "This blog is brought to you by Melisa Blacker, who offers private guidance in Zen meditation and gives Zen talks at daily practice periods at Boundless Way Temple.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5161109.jpg?t=1625832907"
+    },
+    {
+      "title": "The Stink of Zen Blog",
+      "feed_url": "http://thestinkofzen.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://thestinkofzen.blogspot.com/",
+      "description": "This blog presents writings on zen practice, meditative life, and surviving tough times.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5161742.jpg?t=1668511088"
+    },
+    {
+      "title": "Buffalo Zen Dharma Community Blog",
+      "feed_url": "https://www.buffalozen.org/5/feed",
+      "website_url": "https://www.buffalozen.org/blog",
+      "description": "The Buffalo Zen Dharma Community has begun its usual full-service weekly Tuesday night meditation program at Westminster Presbyterian Church. Read our blog to know more about our community, what we do, what happens at our gatherings, and many more!",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5467176.jpg?t=1669121211"
+    },
+    {
+      "title": "A to Zen Life Blog",
+      "feed_url": "https://atozenlife.com/feed/",
+      "website_url": "https://atozenlife.com/blog/",
+      "description": "Hi there, I'm Marissa! Along my journey to let go of 30 years of clutter, I accidentally became a minimalist and it was life-changing. This blog is my place to share all my learning, decluttering tips, and more! My mission is to help real families just like we conquer their clutter and simplify their way to a happier and better life.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 32,
+        "instagram": 86400
+      },
+      "image_url": "https://i1.feedspot.com/5451898.jpg?t=1668510546"
+    },
+    {
+      "title": "Zen Embodiment",
+      "feed_url": "https://zenembodiment.com/feed/",
+      "website_url": "https://zenembodiment.com/",
+      "description": "Zen Embodiment is all about movement, meditation, and internal processes. Here you can find mind-healing articles like don't be vulgar move with essences, mind transmission, the second breath recorded, you have to love your practice, and many more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5467168.jpg?t=1669179132"
+    },
+    {
+      "title": "Zen Center of Las Vegas",
+      "feed_url": "https://zenlasvegas.com/feed/",
+      "website_url": "https://zenlasvegas.com/",
+      "description": "Zen Center of Las Vegas's mission is to help us understand and see our situation and life direction. We create suffering in this world by thoughts of, 'Here I am, this is where I want to be.' We're always projecting outward. We're clouded by 'I, my, me.' By getting rid of judgmental thought, we get back to the essence of who we are, which is compassion.'",
+      "followers": {
+        "facebook": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5467179.jpg?t=1669123603"
+    },
+    {
+      "title": "Bodhi Heart Blog",
+      "feed_url": "https://bodhiheart.com/feed/",
+      "website_url": "https://bodhiheart.com/blog/",
+      "description": "Bodhi Heart was born on a mountain 7,000 ft. above sea level. We help you restore your peace of mind with Rolfing, Coaching, and Meditation Classes so you can flourish in peace doing what you love. We want to help folks thrive in an increasingly complex world.",
+      "followers": {
+        "facebook": 1
+      },
+      "image_url": "https://i1.feedspot.com/5467178.jpg?t=1668510633"
+    },
+    {
+      "title": "Not Quite Zen Blog",
+      "feed_url": "https://www.notquitezen.co/feed/",
+      "website_url": "https://www.notquitezen.co/blog/",
+      "description": "If you've ever felt anxiety, depression, and anger, or struggled with the challenges of daily life then this Not Quite Zen is for you. It is about taking small steps toward a better life, but it's also about acceptance. Get insight into all the problems, solutions, tips, and information related to mental health.",
+      "followers": {
+        "facebook": 28,
+        "twitter": 16,
+        "instagram": 69
+      },
+      "image_url": "https://i1.feedspot.com/5467185.jpg?t=1668510756"
+    },
+    {
+      "title": "Zen Osho Energy Blog",
+      "feed_url": "https://zenoshoenergy.com.au/feed/",
+      "website_url": "https://zenoshoenergy.com.au/blog/",
+      "description": "Zenosho Energy provides Hypnotherapy, Past Life Regression Hypnotherapy, and Meditation services. If you are struggling in your life and looking for motivation or answers, this could be your help. Get to know about all our courses, therapy, and more on our blog section.",
+      "followers": {
+        "facebook": 4300,
+        "instagram": 22400
+      },
+      "image_url": "https://i1.feedspot.com/5467171.jpg?t=1668509309"
+    },
+    {
+      "title": "Flowing Zen Blog",
+      "feed_url": "https://flowingzen.com/category/blog/feed/",
+      "website_url": "https://flowingzen.com/category/blog/",
+      "description": "I'm Anthony Korahais, and I created Flowing Zen because I know what it's like to suffer. Read my blog to know a lot more practicality, about life, what heaps, how I healed, what helped me, process, and a lot more things!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5467167.jpg?t=1668510806"
+    },
+    {
+      "title": "Zen Habits",
+      "feed_url": "https://zenhabits.net/archives/",
+      "website_url": "https://zenhabits.net/archives/",
+      "description": "Zen Habits is about finding simplicity and mindfulness in the daily chaos of our lives. It's about clearing the clutter so we can focus on what's important, create something amazing, and find happiness. Leo Babauta is the Creator of Zen Habits living in San Diego, California.",
+      "followers": {
+        "facebook": 17400,
+        "twitter": 162800
+      },
+      "image_url": "https://i1.feedspot.com/4522589.jpg?t=1639736030"
+    },
+    {
+      "title": "Meditation-zen.org Blog",
+      "feed_url": "https://meditation-zen.org/en/blog/feed",
+      "website_url": "https://meditation-zen.org/en/blog",
+      "description": "This blog maintained by Meditation-Zen helps discover the practice of Soto Zen, learning to meditate and preaches the teachings of zen.",
+      "followers": {
+        "facebook": 6600,
+        "twitter": 654
+      },
+      "image_url": "https://i1.feedspot.com/5161259.jpg?t=1668511000"
+    },
+    {
+      "title": "Zen Living",
+      "feed_url": "https://zenlivingmag.com/blog-feed.xml",
+      "website_url": "https://zenlivingmag.com/",
+      "description": "From cultivating inner peace to creating a serene home environment, Zen Living offers expert advice and inspiring content to help you embark on a transformative journey toward a life of mindfulness, purpose, and tranquility.",
+      "followers": {
+        "facebook": 7
+      },
+      "image_url": "https://i1.feedspot.com/5624444.jpg?t=1689224115"
+    },
+    {
+      "title": "The Zennist | Going to the very heart of Zen",
+      "feed_url": "https://zennist.typepad.com/zenfiles/rss.xml",
+      "website_url": "https://zennist.typepad.com/zenfiles/",
+      "description": "I have dedicated my life to see what the Buddha saw. So far I've been lucky. Follow to get updates from my blog.",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5161226.jpg?t=1625832875"
+    },
+    {
+      "title": "Zen Garland Blog",
+      "feed_url": "https://zengarland.org/",
+      "website_url": "https://zengarland.org/",
+      "description": "The teachers and community at Zen Garland meet each practitioner with respect for their unique being and address their personal situation and aspirations. Our goal is to help each practitioner gain skills to deepen their humanity and empower their personal expression in the world.",
+      "followers": {
+        "facebook": 900,
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/5202381.jpg?t=1601461933"
+    },
+    {
+      "title": "Blue Mountain Zendo",
+      "feed_url": "https://www.bluemountainzendo.org/feed/",
+      "website_url": "https://www.bluemountainzendo.org/",
+      "description": "Blue Mountain Zendo nurtures and builds upon the initial spark of awakening which occurs as the catalyst for our awakening process, and together with the sangha, forges a personal path that reveals the true source of that rudimentary spark. It is true to traditional Rinzai Zen form and offers traditional liturgy, koan practice, ceremony, dokusan, zazen, intensity, and discipline.",
+      "followers": {
+        "facebook": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5161749.jpg?t=1668509672"
+    },
+    {
+      "title": "Zen Master Dogen",
+      "feed_url": "https://zenmasterdogen.com/feed/",
+      "website_url": "https://zenmasterdogen.com/",
+      "description": "Focuses on the teaching of the Great Master and founder of Soto Zen. The site features downloads of his work, recommended books and analysis, related teachings from modern Zen Masters, audiofiles and podcasts, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5346541.jpg?t=1637750151"
+    },
+    {
+      "title": "San Mateo Zen Blog",
+      "feed_url": "https://www.sanmateozen.org/feed/",
+      "website_url": "https://www.sanmateozen.org/blog/",
+      "description": "San Mateo Zen community, an affiliate of the PACIFIC ZEN INSTITUTE, is a welcoming group of mostly Silicon Valley and San Francisco professionals, homemakers, craftspeople, and students who have joined together as a community to practice Zen. We have entered a path that is at once both fresh and ancient, both impermanent and enduring. A path of exploration, discovery, and freedom.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5467175.jpg?t=1668510867"
+    }
+  ]
+}

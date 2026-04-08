@@ -1,0 +1,72 @@
+{
+  "category": "Irvine News",
+  "source_url": "https://rss.feedspot.com/irvine_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Irvine Community News and Views",
+      "feed_url": "https://irvinecommunitynewsandviews.org/feed/",
+      "website_url": "https://irvinecommunitynewsandviews.org/",
+      "description": "Irvine Community News and Views (ICNV) is Irvine's only free community newspaper. It is published in hard-copy format at the beginning of each month, with frequent updates and added features available to online subscribers. The newspaper covers a wide range of topics, including local news, events, and opinion pieces.",
+      "followers": {
+        "facebook": 70400,
+        "twitter": 163,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5136624.jpg?t=1692184886"
+    },
+    {
+      "title": "The Orange County Register \u00bb Irvine",
+      "feed_url": "https://www.ocregister.com/location/california/orange-county/irvine/feed/",
+      "website_url": "https://www.ocregister.com/location/california/orange-county/irvine/",
+      "description": "The Orange County Register is a three-time Pulitzer Prize-winning newspaper focused on serving Orange County and helping it thrive. Get the latest local and breaking news including crime reports in Irvine, CA from The Orange County Register.",
+      "followers": {
+        "facebook": 186400,
+        "twitter": 262600
+      },
+      "image_url": "https://i1.feedspot.com/5136612.jpg?t=1586525839"
+    },
+    {
+      "title": "KTLA 5 \u00bb Irvine",
+      "feed_url": "https://ktla.com/tag/irvine/feed/",
+      "website_url": "https://ktla.com/tag/irvine/",
+      "description": "L.A.'s Very Own, KTLA is Southern California's source for Los Angeles-area breaking news, streaming live video, traffic and weather in L.A., Orange and Ventura counties, plus the Inland Empire and beyond. Get the latest news, updates and information in Irvine from KTLA.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1000000,
+        "instagram": 952400
+      },
+      "image_url": "https://i1.feedspot.com/5136615.jpg?t=1586525861"
+    },
+    {
+      "title": "Irvine Standard",
+      "feed_url": "https://www.irvinestandard.com/feed/",
+      "website_url": "https://www.irvinestandard.com/",
+      "description": "Discover online news updates and article diving into the local community and daily life in Irvine City. Irvine Standard is a community paper by Irvine Company that celebrates the people, places, and experiences that make Irvine America's best master-planned city.",
+      "followers": {
+        "facebook": 40000
+      },
+      "image_url": "https://i1.feedspot.com/5491703.jpg?t=1673440441"
+    },
+    {
+      "title": "Irvine Weekly",
+      "feed_url": "https://irvineweekly.com/feed/",
+      "website_url": "https://irvineweekly.com/",
+      "description": "Irvine Weekly is the definitive source of information for news, music, movies, restaurants, reviews, and events in Irvine. The goal is to highlight a city on the rise and share stories about the people, the issues, and the businesses that are changing the dynamics of this amazing community.",
+      "followers": {
+        "facebook": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5491704.jpg?t=1673440431"
+    },
+    {
+      "title": "CBS Los Angeles \u00bb Irvine",
+      "feed_url": "https://losangeles.cbslocal.com/tag/irvine/feed/",
+      "website_url": "https://www.cbsnews.com/losangeles/tag/irvine/",
+      "description": "CBS Los Angeles provides news, sports, weather, traffic and the best of LA & OC! Get the latest local news, updates and information you need in Irvine from CBS Los Angeles.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 329
+      },
+      "image_url": "https://i1.feedspot.com/5136629.jpg?t=1586525731"
+    }
+  ]
+}

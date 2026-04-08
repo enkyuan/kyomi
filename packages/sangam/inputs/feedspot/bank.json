@@ -1,0 +1,737 @@
+{
+  "category": "Bank",
+  "source_url": "https://rss.feedspot.com/bank_rss_feeds",
+  "feeds": [
+    {
+      "title": "Union Bank Blog",
+      "feed_url": "https://www.ublocal.com/blog/feed/",
+      "website_url": "https://www.ublocal.com/blog/",
+      "description": "Established in 1891, we're a true community bank dedicated to serving the people and businesses of Vermont and New Hampshire.",
+      "followers": {
+        "facebook": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4785831.jpg?t=1616746465"
+    },
+    {
+      "title": "Bank Underground",
+      "feed_url": "https://bankunderground.co.uk/feed/",
+      "website_url": "https://bankunderground.co.uk/",
+      "description": "As the UK's central bank we work to ensure low inflation, trust in banknotes and a stable financial system. Mission is Promoting the good of the people of the United Kingdom by maintaining monetary and financial stability.",
+      "followers": {
+        "facebook": 57400,
+        "twitter": 401200
+      },
+      "image_url": "https://i1.feedspot.com/4644144.jpg?t=1616746419"
+    },
+    {
+      "title": "Bank Automation News",
+      "feed_url": "https://bankautomationnews.com/feed/",
+      "website_url": "https://bankautomationnews.com/category/allposts/",
+      "description": "The Definitive Source for Insights and News Surrounding Automation in Financial Services. Formerly Bank Innovation, since 2009 Bank Automation News has been at the forefront of tracking the evolution of digital banking. With the future of innovation pointing to opportunities in automation, we have transitioned the focus of our coverage to continue to provide insights and information that guide industry professionals to better results.",
+      "followers": {
+        "facebook": 429,
+        "twitter": 45600,
+        "instagram": 945
+      },
+      "image_url": "https://i1.feedspot.com/1261143.jpg?t=1616745935"
+    },
+    {
+      "title": "Suits Me Blog",
+      "feed_url": "https://suitsmecard.com/blog/feed",
+      "website_url": "https://suitsmecard.com/blog",
+      "description": "Suits Me is an alternative banking solution offering an e-account with a mobile app and a contactless Mastercard\u00ae debit card. Started in 2015 helping customers who needed an account quickly and are looking for an alternative to using a high street bank. Our mission is to be the number one Debit Card/e-account provider for those seeking an alternative to, or have no access to a UK Bank facility,",
+      "followers": {
+        "facebook": 9400,
+        "twitter": 926,
+        "instagram": 10100
+      },
+      "image_url": "https://i1.feedspot.com/5555124.jpg?t=1683106152"
+    },
+    {
+      "title": "Bankwatch",
+      "feed_url": "https://bankwatch.ca/feed/",
+      "website_url": "https://bankwatch.ca/",
+      "description": "BankWatch.ca is a website dedicated to providing comprehensive information and resources related to banking and financial institutions. It offers a wide range of articles, guides, and tools, covering topics such as personal banking, credit cards, loans, and investment options. BankWatch.ca also features reviews and ratings of various banks, helping users compare services and choose the one that suits their needs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5567499.jpg?t=1684154739"
+    },
+    {
+      "title": "Dieterich Bank Blog",
+      "feed_url": "https://www.dieterichbank.com/feed/",
+      "website_url": "https://www.dieterichbank.com/blog/",
+      "description": "Dieterich Bank offers a range of personal and business banking services including checking accounts, savings, loans, and digital banking options. At Dieterich Bank, we have a rich history of helping our employees and communities prosper. The values we've had since our founding still hold strong today as we strive to be not just a financial partner, but an active member of our towns and neighborhoods.",
+      "followers": {
+        "facebook": 6300,
+        "instagram": 846
+      },
+      "image_url": "https://i1.feedspot.com/7284391.jpg?t=1711545950"
+    },
+    {
+      "title": "Banking Tips",
+      "feed_url": "https://banqingtips.com/feed/",
+      "website_url": "https://banqingtips.com/",
+      "description": "Banking Tips is a personal finance blog by Banking expert A G Singh. He typically discusses and reviews various bank products in the Indian market. Gain valuable insights and strengthen your finance fundamentals as the blog delves into relevant topics from a modern financial perspective.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/6697182.jpg?t=1706702743"
+    },
+    {
+      "title": "The New York Times \u00bb Banking Industry",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/http://www.nytimes.com/topic/subject/banking-industry/rss.xml",
+      "website_url": "https://www.nytimes.com/topic/subject/banking-industry",
+      "description": "News about the banking industry. Commentary and archival information about banks and banking from The New York Times.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/4644065.jpg?t=1616745755"
+    },
+    {
+      "title": "Accenture Banking Blog",
+      "feed_url": "https://bankingblog.accenture.com/feed",
+      "website_url": "https://bankingblog.accenture.com/",
+      "description": "Delivering the future of banking - today. Working with banks and payments providers to seize the digital opportunity, manage risk, and drive profitability.",
+      "followers": {
+        "facebook": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/4644503.jpg?t=1616745750"
+    },
+    {
+      "title": "The Hindu BusinessLine \u00bb Money & Banking",
+      "feed_url": "https://www.thehindubusinessline.com/money-and-banking/feeder/default.rss",
+      "website_url": "https://www.thehindubusinessline.com/money-and-banking/",
+      "description": "Latest news on banking, finance, money, loans, insurance, currency, NBFCs, interest rates, RBI, micro finance, Government Finances, Public Financing, Bank Credit, Financial Regulation.",
+      "followers": {
+        "facebook": 11200000,
+        "twitter": 27000000,
+        "instagram": 113000
+      },
+      "image_url": "https://i1.feedspot.com/5520704.jpg?t=1678863795"
+    },
+    {
+      "title": "American Banker",
+      "feed_url": "https://www.americanbanker.com/feed?rss=true",
+      "website_url": "https://www.americanbanker.com/",
+      "description": "American Banker, a SourceMedia brand, is the banking industry's most powerful information resource providing analysis, insight and perspective on the business of banking. Read the latest on the banking & finance industries in the U.S. with award-winning analysis and in-depth reporting by American Banker.",
+      "followers": {
+        "facebook": 22900,
+        "twitter": 72300
+      },
+      "image_url": "https://i1.feedspot.com/4644168.jpg?t=1616745706"
+    },
+    {
+      "title": "American Banking News",
+      "feed_url": "https://www.americanbankingnews.com/feed",
+      "website_url": "https://www.americanbankingnews.com/",
+      "description": "American Banking & Market News is a financial web-zine with up to the minute coverage of U.S. financial markets.",
+      "followers": {
+        "twitter": 8600
+      },
+      "image_url": "https://i1.feedspot.com/4647726.jpg?t=1616746391"
+    },
+    {
+      "title": "Horicon Bank Blog",
+      "feed_url": "https://www.horiconbank.com/blog.rss",
+      "website_url": "https://www.horiconbank.com/blog.html",
+      "description": "Horicon Bank was founded in 1896 by Daniel C. Van Brunt, the inventor of the grain drill. We are committed to providing quality customer service as we support the sound and productive growth of local businesses, and strive to meet the financial needs of our customers in our bank market areas.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 882,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4644376.jpg?t=1616746406"
+    },
+    {
+      "title": "Gonzobanker",
+      "feed_url": "http://gonzobanker.com/feed/",
+      "website_url": "https://gonzobanker.com/",
+      "description": "Cornerstone's totally opinionated take on the technologies, vendors, strategies, and anything else we run across in the trenches of the banking industry. GonzoBanker is our online information resource dispatched weekly along with a good helping of irreverence to tens of thousands of readers around the world, including banks, credit unions, trade groups, the media and industry analysts.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/2288570.jpg?t=1616746452"
+    },
+    {
+      "title": "BankBazaar Blog",
+      "feed_url": "https://blog.bankbazaar.com/feed/",
+      "website_url": "https://blog.bankbazaar.com/",
+      "description": "BankBazaar is a guide to Home Loans, Personal Loans, Car Loans Credit Cards, Life Insurance, Health Insurance, Car Insurance, and Mutual Funds.",
+      "followers": {
+        "facebook": 607200,
+        "twitter": 16400,
+        "instagram": 31600
+      },
+      "image_url": "https://i1.feedspot.com/4647005.jpg?t=1618639158"
+    },
+    {
+      "title": "Federal Reserve Bank of St. Louis",
+      "feed_url": "https://www.stlouisfed.org/rss/page-resources/publications/blog-entries",
+      "website_url": "https://www.stlouisfed.org/on-the-economy",
+      "description": "The Federal Reserve Bank of St. Louis was established in 1914, after the creation of the Federal Reserve System in 1913. The St. Louis Fed On the Economy blog features relevant commentary, analysis, research, and data from our economists and other St. Louis Fed experts.",
+      "followers": {
+        "facebook": 12400,
+        "twitter": 238100,
+        "instagram": 9500
+      },
+      "image_url": "https://i1.feedspot.com/5213346.jpg?t=1624946659"
+    },
+    {
+      "title": "Federal Reserve Bank of St. Louis Blog",
+      "feed_url": "https://www.stlouisfed.org/rss/page-resources/publications/open-vault-blog",
+      "website_url": "https://www.stlouisfed.org/open-vault",
+      "description": "The Federal Reserve Bank of St. Louis was established in 1914, after the creation of the Federal Reserve System in 1913. This blog explains everyday economic concepts and provides a look at the people and programs that make the St. Louis Fed central to America's economy.",
+      "followers": {
+        "facebook": 12400,
+        "twitter": 238100,
+        "instagram": 9500
+      },
+      "image_url": "https://i1.feedspot.com/5297392.jpg?t=1624946614"
+    },
+    {
+      "title": "Federal Reserve Bank of St. Louis",
+      "feed_url": "https://www.stlouisfed.org/rss/page-resources/publications/blog-entries",
+      "website_url": "https://www.stlouisfed.org/on-the-economy",
+      "description": "The mission of the St. Louis Fed is to promote stable prices, maximum sustainable economic growth and support financial stability in our District and the U.S. Follow our blog that features relevant commentary, analysis, research and data from our economists and other St. Louis Fed experts.",
+      "followers": {
+        "instagram": 9500
+      },
+      "image_url": "https://i1.feedspot.com/4644554.jpg?t=1616745764"
+    },
+    {
+      "title": "Starling Bank Blog",
+      "feed_url": "https://www.starlingbank.com/rss.xml",
+      "website_url": "https://www.starlingbank.com/blog/",
+      "description": "Follow us to keep up with The UK mobile-only bank offering personal and business accounts.",
+      "followers": {
+        "facebook": 34500,
+        "twitter": 67100,
+        "instagram": 45200
+      },
+      "image_url": "https://i1.feedspot.com/4644135.jpg?t=1616745796"
+    },
+    {
+      "title": "ABA Banking Journal",
+      "feed_url": "https://bankingjournal.aba.com/feed/",
+      "website_url": "https://bankingjournal.aba.com/",
+      "description": "First published in 1908, the ABA Banking Journal magazine provides timely and sophisticated analysis, insight, and inspiration for banks of all sizes. The ABA Banking Journal website is also home to a weekly podcast and the focused digital channels ABA Risk and Compliance and ABA Bank Marketing, as well as a daily online news service.",
+      "followers": {
+        "facebook": 16600,
+        "twitter": 30100
+      },
+      "image_url": "https://i1.feedspot.com/4647728.jpg?t=1616745723"
+    },
+    {
+      "title": "OceanFirst Blog",
+      "feed_url": "https://oceanfirst.com/blog/rss.xml",
+      "website_url": "https://oceanfirst.com/blog#ofblog/",
+      "description": "OceanFirst builds value for its shareholders as a growth-oriented, community-focused financial services organization. By providing innovative products backed by outstanding service, we will achieve our vision of enhancing our commitment and responsiveness to the markets, customers, and team members we serve.",
+      "followers": {
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4647218.jpg?t=1611925719"
+    },
+    {
+      "title": "Finovate Blog",
+      "feed_url": "https://finovate.com/feed/",
+      "website_url": "https://finovate.com/blog/",
+      "description": "Tracking financial technology & innovations. The latest developments in fintech & financial services, DIgital finance, banking & investment management.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 54100
+      },
+      "image_url": "https://i1.feedspot.com/4644068.jpg?t=1616745834"
+    },
+    {
+      "title": "Popular Bank Blog",
+      "feed_url": "https://blog.popularbank.com/feed/",
+      "website_url": "https://blog.popularbank.com/",
+      "description": "We're redefining banking so that you can bank smarter, happier, and more connected than ever before. Through the integration of our innovative technology with our unrivaled customer service, we're uniquely equipped to provide a broad range of banking services and products designed to propel you, or your business, forward. Check out the blog to know more.",
+      "followers": {
+        "facebook": 18800,
+        "twitter": 4700,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4644508.jpg?t=1609165687"
+    },
+    {
+      "title": "First Keystone Community Bank Blog",
+      "feed_url": "https://www.fkc.bank/feed/",
+      "website_url": "https://www.fkc.bank/blog/",
+      "description": "First Keystone Community Bank offers a variety of consumer products including checking, savings, money market, certificates of deposit, personal loans, mortgages, and home equity loans. First Keystone Bank blog strives to provide the best possible financial solutions for you and your family. The blog shares information on savings, loans, busines loans and business services.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 359,
+        "instagram": 665
+      },
+      "image_url": "https://i1.feedspot.com/5296360.jpg?t=1624604488"
+    },
+    {
+      "title": "The First National Bank in Sioux Falls Blog",
+      "feed_url": "https://www.fnbsf.com/blog/feed/",
+      "website_url": "https://www.fnbsf.com/blog/",
+      "description": "We do things differently. With an infectious culture, a 130-year commitment to our communities, and a foundation built on our first Values, we pride ourselves on being more than just a bank. Stay informed with occasional bank updates, promotions, and financial planning tips on The First National Bank in Sioux Falls blog.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 910,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5297442.jpg?t=1624951917"
+    },
+    {
+      "title": "Bank Of The James",
+      "feed_url": "https://www.bankofthejames.bank/feed/",
+      "website_url": "https://www.bankofthejames.bank/resources/",
+      "description": "With no hidden fees, user-friendly and secure mobile banking, and friendly staff, Bank of the James has been a leading bank in Virginia for over 17 years! In the Bank of the James Resource Bank blog, you will find helpful articles about wealth building, planning for retirement and more.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 121,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4647173.jpg?t=1616747044"
+    },
+    {
+      "title": "The Guardian | Banking",
+      "feed_url": "https://www.theguardian.com/business/banking/rss",
+      "website_url": "https://www.theguardian.com/business/banking",
+      "description": "Follow us to keep up with the latest banking news and features from The Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4647677.jpg?t=1616745759"
+    },
+    {
+      "title": "Bank Activities",
+      "feed_url": "https://bankactivities.com/feed/",
+      "website_url": "https://bankactivities.com/",
+      "description": "Bank Activities has been created with the goal to help people who do not really understand how banks operate, but anyway, find themselves making wrong decisions. Most often these decisions are made because people do not bother enough to gather information prior to going to the bank.",
+      "followers": {
+        "twitter": 898
+      },
+      "image_url": "https://i1.feedspot.com/4644114.jpg?t=1616747040"
+    },
+    {
+      "title": "Ask Bank Blog",
+      "feed_url": "https://www.askbankifsccode.com/blog/feed/",
+      "website_url": "https://www.askbankifsccode.com/blog/",
+      "description": "Askbankifsccode.com is a source of information for your financial queries and various financial tools. We have been working towards helping people with best resources for their daily banking and finance-related needs.",
+      "followers": {
+        "facebook": 536,
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/5270383.jpg?t=1624604884"
+    },
+    {
+      "title": "HDFC Sales Blog",
+      "feed_url": "https://www.hdfcsales.com/blog/feed/",
+      "website_url": "https://www.hdfcsales.com/blog/",
+      "description": "HDFC Sales Blog gives you information on Home Loans, Insurance, Mutual Funds, Fixed Deposits, Education Loans, NPS, and more. They can guide you to make the best financial decisions for your future, both short-term & long-term.",
+      "followers": {
+        "facebook": 26500,
+        "twitter": 168
+      },
+      "image_url": "https://i1.feedspot.com/5297405.jpg?t=1624947742"
+    },
+    {
+      "title": "First United Bank & Trust",
+      "feed_url": "https://mybank.com/blog/feed/",
+      "website_url": "https://mybank.com/blog/",
+      "description": "First United Bank & Trust is a community bank that is passionate about serving both personal and business customers through an uncommon commitment to building helpful relationships and delivering customized solutions. My Bank is your bank for your personal and business banking needs. We're your local community bank, dedicated to meeting the needs of community oriented business owners.",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 1800,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4647640.jpg?t=1616746427"
+    },
+    {
+      "title": "Chesapeake Bank Blog",
+      "feed_url": "https://blog.chesbank.com/rss.xml",
+      "website_url": "https://blog.chesbank.com/",
+      "description": "A community bank with customizable banking solutions and rewards.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 1800,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4644436.jpg?t=1616746435"
+    },
+    {
+      "title": "BankBound Bank Marketing Blog",
+      "feed_url": "https://www.bankbound.com/blog/feed/",
+      "website_url": "https://www.bankbound.com/blog/",
+      "description": "Reach new prospects, engage existing customers, and increase the visibility of your bank online by partnering with BankBound. Get Marketing tips, tricks, and trends exclusively for the banking industry.",
+      "followers": {
+        "twitter": 458,
+        "instagram": 217
+      },
+      "image_url": "https://i1.feedspot.com/4647738.jpg?t=1616747520"
+    },
+    {
+      "title": "Reverse Mortgage Loan Advisors",
+      "feed_url": "https://reversemortgageloanadvisors.com/feed",
+      "website_url": "https://reversemortgageloanadvisors.com/",
+      "description": "Reverse Mortgage Information provided by reverse mortgage loan advisors. Proudly offering unbiased Reverse loan info for homeowners & family members alike. The landscape for reverse mortgages in 2020 has changed dramatically. Learn more here & get your free reverse mortgage info kit.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5115663.jpg?t=1616746590"
+    },
+    {
+      "title": "Banking Support News",
+      "feed_url": "https://www.bankingsupport.org/category/news/feed/",
+      "website_url": "https://www.bankingsupport.org/category/news/",
+      "description": "In this blog, you will find the answers to all your banking and personal finance Queries. Banking Support is your one-stop solution for all your banking queries.",
+      "followers": {
+        "facebook": 80
+      },
+      "image_url": "https://i1.feedspot.com/5207006.jpg?t=1603112158"
+    },
+    {
+      "title": "The Milford Bank",
+      "feed_url": "https://www.milfordbank.com/feed/",
+      "website_url": "https://www.milfordbank.com/blog/",
+      "description": "Milford Bank is your hometown bank providing excellent online and mobile banking service. The Milford Bank exists to serve its customers and its communities. The Bank's goal will be to prosper financially in order to accomplish those goals, while maintaining its strength and insuring its long term success.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 1300,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4644491.jpg?t=1616746414"
+    },
+    {
+      "title": "Banker's Data",
+      "feed_url": "https://bankerdata.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://bankerdata.blogspot.com/",
+      "description": "Banker's Data is an informative blog and website for Bank address, Branch address with MICR code, IFSC code, RTGS, NEFT, BRANCH CODE, Bank customer care number, Banks headquarters contact numbers which are taken from other respective resources. This blog is only just for information uploaded from other reliable and very trustful resources.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5152434.jpg?t=1616747419"
+    },
+    {
+      "title": "Washington Trust Blog",
+      "feed_url": "https://www.watrust.com/blog",
+      "website_url": "https://www.watrust.com/blog",
+      "description": "Washington Trust is the largest privately owned commercial bank in the Northwest. We have served the region since 1902 and have grown as it has grown. We will focus our unique strengths as a community bank on serving those customers who perceive a distinct value in building long-term relationships with us.",
+      "followers": {
+        "facebook": 9400,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4646982.jpg?t=1616745839"
+    },
+    {
+      "title": "RBL Bank Blog",
+      "feed_url": "https://www.rblbank.com/blog/",
+      "website_url": "https://www.rblbank.com/blog/",
+      "description": "RBL Bank's banking blogs keep you updated with all the recent happenings in the banking sector and also shares banking tips and guide to a smart investment. RBL Bank is one of India's fastest-growing private sector banks with an expanding presence across the country.",
+      "followers": {
+        "facebook": 2200000,
+        "twitter": 357700,
+        "instagram": 95100
+      },
+      "image_url": "https://i1.feedspot.com/5296367.jpg?t=1624607335"
+    },
+    {
+      "title": "First County Bank Blog",
+      "feed_url": "https://firstcountybank.com/feed/",
+      "website_url": "https://firstcountybank.com/blog/",
+      "description": "First County Bank is a mutual community bank that has been serving the needs of businesses and individuals in Lower Fairfield County for 160 years. Mission to provide the highest level of customer service to individuals, businesses and the non-profit community of lower Fairfield County, as a profitable, independent, mutual bank committed to supporting the local community.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 594,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4647268.jpg?t=1616746410"
+    },
+    {
+      "title": "Cuyahoga Land Bank Blog",
+      "feed_url": "https://cuyahogalandbank.org/blog/feed/",
+      "website_url": "https://cuyahogalandbank.org/blog/",
+      "description": "The Cuyahoga County Land Bank is the most progressive entity in the country dedicated to eliminating vacant, blighted homes and properties and returning them to productive use. Our Mission is to strategically acquire properties, return them to productive use, reduce blight, increase property values, support community goals and improve the quality of life for county residents.",
+      "followers": {
+        "facebook": 6300,
+        "twitter": 3000,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4646989.jpg?t=1616747048"
+    },
+    {
+      "title": "imb bank \u00bb Help Centre",
+      "feed_url": "https://www.imb.com.au/help-centre/",
+      "website_url": "https://www.imb.com.au/help-centre/",
+      "description": "IMB provides better value banking for a full range of home, personal and car loans, transaction, savings and investment accounts, credit and debit cards and a range of insurances.",
+      "followers": {
+        "facebook": 13100,
+        "twitter": 981,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4647574.jpg?t=1616747068"
+    },
+    {
+      "title": "Deposit Accounts Blog",
+      "feed_url": "https://www.depositaccounts.com/rss.aspx",
+      "website_url": "https://www.depositaccounts.com/blog/",
+      "description": "Deposit Accounts makes it easy for visitors to compare rates at thousands of banks and credit unions and highlights current banking deals. Get best bank deals and promotions currently being offered by local, national banks and credit unions, including savings, checking and cd deals.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/695892.jpg?t=1616745816"
+    },
+    {
+      "title": "Merchants Bank Blog",
+      "feed_url": "https://www.merchantsbank.com/blog/",
+      "website_url": "https://www.merchantsbank.com/blog/",
+      "description": "At Merchants Bank, it's been our privilege to serve customers since 1875. We're proud of our long history of helping our customers & supporting our communities. we have a bright future providing banking services to help individuals and businesses in our communities thrive.",
+      "followers": {
+        "facebook": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4647200.jpg?t=1616745844"
+    },
+    {
+      "title": "SouthState Correspondent",
+      "feed_url": "https://southstatecorrespondent.com/feed/",
+      "website_url": "https://southstatecorrespondent.com/",
+      "description": "The Correspondent Division of CenterState Bank is a full service unit focused on improving performance of community banks across the United States.",
+      "followers": {
+        "facebook": 212,
+        "twitter": 526
+      },
+      "image_url": "https://i1.feedspot.com/4647169.jpg?t=1616746423"
+    },
+    {
+      "title": "Current",
+      "feed_url": "https://current.com/blog/rss/",
+      "website_url": "https://current.com/blog/",
+      "description": "Current is a bank for modern life, that adapts to the way you work and live. Current's Personal Checking gets you paid quicker with a direct deposit up to two days faster and instant gas hold credits. Teen Banking is a smart debit card and app for parents to provide better financial education and independence for their kids.",
+      "followers": {
+        "facebook": 57400,
+        "twitter": 540500
+      },
+      "image_url": "https://i1.feedspot.com/5056674.jpg?t=1616745801"
+    },
+    {
+      "title": "Chime Blog",
+      "feed_url": "https://www.chime.com/feed/",
+      "website_url": "https://www.chime.com/blog/",
+      "description": "Chime is a new kind of bank account that helps members lead healthier financial lives and automate their savings.",
+      "followers": {
+        "facebook": 110,
+        "twitter": 248000,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/4647285.jpg?t=1616746402"
+    },
+    {
+      "title": "FinTech Futures \u00bb Banking",
+      "feed_url": "https://www.fintechfutures.com/category/banking/feed/",
+      "website_url": "https://www.fintechfutures.com/category/banking/",
+      "description": "FinTech Futures is the definitive source of intelligence for the global fintech sector. We provide daily news, in-depth analysis and expert commentary across a comprehensive range of areas including: fintech, bankingtech, paytech, regtech, wealthtech, lendtech and insurtech.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 84000
+      },
+      "image_url": "https://i1.feedspot.com/4644180.jpg?t=1644917339"
+    },
+    {
+      "title": "Atlantic International Bank Blog",
+      "feed_url": "http://www.atlanticibl.com/blog/feed/",
+      "website_url": "https://www.cnbc.com/banks/",
+      "description": "Atlantic International Bank Limited (AIBL) provides international banking services to non-residents of Belize since its incorporation in November 2000. Our goal as one of Belize's top international financial institution, is to help our customers understand what is offshore banking and how it can legally be of assistance to them.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 849
+      },
+      "image_url": "https://i1.feedspot.com/4647597.jpg?t=1664966528"
+    },
+    {
+      "title": "CNBC \u00bb Banks",
+      "feed_url": "https://www.cnbc.com/id/10000876/device/rss",
+      "website_url": "https://www.cnbc.com/banks/",
+      "description": "Banking news, banks, online banking services, electronic banking, loans, and overall banking industry coverage.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4647691.jpg?t=1616745739"
+    },
+    {
+      "title": "news.com.au \u00bb Banking",
+      "feed_url": "https://www.news.com.au/finance/business/banking/feed",
+      "website_url": "https://www.news.com.au/finance/business/banking",
+      "description": "Read the latest Banking and Finance news from Australia and the world including Banking updates and reports. Read more Banking News and Financial information at News.com.au.",
+      "followers": {
+        "facebook": 3400000,
+        "twitter": 711600,
+        "instagram": 320200
+      },
+      "image_url": "https://i1.feedspot.com/4647702.jpg?t=1616745743"
+    },
+    {
+      "title": "The FRED Blog",
+      "feed_url": "https://www.stlouisfed.org/rss/page-resources/publications/the-regional-economist",
+      "website_url": "https://fredblog.stlouisfed.org/",
+      "description": "A quarterly publication aimed at an engaged, nonacademic audience. This publication addresses the regional, national and international economic issues of the day.",
+      "followers": {
+        "facebook": 12400,
+        "twitter": 238100,
+        "instagram": 9500
+      },
+      "image_url": "https://i1.feedspot.com/5297396.jpg?t=1624946994"
+    },
+    {
+      "title": "Liberty Street Economics",
+      "feed_url": "https://libertystreeteconomics.newyorkfed.org/atom.xml",
+      "website_url": "https://libertystreeteconomics.newyorkfed.org/",
+      "description": "Liberty Street Economics features insight and analysis from New York Fed economists working at the intersection of research and policy.",
+      "followers": {
+        "facebook": 54000,
+        "twitter": 16300
+      },
+      "image_url": "https://i1.feedspot.com/5297417.jpg?t=1624950285"
+    },
+    {
+      "title": "Ephrata National Bank Blog and News | ENB",
+      "feed_url": "https://www.epnb.com/insights/feed/",
+      "website_url": "https://www.epnb.com/insights/",
+      "description": "Ephrata National Bank is a local bank near you with comprehensive personal and business banking services, multiple branches and flexible hours. Mission is to remain an independent community bank of undisputed integrity, serving the communities of Northern Lancaster County and beyond.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 428,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4647234.jpg?t=1616746396"
+    },
+    {
+      "title": "The Financial Brand",
+      "feed_url": "https://thefinancialbrand.com/feed/",
+      "website_url": "https://thefinancialbrand.com/",
+      "description": "The Financial Brand is one of the leading website in the world for senior-level executives in the banking industry strategic insights, practical ideas and actionable intelligence.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 28800
+      },
+      "image_url": "https://i1.feedspot.com/4952767.jpg?t=1616745735"
+    },
+    {
+      "title": "BanksForYou",
+      "feed_url": "https://banksforyou.com/feed/",
+      "website_url": "https://banksforyou.com/",
+      "description": "BanksForYou is Free Clean and Minimal Informational Blog about the banks. It is suitable for the public like dealing with fewer relations with bank immediate action and the security measures to be performed.",
+      "followers": {
+        "facebook": 3,
+        "instagram": 147
+      },
+      "image_url": "https://i1.feedspot.com/5158864.jpg?t=1664966844"
+    },
+    {
+      "title": "IBM RegTech Innovations Blog | Banking",
+      "feed_url": "https://www.ibm.com/blogs/regtech/category/banking/feed/",
+      "website_url": "https://www.ibm.com/thought-leadership/institute-business-value/en-us/technology/internet-of-things-iot",
+      "description": "Banking categorized articles for the IBM RegTech Innovations Blog. Read insight from IBM's Subject Matter Experts, who have been helping top banks and financial services organizations for decades.",
+      "followers": {
+        "twitter": 717500,
+        "instagram": 690800
+      },
+      "image_url": "https://i1.feedspot.com/4644513.jpg?t=1613976564"
+    },
+    {
+      "title": "Heartland Bank Blog",
+      "feed_url": "https://heartland.bank/OUR-BANK/News/Blog/rss/category/6575/heartland-bank",
+      "website_url": "https://heartland.bank/OUR-BANK/News/Blog/category/heartland-bank",
+      "description": "For 100 years, Heartland Bank has been developing relationships while caring about you, your family, and your business. It is our responsibility to guide you to financial success with superior service and extended customer relationships. Heartland Bank's mission to provide the best personalized financial services at competitive prices for the economic growth and well-being.",
+      "followers": {
+        "facebook": 4,
+        "twitter": 1100,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4646973.jpg?t=1616747052"
+    },
+    {
+      "title": "Bangladeshi Banker",
+      "feed_url": "https://www.bangladeshibanker.com/feeds/posts/default",
+      "website_url": "https://www.bangladeshibanker.com/",
+      "description": "Whether you stuck with your financial plan or banking career bangladeshibanker.com is here to help you to know more about banking procedures, rules and policies of banking in Bangladesh.",
+      "followers": {
+        "facebook": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5054451.jpg?t=1664967067"
+    },
+    {
+      "title": "MyBankTracker News",
+      "feed_url": "https://www.mybanktracker.com/news/feed",
+      "website_url": "https://www.mybanktracker.com/news",
+      "description": "MyBankTracker is an independent resource that helps consumers make smarter banking and money decisions. MyBankTracker tracks thousands of banks to help you find the perfect match for your banking needs. Get free personalized money advice.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 6100,
+        "instagram": 177
+      },
+      "image_url": "https://i1.feedspot.com/4644088.jpg?t=1616745783"
+    },
+    {
+      "title": "African Development Bank Blog",
+      "feed_url": "https://www.afdb.org/en/news-and-events/news/rss",
+      "website_url": "https://blogs.afdb.org/our-blogs",
+      "description": "The African Development Bank is a regional multilateral development bank, engaged in promoting the economic development and social progress of its Regional.",
+      "followers": {
+        "facebook": 161500,
+        "twitter": 506000,
+        "instagram": 57100
+      },
+      "image_url": "https://i1.feedspot.com/4644204.jpg?t=1616747096"
+    },
+    {
+      "title": "The Charlotte Observer \u00bb Banking",
+      "feed_url": "https://www.charlotteobserver.com/news/business/banking/?widgetName=rssfeed&widgetContentId=8167599&getXmlFeed=true",
+      "website_url": "https://blogs.deloitte.ch/banking/",
+      "description": "The Charlotte Observer newspaper and CharlotteObserver.com in Charlotte, NC bring you Banking news stories and articles.",
+      "followers": {
+        "facebook": 150200,
+        "twitter": 269000,
+        "instagram": 92300
+      },
+      "image_url": "https://i1.feedspot.com/4647013.jpg?t=1616745774"
+    },
+    {
+      "title": "Deloitte Switzerland Banking blog",
+      "feed_url": "https://blogs.deloitte.ch/banking/atom.xml",
+      "website_url": "https://blogs.deloitte.ch/banking/",
+      "description": "The Deloitte Switzerland banking blog brings together professionals with diverse experience and knowledge to provide insights across all segments of the banking industries.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 73500
+      },
+      "image_url": "https://i1.feedspot.com/4644516.jpg?t=1616746448"
+    },
+    {
+      "title": "Beyond Bank Blog",
+      "feed_url": "https://www.beyondbank.com.au/blog.html",
+      "website_url": "https://www.beyondbank.com.au/blog/",
+      "description": "A mutual bank offering a range of personal and business banking solutions. View our range of personal, car loans, home loans, credit cards and bank accounts.",
+      "followers": {
+        "facebook": 21000,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4644149.jpg?t=1616745807"
+    },
+    {
+      "title": "Qudos Bank Blog",
+      "feed_url": "https://www.qudosbank.com.au/BlogFeed/rss",
+      "website_url": "https://www.qudosbank.com.au/blog",
+      "description": "Qudos Bank offers a full range of banking products, including Home Loans, Personal Loans, Car Loans, Credit Cards, Savings and Transaction Accounts and Term Deposits.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 416
+      },
+      "image_url": "https://i1.feedspot.com/4647181.jpg?t=1616745820"
+    },
+    {
+      "title": "BankNews.com",
+      "feed_url": "https://banknews.com/blog/feed/",
+      "website_url": "https://banknews.com/",
+      "description": "BankNews.com is the leading online resource and web portal for the community banking industry, with special emphasis on the Central States region.",
+      "followers": {
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4647718.jpg?t=1616747084"
+    }
+  ]
+}

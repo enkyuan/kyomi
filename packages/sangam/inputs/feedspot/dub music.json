@@ -1,0 +1,78 @@
+{
+  "category": "Dub Music",
+  "source_url": "https://rss.feedspot.com/dub_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "dub-a-rebel BLOG",
+      "feed_url": "https://dubarebel.wordpress.com/feed/",
+      "website_url": "https://dubarebel.wordpress.com/category/dub/",
+      "description": "dub-a-rebel blog is a selection of dub & reggae free downloads.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5009814.jpg?t=1625838403"
+    },
+    {
+      "title": "Terminal 313 \u00bb dub techno",
+      "feed_url": "https://terminal313.net/category/dub-techno/feed",
+      "website_url": "https://terminal313.net/category/dub-techno",
+      "description": "Reviews, news and flashbacks about electronic music, mostly about techno, acid, electro and vintage rave.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5162440.jpg?t=1625481915"
+    },
+    {
+      "title": "Dub Reality",
+      "feed_url": "https://dubreality.wordpress.com/feed/",
+      "website_url": "https://dubreality.wordpress.com/",
+      "description": "INDIGENOUS RESISTANCE is a revolutionary musical collective creating crucial pan-global collaborations between indigenous cultures from the jungles, favelas and barrios with those in the industrialized world who work their musical magic. In this blogs catch up with the latest updates on dub music.",
+      "followers": {
+        "facebook": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5298055.jpg?t=1625120930"
+    },
+    {
+      "title": "Dub Techno Blog",
+      "feed_url": "https://www.dubtechnoblog.com/feed/",
+      "website_url": "https://www.dubtechnoblog.com/",
+      "description": "The home of everything Dub Techno. For all the latest mixes, net label releases, free tracks and anything else that make us drift deep! This blog is dedicated to the Dub Techno sound. Also run Drift Deeper Recordings and Natural Expressions Label.",
+      "followers": {
+        "facebook": 11200,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4832933.jpg?t=1611045872"
+    },
+    {
+      "title": "Dubroom",
+      "feed_url": "https://feeds.feedburner.com/dubroom",
+      "website_url": "https://dubroom.blogspot.com/",
+      "description": "DUBROOM is an independent supported website promoting (DUB) Reggae. Promoting (DUB) Reggae and Consciousness online since 1997. Checkout the latest article on dub music.",
+      "followers": {
+        "twitter": 329
+      },
+      "image_url": "https://i1.feedspot.com/5298091.jpg?t=1625124171"
+    },
+    {
+      "title": "DUB.COM",
+      "feed_url": "https://www.dub.com/feed/",
+      "website_url": "https://www.dukhanbank.com/",
+      "description": "DUB.COM is a simple portal for dub music fans and musicians from all over the world to share links and music.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5162418.jpg?t=1626520533"
+    },
+    {
+      "title": "Dubophonic Records",
+      "feed_url": "https://feeds.feedburner.com/Dub-o-phonic",
+      "website_url": "https://www.dubophonic.com/",
+      "description": "Leading music label from Cyprus, retaining focus on the art of dub music in its most diverse forms, with exclusive releases of conscious vibrations.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 10100,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5460762.jpg?t=1666958958"
+    }
+  ]
+}

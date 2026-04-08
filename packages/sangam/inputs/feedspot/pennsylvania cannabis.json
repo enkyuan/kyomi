@@ -1,0 +1,83 @@
+{
+  "category": "Pennsylvania Cannabis",
+  "source_url": "https://rss.feedspot.com/pennsylvania_cannabis_rss_feeds",
+  "feeds": [
+    {
+      "title": "Thrive Flower Blog",
+      "feed_url": "https://thriveflower.com/feed/",
+      "website_url": "https://thriveflower.com/blog/",
+      "description": "Thrive Flower, a Philadelphia-based premium cannabis company, prioritizes top-quality products for customers. They advocate for cannabis's beneficial use in wellness, offering a comprehensive CBD blog covering various cannabis topics. Thrive Flower is dedicated to providing natural, healthy solutions for their clientele.",
+      "followers": {
+        "facebook": 394
+      },
+      "image_url": "https://i1.feedspot.com/7285629.jpg?t=1711661602"
+    },
+    {
+      "title": "Ethos Cannabis Blog",
+      "feed_url": "https://ethoscannabis.com/feed/",
+      "website_url": "https://ethoscannabis.com/blog/",
+      "description": "Ethos offers more than just cannabis; it provides insights to help individuals understand its benefits. Their vision promotes cannabis's societal integration, while their mission focuses on informed access for better living. Stay updated on trends and industry news through the Ethos Cannabis blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7285622.jpg?t=1714743813"
+    },
+    {
+      "title": "Compassionate Certification Centers News",
+      "feed_url": "https://www.compassionatecertificationcenters.com/feed/",
+      "website_url": "https://www.compassionatecertificationcenters.com/news/",
+      "description": "Established in 2016 with Pennsylvania's MMJ Program, CCC offers patient-centred medical services for MMJ card acquisition. Compassionate Care Centers provides updates on medical marijuana news, legislation, articles, and case studies, aiding patients in accessing comprehensive support and services.",
+      "followers": {
+        "facebook": 605
+      },
+      "image_url": "https://i1.feedspot.com/7285625.jpg?t=1711661583"
+    },
+    {
+      "title": "MJBizDaily \u00bb Pennsylvania",
+      "feed_url": "https://mjbizdaily.com/news-by-state/pennsylvania/feed/",
+      "website_url": "https://mjbizdaily.com/news-by-state/pennsylvania/",
+      "description": "MJBiz, a pioneer since 2011, offers cannabis business insights. Stay updated with Pennsylvania's cannabis industry news and legislative updates through Marijuana Business Daily, a premier publication in the cannabis sector.",
+      "followers": {
+        "facebook": 33200,
+        "twitter": 77900,
+        "instagram": 73600
+      },
+      "image_url": "https://i1.feedspot.com/7285627.jpg?t=1711661592"
+    },
+    {
+      "title": "Pennsylvania Marijuana Card Blog",
+      "feed_url": "https://www.pennsylvaniamarijuanacard.com/blog-feed.xml",
+      "website_url": "https://www.pennsylvaniamarijuanacard.com/blog",
+      "description": "Pennsylvania Marijuana Card facilitates access to medical marijuana dispensaries by assisting patients in obtaining their medical marijuana cards. Their mission is to expand access to medical marijuana across Pennsylvania, supported by a team of compassionate doctors and knowledgeable counsellors. Stay informed on the state's medical marijuana program through their updates and news.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7285623.jpg?t=1711661672"
+    },
+    {
+      "title": "Cannabis Care Consultants Blog",
+      "feed_url": "https://cannabisconsults.net/feed/",
+      "website_url": "https://cannabisconsults.net/blog/",
+      "description": "Cannabis Care Consultants, dedicated physicians, offer personalized care and follow-up for patients. Recognizing mobility and safety concerns, they provide online scheduling and secure telemedicine appointments, ensuring access to medical marijuana treatment for all, even during the COVID-19 pandemic.",
+      "followers": {
+        "facebook": 75,
+        "twitter": 31
+      },
+      "image_url": "https://i1.feedspot.com/7285626.jpg?t=1711661588"
+    },
+    {
+      "title": "Releaf Specialists Blog",
+      "feed_url": "https://releafspecialists.com/feed/",
+      "website_url": "https://releafspecialists.com/blog/",
+      "description": "Releaf Specialists assist in obtaining Medical Marijuana Cards for Generalized Anxiety Disorder or PTSD. Stay updated on medical cannabis news, patient stories, and clinical research through their platform, offering valuable insights into the evolving landscape of cannabis-based treatments.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/7285628.jpg?t=1711661596"
+    },
+    {
+      "title": "Herbal Care RX Blog",
+      "feed_url": "https://herbalcarerx.com/blog/f.atom",
+      "website_url": "https://herbalcarerx.com/blog",
+      "description": "Herbal Care Rx, a Philadelphia-based medical office, offers medical marijuana certifications statewide. They view cannabis as medicine, aiming to enhance access for all. Dedicated to compassion, they guide patients through the certification process, helping them find relief from symptoms with medical marijuana.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7285624.jpg?t=1711661690"
+    }
+  ]
+}

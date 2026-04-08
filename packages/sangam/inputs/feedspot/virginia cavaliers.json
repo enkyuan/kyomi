@@ -1,0 +1,60 @@
+{
+  "category": "Virginia Cavaliers",
+  "source_url": "https://rss.feedspot.com/virginia_cavaliers_rss_feeds",
+  "feeds": [
+    {
+      "title": "TheSabre.com",
+      "feed_url": "https://virginia.sportswar.com/feed/",
+      "website_url": "https://virginia.sportswar.com/",
+      "description": "TheSabre.com is your daily stop for University of Virginia sports coverage. This site is primarily dedicated to coverage of UVA football, basketball, and baseball. Our mission is to keep Cavalier fans updated on their favorite school and provide commentary on headline issues. Make sure to check the site each day to see the latest news on your favorite school.",
+      "followers": {
+        "twitter": 9000,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5459224.jpg?t=1666330736"
+    },
+    {
+      "title": "Streaking The Lawn",
+      "feed_url": "https://www.streakingthelawn.com/rss/index.xml",
+      "website_url": "https://www.streakingthelawn.com/",
+      "description": "SB Nation is a network of communities where sports fans from all backgrounds gather to share their passion for the teams they love. Streaking The Lawn is your best source for quality Virginia Cavaliers news, rumors, analysis, stats, and scores from the fan's perspective.",
+      "followers": {
+        "facebook": 14400,
+        "twitter": 16800
+      },
+      "image_url": "https://i1.feedspot.com/4923034.jpg?t=1666331116"
+    },
+    {
+      "title": "The Athletic \u00bb Virginia Cavaliers",
+      "feed_url": "https://www.nytimes.com/athletic/rss/college-football/virginia-cavaliers-college-football/",
+      "website_url": "https://www.nytimes.com/athletic/college-football/team/virginia-cavaliers-college-football/",
+      "description": "The Athletic delivers powerful stories and smart analyses that bring sports fans closer to the heart of the game. From breaking news and live commentary to deeply-reported long reads and exclusive interviews, subscribers rely on The Athletic for every sports story that matters. Breaking Virginia Cavaliers news and in-depth analysis from the best newsroom in sports.",
+      "followers": {
+        "facebook": 707100,
+        "twitter": 612600,
+        "instagram": 328300
+      },
+      "image_url": "https://i1.feedspot.com/5459225.jpg?t=1666330961"
+    },
+    {
+      "title": "247Sports \u00bb Virginia Cavaliers",
+      "feed_url": "https://247sports.com/college/virginia/",
+      "website_url": "https://247sports.com/college/virginia/",
+      "description": "247Sports delivers free and premium content and online communities for the most dedicated and engaged college sports fans. Stay up to date with all the Virginia Cavaliers sports news, recruiting, transfers, and more at 247Sports.com.",
+      "followers": {
+        "facebook": 3400000,
+        "twitter": 493400,
+        "instagram": 924500
+      },
+      "image_url": "https://i1.feedspot.com/5459229.jpg?t=1666330754"
+    },
+    {
+      "title": "Sports Illustrated \u00bb Virginia Cavaliers",
+      "feed_url": "https://www.si.com/college/virginia/.rss/full/",
+      "website_url": "https://www.si.com/college/virginia/",
+      "description": "Get our daily recommendations for the best sports worth watching, information on how to watch them, and why they're worth watching. At Sports Illustrated you will get the best of Virginia Cavaliers News, Analysis, and More.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5459222.jpg?t=1666330840"
+    }
+  ]
+}

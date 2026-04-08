@@ -1,0 +1,64 @@
+{
+  "category": "San Jose News",
+  "source_url": "https://rss.feedspot.com/san_jose_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Mercury News",
+      "feed_url": "https://www.mercurynews.com/feed/",
+      "website_url": "https://www.mercurynews.com/",
+      "description": "The Mercury News is the leading source of breaking news, local news, sports, business, entertainment, lifestyle, and opinion for Silicon Valley, the San Francisco Bay Area, and beyond. Get to know the latest updates about Silicon Valley with The Mercury News.",
+      "followers": {
+        "facebook": 195900,
+        "twitter": 276900,
+        "instagram": 31900
+      },
+      "image_url": "https://i1.feedspot.com/4476920.jpg?t=1603896201"
+    },
+    {
+      "title": "San Jose Inside",
+      "feed_url": "https://www.sanjoseinside.com/feed/",
+      "website_url": "https://www.sanjoseinside.com/",
+      "description": "San Jose Inside provides the best behind-the-scenes coverage of local politics in Silicon Valley. We take the stories that have become overlooked or poorly told and hold them up to light for greater inspection.Providing a fresh and diverse mix of opinion, breaking news and investigative reports, San Jose Inside wants to inform while also encouraging political debate, discussion and change in our city and county.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 8400
+      },
+      "image_url": "https://i1.feedspot.com/4901008.jpg?t=1669276482"
+    },
+    {
+      "title": "San Jos\u00e9 Spotlight",
+      "feed_url": "https://sanjosespotlight.com/feed/",
+      "website_url": "https://sanjosespotlight.com/",
+      "description": "San Jos\u00e9 Spotlight is the city's first nonprofit news organization dedicated to independent political and business reporting. Our mission is to change the face of local journalism by building a community-supported newsroom that increases civic engagement, educates citizens and strengthens our democracy.",
+      "followers": {
+        "facebook": 8900,
+        "twitter": 7600,
+        "instagram": 15300
+      },
+      "image_url": "https://i1.feedspot.com/5133463.jpg?t=1669276496"
+    },
+    {
+      "title": "East Bay Times",
+      "feed_url": "https://www.eastbaytimes.com/feed/",
+      "website_url": "https://www.eastbaytimes.com/",
+      "description": "East BayTimes is the leading source of breaking news, local news, sports, entertainment, lifestyle and opinion for Contra Costa County, Alameda County, Oakland and beyond.",
+      "followers": {
+        "facebook": 98500,
+        "twitter": 77500,
+        "instagram": 14500
+      },
+      "image_url": "https://i1.feedspot.com/5133464.jpg?t=1669276587"
+    },
+    {
+      "title": "Silicon Valley",
+      "feed_url": "https://www.siliconvalley.com/feed/",
+      "website_url": "https://www.siliconvalley.com/",
+      "description": "SiliconValley.com is a leading source of news and commentary about technology, startups, innovation, and tech policy. They are covering the latest innovations, start-up funding, local government, big tech news, and more. Stay current on Silicon Valley and World tech news with their updates.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4823533.jpg?t=1705923086"
+    }
+  ]
+}

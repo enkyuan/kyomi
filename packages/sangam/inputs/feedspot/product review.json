@@ -1,0 +1,595 @@
+{
+  "category": "Product Review",
+  "source_url": "https://rss.feedspot.com/product_review_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Verge - Reviews",
+      "feed_url": "https://www.theverge.com/rss/reviews/index.xml",
+      "website_url": "https://www.theverge.com/reviews",
+      "description": "What to buy, what you shouldn't, and how to use it all.",
+      "followers": {
+        "facebook": 3600000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/5037149.jpg?t=1621929713"
+    },
+    {
+      "title": "Trusted Reviews",
+      "feed_url": "https://www.trustedreviews.com/feed",
+      "website_url": "https://www.trustedreviews.com/",
+      "description": "Tech news and expert reviews of the latest mobile phones, laptops, cameras, gadgets and home appliances. We'll help you buy the right product for you.",
+      "followers": {
+        "facebook": 134000,
+        "twitter": 33900,
+        "instagram": 7500
+      },
+      "image_url": "https://i1.feedspot.com/4988081.jpg?t=1760002396"
+    },
+    {
+      "title": "SlashGear",
+      "feed_url": "https://www.slashgear.com/feed/",
+      "website_url": "https://www.slashgear.com/",
+      "description": "SlashGear covers technology, science, automotive, gaming, and entertainment, bringing thought-provoking and independent insight since 2005.",
+      "followers": {
+        "facebook": 110700,
+        "twitter": 43200
+      },
+      "image_url": "https://i1.feedspot.com/5037169.jpg?t=1621929720"
+    },
+    {
+      "title": "CNET",
+      "feed_url": "https://www.cnet.com/rss/all/",
+      "website_url": "https://www.cnet.com/",
+      "description": "CNET is the world's leader in tech product reviews, news, prices, videos, forums, how-tos, and more.",
+      "followers": {
+        "facebook": 4000000,
+        "twitter": 1700000,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/4692541.jpg?t=1616418072"
+    },
+    {
+      "title": "PCWorld",
+      "feed_url": "https://www.pcworld.com/feed",
+      "website_url": "https://www.pcworld.com/reviews",
+      "description": "Features, ratings, reviews, and specs of the PC hardware and software that enables you to get work done.",
+      "followers": {
+        "facebook": 969800,
+        "twitter": 376000
+      },
+      "image_url": "https://i1.feedspot.com/540119.jpg?t=1621929734"
+    },
+    {
+      "title": "Gadget Gram",
+      "feed_url": "https://www.gadgetgram.com/feed/",
+      "website_url": "https://www.gadgetgram.com/",
+      "description": "Get the latest scoop on new gadgets and reviews from our experts only on Gadget Gram. See all the upcoming consumer electronics with full specs, features, and launch dates.",
+      "followers": {
+        "facebook": 48600,
+        "twitter": 1000,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5087008.jpg?t=1618549698"
+    },
+    {
+      "title": "Craving Tech",
+      "feed_url": "https://www.cravingtech.com/feed",
+      "website_url": "https://www.cravingtech.com/",
+      "description": "Craving Tech is an up to date technology blog with the latest innovation news and reviews.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 5000,
+        "instagram": 606
+      },
+      "image_url": "https://i1.feedspot.com/4818609.jpg?t=1756124224"
+    },
+    {
+      "title": "Productivity Land",
+      "feed_url": "https://productivityland.com/feed/",
+      "website_url": "https://productivityland.com/",
+      "description": "Productivity Land is your #1 space for finding the best business software. We review productivity apps, project management software, and more.",
+      "followers": {
+        "facebook": 210,
+        "twitter": 187
+      },
+      "image_url": "https://i1.feedspot.com/5037135.jpg?t=1657883993"
+    },
+    {
+      "title": "Mippin",
+      "feed_url": "https://www.mippin.com/feed/",
+      "website_url": "https://www.mippin.com/",
+      "description": "Mippin.com also named as Mippin provides unbiased product reviews & guides for various categories like technology, home, garden, pets, automobile & more.",
+      "followers": {
+        "facebook": 393,
+        "twitter": 361
+      },
+      "image_url": "https://i1.feedspot.com/5090630.jpg?t=1621929751"
+    },
+    {
+      "title": "Mippin",
+      "feed_url": "https://www.mippin.com/feed/",
+      "website_url": "https://www.mippin.com/",
+      "description": "Mippin.com provides unbiased product reviews & guides for various categories like technology, home, garden, pets, automobile & more.",
+      "followers": {
+        "facebook": 393,
+        "twitter": 361
+      },
+      "image_url": "https://i1.feedspot.com/5051674.jpg?t=1621929747"
+    },
+    {
+      "title": "HighTechDad",
+      "feed_url": "https://www.hightechdad.com/feed/",
+      "website_url": "https://www.hightechdad.com/",
+      "description": "HighTechDad (Michael Sheehan) is a dad who reviews technology products and writes about consumer electronics, software, hardware, and various tips and tricks related to gadgets & being a parent & FamilyTech. He is a tech & digital influencer, content producer, journalist, writer, father, and husband -High Tech Dad",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 10400,
+        "instagram": 721
+      },
+      "image_url": "https://i1.feedspot.com/4724175.jpg?t=1607577039"
+    },
+    {
+      "title": "CrazyDiscoStu",
+      "feed_url": "https://crazydiscostu.wordpress.com/feed/",
+      "website_url": "https://crazydiscostu.wordpress.com/",
+      "description": "A Blog For The Modern Geek - lifestyle, news, reviews, film/TV, gaming, tech, music, opinions, culture, craft beer.",
+      "followers": {
+        "facebook": 160,
+        "twitter": 4,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5449344.jpg?t=1663930990"
+    },
+    {
+      "title": "The Review Wire",
+      "feed_url": "https://thereviewwire.com/feed/",
+      "website_url": "https://thereviewwire.com/category/reviews/electronics/",
+      "description": "The Review Wire has broad experience with social media management, product review and promotion, blogging and brand development. It emphasis on the highly relevant female decision-maker in the purchase cycle drives proven results for clients. Find reviews, giveaways, gift guides, and more!",
+      "followers": {
+        "facebook": 18600,
+        "twitter": 18700,
+        "instagram": 9200
+      },
+      "image_url": "https://i1.feedspot.com/4906238.jpg?t=1602575467"
+    },
+    {
+      "title": "Best12buy",
+      "feed_url": "https://best12buy.com/feed/",
+      "website_url": "https://best12buy.com/",
+      "description": "Best12buy is the collections of best selling products available online which save your time and money in online shopping. Here you will find the best product reviews.",
+      "followers": {
+        "facebook": 47
+      },
+      "image_url": "https://i1.feedspot.com/5265168.jpg?t=1617703993"
+    },
+    {
+      "title": "TwenT3",
+      "feed_url": "https://twent3.co.uk/blogs/news.atom",
+      "website_url": "https://twent3.co.uk/blogs/news/",
+      "description": "TwenT3 offers and provides all forms of lenticuar printing services, We produce custom lenticular prints of all sizes. We also produce a range of lenticular products including 3D lenticular business cards, lenticular keyrings, lenticular magnets, lenticular phone covers and custom made prints. All news and updates about products and collections are available on this page. You can have all information here.",
+      "followers": {
+        "facebook": 200,
+        "twitter": 232,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5242417.jpg?t=1612522684"
+    },
+    {
+      "title": "Easy Home Theater",
+      "feed_url": "https://easyhometheater.net/feed",
+      "website_url": "https://easyhometheater.net/",
+      "description": "Easy Home Theater is a site dedicated to making the extensive world of home theater setup and content simple, so there isn't any guesswork involved.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 354
+      },
+      "image_url": "https://i1.feedspot.com/5141314.jpg?t=1621931688"
+    },
+    {
+      "title": "Product Review Mom",
+      "feed_url": "https://www.productreviewmom.com/feeds/posts/default",
+      "website_url": "https://www.productreviewmom.com/",
+      "description": "Welcome to my little corner of the internet! I'm a professional blogger sharing honest reviews to help you live your best life. Product Review Mom publishes product reviews, how to become a product tester, travel, cars, beauty, fashion, Atlanta, ways to save money, and more!",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 4300,
+        "instagram": 12300
+      },
+      "image_url": "https://feedspotinsta.s3.us-west-2.amazonaws.com/fb_missloumae.jpg"
+    },
+    {
+      "title": "Good Housekeeping",
+      "feed_url": "https://www.goodhousekeeping.com/rss/default.xml",
+      "website_url": "https://www.goodhousekeeping.com/",
+      "description": "RSS feed for Latest Content - Good Housekeeping",
+      "followers": {
+        "facebook": 4800000,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/7835193.jpg?t=1763385247"
+    },
+    {
+      "title": "Momma Review",
+      "feed_url": "https://mommareview.com/feed/",
+      "website_url": "https://mommareview.com/",
+      "description": "Momma Review is a one-stop resource for the modern fashion-loving mom. Here you'll find inspiration for all things motherhood, lifestyle, and honest reviews. We cover a long list of important topics from Motherhood, Travel, Style, Beauty, Wellness, DIY hacks and so much more.",
+      "followers": {
+        "facebook": 876,
+        "twitter": 2500,
+        "instagram": 63100
+      },
+      "image_url": "https://i1.feedspot.com/5090250.jpg?t=1763385249"
+    },
+    {
+      "title": "CNET",
+      "feed_url": "https://www.cnet.com/rss/news/",
+      "website_url": "https://www.cnet.com/",
+      "description": "CNET is a prominent technology media website that has been delivering comprehensive news, reviews, and analysis on consumer electronics and technology since its founding in 1994 by Halsey Minor and Shelby Bonnie. Known for its extensive coverage and in-depth reviews, CNET has become a trusted resource for tech enthusiasts and professionals alike. The website operates under the ownership of Red Ventures, which acquired it from CBS Interactive in 2020...",
+      "followers": {
+        "facebook": 4000000,
+        "twitter": 647200,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/3708244.jpg?t=1622707866"
+    },
+    {
+      "title": "Tika Review",
+      "feed_url": "https://www.tikareview.com/feed/",
+      "website_url": "https://www.tikareview.com/",
+      "description": "Tika Review is a blog dedicated to providing honest and accurate digital product reviews, marketing tips, and updates on the latest marketing trends.",
+      "followers": {
+        "facebook": 442
+      },
+      "image_url": "https://feedspotinsta.s3.us-west-2.amazonaws.com/fb_103646801442481.jpg"
+    },
+    {
+      "title": "Tom's Guide",
+      "feed_url": "https://www.tomsguide.com/feeds.xml",
+      "website_url": "https://www.tomsguide.com/",
+      "description": "Tom's Guide helps you decide what tech to buy by suggesting the right gear, what you can do with it, and where you can save money while purchasing. Tom's Guide upgrades your life by helping you decide what products to buy, showing you how to get the most out of them and solving problems as they arise.",
+      "followers": {
+        "facebook": 91700,
+        "twitter": 38000,
+        "instagram": 71200
+      },
+      "image_url": "https://i1.feedspot.com/5074030.jpg?t=1665387090"
+    },
+    {
+      "title": "Gay NYC Dad \u00bb Product Reviews",
+      "feed_url": "https://www.gaynycdad.com/category/product-reviews/feed",
+      "website_url": "https://www.gaynycdad.com/category/product-reviews/",
+      "description": "Hi, I'm Mitchell. I am a 61 years young gay man with a spouse of 900 years. We have an adopted (at birth) son currently in the NYC Public School system in the 12th grade. I am a Stay at home dad blogger raising a tweenage son in New York City. I cover articles on adoption, parenting, product reviews and more.",
+      "followers": {
+        "facebook": 16800,
+        "twitter": 41500,
+        "instagram": 26500
+      },
+      "image_url": "https://i1.feedspot.com/5289044.jpg?t=1639399345"
+    },
+    {
+      "title": "Technology \u00bb Reviews",
+      "feed_url": "https://www.techradar.com/feeds/articletype/review",
+      "website_url": "https://www.techradar.com/reviews/",
+      "description": "Search, browse and compare the latest technology reviews and products covering computing, home entertainment systems, gadgets and more | TechRadar.",
+      "followers": {
+        "facebook": 655000,
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/7836654.jpg?t=1763385246"
+    },
+    {
+      "title": "Sporked \u00bb Product Reviews",
+      "feed_url": "https://sporked.com/articles/new-product-reviews/feed/",
+      "website_url": "https://sporked.com/articles/new-product-reviews/",
+      "description": "Here, we are sharing top picks for the best product review sites. These platforms make it easier to shop with confidence.",
+      "followers": {
+        "facebook": 28000
+      },
+      "image_url": "https://sporked.com/wp-content/uploads/2024/04/cropped-favicon-32x32.png"
+    },
+    {
+      "title": "DigitalOakkart",
+      "feed_url": "https://digitaloakkart.com/feed/",
+      "website_url": "https://digitaloakkart.com/",
+      "description": "We are a team of avid travelers and passionate photographers who love to share our experiences and insights with fellow travel enthusiasts. Our blog is dedicated to providing you with the best travel and photography content, as well as product reviews that will help you make the most of your travels.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5619042.jpg?t=1688637040"
+    },
+    {
+      "title": "The Glamorganic Goddess \u00bb Reviews",
+      "feed_url": "http://glamorganicgoddess.com/category/reviews/feed/",
+      "website_url": "http://glamorganicgoddess.com/category/reviews/",
+      "description": "Green Your Glam with the Latest Clean Beauty Tips, Product Reviews + Healthy How-To's, written by a sassy, young Breast Cancer Survivor. #greenbeauty",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 4300,
+        "instagram": 10900
+      },
+      "image_url": "https://i1.feedspot.com/5037299.jpg?t=1621929786"
+    },
+    {
+      "title": "Techrakyat",
+      "feed_url": "https://techrakyat.com/feed/",
+      "website_url": "https://techrakyat.com/reviews/",
+      "description": "Find recommendations of the best products for your money, tech, financial tips & life hacks for Malaysians. Live smarter, save money, and make money. Techrakyat.com is operated by a Malaysian tech geek who offers reviews and unbiased opinions on tech products and matter from a local, Malaysian perspective.",
+      "followers": {
+        "facebook": 975,
+        "twitter": 76
+      },
+      "image_url": "https://i1.feedspot.com/5202270.jpg?t=1601449469"
+    },
+    {
+      "title": "My Home Dojo",
+      "feed_url": "https://myhomedojo.com/feed/",
+      "website_url": "https://myhomedojo.com/",
+      "description": "After spending a LOT of time at home in 2020 (can you relate?), we were surprised and disappointed to discover that there was NO reputable product review source designed singularly around products and services that elevate your home, health, and lifestyle. Just when everyone needed that guidance the most. And so, My Home Dojo was conceived and born - into and due to the housebound state in which the world had found itself. We provide product reviews, recommendations and how-tos to cover every area of your life at home.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5257618.jpg?t=1615806816"
+    },
+    {
+      "title": "DeltaHeatedVest Blog",
+      "feed_url": "https://deltaheatedvest.com/blog/feed/",
+      "website_url": "https://deltaheatedvest.com/blog/",
+      "description": "Best Gadgets Reviews & Buyers Guide. Welcome to DeltaHeatedVest, your number one source for all things Best Heated apparels, motorcycle gears, and outdoor gadgets. We're dedicated to providing you with the very best of Heated gadgets, with an emphasis on honesty and quality products.",
+      "followers": {
+        "twitter": 14
+      },
+      "image_url": "https://i1.feedspot.com/5245435.jpg?t=1613458748"
+    },
+    {
+      "title": "Daamify",
+      "feed_url": "https://daamify.com/feed/",
+      "website_url": "https://daamify.com/",
+      "description": "Here at Daamify, we write about the top best product reviews of any gadgets and software you name it we help make better buying decisions for buyers",
+      "followers": {
+        "facebook": 53,
+        "twitter": 4,
+        "instagram": 40
+      },
+      "image_url": "https://i1.feedspot.com/5180730.jpg?t=1597153375"
+    },
+    {
+      "title": "Top Rate Reviews",
+      "feed_url": "https://topratereviews.com/feed/",
+      "website_url": "https://topratereviews.com/category/technology/",
+      "description": "Top Rate Reviews provides you with unbiased reviews about different and top-rated products and models along with a helpful buyer's guide!",
+      "followers": {
+        "facebook": 357,
+        "twitter": 176,
+        "instagram": 70
+      },
+      "image_url": "https://i1.feedspot.com/5257968.jpg?t=1615879465"
+    },
+    {
+      "title": "Bestvela",
+      "feed_url": "https://bestvela.com/feed/",
+      "website_url": "https://bestvela.com/",
+      "description": "Best rated Reviews, Products, comparison table Buyer's Guides, the product buying decision quite difficult because the consumer wants to get the best product at a reasonable price, we think for you and Design BestVela.",
+      "followers": {
+        "facebook": 730,
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/5127531.jpg?t=1621929809"
+    },
+    {
+      "title": "BuyNewUK",
+      "feed_url": "https://buy-new.co.uk/feed/",
+      "website_url": "https://buy-new.co.uk/electronics/computers-accessories/",
+      "description": "The best offers and discounts on products and services that we find online. Browse the buying guides, offers and reviews in technology, home, fashion, and more.",
+      "followers": {
+        "facebook": 102,
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/5153820.jpg?t=1621929802"
+    },
+    {
+      "title": "Knowingsteps360info",
+      "feed_url": "https://feeds.feedburner.com/Knowingsteps360",
+      "website_url": "https://knowingsteps360.blogspot.com/",
+      "description": "The Knowingsteps360info blog providing in-depth reviews of the best home and kitchen appliances for your home. If you are planning to buy your next Electronic goods, home electronics, Kitchen electronics, Grooming goods, Tech electronics, you are at the perfect place. Also, you can collect information about new two-wheelers bike cars along with new technology interesting and knowledgeable news. The blog also provides you home health remedies for your better natural lifestyle and makes life easier.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5193419.jpg?t=1599230973"
+    },
+    {
+      "title": "Reviewparks Blog",
+      "feed_url": "https://reviewparks.com/feed/",
+      "website_url": "https://reviewparks.com/blog/",
+      "description": "The name defines it all. ReviewParks, where going through reviews is as easy as walking through the park. Our aim is to make things easy for you. It's basically a video review based website where all our videos are devised to help you choose your pick on a wide variety of products.",
+      "followers": {
+        "twitter": 90
+      },
+      "image_url": "https://i1.feedspot.com/5053442.jpg?t=1621931768"
+    },
+    {
+      "title": "Exclusivetrendzs",
+      "feed_url": "https://www.exclusivetrendzs.com/feed/",
+      "website_url": "https://www.exclusivetrendzs.com/",
+      "description": "At Exclusivetrendzs we are concerned with writing and displaying reviews on e-commerce and digital products. These reviews are trusted to be impartial and are meant to guide the buyer on making an informed decision just before you purchase these products. As Always, we do our best to present our audience with reviews on a lot of quality and affordable products. If you want something unique, you're in the right place.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5263208.jpg?t=1617175200"
+    },
+    {
+      "title": "Best10Lab",
+      "feed_url": "https://best10lab.com/feed/",
+      "website_url": "https://best10lab.com/",
+      "description": "Best10Lab is the complete knowledgebase. Follow to get updates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5146274.jpg?t=1621932641"
+    },
+    {
+      "title": "XpertChoose",
+      "feed_url": "https://xpertchoose.com/feed/",
+      "website_url": "https://xpertchoose.com/",
+      "description": "This is a website where you will get unbiased reviews on all products that you're looking for. We are trying our level best to cover all type of products",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5061832.jpg?t=1621932505"
+    },
+    {
+      "title": "Have A Look And Have It Blog",
+      "feed_url": "https://gomrproducts.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://gomrproducts.blogspot.com/p/home-electronics.html",
+      "description": "Get latest product reviews on Laptops, TV, Jewellery, gold, machines, appliances, electronics, d\u00e9cor, phones, cameras and much more on have a look and have it blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5478989.jpg?t=1670924172"
+    },
+    {
+      "title": "TechHive - Reviews",
+      "feed_url": "https://www.techhive.com/feed",
+      "website_url": "https://www.techhive.com/reviews",
+      "description": "Features, ratings, reviews, and specs of the latest in consumer technology products",
+      "followers": {
+        "facebook": 54400,
+        "twitter": 56000
+      },
+      "image_url": "https://i1.feedspot.com/1037370.jpg?t=1621929739"
+    },
+    {
+      "title": "Internet Reviewer",
+      "feed_url": "https://internetreviewer.net/feed/",
+      "website_url": "https://internetreviewer.net/trafficzion-review-can-you-really-get-100-free-traffic/",
+      "description": "Ankur Shukla is a full time online marketer, web developer and entrepreneur. He has developed 40+ software products and 100+ websites over the last few years generating over 100,000 sales online from his products. He loves turning ideas into profitable ventures & helping people solve problems using technology & marketing.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5084645.jpg?t=1621929883"
+    },
+    {
+      "title": "Wirecutter: Reviews for the Real World",
+      "feed_url": "https://thewirecutter.com/feed/",
+      "website_url": "https://thewirecutter.com/",
+      "description": "Wirecutter is a list of the best appliances, tech, and gear for the home. Reviews are based on research and hands-on testing by veteran journalists, scientists, and researchers.",
+      "followers": {
+        "facebook": 151400,
+        "twitter": 126300,
+        "instagram": 301100
+      },
+      "image_url": "https://i1.feedspot.com/4757170.jpg?t=1621929716"
+    },
+    {
+      "title": "ReviewBossy",
+      "feed_url": "https://reviewbossy.com/feed/",
+      "website_url": "https://storeparrot.com/blog",
+      "description": "Looking for unbiased and honest product reviews? Find out more on the latest gadgets, appliances, software, and more Read our reviews and make smart buying decisions today.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5559956.jpg?t=1683632677"
+    },
+    {
+      "title": "Product Analogy",
+      "feed_url": "https://www.productanalogy.com/feed/",
+      "website_url": "https://www.productanalogy.com/",
+      "description": "We at Product Analogy, aim to guide the customers to get the best value for their money. We strive to help our customers throughout the process of deciding the most suitable product for them by providing them with product reviews, information, benefits, perceived problems and price comparisons collected by our team with complete honesty.",
+      "followers": {
+        "twitter": 3,
+        "instagram": 27
+      },
+      "image_url": "https://i1.feedspot.com/5064148.jpg?t=1621931746"
+    },
+    {
+      "title": "GAMING HEADSET",
+      "feed_url": "https://carparler.com/feed/",
+      "website_url": "https://carparler.com/",
+      "description": "Best gadgets buying guides are available here . We make the the best guide for you, so read and buy now at best market place of the world for usa.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5164139.jpg"
+    },
+    {
+      "title": "Tech Namaste",
+      "feed_url": "https://technamaste.com/feed/",
+      "website_url": "https://technamaste.com/",
+      "description": "The website provides you the best products falling under each price segment. We do deep research and analysis of every product for everyone.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5230359.jpg?t=1608704882"
+    },
+    {
+      "title": "Best Review Star Blog",
+      "feed_url": "https://bestreviewstar.com/feed/",
+      "website_url": "https://bestreviewstar.com/category/blog/",
+      "description": "Here we have highlighted all the essentials of a product, which are absolutely necessary for that product. From here you can be assured that we will help you and your family to find the best sous vide machine and Vacuum Sealer products. We want you to find the best, easily and rapidly.",
+      "followers": {
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/5057903.jpg?t=1621931137"
+    },
+    {
+      "title": "BuyerFlow Blog",
+      "feed_url": "https://buyerflow.com/feed/",
+      "website_url": "https://www.atom.com/blog/",
+      "description": "Hello! This is Manoj Sain founder of BuyerFlow. I would like to thank every buyer who believes in 'Buying best products online'! We help user to find the best part of a product so they can come to the final buying decision. We also make every possible effort to save money on online shopping.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5163174.jpg?t=1621931176"
+    },
+    {
+      "title": "Review Carts",
+      "feed_url": "https://reviewcarts.com/feed/",
+      "website_url": "https://hotgadgetsinfo.com/",
+      "description": "We review your needs!",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5055558.jpg?t=1621931242"
+    },
+    {
+      "title": "Grab This Deals",
+      "feed_url": "https://grabthisdeals.com/feed",
+      "website_url": "https://hotgadgetsinfo.com/",
+      "description": "We at 'GRAB THIS DEALS' provides top rated reviews, products, buyer's guides, comparison charts and new offers to help you find the best available product in the market",
+      "followers": {
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/5135330.jpg?t=1621931677"
+    },
+    {
+      "title": "HA Bytes",
+      "feed_url": "https://www.habytes.com/feed",
+      "website_url": "https://hotgadgetsinfo.com/",
+      "description": "HA Bytes is a home of technology, provide the latest technology reviews, covering computer stuff, entertainment system, and tech news.",
+      "followers": {
+        "facebook": 531,
+        "twitter": 202
+      },
+      "image_url": "https://i1.feedspot.com/5122073.jpg?t=1621931703"
+    },
+    {
+      "title": "Hot Gadgets Info",
+      "feed_url": "https://hotgadgetsinfo.com/feed/",
+      "website_url": "https://hotgadgetsinfo.com/",
+      "description": "Try out cool gadgets be it car gadgets, hot gadgets, electronic gadgets reviews or other coolest gadgets, buying reviews, tips and more | Best Hot Gadget Reviews. I love to try out cool gadgets be it car gadgets, electronic gadgets or others. So this website is my way of sharing my passion for gadgets.",
+      "followers": {
+        "facebook": 220
+      },
+      "image_url": "https://i1.feedspot.com/5248433.jpg?t=1614234893"
+    },
+    {
+      "title": "Best Wireless 7",
+      "feed_url": "https://bestwireless7.com/feed/",
+      "website_url": "https://bestwireless7.com/",
+      "description": "Always go with the best in range products and never regret the decision later. Choose from hours of research and deeply researched best and long run products.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5228558.jpg?t=1608185889"
+    },
+    {
+      "title": "Consumer Advise",
+      "feed_url": "https://www.homeplace.in/feed/",
+      "website_url": "https://www.consumeradvise.in/",
+      "description": "If you are looking for the best Home and Kitchen product in India, read our latest review and buying guides for a smart buying experience.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/5217922.jpg?t=1605865706"
+    },
+    {
+      "title": "Elucidate Facts",
+      "feed_url": "https://elucidatefacts.com/feed/",
+      "website_url": "https://www.coherecommerce.com/blog/",
+      "description": "Elucidate Facts provides a free platform to people for sharing their views and experiences on products, services, news and any vertical they wish their voice to reach people.",
+      "followers": {
+        "facebook": 446,
+        "twitter": 28,
+        "instagram": 50
+      },
+      "image_url": "https://i1.feedspot.com/5054710.jpg?t=1621929805"
+    }
+  ]
+}

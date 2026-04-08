@@ -1,0 +1,982 @@
+{
+  "category": "Business",
+  "source_url": "https://rss.feedspot.com/business_rss_feeds",
+  "feeds": [
+    {
+      "title": "Harvard Business Review",
+      "feed_url": "http://feeds.hbr.org/harvardbusiness",
+      "website_url": "https://hbr.org/topic/subject/leadership",
+      "description": "Find new ideas and classic advice on strategy, innovation and leadership, for global leaders from the world's best business and management experts. Harvard Business Review is the leading destination for smart management thinking.",
+      "followers": {
+        "facebook": 5800000,
+        "twitter": 5800000,
+        "instagram": 3200000
+      },
+      "image_url": "https://i1.feedspot.com/4583800.jpg?t=1607490758"
+    },
+    {
+      "title": "Entrepreneur.com",
+      "feed_url": "https://www.entrepreneur.com/latest.rss",
+      "website_url": "https://www.entrepreneur.com/latest",
+      "description": "Get the latest news, updates, and business affairs as they happen. Entrepreneur seeks to inspire, inform and celebrate entrepreneurs. We offer real solutions to the challenges you face as an entrepreneur, including tips, tools, and insider news to help build - and grow - your business.",
+      "followers": {
+        "twitter": 3600000,
+        "instagram": 4600000
+      },
+      "image_url": "https://i1.feedspot.com/4425104.jpg?t=1599311687"
+    },
+    {
+      "title": "Fast Company",
+      "feed_url": "https://www.fastcompany.com/latest/rss?truncated=true",
+      "website_url": "https://www.fastcompany.com/",
+      "description": "Fast Company is the world's leading progressive business media brand, with a unique editorial focus on innovation in technology, leadership, world changing ideas, and design. Written for, by, and about the most progressive business leaders, Fast Company inspires readers to think beyond traditional boundaries, lead conversations, and create the future of business.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 2200000,
+        "instagram": 752900
+      },
+      "image_url": "https://i1.feedspot.com/4886888.jpg?t=1628315879"
+    },
+    {
+      "title": "Small Business Trends",
+      "feed_url": "https://feeds.feedburner.com/SmallBusinessTrends/?feedId=220&uuid=JHEFJFpFDDIDMFLEDIDEFpFDMBEKEBHDBEDD",
+      "website_url": "https://smallbiztrends.com/",
+      "description": "Founded in 2003, Small Business Trends is an award-winning online publication for small business owners, entrepreneurs and the people who interact with them. It is one of the most popular independent small business publications on the web. Together with hundreds of expert contributors, Small Business Trends brings you the news, tips, advice and resources you need. 'Small business success... delivered daily.'",
+      "followers": {
+        "facebook": 82900,
+        "twitter": 176400
+      },
+      "image_url": "https://i1.feedspot.com/4755239.jpg?t=1599311785"
+    },
+    {
+      "title": "Inc.",
+      "feed_url": "https://www.inc.com/rss/",
+      "website_url": "https://www.inc.com/",
+      "description": "Successfully start, grow, innovate, and lead your business today: Ideas, resources, advice, support, tools, strategies, real stories, and real business examples can be found on our website. Inc.com, the daily resource for entrepreneurs. Everything you need to know to start and grow your business now.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 2700000,
+        "instagram": 801900
+      },
+      "image_url": "https://i1.feedspot.com/4646738.jpg?t=1599311770"
+    },
+    {
+      "title": "TechCrunch",
+      "feed_url": "https://techcrunch.com/feed/",
+      "website_url": "https://techcrunch.com/",
+      "description": "TechCrunch is a leading technology media platform dedicated to profiling startups, reviewing new internet products, and breaking the latest tech news. Founded in 2005, it has established itself as a vital source of information for the tech industry. TechCrunch is spearheaded by Editor in Chief and General Manager Connie Loizos, who has a deep background in Silicon Valley journalism. The editorial team includes notable contributors like Matt Rosoff, Ingrid Lunden, Frederic Lardinois, and Kirsten Korosec, among others, who bring a wealth of experience and expertise to their respective beats.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/4447421.jpg?t=1634630003"
+    },
+    {
+      "title": "VentureBeat",
+      "feed_url": "https://feeds.feedburner.com/venturebeat/SZYF",
+      "website_url": "https://venturebeat.com/",
+      "description": "A leading source for transformative tech news and events that provide the deep context to help business leaders make smart decisions & stay on top of breaking news. Features mainly industry-leading AI, machine learning, and coverage of the game industry.",
+      "followers": {
+        "facebook": 443000,
+        "twitter": 705000,
+        "instagram": 16600
+      },
+      "image_url": "https://i1.feedspot.com/4429940.jpg?t=1622707849"
+    },
+    {
+      "title": "Duct Tape Marketing Blog",
+      "feed_url": "https://ducttapemarketing.com/feed/",
+      "website_url": "https://ducttapemarketing.com/blog/",
+      "description": "Small business marketing ideas, tips, tricks and guides.Also covers articles on topics such as small business advertising, marketing tools, online marketing, finance, social media, lead generation & conversion, seo and more. John Jantsch, the creator of the Duct Tape Marketing helps small & local business owners, professional services providers and consultants streamline their marketing approach, increase revenue and scale strategically by providing a proven, practical and simple system.",
+      "followers": {
+        "facebook": 33700,
+        "twitter": 99200
+      },
+      "image_url": "https://i1.feedspot.com/4448725.jpg?t=1607490867"
+    },
+    {
+      "title": "Foundr Blog",
+      "feed_url": "https://foundr.com/articles/feed",
+      "website_url": "https://foundr.com/articles",
+      "description": "Foundr is the go-to resource for helping today's entrepreneurs build tomorrow's leading businesses. We aim to foster a culture of authenticity, drive, limitless ambition, and a thirst for freedom. And we want to assist a million entrepreneurs to create a million businesses all around the world.",
+      "followers": {
+        "facebook": 978000,
+        "twitter": 133200,
+        "instagram": 3900000
+      },
+      "image_url": "https://i1.feedspot.com/5392261.jpg?t=1650364633"
+    },
+    {
+      "title": "Tim Ferriss Blog",
+      "feed_url": "https://tim.blog/feed/",
+      "website_url": "https://tim.blog/",
+      "description": "Tim Ferriss has been listed as one of Fast Company's 'Most Innovative Business People' and one of Fortune's '40 under 40.' He is an early-stage technology investor/advisor.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 2000000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/4698507.jpg?t=1608358081"
+    },
+    {
+      "title": "Sage Advice UK Blog",
+      "feed_url": "https://www.sage.com/en-gb/blog/feed/",
+      "website_url": "https://www.sage.com/en-gb/blog/",
+      "description": "We provide small and medium-sized organizations with a range of easy-to-use, secure, and efficient business management software and service. Sage Advice UK provides the best advice on everything from managing money to people. Tailored advice for startups, small businesses, enterprises and accountants.",
+      "followers": {
+        "facebook": 819900,
+        "twitter": 50500,
+        "instagram": 32600
+      },
+      "image_url": "https://i1.feedspot.com/4719864.jpg?t=1607409152"
+    },
+    {
+      "title": "DM Valid Blog",
+      "feed_url": "https://dmvalid.com/feed/",
+      "website_url": "https://dmvalid.com/category/business-blogs/",
+      "description": "DM Valid is a provider of b2b data intelligence. We exclusively provide lead generation services and end-to-end marketing solutions when they are integrated with a data-driven methodology. We can give you the information and insights you need to improve your consumer database while addressing your data concerns.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5752304.jpg?t=1704881880"
+    },
+    {
+      "title": "FTC Business Blog",
+      "feed_url": "https://www.ftc.gov/feeds/blog-business.xml",
+      "website_url": "https://www.ftc.gov/business-guidance/blog",
+      "description": "Must-read quick takes on the latest FTC consumer protection developments written with business people in mind. The FTC is the only federal agency with both consumer protection and competition jurisdiction in broad sectors of the economy. The FTC pursues vigorous and effective law enforcement; advances consumers' interests by sharing its expertise with federal and state legislatures and U.S. and international government agencies",
+      "followers": {
+        "facebook": 123800,
+        "twitter": 110600
+      },
+      "image_url": "https://i1.feedspot.com/5341908.jpg?t=1657539158"
+    },
+    {
+      "title": "All Business",
+      "feed_url": "https://www.allbusiness.com/feeds/feed.rss",
+      "website_url": "https://www.allbusiness.com/",
+      "description": "AllBusiness helps small business professionals save time and money by addressing real-world business questions and presenting practical solutions.",
+      "followers": {
+        "facebook": 16900,
+        "twitter": 9900
+      },
+      "image_url": "https://i1.feedspot.com/4425590.jpg?t=1599312155"
+    },
+    {
+      "title": "Afleo Blog",
+      "feed_url": "https://afleo.com/feed/",
+      "website_url": "https://afleo.com/learn/",
+      "description": "Afleo is a technology-driven business services platform dedicated to helping Startups & Entrepreneurs easily start and grow their business, at an affordable cost. We started with a simple idea that Doing Business in India should be very easy.",
+      "followers": {
+        "facebook": 660,
+        "twitter": 39
+      },
+      "image_url": "https://i1.feedspot.com/4997582.jpg?t=1599485986"
+    },
+    {
+      "title": "Business Pundit",
+      "feed_url": "https://www.businesspundit.com/feed/",
+      "website_url": "https://www.businesspundit.com/",
+      "description": "BusinessPundit is a thought leadership website that focuses on business news, entrepreneurship and general business-related information.",
+      "followers": {
+        "facebook": 11900,
+        "twitter": 363
+      },
+      "image_url": "https://i1.feedspot.com/193457.jpg?t=1599485774"
+    },
+    {
+      "title": "Domosphere Blog",
+      "feed_url": "https://www.domo.com/blog/feed/",
+      "website_url": "https://www.domo.com/blog/",
+      "description": "The Domo business intelligence (BI) blog. Where thought leadership and business strategy mingle. Check out how the BI world is changing! Domo is the Business Cloud, empowering organizations of all sizes with BI leverage at cloud scale in record time.",
+      "followers": {
+        "facebook": 70900,
+        "twitter": 69300
+      },
+      "image_url": "https://i1.feedspot.com/4511934.jpg?t=1612884219"
+    },
+    {
+      "title": "Small Biz Survival",
+      "feed_url": "https://smallbizsurvival.com/feed",
+      "website_url": "https://smallbizsurvival.com/",
+      "description": "Founded by Becky McCray, this is the rural small business blog. We talk about small-town business, with how-to articles, an emphasis on social media marketing, and a weekly chance to share your good news in our Brag Basket. We've been at it since January 14, 2006.",
+      "followers": {
+        "twitter": 22500
+      },
+      "image_url": "https://i1.feedspot.com/5004549.jpg?t=1650361020"
+    },
+    {
+      "title": "United Capital Source Blog",
+      "feed_url": "https://www.unitedcapitalsource.com/feed/",
+      "website_url": "https://www.unitedcapitalsource.com/blog/",
+      "description": "Jared Weitz has been in the financial services industry for more than 10 years. Due to his extensive work experience and deep network of close relationships, he handles a multitude of different finance options for all his clients and contacts. Over the years, he has held positions in some of the largest business financing companies in the U.S.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 4300,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4752682.jpg?t=1599485942"
+    },
+    {
+      "title": "The Business of Fashion",
+      "feed_url": "https://www.businessoffashion.com/arc/outboundfeeds/rss/?outputType=xml",
+      "website_url": "https://www.businessoffashion.com/",
+      "description": "Fashion news, analysis and advice from the leading digital authority on the global fashion industry. The Business of Fashion is recognised around the world for its authoritative, analytical point of view on the $2.5 trillion global fashion industry. Our mission is simple: build fashion's global membership community to open, inform and connect the industry.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/5360895.jpg?t=1657538538"
+    },
+    {
+      "title": "Fascinating Entrepreneurs",
+      "feed_url": "https://briansolis.com/category/articles/feed/",
+      "website_url": "https://briansolis.com/category/articles/",
+      "description": "Getting to the bottom of why entrepreneurs choose to do what they do, how they do it, and how they view and approach profitability.How do people end up becoming an Entrepreneur? How do they scale and grow their businesses? How do they plan for profit? Are they in it for life or are they building to exit? These and a myriad of other topics will be discussed to pull back the veil on the wizardry of successful and fascinating entrepreneurs. Listen to this podcast if you want to learn how to scale and grow your business, build a team, and increase your bottom line.",
+      "followers": {
+        "facebook": 60500,
+        "twitter": 271300,
+        "instagram": 64500
+      },
+      "image_url": "https://i1.feedspot.com/4723575.jpg?t=1745431002"
+    },
+    {
+      "title": "Jeffbullas",
+      "feed_url": "https://www.jeffbullas.com/feed/",
+      "website_url": "https://www.jeffbullas.com/",
+      "description": "Helping business and personal brands with digital marketing including social media with Blogs, Twitter, Facebook, LinkedIn, YouTube and Search Engine Optimization. Our goal 'To optimize your brand in a digital world'. Jeffbullas is a consulting, new media and web services company.",
+      "followers": {
+        "facebook": 274500,
+        "twitter": 539400,
+        "instagram": 16800
+      },
+      "image_url": "https://i1.feedspot.com/43380.jpg?t=1599540747"
+    },
+    {
+      "title": "Mettis Global News",
+      "feed_url": "https://mettisglobal.news/feed/",
+      "website_url": "https://mettisglobal.news/",
+      "description": "Mettis Global is a Financial Information company which provides Market Data, Data Solutions and Analytics to Corporate Treasuries, Financial Institutions and other Market Participants.",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/5040230.jpg?t=1599485758"
+    },
+    {
+      "title": "Google Small Business Blog",
+      "feed_url": "https://blog.google/outreach-initiatives/small-business/rss/",
+      "website_url": "https://blog.google/outreach-initiatives/small-business/",
+      "description": "Discover how Google helps small businesses succeed online and grow in the real world. Learn about Google's initiatives and products that support small businesses. Google's mission is to organize the world's information and make it universally accessible and useful.",
+      "followers": {
+        "facebook": 35700000,
+        "twitter": 32799999,
+        "instagram": 15700000
+      },
+      "image_url": "https://i1.feedspot.com/5420576.jpg?t=1657539344"
+    },
+    {
+      "title": "Evergreen Small Business",
+      "feed_url": "https://evergreensmallbusiness.com/feed/",
+      "website_url": "https://evergreensmallbusiness.com/",
+      "description": "Evergreen Small Business provides practical business and tax advice from small business CPAs",
+      "followers": {
+        "twitter": 711
+      },
+      "image_url": "https://i1.feedspot.com/4753143.jpg?t=1599485717"
+    },
+    {
+      "title": "Young Upstarts",
+      "feed_url": "https://www.youngupstarts.com/feed/",
+      "website_url": "https://www.youngupstarts.com/",
+      "description": "All about entrepreneurship, intrapreneurship, ideas, innovation, and small business. Young Upstarts is an exciting opportunity that supports young people aged 16-24 to set up their own small businesses. We dare young people to believe they can be successful entrepreneurs. We encourage them to turn their thoughts into a working business idea.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/122627.jpg?t=1640588041"
+    },
+    {
+      "title": "Food Business News",
+      "feed_url": "https://www.foodbusinessnews.net/rss/articles",
+      "website_url": "https://www.foodbusinessnews.net/",
+      "description": "Food Business News is the leading media platform covering all aspects of the food and beverage industry. It is a publication of Sosland Publishing Company, a B2B trade publishing company focused on producing and delivering indispensable content for the food and beverage industries it serves.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 9600,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5035691.jpg?t=1627637520"
+    },
+    {
+      "title": "The Great Game of Business Blog",
+      "feed_url": "https://www.greatgame.com/blog/rss.xml",
+      "website_url": "https://www.greatgame.com/blog",
+      "description": "The Great Game of Business strives to help companies of any type unleash the entrepreneur inside every employee in their organization.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 1700,
+        "instagram": 912
+      },
+      "image_url": "https://i1.feedspot.com/4753183.jpg?t=1599485954"
+    },
+    {
+      "title": "CorpNet Blog",
+      "feed_url": "https://www.corpnet.com/feed/",
+      "website_url": "https://www.corpnet.com/blog/",
+      "description": "The Smartest Way to Start and Maintain Your Business! CorpNet provides business filing services required for a variety of business needs such as forming a Corporation or Limited Liability Company.",
+      "followers": {
+        "facebook": 45400,
+        "twitter": 5900,
+        "instagram": 6100
+      },
+      "image_url": "https://i1.feedspot.com/4752598.jpg?t=1599485203"
+    },
+    {
+      "title": "Talking Biz News",
+      "feed_url": "http://talkingbiznews.com/feed/",
+      "website_url": "https://talkingbiznews.com/",
+      "description": "Talking Biz News was created to foster discussion about the field of business journalism, and we realize that many people are passionate about the subject. Posts can include factual information and opinion as well as rumors.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 13600
+      },
+      "image_url": "https://i1.feedspot.com/4752585.jpg?t=1599485302"
+    },
+    {
+      "title": "MoreThanDigital",
+      "feed_url": "https://morethandigital.info/en/feed/",
+      "website_url": "https://morethandigital.info/en/",
+      "description": "Free industry and expert knowledge on digital, innovation, technologies and trends in business and society. MoreThanDigital.info is initiated by the founder Benjamin Talin, which tries to give everyone access to knowledge about the topics of the future. MoreThanDigital is also working on highly scalable solutions to help companies and inviduals with newest technologies and services. Goal is to help everyone deal with challenges imposed by new technologies, digitalization, innovation, changing business world and other dynamics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/fsppublisher/7002507/page/5449354/logo_1664266199.png"
+    },
+    {
+      "title": "web3 with a16z crypto",
+      "feed_url": "https://theenneagraminbusiness.com/feed/",
+      "website_url": "https://theenneagraminbusiness.com/blog/",
+      "description": "'web3 with a16z' is a show about the next generation of the internet, and about how builders and users -- whether artists, coders, creators, developers, companies, organizations, or communities -- now have the ability to not just 'read' (web1) + 'write' (web2) but 'own' (web3) pieces of the internet, unlocking a new wave of creativity and entrepreneurship. Brought to you by a16z crypto, this show is the definitive resource for understanding and going deeper on all things crypto and web3...",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 1600,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5087748.jpg?t=1745505020"
+    },
+    {
+      "title": "Bluewire Media Blog",
+      "feed_url": "https://www.bluewiremedia.com.au/blog/feed",
+      "website_url": "https://www.bluewiremedia.com.au/blog",
+      "description": "Bluewire Media helps digital marketing consultants and trust based-service professional get more qualified lead by providing the tools and templates to help grow their business. If you've got a weakness in digital marketing, we are here to help. We can then teach you how to build your business into multi-six-figure marketing consultancy.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 5300,
+        "instagram": 646
+      },
+      "image_url": "https://i1.feedspot.com/4752484.jpg?t=1599485264"
+    },
+    {
+      "title": "Academy of International Business",
+      "feed_url": "https://www.aib.world/feed/",
+      "website_url": "https://www.aib.world/",
+      "description": "The AIB Insights blog is a scholarly platform dedicated to exploring the multifaceted world of international business. AIB is home to international business scholars worldwide, connecting us across geographic, disciplinary, social, and cultural boundaries.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5379617.jpg?t=1646906852"
+    },
+    {
+      "title": "Steve Biz Blog",
+      "feed_url": "https://stevebizblog.com/feed/",
+      "website_url": "https://stevebizblog.com/blog/",
+      "description": "At SteveBizBlog, we understand what lifestyle and side hustle entrepreneurs need and we are dedicated to providing a regular diet of digestible business advice and resources for lifestyle and side hustle entrepreneurs looking to start and grow their own business.",
+      "followers": {
+        "facebook": 220,
+        "twitter": 1400,
+        "instagram": 913
+      },
+      "image_url": "https://i1.feedspot.com/5392260.jpg?t=1650367235"
+    },
+    {
+      "title": "The Global Small Business Blog",
+      "feed_url": "https://www.globalsmallbusinessblog.com/feeds/posts/default",
+      "website_url": "https://www.globalsmallbusinessblog.com/",
+      "description": "The Global Small Business Blog was founded on July 20, 2004, by Laurel Delaney for the purpose of helping entrepreneurs and small businesses expand their businesses internationally. It is ranked No. 1 in the world for entrepreneurs and small businesses interested in going global.",
+      "followers": {
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/3455658.jpg?t=1599486063"
+    },
+    {
+      "title": "IdeasPlusBusiness",
+      "feed_url": "https://ideasplusbusiness.com/feed/",
+      "website_url": "https://ideasplusbusiness.com/",
+      "description": "Covers media and business resources for startups and entrepreneurs. Some of the topics and themes covered on the blog are business ideas, marketing, technology, finance, cryptocurrency, jobs, and career. Founded by Adeyemi Adetilewa, a Digital Marketing Consultant, and Entrepreneur.",
+      "followers": {
+        "facebook": 8900,
+        "twitter": 7700
+      },
+      "image_url": "https://i1.feedspot.com/5360131.jpg?t=1641378785"
+    },
+    {
+      "title": "Melinda Emerson Blog",
+      "feed_url": "https://succeedasyourownboss.com/feed/",
+      "website_url": "https://succeedasyourownboss.com/blog/",
+      "description": "Melinda is the founder of Small Biz Chat, a Forbes woman to watch, and author of How to Become Your Own Boss. She is recognized as a Social Media Expert as well as a Small Business Resource.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 269100,
+        "instagram": 27000
+      },
+      "image_url": "https://i1.feedspot.com/4754483.jpg?t=1599485295"
+    },
+    {
+      "title": "Bizmaa Blog",
+      "feed_url": "https://bizmaa.com/feed/",
+      "website_url": "https://bizmaa.com/category/tie-business/",
+      "description": "Jaylin is a Blogger and Staff Writer for Bizmaa focusing on business analytics, business systems, gadgets, and other small business news.",
+      "followers": {
+        "facebook": 597
+      },
+      "image_url": "https://i1.feedspot.com/5081325.jpg?t=1599485728"
+    },
+    {
+      "title": "MCDACCG Blog",
+      "feed_url": "https://www.mcdaccginc.com/blog-feed.xml",
+      "website_url": "https://www.mcdaccginc.com/blog",
+      "description": "At MCDA CCG, we provide a full suite of business solutions and consulting services tailored to your specific needs. Whether you're a startup looking to scale or an established company seeking innovative strategies, our experienced team is dedicated to driving your business growth and success.",
+      "followers": {
+        "facebook": 61,
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/2733806/page/4998120/logo_1743191322.jpg"
+    },
+    {
+      "title": "The Joy Of Business Blog",
+      "feed_url": "https://www.thejoyofbusiness.co.uk/feed/",
+      "website_url": "https://www.thejoyofbusiness.co.uk/blog/",
+      "description": "The Joy Of Business helps small businesses grow into bigger businesses through advice on strategy, marketing, and finance, operated by Julia Chanteray. She works with people like on your initial idea, the strategy to make a successful business, and the tactics you need to get more customers, managing your business effectively. Walk through her blog and learn more about services, articles, products, and more.",
+      "followers": {
+        "facebook": 142,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4754489.jpg?t=1696488713"
+    },
+    {
+      "title": "The Corporate Social Responsibility and Business Ethics Blog",
+      "feed_url": "https://corporatesocialresponsibilityblog.com/feed/",
+      "website_url": "https://corporatesocialresponsibilityblog.com/",
+      "description": "The Corporate Social Responsibility and Business Ethics Blog is devoted to promoting analysis and discussion of corporate social responsibility and business ethics issues around the world. This blog focus on topics such as Law, Business, Social Science, and Policy.",
+      "followers": {
+        "twitter": 394
+      },
+      "image_url": "https://i1.feedspot.com/4997894.jpg?t=1643439485"
+    },
+    {
+      "title": "Bloomberg Blog",
+      "feed_url": "https://www.bloomberg.com/professional/feed/",
+      "website_url": "https://www.bloomberg.com/professional/blog/",
+      "description": "Gain unique insights through our blog. Bloomberg Professional Services quickly and accurately deliver business and financial information, news and insights. Bloomberg Professional Services give decision makers access to a network of information, people and ideas - all built on cutting-edge technology and best-in-class data.",
+      "followers": {
+        "facebook": 138300,
+        "twitter": 141300,
+        "instagram": 709300
+      },
+      "image_url": "https://i1.feedspot.com/5420570.jpg?t=1657536032"
+    },
+    {
+      "title": "Clic Blog",
+      "feed_url": "https://clichq.com/feed/",
+      "website_url": "https://clichq.com/blog/",
+      "description": "We're a team of tech-savvy, modern accountants, bookkeepers, and business growth specialists who are here for one reason: to make life easier for you, the small business owners of the UK.",
+      "followers": {
+        "facebook": 152,
+        "twitter": 134,
+        "instagram": 887
+      },
+      "image_url": "https://i1.feedspot.com/5392169.jpg?t=1650351679"
+    },
+    {
+      "title": "Thinking Business Blog",
+      "feed_url": "http://www.thinkingbusinessblog.com/feed/",
+      "website_url": "https://www.thinkingbusinessblog.com/",
+      "description": "David Taylor is the founder of Thinking Business and Thinking Business Blog.com. I have worked in multiple roles in various businesses since graduating from the University of Alberta with an electrical engineering degree in 1989. I share the experience I have gained over the years through my writing and through mentoring other business leaders.",
+      "followers": {
+        "instagram": 915
+      },
+      "image_url": "https://i1.feedspot.com/4753153.jpg?t=1599486512"
+    },
+    {
+      "title": "G2 Blog",
+      "feed_url": "https://learn.g2.com/rss.xml",
+      "website_url": "https://learn.g2.com/",
+      "description": "G2's Learning Hub is for marketing, sales, management, HR, technology, software, and all business topics.",
+      "followers": {
+        "facebook": 20200,
+        "twitter": 33300,
+        "instagram": 6500
+      },
+      "image_url": "https://i1.feedspot.com/4997577.jpg?t=1599485281"
+    },
+    {
+      "title": "BusinessBlogs Hub",
+      "feed_url": "https://www.businessblogshub.com/feed/",
+      "website_url": "https://www.businessblogshub.com/",
+      "description": "BusinessBlogs Hub is the home of business bloggers from around the world. Our core topics are marketing and selling, management, insurance, funding, and technology now include a few more.",
+      "followers": {
+        "facebook": 18000,
+        "twitter": 23800,
+        "instagram": 144
+      },
+      "image_url": "https://i1.feedspot.com/548056.jpg?t=1650362346"
+    },
+    {
+      "title": "Business Insider",
+      "feed_url": "https://feeds.businessinsider.com/custom/all",
+      "website_url": "https://www.businessinsider.com/",
+      "description": "All latest articles from Business Insider.",
+      "followers": {
+        "facebook": 15100000,
+        "twitter": 4099999,
+        "instagram": 4900000
+      },
+      "image_url": "https://i1.feedspot.com/5396971.jpg?t=1758095885"
+    },
+    {
+      "title": "Elisabet Lagerstedt Blog",
+      "feed_url": "https://elisabetlagerstedt.com/feed/",
+      "website_url": "https://elisabetlagerstedt.com/blog/",
+      "description": "Elisabet Lagerstedt is a blogger, entrepreneur, researcher, and the author of two books. She helps business leaders go beyond business as usual to accelerate Better Business and co-create a better future.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5525882.jpg?t=1679571076"
+    },
+    {
+      "title": "Guardian Live Business Blog",
+      "feed_url": "https://www.theguardian.com/business/series/guardian-business-live/rss",
+      "website_url": "https://www.theguardian.com/business/series/guardian-business-live",
+      "description": "On our blog we provide live news coverage of the latest events in global financial markets, the economy and major corporate moves, with instant reaction and analysis from our own team of reporters and experts around the world.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/5420573.jpg?t=1657539478"
+    },
+    {
+      "title": "Blog",
+      "feed_url": "https://www.keepyourdreamalive.org/blog-feed.xml",
+      "website_url": "https://www.keepyourdreamalive.org/blog",
+      "description": "Kyda is a gathering place of knowledge where people from all over the world can learn what they need to know to boost success in business and their finances. It is NOT a motivation or feel-good program. Instead, we provide you here with guides, how-tos, and clear actions to take. Our focus lies on improving finances, becoming better at sales & marketing, and building your own business.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7285323.jpg?t=1711627279"
+    },
+    {
+      "title": "Small Business Bonfire",
+      "feed_url": "https://smallbusinessbonfire.com/feed/",
+      "website_url": "https://smallbusinessbonfire.com/",
+      "description": "Covers topics such as marketing, money, productivity, technology, working from home, social media, content marketing, startup and more. The Small Business Bonfire is a collaborative community for entrepreneurs that provides actionable business resources, tips and tools you can use immediately to help your small business succeed.",
+      "followers": {
+        "facebook": 11100,
+        "twitter": 23700,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4526635.jpg?t=1599485197"
+    },
+    {
+      "title": "Side Hustle Nation Blog",
+      "feed_url": "https://www.sidehustlenation.com/feed/",
+      "website_url": "https://www.sidehustlenation.com/blog/",
+      "description": "The web's leading blog, podcast, and community for aspiring and part-time entrepreneurs building meaningful income on their own terms. Explore legit ways to make money outside of your day job, build a business you love, and escape the rat race. Side Hustle Nation is the #1 community and resource for side hustle ideas and part-time entrepreneurs on the path to financial independence.",
+      "followers": {
+        "facebook": 36200,
+        "twitter": 22200,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/3767818.jpg?t=1648184094"
+    },
+    {
+      "title": "The Business Goals",
+      "feed_url": "https://feeds.feedburner.com/thebusinessgoals",
+      "website_url": "https://thebusinessgoals.com/",
+      "description": "The Business Goals helps the business community in achieving their business goals and objectives by providing the authentic and latest business tips, ideas, news, and trends. The Business Goals help entrepreneurs, startups, and the people who want to make money online or make money from home by adopting legitimate ways.",
+      "followers": {
+        "facebook": 476,
+        "twitter": 26
+      },
+      "image_url": "https://i1.feedspot.com/5175886.jpg?t=1599540764"
+    },
+    {
+      "title": "Business Chicks Blog",
+      "feed_url": "https://businesschicks.com/blog?format=rss",
+      "website_url": "https://businesschicks.com/blog",
+      "description": "At Business Chicks, we believe that every woman is capable of achieving amazing things. Despite our name, we're not only for women in 'business' or women who own their own businesses. Business Chicks is about helping all women play a bigger game. Whether you're running your own show, surrounded by others in an office, or just missing a sense of connection and support, Business Chicks is all about giving you the tools you need to propel yourself and your businesses forward.",
+      "followers": {
+        "facebook": 107600,
+        "twitter": 40700,
+        "instagram": 266800
+      },
+      "image_url": "https://i1.feedspot.com/5266867.jpg?t=1657537648"
+    },
+    {
+      "title": "Vettedopps",
+      "feed_url": "https://vettedopps.com/feed/",
+      "website_url": "https://vettedopps.com/",
+      "description": "This is a business review site. We have expanded to include small business guides on bitcoin, paid surveys, private label, and even a guide on how to get rich.",
+      "followers": {
+        "twitter": 39
+      },
+      "image_url": "https://i1.feedspot.com/4998116.jpg?t=1599486261"
+    },
+    {
+      "title": "Crowdspring Blog",
+      "feed_url": "https://www.crowdspring.com/blog/feed/",
+      "website_url": "https://www.crowdspring.com/blog/",
+      "description": "Crowdspring's blog about marketing, startups, small business, design and more.",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 12500,
+        "instagram": 564
+      },
+      "image_url": "https://i1.feedspot.com/4754607.jpg?t=1599312175"
+    },
+    {
+      "title": "Chris Ducker Blog",
+      "feed_url": "https://chrisducker.com/feed/",
+      "website_url": "https://chrisducker.com/blog",
+      "description": "Chris is a bestselling author, keynote speaker, serial entrepreneur, biz coach, blogger and podcaster! Chris Ducker helps entrepreneurs catapult their small business into the 21st century by utilizing 'New Business' marketing strategies such as blogging, online video, podcasting, outsourcing, social media, and more!",
+      "followers": {
+        "facebook": 24900,
+        "twitter": 49900,
+        "instagram": 35000
+      },
+      "image_url": "https://i1.feedspot.com/5270739.jpg?t=1618830233"
+    },
+    {
+      "title": "The Business Backer Blog",
+      "feed_url": "https://www.businessbacker.com/feed/",
+      "website_url": "https://www.businessbacker.com/blog/?utm_source=feedspot",
+      "description": "The Business Backer provides customized funding solutions and advice for small and medium-sized businesses. Our commitment to ethics and transparency in all aspects of our business has been recognized with awards such as the Better Business Bureau Torch Award for Marketplace Ethics and the U.S. Chamber of Commerce Blue Ribbon Small Business Award.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 935
+      },
+      "image_url": "https://i1.feedspot.com/4754593.jpg?t=1599486001"
+    },
+    {
+      "title": "Scranton SBDC Blog",
+      "feed_url": "https://www.scrantonsbdc.com/feed/",
+      "website_url": "https://www.scrantonsbdc.com/small-business-blog/",
+      "description": "The University of Scranton Small Business Development Center (SBDC) provides educational programs and no cost, confidential consulting services to entrepreneurs looking to start a small business or grow an existing small business. The University of Scranton has hosted the SBDC since 1980, providing outstanding resources, support, and funding.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 2900,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5392171.jpg?t=1650351689"
+    },
+    {
+      "title": "Small Business UK Blog",
+      "feed_url": "https://smallbusiness.co.uk/blog/feed/",
+      "website_url": "https://smallbusiness.co.uk/blog/",
+      "description": "SmallBusiness.co.uk provides expert resources, products and services for small business owners and start-ups. We offer free online advice in the form of news articles, guides, tips and features that can point you in the right direction to start and run your own small business.",
+      "followers": {
+        "facebook": 13600,
+        "twitter": 42400,
+        "instagram": 47000
+      },
+      "image_url": "https://i1.feedspot.com/4719081.jpg?t=1599485175"
+    },
+    {
+      "title": "Success Harbor",
+      "feed_url": "https://www.successharbor.com/feed/",
+      "website_url": "https://www.successharbor.com/",
+      "description": "Business blog for small business owners and entrepreneurs. Our mission is to help you succeed in business and in life. We want to share with you what we have learned about business and life since becoming entrepreneurs.",
+      "followers": {
+        "facebook": 783,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4752623.jpg?t=1599485288"
+    },
+    {
+      "title": "The Business Ethics Blog",
+      "feed_url": "https://businessethicsblog.com/feed/",
+      "website_url": "https://businessethicsblog.com/",
+      "description": "A blog about Business Ethics by Chris MacDonald, Ph.D. Chris is a writer, speaker, and consultant on ethics. A philosopher by training, he teaches at Ryerson University's Ted Rogers School of Management, and is a Nonresident Senior Fellow at Duke University's Kenan Institute for Ethics. He is co-editor of the Business Ethics Journal Review.",
+      "followers": {
+        "twitter": 7900
+      },
+      "image_url": "https://i1.feedspot.com/4442781.jpg?t=1657537901"
+    },
+    {
+      "title": "OnStrategy Blog",
+      "feed_url": "https://onstrategyhq.com/feed/",
+      "website_url": "https://onstrategyhq.com/resources/",
+      "description": "OnStrategy is a services and software company. Our mission is to believe strategic planning more than simply achieving business goals. We combine hands-on services with customized software to design great strategies and automate the process for managing execution that meets your needs and budget. Let's talk about how we can help you build and implement a great strategic plan.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5032842.jpg?t=1599485217"
+    },
+    {
+      "title": "Timo Elliott Blog \u00bb Cartoons",
+      "feed_url": "https://timoelliott.com/blog/feed",
+      "website_url": "https://timoelliott.com/blog/cartoons/",
+      "description": "Timo Elliott is an innovation evangelist and international conference speaker who has presented to business and IT audiences in over fifty countries around the world. His popular Business Analytics blog at timoelliott.com tracks innovation in analytics and social media, including topics such as big data, collaborative decision-making, and social analytics.",
+      "followers": {
+        "twitter": 23000
+      },
+      "image_url": "https://i1.feedspot.com/4754488.jpg?t=1599486058"
+    },
+    {
+      "title": "CraneMorley Blog",
+      "feed_url": "https://cranemorley.com/feed/",
+      "website_url": "https://cranemorley.com/blog-2/",
+      "description": "Information and thoughts from some of the greatest minds in the industry. CraneMorley provides award-winning curriculum development and training performance solutions for Automotive, Powersport, and Marine OEMs.",
+      "followers": {
+        "facebook": 1,
+        "twitter": 32
+      },
+      "image_url": "https://i1.feedspot.com/4982256.jpg?t=1599486966"
+    },
+    {
+      "title": "East Wind Solutions Blog",
+      "feed_url": "https://eastwindinc.ca/feed/",
+      "website_url": "https://eastwindinc.ca/blog/",
+      "description": "As EastWind, Tim Fawcett helps guide business owners as they sell and transition out of their business and enter the next phase of their lives.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 37
+      },
+      "image_url": "https://i1.feedspot.com/4754588.jpg?t=1599486786"
+    },
+    {
+      "title": "Mark Schaefer Blog",
+      "feed_url": "https://feeds.feedburner.com/markgrow",
+      "website_url": "https://businessesgrow.com/blog/",
+      "description": "Mark Schaefer is a globally recognized keynote speaker, educator, business consultant, and author. His blog {grow} is hailed as one of the top marketing blogs in the world. Mark has worked in global sales, PR, and marketing positions for more than 30 years and provides consulting services as Executive Director of Schaefer Marketing Solutions. Subscribe to this feed to receive Mark Schaefer's forward-thinking posts to your inbox every week. There is no better way to keep pace with the fast-changing world of digital marketing strategy.",
+      "followers": {
+        "twitter": 161300,
+        "instagram": 8300
+      },
+      "image_url": "https://i1.feedspot.com/4735526.jpg?t=1618825607"
+    },
+    {
+      "title": "Derek Cheshire Blog",
+      "feed_url": "https://www.derekcheshire.com/feed/",
+      "website_url": "https://www.derekcheshire.com/creativity-innovation-blog/",
+      "description": "Creativity and innovation blog articles published by Derek Cheshire. These include regular articles, newsletters, video snippets and audio podcasts. Derek Cheshire has championed creativity as a serious business tool to allow organisations of all sizes to realise their full potential, create the products and services that their customers want, and ultimately improve their bottom line.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4754580.jpg?t=1599487014"
+    },
+    {
+      "title": "Kuza Blog",
+      "feed_url": "http://www.kuzabiashara.co.ke/blog/feed/",
+      "website_url": "http://www.kuzabiashara.co.ke/blog/",
+      "description": "Kuza Biashara is a free platform where micro, small and medium entrepreneurs come to learn, connect and grow. Microentrepreneurs can learn about starting a business, financing small business enterprises, get best small business ideas, access SME videos and more for free.",
+      "followers": {
+        "facebook": 817900,
+        "twitter": 17300
+      },
+      "image_url": "https://i1.feedspot.com/4753163.jpg?t=1599485971"
+    },
+    {
+      "title": "Naomi Simson Blog",
+      "feed_url": "https://naomisimson.com/feed/",
+      "website_url": "https://naomisimson.com/blog/",
+      "description": "I'm Naomi. I am an Australian entrepreneur, blogger, speaker, founder of RedBalloon, and co-founder of Big Red Group. I started my entrepreneurial journey with RedBalloon in 2001 from my front room with just $25,000 and a second-hand computer. Redballoon.com.au is now considered one of Australia's online business success stories and has proudly served more than 3.6 million customers. Follow my blog feed for a founder's journey; leadership laughs & learning.",
+      "followers": {
+        "facebook": 85100,
+        "twitter": 32200,
+        "instagram": 25800
+      },
+      "image_url": "https://i1.feedspot.com/4751647.jpg?t=1599312130"
+    },
+    {
+      "title": "Headway Capital Blog",
+      "feed_url": "https://www.headwaycapital.com/blog/feed/",
+      "website_url": "https://www.headwaycapital.com/blog/",
+      "description": "At Headway Capital, our mission is to provide access to the credit you need to run your business, and give you the flexibility to draw money again whenever you need to",
+      "followers": {
+        "facebook": 9000,
+        "twitter": 782
+      },
+      "image_url": "https://i1.feedspot.com/4526653.jpg?t=1599485766"
+    },
+    {
+      "title": "Forbes \u00bb Business",
+      "feed_url": "https://www.forbes.com/business/feed/",
+      "website_url": "https://www.forbes.com/business/",
+      "description": "Forbes is a leading source for reliable news and updated analysis on Business. Read the breaking Business coverage and top headlines on Forbes.com",
+      "followers": {
+        "facebook": 8000000,
+        "twitter": 20700000,
+        "instagram": 7400000
+      },
+      "image_url": "https://i1.feedspot.com/5258449.jpg?t=1615976750"
+    },
+    {
+      "title": "Dynamic Business",
+      "feed_url": "https://dynamicbusiness.com.au/feed",
+      "website_url": "https://dynamicbusiness.com.au/",
+      "description": "Dynamic Business is Australia's best-loved small business resource dedicated to providing entrepreneurs, start-ups and business owners with the very latest information and advice on how to start, manage and grow a business.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 19900,
+        "instagram": 585
+      },
+      "image_url": "https://i1.feedspot.com/2356284.jpg?t=1599485612"
+    },
+    {
+      "title": "The GoDaddy Blog",
+      "feed_url": "https://www.godaddy.com/resources/feed",
+      "website_url": "https://www.godaddy.com/resources",
+      "description": "The GoDaddy Blog offers in-depth articles about websites, domains, hosting, online marketing, WordPress and more.GoDaddy is the world's largest services platform for entrepreneurs around the globe that empowers our worldwide community of 20+ million customers and entrepreneurs everywhere by giving them all the help and tools they need to grow online.",
+      "followers": {
+        "facebook": 2200000,
+        "twitter": 282200,
+        "instagram": 278700
+      },
+      "image_url": "https://i1.feedspot.com/4526289.jpg?t=1599312706"
+    },
+    {
+      "title": "Microsoft in Business Blogs",
+      "feed_url": "https://www.microsoft.com/en-us/industry/microsoft-in-business/feed/",
+      "website_url": "https://www.microsoft.com/en-us/industry/microsoft-in-business/",
+      "description": "Visit the Microsoft in Business Blog for success stories, actionable insights, business leader interviews, and event announcements. Microsoft is committed to helping every person and every organization on the planet achieve more. Through Microsoft in Business, we connect today's business leaders with the ideas, insights, and information they need to transform enterprises for the digital age and beyond.",
+      "followers": {
+        "facebook": 436600,
+        "twitter": 204700
+      },
+      "image_url": "https://i1.feedspot.com/5420578.jpg?t=1657539546"
+    },
+    {
+      "title": "The Smart Passive Income Blog",
+      "feed_url": "https://feeds.feedburner.com/smartpassiveincome",
+      "website_url": "https://www.smartpassiveincome.com/blog/",
+      "description": "Smart Passive Income is a resource run by me, Pat Flynn, to teach you proven strategies for running an online business and optimizing it for passive income. Passive income is money, made by your business, that does not require a lot of ongoing, manual effort from you. Follow this blog if you'd like to learn more about any particular topic about doing business online.",
+      "followers": {
+        "facebook": 182700,
+        "twitter": 168500,
+        "instagram": 122700
+      },
+      "image_url": "https://i1.feedspot.com/4751707.jpg?t=1599312797"
+    },
+    {
+      "title": "Homebase Blog",
+      "feed_url": "https://www.joinhomebase.com/feed",
+      "website_url": "https://www.joinhomebase.com/blog",
+      "description": "We believe that every business should be able to move their employee schedules off of paper. We've built the best scheduling and time clock tools to help you handle the basics of running your business for free. We will continue to release new tools and services for businesses that would like to do more.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 1700,
+        "instagram": 8300
+      },
+      "image_url": "https://i1.feedspot.com/4753169.jpg?t=1613038210"
+    },
+    {
+      "title": "ZenBusiness Blog",
+      "feed_url": "https://www.zenbusiness.com/feed/",
+      "website_url": "https://www.zenbusiness.com/blog/",
+      "description": "ZenBusiness Blog is a platform founded in 2015 with a mission to help small businesses start, run, and grow. Looking for the best free small business resources available? We've got you covered. Check out new topics discussed weekly and stay tuned to for more!",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 1600,
+        "instagram": 80300
+      },
+      "image_url": "https://i1.feedspot.com/5400967.jpg?t=1652773031"
+    },
+    {
+      "title": "fassforward",
+      "feed_url": "https://www.fassforward.com/our-thinking",
+      "website_url": "https://www.fassforward.com/our-thinking",
+      "description": "A consulting company focusing on experienced business coaching, practical, simple, and engaging training, creative, strategic, and unique consulting and highly memorable, visually arresting creativity located in Pelham, New York.",
+      "followers": {
+        "twitter": 674
+      },
+      "image_url": "https://i1.feedspot.com/5197612.jpg?t=1600433623"
+    },
+    {
+      "title": "Nextiva Blog",
+      "feed_url": "https://www.nextiva.com/blog/feed",
+      "website_url": "https://www.nextiva.com/blog/",
+      "description": "Nextiva provides innovative communication solutions to strengthen customer relationships. They aim to simplify business operations and increase profitability with competitive products and services. The Nextiva Blog offers valuable insights into VoIP, business communications, and customer experience.",
+      "followers": {
+        "facebook": 116100,
+        "twitter": 21700
+      },
+      "image_url": "https://i1.feedspot.com/4752400.jpg?t=1599312868"
+    },
+    {
+      "title": "Upmetrics Blog",
+      "feed_url": "https://upmetrics.co/blog/rss.xml",
+      "website_url": "https://upmetrics.co/blog",
+      "description": "Upmetrics blog provides hand-curated tips and advice to help entrepreneurs with every aspect of planning a business. Upmetrics is a popular business plan software, which makes it a lot easier for entrepreneurs to write their business plans, forecast their financials, and prepare pitch decks with ease.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 153
+      },
+      "image_url": "https://i1.feedspot.com/5408510.jpg?t=1654680192"
+    },
+    {
+      "title": "Foley Hoag News \u00bb Global Business and Human Rights",
+      "feed_url": "https://www.globalbusinessandhumanrights.com/feed/",
+      "website_url": "https://www.markaaz.com/blog",
+      "description": "Foley Hoag's Global Business and Human Rights practice provide counsel to multinational companies, governments, and multilateral institutions regarding social, political, and environmental challenges. Here, at Global Business And Human Rights, we want to inform, update, comment, and discuss.",
+      "followers": {
+        "facebook": 944,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5379650.jpg?t=1646907349"
+    },
+    {
+      "title": "Markaaz Blog",
+      "feed_url": "https://www.markaaz.com/feed",
+      "website_url": "https://www.markaaz.com/blog",
+      "description": "Read the latest small business trends, community updates, and product news. At Markaaz, our goal is to simplify your business processes so you can get back to what really matters: why you got into business in the first place. We help small business owners find trusted suppliers instantly, monitor them on the spot, and improve cash flow.",
+      "followers": {
+        "facebook": 294,
+        "twitter": 158,
+        "instagram": 92
+      },
+      "image_url": "https://i1.feedspot.com/5392167.jpg?t=1650351667"
+    },
+    {
+      "title": "Sklar Wilton Blog",
+      "feed_url": "https://www.sklarwilton.com/blog/feed",
+      "website_url": "https://www.sklarwilton.com/blog",
+      "description": "At Sklar Wilton & Associates we fuse marketing and market research with strategic facilitation and innovation to yield clarity, action and positive ROI.",
+      "followers": {
+        "facebook": 255,
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/4998111.jpg?t=1600334549"
+    },
+    {
+      "title": "NPR's Business Story of the Day",
+      "feed_url": "https://feeds.npr.org/1095/podcast.xml",
+      "website_url": "https://www.npr.org/sections/business-story-of-the-day/",
+      "description": "Business Story of the Day podcast provides you with NPR's top stories about business, money, Wall Street, companies and the economy that you can't miss.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/4956534.jpg?t=1623823097"
+    },
+    {
+      "title": "Biz Latin Hub News",
+      "feed_url": "https://www.bizlatinhub.com/feed/",
+      "website_url": "https://www.bizlatinhub.com/news-business-latam/",
+      "description": "Biz Latin Hub is a place for business owners, entrepreneurs and professionals within Latin America to keep up-to-date on new business ideas and ventures. Keep up to date with the local business and regulatory environment. Market updates including business news, company formation, back office, accounting, taxation, legal, visas, international PEO, recruitment, headhunting, banking and due diligence.",
+      "followers": {
+        "facebook": 7300,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5050848.jpg?t=1599485191"
+    }
+  ]
+}

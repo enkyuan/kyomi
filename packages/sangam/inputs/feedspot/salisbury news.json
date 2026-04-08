@@ -1,0 +1,51 @@
+{
+  "category": "Salisbury News",
+  "source_url": "https://rss.feedspot.com/salisbury_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Salisbury News",
+      "feed_url": "https://sbynews.com/feed/",
+      "website_url": "https://sbynews.com/",
+      "description": "DelMarVa's Premier Source for News, Opinion, and Analysis, and Human Interest.",
+      "followers": {
+        "facebook": 9700
+      },
+      "image_url": "https://i1.feedspot.com/5143181.jpg?t=1587726987"
+    },
+    {
+      "title": "WMDT 47 ABC",
+      "feed_url": "https://www.wmdt.com/feed/",
+      "website_url": "https://www.wmdt.com/",
+      "description": "WMDT (47ABC) went on the air in April 1980 and has been the ABC and CW affiliate (formerly The WB) since then. Get your news from the team at 47 ABC - Because Local Matters!",
+      "followers": {
+        "facebook": 55000,
+        "twitter": 14900,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5143184.jpg?t=1587727751"
+    },
+    {
+      "title": "Bay to Bay News \u00bb Salisbury",
+      "feed_url": "https://baytobaynews.com/salisbury/",
+      "website_url": "https://baytobaynews.com/salisbury/",
+      "description": "The Salisbury Independent serves the city and the surrounding community of Wicomico County by providing real coverage of the area's schools, churches, civic clubs and organizations.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5143185.jpg"
+    },
+    {
+      "title": "Delmarva Now",
+      "feed_url": "https://www.delmarvanow.com/",
+      "website_url": "https://www.delmarvanow.com/",
+      "description": "Delmarva Now focuses on in-depth and breaking news, sports, things to do at the beach and features on Delmarva, including Salisbury Maryland, Ocean City Maryland, Delaware beaches and the Eastern Shore of Virginia.",
+      "followers": {
+        "facebook": 55100,
+        "twitter": 12800,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5143180.jpg?t=1675170958"
+    }
+  ]
+}

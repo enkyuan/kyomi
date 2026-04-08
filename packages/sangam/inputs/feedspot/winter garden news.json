@@ -1,0 +1,26 @@
+{
+  "category": "Winter Garden News",
+  "source_url": "https://rss.feedspot.com/winter_garden_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Winter Garden, FL",
+      "feed_url": "https://www.cwgdn.com/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.cwgdn.com/CivicAlerts.aspx?sort=date",
+      "description": "Winter Garden, FL is dedicated to keeping residents informed and up-to-date by providing the latest news about sports, business, performing arts, health/safety issues, human interest and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5157605.jpg"
+    },
+    {
+      "title": "Orange Observer",
+      "feed_url": "https://www.orangeobserver.com/",
+      "website_url": "https://www.orangeobserver.com/",
+      "description": "Orange Observer News is the digital publication for the West Orange Times & Observer and the Windermere Observer. The Observer are hyperlocal community newspapers that specialize in reporting neighborhood news and events in West Orange County and Winter Garden city.",
+      "followers": {
+        "facebook": 1,
+        "twitter": 2500,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5157405.jpg?t=1590838896"
+    }
+  ]
+}

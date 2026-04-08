@@ -1,0 +1,37 @@
+{
+  "category": "Jefferson City News",
+  "source_url": "https://rss.feedspot.com/jefferson_city_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "ABC 17 News \u00bb Jefferson City",
+      "feed_url": "https://abc17news.com/category/news/jefferson-city/feed/",
+      "website_url": "https://abc17news.com/category/news/jefferson-city/",
+      "description": "Mid-Missouri's source for breaking news, weather & sports.",
+      "followers": {
+        "twitter": 25700
+      },
+      "image_url": "https://i1.feedspot.com/5155577.jpg"
+    },
+    {
+      "title": "KOMU 8",
+      "feed_url": "https://www.komu.com/search/?f=rss",
+      "website_url": "https://www.komu.com/news/",
+      "description": "KOMU8 is mid-Missouri's news leader. Your home for Breaking and local news, sports News and weather news in and around Columbia and Jefferson City.",
+      "followers": {
+        "twitter": 64800
+      },
+      "image_url": "https://i1.feedspot.com/5155579.jpg"
+    },
+    {
+      "title": "KWOS",
+      "feed_url": "https://kwos.com/category/local-news/feed/",
+      "website_url": "https://kwos.com/",
+      "description": "News, Talk, and Sports for Missouri's Capital City!",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5155575.jpg?t=1590135655"
+    }
+  ]
+}

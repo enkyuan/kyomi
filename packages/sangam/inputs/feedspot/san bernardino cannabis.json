@@ -1,0 +1,40 @@
+{
+  "category": "San Bernardino Cannabis",
+  "source_url": "https://rss.feedspot.com/san_bernardino_cannabis_rss_feeds",
+  "feeds": [
+    {
+      "title": "Strains Dispensary Blog",
+      "feed_url": "https://strainsusa.com/feed/",
+      "website_url": "https://strainsusa.com/blog/",
+      "description": "Strains Dispensary in Perris, CA, offer cannabis products whether that be flower, topicals, edibles, concentrates, or distillate pens. Educate yourself on cannabis strains, local laws, and everything in-between by reading our informative Strains Dispensary blog.",
+      "followers": {
+        "facebook": 993,
+        "twitter": 67
+      },
+      "image_url": "https://i1.feedspot.com/5572499.jpg?t=1684502499"
+    },
+    {
+      "title": "Sky Club Blog",
+      "feed_url": "https://skyclub.la/feed/",
+      "website_url": "https://skyclub.la/blog/",
+      "description": "Sky Club is a premier dispensary providing exceptional cannabis products and unparalleled customer service. We aim to create a unique and elevated cannabis experience for our customers by providing the finest and highest quality products. Our dedicated blog team guides you by answering any questions and making tailored recommendations.",
+      "followers": {
+        "facebook": 3,
+        "twitter": 102
+      },
+      "image_url": "https://i1.feedspot.com/5572501.jpg?t=1684502513"
+    },
+    {
+      "title": "Law Offices of Omar Figueroa Blog",
+      "feed_url": "https://www.omarfigueroa.com/feed/",
+      "website_url": "https://www.omarfigueroa.com/blog/",
+      "description": "The Law Offices of Omar Figueroa is a boutique California law firm focusing on cannabis law. We fight for justice and human rights and advocate passionately for our clients every step of the way. He blogs about laws affecting and pertaining to anything and everything related to cannabis.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 660,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5572502.jpg?t=1684502520"
+    }
+  ]
+}

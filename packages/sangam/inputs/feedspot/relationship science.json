@@ -1,0 +1,29 @@
+{
+  "category": "Relationship Science",
+  "source_url": "https://rss.feedspot.com/relationship_science_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Gottman Institute Blog",
+      "feed_url": "https://www.gottman.com/blog/feed/",
+      "website_url": "https://www.gottman.com/blog/",
+      "description": "Explore our resources and tools developed by Drs. John and Julie Gottman. Improve your relationship with science-backed advice from The Gottman Institute. We are committed to an ongoing program of research that increases the understanding of relationships and adds to the development of interventions that have been carefully evaluated.",
+      "followers": {
+        "facebook": 866900,
+        "twitter": 50500,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/4432125.jpg?t=1606714850"
+    },
+    {
+      "title": "ScienceDaily \u00bb Relationship News",
+      "feed_url": "https://www.sciencedaily.com/rss/mind_brain/relationships.xml",
+      "website_url": "https://www.sciencedaily.com/news/mind_brain/relationships/",
+      "description": "Research about healthy relationships. From friendships to love and marriage, explore articles on human interactions. ScienceDaily is your source for the latest research news.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 306500
+      },
+      "image_url": "https://i1.feedspot.com/3023107.jpg?t=1627551193"
+    }
+  ]
+}

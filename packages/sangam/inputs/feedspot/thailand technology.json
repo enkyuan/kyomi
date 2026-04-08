@@ -1,0 +1,72 @@
+{
+  "category": "Thailand Technology",
+  "source_url": "https://rss.feedspot.com/thailand_technology_rss_feeds",
+  "feeds": [
+    {
+      "title": "Thaiware.com",
+      "feed_url": "https://www.thaiware.com/rss/rss_latestPost_news.php",
+      "website_url": "https://news.thaiware.com/",
+      "description": "Thaiware.com is an IT website that has been in the Thai Internet industry for more than 20 years.",
+      "followers": {
+        "facebook": 154200,
+        "twitter": 8900
+      },
+      "image_url": "https://i1.feedspot.com/3364046.jpg?t=1638195412"
+    },
+    {
+      "title": "SiamPhone",
+      "feed_url": "https://news.siamphone.com/feed/",
+      "website_url": "https://www.siamphone.com/",
+      "description": "Siamphone was established in 2001. We are a provider of mobile and technology information. Whether it is the phone's information, tablet information, technology information, communication equipment, mobile news, assistive devices, accessories and more.",
+      "followers": {
+        "facebook": 849600,
+        "twitter": 38500
+      },
+      "image_url": "https://i1.feedspot.com/5347478.jpg?t=1638262121"
+    },
+    {
+      "title": "DroidSans",
+      "feed_url": "https://droidsans.com/feed/",
+      "website_url": "https://droidsans.com/",
+      "description": "The First Android Community in Thailand. Find news, reviews, technology tips, smartphones, gadgets, IoT articles that are fast and easy to understand.",
+      "followers": {
+        "facebook": 642800,
+        "twitter": 52200
+      },
+      "image_url": "https://i1.feedspot.com/5347477.jpg?t=1638262121"
+    },
+    {
+      "title": "Thailand Business News \u00bb Tech",
+      "feed_url": "https://www.thailand-business-news.com/top-news/tech/feed",
+      "website_url": "https://www.thailand-business-news.com/top-news/tech",
+      "description": "This section features articles on Tech. Thailand Business News is a comprehensive news service about Thailand with a business and financial perspective edited in Bangkok by Siam News Network.",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5347475.jpg?t=1638262120"
+    },
+    {
+      "title": "TechCrunch \u00bb Thailand",
+      "feed_url": "https://techcrunch.com/tag/thailand/feed/",
+      "website_url": "https://techcrunch.com/tag/thailand/",
+      "description": "TechCrunch, founded on June 11, 2005, is a blog dedicated to obsessively profiling and reviewing new Internet products and companies.",
+      "followers": {
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/5347474.jpg?t=1641196811"
+    },
+    {
+      "title": "TechXcite",
+      "feed_url": "https://techxcite.com/web/",
+      "website_url": "https://techxcite.com/web/",
+      "description": "A source of news, reviews, shopping, articles, etc. related to technology devices such as Notebooks, Digital Cameras, Mobile Phones, Smart iPhone, iPad, DSLR, Mac Android.",
+      "followers": {
+        "facebook": 174800,
+        "twitter": 9700
+      },
+      "image_url": "https://i1.feedspot.com/433316.jpg?t=1640157131"
+    }
+  ]
+}

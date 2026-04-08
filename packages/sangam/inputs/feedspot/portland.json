@@ -1,0 +1,717 @@
+{
+  "category": "Portland",
+  "source_url": "https://rss.feedspot.com/portland_rss_feeds",
+  "feeds": [
+    {
+      "title": "Portland Mercury",
+      "feed_url": "https://www.portlandmercury.com/portland/Rss.xml?section=22213/feed",
+      "website_url": "https://www.portlandmercury.com/",
+      "description": "Portland's Most Awesome Weekly Newspaper covering Portland news, politics, music, food & drink, comedy, cannabis, film, and arts; plus the most extensive movie times, club calendars, and blogs.",
+      "followers": {
+        "facebook": 63100,
+        "twitter": 109800,
+        "instagram": 83600
+      },
+      "image_url": "https://i1.feedspot.com/4827970.jpg?t=1610968347"
+    },
+    {
+      "title": "Portland Monthly \u00bb Eat & Drink",
+      "feed_url": "https://www.pdxmonthly.com/eat-and-drink/feed",
+      "website_url": "https://www.pdxmonthly.com/eat-and-drink",
+      "description": "Portland Monthly chronicles, challenges, and celebrates one of America's most innovative cities, inspiring readers to explore and shape the vibrant metropolis we call home. Here you will find reviews of best restuarants.",
+      "followers": {
+        "facebook": 84900,
+        "twitter": 99100,
+        "instagram": 78100
+      },
+      "image_url": "https://i1.feedspot.com/4634601.jpg?t=1610968358"
+    },
+    {
+      "title": "PDX Pipeline | Portland Events, Jobs, Festivals, Local Businesses, & More",
+      "feed_url": "https://www.pdxpipeline.com/feed/",
+      "website_url": "https://www.pdxpipeline.com/",
+      "description": "Over the last 10 years, PDX Pipeline has been a go-to online resource for long-time locals, the newly arrived and tourists to find new and exciting ways to explore the city of Portland, as well as a growing resource for jobseekers and employers.",
+      "followers": {
+        "facebook": 38900,
+        "twitter": 76600,
+        "instagram": 37800
+      },
+      "image_url": "https://i1.feedspot.com/4828769.jpg?t=1610968366"
+    },
+    {
+      "title": "Minimalist Baker",
+      "feed_url": "https://minimalistbaker.com/feed/",
+      "website_url": "https://minimalistbaker.com/recipe-index/?fwp_special-diet=gluten-free",
+      "description": "Sharing simple, delicious plant-based and mostly gluten-free recipes. Minimalist Baker is about celebrating simple cooking with recipes that require 10 ingredients or less, 1 bowl, or 30 minute or less to prepare.",
+      "followers": {
+        "facebook": 493900,
+        "twitter": 310900,
+        "instagram": 2000000
+      },
+      "image_url": "https://i1.feedspot.com/4670721.jpg?t=1611298743"
+    },
+    {
+      "title": "Hummingbird on High Blog",
+      "feed_url": "https://www.hummingbirdhigh.com/feed/atom",
+      "website_url": "https://www.hummingbirdhigh.com/blog",
+      "description": "My name is Michelle. I am the baker, blogger, and photographer behind Hummingbird High. Here you'll find well-tested dessert recipes, cake decorating tutorials, and baking techniques that will help save you time in the kitchen.",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 9600,
+        "instagram": 210500
+      },
+      "image_url": "https://i1.feedspot.com/3955311.jpg?t=1610968386"
+    },
+    {
+      "title": "Eater Portland",
+      "feed_url": "https://pdx.eater.com/rss/index.xml",
+      "website_url": "https://pdx.eater.com/",
+      "description": "Food news and dining guides for Portland, OR.",
+      "followers": {
+        "facebook": 36800,
+        "twitter": 36900,
+        "instagram": 124600
+      },
+      "image_url": "https://i1.feedspot.com/4828836.jpg?t=1610968431"
+    },
+    {
+      "title": "BikePortland.org",
+      "feed_url": "https://bikeportland.org/feed",
+      "website_url": "https://bikeportland.org/",
+      "description": "Portland Oregon bicycle news, events, culture, travel and opinion.",
+      "followers": {
+        "facebook": 13300,
+        "twitter": 30400,
+        "instagram": 22500
+      },
+      "image_url": "https://i1.feedspot.com/4827983.jpg?t=1610968445"
+    },
+    {
+      "title": "Silicon Florist - Portland Oregon Startup and Tech News",
+      "feed_url": "https://siliconflorist.com/feed/",
+      "website_url": "https://siliconflorist.com/",
+      "description": "Silicon Florist by Rick Turoczy covers Portland, Oregon, and Silicon Forest startups, blogs, events, and technology news.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 10800,
+        "instagram": 530
+      },
+      "image_url": "https://i1.feedspot.com/4832056.jpg?t=1610968453"
+    },
+    {
+      "title": "Stephen FitzMaurice Real Estate Blog",
+      "feed_url": "http://feeds.feedblitz.com/realestateagentpdx",
+      "website_url": "https://realestateagentpdx.com/portland-real-estate-blog",
+      "description": "Stephen regularly reports on the greater Portland metro area's real estate market including annual housing forecasts and best time to sell or buy a home reports. Our specialized buyers' agents throughout Oregon and Washington are dedicated to helping home buyers find a perfect match.",
+      "followers": {
+        "facebook": 666,
+        "twitter": 427,
+        "instagram": 360
+      },
+      "image_url": "https://i1.feedspot.com/4828905.jpg?t=1610968464"
+    },
+    {
+      "title": "All Classical Portland",
+      "feed_url": "https://www.allclassical.org/feed/",
+      "website_url": "https://www.allclassical.org/",
+      "description": "All Classical Portland is an independent and community-funded radio station, providing access to classical music, outstanding performances, information about the arts, and more since 1983. All Classical Portland believes that this music and this service should be accessible and inviting to all people, and all communities.",
+      "followers": {
+        "facebook": 11100,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4828630.jpg?t=1610970083"
+    },
+    {
+      "title": "Eleven PDX",
+      "feed_url": "https://elevenpdx.com/feed/",
+      "website_url": "https://elevenpdx.com/",
+      "description": "Eleven Magazine is the culmination of the blood, sweat, tears, curse words, sleep deprivation, daydreams, and passion of an incredibly dedicated group of people. Eleven Magazine is your source for everything music, community, and culture related in the Portland metropolitan area.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 2900,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4828619.jpg?t=1610968823"
+    },
+    {
+      "title": "Portland Radio Project",
+      "feed_url": "http://prp.fm/feed/",
+      "website_url": "https://prp.fm/",
+      "description": "PRP.fm is smart, friendly, local radio run by passionate Portland radio professionals and incredible volunteers who care about music and community local radio at its best.",
+      "followers": {
+        "facebook": 10400,
+        "twitter": 3100,
+        "instagram": 6300
+      },
+      "image_url": "https://i1.feedspot.com/4828736.jpg?t=1610968840"
+    },
+    {
+      "title": "Keller Williams Realty Professionals | Serving your real estate needs in Portland and Vancouver",
+      "feed_url": "https://www.portlandvancouverhomesearch.com/feed",
+      "website_url": "https://www.portlandvancouverhomesearch.com/",
+      "description": "Serving your real estate needs in Portland and Vancouver.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4832139.jpg?t=1610968881"
+    },
+    {
+      "title": "Explorer Sue | Pacific Northwest Travel Guide",
+      "feed_url": "https://www.explorersue.com/category/oregon/feed/",
+      "website_url": "https://www.explorersue.com/category/oregon/",
+      "description": "Explorer Sue (Susan) is a travel writer from Portland OR, and all-around curious gal. This blog focuses on Pacific Northwest travel, but also is a place showcase all of Susan's travels.",
+      "followers": {
+        "facebook": 269,
+        "twitter": 409,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4954412.jpg?t=1610968886"
+    },
+    {
+      "title": "Vintage Portland",
+      "feed_url": "https://vintageportland.wordpress.com/feed/",
+      "website_url": "https://vintageportland.wordpress.com/",
+      "description": "A photo blog exploring Portland's past through historical images.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/3414487.jpg"
+    },
+    {
+      "title": "Jessica Hill Photography | Portland Wedding Photographer",
+      "feed_url": "https://jessicahillphotography.com/feed/",
+      "website_url": "https://jessicahillphotography.com/blog/",
+      "description": "Jessica Hill Photography specializes in unique, fine-art wedding photography in Portland Oregon.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 641,
+        "instagram": 10100
+      },
+      "image_url": "https://i1.feedspot.com/4829051.jpg?t=1610969259"
+    },
+    {
+      "title": "Alla Prima Portland",
+      "feed_url": "https://allaprimaportland.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://allaprimaportland.blogspot.com/",
+      "description": "This blog is for people in the Portland, Oregon area who draw or paint generally in one sitting and from direct observation, in 'real time'*.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4832066.jpg?t=1610969560"
+    },
+    {
+      "title": "The P. Town Girls",
+      "feed_url": "https://theptowngirls.com/feed/",
+      "website_url": "https://theptowngirls.com/",
+      "description": "Hi, I am March Agraviador The P.Town Girls is my own personal blog showcasing my love for fashion and thrifting read all lifestyle-related articles in this blog.",
+      "followers": {
+        "facebook": 742,
+        "twitter": 230,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4828147.jpg?t=1610969491"
+    },
+    {
+      "title": "503tv",
+      "feed_url": "https://503tv.com/feed/",
+      "website_url": "https://503tv.com/",
+      "description": "503tv Productions was created by Sai & J. Lee in 2008. The duo took their love for video and photography and began using visuals to shine a light on the city of Portland, Oregon.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 659,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5026949.jpg?t=1692881222"
+    },
+    {
+      "title": "Portland Architecture",
+      "feed_url": "https://feeds.feedburner.com/PortlandArchitecture",
+      "website_url": "http://www.portlandarchitecture.com/",
+      "description": "A blog about design in the Rose City.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/1822530.jpg?t=1610968380"
+    },
+    {
+      "title": "Portland Business Journal",
+      "feed_url": "http://feeds.bizjournals.com/bizj_portland",
+      "website_url": "https://www.bizjournals.com/portland/news/",
+      "description": "We're pleased to have you visit the online version of the Portland Business Journal, where you'll find the latest breaking business news, updated throughout the day, this week's stories from the Portland Business Journal and other popular features from the print edition.",
+      "followers": {
+        "facebook": 20600,
+        "twitter": 51600
+      },
+      "image_url": "https://i1.feedspot.com/490887.jpg?t=1610968404"
+    },
+    {
+      "title": "Portland Food and Drink",
+      "feed_url": "https://feeds.feedburner.com/portlandfoodanddrink/SdXY",
+      "website_url": "https://portlandfoodanddrink.com/",
+      "description": "Your source for information and news for Portland, OR restaurants with wine, festivals, special dinners and much more.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 13500,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4827979.jpg?t=1610968829"
+    },
+    {
+      "title": "Waz Wu Blog",
+      "feed_url": "https://www.wazwu.com/blog/feed/",
+      "website_url": "https://www.wazwu.com/blog/",
+      "description": "Located in Portland, Oregon, Waz Wu is a graphic designer who writes about all things veggie from restaurant reviews, to vegetarian recipes, to local events and vegan lifestyle.",
+      "followers": {
+        "twitter": 1300,
+        "instagram": 15500
+      },
+      "image_url": "https://i1.feedspot.com/4786999.jpg?t=1605764994"
+    },
+    {
+      "title": "Land of Laurel",
+      "feed_url": "https://landoflaurel.com/feed/",
+      "website_url": "https://landoflaurel.com/",
+      "description": "A blog about home design, cooking, and trying to live an eco-friendly life!",
+      "followers": {
+        "facebook": 83,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5047542.jpg?t=1610968853"
+    },
+    {
+      "title": "Local Haven",
+      "feed_url": "https://www.localhaven.net/blog?format=RSS",
+      "website_url": "https://www.localhaven.net/",
+      "description": "A food and lifestyle blog by Ashley Marti. She is a Creative director, food and prop stylist based in Portland, Oregon. A well known in the community as a food writer that leans towards simple recipes with big flavor that highlight seasonal and local produce.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 530,
+        "instagram": 8
+      },
+      "image_url": "https://i1.feedspot.com/4828884.jpg?t=1610968858"
+    },
+    {
+      "title": "Portland Made",
+      "feed_url": "https://www.portlandmade.com/thepmreader?format=rss",
+      "website_url": "https://www.portlandmade.com/thepmreader",
+      "description": "Portland Made is a local goods collective, providing resources and support to Portland's Makers & Manufacturers. Stronger together, we are Portland Made.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 1400,
+        "instagram": 18700
+      },
+      "image_url": "https://i1.feedspot.com/4828091.jpg?t=1610968867"
+    },
+    {
+      "title": "Train With Bain",
+      "feed_url": "http://www.trainwithbain.com/feed/",
+      "website_url": "https://www.trainwithbain.com/",
+      "description": "This blog exists to share knowledge, promote health and fitness as a lifestyle, and connect you with resources to live your best life whatever that means to you right now.",
+      "followers": {
+        "facebook": 541,
+        "twitter": 4000,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5032608.jpg?t=1610968896"
+    },
+    {
+      "title": "not just baked",
+      "feed_url": "http://feeds.feedburner.com/notjustbaked",
+      "website_url": "https://www.notjustbaked.com/",
+      "description": "A cooking and baking blog sharing tips and tricks learned in Culinary School based in Portland, Oregon. Featuring whole food recipes with easy-to-follow instructions and photos.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 1300,
+        "instagram": 974
+      },
+      "image_url": "https://i1.feedspot.com/4832201.jpg?t=1610969205"
+    },
+    {
+      "title": "The Little Things We Do",
+      "feed_url": "http://laurenhartmann.com/feed",
+      "website_url": "http://mermaidens.blogspot.com/",
+      "description": "Hi I'm Lauren Hartmann. This blog is about life, style and adventures, motherhood and the little things we do.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 1300,
+        "instagram": 10400
+      },
+      "image_url": "https://i1.feedspot.com/4828070.jpg?t=1610969239"
+    },
+    {
+      "title": "Mermaidens - Musings of a Modern Mermaid",
+      "feed_url": "http://mermaidens.blogspot.com/feeds/posts/default",
+      "website_url": "http://mermaidens.blogspot.com/",
+      "description": "Hello! I'm Kailey. Friendly neighborhood cat stalker, ice cream enthusiast, illustrator, and beauty writer. Based in the Portland, Oregon area.",
+      "followers": {
+        "twitter": 7200,
+        "instagram": 86800
+      },
+      "image_url": "https://i1.feedspot.com/1696193.jpg?t=1610969245"
+    },
+    {
+      "title": "Pechluck's Food Adventures",
+      "feed_url": "https://feeds.feedburner.com/PechlucksFoodAdventures",
+      "website_url": "http://pechluck.com/",
+      "description": "I am Pech. This blog chronicles adventures in eating, dining out, and cooking and imbibing with an appreciation for local Portland deliciousness or wherever travels may lead me.",
+      "followers": {
+        "facebook": 360,
+        "twitter": 1100,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4828851.jpg?t=1610969250"
+    },
+    {
+      "title": "Sean Carr Photography | Portland Oregon Wedding Photography",
+      "feed_url": "https://seancarrphotography.com/feed/",
+      "website_url": "https://seancarrphotography.com/blog/",
+      "description": "Oregon Wedding Photographer Sean Carr is based out of Portland Oregon but shooting weddings & elopements throughout U.S. and destinations worldwide.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 299
+      },
+      "image_url": "https://i1.feedspot.com/4831813.jpg"
+    },
+    {
+      "title": "Yasmin Khajavi Photography - Portland Wedding Photographer",
+      "feed_url": "https://ykvision.com/feed/",
+      "website_url": "https://ykvision.com/blog/",
+      "description": "Wedding Photographer, International Destination Wedding Photographer located in Portland, OR and available for weddings worldwide.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 153,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/3919365.jpg?t=1610969473"
+    },
+    {
+      "title": "The Rob Levy Team Real Estate - Real Estate Information",
+      "feed_url": "https://www.roblevy.com/Blog/Rss",
+      "website_url": "https://www.roblevy.com/Blog",
+      "description": "Portland Oregon Real Estate Information from the The Rob Levy Team Real Estate agency.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 345
+      },
+      "image_url": "https://i1.feedspot.com/4832126.jpg?t=1610969482"
+    },
+    {
+      "title": "Stark Photography - Portland Wedding, Headshot and Portrait Photographers",
+      "feed_url": "https://www.starkphotography.com/feed/",
+      "website_url": "https://www.starkphotography.com/blog/",
+      "description": "Daniel and Lindsay Stark are artistic documentary Portland wedding photographers based in Portland, Oregon.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 240,
+        "instagram": 10600
+      },
+      "image_url": "https://i1.feedspot.com/4829035.jpg"
+    },
+    {
+      "title": "Aralani Photography | Come, All You Adventurers",
+      "feed_url": "https://www.aralani.com/blog?format=RSS",
+      "website_url": "https://www.aralani.com/blog",
+      "description": "Portland Wedding, Portrait & Travel Photography, and the adventures of Ara.",
+      "followers": {
+        "facebook": 1300,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4831825.jpg?t=1610969498"
+    },
+    {
+      "title": "Balancing Meanderings",
+      "feed_url": "http://balancingmeanderings.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://balancingmeanderings.blogspot.com/",
+      "description": "A blog by a back-of-the-pack runner, vegetarian, and wanna-be triathlete.",
+      "followers": {
+        "twitter": 141
+      },
+      "image_url": "https://i1.feedspot.com/4828017.jpg?t=1610969512"
+    },
+    {
+      "title": "Deyla Huss Photography | Portland Wedding Photographer | Portraits | Fashion",
+      "feed_url": "https://www.deylahussphotography.com/feed/",
+      "website_url": "https://www.deylahussphotography.com/blog/",
+      "description": "Portland & Seattle Lifestyle & Wedding Photographer!",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 354,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4831851.jpg?t=1610969642"
+    },
+    {
+      "title": "Chris Brodell | Portland Photography Blog",
+      "feed_url": "https://www.chrisbrodell.com/blog?format=RSS",
+      "website_url": "https://www.chrisbrodell.com/blog",
+      "description": "Chris Brodell is a wedding photographer in Portland, Oregon. He photographs engagement sessions, elopements, and weddings with a candid, documentary style throughout the Pacific Northwest.",
+      "followers": {
+        "facebook": 40,
+        "twitter": 1,
+        "instagram": 485
+      },
+      "image_url": "https://i1.feedspot.com/5007438.jpg?t=1610969663"
+    },
+    {
+      "title": "Jamie Jones Lifestyle Photogrpahy",
+      "feed_url": "http://jamiejonesphotography.com/?feed=rss2",
+      "website_url": "http://jamiejonesphotography.com/?page_id=10427",
+      "description": "Wirral based photographer specialising in weddings, events and portraits .",
+      "followers": {
+        "facebook": 928
+      },
+      "image_url": "https://i1.feedspot.com/4831949.jpg?t=1610969707"
+    },
+    {
+      "title": "Andrea Zajonc Photography - Portland Wedding Photographer",
+      "feed_url": "https://andreazajonc.com/feed/",
+      "website_url": "https://andreazajonc.com/blog/",
+      "description": "Andrea Zajonc Photography, Portland wedding photographer offers wedding, engagement, and portrait photography.",
+      "followers": {
+        "facebook": 695,
+        "twitter": 142,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4831938.jpg?t=1610969786"
+    },
+    {
+      "title": "Creative Edge Media Group",
+      "feed_url": "https://creativeedgemediagroup.com/feed/",
+      "website_url": "https://creativeedgemediagroup.com/",
+      "description": "A local blog services business specializing in optimized rich post creation and search engine optimization.",
+      "followers": {
+        "facebook": 119,
+        "instagram": 121
+      },
+      "image_url": "https://i1.feedspot.com/5098956.jpg?t=1610970042"
+    },
+    {
+      "title": "Great Vancouver Homes | Real Estate Articles",
+      "feed_url": "http://feeds.sierrainteractive.com/rss.ashx/14/1946",
+      "website_url": "https://www.greatvancouverhomes.com/blog/",
+      "description": "Read real estate articles about the Vancouver, WA and Portland, OR markets. We cover local real estate news and neighborhood profiles.",
+      "followers": {
+        "facebook": 23
+      },
+      "image_url": "https://i1.feedspot.com/4832098.jpg?t=1610969942"
+    },
+    {
+      "title": "The Moptop",
+      "feed_url": "https://themoptop.com/feed/",
+      "website_url": "https://themoptop.com/",
+      "description": "My name is Tonya and I am a fashion blogger based in Portland, OR. The Moptop comes from my love for the Beatles and my messy hair! This is where I share my style, inspirations, and everything in between!",
+      "followers": {
+        "facebook": 12100,
+        "twitter": 937,
+        "instagram": 133900
+      },
+      "image_url": "https://i1.feedspot.com/1696264.jpg?t=1610968397"
+    },
+    {
+      "title": "Blazer's Edge - a Portland Trail Blazers community",
+      "feed_url": "https://www.blazersedge.com/rss/index.xml",
+      "website_url": "https://www.blazersedge.com/",
+      "description": "Your best source for quality Portland Trail Blazers news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 105600,
+        "twitter": 24300
+      },
+      "image_url": "https://i1.feedspot.com/4832036.jpg?t=1610969932"
+    },
+    {
+      "title": "Underscore News",
+      "feed_url": "https://www.underscore.news/reporting/rss.xml",
+      "website_url": "https://www.underscore.news/",
+      "description": "Uncover in-depth and nuanced reporting on the issues, stories, and perspectives from Native American and Indigenous communities across North America. Underscore News is a nonprofit newsroom covering Indigenous communities and producing in-depth journalism in Oregon and the Pacific Northwest.",
+      "followers": {
+        "facebook": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5431595.jpg?t=1712569994"
+    },
+    {
+      "title": "Travel Portland",
+      "feed_url": "https://www.travelportland.com/feed/",
+      "website_url": "https://www.travelportland.com/",
+      "description": "Everything you need to plan vacations, meetings and days out in and around Portland, Oregon.",
+      "followers": {
+        "facebook": 185100,
+        "twitter": 140400,
+        "instagram": 289300
+      },
+      "image_url": "https://i1.feedspot.com/4832583.jpg?t=1610968438"
+    },
+    {
+      "title": "Brew Dr. Kombucha",
+      "feed_url": "https://www.brewdrkombucha.com/feed",
+      "website_url": "https://www.brewdrkombucha.com/blog",
+      "description": "Brew Dr. Kombucha is brewed and bottled by Townshend's Tea Company in Portland, Oregon. Our authentic 100% raw kombucha hosts naturally occurring probiotics in every bottle, and is crafted with the same high-quality Townshend's organic teas and botanicals we serve to guests at our teahouses.",
+      "followers": {
+        "facebook": 14900,
+        "twitter": 3000,
+        "instagram": 85100
+      },
+      "image_url": "https://i1.feedspot.com/5087702.jpg?t=1610968449"
+    },
+    {
+      "title": "This Beautiful Day",
+      "feed_url": "https://thisbeautifuldayblog.com/feed/",
+      "website_url": "https://thisbeautifuldayblog.com/",
+      "description": "A Lifestyle Blog for Smart Women!",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 4100,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4250859.jpg?t=1610968834"
+    },
+    {
+      "title": "Powers Photography Studios - Wedding Photos Blog",
+      "feed_url": "https://powersstudios.com/wedding-photos-blog/feed/",
+      "website_url": "https://powersstudios.com/wedding-photos-blog/",
+      "description": "Powers's blog of weddings, engagement photo shoots, and personal and family portraits.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 557,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4829045.jpg?t=1610968845"
+    },
+    {
+      "title": "Allison Smith Design | Residential, Commercial and International Interior Designer",
+      "feed_url": "https://allisonsmithdesign.com/blog/feed/",
+      "website_url": "https://allisonsmithdesign.com/blog/",
+      "description": "Allison Smith offers both residential and commercial interior design services, kitchen and bath remodeling, home furnishings and decor, and paint selection.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 501,
+        "instagram": 14200
+      },
+      "image_url": "https://i1.feedspot.com/4832232.jpg?t=1610969265"
+    },
+    {
+      "title": "Portland Youth Philharmonic | Portland Oregon",
+      "feed_url": "https://portlandyouthphil.org/blog/rss",
+      "website_url": "https://portlandyouthphil.org/blog/",
+      "description": "It is the purpose of the Portland Youth Philharmonic Association to maintain the finest possible youth orchestras in order to inspire and educate young people through performing symphonic music and to provide a cultural asset for the community.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 1300,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4828724.jpg?t=1610969270"
+    },
+    {
+      "title": "PDX Property Group | Portland, OR Real Estate Services | Buy or Sell",
+      "feed_url": "https://www.pdxpropertygroup.com/blog/feed/",
+      "website_url": "https://prettygeeky.com/",
+      "description": "At PDX Property Group of Keller Williams Realty Professionals, we approach real estate a bit differently. We recognize that in order to efficiently get houses sold and to successfully connect buyers with their perfect home, it takes more than a typical real estate agent.",
+      "followers": {
+        "facebook": 1700,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4828998.jpg?t=1610969274"
+    },
+    {
+      "title": "PrettyGeeky Photography \u00bb Lifestyle",
+      "feed_url": "https://prettygeeky.com/feed/",
+      "website_url": "https://prettygeeky.com/",
+      "description": "Lifestyle and wedding photographers based out of Portland, OR. We pride ourselves on capturing romantic, timeless imagery through our carefree style.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 60
+      },
+      "image_url": "https://i1.feedspot.com/4828122.jpg?t=1610969495"
+    },
+    {
+      "title": "Marina Mcavoy Fashion & Lifestyle Blogger",
+      "feed_url": "https://www.marinamcavoy.com/feed/",
+      "website_url": "https://www.marinamcavoy.com/",
+      "description": "I'm Marina McAvoy, a twenty-something blogger living in the incredible city Portland, OR. I have been seeking out and promoting all things beautiful.",
+      "followers": {
+        "twitter": 7,
+        "instagram": 259899
+      },
+      "image_url": "https://i1.feedspot.com/4828051.jpg?t=1610969504"
+    },
+    {
+      "title": "Lauren LaBarre Photography",
+      "feed_url": "https://www.laurenlabarre.com/blog?format=RSS",
+      "website_url": "https://www.laurenlabarre.com/blog?category=Family",
+      "description": "Top photos from Portland photographer Lauren LaBarre in Portland, Oregon. Specializing in authentic lifestyle, documentary, family, newborn, and maternity photography.",
+      "followers": {
+        "facebook": 758,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4828155.jpg?t=1610969507"
+    },
+    {
+      "title": "Next Home Realty Connection - Portland Real Estate",
+      "feed_url": "https://www.nexthomepdx.com/feed/",
+      "website_url": "https://www.nexthomepdx.com/",
+      "description": "With an energetic team that boasts a combined real estate experience of over 50 years, we strive to push the industry to higher standards; we offer only genuine guidance and sensible strategies at every stage of the buying, selling and investing process!",
+      "followers": {
+        "facebook": 566
+      },
+      "image_url": "https://i1.feedspot.com/4828956.jpg?t=1610969659"
+    },
+    {
+      "title": "PDX Food Photographer",
+      "feed_url": "https://portlandoregonfoodphotographer.com/feed/",
+      "website_url": "https://simonaihiokhai.wordpress.com/",
+      "description": "Food Photographer in Portland Oregon and the greater Northwest.",
+      "followers": {
+        "facebook": 159
+      },
+      "image_url": "https://i1.feedspot.com/4828860.jpg?t=1610969700"
+    },
+    {
+      "title": "SellPDX",
+      "feed_url": "https://sellpdx.com/feed/",
+      "website_url": "https://simonaihiokhai.wordpress.com/",
+      "description": "SellPDX.com is comprised of a team of local real estate professionals committed to selling some of the most desired homes in Inner Portland Metro.",
+      "followers": {
+        "facebook": 1
+      },
+      "image_url": "https://i1.feedspot.com/4828991.jpg?t=1610969855"
+    },
+    {
+      "title": "Simon Aihiokhai Blogs",
+      "feed_url": "https://simonaihiokhai.wordpress.com/feed/",
+      "website_url": "https://simonaihiokhai.wordpress.com/",
+      "description": "Welcome to my blog page. I hope you find the contents insightful and meaningful.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5036365.jpg"
+    },
+    {
+      "title": "Food Carts Portland - A Guide to Food Carts in Portland Oregon",
+      "feed_url": "https://www.foodcartsportland.com/feed/",
+      "website_url": "https://www.foodcartsportland.com/",
+      "description": "Food Carts Portland documents and tells the story of the food carts and trucks in Portland.",
+      "followers": {
+        "facebook": 53100,
+        "twitter": 66500
+      },
+      "image_url": "https://i1.feedspot.com/50503.jpg?t=1610969936"
+    },
+    {
+      "title": "Portland Bloggers",
+      "feed_url": "https://www.pdxbloggers.com/feed/",
+      "description": "Portland Bloggers is a meet-up group and blogging resource made by and for Portland, OR area bloggers.",
+      "followers": {
+        "facebook": 820,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4827948.jpg?t=1610969954"
+    },
+    {
+      "title": "My Portland Photographer",
+      "feed_url": "https://www.myportlandphotographer.com/feed/",
+      "description": "A collaborative blog of Portland Oregon wedding photographers.",
+      "followers": {
+        "facebook": 669
+      },
+      "image_url": "https://i1.feedspot.com/2062914.jpg?t=1610969959"
+    }
+  ]
+}

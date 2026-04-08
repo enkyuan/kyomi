@@ -1,0 +1,78 @@
+{
+  "category": "UK Dessert",
+  "source_url": "https://rss.feedspot.com/uk_dessert_rss_feeds",
+  "feeds": [
+    {
+      "title": "SpamellaB's Health Food Blog",
+      "feed_url": "https://www.spamellab.com/tag/dessert/feed/",
+      "website_url": "https://www.spamellab.com/tag/dessert/",
+      "description": "SpamellaB's Health Food Blog features High protein, gluten-free, low/no added sugar and healthy versions of sweet desserts, cakes and bakes, along with meals and snacks.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 11700,
+        "instagram": 13300
+      },
+      "image_url": "https://i1.feedspot.com/4502017.jpg?t=1606284027"
+    },
+    {
+      "title": "Crumbs & Doilies",
+      "feed_url": "https://www.crumbsanddoilies.co.uk/blogs/news.atom",
+      "website_url": "https://www.crumbsanddoilies.co.uk/blogs/news/",
+      "description": "Welcome to Crumbs & Doilies. We make amazing cakes and cupcakes every day. Follow us to keep up with articles on desserts. Check the posts now!",
+      "followers": {
+        "facebook": 37000,
+        "twitter": 13300,
+        "instagram": 375000
+      },
+      "image_url": "https://i1.feedspot.com/4841179.jpg?t=1611229341"
+    },
+    {
+      "title": "The Guardian | Dessert",
+      "feed_url": "https://www.theguardian.com/food/dessert/rss",
+      "website_url": "https://www.theguardian.com/food/dessert",
+      "description": "Follow us to keep up with articles on desserts from the The Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4912830.jpg?t=1609857667"
+    },
+    {
+      "title": "The Little Loaf",
+      "feed_url": "https://feeds.feedburner.com/Thelittleloaf",
+      "website_url": "http://www.thelittleloaf.com/",
+      "description": "The Little Loaf blog is filled with recipes for cake, biscuits, desserts and other sweet treats as well as plenty of bread and the occasional savoury recipe.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 4700,
+        "instagram": 6500
+      },
+      "image_url": "https://i1.feedspot.com/4840640.jpg?t=1611231052"
+    },
+    {
+      "title": "Jo's Kitchen",
+      "feed_url": "https://joskitchen.co.uk/feed/",
+      "website_url": "https://joskitchen.co.uk/recipes/",
+      "description": "Jo's kitchen is packed with recipes for cakes and bakes, breakfast, desserts and starters. She is a freelance food writer, recipe developer and tester, social media consultant and a cake eater/wine drinker!",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 5500,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/3382740.jpg?t=1614587370"
+    },
+    {
+      "title": "Veggie Desserts",
+      "feed_url": "https://veggiedesserts.com/feed/",
+      "website_url": "https://veggiedesserts.com/",
+      "description": "I'm Kate Hackworthy, a journalist, author and award-winning food blogger. Subscribe us to keep up with Hundreds of recipes on desserts.",
+      "followers": {
+        "facebook": 9100,
+        "twitter": 10200,
+        "instagram": 51700
+      },
+      "image_url": "https://i1.feedspot.com/4671778.jpg?t=1611298823"
+    }
+  ]
+}

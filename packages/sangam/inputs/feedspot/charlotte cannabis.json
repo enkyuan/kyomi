@@ -1,0 +1,42 @@
+{
+  "category": "Charlotte Cannabis",
+  "source_url": "https://rss.feedspot.com/charlotte_cannabis_rss_feeds",
+  "feeds": [
+    {
+      "title": "Charlotte Marijuana Doctor Blog",
+      "feed_url": "https://charlottemarijuanadoctor.com/feed/",
+      "website_url": "https://charlottemarijuanadoctor.com/blog/",
+      "description": "Follow the Charlotte Marijuana Doctor Blog and Keep up with all the latest news and information by subscribing to the Charlotte marijuana doctor blog page.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7300658.jpg?t=1714741562"
+    },
+    {
+      "title": "Crowntown Cannabis Blog",
+      "feed_url": "https://cltcbd.com/blog/feed/",
+      "website_url": "https://cltcbd.com/blog/",
+      "description": "Crowntown Cannabis is a company formed by three best friends born and raised in Charlotte, North Carolina. After losing too many loved ones to harmful drugs and chemicals, Mike, Dan and Lindsay set out with a goal to make a change in their community and in the world. Crowntown Cannabis serves to educate people about the benefits of CBD, help people with our products, and end the stigma surrounding cannabis.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7300656.jpg?t=1713352440"
+    },
+    {
+      "title": "KANNA Blog",
+      "feed_url": "https://kannacbd.org/blogs/news.atom",
+      "website_url": "https://kannacbd.org/blogs/news",
+      "description": "Kanna CBD is a boutique hemp and CBD store dedicated to providing top-quality products and education. KANNA is a Hemp company based in Charlotte NC, selling THCA, Delta 8, Delta 9, CBD, CBG, and more.",
+      "followers": {
+        "facebook": 133
+      },
+      "image_url": "https://i1.feedspot.com/7300657.jpg?t=1714741542"
+    },
+    {
+      "title": "Direct CBD Online Blog",
+      "feed_url": "https://www.directcbdonline.com/blogs/news.atom",
+      "website_url": "https://www.directcbdonline.com/blogs/news",
+      "description": "The Direct CBD Online store offers natural wellness through premium CBD products and trusted brands on the market. Easy online shopping.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/7300659.jpg?t=1714742154"
+    }
+  ]
+}

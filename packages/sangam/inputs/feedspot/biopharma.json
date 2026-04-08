@@ -1,0 +1,80 @@
+{
+  "category": "Biopharma",
+  "source_url": "https://rss.feedspot.com/biopharma_rss_feeds",
+  "feeds": [
+    {
+      "title": "BioPharma Dive",
+      "feed_url": "https://www.biopharmadive.com/feeds/news/",
+      "website_url": "https://www.biopharmadive.com/",
+      "description": "BioPharma Dive provides news and analysis for biotech and biopharmaceutical executives. We cover topics like clinical trials, drug discovery and development, pharma marketing, FDA approvals and regulations, and more.",
+      "followers": {
+        "facebook": 15000,
+        "twitter": 12900
+      },
+      "image_url": "https://i1.feedspot.com/5002196.jpg?t=1622189786"
+    },
+    {
+      "title": "Endpoints News",
+      "feed_url": "https://endpts.com/feed/",
+      "website_url": "https://endpts.com/",
+      "description": "Endpoints News is an independent news organization, reports and analyzes the top global biotech and pharmaceutical R&D news of the day. We produce original editorials daily on business deals, buyouts, and corporate reorganizations to FDA actions and the latest clinical data on some of the world's most closely watched drugs.",
+      "followers": {
+        "facebook": 799,
+        "twitter": 27000
+      },
+      "image_url": "https://i1.feedspot.com/5002197.jpg?t=1664783370"
+    },
+    {
+      "title": "Biopharma Trend",
+      "feed_url": "https://www.biopharmatrend.com/rss/",
+      "website_url": "https://www.biopharmatrend.com/",
+      "description": "Digital publication for experts in drug discovery, pharma, and biotech. Join to influence the industry with your opinion and insights.",
+      "followers": {
+        "facebook": 162
+      },
+      "image_url": "https://i1.feedspot.com/5002214.jpg?t=1622189804"
+    },
+    {
+      "title": "Haberman Associates Blog",
+      "feed_url": "https://biopharmconsortium.com/blog/feed/",
+      "website_url": "https://biopharmconsortium.com/blog/",
+      "description": "Expert commentary on recent life science industry news, recently published scientific reports, business articles, focusing on effective drug discovery, development, strategies designed to facilitate new product development.",
+      "followers": {
+        "twitter": 816
+      },
+      "image_url": "https://i1.feedspot.com/5002223.jpg?t=1622189814"
+    },
+    {
+      "title": "BioPharm International",
+      "feed_url": "https://www.biopharminternational.com/rss",
+      "website_url": "https://www.biopharminternational.com/",
+      "description": "BioPharm International integrates the science and business of biopharmaceuticals through print and online publications, covering all aspects of biopharmaceutical research, development, formulation, analysis, upstream and downstream processing, manufacturing, supply chain, and packaging, as well as business strategies and regulatory issues.",
+      "followers": {
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4449138.jpg?t=1664783644"
+    },
+    {
+      "title": "BioPharma-Reporter \u00bb Biosimilars",
+      "feed_url": "https://www.biopharma-reporter.com/Info/BioPharma-Reporter-RSS",
+      "website_url": "https://www.biopharma-reporter.com/Hot-Topics/Biosimilars",
+      "description": "Take a peek into the news on the biopharmaceutical manufacturing industry, focusing on biologics, biosimilars, technology, upstream/downstream processing, cell culture, and regulations. William Reed's BioPharma-Reporter has been the leading online news source for the biopharma industry for more than 8 years, leveraging our digital-first position to bring powerful insights and robust information to help your business succeed.",
+      "followers": {
+        "facebook": 965,
+        "twitter": 316
+      },
+      "image_url": "https://i1.feedspot.com/5002775.jpg?t=1622189800"
+    },
+    {
+      "title": "BioSpace News",
+      "feed_url": "https://feedity.com/biospace-com/WlpaUFpW.rss",
+      "website_url": "https://www.biospace.com/news",
+      "description": "Breaking news from the biotech, clinical research and pharmaceutical industries. BioSpace is The Home of the Life Sciences Industry.",
+      "followers": {
+        "facebook": 61700,
+        "twitter": 25100
+      },
+      "image_url": "https://i1.feedspot.com/5002221.jpg?t=1622189843"
+    }
+  ]
+}

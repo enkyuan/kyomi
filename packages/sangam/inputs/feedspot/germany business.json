@@ -1,0 +1,66 @@
+{
+  "category": "Germany Business",
+  "source_url": "https://rss.feedspot.com/germany_business_rss_feeds",
+  "feeds": [
+    {
+      "title": "Schlecht & Partner Blog",
+      "feed_url": "https://taxadvisorgermany.com/blog/feed/",
+      "website_url": "https://taxadvisorgermany.com/blog/",
+      "description": "Schlecht und Partner are experienced auditors, accountants and tax advisors. We advise entrepreneurs, companies and individuals in all business and tax matters and conduct audits for medium-sized companies on a variety of occasions and issues. Based on our broad technical and industry expertise, we have a vast experience in SME consulting.",
+      "followers": {
+        "facebook": 142,
+        "twitter": 27,
+        "instagram": 348
+      },
+      "image_url": "https://i1.feedspot.com/5340686.jpg?t=1636358193"
+    },
+    {
+      "title": "WINHELLER Blog \u00bb German Business Law",
+      "feed_url": "https://winheller.com/blog/en/category/german-business-law/feed/",
+      "website_url": "https://winheller.com/blog/en/category/german-business-law/",
+      "description": "In this part of the site you can go through the law whcih are implemented for doing business in germany. WINHELLER Attorneys at Law & Tax Advisors are your legal experts in the fields of German and international business law and tax law as well as the law of private foundations and nonprofit and charitable organizations.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 713
+      },
+      "image_url": "https://i1.feedspot.com/5457475.jpg?t=1666002371"
+    },
+    {
+      "title": "Sparrks Blog",
+      "feed_url": "https://sparrks.io/feed/",
+      "website_url": "https://sparrks.io/blog/",
+      "description": "Sparrks is a digital coaching platform. We enable companies to have efficient 1:1 business coaching by handpicked top coaches.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5461272.jpg?t=1667212903"
+    },
+    {
+      "title": "Rampup.xyz Blog",
+      "feed_url": "https://rampup.xyz/feed/",
+      "website_url": "https://rampup.xyz/blog/",
+      "description": "rampup.xyz is the visionary management and technology consultancy. Together with our customers, we develop digital and data strategies and implement new technologies and products. This is how we turn our customers into data-driven companies.",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/5737172.jpg?t=1702627978"
+    },
+    {
+      "title": "Faz Blog",
+      "feed_url": "https://blogs.faz.net/fazit/feed/",
+      "website_url": "https://blogs.faz.net/fazit/",
+      "description": "In this blog we take a deeper look at stock exchanges and other markets - mostly with scientific help. The most fascinating things from business and finance. Concisely described and knowledgeably analyzed by authors from the FAZ and the Sunday newspaper.",
+      "followers": {
+        "twitter": 884100,
+        "instagram": 715900
+      },
+      "image_url": "https://i1.feedspot.com/1322979.jpg?t=1636357911"
+    },
+    {
+      "title": "Reshoring Verband",
+      "feed_url": "https://reshoringverband.de/feed/",
+      "website_url": "https://reshoringverband.de/neuigkeiten/",
+      "description": "The Association for Reshoring and Fair Competition advocates for the relocation of production to Europe and fair global competitive conditions. Short and secure supply chains, and personal contacts with European suppliers without quality surprises secure jobs and protect the climate. We are against price dumping, government subsidies that distort competition, forced labor in production, and environmentally harmful production methods.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5733120.jpg?t=1702291113"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "category": "Austin Beer",
+  "source_url": "https://rss.feedspot.com/austin_beer_rss_feeds",
+  "feeds": [
+    {
+      "title": "Craft Beer Austin Blog",
+      "feed_url": "https://craftbeeraustin.com/feed",
+      "website_url": "https://craftbeeraustin.com/austin-beer-blog",
+      "description": "We are a local team of CraftBeer bloggers working hard to be your #1 source for news and events in Austin's dynamic CraftBeer community.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 12400,
+        "instagram": 8900
+      },
+      "image_url": "https://i1.feedspot.com/5405717.jpg?t=1654156552"
+    },
+    {
+      "title": "Texas Craft Brewers Guild",
+      "feed_url": "https://texascraftbrewersguild.org/feed/",
+      "website_url": "https://texascraftbrewersguild.org/news/",
+      "description": "The Texas Craft Brewers Guild exists for the purpose of promoting Texas craft beer, educating the public about the qualities and attributes of craft beer, and advancing the common interest of Texas craft brewers.",
+      "followers": {
+        "facebook": 13500,
+        "twitter": 9300,
+        "instagram": 16400
+      },
+      "image_url": "https://i1.feedspot.com/5405710.jpg?t=1654152314"
+    },
+    {
+      "title": "Big World, Small Girl",
+      "feed_url": "https://bigworldsmallgirl.com/feed/",
+      "website_url": "https://bigworldsmallgirl.com/",
+      "description": "Big World, Small Girl blog is owned and operated by Caitlin Johnson. She is a writer and content creator inspiring you to try new and local beverages. She has a love for sharing stories and creating an adventure. She created her beer blog to educate, share, and encourage others to support local businesses, especially craft breweries. Stay updated about the latest updates, travel guides, articles, and more from her blog.",
+      "followers": {
+        "facebook": 1000,
+        "instagram": 19100
+      },
+      "image_url": "https://i1.feedspot.com/5405713.jpg?t=1654154116"
+    },
+    {
+      "title": "Accidentalis Brewing",
+      "feed_url": "https://www.accidentalis.com/feed/",
+      "website_url": "https://www.accidentalis.com/",
+      "description": "My name is Matt Chrispen. At Accidentalis, you will find some long-winded and long-form articles on brewing beer, mead, and fiddling around with fun (or not so fun) brewery gear and gadgets at home.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5405711.jpg?t=1654153414"
+    },
+    {
+      "title": "Beer Now Conference",
+      "feed_url": "https://beernow.org/feed/",
+      "website_url": "https://beernow.org/news/",
+      "description": "Beer Now, founded as the Beer Bloggers & Writers Conference, was first held in Boulder, Colorado in 2010. The conference is for everyone who communicates about beer. It is oriented towards beer bloggers, beer writers, social media influencers, and those in the beer industry communicating about beer.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 13300,
+        "instagram": 759
+      },
+      "image_url": "https://i1.feedspot.com/5405709.jpg?t=1654153135"
+    },
+    {
+      "title": "Austin Best Brewery Blog",
+      "feed_url": "https://austin-best-brewery.weebly.com/1/feed",
+      "website_url": "https://austin-best-brewery.weebly.com/",
+      "description": "At Austin Best Brewery, our goal is to offer great beers brewed fresh, delicious food and an outstanding, friendly experience to our patrons in a warm inviting hill country space. Our family-owned brewery features fresh, simple yet complex brews and scratch-made New York-style pizza made with love and passion.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5405715.jpg?t=1654154937"
+    }
+  ]
+}

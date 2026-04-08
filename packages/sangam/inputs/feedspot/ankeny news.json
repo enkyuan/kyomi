@@ -1,0 +1,18 @@
+{
+  "category": "Ankeny News",
+  "source_url": "https://rss.feedspot.com/ankeny_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Des Moines Register \u00bb Ankeny",
+      "feed_url": "http://rssfeeds.desmoinesregister.com/desmoines/ankeny",
+      "website_url": "https://www.desmoinesregister.com/communities/ankeny/",
+      "description": "Des Moines Register provides updates and breaking news of local, state, national and world as well as business news, obituaries, weather, politics and crime updates.",
+      "followers": {
+        "facebook": 229300,
+        "twitter": 167000,
+        "instagram": 69100
+      },
+      "image_url": "https://i1.feedspot.com/5148640.jpg"
+    }
+  ]
+}

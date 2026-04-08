@@ -1,0 +1,89 @@
+{
+  "category": "Sales Performance",
+  "source_url": "https://rss.feedspot.com/sales_performance_rss_feeds",
+  "feeds": [
+    {
+      "title": "LevelEleven Blog",
+      "feed_url": "https://leveleleven.com/feed/",
+      "website_url": "https://leveleleven.com/blog/",
+      "description": "LevelEleven is a Sales Management System that helps companies unlock maximum revenue potential by engaging salespeople in the behaviors that matter.",
+      "followers": {
+        "facebook": 647,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4928722.jpg?t=1641812843"
+    },
+    {
+      "title": "Amy Franko Blog",
+      "feed_url": "https://amyfranko.com/feed/",
+      "website_url": "https://amyfranko.com/blog/",
+      "description": "Amy Franko specializes in sales training and leadership development for insurance and professional services. Follow Amy Franko and Impact Instructions blog to learn the latest trends in sales training and leadership development. Amy shares regular strategies and actionable tips for those interested in sales, leadership, and development.",
+      "followers": {
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4940367.jpg?t=1621302434"
+    },
+    {
+      "title": "Janek Performance Group",
+      "feed_url": "https://www.janek.com/feed/",
+      "website_url": "https://www.janek.com/insights/",
+      "description": "We're committed to supporting sales professionals by providing them with the sales performance resources they need to continually excel. The Janek Performance Blog provides expert advice, best practices and sales training enablement content for sales professionals.",
+      "followers": {
+        "facebook": 529,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4940341.jpg?t=1621302446"
+    },
+    {
+      "title": "SBI",
+      "feed_url": "https://sbigrowth.com/insights/rss.xml",
+      "website_url": "https://sbigrowth.com/insights",
+      "description": "Get expert sales, sales management, and sales training advice on the Sales Readiness Group blog. Sales Readiness Group is an industry leader in sales training programs, creating custom sales trainings for corporate teams.",
+      "followers": {
+        "facebook": 288,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4941732.jpg?t=1632982047"
+    },
+    {
+      "title": "1000Steps",
+      "feed_url": "https://1000-steps.com/feed/",
+      "website_url": "https://1000-steps.com/expert-insights/",
+      "description": "1000Steps shares expertise and insights on boosting sales performance, optimizing lead generation, and revolutionizing business growth. Discover strategies, tips, and advice from our team of experienced professionals that can propel your business to new heights. Dedicated to helping clients achieve sales success through targeted sales and marketing strategies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5633064.jpg?t=1707137971"
+    },
+    {
+      "title": "Prima Resource Blog",
+      "feed_url": "https://blog.primaressource.com/en/feed/",
+      "website_url": "https://blog.primaressource.com/en/",
+      "description": "Prima Resource's blog, The Science of Sale, is dedicated to business leaders and sales leaders who are looking for the best practices to build, recruit, coach, train, evaluate, motivate and remunerate their sales teams and improve sales performance.",
+      "followers": {
+        "facebook": 219,
+        "twitter": 452
+      },
+      "image_url": "https://i1.feedspot.com/4940482.jpg?t=1638507978"
+    },
+    {
+      "title": "Marketing Nous Blog",
+      "feed_url": "https://marketingnous.com.au/feed/",
+      "website_url": "https://marketingnous.com.au/sales-blog/",
+      "description": "Marketing Nous helps in enabling sales performance improvement in B2B services, tech and complex products.",
+      "followers": {
+        "twitter": 312
+      },
+      "image_url": "https://i1.feedspot.com/4453104.jpg?t=1607666735"
+    },
+    {
+      "title": "Sales Performance News",
+      "feed_url": "https://www.salesperformance.ie/insights-news/feed/",
+      "website_url": "https://www.salesperformance.ie/insights-news/",
+      "description": "Sales Performance is passionate about sales and helping people to improve their skills. Jo Collins, through Sales Performance, works with business owners who want to develop their salespeople and improve sales results.",
+      "followers": {
+        "facebook": 186,
+        "twitter": 534
+      },
+      "image_url": "https://i1.feedspot.com/4940328.jpg?t=1621302450"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "category": "Kansas Mom",
+  "source_url": "https://rss.feedspot.com/kansas_mom_rss_feeds",
+  "feeds": [
+    {
+      "title": "KCMetroMoms",
+      "feed_url": "https://feeds.feedburner.com/kcmetromoms",
+      "website_url": "https://www.kcmetromoms.com/",
+      "description": "Kansas City's no.1 Website for Moms. Local resources, activity and event calendar, free deals, coupons, KC special events, Kansas City Moms & more.",
+      "followers": {
+        "twitter": 5200,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5314050.jpg?t=1629460700"
+    },
+    {
+      "title": "Covet by Tricia",
+      "feed_url": "https://www.covetbytricia.com/feed/",
+      "website_url": "https://www.covetbytricia.com/",
+      "description": "COVET by Tricia is a lifestyle, fashion, and beauty blog for the modern female. Hi, I'm Tricia! Mom of 2 and a former lawyer turned blogger. COVET by Tricia is where I share my with you, the reader - good deals I find, outfits that are comfortable yet stylish, fun trips to take with your family, and everything in between.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5314098.jpg?t=1629465765"
+    },
+    {
+      "title": "This Kansas City Mama",
+      "feed_url": "http://thiskansascitymama.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://thiskansascitymama.blogspot.com/",
+      "description": "I'm Andrea of This Kansas City Mama! I'm a mama, wife, blogger, DIY enthusiast, a self-professed fashionista, and mompreneur. On this blog I am sharing all of my favorite things from fashion to home decor, places to explore around Kansas City, and so much more.",
+      "followers": {
+        "facebook": 457,
+        "twitter": 476,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4898424.jpg?t=1633000835"
+    },
+    {
+      "title": "Mindfully Gray",
+      "feed_url": "https://www.mindfullygray.com/feed/",
+      "website_url": "https://www.mindfullygray.com/",
+      "description": "Mindfully Gray is a home decor and lifestyle blog by Brett & Jamie. On the blog we share about fixing up our first home inside and out, navigating life as new parents, DIY projects, home renovations, and more!",
+      "followers": {
+        "facebook": 1500,
+        "instagram": 51100
+      },
+      "image_url": "https://i1.feedspot.com/5314119.jpg?t=1629467451"
+    },
+    {
+      "title": "Mrs. Kansas Mommy",
+      "feed_url": "https://mrskansasmommy.wordpress.com/feed/",
+      "website_url": "https://mrskansasmommy.wordpress.com/",
+      "description": "Candid musings for the modern mommy. Come for the hair and makeup tips, stay for the inappropriate sense of humor.",
+      "followers": {
+        "facebook": 749,
+        "twitter": 239
+      },
+      "image_url": "https://i1.feedspot.com/5314056.jpg?t=1629462523"
+    },
+    {
+      "title": "Crazy Bananas",
+      "feed_url": "http://www.crazybananas.com/feed/",
+      "website_url": "http://www.crazybananas.com/",
+      "description": "Crazy Bananas Creative Studio is a personal blog about photography, design, parenting, recovery and life in general!",
+      "followers": {
+        "facebook": 665
+      },
+      "image_url": "https://i1.feedspot.com/5314085.jpg?t=1629463750"
+    },
+    {
+      "title": "Dine & Dish",
+      "feed_url": "https://www.dineanddish.net/feed/",
+      "website_url": "https://www.dineanddish.net/",
+      "description": "Kristen Doyle is the creator of the award winning website, Dine & Dish. Since early 2006, Kristen has been sharing her favorite recipes, photographs and life stories with an ever growing audience of engaged readers.",
+      "followers": {
+        "facebook": 135400,
+        "twitter": 26200,
+        "instagram": 16900
+      },
+      "image_url": "https://i1.feedspot.com/5314116.jpg?t=1629467283"
+    }
+  ]
+}

@@ -1,0 +1,897 @@
+{
+  "category": "D&D",
+  "source_url": "https://rss.feedspot.com/dnd_rss_feeds",
+  "feeds": [
+    {
+      "title": "D&D Beyond",
+      "feed_url": "https://www.dndbeyond.com/posts.rss",
+      "website_url": "https://www.dndbeyond.com/posts",
+      "description": "D&D Beyond is an official digital toolset for Dungeons & Dragons. Follow this blog to know about Dungeons & Dragons Tools, Rules, Races, Classes, Feats, Backgrounds, Items, Spells, Monsters, Character Builder, Character Generator, Character Sheet, Homebrew, Marketplace, Digital Books and More.",
+      "followers": {
+        "facebook": 209500,
+        "twitter": 339400,
+        "instagram": 240400
+      },
+      "image_url": "https://i1.feedspot.com/4920930.jpg?t=1620796161"
+    },
+    {
+      "title": "Sly Flourish",
+      "feed_url": "https://slyflourish.com/index.xml",
+      "website_url": "https://slyflourish.com/",
+      "description": "Follow this blog where Mike shares resources, articles and guide for building the better Dungeons and Dragons Dungeon Master.",
+      "followers": {
+        "twitter": 45800
+      },
+      "image_url": "https://i1.feedspot.com/1355248.jpg?t=1609844467"
+    },
+    {
+      "title": "DMDavid Blog",
+      "feed_url": "https://dmdavid.com/feed/",
+      "website_url": "https://dmdavid.com/",
+      "description": "Dungeons & Dragons design, advice, rules, and inspiration. David Hartlage is a dungeon master at weekly D&D encounters sessions, occasional adventurers' League games, and judging at the big gaming conventions.",
+      "followers": {
+        "facebook": 554,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/2168809.jpg?t=1620796180"
+    },
+    {
+      "title": "The Monsters Know What They're Doing",
+      "feed_url": "http://www.themonstersknow.com/feed/",
+      "website_url": "http://www.themonstersknow.com/",
+      "description": "Follow this blog where Keith Ammann shares eady-to-use tactics for fifth-edition Dungeons and Dragons monsters and non-player characters, guide, resources and much more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4920919.jpg?t=1620796630"
+    },
+    {
+      "title": "Dungeon Solvers",
+      "feed_url": "https://www.dungeonsolvers.com/feed/",
+      "website_url": "https://www.dungeonsolvers.com/",
+      "description": "Eldadres is a 24 year old Computer Engineer playing Dragons and Dungeons since he was very young. Follow this blog where he shares articles on how to run the game as a DM, play the game, character builds, mechanics, homebrew options, and software/tools that are helpful for playing.",
+      "followers": {
+        "twitter": 381
+      },
+      "image_url": "https://i1.feedspot.com/4920860.jpg?t=1620796195"
+    },
+    {
+      "title": "Tribality \u00bb D&D 5E",
+      "feed_url": "https://www.tribality.com/rpgs/dungeons-dragons-5th-edition/feed/",
+      "website_url": "https://www.tribality.com/rpgs/dungeons-dragons-5th-edition/",
+      "description": "D&D / Role Playing",
+      "followers": {
+        "twitter": 3800,
+        "instagram": 428
+      },
+      "image_url": "https://i1.feedspot.com/5741622.jpg?t=1703236633"
+    },
+    {
+      "title": "Jezner Blog \u00bb Dungeons and Dragons",
+      "feed_url": "https://www.jezner.com/category/dungeons-and-dragons/feed/",
+      "website_url": "https://www.jezner.com/category/dungeons-and-dragons/",
+      "description": "Musings about Writing, Audiobooks, and Genre Fiction",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5741600.jpg?t=1703236871"
+    },
+    {
+      "title": "DnD Blog",
+      "feed_url": "https://roll-22.tumblr.com/rss",
+      "website_url": "https://roll-22.tumblr.com/",
+      "description": "all my dnd posts go here for easier reference and inspiration",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5741625.jpg?t=1703237210"
+    },
+    {
+      "title": "Just Your DnD Memes",
+      "feed_url": "https://just-your-dnd-things.tumblr.com/rss",
+      "website_url": "https://just-your-dnd-things.tumblr.com/",
+      "description": "teddy | just a blog for all your dnd quotes, memes, and content needs. occasionally post resources and ideas, but mostly garbage memes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5741620.jpg?t=1703237233"
+    },
+    {
+      "title": "EN World RPG News & Reviews \u00bb Dungeons & Dragons",
+      "feed_url": "https://www.enworld.org/ewr-porta/categories/dungeons-dragons.1/index.rss",
+      "website_url": "https://www.enworld.org/ewr-porta/categories/dungeons-dragons.1/",
+      "description": "Dungeons & Dragons",
+      "followers": {
+        "facebook": 14400
+      },
+      "image_url": "https://i1.feedspot.com/5741617.jpg"
+    },
+    {
+      "title": "PhD20",
+      "feed_url": "https://phd20.com/rss.xml",
+      "website_url": "https://phd20.com/",
+      "description": "Ideas and resources for Dungeons & Dragons and other tabletop roleplaying games",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5741603.jpg?t=1703237258"
+    },
+    {
+      "title": "Points of Inspiration",
+      "feed_url": "https://pointsofinspiration.com/feed/",
+      "website_url": "https://pointsofinspiration.com/",
+      "description": "Helping new Dungeon Masters Level Up",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5741616.jpg?t=1703237339"
+    },
+    {
+      "title": "Mage Hand Press",
+      "feed_url": "https://magehandpress.com/feed/",
+      "website_url": "https://magehandpress.com/all-posts/",
+      "description": "The Mage Hand Press Blog of Free, Quality 5e D&D Content",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5741619.jpg?t=1703237363"
+    },
+    {
+      "title": "D&D Sage Advice",
+      "feed_url": "https://www.sageadvice.eu/feed/",
+      "website_url": "http://www.sageadvice.eu/",
+      "description": "Questions on Dungeons & Dragons answered by game designers",
+      "followers": {
+        "twitter": 136600
+      },
+      "image_url": "https://i1.feedspot.com/5741630.jpg?t=1703236686"
+    },
+    {
+      "title": "Blog of Holding",
+      "feed_url": "https://www.blogofholding.com/?feed=rss2",
+      "website_url": "https://www.blogofholding.com/",
+      "description": "Blog of Holding is all about fantasy gaming, dungeons, and dragons. Find guides, books, articles, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547214.jpg?t=1682057780"
+    },
+    {
+      "title": "Dungeons & Dragons Fanatics",
+      "feed_url": "https://dungeonsanddragonsfan.com/feed/",
+      "website_url": "https://dungeonsanddragonsfan.com/",
+      "description": "D&D Stuff",
+      "followers": {
+        "facebook": 199,
+        "twitter": 662
+      },
+      "image_url": "https://i1.feedspot.com/5741629.jpg?t=1703236669"
+    },
+    {
+      "title": "Richard Green Game Designer \u00bb D&D 5E",
+      "feed_url": "https://richardgreengames.com/category/dd-5th-edition/feed/",
+      "website_url": "https://richardgreengames.com/category/dd-5th-edition/",
+      "description": "Posts about D&D 5th Edition written by richgreen01",
+      "followers": {
+        "facebook": 223,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5741606.jpg?t=1703236536"
+    },
+    {
+      "title": "Wayne's Books \u00bb Dungeons and Dragons",
+      "feed_url": "https://waynesbooks.games/category/dungeons-dragons/feed/",
+      "website_url": "https://waynesbooks.games/category/dungeons-dragons/",
+      "description": "Game Gallery ~ Photo Blog",
+      "followers": {
+        "facebook": 6800
+      },
+      "image_url": "https://i1.feedspot.com/5741626.jpg?t=1703236653"
+    },
+    {
+      "title": "Havards Blackmoor Blog",
+      "feed_url": "https://blackmoormystara.blogspot.com/feeds/posts/default",
+      "website_url": "https://blackmoormystara.blogspot.com/",
+      "description": "This is a blog dedicated to Dave Arneson's Blackmoor. The World of Mystara will also most likely appear here given the fondness of the author towards that fantastic setting. This is the official blog of the Blackmoor Archives and The Comeback Inn Forum at WWW.BLACKMOOR.MYSTARA.NET",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5741597.jpg"
+    },
+    {
+      "title": "Play What You Want \u00bb Dungeons &Dragons",
+      "feed_url": "https://gsllcblog.com/category/rpg/dungeons-dragons/feed/",
+      "website_url": "https://gsllcblog.com/category/rpg/dungeons-dragons/",
+      "description": "Let's roll some dice, watch some movies, or generally just geek out. New posts at 6:30 pm ET but only if I have something to say. Menu at the top. gsllc@chirp.enworld.org on Mastodon and @gsllc on Twitter.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5741610.jpg?t=1703237551"
+    },
+    {
+      "title": "Dragon Encounters",
+      "feed_url": "https://dragonencounters.com/feed/",
+      "website_url": "https://dragonencounters.com/",
+      "description": "I have been a DM for several years, and I was designing home RPG games since my young childhood. I have been a fan of many different types of games (computer, board, RPG, and more) and have designed several for my own entertainment. This is my first attempt to produce game content for a wider audience.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5650607.jpg?t=1692358323"
+    },
+    {
+      "title": "Dungeon Master Assistance",
+      "feed_url": "https://olddungeonmaster.com/feed/",
+      "website_url": "https://olddungeonmaster.com/",
+      "description": "Where anyone over 18 can share thoughts and ideas on RPGs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5741631.jpg?t=1703237446"
+    },
+    {
+      "title": "Grognardia",
+      "feed_url": "https://grognardia.blogspot.com/feeds/posts/default",
+      "website_url": "https://grognardia.blogspot.com/",
+      "description": "James Maliszewski started roleplaying in the late Fall of 1979 when he opened up a copy of the Dungeons & Dragons Basic Set edited by Dr. J. Eric Holmes originally purchased for his father. More than 40 years later, he's still playing. This blog is where James collects his memories and musings about roleplaying games and related nonsense, as well as articles about the history of the hobby from its earliest beginnings to the present day.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5314601.jpg?t=1682639401"
+    },
+    {
+      "title": "Crit Academy",
+      "feed_url": "https://www.critacademy.com/post?format=rss",
+      "website_url": "https://www.critacademy.com/post",
+      "followers": {
+        "facebook": 12700,
+        "twitter": 1500,
+        "instagram": 700
+      },
+      "image_url": "https://i1.feedspot.com/5741636.jpg?t=1703236707"
+    },
+    {
+      "title": "Alphastream",
+      "feed_url": "https://alphastream.org/index.php/feed/",
+      "website_url": "https://alphastream.org/",
+      "description": "The Alphastream Game Design Blog",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5741632.jpg?t=1703236847"
+    },
+    {
+      "title": "Awesome Dice Blog",
+      "feed_url": "https://www.awesomedice.com/blogs/news.atom",
+      "website_url": "https://www.awesomedice.com/blogs/news",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 571
+      },
+      "image_url": "https://i1.feedspot.com/5741608.jpg?t=1703236555"
+    },
+    {
+      "title": "TardisCaptain's Blog of Holding \u00bb Dungeons and Dragons",
+      "feed_url": "https://tardiscaptain.com/category/dungeons-and-dragons/feed/",
+      "website_url": "https://tardiscaptain.com/category/dungeons-and-dragons/",
+      "description": "Random musings from a Geek Dad",
+      "followers": {
+        "twitter": 864
+      },
+      "image_url": "https://i1.feedspot.com/5741623.jpg?t=1703236880"
+    },
+    {
+      "title": "DnD Adventure Club Blog",
+      "feed_url": "https://dndadventureclub.com/blog?format=rss",
+      "website_url": "https://dndadventureclub.com/blog",
+      "followers": {
+        "facebook": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5741627.jpg?t=1703236659"
+    },
+    {
+      "title": "DMiurgy",
+      "feed_url": "https://wizzzargh.blogspot.com/feeds/posts/default",
+      "website_url": "https://wizzzargh.blogspot.com/",
+      "description": "A blog mainly about old school/new weird D&D, with occasional excursions into other role playing games and terrible art.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5741598.jpg?t=1703236781"
+    },
+    {
+      "title": "Tales By Taliopharo \u00bb DnD",
+      "feed_url": "https://taliopharowords.com/?feed=rss2&cat=1",
+      "website_url": "https://taliopharowords.com/?cat=1",
+      "description": "Tales By Taliopharo",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5741621.jpg?t=1703237094"
+    },
+    {
+      "title": "Enter the Arcverse",
+      "feed_url": "https://www.enterthearcverse.com/blog-feed.xml",
+      "website_url": "https://www.enterthearcverse.com/",
+      "description": "'Enter the Arcverse' is a website designed for beginners interested in Dungeons & Dragons. It offers guidance on understanding D&D classes, creating characters, crafting adventures, and mastering gameplay. The site provides free D&D campaigns, original universe books, and a unique spellforging system. Users can explore various D&D content such as classes, races, spells, and adventure ideas through regular blog updates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7275175.jpg?t=1710738539"
+    },
+    {
+      "title": "About Bruce Heard and New Stories",
+      "feed_url": "https://bruce-heard.blogspot.com/feeds/posts/default",
+      "website_url": "https://bruce-heard.blogspot.com/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3616710.jpg?t=1703247332"
+    },
+    {
+      "title": "Nerd's RPG Variety Cast",
+      "feed_url": "https://bxblackrazor.blogspot.com/feeds/posts/default",
+      "website_url": "https://bxblackrazor.blogspot.com/",
+      "description": "Twice a month (nominally) podcast about tabletop role playing games, exploitation movies, board games, miniature war games, and whatever else attracts my interest. US based callers can call my Google Voicemail Box at \u202a(540) 445-1145\u202c, callers outside the US can use my Speakpipe account https://www.speakpipe.com/NerdsRPGVarietyCastyou can send an email to nerdsrpgvarietycast 'at' gmail 'dot' com or find me on a variety of discords including the Audio Dungeon Discord.Ray Otus provided the coffee cup clip art and provides my music.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5741605.jpg?t=1703237106"
+    },
+    {
+      "title": "Dungeons By Dan Blog",
+      "feed_url": "https://dungeonsbydan.net/blogs/news.atom",
+      "website_url": "https://dungeonsbydan.net/blogs/news",
+      "description": "Dungeons By Dan News Blog where new VTT role-playing game maps, adventures, and guides are being posted regularly.",
+      "followers": {
+        "facebook": 142,
+        "twitter": 99
+      },
+      "image_url": "https://i1.feedspot.com/5741634.jpg?t=1703236703"
+    },
+    {
+      "title": "Game Night Blog \u00bb RPG Initiative",
+      "feed_url": "https://gamenightblog.com/category/rpg-initiative/feed/",
+      "website_url": "https://gamenightblog.com/category/rpg-initiative/",
+      "description": "Family Fun One Game at a Time!",
+      "followers": {
+        "facebook": 83
+      },
+      "image_url": "https://i1.feedspot.com/5741609.jpg?t=1703236557"
+    },
+    {
+      "title": "M.T. Black Games Blog",
+      "feed_url": "https://www.mtblackgames.com/blog?format=rss",
+      "website_url": "https://www.mtblackgames.com/blog",
+      "followers": {
+        "facebook": 697,
+        "twitter": 22500
+      },
+      "image_url": "https://i1.feedspot.com/5741638.jpg?t=1703236717"
+    },
+    {
+      "title": "What Do I Know? \u00bb Dungeons & Dragons",
+      "feed_url": "https://whatdoiknowjr.com/feed/",
+      "website_url": "https://whatdoiknowjr.com/category/dungeons-dragons/",
+      "description": "The RPG Games and Geekdom Site. Find articles on RPG games, personalised reviews, gameplays and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5368743.jpg?t=1644228253"
+    },
+    {
+      "title": "The Flaming Feather & Flaming Filament D&D Blog",
+      "feed_url": "https://www.theflamingfeather.com/blogs/dungeons-and-dragons.atom",
+      "website_url": "https://www.theflamingfeather.com/blogs/dungeons-and-dragons",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5741615.jpg?t=1703236967"
+    },
+    {
+      "title": "Dice Scroller",
+      "feed_url": "https://dice-scroller.com/en/feed/",
+      "website_url": "https://dice-scroller.com/en/",
+      "description": "Hi! We are a couple of nerds who want to help out new players and share what we know. We have been playing Dungeons and Dragons as well as testing some other rule systems for about 5 years now. We write posts about everything pen and paper related but mainly focus on Dungeons and Dragons since it is the rule system we know best.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5627805.jpg?t=1689587008"
+    },
+    {
+      "title": "Dirt Cheap Dungeons Blog",
+      "feed_url": "https://dirtcheapdungeons.com/blogs/news.atom",
+      "website_url": "https://dirtcheapdungeons.com/blogs/news",
+      "description": "Get the latest tips and tricks on Dungeons and Dragons and RPG Gaming from Dirt Cheap Dungeons.",
+      "followers": {
+        "facebook": 13800,
+        "twitter": 359
+      },
+      "image_url": "https://i1.feedspot.com/5741612.jpg?t=1703236576"
+    },
+    {
+      "title": "OAFE Blog \u00bb D&D",
+      "feed_url": "http://www.oafe.net/xml/oafenewrss.xml",
+      "website_url": "http://www.oafe.net/blog/tag/dd/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1361283.jpg"
+    },
+    {
+      "title": "Form of Dread - D&D Tactics Blog",
+      "feed_url": "https://formofdread.wordpress.com/feed/",
+      "website_url": "https://formofdread.wordpress.com/blog/",
+      "description": "Optimization guides and builds for D&D 5e",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5741618.jpg?t=1703237007"
+    },
+    {
+      "title": "Dump Stat Adventures",
+      "feed_url": "https://dumpstatadventures.com/blog?format=RSS",
+      "website_url": "https://dumpstatadventures.com/",
+      "description": "A blog about TTRPGs and the interactions between players, GMs and mechanics. Two guys, Chris & Stephen, explore nuance topics about tabletop role playing games and gripe about most of it. We occasionally release adventure modules.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4980557.jpg?t=1620796209"
+    },
+    {
+      "title": "Arcane Eye",
+      "feed_url": "https://arcaneeye.com/feed/",
+      "website_url": "https://arcaneeye.com/",
+      "description": "Arcane Eye is the place to go for all things DnD! From advice on running your campaign to which podcasts are the best, Arcane Eye can deliver the content you are looking for.",
+      "followers": {
+        "twitter": 953,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5058849.jpg?t=1620796699"
+    },
+    {
+      "title": "Hipsters & Dragons",
+      "feed_url": "https://www.hipstersanddragons.com/feed/",
+      "website_url": "https://www.hipstersanddragons.com/",
+      "description": "Because roleplaying is social, creative, and fun! A non-geeky guide to playing Dungeons & Dragons (5e D&D) with tips, new rules, and homebrew adventures.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 527
+      },
+      "image_url": "https://i1.feedspot.com/5236959.jpg?t=1610957304"
+    },
+    {
+      "title": "Scroll for Initiative",
+      "feed_url": "https://scrollforinitiative.com/feed/",
+      "website_url": "https://scrollforinitiative.com/",
+      "description": "I was first introduced to D&D through my friend's copy of First Quest, an AD&D starter set. It came with a snazzy audio CD. In 2001 we levelled up to 3rd edition. I've been hooked ever since. Started in 2020, a UK-based blog about DM advice, D&D history, player tips, and, occasionally, mini painting.",
+      "followers": {
+        "facebook": 69,
+        "twitter": 1300,
+        "instagram": 205
+      },
+      "image_url": "https://i1.feedspot.com/5267384.jpg?t=1618302507"
+    },
+    {
+      "title": "YUM/DM",
+      "feed_url": "https://yumdm.com/feed/",
+      "website_url": "https://yumdm.com/",
+      "description": "I publish a Dungeons & Dragons zine. I am also RPG game designer. Check out the blog to know more about my D&D world, gameplay, tips and more!",
+      "followers": {
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5482156.jpg?t=1671614601"
+    },
+    {
+      "title": "Secrets Of Blackmoor Blog",
+      "feed_url": "https://www.secretsofblackmoor.com/blog/feed",
+      "website_url": "https://www.secretsofblackmoor.com/blog",
+      "description": "Check out news about the film, as well as never before revealed crunchy bits about the hidden history of Dungeons & Dragons. Blackmoor is the name of a fictional world created by David Arneson. It is also the prototype of Dungeons & Dragons, the first published role-playing game. Unlike other fantasy worlds, such as J.R.R. Tolkien's Middle Earth, Blackmoor is a living world that is being explored to this day. Secrets of Blackmoor investigates the origins of the role-playing game, through candid interviews, archival footage, and newly discovered artifacts.",
+      "followers": {
+        "facebook": 7600
+      },
+      "image_url": "https://i1.feedspot.com/5482154.jpg?t=1671614280"
+    },
+    {
+      "title": "Dungeoneering Blog",
+      "feed_url": "https://dungeoneering.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://dungeoneering.blogspot.com/",
+      "description": "I'm an illustrator and game designer, 20-year veteran of the video game industry, and a long-time gaming fan. This blog explores the roots, history, and ongoing evolution of roleplaying games, and other tabletop games in general.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5482150.jpg?t=1671614243"
+    },
+    {
+      "title": "Dice Goblin Blog",
+      "feed_url": "https://dicegoblin.blog/feed/",
+      "website_url": "https://dicegoblin.blog/",
+      "description": "I'm Lars, a Dungeon Master for multiple campaigns for about 4 years now. My interests and inspiration has evolved all over the place during that time: From 5e to PbtA to OSR and beyond. On this blog, I'll share my ideas about being a DM with the world, and hopefully add something useful to your personal DM toolbox!",
+      "followers": {
+        "twitter": 186
+      },
+      "image_url": "https://i1.feedspot.com/5482149.jpg?t=1682058692"
+    },
+    {
+      "title": "Roll 4 Joy",
+      "feed_url": "https://roll4joy.org/feed/",
+      "website_url": "https://roll4joy.org/",
+      "description": "This blog is about where our lordship meets our servanthood, where our identities and God-given abilities meet our activity in God's proclaimed mission and where Pastor meets Dungeon Master, and following Jesus meets tabletop fantasy role-playing.",
+      "followers": {
+        "twitter": 269
+      },
+      "image_url": "https://i1.feedspot.com/5482146.jpg?t=1671616564"
+    },
+    {
+      "title": "Dungeons & Dragons Blog",
+      "feed_url": "https://dndblog.com/feed/",
+      "website_url": "https://dndblog.com/",
+      "description": "A blog about dungeons and dragons role playing and the antics and ludicrous trials and tribulations of the SD DND Crew. DND Blog is an account of the ludicrous trials and tribulations of the SD DND Crew.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5482145.jpg?t=1671614835"
+    },
+    {
+      "title": "Boccob's Blessed Blog",
+      "feed_url": "https://boccobsblog.com/feed/",
+      "website_url": "https://boccobsblog.com/",
+      "description": "Boccob's Blessed Blog is dedicated to all things related to gaming and gamer culture. While this site will emphasize Dungeons & Dragons (especially 3.5e), gamers of all systems will find useful, and sometimes entertaining information. There will be content for World of Darkness, Star Wars, GURPS, Shadowrun, Pathfinder, and Savage Worlds, just to name a few. I was the chief god of magic in the Greyhawk game setting from 1983 until 2008. I was asked to retire prior to the release of 4th edition.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5482144.jpg?t=1671615410"
+    },
+    {
+      "title": "Game Night Blog",
+      "feed_url": "https://gamenightblog.com/feed/",
+      "website_url": "https://gamenightblog.com/",
+      "description": "We're just a family who loves to play games. One Dad, one Mom, and two boys, aged 10 and 12. We try to have a family game night once a week. We love playing games with our family and friends. But it is hard to find, good, trusting game reviews that focus on family. We hope to change that with our game reviews and experiences with a focus on playing with your kids.",
+      "followers": {
+        "facebook": 83
+      },
+      "image_url": "https://i1.feedspot.com/5482142.jpg?t=1671614321"
+    },
+    {
+      "title": "Solo Dungeon Crawler",
+      "feed_url": "https://solodungeoncrawler.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://solodungeoncrawler.blogspot.com/",
+      "description": "Solo Dungeon Crawler is the home of old-school solo Dungeons and Dragons campaigns, how to play DnD solo, and all other solo DnD needs, such as solo D&D actual play and tutorials. You will also find information on the D&D BECMI rules and old-school DnD history. If you want to learn how to play Dungeons & Dragons solo and you love Basic D&D or old school revival/old school renaissance (OSR) tabletop RPG rules then this blog is for you.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5421055.jpg?t=1657713449"
+    },
+    {
+      "title": "The Alexandrian",
+      "feed_url": "https://thealexandrian.net/feed",
+      "website_url": "https://thealexandrian.net/",
+      "description": "The Alexandrian was designed not only to be a site of news and updates, but also as a repository: Here you'll find my reviews, my politics, my stories, and my thoughts. Welcome to the Alexandrian, the homepage of Justin Alexander. By trade I'm a freelance writer and RPG Producer and Developer at Atlas Games.",
+      "followers": {
+        "twitter": 6600
+      },
+      "image_url": "https://i1.feedspot.com/5314618.jpg?t=1671615939"
+    },
+    {
+      "title": "Dyson's Dodecahedron Blog",
+      "feed_url": "https://dysonlogos.blog/feed/",
+      "website_url": "https://dysonlogos.blog/",
+      "description": "I'm Dyson. I've been gaming since 1979 in a variety of game systems, but most often playing Dungeons & Dragons. This is a general RPG blog, where I talked a lot about the games I've played and how I like to play them.",
+      "followers": {
+        "twitter": 21000
+      },
+      "image_url": "https://i1.feedspot.com/4566150.jpg?t=1682057490"
+    },
+    {
+      "title": "The DnD Geek",
+      "feed_url": "https://thedndgeek.co.uk/feed",
+      "website_url": "https://thedndgeek.co.uk/",
+      "description": "Dice, books, rollers and more - The DnD geek is a one-stop shop for all your D&D goodies! Check out our store, or read up on posts by our resident",
+      "followers": {
+        "twitter": 41
+      },
+      "image_url": "https://i1.feedspot.com/5030859.jpg?t=1620796172"
+    },
+    {
+      "title": "Wizard Of The Tavern",
+      "feed_url": "https://wizardofthetavern.com/feed/",
+      "website_url": "https://wizardofthetavern.com/",
+      "description": "My name is Anderson Craftheart an avid Dungeons and Dragons player for over 7 years. I am currently a senior in college in Finance and Marketing. Sadly there was no role playing major to take. This is actually my first website so I love hearing from my visitors so I can continue to provide valuable and fun content that everyone can enjoy.",
+      "followers": {
+        "twitter": 8
+      },
+      "image_url": "https://i1.feedspot.com/5033502.jpg?t=1620796192"
+    },
+    {
+      "title": "Deathsave",
+      "feed_url": "https://deathsave.com/feed/",
+      "website_url": "https://deathsave.com/",
+      "description": "Guides, wisdom and inspiration for Dungeons & Dragons players and Dungeon Masters.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5507753.jpg?t=1676371403"
+    },
+    {
+      "title": "Eventyr Games \u00bb DM Tips",
+      "feed_url": "https://eventyrgames.com/category/dms-tips/feed/",
+      "website_url": "https://eventyrgames.com/category/dms-tips/",
+      "description": "D&D blog, content, and products",
+      "followers": {},
+      "image_url": "https://eventyrgames.com/wp-content/uploads/2020/08/chromadragon-logo-1-100x100.png?t=1703236711"
+    },
+    {
+      "title": "Red Ragged Fiend \u00bb D&D",
+      "feed_url": "https://www.redraggedfiend.com/tag/dd/feed/",
+      "website_url": "https://www.redraggedfiend.com/tag/dd/",
+      "description": "Adventures in Tabletop",
+      "followers": {
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/5741640.jpg?t=1703237417"
+    },
+    {
+      "title": "Power Score RPG",
+      "feed_url": "https://thecampaign20xx.blogspot.com/feeds/posts/default",
+      "website_url": "https://thecampaign20xx.blogspot.com/",
+      "followers": {
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5741599.jpg?t=1703237455"
+    },
+    {
+      "title": "All Things DnD",
+      "feed_url": "https://tiefling-anarchy.tumblr.com/rss",
+      "website_url": "https://tiefling-anarchy.tumblr.com/",
+      "description": "hi im bridger, im rambling about anything dnd that comes to mind. blog themed after my dnd character!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5741628.jpg?t=1703237076"
+    },
+    {
+      "title": "Gamer Peak",
+      "feed_url": "https://gamerpeak.com/feed/",
+      "website_url": "https://gamerpeak.com/",
+      "description": "A blog about Gaming, Teaching, D&D, and Fatherhood. By Rufus Scott.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5741611.jpg?t=1703237514"
+    },
+    {
+      "title": "Mystery Dice Goblins Blog",
+      "feed_url": "https://mysterydicegoblin.com/blogs/the-mythical-scroll.atom",
+      "website_url": "https://mysterydicegoblin.com/blogs/the-mythical-scroll",
+      "description": "Unlock your imagination and explore the endless realms of Dungeons & Dragons, where epic quests and mythical creatures come alive. Enjoy epic articles in the Mystery Dice Goblins Blog to add to your DnD lore. Mystery Dice Goblins is a one-stop online shop of all D&D-related products and accessories.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 529
+      },
+      "image_url": "https://i1.feedspot.com/5724841.jpg?t=1701333102"
+    },
+    {
+      "title": "DNDS Blog",
+      "feed_url": "https://dnds.store/feed/",
+      "website_url": "https://dnds.store/blog/",
+      "description": "Ecommerce website for a brand",
+      "followers": {
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/5741639.jpg"
+    },
+    {
+      "title": "Grumpy Wizard Blog \u00bb 5E",
+      "feed_url": "https://grumpywizard.home.blog/category/5e/feed/",
+      "website_url": "https://grumpywizard.home.blog/category/5e/",
+      "description": "Essays on Sword & Sorcery Fiction, Classic Adventure Gaming, and Heavy Metal Music",
+      "followers": {
+        "facebook": 103,
+        "twitter": 953
+      },
+      "image_url": "https://i1.feedspot.com/5741595.jpg?t=1703236475"
+    },
+    {
+      "title": "A Dungeons and Dragons Blog",
+      "feed_url": "https://chaoticnootral.tumblr.com/rss",
+      "website_url": "https://chaoticnootral.tumblr.com/",
+      "description": "Icon by my friend Rowan of shape and hani, our characters",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5741635.jpg?t=1703236704"
+    },
+    {
+      "title": "SkullSplitter Dice DnD Blog",
+      "feed_url": "https://www.skullsplitterdice.com/blogs/dnd.atom",
+      "website_url": "https://www.skullsplitterdice.com/blogs/dnd",
+      "followers": {
+        "facebook": 68300,
+        "twitter": 8500
+      },
+      "image_url": "https://i1.feedspot.com/5741602.jpg?t=1703236514"
+    },
+    {
+      "title": "Modular Realms Blog",
+      "feed_url": "https://www.modularrealms.com/blogs/news.atom",
+      "website_url": "https://www.modularrealms.com/blogs/news",
+      "description": "Hi I'm Annabelle and this is the part of my DnD shop where I write about all sort of nerdy subjects from painting DnD terrain I sell, to how to explaining Dungeons and Dragons for beginners and giving Dungeon Master Tips.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 512
+      },
+      "image_url": "https://s3-us-west-2.amazonaws.com/feedspothttps://www.modularrealms.com/pages/contact-useed/5741614.jpg?t=1703236585"
+    },
+    {
+      "title": "D&D in a Castle Blog",
+      "feed_url": "https://www.dndinacastle.com/blog?format=rss",
+      "website_url": "https://www.dndinacastle.com/blog",
+      "description": "Journey Through our Blog: Dive into a treasure trove of insightful articles and captivating stories. Explore a world of Dungeons and Dragons lore, castle tales, and gaming tips. Immerse yourself in the magic and knowledge shared by our passionate community. Begin your adventure through our collection of blog posts today.",
+      "followers": {
+        "facebook": 18900,
+        "twitter": 4200,
+        "instagram": 24400
+      },
+      "image_url": "https://i1.feedspot.com/5741633.jpg?t=1703236695"
+    },
+    {
+      "title": "Delta's D&D Hotspot",
+      "feed_url": "https://deltasdnd.blogspot.com/feeds/posts/default",
+      "website_url": "https://deltasdnd.blogspot.com/",
+      "description": "Math, history, and design of old-school D&D.",
+      "followers": {
+        "twitter": 701
+      },
+      "image_url": "https://i1.feedspot.com/5314589.jpg?t=1682057235"
+    },
+    {
+      "title": "Jeffro's Space Gaming Blog \u00bb Old School D&D",
+      "feed_url": "https://jeffro.wordpress.com/category/old-school-dd/feed/",
+      "website_url": "https://jeffro.wordpress.com/category/old-school-dd/",
+      "description": "Microgames, Monster Games, and Role Playing Games",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5741607.jpg?t=1703236543"
+    },
+    {
+      "title": "Tabletop Joab",
+      "feed_url": "https://tabletopjoab.com/feed/",
+      "website_url": "https://tabletopjoab.com/",
+      "description": "Tabletop Joab shares tips, tricks, and lore for all things D&D 5e. This is your source for guides, DM tips, and reviews to make your D&D game unforgettable!",
+      "followers": {
+        "facebook": 211,
+        "twitter": 40
+      },
+      "image_url": "https://i1.feedspot.com/5296483.jpg?t=1624616361"
+    },
+    {
+      "title": "Flutes Loot",
+      "feed_url": "https://www.flutesloot.com/feed/",
+      "website_url": "https://www.flutesloot.com/",
+      "description": "A Dungeons & Dragons blog for the fantasy fanatic and table-top savant.",
+      "followers": {
+        "twitter": 787
+      },
+      "image_url": "https://i1.feedspot.com/5083341.jpg?t=1620796205"
+    },
+    {
+      "title": "Master The Dungeon",
+      "feed_url": "https://www.masterthedungeon.com/feed/",
+      "website_url": "https://www.masterthedungeon.com/",
+      "description": "New to running D&D and don't know where to start? We can help! Created by Dungeon Masters for Dungeon Masters. Blog, Advice, Resources, Campaigns and more!",
+      "followers": {
+        "facebook": 120,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5029935.jpg?t=1620796223"
+    },
+    {
+      "title": "Merric's Musings",
+      "feed_url": "https://merricb.com/feed/",
+      "website_url": "https://merricb.com/",
+      "description": "Merric Blackman writes reviews and play advice for Dungeons & Dragons. He is an Australian role-player, board gamer, and fantasy reader.",
+      "followers": {
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5255482.jpg?t=1630738023"
+    },
+    {
+      "title": "RJD20",
+      "feed_url": "https://www.rjd20.com/feeds/posts/default",
+      "website_url": "https://www.rjd20.com/",
+      "description": "Helping Dungeon Masters and Players run and play the best D&D games they can.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 200
+      },
+      "image_url": "https://i1.feedspot.com/5389628.jpg?t=1649760591"
+    },
+    {
+      "title": "Before You Roll",
+      "feed_url": "https://beforeyouroll.com/feed/",
+      "website_url": "https://beforeyouroll.com/",
+      "description": "Before You Roll is a blog for all TTRPG lovers out there, who are looking for inspiration, new ideas, mechanics and stories to enrich their own work or games. In this early stage, the blog will concentrate mostly on Dungeon & Dragons Fifth Edition, but I intend to dig deeper into Legends of Five Rings, Call of Cthulhu and Cyberpunk (2020 and Red) as well.",
+      "followers": {
+        "facebook": 5,
+        "twitter": 119,
+        "instagram": 337
+      },
+      "image_url": "https://i1.feedspot.com/5197329.jpg?t=1600331474"
+    },
+    {
+      "title": "Coloreolas",
+      "feed_url": "https://coloreolas.blogspot.com/feeds/posts/default",
+      "website_url": "https://coloreolas.blogspot.com/",
+      "description": "Hello! I am a Costa Rican graphic designer who fell in love with D&D in college while playing with my friends. Check out my blog for the latest dnd content.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5225443.jpg?t=1607348297"
+    },
+    {
+      "title": "Roll Seekers Blog",
+      "feed_url": "https://www.rollseekers.com/blog-feed.xml",
+      "website_url": "https://www.rollseekers.com/blog",
+      "description": "Covers the latest recaps and behind-the-scenes information for Roll Seekers. Roll Seekers is a group of gamers led by Lore Master Dustin Ritchea who live stream their tabletop role-playing adventures within Nabell.",
+      "followers": {
+        "facebook": 545,
+        "twitter": 86,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5335047.jpg?t=1634904155"
+    },
+    {
+      "title": "Mephit James Blog \u00bb Dungeons & Dragons",
+      "feed_url": "https://mephitjamesblog.wordpress.com/category/dungeons-dragons/feed/",
+      "website_url": "https://mephitjamesblog.wordpress.com/category/dungeons-dragons/",
+      "description": "I love tackling new systems, building up settings, exploring fun things, and generally looking at RPGs from all directions like a particularly interesting seashell. Check out my ideas for Dungeons and Dragons, adventures, stories and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5482157.jpg?t=1671615525"
+    },
+    {
+      "title": "The Arcane Library Blog",
+      "feed_url": "https://www.thearcanelibrary.com/blogs/news.atom",
+      "website_url": "https://www.thearcanelibrary.com/blogs/news",
+      "description": "Become a better Dungeon Master, adventure designer, and writer for 5E Dungeons & Dragons with these articles by Kelsey Dionne of The Arcane Library. Kelsey Dionne first opened the rune-inscribed doors to The Arcane Library in 2017. Since then, she's been revolutionizing adventure design with one goal: To make running your D&D games as easy and fun as possible.",
+      "followers": {
+        "facebook": 13400,
+        "twitter": 6400,
+        "instagram": 13500
+      },
+      "image_url": "https://i1.feedspot.com/5482155.jpg?t=1671614783"
+    },
+    {
+      "title": "www. Newbie DM .com",
+      "feed_url": "https://newbiedm.com/feed/",
+      "website_url": "https://newbiedm.com/",
+      "description": "If you are a first-time DM, it's the place to go to for helpful tutorials on making your own gaming tokens, printing maps at 1' scale, advice, tips, and plenty more. Chances are, if you have a question as a first-time DM, I may have had it at some point as well and have probably tackled it here. I have been playing D&D for a long time, throughout high school.",
+      "followers": {
+        "twitter": 15300
+      },
+      "image_url": "https://i1.feedspot.com/103879.jpg?t=1671616000"
+    },
+    {
+      "title": "The Relentless Dragon \u00bb Dungeons & Dragons",
+      "feed_url": "https://relentlessdragon.com/category/dungeons-dragons/feed/",
+      "website_url": "https://relentlessdragon.com/category/dungeons-dragons/",
+      "description": "The Relentless Dragon Game Store is a family-owned, family-friendly, inclusive game store. Explore our Dungeons and Dragons category for more news on campaigns, characters, news editions and more!",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 85
+      },
+      "image_url": "https://i1.feedspot.com/5482151.jpg?t=1671614443"
+    },
+    {
+      "title": "Adventures In Rovanna",
+      "feed_url": "https://rovanna.wordpress.com/feed/",
+      "website_url": "https://rovanna.wordpress.com/",
+      "description": "I am a school librarian and have been an avid reader from as far back as I can remember. I particularly like fantasy but will read anything that grabs my attention. I enjoy drawing and painting, when I feel like it but tend to turn those talents to map drawing for D & D. As a DM I like things to be relatively straight forward with the PCs being the hero adventurer yet maybe with one or two quirks. Follow along as I write about my D&D adventures in this blog.",
+      "followers": {
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5482148.jpg?t=1671614545"
+    },
+    {
+      "title": "ThinkDM",
+      "feed_url": "https://thinkdm.org/feed/",
+      "website_url": "https://thinkdm.org/",
+      "description": "Explore the author's musings and ramblings o Dungeons and Dragons, gameplay, characters, roleplay and more!",
+      "followers": {
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5482147.jpg?t=1671614715"
+    },
+    {
+      "title": "Chicagowiz's Games",
+      "feed_url": "https://chgowiz-games.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://chgowiz-games.blogspot.com/",
+      "description": "Hi! I'm Micheal Chgowiz Shorten, Dungeons & Dragons player and referee. Here I blog about my love of playing old-school Dungeons & Dragons! I share reviews, tips, and tricks mostly on D&D. D&D lovers, I bet this page is what you're looking for.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5421352.jpg?t=1657780803"
+    },
+    {
+      "title": "Dungeon Mastering Blog",
+      "feed_url": "https://www.dungeonmastering.com/feed/",
+      "website_url": "https://www.dungeonmastering.com/blog/",
+      "description": "One of the greatest parts of D&D is getting together as a group and telling a communal story. That's what we at Dungeon Mastering want to provide: a community. We're passionate about D&D and hope to open doors for players and DMs to make this great game accessible and welcoming. We bring our collection of helpful guides meant to kick-off your creative spark during your next play session. Dungeon Mastering provides tips and tricks for players, innovative and inspiring ideas for DMs, and rules and roleplay support for all.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/264761.jpg?t=1671614180"
+    },
+    {
+      "title": "The Tao of D&D",
+      "feed_url": "https://www.blogger.com/feeds/3871409676946408069/posts/default",
+      "website_url": "https://tao-dnd.blogspot.com/",
+      "description": "I Love the Game of D&D",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5741601.jpg?t=1703236891"
+    },
+    {
+      "title": "Bell of Lost Souls \u00bb Dungeons & Dragons",
+      "feed_url": "https://www.belloflostsouls.net/category/dungeons-and-dragons/feed",
+      "website_url": "https://www.belloflostsouls.net/category/dungeons-and-dragons",
+      "description": "Stay up to date wth Dungeons & Dragons News, Reviews, Editorials, and Adventures. The best D&D coverage on the web. Bell of Lost Souls is the leading tabletop gaming news and pop culture enthusiast website. Founded in 2006, we are one of the oldest websites covering the world of tabletop gaming and RPGs. Our nonstop 365 coverage of the tabletop games and entertainment industry covers Wizards of the Coast, Games Workshop, Privateer Press, Fantasy Flight Games, Paizo, Kickstarter, and other board games, RPG, and tabletop product lines and the gaming community itself.",
+      "followers": {
+        "facebook": 228500,
+        "twitter": 15400,
+        "instagram": 13900
+      },
+      "image_url": "https://i1.feedspot.com/5482153.jpg?t=1671615668"
+    },
+    {
+      "title": "DMing Dad Blog",
+      "feed_url": "https://dmingdad.com/feed/",
+      "website_url": "https://dmingdad.com/blog/",
+      "description": "Your resource for family-friendly Dungeons & Dragons content, new player guides, advice for new DM's, Homebrew content, and parent's guide to D&D.",
+      "followers": {
+        "facebook": 62,
+        "twitter": 26
+      },
+      "image_url": "https://i1.feedspot.com/5318995.jpg?t=1630736036"
+    },
+    {
+      "title": "The Daily Dungeon Master",
+      "feed_url": "https://www.thedailydungeonmaster.com/feed",
+      "website_url": "https://www.thedailydungeonmaster.com/",
+      "description": "The blogger behind The Daily Dungeon Master Blog brings 27 years of dungeon mastering and writing experience to showcase diverse D&D campaigns. The blog offers game summaries, insights into campaign directions, and candid accounts of writing challenges.",
+      "followers": {
+        "facebook": 16,
+        "twitter": 18
+      },
+      "image_url": "https://i1.feedspot.com/5482143.jpg?t=1671615594"
+    }
+  ]
+}

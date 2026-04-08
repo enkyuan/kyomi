@@ -1,0 +1,78 @@
+{
+  "category": "Kansas City Music",
+  "source_url": "https://rss.feedspot.com/kansas_city_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Pitch \u00bb Music",
+      "feed_url": "https://www.thepitchkc.com/category/music/feed/",
+      "website_url": "https://www.thepitchkc.com/category/music/",
+      "description": "The Pitch is Kansas City's source for progressive, independent, street-level coverage of news, arts, music, and culture. Browse the Music blog to learn about Kansas City's music scene - rock, hip-hop, rap, indie, punk, and country.",
+      "followers": {
+        "facebook": 70600,
+        "twitter": 45000,
+        "instagram": 45300
+      },
+      "image_url": "https://i1.feedspot.com/5326689.jpg?t=1632921797"
+    },
+    {
+      "title": "Live80sKansasCity Blog",
+      "feed_url": "https://www.live80skc.com/category/kansas-city-concert-blog/feed/",
+      "website_url": "https://www.live80skc.com/category/kansas-city-concert-blog/",
+      "description": "Live '80s Kansas City is a digital entertainment site focused on live event promotion and photography for artists from the 1980s appearing locally and outside the area. It brings together fellow fanatics in the beloved city to relive that eminent decade or discover its glory for the very first time. Live '80s Kansas City concert blog provides reviews of concerts in Kansas City and live events featuring artists from the 1980s performing in the area.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 301,
+        "instagram": 720
+      },
+      "image_url": "https://i1.feedspot.com/4859046.jpg?t=1611915175"
+    },
+    {
+      "title": "Kansas City Blues Society Blog",
+      "feed_url": "https://blueskc.org/feed/",
+      "website_url": "https://blueskc.org/blog/",
+      "description": "The Kansas City Blues Society creates a community environment to promote, preserve, enjoy, and celebrate Kansas City Blues music. Get the lowdown on all of Kansas City's blues news with our blog.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 20,
+        "instagram": 379
+      },
+      "image_url": "https://i1.feedspot.com/5474048.jpg?t=1669888598"
+    },
+    {
+      "title": "Shuttlecock Music Magazine",
+      "feed_url": "https://www.shuttlecockmusic.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.shuttlecockmusic.com/",
+      "description": "Launched in 2015, Shuttlecock Music Magazine is dedicated to featuring in-depth coverage of new and exciting music emerging from Kansas City and the surrounding areas. The website features concert coverage, interviews, podcasts, streams of new releases, and video content.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 1600,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5534125.jpg?t=1680682241"
+    },
+    {
+      "title": "Meyer Music Blog",
+      "feed_url": "https://www.meyermusic.com/about/blog/feed/",
+      "website_url": "https://www.meyermusic.com/about/blog/",
+      "description": "In March 1966, Meyer Music opened the doors of our first location in Blue Springs, Missouri. Over the decades, our music business has grown and flourished. We believe music education is such a crucial part of a child's development. We carefully curate the lines of musical instruments we rent and sell in our stores.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 212,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5534124.jpg?t=1680682236"
+    },
+    {
+      "title": "The Record Machine",
+      "feed_url": "https://www.therecordmachine.co/listen-up?format=rss",
+      "website_url": "https://www.therecordmachine.co/listen-up",
+      "description": "Receive news and updates from The Record Machine.The Record Machine is a homegrown, pioneering independent record label based in Kansas City, MO. We aim to work with a diverse group of musicians who are hardworking, dedicated, and stand out on their own accord.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 2100,
+        "instagram": 14600
+      },
+      "image_url": "https://i1.feedspot.com/5326677.jpg?t=1632919202"
+    }
+  ]
+}

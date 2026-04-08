@@ -1,0 +1,66 @@
+{
+  "category": "FDI",
+  "source_url": "https://rss.feedspot.com/fdi_rss_feeds",
+  "feeds": [
+    {
+      "title": "Foreign Investment and National Security Blog",
+      "feed_url": "https://foreigninvestment.bakermckenzie.com/feed/",
+      "website_url": "https://foreigninvestment.bakermckenzie.com/",
+      "description": "A growing number of jurisdictions have now introduced national laws enabling the screening and review of incoming foreign investments, often with a focus on specific sectors perceived to be particularly sensitive. This blog aims to provide you with the latest news and updates in respect of foreign investment review and national security trends and developments, keeping you up-to-date and informed about the legal and business risks impacting your next transaction.",
+      "followers": {
+        "facebook": 24300,
+        "twitter": 30100
+      },
+      "image_url": "https://i1.feedspot.com/5426647.jpg?t=1665146924"
+    },
+    {
+      "title": "OCO Global",
+      "feed_url": "https://www.ocoglobal.com/feed/",
+      "website_url": "https://www.ocoglobal.com/latest/",
+      "description": "OCO Global is a technology enabled advisory firm focused on trade, investment and economic development. The Leading Authority in Foreign Investment.",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5426650.jpg?t=1659090627"
+    },
+    {
+      "title": "Cleary Trade Watch",
+      "feed_url": "https://www.clearytradewatch.com/feed/",
+      "website_url": "https://www.clearytradewatch.com/",
+      "description": "The Cleary Foreign Investment and International Trade Watch provides updates and insights on international trade and sanctions matters. It is published by Cleary Gottlieb's Antitrust, Economic Sanctions and Foreign Investments and International Trade and Investment practice groups to provide updates and insights on international trade and sanctions matters.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5426646.jpg?t=1659090904"
+    },
+    {
+      "title": "InvestChile Blog",
+      "feed_url": "https://blog.investchile.gob.cl/rss.xml",
+      "website_url": "https://blog.investchile.gob.cl/",
+      "description": "FDI news, policies & tools. Business data analysis. Investment location trends. Business opportunities in Chile. We are the government agency responsible for promoting Chile in the global market as a destination for foreign direct investment, serving as a bridge between the interests of overseas investors and the business opportunities the country offers, and providing world-class services that are in line with the country's economic development policies.",
+      "followers": {
+        "twitter": 11700
+      },
+      "image_url": "https://i1.feedspot.com/5426648.jpg?t=1659091110"
+    },
+    {
+      "title": "Financial Times \u00bb Foreign Direct Investment",
+      "feed_url": "https://www.ft.com/foreign-direct-investment?format=rss",
+      "website_url": "https://www.ft.com/foreign-direct-investment",
+      "description": "The Financial Times is one of the world's leading news organisations, recognised internationally for its authority, integrity and accuracy. News, analysis and comment from the Financial Times, the world's leading global business publication",
+      "followers": {
+        "twitter": 7400000
+      },
+      "image_url": "https://i1.feedspot.com/5426662.jpg?t=1659093018"
+    },
+    {
+      "title": "FDI China Blog",
+      "feed_url": "https://fdichina.com/feed/",
+      "website_url": "https://fdichina.com/blog/",
+      "description": "Educate yourself on China and world business news. Doing business in China with the guidance of FDI China's blog! FDI China is a China Company Registration and Professional Employment Organization (PeO) firm based in Shanghai, China.",
+      "followers": {
+        "facebook": 131,
+        "instagram": 218
+      },
+      "image_url": "https://i1.feedspot.com/5341282.jpg?t=1659089976"
+    }
+  ]
+}

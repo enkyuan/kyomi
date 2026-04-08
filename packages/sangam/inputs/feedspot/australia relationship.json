@@ -1,0 +1,46 @@
+{
+  "category": "Australia Relationship",
+  "source_url": "https://rss.feedspot.com/australia_relationship_rss_feeds",
+  "feeds": [
+    {
+      "title": "Sydney Gay Counselling Blog",
+      "feed_url": "https://sydneygaycounselling.com/blog/feed/",
+      "website_url": "https://sydneygaycounselling.com/blog/",
+      "description": "Gay Blog of articles, research and tips on how to live a great gay life, produced by Sydney Gay Counselling.",
+      "followers": {
+        "facebook": 972
+      },
+      "image_url": "https://i1.feedspot.com/4856965.jpg?t=1611834233"
+    },
+    {
+      "title": "Sydney Couple and Family Specialists Blog",
+      "feed_url": "https://sydneycoupleandfamily.com/feed/",
+      "website_url": "https://sydneycoupleandfamily.com/blog/",
+      "description": "Whether you are an individual, a couple or a family, the approach at Sydney Couple and Family Specialists is essentially the same.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4856986.jpg?t=1635766003"
+    },
+    {
+      "title": "Clinton Power + Associates Blog",
+      "feed_url": "https://clintonpower.com.au/feed/",
+      "website_url": "https://clintonpower.com.au/blog/",
+      "description": "Clinton Power + Associates are relationship counselors that are dedicated to improving the lives and relationships of singles, individuals in relationships, and couples. Follow the blog to stay informed with the articles and advice on dating, relationships, and sexuality.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 2800,
+        "instagram": 6000
+      },
+      "image_url": "https://i1.feedspot.com/4856939.jpg?t=1611834225"
+    },
+    {
+      "title": "Melissa Ferrari Blog",
+      "feed_url": "https://www.melissaferrari.com.au/blog-feed.xml",
+      "website_url": "https://www.melissaferrari.com.au/blog",
+      "description": "Melissa Ferrari is a Sydney-based psychotherapist, counsellor and couples therapist. Melissa offers a wide range of services including individual & couples marriage counselling, relationship, family & parenting advice and group workshops .",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4687730.jpg?t=1611834244"
+    }
+  ]
+}

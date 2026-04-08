@@ -1,0 +1,367 @@
+{
+  "category": "PostgreSQL",
+  "source_url": "https://rss.feedspot.com/postgresql_rss_feeds",
+  "feeds": [
+    {
+      "title": "Planet PostgreSQL",
+      "feed_url": "https://planet.postgresql.org/rss20.xml",
+      "website_url": "https://planet.postgresql.org/",
+      "description": "Blog entries from members of the PostgreSQL community.",
+      "followers": {
+        "twitter": 35400
+      },
+      "image_url": "https://i1.feedspot.com/1416807.jpg?t=1610965444"
+    },
+    {
+      "title": "Citus Data Blog",
+      "feed_url": "https://www.citusdata.com/feed.xml",
+      "website_url": "https://www.citusdata.com/blog/",
+      "description": "All the latest blog posts from Citus Data about Postgres, sharding, the Citus database, and distributed databases. Plus posts about scaling multi-tenant SaaS apps, and speeding up real-time analytics pipelines. Our mission is to make it so developers never have to worry about scaling their database again.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/4827575.jpg?t=1610965459"
+    },
+    {
+      "title": "Robert Haas",
+      "feed_url": "http://rhaas.blogspot.com/feeds/posts/default",
+      "website_url": "http://rhaas.blogspot.com/",
+      "description": "Robert Haas is Senior Database Architect at EnterpriseDB, PostgreSQL Major Contributor, and Committer. In this blog, Robert Haas shares information on PostgreSQL.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/131151.jpg?t=1610965472"
+    },
+    {
+      "title": "Cybertec Blog",
+      "feed_url": "https://www.cybertec-postgresql.com/en/feed/",
+      "website_url": "https://www.cybertec-postgresql.com/en/blog/",
+      "description": "We are world-leading PostgreSQL Database specialists and experts in Artificial Intelligence, Machine Learning & Data Services. Based on multiple years of experience with PostgreSQL, we've developed a variety of applications & successfully integrated them into existing systems. Follow to get the newest tricks & useful tips about the world of PostgreSQL and Data Science! Our authors & technicians share their knowledge to keep you going with your data.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5288999.jpg?t=1622892889"
+    },
+    {
+      "title": "Fujitsu PostgreSQL Blog",
+      "feed_url": "https://www.postgresql.fastware.com/blog/rss.xml",
+      "website_url": "https://www.postgresql.fastware.com/blog",
+      "description": "Covers articles regarding all aspects of PostgreSQL and FUJITSU Enterprise Postgres. Fujitsu is a leader in Postgres open-source DBMS - one of the world's most advanced open-source database systems.",
+      "followers": {
+        "twitter": 396
+      },
+      "image_url": "https://i1.feedspot.com/4918237.jpg?t=1620632999"
+    },
+    {
+      "title": "Fundaci\u00f3n PostgreSQL Blog",
+      "feed_url": "https://postgresql.fund/blog/index.xml",
+      "website_url": "https://postgresql.fund/blog/",
+      "description": "Featuring articles that have to do exclusively with PostgreSQL.Fundaci\u00f3n PostgreSQL's goal is to promote the Open Source software known as PostgreSQL at the national and international scope, with a special emphasis on the Spanish-speaking community.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5332592.jpg?t=1634619621"
+    },
+    {
+      "title": "Pganalyze Blog",
+      "feed_url": "https://pganalyze.com/feed.xml",
+      "website_url": "https://pganalyze.com/blog",
+      "description": "Monitoring Postgres and tuning query performance",
+      "followers": {
+        "facebook": 70,
+        "twitter": 716
+      },
+      "image_url": "https://i1.feedspot.com/5675159.jpg?t=1695215227"
+    },
+    {
+      "title": "Bruce Momjian Postgres Blog",
+      "feed_url": "https://momjian.us/main/rss/pgblog.xml",
+      "website_url": "https://momjian.us/main/blogs/pgblog/2023.html",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/35821.jpg?t=1695377417"
+    },
+    {
+      "title": "EDB Postgres Builder Blog",
+      "feed_url": "https://www.enterprisedb.com/blog/rss.xml",
+      "website_url": "https://www.enterprisedb.com/blog",
+      "description": "Industry news and thought leadership",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/5675156.jpg?t=1695215097"
+    },
+    {
+      "title": "AWS Database Blog \u00bb Postgres Compatible",
+      "feed_url": "https://aws.amazon.com/blogs/database/category/database/amazon-aurora/postgresql-compatible/feed/",
+      "website_url": "https://aws.amazon.com/blogs/database/category/database/amazon-aurora/postgresql-compatible/",
+      "description": "Official Database Blog of Amazon Web Services",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 2200000,
+        "instagram": 673000
+      },
+      "image_url": "https://i1.feedspot.com/5675147.jpg?t=1695215001"
+    },
+    {
+      "title": "Postgres.ai Blog",
+      "feed_url": "https://postgres.ai/blog/rss.xml",
+      "website_url": "https://postgres.ai/blog",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5675152.jpg?t=1695215031"
+    },
+    {
+      "title": "pgMustard Blog",
+      "feed_url": "https://www.pgmustard.com/blog?format=rss",
+      "website_url": "https://www.pgmustard.com/blog",
+      "description": "Posts from the team building pgMustard, a tool that gives PostgreSQL performance advice based on EXPLAIN ANALYZE output.",
+      "followers": {
+        "twitter": 549
+      },
+      "image_url": "https://i1.feedspot.com/5675161.jpg?t=1695380550"
+    },
+    {
+      "title": "Timescale Blog",
+      "feed_url": "https://www.timescale.com/blog/rss",
+      "website_url": "https://www.timescale.com/blog",
+      "description": "The latest thoughts, tutorials, and technical posts on TimescaleDB, SQL, time-series data, and PostgreSQL. With IoT, network monitoring, and DevOps use cases.",
+      "followers": {
+        "facebook": 321,
+        "twitter": 7200
+      },
+      "image_url": "https://i1.feedspot.com/5675162.jpg?t=1695380931"
+    },
+    {
+      "title": "Postgres Conference Blog",
+      "feed_url": "https://postgresconf.org/blog/feed.rss",
+      "website_url": "https://postgresconf.org/blog",
+      "description": "Postgres Conference Blog Posts",
+      "followers": {
+        "facebook": 886,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5675167.jpg?t=1695215381"
+    },
+    {
+      "title": "PostgresPro Blog",
+      "feed_url": "https://postgrespro.com/rss",
+      "website_url": "https://postgrespro.com/blog",
+      "description": "Postgres Professional Europe Limited is one of the leading PostgreSQL vendor companies. The company's technical crew blogs about the recent PostgreSQL innovations and interesting practical cases related to Postgres-based applications and the entire PosgreSQL ecosystem.",
+      "followers": {
+        "facebook": 254
+      },
+      "image_url": "https://i1.feedspot.com/5675163.jpg?t=1695215103"
+    },
+    {
+      "title": "Percona Blog \u00bb PostgreSQL",
+      "feed_url": "https://www.percona.com/blog/category/postgresql/feed/",
+      "website_url": "https://www.percona.com/blog/category/postgresql/",
+      "followers": {
+        "facebook": 43500,
+        "twitter": 16500,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5675153.jpg?t=1695215039"
+    },
+    {
+      "title": "Instaclustr Blog \u00bb PostgreSQL",
+      "feed_url": "https://www.instaclustr.com/blog/category/technical/postgresql/feed/",
+      "website_url": "https://www.instaclustr.com/blog/category/technical/postgresql/",
+      "description": "Managed Services and Support for Apache Cassandra, Apache Kafka, PostgreSQL, OpenSearch, Elasticsearch and Redis",
+      "followers": {
+        "facebook": 563,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5675160.jpg?t=1695385051"
+    },
+    {
+      "title": "YugabyteDB Blog \u00bb PostgreSQL",
+      "feed_url": "https://www.yugabyte.com/blog/tag/postgresql/feed/",
+      "website_url": "https://www.yugabyte.com/blog/tag/postgresql/",
+      "description": "High-Performance Distributed SQL Database for Global, Internet-Scale Apps",
+      "followers": {
+        "twitter": 9500,
+        "instagram": 209
+      },
+      "image_url": "https://i1.feedspot.com/5675154.jpg?t=1695215092"
+    },
+    {
+      "title": "PostgreSQL when it's not your job Blog",
+      "feed_url": "https://thebuild.com/blog/feed/",
+      "website_url": "https://thebuild.com/blog/",
+      "description": "programming, etc.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/113305.jpg"
+    },
+    {
+      "title": "Devart Blog \u00bb PostgreSQL Tools",
+      "feed_url": "https://blog.devart.com/category/products/postgresql-tools/feed",
+      "website_url": "https://blog.devart.com/category/products/postgresql-tools",
+      "description": "Devart company blog",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5675165.jpg?t=1695215113"
+    },
+    {
+      "title": "dbi Services Blog \u00bb PostgreSQL",
+      "feed_url": "https://www.dbi-services.com/blog/category/postgresql/feed/",
+      "website_url": "https://www.dbi-services.com/blog/category/postgresql/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5675169.jpg?t=1695215927"
+    },
+    {
+      "title": "ProOpenSource O\u00dc Blog",
+      "feed_url": "https://proopensource.it/feed.xml",
+      "website_url": "https://proopensource.it/blog.html",
+      "description": "Blog about open source, mainly PostgreSQL",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5675168.jpg?t=1695215711"
+    },
+    {
+      "title": "PostgreSQL Person of the Week",
+      "feed_url": "https://postgresql.life/index.xml",
+      "website_url": "https://postgresql.life/",
+      "description": "Recent content on PostgreSQL Person of the Week",
+      "followers": {
+        "twitter": 130
+      },
+      "image_url": "https://i1.feedspot.com/5675164.jpg?t=1695215106"
+    },
+    {
+      "title": "Small Datum",
+      "feed_url": "http://smalldatum.blogspot.com/feeds/posts/default",
+      "website_url": "http://smalldatum.blogspot.com/",
+      "followers": {
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/3717884.jpg?t=1695386785"
+    },
+    {
+      "title": "Shane Borden's Technology Blog \u00bb PostgreSQL",
+      "feed_url": "https://shaneborden.com/category/postgresql/feed/",
+      "website_url": "https://shaneborden.com/category/postgresql/",
+      "description": "My Experiences Navigating Technology - All Views Are My Own",
+      "followers": {
+        "twitter": 465
+      },
+      "image_url": "https://i1.feedspot.com/5675149.jpg?t=1695215016"
+    },
+    {
+      "title": "Database and Migration Insights \u00bb PostgreSQL",
+      "feed_url": "https://databaserookies.wordpress.com/category/postgresql/feed/",
+      "website_url": "https://databaserookies.wordpress.com/category/postgresql/",
+      "description": "All About Database learnings both On Prem, Cloud and Migrations.",
+      "followers": {
+        "twitter": 221
+      },
+      "image_url": "https://i1.feedspot.com/5675148.jpg?t=1695215006"
+    },
+    {
+      "title": "PDXPUG",
+      "feed_url": "https://pdxpug.wordpress.com/feed/",
+      "website_url": "https://pdxpug.wordpress.com/",
+      "description": "Portland Postgres Users Group",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5675151.jpg?t=1695215819"
+    },
+    {
+      "title": "POSTGRESHELP BLOG",
+      "feed_url": "https://postgreshelp.com/feed/",
+      "website_url": "https://postgreshelp.com/",
+      "description": "This blog is complete PostgreSQL tutorials and How to documents.",
+      "followers": {
+        "facebook": 65,
+        "twitter": 37
+      },
+      "image_url": "https://i1.feedspot.com/4982269.jpg?t=1610965463"
+    },
+    {
+      "title": "Database Research & Development \u00bb postgresql",
+      "feed_url": "https://www.dbrnd.com/tag/postgresql/feed/",
+      "website_url": "https://www.dbrnd.com/tag/postgresql/",
+      "description": "I'm Anvesh Patel, a Database Engineer certified by Oracle and IBM. I'm working as a Database Architect, Database Optimizer, Database Administrator, Database Developer. Providing the best articles and solutions for different problems in the best manner through my blogs is my passion.",
+      "followers": {
+        "facebook": 16000,
+        "twitter": 132
+      },
+      "image_url": "https://i1.feedspot.com/4897719.jpg?t=1610965468"
+    },
+    {
+      "title": "Database Tutorials",
+      "feed_url": "https://dbtut.com/index.php/feed/",
+      "website_url": "https://dbtut.com/",
+      "description": "Database Tutorials features articles on MSSQL, Oracle, PostgreSQL, MySQL, MariaDB, DB2, Sybase, Teradata, Big Data, NOSQL, MongoDB, Couchbase, Cassandra, Windows, Linux and more...",
+      "followers": {
+        "twitter": 15
+      },
+      "image_url": "https://i1.feedspot.com/5128458.jpg?t=1622958928"
+    },
+    {
+      "title": "data-nerd. Blog",
+      "feed_url": "https://data-nerd.blog/feed/",
+      "website_url": "https://data-nerd.blog/",
+      "description": "Hands-on with SQL Server",
+      "followers": {
+        "twitter": 223
+      },
+      "image_url": "https://i1.feedspot.com/724639.jpg?t=1695385214"
+    },
+    {
+      "title": "SQL Shack \u00bb PostgreSQL",
+      "feed_url": "https://www.sqlshack.com/category/technologies/postgresql/feed/",
+      "website_url": "https://www.sqlshack.com/category/technologies/postgresql/",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5675150.jpg?t=1695215021"
+    },
+    {
+      "title": "Software and Booz Shaken, not stirred",
+      "feed_url": "https://www.softwareandbooz.com/feed/",
+      "website_url": "https://www.softwareandbooz.com/",
+      "description": "Shaken, not stirred",
+      "followers": {
+        "twitter": 859
+      },
+      "image_url": "https://i1.feedspot.com/5675155.jpg?t=1695215094"
+    },
+    {
+      "title": "PGSQL Phriday",
+      "feed_url": "https://www.pgsqlphriday.com/feed/",
+      "website_url": "https://www.pgsqlphriday.com/",
+      "description": "A monthly community blog event for the PostgreSQL community!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5675158.jpg?t=1695215751"
+    },
+    {
+      "title": "Learn DBA : A Life Long Learning Experience",
+      "feed_url": "https://oracle-dba-help.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://oracle-dba-help.blogspot.com/",
+      "description": "A place for Beginners and Experience to Learn Oracle DBA. A smarter way to learn Oracle DBA , with latest contents.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4623727.jpg?t=1616061397"
+    },
+    {
+      "title": "Microsoft Community Blog \u00bb Azure Database for PostgreSQL",
+      "feed_url": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=ADforPostgreSQL",
+      "website_url": "https://techcommunity.microsoft.com/category/azuredatabases/blog/adforpostgresql",
+      "description": "Azure Database for PostgreSQL Blog articles",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5675170.jpg?t=1695215320"
+    },
+    {
+      "title": "VMware Blog \u00bb Tanzu",
+      "feed_url": "https://blogs.vmware.com/tanzu/feed/",
+      "website_url": "https://blogs.vmware.com/tanzu/",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5193038.jpg?t=1695381451"
+    }
+  ]
+}

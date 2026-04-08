@@ -1,0 +1,65 @@
+{
+  "category": "UK Healthy Eating",
+  "source_url": "https://rss.feedspot.com/uk_healthy_eating_rss_feeds",
+  "feeds": [
+    {
+      "title": "My Fussy Eater",
+      "feed_url": "https://www.myfussyeater.com/feed/",
+      "website_url": "https://www.myfussyeater.com/",
+      "description": "My Fussy Eater is a recipe blog sharing easy and healthy recipes for kids and families, along with tips and tricks for dealing with picky eaters!",
+      "followers": {
+        "facebook": 502100,
+        "twitter": 3800,
+        "instagram": 282700
+      },
+      "image_url": "https://i1.feedspot.com/4915579.jpg?t=1620310725"
+    },
+    {
+      "title": "Every Last Bite",
+      "feed_url": "https://www.everylastbite.com/feed/",
+      "website_url": "https://www.everylastbite.com/",
+      "description": "Welcome, I'm Carmen! I am a passionate foodie who was diagnosed with an autoimmune disease and found remission through clean eating. My mission is to show others that no matter how restrictive your diet you can still make delicious food that everyone will love.",
+      "followers": {
+        "facebook": 33900,
+        "instagram": 187700
+      },
+      "image_url": "https://i1.feedspot.com/4687753.jpg?t=1609917272"
+    },
+    {
+      "title": "Everyday Healthy Recipes",
+      "feed_url": "https://www.everydayhealthyrecipes.com/feed/",
+      "website_url": "https://www.everydayhealthyrecipes.com/",
+      "description": "I share simple recipes with a healthy twist, old classics with a modern take and an occasional Polish dish was thrown into the mix - all easy to make, healthy and delicious, perfect for everyday cooking.",
+      "followers": {
+        "facebook": 12200,
+        "twitter": 6400,
+        "instagram": 7200
+      },
+      "image_url": "https://i1.feedspot.com/4915587.jpg?t=1620310699"
+    },
+    {
+      "title": "Nadia's Healthy Kitchen Blog",
+      "feed_url": "https://nadiashealthykitchen.com/blog/feed/",
+      "website_url": "https://nadiashealthykitchen.com/blog/",
+      "description": "Helping individuals live a healthy lifestyle. Sharing healthy, clean, gluten-free, dairy-free, vegan savory & sweet recipes. I also post easy healthy recipe videos,",
+      "followers": {
+        "facebook": 88800,
+        "twitter": 2700,
+        "instagram": 555500
+      },
+      "image_url": "https://i1.feedspot.com/4843429.jpg?t=1607145378"
+    },
+    {
+      "title": "Food To Glow",
+      "feed_url": "https://kelliesfoodtoglow.com/feed/",
+      "website_url": "https://kelliesfoodtoglow.com/",
+      "description": "Covers articles on Gluten-free, Sauce, soft food diet,, Vegan, easy recipe, lower carb and more. Food To Glow is a healthy, plant-focused omnivore with an occasional decadent twist. Kellie Anderson is a health educator, food writer and recipe developer.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 3600,
+        "instagram": 9800
+      },
+      "image_url": "https://i1.feedspot.com/4496673.jpg?t=1611292309"
+    }
+  ]
+}

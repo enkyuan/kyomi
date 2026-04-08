@@ -1,0 +1,38 @@
+{
+  "category": "UK Arthritis",
+  "source_url": "https://rss.feedspot.com/uk_arthritis_rss_feeds",
+  "feeds": [
+    {
+      "title": "Arthritis Digest",
+      "feed_url": "https://arthritisdigest.co.uk/feed/",
+      "website_url": "https://arthritisdigest.co.uk/",
+      "description": "Arthritis Digest magazine is essential reading for anyone with arthritis, fibromyalgia, Sjogren's syndrome, and chronic pain. It's extremely informative, packed full of news on the latest research, highlights useful products and foods to try, and contains celebrity interviews.",
+      "followers": {
+        "facebook": 11400,
+        "twitter": 10100,
+        "instagram": 210
+      },
+      "image_url": "https://i1.feedspot.com/4909110.jpg?t=1614143787"
+    },
+    {
+      "title": "Me vs Arthritis",
+      "feed_url": "https://mevsarthritis.wordpress.com/feed/",
+      "website_url": "https://mevsarthritis.wordpress.com/",
+      "description": "A blog giving an insight into a young adult's experiences with arthritis.",
+      "followers": {
+        "facebook": 340,
+        "twitter": 74,
+        "instagram": 562
+      },
+      "image_url": "https://i1.feedspot.com/5090664.jpg?t=1614143796"
+    },
+    {
+      "title": "Arthritis Cure",
+      "feed_url": "https://www.arthritis-cure.co.uk/feed/",
+      "website_url": "https://www.arthritis-cure.co.uk/",
+      "description": "Hi, My name is Brian Darby and I've had Rheumatoid Arthritis for over 35 years. I'm learning more about RA all the time and gaining new insights with each passing day. I want to use this blog to share what I've learned and experienced over three and a half decades in my constant struggle with RA.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4908993.jpg"
+    }
+  ]
+}

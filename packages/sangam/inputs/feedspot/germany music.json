@@ -1,0 +1,633 @@
+{
+  "category": "Germany Music",
+  "source_url": "https://rss.feedspot.com/germany_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Other Side Reviews",
+      "feed_url": "https://www.theothersidereviews.com/feed/",
+      "website_url": "https://www.theothersidereviews.com/",
+      "description": "The Other Side Reviews is an online music magazine where writers get together and share their love for music with the world. Our international team review, interview and tell you what's up in the world of tunage.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4902011.jpg?t=1600513228"
+    },
+    {
+      "title": "Krach und so ...",
+      "feed_url": "https://krachundso.blogspot.com/feeds/posts/default",
+      "website_url": "https://krachundso.blogspot.com/",
+      "description": "Krach und so is a music blog in Germany. Covers articles on new music, music videos, and playlists.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5330122.jpg?t=1634024896"
+    },
+    {
+      "title": "Nitestylez.de",
+      "feed_url": "http://www.nitestylez.de/feeds/posts/default",
+      "website_url": "http://www.nitestylez.de/",
+      "description": "Covers articles on artists, new music, quality electronic music, and music recording label. Baze Djunkiii is a music DJ, producer, label manager, music writer, record collector, video creator, and curator of things.",
+      "followers": {
+        "twitter": 734,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5330125.jpg?t=1633929049"
+    },
+    {
+      "title": "We Love That",
+      "feed_url": "https://www.welovethat.de/feed/",
+      "website_url": "https://www.welovethat.de/",
+      "description": "Independent music magazine. Discover new publications and artists for free.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 1200,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5330137.jpg?t=1633929326"
+    },
+    {
+      "title": "African Paper",
+      "feed_url": "http://africanpaper.com/feed/",
+      "website_url": "http://africanpaper.com/",
+      "description": "African Paper is an online magazine in German, mostly about music.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 55
+      },
+      "image_url": "https://i1.feedspot.com/1476641.jpg?t=1633929693"
+    },
+    {
+      "title": "Manierenversagen",
+      "feed_url": "https://manierenversagen.de/?feed=rss2",
+      "website_url": "https://manierenversagen.de/",
+      "description": "Manierenversagen covers articles on dead broke records, Dirt Cult Records, Dirtnap, Dischord records, punk rock, and power punk.",
+      "followers": {
+        "facebook": 98,
+        "twitter": 13
+      },
+      "image_url": "https://i1.feedspot.com/5330141.jpg?t=1633930069"
+    },
+    {
+      "title": "Coast Is Clear",
+      "feed_url": "https://coast-is-clear.blogspot.com/feeds/posts/default",
+      "website_url": "https://coast-is-clear.blogspot.com/",
+      "description": "Coast is Clear, the music blog from Kiel, Alive and Kicking Since 2005. With a special focus on (indie-) pop, shoegaze, electropop, wave, folk, twee, especially from Scandinavia, North America, France, and the UK.",
+      "followers": {
+        "twitter": 710
+      },
+      "image_url": "https://i1.feedspot.com/451934.jpg?t=1633930607"
+    },
+    {
+      "title": "Poule d'Or",
+      "feed_url": "https://www.pouledor.com/feed/",
+      "website_url": "http://www.pouledor.com/",
+      "description": "Poule d'Or is an independent music blog with headquarters in Hamburg, Germany, and roots in Paris, France.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 925
+      },
+      "image_url": "https://i1.feedspot.com/5330149.jpg?t=1633931951"
+    },
+    {
+      "title": "TONSPION \u00bb Music",
+      "feed_url": "https://www.tonspion.de/rubrik/musik/feed",
+      "website_url": "https://www.tonspion.de/rubrik/musik",
+      "description": "In our Music section, we regularly introduce you to playlists, new music videos, albums and songs worth listening to, as well as the latest charts. Tonspion is the largest music blog in Germany and reports daily on new music, film & TV, podcasts, audio equipment, games and current trends in the digital world.",
+      "followers": {
+        "facebook": 28200,
+        "twitter": 4800,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/5330152.jpg?t=1633932363"
+    },
+    {
+      "title": "frohfroh",
+      "feed_url": "https://www.frohfroh.de/feed",
+      "website_url": "https://www.frohfroh.de/",
+      "description": "You are the focus of gladfroh, the blog for electronic music from Leipzig. With artist and label portraits, record reviews, party tips and gossips, we have been accompanying the local scene since summer 2009, which is currently as lively and productive as it has been in a long time.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 2000,
+        "instagram": 8800
+      },
+      "image_url": "https://i1.feedspot.com/5330165.jpg?t=1633932795"
+    },
+    {
+      "title": "tipBerlin \u00bb Musik",
+      "feed_url": "https://www.tip-berlin.de/konzerte-party/musik/feed/",
+      "website_url": "https://www.tip-berlin.de/konzerte-party/musik/",
+      "description": "Berlin magazine for culture, gastronomy, city, events and style. With recommendations for neighborhoods and living conditions. Since 1972. In Berlin, for Berlin. To you.",
+      "followers": {
+        "facebook": 90800,
+        "twitter": 29400,
+        "instagram": 279200
+      },
+      "image_url": "https://i1.feedspot.com/5330240.jpg?t=1633943934"
+    },
+    {
+      "title": "Groove",
+      "feed_url": "https://groove.de/feed/",
+      "website_url": "https://groove.de/news/",
+      "description": "Groove is a magazine for electronic music and club culture. Here you will find articles about music, news, reviews, mixes, charts, and events.",
+      "followers": {
+        "facebook": 89300,
+        "twitter": 12700,
+        "instagram": 51300
+      },
+      "image_url": "https://i1.feedspot.com/5022059.jpg?t=1633939336"
+    },
+    {
+      "title": "Metal Hammer",
+      "feed_url": "https://www.metal-hammer.de/feed/",
+      "website_url": "https://www.metal-hammer.de/news/",
+      "description": "Metal Hammer is the largest heavy metal and hard rock magazine in Germany.",
+      "followers": {
+        "facebook": 299900,
+        "twitter": 41000,
+        "instagram": 70300
+      },
+      "image_url": "https://i1.feedspot.com/4668524.jpg?t=1633942442"
+    },
+    {
+      "title": "KALTBLUT Magazine \u00bb Music",
+      "feed_url": "https://www.kaltblut-magazine.com/category/music/feed/",
+      "website_url": "https://www.kaltblut-magazine.com/category/music/",
+      "description": "KALTBLUT Magazine stands for a limitless symbiosis between art, photography, fashion, music, and media. Explore the music blogs in our archives.",
+      "followers": {
+        "facebook": 127500,
+        "twitter": 7800,
+        "instagram": 146600
+      },
+      "image_url": "https://i1.feedspot.com/5330210.jpg?t=1633938306"
+    },
+    {
+      "title": "VOLT Magazin",
+      "feed_url": "https://www.volt-magazin.de/?format=feed&type=rss",
+      "website_url": "https://www.volt-magazin.de/news",
+      "description": "Music news, Interviews, Features, Reviews, Clips. VOLT is the magazine for music culture.",
+      "followers": {
+        "facebook": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5330169.jpg?t=1633933025"
+    },
+    {
+      "title": "Backstage Pro",
+      "feed_url": "https://www.backstagepro.de/themen/rss",
+      "website_url": "https://www.backstagepro.de/",
+      "description": "Current news and background information on the hottest topics, trends and products in the music industry. Practical tips, interviews and reports from our editorial team.",
+      "followers": {
+        "facebook": 32400
+      },
+      "image_url": "https://i1.feedspot.com/5330223.jpg?t=1633941049"
+    },
+    {
+      "title": "Pickymagazine",
+      "feed_url": "https://pickymagazine.de/feed/",
+      "website_url": "https://pickymagazine.de/category/news/",
+      "description": "Pickymagazine is the indie magazine for music. Here you will find reviews, concert reports, interviews and more about music outside of the main stream.",
+      "followers": {
+        "facebook": 452,
+        "twitter": 126,
+        "instagram": 6100
+      },
+      "image_url": "https://i1.feedspot.com/5330170.jpg?t=1633937784"
+    },
+    {
+      "title": "Sonic Soul Reviews",
+      "feed_url": "https://www.sonicsoulreviews.com/feed/",
+      "website_url": "https://www.sonicsoulreviews.com/",
+      "description": "Sonic Soul Reviews is dedicated to the Soul and Jazz genres of music and every other sound in between. Sonic Soul Reviews is the selection for connoisseurs and the ladies and gentlemen among the readership who want to become one.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5131061.jpg?t=1669026659"
+    },
+    {
+      "title": "Time For Metal",
+      "feed_url": "https://time-for-metal.eu/feed/",
+      "website_url": "https://time-for-metal.eu/category/news/",
+      "description": "Time For Metal is a German-speaking metal platform. We offer you news in metal events, reviews as well as live reports and interviews!",
+      "followers": {
+        "facebook": 16000,
+        "twitter": 1900,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5330235.jpg?t=1633943059"
+    },
+    {
+      "title": "SLAM",
+      "feed_url": "https://www.slam-zine.de/php/rss_feed.php",
+      "website_url": "https://www.slam-zine.de/",
+      "description": "SLAM is an Alternative Music Magazine.",
+      "followers": {
+        "facebook": 12100,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5224930.jpg?t=1633942135"
+    },
+    {
+      "title": "Electrozombies",
+      "feed_url": "https://electrozombies.com/feed/",
+      "website_url": "https://electrozombies.com/",
+      "description": "Electrozombies is an international Synthpop magazine focused on Synth Pop, Electro Pop, Future Pop, Industrial Pop, EBM, Dark Wave, and genre related music. In particular, we publish music videos, album reviews, interviews, music downloads, best-of list articles, our own complilations and tributes and much more.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 812
+      },
+      "image_url": "https://i1.feedspot.com/4667225.jpg?t=1673332667"
+    },
+    {
+      "title": "RAGE",
+      "feed_url": "http://www.rage-official.com/feed/",
+      "website_url": "http://www.rage-official.com/",
+      "description": "Rage is a German heavy metal band, formed in 1984 by Peter 'Peavy' Wagner. They were part of the German heavy/speed/power metal scene to emerge in the early to mid-1980s, along with bands.",
+      "followers": {
+        "facebook": 44900,
+        "twitter": 9200,
+        "instagram": 17600
+      },
+      "image_url": "https://i1.feedspot.com/4668119.jpg?t=1617897038"
+    },
+    {
+      "title": "Transcended Music Blog",
+      "feed_url": "https://www.transcendedmusic.de/feed/",
+      "website_url": "https://www.transcendedmusic.de/",
+      "description": "We are just a bunch of friends who expanded the idea of talking about music and put our passion for music into this blog. The main focus - as can be seen when taking a look into our review section - lies on heavy and fast music, predominantly coming from Punk / Hardcore / Metal, since this is the common ground between all authors.",
+      "followers": {
+        "facebook": 969,
+        "twitter": 251,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5330218.jpg?t=1633940589"
+    },
+    {
+      "title": "Hellfire-Magazin",
+      "feed_url": "https://www.hellfire-magazin.de/feed/",
+      "website_url": "https://www.hellfire-magazin.de/",
+      "description": "Metal and rock webzine with concert reports, concert pictures, music videos, interviews, and CD reviews.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 105
+      },
+      "image_url": "https://i1.feedspot.com/5330228.jpg?t=1633941456"
+    },
+    {
+      "title": "luserlounge",
+      "feed_url": "https://luserlounge.blogspot.com/feeds/posts/default",
+      "website_url": "https://luserlounge.blogspot.com/",
+      "description": "Dreamwalking, easily distracted and playful - you just have to love the luserlounge. A music blog, at its finest.",
+      "followers": {
+        "twitter": 41
+      },
+      "image_url": "https://i1.feedspot.com/5330230.jpg?t=1633942291"
+    },
+    {
+      "title": "Radio Active Magazine",
+      "feed_url": "https://radioactive-mag.com/feed/",
+      "website_url": "https://radioactive-mag.com/news/",
+      "description": "Active Magazine is a free and creative music magazine that feeds you with all kinds of information from the music scene.",
+      "followers": {
+        "facebook": 606,
+        "twitter": 93,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5330231.jpg?t=1633942607"
+    },
+    {
+      "title": "Soundkartell",
+      "feed_url": "https://www.soundkartell.de/feed/",
+      "website_url": "https://www.soundkartell.de/",
+      "description": "The Soundkartell is your music blog. We love indie, pop, hip-hop, rock, alternative. There is a new music tip every day.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 2000,
+        "instagram": 9300
+      },
+      "image_url": "https://i1.feedspot.com/5330233.jpg?t=1633942942"
+    },
+    {
+      "title": "Tough Magazine",
+      "feed_url": "https://toughmagazine.de/feed/",
+      "website_url": "https://toughmagazine.de/",
+      "description": "Tough Magazine is a music magazine that deals with handmade rock music.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 774
+      },
+      "image_url": "https://i1.feedspot.com/5330236.jpg?t=1633943205"
+    },
+    {
+      "title": "Vinyl-keks",
+      "feed_url": "https://vinyl-keks.eu/feed/",
+      "website_url": "https://vinyl-keks.eu/",
+      "description": "Vinyl-keks.eu is an online music magazine all about vinyl and tapes.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 275,
+        "instagram": 7500
+      },
+      "image_url": "https://i1.feedspot.com/5330237.jpg?t=1633943347"
+    },
+    {
+      "title": "Voices From The Darkside",
+      "feed_url": "https://www.voicesfromthedarkside.de/feed/",
+      "website_url": "https://www.voicesfromthedarkside.de/",
+      "description": "Voices From The Darkside is a non-commercial, non-profit music online-zine for old school Death, Black and Thrash Metal.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5330238.jpg?t=1633943577"
+    },
+    {
+      "title": "Born A Rebel",
+      "feed_url": "http://born-a-rebel.com/feed/",
+      "website_url": "http://born-a-rebel.com/news/",
+      "description": "Born A Rebel is a nu-metal band based in Berlin, Germany. The five musicians combine political rap with hardrock and metal.",
+      "followers": {
+        "facebook": 4100,
+        "instagram": 8000
+      },
+      "image_url": "https://i1.feedspot.com/5330253.jpg?t=1633944150"
+    },
+    {
+      "title": "Away From Life",
+      "feed_url": "https://www.awayfromlife.com/feed/",
+      "website_url": "https://www.awayfromlife.com/",
+      "description": "Started in 2015 as a solo project, today AWAY FROM LIFE is a team of almost 20 friends who could hardly be more different, but are united by at least one thing: Our passion for hardcore punk.",
+      "followers": {
+        "facebook": 12100,
+        "twitter": 243,
+        "instagram": 6900
+      },
+      "image_url": "https://i1.feedspot.com/5330324.jpg?t=1633948526"
+    },
+    {
+      "title": "OFFKEY",
+      "feed_url": "https://nbhap.com/berlin/feed",
+      "website_url": "https://nbhap.com/berlin/",
+      "description": "Insights into Berlin's music community and industry. Here you find our favorite Berliner artists, events, labels, and venues.",
+      "followers": {
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/8538911.jpg?t=1753092907"
+    },
+    {
+      "title": "Classic Rock Magazine \u00bb musik",
+      "feed_url": "https://classicrock.net/kategorie/reviews/musik/feed/",
+      "website_url": "https://classicrock.net/kategorie/reviews/musik/",
+      "description": "For those about to rock",
+      "followers": {
+        "facebook": 36200,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/8538913.jpg?t=1753092918"
+    },
+    {
+      "title": "Digital in Berlin",
+      "feed_url": "https://www.digitalinberlin.de/feed/",
+      "website_url": "https://www.digitalinberlin.de/",
+      "description": "Digital in Berlin is a curated platform for cultured music, concerts, and events between avant-garde, pop culture, and experimental music. For 13 years and with more than 5000 announcements, they have been Berlin's musical archive, reflecting the diversity of the scene.",
+      "followers": {
+        "facebook": 16200,
+        "twitter": 1200,
+        "instagram": 7500
+      },
+      "image_url": "https://i1.feedspot.com/5604584.jpg?t=1687352965"
+    },
+    {
+      "title": "DIFFUS",
+      "feed_url": "https://diffus.de/feed/",
+      "website_url": "https://diffus.de/",
+      "description": "DIFFUS ist das digitale Musikmagazin. Entdecke die spannendsten Musik-News, Interviews und alle Infos \u00fcber deine Lieblings-Musiker:innen.",
+      "followers": {
+        "facebook": 8500,
+        "twitter": 2400,
+        "instagram": 90300
+      },
+      "image_url": "https://i1.feedspot.com/8538915.jpg?t=1753092926"
+    },
+    {
+      "title": "The Gap \u00bb Musik Club",
+      "feed_url": "https://thegap.at/kategorie/musik-club/feed/",
+      "website_url": "https://thegap.at/kategorie/musik-club/",
+      "description": "Leiwand seit 1997.",
+      "followers": {
+        "facebook": 25900,
+        "twitter": 2600,
+        "instagram": 7100
+      },
+      "image_url": "https://i1.feedspot.com/8538912.jpg"
+    },
+    {
+      "title": "Bleistiftrocker",
+      "feed_url": "https://bleistiftrocker.de/feed/",
+      "website_url": "https://bleistiftrocker.de/",
+      "description": "Musikmagazin mit den Schwerpunkten News, Album-Reviews, Konzert-Reviews, Interviews, Eurovision Song Contest und weiteren Specials.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 650
+      },
+      "image_url": "https://i1.feedspot.com/8539036.jpg"
+    },
+    {
+      "title": "Frontstage Magazine",
+      "feed_url": "https://frontstage-magazine.de/feed/",
+      "website_url": "https://frontstage-magazine.de/",
+      "description": "Frontstage Magazine ::: Mehr Musik!",
+      "followers": {
+        "facebook": 1100,
+        "instagram": 11000
+      },
+      "image_url": "https://i1.feedspot.com/8539034.jpg?t=1753093341"
+    },
+    {
+      "title": "Testspiel.de",
+      "feed_url": "https://www.testspiel.de/themen/musik/feed/",
+      "website_url": "https://www.testspiel.de/themen/musik/",
+      "description": "Tyler the Creator ver\u00f6ffentlicht neues Album 'Don't Tap The Glass'. G\u00e4nsehaut: Yungblud - Changes (Live From Villa Park / Back To The ...",
+      "followers": {
+        "facebook": 29200
+      },
+      "image_url": "https://i1.feedspot.com/8539032.jpg?t=1753093331"
+    },
+    {
+      "title": "Minutenmusik",
+      "feed_url": "https://minutenmusik.de/feed",
+      "website_url": "https://minutenmusik.de/",
+      "description": "Menschen mit Meinungen. Musik mit Emotionen. Texte mit Leidenschaft.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 383,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/8539035.jpg?t=1753093345"
+    },
+    {
+      "title": "FAZEmag",
+      "feed_url": "https://www.fazemag.de/feed",
+      "website_url": "https://www.fazemag.de/",
+      "description": "Every month, FAZEmag provides its readers with interesting interviews with the hottest artists, exciting news about clubs and music, hundreds of record reviews, tech tests, and news from the lifestyle world from fashion to movies to games and nightlife from small club events to huge festivals. Each issue also includes an exclusive DJ mix from a well-known national or international artist as a free download.",
+      "followers": {
+        "facebook": 214900,
+        "twitter": 10500,
+        "instagram": 64700
+      },
+      "image_url": "https://i1.feedspot.com/5224889.jpg?t=1750144056"
+    },
+    {
+      "title": "VISIONS",
+      "feed_url": "https://www.visions.de/feed/",
+      "website_url": "https://www.visions.de/",
+      "description": "Musikmagazin f\u00fcr alternative Musik, online seit 1995. News rund um Bands, Konzerte und Festivals. Storys, Features, Interviews, Konzertberichte und Reviews.",
+      "followers": {
+        "facebook": 47200,
+        "twitter": 12800,
+        "instagram": 24100
+      },
+      "image_url": "https://i1.feedspot.com/8539033.jpg?t=1753093337"
+    },
+    {
+      "title": "Sonic Seducer",
+      "feed_url": "https://sonic-seducer.de/feed/",
+      "website_url": "https://sonic-seducer.de/",
+      "description": "Sonic Seducer Music Magazine: Scene news, reviews, tour dates, online shop, tickets, and much more check it out online now! Enjoy!",
+      "followers": {
+        "facebook": 92200,
+        "twitter": 4900,
+        "instagram": 23600
+      },
+      "image_url": "https://sonic-seducer.de/wp-content/uploads/2022/11/cropped-Sonic-Logo-silber-frei-600x171.png.webp?t=1748499028"
+    },
+    {
+      "title": "Stitch By Stitch",
+      "feed_url": "https://myteedjthor.blogspot.com/feeds/posts/default",
+      "website_url": "https://myteedjthor.blogspot.com/",
+      "description": "Mytee Thor is a hip-hop/rap record collector since the early 90s and has a blog called myteedjthor.blogspot.com. The blog features posts about prime hip-hop releases, the latest albums, feature stories, event news an updates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5330205.jpg?t=1634710099"
+    },
+    {
+      "title": "BlackbirdPunk Blog",
+      "feed_url": "https://blackbirdpunk.com/feed/",
+      "website_url": "https://blackbirdpunk.com/blog/",
+      "description": "This blog is full of insider tips and tricks about the music industry and musically miscellaneous posts. Blackbird Punk is a digital agency here to help the music industry master digital transformation.",
+      "followers": {
+        "facebook": 134,
+        "twitter": 30,
+        "instagram": 344
+      },
+      "image_url": "https://i1.feedspot.com/5330222.jpg?t=1633940874"
+    },
+    {
+      "title": "Global Texan Chronicles",
+      "feed_url": "https://globaltexanchronicles.com/feed/",
+      "website_url": "https://globaltexanchronicles.com/",
+      "description": "GTC is focused on celebrating the positive in the music scenes. Garge-pop, alt-country, metal, blues, rock, and all stops in-between, if we like it, we'll tell you about it. And yes, we actually listen to the music before we write about it. No one-sheet regurgitation.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5259353.jpg?t=1616158050"
+    },
+    {
+      "title": "Dying for Bad Music Blog",
+      "feed_url": "https://dyingforbadmusic.com/blog/feed",
+      "website_url": "https://dyingforbadmusic.com/dfbm.phtml",
+      "description": "Your resource of the best free music provided by artists - Indie, Psych Folk, Drone, Post-Rock, Lo-Fi, Electronic, Punk and more.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/308327.jpg?t=1633943705"
+    },
+    {
+      "title": "MUSIKMUSSMIT",
+      "feed_url": "https://musikmussmit.de/feed/",
+      "website_url": "https://musikmussmit.de/",
+      "description": "MUSIKMUSSMIT is your music blog for newcomers, concerts, new albums, tour dates, playlists, interviews, guest lists, concert reports & musical pearls authored by Angela. For new albums, tour dates, newcomers, guest list positions, and recommendations from electro-pop, rock, hip-hop, and soul, check out the blog.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 512
+      },
+      "image_url": "https://i1.feedspot.com/5330239.jpg?t=1633943795"
+    },
+    {
+      "title": "Amplify Berlin",
+      "feed_url": "https://amplify-berlin.de/feed/",
+      "website_url": "https://amplify-berlin.de/",
+      "description": "Creative development program for Berlin-based emerging musicians through mentorships, presented by Acud Macht Neu.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 248,
+        "instagram": 5700
+      },
+      "image_url": "https://i1.feedspot.com/5330252.jpg?t=1633944041"
+    },
+    {
+      "title": "Herzmukke.de",
+      "feed_url": "https://herzmukke.de/feed/",
+      "website_url": "https://herzmukke.de/",
+      "description": "Check out new bands, albums, songs, and concerts from indie, rock & pop culture lovingly prepared & with a dash of pleasure for you on herzmukke.de. It not only writes great music reviews, interviews, and music news. They also regularly provide you with interesting magazine topics from indie rock, pop music, and the music business in general.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 362,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5330327.jpg?t=1633948784"
+    },
+    {
+      "title": "Raveline",
+      "feed_url": "https://www.raveline.de/feed/",
+      "website_url": "https://www.raveline.de/",
+      "description": "The magazine for electronic music. Between 1993 and 2012, the most successful and widely read magazine for electronic music in Germany was published. Now it continues.",
+      "followers": {
+        "facebook": 62,
+        "instagram": 369
+      },
+      "image_url": "https://i1.feedspot.com/8538914.jpg?t=1753092922"
+    },
+    {
+      "title": "VISIONS Magazin",
+      "feed_url": "https://www.visions.de/feeds/news.rss",
+      "website_url": "https://www.visions.de/news/",
+      "description": "VISIONS is a magazine for readers who are just as passionate about music as we are. For 30 years, rock in all its forms has been a matter close to our hearts: From metal, hardcore and punk to indie, noise and alternative to post rock, britpop and singer / songwriter - good music is our only criterion. If that is fulfilled, we write about it.",
+      "followers": {
+        "facebook": 47200,
+        "twitter": 12800,
+        "instagram": 24100
+      },
+      "image_url": "https://i1.feedspot.com/127093.jpg?t=1634711621"
+    },
+    {
+      "title": "that new music blog",
+      "feed_url": "https://thatnewmusicblog.de/feed/",
+      "website_url": "http://www.thatnewmusicblog.de/",
+      "description": "Another, interactive and new blog about indie music of all kinds.",
+      "followers": {
+        "facebook": 565,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5330217.jpg?t=1633940259"
+    },
+    {
+      "title": "Metal Maniacs Blog",
+      "feed_url": "https://www.metal-maniacs.eu/feed",
+      "website_url": "https://www.metal-maniacs.eu/blog/",
+      "description": "BADEN IN BLUT festival news and all information about the festival.",
+      "followers": {
+        "facebook": 10100
+      },
+      "image_url": "https://i1.feedspot.com/5330254.jpg?t=1633944322"
+    },
+    {
+      "title": "Zephyr's Odem",
+      "feed_url": "https://www.zephyrs-odem.de/",
+      "website_url": "https://www.zephyrs-odem.de/",
+      "description": "All about Metal since 2011.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 317,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5330326.jpg?t=1633948639"
+    }
+  ]
+}

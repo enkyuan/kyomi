@@ -1,0 +1,123 @@
+{
+  "category": "Food Service",
+  "source_url": "https://rss.feedspot.com/food_service_rss_feeds",
+  "feeds": [
+    {
+      "title": "RestoBiz",
+      "feed_url": "https://www.restobiz.ca/feed/",
+      "website_url": "https://www.restobiz.ca/",
+      "description": "The official online home of Canadian restaurant & Foodservice news.RestoBiz delivers practical, relevant, timely, and engaging information that helps foodservice operators improve and grow their business while connecting them to Canada's foodservice supply chain.",
+      "followers": {
+        "facebook": 438,
+        "twitter": 8100,
+        "instagram": 761
+      },
+      "image_url": "https://i1.feedspot.com/4771164.jpg?t=1602509690"
+    },
+    {
+      "title": "Let's Chat Snacks",
+      "feed_url": "https://www.letschatsnacks.com/rss.xml",
+      "website_url": "https://www.letschatsnacks.com/",
+      "description": "The snacking blog is devoted to helping foodservice operators feed their snack sales success. Track the latest snack trends. Get insights and statistics to help improve customer service, inform menu innovation and encourage a higher check average.We have the delicious brands and passionate people to help build your business.",
+      "followers": {
+        "facebook": 15000
+      },
+      "image_url": "https://i1.feedspot.com/5310468.jpg?t=1628484725"
+    },
+    {
+      "title": "Wasserstrom Blog",
+      "feed_url": "https://www.wasserstrom.com/blog/feed/",
+      "website_url": "https://www.wasserstrom.com/blog/",
+      "description": "Professional Kitchen Buying Guides, Foodservice Industry News, and more.The Wasserstrom Company is the world's leading restaurant supplier and distributor of food service supplies and equipment.",
+      "followers": {
+        "facebook": 8200,
+        "twitter": 2300,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5309929.jpg?t=1628238251"
+    },
+    {
+      "title": "Flanagan Foodservice Blog",
+      "feed_url": "https://www.flanagan.ca/blog/rss.xml",
+      "website_url": "https://www.flanagan.ca/blog/",
+      "description": "Hot topics in the foodservice industry, helpful tips & recipes. Flanagan's is the largest Canadian owned, independent foodservice distributor in Canada.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 1500,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5310079.jpg?t=1628259268"
+    },
+    {
+      "title": "Restaurant & Caf\u00e9 News",
+      "feed_url": "https://restaurantandcafe.co.nz/category/news/feed/",
+      "website_url": "https://restaurantandcafe.co.nz/category/news/",
+      "description": "Knowledgeable insights, trends, and information from a professional team of journalists about foodservice and hospitality industry.Restaurant & Caf\u00e9 is NZ's only locally owned and operated magazine for the hospitality and foodservice industry.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 64,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5309981.jpg?t=1628245598"
+    },
+    {
+      "title": "Mintel.com \u00bb Foodservice News",
+      "feed_url": "https://www.mintel.com/insights/food-and-drink/feed/",
+      "website_url": "https://www.mintel.com/insights/food-and-drink/",
+      "description": "Latest news, trends, strategies, and insights in the foodservice industry.Mintel the world's leading market intelligence agency, our analysis of consumers, markets, new products, and competitive landscapes provides a unique perspective on global and local economies.",
+      "followers": {
+        "facebook": 10900,
+        "twitter": 25200,
+        "instagram": 9900
+      },
+      "image_url": "https://i1.feedspot.com/5310512.jpg?t=1628489861"
+    },
+    {
+      "title": "HoodFilters.com Foodservice Blog",
+      "feed_url": "https://blog.hoodfilters.com/feed/",
+      "website_url": "https://blog.hoodfilters.com/",
+      "description": "101 and step by step instruction regarding hoods, exhaust fans, restaurant ventilation systems, and more.Hoodfilters.com is North America's leading foodservice provider for food complaint hood filters and commercial kitchen exhaust products.",
+      "followers": {
+        "facebook": 558,
+        "twitter": 249
+      },
+      "image_url": "https://i1.feedspot.com/5309922.jpg?t=1628236617"
+    },
+    {
+      "title": "The Cambro blog \u00bb Food Service News",
+      "feed_url": "https://blog.cambro.com/category/foodservice-news/feed/",
+      "website_url": "https://blog.cambro.com/category/foodservice-news/",
+      "description": "The Cambro blog is for those passionate about food service and food safety. Cambro is a family-owned company focused on creating food service solutions in the US and around the world.",
+      "followers": {
+        "facebook": 227000,
+        "twitter": 19600,
+        "instagram": 118400
+      },
+      "image_url": "https://i1.feedspot.com/5309858.jpg?t=1628230074"
+    },
+    {
+      "title": "IN Food Marketing and Design Blog",
+      "feed_url": "https://infoodmarketing.com/feed/",
+      "website_url": "https://infoodmarketing.com/news-insights/",
+      "description": "Find the latest trends in foodservice, food marketing & life at a food marketing agency. Food Marketing & Design is a Marcom agency with a passion for helping food-related companies heat up their foodservice and retail sales.",
+      "followers": {
+        "facebook": 697,
+        "twitter": 1000,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5278700.jpg?t=1620624833"
+    },
+    {
+      "title": "Total Food Service",
+      "feed_url": "https://totalfood.com/",
+      "website_url": "https://totalfood.com/",
+      "description": "Since 1990, Total Food Service has been serving the Metro New York foodservice industry, including restaurant operators, chefs, dealers, consultants, suppliers, and distributors. Each month, we deliver the latest news, insights, and interviews focused exclusively on the world's largest food service and hospitality capital of the word, Metro New York.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 5100,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4871901.jpg?t=1612270533"
+    }
+  ]
+}

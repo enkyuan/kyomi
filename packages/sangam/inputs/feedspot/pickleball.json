@@ -1,0 +1,985 @@
+{
+  "category": "Pickleball",
+  "source_url": "https://rss.feedspot.com/pickleball_rss_feeds",
+  "feeds": [
+    {
+      "title": "PickleballMAX Blog",
+      "feed_url": "https://www.pickleballmax.com/feed/",
+      "website_url": "https://www.pickleballmax.com/blog/",
+      "description": "PickleballMAX is dedicated to helping people of all ages and skill levels improve their pickleball game. We do this by sharing pickleball strategies, rules, and tips for how to play winning pickleball.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 808
+      },
+      "image_url": "https://i1.feedspot.com/5020853.jpg?t=1674218310"
+    },
+    {
+      "title": "Crazy Pickleball Lady",
+      "feed_url": "https://crazypickleballlady.com/feed/",
+      "website_url": "https://crazypickleballlady.com/",
+      "description": "Pickleball information with helpful tips, plus fun and advice to the pickleball lovers!",
+      "followers": {
+        "facebook": 988
+      },
+      "image_url": "https://i1.feedspot.com/5018648.jpg?t=1622290572"
+    },
+    {
+      "title": "Aussie Pickleball Bros Blog",
+      "feed_url": "https://www.aussiepickleballbros.com/feed/",
+      "website_url": "https://www.aussiepickleballbros.com/blog/",
+      "description": "Hello, welcome to the Aussie Pickleball Bros blog. Pickleball is a new sport in Australia. The Aussie Pickleball Bros created this website when they found no real local content for fellow Australian pickleball enthusiasts. That's why AussiePickleballBros.com was built - to be the Ultimate Australian Pickleball site for all players at all skill levels.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5621262.jpg?t=1688982949"
+    },
+    {
+      "title": "toppickleballneeds",
+      "feed_url": "https://toppickleballneeds.com/feed/",
+      "website_url": "https://toppickleballneeds.com/",
+      "description": "toppickleballneeds is a Professional pickleball Sports Platform. Here we will provide you only interesting content, which you will like very much. We're dedicated to providing you with the best of pickleball sports, with a focus on dependability and buying guides and information.",
+      "followers": {
+        "facebook": 1300,
+        "instagram": 775
+      },
+      "image_url": "https://i1.feedspot.com/5687338.jpg?t=1697028439"
+    },
+    {
+      "title": "Pickleball Paddle Blog",
+      "feed_url": "https://justpicklepaddle.com/feed/",
+      "website_url": "https://justpicklepaddle.com/category/blog/",
+      "description": "Pickleball Paddle",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7345653.jpg?t=1730206298"
+    },
+    {
+      "title": "USA Pickleball",
+      "feed_url": "https://usapickleball.org/feed/",
+      "website_url": "https://usapickleball.org/news/",
+      "description": "Stay up-to-date with the latest pickleball news and information here. USA Pickleball is the National Governing Body for the sport of pickleball in the U.S. and provides players with official rules, tournaments, rankings and promotional materials.",
+      "followers": {
+        "facebook": 48100,
+        "twitter": 12800,
+        "instagram": 75600
+      },
+      "image_url": "https://i1.feedspot.com/5461045.jpg?t=1667201073"
+    },
+    {
+      "title": "Pickleheads Blog",
+      "feed_url": "https://www.pickleheads.com/blog.xml",
+      "website_url": "https://www.pickleheads.com/blog",
+      "description": "Pickleball has become the fastest growing sport in the United States. Read the latest Pickleball news, guides, new court news, lessons, reviews and leagues in your area.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 264
+      },
+      "image_url": "https://i1.feedspot.com/5438616.jpg?t=1662374425"
+    },
+    {
+      "title": "Professional Pickleball Association",
+      "feed_url": "https://www.ppatour.com/feed/",
+      "website_url": "https://www.ppatour.com/news/",
+      "description": "The official professional tour of pickleball. Follow along for the latest news, highlights, and stories all things pickleball. The Professional Pickleball Association is home to the best professionals in the sport of pickleball. Come watch all the action and play where the pros play with the PPA Tour.",
+      "followers": {
+        "facebook": 171300,
+        "twitter": 17800,
+        "instagram": 191900
+      },
+      "image_url": "https://i1.feedspot.com/5461075.jpg?t=1667201315"
+    },
+    {
+      "title": "Major League Pickleball News",
+      "feed_url": "https://www.majorleaguepickleball.co/feed/",
+      "website_url": "https://www.majorleaguepickleball.co/news-updates/",
+      "description": "Find out about the latest news and events happening in the world of Pickleball. We believe pickleball makes the world a better, more joyful place. From thrilling events and experiences to high-quality live broadcasts for fans around the world, our goal is to elevate and grow the sport we love in everything we do.",
+      "followers": {
+        "facebook": 76500,
+        "twitter": 9900,
+        "instagram": 120500
+      },
+      "image_url": "https://i1.feedspot.com/5474326.jpg?t=1669891500"
+    },
+    {
+      "title": "Big Dill Pickleball Co. Blog",
+      "feed_url": "https://www.bigdillpickleballcompany.com/blogs/news.atom",
+      "website_url": "https://www.bigdillpickleballcompany.com/blogs/news",
+      "description": "Serving up news and tips for the pickleball community. Big Dill Pickleball Co. was established in 2020. Our paddles offer fresh designs, fun colors, and add excitement to your game. Each paddle is tested for quality and durability, and constructed to high standards with premium components. While these paddles may make you smile, they are also made for ALL pickleball players, from beginner to tournament-level players.",
+      "followers": {
+        "facebook": 535,
+        "twitter": 682
+      },
+      "image_url": "https://i1.feedspot.com/5474269.jpg?t=1669891018"
+    },
+    {
+      "title": "The Dink Pickleball",
+      "feed_url": "https://www.thedinkpickleball.com/rss/",
+      "website_url": "https://www.thedinkpickleball.com/",
+      "description": "The Dink is your source for the best pickleball content. Featuring stories, news, tips, gear reviews, highlights and more.",
+      "followers": {
+        "facebook": 45900,
+        "twitter": 361,
+        "instagram": 201200
+      },
+      "image_url": "https://i1.feedspot.com/5461042.jpg?t=1667201055"
+    },
+    {
+      "title": "Onix Pickleball Blog",
+      "feed_url": "https://www.onixpickleball.com/blogs/news.atom",
+      "website_url": "https://www.onixpickleball.com/blogs/news",
+      "description": "Read updates on the latest pickleball news featuring pro pickleball player news, pickleball gift guides, and lots more to stay at the top of your game in our pickleball blog. The leading manufacturer of performance pickleball paddles, balls, and accessories, ONIX equips players with technologically advanced equipment that is PROVEN to make the sport faster, more precise, and more strategic. Since its founding in 2005, ONIX Pickleball has dedicated its mission to growing and supporting the sport at a professional level. Play your best with ONIX Pickleball.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 4100,
+        "instagram": 13900
+      },
+      "image_url": "https://i1.feedspot.com/5474265.jpg?t=1669890990"
+    },
+    {
+      "title": "Pickleball Canada",
+      "feed_url": "https://pickleballcanada.org/feed/",
+      "website_url": "https://pickleballcanada.org/pc-news-archives/",
+      "description": "Pickleball Canada Organization is incorporated under the Canada Not-for-Profit Corporations Act. PCO is the governing body for the sport of Pickleball in Canada. Pickleball is recreational and competitive; fun and challenging. Know more about the pickleball tournaments in Canada, announcements, policies and more from the official source.",
+      "followers": {
+        "facebook": 6300,
+        "twitter": 931,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5474321.jpg?t=1669891456"
+    },
+    {
+      "title": "Control the 'T' Sports Blog \u00bb Pickleball",
+      "feed_url": "https://blog.controlthet.com/pickleball/rss.xml",
+      "website_url": "https://blog.controlthet.com/pickleball",
+      "description": "Welcome to the pickleball blog at Control the 'T' Sports. Aimed at helping you learn more about pickleball, improve your game, and learn more about pickleball gear. Jeff Warren is the founder of Control the 'T' Sports loves racquet sports and wants to be a part of the community.",
+      "followers": {
+        "facebook": 691,
+        "twitter": 854,
+        "instagram": 926
+      },
+      "image_url": "https://i1.feedspot.com/5461047.jpg?t=1667201083"
+    },
+    {
+      "title": "Pickleball England Blog",
+      "feed_url": "https://www.pickleballengland.org/feed/",
+      "website_url": "https://www.pickleballengland.org/our-blog/",
+      "description": "Pickleball England is a not-for-profit organization set up to promote and encourage in every way at local, national and international levels the sport of pickleball and to act as the sole governing or delegating body for the sport in England. The Pickleball England blog is dedicated to bringing content that might be of interest to both club membership and individual player membership. It could be about what the pickleballEngland volunteers are up to, it could be about playing tips and tactics, it could be about tournaments, ladders and leagues - anything pickleball related!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5474264.jpg?t=1669958073"
+    },
+    {
+      "title": "NML Pickleball",
+      "feed_url": "https://www.nmlpickleball.com/feed/",
+      "website_url": "https://www.nmlpickleball.com/",
+      "description": "We are two formerly anonymous bloggers - Slim and Gritty - bringing pickleball opinion and analysis to the masses. We're simply two guys who have way too many thoughts about pickleball and figured a blog would be a great place for all the world to disagree with. We initially went by aliases to be able to give the most honest assessments that we possibly could.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5461062.jpg?t=1667201178"
+    },
+    {
+      "title": "Seattle Metro Pickleball Association Blog",
+      "feed_url": "https://seattlemetropickleball.com/feed/",
+      "website_url": "https://seattlemetropickleball.com/news/",
+      "description": "Seattle Metro Pickleball Association (SMPA) is your voice in speaking up to the city or county parks departments to ask for pickleball facilities, more court time indoors, and work to develop dedicated pickleball facilities. Get the latest news on pickleball tournaments, courts, facilities and more in Seattle.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 86
+      },
+      "image_url": "https://i1.feedspot.com/5461048.jpg?t=1667201089"
+    },
+    {
+      "title": "Talbot Tennis Blog",
+      "feed_url": "https://www.talbottennis.com/feed/",
+      "website_url": "https://www.talbottennis.com/blog/",
+      "description": "Learn more about tennis court construction & resurfacing through our blog post. Stay up-to-date on the latest news & find helpful tips for your tennis court. Talbot Tennis provides expert services in the field of Tennis Court Construction, from providing our clients with innovative solutions for Court Construction.",
+      "followers": {
+        "facebook": 755,
+        "twitter": 205
+      },
+      "image_url": "https://i1.feedspot.com/5461064.jpg?t=1667201197"
+    },
+    {
+      "title": "Holbrook Pickleball Blog",
+      "feed_url": "https://holbrookpickleball.com/blogs/holbrook-blog.atom",
+      "website_url": "https://holbrookpickleball.com/blogs/holbrook-blog",
+      "description": "Discover exclusive offers, original stories, events and more in the blog. Designed and engineered for competitive and professional players, Holbrook Pro Series Pickleball Paddles feature the latest in cutting edge paddle technology to provide power, spin and control.",
+      "followers": {
+        "facebook": 2400,
+        "instagram": 16200
+      },
+      "image_url": "https://i1.feedspot.com/5474276.jpg?t=1669891080"
+    },
+    {
+      "title": "Pickleball BC",
+      "feed_url": "https://www.pickleballbc.ca/news/feed",
+      "website_url": "https://www.pickleballbc.ca/news",
+      "description": "PICKLEBALLBC (PBC), founded in March 2017, is dedicated to the growth, development, promotion, and enjoyment of pickleball. It encourages people of all ages and skill levels to experience pickleball. Get the latest news and updates from BC on pickleball tournaments, policies, rules, and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5474311.jpg?t=1669894777"
+    },
+    {
+      "title": "Hudef Sport Blog",
+      "feed_url": "https://hudefsport.com/blogs/news.atom",
+      "website_url": "https://hudefsport.com/blogs/news",
+      "description": "Explore Hudef Sport's blog for News, pickleball education, the technology of products and more! Hudef is the pioneer in spin technology and surface abrasion of pickleball paddles. We show respect for players of all levels by making the very best paddles.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 797,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5474286.jpg?t=1669891170"
+    },
+    {
+      "title": "North Shore Pickleball Club",
+      "feed_url": "https://northshorepickleballclub.com/category/news-and-events/feed/",
+      "website_url": "https://northshorepickleballclub.com/category/news-and-events/",
+      "description": "We are a registered non-profit society promoting the game of pickleball for all ages and abilities on the North Shore in British Columbia, Canada. In just a few short years, our club and its members have introduced thousands of North Shore residents of all ages to pickleball. Stay up to date with the latest news and updates on games, events, tournaments and more from PIckleball world.",
+      "followers": {
+        "facebook": 905
+      },
+      "image_url": "https://i1.feedspot.com/5474317.jpg?t=1708680624"
+    },
+    {
+      "title": "Pickleball Rookie Blog",
+      "feed_url": "https://pickleballrookie.com/feed",
+      "website_url": "https://pickleballrookie.com/blog",
+      "description": "My name is Andrew, and I am a lifelong recreational tennis player who, like many people, became intrigued with this 'pickleball thing.' I started playing in March 2022 and am using this platform to document my experience with America's fastest-growing sport. The goal is to use Pickleball Rookie to share my education in the highly-addictive sport. And perhaps my lessons will help you embark on your pickleball journey.",
+      "followers": {
+        "twitter": 692
+      },
+      "image_url": "https://i1.feedspot.com/5461063.jpg?t=1667217626"
+    },
+    {
+      "title": "Pickleball Channel",
+      "feed_url": "https://www.pickleballchannel.com/feed/",
+      "website_url": "https://www.pickleballchannel.com/",
+      "description": "Find out what is happening in the world of Pickleball - the community, information and fun. Pickleball Channel is the first global media channel sharing the wonderful game of Pickleball. Established in March of 2014, we brought professional media to the sport of pickleball. We cover tournaments, the largest of which is The US Open Pickleball Championships, as well as provide pickleball instruction, news and community stories to all those that play pickleball, and to new players joining every day.",
+      "followers": {
+        "facebook": 52100,
+        "twitter": 5800,
+        "instagram": 20700
+      },
+      "image_url": "https://i1.feedspot.com/5474320.jpg?t=1669891451"
+    },
+    {
+      "title": "Cape Fear Pickleball Club Blog",
+      "feed_url": "https://capefearpickleballclub.org/category/blog/feed/",
+      "website_url": "https://capefearpickleballclub.org/category/blog/",
+      "description": "The Cape Fear Pickleball Club was formed in 2015 to promote participation in pickleball, to develop venues to provide more opportunities to play, and to bring pickleball players together for the enjoyment of social events and friendly competition. Explore the blog for the latest news from the club, updates, tips for playing and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5474284.jpg?t=1669957347"
+    },
+    {
+      "title": "Play-PKL Blog",
+      "feed_url": "https://play-pkl.com/blogs/pkl-posts-blogs.atom",
+      "website_url": "https://play-pkl.com/blogs/pkl-posts-blogs",
+      "description": "Your go-to resource for everything you want to know about pickleball but were afraid to ask! Come play with us. Play-PKL is the premier pickleball brand for the recreational player to look and feel confident on and off the court.",
+      "followers": {
+        "facebook": 293,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5474274.jpg?t=1669891067"
+    },
+    {
+      "title": "Sarasota Pickleball Organization, LLC",
+      "feed_url": "https://sarasotapickleball.com/feed/",
+      "website_url": "https://sarasotapickleball.com/",
+      "description": "I am Pickleball Terry, leader and developer of the Sarasota Pickleball Organization. I am a USA Ambassador of pickleball through USAPA or USA Pickleball Association and a certified PPR instructor. I give clinics and host tournaments. My primary goal of Sarasota Pickleball is to educate and encourage pickleball players in Sarasota.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5474268.jpg?t=1669961380"
+    },
+    {
+      "title": "Pickleball Eastern MA",
+      "feed_url": "https://pickleballeasternma.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://pickleballeasternma.blogspot.com/",
+      "description": "All things pickleball from the NH border to the Cape and Islands and out as far as Worcester. Coverage includes Ashland, Framingham, Holliston, Hopkinton, Marlborough, Natick, Sherborn, Southborough, Sudbury, Wayland and Westborough and Weston.",
+      "followers": {
+        "facebook": 420
+      },
+      "image_url": "https://i1.feedspot.com/5474314.jpg?t=1669891395"
+    },
+    {
+      "title": "CY Pickleball Blog",
+      "feed_url": "https://www.cypickleball.ca/blog-feed.xml",
+      "website_url": "https://www.cypickleball.ca/blog",
+      "description": "CY Pickleball Blog is a blog by Cheryl young where she distributes handy Pickleball tips and insights. Sharpen your Pickleball skills with this expert advice and strategies. Cheryl is one of the top-ranked female players in Whistler, B.C., and wants to share her personal passion for pickleball through her blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5497508.jpg?t=1674218564"
+    },
+    {
+      "title": "Pickleball Portal Blog",
+      "feed_url": "https://www.pickleballportal.com/blog/feed/",
+      "website_url": "https://www.pickleballportal.com/blog/",
+      "description": "This is the blog page of Pickelball Portal with a running blogroll of all our past posts.",
+      "followers": {
+        "facebook": 982,
+        "twitter": 810,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5018531.jpg?t=1674218274"
+    },
+    {
+      "title": "CJ Johnson Global",
+      "feed_url": "https://cjjohnsonglobal.com/feed/",
+      "website_url": "https://cjjohnsonglobal.com/pickleball/",
+      "description": "Train Smart, Live Bold, Age Well. Better Pickleball and Age Well with CJ are dedicated to helping players over 50 live their best lives on and off the pickleball courts.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5187082.jpg?t=1598602127"
+    },
+    {
+      "title": "Pink Pickleball Blog",
+      "feed_url": "https://pinkpickleball.com/feed/",
+      "website_url": "https://pinkpickleball.com/blog/",
+      "description": "Whether you're a seasoned pro or just picking up your pickleball paddle for the first, the Pink Pickleball community is here to welcome you with open arms.",
+      "followers": {
+        "facebook": 277
+      },
+      "image_url": "https://i1.feedspot.com/5130712.jpg?t=1622290563"
+    },
+    {
+      "title": "Picky PickleBall",
+      "feed_url": "https://www.pickypickleball.com/feed/",
+      "website_url": "https://www.pickypickleball.com/",
+      "description": "Picky PickleBall is a website dedicated to the amazing sport of Pickleball. Here one can find all kinds of information related to Pickleball. This website is started by a group of hardcore Pickleball fans.",
+      "followers": {
+        "facebook": 146,
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/5020799.jpg?t=1622290783"
+    },
+    {
+      "title": "Pickleball Is All Blog of Joe Palmere Certified Professional Coach and Ambassador",
+      "feed_url": "https://pickleballisalljoepalmere.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://pickleballisalljoepalmere.blogspot.com/",
+      "description": "A blog for serious pickleball players who play to win, and eliminate their opponents scoring opportunities.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5020837.jpg?t=1622290726"
+    },
+    {
+      "title": "PaddlePal",
+      "feed_url": "https://www.paddlepal.co/blog-feed.xml",
+      "website_url": "https://www.paddlepal.co/",
+      "description": "PaddlePal is the pickleball authority. Paddle reviews, industry updates, strategy guides, lifestyle, and more.",
+      "followers": {
+        "twitter": 15
+      },
+      "image_url": "https://i1.feedspot.com/5518250.jpg?t=1678357264"
+    },
+    {
+      "title": "PickleballAdvisor Blog",
+      "feed_url": "https://pickleballadvisor.com/feed/",
+      "website_url": "https://pickleballadvisor.com/category/blog/",
+      "description": "John Wells is a passionate pickleball player and blogger who has been sharing his love for the sport with others for many years. He started his blog, 'PickleballAdvisor.com,' as a way to document his own pickleball journey and to connect with other players who share his enthusiasm for the game. Get a review of the best pickleball paddles available in the market. I review paddles from beginner level to professional level.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5610532.jpg?t=1687945636"
+    },
+    {
+      "title": "Bob Savar Blog",
+      "feed_url": "https://bobsavarpickleball.com/feed/",
+      "website_url": "https://bobsavarpickleball.com/blog/",
+      "description": "Bob Savar's blog posts aim to help beginner and intermediate pickleball players improve their game by teaching them the basics and some advanced-level techniques in pickleball. His blog posts focus on the fundamentals of the game, mastering pickleball strategy and skills, and improving players' skills with drills and exercises. Bob's primary goal is to help players become better by incorporating essential techniques.",
+      "followers": {
+        "facebook": 42,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5619052.jpg?t=1688637126"
+    },
+    {
+      "title": "Pickleball4All Blog",
+      "feed_url": "https://pickleball4all.com/feed/",
+      "website_url": "https://pickleball4all.com/blog/",
+      "description": "Welcome to Pickleball4All, a dynamic community catering to pickleball enthusiasts of all levels - beginners, intermediates, and advanced players. Here, you'll uncover product reviews spanning paddles, nets, machines, and more. We also provide carefully curated buying guides and practical playing tips.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5680057.jpg?t=1695819746"
+    },
+    {
+      "title": "Pickelball For All Blog",
+      "feed_url": "https://pickelballforall.com/feed/",
+      "website_url": "https://pickelballforall.com/blog/",
+      "description": "Pickelball For All is a dedicated affiliate website that helps people like you find the best pickleball paddles and accessories for your specific requirement. As ardent players ourselves, we understand the impact of having the right gear, which is why we've made it our mission to offer the best selection of pickleball paddles and accessories, each rigorously tested and handpicked by us.",
+      "followers": {
+        "twitter": 7,
+        "instagram": 79
+      },
+      "image_url": "https://i1.feedspot.com/5673604.jpg?t=1695031377"
+    },
+    {
+      "title": "Pickleball Players Guide",
+      "feed_url": "https://pickleballplayersguide.com/feed/",
+      "website_url": "https://pickleballplayersguide.com/",
+      "description": "Unlock the secrets to mastering Pickleball with Pickleball Players Guide! From beginner tips to advanced pickleball strategies, find everything you need right here ta Pickleball Players Guide to elevate your game and dominate the court.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7252519.jpg?t=1707984682"
+    },
+    {
+      "title": "Recess Pickleball Blog",
+      "feed_url": "https://www.recesspickleball.com/blogs/pickleball.atom",
+      "website_url": "https://www.recesspickleball.com/blogs/pickleball",
+      "description": "Recess is a lifestyle pickle ball brand that encourages all types and levels of play. Know more about our promotions, new collections, and Recess event invitations along with the game of pickleball, tips and tricks to play and more!",
+      "followers": {
+        "facebook": 2500,
+        "instagram": 52400
+      },
+      "image_url": "https://i1.feedspot.com/5461052.jpg?t=1667201113"
+    },
+    {
+      "title": "Pickleball Hop Blog",
+      "feed_url": "https://pickleballhop.com/feed/",
+      "website_url": "https://pickleballhop.com/blog/",
+      "description": "Pickleball Hop is dedicated to providing reviews, news, and information about pickleball equipment. All players can find the best products with our help. Besides offering reviews of products like paddles, rackets, buying guides, and padel news, we also offer news about padel.",
+      "followers": {
+        "facebook": 17
+      },
+      "image_url": "https://i1.feedspot.com/5439157.jpg?t=1662469906"
+    },
+    {
+      "title": "The Pickleball Paddles",
+      "feed_url": "https://thepickleballpaddles.com/feed/",
+      "website_url": "https://thepickleballpaddles.com/",
+      "description": "Everything You need to know about the Pickleball Paddles Today! I'm covering all the aspects of pickleball paddles.",
+      "followers": {
+        "facebook": 1200,
+        "instagram": 379
+      },
+      "image_url": "https://i1.feedspot.com/5416934.jpg?t=1656586244"
+    },
+    {
+      "title": "IntoPickleball",
+      "feed_url": "https://intopickleball.com/feed/",
+      "website_url": "https://intopickleball.com/",
+      "description": "InPickleball Magazine offers an independent and inclusive look at America's fastest-growing sport, geared toward players of all skill levels - whether you're one of the millions of people who play pickleball regularly or a first-timer who wants to see what all the fun is about. InPickleball readers will find useful information to improve their on-court skills, including curated gear guides, fitness and nutrition tips, and advice from professional players and sports medicine doctors.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5461054.jpg?t=1667201124"
+    },
+    {
+      "title": "PrimeTime Pickleball",
+      "feed_url": "https://primetimepickleball.com/feed/",
+      "website_url": "https://primetimepickleball.com/",
+      "description": "Our site is here to bring you World Class Online Pickleball Training. We have the best and most up-to-date pickleball information to take your game to the next level. PrimeTime Pickleball is headed up by Nicole Havlicek. She is a former nationally ranked Division 1 tennis player turned 5.0. level pickleball player and an IPTPA-certified pickleball coach.",
+      "followers": {
+        "facebook": 7300,
+        "twitter": 528
+      },
+      "image_url": "https://i1.feedspot.com/5429640.jpg?t=1667204998"
+    },
+    {
+      "title": "Tangerine Paddle Blog",
+      "feed_url": "https://tangerinepaddle.com/blogs/guide.atom",
+      "website_url": "https://tangerinepaddle.com/blogs/guide/",
+      "description": "This blog is a guide dedicated to pickleball rules, events, and products. We created Tangerine because we love spending time outside with friends playing pickleball! We knew that there were others around the world that love pickleball for the same reasons and we wanted to create a brand and products that reflect that spirit of fun, camaraderie, and friendly competition.",
+      "followers": {
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/5474312.jpg?t=1669893741"
+    },
+    {
+      "title": "Amazin' Aces Blog",
+      "feed_url": "https://www.amazinaces.com/blogs/news.atom",
+      "website_url": "https://www.amazinaces.com/blogs/news",
+      "description": "Read our blog information on the game of pickleball. Rules, strategy, pickleball paddle guides, preventing pickleball injuries, and more! We've been in LOVE with pickleball since 2016. Call us the OGs of the new wave of pickleball. Our specialty is producing pickleball paddles and gear for newbies and weekend warriors all the way to experienced players with dreams of competing in Major League Pickleball. We're on a mission to grow this glorious game through premium products at fair prices.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 33,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5461051.jpg?t=1667201106"
+    },
+    {
+      "title": "Rhino Pickleball Blog \u00bb Pickleball Tips and Tricks",
+      "feed_url": "https://rhinopickleball.com/blogs/pickleball-tips-and-tricks.atom",
+      "website_url": "https://rhinopickleball.com/blogs/pickleball-tips-and-tricks",
+      "description": "Know more about the Pickleball game, rules, guide, tips and tricks for everyone from beginners to experts and more! Rhino Pickleball, created by Champion Sports, is all about providing quality products for all levels of athletes. Anyone can play, whether recreationally or competitively in one of the many official pickleball tournaments across the nation.",
+      "followers": {
+        "facebook": 3000,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5474319.jpg?t=1669891444"
+    },
+    {
+      "title": "Triangle Blog Blog \u00bb Pickleball",
+      "feed_url": "https://triangleblogblog.com/category/pickleball/feed/",
+      "website_url": "https://triangleblogblog.com/category/pickleball/",
+      "description": "We frequently write about Carrboro, Durham, and Chapel Hill on a variety of different platforms. This is our attempt to put everything in one place, so that ongoing musings about local governance, climate change, history, and our region are easier to follow. Explore what is happening on the Pickleball front in those areas ad surrounding towns in this section.",
+      "followers": {
+        "facebook": 200,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5461055.jpg?t=1667201131"
+    },
+    {
+      "title": "All Pickleball Blog",
+      "feed_url": "https://allpickleball.com/jennifersblog/feed/",
+      "website_url": "https://allpickleball.com/jennifersblog/",
+      "description": "All Pickleball is a website to share playing tips from the pros, pickleball adventures from around the world, the History of Pickleball book, and of course, to make you smile.",
+      "followers": {
+        "facebook": 1900,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5018646.jpg?t=1622290578"
+    },
+    {
+      "title": "Pickleball Rocks!!!",
+      "feed_url": "https://pickleballrocks.com/feed/",
+      "website_url": "https://pickleballrocks.com/",
+      "description": "Living and sharing the pickleball life. USAPA Pickleball Ambassador and pickleball fanatic, Rocket and the whole Pickleball Rocks Team share this great sport with everyone young and old. Check out Lessons, clinics, boot camps and other fun pickleball events brought to you by the Pickleball Rocks Team, Parkview Sports Medicine and the High-Performance Pickleball team featuring Scott, Jon and Daniel Moore.",
+      "followers": {
+        "facebook": 24600,
+        "twitter": 7,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/3509235.jpg?t=1669967648"
+    },
+    {
+      "title": "F2Sports Blog",
+      "feed_url": "https://www.f2sports.com/blogs/news.atom",
+      "website_url": "https://www.f2sports.com/blogs/news",
+      "description": "F2 Sports offers pickleball products that are powerful in play and beautiful in design. Find out more about new products, promotions and news related to F2 Sports!",
+      "followers": {
+        "facebook": 204,
+        "instagram": 644
+      },
+      "image_url": "https://i1.feedspot.com/5474316.jpg?t=1669891410"
+    },
+    {
+      "title": "jojo+lo Pickleball Blog",
+      "feed_url": "https://jojoandlo.com/blogs/news.atom",
+      "website_url": "https://jojoandlo.com/blogs/news",
+      "description": "Whether you're new to pickleball or an experienced dinker or banger - be the most stylish player on and off the court. From cozy hoodies and cute visors to graphic tees and activewear, browse through our collection. Stay up-to-date on our newest product drops, promotions, and sales.",
+      "followers": {
+        "facebook": 758,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5461041.jpg?t=1667201049"
+    },
+    {
+      "title": "Palm Creek Pickleball Blog",
+      "feed_url": "http://palmcreekpickleball.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://palmcreekpickleball.blogspot.com/",
+      "description": "Get the latest updates and news on pickleball at Palm Creek Pickleball blog.",
+      "followers": {
+        "twitter": 514
+      },
+      "image_url": "https://i1.feedspot.com/5018645.jpg?t=1674219016"
+    },
+    {
+      "title": "BigPickleBalls Blog",
+      "feed_url": "https://bigpickleballs.com/feed/",
+      "website_url": "https://bigpickleballs.com/bloggy-blog/",
+      "description": "Big Pickle Balls.com Shop Specials Where To Play Dedicated to my mom (My 85 year old mom plays PickleBall everyday ) Paddles Look here for our large selection of paddles Pickleball.",
+      "followers": {
+        "twitter": 8
+      },
+      "image_url": "https://i1.feedspot.com/5162995.jpg?t=1657521146"
+    },
+    {
+      "title": "Quick Pickle Blog",
+      "feed_url": "https://quickpickle.com/feed/",
+      "website_url": "https://quickpickle.com/blog/",
+      "description": "You love Pickleball and want more knowledge. Our funny and informational blogs cover all things Pickleball. Whether you are new to the sport or a seasoned veteran we have actionable advice you can use on the court today.",
+      "followers": {
+        "facebook": 641,
+        "twitter": 94,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5018644.jpg?t=1674219041"
+    },
+    {
+      "title": "The Pickleball Player",
+      "feed_url": "https://thepickleballplayer.com/feed/",
+      "website_url": "https://thepickleballplayer.com/",
+      "description": "The Pickleball Player aims to help the growing pickleball community by publishing great content. Here, you can read reviews of pickleball paddles, get tips, read interviews of pros, and find the latest information about Pickleball.",
+      "followers": {
+        "facebook": 1
+      },
+      "image_url": "https://i1.feedspot.com/5368115.jpg?t=1643966858"
+    },
+    {
+      "title": "Nelson BC Pickleball Blog",
+      "feed_url": "http://nelsonpickleball.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://nelsonpickleball.blogspot.com/",
+      "description": "Nelson Pickleball is where we arrange games at short notice and pass on other important news and changes to schedules for the rest of the year.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5474263.jpg?t=1669895420"
+    },
+    {
+      "title": "Summit County Pickleball Association Blog",
+      "feed_url": "https://www.summitpickleball.org/feed/",
+      "website_url": "https://www.summitpickleball.org/blog/",
+      "description": "Check out the news and fun for Summit County pickleball players. Summit County Pickleball Association is a tax-exempt, all-volunteer, nonprofit that promotes the growth and development of pickleball as a healthful activity among players of all ages and characteristics, residing in or visiting Summit County, CO.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5474267.jpg?t=1669959391"
+    },
+    {
+      "title": "Court Sports 4 Life Blog",
+      "feed_url": "https://www.courtsports4life.org/blog-feed.xml",
+      "website_url": "https://www.courtsports4life.org/blog",
+      "description": "Follow for progress reports on the Pickleball Center project plus news relating to tennis & pickleball in Steamboat Springs, CO! Court Sports 4 Life is enriching the lives of Steamboat Springs CO residents and visitors of all ages, abilities, and socio-economic groups through tennis and pickleball.",
+      "followers": {
+        "facebook": 7
+      },
+      "image_url": "https://i1.feedspot.com/5474295.jpg?t=1669896858"
+    },
+    {
+      "title": "Pickleball Tutor Blog",
+      "feed_url": "https://pickleballtutor.com/feed/",
+      "website_url": "https://pickleballtutor.com/blog/",
+      "description": "Check out more great pickleball training resources here featuring gameplay tips and tricks, training aids and more! Get tips and practical information for improving your pickleball game! We provide Portable, Powerful, Pickleball Tutor the preferred ball machine of the world's top pickleball players!",
+      "followers": {
+        "facebook": 22800,
+        "twitter": 339,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5474283.jpg?t=1669897215"
+    },
+    {
+      "title": "La Pine Pickleball Club Blog",
+      "feed_url": "https://lapinepickleball.com/lppc-blog?format=rss",
+      "website_url": "https://lapinepickleball.com/lppc-blog",
+      "description": "Get your monthly dose of local Pickleball reading, including what our club is up to, tips & tricks, and more! Join the fastest growing sport in America right here in our small community. Our local club has over 150 members ranging from beginners to advanced players. Play happens year-round at La Pine Park & Recreation District with three indoor courts and eight dedicated outdoor courts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5474275.jpg?t=1669961952"
+    },
+    {
+      "title": "Around The Post Blog \u00bb Pickleball",
+      "feed_url": "https://aroundthepost.blog/category/pickleball-blog/feed/",
+      "website_url": "https://aroundthepost.blog/category/pickleball-blog/",
+      "description": "This is my space to organize my thoughts on pickleball and squash. Often I'll be playing and notice something specific that I want to explore, or watching a video and something jumps out at me. Ultimately I hope keeping a log in this manner will keep me accountable and organized. Explore quick-take videos, ideas, and analysis of pickleball here.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5474277.jpg?t=1669962091"
+    },
+    {
+      "title": "Royal Pickleball Blog",
+      "feed_url": "https://royalpickleball.com/blogs/pickleball-gameplay.atom",
+      "website_url": "https://royalpickleball.com/blogs/pickleball-gameplay",
+      "description": "Royal Pickleball manufactures and provides paddles and gear for competitive pickleball players of all levels that are committed to improving their game. We bring together pickleball players of all levels that are committed to improving their game. Learn more about pickleball game, tips and tricks to play the game, gear and more!",
+      "followers": {
+        "facebook": 486,
+        "twitter": 17,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5474315.jpg?t=1669891403"
+    },
+    {
+      "title": "VeronaWalk Pickleball Club",
+      "feed_url": "https://www.veronawalkpickleball.com/announcements?format=rss",
+      "website_url": "https://www.veronawalkpickleball.com/announcements",
+      "description": "VeronaWalk Pickleball Club portal is where you will stay up to date on everything Pickleball in our beautiful community. Stay up to date with the latest updates, announcements, rule changes and amendments and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5474322.jpg?t=1669894109"
+    },
+    {
+      "title": "Players Pickleball Blog",
+      "feed_url": "https://players-pickleball.myshopify.com/blogs/news.atom",
+      "website_url": "https://players-pickleball.myshopify.com/blogs/news",
+      "description": "We develop high-performance pickleball paddles through a rigorous R&D program that combines a scientific approach with subjective feedback from players to create some of the best paddles money can buy. Explore our latest products, reviews, news and more!",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 46,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5461058.jpg?t=1667201155"
+    },
+    {
+      "title": "NYC Pickleball Blog",
+      "feed_url": "https://www.nycpickleball.com/blog?format=rss",
+      "website_url": "https://www.nycpickleball.com/blog",
+      "description": "Get the latest on pickleball play times, tournaments, clinics, and events in New York City. A quick overview of pickleball courts in New York City and the surrounding areas. Indoor pickleball is available in NYC Rec Centers.",
+      "followers": {
+        "instagram": 9000
+      },
+      "image_url": "https://i1.feedspot.com/5461060.jpg?t=1667204430"
+    },
+    {
+      "title": "Merchant of Tennis Blog \u00bb Pickleball",
+      "feed_url": "https://www.merchantoftennis.com/blogs/pickleball.atom",
+      "website_url": "https://www.merchantoftennis.com/blogs/pickleball",
+      "description": "Merchant of Tennis, celebrating 30 years in business, is a company founded by tennis players and professionals to cater to tennis enthusiasts everywhere. Incorporated in 1992 with a background in pro shop retailing the idea was to bring personal professional tennis service to a larger market. Browse through the pickleball section to know more about the latest sensation game in the sports world, tips and tricks to play, gear reviews and more!",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 1600,
+        "instagram": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5474288.jpg?t=1669957018"
+    },
+    {
+      "title": "PEP Pickleball",
+      "feed_url": "https://peppickleball.com/feed/",
+      "website_url": "https://peppickleball.com/community/",
+      "description": "Our community is full of amazing women both on and off the court! Whether you are new to the game, or an elite player, PEP is for you. Join us, and see how our shared love of Pickleball is only the beginning of the fun we'll have together! Founded in 2020, by entrepreneur Jill Christiansen. Her passion for pickleball led her to create PEP Pickleball, a brand designed to empower women. What began as an idea to create a high-quality paddle for women transformed into a much bigger picture about the world of sports, competitive advantage, empowerment, and community.",
+      "followers": {
+        "facebook": 531,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5474279.jpg?t=1669891105"
+    },
+    {
+      "title": "Pickleball Realtor Network Blog",
+      "feed_url": "https://pickleballrealtornetwork.com/feed/",
+      "website_url": "https://pickleballrealtornetwork.com/news-social-media/",
+      "description": "The Pickleball Realtor Network is committed to delivering a high level of expertise, customer service, and attention to detail to the marketing and sales of luxury real estate, and rental properties. Learn the latest Pickleball news in recent posts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5497501.jpg?t=1674218642"
+    },
+    {
+      "title": "Pickleball Trips",
+      "feed_url": "https://pickleballtrips.com/feed/",
+      "website_url": "https://pickleballtrips.com/about/news/",
+      "description": "Brothers Jon and Daniel share their expertise as certified teaching professionals and their knowledge of travel. Combining top travel destinations with World-Class Pickleball Instruction, Pickleball Trips is the ultimate online resource for Longtime Pickle Ball fanatics. Stay up to date on the latest pickleball news and tips to help improve your game with our blog.",
+      "followers": {
+        "facebook": 11800,
+        "instagram": 24700
+      },
+      "image_url": "https://i1.feedspot.com/5497506.jpg?t=1674218803"
+    },
+    {
+      "title": "Baddle Pickleball Blog",
+      "feed_url": "https://baddle.com/blogs/news.atom",
+      "website_url": "https://baddle.com/blogs/news",
+      "description": "Discover trending gameplay strategies, insights, rules, and sports news in the Baddle Pickleball blog. Baddle is an athletic gear-making company. Using the latest in technology and design, Baddle makes premium pickleball gear that helps you elevate your pickleball game to the pro level.",
+      "followers": {
+        "facebook": 976,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5497502.jpg?t=1674218315"
+    },
+    {
+      "title": "Deep River Pickleball Blog",
+      "feed_url": "https://www.deepriverpickleball.ca/blog-feed.xml",
+      "website_url": "https://www.deepriverpickleball.ca/blog",
+      "description": "The Deep River Pickleball blog is where we post up-to-date content on activities, events and the Deep River Pickleball community.Deep River Pickleball provides pickleball coaching, court-time, competition and social activities for pickleball players in Deep River.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5497505.jpg?t=1674218906"
+    },
+    {
+      "title": "PickleballCentral Blog",
+      "feed_url": "https://pickleballcentral.com/blog/",
+      "website_url": "https://pickleballcentral.com/blog/",
+      "description": "Get to know about Pickleball Stories, News and Information at Pickleball Central.com",
+      "followers": {
+        "facebook": 34800,
+        "twitter": 7400,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5018532.jpg?t=1674218287"
+    },
+    {
+      "title": "JOOLA Blog \u00bb Pickleball",
+      "feed_url": "https://joola.com/blogs/updates/tagged/pickleball.atom",
+      "website_url": "https://joola.com/blogs/updates/tagged/pickleball/",
+      "description": "JOOLA was founded by Karl Frey, the former owner of the department store group, Fr. Th. Jooss, located in Landau, Germany. In 2022, JOOLA launched JOOLA Pickleball and immediately took the sport by storm as the sponsor of pickleball world #1 Ben Johns and a partner of USPPA. Expl0ore our pickleball section for the latest coverage of tournaments, players, game scores, new equipment and more!",
+      "followers": {
+        "facebook": 22800,
+        "instagram": 95800
+      },
+      "image_url": "https://i1.feedspot.com/5461050.jpg?t=1667201099"
+    },
+    {
+      "title": "Better Pickleball",
+      "feed_url": "https://betterpickleball.com/",
+      "website_url": "https://betterpickleball.com/",
+      "description": "WeArePickleball is an online training platform that helps pickleball players over 50 who are frustrated and confused gain confidence and proficiency by teaching a deeper understanding of the mechanics, strategies, and athleticism they need to reach their pickleball potential. We teach you the mechanical, strategic, and athletic skills that you need to play your best.",
+      "followers": {
+        "facebook": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5461057.jpg?t=1667201152"
+    },
+    {
+      "title": "Salted City Sports Blogs \u00bb Pickleball",
+      "feed_url": "https://saltedcitysports.com/blogs/all-about-paddles.atom",
+      "website_url": "https://saltedcitysports.com/blogs/all-about-paddles/",
+      "description": "Here is everything you need to know about pickleball! From rules to gifs you will find everything you need in one place. Salted City Sports started with a dream to influence the pickleball community. Founded in 2021 by Hayden Bruce, Salted City Sports began in Utah. Hayden is a full time college student and pursues a career in marketing. Now Salted City Sports is a worldwide pickleball manufacturer providing the highest quality paddles on the market.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5461056.jpg?t=1667207953"
+    },
+    {
+      "title": "Huntsville Pickleball Blog",
+      "feed_url": "https://www.pickleball-huntsville.com/blog/?feed=rss2",
+      "website_url": "https://www.pickleball-huntsville.com/blog/",
+      "description": "This section will contain news about events, facility availability, instruction and much more. Welcome to the Huntsville, Alabama pickleball web page. In Huntsville, there are 9 indoor locations available to play pickleball up to 7 days a week (depending on the season). We also have 12 new outdoor courts at the Sandra Moon Moon Community Complex that are dedicated to Pickleball.",
+      "followers": {
+        "facebook": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5461046.jpg?t=1667217828"
+    },
+    {
+      "title": "Third Shot Drop Blog",
+      "feed_url": "https://www.thirdshotdrop.com/sec-blog.rss",
+      "website_url": "https://www.barstoolsports.com/topics/pickleball",
+      "description": "Third Shot Drop Custom Pickleball Paddles is the future of the fastest-growing sport in America. Using advanced materials and breakthroughs in design, TSD challenges traditional off-the-shelf paddles. The blog is your source for all the basic information on Pickleball, gear reviews and more!",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 397,
+        "instagram": 22000
+      },
+      "image_url": "https://i1.feedspot.com/5474281.jpg?t=1669891120"
+    },
+    {
+      "title": "Pickleball Advice",
+      "feed_url": "https://pickleballadvice.com/feed/",
+      "website_url": "https://pickleballadvice.com/",
+      "description": "Want to be the best in pickleball and play link a pro? Pickleball is the fastest growing sport in the world! We provide the best and honest reviews on pickleball equipment such as paddles, shoes, nets, balls etc. We also provide you with dedicated advice on pickleball rules, scoring, strategies as well as information about tournament and clinics around you.",
+      "followers": {
+        "facebook": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5259887.jpg?t=1616390253"
+    },
+    {
+      "title": "Play Pickleballs",
+      "feed_url": "https://playpickleballs.com/feed/",
+      "website_url": "https://playpickleballs.com/",
+      "description": "The Play Pickleballs website features articles and updates on pickleball events, players, rules, and news. It covers various topics such as player achievements, tournament details, facility openings, and controversies in the pickleball community. Additionally, the site includes information on pickleball court dimensions, biographies of players like Ben Johns, and speculations on pickleball's future, including its potential as an Olympic sport and the involvement of players like Roger Federer.",
+      "followers": {
+        "twitter": 40
+      },
+      "image_url": "https://i1.feedspot.com/7293682.jpg?t=1712641666"
+    },
+    {
+      "title": "Pickleball Bee",
+      "feed_url": "https://pickleballbee.com/feed/",
+      "website_url": "https://pickleballus360.com/blog/",
+      "description": "My Name Is Humna. We are a group of passionate pickleball players who are dedicated to providing the latest news, tips, and insights on all things pickleball. Whether you are a seasoned pro or just getting started, our website is the perfect destination for everything related to this exciting and growing sport.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5603577.jpg?t=1687330904"
+    },
+    {
+      "title": "Pickleball US 360 Blog",
+      "feed_url": "https://pickleballus360.com/feed/",
+      "website_url": "https://pickleballus360.com/blog/",
+      "description": "Explore the fun world of Pickleball! Master the game's fundamentals, understand official regulations, and learn about variations for different skill levels. The team behind Pickleballus360 strives to deliver valuable knowledge and insights to enrich your pickleball experience, regardless of your skill level or background.",
+      "followers": {
+        "facebook": 2,
+        "twitter": 589
+      },
+      "image_url": "https://i1.feedspot.com/7246116.jpg?t=1707296617"
+    },
+    {
+      "title": "Pickleballopinion Blog",
+      "feed_url": "https://pickleballopinion.com/feed/",
+      "website_url": "https://pickleballopinion.com/blog/",
+      "description": "Pickleballopinion.com is an informative and reviews website where you can get the latest information related to its rules and news updates about this popular and fastest-growing sport. Here we provide reviews about the best playing equipment/products related to this sport.",
+      "followers": {
+        "twitter": 24,
+        "instagram": 526
+      },
+      "image_url": "https://i1.feedspot.com/5550966.jpg?t=1682501506"
+    },
+    {
+      "title": "Pickler Blog",
+      "feed_url": "https://thepickler.com/blogs/pickleball-blog.atom",
+      "website_url": "https://thepickler.com/pickleball-blog/",
+      "description": "This pickleball blog shares pickleball tips, strategies, stories & other information about the community, culture & spirit of the sport of pickleball and why pickleball is more than just a sport. Our mission at Pickler is to promote the sport of pickleball and inspire others to play pickleball. Pickler promotes the unique and welcoming community of pickleball, as well as pickleball's great exercise, family-friendly, high-quality play, meaningful relationships, health and wellness benefits, and fun culture.",
+      "followers": {
+        "facebook": 22700,
+        "twitter": 125,
+        "instagram": 8300
+      },
+      "image_url": "https://i1.feedspot.com/5461049.jpg?t=1667201096"
+    },
+    {
+      "title": "Pickleball Superstore Blog",
+      "feed_url": "https://pickleballsuperstore.com/blogs/pickleball-blog.atom",
+      "website_url": "https://pickleballsuperstore.com/blogs/pickleball-blog/",
+      "description": "Explore the most recent pickleball news. From professional pickleball serves to the official pickleball rules, find everything in our blog. Created for pickleball players, by pickleball players. Pickleball Superstore is the #1 destination for your pickleball paddles, balls, bags, accessories and more.",
+      "followers": {
+        "facebook": 214,
+        "instagram": 10700
+      },
+      "image_url": "https://i1.feedspot.com/5461059.jpg?t=1667201162"
+    },
+    {
+      "title": "Pickleballsinfo Blog",
+      "feed_url": "https://www.pickleballsinfo.com/feed/",
+      "website_url": "https://www.pickleballsinfo.com/blog/",
+      "description": "Sharing pickleball tips and tricks, what to buy and not to. Pickleballsinfo is a place where beginners to advance all types of players will get valuable pickleball tips and suggestions to improve their game or solve their issues during the game.",
+      "followers": {
+        "facebook": 275
+      },
+      "image_url": "https://i1.feedspot.com/5362448.jpg?t=1674218451"
+    },
+    {
+      "title": "Pickleball Magazine",
+      "feed_url": "https://www.pickleballmagazine.com/",
+      "website_url": "https://www.pickleballmagazine.com/",
+      "description": "Pickleball Magazine (2016) is published by Dollard Publishing Company (1999). Each year, Dollard Publishing produces six print/mailed issues of the magazine as well as two digital-only, special edition, electronic issues. Pickleball Magazine has never been more illustrated: intensity, passion, meaning, insights, tournaments, products. Pickleball Magazine covers it all and goes out to over 100K readers every issue.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 3300,
+        "instagram": 14600
+      },
+      "image_url": "https://i1.feedspot.com/5461074.jpg?t=1667201310"
+    },
+    {
+      "title": "Atomic Pickleball",
+      "feed_url": "https://atomicpickleball.com/feed/",
+      "website_url": "https://atomicpickleball.com/",
+      "description": "Atomic Pickleball is your nucleus for pickleball. From beginner strategies to reviews of the best pickleball gear, we have what you need to get involved in America's fastest-growing sport.",
+      "followers": {
+        "facebook": 1
+      },
+      "image_url": "https://i1.feedspot.com/5458619.jpg?t=1666182304"
+    },
+    {
+      "title": "The Pickleball Guru",
+      "feed_url": "https://pickleballhelp.com/feed/",
+      "website_url": "https://barnstablepickleball.com/blog",
+      "description": "Pickleball Coach, Prem Carnot, The Pickleball Guru will teach you to play Smart Pickleball. Explore Pickleball Strategies, Tips and Trick, Pickleball Lessons, Coaching, Clinics and Bootcamps. This is the place for new players to get up to speed fast, beginner & intermediate players to find out how to move to the more advanced levels, and athletes and total non-athletes to learn the tactics and strategies for playing smarter, not harder.",
+      "followers": {
+        "facebook": 7900
+      },
+      "image_url": "https://i1.feedspot.com/5429639.jpg?t=1667216105"
+    },
+    {
+      "title": "Vulcan Sporting Goods Blog",
+      "feed_url": "https://vulcansportinggoods.com/blogs/news.atom",
+      "website_url": "https://vulcansportinggoods.com/blogs/news/",
+      "description": "Founded in 2019, the Paddle Candy Pickleball brand - powered by Vulcan Pickleball - was built to be a little different. While intentionally eccentric and free-spirited in its creativity and design aesthetic, we manufacture only high-performance, advanced-technology pickleball gear to allow players to compete and win, and to be their best whether as amateurs or at the professional level. Browse through our blog to know more about our paddles, new release and more!",
+      "followers": {
+        "facebook": 267,
+        "instagram": 483
+      },
+      "image_url": "https://i1.feedspot.com/5474270.jpg?t=1669891039"
+    },
+    {
+      "title": "KAYAA Sports Blog",
+      "feed_url": "https://www.kayaasports.com/blogs/news.atom",
+      "website_url": "https://www.kayaasports.com/blogs/news",
+      "description": "KAYAA Sports produces high quality pickleball clothing, apparel and accessories, perfectly balancing form with function. Our products represent a combination of fresh style and timeless aesthetic, backed by a guarantee on everything we create. Stay on top of all the latest KAYAA Sports news, products and promotions.",
+      "followers": {
+        "facebook": 1100,
+        "instagram": 692
+      },
+      "image_url": "https://i1.feedspot.com/5474285.jpg?t=1669891148"
+    },
+    {
+      "title": "Pickleball Journey",
+      "feed_url": "https://pickleballjourney.com/feed/",
+      "website_url": "https://pickleballjourney.com/",
+      "description": "Follow Andrew and his misadventures with the yellow ball as he learns to play Pickleball. Andrew talks about the game, rules, tips and tricks and more for everyone from beginners to pros. Andrew earns his living selling art materials and picture framing with the help of his dedicated staff. He started Pickleball as a need for exercise and hasn't looked back!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5474282.jpg?t=1669897775"
+    },
+    {
+      "title": "Golden Pickleball Blog",
+      "feed_url": "https://goldenpickleball.com/blogs/pickleball-blog.atom",
+      "website_url": "https://goldenpickleball.com/blogs/pickleball-blog",
+      "description": "Check out the Golden Pickleball Blog for Playing strategies, Insights, recent sporting trends, and more exciting Pickleball stuff. Golden Pickleball is a place to search, find and grow a player's love for the game. Our mission is to provide high-quality pickleball products -paddles, balls to players and enthusiasts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5497499.jpg?t=1674218705"
+    },
+    {
+      "title": "Sioux Falls Area Pickleball Blog",
+      "feed_url": "https://www.sfapickleball.org/feed/",
+      "website_url": "https://www.sfapickleball.org/blog/",
+      "description": "Stay current and on top of all things Pickleball activities and competitions in the Sioux Falls Area. Our blog updates you on all the latest Championship news and details. Sioux Falls Area Pickleball is a local sports body that strives to create and promote fun, friendship, and fitness through our shared enjoyment of the sport of pickleball.",
+      "followers": {
+        "twitter": 263
+      },
+      "image_url": "https://i1.feedspot.com/5497497.jpg?t=1674218744"
+    }
+  ]
+}

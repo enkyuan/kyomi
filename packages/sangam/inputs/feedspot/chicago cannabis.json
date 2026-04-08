@@ -1,0 +1,58 @@
+{
+  "category": "Chicago Cannabis",
+  "source_url": "https://rss.feedspot.com/chicago_cannabis_rss_feeds",
+  "feeds": [
+    {
+      "title": "nuEra Blog",
+      "feed_url": "https://nueracannabis.com/feed/",
+      "website_url": "https://nueracannabis.com/blog/",
+      "description": "nuEra Cannabis, a family-owned canna retailer in Illinois, is a pioneering force in the state's cannabis industry. With roots as original medical licensees, they've shaped the industry and grown into one of Illinois' largest independent operators. Stay informed with nuEra's latest news and insights into their innovative cultivation and production methods.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/7295795.jpg?t=1714744899"
+    },
+    {
+      "title": "Chicago Sun-Times \u00bb Marijuana",
+      "feed_url": "https://chicago.suntimes.com/rss/marijuana/index.xml",
+      "website_url": "https://chicago.suntimes.com/marijuana/",
+      "description": "With a legacy spanning over seven decades, the Chicago Sun-Times is renowned for its investigative journalism and comprehensive coverage of politics, sports, and culture. Delving into Chicago's burgeoning cannabis industry, it provides insightful coverage from legalization to culinary explorations with cannabis.",
+      "followers": {
+        "facebook": 414400,
+        "twitter": 540500,
+        "instagram": 103200
+      },
+      "image_url": "https://i1.feedspot.com/5259572.jpg?t=1616228154"
+    },
+    {
+      "title": "nuEra Cannabis News",
+      "feed_url": "https://nueracannabis.com/feed/",
+      "website_url": "https://nueracannabis.com/news/",
+      "description": "nuEra Cannabis, a family-owned canna retailer in Illinois, is a pioneering force in the state's cannabis industry. With roots as original medical licensees, they've shaped the industry and grown into one of Illinois' largest independent operators. Stay informed with nuEra's latest news and insights into their innovative cultivation and production methods.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/7296129.jpg?t=1712830099"
+    },
+    {
+      "title": "Grasshopper Club Blog",
+      "feed_url": "https://grasshopperclub.multiscreensite.com//feed/rss2",
+      "website_url": "https://grasshopperclub.com/blog",
+      "description": "Grasshopper Club, a Chicago-based, Black-owned dispensary, was born from a family's vision to redefine the local cannabis experience. Their mission extends beyond sales to fostering diversity by offering career paths and ownership opportunities within the industry. Committed to heritage and community, they provide premium products and personalized service.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7295895.jpg?t=1712822749"
+    },
+    {
+      "title": "High Minded Events Blog",
+      "feed_url": "https://www.highmindedevents.com/feed",
+      "website_url": "https://www.highmindedevents.com/blog",
+      "description": "High Minded Events, a premier experiential event planner, blends upscale events with cannabis, crafting unforgettable experiences. With a focus on education, they curate unique, infused events, elevating responsible consumption for guests, and redefining luxury event experiences.",
+      "followers": {
+        "facebook": 683
+      },
+      "image_url": "https://i1.feedspot.com/7295896.jpg?t=1712822778"
+    }
+  ]
+}

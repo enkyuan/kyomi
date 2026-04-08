@@ -1,0 +1,468 @@
+{
+  "category": "Techcrunch",
+  "source_url": "https://rss.feedspot.com/techcrunch_rss_feeds",
+  "feeds": [
+    {
+      "title": "TechCrunch",
+      "feed_url": "https://techcrunch.com/feed/",
+      "website_url": "https://techcrunch.com/",
+      "description": "TechCrunch is a leading technology media platform dedicated to profiling startups, reviewing new internet products, and breaking the latest tech news. Founded in 2005, it has established itself as a vital source of information for the tech industry. TechCrunch is spearheaded by Editor in Chief and General Manager Connie Loizos, who has a deep background in Silicon Valley journalism. The editorial team includes notable contributors like Matt Rosoff, Ingrid Lunden, Frederic Lardinois, and Kirsten Korosec, among others, who bring a wealth of experience and expertise to their respective beats.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/4447421.jpg?t=1634630003"
+    },
+    {
+      "title": "TechCrunch \u00bb Startups",
+      "feed_url": "https://techcrunch.com/category/startups/feed/",
+      "website_url": "https://techcrunch.com/category/startups/",
+      "description": "Read more about tech startup news that breaks down funding, growth, and long-term trajectory of companies across every stage and industry from TechCrunch.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/4461696.jpg?t=1726569530"
+    },
+    {
+      "title": "TechCrunch \u00bb Funding",
+      "feed_url": "https://techcrunch.com/tag/funding/feed/",
+      "website_url": "https://techcrunch.com/tag/funding/",
+      "description": "TechCrunch covers the latest funding news across the tech ecosystem\u2014from unicorns to the hottest new AI startup, TechCrunch analyzes every round.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/4822258.jpg?t=1752730078"
+    },
+    {
+      "title": "TechCrunch \u00bb Gadgets",
+      "feed_url": "https://techcrunch.com/category/gadgets/feed/",
+      "website_url": "https://techcrunch.com/category/gadgets/",
+      "description": "Discover the latest hardware that's bringing computing everywhere only on TechCrunch.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/4629054.jpg?t=1616219220"
+    },
+    {
+      "title": "TechCrunch \u00bb Security",
+      "feed_url": "https://techcrunch.com/category/security/feed/",
+      "website_url": "https://techcrunch.com/category/security/",
+      "description": "Read the latest news and investigative reporting on security today, including cybersecurity, breaches, hacks and cyberattacks around the globe.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/8642730.jpg"
+    },
+    {
+      "title": "TechCrunch \u00bb Tesla",
+      "feed_url": "https://techcrunch.com/tag/tesla/feed/",
+      "website_url": "https://techcrunch.com/tag/tesla/",
+      "description": "Discover the latest technology used in Tesla cars, how they make advancements in the batteries, updates, and announcements directly from Elon Musk.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/4822244.jpg?t=1612267739"
+    },
+    {
+      "title": "TechCrunch \u00bb Biotech & Health",
+      "feed_url": "https://techcrunch.com/category/biotech-health/feed/",
+      "website_url": "https://techcrunch.com/category/biotech-health/",
+      "description": "Read the latest news about biotech and health, from the most recent health tech and medical devices to research in synthetic biology and genetics.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/8642733.jpg"
+    },
+    {
+      "title": "TechCrunch \u00bb AI",
+      "feed_url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "website_url": "https://techcrunch.com/category/artificial-intelligence/",
+      "description": "Read the latest on artificial intelligence and machine learning tech, the companies that are building them, and the ethical issues AI raises today from Techcrunch.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/4822258.jpg?t=1752730078"
+    },
+    {
+      "title": "TechCrunch \u00bb Venture",
+      "feed_url": "https://techcrunch.com/category/venture/feed/",
+      "website_url": "https://techcrunch.com/category/venture/",
+      "description": "Venture capital news and coverage feature all the VCs, VC-backed startups, and investment trends that founders, investors, and students should be tracking.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/8642729.jpg"
+    },
+    {
+      "title": "TechCrunch \u00bb Apple",
+      "feed_url": "https://techcrunch.com/tag/apple/feed/",
+      "website_url": "https://techcrunch.com/tag/apple/",
+      "description": "TechCrunch's Apple section is a key resource for staying updated on all things Apple, featuring news, reviews, and analyses of the latest products, software updates, and corporate developments. The blog offers timely and comprehensive coverage, ensuring readers are well-informed about new iPhone releases, MacBook updates, and innovations in Apple's software and services. With contributions from a team of seasoned tech journalists, TechCrunch provides in-depth articles and expert insights, making it a valuable destination for Apple enthusiasts and tech aficionados alike.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/586370.jpg?t=1608797797"
+    },
+    {
+      "title": "TechCrunch \u00bb Videos",
+      "feed_url": "https://techcrunch.com/video/feed/",
+      "website_url": "https://techcrunch.com/video/",
+      "description": "All videos from TechCrunch.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/4822258.jpg?t=1752730078"
+    },
+    {
+      "title": "TechCrunch \u00bb Samsung",
+      "feed_url": "https://techcrunch.com/tag/samsung/feed/",
+      "website_url": "https://techcrunch.com/tag/samsung/",
+      "description": "Get the recent updates about Samsung, Samsung mobiles, and much more only on TechCrunch.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/4822258.jpg?t=1752730078"
+    },
+    {
+      "title": "TechCrunch \u00bb Twitter",
+      "feed_url": "https://techcrunch.com/tag/twitter/feed/",
+      "website_url": "https://techcrunch.com/tag/twitter/",
+      "description": "Stay up to date with the latest technology news and analysis about Twitter only on TechCrunch.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/4822258.jpg?t=1752730078"
+    },
+    {
+      "title": "TechCrunch \u00bb Transportation",
+      "feed_url": "https://techcrunch.com/category/transportation/feed/",
+      "website_url": "https://techcrunch.com/category/transportation/",
+      "description": "Read the latest on transportation and auto news, from scooters and e-bikes to autonomous vehicles and EVs. Covering auto tech companies big and small.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/8642740.jpg"
+    },
+    {
+      "title": "TechCrunch \u00bb Space",
+      "feed_url": "https://techcrunch.com/category/space/feed/",
+      "website_url": "https://techcrunch.com/category/space/",
+      "description": "Read the latest news about space, including launches, funding rounds, satellite communications systems, and the latest space research.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/8642741.jpg"
+    },
+    {
+      "title": "TechCrunch \u00bb Robotics",
+      "feed_url": "https://techcrunch.com/category/robotics/feed/",
+      "website_url": "https://techcrunch.com/category/robotics/",
+      "description": "Read the latest robotics news and research on the companies and startups building robots to automate logistics, delivery, home robotics, and more.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/8642743.jpg"
+    },
+    {
+      "title": "TechCrunch \u00bb Privacy",
+      "feed_url": "https://techcrunch.com/category/privacy/feed/",
+      "website_url": "https://techcrunch.com/category/privacy/",
+      "description": "Read the latest privacy news coverage, including data protection, policy, emerging tech, and startups trying to solve today's biggest data privacy issues.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/8642742.jpg"
+    },
+    {
+      "title": "TechCrunch \u00bb Meta",
+      "feed_url": "https://techcrunch.com/tag/meta/feed/",
+      "website_url": "https://techcrunch.com/tag/meta/",
+      "description": "Read the latest news about Meta on TechCrunch",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/8642731.jpg"
+    },
+    {
+      "title": "TechCrunch \u00bb Instagram",
+      "feed_url": "https://techcrunch.com/tag/instagram/feed",
+      "website_url": "https://techcrunch.com/tag/instagram/",
+      "description": "Read the latest news about Instagram on TechCrunch.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4822258.jpg?t=1752730078"
+    },
+    {
+      "title": "TechCrunch \u00bb Hardware",
+      "feed_url": "https://techcrunch.com/category/hardware/feed/",
+      "website_url": "https://techcrunch.com/category/hardware/",
+      "description": "Read the latest hardware news and reviews focusing on tech products from the latest startups to the biggest players like Apple, Amazon, Google, Microsoft.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/8642735.jpg"
+    },
+    {
+      "title": "TechCrunch \u00bb Gaming News",
+      "feed_url": "https://techcrunch.com/category/gaming/feed/",
+      "website_url": "https://techcrunch.com/category/gaming/",
+      "description": "Read the latest gaming news and updates covering everything from mobile and video games to consoles and PCs, and the companies powering them.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/8642732.jpg?t=1753786682"
+    },
+    {
+      "title": "TechCrunch \u00bb Fintech",
+      "feed_url": "https://techcrunch.com/category/fintech/feed/",
+      "website_url": "https://techcrunch.com/category/fintech/",
+      "description": "Read the latest fintech news, covering everything from disruptor banks and innovations at financial institutions to fintech companies and startups.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/8642728.jpg"
+    },
+    {
+      "title": "TechCrunch \u00bb EVs",
+      "feed_url": "https://techcrunch.com/tag/evs/feed/",
+      "website_url": "https://techcrunch.com/tag/evs/",
+      "description": "Read the latest news about EVs on TechCrunch",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/8642739.jpg"
+    },
+    {
+      "title": "TechCrunch \u00bb Crypto",
+      "feed_url": "https://techcrunch.com/category/cryptocurrency/feed/",
+      "website_url": "https://techcrunch.com/category/cryptocurrency/",
+      "description": "Read the latest news and coverage on cryptocurrency, including Bitcoin, Ethereum and the blockchain startups building the future of crypto, web3 and NFTs.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/8642734.jpg"
+    },
+    {
+      "title": "TechCrunch \u00bb Commerce",
+      "feed_url": "https://techcrunch.com/category/commerce/feed/",
+      "website_url": "https://techcrunch.com/category/commerce/",
+      "description": "Read the latest news on commerce, including e-commerce, retail, and social commerce\u2014which is a huge and ever-changing industry.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/8642737.jpg"
+    },
+    {
+      "title": "TechCrunch \u00bb Cloud Computing",
+      "feed_url": "https://techcrunch.com/tag/cloud-computing/feed/",
+      "website_url": "https://techcrunch.com/tag/cloud-computing/",
+      "description": "Read the latest news about Cloud Computing on TechCrunch",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/8642738.jpg"
+    },
+    {
+      "title": "TechCrunch \u00bb Climate",
+      "feed_url": "https://techcrunch.com/category/climate/feed/",
+      "website_url": "https://techcrunch.com/category/climate/",
+      "description": "Our climate coverage has the latest startups and investments in solar energy, Greentech, renewables, food tech, alternative proteins and fake meat, and things like circular economy and carbon capture efforts. We also cover research into climate change and how technology can be used to track and mitigate severe weather and climate-related disasters.",
+      "followers": {
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/4822258.jpg?t=1752730078"
+    },
+    {
+      "title": "TechCrunch \u00bb Apps",
+      "feed_url": "https://techcrunch.com/category/apps/feed/",
+      "website_url": "https://techcrunch.com/category/apps/",
+      "description": "As the app economy continues to grow, both on iOS and Google Play stores, TechCrunch covers the latest app news and updates across both digital storefronts.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/8642736.jpg"
+    },
+    {
+      "title": "TechCrunch \u00bb Yahoo",
+      "feed_url": "https://techcrunch.com/tag/yahoo/feed/",
+      "website_url": "https://techcrunch.com/tag/yahoo/",
+      "description": "View the latest technology news and analysis about Yahoo from TechCrunch.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/4822258.jpg?t=1752730078"
+    },
+    {
+      "title": "TechCrunch \u00bb Social",
+      "feed_url": "https://techcrunch.com/category/social/feed/",
+      "website_url": "https://techcrunch.com/category/social/",
+      "description": "Read the latest news and updates about the biggest social media players, as well as funding and acquisitions of new social startups from Techcrunch.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/4822258.jpg?t=1752730078"
+    },
+    {
+      "title": "TechCrunch \u00bb Media & Entertainment",
+      "feed_url": "https://techcrunch.com/category/media-entertainment/feed/",
+      "website_url": "https://techcrunch.com/category/media-entertainment/",
+      "description": "Media & Entertainment tech news covers social media, streaming services, mobile apps, startups entering App Stores, the creator economy and more.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/4612631.jpg?t=1612264689"
+    },
+    {
+      "title": "TechCrunch \u00bb Europe",
+      "feed_url": "https://techcrunch.com/tag/europe/feed/",
+      "website_url": "https://techcrunch.com/tag/europe/",
+      "description": "View the latest innovative technology coming out of Europe only on TechCrunch.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/4822258.jpg?t=1752730078"
+    },
+    {
+      "title": "TechCrunch \u00bb Enterprise",
+      "feed_url": "https://techcrunch.com/category/enterprise/feed/",
+      "website_url": "https://techcrunch.com/category/enterprise/",
+      "description": "Read the latest enterprise news, from large SaaS providers to funding for small SaaS companies, and products that help startups build their own SaaS from Techcrunch.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/4822258.jpg?t=1752730078"
+    },
+    {
+      "title": "TechCrunch \u00bb Mobile",
+      "feed_url": "https://techcrunch.com/tag/mobile/feed/",
+      "website_url": "https://techcrunch.com/tag/mobile/",
+      "description": "Read the latest news about Mobile on TechCrunch.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/4822255.jpg?t=1612266458"
+    },
+    {
+      "title": "TechCrunch \u00bb Asia",
+      "feed_url": "https://techcrunch.com/tag/asia/feed/",
+      "website_url": "https://techcrunch.com/tag/asia/",
+      "description": "Find out the latest innovative tech coming out of Asia only from TechCrunch.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/4822258.jpg?t=1752730078"
+    },
+    {
+      "title": "TechCrunch \u00bb Amazon",
+      "feed_url": "https://techcrunch.com/tag/amazon/feed/",
+      "website_url": "https://techcrunch.com/tag/amazon/",
+      "description": "Stay up to date with the updates related to Amazon only on TechCrunch.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/4822258.jpg?t=1752730078"
+    },
+    {
+      "title": "TechCrunch \u00bb Android",
+      "feed_url": "https://techcrunch.com/tag/android/feed/",
+      "website_url": "https://techcrunch.com/tag/Android/",
+      "description": "Get the latest Android update news, features added, and much more on TechCrunch.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/4822258.jpg?t=1752730078"
+    },
+    {
+      "title": "TechCrunch \u00bb Facebook",
+      "feed_url": "https://techcrunch.com/tag/facebook/feed/",
+      "website_url": "https://techcrunch.com/tag/facebook/",
+      "description": "Follow up for the latest updates, reviews, and announcements on Facebook only from TechCrunch.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/507886.jpg?t=1612269650"
+    },
+    {
+      "title": "TechCrunch \u00bb Google",
+      "feed_url": "https://techcrunch.com/tag/google/feed/",
+      "website_url": "https://techcrunch.com/tag/Google/",
+      "description": "Discover the latest updates, and reviews on google only from TechCrunch.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/4822258.jpg?t=1752730078"
+    },
+    {
+      "title": "TechCrunch \u00bb LinkedIn",
+      "feed_url": "https://techcrunch.com/tag/linkedin/feed/",
+      "website_url": "https://techcrunch.com/tag/linkedin/",
+      "description": "Follow up for the latest updates about LinkedIn only from TechCrunch.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/4822258.jpg?t=1752730078"
+    },
+    {
+      "title": "TechCrunch \u00bb Microsoft",
+      "feed_url": "https://techcrunch.com/tag/microsoft/feed/",
+      "website_url": "https://techcrunch.com/tag/microsoft/",
+      "description": "Discover the latest news, reviews, and updates from Microsoft only on TechCrunch.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/4822258.jpg?t=1752730078"
+    }
+  ]
+}

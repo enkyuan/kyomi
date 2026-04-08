@@ -1,0 +1,18 @@
+{
+  "category": "Oakdale News",
+  "source_url": "https://rss.feedspot.com/oakdale_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "CBS News \u00bb Oakdale",
+      "feed_url": "https://www.cbsnews.com/latest/rss/main",
+      "website_url": "https://www.cbsnews.com/minnesota/tag/oakdale/",
+      "description": "Get Oakdale News, Sports, Weather, Traffic, and the Best of Minnesota, and the Twin Cities of Minneapolis-St. Paul from WCCO - CBS Minnesota.",
+      "followers": {
+        "facebook": 484700,
+        "twitter": 269700,
+        "instagram": 87900
+      },
+      "image_url": "https://i1.feedspot.com/5160767.jpg"
+    }
+  ]
+}

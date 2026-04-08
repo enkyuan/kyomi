@@ -1,0 +1,212 @@
+{
+  "category": "Herald Bulletin",
+  "source_url": "https://rss.feedspot.com/herald_bulletin_rss_feeds",
+  "feeds": [
+    {
+      "title": "Herald Bulletin \u00bb Local News",
+      "feed_url": "https://www.heraldbulletin.com/search/?f=rss&t=article&c=news/local_news&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.heraldbulletin.com/news/local_news/",
+      "description": "Get the latest local news and updates only on Herald Bulletin.",
+      "followers": {
+        "facebook": 30600,
+        "twitter": 8100,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5242670.jpg?t=1612603407"
+    },
+    {
+      "title": "Herald Bulletin \u00bb State",
+      "feed_url": "https://www.heraldbulletin.com/search/?f=rss&t=article&c=news/state_news&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.heraldbulletin.com/news/state_news/",
+      "description": "Find the latest regional news, including headlines & top stories available on the Herald Bulletin.",
+      "followers": {
+        "facebook": 30600,
+        "twitter": 8100,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5242681.jpg?t=1612604013"
+    },
+    {
+      "title": "Herald Bulletin \u00bb Nation & World",
+      "feed_url": "https://www.heraldbulletin.com/search/?f=rss&t=article&c=news/nation_world&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.heraldbulletin.com/news/nation_world/",
+      "description": "Indiana's coverage of National news and World from Herald Bulletin.",
+      "followers": {
+        "facebook": 30600,
+        "twitter": 8100,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5242684.jpg?t=1612604356"
+    },
+    {
+      "title": "Herald Bulletin \u00bb Business",
+      "feed_url": "https://www.heraldbulletin.com/search/?f=rss&t=article&c=business&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.heraldbulletin.com/business/",
+      "description": "Find the latest business news, interest rates, banking, companies, and the U.S. and world financial markets from Herald Bulletin.",
+      "followers": {
+        "facebook": 30600,
+        "twitter": 8100,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5242662.jpg?t=1612598931"
+    },
+    {
+      "title": "Herald Bulletin \u00bb Sports",
+      "feed_url": "https://www.heraldbulletin.com/search/?f=rss&t=article&c=sports&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.heraldbulletin.com/sports/",
+      "description": "The latest scores, news, videos, photos, and standings in high school, college, and professional sports from Herald Bulletin.",
+      "followers": {
+        "facebook": 30600,
+        "twitter": 8100,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5242691.jpg?t=1612605058"
+    },
+    {
+      "title": "Herald Bulletin \u00bb Multimedia",
+      "feed_url": "https://www.heraldbulletin.com/search/?f=rss&t=article&c=multimedia&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.heraldbulletin.com/multimedia/",
+      "description": "Get the latest multimedia news and updates in the Indiana region.",
+      "followers": {
+        "facebook": 30600,
+        "twitter": 8100,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5242694.jpg?t=1612605417"
+    },
+    {
+      "title": "Herald Bulletin \u00bb Community",
+      "feed_url": "https://www.heraldbulletin.com/search/?f=rss&t=article&c=community&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.heraldbulletin.com/community/",
+      "description": "Discover the latest community news and updates only on Herald Bulletin.",
+      "followers": {
+        "facebook": 30600,
+        "twitter": 8100,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5242696.jpg?t=1612605779"
+    },
+    {
+      "title": "Herald Bulletin \u00bb Opinion",
+      "feed_url": "https://www.heraldbulletin.com/search/?f=rss&t=article&c=opinion&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.heraldbulletin.com/opinion/",
+      "description": "Get the latest editorials, opinions from different columnists, and much more only on the Herald Bulletin.",
+      "followers": {
+        "facebook": 30600,
+        "twitter": 8100,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5242702.jpg?t=1612606106"
+    },
+    {
+      "title": "Herald Bulletin \u00bb Food",
+      "feed_url": "https://www.heraldbulletin.com/search/?f=rss&t=article&c=community/food&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.heraldbulletin.com/community/food/",
+      "description": "All articles about Food from Herald Bulletin.",
+      "followers": {
+        "facebook": 30600,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/8541040.jpg"
+    },
+    {
+      "title": "Herald Bulletin \u00bb Entertainment",
+      "feed_url": "https://www.heraldbulletin.com/search/?f=rss&t=article&c=community/entertainment&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.heraldbulletin.com/community/entertainment/",
+      "description": "All articles about Entertainment from Herald Bulletin.",
+      "followers": {
+        "facebook": 30600,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/8541049.jpg"
+    },
+    {
+      "title": "Herald Bulletin \u00bb Notre Dame",
+      "feed_url": "https://www.heraldbulletin.com/search/?f=rss&t=article&c=sports/notredame&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.heraldbulletin.com/sports/notredame/",
+      "description": "All articles about Notre Dame from Herald Bulletin.",
+      "followers": {
+        "facebook": 30600,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/8541047.jpg"
+    },
+    {
+      "title": "Herald Bulletin \u00bb High School Sports",
+      "feed_url": "https://www.heraldbulletin.com/search/?f=rss&t=article&c=sports/high_school_sports&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.heraldbulletin.com/sports/high_school_sports/",
+      "description": "All articles about High School Sports from Herald Bulletin.",
+      "followers": {
+        "facebook": 30600,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/8541046.jpg"
+    },
+    {
+      "title": "Herald Bulletin \u00bb Colts",
+      "feed_url": "https://www.heraldbulletin.com/search/?f=rss&t=article&c=sports/colts&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.heraldbulletin.com/sports/colts/",
+      "description": "All articles about Colts from Herald Bulletin.",
+      "followers": {
+        "facebook": 30600,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/8541044.jpg"
+    },
+    {
+      "title": "Herald Bulletin \u00bb Elections",
+      "feed_url": "https://www.heraldbulletin.com/search/?f=rss&t=article&c=elections/news&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.heraldbulletin.com/elections/news/",
+      "description": "All articles about Elections from Herald Bulletin.",
+      "followers": {
+        "facebook": 30600,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/8541045.jpg"
+    },
+    {
+      "title": "Herald Bulletin \u00bb Public Safety",
+      "feed_url": "https://www.heraldbulletin.com/search/?f=rss&t=article&c=news/public_safety&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.heraldbulletin.com/news/public_safety/",
+      "description": "All articles about Public Safety from Herald Bulletin.",
+      "followers": {
+        "facebook": 30600,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/8541042.jpg"
+    },
+    {
+      "title": "Herald Bulletin \u00bb Education",
+      "feed_url": "https://www.heraldbulletin.com/search/?f=rss&t=article&c=news/education&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.heraldbulletin.com/news/education/",
+      "description": "All articles about Education from Herald Bulletin.",
+      "followers": {
+        "facebook": 30600,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/8541048.jpg"
+    },
+    {
+      "title": "Herald Bulletin \u00bb Courts",
+      "feed_url": "https://www.heraldbulletin.com/search/?f=rss&t=article&c=news/courts&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.heraldbulletin.com/news/courts/",
+      "description": "All articles about Courts from Herald Bulletin.",
+      "followers": {
+        "facebook": 30600,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/8541043.jpg"
+    },
+    {
+      "title": "Herald Bulletin \u00bb Coronavirus",
+      "feed_url": "https://www.heraldbulletin.com/search/?f=rss&t=article&c=news/coronavirus&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.heraldbulletin.com/news/coronavirus/",
+      "description": "All articles about Coronavirus from Herald Bulletin.",
+      "followers": {
+        "facebook": 30600,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/8541041.jpg"
+    }
+  ]
+}

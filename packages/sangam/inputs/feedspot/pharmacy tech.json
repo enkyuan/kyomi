@@ -1,0 +1,78 @@
+{
+  "category": "Pharmacy Tech",
+  "source_url": "https://rss.feedspot.com/pharmacy_tech_rss_feeds",
+  "feeds": [
+    {
+      "title": "PharmTech News",
+      "feed_url": "https://www.pharmtech.com/rss",
+      "website_url": "https://www.pharmtech.com/",
+      "description": "PharmTech is a comprehensive information source for all professionals in the global pharmaceutical manufacturing drug development community. We provide professionals with dynamic and reliable cutting-edge peer-reviewed content and features on next-generation process development and manufacturing, formulation, drug delivery, ingredients, regulation, analytics, packaging, supply chain, and outsourcing.",
+      "followers": {
+        "twitter": 15900
+      },
+      "image_url": "https://i1.feedspot.com/5424358.jpg?t=1658487872"
+    },
+    {
+      "title": "PTCB Test Prep Blog",
+      "feed_url": "https://ptcbtestprep.com/feed/",
+      "website_url": "https://ptcbtestprep.com/ptcb-blog/",
+      "description": "PTCB Test Prep is a leading online course to prepare you for all core subjects of the PTCB exam. The courses are developed by industry experts. By providing the examination comprehensive coverage of pharmacy calculations for technicians and full-length PTCB practice exams, we also include exam tips, tricks, and all the latest news of the previous examination.",
+      "followers": {
+        "facebook": 8500,
+        "twitter": 13900,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5424363.jpg?t=1658482124"
+    },
+    {
+      "title": "The Digital Apothecary",
+      "feed_url": "https://www.thedigitalapothecary.com/pharmacy-innovation-news?format=rss",
+      "website_url": "https://www.thedigitalapothecary.com/pharmacy-innovation-news",
+      "description": "Hey, this is Timothy Aungst, an Associate Professor of Pharmacy Practice at MCPHS University. The Digital Apothecary is a space for pharmacists to learn about recent technological innovations and their impact on pharmacy. The main purpose of this site is to focus on the news and reviews on the pharmacy sector, including startups, research, and products of interest.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5424360.jpg?t=1658482108"
+    },
+    {
+      "title": "PharmTechEDU Blog",
+      "feed_url": "https://pharmtechedu.com/feed/",
+      "website_url": "https://pharmtechedu.com/blog/",
+      "description": "The Pharmacy Technician Program is an exclusively online self-paced, 12-week program, with 24 weeks of curriculum access. With the delivery of 'fun and excitement', this program truly has everything and is fully approved by the Pharmacy Technician Certification Board. Our mission at Pharm Tech EDU is to develop the unique abilities and potential of each individual by offering an enriched, easy learning pharmacy technician educational program.",
+      "followers": {
+        "facebook": 17
+      },
+      "image_url": "https://i1.feedspot.com/5424356.jpg?t=1658482089"
+    },
+    {
+      "title": "Pharmacy Technician School Blog",
+      "feed_url": "https://pharmacistschools.org/feed/",
+      "website_url": "https://pharmacistschools.org/blog/",
+      "description": "The Pharmacy Technician School gives you out a complete guidance on how to become a Pharmacy Technician, including state-by-state information on education and certification, specific state requirements, local salaries and job outlook, and professional organizations. The Technicians work under the direct supervision of a licensed pharmacist, also they daily interact with the pharmacist, with customers or patients, and sometimes with pharmaceutical reps. to provide useful information.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5424359.jpg?t=1658486744"
+    },
+    {
+      "title": "Parata Blog",
+      "feed_url": "https://parata.com/feed/",
+      "website_url": "https://parata.com/blog/",
+      "description": "Parata provides pharmacy technology solutions that empower business growth, increase safety and efficiency, and improve patient adherence and outcomes. We are dedicated to giving each customer, from centralized filling operations and nutraceutical facilities to independently-owned retail pharmacies and everything in between, innovative technology solutions. Our executive team the team behind it all supports safety and efficiency, better health outcomes, and business growth. Here you can explore posts, articles, and tips from industry thought leaders at Parata and beyond in our Blog.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5424357.jpg?t=1658482094"
+    },
+    {
+      "title": "KLR Med Certs Blog",
+      "feed_url": "https://www.klronlinecertifications.com/blog-feed.xml",
+      "website_url": "https://www.klronlinecertifications.com/blog",
+      "description": "The Technician Training School is designed to prepare students to take a national exam through National Healthcareer Association/NHA. By providing instructor-led classes, projects, and guest speakers; students are introduced to and learn the fundamentals of pharmacy history and pharmacy law at large. Students will learn about the Top 200 Drugs (brand, generic, and indication), sig codes (pharmaceutical terminology), and basic pharmacy math calculations.",
+      "followers": {
+        "facebook": 978,
+        "twitter": 220
+      },
+      "image_url": "https://i1.feedspot.com/5424362.jpg?t=1658485387"
+    }
+  ]
+}

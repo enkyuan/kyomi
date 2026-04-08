@@ -1,0 +1,88 @@
+{
+  "category": "Yoyo",
+  "source_url": "https://rss.feedspot.com/yoyo_rss_feeds",
+  "feeds": [
+    {
+      "title": "YOYO REWIND News",
+      "feed_url": "https://yoyorewind.com/en/news/feed/",
+      "website_url": "https://yoyorewind.com/en/news/",
+      "description": "A yo-yo store serving worldwide from Japan. Get all the information on Yo-Yo Videos, Tricks, News, Tips & more.",
+      "followers": {
+        "facebook": 64800,
+        "twitter": 2500,
+        "instagram": 35100
+      },
+      "image_url": "https://i1.feedspot.com/5016487.jpg?t=1622286729"
+    },
+    {
+      "title": "Luftverk Blog",
+      "feed_url": "https://luftverk.com/blogs/blog.atom",
+      "website_url": "https://luftverk.com/blogs/blog",
+      "description": "Luftverk is the maker of professional-grade billet titanium yoyos. Each design is engineered around the unique material properties of titanium. Both aspects of performance and aesthetics intersect to provide the best possible user experience. Releases are limited in quantity and once retired will not be manufactured again. Know all the details about Titanium on our blogs.",
+      "followers": {
+        "facebook": 1200,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5016475.jpg?t=1622286737"
+    },
+    {
+      "title": "Doc Pop's \u00bb Yo-Yoing",
+      "feed_url": "https://docpop.org/category/yo-yoing/feed/",
+      "website_url": "https://docpop.org/category/yo-yoing/",
+      "description": "Doctor Popular is a game designer, musician, illustrator, zinester, crafster, and DIY super nerd who lives in San Francisco.",
+      "followers": {
+        "twitter": 8500,
+        "instagram": 17400
+      },
+      "image_url": "https://i1.feedspot.com/5016497.jpg?t=1622286746"
+    },
+    {
+      "title": "YoYo News",
+      "feed_url": "https://yoyonews.com/feed/",
+      "website_url": "https://yoyonews.com/",
+      "description": "YoYoNews is the Number 1 destination in the world for yoyo and related news and updates. From live contest coverage to first looks at new products, YoYoNews has a finger on the pulse of the yoyo industry.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 2100,
+        "instagram": 6300
+      },
+      "image_url": "https://i1.feedspot.com/5016496.jpg?t=1622286721"
+    },
+    {
+      "title": "YoYo Expert Blog",
+      "feed_url": "https://yoyoexpert.com/blog/feed/",
+      "website_url": "https://yoyoexpert.com/blog/",
+      "description": "Watch free yo-yo trick videos, learn from professional yo-yo players, and buy yo-yos from the YoYo Expert.",
+      "followers": {
+        "facebook": 25700,
+        "twitter": 5600,
+        "instagram": 23200
+      },
+      "image_url": "https://i1.feedspot.com/5016472.jpg?t=1622286750"
+    },
+    {
+      "title": "Yomega News",
+      "feed_url": "https://yomega.com/category/news/feed/",
+      "website_url": "https://yomega.com/category/news/",
+      "description": "Yomega Corp. is based in Seekonk, Massachusetts. We create finely engineered yoyos and skill toys. Our goal is to introduce the fun of yo-ing to the youngest players and to provide yo-yos that extend through play levels to the competition arena. Yo-ing is a fast-paced sport that changes daily and Yomega is newly committed to staying on the cutting edge.",
+      "followers": {
+        "facebook": 18300,
+        "twitter": 1500,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5016485.jpg?t=1622286758"
+    },
+    {
+      "title": "Duncan Blog",
+      "feed_url": "https://www.yo-yo.com/blog?feed=rss",
+      "website_url": "https://duncantoys.com/blogs/blog",
+      "description": "Duncan is one of the oldest and best-known toy makers. Founded during the Great Depression, the story of Duncan Toys is unique: one full of curiosity and invention that could only be fueled by the uniquely entrepreneurial spirit of America.",
+      "followers": {
+        "facebook": 28400,
+        "twitter": 2600,
+        "instagram": 16500
+      },
+      "image_url": "https://i1.feedspot.com/5016481.jpg?t=1622286725"
+    }
+  ]
+}

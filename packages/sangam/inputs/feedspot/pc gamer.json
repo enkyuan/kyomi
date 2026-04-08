@@ -1,0 +1,78 @@
+{
+  "category": "PC Gamer",
+  "source_url": "https://rss.feedspot.com/pcgamer_rss_feeds",
+  "feeds": [
+    {
+      "title": "PC Gamer",
+      "feed_url": "https://www.pcgamer.com/rss/",
+      "website_url": "https://www.pcgamer.com/",
+      "description": "PC Gamer is the world's best-selling PC games magazine, a coveted position obtained by hiring hardcore gamers as editors. The magazine delivers hard-hitting reviews, winning game strategies, explanations for complex games technology, and news about what's next in this rapidly changing arena. Smart, irreverent, and well-connected, PC Gamer not only keeps readers 'in the know,' but also invites new computer users into world of PC games.",
+      "followers": {
+        "facebook": 3700000,
+        "twitter": 3300000,
+        "instagram": 67000
+      },
+      "image_url": "https://i1.feedspot.com/4943252.jpg?t=1609821529"
+    },
+    {
+      "title": "PC Gamer \u00bb News",
+      "feed_url": "https://www.pcgamer.com/feeds/articletype/news/",
+      "website_url": "https://www.pcgamer.com/news/",
+      "description": "PC Gamer brings you the latest news on the PC games you love.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4943252.jpg?t=1609821529"
+    },
+    {
+      "title": "PC Gamer \u00bb Games",
+      "feed_url": "https://www.pcgamer.com/feeds/tag/games/",
+      "website_url": "https://www.pcgamer.com/games/",
+      "description": "The latest Games breaking news, comment, reviews and features from the experts at PC Gamer.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4943252.jpg?t=1609821529"
+    },
+    {
+      "title": "PC Gamer \u00bb Software",
+      "feed_url": "https://www.pcgamer.com/feeds/tag/software/",
+      "website_url": "https://www.pcgamer.com/software/",
+      "description": "The latest Software breaking news, comment, reviews and features from the experts at PC Gamer.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4943252.jpg?t=1609821529"
+    },
+    {
+      "title": "PC Gamer \u00bb Movies & TV",
+      "feed_url": "https://www.pcgamer.com/feeds/tag/movies-tv/",
+      "website_url": "https://www.pcgamer.com/movies-tv/",
+      "description": "The latest Movies & TV breaking news, comment, reviews and features from the experts at PC Gamer.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4943252.jpg?t=1609821529"
+    },
+    {
+      "title": "PC Gamer \u00bb Gaming Industry",
+      "feed_url": "https://www.pcgamer.com/feeds/tag/gaming-industry/",
+      "website_url": "https://www.pcgamer.com/gaming-industry/",
+      "description": "The latest Gaming Industry breaking news, comment, reviews and features from the experts at PC Gamer.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4943252.jpg?t=1609821529"
+    },
+    {
+      "title": "PC Gamer \u00bb Reviews",
+      "feed_url": "https://www.pcgamer.com/feeds/articletype/review/",
+      "website_url": "https://www.pcgamer.com/games/reviews/",
+      "description": "All of the latest from PC Gamer",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4943252.jpg?t=1609821529"
+    },
+    {
+      "title": "PC Gamer \u00bb Hardware",
+      "feed_url": "https://www.pcgamer.com/feeds/tag/hardware/",
+      "website_url": "https://www.pcgamer.com/hardware/",
+      "description": "The latest Hardware breaking news, comment, reviews and features from the experts at PC Gamer.",
+      "followers": {
+        "facebook": 3700000,
+        "twitter": 3300000,
+        "instagram": 67000
+      },
+      "image_url": "https://i1.feedspot.com/4943252.jpg?t=1609821529"
+    }
+  ]
+}

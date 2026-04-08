@@ -1,0 +1,30 @@
+{
+  "category": "Lawrenceville News",
+  "source_url": "https://rss.feedspot.com/lawrenceville_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Lawrenceville, GA",
+      "feed_url": "https://www.lawrencevillega.org/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.lawrencevillega.org/CivicAlerts.aspx?sort=date",
+      "description": "Lawrenceville, GA is dedicated to keeping residents informed and up-to-date by providing the latest news about sports, business, performing arts, health/safety issues, human interest and more.",
+      "followers": {
+        "facebook": 51900,
+        "twitter": 5000,
+        "instagram": 15700
+      },
+      "image_url": "https://i1.feedspot.com/5170415.jpg"
+    },
+    {
+      "title": "Gwinnett Daily Post",
+      "feed_url": "https://www.gwinnettdailypost.com/search/?f=rss&t=article&c=local&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.gwinnettdailypost.com/local/",
+      "description": "The Gwinnett Daily Post is the online news and sports information source for metro Atlanta, Gwinnett and surrounding counties in Georgia. Get the latest news and updates of Lawrenceville.",
+      "followers": {
+        "facebook": 59200,
+        "twitter": 47300,
+        "instagram": 11000
+      },
+      "image_url": "https://i1.feedspot.com/5170426.jpg?t=1594651627"
+    }
+  ]
+}

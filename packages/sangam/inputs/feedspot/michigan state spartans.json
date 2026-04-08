@@ -1,0 +1,37 @@
+{
+  "category": "Michigan State Spartans",
+  "source_url": "https://rss.feedspot.com/michigan_state_spartans_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Athletic \u00bb Michigan State Spartans",
+      "feed_url": "https://www.nytimes.com/athletic/rss/college-football/michigan-state-spartans-college-football/",
+      "website_url": "https://www.nytimes.com/athletic/college-football/team/michigan-state-spartans-college-football/",
+      "description": "The Athletic delivers powerful stories and smart analyses that bring sports fans closer to the heart of the game. From breaking news and live commentary to deeply-reported long reads and exclusive interviews, subscribers rely on The Athletic for every sports story that matters. Get the latest injury updates, player news and more from around the league.",
+      "followers": {
+        "facebook": 707100,
+        "twitter": 612600,
+        "instagram": 328300
+      },
+      "image_url": "https://i1.feedspot.com/5461025.jpg?t=1667198910"
+    },
+    {
+      "title": "Spartans Wire",
+      "feed_url": "https://spartanswire.usatoday.com/feed/",
+      "website_url": "https://spartanswire.usatoday.com/",
+      "description": "Covering all things Michigan State athletics for USA Today's Sports Media Group. We are your source for news, analysis, viral storylines and wall-to-wall coverage about college sports, the NFL and the NBA. Get the latest Michigan State Spartans' football and basketball news, schedules, photos and rumors.",
+      "followers": {
+        "facebook": 29600,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5461024.jpg?t=1667198416"
+    },
+    {
+      "title": "Sports Illustrated \u00bb Michigan State Spartans",
+      "feed_url": "https://www.si.com/college/michiganstate/.rss/full/",
+      "website_url": "https://www.si.com/college/michiganstate/",
+      "description": "Spartan Nation is a Sports Illustrated channel featuring Hondo Carpenter to bring you the latest News, Highlights, Analysis, and Recruiting surrounding the Michigan State Spartans. It provides sports news, expert analysis, highlights, stats and scores for the NFL, NBA, MLB, NHL, college football, soccer, etc.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5461023.jpg?t=1667199339"
+    }
+  ]
+}

@@ -1,0 +1,826 @@
+{
+  "category": "Wrestling",
+  "source_url": "https://rss.feedspot.com/wrestling_rss_feeds",
+  "feeds": [
+    {
+      "title": "Wrestling Inc",
+      "feed_url": "https://feeds.feedburner.com/wrestlinginc-news",
+      "website_url": "https://www.wrestlinginc.com/news/",
+      "description": "Wrestling Inc Podcast features pro wrestling, WWE, NJPW, impact wrestling, and ROH wrestling news",
+      "followers": {
+        "facebook": 369900,
+        "twitter": 96800,
+        "instagram": 33900
+      },
+      "image_url": "https://i1.feedspot.com/4959616.jpg?t=1603366307"
+    },
+    {
+      "title": "Cageside Seats",
+      "feed_url": "https://www.cagesideseats.com/rss/current.xml",
+      "website_url": "https://www.cagesideseats.com/",
+      "description": "Your best source for Pro Wrestling and MMA news, rumors and opinion from the fan perspective.",
+      "followers": {
+        "facebook": 72400,
+        "twitter": 34700
+      },
+      "image_url": "https://i1.feedspot.com/29349.jpg?t=1603366229"
+    },
+    {
+      "title": "Voices of Wrestling",
+      "feed_url": "https://www.voicesofwrestling.com/feed/",
+      "website_url": "https://www.voicesofwrestling.com/",
+      "description": "Voices of wrestling covers the world of wrestling from WWE to New Japan Pro Wrestling and everything in-between.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 17400
+      },
+      "image_url": "https://i1.feedspot.com/4348703.jpg?t=1603366245"
+    },
+    {
+      "title": "Kayfabe NEWS",
+      "feed_url": "https://www.kayfabenews.com/feed/",
+      "website_url": "https://www.kayfabenews.com/",
+      "description": "Get your daily dose of wrestling satire from Kayfabe News. Since January 2012, Kayfabe News has presented daily doses of 'unreal news about an unreal sport.', Kayfabe News reports on the feuds and storylines of wrestling as if they're completely real.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1576587.jpg?t=1672392395"
+    },
+    {
+      "title": "Wrestler4 Hire",
+      "feed_url": "https://wrestler4hire2.com/blogs/news.atom",
+      "website_url": "https://wrestler4hire2.com/blogs/news",
+      "description": "Welcome to Wrestler4Hire featuring the best in underground wrestling. Owned and operated by Cameron, himself.",
+      "followers": {
+        "facebook": 22400,
+        "twitter": 9000
+      },
+      "image_url": "https://i1.feedspot.com/4539960.jpg?t=1603366406"
+    },
+    {
+      "title": "Owrestle",
+      "feed_url": "https://owrestle.com/feed/",
+      "website_url": "https://owrestle.com/",
+      "description": "Oklahoma, wrestling, high school, college, youth, news, Oklahoma based company focused on getting wrestling news out to the local and nationals fans.",
+      "followers": {
+        "facebook": 18500,
+        "twitter": 75
+      },
+      "image_url": "https://i1.feedspot.com/4539950.jpg?t=1603366375"
+    },
+    {
+      "title": "Wrestling News Blog",
+      "feed_url": "https://wrestlingnewsblog.com/feed/",
+      "website_url": "https://wrestlingnewsblog.com/",
+      "description": "Get the latest news on everything professional wrestling.Industry news, show recaps and more.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4998697.jpg?t=1603366325"
+    },
+    {
+      "title": "bastionblogger",
+      "feed_url": "https://bastionblogger.com/feed/",
+      "website_url": "https://bastionblogger.com/page/2/",
+      "description": "Watching and reviewing every @WWE PPV, ranking them all. Join me on my journey with a new review every 6 days!",
+      "followers": {
+        "twitter": 417
+      },
+      "image_url": "https://i1.feedspot.com/5155985.jpg"
+    },
+    {
+      "title": "PA Power Wrestling",
+      "feed_url": "https://www.papowerwrestling.com/feed/",
+      "website_url": "https://www.papowerwrestling.com/",
+      "description": "PA Power Wrestling strives to provide the most comprehensive and informative wrestling coverage for our high school wrestlers throughout Pennsylvania.",
+      "followers": {
+        "facebook": 18100,
+        "twitter": 14200
+      },
+      "image_url": "https://i1.feedspot.com/4539954.jpg?t=1603366345"
+    },
+    {
+      "title": "The Wrestling Classic",
+      "feed_url": "https://thewrestlingclassic.com/feed/",
+      "website_url": "https://thewrestlingclassic.com/",
+      "description": "Home of Wrestling blogs.",
+      "followers": {
+        "facebook": 88900,
+        "instagram": 722600
+      },
+      "image_url": "https://i1.feedspot.com/4539931.jpg?t=1603366357"
+    },
+    {
+      "title": "BodySlam.net",
+      "feed_url": "https://www.bodyslam.net/feed/",
+      "website_url": "https://www.bodyslam.net/",
+      "description": "Bodyslam.net brings you all your wrestling coverage. Featuring exclusive wrestling news, results, coverage, and blogs as well as MMA News and Results. A trusted source for wrestling news, BodySlam.net is owned by Cassidy Haynes and caters to the loads of wrestling fans across the globe.",
+      "followers": {
+        "facebook": 87900,
+        "twitter": 30100,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5485386.jpg?t=1672389043"
+    },
+    {
+      "title": "Segunda Caida",
+      "feed_url": "http://segundacaida.blogspot.com/feeds/posts/default",
+      "website_url": "http://segundacaida.blogspot.com/",
+      "description": "Written by wrestling enthusiasts and friends Phil Schneider, Eric Ritz, Matt D, Sebastian, and others, Segunda Caida offers a fan-focused perspective into the world of Wrestling with analysis, comments, and news. Read the latest posts to stay abreast of recent events.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5485387.jpg?t=1672391778"
+    },
+    {
+      "title": "WrestlingNewsSource.Com",
+      "feed_url": "https://cdn.wrestlingnewssource.com/feeds/feed_news.xml",
+      "website_url": "https://www.wrestlingnewssource.com/",
+      "description": "WrestlingNewsSource.Com produces top stories covering news, results, rumors, and spoilers from AEW, WWE, and more wrestling avenues. We serves news sourced from around the Internet as a way to be a sort of 'one-stop shop' for all wrestling fans offering a A great mix of valid opinions, accurate information, and great comedy bits.",
+      "followers": {
+        "facebook": 17200,
+        "instagram": 13800
+      },
+      "image_url": "https://i1.feedspot.com/1377409.jpg?t=1672391849"
+    },
+    {
+      "title": "411MANIA",
+      "feed_url": "https://411mania.com/feed/",
+      "website_url": "https://411mania.com/mma/",
+      "description": "411MANIA started as a wrestling site but soon expanded to cover other pop-cultural phenomena appealing to guys such as TV, Movies, Games, Music, and more. Staffed by independent bloggers, we scour the web to provide our readers with the most cutting-edge news centered on Wrestling on this page.",
+      "followers": {
+        "facebook": 30700,
+        "twitter": 5400,
+        "instagram": 951
+      },
+      "image_url": "https://i1.feedspot.com/5485382.jpg?t=1672389015"
+    },
+    {
+      "title": "luchablog",
+      "feed_url": "https://thecubsfan.com/cmll/feed/",
+      "website_url": "https://thecubsfan.com/cmll/",
+      "description": "The Luchablog is your source of uninterrupted and extensive coverage of Lucha wrestling in America. A subsite of theCubsfan.com, Luchablog presents a platform for fans to know, get together and discuss their favorite wrestling category all in one place.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5485381.jpg?t=1672391992"
+    },
+    {
+      "title": "Diva Dirt",
+      "feed_url": "https://www.diva-dirt.com/feed/",
+      "website_url": "https://www.diva-dirt.com/",
+      "description": "Dive Dirt delivers Fresh and updated stories in Female Wrestling from WWE, AEW, and TNA Impact. A trusted online source for fans, Diva Dirt has consistently provided news, scoops and rumors surrounding the latest events and storylines across the female wrestling world.",
+      "followers": {
+        "facebook": 23200,
+        "twitter": 96600,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5177693.jpg?t=1672392032"
+    },
+    {
+      "title": "Pro Wrestling Stories Blog",
+      "feed_url": "https://prowrestlingstories.com/blog/feed/",
+      "website_url": "https://prowrestlingstories.com/blog/",
+      "description": "Pro Wrestling Stories, is your daily source of wrestling history and nostalgia. Read stories that transport you in time and peel back the curtain of wrestling's rich past via tales of its celebrated, bizarre, and dark moments. As a website, our forever endeavor is to deliver stories about professional wrestling with care, dignity, and respect to the business and its performers.",
+      "followers": {
+        "facebook": 185000,
+        "twitter": 13100,
+        "instagram": 29700
+      },
+      "image_url": "https://i1.feedspot.com/5485389.jpg?t=1672392117"
+    },
+    {
+      "title": "WrestleTalk",
+      "feed_url": "https://wrestletalk.com/feed/",
+      "website_url": "https://wrestletalk.com/news/",
+      "description": "WrestleTalk is one of the biggest news websites dedicated to covering the latest pro-wrestling news, features, videos, and stats from WWE, AEW, IMPACT, ROH, and NJPW. We also offer other wrestling content like quizzes, stats, special feature articles, and videos, and highlights.",
+      "followers": {
+        "facebook": 85200,
+        "twitter": 104100
+      },
+      "image_url": "https://i1.feedspot.com/5294848.jpg?t=1672392133"
+    },
+    {
+      "title": "Pro Wrestling Post",
+      "feed_url": "https://prowrestlingpost.com/feed/",
+      "website_url": "https://prowrestlingpost.com/",
+      "description": "Pro Wrestling Post is your first call for wrestling news, previews, reviews, and interviews! We cover all promotions. Stay informed and educated on what's happening in the squared circle with daily news updates from WWE, AEW, NJPW, TNA and Pay-per-view events.",
+      "followers": {
+        "facebook": 15100,
+        "twitter": 2100,
+        "instagram": 409
+      },
+      "image_url": "https://i1.feedspot.com/5485385.jpg?t=1672389036"
+    },
+    {
+      "title": "Fightful",
+      "feed_url": "https://www.fightful.com/rss",
+      "website_url": "https://www.fightful.com/",
+      "description": "Get the latest news coverage on all things in the ring. A trusted source of wrestling news, The Fightful panel covers pro wrestling, mixed martial arts, and boxing television and pay-per-view shows from WWE, AEW, UFC, NXT, Bellator, ROH, Impact, New Japan, and more.",
+      "followers": {
+        "facebook": 126000,
+        "twitter": 133000
+      },
+      "image_url": "https://i1.feedspot.com/5485391.jpg?t=1672392180"
+    },
+    {
+      "title": "Pro Wrestling Torch",
+      "feed_url": "https://www.pwtorch.com/site/feed/",
+      "website_url": "https://www.pwtorch.com/site/",
+      "description": "Lead the conversation with the latest wrestling news, and TV and PPV reports, and engage in Fan Polls from Pro Wrestling Torch. Founded by Wade Keller, PWTorch brings you topical news and a thought-provoking fair-minded conversation about pro wrestling.",
+      "followers": {
+        "twitter": 40400
+      },
+      "image_url": "https://i1.feedspot.com/5485397.jpg?t=1672389130"
+    },
+    {
+      "title": "Ringside News",
+      "feed_url": "https://www.ringsidenews.com/feed/",
+      "website_url": "https://www.ringsidenews.com/",
+      "description": "Your one-stop source for WWE News and TNA Wrestling News, rumors, spoilers, results, videos, and much more for over a decade. At Ringside News, we provide our readers with the most accurate professional wrestling news, spoilers, and rumors with our around-the-clock coverage.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 381000,
+        "instagram": 150600
+      },
+      "image_url": "https://i1.feedspot.com/4794066.jpg?t=1672392210"
+    },
+    {
+      "title": "EWrestlingNews",
+      "feed_url": "https://www.ewrestlingnews.com/feed",
+      "website_url": "https://www.ewrestlingnews.com/",
+      "description": "The ultimate destination for the latest Wrestling News, WWE News, TNA news, ROH News, and all things pro wrestling. Providing news, results, videos, spoilers, rumors, and more. EWrestlingNews brings all the trending stories, celebrity affairs, upcoming events updates, and more to wrestling fans right here.",
+      "followers": {
+        "facebook": 64099,
+        "twitter": 4400,
+        "instagram": 796
+      },
+      "image_url": "https://i1.feedspot.com/4793781.jpg?t=1641281993"
+    },
+    {
+      "title": "PWMania",
+      "feed_url": "https://www.pwmania.com/feed",
+      "website_url": "https://www.pwmania.com/",
+      "description": "Providing professional wrestling fans with accurate WWE, AEW, and Impact Wrestling news, results, spoilers, photos, videos, and more from industry insiders. PWMania is a known news portal for all the latest WWE news, rumors, spoilers, results, and videos. Check the latest posts for updates.",
+      "followers": {
+        "facebook": 57700,
+        "twitter": 201500
+      },
+      "image_url": "https://i1.feedspot.com/4529138.jpg?t=1672392230"
+    },
+    {
+      "title": "TheSportster",
+      "feed_url": "https://www.thesportster.com/feed/",
+      "website_url": "https://prowrestlingnewshub.com/",
+      "description": "In-depth analysis, reports, entertaining facts & the most trending topics in the world of Pro Wrestling. TheSportster.com is a trusted resource covering timely news and interesting facts from the world of WWE, AEW, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5485383.jpg?t=1672392357"
+    },
+    {
+      "title": "Pro Wrestling News Hub",
+      "feed_url": "https://prowrestlingnewshub.com/feed/",
+      "website_url": "https://prowrestlingnewshub.com/",
+      "description": "Premier All Elite Wrestling news site. We focus on everything AEW. From AEW News, Rumors, Dynamite Results, Spoilers, Results, TV, ALL Or Nothing PPV and more. Get buzzing news updates and scoops here before everyone.",
+      "followers": {
+        "facebook": 61200,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5087313.jpg?t=1653136229"
+    },
+    {
+      "title": "Online World of Wrestling",
+      "feed_url": "https://www.onlineworldofwrestling.com/feed/",
+      "website_url": "https://www.onlineworldofwrestling.com/",
+      "description": "Professional Wrestling News, Profiles, Results, Pictures, and more. Formerly known as 'Obsessed with Wrestling', OWW is the number one destination for wrestling fans to find detailed wrestler profiles, show results, wrestling photographs, and more wrestling content.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/1317261.jpg?t=1512800578"
+    },
+    {
+      "title": "Wrestling Headlines",
+      "feed_url": "https://wrestlingheadlines.com/feed/",
+      "website_url": "https://wrestlingheadlines.com/news/",
+      "description": "WrestlingHeadlines.com is your daily source for pro wrestling news headlines. Our coverage includes WWE, AEW, IMPACT, NJPW, ROH, MLW and more. Formerly Lords of Pain (LOP), we have been publishing WWE news and rumors. We are an independent news outlet publishing wrestling news since 1998.",
+      "followers": {
+        "facebook": 156100,
+        "twitter": 11100,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/1057770.jpg?t=1641287997"
+    },
+    {
+      "title": "Pro Wrestling.Net",
+      "feed_url": "https://prowrestling.net/site/feed/",
+      "website_url": "https://prowrestling.net/site/",
+      "description": "Pro Wrestling.Net presents one of the largest sources for wrestling news, TV reviews, PPV reports, and Fan perspectives, covering WWE, AEW, ROH, IMPACT, MMA, and all other major wrestling companies. You cam xplore the latest news as well as dive into our archives for past coverage.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4794099.jpg?t=1512806926"
+    },
+    {
+      "title": "Wrestle Zone",
+      "feed_url": "https://www.wrestlezone.com/feed",
+      "website_url": "https://www.wrestlezone.com/",
+      "description": "Covering WWE RAW, SmackDown!, TNA IMPACT!, and the rest of the wrestling industry to bring you the all the latest news, WRESTLEZONE provides around-the-clock breaking news, ringside and other live updates, exclusive interviews, and informative and entertaining content about the 'ONE TRUE SPORT' of professional wrestling.",
+      "followers": {
+        "facebook": 292900,
+        "twitter": 71500,
+        "instagram": 23100
+      },
+      "image_url": "https://i1.feedspot.com/5485394.jpg?t=1672392519"
+    },
+    {
+      "title": "GERWECK.NET",
+      "feed_url": "https://www.gerweck.net/feed/",
+      "website_url": "https://www.gerweck.net/category/news/",
+      "description": "GERWECK.NET is an independent wrestling news website providing all Pro wrestling news since 1997. Here you will find Top News, Polls, Match results, and Opinions from popular personalities in the glitzy world of wrestling. Read on to stay updated on the feats of your favorite superstars.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 5000,
+        "instagram": 724
+      },
+      "image_url": "https://i1.feedspot.com/5485390.jpg?t=1672389065"
+    },
+    {
+      "title": "Wrestleview.com",
+      "feed_url": "https://www.wrestleview.com/feed/",
+      "website_url": "https://www.wrestleview.com/",
+      "description": "Your source for everything pro wrestling since 1997 featuring news, results and information. WWE News and rumors, weekly WWE RAW Results and WWE Smackdown results, spoilers, PPV Results, TNA News and results, ROH News.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 8500,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4795333.jpg?t=1645708059"
+    },
+    {
+      "title": "IAwrestle",
+      "feed_url": "https://iawrestle.com/feed/",
+      "website_url": "https://iawrestle.com/",
+      "description": "IAwrestle is the new source for wrestling news in Iowa. Let us be your one-stop for wrestling news from our youth to our world-level wrestlers. IAwrestle.com is dedicated to bringing Iowa wrestling fans fresh articles, rankings, videos, and interviews from across the state.",
+      "followers": {
+        "facebook": 125500,
+        "twitter": 38800,
+        "instagram": 157200
+      },
+      "image_url": "https://i1.feedspot.com/5485405.jpg?t=1672389245"
+    },
+    {
+      "title": "Illinois Wrestling Coaches and Officials Association",
+      "feed_url": "https://iwcoa.net/blog/feed/",
+      "website_url": "https://iwcoa.net/blog/",
+      "description": "The Illinois Wrestling Coaches and Officials Association (IWCOA) was founded with the mutual intent to recognize individuals, groups, and institutions who have further advanced the quality of the sport of wrestling. Here we share important releases, announcements and other reports detailing our activities.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 3000,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5485407.jpg?t=1672389259"
+    },
+    {
+      "title": "Pro-Wrestling Super Blog",
+      "feed_url": "https://prowrestlingsuperblog.wordpress.com/feed/",
+      "website_url": "https://prowrestlingsuperblog.wordpress.com/",
+      "description": "Pro-Wrestling Super is a blog about wrestling by Steven Graham. He is the host of the Pro-Wrestling Super Show podcast. He is now moving on to the written form with the Pro-Wrestling Super Blog. Focusing on reviewing every WWF Coliseum Home Video in order. Plus other sub-topics are also covered.",
+      "followers": {
+        "twitter": 509
+      },
+      "image_url": "https://i1.feedspot.com/5485401.jpg?t=1672389216"
+    },
+    {
+      "title": "WhatCulture \u00bb WWE",
+      "feed_url": "https://whatculture.com/wwe/feed",
+      "website_url": "https://whatculture.com/wwe/",
+      "description": "The latest WWE and AEW wrestling news, rumours and results. Read our top 10 lists and get the latest insider reports.",
+      "followers": {
+        "facebook": 78000,
+        "twitter": 40300
+      },
+      "image_url": "https://i1.feedspot.com/8537405.jpg?t=1753087436"
+    },
+    {
+      "title": "WrestleCrap",
+      "feed_url": "https://www.wrestlecrap.com/feed",
+      "website_url": "https://www.wrestlecrap.com/",
+      "description": "The home of the worst of pro wrestling! WrestleCrap looks back at the weird, whacky, unforgettable and truly bizarre moments in wrestling history.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/3906339.jpg?t=1749644596"
+    },
+    {
+      "title": "HANDWERK",
+      "feed_url": "https://handwerkreviews.wordpress.com/feed/",
+      "website_url": "https://handwerkreviews.wordpress.com/",
+      "description": "The World's Only Wrestling Blog // Drops on Fridays",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/8537404.jpg?t=1753087432"
+    },
+    {
+      "title": "Stephanie Chase",
+      "feed_url": "https://stephaniechase.substack.com/feed",
+      "website_url": "https://stephaniechase.substack.com/",
+      "description": "Click to read Stephanie Chase... on wrestling, a Substack publication with hundreds of subscribers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8537408.jpg?t=1753087444"
+    },
+    {
+      "title": "PWI Pro Wrestling Illustrated",
+      "feed_url": "https://pwi-online.com/feed/",
+      "website_url": "https://pwi-online.com/blog/",
+      "description": "Pro Wrestling Illustrated has been recognized as the sport's number one magazine since its inception in 1979. Founded by legendary publisher Stanley Weston, PWI set out on a course to alter the landscape of pro wrestling journalism. Over the years, utilizing the talents of the world's finest writers, editors, photographers, and designers, PWI succeeded beyond Weston's wildest dreams.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7341895.jpg?t=1728627232"
+    },
+    {
+      "title": "Pro Wrestling Downunder",
+      "feed_url": "https://www.pwdownunder.com/feed/",
+      "website_url": "https://www.pwdownunder.com/",
+      "description": "Australian pro wrestling news and information. The top promotions and wrestlers covered right here at PWDU.",
+      "followers": {
+        "facebook": 624,
+        "twitter": 182
+      },
+      "image_url": "https://i1.feedspot.com/8537409.jpg?t=1753087452"
+    },
+    {
+      "title": "Australian Pro Wrestling",
+      "feed_url": "https://ausprowrestling.com.au/australian-wrestling/f.rss",
+      "website_url": "https://ausprowrestling.com.au/",
+      "description": "Join us for an action-packed Australian wrestling event featuring top pro wrestling stars. Get ready for an unforgettable night of entertainment!",
+      "followers": {
+        "facebook": 901,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/8537406.jpg?t=1753087440"
+    },
+    {
+      "title": "British Wrestling",
+      "feed_url": "https://britishwrestling.org/feed/",
+      "website_url": "https://britishwrestling.org/",
+      "description": "British Wrestling (BWA) is the National Governing Body for wrestling in the UK, including the Olympic and Commonwealth styles of wrestling and other styles within the remit of United World Wrestling, as well as other indigenous forms of wrestling. Stay up to date with the latest news and updates on wrestling sports, events, tournaments, wrestlers and more!",
+      "followers": {
+        "facebook": 4600,
+        "instagram": 6100
+      },
+      "image_url": "https://i1.feedspot.com/5502817.jpg?t=1675324474"
+    },
+    {
+      "title": "BritWrestling",
+      "feed_url": "https://britwrestling.co.uk/feed/",
+      "website_url": "https://britwrestling.co.uk/blog/?cst&query-622c8a8b-page=4/",
+      "description": "The BritWrestling Blog is a comprehensive hub for all things British wrestling\u2014featuring event results, in-depth historical retrospectives, wrestler profiles, and coverage of both mainstream and indie promotions across the UK.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8537407.jpg?t=1749646542"
+    },
+    {
+      "title": "Wrestling Canada Lutte",
+      "feed_url": "https://wrestling.ca/feed/",
+      "website_url": "https://wrestling.ca/",
+      "description": "Latest news updates, tournaments, programs, services, and discounts. Wrestling Canada Lutte is the national sport governing body for Olympic-style wrestling in Canada.",
+      "followers": {
+        "facebook": 9900,
+        "twitter": 22300,
+        "instagram": 11600
+      },
+      "image_url": "https://i1.feedspot.com/5344606.jpg?t=1637331600"
+    },
+    {
+      "title": "Maple Leaf Wrestling",
+      "feed_url": "https://mapleleafwrestling.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://mapleleafwrestling.blogspot.com/",
+      "description": "I am Andrew. It's been a fun trip learning about the classic Toronto & Ontario wrestling scene. We started in 2003 with just a few old photos and little insight. Thanks to Roger Baker and Gary Will and Griff Henderson. And everyone who has been a part of it. You'll find all the news and updates from the wrestling world written by passionate wrestling experts.",
+      "followers": {
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5344607.jpg?t=1637331524"
+    },
+    {
+      "title": "Sask Wrestling",
+      "feed_url": "https://www.saskwrestling.ca/feed/",
+      "website_url": "https://www.saskwrestling.ca/blog/",
+      "description": "Saskatchewan Wrestling's purpose is to encourage the widest participation and highest proficiency in amateur wrestling in SASKATCHEWAN and thereby contribute to amateur wrestling in Canada.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 450,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/8537410.jpg?t=1753087455"
+    },
+    {
+      "title": "Generals Wrestling",
+      "feed_url": "https://generalswrestling.academic.wlu.edu/feed/",
+      "website_url": "https://generalswrestling.academic.wlu.edu/",
+      "description": "Washington and Lee University wrestling blogs.",
+      "followers": {
+        "facebook": 893,
+        "twitter": 980
+      },
+      "image_url": "https://i1.feedspot.com/4539925.jpg?t=1611827236"
+    },
+    {
+      "title": "The B.O.W (Blog of Wrestling)",
+      "feed_url": "https://blogofwrestling52.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://blogofwrestling52.blogspot.com./",
+      "description": "Providing Wrestling related content from Top Lists to Blogs/ Articles about things going on in the mad world known as Professional Wrestling.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5061879.jpg"
+    },
+    {
+      "title": "A Top Guys' Professional-Wrestling",
+      "feed_url": "https://atopguys.wordpress.com/feed/",
+      "website_url": "https://atopguys.wordpress.com/",
+      "description": "A Top Guys' Professional-Wrestling - Seeing Wrestling From A Manly View. Check out the blog for interesting wrestling articles.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5230502.jpg?t=1608725488"
+    },
+    {
+      "title": "Iowa Wrestling Fan",
+      "feed_url": "https://iowawrestlingblog.com/feed/",
+      "website_url": "https://iowawrestlingblog.com/",
+      "description": "It's great to be an Iowa Wrestling fan.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4539926.jpg?t=1603366334"
+    },
+    {
+      "title": "Behind The Squared Circle",
+      "feed_url": "https://behindthesquaredcircle.com/feed/",
+      "website_url": "https://behindthesquaredcircle.com/",
+      "description": "Behind The Squared Circle is your wrestling mothership! A busy message board, industry headlines, and the A1 Radio network!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4539951.jpg?t=1603366352"
+    },
+    {
+      "title": "WWE Fantacy",
+      "feed_url": "https://wwefantacy.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://wwefantacy.blogspot.com/",
+      "description": "All information and latest news about WWE.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5076461.jpg?t=1672388637"
+    },
+    {
+      "title": "Wrestling 20 Years Ago Blog",
+      "feed_url": "https://www.wrestling20yrs.com/blog/feed",
+      "website_url": "https://www.wrestling20yrs.com/blog",
+      "description": "Bob Bamber presents a wrestling history podcast takes you back twenty years ago to the month - reviewing WWF, WCW and ECW PPVs and TV along with the big talking points of the day.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4539920.jpg?t=1603366387"
+    },
+    {
+      "title": "Dr.Terri Cecchine Blog",
+      "feed_url": "https://www.drterricecchine.com/blog-feed.xml",
+      "website_url": "https://www.drterricecchine.com/blog",
+      "description": "The mission is to promote team development, how to engage female athletes in a male-dominated space, and educate coaches and athletes on how to coordiante a successful women's wrestling program.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5155660.jpg?t=1672388601"
+    },
+    {
+      "title": "Wrestling Rumors",
+      "feed_url": "https://wrestlingrumors.net/feed/",
+      "website_url": "https://wrestlingrumors.net/",
+      "description": "Find the hottest Pro Wrestling News & Rumors and get updates on all your favorite wrestling stars at WrestlongRumors.net. We focus especially on highlighting TNA. Ring of Honor and WWE news moments. Wrestling Rumors is the premiere digital news destination for all things related to the world of wrestling.",
+      "followers": {
+        "facebook": 438100,
+        "twitter": 11900
+      },
+      "image_url": "https://i1.feedspot.com/4793787.jpg?t=1512842870"
+    },
+    {
+      "title": "Ring the Damn Bell",
+      "feed_url": "https://ring-the-damn-bell.com/feed/",
+      "website_url": "https://ringthedamnbell.wordpress.com/",
+      "description": "Ring the Damn Bell takes the readers on a beautiful wrestling trip down memory lane. Explore grisly, obscure wrestling stories and anecdotes offering a cold, behind-the-scenes view of the dark underbelly of the Wrestling world brought to by wrestling fanatic Brian Damage.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5485388.jpg?t=1672392100"
+    },
+    {
+      "title": "Wrestling DVD News",
+      "feed_url": "https://www.wrestlingdvdnetwork.com/feed/",
+      "website_url": "https://www.wrestlingdvdnetwork.com/",
+      "description": "WWEDVDNews.com provides exclusive News on WWE DVDs and Blu-rays, WWE Network News, Upcoming WWE DVD Releases, Best Wrestling DVD Reviews, 2018 Schedule and much more. Founded by Daniel Bee Wrestling DVD News has long been a constant destination for the latest WWE updates on the web.",
+      "followers": {
+        "facebook": 22600,
+        "twitter": 10200
+      },
+      "image_url": "https://i1.feedspot.com/5485393.jpg?t=1672389087"
+    },
+    {
+      "title": "Catch Wrestling Alliance Blog",
+      "feed_url": "https://www.catchwrestlingalliance.com/blog.rss",
+      "website_url": "https://www.catchwrestlingalliance.com/blog/",
+      "description": "News and updates about authentic Catch Wrestling elaborating styles, tips, strategies, and events on Catch Wrestling. The Catch Wrestling Alliance exists to provide a comprehensive online learning experience to those interested in Catch Wrestling. Catch the latest posts for more information and updates",
+      "followers": {
+        "facebook": 15400,
+        "twitter": 996,
+        "instagram": 6700
+      },
+      "image_url": "https://i1.feedspot.com/5485400.jpg?t=1672389201"
+    },
+    {
+      "title": "American Wrestler Blog",
+      "feed_url": "https://americanwrestler.com/blogs/news.atom",
+      "website_url": "https://americanwrestler.com/blogs/news",
+      "description": "Pick on trending Wrestling News and Player Interviews in this blog by American Wrestler. Founded by Jeff McCall as a tribute to wrestling, American Wrestler TM is a trusted source that exists to provide all Wrestlers with the Apparel, Gear, & Equipment they need to be successful.",
+      "followers": {
+        "facebook": 20900,
+        "instagram": 7200
+      },
+      "image_url": "https://i1.feedspot.com/5485403.jpg?t=1672389237"
+    },
+    {
+      "title": "Fanatic Wrestling Blog",
+      "feed_url": "https://fanaticwrestling.com/blogs/news.atom",
+      "website_url": "https://fanaticwrestling.com/blogs/news",
+      "description": "View Free Lessons, Player Profiles, and more exciting wrestling content from Fanatic Wrestling. Founded by a pair of grappling fanatics, Fanatic Wrestling is a wrestling resource and aid website dedicated to bringing you the best wrestling competitors and coaches in the world to learn from.",
+      "followers": {
+        "instagram": 134500
+      },
+      "image_url": "https://i1.feedspot.com/5485406.jpg?t=1672392656"
+    },
+    {
+      "title": "Professional Wrestling Studies Association",
+      "feed_url": "https://www.prowrestlingstudies.org/feed/",
+      "website_url": "https://www.prowrestlingstudies.org/",
+      "description": "Read news, opinions, and match breakdowns from Wrestling experts, fans, and professionals. The PWSA is a community of academics, bloggers, journalists, fans, wrestling insiders, and other professionals who study, analyze, discuss, and write about professional wrestling.",
+      "followers": {
+        "twitter": 720
+      },
+      "image_url": "https://i1.feedspot.com/5485408.jpg?t=1672389263"
+    },
+    {
+      "title": "Space Flying Tiger Blog",
+      "feed_url": "https://spaceflyingtigerblog.wordpress.com/feed/",
+      "website_url": "https://spaceflyingtigerblog.wordpress.com/",
+      "description": "Deep dive pro wrestling reviews on an irregular basis with the Space Flying Tiger Blog. Dan Golazo writes articles that take down a nostalgic lane with reviews and commentaries on Vintage wrestling matches from WWE, AEW, NJPW, and other wrestling platforms.",
+      "followers": {
+        "twitter": 9200
+      },
+      "image_url": "https://i1.feedspot.com/5485402.jpg?t=1672389218"
+    },
+    {
+      "title": "Venom Championship Wrestling",
+      "feed_url": "https://venomwrestling.co.uk/feed/",
+      "website_url": "https://venomwrestling.co.uk/blog/",
+      "description": "Posts Check out the latest news in our Blog posts.",
+      "followers": {
+        "facebook": 917
+      },
+      "image_url": "https://i1.feedspot.com/8537403.jpg?t=1753087431"
+    },
+    {
+      "title": "Daily DDT",
+      "feed_url": "https://dailyddt.com/feed/",
+      "website_url": "https://dailyddt.com/",
+      "description": "A Professional Wrestling Blog Covering the WWE, NWA, and everything Professional Wrestling.",
+      "followers": {
+        "facebook": 19600,
+        "twitter": 19300,
+        "instagram": 38900
+      },
+      "image_url": "https://i1.feedspot.com/4539850.jpg?t=1603366279"
+    },
+    {
+      "title": "TJR Wrestling",
+      "feed_url": "https://tjrwrestling.net/category/blogs/feed/",
+      "website_url": "https://tjrwrestling.net/category/blogs/",
+      "description": "The finest in professional wrestling coverage.",
+      "followers": {
+        "facebook": 16900,
+        "twitter": 11600
+      },
+      "image_url": "https://i1.feedspot.com/4539884.jpg?t=1603366296"
+    },
+    {
+      "title": "Scott's Blog of Doom",
+      "feed_url": "https://blogofdoom.com/index.php/feed/",
+      "website_url": "https://www.blogofdoom.com/",
+      "description": "Scott Keith is a wrestling blogger and general smart-ass, residing at rspwfaq.net, aka Scott's Blog of Doom! With weekly reviews of RAW from Scott and general wackiness from commenters.",
+      "followers": {
+        "facebook": 684,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4334354.jpg?t=1603366255"
+    },
+    {
+      "title": "The Work of Wrestling",
+      "feed_url": "https://www.workofwrestling.com/rss",
+      "website_url": "http://www.workofwrestling.com/",
+      "description": "Professional wrestling is an art. The Work of Wrestling website & podcast is dedicated to exploring that simple truth. Instead of dirt, rumor, and conjecture, you will be treated to in-depth arts criticism that dissects the historical, cultural, and personal significance of pro-wrestling storytelling. With a weekly review of Monday Night Raw, occasional editorials about the pro-wrestling medium, and a weekly podcast",
+      "followers": {
+        "facebook": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4539890.jpg?t=1603366489"
+    },
+    {
+      "title": "SEScoops",
+      "feed_url": "https://www.sescoops.com/.rss/full/",
+      "website_url": "https://www.sescoops.com/",
+      "description": "Daily coverage of the pro wrestling industry. Find the latest wrestling news on SecScoops. Since 2004, SEScoops has been an industry-leading source of pro wrestling news with a talented team that works around the clock to provide our readers with the latest news and analysis of all the industry's happenings.",
+      "followers": {
+        "facebook": 142900,
+        "twitter": 15200,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/1576595.jpg?t=1512741026"
+    },
+    {
+      "title": "Wrestling Edge",
+      "feed_url": "https://wrestling-edge.com/feed/",
+      "website_url": "https://vahvafitness.com/our-story/",
+      "description": "Grab the latest wrestling news and rumors, including Diva photo galleries, videos, pay-per-view coverage, and much more. As one of the largest Websites in the wrestling industry, we provide the news from the majority of wrestling promotions, exclusive editorials from our hand-picked selection of writers, image galleries, and much more.",
+      "followers": {
+        "facebook": 119100,
+        "twitter": 8600
+      },
+      "image_url": "https://i1.feedspot.com/4794224.jpg?t=1512843037"
+    },
+    {
+      "title": "TNA Wrestling",
+      "feed_url": "https://impactwrestling.com/feed/",
+      "website_url": "https://tnawrestling.com/news/",
+      "description": "The Official Global Home of Impact Wrestling. Find up-to-date wrestling news, results, photos, and videos. IMPACT WRESTLING is a weekly 2 hour TV show with captivating characters and adrenaline-pumping action featuring your favorite professional athletes.",
+      "followers": {
+        "facebook": 2200000,
+        "twitter": 641000,
+        "instagram": 410
+      },
+      "image_url": "https://i1.feedspot.com/4794141.jpg?t=1672392168"
+    },
+    {
+      "title": "WWE Network News",
+      "feed_url": "https://www.wwenetworknews.com/feed/",
+      "website_url": "https://www.wwenetworknews.com/category/wwe-network-news/",
+      "description": "Grab the latest WWE Network updates you won't find anywhere else. WWE Network News brings you top stories, exclusive scoops, top moments, and hidden gems of wrestling matches from WWE. Stay current on all the latest developments and new from the wrestling industry.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5485392.jpg?t=1672392498"
+    },
+    {
+      "title": "InterMat",
+      "feed_url": "https://intermatwrestle.com/rss",
+      "website_url": "https://intermatwrestle.com/",
+      "description": "InterMat is home to the very best wrestling content available online! Find in depth analysis of NCAA and high school wrestling tournaments and dual matchups, high school recuriting information, and great breaking news.",
+      "followers": {
+        "facebook": 25100,
+        "twitter": 49400
+      },
+      "image_url": "https://i1.feedspot.com/4335767.jpg?t=1672387181"
+    },
+    {
+      "title": "Wrestling Mindset Blog",
+      "feed_url": "https://www.wrestlingmindset.com/feed",
+      "website_url": "https://www.wrestlingmindset.com/blog",
+      "description": "Wrestling Mindset is a wrestling specific mindset system made by wrestlers for wrestlers.",
+      "followers": {
+        "facebook": 56300,
+        "twitter": 21000
+      },
+      "image_url": "https://i1.feedspot.com/4539900.jpg?t=1617269300"
+    },
+    {
+      "title": "1Z1 Pro Wrestling",
+      "feed_url": "https://1z1prowrestling.com/feed/",
+      "website_url": "https://cultaholic.com/",
+      "description": "My name is Jordan Huie. I've been a writer for over a decade and have been writing about pro wrestling as a career since April of 2019. On this site I'll still be doing recaps and results for AEW Dynamite, Raw and SmackDown every week and I'll be doing NXT when I can, plus PPVs and specials for the two American promotions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5192234.jpg?t=1599044253"
+    },
+    {
+      "title": "Cultaholic Wrestling",
+      "feed_url": "https://cultaholic.com/feed",
+      "website_url": "https://cultaholic.com/",
+      "description": "Cultaholic Wrestling brings together the top trending from WWE, AEW, NJPW, and worldwide wrestling news, rumors, interviews, results, features, and spoilers. Stay connected to the wrestling community, fans and personalities through latest stories and articles.",
+      "followers": {
+        "facebook": 173800,
+        "twitter": 101600,
+        "instagram": 44800
+      },
+      "image_url": "https://i1.feedspot.com/5485395.jpg?t=1672389106"
+    },
+    {
+      "title": "New Japan Pro-Wrestling",
+      "feed_url": "https://www.njpw1972.com/feed",
+      "website_url": "https://news.njpw1972.com/",
+      "description": "The official home of New Japan Pro Wrestling. Discover News, Results, Schedules, Columns, Podcasts, and more entertaining content on your favorite NJPW wrestlers. As a premier wrestling organization, aim to contribute to society by establishing and developing professional wrestling as a healthy sport for every citizen.",
+      "followers": {
+        "facebook": 199000,
+        "twitter": 217200,
+        "instagram": 365100
+      },
+      "image_url": "https://i1.feedspot.com/5485384.jpg?t=1672389033"
+    },
+    {
+      "title": "Retro Pro Wrestling",
+      "feed_url": "https://retroprowrestling.com/feeds/posts/default",
+      "website_url": "https://retroprowrestling.com/",
+      "description": "Retro Pro Wrestling is a nostalgic look back at the last forty or so years of professional wrestling. Chris 'CJ Scholes' Skoyles has Documents and presents Classic WWE reviews from Wrestlemania 1 - 30, plus WCW, ECW, and other wrestling reviews to share with fellow wrestling fans.",
+      "followers": {
+        "twitter": 702
+      },
+      "image_url": "https://i1.feedspot.com/5485399.jpg?t=1672389188"
+    }
+  ]
+}

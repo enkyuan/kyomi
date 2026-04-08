@@ -1,0 +1,69 @@
+{
+  "category": "HSA",
+  "source_url": "https://rss.feedspot.com/hsa_rss_feeds",
+  "feeds": [
+    {
+      "title": "HSA Talk Blog",
+      "feed_url": "https://www.hsatalk.com/blog?format=rss",
+      "website_url": "https://www.hsatalk.com/blog",
+      "description": "Leaders from around the health savings account industry share their latest insights in this informative blog. Consumers can benefit through better education, transparency, and HSA advocacy. Our panel of experts publish weekly articles about HSAs to keep you up-to-date with current HSA news and legislative updates.",
+      "followers": {
+        "twitter": 7
+      },
+      "image_url": "https://i1.feedspot.com/5432418.jpg?t=1660719385"
+    },
+    {
+      "title": "HSA For America Blog",
+      "feed_url": "https://hsaforamerica.com/feed/",
+      "website_url": "https://hsaforamerica.com/blog/",
+      "description": "Our blog discusses health share programs, health savings accounts (HSAs), and other affordable health insurance options. Since 2004, HSA For America mission is to be experts in paying for health care. That includes becoming experts both in insurance solutions, as well as alternative, lower-cost alternatives to less well-known traditional health insurance models.",
+      "followers": {
+        "facebook": 661,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5458476.jpg?t=1666175710"
+    },
+    {
+      "title": "Thomson Reuters Blog \u00bb HSA",
+      "feed_url": "https://tax.thomsonreuters.com/blog/topic/hsa/feed/",
+      "website_url": "https://tax.thomsonreuters.com/blog/topic/hsa/",
+      "description": "Tax & Accounting blog from Thomson Reuters, the intelligence, technology and human expertise you need to find trusted answers. Whether you're an accounting firm, corporation, or government, you can rely on innovative, integrated software and content from Thomson Reuters to help you excel at what you do every day.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5432416.jpg?t=1660719619"
+    },
+    {
+      "title": "HSA Search Blog",
+      "feed_url": "https://www.hsasearch.com/feed/",
+      "website_url": "https://www.hsasearch.com/blog/",
+      "description": "Welcome to HSA Search! We're here to help you navigate the complexities of health savings accounts (HSA's) and find the best provider for you. We launched HSA Search to help consumers with the HSA marketplace. We are an independent source for HSA provider information for individuals and businesses.",
+      "followers": {
+        "twitter": 189
+      },
+      "image_url": "https://i1.feedspot.com/5432419.jpg?t=1660719553"
+    },
+    {
+      "title": "Bend HSA Blog",
+      "feed_url": "https://www.bendhsa.com/blog/rss.xml",
+      "website_url": "https://www.bendhsa.com/blog",
+      "description": "Learn about HSA and the importance of finding the right HSA provider. Bend is more than an HSA, we use advanced technologies to help optimize account benefits for both individuals and employers. Our unique platform learns individual behaviors and situations, predicts outcomes and delivers actionable advice.",
+      "followers": {
+        "facebook": 94,
+        "twitter": 61,
+        "instagram": 40
+      },
+      "image_url": "https://i1.feedspot.com/5432420.jpg?t=1660719940"
+    },
+    {
+      "title": "WEX Blog \u00bb Employee Health Benefits",
+      "feed_url": "https://www.wexinc.com/resources/blog/benefits/",
+      "website_url": "https://www.wexinc.com/resources/blog/benefits/",
+      "description": "Learn everything you need to know about health savings accounts (HSAs) and how to work with your employees on their HSA plans. WEX is a global leader in financial technology solutions. We simplify the complexities of payment systems across continents and industries, including Fleet, Corporate Payments, and Benefits.",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 1900,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5432417.jpg?t=1660719378"
+    }
+  ]
+}

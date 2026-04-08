@@ -1,0 +1,155 @@
+{
+  "category": "Romania News",
+  "source_url": "https://rss.feedspot.com/romania_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Romania Insider",
+      "feed_url": "https://www.romania-insider.com/feed",
+      "website_url": "https://www.romania-insider.com/",
+      "description": "Romania Insider is the most reliable media source for articles in English dedicated to Romania. Latest news in business, politics, and society, feature stories on business & life, with a host of free and premium newsletters.",
+      "followers": {
+        "facebook": 27700,
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4771213.jpg?t=1635924812"
+    },
+    {
+      "title": "Jurnalul",
+      "feed_url": "https://jurnalul.ro/rss",
+      "website_url": "https://jurnalul.ro/",
+      "description": "The reference newspaper of the Romanians from the last two decades.",
+      "followers": {
+        "facebook": 136000,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/1676972.jpg?t=1636355783"
+    },
+    {
+      "title": "Cotidianul RO",
+      "feed_url": "https://www.cotidianul.ro/feed/",
+      "website_url": "https://www.cotidianul.ro/",
+      "description": "Cotidianul.ro is a news site updated 24 out of 24, dedicated to elite readers. Cotidianul.ro presents breaking news, editorials made by personalities from the Romanian society, reports, opinions, interviews, press files, TV chronicles, articles about arts, health and more.",
+      "followers": {
+        "facebook": 37400,
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/4832565.jpg?t=1635937968"
+    },
+    {
+      "title": "Hotnews.ro",
+      "feed_url": "https://feeds.feedburner.com/hotnews/yvoq",
+      "website_url": "https://hotnews.ro/",
+      "description": "The first newspaper 24/7 in Romania. Articles on economy, sport, life, science, and more.",
+      "followers": {
+        "facebook": 507400,
+        "twitter": 141100
+      },
+      "image_url": "https://i1.feedspot.com/5339821.jpg?t=1645801311"
+    },
+    {
+      "title": "Valahia.News",
+      "feed_url": "https://valahia.news/feed/",
+      "website_url": "https://valahia.news/",
+      "description": "Romanian News in English with news from Romania and International News.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 100
+      },
+      "image_url": "https://i1.feedspot.com/5339616.jpg?t=1645799718"
+    },
+    {
+      "title": "The Diplomat Bucharest",
+      "feed_url": "https://www.thediplomat.ro/feed/",
+      "website_url": "https://www.thediplomat.ro/",
+      "description": "The Diplomat Bucharest aims to bring a fair and balanced analysis and comprehensive coverage of the political and business scene in Romania.",
+      "followers": {
+        "facebook": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5339617.jpg?t=1635921998"
+    },
+    {
+      "title": "ZF English",
+      "feed_url": "http://www.zfenglish.com/rss/",
+      "website_url": "http://www.zfenglish.com/",
+      "description": "ZF English is the most trusted source of accurate and relevant information on Romania and its role in the region.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/200/5339619.jpg?t=1636355833"
+    },
+    {
+      "title": "Nine O`Clock",
+      "feed_url": "https://nineoclock.ro/feed/",
+      "website_url": "https://nineoclock.ro/",
+      "description": "Nine O'Clock is Romania's first and only English-language newspaper. It has adopted the position to always respect its readers by offering real and unbiased information about all aspects of life in Romania and the world.",
+      "followers": {
+        "facebook": 1600
+      },
+      "image_url": "https://i1.feedspot.com/707366.jpg?t=1635924555"
+    },
+    {
+      "title": "Romania Libera",
+      "feed_url": "https://romanialibera.ro/feed/",
+      "website_url": "https://romanialibera.ro/",
+      "description": "Romania current affairs, investigations, editorial and opinions, interviews, and more.",
+      "followers": {
+        "facebook": 56200,
+        "twitter": 38100
+      },
+      "image_url": "https://i1.feedspot.com/5339620.jpg?t=1635936145"
+    },
+    {
+      "title": "Curierul National",
+      "feed_url": "https://curierulnational.ro/feed/",
+      "website_url": "https://curierulnational.ro/",
+      "description": "Conceived from the first issue as a compass for Romanians facing the mind-boggling transition to a capitalist economy, the National Courier is trying to be a barometer that reflects the trends and opportunities of the current economic and financial environment.",
+      "followers": {
+        "facebook": 12200,
+        "twitter": 280
+      },
+      "image_url": "https://i1.feedspot.com/5339819.jpg?t=1636353964"
+    },
+    {
+      "title": "Mediafax",
+      "feed_url": "https://www.mediafax.ro/rss",
+      "website_url": "https://www.mediafax.ro/",
+      "description": "Mediafax.ro offers you real-time internal and external news, political news, economic, social, social and sports news.",
+      "followers": {
+        "facebook": 532600
+      },
+      "image_url": "https://i1.feedspot.com/5022673.jpg?t=1635921700"
+    },
+    {
+      "title": "ADZ News",
+      "feed_url": "https://adz.news/startseite",
+      "website_url": "https://adz.news/startseite",
+      "description": "Adz.ro is the only German-language daily newspaper in Central and Eastern Europe. It provides information about Romania as a whole and about the German minority living here.",
+      "followers": {
+        "facebook": 6700
+      },
+      "image_url": "https://i1.feedspot.com/5339816.jpg?t=1636354186"
+    },
+    {
+      "title": "Kr\u00f3nika",
+      "feed_url": "https://kronikaonline.ro/rss/kronika_hirek.xml",
+      "website_url": "https://kronikaonline.ro/",
+      "description": "As the leading body of the Hungarian press market in Transylvania, the basic philosophy of the Chronicle is to provide a comprehensive and authentic picture of the reality and events in Romania, especially in Transylvania, at the highest possible professional level.",
+      "followers": {
+        "facebook": 67800,
+        "twitter": 284,
+        "instagram": 653
+      },
+      "image_url": "https://i1.feedspot.com/5340682.jpg?t=1636356198"
+    },
+    {
+      "title": "Libertatea",
+      "feed_url": "https://captcha.distinct.ro/?original_url=aHR0cHM6Ly93d3cubGliZXJ0YXRlYS5yby9mZWVk",
+      "website_url": "https://www.libertatea.ro/",
+      "description": "The newspaper that brings you the latest news from Romania and from all over the world. The best newspaper with live broadcasts, exclusive interviews, reports and investigations.",
+      "followers": {
+        "facebook": 1500000,
+        "twitter": 57100,
+        "instagram": 41400
+      },
+      "image_url": "https://i1.feedspot.com/5339618.jpg?t=1635936589"
+    }
+  ]
+}

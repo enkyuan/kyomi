@@ -1,0 +1,58 @@
+{
+  "category": "Social Engineering",
+  "source_url": "https://rss.feedspot.com/social_engineering_rss_feeds",
+  "feeds": [
+    {
+      "title": "GW Information Security Blog \u00bb Social Engineering",
+      "feed_url": "https://blogs.gwu.edu/gwinfosec/tag/social-engineering/feed/",
+      "website_url": "https://blogs.gwu.edu/gwinfosec/tag/social-engineering/",
+      "description": "Find articles with the latest news and updates in the Social Engineering industry, information on different attacks and prevention measures, and more! George Washington University is one of the prominent universities in the USA with a variety of courses available to students.",
+      "followers": {
+        "facebook": 198500,
+        "twitter": 62600,
+        "instagram": 107000
+      },
+      "image_url": "https://i1.feedspot.com/5373466.jpg?t=1645255046"
+    },
+    {
+      "title": "The AntiSocial Engineer Limited Blog",
+      "feed_url": "https://theantisocialengineer.com/feed/",
+      "website_url": "https://theantisocialengineer.com/tag/social-engineering/",
+      "description": "Keep up to date with industry news, security tips, and social engineering trends. Discover information security through our eyes. AntiSocial Engineer Limited is an ethical social engineering company based in Barnsley, South Yorkshire. We help organizations protect themselves against online attacks.",
+      "followers": {
+        "facebook": 129,
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/5373473.jpg?t=1645254716"
+    },
+    {
+      "title": "CSO Online \u00bb Security",
+      "feed_url": "https://www.csoonline.com/in/security/",
+      "website_url": "https://www.csoonline.com/in/security/",
+      "description": "Find News, how-tos, features, reviews, and videos on Social Engineering. CSO provides news, analysis, and research on security and risk management.",
+      "followers": {
+        "facebook": 659,
+        "twitter": 721
+      },
+      "image_url": "https://i1.feedspot.com/5373463.jpg?t=1645246638"
+    },
+    {
+      "title": "Malwarebytes Labs \u00bb Social Engineering",
+      "feed_url": "https://blog.malwarebytes.com/category/social-engineering/feed/",
+      "website_url": "http://",
+      "description": "Stay informed on social engineering news and updates along with tips for preventing phishing and bots attacks. Malwarebytes proactively protects people and businesses against dangerous threats such as malware, ransomware, and exploits that escape detection by traditional antivirus solutions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5373467.jpg?t=1645246652"
+    },
+    {
+      "title": "TrustedSec Blog \u00bb Social Engineering",
+      "feed_url": "https://www.trustedsec.com/blog/category/social-engineering/feed",
+      "website_url": "https://www.trustedsec.com/blog",
+      "description": "The latest in cybersecurity news and resources on topics like phishing, Penetration Testing, and more! TrustedSec is a Full-service InfoSec firm leading the industry, supporting organizations, and giving back.",
+      "followers": {
+        "twitter": 75700
+      },
+      "image_url": "https://i1.feedspot.com/5373464.jpg?t=1645246642"
+    }
+  ]
+}

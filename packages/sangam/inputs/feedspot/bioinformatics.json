@@ -1,0 +1,535 @@
+{
+  "category": "Bioinformatics",
+  "source_url": "https://rss.feedspot.com/bioinformatics_rss_feeds",
+  "feeds": [
+    {
+      "title": "RNA-Seq Blog",
+      "feed_url": "https://www.rna-seqblog.com/feed/",
+      "website_url": "https://www.rna-seqblog.com/blog/",
+      "description": "RNA-Seq is a transcriptome research & industry news blog. The optimum goal of the site is to provide readers with updated and most recent research news, analysis, and results. On the site, you can come across countless articles debating and informing covering topics such as data analysis, technology, statistical analysis, and more.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 8700
+      },
+      "image_url": "https://i1.feedspot.com/769978.jpg?t=1607346492"
+    },
+    {
+      "title": "News-Medical.Net - Bioinformatics News",
+      "feed_url": "https://www.news-medical.net/tag/feed/Bioinformatics.aspx",
+      "website_url": "https://www.news-medical.net/?tag=/Bioinformatics",
+      "description": "News-Medical.Net aims to segment, profile and distribute medical news to the widest possible audience of potential beneficiaries worldwide and to provide a forum for ideas, debate and learning, and to facilitate interaction between all parts of the medical health sciences community worldwide.",
+      "followers": {
+        "facebook": 254300,
+        "twitter": 16300
+      },
+      "image_url": "https://i1.feedspot.com/4719854.jpg?t=1607346508"
+    },
+    {
+      "title": "BioInformatics Inc. Blog",
+      "feed_url": "https://bioinfoinc.com/feed/",
+      "website_url": "https://bioinfoinc.com/blog/",
+      "description": "Providing critical market intelligence to major suppliers serving the life science, analytical instrument, and clinical diagnostic markets. BioInformatics Inc's blog includes key findings from our scientific industry experts on everything from company acquisitions to customer relations.",
+      "followers": {
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4717794.jpg?t=1615025763"
+    },
+    {
+      "title": "Creative Diagnostics Blog",
+      "feed_url": "https://www.creative-diagnostics.com/blog/index.php/feed/",
+      "website_url": "https://www.creative-diagnostics.com/blog/",
+      "description": "Get the latest blog product and research information from Creative Diagnostics providing latest research and news for ELISA kits, antigens and antibodies. Creative Diagnostics manufactures and markets worldwide the highest quality; innovative; specialty immunoassays. Utilizing advanced direct label technology to meet the throughput needs of both large and small independent and hospital laboratories.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 638
+      },
+      "image_url": "https://i1.feedspot.com/4785822.jpg?t=1712086495"
+    },
+    {
+      "title": "Dave Tang's blog",
+      "feed_url": "https://davetang.org/muse/feed/",
+      "website_url": "https://davetang.org/muse/",
+      "description": "I'm a genomics researcher who uses R and Perl (because I was exposed to bioinformatics around 2005). Most of this blog is on analyses related to genomics.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4717632.jpg?t=1607346550"
+    },
+    {
+      "title": "Bioinformatics Review",
+      "feed_url": "https://bioinformaticsreview.com/feed/",
+      "website_url": "https://bioinformaticsreview.com/",
+      "description": "Bioinformatics Review provides latest bioinformatics research news and articles. Get the latest news, views and opinion at your fingertips.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 353
+      },
+      "image_url": "https://i1.feedspot.com/4718186.jpg?t=1620399240"
+    },
+    {
+      "title": "Living in an Ivory Basement Blog",
+      "feed_url": "http://ivory.idyll.org/blog/feeds/all.atom.xml",
+      "website_url": "http://ivory.idyll.org/blog/",
+      "description": "Gives information on science, testing and programming.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/258044.jpg?t=1607349368"
+    },
+    {
+      "title": "Bits of DNA",
+      "feed_url": "https://liorpachter.wordpress.com/feed/",
+      "website_url": "https://liorpachter.wordpress.com/",
+      "description": "Reviews and commentary on computational biology by Lior Pachter.",
+      "followers": {
+        "twitter": 46800
+      },
+      "image_url": "https://i1.feedspot.com/4229243.jpg?t=1607347445"
+    },
+    {
+      "title": "Python for Bioinformatics - adventures in bioinformatics",
+      "feed_url": "https://telliott99.blogspot.com/feeds/posts/default",
+      "website_url": "https://telliott99.blogspot.com/",
+      "description": "I teach and do research in Microbiology. This blog started as a record of my adventures learning bioinformatics and using Python. It has expanded to include Cocoa, R, simple math and assorted topics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/119933.jpg?t=1609938400"
+    },
+    {
+      "title": "Omics! Omics!",
+      "feed_url": "http://omicsomics.blogspot.com/feeds/posts/default",
+      "website_url": "http://omicsomics.blogspot.com/",
+      "description": "A computational biologist's personal views on new technologies & publications on genomics, genome sequencing, proteomics, and their impact on drug discovery. Dr. Robison spent 10 years at Millennium Pharmaceuticals working with various genomics & proteomics technologies & working on multiple teams attempting to apply these throughout the drug discovery process.",
+      "followers": {
+        "twitter": 10000
+      },
+      "image_url": "https://i1.feedspot.com/103650.jpg?t=1607347465"
+    },
+    {
+      "title": "Fios Genomics Blog",
+      "feed_url": "https://www.fiosgenomics.com/feed/",
+      "website_url": "https://www.fiosgenomics.com/blog/",
+      "description": "Fios Genomics is a bioinformatics provider of data analysis services to Pharma, CROs and academia for drug discovery & development and applied research across all species.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4718200.jpg?t=1607347478"
+    },
+    {
+      "title": "ACGT",
+      "feed_url": "http://www.acgt.me/blog?format=RSS",
+      "website_url": "http://www.acgt.me/",
+      "description": "A blog that discusses various issues relating to genomics and bioinformatics by Keith Bradnam.",
+      "followers": {
+        "twitter": 525
+      },
+      "image_url": "https://i1.feedspot.com/4246887.jpg?t=1607347627"
+    },
+    {
+      "title": "What You're Doing Is Rather Desperate Blog",
+      "feed_url": "https://nsaunders.wordpress.com/feed/",
+      "website_url": "https://nsaunders.wordpress.com/blog/",
+      "description": "I'm Neil Saunders, a data scientist and bioinformatician based in Sydney, Australia. I've worked as a data scientist for a healthcare technology startup, as a researcher for the CSIRO and in several universities.",
+      "followers": {
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4717533.jpg?t=1607347635"
+    },
+    {
+      "title": "Thermo Fisher Scientific",
+      "feed_url": "https://www.thermofisher.com/blog/connectedlab/feed/",
+      "website_url": "https://www.thermofisher.com/blog/connectedlab/",
+      "description": "Thermo Fisher Scientific Inc. is the world leader in serving science. Our mission is to enable our customers to make the world healthier, cleaner and safer. The Connected Lab focuses on the digital transformation of the lab via technology & software enabling lab automation, lab integration, and lab optimization.",
+      "followers": {
+        "facebook": 171900,
+        "twitter": 67300
+      },
+      "image_url": "https://i1.feedspot.com/4719890.jpg?t=1613537404"
+    },
+    {
+      "title": "The CEHG blog",
+      "feed_url": "https://stanfordcehg.wordpress.com/feed/",
+      "website_url": "https://stanfordcehg.wordpress.com/",
+      "description": "This is the blog of the Stanford Center for Computational, Evolutionary and Human Genomics. The blog posts are written by our researchers (students, postdocs, professors, etc).",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4718972.jpg?t=1607347835"
+    },
+    {
+      "title": "Blasted Bioinformatics!?",
+      "feed_url": "https://blastedbio.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://blastedbio.blogspot.com/",
+      "description": "Bioinformatics lessons learned the hard way, bugs, gripes, and maybe topical paper reviews too!",
+      "followers": {
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4717572.jpg?t=1609938228"
+    },
+    {
+      "title": "BioBam Blog",
+      "feed_url": "https://www.biobam.com/blog/feed/",
+      "website_url": "https://www.biobam.com/blog/",
+      "description": "Bioinformatics Made Easy",
+      "followers": {
+        "facebook": 3200
+      },
+      "image_url": "https://i1.feedspot.com/7331926.jpg?t=1725260596"
+    },
+    {
+      "title": "Fios Genomics Blogs \u00bb Bioinformatics",
+      "feed_url": "https://www.fiosgenomics.com/category/bioinformatics/feed/",
+      "website_url": "https://www.fiosgenomics.com/category/bioinformatics/",
+      "description": "Fios Genomics is a bioinformatics data analysis company",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/7331927.jpg?t=1725260604"
+    },
+    {
+      "title": "Oxford Academic Bioinformatics",
+      "feed_url": "https://academic.oup.com/rss/site_5139/advanceAccess_3001.xml",
+      "website_url": "https://academic.oup.com/bioinformatics/advance-articles",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 49600
+      },
+      "image_url": "https://i1.feedspot.com/7331928.jpg?t=1725260907"
+    },
+    {
+      "title": "Bioinformaticamente",
+      "feed_url": "https://bioinformaticamente.com/feed/",
+      "website_url": "https://bioinformaticamente.com/",
+      "description": "A journey into the world of bioinformatics",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7331924.jpg?t=1725260654"
+    },
+    {
+      "title": "LatchBio",
+      "feed_url": "https://blog.latch.bio/feed",
+      "website_url": "https://blog.latch.bio/",
+      "description": "The Biocomputing Revolution.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fbdff66c7-da6e-417a-9733-6d885db5cd08_800x800.png"
+    },
+    {
+      "title": "Seven Bridges Genomics - The biomedical data analysis company Blog",
+      "feed_url": "https://www.sevenbridges.com/feed/",
+      "website_url": "https://www.sevenbridges.com/blog/",
+      "description": "Seven Bridges is the biomedical data analysis company accelerating breakthroughs in genomics research for cancer, drug development and precision medicine.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4717776.jpg?t=1725276998"
+    },
+    {
+      "title": "Genohub Blog",
+      "feed_url": "https://blog.genohub.com/feed/",
+      "website_url": "https://blog.genohub.com/",
+      "description": "Genohub is the easiest and most reliable way to find and order next-gen sequencing services. We connect service providers with researchers and clinicians interested in sequencing, library preparation and bioinformatics services.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 686
+      },
+      "image_url": "https://i1.feedspot.com/4718872.jpg?t=1725278713"
+    },
+    {
+      "title": "CoreGenomics",
+      "feed_url": "http://core-genomics.blogspot.com/feeds/posts/default",
+      "website_url": "http://core-genomics.blogspot.com/",
+      "description": "This blog by James Hadfield provides some comments and analysis from the exciting and fast moving world of Genomics. It focusses on next-generation sequencing and microarray technologies, although it is likely to go off on tangents from time-to-time.",
+      "followers": {
+        "twitter": 7200
+      },
+      "image_url": "https://i1.feedspot.com/1305556.jpg?t=1607347457"
+    },
+    {
+      "title": "Informatics Professor",
+      "feed_url": "http://informaticsprofessor.blogspot.com/feeds/posts/default",
+      "website_url": "http://informaticsprofessor.blogspot.com/",
+      "description": "This blog maintains the thoughts on various topics related to biomedical and health informatics by Dr. William Hersh, Professor, and Chair, Department of Medical Informatics & Clinical Epidemiology, Oregon Health & Science University. He also co-leads efforts to teach clinical informatics to other health professions students.",
+      "followers": {
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/1361652.jpg?t=1607347469"
+    },
+    {
+      "title": "Michael S. Chimenti's Bioinformatics Blog",
+      "feed_url": "https://www.michaelchimenti.com/feed/",
+      "website_url": "https://www.michaelchimenti.com/",
+      "description": "A blog about bioinformatics, genomic research, and data analysis.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4717833.jpg?t=1607349227"
+    },
+    {
+      "title": "Epistasis Blog - From the Computational Genetics Laboratory at the University of Pennsylvania",
+      "feed_url": "http://www.epistasisblog.org/feeds/posts/default?alt=rss",
+      "website_url": "http://www.epistasisblog.org/",
+      "description": "Edward Rose Professor of Informatics, Director of the Institute for Biomedical Informatics, Director of the Division of Informatics in the Department of Biostatistics and Epidemiology, Senior Associate Dean for Informatics, The Perelman School of Medicine, University of Pennsylvania.",
+      "followers": {
+        "twitter": 35800
+      },
+      "image_url": "https://i1.feedspot.com/4717550.jpg?t=1607347499"
+    },
+    {
+      "title": "RajLab",
+      "feed_url": "http://rajlaboratory.blogspot.com/feeds/posts/default",
+      "website_url": "http://rajlaboratory.blogspot.com/",
+      "description": "A blog from the Raj Lab for systems biology.",
+      "followers": {
+        "twitter": 27400
+      },
+      "image_url": "https://i1.feedspot.com/3755739.jpg?t=1725274944"
+    },
+    {
+      "title": "Building confidence.",
+      "feed_url": "https://rbaltman.wordpress.com/feed/",
+      "website_url": "https://rbaltman.wordpress.com/",
+      "description": "I'm Russ Altman and I am on the faculty at Stanford University. I have been encouraged to create this blog in order to provide hopefully useful and edgy commentary on issues related to my professional expertise, which is biomedical informatics, genetics, medicine, and bioengineering.",
+      "followers": {
+        "twitter": 8100
+      },
+      "image_url": "https://i1.feedspot.com/4717706.jpg?t=1725264757"
+    },
+    {
+      "title": "Eagle Genomics",
+      "feed_url": "https://www.eaglegenomics.com/news/rss.xml",
+      "website_url": "https://www.eaglegenomics.com/news",
+      "description": "Eagle Genomics supplies quality outsourced bioinformatics solutions.We combine cloud computing and Next Generation Sequencing (NGS) expertise with a track record in building scalable, efficient genomics analysis workflows using both commercial and open source software.",
+      "followers": {
+        "facebook": 180,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/258039.jpg?t=1607347511"
+    },
+    {
+      "title": "Gigabase or gigabyte - Exploring bioinformatics",
+      "feed_url": "https://gigabaseorgigabyte.wordpress.com/feed/",
+      "website_url": "https://gigabaseorgigabyte.wordpress.com/",
+      "description": "My research project focusses on elucidating the genetics of Neurodegenerative Diseases in general and in particular Frontotemporal Dementia. I mainly work on data generated by whole genome sequencing, whole exome sequencing, targeted resequencing, RNA-seq and Nanopore Sequencing using MinION.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4718285.jpg?t=1607347518"
+    },
+    {
+      "title": "Alberta Children's Hospital Research Institute - Bioinformatics",
+      "feed_url": "http://achri.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://achri.blogspot.com/",
+      "description": "This blog provides updates on the happenings at the Bioinformatics Support Services of the Alberta Children's Hospital Research Institute. This includes a mix of technical information of use to other bioinformaticians, and practical information about services for both bench researchers and clinicians. Opinions expressed here are solely my (Paul Gordon) own, and should not be construed as ACHRI, AHS or UofC policy.",
+      "followers": {
+        "facebook": 417,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4718249.jpg?t=1607349059"
+    },
+    {
+      "title": "Bits and Bugs - Applying bioinformatics to public health microbiology",
+      "feed_url": "https://bitsandbugs.org/feed/",
+      "website_url": "https://bitsandbugs.org/",
+      "description": "This blog reflects the practicalities and impracticalities of working at the intersection of public health microbiolgy and bioinformatics, and whatever else I fancy posting about really.",
+      "followers": {
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4717577.jpg?t=1725270286"
+    },
+    {
+      "title": "Computational Biology Blog",
+      "feed_url": "https://computationalbiologyblog.com/feed/",
+      "website_url": "https://computationalbiologyblog.com/",
+      "description": "Random remarks on topics from computational biology, signal transduction, neuroscience etc.",
+      "followers": {
+        "facebook": 196,
+        "twitter": 28
+      },
+      "image_url": "https://i1.feedspot.com/4714471.jpg?t=1725270871"
+    },
+    {
+      "title": "Omics Tutorials",
+      "feed_url": "https://follow.it/omicstutorials5",
+      "website_url": "https://omicstutorials.com/",
+      "description": "Bioinformatics, Genomics, Proteomics, and Transcriptomics. The information contained in this website is for teaching and learning purposes only.",
+      "followers": {
+        "twitter": 35
+      },
+      "image_url": "https://i1.feedspot.com/5050818.jpg?t=1725275608"
+    },
+    {
+      "title": "Loman Labs",
+      "feed_url": "http://lab.loman.net/atom.xml",
+      "website_url": "http://lab.loman.net/",
+      "description": "Nick works as an Independent Research Fellow in the Institute for Microbiology and Infection at the University of Birmingham. His current work focuses on the development and evaluation of novel molecular biology, sequencing and bioinformatics methods to aid the interpretation of genome and metagenome scale data generated in clinical and public health microbiology.",
+      "followers": {
+        "twitter": 38400
+      },
+      "image_url": "https://i1.feedspot.com/4465058.jpg?t=1607347605"
+    },
+    {
+      "title": "Kevin's GATTACA World",
+      "feed_url": "https://feeds.feedburner.com/MyWeblogOnBioinformaticsGenomeScienceNextGenerationSequencing",
+      "website_url": "http://kevin-gattaca.blogspot.com/",
+      "description": "My Weblog on Bioinformatics, Genome Science and Next Generation Sequencing.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/808723.jpg?t=1607348260"
+    },
+    {
+      "title": "In between lines of code - Biology, sequencing, bioinformatics and more",
+      "feed_url": "https://flxlexblog.wordpress.com/feed/",
+      "website_url": "https://flxlexblog.wordpress.com/",
+      "description": "Welcome to my blog on Biology, sequencing, bioinformatics and more. I'll post snippets of codes, ideas, perhaps discuss a paper or two, or write about anything else that I want to get off my chest.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4165883.jpg?t=1607348152"
+    },
+    {
+      "title": "Next-Gen Sequencing",
+      "feed_url": "http://nextgenseq.blogspot.com/feeds/posts/default",
+      "website_url": "http://nextgenseq.blogspot.com/",
+      "description": "A working guide to the rapidly developing world of Next-Generation DNA sequencing, with an emphasis on bioinformatics.",
+      "followers": {
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/258046.jpg?t=1607348004"
+    },
+    {
+      "title": "Diving into Genetics and Genomics",
+      "feed_url": "http://crazyhottommy.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://crazyhottommy.blogspot.com/",
+      "description": "A wet biologist's bioinformatic notes. Mostly is about Linux, R, python, reproducible research, open science and NGS. I am into data science! I am working on glioblastoma (a terrible brain cancer) genomics at MD Anderson cancer center. Disclaimer: For posts that I copied from other places, credits go to the original authors. Follow the links to the original posts, I mainly put them here for my own future references.",
+      "followers": {
+        "twitter": 40600
+      },
+      "image_url": "https://i1.feedspot.com/4432422.jpg?t=1607347639"
+    },
+    {
+      "title": "Viral Genomics & Bioinformatics - Bioinformatics I/O - Tips && tricks from a cluster of bioinformat",
+      "feed_url": "https://bioinformatics.cvr.ac.uk/blog/feed/",
+      "website_url": "https://bioinformatics.cvr.ac.uk/blog/",
+      "description": "The mission of the CVR is to carry out multidisciplinary research on viruses and viral diseases of humans and animals, translating the knowledge gained for the improvement of human and animal health.",
+      "followers": {
+        "facebook": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4718396.jpg?t=1607347995"
+    },
+    {
+      "title": "Dovetail Biopartners Blog",
+      "feed_url": "https://dovetailbiopartners.com/feed/",
+      "website_url": "https://dovetailbiopartners.com/blog/",
+      "description": "Customized data science and engineering solutions for the life sciences.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7331925.jpg?t=1725260589"
+    },
+    {
+      "title": "Bio-IT World",
+      "feed_url": "https://www.bio-itworld.com/RSS/BioIT_WorldNews_RSS.aspx",
+      "website_url": "https://www.bio-itworld.com/",
+      "description": "It covers the application of informatics, IT and computer science in biomedical research and drug discovery. As the life sciences become an increasingly quantitative discipline, Bio-IT World provides topical news coverage and analysis of cutting-edge technologies to handle the data deluge in petascale computing and the tools to deliver individualized medicine.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 15400
+      },
+      "image_url": "https://i1.feedspot.com/1765882.jpg?t=1607346483"
+    },
+    {
+      "title": "nature.com - Computational biology and bioinformatics",
+      "feed_url": "https://www.nature.com/subjects/computational-biology-and-bioinformatics.rss",
+      "website_url": "https://www.nature.com/subjects/computational-biology-and-bioinformatics",
+      "description": "Latest news and research from Nature.com on the topic of Computational biology and bioinformatics. Nature Research is part of Springer Nature, a leading global research, educational and professional publisher. Springer Nature is the world's largest academic book publisher, publisher of the world's most influential journals and a pioneer in the field of open research.",
+      "followers": {
+        "facebook": 792300,
+        "twitter": 2600000
+      },
+      "image_url": "https://i1.feedspot.com/4718196.jpg?t=1607346497"
+    },
+    {
+      "title": "Front Line Genomics",
+      "feed_url": "https://frontlinegenomics.com/search/Bioinformatics/feed/rss2/",
+      "website_url": "https://frontlinegenomics.com/?s=Bioinformatics",
+      "description": "Our aim is to bring the benefits of genomics to patients faster by supporting scientists, clinicians, business/research leaders and officials.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 10900
+      },
+      "image_url": "https://i1.feedspot.com/4717887.jpg?t=1607346559"
+    },
+    {
+      "title": "Elucidata Blog",
+      "feed_url": "https://www.elucidata.io/resources/blog",
+      "website_url": "https://www.elucidata.io/resources/blog",
+      "description": "Elucidata's mission is to use data analytics to transform decision-making processes in R&D labs in biotechnology and pharmaceutical companies. On our Blog, you will find easy-to-understand and actionable insights to help your company improve its data management.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 465
+      },
+      "image_url": "https://i1.feedspot.com/5156339.jpg?t=1607346565"
+    },
+    {
+      "title": "Genomics Proteomics and Bioinformatics",
+      "feed_url": "http://www.bioinf.org/index.php/feed/",
+      "website_url": "http://www.bioinf.org/",
+      "description": "Bioinforrmatics content curated by top Bioinformatics Influencers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4717800.jpg?t=1607348974"
+    },
+    {
+      "title": "OBF News Blog",
+      "feed_url": "https://www.open-bio.org/blog/feed/",
+      "website_url": "https://www.open-bio.org/blog/",
+      "description": "The Open Bioinformatics Foundation or OBF is a non profit, volunteer run organization focused on supporting open source programming in bioinformatics.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4717950.jpg?t=1607346663"
+    },
+    {
+      "title": "Advaita Bioinformatics",
+      "feed_url": "https://advaitabio.com/blog/feed/",
+      "website_url": "https://advaitabio.com/news/",
+      "description": "Advaita Bioinformatics develops bioinformatics software tools for gene-expression analysis in research and pharmaceutical industries. Advaita is the only company in the bioinformatics technology sector that focuses on the pathway analysis rather than data.",
+      "followers": {
+        "twitter": 150
+      },
+      "image_url": "https://i1.feedspot.com/4717738.jpg?t=1607349385"
+    },
+    {
+      "title": "Ewan's Blog: Bioinformatician at large",
+      "feed_url": "https://ewanbirney.com/feed",
+      "website_url": "https://ewanbirney.com/",
+      "description": "Professor Ewan Birney is joint Director of EMBL-EBI with Rolf Apweiler, nonexecutive Director of Genomics England and Chair of the Global Alliance for Genomics and Health.",
+      "followers": {
+        "twitter": 47800
+      },
+      "image_url": "https://i1.feedspot.com/4717557.jpg?t=1607347474"
+    },
+    {
+      "title": "McInerney Lab Blog",
+      "feed_url": "http://mcinerneylab.com/feed/",
+      "website_url": "https://bcb.io/articles/",
+      "description": "James McInerney's Bioinformatics and Molecular Evolution laboratory at The University of Manchester carries our research on gene and genome evolution.",
+      "followers": {
+        "facebook": 228,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4717746.jpg?t=1607347493"
+    },
+    {
+      "title": "Blue Collar Bioinformatics - Community built tools for biological data analysis",
+      "feed_url": "https://feeds.feedburner.com/bcbio?x=1",
+      "website_url": "https://bcb.io/articles/",
+      "description": "Blue Collar Bioinformatics (bcbio) is community-developed variant calling, RNA-seq and small RNA analysis.",
+      "followers": {
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4717546.jpg?t=1607347616"
+    },
+    {
+      "title": "MassGenomics - Medical genomics in the post-genome era",
+      "feed_url": "http://massgenomics.org/feed",
+      "website_url": "http://massgenomics.org/",
+      "description": "I am Dan Koboldt, the author of MassGenomics. I started the Massgenomics blog in 2008 to write about next-generation sequencing and medical genomics in the post-genome era. My primary research interests are human genetics and cancer genomics, and the content of my blog reflects that.",
+      "followers": {
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/1841353.jpg?t=1646634140"
+    }
+  ]
+}

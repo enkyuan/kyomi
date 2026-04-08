@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml xmlns:frss="https://freshrss.org/opml" version="2.0">
+  <head>
+    <title>FreshRSS</title>
+    <dateCreated>Tue, 06 May 2025 09:48:51 +0000</dateCreated>
+  </head>
+  <body>
+    <outline text="Altro">
+      <outline text="FuturoProssimo" type="rss" xmlUrl="https://www.futuroprossimo.it/feed/" htmlUrl="https://www.futuroprossimo.it/" description="Notizie che anticipano il mondo di domani"/>
+      <outline text="GamerPower Giveaways - Steam" type="rss" xmlUrl="https://www.gamerpower.com/rss/steam" htmlUrl="https://www.gamerpower.com/" description="Find, Track and collect the best giveaways in gaming!"/>
+      <outline text="Geopop" type="rss" xmlUrl="https://www.geopop.it/feed/" htmlUrl="https://www.geopop.it/" description="Le Scienze nella vita di tutti i giorni, a cura di Andrea Moccia, Geologo e Divulgatore Scientifico"/>
+      <outline text="GrabFreeGames RSS Feed" type="rss" xmlUrl="https://steamcommunity.com/groups/GrabFreeGames/rss/" htmlUrl="https://steamcommunity.com/groups/GrabFreeGames" description="Events and Announcements for GrabFreeGames"/>
+      <outline text="IrpiMedia" type="rss" xmlUrl="https://irpimedia.irpi.eu/feed/" htmlUrl="https://irpimedia.irpi.eu/" description="Periodico indipendente di giornalismo d'inchiesta"/>
+      <outline text="The History of the Web" type="rss" xmlUrl="https://thehistoryoftheweb.com/feed/" htmlUrl="https://thehistoryoftheweb.com/" description="Unraveling the web's story"/>
+    </outline>
+    <outline text="FOSS">
+      <outline text="bellingcat" type="rss" xmlUrl="https://www.bellingcat.com/feed/" htmlUrl="https://www.bellingcat.com/" description="the home of online investigations"/>
+      <outline text="Collabora Newsroom RSS Feed" type="rss" xmlUrl="https://www.collabora.com/newsroom-rss-feed.rss" htmlUrl="https://www.collabora.com/newsroom-rss-feed.rss" description="Your one-stop shop for all the latest from Collabora"/>
+      <outline text="Dolphin MR" type="rss" xmlUrl="https://invent.kde.org/system/dolphin/-/merge_requests.atom?state=opened" htmlUrl="https://invent.kde.org/system/dolphin/-/merge_requests"/>
+      <outline text="Firefox – gHacks Technology News" type="rss" xmlUrl="https://www.ghacks.net/category/firefox/feed/" htmlUrl="https://www.ghacks.net/" description="The independent technology news blog"/>
+      <outline text="Kate MR" type="rss" xmlUrl="https://invent.kde.org/utilities/kate/-/merge_requests.atom?state=opened" htmlUrl="https://invent.kde.org/utilities/kate/-/merge_requests"/>
+      <outline text="LWN.net" type="rss" xmlUrl="https://lwn.net/headlines/newrss" htmlUrl="https://lwn.net/" description="LWN.net is a comprehensive source of news and opinions from&#10;        and about the Linux community.  This is the main LWN.net feed,&#10;        listing all articles which are posted to the site front page."/>
+      <outline text="Mike Blumenkrantz" type="rss" xmlUrl="https://www.supergoodcode.com/feed.xml" htmlUrl="https://zmike.github.io/" description="Super. Good. Chair."/>
+      <outline text="Mozilla – soeren-hentzschel.at" type="rss" xmlUrl="https://www.soeren-hentzschel.at/mozilla/feed/" htmlUrl="https://www.soeren-hentzschel.at/" description="Aktuelles zu Mozilla"/>
+      <outline text="NLnet news" type="rss" xmlUrl="https://nlnet.nl/feed.atom" htmlUrl="https://nlnet.nl/feed.atom"/>
+      <outline text="Noted" type="rss" xmlUrl="https://noted.lol/rss/" htmlUrl="https://noted.lol/" description="Maximize Your Homelab Potential with Self-Hosting and Open-Source Solutions."/>
+      <outline text="OpenSource.net" type="rss" xmlUrl="https://opensource.net/feed/" htmlUrl="https://opensource.net/" description="Powered by open, united by community"/>
+      <outline text="Planet Debian" type="rss" xmlUrl="https://planet.debian.org/rss20.xml" htmlUrl="https://planet.debian.org/" description="Planet Debian - https://planet.debian.org/"/>
+      <outline text="Planet KDE" type="rss" xmlUrl="https://planet.kde.org/index.xml" htmlUrl="http://planetkde.org/" description="Planet KDE | English"/>
+      <outline text="Planet LUG" type="rss" xmlUrl="https://planet.linux.it/lug/rss.xml" htmlUrl="https://planet.linux.it/lug/rss.xml" description="Feed generato da Planet.Linux.it"/>
+      <outline text="Planet Mozilla" type="rss" xmlUrl="https://planet.mozilla.org/rss20.xml" htmlUrl="https://planet.mozilla.org/" description="Planet Mozilla - https://planet.mozilla.org/"/>
+      <outline text="Siduction Forum - Upgrade Warnings" type="rss" xmlUrl="https://forum.siduction.org/index.php?action=.xml;type=rss;board=22.0" htmlUrl="https://forum.siduction.org/index.php" description="Live information from Siduction Forum"/>
+      <outline text="Sovereign Tech Fund" type="rss" xmlUrl="https://www.sovereign.tech/feed.rss" htmlUrl="https://www.sovereigntechfund.de/"/>
+      <outline text="The Register" type="rss" xmlUrl="https://www.theregister.com/headlines.atom" htmlUrl="https://www.theregister.com/" description="Biting the hand that feeds IT — Enterprise Technology News and Analysis"/>
+    </outline>
+    <outline text="IT News">
+      <outline text="404 Media" type="rss" xmlUrl="https://www.404media.co/rss/" htmlUrl="https://www.404media.co/" description="404 Media is a new independent media company founded by technology journalists Jason Koebler, Emanuel Maiberg, Samantha Cole, and Joseph Cox."/>
+      <outline text="Developers Italia - Medium" type="rss" xmlUrl="https://medium.com/feed/developers-italia" htmlUrl="https://medium.com/developers-italia?source=rss----1a0a16c99341---4" description="Esperienze di sviluppo per il software della Pubblica Amministrazione - Medium"/>
+      <outline text="Django News" type="rss" xmlUrl="https://django-news.com/issues.rss" htmlUrl="https://django-news.com/issues" description="Weekly Django news, articles, projects, and more.&#10;&#10;Curated by Jeff Triplett &amp; William Vincent."/>
+      <outline text="Firefox Developer Experience" type="rss" xmlUrl="https://fxdx.dev/feed/" htmlUrl="https://fxdx.dev/" description="Your Go-To Resource for Web Development &amp; Compatibility"/>
+      <outline text="Guerre di Rete" type="rss" xmlUrl="https://www.guerredirete.it/feed/" htmlUrl="https://www.guerredirete.it/"/>
+      <outline text="Hackaday" type="rss" xmlUrl="https://hackaday.com/feed/" htmlUrl="https://hackaday.com/" description="Fresh hacks every day"/>
+      <outline text="Linux Systems Analyst | Hayden James" type="rss" xmlUrl="https://linuxblog.io/feed/" htmlUrl="https://haydenjames.io/" description="Linux and Technology Insights"/>
+      <outline text="LPI Blog" type="rss" xmlUrl="https://www.lpi.org/it/feed/" htmlUrl="https://www.lpi.org/articles"/>
+      <outline text="Marco's Box" type="rss" xmlUrl="https://www.marcosbox.com/feed/" htmlUrl="http://www.marcosbox.org/search/label/Mondo%20Linux" description="Quello del pacco"/>
+      <outline text="Mia mamma usa Linux!" type="rss" xmlUrl="http://www.miamammausalinux.org/feed/" htmlUrl="https://www.miamammausalinux.org/" description="Il portale italiano di notizie ed articoli su Linux ed il mondo open-source!"/>
+      <outline text="Nick Janetakis" type="rss" xmlUrl="https://nickjanetakis.com/atom.xml" htmlUrl="https://nickjanetakis.com/" description="Recent content in From Development to Production on Nick Janetakis"/>
+      <outline text="Paged Out! Magazine" type="rss" xmlUrl="https://pagedout.institute/rss.xml" htmlUrl="https://pagedout.institute/rss.xml" description="Paged Out! Magazine issues"/>
+      <outline text="Web Performance" type="rss" xmlUrl="https://feed.perfplanet.com/rss.xml" htmlUrl="https://feed.perfplanet.com/" description="News and views from the web performance blogosphere"/>
+    </outline>
+    <outline text="Reddit">
+      <outline text="commandline" type="rss" xmlUrl="https://old.reddit.com/r/commandline/top.rss?t=week&amp;limit=25" htmlUrl="https://www.reddit.com/r/commandline/top?t=week&amp;limit=25" description="This is for anything regarding the command line, in any operating system. All questions (including dumb ones), tips, and links to interesting programs/console applications you've found or made yourself are welcome. Linux / BSD / OSX / Windows CLI and TUI apps or questions or comments, we're happy to take them all!"/>
+      <outline text="Hacker News" type="rss" xmlUrl="https://news.ycombinator.com/rss" htmlUrl="https://news.ycombinator.com/" description="Links for the intellectually curious, ranked by readers." frss:filtersActionRead="intitle:'(202'&#10;intitle:'(201'&#10;intitle:'hiring'"/>
+      <outline text="linuxadmin" type="rss" xmlUrl="https://old.reddit.com/r/linuxadmin/top.rss?t=week&amp;limit=25" htmlUrl="https://www.reddit.com/r/linuxadmin/top?t=week&amp;limit=25" description="users voted"/>
+      <outline text="neovim" type="rss" xmlUrl="https://old.reddit.com/r/neovim/top.rss?t=week&amp;limit=25" htmlUrl="https://www.reddit.com/r/neovim/top?t=week&amp;limit=25" description="Neovim is a hyperextensible Vim-based text editor. Learn more at neovim.io."/>
+      <outline text="opensource" type="rss" xmlUrl="https://old.reddit.com/r/opensource/hot.rss?t=week&amp;limit=25" htmlUrl="https://www.reddit.com/r/opensource/top?t=week&amp;limit=25" description="A subreddit for everything open source related (for this context, we go off the definition of open source here http://en.wikipedia.org/wiki/Open_source)"/>
+      <outline text="ReverseEngineering" type="rss" xmlUrl="https://old.reddit.com/r/ReverseEngineering/top.rss?t=week&amp;limit=25" htmlUrl="https://www.reddit.com/r/ReverseEngineering/top?t=week&amp;limit=25" description="A moderated community dedicated to all things reverse engineering."/>
+      <outline text="selfhosted" type="rss" xmlUrl="https://old.reddit.com/r/selfhosted/top.rss?t=week&amp;limit=25" htmlUrl="https://www.reddit.com/r/selfhosted/top?t=week&amp;limit=25" description="A place to share, discuss, discover, assist with, gain assistance for, and critique self-hosted alternatives to our favorite web apps, web services, and online tools."/>
+      <outline text="sysadmin" type="rss" xmlUrl="https://www.reddit.com/r/sysadmin/top.rss?t=week&amp;limit=25" htmlUrl="https://www.reddit.com/r/sysadmin/top?t=week&amp;limit=25" description="A reddit dedicated to the profession of Computer System Administration."/>
+      <outline text="talesfromtechsupport" type="rss" xmlUrl="https://old.reddit.com/r/talesfromtechsupport/top.rss?t=week&amp;limit=25" htmlUrl="https://www.reddit.com/r/talesfromtechsupport/top?t=week&amp;limit=25" description="Welcome to Tales From Tech Support, the subreddit where we post stories about helping someone with a tech issue."/>
+    </outline>
+    <outline text="Senza categoria">
+      <outline text="GG.deals - Game bundles" type="rss" xmlUrl="https://gg.deals/it/news/bundles/feed/" htmlUrl="https://gg.deals/news/bundles/" description="Looking for news about the best game bundles that are currently available? GG.deals has got you covered! Click here to see the details."/>
+    </outline>
+    <outline text="WordPress">
+      <outline text="Develop WooCommerce" type="rss" xmlUrl="https://developer.woocommerce.com/feed/" htmlUrl="https://woocommerce.wordpress.com/" description="The commerce platform for developers"/>
+      <outline text="Make WordPress Core" type="rss" xmlUrl="https://make.wordpress.org/core/feed/" htmlUrl="https://make.wordpress.org/core" description="WordPress Development Updates"/>
+      <outline text="snicco" type="rss" xmlUrl="https://snicco.io/feed" htmlUrl="https://snicco.io/" description="Taking the pain out of enterprise WordPress development"/>
+      <outline text="Sucuri Blog" type="rss" xmlUrl="https://blog.sucuri.net/feed" htmlUrl="https://blog.sucuri.net/" description="Learn about website security, software vulnerabilities, how to protect WordPress, and malware infections from our team of security researchers."/>
+      <outline text="WordPress Tavern" type="rss" xmlUrl="https://wptavern.com/feed" htmlUrl="https://wptavern.com/" description="WordPress News — Free as in Beer."/>
+    </outline>
+  </body>
+</opml>

@@ -1,0 +1,28 @@
+{
+  "category": "Oshkosh News",
+  "source_url": "https://rss.feedspot.com/oshkosh_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Oshkosh Herald",
+      "feed_url": "https://oshkoshherald.com/feed/",
+      "website_url": "https://oshkoshherald.com/",
+      "description": "Bringing local news home",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 382
+      },
+      "image_url": "https://i1.feedspot.com/5168948.jpg?t=1594130353"
+    },
+    {
+      "title": "Oshkosh Northwestern",
+      "feed_url": "https://www.thenorthwestern.com/",
+      "website_url": "https://www.thenorthwestern.com/",
+      "description": "Complete coverage of Oshkosh area news and weather, sports, business, community, entertainment, technology, obituaries, photos, videos and opinion at thenorthwestern.com",
+      "followers": {
+        "facebook": 17600,
+        "twitter": 8000
+      },
+      "image_url": "https://i1.feedspot.com/5168947.jpg?t=1671781118"
+    }
+  ]
+}

@@ -1,0 +1,749 @@
+{
+  "category": "Atlanta",
+  "source_url": "https://rss.feedspot.com/atlanta_rss_feeds",
+  "feeds": [
+    {
+      "title": "Atlanta Magazine",
+      "feed_url": "https://www.atlantamagazine.com/feed/",
+      "website_url": "https://www.atlantamagazine.com/dining-news/",
+      "description": "Since 1961, Atlanta magazine has served as the authority on Atlanta, providing its monthly readers with a mix of long-form nonfiction, lively lifestyle coverage, in-depth service journalism, and literary essays, columns, and profiles. The city's only general-interest magazine, Atlanta Magazine is recognized regionally and nationally for journalism and design excellence.",
+      "followers": {
+        "facebook": 87000,
+        "twitter": 486600,
+        "instagram": 172700
+      },
+      "image_url": "https://i1.feedspot.com/4817335.jpg?t=1669707242"
+    },
+    {
+      "title": "Eater Atlanta",
+      "feed_url": "https://atlanta.eater.com/rss/index.xml",
+      "website_url": "https://atlanta.eater.com/",
+      "description": "Stay updated with the latest food news and dining guides for Atlanta. Eater's coverage ranges from extensive city maps and travel dining guides marking all the best places to eat, punchy editorials exploring the cultural significance of what and how people eat, in-depth industry investigations, and light-hearted ruminations on food fads and cooking tips and tricks.",
+      "followers": {
+        "facebook": 41300,
+        "twitter": 65400,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/4817407.jpg?t=1610692375"
+    },
+    {
+      "title": "365 Atlanta Traveler",
+      "feed_url": "https://365atlantatraveler.com/feed/",
+      "website_url": "https://365atlantatraveler.com/",
+      "description": "Family Travel, Vacations, and Getaways; Outdoor Adventure; Romantic Escapes, and Date Night Ideas.",
+      "followers": {
+        "facebook": 34500,
+        "twitter": 15500
+      },
+      "image_url": "https://i1.feedspot.com/4971751.jpg?t=1610692384"
+    },
+    {
+      "title": "Atlanta on the Cheap",
+      "feed_url": "http://feeds.feedblitz.com/atlonthecheap",
+      "website_url": "https://www.atlantaonthecheap.com/",
+      "description": "Free things to do in Atlanta, plus restaurant coupons, travel discounts, cheap events, family-friendly deals, festivals, concerts, movies & more. Explore the ATL on the cheap.",
+      "followers": {
+        "facebook": 17400,
+        "twitter": 53200
+      },
+      "image_url": "https://i1.feedspot.com/1067767.jpg?t=1610692388"
+    },
+    {
+      "title": "Atlanta Homes & Lifestyles Blog",
+      "feed_url": "https://atlantahomesmag.com/feed/",
+      "website_url": "https://atlantahomesmag.com/category/blog/",
+      "description": "Published since 1983, Atlanta Homes & Lifestyles is the city's only monthly home and garden magazine. Dedicated to showcasing the best in design for our city.",
+      "followers": {
+        "facebook": 298900,
+        "instagram": 183800
+      },
+      "image_url": "https://i1.feedspot.com/4612672.jpg?t=1610692580"
+    },
+    {
+      "title": "The Fairytale Traveler",
+      "feed_url": "https://thefairytaletraveler.com/feed/",
+      "website_url": "https://thefairytaletraveler.com/",
+      "description": "Travel and lifestyle blog inspired by legends and lore featuring film locations, literary trails, and cool history. Explore magical, otherworldly and fairytale-like places.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 17600,
+        "instagram": 6000
+      },
+      "image_url": "https://i1.feedspot.com/4971746.jpg?t=1610692747"
+    },
+    {
+      "title": "Vettes of Atlanta Magazine",
+      "feed_url": "https://vettesofatlanta.com/feed/",
+      "website_url": "https://vettesofatlanta.com/",
+      "description": "Vettes of Atlanta Magazine covers America's Corvette lifestyle, with a focus on Atlanta's Corvette clubs and events. From C8.R racing to Vette owner stories to the National Corvette Restoration Society. We bring you the latest on America's sports car.",
+      "followers": {
+        "facebook": 890,
+        "twitter": 49,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5605119.jpg?t=1687507191"
+    },
+    {
+      "title": "FanBolt",
+      "feed_url": "https://www.fanbolt.com/feed/",
+      "website_url": "https://www.fanbolt.com/",
+      "description": "Geek news covering film, television, gaming, travel, tech, and fan and geek culture. By the fans and for the fans since 2002!",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 7600,
+        "instagram": 22300
+      },
+      "image_url": "https://i1.feedspot.com/5034309.jpg?t=1610692933"
+    },
+    {
+      "title": "Really, Are You Serious?",
+      "feed_url": "https://reallyareyouserious.com/feed/",
+      "website_url": "https://reallyareyouserious.com/",
+      "description": "An Atlanta Mom Blog featuring family, parenting, life, travel, vacations, activities, recipes, crafts and more. From the perspective of a wife, mom of four girls, a sister and daughter.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 8700,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4971722.jpg?t=1610692753"
+    },
+    {
+      "title": "JaMonkey",
+      "feed_url": "https://jamonkey.com/feed/",
+      "website_url": "https://jamonkey.com/",
+      "description": "Meghan Cooper, an Atlanta Georgia Lifestyle / Mom blogger discussing entertainment, travel, recipes, crafts, S.T.E.A.M., and more.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 17600,
+        "instagram": 12900
+      },
+      "image_url": "https://i1.feedspot.com/4971703.jpg?t=1628339881"
+    },
+    {
+      "title": "Life Family Fun",
+      "feed_url": "https://lifefamilyfun.com/feed/",
+      "website_url": "https://lifefamilyfun.com/",
+      "description": "Life Family Fun is a resource for favorite family & luxury travel destinations, active lifestyle, parenting tips, family recipes, healthy recipes and technology favorites.",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 17100,
+        "instagram": 28
+      },
+      "image_url": "https://i1.feedspot.com/4971709.jpg?t=1610692888"
+    },
+    {
+      "title": "Venture Atlanta",
+      "feed_url": "http://www.ventureatlanta.org/feed/",
+      "website_url": "https://www.ventureatlanta.org/",
+      "description": "Venture Atlanta is an annual conference that creates opportunities for top tier investors to connect with and fund the region's most promising technology companies.",
+      "followers": {
+        "twitter": 17100,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/672715.jpg?t=1610693126"
+    },
+    {
+      "title": "Atlanta Eats",
+      "feed_url": "http://www.atlantaeats.com/feed/",
+      "website_url": "https://www.atlantaeats.com/",
+      "description": "Find the best restaurants in Atlanta Watch video reviews and use our restaurant finder to search for the best places to eat in Atlanta, GA",
+      "followers": {
+        "facebook": 74600,
+        "twitter": 32900,
+        "instagram": 233500
+      },
+      "image_url": "https://i1.feedspot.com/3889636.jpg?t=1610692918"
+    },
+    {
+      "title": "The Savvy Mama Lifestyle",
+      "feed_url": "https://www.savvymamalifestyle.com/feed/",
+      "website_url": "https://www.savvymamalifestyle.com/",
+      "description": "A resource for family travel tips, Millennial parenting, entertainment, recipes, & reviews. We love featuring fun travel destinations, great food and things to do as a family. A blog by Kimberly Stroh - a busy mom of three boys working as an Atlanta family lifestyle & travel blogger.",
+      "followers": {
+        "facebook": 28200,
+        "twitter": 14900,
+        "instagram": 42900
+      },
+      "image_url": "https://i1.feedspot.com/4971738.jpg?t=1629549043"
+    },
+    {
+      "title": "Tomorrow's News Today",
+      "feed_url": "https://www.tonetoatl.com/feeds/posts/default",
+      "website_url": "https://www.tonetoatl.com/",
+      "description": "The most accurate and comprehensive blog covering Atlanta restaurant, retail, hotel, banking, grocery, multi-family and convenience store news.",
+      "followers": {
+        "facebook": 20400,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/716936.jpg?t=1610693096"
+    },
+    {
+      "title": "Atlanta Real Estate Forum",
+      "feed_url": "https://www.atlantarealestateforum.com/feed/",
+      "website_url": "https://www.atlantarealestateforum.com/",
+      "description": "Atlanta's Real Estate Blog with information on Atlanta new homes, builders, and construction industry news. This site focuses on promoting new homes in the metro Atlanta area to consumers and industry insiders.",
+      "followers": {
+        "facebook": 13000,
+        "twitter": 4100,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4817435.jpg?t=1629296231"
+    },
+    {
+      "title": "Redhead Baby Mama Blog",
+      "feed_url": "https://www.redheadbabymama.com/feed/",
+      "website_url": "https://www.redheadbabymama.com/blog/",
+      "description": "I'm Lindsey, a southern girl residing in Atlanta. Welcome to my little corner where I share my anecdotes, crafts, recipes, & dose of Disney as I raise my 2 kids!",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 5100,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4971723.jpg?t=1610693108"
+    },
+    {
+      "title": "Mamalicious Maria",
+      "feed_url": "https://mamaliciousmaria.com/feed/",
+      "website_url": "https://mamaliciousmaria.com/",
+      "description": "Mamalicious Maria is the place for family travel tips and other fun finds for Moms and the men who love them. Maria Smith is one of the top Atlanta Mom bloggers.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 8600,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4971717.jpg?t=1628341207"
+    },
+    {
+      "title": "Becky Morris Blog",
+      "feed_url": "https://feeds.feedburner.com/BeckyMorris",
+      "website_url": "https://beckymorris.com/blog/",
+      "description": "Explore Atlanta real estate listings, news, and commentary by Becky Morris. The Morris Raney Real Estate team works with buyers and sellers who expect exceptional service in Atlanta. Becky Morris has been a top real estate agent in Atlanta since 2002, leading in excellence in customer service and technology. Dixon Raney teamed up with Becky in 2013 to form Morris Raney Real Estate. Melissa. Honesty and integrity are the foundation of their business morris Fuller joined the team in 2017 bringing her expertise in marketing.",
+      "followers": {
+        "facebook": 650,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4817448.jpg?t=1610693121"
+    },
+    {
+      "title": "Lush to Blush",
+      "feed_url": "https://lushtoblush.com/feed/",
+      "website_url": "https://lushtoblush.com/",
+      "description": "Lush to Blush is a fashion and beauty blog founded by an Atlanta-based blogger, Megan Elliott. The blog is all about inspiring women to feel confident and beautiful in their skin. The blog features various categories such as fashion, beauty, lifestyle, and travel, and provides helpful tips and advice on different topics.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 8100
+      },
+      "image_url": "https://i1.feedspot.com/4971697.jpg?t=1610692914"
+    },
+    {
+      "title": "Author Wallace Rushing",
+      "feed_url": "https://wallacerushing.com/feed/",
+      "website_url": "https://wallacerushing.com/blog/",
+      "description": "Wallace Rushing owes a big wealth of gratitude to his rural southern upbringing and his deep southern Baptist roots. Author shares a life-changing message that can be applied across racial and social lines.",
+      "followers": {
+        "facebook": 110,
+        "twitter": 208,
+        "instagram": 278
+      },
+      "image_url": "https://i1.feedspot.com/5173598.jpg?t=1610693116"
+    },
+    {
+      "title": "Atlanta Real Estate Investors Alliance (Atlanta REIA)",
+      "feed_url": "https://atlantareia.com/feed/",
+      "website_url": "https://atlantareia.com/",
+      "description": "Atlanta REIA is an Atlanta Georgia Real Estate Investors Association for those interested in real estate investing for fun and profit.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 7200,
+        "instagram": 455
+      },
+      "image_url": "https://i1.feedspot.com/4819022.jpg?t=1610693135"
+    },
+    {
+      "title": "Atlanta Appliance Repair",
+      "feed_url": "https://atlantaappliancesrepair.net/feed/",
+      "website_url": "https://atlantaappliancesrepair.net/appliance-repair-blog/",
+      "description": "Atlanta City Appliance Repair, Inc is the most reliable and professional Appliance Repair Service in Atlanta Area.",
+      "followers": {
+        "twitter": 294,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5054775.jpg?t=1610693159"
+    },
+    {
+      "title": "Roamilicious",
+      "feed_url": "https://roamilicious.com/feed/",
+      "website_url": "https://roamilicious.com/",
+      "description": "Travel, Food and LifeAt Roamilicious.com Malika Bowling provides travelers, diners etc travel advice, and guide to some of the top restaurants, markets, breweries etc for a memorable experience.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 1300,
+        "instagram": 50000
+      },
+      "image_url": "https://i1.feedspot.com/4971732.jpg?t=1610693166"
+    },
+    {
+      "title": "It's Arkeedah",
+      "feed_url": "https://feeds.feedburner.com/itsarkeedah/XGWK",
+      "website_url": "http://www.itsarkeedah.com/",
+      "description": "It's Arkeedah is a personal style and lifestyle blog founded by Arkeedah McCormick. Arkeedah aims to inspire her readers to embrace their individuality and personal style. Her blog features posts on fashion, beauty, wellness, and lifestyle, and she also provides style advice and tips to her readers.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4971691.jpg?t=1610693270"
+    },
+    {
+      "title": "Growing in Grace",
+      "feed_url": "https://www.growingingrace.blog/feed/",
+      "website_url": "https://www.growingingrace.blog/",
+      "description": "My name is James Williams and I serve as one of the pastors at FBC Atlanta, TX. I love preaching, writing, reading, growing vegetables, and running. My wife, Jenny, and I have three children and are actively involved in foster care.",
+      "followers": {
+        "facebook": 353,
+        "twitter": 341,
+        "instagram": 200
+      },
+      "image_url": "https://i1.feedspot.com/5049418.jpg"
+    },
+    {
+      "title": "Atlanta Daily World",
+      "feed_url": "https://atlantadailyworld.com/feed/",
+      "website_url": "https://atlantadailyworld.com/",
+      "description": "Atlanta Daily World provides news related to Business, Politics, Arts & Culture, Entertainment, Lifestyle and Education.",
+      "followers": {
+        "facebook": 32600,
+        "twitter": 4900,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4892022.jpg?t=1669707052"
+    },
+    {
+      "title": "The Atlanta Voice",
+      "feed_url": "https://theatlantavoice.com/feed/",
+      "website_url": "https://theatlantavoice.com/",
+      "description": "The Atlanta Voice provides news from politics, business spotlights to music, arts and lifestyle,it has its finger on the pulse of what's hot and newsworthy in the community.",
+      "followers": {
+        "facebook": 26300,
+        "twitter": 7400,
+        "instagram": 22700
+      },
+      "image_url": "https://i1.feedspot.com/4892015.jpg?t=1669707017"
+    },
+    {
+      "title": "Atlanta Tribune",
+      "feed_url": "https://atlantatribune.com/feed/",
+      "website_url": "https://atlantatribune.com/",
+      "description": "The Magazine is Atlanta's No. 1 business lifestyle publication and Black Atlanta's leading source for relevant, thought-provoking news and information on business and generational wealth-building. The magazine educates readers and presents ideas, viewpoints and possible solutions that economically, politically and socially empower them.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 7500,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5207899.jpg?t=1649664190"
+    },
+    {
+      "title": "Atlanta Eats",
+      "feed_url": "https://www.atlantaeats.com/blog/feed/",
+      "website_url": "https://www.atlantaeats.com/blog/",
+      "description": "Atlanta Eats is a food and dining guide that showcases Atlanta's best restaurants, chefs, and culinary experiences through articles, videos, and reviews.",
+      "followers": {
+        "facebook": 74600,
+        "twitter": 32900,
+        "instagram": 233500
+      },
+      "image_url": "https://www.atlantaeats.com/wp-content/uploads/2020/07/AE-Logo.png"
+    },
+    {
+      "title": "Urban Belle Magazine",
+      "feed_url": "https://urbanbellemag.com/feed/",
+      "website_url": "https://urbanbellemag.com/",
+      "description": "Urban Belle is quickly becoming one of the fastest growing sites for black celebrities, black celebrity news, urban gossip, and the rawest source for what's hot in today's black culture. Praised for its straight up and no chaser content, there is simply no other online magazine for black women on the internet this dope.",
+      "followers": {
+        "facebook": 28000,
+        "twitter": 9700,
+        "instagram": 51300
+      },
+      "image_url": "https://i1.feedspot.com/4954594.jpg?t=1666328820"
+    },
+    {
+      "title": "Atlanta Black Star",
+      "feed_url": "https://atlantablackstar.com/feed/",
+      "website_url": "https://atlantablackstar.com/",
+      "description": "Explore the latest news and coverage of trending topics from the Atlanta Black Star. Featuring news that empowers narratives to change our world. Atlanta Black Star is a narrative company. We publish narratives intentionally and specifically to enlighten and transform the world.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 39900,
+        "instagram": 229700
+      },
+      "image_url": "https://i1.feedspot.com/4411267.jpg?t=1658402135"
+    },
+    {
+      "title": "Saporta Report",
+      "feed_url": "https://saportareport.com/feed",
+      "website_url": "https://saportareport.com/",
+      "description": "SaportaReport, founded in February 2009, is a trusted voice in metro Atlanta. Through the years we have become Atlanta's authoritative civic website. Our readers are engaged in Atlanta's most pressing issues and want to hear directly from leading companies and nonprofits in the region. We give those organizations a platform to share their messages and interact with informed Atlantans.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 12800,
+        "instagram": 4300
+      },
+      "image_url": "https://i1.feedspot.com/1657744.jpg?t=1754655855"
+    },
+    {
+      "title": "WhatNow \u00bb Atlanta",
+      "feed_url": "https://whatnow.com/atlanta/feed/",
+      "website_url": "https://whatnow.com/atlanta/",
+      "description": "WhatNow Atlanta is the premier news source for restaurants, retail, and real estate in Atlanta. Get the inside scoop on what's trending in [Atlanta] right now!",
+      "followers": {
+        "facebook": 26700
+      },
+      "image_url": "https://i1.feedspot.com/8657228.jpg?t=1754656162"
+    },
+    {
+      "title": "Global Atlanta",
+      "feed_url": "https://www.globalatlanta.com/feed/",
+      "website_url": "https://www.globalatlanta.com/",
+      "description": "Latest News Around the World Africa Asia Caribbean Europe Latin America Middle East / NORTH AFRICA Featured Events MORE Events how can we help? Get us on your team. Global [\u2026]",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 3600,
+        "instagram": 857
+      },
+      "image_url": "https://i1.feedspot.com/8657227.jpg?t=1754656531"
+    },
+    {
+      "title": "Mainline",
+      "feed_url": "https://www.mainlineatl.com/feed/",
+      "website_url": "https://www.mainlineatl.com/",
+      "description": "A women-led, independent magazine based in Atlanta, Ga., whose mission is to disrupt the ideas held in status quo and corporatized media.",
+      "followers": {
+        "twitter": 2400,
+        "instagram": 19800
+      },
+      "image_url": "https://i1.feedspot.com/8657230.jpg?t=1754656876"
+    },
+    {
+      "title": "Atlanta Jewish Times",
+      "feed_url": "https://www.atlantajewishtimes.com/feed/",
+      "website_url": "https://www.atlantajewishtimes.com/",
+      "description": "Atlanta Jewish Times is a local newspaper connecting the Southeastern Jewish community. The mission of the Atlanta Jewish Times is to create a sense of community throughout the geographically dispersed Jewish people of greater Atlanta. It accomplishes its mission through the timely dissemination of local news and important national Jewish and Israeli interests.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5426198.jpg?t=1669619110"
+    },
+    {
+      "title": "ArtsATL",
+      "feed_url": "https://www.artsatl.org/feed/",
+      "website_url": "https://www.artsatl.org/",
+      "description": "ARTS ATL offers comprehensive coverage of Atlanta's arts scene, including music, film and TV, books, theater, dance, and the visual arts, while supporting arts in Atlanta through independent journalism and programs. ArtsATL is a non-profit that provides comprehensive coverage of the arts in metro Atlanta and has grown to become an essential part of the city's arts community.",
+      "followers": {
+        "facebook": 35100,
+        "twitter": 8000,
+        "instagram": 43600
+      },
+      "image_url": "https://i1.feedspot.com/4819004.jpg?t=1669707284"
+    },
+    {
+      "title": "Curbed Atlanta",
+      "feed_url": "https://atlanta.curbed.com/rss/index.xml",
+      "website_url": "https://atlanta.curbed.com/",
+      "description": "Every aspect of living in Atlanta, for people who care about their city, their streets, and their homes.",
+      "followers": {
+        "facebook": 28200,
+        "instagram": 200500
+      },
+      "image_url": "https://i1.feedspot.com/4817414.jpg?t=1610692638"
+    },
+    {
+      "title": "Dirty South Soccer",
+      "feed_url": "https://www.dirtysouthsoccer.com/rss/current.xml",
+      "website_url": "https://www.dirtysouthsoccer.com/",
+      "description": "Dirty South Soccer blog is a source for Atlanta United news, analysis, rumors, and banter.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 24200
+      },
+      "image_url": "https://i1.feedspot.com/4785108.jpg?t=1610692910"
+    },
+    {
+      "title": "Southern State of Mind Blog",
+      "feed_url": "https://southernstateofmindblog.com/feed/",
+      "website_url": "https://southernstateofmindblog.com/",
+      "description": "The blog covers topics such as style, home decor, travel, DIY & crafts, holidays and parties, and many more. Heather is a lifestyle blogger that hopes to inspire her readers with her Atlanta Lifestyle and HomeStyle blog to enjoy Life in Southern style.",
+      "followers": {
+        "facebook": 5900,
+        "instagram": 132800
+      },
+      "image_url": "https://i1.feedspot.com/4971745.jpg?t=1628333141"
+    },
+    {
+      "title": "Mommy Talk Show \u00bb Family",
+      "feed_url": "https://mommytalkshow.com/category/family/feed/",
+      "website_url": "https://mommytalkshow.com/category/family/",
+      "description": "Mommy Talk Show is a parenting talk show features video reviews, parenting news, webcasts and is taped on-location at the newest & coolest family-friendly businesses in Atlanta.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 19400,
+        "instagram": 5600
+      },
+      "image_url": "https://i1.feedspot.com/4927891.jpg?t=1610692757"
+    },
+    {
+      "title": "Ramble Atlanta",
+      "feed_url": "https://rambleatlanta.com/feed/",
+      "website_url": "https://rambleatlanta.com/",
+      "description": "Ramble Atlanta's mission is to document all the best breweries, restaurants, outdoor activities and indoor things to do in the city of Atlanta, northern suburbs and north Georgia mountains.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5442269.jpg?t=1663243396"
+    },
+    {
+      "title": "Adventures in Mommyhood",
+      "feed_url": "http://babywink10.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://babywink10.blogspot.com/",
+      "description": "The mommyhood just got sweeter with the arrival of our baby girl. Now my days are double the fun, trouble, and adventure with Max and Emma.",
+      "followers": {
+        "facebook": 93,
+        "twitter": 115
+      },
+      "image_url": "https://i1.feedspot.com/5027577.jpg?t=1610693287"
+    },
+    {
+      "title": "Style and Living Profile",
+      "feed_url": "https://styleandlivingprofile.com/feed/",
+      "website_url": "https://styleandlivingprofile.com/",
+      "description": "Lifestyle Blog. sharing a mix of topics for women ootd affordable & high-quality finds. Leisure, trends, foods & cocktails follow for daily inspirational finds.",
+      "followers": {
+        "facebook": 787,
+        "twitter": 2300,
+        "instagram": 7700
+      },
+      "image_url": "https://i1.feedspot.com/4966157.jpg?t=1610693308"
+    },
+    {
+      "title": "Limo Rental Atlanta",
+      "feed_url": "http://limorentalatlanta.com/feed/",
+      "website_url": "http://limorentalatlanta.com/",
+      "description": "We pride ourselves in providing the Best & Cheap Limo Rental Atlanta & Limo Rentals in Atlanta your Business & Personal needs. Get Atlanta Limo Rentals",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 644
+      },
+      "image_url": "https://i1.feedspot.com/4818938.jpg?t=1610693402"
+    },
+    {
+      "title": "Society Of Harlow",
+      "feed_url": "https://www.societyofharlow.com/feed/",
+      "website_url": "https://www.societyofharlow.com/",
+      "description": "As a top influencer, brand consultant, blogger, and model, Crystal brings a plethora of experiences that ranges from an educator to a fashion buyer. For over 7 years Crystal Daniels was signed to Elite Model Management {Now Factor Women Atlanta} as plus size talent; modeling for brands such as Macy's, Saks Fifth Avenue, David's Bridal, Nordstrom, Lane Bryant, Ashley Stewart. In just over two years Society of Harlow has blossomed into an award-winning fashion and lifestyle blog and brand.",
+      "followers": {
+        "twitter": 145,
+        "instagram": 53900
+      },
+      "image_url": "https://i1.feedspot.com/4971692.jpg?t=1610693424"
+    },
+    {
+      "title": "BuyMyTimeBack.com | Using Passive Income to Buy Our Time Back",
+      "feed_url": "https://www.buymytimeback.com/feed/",
+      "website_url": "https://www.buymytimeback.com/",
+      "description": "This blog is about the journey to Buying My Time Back with Financial Independence. I am no financial expert nor do I profess to be and I am still a work in progress. My writings include my life's challenges, changes and successes.",
+      "followers": {
+        "facebook": 112,
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/4974508.jpg?t=1610693436"
+    },
+    {
+      "title": "Waiting on Martha",
+      "feed_url": "http://waitingonmartha.com/feed/",
+      "website_url": "https://waitingonmartha.com/",
+      "description": "The blog covers topics such as style & beauty, entertainment, health & wellness, living & home and much more. Waiting on Martha was created with the desire to unite all of the things the writer loves the most in one place. It has been named as one of the top 5 southern style blogs by the southern living magazine.",
+      "followers": {
+        "facebook": 23900,
+        "twitter": 7900,
+        "instagram": 9400
+      },
+      "image_url": "https://i1.feedspot.com/2495270.jpg?t=1610693442"
+    },
+    {
+      "title": "Love Peace and Tiny Feet",
+      "feed_url": "https://www.lovepeaceandtinyfeet.com/feed/",
+      "website_url": "https://www.lovepeaceandtinyfeet.com/",
+      "description": "Ari Adams, Atlanta Green Lifestyle Mom Blogger and CEO of ShiftCon shares tips on parenting, Chiropractic, eco-friendly and green living, holistic health, family entertainment, Disney activity sheets & family travel.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 28300
+      },
+      "image_url": "https://i1.feedspot.com/4971715.jpg?t=1610692923"
+    },
+    {
+      "title": "Discover Atlanta",
+      "feed_url": "https://discoveratlanta.com/",
+      "website_url": "https://discoveratlanta.com/",
+      "description": "Get the latest scoop and tips on things to do in Atlanta, trendy hot spots, great restaurants, unique events and more. The Atlanta Convention & Visitors Bureau is the official source for what's new, hot and happening in Atlanta, Georgia!",
+      "followers": {
+        "facebook": 261700,
+        "twitter": 235100
+      },
+      "image_url": "https://i1.feedspot.com/2871278.jpg?t=1610692351"
+    },
+    {
+      "title": "The Falcoholic",
+      "feed_url": "https://www.thefalcoholic.com/rss/index.xml",
+      "website_url": "https://www.thefalcoholic.com/",
+      "description": "Founded in 2006, The Falcoholic is dedicated to delivering the news and analysis that matters to Atlanta Falcons fans.",
+      "followers": {
+        "facebook": 66200,
+        "twitter": 64900
+      },
+      "image_url": "https://i1.feedspot.com/4757291.jpg?t=1610692365"
+    },
+    {
+      "title": "Atlanta Fine Homes Blog",
+      "feed_url": "https://blog.atlantafinehomes.com/feed/",
+      "website_url": "https://www.peachtreehoops.com/",
+      "description": "Covers articles on Atlanta Neighborhoods, Living In Atlanta, Luxury Real Estate, Atlanta Listings, and more.Atlanta Fine Homes Sotheby's International Realty represents home buyers and sellers in Atlanta, Buckhead, Sandy Springs, Vinings and East Cobb. They are dedicated to providing the best possible real estate experience to their clients.",
+      "followers": {
+        "facebook": 12700,
+        "twitter": 2300,
+        "instagram": 40500
+      },
+      "image_url": "https://i1.feedspot.com/4431030.jpg?t=1629366154"
+    },
+    {
+      "title": "Peachtree Hoops",
+      "feed_url": "https://www.peachtreehoops.com/rss/index.xml",
+      "website_url": "https://www.peachtreehoops.com/",
+      "description": "Your best source for quality Atlanta Hawks news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 29700,
+        "twitter": 16000
+      },
+      "image_url": "https://i1.feedspot.com/4818980.jpg?t=1610693446"
+    },
+    {
+      "title": "The Falcoholic",
+      "feed_url": "https://www.thefalcoholic.com/rss/index.xml",
+      "website_url": "https://www.thefalcoholic.com/",
+      "description": "Your best source for quality Atlanta Falcons news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 66200,
+        "twitter": 64900
+      },
+      "image_url": "https://i1.feedspot.com/5161403.jpg?t=1625835743"
+    },
+    {
+      "title": "An Indigo Day",
+      "feed_url": "https://mystylevita.com/feed/",
+      "website_url": "https://anindigoday.com/",
+      "description": "My Style Vita is an Atlanta based casual and affordable style blog written by top fashion blogger, Jessica Camerata.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/4971690.jpg?t=1610692906"
+    },
+    {
+      "title": "Atlanta BeltLine",
+      "feed_url": "https://beltline.org/blog/feed/",
+      "website_url": "https://beltline.org/blog/",
+      "description": "The Atlanta BeltLine is the most comprehensive revitalization effort ever undertaken in the City of Atlanta and among the largest, most wide-ranging urban.",
+      "followers": {
+        "facebook": 97100,
+        "twitter": 366800,
+        "instagram": 167600
+      },
+      "image_url": "https://i1.feedspot.com/4817364.jpg?t=1610692896"
+    },
+    {
+      "title": "KNOWAtlanta",
+      "feed_url": "https://www.knowatlanta.com/blog/feed",
+      "website_url": "https://www.knowatlanta.com/blog",
+      "description": "Founded in 1986, KNOWAtlanta is metro Atlanta's premier relocation guide, providing valuable information about homes, education, county guides and more.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 787,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4818986.jpg?t=1610693132"
+    },
+    {
+      "title": "Karisma Ray",
+      "feed_url": "https://karismaray.com/blog?format=rss",
+      "website_url": "https://karismaray.com/",
+      "description": "Karisma Ray is an Atlanta based lifestyle and travel blog that focuses on the best in solo travel, beauty, fashion, and black girl luxury.",
+      "followers": {
+        "twitter": 785,
+        "instagram": 11600
+      },
+      "image_url": "https://i1.feedspot.com/5397474.jpg?t=1651830754"
+    },
+    {
+      "title": "Paces West",
+      "feed_url": "https://www.paces-west.com/feed/",
+      "website_url": "https://www.paces-west.com/",
+      "description": "Sometimes you need yoga, sometimes you need champagne. It's called balance. Follow me as I live my best life full of adventures, interiors, carbohydrates, and other accoutrements.Always with style.",
+      "followers": {
+        "instagram": 51700
+      },
+      "image_url": "https://i1.feedspot.com/5031894.jpg?t=1610693212"
+    },
+    {
+      "title": "Atlanta Baseball Talk",
+      "feed_url": "https://atlantabaseballtalk.com/feed/",
+      "website_url": "https://atlantabaseballtalk.com/",
+      "description": "A weekly podcast and blogs related to everything of Atlanta Braves.",
+      "followers": {
+        "facebook": 486,
+        "twitter": 6600
+      },
+      "image_url": "https://i1.feedspot.com/490860.jpg?t=1610693169"
+    },
+    {
+      "title": "Tourist Mom",
+      "feed_url": "https://www.touristmom.com/feed/",
+      "website_url": "https://www.touristmom.com/",
+      "description": "Entertainment, Food, Travel, Beauty, Lifestyle & Mom Blog.",
+      "followers": {
+        "facebook": 3500,
+        "instagram": 77
+      },
+      "image_url": "https://i1.feedspot.com/4971749.jpg?t=1610693297"
+    },
+    {
+      "title": "CREW : Commercial Real Estate Women of Atlanta",
+      "feed_url": "http://www.crewatlantablog.com/feed/",
+      "website_url": "http://www.crewatlantablog.com/",
+      "description": "CREW Atlanta Blog for female commercial real estate professionals in Atlanta, GA. CREW is dedicated to elevating women to positions of power and influence within the real estate industry.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/1767587.jpg"
+    },
+    {
+      "title": "Style by Carise",
+      "feed_url": "https://www.stylebycarise.com/feed",
+      "website_url": "https://www.stylebycarise.com/",
+      "description": "Style By Carise is a personal creative brand providing creative services while inspiring excellence through God's creative gifts: DIY, Fashion, Design, Food, Art and Lifestyle",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 25,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5043763.jpg?t=1610693408"
+    },
+    {
+      "title": "ATL Cheap Date Blog",
+      "feed_url": "https://www.atlcheapdate.com/copy-of-weekly-hook-up",
+      "website_url": "https://www.atlcheapdate.com/copy-of-weekly-hook-up",
+      "description": "ATL Cheap date is a website that shares latest information about free and cheap entertainment options in and around Atlanta.",
+      "followers": {
+        "twitter": 396,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5481324.jpg?t=1671447754"
+    }
+  ]
+}

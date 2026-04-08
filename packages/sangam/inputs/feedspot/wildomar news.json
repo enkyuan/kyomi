@@ -1,0 +1,29 @@
+{
+  "category": "Wildomar News",
+  "source_url": "https://rss.feedspot.com/wildomar_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Valley News \u00bb Wildomar",
+      "feed_url": "https://myvalleynews.com/category/in-my-city/wildomar/feed/",
+      "website_url": "https://myvalleynews.com/blog/category/in-my-city/wildomar/",
+      "description": "The Valley News is made up of local residents dedicated to keeping our communities up-to-date with local issues. Keep up with the latest news and updates about Wildomar.",
+      "followers": {
+        "facebook": 22000,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5157496.jpg?t=1626164333"
+    },
+    {
+      "title": "KTLA \u00bb Wildomar",
+      "feed_url": "https://ktla.com/tag/wildomar/feed/",
+      "website_url": "https://ktla.com/tag/wildomar/",
+      "description": "L.A.'s Very Own, KTLA is Southern California's source for Los Angeles-area breaking news, streaming live video, traffic and weather in L.A., Orange and Ventura counties, plus the Inland Empire and beyond.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1000000,
+        "instagram": 952400
+      },
+      "image_url": "https://i1.feedspot.com/5157498.jpg?t=1590820565"
+    }
+  ]
+}

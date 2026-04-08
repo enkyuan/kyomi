@@ -1,0 +1,87 @@
+{
+  "category": "Nashville SC",
+  "source_url": "https://rss.feedspot.com/nashville_sc_rss_feeds",
+  "feeds": [
+    {
+      "title": "NewsChannel 5 \u00bb Nashville SC",
+      "feed_url": "https://www.newschannel5.com/sports/nashville-soccer.rss",
+      "website_url": "https://www.newschannel5.com/sports/nashville-soccer",
+      "description": "Your best source for the latest Nashville SC news, analysis, stats, opinions, and more.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 289400,
+        "instagram": 116600
+      },
+      "image_url": "https://i1.feedspot.com/5184852.jpg?t=1597997558"
+    },
+    {
+      "title": "WKRN News 2 \u00bb Nashville SC",
+      "feed_url": "https://www.wkrn.com/sports/nashville-sc/feed/",
+      "website_url": "https://www.wkrn.com/sports/nashville-sc/",
+      "description": "The Latest News and Updates in Nashville SC brought to you by the team at WKRN News 2.",
+      "followers": {
+        "facebook": 604500,
+        "twitter": 216200,
+        "instagram": 58900
+      },
+      "image_url": "https://i1.feedspot.com/5184932.jpg?t=1598008300"
+    },
+    {
+      "title": "SportSpyder.com \u00bb Nashville SC",
+      "feed_url": "https://sportspyder.com/mls/nashville-sc/news.xml",
+      "website_url": "https://sportspyder.com/mls/nashville-sc/news",
+      "description": "The Latest Nashville SC MLS news articles from around the web.",
+      "followers": {
+        "facebook": 701,
+        "twitter": 873
+      },
+      "image_url": "https://i1.feedspot.com/5184906.jpg?t=1598003561"
+    },
+    {
+      "title": "Yahoo Sports \u00bb Nashville SC",
+      "feed_url": "https://sports.yahoo.com/soccer/teams/nashville-sc/rss/",
+      "website_url": "https://sports.yahoo.com/soccer/teams/nashville-sc/",
+      "description": "The latest Nashville SC news from Yahoo Sports. Find Nashville SC fixtures, results, top scorers, transfer rumors, and player profiles, with exclusive photos and video highlights.",
+      "followers": {
+        "facebook": 4099999,
+        "twitter": 573300,
+        "instagram": 478000
+      },
+      "image_url": "https://i1.feedspot.com/5184966.jpg?t=1598011612"
+    },
+    {
+      "title": "Yardbarker \u00bb Nashville SC",
+      "feed_url": "https://www.yardbarker.com/rss/team/17426",
+      "website_url": "https://www.yardbarker.com/soccer/teams/nashville_sc/17426",
+      "description": "Get the latest Nashville SC rumors, news and videos from the best sources on the web.",
+      "followers": {
+        "facebook": 151800,
+        "twitter": 28800
+      },
+      "image_url": "https://i1.feedspot.com/5184985.jpg?t=1598015086"
+    },
+    {
+      "title": "Club and Country",
+      "feed_url": "https://clubcountryusa.com/feed/",
+      "website_url": "https://clubcountryusa.com/",
+      "description": "The original (and largely, still only) journalistic outlet covering Nashville SC. Get on-site coverage of the Boys in Gold, columns related to USSF (particularly the men's national team) and continued roundups of the local and national news soccer fans are looking for.",
+      "followers": {
+        "facebook": 215,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5288595.jpg?t=1622788927"
+    },
+    {
+      "title": "The Athletic \u00bb Nashville SC",
+      "feed_url": "https://www.nytimes.com/athletic/rss/football/nashvillesc/",
+      "website_url": "https://www.nytimes.com/athletic/football/team/nashvillesc/",
+      "description": "Welcome to The Athletic. Get access to smart, in-depth Nashville SC sports coverage from an all-star team of writers.",
+      "followers": {
+        "facebook": 707100,
+        "twitter": 612600,
+        "instagram": 328300
+      },
+      "image_url": "https://i1.feedspot.com/5184866.jpg?t=1597998597"
+    }
+  ]
+}

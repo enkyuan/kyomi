@@ -1,0 +1,97 @@
+{
+  "category": "Clojure Programming",
+  "source_url": "https://rss.feedspot.com/clojure_programming_rss_feeds",
+  "feeds": [
+    {
+      "title": "Planet Clojure",
+      "feed_url": "https://planet.clojure.in/atom.xml",
+      "website_url": "https://planet.clojure.in/",
+      "description": "Planet Clojure is a metablog that collects posts from the blogs of various Clojure hackers and contributors.",
+      "followers": {
+        "twitter": 8600
+      },
+      "image_url": "https://i1.feedspot.com/93961.jpg?t=1621601066"
+    },
+    {
+      "title": "Jake McCrary's Musings",
+      "feed_url": "http://feeds.feedburner.com/JakeMccrarysMusings",
+      "website_url": "https://jakemccrary.com/blog/archives/",
+      "description": "Jake McCrary is a Software developer, technical leader, clojure expert, sailor, and rock climber.",
+      "followers": {
+        "twitter": 566
+      },
+      "image_url": "https://i1.feedspot.com/2068944.jpg?t=1621601084"
+    },
+    {
+      "title": "Dragan Djuric",
+      "feed_url": "https://dragan.rocks/feed",
+      "website_url": "https://dragan.rocks/",
+      "description": "This blog is a place where Dragan Djuric writes about his journey of trying to make Clojure a great environment for high-performance numerical computing, GPU computing, Bayesian data analysis, and probabilistic machine learning.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4952761.jpg?t=1621601097"
+    },
+    {
+      "title": "Digital Digressions by Stuart Sierra",
+      "feed_url": "https://feeds2.feedburner.com/StuartSierra",
+      "website_url": "https://stuartsierra.com/",
+      "description": "Stuart Sierra is a software developer with a background in theatre, music, and writing. Currently, a software engineer at Clubhouse.io, helping build better project management tools for software teams.",
+      "followers": {
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/4952786.jpg?t=1621601077"
+    },
+    {
+      "title": "Squid's Blog",
+      "feed_url": "http://gigasquidsoftware.com/atom.xml",
+      "website_url": "http://gigasquidsoftware.com/",
+      "description": "Carin Meier is a senior developer. She also is passionate about Clojure programming, Deep Learning, ML, and AI.",
+      "followers": {
+        "twitter": 7100
+      },
+      "image_url": "https://i1.feedspot.com/3585072.jpg?t=1621601081"
+    },
+    {
+      "title": "Lambda Island Blog",
+      "feed_url": "https://lambdaisland.com/feeds/episodes.atom?2018-08-27T10:27:28.789Z?format=xml",
+      "website_url": "https://lambdaisland.com/blog",
+      "description": "It's a screencast, a series of video tutorial about web development using ClojureScript and Clojure.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4953335.jpg?t=1621601093"
+    },
+    {
+      "title": "Podsnap",
+      "feed_url": "https://blog.podsnap.com/feed/all.atom.xml",
+      "website_url": "https://blog.podsnap.com/",
+      "description": "Podsnap is a scala hacker, Clojure dabbler, polyglot opinionated, former everything.",
+      "followers": {
+        "twitter": 232
+      },
+      "image_url": "https://i1.feedspot.com/3583154.jpg?t=1621601101"
+    },
+    {
+      "title": "PurelyFunctional.tv",
+      "feed_url": "https://purelyfunctional.tv/feed/normal-feed",
+      "website_url": "https://ericnormand.me/",
+      "description": "Extensive video courses and text guides to help you learn the language, the mindset, and the tooling you need to master Clojure. Clojure is a powerful language that combines the best of the Java platform with the expressivity of Functional Programming.",
+      "followers": {
+        "facebook": 139,
+        "twitter": 542
+      },
+      "image_url": "https://i1.feedspot.com/4952712.jpg?t=1621601073"
+    },
+    {
+      "title": "The JUXT Blog",
+      "feed_url": "https://www.juxt.pro/blog/rss.xml",
+      "website_url": "https://www.juxt.pro/blog/",
+      "description": "JUXT is a specialist Clojure consultancy, backed by a wide network of experienced Clojure developers. A consultancy bringing great people and innovative technologies together. We build fantastic things.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4952810.jpg?t=1621601089"
+    }
+  ]
+}

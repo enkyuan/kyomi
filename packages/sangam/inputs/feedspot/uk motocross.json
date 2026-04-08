@@ -1,0 +1,50 @@
+{
+  "category": "UK Motocross",
+  "source_url": "https://rss.feedspot.com/uk_motocross_rss_feeds",
+  "feeds": [
+    {
+      "title": "MX Vice",
+      "feed_url": "https://mxvice.com/feed/",
+      "website_url": "https://mxvice.com/",
+      "description": "The Latest Motocross, Supercross and MXGP news, including interviews, vidoes and exclusives from across the world.",
+      "followers": {
+        "facebook": 524600,
+        "twitter": 28700,
+        "instagram": 124500
+      },
+      "image_url": "https://i1.feedspot.com/4795664.jpg?t=1609849411"
+    },
+    {
+      "title": "AMCA Events | Motocross News",
+      "feed_url": "https://www.amca.uk.com/news/motocross-news?format=feed&type=rss",
+      "website_url": "https://www.amca.uk.com/news/motocross-news",
+      "description": "The Amateur Motor Cycle Association (AMCA) is one of the oldest off-road motorcycle governing bodies in the world. Follow this blog for the latest road discipline, view fixtures, news and race reports.",
+      "followers": {
+        "facebook": 28200,
+        "twitter": 1200,
+        "instagram": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4908962.jpg?t=1614089362"
+    },
+    {
+      "title": "Hawkstone MX International",
+      "feed_url": "http://hawkstoneinternationalmx.com/feed/",
+      "website_url": "http://hawkstoneinternationalmx.com/latest-news/",
+      "description": "The Hawkstone International is one of the UK's biggest attended motocross events and is the opening and start of the UK motocross season. The Hawkstone International will give the fans an opportunity to some of the World's best riders in the UK.",
+      "followers": {
+        "facebook": 28900
+      },
+      "image_url": "https://i1.feedspot.com/4795287.jpg?t=1609850560"
+    },
+    {
+      "title": "MX Nationals | British MX Championship",
+      "feed_url": "https://mxnationals.co.uk/feed/",
+      "description": "The Michelin MX Nationals is a unique British Championship Motocross race series offering two days top class action catering from youth to pro, visiting the UK's premier venues. Follow this blog to stay up to date with the Latest news and events.",
+      "followers": {
+        "facebook": 38900,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4908997.jpg?t=1614089370"
+    }
+  ]
+}

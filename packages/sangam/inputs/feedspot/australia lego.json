@@ -1,0 +1,94 @@
+{
+  "category": "Australia Lego",
+  "source_url": "https://rss.feedspot.com/australia_lego_rss_feeds",
+  "feeds": [
+    {
+      "title": "Bricking Around",
+      "feed_url": "https://brickingaround.com/feed/",
+      "website_url": "https://brickingaround.com/",
+      "description": "Bricking Around is an Australian LEGO fan blog. Our core coverage includes LEGO news, Australian LEGO sales, and Australian LEGO events.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 292,
+        "instagram": 375
+      },
+      "image_url": "https://i1.feedspot.com/5283554.jpg?t=1679661337"
+    },
+    {
+      "title": "Jay's Brick Blog",
+      "feed_url": "https://jaysbrickblog.com/feed/",
+      "website_url": "https://jaysbrickblog.com/",
+      "description": "Jay's Brick Blog is a LEGO blog with a distinctive Aussie flavour that primarily focuses on high quality editorial content and perspectives of LEGO. This blog is all about celebrating the love of LEGO, sharing exciting news and being a hub for LEGO fans to connect with one another. I have an extensive collection of LEGO Set Reviews that's curated in the Review Hub.",
+      "followers": {
+        "facebook": 26300,
+        "twitter": 5100,
+        "instagram": 70700
+      },
+      "image_url": "https://i1.feedspot.com/4610311.jpg?t=1679661307"
+    },
+    {
+      "title": "The Rambling Brick",
+      "feed_url": "https://ramblingbrick.com/feed/",
+      "website_url": "https://ramblingbrick.com/",
+      "description": "Enjoy rambling Lego reviews, opinions, nostalgia, and building techniques. Richard Jones is an Adult Fan of LEGO in Melbourne, Australia. He aims to take a look at some of Lego the things that are often not blogged about but are still relevant to upbuilders: Photography, Lighting, MOC design, Exhibiting, and so on.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 465
+      },
+      "image_url": "https://i1.feedspot.com/5526825.jpg?t=1698405498"
+    },
+    {
+      "title": "GJBricks",
+      "feed_url": "https://gjbricks.com/feed/",
+      "website_url": "https://gjbricks.com/",
+      "description": "I'm an Australian AFOL called Greg who's decided that besides my family, this is something that I'm super passionate about - other than my startup business. With the GJ Bricks blog, I'm creating an outlet for my love of the Brick. And, do something I've always wanted to do, which goes more into the models and community to talk about the beauty of it.",
+      "followers": {
+        "facebook": 545,
+        "twitter": 1100,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4895744.jpg?t=1679661203"
+    },
+    {
+      "title": "Light My Bricks Australia News",
+      "feed_url": "https://www.lightmybricks.com.au/blogs/news.atom",
+      "website_url": "https://www.lightmybricks.com.au/blogs/news",
+      "description": "Light My Bricks is an Australian company, founded by a team of passionate LEGO enthusiasts. We offer a wide variety of LEGO lighting solutions for LEGO customization. Our unique lighting and cabling system means you can chain multiple lighting kits through a single power source.",
+      "followers": {
+        "facebook": 14300,
+        "twitter": 1300,
+        "instagram": 66900
+      },
+      "image_url": "https://i1.feedspot.com/5526822.jpg?t=1679661185"
+    },
+    {
+      "title": "WA Brick Society",
+      "feed_url": "http://www.wabricksociety.org.au/feeds/posts/default",
+      "website_url": "http://www.wabricksociety.org.au/",
+      "description": "The WA Brick Society is a LEGO\u00ae user group (LUG) based in Perth, Western Australia for adult fans of LEGO\u00ae (AFOL's).",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5526824.jpg?t=1679661190"
+    },
+    {
+      "title": "BrickResales Blog",
+      "feed_url": "https://brickresales.com.au/blogs/news.atom",
+      "website_url": "https://brickresales.com.au/blogs/news/",
+      "description": "The news section features articles on LEGO minifigures, expert tips, build ideas and much more related to LEGO. BrickResales is so much more than a pre-loved LEGO brick business. BrickResales is a community of people, connected through the amazing LEGO world.",
+      "followers": {
+        "facebook": 21000,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5434631.jpg?t=1679661286"
+    },
+    {
+      "title": "BrickBanter",
+      "feed_url": "https://brickbanter.com/blog-feed.xml",
+      "website_url": "https://brickbanter.com/",
+      "description": "Brick Banter is a Recognized LEGO Fan Media (RLFM) channel, with news and reviews created specifically for Adult Fans Of LEGO.",
+      "followers": {
+        "instagram": 43400
+      },
+      "image_url": "https://i1.feedspot.com/5526823.jpg?t=1679661283"
+    }
+  ]
+}

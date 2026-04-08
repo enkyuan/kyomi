@@ -1,0 +1,26 @@
+{
+  "category": "Absinthe",
+  "source_url": "https://rss.feedspot.com/absinthe_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Real Absinthe Blog",
+      "feed_url": "https://realabsinthe.blogspot.com/feeds/posts/default",
+      "website_url": "https://realabsinthe.blogspot.com/",
+      "description": "Real absinthe: an inside view of the absinthe world in the 21st century.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5404756.jpg?t=1653894307"
+    },
+    {
+      "title": "La F\u00e9e Absinthe Blog",
+      "feed_url": "https://lafee.com/feed/",
+      "website_url": "https://lafee.com/blog/",
+      "description": "Lafee.com are producers and suppliers of Parisienne Absinthe Sup\u00e9rieure, Bohemian Absinthe, and NV Absinthe Verte, we were established in 2000 and were instrumental in lifting the 1915 ban in France, La F\u00e9e is now available worldwide and online.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 1200,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5404757.jpg?t=1653893593"
+    }
+  ]
+}

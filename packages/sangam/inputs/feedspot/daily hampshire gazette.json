@@ -1,0 +1,54 @@
+{
+  "category": "Daily Hampshire Gazette",
+  "source_url": "https://rss.feedspot.com/daily_hampshire_gazette_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Daily Hampshire Gazette \u00bb News",
+      "feed_url": "https://www.gazettenet.com/SpecialPages/RSS?feed=News",
+      "website_url": "https://www.gazettenet.com/News",
+      "description": "All News articles from The Daily Hampshire Gazette.",
+      "followers": {
+        "facebook": 16600,
+        "twitter": 13500,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5240227.jpg?t=1750684120"
+    },
+    {
+      "title": "The Daily Hampshire Gazette \u00bb Arts",
+      "feed_url": "https://www.gazettenet.com/SpecialPages/RSS?feed=Arts",
+      "website_url": "https://www.gazettenet.com/Arts",
+      "description": "Discover the latest art news, events, books, calendar, TV listingsand much more from The Daily Hampshire Gazette.",
+      "followers": {
+        "facebook": 16600,
+        "twitter": 13500,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5240227.jpg?t=1750684120"
+    },
+    {
+      "title": "The Daily Hampshire Gazette \u00bb Sports",
+      "feed_url": "https://www.gazettenet.com/SpecialPages/RSS?feed=Sports",
+      "website_url": "https://www.gazettenet.com/Sports",
+      "description": "Get the latest sports news from Northampton, MA, in Franklin County from The Daily Hampshire Gazette.",
+      "followers": {
+        "facebook": 16600,
+        "twitter": 13500,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5240227.jpg?t=1750684120"
+    },
+    {
+      "title": "The Daily Hampshire Gazette \u00bb Opinion",
+      "feed_url": "https://www.gazettenet.com/SpecialPages/RSS?feed=Opinion",
+      "website_url": "https://www.gazettenet.com/Opinion",
+      "description": "Read the latest opinions and editorials on The Daily Hampshire Gazette.",
+      "followers": {
+        "facebook": 16600,
+        "twitter": 13500,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5240227.jpg?t=1750684120"
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "category": "AFL",
+  "source_url": "https://rss.feedspot.com/afl_rss_feeds",
+  "feeds": [
+    {
+      "title": "BigFooty",
+      "feed_url": "https://www.bigfooty.com/feed/",
+      "website_url": "https://www.bigfooty.com/",
+      "description": "Launched in 1999, BigFooty is the web's largest Aussie Rules community, and a top-10 Australian social networking site.",
+      "followers": {
+        "facebook": 8200,
+        "twitter": 5700,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4777422.jpg?t=1609131506"
+    },
+    {
+      "title": "Aussie Rules Training",
+      "feed_url": "https://aussierulestraining.com/feed/",
+      "website_url": "https://aussierulestraining.com/",
+      "description": "Up to date training information for Aussie Rules / AFL .",
+      "followers": {
+        "facebook": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4776322.jpg?t=1609131512"
+    },
+    {
+      "title": "ABC News \u00bb AFL News",
+      "feed_url": "https://www.abc.net.au/news/feed/7077144/rss.xml",
+      "website_url": "https://www.abc.net.au/news/sport/afl",
+      "description": "Australia's leading source of information and entertainment. AFL news, live scores, features and analysis.",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 134900,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/4777444.jpg?t=1609131528"
+    },
+    {
+      "title": "Before You Bet \u00bb AFL Tips",
+      "feed_url": "https://www.beforeyoubet.com.au/taxonomy/term/12/all/feed",
+      "website_url": "https://www.beforeyoubet.com.au/sports-betting/afl-tips",
+      "description": "AFL Betting tips and match previews for the Australian Football League including how to bet on AFL in Australia.",
+      "followers": {
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/4776416.jpg?t=1609131579"
+    },
+    {
+      "title": "AFANA",
+      "feed_url": "https://www.afana.com/rss.xml",
+      "website_url": "https://www.afana.com/",
+      "description": "AFANA.com is the home of the Australian Football Association of North America and provides up-to-date information on Aussie Rules including match reports, TV and radio schedules, and resources for fans to learn about the sport.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 682,
+        "instagram": 93
+      },
+      "image_url": "https://i1.feedspot.com/5391241.jpg?t=1650019814"
+    },
+    {
+      "title": "AFL Online News",
+      "feed_url": "https://www.aflonline.com.au/afl-news/feed/",
+      "website_url": "https://www.aflonline.com.au/afl-news/",
+      "description": "AFL Blog for plenty of AFL analysis, views, and fan opinions. AFL Online was developed in 2005 by passionate footy supporters as a footy blog and a hangout to discuss Australia's number one sport.",
+      "followers": {
+        "facebook": 938,
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5329862.jpg?t=1633701388"
+    },
+    {
+      "title": "AFL New Zealand News",
+      "feed_url": "https://aflnz.co.nz/feed/",
+      "website_url": "https://aflnz.co.nz/news/",
+      "description": "Home of AFL New Zealand. Our mission as a National Sporting Organisation is to make AFL a New Zealand game.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4776541.jpg?t=1609131594"
+    },
+    {
+      "title": "United States Australian Football League News",
+      "feed_url": "https://usafl.com/rss.xml",
+      "website_url": "https://usafl.com/newsall",
+      "description": "We serve the Australian football community in the United States. In addition, we further the international agenda of the USAFL's governing body, the AFL. In everything we do, we aim to further either development or participation in the sport.",
+      "followers": {
+        "facebook": 14300,
+        "twitter": 7100
+      },
+      "image_url": "https://i1.feedspot.com/4776290.jpg?t=1609131589"
+    },
+    {
+      "title": "The Weekend Preview Blog",
+      "feed_url": "https://www.theweekendpreview.com/blog?format=RSS",
+      "website_url": "https://www.theweekendpreview.com/blog/",
+      "description": "The Weekend Preview is a blog that aims to provide a different angle on the narrative of an upcoming sporting event.",
+      "followers": {
+        "facebook": 29,
+        "twitter": 31
+      },
+      "image_url": "https://i1.feedspot.com/4775836.jpg?t=1609131605"
+    },
+    {
+      "title": "Drummoyne Power AFL Blog",
+      "feed_url": "https://drummoynepower.com/feed/",
+      "website_url": "https://drummoynepower.com/blog/",
+      "description": "Drummoyne Power Junior AFL Club is committed to fun, fitness and performance. We engage boy and girl players, families, volunteers and sponsors alike to foster our values. We develop AFL and team skills, and maximise participation in all levels and at all abilities.",
+      "followers": {
+        "facebook": 967,
+        "twitter": 319,
+        "instagram": 904
+      },
+      "image_url": "https://i1.feedspot.com/4775748.jpg?t=1609131608"
+    },
+    {
+      "title": "Marley's AFL blog",
+      "feed_url": "https://teamoftheweekcom.wordpress.com/feed/",
+      "website_url": "https://teamoftheweekcom.wordpress.com/",
+      "description": "This blog is about AFL as you may have known it will keep you updated on the latest news, scores, and lots more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4775930.jpg?t=1613128865"
+    },
+    {
+      "title": "Draftstars Blog \u00bb AFL",
+      "feed_url": "http://blog.draftstars.com.au/news/category/afl/feed/",
+      "website_url": "http://blog.draftstars.com.au/news/afl/",
+      "description": "DraftStar, the AFL's High Performance Talent partner, is the only group endorsed by the AFL to run camps for boys and girls between 11 and 17, of all abilities. Find the latest AFL Fantasy news you need to win big. Get your tips, tricks and best picks from our fantasy experts.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 3500,
+        "instagram": 270
+      },
+      "image_url": "https://i1.feedspot.com/4775733.jpg?t=1609131567"
+    },
+    {
+      "title": "Betr Blog \u00bb AFL",
+      "feed_url": "https://www.betr.com.au/blog/afl/feed/",
+      "website_url": "https://www.betr.com.au/blog/afl",
+      "description": "Find latest news of AFL on this blog.",
+      "followers": {
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4775944.jpg?t=1609131584"
+    },
+    {
+      "title": "Australian Football League",
+      "feed_url": "http://feeds.feedburner.com/aflcomau",
+      "website_url": "https://www.afl.com.au/",
+      "description": "The official website of the Australian Football League. Get latest news, videos and opinion on AFL.",
+      "followers": {
+        "facebook": 1500000,
+        "twitter": 883200,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/905363.jpg?t=1609131493"
+    },
+    {
+      "title": "The Roar \u00bb AFL",
+      "feed_url": "https://www.theroar.com.au/afl/feed/",
+      "website_url": "https://www.theroar.com.au/afl/",
+      "description": "The Roar is an Australian sports opinion website. Get the latest news, live scores and opinion of Australian Football League.",
+      "followers": {
+        "facebook": 142500,
+        "twitter": 23700,
+        "instagram": 16200
+      },
+      "image_url": "https://i1.feedspot.com/4775562.jpg?t=1609131522"
+    },
+    {
+      "title": "SEN 1116 News \u00bb AFL",
+      "feed_url": "https://www.sen.com.au/feeds/5uOBi2OdBCeMgICO86cwWG/rss.xml",
+      "website_url": "https://www.sen.com.au/news/afl",
+      "description": "SEN 1116 (Sports Entertainment Network) is a commercial AM radio station based in Melbourne, Australia, operating on 1116 kHz. Read the latest AFL news from SEN 1116 Melbourne's Home of Sport.",
+      "followers": {
+        "facebook": 176300,
+        "twitter": 424,
+        "instagram": 89000
+      },
+      "image_url": "https://i1.feedspot.com/4775596.jpg?t=1609131539"
+    },
+    {
+      "title": "Palmerbet Blog \u00bb AFL",
+      "feed_url": "https://blog.palmerbet.com/",
+      "website_url": "https://blog.palmerbet.com/afl/",
+      "description": "Palmerbet offers AFL Betting Tips, Previews, and Bonus Bets. Get bigger odds when you bet on AFL markets with Palmerbet.",
+      "followers": {
+        "facebook": 66000,
+        "twitter": 19400,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4775758.jpg?t=1609131572"
+    },
+    {
+      "title": "The Swans Blog",
+      "feed_url": "https://theswansblog.com/rss/",
+      "description": "The Swans Blog was created in October 2016, designed to be a one stop shop for Sydney Swans related news and opinion articles. Find news of AFL on this blog.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 548,
+        "instagram": 433
+      },
+      "image_url": "https://i1.feedspot.com/4775784.jpg?t=1609131598"
+    }
+  ]
+}

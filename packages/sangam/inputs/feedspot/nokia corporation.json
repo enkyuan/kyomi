@@ -1,0 +1,52 @@
+{
+  "category": "Nokia Corporation",
+  "source_url": "https://rss.feedspot.com/nokia_rss_feeds",
+  "feeds": [
+    {
+      "title": "Nokiapoweruser",
+      "feed_url": "https://nokiapoweruser.com/feed/",
+      "website_url": "https://nokiapoweruser.com/news/",
+      "description": "Nokiapoweruser also popularly known as NPU is a site related to Nokia, Android, Tech and Innovations in the field of communication devices. It brings news, tips, reviews, tutorials, How-Tos and provides Forum for discussions.",
+      "followers": {
+        "facebook": 14900,
+        "twitter": 14400,
+        "instagram": 476
+      },
+      "image_url": "https://i1.feedspot.com/4773177.jpg?t=1614146825"
+    },
+    {
+      "title": "Nokiamob",
+      "feed_url": "https://nokiamob.net/feed/",
+      "website_url": "https://nokiamob.net/category/nokia/",
+      "description": "In the Nokiamob blog you can find news from the Nokia world, networks, phones and everything that originated from Nokia, including Jolla, Here, Withings, HMD Global, and others.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 16600
+      },
+      "image_url": "https://i1.feedspot.com/4571138.jpg?t=1614146832"
+    },
+    {
+      "title": "LoveNokia",
+      "feed_url": "https://www.lovenokia.net/feeds/posts/default",
+      "website_url": "https://www.lovenokia.net/",
+      "description": "Welcome to this blog. This blog is all about Nokia Phones and other things related to Nokia. You will find news, comparisons, and all the latest information on Nokia Mobiles, Accessories, and other gadgets.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4912348.jpg?t=1614146837"
+    },
+    {
+      "title": "Nokia Blog",
+      "feed_url": "https://www.nokia.com/en_int/blog/rss",
+      "website_url": "https://www.nokia.com/blog/",
+      "description": "Nokia corporation's official blog covering topics about technology to connect the world like 5G, IoT, Cloud, Networks, Digital Health, Virtual Reality, and AI.",
+      "followers": {
+        "facebook": 12500000,
+        "twitter": 2000000,
+        "instagram": 993700
+      },
+      "image_url": "https://i1.feedspot.com/4909139.jpg?t=1614146841"
+    }
+  ]
+}

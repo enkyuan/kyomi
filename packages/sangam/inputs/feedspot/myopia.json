@@ -1,0 +1,59 @@
+{
+  "category": "Myopia",
+  "source_url": "https://rss.feedspot.com/myopia_rss_feeds",
+  "feeds": [
+    {
+      "title": "Endmyopia Blog",
+      "feed_url": "https://endmyopia.org/myopia-blog/feed/",
+      "website_url": "https://endmyopia.org/myopia-blog/",
+      "description": "The Definitive Natural Myopia Control Resource. Keep up with Myopia Clinical Studies, Reports & How-Tos from this blog.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 12800
+      },
+      "image_url": "https://i1.feedspot.com/4790116.jpg?t=1609588456"
+    },
+    {
+      "title": "News Medical Life Sciences \u00bb Myopia",
+      "feed_url": "https://www.news-medical.net/tag/feed/Myopia.aspx",
+      "website_url": "https://www.news-medical.net/?tag=/Myopia",
+      "description": "Medical News and articles about myopia you can trust from around the world. All content is written and reviewed by qualified health, medical and scientific experts.",
+      "followers": {
+        "facebook": 254300
+      },
+      "image_url": "https://i1.feedspot.com/4794366.jpg?t=1609588483"
+    },
+    {
+      "title": "Treehouse Eyes Blog",
+      "feed_url": "https://treehouseeyes.com/feed/",
+      "website_url": "https://treehouseeyes.com/blog/",
+      "description": "Stay up on the latest case studies, patient stories, research, and new treatments available for childhood myopia. Treehouse Eyes is a specialty pediatric eye care business focused on stopping the progression of myopia (nearsightedness) in children.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 292,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4790212.jpg?t=1632374824"
+    },
+    {
+      "title": "MyFUN Blog",
+      "feed_url": "https://myopiainscience.wordpress.com/feed/",
+      "website_url": "https://myopiainscience.wordpress.com/blog/",
+      "description": "A Science Blog curated by Early Stage Researchers of the MYFUN Project.",
+      "followers": {
+        "twitter": 210
+      },
+      "image_url": "https://i1.feedspot.com/4790167.jpg?t=1609588507"
+    },
+    {
+      "title": "Myopia Profile",
+      "feed_url": "https://www.myopiaprofile.com/feed",
+      "website_url": "https://www.myopiaprofile.com/articles/category/clinical",
+      "description": "Myopiaprofile.com is a site designed to provide all of the resources required to adopt myopia management into clinical practice. An information resource to help eye care practitioners control the progression of myopia in clinical practice, including education courses, downloads, and blogs.",
+      "followers": {
+        "twitter": 296
+      },
+      "image_url": "https://i1.feedspot.com/4790161.jpg?t=1609588479"
+    }
+  ]
+}

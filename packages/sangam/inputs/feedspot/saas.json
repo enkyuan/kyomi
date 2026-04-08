@@ -1,0 +1,842 @@
+{
+  "category": "SAAS",
+  "source_url": "https://rss.feedspot.com/saas_rss_feeds",
+  "feeds": [
+    {
+      "title": "SaaStr",
+      "feed_url": "https://www.saastr.com/feed/",
+      "website_url": "https://www.saastr.com/",
+      "description": "SaaStr is one of the world's largest communities of SaaS executives, founders, and entrepreneurs. Our goal is to help everyone get from $0 to $100m ARR with less stress and more success. We do that with a combination of industry-leading content and community connections.",
+      "followers": {
+        "facebook": 8800,
+        "twitter": 63600
+      },
+      "image_url": "https://i1.feedspot.com/4397495.jpg?t=1615289877"
+    },
+    {
+      "title": "Tomasz Tunguz",
+      "feed_url": "https://tomtunguz.com/index.xml",
+      "website_url": "https://tomtunguz.com/",
+      "description": "Tomasz Tunguz is a venture capitalist at Redpoint since 2008. He was a PM on the Ads team at Google and worked at Appian before. He loves to learn about how businesses are created and aim to share those learnings here.",
+      "followers": {
+        "twitter": 112100
+      },
+      "image_url": "https://i1.feedspot.com/4096872.jpg?t=1607512747"
+    },
+    {
+      "title": "SutiSoft Blog",
+      "feed_url": "https://www.sutisoft.com/blog/feed/",
+      "website_url": "https://www.sutisoft.com/blog/",
+      "description": "SutiSoft offers a comprehensive suite of integrated solutions tailored to fit small, midsize and enterprise level business requirements. Scale your business operations effortlessly and adapt to changing market dynamics with our scalable solutions.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4614909.jpg?t=1692343896"
+    },
+    {
+      "title": "The Agile Operator",
+      "feed_url": "https://agile-operator.com/feed/",
+      "website_url": "https://agile-operator.com/",
+      "description": "'The Agile Operator' is a resource hub focusing on SaaS operating playbooks. It emphasizes adaptability in competitive markets and maximizing value creation. The blog provides in-depth analysis, referencing the most current and relevant research, to provide actionable advice to enhance SaaS playbooks. The Managing Editor, Jeff Lortz, has extensive experience in C-level roles in enterprise software and SaaS businesses. The company categorizes it's content around market leadership, operational excellence, customer loyalty, and a building world-class product.",
+      "followers": {
+        "facebook": 140,
+        "twitter": 24
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/8194787/page/6700998/logo_1709569701.png"
+    },
+    {
+      "title": "Crazy Egg Blog",
+      "feed_url": "https://www.crazyegg.com/blog/feed/",
+      "website_url": "https://www.crazyegg.com/blog/",
+      "description": "Covers hard-boiled conversion rate optimization advice from the experts at Crazy Egg to see what's hot and what's not, and to know what your web visitors are doing with tools, such as heatmaps, recordings, A/B testing and more.",
+      "followers": {
+        "facebook": 11400,
+        "twitter": 46300
+      },
+      "image_url": "https://i1.feedspot.com/4619237.jpg?t=1607511949"
+    },
+    {
+      "title": "Saasmetrics",
+      "feed_url": "https://saasmetrics.co/feed/",
+      "website_url": "https://saasmetrics.co/",
+      "description": "Saasmetrics is one place for you to keep track of all your subscription business metrics. Marketing, sales, operations and financial data making sense together.",
+      "followers": {
+        "twitter": 456
+      },
+      "image_url": "https://i1.feedspot.com/4722032.jpg"
+    },
+    {
+      "title": "TechCrunch - SaaS",
+      "feed_url": "https://techcrunch.com/tag/saas/feed/",
+      "website_url": "https://techcrunch.com/tag/saas/",
+      "description": "TechCrunch is a leading technology media property, dedicated to obsessively profiling startups, reviewing new Internet products, and breaking tech news. Follow to get articles on SAAS.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/4723955.jpg?t=1607511961"
+    },
+    {
+      "title": "Ben Cotton - SaaS, Growth & Marketing Blog",
+      "feed_url": "https://www.ben-cotton.com/blog?format=RSS",
+      "website_url": "https://www.ben-cotton.com/blog/",
+      "description": "I'm an experienced data-driven marketer that helps software as a service (SaaS) businesses increase website traffic, generate leads and drive sales. I have a proven track record of leading successful marketing programs that create predictable recurring revenue. I bring a hunger to succeed, an entrepreneurial spirit, love of developing teams and desire to get stuff done.",
+      "followers": {
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/4723277.jpg?t=1607511939"
+    },
+    {
+      "title": "ChartMogul Blog",
+      "feed_url": "https://chartmogul.com/blog/feed/",
+      "website_url": "https://chartmogul.com/blog/",
+      "description": "Get all your SaaS & Subscription Metrics with a Single Click! MRR, churn, LTV and much more. ChartMogul is an analytics platform to simplify your subscription business. ChartMogul helps hundreds of subscription businesses extract value from their data; from large SaaS and media businesses to niche monthly gift box companies.",
+      "followers": {
+        "facebook": 849,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4722057.jpg?t=1607512009"
+    },
+    {
+      "title": "SparkToro Blog",
+      "feed_url": "https://sparktoro.com/blog/feed/",
+      "website_url": "https://sparktoro.com/blog/",
+      "description": "Read marketing, entrepreneurship, and the ongoing study of how influence spreads from founder Rand Fishkin. SparkToro is a software company founded by Casey Henry and Rand Fishkin. We believe high-quality market research and audience research should be available to everyone, not just tech giants and those with huge budgets.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 21900,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5004515.jpg?t=1662555077"
+    },
+    {
+      "title": "Buffer",
+      "feed_url": "https://buffer.com/resources/rss/",
+      "website_url": "https://buffer.com/resources/",
+      "description": "Buffer helps you build an audience organically. They're a values-driven company that provides affordable, intuitive, marketing tools for ambitious people and teams. Browse their marketing blog which covers the latest social media tools, analytics, strategies, and more.",
+      "followers": {
+        "facebook": 134200,
+        "twitter": 942800,
+        "instagram": 108900
+      },
+      "image_url": "https://i1.feedspot.com/5269997.jpg?t=1744091456"
+    },
+    {
+      "title": "Ahrefs Blog",
+      "feed_url": "https://ahrefs.com/blog/feed/",
+      "website_url": "https://ahrefs.com/blog/",
+      "description": "Covers articles on keyword research, link building, SEO basics, website traffic, SEO tools, outreach and more. The Ahrefs Blog helps you get better at SEO and marketing with detailed tutorials, case studies and opinion pieces from marketing practitioners and industry experts alike. Ahrefs is an all-in-one SEO toolset, with free Learning materials and a passionate Community & support.",
+      "followers": {
+        "facebook": 106500,
+        "twitter": 159700
+      },
+      "image_url": "https://i1.feedspot.com/4401041.jpg?t=1658465890"
+    },
+    {
+      "title": "Process Street Blog",
+      "feed_url": "https://www.process.st/feed/",
+      "website_url": "https://www.process.st/blog/",
+      "description": "Want to be a productivity ninja? Find more customers for your business? Systemize your business so it runs on autopilot? It's all here and more at the Process Street blog. Process Street is a simple, free and powerful way to manage your team's recurring checklists and procedures.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4463897.jpg?t=1607511997"
+    },
+    {
+      "title": "How To Buy Saas Blog",
+      "feed_url": "https://www.howtobuysaas.com/feed/",
+      "website_url": "https://www.howtobuysaas.com/blog/",
+      "description": "Learn everything about SAAS, Softwares, its reviews, and much more. How to buy saas is a blog run in collaboration with saas marketers, creators, and buyers.",
+      "followers": {
+        "facebook": 139,
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/5235397.jpg?t=1610453901"
+    },
+    {
+      "title": "Moz",
+      "feed_url": "https://moz.com/feeds/blog.rss",
+      "website_url": "https://moz.com/blog",
+      "description": "Find the industry's top wizards, doctors, and other experts who offer their best advice, research, how-tos, and insights, all in the name of helping you level up your SEO and online marketing skills. Moz is the most trusted authority in an online search. With our powerful SEO solutions, you can improve the position of your brand, business locations, and competitive rank in search results.",
+      "followers": {
+        "facebook": 267300,
+        "twitter": 548100,
+        "instagram": 19700
+      },
+      "image_url": "https://i1.feedspot.com/5425983.jpg?t=1744105631"
+    },
+    {
+      "title": "SaaS Capital Blog",
+      "feed_url": "https://www.saas-capital.com/blog-posts/feed/",
+      "website_url": "https://www.saas-capital.com/blog-posts/",
+      "description": "A blog offers actionable insights and benchmarking data for SaaS companies. SaaS Capital is the leading provider of growth debt designed explicitly for B2B SaaS companies.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5289613.jpg?t=1712233087"
+    },
+    {
+      "title": "The Help Scout Blog",
+      "feed_url": "https://www.helpscout.com/feed.xml",
+      "website_url": "https://www.helpscout.com/blog/",
+      "description": "Get tips and advice on delivering exceptional customer service, engaging and delighting your customers, and building a customer-centric company. Help Scout develops Help Desk software and customer support tools.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 12300
+      },
+      "image_url": "https://i1.feedspot.com/905317.jpg?t=1611054529"
+    },
+    {
+      "title": "Kellblog \u00bb CEO",
+      "feed_url": "https://kellblog.com/feed/",
+      "website_url": "https://kellblog.com/category/ceo/",
+      "description": "Kellblog covers topics related to starting, leading, and scaling enterprise software startups including corporate strategy, marketing strategy, messaging, positioning, management, go-to-market models, SaaS metrics, operational metrics, and venture capital (VC) financing.",
+      "followers": {
+        "twitter": 24100
+      },
+      "image_url": "https://i1.feedspot.com/4721882.jpg?t=1622653183"
+    },
+    {
+      "title": "Skyword",
+      "feed_url": "https://www.skyword.com/feed/atom/",
+      "website_url": "https://www.skyword.com/resources/",
+      "description": "Explore the latest insight-backed content marketing reports, tools, videos, and resources, brought to you by Skyword. We're on a mission to make it easy for brands to tell authentic stories that establish trust and build lasting relationships. Skyword unlocks content excellence for the world's largest brands through a combination of managed professional services.",
+      "followers": {
+        "facebook": 10400,
+        "twitter": 8000,
+        "instagram": 148
+      },
+      "image_url": "https://i1.feedspot.com/5289614.jpg?t=1662553963"
+    },
+    {
+      "title": "Kuno Creative Blog",
+      "feed_url": "https://www.kunocreative.com/blog/rss.xml",
+      "website_url": "https://www.kunocreative.com/blog",
+      "description": "Read our blog to stay up to date on the latest trends in inbound marketing and sales, content, design, marketing automation, SEO, paid media, HubSpot, healthcare marketing, industrial marketing, technology marketing, renewable energy marketing, and more! Kuno Creative helps mid-to-large-size companies generate, nurture, and close more sales.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 16500,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4619781.jpg?t=1607490885"
+    },
+    {
+      "title": "Justin Jackson - Helping Software Companies Grow",
+      "feed_url": "https://justinjackson.ca/feed",
+      "website_url": "https://justinjackson.ca/",
+      "description": "Justin Jackson is a Canadian entrepreneur, author, podcaster. He advises software and SaaS companies on growth, marketing, JTBD, and product development.",
+      "followers": {
+        "twitter": 38300,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4722807.jpg?t=1607512794"
+    },
+    {
+      "title": "Teamgate CRM Blog",
+      "feed_url": "https://www.teamgate.com/feed/",
+      "website_url": "https://www.teamgate.com/blog/",
+      "description": "The latest news on sales tactics, tools and sales management, as well as learned lessons from the #1 Value-for-Money CRM of 2024!",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 11900
+      },
+      "image_url": "https://i1.feedspot.com/4664284.jpg?t=1607512766"
+    },
+    {
+      "title": "Business of Software USA Blog",
+      "feed_url": "https://businessofsoftware.org/blog/feed/?x=1",
+      "website_url": "https://businessofsoftware.org/blog/",
+      "description": "All the talks from previous Business of Software Conferences from one place. Great SaaS & Software Talks. We're a friendly conference for independent thinking software people who want to run very successful software businesses and learn from others like them.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4722744.jpg?t=1607513276"
+    },
+    {
+      "title": "New Breed Blog",
+      "feed_url": "https://www.newbreedrevenue.com/blog/rss.xml",
+      "website_url": "https://www.newbreedrevenue.com/blog",
+      "description": "We want to help you succeed, so our experts have compiled resources addressing all things marketing, sales, service, and operations. Whether you're looking for inspiration, trying to understand how to implement a new strategy, or evaluating a potential solution, we have content that can help you.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 2500,
+        "instagram": 798
+      },
+      "image_url": "https://i1.feedspot.com/5438194.jpg?t=1662198850"
+    },
+    {
+      "title": "CloudKettle Blog",
+      "feed_url": "https://www.cloudkettle.com/feed/",
+      "website_url": "https://www.cloudkettle.com/blog/",
+      "description": "This blog is dedicated to sharing actionable insight on Salesforce security best practices, Salesforce optimization for enterprises and more. CloudKettle helps SaaS companies improve their Sales, Marketing and Customer Support activities by leveraging Salesforce and integrated tools.",
+      "followers": {
+        "facebook": 249,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4722741.jpg?t=1607513269"
+    },
+    {
+      "title": "YourSales Sales Blog",
+      "feed_url": "https://yoursales.com/feed/",
+      "website_url": "https://yoursales.com/blog/",
+      "description": "B2B SaaS Sales Blog. YourSales delivers global sales growth for our clients. We do that by working with qualified & motivated Sales Professionals around the World.",
+      "followers": {
+        "facebook": 318,
+        "twitter": 326
+      },
+      "image_url": "https://i1.feedspot.com/4723301.jpg?t=1632982020"
+    },
+    {
+      "title": "SaaStock Blog",
+      "feed_url": "https://www.saastock.com/feed/",
+      "website_url": "https://www.saastock.com/blog/",
+      "description": "The SaaS blog bringing you the word from the SaaS startup community. The SaaS Industry is booming. Every business is becoming an internet business in some shape or form and SaaS continues to be a major driving force for this sea change.",
+      "followers": {
+        "facebook": 529,
+        "twitter": 7300,
+        "instagram": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4722062.jpg"
+    },
+    {
+      "title": "A Smart Bear",
+      "feed_url": "https://longform.asmartbear.com/index.xml",
+      "website_url": "https://longform.asmartbear.com/",
+      "description": "Hi! I'm Jason Cohen. As a four-time entrepreneur, both bootstrapped and fundraised, with two sales, I've been writing about startups for 15 years. I hope you'll find it useful!",
+      "followers": {
+        "twitter": 26700
+      },
+      "image_url": "https://i1.feedspot.com/4721936.jpg?t=1662546426"
+    },
+    {
+      "title": "Predictable Revenue Blog",
+      "feed_url": "https://predictablerevenue.com/blog/feed",
+      "website_url": "https://predictablerevenue.com/blog",
+      "description": "Stay up to date with the latest B2B outbound sales trends. Also covers articles on inbound sales strategies, people management, outbound sales development, sales, and marketing strategies. Predictable Revenue is a sales development training company that helps B2B companies create repeatable, scalable, and predictable revenue.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 251,
+        "instagram": 967
+      },
+      "image_url": "https://i1.feedspot.com/5289612.jpg?t=1623073361"
+    },
+    {
+      "title": "Sixteen Ventures",
+      "feed_url": "https://feeds.feedburner.com/SixteenVentures",
+      "website_url": "https://sixteenventures.com/",
+      "description": "Sixteen Ventures has driven growth across the entire customer lifecycle for more than 500 companies around the world directly, and thousands through speaking and publishing. Know more about Marketing, Customer Acquisition, & Churn Reduction Consulting for SaaS providers.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/2192097.jpg?t=1607511966"
+    },
+    {
+      "title": "Inturact Blog",
+      "feed_url": "https://www.inturact.com/blog/rss.xml",
+      "website_url": "https://www.inturact.com/blog",
+      "description": "Learn the Best SaaS Marketing Strategies & Tactics to Build Your SaaS Business. Inturact is a SaaS Marketing and SaaS Consulting Agency Working to Reduce Your CAC and Maximize Your LTV. We Live By The Moto: Wake Up. Kick SaaS. Repeat.",
+      "followers": {
+        "facebook": 976,
+        "twitter": 12200
+      },
+      "image_url": "https://i1.feedspot.com/4723263.jpg?t=1607512782"
+    },
+    {
+      "title": "Chargebee's SaaS Dispatch Blog",
+      "feed_url": "https://www.chargebee.com/blog/feed.xml?format=xml",
+      "website_url": "https://www.chargebee.com/blog/",
+      "description": "Chargebee lets you automate your recurring billing, manage subscriptions at scale and access metrics that matter. Get Growth insights on SaaS, subscription commerce and all things Startup.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 7400,
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/4723357.jpg?t=1607511957"
+    },
+    {
+      "title": "The SaaS Playbook",
+      "feed_url": "https://thesaasplaybook.substack.com/feed",
+      "website_url": "https://thesaasplaybook.substack.com/",
+      "description": "A weekly rundown of the most relevant, informative SaaS resources and best practices.",
+      "followers": {
+        "twitter": 79
+      },
+      "image_url": "https://i1.feedspot.com/5027850.jpg?t=1607512022"
+    },
+    {
+      "title": "SaaSOptics Blog",
+      "feed_url": "https://saasoptics.com/blog/feed/",
+      "website_url": "https://www.maxio.com/blog",
+      "description": "Grow your business with SaaSOptics, a subscription management platform that provides subscription billing, revenue recognition, and robust subscription analytics and metrics. SaaSOptics gives early-stage and growing SaaS and subscription businesses the ability to eliminate your dependency on spreadsheets and streamline your financial operations and reporting. In search of an insightful SaaS blog? Look no further. We cover everything you need to know from financial metrics to SaaS success stories.",
+      "followers": {
+        "facebook": 542,
+        "twitter": 701
+      },
+      "image_url": "https://i1.feedspot.com/5287142.jpg?t=1622530244"
+    },
+    {
+      "title": "SmartKarrot Blog",
+      "feed_url": "https://www.smartkarrot.com/feed/",
+      "website_url": "https://www.smartkarrot.com/resources/blog/",
+      "description": "Transform customer success with SmartKarrot: an all-in-one platform for building strong customer relationships, driving customer success, customer adoption, and maximizing customer lifetime value. Leverage advanced analytics, automation, and collaboration tools to proactively address needs, identify growth opportunities, and reduce churn. Content on global enterprises trusting SmartKarrot for exceptional customer success.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/2621439/page/5148236/logo_1687492909.jpg"
+    },
+    {
+      "title": "SaaS Mag Blog",
+      "feed_url": "https://www.saasmag.com/feed/",
+      "website_url": "https://www.saasmag.com/blog/",
+      "description": "SaaS Mag was born from SaaS M&A advisors who have had the privilege to encounter no shortage of brilliant SaaS founders, executives, and investors. Recognizing that the SaaS industry has expanded exponentially over the last decade - and it's no wonder given the influence of technology on businesses - these advisors saw a need for a community to support enthusiasts of the dynamic SaaS industry.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 6000,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5287154.jpg?t=1622539958"
+    },
+    {
+      "title": "All That SaaS",
+      "feed_url": "https://allthatsaas.com/feed/",
+      "website_url": "https://allthatsaas.com/",
+      "description": "All That SaaS is a SaaS blog dedicated to finding the best SaaS apps, discovering inspiring SaaS stories, founders, and more.",
+      "followers": {
+        "facebook": 152,
+        "twitter": 215
+      },
+      "image_url": "https://i1.feedspot.com/5131366.jpg?t=1607512751"
+    },
+    {
+      "title": "Both Sides of the Table",
+      "feed_url": "https://bothsidesofthetable.com/feed",
+      "website_url": "https://bothsidesofthetable.com/",
+      "description": "Perspectives of a 2x entrepreneur turned VC at @UpfrontVC, the largest and most active early-stage fund in Southern California.",
+      "followers": {
+        "twitter": 333500
+      },
+      "image_url": "https://i1.feedspot.com/4468161.jpg?t=1600240729"
+    },
+    {
+      "title": "Andrew Chen",
+      "feed_url": "https://andrewchen.com/feed/",
+      "website_url": "https://andrewchen.com/recent/",
+      "description": "I've written 650 essays which have been featured and quoted in The New York Times, Fortune, Wired, and WSJ. The topics range from mobile product design to fundraising to user growth.",
+      "followers": {
+        "twitter": 269000
+      },
+      "image_url": "https://i1.feedspot.com/79279.jpg?t=1607512734"
+    },
+    {
+      "title": "Giva - SaaS Insights, Software, Customer Service and Help Desk Best Practices Blog",
+      "feed_url": "https://feeds.feedburner.com/giva",
+      "website_url": "https://www.givainc.com/blog/",
+      "description": "The experts at Giva provide daily insights on SaaS, Customer Service & Help Desk Best Practices.",
+      "followers": {
+        "twitter": 412
+      },
+      "image_url": "https://i1.feedspot.com/4723449.jpg"
+    },
+    {
+      "title": "UserActive",
+      "feed_url": "https://www.useractive.io/feed/",
+      "website_url": "https://www.useractive.io/articles/",
+      "description": "UserActive is an agency that designs meaningful tech products. We're inspired by a mission to help tech founders build meaningful products that enrich the lives of users. Our blog focuses on providing relevant information and helpful resources to SaaS founders and executives. We post several articles each month, so there is always something new to look forward to.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5395692.jpg?t=1651319995"
+    },
+    {
+      "title": "The SaaS Garage Insights for SaaS Founders Blog",
+      "feed_url": "https://saasgarage.com/feed/",
+      "website_url": "https://saasgarage.com/blog/",
+      "description": "Welcome at Alexander Bruehl's SaaS garage, were leading SaaS startup companies refined their business and execution models before they hit the global roads. I am an entrepreneur, mentor, coach and passionate, hands-on angel investor, seeking exciting business ideas, credible teams and promising businesses in Software (SaaS, Software as a Service; Cloud Software) and Digital Media.",
+      "followers": {
+        "facebook": 6
+      },
+      "image_url": "https://i1.feedspot.com/4723377.jpg?t=1607513342"
+    },
+    {
+      "title": "SaaSholic",
+      "feed_url": "https://saasholic.com/feed/",
+      "website_url": "https://blog.saasholic.com/",
+      "description": "Featuring SaaS-specific and curated content. SaaSholic helps early-stage Startups grow with capital, go-to-market strategy, and access to later-stage funding.",
+      "followers": {
+        "twitter": 132
+      },
+      "image_url": "https://i1.feedspot.com/5322312.jpg?t=1631769174"
+    },
+    {
+      "title": "Think Strategies",
+      "feed_url": "http://thinkstrategies.com/feed/",
+      "website_url": "http://thinkstrategies.com/blog/#",
+      "description": "The innovative THINKstrategies blog is written by Jeff Kaplan, who is its Managing Director. A leading expert in cloud computing, Jeff is a frequent guest blogger and keynote speaker on SaaS, managed services, and IOT.",
+      "followers": {
+        "twitter": 7600
+      },
+      "image_url": "https://i1.feedspot.com/51295.jpg?t=1607513310"
+    },
+    {
+      "title": "Sujan Patel \u00bb Marketing",
+      "feed_url": "https://sujanpatel.com/feed/",
+      "website_url": "https://sujanpatel.com/category/marketing/",
+      "description": "A veteran SaaS marketing leader with 15+ years of experience, Sujan Patel has helped hundreds of companies - from emerging startups to Fortune 500 leaders - to create growth strategies that have generated massive increases in traffic and revenue.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 54700
+      },
+      "image_url": "https://i1.feedspot.com/4768680.jpg?t=1662551128"
+    },
+    {
+      "title": "Agility - SaaS Blog",
+      "feed_url": "https://www.workwithagility.com/blog?format=RSS",
+      "website_url": "https://www.workwithagility.com/blog/",
+      "description": "This blog will focus on topics that are designed to educate and inform those interested in SaaS and B2B Marketing how to optimise their sites. We are a strategic marketing consultancy with a passion for Software as a Service (SaaS) marketing (primarily B2B).",
+      "followers": {
+        "twitter": 15
+      },
+      "image_url": "https://i1.feedspot.com/4723508.jpg?t=1607513313"
+    },
+    {
+      "title": "OnStartups",
+      "feed_url": "https://www.onstartups.com/rss.xml",
+      "website_url": "https://www.onstartups.com/",
+      "description": "For curious entrepreneurs who are interested in SaaS startups. Read insightful information about software startups from Dharmesh Shah. He is a software entrepreneur and currently the co-founder and CTO of HubSpot.",
+      "followers": {
+        "facebook": 216600,
+        "twitter": 316800
+      },
+      "image_url": "https://i1.feedspot.com/4161403.jpg?t=1662550602"
+    },
+    {
+      "title": "Lean-Case Blog",
+      "feed_url": "https://www.lean-case.com/blog/feed/",
+      "website_url": "https://www.lean-case.com/blog/",
+      "description": "Lean-Case provides you with business models & metrics, so you can apply a standard approach to business planning, modeling and tracking.Lean-Case is your Workspace for Business Planning and our authors are true thought leader.",
+      "followers": {
+        "twitter": 580
+      },
+      "image_url": "https://i1.feedspot.com/5018530.jpg?t=1607513413"
+    },
+    {
+      "title": "Joel Capperella Blog",
+      "feed_url": "http://joelcapperella.com/blog/feed/",
+      "website_url": "http://joelcapperella.com/blog/",
+      "description": "Joel Cap Capperella brings over 20 years strategic marketing execution in software and SaaS, with both big fish (SAP, Oracle) and small startups. He's now building on that experience to help startups and small companies to think like and relate to customers in the way they go about sales and marketing.",
+      "followers": {
+        "facebook": 149,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4661775.jpg?t=1607513318"
+    },
+    {
+      "title": "Aaron Beashel Blog",
+      "feed_url": "https://aaronbeashel.com/feed/",
+      "website_url": "https://aaronbeashel.com/saas-marketing-blog/",
+      "description": "With a wealth of knowledge and passion bordering on obsession, my career to date has spanned multiple roles. I started out co-founding a SaaS startup and have gone on to lead marketing teams at some of the fastest-growing B2B SaaS companies in the world.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4722727.jpg?t=1607513352"
+    },
+    {
+      "title": "Cardin Partners - SaaS Metric FAQ's Blog",
+      "feed_url": "https://cardinpartners.com/blog?format=RSS",
+      "website_url": "https://cardinpartners.com/blog/",
+      "description": "We know the negotiating deal-making art and analytical and valuation science of SaaS company sale. The backbone of our proprietary CRM and deal automation platform is a global database of private SaaS company data, and that same dataset gives us a leg up to defend value and engage all relevant buyers when orchestrating the exit process.",
+      "followers": {
+        "facebook": 11,
+        "twitter": 7
+      },
+      "image_url": "https://i1.feedspot.com/4723484.jpg?t=1607513357"
+    },
+    {
+      "title": "Cobloom Blog",
+      "feed_url": "https://www.cobloom.com/blog/rss.xml",
+      "website_url": "https://www.cobloom.com/blog",
+      "description": "Cobloom helps SaaS Startups to find traction and scale growth in a repeatable, predictable and data-driven way. Get the latest B2B SaaS growth tips, strategies & advice fresh from the Cobloom blog.",
+      "followers": {
+        "facebook": 204,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4721870.jpg?t=1607512754"
+    },
+    {
+      "title": "Kraftblick - Digital Marketing for Tech Companies, SaaS and Startups Blog",
+      "feed_url": "https://kraftblick.com/feed/",
+      "website_url": "https://kraftblick.com/blog/",
+      "description": "Kraftblick is a digital marketing agency for Tech companies, SaaS and Startups. We leverage PPC advertising, SEO and content marketing to generate leads. Everything you need to know about marketing for SaaS and startups is here.",
+      "followers": {
+        "facebook": 210,
+        "twitter": 362
+      },
+      "image_url": "https://i1.feedspot.com/4721982.jpg?t=1607512786"
+    },
+    {
+      "title": "The Bridge Group Blog",
+      "feed_url": "https://blog.bridgegroupinc.com/rss.xml",
+      "website_url": "https://blog.bridgegroupinc.com/",
+      "description": "We've been helping B2B companies optimize SDR, AE, AM, and CSM strategies since 1998. We're dedicated to understanding the models, metrics, and motions that deliver scalable growth. Along the way, we've worked with 405+ tech companies helping them build more pipelines, win more deals, and expand more accounts.",
+      "followers": {
+        "facebook": 148,
+        "twitter": 25400,
+        "instagram": 249
+      },
+      "image_url": "https://i1.feedspot.com/4941231.jpg?t=1632983295"
+    },
+    {
+      "title": "Practical Advice on SaaS Marketing Blog",
+      "feed_url": "http://saasmarketingstrategy.blogspot.com/feeds/posts/default",
+      "website_url": "http://saasmarketingstrategy.blogspot.com/",
+      "description": "I'm Peter Cohen, principal of SaaS Marketing Strategy Advisors, and the author of the 'Practical Advice on SaaS Marketing' blog. Before I started my own firm and this blog, I'd spent many years in marketing positions with Lotus, IBM, and other companies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/314087.jpg?t=1609998905"
+    },
+    {
+      "title": "Christoph Janz The angel VC",
+      "feed_url": "http://christophjanz.blogspot.com/feeds/posts/default",
+      "website_url": "http://christophjanz.blogspot.com/",
+      "description": "Thoughts on Internet startups, SaaS and early-stage investing from Christoph Janz @ Point Nine Capital.",
+      "followers": {
+        "twitter": 40900
+      },
+      "image_url": "https://i1.feedspot.com/58457.jpg?t=1610698071"
+    },
+    {
+      "title": "InsideSales Blog",
+      "feed_url": "https://www.insidesales.com/feed/",
+      "website_url": "https://www.insidesales.com/blog/",
+      "description": "InsideSales offers the leading Enterprise Sales Engagement Platform that accelerates revenue. With Playbooks from InsideSales, sales professionals increase productivity, optimize customer interactions, and connect to the right buyers. Playbooks manage lead follow-up and prospecting cadences automate administrative tasks and use data to predict who, when, and how to engage buyers for the best outcome all to set your sales reps up for success.",
+      "followers": {
+        "facebook": 5000,
+        "instagram": 51
+      },
+      "image_url": "https://i1.feedspot.com/5426217.jpg?t=1659011566"
+    },
+    {
+      "title": "CIO \u00bb Enterprise Applications",
+      "feed_url": "https://www.cio.com/feed/",
+      "website_url": "https://www.cio.com/enterprise-applications/",
+      "description": "CIO.com delivers the latest tech news, analysis, how-to, blogs, and video for IT professionals. Follow blog to get Software as a Service (SaaS) news, analysis, research, how-to, opinion, and video.",
+      "followers": {
+        "facebook": 62100,
+        "twitter": 173800
+      },
+      "image_url": "https://i1.feedspot.com/4723964.jpg?t=1607511972"
+    },
+    {
+      "title": "GTMnow",
+      "feed_url": "https://gtmnow.com/feed/",
+      "website_url": "https://gtmnow.com/tag/articles/",
+      "description": "Sales Hacker founded in 2013 by Max Altschuler is the smartest community of B2B sales professionals on the planet. You'll find every member of this open, free community is committed to elevating the sales profession and supporting and equipping one another on our journey to the top.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 27300,
+        "instagram": 13100
+      },
+      "image_url": "https://i1.feedspot.com/5199053.jpg?t=1662554809"
+    },
+    {
+      "title": "BetterCloud Monitor",
+      "feed_url": "https://www.bettercloud.com/monitor/feed/",
+      "website_url": "https://www.bettercloud.com/monitor/",
+      "description": "BetterCloud centralizes SaaS management, automates workflows and compliance policies, and surfaces relevant insights across SaaS applications. Follow and get Industry news and research, the latest SaaS trends, tutorials, videos, shortcuts, and more for the IT industry and everyone else.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 12300,
+        "instagram": 829
+      },
+      "image_url": "https://i1.feedspot.com/4457526.jpg?t=1607512712"
+    },
+    {
+      "title": "Salesforce Blog",
+      "feed_url": "https://www.salesforce.com/blog/feed/",
+      "website_url": "https://www.salesforce.com/blog/",
+      "description": "New tips, trends, and insights from the world's leading enterprise cloud ecosystem. Salesforce has sought to change the world for the better through technology that builds stronger relationships. Between companies and their customers. Between employees and far-flung teams. Between governments and their citizens. Between people who want to make a difference.",
+      "followers": {
+        "twitter": 583600,
+        "instagram": 286300
+      },
+      "image_url": "https://i1.feedspot.com/5287651.jpg?t=1633002334"
+    },
+    {
+      "title": "IT Pro \u00bb SaaS",
+      "feed_url": "https://www.itpro.com/feeds/tag/saas",
+      "website_url": "https://www.itpro.com/cloud/saas",
+      "description": "SAAS News. IT PRO is a comprehensive technology news & reviews hub for IT professionals. Follow our practical advice to guide yourself through the maze of IT investment. IT Pro is the essential place for all IT coverage in the UK, offering breaking IT news, along with analysis and comment, interviews, reviews and more.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 25000
+      },
+      "image_url": "https://i1.feedspot.com/4723979.jpg?t=1607513395"
+    },
+    {
+      "title": "Yoroflow Blog",
+      "feed_url": "https://www.yoroflow.com/feed/",
+      "website_url": "https://www.yoroflow.com/all-blog",
+      "description": "Learn extra professional guides, tips, automation insights. Yoroflow is a powerful web-based, intuitive, no-code workflow management platform that helps all SMEs till Enterprise organizations to manage, automate, and optimize business processes to rules-driven digital transformation.",
+      "followers": {
+        "facebook": 79,
+        "twitter": 39,
+        "instagram": 414
+      },
+      "image_url": "https://i1.feedspot.com/5379863.jpg?t=1646895673"
+    },
+    {
+      "title": "Azumuta Blog",
+      "feed_url": "https://www.azumuta.com/blog/",
+      "website_url": "https://www.azumuta.com/blog/",
+      "description": "Bringing you the latest in frontline operations - actionable, educational, and industry-relevant posts. Azumuta is a SaaS Software that helps Manufacturing Companies eliminate paperwork and digitize shop floor operations.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5417174.jpg?t=1656653933"
+    },
+    {
+      "title": "For Entrepreneurs",
+      "feed_url": "https://www.forentrepreneurs.com/feed/",
+      "website_url": "https://www.forentrepreneurs.com/",
+      "description": "forEntrepreneurs offers advice on the key issues founders and their teams face in getting started, getting funded, and building a successful company.",
+      "followers": {
+        "twitter": 52600
+      },
+      "image_url": "https://i1.feedspot.com/108560.jpg?t=1662550027"
+    },
+    {
+      "title": "The Groove Blog",
+      "feed_url": "https://blog.groovehq.com/feed",
+      "website_url": "https://blog.groovehq.com/",
+      "description": "The Groove Blog is your go-to place for awesome advice on customer service, building a company with a fully remote team, using content marketing to grow it, and more. Groove is the Shared Inbox for small businesses looking for an alternative to Email. Organize all your support emails in one place, route them to the right people, and get more work done as a team.",
+      "followers": {
+        "facebook": 456,
+        "twitter": 6800
+      },
+      "image_url": "https://i1.feedspot.com/3695229.jpg?t=1662557118"
+    },
+    {
+      "title": "OpenView Blog",
+      "feed_url": "https://openviewpartners.com/blog/feed/",
+      "website_url": "https://openviewpartners.com/blog/",
+      "description": "OpenView Labs is insights, actionable advice & founder interviews aimed at helping you grow your expansion stage software company.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 14600
+      },
+      "image_url": "https://i1.feedspot.com/5945.jpg?t=1641796437"
+    },
+    {
+      "title": "Fonada Blog",
+      "feed_url": "https://www.fonada.com/feed/",
+      "website_url": "https://www.fonada.com/blog/",
+      "description": "Fonada offers end-to-end cloud telephony services to help businesses connect, inform, and sell cost-efficiently. Our Voice, SMS, and AI-enabled solutions can help you become a household name cost-efficiently. Fonada is your one-stop CPaaS Provider and customer engagement platform. Manage customer engagement with Fonada's end-to-end cloud telephony and customer engagement contact center, supported by a suite of communication APIs and conversational, cloud-empowered AI platform.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7296786.jpg?t=1712914598"
+    },
+    {
+      "title": "Baremetrics Blog",
+      "feed_url": "https://baremetrics.com/category/blog/feed",
+      "website_url": "https://baremetrics.com/blog",
+      "description": "Josh at Baremetrics has done a great job sharing his journey in growing his SaaS company past the $1m ARR point. Baremetrics is Subscription Analytics and Insights. Read about true experiences, challenges, and what the road to success really looks like for a SaaS startup straight from the team behind Baremetrics.",
+      "followers": {
+        "facebook": 997,
+        "twitter": 7000,
+        "instagram": 314
+      },
+      "image_url": "https://i1.feedspot.com/4317797.jpg?t=1607511953"
+    },
+    {
+      "title": "Entrepreneur - Latest SaaS Articles",
+      "feed_url": "https://www.entrepreneur.com/topic/saas.rss",
+      "website_url": "https://www.entrepreneur.com/topic/saas",
+      "description": "The latest news, videos, and discussion topics on SaaS. Advice, insight, profiles and guides for established and aspiring entrepreneurs worldwide. Home of Entrepreneur magazine.",
+      "followers": {
+        "facebook": 42,
+        "twitter": 3600000,
+        "instagram": 4600000
+      },
+      "image_url": "https://i1.feedspot.com/4723957.jpg?t=1607511988"
+    },
+    {
+      "title": "Totango Blog",
+      "feed_url": "https://www.totango.com/blog/",
+      "website_url": "https://www.totango.com/blog/",
+      "description": "With Totango's leading, open approach to customer success, companies can enable the three necessary components of a successful E2C Enterprise to Customer growth strategy: customer-centric data, customer engagement, and enterprise impact.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 7800
+      },
+      "image_url": "https://i1.feedspot.com/4721885.jpg?t=1607512006"
+    },
+    {
+      "title": "CXL Blog",
+      "feed_url": "https://cxl.com/feed/",
+      "website_url": "https://cxl.com/blog/",
+      "description": "A blog covering all things Data-Driven Marketing. Blog posts cover Acquisition, Business Building, CRO & Testing, User Experience & Design, Digital Analytics, and Copywriting. Founded by Peep Laja, CXL brings you advanced-level marketing training.",
+      "followers": {
+        "facebook": 12300,
+        "twitter": 12600,
+        "instagram": 6900
+      },
+      "image_url": "https://i1.feedspot.com/5310775.jpg?t=1659072159"
+    },
+    {
+      "title": "First Round Review",
+      "feed_url": "https://review.firstround.com/feed.xml/",
+      "website_url": "https://review.firstround.com/",
+      "description": "Investing at the earliest possible stage, First Round offers a growing number of services and products to help founders build companies from scratch. We don't split angel, seed, and pre-seed funding into separate categories - we're interested in providing the same support across the board.",
+      "followers": {
+        "twitter": 218300,
+        "instagram": 12800
+      },
+      "image_url": "https://i1.feedspot.com/4397422.jpg?t=1615289884"
+    },
+    {
+      "title": "Subscription Flow Blog",
+      "feed_url": "https://www.subscriptionflow.com/feed/",
+      "website_url": "https://www.subscriptionflow.com/blog/",
+      "description": "Subscription Flow was founded with the premise to open a new chapter of growth for your subscription business. We are online subscription management, recurring billing, and payment processing platform. We enable businesses to optimize revenue, maximize customer lifetime value, and attract real success. Our vision is to become a secure system for managing a recurring revenue cycle and eliminate all the billing bottlenecks.",
+      "followers": {
+        "facebook": 102,
+        "twitter": 150
+      },
+      "image_url": "https://i1.feedspot.com/5201693.jpg?t=1672748184"
+    },
+    {
+      "title": "Outseta Blog",
+      "feed_url": "https://www.outseta.com/blog?format=RSS",
+      "website_url": "https://www.outseta.com/blog",
+      "description": "Outseta Blog Tips on building SaaS start-ups and self-managed organizations. The software starter kit for your saas business Better understand your customers. Reduce your technology footprint. Launch more efficiently.",
+      "followers": {
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/4723457.jpg?t=1607512762"
+    },
+    {
+      "title": "Saaztro Blog",
+      "feed_url": "https://www.saaztro.co/blog/feed/",
+      "website_url": "https://www.saaztro.co/blog/",
+      "description": "Saaztro is a cloud-based on-demand delivery and ordering solution for food, grocery, medicine, meat, flower, and liquor business. Here, the blog covers helpful articles and knowledge related to Saas.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5392074.jpg?t=1650370750"
+    },
+    {
+      "title": "SaaS Addict - Software as A Service and Cloud Computing Blog",
+      "feed_url": "https://www.walkme.com/",
+      "website_url": "https://www.walkme.com/blog/",
+      "description": "I started this blog back in 2012 observing that software-as-a-service is fast becoming the future of the tech world. Over the last few years, we have experienced SaaS based platforms becoming the standard of the online experience. As SaaS continues to evolve and grow, I see it as my personal mission to cover the latest news and insights about fascinating products, the future of the industry.",
+      "followers": {
+        "facebook": 92300,
+        "twitter": 14700
+      },
+      "image_url": "https://i1.feedspot.com/4061215.jpg?t=1607512729"
+    },
+    {
+      "title": "Price Intelligently - SaaS Pricing Blog",
+      "feed_url": "https://www.priceintelligently.com/blog/rss.xml",
+      "description": "We empower companies to get the most out of SaaS. We help SaaS leaders align the right product to the right customer for the right price in order to boost revenue and learn more about their customer.",
+      "followers": {
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/4148860.jpg?t=1607513399"
+    }
+  ]
+}

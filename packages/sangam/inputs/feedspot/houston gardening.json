@@ -1,0 +1,94 @@
+{
+  "category": "Houston Gardening",
+  "source_url": "https://rss.feedspot.com/houston_gardening_rss_feeds",
+  "feeds": [
+    {
+      "title": "ECOgardener Gardening Blog",
+      "feed_url": "https://ecogardener.com/blogs/news.atom",
+      "website_url": "https://ecogardener.com/blogs/news",
+      "description": "I'm Dave. I founded ECOgardener in 2015 in hopes of encouraging generations of growers to keep planting. Here at ECOgardener, we educate and provide tools for beginner and seasoned gardeners alike. Ours are efficient, trusted, and long-lasting no matter the size, space or weather.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 1,
+        "instagram": 652
+      },
+      "image_url": "https://i1.feedspot.com/5326241.jpg?t=1632837853"
+    },
+    {
+      "title": "Garden Girls Blog",
+      "feed_url": "https://www.gardengirlstx.com/blog?format=rss",
+      "website_url": "https://www.gardengirlstx.com/blog",
+      "description": "Over the past three years, we've installed hundreds of gorgeous gardens and have mastered planting according to Houston's unique climate and seasons. We begin and end each day in our own gardens and understand that time is precious. We strive to design gardens that are simple to maintain, productive, stylish, and complimentary to your lifestyle. Our goal is to create a garden that reflects your unique personality.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488500.jpg?t=1672921627"
+    },
+    {
+      "title": "Houstonia Magazine \u00bb Gardening",
+      "feed_url": "https://www.houstoniamag.com/home-and-real-estate/gardening/feed",
+      "website_url": "https://www.houstoniamag.com/home-and-real-estate/gardening",
+      "description": "Houstonia is a news, entertainment, and information source as smart, exciting, and vital as the people who call Houston home. Our goal is a signature mix of in-depth news stories, provocative essays, and guides to the best of the city that no Houstonian can live without. Get to know about Houston's most gorgeous gardens, plus tips on how to grow a lush outdoor space, green thumb or not in the gardening blog.",
+      "followers": {
+        "facebook": 74100,
+        "twitter": 43500,
+        "instagram": 121400
+      },
+      "image_url": "https://i1.feedspot.com/5488499.jpg?t=1672921215"
+    },
+    {
+      "title": "Garden Guy Blog",
+      "feed_url": "https://www.garden-guy.com/feed/",
+      "website_url": "https://www.garden-guy.com/blog/",
+      "description": "Garden Guy has been delivering custom residential landscaping that is beautiful, expertly installed, and on a budget since 1991. We've created custom designs all over the Houston area. If you're looking for some direction and tips for your home's landscaping, look no further than the Garden Guy Blog! We're your Texas landscaping resource!",
+      "followers": {
+        "facebook": 5300,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5488503.jpg?t=1674208258"
+    },
+    {
+      "title": "Buchanan's Native Plants Blog",
+      "feed_url": "https://buchanansplants.com/feed/",
+      "website_url": "https://buchanansplants.com/blog/",
+      "description": "Buchanan's Native Plants has been serving Houston gardeners since 1986. Located in historic Houston Heights, the garden center is dedicated to native plants and organic gardening. You will find the best selections of hardy natives as well as perennials, herbs, vegetables, trees, shrubs & roses - all suited to the Houston climate. The blog provides valuable tips, suggestions, and a forum to share ideas about getting the most from your garden.",
+      "followers": {
+        "facebook": 21000,
+        "twitter": 1600,
+        "instagram": 27700
+      },
+      "image_url": "https://i1.feedspot.com/5326103.jpg?t=1632827139"
+    },
+    {
+      "title": "Urban Harvest Blog",
+      "feed_url": "https://www.urbanharvest.org/feed/",
+      "website_url": "https://www.urbanharvest.org/blog/",
+      "description": "Founded in 1994, Urban Harvest has garnered a well-deserved reputation as a leader in the local food movement. We've earned this role by adhering to clear and simple values and a focused vision. Our mission is to cultivate thriving communities through gardening and access to healthy, local food.We are improving the lives, soils, and plates of Houstonians.",
+      "followers": {
+        "facebook": 29600,
+        "twitter": 10000
+      },
+      "image_url": "https://i1.feedspot.com/5488501.jpg?t=1672921225"
+    },
+    {
+      "title": "Rooted Garden Blog",
+      "feed_url": "https://rootedgarden.com/blog?format=rss",
+      "website_url": "https://rootedgarden.com/blog",
+      "description": "Learn to grow an organic raised bed kitchen garden in Houston Texas from the experts at Rooted Garden. Tour some of our most beautiful raised garden bed creations and learn more about organic vegetable gardening in and around Houston. All of us at Rooted Garden harvest delicious food from our gardens every single week of the year.",
+      "followers": {
+        "facebook": 13500,
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/5326076.jpg?t=1674114918"
+    },
+    {
+      "title": "Rusty Dog Gardens Blog",
+      "feed_url": "https://rustydoggardens.com/blogs/habitatathome.atom",
+      "website_url": "https://rustydoggardens.com/blogs/habitatathome",
+      "description": "Rusty Dog Gardens began from my own challenges in finding quality native plants for home landscaping. Originally a small side project, the business grew faster than expected and has transformed many yards into habitats for wildlife. Find tips and advice for gardening in Houston with native plants that build habitats and attract birds and butterflies.",
+      "followers": {
+        "facebook": 786,
+        "instagram": 617
+      },
+      "image_url": "https://i1.feedspot.com/5488498.jpg?t=1672921208"
+    }
+  ]
+}

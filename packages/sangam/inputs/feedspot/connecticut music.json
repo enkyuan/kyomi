@@ -1,0 +1,71 @@
+{
+  "category": "Connecticut Music",
+  "source_url": "https://rss.feedspot.com/connecticut_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "Ariana Strings Blog",
+      "feed_url": "https://www.weddingmusic-ct.com/blog-feed.xml",
+      "website_url": "https://www.weddingmusic-ct.com/blog",
+      "description": "Ariana Strings brings a world-class team of musicians who have performed in over 80 weddings per year together providing high quality, musical experience for all couples by bringing the concert stage to their wedding day. In the blogs, you can find wedding music planning tips for all ceremonies, cocktail hours, and more!",
+      "followers": {
+        "facebook": 506,
+        "twitter": 48,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5313883.jpg?t=1674127167"
+    },
+    {
+      "title": "Hartford Jazz Society Blog",
+      "feed_url": "https://hartfordjazzsociety.com/feed/",
+      "website_url": "https://hartfordjazzsociety.com/blog/",
+      "description": "The blog covers articles on concert reviews, jazz history, Hartford Jazz society news, album reviews, and more. The mission of The Hartford Jazz Society is to cultivate an appreciation of the sound, culture, and love of jazz by presenting a variety of live events and other activities. We strive to accomplish these goals through offering jazz-related performances, activities, education, and support throughout the Greater Hartford community.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 116
+      },
+      "image_url": "https://i1.feedspot.com/5313777.jpg?t=1629372848"
+    },
+    {
+      "title": "My Emu Is Emo",
+      "feed_url": "https://myemuisemo.com/feed/",
+      "website_url": "https://myemuisemo.com/",
+      "description": "Music industry financial analysis and Connecticut music adventures. This is a blog about the New England indie music scene, centered in New Haven, Connecticut.",
+      "followers": {
+        "twitter": 17
+      },
+      "image_url": "https://i1.feedspot.com/5313751.jpg?t=1629370972"
+    },
+    {
+      "title": "CRISIS",
+      "feed_url": "https://crisismusicblog.com/feed/",
+      "website_url": "https://crisismusicblog.com/",
+      "description": "My name is Jennifer and I'm a middle aged music lover. I'm hoping to write about some of the bands I love and shows I'm lucky enough to see.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5313754.jpg?t=1630052422"
+    },
+    {
+      "title": "CT verses",
+      "feed_url": "https://www.ctverses.com/feed/",
+      "website_url": "https://www.ctverses.com/",
+      "description": "CT verses is a music blog focused on local music in Connecticut.",
+      "followers": {
+        "facebook": 691,
+        "twitter": 822,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5313771.jpg?t=1629372449"
+    },
+    {
+      "title": "Neighborhood Music School Blog",
+      "feed_url": "https://nmsnewhaven.org/feed",
+      "website_url": "https://nmsnewhaven.org/blog",
+      "description": "Neighborhood Music School strives to provide the highest quality instruction in music and dance and to make it accessible to people of all ages, backgrounds, economic means, and levels of ability.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 898,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5313785.jpg?t=1629374555"
+    }
+  ]
+}

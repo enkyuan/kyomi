@@ -1,0 +1,521 @@
+{
+  "category": "Daily Express",
+  "source_url": "https://rss.feedspot.com/daily_express_rss_feeds",
+  "feeds": [
+    {
+      "title": "Express \u00bb Conservative Party",
+      "feed_url": "https://feeds.feedburner.com/daily-express-news-showbiz",
+      "website_url": "https://www.express.co.uk/latest/conservative-party/",
+      "description": "The latest UK and international news on Express.co.uk. Featuring all the breaking news stories, political news, opinion and analysis.",
+      "followers": {
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/1858555.jpg?t=1752123974"
+    },
+    {
+      "title": "Daily Express \u00bb World News",
+      "feed_url": "https://feeds.feedburner.com/daily-express-world-news",
+      "website_url": "https://www.express.co.uk/news/world",
+      "description": "Get the latest world news and international news from Express.co.uk including breaking news stories from US, Europe, China and Africa.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/5179351.jpg?t=1686224752"
+    },
+    {
+      "title": "Daily Express \u00bb UK News",
+      "feed_url": "https://www.express.co.uk/posts/rss/1/uk",
+      "website_url": "https://www.express.co.uk/news/uk",
+      "description": "Breaking UK news headlines and stories from around Britain from Express.co.uk. Featuring the latest news stories, features, analysis, videos and pictures.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/5593255.jpg?t=1686224769"
+    },
+    {
+      "title": "Daily Express \u00bb US News",
+      "feed_url": "https://www.express.co.uk/posts/rss/198/us",
+      "website_url": "https://www.express.co.uk/news/us",
+      "description": "Breaking US news headlines and stories. Featuring the latest news stories, features, analysis, videos and pictures.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/5593248.jpg?t=1686224836"
+    },
+    {
+      "title": "Daily Express \u00bb Royals",
+      "feed_url": "https://www.express.co.uk/posts/rss/106/royal",
+      "website_url": "https://www.express.co.uk/news/royal",
+      "description": "Keep up to date with all the latest royal news on Express.co.uk. The latest coverage of all Royal events, the Royal Family and the British Monarchy.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/5593251.jpg?t=1686224213"
+    },
+    {
+      "title": "Daily Express \u00bb Showbiz & TV",
+      "feed_url": "https://www.express.co.uk/posts/rss/152/showbiztv",
+      "website_url": "https://www.express.co.uk/showbiz",
+      "description": "The website's showbiz area provides you with the most recent rumours, news, and updates from the entertainment industry, including information on celebrities, films, TV shows, and other topics.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/5593246.jpg?t=1686224182"
+    },
+    {
+      "title": "Daily Express \u00bb Sport",
+      "feed_url": "https://www.express.co.uk/posts/rss/65/sport",
+      "website_url": "https://www.express.co.uk/sport",
+      "description": "The most up-to-date sporting news, including football news and transfers, cricket, rugby, golf and expert opinion from Express columnists.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/5593245.jpg?t=1686224174"
+    },
+    {
+      "title": "Daily Express \u00bb Football",
+      "feed_url": "https://feeds.feedburner.com/daily-express-football-news",
+      "website_url": "https://www.express.co.uk/sport/football",
+      "description": "Follow all the latest football news on Express.co.uk. Featuring updates on transfer news and rumours, results, upcoming fixtures, stats and more.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/1858555.jpg?t=1686224342"
+    },
+    {
+      "title": "Daily Express \u00bb Comment",
+      "feed_url": "https://www.express.co.uk/posts/rss/16/comment",
+      "website_url": "https://www.express.co.uk/comment",
+      "description": "Comment and views on breaking news from our award-winning team of Daily and Sunday Express columnists. Find all the latest opinion on Express.co.uk.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/5593243.jpg?t=1686224163"
+    },
+    {
+      "title": "Daily Express \u00bb Finance",
+      "feed_url": "https://www.express.co.uk/posts/rss/21/finance",
+      "website_url": "https://www.express.co.uk/finance",
+      "description": "Read all the latest news and information from the world of finance and business. Discover expert coverage and analysis on Express.co.uk.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/5593253.jpg?t=1686224226"
+    },
+    {
+      "title": "Daily Express \u00bb Travel",
+      "feed_url": "https://www.express.co.uk/posts/rss/132/travel",
+      "website_url": "https://www.express.co.uk/travel",
+      "description": "The latest travel news and holiday advice on Express.co.uk. Get our expert advice on city breaks, beach holidays, family and adventure holidays, and cheap deals.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/5593247.jpg?t=1686224187"
+    },
+    {
+      "title": "Daily Express \u00bb Entertainment",
+      "feed_url": "https://www.express.co.uk/posts/rss/18/entertainment",
+      "website_url": "https://www.express.co.uk/entertainment",
+      "description": "Find news, reviews and opinion pieces related to culture and entertainment on Express.co.uk, including the latest news on film, music, books and theatre.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/4926392.jpg?t=1686224727"
+    },
+    {
+      "title": "Daily Express \u00bb Tennis",
+      "feed_url": "https://www.express.co.uk/posts/rss/72/tennis",
+      "website_url": "https://www.express.co.uk/sport/tennis",
+      "description": "Follow all the latest Tennis news on Express.co.uk, including the updates, match highlights and commentary from Grand Slam events, Wimbledon and Davis Cup.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/8536216.jpg"
+    },
+    {
+      "title": "Daily Express \u00bb Lifestyle",
+      "feed_url": "https://www.express.co.uk/posts/rss/8/lifestyle",
+      "website_url": "https://www.express.co.uk/life-style",
+      "description": "All things lifestyle with Express.co.uk. Health, beauty and fashion advice as well as latest news on cars, must-have gadgets and delicious recipes.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/5593244.jpg?t=1686224741"
+    },
+    {
+      "title": "Daily Express \u00bb Nature News",
+      "feed_url": "https://www.express.co.uk/posts/rss/128/nature",
+      "website_url": "https://www.express.co.uk/news/nature",
+      "description": "Follow the latest news on nature, environment, earth, global warming, pollution, animals, birds, climate change, green living and the weather on Express.co.uk.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/5593254.jpg?t=1686224848"
+    },
+    {
+      "title": "Daily Express \u00bb Cricket",
+      "feed_url": "https://www.express.co.uk/posts/rss/68/cricket",
+      "website_url": "https://www.express.co.uk/sport/cricket",
+      "description": "Follow the latest cricket news, analysis, fixtures and results on Express.co.uk. Covering updates on Test matches, T20, County Championship & Indian Premier League.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/8536217.jpg"
+    },
+    {
+      "title": "Daily Express \u00bb History News",
+      "feed_url": "https://www.express.co.uk/posts/rss/141/history",
+      "website_url": "https://www.express.co.uk/news/history",
+      "description": "History articles and features including historical news, analysis, pictures and videos.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/5593258.jpg?t=1686224936"
+    },
+    {
+      "title": "Daily Express \u00bb Science",
+      "feed_url": "https://www.express.co.uk/posts/rss/151/science",
+      "website_url": "https://www.express.co.uk/news/science",
+      "description": "Keep up to date with the latest news about all areas of science with Express.co.uk. Featuring the latest science news headlines, new discoveries & scientific analysis.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/5593256.jpg?t=1753687937"
+    },
+    {
+      "title": "Daily Express \u00bb Food",
+      "feed_url": "https://www.express.co.uk/posts/rss/14/food",
+      "website_url": "https://www.express.co.uk/life-style/food",
+      "description": "Discover the latest news about food and drink on Express.co.uk. Covering healthy eating tips, recipes, the latest food trends and restaurant reviews.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/5593257.jpg?t=1686225067"
+    },
+    {
+      "title": "Daily Express \u00bb Cars",
+      "feed_url": "https://www.express.co.uk/posts/rss/24/cars",
+      "website_url": "https://www.express.co.uk/life-style/cars",
+      "description": "Keep up to date with car news with Express.co.uk. Featuring the latest motoring industry news, model reveals, reviews, deals, videos and more.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/5584946.jpg?t=1686224967"
+    },
+    {
+      "title": "Daily Express \u00bb Tech",
+      "feed_url": "https://www.express.co.uk/posts/rss/59/tech",
+      "website_url": "https://www.express.co.uk/life-style/science-technology",
+      "description": "Keep up to date with the latest technology news and gadgets on Express.co.uk. Featuring news and reviews on the hottest gadgets and trends.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/5593252.jpg?t=1686224980"
+    },
+    {
+      "title": "Daily Express \u00bb F1",
+      "feed_url": "https://www.express.co.uk/posts/rss/73/f1",
+      "website_url": "https://www.express.co.uk/sport/f1-autosport",
+      "description": "Follow all the latest Formula 1 news on Express.co.uk. Find all the latest race details, F1 team updates, results, opinion and more.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/8536213.jpg"
+    },
+    {
+      "title": "Daily Express \u00bb Health",
+      "feed_url": "https://www.express.co.uk/posts/rss/11/health",
+      "website_url": "https://www.express.co.uk/life-style/health",
+      "description": "Find the latest health news and advice on diets, fitness, eating and improving your mental health on Express.co.uk. Look good and feel great!",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/5593250.jpg?t=1686224992"
+    },
+    {
+      "title": "Daily Express \u00bb Diets",
+      "feed_url": "https://www.express.co.uk/posts/rss/126/diets",
+      "website_url": "https://www.express.co.uk/life-style/diets",
+      "description": "Find all the latest news about diet and nutrition from Express.co.uk. Covering the latest stories on diet, fitness, weight loss, health and food.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/5593242.jpg?t=1686225004"
+    },
+    {
+      "title": "Daily Express \u00bb Gaming",
+      "feed_url": "https://www.express.co.uk/posts/rss/143/gaming",
+      "website_url": "https://www.express.co.uk/entertainment/gaming",
+      "description": "All the latest video game and console news, walkthroughs and reviews on Express.co.uk. Featuring the latest news on PC Games, Xbox Games, PS5 Games & more.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/5593249.jpg?t=1753789987"
+    },
+    {
+      "title": "Daily Express \u00bb Music",
+      "feed_url": "https://feeds.feedburner.com/daily-express-music-news",
+      "website_url": "https://www.express.co.uk/entertainment/music",
+      "description": "Keep up to date with music news on Express.co.uk. The latest in the music industry, big interviews from your favourite artists & our reviews of new album releases.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/5179364.jpg?t=1686225025"
+    },
+    {
+      "title": "Daily Express \u00bb Books",
+      "feed_url": "https://www.express.co.uk/posts/rss/39/books",
+      "website_url": "https://www.express.co.uk/entertainment/books",
+      "description": "Find the latest books news and reviews on Express.co.uk. Discover new book releases from your favourite authors and reviews of the best-selling novels.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/5593260.jpg?t=1686225038"
+    },
+    {
+      "title": "Daily Express \u00bb Property",
+      "feed_url": "https://www.express.co.uk/posts/rss/51/property",
+      "website_url": "https://www.express.co.uk/life-style/property",
+      "description": "The latest property news on Express.co.uk including news and advice on the property market, house prices, mortgages, insurance and property tips for your home.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/5593259.jpg?t=1686225049"
+    },
+    {
+      "title": "Daily Express \u00bb UFC",
+      "feed_url": "https://www.express.co.uk/posts/rss/167/ufc",
+      "website_url": "https://www.express.co.uk/sport/ufc",
+      "description": "Follow all the UFC news on Express.co.uk, including rumours on upcoming fights, results, fixtures, stats, videos and pictures.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/8536225.jpg"
+    },
+    {
+      "title": "Daily Express \u00bb Rugby",
+      "feed_url": "https://www.express.co.uk/posts/rss/69/rugby",
+      "website_url": "https://www.express.co.uk/sport/rugby-union",
+      "description": "Follow all the latest rugby union breaking news on Express.co.uk. Featuring live scores, stories, results, match reports, rugby statistics and more.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/8536226.jpg"
+    },
+    {
+      "title": "Daily Express \u00bb Boxing",
+      "feed_url": "https://www.express.co.uk/posts/rss/102/boxing",
+      "website_url": "https://www.express.co.uk/sport/boxing",
+      "description": "Follow the latest boxing news on Express.co.uk including coverage about upcoming boxing fights, results, fixtures, reports and post-fight opinion.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/8536224.jpg"
+    },
+    {
+      "title": "Daily Express \u00bb Personal Finance",
+      "feed_url": "https://feeds.feedburner.com/daily-express-personal-finance-news",
+      "website_url": "https://www.express.co.uk/finance/personalfinance",
+      "description": "Keep up to date with the latest personal finance news on Express.co.uk. Find out more about savings, mortgages, loans, credit cards, insurance and more.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/1858555.jpg?t=1686224342"
+    },
+    {
+      "title": "Daily Express \u00bb Theatre",
+      "feed_url": "https://www.express.co.uk/posts/rss/38/theatre",
+      "website_url": "https://www.express.co.uk/entertainment/theatre",
+      "description": "Keep up to date with theatre news on Express.co.uk, including show announcements, latest musicals and stage shows, ticket information and theatre reviews.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/8536223.jpg"
+    },
+    {
+      "title": "Daily Express \u00bb Films",
+      "feed_url": "https://feeds.feedburner.com/daily-express-film-news",
+      "website_url": "https://www.express.co.uk/entertainment/films",
+      "description": "Keep up to date with the latest film news on Express.co.uk. Featuring new film and cinema releases, trailers, reviews and more.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/1858555.jpg?t=1686224342"
+    },
+    {
+      "title": "Daily Express \u00bb Celebrity",
+      "feed_url": "https://www.express.co.uk/posts/rss/79/celebritynews",
+      "website_url": "https://www.express.co.uk/celebrity-news",
+      "description": "Keep up to date with all the latest celebrity and showbiz news, gossip, photos, and videos. Since 1900 the Express has been at the forefront of the news, and a fundamental part of the fabric of British life, crusading for truth and dignity and bringing millions of readers informed coverage of the most important world events in both print and online.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/1858555.jpg?t=1686224342"
+    },
+    {
+      "title": "Daily Express \u00bb TV & Radio",
+      "feed_url": "https://www.express.co.uk/posts/rss/20/tvradio",
+      "website_url": "https://www.express.co.uk/showbiz/tv-radio",
+      "description": "Keep up to date with the latest TV & radio news with Express.co.uk. Featuring news on upcoming TV show releases, reviews, gossip and more.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/8536221.jpg"
+    },
+    {
+      "title": "Daily Express \u00bb Weird",
+      "feed_url": "https://www.express.co.uk/posts/rss/80/weird",
+      "website_url": "https://www.express.co.uk/news/weird",
+      "description": "Follow the latest weird news headlines on Express.co.uk. Featuring the wackiest and most bizarre weird news stories from around the world.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/8536215.jpg"
+    },
+    {
+      "title": "Daily Express \u00bb Weather",
+      "feed_url": "https://www.express.co.uk/posts/rss/153/weather",
+      "website_url": "https://www.express.co.uk/news/weather",
+      "description": "Keep up to date with the latest weather forecast in the UK wiith Daily Express. 7 day, 10 day and 14 day forecast available for your local region.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/8536214.jpg"
+    },
+    {
+      "title": "Daily Express \u00bb Politics",
+      "feed_url": "https://www.express.co.uk/posts/rss/139/politics",
+      "website_url": "https://www.express.co.uk/news/politics",
+      "description": "Follow the latest politics news, politics comment and analysis on Express.co.uk. Featuring breaking stories and coverage in UK and international politics.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/8536212.jpg"
+    },
+    {
+      "title": "Daily Express \u00bb Style",
+      "feed_url": "https://www.express.co.uk/posts/rss/12/style",
+      "website_url": "https://www.express.co.uk/life-style/style",
+      "description": "Keep up to date with fashion news on Express.co.uk. All things style, fashion tips, the latest trends, celebrity style and beauty news.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/8536222.jpg"
+    },
+    {
+      "title": "Daily Express \u00bb Garden",
+      "feed_url": "https://www.express.co.uk/posts/rss/13/garden",
+      "website_url": "https://www.express.co.uk/life-style/garden",
+      "description": "Find all the latest gardening news and inspiration on Express.co.uk. Featuring useful tips and advice from gardening expert, Alan Titchmarsh.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/8536220.jpg"
+    },
+    {
+      "title": "Daily Express \u00bb NBA",
+      "feed_url": "https://www.express.co.uk/posts/rss/170/nba",
+      "website_url": "https://www.express.co.uk/sport/nba",
+      "description": "NBA basketball news, latest scores, stats, standings, rankings, fantasy games and projections from Express.co.uk",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/8536219.jpg"
+    },
+    {
+      "title": "Daily Express \u00bb NFL",
+      "feed_url": "https://www.express.co.uk/posts/rss/172/nfl",
+      "website_url": "https://www.express.co.uk/sport/nfl",
+      "description": "Keep up to date with the latest NFL football news. Find out the latest scores, player stats, standings and predictions from Express.co.uk",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/8536218.jpg"
+    }
+  ]
+}

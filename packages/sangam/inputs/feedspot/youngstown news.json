@@ -1,0 +1,63 @@
+{
+  "category": "Youngstown News",
+  "source_url": "https://rss.feedspot.com/youngstown_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "WKBN 27 First News",
+      "feed_url": "https://www.wkbn.com/feed/",
+      "website_url": "https://www.wkbn.com/",
+      "description": "Covering Local news, weather, and sports in Youngstown, wkbn.com is an established online news source for the Youngstown, Ohio area. WKBN-TV is the CBS affiliate and offers the most efficient and accurate local news and sports coverage in the area. Discover additional news articles and content online.",
+      "followers": {
+        "facebook": 170700,
+        "twitter": 20800,
+        "instagram": 15000
+      },
+      "image_url": "https://i1.feedspot.com/5132185.jpg?t=1670561617"
+    },
+    {
+      "title": "WYTV",
+      "feed_url": "https://www.wytv.com/feed/",
+      "website_url": "https://www.wytv.com/",
+      "description": "Local news, business, sports, events and latest updates from WYTV channel in Youngstown, Ohio.",
+      "followers": {
+        "facebook": 24900,
+        "twitter": 7300,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5132192.jpg?t=1670561634"
+    },
+    {
+      "title": "Business Journal Daily",
+      "feed_url": "https://businessjournaldaily.com/feed/",
+      "website_url": "https://businessjournaldaily.com/",
+      "description": "Since 1984, The Business Journal has built upon its foundation as the top resource to business and community leaders by promoting the growth of business and industry throughout Mahoning, Youngstown and Columbiana counties in Ohio.",
+      "followers": {
+        "facebook": 20600,
+        "twitter": 4500,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5132187.jpg?t=1631789505"
+    },
+    {
+      "title": "Metro Monthly",
+      "feed_url": "http://www.metromonthly.net/feed/",
+      "website_url": "https://www.metromonthly.net/",
+      "description": "News, features and events for Youngstown-Warren, Ohio.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 913
+      },
+      "image_url": "https://i1.feedspot.com/5132191.jpg?t=1623161316"
+    },
+    {
+      "title": "Mahoning Matters",
+      "feed_url": "https://feeds.mcclatchy.com/mahoningmatters/stories",
+      "description": "Read the latest news from Youngstown Ohio and the Mahoning County area. Get updates on local entertainment, schools, business, politics, aswell as Lifestyle tips, Obituaries, and more. Mahoning Matters is a civic-minded community news source for the city of Youngstown and the Mahoning Valley.",
+      "followers": {
+        "facebook": 18300,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5465774.jpg?t=1668688032"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "category": "Thyroid Cancer",
+  "source_url": "https://rss.feedspot.com/thyroid_cancer_rss_feeds",
+  "feeds": [
+    {
+      "title": "American Thyroid Association",
+      "feed_url": "https://www.thyroid.org/feed/",
+      "website_url": "https://www.thyroid.org/media-main/",
+      "description": "The ATA is the leading organization devoted to thyroid biology and the prevention and treatment of thyroid disease through excellence in research, clinical care, education, and public health.",
+      "followers": {
+        "facebook": 35800,
+        "twitter": 10200,
+        "instagram": 6200
+      },
+      "image_url": "https://i1.feedspot.com/4888061.jpg?t=1655876922"
+    },
+    {
+      "title": "Anna's Lipstick Journey",
+      "feed_url": "https://lipstick-journey.com/feed/",
+      "website_url": "https://lipstick-journey.com/",
+      "description": "Anna is a three times cancer survivor and fighting again. In this blog, she shares her journey through thyroid cancer.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4887516.jpg?t=1612532296"
+    },
+    {
+      "title": "Losing the Butterfly",
+      "feed_url": "http://losingthebutterfly.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://losingthebutterfly.blogspot.com/",
+      "description": "I'm writing about my journey through thyroid cancer and beyond. I'm going to try to incorporate humor and positive self-reflection in an attempt to help myself heal and perhaps help others deal with this situation.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4887564.jpg?t=1612533233"
+    },
+    {
+      "title": "Life Without a Thyroid",
+      "feed_url": "https://www.lifewithoutathyroid.com/feed/",
+      "website_url": "https://www.lifewithoutathyroid.com/",
+      "description": "The thyroid cancer survivor shares her story about her life without a thyroid.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4888186.jpg?t=1612533194"
+    },
+    {
+      "title": "The Thyroid Survivor Network Blog",
+      "feed_url": "https://www.thyroidsurvivornetwork.com/blog-feed.xml",
+      "website_url": "https://www.thyroidsurvivornetwork.com/blog",
+      "description": "The Thyroid Survivor Network empowers survivors of thyroid disease and thyroid cancer to take control of their health and become their own advocates.",
+      "followers": {
+        "facebook": 24400,
+        "twitter": 40700
+      },
+      "image_url": "https://i1.feedspot.com/4854831.jpg?t=1612532320"
+    },
+    {
+      "title": "Because Its Not The Good Cancer",
+      "feed_url": "https://becauseitsnotthegoodcancer.wordpress.com/feed/",
+      "website_url": "https://becauseitsnotthegoodcancer.wordpress.com/",
+      "description": "The thyroid cancer survivor shares her journey with Metastatic Papillary Thyroid Cancer through this blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4888142.jpg?t=1612532954"
+    }
+  ]
+}

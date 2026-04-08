@@ -1,0 +1,64 @@
+{
+  "category": "Columbia News",
+  "source_url": "https://rss.feedspot.com/columbia_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "WLTX.com",
+      "feed_url": "http://rssfeeds.wltx.com/wltx/topstories",
+      "website_url": "https://www.wltx.com/",
+      "description": "WLTX 19 provides Columbia's leading local news, weather information, traffic, sports and more from WLTX 19.",
+      "followers": {
+        "facebook": 722500,
+        "twitter": 132300,
+        "instagram": 55300
+      },
+      "image_url": "https://i1.feedspot.com/4217344.jpg?t=1586421489"
+    },
+    {
+      "title": "Free Times",
+      "feed_url": "https://www.postandcourier.com/search/?f=rss&t=article&c=free-times&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.postandcourier.com/free-times/",
+      "description": "Free Times is Columbia, SC's alternative weekly newspaper since 1987 covering news, politics, arts and entertainment, business, opinion and more.",
+      "followers": {
+        "facebook": 6,
+        "twitter": 46,
+        "instagram": 17800
+      },
+      "image_url": "https://i1.feedspot.com/5135637.jpg?t=1586421361"
+    },
+    {
+      "title": "ABC Columbia",
+      "feed_url": "https://www.abccolumbia.com/feed/",
+      "website_url": "https://www.abccolumbia.com/",
+      "description": "ABC Columbia is serving as Columbia's innovative television station since 1953. Follow the website to get the latest news, top stories, weather information and sports from ABC Columbia.",
+      "followers": {
+        "facebook": 51400,
+        "twitter": 26800,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5130905.jpg?t=1586423155"
+    },
+    {
+      "title": "Columbia Star",
+      "feed_url": "https://www.thecolumbiastar.com/category/news/feed/",
+      "website_url": "https://www.thecolumbiastar.com/",
+      "description": "Columbia's locally owned weekly newspaper since 1963. Read the latest news and stay up to date on topics such as politics, business, sports, education, arts and entertainment, and more.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5135624.jpg?t=1586327061"
+    },
+    {
+      "title": "The State",
+      "feed_url": "https://feeds.mcclatchy.com/thestate/sections/news/stories",
+      "website_url": "https://columbiabusinessreport.com/",
+      "description": "The State provides the latest news, crime reports, business, politics, sports, government, in addition to features, opinion, and obituaries from South Carolina's capital city.",
+      "followers": {
+        "facebook": 202700,
+        "twitter": 111600
+      },
+      "image_url": "https://i1.feedspot.com/5135615.jpg?t=1586421078"
+    }
+  ]
+}

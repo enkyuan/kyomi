@@ -1,0 +1,18 @@
+{
+  "category": "DXC Technology",
+  "source_url": "https://rss.feedspot.com/dxc_technology_rss_feeds",
+  "feeds": [
+    {
+      "title": "DXC Technology Investor News",
+      "feed_url": "https://investors.dxc.com/rss/pressrelease.aspx",
+      "website_url": "https://investors.dxc.com/investor-news/default.aspx",
+      "description": "We deliver the latest company news, statements, collaborations, and announcements for our Investors. DXC Technology is a company that helps global companies run their mission-critical systems and operations while modernizing IT, optimizing data architectures, and ensuring security and scalability across public, private, and hybrid clouds.",
+      "followers": {
+        "facebook": 138500,
+        "twitter": 39400,
+        "instagram": 41800
+      },
+      "image_url": "https://i1.feedspot.com/5437862.jpg?t=1662106449"
+    }
+  ]
+}

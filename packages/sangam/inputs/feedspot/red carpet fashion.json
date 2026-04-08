@@ -1,0 +1,54 @@
+{
+  "category": "Red Carpet Fashion",
+  "source_url": "https://rss.feedspot.com/red_carpet_fashion_rss_feeds",
+  "feeds": [
+    {
+      "title": "Red Carpet Ready by Christina",
+      "feed_url": "https://redcarpetreadybychristina.ca/blogs/feed/",
+      "website_url": "https://redcarpetreadybychristina.ca/blogs/",
+      "description": "The author Christina Petry is specializing in Makeup, Hair & Styling, with extensive experience in Special Events, Weddings, Editorials, Print, TV & Film. An expert in all things Glam!",
+      "followers": {
+        "facebook": 993,
+        "twitter": 291,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/5022638.jpg?t=1622294566"
+    },
+    {
+      "title": "The Fashion Tag Blog",
+      "feed_url": "https://thefashiontag.com/feed/",
+      "website_url": "https://thefashiontag.com/feed/",
+      "description": "Get fashion Insights, Style Crushes, Trends, How To's Beauty Tips, Looks, Catwalk Shows Cover stories, style icons, red carpet looks, product & events reviews.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 1300,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5022615.jpg?t=1622294570"
+    },
+    {
+      "title": "Red Carpet Fashion Awards Blog",
+      "feed_url": "https://www.redcarpet-fashionawards.com/category/blog/feed/",
+      "website_url": "https://www.redcarpet-fashionawards.com/",
+      "description": "Red Carpet Fashion Awards is a celebrity fashion website that chronicles the ensembles from runways and red carpet events around the world.",
+      "followers": {
+        "facebook": 384200,
+        "twitter": 146800,
+        "instagram": 148300
+      },
+      "image_url": "https://i1.feedspot.com/5022599.jpg?t=1622294553"
+    },
+    {
+      "title": "Tom Lorenzo",
+      "feed_url": "https://tomandlorenzo.com/category/fashion/feed/",
+      "website_url": "https://tomandlorenzo.com/category/red-carpet/",
+      "description": "The fabulous, funny & opinionated place for the red carpet, runway, celebrity, television, costume, and film commentary, for over 10 years.",
+      "followers": {
+        "facebook": 28700,
+        "twitter": 86200,
+        "instagram": 15600
+      },
+      "image_url": "https://i1.feedspot.com/4861536.jpg?t=1622294559"
+    }
+  ]
+}

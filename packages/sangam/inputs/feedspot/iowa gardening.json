@@ -1,0 +1,90 @@
+{
+  "category": "Iowa Gardening",
+  "source_url": "https://rss.feedspot.com/iowa_gardening_rss_feeds",
+  "feeds": [
+    {
+      "title": "Garden Gate Magazine",
+      "feed_url": "https://www.gardengatemagazine.com/.rss/latest/?headlines",
+      "website_url": "https://www.gardengatemagazine.com/",
+      "description": "Inspiration and practical tips to help you grow a better garden. Garden Gate can turn any thumb green! Grab your trowel and step into your garden geared with the freshest techniques, design ideas and plant info!",
+      "followers": {
+        "facebook": 73600,
+        "twitter": 1200,
+        "instagram": 52800
+      },
+      "image_url": "https://i1.feedspot.com/5314778.jpg?t=1652099914"
+    },
+    {
+      "title": "Ted Lare",
+      "feed_url": "https://tedsgardens.com/feed/",
+      "website_url": "https://tedsgardens.com/the-ted-lare-look/",
+      "description": "Inspiration can come in many forms, covering wide topics. To better suit your interests, we have developed three distinct blogs that focus on Landscaping, Gardening, and Houseplants. Ted Lare Design Build and Garden Center has installed beautiful eye-catching landscapes in the Des Moines area for over 36 years.",
+      "followers": {
+        "facebook": 15800,
+        "twitter": 115,
+        "instagram": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5314806.jpg?t=1629717721"
+    },
+    {
+      "title": "Garden Fancy",
+      "feed_url": "https://gardenfancy.blogspot.com/feeds/posts/default",
+      "website_url": "http://gardenfancy.blogspot.com/",
+      "description": "I'm Beth. I'm not a professional gardener or an expert on anything, but I am captivated by beautiful gardens and would like to share with readers my own gardens and how they change over time as I experiment with new plants and become a more experienced gardener.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5125439.jpg?t=1631693427"
+    },
+    {
+      "title": "CRgardenJoe's Blog",
+      "feed_url": "https://crgardenjoe.wordpress.com/feed/",
+      "website_url": "https://crgardenjoe.wordpress.com/",
+      "description": "My name is Joe Sheller, and I'm an Associate Professor at Mount Mercy University in Cedar Rapids, Iowa. I love to garden and often find my mind wandering when I'm pondering weeds or flowers. This blog is a pretty random mix of those thoughts, some on gardening, many on life in general.",
+      "followers": {
+        "twitter": 296
+      },
+      "image_url": "https://i1.feedspot.com/5314775.jpg?t=1629714695"
+    },
+    {
+      "title": "Blooms Garden Center & Gift Shop Blog",
+      "feed_url": "https://bloomsgardencenter.com/feed/",
+      "website_url": "https://bloomsgardencenter.com/blog/",
+      "description": "A Beautiful Place for Plants and Home/Garden Decor. Opened in 2017 as an extension of BladeWorks Landscaping. We carry a wide variety of annuals, perennials, trees and shrubs as well as unique home decor and gifts.",
+      "followers": {
+        "facebook": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5314767.jpg?t=1629714359"
+    },
+    {
+      "title": "Wyse Guide \u00bb Gardening",
+      "feed_url": "https://www.wyseguide.com/category/gardening/feed/",
+      "website_url": "https://www.wyseguide.com/category/gardening/",
+      "description": "Hey there! I'm Kaleb and it's my goal to teach you how to garden and preserve, one story at a time!",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 1200,
+        "instagram": 505900
+      },
+      "image_url": "https://i1.feedspot.com/5314764.jpg?t=1629713185"
+    },
+    {
+      "title": "Miss Smarty Plants Blog",
+      "feed_url": "https://feeds.feedburner.com/MissSmartyPlants",
+      "website_url": "https://misssmartyplants.com/",
+      "description": "If you love gardening, plants, and trying new outdoor projects then you have come to the right place! This garden blog aims to inspire and educate gardeners with thoughtful tips and projects for any garden.",
+      "followers": {
+        "twitter": 718
+      },
+      "image_url": "https://i1.feedspot.com/4457162.jpg?t=1626177627"
+    },
+    {
+      "title": "Capital Landscaping",
+      "feed_url": "https://capitallandscaping.com/feed/",
+      "website_url": "https://capitallandscaping.com/articles/",
+      "description": "Get tips and tricks from the experts on a variety of topics, including watering, aerating, weeding, retaining walls, and more. Capital Landscaping is your one-stop shop for landscaping and outdoor living needs in Des Moines, Iowa.",
+      "followers": {
+        "facebook": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5314812.jpg?t=1629718108"
+    }
+  ]
+}

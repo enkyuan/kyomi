@@ -1,0 +1,32 @@
+{
+  "category": "Utah Accounting",
+  "source_url": "https://rss.feedspot.com/utah_accounting_rss_feeds",
+  "feeds": [
+    {
+      "title": "CMP Blog",
+      "feed_url": "https://blog.cmp.cpa/rss.xml",
+      "website_url": "https://blog.cmp.cpa/all",
+      "description": "The CMP blog features expert advice and current news about accounting, tax and various facets of financial management.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7276524.jpg?t=1710828584"
+    },
+    {
+      "title": "Utah Real Estate Accountants Blog",
+      "feed_url": "https://utahrealestateaccountant.com/blog/f.atom",
+      "website_url": "https://utahrealestateaccountant.com/blog/",
+      "description": "Utah Real Estate Accountants combine more than 30 years of experience with the latest accounting technology to provide world-class bookkeeping, tax strategy, tax preparation, and IRS audit representation services for Real Estate Professionals and Investors nationwide.Backed by 30+ years of industry experience, we specialize in tailored bookkeeping services, tax preparation, and tax planning services for real estate investors.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7276523.jpg?t=1710828624"
+    },
+    {
+      "title": "Klingler & Associates Blog",
+      "feed_url": "https://klinglercpa.com/feed/",
+      "website_url": "https://klinglercpa.com/blog/",
+      "description": "Klingler & Associates firm specializes in small business and corporate tax, working with business owners to compile and understand how to use their company's financial and accounting data to maximize profits and minimize tax burden. We also prepare personal taxes. Stop by here to read more and learn about some basic things you can do to improve your financial situation. From serious savings to tax tips, we can help!",
+      "followers": {
+        "facebook": 440
+      },
+      "image_url": "https://i1.feedspot.com/7276526.jpg?t=1710828433"
+    }
+  ]
+}

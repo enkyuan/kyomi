@@ -1,0 +1,74 @@
+{
+  "category": "Fiat",
+  "source_url": "https://rss.feedspot.com/fiat_rss_feeds",
+  "feeds": [
+    {
+      "title": "Fiat 500 USA",
+      "feed_url": "https://feeds.feedburner.com/Fiat500USA",
+      "website_url": "https://www.fiat500usa.com/",
+      "description": "Fiat 500 USA is the unofficial blog of the Fiat 500. This blog keeps people up to date on the latest Fiat 500 news in the USA. It's run by Chris, a long-time Italian car owner, and enthusiast.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/309327.jpg?t=1609575341"
+    },
+    {
+      "title": "Fiat Group's World",
+      "feed_url": "https://fiatgroupworld.com/feed/",
+      "website_url": "https://fiatgroupworld.com/",
+      "description": "Fiat Group's World is a Non-Official site for Fiat Chrysler Automobiles. Find Global trends, market research and data analysis of Fiat Group.",
+      "followers": {
+        "twitter": 20100
+      },
+      "image_url": "https://i1.feedspot.com/4917972.jpg?t=1620630551"
+    },
+    {
+      "title": "Auto Express \u00bb Fiat",
+      "feed_url": "https://www.autoexpress.co.uk/fiat/feed",
+      "website_url": "https://www.autoexpress.co.uk/fiat",
+      "description": "Auto Express is the UK's favorite weekly car magazine. Find Fiat new and Used Car Reviews, News & Advice and in-depth video reviews.",
+      "followers": {
+        "facebook": 113200,
+        "twitter": 145900
+      },
+      "image_url": "https://i1.feedspot.com/4918065.jpg?t=1620630582"
+    },
+    {
+      "title": "Objects in the mirror",
+      "feed_url": "https://blog.fcanorthamerica.com/feed/",
+      "website_url": "https://blog.stellantisnorthamerica.com/category/fiat/",
+      "description": "Objects in the mirror is run by the FCA Digital Media team. We'll bring you an insider's access to the stories, people, places and events within FCA.",
+      "followers": {
+        "facebook": 9,
+        "twitter": 19,
+        "instagram": 587
+      },
+      "image_url": "https://i1.feedspot.com/4918253.jpg?t=1620630533"
+    },
+    {
+      "title": "Autoblog \u00bb Fiat",
+      "feed_url": "https://www.autoblog.com/category/fiat/rss.xml",
+      "website_url": "https://www.autoblog.com/fiat/",
+      "description": "Autoblog brings you car news; expert reviews of cars, trucks, crossovers, and SUVs; and pictures and video. Get FIAT news, press releases and expert reviews along with detailed photos, spy shots and road tests of new FIAT vehicles.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 449300,
+        "instagram": 165900
+      },
+      "image_url": "https://i1.feedspot.com/4918060.jpg?t=1620630546"
+    },
+    {
+      "title": "FCA",
+      "feed_url": "https://media.fcanorthamerica.com/rss.do",
+      "website_url": "https://media.stellantisnorthamerica.com/homepage.do",
+      "description": "Fiat Chrysler Automobiles page covering FCA brands, including Chrysler, Jeep, Dodge, Ram Truck, FIAT, Alfa Romeo & Mopar brands.",
+      "followers": {
+        "facebook": 9,
+        "twitter": 19,
+        "instagram": 587
+      },
+      "image_url": "https://i1.feedspot.com/4918042.jpg?t=1620630556"
+    }
+  ]
+}

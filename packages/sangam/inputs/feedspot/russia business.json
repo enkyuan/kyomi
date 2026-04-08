@@ -1,0 +1,47 @@
+{
+  "category": "Russia Business",
+  "source_url": "https://rss.feedspot.com/russia_business_rss_feeds",
+  "feeds": [
+    {
+      "title": "Financial Times \u00bb Russian business & finance",
+      "feed_url": "https://www.ft.com/russia-business-finance?format=rss",
+      "website_url": "https://www.ft.com/russia-business-finance",
+      "description": "News, analysis, and comment from the Financial Times, the world's leading global business publication.",
+      "followers": {
+        "twitter": 7400000
+      },
+      "image_url": "https://i1.feedspot.com/5341274.jpg?t=1636516458"
+    },
+    {
+      "title": "Awara Blog",
+      "feed_url": "https://www.awaragroup.com/feed/",
+      "website_url": "https://www.awaragroup.com/blog/",
+      "description": "Awara is a leading business administration services provider on the Russian market, serving international and local organizations and individual entrepreneurs. Our services comprise a wide array of advisory packages for strategic business development, establishment and investment, and more.",
+      "followers": {
+        "facebook": 701,
+        "twitter": 85
+      },
+      "image_url": "https://i1.feedspot.com/5331369.jpg?t=1674650233"
+    },
+    {
+      "title": "Russia Today \u00bb Business News",
+      "feed_url": "https://www.rt.com/rss/business/",
+      "website_url": "https://www.rt.com/business/",
+      "description": "Business life in Russia and around the world. Most recent news, articles, videos and commentaries.",
+      "followers": {
+        "twitter": 3300000
+      },
+      "image_url": "https://i1.feedspot.com/5185507.jpg?t=1742208778"
+    },
+    {
+      "title": "Outsourcing Solutions Blog",
+      "feed_url": "https://rusoutsourcing.com/rss.xml",
+      "website_url": "https://rusoutsourcing.com/blog",
+      "description": "Outsourcing Solutions is a consulting company in Russia that provides professional services in accounting and bookkeeping, payroll, tax compliance, company formation in Russia, corporate law, HR-administration, and consulting. Our clients include International and local companies, working in different business fields in Russi",
+      "followers": {
+        "facebook": 67
+      },
+      "image_url": "https://i1.feedspot.com/5499764.jpg?t=1674650403"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "category": "UK Simple Living",
+  "source_url": "https://rss.feedspot.com/uk_simple_living_rss_feeds",
+  "feeds": [
+    {
+      "title": "Gypsy Soul Blog",
+      "feed_url": "http://www.gypsysoul.co.uk/feed/",
+      "website_url": "https://www.gypsysoul.co.uk/blog/",
+      "description": "Gypsy Soul is perfect for anyone who is trying to live a more simple, thrifty & sustainable lifestyle. Join us on our mission to lead happier, healthier lives.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 13500
+      },
+      "image_url": "https://i1.feedspot.com/4802115.jpg?t=1610104761"
+    },
+    {
+      "title": "A Considered Life",
+      "feed_url": "https://www.aconsideredlife.co.uk/feeds/posts/default?alt=rss",
+      "website_url": "https://www.aconsideredlife.co.uk/",
+      "description": "Hello, I'm Sophie! Welcome to A Considered Life, a UK-based simple living blog focused on sustainable style, eco habits, and slow travel. I write about the ways we can simplify our lives in order to be kinder to the planet and ourselves.",
+      "followers": {
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4907177.jpg?t=1674192886"
+    },
+    {
+      "title": "Family budgeting Blog",
+      "feed_url": "https://family-budgeting.co.uk/category/blog/feed/",
+      "website_url": "https://family-budgeting.co.uk/category/blog/",
+      "description": "Top UK parenting blog written by Becky Goddard Hill award winning thrifty blogger, It covers all aspects of frugal family life. My blog is full of ideas for living creatively as a family on a budget.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 16500,
+        "instagram": 8900
+      },
+      "image_url": "https://i1.feedspot.com/4801846.jpg?t=1610104743"
+    },
+    {
+      "title": "Simple Living In Somerset",
+      "feed_url": "https://simplelivingsomerset.wordpress.com/feed/",
+      "website_url": "https://simplelivingsomerset.wordpress.com/",
+      "description": "Breaking free of the rat race and living intentionally",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4907803.jpg?t=1614001570"
+    },
+    {
+      "title": "Shoestring Cottage",
+      "feed_url": "https://www.shoestringcottage.com/feed/",
+      "website_url": "https://www.shoestringcottage.com/",
+      "description": "Covers frugal tips and ideas. At Shoestring Cottage Jane aims to show you that you can live a good and happy life on less than you think, you can get off the consumer treadmill and you can live more simply and healthily and not feel deprived.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4587987.jpg?t=1605264730"
+    },
+    {
+      "title": "The Cottage at the End of a Lane",
+      "feed_url": "https://attheendofasuffolklane.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://attheendofasuffolklane.blogspot.com/",
+      "description": "In 2017 we moved to a cottage at the end of a lane in Mid Suffolk where we will enjoy the peace and quiet of the countryside for as long as possible.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4801856.jpg?t=1610105711"
+    },
+    {
+      "title": "Balance Through Simplicity Blog",
+      "feed_url": "https://feeds.feedburner.com/BalanceThroughSimplicity",
+      "website_url": "https://balancethroughsimplicity.com/blog/",
+      "description": "Practical inspiration to declutter your home, simplify your life and create space and time for what really matters to you. Blog, courses and resources.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 147,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/5143242.jpg?t=1614001516"
+    },
+    {
+      "title": "Simply Shine Blog",
+      "feed_url": "https://simply-shine.co.uk/feed",
+      "website_url": "https://simply-shine.co.uk/blog",
+      "description": "I am passionate about self-development, finding a healthy balance and shining bright. I started reading about the subject, making changes in my life and now I blog about it to inspire others to do the same. If you wish to read about calm mornings, having time to do what you enjoy and knowing what to focus on in your day to day, then this is the place to be.",
+      "followers": {
+        "facebook": 435
+      },
+      "image_url": "https://i1.feedspot.com/4907850.jpg?t=1614001527"
+    },
+    {
+      "title": "Geoffrey & Grace",
+      "feed_url": "https://geoffreyandgrace.com/articles?format=rss",
+      "website_url": "https://geoffreyandgrace.com/",
+      "description": "Geoffrey & Grace focuses on being wholehearted with all our moments.Topics cover motherhood, slow living, well-being, creativity, yoga and mindfulness.",
+      "followers": {
+        "facebook": 845,
+        "twitter": 1400,
+        "instagram": 34700
+      },
+      "image_url": "https://i1.feedspot.com/4907819.jpg?t=1614001531"
+    },
+    {
+      "title": "Littlegreenshed Blog",
+      "feed_url": "https://www.littlegreenshedblog.co.uk/feed/",
+      "website_url": "https://www.littlegreenshedblog.co.uk/blog",
+      "description": "Littlegreenshed is a UK Lifestyle & Travel Blog written by Lou Archell which features travel & adventure both near and far, food, interiors, botanical inspiration and practical advice on simple living.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 4500,
+        "instagram": 58600
+      },
+      "image_url": "https://i1.feedspot.com/4907837.jpg?t=1614001512"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "category": "The Daily Beast",
+  "source_url": "https://rss.feedspot.com/the_daily_beast_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Daily Beast",
+      "feed_url": "https://www.thedailybeast.com/arc/outboundfeeds/rss/articles/",
+      "website_url": "https://www.thedailybeast.com/",
+      "description": "A smart, speedy take on breaking news and opinion in politics, media, entertainment, and more.",
+      "followers": {
+        "facebook": 2100000,
+        "twitter": 1300000,
+        "instagram": 503000
+      },
+      "image_url": "https://i1.feedspot.com/8538475.jpg"
+    }
+  ]
+}

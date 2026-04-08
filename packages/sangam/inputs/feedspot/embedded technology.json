@@ -1,0 +1,398 @@
+{
+  "category": "Embedded Technology",
+  "source_url": "https://rss.feedspot.com/embedded_technology_rss_feeds",
+  "feeds": [
+    {
+      "title": "Embedded.com",
+      "feed_url": "https://www.embedded.com/feed/",
+      "website_url": "https://www.embedded.com/",
+      "description": "Embedded Magazine is the resource for everything embedded systems designers and developers need to do their jobs, from the latest products, design and coding trends and tips, and source code, to practical design information, discussions, features, and industry happenings.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 12700
+      },
+      "image_url": "https://i1.feedspot.com/1476695.jpg?t=1617953499"
+    },
+    {
+      "title": "Embedded Systems Design",
+      "feed_url": "https://embeddeddesignblog.blogspot.com/feeds/posts/default",
+      "website_url": "https://embeddeddesignblog.blogspot.com/",
+      "description": "This blog is dedicated to all those embedded engineers who always have sleepless nights in labs debugging the hardest problems on the earth. This is a generic blog written based on understanding and resources over the internet.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5139485.jpg?t=1625650216"
+    },
+    {
+      "title": "Embedded Use",
+      "feed_url": "https://embeddeduse.com/feed/",
+      "website_url": "https://embeddeduse.com/",
+      "description": "My name is Burkhard Stubert. I am a solopreneur (a.k.a. independent contractor or freelancer) offering professional services for software development. My focus is on designing and developing connected embedded systems - with a special passion in user interfaces. EmbeddedUse, the name of my company, reflects these two passions: embedded systems and user interfaces.",
+      "followers": {
+        "twitter": 512
+      },
+      "image_url": "https://i1.feedspot.com/5139493.jpg?t=1649332158"
+    },
+    {
+      "title": "Embitel Blog",
+      "feed_url": "https://www.embitel.com/category/blog/embedded-blog/feed",
+      "website_url": "https://www.embitel.com/category/blog/embedded-blog",
+      "description": "Embitel primarily focuses on the Automotive/IoT Embedded Technology space and Digital Multi-Channel solutions for Digital Commerce.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4826474.jpg?t=1623052081"
+    },
+    {
+      "title": "Embedded Artistry Blog",
+      "feed_url": "https://embeddedartistry.com/feed/",
+      "website_url": "https://embeddedartistry.com/blog/",
+      "description": "Embedded Artistry is an Embedded systems consulting firm. Distilling techniques & processes so you can take your embedded skills to the next level.",
+      "followers": {
+        "facebook": 47,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5139422.jpg?t=1628844098"
+    },
+    {
+      "title": "Embedded Systems Academy",
+      "feed_url": "https://blog.esacademy.com/feed/",
+      "website_url": "https://blog.esacademy.com/",
+      "description": "Our expertise covers many microcontroller architectures and their development tools. We focus on time-to-market, quality improvement and embedded networking applications using Controller Area Network (CAN bus), CANopen and Embedded Internetworking.",
+      "followers": {
+        "twitter": 232
+      },
+      "image_url": "https://i1.feedspot.com/5135441.jpg?t=1625650238"
+    },
+    {
+      "title": "Beningo Embedded Group Blog",
+      "feed_url": "https://www.beningo.com/feed/",
+      "website_url": "https://www.beningo.com/blog/",
+      "description": "Beningo Embedded is an embedded software consulting company that focuses on the development of innovative embedded systems across multiple industries.",
+      "followers": {
+        "facebook": 238,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4850850.jpg?t=1625650242"
+    },
+    {
+      "title": "IoT Devices Blog",
+      "feed_url": "https://iot-devices.com.ua/en/feed/",
+      "website_url": "https://iot-devices.com.ua/en/blog/",
+      "description": "Learn about the benefits of IoT, how to troubleshoot common issues, and make the most of your connected devices. Explore the latest and greatest IoT gadgets with IoT Devices blog - your one-stop shop for all things IoT dedicated to helping you navigate the exciting world of connected devices.",
+      "followers": {
+        "facebook": 111,
+        "twitter": 168
+      },
+      "image_url": "https://i1.feedspot.com/5754721.jpg?t=1705314269"
+    },
+    {
+      "title": "CNX Software",
+      "feed_url": "https://www.cnx-software.com/feed/",
+      "website_url": "https://www.cnx-software.com/",
+      "description": "CNX Software Limited is a news and information company managing the 'CNX Software' blogs covering embedded systems, the maker community, popular development boards and SBCs such as Raspberry Pi, ESP8266, and Arduino, as well as more obscure hardware platforms, Linux, and open-source software and hardware as a whole.",
+      "followers": {
+        "facebook": 22200,
+        "twitter": 17100
+      },
+      "image_url": "https://i1.feedspot.com/6158.jpg?t=1618127211"
+    },
+    {
+      "title": "Bootlin",
+      "feed_url": "https://bootlin.com/feed/",
+      "website_url": "https://bootlin.com/",
+      "description": "Bootlin is an engineering company specialized in embedded Linux and more generally in Free and Open Source software for embedded systems.",
+      "followers": {
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4856119.jpg?t=1625650251"
+    },
+    {
+      "title": "Electronics Weekly \u00bb Embedded Systems",
+      "feed_url": "https://www.electronicsweekly.com/market-sectors/embedded-systems/feed/",
+      "website_url": "https://www.electronicsweekly.com/market-sectors/embedded-systems/",
+      "description": "Everything you need to know about Embedded Systems is featured on Electronics Weekly. All the latest news for electronics engineers & professionals involved in the design & development industry. Electronics Weekly is the market-leading and longest-established electronics magazine, read in print and online by key decision-makers throughout the industry for more than 50 years.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 33200
+      },
+      "image_url": "https://i1.feedspot.com/5139575.jpg?t=1625650247"
+    },
+    {
+      "title": "Pallav Aggarwal",
+      "feed_url": "https://pallavaggarwal.in/feed/",
+      "website_url": "https://pallavaggarwal.in/",
+      "description": "This blog provides practical tips on embedded systems design. Pallav Aggarwal is an experienced embedded system design consultant who helps hardware startups and embedded design engineers building successful embedded / IoT products.",
+      "followers": {
+        "facebook": 405,
+        "twitter": 2300,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5297841.jpg?t=1625049316"
+    },
+    {
+      "title": "Acura Embedded Systems",
+      "feed_url": "https://acuraembedded.com/feed/",
+      "website_url": "https://acuraembedded.com/",
+      "description": "Acura Embedded Systems is a manufacturer of industrial pc & embedded computers. We excel at developing reliable & durable products systems.",
+      "followers": {
+        "twitter": 89
+      },
+      "image_url": "https://i1.feedspot.com/5134688.jpg?t=1625650277"
+    },
+    {
+      "title": "DeepBlue \u00bb Embedded Systems",
+      "feed_url": "https://deepbluembedded.com/embedded-systems/feed/",
+      "website_url": "https://deepbluembedded.com/embedded-systems/",
+      "description": "Learn embedded systems with DeepBlue from the very basic fundamentals to the frontiers & create your own projects.",
+      "followers": {
+        "facebook": 998,
+        "twitter": 130
+      },
+      "image_url": "https://i1.feedspot.com/5134640.jpg?t=1625650255"
+    },
+    {
+      "title": "Hackaday",
+      "feed_url": "https://hackaday.com/feed/",
+      "website_url": "https://hackaday.com/",
+      "description": "Hackaday serves up Fresh Hacks Every Day from around the Internet. Our playful posts are the gold standard in entertainment for engineers and engineering enthusiasts. We educate those just learning the art of Hack, and provide inspiration for the seasoned veterans.",
+      "followers": {
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/46285.jpg?t=1746599740"
+    },
+    {
+      "title": "EEJournal \u00bb Embedded",
+      "feed_url": "https://www.eejournal.com/category/embedded/feed/",
+      "website_url": "https://www.eejournal.com/category/embedded/",
+      "description": "Electronic Engineering Journal is your source to read articles on Embedded technology and stay updated on the latest news, updates, reports, and more. The journal is here to provide independent insight and analysis (with a sense of humor) on the fast-paced world of electronic design for a worldwide engineering audience.",
+      "followers": {
+        "facebook": 177000,
+        "twitter": 13600
+      },
+      "image_url": "https://i1.feedspot.com/5388382.jpg?t=1649317819"
+    },
+    {
+      "title": "EE World \u00bb Embedded",
+      "feed_url": "https://www.eeworldonline.com/category/embedded/feed/",
+      "website_url": "https://www.eeworldonline.com/category/embedded/",
+      "description": "The following section of EE World features articles on Embedded. EEWorld Online is a network of resources for design engineers and is comprised of highly engaged user forums, industry news, EE tools, focused editorial content, datasheet/electronic part search, and electronic projects.",
+      "followers": {
+        "facebook": 103400,
+        "twitter": 4200,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5388385.jpg?t=1649317836"
+    },
+    {
+      "title": "Witekio Blog",
+      "feed_url": "https://witekio.com/feed/",
+      "website_url": "https://witekio.com/blog/",
+      "description": "At Witekio we think sharing is key. Our engineers, tech leads, project managers, and leaders share their views, their experiences, and their expertise. Witekio's software experts help you tackle any complex software system challenge like system security, system update; OTA, etc. Working with us helped you gain access to a network of partners that will help power your project, accelerate your go-to-market, and assure the smooth launch of your product or system.",
+      "followers": {
+        "facebook": 906,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5388386.jpg?t=1649317841"
+    },
+    {
+      "title": "SEGGER Blog",
+      "feed_url": "https://blog.segger.com/feed/",
+      "website_url": "https://blog.segger.com/",
+      "description": "SEGGER Microcontroller provides professional development and production solutions for the embedded market. All SEGGER products are highly optimized and benefit from more than 30 years of experience in the industry. We provide an RTOS plus communication and security software, so developers get a head start, benefiting from SEGGER's decades of experience in the industry.",
+      "followers": {
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4844970.jpg?t=1649327105"
+    },
+    {
+      "title": "Microcontroller Tips",
+      "feed_url": "https://feeds.feedburner.com/microcontrollertips/MicroControllerTips",
+      "website_url": "https://www.microcontrollertips.com/",
+      "description": "Microcontroller Tips is the premier online source for new products, news, and innovations around microcontrollers, embedded devices, memory, modules, and design tools, as well as FPGAs, connectivity devices, and MCU-based products that enable the interconnection of embedded devices, sensor networks, control systems, automation, and more.",
+      "followers": {
+        "facebook": 103400,
+        "twitter": 806,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5221273.jpg?t=1649327248"
+    },
+    {
+      "title": "Circuit Cellar Blog",
+      "feed_url": "https://circuitcellar.com/category/cc-blog/feed/",
+      "website_url": "https://circuitcellar.com/cc-blog/",
+      "description": "Circuit Cellar is the premier media resource for professional engineers, academic technologists, and other electronics technology decision-makers worldwide involved in the design and development of embedded processor- and microcontroller-based systems across a broad range of applications. The magazine provides critical information on embedded, electronics technology and does so at the level of depth and detail tailored specifically for our readers.",
+      "followers": {
+        "facebook": 6600,
+        "twitter": 13200,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5388383.jpg?t=1649317825"
+    },
+    {
+      "title": "LinuxGizmos.com",
+      "feed_url": "https://linuxgizmos.com/feed/",
+      "website_url": "https://linuxgizmos.com/",
+      "description": "LinuxGizmos.com is dedicated to bringing you timely news and analysis on the hardware, software, protocols, and standards used in embedded, mobile, and Internet of Things devices that are built around open source OSes such as Linux and derivatives (e.g. Android, Tizen, OpenWRT, Brillo, etc.).",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/708169.jpg?t=1615806174"
+    },
+    {
+      "title": "MCU on Eclipse",
+      "feed_url": "https://mcuoneclipse.com/feed/",
+      "website_url": "https://mcuoneclipse.com/",
+      "description": "My name is Erich Styger. This blog is because I have been asked to share my thoughts, tips, and tricks around Eclipse, CodeWarrior, Kinetis Design Studio, and anything else around software, and microcontrollers in an accessible way.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/1384916.jpg?t=1649325805"
+    },
+    {
+      "title": "The Embedded Blog",
+      "feed_url": "http://embeddedblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://embeddedblog.blogspot.com/",
+      "description": "Hardware and Software News from Nick Flaherty at Flaherty Publishing.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5139525.jpg?t=1649329929"
+    },
+    {
+      "title": "Embedded.fm Blog",
+      "feed_url": "https://embedded.fm/blog?format=rss",
+      "website_url": "https://embedded.fm/blog-index",
+      "description": "Embedded.fm is a site dedicated to the many aspects of engineering. We talk about the how, why, and what of engineering, usually devices. The site also includes a blog written by Elecia White, Christopher White, Andrei Chichak, and Chris Svec.",
+      "followers": {
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/4507431.jpg?t=1625650228"
+    },
+    {
+      "title": "Timesys \u00bb Embedded Development",
+      "feed_url": "https://www.timesys.com/blog/embedded-development/feed/",
+      "website_url": "https://www.timesys.com/blog/embedded-development/",
+      "description": "Timesys is a pioneer and industry leader in open source software security, development tools and engineering services spanning the embedded software market. Follow to get updates on Embedded Development.",
+      "followers": {
+        "twitter": 552
+      },
+      "image_url": "https://i1.feedspot.com/5134651.jpg?t=1625650259"
+    },
+    {
+      "title": "One Digital \u00bb Embedded case studies",
+      "feed_url": "https://www.onedigitaluk.com/latest-news/category/case-studies/embedded-case-studies/feed/",
+      "website_url": "https://www.onedigitaluk.com/latest-news/category/case-studies/embedded-case-studies/",
+      "description": "One Digital is a collaborative digital inclusion programme developed by Age UK, Citizens Online, Clarion Futures (part of Clarion Housing Group), Digital Unite, and Scottish Council of Voluntary Organisations (SCVO).",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5139573.jpg?t=1625650304"
+    },
+    {
+      "title": "RISE UK Research Institute in Secure Hardware and Embedded Systems Blog",
+      "feed_url": "https://www.ukrise.org/feed/",
+      "website_url": "https://www.ukrise.org/blog/",
+      "description": "The \u00a35M multi-institutional Research institute - RISE - seeks to identify and address key issues that underpin our understanding of Hardware Security.",
+      "followers": {
+        "twitter": 342
+      },
+      "image_url": "https://i1.feedspot.com/5139566.jpg?t=1625650270"
+    },
+    {
+      "title": "James Grenning's Blog",
+      "feed_url": "http://blog.wingman-sw.com/feed",
+      "website_url": "http://blog.wingman-sw.com/",
+      "description": "James Grenning blogs about Agile Development, especially embedded. Follow for the latest updates.",
+      "followers": {
+        "twitter": 6300
+      },
+      "image_url": "https://i1.feedspot.com/5139553.jpg?t=1649404436"
+    },
+    {
+      "title": "Embedded Computing",
+      "feed_url": "https://embeddedcomputing.weebly.com/2/feed",
+      "website_url": "https://embeddedcomputing.com/",
+      "description": "With an estimated 15 billion devices in the world, Embedded Computing Design aims to help those designing these devices stay informed about the latest technologies and look ahead to where the next decade of embedded computing is going. Coverage includes IoT, IIoT, Machine Learning, AI, Automotive, and more.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 28200
+      },
+      "image_url": "https://i1.feedspot.com/1585608.jpg?t=1649328057"
+    },
+    {
+      "title": "Safe Autonomy",
+      "feed_url": "http://safeautonomy.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://safeautonomy.blogspot.com/",
+      "description": "I work with self-driving car safety and more generally with dependable embedded systems. I teach at Carnegie Mellon University. As with any blog, these posts often contain speculative and partially formed thoughts, and should not be interpreted as a fully considered opinion unless stated otherwise.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5388381.jpg?t=1649327920"
+    },
+    {
+      "title": "Sticky Bits Blog",
+      "feed_url": "https://blog.feabhas.com/feed/",
+      "website_url": "https://blog.feabhas.com/",
+      "description": "This Blog was created by a world-class provider of embedded systems training and consultancy, Feabhas founder Niall Cooling. His aim was to cover, in a no-nonsense manner, aspects centered on Real-Time and Embedded Systems (RTES) Software.",
+      "followers": {
+        "twitter": 991
+      },
+      "image_url": "https://i1.feedspot.com/5388384.jpg?t=1649324879"
+    },
+    {
+      "title": "BeagleBoard Blog",
+      "feed_url": "https://www.beagleboard.org/blog/feed",
+      "website_url": "https://www.beagleboard.org/blog",
+      "description": "The BeagleBoard.org Foundation is a Michigan, USA-based 501(c)(3) non-profit corporation existing to provide education in and collaboration around the design and use of open-source software and hardware in embedded computing. The community collaborates on the development of open-source physical computing solutions including robotics, personal manufacturing tools like 3D printers and laser cutters, and other types of industrial and machine controls.",
+      "followers": {
+        "facebook": 8700,
+        "twitter": 13100
+      },
+      "image_url": "https://i1.feedspot.com/5388380.jpg?t=1649317809"
+    },
+    {
+      "title": "Embedded Lab Blog",
+      "feed_url": "https://embedded-lab.com/blog/feed/",
+      "website_url": "https://embedded-lab.com/blog/",
+      "description": "Embedded Lab is an online teaching laboratory for Microcontrollers, Arduino and Embedded Systems. This website is aimed at anyone curious to learn how these things work on a fundamental level and who wants to get started with embedded system design on their own. Follow this blog for Embedded Systems tutorials, projects, and more.",
+      "followers": {
+        "facebook": 18300,
+        "twitter": 289
+      },
+      "image_url": "https://i1.feedspot.com/103081.jpg?t=1621842637"
+    },
+    {
+      "title": "ADL Embedded Solutions Blog",
+      "feed_url": "https://www.adl-usa.com/feed",
+      "website_url": "https://www.adl-usa.com/blog/",
+      "description": "ADL Embedded Solutions, Inc. provides high-performance embedded solutions in demanding thermal and rugged environments for industrial and military applications.",
+      "followers": {
+        "facebook": 124,
+        "twitter": 171
+      },
+      "image_url": "https://i1.feedspot.com/5134639.jpg?t=1625650179"
+    },
+    {
+      "title": "Ezurio Blog",
+      "feed_url": "https://www.ezurio.com/resources/blog",
+      "website_url": "https://www.ezurio.com/resources/blog",
+      "description": "Boundary Devices is a leading global supplier of ARM-based Single Board Computers and systems on Modules for the general embedded market. Founded in 2003, we specialize in creating custom solutions tailored to the exact specifications of the customer.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5388389.jpg?t=1649327205"
+    },
+    {
+      "title": "Vadzo Imaging Blog",
+      "feed_url": "https://www.vadzoimaging.com/feed/",
+      "website_url": "https://www.vadzoimaging.com/embedded-camera-blog/",
+      "description": "Stay updated with the latest in embedded camera technology - Vadzo Imaging. Discover insights now. Vadzo Imaging has a rich and diverse off-the-shelf camera portfolio comprising USB 3.0 Cameras, USB 2.0 Cameras, MIPI cameras, and Parallel Cameras. Additionally, It also offers customization services to support new sensors as well as additional interfaces to achieve different utility cameras.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5676191.jpg?t=1706873302"
+    },
+    {
+      "title": "Embedded IT Blog",
+      "feed_url": "https://www.embedded-it.co.uk/blog?format=feed&type=rss",
+      "website_url": "https://www.embedded-it.co.uk/blog",
+      "description": "Embedded IT is a team of consultants who have lived through the IT Services complexity, and understand the impacts that these changes will have on everyone's business.",
+      "followers": {
+        "twitter": 294
+      },
+      "image_url": "https://i1.feedspot.com/5139498.jpg?t=1625650263"
+    }
+  ]
+}

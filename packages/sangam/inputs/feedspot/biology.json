@@ -1,0 +1,529 @@
+{
+  "category": "Biology",
+  "source_url": "https://rss.feedspot.com/biology_rss_feeds",
+  "feeds": [
+    {
+      "title": "PLOS Biology",
+      "feed_url": "https://journals.plos.org/plosbiology/feed/atom",
+      "website_url": "https://plos.org/blogs/",
+      "description": "PLOS Biology publishes significant advances across the biological sciences. And we push boundaries. Designed to advance science and the communities who depend upon it, we're transforming research communication to fit the research process.",
+      "followers": {
+        "facebook": 98500,
+        "twitter": 160300
+      },
+      "image_url": "https://i1.feedspot.com/4479478.jpg?t=1614341759"
+    },
+    {
+      "title": "The Journal of Cell Biology",
+      "feed_url": "https://rupress.org/rss/site_1000001/LatestArticles_1000003.xml",
+      "website_url": "https://rupress.org/jcb",
+      "description": "Journal of Cell Biology (JCB) publishes advances in any area of basic cell biology as well as applied cellular advances in fields such as immunology, neurobiology, metabolism, microbiology, developmental biology, and plant biology.",
+      "followers": {
+        "facebook": 276300,
+        "twitter": 44000,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/95592.jpg?t=1610618102"
+    },
+    {
+      "title": "Journal of Experimental Biology",
+      "feed_url": "https://journals.biologists.com/rss/site_1000009/1000007.xml",
+      "website_url": "https://journals.biologists.com/jeb",
+      "description": "Journal of Experimental Biology (JEB) is the leading primary research journal in comparative physiology and is published by The Company of Biologists, a not-for-profit publishing organisation dedicated to supporting and inspiring the biological community.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 6600
+      },
+      "image_url": "https://i1.feedspot.com/156156.jpg?t=1605778052"
+    },
+    {
+      "title": "Bioengineer.org",
+      "feed_url": "https://bioengineer.org/feed/",
+      "website_url": "https://bioengineer.org/",
+      "description": "Bioengineer.org is your biotechnology news website. We provide you with the latest breaking news and videos.",
+      "followers": {
+        "facebook": 87600
+      },
+      "image_url": "https://i1.feedspot.com/4508736.jpg?t=1605778061"
+    },
+    {
+      "title": "The Biology Corner",
+      "feed_url": "https://www.biologycorner.com/feed/",
+      "website_url": "https://www.biologycorner.com/",
+      "description": "Biology lesson plans, worksheets, tutorials and resources for teachers and students.",
+      "followers": {
+        "facebook": 18400,
+        "twitter": 858
+      },
+      "image_url": "https://i1.feedspot.com/4508325.jpg"
+    },
+    {
+      "title": "Molecular Systems Biology",
+      "feed_url": "https://www.embopress.org/feed/17444292/most-recent",
+      "website_url": "https://www.embopress.org/journal/17444292",
+      "description": "Systems biology is an integrative discipline that seeks to explain the properties and behaviour of complex biological systems in terms of their components and their interactions. Molecular Systems Biology is a peer-reviewed author-pays online journal that publishes high-quality research in the fields of systems biology, synthetic biology and systems medicine.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 7600
+      },
+      "image_url": "https://i1.feedspot.com/3488961.jpg"
+    },
+    {
+      "title": "Fight Aging!",
+      "feed_url": "https://www.fightaging.org/feed",
+      "website_url": "https://www.fightaging.org/",
+      "description": "Reports from the front line in the fight against aging. The science of healthy life extension. Activism and advocacy for longer, healthier lives.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3328291.jpg"
+    },
+    {
+      "title": "Lovelace Biomedical Blog",
+      "feed_url": "https://www.lovelacebiomedical.org/feed/",
+      "website_url": "https://www.lovelacebiomedical.org/blog/",
+      "description": "Get news updates from Lovelace Biomedical. Lovelace Biomedical is a not-for-profit contract research organization with a rich history of helping it's pharmaceutical and biotechnology partners achieve great things.",
+      "followers": {
+        "twitter": 547
+      },
+      "image_url": "https://i1.feedspot.com/4508752.jpg?t=1625030747"
+    },
+    {
+      "title": "Virology blog",
+      "feed_url": "https://virology.ws/feed/",
+      "website_url": "https://virology.ws/",
+      "description": "Virology blog is about viruses and viral disease.",
+      "followers": {
+        "facebook": 75,
+        "twitter": 190300,
+        "instagram": 7200
+      },
+      "image_url": "https://i1.feedspot.com/3884900.jpg?t=1607688358"
+    },
+    {
+      "title": "Marine Biological Laboratory",
+      "feed_url": "https://www.mbl.edu/feed",
+      "website_url": "https://www.mbl.edu/news",
+      "description": "The Marine Biological Laboratory (MBL) is an international center for research and education in biology and ecology and an affiliate of the University of Chicago. MBL provides information on Marine Biology. Follow our news feed to keep up with new updates.",
+      "followers": {
+        "facebook": 12000,
+        "twitter": 25300,
+        "instagram": 9900
+      },
+      "image_url": "https://i1.feedspot.com/4508368.jpg?t=1605778621"
+    },
+    {
+      "title": "Biology EduCare",
+      "feed_url": "https://biologyeducare.com/feed/",
+      "website_url": "https://biologyeducare.com/",
+      "description": "Biologyeducare.com is a biology topic-related website that provides information for college and university students about Life Science which helps you to learn about all sorts of biology terms, principles, and all types of life forms. Generally, here we provide the scientific study of living organisms both plants and animals. We try to make the study easy and interesting for you. If you would like to gather basic biology knowledge, you should stay on this site 'Biologyeducare.com' and you know and congregate any information about any biology-related topics for your needs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5264409.jpg?t=1617452332"
+    },
+    {
+      "title": "Biochemistry Den - Biochemistry Resource Blog",
+      "feed_url": "https://biochemden.com/feed/",
+      "website_url": "https://biochemden.com/",
+      "description": "This is Biochemistry Resources Blog. This blog useful for all Biology students and teachers. It's providing Free study materials.",
+      "followers": {
+        "facebook": 10000
+      },
+      "image_url": "https://i1.feedspot.com/4508701.jpg?t=1610618139"
+    },
+    {
+      "title": "Awkward Botany",
+      "feed_url": "https://awkwardbotany.com/feed/",
+      "website_url": "https://awkwardbotany.com/",
+      "description": "This blog will document Daniel's plant obsession.This blog is for equally plant obsessed, as well as for the plant interested and the plant curious people. Daniel is a citizen botany for the phytocurious.",
+      "followers": {
+        "twitter": 1100,
+        "instagram": 923
+      },
+      "image_url": "https://i1.feedspot.com/4508812.jpg?t=1605778718"
+    },
+    {
+      "title": "Bitesize Bio",
+      "feed_url": "https://bitesizebio.com/feed/",
+      "website_url": "https://bitesizebio.com/",
+      "description": "Life science and bioscience articles for biology researchers. At BitesizeBio, we cover biochemistry, molecular biology, cell biology, genomics, gene editing, microscopy, and laboratory research articles and more.",
+      "followers": {
+        "facebook": 9400,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5264396.jpg?t=1617458264"
+    },
+    {
+      "title": "Biology Learner",
+      "feed_url": "https://biologylearner.com/feed/",
+      "website_url": "https://biologylearner.com/",
+      "description": "Biology Learner is an educational website about biology and biological science. It is the destination for those who are interested in biology, love, study, and learn biology. We provide biology-related various types of articles and notes. It may help them study biology and they can access it easily and freely.",
+      "followers": {
+        "facebook": 10100
+      },
+      "image_url": "https://i1.feedspot.com/5438682.jpg?t=1662381931"
+    },
+    {
+      "title": "Strange Biology",
+      "feed_url": "https://www.strangebio.com/rss",
+      "website_url": "https://www.strangebio.com/",
+      "description": "Anomalous Animals, Mutants, and Mad Science.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 32
+      },
+      "image_url": "https://i1.feedspot.com/4468462.jpg?t=1605778742"
+    },
+    {
+      "title": "A Blog for Biomedical Engineers",
+      "feed_url": "https://learnbiomedengine.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://learnbiomedengine.blogspot.com/2019/",
+      "description": "This blog has been created for sharing knowledge among the Biomedical Engineering communities; from Students to Professionals; where all can learn things much easier by spending a very less time.",
+      "followers": {
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/5021249.jpg"
+    },
+    {
+      "title": "Bio Trivia | Enhance your Life Science Knowledge",
+      "feed_url": "https://biotrivia.com/feed/",
+      "website_url": "https://biotrivia.com/",
+      "description": "BioTrivia provides an in-depth explanation with complete information on various biological topics. Friendly guide for budding researchers.BioTrivia Team provides all such information such as basic biology in chapters, research methodology, recent researches, protocols that may support your research, interpretation of your experimental results, and about how to write a research or a review article.",
+      "followers": {
+        "facebook": 548,
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/5174786.jpg?t=1605779750"
+    },
+    {
+      "title": "Dave Tang's blog",
+      "feed_url": "https://davetang.org/muse/feed/",
+      "website_url": "https://davetang.org/muse/",
+      "description": "I'm a genomics researcher who uses R and Perl (because I was exposed to bioinformatics around 2005). Most of this blog is on analyses related to genomics.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4717632.jpg?t=1607346550"
+    },
+    {
+      "title": "Integrative and Comparative Biology",
+      "feed_url": "https://integrativeandcomparativebiology.wordpress.com/feed/",
+      "website_url": "https://integrativeandcomparativebiology.wordpress.com/",
+      "description": "A blog affiliated with the Journal Integrative and Comparative Biology.",
+      "followers": {
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/8663347.jpg?t=1756143916"
+    },
+    {
+      "title": "Sociobiology",
+      "feed_url": "https://sociobiology.wordpress.com/feed/",
+      "website_url": "https://sociobiology.wordpress.com/",
+      "description": "Sociobiology is an open and thoughtful exploration of the science of social evolution\u2014where teaching, research, publication, academic life, and the joy of biology are shared candidly by a scientist navigating the path to professorship.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3499695.jpg"
+    },
+    {
+      "title": "Quanta Magazine \u00bb Biology",
+      "feed_url": "https://www.quantamagazine.org/biology/feed/",
+      "website_url": "https://www.quantamagazine.org/biology/",
+      "description": "Quanta's award-winning coverage of evolution, neuroscience, genetics, ecology, zoology, microbiology, infectious disease, molecular biology and more.",
+      "followers": {
+        "facebook": 287700,
+        "twitter": 348600,
+        "instagram": 270400
+      },
+      "image_url": "https://i1.feedspot.com/8537707.jpg?t=1756139405"
+    },
+    {
+      "title": "Wildlife Biology",
+      "feed_url": "https://www.wildlifebiology.org/rss.xml",
+      "website_url": "https://www.wildlifebiology.org/",
+      "description": "Wildlife Biology is an open-access, peer-reviewed scientific journal published by the Nordic Society Oikos that delivers global research and practical insights on wildlife ecology, management, and conservation to scientists and conservation professionals.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/8663351.jpg?t=1756144335"
+    },
+    {
+      "title": "Phys.org \u00bb Biology",
+      "feed_url": "https://phys.org/rss-feed/biology-news/",
+      "website_url": "https://phys.org/biology-news/",
+      "description": "Read the latest science news from Phys.org on biology, evolution, microbiology, biotechnology",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/7879150.jpg?t=1740115432"
+    },
+    {
+      "title": "SciTechDaily \u00bb Biology",
+      "feed_url": "https://scitechdaily.com/news/biology/feed/",
+      "website_url": "https://scitechdaily.com/news/biology/",
+      "description": "Welcome to SciTechDaily.com's Biology News page, your ultimate destination for the latest discoveries, breakthroughs, and advancements in the fascinating world of biology. Here, we cover a wide range of topics, from molecular biology and genetics to ecology and evolutionary studies, ensuring that our readers stay up-to-date with the most recent developments in this ever-evolving field.",
+      "followers": {
+        "facebook": 167700,
+        "twitter": 11400
+      },
+      "image_url": "https://i1.feedspot.com/1716495.jpg"
+    },
+    {
+      "title": "MIT News \u00bb Biology",
+      "feed_url": "https://news.mit.edu/topic/mitbiology-rss.xml",
+      "website_url": "https://news.mit.edu/topic/biology/",
+      "description": "MIT news feed about: Biology",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 1400000,
+        "instagram": 972700
+      },
+      "image_url": "https://i1.feedspot.com/8663346.jpg"
+    },
+    {
+      "title": "Sci.News \u00bb Biology",
+      "feed_url": "https://www.sci.news/news/biology/feed",
+      "website_url": "https://www.sci.news/news/biology/",
+      "description": "Biology news from across the world provided by Sci.News, an independent source for the latest news on science.",
+      "followers": {
+        "facebook": 41000,
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/8663344.jpg"
+    },
+    {
+      "title": "The Conversation \u00bb Biology",
+      "feed_url": "https://theconversation.com/topics/biology-521/articles.atom",
+      "website_url": "https://theconversation.com/topics/biology-521/",
+      "description": "Browse Biology news, research and analysis from The Conversation",
+      "followers": {
+        "facebook": 117400,
+        "twitter": 65300,
+        "instagram": 54600
+      },
+      "image_url": "https://i1.feedspot.com/8663345.jpg"
+    },
+    {
+      "title": "ScienceDaily \u00bb Human Biology",
+      "feed_url": "https://www.sciencedaily.com/rss/health_medicine/human_biology.xml",
+      "website_url": "https://www.sciencedaily.com/news/health_medicine/human_biology/",
+      "description": "Read the latest research on human biology. Learn about comparative biology and human genetics.",
+      "followers": {
+        "facebook": 1600000
+      },
+      "image_url": "https://i1.feedspot.com/8663350.jpg?t=1756144482"
+    },
+    {
+      "title": "BioTechniques",
+      "feed_url": "https://www.biotechniques.com/feed/",
+      "website_url": "https://www.biotechniques.com/",
+      "description": "Explore BioTechniques. A world leader in life science method research news.",
+      "followers": {
+        "facebook": 582100,
+        "twitter": 13100
+      },
+      "image_url": "https://i1.feedspot.com/8663343.jpg"
+    },
+    {
+      "title": "Biology Blogs",
+      "feed_url": "https://biologyblogs.in/feed/",
+      "website_url": "https://biologyblogs.in/",
+      "description": "Bringing Biology Into The Classroom And The Workplace.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8663349.jpg"
+    },
+    {
+      "title": "Biology Dictionary",
+      "feed_url": "https://biologydictionary.net/feed/",
+      "website_url": "https://biologydictionary.net/",
+      "description": "Biology is the study of living things. It is broken down into many fields, reflecting the complexity of life from the atoms and molecules of biochemistry to the interactions of millions of organisms in ecology. This biology dictionary is here to help you learn about all sorts of biology terms, principles, and life forms.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 172
+      },
+      "image_url": "https://i1.feedspot.com/5264403.jpg?t=1617454309"
+    },
+    {
+      "title": "LaboratoryInfo.com",
+      "feed_url": "https://laboratoryinfo.com/feed/",
+      "website_url": "https://laboratoryinfo.com/",
+      "description": "LaboratoryInfo.com was launched on 23 March 2015 with the aim to provide every possible information, guide, and updates related to Medical Laboratory Science to the students as well as laboratory professionals. This blog covers several disciplines primarily including Microbiology (Bacteriology, Virology, Mycology, Immunology, Parasitology), Biochemistry, Hematology, Histopathology, and Cytopathology.",
+      "followers": {
+        "facebook": 8500
+      },
+      "image_url": "https://i1.feedspot.com/5264414.jpg?t=1620201320"
+    },
+    {
+      "title": "Institute for Systems Biology",
+      "feed_url": "http://isbscience.org/news/feed/",
+      "website_url": "https://isbscience.org/news/",
+      "description": "The Institute for Systems Biology is a nonprofit biomedical research organization based in Seattle, Washington. It was founded in 2000 by systems biologist Leroy Hood. Revolutionize science, transform human health, and ensure environmental sustainability.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 5300,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4508919.jpg?t=1605778617"
+    },
+    {
+      "title": "Biology Exams 4 U",
+      "feed_url": "https://feeds.feedburner.com/BiologyExams4U",
+      "website_url": "https://www.biologyexams4u.com/",
+      "description": "Biologyexams4u network is dedicated to create and share simplified biology learning resources to students as well as teachers globally. We firmly believe that our content will help you to improve your understanding and generate curiosity and interest in Life Sciences. We provide simplified notes, syllabus, Practice tests, previous solved Question Papers, MCQs, Biology Quiz, etc. to help you in mastering Biology.",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 898
+      },
+      "image_url": "https://i1.feedspot.com/5000511.jpg?t=1617449325"
+    },
+    {
+      "title": "BiotechBlog",
+      "feed_url": "http://www.biotechblog.com/feed/",
+      "website_url": "http://www.biotechblog.com/",
+      "description": "Find the latest Biotechnology business news, policies, commercial, legal, political, and scientific trends in biotechnology and more.",
+      "followers": {
+        "twitter": 10700
+      },
+      "image_url": "https://i1.feedspot.com/602879.jpg?t=1605779447"
+    },
+    {
+      "title": "Biology 24/7",
+      "feed_url": "https://feeds.feedburner.com/Biology24/7",
+      "website_url": "https://plantscience247.blogspot.com/",
+      "description": "Here, we provide you importants notes related to biology. These notes incresase your knowledge and help in yours examination.",
+      "followers": {
+        "twitter": 59
+      },
+      "image_url": "https://i1.feedspot.com/5172366.jpg?t=1605778739"
+    },
+    {
+      "title": "Mrs. Damp's Bioblog",
+      "feed_url": "http://lphsbiology.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://lphsbiology.blogspot.com/",
+      "description": "Get started with biology as we explore topics of human and cell anatomy, systems, and structures that make up the organisms of our world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4508319.jpg?t=1605779936"
+    },
+    {
+      "title": "Bio attainment..... Get surely selection in NEET by proven Strategies",
+      "feed_url": "https://bioattainment4886.blogspot.com/feeds/posts/default",
+      "website_url": "https://bioattainment4886.blogspot.com/",
+      "description": "Proven strategies to crack NEET Exam.How to NEET toppers study,The best strategy to help you prapere for NEET with all important questions,NEET Masterclass in Biology,Free study package for NEET,How to prepare for NEET in 2020,NEET syllabus and question papers,best biology study material for CBSE and MP board,How to study biology online in 2020.Best biology notes by experts to study at home.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5168459.jpg?t=1605780135"
+    },
+    {
+      "title": "Pavan Chaubeyy",
+      "feed_url": "https://pavanchaubeyy.blogspot.com/feeds/posts/default",
+      "website_url": "https://pavanchaubeyy.blogspot.com/",
+      "description": "Easy and quality material of biology to enhance knowledge, by Pavan Chaubey who is a teacher by profession.",
+      "followers": {
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/5300654.jpg?t=1625814024"
+    },
+    {
+      "title": "Online Biology Notes",
+      "feed_url": "https://www.onlinebiologynotes.com/feed/",
+      "website_url": "https://www.onlinebiologynotes.com/",
+      "description": "Hi, I'm Gaurab Karki. I am a dedicated microbiologist with excellent technical and analytical microbiological skills. My primary research interest is intersection between immunology and virology focusing on the design and preclinical evaluation of vaccines targeting emerging viral pathogens. I am also interested in the analysis and characterization of the outbreak strain, molecular analysis of drug-resistant genes, and track down the dissemination of resistance through horizontal gene transfer among the bacterial populations.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5264405.jpg?t=1617453142"
+    },
+    {
+      "title": "BioScify",
+      "feed_url": "https://bioscify.blogspot.com/feeds/posts/default",
+      "website_url": "https://bioscify.blogspot.com/",
+      "description": "BioScify features recent research news, articles and stories about science, COVID-19, genetics, diseases, bionics, fitness and many more.",
+      "followers": {
+        "facebook": 33,
+        "twitter": 4,
+        "instagram": 92
+      },
+      "image_url": "https://i1.feedspot.com/5326693.jpg?t=1632922001"
+    },
+    {
+      "title": "Digieduco",
+      "feed_url": "https://digieduco.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://digieduco.blogspot.com/?m=1",
+      "description": "digieduco is a great place for digital education. Follow my blog to never miss any update about biology and everything.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4960720.jpg?t=1605779543"
+    },
+    {
+      "title": "BIOL 326",
+      "feed_url": "https://biol326.wordpress.com/feed/",
+      "website_url": "https://biol326.wordpress.com/",
+      "description": "BIOL 326's blog offers a captivating, student-driven exploration of invertebrate biology\u2014mixing field observations, playful experiments, creative projects, and poetic reflections to reveal the hidden wonders of ocean life.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8663348.jpg?t=1756144118"
+    },
+    {
+      "title": "The Node",
+      "feed_url": "https://thenode.biologists.com/feed/",
+      "website_url": "https://thenode.biologists.com/",
+      "description": "The Node is a community blog for and by developmental biologists, covering news, meetings, and research. The Node is run by the journal Development, but anyone can contribute to the site.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 18900
+      },
+      "image_url": "https://i1.feedspot.com/1422299.jpg?t=1605778599"
+    },
+    {
+      "title": "BioMed Central blog",
+      "feed_url": "https://blogs.biomedcentral.com/on-biology/feed/",
+      "website_url": "https://blogs.biomedcentral.com/on-biology/",
+      "description": "BioMed Central is an STM (Science, Technology and Medicine) publisher of 272 peer-reviewed open access journals, which span all areas of biology, biomedicine and medicine.",
+      "followers": {
+        "facebook": 107100,
+        "twitter": 76200
+      },
+      "image_url": "https://i1.feedspot.com/1266035.jpg?t=1618229149"
+    },
+    {
+      "title": "Biology Ideas",
+      "feed_url": "http://www.biologyideas.com/",
+      "website_url": "http://www.biologyideas.com/",
+      "description": "Biology Ideas is a free educational website for Biology/Life Science tutorials, lecture notes, practice questions for Biology lovers, students & teachers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5669333.jpg?t=1694437938"
+    },
+    {
+      "title": "Benchling",
+      "feed_url": "https://www.benchling.com/feed",
+      "website_url": "https://www.benchling.com/blog",
+      "description": "The Benchling Life Sciences R&D Cloud is an informatics platform to accelerate, measure, and forecast R&D from discovery through bioprocessing.",
+      "followers": {
+        "twitter": 9500
+      },
+      "image_url": "https://i1.feedspot.com/5083952.jpg?t=1605778335"
+    },
+    {
+      "title": "24 Hours Of Biology",
+      "feed_url": "https://24hoursofbiology.com/feed/",
+      "website_url": "https://24hoursofbiology.com/",
+      "description": "24HoursOfBiology is an electronic platform built to help the Biological community including students, teachers, and researchers out there. We are a group of friends who met at school and are now working as Biology teachers and laboratory technicians including wet and dry labs. Our goal is to provide amazing high-quality contextual content with infographics and GIFs in a non-complicated manner that anybody can read and understand easily. Our content will possess all biology topics from basic to advance levels which will quickly register in the reader's mind.",
+      "followers": {
+        "facebook": 242,
+        "twitter": 6,
+        "instagram": 48
+      },
+      "image_url": "https://i1.feedspot.com/5264408.jpg?t=1617449626"
+    },
+    {
+      "title": "Wit Biology",
+      "feed_url": "https://www.witbiology.com/feeds/posts/default",
+      "website_url": "https://www.witbiology.com/",
+      "description": "Wit Biology is the best place to get the best knowledge about all around biology. Here we will talk about all branches of biology and get more knowledge and information about biology. We can learn in-depth. We will learn everything about biology in this blog.",
+      "followers": {
+        "facebook": 34,
+        "twitter": 171
+      },
+      "image_url": "https://i1.feedspot.com/5180803.jpg?t=1605779764"
+    },
+    {
+      "title": "Bioquick news",
+      "feed_url": "https://bioquicknews.com/rss.xml",
+      "website_url": "https://bioquicknews.com/",
+      "description": "Keep up with articles from Bioquick news.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/963113.jpg"
+    }
+  ]
+}

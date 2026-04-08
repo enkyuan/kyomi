@@ -1,0 +1,44 @@
+{
+  "category": "Caribbean Motorcycle",
+  "source_url": "https://rss.feedspot.com/caribbean_motorcycle_rss_feeds",
+  "feeds": [
+    {
+      "title": "DR Moto Rides Blog",
+      "feed_url": "https://drmotorides.com/feed/",
+      "website_url": "https://drmotorides.com/blog/",
+      "description": "DR Moto Rides specializes in catering to adventure rider enthusiasts, providing motorcycle rentals and guided or self-guided tours. Whether seeking hidden waterfalls or a weekend getaway in Caberete, their team is ready to hit the road with you today!",
+      "followers": {
+        "facebook": 39
+      },
+      "image_url": "https://i1.feedspot.com/7283255.jpg?t=1711459471"
+    },
+    {
+      "title": "Hero Dominican Republic News",
+      "feed_url": "https://heromotos.com.do/feed/",
+      "website_url": "https://heromotos.com.do/noticias/",
+      "description": "Hero continuously pushes boundaries, developing technologies that meet current and future standards. Their dedication to environmental stewardship ensures users enjoy top-notch, eco-friendly products. Discover valuable motorcycle tips on the Hero Motos Dominican Republic platform. As the world's largest motorcycle manufacturer, their innovation sets industry benchmarks.",
+      "followers": {
+        "facebook": 4500
+      },
+      "image_url": "https://i1.feedspot.com/7283257.jpg?t=1711459480"
+    },
+    {
+      "title": "Honda Motorcycle News",
+      "feed_url": "https://hondabikesjamaica.com/feed/",
+      "website_url": "https://hondabikesjamaica.com/category/news/",
+      "description": "Honda Motorcycle Jamaica is dedicated to delivering high-quality products at affordable prices globally. Guided by the Honda Philosophy, their core values include respect for individuals and the pursuit of joy. This philosophy unifies all associates, shaping their conduct and decision-making processes. It forms the basis for customer and community engagement, fostering sustainability.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://hondabikesjamaica.com/wp-content/uploads/2024/02/honda-logo-BOX-100x100.webp?t=1711459483"
+    },
+    {
+      "title": "Hero Haiti News",
+      "feed_url": "https://heromotos.com.ht/feed/",
+      "website_url": "https://heromotos.com.ht/motorcycle-tips/",
+      "description": "Hero constantly pioneers forward, crafting technologies compliant with present and future standards. Their commitment to environmental responsibility ensures users access cutting-edge, eco-friendly products. Explore motorcycle tips on Hero Haiti's platform for valuable insights.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7283256.jpg?t=1711461203"
+    }
+  ]
+}

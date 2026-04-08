@@ -1,0 +1,112 @@
+{
+  "category": "Fiji News",
+  "source_url": "https://rss.feedspot.com/fiji_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Fiji News.Net",
+      "feed_url": "http://feeds.thefijinews.net/rss/7b9fd5fd3be1c082",
+      "website_url": "https://www.thefijinews.net/",
+      "description": "The Fiji News.Net keeps residents and potential tourists up-to-date on all news headlines that relate to the island nation of Fiji, with additional tourist and travel information, governments links and links to the major newspapers of the country.",
+      "followers": {
+        "facebook": 7800,
+        "twitter": 255
+      },
+      "image_url": "https://i1.feedspot.com/5358142.jpg?t=1640848761"
+    },
+    {
+      "title": "FBC News",
+      "feed_url": "https://www.fbcnews.com.fj/feed/",
+      "website_url": "https://www.fbcnews.com.fj/",
+      "description": "Latest Fiji News, Sports, and Weather. As the national broadcaster, FBC NEWS is dedicated to and promotes ideas like National Unity, equality, domestic violence free and civil nation and progress.",
+      "followers": {
+        "facebook": 476000,
+        "twitter": 61800
+      },
+      "image_url": "https://i1.feedspot.com/5049810.jpg?t=1640848903"
+    },
+    {
+      "title": "Fiji Sun",
+      "feed_url": "https://fijisun.com.fj/feed/",
+      "website_url": "https://fijisun.com.fj/category/tourism/",
+      "description": "A brand recognized as a leader in media innovation produced by an editorial team known for its quality, innovation and integrity, Fiji Sun is the choice of the majority of readers across the country. They turn to it daily for news, information, analysis and entertainment.",
+      "followers": {
+        "facebook": 455000,
+        "twitter": 34700,
+        "instagram": 46200
+      },
+      "image_url": "https://i1.feedspot.com/5358141.jpg?t=1640848602"
+    },
+    {
+      "title": "Fiji Daily Post",
+      "feed_url": "https://www.fijidailypost.com/feed",
+      "website_url": "https://www.fijidailypost.com/",
+      "description": "Fiji Daily Post is an organization about News And Media.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5358143.jpg?t=1640849156"
+    },
+    {
+      "title": "Islands Business",
+      "feed_url": "https://islandsbusiness.com/feed/",
+      "website_url": "https://islandsbusiness.com/",
+      "description": "Islands Business is the sole surviving news and business monthly of the Pacific Islands, and your source on issues that matter to the islands region and beyond.",
+      "followers": {
+        "facebook": 45600,
+        "twitter": 8100,
+        "instagram": 882
+      },
+      "image_url": "https://i1.feedspot.com/5358144.jpg?t=1640848677"
+    },
+    {
+      "title": "Fiji One News",
+      "feed_url": "https://fijionenews.com.fj/feed/",
+      "website_url": "https://fijionenews.com.fj/",
+      "description": "At Fiji One News we keep you updated with up-to-the-minute news and updates in local, business, sports, politics and world news. Fiji One News is your one-stop destination for trusted Local and World news coverage. Stay connected on the web to watch the news on politics, sports, entertainment, lifestyle, gadgets, and much more.",
+      "followers": {
+        "facebook": 351800,
+        "twitter": 53100
+      },
+      "image_url": "https://i1.feedspot.com/5484418.jpg?t=1672146222"
+    },
+    {
+      "title": "Today Media Fiji",
+      "feed_url": "https://todaymediafiji.com/feed/",
+      "website_url": "https://todaymediafiji.com/",
+      "description": "Today Media Fiji is a news and media website exclusively covering stories from Fiji and other Pacific islands. Stay updated on all Political, Economical, and International events with timely and accurate coverage from Today Media. The site also features additional content like photos, videos and links to other sources.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5484415.jpg?t=1672146093"
+    },
+    {
+      "title": "FijiLive",
+      "feed_url": "https://fijilive.com/feed/",
+      "website_url": "https://fijilive.com/",
+      "description": "FijiLive is a one-stop shop for the latest News from the Business, Sports, and Entertainment sectors of Fiji. View trending news stories, and photo galleries in addition to information on Hotels, resorts, snorkeling, software, Taveuni, coral coast, and other tourism topics.",
+      "followers": {
+        "facebook": 174300,
+        "twitter": 516,
+        "instagram": 154
+      },
+      "image_url": "https://i1.feedspot.com/5484413.jpg?t=1672146186"
+    },
+    {
+      "title": "The Fiji Times",
+      "feed_url": "https://www.fijitimes.com.fj/feed/",
+      "website_url": "https://www.fijitimes.com.fj/",
+      "description": "The Fiji Times online provides distinct, accurate, and unbiased news coverage and updates on the Latest Fiji News, Sports, and Weather events. Locally-driven and committed to objective, fact-based journalism, The Fiji Times is a local independent publication serving Fiji Islands.",
+      "followers": {
+        "twitter": 106700
+      },
+      "image_url": "https://i1.feedspot.com/5484416.jpg?t=1672146159"
+    },
+    {
+      "title": "NZ Fiji Times",
+      "feed_url": "https://nzfijitimes.co.nz/feed/",
+      "website_url": "https://nzfijitimes.co.nz/",
+      "description": "Get day-to-day updates on Fiji News, New Zealand News, and the world: Latest News, videos, sports, rugby, politics, and more. NZ Fiji Times is a popular news, entertainment, music, and fashion website with a focus on providing readers with the latest lowdown from the entertainment industry.",
+      "followers": {
+        "facebook": 37200,
+        "twitter": 130
+      },
+      "image_url": "https://i1.feedspot.com/5484414.jpg?t=1672146242"
+    }
+  ]
+}

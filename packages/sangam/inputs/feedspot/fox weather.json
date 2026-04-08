@@ -1,0 +1,50 @@
+{
+  "category": "Fox Weather",
+  "source_url": "https://rss.feedspot.com/foxweather_rss_feeds",
+  "feeds": [
+    {
+      "title": "Fox Weather",
+      "feed_url": "https://moxie.foxweather.com/google-publisher/latest.xml",
+      "website_url": "https://www.foxweather.com/",
+      "description": "Discover the latest breaking weather news feed with Fox Weather. Find out what the latest news is and read about the latest news happening today.",
+      "followers": {
+        "facebook": 584500,
+        "twitter": 35500,
+        "instagram": 367500
+      },
+      "image_url": "https://i1.feedspot.com/7883927.jpg?t=1741259572"
+    },
+    {
+      "title": "Fox Weather \u00bb Extreme Weather",
+      "feed_url": "https://moxie.foxweather.com/google-publisher/extreme-weather.xml",
+      "website_url": "https://www.foxweather.com/extreme-weather",
+      "description": "Read below to see the extreme weather world and local events happening today. Discover the unfolding stories of extreme weather happening near you by delving into the articles below.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7883928.jpg?t=1741259563"
+    },
+    {
+      "title": "Fox Weather \u00bb Learn",
+      "feed_url": "https://moxie.foxweather.com/google-publisher/learn.xml",
+      "website_url": "https://www.foxweather.com/learn",
+      "description": "Want to learn more about the weather? Check out the weather articles below for some tips and tricks. Learn things like what is a hurricane, how does a tornado form, what is a supermoon plus much more.",
+      "followers": {
+        "facebook": 584500,
+        "twitter": 35500,
+        "instagram": 367500
+      },
+      "image_url": "https://i1.feedspot.com/7883926.jpg?t=1741259534"
+    },
+    {
+      "title": "Fox Weather \u00bb Earth & Space",
+      "feed_url": "https://moxie.foxweather.com/google-publisher/earth-space.xml",
+      "website_url": "https://www.foxweather.com/earth-space",
+      "description": "Uncover information about space and the earth with FOX Weather. Learn the latest trending space news and read about all the events earth is experiencing today.",
+      "followers": {
+        "facebook": 584500,
+        "twitter": 35500,
+        "instagram": 367500
+      },
+      "image_url": "https://i1.feedspot.com/7883929.jpg?t=1741259528"
+    }
+  ]
+}

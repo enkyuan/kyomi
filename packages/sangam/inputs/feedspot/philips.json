@@ -1,0 +1,52 @@
+{
+  "category": "Philips",
+  "source_url": "https://rss.feedspot.com/philips_rss_feeds",
+  "feeds": [
+    {
+      "title": "Philips News and Insights",
+      "feed_url": "https://www.philips.com/content/corporate/en_AA/feed.rss.xml?pageSize=15&startIndex=0&src=/content/corporate/en_AA/about/news/archive&sortMode=createdDate",
+      "website_url": "https://www.philips.com/a-w/about/news-and-insights/all.html/",
+      "description": "Philips is a leading health technology company focused on improving people's health and enabling better outcomes across the health continuum from healthy living and prevention, to diagnosis, treatment and home care. At Philips, we want to improve the quality of people's lives through meaningful innovation. Find new perspectives on health, direct from the experts.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 323400,
+        "instagram": 249000
+      },
+      "image_url": "https://i1.feedspot.com/4922733.jpg?t=1639727858"
+    },
+    {
+      "title": "Philips News and Insights",
+      "feed_url": "https://www.philips.com/content/corporate/en_AA/feed.rss.xml?pageSize=15&startIndex=0&src=/content/corporate/en_AA/about/news/archive&sortMode=createdDate",
+      "website_url": "https://www.philips.com/a-w/about/news-and-insights/all.html/",
+      "description": "Innovation news and insights. Philips research helps define the future of healthcare by unlocking opportunities for smart connected systems and solutions that improve lives.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 323400,
+        "instagram": 249000
+      },
+      "image_url": "https://i1.feedspot.com/5354331.jpg?t=1639728683"
+    },
+    {
+      "title": "Philips News and Insights",
+      "feed_url": "https://www.philips.com/content/corporate/en_AA/feed.rss.xml?pageSize=15&startIndex=0&src=/content/corporate/en_AA/about/news/archive&sortMode=createdDate",
+      "website_url": "https://www.philips.com/a-w/about/news-and-insights/all.html/",
+      "description": "At Philips, we want to improve the quality of people's lives through meaningful innovation. Find the latest Royal Philips press releases.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 47300,
+        "instagram": 249000
+      },
+      "image_url": "https://i1.feedspot.com/4922729.jpg?t=1639727870"
+    },
+    {
+      "title": "Hue Home Lighting \u00bb Philips News",
+      "feed_url": "https://huehomelighting.com/philips-hue-light-news/feed/",
+      "website_url": "https://huehomelighting.com/philips-hue-light-news/",
+      "description": "Hue Home Lighting offers all things Hue from Philips, home lighting automation, amazing lighting setups, hue apps & tips and tricks with Philips LED Lights & Bulbs. We round up the latest news from and related to the Philips Hue lighting system, new releases, updates, and rumors.",
+      "followers": {
+        "facebook": 689
+      },
+      "image_url": "https://i1.feedspot.com/4922755.jpg?t=1639728226"
+    }
+  ]
+}

@@ -1,0 +1,528 @@
+{
+  "category": "Space",
+  "source_url": "https://rss.feedspot.com/space_rss_feeds",
+  "feeds": [
+    {
+      "title": "Space.com: NASA, Space Exploration and Astronomy News",
+      "feed_url": "https://www.space.com/feeds.xml",
+      "website_url": "https://www.space.com/",
+      "description": "SPACE.com is the leading space news site on the web keeping up on the latest space science, technology and astronomy news. From satellites to stars, NASA information, astronomy, the sun and the planets, this blog has the information.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 1600000,
+        "instagram": 147700
+      },
+      "image_url": "https://i1.feedspot.com/29628.jpg?t=1605769535"
+    },
+    {
+      "title": "European Space Agency",
+      "feed_url": "https://www.esa.int/rssfeed/TopNews",
+      "website_url": "https://www.esa.int/Newsroom",
+      "description": "The European Space Agency portal features the latest news in space exploration, human spaceflight, launchers, telecommunications, navigation, monitoring and space science.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1800000,
+        "instagram": 3100000
+      },
+      "image_url": "https://i1.feedspot.com/709383.jpg?t=1616135672"
+    },
+    {
+      "title": "Sky & Telescope",
+      "feed_url": "https://skyandtelescope.org/feed/",
+      "website_url": "https://skyandtelescope.org/",
+      "description": "Sky & Telescope magazine, founded in 1941 by Charles A. Federer Jr. and Helen Spence Federer, has the largest, most experienced staff of any astronomy magazine in the world. It features large illustrations and articles from astronomers all over the globe. Sky & Tel covers the latest night-sky events, astronomy news, astrophotography and observing tips.",
+      "followers": {
+        "facebook": 606500,
+        "twitter": 127000,
+        "instagram": 24300
+      },
+      "image_url": "https://i1.feedspot.com/3823854.jpg?t=1616135677"
+    },
+    {
+      "title": "Universe Today",
+      "feed_url": "https://www.universetoday.com/feed/",
+      "website_url": "https://www.universetoday.com/",
+      "description": "Universe Today is all about Space and astronomy news. If you're a fan of space, sci-fi and pop culture, you'll love our Guide to Space.",
+      "followers": {
+        "facebook": 126100,
+        "twitter": 300400,
+        "instagram": 174100
+      },
+      "image_url": "https://i1.feedspot.com/17029.jpg?t=1616135691"
+    },
+    {
+      "title": "Spaceflight Now",
+      "feed_url": "https://spaceflightnow.com/feed/",
+      "website_url": "https://spaceflightnow.com/",
+      "description": "Spaceflight Now is a popular online publication that focuses on providing up-to-date news and information related to space exploration, satellite launches, rocket launches, and other space-related activities.",
+      "followers": {
+        "facebook": 143000,
+        "twitter": 494000
+      },
+      "image_url": "https://i1.feedspot.com/4624932.jpg?t=1616135700"
+    },
+    {
+      "title": "Astronomy Now Magazine",
+      "feed_url": "https://astronomynow.com/feed/",
+      "website_url": "https://astronomynow.com/",
+      "description": "Astronomy Now is the UK's biggest astronomy magazine. For over 25 years Astronomy Now magazine has provided a monthly source of information for amateur and professional astronomers alike. A wide range of feature articles cover subjects such as observing, cosmology, the history of astronomy and space science.",
+      "followers": {
+        "facebook": 532000,
+        "twitter": 116800
+      },
+      "image_url": "https://i1.feedspot.com/4624223.jpg?t=1616135705"
+    },
+    {
+      "title": "NPR \u00bb Space",
+      "feed_url": "https://feeds.npr.org/1026/rss.xml",
+      "website_url": "https://www.npr.org/sections/space/",
+      "description": "NPR covers of space exploration, space shuttle missions, news from NASA, private space exploration, satellite technology, and new discoveries in astronomy and astrophysics.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "Phys.org \u00bb Astronomy & Space",
+      "feed_url": "https://phys.org/rss-feed/space-news/",
+      "website_url": "https://phys.org/space-news/",
+      "description": "Phys.org provides the latest news on astronomy and space exploration.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/4624950.jpg?t=1616135720"
+    },
+    {
+      "title": "New Scientist \u00bb Space",
+      "feed_url": "https://www.newscientist.com/subject/space/feed/",
+      "website_url": "https://www.newscientist.com/subject/space/",
+      "description": "Get the latest and most comprehensive space news and information on our Space subject page. Stay informed on space exploration, astronomy, and the cosmos with in-depth articles, videos, and infographics. Satisfy your space curiosity here",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 4400000,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/4624929.jpg?t=1686313251"
+    },
+    {
+      "title": "EarthSky",
+      "feed_url": "https://earthsky.org/space/feed/",
+      "website_url": "https://earthsky.org/space/",
+      "description": "Based in Austin, TX, the EarthSky team has a blast bringing you daily updates Space",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 832300
+      },
+      "image_url": "https://i1.feedspot.com/1716449.jpg?t=1616135735"
+    },
+    {
+      "title": "Space News",
+      "feed_url": "https://spacenews.com/feed/",
+      "website_url": "https://spacenews.com/",
+      "description": "Established in 1989, SpaceNews is the most trusted and comprehensive source of news and analysis of the companies, agencies, technologies and trends shaping the global space industry. Space professionals rely on our experienced reporters to deliver timely, accurate and engaging coverage of civil, military and commercial space programs.",
+      "followers": {
+        "facebook": 24500,
+        "twitter": 134400
+      },
+      "image_url": "https://i1.feedspot.com/4360956.jpg?t=1616135739"
+    },
+    {
+      "title": "National Space Society Blog",
+      "feed_url": "https://nss.org/feed/",
+      "website_url": "https://nss.org/category/blog/",
+      "description": "The National Space Society (NSS) is an independent, educational, grassroots, non-profit organization dedicated to the creation of a spacefaring civilization. Its mission is 'to promote social, economic, technological, and political change in order to expand civilization beyond Earth, to settle space and to use the resulting resources to build a hopeful and prosperous future for humanity.'",
+      "followers": {
+        "facebook": 127500,
+        "twitter": 21700
+      },
+      "image_url": "https://i1.feedspot.com/4624689.jpg?t=1616136009"
+    },
+    {
+      "title": "Orbital Today",
+      "feed_url": "https://orbitaltoday.com/feed/",
+      "website_url": "https://orbitaltoday.com/",
+      "description": "Follow breaking British news about space with our online space magazine. Latest discoveries in the space world and astronomy news. As a group of individuals, we will monitor the evolution of this industry across the UK and Europe with the occasional news article relevant to specific sites, groups or individuals involved in this industry.",
+      "followers": {
+        "twitter": 866
+      },
+      "image_url": "https://i1.feedspot.com/5440096.jpg?t=1662717599"
+    },
+    {
+      "title": "NASA Watch",
+      "feed_url": "https://nasawatch.com/feed/",
+      "website_url": "https://nasawatch.com/",
+      "description": "NASA Watch is focused on the space sector that is a pioneer in news aggregation it also creates original content in the form of timely news stories, coverage of ongoing events and unique editorial content.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 112700
+      },
+      "image_url": "https://i1.feedspot.com/92047.jpg?t=1609308900"
+    },
+    {
+      "title": "Leonard David's INSIDE OUTER SPACE",
+      "feed_url": "https://www.leonarddavid.com/feed/",
+      "website_url": "https://www.leonarddavid.com/",
+      "description": "Leonard David is a space journalist, reporting on space activities for over 50 years. Leonard is co-author with Apollo 11's Buzz Aldrin of Mission to Mars My Vision for Space Exploration",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4625469.jpg?t=1616136042"
+    },
+    {
+      "title": "Astrobiology",
+      "feed_url": "https://astrobiology.com/feed",
+      "website_url": "https://astrobiology.com/",
+      "description": "Founded in 1999, SpaceRef is a new media company focused on the space sector and based out of Reston, Virginia. The company maintains four online properties including, SpaceRef, SpaceRef Business, NASA Watch, and the Astrobiology Web. SpaceRef is a pioneer in news aggregation but also creates original content in the form of timely news stories, coverage of ongoing events, and unique editorial content. Stay tuned to get the latest updates.",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 30700
+      },
+      "image_url": "https://i1.feedspot.com/1890450.jpg?t=1621075716"
+    },
+    {
+      "title": "Armagh Planetarium's Stellar Blog",
+      "feed_url": "https://armaghplanet.com/feed",
+      "website_url": "https://armaghplanet.com/",
+      "description": "Latest news and views from the exciting worlds of astronomy and space brought to you by the world-renowned Armagh Planetarium.",
+      "followers": {
+        "facebook": 36400,
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/4624196.jpg?t=1608533106"
+    },
+    {
+      "title": "Little Astronomy",
+      "feed_url": "https://littleastronomy.com/feed/",
+      "website_url": "https://littleastronomy.com/",
+      "description": "Little Astronomy is a site where everyone can learn cool facts about space and develop their love for astronomy and stargazing. Little Astronomy is a passion project started by Elena Stone with the objective of welcoming more people into the astronomy community.The site is built to be easy to communicate and share our curiosity for all things space and help newcomers with the journey so they can enjoy the hobby as much as we do.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5032554.jpg?t=1616136860"
+    },
+    {
+      "title": "SPACE AGE ARCHAEOLOGY",
+      "feed_url": "http://zoharesque.blogspot.com/feeds/posts/default",
+      "website_url": "http://zoharesque.blogspot.com/",
+      "description": "In 2003 I began work on a research project that has taken me to places that I never imagined: the cultural heritage of space exploration. Now I am determined to bring to light the secrets at the heart of the Space Age.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/43702.jpg?t=1616136825"
+    },
+    {
+      "title": "TASS",
+      "feed_url": "https://tass.com/rss/v2.xml?sections=NDg4Mw==",
+      "website_url": "https://tass.com/space-programs",
+      "description": "Space exploration programs, rocket launches, Russian space industry and more from TASS. TASS is the leading Russian state information agency, a legend of national news journalism.",
+      "followers": {
+        "facebook": 78600,
+        "twitter": 111500,
+        "instagram": 298400
+      },
+      "image_url": "https://i1.feedspot.com/4624809.jpg?t=1616135730"
+    },
+    {
+      "title": "SpaceQ",
+      "feed_url": "https://spaceq.ca/feed/",
+      "website_url": "https://spaceq.ca/",
+      "description": "SpaceQ is an independent online news service reporting real news related to the Canadian and international space sectors.",
+      "followers": {
+        "facebook": 22500
+      },
+      "image_url": "https://i1.feedspot.com/4625430.jpg?t=1616136038"
+    },
+    {
+      "title": "SpaceDaily",
+      "feed_url": "https://www.spacedaily.com/spacedaily.xml",
+      "website_url": "https://www.spacedaily.com/",
+      "description": "Space News from across the world and distant stars and planets.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 255
+      },
+      "image_url": "https://i1.feedspot.com/108902.jpg?t=1616136172"
+    },
+    {
+      "title": "Spaceflight History",
+      "feed_url": "http://spaceflighthistory.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://spaceflighthistory.blogspot.com/",
+      "description": "Spaceflight History blog is the latest in a series going back to 1996. The author David S. F. Portree started his first blog to make people aware of the many concepts proposed in the past half-century for accomplishing piloted moon and Mars programs.",
+      "followers": {
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4625523.jpg?t=1609309032"
+    },
+    {
+      "title": "Explaining Science",
+      "feed_url": "https://explainingscience.org/tag/latest/feed/",
+      "website_url": "https://explainingscience.org/tag/latest/",
+      "description": "I have a PhD in astronomy from the University of Manchester in the North West of England. Explaining Science contains articles on astronomy, space, and space travel - written at a level which is easily accessible to the non-scientist but without being dumbed down. Check the posts now!",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 60
+      },
+      "image_url": "https://i1.feedspot.com/4811764.jpg?t=1606808699"
+    },
+    {
+      "title": "The Human Spaceflight Blog: From the Space Shuttle to Beyond",
+      "feed_url": "https://feeds.feedburner.com/HumanSpaceflight",
+      "website_url": "https://human-spaceflight.blogspot.com/",
+      "description": "Discussing manned spaceflight by NASA, ESA, JAXA and other national space programs.",
+      "followers": {
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4624726.jpg?t=1616136352"
+    },
+    {
+      "title": "SpaceWatch GLOBAL",
+      "feed_url": "https://spacewatch.global/feed/",
+      "website_url": "https://spacewatch.global/",
+      "description": "SpaceWatch.GLOBAL is a digital magazine and portal for those interested in space and the far-reaching impact that space developments have. While showcasing the technology that enables the industry to edge closer to the next frontier, it provides analysis, forecasts, and insight into the geopolitical implications.",
+      "followers": {
+        "facebook": 11600,
+        "twitter": 9800,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4624842.jpg?t=1609315003"
+    },
+    {
+      "title": "Ice on the Moon",
+      "feed_url": "https://iceonthemoon.org/feed/",
+      "website_url": "https://iceonthemoon.org/",
+      "description": "All about Human Space Flight Beyond Earth Orbit, and lately about politics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5380190.jpg?t=1646978404"
+    },
+    {
+      "title": "Meson Stars",
+      "feed_url": "https://www.mesonstars.com/feed/",
+      "website_url": "https://www.mesonstars.com/",
+      "description": "Online news about space exploration",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5499739.jpg?t=1674648774"
+    },
+    {
+      "title": "New Space Economy",
+      "feed_url": "https://newspaceeconomy.ca/feed/",
+      "website_url": "https://newspaceeconomy.ca/",
+      "description": "New Space Economy focuses on the emerging trends and opportunities within the new space economy. It covers advancements in space technology, commercial space ventures, space exploration initiatives, and the economic impacts of space-related industries.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5419956.jpg?t=1711624464"
+    },
+    {
+      "title": "The Guardian | Space",
+      "feed_url": "https://www.theguardian.com/science/space/rss",
+      "website_url": "https://www.theguardian.com/science/space",
+      "description": "Latest news and features from theguardian.com on Space, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 706500,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4625416.jpg?t=1616135709"
+    },
+    {
+      "title": "SpaceFoxies",
+      "feed_url": "https://spacefoxies.com/news/index.php?news-feed/",
+      "website_url": "https://spacefoxies.com/",
+      "description": "SpaceFoxies is an independent Space Community. The community for Space Travel, Space Stations, Astronomy, Planets, Moons, and much more. Read news about Outer Space, Space Stations, Astronomy, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5640989.jpg?t=1690955993"
+    },
+    {
+      "title": "SpaceRef",
+      "feed_url": "https://spaceref.com/feed/",
+      "website_url": "https://spaceref.com/",
+      "description": "Founded in 1999, SpaceRef is a new media company focused on the space sector and based out of Reston, Virginia. SpaceRef is a pioneer in news aggregation but also creates original content in the form of timely news stories, coverage of ongoing events and unique editorial content.",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 46700
+      },
+      "image_url": "https://i1.feedspot.com/1457.jpg?t=1616135991"
+    },
+    {
+      "title": "Orbiter.ch Space News",
+      "feed_url": "https://orbiterchspacenews.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://orbiterchspacenews.blogspot.com/",
+      "description": "All news from space: Satellites data's; Probe data's; Discoveries; Exploration; Space survey; Launches etc...",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5164136.jpg?t=1616136957"
+    },
+    {
+      "title": "Space Adventures Blog",
+      "feed_url": "https://spaceadventures.com/feed/",
+      "website_url": "https://spaceadventures.com/blog/",
+      "description": "Space Adventures is the world's premier private spaceflight company and the only company currently providing opportunities for private astronauts to fly to and live in space. To date we have arranged eight spaceflights for seven clients, who cumulatively spent over 80 days in space and traveled nearly 30 million miles in space.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 11000
+      },
+      "image_url": "https://i1.feedspot.com/4945919.jpg?t=1616136027"
+    },
+    {
+      "title": "INTO THE DARK SPACE",
+      "feed_url": "https://intothedarkspace.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://intothedarkspace.blogspot.com/",
+      "description": "Founded in 2020 by Hemanth Kumar, Into the dark space has come a long way from its beginnings. When Hemanth Kumar first started out, his passion for astronomy drove him to do research. So that Into the dark space brings you the information about Astronomy and Space research.",
+      "followers": {
+        "facebook": 1400,
+        "instagram": 19
+      },
+      "image_url": "https://i1.feedspot.com/5178949.jpg?t=1616136182"
+    },
+    {
+      "title": "The Gargantua Times",
+      "feed_url": "https://thegargantuatimes.wordpress.com/feed/",
+      "website_url": "https://thegargantuatimes.wordpress.com/",
+      "description": "The Gargantua Times, an astronomy blog, is an initiative started by three young astronomy enthusiasts from the subcontinent. You can consider it as your virtual astronomy club - where you can learn about black holes, interesting theories, deep-sky objects, and about many more fascinating topics.",
+      "followers": {
+        "twitter": 726,
+        "instagram": 113
+      },
+      "image_url": "https://i1.feedspot.com/5192669.jpg?t=1599136472"
+    },
+    {
+      "title": "SkyFeed",
+      "feed_url": "https://www.skyfeedblog.com/feed/",
+      "website_url": "https://www.skyfeedblog.com/",
+      "description": "SkyFeed offers the best of the latest videos, news, and quizzes in the world of space exploration - delivered straight to your inbox.",
+      "followers": {
+        "facebook": 58,
+        "instagram": 363
+      },
+      "image_url": "https://i1.feedspot.com/5040284.jpg?t=1616136220"
+    },
+    {
+      "title": "amazingspace",
+      "feed_url": "https://universebelike.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://universebelike.blogspot.com/",
+      "description": "My name is Srishti, a teenager, my areas of interest are technologies, art forms, and how the universe works and I want to acquire more knowledge about the space. In today's world, everyone knows about our surroundings, our environment, and our earth. But only a few of them know about the outside world of the earth that is the universe. So here is my small effort to make everyone aware about the facts of the space.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5176094.jpg"
+    },
+    {
+      "title": "Space @ interstellar news",
+      "feed_url": "https://interstellarsapce.blogspot.com/feeds/posts/default",
+      "website_url": "https://interstellarsapce.blogspot.com/",
+      "description": "Space news now, space news 2019, outer space news, space news NASA, space news websites, space news app, latest space discoveries, and the latest news on the universe.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5129181.jpg?t=1616136749"
+    },
+    {
+      "title": "Irish Space Blog",
+      "feed_url": "http://irishspaceblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://irishspaceblog.blogspot.com/",
+      "description": "Irish Space Blog features news about Space Exploration and Astronomy. Bringing you the latest news from around the universe!",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4624418.jpg?t=1616136376"
+    },
+    {
+      "title": "The Gravity Well Blog",
+      "feed_url": "http://www.thegravitywell.org/blog?format=RSS",
+      "website_url": "http://www.thegravitywell.org/blog",
+      "description": "The Gravity Well Blog covers how the public space program can renew America's economy, international standing, and technological prowess.",
+      "followers": {
+        "facebook": 188,
+        "twitter": 33
+      },
+      "image_url": "https://i1.feedspot.com/4748031.jpg?t=1609309108"
+    },
+    {
+      "title": "For All Moonkind Blog",
+      "feed_url": "https://www.forallmoonkind.org/feed/",
+      "website_url": "https://www.forallmoonkind.org/blog/",
+      "description": "Ensure the lunar landing, and other sites in outer space, are recognized for their outstanding value to humanity and consequently preserved and protected for posterity by the United Nations and the international community as part of our common human heritage.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 2200,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4957907.jpg?t=1616136406"
+    },
+    {
+      "title": "Unifying Quantum and Relativistic Theories",
+      "feed_url": "https://www.theimagineershome.com/blog/feed/",
+      "website_url": "https://www.theimagineershome.com/blog/",
+      "description": "The purpose of this blog is to show how changing ones perspective on the physical structure of the universe will allow one to unite the abstract concepts of Quantum Mechanics with the observable realities of both Einstein's Special and General Theories of Relativity",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5161851.jpg?t=1608213830"
+    },
+    {
+      "title": "The Mars Blueprint Blog",
+      "feed_url": "https://themarsblueprint.com/feed/",
+      "website_url": "https://themarsblueprint.com/the-mars-blueprint-blog/",
+      "description": "Inspiring a generation to reach to the stars and make the impossible... Possible. The Mars Blueprint is equal parts thought experiment and social movement. For the first time in our species history, we have the technology to explore and settle another world. The Mars Blueprint is determined to generate intelligent discussion that drives public opinion and policy on how all the pieces should fall together.",
+      "followers": {
+        "twitter": 17,
+        "instagram": 83
+      },
+      "image_url": "https://i1.feedspot.com/5429284.jpg?t=1659615967"
+    },
+    {
+      "title": "CosmoBC.com AstroBlog",
+      "feed_url": "https://astroblog.cosmobc.com/feed/",
+      "website_url": "https://astroblog.cosmobc.com/",
+      "description": "The blog about Astronomy and Space Exploration. We publish astronomy pictures, as well as articles about astrophysics, space science, the solar system, stars, galaxies, etc. CosmoBC.com was founded in 2008.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4624691.jpg?t=1616135988"
+    },
+    {
+      "title": "The Planetary Society",
+      "feed_url": "https://www.planetary.org/rss/articles",
+      "website_url": "https://www.planetary.org/articles",
+      "description": "The Planetary Society is the largest and most effective nonprofit organization that promotes the exploration of space through education, advocacy, and innovative projects. Its mission is to empower the world's citizens to advance space science and exploration.",
+      "followers": {
+        "facebook": 939000,
+        "twitter": 247600,
+        "instagram": 659100
+      },
+      "image_url": "https://i1.feedspot.com/95267.jpg?t=1606988520"
+    },
+    {
+      "title": "Centauri Dreams",
+      "feed_url": "https://feeds.feedburner.com/centauri-dreams/eepu",
+      "website_url": "https://www.centauri-dreams.org/",
+      "description": "In Centauri Dreams, Paul Gilster looks at peer-reviewed research on deep space exploration, with an eye toward interstellar possibilities.",
+      "followers": {
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4945927.jpg?t=1616136051"
+    },
+    {
+      "title": "Huff Post",
+      "feed_url": "https://www.huffpost.com/topic/space/feed",
+      "website_url": "https://www.huffpost.com/impact/topic/space",
+      "description": "The destination for news, blogs and original content on Space and beyond.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4624976.jpg?t=1608544100"
+    },
+    {
+      "title": "Joshua Habka",
+      "feed_url": "https://joshuahabka.com/rss/",
+      "website_url": "https://www.astronomy.com/news/",
+      "description": "Josh Habka is a dynamic science communicator and influencer based in Melbourne, currently serving as a Sophomore and content creator at the Florida Institute of Technology. Read his captivating blog on astronomy where he educated readers about cutting-edge space research and new developments.",
+      "followers": {
+        "facebook": 168700
+      },
+      "image_url": "https://i1.feedspot.com/7304720.jpg?t=1713951676"
+    },
+    {
+      "title": "Anecdotes of a Space Nerd",
+      "feed_url": "https://www.aerospacenerd.com/feed/",
+      "website_url": "https://www.aerospacenerd.com/",
+      "description": "As a space nerd, I chose to follow my dream and pursue Aerospace Engineering.Through my blog, I attempt to advise and assist upcoming students in the field of Aerospace Engineering. This endeavour would also guide the general public towards the Final Frontier (Space).",
+      "followers": {
+        "facebook": 572,
+        "twitter": 333,
+        "instagram": 357
+      },
+      "image_url": "https://i1.feedspot.com/5139278.jpg?t=1616136200"
+    }
+  ]
+}

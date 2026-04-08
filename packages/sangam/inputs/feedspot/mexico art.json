@@ -1,0 +1,30 @@
+{
+  "category": "Mexico Art",
+  "source_url": "https://rss.feedspot.com/mexico_art_rss_feeds",
+  "feeds": [
+    {
+      "title": "Museo Franz Mayer Blog",
+      "feed_url": "https://franzmayer.org.mx/feed/",
+      "website_url": "https://franzmayer.org.mx/blog/",
+      "description": "A museum that encourages innovation and creativity, preserving, researching, disseminating art and design through its collections and temporary programs. Read more about arts, exhibitions, history of arts, historical artists, modern arts, and more.",
+      "followers": {
+        "facebook": 325800,
+        "twitter": 395000,
+        "instagram": 142700
+      },
+      "image_url": "https://i1.feedspot.com/5344555.jpg?t=1637242068"
+    },
+    {
+      "title": "Obras de Arte Mexico",
+      "feed_url": "https://odam.mx/feed/",
+      "website_url": "https://odam.mx/blog-odam/",
+      "description": "Works of art in reproducible editions in different sizes, printed in museum quality sent with an author's certificate that revalue and validate the original work produced by the artist. Read more about mexican artworks, artists, history of art and more.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 18,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5344554.jpg?t=1637241855"
+    }
+  ]
+}

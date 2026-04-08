@@ -1,0 +1,65 @@
+{
+  "category": "White House",
+  "source_url": "https://rss.feedspot.com/white_house_rss_feeds",
+  "feeds": [
+    {
+      "title": "WTOP News \u00bb White House",
+      "feed_url": "https://wtop.com/government/white-house/feed/",
+      "website_url": "https://wtop.com/government/white-house/",
+      "description": "See the latest news, headlines, and analysis on the White House from WTOP's top news teams. WTOP delivers the latest local news, traffic and weather information to the Washington, D.C., region across multiple platforms.",
+      "followers": {
+        "facebook": 214700,
+        "twitter": 307900,
+        "instagram": 79600
+      },
+      "image_url": "https://i1.feedspot.com/5365185.jpg?t=1643090730"
+    },
+    {
+      "title": "WION \u00bb The White House",
+      "feed_url": "https://www.wionews.com/rss",
+      "website_url": "https://www.wionews.com/tags/the-white-house/",
+      "description": "Breaking news from The White House. At WION, we examine global issues with in-depth analysis. WION is leading news channel worldwide.",
+      "followers": {
+        "facebook": 3200000,
+        "twitter": 491100
+      },
+      "image_url": "https://i1.feedspot.com/5365198.jpg?t=1643091467"
+    },
+    {
+      "title": "The White House",
+      "feed_url": "https://www.whitehouse.gov/news/feed/",
+      "website_url": "https://www.whitehouse.gov/news/",
+      "description": "Get the latest news from The White House. The White House is where the President and First Family of the United States live and work - but it's also the People's House, where we hope all Americans feel a sense of inclusion and belonging.",
+      "followers": {
+        "facebook": 12900000,
+        "twitter": 8700000,
+        "instagram": 10500000
+      },
+      "image_url": "https://i1.feedspot.com/5365186.jpg?t=1643606311"
+    },
+    {
+      "title": "CNBC \u00bb White House",
+      "feed_url": "https://www.cnbc.com/white-house/",
+      "website_url": "https://www.cnbc.com/white-house/",
+      "description": "Follow the latest news from the White House, including video, commentary, and in-depth analysis coverage. CNBC is the recognized world leader in business news and provides real-time financial market coverage and business content.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/5365197.jpg?t=1643091460"
+    },
+    {
+      "title": "The Washington Post \u00bb White House",
+      "feed_url": "https://www.washingtonpost.com/politics/white-house/",
+      "website_url": "https://www.washingtonpost.com/politics/white-house/",
+      "description": "This section features artices on White House. The Washington Post consists of award-winning journalists who cover the news around Washington and the world since 1877.",
+      "followers": {
+        "facebook": 7600000,
+        "twitter": 19800000,
+        "instagram": 7300000
+      },
+      "image_url": "https://i1.feedspot.com/5365773.jpg?t=1643288323"
+    }
+  ]
+}

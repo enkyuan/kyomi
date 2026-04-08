@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>Awesome RSS Feeds</title>
+  </head>
+  <body>
+    <outline text="Frontend Development">
+      <outline text="Flavio Copes" type="rss" xmlUrl="https://flaviocopes.com/index.xml"/>
+      <outline text="JavaScript Weekly" type="rss" xmlUrl="http://javascriptweekly.com/rss"/>
+      <outline text="Made with React" type="rss" xmlUrl="https://madewithreact.com/rss/"/>
+      <outline text="Overreacted" type="rss" xmlUrl="https://overreacted.io/rss.xml"/>
+      <outline text="React Native Blog" type="rss" xmlUrl="https://facebook.github.io/react-native/blog/feed"/>
+      <outline text="React Status" type="rss" xmlUrl="https://react.statuscode.com/rss/1ble8b5f"/>
+      <outline text="React" type="rss" xmlUrl="https://facebook.github.io/react/feed.xml"/>
+      <outline text="ReactJS - Building Web Apps w/JavaScript" type="rss" xmlUrl="https://www.reddit.com/r/reactjs/.rss"/>
+    </outline>
+    <outline text="Software Engineering">
+      <outline text="Airbnb Engineering &amp;amp; Data Science - Medium" type="rss" xmlUrl="https://medium.com/feed/airbnb-engineering"/>
+      <outline text="Complete Think" type="rss" xmlUrl="https://rickhw.github.io/atom.xml"/>
+      <outline text="Hacker Noon — Medium" type="rss" xmlUrl="https://hackernoon.com/feed"/>
+      <outline text="Joel on Software" type="rss" xmlUrl="http://www.joelonsoftware.com/rss.xml"/>
+      <outline text="Newsletter feed for Kent C. Dodds News" type="rss" xmlUrl="https://buttondown.email/kentcdodds/rss"/>
+      <outline text="programming is terrible" type="rss" xmlUrl="https://programmingisterrible.com/rss"/>
+      <outline text="SegmentFault 最新的文章" type="rss" xmlUrl="http://segmentfault.com/feeds/blogs"/>
+      <outline text="Stories by Pinterest Engineering on Medium" type="rss" xmlUrl="https://medium.com/feed/@Pinterest_Engineering"/>
+      <outline text="The GitHub Blog" type="rss" xmlUrl="https://blog.github.com/all.atom"/>
+      <outline text="The Zapier Engineering Blog" type="rss" xmlUrl="https://zapier.com/engineering/feeds/latest/"/>
+    </outline>
+    <outline text="Tech, Gadgets">
+      <outline text="Alfred Blog" type="rss" xmlUrl="http://blog.alfredapp.com/feed/"/>
+      <outline text="Engadget 中文版 RSS Feed" type="rss" xmlUrl="http://chinese.engadget.com/rss.xml"/>
+      <outline text="Inside 硬塞的網路趨勢觀察" type="rss" xmlUrl="https://feeds.feedburner.com/inside-blog-taiwan"/>
+      <outline text="MacRumors: Mac News and Rumors - Front Page" type="rss" xmlUrl="http://www.macrumors.com/macrumors.xml"/>
+      <outline text="TechCrunch" type="rss" xmlUrl="http://feeds.feedburner.com/TechCrunch"/>
+      <outline text="TechOrange" type="rss" xmlUrl="http://feeds.feedburner.com/techorange"/>
+      <outline text="The Zapier Blog" type="rss" xmlUrl="https://zapier.com/blog/feeds/latest/"/>
+      <outline text="UNWIRE.HK 流動科技生活" type="rss" xmlUrl="http://feeds2.feedburner.com/unwirelife"/>
+      <outline text="電腦玩物" type="rss" xmlUrl="http://feeds.feedburner.com/playpc"/>
+    </outline>
+    <outline text="Management">
+      <outline text="經理人 Manager Today ｜管理、經理人、企業管理、品牌" type="rss" xmlUrl="http://www.managertoday.com.tw/rss/"/>
+    </outline>
+  </body>
+</opml>

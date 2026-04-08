@@ -1,0 +1,777 @@
+{
+  "category": "Theatre",
+  "source_url": "https://rss.feedspot.com/theatre_rss_feeds",
+  "feeds": [
+    {
+      "title": "OnStage",
+      "feed_url": "https://www.onstageblog.com/columns?format=RSS",
+      "website_url": "https://www.onstageblog.com/",
+      "description": "OnStage is a blog dedicated to Broadway and Community Theater Show Reviews as well as discussing the famous stage directors, actors, and technicians. Chris Peterson launched OnStage Blog on May 14th, 2014 with the mission of promoting and discussing the community theatre scene in Fairfield County, CT. Its mission has always been, and will always be, to shine a light on issues within the theatrical space that deserve to be covered more often.",
+      "followers": {
+        "facebook": 200500,
+        "twitter": 10000,
+        "instagram": 21400
+      },
+      "image_url": "https://i1.feedspot.com/4524311.jpg?t=1606802494"
+    },
+    {
+      "title": "HowlRound",
+      "feed_url": "https://howlround.com/feed",
+      "website_url": "https://howlround.com/",
+      "description": "A theatre commons by and for people who make performance.",
+      "followers": {
+        "facebook": 23400,
+        "twitter": 17100
+      },
+      "image_url": "https://i1.feedspot.com/4524310.jpg?t=1606801571"
+    },
+    {
+      "title": "Gia On The Move",
+      "feed_url": "https://giaonthemove.com/feed/",
+      "website_url": "https://giaonthemove.com/",
+      "description": "At Gia On The Move, we want to tell stories that inspire, connect you to one another, and connect you to ideas that ignite movement, action and interaction.We are constantly pulling together, sifting through, selecting, and presenting concepts and anecdotes that excite, radiate, galvanize, clarify, fire spontaneity or simply stimulate the giggles.",
+      "followers": {
+        "facebook": 946,
+        "twitter": 8400,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4922159.jpg?t=1606802516"
+    },
+    {
+      "title": "West End Wilma",
+      "feed_url": "https://westendwilma.com/feed/",
+      "website_url": "https://westendwilma.com/",
+      "description": "West End Wilma prides herself on being an all-round theatre expert - from in depth and honest reviews to booking tickets online, where to sit and when to go. The blog features articles on interesting topics such as theatre etiquette and advice on booking tickets in various theatres, restricted view seats and what to avoid when trying to pick up budget tickets.",
+      "followers": {
+        "twitter": 26000,
+        "instagram": 10000
+      },
+      "image_url": "https://i1.feedspot.com/4524321.jpg?t=1606802523"
+    },
+    {
+      "title": "Griffin Theatre Blog",
+      "feed_url": "https://griffintheatre.com.au/feed/",
+      "website_url": "https://griffintheatre.com.au/blog/",
+      "description": "Located in the heart of Kings Cross in the historic SBW Stables Theatre Griffin has been dedicated to bringing the best Australian stories to the stage for the better part of four decades. We're passionate about theatre that's written by Australians, about Australians, for Australians to enjoy.",
+      "followers": {
+        "facebook": 17900,
+        "twitter": 11800,
+        "instagram": 14100
+      },
+      "image_url": "https://i1.feedspot.com/4524355.jpg?t=1662009165"
+    },
+    {
+      "title": "Rev Stan's theatre blog",
+      "feed_url": "https://feeds.feedburner.com/revstanstheatreblog",
+      "website_url": "https://theatre.revstan.com/",
+      "description": "Love going to the theatre, here you'll find interviews, reviews, thoughts and experiences from London's theatre scene including big West End plays right down to fringe and pub performances.",
+      "followers": {
+        "twitter": 1900,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/465550.jpg?t=1606801596"
+    },
+    {
+      "title": "The Joyous Living",
+      "feed_url": "https://www.thejoyousliving.com/feed/",
+      "website_url": "https://www.thejoyousliving.com/",
+      "description": "At The Joyous Living, we provide family-friendly entertainment reviews and recommendations with a focus on all things Disney. We are an entertainment blog providing our readers with book reviews, movie reviews, theater show reviews, theme park recommendations, and tv show reviews!",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 3600,
+        "instagram": 7500
+      },
+      "image_url": "https://i1.feedspot.com/5059105.jpg?t=1606802573"
+    },
+    {
+      "title": "New York Theater",
+      "feed_url": "https://newyorktheater.me/feed/",
+      "website_url": "https://newyorktheater.me/",
+      "description": "This is Jonathan Mandell's New York Theater blog, where you will read reviews and news about Broadway, Off-Broadway and independent theater, and occasionally some off-topic commentary. New York Theater offers weekly summaries of theater news, a monthly calendar of theater openings, monthly theater quizzes, and occasional ticket giveaways. In this publication, I discuss issues in the arts, and books, and theater etiquette, and I crack jokes. But mostly, I write theater reviews.",
+      "followers": {
+        "twitter": 31700
+      },
+      "image_url": "https://i1.feedspot.com/5165003.jpg?t=1606802633"
+    },
+    {
+      "title": "American Theatre",
+      "feed_url": "https://www.americantheatre.org/feed/",
+      "website_url": "https://www.americantheatre.org/",
+      "description": "American Theatre magazine is the nation's only general-circulation magazine devoted to theatre. American Theatre provides theatre news, features, artist interviews, and editorials about theatre in the US and abroad.",
+      "followers": {
+        "facebook": 122300,
+        "twitter": 22500,
+        "instagram": 9600
+      },
+      "image_url": "https://i1.feedspot.com/4967787.jpg?t=1606802618"
+    },
+    {
+      "title": "Seen and Heard International",
+      "feed_url": "https://seenandheard-international.com/feed/",
+      "website_url": "https://seenandheard-international.com/",
+      "description": "Established in 1999 Seen and Heard International has internationally based correspondents reporting on a wide range of music and other events Seen and Heard.",
+      "followers": {
+        "facebook": 991,
+        "twitter": 411
+      },
+      "image_url": "https://i1.feedspot.com/5185029.jpg?t=1606802628"
+    },
+    {
+      "title": "LouReviews",
+      "feed_url": "https://loureviews.blog/feed/",
+      "website_url": "https://loureviews.blog/",
+      "description": "LouReviews launched in the first week of January 2012 and is intended to be a one-stop-shop for theatre, film, concert, television, book and DVD reviews, with the odd tribute and profile of people I admire, and anything else I feel like sharing.",
+      "followers": {
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4986958.jpg?t=1606802648"
+    },
+    {
+      "title": "Glasgow Theatre Blog",
+      "feed_url": "https://glasgowtheatreblog.com/feed/",
+      "website_url": "https://glasgowtheatreblog.com/",
+      "description": "The aim of the blog is to publicise and review arts events in Glasgow and the Greater Glasgow area. The best place for news, interviews and reviews of theatre in Glasgow, Scotland and beyond.",
+      "followers": {
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4524316.jpg?t=1608118540"
+    },
+    {
+      "title": "theatreCat",
+      "feed_url": "https://theatrecat.com/feed/",
+      "website_url": "https://theatrecat.com/",
+      "description": "'It seemed that honest vivid reviewing was a kind of duty: not merely a service to readers and potential ticket-buyers but to the art of theatre itself.' Written by former Chief Theatre Critic at The Times, Libby Purves, Theatre Cat is a wonderfully tight review blog.",
+      "followers": {
+        "twitter": 14100
+      },
+      "image_url": "https://i1.feedspot.com/4524305.jpg?t=1606802667"
+    },
+    {
+      "title": "Night-Tinted Glasses",
+      "feed_url": "http://zahirblue.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://zahirblue.blogspot.com/",
+      "description": "Theatre Reviews. Born in the Year of the Boar. Sagittarius. From San Francisco, raised in Florida, went to school (eventually) in New York City, currently living in Los Angeles.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5057614.jpg?t=1606802715"
+    },
+    {
+      "title": "Everything Theatre",
+      "feed_url": "https://everything-theatre.co.uk/feed/",
+      "website_url": "https://everything-theatre.co.uk/",
+      "description": "An honest & unpretentious guide to the London theatre scene. Reviews, competitions, features, opinions & podcasts that aim to make theatre appealing to all!",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 11100
+      },
+      "image_url": "https://i1.feedspot.com/4524317.jpg?t=1606803167"
+    },
+    {
+      "title": "The Way I See It Theatre Blog",
+      "feed_url": "https://www.twisitheatreblog.com/?feed=rss2",
+      "website_url": "https://www.twisitheatreblog.com/",
+      "description": "The Way I See It is strongly committed to fostering and championing Canadian theatre and to providing a space for the discussion and sharing of perspectives, ideas and perceptions both from within the theatre community and among its varied audiences.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4524461.jpg"
+    },
+    {
+      "title": "The Play's the Thing UK",
+      "feed_url": "https://theplaysthethinguk.com/feed/",
+      "website_url": "https://theplaysthethinguk.com/",
+      "description": "The Play's the Thing UK aims to cover a wide range of performance genres and styles, with a focus on small-scale and fringe theatre. This is the lifeblood of UK theatre and performing arts, but it is also the work least likely to receive newspaper reviews. The Play's the Thing UK wants to provide small and emerging companies with the coverage they need and deserve, and publish those reviews alongside those of larger companies and venues.",
+      "followers": {
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4689388.jpg?t=1606803181"
+    },
+    {
+      "title": "theatremontgomery",
+      "feed_url": "http://theatremontgomery.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://theatremontgomery.blogspot.com/",
+      "description": "Serving the Montgomery Alabama community by posting reviews of professional, university, and community theatre productions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4524331.jpg?t=1606801943"
+    },
+    {
+      "title": "BroadwayShowbiz.com",
+      "feed_url": "https://broadwayshowbiz.com/feed/",
+      "website_url": "https://broadwayshowbiz.com/",
+      "description": "Bringing you the best about theater, film, dance & entertainment.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5391897.jpg?t=1650287168"
+    },
+    {
+      "title": "Theatre Fan",
+      "feed_url": "https://theatrefan.co.uk/feed/",
+      "website_url": "https://theatrefan.co.uk/category/news/",
+      "description": "Receive all the theater news, views, and reviews by Shaun Tossell! This blog is all about theatre, where he reviews all his favorite and good plays. His main love is musical theatre but then nothing beats a good play once in a while.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 26400,
+        "instagram": 22500
+      },
+      "image_url": "https://i1.feedspot.com/5466270.jpg?t=1672985720"
+    },
+    {
+      "title": "Octagon Theatre Bolton Blog",
+      "feed_url": "https://octagonbolton.co.uk/feed.rss",
+      "website_url": "https://octagonbolton.co.uk/news",
+      "description": "Find out more about the world behind the scenes at the Octagon Theatre Bolton. We are a theatre situated in the heart of Bolton and aim to be bold, adventurous and popular, making theatre of the highest quality and to be a brilliant creative home for the people of Bolton and beyond.",
+      "followers": {
+        "facebook": 16300,
+        "twitter": 21200,
+        "instagram": 9300
+      },
+      "image_url": "https://i1.feedspot.com/5488779.jpg?t=1672985436"
+    },
+    {
+      "title": "Theatre Works Blog",
+      "feed_url": "https://www.theatreworks.org.au/blog-feed.xml",
+      "website_url": "https://www.theatreworks.org.au/backstage-blog",
+      "description": "Visit our blog to check out our artist interviews. Theatre Works is one of Australia's longest-running independent theatres, constantly reinvigorating and reimagining the sector by providing a hotbed for artists and audience development. Theatre Works fills a vital niche in the Australian cultural landscape as an artistic home and destination for the ambitious, the new, and the eminent.",
+      "followers": {
+        "facebook": 13600,
+        "twitter": 6900,
+        "instagram": 10000
+      },
+      "image_url": "https://i1.feedspot.com/5461924.jpg?t=1672985355"
+    },
+    {
+      "title": "Theater Pizzazz",
+      "feed_url": "https://theaterpizzazz.com/feed/",
+      "website_url": "https://theaterpizzazz.com/",
+      "description": "Theater Pizzazz is your source of New York Theater Reviews, Broadway, Off Broadway, Celebrity Interviews, Music Reviews, discerning critics, and entertainment. Sandi Durell is Publisher/Editor of TheaterPizzazz.com an entertainment website featuring a variety of writer voices. Sandi has been writing, reviewing, producing and having a voice in theater, cabaret and the entertainment community for over 30+ years.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488774.jpg?t=1672985786"
+    },
+    {
+      "title": "AussieTheatre",
+      "feed_url": "https://www.aussietheatre.com.au/feed/",
+      "website_url": "https://www.aussietheatre.com.au/",
+      "description": "AussieTheatre.com is the leading source of theatre news, reviews, interviews and features in the Australian theatre industry. AussieTheatre.com is an interactive theatre and arts platform servicing the Australian performing arts community and the theatre-going public. Our aim is to create an engaging and informative platform that supports an appreciation of artists and the Australian arts industry.",
+      "followers": {
+        "facebook": 20300,
+        "twitter": 8800,
+        "instagram": 14200
+      },
+      "image_url": "https://i1.feedspot.com/5461921.jpg?t=1672986537"
+    },
+    {
+      "title": "Theatre Trip Blog",
+      "feed_url": "https://www.theatretrip.com/feed/",
+      "website_url": "https://www.theatretrip.com/blog/",
+      "description": "Theatre Trip is your go-to resource for interviews, audition songs, and tons of fun stuff related to musical theatre & repertoire. My name is Stacy Karyn and I specialize in musical theatre repertoire. I'm the founder of Theatre Trip. I have a TESOL drama certificate, a theatre degree from Hunter College in NYC, and have worked and interned with Broadway and Off-Broadway theatres.",
+      "followers": {
+        "facebook": 252,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5201709.jpg?t=1672986961"
+    },
+    {
+      "title": "Theatre Scotland Blog",
+      "feed_url": "https://www.theatrescotland.com/feed/",
+      "website_url": "https://www.theatrescotland.com/blog/",
+      "description": "Read about the latest theatre performances in the Theatre Scotland, the home of Scottish theatre. Theatre Scotland is maintained by Mark Fisher, freelance theatre critic, editor and feature writer. He has written about theatre in Scotland since the late-1980s, is a theatre critic for the Guardian and writes for publications all over the world.",
+      "followers": {
+        "twitter": 9000
+      },
+      "image_url": "https://i1.feedspot.com/5488772.jpg?t=1672986379"
+    },
+    {
+      "title": "Toasting Aussie Theatre Blog",
+      "feed_url": "https://toastingaussietheatre.com/feed/",
+      "website_url": "https://toastingaussietheatre.com/toasting-aussie-theatre/blog/",
+      "description": "Read the interviews, tips related to wine and the latest on theatre in the blog. Toasting Aussie Theatre brings you theatre reviews as well as wine pairings to go with the show. My name is Chantelle and I hope my theatre reviews and wine pairings give you a chuckle, convince you to try a new genre or varietal and gain a greater appreciation for two industries in which Australia shines.",
+      "followers": {
+        "facebook": 86,
+        "instagram": 305
+      },
+      "image_url": "https://i1.feedspot.com/5437267.jpg?t=1672986485"
+    },
+    {
+      "title": "A Seat On The Aisle Blog",
+      "feed_url": "https://asota.wordpress.com/feed/",
+      "website_url": "https://asota.wordpress.com/",
+      "description": "A theatre review blog by Ken Klingenmeier with Larry Adams, Adam Crowe, Carrie Neal, Vickie Cornelius Phipps & Daniel Shock. My name is Ken Klingenmeier. I have been involved in the busy Indianapolis theatre community for the past 28 years. I hoped to give opinions and helpful commentary not only on theater events, but also the wider world as I perceive it.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488769.jpg?t=1672987423"
+    },
+    {
+      "title": "Chris Neville-Smith's Blog On Theatre",
+      "feed_url": "https://chrisontheatre.wordpress.com/feed/",
+      "website_url": "https://chrisontheatre.wordpress.com/",
+      "description": "Welcome to Chris Neville-Smith's blog on Theatre where I provide reviews of stuff that's good. I write about local productions that are good or at least show some promise. I seek out plays that aren't already getting attention from other publications.",
+      "followers": {
+        "twitter": 19200
+      },
+      "image_url": "https://i1.feedspot.com/5466241.jpg?t=1669103878"
+    },
+    {
+      "title": "The Chrysalis Theatre Blog",
+      "feed_url": "https://www.chrysalismk.co.uk/feed/",
+      "website_url": "https://www.chrysalismk.co.uk/blog/",
+      "description": "The Chrysalis is more than just a theatre; it is a performance, events space and community creative hub based in Milton Keynes. The Chrysalis Theatre is used for theatre workshops and performances, singing, eurhythmy, bell ringing, religious services, gatherings, celebration, Family and Friends meetings and fun days.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5488771.jpg?t=1672987061"
+    },
+    {
+      "title": "Theatre Things Blog",
+      "feed_url": "https://theblogoftheatrethings.com/feed/",
+      "website_url": "https://theblogoftheatrethings.com/",
+      "description": "Theatre Things is a blog all about theatre, pretty much what the name suggests. Here you can find reviews and random musings from a lifelong fan. Our blog has all the theatre news, reviews, and interviews from London, Kent, and around the UK. All my reviews are written not as a critic but simply as a member of the audience, who loves theatre and wants to support it.",
+      "followers": {
+        "facebook": 161,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5466237.jpg?t=1672988016"
+    },
+    {
+      "title": "Partially Obstructed View Blog",
+      "feed_url": "http://feeds.feedburner.com/PartiallyObstructedView",
+      "website_url": "http://partially-obstructed-view.blogspot.com/",
+      "description": "Writing down what I think about theatre I've seen in That London, whether I've been asked to or not. I'm Nick, and I have a degree in English and Drama. I don't currently work in theatre but see as many London shows as I can, and like to share my reviews and opinions.",
+      "followers": {
+        "twitter": 418
+      },
+      "image_url": "https://i1.feedspot.com/5488763.jpg?t=1672988493"
+    },
+    {
+      "title": "Northeastern Ballet Theatre Blog",
+      "feed_url": "https://www.northeasternballet.org/blog-feed.xml",
+      "website_url": "https://www.northeasternballet.org/blog",
+      "description": "Northeastern Ballet Theatre, New Hampshire's premier ballet company and training school, is the artistic vision and passion of its founder, Edra Toth. At NBT, we teach the art and discipline of ballet. Our classes and performance opportunities are an investment in professional training and education unique to New Hampshire, providing the highest standard of excellence in the area.",
+      "followers": {
+        "facebook": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5488760.jpg?t=1672988866"
+    },
+    {
+      "title": "Alta High School Theatre Blog",
+      "feed_url": "http://altatheatre.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://altatheatre.blogspot.com/",
+      "description": "The Alta High School Theatre Blog shares announcements of auditions and casting for various drama events in the high school. That blog is managed by Lindsey Cline and Linze Kate.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488755.jpg?t=1672988811"
+    },
+    {
+      "title": "Norwich Theatre News",
+      "feed_url": "https://norwichtheatre.org/news/feed/",
+      "website_url": "https://norwichtheatre.org/news/",
+      "description": "Read the latest news from the Norwich Theatre. You can also check out the latest articles, blogs, and much more. Norwich Theatre presents a vibrant programme of live performance and creative engagement activities to entertain, enrich and inspire audiences of all ages and backgrounds.",
+      "followers": {
+        "facebook": 49000,
+        "twitter": 23100
+      },
+      "image_url": "https://i1.feedspot.com/5488752.jpg?t=1672988533"
+    },
+    {
+      "title": "Rangshila Theatre Blogs",
+      "feed_url": "https://rangshila.com/feed/",
+      "website_url": "https://rangshila.com/blogs/",
+      "description": "Rangshila blog provides you with useful acting tips and information about theatre. Our acting school has successfully trained around 500+ theatre enthusiasts, giving the theatre groups in Mumbai a much needed solid boost. Rangshila Theatre Group has performed in major theatre festivals of India including & Bharat Rang Mahotsav & organized by National School of Drama.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 135
+      },
+      "image_url": "https://i1.feedspot.com/5488753.jpg?t=1672988586"
+    },
+    {
+      "title": "Utah Theatre Bloggers",
+      "feed_url": "https://utahtheatrebloggers.com/feed",
+      "website_url": "https://utahtheatrebloggers.com/",
+      "description": "The Utah Theater Blogger Association is comprised of a group of theatre patrons and professionals dedicated to the creation and support of theatre by providing honest, quality reviews of productions across the state. Check out their recent articles and reviews on various theatre performances and also read interviews with the people behind the scenes and on stage.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5488751.jpg?t=1672989239"
+    },
+    {
+      "title": "The Theatre Times",
+      "feed_url": "https://thetheatretimes.com/feed/",
+      "website_url": "https://thetheatretimes.com/",
+      "description": "The Theatre Times is the largest global theatre portal and publishes news stories on daily basis from a variety of sources. Our goal is to create a transnational discursive space that would bring together theatre-makers and theatre lovers, facilitating global collaborative models, and generating opportunities for interaction and creative development amongst a wide network of international theatre-makers and theatergoers.",
+      "followers": {
+        "facebook": 56000,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5466271.jpg?t=1672989309"
+    },
+    {
+      "title": "Theatre-News.com",
+      "feed_url": "https://www.theatre-news.com/rss/UK/news",
+      "website_url": "https://www.theatre-news.com/",
+      "description": "The BBC of the theatre industry, created for and run by theatre lovers. Theatre News is a leading independent publisher featuring news, reviews, interviews, competitions, the latest releases and all the gossip from the theatre and performing arts industry. Theatre News is formed from a wide ranging collective of writers and journalists sharing a common love of theatre.",
+      "followers": {
+        "facebook": 724,
+        "twitter": 16300,
+        "instagram": 8300
+      },
+      "image_url": "https://i1.feedspot.com/5467096.jpg?t=1672989428"
+    },
+    {
+      "title": "Broadway & Me",
+      "feed_url": "https://feeds.feedburner.com/BroadwayMe",
+      "website_url": "http://broadwayandme.blogspot.com/",
+      "description": "I'm a theater lover. I am happiest when I am sitting in a theater. Or when I'm talking about theater. Or reading about theater. Or now blogging about it. If you're reading this, you're probably a theater lover too and I hope you'll keep me company as I blog my way through each Broadway season.",
+      "followers": {
+        "twitter": 789
+      },
+      "image_url": "https://i1.feedspot.com/686024.jpg?t=1672989611"
+    },
+    {
+      "title": "OLSH Theatre Blog",
+      "feed_url": "https://olshtheatreblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://olshtheatreblog.blogspot.com/",
+      "description": "The OLSH Theatre Blog is a blog managed by Ms. Dolores Manuel, the head of the Theatre Department at Our Lady of the Sacred Heart High School. Ms. Manuel updates the blog with rehearsal schedules and announcements for auditions and other theatre events.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488791.jpg?t=1672990888"
+    },
+    {
+      "title": "The Theatre Podcast with Alan Seales",
+      "feed_url": "https://feeds.megaphone.fm/thetheatrepodcast",
+      "website_url": "https://www.thetheatrepodcast.com/",
+      "description": "Intimate, personal conversations with the biggest talents from professional theatre, tv, film, and more. Hear their secrets, what makes them laugh, stresses them out, and how they manage the anxiety of success. We feature both stars and creatives such as producers, stage managers, directors, press and marketing agents, or even the people who own the theaters or productions themselves.\u200bThis is a podcast for artists, made by artists...",
+      "followers": {
+        "facebook": 591,
+        "twitter": 523,
+        "instagram": 10900
+      },
+      "image_url": "https://i1.feedspot.com/4996428.jpg?t=1745505126"
+    },
+    {
+      "title": "Players, Performers, & Portrayers",
+      "feed_url": "https://medium.com/feed/players-performers-portrayers",
+      "website_url": "https://medium.com/players-performers-portrayers",
+      "description": "Players, Performers, & Portrayers was created by actress and playwright Julia Stier to serve as a resource for early-career actors. Find interviews with actors on acting, advice, and their journeys in the entertainment industry.",
+      "followers": {
+        "facebook": 136,
+        "twitter": 135,
+        "instagram": 246
+      },
+      "image_url": "https://i1.feedspot.com/5202291.jpg?t=1601454024"
+    },
+    {
+      "title": "Embodiment as the One Heart",
+      "feed_url": "https://evamillauer.com/feed/",
+      "website_url": "https://evamillauer.com/",
+      "description": "Embodiment as the One Heart is the creative expression of the oneness of all of life through the heart. It is an extraordinarily powerful and transformative exploration tapping into the wisdom of the body and its knowledge that it already is the mystery of the universe.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5686922.jpg?t=1697005163"
+    },
+    {
+      "title": "Theatre Scenes: Auckland Theatre Blog (Reviews and commentary)",
+      "feed_url": "http://www.theatrescenes.co.nz/feed/",
+      "website_url": "http://www.theatrescenes.co.nz/",
+      "description": "Theatre Scenes is an independent and alternative blog for reviews and commentary on theatre productions in Auckland and beyond.",
+      "followers": {
+        "twitter": 784
+      },
+      "image_url": "https://i1.feedspot.com/4524330.jpg?t=1614235914"
+    },
+    {
+      "title": "2nd from Bottom",
+      "feed_url": "https://2ndfrombottom.wordpress.com/feed/",
+      "website_url": "https://2ndfrombottom.wordpress.com/",
+      "description": "Since the start of the UK's first pandemic lockdown 2nd From Bottom has specialised in listing and reviewing online theatre in the form of recorded material, live streams or shows constructed through media platforms such as Zoom. Since April 1st 2020 reviews have been continuous on consecutive days. The blog is now a premier resource for all theatre online.",
+      "followers": {
+        "twitter": 856
+      },
+      "image_url": "https://i1.feedspot.com/5139276.jpg?t=1606803332"
+    },
+    {
+      "title": "Stage Left Theatre Blog",
+      "feed_url": "https://www.stagelefttheatre.com/blog-feed.xml",
+      "website_url": "https://www.stagelefttheatre.com/blog",
+      "description": "Founded in Chicago in 1982, Stage Left Theatre develops and produces plays that explore the social and political landscape. The blog features the latest announcements of our shows and events,",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 2900,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4524337.jpg?t=1606803180"
+    },
+    {
+      "title": "A West End Whinger",
+      "feed_url": "https://westendwhingers.wordpress.com/feed/",
+      "website_url": "https://westendwhingers.wordpress.com/",
+      "description": "Andrew is on sabbatical but Phil is soldiering on to help you decide between the Merlot and the Marlowe and generally putting London's West End theatre to rights",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 7600
+      },
+      "image_url": "https://i1.feedspot.com/4524327.jpg?t=1606803192"
+    },
+    {
+      "title": "Reviews from Underground",
+      "feed_url": "https://reviewsfromunderground.com/feed/",
+      "website_url": "https://reviewsfromunderground.com/",
+      "description": "Studies in fringe, off-off-Broadway and experimental theater from a basement lab in NYC",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5035314.jpg"
+    },
+    {
+      "title": "There Ought To Be Clowns",
+      "feed_url": "http://feeds.feedburner.com/ThereOughtToBeClowns",
+      "website_url": "http://oughttobeclowns.blogspot.com/",
+      "description": "There Ought to be Clowns is a brilliant place to find reviews of plays, musical theatre, TV and film, describing itself as a 'theatrical diary' which actually turns out to be a very accurate description. There Ought to be Clowns is a very carefully thought out theatrical journal, with top notch reviews and a deeper look into both TV and film as well as on stage productions.",
+      "followers": {
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4524323.jpg?t=1606803220"
+    },
+    {
+      "title": "Treehouse Theatre",
+      "feed_url": "https://www.treehousetheatre.com/blog-feed.xml",
+      "website_url": "https://www.treehousetheatre.com/blog-1",
+      "description": "Treehouse Theatre specialise in interactive performances and workshops.We particularly love history and great story-telling. Most of the time we perform in schools, and most of our shows and workshops are educational as well as fun, with sessions for every age group from age 2 upwards.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 50
+      },
+      "image_url": "https://i1.feedspot.com/4524341.jpg?t=1606801680"
+    },
+    {
+      "title": "The Guardian Theatre blog",
+      "feed_url": "https://www.theguardian.com/stage/theatreblog/rss",
+      "website_url": "https://www.theguardian.com/stage/theatreblog",
+      "description": "Latest Theatre news and features from theguardian.com, the world's leading liberal voice",
+      "followers": {
+        "twitter": 94200
+      },
+      "image_url": "https://i1.feedspot.com/4524295.jpg"
+    },
+    {
+      "title": "Postcards from the Gods",
+      "feed_url": "http://postcardsgods.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://postcardsgods.blogspot.com/",
+      "description": "This brilliant blog from theatre critic Andrew Haydon is one of our immediate go-tos for thoughtful and frequent coverage of innovative theatre, dance and performance across the country, and into Europe.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4524308.jpg?t=1614235896"
+    },
+    {
+      "title": "Metta Theatre Blog",
+      "feed_url": "https://www.mettatheatre.co.uk/blog?format=rss",
+      "website_url": "https://www.mettatheatre.co.uk/blog",
+      "description": "Metta is a London and Somerset-based theatre company founded in 2005 by writer/director P Burton-Morgan & designer William Reynolds. We tell political stories with imagination & make compelling theatre using all the story-telling tools at our disposal. Here on our blog, you can find information, news, interviews, and more about different theater plays.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 2800,
+        "instagram": 900
+      },
+      "image_url": "https://i1.feedspot.com/5466239.jpg?t=1672986305"
+    },
+    {
+      "title": "The New Theatre Ideas Blog",
+      "feed_url": "http://feeds.feedburner.com/blogspot/vYsc",
+      "website_url": "https://theatreideas.blogspot.com/",
+      "description": "The New Theatre Ideas Blog brings you ideas, big Ideas, tirades, manifestoes, and musings. Declarations of Independence and Constitutions. The blog was created by Scott Walters, an Emeritus Professor of Drama at the University of North Carolina, Asheville.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488770.jpg?t=1672987121"
+    },
+    {
+      "title": "Playback Theatre Reflects",
+      "feed_url": "https://playbacktheatrereflects.net/feed/",
+      "website_url": "https://playbacktheatrereflects.net/",
+      "description": "Playback Theatre Reflects is an independent blog for writing on Playback Theatre. The blog is curated by Jo Salas, co-founder of Playback Theatre and author of Improvising Real Life: Personal Story in Playback Theatre.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488768.jpg?t=1672987499"
+    },
+    {
+      "title": "Clay Cooper Theatre Blog",
+      "feed_url": "https://www.claycoopertheatre.com//feed/rss2",
+      "website_url": "https://www.claycoopertheatre.com/blog",
+      "description": "For theatre updates, show information, and details on upcoming live events at the Clay Cooper Theatre, visit our blog page! Home to Branson's most talented artists and incredible entertainers since 2010, the Clay Cooper Theatre has shows you won't find anywhere else in Missouri!",
+      "followers": {
+        "facebook": 217900,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5488766.jpg?t=1672987559"
+    },
+    {
+      "title": "Kevin Jackson's Theatre Diary",
+      "feed_url": "https://feeds.feedburner.com/kjtheatrereviews",
+      "website_url": "https://kjtheatrediary.com/",
+      "description": "Kevin Jackson's Theatre Diary is a theatre, dance and concert blog from Sydney, Australia. My mission statement for this blog is that it promotes constructive discussion. I created this blog hoping that it will be a catalyst for real 'speak'. I see it as some way to record for History's sake events and to interpret them. I hope engagement and exchange evolves.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5437273.jpg?t=1672988211"
+    },
+    {
+      "title": "The Theatre Reviewer Blog",
+      "feed_url": "https://theatrereviewerblog.wordpress.com/feed/",
+      "website_url": "https://theatrereviewerblog.wordpress.com/blog/",
+      "description": "The Theatre Reviewer is combining critical theory and performance analysis to provide technical reviews for London theatre. My name is Lee James Broadwood and I am an interdisciplinary artist with various interests and skills. Principally, my practices span across writing, filmmaking and theatremaking as well as photography, painting and criticism.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488756.jpg?t=1672988663"
+    },
+    {
+      "title": "Village Theatre Blog",
+      "feed_url": "https://villagetheatre.wordpress.com/feed/",
+      "website_url": "https://villagetheatre.wordpress.com/",
+      "description": "Visit the Village Theatre blog to know about our latest updates and other interesting information related to theatre. Based in Issaquah, WA, with operations in Everett, Village Theatre is a leading producer of musical theatre in the Pacific Northwest. Producing entertaining quality productions for the entire family since 1979, Village Theatre has grown into one of the region's best-attended Equity theatres.",
+      "followers": {
+        "facebook": 22900
+      },
+      "image_url": "https://i1.feedspot.com/1253812.jpg?t=1672989176"
+    },
+    {
+      "title": "National Theatre News",
+      "feed_url": "https://www.nationaltheatre.org.uk/news/feed/",
+      "website_url": "https://www.nationaltheatre.org.uk/news/",
+      "description": "Visit the National Theatre Blog to keep up with the latest news on our shows and cast members, and the newest dramas. The National Theatre's mission is to make world-class theatre, for everyone. We create and share unforgettable stories with audiences across the UK and around the world.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 494100,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5488757.jpg?t=1672989679"
+    },
+    {
+      "title": "Limelight \u00bb Theatre",
+      "feed_url": "https://limelight-arts.com.au/category/theatre/feed/",
+      "website_url": "https://limelight-arts.com.au/category/theatre/",
+      "description": "Visit the Limelight Magazine website to view the latest news, reviews and events on Music, Arts & Culture. Limelight is Australia's premier arts platform. It has a unique place in Australia's performing arts scene, and is recognised as the journal of record in classical music, as well as providing extensive coverage of related art forms.",
+      "followers": {
+        "facebook": 65800,
+        "twitter": 7500,
+        "instagram": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5488759.jpg?t=1672988357"
+    },
+    {
+      "title": "Broadway Direct",
+      "feed_url": "https://broadwaydirect.com/feed/",
+      "website_url": "https://broadwaydirect.com/",
+      "description": "The Nederlander Organization established Broadway Direct in 2011 to help its patrons around the country stay connected to every show on Broadway. With this insider access, we're able to bring you the latest Broadway news, behind-the-scenes stories, backstage videos, and expert tips to help you find your next show.",
+      "followers": {
+        "facebook": 66400,
+        "twitter": 3100,
+        "instagram": 154000
+      },
+      "image_url": "https://i1.feedspot.com/5040460.jpg?t=1646651544"
+    },
+    {
+      "title": "World of Theatre and Art",
+      "feed_url": "https://worldoftheatreandart.com/feed/",
+      "website_url": "https://worldoftheatreandart.com/",
+      "description": "The top web source for theatre, alternative theatre, history of theatre, culture, art and social awareness.",
+      "followers": {
+        "twitter": 268
+      },
+      "image_url": "https://i1.feedspot.com/5139291.jpg"
+    },
+    {
+      "title": "Shoebox Theatre",
+      "feed_url": "https://www.shoeboxtheatre.org.uk/blog-feed.xml",
+      "website_url": "https://www.shoeboxtheatre.org.uk/blog",
+      "description": "Studio theatre in Swindon supporting new work and contemporary performance. Also provides quality training and arts education.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 708,
+        "instagram": 63
+      },
+      "image_url": "https://i1.feedspot.com/4524338.jpg?t=1606801669"
+    },
+    {
+      "title": "John Morrison | London Theatre Reviews",
+      "feed_url": "https://blackpig.typepad.com/john_morrison/atom.xml",
+      "website_url": "https://blackpig.typepad.com/",
+      "description": "John Morrison writes about the best of London theatre -- and occasionally the worst",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4524306.jpg?t=1606804371"
+    },
+    {
+      "title": "My Theatre Mates",
+      "feed_url": "https://mytheatremates.com/feed/",
+      "website_url": "https://mytheatremates.com/",
+      "description": "New digital hub MyTheatreMates.com is co-founded by Mark Shenton and Terri Paddock, and takes its name from the Ma in Mark and the Te in Terri. In addition to hosting the Also Recognised Awards, it collates the best content from our individual websites and social channels - and, we hope, will soon host additional content from other independent theatre voices.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 14300
+      },
+      "image_url": "https://i1.feedspot.com/5488777.jpg?t=1672986179"
+    },
+    {
+      "title": "London Theatre 1 News",
+      "feed_url": "https://www.londontheatre1.com/theatre-news/feed/",
+      "website_url": "https://www.londontheatre1.com/theatre-news/",
+      "description": "London theatre news for London West End, Off-West End and UK touring productions. Visit our website for news, reviews, interviews, tickets, production and rehearsal images. LondonTheatre1.com is an independently owned business which provides a range of theatre-related services for customers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488776.jpg?t=1672986060"
+    },
+    {
+      "title": "BritishTheatre.com",
+      "feed_url": "https://www.britishtheatre.com/feed/",
+      "website_url": "https://www.britishtheatre.com/",
+      "description": "The latest Theatre Shows, Tickets, News & Guides: British Theatre is the best website for London West End theatre tickets, Off West End and touring theatre around the UK. The British Theatre website has been established to celebrate the rich and diverse theatrical culture of the United Kingdom. Our ethos revolves around encouraging and nurturing the performing arts in all its forms.",
+      "followers": {
+        "facebook": 11300,
+        "twitter": 11100,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4975841.jpg?t=1672985899"
+    },
+    {
+      "title": "Chad Jones' Theater Dogs",
+      "feed_url": "https://www.theaterdogs.net/reviews/feed",
+      "website_url": "https://www.theaterdogs.net/",
+      "description": "Chad Jones' Theater Dogs provides San Francisco Bay Area On Stage & Backstage reviews and more. Chad Jones has covered theater in the San Francisco Bay Area since 1992.He was a long-time member of the American Theatre Critics Association and served for nearly two decades on the Glickman committee, which awards a cash prize for the best play to debut in the Bay Area.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1021681.jpg?t=1672990220"
+    },
+    {
+      "title": "Ernie's Theatre Blog",
+      "feed_url": "https://erniealmond.com/feed/",
+      "website_url": "https://erniealmond.com/",
+      "description": "Ernie's Theatre Blog brings you news of what's on in theatres across the Home Counties. With the help of the theatre companies themselves I hope that this Theatre Blog will just be a useful reference as to what's on this week, what's coming soon, what's worth seeing - and what should be avoided at all costs!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488767.jpg?t=1672987292"
+    },
+    {
+      "title": "THEATRESS",
+      "feed_url": "https://theatress.com/feed/",
+      "website_url": "https://theatress.com/",
+      "description": "A UK Theatre and Culture blog based in the Midlands & London. I started Theatress as a way to talk about something I loved. Theatre is an escape, a chance to be transported to another world, to be completely immersed in a story for 3 hours. There is something truly special about the theatre and there is nothing better than sharing that with others!",
+      "followers": {
+        "facebook": 19
+      },
+      "image_url": "https://i1.feedspot.com/5488765.jpg?t=1672987973"
+    },
+    {
+      "title": "Encore Monthly",
+      "feed_url": "https://encoremonthly.com/feed/",
+      "website_url": "https://www.westendtheatre.com/category/news/",
+      "description": "Our exclusive content takes you into the wings, behind the scenes and to all the places theatre people come together. Encore Monthly is a new theatre magazine for the 21st Century. It celebrates everything we love about American theatre, whether it's happening on the stages on Broadway or the pages we follow on social media.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5488792.jpg?t=1672990630"
+    },
+    {
+      "title": "WestendTheatre News",
+      "feed_url": "https://www.westendtheatre.com/category/news/feed/",
+      "website_url": "https://www.westendtheatre.com/category/news/",
+      "description": "The latest London theatre news, including new West End shows coming to London, stars and talent performing on the West End stage, plus photos and videos of London shows, West End reviews, news on tickets and booking, and theatre gossip. WestEndTheatre.com is one of the Britain's leading theatre websites providing news, information and tickets to London theatre.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 7400,
+        "instagram": 13600
+      },
+      "image_url": "https://i1.feedspot.com/5488793.jpg?t=1672990782"
+    },
+    {
+      "title": "The Theatrefolk Blog",
+      "feed_url": "https://www.theatrefolk.com/blog/feed/",
+      "website_url": "https://www.theatrefolk.com/blog/",
+      "description": "Find all the resources for the drama teachers. Covers resources on acting, directing, playwriting, production, teaching drama, and technical theatre. We are the creators of the Drama Teacher Academy (DTA), a provider of curriculum materials, educational resources, and professional development designed just for middle school and high school drama teachers.",
+      "followers": {
+        "facebook": 56600,
+        "twitter": 2000,
+        "instagram": 7400
+      },
+      "image_url": "https://i1.feedspot.com/4700317.jpg?t=1672990998"
+    }
+  ]
+}

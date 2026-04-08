@@ -1,0 +1,39 @@
+{
+  "category": "uTorrent",
+  "source_url": "https://rss.feedspot.com/utorrent_rss_feeds",
+  "feeds": [
+    {
+      "title": "RapidSeedbox \u00bb uTorrent",
+      "feed_url": "https://www.rapidseedbox.com/tag/utorrent/feed",
+      "website_url": "https://www.rapidseedbox.com/tag/utorrent",
+      "description": "RapidSeedbox's uTorrent section contains information on topics like seeding in uTorrent, uTorrent replacements for mac, BitTorrent vs uTorrent, easy uTorrent settings, and many more! RapidSeedbox gives you an optimized, fast, and totally customizable Seedbox that fits your every need.",
+      "followers": {
+        "facebook": 728,
+        "twitter": 684
+      },
+      "image_url": "https://i1.feedspot.com/5438686.jpg?t=1662382945"
+    },
+    {
+      "title": "\u00b5Torrent Blog",
+      "feed_url": "https://blog.utorrent.com/feed/",
+      "website_url": "https://blog.utorrent.com/",
+      "description": "\u00b5Torrent Blog is the official blog of \u00b5Torrent which is a very tiny BitTorrent client. It has posts on topics like black Friday deals, whether you're interested in buying mac or windows products on 25% off, \u00b5Torrent's new website, and many more!",
+      "followers": {
+        "facebook": 976700,
+        "twitter": 100800
+      },
+      "image_url": "https://i1.feedspot.com/5438687.jpg?t=1662383088"
+    },
+    {
+      "title": "TechSpree \u00bb Torrent",
+      "feed_url": "https://techspree.net/category/torrent/feed/",
+      "website_url": "https://techspree.net/category/torrent/",
+      "description": "Torrent tracker list, best torrent search engines that still work, how to download torrents on iPhone & iPad, best VPN for torrenting, and many more! TechSpree is a blog where we share fresh and updated information related to Android Apps, Internet, Social Media, Gadgets, Blogging, How-To Guides, Internet Marketing, SEO, and much more related to Technology.",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5438688.jpg?t=1662383070"
+    }
+  ]
+}

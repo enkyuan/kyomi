@@ -1,0 +1,51 @@
+{
+  "category": "Hagerstown News",
+  "source_url": "https://rss.feedspot.com/hagerstown_maryland_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of Hagerstown",
+      "feed_url": "https://www.hagerstownmd.org/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.hagerstownmd.org/CivicAlerts.aspx?sort=date",
+      "description": "Hagerstown, MD is dedicated to keeping residents informed and up-to-date by providing the latest news about schools, sports, business, performing arts, health/safety issues, human interest and more.",
+      "followers": {
+        "facebook": 22300,
+        "twitter": 2100,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5213963.jpg?t=1604676582"
+    },
+    {
+      "title": "DC News Now",
+      "feed_url": "https://www.localdvm.com/feed/",
+      "website_url": "https://www.dcnewsnow.com/",
+      "description": "We tell local Hagerstown news & weather stories, and we do what we do to make Hagerstown, Germantown, Winchester & Chantilly a better place to live.",
+      "followers": {
+        "facebook": 6,
+        "twitter": 21300
+      },
+      "image_url": "https://i1.feedspot.com/5133389.jpg?t=1623649355"
+    },
+    {
+      "title": "CBS News \u00bb Baltimore",
+      "feed_url": "https://www.cbsnews.com/latest/rss/main",
+      "website_url": "https://www.cbsnews.com/baltimore/tag/hagerstown/",
+      "description": "Read the latest Hagerstown news. Get breaking news, events and information on sports, weather, entertainment and lifestyle at CBS Baltimore.",
+      "followers": {
+        "facebook": 432200,
+        "twitter": 277400
+      },
+      "image_url": "https://i1.feedspot.com/5133398.jpg?t=1585651862"
+    },
+    {
+      "title": "Hagerstownonline.us",
+      "feed_url": "https://news.hagerstownonline.us/",
+      "website_url": "https://news.hagerstownonline.us/",
+      "description": "Hagerstownonline.us brings you complete business, leisure, travel and tourism, weather, the latest news, and all other related information about Hagerstown. Established as a leading total for businesses and general users, Hagerstownonline.us is part of the USA Online Network, a group of dedicated local news websites for each city and territory in the United States.",
+      "followers": {
+        "facebook": 8,
+        "twitter": 429
+      },
+      "image_url": "https://i1.feedspot.com/5490383.jpg?t=1673268140"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "category": "AMC Stock",
+  "source_url": "https://rss.feedspot.com/amc_stock_rss_feeds",
+  "feeds": [
+    {
+      "title": "FrankNez \u00bb AMC",
+      "feed_url": "https://franknez.com/tag/amc-stock/feed/",
+      "website_url": "https://franknez.com/tag/amc-stock/",
+      "description": "Frank Nez is an American entrepreneur and journalist with a background in marketing, writing, and startup development. Read the latest news and resources related to AMC Stock on Frank Nez.",
+      "followers": {
+        "facebook": 637,
+        "twitter": 22700
+      },
+      "image_url": "https://i1.feedspot.com/5422095.jpg?t=1657889118"
+    },
+    {
+      "title": "Yahoo Finance \u00bb AMC",
+      "feed_url": "https://finance.yahoo.com/quote/AMC/news/?p=AMC",
+      "website_url": "https://finance.yahoo.com/quote/AMC/news/?p=AMC",
+      "description": "Get the latest AMC Entertainment Holdings, Inc. (AMC) stock news and headlines to help you in your trading and investing decisions. Yahoo Finance is the Internet's leading business news and financial data website.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 2000000
+      },
+      "image_url": "https://i1.feedspot.com/5422083.jpg?t=1657888639"
+    },
+    {
+      "title": "Investing.com \u00bb AMC News",
+      "feed_url": "https://www.investing.com/equities/amc-entertat-hld-news",
+      "website_url": "https://www.investing.com/equities/amc-entertat-hld-news",
+      "description": "Get today's AMC Entertainment stock news. We cover the latest AMC Entertainment headlines and breaking news impacting AMC Entertainment stock performance. Investing.com is a leading financial platform which offers real-time quotes, streaming charts, up-to-date financial news, technical analysis and more. Free, for everyone, anywhere.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/5422099.jpg?t=1657888733"
+    },
+    {
+      "title": "Nasdaq \u00bb AMC",
+      "feed_url": "https://www.nasdaq.com/market-activity/stocks/amc",
+      "website_url": "https://www.nasdaq.com/market-activity/stocks/amc",
+      "description": "Find AMC Entertainment Holdings, Inc. Class A Common Stock (AMC) Stock Quotes. Nasdaq is a global technology company that champions inclusive growth and prosperity, creating opportunities for markets and economies of all sizes.",
+      "followers": {
+        "facebook": 825600,
+        "twitter": 148000,
+        "instagram": 594700
+      },
+      "image_url": "https://i1.feedspot.com/5422097.jpg?t=1657889442"
+    }
+  ]
+}

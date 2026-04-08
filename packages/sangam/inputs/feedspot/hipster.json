@@ -1,0 +1,36 @@
+{
+  "category": "Hipster",
+  "source_url": "https://rss.feedspot.com/hipster_rss_feeds",
+  "feeds": [
+    {
+      "title": "Travels of Adam",
+      "feed_url": "https://feeds.feedburner.com/travelsofadam",
+      "website_url": "https://travelsofadam.com/gay-travel/",
+      "description": "One of the world's most popular men's lifestyle & hipster travel blogs with stories from around the world gay city destinations & cultural experiences. This blog is your travel guide to the coolest things to do and see around the world, from an American hipster in Berlin.",
+      "followers": {
+        "facebook": 16500,
+        "instagram": 31200
+      },
+      "image_url": "https://i1.feedspot.com/1122652.jpg?t=1608277338"
+    },
+    {
+      "title": "Hipster Birders",
+      "feed_url": "http://hipsterbirders.blogspot.com/feeds/posts/default",
+      "website_url": "http://hipsterbirders.blogspot.com/",
+      "description": "We are Nick and Maureen, two people who enjoy being hipstery and who love to bird. A hipster seems to be a term for any young person these days who likes indie music, fedoras, local beers, and enjoy eating artisanal food. We are that, but so much more. Our true passion is birding, and amongst the birding crowd, we are definitely the odd young'ins.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1385158.jpg?t=1608277385"
+    },
+    {
+      "title": "Hipster Sunnies Blog",
+      "feed_url": "https://www.hipstersunnies.com/blogs/gethipblog.atom",
+      "website_url": "https://www.hipstersunnies.com/blogs/gethipblog",
+      "description": "Welcome to our hip, hop and happening blog where we discuss everything going on in the world of cool sunglasses! Retro and vintage looks and of course music and festivals!",
+      "followers": {
+        "facebook": 1800,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4838428.jpg?t=1608277351"
+    }
+  ]
+}

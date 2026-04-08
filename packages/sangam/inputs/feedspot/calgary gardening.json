@@ -1,0 +1,25 @@
+{
+  "category": "Calgary Gardening",
+  "source_url": "https://rss.feedspot.com/calgary_gardening_rss_feeds",
+  "feeds": [
+    {
+      "title": "Blue Grass Blog",
+      "feed_url": "https://bluegrassnursery.com/feed/",
+      "website_url": "https://bluegrassnursery.com/blog/",
+      "description": "Blue Grass offers all the garden products for your landscaping needs, including sod, trees, shrubs, bulk rocks, grass and annuals and perennials in the nursery. Follow our blog where we share decades of experience and our passion for plants, gardening, and landscaping.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4929777.jpg?t=1621237440"
+    },
+    {
+      "title": "Bloomfield Blog",
+      "feed_url": "https://bloomfieldgardencentre.net/blog/feed/",
+      "website_url": "https://bloomfieldgardencentre.net/blog/",
+      "description": "Follow Bloomfield blog that covers plant tips, gardening information, and news about garden centre events.",
+      "followers": {
+        "facebook": 1500,
+        "instagram": 475
+      },
+      "image_url": "https://i1.feedspot.com/4929781.jpg?t=1621237477"
+    }
+  ]
+}

@@ -1,0 +1,733 @@
+{
+  "category": "Logistics",
+  "source_url": "https://rss.feedspot.com/logistics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Logistics Viewpoints",
+      "feed_url": "https://logisticsviewpoints.com/feed/",
+      "website_url": "https://logisticsviewpoints.com/",
+      "description": "Logistics Viewpoints provides logistics professionals with clear and concise analyses of logistics trends, technologies, and services. It is the comprehensive source for news about supply chain trends, technology, & best practices.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 24400
+      },
+      "image_url": "https://i1.feedspot.com/4480581.jpg?t=1616490631"
+    },
+    {
+      "title": "Logistics Business",
+      "feed_url": "https://www.logisticsbusiness.com/feed/",
+      "website_url": "https://www.logisticsbusiness.com/",
+      "description": "Logistics Business Magazine is the only pan-European journal for all aspects of logistics, supply chain, warehousing & materials handling. It covers software solutions, mobile computing, barcoding, RFID, labeling, warehousing, conveying, sortation, packaging systems, automation, robotics, and much more.",
+      "followers": {
+        "twitter": 3300,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4661221.jpg?t=1613560803"
+    },
+    {
+      "title": "Freightos - Freight & Logistics Trends Blog",
+      "feed_url": "https://www.freightos.com/feed/",
+      "website_url": "https://www.freightos.com/blog/",
+      "description": "Freightos is the leading sales automation platform for the logistics industry. The Freightos software-as-a-service (SaaS) technology allows freight forwarders and carriers to manage contracts, and automate and manage the quotation and sales process, from their own web site.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4647084.jpg?t=1616490708"
+    },
+    {
+      "title": "Logi-Sys Blog",
+      "feed_url": "https://www.logi-sys.com/blog-feed.xml",
+      "website_url": "https://www.logi-sys.com/blog",
+      "description": "Logi-Sys is the most comprehensive ERP platform for logistics and freight forwarding operations.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5546334.jpg?t=1681976233"
+    },
+    {
+      "title": "Penske Blog",
+      "feed_url": "https://www.gopenske.com/feeds/blog.rss",
+      "website_url": "https://www.gopenske.com/blog/",
+      "description": "The Penske official blog gives you relevant industry news and company information. Keep up to date with Move Ahead.",
+      "followers": {
+        "facebook": 55300,
+        "twitter": 7800,
+        "instagram": 17400
+      },
+      "image_url": "https://i1.feedspot.com/4643018.jpg?t=1609158775"
+    },
+    {
+      "title": "Supply Chain and Logistics Blog",
+      "feed_url": "https://supplychainandlogistics.org/feed/",
+      "website_url": "https://supplychainandlogistics.org/",
+      "description": "This blog is all about logistics and supply chain operations.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4646994.jpg?t=1647427837"
+    },
+    {
+      "title": "Advanced Solutions Blog",
+      "feed_url": "https://advsolutionpros.com/feed/",
+      "website_url": "https://advsolutionpros.com/blog/",
+      "description": "Advanced Solutions combines years of business experience with deep SAP expertise to deliver real-world, usable results. Blog articles from the Advanced Solutions consulting and support teams.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5156929.jpg?t=1674633863"
+    },
+    {
+      "title": "Radius Logistics Blog",
+      "feed_url": "https://www.radiuslogistics.com/blog/feed/",
+      "website_url": "https://www.radiuslogistics.com/blog/",
+      "description": "Radius Logistics is a third-party logistics services company providing seamlessly integrated freight, warehousing, and distribution services for clients throughout North America. Radius Logistics blog contains articles related to the logistics industry, including supply chain management, transportation, warehousing, and international trade.",
+      "followers": {
+        "facebook": 296,
+        "twitter": 677,
+        "instagram": 569
+      },
+      "image_url": "https://i1.feedspot.com/4661183.jpg?t=1617687267"
+    },
+    {
+      "title": "Weber Logistics",
+      "feed_url": "https://www.weberlogistics.com/blog/california-logistics-blog/rss.xml",
+      "website_url": "https://www.weberlogistics.com/blog/california-logistics-blog/topic/chemical-storage",
+      "description": "Weber Logistics is the leader in West Coast warehousing, logistics, freight management and retail compliance.",
+      "followers": {
+        "facebook": 135,
+        "twitter": 2900,
+        "instagram": 97
+      },
+      "image_url": "https://i1.feedspot.com/4660574.jpg?t=1617689556"
+    },
+    {
+      "title": "GCE Logistics Blog",
+      "feed_url": "https://gcelogistic.com/feed/",
+      "website_url": "https://gcelogistic.com/blog/",
+      "description": "GCE Logistics started with a simple vision of delivering exceptional value to our customers, and it was that zeal for service and innovative. Shipping and Freight awareness and tips blog that explains the processes and procedures transportation & shipping tricks.",
+      "followers": {
+        "facebook": 61200,
+        "instagram": 125
+      },
+      "image_url": "https://i1.feedspot.com/4660959.jpg?t=1617689281"
+    },
+    {
+      "title": "Staci Americas Blog",
+      "feed_url": "https://www.staciamericas.com/blog/rss.xml",
+      "website_url": "https://www.staciamericas.com/blog",
+      "description": "Amware helps companies scale fulfillment operations so they can grow without limitations. Our mission is to make growth happen. We provide you with all the useful information on fulfillment and logistics and help you as well as your firm reach a higher level on our blog.",
+      "followers": {
+        "facebook": 415,
+        "twitter": 220
+      },
+      "image_url": "https://i1.feedspot.com/4660804.jpg?t=1617689559"
+    },
+    {
+      "title": "Logility Blog",
+      "feed_url": "https://www.logility.com/feed/",
+      "website_url": "https://www.logility.com/resources/?filter=Blog",
+      "description": "Latest Blogs for the Freight, Logistics, Shipping and Supply Chain.",
+      "followers": {
+        "facebook": 770,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4660471.jpg?t=1617687112"
+    },
+    {
+      "title": "Axestrack",
+      "feed_url": "https://www.axestrack.com/feed/",
+      "website_url": "https://www.axestrack.com/resources/",
+      "description": "Axestrack is a leading provider of digital logistics solutions. We partner with our clients to provide end-to-end tailored Digital capabilities for building an Enterprise Digital Thread. Find all the relevant news from the logistics industry and stay updated with recent happenings in the vehicle tracking, and GPS industries.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 810,
+        "instagram": 912
+      },
+      "image_url": "https://i1.feedspot.com/5273553.jpg?t=1619527114"
+    },
+    {
+      "title": "DocShipper China Blog",
+      "feed_url": "https://china.docshipper.com/en/feed/",
+      "website_url": "https://china.docshipper.com/en/blog/",
+      "description": "We are the Chinese branch of the DocShipper Group. DocShipper was founded with the clear intention of redefining the international logistics for SMEs (Small and Medium Enterprises) and individuals.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 38,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5433565.jpg?t=1660905541"
+    },
+    {
+      "title": "Loginextsolutions.com Blog",
+      "feed_url": "https://www.loginextsolutions.com/blog/feed/",
+      "website_url": "https://www.loginextsolutions.com/blog/",
+      "description": "Read all about the latest logistics trends, the industries it affects, big data analytics and our products MILE, HAUL, ON-DEMAND, FORCE & REVERSE. Read more about Fleet Management Software, Delivery Management Software, Logistics Automation, Last Mile Delivery Management",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 19300
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/7688896/page/4660915/logo_1686811482.png"
+    },
+    {
+      "title": "FreightWaves",
+      "feed_url": "https://feeds.feedburner.com/Freightwaves",
+      "website_url": "https://www.freightwaves.com/news/category/fuel",
+      "description": "FreightWaves provides thought leadership and editorial content focused on economic and innovative technology drivers for the trucking ecosystem.",
+      "followers": {
+        "twitter": 46700,
+        "instagram": 43000
+      },
+      "image_url": "https://i1.feedspot.com/4675535.jpg?t=1616490714"
+    },
+    {
+      "title": "Nautical Manufacturing & Fulfillment Blog",
+      "feed_url": "https://nautical-direct.com/feed/",
+      "website_url": "https://nautical-direct.com/blog/",
+      "description": "Nautical Manufacturing and Fulfillment was launched in 2017 to bring improved strategy to product manufacturing and fulfillment on a global scale. Nautical's blog is your one-stop shop for all supply chain topics. Covering everything from product sourcing and manufacturing to the intricate web of freight, logistics, and warehousing.",
+      "followers": {
+        "facebook": 303,
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/8144052/page/5695607/logo_1698240290.jpg"
+    },
+    {
+      "title": "Lading Logistics Blog",
+      "feed_url": "https://ladingcargo.com/blog/feed/",
+      "website_url": "https://ladingcargo.com/blog/",
+      "description": "Lading Logistics is a fully owned and operated registered in Texas freight forwarding firm that offers all types of logistics services. We collaborate with clients in Texas and overseas to serve their local and global logistical requirements through ground, air, and sea transportation. Read the latest news, blogs, articles, and everything about the Texas logistics industry.",
+      "followers": {
+        "twitter": 40,
+        "instagram": 746
+      },
+      "image_url": "https://i1.feedspot.com/5639249.jpg?t=1690795379"
+    },
+    {
+      "title": "Logistics In War",
+      "feed_url": "https://logisticsinwar.com/feed/",
+      "website_url": "https://logisticsinwar.com/about/posts/",
+      "description": "Explore deep, analytical, and carefully crafted articles delving into the impact of Logistics and Preparedness in a military environment. Logistics In War offers an insider view through articles, case studies, war stories, and more on how the Defence depends on Modern Logistics and Supply Chain management and the challenges that exist.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4660970.jpg?t=1617687895"
+    },
+    {
+      "title": "The Logistics of Logistics",
+      "feed_url": "https://www.thelogisticsoflogistics.com/feed/",
+      "website_url": "https://www.thelogisticsoflogistics.com/",
+      "description": "The Logistics of Logistics offers websites, digital marketing and sales training specifically designed for logistics, transportation and 3rd party logistics providers. We will help you target your ideal client, get more and higher quality sales leads and ultimately win more business.",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/1268736.jpg?t=1647427675"
+    },
+    {
+      "title": "Manufacturing & Logistics IT Magazine",
+      "feed_url": "https://www.logisticsit.com/feed.rss",
+      "website_url": "https://www.logisticsit.com/",
+      "description": "Manufacturing & Logistics IT Magazine (LogisticsIT.com) is the leading specialist IT solutions magazine and website covering all aspects of end-to-end supply chains within a wide range of vertical markets. The editorial content covers real live applications within collaborative supply chain environments and has contributions from leading vendors and research analysts.",
+      "followers": {
+        "facebook": 647,
+        "twitter": 20000
+      },
+      "image_url": "https://i1.feedspot.com/3766762.jpg?t=1617687139"
+    },
+    {
+      "title": "JORI Logistics Blog",
+      "feed_url": "https://www.jorilogistics.com/feed/",
+      "website_url": "https://www.jorilogistics.com/blog/",
+      "description": "The blog features transportation news, shipping insights, and best practices to keep you informed. JORI is a family-owned and operated logistics company that provides tailored customs brokerage, freight forwarding, and trade consulting services.",
+      "followers": {
+        "facebook": 458,
+        "instagram": 203
+      },
+      "image_url": "https://i1.feedspot.com/5308977.jpg?t=1628154938"
+    },
+    {
+      "title": "PNG Worldwide News",
+      "feed_url": "https://pngworldwide.com/feed",
+      "website_url": "https://pngworldwide.com/resources/news/",
+      "description": "PNG Logistics is a full service Third Party Logistics (3PL) company that has helps clients to lower their freight costs and increase shipping efficiencies. They offer highly personalized logistics services for clients freight needs. PNGLC works with clients to customize a variety of freight operations including inbound, outbound and drop shipments - both domestic and international.",
+      "followers": {
+        "facebook": 183
+      },
+      "image_url": "https://i1.feedspot.com/4642932.jpg?t=1616492554"
+    },
+    {
+      "title": "Learn About Logistics Blog",
+      "feed_url": "https://www.learnaboutlogistics.com/blog/feed/",
+      "website_url": "https://www.learnaboutlogistics.com/blog/",
+      "description": "Learn About Logistics is a free resource about logistics, supply chains & supply networks providing practical information about these vital disciplines.",
+      "followers": {
+        "facebook": 488,
+        "twitter": 811
+      },
+      "image_url": "https://i1.feedspot.com/4660849.jpg?t=1647429792"
+    },
+    {
+      "title": "LOGISTICSMATTER",
+      "feed_url": "https://logisticsmatter.com/feed/",
+      "website_url": "https://logisticsmatter.com/",
+      "description": "LogisticsMatter is an independent supply chain and logistics news aggregator. Top stories in the areas of 3PL, Logistics, Supply Chain, Transportation, Shipping, Sustainability and Social Media.",
+      "followers": {
+        "facebook": 519,
+        "twitter": 24000
+      },
+      "image_url": "https://i1.feedspot.com/4660596.jpg?t=1617687242"
+    },
+    {
+      "title": "R2 Logistics Blog",
+      "feed_url": "https://www.r2logistics.com/feed/",
+      "website_url": "https://www.r2logistics.com/blog/",
+      "description": "R2 Logistics is a global provider of transportation services and logistics solutions. We provide access to thousands of transportation providers and have the capacity to resolve all your shipping needs.",
+      "followers": {
+        "facebook": 873,
+        "twitter": 653,
+        "instagram": 517
+      },
+      "image_url": "https://i1.feedspot.com/5427418.jpg?t=1659358323"
+    },
+    {
+      "title": "MHD Supply Chain Solutions",
+      "feed_url": "https://mhdsupplychain.com.au/feed/",
+      "website_url": "https://mhdsupplychain.com.au/",
+      "description": "MHD Supply Chain Solutions magazine is Australia's leading logistics and supply chain management title. The printed magazine and bi-weekly e-newsletter is a vital resource tool for all people working in logistics, warehousing, and supply chain.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 538
+      },
+      "image_url": "https://i1.feedspot.com/4661226.jpg?t=1615294651"
+    },
+    {
+      "title": "Talking Logistics with Adrian Gonzalez",
+      "feed_url": "https://talkinglogistics.com/feed/",
+      "website_url": "https://talkinglogistics.com/",
+      "description": "Conversations with Thought Leaders and Newsmakers in the Supply Chain & Logistics Industry.",
+      "followers": {
+        "facebook": 466
+      },
+      "image_url": "https://i1.feedspot.com/4660591.jpg?t=1617687126"
+    },
+    {
+      "title": "Evans Distribution Systems Blog",
+      "feed_url": "https://www.evansdist.com/feed/",
+      "website_url": "https://www.evansdist.com/blog/",
+      "description": "Find out the latest trends and information about logistics, transportation, and e-commerce in our award winning, 3PL Insights Blog. We provide our customers with innovative and flexible logistics solutions. Evans is a full service warehousing and logistics company that has been in business since 1929.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 2200,
+        "instagram": 497
+      },
+      "image_url": "https://i1.feedspot.com/4849825.jpg?t=1617687154"
+    },
+    {
+      "title": "Dedola Blog",
+      "feed_url": "https://dedola.com/feed/",
+      "website_url": "https://dedola.com/most-popular-freight-forwarding-blogs/",
+      "description": "Dedola Global Logistics (DGL) provides logistics and freight management solutions for importers and exporters worldwide. DGL currently manages a full matrix of logistics services within all trade lanes of the world, in the air, over land and on the sea.",
+      "followers": {
+        "facebook": 462,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4643057.jpg?t=1669796017"
+    },
+    {
+      "title": "Datex Corporation Blog",
+      "feed_url": "https://www.datexcorp.com/feed/",
+      "website_url": "https://www.datexcorp.com/library/datex-blog/",
+      "description": "Datex is counted on to provide supply chain software, mobile computing solutions and managed services including mobile device management. This enables clients, both large and small to focus on their core business, rather than on typical everyday IT challenges. This approach produces definitive savings in time and labor and boosts productivity.",
+      "followers": {
+        "facebook": 274,
+        "twitter": 420,
+        "instagram": 909
+      },
+      "image_url": "https://i1.feedspot.com/4988966.jpg?t=1617687270"
+    },
+    {
+      "title": "Logistics Manager",
+      "feed_url": "https://www.logisticsmanager.com/feed/",
+      "website_url": "https://www.logisticsmanager.com/",
+      "description": "Logistics Manager is the leading monthly magazine for managers in charge of the supply chain of the UK's largest industrial, retail, and commercial organizations. Logistics Manager's editorial focuses on the core competencies essential to modern logistics and supply chain management. On this website, we publish daily news stories, case studies, opinions, and more related to temperature-controlled supplies.",
+      "followers": {
+        "twitter": 40700
+      },
+      "image_url": "https://i1.feedspot.com/4428924.jpg?t=1613558937"
+    },
+    {
+      "title": "Transport Works Blog",
+      "feed_url": "https://www.transportworks.com/blog-feed.xml",
+      "website_url": "https://www.transportworks.com/blog",
+      "description": "The Transport Works Blog is your ultimate resource for logistics solutions, supply chain optimisation, freight management, and sustainable transport. We dive deep into global freight trends, real-time tracking technologies, warehouse automation, last-mile delivery, and supply chain visibility to help businesses streamline operations and boost efficiency. Our expertly crafted, logistics content delivers cutting-edge insights on 4PL logistics, freight brokerage, multimodal transport, and cost-saving strategies, ensuring you stay ahead in a competitive market.",
+      "followers": {
+        "facebook": 469
+      },
+      "image_url": "https://i1.feedspot.com/7879818.jpg?t=1740381693"
+    },
+    {
+      "title": "20Cube Logistics Blog",
+      "feed_url": "https://www.20cube.com/blog/feed/",
+      "website_url": "https://www.20cube.com/blog/",
+      "description": "Keep track of what's new in the industry and our latest news with our blog updates. We are new age Digital Logistics company and provide best services in Freight Forwarding, Custom Clearance and Warehousing. Get Air Freight, Ocean Freight, Customs Broker and Warehouse services with advantage of reduction in costs.",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 142
+      },
+      "image_url": "https://i1.feedspot.com/5050062.jpg?t=1617689608"
+    },
+    {
+      "title": "Grand Porter Blog",
+      "feed_url": "https://grandporter.com/blog/feed/",
+      "website_url": "https://grandporter.com/blog/",
+      "description": "Read our blog to stay up to date on logistics management solutions, and shipping and transportation in general. We share tips, news, and updates.",
+      "followers": {
+        "facebook": 123,
+        "twitter": 30
+      },
+      "image_url": "https://i1.feedspot.com/4660899.jpg"
+    },
+    {
+      "title": "The Communication Logistics Specialists",
+      "feed_url": "https://www.commerce-logistics.com/logistics.xml",
+      "website_url": "https://www.commerce-logistics.com/logistics-blog.html",
+      "description": "Charting the course for post, IT, telecommunications and e-commerce businesses to profit from the emerging communication logistics industry.",
+      "followers": {
+        "twitter": 315
+      },
+      "image_url": "https://i1.feedspot.com/4661209.jpg?t=1647427720"
+    },
+    {
+      "title": "GoMax Logistics Inc Blog",
+      "feed_url": "https://gomaxlogistics.wordpress.com/feed/",
+      "website_url": "https://gomaxlogistics.wordpress.com/blog/",
+      "description": "GoMax Logistics Inc. is a fully licensed comprehensive local and international Logistics Service Provider and Freight Forwarder. Furthermore, we are the supply chain management experts. GoMax logistics team members have 25 years of accumulated experience in local and international transpiration, logistics, shipping industries, procurement, warehousing, packing, and delivery of products. Follow the blog to know more about us.",
+      "followers": {
+        "instagram": 30
+      },
+      "image_url": "https://i1.feedspot.com/5196243.jpg?t=1599828013"
+    },
+    {
+      "title": "Logistics Monthly Magazine",
+      "feed_url": "https://www.logisticsmonthly.com/feed/",
+      "website_url": "https://www.logisticsmonthly.com/",
+      "description": "Single source for logistics related news. Midwest United States focused logistics news, all modes of transportation and technologies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5256156.jpg?t=1617688037"
+    },
+    {
+      "title": "Interflow logistics - Global Freight Forwarder & Event Logistics Specialists Blog",
+      "feed_url": "https://www.interflow.ie/blog/feed/",
+      "website_url": "https://www.interflow.ie/blog/",
+      "description": "Interflow logistics is a global freight forwarding service provider who specialise in event logistics, international freight shipping and factory relocation.",
+      "followers": {
+        "facebook": 532,
+        "twitter": 109
+      },
+      "image_url": "https://i1.feedspot.com/4660926.jpg?t=1674638640"
+    },
+    {
+      "title": "AMX Trucking Blog",
+      "feed_url": "https://www.amxtrucking.com/feed/",
+      "website_url": "https://www.amxtrucking.com/blog/",
+      "description": "Alabama Motor Express is driven, dedicated and dependable, enabling us to move freight quickly and affordably. Begin your career here, or partner with us on your next shipment.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4988981.jpg?t=1617687279"
+    },
+    {
+      "title": "10x Logistics - Leading Revolutionary Change",
+      "feed_url": "https://10xlogistics.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://10xlogistics.blogspot.com/",
+      "description": "A 25 year veteran of the supply chain and logistics industry blogs on all things logistics. Experience in 3PL, automotive and consumer goods logistics help bring a unique insight to this topic. Logistics Expert | Supply Chain Guru | Thought Leader | Strategist | Futurist.",
+      "followers": {
+        "twitter": 16400
+      },
+      "image_url": "https://i1.feedspot.com/4661247.jpg?t=1617688455"
+    },
+    {
+      "title": "3plmanager Blog",
+      "feed_url": "https://www.3plmanager.com/feed/",
+      "website_url": "https://www.3plmanager.com/blog/",
+      "description": "Tips, Tools and Techniques for Managing 3rd Party Logistics Service Providers.",
+      "followers": {
+        "facebook": 28,
+        "twitter": 454
+      },
+      "image_url": "https://i1.feedspot.com/4660861.jpg?t=1617688472"
+    },
+    {
+      "title": "Land-Link Blog",
+      "feed_url": "https://www.land-link.com/blog/rss.xml",
+      "website_url": "https://www.land-link.com/blog",
+      "description": "Land-Link, a well respected professional organization, has been providing its clients with effective transportation and logistics solutions since 1978. Its well seasoned managerial staff has over 200 years of combined experience within the transportation, logistics, and supply chain industries.",
+      "followers": {
+        "facebook": 164,
+        "twitter": 132
+      },
+      "image_url": "https://i1.feedspot.com/4660918.jpg?t=1617687899"
+    },
+    {
+      "title": "Logistics Marketing Advisors Blog",
+      "feed_url": "https://www.logisticsmarketing.com/blog/rss.xml",
+      "website_url": "https://www.logisticsmarketing.com/blog",
+      "description": "Logistics Marketing Advisors provides complete marketing strategy and execution services for 3PLs and other logistics businesses.",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/4660961.jpg?t=1656419048"
+    },
+    {
+      "title": "Keep In Sync",
+      "feed_url": "https://keepinsync.wordpress.com/feed/",
+      "website_url": "https://keepinsync.wordpress.com/",
+      "description": "Synchronized Supply Systems stores, moves and delivers your products with services customised to meet the demands of your business On Time and In Full, every time. We are an Indian company providing logistics solutions to businesses looking for excellence and innovation. Synchronized works across sectors like consumer durables, pharmaceuticals, automobiles, retail and FMCG.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4988967.jpg?t=1656419313"
+    },
+    {
+      "title": "Mahindra Logistics",
+      "feed_url": "https://mahindralogistics.com/feed/",
+      "website_url": "https://mahindralogistics.com/#blogs",
+      "description": "Features third-party logistics (3PL), automotive, consumer products, E-commerce, Enterprise mobility, Human resources, In factory Logistics, Technology, Transportation, and Warehousing. Mahindra Logistics Limited is one of India's leading third-party logistics (3PL) solutions providers.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5308978.jpg?t=1628155927"
+    },
+    {
+      "title": "The Logistics Academy Blog",
+      "feed_url": "https://tla.edu.sg/blog/feed/",
+      "website_url": "https://tla.edu.sg/blog/",
+      "description": "The Logistics Academy, a wholly owned subsidiary of SLA, upholds the SLA's mission to promote professionalism and excellence in the logistics industry.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4660879.jpg?t=1617688475"
+    },
+    {
+      "title": "CLX Logistics, LLC Blog",
+      "feed_url": "https://clxlogistics.com/blog/feed/",
+      "website_url": "https://clxlogistics.com/blog/",
+      "description": "CLX Logistics is a global provider of transportation management, technology, and supply chain consulting services. It also provides international logistics services, logistics management, consulting and technology services across all industry verticals.",
+      "followers": {
+        "facebook": 261,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4644437.jpg?t=1616491838"
+    },
+    {
+      "title": "Morai Logistics Blog",
+      "feed_url": "https://morailogistics.com/blog/feed/",
+      "website_url": "http://morailogistics.com/blog/",
+      "description": "#Logistics can be messy. Let us take care of your cross-border, domestic & international #supplychain needs. From intermodal, truckload, LTL to small package.",
+      "followers": {
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4660598.jpg?t=1617687259"
+    },
+    {
+      "title": "Logistics Bureau",
+      "feed_url": "https://www.logisticsbureau.com/feed/",
+      "website_url": "https://www.logisticsbureau.com/blog/",
+      "description": "Supply Chain & Logistics Blog with tips and insights from Industry leading Professionals.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 2700,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4660587.jpg?t=1617687117"
+    },
+    {
+      "title": "BlueGrace Logistics",
+      "feed_url": "http://blog.mybluegrace.com/feed/",
+      "website_url": "https://mybluegrace.com/resources/?search=good+transport",
+      "description": "BlueGrace Logistics helps businesses better understand and optimize their transportation programs by combining smarter analytics with advanced technology, committed service and innovative freight programs. The Logistics Blog by BlueGrace is one of the nation's most recognized freight shipping blogs and industry news sources.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 11100,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4642921.jpg?t=1616492305"
+    },
+    {
+      "title": "Cyzerg Blog",
+      "feed_url": "https://cyzerg.com/feed/",
+      "website_url": "https://cyzerg.com/blog/",
+      "description": "Cyzerg's blog is dedicated to helping logistics owners, leaders, and IT decision-makers find updates on the latest logistics technology and gain business insights, and actionable IT solutions for running and growing their logistics business. Cyzerg is a technology company specializing in providing solutions and services to warehouses and distribution centers.",
+      "followers": {
+        "facebook": 577,
+        "twitter": 384
+      },
+      "image_url": "https://i1.feedspot.com/4660942.jpg?t=1617687108"
+    },
+    {
+      "title": "Odyssey Blog",
+      "feed_url": "https://www.odysseylogistics.com/blog/feed/",
+      "website_url": "https://www.odysseylogistics.com/blog/",
+      "description": "Empowering Global Logistics - Odyssey Logistics & Technology provides the logistics professional with technology, processes and information for better decision making.",
+      "followers": {
+        "facebook": 749,
+        "twitter": 753
+      },
+      "image_url": "https://i1.feedspot.com/4661180.jpg"
+    },
+    {
+      "title": "VIZION",
+      "feed_url": "https://www.vizionapi.com/resource-hub/",
+      "website_url": "https://www.vizionapi.com/resource-hub/",
+      "description": "Vizion is a San Francisco-based technology company serving the logistics and supply chain industry. Vizion offers data services that consolidate and evaluate data from multiple sources to help logistics teams all around the globe stay on top of day-to-day operations and strategic analysis. Here from Vizion get the latest news and insights about ocean carrier tracking and tracking.",
+      "followers": {
+        "twitter": 108
+      },
+      "image_url": "https://i1.feedspot.com/5286320.jpg?t=1622298270"
+    },
+    {
+      "title": "JP Logistics Blog",
+      "feed_url": "https://blog.jplogistics.net/feeds/posts/default",
+      "website_url": "https://blog.jplogistics.net/",
+      "description": "Welcome to JP Logistics! We specialize in enclosed auto transport for classic, exotic, & luxury vehicles. Check out articles on enclosed auto transport, vehicle storage, and anything else pertaining to luxury, classic, and exotic cars!",
+      "followers": {
+        "facebook": 21100,
+        "twitter": 5200,
+        "instagram": 102200
+      },
+      "image_url": "https://i1.feedspot.com/4661197.jpg?t=1617688485"
+    },
+    {
+      "title": "Logistics Management",
+      "feed_url": "https://www.logisticsmgmt.com/topic/category/blogs",
+      "website_url": "https://www.logisticsmgmt.com/topic/category/blogs",
+      "description": "Logistics Management magazine is published monthly. Logistics Management has been serving the information needs of logistics, transportation and distribution professionals.",
+      "followers": {
+        "facebook": 40400,
+        "twitter": 52000
+      },
+      "image_url": "https://i1.feedspot.com/402338.jpg?t=1616490690"
+    },
+    {
+      "title": "Kuehne+Nagel \u00bb ReTrans Freight Redirect",
+      "feed_url": "https://us.kuehne-nagel.com/en/retrans-freight-redirect/",
+      "website_url": "https://us.kuehne-nagel.com/en/retrans-freight-redirect/",
+      "description": "Kenco is the largest woman-owned third-party logistics company in the United States. They provide integrated logistics solutions that include distribution and fulfillment, comprehensive transportation management, material handling services, real estate management and information technology all engineered for Operational Excellence.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4644433.jpg?t=1616491665"
+    },
+    {
+      "title": "Carter Logistics Blog",
+      "feed_url": "https://carterlogistics.com/category/blog/feed/",
+      "website_url": "https://www.carter-express.com/blog",
+      "description": "With our supply chain analysts and operational-based sales staff, we can provide your organization with the resources to implement a LEAN-based supply chain.",
+      "followers": {
+        "facebook": 821,
+        "twitter": 266
+      },
+      "image_url": "https://i1.feedspot.com/4660814.jpg?t=1617688450"
+    },
+    {
+      "title": "247 Customs Broker Blog",
+      "feed_url": "https://www.packair.com/feed/",
+      "website_url": "https://www.packair.com/blog/",
+      "description": "Find Imports, Ocean Freight, Shipping, Logistics, Customs Broker News.",
+      "followers": {
+        "facebook": 8100,
+        "twitter": 52
+      },
+      "image_url": "https://i1.feedspot.com/4739515.jpg?t=1617688435"
+    },
+    {
+      "title": "Southwest Freight & Logistics LTD Blog",
+      "feed_url": "https://www.swfl18.co.uk/feed/",
+      "website_url": "https://www.swfl18.co.uk/swfl-blog/",
+      "description": "Covers different topics regarding relocations, tips and advice with useful information in your planing to move home or office, business, domestic or international. Southwest Freight & Logistics LTD is a removal and storage company based in Bristol, offering a wide range of services, business & house removals, storage & courier services, competitive & reliable.",
+      "followers": {
+        "facebook": 142,
+        "twitter": 15,
+        "instagram": 50
+      },
+      "image_url": "https://i1.feedspot.com/5331999.jpg?t=1634367362"
+    },
+    {
+      "title": "Saddle Creek Logistics Services",
+      "feed_url": "https://www.sclogistics.com/feed/",
+      "website_url": "https://www.sclogistics.com/resource-center/",
+      "description": "Get the answers you need and stay up-to-date on logistics strategies on our blog from warehousing, to omnichannel fulfillment, and more!",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 690
+      },
+      "image_url": "https://i1.feedspot.com/4661192.jpg?t=1617689273"
+    },
+    {
+      "title": "Ottawa Logistics Blog",
+      "feed_url": "https://www.ottawalogistics.com/blog/feed/",
+      "website_url": "https://www.ottawalogistics.com/blog/",
+      "description": "Get the latest information in the logistics industry from our distribution and fulfillment blog, here at Ottawa Logistics. Providing E-Commerce merchants fast & accurate order fulfillment. #fulfillment #warehousing,#ecommerce, #shipping.",
+      "followers": {
+        "facebook": 698,
+        "twitter": 612
+      },
+      "image_url": "https://i1.feedspot.com/4661189.jpg?t=1617687158"
+    },
+    {
+      "title": "Logistics Manager",
+      "feed_url": "https://logistics-manager.com/feed/",
+      "website_url": "https://logistics-manager.com/",
+      "description": "Logistics ManagerLM is the leading source of logistics and cargo news within ASEAN and is regarded as one of the most authoritative sources of information. Our subscribers keep up to date with the latest logistics news, views, features and events within ASEAN and beyond.",
+      "followers": {
+        "facebook": 8100,
+        "twitter": 478,
+        "instagram": 7100
+      },
+      "image_url": "https://i1.feedspot.com/4661224.jpg?t=1617687034"
+    },
+    {
+      "title": "Transmetrics Blog",
+      "feed_url": "https://transmetrics.eu/blog/feed",
+      "website_url": "https://www.transmetrics.ai/tm-blog/",
+      "description": "Subscribe to learn more about the latest logistics innovation news, and get valuable insights from the best logistics startups and industry experts.",
+      "followers": {
+        "facebook": 889,
+        "twitter": 800
+      },
+      "image_url": "https://i1.feedspot.com/5099068.jpg?t=1617688489"
+    },
+    {
+      "title": "Shipsea Logistics",
+      "feed_url": "https://shipsealogistics.com/feed/",
+      "website_url": "https://shipsealogistics.com/all-posts/",
+      "description": "Shipsea Logistics to be a best leading forwarding agency offering turnkey solutions, in shipping and logistics it provides a high standard of quality services to all its clients.",
+      "followers": {
+        "facebook": 208,
+        "twitter": 9,
+        "instagram": 161
+      },
+      "image_url": "https://i1.feedspot.com/5236472.jpg?t=1610720963"
+    },
+    {
+      "title": "Symbia Logistics",
+      "feed_url": "https://www.symbia.com/resources/",
+      "website_url": "https://www.symbia.com/resources/",
+      "description": "Symbia Logistics is a true blue WBE Certified logistics company, boasting experience in logistics, warehousing & order fulfillment.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 63
+      },
+      "image_url": "https://i1.feedspot.com/5173596.jpg?t=1617687121"
+    },
+    {
+      "title": "Kane Logistics",
+      "feed_url": "https://www.kanelogistics.com/blog/rss.xml",
+      "website_url": "https://www.id-logistics.com/en/id-news/",
+      "description": "Weekly tips and ideas about logistics best practices for consumer goods companies and the retail supply chain.",
+      "followers": {
+        "facebook": 578,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4660019.jpg?t=1617687876"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "category": "Spain Trucking",
+  "source_url": "https://rss.feedspot.com/spain_trucking_rss_feeds",
+  "feeds": [
+    {
+      "title": "mowiz TRUCK",
+      "feed_url": "https://drive.mowiztruck.com/feed/",
+      "website_url": "https://drive.mowiztruck.com/",
+      "description": "Mowiz TRUCK offers comprehensive coverage on trucks, transporters, new truck parking, and strikes. Stay updated on industry news and developments, ensuring you're informed on all aspects of the trucking sector.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7297268.jpg?t=1714716206"
+    },
+    {
+      "title": "EvenTruck Blog",
+      "feed_url": "https://www.eventruck.es/feed",
+      "website_url": "https://www.eventruck.es/blog",
+      "description": "EvenTruck specializes in food truck rental and sales. Explore their blog for the latest updates, news, events, and roadshows in the food truck industry. Stay informed and discover new opportunities with EvenTruck.",
+      "followers": {
+        "facebook": 323
+      },
+      "image_url": "https://i1.feedspot.com/7297269.jpg?t=1712913944"
+    },
+    {
+      "title": "Dayjo Logistics Group",
+      "feed_url": "https://www.dayjologistica.com/feed/",
+      "website_url": "https://www.dayjologistica.com/noticias/",
+      "description": "With an extensive background in logistics, Dayjo Log\u00edstica SL emerged in 2007, prioritizing top-notch service. By 2019, it had evolved into a leading company, marking a milestone in the Dayjo Logistics Group's journey of growth and expansion.",
+      "followers": {
+        "facebook": 1000
+      },
+      "image_url": "https://i1.feedspot.com/7297270.jpg?t=1712913948"
+    },
+    {
+      "title": "All4Truckers Blog",
+      "feed_url": "https://all4truckers.com/feed/",
+      "website_url": "https://all4truckers.com/blog/",
+      "description": "Discover the latest news, events, and products in the trucking world with All4Truckers. Their blog caters to trucker lifestyle, garage culture, and motor enthusiasts, offering insights and updates for trucking aficionados.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7297266.jpg?t=1712914277"
+    },
+    {
+      "title": "Trucksters",
+      "feed_url": "https://www.trucksters.io/feed/",
+      "website_url": "https://www.trucksters.io/news/",
+      "description": "Trucksters, a transportation company, revolutionizes long-distance FTL trucking with an AI-driven relay system. Their vision aims to optimize road freight movement, benefiting truck drivers, the environment, and clients. Trucksters sets a new standard in the industry by achieving air transport-like transit times at reduced costs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7297265.jpg?t=1714715951"
+    },
+    {
+      "title": "Serino Motors SL Blog",
+      "feed_url": "https://gruas-asistencia.com/en/feed/",
+      "website_url": "https://gruas-asistencia.com/en/blog/",
+      "description": "Serinco Motors S.L. offers towing and roadside assistance in Barcelona. With vast experience in the transport sector, they provide high-quality services and professionalism. They handle various transportation needs and roadside assistance in Barcelona and neighbouring areas with expertise and efficiency.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7297267.jpg?t=1712914218"
+    }
+  ]
+}

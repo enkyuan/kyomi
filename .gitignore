@@ -7,3 +7,15 @@ node_modules
 dist
 build
 coverage
+
+# Python pipeline artifacts
+packages/sangam/.venv
+packages/sangam/**/__pycache__
+packages/sangam/**/*.py[codz]
+packages/sangam/.mypy_cache
+packages/sangam/.ruff_cache
+packages/sangam/.pytest_cache
+packages/sangam/processing/exports
+packages/sangam/**/*.parquet
+packages/sangam/**/*.duckdb
+packages/sangam/**/*.db

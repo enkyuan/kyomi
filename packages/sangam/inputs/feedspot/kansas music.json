@@ -1,0 +1,76 @@
+{
+  "category": "Kansas Music",
+  "source_url": "https://rss.feedspot.com/kansas_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "I Heart Local Music",
+      "feed_url": "https://iheartlocalmusic.com/category/articles/feed/",
+      "website_url": "https://iheartlocalmusic.com/category/articles/",
+      "description": "I Heart Local Music is a place for music lovers in Lawrence to gather. It was started out of deep love and appreciation for the local music scene. Our goal is to provide information about all music events and local bands.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5319096.jpg?t=1630750609"
+    },
+    {
+      "title": "Kansas Music Review",
+      "feed_url": "https://kansasmusicreview.com/feed/",
+      "website_url": "https://kansasmusicreview.com/category/news/",
+      "description": "The Kansas Music Review is the official publication of the Kansas Music Educators Association, a federated State Association of the National Association for Music Education. It's a must-read for every music educator in Kansas.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5319091.jpg?t=1630749919"
+    },
+    {
+      "title": "Mass Resonator Blog",
+      "feed_url": "https://blog.massstreetmusic.com/feed/",
+      "website_url": "https://blog.massstreetmusic.com/",
+      "description": "All the news, events, demos, gear reviews, features, podcasts and videos from the crew at Mass Street Music. Mass Resonator is a hometown guitar shop with world class service, expertise & repair.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 1300,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5319093.jpg?t=1630750134"
+    },
+    {
+      "title": "University Daily Kansan \u00bb Music",
+      "feed_url": "https://www.kansan.com/search/?f=rss&t=article&c=arts_and_culture/music&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.kansan.com/arts_and_culture/music/",
+      "description": "Get the latest music news, events and announcements on the University Daily Kansan.The University Daily Kansan is the student newspaper of the University of Kansas.",
+      "followers": {
+        "facebook": 10900,
+        "twitter": 17500,
+        "instagram": 17700
+      },
+      "image_url": "https://i1.feedspot.com/5319172.jpg?t=1630757914"
+    },
+    {
+      "title": "eXplore Lawrence Blog \u00bb Live Music",
+      "feed_url": "https://www.explorelawrence.com/blog/category/live-music/60a704ca8977a14a6d7de0b2/rss/",
+      "website_url": "https://www.explorelawrence.com/blog/category/live-music/60a704ca8977a14a6d7de0b2/",
+      "description": "Posts on live music from eXplore Lawrence.eXplore Lawrence is your one-stop shop for everything you need to plan a Lawrence visit.",
+      "followers": {
+        "facebook": 24200,
+        "twitter": 6300,
+        "instagram": 13200
+      },
+      "image_url": "https://i1.feedspot.com/5319186.jpg?t=1630759339"
+    },
+    {
+      "title": "KJIL Blog \u00bb New Music This Week",
+      "feed_url": "https://www.kjil.online/western-kansas/blogs/new-music-this-week/rss",
+      "website_url": "https://www.kjil.online/western-kansas/blogs/new-music-this-week/",
+      "description": "Find out about the new music releases on KJIL.KJIL is a non-profit Christian radio ministry with over 50 signals serving Kansas, Oklahoma, Texas, and Colorado with CCM format.",
+      "followers": {
+        "facebook": 26400,
+        "twitter": 519,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5319121.jpg?t=1630754181"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "category": "Military Aviation",
+  "source_url": "https://rss.feedspot.com/military_aviation_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Aviationist",
+      "feed_url": "https://theaviationist.com/feed/",
+      "website_url": "https://theaviationist.com/",
+      "description": "Articles on airships, air source, airspace violations, F-104, helicopters, air force and more. This blog shares military aviation news and commentary from around the world by Italian private pilot and former Italian Air Force officer David Cenciotti. Get unmatched, unconventional, independent coverage of military aviation, defense, tech & everything in the middle.",
+      "followers": {
+        "facebook": 173800,
+        "twitter": 70300,
+        "instagram": 285900
+      },
+      "image_url": "https://i1.feedspot.com/4446311.jpg?t=1666761722"
+    },
+    {
+      "title": "Defence Blog \u00bb Aviation",
+      "feed_url": "https://defence-blog.com/category/aviation/feed/",
+      "website_url": "https://defence-blog.com/category/aviation/",
+      "description": "Defence Blog is the independent, professional news source for the world's defence decision-makers. DB is a global provider of news, information and marketing solutions in the military, defence, federal technology, and C4ISR markets.",
+      "followers": {
+        "facebook": 93800,
+        "twitter": 51500
+      },
+      "image_url": "https://i1.feedspot.com/4999998.jpg?t=1622182648"
+    },
+    {
+      "title": "RAND Corporation \u00bb Military Aircraft",
+      "feed_url": "https://www.rand.org/topics/military-aircraft.xml",
+      "website_url": "https://www.rand.org/topics/military-aircraft.html",
+      "description": "RAND research has provided policymakers with essential evaluations and recommendations to implement cost savings in the design, acquisition, and fielding of military aircraft.",
+      "followers": {
+        "facebook": 67000,
+        "twitter": 250800,
+        "instagram": 24000
+      },
+      "image_url": "https://i1.feedspot.com/4999997.jpg?t=1622182661"
+    },
+    {
+      "title": "SOFREP \u00bb Fighter Sweep",
+      "feed_url": "https://fightersweep.com/feed/",
+      "website_url": "https://sofrep.com/fightersweep/",
+      "description": "Written from a military pilot point of view, this blog highlights news and commentary surrounding fighter planes, resource for military pilots or anyone interested in the industry.",
+      "followers": {
+        "facebook": 78400,
+        "twitter": 3500,
+        "instagram": 51400
+      },
+      "image_url": "https://i1.feedspot.com/4570059.jpg?t=1614950858"
+    },
+    {
+      "title": "Jalopnik",
+      "feed_url": "https://www.jalopnik.com/feed/",
+      "website_url": "https://www.jalopnik.com/",
+      "description": "From cars to motorcycles, Jalopnik is your go-to site covering everything with an engine\u2014including automotive news, buying guides, and expert commentary from our staff.",
+      "followers": {
+        "facebook": 13000,
+        "twitter": 8300,
+        "instagram": 117700
+      },
+      "image_url": "https://i1.feedspot.com/8801876.jpg?t=1763155653"
+    }
+  ]
+}

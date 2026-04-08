@@ -1,0 +1,369 @@
+{
+  "category": "Virtualization",
+  "source_url": "https://rss.feedspot.com/virtualization_rss_feeds",
+  "feeds": [
+    {
+      "title": "Scott S. Lowe Blog",
+      "feed_url": "http://feeds.scottlowe.org/slowe/content/feed?format=xml",
+      "website_url": "https://blog.scottlowe.org/",
+      "description": "The weblog of an IT pro specializing in virtualization, networking, cloud, servers, & Macs.",
+      "followers": {
+        "twitter": 25200
+      },
+      "image_url": "https://i1.feedspot.com/1174342.jpg?t=1622098275"
+    },
+    {
+      "title": "Eric Sloof - NTPRO.NL Blog",
+      "feed_url": "https://www.ntpro.nl/blog/feeds/index.rss2",
+      "website_url": "https://www.ntpro.nl/blog/",
+      "description": "Eric Sloof has been working in the information technology for nearly 20 years and shows comprehensive knowledge and expertise in virtualized environments, storage and networking.",
+      "followers": {
+        "twitter": 12200
+      },
+      "image_url": "https://i1.feedspot.com/4919340.jpg?t=1622098280"
+    },
+    {
+      "title": "vInfrastructure Blog - Virtualization, Cloud and Storage",
+      "feed_url": "https://vinfrastructure.it/feed/",
+      "website_url": "https://vinfrastructure.it/",
+      "description": "Virtualization expert and architect, System Administrator on Linux and Windows OS, network and storage specialist, and teacher. Follow this blog to get information on Virtualization, Cloud and Storage.",
+      "followers": {
+        "facebook": 268,
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4831843.jpg?t=1610970803"
+    },
+    {
+      "title": "Rorymon.com - Rory Monaghan Blog",
+      "feed_url": "https://www.rorymon.com/blog/feed/",
+      "website_url": "https://www.rorymon.com/blog/",
+      "description": "This site provides the latest news, reviews, guides, and tools covering Application Virtualization, EMM, VDI, Desktop Virtualization, Citrix, VMware, BriForum and more.",
+      "followers": {
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/4907988.jpg?t=1622098288"
+    },
+    {
+      "title": "ESX Virtualization",
+      "feed_url": "https://www.vladan.fr/feed/",
+      "website_url": "https://www.vladan.fr/",
+      "description": "ESX Virtualization features articles about VMware ESXi, vSphere, VMware Backup, Hyper-V, how-to videos, tutorials and more.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/4919335.jpg?t=1622098293"
+    },
+    {
+      "title": "Nolabnoparty - Virtualization and beyond",
+      "feed_url": "https://nolabnoparty.com/en/feed/",
+      "website_url": "https://nolabnoparty.com/en/category/virtualization-en/",
+      "description": "Technical blog focused on Virtualization, Active Directory and Networking.",
+      "followers": {
+        "facebook": 264,
+        "twitter": 1200,
+        "instagram": 194
+      },
+      "image_url": "https://i1.feedspot.com/4983648.jpg?t=1622098304"
+    },
+    {
+      "title": "Virtualization Team - Eiad Al-Aqqad",
+      "feed_url": "https://feeds.feedburner.com/Virtualizationteamblog",
+      "website_url": "http://virtualizationteam.com/",
+      "description": "This blog covers Virtualization and Cloud Computing with emphasis on VMware products including vSphere, VMware ESXi/ESX, vCloud Director, & vCloud Automation Center.",
+      "followers": {
+        "facebook": 471,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/727728.jpg?t=1622098308"
+    },
+    {
+      "title": "VMblog.com",
+      "feed_url": "https://vmblog.com/rss.aspx",
+      "website_url": "https://vmblog.com/",
+      "description": "VMblog.com is dedicated to spreading the word about Virtualization and other modern Data Center technologies like Cloud Computing, Containers, Hyperconvergence, IoT, etc. The goal is to keep the masses informed and educated about all the latest trends, technologies, and news that relates to these amazing technologies.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 12100
+      },
+      "image_url": "https://i1.feedspot.com/321060.jpg"
+    },
+    {
+      "title": "Tom Fojta's Blog",
+      "feed_url": "https://fojta.wordpress.com/feed/",
+      "website_url": "https://fojta.wordpress.com/",
+      "description": "Tom Fojta's Blog is all about virtualization, cloud computing and beyond.",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4983698.jpg?t=1622099189"
+    },
+    {
+      "title": "vElements.net",
+      "feed_url": "https://www.velements.net/feed/",
+      "website_url": "https://www.velements.net/category/vmware/",
+      "description": "The weblog of Cloud and Data Center specialists focusing on virtualization, cloud computing and Software-Defined Data Center technologies.",
+      "followers": {
+        "twitter": 108
+      },
+      "image_url": "https://i1.feedspot.com/5360958.jpg?t=1643959610"
+    },
+    {
+      "title": "ProVirtualzone",
+      "feed_url": "https://www.provirtualzone.com/feed/",
+      "website_url": "https://www.provirtualzone.com/category/vmware-posts/",
+      "description": "ProVirtualZone is a personal blog about Virtual Infrastructures maintained by Luciano Patr\u00e3o. The primary focus of this blog is on VMware and Hyper-V products, solutions, and services with the associated Storage and Virtual Backup solutions. The purpose of these write-ups is to review, provide break-fix information and also design How-To guides for implementing various virtualization solutions.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4983686.jpg?t=1622098828"
+    },
+    {
+      "title": "Davoud Teimouri",
+      "feed_url": "https://www.teimouri.net/feed/",
+      "website_url": "https://www.teimouri.net/",
+      "description": "Follow this blog to get updates about virtualization and datacenter.",
+      "followers": {
+        "facebook": 95,
+        "twitter": 455,
+        "instagram": 149
+      },
+      "image_url": "https://i1.feedspot.com/5004752.jpg"
+    },
+    {
+      "title": "VM Analyst",
+      "feed_url": "https://vmanalyst.com/feed/",
+      "website_url": "https://vmanalyst.com/",
+      "description": "VM Analyst provides the latest news, reviews, guides, and tools covering Application Virtualization, Citrix, Horizon VDI, Desktop Virtualization, VCF, NSX, VSAN, HCI, Windows, Linux and more.",
+      "followers": {
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/5478510.jpg?t=1670845899"
+    },
+    {
+      "title": "Yahya Zahedi Blog",
+      "feed_url": "https://blog.yahyazahedi.com/feed/",
+      "website_url": "https://blog.yahyazahedi.com/",
+      "description": "Daily experiences of a virtualization engineer, Yahya Zahedi. Yahya holds a Master's degree in Information Technology and has 5 years of experience in virtualization, storage, data centers, and cloud technologies.",
+      "followers": {
+        "twitter": 49
+      },
+      "image_url": "https://i1.feedspot.com/5387947.jpg?t=1649224851"
+    },
+    {
+      "title": "Virt Tools",
+      "feed_url": "https://planet.virt-tools.org/rss10.xml",
+      "website_url": "https://planet.virt-tools.org/",
+      "description": "Virt Tools are open source virtualization management tools for Linux system administrators. This site provides tutorials, videos, documentation, online help and roadmaps to help you get started with and understand the tools.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4983635.jpg"
+    },
+    {
+      "title": "Adventures in a Virtual World - Paul Grevink",
+      "feed_url": "https://paulgrevink.wordpress.com/feed/",
+      "website_url": "https://paulgrevink.wordpress.com/",
+      "description": "Paul Grevink is an IT Consultant. He is especially interested in subjects concerning Cloud, Virtualization, storage and networking. Paul is specialized in VMware Products, but also has an extended knowledge of Microsoft Windows, Linux and other Open Source products.",
+      "followers": {
+        "twitter": 378
+      },
+      "image_url": "https://i1.feedspot.com/4983737.jpg?t=1622098869"
+    },
+    {
+      "title": "Virtualization Calsoft Inc. Blog",
+      "feed_url": "https://www.calsoftinc.com/blogs/category/virtualization/feed",
+      "website_url": "https://www.calsoftinc.com/blogs/category/virtualization",
+      "description": "Calsoft is ISV preferred product engineering services partner in Storage, Networking, Virtualization, Cloud, IoT and analytics domains",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4983625.jpg?t=1622098906"
+    },
+    {
+      "title": "vCloudNotes : Information Sharing",
+      "feed_url": "https://www.vcloudnotes.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.vcloudnotes.com/",
+      "description": "Welcome to my blog! This blog focuses on dy-to-day virtualization stuff. Subscribe us to get your guide to VMware, AWS, Windows and related technologies.",
+      "followers": {
+        "twitter": 74
+      },
+      "image_url": "https://i1.feedspot.com/5012020.jpg"
+    },
+    {
+      "title": "VMware Arena",
+      "feed_url": "https://www.vmwarearena.com/feed/",
+      "website_url": "https://www.vmwarearena.com/",
+      "description": "VMware Arena is the leading virtualization blog focusing on architecture, best practice,software-defined storage & networking, availability and disaster recovery",
+      "followers": {
+        "twitter": 449
+      },
+      "image_url": "https://i1.feedspot.com/4491892.jpg?t=1622098317"
+    },
+    {
+      "title": "Wojcieh.net - Wojciech Marusiak",
+      "feed_url": "https://www.wojcieh.net/index.xml",
+      "website_url": "https://www.wojcieh.net/",
+      "description": "All about VMware, Cloud, Virtualization, Management and Hardware.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4983642.jpg?t=1622098856"
+    },
+    {
+      "title": "Let's Virtualize",
+      "feed_url": "https://blog.kanishksethi.in/feeds/posts/default?alt=rss",
+      "website_url": "https://blog.kanishksethi.in/",
+      "description": "A blog about VMware Virtualization, Cloud, Business Continuity, Disaster Recovery and NVIDIA GRID GPU.",
+      "followers": {
+        "facebook": 591,
+        "twitter": 774
+      },
+      "image_url": "https://i1.feedspot.com/4987749.jpg?t=1622098885"
+    },
+    {
+      "title": "ITVCE Blog - Dane Young",
+      "feed_url": "http://blog.itvce.com/feed/",
+      "website_url": "http://blog.itvce.com/category/vmware/",
+      "description": "The ITVCE (Information Technology Virtualization and Cloud Enthusiasts) blog is a community driven site for IT Professionals. The content found on ITVCE.com is primarily geared toward community support and enablement for application, desktop, and server virtualization technologies.",
+      "followers": {
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4983684.jpg?t=1622098890"
+    },
+    {
+      "title": "Virtual Remote Networking Blog",
+      "feed_url": "http://virtualremote.net/blogpost/feed/",
+      "website_url": "https://ithinkvirtual.com/",
+      "description": "Virtual Remote provides cross-platform Mobil Apps,Virtual Servers/Applications,Data Center and Coding solutions. Setting higher standards for VOIP , Cloud technology & Virtual Servers and investing in to highly skilled team for the implementation of customized solutions for clients.",
+      "followers": {
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/4983655.jpg?t=1622098895"
+    },
+    {
+      "title": "iThinkVirtual Blog - Alex L\u00f3pez",
+      "feed_url": "https://ithinkvirtual.com/feed/",
+      "website_url": "https://ithinkvirtual.com/",
+      "description": "Alex L\u00f3pez is a VMware Solutions Engineer by profession, a VCA-DCV, VCA6-DCV, VCP5-DCV, VCP6-DCV certification holder, and a proud honoree of the awarded and well-respected VMware vExpert 2016, 2017, & 2018 title!",
+      "followers": {
+        "twitter": 556
+      },
+      "image_url": "https://i1.feedspot.com/4983752.jpg?t=1622098918"
+    },
+    {
+      "title": "Virtualization24x7",
+      "feed_url": "https://feeds.feedburner.com/Virtualization24x7",
+      "website_url": "http://virtualization24x7.blogspot.com/",
+      "description": "Virtualization24x7.blogspot.com is the personal blog of Ranjna Aggarwal and has a strong focus on Virtualization Technology. He works as a Senior Consultant and has more than 12+ years of experience in the IT Industry.",
+      "followers": {
+        "facebook": 2100
+      },
+      "image_url": "https://i1.feedspot.com/3050940.jpg?t=1653026994"
+    },
+    {
+      "title": "VMWARE ADDICTED - Irshad Ali Chowdhary",
+      "feed_url": "https://vmwareaddicted.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://vmwareaddicted.blogspot.com/",
+      "description": "This blog is for people who wish to learn more about VMware, Microsoft Azure, Hyper-V and Upcoming technologies. Getting the latest insights into Virtualization and Cloud. Live discussion on Virtualization and Cloud. UNBOXING Technology",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 45
+      },
+      "image_url": "https://i1.feedspot.com/4983738.jpg?t=1622098833"
+    },
+    {
+      "title": "Virtualization Blogs Primarily focusing on VMware NSX",
+      "feed_url": "https://shuttletitan.com/feed/",
+      "website_url": "https://shuttletitan.com/",
+      "description": "shuttleTITAN is a personal blog about virtualization (primarily focusing on VMware products and suites) maintained by Varun Vermani.",
+      "followers": {
+        "twitter": 107
+      },
+      "image_url": "https://i1.feedspot.com/4983674.jpg?t=1622098818"
+    },
+    {
+      "title": "Denodo - Data Virtualization and Modern Data Management",
+      "feed_url": "http://www.datavirtualizationblog.com/feed/",
+      "website_url": "https://www.datamanagementblog.com/",
+      "description": "Denodo is the leader in data virtualization providing agile, high performance data integration and data abstraction software at half the cost of traditional approaches.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/4983608.jpg?t=1622098842"
+    },
+    {
+      "title": "PenguinPunk.net Blog",
+      "feed_url": "https://www.penguinpunk.net/blog/feed/",
+      "website_url": "https://www.penguinpunk.net/blog/",
+      "description": "Subscribe us to get articles about virtualization from PenguinPunk.",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4973736.jpg?t=1622098851"
+    },
+    {
+      "title": "VStellar.com",
+      "feed_url": "http://vstellar.com/feed/",
+      "website_url": "http://vstellar.com/",
+      "description": "Subscribe us to get articles on VMware vSphere, vCloud Director, vRealize Automation, vRealize Suite Life Cycle Manager, VMware NSX and vSphere Replication.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5012024.jpg?t=1622099137"
+    },
+    {
+      "title": "Ivo Beerens Blog",
+      "feed_url": "https://www.ivobeerens.nl/feed/",
+      "website_url": "https://www.ivobeerens.nl/",
+      "description": "A blog about virtualization, data center, security, end user computing, IoT and cloud.",
+      "followers": {
+        "facebook": 110,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4983660.jpg?t=1622098296"
+    },
+    {
+      "title": "Yellow Bricks - Duncan Epping",
+      "feed_url": "https://feeds.feedburner.com/YellowBricks",
+      "website_url": "https://www.yellow-bricks.com/",
+      "description": "Yellow Bricks is a personal Blog about virtualization(mostly VMware related) maintained by Duncan Epping.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 34900
+      },
+      "image_url": "https://i1.feedspot.com/20494.jpg?t=1622098300"
+    },
+    {
+      "title": "Vembu Technologies Blog",
+      "feed_url": "https://www.vembu.com/blog/feed/?format=xml",
+      "website_url": "https://www.bdrsuite.com/blog/",
+      "description": "Vembu is a leading provider of affordable software and cloud services with an array of innovative, flexible and reliable solutions for data protection, disaster recovery and CRM. Vembus flagship offering is its Backup & Disaster Recovery (BDR) product targeted at IT-Administrators in small and medium businesses to protect their Physical, VMware and Hyper-V environments.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4983716.jpg?t=1622098900"
+    },
+    {
+      "title": "AstroArch Consulting, Inc Blog",
+      "feed_url": "https://www.astroarch.com/blog/rss",
+      "website_url": "https://www.astroarch.com/blog/",
+      "description": "A blog Providing Consulting for all your Cloud, Security, and Virtualization Needs.",
+      "followers": {
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4983630.jpg?t=1622098909"
+    },
+    {
+      "title": "Derek Seaman's Blog",
+      "feed_url": "https://feeds.feedblitz.com/derekseaman",
+      "website_url": "https://www.derekseaman.com/",
+      "description": "This is a personal blog by Derek Seaman, a Top 25 Virtualization Blogger, which focuses on enterprise IT technologies such as Nutanix, VMware Virtualization, datacenter hardware, and Microsoft enterprise software like Windows Server.",
+      "followers": {
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4919344.jpg?t=1622098838"
+    }
+  ]
+}

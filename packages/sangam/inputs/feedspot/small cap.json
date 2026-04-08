@@ -1,0 +1,48 @@
+{
+  "category": "Small Cap",
+  "source_url": "https://rss.feedspot.com/small_cap_rss_feeds",
+  "feeds": [
+    {
+      "title": "Small Caps",
+      "feed_url": "https://smallcaps.com.au/feed/",
+      "website_url": "https://smallcaps.com.au/",
+      "description": "Small Caps, is the premier news and information site for all things small-cap stocks and the stock market. Our mission is to provide our readers with the most up-to-date and accurate information on small-cap stocks and the stock market as a whole. Whether you're an experienced investor or just getting started, we have something for you, from market summaries, interviews, and commentary.",
+      "followers": {
+        "facebook": 12200,
+        "twitter": 25000
+      },
+      "image_url": "https://i1.feedspot.com/4917836.jpg?t=1620627236"
+    },
+    {
+      "title": "Small Cap Discoveries News",
+      "feed_url": "https://smallcapdiscoveries.com/feed/",
+      "website_url": "https://smallcapdiscoveries.com/news-and-reports/",
+      "description": "Small Cap Discoveries is an idea generation platform that helps you network with 272 of the world's best smallcap investors and access over 80 threads and 17,000 posts of original research on winning small-caps. Explore our news and reports on small/penny stock companies, market trends and more! Small Cap Discoveries is an idea generation platform for microcap investors.",
+      "followers": {
+        "twitter": 20600
+      },
+      "image_url": "https://i1.feedspot.com/5441349.jpg?t=1663071283"
+    },
+    {
+      "title": "SmallCaps.co.za",
+      "feed_url": "https://smallcaps.co.za/feed/",
+      "website_url": "https://smallcaps.co.za/",
+      "description": "SmallCaps.co.za is a blog about small-cap equity investments and related subjects. The blog keeps investors informed on stock market news and information on ASX-listed small-cap companies across all sectors.",
+      "followers": {
+        "twitter": 16500
+      },
+      "image_url": "https://i1.feedspot.com/5479560.jpg?t=1671017417"
+    },
+    {
+      "title": "SmallCap Informer Blog",
+      "feed_url": "https://www.smallcapinformer.com/About/Blog?rss=1",
+      "website_url": "https://www.smallcapinformer.com/About/Blog",
+      "description": "SmallCap Informer is packed with information aimed at helping you make smarter investing decisions about the small-cap stocks in your portfolio. From helping you learn about making better decisions about small company stocks to presenting new ideas for your portfolio, SCI will educate and inform you.",
+      "followers": {
+        "facebook": 639,
+        "twitter": 52
+      },
+      "image_url": "https://i1.feedspot.com/5479556.jpg?t=1671017681"
+    }
+  ]
+}

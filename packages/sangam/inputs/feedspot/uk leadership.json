@@ -1,0 +1,70 @@
+{
+  "category": "UK Leadership",
+  "source_url": "https://rss.feedspot.com/uk_leadership_rss_feeds",
+  "feeds": [
+    {
+      "title": "Susanne Madsen's Project Management and Leadership Blog",
+      "feed_url": "https://www.susannemadsen.co.uk/1/feed",
+      "website_url": "https://www.susannemadsen.co.uk/blog",
+      "description": "Susanne Madsen's award winning blog is for managers and project professionals who would like to step into a personal and professional leadership role. It's mostly about project management soft skills.",
+      "followers": {
+        "twitter": 10200
+      },
+      "image_url": "https://i1.feedspot.com/3555673.jpg?t=1607491173"
+    },
+    {
+      "title": "Quest Leadership Blog",
+      "feed_url": "https://www.questleadership.co.uk/feed/",
+      "website_url": "https://www.questleadership.co.uk/blog/",
+      "description": "From change management to leadership theories and everyday leadership scenarios, we write about everything concerning leadership and business strategy.",
+      "followers": {
+        "twitter": 145
+      },
+      "image_url": "https://i1.feedspot.com/4438819.jpg?t=1607491917"
+    },
+    {
+      "title": "Coaching Leaders Blog",
+      "feed_url": "https://coachingleaders.co.uk/feed/",
+      "website_url": "https://coachingleaders.co.uk/blog/",
+      "description": "Follow us to keep up with Andy Smith's blog which features Emotional Intelligence, Appreciative Inquiry, NLP, leadership, training and coaching skills.",
+      "followers": {
+        "facebook": 779,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4841864.jpg?t=1611207402"
+    },
+    {
+      "title": "The Army Leader",
+      "feed_url": "https://thearmyleader.co.uk/feed/",
+      "website_url": "https://thearmyleader.co.uk/",
+      "description": "Blog dedicated to improving your and your unit's leadership. The Army Leader provides the advice and tools to develop you and your team. Run by current and former military leaders.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 11600
+      },
+      "image_url": "https://i1.feedspot.com/4922191.jpg?t=1607491810"
+    },
+    {
+      "title": "The Leadership Training Workshop Blog",
+      "feed_url": "https://theleadershiptrainingworkshop.com/feed/",
+      "website_url": "https://theleadershiptrainingworkshop.com/blog/",
+      "description": "Tony Brooks is an experienced Leadership Specialist, Qualified Psychologist, Author and is recognized as an inspiring and impactful Speaker on Leadership Mindset. He has worked across the UK, Dubai, Malaysia, Saudi Arabia and Zurich.",
+      "followers": {
+        "facebook": 312,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4438822.jpg?t=1607491958"
+    },
+    {
+      "title": "The Key's Blog",
+      "feed_url": "https://thekeysupport.com/feed/",
+      "website_url": "https://thekeysupport.com/blog/",
+      "description": "Key insights is The Key's blog on school leadership and governance, featuring analysis and comment from those working in and for schools.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 17800
+      },
+      "image_url": "https://i1.feedspot.com/4438823.jpg?t=1607490811"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "category": "Stereogum",
+  "source_url": "https://rss.feedspot.com/stereogum_rss_feeds",
+  "feeds": [
+    {
+      "title": "Stereogum",
+      "feed_url": "https://www.stereogum.com/feed/",
+      "website_url": "https://www.stereogum.com/",
+      "description": "Stereogum is the best music blog founded in 2002. The blog features articles on new music, columns, interviews, reviews, and indie rock gossip.",
+      "followers": {
+        "facebook": 437400,
+        "twitter": 347300,
+        "instagram": 601200
+      },
+      "image_url": "https://i1.feedspot.com/3801816.jpg?t=1745910780"
+    },
+    {
+      "title": "Stereogum \u00bb Music",
+      "feed_url": "https://www.stereogum.com/category/music/feed/",
+      "website_url": "https://www.stereogum.com/category/music/",
+      "description": "All latest articles about Music from Stereogum.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8513430.jpg?t=1753045058"
+    },
+    {
+      "title": "Stereogum \u00bb Premature Evaluation",
+      "feed_url": "https://www.stereogum.com/category/reviews/premature-evaluation/feed/",
+      "website_url": "https://www.stereogum.com/category/reviews/premature-evaluation/",
+      "description": "All latest articles about Premature Evaluation from Stereogum.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8513427.jpg?t=1753045048"
+    },
+    {
+      "title": "Stereogum \u00bb The Anniversary",
+      "feed_url": "https://www.stereogum.com/category/reviews/the-anniversary/feed/",
+      "website_url": "https://www.stereogum.com/category/reviews/the-anniversary/",
+      "description": "All latest articles about The Anniversary from Stereogum.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8513431.jpg?t=1753045061"
+    },
+    {
+      "title": "Stereogum \u00bb Movie Review",
+      "feed_url": "https://www.stereogum.com/category/reviews/movie-review/feed/",
+      "website_url": "https://www.stereogum.com/category/reviews/movie-review/",
+      "description": "All latest articles about Movie Review from Stereogum.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8513428.jpg?t=1753045051"
+    },
+    {
+      "title": "Stereogum \u00bb Album Of The Week",
+      "feed_url": "https://www.stereogum.com/category/reviews/album-of-the-week/feed/",
+      "website_url": "https://www.stereogum.com/category/reviews/album-of-the-week/",
+      "description": "All latest articles about Album Of The Week from Stereogum.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8513429.jpg?t=1753045055"
+    },
+    {
+      "title": "Stereogum \u00bb Concert Review",
+      "feed_url": "https://www.stereogum.com/category/reviews/concert-review/feed/",
+      "website_url": "https://www.stereogum.com/category/reviews/concert-review/",
+      "description": "All latest articles about Concert Review from Stereogum.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8513432.jpg?t=1753045065"
+    }
+  ]
+}

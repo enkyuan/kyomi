@@ -1,0 +1,938 @@
+{
+  "category": "HVAC",
+  "source_url": "https://rss.feedspot.com/hvac_rss_feeds",
+  "feeds": [
+    {
+      "title": "The ACHR NEWS",
+      "feed_url": "https://www.achrnews.com/rss/articles",
+      "website_url": "https://www.achrnews.com/",
+      "description": "Established in 1926, The Air Conditioning, Heating and Refrigeration NEWS is the HVACR contractor's weekly newsmagazine and is the industry's most trusted and utilized direct communications link to the HVACR buyer.",
+      "followers": {
+        "facebook": 11600,
+        "twitter": 17200
+      },
+      "image_url": "https://i1.feedspot.com/4436383.jpg?t=1624446056"
+    },
+    {
+      "title": "Goodway Technologies Blog",
+      "feed_url": "https://www.goodway.com/hvac-blog/feed/",
+      "website_url": "https://www.goodway.com/hvac-blog/",
+      "description": "Goodway's HVAC Blog covering tools, news and trends in the HVAC and Power Generation Maintenance industry. Goodway Technologies is an industry leading expert with over 55 years of service in HVAC tube and coil cleaning, and non-food and food sanitation plant maintenance.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/1714950.jpg?t=1623155991"
+    },
+    {
+      "title": "Westland Heating and Air Conditioning Blog",
+      "feed_url": "https://westlandhvac.com/blog/feed/",
+      "website_url": "https://westlandhvac.com/blog/",
+      "description": "Since 1984 Westland Heating and Air Conditioning has provided dependable heating and air conditioning service and quality HVAC products to their customers. They service and install all makes and models of equipment from residential units to large industrial heating and cooling systems.",
+      "followers": {
+        "facebook": 687,
+        "twitter": 57
+      },
+      "image_url": "https://i1.feedspot.com/4648122.jpg?t=1709556611"
+    },
+    {
+      "title": "Davis Air Conditioning & Heating Blog",
+      "feed_url": "http://davisac.com/blog/feed",
+      "website_url": "https://davisac.com/blog",
+      "description": "Providing Houston homeowners and businesses with outstanding air conditioning service and home heating repair has been our pleasure since 1971. Today's HVAC equipment is more energy efficient than ever and opportunities for improving the energy efficiency of building envelopes continue to evolve.",
+      "followers": {
+        "facebook": 197,
+        "twitter": 493
+      },
+      "image_url": "https://i1.feedspot.com/4647880.jpg"
+    },
+    {
+      "title": "A Plus Air Conditioning & Refrigeration Blog",
+      "feed_url": "https://aplusairconditioning.com/feed/",
+      "website_url": "https://aplusairconditioning.com/blog/",
+      "description": "A Air Conditioning is a full service, N.A.T.E. certified, air conditioning and heating installation and repair company serving north central Florida since 1998. Follow this blog for helpful tips and tricks, information about air conditioning, air duct cleaning, energy efficiency, indoor air quality, and more.",
+      "followers": {
+        "facebook": 497
+      },
+      "image_url": "https://i1.feedspot.com/4648256.jpg?t=1617092016"
+    },
+    {
+      "title": "John C. Flood Blog",
+      "feed_url": "https://www.johncflood.com/feed/",
+      "website_url": "https://www.johncflood.com/our-blog/",
+      "description": "John C. Flood to provide reliable plumbing, Air Conditioning, Heating, HVAC. electrical services & more in DC, Maryland and NoVA since 1904.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 572
+      },
+      "image_url": "https://i1.feedspot.com/4647885.jpg?t=1625570447"
+    },
+    {
+      "title": "Bell Plumbing, Heating, Cooling & Electrical Blog",
+      "feed_url": "https://bellplumbing.com/blog/feed/",
+      "website_url": "https://bellplumbing.com/blog/",
+      "description": "Bell Home Solutions stands as Denver's trusted provider of plumbers, remodelers, electricians, and HVAC contractors in the Denver Metro area. Their blog offers valuable insights and tips on remodelling, HVAC, and plumbing issues specific to the Denver, CO area. Customers benefit from expert guidance and information to address their home improvement needs effectively.",
+      "followers": {
+        "facebook": 685,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4648696.jpg?t=1626509045"
+    },
+    {
+      "title": "Comfort Flow Heating Blog",
+      "feed_url": "https://www.comfortflow.com/blog/feed/",
+      "website_url": "https://www.comfortflow.com/blog/",
+      "description": "Comfort Flow Heating is the trusted HVAC company for Eugene, OR. Comfort Flow Heating has been designing, installing & servicing residential and commercial systems for over 50 years. They provide professional heating and air conditioning services.",
+      "followers": {
+        "facebook": 787,
+        "twitter": 104
+      },
+      "image_url": "https://i1.feedspot.com/4648335.jpg?t=1623048001"
+    },
+    {
+      "title": "Preferred Air Conditioning & Mechanical Blog",
+      "feed_url": "https://getcold.net/blog/feed",
+      "website_url": "https://getcold.net/blog",
+      "description": "Since 1991, Preferred Air Conditioning & Mechanical has been providing excellent comfort services in the South Florida area. Their technicians specialize in HVAC system design, indoor air quality, energy efficiency and insurance repairs, among other great services. They bring professionalism, energy and a commitment to outstanding service to every installation, maintenance and repair job.",
+      "followers": {
+        "facebook": 113,
+        "twitter": 12
+      },
+      "image_url": "https://i1.feedspot.com/4648713.jpg"
+    },
+    {
+      "title": "Cool Air Mechanical Blog",
+      "feed_url": "https://www.770coolair.com/blog/feed/",
+      "website_url": "https://www.770coolair.com/blog/",
+      "description": "Cool Air is an HVAC company serving Sandy Springs, Decatur, and Vinings. Cool Air Mechanical is an expert provider of heating, cooling, ventilation and water heater services throughout the greater Atlanta region.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 256
+      },
+      "image_url": "https://i1.feedspot.com/4648290.jpg?t=1649324406"
+    },
+    {
+      "title": "Roberts Heating & Air Conditioning Blog",
+      "feed_url": "https://www.robertsheating.com/blog/feed/",
+      "website_url": "https://www.robertsheating.com/blog/",
+      "description": "Robert's Has Been Providing Heating and Air Conditioning in Northbrook, IL, Since 1979. Today they are one of the premier HVAC contractors in the North Shore area. Their service technicians are skilled professionals. Certified by North American Technician Excellence and the Environmental Protection Agency, their technicians have extensive experience in the HVAC field.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 199
+      },
+      "image_url": "https://i1.feedspot.com/4648687.jpg?t=1703062816"
+    },
+    {
+      "title": "Ultimate Heating and Air",
+      "feed_url": "https://ultimateheatingandair.com/feed/",
+      "website_url": "https://ultimateheatingandair.com/blog/",
+      "description": "Ultimate Heating & Air, Inc is the trusted HVAC and construction company of Boise, ID. Ultimate Heating & Air, strives to be the very best in complete customer satisfaction, customer education, superior installation, and service.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/4648327.jpg?t=1649239342"
+    },
+    {
+      "title": "Boehmer Heating and Cooling Blog",
+      "feed_url": "https://www.boehmerheating.com/blog/feed/",
+      "website_url": "https://www.boehmerheating.com/blog/",
+      "description": "Boehmer Heating & Cooling is a Pittsburgh, PA heating and air conditioning company you can depend on for excellent HVAC services throughout the Greater Pittsburgh Metropolitan area.",
+      "followers": {
+        "facebook": 129,
+        "twitter": 38
+      },
+      "image_url": "https://i1.feedspot.com/4648218.jpg"
+    },
+    {
+      "title": "Blue Heating and Cooling Blog",
+      "feed_url": "https://www.blueheatingandcooling.com/feed/",
+      "website_url": "https://www.blueheatingandcooling.com/blog/",
+      "description": "Blue Heating and Cooling is your full service HVAC company. Founded in 2010 by owners Dustin and Shannon Lundberg, we believe in getting to know our customers, offering fair pricing, and performing quality work. We help Kansas City HVAC customers with all of their heating and cooling needs.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 293
+      },
+      "image_url": "https://i1.feedspot.com/4647047.jpg?t=1608214923"
+    },
+    {
+      "title": "Custom/Design Heating & Air Conditioning Inc. Blog",
+      "feed_url": "https://www.customdesignhvac.com/blog/feed",
+      "website_url": "https://www.customdesignhvac.com/blog",
+      "description": "Custom/Design Heating & Air Conditioning Inc. is a full-service home and commercial HVAC contractor. They offer both residential and commercial HVAC services. From routine maintenance and major repairs to estimates and replacement HVAC systems.",
+      "followers": {
+        "facebook": 288,
+        "twitter": 10
+      },
+      "image_url": "https://i1.feedspot.com/4648455.jpg?t=1649239950"
+    },
+    {
+      "title": "Senica Air Conditioning Blog",
+      "feed_url": "https://www.senicaair.com/blog/feed",
+      "website_url": "https://www.senicaair.com/blog",
+      "description": "Senica Air Conditioning is an air conditioning contractor and heating contractor servicing Tampa, Spring Hill, & St. Petersburg FL. It is a HVAC Residential and Light Commercial.",
+      "followers": {
+        "facebook": 8200
+      },
+      "image_url": "https://i1.feedspot.com/4647062.jpg?t=1617090014"
+    },
+    {
+      "title": "Dr HVAC Blog",
+      "feed_url": "https://www.drhvac.ca/feed/",
+      "website_url": "https://www.drhvac.ca/blog/",
+      "description": "You'll find lots of heating, cooling and air quality tips in our blog. And we definitely plan to have some fun too! Dr HVAC is a licensed and registered heating and air conditioning company that has been professionally serving Brampton, Mississauga, Caledon, Oakville, Georgetown and the Greater Toronto area for close to a decade.",
+      "followers": {
+        "facebook": 541,
+        "twitter": 205,
+        "instagram": 262
+      },
+      "image_url": "https://i1.feedspot.com/5434220.jpg?t=1661165517"
+    },
+    {
+      "title": "HVAC/P",
+      "feed_url": "https://hvacpproducts.com/feed/",
+      "website_url": "https://hvacpproducts.com/",
+      "description": "HVAC/P Products is a new product news publication for the HVAC and plumbing industries and is published by Inform Publishing Group, a family-owned business based in Scottsdale, AZ.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4648761.jpg?t=1624449008"
+    },
+    {
+      "title": "Western Hills Heating and Air Conditioning Blog",
+      "feed_url": "https://westernhillsheating.com/blog/feed",
+      "website_url": "https://westernhillsheating.com/blog",
+      "description": "Western Hills Heating & Air is your source for Air Conditioning Repair in Cincinnati, OH and surrounding areas. Western Hills Heating & Air provides useful information for their customers.",
+      "followers": {
+        "facebook": 164
+      },
+      "image_url": "https://i1.feedspot.com/4648172.jpg?t=1608213353"
+    },
+    {
+      "title": "EDS Tech Blog",
+      "feed_url": "https://www.eds.tech/feed/",
+      "website_url": "https://www.eds.tech/blog/",
+      "description": "Get the latest tips & tricks on HVAC Software, HVAC maintenance, heating, cooling by staying up to date with our HVAC Blog. Energy Design Systems (EDS), an industry leader in providing and implementing HVAC engineering and sales systems; and ground-breaking marketing programs for over 20 years.",
+      "followers": {
+        "facebook": 327
+      },
+      "image_url": "https://i1.feedspot.com/5452511.jpg?t=1664875116"
+    },
+    {
+      "title": "Air-Tro Blog",
+      "feed_url": "https://www.airtro.com/feed",
+      "website_url": "https://www.airtro.com/blog",
+      "description": "Air Tro, founded in 1969, provides a full range of air conditioning, heating, and ventilation services to the greater Los Angeles area. We are local professionals who have your best interests in mind. Our team is committed to delivering top-notch service at the best value. Check out our blog for helpful HVAC tips.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4648226.jpg?t=1617090437"
+    },
+    {
+      "title": "Donald P. Dick Air Conditioning Blog",
+      "feed_url": "https://www.mrcool4ac.com/blog/feed/",
+      "website_url": "https://www.mrcool4ac.com/blog/",
+      "description": "Donald P. Dick Air Conditioning is the trusted air conditioning, heating, solar and home performance company of Fresno, CA. Donald P Dick Air Conditioning has served the greater Fresno area for its HVAC needs for 40 years.",
+      "followers": {
+        "facebook": 859,
+        "twitter": 191
+      },
+      "image_url": "https://i1.feedspot.com/4648449.jpg?t=1617091190"
+    },
+    {
+      "title": "Ambient Comfort Blog",
+      "feed_url": "https://www.ambientcomfortnj.com/blog/feed/",
+      "website_url": "https://www.ambientcomfortnj.com/blog/",
+      "description": "Ambient Comfort LLC is the trusted HVAC company of Gloucester County, NJ. Ambient Comfort LLC a small heating and air conditioning company with highly skilled technicians and installers, in addition to their salesmen. They provide heating and cooling solutions to residential and commercial customers throughout Gloucester, Cumberland, Camden, Atlantic, and Burlington Counties.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 52
+      },
+      "image_url": "https://i1.feedspot.com/4648344.jpg"
+    },
+    {
+      "title": "Bruce's Air Conditioning Blog",
+      "feed_url": "https://brucesac.com/blog/feed/",
+      "website_url": "https://brucesac.com/blog/",
+      "description": "Bruce's Air Conditioning has been providing expert, full-service residential and commercial heating, ventilation and air conditioning (HVAC) services in Chandler, AZ and Greater Phoenix for more than four decades.",
+      "followers": {
+        "facebook": 283,
+        "twitter": 120
+      },
+      "image_url": "https://i1.feedspot.com/4648702.jpg?t=1617110334"
+    },
+    {
+      "title": "Patriot Pros Blog",
+      "feed_url": "https://patriotpros.com/feed/",
+      "website_url": "https://patriotpros.com/blog/",
+      "description": "Covers articles related to HVAC, Plumbing, & Electrical. Patriot Pros has been providing plumbing and HVAC services to the people of Castle Rock, CO since 1997.",
+      "followers": {
+        "facebook": 403,
+        "instagram": 298
+      },
+      "image_url": "https://i1.feedspot.com/5422309.jpg?t=1657973316"
+    },
+    {
+      "title": "Edison Heating and Cooling Blog",
+      "feed_url": "https://www.edisonhvac.com/about-us/blog/feed/",
+      "website_url": "https://www.edisonhvac.com/about-us/blog/",
+      "description": "Edison Heating and Cooling provides HVAC services in Edison, NJ that include air conditioning repair and heater installation. Their services include both residential and commercial preventative maintenance agreement for years of trouble free service for your home or office.",
+      "followers": {
+        "facebook": 858,
+        "twitter": 35
+      },
+      "image_url": "https://i1.feedspot.com/4648355.jpg?t=1608215858"
+    },
+    {
+      "title": "Access Heating and Air Blog",
+      "feed_url": "https://accessheating.com/blog/feed/",
+      "website_url": "https://accessheating.com/blog/",
+      "description": "For more than 40 years we have been providing premium solutions for our customers. We have seen a lot of changes over the last several decades and we promise you that we will continue pushing harder and higher to provide you the best possible service. Take a look at the latest HVAC tips and tricks from the experts at Access Heating & Air!",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4647037.jpg?t=1609166412"
+    },
+    {
+      "title": "Climate Control Company Blog",
+      "feed_url": "https://climatecontrolcompany.com/blog/feed/",
+      "website_url": "https://climatecontrolcompany.com/blog/",
+      "description": "Understand the ins and outs of your heating, cooling, and plumbing needs! Browse through Climate Control Company's blog for up to date news and tips!",
+      "followers": {
+        "facebook": 543,
+        "twitter": 104,
+        "instagram": 126
+      },
+      "image_url": "https://i1.feedspot.com/4825437.jpg?t=1608214229"
+    },
+    {
+      "title": "Crockett Facilities Blog",
+      "feed_url": "https://www.crockett-facilities.com/blog/feed/",
+      "website_url": "http://www.crockett-facilities.com/blog/",
+      "description": "Crockett Facilities Services, Inc., a woman-owned business headquartered in Bowie, Maryland, is a mechanical contractor providing integrated facilities services, heating, ventilation, and cooling (HVAC) services, data center cooling services and energy management services.",
+      "followers": {
+        "facebook": 297,
+        "twitter": 449
+      },
+      "image_url": "https://i1.feedspot.com/4647079.jpg"
+    },
+    {
+      "title": "Climate Control Blog",
+      "feed_url": "https://climatecontrolinc.com/blog/feed/",
+      "website_url": "https://climatecontrolinc.com/blog/",
+      "description": "With more than 21 years in the heating and cooling business, Climate Control is dedicated to providing the best possible service for you and your family. Climate Control services & replaces air conditioners, heaters and more. They are the residential and commercial HVAC contractor in the Portland metro area.",
+      "followers": {
+        "facebook": 146,
+        "twitter": 140
+      },
+      "image_url": "https://i1.feedspot.com/4648309.jpg?t=1610012978"
+    },
+    {
+      "title": "Holtzople Heating & Air Conditioning Blog",
+      "feed_url": "https://holtzople.com/feed/",
+      "website_url": "https://holtzople.com/blog/",
+      "description": "Holtzople Heating & Air Conditioning of Frederick, MD, is a family owned-and-operated HVAC business serving the heating & cooling needs of homes & businesses.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 185
+      },
+      "image_url": "https://i1.feedspot.com/5119384.jpg?t=1649245501"
+    },
+    {
+      "title": "Advanced Cooling Systems Blog",
+      "feed_url": "https://acs-advancedcooling.com/blog/feed/",
+      "website_url": "https://acs-advancedcooling.com/blog/",
+      "description": "Advanced Cooling Systems, Inc. Jim Osiel and Jeff Rapaport bring a combined 46 years of experience in the air conditioning industry. Their job is to educate and inform potential clients of the options available and achieve a better level of comfort, efficiency and lower utility bills.",
+      "followers": {
+        "facebook": 422,
+        "twitter": 592
+      },
+      "image_url": "https://i1.feedspot.com/4647723.jpg?t=1617092909"
+    },
+    {
+      "title": "Keith Air Conditioning Blog",
+      "feed_url": "http://keithair.com/feed/",
+      "website_url": "https://keithair.com/blog/",
+      "description": "Keith Air Conditioning has served Baldwin County and Mobile, AL for more than 50 years with an all-star team of HVAC contractors. They are the Mobile, AL, air conditioning company that you can count on for expert after-hours HVAC service. Follow this blog for more tips on and information to help you understand your home's HVAC system.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 549
+      },
+      "image_url": "https://i1.feedspot.com/4648148.jpg?t=1617092948"
+    },
+    {
+      "title": "Charlie's Heating & Cooling Blog",
+      "feed_url": "https://www.charliestinshop.com/feed",
+      "website_url": "https://www.charliestinshop.com/blog",
+      "description": "Charlie's Heating & Cooling is committed to providing our community with quality HVAC service to help you satisfactorily manage indoor comfort, regardless of the weather.",
+      "followers": {
+        "facebook": 291,
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/4647853.jpg?t=1524728816"
+    },
+    {
+      "title": "Quantum Air Conditioning Blog",
+      "feed_url": "https://quantumhvac.com/feed/",
+      "website_url": "https://quantumhvac.com/hvac-contractor/blog/",
+      "description": "This Blog Is definitely For The DIY-Here You Can Find Plenty Information And Tips About Heating And Air Conditioning Repair And Installations",
+      "followers": {
+        "facebook": 517
+      },
+      "image_url": "https://i1.feedspot.com/5156411.jpg?t=1649247861"
+    },
+    {
+      "title": "Doc Dancer Blog",
+      "feed_url": "https://docdancer.com/feed/",
+      "website_url": "https://docdancer.com/blog/",
+      "description": "Covers heating, air conditioning, and indoor air quality tips and latest news in the home services industry.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 639
+      },
+      "image_url": "https://i1.feedspot.com/5319540.jpg?t=1630924000"
+    },
+    {
+      "title": "National Air Warehouse Blog",
+      "feed_url": "https://www.nationalairwarehouse.com/blog/feed/",
+      "website_url": "https://www.nationalairwarehouse.com/blog/",
+      "description": "National Air Warehouse sells air conditioners, heat pumps, gas furnaces, electric furnaces and split systems. They have been providing heating and cooling equipment locally for years and are now available nationwide. They believe in offering high-quality equipment at affordable prices, the best customer service, speedy shipments and a knowledgeable staff.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4647607.jpg?t=1649325530"
+    },
+    {
+      "title": "Woods Comfort Systems Blog",
+      "feed_url": "https://woodscomfortsystems.com/blogs/feed/",
+      "website_url": "https://woodscomfortsystems.com/blogs/",
+      "description": "Wood Comfort Systems is recognized as a leader in the Heating and Air Conditioning industry serving central & south Texas cities. For six decades, they have provided Texans with outstanding service, competitive pricing, and practical solutions to their HVAC needs.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 32
+      },
+      "image_url": "https://i1.feedspot.com/4648319.jpg?t=1626331506"
+    },
+    {
+      "title": "Valley Comfort Heating and Air Blog",
+      "feed_url": "https://valleycomfortheatingandair.com/feed/",
+      "website_url": "https://valleycomfortheatingandair.com/blog/",
+      "description": "Valley Comfort offers heating and air conditioning sales, service, repair, and replacement in the Santa Rosa and Napa Valley areas of CA. Valley Comfort Heating and Air Conditioning is a family owned and operated business, which operates on the principles of quality service, integrity, reliability, and honesty.",
+      "followers": {
+        "facebook": 295,
+        "twitter": 284
+      },
+      "image_url": "https://i1.feedspot.com/4648167.jpg?t=1649239613"
+    },
+    {
+      "title": "Samm's Heating and Air Conditioning Blog",
+      "feed_url": "https://www.sammsheatingandair.com/blog/feed",
+      "website_url": "https://www.sammsheatingandair.com/blog",
+      "description": "Samm's Heating and Air provides commercial and residential air conditioning repair, service, installation and maintenance. Serving Plano, TX and surrounding cities.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 259
+      },
+      "image_url": "https://i1.feedspot.com/4647854.jpg?t=1649326485"
+    },
+    {
+      "title": "GAC Services Blog",
+      "feed_url": "https://gacservices.com/blog/feed/",
+      "website_url": "https://gacservices.com/blog/",
+      "description": "Based out of Gaithersburg, MD, GAC Services is a residential cooling, heating, and electrical contractor setting new standards in the Maryland HVAC and electric market. GAC Services is committed to helping their customers in Maryland save money on their cooling, Heating, and electric bills.",
+      "followers": {
+        "facebook": 2,
+        "twitter": 180
+      },
+      "image_url": "https://i1.feedspot.com/4648676.jpg?t=1626161794"
+    },
+    {
+      "title": "Hamel's Air Conditioning & Heating Blog",
+      "feed_url": "https://hamelsac.com/feed/",
+      "website_url": "https://hamelsac.com/resources/hvac-blog/",
+      "description": "Covers articles related to residential air conditioning and heating repairs, maintenance, and installations.",
+      "followers": {
+        "facebook": 910
+      },
+      "image_url": "https://i1.feedspot.com/5370720.jpg?t=1644489439"
+    },
+    {
+      "title": "Cozy Heating And Cooling Blog",
+      "feed_url": "https://cozyheatingandcooling.com/feed/",
+      "website_url": "https://cozyheatingandcooling.com/blog/",
+      "description": "Head over to the Cozy Heating And Cooling Blog for a deep dive into modern HVAC tools, and how they work. Find simple DIY tips and ideas for a better cooling experience. Experience optimal HVAC comfort in every season with Cozy Heating and Cooling. The efficient and reliable solutions ensure a cozy home environment.",
+      "followers": {
+        "facebook": 94400000
+      },
+      "image_url": "https://i1.feedspot.com/5746110.jpg?t=1704105107"
+    },
+    {
+      "title": "AirPoint Blog",
+      "feed_url": "https://airpoint.ca/feed/",
+      "website_url": "https://airpoint.ca/toronto-hvac-blog/",
+      "description": "AirPoint's blog is a premier destination for insightful and practical advice on all things HVAC in the Greater Toronto Area. We specialize in offering expert tips, latest industry trends, and essential maintenance guidance to ensure optimal home comfort. Our blog is a valuable resource for homeowners seeking reliable and efficient solutions for heating, cooling, and air quality needs, presented by seasoned professionals with a passion for enhancing indoor environments.",
+      "followers": {
+        "facebook": 89,
+        "twitter": 5,
+        "instagram": 43
+      },
+      "image_url": "https://i1.feedspot.com/5737050.jpg?t=1702618746"
+    },
+    {
+      "title": "Tropic-Air Blog",
+      "feed_url": "https://tropicairfl.com/feed/",
+      "website_url": "https://tropicairfl.com/blog/",
+      "description": "Read Tropic-Air's latest blog posts to discover expert tips about air conditioning installation, maintenance, and repair, as well as ductwork, attic insulations, and more. Tropic-Air is Sarasota Area's most trusted heating & air Conditioning Company specializing in duct cleaning, replacement, installation, and maintenance.",
+      "followers": {
+        "facebook": 1000,
+        "instagram": 118
+      },
+      "image_url": "https://i1.feedspot.com/5670241.jpg?t=1694523813"
+    },
+    {
+      "title": "Celco Heating and Air Conditioning Blog",
+      "feed_url": "https://celcoct.com/blog/feed/",
+      "website_url": "https://celcoct.com/blog/",
+      "description": "Celco Heating and Air Conditioning was founded in 1976 by Stanley Elovecky with the goal of providing his customers with more than just heating and air conditioning services.The heating and air conditioning experts at Celco Heating and AC offer quality heating and air conditioning repair, installation, water heaters, generators, and other HVAC services throughout Fairfield and Stamford,CT.",
+      "followers": {
+        "facebook": 965,
+        "twitter": 15
+      },
+      "image_url": "https://i1.feedspot.com/4648186.jpg?t=1623155928"
+    },
+    {
+      "title": "Advanced HVAC Blog",
+      "feed_url": "https://advancedhvac.ca/blog/feed/",
+      "website_url": "https://advancedhvac.ca/blog/",
+      "description": "As a family run business Advanced HVAC provides Ottawa heating, ventilation and air conditioning. They provide quality work and personalized service. Their experienced HVAC technicians are proud to offer their customers professional and timely heating and cooling services.",
+      "followers": {
+        "facebook": 466,
+        "twitter": 50
+      },
+      "image_url": "https://i1.feedspot.com/4648697.jpg"
+    },
+    {
+      "title": "Action AC Blog",
+      "feed_url": "https://actionac.net/feed/",
+      "website_url": "https://actionac.net/blog/",
+      "description": "Since 1975, Action Air Conditioning, Heating & Solar has been providing top-quality HVAC and solar energy services to the homeowners and businesses of Southern California. From replacements and repairs to installations and replacements, our highly trained and certified team of professionals has all your needs covered.",
+      "followers": {
+        "facebook": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5279274.jpg?t=1620742127"
+    },
+    {
+      "title": "Ventwerx HVAC Blog",
+      "feed_url": "https://ventwerx.com/blog/feed/",
+      "website_url": "https://ventwerx.com/blog/",
+      "description": "Ventwerx HVAC Heating & Air Conditioning is a full service HVAC Company that residential customers in San Jose, CA and surrounding areas have been choosing for quality Heating, Air Conditioning and Air Duct Cleaning services since 2006. They have over 20 years experience and are a local, family owned and operated, licensed, bonded and insured HVAC company.",
+      "followers": {
+        "facebook": 153,
+        "twitter": 5,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/4648682.jpg?t=1649248018"
+    },
+    {
+      "title": "Shavitz Heating and Air Conditioning News",
+      "feed_url": "https://www.shavitz.com/blog/feed/",
+      "website_url": "https://www.shavitz.com/news/",
+      "description": "Browse through the blog to know more about the furnace repair, cleaning, installation and much more. Chicagoland's Trusted Name in Heating & Cooling since 1904. Shavitz Heating and Air Conditioning has been proudly serving the Chicago area, offering honest, reliable, and quality HVAC services.",
+      "followers": {
+        "facebook": 729,
+        "twitter": 102
+      },
+      "image_url": "https://i1.feedspot.com/4647733.jpg?t=1617109878"
+    },
+    {
+      "title": "Home Comfort Alliance Blog",
+      "feed_url": "https://www.gsheating.com/feed/",
+      "website_url": "https://homecomfortalliance.com/blog/news/",
+      "description": "Covers heating and air conditioning tips, installation guides and more!",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 1000,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5323380.jpg?t=1632121544"
+    },
+    {
+      "title": "Earth Temp HVAC Blog",
+      "feed_url": "https://www.earthtempacheating.com/feed/",
+      "website_url": "https://www.earthtempacheating.com/blog/",
+      "description": "The founding President Demetris started working in the industry over two decades ago and founded Earth Temp HVAC in 2014. Through hard work and his extensive HVAC knowledge, he quickly developed a reputation for being a rising star as an HVAC technician. At Earth Temp HVAC we are a highly rated, fully certified, insured and bonded HVAC company committed to delivering exceptional top-notch, quality service.",
+      "followers": {
+        "facebook": 525
+      },
+      "image_url": "https://i1.feedspot.com/5271379.jpg?t=1618927569"
+    },
+    {
+      "title": "Linquip \u00bb HVAC",
+      "feed_url": "https://www.linquip.com/blog/category/hvac/feed/",
+      "website_url": "https://www.linquip.com/blog/category/hvac/",
+      "description": "Linquip is an ultimate equipment-based industry directory that brings experts, manufacturers, service providers, and customers together to create an industry social media network-based ecosystem.",
+      "followers": {
+        "facebook": 835,
+        "twitter": 872,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5279318.jpg?t=1620708550"
+    },
+    {
+      "title": "Quality Heating & Air Blog",
+      "feed_url": "https://www.qualityheatair.com/blog/feed/",
+      "website_url": "https://www.qualityheatair.com/blog/",
+      "description": "Quality Heating & Air is a reliable and experienced HVAC company you can count on. As a full service, residential and commercial HVAC contractor, we are happy to take care of all of your HVAC installation needs.",
+      "followers": {
+        "facebook": 243,
+        "twitter": 25
+      },
+      "image_url": "https://i1.feedspot.com/4648396.jpg"
+    },
+    {
+      "title": "Russell's Heating & Air Conditioning Blog",
+      "feed_url": "https://www.russellsac.com/blog/feed/",
+      "website_url": "https://www.russellsac.com/blog/",
+      "description": "The Yucaipa air conditioning & heating specialists at Russell's Heating and Air Conditioning offer quality repair, installation and other HVAC services throughout the Yucaipa, California area including Redlands and Beaumont. They carry all major brands of HVAC units and service all makes and models.",
+      "followers": {
+        "facebook": 783,
+        "twitter": 132
+      },
+      "image_url": "https://i1.feedspot.com/4648369.jpg"
+    },
+    {
+      "title": "Warmup New Zealand Blog",
+      "feed_url": "https://warmup.co.nz/feed/",
+      "website_url": "https://warmup.co.nz/blog/",
+      "description": "Covers articles about general information relevant to the heating technologies, new products, technology improvements and more. Warmup is the best electric underfloor heating solution using radiant heat which provides both quality and cost-efficiency within your home.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 312,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5318379.jpg?t=1630567549"
+    },
+    {
+      "title": "K2 HVAC",
+      "feed_url": "https://k2hvac.com/feed",
+      "website_url": "https://k2hvac.com/",
+      "description": "Heating and Cooling Blog. Find expert advice on Air Conditioning, Air Quality, Heating, HVAC, Maintenance, and Furnace.",
+      "followers": {
+        "facebook": 223,
+        "instagram": 92
+      },
+      "image_url": "https://i1.feedspot.com/5367795.jpg?t=1649246992"
+    },
+    {
+      "title": "Homesense Heating and Cooling Blog",
+      "feed_url": "https://trusthomesense.com/feed/",
+      "website_url": "https://trusthomesense.com/blog/",
+      "description": "Homesense Heating & Cooling was started in Indianapolis by Purdue University friends, Jesse Cross and Brian Schutt. With Jesse's background in finance and real estate and Brian's background in marketing, they've built a different kind of heating & cooling company.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5271378.jpg?t=1618927565"
+    },
+    {
+      "title": "Bill Joplin's Air Conditioning & Heating Blog",
+      "feed_url": "https://joplins.net/feed/",
+      "website_url": "https://joplins.net/articles/",
+      "description": "Bill Joplin's Air Conditioning & Heating is a leading residential HVAC Contractor providing heating and cooling services to North Dallas and McKinney TX. They have always been an air conditioning company showing consistent growth over the years, by offering competitively priced programs and services.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 437,
+        "instagram": 954
+      },
+      "image_url": "https://i1.feedspot.com/4648193.jpg?t=1617090415"
+    },
+    {
+      "title": "Bud Matthews Service Blog",
+      "feed_url": "https://budmatthews.com/blog/feed",
+      "website_url": "https://budmatthews.com/blog",
+      "description": "Bud Matthews Services is the HVAC, plumbing and construction company of choice near Durham, NC. Bud Matthews Service is a single, reliable company that can handle your HVAC system, your plumbing system, your appliances and your construction needs, and we've been doing so for over 30 years.",
+      "followers": {
+        "facebook": 195,
+        "twitter": 13
+      },
+      "image_url": "https://i1.feedspot.com/4648685.jpg?t=1617109991"
+    },
+    {
+      "title": "HVAC Beginners Blog",
+      "feed_url": "https://hvacbeginners.com/blog/feed/",
+      "website_url": "https://hvacbeginners.com/blog/",
+      "description": "Providing residential HVAC tips and best practices for technicians in training, and educating home owners on how their heating and air conditioning systems operate.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 40
+      },
+      "image_url": "https://i1.feedspot.com/5042516.jpg?t=1649323705"
+    },
+    {
+      "title": "WG Speeks Blog",
+      "feed_url": "https://www.wgspeeks.com/blog/feed/",
+      "website_url": "https://www.wgspeeks.com/blog/",
+      "description": "WG Speeks provides expert services for HVAC Richmond VA residents. They provide HVAC installation and services as well as duct cleaning and more.",
+      "followers": {
+        "facebook": 235,
+        "twitter": 19
+      },
+      "image_url": "https://i1.feedspot.com/4648376.jpg"
+    },
+    {
+      "title": "Hader Solutions Blog",
+      "feed_url": "https://haderhvac.com/feed/",
+      "website_url": "https://haderhvac.com/blog/",
+      "description": "Hader Solutions is Cincinnati's award-winning heating, cooling, and roofing contractors who focus on total home efficiency and comfort. Our blog includes articles on heating and air conditioning-related topics, written to benefit our Cincinnati customers.",
+      "followers": {
+        "facebook": 577,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4713546.jpg?t=1505385034"
+    },
+    {
+      "title": "Lenz Heating & Cooling Blog",
+      "feed_url": "https://lenzmechanical.com/blog/feed/",
+      "website_url": "https://lenzmechanical.com/blog/",
+      "description": "As a family-owned and operated HVAC company, Lenz Heating & Cooling ensures you receive top-quality professionals and expertise along with unmatched customer service. Al Lenz, founder and owner of Lenz Heating & Cooling, has provided residential air conditioner and furnace services in the Des Moines community and surrounding areas in the state of Iowa since 2009.",
+      "followers": {
+        "twitter": 77
+      },
+      "image_url": "https://i1.feedspot.com/4647099.jpg"
+    },
+    {
+      "title": "Climate Control Heating, Cooling & Plumbing Blog",
+      "feed_url": "https://www.climatecontrolkc.com/blog/feed/",
+      "website_url": "https://www.climatecontrolkc.com/blog/",
+      "description": "Since 1987, Climate Control HVAC service has been providing friendly, reliable HVAC service to residents and business owners in Liberty and the Kansas City area.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 210
+      },
+      "image_url": "https://i1.feedspot.com/4648664.jpg?t=1626330849"
+    },
+    {
+      "title": "HVAC Know It All Blog",
+      "feed_url": "https://hvacknowitall.com/blog/",
+      "website_url": "https://hvacknowitall.com/blog/",
+      "description": "HVAC Know It All was created by Gary McCreadie, a licensed refrigeration and gas technician, with three goals in mind: Learn. Teach. Entertain. All within a positive environment.",
+      "followers": {
+        "twitter": 663,
+        "instagram": 97700
+      },
+      "image_url": "https://i1.feedspot.com/5279319.jpg?t=1620709489"
+    },
+    {
+      "title": "Contracting Business \u00bb Commercial HVAC",
+      "feed_url": "https://www.contractingbusiness.com/rss.xml",
+      "website_url": "https://www.contractingbusiness.com/commercial-hvac",
+      "description": "Contracting Business is the leading business-to-business magazine for commercial, residential, and industrial contractors in the heating, ventilation, air conditioning and refrigeration industries. It provides news and information on HVACR and technology trends and emerging technologies, processes and operations to HVACR Contracting firms.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 9500
+      },
+      "image_url": "https://i1.feedspot.com/4224636.jpg?t=1550125351"
+    },
+    {
+      "title": "Schaal Heating and Cooling Blog",
+      "feed_url": "https://callschaalyaall.com/blog/feed",
+      "website_url": "https://callschaalyaall.com/blog",
+      "description": "Schaal Heating and Cooling is an award-winning HVAC contractor based in Des Moines, Iowa. The company offers air conditioners, water heaters, and geothermal pumps. They also provide indoor air quality services for proper ventilation of living spaces.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 28
+      },
+      "image_url": "https://i1.feedspot.com/4648140.jpg?t=1649323333"
+    },
+    {
+      "title": "Builder Online \u00bb HVAC",
+      "feed_url": "https://www.builderonline.com/products/hvac/?rss=true",
+      "website_url": "https://www.builderonline.com/products/hvac/",
+      "description": "Builder and Builder Online are the premier sources of information for the home building industry. With a comprehensive circulation of 110,000 new-home builders and their subcontractors, Builder provides balanced, analytical coverage of the economy, housing policy, design, construction, new products, sales and marketing, technology, and business management.",
+      "followers": {
+        "facebook": 18900,
+        "twitter": 30400
+      },
+      "image_url": "https://i1.feedspot.com/4647179.jpg?t=1649247960"
+    },
+    {
+      "title": "Cielo Wigle Blog",
+      "feed_url": "https://www.cielowigle.com/feed/",
+      "website_url": "https://cielowigle.com/blog/",
+      "description": "Cielo makes any air conditioner smart. Our programmable Wi-Fi-enabled smart AC controllers are backed by apps for iOS/Android/Web, linked via AWS IoT based cloud. Read the Cielo blog to get news and insights about smart air conditioners, the latest news about smart controllers, AC market reviews and much more.",
+      "followers": {
+        "facebook": 22200,
+        "twitter": 2500,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5247126.jpg?t=1613817143"
+    },
+    {
+      "title": "Total Energy Systems Ltd. Blog",
+      "feed_url": "https://tesltd.ca/feed/",
+      "website_url": "https://tesltd.ca/blog/",
+      "description": "Welcome to Total Energy Systems Ltd. (TES), your trusted commercial HVAC and mechanical service provider based in Coquitlam, British Columbia. Serving a wide range of sectors since 1978, we specialize in commercial, industrial, and residential energy conservation solutions, offering quality service and cost-effectiveness.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5688848.jpg?t=1697199557"
+    },
+    {
+      "title": "Bob's Climate Control Blog",
+      "feed_url": "https://bobsclimatecontrol.com/blogs/feed/",
+      "website_url": "https://bobsclimatecontrol.com/blogs/",
+      "description": "Bob's Climate Control was established with an approach to keep transparency and integrity above all else. We aim to offer homeowners quality HVAC services that allow them to enjoy complete control over their home's comfort. We strive to provide an enhanced indoor air quality system that complies precisely with the needs of the consumers.",
+      "followers": {
+        "facebook": 112,
+        "twitter": 46,
+        "instagram": 101
+      },
+      "image_url": "https://i1.feedspot.com/5547048.jpg?t=1682054376"
+    },
+    {
+      "title": "Ace Solves It All Blog",
+      "feed_url": "https://www.acesolvesitall.com/blog/feed/",
+      "website_url": "https://www.acesolvesitall.com/blog/",
+      "description": "Ace was founded in 1994 by Kissimmee resident Charlie DePari, who was previously a contractor in another state. The company started with electrical and has expanded their services to include plumbing, air conditioning, heating and solar. In addition to being a lead-certified firm, their technicians are NATE-certified, backflow certified, and are highly trained.",
+      "followers": {
+        "facebook": 12000,
+        "twitter": 267
+      },
+      "image_url": "https://i1.feedspot.com/4648691.jpg?t=1649247113"
+    },
+    {
+      "title": "Burkholders HVAC Blog",
+      "feed_url": "https://burkholders-hvac.com/blog/feed/",
+      "website_url": "https://burkholders-hvac.com/blog/",
+      "description": "At Burkholder's HVAC we strive to offer our customers the highest level of quality Heating and Air Conditioning services at fair and market competitive prices. For nearly 50 years, Burkholder's HVAC has completed hundreds of installations and delivered award-winning service to commercial, industrial and institutional customers throughout Eastern Pennsylvania.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 180
+      },
+      "image_url": "https://i1.feedspot.com/4648706.jpg?t=1649239557"
+    },
+    {
+      "title": "Advent Air Conditioning Blog",
+      "feed_url": "https://adventair.com/feed/",
+      "website_url": "https://adventair.com/blog/",
+      "description": "Providing the latest updates and news on all things HVAC, Advent helps customers with the air conditioning and heating decisions they may face. Their mission is to be one of the industry leaders in home comfort solutions by providing HVAC installation, maintenance, and repair services to residential and commercial clients throughout the North Texas area.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 217,
+        "instagram": 324
+      },
+      "image_url": "https://i1.feedspot.com/4647897.jpg?t=1617091207"
+    },
+    {
+      "title": "Moncrief Heating Blog",
+      "feed_url": "https://www.moncriefair.com/blog/",
+      "website_url": "https://www.moncriefair.com/blog/",
+      "description": "Since 1898, Moncrief is Atlanta's oldest and best heating & air conditioning contractor. For 120 years, we've been proudly turning houses into comfortable homes. It's how we've become Atlanta's most trusted heating and cooling company. Along the way, we discovered something important - becoming a leader isn't just about installing systems or maintaining equipment. It'es about instilling trust in our customers.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 788,
+        "instagram": 186
+      },
+      "image_url": "https://i1.feedspot.com/5279342.jpg?t=1620710457"
+    },
+    {
+      "title": "Kennon Heating & Air Conditioning Blog",
+      "feed_url": "https://kennonhvac.com/feed",
+      "website_url": "https://kennonhvac.com/blog",
+      "description": "Kennon Heating and Air Conditioning is a full-service HVAC Company with a wide service area surrounding Cumming GA. Find answers to your HVAC questions about Air conditioner problems, HVAC unit issues, Heating issues, HVAC DIYs, and more.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 13,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5282541.jpg?t=1621499058"
+    },
+    {
+      "title": "Douglas Cooling & Heating Blog",
+      "feed_url": "https://www.callks.com/feed/",
+      "website_url": "https://www.douglascoolingandheating.com/blog/",
+      "description": "KS Services is the trusted local heating & air conditioning professional for the greater Birmingham area. Check out our blog to learn more about the heating and air conditioning industry. We provide helpful tips and tricks to keep your home comfortable and your HVAC system running efficiently.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 120
+      },
+      "image_url": "https://i1.feedspot.com/5143171.jpg?t=1587724882"
+    },
+    {
+      "title": "Fort Collins Heating & Air Conditioning Blog",
+      "feed_url": "https://fortcollinsheating.com/blog/feed/",
+      "website_url": "https://fortcollinsheating.com/blog/",
+      "description": "At Fort Collins Heating & Air Conditioning our top priorities are the comfort and complete satisfaction of our clients. When you call us to handle your heating, air conditioning, indoor air quality or commercial HVAC service needs you receive the expertise that comes from over 80 years of industry experience.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 489,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4647720.jpg?t=1625720501"
+    },
+    {
+      "title": "Cooper Heating & Cooling Blog",
+      "feed_url": "https://www.coopergreenteam.com/blog/feed",
+      "website_url": "https://www.coopergreenteam.com/blog",
+      "description": "Founded in Arvada in 1978 by Gary Cooper, Cooper Heating & Cooling, Inc. is proud to be one of Colorado's largest residential HVAC companies. They are a full service company, offering installation, repair, maintenance, and replacement services for all relevant systems.",
+      "followers": {
+        "facebook": 7800,
+        "twitter": 108,
+        "instagram": 183
+      },
+      "image_url": "https://i1.feedspot.com/4648380.jpg?t=1649246520"
+    },
+    {
+      "title": "Crown Heating, Cooling & Plumbing Blog",
+      "feed_url": "https://www.crowngroupohio.com/feed/",
+      "website_url": "https://www.crowngroupohio.com/blog/",
+      "description": "Crown Group Ohio for your HVAC and plumbing needs. Serving residential & commercial customers in Northeast Ohio for over 100 years. Get heating and cooling tips from the experts who know the industry best, Crown Group Ohio.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 13
+      },
+      "image_url": "https://i1.feedspot.com/4647071.jpg?t=1649319565"
+    },
+    {
+      "title": "Simply the Best Heating & Cooling Blog",
+      "feed_url": "https://simplythebestac.com/blog/",
+      "website_url": "https://simplythebestac.com/blog/",
+      "description": "Simply the Best Heating & Cooling will help you maintain your home comfort! Simply the Best Heating & Cooling is an expert, full-service residential and commercial heating, ventilation and air conditioning (HVAC) service and installation provider in Gilbert, Arizona.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 252
+      },
+      "image_url": "https://i1.feedspot.com/4648197.jpg?t=1596983561"
+    },
+    {
+      "title": "Blaze Air Blog",
+      "feed_url": "https://www.airtreatmentinc.com/blogs/feed/",
+      "website_url": "https://www.blazeair.com/blog/",
+      "description": "Established back in 1967, Air Treatment, Inc. has grown over the years. We are now the premier heating and cooling company in Greensboro and the surrounding area. They specialize in residential and commercial heating and cooling service and installation.",
+      "followers": {
+        "facebook": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4648240.jpg?t=1608215266"
+    },
+    {
+      "title": "Bob Boldt HVAC Blog",
+      "feed_url": "https://www.bobhvac.com/blog?format=rss",
+      "website_url": "https://www.bobhvac.com/blog/",
+      "description": "Bob Boldt HVAC provides residential and commercial HVAC and indoor air quality services in the greater Eagan, MN area. Bob Boldt HVAC is the trusted HVAC company of Eagan, MN.",
+      "followers": {
+        "facebook": 64,
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/4648324.jpg"
+    },
+    {
+      "title": "MightyServ Blog",
+      "feed_url": "https://cphac.com/",
+      "website_url": "https://mightyservhvac.com/blog/",
+      "description": "Canoga Park Heating & Air Conditioning provides dependable AC and heating services to surrounding CA areas ensuring your home is safe and efficient. Heating and Air Conditioning Blog Articles, References, Resources and Tips to Keep Your Heating and Air Conditioning Systems Running Perfectly.",
+      "followers": {
+        "facebook": 193,
+        "twitter": 131
+      },
+      "image_url": "https://i1.feedspot.com/4647825.jpg?t=1649323782"
+    }
+  ]
+}

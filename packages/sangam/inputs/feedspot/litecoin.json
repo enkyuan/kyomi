@@ -1,0 +1,69 @@
+{
+  "category": "Litecoin",
+  "source_url": "https://rss.feedspot.com/litecoin_rss_feeds",
+  "feeds": [
+    {
+      "title": "NewsBTC \u00bb Litecoin (LTC)",
+      "feed_url": "https://www.newsbtc.com/news/litecoin/feed/",
+      "website_url": "https://www.newsbtc.com/news/litecoin/",
+      "description": "Latest Litecoin (LTC) news, we cover price forecasts and today's updates. NewsBTC is a cryptocurrency news service that covers the latest bitcoin news, technical analysis & price for bitcoin & other altcoins.",
+      "followers": {
+        "facebook": 24500,
+        "twitter": 61900
+      },
+      "image_url": "https://i1.feedspot.com/5320359.jpg?t=1631174524"
+    },
+    {
+      "title": "BTC Ethereum Blog \u00bb Litecoin",
+      "feed_url": "https://www.btcethereum.com/blog/category/litecoin-news/feed/",
+      "website_url": "https://www.btcethereum.com/blog/category/litecoin-news/",
+      "description": "Full cryptocurrency market outlook and real-time monitoring. Blockchain Initial Coin Offering ICO information. Blog about forex, cryptocurrency, and investments.",
+      "followers": {
+        "facebook": 1300,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4802764.jpg?t=1610368482"
+    },
+    {
+      "title": "Litecoin Project Blog",
+      "feed_url": "https://blog.litecoin.org/feed",
+      "website_url": "https://blog.litecoin.org/",
+      "description": "Litecoin Project Blog is an informative page related to Litecoin cryptocurrency. Stay tuned to Litecoin Project Blog to read the latest news, updates, insights, and more on Litecoin.",
+      "followers": {
+        "twitter": 42600
+      },
+      "image_url": "https://i1.feedspot.com/4802636.jpg?t=1670232713"
+    },
+    {
+      "title": "CryptoSlate \u00bb Litecoin (LTC)",
+      "feed_url": "https://cryptoslate.com/news/litecoin/feed/",
+      "website_url": "https://cryptoslate.com/news/litecoin/",
+      "description": "Since 2017, CryptoSlate has been a go-to destination for the fast-moving and nascent digital assets space. With a focus on Bitcoin, Defi, NFTs, and web3, our goal is to provide a holistic overview of the crypto asset market. Litecoin is a peer-to-peer Internet currency that enables instant, near-zero-cost payments to anyone worldwide.",
+      "followers": {
+        "twitter": 55000,
+        "instagram": 102800
+      },
+      "image_url": "https://i1.feedspot.com/5473993.jpg?t=1669882636"
+    },
+    {
+      "title": "Crypto Mining \u00bb Litecoin",
+      "feed_url": "https://cryptomining-blog.com/tag/litecoin/feed/",
+      "website_url": "http://cryptomining-blog.com/tag/litecoin/",
+      "description": "All about BItcoin and Litecoin mining and other alternative crypto currencies, always be up to date with us.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4803021.jpg?t=1610369029"
+    },
+    {
+      "title": "Cryptopolitan \u00bb Litecoin News",
+      "feed_url": "https://www.cryptopolitan.com/news/litcoin-ltc/feed",
+      "website_url": "https://www.cryptopolitan.com/news/litcoin-ltc/",
+      "description": "Litecoin news with all the important updates delivered in a timely manner. Also. you'll find Litecoin price predictions & guides on how to mine Litecoin. Cryptopolitan brings quality news content and unique insights to the ever-growing cryptocurrency community.",
+      "followers": {
+        "facebook": 182000,
+        "twitter": 11100,
+        "instagram": 21800
+      },
+      "image_url": "https://i1.feedspot.com/5320358.jpg?t=1631174161"
+    }
+  ]
+}

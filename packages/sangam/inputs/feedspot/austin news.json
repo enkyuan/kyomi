@@ -1,0 +1,49 @@
+{
+  "category": "Austin News",
+  "source_url": "https://rss.feedspot.com/austin_minnesota_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Austin Daily Herald",
+      "feed_url": "https://www.austindailyherald.com/category/news/feed/",
+      "website_url": "https://www.austindailyherald.com/category/news/",
+      "description": "Austin Minnesota breaking news, weather, obituaries, classifieds, sports, and Austin Packers news from Austin Daily Herald.",
+      "followers": {
+        "facebook": 10400,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5162853.jpg?t=1592467890"
+    },
+    {
+      "title": "City of Austin",
+      "feed_url": "https://www.ci.austin.mn.us/category/news/feed",
+      "website_url": "https://www.ci.austin.mn.us/category/news",
+      "description": "Get the latest local news and regular updates in Austin, Minnesota.",
+      "followers": {
+        "facebook": 7200
+      },
+      "image_url": "https://i1.feedspot.com/5162844.jpg?t=1592467025"
+    },
+    {
+      "title": "AM 1480 KAUS",
+      "feed_url": "https://www.myaustinminnesota.com/category/local-news/feed/",
+      "website_url": "https://www.myaustinminnesota.com/category/local-news/",
+      "description": "AM 1480 KAUS delivers up to date News, Weather, and Sports in Austin, MN.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 432
+      },
+      "image_url": "https://i1.feedspot.com/5162850.jpg?t=1592467355"
+    },
+    {
+      "title": "Southern Minnesota News \u00bb Austin",
+      "feed_url": "https://www.southernminnesotanews.com/tag/austin/feed/",
+      "website_url": "https://www.southernminnesotanews.com/tag/austin/",
+      "description": "Southern Minnesota News is your source for news & events in Greater Mankato & across the region. Keep up with local news in Austin.",
+      "followers": {
+        "facebook": 24900,
+        "twitter": 827
+      },
+      "image_url": "https://i1.feedspot.com/5162852.jpg"
+    }
+  ]
+}

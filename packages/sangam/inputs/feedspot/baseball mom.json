@@ -1,0 +1,45 @@
+{
+  "category": "Baseball Mom",
+  "source_url": "https://rss.feedspot.com/baseball_mom_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mom in the Bleachers Blog",
+      "feed_url": "https://mominthebleachers.com/feed",
+      "website_url": "https://mominthebleachers.com/blog",
+      "description": "I'm Natasha, aka Tash, aka a Mom in the Bleachers. If you're a parent of a child in travel sports then welcome! I'm sharing all our travel baseball adventures, plus tips and tricks I've learned to make the chaos more manageable and fun!",
+      "followers": {
+        "facebook": 826,
+        "instagram": 8000
+      },
+      "image_url": "https://i1.feedspot.com/5404367.jpg?t=1653637829"
+    },
+    {
+      "title": "There's No Place Like Home Plate",
+      "feed_url": "https://www.theresnoplacelikehomeplate.com/feed/",
+      "website_url": "https://www.theresnoplacelikehomeplate.com/",
+      "description": "Hi, I'm Jamie, and like you, I'm a busy Baseball Mom. I know how demanding it can be to juggle kids' sports schedules with work, household responsibilities, and all the other demands of life. This is where I love to help. With over twenty years of project and process management experience, I create and share tools, resources, and tried and true systems to help busy Baseball Moms manage the chaos that is 'that baseball life'.",
+      "followers": {
+        "instagram": 94
+      },
+      "image_url": "https://i1.feedspot.com/5404362.jpg?t=1653637465"
+    },
+    {
+      "title": "Minor League Mom Writes...",
+      "feed_url": "https://minorleaguemom.blogspot.com/feeds/posts/default",
+      "website_url": "https://minorleaguemom.blogspot.com/",
+      "description": "I discuss the humorous quirks of life after menopause, including body changes, long-term marriage, kids and grandkids, workouts, retirement, travel, life as a baseball mom, life as a caregiver, life as an elderly parent, writing, and other oddities.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5404369.jpg?t=1653638456"
+    },
+    {
+      "title": "That Baseball Mom",
+      "feed_url": "https://thatbaseballmom.com/feed/",
+      "description": "That Baseball Mom is a baseball mom website sharing ideas for all baseball moms no matter at what level your child plays! Let's chat baseball!",
+      "followers": {
+        "facebook": 1100,
+        "instagram": 151
+      },
+      "image_url": "https://i1.feedspot.com/5404370.jpg?t=1653638317"
+    }
+  ]
+}

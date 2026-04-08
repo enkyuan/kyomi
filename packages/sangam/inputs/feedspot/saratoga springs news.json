@@ -1,0 +1,28 @@
+{
+  "category": "Saratoga Springs News",
+  "source_url": "https://rss.feedspot.com/saratoga_springs_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Saratoga Springs, NY",
+      "feed_url": "https://www.saratoga-springs.org/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.saratoga-springs.org/",
+      "description": "Get the latest news from Saratoga Springs, NY.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 978
+      },
+      "image_url": "https://i1.feedspot.com/5150967.jpg?t=1626330976"
+    },
+    {
+      "title": "Saratogian \u00bb Local",
+      "feed_url": "https://www.saratogian.com/feed/",
+      "website_url": "https://www.saratogian.com/local-news/",
+      "description": "The Saratogian is newspaper published in Saratoga Springs since 1855, serving all of Saratoga County. Find breaking news from Saratoga Springs, NY and surrounding communities in Saratoga County.",
+      "followers": {
+        "facebook": 20300,
+        "twitter": 17600
+      },
+      "image_url": "https://i1.feedspot.com/5150958.jpg?t=1626330972"
+    }
+  ]
+}

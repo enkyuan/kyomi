@@ -1,0 +1,64 @@
+{
+  "category": "France Art",
+  "source_url": "https://rss.feedspot.com/france_art_rss_feeds",
+  "feeds": [
+    {
+      "title": "Artistikrezo \u00bb Art",
+      "feed_url": "https://www.artistikrezo.com/feed",
+      "website_url": "https://www.artistikrezo.com/",
+      "description": "For 20 years, the Artistik Rezo association has given everyone access to culture in all its diversity. With 150,000 unique visitors per month, Artistik Rezo is one of the main cultural media on the web. The first of its kind in France, the site offers its readers the best of theater, cinema, art, and music outings with reviews, interviews, files, news, artist portraits.",
+      "followers": {
+        "facebook": 45100,
+        "twitter": 9800,
+        "instagram": 12300
+      },
+      "image_url": "https://i1.feedspot.com/5345538.jpg?t=1637564007"
+    },
+    {
+      "title": "Hotels Paris Rive Gauche \u00bb Art and Culture",
+      "feed_url": "https://www.hotels-paris-rive-gauche.com/blog/category/en/art-culture-exhibition-informations-paris/feed/",
+      "website_url": "https://www.hotels-paris-rive-gauche.com/blog/category/en/art-culture-exhibition-informations-paris/",
+      "description": "A Paris newsblog with a sense of humour. Info about arts, restaurants, amazing buildings, and unusual stuff you might otherwise miss.",
+      "followers": {
+        "facebook": 538,
+        "twitter": 134
+      },
+      "image_url": "https://i1.feedspot.com/5345537.jpg?t=1637563231"
+    },
+    {
+      "title": "Impact Art News",
+      "feed_url": "https://artofchange21.com/en/feed/",
+      "website_url": "https://artofchange21.com/en/impact-art-news-en/",
+      "description": "Impact Art News is a monthly French-English bilingual blog and newsletter on contemporary art and the environment. Since April 2018, Impact Art News has selected, questioned and supported artists, exhibitions and projects related to ecology and the Sustainable Development Goals (SDGs).",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 3000,
+        "instagram": 10700
+      },
+      "image_url": "https://i1.feedspot.com/5345535.jpg?t=1637562834"
+    },
+    {
+      "title": "KAZoART Blog",
+      "feed_url": "https://www.riseart.com/rss",
+      "website_url": "https://www.riseart.com/articles",
+      "description": "Everything you've ever wanted to know about art. KAZoART is the online art gallery that allows you to buy directly from the artist's studio. Sourcing the most promising talent from all over Europe, we have expertly curated a fine selection of paintings, sculptures, photographs, drawings, and engravings, all of which are available at your fingertips. Discover our diverse body of works featuring over 20,000 original pieces from 1,000 artists.",
+      "followers": {
+        "facebook": 5,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5345539.jpg?t=1637563720"
+    },
+    {
+      "title": "Artsper Magazine",
+      "feed_url": "https://blog.artsper.com/fr/feed/",
+      "website_url": "https://blog.artsper.com/fr/",
+      "description": "Artsper is a leading online marketplace for contemporary artworks. We have more than 170,000 artworks available, so you're bound to find one that you love! Discover on Artsper's magazine all the latest contemporary art news, artist interviews, and much more.",
+      "followers": {
+        "facebook": 394500,
+        "twitter": 9600,
+        "instagram": 115600
+      },
+      "image_url": "https://i1.feedspot.com/5345533.jpg?t=1637561865"
+    }
+  ]
+}

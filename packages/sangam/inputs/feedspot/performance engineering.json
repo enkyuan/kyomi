@@ -1,0 +1,35 @@
+{
+  "category": "Performance Engineering",
+  "source_url": "https://rss.feedspot.com/performance_engineering_rss_feeds",
+  "feeds": [
+    {
+      "title": "Performance Engineering Blog",
+      "feed_url": "https://akshayd.dev/feed/",
+      "website_url": "https://performanceengineeringin.wordpress.com/all-the-blog-posts/",
+      "description": "Hi, I'm Akshay. This is my Performance Engineering Blog for sharing stuff related to Performance Engineering and other resources. Learn Frequently used Commands, About Proc interfaces, Weekly summaries, and more. I am a Software Engineer with a passion for making software applications & products work faster.",
+      "followers": {
+        "twitter": 552
+      },
+      "image_url": "https://i1.feedspot.com/5451385.jpg?t=1664518389"
+    },
+    {
+      "title": "TEPEN Blog",
+      "feed_url": "https://cepenet.wordpress.com/feed/",
+      "website_url": "https://cepenet.wordpress.com/blog-2/",
+      "description": "Read insightful articles from our engineering team covering Performance, Scalability, Infrastructure, and other technical aspects. LinkedIn Engineering builds the infrastructure necessary for the Platform to grow and connect the world's professionals to economic opportunity.",
+      "followers": {
+        "facebook": 3400000,
+        "twitter": 47100
+      },
+      "image_url": "https://i1.feedspot.com/5451393.jpg?t=1664518334"
+    },
+    {
+      "title": "The Tyreman",
+      "feed_url": "https://www.tyremanmagazine.com/feed/",
+      "website_url": "https://www.tyremanmagazine.com/",
+      "description": "Stay updated with the new developments and announcements from TEPEN through this blog. Read Conference reports, Publications, Snippets from keynote speeches, and more. TEPEN is an international network of world-leading researchers in the field of efficiency and performance engineering.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5451388.jpg?t=1664518282"
+    }
+  ]
+}

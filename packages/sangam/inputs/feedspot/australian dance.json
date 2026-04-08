@@ -1,0 +1,61 @@
+{
+  "category": "Australian Dance",
+  "source_url": "https://rss.feedspot.com/australian_dance_rss_feeds",
+  "feeds": [
+    {
+      "title": "Dance Life Australia",
+      "feed_url": "https://www.dancelife.com.au/feed/",
+      "website_url": "https://www.dancelife.com.au/",
+      "description": "Covers news, interviews, auditions, show reviews. Dance Life Australia is Australia's Leading Online Dance Resource, that's now the number one destination for Australian dancers and performers.",
+      "followers": {
+        "facebook": 12200,
+        "twitter": 417,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4917482.jpg?t=1620397148"
+    },
+    {
+      "title": "Energetiks Blog",
+      "feed_url": "https://www.energetiksblog.com.au/blog?format=RSS",
+      "website_url": "https://www.energetiksblog.com.au/",
+      "description": "This blog is a place for inspiration, education and empowerment. Celebrating all aspects of dance and fitness through sharing knowledge, inspiration, tips, news and interviews.",
+      "followers": {
+        "facebook": 62600,
+        "twitter": 403,
+        "instagram": 49900
+      },
+      "image_url": "https://i1.feedspot.com/4507679.jpg?t=1603187347"
+    },
+    {
+      "title": "FORM Dance Projects Blog",
+      "feed_url": "https://www.form.org.au/feed/",
+      "website_url": "https://www.form.org.au/blog/",
+      "description": "FORM Dance Projects is a unique, innovative cultural service provider that aims to foster and develop contemporary dance culture in Western Sydney. It is delighted to introduce Vicki Van Hout as their resident blogger for 2016. Over the coming year Vicki will be blogging and tweeting for FORM about all things dance.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 539,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4508687.jpg?t=1603187701"
+    },
+    {
+      "title": "Sydney Dance Company",
+      "feed_url": "https://www.sydneydancecompany.com/feed/",
+      "website_url": "http://www.sydneydancecompany.com/about-us/news/",
+      "description": "Sydney Dance Company is an australian contemporary dance classes. Sydney Dance Company has a broad community beyond the practice and performance of their lead dancers.",
+      "followers": {
+        "facebook": 85600,
+        "twitter": 12800
+      },
+      "image_url": "https://i1.feedspot.com/4917592.jpg?t=1620817599"
+    },
+    {
+      "title": "QuickSteps Blog",
+      "feed_url": "https://www.quicksteps.com.au/feed/",
+      "website_url": "https://www.quicksteps.com.au/blog/",
+      "description": "Over the years Michelle has witnessed first hand the happiness that dancing can bring into peoples lives. It can improve your health and fitness, stress levels, social life, self confidence, relationships all while giving you an amazing sense of satisfaction and achievement. The QuickSteps Team are here to help you learn to dance.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7282772.jpg?t=1711450647"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "category": "UK Universities",
+  "source_url": "https://rss.feedspot.com/uk_universities_rss_feeds",
+  "feeds": [
+    {
+      "title": "Imperial College London",
+      "feed_url": "https://www.imperial.ac.uk/NewsApp/docs/feed/college/news",
+      "website_url": "https://www.imperial.ac.uk/news/",
+      "description": "The latest from Imperial College London. Consistently rated amongst the world's best universities, Imperial College London is a science-based institution with a reputation for excellence in teaching and research.",
+      "followers": {
+        "facebook": 231400,
+        "twitter": 181700
+      },
+      "image_url": "https://i1.feedspot.com/4959562.jpg?t=1621864644"
+    },
+    {
+      "title": "Loughborough University",
+      "feed_url": "https://www.lboro.ac.uk/news-events/rss/index.xml",
+      "website_url": "https://www.lboro.ac.uk/news-events/",
+      "description": "The latest news from Loughborough University, a UK top 10 University with an unbeatable student experience and excellence in teaching, research and sport.",
+      "followers": {
+        "facebook": 87100,
+        "twitter": 58700,
+        "instagram": 84700
+      },
+      "image_url": "https://i1.feedspot.com/4959579.jpg?t=1621864650"
+    },
+    {
+      "title": "University Of Plymouth News",
+      "feed_url": "https://www.plymouth.ac.uk/feeds/news",
+      "website_url": "https://www.plymouth.ac.uk/news",
+      "description": "Get the latest news, views and events from around the University of Plymouth, press office information for the media. We are a world-leading modern, contemporary university and have fostered a dynamic and agile culture where great decisions are made at all levels each day. We have exceptional levels of student satisfaction, undertake world-class research with impact and our enterprising approach along with a commitment to raising aspirations and innovation is making a real and sustainable difference to our students, staff, partners and society on a global stage.",
+      "followers": {
+        "facebook": 74400,
+        "twitter": 65800,
+        "instagram": 45000
+      },
+      "image_url": "https://i1.feedspot.com/4959698.jpg?t=1660279853"
+    },
+    {
+      "title": "Keele University Blog",
+      "feed_url": "https://blogs.keele.ac.uk/feed",
+      "website_url": "https://blogs.keele.ac.uk/",
+      "description": "Latest Blogs and News from Keele University. Located in the Staffordshire countryside and just five miles from Stoke-on-Trent, Keele is world-renowned for its breadth of teaching and research that tackles the world's most urgent problems.",
+      "followers": {
+        "facebook": 68500,
+        "twitter": 43500
+      },
+      "image_url": "https://i1.feedspot.com/4959599.jpg?t=1660223748"
+    },
+    {
+      "title": "Ulster University",
+      "feed_url": "https://www.ulster.ac.uk/news/rss",
+      "website_url": "https://www.ulster.ac.uk/news",
+      "description": "Official Ulster University News for everything you need to know about Undergraduate and Postgraduate study at Ulster Uni",
+      "followers": {
+        "facebook": 35700,
+        "twitter": 4700,
+        "instagram": 41900
+      },
+      "image_url": "https://i1.feedspot.com/4959610.jpg?t=1621864676"
+    },
+    {
+      "title": "UCL",
+      "feed_url": "https://www.ucl.ac.uk/news/rss",
+      "website_url": "https://www.ucl.ac.uk/news/",
+      "description": "UCL is London's leading multidisciplinary university, with more than 13,000 staff and 38,000 students from 150 different countries. Founded in 1826 in the heart of London, UCL was the first university in England to welcome students of any religion and the first to welcome women on equal terms with men",
+      "followers": {
+        "facebook": 288400,
+        "twitter": 141700,
+        "instagram": 275800
+      },
+      "image_url": "https://i1.feedspot.com/4959552.jpg?t=1621864632"
+    },
+    {
+      "title": "Kings College London",
+      "feed_url": "https://www.kcl.ac.uk/news/feed",
+      "website_url": "https://www.kcl.ac.uk/news/kings-news",
+      "description": "Latest news from Kings College London. The official page of King's College London, a multi-faculty research-led institution and one of the top 10 UK universities in the world.",
+      "followers": {
+        "facebook": 395200,
+        "twitter": 153700,
+        "instagram": 146400
+      },
+      "image_url": "https://i1.feedspot.com/4959569.jpg?t=1621864638"
+    },
+    {
+      "title": "University of South Wales",
+      "feed_url": "https://www.southwales.ac.uk/news/",
+      "website_url": "https://www.southwales.ac.uk/news/",
+      "description": "We're a UK University, with campuses in Cardiff, Newport, and Pontypridd. Check out the stories section to get insights about the University of South Wales and student inspiration.",
+      "followers": {
+        "facebook": 94800,
+        "twitter": 38800
+      },
+      "image_url": "https://i1.feedspot.com/4959706.jpg?t=1621864681"
+    },
+    {
+      "title": "University of West London (UWL)",
+      "feed_url": "https://www.uwl.ac.uk/news.xml/feed",
+      "website_url": "https://www.uwl.ac.uk/news",
+      "description": "Latest News from University of West London (UWL)",
+      "followers": {
+        "facebook": 45700,
+        "twitter": 13300,
+        "instagram": 31200
+      },
+      "image_url": "https://i1.feedspot.com/4959710.jpg?t=1621864689"
+    }
+  ]
+}

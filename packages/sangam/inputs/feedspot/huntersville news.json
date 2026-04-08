@@ -1,0 +1,22 @@
+{
+  "category": "Huntersville News",
+  "source_url": "https://rss.feedspot.com/huntersville_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Lake Norman Publications",
+      "feed_url": "https://www.lakenormanpublications.com/category/news/feed",
+      "website_url": "https://www.lakenormanpublications.com/category/news/",
+      "description": "We're committed to covering the news, events and people that make our communities great.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5157327.jpg"
+    },
+    {
+      "title": "Patch \u00bb Huntersville",
+      "feed_url": "https://patch.com/feeds/aol/north-carolina/huntersville",
+      "website_url": "http://",
+      "description": "The best Huntersville breaking news, stories, and events from the Patch network of local news sites.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5157326.jpg"
+    }
+  ]
+}

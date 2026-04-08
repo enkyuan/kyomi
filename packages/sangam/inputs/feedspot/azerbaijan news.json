@@ -1,0 +1,103 @@
+{
+  "category": "Azerbaijan News",
+  "source_url": "https://rss.feedspot.com/azerbaijan_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "AzerNews",
+      "feed_url": "https://www.azernews.az/feed.php",
+      "website_url": "https://www.azernews.az/",
+      "description": "News from Azerbaijan, business, energy, analysis, and more. AzerNEWS weekly, Azerbaijan's first English language newspaper published since 1997, is in the vanguard of the country's print media market.",
+      "followers": {
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5344416.jpg?t=1637645406"
+    },
+    {
+      "title": "Day.az",
+      "feed_url": "https://news.day.az/rss/",
+      "website_url": "https://www.day.az/",
+      "description": "News and weather of Azerbaijan, Armenia and Georgia.",
+      "followers": {
+        "facebook": 209600,
+        "twitter": 5200,
+        "instagram": 22700
+      },
+      "image_url": "https://i1.feedspot.com/5344639.jpg?t=1637647822"
+    },
+    {
+      "title": "Sia.az",
+      "feed_url": "https://sia.az/feed.php",
+      "website_url": "https://sia.az/",
+      "description": "The Voice Information Agency (SIA), which is part of one of Azerbaijan's independent, private, and internationally recognized news agencies covers news on science, education, culture, health, sports, environment, etc.",
+      "followers": {
+        "facebook": 457000
+      },
+      "image_url": "https://i1.feedspot.com/5344637.jpg?t=1637647476"
+    },
+    {
+      "title": "Azadliq",
+      "feed_url": "https://www.azadliq.info/feed/",
+      "website_url": "https://www.azadliq.info/",
+      "description": "Azadlig Newspaper is the first independent newspaper in Azerbaijan and is committed to the idea and principles of a free press. The newspaper provides Azerbaijani readers and viewers with alternative opinions and true news.",
+      "followers": {
+        "facebook": 405500,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5344418.jpg?t=1637645821"
+    },
+    {
+      "title": "Xalq q\u0259zeti",
+      "feed_url": "https://xalqqazeti.az/az",
+      "website_url": "https://xalqqazeti.az/az",
+      "description": "Xalqqazeti is a daily socio-political newspaper. Topics covered are education, sports, society, culture, health, economy, politics, and more.",
+      "followers": {
+        "twitter": 166
+      },
+      "image_url": "https://i1.feedspot.com/5344455.jpg?t=1637649123"
+    },
+    {
+      "title": "Musavat.com",
+      "feed_url": "https://musavat.com/rss.xml",
+      "website_url": "https://musavat.com/ru/",
+      "description": "Musavat.com is an Internet version of an online socio-political newspaper.",
+      "followers": {
+        "facebook": 120900,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5344451.jpg?t=1637648661"
+    },
+    {
+      "title": "Oxu.az",
+      "feed_url": "https://oxu.az/feed",
+      "website_url": "https://oxu.az/",
+      "description": "The most important news of Azerbaijan and the world. Our purpose is to present the most important and interesting news in the world and in the country to a wide audience.",
+      "followers": {
+        "facebook": 208800,
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/5344452.jpg?t=1637648325"
+    },
+    {
+      "title": "Publika.az",
+      "feed_url": "https://publika.az/rss/",
+      "website_url": "https://publika.az/",
+      "description": "Publika.az was launched on March 1, 2012. The site acts as a news portal. In addition to news, it includes extensive research, analysis, interviews, as well as projects of interest to the reader.",
+      "followers": {
+        "facebook": 73000
+      },
+      "image_url": "https://i1.feedspot.com/5344638.jpg?t=1637648123"
+    },
+    {
+      "title": "AZERTAC News Agency",
+      "feed_url": "https://azertag.az/rss",
+      "website_url": "https://azertag.az/",
+      "description": "Bringing you all the important news and development from Azerbaijan and the world. Azerbaijan News Agency helps you stay updated on Politics, Economy, Culture, Science & Education, and more.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 19100,
+        "instagram": 94400
+      },
+      "image_url": "https://i1.feedspot.com/4272173.jpg?t=1637644628"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "category": "Richmond News",
+  "source_url": "https://rss.feedspot.com/richmond_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "WRIC ABC 8News",
+      "feed_url": "https://www.wric.com/feed/",
+      "website_url": "https://www.wric.com/",
+      "description": "ABC 8News is committed to bringing you local news, weather updates, sports, community news, traffic across Metro Richmond and Central Virginia.",
+      "followers": {
+        "facebook": 340300,
+        "twitter": 108100,
+        "instagram": 38200
+      },
+      "image_url": "https://i1.feedspot.com/5135193.jpg?t=1586190293"
+    },
+    {
+      "title": "WTVR CBS 6",
+      "feed_url": "https://www.wtvr.com/news.rss",
+      "website_url": "https://www.wtvr.com/",
+      "description": "Get the latest breaking news, weather, sports and traffic coverage from the Richmond metro area and across Virginia from WTVR CBS 6 News.",
+      "followers": {
+        "facebook": 666000,
+        "twitter": 141000,
+        "instagram": 98500
+      },
+      "image_url": "https://i1.feedspot.com/5135200.jpg?t=1586191153"
+    },
+    {
+      "title": "Richmond Times-Dispatch",
+      "feed_url": "https://richmond.com/search/?f=rss&t=article&c=news&l=50&s=start_time&sd=desc",
+      "website_url": "https://richmond.com/",
+      "description": "The Richmond Times-Dispatch is the trusted source for local news in Richmond and Central Virginia. Get local news, crime reports and Virginia politics including General Assembly.",
+      "followers": {
+        "twitter": 111300,
+        "instagram": 34900
+      },
+      "image_url": "https://i1.feedspot.com/5135206.jpg?t=1586189564"
+    },
+    {
+      "title": "Style Weekly",
+      "feed_url": "https://www.styleweekly.com/feed/",
+      "website_url": "https://www.styleweekly.com/",
+      "description": "For more than 35 years, Style Weekly has been a significant part of the Greater Richmond community through its journalism, community involvement and business presence. It is your alternative for RVA news, arts, events, restaurant reviews and classifieds.",
+      "followers": {
+        "facebook": 40800,
+        "twitter": 65000,
+        "instagram": 36700
+      },
+      "image_url": "https://i1.feedspot.com/4659146.jpg?t=1586185256"
+    },
+    {
+      "title": "Richmond BizSense",
+      "feed_url": "https://richmondbizsense.com/feed/",
+      "website_url": "https://richmondbizsense.com/",
+      "description": "Richmond BizSense is the River City's premier source of business news and information. They publish four to six original news stories each weekday and provide regular roundups of local foreclosures, business licenses, building permits, legal disputes and more.",
+      "followers": {
+        "facebook": 25500,
+        "twitter": 9800
+      },
+      "image_url": "https://i1.feedspot.com/5135203.jpg?t=1586188440"
+    },
+    {
+      "title": "Small Richmond",
+      "feed_url": "https://smallrichmond.com/rss.xml",
+      "website_url": "https://smallrichmond.com/",
+      "description": "Small Richmond is a simple collection of independent news sites from Richmond, Virginia. Follow this site to stay up to date with latest news in city Richmond.",
+      "followers": {
+        "facebook": 685,
+        "twitter": 520
+      },
+      "image_url": "https://i1.feedspot.com/4926454.jpg?t=1620980573"
+    }
+  ]
+}

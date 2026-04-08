@@ -1,0 +1,48 @@
+{
+  "category": "UK Rehab",
+  "source_url": "https://rss.feedspot.com/uk_rehab_rss_feeds",
+  "feeds": [
+    {
+      "title": "Castle Craig",
+      "feed_url": "https://www.castlecraig.co.uk/feed/",
+      "website_url": "https://www.castlecraig.co.uk/addiction-resources/",
+      "description": "Castle Craig is a centre of excellence for the treatment of alcohol, drug and other addictions in the United Kingdom and Europe. A leading residential rehab clinic, it provides medical detox from alcohol and drugs, specialist addiction therapies & mental health treatment in a world class rehab centre.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4920583.jpg?t=1620720884"
+    },
+    {
+      "title": "Rehab 4 Addiction Blog | Drug Rehab & Alcohol Rehab",
+      "feed_url": "https://www.rehab4addiction.co.uk/blog/feed",
+      "website_url": "https://www.rehab4addiction.co.uk/blog",
+      "description": "Rehab 4 Addiction is an addiction advice service offering Drug Rehab & Alcohol Rehab. Follow us to keep up with the latest drug and alcohol rehab news.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4908697.jpg?t=1614077243"
+    },
+    {
+      "title": "UK Addiction Treatment Centres",
+      "feed_url": "https://www.ukat.co.uk/blog/feed/",
+      "website_url": "https://www.ukat.co.uk/blog/",
+      "description": "UKAT have a long history of helping people get well. We care about the people we help and have had a great success in treating addictions and other related conditions. Find out more about addiction & treatment options here.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 647
+      },
+      "image_url": "https://i1.feedspot.com/4908500.jpg?t=1614077233"
+    },
+    {
+      "title": "Narconon UK | Effective path for Rehabilitation",
+      "feed_url": "https://www.narcononuk.org.uk/blog/rss.xml?format=xml",
+      "website_url": "https://www.narcononuk.org.uk/blog/",
+      "description": "Narconon's mission is to provide an effective path for rehabilitation from drug abuse and to assist society in preventing the scourge of drugs worldwide.",
+      "followers": {
+        "facebook": 9700
+      },
+      "image_url": "https://i1.feedspot.com/4908517.jpg?t=1620720888"
+    }
+  ]
+}

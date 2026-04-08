@@ -1,0 +1,132 @@
+{
+  "category": "Pasta",
+  "source_url": "https://rss.feedspot.com/pasta_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Pasta Project",
+      "feed_url": "https://www.the-pasta-project.com/feed/",
+      "website_url": "https://www.the-pasta-project.com/",
+      "description": "A food blog about the 360 pasta types available here in Italy. Recipes and articles for pasta lovers about the world's favourite food!.",
+      "followers": {
+        "facebook": 28200
+      },
+      "image_url": "https://i1.feedspot.com/4964100.jpg?t=1615213056"
+    },
+    {
+      "title": "Copykat.com \u00bb Pasta",
+      "feed_url": "https://copykat.com/category/pasta/feed/",
+      "website_url": "https://copykat.com/category/pasta/",
+      "description": "You have loved it in the restaurant, now make it at home. CopyKat.com recreates your favorite pasta recipes so you can make them at home.",
+      "followers": {
+        "facebook": 204300,
+        "twitter": 70900,
+        "instagram": 16300
+      },
+      "image_url": "https://i1.feedspot.com/4523928.jpg?t=1606741931"
+    },
+    {
+      "title": "Share the Pasta Blog",
+      "feed_url": "https://sharethepasta.org/feed/",
+      "website_url": "https://sharethepasta.org/blog/",
+      "description": "Share The Pasta is brought to you by The National Pasta Association and aims to celebrate pasta and all its benefits. Whether you want to expand your cooking skills or prove to everyone you're the ultimate pasta aficionado, the website has every recipe you want to try.",
+      "followers": {
+        "facebook": 439700,
+        "twitter": 296300,
+        "instagram": 12100
+      },
+      "image_url": "https://i1.feedspot.com/5254437.jpg?t=1615213004"
+    },
+    {
+      "title": "Saveur \u00bb Pasta Course",
+      "feed_url": "https://www.saveur.com/feed/",
+      "website_url": "https://www.saveur.com/category/pasta-course/",
+      "description": "Pasta recipes for cooking pasta salad, pasta dishes, chicken pasta, homemade pasta and easy pasta recipes from Saveur Magazine.",
+      "followers": {
+        "facebook": 538200,
+        "twitter": 642300,
+        "instagram": 802700
+      },
+      "image_url": "https://i1.feedspot.com/4523915.jpg?t=1608213500"
+    },
+    {
+      "title": "Stefan's Gourmet \u00bb fresh pasta",
+      "feed_url": "https://stefangourmet.com/tag/fresh-pasta/feed/",
+      "website_url": "https://stefangourmet.com/tag/fresh-pasta/",
+      "description": "Posts about fresh pasta written by StefanGourmet.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 100
+      },
+      "image_url": "https://i1.feedspot.com/4523009.jpg"
+    },
+    {
+      "title": "Cookie and Kate \u00bb Pasta",
+      "feed_url": "https://cookieandkate.com/category/food-recipes/pasta/feed/",
+      "website_url": "https://cookieandkate.com/category/food-recipes/pasta/",
+      "description": "Explore healthy recipes containing pasta by Kate Taylor. All recipes are vegetarian.",
+      "followers": {
+        "facebook": 132900,
+        "twitter": 32100,
+        "instagram": 469300
+      },
+      "image_url": "https://i1.feedspot.com/4522991.jpg?t=1606741956"
+    },
+    {
+      "title": "Pasta Grammar",
+      "feed_url": "https://www.pastagrammar.com/blog-feed.xml",
+      "website_url": "https://www.pastagrammar.com/",
+      "description": "Authentic Italian food recipes where Eva tries American 'pizza,' and Harper learns the intricacies of authentic Italian pasta. Eva & Harper is an Italian and American couple passionate about sharing their food & culture with the world.",
+      "followers": {
+        "facebook": 14400,
+        "twitter": 1300,
+        "instagram": 36900
+      },
+      "image_url": "https://i1.feedspot.com/5313280.jpg?t=1629292300"
+    },
+    {
+      "title": "The Guardian \u00bb Pasta",
+      "feed_url": "https://www.theguardian.com/food/pasta/rss",
+      "website_url": "https://www.theguardian.com/food/pasta",
+      "description": "Get all the latest pasta news, tips and recipes from theguardian.com, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4523901.jpg?t=1606741935"
+    },
+    {
+      "title": "The Pasta Shoppe Blog",
+      "feed_url": "https://pastashoppe.com/category/blog/feed/",
+      "website_url": "https://pastashoppe.com/category/blog/",
+      "description": "Blogs on delicious pasta recipes and fun pasta ideas.",
+      "followers": {
+        "twitter": 793
+      },
+      "image_url": "https://i1.feedspot.com/4523888.jpg?t=1606741948"
+    },
+    {
+      "title": "The Rose Table \u00bb Pasta",
+      "feed_url": "https://therosetable.com/category/cooking/pasta/feed/",
+      "website_url": "https://therosetable.com/category/cooking/pasta/",
+      "description": "Posts about Pasta written by Katie-Rose Watson. The Rose Table is a food, garden, & travel website dedicated to savoring life's pleasures. Follow if you love food, flowers, and entertaining!",
+      "followers": {
+        "facebook": 219000,
+        "twitter": 1200,
+        "instagram": 11900
+      },
+      "image_url": "https://i1.feedspot.com/5334219.jpg?t=1634794786"
+    },
+    {
+      "title": "Love, Pasta, and a Tool Belt",
+      "feed_url": "https://lovepastatoolbelt.com/category/pasta-2/feed/",
+      "website_url": "https://lovepastatoolbelt.com/category/pasta-2/",
+      "description": "Sharing delicious pasta recipes.",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 2500,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4523039.jpg?t=1615267861"
+    }
+  ]
+}

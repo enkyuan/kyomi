@@ -1,0 +1,74 @@
+{
+  "category": "Flickr",
+  "source_url": "https://rss.feedspot.com/flickr_rss_feeds",
+  "feeds": [
+    {
+      "title": "Flickr Blog",
+      "feed_url": "https://blog.flickr.net/feed/",
+      "website_url": "https://blog.flickr.net/en",
+      "description": "Welcome to the companion blog for Flickr, the home for all your photos. Flickr is the best site on the web for organizing, sharing and storing your photos. Follow to get updates.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1100000,
+        "instagram": 102800
+      },
+      "image_url": "https://i1.feedspot.com/5032838.jpg?t=1622697371"
+    },
+    {
+      "title": "TechCrunch \u00bb Flickr",
+      "feed_url": "https://techcrunch.com/tag/flickr/feed/",
+      "website_url": "https://techcrunch.com/tag/flickr/",
+      "description": "TechCrunch is dedicated to obsessively profiling startups, reviewing gadgets and internet products, and breaking tech news. Follow and never miss an update about Flickr from TechCrunch.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/5057247.jpg?t=1622697383"
+    },
+    {
+      "title": "Interdependent Thoughts \u00bb Flickr",
+      "feed_url": "https://www.zylstra.org/blog/tag/flickr/feed/",
+      "website_url": "https://www.zylstra.org/blog/tag/flickr/",
+      "description": "Interdependent Thoughts is a blog about how our digital and networked world changes the way we work, learn, decide and organize. It explores the tools and strategies that help us navigate the networked world. Follow for information and content about Flickr by Ton Zijlstra.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5057392.jpg?t=1622697388"
+    },
+    {
+      "title": "Engadget \u00bb Flickr",
+      "feed_url": "https://www.engadget.com/tag/flickr/rss.xml",
+      "website_url": "https://www.engadget.com/tag/flickr/",
+      "description": "Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics. Subscribe to get the latest coverage about Flickr at Engadget.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 2300000,
+        "instagram": 367700
+      },
+      "image_url": "https://i1.feedspot.com/5057257.jpg?t=1622697392"
+    },
+    {
+      "title": "PetaPixel \u00bb Flickr",
+      "feed_url": "https://petapixel.com/tag/flickr/feed/",
+      "website_url": "https://petapixel.com/tag/flickr/",
+      "description": "The coolest blog on the Internet for photography enthusiasts containing photo and camera news, reviews, and inspiration. Follow the blog and get updates about Flickr from PetaPixel directly to your mailbox.",
+      "followers": {
+        "facebook": 491500,
+        "twitter": 998200
+      },
+      "image_url": "https://i1.feedspot.com/5057253.jpg?t=1622697375"
+    },
+    {
+      "title": "DIY Photography \u00bb Flickr",
+      "feed_url": "https://www.diyphotography.net/tag/flickr/feed/",
+      "website_url": "https://www.diyphotography.net/tag/flickr/",
+      "description": "DIY Photography features some of the best and most inspiring photography found worldwide, industry news, exciting behind the scenes footage, gear reviews, and the best photography tutorials to be found on the web. Subscribe to get updates about Flickr from DIY Photography.",
+      "followers": {
+        "twitter": 241000,
+        "instagram": 83800
+      },
+      "image_url": "https://i1.feedspot.com/5057238.jpg"
+    }
+  ]
+}

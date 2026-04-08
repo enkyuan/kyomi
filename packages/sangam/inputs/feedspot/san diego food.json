@@ -1,0 +1,109 @@
+{
+  "category": "San Diego Food",
+  "source_url": "https://rss.feedspot.com/san_diego_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Eater San Diego",
+      "feed_url": "https://sandiego.eater.com/rss/index.xml",
+      "website_url": "https://sandiego.eater.com/",
+      "description": "The San Diego Restaurant, Bar, and Nightlife Blog. Food news and dining guides for San Diego.",
+      "followers": {
+        "facebook": 48600,
+        "twitter": 14300,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/4828950.jpg?t=1610972685"
+    },
+    {
+      "title": "Kirbie's Cravings",
+      "feed_url": "https://kirbiecravings.com/feed/",
+      "website_url": "https://kirbiecravings.com/",
+      "description": "Kirbie's Cravings is a food blog based in San Diego sharing recipes (ranging from healthy meals to easy desserts) and dining out experiences (in San Diego and from our travels). It chronicles the food cravings of Kirbie and her supportive husband, Mr. K.",
+      "followers": {
+        "facebook": 25800,
+        "twitter": 2600,
+        "instagram": 54200
+      },
+      "image_url": "https://i1.feedspot.com/4872607.jpg?t=1612784096"
+    },
+    {
+      "title": "The Joy of Food Blog",
+      "feed_url": "https://thejoyoffood.life/feed/",
+      "website_url": "https://thejoyoffood.life/",
+      "description": "The Joy of Food is a food blog that celebrates eating well, traveling often, and living la dolce vita. Get reviews and photos that help to highlight wonderful (or not) food experiences from around the world.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5291054.jpg?t=1623133341"
+    },
+    {
+      "title": "San Diego Food",
+      "feed_url": "https://www.sandiegofood.net/feed",
+      "website_url": "https://www.sandiegofood.net/",
+      "description": "San Diego's best food and restaurant blog. It was born as the creation of 2 cousins (Michael & Darren), Michael's wife (Jorgina), and a community of foodies searching for the best food San Diego has to offer. They explore the dining scene one bite at a time.",
+      "followers": {
+        "facebook": 616,
+        "twitter": 3400,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4828156.jpg?t=1610973165"
+    },
+    {
+      "title": "San Diego Foodstuff",
+      "feed_url": "http://www.sandiegofoodstuff.com/feeds/posts/default",
+      "website_url": "http://www.sandiegofoodstuff.com/",
+      "description": "To Market, To Market... With San Diego Foodstuff is San Diego food writer Caron Golden's forum for discussing great food in San Diego and beyond -- from ethnic markets, artisan bakeries, and specialty gourmet shops to farmers markets, specialty producers, and more. Okay, restaurants, too!",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/1822165.jpg?t=1610973329"
+    },
+    {
+      "title": "This Tasty Life",
+      "feed_url": "http://food.theplainjane.com/feed/",
+      "website_url": "http://food.theplainjane.com/",
+      "description": "San Diego food blog covering restaurant reviews, recipes, travel and more. Mary has a journalism degree and wanted a fun way to express herself and got into food blogging with her friend, Alyssa.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 1400,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/3802344.jpg?t=1610973154"
+    },
+    {
+      "title": "Bloody Mary Obsessed Blog",
+      "feed_url": "https://www.bloodymaryobsessed.com/blog?format=RSS",
+      "website_url": "https://www.bloodymaryobsessed.com/blog/",
+      "description": "Follow me on my quest for the best brunch & bloody mary! Reviews, recipes and rankings of the best in San Diego and beyond!",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 126,
+        "instagram": 6200
+      },
+      "image_url": "https://i1.feedspot.com/5048543.jpg?t=1612784123"
+    },
+    {
+      "title": "Classic San Diego",
+      "feed_url": "https://classicsandiego.com/feed/",
+      "website_url": "https://classicsandiego.com/",
+      "description": "Official website for 'Classic San Diego,' a book about the history of San Diego and Tijuana's classic restaurants, bars and hotels.",
+      "followers": {
+        "facebook": 948,
+        "twitter": 26,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4959401.jpg?t=1612784113"
+    },
+    {
+      "title": "LLCPedia Blog",
+      "feed_url": "https://llcpedia.com/feed/",
+      "website_url": "https://llcpedia.com/",
+      "description": "We are Mike and Sherry and we're located in San Diego (Pacific Beach, to be more precise). We are avid consumers and producers of food and beverages. This blog gives us a place to share our culinary adventures with family, friends and anyone else who stops by.",
+      "followers": {
+        "twitter": 142
+      },
+      "image_url": "https://i1.feedspot.com/3822422.jpg"
+    }
+  ]
+}

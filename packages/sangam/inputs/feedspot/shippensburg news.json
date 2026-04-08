@@ -1,0 +1,17 @@
+{
+  "category": "Shippensburg News",
+  "source_url": "https://rss.feedspot.com/shippensburg_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Shippensburg News-Chronicle",
+      "feed_url": "https://www.shipnc.com/search/?f=rss&t=article&c=news/local&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.shipnc.com/news/local/",
+      "description": "The Shippensburg News-Chronicle provides important news on local government, your community, sports, and events!",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 112
+      },
+      "image_url": "https://i1.feedspot.com/5173296.jpg?t=1595420542"
+    }
+  ]
+}

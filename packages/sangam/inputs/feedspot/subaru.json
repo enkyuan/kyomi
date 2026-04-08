@@ -1,0 +1,53 @@
+{
+  "category": "Subaru",
+  "source_url": "https://rss.feedspot.com/subaru_rss_feeds",
+  "feeds": [
+    {
+      "title": "Subaru",
+      "feed_url": "https://media.subaru.com/rss.do",
+      "website_url": "https://media.subaru.com/homepage.do",
+      "description": "The latest information about Subaru of America, Inc. and its products, press releases, corporate news, motorsports, industry awards, and more.",
+      "followers": {
+        "facebook": 2000000,
+        "twitter": 6500,
+        "instagram": 845200
+      },
+      "image_url": "https://i1.feedspot.com/4917459.jpg?t=1620395308"
+    },
+    {
+      "title": "Subaru Canada",
+      "feed_url": "https://www.subaru.ca/Content/7907/media/en-ca/rss/subarunewsfeed.xml",
+      "website_url": "https://www.subaru.ca/WebPage.aspx?WebSiteID=282&WebPageID=4781",
+      "description": "Get updates about Subaru news, car launch, reviews, photos, videos and more from Subaru Canada.",
+      "followers": {
+        "facebook": 90700,
+        "twitter": 19400,
+        "instagram": 71300
+      },
+      "image_url": "https://i1.feedspot.com/4917473.jpg?t=1620395321"
+    },
+    {
+      "title": "Dan Perkins Subaru",
+      "feed_url": "https://www.danperkinssubaru.com/blog/rss/index.xml",
+      "website_url": "https://www.danperkinssubaru.com/blog/index.htm",
+      "description": "Dan Perkins Subaru in Milford, CT offers new Subaru cars, car loans, and leasing, service and auto body repair shops. Get Subaru car information, reviews, new launches, photos, features and more from Dan Perkins Subaru.",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 681
+      },
+      "image_url": "https://i1.feedspot.com/4917587.jpg?t=1620395326"
+    },
+    {
+      "title": "Autoblog \u00bb Subaru News",
+      "feed_url": "https://www.autoblog.com/category/subaru/rss.xml",
+      "website_url": "https://www.autoblog.com/subaru/",
+      "description": "Autoblog brings you car news; expert reviews of cars, trucks, crossovers, and SUVs; and pictures and video. Get Subaru news, press releases and expert reviews along with detailed photos, spy shots and road tests of new Subaru vehicles.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 449300,
+        "instagram": 165900
+      },
+      "image_url": "https://i1.feedspot.com/4917464.jpg?t=1620395312"
+    }
+  ]
+}

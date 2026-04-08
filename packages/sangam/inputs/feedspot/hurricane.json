@@ -1,0 +1,103 @@
+{
+  "category": "Hurricane",
+  "source_url": "https://rss.feedspot.com/hurricane_rss_feeds",
+  "feeds": [
+    {
+      "title": "Hurricane Harbor",
+      "feed_url": "http://hurricaneharbor.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://hurricaneharbor.blogspot.com/",
+      "description": "A writer and a tropical muse. A funky Lubavitcher who enjoys watching the weather, hurricanes, listening to music while enjoying life with a sense of humor and trying to make sense of it all! Get more information by following our feed.",
+      "followers": {
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/3983999.jpg?t=1610713209"
+    },
+    {
+      "title": "Storm Walsh",
+      "feed_url": "https://stormw.wordpress.com/feed/",
+      "website_url": "https://stormw.wordpress.com/",
+      "description": "Expert in Hurricane analysis and severe weather forecasts. Currently serving the central U.S. from Tornado alley, eastward to the Eastern Seaboard, and the Gulf Coast States. Find out more about hurricane by following our feed.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4821818.jpg?t=1610713971"
+    },
+    {
+      "title": "MyFoxHurricane.com Blog",
+      "feed_url": "https://blog.myfoxhurricane.com/feed/",
+      "website_url": "https://blog.myfoxhurricane.com/",
+      "description": "Everything you need to monitor the tropics in one place. Hurricane tracking, tropical models, and more storm coverage. Includes exclusive satellite and radar coverage of Florida, the Gulf of Mexico, and the Caribbean. Follow this blog for daily updates.",
+      "followers": {
+        "facebook": 46400,
+        "twitter": 7900
+      },
+      "image_url": "https://i1.feedspot.com/5047894.jpg?t=1622553561"
+    },
+    {
+      "title": "Storm Highway",
+      "feed_url": "https://stormhighway.com/index.htm",
+      "website_url": "https://stormhighway.com/blog/",
+      "description": "Storm Highway covers extreme weather year-round in the Midwest, Great Plains and beyond. I focus primarily on the storm hazard during the winter months and the midwestern severe weather threat throughout the year. Get more information about storm chasing by following this feed.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5042330.jpg?t=1622526701"
+    },
+    {
+      "title": "CIMSS Satellite Blog \u00bb Tropical Hurricanes",
+      "feed_url": "https://cimss.ssec.wisc.edu/satellite-blog/archives/category/tropical-cyclones/feed",
+      "website_url": "https://cimss.ssec.wisc.edu/satellite-blog/archives/category/tropical-cyclones",
+      "description": "The intent of this blog is to showcase examples of meteorological satellite imagery and products that are available to (or created by) scientists and researchers at NOAA's Cooperative Institute for Meteorological Satellite Studies (CIMSS), located at the University of Wisconsin - Madison's Space Science and Engineering Center (SSEC).",
+      "followers": {
+        "facebook": 27400,
+        "twitter": 43800
+      },
+      "image_url": "https://i1.feedspot.com/5047959.jpg?t=1622553570"
+    },
+    {
+      "title": "Tropical Atlantic Update",
+      "feed_url": "http://bmcnoldy.blogspot.com/feeds/posts/default",
+      "website_url": "http://bmcnoldy.blogspot.com/",
+      "description": "Brief summaries of tropical Atlantic activity designed for the general public, coastal residents, and weather enthusiasts. I have been sending out these updates continuously since 1996, and appreciate everyone's continued interest! Follow this blog for recent updates.",
+      "followers": {
+        "twitter": 29100
+      },
+      "image_url": "https://i1.feedspot.com/94978.jpg?t=1622553599"
+    },
+    {
+      "title": "Texas Hurricane",
+      "feed_url": "https://texashurricane.wordpress.com/feed/",
+      "website_url": "https://texashurricane.wordpress.com/",
+      "description": "This blog provides information about the hurricanes that occurred recently and the severe weather forecast. Follow to keep up with latest from this blog",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5048245.jpg?t=1622553796"
+    },
+    {
+      "title": "Blog.weather.us \u00bb Storm",
+      "feed_url": "https://blog.weather.us/tag/storm/feed/",
+      "website_url": "https://blog.weather.us/tag/storm/",
+      "description": "This blog provides information about severe storms that are expected, severe weather and weather forecast across the country. Follow to get the latest articles from this feed in your inbox.",
+      "followers": {
+        "facebook": 206,
+        "twitter": 10600
+      },
+      "image_url": "https://i1.feedspot.com/5048299.jpg?t=1622553566"
+    },
+    {
+      "title": "Jyotika's Tropical Storms Blog",
+      "feed_url": "http://jyotikastorms.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://jyotikastorms.blogspot.com/",
+      "description": "Dr. Jyotika's science and educational blog concerning tropical storms and witty weather forecasting. Follow this blog to get information varying from weather to hectic hurricanes!",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5047939.jpg?t=1622553580"
+    },
+    {
+      "title": "Hurricane Hal's Storm Surge Blog",
+      "feed_url": "http://hurricanehalssb.blogspot.com/feeds/posts/default",
+      "website_url": "http://hurricanehalssb.blogspot.com/",
+      "description": "Dr. Needham is a hazards scientist focusing on hurricane risk analysis and coastal hazards. He has focused on data-driven research for the past decade. Follow to get regular updates from this blog in your inbox.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5047909.jpg?t=1622553678"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "category": "Youth Football",
+  "source_url": "https://rss.feedspot.com/youth_football_rss_feeds",
+  "feeds": [
+    {
+      "title": "North East Hampshire Youth League",
+      "feed_url": "https://www.nehyl.org.uk//feed/rss2",
+      "website_url": "https://www.nehyl.org.uk/news",
+      "description": "The North East Hampshire Youth League (NEHYL), under Hampshire FA, boasts a dedicated volunteer committee passionate about fostering football opportunities. Covering a wide area from Basingstoke to Chiddingfold, and Petersfield to Finchampstead, NEHYL welcomes girls and boys of all abilities. Stay informed with the latest news, tips, and advice from this dynamic youth football community.",
+      "followers": {
+        "facebook": 437,
+        "twitter": 381
+      },
+      "image_url": "https://i1.feedspot.com/5727842.jpg?t=1701692448"
+    },
+    {
+      "title": "Katy Youth Football",
+      "feed_url": "https://www.katyyouthfootball.com/feed/",
+      "website_url": "https://www.katyyouthfootball.com/",
+      "description": "Katy Youth Football, a mission-oriented entity, emphasizes family and youth development. Their coach application process for fall football and cheer underscores their commitment to fostering a supportive environment. With a focus on preparing student-athletes for life beyond sports, they instil values that extend far beyond the playing field, enriching the lives of youth in the community.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5727838.jpg?t=1701693169"
+    },
+    {
+      "title": "Offense-Defense Blog",
+      "feed_url": "https://o-d.com/feed/",
+      "website_url": "https://o-d.com/football-blog/",
+      "description": "Offense-Defense Sports traces its roots back to 1969, initially offering one football camp. Committed to full-contact, full-speed training, it quickly gained recognition. Offense-Defense camps serve as platforms to assess top high school talent for the prestigious Offense-Defense All-American Bowl Week. Their website provides the latest news, information, and articles on youth and high school football, reflecting their dedication to athletic excellence and development.",
+      "followers": {
+        "facebook": 23800,
+        "twitter": 40400
+      },
+      "image_url": "https://i1.feedspot.com/5727839.jpg?t=1701769305"
+    }
+  ]
+}

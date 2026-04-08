@@ -1,0 +1,55 @@
+{
+  "category": "UK Backpacking",
+  "source_url": "https://rss.feedspot.com/uk_backpacking_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kat is Travelling",
+      "feed_url": "https://katistravelling.com/feed/",
+      "website_url": "https://katistravelling.com/",
+      "description": "I'm Kat, the writer behind this blog. In September 2015 I quit my job to go backpacking around Australia for a year on a Working Holiday Visa. My love for travel comes from learning about new destinations by immersing myself in their cultural and natural beauty.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4739826.jpg?t=1608127694"
+    },
+    {
+      "title": "v-g Backpacking in Britain Blog",
+      "feed_url": "https://v-g.me.uk/blog/?feed=rss2",
+      "website_url": "https://v-g.me.uk/blog/",
+      "description": "This site is about backpacking mainly in mountainous and remote regions of England, Wales and Scotland, but also covers a few low-level routes and day walks. The backpack routes are mostly self-designed and exclusively wild-camped",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4913167.jpg?t=1620306504"
+    },
+    {
+      "title": "Heels In My Backpack",
+      "feed_url": "https://heelsinmybackpack.com/feed/",
+      "website_url": "https://heelsinmybackpack.com/",
+      "description": "Heels in my Backpack is the go-to blog for girly backpackers looking for advice on fashion, beauty and everything travelling. I'm a firm believer in keeping true to your style when it comes to your trip and I always carry heels in my backpack.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 7100,
+        "instagram": 35300
+      },
+      "image_url": "https://i1.feedspot.com/4913152.jpg?t=1620306404"
+    },
+    {
+      "title": "Ultra-lightweight Hiking and Backpacking",
+      "feed_url": "https://litehikersblog.blogspot.com/feeds/posts/default",
+      "website_url": "https://litehikersblog.blogspot.com/",
+      "description": "I walked from land's end to john o'groats starting on 5 april 2009 and finished on 13 june 2009, raising over \u00a34,000 for ms research and relief fund in the process. I posted to this blog every day. I am now planning to walk from chepstow to berwick-upon-tweed in 2018. Just one life: live it",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1236879.jpg?t=1654845202"
+    },
+    {
+      "title": "Got My Backpack",
+      "feed_url": "https://gotmybackpack.com/feed/",
+      "website_url": "https://gotmybackpack.com/",
+      "description": "Hi, I'm Kieren, a 27 year old from Wales with a love of exploring new.",
+      "followers": {
+        "twitter": 885
+      },
+      "image_url": "https://i1.feedspot.com/5145296.jpg?t=1620306420"
+    }
+  ]
+}

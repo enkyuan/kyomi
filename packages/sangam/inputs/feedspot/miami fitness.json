@@ -1,0 +1,28 @@
+{
+  "category": "Miami Fitness",
+  "source_url": "https://rss.feedspot.com/miami_fitness_rss_feeds",
+  "feeds": [
+    {
+      "title": "Miami's Community News \u00bb Fitness",
+      "feed_url": "https://communitynewspapers.com/tag/fitness/feed/",
+      "website_url": "https://communitynewspapers.com/tag/fitness/",
+      "description": "For more than 50 years, Miami's Community News has supported local businesses by connecting people who live, work, and play in communities throughout Miami-Dade County. Check out their blog and learn more about the latest news, tips, tricks, and more related to fitness.",
+      "followers": {
+        "facebook": 61000,
+        "twitter": 9600,
+        "instagram": 41400
+      },
+      "image_url": "https://i1.feedspot.com/5717938.jpg?t=1700639973"
+    },
+    {
+      "title": "Austin Morell Training Blog",
+      "feed_url": "https://austinmorelltraining.com/feed/",
+      "website_url": "https://austinmorelltraining.com/blog/",
+      "description": "At Austin Morell Training, they believe in helping you achieve your fitness and health goals. They care about their clients and their health and they created a program where the client is the main priority. Their different trainers are all certified and elite and know how to train you based on your goals and wishes. They offer different types of programs that allow you to be the main decision-makers in this amazing experience.",
+      "followers": {
+        "instagram": 26600
+      },
+      "image_url": "https://i1.feedspot.com/5717937.jpg?t=1700635763"
+    }
+  ]
+}

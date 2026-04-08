@@ -1,0 +1,99 @@
+{
+  "category": "Yelp",
+  "source_url": "https://rss.feedspot.com/yelp_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Yelp Blog",
+      "feed_url": "https://blog.yelp.com/feed/",
+      "website_url": "https://blog.yelp.com/",
+      "description": "The official voice of Yelp HQ in San Francisco. It's a place for us to talk about news, product, community, businesses and more. Follow to get updates.",
+      "followers": {
+        "facebook": 243800,
+        "twitter": 99400,
+        "instagram": 147500
+      },
+      "image_url": "https://i1.feedspot.com/5023913.jpg?t=1622697191"
+    },
+    {
+      "title": "TechCrunch \u00bb Yelp",
+      "feed_url": "https://techcrunch.com/tag/yelp/feed/",
+      "website_url": "https://techcrunch.com/tag/yelp/",
+      "description": "TechCrunch is dedicated to obsessively profiling startups, reviewing gadgets and internet products, and breaking tech news. Follow and never miss an update about Yelp from TechCrunch.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/5057002.jpg?t=1622697201"
+    },
+    {
+      "title": "New York Post \u00bb Yelp",
+      "feed_url": "https://nypost.com/tag/yelp/feed/",
+      "website_url": "https://nypost.com/tag/yelp/",
+      "description": "New York Post is your source for breaking news about New York, sports, business, entertainment, opinion, real estate, culture, fashion, and more. Get the latest Yelp news, articles, videos and photos on the New York Post.",
+      "followers": {
+        "facebook": 6900000,
+        "twitter": 3500000,
+        "instagram": 2100000
+      },
+      "image_url": "https://i1.feedspot.com/5057011.jpg?t=1622697213"
+    },
+    {
+      "title": "PYMNTS.com \u00bb Yelp",
+      "feed_url": "https://www.pymnts.com/tag/yelp/feed/",
+      "website_url": "https://www.pymnts.com/tag/yelp/",
+      "description": "PYMNTS.com provides online coverage of payments news and top industry trends. Insight and reporting on payments, commerce, FinTech and innovation. Follow for updates about Yelp by PYMNTS.com",
+      "followers": {
+        "facebook": 7800,
+        "twitter": 63300
+      },
+      "image_url": "https://i1.feedspot.com/5057037.jpg?t=1622697205"
+    },
+    {
+      "title": "Engadget \u00bb Yelp",
+      "feed_url": "https://www.engadget.com/tag/yelp/rss.xml",
+      "website_url": "https://www.engadget.com/tag/yelp/",
+      "description": "Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics. Subscribe to get the latest coverage about Yelp at Engadget.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 2300000,
+        "instagram": 367700
+      },
+      "image_url": "https://i1.feedspot.com/5057006.jpg?t=1622697217"
+    },
+    {
+      "title": "39 Celsius \u00bb Yelp",
+      "feed_url": "https://www.39celsius.com/category/yelp/feed/",
+      "website_url": "https://www.39celsius.com/category/yelp/",
+      "description": "39 Celsius is a boutique online marketing agency with digital marketing professionals that specialize in helping improve the web strategies of our clients. Subscribe to get updates about Yelp from 39 Celcius directly to your mailbox.",
+      "followers": {
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5057021.jpg"
+    },
+    {
+      "title": "Yelp Blog",
+      "feed_url": "https://blog.yelp.com/category/news/feed/",
+      "website_url": "https://blog.yelp.com/category/news/",
+      "description": "The Yelp News gives the latest news, alerts and announcements about Yelp. Follow the blog and never miss an update about Yelp.",
+      "followers": {
+        "facebook": 243800,
+        "twitter": 99400,
+        "instagram": 147500
+      },
+      "image_url": "https://i1.feedspot.com/5057001.jpg?t=1622697195"
+    },
+    {
+      "title": "Gizmodo \u00bb Yelp",
+      "feed_url": "https://gizmodo.com/tag/yelp/rss",
+      "website_url": "https://gizmodo.com/tag/yelp",
+      "description": "Subscribe to get tech and science tips, reviews, news and more about Yelp from Gizmodo.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 2600000,
+        "instagram": 123500
+      },
+      "image_url": "https://i1.feedspot.com/5057031.jpg?t=1622697209"
+    }
+  ]
+}

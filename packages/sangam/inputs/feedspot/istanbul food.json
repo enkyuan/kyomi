@@ -1,0 +1,77 @@
+{
+  "category": "Istanbul Food",
+  "source_url": "https://rss.feedspot.com/istanbul_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Istanbul Food",
+      "feed_url": "https://istanbulfood.com/feed/",
+      "website_url": "https://istanbulfood.com/",
+      "description": "Istanbul Food is about supporting and emphasizing the real, local, genuine food and of its people. My people, my food heroes, my esnaf, my artisans - My take of the city. Istanbul Food tells their stories, with my touch, experiences, memoirs, food and culture from the lands of Turkey.",
+      "followers": {
+        "facebook": 10600,
+        "twitter": 3500,
+        "instagram": 41200
+      },
+      "image_url": "https://i1.feedspot.com/1993432.jpg?t=1668670199"
+    },
+    {
+      "title": "Vidar Bergum",
+      "feed_url": "https://vidarbergum.com/feed/",
+      "website_url": "https://vidarbergum.com/all-recipes/",
+      "description": "I'm Vidar. For the past few years, I've been exploring the foods of Turkey, the Middle East and beyond from my house in Istanbul. At this blog, I share the highlights of what I've learned from years of spending virtually all my time over the past few years eating, making and researching the food of Turkey and the wider Middle East region. Primarily traditional and authentic recipes and stories from the lands which have been my home since I moved to Istanbul in 2015.",
+      "followers": {
+        "facebook": 583,
+        "instagram": 18100
+      },
+      "image_url": "https://i1.feedspot.com/5468792.jpg?t=1668670047"
+    },
+    {
+      "title": "Yummy Istanbul Blog",
+      "feed_url": "https://yummyistanbul.com/feed/",
+      "website_url": "https://yummyistanbul.com/blog/",
+      "description": "Complete your Istanbul visit with an Istanbul Food Tour. The city's best flavours & vibrant neighborhoods await you. STay up to date with the best places to eat in Istanbul.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 158,
+        "instagram": 6000
+      },
+      "image_url": "https://i1.feedspot.com/5468790.jpg?t=1668669553"
+    },
+    {
+      "title": "HeyTripster \u00bb Food & Drink",
+      "feed_url": "https://heytripster.com/category/food-and-drink/feed/",
+      "website_url": "https://heytripster.com/category/food-and-drink/",
+      "description": "Find out all the information about the best restaurants, brunch spots, places to drink coffee, places to have breakfast, street food in Istanbul, London and many other cities. HeyTripster is a travel platform founded in 2019 with hundreds of constantly updated travel articles and itineraries designed by locals from all ages and walks of life who know and love the place where they live. We provide unique information in seconds, selected and narrowed down to meet your preferences.",
+      "followers": {
+        "facebook": 27,
+        "twitter": 100,
+        "instagram": 10000
+      },
+      "image_url": "https://i1.feedspot.com/5468795.jpg?t=1668669591"
+    },
+    {
+      "title": "Istanbul Clues \u00bb Food-Drink",
+      "feed_url": "https://istanbulclues.com/category/food-drink/feed/",
+      "website_url": "https://istanbulclues.com/category/food-drink/",
+      "description": "I'm Serhat Engul. I am a licensed tour guide operating in Istanbul. I do walking tours in Istanbul focusing on Roman, Byzantine and Ottoman history. Check out the food and drink section for the best places to eat, drink, authentic food vendors and more!",
+      "followers": {
+        "facebook": 935,
+        "twitter": 67,
+        "instagram": 253
+      },
+      "image_url": "https://i1.feedspot.com/5468791.jpg?t=1668669847"
+    },
+    {
+      "title": "CafeFernando",
+      "feed_url": "https://follow.it/cafefernando",
+      "website_url": "http://cafefernando.com/",
+      "description": "My name is Cenk (Jenk). I am an author, blogger, photographer, and food stylist based in Istanbul. In 2006, I started this blog to share my kitchen adventures with friends and it got bigger than I could have ever imagined. Check out my recipes and the stories behind them in here.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 272000,
+        "instagram": 88600
+      },
+      "image_url": "https://i1.feedspot.com/5468796.jpg?t=1668670175"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "category": "Carrollton News",
+  "source_url": "https://rss.feedspot.com/carrollton_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Carrollton Leader",
+      "feed_url": "https://starlocalmedia.com/search/?f=rss&t=article&c=carrolltonleader/news&l=50&s=start_time&sd=desc",
+      "website_url": "https://starlocalmedia.com/carrolltonleader/",
+      "description": "The Carrollton Leader is a weekly publication that serves the Dallas suburb of Carrollton. Your hometown source for news and sports. We explore Carrollton through our coverage of Carrollton schools, Carrollton sports, Carrollton business, Carrollton entertainment, and events.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 534,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5139805.jpg?t=1626670674"
+    },
+    {
+      "title": "Carrolltononline.us",
+      "feed_url": "https://news.carrolltononline.us/",
+      "website_url": "https://news.carrolltononline.us/",
+      "description": "Carrolltononline.us is Carrollton's No.1 portal that provides resources for Businesses, General users, and Visitors to Carrollton, providing the Latest News, weather updates for Carrollton, current events, festivals, and all other important and relevant information about History, Geography, Administration, Travel and Tourism in Carrollton.",
+      "followers": {
+        "facebook": 8,
+        "twitter": 429,
+        "instagram": 40
+      },
+      "image_url": "https://i1.feedspot.com/5510804.jpg?t=1676965693"
+    },
+    {
+      "title": "City of Carrollton, TX",
+      "feed_url": "https://www.cityofcarrollton.com/Home/Components/RssFeeds/RssFeed/View?id=2",
+      "website_url": "https://www.cityofcarrollton.com/about-us/connect-with-us/latest-city-news",
+      "description": "Located in the heart of the Dallas-Fort Worth area, Carrollton is known for its high quality of life, abundant parks, schools & safe neighborhoods. Subscribe this feed for the latest news, city alert, economic and environmental events and much more.",
+      "followers": {
+        "facebook": 28000,
+        "twitter": 8400,
+        "instagram": 13900
+      },
+      "image_url": "https://i1.feedspot.com/5139894.jpg?t=1626670669"
+    },
+    {
+      "title": "CBS Texas \u00bb Carrollton",
+      "feed_url": "https://dfw.cbslocal.com/tag/carrollton/feed/",
+      "website_url": "https://www.cbsnews.com/texas/tag/carrollton/",
+      "description": "Welcome to CBS DFW, your home for the latest news, weather, traffic, and sports along with great lifestyle content. CBS 11 is part of CBS Television Stations, a division of CBS Corporation, and is one of the largest network-owned station groups in the country. Follow this feed to get the latest news, crime, politics event and information in Carrollton, Texas.",
+      "followers": {
+        "facebook": 591600,
+        "twitter": 167300,
+        "instagram": 602
+      },
+      "image_url": "https://i1.feedspot.com/5139891.jpg?t=1587125662"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "category": "SSL",
+  "source_url": "https://rss.feedspot.com/ssl_rss_feeds",
+  "feeds": [
+    {
+      "title": "The SSL Store Blog",
+      "feed_url": "https://www.thesslstore.com/blog/feed/",
+      "website_url": "https://www.thesslstore.com/blog/",
+      "description": "Since 2007, The SSL Store has helped over 200,000 companies around the globe protect their businesses, employees, and customers. We've done this by simplifying access to the best products from top cybersecurity vendors-making industry-leading solutions easy and affordable, even for small businesses with limited budgets.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 422
+      },
+      "image_url": "https://i1.feedspot.com/4669929.jpg?t=1674126644"
+    },
+    {
+      "title": "Compare Cheap SSL Blog",
+      "feed_url": "https://comparecheapssl.com/feed/",
+      "website_url": "https://comparecheapssl.com/blog/",
+      "description": "Compare Cheap SSL Certificate manually compare the market's most trusted and leading SSL Certificate providers in the area that matter most. We have covered a wide range of solutions bound to meet your requirements ranging from Domain SSL Certificate, Organization SSL Certificate, or EV SSL Certificate. In the blogs, we have a collection of the latest news, article, and useful content related to SSL certificates and Cyber Security.",
+      "followers": {
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/5496459.jpg?t=1674126371"
+    },
+    {
+      "title": "SSL Shop Blog",
+      "feed_url": "https://www.cheapsslshop.com/blog/feed",
+      "website_url": "https://www.cheapsslshop.com/blog",
+      "description": "Welcome to CheapSSLShop - The Best global supplier of the world's trusted and famous brand SSL certificates like DigiCert, GeoTrust, Thawte, GlobalSign, Comodo, and RapidSSL. We - the known cheapest price SSL provider - assure you the best price guarantee. We offer unlimited re-issuance without charging a single penny to you. You can retrieve your SSL for an unlimited time within the certificate's lifespan.",
+      "followers": {
+        "facebook": 275,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5496460.jpg?t=1674126687"
+    },
+    {
+      "title": "wolfSSL Blog",
+      "feed_url": "https://www.wolfssl.com/feed/",
+      "website_url": "https://www.wolfssl.com/blog/",
+      "description": "wolfSSL focuses on providing lightweight and embedded security solutions with an emphasis on speed, size, portability, features, and standards compliance. Dual-licensed to cater to a diversity of users ranging from the hobbyist to the user with commercial needs, we are happy to help our customers and community in any way we can. Our products are Open Source giving customers the freedom to look under the hood.",
+      "followers": {
+        "facebook": 513,
+        "twitter": 10000
+      },
+      "image_url": "https://i1.feedspot.com/5496457.jpg?t=1674126355"
+    },
+    {
+      "title": "SSLs.com Blog",
+      "feed_url": "https://www.ssls.com/blog/feed/",
+      "website_url": "https://www.ssls.com/blog/",
+      "description": "SSLs.com is for everyone, whatever the size and scope of their project. From small business websites to niche blogs run by tiny teams or individuals with a small budget, we've got you covered. We take pride in ensuring that you, the customer, is taken care of. All customer requests are addressed and resolved in a quick and timely manner, and require you to deal with as few people as possible.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4318627.jpg?t=1674126811"
+    },
+    {
+      "title": "SSL.com Blog",
+      "feed_url": "https://www.ssl.com/feed/",
+      "website_url": "https://www.ssl.com/blog/",
+      "description": "SSL.com is an integral component of an organization's layered cybersecurity defense strategy. As a Digital Identity and Trust Services Provider, SSL.com provides publicly trusted digital certificates, cloud signing services, and enterprise PKI solutions. Founded in 2002, SSL.com is a trusted partner for thousands of companies and continues to innovate with new cloud and transformative digital products.",
+      "followers": {
+        "facebook": 10400,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5496458.jpg?t=1674126363"
+    },
+    {
+      "title": "CheapSSLWeb.com Blog",
+      "feed_url": "https://cheapsslweb.com/blog/feed",
+      "website_url": "https://cheapsslweb.com/blog/",
+      "description": "CheapSSLWeb.com is one of the trusted and major SSL certificate providers globally. We offer the cheapest SSL Certificates from branded certificate authorities like Comodo, Sectigo, Certera, Rapidssl, and Geotrust SSL. CheapSSLweb.com blog provides the latest updates, articles, news, and web security practices on SSL, TLS, SMIME, Email Security, and Code Signing Certificates.",
+      "followers": {
+        "facebook": 16,
+        "twitter": 426
+      },
+      "image_url": "https://i1.feedspot.com/5496461.jpg?t=1674126383"
+    }
+  ]
+}

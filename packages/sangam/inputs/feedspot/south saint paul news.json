@@ -1,0 +1,28 @@
+{
+  "category": "South Saint Paul News",
+  "source_url": "https://rss.feedspot.com/south_saint_paul_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of South St. Paul, Minnesota",
+      "feed_url": "http://www.southstpaul.org/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "http://www.southstpaul.org/CivicAlerts.aspx",
+      "description": "Get the latest news and information, important announcements, city alerts, economic development news, upcoming events and more from the official website of South St. Paul, MN.",
+      "followers": {
+        "facebook": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5161201.jpg?t=1591883745"
+    },
+    {
+      "title": "CBS News \u00bb South St. Paul",
+      "feed_url": "https://www.cbsnews.com/latest/rss/main",
+      "website_url": "https://www.cbsnews.com/minnesota/tag/south-st-paul/",
+      "description": "WCCO - CBS Minnesota is Minneapolis's source for breaking news, weather, traffic, and sports. Get all the local news and information you need plus other fun stuff across the city of South St. Paul from the team at WCCO and CBS Minnesota.",
+      "followers": {
+        "facebook": 484700,
+        "twitter": 269700,
+        "instagram": 87900
+      },
+      "image_url": "https://i1.feedspot.com/5161198.jpg"
+    }
+  ]
+}

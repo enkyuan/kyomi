@@ -1,0 +1,719 @@
+{
+  "category": "UK Vaping",
+  "source_url": "https://rss.feedspot.com/uk_vaping_rss_feeds",
+  "feeds": [
+    {
+      "title": "WizVape Blog",
+      "feed_url": "https://wizvape.co.uk/blogs/news.atom",
+      "website_url": "https://wizvape.co.uk/blogs/news",
+      "description": "WizVape was founded in 2019 to Provide Cheapest Prices Possible to Vapers in the United Kingdom. The Aim is to help people to quit smoking and help the vape community by providing very competitive prices. Read all about vaping and techniques on our blog!",
+      "followers": {
+        "facebook": 692,
+        "twitter": 149,
+        "instagram": 7100
+      },
+      "image_url": "https://i1.feedspot.com/5468143.jpg?t=1668580913"
+    },
+    {
+      "title": "OK Vape Blog",
+      "feed_url": "https://okvape.co.uk/feed/",
+      "website_url": "https://okvape.co.uk/blog/",
+      "description": "OK Vape is an e-cigarette and vape product brand and supplier. As one of the few remaining, independently owned vape companies, we focus on providing quality vape products to our customers at excellent prices, with the best customer service possible. Keep up-to-date with the latest vaping & e-cigarette news, trends & competitions. Join the discussion on the latest vape trends, vape tricks & more.",
+      "followers": {
+        "facebook": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5468153.jpg?t=1668581331"
+    },
+    {
+      "title": "Juice Mate Blog \u00bb Vaping",
+      "feed_url": "https://juicemate.co.uk/blogs/vaping.atom",
+      "website_url": "https://juicemate.co.uk/blogs/vaping",
+      "description": "The Juice Mate Vaping & E-Liquid Blog keeps you up to date with the latest news in the Vaping and E-Liquid industry and educates people who vape, or want to vape, along the way. We are a leading online vape shop in the UK, stocking a wide range of affordable vaping products.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 15
+      },
+      "image_url": "https://i1.feedspot.com/5468127.jpg?t=1668583018"
+    },
+    {
+      "title": "Vape.co.uk Blog",
+      "feed_url": "https://vape.co.uk/vaping-blog/feed/",
+      "website_url": "https://vape.co.uk/vaping-blog/",
+      "description": "Vaping-Related Blog proves that it's your time to improve your vaping knowledge. We've created a series of helpful articles that might help answer your queries. VAPE.CO.UK is a UK Based online Vape Retailer and is a haven for people who are trying to quit smoking and just can't keep up with the E-cig jargon.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 340,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5468158.jpg?t=1668583048"
+    },
+    {
+      "title": "VapeiQ Blog",
+      "feed_url": "https://vapeiq.co.uk/feed/",
+      "website_url": "https://vapeiq.co.uk/blog/",
+      "description": "Your one-stop resource on all Vape-liquid-related queries. Stay informed about the best flavours, and liquids through these reviews. Established in 2016, VapeiQ is one of the UK's most popular choices for affordable & quality E-liquid, offering customizable options.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7304716.jpg?t=1713947972"
+    },
+    {
+      "title": "Red Vape Blog",
+      "feed_url": "https://www.redvape.com/blog/feed/",
+      "website_url": "https://www.redvape.com/blog/",
+      "description": "On the Red Vape Vaping and E-Liquid Blog Page, you can find news, views, and opinions on the world of vaping and e-liquids. Our vision was to develop a range of liquids that used only the finest ingredients and which derived its flavors from natural sources.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 5500,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5468154.jpg?t=1668583529"
+    },
+    {
+      "title": "Vapesdirect Blog",
+      "feed_url": "https://www.vapesdirect.co.uk/blogs/blog.atom",
+      "website_url": "https://www.vapesdirect.co.uk/blogs/blog",
+      "description": "Vapesdirect is the leading online vape shop in Stourport within the Worcestershire region we pride ourselves by offering a great service Nationally all across the UK from London to Wales up to the Scottish Highlands and Isles, offering a wide range of e-cigs, vape kits, box mods, tanks and e-liquids.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 36,
+        "instagram": 700
+      },
+      "image_url": "https://i1.feedspot.com/5468139.jpg?t=1668584402"
+    },
+    {
+      "title": "Eco Vape Blog",
+      "feed_url": "https://www.eco-vape.co.uk/blog/feed/",
+      "website_url": "https://www.eco-vape.co.uk/blog/",
+      "description": "The Eco Vape blog is your place to discover the latest vape news across the UK vaping industry, including products and topical discussions. Our specialist online vape shop offers one of the UK's largest selections of e-liquids, vaping hardware, vape coils, and vape accessories. We price all our e-liquids and vaping products competitively allowing all customers to find the perfect vaping products within their desired budget.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5468168.jpg?t=1668585036"
+    },
+    {
+      "title": "Uk Vape World Blog",
+      "feed_url": "https://www.ukvapeworld.com/blogs/vaping.atom",
+      "website_url": "https://www.ukvapeworld.com/blogs/vaping/",
+      "description": "Keep up-to-date with the latest vaping & e-cigarette news, trends & competitions. Join the discussion on the latest vape trends, vape tricks & more.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 369,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5468148.jpg?t=1668585178"
+    },
+    {
+      "title": "Mist E Liquid Blog",
+      "feed_url": "https://www.misteliquid.co.uk/blog/feed/",
+      "website_url": "https://www.misteliquid.co.uk/blog/",
+      "description": "Mist puts people first and endeavors to meet their needs. We're real, friendly people, not a faceless corporation. Our purpose is to help people to give up smoking for good by using a healthier alternative. Best vape juice flavors, guides, user kit, vaping techniques, and more find all of it on our blog!",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 2200,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5468145.jpg?t=1668585503"
+    },
+    {
+      "title": "Vapour Days UK Blog",
+      "feed_url": "https://www.vapourdays.co.uk/blog/feed/",
+      "website_url": "https://www.vapourdays.co.uk/blog/",
+      "description": "Our blogs are updated regularly so make sure you pop back often for new posts on topics that range from product reviews to industry news. Vapour Days strives to bring our customers the very best in e-liquids, electronic cigarettes, vapes, and accessories.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 221,
+        "instagram": 765
+      },
+      "image_url": "https://i1.feedspot.com/5468149.jpg?t=1668585960"
+    },
+    {
+      "title": "Vapeology Blog",
+      "feed_url": "https://www.vapeology.co.uk/blogs/vape-advice.atom",
+      "website_url": "https://www.vapeology.co.uk/blogs/vape-advice",
+      "description": "Looking for advice on the latest vaping products and what to buy then you're at the right place as the Vapeology blog has all the news, advice, tips, and guides on vapes and vaping! The company was set up to help put an end to the damaging impact on people's health because of smoking tobacco.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5468133.jpg?t=1668586125"
+    },
+    {
+      "title": "Vape Superstore Blog",
+      "feed_url": "https://www.vapesuperstore.co.uk/blogs/news.atom",
+      "website_url": "https://www.vapesuperstore.co.uk/blogs/news",
+      "description": "Vape Superstore's vaping blog, brings you the latest in industry-related topics, regulations, and vape product reviews. Discover what is going on in the world of vaping here. We are a leading UK retailer of E-Cigarettes and E-Liquids.",
+      "followers": {
+        "facebook": 12400,
+        "twitter": 1600,
+        "instagram": 18000
+      },
+      "image_url": "https://i1.feedspot.com/5027396.jpg?t=1668586191"
+    },
+    {
+      "title": "SMOKO Blog",
+      "feed_url": "https://smoko.com/blogs/news.atom",
+      "website_url": "https://smoko.com/blogs/news",
+      "description": "Get the latest news & info on the e-cig industry, e-cig starter kits, what experts say & general updates for all things vaping, and e-liquids. SMOKO E-Cigarettes wants to help as many people around the world to quit smoking traditional cigarettes.",
+      "followers": {
+        "facebook": 21600,
+        "instagram": 937
+      },
+      "image_url": "https://i1.feedspot.com/5468130.jpg?t=1668586263"
+    },
+    {
+      "title": "UK ECIG STORE Blog",
+      "feed_url": "https://www.ukecigstore.com/blogs/news.atom",
+      "website_url": "https://www.ukecigstore.com/blogs/news",
+      "description": "UK ECIG STORE Vape Blog gives you all you need to know about vaping including all the latest vape kit and e-liquid reviews. Learn about vaping and stay up to date with health, legal, and industry developments.",
+      "followers": {
+        "facebook": 24200,
+        "twitter": 7200,
+        "instagram": 23600
+      },
+      "image_url": "https://i1.feedspot.com/5468144.jpg?t=1668586297"
+    },
+    {
+      "title": "Flawless Vape Shop Blog",
+      "feed_url": "https://www.flawlessvapeshop.co.uk/blogs/news.atom",
+      "website_url": "https://www.flawlessvapeshop.co.uk/blogs/news",
+      "description": "All the latest reviews and news in the vaping world, find reviews of the latest e-liquids and mods. Flawless Vape Shop is the UK's leading distributor of vape, vaping hardware, accessories, starter kits, tanks, and E-liquids. We focus on providing outstanding customer service and quality products.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 999,
+        "instagram": 7600
+      },
+      "image_url": "https://i1.feedspot.com/5468175.jpg?t=1668586459"
+    },
+    {
+      "title": "Vapor Shop Direct Blog",
+      "feed_url": "https://www.vaporshopdirect.com/blogs/news.atom",
+      "website_url": "https://www.vaporshopdirect.com/blogs/news",
+      "description": "Here we have all of the blogs for Vapor Shop Direct, find brand spotlights, blogs to help you get started, and blogs to inform you about parts of the vaping world. We aim to fit the demands of every vaper with authentic and delicious disposable vapes, e-liquids, tanks, mods, and various vape accessories.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 1600,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5468189.jpg?t=1668586491"
+    },
+    {
+      "title": "LiQuid Blog",
+      "feed_url": "https://www.onepoundeliquid.com/blogs/news.atom",
+      "website_url": "https://www.onepoundeliquid.com/blogs/news",
+      "description": "To become your ultimate one-stop-shop for all your vaping needs, whether you're looking for an alternative to smoking or if your vaping journey has already begun, we are here to help as many people as possible achieve their goals! Check out our blog for all the latest news, info, and tips on vaping!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5468191.jpg?t=1668587049"
+    },
+    {
+      "title": "Grey Haze Blog",
+      "feed_url": "https://greyhaze.co.uk/blogs/grey-haze-blog.atom",
+      "website_url": "https://greyhaze.co.uk/blogs/grey-haze-blog",
+      "description": "Catch up on the latest news, reviews, guides, and much more at our dedicated vaping blog! Grey Haze is an online UK-based ecig store established in 2012. We are one of Europe's leading online vape shops. We work to provide the best and most unique vape mods at the best prices possible.",
+      "followers": {
+        "facebook": 13000,
+        "twitter": 3900,
+        "instagram": 19100
+      },
+      "image_url": "https://i1.feedspot.com/5468188.jpg?t=1668587222"
+    },
+    {
+      "title": "The E-Cig Store Blog",
+      "feed_url": "https://theecig.co.uk/blogs/news.atom",
+      "website_url": "https://theecig.co.uk/blogs/news",
+      "description": "The E-Cig & CBD Store is the largest growing electronic cigarette & CBD Store in the UK with 50+ Stores Nationwide, providing a huge range of brands of e-liquids & vape devices & accessories. On our blog, you can find buying guides, information bout different kinds of vapes, and much more!",
+      "followers": {
+        "facebook": 954,
+        "instagram": 8100
+      },
+      "image_url": "https://i1.feedspot.com/5468179.jpg?t=1668586976"
+    },
+    {
+      "title": "Ecigclick Blog",
+      "feed_url": "https://www.ecigclick.co.uk/category/blog/feed/",
+      "website_url": "https://www.ecigclick.co.uk/category/blog/",
+      "description": "For all the latest vape news and views from around the world, follow our blog. Ecigclick is one of the biggest and best vape review sites in the UK with a growing following from the USA and Europe. We cover all areas of vaping reviews to help you, the vaper, make an informed buying decision.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 10400,
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5468184.jpg?t=1668587307"
+    },
+    {
+      "title": "EDGE Blog",
+      "feed_url": "https://www.edgevaping.com/blogs/news.atom",
+      "website_url": "https://www.edgevaping.com/blogs/news/",
+      "description": "Stay up-to-date on all the latest vaping news and industry activity, providing all the latest trends, data and insights. EDGE produces a range of premium e-liquid manufactured right here in the UK. We use the very best ingredients to create some much-loved flavors at our expertly equipped production facility. Our mission is to help people worldwide quit smoking",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 427,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5468181.jpg?t=1668587338"
+    },
+    {
+      "title": "Vapin Loud Blog",
+      "feed_url": "https://www.vapinloud.co.uk/blogs/news.atom",
+      "website_url": "https://www.vapinloud.co.uk/blogs/news",
+      "description": "Find our news posts for helpful guides & tips about all things vaping, from how to choose the right starter kits to preserving vapes for longer. Learn about the different accessories that can level up your vaping game, giving you the ultimate tailored vape experience you want. Vapin Loud is one of the best shops in South East London, with a wide range of premium vaping products.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 133,
+        "instagram": 9300
+      },
+      "image_url": "https://i1.feedspot.com/5468190.jpg?t=1668590201"
+    },
+    {
+      "title": "Vape Shop Blog",
+      "feed_url": "https://www.vapeshop.co.uk/blogs/news.atom",
+      "website_url": "https://www.vapeshop.co.uk/blogs/news",
+      "description": "Vape Shop, is the UK's premier one-stop online vaping shop. Buy vape kits, UK e-liquids, pods, mods, E-cigs, and more. Check out all our products, new launches, disposable vapes, the best IVG vape, top vape kits to take on the beach, and many more!",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 2400,
+        "instagram": 6500
+      },
+      "image_url": "https://i1.feedspot.com/5468193.jpg?t=1668590627"
+    },
+    {
+      "title": "I Vape Great Blog",
+      "feed_url": "https://ivapegreat.com/blogs/blog.atom",
+      "website_url": "https://ivapegreat.com/blogs/blog",
+      "description": "If you're looking for the best vape store in the UK, we have everything you need to get started vaping, including e-cigarettes, e-liquids & accessories. I Vape Great was established with a vision to become the best total global vaping leader, generating sustainable economic, social, and environmental value by managing innovative, winning business models with the best people in the world.",
+      "followers": {
+        "facebook": 18300,
+        "twitter": 5200,
+        "instagram": 50300
+      },
+      "image_url": "https://i1.feedspot.com/5468183.jpg?t=1668590733"
+    },
+    {
+      "title": "JM Wholesale Blog",
+      "feed_url": "https://jm-wholesale.co.uk/blogs/blog.atom",
+      "website_url": "https://jm-wholesale.co.uk/blogs/blog",
+      "description": "JM Wholesale has risen to become the UK's largest wholesaler within the vaping, CBD, and smoking categories. With an ever-expanding inventory, we currently sell over 15,000 products, and are pioneering within one of the fastest-growing industries Worldwide! we provide vape and CBD drink blogs in our blog section!",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 373,
+        "instagram": 8700
+      },
+      "image_url": "https://i1.feedspot.com/5468177.jpg?t=1668590972"
+    },
+    {
+      "title": "TABlites Blog",
+      "feed_url": "https://tablites.com/blogs/news.atom",
+      "website_url": "https://tablites.com/blogs/news",
+      "description": "The hub for all types of vaping information, written by the TABlites experts. Here you'll find all the answers to all your vaping relating questions on the internet. We are one of the UK's highest-rated online vape stores, offering a massive range of e-liquids, disposable vapes, vape kits, and accessories.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 3700,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5468186.jpg?t=1668591100"
+    },
+    {
+      "title": "Wholesale Manager \u00bb Vaping & Next Generation Products",
+      "feed_url": "https://wholesalemanager.co.uk/category/tobacco-vaping/vaping-next-generation-products/feed/",
+      "website_url": "https://wholesalemanager.co.uk/category/tobacco-vaping/vaping-next-generation-products/",
+      "description": "Discover vaping & next-generation products through articles like nicotine pouches, lauunching novel pod refill systems with rechargeable batteries for the UK market, and more! Wholesale Manager is a monthly magazine that is distributed to senior buyers, directors, managers, and other decision-makers within the UK wholesale and cash and carries industry.",
+      "followers": {
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5468185.jpg?t=1668591270"
+    },
+    {
+      "title": "UKVIA",
+      "feed_url": "https://ukvia.co.uk/feed/",
+      "website_url": "https://ukvia.co.uk/news-views/",
+      "description": "The UK Vaping Industry Association is spearheading one of the biggest market disruptions in the 21st century, the seismic shift from smoking to vaping. A non-profit organization run by its members for its members, we're about educating, informing, and reassuring our key stakeholders as well as championing our industry so that the shift from smoking to vaping continues unabated and the public health benefits of doing so are realized fully.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5468171.jpg?t=1668591340"
+    },
+    {
+      "title": "The Vape Shop Blog",
+      "feed_url": "https://www.thevapeshop.co.uk/blog/feed/",
+      "website_url": "https://www.thevapeshop.co.uk/blog/",
+      "description": "Vape Blog by The Vape Shop is your go-to hub for the latest vaping news, tips, lifestyle insights, and expert guides. Whether you're a beginner or a seasoned vaper, elevate your experience with our curated content.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 746,
+        "instagram": 30
+      },
+      "image_url": "https://i1.feedspot.com/5493710.jpg?t=1673857306"
+    },
+    {
+      "title": "The Vape Giant Blog",
+      "feed_url": "https://www.thevapegiant.co.uk/blogs/news.atom",
+      "website_url": "https://www.thevapegiant.co.uk/blogs/news",
+      "description": "The Vape Giant is a premier online vape retailer serving the United Kingdom market, offering a comprehensive selection of vaping products for all experience levels. The company specializes in vape kits, e-liquids, prefilled and refillable pod systems, nicotine salts, tanks, coils, and accessories from leading brands including Elf Bar, Lost Mary, The Crystal Bling, Hayati, SKE Crystal, and IVG.",
+      "followers": {
+        "instagram": 99
+      },
+      "image_url": "https://i1.feedspot.com/8817117.jpg?t=1764139015"
+    },
+    {
+      "title": "Decadent Vapours Blog",
+      "feed_url": "https://www.decadentvapours.com/blog/feed/",
+      "website_url": "https://www.decadentvapours.com/blog/",
+      "description": "News, tutorials, and information on e-cigarettes and vaping. Search for questions you have about anything from e-liquid to devices. Producing the finest e-liquid for over 10 years, our iconic e-liquid flavors are known worldwide and have won numerous awards for over a decade.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5468141.jpg?t=1668581125"
+    },
+    {
+      "title": "Royal Flush Vape Blog",
+      "feed_url": "https://www.royalflushvape.co.uk/blogs/news.atom",
+      "website_url": "https://www.royalflushvape.co.uk/blogs/news",
+      "description": "Royal Flush Vapes are retailers of liquid from each corner of the world. Also, retailers of e-cigarettes and e-liquids. Pros & cons of vaping, vaping survey reports, vaping mistakes that should be avoided, and more, find all of this on our blog!",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 1300,
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5468129.jpg?t=1668581036"
+    },
+    {
+      "title": "NVee Blog",
+      "feed_url": "https://nvee.co.uk/blog/feed/",
+      "website_url": "https://nvee.co.uk/blog/",
+      "description": "Read the latest news and updates for vapes, e-cigarettes, and e-liquids with NVee, one of the UK's largest sellers of Vape Pens and Vape Juice! When the Tobacco Products Directive came upon the UK market, NVee remained in the market when the regulation forced out many other manufacturers and brands with its more stringent rules around the size of bottles, nicotine strengths, and packaging.",
+      "followers": {
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5468159.jpg?t=1668580962"
+    },
+    {
+      "title": "New Nicotine Alliance Blog",
+      "feed_url": "https://nnalliance.org/blog?format=feed&type=rss",
+      "website_url": "https://nnalliance.org/blog",
+      "description": "The New Nicotine Alliance, a registered Charitable Organisation, is concerned with improving public health, through a greater understanding of 'new' nicotine products and their uses. We wish to see a mature public and organizational understanding of the potential of safer nicotine products for reducing cigarette smoking, including their safety and efficacy, and hence contribute to the reduction in cigarette smoking.",
+      "followers": {
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5468140.jpg?t=1668582966"
+    },
+    {
+      "title": "House of Vapes - London Blog",
+      "feed_url": "https://www.houseofvapeslondon.co.uk/blogs/vape.atom",
+      "website_url": "https://www.houseofvapeslondon.co.uk/blogs/vape",
+      "description": "House of Vapes London blog featuring vaping news, product reviews, brand introductions, how-to's, and much more. We set out with the goal of bringing premium vaping products from all over the globe to all UK vapers, no matter how far along their vaping journey they are.",
+      "followers": {
+        "facebook": 6000,
+        "instagram": 14900
+      },
+      "image_url": "https://i1.feedspot.com/5468134.jpg?t=1668583320"
+    },
+    {
+      "title": "Vapekit\u00a0 Blog",
+      "feed_url": "https://vapekit.co.uk/blog/feed/",
+      "website_url": "https://vapekit.co.uk/blog/",
+      "description": "Vapekit\u00a0aims of becoming a leading online supplier of all vaping supplies. We wanted to provide UK vapers with great service, amazing choices, and the best products at reasonable prices. Get news, reviews, research, how-to guides, advice, and more on Vaping on our blog!",
+      "followers": {
+        "facebook": 339,
+        "twitter": 2100,
+        "instagram": 384
+      },
+      "image_url": "https://i1.feedspot.com/5468138.jpg?t=1668584177"
+    },
+    {
+      "title": "Steam Liquid Blog",
+      "feed_url": "https://steameliquid.co.uk/feed/",
+      "website_url": "https://steameliquid.co.uk/blog/",
+      "description": "Read through our blogs to answer all of your vaping questions! From guides to tutorials, we try to cover the lot! Over that period, the industry has gone through huge changes and there is now a massive choice of products available. As a company, we have seen the choice of products go from the very popular 'ciggy-like' to drippers, mech mods, and everything in between.",
+      "followers": {
+        "facebook": 1300,
+        "instagram": 606
+      },
+      "image_url": "https://i1.feedspot.com/5468132.jpg?t=1668584365"
+    },
+    {
+      "title": "ECigaretteDirect Blog",
+      "feed_url": "https://www.ecigarettedirect.co.uk/ashtray-blog/feed",
+      "website_url": "https://www.ecigarettedirect.co.uk/ashtray-blog",
+      "description": "Ashtray Blog is the world's longest-running vape blog. Providing coverage and analysis of the biggest vape stories, as well as in-depth articles for new and experienced vapers alike. Keep up to date will all things vape including news, views, product guides, tutorials & offers.",
+      "followers": {
+        "facebook": 9000,
+        "twitter": 8800
+      },
+      "image_url": "https://i1.feedspot.com/5075747.jpg?t=1673853934"
+    },
+    {
+      "title": "myCigara Blog",
+      "feed_url": "https://www.mycigara.com/blogs/news.atom",
+      "website_url": "https://www.mycigara.com/blogs/news",
+      "description": "The most current news on vaping from around the world. Stay up to date with regulatory changes and studies that span all aspects of this emerging industry! We provide rigorous coverage in our informative articles about new products coming out as well. myCigarahe is the UK's best Vape store, providing world-class products and services to New and Old vapers!",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 1600,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5468135.jpg?t=1668585120"
+    },
+    {
+      "title": "Vape Simple Blog",
+      "feed_url": "https://www.vape-simple.com/blogs/news.atom",
+      "website_url": "https://www.vape-simple.com/blogs/news",
+      "description": "Latest news and updates from Vape Simple. All posts relate to Vape Simple and the industry we work in. We provide our customers with the best E Liquids on the market. Based out of our state-of-the-art manufacturing facility in Gatwick Vape Simple brings you the best quality E Liquids that money can buy.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 1000,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5468131.jpg?t=1673855747"
+    },
+    {
+      "title": "Drip Hacks Blog",
+      "feed_url": "https://www.driphacks.com/blog/feed/",
+      "website_url": "https://www.driphacks.com/blog/",
+      "description": "Stay up to date with the latest UK vaping news, vape guides, and general vaping articles at Drip Hacks. Drip Hacks provides the highest quality E-Liquid and flavor concentrates covering all aspects of vaping. It is our mission to provide our customers with the best experience possible, ensuring our product range is adapted and improved whenever possible.",
+      "followers": {
+        "facebook": 10900,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5468157.jpg?t=1668585413"
+    },
+    {
+      "title": "Vaping 101 Blog",
+      "feed_url": "https://vaping101.co.uk/blogs/news.atom",
+      "website_url": "https://vaping101.co.uk/blogs/news",
+      "description": "We bring to you the most sought-after hardware & accessories on the market, continue to further our journey, and hope to share our experience to date. Our main goal is to bring excellence in service whilst offering the most competitive prices in the UK market. Know about the vape kits, the best vape for you, e-liquids, and much more!",
+      "followers": {
+        "facebook": 9900,
+        "twitter": 913,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5468125.jpg?t=1668581486"
+    },
+    {
+      "title": "Simply Eliquid Blog",
+      "feed_url": "https://www.simplyeliquid.co.uk/blogs/vaping.atom",
+      "website_url": "https://www.simplyeliquid.co.uk/blogs/vaping",
+      "description": "Simply Eliquid has been a proud member of the UK vaping community for many years, and we've served over 50,000 customers during that time. Find all about vaping, vape kits, useful troubleshooting guides, how-to articles, and more on our blog!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5468147.jpg?t=1668585674"
+    },
+    {
+      "title": "Uk Aspire Vendor Blog",
+      "feed_url": "https://www.ukaspirevendor.co.uk/blogs/uav-blog.atom",
+      "website_url": "https://www.ukaspirevendor.co.uk/blogs/uav-blog",
+      "description": "UK Aspire Vendor has been at the forefront of the vaping industry for many years. Our mission is simply to service the UK market with sales experience, aftersales care, and devoted dedication the to Aspire brand. Read our blog to get products, new vape launches, and more!",
+      "followers": {
+        "facebook": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5468126.jpg?t=1668580576"
+    },
+    {
+      "title": "My E-Liquid Supplies Blog",
+      "feed_url": "https://myeliquidsupplies.com/blog/feed/",
+      "website_url": "https://myeliquidsupplies.com/blog/",
+      "description": "All updates regarding vape news and the industry. Also includes information and guides to help you and provide knowledge. My E-Liquid Supplies is your one-stop-shop for wholesale e-juice, vape flavors, nicotine, PG/VG & empty bottles, and we ship worldwide.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 599
+      },
+      "image_url": "https://i1.feedspot.com/5468137.jpg?t=1668581690"
+    },
+    {
+      "title": "DIY E Liquids Blog",
+      "feed_url": "https://diyeliquids.co.uk/blog/feed/",
+      "website_url": "https://diyeliquids.co.uk/blog/",
+      "description": "'DIY e-Liquids represents an innovative stride towards discovering a leading online vape store in the UK. Explore our meticulously curated collection, featuring premium liquid concentrates, cutting-edge vaping devices, and stylish accessories. Our commitment extends to catering to diverse preferences, offering an extensive array of flavours\u2014from classic tobacco to refreshing mint, menthol, and indulgent dessert blends. Each inhale promises a memorable experience, thanks to our precision-crafted e-liquids. We prioritize the importance of convenience in your vaping journey. Happy Vaping!",
+      "followers": {
+        "facebook": 883,
+        "instagram": 805
+      },
+      "image_url": "https://i1.feedspot.com/5468173.jpg?t=1668586404"
+    },
+    {
+      "title": "Ibiza Club Blog",
+      "feed_url": "https://www.ibizavapeclub.com/blogs/blog.atom",
+      "website_url": "https://www.ibizavapeclub.com/blogs/blog",
+      "description": "Ibiza Club is an innovative vape brand that celebrates Summer all year round. Bring a taste of Ibiza with you wherever you are and experience our revolutionary vaping concepts that fit in with your lifestyle. Find tips, advice, and guides on quitting smoking and vaping in our blog section!",
+      "followers": {
+        "facebook": 264,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5468170.jpg?t=1668587255"
+    },
+    {
+      "title": "Vape Manufacturing Blog",
+      "feed_url": "https://vape-manufacturing.co.uk/blog/feed/",
+      "website_url": "https://vape-manufacturing.co.uk/blog/",
+      "description": "The Vape Manufacturing provision has been specifically designed to provide an end-to-end service for both our larger customers as well as small, medium, and new start-up brands. View all the blogs on our products, vape building, e-liquids, and more on our blog section!",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5468178.jpg?t=1668587161"
+    },
+    {
+      "title": "Moreish Puff Blog",
+      "feed_url": "https://moreishpuff.com/blogs/news.atom",
+      "website_url": "https://moreishpuff.com/blogs/news",
+      "description": "Cherish Vapor is as an e-liquid brand distributing premium e-liquids to the vaping community. Our mission is to give the vaping community a simple way to get high-quality e-liquids. We pride ourselves on delivering great products and great customer service, which has led us to become one of the fastest-growing e-liquid brands. Read our blogs to know all about vaping.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 871,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5468176.jpg?t=1668587430"
+    },
+    {
+      "title": "E-Liquids UK Blog",
+      "feed_url": "https://www.e-liquids.uk/feed/",
+      "website_url": "https://www.e-liquids.uk/vape-blog/",
+      "description": "Read the latest vaping news and stay up to date with what's happening within the vape industry. We are constantly reporting on industry events. E-Liquids UK is a premium online vape shop based in Surrey, United Kingdom. We stock the latest vape kits from popular vape companies such as SMOK, Aspire & GeekVape.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 817,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5468169.jpg?t=1668590422"
+    },
+    {
+      "title": "Vape and Juice Blog",
+      "feed_url": "https://vapeandjuice.co.uk/blogs/feed",
+      "website_url": "https://vapeandjuice.co.uk/blogs",
+      "description": "Vape and Juice aim to offer a customer service-led vape retail experience. We intend to ensure the highest standards of customer satisfaction, both online and offline. Find all about vaping, guides, and vaping tips in our blog section.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 1100,
+        "instagram": 10700
+      },
+      "image_url": "https://i1.feedspot.com/5468197.jpg?t=1668590862"
+    },
+    {
+      "title": "Juice Sauz Distribution Blog",
+      "feed_url": "https://juicesauzdistribution.com/blogs/news.atom",
+      "website_url": "https://juicesauzdistribution.com/blogs/news/",
+      "description": "Our passion for high-quality products and outstanding customer service has driven us to become one of the biggest manufacturers and distributors in the UK that also now supply countries all over the world. Juice Sauz Distribution Blog contains guides, information on vape & vape kits, top e-liquids, and more!",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 594,
+        "instagram": 8600
+      },
+      "image_url": "https://i1.feedspot.com/5468180.jpg?t=1668590226"
+    },
+    {
+      "title": "Vapouround",
+      "feed_url": "https://www.vapouround.com/feed/",
+      "website_url": "https://www.vapouround.com/learn/",
+      "description": "As the world-leading vaping magazine, we bring you the ultimate vaping blog where we publish useful tips and news around the world of vaping. Vapouround has become a leading voice in the global vape industry. The multi-award-winning Vapouround Magazine is stocked at hundreds of vape shops across the UK and Ireland.",
+      "followers": {
+        "facebook": 10400,
+        "twitter": 8300,
+        "instagram": 42300
+      },
+      "image_url": "https://i1.feedspot.com/5010379.jpg?t=1668585087"
+    },
+    {
+      "title": "Vape Jucce Blog",
+      "feed_url": "https://vape-jucce.com/feed/",
+      "website_url": "https://vape-jucce.com/vape-blog/",
+      "description": "The Jucce Bar is the vape perfect starter kit or upgrades from disposables. A sleek and pocket-friendly rechargeable vape device, just switch out the pre-filled pods to enjoy different delicious e-liquid flavors. Our blog offers guides, advice, vaping myths, tips for choosing the right e-liquids, and more!",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 472
+      },
+      "image_url": "https://i1.feedspot.com/5468136.jpg?t=1668585609"
+    },
+    {
+      "title": "Ecig Review Site UK Blog",
+      "feed_url": "https://ecigreviewsite.co.uk/blog/feed/",
+      "website_url": "https://ecigreviewsite.co.uk/",
+      "description": "A collection of original, high-quality Electronic Cigarettes articles, various topics for Beginners and Advanced Vapers. At the E-Cig Review Site, our values reflect that of our customers. We help you to understand and compare which vape products are the best value and which products are the best for throat hit, vapor production, flavor, and nicotine absorption.",
+      "followers": {
+        "facebook": 953,
+        "twitter": 445
+      },
+      "image_url": "https://i1.feedspot.com/5468142.jpg?t=1668581746"
+    },
+    {
+      "title": "UK Vape Supply Blog",
+      "feed_url": "https://www.ukvapesupply.co.uk/blogs/uk-vape-blog.atom/",
+      "website_url": "https://www.ukvapesupply.co.uk/blogs/uk-vape-blog/",
+      "description": "UK Vape Supply is your one-stop shop for your vape and CBD needs, including our own City Vape and LVWell CBD ranges. Shop with UK Vape Supply for great prices on CBD oils, vape kits, e-liquids & more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5468150.jpg?t=1668582841"
+    },
+    {
+      "title": "Firevape Blog",
+      "feed_url": "https://www.firevape.co.uk/blogs/news.atom",
+      "website_url": "https://www.firevape.co.uk/blogs/news",
+      "description": "Firevapes is a premium online vape shop based in the United Kingdom. We stock the latest vape kits from popular vape companies such as Elux Legend, RandM, SKE Crystal, Tito Crystal, SMOK, Aspire & GeekVape, and Elf Bars. Stocking unlimited e-liquid flavors and nicotine salts from major vape brands.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5595043.jpg?t=1686554388"
+    },
+    {
+      "title": "Chief of Vapes Blog",
+      "feed_url": "https://www.chiefofvapes.com/feed/",
+      "website_url": "https://www.vuse.com/gb/en/blog",
+      "description": "Vape Blog with the latest news, updates, events, and all things Chief of Vapes and all things Vape. Award Winning Vape Manufacturer. Chief of Vapes was established in 2018 with its Fabulous Vape Juice Shop in Blackburn and then expanded to become an industry leader within Vape Juice Shops.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 494,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5468155.jpg?t=1668583928"
+    },
+    {
+      "title": "Totally Wicked | Vaped",
+      "feed_url": "https://www.totallywicked-eliquid.co.uk/vaped/feed/",
+      "website_url": "https://www.totallywicked-eliquid.co.uk/vaped/",
+      "description": "Vaped is our digital magazine that focuses on a range of topics concerning vaping, including the latest e-cigarette news and new vaping products. Here, we stock a large and growing range of vaping products, ensuring we continue to be able to meet the needs of new and experienced vapers alike.",
+      "followers": {
+        "facebook": 38600,
+        "twitter": 16100,
+        "instagram": 6400
+      },
+      "image_url": "https://i1.feedspot.com/5468151.jpg?t=1668584592"
+    },
+    {
+      "title": "Aquavape Blog",
+      "feed_url": "https://aquavape.co.uk/blogs/news.atom",
+      "website_url": "https://aquavape.co.uk/blogs/news",
+      "description": "Discover the latest news around the vaping industry. We try to keep our blog updated regularly. We, Team Aquavape, are an independent company based in the North West City of Bolton.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 827
+      },
+      "image_url": "https://i1.feedspot.com/5468146.jpg?t=1668581166"
+    },
+    {
+      "title": "The Electronic Cigarette Company Blog",
+      "feed_url": "https://www.theelectroniccigarette.co.uk/blog/feed/",
+      "website_url": "https://www.theelectroniccigarette.co.uk/blog/",
+      "description": "The Electronic Cigarette Company's vape blog focuses on a range of vaping topics, including the latest e-cig news and reviews! From our friendly customer service team that is ready to help with any query you may have to our comprehensive range of products, we aim to provide a stress-free and enjoyable shopping experience.",
+      "followers": {
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5468152.jpg?t=1673856983"
+    },
+    {
+      "title": "Vape And Go Blog",
+      "feed_url": "https://www.vapeandgo.co.uk/blog/feed/",
+      "website_url": "https://www.vapeandgo.co.uk/blog/",
+      "description": "Vape & Go is a UK Vaping retail company run by vapers for vapers sourcing the best American E liquids / Malaysian / UK Made E Liquids. We are dedicated to bringing customers the best possible vaping products at the lowest possible prices. We inform you about e-cigarettes, e-liquids, vape kits, vapes, and much more!",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 481,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5468195.jpg?t=1668591372"
+    },
+    {
+      "title": "Vapoholic E Liquid",
+      "feed_url": "https://vapoholic.co.uk/news/feed/",
+      "website_url": "https://vapoholic.co.uk/news/",
+      "description": "View the latest news and updates from Vapoholic and the vaping world in general. Vapoholic E-Liquid is the UK's most innovative online e-liquid store. Our mission is to offer you liquids of the premium quality you're looking for but without the premium price tag. We decided, right from the start, that we would never compromise on standards; taste, safety, and satisfaction are always our priorities.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 398,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5468172.jpg?t=1668590375"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "category": "Hackensack News",
+  "source_url": "https://rss.feedspot.com/hackensack_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Hackensack Daily Voice",
+      "feed_url": "https://dailyvoice.com/new-jersey/hackensack/rss/",
+      "website_url": "https://dailyvoice.com/new-jersey/hackensack/",
+      "description": "Discover the best local stories, latest breaking news and current events happening in Hackensack, NJ.",
+      "followers": {
+        "facebook": 42700,
+        "twitter": 1300,
+        "instagram": 48100
+      },
+      "image_url": "https://i1.feedspot.com/5150084.jpg?t=1589361851"
+    },
+    {
+      "title": "NorthJersey.com \u00bb Hackensack",
+      "feed_url": "http://rssfeeds.northjersey.com/northjerseyhackensack",
+      "website_url": "https://www.northjersey.com/local/hackensack/",
+      "description": "NorthJersey.com is the number one website for local breaking news, investigations, high school sports, dining and more for Bergen County, Passaic County and beyond. Follow this feed to read the latest news and updates in Hackensack, NJ.",
+      "followers": {
+        "facebook": 459500,
+        "twitter": 81000,
+        "instagram": 149100
+      },
+      "image_url": "https://i1.feedspot.com/5150105.jpg"
+    },
+    {
+      "title": "TAPinto Hackensack",
+      "feed_url": "https://www.tapinto.net/towns/hackensack/",
+      "website_url": "https://www.tapinto.net/towns/hackensack/",
+      "description": "TAPinto Hackensack is a hyperlocal newspaper covering news, sports, police, fire, and government issues for Hackensack, NJ.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 282
+      },
+      "image_url": "https://i1.feedspot.com/5150101.jpg?t=1589362272"
+    },
+    {
+      "title": "CBS New York \u00bb Hackensack",
+      "feed_url": "https://newyork.cbslocal.com/tag/hackensack/feed/",
+      "website_url": "https://www.cbsnews.com/newyork/tag/hackensack/",
+      "description": "CBS New York provides you with 24/7 access to the latest updates in local news, sports, traffic, weather, and the best of New York! Read Hackensack city news and information by following this feed.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 201400,
+        "instagram": 185500
+      },
+      "image_url": "https://i1.feedspot.com/5150118.jpg?t=1589366386"
+    }
+  ]
+}

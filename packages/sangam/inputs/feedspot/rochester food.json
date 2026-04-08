@@ -1,0 +1,62 @@
+{
+  "category": "Rochester Food",
+  "source_url": "https://rss.feedspot.com/rochester_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Rochester Local \u00bb Food",
+      "feed_url": "https://rochesterlocal.com/tag/food/feed/",
+      "website_url": "https://rochesterlocal.com/tag/food/",
+      "description": "Explore Local food guides, Outdoor dining recommendations and The newest food adventures to be had in Rochester city. Rochester Local is a locally-focused resource website for Rochester MN residents and visitors. We're passionate about our community, and strive to connect Rochester MN to relevant resources, local businesses, and can't-miss happenings.",
+      "followers": {
+        "facebook": 19300,
+        "instagram": 12900
+      },
+      "image_url": "https://i1.feedspot.com/5518286.jpg?t=1678359562"
+    },
+    {
+      "title": "CHOOCHOO-ca-CHEW",
+      "feed_url": "https://www.choochoocachew.com/feed/",
+      "website_url": "https://www.choochoocachew.com/recipes/",
+      "description": "Hi! My name is Tiffany, I love food and adventures. I'm passionate about sharing food from home (Taiwan) with the world. There is so much about Taiwanese food - the people, the history and the stories. Choochoo-ca-Chew will give you a little insight on what Taiwan is like through recipes. I'm developing recipes with local farmers market finds you can recreate in your own kitchen!",
+      "followers": {
+        "facebook": 2500,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/5512956.jpg?t=1678359595"
+    },
+    {
+      "title": "Minnesota's Rochester \u00bb Dining",
+      "feed_url": "https://www.experiencerochestermn.com/blog/category/dining/59358488fd9fed5b41022693/rss/",
+      "website_url": "https://www.experiencerochestermn.com/blog/category/dining/59358488fd9fed5b41022693/",
+      "description": "Check out the Experience Rochester Blog to find upcoming Dining event schedules, family-friendly activities, local restaurants, and trip planning recommendations. Experience Rochester MN is the official online source catering to visitors with news, information and special experiences in the city.",
+      "followers": {
+        "facebook": 18900,
+        "twitter": 6600
+      },
+      "image_url": "https://i1.feedspot.com/5518283.jpg?t=1678359489"
+    },
+    {
+      "title": "People's Food Co-op Blog",
+      "feed_url": "https://www.pfc.coop/recipeblog?format=rss",
+      "website_url": "https://www.pfc.coop/recipeblog",
+      "description": "Stay in the loop with the co-op via the People's Food Co-op Blog. Catch every bit from important updates to special promotions, weekly sales, recipes, and more. People's Food Co-op is a community-owned natural foods market with locations in La Crosse and Rochester.",
+      "followers": {
+        "facebook": 15100,
+        "instagram": 6000
+      },
+      "image_url": "https://i1.feedspot.com/5518285.jpg?t=1678359502"
+    },
+    {
+      "title": "Green Mill Blog",
+      "feed_url": "https://www.greenmill.com/feed/",
+      "website_url": "https://www.greenmill.com/blog/",
+      "description": "Check out our News & Blog Page Today for local events info. Featuring the latest goings on in your area and with Green Mill Restaurant & Bar. Green Mill was a neighborhood staple & is still the oldest licensed pub in the region. Our menu has fantastic pizza AND delicious pasta, wings, entrees, burgers, sandwiches, appetizers, delicious drinks, and more.",
+      "followers": {
+        "facebook": 22000,
+        "twitter": 5400,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5518284.jpg?t=1678359497"
+    }
+  ]
+}

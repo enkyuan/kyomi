@@ -1,0 +1,30 @@
+{
+  "category": "Hinesville News",
+  "source_url": "https://rss.feedspot.com/hinesville_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Coastal Courier",
+      "feed_url": "https://coastalcourier.com/rss/",
+      "website_url": "https://coastalcourier.com/",
+      "description": "Coastal Courier delivers up-to-the-minute news and information on the latest top stories, weather, entertainment, opinion and more.",
+      "followers": {
+        "facebook": 16100,
+        "twitter": 1500,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5150973.jpg?t=1589619388"
+    },
+    {
+      "title": "City of Hinesville, GA",
+      "feed_url": "https://www.cityofhinesville.org/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.cityofhinesville.org/CivicAlerts.aspx?sort=date",
+      "description": "City of Hinesville is dedicated to keeping residents informed and up-to-date by providing the latest news about schools, sports, business, performing arts, health/safety issues, human interest and more.",
+      "followers": {
+        "facebook": 15300,
+        "twitter": 1800,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5150943.jpg?t=1589618805"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "category": "Bedford News",
+  "source_url": "https://rss.feedspot.com/bedford_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Bedford BubbleLife",
+      "feed_url": "https://bedford.bubblelife.com/rss?c=35678933",
+      "website_url": "https://bedford.bubblelife.com/",
+      "description": "Bedford BubbleLife is a digital newspaper, bringing together all of the local news, information and events in Bedford, Texas.",
+      "followers": {
+        "facebook": 47,
+        "twitter": 760
+      },
+      "image_url": "https://i1.feedspot.com/5148900.jpg"
+    },
+    {
+      "title": "City of Bedford, TX",
+      "feed_url": "https://bedfordtx.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://bedfordtx.gov/CivicAlerts.aspx",
+      "description": "Bedford is a quality residential community balanced with an environment for planned economic vitality. Follow this feed to read the latest news, updates and information from the official website of Bedford, TX.",
+      "followers": {
+        "facebook": 25000,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5148894.jpg?t=1588935537"
+    }
+  ]
+}

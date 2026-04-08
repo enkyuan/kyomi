@@ -1,0 +1,483 @@
+{
+  "category": "UK Health",
+  "source_url": "https://rss.feedspot.com/uk_health_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Hippocratic Post",
+      "feed_url": "https://www.hippocraticpost.com/feed/",
+      "website_url": "https://www.hippocraticpost.com/",
+      "description": "The world's first global blogging site specialising in medical issues. Reaching out to medical professionals and students as well as savvy consumers in the UK and abroad to keep them abreast of latest developments in their field. Featuring blogs from some of the world's most eminent medical professionals including professors from Harvard, Oxford, Cambridge, KCL and UCLA.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4611289.jpg?t=1607145295"
+    },
+    {
+      "title": "Mindful Chef Blog",
+      "feed_url": "https://www.mindfulchef.com/blog/feed/",
+      "website_url": "https://www.mindfulchef.com/blog/",
+      "description": "Check out delicious healthy cooking recipes along with articles on nutrition and lifestyle. Myles and Giles founded Mindful Chef in 2015 with one mission to make healthy eating easy. They deliver a range of balanced, delicious recipe boxes, frozen ready meals, broths and smoothie mixes nationwide.",
+      "followers": {
+        "facebook": 90000,
+        "twitter": 10600,
+        "instagram": 171500
+      },
+      "image_url": "https://i1.feedspot.com/4589553.jpg?t=1607324531"
+    },
+    {
+      "title": "Rosanna Davison Nutrition - Healthier Lifestyles",
+      "feed_url": "https://www.rosannadavisonnutrition.com/feed/",
+      "website_url": "https://www.rosannadavisonnutrition.com/",
+      "description": "To bring you healthy recipes, clean eating, nutrition and fitness tips, and beauty and fashion inspiration.",
+      "followers": {
+        "facebook": 54000,
+        "twitter": 59800,
+        "instagram": 319600
+      },
+      "image_url": "https://i1.feedspot.com/4788925.jpg?t=1607145307"
+    },
+    {
+      "title": "Be Healthy Now",
+      "feed_url": "https://www.behealthynow.co.uk/feed/",
+      "website_url": "https://www.behealthynow.co.uk/",
+      "description": "UK health blog helping you to lead a healthier lifestyle. Health articles, healthy recipes, nutrition, fitness and natural beauty posts. I am Petra, originally from Slovenia, living in England. I strongly believe in a holistic approach to health. This blog evolved over time and started as a healthy eating blog but now it's much more than that. I like to write about everything which is linked to health and not only food.",
+      "followers": {
+        "facebook": 978,
+        "twitter": 3300,
+        "instagram": 558
+      },
+      "image_url": "https://i1.feedspot.com/4483954.jpg?t=1607145312"
+    },
+    {
+      "title": "Lazy Girl Running Blog",
+      "feed_url": "https://feeds.feedburner.com/blogspot/RZFvG",
+      "website_url": "https://www.lazygirlrunning.com/blog",
+      "description": "The blog ran by Laura Fountain who is a UK Athletics coach in running fitness, aims to provide practical running advice on run coaching, marathon running, injuries, and running gears.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 6100,
+        "instagram": 11000
+      },
+      "image_url": "https://i1.feedspot.com/4399625.jpg?t=1607145334"
+    },
+    {
+      "title": "The Runner Beans",
+      "feed_url": "https://therunnerbeans.com/feed/",
+      "website_url": "https://therunnerbeans.com/",
+      "description": "Focuses on marathon training, running tips, recipes, nutrition advice, and kit reviews. Authored by Charlie Watson, a Registered Dietitian, author of Cook Eat Run, and thirteen-time marathoner.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 12000,
+        "instagram": 86500
+      },
+      "image_url": "https://i1.feedspot.com/4399832.jpg?t=1611237995"
+    },
+    {
+      "title": "Father Fitness",
+      "feed_url": "https://www.fatherfitness.co.uk/feed/",
+      "website_url": "https://www.fatherfitness.co.uk/",
+      "description": "Hi, my name is Paul. Father Fitness is my fitness journey from becoming a first-time Father, to regaining my fitness. My blog holds information about health, weight loss, product reviews, nutrition, muscle, and events. I support exercise & kids offering advice on getting out and staying fit as a family.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 6500,
+        "instagram": 12400
+      },
+      "image_url": "https://i1.feedspot.com/4724265.jpg?t=1675685622"
+    },
+    {
+      "title": "Nadia's Healthy Kitchen Blog",
+      "feed_url": "https://nadiashealthykitchen.com/blog/feed/",
+      "website_url": "https://nadiashealthykitchen.com/blog/",
+      "description": "Helping individuals live a healthy lifestyle. Sharing healthy, clean, gluten-free, dairy-free, vegan savory & sweet recipes. I also post easy healthy recipe videos,",
+      "followers": {
+        "facebook": 88800,
+        "twitter": 2700,
+        "instagram": 555500
+      },
+      "image_url": "https://i1.feedspot.com/4843429.jpg?t=1607145378"
+    },
+    {
+      "title": "THC Primary Care Blog",
+      "feed_url": "https://www.thcprimarycare.co.uk/blog-feed.xml",
+      "website_url": "https://www.thcprimarycare.co.uk/blog",
+      "description": "THC Primary Care provides interim network management and training for PCN managers, administrators and clinical directors.",
+      "followers": {
+        "twitter": 112
+      },
+      "image_url": "https://i1.feedspot.com/5482234.jpg?t=1678878837"
+    },
+    {
+      "title": "Zanna Van Dijk",
+      "feed_url": "https://www.zannavandijk.co.uk/feed/",
+      "website_url": "https://www.zannavandijk.co.uk/blogger-basics/",
+      "description": "Blogger & trainer sharing a balanced approach to fitness, food and life!",
+      "followers": {
+        "facebook": 13800,
+        "instagram": 492100
+      },
+      "image_url": "https://i1.feedspot.com/4843923.jpg?t=1607145425"
+    },
+    {
+      "title": "keep it simpElle Blog",
+      "feed_url": "https://www.keepitsimpelle.com/feed/",
+      "website_url": "https://www.keepitsimpelle.com/blog/",
+      "description": "'Keep it simpElle' is Elle Linton's brainchild - a dynamic Health and Fitness Blog exuding inspiration and empowerment. As a UK fitness professional and entrepreneur, Elle's passion for cycling, sweating, and running infuses every post, motivating individuals worldwide to embrace vitality and wellness.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 4600,
+        "instagram": 7900
+      },
+      "image_url": "https://i1.feedspot.com/4843927.jpg?t=1607145388"
+    },
+    {
+      "title": "What Allergy - Food Allergy, Allergies, Allergy Treatment",
+      "feed_url": "https://whatallergy.com/feed/",
+      "website_url": "https://whatallergy.com/",
+      "description": "Find over 600 articles on allergies, food allergies, living with allergies, allergy treatments, cold sores and eczema from Ruth Holroyd.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 5000,
+        "instagram": 6300
+      },
+      "image_url": "https://i1.feedspot.com/4843363.jpg?t=1611307713"
+    },
+    {
+      "title": "Wholeheartedly Laura Blog",
+      "feed_url": "https://wholeheartedlylaura.com/feed",
+      "website_url": "https://wholeheartedlylaura.com/blog",
+      "description": "This is a Health, fitness and lifestyle blog. Come and see some of my healthy tasty recipes, my fitness exploits and shopping hauls! I help women lead a more wholehearted life as well as offering support for new online coaches setting up kick ass freedom based businesses.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 3800,
+        "instagram": 5600
+      },
+      "image_url": "https://i1.feedspot.com/4844014.jpg?t=1607145393"
+    },
+    {
+      "title": "Allergy Insight Blog",
+      "feed_url": "https://www.allergy-insight.com/blog/feed/",
+      "website_url": "https://www.allergy-insight.com/blog/",
+      "description": "Get updates on Issues in food allergy and intolerance, coeliac disease, gut disorders, eczema, 'free from' and all allergies and sensitivities!",
+      "followers": {
+        "facebook": 341,
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/4574268.jpg?t=1607145806"
+    },
+    {
+      "title": "HealthInvestor UK",
+      "feed_url": "https://healthinvestor.co.uk/newfeed-2/",
+      "website_url": "https://healthinvestor.co.uk/news/",
+      "description": "Health Investor Magazine is the leading magazine and website for the healthcare business. Get updates on finance, health, news and conferences for the UK healthcare industry!",
+      "followers": {
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/3873266.jpg?t=1607145762"
+    },
+    {
+      "title": "Healthy Life Essex: resource for a happier, healthier, greener life in Essex Blog",
+      "feed_url": "https://healthylifeessex.co.uk/blog/feed/",
+      "website_url": "https://healthylifeessex.co.uk/blog/",
+      "description": "Healthy Life Essex contains information that can help people lead happier, healthier, greener lives: healthy living, healthy eating, wildlife, countryside.",
+      "followers": {
+        "facebook": 822,
+        "twitter": 1100,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4844945.jpg?t=1607145404"
+    },
+    {
+      "title": "NHS England",
+      "feed_url": "https://www.england.nhs.uk/feed/",
+      "website_url": "https://www.england.nhs.uk/blogs/",
+      "description": "NHS England's official portal provides policy updates, operational guidance, and strategic plans that shape the delivery and improvement of health services across England.",
+      "followers": {
+        "facebook": 267800,
+        "twitter": 528100,
+        "instagram": 215600
+      },
+      "image_url": "https://i1.feedspot.com/8659678.jpg"
+    },
+    {
+      "title": "Inhealthcare Blog",
+      "feed_url": "https://www.inhealthcare.co.uk/feed/",
+      "website_url": "https://www.inhealthcare.co.uk/category/blog/",
+      "description": "From our latest press releases, blogs and upcoming events, find out what the Inhealthcare team has been up to. Inhealthcare is the number one choice for digital health and remote patient monitoring. Inhealthcare enables health and social care organisations to deliver more care outside of the traditional setting to reduce pressures on overstretched services.",
+      "followers": {
+        "facebook": 42,
+        "twitter": 4200,
+        "instagram": 141
+      },
+      "image_url": "https://i1.feedspot.com/5301775.jpg?t=1626273764"
+    },
+    {
+      "title": "London Doctors Clinic",
+      "feed_url": "https://www.londondoctorsclinic.co.uk/blog/feed/",
+      "website_url": "https://www.londondoctorsclinic.co.uk/blog/",
+      "description": "London Doctors Clinic's Health Blog focuses on topical health issues and treatments, helping encourage people to live happier and healthier.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8659677.jpg"
+    },
+    {
+      "title": "Healthy Life Essex",
+      "feed_url": "https://healthylifeessex.co.uk/feed/",
+      "website_url": "https://healthylifeessex.co.uk/blog/",
+      "description": "Keep up to date with the Healthy Life Essex blog for news on health and wellbeing, fitness, environment, charities. A top 45 UK health and wellbeing blog.",
+      "followers": {
+        "facebook": 822,
+        "twitter": 1100,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/8659679.jpg"
+    },
+    {
+      "title": "Julia Buckley Fitness Blog",
+      "feed_url": "https://juliabuckleyfitness.com/feed/",
+      "website_url": "https://juliabuckleyfitness.com/fitnessblog/",
+      "description": "I'm a fitness trainer based in London, UK, here to share support and advice on fitness and fat loss. I also share advice, tips and ideas right here on my blog.",
+      "followers": {
+        "facebook": 35200,
+        "twitter": 30300,
+        "instagram": 42200
+      },
+      "image_url": "https://i1.feedspot.com/4472687.jpg?t=1607145734"
+    },
+    {
+      "title": "Hannah & Fitness",
+      "feed_url": "https://hannahandfitness.com/feed/",
+      "website_url": "https://hannahandfitness.com/",
+      "description": "From this blog Hannah shares healthy recipes, her fitness routines, motivate and inspire you whilst also sharing her daily struggles!",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4844570.jpg?t=1607145743"
+    },
+    {
+      "title": "JogBlog",
+      "feed_url": "https://www.jog-blog.co.uk/feed/",
+      "website_url": "https://www.jog-blog.co.uk/",
+      "description": "A light-hearted look at running, cycling and general fitness. JogBlog provides novice runners with a starting point to get them to make achievable running goals, while providing the tips, inspiration and advice that they need to push themselves.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4841886.jpg?t=1611238322"
+    },
+    {
+      "title": "FitBits - fitness for fun and wellbeing",
+      "feed_url": "https://www.thefitbits.com/feed",
+      "website_url": "https://www.thefitbits.com/",
+      "description": "A UK running, cycling and fitness blog from Brighton freelance copywriter and marketing consultant Tess Agnew!",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 4600,
+        "instagram": 204
+      },
+      "image_url": "https://i1.feedspot.com/4844000.jpg?t=1607145754"
+    },
+    {
+      "title": "Healthier Matters blog",
+      "feed_url": "https://healthiermatters.com/feed",
+      "website_url": "https://healthiermatters.com/",
+      "description": "Read news, interviews and industry updates for Wellbeing, Beauty, Diet, Nutrition & Healthcare. Everything you need to know and wonderful tips from top industry experts.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 826,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5070115.jpg?t=1607145888"
+    },
+    {
+      "title": "SEMH Social, Emotional and Mental Health Blog",
+      "feed_url": "https://semh.co.uk/blog/feed/",
+      "website_url": "https://semh.co.uk/blog/",
+      "description": "This website was designed to help education staff to support students with social, emotional and mental health concerns.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4843567.jpg?t=1607146187"
+    },
+    {
+      "title": "Happy Healthy Nat",
+      "feed_url": "https://happyhealthynat.com/feed/",
+      "website_url": "https://happyhealthynat.com/",
+      "description": "Learn to develop a healthy relationship with food, exercise and your body. Create a balanced healthy lifestyle and never stop playing!",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1300,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4844584.jpg?t=1607145933"
+    },
+    {
+      "title": "Beginning of my Life",
+      "feed_url": "https://jessscribble.blogspot.com//feeds/posts/default",
+      "website_url": "https://jessscribble.blogspot.com/",
+      "description": "I write blogs about my experience suffering from epilepsy and retrograde amnesia. Each of my blogs was written around two years ago (in 2017) and I feel that only now is it the right time for me to post them and share them with you.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5091773.jpg?t=1607146024"
+    },
+    {
+      "title": "Pt Mollie Blog",
+      "feed_url": "https://www.ptmollie.com/home/blog/feed/",
+      "website_url": "https://www.ptmollie.com/home/blog/",
+      "description": "A blog about health, running, exercise, fitness, and loving your life filled with happiness.",
+      "followers": {
+        "facebook": 700,
+        "twitter": 5600,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4844562.jpg?t=1607145964"
+    },
+    {
+      "title": "The Kitchen Shed",
+      "feed_url": "https://thekitchenshed.co.uk/feed/",
+      "website_url": "https://thekitchenshed.co.uk/",
+      "description": "Recipes and ideas to help you become healthier, increase your metabolism, lose weight and gain energy!",
+      "followers": {
+        "facebook": 11800,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4585925.jpg?t=1607145974"
+    },
+    {
+      "title": "Fitness On Toast",
+      "feed_url": "http://fitnessontoast.com/feed/",
+      "website_url": "http://fitnessontoast.com/",
+      "description": "A Fitness Blog about Gym Training, Sports Fashion, and Healthy Nutrition - By fitness blogger Faya Nilsson.",
+      "followers": {
+        "facebook": 26300,
+        "twitter": 22900,
+        "instagram": 113900
+      },
+      "image_url": "https://i1.feedspot.com/4058202.jpg?t=1607145372"
+    },
+    {
+      "title": "Food For Fitness Blog",
+      "feed_url": "https://www.foodforfitness.co.uk/blog/",
+      "website_url": "https://www.foodforfitness.co.uk/blog/",
+      "description": "Articles on exercise & training, fat loss, food & healthy recipes, nutrition and supplementation.At Food For Fitness we'll show you how you can lose weight without the suffering, punishing fitness regimes or extreme diets.",
+      "followers": {
+        "twitter": 1100,
+        "instagram": 167900
+      },
+      "image_url": "https://i1.feedspot.com/4844801.jpg?t=1607177247"
+    },
+    {
+      "title": "The Academic Health Economists' Blog",
+      "feed_url": "https://aheblog.com/feed/",
+      "website_url": "https://aheblog.com/",
+      "description": "The Academic Health Economists' Blog exists to provide an online presence for the discussion of issues and developments in health economics. A place where people can present their views, opinions, ideas, and takes on current affairs from the perspective of health economics. The site has a simple aim is to promote healthy debate in the field, with a sharing of ideas.",
+      "followers": {
+        "facebook": 715,
+        "twitter": 6300
+      },
+      "image_url": "https://i1.feedspot.com/4531376.jpg?t=1608368932"
+    },
+    {
+      "title": "HealthUnlocked Blog",
+      "feed_url": "https://blog.healthunlocked.com/feed/",
+      "website_url": "https://healthunlocked.com/blog",
+      "description": "We are the world's largest online support network. Ask questions. Get answers. Talk to others who've been there before. #UnlockYourHealth",
+      "followers": {
+        "facebook": 26900,
+        "twitter": 7000,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4685538.jpg?t=1612935990"
+    },
+    {
+      "title": "Medicine Online Blog",
+      "feed_url": "https://medicinesonline.org.uk/feed/",
+      "website_url": "https://medicinesonline.org.uk/blog/",
+      "description": "We supply goods and services to the Professional Healthcare industry in the UK. Medicines Online blog provides the latest articles about health and COVID-19. Learn about the effectiveness of masks, hand sanitizers, etc. in preventing COVID-19 and other healthcare tips.",
+      "followers": {
+        "facebook": 8
+      },
+      "image_url": "https://i1.feedspot.com/5180818.jpg?t=1607145397"
+    },
+    {
+      "title": "Carly Rowena Blog",
+      "feed_url": "https://www.carlyrowena.com/feed",
+      "website_url": "https://www.carlyrowena.com/blog/",
+      "description": "Carly Rowena is a Personal Trainer & Fitness YouTuber which trains you to give the body you want without spending your life in the gym or having to avoid the foods you enjoy.",
+      "followers": {
+        "facebook": 31800,
+        "twitter": 42400,
+        "instagram": 195700
+      },
+      "image_url": "https://i1.feedspot.com/4843898.jpg?t=1607145961"
+    },
+    {
+      "title": "NatureDoc Clinic Blog",
+      "feed_url": "https://www.naturedoc.co.uk/feed/",
+      "website_url": "https://naturedoc.com/the-healthy-blog/",
+      "description": "A Naturopath Iridologist & Herbalist specialising in Functional Medicine, Lucinda uses lab testing & gentle, natural solutions!",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 2800,
+        "instagram": 66500
+      },
+      "image_url": "https://i1.feedspot.com/4843474.jpg?t=1607145458"
+    },
+    {
+      "title": "Health Shield Blog",
+      "feed_url": "https://blog.healthshield.co.uk/blog/rss.xml",
+      "website_url": "https://www.modernaestheticsolutions.com/Blogs",
+      "description": "We make it easier for people to look after themselves by providing affordable health and wellbeing benefits that are easy to access. Our award-winning product offering includes health cash plans, health screening services, and an occupational health programme, designed for prevention and early intervention. Read the blog to know more.",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4843523.jpg?t=1607145969"
+    },
+    {
+      "title": "The Rafaelo Procedure",
+      "feed_url": "https://rafaelo.co.uk/feed/",
+      "website_url": "https://www.modernaestheticsolutions.com/Blogs",
+      "description": "The Rafaelo Procedure is a revolutionary walk-in walk-out treatment for haemorrhoids (piles) that is a safe and effective procedure, with minimal pain and minimal downtime.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5002985.jpg?t=1607145796"
+    },
+    {
+      "title": "UK Healthcare Law Blog",
+      "feed_url": "https://www.ukhealthcarelawblog.co.uk/?format=feed&type=rss",
+      "website_url": "https://www.ukhealthcarelawblog.co.uk/",
+      "description": "Regular UK healthcare law updates by the Serjeants Inn Chambers Clinical Negligence and Healthcare team. Serjeants Inn is at the forefront of healthcare law. We are ranked as a top tier set for clinical negligence by the Legal 500 which describes us as a very professional set with a modern outlook, providing many skilled counsel with a wealth of knowledge on clinical negligence law.",
+      "followers": {
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4772077.jpg?t=1626267739"
+    },
+    {
+      "title": "Cat Storey",
+      "feed_url": "https://catstorey.com/feed/",
+      "website_url": "https://catstorey.com/",
+      "description": "UK running blog filled with fitness and food.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4852809.jpg?t=1607145880"
+    },
+    {
+      "title": "Evolve Your Health Personal Training Blog",
+      "feed_url": "https://evolveyourhealthpersonaltraining.com/feed/",
+      "website_url": "https://evolveyourhealthpersonaltraining.com/blog/",
+      "description": "A fun 1:1 mobile personal training and group fitness service in Edinburgh. I specialize in making exercise fun yet effective for those of you who feel stressed, are overweight or find the gym uncomfortable but want to make a change.",
+      "followers": {
+        "facebook": 57
+      },
+      "image_url": "https://i1.feedspot.com/5040744.jpg?t=1607145885"
+    },
+    {
+      "title": "The Wellness Hub Falmouth",
+      "feed_url": "https://www.inspiringhealth.org.uk/feed/",
+      "website_url": "https://trulygrounded.co.uk/blogs/guides",
+      "description": "Natural Health Blog covers articles on covid, insomnia, massage nutrition, sleep, stress management, women health and natural health.At Inspiring Health, our highly experienced team of natural health therapists have a wealth of knowledge and skill to help you reach your health goals.",
+      "followers": {
+        "facebook": 477,
+        "twitter": 121
+      },
+      "image_url": "https://i1.feedspot.com/4603686.jpg?t=1600758446"
+    }
+  ]
+}

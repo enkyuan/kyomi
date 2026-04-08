@@ -1,0 +1,60 @@
+{
+  "category": "Drip Irrigation",
+  "source_url": "https://rss.feedspot.com/drip_irrigation_rss_feeds",
+  "feeds": [
+    {
+      "title": "Smart Watering Blog",
+      "feed_url": "https://smart-watering.com/feed/",
+      "website_url": "https://smart-watering.com/blog/",
+      "description": "Smart Watering Solutions is founded in 2018. as the next step in developing the idea on which we are working from 2015. Our main activity is developing software and controller for smart irrigation. Our team is made of IT engineers and agricultural experts and is lead by the idea of making smart irrigation available to every fruit grower. Know more about irrigation systems, drip irrigation, advantages and more!",
+      "followers": {
+        "facebook": 3000,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5478849.jpg?t=1670911784"
+    },
+    {
+      "title": "DRTS Blog",
+      "feed_url": "https://drts.com/feed/",
+      "website_url": "https://drts.com/blog/",
+      "description": "Get the latest industry news & manufacturing trends for drip irrigation, pipe extrusion & leach mining on DRTS' continually updated blog. DRTS offers turnkey production lines for round, flat, thin-wall and thick-wall drip irrigation pipe as well as for PE, PVC, and PPR pipes. We also provide round and flat irrigation drippers and offer a range of heap leach mining project services.",
+      "followers": {
+        "facebook": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5048555.jpg?t=1610547750"
+    },
+    {
+      "title": "Responsive Drip Irrigation",
+      "feed_url": "https://www.responsivedrip.com/feed/",
+      "website_url": "https://www.responsivedrip.com/elementor-2648/",
+      "description": "RDI's plant-responsive technology delivers plant-by-plant precision, unmatched yield while drastically reducing water and fertilizer use. Stay up to date with the latest news and updates, projects, insights and more!",
+      "followers": {
+        "twitter": 350,
+        "instagram": 811
+      },
+      "image_url": "https://i1.feedspot.com/5478936.jpg?t=1670916658"
+    },
+    {
+      "title": "Southern Irrigation \u00bb Drip Irrigation",
+      "feed_url": "https://southernirrigation.com/category/drip-irrigation/feed/",
+      "website_url": "https://southernirrigation.com/category/drip-irrigation/",
+      "description": "Learn more about Southern Irrigation's drip irrigation technology. Southern Irrigation offers an inclusive line of water-related products for Agriculture, Landscape/Turf, Greenhouse/Nursery, Mining, Septic/Drainage, Municipal & Wastewater.",
+      "followers": {
+        "facebook": 2200,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5478934.jpg?t=1670916787"
+    },
+    {
+      "title": "DIG Corp Blog",
+      "feed_url": "https://www.digcorp.com/feed/",
+      "website_url": "https://www.digcorp.com/blog/",
+      "description": "The blog is a source for more information on drip irrigation, case studies, technology and more! DIG Corporation, a privately held company, was founded in 1981. The idea was to provide the commercial turf and the do-it-yourself retail marketplace a comprehensive line of low-volume irrigation products.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 866
+      },
+      "image_url": "https://i1.feedspot.com/5478935.jpg?t=1670916641"
+    }
+  ]
+}

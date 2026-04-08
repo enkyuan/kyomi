@@ -1,0 +1,388 @@
+{
+  "category": "Mexican News",
+  "source_url": "https://rss.feedspot.com/mexican_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mexico News Daily",
+      "feed_url": "https://mexiconewsdaily.com/feed/",
+      "website_url": "https://mexiconewsdaily.com/",
+      "description": "Mexico News Daily is the premier source of English-language news about Mexico. Our editors and writers synthesize information from Mexican newspapers and periodicals to bring you the day's most important news about the country's politics, economy, business, and security.",
+      "followers": {
+        "facebook": 47200,
+        "twitter": 5300,
+        "instagram": 29000
+      },
+      "image_url": "https://i1.feedspot.com/4780313.jpg?t=1512813073"
+    },
+    {
+      "title": "Exc\u00e9lsior",
+      "feed_url": "https://www.excelsior.com.mx/rss.xml",
+      "website_url": "https://www.excelsior.com.mx/",
+      "description": "The leading news portal in Mexico with all the national and world information, with the most impacting news.",
+      "followers": {
+        "facebook": 3600000,
+        "twitter": 2400000,
+        "instagram": 216700
+      },
+      "image_url": "https://i1.feedspot.com/4381919.jpg?t=1512811867"
+    },
+    {
+      "title": "Reforma",
+      "feed_url": "https://www.reforma.com/rss/portada.xml",
+      "website_url": "https://www.reforma.com/",
+      "description": "Con la red m\u00e1s extensa de periodistas profesionales cubriendo M\u00e9xico, REFORMA es la instituci\u00f3n informativa con m\u00e1s credibilidad y prestigio del Pa\u00eds.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 31300,
+        "instagram": 475900
+      },
+      "image_url": "https://i1.feedspot.com/61509.jpg?t=1512813033"
+    },
+    {
+      "title": "Vanguardia MX",
+      "feed_url": "https://vanguardia.com.mx/rss.xml",
+      "website_url": "https://vanguardia.com.mx/",
+      "description": "Encuentra la informaci\u00f3n y noticias mas relevantes y objetivas.",
+      "followers": {
+        "facebook": 545800,
+        "twitter": 215400,
+        "instagram": 103800
+      },
+      "image_url": "https://i1.feedspot.com/4781449.jpg?t=1512813041"
+    },
+    {
+      "title": "El Siglo de Torre\u00f3n",
+      "feed_url": "https://www.elsiglodetorreon.com.mx/index.xml",
+      "website_url": "https://www.elsiglodetorreon.com.mx/",
+      "description": "Peri\u00f3dico Regional. Defensor de la Comunidad Lagunera, noticias de Coahuila y Durango.",
+      "followers": {
+        "facebook": 811300,
+        "twitter": 188400,
+        "instagram": 62100
+      },
+      "image_url": "https://i1.feedspot.com/4781900.jpg?t=1512813051"
+    },
+    {
+      "title": "SinEmbargo",
+      "feed_url": "https://www.sinembargo.mx/feed/",
+      "website_url": "https://www.sinembargo.mx/",
+      "description": "Mexico's digital journalism with rigor.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 1700000,
+        "instagram": 167500
+      },
+      "image_url": "https://i1.feedspot.com/60402.jpg?t=1512812061"
+    },
+    {
+      "title": "EL NORTE",
+      "feed_url": "https://www.elnorte.com/rss/portada.xml",
+      "website_url": "https://www.elnorte.com/",
+      "description": "Cuenta oficial del Peri\u00f3dico EL NORTE de Grupo REFORMA.",
+      "followers": {
+        "facebook": 23,
+        "twitter": 1100000,
+        "instagram": 274500
+      },
+      "image_url": "https://i1.feedspot.com/759244.jpg?t=1512812199"
+    },
+    {
+      "title": "El Deforma",
+      "feed_url": "https://eldeforma.com/feed/",
+      "website_url": "https://eldeforma.com/",
+      "description": "Estamos dispuestos a inventar con tal de que te r\u00edas y a la vez somos muy honestos... Honestamente todo es mentira.",
+      "followers": {
+        "facebook": 5200000,
+        "twitter": 639600,
+        "instagram": 809700
+      },
+      "image_url": "https://i1.feedspot.com/2611333.jpg?t=1512812143"
+    },
+    {
+      "title": "Diario de Yucat\u00e1n",
+      "feed_url": "https://www.yucatan.com.mx/feed",
+      "website_url": "https://www.yucatan.com.mx/",
+      "description": "L\u00edder en informaci\u00f3n y noticias de la pen\u00ednsula. El Diario de Yucat\u00e1n ofrece las noticias del peri\u00f3dico diario, gran informaci\u00f3n tur\u00edstica e informaci\u00f3n arqueol\u00f3gica.",
+      "followers": {
+        "facebook": 920200,
+        "twitter": 325800,
+        "instagram": 112000
+      },
+      "image_url": "https://i1.feedspot.com/3503682.jpg?t=1512812501"
+    },
+    {
+      "title": "El Informador",
+      "feed_url": "https://www.informador.mx/rss/mexico.xml",
+      "website_url": "https://www.informador.mx/",
+      "description": "Noticias en tiempo real de Guadalajara, Jalisco, M\u00e9xico, Internacional, Entretenimiento y Deportes.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 674200,
+        "instagram": 152100
+      },
+      "image_url": "https://i1.feedspot.com/4781083.jpg?t=1512812592"
+    },
+    {
+      "title": "24 Horas",
+      "feed_url": "https://24-horas.mx/feed/",
+      "website_url": "https://24-horas.mx/",
+      "description": "El primer peri\u00f3dico impreso sin costo, con informaci\u00f3n propia y de primera mano que tambi\u00e9n se puede consultar v\u00eda web",
+      "followers": {
+        "facebook": 2300000,
+        "twitter": 376600,
+        "instagram": 43800
+      },
+      "image_url": "https://i1.feedspot.com/3007972.jpg?t=1734087874"
+    },
+    {
+      "title": "MURAL",
+      "feed_url": "https://www.mural.com.mx/rss/portada.xml",
+      "website_url": "https://www.mural.com.mx/",
+      "description": "Con la red m\u00e1s extensa de periodistas profesionales cubriendo M\u00e9xico, Grupo Reforma es la instituci\u00f3n informativa con m\u00e1s credibilidad y prestigio del Pa\u00eds.",
+      "followers": {
+        "facebook": 209800,
+        "twitter": 13800,
+        "instagram": 34600
+      },
+      "image_url": "https://i1.feedspot.com/759280.jpg?t=1512812662"
+    },
+    {
+      "title": "Diario Basta",
+      "feed_url": "https://diariobasta.com/feed/",
+      "website_url": "https://diariobasta.com/",
+      "description": "El peri\u00f3dico digital de la Ciudad de M\u00e9xico: pol\u00edtica, columnistas, espect\u00e1culos, deportes, chismes, noticias y clasificados.",
+      "followers": {
+        "facebook": 81100,
+        "twitter": 88400
+      },
+      "image_url": "https://i1.feedspot.com/4784987.jpg?t=1512812679"
+    },
+    {
+      "title": "The Yucatan Times",
+      "feed_url": "https://theyucatantimes.com/feed/",
+      "website_url": "https://www.theyucatantimes.com/",
+      "description": "News you can rely on for the Yucatan Peninsula & Mexico.We are an organization of communication, news and entertainment, focused on the English speaking market, that seeks world class content offering the reader the most complete information.",
+      "followers": {
+        "facebook": 18300,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/303242.jpg?t=1512715165"
+    },
+    {
+      "title": "8 Columnas",
+      "feed_url": "https://8columnas.com.mx/feed/",
+      "website_url": "https://8columnas.com.mx/",
+      "description": "8 Columnas is a morning newspaper published in its own workshops, located in the capital of the State of Mexico.",
+      "followers": {
+        "facebook": 132
+      },
+      "image_url": "https://i1.feedspot.com/4784886.jpg?t=1512812878"
+    },
+    {
+      "title": "Expreso Chiapas",
+      "feed_url": "http://expresochiapas.com/noticias/feed/",
+      "website_url": "http://expresochiapas.com/noticias/",
+      "description": "Un Periodico Chiapaneco",
+      "followers": {
+        "facebook": 31000,
+        "twitter": 1400,
+        "instagram": 641
+      },
+      "image_url": "https://i1.feedspot.com/4784897.jpg?t=1512812843"
+    },
+    {
+      "title": "Capital Quer\u00e9taro",
+      "feed_url": "https://www.capitalqueretaro.com.mx/category/nacional/feed/",
+      "website_url": "https://www.capitalqueretaro.com.mx/",
+      "description": "Fuente de informaci\u00f3n con noticias estatales, capitalinas, de municipios, universidades, cultura, deportes, ecolog\u00eda y mucho m\u00e1s que se publica de lunes a viernes en un formato innovador y conciso.",
+      "followers": {
+        "facebook": 13000,
+        "twitter": 16700
+      },
+      "image_url": "https://i1.feedspot.com/4782258.jpg?t=1512812821"
+    },
+    {
+      "title": "Grupo Metr\u00f3poli",
+      "feed_url": "https://grupometropoli.net/feed/",
+      "website_url": "https://grupometropoli.net/",
+      "description": "Daily newspaper in some parts of mexican countries.",
+      "followers": {
+        "facebook": 12700,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4782239.jpg?t=1512796740"
+    },
+    {
+      "title": "Mexico Today",
+      "feed_url": "https://mexicotoday.com/feed/",
+      "website_url": "https://mexicotoday.com/",
+      "description": "Mexico Today is the top English source for news about Mexico. Mexico Today is brought to you by Reforma, Mexico's leading & most trusted news organization",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 7400
+      },
+      "image_url": "https://i1.feedspot.com/7327508.jpg?t=1721721724"
+    },
+    {
+      "title": "The News",
+      "feed_url": "https://www.thenews.mx/feed/",
+      "website_url": "https://www.thenews.mx/",
+      "description": "The News Mexico covers a broad range of topics, including the latest news from Mexico and around the world. It features sections on world news, business, lifestyle, science, sports, and entertainment. The site offers up-to-date reports, insightful articles, and multimedia content to keep readers well-informed about current events and trends.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 9600
+      },
+      "image_url": "https://i1.feedspot.com/7327507.jpg?t=1721721719"
+    },
+    {
+      "title": "Novedades de Campeche",
+      "feed_url": "https://www.novedadescampeche.com.mx/feed/",
+      "website_url": "https://www.novedadescampeche.com.mx/",
+      "description": "News from Campeche, Mexico, the newspaper of the Campeche family. 44 years of reporting with truthfulness, honesty and values.",
+      "followers": {
+        "facebook": 56200
+      },
+      "image_url": "https://i1.feedspot.com/4784923.jpg?t=1512812477"
+    },
+    {
+      "title": "NAI Mexico",
+      "feed_url": "https://naimexico.com/feed/",
+      "website_url": "https://naimexico.com/news/",
+      "description": "NAI Mexico specializes in leasing, sales and construction project management in Mexican industrial, office and retail property markets.",
+      "followers": {
+        "facebook": 494,
+        "twitter": 489
+      },
+      "image_url": "https://i1.feedspot.com/4781837.jpg?t=1512796763"
+    },
+    {
+      "title": "EL FINANCIERO",
+      "feed_url": "https://www.elfinanciero.com.mx/rss",
+      "website_url": "https://www.elfinanciero.com.mx/",
+      "description": "EL FINANCIERO is the leading newspaper specializing in finance, economics and business in Mexico, born in October 1981.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1900000
+      },
+      "image_url": "https://i1.feedspot.com/4706788.jpg?t=1512548435"
+    },
+    {
+      "title": "SDP Noticias",
+      "feed_url": "https://feeds.sdpnoticias.com/portal/all",
+      "website_url": "https://www.sdpnoticias.com/",
+      "description": "Mexico's most read digital newspaper.",
+      "followers": {
+        "facebook": 6000000,
+        "twitter": 12,
+        "instagram": 502200
+      },
+      "image_url": "https://i1.feedspot.com/4781919.jpg?t=1512812048"
+    },
+    {
+      "title": "Publimetro",
+      "feed_url": "https://www.publimetro.com.mx/",
+      "website_url": "https://www.publimetro.com.mx/",
+      "description": "The largest newspaper in the world in its Mexican edition.",
+      "followers": {
+        "facebook": 3500000,
+        "twitter": 745200,
+        "instagram": 179900
+      },
+      "image_url": "https://i1.feedspot.com/4781165.jpg?t=1512812074"
+    },
+    {
+      "title": "El Imparcial de Oaxaca",
+      "feed_url": "https://imparcialoaxaca.mx/feed/",
+      "website_url": "https://imparcialoaxaca.mx/",
+      "description": "Find the most important news in OAXACA, Mexico and the World. The Best Diary of Oaxaca.",
+      "followers": {
+        "facebook": 2,
+        "twitter": 150300,
+        "instagram": 41900
+      },
+      "image_url": "https://i1.feedspot.com/4781367.jpg?t=1512812353"
+    },
+    {
+      "title": "Plaza Juarez",
+      "feed_url": "https://plazajuarez.mx/feed/",
+      "website_url": "https://plazajuarez.mx/",
+      "description": "Plaza Juarez newspaper is a purely democratic means of communication, which gives voice to all social sectors. Our mission is to inform truthfully and timely about the most important events of our State and our country, in the search for a more prosperous and just Nation.",
+      "followers": {
+        "facebook": 25600,
+        "twitter": 17900,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4782269.jpg?t=1512812920"
+    },
+    {
+      "title": "El Debate",
+      "feed_url": "https://www.debate.com.mx/rss/feed.xml",
+      "website_url": "https://www.debate.com.mx/usa/",
+      "description": "Noticias de \u00faltima hora, v\u00eddeos, reportajes, opini\u00f3n y tendencias en redes sociales. Historias, pol\u00edtica, econom\u00eda, tecnolog\u00eda, deportes, polic\u00edaca y show.",
+      "followers": {
+        "facebook": 7900000,
+        "twitter": 199000,
+        "instagram": 295100
+      },
+      "image_url": "https://i1.feedspot.com/4780303.jpg?t=1512847531"
+    },
+    {
+      "title": "La Raz\u00f3n de M\u00e9xico",
+      "feed_url": "https://www.razon.com.mx/rss/feed.xml",
+      "website_url": "https://www.razon.com.mx/",
+      "description": "Hoy la informaci\u00f3n te cae de todas partes y sin pedirla... Aqu\u00ed te damos las noticias m\u00e1s importantes, las que m\u00e1s te interesan y como a ti te gusta.",
+      "followers": {
+        "facebook": 230700,
+        "twitter": 158500,
+        "instagram": 90100
+      },
+      "image_url": "https://i1.feedspot.com/4785004.jpg?t=1512813088"
+    },
+    {
+      "title": "La Jornada",
+      "feed_url": "https://www.jornada.com.mx/",
+      "website_url": "https://www.jornada.com.mx/",
+      "description": "Empresa productora de medios y radiodifusi\u00f3n en Ciudad de M\u00e9xico. Cuenta con un archivo disponible desde 1995.",
+      "followers": {
+        "facebook": 3400000,
+        "twitter": 2800000
+      },
+      "image_url": "https://i1.feedspot.com/4781175.jpg?t=1512813123"
+    },
+    {
+      "title": "El Diario",
+      "feed_url": "https://diario.mx/jrz/media/sitemaps/rss.xml",
+      "website_url": "https://diario.mx/",
+      "description": "El Diario de Ciudad Ju rez: International digital news edition in Spanish from Mexico. With information on Politics, Entertainment, Economy, Health, News, National and International News and the most important events of the world minute by minute.",
+      "followers": {
+        "facebook": 970900,
+        "twitter": 99000
+      },
+      "image_url": "https://i1.feedspot.com/4781994.jpg?t=1512812023"
+    },
+    {
+      "title": "Radio F\u00f3rmula \u00bb CDMX",
+      "feed_url": "https://www.radioformula.com.mx/read/portadas/nacional.rss",
+      "website_url": "https://www.radioformula.com.mx/cdmx/",
+      "description": "Radio Formula - El mejor sitio de la Radio en Mexico",
+      "followers": {
+        "facebook": 3300000,
+        "twitter": 998200,
+        "instagram": 551700
+      },
+      "image_url": "https://i1.feedspot.com/2014428.jpg?t=1512812180"
+    },
+    {
+      "title": "Presencia.MX",
+      "feed_url": "https://www.presencia.mx/default.aspx",
+      "website_url": "https://www.presencia.mx/default.aspx",
+      "description": "Portal de noticias en tiempo real con toda la informaci\u00f3n del Estado de Veracruz, M\u00e9xico y el mundo.",
+      "followers": {
+        "facebook": 148300,
+        "twitter": 6100,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4784928.jpg?t=1512897289"
+    }
+  ]
+}

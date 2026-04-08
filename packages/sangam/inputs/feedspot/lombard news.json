@@ -1,0 +1,28 @@
+{
+  "category": "Lombard News",
+  "source_url": "https://rss.feedspot.com/lombard_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Village of Lombard, IL",
+      "feed_url": "https://www.villageoflombard.org/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.villageoflombard.org/CivicAlerts.aspx",
+      "description": "Get the latest news, updates, information, community events and important announcements from the official website of Lombard, IL.",
+      "followers": {
+        "facebook": 19100,
+        "twitter": 4600,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5150318.jpg?t=1589433242"
+    },
+    {
+      "title": "The Independent Newspapers \u00bb Lombard",
+      "feed_url": "https://theindependentnewspapers.com/category/lombard-news/feed/",
+      "website_url": "https://theindependentnewspapers.com/category/lombard-news/",
+      "description": "Get the latest local and breaking news, information, events and everything that matters to you in Lombard, IL by following this feed.",
+      "followers": {
+        "facebook": 593
+      },
+      "image_url": "https://i1.feedspot.com/5150319.jpg?t=1589433774"
+    }
+  ]
+}

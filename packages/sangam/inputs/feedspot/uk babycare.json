@@ -1,0 +1,63 @@
+{
+  "category": "UK Babycare",
+  "source_url": "https://rss.feedspot.com/uk_babycare_rss_feeds",
+  "feeds": [
+    {
+      "title": "Parenta Blog",
+      "feed_url": "https://www.parenta.com/feed/",
+      "website_url": "https://www.parenta.com/parentablog/",
+      "description": "Parenta provide childcare qualifications and apprenticeships for early years providers, as well as management software, websites and fee collection. Over the years, we've worked with thousands of childcare providers; giving them the tools and support they need to focus on providing great childcare.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 2600,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4688107.jpg?t=1619010215"
+    },
+    {
+      "title": "A Baby on Board",
+      "feed_url": "https://www.ababyonboard.com/feed/",
+      "website_url": "https://www.ababyonboard.com/",
+      "description": "A Baby on Board is a London mum blog for the parenting journey. Gill is a freelance digital consultant, editor and writer of this blog. It covers articles all about pregnancy, motherhood and life in London.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 6200,
+        "instagram": 9700
+      },
+      "image_url": "https://i1.feedspot.com/64332.jpg?t=1608614239"
+    },
+    {
+      "title": "Bubble",
+      "feed_url": "https://joinbubble.com/feed",
+      "website_url": "https://joinbubble.com/babysitter-guides",
+      "description": "If you've ever been stuck for brilliant ideas to keep kids entertained, either as a parent, nanny or babysitter, here are some incredible ideas.",
+      "followers": {
+        "facebook": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4684697.jpg?t=1618820450"
+    },
+    {
+      "title": "BabyCentre",
+      "feed_url": "https://feeds.feedburner.com/babycentre/blog",
+      "website_url": "https://www.babycentre.co.uk/baby",
+      "description": "BabyCentre is the most complete online resource for new and expectant parents featuring resources such as unique baby names, newborn baby care and baby development stages.",
+      "followers": {
+        "facebook": 974400,
+        "twitter": 17800,
+        "instagram": 214600
+      },
+      "image_url": "https://i1.feedspot.com/4611079.jpg?t=1615801357"
+    },
+    {
+      "title": "Tinies",
+      "feed_url": "https://www.tinies.com/news/feed.rss/",
+      "website_url": "https://www.tinies.com/resources/",
+      "description": "Tinies is the UK's leading childcare company and nanny agency network. We aim to answer parents questions, set their mind at ease, and help them make some difficult decisions.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/4911203.jpg?t=1620119953"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "category": "Idaho Conservative",
+  "source_url": "https://rss.feedspot.com/idaho_conservative_rss_feeds",
+  "feeds": [
+    {
+      "title": "Bonneville County Republican Party Blog",
+      "feed_url": "https://www.bonnevillegop.com/blog-feed.xml",
+      "website_url": "https://www.bonnevillegop.com/blog",
+      "description": "A truly conservative Idaho Republican county organization located in Bonneville County, Idaho. The BCRCC promotes the Republican Platform.",
+      "followers": {
+        "facebook": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5741680.jpg?t=1703237383"
+    },
+    {
+      "title": "Idaho Freedom PAC Blog",
+      "feed_url": "https://idahofreedompac.com/feed/",
+      "website_url": "https://idahofreedompac.com/blog/",
+      "description": "Idaho Freedom PAC were founded in 2021 to combat the growing power of wealthy special interest groups in the Idaho Statehouse. We, a group of conservative Idahoans, aim to protect the Idaho way of life, and protect the value we hold dear. Together, we will hold politicians to their word and reignite the flame of liberty in the Gem State.",
+      "followers": {
+        "facebook": 546
+      },
+      "image_url": "https://i1.feedspot.com/5741684.jpg?t=1705661925"
+    },
+    {
+      "title": "Clayton Cramer",
+      "feed_url": "https://claytonecramer.blogspot.com/feeds/posts/default",
+      "website_url": "https://claytonecramer.blogspot.com/search/label/Idaho%20politics",
+      "description": "Conservative. Idaho. Software engineer. Historian. Trying to prevent Idiocracy from becoming a documentary.Email complaints/requests about copyright infringement to clayton @ claytoncramer.com. Reminder: the last copyright troll that bothered me went bankrupt.'And we know that all things work together for good to them that love God, to them who are the called according to his purpose.' -- Rom. 8:28",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5759615.jpg?t=1705925210"
+    },
+    {
+      "title": "Chenele Dixon for State Representative Blog",
+      "feed_url": "https://dixonforidaho.com/feed/",
+      "description": "Conservative Republican Chenele Dixon will ensure your values are fought for and protected.The blog shares information about Chenele Dixon as a state representative, their political view, current state policies, general news, updates and more.",
+      "followers": {
+        "facebook": 968
+      },
+      "image_url": "https://i1.feedspot.com/5741683.jpg?t=1703237362"
+    }
+  ]
+}

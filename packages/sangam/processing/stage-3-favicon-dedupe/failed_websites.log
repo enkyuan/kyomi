@@ -1,0 +1,967 @@
+2025-12-09 14:46:09,440 - Failed to download image https://i1.feedspot.com/8802000.jpg?t=1763156777: HTTP 403 (Feed: https://www.lawofattractionlab.com/blogs/)
+2025-12-09 14:46:09,445 - Falling back to domain favicon for https://www.lawofattractionlab.com/blogs/
+2025-12-09 14:46:13,105 - Download exception for https://s3-us-west-2.amazonaws.coinfo@toli-s-landscaping.co.ukm/feedspotfeed/7269027.jpg?t=1709814159: Cannot connect to host toli-s-landscaping.co.ukm:443 ssl:default [Name or service not known]
+2025-12-09 14:46:13,105 - Falling back to domain favicon for https://www.toli-s-landscaping.co.uk/blog
+2025-12-09 14:46:16,873 - Failed to download image https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=//2.bp.blogspot.com/-7r-y9T66Fuo/U-twc341jOI/AAAAAAAASmY/-wEkkv30kYE/s113/*&container=blogger&gadget=a&rewriteMime=image/*: HTTP 404 (Feed: https://kathysquilts.blogspot.com/)
+2025-12-09 14:46:16,903 - Falling back to domain favicon for https://kathysquilts.blogspot.com/
+2025-12-09 14:46:18,579 - Failed to download image https://s3-us-west-2.amazonaws.com/feedspotfehttps://www.pittsburghgarage.com/contact-us/ed/5676740.jpg?t=1695377397: HTTP 400 (Feed: https://pittsburghgarage.com/news/)
+2025-12-09 14:46:18,579 - Falling back to domain favicon for https://pittsburghgarage.com/news/
+2025-12-09 14:46:23,668 - Failed to download image https://graph.facebook.com/halalbbqpitmasters/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77?t=1681889832: HTTP 400 (Feed: https://halalbbqpitmasters.com/blogs/recipes)
+2025-12-09 14:46:23,672 - Falling back to domain favicon for https://halalbbqpitmasters.com/blogs/recipes
+2025-12-09 14:46:34,440 - Failed to download image https://graph.facebook.com/people/samantha-healing-slice/61558022097206/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77: HTTP 400 (Feed: https://healingslice.com/category/sourdough/)
+2025-12-09 14:46:34,442 - Falling back to domain favicon for https://healingslice.com/category/sourdough/
+2025-12-09 14:46:45,135 - Failed to download image https://pbs.twimg.com/profile_images/1552962038397288449/QJwmOiT1.jpg: HTTP 404 (Feed: https://musicforthemisfits.com/tag/punk/)
+2025-12-09 14:46:45,138 - Falling back to domain favicon for https://musicforthemisfits.com/tag/punk/
+2025-12-09 14:46:49,027 - Failed to download image https://graph.facebook.com/PaulaMuran/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77?t=1707218559: HTTP 400 (Feed: https://www.kumarainstitute.com/blog-2/)
+2025-12-09 14:46:49,035 - Falling back to domain favicon for https://www.kumarainstitute.com/blog-2/
+2025-12-09 14:47:30,208 - Corrupted or unsupported image in save for 394e9c73f8a9ba4ec515b51f4838eb63. Content snippet: '<!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> <link rel="icon" type="image/png" href="https://s.imgur.com/images/fa'
+2025-12-09 14:48:23,683 - Corrupted or unsupported image in save for e06c791396d6e04491bacbb678f16081. Content snippet: '<!doctype html> <html lang=en> <head> <meta charset=utf-8> <meta name=viewport content="width=device-width,initial-scale=1"> <link rel=icon type=image/png href=https://s.imgur.com/images/favicon-32x32'
+2025-12-09 14:48:29,497 - Corrupted or unsupported image in save for d07e2949bdaa7a349390083b62fe6eb6. Content snippet: '<!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> <link rel="icon" type="image/png" href="https://s.imgur.com/images/fa'
+2025-12-09 14:48:45,412 - Failed to download image https://inspirience.es/wp-content/uploads/2021/03/inspierence-1.png?t=1711108342: HTTP 404 (Feed: https://inspirience.es/lugar/madrid/)
+2025-12-09 14:48:45,461 - Falling back to domain favicon for https://inspirience.es/lugar/madrid/
+2025-12-09 14:48:55,398 - Corrupted or unsupported image in save for 31e789d8e99547697dc8ba336639917a. Content snippet: '<!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> <link rel="icon" type="image/png" href="https://s.imgur.com/images/fa'
+2025-12-09 14:48:59,395 - Failed to download image https://www.thatmutt.com/web/wp-content/uploads/2021/01/TM_StraightIcon_sm.png.webp?t=1695896676: HTTP 404 (Feed: https://www.thatmutt.com/)
+2025-12-09 14:48:59,395 - Falling back to domain favicon for https://www.thatmutt.com/
+2025-12-09 14:49:09,833 - Download exception for ?t=1669278569: ?t=1669278569
+2025-12-09 14:49:09,834 - Falling back to domain favicon for https://freeupsc.org/blog/
+2025-12-09 14:49:10,710 - Failed to download image https://scontent.fpnq13-3.fna.fbcdn.net/v/t39.30808-6/272269608_5151030234930220_9090382482035993503_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=URRM0XrPoBgAX_ApEfT&_nc_ht=scontent.fpnq13-3.fna&oh=00_AfD6zr1VDHymT90cH8Im0V4Z-ZFsbOO2O9U785oPffSj-g&oe=: HTTP 403 (Feed: https://forumias.com/blog/)
+2025-12-09 14:49:10,720 - Falling back to domain favicon for https://forumias.com/blog/
+2025-12-09 14:49:18,564 - Corrupted or unsupported image in save for e886197a77d3e2314daa85720da5f104. Content snippet: '<!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> <link rel="icon" type="image/png" href="https://s.imgur.com/images/fa'
+2025-12-09 14:49:22,915 - Failed to download image https://s3-us-west-2.amazonaws.com/feedhttps://abbtx.com/contactspotfeed/5607726.jpg?t=1687765104: HTTP 400 (Feed: https://abbtx.com/blog)
+2025-12-09 14:49:22,916 - Falling back to domain favicon for https://abbtx.com/blog
+2025-12-09 14:49:29,283 - Failed to download image https://i1.feedspot.com/8663348.jpg?t=1756144118: HTTP 403 (Feed: https://biol326.wordpress.com/)
+2025-12-09 14:49:29,283 - Falling back to domain favicon for https://biol326.wordpress.com/
+2025-12-09 14:49:36,901 - Failed to download image https://pbs.twimg.com/profile_images/1497133149532217345/Ef8jgtGu.jpg: HTTP 404 (Feed: https://mmatorch.com/)
+2025-12-09 14:49:36,911 - Falling back to domain favicon for https://mmatorch.com/
+2025-12-09 14:49:37,115 - Corrupted or unsupported image in save for f2a6d863580df3a24789a5f6ee141432. Content snippet: '<!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> <link rel="icon" type="image/png" href="https://s.imgur.com/images/fa'
+2025-12-09 14:49:40,200 - Download exception for ?t=1687162052: ?t=1687162052
+2025-12-09 14:49:40,201 - Falling back to domain favicon for https://vordermagazine.com/
+2025-12-09 14:49:42,481 - Falling back to domain favicon for https://www.recipetineats.com/category/burger-recipes/
+2025-12-09 14:49:50,025 - Download exception for https://i.ibb.co/m5x1WPwr/Screenshot-2025-07-31-154110.png: 
+2025-12-09 14:49:50,026 - Falling back to domain favicon for https://atlasmarinesystems.com/blog/
+2025-12-09 14:49:53,274 - Download exception for ?t=1752475213: ?t=1752475213
+2025-12-09 14:49:53,275 - Falling back to domain favicon for https://engineering.electrical-equipment.org/
+2025-12-09 14:49:55,317 - Failed to download image https://graph.facebook.com/sastatiles/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77?t=1676269596: HTTP 400 (Feed: https://www.sastatiles.com/)
+2025-12-09 14:49:55,324 - Falling back to domain favicon for https://www.sastatiles.com/
+2025-12-09 14:50:07,699 - Failed to download image https://graph.facebook.com/mark.boudreau.39/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77: HTTP 400 (Feed: https://www.motorsportprospects.com/blog/)
+2025-12-09 14:50:07,699 - Falling back to domain favicon for https://www.motorsportprospects.com/blog/
+2025-12-09 14:50:27,656 - Failed to download image https://chatgpt.com/backend-api/estuary/content?id=file-N7KMmBRS71C5cFHgRFb9bY&ts=486821&p=fs&cid=1&sig=d59cf83058a1f484ba43e079ed3127c7aec902516afdaddd9ae1a7cd8b250c0d?t=1752558872: HTTP 403 (Feed: https://scatteredthoughtsandroguewords.com/)
+2025-12-09 14:50:27,657 - Falling back to domain favicon for https://scatteredthoughtsandroguewords.com/
+2025-12-09 14:50:31,228 - Failed to download image https://graph.facebook.com/landscapelightingguru/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77?t=1699954459: HTTP 400 (Feed: https://landscapelightingguru.com/blog/)
+2025-12-09 14:50:31,263 - Falling back to domain favicon for https://landscapelightingguru.com/blog/
+2025-12-09 14:50:31,302 - Failed to download image https://graph.facebook.com/Kings-Outdoor-Lighting-Store-2173453166054790/?modal=admin_todo_tour/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77?t=1699954803: HTTP 400 (Feed: https://kingsoutdoorlighting.com/blogs/news)
+2025-12-09 14:50:31,323 - Falling back to domain favicon for https://kingsoutdoorlighting.com/blogs/news
+2025-12-09 14:50:49,368 - Failed to download image https://files.oaiusercontent.com/file-TYXRHjQCNQQQ5mPGb2nuWT?se=2025-07-04T06%3A58%3A19Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D299%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D173f44cd-97ab-42d9-ad54-7243cc8c0ab2.png&sig=IUeikYh3exihIW6ER8: HTTP 403 (Feed: http://deepak-indianhistory.blogspot.com/)
+2025-12-09 14:50:49,371 - Falling back to domain favicon for http://deepak-indianhistory.blogspot.com/
+2025-12-09 14:50:55,369 - Corrupted or unsupported image in save for acd0b189c7d767df1d74a08ac34db315. Content snippet: '<!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> <link rel="icon" type="image/png" href="https://s.imgur.com/images/fa'
+2025-12-09 14:50:55,845 - Download exception for https://scontent.fbom3-5.fna.fbcdn.net/v/t39.30808-6/327196815_566797605326609_2558312716232383533_n.png?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=6mP58qJmZncQ7kNvwGtHw6S&_nc_oc=AdmX5jG7trWsFMxAkLoI-jufn98_9yOE_0BBQRDy-JM5gU_CFi4oP9X6eUJv64XhI3M3SMXv5l2l: Cannot connect to host scontent.fbom3-5.fna.fbcdn.net:443 ssl:default [Network is unreachable]
+2025-12-09 14:50:55,845 - Falling back to domain favicon for https://www.drupal.org/planet
+2025-12-09 14:50:57,720 - Corrupted or unsupported image in save for 440f4253e8bed3280170337f9cb01e50. Content snippet: '<!doctype html> <html lang=en> <head> <meta charset=utf-8> <meta name=viewport content="width=device-width,initial-scale=1"> <link rel=icon type=image/png href=https://s.imgur.com/images/favicon-32x32'
+2025-12-09 14:51:00,292 - Failed to download image https://graph.facebook.com/suzannewinterly/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77: HTTP 400 (Feed: https://www.suzannewinterly.com/blog/category/mystery/)
+2025-12-09 14:51:00,293 - Falling back to domain favicon for https://www.suzannewinterly.com/blog/category/mystery/
+2025-12-09 14:51:01,725 - Failed to download image https://i1.feedspot.com/8836686.jpg: HTTP 403 (Feed: https://brisbanelandrover.com.au/land-rover-blogs/)
+2025-12-09 14:51:01,727 - Falling back to domain favicon for https://brisbanelandrover.com.au/land-rover-blogs/
+2025-12-09 14:51:03,527 - Download exception for https://scontent.fbom3-3.fna.fbcdn.net/v/t39.30808-6/465863898_9169835396381241_5749372241978309787_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=y69mmVdZ2BcQ7kNvwHs-GKm&_nc_oc=AdklsPZnUPB0mA1B7k3jj8433vXoD7TPdIwipxolxxV8S2vyA76qJqhM7WTvfzHmhm2NyK3v_FePq: Cannot connect to host scontent.fbom3-3.fna.fbcdn.net:443 ssl:default [Network is unreachable]
+2025-12-09 14:51:03,527 - Falling back to domain favicon for https://crepprotect.com/blogs/crepdaily/
+2025-12-09 14:51:04,830 - Failed to download image https://lansingchiropractor.org/wp-content/uploads/Delta-Chiropractic-Center-Logo.webp: HTTP 404 (Feed: https://www.lansingchiropractor.org/blog/)
+2025-12-09 14:51:04,830 - Falling back to domain favicon for https://www.lansingchiropractor.org/blog/
+2025-12-09 14:51:09,599 - Failed to download image https://www.digitlhaus.com/contact/https://i1.feedspot.com/5701308.jpg?t=1698753913: HTTP 404 (Feed: https://www.digitlhaus.com/blog/)
+2025-12-09 14:51:09,653 - Falling back to domain favicon for https://www.digitlhaus.com/blog/
+2025-12-09 14:51:20,830 - Failed to download image https://divorceattorneyatweston.com/contact/https://i1.feedspot.com/5696201.jpg?t=1698148787: HTTP 404 (Feed: https://divorceattorneyatweston.com/knowledge-base/)
+2025-12-09 14:51:20,882 - Falling back to domain favicon for https://divorceattorneyatweston.com/knowledge-base/
+2025-12-09 14:51:23,847 - Download exception for ?t=1675325003: ?t=1675325003
+2025-12-09 14:51:23,847 - Falling back to domain favicon for https://www.aep-emu.de/
+2025-12-09 14:51:24,185 - Download exception for ?t=1675326329: ?t=1675326329
+2025-12-09 14:51:24,185 - Falling back to domain favicon for https://dolphin-emu.org/blog/
+2025-12-09 14:51:30,053 - Corrupted or unsupported image in save for f266092b2cb02e52ee6fa4587a3eac55. Content snippet: '<!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> <link rel="icon" type="image/png" href="https://s.imgur.com/images/fa'
+2025-12-09 14:51:35,409 - Failed to download image https://i1.feedspot.com/8757350.jpg?t=1760126378: HTTP 403 (Feed: https://www.meditation-research.org.uk/blog/)
+2025-12-09 14:51:35,411 - Falling back to domain favicon for https://www.meditation-research.org.uk/blog/
+2025-12-09 14:51:39,577 - Corrupted or unsupported image in save for 6e02a27c6fab7cd0ffc3bba867a68770. Content snippet: '<!doctype html> <html lang=en> <head> <meta charset=utf-8> <meta name=viewport content="width=device-width,initial-scale=1"> <link rel=icon type=image/png href=https://s.imgur.com/images/favicon-32x32'
+2025-12-09 14:51:53,016 - Failed to download image https://graph.facebook.com/tipplaAU/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77?t=1695299319: HTTP 400 (Feed: https://www.tippla.com.au/category/credit-scores/)
+2025-12-09 14:51:53,017 - Falling back to domain favicon for https://www.tippla.com.au/category/credit-scores/
+2025-12-09 14:51:55,088 - Download exception for https://i.postimg.cc/y6bjQdrr/image.png?t=1752667340: 
+2025-12-09 14:51:55,088 - Falling back to domain favicon for https://fictionfanblog.wordpress.com/
+2025-12-09 14:51:56,285 - Failed to download image https://graph.facebook.com/events/1085334726762834/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77: HTTP 400 (Feed: https://www.soundsofoz.com/)
+2025-12-09 14:51:56,286 - Falling back to domain favicon for https://www.soundsofoz.com/
+2025-12-09 14:51:59,388 - Failed to download image https://graph.facebook.com/fonz.tramontano/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77: HTTP 400 (Feed: https://www.fonztramontano.com/blog/)
+2025-12-09 14:51:59,407 - Falling back to domain favicon for https://www.fonztramontano.com/blog/
+2025-12-09 14:52:18,015 - Failed to download image https://graph.facebook.com/people/Saera-Golf-Cart/100091537241509/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77?t=1717412743: HTTP 400 (Feed: https://saeragolfcart.com/blog/)
+2025-12-09 14:52:18,047 - Falling back to domain favicon for https://saeragolfcart.com/blog/
+2025-12-09 14:52:18,195 - Failed to download image https://graph.facebook.com/golfcartfactory/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77?t=1717407259: HTTP 400 (Feed: https://golfcartfactory.com/blog-news/)
+2025-12-09 14:52:18,199 - Falling back to domain favicon for https://golfcartfactory.com/blog-news/
+2025-12-09 14:52:31,414 - Failed to download image https://graph.facebook.com/events/24709987875316654/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77: HTTP 400 (Feed: https://popcultblog.com/)
+2025-12-09 14:52:31,419 - Falling back to domain favicon for https://popcultblog.com/
+2025-12-09 14:52:32,092 - Failed to download image https://i1.feedspot.com/5https://weareavalon.love/contact586599.jpg?t=1685522872: HTTP 403 (Feed: https://weareavalon.love/blog)
+2025-12-09 14:52:32,121 - Falling back to domain favicon for https://weareavalon.love/blog
+2025-12-09 14:52:32,481 - Failed to download image https://storage.buzzsprout.com/variants/ifbj5oeh8ooen529a1hnutzo48rl/60854458c4d1acdf4e1c2f79c4137142d85d78e379bdafbd69bd34c85f5819ad.jpg: HTTP 403 (Feed: https://altpoprepeat.com/)
+2025-12-09 14:52:32,511 - Falling back to domain favicon for https://altpoprepeat.com/
+2025-12-09 14:52:45,821 - Failed to download image https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=//1.bp.blogspot.com/-AXWHuK7qx9s/TbBYrqcsIJI/AAAAAAAABrY/zM5i6B0mD5A/s113/IMG_2196-red.jpg&container=blogger&gadget=a&rewriteMime=image/*: HTTP 404 (Feed: https://estilofilos.blogspot.com/)
+2025-12-09 14:52:45,823 - Falling back to domain favicon for https://estilofilos.blogspot.com/
+2025-12-09 14:52:49,561 - Failed to download image https://graph.facebook.com/marthastarotreading/?ref=bookmarks/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77: HTTP 400 (Feed: https://www.marthastarot.com/blog-1/)
+2025-12-09 14:52:49,569 - Falling back to domain favicon for https://www.marthastarot.com/blog-1/
+2025-12-09 14:52:57,832 - Download exception for https://s3-us-west-2.amazonaws.co%20from%20/feedspotfeed/5067833.jpg?t=1611206300: Cannot connect to host s3-us-west-2.amazonaws.co%20from%20:443 ssl:default [Name or service not known]
+2025-12-09 14:52:57,832 - Falling back to domain favicon for https://www.cnbc.com/technology/
+2025-12-09 14:53:00,189 - Download exception for https://s3-us-west-2.amazonaws.cohttps://www.kgphotoworkshops.com/blog/contact-kevin/m/feedspotfeed/5685338.jpg?t=1696835006: Cannot connect to host s3-us-west-2.amazonaws.cohttps:443 ssl:default [Name or service not known]
+2025-12-09 14:53:00,190 - Falling back to domain favicon for https://www.kgphotoworkshops.com/blog/
+2025-12-09 14:53:00,598 - Download exception for https://s3-us-west-2.amazonaws.ctheclaimsquad@gmail.comom/feedspotfeed/5550309.jpg?t=1682425593: Cannot connect to host gmail.comom:443 ssl:default [Name or service not known]
+2025-12-09 14:53:00,598 - Falling back to domain favicon for https://theclaimsquad.com/blog/
+2025-12-09 14:53:00,883 - Failed to download image https://s3-us-west-2.amazonaws.com/publicadjuster100@feedspot.comfeedspotfeed/5550310.jpg?t=1682425754: HTTP 400 (Feed: https://www.getpaidforyourclaim.com/blog/)
+2025-12-09 14:53:00,890 - Falling back to domain favicon for https://www.getpaidforyourclaim.com/blog/
+2025-12-09 14:53:07,632 - Failed to download image https://i1.feedspot.com/8837142.jpg?t=1764850122: HTTP 403 (Feed: https://masterassignmentwriter.com/blog/)
+2025-12-09 14:53:07,634 - Falling back to domain favicon for https://masterassignmentwriter.com/blog/
+2025-12-09 14:53:14,503 - Failed to download image https://graph.facebook.com/American-Academy-of-HIV-Medicine/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77?t=1643776733: HTTP 400 (Feed: https://aahivm.org/blog/)
+2025-12-09 14:53:14,503 - Falling back to domain favicon for https://aahivm.org/blog/
+2025-12-09 14:53:18,464 - Failed to download image https://pbs.twimg.com/profile_images/1932423785585446912/7zxVLCmH.jpg: HTTP 404 (Feed: https://www.tennismajors.com/)
+2025-12-09 14:53:18,466 - Falling back to domain favicon for https://www.tennismajors.com/
+2025-12-09 14:53:19,426 - Failed to download image https://i1.feedspot.com/5531027.jpg?t=1680250830: HTTP 403 (Feed: https://injurywisconsin.com/blog/)
+2025-12-09 14:53:19,449 - Falling back to domain favicon for https://injurywisconsin.com/blog/
+2025-12-09 14:53:20,608 - Failed to download image https://graph.facebook.com/AZmusicdance/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77?t=1694091296: HTTP 400 (Feed: https://www.ensembleschools.com/music-dance-academy/blog/)
+2025-12-09 14:53:20,639 - Falling back to domain favicon for https://www.ensembleschools.com/music-dance-academy/blog/
+2025-12-09 14:53:30,237 - Failed to download image https://graph.facebook.com/tengaglobal/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77: HTTP 400 (Feed: https://usstore.tenga.co/blogs/category_sex-education/)
+2025-12-09 14:53:30,239 - Falling back to domain favicon for https://usstore.tenga.co/blogs/category_sex-education/
+2025-12-09 14:53:31,645 - Corrupted or unsupported image in save for c8ceb5b2c7b2c1873c3d7c13b598685f. Content snippet: '<!doctype html>\n<html lang="en-US" prefix="og: https://ogp.me/ns#">\n<head>\n\t<meta name="google-site-verification" content="mHeEan4dKv08KyXU-9v6j0KC5Fowtiwn9ZUoFriqNL4" />\n\t<meta charset="UTF-8">\n\t<met'
+2025-12-09 14:53:39,454 - Failed to download image https://i1.feedspot.com/8790268.jpg: HTTP 403 (Feed: https://submitfreepr.com/)
+2025-12-09 14:53:39,462 - Falling back to domain favicon for https://submitfreepr.com/
+2025-12-09 14:53:39,532 - Failed to download image https://i1.feedspot.com/8790237.jpg?t=1762341603: HTTP 403 (Feed: https://www.worldpressrelease.org/)
+2025-12-09 14:53:39,533 - Falling back to domain favicon for https://www.worldpressrelease.org/
+2025-12-09 14:53:42,321 - Failed to download image https://vaycaycouple.com/wp-content/uploads/2023/03/LogoMakr-9dD8ma-150x150.png?t=1698650457: HTTP 404 (Feed: https://vaycaycouple.com/category/blog/)
+2025-12-09 14:53:42,332 - Falling back to domain favicon for https://vaycaycouple.com/category/blog/
+2025-12-09 14:53:49,059 - Failed to download image https://www.orthokau.com/wp-content/uploads/2023/04/Favicon-150x150.ico?t=1692356345: HTTP 404 (Feed: https://orthokau.com/media/)
+2025-12-09 14:53:49,059 - Falling back to domain favicon for https://orthokau.com/media/
+2025-12-09 14:53:52,018 - Download exception for https://i.ibb.co/VcxNx44L/Screenshot-2025-07-03-110012.png?t=1753082345: 
+2025-12-09 14:53:52,018 - Falling back to domain favicon for https://ipwatch.live/our-iptv-blog/
+2025-12-09 14:53:52,543 - Failed to download image https://graph.facebook.com/MommyLocalSpots/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77?t=1676269486: HTTP 400 (Feed: https://mommylocalspots.com/services/)
+2025-12-09 14:53:52,544 - Falling back to domain favicon for https://mommylocalspots.com/services/
+2025-12-09 14:53:53,816 - Download exception for ?t=1714040107: ?t=1714040107
+2025-12-09 14:53:53,816 - Falling back to domain favicon for http://lesleyannemcleod.blogspot.com/
+2025-12-09 14:54:04,792 - Download exception for https://i1.feedspot.comhttps://bordersbeekeepers.org/contact-us/5568801.jpg?t=1684730152: Cannot connect to host i1.feedspot.comhttps:443 ssl:default [Name or service not known]
+2025-12-09 14:54:04,792 - Falling back to domain favicon for https://bordersbeekeepers.org/news
+2025-12-09 14:54:06,413 - Failed to download image https://i1.feedspot.com/5327168.jpg?t=1633072945: HTTP 503 (Feed: https://paisleyandsparrow.com/)
+2025-12-09 14:54:06,419 - Falling back to domain favicon for https://paisleyandsparrow.com/
+2025-12-09 14:54:06,590 - Failed to download image https://lemonnadesac.com/southsac/wp-content/uploads/2020/07/cropped-lmnade_logo-66x66.png?t=1713244431: HTTP 404 (Feed: https://lemonnadesac.com/blog/)
+2025-12-09 14:54:06,594 - Falling back to domain favicon for https://lemonnadesac.com/blog/
+2025-12-09 14:54:09,617 - Failed to download image https://graph.facebook.com/marketplace/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77?t=1686644728: HTTP 400 (Feed: https://www.noradarealestate.com/blog/category/passive-income/)
+2025-12-09 14:54:09,618 - Falling back to domain favicon for https://www.noradarealestate.com/blog/category/passive-income/
+2025-12-09 14:54:24,967 - Failed to download image https://scontent.fbom3-2.fna.fbcdn.net/v/t39.30808-6/522977012_1311349107660761_4774857350614732826_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=HCe-KBSO2Y0Q7kNvwFGgEe-&_nc_oc=AdmO1Kz9S6VyRq3gioUXr7iUmNhsSTCE845kfsE52EzVDhdNZczQclYuiKPoJkflRO6aUWYVVSO: HTTP 403 (Feed: https://harvsautobody.com/blog/)
+2025-12-09 14:54:24,968 - Falling back to domain favicon for https://harvsautobody.com/blog/
+2025-12-09 14:54:26,052 - Failed to download image https://graph.facebook.com/fan.stanbrough/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77?t=1698045070: HTTP 400 (Feed: https://bbdsdesign.com/blog/)
+2025-12-09 14:54:26,065 - Falling back to domain favicon for https://bbdsdesign.com/blog/
+2025-12-09 14:54:29,749 - Failed to download image https://omnifloor.ae/wp-content/uploads/2023/10/cropped-fav-icon-32x32.png?t=1707821527: HTTP 404 (Feed: https://omnifloor.ae/blogs/)
+2025-12-09 14:54:29,750 - Falling back to domain favicon for https://omnifloor.ae/blogs/
+2025-12-09 14:54:32,145 - Failed to download image https://files.slack.com/files-tmb/TB6UTRRQF-F09GA3UMM17-a7f55011c9/mic_mag_-_circle_transparent_480.png?t=1758198890: HTTP 404 (Feed: https://www.themicmg.com/mag)
+2025-12-09 14:54:32,153 - Falling back to domain favicon for https://www.themicmg.com/mag
+2025-12-09 14:54:48,038 - Failed to download image https://graph.facebook.com/carley.benazzi/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77: HTTP 400 (Feed: https://carleybenazzi.com/)
+2025-12-09 14:54:48,039 - Falling back to domain favicon for https://carleybenazzi.com/
+2025-12-09 14:55:04,186 - Failed to download image https://i1.feedspot.com/8663671.jpg: HTTP 403 (Feed: https://eatdrinkfilms.com/category/parody/)
+2025-12-09 14:55:04,197 - Falling back to domain favicon for https://eatdrinkfilms.com/category/parody/
+2025-12-09 14:55:10,014 - Download exception for https://i.postimg.cc/B6k9Vh3d/image.png?t=1764658984: 
+2025-12-09 14:55:10,014 - Falling back to domain favicon for https://harpinonrugby.blog/
+2025-12-09 14:55:24,674 - Failed to download image https://i1.feedspot.com/8530373.jpg: HTTP 403 (Feed: https://thealtpath.net/witchcraft-blog/)
+2025-12-09 14:55:24,691 - Falling back to domain favicon for https://thealtpath.net/witchcraft-blog/
+2025-12-09 14:55:28,798 - Failed to download image https://skinnerfirm.com/wp-content/uploads/2020/02/favicon.ico?t=1680246035: HTTP 404 (Feed: https://skinnerfirm.com/blog/)
+2025-12-09 14:55:28,806 - Falling back to domain favicon for https://skinnerfirm.com/blog/
+2025-12-09 14:55:55,270 - Failed to download image https://graph.facebook.com/woodburyspinemn/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77: HTTP 400 (Feed: https://www.woodburymnchiropractor.com/blog/)
+2025-12-09 14:55:55,334 - Falling back to domain favicon for https://www.woodburymnchiropractor.com/blog/
+2025-12-09 14:55:55,507 - Failed to download image https://graph.facebook.com/healthharmonyuk/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77: HTTP 400 (Feed: https://www.healthharmony.uk/blog/)
+2025-12-09 14:55:55,508 - Falling back to domain favicon for https://www.healthharmony.uk/blog/
+2025-12-09 14:55:55,628 - Failed to download image https://graph.facebook.com/mariposamassagemt/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77: HTTP 400 (Feed: https://www.mariposamassagemontana.com/blog/)
+2025-12-09 14:55:55,634 - Falling back to domain favicon for https://www.mariposamassagemontana.com/blog/
+2025-12-09 14:55:56,198 - Failed to download image https://i1.feedspot.com/8803067.jpg?t=1763166810: HTTP 403 (Feed: https://joeypress.wordpress.com/)
+2025-12-09 14:55:56,267 - Falling back to domain favicon for https://joeypress.wordpress.com/
+2025-12-09 14:55:58,538 - Failed to download image https://gahmusa.org/wp-content/themes/yootheme/cache/13/GAHF-logo-300dpi_TIFF-1-e1645741522315-13adcacc.webp?t=1678271044: HTTP 404 (Feed: https://gahmusa.org/blog/)
+2025-12-09 14:55:58,539 - Falling back to domain favicon for https://gahmusa.org/blog/
+2025-12-09 14:56:05,649 - Failed to download image https://graph.facebook.com/cutiepieandme/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77: HTTP 400 (Feed: https://www.storiesfromthesewingroom.com/)
+2025-12-09 14:56:05,651 - Falling back to domain favicon for https://www.storiesfromthesewingroom.com/
+2025-12-09 14:56:05,714 - Failed to download image https://pbs.twimg.com/profile_images/639958412579606528/96IhtFl-.jpg: HTTP 404 (Feed: https://www.thesewingroomalameda.com/fashion-studies-blog/)
+2025-12-09 14:56:05,744 - Falling back to domain favicon for https://www.thesewingroomalameda.com/fashion-studies-blog/
+2025-12-09 14:56:19,048 - Failed to download image https://www.balticbroadband.com/wp-content/uploads/2022/05/trest-1.png?t=1659446246: HTTP 404 (Feed: https://www.balticbroadband.com/blog/)
+2025-12-09 14:56:19,053 - Falling back to domain favicon for https://www.balticbroadband.com/blog/
+2025-12-09 14:56:21,277 - Failed to download image https://chatgpt.com/backend-api/estuary/content?id=file-MtwVhfW2GzZEJNtcZ7vAFG&ts=486796&p=fs&cid=1&sig=cc785cecdd9ec2ee8c19e8dbf131c9a14cc0a4f1039c73c5655c8bfaf63f21b1?t=1752468353: HTTP 403 (Feed: https://musicreporterblog.com/category/music-festival-2/)
+2025-12-09 14:56:21,277 - Falling back to domain favicon for https://musicreporterblog.com/category/music-festival-2/
+2025-12-09 14:56:30,431 - Failed to download image https://graph.facebook.com/bedfordbaptistca?fref=ts/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77: HTTP 400 (Feed: https://www.bedfordbaptist.ca/blog/)
+2025-12-09 14:56:30,448 - Failed to download image https://graph.facebook.com/blake.barbera.5/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77: HTTP 400 (Feed: https://www.thatyoumayknowhim.com/blog/)
+2025-12-09 14:56:30,449 - Falling back to domain favicon for https://www.bedfordbaptist.ca/blog/
+2025-12-09 14:56:30,473 - Falling back to domain favicon for https://www.thatyoumayknowhim.com/blog/
+2025-12-09 14:56:41,795 - Failed to download image https://graph.facebook.com/accurateairac/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77?t=1696327295: HTTP 400 (Feed: https://accurateairac.com/tips/)
+2025-12-09 14:56:41,796 - Falling back to domain favicon for https://accurateairac.com/tips/
+2025-12-09 14:56:56,035 - Download exception for https://i.postimg.cc/zDhgMBHd/image.png: 
+2025-12-09 14:56:56,035 - Falling back to domain favicon for https://birdjayreads.wordpress.com/
+2025-12-09 14:57:02,756 - Failed to download image https://rapidruling.com/wp-content/uploads/graphic-design.png: HTTP 404 (Feed: https://rapidruling.com/blog/)
+2025-12-09 14:57:02,778 - Falling back to domain favicon for https://rapidruling.com/blog/
+2025-12-09 14:57:04,209 - Failed to download image https://pbs.twimg.com/profile_images/1887523429068242944/MdPCt0aQ.png: HTTP 404 (Feed: https://aws.amazon.com/blogs/dotnet/)
+2025-12-09 14:57:04,210 - Falling back to domain favicon for https://aws.amazon.com/blogs/dotnet/
+2025-12-09 14:57:07,260 - Failed to download image https://npr.brightspotcdn.com/dims4/default/231a1e3/2147483647/strip/true/crop/4500x2189+0+0/resize/494x240!/format/webp/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F80%2F1c%2F0fce3b02418c82c306c00ecedff4%2Fhpr-logo-final-hi-res.png?t=17: HTTP 400 (Feed: https://www.hawaiipublicradio.org/culture-arts)
+2025-12-09 14:57:07,263 - Falling back to domain favicon for https://www.hawaiipublicradio.org/culture-arts
+2025-12-09 14:57:10,032 - Download exception for https://i.postimg.cc/dtSk2SMj/Screenshot-2025-11-05-131846.png: 
+2025-12-09 14:57:10,032 - Falling back to domain favicon for http://learningfrommymistakesenglish.blogspot.com/
+2025-12-09 14:57:11,408 - Failed to download image https://graph.facebook.com/totmorganic/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77: HTTP 400 (Feed: https://www.totm.com/)
+2025-12-09 14:57:11,409 - Falling back to domain favicon for https://www.totm.com/
+2025-12-09 14:57:11,704 - Failed to download image https://i1.feedspot.com/8803319.jpg?t=1763168076: HTTP 403 (Feed: https://independentfilmartsacademy.com/blog/)
+2025-12-09 14:57:11,708 - Falling back to domain favicon for https://independentfilmartsacademy.com/blog/
+2025-12-09 14:57:11,716 - Failed to download image https://i1.feedspot.com/8803316.jpg?t=1763168068: HTTP 403 (Feed: https://jarrodreviews.blog/category/independent-films/)
+2025-12-09 14:57:11,717 - Falling back to domain favicon for https://jarrodreviews.blog/category/independent-films/
+2025-12-09 14:57:13,863 - Failed to download image https://benzoil.com.au/wp-content/webp-express/webp-images/uploads/2017/08/logo-web.png.webp?t=1688724822: HTTP 404 (Feed: https://benzoil.com.au/blog/)
+2025-12-09 14:57:13,863 - Falling back to domain favicon for https://benzoil.com.au/blog/
+2025-12-09 14:57:21,351 - Download exception for ?t=1691753140: ?t=1691753140
+2025-12-09 14:57:21,352 - Falling back to domain favicon for https://www.edealinfo.com/
+2025-12-09 14:57:21,447 - Download exception for ?t=1692011714: ?t=1692011714
+2025-12-09 14:57:21,448 - Falling back to domain favicon for https://www.spoofee.com/
+2025-12-09 14:57:21,727 - Download exception for ?t=1691748392: ?t=1691748392
+2025-12-09 14:57:21,728 - Falling back to domain favicon for https://www.dansdeals.com/
+2025-12-09 14:57:21,875 - Download exception for ?t=1692011768: ?t=1692011768
+2025-12-09 14:57:21,875 - Falling back to domain favicon for http://www.dealsofamerica.com/
+2025-12-09 14:57:24,014 - Download exception for https://i.postimg.cc/YqFwypny/image.png: 
+2025-12-09 14:57:24,014 - Falling back to domain favicon for https://petesblog.uk/tag/narrowboat/
+2025-12-09 14:57:25,675 - Failed to download image https://pbs.twimg.com/profile_images/647735713291702272/Rk3hpMSA.png: HTTP 404 (Feed: https://midlifeinstyle.com/)
+2025-12-09 14:57:25,681 - Falling back to domain favicon for https://midlifeinstyle.com/
+2025-12-09 14:57:26,825 - Failed to download image https://files.slack.com/files-tmb/TB6UTRRQF-F09LP31QHAL-194e65271d/jwfk_logo2023_whitesquare_720.jpg?t=1760101244: HTTP 404 (Feed: https://www.justkidslit.com/blog/)
+2025-12-09 14:57:26,829 - Falling back to domain favicon for https://www.justkidslit.com/blog/
+2025-12-09 14:57:28,617 - Failed to download image https://s3-us-west-2.amazonaws.com/fehttps://mollybrucephotography.com/contact/#goto-4a4e5e7d-e5d6-4ca1-8682-70e4765d971eedspotfeed/5697405.jpg?t=1698239409: HTTP 400 (Feed: https://mollybrucephotography.com/blog/)
+2025-12-09 14:57:28,625 - Falling back to domain favicon for https://mollybrucephotography.com/blog/
+2025-12-09 14:57:32,950 - Failed to download image https://i1.feedspot.com/5448103.jpg?t=1663742494: HTTP 502 (Feed: https://filmstillsacademy.com/blog/)
+2025-12-09 14:57:32,980 - Falling back to domain favicon for https://filmstillsacademy.com/blog/
+2025-12-09 14:58:01,313 - Download exception for data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAQ4CAIAAABjcvvYAAAQAElEQVR4Aez9h38cR5L3DUZkVlV3w4MEvfeeopFEkRQpMzNrZkea2X3sPe97d597/7e7%209z73r3u2Z2Znd3xTt57UqQsKXoDoLurKjPjflkNgA6UQNGgAUQpOjorK03kN7MKEZUAZVZuP6iiBJSAElACSkAJKAEloASUgBLoKgKG9FACSuABE9Dml: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAQ4CAIAAABjcvvYAAAQAElEQVR4Aez9h38cR5L3DUZkVlV3w4MEvfeeopFEkRQpMzNrZkea2X3sPe97d597/7e7%209z73r3u2Z2Znd3xTt57UqQsKXoDoLurKjPjflkNgA6UQNGgAUQpOjorK03kN7MKEZUAZVZuP6iiBJSAElACSkAJKAEloASUgBLoKgKG9FACSuABE9Dml
+2025-12-09 14:58:01,313 - Falling back to domain favicon for https://indie-under-rated.com/
+2025-12-09 14:58:05,795 - Failed to download image https://www.rethinkmathteacher.com/wp-content/uploads/2020/03/book-cover-3D-678x381.jpg?t=1755519740: HTTP 403 (Feed: https://www.rethinkmathteacher.com/math-teacher-blog/)
+2025-12-09 14:58:05,795 - Falling back to domain favicon for https://www.rethinkmathteacher.com/math-teacher-blog/
+2025-12-09 14:58:28,954 - Failed to download image https://pbs.twimg.com/profile_images/1552962038397288449/QJwmOiT1.jpg: HTTP 404 (Feed: https://musicforthemisfits.com/)
+2025-12-09 14:58:28,961 - Falling back to domain favicon for https://musicforthemisfits.com/
+2025-12-09 14:58:31,914 - Failed to download image https://i1.feedspot.com/8665152.jpg: HTTP 403 (Feed: https://www.fashion.org.au/fashion/)
+2025-12-09 14:58:31,923 - Falling back to domain favicon for https://www.fashion.org.au/fashion/
+2025-12-09 14:58:33,450 - Failed to download image https://welovepets.care/wp-content/uploads/2021/09/favicon-100x100.png?t=1681733603: HTTP 404 (Feed: https://welovepets.care/blog/)
+2025-12-09 14:58:33,493 - Falling back to domain favicon for https://welovepets.care/blog/
+2025-12-09 14:58:45,981 - Corrupted or unsupported image in save for ca803ed33e1ac1b20de22f40fb1679ec. Content snippet: '<!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> <link rel="icon" type="image/png" href="https://s.imgur.com/images/fa'
+2025-12-09 14:58:52,653 - Failed to download image https://1stamericanplumbing.com/new/wp-content/uploads/2020/09/1st-American-Plumbing-Logo-1.png2020-300x132-1.png?t=1713795676: HTTP 404 (Feed: https://1stamericanplumbing.com/news-media/#/media-room/)
+2025-12-09 14:58:52,654 - Falling back to domain favicon for https://1stamericanplumbing.com/news-media/#/media-room/
+2025-12-09 14:58:59,808 - Failed to download image https://s3-us-west-2.amazonaws.com/feedsptfeed/5565921.jpg?t=1683893601: HTTP 404 (Feed: https://eileenanddogs.com/)
+2025-12-09 14:58:59,813 - Falling back to domain favicon for https://eileenanddogs.com/
+2025-12-09 14:59:13,526 - Download exception for https://s3-us-west-2.amazonadianarodriguezdmd@gmail.comws.com/feedspotfeed/5742066.jpg?t=1703581009: Cannot connect to host gmail.comws.com:443 ssl:default [[SSL: TLSV1_UNRECOGNIZED_NAME] tlsv1 unrecognized name (_ssl.c:1032)]
+2025-12-09 14:59:13,526 - Falling back to domain favicon for https://unioncityminidentalimplants.com/blog/
+2025-12-09 14:59:14,587 - Download exception for https://s3-us-west-2.amazonaws.comhttps://corvusjanitorial.com/contact//feedspotfeed/5655519.jpg?t=1692854508: Cannot connect to host s3-us-west-2.amazonaws.comhttps:443 ssl:default [Name or service not known]
+2025-12-09 14:59:14,587 - Falling back to domain favicon for https://corvusjanitorial.com/blog/
+2025-12-09 14:59:18,757 - Failed to download image https://i1.feedspot.com/8663498.jpg: HTTP 403 (Feed: https://lowendmac.com/category/news/mac-news-today/)
+2025-12-09 14:59:18,790 - Falling back to domain favicon for https://lowendmac.com/category/news/mac-news-today/
+2025-12-09 14:59:19,662 - Corrupted or unsupported image in save for a0901d1fc93ccf56ca34204149c41ce8. Content snippet: 'We cannot complete this request, remote data could not be fetched'
+2025-12-09 14:59:23,872 - Failed to download image https://graph.facebook.com/people/30A-Smiles/100037418426286/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77?t=1696344297: HTTP 400 (Feed: https://www.30asmiles.com/blog/)
+2025-12-09 14:59:23,877 - Falling back to domain favicon for https://www.30asmiles.com/blog/
+2025-12-09 14:59:32,073 - Download exception for https://s3-us-west-2.https://scontent.fpnq15-1.fna.fbcdn.net/v/t39.30808-1/296704870_450244520447201_5829382584702170137_n.jpg?stp=c20.20.440.440a_dst-jpg_p480x480&_nc_cat=106&ccb=1-7&_nc_sid=c6021c&_nc_ohc=JI77GR_B4JgAX_moAJm&_nc_ht=scontent.fpnq15-1.fna: Cannot connect to host s3-us-west-2.https:443 ssl:default [Name or service not known]
+2025-12-09 14:59:32,073 - Falling back to domain favicon for https://johnscreeksymphony.org/posts/
+2025-12-09 14:59:41,235 - Failed to download image https://graph.facebook.com/owlrepairksu/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77: HTTP 400 (Feed: https://owlrepairs.com/iphone-tips/)
+2025-12-09 14:59:41,249 - Failed to download image https://graph.facebook.com/shopify/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77: HTTP 400 (Feed: https://casebx.com/blogs/tips/)
+2025-12-09 14:59:41,254 - Falling back to domain favicon for https://owlrepairs.com/iphone-tips/
+2025-12-09 14:59:41,262 - Falling back to domain favicon for https://casebx.com/blogs/tips/
+2025-12-09 14:59:43,017 - Failed to download image https://i1.feedspot.com/8810504.jpg?t=1763815841: HTTP 403 (Feed: https://nigeladamsbookworm.com/category/true-crime/)
+2025-12-09 14:59:43,044 - Falling back to domain favicon for https://nigeladamsbookworm.com/category/true-crime/
+2025-12-09 14:59:50,153 - Failed to download image https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=//4.bp.blogspot.com/-1rr2jOMPP6c/VcDmrZgM6cI/AAAAAAAAW5o/dEA_08IXQzs/s151/UL_09-02-2012_01.JPG&container=blogger&gadget=a&rewriteMime=image/*?t=1679047966: HTTP 404 (Feed: https://mandarvichar.blogspot.com/)
+2025-12-09 14:59:50,165 - Falling back to domain favicon for https://mandarvichar.blogspot.com/
+2025-12-09 14:59:56,676 - Failed to download image https://graph.facebook.com/groups/saintemmelia/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77: HTTP 400 (Feed: https://www.saintemmelia.com/blog/)
+2025-12-09 14:59:56,677 - Falling back to domain favicon for https://www.saintemmelia.com/blog/
+2025-12-09 14:59:59,876 - Download exception for data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZoAAAB7CAMAAAB6t7bCAAAAyVBMVEX////jBhMAAADiAADjAA/72dvlGiTzmZ7+9/jiAAfpQ0zn5+c6OjrujY/Ly8v6+vrt7e3Z2dnS0tIdHR33vcAzMzNQUFBmZmYVFRXExMSCgoL84eP09PTf398NDQ3whYqlpaWNjY0lJSVVVVW2trZFRUV1dXVUVFShoaGYmJhvb28rKyv97: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZoAAAB7CAMAAAB6t7bCAAAAyVBMVEX////jBhMAAADiAADjAA/72dvlGiTzmZ7+9/jiAAfpQ0zn5+c6OjrujY/Ly8v6+vrt7e3Z2dnS0tIdHR33vcAzMzNQUFBmZmYVFRXExMSCgoL84eP09PTf398NDQ3whYqlpaWNjY0lJSVVVVW2trZFRUV1dXVUVFShoaGYmJhvb28rKyv97
+2025-12-09 14:59:59,876 - Falling back to domain favicon for https://www.abecogroup.ca/blog/
+2025-12-09 15:00:01,646 - Failed to download image https://s3-us-west-2.amazonaws.com/feedsinfo@theartgallery.compotfeed/7280100.jpg?t=1711094520: HTTP 400 (Feed: https://www.theartgallery.es/blog/)
+2025-12-09 15:00:01,648 - Falling back to domain favicon for https://www.theartgallery.es/blog/
+2025-12-09 15:00:17,572 - Failed to download image https://graph.facebook.com/Silverstonecarrental/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77?t=1682676676: HTTP 400 (Feed: https://www.rentluxurycars.ae/blog/)
+2025-12-09 15:00:17,573 - Falling back to domain favicon for https://www.rentluxurycars.ae/blog/
+2025-12-09 15:00:17,640 - Download exception for https://scontent.fbom3-3.fna.fbcdn.net/v/t1.6435-9/162227476_206925214551756_1315894251686593464_n.jpg?stp=dst-jpg_tt6&cstp=mx512x512&ctp=s512x512&_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=VMPCkiXHgSoQ7kNvwEiBjMd&_nc_oc=AdmOrIUHSFKHkDQTTPDAfNJ6-byH4yOfzw: Cannot connect to host scontent.fbom3-3.fna.fbcdn.net:443 ssl:default [Network is unreachable]
+2025-12-09 15:00:17,640 - Falling back to domain favicon for https://kalimba.co.za/blog/
+2025-12-09 15:00:34,235 - Corrupted or unsupported image in save for 9c965b2421f65c34802065de95ac189b. Content snippet: '<!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> <link rel="icon" type="image/png" href="https://s.imgur.com/images/fa'
+2025-12-09 15:00:35,069 - Download exception for https://i.postimg.cc/VLpksCzf/image.png: 
+2025-12-09 15:00:35,069 - Falling back to domain favicon for https://thesstudioonline.com/blogs/news/
+2025-12-09 15:00:35,073 - Download exception for https://i.postimg.cc/7LQBjw38/image.png?t=1764082578: 
+2025-12-09 15:00:35,073 - Falling back to domain favicon for https://sareegharjaipur.com/blog/
+2025-12-09 15:00:40,161 - Failed to download image https://graph.facebook.com/Hybrid_HR-111515221570197/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77?t=1687431986: HTTP 400 (Feed: https://hybrid-hr.co.uk/news/)
+2025-12-09 15:00:40,164 - Falling back to domain favicon for https://hybrid-hr.co.uk/news/
+2025-12-09 15:00:52,612 - Download exception for https://scontent.fbom3-3.fna.fbcdn.net/v/t39.30808-6/280971545_10160025736149464_4676333415240159656_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=sQovUrIK79QQ7kNvwH-vZkY&_nc_oc=AdkwbmIv0-xR0TRIMbKuGHnirAm70y7joIbPrD5HlkvaHmDaurfFdzh6mqBBYFdZdoaSQZy5vc: Cannot connect to host scontent.fbom3-3.fna.fbcdn.net:443 ssl:default [Network is unreachable]
+2025-12-09 15:00:52,613 - Falling back to domain favicon for https://www.psypost.org/exclusive/drugs/
+2025-12-09 15:01:02,576 - Failed to download image https://i1.feedspot.com/8832658.jpg: HTTP 403 (Feed: https://facefrontblog.com/)
+2025-12-09 15:01:02,591 - Failed to download image https://i1.feedspot.com/8832654.jpg: HTTP 403 (Feed: https://filmbuzzr.com/category/comic/marvel/)
+2025-12-09 15:01:02,595 - Falling back to domain favicon for https://facefrontblog.com/
+2025-12-09 15:01:02,645 - Falling back to domain favicon for https://filmbuzzr.com/category/comic/marvel/
+2025-12-09 15:01:08,173 - Failed to download image https://chatgpt.com/backend-api/estuary/content?id=file-7AMexuMtLchi3Cxc8EieRm&ts=487191&p=fsns&cid=1&sig=9942a37fff4aedc42f5247e973c864039d0ca342c4a960289abbdabc9772c0fd: HTTP 403 (Feed: https://www.nighty.ma/)
+2025-12-09 15:01:08,177 - Falling back to domain favicon for https://www.nighty.ma/
+2025-12-09 15:01:25,440 - Failed to download image https://s3-us-west-2.amazonaws.com/feedspothttps://www.modularrealms.com/pages/contact-useed/5741614.jpg?t=1703236585: HTTP 400 (Feed: https://www.modularrealms.com/blogs/news)
+2025-12-09 15:01:25,440 - Falling back to domain favicon for https://www.modularrealms.com/blogs/news
+2025-12-09 15:01:27,461 - Failed to download image https://i1.feedspot.com/7117490.jpg: HTTP 403 (Feed: https://fashiontalks.ca/blog/)
+2025-12-09 15:01:27,461 - Falling back to domain favicon for https://fashiontalks.ca/blog/
+2025-12-09 15:01:35,315 - Download exception for https://scontent.fbom3-3.fna.fbcdn.net/v/t39.30808-6/220161528_4237096189647100_6322112942302645884_n.png?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Jng4u6PMVXAQ7kNvwEQxFC7&_nc_oc=Adml1zmdaywvuzPKrra504RPYFG0ZarfL4MO_9ohbVWe2rg_qLFxnG5lkYtJyi-Uf0E9srf0OrB: Cannot connect to host scontent.fbom3-3.fna.fbcdn.net:443 ssl:default [Network is unreachable]
+2025-12-09 15:01:35,315 - Falling back to domain favicon for https://makimo.com/blog/
+2025-12-09 15:01:55,987 - Failed to download image https://vidadentalcoralgables.com/wp-content/uploads/2019/03/vida-dental-2x.png?t=1704804150: HTTP 404 (Feed: https://vidadentalcoralgables.com/blog/)
+2025-12-09 15:01:56,021 - Falling back to domain favicon for https://vidadentalcoralgables.com/blog/
+2025-12-09 15:02:03,828 - Download exception for ?t=1699592432: ?t=1699592432
+2025-12-09 15:02:03,829 - Falling back to domain favicon for https://maptitude1.tumblr.com/
+2025-12-09 15:02:15,642 - Download exception for https://s3-uThe%20Grey%20Elfs-west-2.amazonaws.com/feedspotfeed/4002366.jpg?t=1682636285: Cannot connect to host s3-uthe%20grey%20elfs-west-2.amazonaws.com:443 ssl:default [Name or service not known]
+2025-12-09 15:02:15,642 - Falling back to domain favicon for https://wastedlandsfantasy.blogspot.com/
+2025-12-09 15:02:25,031 - Download exception for https://i.postimg.cc/6qBG0Gyj/image.png: 
+2025-12-09 15:02:25,031 - Falling back to domain favicon for https://sadika.in/blogs/sarees-blog/
+2025-12-09 15:02:32,015 - Download exception for https://i.postimg.cc/Cxpp6HFw/image.png: 
+2025-12-09 15:02:32,015 - Falling back to domain favicon for https://sareevibes.in/blog/
+2025-12-09 15:03:13,170 - Failed to download image https://www.goodreads.com/images/layout/goodreads_logo_144.jpg: HTTP 404 (Feed: https://www.goodreads.com/)
+2025-12-09 15:03:13,171 - Falling back to domain favicon for https://www.goodreads.com/
+2025-12-09 15:03:24,353 - No image URL found after extraction for https://olu.online/
+2025-12-09 15:03:25,135 - No image URL found after extraction for https://webcurios.co.uk/
+2025-12-09 15:03:25,199 - Failed to download image https://static.bbci.co.uk/travel/1.5.2/img/feed_logo.gif: HTTP 404 (Feed: https://www.bbc.com/)
+2025-12-09 15:03:25,201 - Falling back to domain favicon for https://www.bbc.com/
+2025-12-09 15:03:41,930 - Corrupted or unsupported image in save for 2f84f5584a7774a36e88ade3a55c6020. Content snippet: '<!DOCTYPE html>\n<html lang="es">\n    <head>\n        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\n                    <meta name="viewport" content="width=device-width,user-sca'
+2025-12-09 15:03:54,215 - Failed to download image http://www.theimpulsivebuy.com/podcasts/cover.jpg: HTTP 404 (Feed: https://www.theimpulsivebuy.com/)
+2025-12-09 15:03:54,215 - Falling back to domain favicon for https://www.theimpulsivebuy.com/
+2025-12-09 15:04:04,990 - Failed to download image http://cdn.trendhunterstatic.com/TrendHunterLogo120x30.gif: HTTP 404 (Feed: http://www.trendhunter.com/)
+2025-12-09 15:04:04,991 - Falling back to domain favicon for http://www.trendhunter.com/
+2025-12-09 15:04:22,915 - Failed to download image https://sia.codes/img/favicons/rss_144x144.png: HTTP 404 (Feed: https://sia.codes/)
+2025-12-09 15:04:22,916 - Falling back to domain favicon for https://sia.codes/
+2025-12-09 15:05:02,544 - No image URL found after extraction for https://lincolnmullen.com/
+2025-12-09 15:05:18,888 - Download exception for https://sidebar.ioimg/favicon.png: Cannot connect to host sidebar.ioimg:443 ssl:default [Name or service not known]
+2025-12-09 15:05:18,888 - Falling back to domain favicon for https://www.fastcompany.com/
+2025-12-09 15:05:27,606 - Failed to download image https://sspai.me/wp-content/uploads/2025/11/sspailogo-150x150.png: HTTP 404 (Feed: https://sspai.me/)
+2025-12-09 15:05:27,606 - Falling back to domain favicon for https://sspai.me/
+2025-12-09 15:05:39,173 - Corrupted or unsupported image in save for ea0492cb80babf30051ff6dc4824f64d. Content snippet: '0\n'
+2025-12-09 15:05:52,935 - Failed to download image https://dev.37signals.com/assets/images/favicon.svg: HTTP 404 (Feed: https://dev.37signals.com/)
+2025-12-09 15:05:52,936 - Falling back to domain favicon for https://dev.37signals.com/
+2025-12-09 15:06:13,372 - Failed to download image http://www.bradleysalmanac.com/wp-content/uploads/2021/07/cropped-favicon-32x32.png: HTTP 404 (Feed: http://www.bradleysalmanac.com/)
+2025-12-09 15:06:13,373 - Falling back to domain favicon for http://www.bradleysalmanac.com/
+2025-12-09 15:06:41,586 - Corrupted or unsupported image in save for bradleysalmanac.com. Content snippet: '\x00\x00\x01\x00\x00\x00'
+2025-12-09 15:06:52,272 - Failed to download image https://longnow.org/favicon.png: HTTP 404 (Feed: https://longnow.org/)
+2025-12-09 15:06:52,272 - Falling back to domain favicon for https://longnow.org/
+2025-12-09 15:07:28,669 - Failed to download image https://static.libsyn.com/p/assets/5/e/3/d/5e3d275dabea2b51/lrpodcastcover.jpg: HTTP 403 (Feed: http://londonreconnections.libsyn.com/podcast)
+2025-12-09 15:07:28,670 - Falling back to domain favicon for http://londonreconnections.libsyn.com/podcast
+2025-12-09 15:08:06,911 - Failed to download image https://cdn-images-1.medium.com/fit/c/150/150/1*M7PamUCDyJ7AsJu-QHmgFg.jpeg: HTTP 403 (Feed: https://medium.com/@oliverhannan?source=rss-656f12d3ccac------2)
+2025-12-09 15:08:06,912 - Falling back to domain favicon for https://medium.com/@oliverhannan?source=rss-656f12d3ccac------2
+2025-12-09 15:09:02,402 - Download exception for ../Images/favicon.ico: ../Images/favicon.ico
+2025-12-09 15:09:02,402 - Falling back to domain favicon for https://www.dimsumthinking.com/Blog/
+2025-12-09 15:09:17,955 - Failed to download image http://nion.modprobe.de/blog/templates/default/img/s9y_banner_small.png: HTTP 404 (Feed: http://nion.modprobe.de/blog/)
+2025-12-09 15:09:17,956 - Falling back to domain favicon for http://nion.modprobe.de/blog/
+2025-12-09 15:09:30,943 - Download exception for https://filmschoolrejects.com/wp-content/uploads/2021/07/cropped-fsr-site-icon.png: Cannot connect to host filmschoolrejects.com:443 ssl:default [[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:1032)]
+2025-12-09 15:09:30,943 - Falling back to domain favicon for https://filmschoolrejects.com/
+2025-12-09 15:09:41,452 - Failed to download image https://staticn1.nplus1.ru/image-new/logo.png: HTTP 404 (Feed: https://nplus1.ru/rss)
+2025-12-09 15:09:41,458 - Falling back to domain favicon for https://nplus1.ru/rss
+2025-12-09 15:09:50,674 - Failed to download image https://blog.playstation.com/tachyon/2019/03/cropped-pslogo.png?presign=X-Amz-Content-Sha256%3DUNSIGNED-PAYLOAD%26X-Amz-Security-Token%3DIQoJb3JpZ2luX2VjENL%252F%252F%252F%252F%252F%252F%252F%252F%252F%252FwEaCXVzLWVhc3QtMSJIMEYCIQDN%252B04aRhozk0Vuxg1kDfoKdGLKliULuTD03OEOWyG26QIhAOMQnMq7PDD0uofsaCggJduYVrZUqnHQzlcleCFHGmfWKoYECJr%252F%252F%252F%252F%252F%252F%252F%252F%252F%252FwEQABoMNTc3NDE4ODE4NDEzIgx2Eb4Rc94p0SY%252BoZcq2gMd0imef4fjRIse%252BcoP4QwHkybaUVKTyO4ieNy0TNIPidf0NyP6pe8L9IriOOeoh12piMCOPx1w5moBkEvQObWAal6pnjo5OyG%252FQjG5yze8GblGgjCGgPbi3FPFJgazifvEUGQjUDOAIWniG9BgljPnVlcSxgeZmjsw1JkWW3K9%252B4SaFdW9%252BqdjJ%252FTdEF0qKBrxoAMn%252Fbjndh3Cjp0uD%252FlO8InlR9bVVPz0nu0Hu50TFJ%252BXpvVR3ZWenqbpyKQvkkS89Y%252B8c%252FLxzsYr6wcjqSpvI9DbYfLIHaX4K5FSVHIoqVv48yHJ%252BICWTOSyVPFSfbcI%252BLiZwKnbXVIyfklvnQesXCy88WxbP80zl79nXtEq8jT799CTnV1p%252BcTZgnzYRczsiGlt%252BALS4%252BA1eJLDnv7UBnCmMJwT1LzAPaKyVC5VokJo6jzYW3NjkkQKFQ3WWAAtwoz7pXbNHML8kUOErAZK6kBIF%252F0dhnPRl1azTdXrBBTc12vSHtsQUqC5GpC4JHyl0vR8Zl%252F7TsVCxikcVitSwURWEc13JXu0VIRvQ%252FUZ8U3AGuzn9lGyTNA8uA0WYMkNk%252BQJJGrnxZLEFu33%252FeAfCnR81QF5VKhUfaOYiWvQ5oGOQ9FCEw%252FDWMowxcrYyQY6pAG%252Br4wsLkqw7yDkZvhtSJxbRghDluctf1%252F3bzfTx1yN7dqhL9ycBPIo7SIS%252BUPcustvPXQK2AtvCPwY3%252B9q5ihXz%252Bjq85%252BE%252B%252BOmahDLCleyR2Av4ioRHo0qhh3033tUzWF%252FFOgSdou6Jg3V9lCVKjdSqo1smfItEHZQ05%252BxzYUSf5gLS4NaY4vjMbYTq%252FvMu%252BQXsZ5q%252F6EYGh43u03YCwyYNySnYw%253D%253D%26X-Amz-Algorithm%3DAWS4-HMAC-SHA256%26X-Amz-Credential%3DASIAYM4GX6NWSVHIBWBC%252F20251208%252Fus-east-1%252Fs3%252Faws4_request%26X-Amz-Date%3D20251208T011101Z%26X-Amz-SignedHeaders%3Dhost%26X-Amz-Expires%3D900%26X-Amz-Signature%3Dbdd884575f350ccfb41b7cf956b22fd9352515da3055aafe62f0a81627fe31d3&fit=32%2C32: HTTP 404 (Feed: https://blog.playstation.com)
+2025-12-09 15:09:50,674 - Falling back to domain favicon for https://blog.playstation.com
+2025-12-09 15:10:00,568 - Failed to download image https://www.neowin.net/images/pegasus/icon.png: HTTP 403 (Feed: https://www.neowin.net/)
+2025-12-09 15:10:00,568 - Falling back to domain favicon for https://www.neowin.net/
+2025-12-09 15:10:15,661 - Failed to download image https://static.libsyn.com/p/assets/a/9/0/5/a905d230cda320c7/Hat-and-Mike-3.jpg: HTTP 403 (Feed: http://flywithjoe.com)
+2025-12-09 15:10:15,661 - Falling back to domain favicon for http://flywithjoe.com
+2025-12-09 15:10:36,572 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/gamers/)
+2025-12-09 15:10:36,573 - Falling back to domain favicon for https://www.reddit.com/r/gamers/
+2025-12-09 15:10:37,006 - Failed to download image https://www.marketwatch.com/rss/marketwatch.gif: HTTP 403 (Feed: http://www.marketwatch.com/)
+2025-12-09 15:10:37,006 - Falling back to domain favicon for http://www.marketwatch.com/
+2025-12-09 15:10:45,014 - Download exception for http://www.mckinsey.com/assets/dotcom/newsletters/images/mckinsey_logo_sm.jpg: 
+2025-12-09 15:10:45,014 - Falling back to domain favicon for https://www.mckinsey.com/
+2025-12-09 15:10:53,344 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/pigrow)
+2025-12-09 15:10:53,344 - Falling back to domain favicon for https://www.reddit.com/r/pigrow
+2025-12-09 15:10:58,810 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/nottheonion/)
+2025-12-09 15:10:58,810 - Falling back to domain favicon for https://www.reddit.com/r/nottheonion/
+2025-12-09 15:11:26,841 - Failed to download image https://cdn-images-1.medium.com/fit/c/150/150/0*xq79ajIWLYfoy4pR.jpeg: HTTP 403 (Feed: https://medium.com/@chris_bour?source=rss-90ca8bc640f4------2)
+2025-12-09 15:11:26,841 - Falling back to domain favicon for https://medium.com/@chris_bour?source=rss-90ca8bc640f4------2
+2025-12-09 15:11:32,432 - Failed to download image https://cdn-images-1.medium.com/proxy/1*TGH72Nnw24QL3iV9IOm4VA.png: HTTP 403 (Feed: https://devblog.songkick.com?source=rss----e0e3c74f91b8---4)
+2025-12-09 15:11:32,432 - Falling back to domain favicon for https://devblog.songkick.com?source=rss----e0e3c74f91b8---4
+2025-12-09 15:11:53,701 - Download exception for 8th Light/favicon-32x32.png: 8th%20Light/favicon-32x32.png
+2025-12-09 15:11:53,701 - Falling back to domain favicon for https://8thlight.com/insights
+2025-12-09 15:11:55,746 - Failed to download image https://engineering.wingify.com//logos/logo-48.png: HTTP 404 (Feed: https://engineering.wingify.com/)
+2025-12-09 15:11:55,746 - Falling back to domain favicon for https://engineering.wingify.com/
+2025-12-09 15:12:30,090 - Failed to download image https://cloud.google.com/blog/products/devops-sre/static/blog/images/google.a51985becaa6.png: HTTP 404 (Feed: https://cloud.google.com/blog/products/devops-sre/)
+2025-12-09 15:12:30,090 - Falling back to domain favicon for https://cloud.google.com/blog/products/devops-sre/
+2025-12-09 15:12:38,792 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/reactjs/)
+2025-12-09 15:12:38,792 - Falling back to domain favicon for https://www.reddit.com/r/reactjs/
+2025-12-09 15:12:40,425 - No image URL found after extraction for https://rickhw.github.io/
+2025-12-09 15:13:05,135 - Failed to download image http://online.wsj.com/img/wsj_sm_logo.gif: HTTP 301 (Feed: http://online.wsj.com)
+2025-12-09 15:13:05,137 - Falling back to domain favicon for http://online.wsj.com
+2025-12-09 15:13:10,247 - Failed to download image http://www.icoeye.com/blog/wp-content/uploads/2017/11/cropped-icoeye-logo-2017-32x32.png: HTTP 403 (Feed: http://www.icoeye.com/blog)
+2025-12-09 15:13:10,248 - Falling back to domain favicon for http://www.icoeye.com/blog
+2025-12-09 15:13:11,699 - Failed to download image https://cdn-images-1.medium.com/proxy/1*TGH72Nnw24QL3iV9IOm4VA.png: HTTP 403 (Feed: https://research.ifcr.dk?source=rss----9372536d3084---4)
+2025-12-09 15:13:11,699 - Falling back to domain favicon for https://research.ifcr.dk?source=rss----9372536d3084---4
+2025-12-09 15:13:14,920 - No image URL found after extraction for https://blog.tankywoo.com/
+2025-12-09 15:13:30,800 - No image URL found after extraction for https://karpathy.bearblog.dev
+2025-12-09 15:14:32,909 - No image URL found after extraction for https://jeff.wtf/
+2025-12-09 15:14:55,472 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/3Dprinting/)
+2025-12-09 15:14:55,476 - Falling back to domain favicon for https://www.reddit.com/r/3Dprinting/
+2025-12-09 15:14:55,988 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/booksuggestions/)
+2025-12-09 15:14:55,989 - Falling back to domain favicon for https://www.reddit.com/r/booksuggestions/
+2025-12-09 15:14:56,057 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/books/)
+2025-12-09 15:14:56,057 - Falling back to domain favicon for https://www.reddit.com/r/books/
+2025-12-09 15:14:56,879 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/ProgrammerHumor/)
+2025-12-09 15:14:56,879 - Falling back to domain favicon for https://www.reddit.com/r/ProgrammerHumor/
+2025-12-09 15:14:56,944 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/Asmongold/)
+2025-12-09 15:14:56,944 - Falling back to domain favicon for https://www.reddit.com/r/Asmongold/
+2025-12-09 15:14:56,970 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/comics/)
+2025-12-09 15:14:56,976 - Falling back to domain favicon for https://www.reddit.com/r/comics/
+2025-12-09 15:14:57,031 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/youtube/)
+2025-12-09 15:14:57,031 - Falling back to domain favicon for https://www.reddit.com/r/youtube/
+2025-12-09 15:14:57,284 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/memes/)
+2025-12-09 15:14:57,285 - Falling back to domain favicon for https://www.reddit.com/r/memes/
+2025-12-09 15:14:57,327 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/programmingmemes/)
+2025-12-09 15:14:57,328 - Falling back to domain favicon for https://www.reddit.com/r/programmingmemes/
+2025-12-09 15:14:57,345 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/Fantasy/)
+2025-12-09 15:14:57,346 - Falling back to domain favicon for https://www.reddit.com/r/Fantasy/
+2025-12-09 15:14:57,394 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/RareHistoricalPhotos/)
+2025-12-09 15:14:57,394 - Falling back to domain favicon for https://www.reddit.com/r/RareHistoricalPhotos/
+2025-12-09 15:14:57,416 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/wizardposting/)
+2025-12-09 15:14:57,417 - Falling back to domain favicon for https://www.reddit.com/r/wizardposting/
+2025-12-09 15:14:57,458 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/DeepIntoYouTube/)
+2025-12-09 15:14:57,458 - Falling back to domain favicon for https://www.reddit.com/r/DeepIntoYouTube/
+2025-12-09 15:14:57,481 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/handmade/)
+2025-12-09 15:14:57,482 - Falling back to domain favicon for https://www.reddit.com/r/handmade/
+2025-12-09 15:14:57,516 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/movies/)
+2025-12-09 15:14:57,517 - Falling back to domain favicon for https://www.reddit.com/r/movies/
+2025-12-09 15:14:57,547 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/boardgames/)
+2025-12-09 15:14:57,548 - Falling back to domain favicon for https://www.reddit.com/r/boardgames/
+2025-12-09 15:14:57,573 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/Music/)
+2025-12-09 15:14:57,573 - Falling back to domain favicon for https://www.reddit.com/r/Music/
+2025-12-09 15:14:57,613 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/Warhammer40k/)
+2025-12-09 15:14:57,613 - Falling back to domain favicon for https://www.reddit.com/r/Warhammer40k/
+2025-12-09 15:14:57,764 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/Weird/)
+2025-12-09 15:14:57,764 - Falling back to domain favicon for https://www.reddit.com/r/Weird/
+2025-12-09 15:14:57,822 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/Warhammer/)
+2025-12-09 15:14:57,822 - Falling back to domain favicon for https://www.reddit.com/r/Warhammer/
+2025-12-09 15:14:58,178 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/GameMods/)
+2025-12-09 15:14:58,178 - Falling back to domain favicon for https://www.reddit.com/r/GameMods/
+2025-12-09 15:14:58,200 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/gaming/)
+2025-12-09 15:14:58,204 - Falling back to domain favicon for https://www.reddit.com/r/gaming/
+2025-12-09 15:14:58,228 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/retrogaming/)
+2025-12-09 15:14:58,229 - Falling back to domain favicon for https://www.reddit.com/r/retrogaming/
+2025-12-09 15:14:58,247 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/darknet/)
+2025-12-09 15:14:58,247 - Falling back to domain favicon for https://www.reddit.com/r/darknet/
+2025-12-09 15:14:58,315 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/InternetIsBeautiful/)
+2025-12-09 15:14:58,316 - Falling back to domain favicon for https://www.reddit.com/r/InternetIsBeautiful/
+2025-12-09 15:14:58,347 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/oldinternet/)
+2025-12-09 15:14:58,348 - Falling back to domain favicon for https://www.reddit.com/r/oldinternet/
+2025-12-09 15:14:58,423 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/anime/)
+2025-12-09 15:14:58,424 - Falling back to domain favicon for https://www.reddit.com/r/anime/
+2025-12-09 15:14:58,482 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/listentothis/)
+2025-12-09 15:14:58,482 - Falling back to domain favicon for https://www.reddit.com/r/listentothis/
+2025-12-09 15:15:01,476 - Failed to download image https://cdn.gadgets360.com/gadgets360_logo.png: HTTP 403 (Feed: https://www.gadgets360.com/)
+2025-12-09 15:15:01,476 - Falling back to domain favicon for https://www.gadgets360.com/
+2025-12-09 15:15:02,476 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/news/)
+2025-12-09 15:15:02,477 - Falling back to domain favicon for https://www.reddit.com/r/news/
+2025-12-09 15:15:04,935 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/worldnews/)
+2025-12-09 15:15:04,936 - Falling back to domain favicon for https://www.reddit.com/r/worldnews/
+2025-12-09 15:15:06,692 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/Polska/)
+2025-12-09 15:15:06,692 - Falling back to domain favicon for https://www.reddit.com/r/Polska/
+2025-12-09 15:15:09,605 - Failed to download image http://online.wsj.com/img/wsj_sm_logo.gif: HTTP 301 (Feed: http://online.wsj.com)
+2025-12-09 15:15:09,605 - Falling back to domain favicon for http://online.wsj.com
+2025-12-09 15:15:10,053 - Failed to download image http://online.wsj.com/img/wsj_sm_logo.gif: HTTP 301 (Feed: http://online.wsj.com/page/2_0006.html)
+2025-12-09 15:15:10,054 - Falling back to domain favicon for http://online.wsj.com/page/2_0006.html
+2025-12-09 15:15:11,087 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/CrackWatch/)
+2025-12-09 15:15:11,088 - Falling back to domain favicon for https://www.reddit.com/r/CrackWatch/
+2025-12-09 15:15:12,396 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/politics/)
+2025-12-09 15:15:12,397 - Falling back to domain favicon for https://www.reddit.com/r/politics/
+2025-12-09 15:15:12,548 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/lgbt/)
+2025-12-09 15:15:12,548 - Falling back to domain favicon for https://www.reddit.com/r/lgbt/
+2025-12-09 15:15:13,082 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/deepweb/)
+2025-12-09 15:15:13,083 - Falling back to domain favicon for https://www.reddit.com/r/deepweb/
+2025-12-09 15:15:13,148 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/Epstein/)
+2025-12-09 15:15:13,149 - Falling back to domain favicon for https://www.reddit.com/r/Epstein/
+2025-12-09 15:15:13,210 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/conspiracy/)
+2025-12-09 15:15:13,210 - Falling back to domain favicon for https://www.reddit.com/r/conspiracy/
+2025-12-09 15:15:13,356 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/Damnthatsinteresting/)
+2025-12-09 15:15:13,356 - Falling back to domain favicon for https://www.reddit.com/r/Damnthatsinteresting/
+2025-12-09 15:15:13,413 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/interestingasfuck/)
+2025-12-09 15:15:13,414 - Falling back to domain favicon for https://www.reddit.com/r/interestingasfuck/
+2025-12-09 15:15:13,474 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/usenet/)
+2025-12-09 15:15:13,475 - Falling back to domain favicon for https://www.reddit.com/r/usenet/
+2025-12-09 15:15:13,558 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/4chan/)
+2025-12-09 15:15:13,558 - Falling back to domain favicon for https://www.reddit.com/r/4chan/
+2025-12-09 15:15:14,004 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/WeirdWebsites/)
+2025-12-09 15:15:14,004 - Falling back to domain favicon for https://www.reddit.com/r/WeirdWebsites/
+2025-12-09 15:15:14,081 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/woahdude/)
+2025-12-09 15:15:14,082 - Falling back to domain favicon for https://www.reddit.com/r/woahdude/
+2025-12-09 15:15:15,308 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/ChatGPT/)
+2025-12-09 15:15:15,308 - Falling back to domain favicon for https://www.reddit.com/r/ChatGPT/
+2025-12-09 15:15:15,367 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/OpenAI/)
+2025-12-09 15:15:15,368 - Falling back to domain favicon for https://www.reddit.com/r/OpenAI/
+2025-12-09 15:15:15,427 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/aivideo/)
+2025-12-09 15:15:15,428 - Falling back to domain favicon for https://www.reddit.com/r/aivideo/
+2025-12-09 15:15:15,490 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/ArtificialInteligence/)
+2025-12-09 15:15:15,490 - Falling back to domain favicon for https://www.reddit.com/r/ArtificialInteligence/
+2025-12-09 15:15:15,546 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/aiMusic/)
+2025-12-09 15:15:15,546 - Falling back to domain favicon for https://www.reddit.com/r/aiMusic/
+2025-12-09 15:15:15,565 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/artificial/)
+2025-12-09 15:15:15,565 - Falling back to domain favicon for https://www.reddit.com/r/artificial/
+2025-12-09 15:15:15,611 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/cybersecurity/)
+2025-12-09 15:15:15,611 - Falling back to domain favicon for https://www.reddit.com/r/cybersecurity/
+2025-12-09 15:15:15,636 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/aiArt/)
+2025-12-09 15:15:15,637 - Falling back to domain favicon for https://www.reddit.com/r/aiArt/
+2025-12-09 15:15:15,675 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/hackers/)
+2025-12-09 15:15:15,675 - Falling back to domain favicon for https://www.reddit.com/r/hackers/
+2025-12-09 15:15:15,692 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/hacking/)
+2025-12-09 15:15:15,692 - Falling back to domain favicon for https://www.reddit.com/r/hacking/
+2025-12-09 15:15:15,737 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/CursedAI/)
+2025-12-09 15:15:15,737 - Falling back to domain favicon for https://www.reddit.com/r/CursedAI/
+2025-12-09 15:15:15,798 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/Piracy/)
+2025-12-09 15:15:15,798 - Falling back to domain favicon for https://www.reddit.com/r/Piracy/
+2025-12-09 15:15:15,835 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/Malware/)
+2025-12-09 15:15:15,836 - Falling back to domain favicon for https://www.reddit.com/r/Malware/
+2025-12-09 15:15:15,863 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/torrents/)
+2025-12-09 15:15:15,863 - Falling back to domain favicon for https://www.reddit.com/r/torrents/
+2025-12-09 15:15:15,930 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/django/)
+2025-12-09 15:15:15,931 - Falling back to domain favicon for https://www.reddit.com/r/django/
+2025-12-09 15:15:16,533 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/degoogle/)
+2025-12-09 15:15:16,534 - Falling back to domain favicon for https://www.reddit.com/r/degoogle/
+2025-12-09 15:15:16,589 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/technology/)
+2025-12-09 15:15:16,589 - Falling back to domain favicon for https://www.reddit.com/r/technology/
+2025-12-09 15:15:16,645 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/programming/)
+2025-12-09 15:15:16,645 - Falling back to domain favicon for https://www.reddit.com/r/programming/
+2025-12-09 15:15:16,706 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/CrackSupport/)
+2025-12-09 15:15:16,706 - Falling back to domain favicon for https://www.reddit.com/r/CrackSupport/
+2025-12-09 15:15:17,444 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/developer/)
+2025-12-09 15:15:17,444 - Falling back to domain favicon for https://www.reddit.com/r/developer/
+2025-12-09 15:15:17,504 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/webscraping/)
+2025-12-09 15:15:17,504 - Falling back to domain favicon for https://www.reddit.com/r/webscraping/
+2025-12-09 15:15:19,964 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/amiga/)
+2025-12-09 15:15:19,964 - Falling back to domain favicon for https://www.reddit.com/r/amiga/
+2025-12-09 15:15:20,030 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/linux/)
+2025-12-09 15:15:20,031 - Falling back to domain favicon for https://www.reddit.com/r/linux/
+2025-12-09 15:15:20,085 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/opensource/)
+2025-12-09 15:15:20,086 - Falling back to domain favicon for https://www.reddit.com/r/opensource/
+2025-12-09 15:15:20,150 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/emulation/)
+2025-12-09 15:15:20,151 - Falling back to domain favicon for https://www.reddit.com/r/emulation/
+2025-12-09 15:15:20,215 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/SEO/)
+2025-12-09 15:15:20,215 - Falling back to domain favicon for https://www.reddit.com/r/SEO/
+2025-12-09 15:15:20,372 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/searchengines/)
+2025-12-09 15:15:20,373 - Falling back to domain favicon for https://www.reddit.com/r/searchengines/
+2025-12-09 15:15:20,757 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/Hacking_Tutorials/)
+2025-12-09 15:15:20,758 - Falling back to domain favicon for https://www.reddit.com/r/Hacking_Tutorials/
+2025-12-09 15:15:20,813 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/SideProject/)
+2025-12-09 15:15:20,813 - Falling back to domain favicon for https://www.reddit.com/r/SideProject/
+2025-12-09 15:15:21,119 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/rss/)
+2025-12-09 15:15:21,119 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/privacy/)
+2025-12-09 15:15:21,120 - Falling back to domain favicon for https://www.reddit.com/r/rss/
+2025-12-09 15:15:21,121 - Falling back to domain favicon for https://www.reddit.com/r/privacy/
+2025-12-09 15:15:21,185 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/selfhosted/)
+2025-12-09 15:15:21,186 - Falling back to domain favicon for https://www.reddit.com/r/selfhosted/
+2025-12-09 15:15:21,827 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/browsers/)
+2025-12-09 15:15:21,828 - Falling back to domain favicon for https://www.reddit.com/r/browsers/
+2025-12-09 15:15:22,389 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/docker/)
+2025-12-09 15:15:22,390 - Falling back to domain favicon for https://www.reddit.com/r/docker/
+2025-12-09 15:15:22,453 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/youtubedl/)
+2025-12-09 15:15:22,453 - Falling back to domain favicon for https://www.reddit.com/r/youtubedl/
+2025-12-09 15:15:22,725 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/linux_gaming/)
+2025-12-09 15:15:22,726 - Falling back to domain favicon for https://www.reddit.com/r/linux_gaming/
+2025-12-09 15:15:23,351 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/DataHoarder/)
+2025-12-09 15:15:23,352 - Falling back to domain favicon for https://www.reddit.com/r/DataHoarder/
+2025-12-09 15:15:23,762 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/raspberry_pi/)
+2025-12-09 15:15:23,763 - Falling back to domain favicon for https://www.reddit.com/r/raspberry_pi/
+2025-12-09 15:15:23,871 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/RISCV/)
+2025-12-09 15:15:23,872 - Falling back to domain favicon for https://www.reddit.com/r/RISCV/
+2025-12-09 15:15:24,262 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/virtualreality/)
+2025-12-09 15:15:24,262 - Falling back to domain favicon for https://www.reddit.com/r/virtualreality/
+2025-12-09 15:15:24,314 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/science/)
+2025-12-09 15:15:24,315 - Falling back to domain favicon for https://www.reddit.com/r/science/
+2025-12-09 15:15:24,413 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/ReverseEngineering/)
+2025-12-09 15:15:24,414 - Falling back to domain favicon for https://www.reddit.com/r/ReverseEngineering/
+2025-12-09 15:15:24,448 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/Games/)
+2025-12-09 15:15:24,449 - Falling back to domain favicon for https://www.reddit.com/r/Games/
+2025-12-09 15:15:31,224 - Failed to download image https://cdn-images-1.medium.com/proxy/1*TGH72Nnw24QL3iV9IOm4VA.png: HTTP 403 (Feed: https://deezer.io?source=rss----2ab7e077175a---4)
+2025-12-09 15:15:31,224 - Falling back to domain favicon for https://deezer.io?source=rss----2ab7e077175a---4
+2025-12-09 15:15:31,566 - Failed to download image https://cdn-images-1.medium.com/proxy/1*TGH72Nnw24QL3iV9IOm4VA.png: HTTP 403 (Feed: https://medium.com/better-practices?source=rss----410f2fbc015d---4)
+2025-12-09 15:15:31,566 - Falling back to domain favicon for https://medium.com/better-practices?source=rss----410f2fbc015d---4
+2025-12-09 15:15:33,189 - Failed to download image https://cdn-images-1.medium.com/proxy/1*TGH72Nnw24QL3iV9IOm4VA.png: HTTP 403 (Feed: https://medium.com/driven-by-code?source=rss----9b85cd78d09d---4)
+2025-12-09 15:15:33,190 - Falling back to domain favicon for https://medium.com/driven-by-code?source=rss----9b85cd78d09d---4
+2025-12-09 15:15:34,015 - Download exception for https://www.eetimes.com/wp-content/uploads/EE-Times-700x100-1.png: 
+2025-12-09 15:15:34,015 - Falling back to domain favicon for https://www.eetimes.com/
+2025-12-09 15:15:35,376 - Failed to download image https://cdn-images-1.medium.com/proxy/1*TGH72Nnw24QL3iV9IOm4VA.png: HTTP 403 (Feed: https://engineering.universe.com?source=rss----a1cd8e0d60b2---4)
+2025-12-09 15:15:35,376 - Falling back to domain favicon for https://engineering.universe.com?source=rss----a1cd8e0d60b2---4
+2025-12-09 15:16:09,270 - Failed to download image https://ponyfoo.com/img/banners/branded.b2b85b77.png: HTTP 404 (Feed: https://ponyfoo.com)
+2025-12-09 15:16:09,270 - Falling back to domain favicon for https://ponyfoo.com
+2025-12-09 15:16:10,191 - Failed to download image https://www.cs.columbia.edu/~smb/blog/control/hawk.jpg/: HTTP 404 (Feed: https://www.cs.columbia.edu/~smb/blog)
+2025-12-09 15:16:10,192 - Falling back to domain favicon for https://www.cs.columbia.edu/~smb/blog
+2025-12-09 15:16:49,989 - Download exception for "https://blog.ktamas.com/icon-512x512.png": %22https://blog.ktamas.com/icon-512x512.png%22
+2025-12-09 15:16:49,989 - Falling back to domain favicon for https://blog.ktamas.com/
+2025-12-09 15:17:14,627 - Corrupted or unsupported image in save for 577c941a32f8c21444ba7770d326aee9. Content snippet: '0\n'
+2025-12-09 15:17:19,798 - Failed to download image http://owensoft.net/favicon.png: HTTP 404 (Feed: http://owensoft.net/)
+2025-12-09 15:17:19,798 - Falling back to domain favicon for http://owensoft.net/
+2025-12-09 15:17:39,515 - Failed to download image https://vasters.com/clemens/images/zenicon.jpg: HTTP 404 (Feed: https://vasters.com/clemens/)
+2025-12-09 15:17:39,516 - Falling back to domain favicon for https://vasters.com/clemens/
+2025-12-09 15:17:46,083 - Corrupted or unsupported image in save for p.agnihotry.com. Content snippet: '\x00\x00\x01\x00\x00\x00'
+2025-12-09 15:18:57,677 - No image URL found after extraction for https://aravind.bearblog.dev
+2025-12-09 15:19:03,387 - No image URL found after extraction for https://apiratelifefor.me
+2025-12-09 15:19:47,037 - No image URL found after extraction for https://benny.bearblog.dev/
+2025-12-09 15:19:47,611 - Corrupted or unsupported image in save for americancynic.net. Content snippet: '\x00\x00\x01\x00\x00\x00'
+2025-12-09 15:20:02,909 - No image URL found after extraction for https://blog.avas.space/
+2025-12-09 15:20:05,716 - No image URL found after extraction for https://blog.briankitano.com
+2025-12-09 15:20:09,508 - No image URL found after extraction for https://blog.charliemeyer.co
+2025-12-09 15:20:25,704 - No image URL found after extraction for http://blog.danieljanus.pl
+2025-12-09 15:20:38,360 - Corrupted or unsupported image in save for bacardi55.io. Content snippet: '\x00\x00\x01\x00\x00\x00'
+2025-12-09 15:20:38,588 - Failed to download image https://blog.haschek.at/img/logo_icon_small.png: HTTP 404 (Feed: https://blog.haschek.at)
+2025-12-09 15:20:38,589 - Falling back to domain favicon for https://blog.haschek.at
+2025-12-09 15:20:38,782 - Corrupted or unsupported image in save for bacardi55.io. Content snippet: '\x00\x00\x01\x00\x00\x00'
+2025-12-09 15:21:01,101 - No image URL found after extraction for https://blog.lauramichet.com/
+2025-12-09 15:21:36,244 - No image URL found after extraction for https://blog.soykaf.com/
+2025-12-09 15:21:42,368 - Failed to download image https://blog.tjll.net/assets/assets/images/avatar.png: HTTP 404 (Feed: https://blog.tjll.net/)
+2025-12-09 15:21:42,368 - Falling back to domain favicon for https://blog.tjll.net/
+2025-12-09 15:21:54,927 - No image URL found after extraction for https://bluelander.bearblog.dev
+2025-12-09 15:22:11,925 - Download exception for https://brainbaking.com/img/bblogo.png: Server disconnected
+2025-12-09 15:22:11,926 - Falling back to domain favicon for https://brainbaking.com/
+2025-12-09 15:22:31,257 - No image URL found after extraction for https://by.bearblog.dev/
+2025-12-09 15:22:36,571 - No image URL found after extraction for https://calebtrevatt.com
+2025-12-09 15:22:39,208 - No image URL found after extraction for https://cascading.space/
+2025-12-09 15:23:34,114 - Failed to download image https://cookie.engineer/design/cookiengineer.png: HTTP 404 (Feed: https://cookie.engineer/weblog/feed.xml)
+2025-12-09 15:23:34,114 - Falling back to domain favicon for https://cookie.engineer/weblog/feed.xml
+2025-12-09 15:23:40,756 - No image URL found after extraction for https://criminallyvulgar.dev/
+2025-12-09 15:24:05,853 - Failed to download image https://davesmyth.com/assets/images/favicon.png: HTTP 404 (Feed: https://davesmyth.com)
+2025-12-09 15:24:05,854 - Falling back to domain favicon for https://davesmyth.com
+2025-12-09 15:24:10,609 - Failed to download image http://davidkunnen.com/favicon.png: HTTP 502 (Feed: https://davidkunnen.com/)
+2025-12-09 15:24:10,610 - Falling back to domain favicon for https://davidkunnen.com/
+2025-12-09 15:24:55,469 - No image URL found after extraction for https://dheinemann.com/
+2025-12-09 15:24:56,812 - Download exception for dmpop: dmpop
+2025-12-09 15:24:56,812 - Falling back to domain favicon for https://dmpop.xyz/
+2025-12-09 15:24:57,503 - Failed to download image https://dmc.lol/favicon.ico: HTTP 404 (Feed: https://dmc.lol)
+2025-12-09 15:24:57,503 - Falling back to domain favicon for https://dmc.lol
+2025-12-09 15:24:59,046 - Failed to download image https://dnlytras.com/avatar.png: HTTP 404 (Feed: https://dnlytras.com)
+2025-12-09 15:24:59,046 - Falling back to domain favicon for https://dnlytras.com
+2025-12-09 15:25:09,128 - Download exception for None: None
+2025-12-09 15:25:09,128 - Falling back to domain favicon for https://du.nkel.dev/
+2025-12-09 15:25:16,970 - No image URL found after extraction for https://eden.bearblog.dev
+2025-12-09 15:25:18,865 - No image URL found after extraction for https://eftegarie.com
+2025-12-09 15:25:22,203 - No image URL found after extraction for https://eligundry.com/blog/
+2025-12-09 15:25:25,526 - No image URL found after extraction for https://ellispinsky.com
+2025-12-09 15:25:26,949 - No image URL found after extraction for https://emschwartz.me/
+2025-12-09 15:25:28,899 - Failed to download image https://enindu.com/images/rss.png: HTTP 404 (Feed: https://enindu.com)
+2025-12-09 15:25:28,899 - Falling back to domain favicon for https://enindu.com
+2025-12-09 15:25:50,890 - No image URL found after extraction for https://evantravers.com/
+2025-12-09 15:25:51,129 - Failed to download image https://orgmode.org/img/org-mode-unicorn-logo.png: HTTP 404 (Feed: https://explog.in/)
+2025-12-09 15:25:51,129 - Falling back to domain favicon for https://explog.in/
+2025-12-09 15:25:58,014 - Download exception for https://ethanmick.com/favicon.png: 
+2025-12-09 15:25:58,014 - Falling back to domain favicon for https://ethanmick.com/
+2025-12-09 15:26:20,054 - No image URL found after extraction for https://folkmoss.bearblog.dev/
+2025-12-09 15:26:22,398 - No image URL found after extraction for https://forkingmad.blog/
+2025-12-09 15:26:25,270 - Failed to download image https://www.coryd.dev/og/w2000265a621-ef92-4d46-96a3-ca1f4052a53a: HTTP 404 (Feed: https://www.coryd.dev/feeds/posts.xml)
+2025-12-09 15:26:25,270 - Falling back to domain favicon for https://www.coryd.dev/feeds/posts.xml
+2025-12-09 15:26:33,562 - No image URL found after extraction for https://george.mand.is/
+2025-12-09 15:26:51,873 - Failed to download image http://guissmo.com/blog/favicon/favicon.ico: HTTP 404 (Feed: https://guissmo.com/)
+2025-12-09 15:26:51,874 - Falling back to domain favicon for https://guissmo.com/
+2025-12-09 15:26:53,461 - No image URL found after extraction for https://haborym.bearblog.dev/
+2025-12-09 15:26:58,318 - No image URL found after extraction for https://hanki.dev
+2025-12-09 15:27:30,206 - No image URL found after extraction for http://iamkonstantin.eu/blog/
+2025-12-09 15:27:30,917 - No image URL found after extraction for https://idogawa.dev
+2025-12-09 15:28:02,209 - No image URL found after extraction for https://jackmcdade.com/articles
+2025-12-09 15:28:02,348 - No image URL found after extraction for https://JackHPeterson.com
+2025-12-09 15:28:20,398 - Failed to download image https://jc0b.computer/img/favicon/green.png: HTTP 404 (Feed: https://jc0b.computer?utm_source=rss)
+2025-12-09 15:28:20,426 - Falling back to domain favicon for https://jc0b.computer?utm_source=rss
+2025-12-09 15:28:23,349 - Failed to download image https://jasonrouet.com/wp-content/uploads/2024/02/cropped-android-chrome-512x512-1-32x32.png: HTTP 404 (Feed: https://jasonrouet.com/)
+2025-12-09 15:28:23,349 - Falling back to domain favicon for https://jasonrouet.com/
+2025-12-09 15:28:32,087 - No image URL found after extraction for https://jklinger.co
+2025-12-09 15:29:05,533 - No image URL found after extraction for https://jtwoodhouse.com/
+2025-12-09 15:29:07,794 - No image URL found after extraction for https://junebash.bearblog.dev/
+2025-12-09 15:29:08,723 - Corrupted or unsupported image in save for kaikunze.de. Content snippet: '\x00\x00\x01\x00\x00\x00'
+2025-12-09 15:29:10,427 - No image URL found after extraction for https://julianwachholz.dev/blog/
+2025-12-09 15:29:32,017 - No image URL found after extraction for https://knhash.in/
+2025-12-09 15:29:39,244 - No image URL found after extraction for https://kmaasrud.com
+2025-12-09 15:29:39,758 - Failed to download image https://karlkoch.me/logo.svg: HTTP 404 (Feed: https://karlkoch.me/)
+2025-12-09 15:29:39,759 - Falling back to domain favicon for https://karlkoch.me/
+2025-12-09 15:29:54,025 - No image URL found after extraction for https://lchamberlin.com/
+2025-12-09 15:30:07,746 - No image URL found after extraction for https://library.xandra.cc/
+2025-12-09 15:30:07,875 - No image URL found after extraction for https://linkage.lol/
+2025-12-09 15:30:16,981 - Failed to download image https://limited.systems/apple-touch-icon-precomposed.avif: HTTP 404 (Feed: https://limited.systems/)
+2025-12-09 15:30:16,981 - Falling back to domain favicon for https://limited.systems/
+2025-12-09 15:30:19,598 - No image URL found after extraction for https://louplummer.lol/
+2025-12-09 15:30:29,997 - Failed to download image https://lucien.nogues.ca/icon.png: HTTP 404 (Feed: https://lucien.nogues.ca/)
+2025-12-09 15:30:29,998 - Falling back to domain favicon for https://lucien.nogues.ca/
+2025-12-09 15:30:35,449 - Corrupted or unsupported image in save for luxagraf.net. Content snippet: '\x00\x00\x01\x00\x00\x00'
+2025-12-09 15:31:03,913 - No image URL found after extraction for https://mason.bearblog.dev
+2025-12-09 15:31:03,918 - Failed to download image https://martinschneider.me/logo128.jpg: HTTP 404 (Feed: https://martinschneider.me)
+2025-12-09 15:31:03,923 - Falling back to domain favicon for https://martinschneider.me
+2025-12-09 15:31:06,830 - No image URL found after extraction for https://matanabudy.com/
+2025-12-09 15:31:10,229 - No image URL found after extraction for https://mattthequick.bearblog.dev
+2025-12-09 15:31:11,969 - No image URL found after extraction for https://matt.bure.sh
+2025-12-09 15:31:14,006 - Failed to download image https://maxrozen.com/images/logo.svg: HTTP 404 (Feed: https://maxrozen.com)
+2025-12-09 15:31:14,006 - Falling back to domain favicon for https://maxrozen.com
+2025-12-09 15:31:24,016 - Corrupted or unsupported image in save for 7532b47c8bd58d7effda6aecf5e57a8f. Content snippet: '<html><body><script type="text/javascript" src="/aes.js" ></script><script>function toNumbers(d){var e=[];d.replace(/(..)/g,function(d){e.push(parseInt(d,16))});return e}function toHex(){for(var d=[],'
+2025-12-09 15:31:32,355 - No image URL found after extraction for https://michaelbox.net
+2025-12-09 15:31:35,386 - No image URL found after extraction for https://midzer.de/
+2025-12-09 15:31:37,636 - No image URL found after extraction for https://mirroredworld.bearblog.dev/
+2025-12-09 15:31:37,930 - No image URL found after extraction for https://mjulius.com/
+2025-12-09 15:31:39,510 - No image URL found after extraction for https://mitatefe.bearblog.dev
+2025-12-09 15:31:41,695 - No image URL found after extraction for https://mo42.bearblog.dev/
+2025-12-09 15:31:44,915 - No image URL found after extraction for https://mooeena.bearblog.dev/
+2025-12-09 15:31:45,652 - No image URL found after extraction for https://monocyte.blog
+2025-12-09 15:31:49,263 - No image URL found after extraction for https://mostlytrue.life
+2025-12-09 15:31:55,242 - No image URL found after extraction for https://muxup.com
+2025-12-09 15:31:57,762 - No image URL found after extraction for https://murtezayesil.me
+2025-12-09 15:32:40,411 - No image URL found after extraction for https://notaprick.blog/
+2025-12-09 15:32:44,208 - No image URL found after extraction for http://notes.billmill.org/
+2025-12-09 15:32:48,765 - Failed to download image https://nobelium.vercel.app/favicon.svg: HTTP 404 (Feed: https://nobelium.vercel.app/)
+2025-12-09 15:32:48,765 - Falling back to domain favicon for https://nobelium.vercel.app/
+2025-12-09 15:32:51,710 - No image URL found after extraction for https://olu.online/
+2025-12-09 15:33:02,478 - Failed to download image https://paco.sh/og.png: HTTP 404 (Feed: https://paco.sh)
+2025-12-09 15:33:02,479 - Falling back to domain favicon for https://paco.sh
+2025-12-09 15:33:02,677 - No image URL found after extraction for https://osc.garden
+2025-12-09 15:33:06,634 - Failed to download image https://patrick.wtf/favicon-32x32.png: HTTP 404 (Feed: https://patrick.wtf/)
+2025-12-09 15:33:06,635 - Falling back to domain favicon for https://patrick.wtf/
+2025-12-09 15:33:09,951 - No image URL found after extraction for https://paulkinchla.com/
+2025-12-09 15:33:19,060 - Failed to download image https://petermolnar.net/favicon.png: HTTP 404 (Feed: https://petermolnar.net)
+2025-12-09 15:33:19,061 - Falling back to domain favicon for https://petermolnar.net
+2025-12-09 15:33:24,137 - No image URL found after extraction for https://philwilson.org/
+2025-12-09 15:33:29,118 - Failed to download image https://poohitan.com/static/logo.png: HTTP 404 (Feed: https://poohitan.com)
+2025-12-09 15:33:29,118 - Falling back to domain favicon for https://poohitan.com
+2025-12-09 15:33:35,866 - No image URL found after extraction for https://popcar.bearblog.dev/
+2025-12-09 15:33:40,673 - No image URL found after extraction for http://plblog.danieljanus.pl
+2025-12-09 15:33:45,795 - Failed to download image https://quickandtastycooking.org.uk/apple-touch-icon-precomposed.avif: HTTP 404 (Feed: https://quickandtastycooking.org.uk/)
+2025-12-09 15:33:45,796 - Falling back to domain favicon for https://quickandtastycooking.org.uk/
+2025-12-09 15:34:19,439 - No image URL found after extraction for https://rewiring.bearblog.dev
+2025-12-09 15:34:24,342 - Failed to download image https://ribo.zone/img/favicon.png: HTTP 403 (Feed: https://ribo.zone)
+2025-12-09 15:34:24,342 - Falling back to domain favicon for https://ribo.zone
+2025-12-09 15:34:38,331 - Falling back to domain favicon for https://river.cat
+2025-12-09 15:34:41,581 - Failed to download image https://riess.dev/favicon.png: HTTP 404 (Feed: https://riess.dev/)
+2025-12-09 15:34:41,581 - Falling back to domain favicon for https://riess.dev/
+2025-12-09 15:35:00,147 - No image URL found after extraction for https://sals.place/
+2025-12-09 15:35:02,620 - No image URL found after extraction for https://samsharp.ca/
+2025-12-09 15:35:03,004 - Failed to download image https://salman.io/images/fox-square.png: HTTP 404 (Feed: https://salman.io/)
+2025-12-09 15:35:03,004 - Falling back to domain favicon for https://salman.io/
+2025-12-09 15:35:14,132 - Failed to download image https://screenspan.net/favicon.ico: HTTP 404 (Feed: https://screenspan.net)
+2025-12-09 15:35:14,132 - Falling back to domain favicon for https://screenspan.net
+2025-12-09 15:35:23,491 - No image URL found after extraction for https://seanmcloughl.in/
+2025-12-09 15:35:34,014 - Download exception for https://sebastiandedeyne.com/media/me.jpg: 
+2025-12-09 15:35:34,014 - Falling back to domain favicon for https://sebastiandedeyne.com/index.xml
+2025-12-09 15:35:40,746 - No image URL found after extraction for https://sebastianmalloy.bearblog.dev/
+2025-12-09 15:36:16,183 - No image URL found after extraction for https://stackdiver.com/
+2025-12-09 15:36:28,785 - No image URL found after extraction for https://suhas.org/
+2025-12-09 15:36:42,112 - No image URL found after extraction for https://t-ravis.com/
+2025-12-09 15:36:50,078 - Failed to download image https://starbreaker.org/assets/images/icon.png: HTTP 404 (Feed: https://starbreaker.org/grimoire/entries/index.html)
+2025-12-09 15:36:50,079 - Falling back to domain favicon for https://starbreaker.org/grimoire/entries/index.html
+2025-12-09 15:36:56,751 - No image URL found after extraction for https://the.secure.engineer/
+2025-12-09 15:36:58,299 - No image URL found after extraction for https://the.scapegoat.dev
+2025-12-09 15:37:03,591 - No image URL found after extraction for https://theprivacydad.com
+2025-12-09 15:37:03,615 - No image URL found after extraction for https://themindofruss.com/
+2025-12-09 15:37:11,960 - No image URL found after extraction for https://thinkdobecreate.com
+2025-12-09 15:37:16,573 - No image URL found after extraction for https://thundergolfer.com/
+2025-12-09 15:37:28,289 - No image URL found after extraction for https://tiramisu.bearblog.dev
+2025-12-09 15:37:43,224 - Failed to download image https://treypiepmeier.com/assets/images/favicon.png: HTTP 404 (Feed: https://treypiepmeier.com/words)
+2025-12-09 15:37:43,224 - Falling back to domain favicon for https://treypiepmeier.com/words
+2025-12-09 15:37:44,935 - No image URL found after extraction for https://tsk.bearblog.dev
+2025-12-09 15:37:52,820 - Failed to download image http://una.github.io/images/itunes-1400-1400.jpg: HTTP 404 (Feed: http://una.github.io)
+2025-12-09 15:37:52,821 - Falling back to domain favicon for http://una.github.io
+2025-12-09 15:38:00,717 - No image URL found after extraction for https://veronique.ink
+2025-12-09 15:38:06,969 - Download exception for https:/vincentp.me/images/vincentp.jpg: https:///vincentp.me/images/vincentp.jpg
+2025-12-09 15:38:06,969 - Falling back to domain favicon for https://vincentp.me/
+2025-12-09 15:38:09,513 - No image URL found after extraction for https://vincaroz.neocities.org
+2025-12-09 15:38:11,380 - No image URL found after extraction for https://virtuwise.com
+2025-12-09 15:38:13,320 - No image URL found after extraction for https://vinko.bearblog.dev/
+2025-12-09 15:38:21,173 - Download exception for static/8bitcc.png: static/8bitcc.png
+2025-12-09 15:38:21,173 - Falling back to domain favicon for https://waylonwalker.com/
+2025-12-09 15:38:37,012 - No image URL found after extraction for https://winther.sysctl.dk/
+2025-12-09 15:38:43,884 - No image URL found after extraction for https://writing.bobdoto.computer/
+2025-12-09 15:39:13,031 - Download exception for https://www.avanwyk.com/favicon.png: 
+2025-12-09 15:39:13,031 - Falling back to domain favicon for https://www.avanwyk.com/
+2025-12-09 15:39:26,494 - Failed to download image https://www.charliechao.com/static/icon-android.png: HTTP 404 (Feed: https://www.charliechao.com)
+2025-12-09 15:39:26,494 - Falling back to domain favicon for https://www.charliechao.com
+2025-12-09 15:39:49,945 - Corrupted or unsupported image in save for cyberdemon.org. Content snippet: '\x00\x00\x01\x00\x00\x00'
+2025-12-09 15:39:57,014 - No image URL found after extraction for https://www.ecliptik.com/
+2025-12-09 15:39:59,090 - Download exception for public/favicon 3.png: public/favicon%203.png
+2025-12-09 15:39:59,090 - Falling back to domain favicon for https://dltn.io
+2025-12-09 15:40:24,784 - Download exception for ./favicon.32x32.png: ./favicon.32x32.png
+2025-12-09 15:40:24,784 - Falling back to domain favicon for http://www.hxa.name/
+2025-12-09 15:40:44,824 - Failed to download image https://juliaferraioli.com/img/me.png: HTTP 404 (Feed: https://juliaferraioli.com/blog/)
+2025-12-09 15:40:44,824 - Falling back to domain favicon for https://juliaferraioli.com/blog/
+2025-12-09 15:41:15,323 - No image URL found after extraction for https://www.meg.dev/
+2025-12-09 15:42:01,128 - No image URL found after extraction for https://www.paritybits.me
+2025-12-09 15:42:16,240 - Failed to download image https://www.pavlinbg.com/favicon.png: HTTP 404 (Feed: https://www.pavlinbg.com/)
+2025-12-09 15:42:16,240 - Falling back to domain favicon for https://www.pavlinbg.com/
+2025-12-09 15:42:32,032 - Corrupted or unsupported image in save for 598606d0702da222cecebab7c031f000. Content snippet: '�PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00�\x00\x00\x00�\x08\x06\x00\x00\x00���e\x00\x00\x0bhzTXtRaw profile type exif\x00\x00x��Zi�\x02-\x12����#\x00\t$\x1c�5bn0��^B��m/�\x1d�Fk\x15K\x02��Z6���w�\x7f�\n&F�AR�1\x1a�|��\x15\\$�_��\x1a�>�k���\u07b7ӵá����6�c|A{�M\x10\x7f���v�v�I����"�ue��~l�\x10�n��㞲�\x17%��s��'
+2025-12-09 15:43:31,113 - Failed to download image https://www.shuchow.com/wp-content/uploads/2020/09/cropped-ShuIcon-32x32.png: HTTP 404 (Feed: https://www.shuchow.com)
+2025-12-09 15:43:31,113 - Falling back to domain favicon for https://www.shuchow.com
+2025-12-09 15:43:49,032 - No image URL found after extraction for https://shruggingface.com
+2025-12-09 15:43:55,091 - No image URL found after extraction for https://aubreysambor.com/
+2025-12-09 15:45:02,028 - No image URL found after extraction for https://www.werder.space
+2025-12-09 15:45:20,658 - Corrupted or unsupported image in save for 0ecee96389a51a9ea8072f5a1133867e. Content snippet: '<!DOCTYPE html><html lang="en" data-country="US"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Vasyl Zubach - Software Engineer</title><meta name="de'
+2025-12-09 15:45:26,900 - No image URL found after extraction for https://xsw.bearblog.dev/
+2025-12-09 15:46:21,532 - Failed to download image https://kuranuki.sonicgarden.jp/wp-content/uploads/2022/03/cropped-favicon_socialchange_transparent-32x32.png: HTTP 404 (Feed: https://kuranuki.sonicgarden.jp)
+2025-12-09 15:46:21,533 - Falling back to domain favicon for https://kuranuki.sonicgarden.jp
+2025-12-09 15:46:48,566 - No image URL found after extraction for https://sindresorhus.com
+2025-12-09 15:46:57,105 - Corrupted or unsupported image in save for 3a02c4c66c6844153386521058a9ff47. Content snippet: '<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8" data-next-head=""/><title data-next-head="">BitMEX Blog - Cryptocurrency Trading Insights &amp; Market Analysis</title><meta name="descriptio'
+2025-12-09 15:47:07,240 - Download exception for http://static.daily.zhihu.com/img/new_home_v3/mobile_top_logo.png: Cannot connect to host static.daily.zhihu.com:80 ssl:default [Name or service not known]
+2025-12-09 15:47:07,240 - Falling back to domain favicon for https://daily.zhihu.com
+2025-12-09 15:47:08,394 - Failed to download image http://pic1.36krcnd.com/nil_class/e9dfee47-68bd-4121-b29d-dc06f058588b/36kr.png: HTTP 400 (Feed: http://36kr.com)
+2025-12-09 15:47:08,398 - Falling back to domain favicon for http://36kr.com
+2025-12-09 15:47:12,114 - Download exception for https://data.sercretcore.cn/new_avatar.jpeg: Cannot connect to host data.sercretcore.cn:443 ssl:default [Name or service not known]
+2025-12-09 15:47:12,114 - Falling back to domain favicon for https://www.wyr.me
+2025-12-09 15:47:14,225 - Failed to download image http://www.news.cn/20141223_xhsxw_logo_v1.png: HTTP 404 (Feed: http://www.news.cn/xhsxw.htm)
+2025-12-09 15:47:14,226 - Falling back to domain favicon for http://www.news.cn/xhsxw.htm
+2025-12-09 15:47:28,235 - Failed to download image http://pic1.36krcnd.com/nil_class/e9dfee47-68bd-4121-b29d-dc06f058588b/36kr.png: HTTP 400 (Feed: http://36kr.com)
+2025-12-09 15:47:28,236 - Falling back to domain favicon for http://36kr.com
+2025-12-09 15:47:32,056 - Falling back to domain favicon for https://www.infzm.com/contents?term_id=2
+2025-12-09 15:47:44,282 - Failed to download image https://imgslim.geekpark.net/images/GeekPart-blacklogo.png: HTTP 404 (Feed: http://mainssl.geekpark.net/rss.rss)
+2025-12-09 15:47:44,283 - Falling back to domain favicon for http://mainssl.geekpark.net/rss.rss
+2025-12-09 15:47:55,946 - Falling back to domain favicon for https://www.infzm.com/contents?term_id=1
+2025-12-09 15:48:09,269 - No image URL found after extraction for http://devon.postach.io/
+2025-12-09 15:48:48,665 - No image URL found after extraction for https://www.natemeyvis.com
+2025-12-09 15:48:50,444 - No image URL found after extraction for https://dhq.digitalhumanities.org/vol/19/3/index.html
+2025-12-09 15:48:52,435 - Failed to download image https://luolei.org/logo.jpg: HTTP 404 (Feed: https://luolei.org)
+2025-12-09 15:48:52,435 - Falling back to domain favicon for https://luolei.org
+2025-12-09 15:49:11,070 - Corrupted or unsupported image in save for 7392c57c16f9e1e1c6f4488cc88a0dbe. Content snippet: '<!DOCTYPE html>\n<html>\n<head>\n\t<title>Verify Yourself</title>\n\t<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">\n\t<meta charset="UTF-8"/>\n\t<script type="text/javasc'
+2025-12-09 15:49:14,566 - Download exception for logo.jpg: logo.jpg
+2025-12-09 15:49:14,566 - Falling back to domain favicon for https://blog.imalan.cn/
+2025-12-09 15:49:20,840 - Failed to download image https://img.thedailybeast.com/image/upload/v1550872986/White2x_hcwpd6.png: HTTP 403 (Feed: https://www.thedailybeast.com/?via=rss&source=articles)
+2025-12-09 15:49:20,841 - Falling back to domain favicon for https://www.thedailybeast.com/?via=rss&source=articles
+2025-12-09 15:49:26,334 - Failed to download image http://www.motherjones.com/files/motherjonesLogo_google_206X40.png: HTTP 404 (Feed: http://www.motherjones.com/politics/feed)
+2025-12-09 15:49:26,334 - Falling back to domain favicon for http://www.motherjones.com/politics/feed
+2025-12-09 15:49:29,596 - Failed to download image https://imgslim.geekpark.net/images/GeekPart-blacklogo.png: HTTP 404 (Feed: http://mainssl.geekpark.net/rss.rss)
+2025-12-09 15:49:29,597 - Falling back to domain favicon for http://mainssl.geekpark.net/rss.rss
+2025-12-09 15:49:31,217 - Failed to download image https://www.foodsafetynews.com/files/2018/05/cropped-siteicon-32x32.png: HTTP 404 (Feed: https://www.foodsafetynews.com/)
+2025-12-09 15:49:31,218 - Falling back to domain favicon for https://www.foodsafetynews.com/
+2025-12-09 15:49:54,463 - Failed to download image https://www.dramexchange.com/Common/Images/logo.gif: HTTP 404 (Feed: https://www.dramexchange.com/)
+2025-12-09 15:49:54,463 - Falling back to domain favicon for https://www.dramexchange.com/
+2025-12-09 15:49:54,541 - Corrupted or unsupported image in save for ba6320405d4efdbe4ac819b2ecfc8c9f. Content snippet: '<!DOCTYPE html>\r\n<html lang="pt-BR" prefix="og: https://ogp.me/ns#">\r\n<head>\r\n\t<meta charset="UTF-8">\r\n\t\t<meta name="viewport" content="width=device-width, initial-scale=1">\r\n\t\t<link rel="profile" hre'
+2025-12-09 15:50:05,014 - Download exception for https://azure.microsoft.com/en-us/blog/wp-content/uploads/2024/06/microsoft_logo-150x150.webp: 
+2025-12-09 15:50:05,014 - Falling back to domain favicon for https://azure.microsoft.com/en-us/blog/
+2025-12-09 15:50:05,065 - Corrupted or unsupported image in save for 4fb960bf756e32a526dcdd89f05affaa. Content snippet: 'GIF89a \x00 \x00÷\x00\x00\x04\x02\x04\x84\x82\x84DBDÄÂÄ$"$¤¢¤dbdäâä\x14\x12\x14\x94\x92\x94TRTÔÒÔ424´²´trtôòô\x0c\n\x0c\x8c\x8a\x8cLJLÌÊÌ,*,¬ª¬ljlìêì\x1c\x1a\x1c\x9c\x9a\x9c\\Z\\ÜÚÜ<:<¼º¼|z|üúü\x04\x06\x04\x84\x86\x84DFDÄÆÄ$&$¤¦¤dfdäæä\x14\x16\x14\x94�'
+2025-12-09 15:50:05,219 - No image URL found after extraction for https://kliu.io
+2025-12-09 15:50:27,626 - Failed to download image https://poorlydefinedbehaviour.github.io/papermod-cover.png: HTTP 404 (Feed: https://poorlydefinedbehaviour.github.io/)
+2025-12-09 15:50:27,626 - Falling back to domain favicon for https://poorlydefinedbehaviour.github.io/
+2025-12-09 15:50:52,039 - Failed to download image https://www.techbargains.com/Content/static/tb-logo.png: HTTP 404 (Feed: https://www.techbargains.com)
+2025-12-09 15:50:52,039 - Falling back to domain favicon for https://www.techbargains.com
+2025-12-09 15:50:57,014 - Download exception for http://www.cubicleescape.com/images/albumart.jpg: 
+2025-12-09 15:50:57,015 - Falling back to domain favicon for http://www.cubicleescape.com
+2025-12-09 15:51:14,014 - Download exception for https://8bitboyz.com/wp-content/uploads/2016/09/cropped-atari-2600-joystick-512-242301-32x32.png: 
+2025-12-09 15:51:14,014 - Falling back to domain favicon for https://8bitboyz.com/
+2025-12-09 15:51:26,132 - Failed to download image https://www.coryd.dev/og/w2000265a621-ef92-4d46-96a3-ca1f4052a53a: HTTP 404 (Feed: https://www.coryd.dev/feeds/links.xml)
+2025-12-09 15:51:26,132 - Falling back to domain favicon for https://www.coryd.dev/feeds/links.xml
+2025-12-09 15:51:48,757 - Corrupted or unsupported image in save for 5eded84cef2669a9d438d6000fe38f1f. Content snippet: 'Multisite support not enabled'
+2025-12-09 15:51:49,937 - Failed to download image https://logicmag.io/images/logics-22_preview3.png: HTTP 404 (Feed: https://logicmag.io)
+2025-12-09 15:51:49,937 - Falling back to domain favicon for https://logicmag.io
+2025-12-09 15:52:03,960 - Failed to download image https://www.freethink.com/assets/favicon/freethink-144.png: HTTP 404 (Feed: https://www.freethink.com//feed/all)
+2025-12-09 15:52:03,961 - Falling back to domain favicon for https://www.freethink.com//feed/all
+2025-12-09 15:52:09,382 - Download exception for https://bleedingedge.aifavicon/favicon-rss.jpg: Cannot connect to host bleedingedge.aifavicon:443 ssl:default [Name or service not known]
+2025-12-09 15:52:09,382 - Falling back to domain favicon for https://bleedingedge.ai
+2025-12-09 15:52:29,883 - Corrupted or unsupported image in save for 30b17474e093844892d90fb43f0282c2. Content snippet: '<!DOCTYPE html>\n  <!--[if IEMobile 7]><html class="no-js ie iem7" lang="en" dir="ltr"><![endif]-->\n  <!--[if lte IE 6]><html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en" dir="ltr"><![endif]-->\n  <!'
+2025-12-09 15:52:49,939 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/MachineLearning/)
+2025-12-09 15:52:49,940 - Falling back to domain favicon for https://www.reddit.com/r/MachineLearning/
+2025-12-09 15:52:50,458 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/neuralnetworks/?format=xml)
+2025-12-09 15:52:50,459 - Falling back to domain favicon for https://www.reddit.com/r/neuralnetworks/?format=xml
+2025-12-09 15:52:51,366 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/reinforcementlearning/?format=xml)
+2025-12-09 15:52:51,371 - Falling back to domain favicon for https://www.reddit.com/r/reinforcementlearning/?format=xml
+2025-12-09 15:53:10,991 - Corrupted or unsupported image in save for javaspecialists.eu. Content snippet: '\x00\x00\x01\x00\x00\x00'
+2025-12-09 15:53:43,217 - Failed to download image https://cloud.google.com/blog/products/gcp/static/blog/images/google.a51985becaa6.png: HTTP 404 (Feed: https://cloud.google.com/blog/products/gcp/)
+2025-12-09 15:53:43,217 - Falling back to domain favicon for https://cloud.google.com/blog/products/gcp/
+2025-12-09 15:53:56,369 - Failed to download image https://opg.optica.org/rss/images/as.gif: HTTP 404 (Feed: https://opg.optica.org/as)
+2025-12-09 15:53:56,369 - Falling back to domain favicon for https://opg.optica.org/as
+2025-12-09 15:53:57,557 - Failed to download image https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8xODc3OTY0Ni9vcmlnaW4ucG5nIiwiZXhwaXJlc19hdCI6MTY4MDY2MTIyNn0.4LDhoMIe1B7Jrz8wqZ93UJwWg-6zIOm_KFDzYJhptPo/img.png?width=210: HTTP 400 (Feed: https://bigthink.com/)
+2025-12-09 15:53:57,559 - Falling back to domain favicon for https://bigthink.com/
+2025-12-09 15:54:27,215 - Failed to download image https://www.ftium4.com/icon.png: HTTP 404 (Feed: https://www.ftium4.com/)
+2025-12-09 15:54:27,215 - Falling back to domain favicon for https://www.ftium4.com/
+2025-12-09 15:54:55,929 - Failed to download image https://www.hashicorp.com/favicon.svg: HTTP 429 (Feed: https://hashicorp.com/blog)
+2025-12-09 15:54:55,929 - Falling back to domain favicon for https://hashicorp.com/blog
+2025-12-09 15:55:12,714 - Failed to download image https://cdn-images-1.medium.com/proxy/1*TGH72Nnw24QL3iV9IOm4VA.png: HTTP 403 (Feed: https://blog.appsecco.com?source=rss----e2adb3957733---4)
+2025-12-09 15:55:12,714 - Falling back to domain favicon for https://blog.appsecco.com?source=rss----e2adb3957733---4
+2025-12-09 15:55:13,014 - Download exception for https://fondtimes.com/wp-content/uploads/2025/09/cropped-FT-32x32.png: 
+2025-12-09 15:55:13,014 - Falling back to domain favicon for https://fondtimes.com/
+2025-12-09 15:55:20,645 - Failed to download image https://cdn-images-1.medium.com/proxy/1*TGH72Nnw24QL3iV9IOm4VA.png: HTTP 403 (Feed: https://blog.0day.rocks?source=rss----6beb88197afc---4)
+2025-12-09 15:55:20,645 - Falling back to domain favicon for https://blog.0day.rocks?source=rss----6beb88197afc---4
+2025-12-09 15:55:21,205 - Failed to download image https://danielmiessler.com/images/logo.png: HTTP 404 (Feed: https://danielmiessler.com)
+2025-12-09 15:55:21,206 - Falling back to domain favicon for https://danielmiessler.com
+2025-12-09 15:55:30,367 - Failed to download image https://cdn-images-1.medium.com/proxy/1*TGH72Nnw24QL3iV9IOm4VA.png: HTTP 403 (Feed: https://blog.shiftleft.io?source=rss----86a4f941c7da---4)
+2025-12-09 15:55:30,367 - Falling back to domain favicon for https://blog.shiftleft.io?source=rss----86a4f941c7da---4
+2025-12-09 15:55:59,035 - Corrupted or unsupported image in save for d92ea92f69b798ec2235c4904cf78fb5. Content snippet: '<!DOCTYPE HTML>\n<html lang="en-US">\n<head>\n  <meta charset="UTF-8">\n  <link rel="canonical" href="https://highon.coffee/">\n  <title>HighOn.Coffee &bull; Security Research &bull; Penetration Testing Bl'
+2025-12-09 15:55:59,228 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/xss/)
+2025-12-09 15:55:59,229 - Falling back to domain favicon for https://www.reddit.com/r/xss/
+2025-12-09 15:56:08,279 - Corrupted or unsupported image in save for 298ed1da6000ec0e520cae70a127f898. Content snippet: '<!DOCTYPE HTML>\n<html>\n<head>\n<title>Gagallium</title>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>\n<link rel="stylesheet" type="text/css" href="https://cambium.inria.fr/'
+2025-12-09 15:56:10,209 - Failed to download image https://mastodon.thenewoil.org/mnt/HC_Volume_104098632/accounts/avatars/111/434/264/745/920/273/original/52ff85db085a2a1d.jpg: HTTP 404 (Feed: https://mastodon.thenewoil.org/@thenewoil)
+2025-12-09 15:56:10,210 - Falling back to domain favicon for https://mastodon.thenewoil.org/@thenewoil
+2025-12-09 15:56:16,287 - Failed to download image https://file.digitaling.com/images/common/rss_logo.png: HTTP 403 (Feed: https://www.digitaling.com)
+2025-12-09 15:56:16,288 - Falling back to domain favicon for https://www.digitaling.com
+2025-12-09 15:56:45,011 - Failed to download image https://andrew.gr/favicon.png: HTTP 404 (Feed: https://andrew.gr/stories)
+2025-12-09 15:56:45,012 - Falling back to domain favicon for https://andrew.gr/stories
+2025-12-09 15:57:38,714 - Failed to download image https://ache.one/ache.png: HTTP 404 (Feed: https://ache.one/)
+2025-12-09 15:57:38,715 - Falling back to domain favicon for https://ache.one/
+2025-12-09 15:57:57,997 - No image URL found after extraction for https://blog.bryce.io
+2025-12-09 15:58:08,889 - Download exception for https://{{domain}}/img/exyte-logo.jpg: Cannot connect to host {{domain}}:443 ssl:default [Name or service not known]
+2025-12-09 15:58:08,889 - Falling back to domain favicon for https://{{domain}}
+2025-12-09 15:58:13,791 - Failed to download image https://cdn-images-1.medium.com/proxy/1*TGH72Nnw24QL3iV9IOm4VA.png: HTTP 403 (Feed: https://blog.mapbox.com?source=rss----c5e029442---4)
+2025-12-09 15:58:13,791 - Falling back to domain favicon for https://blog.mapbox.com?source=rss----c5e029442---4
+2025-12-09 15:58:58,813 - Failed to download image https://www.siteinspire.com/static/logo.png: HTTP 429 (Feed: https://www.siteinspire.com)
+2025-12-09 15:58:58,813 - Falling back to domain favicon for https://www.siteinspire.com
+2025-12-09 15:59:03,575 - Download exception for http://www.rssFeedFolder.com/images/rssFeedFolderLogo.gif: Cannot connect to host www.rssfeedfolder.com:80 ssl:default [Name or service not known]
+2025-12-09 15:59:03,575 - Falling back to domain favicon for http://www.lukew.com
+2025-12-09 15:59:24,251 - Failed to download image http://img.chinaz.com/templates/chinaz/img/logo.png: HTTP 403 (Feed: http://www.chinaz.com)
+2025-12-09 15:59:24,252 - Falling back to domain favicon for http://www.chinaz.com
+2025-12-09 15:59:28,629 - Download exception for https://smartcdn.prod.postmedia.digital/vancouversun/wp-content/uploads/2017/09/vs-wordmark-250x39.png: Cannot connect to host smartcdn.prod.postmedia.digital:443 ssl:default [Name or service not known]
+2025-12-09 15:59:28,630 - Falling back to domain favicon for https://vancouversun.com
+2025-12-09 15:59:29,717 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/aww/)
+2025-12-09 15:59:29,718 - Falling back to domain favicon for https://www.reddit.com/r/aww/
+2025-12-09 15:59:34,491 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/android/)
+2025-12-09 15:59:34,493 - Falling back to domain favicon for https://www.reddit.com/r/android/
+2025-12-09 15:59:35,594 - Failed to download image https://journeybunnies.com/wp-content/uploads/2024/07/cropped-journeybunnies-logo-旅兔驿站-20240718-232126-32x32.png: HTTP 404 (Feed: https://journeybunnies.com)
+2025-12-09 15:59:35,594 - Falling back to domain favicon for https://journeybunnies.com
+2025-12-09 15:59:36,257 - Corrupted or unsupported image in save for bd3712d9c83792fda5b235f01bdedef8. Content snippet: '<!doctype html>\n<html lang="en-GB">\n\t<head>\n\t\t<meta charset="UTF-8">\n\n\t\t<meta name="HandheldFriendly" content="True">\n\t\t<meta name="MobileOptimized" content="320">\n\t\t<meta name="viewport" content="wid'
+2025-12-09 15:59:36,606 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/androiddev)
+2025-12-09 15:59:36,607 - Falling back to domain favicon for https://www.reddit.com/r/androiddev
+2025-12-09 15:59:37,901 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/apple/)
+2025-12-09 15:59:37,907 - Falling back to domain favicon for https://www.reddit.com/r/apple/
+2025-12-09 15:59:38,832 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/iphone/)
+2025-12-09 15:59:38,832 - Falling back to domain favicon for https://www.reddit.com/r/iphone/
+2025-12-09 15:59:38,895 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/architecture/)
+2025-12-09 15:59:38,895 - Falling back to domain favicon for https://www.reddit.com/r/architecture/
+2025-12-09 15:59:39,232 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/formula1/)
+2025-12-09 15:59:39,232 - Falling back to domain favicon for https://www.reddit.com/r/formula1/
+2025-12-09 15:59:40,032 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/Cricket/)
+2025-12-09 15:59:40,032 - Falling back to domain favicon for https://www.reddit.com/r/Cricket/
+2025-12-09 15:59:40,328 - Failed to download image https://www.ndtv.com/common/header/images/ndtv_logo_black.gif: HTTP 403 (Feed: https://www.ndtv.com/)
+2025-12-09 15:59:40,328 - Falling back to domain favicon for https://www.ndtv.com/
+2025-12-09 15:59:43,063 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/Championship/?format=xml)
+2025-12-09 15:59:43,063 - Falling back to domain favicon for https://www.reddit.com/r/Championship/?format=xml
+2025-12-09 15:59:43,831 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/football/?format=xml)
+2025-12-09 15:59:43,832 - Falling back to domain favicon for https://www.reddit.com/r/football/?format=xml
+2025-12-09 15:59:45,264 - Failed to download image https://ui-seo.crackedcdn.com/build/assets/images/cracked_logo_regina.png?v=2ef5e50e4a286ac25b48afa3beac134e: HTTP 404 (Feed: https://www.cracked.com)
+2025-12-09 15:59:45,264 - Falling back to domain favicon for https://www.cracked.com
+2025-12-09 15:59:47,003 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/InteriorDesign/)
+2025-12-09 15:59:47,011 - Falling back to domain favicon for https://www.reddit.com/r/InteriorDesign/
+2025-12-09 15:59:47,341 - Failed to download image https://www.ndtv.com/common/header/images/ndtv_logo_black.gif: HTTP 403 (Feed: https://www.ndtv.com/)
+2025-12-09 15:59:47,358 - Falling back to domain favicon for https://www.ndtv.com/
+2025-12-09 15:59:51,073 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/movies/)
+2025-12-09 15:59:51,074 - Falling back to domain favicon for https://www.reddit.com/r/movies/
+2025-12-09 15:59:51,701 - Failed to download image https://buffer.com/resources/favicon.png: HTTP 404 (Feed: https://buffer.com/resources/)
+2025-12-09 15:59:51,702 - Falling back to domain favicon for https://buffer.com/resources/
+2025-12-09 15:59:52,369 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/personalfinance/)
+2025-12-09 15:59:52,370 - Falling back to domain favicon for https://www.reddit.com/r/personalfinance/
+2025-12-09 15:59:53,410 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/space/?format=xml)
+2025-12-09 15:59:53,411 - Falling back to domain favicon for https://www.reddit.com/r/space/?format=xml
+2025-12-09 15:59:55,088 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/sports)
+2025-12-09 15:59:55,089 - Falling back to domain favicon for https://www.reddit.com/r/sports
+2025-12-09 15:59:59,318 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/tennis/)
+2025-12-09 15:59:59,323 - Falling back to domain favicon for https://www.reddit.com/r/tennis/
+2025-12-09 15:59:59,730 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/userexperience/)
+2025-12-09 15:59:59,731 - Falling back to domain favicon for https://www.reddit.com/r/userexperience/
+2025-12-09 16:00:01,050 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/television/)
+2025-12-09 16:00:01,050 - Falling back to domain favicon for https://www.reddit.com/r/television/
+2025-12-09 16:00:23,014 - Download exception for https://ay.d.mailin.fr/favicon.ico: 
+2025-12-09 16:00:23,014 - Falling back to domain favicon for https://kill-the-newsletter.com/
+2025-12-09 16:00:29,015 - Download exception for https://mail90.atl261.mcdlv.net/favicon.ico: 
+2025-12-09 16:00:29,016 - Falling back to domain favicon for https://kill-the-newsletter.com/
+2025-12-09 16:00:30,014 - Download exception for https://pm-bounces.buttondown.email/favicon.ico: 
+2025-12-09 16:00:30,014 - Falling back to domain favicon for https://kill-the-newsletter.com/
+2025-12-09 16:00:35,641 - Failed to download image https://zhangshuqiao.org/icon.png: HTTP 404 (Feed: https://zhangshuqiao.org/)
+2025-12-09 16:00:35,641 - Falling back to domain favicon for https://zhangshuqiao.org/
+2025-12-09 16:00:41,274 - Failed to download image https://imzlp.com/icon.png: HTTP 404 (Feed: https://imzlp.com/)
+2025-12-09 16:00:41,274 - Falling back to domain favicon for https://imzlp.com/
+2025-12-09 16:00:41,596 - Failed to download image https://uzzz.org/wp-content/uploads/2019/10/cropped-icon-32x32.png: HTTP 404 (Feed: https://uzzz.org/)
+2025-12-09 16:00:41,597 - Falling back to domain favicon for https://uzzz.org/
+2025-12-09 16:00:58,620 - No image URL found after extraction for https://bgzo.montaigne.io
+2025-12-09 16:01:04,753 - Failed to download image https://chengzhaoxi.xyz/icon.png: HTTP 404 (Feed: https://chengzhaoxi.xyz/)
+2025-12-09 16:01:04,754 - Falling back to domain favicon for https://chengzhaoxi.xyz/
+2025-12-09 16:01:23,707 - Failed to download image https://s3.mashiro.top/mstdn/accounts/avatars/000/041/516/original/31a5d2e34873cecc.jpg: HTTP 502 (Feed: https://hello.2heng.xin/@eveonecat)
+2025-12-09 16:01:23,707 - Falling back to domain favicon for https://hello.2heng.xin/@eveonecat
+2025-12-09 16:02:07,671 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://old.reddit.com/r/linuxadmin/top?t=week&limit=25)
+2025-12-09 16:02:07,671 - Falling back to domain favicon for https://old.reddit.com/r/linuxadmin/top?t=week&limit=25
+2025-12-09 16:02:08,295 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://old.reddit.com/r/commandline/top?t=week&limit=25)
+2025-12-09 16:02:08,300 - Falling back to domain favicon for https://old.reddit.com/r/commandline/top?t=week&limit=25
+2025-12-09 16:02:10,524 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://old.reddit.com/r/ReverseEngineering/top?t=week&limit=25)
+2025-12-09 16:02:10,525 - Falling back to domain favicon for https://old.reddit.com/r/ReverseEngineering/top?t=week&limit=25
+2025-12-09 16:02:11,204 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://old.reddit.com/r/neovim/top?t=week&limit=25)
+2025-12-09 16:02:11,204 - Falling back to domain favicon for https://old.reddit.com/r/neovim/top?t=week&limit=25
+2025-12-09 16:02:12,443 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://old.reddit.com/r/selfhosted/top?t=week&limit=25)
+2025-12-09 16:02:12,443 - Falling back to domain favicon for https://old.reddit.com/r/selfhosted/top?t=week&limit=25
+2025-12-09 16:02:12,847 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://old.reddit.com/r/opensource/hot?t=week&limit=25)
+2025-12-09 16:02:12,848 - Falling back to domain favicon for https://old.reddit.com/r/opensource/hot?t=week&limit=25
+2025-12-09 16:02:15,491 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://old.reddit.com/r/talesfromtechsupport/top?t=week&limit=25)
+2025-12-09 16:02:15,491 - Falling back to domain favicon for https://old.reddit.com/r/talesfromtechsupport/top?t=week&limit=25
+2025-12-09 16:02:18,068 - Failed to download image https://www.redditstatic.com/icon.png/: HTTP 404 (Feed: https://www.reddit.com/r/sysadmin/top?t=week&limit=25)
+2025-12-09 16:02:18,069 - Falling back to domain favicon for https://www.reddit.com/r/sysadmin/top?t=week&limit=25
+2025-12-09 16:03:17,813 - Failed to download image https://new.pythonforengineers.com/favicon.png: HTTP 404 (Feed: https://new.pythonforengineers.com/)
+2025-12-09 16:03:17,814 - Falling back to domain favicon for https://new.pythonforengineers.com/
+2025-12-09 16:03:41,888 - No image URL found after extraction for https://angrybunnyman.com/
+2025-12-09 16:03:57,707 - Download exception for None: None
+2025-12-09 16:03:57,707 - Falling back to domain favicon for https://www.privacyguides.org/articles/
+2025-12-09 16:04:10,015 - Download exception for https://jukeboxmusic.com.ng/wp-content/uploads/2024/03/cropped-jukebox-new-logo-32x32.png: 
+2025-12-09 16:04:10,015 - Falling back to domain favicon for https://jukeboxmusic.com.ng/
+2025-12-09 16:04:13,626 - Download exception for https://www.energystoragejournal.com/wp-content/uploads/2018/05/cropped-Energy_Storage_Favicon-32x32.png: Cannot connect to host www.energystoragejournal.com:443 ssl:default [Temporary failure in name resolution]
+2025-12-09 16:04:13,626 - Falling back to domain favicon for https://www.energystoragejournal.com/
+2025-12-09 16:04:22,895 - Download exception for https://ckespa.oliverburkeman.com/favicon.ico: Cannot connect to host ckespa.oliverburkeman.com:443 ssl:default [Name or service not known]
+2025-12-09 16:04:22,895 - Falling back to domain favicon for https://kill-the-newsletter.com/

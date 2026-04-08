@@ -1,0 +1,30 @@
+{
+  "category": "Spring Hill News",
+  "source_url": "https://rss.feedspot.com/spring_hill_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of Spring Hill, TN",
+      "feed_url": "https://www.springhilltn.org/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.springhilltn.org/CivicAlerts.aspx?CID=1",
+      "description": "The official government website of the City of Spring Hill, Tennessee. We provide resident, business, and visitor information sections, plus city government information to Spring Hill city and community.",
+      "followers": {
+        "facebook": 20300,
+        "twitter": 5000,
+        "instagram": 6900
+      },
+      "image_url": "https://i1.feedspot.com/5150152.jpg?t=1589373795"
+    },
+    {
+      "title": "Williamson Herald \u00bb Spring Hill",
+      "feed_url": "https://www.williamsonherald.com/search/?f=rss&t=article&c=communities/spring_hill&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.williamsonherald.com/communities/spring_hill/",
+      "description": "The Williamson Herald delivers news, lifestyles, sports, and business with in-depth analysis and a local perspective and publishes every Thursday. Our paper delivers the news and community events that you are looking for. Stay tuned for breaking news and instant updates.",
+      "followers": {
+        "facebook": 15800,
+        "twitter": 13400,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5150153.jpg?t=1589374269"
+    }
+  ]
+}

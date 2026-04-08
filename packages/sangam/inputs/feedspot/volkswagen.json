@@ -1,0 +1,59 @@
+{
+  "category": "Volkswagen",
+  "source_url": "https://rss.feedspot.com/volkswagen_rss_feeds",
+  "feeds": [
+    {
+      "title": "Auto Express \u00bb Volkswagen News",
+      "feed_url": "https://www.autoexpress.co.uk/volkswagen/feed",
+      "website_url": "https://www.autoexpress.co.uk/volkswagen",
+      "description": "Every new car reviewed and rated by Auto Express road test experts. Auto Express is the UK's favorite weekly car magazine. Find Volkswagen new and Used Car Reviews, News & Advice and in-depth video reviews.",
+      "followers": {
+        "facebook": 113200,
+        "twitter": 145900
+      },
+      "image_url": "https://i1.feedspot.com/320228.jpg?t=1620371539"
+    },
+    {
+      "title": "Motor Authority \u00bb Volkswagen News",
+      "feed_url": "https://feeds.highgearmedia.com/?sites=MotorAuthority&tags=volkswagen",
+      "website_url": "https://www.motorauthority.com/news/volkswagen",
+      "description": "Motor Authority's readership consists of driving enthusiasts, industry members, and in-market consumers, all of whom are searching for the very latest and most reliable information to make informed decisions on the luxury and performance cars they follow and drive. Follow this blog that offers everything you ever wanted to know about Volkswagen News, photos, and videos.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5453559.jpg?t=1665120889"
+    },
+    {
+      "title": "Autoblog \u00bb Volkswagen News and Reviews",
+      "feed_url": "https://www.autoblog.com/category/volkswagen/rss.xml",
+      "website_url": "https://www.autoblog.com/volkswagen/",
+      "description": "Autoblog brings you car news; expert reviews of cars, trucks, crossovers, and SUVs; and pictures and video. Get Volkswagen news, press releases and expert reviews along with detailed photos, spy shots and road tests of new Volkswagen vehicles.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 449300,
+        "instagram": 165900
+      },
+      "image_url": "https://i1.feedspot.com/4915746.jpg?t=1620371506"
+    },
+    {
+      "title": "Volkswagen",
+      "feed_url": "https://newsroom.vw.com/feed/",
+      "website_url": "https://www.vw.com/en/newsroom.html",
+      "description": "This is the official Volkswagen of America News account. Get updates about Volkswagen news, car launch, reviews, photos, videos and more.",
+      "followers": {
+        "facebook": 33600000,
+        "twitter": 22000,
+        "instagram": 938400
+      },
+      "image_url": "https://i1.feedspot.com/4915745.jpg?t=1620371492"
+    },
+    {
+      "title": "Volkswagen Group",
+      "feed_url": "https://www.volkswagenag.com/en/news.webfeed.html/feed",
+      "website_url": "https://www.volkswagen-group.com/en/press-releases",
+      "description": "The Volkswagen Group with its headquarters in Wolfsburg, Germany is one of the world's leading manufacturers of automobiles and commercial vehicles.",
+      "followers": {
+        "facebook": 66600
+      },
+      "image_url": "https://i1.feedspot.com/4915756.jpg?t=1620371546"
+    }
+  ]
+}

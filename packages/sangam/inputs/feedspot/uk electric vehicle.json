@@ -1,0 +1,117 @@
+{
+  "category": "UK Electric Vehicle",
+  "source_url": "https://rss.feedspot.com/uk_electric_vehicle_rss_feeds",
+  "feeds": [
+    {
+      "title": "E-zoomed Blog",
+      "feed_url": "https://www.ezoomed.com/blog/feed/",
+      "website_url": "https://www.ezoomed.com/blog/",
+      "description": "E-zoomed, the first comprehensive platform of its type, makes your journey to electric car ownership easier by providing quotes and comparison.",
+      "followers": {
+        "facebook": 179,
+        "twitter": 242,
+        "instagram": 80
+      },
+      "image_url": "https://i1.feedspot.com/5039354.jpg?t=1637816746"
+    },
+    {
+      "title": "EV Info",
+      "feed_url": "https://evinfo.info/feed/",
+      "website_url": "https://evinfo.info/",
+      "description": "EV news on the Electric Car industry plus reviews of best selling EVs and the latest on Charging technology.",
+      "followers": {
+        "facebook": 298,
+        "twitter": 226
+      },
+      "image_url": "https://i1.feedspot.com/4811718.jpg?t=1610606748"
+    },
+    {
+      "title": "EVision Electric Vehicles",
+      "feed_url": "https://www.evisionevs.co.uk/feed/",
+      "website_url": "https://www.evisionevs.co.uk/electric-vehicle-news/",
+      "description": "Read all about the latest electric vehicle news, UK Government incentives and new vehicles coming to market as written by EVision, the UK's first and largest all-electric vehicle rental company.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 2500,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5367073.jpg?t=1643794655"
+    },
+    {
+      "title": "GreenMotor",
+      "feed_url": "http://www.greenmotor.co.uk/feeds/posts/default",
+      "website_url": "http://www.greenmotor.co.uk/",
+      "description": "GreenMotor is a website about electric cars, hybrids and low-carbon motoring. Get Reviews, news and opinion about low-CO2 cars, electric cars and hybrids in the UK.",
+      "followers": {
+        "facebook": 94,
+        "twitter": 248
+      },
+      "image_url": "https://i1.feedspot.com/4476354.jpg?t=1610607359"
+    },
+    {
+      "title": "EVBox Blog",
+      "feed_url": "https://blog.evbox.com/rss.xml",
+      "website_url": "https://blog.evbox.com/",
+      "description": "EVBox is the leading global manufacturer of electric vehicle charging stations and charging management software. With an installed base of over 50,000 charging points across more than 980 cities worldwide, EVBox drives sustainable mobility, by bringing leading electric vehicle charging solutions to the world. Right from the beating heart of the clean tech industry, here are the latest updates on electric cars and future transportation from EVBox.",
+      "followers": {
+        "facebook": 19100,
+        "twitter": 7100,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4917614.jpg?t=1620397415"
+    },
+    {
+      "title": "EV Driver Blog",
+      "feed_url": "https://www.evdriver.co.uk/ev-blog?format=RSS",
+      "website_url": "https://www.evdriver.co.uk/ev-blog/",
+      "description": "EVDriver specialise in the installation, support and management of revenue generating Electric Vehicle Charge Points.",
+      "followers": {
+        "facebook": 333,
+        "twitter": 576
+      },
+      "image_url": "https://i1.feedspot.com/4812111.jpg?t=1614747298"
+    },
+    {
+      "title": "Autovolt Magazine",
+      "feed_url": "https://www.autovolt-magazine.com/feed/",
+      "website_url": "https://www.autovolt-magazine.com/",
+      "description": "Autovolt magazine is the UK's premier electric and hybrid vehicle publication. We believe the world of vehicles is changing. Transport is no longer solely a question of petrol or diesel. Every major vehicle manufacturer is looking to electrified vehicles and have either already introduced electric cars and hybrids, or are developing them with release imminent.",
+      "followers": {
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4812847.jpg?t=1610606167"
+    },
+    {
+      "title": "Solisco Blog",
+      "feed_url": "https://solisco.co.uk/blog/feed/",
+      "website_url": "https://solisco.co.uk/blog/",
+      "description": "Solisco was founded with a mission to inspire and support the emerging electric vehicle market with innovative solutions that harness the power of the sun. Having a wealth of experience in running electric vehicles, the team at Solisco were passionate about making a difference so that everyone can enjoy the true freedom of driving an EV without any compromises.",
+      "followers": {
+        "facebook": 116
+      },
+      "image_url": "https://i1.feedspot.com/4812187.jpg?t=1610606731"
+    },
+    {
+      "title": "4EV Blog",
+      "feed_url": "https://www.4ev.co.uk/blog/rss/1",
+      "website_url": "https://www.4ev.co.uk/blog",
+      "description": "Covers articles about EV charging, and EV news. How-to style blogs - as well as vehicle overviews, charging options and more.",
+      "followers": {
+        "facebook": 243,
+        "twitter": 848
+      },
+      "image_url": "https://i1.feedspot.com/5312491.jpg?t=1629108871"
+    },
+    {
+      "title": "DriveElectric News",
+      "feed_url": "https://www.drive-electric.co.uk/feed/",
+      "website_url": "https://www.drive-electric.co.uk/news/",
+      "description": "DriveElectric are the UK's leading provider of leased Electric Vehicles and offer finance options for all makes and model, from all manufacturers, including the BMW i3, Renault Zoe, Mitsubishi Outlander PHEV and Nissan Leaf. Follow this blog to find more information on EV news and stories.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 7300
+      },
+      "image_url": "https://i1.feedspot.com/4812327.jpg?t=1620397435"
+    }
+  ]
+}

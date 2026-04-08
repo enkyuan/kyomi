@@ -1,0 +1,240 @@
+{
+  "category": "Georgia Food",
+  "source_url": "https://rss.feedspot.com/georgia_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Eater Atlanta",
+      "feed_url": "https://atlanta.eater.com/rss/index.xml",
+      "website_url": "https://atlanta.eater.com/",
+      "description": "Stay updated with the latest food news and dining guides for Atlanta. Eater's coverage ranges from extensive city maps and travel dining guides marking all the best places to eat, punchy editorials exploring the cultural significance of what and how people eat, in-depth industry investigations, and light-hearted ruminations on food fads and cooking tips and tricks.",
+      "followers": {
+        "facebook": 41300,
+        "twitter": 65400,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/4817407.jpg?t=1610692375"
+    },
+    {
+      "title": "Domestic Superhero",
+      "feed_url": "https://domesticsuperhero.com/feed/",
+      "website_url": "https://domesticsuperhero.com/",
+      "description": "HI! I'm Allyson. You will find lots of recipes & food goodness, DIY projects, crafts & a little bit of everything.",
+      "followers": {
+        "facebook": 278100,
+        "twitter": 2300,
+        "instagram": 102400
+      },
+      "image_url": "https://i1.feedspot.com/5193157.jpg?t=1599210055"
+    },
+    {
+      "title": "Lana's Cooking",
+      "feed_url": "https://www.lanascooking.com/feed/",
+      "website_url": "https://www.lanascooking.com/",
+      "description": "Hello! I'm Lana Stuart, the cook and author behind Lana's Cooking. I live in Georgia, in the southern U.S., with my very patient, taste-tester, and my husband Bill. I started Lana's Cooking in 2009 as a fun way to record some of the old, classic southern comfort food recipes that I grew up cooking with my mother, grandmothers, and aunts.",
+      "followers": {
+        "facebook": 15900,
+        "twitter": 1500,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5009249.jpg?t=1673353973"
+    },
+    {
+      "title": "Savory Spin Blog",
+      "feed_url": "https://savoryspin.com/feed/",
+      "website_url": "https://savoryspin.com/blog/",
+      "description": "Hiya, I'm Shashi, the blogger behind Savory Spin. Here you can browse a collection of super easy, economical, mostly fusion recipes that can be made with ingredients from your local grocery store. Find hundreds of deliciously spiced, fusion recipes you can easily make at home. From breakfast to lunch to dinner to your next holiday celebration find the perfect dish to satisfy even the most demanding craving, just by adding some spice!",
+      "followers": {
+        "facebook": 54000,
+        "twitter": 14,
+        "instagram": 101600
+      },
+      "image_url": "https://i1.feedspot.com/5129714.jpg?t=1667387052"
+    },
+    {
+      "title": "Marilyn Wolf's Food and Restaurant Blog",
+      "feed_url": "http://foodwolfblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://foodwolfblog.blogspot.com/",
+      "description": "Marilyn Wolf thoughts on the Atlanta food scene, with occasional forays into the world beyond. Find restaurant reviews and recipes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4635808.jpg?t=1602511171"
+    },
+    {
+      "title": "Healthy Eating 101",
+      "feed_url": "https://www.healthyeating101.com/feed/",
+      "website_url": "https://www.healthyeating101.com/",
+      "description": "Chef Megan McCarthy's creative culinary experience and enthusiasm bring healthy food to life! She incorporates highly nutritious Superfoods into an everyday healthy eating lifestyle while putting you at ease in the kitchen.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1900,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4687550.jpg?t=1627371123"
+    },
+    {
+      "title": "Life, Love and Sugar",
+      "feed_url": "https://www.lifeloveandsugar.com/feed/",
+      "website_url": "https://www.lifeloveandsugar.com/",
+      "description": "Browse hundreds of tried and true dessert recipes. From creamy cheesecakes and moist cupcakes, to fluffy cakes and fudgy brownies!",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 3500,
+        "instagram": 249200
+      },
+      "image_url": "https://i1.feedspot.com/4344484.jpg?t=1606291411"
+    },
+    {
+      "title": "Some Kinda Good",
+      "feed_url": "https://somekindagood.com/feed/",
+      "website_url": "https://somekindagood.com/",
+      "description": "Georgia native Rebekah Faulk Lingenfelser is a ServSafe certified professionally trained private chef, culinary TV personality, author, and food enthusiast. Pull up a chair for cooking and entertaining tips, and easy-to-execute, flavorful recipes to share around the family table.",
+      "followers": {
+        "twitter": 820
+      },
+      "image_url": "https://i1.feedspot.com/5313826.jpg?t=1629379732"
+    },
+    {
+      "title": "Savvy Mama Lifestyle \u00bb Recipes",
+      "feed_url": "https://www.savvymamalifestyle.com/recipes/main-course-recipes/feed/",
+      "website_url": "https://www.savvymamalifestyle.com/recipes/",
+      "description": "Welcome to Savvy Mama Lifestyle - a resource for family travel tips, Millennial parenting, entertainment, recipes, & reviews. We love featuring fun travel destinations, great food and things to do as a family.",
+      "followers": {
+        "facebook": 28200,
+        "twitter": 14900,
+        "instagram": 42900
+      },
+      "image_url": "https://i1.feedspot.com/5009251.jpg?t=1622265546"
+    },
+    {
+      "title": "Add a Pinch",
+      "feed_url": "https://addapinch.com/feed/",
+      "website_url": "https://addapinch.com/category/all-recipes/",
+      "description": "Browse 1500+ simple, tested, and perfected recipes the whole family will love! Featuring family-friendly quick and easy meals, desserts, and more!",
+      "followers": {
+        "facebook": 690600,
+        "twitter": 7900,
+        "instagram": 47000
+      },
+      "image_url": "https://i1.feedspot.com/703540.jpg?t=1600345417"
+    },
+    {
+      "title": "Atlanta Magazine",
+      "feed_url": "https://www.atlantamagazine.com/feed/",
+      "website_url": "https://www.atlantamagazine.com/dining-news/",
+      "description": "Since 1961, Atlanta magazine has served as the authority on Atlanta, providing its monthly readers with a mix of long-form nonfiction, lively lifestyle coverage, in-depth service journalism, and literary essays, columns, and profiles. The city's only general-interest magazine, Atlanta Magazine is recognized regionally and nationally for journalism and design excellence.",
+      "followers": {
+        "facebook": 87000,
+        "twitter": 486600,
+        "instagram": 172700
+      },
+      "image_url": "https://i1.feedspot.com/4817335.jpg?t=1669707242"
+    },
+    {
+      "title": "Food Fun Travel News",
+      "feed_url": "https://foodfuntravel.com/feed/",
+      "website_url": "https://foodfuntravel.com/news/",
+      "description": "We are Tommo & Megsy two roaming food and travel photographers & writers with an insatiable passion for seeking out culinary deliciousness. We've visited 90 countries territories during our quest to find the ultimate Food Worth Traveling For. Here on our food travel blog, we share what we have discovered, to help you plan your next perfect foodie vacation.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 43700
+      },
+      "image_url": "https://i1.feedspot.com/4925962.jpg?t=1620976581"
+    },
+    {
+      "title": "Slow Food Atlanta Blog",
+      "feed_url": "https://www.slowfoodatlanta.org/blog?format=rss",
+      "website_url": "https://www.slowfoodatlanta.org/blog",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 6200
+      },
+      "image_url": "https://i1.feedspot.com/7323427.jpg?t=1719228375"
+    },
+    {
+      "title": "Atlanta Restaurant Blog",
+      "feed_url": "https://atlantarestaurantblog.com/feed/",
+      "website_url": "https://atlantarestaurantblog.com/",
+      "description": "Latest new on Atlanta dining scene",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7323426.jpg?t=1719235331"
+    },
+    {
+      "title": "Tomorrow's News Today",
+      "feed_url": "https://www.tonetoatl.com/feeds/posts/default",
+      "website_url": "https://www.tonetoatl.com/",
+      "description": "The most accurate and comprehensive blog covering Atlanta restaurant, retail, hotel, banking, grocery, multi-family and convenience store news.",
+      "followers": {
+        "facebook": 20400,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/716936.jpg?t=1610693096"
+    },
+    {
+      "title": "Hungry Girls Do It Better \u00bb Food",
+      "feed_url": "http://www.hungrygirlsdoitbetter.com/food?format=rss",
+      "website_url": "http://www.hungrygirlsdoitbetter.com/food",
+      "description": "Hitting Atlanta's every restaurant, Megan shares with all Atlanta her personal take on food genres from Michelin Star restaurants to McDonald's.",
+      "followers": {
+        "facebook": 969
+      },
+      "image_url": "https://i1.feedspot.com/5313813.jpg?t=1629378878"
+    },
+    {
+      "title": "Mi Diario de Cocina",
+      "feed_url": "https://www.midiariodecocina.com/en/feed/",
+      "website_url": "https://www.midiariodecocina.com/en/",
+      "description": "Easy and delicious cooking recipes with step-by-step photos. A variety of recipes from Chilean cuisine, international, bakery (cakes, pies, kuchen, desserts), vegetarian, and much more.",
+      "followers": {
+        "facebook": 62600,
+        "twitter": 3800,
+        "instagram": 54100
+      },
+      "image_url": "https://i1.feedspot.com/5313843.jpg?t=1629380835"
+    },
+    {
+      "title": "Eating Through Atlanta Blog",
+      "feed_url": "https://www.eatingthroughatlanta.com/blog?format=rss",
+      "website_url": "https://www.eatingthroughatlanta.com/blog",
+      "description": "HI! I'm just an ATL PR girl eating through the foodie world. Here you'll get to see more in depth reviews on some of my favorite places to eat, drink and everything in between.",
+      "followers": {
+        "facebook": 1500,
+        "instagram": 122600
+      },
+      "image_url": "https://i1.feedspot.com/5313820.jpg?t=1629379349"
+    },
+    {
+      "title": "Simply Sabrina \u00bb Food & Drink",
+      "feed_url": "https://heysimply.com/living/food-drink/feed/",
+      "website_url": "https://heysimply.com/living/food-drink/",
+      "description": "Simply Sabrina is a petite fashion and lifestyle blog based in Atlanta Georgia. Simply Sabrina shares personal style looks, beauty tricks, recipes, and interior design.",
+      "followers": {
+        "twitter": 1900,
+        "instagram": 179800
+      },
+      "image_url": "https://i1.feedspot.com/5009257.jpg?t=1622265704"
+    },
+    {
+      "title": "Roamilicious \u00bb Recipes",
+      "feed_url": "https://roamilicious.com/category/recipes/feed/",
+      "website_url": "https://roamilicious.com/category/recipes/",
+      "description": "Welcome to Roamilicious, a food, travel and lifestyle Blog. I'm Malika Bowling, a foodie and traveler married with no kids. Love traveling & finding the next great foodie spot with my husband / photographer, Glen.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 1300,
+        "instagram": 50000
+      },
+      "image_url": "https://i1.feedspot.com/5414217.jpg?t=1656072068"
+    },
+    {
+      "title": "Eating With Erica Blog",
+      "feed_url": "http://eatingwitherica.com/feed/",
+      "website_url": "https://eatingwitherica.com/blog/",
+      "description": "Eating With Erica highlights delicious recipes, incredible travel destinations, and entertaining inspo. Erica is an Atlanta-based blogger with a passion for all things dining, entertaining, and food.",
+      "followers": {
+        "facebook": 11400,
+        "twitter": 5500,
+        "instagram": 43000
+      },
+      "image_url": "https://i1.feedspot.com/4962955.jpg?t=1621863428"
+    }
+  ]
+}

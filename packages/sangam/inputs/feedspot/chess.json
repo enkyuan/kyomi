@@ -1,0 +1,804 @@
+{
+  "category": "Chess",
+  "source_url": "https://rss.feedspot.com/chess_rss_feeds",
+  "feeds": [
+    {
+      "title": "Chess.com News",
+      "feed_url": "https://www.chess.com/rss/news",
+      "website_url": "https://www.chess.com/news",
+      "description": "Chess.com aims to provide a safe and enjoyable environment where chess players of all skill levels can learn, contribute, play, build, chat, and share.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 489300,
+        "instagram": 2000000
+      },
+      "image_url": "https://i1.feedspot.com/4416658.jpg?t=1609230747"
+    },
+    {
+      "title": "ChessBase",
+      "feed_url": "https://en.chessbase.com/feed",
+      "website_url": "https://en.chessbase.com/",
+      "description": "Reports about chess - tournaments, championships, portraits, interviews, World Championships, product launches and more.",
+      "followers": {
+        "facebook": 31700,
+        "twitter": 56600
+      },
+      "image_url": "https://i1.feedspot.com/3463590.jpg?t=1614258037"
+    },
+    {
+      "title": "The Week in Chess",
+      "feed_url": "https://theweekinchess.com/twic-rss-feed",
+      "website_url": "https://theweekinchess.com/",
+      "description": "The Week in Chess is an electronic magazine covering the games and results from current international chess events by Mark Crowther.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 13600
+      },
+      "image_url": "https://i1.feedspot.com/4443359.jpg?t=1732101631"
+    },
+    {
+      "title": "Remote Chess Academy Blog",
+      "feed_url": "https://chess-teacher.com/feed/",
+      "website_url": "https://chess-teacher.com/blog/",
+      "description": "In RCA, we treat chess as a tool for developing one's mental power and a champion psychology. That's how we help people grow personally, becoming a winner in chess, as well as in any other activity. Although we are a chess-teaching company, our focus is not chess;it is on the PERSON that plays chess. We use chess as a tool for self-improvement, developing one's mental power, and cultivating the psychology of a champion.",
+      "followers": {
+        "facebook": 234900,
+        "twitter": 691
+      },
+      "image_url": "https://i1.feedspot.com/4968290.jpg?t=1614258322"
+    },
+    {
+      "title": "Chess For Kids Blog",
+      "feed_url": "https://blog.chessforkids.in/feeds/posts/default",
+      "website_url": "https://blog.chessforkids.in/",
+      "description": "Chess for Kids, chess kids is a blog dedicated to providing chess education, strategies, tactics, and lessons to kids of all ages.",
+      "followers": {
+        "facebook": 952,
+        "twitter": 215,
+        "instagram": 6600
+      },
+      "image_url": "https://i1.feedspot.com/5678647.jpg?t=1695715390"
+    },
+    {
+      "title": "Chess Skills",
+      "feed_url": "https://feeds.feedburner.com/blogspot/wotAx",
+      "website_url": "http://chessskill.blogspot.com/",
+      "description": "Chess strategy, tactics, history. Suggestions for improving skills from an active youth chess coach and improving adult player.",
+      "followers": {
+        "facebook": 10000,
+        "twitter": 223
+      },
+      "image_url": "https://i1.feedspot.com/4536680.jpg?t=1650527808"
+    },
+    {
+      "title": "Chessdom",
+      "feed_url": "https://www.chessdom.com/feed/",
+      "website_url": "https://www.chessdom.com/",
+      "description": "The Global Chess News Site",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 24300
+      },
+      "image_url": "https://i1.feedspot.com/3290820.jpg?t=1614258383"
+    },
+    {
+      "title": "Learning Chess Blog",
+      "feed_url": "https://learningchess.net/blog/?feed=rss2",
+      "website_url": "https://learningchess.net/blog/",
+      "description": "Multilingual, online chess learning tool, designed for kids, open to everyone. Their mission is to popularize chess - as a game and personal development tool - all over the world.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4536731.jpg?t=1650519664"
+    },
+    {
+      "title": "Chess Goals Blog",
+      "feed_url": "https://chessgoals.com/feed/",
+      "website_url": "https://chessgoals.com/blog/",
+      "description": "Providing study plans based on survey data to help you reach chess master.",
+      "followers": {
+        "twitter": 340
+      },
+      "image_url": "https://i1.feedspot.com/5165203.jpg?t=1650523260"
+    },
+    {
+      "title": "Official Staunton Blog",
+      "feed_url": "https://www.officialstaunton.com/blogs/news.atom",
+      "website_url": "https://www.officialstaunton.com/blogs/news",
+      "description": "We are the World's premier source for the finest chess sets available on the market today. We take great pride in the services we provide to all the dedicated fans of the timeless tradition of chess.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5170414.jpg?t=1614258604"
+    },
+    {
+      "title": "IRL Chess",
+      "feed_url": "https://www.irlchess.com/feed/",
+      "website_url": "https://www.irlchess.com/",
+      "description": "We're interested in Irish chess history & records. It's a group blog and, as interests differ, there will be a wide range of topics and styles.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4968315.jpg?t=1614315419"
+    },
+    {
+      "title": "Tartajubow On Chess",
+      "feed_url": "https://feeds.feedburner.com/TartajubowOnChessIi",
+      "website_url": "http://tartajubow.blogspot.com/",
+      "description": "Just a Blogger trying to write about chess.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1708858.jpg?t=1614259432"
+    },
+    {
+      "title": "Path to Chess Mastery",
+      "feed_url": "https://www.pathtochessmastery.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.pathtochessmastery.com/",
+      "description": "A blog about chess improvement, focusing on analysis, opening study, and training of chess and mental skills.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4968270.jpg?t=1614259527"
+    },
+    {
+      "title": "ChessBox",
+      "feed_url": "https://www.chessbox.in/feed/",
+      "website_url": "https://www.chessbox.in/",
+      "description": "ChessBox, the home to all chess games, events, news, and puzzles around the world. Here you will get the latest Chess News, Updates, Games, Chess Online, and more.",
+      "followers": {
+        "twitter": 370
+      },
+      "image_url": "https://i1.feedspot.com/5245828.jpg?t=1613542558"
+    },
+    {
+      "title": "Jim West On Chess",
+      "feed_url": "http://jimwestonchess.blogspot.com/feeds/posts/default",
+      "website_url": "http://jimwestonchess.blogspot.com/",
+      "description": "Chess blogs by Jim West from Paul Morphy to Bobby Fischer.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1708855.jpg?t=1614315274"
+    },
+    {
+      "title": "Michel's Chess Blog",
+      "feed_url": "https://michelschessblog.com/feed/",
+      "website_url": "https://michelschessblog.com/",
+      "description": "This blog is all about chess. I started playing chess in the late sixties. At some point I got very fanatic about it and played in lots of tournaments. My level? At best mediocre. I played in the second team of the Utrecht Chess club.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4968336.jpg"
+    },
+    {
+      "title": "Temposchlucker",
+      "feed_url": "https://www.blogger.com/feeds/10713928/posts/default",
+      "website_url": "http://temposchlucker.blogspot.com/",
+      "description": "Finding my way in the chessdevelopment- and training jungle in order to improve my rating.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4968266.jpg?t=1650528575"
+    },
+    {
+      "title": "Gardiner Chess Blog",
+      "feed_url": "https://gardinerchess.com.au/feed/",
+      "website_url": "https://gardinerchess.com.au/blog/",
+      "description": "They believe in providing a positive impact on society. This is why Gardiner Chess actively strive to strengthen a child's mental clarity, fortitude, stability and overall health through high quality chess coaching. They believe that chess can be used as a metaphor for life You have to be responsible for your actions, make a move, and plan ahead.",
+      "followers": {
+        "facebook": 1800,
+        "instagram": 476
+      },
+      "image_url": "https://i1.feedspot.com/4536588.jpg?t=1614314177"
+    },
+    {
+      "title": "RafTop Chess News",
+      "feed_url": "https://chesswords.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://chesswords.blogspot.com/",
+      "description": "Chess and chess tournament announcements from Greece and the world. To know more on these, subscribe with us.",
+      "followers": {
+        "twitter": 33
+      },
+      "image_url": "https://i1.feedspot.com/5000943.jpg?t=1614258634"
+    },
+    {
+      "title": "Chess Manitoba",
+      "feed_url": "http://chessmanitoba.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://chessmanitoba.blogspot.com/",
+      "description": "A blog for Chess activities in Manitoba, particularly Chess in Winnipeg.",
+      "followers": {
+        "twitter": 22
+      },
+      "image_url": "https://i1.feedspot.com/4712493.jpg?t=1650528796"
+    },
+    {
+      "title": "Chessexpress",
+      "feed_url": "http://chessexpress.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://chessexpress.blogspot.com/",
+      "description": "A blog mainly devoted to chess.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 161
+      },
+      "image_url": "https://i1.feedspot.com/4536573.jpg?t=1614314157"
+    },
+    {
+      "title": "Daily Chess Musings Blog",
+      "feed_url": "https://dailychessmusings.com/feed/",
+      "website_url": "https://dailychessmusings.com/chess-musings-blog/",
+      "description": "Chris Torres is a nationally renowned scholastic chess coach working in the San Francisco Bay Area. His classes have attracted players of strengths ranging from rank beginners to world champions. All those who want to learn chess are welcome here.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5241775.jpg?t=1612353927"
+    },
+    {
+      "title": "Livingston County Chess Blog",
+      "feed_url": "http://livingstoncountychessclub.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://livingstoncountychessclub.blogspot.com/",
+      "description": "We offer free instructions and lessons to beginners. All ages welcome, with free lessons for beginners, and analysis of games.",
+      "followers": {
+        "facebook": 93
+      },
+      "image_url": "https://i1.feedspot.com/4968312.jpg?t=1614314418"
+    },
+    {
+      "title": "Ennis Chess",
+      "feed_url": "https://ennischessclub.wordpress.com/feed/",
+      "website_url": "https://ennischessclub.wordpress.com/",
+      "description": "This website is maintained by Rory Quinn. All articles are my own work unless otherwise stated. I originally started this blog in 2009 to give Ennis Chess Club a web presence something the club needed at the time. While providing coverage and information about chess in Ennis and the Munster/Connaught areas in particular it also provides commentary on national and international chess news.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4968566.jpg?t=1614315467"
+    },
+    {
+      "title": "Kingpin Chess Magazine",
+      "feed_url": "https://www.kingpinchess.net/feed/",
+      "website_url": "https://www.kingpinchess.net/",
+      "description": "The satirical chess magazine.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/1861211.jpg?t=1732101663"
+    },
+    {
+      "title": "Chess Summit Blog",
+      "feed_url": "https://chesssummit.com/feed/",
+      "website_url": "https://chesssummit.com/blog/",
+      "description": "Sharing instructional material, personal experiences and goals, and news on ongoing chess programs around the world for free.",
+      "followers": {
+        "facebook": 979,
+        "twitter": 480
+      },
+      "image_url": "https://i1.feedspot.com/4968267.jpg?t=1614314269"
+    },
+    {
+      "title": "John Saunders' Chess Blog",
+      "feed_url": "https://johnchess.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://johnchess.blogspot.com/",
+      "description": "John Saunders is an Associate Editor, CHESS Magazine, writer, photo-journalist, webmaster ... greatest chess achievement: finding Boris Spassky's reading glasses",
+      "followers": {
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4917379.jpg?t=1614315555"
+    },
+    {
+      "title": "Boardgameintellect",
+      "feed_url": "https://boardgameintellect.com/feed/",
+      "website_url": "https://boardgameintellect.com/",
+      "description": "Welcome to Boardgameintellect.com. We're dedicated to giving you the very best information on everything board game related, with a focus on highly under-covered news, quality information, and valuable insights into not just board games but all things intellectual.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5624448.jpg?t=1689240397"
+    },
+    {
+      "title": "Boylston Chess Club",
+      "feed_url": "https://feeds.feedburner.com/BCC-Weblog",
+      "website_url": "http://boylston-chess-club.blogspot.com/",
+      "description": "The Chess Blog of the Boylston Chess Club ... The Boylston Chess Club of the Boylston Chess Foundation is the largest chess club in Boston, and the third oldest chess organization in the United States.",
+      "followers": {
+        "twitter": 356
+      },
+      "image_url": "https://i1.feedspot.com/637620.jpg?t=1614314125"
+    },
+    {
+      "title": "Chess-Site.com",
+      "feed_url": "https://chess-site.com/articles/feed/",
+      "website_url": "https://chess-site.com/articles/",
+      "description": "Everything you should know about the game of chess. Including Guides, Tips & Reviews of the Best Chess Products in the market of 2018.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 317
+      },
+      "image_url": "https://i1.feedspot.com/4918091.jpg?t=1614258377"
+    },
+    {
+      "title": "Chess KLUB Blog",
+      "feed_url": "https://chessklub.com/feed/",
+      "website_url": "https://chessklub.com/blog/",
+      "description": "Chess KLUB's vision is to help people learn life lessons through the game of Chess and become better human beings. We educate & train people in the game of chess and help them progress through the various stages by providing an all-around enriching experience, one move at a time. Read quality Chess blog articles written by Chess professionals and rated coaches. Also, read Chess tournament updates from Chess KLUB.",
+      "followers": {
+        "twitter": 8
+      },
+      "image_url": "https://i1.feedspot.com/5271927.jpg?t=1619006755"
+    },
+    {
+      "title": "Goddess Chess",
+      "feed_url": "https://goddesschess.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://goddesschess.blogspot.com/",
+      "description": "'Despite the documented evidence of chess historian H.J.R. Murray, I have always thought that chess was invented by a goddess.' George Koltonowski, from Women in Chess, Players of the Modern Game",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4968126.jpg?t=1614259321"
+    },
+    {
+      "title": "ChessTech",
+      "feed_url": "https://www.chesstech.org/rss/",
+      "website_url": "https://www.chesstech.org/",
+      "description": "ChessTech is a free weekly newsletter and website bringing the latest technology news and hands-on knowledge to the international chess community.",
+      "followers": {
+        "facebook": 862,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5173636.jpg?t=1614258648"
+    },
+    {
+      "title": "Chess School Blog",
+      "feed_url": "https://chessschool.com.au/feed/",
+      "website_url": "https://chessschool.com.au/weblog/",
+      "description": "Chess School SA is a leading provider of chess coaching services in Adelaide, South Australia. We are combining modern chess training with the Russian methods for training chess players",
+      "followers": {
+        "twitter": 672
+      },
+      "image_url": "https://i1.feedspot.com/4984838.jpg?t=1614314151"
+    },
+    {
+      "title": "Macedonia's First Chess Blog",
+      "feed_url": "https://www.alexcolovic.com/feed/",
+      "website_url": "https://www.alexcolovic.com/",
+      "description": "International Grandmaster Alex Colovic presents Macedonia's First Chess Blog where he will be sharing his thoughts on the ongoing topics in the chess world. The site will have entries in Macedonian that will shed light on the themes relevant to the Macedonian chess scene.",
+      "followers": {
+        "facebook": 26,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4536624.jpg?t=1614314145"
+    },
+    {
+      "title": "The Chess Journal",
+      "feed_url": "https://www.chessjournal.com/feed/",
+      "website_url": "https://www.chessjournal.com/",
+      "description": "The Chess Journal is about Chess and all things related to the great game of Chess. If some other activity will indirectly improve your game, we'll talk about it. We believe Chess is the greatest game ever invented. It is the ultimate game. Our is to become your go-to source for chess guides, tips, and also community.",
+      "followers": {
+        "facebook": 9,
+        "twitter": 84
+      },
+      "image_url": "https://i1.feedspot.com/5283759.jpg?t=1669708335"
+    },
+    {
+      "title": "World Chess Championship Blog",
+      "feed_url": "https://worldchesschampionship.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://worldchesschampionship.blogspot.com/",
+      "description": "News, views, and feedback on my World Chess Championship web site (see links). Any comment about the World Chess Championship is welcome on any post.",
+      "followers": {
+        "twitter": 28100
+      },
+      "image_url": "https://i1.feedspot.com/4968571.jpg?t=1614314408"
+    },
+    {
+      "title": "Chess Lecture Blog",
+      "feed_url": "https://blog.chesslecture.com/feed/",
+      "website_url": "https://blog.chesslecture.com/",
+      "description": "ChessLecture.com has over 3213 videos, the world's largest library of professional-quality video lectures by proven chess masters, many of whom are also educators. Our mission is to provide the best in professional quality video learning for chess students, enthusiasts and competitive players through proven masters and educators.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4968167.jpg?t=1614314183"
+    },
+    {
+      "title": "Alberto Chueca Blog",
+      "feed_url": "https://www.albertochueca.com/blog/feed/",
+      "website_url": "https://www.albertochueca.com/blog/",
+      "description": "Are you finding a chess coach? Would you like to improve your chess level? You have reached to the best chess website you can find on internet.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4968378.jpg?t=1614314276"
+    },
+    {
+      "title": "Better Chess Training",
+      "feed_url": "http://www.betterchesstraining.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.betterchesstraining.com/",
+      "description": "Tools, methods, and motivation to take your chess to the next level. Better Chess Training helps amateur players get better at chess. How? By showing you how to optimize the limited time you have to study and train. Besides using the example of the great chess masters past and present, I will apply principles and methods from the sciences or developing expertise, learning, memory, motivation, and achievement.",
+      "followers": {
+        "twitter": 602
+      },
+      "image_url": "https://i1.feedspot.com/4968277.jpg"
+    },
+    {
+      "title": "David Smerdon",
+      "feed_url": "https://www.davidsmerdon.com/?feed=rss2",
+      "website_url": "https://www.davidsmerdon.com/",
+      "description": "David Smerdon is an Australian chess grandmaster and economist. He is the seventh highest ranked chess player of Australia. Smerdon has played for the Australian team in the Chess Olympiad since 2004.",
+      "followers": {
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4968185.jpg?t=1614314312"
+    },
+    {
+      "title": "Hairulov Chessmaniac",
+      "feed_url": "https://feeds.feedburner.com/hairulovchessmaniacs",
+      "website_url": "http://hairulovchessmaniacs.blogspot.com/",
+      "description": "I am simply a chess maniac. Surprisingly it didn't prevent Malaysian Chess Federation (MCF) to appoint me as one of their committee member for the 2010-2013 term. . I hope i will give good contribution to the organization and Malaysian chess as a whole.",
+      "followers": {
+        "twitter": 44
+      },
+      "image_url": "https://i1.feedspot.com/2992420.jpg?t=1614314359"
+    },
+    {
+      "title": "Chess Corner Blog",
+      "feed_url": "https://deepchess.org/blog/f.rss",
+      "website_url": "https://deepchess.org/blog",
+      "description": "Strong Chess Game with possibility for Analysis. 20 levels available from beginner to Grandmaster. This is the first release of our Chess game.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/4951748.jpg?t=1614314641"
+    },
+    {
+      "title": "Charlotte Chess Center",
+      "feed_url": "http://charlottechesscenter.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://charlottechesscenter.blogspot.com/",
+      "description": "The Charlotte Chess Center & Scholastic Academy (CCCSA), founded in March of 2014, serves as a place where members of all ages and skill levels can congregate and enjoy the royal game of chess. The CCCSA also sells basic chess supplies and has an open library of over 500 books. The CCCSA serves as an educational hub for chess in the Charlotte area; offering camps, classes and lectures year round.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4968311.jpg?t=1614314374"
+    },
+    {
+      "title": "Fpawn Chess Blog",
+      "feed_url": "http://fpawn.blogspot.com/feeds/posts/default",
+      "website_url": "http://fpawn.blogspot.com/",
+      "description": "Check here for tournament reports and the latest chess news from Michael 'fpawn' Aigner.",
+      "followers": {
+        "twitter": 937
+      },
+      "image_url": "https://i1.feedspot.com/320734.jpg?t=1614314380"
+    },
+    {
+      "title": "Chesslife Blog",
+      "feed_url": "https://www.chesslife.com.au/category/blog/feed/",
+      "website_url": "https://www.chesslife.com.au/category/blog/",
+      "description": "Discover a new and exciting approach to chess! Whether you're keen on learning the basics of chess or aspire to take your game to new levels, Chesslife is happy to cater to all your chess needs in the wider area of Adelaide and the Adelaide Hills in South.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 83
+      },
+      "image_url": "https://i1.feedspot.com/4536693.jpg"
+    },
+    {
+      "title": "The Chess Coroner",
+      "feed_url": "http://chesscoroner.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://chesscoroner.blogspot.com/",
+      "description": "A blog that specializes in post mortem analysis.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4968145.jpg?t=1614314459"
+    },
+    {
+      "title": "Greg Shahade",
+      "feed_url": "https://gregshahade.wordpress.com/feed/",
+      "website_url": "https://gregshahade.wordpress.com/",
+      "description": "Greg Shahade is an international master of chess. He is the founder and commissioner of the U.S. Chess League, the only professional chess league in the United States, with teams in 16 cities across the country. In his spare time, Greg provides individual chess lessons to a handful of students in Philadelphia.",
+      "followers": {
+        "twitter": 5300,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4968289.jpg?t=1614315105"
+    },
+    {
+      "title": "Africa Chess",
+      "feed_url": "https://africachess.net/feed/",
+      "website_url": "https://africachess.net/",
+      "description": "Africa Chess is the platform for chess players across Africa and friends of chess in Africa to tell their own stories so that they might inspire the next generation of chess players in Africa. The website will seek to capture the stories of current and previously active chess players in Africa. There is a great deal of chess talent in Africa.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 88
+      },
+      "image_url": "https://i1.feedspot.com/4968284.jpg?t=1614315122"
+    },
+    {
+      "title": "Akshat Chandra\u2026A Chess Journey",
+      "feed_url": "https://akshatchandra.com/feed/",
+      "website_url": "https://akshatchandra.com/",
+      "description": "I'm Akshat Chandra and this blog has served as a log of my Journey to be a Chess Grandmaster and beyond.",
+      "followers": {
+        "twitter": 804
+      },
+      "image_url": "https://i1.feedspot.com/4968351.jpg?t=1614315112"
+    },
+    {
+      "title": "Northwest Chess Blog",
+      "feed_url": "https://www.nwchess.com/blog/feed/",
+      "website_url": "https://www.nwchess.com/blog/",
+      "description": "News and discussions from the Northwest Chess officers and editors.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 16
+      },
+      "image_url": "https://i1.feedspot.com/4536656.jpg?t=1614315133"
+    },
+    {
+      "title": "Chess House Blog",
+      "feed_url": "https://blog.chesshouse.com/feed",
+      "website_url": "https://blog.chesshouse.com/blog/",
+      "description": "Keep up with articles related to Chess from Chess House.",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5155898.jpg"
+    },
+    {
+      "title": "Chess Pathways",
+      "feed_url": "https://chesspathways.com/feed/",
+      "website_url": "https://chesspathways.com/chess-openings/",
+      "description": "ChessPathways is to help every chess player achieve their goals in chess, whatever those may be, with the help of a supportive, active chess community that has each other's backs. If you're a beginner curious about what chess is all about, ChessPathways is the perfect place to begin your chess journey and receive guidance.",
+      "followers": {
+        "twitter": 188
+      },
+      "image_url": "https://i1.feedspot.com/5007605.jpg?t=1614315158"
+    },
+    {
+      "title": "Chess Parents",
+      "feed_url": "https://www.chessparents.net/1/feed",
+      "website_url": "https://www.chessparents.net/",
+      "description": "Questions and answers for chess parents about scholastic chess, chess tournament, chess club, chess lesson, chess coach, chess training, chess book, etc.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 261
+      },
+      "image_url": "https://i1.feedspot.com/4536742.jpg?t=1650528638"
+    },
+    {
+      "title": "Dejan Bojkov Chess Blog",
+      "feed_url": "http://dejanbojkov.blogspot.com/feeds/posts/default",
+      "website_url": "http://dejanbojkov.blogspot.com/",
+      "description": "Grandmaster in chess, author and coach, where he will try to inform and entertain you!",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/283074.jpg"
+    },
+    {
+      "title": "MonRoi Blog",
+      "feed_url": "https://www.monroi.com/chess-blog.feed?type=rss",
+      "website_url": "https://www.monroi.com/chess-blog.html",
+      "description": "Watch online chess games live, play chess, follow chess tournaments free and view chess results, replay expert rounds, view chess masters ranking, learn new chess strategies.",
+      "followers": {
+        "facebook": 293500
+      },
+      "image_url": "https://i1.feedspot.com/4536686.jpg?t=1614315163"
+    },
+    {
+      "title": "Chess.com News",
+      "feed_url": "https://www.chess.com/rss/news",
+      "website_url": "https://www.chess.com/news/",
+      "description": "Chess24.com your playground | play chess, learn chess, read chess news and watch chess live. Reports from top tournaments, behind-the-scenes insights, in-depth feature articles and more. We'll keep you up-to-date with our fast, lively and comprehensive news coverage.",
+      "followers": {
+        "facebook": 194100,
+        "twitter": 211500
+      },
+      "image_url": "https://i1.feedspot.com/4968176.jpg?t=1614258033"
+    },
+    {
+      "title": "Lichess's Blog",
+      "feed_url": "https://lichess.org/@/Lichess/blog.atom",
+      "website_url": "https://lichess.org/@/Lichess/blog/",
+      "description": "Play Chess now in a clean interface. No registration, no ads, no plugin required. Play Chess with the computer, friends or random opponents.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 53
+      },
+      "image_url": "https://i1.feedspot.com/4536713.jpg?t=1609230845"
+    },
+    {
+      "title": "The Chess Drum Blog",
+      "feed_url": "https://thechessdrum.net/blog/feed/",
+      "website_url": "https://thechessdrum.net/blog/",
+      "description": "All-purpose chess site which champions the success of Black chess players, or those of African ancestry... includes interviews, playble chess games, puzzles, essays, and current chess news from around the world.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/1292580.jpg?t=1614258410"
+    },
+    {
+      "title": "Better Chess",
+      "feed_url": "https://betterchess.net/feed/",
+      "website_url": "https://www.chessbase.in/",
+      "description": "A blog dedicated to chess improvement and helping amateur players boost their chess rating.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5159161.jpg?t=1650519247"
+    },
+    {
+      "title": "Chessbazaar Blog",
+      "feed_url": "https://blog.chessbazaar.com/feed/",
+      "website_url": "https://chesscafe.com/",
+      "description": "Learn various moves, new chess stories and much more at chessbazaar blog.",
+      "followers": {
+        "facebook": 12600,
+        "twitter": 2000,
+        "instagram": 10500
+      },
+      "image_url": "https://i1.feedspot.com/4536729.jpg?t=1622528606"
+    },
+    {
+      "title": "ChessCafe.com",
+      "feed_url": "https://chesscafe.com/feed/",
+      "website_url": "https://chesscafe.com/",
+      "description": "One of the most highly acclaimed and frequented chess sites on the world wide web. Our mission is to provide high quality, freely accessible chess content to the chess playing community.",
+      "followers": {
+        "facebook": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4968299.jpg?t=1614258612"
+    },
+    {
+      "title": "Saint Louis Chess Club \u00bb News, Insights, Press",
+      "feed_url": "https://saintlouischessclub.org/feed/",
+      "website_url": "https://saintlouischessclub.org/news-insights-press/",
+      "description": "The Saint Louis Chess Club is an educational organization that is committed to making chess an important part of our community. Follow us to learn more.",
+      "followers": {
+        "instagram": 48400
+      },
+      "image_url": "https://i1.feedspot.com/4536579.jpg?t=1614258492"
+    },
+    {
+      "title": "Yelena Dembo's Blog",
+      "feed_url": "https://yelenadembo.com/feed",
+      "website_url": "https://yelenadembo.com/",
+      "description": "Helping you improve your chess.",
+      "followers": {
+        "twitter": 10300
+      },
+      "image_url": "https://i1.feedspot.com/1831656.jpg?t=1609232418"
+    },
+    {
+      "title": "TheChessWorld",
+      "feed_url": "https://thechessworld.com/feed/",
+      "website_url": "https://thechessworld.com/",
+      "description": "TheChessWorld.com provides comprehensive chess content, including basic chess rules and tactics, deeply analyzed positions and games, tactical puzzles and problems, chess books and articles, wallpaper gallery, computer program challenge, video lectures. We keep all our chess resources free and available to anyone, anytime, anywhere.",
+      "followers": {
+        "facebook": 146200,
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4968327.jpg?t=1614258294"
+    },
+    {
+      "title": "Chessable Blog",
+      "feed_url": "https://www.chessable.com/blog/feed/",
+      "website_url": "https://www.chessable.com/blog/",
+      "description": "Science-backed chess learning tools online, chess training, and chess opening repertoires from chess masters and amateurs alike. Master your chess opening at Chessable.",
+      "followers": {
+        "facebook": 17500,
+        "twitter": 31600
+      },
+      "image_url": "https://i1.feedspot.com/4968279.jpg?t=1614258286"
+    },
+    {
+      "title": "Chessable Blog",
+      "feed_url": "https://www.chessable.com/blog/feed/",
+      "website_url": "https://www.chessable.com/blog/",
+      "description": "iChess.NET is a chess enthusiast website as well as a chess shop that specializes in selling digital chess products, particularly premium chess videos by world renowned chess Grandmasters and masters. Chess Blog of Chess Master William Stewart. Hundreds of free chess videos and chess articles inside.",
+      "followers": {
+        "facebook": 85500,
+        "twitter": 9700,
+        "instagram": 22000
+      },
+      "image_url": "https://i1.feedspot.com/4968296.jpg?t=1614258299"
+    },
+    {
+      "title": "Susan Polgar Global Chess Daily News and Information",
+      "feed_url": "https://chessdailynews.com/feed/",
+      "website_url": "https://chessdailynews.com/",
+      "description": "Bringing you updated, timely, fair, and objective chess daily news and information from around the globe.",
+      "followers": {
+        "facebook": 113300,
+        "twitter": 102100,
+        "instagram": 42100
+      },
+      "image_url": "https://i1.feedspot.com/4536332.jpg?t=1614258316"
+    },
+    {
+      "title": "Quality Chess Blog",
+      "feed_url": "https://www.qualitychess.co.uk/blog/feed",
+      "website_url": "https://blog.qualitychess.co.uk/",
+      "description": "Quality Chess Blog by GM Jacob Aagaard & GM John Shaw. Get chess tips, tricks on our blog",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/283078.jpg?t=1614258373"
+    },
+    {
+      "title": "Chess Made Fun",
+      "feed_url": "https://chessmadefun.com/feed/",
+      "website_url": "https://chessmadefun.com/blog/",
+      "description": "Headquartered in Hiram, GA, Chess Made Fun enriches lives by bringing the love and fun of chess to families and communities. Chess Made Fun provides moderately priced chess instruction, supporting products, and technology tailored to the fun and learning of chess. Chess Made Fun provides and promotes opportunity, exploration, and adventure in areas of specialized and applied learning.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 702,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4968574.jpg?t=1615983402"
+    },
+    {
+      "title": "Chess at Three Blog",
+      "feed_url": "https://www.chessat3.com/feed",
+      "website_url": "https://www.chessat3.com/blog",
+      "description": "Children playing and loving chess younger than ever before, through stories. Chess At Three is the authority in early childhood chess. Get the latest from Chess at Three.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 331,
+        "instagram": 9100
+      },
+      "image_url": "https://i1.feedspot.com/4536706.jpg?t=1650528395"
+    },
+    {
+      "title": "GrandmasterMac Blog",
+      "feed_url": "https://grandmastermac.com/feed/",
+      "website_url": "https://grandmastermac.com/blog-new/",
+      "description": "GrandmasterMac is a chess coaching organization run by Grandmaster Mackenzie Molner, designed to help bring chess to people of all skill levels.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 58,
+        "instagram": 435
+      },
+      "image_url": "https://i1.feedspot.com/5237069.jpg?t=1610971090"
+    },
+    {
+      "title": "On The Road to Chess Master",
+      "feed_url": "https://ontheroadtochessmaster.com/feed/",
+      "website_url": "https://ontheroadtochessmaster.com/",
+      "description": "I am an adult chess player seeking to prove that it's possible to become a master after the age of 40 as long as one is willing to work hard and train properly. I am also a chess journalist, having written for Chess Life, Chess Life Online, and American Chess Magazine.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4968301.jpg?t=1614314368"
+    },
+    {
+      "title": "Elevate My Chess Blog",
+      "feed_url": "https://elevatemychess.com/blog/feed/",
+      "website_url": "https://elevatemychess.com/blog/",
+      "description": "We are a Canadian based company founded by chess lovers who have now created a community for fellow chess lovers and those interested in learning more about the game of chess. Our goal is simple, we are in business to elevate your chess experience! We provide chess training for our members, host, manage and promote chess tournaments, organize chess camps for kids and adults and actively promote the game of chess in the community.",
+      "followers": {
+        "facebook": 322,
+        "twitter": 510,
+        "instagram": 160
+      },
+      "image_url": "https://i1.feedspot.com/4968374.jpg?t=1614314286"
+    },
+    {
+      "title": "Hot Off The Chess",
+      "feed_url": "https://hotoffthechess.com/feed/",
+      "website_url": "https://hotoffthechess.com/",
+      "description": "Hot Off The Chess is founded and edited by me, John Lee Shaw. I love everything chess! Playing and following this great game has been a passion of mine for over a quarter of a century! I am here to share that with like-minded people, like you. If you are a chess fan - actually, if you get anything out of chess at all-- then it is so great to have you here.",
+      "followers": {
+        "twitter": 304
+      },
+      "image_url": "https://i1.feedspot.com/4968281.jpg?t=1614314304"
+    },
+    {
+      "title": "Chess Blogger",
+      "feed_url": "https://chessblogger.org/feed/",
+      "website_url": "https://chessblogger.org/",
+      "description": "Chessblogger.org provides chess lessons, chess tips, chess facts, and more things about chess. Get articles to learn everything about chess from this blog.",
+      "followers": {
+        "twitter": 345
+      },
+      "image_url": "https://i1.feedspot.com/5294539.jpg?t=1624109791"
+    },
+    {
+      "title": "Play Magnus News",
+      "feed_url": "https://blog.playmagnus.com/rss/",
+      "description": "Find updates from chess tournaments, personal updates, chess tutorials, and information about Magnus Carlsen's chess apps and associated chess products, Play Magnus, Magnus Trainer and Magnus' Kingdom of Chess.",
+      "followers": {
+        "facebook": 45400,
+        "twitter": 13400,
+        "instagram": 21800
+      },
+      "image_url": "https://i1.feedspot.com/4980747.jpg?t=1614258392"
+    }
+  ]
+}

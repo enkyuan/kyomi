@@ -1,0 +1,168 @@
+{
+  "category": "Israel News",
+  "source_url": "https://rss.feedspot.com/israel_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Haaretz",
+      "feed_url": "https://www.haaretz.com/srv/haaretz-latest-headlines",
+      "website_url": "https://www.haaretz.com/",
+      "description": "Haaretz is an independent daily newspaper with a broadly liberal outlook both on domestic issues and on international affairs.",
+      "followers": {
+        "facebook": 491000,
+        "twitter": 566400
+      },
+      "image_url": "https://i1.feedspot.com/5345345.jpg?t=1645108685"
+    },
+    {
+      "title": "Globes",
+      "feed_url": "https://en.globes.co.il/WebService/Rss/RssFeeder.asmx/FeederNode?iID=942",
+      "website_url": "https://en.globes.co.il/en/",
+      "description": "Business news and analysis from Israeli financial daily 'Globes', covering the economy, finance, information technology, healthcare, defense, real estate, and more, updated throughout Israel's working week.",
+      "followers": {
+        "facebook": 75500,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5162004.jpg?t=1645108828"
+    },
+    {
+      "title": "Maariv.co.il",
+      "feed_url": "https://www.maariv.co.il/Rss/RssChadashot",
+      "website_url": "https://www.maariv.co.il/",
+      "description": "Stay up to date with news, commentaries and photos at any moment and any day.",
+      "followers": {
+        "facebook": 413600,
+        "twitter": 63100,
+        "instagram": 84800
+      },
+      "image_url": "https://i1.feedspot.com/5205841.jpg?t=1645108968"
+    },
+    {
+      "title": "The Jerusalem Post",
+      "feed_url": "https://www.jpost.com/Rss/RssFeedsFrontPage.aspx",
+      "website_url": "https://www.jpost.com/",
+      "description": "The Jerusalem Post is Israel's most-read English news website and best-selling English newspaper bringing breaking news, world news & middle east news.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 807900
+      },
+      "image_url": "https://i1.feedspot.com/4907696.jpg?t=1706779626"
+    },
+    {
+      "title": "Israel National News",
+      "feed_url": "https://www.israelnationalnews.com/Rss.aspx",
+      "website_url": "https://www.israelnationalnews.com/",
+      "description": "A news website that provides news briefs, opinions, and updates on the latest news from Israel.",
+      "followers": {
+        "facebook": 171300,
+        "twitter": 46200,
+        "instagram": 26500
+      },
+      "image_url": "https://i1.feedspot.com/4909086.jpg?t=1645109451"
+    },
+    {
+      "title": "Vesty",
+      "feed_url": "https://www.vesty.co.il/3rdparty/mobile/rss/vesty/13148/",
+      "website_url": "https://www.vesty.co.il/main",
+      "description": "News from Israel and the Middle East.",
+      "followers": {
+        "facebook": 168200,
+        "instagram": 11300
+      },
+      "image_url": "https://i1.feedspot.com/5345545.jpg?t=1637563128"
+    },
+    {
+      "title": "Cursorinfo",
+      "feed_url": "https://cursorinfo.co.il/feed/",
+      "website_url": "https://cursorinfo.co.il/",
+      "description": "Cursorinfo is an Israeli news portal in Russia, covering events in Israel and the world for over 20 years.",
+      "followers": {
+        "facebook": 52600,
+        "instagram": 12300
+      },
+      "image_url": "https://i1.feedspot.com/5345550.jpg?t=1637563341"
+    },
+    {
+      "title": "Davar",
+      "feed_url": "https://www.davar1.co.il/feed/",
+      "website_url": "https://en.davar1.co.il/",
+      "description": "Davar brings reliable and verified information on economics, labor, welfare, infrastructure, and the environment from Israel and the world.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5061457.jpg?t=1637569791"
+    },
+    {
+      "title": "Makor Rishon",
+      "feed_url": "https://www.makorrishon.co.il/feed/",
+      "website_url": "https://www.makorrishon.co.il/",
+      "description": "Makor Rishon was established in 1997 at the initiative of right-wing opinion leaders. The newspaper is the only subscriber newspaper for the national religious sector for 17 years.",
+      "followers": {
+        "facebook": 91500,
+        "twitter": 33800
+      },
+      "image_url": "https://i1.feedspot.com/5345346.jpg?t=1645108550"
+    },
+    {
+      "title": "Channel 7",
+      "feed_url": "https://www.inn.co.il/",
+      "website_url": "https://www.inn.co.il/",
+      "description": "News from Israel and the world 24 hours a day. Covering topics like economy, culture, food, health, music, sports, technology and more.",
+      "followers": {
+        "facebook": 179400,
+        "twitter": 13600,
+        "instagram": 26500
+      },
+      "image_url": "https://i1.feedspot.com/5345349.jpg?t=1645108090"
+    },
+    {
+      "title": "Hamodia",
+      "feed_url": "https://www.hamodia.com/feed",
+      "website_url": "https://www.hamodia.com/",
+      "description": "In-depth news for Israel and the Jewish community. Politics, editorials, terrorism, technology, Jewish culture and community.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4990177.jpg?t=1706781829"
+    },
+    {
+      "title": "TheMarker",
+      "feed_url": "https://www.themarker.com/",
+      "website_url": "https://www.themarker.com/",
+      "description": "The Marker offers news and financial information, content from the world of economics, stock market flashes and real-time updates from the Israeli and global capital markets.",
+      "followers": {
+        "facebook": 257100,
+        "twitter": 141200
+      },
+      "image_url": "https://i1.feedspot.com/5345386.jpg?t=1637418260"
+    },
+    {
+      "title": "The Times of Israel",
+      "feed_url": "https://www.timesofisrael.com/",
+      "website_url": "https://www.timesofisrael.com/",
+      "description": "The one-stop news site for Israel, the region & the Jewish world.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 619300
+      },
+      "image_url": "https://i1.feedspot.com/5345501.jpg?t=1645109308"
+    },
+    {
+      "title": "Israel News Agency",
+      "feed_url": "https://israelnewsagency.com/feed/",
+      "description": "The Israel Internet News Agency (INA) was created by Joel Leyden in 1995 to provide accurate and timely online news from Israel in times of crisis.",
+      "followers": {
+        "facebook": 252600
+      },
+      "image_url": "https://i1.feedspot.com/5345551.jpg?t=1645109902"
+    },
+    {
+      "title": "DEBKAfile",
+      "feed_url": "https://www.debka.co.il/feed/",
+      "description": "The Debka covers news and analyzes related to military, strategic, intelligence developments, and those related to the world of terrorism.",
+      "followers": {
+        "facebook": 9100,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4569300.jpg?t=1637575898"
+    }
+  ]
+}

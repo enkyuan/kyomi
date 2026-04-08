@@ -1,0 +1,85 @@
+{
+  "category": "Malifaux",
+  "source_url": "https://rss.feedspot.com/malifaux_rss_feeds",
+  "feeds": [
+    {
+      "title": "Wyrd Games",
+      "feed_url": "https://www.wyrd-games.net/news?format=rss",
+      "website_url": "https://www.wyrd-games.net/news",
+      "description": "Wyrd was founded in 2005 to provide high-quality miniatures for painters who were looking for something different. In 2009, the Malifaux skirmish game exploded onto the scene and since then Wyrd has continued pushing the banner. Follow to get updates about Malifaux by Wyrd Games directly to your inbox.",
+      "followers": {
+        "twitter": 11100
+      },
+      "image_url": "https://i1.feedspot.com/5057493.jpg?t=1622700902"
+    },
+    {
+      "title": "Malifaux Musings",
+      "feed_url": "https://www.malifauxmusings.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.malifauxmusings.com/",
+      "description": "The world's #1 blog for all things Malifaux! Follow to keep up with the blog.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 75
+      },
+      "image_url": "https://i1.feedspot.com/5057481.jpg?t=1622700906"
+    },
+    {
+      "title": "What The Faux",
+      "feed_url": "http://www.whatthefaux.net/feeds/posts/default?alt=rss",
+      "website_url": "http://www.whatthefaux.net/",
+      "description": "What the Faux is a blog focused mainly on the best tabletop game - Malifaux. Subscribe to get notifications and updates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5057484.jpg?t=1622701003"
+    },
+    {
+      "title": "Bell of Lost Souls \u00bb Malifaux",
+      "feed_url": "https://www.belloflostsouls.net/category/malifaux/feed",
+      "website_url": "https://www.belloflostsouls.net/category/malifaux",
+      "description": "Best of Lost Souls features Tabletop, RPG, Boardgames, Miniatures News & Rumors. Follow the blog for Malifaux game news, reviews, editorials & unboxings from Best of Lost Souls.",
+      "followers": {
+        "facebook": 228500,
+        "twitter": 15400
+      },
+      "image_url": "https://i1.feedspot.com/5057581.jpg?t=1622700915"
+    },
+    {
+      "title": "Painted Guys \u00bb Malifaux",
+      "feed_url": "https://paintedguys.com/blog/category/malifaux/feed/",
+      "website_url": "https://paintedguys.com/blog/category/malifaux/",
+      "description": "Painted Guys is all about Hobby, games, and other amusements. Subscribe the blog and get updates about Malifaux from the Painted Guys.",
+      "followers": {
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/5057536.jpg"
+    },
+    {
+      "title": "PraetorDragoon's Blog \u00bb Malifaux",
+      "feed_url": "https://praetordragoon.wordpress.com/tag/malifaux/feed/",
+      "website_url": "https://praetordragoon.wordpress.com/tag/malifaux/",
+      "description": "PraetorDragoon's Blog is a blog about wargaming, gaming, and literature. Follow to get posts about Malifaux written by PraetorDragoon.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5057564.jpg?t=1622701039"
+    },
+    {
+      "title": "Bleeding Cool \u00bb Malifaux",
+      "feed_url": "https://bleedingcool.com/tag/malifaux/feed/",
+      "website_url": "https://bleedingcool.com/tag/malifaux/",
+      "description": "Bleeding Cool is your independent source for news about comic books, film, tv, games, collectibles, and more. Stay tuned for Malifaux news, rumors and information by Bleeding Cool.",
+      "followers": {
+        "twitter": 15900,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5057577.jpg?t=1622700938"
+    },
+    {
+      "title": "Art of War Studios \u00bb Malifaux Tokens",
+      "feed_url": "https://art-of-war-studios-ltd.myshopify.com/blogs/news/tagged/malifaux-tokens.atom",
+      "website_url": "https://art-of-war-studios-ltd.myshopify.com/blogs/news/tagged/malifaux-tokens",
+      "description": "Art of War Studios produces boutique quality tokens and terrain without the boutique prices! Follow for all the info and updates related to Malifaux tokens by Art of War Studios.",
+      "followers": {
+        "twitter": 479
+      },
+      "image_url": "https://i1.feedspot.com/5057488.jpg"
+    }
+  ]
+}

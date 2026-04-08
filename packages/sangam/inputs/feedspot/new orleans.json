@@ -1,0 +1,464 @@
+{
+  "category": "New Orleans",
+  "source_url": "https://rss.feedspot.com/new_orleans_rss_feeds",
+  "feeds": [
+    {
+      "title": "Eater New Orleans",
+      "feed_url": "https://nola.eater.com/rss/index.xml",
+      "website_url": "https://nola.eater.com/",
+      "description": "Eater New Orleans is a website that covers food news and dining guides for New Orleans. Eater New Orleans is updated daily with news stories, features, and guides on restaurants, bars, and food trends in the city. Eater is a digital media brand dedicated to all things food and dining. overage ranges from extensive city maps and travel dining guides marking all the best places to eat, punchy editorials exploring the cultural significance of what and how we eat, and more.",
+      "followers": {
+        "facebook": 43900,
+        "twitter": 22100,
+        "instagram": 67200
+      },
+      "image_url": "https://i1.feedspot.com/4900532.jpg?t=1630748231"
+    },
+    {
+      "title": "My New Orleans",
+      "feed_url": "https://www.myneworleans.com/feed/",
+      "website_url": "https://www.myneworleans.com/",
+      "description": "Everything you need to know about New Orleans is here. Read articles and blogs about the best places to eat, shop and play in New Orleans.",
+      "followers": {
+        "twitter": 55900
+      },
+      "image_url": "https://i1.feedspot.com/5053813.jpg?t=1612847965"
+    },
+    {
+      "title": "NOMA News",
+      "feed_url": "https://noma.org/feed/",
+      "website_url": "https://noma.org/about/news/",
+      "description": "NOMA is committed to preserving, interpreting, and enriching its collections and renowned sculpture garden; offering innovative experiences for learning and interpretation; and uniting, inspiring, and engaging diverse communities and cultures. Read news articles, activities of NOMA, and more.",
+      "followers": {
+        "facebook": 44600,
+        "twitter": 35000,
+        "instagram": 65700
+      },
+      "image_url": "https://i1.feedspot.com/4900616.jpg?t=1612847969"
+    },
+    {
+      "title": "New Orleans Mom",
+      "feed_url": "https://neworleansmom.com/feed/",
+      "website_url": "https://neworleansmom.com/",
+      "description": "New Orleans Mom is a locally-focused parenting resource for moms and families. Passionate about parenting and our community, New Orleans Mom strives to connect area moms to relevant resources, local businesses, can't-miss happenings, and most of all - each other!",
+      "followers": {
+        "facebook": 71200,
+        "twitter": 7400,
+        "instagram": 34800
+      },
+      "image_url": "https://i1.feedspot.com/4847097.jpg?t=1610548527"
+    },
+    {
+      "title": "Red Beans and Eric",
+      "feed_url": "https://redbeansanderic.com/feed/",
+      "website_url": "https://redbeansanderic.com/",
+      "description": "Red Beans & Eric is about more than just red beans and rice. It's also about community, culture, and coming together over amazing food!",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 326,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5096133.jpg?t=1612847978"
+    },
+    {
+      "title": "Big Easy Magazine",
+      "feed_url": "https://bigeasymagazine.com/feed/",
+      "website_url": "https://bigeasymagazine.com/",
+      "description": "For a city under threat by water, for a city that stays up all night, to a world in need of different perspectives. With insight and introspection, we strive to deliver thorough and thoughtful coverage of anything and everything NOLA.",
+      "followers": {
+        "facebook": 21600,
+        "twitter": 8400,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4919788.jpg?t=1612847988"
+    },
+    {
+      "title": "Airboat Adventures Blog",
+      "feed_url": "https://airboatadventures.com/blog/feed/",
+      "website_url": "https://airboatadventures.com/blog/",
+      "description": "New Orleans Airboat Rides and Swamp Tours Provided by Airboat Adventures. Our tours are just minutes away from downtown New Orleans, LA. Airboat Adventures offers visitors a break from bawdy Bourbon Street and an exciting alternative to commercial swamp tours.",
+      "followers": {
+        "facebook": 19500,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4900743.jpg?t=1612848380"
+    },
+    {
+      "title": "NOW Weddings Magazine Blog",
+      "feed_url": "https://nowweddingsmagazine.com/feed/",
+      "website_url": "https://nowweddingsmagazine.com/blog-archives/",
+      "description": "New Orleans Weddings Magazine is a website and magazine that provides planning advice, real weddings, and fashion and decor inspiration for weddings in New Orleans. New Orleans Weddings Magazine is the best resource for local and destination couples featuring prints, bridal shoots, and totally amazing bridal shows!",
+      "followers": {
+        "facebook": 12000,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4900771.jpg?t=1710494603"
+    },
+    {
+      "title": "Le Salon Annex",
+      "feed_url": "https://kristinfouquet.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://kristinfouquet.blogspot.com/",
+      "description": "Writer and photographer from New Orleans. Author of Twenty Stories, Rampart & Toulouse, The Olive Stain, Surreptitiously Yours, and Surrendered Stories.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5030046.jpg?t=1612848404"
+    },
+    {
+      "title": "Big Easy Mafia",
+      "feed_url": "https://www.bigeasymafia.com/feed/",
+      "website_url": "https://www.bigeasymafia.com/",
+      "description": "Big Easy Mafia is recognized as the Official Fan Club of the Who Dat Nation by the fans and the local media outlets. This fan club was started by Die-Hard Fans of the New Orleans Saints who felt like the Who Dat Nation needed an organized fan club to help form an alliance with each other and unite Saints fans not only in the U.S. but also worldwide.",
+      "followers": {
+        "facebook": 117400,
+        "twitter": 1600,
+        "instagram": 14200
+      },
+      "image_url": "https://i1.feedspot.com/5120618.jpg?t=1612848425"
+    },
+    {
+      "title": "Verite News",
+      "feed_url": "https://veritenews.org/feed/",
+      "website_url": "https://veritenews.org/",
+      "description": "Verite News is a nonprofit news organization with a mission to produce in-depth journalism that serves the people of New Orleans. Verite is a nonprofit newsroom organization with a mission to produce in-depth journalism that serves New Orleans.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 1900,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/5606720.jpg?t=1687514687"
+    },
+    {
+      "title": "OffBeat Magazine",
+      "feed_url": "https://www.offbeat.com/feed/",
+      "website_url": "https://www.offbeat.com/",
+      "description": "OffBeat Magazine is the definitive guide to Louisiana and New Orleans music, featuring news, album reviews, artist interviews, concert listings, and more! Since its inception in 1998, OffBeat Magazine has been distributed for free across the metro-New Orleans area and available nationally and internationally.",
+      "followers": {
+        "facebook": 65500,
+        "twitter": 49000,
+        "instagram": 60500
+      },
+      "image_url": "https://i1.feedspot.com/4387111.jpg?t=1687523707"
+    },
+    {
+      "title": "Biz New Orleans",
+      "feed_url": "https://bizneworleans.com/category/todays-business-news/feed/",
+      "website_url": "https://bizneworleans.com/category/todays-business-news/",
+      "description": "BizNewOrleans.com and Biz New Orleans are divisions of Renaissance Publishing LLC. Biz New Orleans provide business news and insightful commentary for New Orleans and southeast Louisiana.",
+      "followers": {
+        "facebook": 14300,
+        "twitter": 1800,
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/5606724.jpg?t=1687514701"
+    },
+    {
+      "title": "NOLA Detox And Recovery Center Blog",
+      "feed_url": "https://noladetox.com/feed/",
+      "website_url": "https://noladetox.com/blog/",
+      "description": "The NOLA Detox and Recovery Center blog can help you learn more about addiction recovery, our center, and our approach. Explore our latest blog entries today. NOLA Detox Team is committed to bringing a world-class recovery option to New Orleans with medication-assisted treatment, a comforting atmosphere, and true Southern hospitality.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 35,
+        "instagram": 391
+      },
+      "image_url": "https://i1.feedspot.com/5606725.jpg?t=1687514705"
+    },
+    {
+      "title": "Startup Nola Blog",
+      "feed_url": "https://startupnola.com/blog/feed/",
+      "website_url": "https://startupnola.com/blog/",
+      "description": "Startup NOLA was created to allow startups, workers and funders to connect in one place. Whether you're looking for funding, a job or just a new connection, this is the hub for entrepreneurs to find and support each other in New Orleans. Explore all the latest startups, entrepreneurs, innovations and more in New Orleans.",
+      "followers": {
+        "facebook": 7300,
+        "twitter": 17600
+      },
+      "image_url": "https://i1.feedspot.com/5606729.jpg?t=1687514718"
+    },
+    {
+      "title": "Plastic Surgery NOLA Blog",
+      "feed_url": "https://www.plasticsurgerynola.com/feed/",
+      "website_url": "https://www.plasticsurgerynola.com/resources/blog/",
+      "description": "Read the latest plastic surgery news from the New Orleans Center for Aesthetic and Plastic Surgery. You'll find only the latest, most innovative treatments in our practice. You can choose from dozens of cosmetic surgery and reconstructive surgery procedures focusing on the face, hand, and body along with specialized procedures for men.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 317,
+        "instagram": 15800
+      },
+      "image_url": "https://i1.feedspot.com/5606721.jpg?t=1687514690"
+    },
+    {
+      "title": "Curbed New Orleans",
+      "feed_url": "https://nola.curbed.com/rss/index.xml",
+      "website_url": "https://nola.curbed.com/",
+      "description": "Every aspect of living in New Orleans, for people who care about their city, their streets, and their homes.",
+      "followers": {
+        "facebook": 7200,
+        "instagram": 200500
+      },
+      "image_url": "https://i1.feedspot.com/4900619.jpg?t=1612848255"
+    },
+    {
+      "title": "Adventures of B2",
+      "feed_url": "https://www.adventuresofb2.com/feed/",
+      "website_url": "https://www.adventuresofb2.com/",
+      "description": "Home of Adventures of B2 life + travel adventures, delicious recipes, everything New Orleans and a huge bucket list. Taking on life one adventure at a time.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 222
+      },
+      "image_url": "https://i1.feedspot.com/5125269.jpg?t=1612847993"
+    },
+    {
+      "title": "Be New Orleans Blog",
+      "feed_url": "https://beneworleans.com/blog/feed/",
+      "website_url": "https://beneworleans.com/blog/",
+      "description": "Be New Orleans is a neighborhood guide and real estate resource. New Orleans neighborhoods are unique. Be New Orleans can help find your New Orleans home.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 123,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4900746.jpg?t=1612848012"
+    },
+    {
+      "title": "The NOLA Chic",
+      "feed_url": "https://nolachic.blog/feed/",
+      "website_url": "https://nolachic.blog/",
+      "description": "I love all things authentic New Orleans culture, especially the food and people. My favorite destination outside of New Orleans would be anywhere the ocean and sand is. Writing is my passion, it frees me from all of all that comes with living in this fabulous world of ours.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4973458.jpg?t=1612848099"
+    },
+    {
+      "title": "Kids & Family New Orleans",
+      "feed_url": "https://kidsandfamilyneworleans.hooknows.com/feed/",
+      "website_url": "https://kidsandfamilyneworleans.hooknows.com/",
+      "description": "NOLA & Northshore families' print/online source for info, deals, and events. Our print digital mobile mediums are the go-to monthly resource for local moms!",
+      "followers": {
+        "facebook": 13800,
+        "twitter": 777,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4900774.jpg?t=1612848385"
+    },
+    {
+      "title": "La Belle Esplanade Blog",
+      "feed_url": "https://labelleesplanade.com/blog/feed/",
+      "website_url": "https://labelleesplanade.com/blog/",
+      "description": "The Best Written Blog in New Orleans is an ongoing introduction to the most interesting city in America. There is more to the French Quarter than what you read in guidebooks or online. Discover New Orleans like a New Orleanian and get an insider's view of what makes this magical city so special.",
+      "followers": {
+        "facebook": 13200,
+        "twitter": 102
+      },
+      "image_url": "https://i1.feedspot.com/4900533.jpg?t=1612848393"
+    },
+    {
+      "title": "French Quarterly Blog",
+      "feed_url": "https://frenchquarterly.com/blog/rss",
+      "website_url": "https://frenchquarterly.com/blog",
+      "description": "Discover French Quarter events, restaurant reviews, concerts, history, and everything else Vieux Carre culture",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 808
+      },
+      "image_url": "https://i1.feedspot.com/4900801.jpg?t=1612848409"
+    },
+    {
+      "title": "Bienville House Hotel",
+      "feed_url": "https://bienvillehouse.com/feed/",
+      "website_url": "https://bienvillehouse.com/",
+      "description": "Bienville House is a French Quarter hotel in New Orleans near Jackson Square, the New Orleans Convention Center, and the best New Orleans restaurants.",
+      "followers": {
+        "facebook": 60100,
+        "twitter": 1200,
+        "instagram": 10500
+      },
+      "image_url": "https://i1.feedspot.com/4900797.jpg?t=1612848421"
+    },
+    {
+      "title": "New Orleans Living Magazine",
+      "feed_url": "https://www.livingneworleans.com/?feed=rss2",
+      "website_url": "https://www.livingneworleans.com/",
+      "description": "New Orleans Living Magazine is a monthly lifestyle magazine that features articles on the best our city has to offer. Get the latest on health news, business, local hot spots, fashion and so much more.",
+      "followers": {
+        "facebook": 14100,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4847110.jpg?t=1612848429"
+    },
+    {
+      "title": "Satsuma Real Estate Blog",
+      "feed_url": "https://www.satsumarealestate.com/feed/",
+      "website_url": "https://www.satsumarealestate.com/blog/",
+      "description": "Check out the Satsuma blog for insight and resources on buying, selling and investing in New Orleans real estate. Satsuma Real Estate guides homebuyers, home sellers, renters, and investors through real estate transactions across the greater New Orleans area.",
+      "followers": {
+        "facebook": 933,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5606726.jpg?t=1687514708"
+    },
+    {
+      "title": "New Orleans Creole Cookery Blog",
+      "feed_url": "https://neworleanscreolecookery.com/feed/",
+      "website_url": "https://neworleanscreolecookery.com/blog/",
+      "description": "Launched by A.J. and Anna Tusa of the famous New Orleans Tusa restaurant family, the New Orleans Creole Cookery boasts a spark of new-generation energy, presenting some of New Orleans' most treasured cooking traditions in an innovative setting that speaks to the way people dine today. Explore the blog for more information o the latest news, events and more!",
+      "followers": {
+        "facebook": 9300
+      },
+      "image_url": "https://i1.feedspot.com/5596636.jpg?t=1686650654"
+    },
+    {
+      "title": "L.A. to N.O.LA",
+      "feed_url": "https://latonola.wordpress.com/feed/",
+      "website_url": "https://latonola.wordpress.com/",
+      "description": "I am a professional actor with over 20 years experience doing film, TV and commercials. Though I still write about moving from L.A. occasionally, L.A. to N.O.LA has become more of a resource. Whether you're relocating here, planning a trip, or wondering if I caught your high school band on my video of a parade.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 14200
+      },
+      "image_url": "https://i1.feedspot.com/5606723.jpg?t=1687522768"
+    },
+    {
+      "title": "LOOP NOLA Blog",
+      "feed_url": "https://loopnola.org/blog-1?format=rss",
+      "website_url": "https://loopnola.org/blog-1",
+      "description": "Our blog will keep you up to date on upcoming events and fill you in on some of our recent highlights. LOOP NOLA is a nonprofit organization whose mission is to provide positive, life-changing outdoor experiences for children and youth in Greater New Orleans. LOOP NOLA addresses the lack of opportunity for urban children to experience the outdoors.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 46,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5606722.jpg?t=1687514693"
+    },
+    {
+      "title": "New Orleans Blog",
+      "feed_url": "https://www.neworleans.com/blog/",
+      "website_url": "https://www.neworleans.com/blog/",
+      "description": "At GoNOLA.com you will find the best places to eat, drink, shop and play in New Orleans! From world-famous restaurants to hidden music clubs, New Orleans has something to discover at every turn. It is the ultimate guide to New Orleans food, music, culture and fun.",
+      "followers": {
+        "facebook": 618500,
+        "twitter": 51900,
+        "instagram": 50900
+      },
+      "image_url": "https://i1.feedspot.com/4847095.jpg?t=1686723831"
+    },
+    {
+      "title": "Canal Street Chronicles",
+      "feed_url": "https://www.canalstreetchronicles.com/rss/index.xml",
+      "website_url": "https://www.canalstreetchronicles.com/",
+      "description": "Canal Street Chronicles is your best source for quality New Orleans Saints news, rumours, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 23600,
+        "twitter": 31400
+      },
+      "image_url": "https://i1.feedspot.com/4756144.jpg?t=1645257271"
+    },
+    {
+      "title": "Magazine Street Merchants Association Blog",
+      "feed_url": "https://magazinestreet.com/feed/",
+      "website_url": "https://magazinestreet.com/insiders-blog/",
+      "description": "Magazine Street in New Orleans is one of the south's most recognized thoroughfares, dating back to the early days of the expansion of the city beyond the original French Quarter. Our mission is to promote Magazine Street as a unique and easily accessible premier shopping district, commercial area, and an art and cultural destination for all locals, tourists and conventioneers.",
+      "followers": {
+        "facebook": 48400,
+        "twitter": 20400,
+        "instagram": 78300
+      },
+      "image_url": "https://i1.feedspot.com/5606727.jpg?t=1687514711"
+    },
+    {
+      "title": "The Bird Writes",
+      "feed_url": "https://thebirdwrites.com/rss/current.xml",
+      "website_url": "https://thebirdwrites.com/",
+      "description": "Your best source for quality New Orleans Pelicans news, rumors, analysis, stats, and scores from the fan perspective. We provide anything that relates to your Pels!",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 16000
+      },
+      "image_url": "https://i1.feedspot.com/4900535.jpg?t=1612847983"
+    },
+    {
+      "title": "The Historic New Orleans Collection",
+      "feed_url": "https://hnoc.org/rss.xml",
+      "website_url": "https://hnoc.org/",
+      "description": "The Historic New Orleans Collection is a museum, research center, & publisher preserving the history & culture of NOLA & the Gulf South.",
+      "followers": {
+        "facebook": 88700,
+        "twitter": 5800,
+        "instagram": 21600
+      },
+      "image_url": "https://i1.feedspot.com/4900785.jpg?t=1612847997"
+    },
+    {
+      "title": "Archdiocese of New Orleans",
+      "feed_url": "https://nolacatholic.org/newsRSS",
+      "website_url": "https://nolacatholic.org/",
+      "description": "The Roman Catholic Archdiocese of New Orleans is dedicated to promoting the Kingdom of God in the Metro New Orleans area. The ministries of the Archdiocese of New Orleans, in union with the Archbishop and with one another, serve the people of the parishes, schools and organizations of the archdiocese in enabling them to encounter Jesus and to witness with joy.",
+      "followers": {
+        "facebook": 14700,
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4900766.jpg?t=1612848007"
+    },
+    {
+      "title": "New Orleans Kayak Swamp Tours Blog",
+      "feed_url": "https://neworleanskayakswamptours.com/blog/feed/",
+      "website_url": "https://neworleanskayakswamptours.com/blog/",
+      "description": "On a New Orleans Kayak Swamp Tours you will create memories exploring the beauty of the swamps and plantations. Small groups led by amazing local eco-guides.",
+      "followers": {
+        "facebook": 8100,
+        "twitter": 878,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4769389.jpg?t=1612848016"
+    },
+    {
+      "title": "Crescent City Living Blog",
+      "feed_url": "https://www.findyourneworleanshome.com/blog/feed/",
+      "website_url": "http://www.neworleanscharterfishing.com/blog/",
+      "description": "Find real estate in Greater New Orleans. Use Crescent City Living LLC search engine to find Greater New Orleans real estate by price, bedrooms and more. We have every listing from every real estate company in the Greater New Orleans area.",
+      "followers": {
+        "facebook": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4900760.jpg?t=1612848024"
+    },
+    {
+      "title": "New Orleans Charter Fishing Blog",
+      "feed_url": "http://www.neworleanscharterfishing.com/blog/feed/",
+      "website_url": "http://www.neworleanscharterfishing.com/blog/",
+      "description": "I always wanted to share my passion of fishing and the love of the outdoors with others and teach them what I have learned throughout the many years I have spent along the bayou. It's such a great feeling to see someone hook one of those nice reds and land them in the boat for their first time. These redfish down here seem to really put up a fight!",
+      "followers": {
+        "facebook": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4900749.jpg?t=1612848415"
+    },
+    {
+      "title": "The New Orleans Menu",
+      "feed_url": "https://nomenu.com/feed",
+      "website_url": "https://nomenu.com/",
+      "description": "The Best Restaurants In New Orleans. We cover almost every imaginable topic, from directories of every known New Orleans restaurant down to top-twelve lists of very particular questions. Almost all are ranked and rated. We have, in season, even more lists for all the major food festivals and food-related holidays.",
+      "followers": {
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/4900633.jpg?t=1612848437"
+    },
+    {
+      "title": "NOLA Activities Blog",
+      "feed_url": "https://nolaactivities.com/blog/feed/",
+      "website_url": "https://nolaactivities.com/blog/",
+      "description": "The Best tours and activities in New Orleans!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5606718.jpg?t=1687514681"
+    },
+    {
+      "title": "Blake Hotel New Orleans Blog",
+      "feed_url": "https://blakehotelneworleans.com/blog/feed/",
+      "description": "Want to hear about New Orleans from us locals that see it every day? The special spots around the city that we know about will blow you away! No matter what brings you to The Big Easy, enjoy a variety of top-notch amenities to make you feel right at home during your stay at our contemporary hotel near Bourbon Street. Created with quality and convenience in mind, our premium features are great for business, leisure, and group travelers alike.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 34,
+        "instagram": 662
+      },
+      "image_url": "https://i1.feedspot.com/5606719.jpg?t=1687514684"
+    }
+  ]
+}

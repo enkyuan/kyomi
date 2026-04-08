@@ -1,0 +1,71 @@
+{
+  "category": "Vietnam Business",
+  "source_url": "https://rss.feedspot.com/vietnam_business_rss_feeds",
+  "feeds": [
+    {
+      "title": "Vietnam Business Law",
+      "feed_url": "https://vietnam-business-law.info/blog?format=RSS",
+      "website_url": "https://vietnam-business-law.info/",
+      "description": "English blog on Vietnam business law written by experienced Vietnamese lawyers. Vietnam Business Law is managed by lawyers of Venture North Law Limited (VNLaw). VNLaw is a boutique professional law firm focusing on corporate, commercial, and M&A practices in Vietnam.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/200/4757290.jpg?t=1608533645"
+    },
+    {
+      "title": "Duane Morris Vietnam",
+      "feed_url": "https://blogs.duanemorris.com/vietnam/feed/",
+      "website_url": "https://blogs.duanemorris.com/vietnam/",
+      "description": "Duane Morris lawyers in Vietnam explore the issues impacting businesses with operations and investments in one of the world's fastest growing economies.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 9300,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5343062.jpg?t=1636982758"
+    },
+    {
+      "title": "Vietnam Business Gateway Blog",
+      "feed_url": "https://vietnambusinessgateway.com/feed/",
+      "website_url": "https://vietnambusinessgateway.com/blog/",
+      "description": "Vietnam Business Gateway is a one-stop service portal providing information and opportunities to acquire or create a business in Vietnam, without hassle.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5343064.jpg?t=1710333018"
+    },
+    {
+      "title": "VnExpress \u00bb Business",
+      "feed_url": "https://e.vnexpress.net/rss/business.rss",
+      "website_url": "https://e.vnexpress.net/news/business",
+      "description": "News and analyses on Vietnam business affairs by VnExpress. VnExpress International is a leading source for politics, economic, finance, travel & food from Vietnam and ASEAN.",
+      "followers": {
+        "facebook": 242700,
+        "twitter": 268500
+      },
+      "image_url": "https://i1.feedspot.com/5343066.jpg?t=1636982858"
+    },
+    {
+      "title": "AHK Knowledge Hub VN Blog",
+      "feed_url": "https://www.ahk-knowledgehub-vn.com/blog-feed.xml",
+      "website_url": "https://www.ahk-knowledgehub-vn.com/blog",
+      "description": "AHK Knowledge Hub VN aims to provide companies trading with or investing in Vietnam with essential knowledge for their activities.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5343067.jpg?t=1636982445"
+    },
+    {
+      "title": "Blogger Kh\u1edfi Nghi\u1ec7p",
+      "feed_url": "https://bloggerkhoinghiep.com/rss/",
+      "website_url": "https://bloggerkhoinghiep.com/",
+      "description": "A blog for Entrepreneurs specializing in sharing knowledge, start-up experience, and practical start-up lessons.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5343063.jpg?t=1637152840"
+    },
+    {
+      "title": "Vietnam net",
+      "feed_url": "https://vietnamnet.vn/en/news.rss",
+      "website_url": "https://vietnamnet.vn/en",
+      "description": "The latest Vietnam's Business News - Breaking personal finance, company, financial and economic news, plus insight and analysis into Vietnam.",
+      "followers": {
+        "facebook": 2500000
+      },
+      "image_url": "https://i1.feedspot.com/5343069.jpg?t=1636982995"
+    }
+  ]
+}

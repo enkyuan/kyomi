@@ -1,0 +1,16 @@
+{
+  "category": "American Express",
+  "source_url": "https://rss.feedspot.com/american_express_rss_feeds",
+  "feeds": [
+    {
+      "title": "American Express Investor Relations",
+      "feed_url": "https://ir.americanexpress.com/rss/pressrelease.aspx",
+      "website_url": "https://ir.americanexpress.com/news/investor-relations-news/default.aspx",
+      "description": "Browse through Investor Relations news, insights and more! At American Express, we know that with the right backing, people and businesses have the power to progress in incredible ways. Whether we're supporting our customers' financial confidence to move ahead, taking commerce to new heights, or encouraging people to explore the world, our colleagues are constantly striving to uphold our powerful backing promise to our customers and each other every day.",
+      "followers": {
+        "twitter": 831200
+      },
+      "image_url": "https://i1.feedspot.com/5437686.jpg?t=1662037986"
+    }
+  ]
+}

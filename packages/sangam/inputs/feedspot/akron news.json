@@ -1,0 +1,74 @@
+{
+  "category": "Akron News",
+  "source_url": "https://rss.feedspot.com/akron_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Akron.com",
+      "feed_url": "https://www.akron.com/feed/",
+      "website_url": "https://www.akron.com/",
+      "description": "We're source for local news in 16 communities in the Greater Akron area. Akron.com is your go to website for local government news, entertainment, and high school and youth sports covering several Akron neighborhoods and surrounding communities.",
+      "followers": {
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5132090.jpg?t=1626501456"
+    },
+    {
+      "title": "Fox 8 News \u00bb Akron",
+      "feed_url": "https://fox8.com/tag/akron-news/feed/",
+      "website_url": "https://fox8.com/tag/akron-news/",
+      "description": "Cleveland's own- Fox 8 News. Breaking news, weather alerts and topics that impact you. On the web, on your phone and on your TV. Follow to read the latest news and updates in Akron brought to you by the team at Fox8.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 293700,
+        "instagram": 217600
+      },
+      "image_url": "https://i1.feedspot.com/5132093.jpg"
+    },
+    {
+      "title": "WKYC \u00bb Akron",
+      "feed_url": "http://rssfeeds.wkyc.com/wkyc/AkronCantonNews",
+      "website_url": "https://www.wkyc.com/akron",
+      "description": "WKYC Channel 3 has a rich broadcast heritage. We first went on the air as WNBK on October 31, 1948 as an NBC owned-and-operated station and have been affiliated with NBC ever since. We have a long history of excellence in local programming shows. For all the latest Akron local news, weather and sports news follow our WKYC feed.",
+      "followers": {
+        "facebook": 514799,
+        "twitter": 209700
+      },
+      "image_url": "https://i1.feedspot.com/5132091.jpg?t=1585301606"
+    },
+    {
+      "title": "News 5 Cleveland \u00bb Akron",
+      "feed_url": "https://www.news5cleveland.com/news/local-news/akron-canton-news.rss",
+      "website_url": "https://www.news5cleveland.com/news/local-news/akron-canton-news",
+      "description": "News 5, champions the people of Cleveland. We investigate solutions, hold the powerful accountable, ask the tough questions, provide alerts, and tell memorable stories about our readers. News 5 Cleveland brings you breaking and developing news, weather, traffic and sports coverage from the Cleveland metro area and across Ohio.",
+      "followers": {
+        "facebook": 632300,
+        "twitter": 132600
+      },
+      "image_url": "https://i1.feedspot.com/5132100.jpg?t=1623161301"
+    },
+    {
+      "title": "Akron Ohio Stake News",
+      "feed_url": "https://akronohiostake.news/feed/",
+      "website_url": "https://akronohiostake.news/",
+      "description": "Akron Ohio Stake News is a source that connects members of the Akron Ohio Stake and shares Stake Events, announcements, and news. This website is put together by the LDS Akron Ohio Stake Communications Committee. Learn the latest news and updates about our Stake here.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 78,
+        "instagram": 232
+      },
+      "image_url": "https://i1.feedspot.com/5490376.jpg?t=1673268018"
+    },
+    {
+      "title": "Akron Beacon Journal",
+      "feed_url": "https://www.beaconjournal.com/news?template=rss&mime=xml",
+      "website_url": "https://www.beaconjournal.com/",
+      "description": "The Akron Beacon Journal/BeaconJournal.com is the largest news gathering operation in Summit County, known for in-depth local reporting. The newspaper and website regularly attract accolades from professional journalism associations at the local, regional, state and national levels. The newspaper has received four Pulitzer Prizes, the highest honor in journalism.",
+      "followers": {
+        "facebook": 92100,
+        "twitter": 32600,
+        "instagram": 21500
+      },
+      "image_url": "https://i1.feedspot.com/5132097.jpg?t=1626501451"
+    }
+  ]
+}

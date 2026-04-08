@@ -1,0 +1,60 @@
+{
+  "category": "Smart City",
+  "source_url": "https://rss.feedspot.com/smart_city_rss_feeds",
+  "feeds": [
+    {
+      "title": "Smart Cities Dive",
+      "feed_url": "https://www.smartcitiesdive.com/feeds/news/",
+      "website_url": "https://www.smartcitiesdive.com/",
+      "description": "Smart Cities Dive provides news and original analysis on urbanization and sustainability. Smart Cities Dive is a resource to help leaders address environmental issues, highlighting innovative practices and thinkers who are making systems more sustainable, connected and livable.",
+      "followers": {
+        "facebook": 93800,
+        "twitter": 138400
+      },
+      "image_url": "https://i1.feedspot.com/4962973.jpg?t=1621863609"
+    },
+    {
+      "title": "Smart Cities World",
+      "feed_url": "https://www.smartcitiesworld.net/Syndication/DF.cfm?f=7&ft=10",
+      "website_url": "https://www.smartcitiesworld.net/news/news",
+      "description": "Founded with the goal of fostering knowledge exchange and collaboration, the platform covers a wide range of smart city-related topics, including IoT, energy management, urban planning, and data-driven decision-making. It provides news, analysis, case studies, and research reports to help city leaders, policymakers, and technology providers navigate the complexities of building smarter cities.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 11200
+      },
+      "image_url": "https://i1.feedspot.com/4963039.jpg?t=1621863617"
+    },
+    {
+      "title": "Smart City Blog",
+      "feed_url": "https://blog.smartcity.com/feed/",
+      "website_url": "https://blog.smartcity.com/",
+      "description": "Smart City Networks is the nation's leading provider of quality, advanced technology and telecommunication services to the trade show and event industry.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4962941.jpg?t=1621863666"
+    },
+    {
+      "title": "Government Technology \u00bb Smart Cities",
+      "feed_url": "https://www.govtech.com/smart-cities.rss",
+      "website_url": "https://www.govtech.com/smart-cities",
+      "description": "Coverage of the sensor-connected cities collecting and harnessing data on traffic, air quality, crime, and more to create safer, more efficient urban centers. Government Technology is the national magazine and multi-media platform covering information technology's role in state and local governments.",
+      "followers": {
+        "facebook": 14100,
+        "twitter": 27900
+      },
+      "image_url": "https://i1.feedspot.com/5296924.jpg?t=1624878901"
+    },
+    {
+      "title": "Axis Communications \u00bb Smart Cities",
+      "feed_url": "https://www.axis.com/blog/secure-insights/category/industry-specific-solutions/smart-cities/feed/",
+      "website_url": "https://newsroom.axis.com/?post_type%5Bblog%5D=blog#acn-frontpage",
+      "description": "Discusses how you add safety to smart cities to prevent, respond and follow up on incidents and add proactive early detection. Covers Industry-specific solutions, IoT, Trends and Innovations, Sustainability, Transportation, and AI. Government Technology is the national magazine and multi-media platform covering information technology's role in state and local governments.",
+      "followers": {
+        "facebook": 51200
+      },
+      "image_url": "https://i1.feedspot.com/5296930.jpg?t=1624877231"
+    }
+  ]
+}

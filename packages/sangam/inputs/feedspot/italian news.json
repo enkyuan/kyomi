@@ -1,0 +1,263 @@
+{
+  "category": "Italian News",
+  "source_url": "https://rss.feedspot.com/italian_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "ANSA",
+      "feed_url": "https://www.ansa.it/sito/ansait_rss.xml",
+      "website_url": "https://www.ansa.it/english/",
+      "description": "Latest Italy news, photos, videos and insights about: politics, economy, regions, world, sport, football, culture and technology by ANSA.it",
+      "followers": {
+        "facebook": 2000000,
+        "twitter": 2400000,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/43690.jpg"
+    },
+    {
+      "title": "Florence Daily News",
+      "feed_url": "https://www.florencedailynews.com/feed/",
+      "website_url": "https://www.florencedailynews.com/",
+      "description": "Find the latest news for Florence, Italy on Business, Travel, Culture, Life, arts, Sports and more.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 1100,
+        "instagram": 708
+      },
+      "image_url": "https://i1.feedspot.com/4634103.jpg"
+    },
+    {
+      "title": "Wanted in Rome",
+      "feed_url": "https://www.wantedinrome.com/news?format=rss",
+      "website_url": "https://www.wantedinrome.com/news",
+      "description": "The English language magazine of Rome since 1985. News, events, culture, insights, information on Rome and #Italy for foreign residents, tourists, and Italians.",
+      "followers": {
+        "facebook": 172800,
+        "twitter": 33500,
+        "instagram": 51600
+      },
+      "image_url": "https://i1.feedspot.com/5334317.jpg?t=1634802374"
+    },
+    {
+      "title": "The Florentine",
+      "feed_url": "https://www.theflorentine.net/feed/",
+      "website_url": "https://www.theflorentine.net/",
+      "description": "The Florentine was launched as a news magazine for English speakers in Florence, Italy, in 2005. Explore Events, Classifieds, International Living, Food & Wine, Art, Culture and News from Florence and Tuscany.",
+      "followers": {
+        "facebook": 122000,
+        "twitter": 15800,
+        "instagram": 92400
+      },
+      "image_url": "https://i1.feedspot.com/5334319.jpg?t=1634802615"
+    },
+    {
+      "title": "la Repubblica",
+      "feed_url": "https://www.repubblica.it/rss/homepage/rss2.0.xml",
+      "website_url": "https://www.repubblica.it/",
+      "description": "la Repubblica is the online newspaper real-time4 hours a day on politics, news, economics, sport, foreign countries, entertainment, music, culture, science, technology.",
+      "followers": {
+        "facebook": 4500000,
+        "twitter": 3600000
+      },
+      "image_url": "https://i1.feedspot.com/129437.jpg?t=1634802786"
+    },
+    {
+      "title": "La Stampa",
+      "feed_url": "https://www.lastampa.it/rss/copertina.xml",
+      "website_url": "https://www.lastampa.it/",
+      "description": "Follow the latest news from La Stampa and stay updated on all the news, politics, economics, and much more in Italy and around the world.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/5334323.jpg?t=1634802998"
+    },
+    {
+      "title": "Alto Adige",
+      "feed_url": "https://www.altoadige.it/feed-rss/cronaca-1.169",
+      "website_url": "https://www.altoadige.it/cronaca",
+      "description": "Alto Adige is Bolzano's online newspaper continuously updated, with photos and videos, on news, politics, sport, culture, entertainment and economy.",
+      "followers": {
+        "facebook": 147000,
+        "twitter": 11300
+      },
+      "image_url": "https://i1.feedspot.com/5334326.jpg?t=1634803268"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Italy",
+      "feed_url": "https://www.ilsole24ore.com/rss/italia.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/italia",
+      "description": "All the latest news today: Italian news, politics and economy always updated on Il Sole 24 Ore.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Italia a Tavola",
+      "feed_url": "http://rss.italiaatavola.net/feed.xml",
+      "website_url": "https://www.italiaatavola.net/",
+      "description": "Italia a Tavola, a daily publication focused on enogastronomy, tourism, catering, and hospitality. It offers articles and resources for professionals in the food service, Horeca, GDO, F&B Manager, pizzerias, pastry shops, bars, tourism, wellness, and health sectors.",
+      "followers": {
+        "facebook": 25300
+      },
+      "image_url": "https://i1.feedspot.com/5018580.jpg?t=1703680537"
+    },
+    {
+      "title": "MilanoToday",
+      "feed_url": "https://www.milanotoday.it/rss",
+      "website_url": "https://www.milanotoday.it/",
+      "description": "MilanoToday is an Italian news website covering various topics like current events, politics, crime, and local news in Milan. They provide in-depth articles, opinion pieces, and coverage on a wide range of issues affecting the city and its residents. Their content includes updates on local events, political developments, crime reports, and cultural happenings in Milan.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5186680.jpg?t=1710741373"
+    },
+    {
+      "title": "Libero Quotidiano",
+      "feed_url": "https://www.liberoquotidiano.it/rss.xml",
+      "website_url": "https://www.liberoquotidiano.it/",
+      "description": "Quotidiano Libero, an interactive space where you can get information and express your opinions.",
+      "followers": {
+        "facebook": 519299,
+        "twitter": 349100,
+        "instagram": 179800
+      },
+      "image_url": "https://i1.feedspot.com/5334329.jpg?t=1634803936"
+    },
+    {
+      "title": "IL Tempo",
+      "feed_url": "https://www.iltempo.it/rss.xml",
+      "website_url": "https://www.iltempo.it/",
+      "description": "IL Tempo covers articles on Italy breaking news, politics, sports, foreign policies, and more.",
+      "followers": {
+        "facebook": 130199,
+        "twitter": 109200,
+        "instagram": 66600
+      },
+      "image_url": "https://i1.feedspot.com/5334331.jpg?t=1634804320"
+    },
+    {
+      "title": "ZENIT",
+      "feed_url": "https://zenit.org/feed/",
+      "website_url": "https://zenit.org/",
+      "description": "ZENIT is an international, non-profit news agency staffed by a team of professionals and volunteers who are convinced that the extraordinary wisdom of the Pontiff and the Catholic Church can nourish hope, and assist all of humanity to find truth, justice and beauty.The coverage we offer focuses on The Pope's activities like apostolic trips, documents, meetings with state officials, and more.",
+      "followers": {
+        "facebook": 213700,
+        "twitter": 12500,
+        "instagram": 66100
+      },
+      "image_url": "https://i1.feedspot.com/4755783.jpg?t=1607000903"
+    },
+    {
+      "title": "Rome News-Tribune",
+      "feed_url": "https://www.northwestgeorgianews.com/search/?f=rss&t=article&c=rome&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.northwestgeorgianews.com/rome/news/",
+      "description": "Rome News-Tribune is the daily newspaper of Rome, Georgia. It provides Local, breaking news and multimedia for Rome and Northwest Georgia.",
+      "followers": {
+        "facebook": 69100,
+        "twitter": 10300
+      },
+      "image_url": "https://i1.feedspot.com/4634112.jpg?t=1508936469"
+    },
+    {
+      "title": "The City of Salerno",
+      "feed_url": "https://www.lacittadisalerno.it/feed",
+      "website_url": "https://www.lacittadisalerno.it/cronaca",
+      "description": "la Citt\u00e0 is a local newspaper owned by Edizioni Salernitane srl, directed by Antonio Manzo, distributed in the province of Salerno, and founded in 1996. This news section covers articles on Chronicle.",
+      "followers": {
+        "facebook": 124200,
+        "twitter": 12100
+      },
+      "image_url": "https://i1.feedspot.com/5334367.jpg?t=1634807867"
+    },
+    {
+      "title": "Vietato Parlare",
+      "feed_url": "https://www.vietatoparlare.it/feed/",
+      "website_url": "https://www.vietatoparlare.it/",
+      "description": "Vietato Parlare is a Italian News Website which covers news worldwide related to Politics, Economy, Health, culture, society and much more.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5331685.jpg?t=1662988558"
+    },
+    {
+      "title": "Notizie Geopolitiche",
+      "feed_url": "https://www.notiziegeopolitiche.net/feed/",
+      "website_url": "https://www.notiziegeopolitiche.net/",
+      "description": "Notizie Geopolitiche is an Italian online newspaper that deals with geopolitics and foreign policy. It aims to help to learn about international events and the mechanisms related to them.",
+      "followers": {
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/5334369.jpg?t=1634808050"
+    },
+    {
+      "title": "Gazzetta.it",
+      "feed_url": "https://www.gazzetta.it/rss/home.xml",
+      "website_url": "https://www.gazzetta.it/",
+      "description": "Read the latest live sports news on gazzetta.it, discover the live scores and videos of football, basketball, F1, MotoGP, cycling, tennis, and much more.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 2000000
+      },
+      "image_url": "https://i1.feedspot.com/5032080.jpg?t=1634803480"
+    },
+    {
+      "title": "The Local Italy",
+      "feed_url": "https://www.thelocal.it/feeds/rss.php",
+      "website_url": "https://www.thelocal.it/",
+      "description": "Daily news from Italy written in English by native English-speaking journalists. An entertaining blend of Italy's latest news headlines, politics, sport, business, and features.",
+      "followers": {
+        "facebook": 237700,
+        "twitter": 21800
+      },
+      "image_url": "https://i1.feedspot.com/1409477.jpg?t=1634801702"
+    },
+    {
+      "title": "IL Manifesto",
+      "feed_url": "https://ilmanifesto.it/feed/",
+      "website_url": "https://ilmanifesto.it/",
+      "description": "IL Manifesto covers articles on Politics, Italy news, Job, School, Economy, International, European news, Extraterrestrial activities, and more.",
+      "followers": {
+        "facebook": 395400,
+        "twitter": 218300,
+        "instagram": 167300
+      },
+      "image_url": "https://i1.feedspot.com/5334333.jpg?t=1634804657"
+    },
+    {
+      "title": "Nuovo Giornale Nazionale",
+      "feed_url": "https://www.nuovogiornalenazionale.com/index.php",
+      "website_url": "https://www.nuovogiornalenazionale.com/index.php",
+      "description": "Nuovo Giornale Nazionale is an independent newspaper owned by the Free Press and Free Communication Association",
+      "followers": {
+        "facebook": 9100,
+        "twitter": 168
+      },
+      "image_url": "https://i1.feedspot.com/5554518.jpg?t=1683030835"
+    },
+    {
+      "title": "Gazzetta di Parma",
+      "feed_url": "https://www.gazzettadiparma.it/",
+      "website_url": "https://www.gazzettadiparma.it/",
+      "description": "The oldest newspaper in Italy, founded in 1735. Real-time news from Parma and its province with insights into news, politics, economics, sport, and more.",
+      "followers": {
+        "facebook": 139000,
+        "twitter": 11900,
+        "instagram": 45400
+      },
+      "image_url": "https://i1.feedspot.com/5334339.jpg?t=1634804866"
+    },
+    {
+      "title": "The Italian Tribune",
+      "feed_url": "https://www.italiantribune.com/?feed=rss2",
+      "website_url": "https://italiantribune.com/",
+      "description": "Since 1931, the Italian Tribune, has been one of the country's largest and most influential Italian American weekly newspapers. Its mission is to retrieve information regarding culture, political, clubs, businesses and in individuals, from the Italian community.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 414
+      },
+      "image_url": "https://i1.feedspot.com/4634150.jpg"
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "category": "Madison",
+  "source_url": "https://rss.feedspot.com/madison_rss_feeds",
+  "feeds": [
+    {
+      "title": "madison.com | Madison Sports",
+      "feed_url": "https://madison.com/search/?f=rss&t=article&c=sports&l=50&s=start_time&sd=desc",
+      "website_url": "https://madison.com/sports/",
+      "description": "Follow this website to get the latest updates, news and information about sports in Madison area.",
+      "followers": {
+        "facebook": 34600,
+        "twitter": 40000,
+        "instagram": 18800
+      },
+      "image_url": "https://i1.feedspot.com/4924679.jpg?t=1611147254"
+    },
+    {
+      "title": "Mad City Dream Homes Blog",
+      "feed_url": "https://www.madcitydreamhomes.com/blog/rss",
+      "website_url": "https://www.madcitydreamhomes.com/blog/",
+      "description": "The blog offers the best information, news and views available on the neighborhoods and properties for sale in Madison. At Mad City Dream Homes, we help you buy your dream home and sell for top dollar by giving you the time, support, and attention you need during these complex times.",
+      "followers": {
+        "facebook": 990,
+        "twitter": 48,
+        "instagram": 817
+      },
+      "image_url": "https://i1.feedspot.com/4619921.jpg?t=1639479686"
+    },
+    {
+      "title": "EatDrinkMadison | Madison Restaurant Blog",
+      "feed_url": "https://www.eatdrinkmadison.com/blog/?feed=rss2",
+      "website_url": "https://www.eatdrinkmadison.com/blog/",
+      "description": "EatDrinkMadison connect people with wonderful food, drinks and dining experiences and also provide restaurant reviews, bar reviews in Madison.",
+      "followers": {
+        "facebook": 619,
+        "twitter": 7700
+      },
+      "image_url": "https://i1.feedspot.com/4924437.jpg?t=1611147264"
+    },
+    {
+      "title": "Madison Preservation Blog",
+      "feed_url": "https://www.madisonpreservation.org/blog?format=rss",
+      "website_url": "https://www.madisonpreservation.org/blog",
+      "description": "Madison Preservation Blog promotes revitalization of Madison, supports the continued viability of Madison's historic places, provides opportunities to learn about and experience Madison's history and also facilitates planning and development proposals that affect Madison's historic places.",
+      "followers": {
+        "facebook": 985,
+        "twitter": 284,
+        "instagram": 403
+      },
+      "image_url": "https://i1.feedspot.com/4924449.jpg?t=1611147268"
+    },
+    {
+      "title": "Lake & City Homes Realty | Madison Real Estate Blog",
+      "feed_url": "https://www.lakeandcityhomes.com/blog/rss",
+      "website_url": "https://www.lakeandcityhomes.com/blog/",
+      "description": "This blog provides real estate news, opinions, featured Madison WI homes for sale, the overall Madison real estate market, mortgage news and local events in Madison.",
+      "followers": {
+        "facebook": 675,
+        "twitter": 551
+      },
+      "image_url": "https://i1.feedspot.com/4924742.jpg?t=1611147256"
+    },
+    {
+      "title": "Library Makers | Madison Library Blog",
+      "feed_url": "http://librarymakers.blogspot.com/feeds/posts/default",
+      "website_url": "http://librarymakers.blogspot.com/",
+      "description": "Library Makers is a blog that provides information, stories and hands-on learning for all ages in Madison.",
+      "followers": {
+        "twitter": 282
+      },
+      "image_url": "https://i1.feedspot.com/2354673.jpg?t=1611147282"
+    },
+    {
+      "title": "Eating in Madison A to Z | Madison Restaurant Blog",
+      "feed_url": "http://feeds.feedburner.com/madisonatoz/ranj",
+      "website_url": "https://www.madisonatoz.com/",
+      "description": "Eating in Madison A to Z provides information on every restaurant's food in Madison, Wisconsin in alphabetical order.",
+      "followers": {
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/69224.jpg?t=1611147475"
+    },
+    {
+      "title": "The Madison Historical Society",
+      "feed_url": "https://www.madisonhistory.org/feed/",
+      "website_url": "https://www.madisonhistory.org/",
+      "description": "The Madison Historical Society collects, preserves and interprets artifacts and information that illustrate Madison's history.",
+      "followers": {
+        "facebook": 959,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4924458.jpg?t=1611147294"
+    },
+    {
+      "title": "Madison Bikes Blog",
+      "feed_url": "https://www.madisonbikes.org/blog.rss",
+      "website_url": "https://www.madisonbikes.org/",
+      "description": "Madison Bikes blog brings you news and post that are relevant to biking in Madison like new bike infrastructure projects, public meetings and events.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 810
+      },
+      "image_url": "https://i1.feedspot.com/4924650.jpg?t=1611147274"
+    },
+    {
+      "title": "City of Madison | Madison News",
+      "feed_url": "https://www.cityofmadison.com/feed/news",
+      "website_url": "https://www.cityofmadison.com/news",
+      "description": "Follow City of Madison to get latest latest news, updates and information of Madison city in Wisconsin.",
+      "followers": {
+        "facebook": 22300,
+        "twitter": 43300,
+        "instagram": 7300
+      },
+      "image_url": "https://i1.feedspot.com/4924718.jpg?t=1611147245"
+    },
+    {
+      "title": "Madison Eats Food Tours | Madison Food Blog",
+      "feed_url": "https://madisoneatsfoodtours.com/blog/feed/",
+      "website_url": "https://madisoneatsfoodtours.com/blog/",
+      "description": "Madison Eats Food Tours brings you the best in food tours around Madison focusing on local foods and flavors. Follow this blog to get latest updates on Madison's great food scene in a new and fun way.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 978
+      },
+      "image_url": "https://i1.feedspot.com/4924614.jpg?t=1611147251"
+    },
+    {
+      "title": "Amadison Mom Australia Blog",
+      "feed_url": "https://amadisonmom.net/blog?format=RSS",
+      "website_url": "https://amadisonmom.net/blog/",
+      "description": "Colleen lives in New Jersey with her husband, Nick, and daughters Zoe and Ana. She began writing at A Madison Mom in March of 2007. It was very much a 'mommy blog'... all about her adventures as a new stay-at-home mom. In 2016, she decided to change it up a little. She wants to share information with the other families here (or thinking of moving here) about the local schools, restaurants, businesses, and events.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 6600
+      },
+      "image_url": "https://i1.feedspot.com/4924628.jpg?t=1599727823"
+    }
+  ]
+}

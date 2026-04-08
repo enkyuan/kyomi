@@ -1,0 +1,55 @@
+{
+  "category": "Study Hacks",
+  "source_url": "https://rss.feedspot.com/study_hacks_rss_feeds",
+  "feeds": [
+    {
+      "title": "Cal Newport's Study Hacks Blog",
+      "feed_url": "https://feeds.feedburner.com/StudyHacks",
+      "website_url": "https://calnewport.com/blog/",
+      "description": "Cal Newport is an Associate Professor of Computer Science at Georgetown University, who specializes in the theory of distributed algorithms. He previously earned his PhD. from MIT in 2009. He writes about how to perform productive, valuable, and meaningful work in an increasingly distracted digital age. He focuses on deep work, success, productivity, and work-life balance.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/22160.jpg?t=1605765335"
+    },
+    {
+      "title": "Rhode Island Tutorial and Educational Services Blog",
+      "feed_url": "https://ritutorial.org/blog/feed/",
+      "website_url": "https://ritutorial.org/blog/",
+      "description": "Rhode Island Tutorial and Educational Services, Inc. (RITES) is dedicated to providing high-quality, multisensory, research-based and proven educational instruction to improve students' academic skills for lifelong success.",
+      "followers": {
+        "facebook": 672,
+        "twitter": 91
+      },
+      "image_url": "https://i1.feedspot.com/4690127.jpg?t=1605765413"
+    },
+    {
+      "title": "Study | Reflected.Ghost",
+      "feed_url": "https://reflectedghostblog.wixsite.com/blogs/blog-feed.xml",
+      "website_url": "https://reflectedghostblog.wixsite.com/blogs",
+      "description": "This Blog's main goal to give advice about how to Study, college and work life. But also share my own experiences.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5057212.jpg"
+    },
+    {
+      "title": "SchoolHabits",
+      "feed_url": "https://schoolhabits.com/feed/",
+      "website_url": "https://schoolhabits.com/category/time-management/",
+      "description": "My name is Katie Azevedo. Through private coaching and video tutorials, I teach students how to learn. I work with students in elementary school through graduate school, as well as adults looking to further their work productivity habits.",
+      "followers": {
+        "facebook": 575,
+        "twitter": 146,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4689399.jpg?t=1605765095"
+    },
+    {
+      "title": "Studelp Blog",
+      "feed_url": "https://studelp.com/feeds/posts/default",
+      "website_url": "https://studelp.com/blog",
+      "description": "Studelp is a place to learn and grab a lot of study tips, strategies and guides. Apart from these, This site also provides you the best information about various courses and career options to make your future bright.",
+      "followers": {
+        "twitter": 17
+      },
+      "image_url": "https://i1.feedspot.com/5263710.jpg?t=1617275753"
+    }
+  ]
+}

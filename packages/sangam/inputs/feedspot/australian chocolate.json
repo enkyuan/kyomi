@@ -1,0 +1,64 @@
+{
+  "category": "Australian Chocolate",
+  "source_url": "https://rss.feedspot.com/australian_chocolate_rss_feeds",
+  "feeds": [
+    {
+      "title": "How To Cook That",
+      "feed_url": "https://www.howtocookthat.net/public_html/feed/",
+      "website_url": "https://www.howtocookthat.net/public_html/",
+      "description": "It How To Cook That covers cake, chocolate, dessert, and macaron recipes, by Ann Reardon, a food scientist, and dietitian who likes to cook ridiculously unhealthy desserts. Read my blog to join me as I get creative with desserts & debunk viral food myths.",
+      "followers": {
+        "facebook": 347600,
+        "twitter": 19900,
+        "instagram": 179600
+      },
+      "image_url": "https://i1.feedspot.com/4330425.jpg?t=1665581515"
+    },
+    {
+      "title": "Bean Bar You News",
+      "feed_url": "https://beanbaryou.com.au/feed/",
+      "website_url": "https://beanbaryou.com.au/news/",
+      "description": "Catch up on the latest news from the Australian Bean to Bar scene and our Independent Chocolate Subscription Service.",
+      "followers": {
+        "facebook": 827,
+        "twitter": 907,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5149657.jpg?t=1620383387"
+    },
+    {
+      "title": "ChocolateSuze",
+      "feed_url": "https://www.chocolatesuze.com/feed/",
+      "website_url": "https://www.chocolatesuze.com/",
+      "description": "ChocolateSuze is a chocolate, food and lifestyle blog along with restaurant and/or event reviews from different regions of Australia. Aka ChocolateSuze also write stories about travel trips, product evaluations, recipe testing, and the occasional story about herself and friends.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 5100,
+        "instagram": 17700
+      },
+      "image_url": "https://i1.feedspot.com/4588024.jpg?t=1625547834"
+    },
+    {
+      "title": "Peak Chocolate Blog",
+      "feed_url": "https://peakchocolate.com.au/blogs/news.atom",
+      "website_url": "https://peakchocolate.com.au/blogs/news",
+      "description": "Covers blog posts and news on the health benefits of dark chocolate. Peak Chocolate is the world's first high-performance chocolate. Premium dark chocolate infused and enriched with supplements that will improve your life and help you achieve your goals.",
+      "followers": {
+        "facebook": 3700,
+        "instagram": 6100
+      },
+      "image_url": "https://i1.feedspot.com/5298177.jpg?t=1625135385"
+    },
+    {
+      "title": "Melba's Chocolates & Confectionery Blog",
+      "feed_url": "https://www.melbaschocolates.com.au/feed/",
+      "website_url": "https://www.melbaschocolates.com.au/blog/",
+      "description": "A working tourism chocolate & confectionery factory located in a heritage listed complex 40 minutes from Adelaide at Woodside in the Adelaide Hills.",
+      "followers": {
+        "facebook": 23200,
+        "instagram": 6400
+      },
+      "image_url": "https://i1.feedspot.com/4916290.jpg?t=1620383383"
+    }
+  ]
+}

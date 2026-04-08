@@ -1,0 +1,105 @@
+{
+  "category": "Energy Storage",
+  "source_url": "https://rss.feedspot.com/energy_storage_rss_feeds",
+  "feeds": [
+    {
+      "title": "Energy Storage News",
+      "feed_url": "https://www.energy-storage.news/feed/",
+      "website_url": "https://www.energy-storage.news/",
+      "description": "Energy Storage News is your go-to resource for in-depth news, analysis, opinions, blogs, and more on the international energy storage industry. Energy Storage News is part of the Solar Media ltd group, which includes PV Tech, Solar Media Market Research, and Solar Power Portal.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 10500
+      },
+      "image_url": "https://i1.feedspot.com/5371938.jpg?t=1645185495"
+    },
+    {
+      "title": "Clean Energy Group Blog",
+      "feed_url": "https://www.cleanegroup.org/feed/",
+      "website_url": "https://www.cleanegroup.org/blog/",
+      "description": "Stay current on the latest Energy Storage trends and climate updates from Clean Energy Group Blog. Clean Energy Group (CEG) is a national, nonprofit advocacy organization working in the U.S. and internationally on innovative finance, technology, and policy programs in the areas of clean energy and climate.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5371942.jpg?t=1644904894"
+    },
+    {
+      "title": "Battery Power Online",
+      "feed_url": "https://www.batterypoweronline.com/feed/",
+      "website_url": "https://www.batterypoweronline.com/category/blogs/",
+      "description": "Battery Power is a 'solutions-oriented' platform unveiling the latest technologies and trends, from portable, stationary and automotive applications to manufacturing and R&D.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 714
+      },
+      "image_url": "https://i1.feedspot.com/5371944.jpg?t=1644992944"
+    },
+    {
+      "title": "Loom Solar Blog",
+      "feed_url": "https://www.loomsolar.com/blogs/collections.atom",
+      "website_url": "https://www.loomsolar.com/blogs/collections",
+      "description": "Loomsolar.com India's premium solar brand store blogs, On grid, Off grid solar system, solar panel, solar inverters, solar battery and solar charge controllers buying guides, installation, solar products pricing, customers success story, product delivery and more.",
+      "followers": {
+        "facebook": 210900,
+        "twitter": 2500,
+        "instagram": 16400
+      },
+      "image_url": "https://i1.feedspot.com/4963669.jpg?t=1614672250"
+    },
+    {
+      "title": "Energy Storage Journal",
+      "feed_url": "https://www.energystoragejournal.com/feed/",
+      "website_url": "https://www.energystoragejournal.com/",
+      "description": "Energy Storage Journal (business and market strategies for energy storage and smart grid technologies) is a quarterly B2B publication that covers global news, trends, and developments in energy storage and smart grid markets. Find out what are the latest news in the energy sector with Energy Storage Journal.",
+      "followers": {
+        "twitter": 293
+      },
+      "image_url": "https://i1.feedspot.com/5371936.jpg?t=1644989700"
+    },
+    {
+      "title": "UPS Battery Center Blog",
+      "feed_url": "https://blog.upsbatterycenter.com/feed/",
+      "website_url": "https://blog.upsbatterycenter.com/",
+      "description": "News about Energy Storage, Climate Change, and everything you want to know about Batteries. UPS Battery Center is the leading manufacturer and supplier of sealed lead-acid batteries in Canada.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5371937.jpg?t=1645078831"
+    },
+    {
+      "title": "Mayfield Renewables",
+      "feed_url": "https://www.mayfield.energy/blog?format=rss",
+      "website_url": "https://www.mayfield.energy/technical-articles/",
+      "description": "A technical blog about solar PV and energy storage system design and installation best practices. Mayfield Renewables is a technical consultancy that delivers a variety of services - including system design, specialized content, and educational programs - to companies in the solar and energy storage industries.",
+      "followers": {
+        "twitter": 45
+      },
+      "image_url": "https://i1.feedspot.com/5371940.jpg?t=1644904887"
+    },
+    {
+      "title": "Energy Storage Association | The ESA Blog",
+      "feed_url": "https://www.energystorage.org/news-center/the-esa-blog/feed",
+      "website_url": "http://",
+      "description": "Learn about the electricity storage industry with this archive of blog articles from the ESA, including Spotlight on Storage. The US Energy Storage Association ('ESA') is the national trade association dedicated to energy storage, working toward a more resilient, efficient, sustainable, and affordable electricity grid.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5371941.jpg?t=1644904891"
+    },
+    {
+      "title": "Dufresne | Energy Storage World Forum",
+      "feed_url": "https://energystorageforum.com/feed",
+      "website_url": "http://",
+      "description": "A reliable source to get all the latest Energy Storage News. Dufresne Research specializes in creating high-quality market-driven conferences and training. The company focuses on stationary Energy Storage across all applications from Residential, Self - Consumption, and Microgrid through to large-scale stationary storage.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5371943.jpg?t=1644904901"
+    },
+    {
+      "title": "California Energy Storage Alliance",
+      "feed_url": "https://storagealliance.org/news",
+      "website_url": "https://storagealliance.org/news",
+      "description": "News and updates from the California Energy Storage Alliance (CESA). California Energy Storage Alliance (CESA) is a membership-based advocacy group committed to advancing the role of energy storage in the electric power sector.",
+      "followers": {
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5371912.jpg?t=1644995561"
+    }
+  ]
+}

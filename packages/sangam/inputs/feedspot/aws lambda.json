@@ -1,0 +1,58 @@
+{
+  "category": "AWS Lambda",
+  "source_url": "https://rss.feedspot.com/aws_lambda_rss_feeds",
+  "feeds": [
+    {
+      "title": "Serverless Land",
+      "feed_url": "https://serverlessland.com/feed.xml",
+      "website_url": "https://serverlessland.com/",
+      "description": "This site brings together all the latest blogs, videos, and training for AWS Serverless. Serverless Land is your resource for learning serverless technology. Serverless is the practice of using managed services with event-driven compute functions to minimize infrastructure management, configuration, operations, and idle capacity. Using serverless, developers can reduce their time for creating customer value with faster development practices by concentrating on business logic.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5365834.jpg?t=1660718212"
+    },
+    {
+      "title": "Amazon Web Services \u00bb AWS Lambda",
+      "feed_url": "https://aws.amazon.com/blogs/compute/category/compute/aws-lambda/feed/",
+      "website_url": "https://aws.amazon.com/blogs/compute/category/compute/aws-lambda/",
+      "description": "Learn more about AWS Lambda by reading our blog. AWS is a comprehensive cloud services platform, offering computing power, storage, content delivery, and other functionality services. The AWS mission is to enable developers and businesses to use web services to easily build and be paid for sophisticated, scalable applications.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/5432403.jpg?t=1660718111"
+    },
+    {
+      "title": "Noise \u00bb AWS Lambda",
+      "feed_url": "https://noise.getoto.net/tag/aws-lambda/feed/",
+      "website_url": "https://noise.getoto.net/tag/aws-lambda/",
+      "description": "In this blog post find the best practices and guidance on AWS Lambda. The Founder of this website Channy Yun is a principal developer advocate at Amazon Web Services and has helped Korean developers to enable AWS cloud services. He shares knowledge of the latest AWS cloud services in blog posts, social media, and public speaking.",
+      "followers": {
+        "twitter": 56200
+      },
+      "image_url": "https://i1.feedspot.com/5432405.jpg?t=1660718122"
+    },
+    {
+      "title": "Knoldus \u00bb AWS Lambda",
+      "feed_url": "https://blog.knoldus.com/tag/aws-lambda/feed/",
+      "website_url": "https://blog.knoldus.com/tag/aws-lambda/",
+      "description": "Get insights and perspectives to keep you updated on AWS Lambda technology. Knoldus is the world's largest pure-play Scala and Spark company focused on creating customized high-performance solutions. Our mission is to help businesses succeed with technology by leveraging emerging future-ready technologies thus bringing them a competitive advantage.",
+      "followers": {
+        "facebook": 960,
+        "twitter": 814,
+        "instagram": 191
+      },
+      "image_url": "https://i1.feedspot.com/5432406.jpg?t=1661851660"
+    },
+    {
+      "title": "Lumigo Blog",
+      "feed_url": "https://lumigo.io/feed/",
+      "website_url": "https://lumigo.io/blog/",
+      "description": "From step-by-step tutorials to open source tools, news, and opinion to original research, find everything on Lumigo Blog. Lumigo is a monitoring and debugging platform for cloud & serverless applications. With one-click distributed tracing, Lumigo lets developers effortlessly find and fix issues in serverless and containerized environments.",
+      "followers": {
+        "facebook": 404,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5432404.jpg?t=1660718117"
+    }
+  ]
+}

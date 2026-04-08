@@ -1,0 +1,208 @@
+{
+  "category": "Argentina News",
+  "source_url": "https://rss.feedspot.com/argentina_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Buenos Aires Times",
+      "feed_url": "https://www.batimes.com.ar/feed",
+      "website_url": "https://www.batimes.com.ar/",
+      "description": "Keep your knowledge up-to-the-minute with the latest stories and headlines from Argentina. The Buenos Aires Times is Argentina's only English-language newspaper. News from Argentina and beyond, analysis, politics, finance, economy, culture, sports, and more!",
+      "followers": {
+        "facebook": 9000,
+        "twitter": 7400,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5334474.jpg?t=1634816911"
+    },
+    {
+      "title": "LA NACION",
+      "feed_url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/?outputType=xml",
+      "website_url": "https://www.lanacion.com.ar/",
+      "description": "La Nacion is the most active community of an Argentine newspaper. Go through their blog to learn about the latest lifestyle news, updates, opinions, and much more.",
+      "followers": {
+        "facebook": 6000000,
+        "twitter": 4200000,
+        "instagram": 2300000
+      },
+      "image_url": "https://i1.feedspot.com/5334480.jpg?t=1758607065"
+    },
+    {
+      "title": "La Gaceta",
+      "feed_url": "https://feeds.feedburner.com/LaGaceta-General",
+      "website_url": "https://www.lagaceta.com.ar/",
+      "description": "La Gaceta is recognized nationally for its political, social, and cultural influence. It is the main newspaper in the province of Tucum\u00e1n and northern Argentina.",
+      "followers": {
+        "facebook": 1500000,
+        "twitter": 242400,
+        "instagram": 649000
+      },
+      "image_url": "https://i1.feedspot.com/5334487.jpg?t=1634818267"
+    },
+    {
+      "title": "Misiones Online",
+      "feed_url": "https://misionesonline.net/feed/",
+      "website_url": "https://misionesonline.net/",
+      "description": "Media of the province of Misiones, Argentina. News, Politics, Economy, Police, General Information, The Region.",
+      "followers": {
+        "facebook": 764900,
+        "twitter": 53600,
+        "instagram": 544500
+      },
+      "image_url": "https://i1.feedspot.com/5334488.jpg?t=1634818463"
+    },
+    {
+      "title": "Perfil",
+      "feed_url": "https://www.perfil.com/feed",
+      "website_url": "https://www.perfil.com",
+      "description": "Breaking news, analysis, and the best columnists covering the most important issues in Argentina and the world.",
+      "followers": {
+        "facebook": 838000,
+        "twitter": 816500,
+        "instagram": 343800
+      },
+      "image_url": "https://i1.feedspot.com/5334491.jpg?t=1757508992"
+    },
+    {
+      "title": "LaVoz.com.ar",
+      "feed_url": "https://www.lavoz.com.ar/arc/outboundfeeds/feeds/rss/?outputType=xml",
+      "website_url": "https://www.lavoz.com.ar/",
+      "description": "We are the leading news site in the interior of Argentina. We tell you what happens while it happens, from C\u00f3rdoba and with a global perspective.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 524600,
+        "instagram": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/5334492.jpg?t=1634818849"
+    },
+    {
+      "title": "P\u00e1gina/12",
+      "feed_url": "https://www.pagina12.com.ar/rss/portada",
+      "website_url": "https://www.pagina12.com.ar/",
+      "description": "Notes focused on the political work of Argentina.",
+      "followers": {
+        "facebook": 978800,
+        "twitter": 534000
+      },
+      "image_url": "https://i1.feedspot.com/5334494.jpg?t=1634819034"
+    },
+    {
+      "title": "Diario Registrado",
+      "feed_url": "https://www.diarioregistrado.com/rss.xml",
+      "website_url": "https://www.diarioregistrado.com/",
+      "description": "Diario Registrado is the first audiovisual newspaper. Covers articles on politics, economy, international news, science & technology and much more.",
+      "followers": {
+        "facebook": 325100,
+        "twitter": 37500
+      },
+      "image_url": "https://i1.feedspot.com/5334495.jpg?t=1634819221"
+    },
+    {
+      "title": "Diario El D\u00eda de La Plata",
+      "feed_url": "https://www.eldia.com/.rss",
+      "website_url": "https://www.eldia.com/",
+      "description": "With more than 130 years, it is one of the most prestigious newspapers in the country.",
+      "followers": {
+        "facebook": 447400,
+        "twitter": 324900,
+        "instagram": 149100
+      },
+      "image_url": "https://i1.feedspot.com/4378780.jpg?t=1634820730"
+    },
+    {
+      "title": "El Intransigente",
+      "feed_url": "https://elintransigente.com/feed/",
+      "website_url": "https://elintransigente.com/",
+      "description": "News from Argentina and the world in real time.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 83200,
+        "instagram": 92600
+      },
+      "image_url": "https://i1.feedspot.com/5334548.jpg?t=1634821483"
+    },
+    {
+      "title": "El Cronista",
+      "feed_url": "https://www.cronista.com/files/rss/news.xml",
+      "website_url": "https://www.cronista.com/",
+      "description": "El Cronista is one of the most valued Economic Newspapers of Argentina. It is the most reliable source of information on Economics, Finance, and Business.",
+      "followers": {
+        "facebook": 362300,
+        "twitter": 223100,
+        "instagram": 357800
+      },
+      "image_url": "https://i1.feedspot.com/5334911.jpg?t=1634887442"
+    },
+    {
+      "title": "R\u00edo Negro",
+      "feed_url": "https://www.rionegro.com.ar/feed/",
+      "website_url": "https://www.rionegro.com.ar/",
+      "description": "We are the most visited news site in Patagonia.",
+      "followers": {
+        "facebook": 847400,
+        "twitter": 104700,
+        "instagram": 289900
+      },
+      "image_url": "https://i1.feedspot.com/5334915.jpg?t=1634888018"
+    },
+    {
+      "title": "Diario de Cuyo",
+      "feed_url": "https://www.diariodecuyo.com.ar/rss/rss.xml",
+      "website_url": "https://www.diariodecuyo.com.ar/",
+      "description": "News from San Juan, Argentina, and the World. Covers the Latest News, Politics, Economics, Opinion, Shows, Sports, and more.",
+      "followers": {
+        "facebook": 718500,
+        "twitter": 37500,
+        "instagram": 200500
+      },
+      "image_url": "https://i1.feedspot.com/5334535.jpg?t=1634820893"
+    },
+    {
+      "title": "El Liberal",
+      "feed_url": "https://www.elliberal.com.ar/",
+      "website_url": "https://www.elliberal.com.ar/",
+      "description": "El Liberal newspaper, the dean of the Argentine North. News from Santiago del Estero, the country, and the world updated instantly.",
+      "followers": {
+        "facebook": 430800,
+        "twitter": 17300,
+        "instagram": 402500
+      },
+      "image_url": "https://i1.feedspot.com/5334501.jpg?t=1634819413"
+    },
+    {
+      "title": "Los Andes",
+      "feed_url": "https://www.losandes.com.ar/arcio/rss",
+      "website_url": "https://www.losandes.com.ar/",
+      "description": "Mendoza's number one newspaper in information, credibility, and audience.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 235400,
+        "instagram": 486800
+      },
+      "image_url": "https://i1.feedspot.com/5334516.jpg?t=1634819676"
+    },
+    {
+      "title": "Cr\u00f3nica",
+      "feed_url": "https://www.cronica.com.ar/feed/feed.xml",
+      "website_url": "https://www.cronica.com.ar/",
+      "description": "The most updated and leading Argentine newspaper. Covers articles on politics, society, world news, health, technology, opinions, and more.",
+      "followers": {
+        "facebook": 1900000,
+        "twitter": 853900,
+        "instagram": 521200
+      },
+      "image_url": "https://i1.feedspot.com/5334537.jpg?t=1634821283"
+    },
+    {
+      "title": "La Arena",
+      "feed_url": "https://www.laarena.com.ar/",
+      "website_url": "https://www.laarena.com.ar/",
+      "description": "La Arena is a daily morning newspaper that is distributed throughout the province of La Pampa and the center of the country.",
+      "followers": {
+        "facebook": 144700,
+        "twitter": 3200,
+        "instagram": 20000
+      },
+      "image_url": "https://i1.feedspot.com/5334914.jpg?t=1634887772"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "category": "Indiana Auto",
+  "source_url": "https://rss.feedspot.com/indiana_auto_rss_feeds",
+  "feeds": [
+    {
+      "title": "Gauge Magazine",
+      "feed_url": "https://gaugemagazine.com/feed/",
+      "website_url": "https://gaugemagazine.com/",
+      "description": "See the latest news, Upcoming event information, and other helpful resources in the Gauge Magazine online. Gauge Magazine is the number 1 online magazine and website for custom car and truck features, car show coverage, automotive videos and so much more.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 2600,
+        "instagram": 43800
+      },
+      "image_url": "https://i1.feedspot.com/5227537.jpg?t=1608011443"
+    },
+    {
+      "title": "Zore's Towing of Indiana Blog",
+      "feed_url": "https://www.zorestowing.com/blog/feed/",
+      "website_url": "https://www.zorestowing.com/blog/",
+      "description": "Zore's Towing Blog provides rare insights and tips on Cars, Maintenance, and How to drive Safely. Read the guides in our blog and prepare your vehicle for any eventuality. Zore's Towing is Family Owned and Operated Towing Company In Indianapolis and a frequent choice for prompt and professional towing and heavy wrecker service in Central Indiana.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5449282.jpg?t=1663927558"
+    },
+    {
+      "title": "Fox 59 \u00bb Automotive",
+      "feed_url": "https://fox59.com/automotive/feed/",
+      "website_url": "https://fox59.com/automotive/",
+      "description": "Read the latest News and Updates in Automotive brought to you by the team at Fox 59. Fox 59 is a cable channel reporting Indianapolis News, Indiana Weather, Indiana News, Indiana Traffic, Indiana Local News, Indiana Sports, Community, and Entertainment live updates.",
+      "followers": {
+        "facebook": 998200,
+        "twitter": 296000,
+        "instagram": 114400
+      },
+      "image_url": "https://i1.feedspot.com/5449283.jpg?t=1663927404"
+    },
+    {
+      "title": "Consolidated Automotive Services of Indiana Blog",
+      "feed_url": "https://www.consolidatedautoservices.com/feed/",
+      "website_url": "https://www.consolidatedautoservices.com/blog/",
+      "description": "This blog by Consolidated Automotive Services of Indiana supplies you with insights and opinions from their 35 years of collective and comprehensive knowledge and experience. Consolidated Automotive Services of Indiana is an Automotive Dealer providing easy, professional, and efficient out-of-state title processing.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5449284.jpg?t=1663927807"
+    },
+    {
+      "title": "Indianapolis Business Journal \u00bb Auto Industry",
+      "feed_url": "https://www.ibj.com/topics/auto-industry/feed",
+      "website_url": "https://www.ibj.com/topics/auto-industry",
+      "description": "Get your dose of Auto Industry news from one of the best in business information. This section focuses on car industry news across central Indiana. Read more to find out relevant topics and trends in the industry. The Indianapolis Business Journal provides in-depth and thoughtful coverage of central Indiana's business community.",
+      "followers": {
+        "facebook": 32100,
+        "twitter": 59000
+      },
+      "image_url": "https://i1.feedspot.com/5449285.jpg?t=1663927412"
+    },
+    {
+      "title": "Noble Auto Service Blog",
+      "feed_url": "https://thenoblemechanic.com/feed/",
+      "website_url": "https://thenoblemechanic.com/blog/",
+      "description": "Check out our blog for car and maintenance tips, industry news, and events as well as interesting trivia, fun facts, and more. Noble Auto Service is a repair and service provider in Noblesville and Kokomo Indiana. Our highly trained mechanics make sure your car is always ready for the road ahead from transmission repairs, tire sales/services, and everything in between.",
+      "followers": {
+        "facebook": 604,
+        "twitter": 22
+      },
+      "image_url": "https://i1.feedspot.com/5449286.jpg?t=1663927426"
+    }
+  ]
+}

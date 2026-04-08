@@ -1,0 +1,88 @@
+{
+  "category": "Alabama Food",
+  "source_url": "https://rss.feedspot.com/alabama_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Southern Bite",
+      "feed_url": "https://southernbite.com/feed/",
+      "website_url": "https://southernbite.com/",
+      "description": "Father, Cookbook Author, and Southern food blogger sharing tried and true Southern recipes.",
+      "followers": {
+        "facebook": 365200,
+        "twitter": 2700,
+        "instagram": 41200
+      },
+      "image_url": "https://i1.feedspot.com/4794331.jpg?t=1609842389"
+    },
+    {
+      "title": "Taste of the South Blog",
+      "feed_url": "https://tasteofthesouthmagazine.com/category/blog/feed/",
+      "website_url": "https://tasteofthesouthmagazine.com/category/blog/",
+      "description": "Preserving the past and celebrating the future of Southern food. Each issue of Taste of the South is filled with more than 60 wonderful recipes and delightful information on the South's favorite foods.",
+      "followers": {
+        "facebook": 305000,
+        "twitter": 6300,
+        "instagram": 232400
+      },
+      "image_url": "https://i1.feedspot.com/5308973.jpg?t=1628151989"
+    },
+    {
+      "title": "Grits and Gouda",
+      "feed_url": "https://gritsandgouda.com/feed/",
+      "website_url": "https://gritsandgouda.com/",
+      "description": "Southern shortcut recipes with a dash of gourmet is what you will find at GritsAndGouda.com! Most of my recipes are traditional Southern classics with a shortcut to get you in and out of the kitchen quickly because I know you are busy.",
+      "followers": {
+        "facebook": 21700,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5309134.jpg?t=1628173328"
+    },
+    {
+      "title": "Alabama Living Magazine \u00bb Recipes",
+      "feed_url": "https://alabamaliving.coop/section/recipes/feed/",
+      "website_url": "https://alabamaliving.coop/section/recipes/",
+      "description": "Alabama Living is the award-winning, official statewide publication of the rural electric cooperatives in Alabama and the largest circulation lifestyle magazine in the state, reaching more than 415,000 electric cooperative consumer-members every month.",
+      "followers": {
+        "facebook": 20000,
+        "twitter": 1200,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5308976.jpg?t=1628152805"
+    },
+    {
+      "title": "Bethcakes",
+      "feed_url": "https://bethcakes.com/feed/",
+      "website_url": "https://bethcakes.com/",
+      "description": "Check out Beth's blog for recipes, sweet treats, baking adventures, and a little bit southern.",
+      "followers": {
+        "facebook": 15800,
+        "twitter": 1300,
+        "instagram": 17700
+      },
+      "image_url": "https://i1.feedspot.com/5304766.jpg?t=1627029582"
+    },
+    {
+      "title": "Tasting TBL Blog",
+      "feed_url": "https://www.tastingtbl.com/the-blog?format=rss",
+      "website_url": "https://www.tastingtbl.com/the-blog",
+      "description": "Our goal is simple: to provide you with a fine dining experience in an intimate home setting.",
+      "followers": {
+        "facebook": 2800,
+        "instagram": 9700
+      },
+      "image_url": "https://i1.feedspot.com/5309997.jpg?t=1628248532"
+    },
+    {
+      "title": "Dining Out With Comedienne Joy",
+      "feed_url": "https://www.diningoutwithcomediennejoy.com/blog-feed.xml",
+      "website_url": "https://www.diningoutwithcomediennejoy.com/blog-post",
+      "description": "Comedienne Joy visits restaurants to find food so good, it makes you want to lie down! Read her dining and food blog for the best to find the best food in town!",
+      "followers": {
+        "facebook": 93000,
+        "twitter": 1000,
+        "instagram": 7400
+      },
+      "image_url": "https://i1.feedspot.com/5309912.jpg?t=1628236817"
+    }
+  ]
+}

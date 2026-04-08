@@ -1,0 +1,62 @@
+{
+  "category": "Bologna Food",
+  "source_url": "https://rss.feedspot.com/bologna_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Tortellini&CO \u00bb RICETTE",
+      "feed_url": "https://www.tortelliniandco.com/category/ricette/feed/",
+      "website_url": "https://www.tortelliniandco.com/category/ricette/",
+      "description": "Monica is a food writer and a good fork. She has a past of various and a present of possible ones that she cooks to season the future. This blog is a tribute to Italian home cooking and the Bolognese-Romagna tradition. She share history, stthe ories and traditional recipes of Bologna and Emilia-Romagna as well as some travel notes on the wonders that her area has to offer. Check out her blog for authentic Italian recipes and intersteing stories.",
+      "followers": {
+        "facebook": 2400,
+        "instagram": 29300
+      },
+      "image_url": "https://i1.feedspot.com/5613229.jpg?t=1688041546"
+    },
+    {
+      "title": "Tina's Table \u00bb Bologna",
+      "feed_url": "https://www.tinastable.com/category/italy-travel/bologna/feed/",
+      "website_url": "https://www.tinastable.com/category/italy-travel/bologna/",
+      "description": "Tina is a blogger who is addicted to Italy when she is not in Italy, she wants to be. She loves the food, the people, the art, the history, you name it. As a long-time lover of Italian food and culture, she frequently asked friends for information about Italian recipes, travel, restaurants, culinary techniques, and cookbooks. Here she discusses tips, restaurant reviews, and info about Bologna.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 61,
+        "instagram": 20700
+      },
+      "image_url": "https://i1.feedspot.com/5613225.jpg?t=1688041519"
+    },
+    {
+      "title": "Social Food Love Blog",
+      "feed_url": "https://www.socialfoodlove.com/feed/",
+      "website_url": "https://www.socialfoodlove.com/blog/",
+      "description": "Guilia was born in August 1991 in Bologna and grew up and lived here. She created social.food.love in 2015 because she wanted to make a dream come true: she wanted to express all her thoughts, wanted to make her life known and what she loves to see and photograph, she wanted to introduce you to Bologna and beyond, all seen with her own eyes.",
+      "followers": {
+        "facebook": 2100,
+        "instagram": 21700
+      },
+      "image_url": "https://i1.feedspot.com/5613230.jpg?t=1688041552"
+    },
+    {
+      "title": "BolognaToday \u00bb Cibo",
+      "feed_url": "https://www.bolognatoday.it/rss/channels/cibo/",
+      "website_url": "https://www.bolognatoday.it/cibo/",
+      "description": "Learn about Cibo, food, where to go, and more. BolognaToday is a news website that keeps you posted on the political and economic scene along with sports and entertainment.",
+      "followers": {
+        "facebook": 307600,
+        "twitter": 14400
+      },
+      "image_url": "https://i1.feedspot.com/5613227.jpg?t=1688041531"
+    },
+    {
+      "title": "Delicious Bologna Blog",
+      "feed_url": "https://deliciousbologna.com/feed/",
+      "website_url": "https://deliciousbologna.com/blog/",
+      "description": "Only Delicious Bologna Food Tours includes a complete lunch/dinner in a traditional trattoria to taste local homemade pasta. They want to give their guests the opportunity to discover Bologna in a completely different way than tourists usually do. They are very passionate about their city and its food and, at the end of the tour, you will be too: you won't just be their client; you will be their friend!",
+      "followers": {
+        "facebook": 2100,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5613228.jpg?t=1688041542"
+    }
+  ]
+}

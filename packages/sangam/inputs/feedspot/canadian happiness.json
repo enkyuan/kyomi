@@ -1,0 +1,58 @@
+{
+  "category": "Canadian Happiness",
+  "source_url": "https://rss.feedspot.com/canadian_happiness_rss_feeds",
+  "feeds": [
+    {
+      "title": "Positive Letters",
+      "feed_url": "http://positiveletters.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://positiveletters.blogspot.com/",
+      "description": "Hilary Melton-Butcher is an administrator, sports lover, who enjoys cooking and entertaining and has found a new passion - writing, in particular, blogging about all and everything on being positive and happy. You'll find inspirational stories to boost you up on the page.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5344249.jpg?t=1637327328"
+    },
+    {
+      "title": "School of Happiness Blog",
+      "feed_url": "https://www.schoolofhappiness.ca/blog/feed/",
+      "website_url": "https://www.schoolofhappiness.ca/blog/",
+      "description": "School of Happiness is an online fitness and wellness platform that guides people to cultivate a resilient body, a clear mind, and a happy heart leading to optimal health, happiness, and fulfillment at home and at work.",
+      "followers": {
+        "twitter": 122
+      },
+      "image_url": "https://i1.feedspot.com/5344388.jpg?t=1637327736"
+    },
+    {
+      "title": "365Give Blog",
+      "feed_url": "https://365give.ca/feed/",
+      "website_url": "https://365give.ca/365-days-of-giving/blog/",
+      "description": "365give is the source of daily giving inspiration through their blog and the 365give Challenge. Learn to give every day to increase global happiness.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 3700,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5345035.jpg?t=1637384584"
+    },
+    {
+      "title": "The Sattvic Life",
+      "feed_url": "https://thesattviclife.com/feed/",
+      "website_url": "https://thesattviclife.com/",
+      "description": "A Happiness Blog. Breathing into a blissful balance. Learning how to use the ancient teachings of Ayurveda in everyday life. Bringing back balance, focus, and bliss.",
+      "followers": {
+        "facebook": 781,
+        "twitter": 84
+      },
+      "image_url": "https://i1.feedspot.com/4777303.jpg?t=1637327482"
+    },
+    {
+      "title": "Happy Monkey Club",
+      "feed_url": "https://happymonkeyclub.com/feed/",
+      "description": "Happy Monkey Club's mission is to create communities of happy, healthy, positive women that in turn give back to others. Guided by our five pillars of happiness: Be Positive, Eat Healthy, Live Active, Have Fun, Give Back, we give our members permission to take care of themselves first so they can be the best care giver for their loved ones.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 199,
+        "instagram": 694
+      },
+      "image_url": "https://i1.feedspot.com/5344385.jpg?t=1637384114"
+    }
+  ]
+}

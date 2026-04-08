@@ -1,0 +1,72 @@
+{
+  "category": "UK Organic",
+  "source_url": "https://rss.feedspot.com/uk_organic_rss_feeds",
+  "feeds": [
+    {
+      "title": "Natural Products Magazine",
+      "feed_url": "https://www.naturalproductsonline.co.uk/feed/",
+      "website_url": "https://www.naturalproductsonline.co.uk/",
+      "description": "Natural Products News is Britain's leading trade magazine for the natural and organic products industry.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/4918074.jpg?t=1620630891"
+    },
+    {
+      "title": "Planet Organic Blog",
+      "feed_url": "https://www.planetorganic.com/blogs/blog.atom",
+      "website_url": "https://www.planetorganic.com/blogs/blog",
+      "description": "The UK's largest fully certified organic supermarket, Planet Organic is a celebration of nature, overflowing with mouth-watering, inspiring and ecologically great ideas. We believe wholeheartedly that safe, seasonal and sustainable organic food is fundamental to good health and natural vitality.",
+      "followers": {
+        "facebook": 40400,
+        "twitter": 62100,
+        "instagram": 132800
+      },
+      "image_url": "https://i1.feedspot.com/4509920.jpg?t=1612018476"
+    },
+    {
+      "title": "The Enduring Gardener | Organic Gardening Blog",
+      "feed_url": "https://blog.theenduringgardener.com/feed/",
+      "website_url": "https://blog.theenduringgardener.com/",
+      "description": "The Enduring Gardener, a friendly community of like-minded garden enthusiasts. This is an organic gardening blog of Stephanie Donaldson.We like to keep up to date on the latest garden trends, plants and products. Enjoy our garden design ideas, inspirational articles and how-to guides.",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 4400,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4687514.jpg?t=1611922252"
+    },
+    {
+      "title": "Better Food Blog",
+      "feed_url": "https://betterfood.co.uk/blog/feed/",
+      "website_url": "https://betterfood.co.uk/blog/",
+      "description": "Better Food mission is to build a better, fairer food community. To do this, they will be the best independent retailer in making organic and local food accessible to all, whilst respecting and celebrating all in the food chain.",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 5000,
+        "instagram": 9200
+      },
+      "image_url": "https://i1.feedspot.com/4918041.jpg?t=1620630896"
+    },
+    {
+      "title": "An Organic Lifestyle (Organic Growing Pains)",
+      "feed_url": "https://organicgrowingpains.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://organicgrowingpains.blogspot.com/",
+      "description": "A Blog originally about trying to grow organically on allotments, now growing flowers & veg at home on a smaller scale and living an organic lifestyle.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4918083.jpg?t=1620630929"
+    },
+    {
+      "title": "Evolve Organic Beauty Blog",
+      "feed_url": "https://www.evolvebeauty.com/en-int/blogs/news.atom",
+      "website_url": "https://www.evolvebeauty.com/en-int/blogs/news/",
+      "description": "Natural beauty and lifestyle news from organic skincare brand Evolve Beauty. Includes handmade beauty recipes, offers, and advice.",
+      "followers": {
+        "twitter": 4300,
+        "instagram": 89000
+      },
+      "image_url": "https://i1.feedspot.com/4743648.jpg?t=1609424962"
+    }
+  ]
+}

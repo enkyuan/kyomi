@@ -1,0 +1,17 @@
+{
+  "category": "Santa Rosa News",
+  "source_url": "https://rss.feedspot.com/santa_rosa_california_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Santa Rosa Press Gazette",
+      "feed_url": "https://srpressgazette.com/feed/",
+      "website_url": "https://srpressgazette.com/",
+      "description": "Santa Rosa's Press Gazette delivers news and information to the communities of Milton. Santa Rosa Press Gazette is pledged to an aggressive, responsible and fair pursuit of the truth without any fear of any special interest and with favor to none.",
+      "followers": {
+        "facebook": 23800,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5505935.jpg?t=1676269226"
+    }
+  ]
+}

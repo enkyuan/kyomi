@@ -1,0 +1,55 @@
+{
+  "category": "Australian Venture Capital",
+  "source_url": "https://rss.feedspot.com/australian_venture_capital_rss_feeds",
+  "feeds": [
+    {
+      "title": "Startup Daily \u00bb Venture Capital",
+      "feed_url": "https://www.startupdaily.net/topic/venture-capital/feed/",
+      "website_url": "https://www.startupdaily.net/topic/venture-capital/",
+      "description": "Startup Daily, a leading startup news platform, dedicates a section of its blog to venture capital. The blog covers topics such as fundraising, investor perspectives, and the latest trends in venture capital, providing valuable information for entrepreneurs and investors alike.",
+      "followers": {
+        "facebook": 41100,
+        "twitter": 21600,
+        "instagram": 6800
+      },
+      "image_url": "https://i1.feedspot.com/5587124.jpg?t=1685533024"
+    },
+    {
+      "title": "CP Ventures",
+      "feed_url": "https://cp.ventures/feed/",
+      "website_url": "https://cp.ventures/portfolio-news/",
+      "description": "CP Ventures, a venture capital firm, offers a blog that delves into their investment philosophy, portfolio companies, and industry insights. The blog provides readers with a glimpse into CP Ventures' approach to venture capital and their perspective on the evolving startup ecosystem.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5587122.jpg?t=1685533691"
+    },
+    {
+      "title": "Venture Capital in Australia",
+      "feed_url": "https://bsivc.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://bsivc.blogspot.com/",
+      "description": "Venture Capital in Australia is a blog dedicated to exploring the venture capital landscape in the country. The blog covers topics such as investment trends, regulatory updates, and success stories, providing readers with a comprehensive overview of the Australian venture capital industry.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5587120.jpg?t=1685534636"
+    },
+    {
+      "title": "OneVentures",
+      "feed_url": "https://medium.com/feed/oneventures",
+      "website_url": "https://medium.com/oneventures",
+      "description": "OneVentures, a venture capital firm, offers a blog that covers a wide range of topics, including investment strategies, market trends, and insights from their portfolio companies. The blog provides readers with a glimpse into OneVentures' investment philosophy and their approach to supporting innovative startups.",
+      "followers": {
+        "twitter": 925
+      },
+      "image_url": "https://i1.feedspot.com/5587121.jpg?t=1685532998"
+    },
+    {
+      "title": "Blackbird Blog",
+      "feed_url": "https://www.blackbird.vc/blog",
+      "website_url": "https://www.blackbird.vc/blog",
+      "description": "Blackbird Ventures, a venture capital firm, maintains a blog that shares their experiences and perspectives on startup investing. The blog covers topics such as founder stories, emerging technologies, and the future of entrepreneurship, offering valuable insights for both entrepreneurs and investors.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 16500
+      },
+      "image_url": "https://i1.feedspot.com/5587132.jpg?t=1685533057"
+    }
+  ]
+}

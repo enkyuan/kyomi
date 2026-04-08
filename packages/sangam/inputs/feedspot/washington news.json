@@ -1,0 +1,245 @@
+{
+  "category": "Washington News",
+  "source_url": "https://rss.feedspot.com/washington_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "MyNorthwest",
+      "feed_url": "https://mynorthwest.com/feed",
+      "website_url": "https://mynorthwest.com/",
+      "description": "Seattle news, sports, weather, traffic, talk and community.",
+      "followers": {
+        "facebook": 43300,
+        "twitter": 45100
+      },
+      "image_url": "https://i1.feedspot.com/5130577.jpg?t=1669968641"
+    },
+    {
+      "title": "The Columbian",
+      "feed_url": "https://www.columbian.com/feed/",
+      "website_url": "https://www.columbian.com/",
+      "description": "Clark County Washington's source for local news, breaking news, business, sports, politics, opinion, entertainment, and restaurants",
+      "followers": {
+        "facebook": 67500,
+        "twitter": 47300,
+        "instagram": 18800
+      },
+      "image_url": "https://i1.feedspot.com/5130580.jpg?t=1669968665"
+    },
+    {
+      "title": "The Center Square \u00bb Washington",
+      "feed_url": "https://www.thecentersquare.com/search/?f=rss&t=article&l=20&s=start_time&fulltext=showtext&sd=desc&c[]=Washington",
+      "website_url": "https://www.thecentersquare.com/washington/",
+      "description": "The Center Square was launched in May 2019 to fulfill the need for high-quality statehouse and statewide news across the United States. Get essential news, data and analysis delivered with velocity, frequency and consistency.",
+      "followers": {
+        "facebook": 252600,
+        "twitter": 15500
+      },
+      "image_url": "https://i1.feedspot.com/5130584.jpg?t=1669968677"
+    },
+    {
+      "title": "KING 5",
+      "feed_url": "https://rssfeeds.king5.com/king5/home",
+      "website_url": "https://www.king5.com/",
+      "description": "KING 5 is one of the strongest, most trusted local news brands in the country, delivering the largest audiences across all screens among its peers in Seattle. Follow this news website to get the latest news, weather stories, traffic, sports, politics and more.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 727100
+      },
+      "image_url": "https://i1.feedspot.com/5130501.jpg?t=1585315003"
+    },
+    {
+      "title": "Westside Seattle",
+      "feed_url": "https://www.westsideseattle.com/rss.xml",
+      "website_url": "https://www.westsideseattle.com/",
+      "description": "Local daily newspaper website covering West Seattle neighborhoods since 1923 with latest news and information.",
+      "followers": {
+        "facebook": 93,
+        "twitter": 9300
+      },
+      "image_url": "https://i1.feedspot.com/5130583.jpg?t=1694066205"
+    },
+    {
+      "title": "The Spokesman-Review",
+      "feed_url": "https://www.spokesman.com/feeds/stories/",
+      "website_url": "https://www.spokesman.com/",
+      "description": "Up-to-date news coverage of the most recent stories happening in Business, Sports, Arts, and Entertainment in the Pacific Northwest at Spokesman.com. The Spokesman.com and The Spokesman-Review is one of the most significant news and information providers in Washington State and delivers comprehensive reportage of all events of importance.",
+      "followers": {
+        "twitter": 63800
+      },
+      "image_url": "https://i1.feedspot.com/5142424.jpg?t=1669967320"
+    },
+    {
+      "title": "Everett Herald",
+      "feed_url": "https://www.heraldnet.com/feed/",
+      "website_url": "https://www.heraldnet.com/",
+      "description": "The Daily Herald, with its website, HeraldNet.com, has been the leading news and information source in Everett and Snohomish County, Washington, for more than a century. The Herald is one of 49 newspaper titles owned by Everett-based Sound Publishing, the largest community media organization in Washington state.",
+      "followers": {
+        "facebook": 54700,
+        "twitter": 642,
+        "instagram": 9000
+      },
+      "image_url": "https://i1.feedspot.com/5141351.jpg?t=1669967211"
+    },
+    {
+      "title": "KREM 2",
+      "feed_url": "https://www.krem.com/feeds/syndication/rss/news",
+      "website_url": "https://www.krem.com/",
+      "description": "Discover Local News and Information for Spokane, Washington, and surrounding areas. KREM.com is the official website for KREM-TV, the trusted local source for breaking news, weather, and sports in Spokane, Washington.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5475012.jpg?t=1669966964"
+    },
+    {
+      "title": "Peninsula Daily News",
+      "feed_url": "https://www.peninsuladailynews.com/feed/",
+      "website_url": "https://www.peninsuladailynews.com/",
+      "description": "Peninsula Daily News provides the most recent trending news stories and updates covering Sports, Crime, Politics, Entertainment, and Critical Op-Eds to its readers. One of the most-read publications on the Peninsula, PDN covers Clallam County, Port Angeles, Sequim, Port Townsend, and beyond.",
+      "followers": {
+        "facebook": 30400,
+        "twitter": 6500,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5475010.jpg?t=1669967270"
+    },
+    {
+      "title": "Whatcom News",
+      "feed_url": "https://whatcom-news.com/feed/",
+      "website_url": "https://whatcom-news.com/",
+      "description": "Find local news, business, weather, traffic, events, and job opportunities on Whatcom News, Whatcom County Washington's premier community news source. We provide fresh updates and hot scoops on all stories of public interest, serving readers and advertisers across Whatcom County.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5475018.jpg?t=1670221595"
+    },
+    {
+      "title": "Seattle Weekly",
+      "feed_url": "https://www.seattleweekly.com/feed/",
+      "website_url": "https://www.seattleweekly.com/",
+      "description": "The preferred online destination for all Seattle news, events, music, movies, restaurants, and reviews. Seattle Weekly connects its readers to the doers, thinkers, businesses, and entertainers that shape this city through deeply reported stories, stirring critiques, and insightful interviews.",
+      "followers": {
+        "facebook": 40400,
+        "twitter": 148900,
+        "instagram": 19900
+      },
+      "image_url": "https://i1.feedspot.com/5475011.jpg?t=1669966754"
+    },
+    {
+      "title": "Sequim Gazette",
+      "feed_url": "https://www.sequimgazette.com/feed/",
+      "website_url": "https://www.sequimgazette.com/",
+      "description": "Read articles reporting key updates on local news, sports, and entertainment for Sequim, Washington. The Sequim Gazette is a premier local news provider extensively covering the latest word in Business, Politics, and all other matters that the public needs knowing.",
+      "followers": {
+        "facebook": 15200,
+        "twitter": 3400,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5475013.jpg?t=1669966682"
+    },
+    {
+      "title": "Washington State News Network",
+      "feed_url": "https://washingtonstatenews.net/feed/",
+      "website_url": "https://washingtonstatenews.net/",
+      "description": "Washington State News Network disseminates daily key news updates and local stories in the State. Read the latest posts for brief but concise reports on all local events around you. WSNN is an online newsroom comprising a team of local journalists and media personalities committed to delivering quality news.",
+      "followers": {
+        "facebook": 160
+      },
+      "image_url": "https://i1.feedspot.com/5475015.jpg?t=1669966990"
+    },
+    {
+      "title": "Lynnwood Today",
+      "feed_url": "https://lynnwoodtoday.com/feed/",
+      "website_url": "https://lynnwoodtoday.com/",
+      "description": "Learn about Local events and the latest news covering, Health & Fitness, Real Estate, Weather, Schools, and more. Additional featured content also includes Obituaries, Classified, and Special Op-Eds. Lynnwood Today is an independently owned neighborhood news website dedicated to local journalism in Lynnwood.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5475014.jpg?t=1669967382"
+    },
+    {
+      "title": "Seattle Gay News",
+      "feed_url": "https://www.sgn.org/rss/rss_seattle_gay_news_0_0.xml",
+      "website_url": "https://www.sgn.org/",
+      "description": "Explore the latest news, podcasts, and special issues covering the LGBTQIA community. The Seattle Gay News (SGN) is one of the largest Gay/Lesbian/LGBTQ newspapers in the world, serving the Washington and Pacific Northwest USA with arts, entertainment, local, international, and equality news for over 45 years.",
+      "followers": {
+        "facebook": 13200,
+        "twitter": 6200,
+        "instagram": 6300
+      },
+      "image_url": "https://i1.feedspot.com/5475017.jpg?t=1669967243"
+    },
+    {
+      "title": "SeattlePI",
+      "feed_url": "https://www.seattlepi.com/local/feed/seattlepi-com-Local-News-218.php",
+      "website_url": "https://www.seattlepi.com/",
+      "description": "Seattlepi is the first major metro daily newspaper to go online-only. Get breaking Seattle news along with coverage of the local industry, sports, traffic and weather.",
+      "followers": {
+        "facebook": 83200,
+        "twitter": 175900,
+        "instagram": 18300
+      },
+      "image_url": "https://i1.feedspot.com/365876.jpg?t=1603896519"
+    },
+    {
+      "title": "Washington State Journal",
+      "feed_url": "https://www.wastatejournal.org/rss",
+      "website_url": "https://www.wastatejournal.org/",
+      "description": "The Washington State Journal covers the State Legislature when it is in session. In addition, it also features news stories from weekly and small daily newspapers from around the state. Other categories covered include Environment, Education, Justice, Health, Business, and Housing.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5475019.jpg?t=1669967103"
+    },
+    {
+      "title": "FOX 13 Seattle",
+      "feed_url": "https://www.fox13seattle.com/rss/category/apps",
+      "website_url": "https://www.fox13seattle.com/",
+      "description": "Seattle source for breaking news, weather, and sports. Home of Washington's Most Wanted and the Seattle Seahawks.",
+      "followers": {
+        "facebook": 779900,
+        "instagram": 152800
+      },
+      "image_url": "https://i1.feedspot.com/5130500.jpg?t=1694071040"
+    },
+    {
+      "title": "Tacoma News Tribune \u00bb Washington",
+      "feed_url": "https://feeds.mcclatchy.com/thenewstribune/sections/news/state/washington/stories",
+      "website_url": "https://www.seattletimes.com/",
+      "description": "Stay updated on news events, politics, government, breaking news and trending stories from around Washington state. Find headlines on weather, crime and more from the Pacific Northwest.",
+      "followers": {
+        "facebook": 108500,
+        "twitter": 94300
+      },
+      "image_url": "https://i1.feedspot.com/5130498.jpg?t=1669968702"
+    },
+    {
+      "title": "The Seattle Times",
+      "feed_url": "https://www.seattletimes.com/feed/",
+      "website_url": "https://www.seattletimes.com/",
+      "description": "As the Northwest's comprehensive news source, The Seattle Times provides local news, sports, business, politics, entertainment, travel, restaurants and opinion for Seattle and the Pacific Northwest.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/4366653.jpg?t=1603896192"
+    },
+    {
+      "title": "Puget Sound Business Journal",
+      "feed_url": "https://www.bizjournals.com/seattle/",
+      "website_url": "https://www.bizjournals.com/seattle/",
+      "description": "The Puget Sound Business Journal (Seattle) features local business news about Seattle. Read top headlines and stories covering Banking, Technology, Healthcare, Commercial Real Estate, and other sectors updated throughput the day. We also provide tools to help businesses grow, network, and hire.",
+      "followers": {
+        "facebook": 30700,
+        "twitter": 35100,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5475026.jpg?t=1669967365"
+    },
+    {
+      "title": "Washington State Wire",
+      "feed_url": "https://washingtonstatewire.com/feed/",
+      "description": "Washington State Wire is an independent nonpartisan news gathering organization focusing on the Washington state government and the policies that affect Washington residents' daily lives. We're an independent, policy agnostic, and non-partisan outlet for thoughtful content about state policy, political economy, and regulated markets.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/978344.jpg?t=1638445115"
+    }
+  ]
+}

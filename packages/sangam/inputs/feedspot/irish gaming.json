@@ -1,0 +1,38 @@
+{
+  "category": "Irish Gaming",
+  "source_url": "https://rss.feedspot.com/irish_gaming_rss_feeds",
+  "feeds": [
+    {
+      "title": "GamEir",
+      "feed_url": "https://gameir.ie/feed/",
+      "website_url": "https://gameir.ie/",
+      "description": "Founded in 2015, GamEir is a popular gaming blog that covers news, reviews, and features about the latest video games across all platforms. The site aims to provide in-depth coverage of the gaming industry and has a team of dedicated writers who are passionate about gaming.",
+      "followers": {
+        "twitter": 875
+      },
+      "image_url": "https://i1.feedspot.com/5537591.jpg?t=1681120088"
+    },
+    {
+      "title": "Game Workers United Ireland Blog",
+      "feed_url": "https://gwuireland.org/feed/",
+      "website_url": "https://gwuireland.org/blog/",
+      "description": "This blog is run by Game Workers Unite Ireland, a grassroots organization that advocates for better working conditions and fair treatment of workers in the video game industry. The blog provides a platform for workers to share their experiences and raise awareness about issues in the gaming industry.",
+      "followers": {
+        "twitter": 745
+      },
+      "image_url": "https://i1.feedspot.com/5537594.jpg?t=1681120122"
+    },
+    {
+      "title": "Gamerfest News",
+      "feed_url": "https://gamerfest.ie/feed/",
+      "website_url": "https://gamerfest.ie/news/",
+      "description": "Gamerfest is a gaming event that takes place annually in Ireland. The blog provides updates on the event, including news about the latest games that will be featured, competitions, and special guests. It also covers gaming news and reviews throughout the year.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 2100,
+        "instagram": 6500
+      },
+      "image_url": "https://i1.feedspot.com/5537593.jpg?t=1681119980"
+    }
+  ]
+}

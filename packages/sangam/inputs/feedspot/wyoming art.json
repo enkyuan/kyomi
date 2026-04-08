@@ -1,0 +1,77 @@
+{
+  "category": "Wyoming Art",
+  "source_url": "https://rss.feedspot.com/wyoming_art_rss_feeds",
+  "feeds": [
+    {
+      "title": "Horizon Fine Art Gallery Blog",
+      "feed_url": "https://www.horizonfineartgallery.com/feed",
+      "website_url": "https://www.horizonfineartgallery.com/blog",
+      "description": "Horizon Fine Art Gallery, a longstanding presence in Jackson Hole, Wyoming, offers a diverse collection of Western, Contemporary, and International art. Visitors discover stunning portrayals of Yellowstone and Grand Teton National Parks, featuring wildlife and landscapes, alongside captivating scenes from around the globe.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7274359.jpg?t=1710491463"
+    },
+    {
+      "title": "Georgia Rowswell",
+      "feed_url": "https://www.georgiarowswell.com/studio-news/feed",
+      "website_url": "https://www.georgiarowswell.com/studio-news",
+      "description": "Georgia Rowswell, a mixed media artist based in Cheyenne, WY, is known for her curiosity, drawing inspiration from various sources. She believes in the importance of creative expression and shares her artistic visions through studio visits, workshops, and collaborative projects, offering insights into her inspiration and working process.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7274356.jpg?t=1710491520"
+    },
+    {
+      "title": "Cap City News \u00bb Arts",
+      "feed_url": "https://capcity.news/category/arts-2/feed/",
+      "website_url": "https://capcity.news/category/arts-2/",
+      "description": "Cap City News, the Cheyenne affiliate of Oil City News, provides hyperlocal coverage of the people, places, and events shaping the community. Their Wyoming-based reporters aim to connect and build communities by delivering accurate stories first and keeping them forever free.",
+      "followers": {
+        "facebook": 18800,
+        "instagram": 384
+      },
+      "image_url": "https://i1.feedspot.com/7274355.jpg?t=1714482018"
+    },
+    {
+      "title": "Buckrail \u00bb Arts & Entertainment",
+      "feed_url": "https://buckrail.com/category/arts-entertainment/feed/",
+      "website_url": "https://buckrail.com/category/arts-entertainment/",
+      "description": "Buckrail, a web and mobile-based media outlet, serves Jackson, Wyoming, and nearby areas with Breaking Local News and Community Updates. Committed to clarity, they ensure an easy grasp of news without overwhelm. Buckrail aims for inclusivity, representing every voice to create a sense of togetherness and strengthening the community fabric.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7274352.jpg?t=1714482111"
+    },
+    {
+      "title": "Kathryn Mapes Turner Blog",
+      "feed_url": "https://kathrynmapesturner.com/feed/",
+      "website_url": "https://kathrynmapesturner.com/blog/",
+      "description": "Kathryn Mapes Turner's artwork, inspired by Jackson Hole, Wyoming's mountain valley, garners national recognition. With honours from esteemed societies, her blog 'Field Notes' delves into her creative process within the Greater Yellowstone Ecosystem.",
+      "followers": {
+        "facebook": 2500
+      },
+      "image_url": "https://i1.feedspot.com/7274354.jpg?t=1710491583"
+    },
+    {
+      "title": "Wyoming Arts Council Blog",
+      "feed_url": "https://wyoarts.state.wy.us/feed/",
+      "website_url": "https://wyoarts.state.wy.us/news-media/newsblog/",
+      "description": "The Wyoming Arts Council, through grants, partnerships, and programs, supports artistic endeavours statewide, fostering community development and economic growth. Their vision is of Wyoming where the arts play a central role in citizens' social, economic, and educational experiences, championing creativity and community engagement.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7274357.jpg?t=1710491545"
+    },
+    {
+      "title": "Jackson Hole News&Guide \u00bb Arts",
+      "feed_url": "https://www.jhnewsandguide.com/search/?f=rss&t=article&c=scene/arts&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.jhnewsandguide.com/scene/arts/",
+      "description": "Jackson Hole News and Guide has been a staple in the community, providing news and events coverage alongside gallery shows in Jackson, Wyoming. Founded by Fred and Liz McCabe in the 1970s, it's part of the town's publishing history, reflecting its vibrant local culture.",
+      "followers": {
+        "facebook": 58000
+      },
+      "image_url": "https://i1.feedspot.com/7288977.jpg?t=1712089349"
+    },
+    {
+      "title": "Works of Wyoming Gift n Gallery Blog",
+      "feed_url": "https://www.worksofwyoming.com/blogs/news.atom",
+      "website_url": "https://www.worksofwyoming.com/blogs/news",
+      "description": "Works of Wyoming, a non-profit initiative of the Wyoming Women's Business Center, nurtures artists statewide. Their gallery showcases diverse works, empowering artists to flourish and connect with audiences. With a physical store and online presence, they offer a rich array of original art, fostering an appreciation for Wyoming's creative talent.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7274353.jpg?t=1710491363"
+    }
+  ]
+}

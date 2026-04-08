@@ -1,0 +1,48 @@
+{
+  "category": "Contemporary Dance",
+  "source_url": "https://rss.feedspot.com/contemporary_dance_rss_feeds",
+  "feeds": [
+    {
+      "title": "Form Dance Projects Blog",
+      "feed_url": "https://www.form.org.au/blog/feed/",
+      "website_url": "https://www.form.org.au/blog/",
+      "description": "Form Dance Projects is a unique, innovative cultural service provider that aims to foster and develop contemporary dance culture in Western Sydney. Follow the musings of Vicki through the performance world as she informs you about what's happening and what not to miss.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 539,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4940734.jpg?t=1622016337"
+    },
+    {
+      "title": "Contemporary Dance Blog",
+      "feed_url": "https://www.contemporary-dance.org/contemporary-dance.xml",
+      "website_url": "https://www.contemporary-dance.org/contemporary-dance-blog.html",
+      "description": "The Contemporary Dance Blog keeps you up to date with our announcements and all additions and changes to contemporary-dance.org.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4977035.jpg?t=1638358095"
+    },
+    {
+      "title": "Canadian Contemporary Dance Theatre Blog",
+      "feed_url": "https://www.ccdt.org/blog-feed.xml",
+      "website_url": "https://www.ccdt.org/blog",
+      "description": "Canadian Contemporary Dance Theatre, where aspiring young artists come to perform. Follow this blog to get tips, updates, news, events, and what's on - teacher and dancer profiles at Canadian Contemporary Dance.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 483,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4977057.jpg?t=1622016341"
+    },
+    {
+      "title": "The Ottawa Dance Blog",
+      "feed_url": "https://ottawadance.wordpress.com/category/contemporary/feed/",
+      "website_url": "https://ottawadance.wordpress.com/category/contemporary/",
+      "description": "Susan Hickman is a journalist with the heart of a nomad fine polisher of rough words, a provider of inspiration to aspiring writers, and a dance blogger. She learned the skills of many types of dance and practiced ballet, jazz, tap and flamenco dance. Follow her blog to get posts about contemporary dance.",
+      "followers": {
+        "twitter": 71
+      },
+      "image_url": "https://i1.feedspot.com/4976948.jpg?t=1622016361"
+    }
+  ]
+}

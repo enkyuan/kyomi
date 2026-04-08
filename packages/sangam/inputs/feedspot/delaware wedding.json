@@ -1,0 +1,71 @@
+{
+  "category": "Delaware Wedding",
+  "source_url": "https://rss.feedspot.com/delaware_wedding_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kerry Harrison Photography Blog",
+      "feed_url": "https://www.kerryharrison.net/blog?format=rss",
+      "website_url": "https://www.kerryharrison.net/blog",
+      "description": "Kerry is a full-time wedding photographer based in Wilmington Delaware whose wedding services include 7 hours of wedding day coverage, high resolution digital files, online gallery and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5315561.jpg?t=1629890930"
+    },
+    {
+      "title": "Creative Image Weddings Blog",
+      "feed_url": "https://creativeimageweddings.com/feed/",
+      "website_url": "https://creativeimageweddings.com/blog/",
+      "description": "If you are looking for a wedding or portrait photographer, visiting this blog is a great way to get to know about Katie's work and personality. Katie is a wedding and portrait photographer serving Delaware, mainline PA, NJ, MD, and beyond.",
+      "followers": {
+        "facebook": 417,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5308273.jpg?t=1629895727"
+    },
+    {
+      "title": "Tuleya Photography Blog",
+      "feed_url": "https://www.tuleyaphotography.com/blog?format=rss",
+      "website_url": "https://www.tuleyaphotography.com/blog",
+      "description": "Tuleya Photography is a lifestyle, family, and wedding photography company located in Wilmington, DE and serving, Delaware, New Jersey, Eastern Pennsylvania, and Maryland. Sarah Gaspero is the owner and photographer at Tuleya Photography.",
+      "followers": {
+        "facebook": 892,
+        "twitter": 22,
+        "instagram": 859
+      },
+      "image_url": "https://i1.feedspot.com/5315624.jpg?t=1705461002"
+    },
+    {
+      "title": "Chelsea Fluharty Photography Blog",
+      "feed_url": "https://chelseafluhartyphotography.com/feed/",
+      "website_url": "https://chelseafluhartyphotography.com/blog/",
+      "description": "Chelsea Fluharty is a wedding and family photographer who loves raw emotion, making connections with amazing people.",
+      "followers": {
+        "facebook": 2500,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5315570.jpg?t=1629890785"
+    },
+    {
+      "title": "Delaware Seaside Bride",
+      "feed_url": "https://delawareseasidebride.com/rss.xml",
+      "website_url": "https://delawareseasidebride.com/",
+      "description": "A guide to planning your dream wedding and a valuable resource for brides who are looking to get married in the coastal areas of Delaware.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 21,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5315560.jpg?t=1629889477"
+    },
+    {
+      "title": "Daniel Bostwick Photography Blog",
+      "feed_url": "https://danielbostwickphotography.com/feed/",
+      "description": "Daniel is a wedding and portrait photographer based in Delaware.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 134,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5315575.jpg?t=1629891218"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "category": "Scanner",
+  "source_url": "https://rss.feedspot.com/scanner_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Lidar News Blog",
+      "feed_url": "https://blog.lidarnews.com/feed",
+      "website_url": "https://blog.lidarnews.com/",
+      "description": "Lidar is a cutting-edge technology that uses lasers to measure distances and create detailed 3D maps of physical environments. The Lidar News provides readers with information about lidar technology, including its applications, benefits, and limitations. Their blog covers a wide range of topics such as new product releases, industry events and conferences, case studies and more.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/5511819.jpg?t=1677135634"
+    },
+    {
+      "title": "Enhanced Scannning Blog",
+      "feed_url": "https://enhancedscanning.com/blog/feed/",
+      "website_url": "https://enhancedscanning.com/blog/",
+      "description": "Our mission is to provide informed, innovative, and even creative solutions to many subsurface problems found in the construction, engineering, and scientific communities. The Enhanced Scanning blog is a resource for information and news related to 3D scanning technology and its applications. Follow the blog to get the latest news and updates about scanning technology.",
+      "followers": {
+        "facebook": 148
+      },
+      "image_url": "https://i1.feedspot.com/5511821.jpg?t=1677135864"
+    },
+    {
+      "title": "Scanner School Blog",
+      "feed_url": "https://www.scannerschool.com/blog/feed/",
+      "website_url": "https://www.scannerschool.com/blog/",
+      "description": "Growing up, my earliest memories include watching the red lights dance on my grandparent's old Bearcat 101 in the kitchen. The sounds of police and fire tones would make their way into the living room as we played on the floor.",
+      "followers": {
+        "facebook": 10500,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5511824.jpg?t=1677135652"
+    },
+    {
+      "title": "Scan My Photos Blog",
+      "feed_url": "https://www.scanmyphotos.com/blog/feed",
+      "website_url": "https://www.scanmyphotos.com/blog/",
+      "description": "Scan My Photos is the industry expert in scanning physical media and converting it into a digital form.ScanMyPhotos.com began in 1990 as a boutique retail photo center in Irvine, California. Originally named 30 Minute Photos Etc., we offered fast and affordable photo processing for local customers. Read more about the center and our past work in our blog.",
+      "followers": {
+        "facebook": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4630034.jpg?t=1677135689"
+    },
+    {
+      "title": "IScanner Blog",
+      "feed_url": "https://iscanner.com/blog/feed/",
+      "website_url": "https://iscanner.com/blog/",
+      "description": "Welcome to iScanner blog! If you are interested in AI technologies for scanning, paper-free workflow, and the future of digital documents - you're in the right place.",
+      "followers": {
+        "facebook": 70200,
+        "twitter": 69,
+        "instagram": 183500
+      },
+      "image_url": "https://i1.feedspot.com/5511823.jpg?t=1677135818"
+    },
+    {
+      "title": "Scanbot SDK Blog",
+      "feed_url": "https://scanbot.io/feed/",
+      "website_url": "https://scanbot.io/blog/",
+      "description": "Industry trends, use cases, and developer tutorials find everything you need to know about the Scanbot SDK & mobile data capture. Top News Smartphone-based workflows for various industries. Stay up-to-date with the latest trends, product updates, and releases.",
+      "followers": {
+        "twitter": 224
+      },
+      "image_url": "https://i1.feedspot.com/5511822.jpg?t=1677135604"
+    },
+    {
+      "title": "Joescan Blog",
+      "feed_url": "https://joescan.com/feed/",
+      "website_url": "https://joescan.com/blog/",
+      "description": "JoeScan develops 3-D laser scanner technology used in sawmills and other industries where there is a need for accurate size, shape, and orientation measurements. Read all the latest news and hottest tips in our blog. You'll find valuable sawmill scanning education resources, as well as upcoming events and contests from JoeScan.",
+      "followers": {
+        "facebook": 216,
+        "twitter": 189
+      },
+      "image_url": "https://i1.feedspot.com/5511820.jpg?t=1677135709"
+    },
+    {
+      "title": "The Scanner Guys Blog",
+      "feed_url": "https://thescannerguysshow.com/feed/",
+      "website_url": "https://thescannerguysshow.com/blog/",
+      "description": "The Scanner Guys started on Facebook by going 'live' often at random times. In 2018 when the Uniden Bearcat SDS100 was first introduced, the need for a regularly scheduled program grew. This led to the birth of 'The Scanner Guys' live YouTube show. Since then,The Scanner Guys have nurtured a community for scanner enthusiasts around the world.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 419
+      },
+      "image_url": "https://i1.feedspot.com/5511826.jpg?t=1677135633"
+    },
+    {
+      "title": "Scanner Master Blog",
+      "feed_url": "https://www.scannermasterblog.com/feed/",
+      "website_url": "https://www.scannermasterblog.com/",
+      "description": "The Nation's Oldest and Largest Scanner Only Dealer",
+      "followers": {
+        "facebook": 13100,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5511825.jpg?t=1677135628"
+    }
+  ]
+}

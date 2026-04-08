@@ -1,0 +1,17 @@
+{
+  "category": "Turkey Movie",
+  "source_url": "https://rss.feedspot.com/turkey_movie_rss_feeds",
+  "feeds": [
+    {
+      "title": "New Turkish Films",
+      "feed_url": "https://newturkishfilms.com/feed/",
+      "website_url": "https://newturkishfilms.com/",
+      "description": "The New Turkish Film Program supports both established and emerging directors and producers, providing information and guidance to facilitate Turkish filmmakers' access to international events, showcases and opportunities.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/5349427.jpg?t=1638472352"
+    }
+  ]
+}

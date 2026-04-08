@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>Crypto &amp; News RSS Feeds</title>
+    <dateCreated>2025-12-05T00:00:00Z</dateCreated>
+  </head>
+  <body>
+    <outline title="Crypto &amp; Finance" text="Crypto &amp; Finance">
+      <outline type="rss" text="The Defiant" xmlUrl="https://thedefiant.io/feed/" htmlUrl="https://thedefiant.io"/>
+      <outline type="rss" text="CoinDesk" xmlUrl="https://www.coindesk.com/arc/outboundfeeds/rss/?outputType=xml" htmlUrl="https://www.coindesk.com"/>
+      <outline type="rss" text="Cointelegraph" xmlUrl="https://cointelegraph.com/rss" htmlUrl="https://cointelegraph.com"/>
+      <outline type="rss" text="CryptoPotato" xmlUrl="https://cryptopotato.com/feed/" htmlUrl="https://cryptopotato.com"/>
+      <outline type="rss" text="CryptoSlate" xmlUrl="https://cryptoslate.com/feed/" htmlUrl="https://cryptoslate.com"/>
+      <outline type="rss" text="CryptoNews" xmlUrl="https://cryptonews.com/news/feed/" htmlUrl="https://cryptonews.com"/>
+      <outline type="rss" text="Smart Liquidity" xmlUrl="https://smartliquidity.info/feed/" htmlUrl="https://smartliquidity.info"/>
+      <outline type="rss" text="Benjamin Ion - New in ETH2" xmlUrl="https://benjaminion.xyz/newineth2/rss_feed.xml" htmlUrl="https://benjaminion.xyz"/>
+    </outline>
+    <outline title="General Finance / News" text="General Finance &amp; News">
+      <outline type="rss" text="Yahoo Finance News" xmlUrl="https://finance.yahoo.com/news/rssindex" htmlUrl="https://finance.yahoo.com"/>
+      <outline type="rss" text="CNBC News" xmlUrl="https://www.cnbc.com/id/10000664/device/rss/rss.html" htmlUrl="https://www.cnbc.com"/>
+      <outline type="rss" text="Time – NextAdvisor" xmlUrl="https://time.com/nextadvisor/feed/" htmlUrl="https://time.com"/>
+    </outline>
+  </body>
+</opml>

@@ -1,0 +1,83 @@
+{
+  "category": "Australian Cat",
+  "source_url": "https://rss.feedspot.com/australian_cat_rss_feeds",
+  "feeds": [
+    {
+      "title": "Australian Cat Lover",
+      "feed_url": "https://www.australiancatlover.com/feeds/posts/default",
+      "website_url": "https://www.australiancatlover.com/",
+      "description": "Australian Cat Lover promotes responsible cat ownership and covers everything cat, including health, nutrition, and behavior advice, latest products and services, cat rescue stories, gift guides, cat lovers book club, and competitions.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 1800,
+        "instagram": 8700
+      },
+      "image_url": "https://i1.feedspot.com/5353497.jpg?t=1639556859"
+    },
+    {
+      "title": "Mad Paws \u00bb Cats",
+      "feed_url": "https://www.madpaws.com.au/blog/category/training-tips/cat-training-tips/feed/",
+      "website_url": "https://www.madpaws.com.au/blog/category/training-tips/cat-training-tips/",
+      "description": "Tips on Cats health, training & nutrition. Mad Paws is an online Pet Sitting Community in Australia, where Pet Owners can find trusted Pet Sitters near their homes.",
+      "followers": {
+        "facebook": 55500,
+        "twitter": 823,
+        "instagram": 30100
+      },
+      "image_url": "https://i1.feedspot.com/5353499.jpg?t=1639556790"
+    },
+    {
+      "title": "Walkerville Vet",
+      "feed_url": "https://www.walkervillevet.com.au/blog/category/cats/feed/",
+      "website_url": "https://www.walkervillevet.com.au/blog/category/cats/",
+      "description": "Andrew Spanner is an Adelaide vet and blogger providing health care to cats, dogs, ferrets, rabbits, birds",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 69
+      },
+      "image_url": "https://i1.feedspot.com/4913184.jpg?t=1620307509"
+    },
+    {
+      "title": "Cat Groomer",
+      "feed_url": "https://www.groomzy.com.au/blog-feed.xml",
+      "website_url": "https://www.groomzy.com.au/blog-1",
+      "description": "With my blogs you can discover some simple grooming activities they can reduce your cat's fur from your furnitures and clothes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5042009.jpg"
+    },
+    {
+      "title": "Cat Harness Australia Blog",
+      "feed_url": "https://catharnessaustralia.com.au/blogs/news.atom",
+      "website_url": "https://catharnessaustralia.com.au/blogs/news",
+      "description": "Blog about keeping your cat healthy and happy. Cat Harness Australia offers highly recommended products for your cat adventures, such as cat essentials, accessories, and cat treats.",
+      "followers": {
+        "facebook": 4600,
+        "instagram": 8600
+      },
+      "image_url": "https://i1.feedspot.com/5353495.jpg?t=1639555570"
+    },
+    {
+      "title": "Van Cat Meow",
+      "feed_url": "https://www.vancatmeow.com/feed/",
+      "website_url": "https://www.vancatmeow.com/",
+      "description": "This is the story of a rescue cat who travelled Australia in a campervan and the human that made it possible.",
+      "followers": {
+        "facebook": 41500,
+        "twitter": 337,
+        "instagram": 93500
+      },
+      "image_url": "https://i1.feedspot.com/4822130.jpg?t=1606486578"
+    },
+    {
+      "title": "Catnets Blog",
+      "feed_url": "https://catnets.com.au/blogs/cat-demy.atom",
+      "website_url": "https://catnets.com.au/blogs/cat-demy",
+      "description": "Covers a wide range of topics related to cats. Including cat behavior, cat safety, cat happiness, and cat enclosures to keep your cat happy and safe. Catnets.com.au is Australia's leading supplier of cat enclosure netting and related accessories.",
+      "followers": {
+        "facebook": 48000,
+        "instagram": 9200
+      },
+      "image_url": "https://i1.feedspot.com/5353496.jpg?t=1639553780"
+    }
+  ]
+}

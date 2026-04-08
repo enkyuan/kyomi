@@ -1,0 +1,49 @@
+{
+  "category": "Chow Chow",
+  "source_url": "https://rss.feedspot.com/chow_chow_rss_feeds",
+  "feeds": [
+    {
+      "title": "Chow Paws Dog Treats Blog",
+      "feed_url": "https://chowpawsdogtreats.co.uk/blogs/blog.atom",
+      "website_url": "https://chowpawsdogtreats.co.uk/blogs/blog",
+      "description": "This blog is focused on providing information about dog treats and health tips for Chow Chows. The Chow Paws brand produces homemade, all-natural dog treats that are specially made for the Chow Chow breed. The blog includes articles on dog nutrition, recipes, and training tips to help owners take better care of their pets.",
+      "followers": {
+        "facebook": 296,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5550110.jpg?t=1682419653"
+    },
+    {
+      "title": "ChowTales",
+      "feed_url": "https://chowtales.com/feed/",
+      "website_url": "https://chowtales.com/",
+      "description": "Get your daily dose of cute with ChowTales, a blog dedicated to all things Chow Chow! From heartwarming stories to adorable photos, ChowTales showcases the unique personality and beauty of this beloved breed. Stay up-to-date on Chow Chow events, news, and lifestyle tips, and connect with other Chow Chow enthusiasts around the world.",
+      "followers": {
+        "facebook": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5550109.jpg?t=1682419470"
+    },
+    {
+      "title": "ShowSight \u00bb Chow Chow",
+      "feed_url": "https://showsightmagazine.com/dog-breeds/chow-chow/feed/",
+      "website_url": "https://showsightmagazine.com/dog-breeds/chow-chow/",
+      "description": "Chow Chow lovers, this one's for you! ShowSight is a comprehensive resource for breed information, including health, grooming, training, and showing tips. With expert insights and advice, as well as profiles of top Chow Chow breeders and handlers, ShowSight is a must-read for anyone interested in this majestic breed.",
+      "followers": {
+        "facebook": 90600,
+        "twitter": 783,
+        "instagram": 17800
+      },
+      "image_url": "https://i1.feedspot.com/5550111.jpg?t=1682419513"
+    },
+    {
+      "title": "Chow Chow Community Blog",
+      "feed_url": "https://chowchowcommunity.com/feed/",
+      "website_url": "https://chowchowcommunity.com/our-blog/",
+      "description": "Join the Chow Chow Community and connect with other Chow Chow enthusiasts around the world! This blog offers a forum for discussion, as well as tips and advice for owning and caring for a Chow Chow. From training and nutrition to breed-specific health concerns, the Chow Chow Community Blog has everything you need to know about this beloved breed.",
+      "followers": {
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5550113.jpg?t=1682419715"
+    }
+  ]
+}

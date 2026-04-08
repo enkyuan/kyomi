@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<opml version="2.0">
+  <head>
+    <title>Frank McPherson - Blogroll</title>
+  </head>
+  <body>
+    <outline type="rss" text="Andy Sylvester's Web" xmlUrl="https://andysylvester.com/feed/" htmlUrl="https://andysylvester.com/" category="Recommendations"/>
+    <outline type="rss" text="Baty.net" xmlUrl="https://www.baty.net/index.xml" htmlUrl="https://baty.net/posts" category="Recommendations"/>
+    <outline type="rss" text="Matt Mullenweg" xmlUrl="https://ma.tt/feed/" htmlUrl="https://ma.tt/" category="Recommendations"/>
+    <outline type="rss" text="Julia Evans" xmlUrl="https://jvns.ca/atom.xml" htmlUrl="http://jvns.ca/" category="Recommendations"/>
+    <outline type="rss" text="Freedom to Tinker" xmlUrl="https://freedom-to-tinker.com/feed/" htmlUrl="https://freedom-to-tinker.com/" category="Recommendations"/>
+    <outline type="rss" text="Chris Aldrich" xmlUrl="https://boffosocko.com/feed/" htmlUrl="https://boffosocko.com/" category="Recommendations"/>
+    <outline type="rss" text="BuzzMachine" xmlUrl="https://buzzmachine.com/feed/" htmlUrl="https://buzzmachine.com/" category="Recommendations"/>
+    <outline type="rss" text="Scott's Weblog" xmlUrl="http://feeds.scottlowe.org/slowe/content/feed/" htmlUrl="https://blog.scottlowe.org/" category="Recommendations"/>
+    <outline type="rss" text="Stonekettle Station" xmlUrl="https://www.stonekettle.com/feeds/posts/default" htmlUrl="https://www.stonekettle.com/" category="Recommendations"/>
+    <outline type="rss" text="On my Om" xmlUrl="http://om.co/feed/" htmlUrl="https://om.co/" category="Recommendations"/>
+    <outline type="rss" text="Doc Searls Weblog" xmlUrl="https://blogs.harvard.edu/doc/feed/" htmlUrl="https://doc.searls.com/" category="Recommendations"/>
+    <outline type="rss" text="Jeff Geerling's Blog" xmlUrl="https://www.jeffgeerling.com/blog.xml" htmlUrl="https://www.jeffgeerling.com/" category="Recommendations"/>
+    <outline type="rss" text="Bicycle For Your Mind" xmlUrl="https://bicycleforyourmind.com/feed.rss" htmlUrl="https://bicycleforyourmind.com" category="Recommendations"/>
+    <outline type="rss" text="Penelope Trunk Careers" xmlUrl="http://feeds.feedburner.com/BrazenCareerist" htmlUrl="https://blog.penelopetrunk.com/" category="Recommendations"/>
+    <outline type="rss" text="Crooked Timber" xmlUrl="https://crookedtimber.org/feed/" htmlUrl="https://crookedtimber.org/" category="Recommendations"/>
+    <outline type="rss" text="Tipsy Teetotaler &#x646;" xmlUrl="https://intellectualoid.com/feed/" htmlUrl="https://intellectualoid.com/" category="Recommendations"/>
+    <outline type="rss" text="Tao of Mac" xmlUrl="https://taoofmac.com/feed" htmlUrl="https://taoofmac.com/" category="Recommendations"/>
+    <outline type="rss" text="Memex 1.1" xmlUrl="http://memex.naughtons.org/feed" htmlUrl="https://memex.naughtons.org/" category="Recommendations"/>
+    <outline type="rss" text="Routine Revelations" xmlUrl="https://frankmcpherson.blog/feed.xml" htmlUrl="https://frankmcpherson.blog/" category="Recommendations"/>
+    <outline type="rss" text="Nicholas Bate" xmlUrl="https://feeds.feedburner.com/NicholasBate" htmlUrl="https://blog.strategicedge.co.uk/" category="Recommendations"/>
+    <outline type="rss" text="Kimberly Hirsh" xmlUrl="http://kimberlyhirsh.com/feed/" htmlUrl="https://kimberlyhirsh.com/" category="Recommendations"/>
+    <outline type="rss" text="all that's past is prologue..." xmlUrl="https://prologuist.blogspot.com/rss.xml" htmlUrl="https://prologuist.blogspot.com/" category="Recommendations"/>
+    <outline type="rss" text="Pluralistic: Daily links from Cory Doctorow" xmlUrl="https://pluralistic.net/feed/" htmlUrl="https://pluralistic.net/" category="Recommendations"/>
+    <outline type="rss" text="Scripting News" xmlUrl="http://scripting.com/rss.xml" htmlUrl="http://scripting.com/" category="Recommendations"/>
+    <outline type="rss" text="Mitch W" xmlUrl="https://mitchw.blog/feed.xml" htmlUrl="https://mitchw.blog/" category="Recommendations"/>
+    <outline type="rss" text="Manton Reece" xmlUrl="http://www.manton.org/feed" htmlUrl="https://www.manton.org/" category="Recommendations"/>
+    <outline type="rss" text="kottke.org" xmlUrl="http://feeds.kottke.org/main" htmlUrl="http://kottke.org/" category="Recommendations"/>
+    <outline type="rss" text="Kevin Drum" xmlUrl="https://jabberwocking.com/feed/" htmlUrl="https://jabberwocking.com/" category="Recommendations"/>
+  </body>
+</opml>

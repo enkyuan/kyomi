@@ -1,0 +1,41 @@
+{
+  "category": "Premiere Pro",
+  "source_url": "https://rss.feedspot.com/premiere_pro_rss_feeds",
+  "feeds": [
+    {
+      "title": "Premiere Gal Blog",
+      "feed_url": "https://premieregal.com/blog?format=RSS",
+      "website_url": "https://premieregal.com/blog",
+      "description": "Premiere Gal blog creates free video editing and production tutorials on Adobe Premiere Pro, third-party plugins, and other Creative Cloud products. The blog is focused on providing information about serval software including premiere pro.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 6500,
+        "instagram": 33700
+      },
+      "image_url": "https://i1.feedspot.com/4621270.jpg?t=1616050260"
+    },
+    {
+      "title": "The Beat Blog \u00bb Premiere Pro",
+      "feed_url": "https://www.premiumbeat.com/blog/category/premiere-2/feed/",
+      "website_url": "https://www.premiumbeat.com/blog/category/premiere-2/",
+      "description": "Get the latest news and updates from 2020's Adobe Max conference, including quick export for Premiere Pro and Roto Brush 2 for After Effects. PremiumBeat by Shutterstock is a curated royalty free music website that provides high-quality royalty free music tracks and sound effects for new and traditional media projects.",
+      "followers": {
+        "facebook": 155400,
+        "twitter": 15100,
+        "instagram": 16500
+      },
+      "image_url": "https://i1.feedspot.com/5076949.jpg?t=1574855841"
+    },
+    {
+      "title": "Frame.io Insider Blog \u00bb Premiere Pro",
+      "feed_url": "https://blog.frame.io/category/post-production/nles/premiere/feed/",
+      "website_url": "https://blog.frame.io/category/post-production/nles/premiere/",
+      "description": "Frame.io Insider Blog provides tips, tutorials, and insights related to video editing with Adobe Premiere Pro. Frame.io is a cloud-based video review and collaboration platform, and the blog seems to be an extension of its main product.The main blog features articles that cover a range of topics related to Premiere Pro, including how-to guides, software updates, video editing techniques, workflow optimization, and industry news.",
+      "followers": {
+        "facebook": 32600,
+        "twitter": 13700
+      },
+      "image_url": "https://i1.feedspot.com/5539032.jpg?t=1681217183"
+    }
+  ]
+}

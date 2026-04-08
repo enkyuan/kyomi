@@ -1,0 +1,50 @@
+{
+  "category": "IBM AIX",
+  "source_url": "https://rss.feedspot.com/ibm_aix_rss_feeds",
+  "feeds": [
+    {
+      "title": "L3C Blog",
+      "feed_url": "https://l3c.cloud/feed/",
+      "website_url": "https://l3c.cloud/blog-page/",
+      "description": "L3C specialises in Cloud Migration services, especially for legacy AIX/Unix and IBM i based environments whether to our own dedicated Cloud environment or to the major public clouds such as Skytap on Azure or IBM PowerVS. L3C Blog is a go-to destination for AIX professionals seeking deep insights into IBM AIX, Linux, and Power Systems. The blog offers a blend of articles about L3C initiatives, upcoming events, disruptive technological news, and personal insights.",
+      "followers": {
+        "twitter": 916
+      },
+      "image_url": "https://i1.feedspot.com/5603201.jpg?t=1687257832"
+    },
+    {
+      "title": "AIX for System Administrators",
+      "feed_url": "https://aix4admins.blogspot.com/feeds/posts/default",
+      "website_url": "https://aix4admins.blogspot.com/",
+      "description": "AIX for System Administrators is a dedicated blog created for system administrators working with IBM AIX, an enterprise operating system. The blog offers a wide range of resources, including tutorials, how-to guides, troubleshooting tips, and best practices specifically tailored for AIX administrators. Whether you're new to AIX or an experienced administrator, this blog provides valuable insights and knowledge to help you effectively manage and optimize your AIX environments.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1911418.jpg?t=1687863464"
+    },
+    {
+      "title": "Kristian's Blog",
+      "feed_url": "https://blog.kristijan.org/feed.xml",
+      "website_url": "https://blog.kristijan.org/",
+      "description": "Kristian's Blog is a blog about AIX, POWER, Puppet, and Automation. It is written by Kristian Milos, who is a systems engineer with over 15 years of experience in the IT industry. The blog covers a wide range of topics, including AIX administration, scripting, performance tuning, and virtualization.",
+      "followers": {
+        "twitter": 389
+      },
+      "image_url": "https://i1.feedspot.com/5603199.jpg?t=1687257819"
+    },
+    {
+      "title": "Virtually Fun \u00bb AIX",
+      "feed_url": "https://virtuallyfun.com/category/aix/feed/",
+      "website_url": "https://virtuallyfun.com/category/aix/",
+      "description": "The blog is a place to share some of the experiences in the fun world of emulation & virtualization. I have been using emulation software personally since the Commodore Released a PC emulator that could run on the Amiga 500. Virtually Fun's AIX section is dedicated to exploring the world of AIX and its virtualization capabilities. The blog offers insights, tutorials, and experiences related to running AIX in virtualized environments.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5603200.jpg?t=1687258280"
+    },
+    {
+      "title": "IBM-AIX Blog",
+      "feed_url": "http://howtoaix.blogspot.com/feeds/posts/default",
+      "website_url": "http://howtoaix.blogspot.com/",
+      "description": "The IBM-AIX Blog is an official blog by IBM dedicated to sharing updates, announcements, and technical information about IBM AIX. The blog helps readers to stay informed about the latest advancements in AIX, gain insights from IBM experts, and discover resources to help them maximize the value of AIX in their organizations.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5605092.jpg?t=1687425676"
+    }
+  ]
+}

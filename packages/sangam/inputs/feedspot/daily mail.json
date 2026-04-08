@@ -1,0 +1,183 @@
+{
+  "category": "Daily Mail",
+  "source_url": "https://rss.feedspot.com/dailymail_rss_feeds",
+  "feeds": [
+    {
+      "title": "Daily Mail Online \u00bb Sports",
+      "feed_url": "https://www.dailymail.co.uk/sport/index.rss",
+      "website_url": "https://www.dailymail.co.uk/sport/index.html/",
+      "description": "Explore MailOnline's latest sport news including football, F1, rugby, NFL and more!",
+      "followers": {
+        "facebook": 23200000,
+        "twitter": 797200
+      },
+      "image_url": "https://i1.feedspot.com/90847.jpg?t=1748428353"
+    },
+    {
+      "title": "Daily Mail Online \u00bb Health",
+      "feed_url": "https://www.dailymail.co.uk/health/index.rss",
+      "website_url": "https://www.dailymail.co.uk/health/index.html",
+      "description": "Check out the latest health news, articles, advice, and trends for you and your family on topics like nutrition, weight loss, popular diets, and exercise.",
+      "followers": {
+        "facebook": 23200000,
+        "twitter": 797200
+      },
+      "image_url": "https://i1.feedspot.com/455733.jpg"
+    },
+    {
+      "title": "Daily Mail UK \u00bb Science",
+      "feed_url": "https://www.dailymail.co.uk/sciencetech/index.rss",
+      "website_url": "https://www.dailymail.co.uk/sciencetech/index.html",
+      "description": "Stay up-to-date with the latest science and technology news from Daily Mail including scientific discoveries, pictures, new technology, and more.",
+      "followers": {
+        "facebook": 23200000,
+        "twitter": 797200
+      },
+      "image_url": "https://i1.feedspot.com/153125.jpg?t=1753686708"
+    },
+    {
+      "title": "Daily Mail Online \u00bb Femail",
+      "feed_url": "https://www.dailymail.co.uk/femail/index.rss",
+      "website_url": "https://www.dailymail.co.uk/femail/index.html",
+      "description": "Explore celebrity trends and tips on fashion, style, beauty, diets, health, relationships and more. Never miss a beat with MailOnline's latest news for women.",
+      "followers": {
+        "facebook": 23200000,
+        "twitter": 797200
+      },
+      "image_url": "https://i1.feedspot.com/688993.jpg"
+    },
+    {
+      "title": "Daily Mail Online \u00bb Money",
+      "feed_url": "https://www.dailymail.co.uk/money/index.rss",
+      "website_url": "https://www.dailymail.co.uk/money/index.html",
+      "description": "This is Money is your complete guide to personal finance and investing with news, predictions, advice, guides, and opinions from the financial website of the year. Here you can keep up with financial predictions, advice, and tips. The aim of This is Money is to win justice for its readers and arm them with the best possible financial advice and information, empowering them to make the right choices.",
+      "followers": {
+        "facebook": 16200,
+        "twitter": 62400
+      },
+      "image_url": "https://i1.feedspot.com/1038430.jpg?t=1761822622"
+    },
+    {
+      "title": "Daily Mail Online \u00bb Travel",
+      "feed_url": "https://www.dailymail.co.uk/travel/index.rss",
+      "website_url": "https://www.dailymail.co.uk/travel/index.html",
+      "description": "Get the most out of your holidays with Daily Mail. Learn about top Europe destinations and everything you need to know about travelling Europe.",
+      "followers": {
+        "facebook": 23200000,
+        "twitter": 797200
+      },
+      "image_url": "https://i1.feedspot.com/1038430.jpg"
+    },
+    {
+      "title": "Daily Mail Online \u00bb You mag",
+      "feed_url": "https://www.dailymail.co.uk/home/you/index.rss",
+      "website_url": "https://www.dailymail.co.uk/home/you/index.html",
+      "description": "Check out the latest fashion, beauty, food news and celebrity interviews from Mail on Sunday's You Magazine.",
+      "followers": {
+        "facebook": 49200,
+        "twitter": 41200,
+        "instagram": 138200
+      },
+      "image_url": "https://i1.feedspot.com/1038430.jpg?t=1761822569"
+    },
+    {
+      "title": "Daily Mail Online \u00bb Books",
+      "feed_url": "https://www.dailymail.co.uk/home/books/index.rss",
+      "website_url": "https://www.dailymail.co.uk/home/books/index.html",
+      "description": "Get Book reviews, news and information from Daily Mail Online.",
+      "followers": {
+        "facebook": 23200000,
+        "twitter": 797200
+      },
+      "image_url": "https://i1.feedspot.com/236249.jpg?t=1523692675"
+    },
+    {
+      "title": "Daily Mail Online \u00bb Property",
+      "feed_url": "https://www.dailymail.co.uk/property/index.rss",
+      "website_url": "https://www.dailymail.co.uk/property/index.html",
+      "description": "Check out the latest property news, stories and advice from around the world from the Daily Mail and Mail on Sunday.",
+      "followers": {
+        "facebook": 23200000,
+        "twitter": 797200
+      },
+      "image_url": "https://i1.feedspot.com/2150044.jpg"
+    },
+    {
+      "title": "Daily Mail Online \u00bb Latest Stories",
+      "feed_url": "https://www.dailymail.co.uk/articles.rss",
+      "website_url": "https://www.dailymail.co.uk/home/latest/index.html",
+      "description": "Check out the latest breaking news headlines on sports, entertainment, celebrities, health, science, world news and more from MailOnline.",
+      "followers": {
+        "facebook": 23200000,
+        "twitter": 797200
+      },
+      "image_url": "https://i1.feedspot.com/3951415.jpg?t=1523700272"
+    },
+    {
+      "title": "Daily Mail Online \u00bb News",
+      "feed_url": "https://www.dailymail.co.uk/news/index.rss",
+      "website_url": "https://www.dailymail.co.uk/news/index.html",
+      "description": "All the latest breaking UK and world news with in-depth comment and analysis, pictures and videos from MailOnline and the Daily Mail.",
+      "followers": {
+        "facebook": 23200000,
+        "twitter": 797200
+      },
+      "image_url": "https://i1.feedspot.com/298252.jpg?t=1523700398"
+    },
+    {
+      "title": "Daily Mail Online \u00bb U.S.",
+      "feed_url": "https://www.dailymail.co.uk/ushome/index.rss",
+      "website_url": "https://www.dailymail.co.uk/ushome/index.html",
+      "description": "Get latest U.S. news from Daily Mail Online.",
+      "followers": {
+        "facebook": 23200000
+      },
+      "image_url": "https://i1.feedspot.com/153082.jpg?t=1523690228"
+    },
+    {
+      "title": "Daily Mail Online \u00bb Australia",
+      "feed_url": "https://www.dailymail.co.uk/auhome/index.rss",
+      "website_url": "https://www.dailymail.co.uk/auhome/index.html",
+      "description": "Get breaking news from Sydney, Melbourne, Perth and Brisbane with celebrity photos, viral videos, and popular TV series including The Bachelor from MailOnline.",
+      "followers": {
+        "facebook": 23200000,
+        "twitter": 797200
+      },
+      "image_url": "https://i1.feedspot.com/3942587.jpg"
+    },
+    {
+      "title": "Daily Mail Online \u00bb India",
+      "feed_url": "https://www.dailymail.co.uk/indiahome/index.rss",
+      "website_url": "https://www.dailymail.co.uk/home/index.html",
+      "description": "Get latest news and information from India on Daily Mail Online.",
+      "followers": {
+        "facebook": 23200000,
+        "twitter": 797200,
+        "instagram": 4500000
+      },
+      "image_url": "https://i1.feedspot.com/3969176.jpg"
+    },
+    {
+      "title": "Daily Mail Online \u00bb Latest Videos",
+      "feed_url": "https://www.dailymail.co.uk/video/videos.rss",
+      "website_url": "https://www.dailymail.co.uk/video/index.html",
+      "description": "Check out the latest breaking news videos and viral videos covering showbiz, sport, fashion, technology, and more from the Daily Mail and Mail on Sunday.",
+      "followers": {
+        "facebook": 23200000,
+        "twitter": 797200
+      },
+      "image_url": "https://i1.feedspot.com/3962061.jpg"
+    },
+    {
+      "title": "Daily Mail Online \u00bb Event Mag",
+      "feed_url": "https://www.dailymail.co.uk/home/event/index.rss",
+      "website_url": "https://www.dailymail.co.uk/home/event/index.html",
+      "description": "Check out news and information on Event Mag from Daily Mail Online.",
+      "followers": {
+        "facebook": 23200000,
+        "twitter": 797200
+      },
+      "image_url": "https://i1.feedspot.com/4727017.jpg"
+    }
+  ]
+}

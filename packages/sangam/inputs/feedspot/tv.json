@@ -1,0 +1,742 @@
+{
+  "category": "TV",
+  "source_url": "https://rss.feedspot.com/tv_rss_feeds",
+  "feeds": [
+    {
+      "title": "TVLine",
+      "feed_url": "https://tvline.com/feed/",
+      "website_url": "https://tvline.com/",
+      "description": "Since its launch in January 2011, TVLine has had a singular, unwavering focus: to deliver a concentrated stream of breaking TV news, original previews and insightful recaps/reviews. TVLine is here to help TV enthusiasts cut through the clutter and be a household name in trusted content, so that you can easily and efficiently find the news and updates you crave - from breaking casting scoops to exclusive spoilers and deep-dives into your favorite shows.",
+      "followers": {
+        "facebook": 395500,
+        "twitter": 187700
+      },
+      "image_url": "https://i1.feedspot.com/3950.jpg?t=1618237830"
+    },
+    {
+      "title": "Spoiler TV",
+      "feed_url": "https://www.spoilertv.com/feeds/posts/default",
+      "website_url": "https://www.spoilertv.com/",
+      "description": "The Largest Collection of TV spoilers and show information for the most popular shows on TV.",
+      "followers": {
+        "facebook": 43200,
+        "twitter": 84200
+      },
+      "image_url": "https://i1.feedspot.com/565782.jpg?t=1618237844"
+    },
+    {
+      "title": "Reality Steve",
+      "feed_url": "https://realitysteve.com/feed/atom/",
+      "website_url": "https://realitysteve.com/",
+      "description": "My sarcastic, slanted, sophomoric, and skewed view on the world of reality television. Reality television featuring commentary from Reality Steve on Bachelor insights and spoilers.",
+      "followers": {
+        "facebook": 84600,
+        "twitter": 310700,
+        "instagram": 259600
+      },
+      "image_url": "https://i1.feedspot.com/4676349.jpg?t=1618237847"
+    },
+    {
+      "title": "TV Series Finale",
+      "feed_url": "https://tvseriesfinale.com/feed/",
+      "website_url": "https://tvseriesfinale.com/",
+      "description": "Lead source for cancelled and renewed TV show news ratings since 2006. Referenced by NY Times, LA Times, USA Today, ABC, CBS, FOX, NBC, BBC, PBS, TV Guide, EW, and many other respected outlets.",
+      "followers": {
+        "facebook": 20900,
+        "twitter": 7500
+      },
+      "image_url": "https://i1.feedspot.com/433517.jpg?t=1618237859"
+    },
+    {
+      "title": "TV Insider",
+      "feed_url": "https://www.tvinsider.com/feed/",
+      "website_url": "https://www.tvinsider.com/",
+      "description": "TV Insider is a celebration of the very best in television. We're a guide to what's worth watching an all-access pass into your favorite shows.",
+      "followers": {
+        "facebook": 213900,
+        "twitter": 140000,
+        "instagram": 24700
+      },
+      "image_url": "https://i1.feedspot.com/4675760.jpg?t=1649851908"
+    },
+    {
+      "title": "Not My 1st Day",
+      "feed_url": "https://notmyfirstday.com/feed",
+      "website_url": "https://notmyfirstday.com/",
+      "description": "Articles focused on Friends, The Office & The Young & the Restless.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5364309.jpg?t=1642671686"
+    },
+    {
+      "title": "TV Guide Magazine",
+      "feed_url": "https://www.tvguidemagazine.com/feed/",
+      "website_url": "https://www.tvguidemagazine.com/",
+      "description": "TV Guide Magazine is the official guide to what's worth watching on television. Get news, reviews, and inside scoop on all your favorite shows and stars.",
+      "followers": {
+        "twitter": 19900,
+        "instagram": 72400
+      },
+      "image_url": "https://i1.feedspot.com/5390170.jpg?t=1649852389"
+    },
+    {
+      "title": "Decider",
+      "feed_url": "https://decider.com/feed/",
+      "website_url": "https://decider.com/",
+      "description": "Decider helps you find what to watch. Discover the best movies and shows to stream on Netflix, Disney+, Hulu, Amazon Prime Video, HBO Max, and more. Decider is the first entertainment and pop culture destination site created to help today's on-demand generation discover the best streaming content through a unique blend of pop culture expertise and hilarious insight.",
+      "followers": {
+        "facebook": 121200,
+        "twitter": 47900,
+        "instagram": 95700
+      },
+      "image_url": "https://i1.feedspot.com/4122872.jpg?t=1671013734"
+    },
+    {
+      "title": "All About The Tea",
+      "feed_url": "https://allaboutthetea.com/feed/",
+      "website_url": "https://allaboutthetea.com/",
+      "description": "Follow All About the Tea for the latest and breaking in celebrity, and entertainment news with stories, photos, and videos from the hottest reality stars. All About the Tea is updated daily and we cover a wide range of shows: The Real Housewives franchise, Married to Medicine, Southern Charm, Dance Moms, Sister Wives, Vanderpump Rules, Shahs of Sunset, Teen Mom, Keeping Up with the Kardashians, Little Women series, Below Deck and much more.",
+      "followers": {
+        "facebook": 22600,
+        "twitter": 26300,
+        "instagram": 107900
+      },
+      "image_url": "https://i1.feedspot.com/4681185.jpg?t=1672291081"
+    },
+    {
+      "title": "Paul Levinson's Infinite Regress",
+      "feed_url": "https://paullevinson.blogspot.com/feeds/posts/default",
+      "website_url": "https://paullevinson.blogspot.com/",
+      "description": "Reviewing 12 Monkeys, 24, Big Little Lies, Bloodline, Bosch, Colony, Designated Survivor, Fauda, Game of Thrones, Homeland, House of Cards, Humans, Peaky Blinders, Outlander, Ray Donovan, Sense8, Stranger Things, The: Affair, Americans, Girlfriend Experience, Man in the High Castle, Missing, OA, Walking Dead; Timeless, Travelers, Twin Peaks, Vikings, Westworld movies, music, politics.",
+      "followers": {
+        "twitter": 20600,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/74002.jpg?t=1618238118"
+    },
+    {
+      "title": "Tellychakkar.com",
+      "feed_url": "https://www.tellychakkar.com/rss.xml",
+      "website_url": "https://www.tellychakkar.com/",
+      "description": "TV News, TV Gossip, Bollywood News, Bollywood Gossip, Celebrity, Celebrity Gossip, Celebs, TV Shows, Movies, Entertainment News.",
+      "followers": {
+        "facebook": 7200000,
+        "twitter": 243000
+      },
+      "image_url": "https://i1.feedspot.com/1477462.jpg?t=1618237864"
+    },
+    {
+      "title": "Tv Shows Ace",
+      "feed_url": "https://tvshowsace.com/feed/",
+      "website_url": "https://tvshowsace.com/",
+      "description": "TV Shows Ace will give you the best in television news and spoilers. Check us out for soaps, reality TV and more!",
+      "followers": {
+        "facebook": 15000,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4990525.jpg?t=1618237872"
+    },
+    {
+      "title": "TV Tonight",
+      "feed_url": "https://tvtonight.com.au/feed",
+      "website_url": "https://tvtonight.com.au/",
+      "description": "Australia's leading TV blog is the 'go to' site for industry and public alike, full of news, ratings, reviews & more.",
+      "followers": {
+        "twitter": 18800
+      },
+      "image_url": "https://i1.feedspot.com/642507.jpg"
+    },
+    {
+      "title": "TV Show Pilot",
+      "feed_url": "https://tvshowpilot.com/feed/",
+      "website_url": "https://tvshowpilot.com/",
+      "description": "On TVSHOWPILOT we bring you the latest in TV world, so you can find it easier and enjoy it better. On here you will find TV show news and reviews, first impressions on new series, fun posts about our favorite television shows and their characters and so much more. Sit back, relax and read up!",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 391,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4982366.jpg?t=1618238147"
+    },
+    {
+      "title": "Reality TV World",
+      "feed_url": "http://www.realitytvworld.com/index/backend.php",
+      "website_url": "https://www.realitytvworld.com/",
+      "description": "News, information, episode summaries, message boards, chat and games for unscripted television programs.",
+      "followers": {
+        "facebook": 34000,
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/357692.jpg?t=1618238130"
+    },
+    {
+      "title": "Tom and Lorenzo \u00bb Television",
+      "feed_url": "https://tomandlorenzo.com/category/television/feed/",
+      "website_url": "https://tomandlorenzo.com/category/television/",
+      "description": "Your place for more news, gossip and other gems that didn't make the blog cut from television. Tom and Lorenzo has been the fabulous, funny & opinionated place for red carpet, runway, celebrity, television, costume, and film commentary, for over 10 years.",
+      "followers": {
+        "facebook": 28700,
+        "twitter": 86200,
+        "instagram": 15600
+      },
+      "image_url": "https://i1.feedspot.com/5479440.jpg?t=1671013819"
+    },
+    {
+      "title": "TV with Thinus",
+      "feed_url": "https://feeds.feedburner.com/TvWithThinus",
+      "website_url": "https://teeveetee.blogspot.com/",
+      "description": "News & analysis on South African television. Thinus is an independent TV critic, writer and journalist in South Africa as well as a pop culture and media expert. He writes breaking news about TV for daily and weekly leading publications in the country and authors trend and analysis pieces about the TV business.In addition he writes regular weekly and monthly TV columns.",
+      "followers": {
+        "twitter": 13800
+      },
+      "image_url": "https://i1.feedspot.com/4675625.jpg?t=1637057731"
+    },
+    {
+      "title": "TV Is My Pacifier",
+      "feed_url": "https://tvismypacifier.com/feed/",
+      "website_url": "https://tvismypacifier.com/",
+      "description": "Bringing you weekly and daily TV schedules, as well as TV news, reviews, contests, and our honest opinions!",
+      "followers": {
+        "facebook": 372,
+        "twitter": 641
+      },
+      "image_url": "https://i1.feedspot.com/4455307.jpg?t=1618238110"
+    },
+    {
+      "title": "TVSource Magazine",
+      "feed_url": "https://tvsourcemagazine.com/feed/",
+      "website_url": "https://tvsourcemagazine.com/",
+      "description": "TVSource Magazine features breaking television news, reviews, inside scoop, celebrity interviews, and more in pop culture, entertainment, music and awards.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 15300
+      },
+      "image_url": "https://i1.feedspot.com/4676335.jpg?t=1618238123"
+    },
+    {
+      "title": "CST Onlinetv Blog",
+      "feed_url": "https://cstonline.net/category/blogs/feed/",
+      "website_url": "https://cstonline.net/category/blogs/",
+      "description": "We are a website devoted to TV studies in Europe and North America. Check out the latest news, updates, celebrity news, interviews and more!",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5479442.jpg?t=1671013704"
+    },
+    {
+      "title": "Reality Tea",
+      "feed_url": "https://www.realitytea.com/feed/",
+      "website_url": "https://www.realitytea.com/",
+      "description": "RealityTea provides devoted reality TV fans with their daily cup of news, gossip, photos, and episode recaps about all of your favorite reality TV shows, cast members, and more - with a unique touch of humor.",
+      "followers": {
+        "facebook": 76200,
+        "twitter": 58600
+      },
+      "image_url": "https://i1.feedspot.com/1547837.jpg?t=1643260598"
+    },
+    {
+      "title": "mjsbigblog",
+      "feed_url": "https://feeds.feedburner.com/mjsbigblog/hmcV",
+      "website_url": "https://www.mjsbigblog.com/",
+      "description": "News, Spoilers, Recaps, Results for American Idol, The Voice, SYTYCD, DWTS and More.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 11100
+      },
+      "image_url": "https://i1.feedspot.com/4675571.jpg?t=1618238133"
+    },
+    {
+      "title": "Comfort TV",
+      "feed_url": "https://comforttv.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://comforttv.blogspot.com/",
+      "description": "Some of you may know me from the books I've written about television, including What Were They Thinking? The 100 Dumbest Events in Television History, Obsessed With TV, and companion guides to Charlie's Angels (written with Jack Condon) and The Dukes of Hazzard. I've convinced myself that these achievements are sufficient qualification for the status of television historian, and as there's no official test required for this designation, I'll stick with it.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5082244.jpg?t=1618827886"
+    },
+    {
+      "title": "TV, eh?",
+      "feed_url": "https://www.tv-eh.com/feed/",
+      "website_url": "https://www.tv-eh.com/",
+      "description": "TV, eh? covers news, reviews and interviews about Canadian television shows, with the odd foray into the odd industry that produces them.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 10000,
+        "instagram": 643
+      },
+      "image_url": "https://i1.feedspot.com/804085.jpg?t=1618238150"
+    },
+    {
+      "title": "Reality Blurred",
+      "feed_url": "https://www.realityblurred.com/realitytv/feed/",
+      "website_url": "https://www.realityblurred.com/realitytv/",
+      "description": "Reality TV news, behind-the-scenes reporting, reality show reviews, and news analysis about reality shows and unscripted television. Andy Dehnart finds the real in reality television.",
+      "followers": {
+        "facebook": 8700,
+        "twitter": 14500
+      },
+      "image_url": "https://i1.feedspot.com/4673475.jpg?t=1671015817"
+    },
+    {
+      "title": "Rickey.org",
+      "feed_url": "https://www.rickey.org/index.xml",
+      "website_url": "https://www.rickey.org/",
+      "description": "Fastest on the Planet! TV, Music and Pop Culture news. Plus: The Voice, DWTS, American Idol, Survivor, SYTYCD, Big Brother, Reality TV. Dog lovers!",
+      "followers": {
+        "facebook": 18000,
+        "twitter": 9400,
+        "instagram": 99
+      },
+      "image_url": "https://i1.feedspot.com/4673569.jpg?t=1618239515"
+    },
+    {
+      "title": "MASSOV Media and Television",
+      "feed_url": "https://www.massov.tv/blog-feed.xml",
+      "website_url": "https://www.massov.tv/",
+      "description": "Keep up with articles from MASSOV Media and Television.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5215365.jpg?t=1605030194"
+    },
+    {
+      "title": "Reality Blurb",
+      "feed_url": "https://realityblurb.com/feed/",
+      "website_url": "https://realityblurb.com/",
+      "description": "Reality Blurb was created to bring readers the latest and up to date reality TV news, updates and exclusive interviews. We cover an array of reality shows as well as reality television stars. Reality Blurb is a trusted source when it comes to reality television pop culture, recaps, and breaking news that is sure to interest tv fans and spark water cooler conversations.",
+      "followers": {
+        "facebook": 46500,
+        "twitter": 7000,
+        "instagram": 214700
+      },
+      "image_url": "https://i1.feedspot.com/4769458.jpg?t=1618579334"
+    },
+    {
+      "title": "Just TV",
+      "feed_url": "https://justtv.wordpress.com/feed/",
+      "website_url": "https://justtv.wordpress.com/",
+      "description": "Jason Mittell is a Professor of Film & Media Culture and American Studies at Middlebury College and co-founded Middlebury's Digital Liberal Arts Initiative. His research interests include television history and criticism, media and cultural history, genre and narrative theory, digital humanities, videographic criticism, animation and children's media, videogames, digital media literacy & technological convergence.",
+      "followers": {
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/808632.jpg?t=1671013990"
+    },
+    {
+      "title": "IndieWire",
+      "feed_url": "https://www.indiewire.com/feed/",
+      "website_url": "https://www.indiewire.com/",
+      "description": "IndieWire is an online publication covering film, TV, and digital news, reviews, and interviews for passionate fans and industry insiders. The leading news, information, and networking site for independent-minded filmmakers, the industry, and moviegoers alike since 1996.",
+      "followers": {
+        "facebook": 771900,
+        "twitter": 808000
+      },
+      "image_url": "https://i1.feedspot.com/4667248.jpg?t=1617776291"
+    },
+    {
+      "title": "TV Fanatic Girl",
+      "feed_url": "https://tvfanatic.blog/feed/",
+      "website_url": "https://tvfanatic.blog/",
+      "description": "Obsessed with TV? Me too! Join the discussion today on your favorite TV shows!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8543381.jpg?t=1753105243"
+    },
+    {
+      "title": "It's About TV",
+      "feed_url": "https://www.itsabouttv.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.itsabouttv.com/",
+      "description": "A look at the relationship between classic television and American culture, concentrating on the 1950s through 1970s.",
+      "followers": {
+        "facebook": 290,
+        "twitter": 785
+      },
+      "image_url": "https://i1.feedspot.com/8543379.jpg?t=1753105240"
+    },
+    {
+      "title": "TV Blackbox",
+      "feed_url": "https://tvblackbox.com.au/feed/",
+      "website_url": "https://tvblackbox.com.au/",
+      "description": "The latest Australian TV news updated in real time. We bring you breaking updates on all things television, providing an unfiltered and unbiased analysis of events. TV Blackbox - Where people in the Industry get their news.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 15300,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5351864.jpg?t=1751259454"
+    },
+    {
+      "title": "TV Central",
+      "feed_url": "https://www.tvcentral.com.au/feed/",
+      "website_url": "https://www.tvcentral.com.au/",
+      "description": "Australia TV News! Bringing you the best and latest in TV news, podcasts, sports, ratings, streaming, and exclusives.",
+      "followers": {
+        "facebook": 181,
+        "twitter": 82,
+        "instagram": 109
+      },
+      "image_url": "https://i1.feedspot.com/8543383.jpg?t=1751259513"
+    },
+    {
+      "title": "Digital Spy \u00bb TV",
+      "feed_url": "https://www.digitalspy.com/rss/tv.xml",
+      "website_url": "https://www.digitalspy.com/tv/",
+      "description": "The latest TV, Netflix and Amazon and streaming entertainment news, recommendations, interviews and features from Digital Spy.",
+      "followers": {
+        "facebook": 666000,
+        "instagram": 76200
+      },
+      "image_url": "https://i1.feedspot.com/7892653.jpg?t=1743055093"
+    },
+    {
+      "title": "CST Online",
+      "feed_url": "https://cstonline.net/feed/",
+      "website_url": "https://cstonline.net/",
+      "description": "We are a blog devoted to international TV studies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8543384.jpg?t=1751260003"
+    },
+    {
+      "title": "brioux.tv",
+      "feed_url": "https://brioux.tv/feed/",
+      "website_url": "https://brioux.tv/",
+      "description": "Bill Brioux is one of the leading voices in the North American television scene.",
+      "followers": {
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/8543380.jpg?t=1753105242"
+    },
+    {
+      "title": "Remind Magazine \u00bb Classic TV",
+      "feed_url": "https://www.remindmagazine.com/category/classic-tv/feed/",
+      "website_url": "https://www.remindmagazine.com/category/classic-tv/",
+      "description": "Classic TV - Remind",
+      "followers": {
+        "facebook": 16600,
+        "twitter": 383
+      },
+      "image_url": "https://i1.feedspot.com/8543382.jpg?t=1753105246"
+    },
+    {
+      "title": "Channel Guide Magazine",
+      "feed_url": "https://www.channelguidemag.com/feed/",
+      "website_url": "https://www.channelguidemag.com/",
+      "description": "Know what's great on TV with Channel Guide Magazine! Inside this monthly TV magazine, you'll find TV listings, celebrity interviews & best TV bets.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4676339.jpg?t=1649852859"
+    },
+    {
+      "title": "Slant Magazine \u00bb TV",
+      "feed_url": "https://www.slantmagazine.com/category/tv/feed/",
+      "website_url": "https://www.slantmagazine.com/category/tv/",
+      "description": "Reviews of the latest television shows, as well as recaps and interviews with directors, actors, and other talent.",
+      "followers": {
+        "facebook": 19400,
+        "twitter": 15100,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/8543385.jpg?t=1751262040"
+    },
+    {
+      "title": "The Hollywood Reporter \u00bb TV",
+      "feed_url": "https://www.hollywoodreporter.com/c/tv/feed/",
+      "website_url": "https://www.hollywoodreporter.com/c/tv/",
+      "description": "Keep up with all your favorite TV shows. The latest TV news, interviews, TV reviews, TV trailers and more from THR.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 3400000,
+        "instagram": 2900000
+      },
+      "image_url": "https://i1.feedspot.com/7892680.jpg?t=1751262258"
+    },
+    {
+      "title": "thefutoncritic.com",
+      "feed_url": "http://www.thefutoncritic.com/rss/news.aspx",
+      "website_url": "http://www.thefutoncritic.com/news/",
+      "description": "The Futon Critic is the web's go\u2011to source for up\u2011to\u2011the\u2011minute breaking news, press releases, and updates on U.S. primetime television programming.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/305658.jpg?t=1751265869"
+    },
+    {
+      "title": "Deadline \u00bb TV",
+      "feed_url": "https://deadline.com/v/tv/feed/",
+      "website_url": "https://deadline.com/v/tv/",
+      "description": "TV news that is up-to-the-minute. Get breaking TV information and an unfiltered, no-holds-barred analysis of TV-related events.",
+      "followers": {
+        "facebook": 912600,
+        "twitter": 1200000,
+        "instagram": 586500
+      },
+      "image_url": "https://i1.feedspot.com/7893004.jpg?t=1743074248"
+    },
+    {
+      "title": "Is My Show Cancelled",
+      "feed_url": "https://www.ismyshowcancelled.com/feed/news",
+      "website_url": "https://www.ismyshowcancelled.com/home/",
+      "description": "Find out which TV shows are cancelled or renewed. Get the latest news, premiere dates and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1140207.jpg?t=1751266223"
+    },
+    {
+      "title": "Give Me My Remote",
+      "feed_url": "https://www.givememyremote.com/remote/feed/",
+      "website_url": "https://www.givememyremote.com/remote/blog/",
+      "description": "Give Me My Remote is one of the web's most popular TV blogs. For the latest TV news, gossip and exclusive interviews with your favorite TV stars,",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/401.jpg?t=1751266634"
+    },
+    {
+      "title": "TVWise",
+      "feed_url": "https://www.tvwise.co.uk/feed/",
+      "website_url": "https://www.tvwise.co.uk/",
+      "description": "TV Channels information and guides on how to watch live events streaming on your television and mobile. Film Premieres dates and interviews.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/447073.jpg"
+    },
+    {
+      "title": "What's on Netflix",
+      "feed_url": "https://www.whats-on-netflix.com/feed/",
+      "website_url": "https://www.whats-on-netflix.com/",
+      "description": "What's on Netflix is your source for Netflix's daily additions, top lists, breaking news and showcase for all things Netflix.",
+      "followers": {
+        "facebook": 247500,
+        "twitter": 85900
+      },
+      "image_url": "https://i1.feedspot.com/4915747.jpg?t=1620370744"
+    },
+    {
+      "title": "Monsters and Critics",
+      "feed_url": "https://www.monstersandcritics.com/feed/",
+      "website_url": "https://www.monstersandcritics.com/",
+      "description": "Monsters & Critics is one of the internet's leading entertainment websites, with a special focus on TV and celebrity news.",
+      "followers": {
+        "facebook": 133200,
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5209834.jpg?t=1603459574"
+    },
+    {
+      "title": "By Ken Levine",
+      "feed_url": "http://kenlevine.blogspot.com/feeds/posts/default",
+      "website_url": "http://kenlevine.blogspot.com/",
+      "description": "Ken Levine's daily column about writing, producing and watching TV sitcoms, TV dramas, film, pop culture and life.",
+      "followers": {
+        "twitter": 19
+      },
+      "image_url": "https://i1.feedspot.com/5890.jpg?t=1652944572"
+    },
+    {
+      "title": "Series & TV",
+      "feed_url": "https://feeds.feedburner.com/seriesandtv/WSUM",
+      "website_url": "https://seriesandtv.com/",
+      "description": "A Blog about TV Shows, Film, Travel, Tourism and Books. Everything Entertainment.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4675804.jpg?t=1618238101"
+    },
+    {
+      "title": "TVWW | TV Worth Watching!",
+      "feed_url": "http://www.tvworthwatching.com/Feed.aspx",
+      "website_url": "http://www.tvworthwatching.com/",
+      "description": "Featuring Bianculli's Best Bets and regular TV columns reviewing and recommending the day's very best television offerings - whether they're weekly series, documentary specials, movies, web series, children's offerings, or bizarre but worthwhile cult items.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 6800
+      },
+      "image_url": "https://i1.feedspot.com/1013062.jpg?t=1618238143"
+    },
+    {
+      "title": "From the Archive: A British Television Blog",
+      "feed_url": "https://feeds.feedburner.com/FromTheArchiveABritishTelevisionBlog",
+      "website_url": "http://www.from-the-archive.co.uk/",
+      "description": "Every week I randomly pick a British television show from my collection to watch and then write about it. Pretty simple!",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4675829.jpg?t=1618238225"
+    },
+    {
+      "title": "TV-aholic's TV Blog",
+      "feed_url": "https://feeds.feedburner.com/Tv-aholicsTvBlog",
+      "website_url": "https://tvaholics.blogspot.com/",
+      "description": "Taking and reporting about all things TV and Media.",
+      "followers": {
+        "facebook": 575,
+        "twitter": 788,
+        "instagram": 213
+      },
+      "image_url": "https://i1.feedspot.com/1241493.jpg?t=1618238229"
+    },
+    {
+      "title": "The (TV) Show Must Go On...",
+      "feed_url": "https://feeds.feedburner.com/blogspot/xuiTJ",
+      "website_url": "https://jackiestvblog.blogspot.com/",
+      "description": "I'm Jackie and I watch TV. I'm not proud. Reviews, some recaps, TV news, reality television, primetime and even a weekly off television topic photo post. Bookmark the blog now as your source for live feed reports from inside the 'Big Brother' house! Come, join in on the fun ...",
+      "followers": {
+        "twitter": 345
+      },
+      "image_url": "https://i1.feedspot.com/4675502.jpg?t=1618239777"
+    },
+    {
+      "title": "TV Series Explained",
+      "feed_url": "https://tvseriesexplained.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://tvseriesexplained.blogspot.com/",
+      "description": "This is my space where I write reviews about various TV series episode-by-episode.",
+      "followers": {
+        "facebook": 123
+      },
+      "image_url": "https://i1.feedspot.com/5040842.jpg?t=1618238378"
+    },
+    {
+      "title": "Daily Pinoy Tv - Teleserye Replay",
+      "feed_url": "http://dailypinoychannel.blogspot.in//feeds/posts/default",
+      "website_url": "http://dailypinoychannel.blogspot.com/",
+      "description": "Latest Pinoy teleserye and Lambingan Replay daily tv show, pinoy live streaming, pinoy movies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4739305.jpg?t=1618238312"
+    },
+    {
+      "title": "TVWeek",
+      "feed_url": "https://www.tvweek.com/feed/",
+      "website_url": "https://www.tvweek.com/",
+      "description": "The television business is evolving rapidly, and TelevisionWeek is, too. With its coverage of the people, events, programming and new technology trends that affect the industry, TVWeek has always aimed to be the insider's guide to the business behind the screens.",
+      "followers": {
+        "twitter": 206
+      },
+      "image_url": "https://i1.feedspot.com/4424759.jpg?t=1618240277"
+    },
+    {
+      "title": "ShowbizzWoman \u00bb TV",
+      "feed_url": "https://showbizzwoman.com/category/tv/feed/",
+      "website_url": "https://showbizzwoman.com/category/tv/",
+      "description": "Learn more about the TV industry! Read how your favorite programs are made, get tips and advice if you want to become involved and enjoy the information! I'm Margaret van Weperen. I'm a lover of - and an employee in - the entertainment industry, also called 'showbiz' or 'showbizz'. Thus making me a true showbizz woman.",
+      "followers": {
+        "instagram": 27
+      },
+      "image_url": "https://i1.feedspot.com/5479444.jpg?t=1671013725"
+    },
+    {
+      "title": "The Medium is Not Enough TV blog",
+      "feed_url": "https://feeds.feedburner.com/TheMediumIsNotEnough",
+      "website_url": "https://www.the-medium-is-not-enough.com/",
+      "description": "The Medium Is Not Enough is a UK media blog with daily news, views, exclusive reviews and good conversation. There's a bit of a bias towards the latest and greatest US TV, but we also cover UK/British TV and look for the best in international TV as well. Add in film, theatre, art, books, comics, events and media journalism and you'v got one of the best places on the web for media lovers.",
+      "followers": {
+        "facebook": 124,
+        "twitter": 356
+      },
+      "image_url": "https://i1.feedspot.com/1947739.jpg?t=1618239920"
+    },
+    {
+      "title": "TV Fanatic",
+      "feed_url": "https://www.tvfanatic.com/rss.xml",
+      "website_url": "https://www.tvfanatic.com/",
+      "description": "TV Fanatic is your source for television news, spoilers, photos, quotes and clips.",
+      "followers": {
+        "facebook": 651100,
+        "twitter": 33600
+      },
+      "image_url": "https://i1.feedspot.com/4673482.jpg?t=1618237826"
+    },
+    {
+      "title": "WhattoWatch",
+      "feed_url": "https://www.whattowatch.com/feeds.xml",
+      "website_url": "https://www.whattowatch.com/",
+      "description": "What's on TV is the best guide to UK TV, news, gossip and spoilers about soaps, including EastEnders, Coronation Street, Emmerdale, and top TV.",
+      "followers": {
+        "facebook": 30300,
+        "twitter": 139400,
+        "instagram": 62300
+      },
+      "image_url": "https://i1.feedspot.com/4675756.jpg?t=1618237855"
+    },
+    {
+      "title": "Roku Blog",
+      "feed_url": "https://www.roku.com/blog/en-gb",
+      "website_url": "https://www.roku.com/blog/en-gb",
+      "description": "Roku provides the simplest way to stream entertainment to your TV. On your terms. With thousands of available channels to choose from.",
+      "followers": {
+        "facebook": 930400,
+        "twitter": 5900,
+        "instagram": 9900
+      },
+      "image_url": "https://i1.feedspot.com/5272114.jpg?t=1619068071"
+    },
+    {
+      "title": "CraveYouTV",
+      "feed_url": "https://www.craveyoutv.com/feed/",
+      "website_url": "https://www.craveyoutv.com/",
+      "description": "CraveYouTV covers Scandal Reviews, Pretty Little Liars Reviews, PLL, Sleepy Hollow Review, and TV Show Reviews.",
+      "followers": {
+        "facebook": 253,
+        "twitter": 503,
+        "instagram": 262
+      },
+      "image_url": "https://i1.feedspot.com/5142496.jpg?t=1618238115"
+    },
+    {
+      "title": "The British TV Place",
+      "feed_url": "https://thebritishtvplace.com/feed/",
+      "website_url": "https://thebritishtvplace.com/",
+      "description": "We're huge fans of international TV shows - crime dramas, suspense thrillers, comedies, true-crime documentaries, Nordic & Scandi noir, and more - and we love sharing with you news, reviews, and more about them.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4615214.jpg?t=1682591060"
+    },
+    {
+      "title": "Tellyspotting",
+      "feed_url": "https://tellyspotting.kera.org/feed/",
+      "website_url": "https://tellyspotting.kera.org/",
+      "description": "Tellyspotting is your home for British comedy, UK television, and more. It covers comedy, drama, action, mystery, music, and more.",
+      "followers": {
+        "facebook": 53600
+      },
+      "image_url": "https://i1.feedspot.com/1834914.jpg?t=1682590964"
+    },
+    {
+      "title": "TV Guide",
+      "feed_url": "https://www.tvguide.com/",
+      "website_url": "https://www.tvguide.com/",
+      "description": "Find local TV listings, watch full episodes of your favorite TV Shows and read the latest breaking news on TV shows, celebrities and movies. TV Guide Magazine is a bi-weekly American magazine.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 1000000,
+        "instagram": 101400
+      },
+      "image_url": "https://i1.feedspot.com/86.jpg?t=1633094386"
+    },
+    {
+      "title": "The A.V. Club",
+      "feed_url": "https://www.avclub.com/rss",
+      "website_url": "https://www.avclub.com/",
+      "description": "Pop culture obsessives writing for the pop culture obsessed. The A.V. Club is an entertainment website, part of the G/O Media family of sites - including The Onion, Gizmodo, Kotaku, and more. Get your no-fail, must-read guide to the latest and greatest in TV, music, and movies.",
+      "followers": {
+        "facebook": 490100,
+        "twitter": 385100,
+        "instagram": 57200
+      },
+      "image_url": "https://i1.feedspot.com/4739727.jpg?t=1671013781"
+    },
+    {
+      "title": "The Post Credit Scene",
+      "feed_url": "https://www.thepostcreditscene.com/feed/",
+      "website_url": "https://www.thepostcreditscene.com/",
+      "description": "Sharing our thoughts and experiences with television and film.",
+      "followers": {
+        "facebook": 222,
+        "twitter": 91,
+        "instagram": 390
+      },
+      "image_url": "https://i1.feedspot.com/5122378.jpg?t=1618239556"
+    },
+    {
+      "title": "TVSteps.Com",
+      "feed_url": "https://www.tvsteps.com/feed/",
+      "website_url": "https://www.tvsteps.com/",
+      "description": "IPTV | TV Devices | Android TV | Smart TV",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5035526.jpg"
+    }
+  ]
+}

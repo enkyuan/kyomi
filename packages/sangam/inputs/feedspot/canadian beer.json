@@ -1,0 +1,209 @@
+{
+  "category": "Canadian Beer",
+  "source_url": "https://rss.feedspot.com/canadian_beer_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Growler",
+      "feed_url": "https://bc.thegrowler.ca/feed/",
+      "website_url": "https://bc.thegrowler.ca/",
+      "description": "The Growler is B.C.'s quarterly craft beer guide, covering the breweries, the beer and the industry as it swells and threatens to consume them all if they don't consume it (the beer) first.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4487656.jpg?t=1611036427"
+    },
+    {
+      "title": "Pacific Rim Distributors Blog",
+      "feed_url": "https://www.pacrimdistributors.com/blog?format=rss",
+      "website_url": "https://www.pacrimdistributors.com/blog",
+      "description": "A little light reading for us beer geeks. The Pacific Northwest is home to some of the most forward thinking beer producers in the world. The Pacific Rim is on the artistic forefront of the beer industry and is producing award winning taste profiles recognized in beer circles across the globe.",
+      "followers": {
+        "facebook": 4,
+        "twitter": 316
+      },
+      "image_url": "https://i1.feedspot.com/5323824.jpg?t=1632212724"
+    },
+    {
+      "title": "GTA Brews",
+      "feed_url": "https://www.gtabrews.ca/feed/",
+      "website_url": "https://www.gtabrews.ca/",
+      "description": "We are Toronto's local, as well as Canada's largest, homebrew club. We bring Toronto area homebrewers together in person, and online, to create a friendly community where we share knowledge, talk shop, and provide feedback on each others homebrews.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 999
+      },
+      "image_url": "https://i1.feedspot.com/5323840.jpg?t=1632215942"
+    },
+    {
+      "title": "A Good Beer Blog",
+      "feed_url": "http://abetterbeerblog427.com/feed/",
+      "website_url": "http://abetterbeerblog427.com/",
+      "description": "The second longest running beer blog on the planet. A Good Beer Blog is the playground of Alan McLeod, clearly Canada's favorite and surely unparalleled beer historian. Not a consultant on the side. Not even a tour guide. Beer community denier. Spits. Wants a Double Double. Unpopular globally.",
+      "followers": {
+        "twitter": 22200,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5269724.jpg"
+    },
+    {
+      "title": "BeerCrank",
+      "feed_url": "https://feeds.feedburner.com/blogspot/bbRhaW",
+      "website_url": "https://www.beercrank.ca/",
+      "description": "I'm Cody Lobreau, the creator and blogger at BeerCrank.ca. BeerCrank is a Brandon, Manitoba based beer blog writing mostly about Canadian beer. Casual beer reviews for the casual beer drinker.",
+      "followers": {
+        "facebook": 452,
+        "twitter": 2200,
+        "instagram": 447
+      },
+      "image_url": "https://i1.feedspot.com/4486818.jpg?t=1611036669"
+    },
+    {
+      "title": "YYCTOURS Blog",
+      "feed_url": "https://www.yyctours.ca/blog-feed.xml",
+      "website_url": "https://www.yyctours.ca/blog",
+      "description": "Welcome to YYCTOURS, Calgary's newest and only locally-owned craft tour agency. We pride ourselves in showcasing the best of Calgary's craft community through tours at award-winning facilities, venue and drink reviews, maps, and education. All tours are customizable, so just let us know what you are looking for.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5625892.jpg?t=1689330629"
+    },
+    {
+      "title": "Canadian Craft Brewers Association Blog",
+      "feed_url": "https://ccba-ambc.org/feed/",
+      "website_url": "https://ccba-ambc.org/blog/",
+      "description": "The latest news and information from the Canadian Craft Brewers Association. We represent the interests of a growing industry of over 1,000 small and independent craft breweries, brewpubs and their supplier partners in every province and territory in Canada.",
+      "followers": {
+        "facebook": 717,
+        "twitter": 935
+      },
+      "image_url": "https://i1.feedspot.com/5324165.jpg?t=1632301707"
+    },
+    {
+      "title": "Canadian Craft Tours News & Blog",
+      "feed_url": "https://www.canadiancrafttours.ca/blogs/news.atom",
+      "website_url": "https://www.canadiancrafttours.ca/blogs/news",
+      "description": "Craft brewery news, favourite monthly beers, new wineries, party planning ideas, etc. Check out our blog for interesting reads, news, and more! Canadian Craft Tours is a company of craft beer, spirits, and wine fanatics.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 240,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5323803.jpg?t=1632312879"
+    },
+    {
+      "title": "Alberta Beer Festivals",
+      "feed_url": "https://albertabeerfestivals.com/feed/",
+      "website_url": "https://albertabeerfestivals.com/",
+      "description": "Alberta Beer Festival's Mission is to provide the ultimate beer & spirit experience! Each of our 6 events provides a forum for breweries and distilleries to share their stories, passions, and products with the beer enthusiasts of Western Canada. ABF strives to have a positive impact in the beer/spirit industry, with local charities, and within our community.",
+      "followers": {
+        "facebook": 23400,
+        "twitter": 6400,
+        "instagram": 46900
+      },
+      "image_url": "https://i1.feedspot.com/5324044.jpg?t=1632287230"
+    },
+    {
+      "title": "The BC Ale Trail Blog",
+      "feed_url": "https://bcaletrail.ca/blog/feed/",
+      "website_url": "https://bcaletrail.ca/blog/",
+      "description": "A BC Ale Trail is a series of self-guided itineraries highlighting local craft brewery destinations and the super, natural landscapes that surround them.",
+      "followers": {
+        "facebook": 12500,
+        "twitter": 2100,
+        "instagram": 24500
+      },
+      "image_url": "https://i1.feedspot.com/5325826.jpg?t=1632747542"
+    },
+    {
+      "title": "Canadian Beer News",
+      "feed_url": "https://www.canadianbeernews.com/feed/",
+      "website_url": "https://www.canadianbeernews.com/",
+      "description": "Canadian Beer News is a website dedicated exclusively to covering news about Canada's beer and brewing industry. Presenting information with minimal editorializing, CBN features announcements of new beer releases, brewery openings and closures, news about festivals and events, and other information from breweries all across the country.",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 13000
+      },
+      "image_url": "https://i1.feedspot.com/548961.jpg?t=1611036435"
+    },
+    {
+      "title": "What's Brewing Magazine",
+      "feed_url": "https://www.whatsbrewing.ca/feed/",
+      "website_url": "https://www.whatsbrewing.ca/news/",
+      "description": "What's Brewing is a magazine about the craft beer movement in BC, Canada. It features great original beer writing from front to back. It also features craft beer community contributions and spotlight some of the best recent articles by BC beer bloggers and authors in order to help bring attention to the craft beer movement as well as the writing talent that exists in BC and Western Canada.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 1800,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4487643.jpg?t=1611036458"
+    },
+    {
+      "title": "The Growler",
+      "feed_url": "https://on.thegrowler.ca/feed/",
+      "website_url": "https://on.thegrowler.ca/",
+      "description": "The Growler is a craft beer and lifestyle guide for people who love good beer, good food, good music, and are willing to pay a little more to live well.Published bi-annually, this trade-paperback-sized digest appeals to anyone interested in Ontario's rapidly evolving craft beer scene, and craft culture in general.",
+      "followers": {
+        "facebook": 992,
+        "twitter": 1300,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5323783.jpg?t=1632208434"
+    },
+    {
+      "title": "Atlantic Canada Beer Blog",
+      "feed_url": "https://acbeerblog.ca/feed/",
+      "website_url": "https://acbeerblog.ca/",
+      "description": "News on Atlantic Canadian beer, cider, and mead. The ACBB was launched by Greg Delaney in January 2012. After a year of hard work, Greg handed off the blog to Chris McDonald. Chris then roped in fellow homebrewer and beer lover Shawn Meek. Since then, Chris and Shawn have been continuing the work that Greg started, with the goal of sharing the latest and greatest news of the ever-growing beer scene in Atlantic Canada.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5323750.jpg?t=1632206358"
+    },
+    {
+      "title": "Matter of Beer Blog",
+      "feed_url": "https://matterofbeer.com/feed/",
+      "website_url": "https://matterofbeer.com/blog/",
+      "description": "My name is Matt Poirier, and I'm a Certified Cicerone located in Victoria, BC, Canada. I've always had a passion for craft beer and and Matter of Beer is my attempt to share not only that passion, but to quench the thirst for knowledge that exists within the world of craft beer.",
+      "followers": {
+        "facebook": 670,
+        "twitter": 734,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5323806.jpg?t=1632210539"
+    },
+    {
+      "title": "Beerism",
+      "feed_url": "https://beerism.ca/feed/",
+      "website_url": "https://beerism.ca/",
+      "description": "Noah Forrest created this site/blog in order to explore the ever growing craft beer scene that she have fallen for. She will be reviewing, examining, and providing information about beer, food, breweries, and the beer community in general, with a special emphasis on Quebec.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 540
+      },
+      "image_url": "https://i1.feedspot.com/4487724.jpg?t=1632233925"
+    },
+    {
+      "title": "Analog Brewing Blog",
+      "feed_url": "https://analogbrewing.ca/feed/",
+      "website_url": "https://analogbrewing.ca/blog/",
+      "description": "Check out our blog where we talk craft beer from the point of view of some retro gamer nerds! Edmonton's craft beer scene is booming, and Analog Brewing is here to play. Analog Brewing is an extension of the personalities of its founders: beer lovers and nerds who love sci-fi, vintage video games, and board games.",
+      "followers": {
+        "twitter": 1800,
+        "instagram": 7300
+      },
+      "image_url": "https://i1.feedspot.com/5325837.jpg?t=1632747825"
+    },
+    {
+      "title": "Great Lakes Brewery",
+      "feed_url": "https://www.greatlakesbeer.com/feed/",
+      "website_url": "https://www.greatlakesbeer.com/glb-news/",
+      "description": "The blog features news from around the brewery. We are a fiercely independently owned craft brewery. Great Lakes celebrated 34 years in the craft beer business in 2021, making us one of the oldest independent craft breweries in Canada.",
+      "followers": {
+        "facebook": 13300,
+        "twitter": 22200,
+        "instagram": 41800
+      },
+      "image_url": "https://i1.feedspot.com/5325811.jpg?t=1632746696"
+    }
+  ]
+}

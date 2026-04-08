@@ -1,0 +1,72 @@
+{
+  "category": "Los Angeles Tech",
+  "source_url": "https://rss.feedspot.com/los_angeles_tech_rss_feeds",
+  "feeds": [
+    {
+      "title": "Los Angeles Times \u00bb Technology",
+      "feed_url": "https://www.latimes.com/business/technology.rss",
+      "website_url": "https://www.latimes.com/business/technology",
+      "description": "Read the Los Angeles Times articles covering technology, including social media, apps, electronics, and other news of tech companies. The Los Angeles Times is the largest metropolitan daily newspaper in the country, with more than 40 million unique visitors monthly. The Pulitzer Prize-winning Times has been covering Southern California for more than 142 years.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 3800000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/5712694.jpg?t=1700048268"
+    },
+    {
+      "title": "Humanities Technology Blog",
+      "feed_url": "https://humtech.ucla.edu/feed/",
+      "website_url": "https://humtech.ucla.edu/blog/",
+      "description": "Stay updated with important technology-related changes, deadlines, and opportunities for faculty, staff, and graduate students in the Humanities. Humanities Technology (HumTech) is the technology partner for faculty, staff, and students in the Humanities Division at UCLA.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5712698.jpg?t=1700048840"
+    },
+    {
+      "title": "TechEBlog",
+      "feed_url": "https://www.techeblog.com/feed/",
+      "website_url": "https://www.techeblog.com/",
+      "description": "TechEBlog brings you the latest technology, gadget, and geek-related news from around the world. Their commitment to combining the highest-quality products and services with the highest level of integrity in dealing with their clients and partners. Visit their blog to learn more about their services, products, news, articles, and more.",
+      "followers": {
+        "facebook": 153800,
+        "twitter": 44000
+      },
+      "image_url": "https://i1.feedspot.com/5293874.jpg?t=1700048327"
+    },
+    {
+      "title": "Clearmind Technology Blog",
+      "feed_url": "https://clearmind.it/blog?format=feed",
+      "website_url": "https://clearmind.it/blog",
+      "description": "Stay connected with all of the latest IT trends and alerts through the Clearmind Technology Blog. Clearmind Technology, Inc. has been serving the California area since 2011, providing IT Support such as technical helpdesk support, computer support, and consulting to small and medium-sized businesses.",
+      "followers": {
+        "facebook": 18,
+        "twitter": 19
+      },
+      "image_url": "https://i1.feedspot.com/5712699.jpg?t=1700048292"
+    },
+    {
+      "title": "Los Angeles Issue \u00bb Technology",
+      "feed_url": "https://losangelesissue.com/technology-news/feed/",
+      "website_url": "https://losangelesissue.com/technology-news/",
+      "description": "Los Angeles Issue is where you can read the latest technology news from Los Angeles and Silicon Valley. See updates from pioneers in tech as well as leading companies in the U.S. Los Angeles Issue is an online digital publisher and digital magazine highlighting the latest trends in California and across the U.S.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 17200,
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5712697.jpg?t=1700048558"
+    },
+    {
+      "title": "Be Structured Technology Group Blog",
+      "feed_url": "https://bestructured.com/feed/",
+      "website_url": "https://bestructured.com/blog/",
+      "description": "To stay current with all of the latest technology buzz, and industry news, and to see what's going on over at Be Structured, check out the blog. Be Structured Technology Group Inc. is a Los Angeles-based IT support company founded in 2007. They created this business because they are passionate about technology and the practical solutions that tech can deliver to workplaces big and small, and even nonprofits.",
+      "followers": {
+        "facebook": 754,
+        "twitter": 567,
+        "instagram": 152
+      },
+      "image_url": "https://i1.feedspot.com/5712693.jpg?t=1700048284"
+    }
+  ]
+}

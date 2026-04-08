@@ -1,0 +1,39 @@
+{
+  "category": "Whirlpool",
+  "source_url": "https://rss.feedspot.com/whirlpool_rss_feeds",
+  "feeds": [
+    {
+      "title": "Whirlpool Corporation | News & Events",
+      "feed_url": "https://investors.whirlpoolcorp.com/rss/PressRelease.aspx",
+      "website_url": "https://investors.whirlpoolcorp.com/news-and-events/news/default.aspx",
+      "description": "Whirlpool Corporation is the world's leading major home appliance company. This is the Investor Relations website that covers information about Whirlpool Corporation's business for stockholders, potential investors, and financial analysts.",
+      "followers": {
+        "facebook": 87400,
+        "twitter": 32700,
+        "instagram": 19700
+      },
+      "image_url": "https://i1.feedspot.com/4922060.jpg?t=1620817367"
+    },
+    {
+      "title": "Whirlpool Corporation | Pro",
+      "feed_url": "https://whirlpoolpro.com/feed/",
+      "website_url": "https://www.whirlpoolpro.com/news-events/",
+      "description": "Whirlpool Corporation is the world's leading major home appliance company. Browse industry news, learn the latest trends in kitchen & laundry, watch videos, and check out upcoming events. Brought to you by Whirlpool Corp.",
+      "followers": {
+        "twitter": 32700
+      },
+      "image_url": "https://i1.feedspot.com/4922066.jpg?t=1612187011"
+    },
+    {
+      "title": "Whirlpool Corporation",
+      "feed_url": "https://www.whirlpoolcorp.com/latest-news.html/",
+      "website_url": "https://www.whirlpoolcorp.com/latest-news.html/",
+      "description": "Whirlpool Corporation is the world's leading major home appliance company. Follow this blog to get the latest Whirlpool Corporation news.",
+      "followers": {
+        "twitter": 32700,
+        "instagram": 19700
+      },
+      "image_url": "https://i1.feedspot.com/4922072.jpg?t=1620817363"
+    }
+  ]
+}

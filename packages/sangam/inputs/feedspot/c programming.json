@@ -1,0 +1,259 @@
+{
+  "category": "C++ Programming",
+  "source_url": "https://rss.feedspot.com/cpp_programming_rss_feeds",
+  "feeds": [
+    {
+      "title": "Meeting C++ Blog",
+      "feed_url": "https://meetingcpp.com/feed.xml",
+      "website_url": "https://www.meetingcpp.com/blog/",
+      "description": "Read about the C++, Qt, ISO Standardization, and other C++ related things on the Meeting C++ blog. Since 2012, Meeting C++ is Europe's leading C++ Conference and also platform for C++ User Groups.",
+      "followers": {
+        "facebook": 24600,
+        "twitter": 30500
+      },
+      "image_url": "https://i1.feedspot.com/5311837.jpg?t=1628779109"
+    },
+    {
+      "title": "C++ Stories",
+      "feed_url": "https://www.cppstories.com/index.xml",
+      "website_url": "https://www.cppstories.com/",
+      "description": "Stay up-to-date with Modern C++. My name is Bartlomiej Filipek. I am a software developer from the beautiful city Cracow in Southern Poland. This is my technical blog.",
+      "followers": {
+        "facebook": 130,
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/5311876.jpg?t=1628831583"
+    },
+    {
+      "title": "C++ Team Blog",
+      "feed_url": "https://devblogs.microsoft.com/cppblog/feed/",
+      "website_url": "https://devblogs.microsoft.com/cppblog/",
+      "description": "C++ tutorials, C and C++ news, and information about Visual Studio, Visual Studio Code, and Vcpkg from the Microsoft C++ team.",
+      "followers": {
+        "facebook": 13200000,
+        "twitter": 510100,
+        "instagram": 4500000
+      },
+      "image_url": "https://i1.feedspot.com/5163088.jpg"
+    },
+    {
+      "title": "Daniel Lemire Blog",
+      "feed_url": "https://lemire.me/blog/feed/",
+      "website_url": "https://lemire.me/blog/",
+      "description": "Daniel Lemire is a computer science professor at the University of Quebec (TELUQ) in Montreal. His research is focused on software performance and data engineering. He programs in C, C++, Java, JavaScript, Python, Swift and Go. He works primarily in an open-source setting.",
+      "followers": {
+        "twitter": 16600
+      },
+      "image_url": "https://i1.feedspot.com/5060883.jpg?t=1630934710"
+    },
+    {
+      "title": "The CLion Blog",
+      "feed_url": "https://blog.jetbrains.com/clion/category/news/feed/",
+      "website_url": "https://blog.jetbrains.com/clion/category/news/",
+      "description": "A cross platform IDE for C and C++. JetBrains is a cutting-edge software vendor specializing in the creation of intelligent development tools, including IntelliJ IDEA - the leading Java IDE, and the Kotlin programming language.",
+      "followers": {
+        "facebook": 117500,
+        "twitter": 10500,
+        "instagram": 112700
+      },
+      "image_url": "https://i1.feedspot.com/5311831.jpg?t=1630934911"
+    },
+    {
+      "title": "Vorbrodt's C++ Blog",
+      "feed_url": "https://vorbrodt.blog/feed/",
+      "website_url": "https://vorbrodt.blog/",
+      "description": "Hi! I am Martin Vorbrodt, I am your host on this blog. I have been a professional programmer for about 20 years but coding has been a passion of mine for over 30. My main interests are systems, low-level, and generic programming, as well as high performance, clean, and concise C++ code.",
+      "followers": {
+        "facebook": 60,
+        "twitter": 424
+      },
+      "image_url": "https://i1.feedspot.com/5311922.jpg?t=1628838265"
+    },
+    {
+      "title": "Arthur O'Dwyer Blog",
+      "feed_url": "https://quuxplusone.github.io/blog/feed.xml",
+      "website_url": "https://quuxplusone.github.io/blog/",
+      "description": "Stuff mostly about C++. I started this blog on 2018-03-13 so that I'd have a place to dump short essays on topics that seem to come up a lot in the discussion about C++. I might occasionally say things that aren't about C++, too.",
+      "followers": {
+        "twitter": 619
+      },
+      "image_url": "https://i1.feedspot.com/5311889.jpg?t=1628833400"
+    },
+    {
+      "title": "Sandor Dargo's Blog",
+      "feed_url": "https://www.sandordargo.com/feed.xml",
+      "website_url": "https://www.sandordargo.com/",
+      "description": "Sandor Dargo writes about C++, software development, books, and stoic philosophy applied to software craftsmanship.",
+      "followers": {
+        "twitter": 761
+      },
+      "image_url": "https://i1.feedspot.com/5311881.jpg?t=1630937108"
+    },
+    {
+      "title": "Marius Bancila's Blog",
+      "feed_url": "https://mariusbancila.ro/blog/feed/",
+      "website_url": "https://mariusbancila.ro/blog/",
+      "description": "My name is Marius Bancila, I am a software architect, author, and speaker from Timisoara, Romania. Since 2006 I have been recognized as a Microsoft MVP for VC++ and later Development Technologies for my online and offline activities focused on Microsoft technologies and development tools and particularly Visual C++.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/1094835.jpg?t=1628834933"
+    },
+    {
+      "title": "Barry Revzin",
+      "feed_url": "https://brevzin.github.io/feed.xml",
+      "website_url": "https://brevzin.github.io/",
+      "description": "A blog by Barry Revzin - a C++ programmer and swimming current analyzer.",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5311915.jpg?t=1628837447"
+    },
+    {
+      "title": "Sutter's Mill",
+      "feed_url": "https://herbsutter.com/feed/",
+      "website_url": "https://herbsutter.com/",
+      "description": "Herb Sutter on software development. He is an author, chair of the ISO C++ standards committee, and native languages architect at Microsoft.",
+      "followers": {
+        "twitter": 24700
+      },
+      "image_url": "https://i1.feedspot.com/76320.jpg?t=1628829927"
+    },
+    {
+      "title": "Andrzej's C++ Blog",
+      "feed_url": "https://akrzemi1.wordpress.com/feed/",
+      "website_url": "https://akrzemi1.wordpress.com/",
+      "description": "I am Andrzej. I started this blog because I wanted to share my knowledge on both practical aspects of programming in C++ and some theoretical background on C++ design and current evolution. I have been developing commercial applications in C++ since 2004 and have been studying the progress of the ISO C++ Standards Committee. I believe some of the posts may prove useful to C++ programmers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4126328.jpg?t=1630938108"
+    },
+    {
+      "title": "Shafik Yaghmour's Blog",
+      "feed_url": "https://shafik.github.io/feed.xml",
+      "website_url": "https://shafik.github.io/#",
+      "description": "Blog about C++, C, Undefined Behavior, and Compilers.",
+      "followers": {
+        "twitter": 8300
+      },
+      "image_url": "https://i1.feedspot.com/5153118.jpg?t=1630938270"
+    },
+    {
+      "title": "Fluent C++",
+      "feed_url": "https://www.fluentcpp.com/feed/",
+      "website_url": "https://www.fluentcpp.com/",
+      "description": "My name is Jonathan Boccara. I've been working as a software engineer on large codebases for 10 years. Fluent C++ contains some 450 articles (including guest posts) about writing expressive code in general, and in C++ in particular.",
+      "followers": {
+        "twitter": 7300
+      },
+      "image_url": "https://i1.feedspot.com/4856120.jpg?t=1628833760"
+    },
+    {
+      "title": "Belay the C++ Blog",
+      "feed_url": "https://belaycpp.com/feed/",
+      "website_url": "https://belaycpp.com/blog/",
+      "description": "This blog aims to enlighten the reader about bad yet often seen practices in C++, explanations on how it is bad, and ways to avoid it. You will occasionally see articles about good practices instead of bad ones, and sometimes strange-yet-interesting behavior.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5311937.jpg?t=1630936253"
+    },
+    {
+      "title": "Foonathan Blog",
+      "feed_url": "https://www.foonathan.net/post/feed.xml",
+      "website_url": "https://www.foonathan.net/",
+      "description": "Thoughts from a C++ library developer. Jonathan is a student whose hobby is C++: he writes open-source projects, blog about them plus more, and give talks.",
+      "followers": {
+        "twitter": 10900
+      },
+      "image_url": "https://i1.feedspot.com/5311899.jpg?t=1628834270"
+    },
+    {
+      "title": "Simplify C++!",
+      "feed_url": "https://arne-mertz.de/feed/",
+      "website_url": "https://arne-mertz.de/",
+      "description": "I am Arne - a C++ enthusiast. As of today, I live in Hamburg, work in software development for several years now, and have had my share of Cpp and other programming problems myself. Most of the posts you will see on this blog are either based on things I have experienced myself or are answers to questions that have popped up on the team I work on or on the web.",
+      "followers": {
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4762525.jpg?t=1630937052"
+    },
+    {
+      "title": "The Coding Nest",
+      "feed_url": "https://codingnest.com/rss/",
+      "website_url": "https://codingnest.com/",
+      "description": "I am a mainly C++ programmer that used to work with safety-critical, hard and soft real-time systems, but lately, I have been working on a research project at FEE CTU. I also happen to teach C++ at my university.",
+      "followers": {
+        "twitter": 825
+      },
+      "image_url": "https://i1.feedspot.com/5153009.jpg?t=1628836045"
+    },
+    {
+      "title": "Craft::cpp",
+      "feed_url": "https://m-peko.github.io/craft-cpp/feed.xml",
+      "website_url": "https://m-peko.github.io/craft-cpp/",
+      "description": "Blog about modern C++ and software design. Marin Peko is a software engineer with focus on high-performance, clean and expressive code.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5311967.jpg?t=1628843613"
+    },
+    {
+      "title": "Lesley Lai's Blog",
+      "feed_url": "https://lesleylai.info/rss.xml",
+      "website_url": "https://lesleylai.info/",
+      "description": "Hi, I am Lesley Lai, a Software Engineering Intern at Trimble SketchUp and a Computer Science and Applied Mathematics undergraduate student at the University of Colorado at Boulder. My primary interests include Computer Graphics and Programming Language theories. I love to code in various programming languages, though I am particularly fond of C++.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5311910.jpg?t=1628836711"
+    },
+    {
+      "title": "The ReSharper C++ Blog",
+      "feed_url": "https://blog.jetbrains.com/rscpp/category/tips-tricks/feed/",
+      "website_url": "https://blog.jetbrains.com/rscpp/category/tips-tricks/",
+      "description": "Latest Tips and tricks on C++. JetBrains is a cutting-edge software vendor specializing in the creation of intelligent development tools, including IntelliJ IDEA - the leading Java IDE, and the Kotlin programming language.",
+      "followers": {
+        "facebook": 117500,
+        "twitter": 201100,
+        "instagram": 112700
+      },
+      "image_url": "https://i1.feedspot.com/5311843.jpg?t=1628779962"
+    },
+    {
+      "title": "Preshing on Programming",
+      "feed_url": "https://preshing.com/feed",
+      "website_url": "https://preshing.com/",
+      "description": "Hi, I'm Jeff Preshing, Canadian computer programmer. This is where I write about programming-related stuff. I try to keep it technical and tend to focus on C++ and Python.",
+      "followers": {
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5153089.jpg?t=1630938207"
+    },
+    {
+      "title": "Andreas Fertig Blog",
+      "feed_url": "https://andreasfertig.com/feed.xml",
+      "website_url": "https://andreasfertig.com/blog/",
+      "description": "Andreas Fertig is an embedded software developer, trainer, and speaker from Stuttgart. He enjoys exploring the depth of the language and sharing his knowledge.",
+      "followers": {
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5311894.jpg?t=1628834017"
+    },
+    {
+      "title": "Modernes C++ Blog",
+      "feed_url": "https://www.modernescpp.com/index.php?format=feed&type=rss",
+      "website_url": "https://www.modernescpp.com/index.php/blog/",
+      "description": "Training, Coaching, and Technology Consulting. Rainer is an author of a few C++ books, speaker, and blogger.",
+      "followers": {
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5311841.jpg?t=1628779586"
+    },
+    {
+      "title": "bitwizeshift on software",
+      "feed_url": "https://bitwizeshift.github.io/index.xml",
+      "website_url": "https://rodusek.com/",
+      "description": "Hello, I'm Matthew Rodusek, a software developer from Waterloo, Ontario. I am an embedded developer by day, C++ template meta-programmer by night. When I see a problem that does not yet have a solution, I develop it - and try to release it to the open-source community (where possible) through my GitHub.",
+      "followers": {
+        "twitter": 12
+      },
+      "image_url": "https://i1.feedspot.com/5311968.jpg?t=1628843939"
+    }
+  ]
+}

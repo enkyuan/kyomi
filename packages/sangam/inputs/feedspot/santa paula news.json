@@ -1,0 +1,51 @@
+{
+  "category": "Santa Paula News",
+  "source_url": "https://rss.feedspot.com/santa_paula_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "KTLA \u00bb Santa Paula",
+      "feed_url": "https://ktla.com/tag/santa-paula/feed/",
+      "website_url": "https://ktla.com/tag/santa-paula/",
+      "description": "L.A.'s Very Own, KTLA is Southern California's source for Los Angeles-area breaking news, streaming live video, traffic and weather in L.A., Orange and Ventura counties, plus the Inland Empire and beyond. Get the latest news and updates about Santa Paula at KTLA.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1000000,
+        "instagram": 952400
+      },
+      "image_url": "https://i1.feedspot.com/5168603.jpg?t=1594120589"
+    },
+    {
+      "title": "Santa Paula, CA",
+      "feed_url": "https://spcity.org/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://spcity.org/CivicAlerts.aspx?sort=date",
+      "description": "Santa Paula, CA is dedicated to keeping residents informed and up-to-date by providing the latest news about sports, business, performing arts, health/safety issues, human interest and more.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 476
+      },
+      "image_url": "https://i1.feedspot.com/5168610.jpg?t=1594126230"
+    },
+    {
+      "title": "Santa Paula Times",
+      "feed_url": "http://santapaulatimes.com/news/rss.php/rss.xml",
+      "website_url": "http://santapaulatimes.com/",
+      "description": "The Santa Paula Times is a newspaper of general circulation for the City of Santa Paula. The newspaper was founded January 1, 1993. Get to know everything about the city at Santa Paula Times.",
+      "followers": {
+        "facebook": 8300
+      },
+      "image_url": "https://i1.feedspot.com/5168609.jpg"
+    },
+    {
+      "title": "Vc Star \u00bb Santa Paula",
+      "feed_url": "http://rssfeeds.vcstar.com/ventura-county/news",
+      "website_url": "https://www.vcstar.com/news/santa-paula/",
+      "description": "Vc Star is dedicated to keeping residents informed and up-to-date by providing the latest news about sports, business, performing arts, health/safety issues, human interest and more.",
+      "followers": {
+        "facebook": 147500,
+        "twitter": 107000,
+        "instagram": 41300
+      },
+      "image_url": "https://i1.feedspot.com/5168601.jpg?t=1623822728"
+    }
+  ]
+}

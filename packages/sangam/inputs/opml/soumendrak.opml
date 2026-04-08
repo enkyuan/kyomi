@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+    <head>
+        <title>Tech and Engineering Subscriptions</title>
+    </head>
+    <body>
+        <outline text="Chip Huyen" title="Chip Huyen" type="rss" xmlUrl="https://huyenchip.com/feed.xml"/>
+        <outline text="Martin Fowler" title="Martin Fowler" type="rss" xmlUrl="https://martinfowler.com/feed.atom"/>
+        <outline text="Joel on Software" title="Joel on Software" type="rss" xmlUrl="https://www.joelonsoftware.com/feed/"/>
+        <outline text="LeadDev" title="LeadDev" type="rss" xmlUrl="https://leaddev.com/content-piece-and-series/rss.xml"/>
+        <outline text="Adam Johnson" title="Adam Johnson" type="rss" xmlUrl="https://adamj.eu/tech/atom.xml"/>
+        <outline text="Engineering at Meta" title="Engineering at Meta" type="rss" xmlUrl="https://engineering.fb.com/feed/"/>
+        <outline text="Martijn Pieters" title="Martijn Pieters" type="rss" xmlUrl="https://www.zopatista.com/atom.xml"/>
+        <outline text="Ethan Rosenthal" title="Ethan Rosenthal" type="rss" xmlUrl="https://www.ethanrosenthal.com/blog/index.xml"/>
+        <outline text="Balaji Srinivasan" title="Balaji Srinivasan" type="rss" xmlUrl="https://balajis.com/feed"/>
+        <outline text="Erik Bernhardsson" title="Erik Bernhardsson" type="rss" xmlUrl="https://erikbern.com/index.xml"/>
+        <outline text="Adventures in Machine Learning" title="Adventures in Machine Learning" type="rss" xmlUrl="https://www.spreaker.com/show/6102041/episodes/feed"/>
+        <outline text="Hamel’s Blog" title="Hamel’s Blog" type="rss" xmlUrl="https://hamel.dev/index.xml"/>
+        <outline text="Canva Engineering" title="Canva Engineering" type="rss" xmlUrl="https://canvatechblog.com/feed"/>
+        <outline text="AWS Architecture" title="AWS Architecture" type="rss" xmlUrl="https://aws.amazon.com/blogs/architecture/feed/"/>
+        <outline text="Amazon Science" title="Amazon Science" type="rss" xmlUrl="https://www.amazon.science/index.rss"/>
+        <outline text="Simon Willison" title="Simon Willison" type="rss" xmlUrl="https://simonwillison.net/atom/everything/"/>
+        <outline text="S Anand" title="S Anand" type="rss" xmlUrl="https://www.s-anand.net/blog/feed/"/>
+        <outline text="OpenTelemetry" title="OpenTelemetry" type="rss" xmlUrl="https://opentelemetry.io/blog/index.xml"/>
+        <outline text="Tomas Petricek" title="Tomas Petricek" type="rss" xmlUrl="https://tomasp.net/rss.xml"/>
+    </body>
+</opml>

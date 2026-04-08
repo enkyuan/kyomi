@@ -1,0 +1,106 @@
+{
+  "category": "Iowa Politics",
+  "source_url": "https://rss.feedspot.com/iowa_politics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Blog For Iowa Politics",
+      "feed_url": "https://blogforiowa.com/tag/iowa-politics/feed/",
+      "website_url": "https://blogforiowa.com/tag/iowa-politics/",
+      "description": "The Online Information Source for Iowa's Progressive Community. This blog section covers articles on political updates.",
+      "followers": {
+        "facebook": 866,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5313713.jpg?t=1629374204"
+    },
+    {
+      "title": "Iowa Capital Dispatch Politics",
+      "feed_url": "https://iowacapitaldispatch.com/category/government-politics/feed/",
+      "website_url": "https://iowacapitaldispatch.com/category/government-politics/",
+      "description": "The Iowa Capital Dispatch is a hard-hitting, independent news organization dedicated to connecting Iowans to their state government and its impact on their lives. Covers the Latest News and Updates in Politics.",
+      "followers": {
+        "facebook": 12400,
+        "twitter": 7200
+      },
+      "image_url": "https://i1.feedspot.com/5313714.jpg?t=1629374308"
+    },
+    {
+      "title": "Iowa State Daily Politics And Administration",
+      "feed_url": "https://iowastatedaily.com/category/news-politics-and-administration/feed/",
+      "website_url": "https://iowastatedaily.com/category/news-politics-and-administration/",
+      "description": "The Iowa State Daily is an independent student news organization established in 1890. Covers the Latest News and Updates in Politics.",
+      "followers": {
+        "facebook": 32500,
+        "twitter": 20000,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5313734.jpg?t=1629375098"
+    },
+    {
+      "title": "WHO 13 News Politics",
+      "feed_url": "https://who13.com/news/politics/feed/",
+      "website_url": "https://who13.com/news/politics/",
+      "description": "WHO 13 News is Iowa's leader for local news, weather, sports, and politics. Covers the latest news and updates in politics.",
+      "followers": {
+        "facebook": 283000,
+        "twitter": 86600
+      },
+      "image_url": "https://i1.feedspot.com/5313743.jpg?t=1629375932"
+    },
+    {
+      "title": "The Daily Iowan Politics",
+      "feed_url": "https://dailyiowan.com/category/politics/feed/",
+      "website_url": "https://dailyiowan.com/category/politics/",
+      "description": "The Daily Iowan is a multi-faceted news media organization, which provides fair and accurate coverage of events and issues. Covers the Latest News and Updates in Politics.",
+      "followers": {
+        "facebook": 18000,
+        "twitter": 27100
+      },
+      "image_url": "https://i1.feedspot.com/5313753.jpg?t=1629373431"
+    },
+    {
+      "title": "Iowa Public Radio Politics",
+      "feed_url": "https://www.iowapublicradio.org/political-news.rss",
+      "website_url": "https://www.iowapublicradio.org/political-news",
+      "description": "Iowa Public Radio enriches the civic and cultural life in Iowa through high-quality news and cultural programming. Covers the Latest News and Updates in Politics.",
+      "followers": {
+        "facebook": 29400,
+        "twitter": 17000
+      },
+      "image_url": "https://i1.feedspot.com/5313900.jpg?t=1629439540"
+    },
+    {
+      "title": "Sioux City Journal \u00bb Government & Politics",
+      "feed_url": "https://siouxcityjournal.com/search/?f=rss&t=article&c=news/local/government-politics&l=50&s=start_time&sd=desc",
+      "website_url": "https://siouxcityjournal.com/news/local/government-politics/",
+      "description": "Stay informed and notified of the ongoing political news, events and updated with the help of the Government & Politics section from Sioux City Journal. We are the best source for community, business, and entertainment news and opinions from the Sioux City region.",
+      "followers": {
+        "facebook": 48800,
+        "twitter": 30900
+      },
+      "image_url": "https://i1.feedspot.com/5313757.jpg?t=1638428861"
+    },
+    {
+      "title": "Iowa Democrats",
+      "feed_url": "https://iowademocrats.org/feed/",
+      "website_url": "https://iowademocrats.org/latest-news/",
+      "description": "Elect good Democrats and promote Democratic principles at every level of government. Covers insider political party news and updates.",
+      "followers": {
+        "facebook": 42500,
+        "twitter": 29800
+      },
+      "image_url": "https://i1.feedspot.com/5313735.jpg?t=1629375277"
+    },
+    {
+      "title": "The Gazette Government & Politics",
+      "feed_url": "https://www.thegazette.com/government-politics/",
+      "website_url": "https://www.thegazette.com/government-politics/",
+      "description": "The Gazette follows governmental news and Eastern Iowa Politics in Cedar Rapids, Iowa, Iowa City, Iowa, and area districts.",
+      "followers": {
+        "facebook": 101700,
+        "twitter": 56500
+      },
+      "image_url": "https://i1.feedspot.com/5313899.jpg?t=1629439442"
+    }
+  ]
+}

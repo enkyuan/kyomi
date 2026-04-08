@@ -1,0 +1,299 @@
+{
+  "category": "Stock Market News",
+  "source_url": "https://rss.feedspot.com/stock_market_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "MarketWatch",
+      "feed_url": "https://feeds.content.dowjones.io/public/rss/mw_topstories",
+      "website_url": "https://www.marketwatch.com/",
+      "description": "MarketWatch.com, published by Dow Jones & Company, tracks the pulse of markets for engaged investors with more than 16 million visitors per month. MarketWatch provides the latest stock market, financial and business news. Get stock market quotes, personal finance advice, company news and more.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 4600000
+      },
+      "image_url": "https://i1.feedspot.com/80109.jpg?t=1656573003"
+    },
+    {
+      "title": "Investing.com",
+      "feed_url": "https://www.investing.com/rss/news.rss",
+      "website_url": "https://www.investing.com/",
+      "description": "Founded in 2007, Investing.com is a definitive source for tools and information relating to the financial markets such as real-time quotes and streaming charts, up-to-date financial news, technical analysis, brokers directory & listings, an economic calendar, and tools & calculators. The site provides in-depth information on Currencies, Indices & Stocks, Futures and Options, Commodities, and Rates & Bonds.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/4806846.jpg?t=1526031527"
+    },
+    {
+      "title": "CNBC",
+      "feed_url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114",
+      "website_url": "https://www.cnbc.com/",
+      "description": "CNBC is the hub of business news, financial markets, and economic updates. It features real-time information on stock markets, investment insights, and analysis of global economic trends. The site includes sections on technology, finance, and personal finance, offering detailed articles, video content, and market data to keep readers informed about the latest developments in the financial world.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 175500,
+        "instagram": 700000
+      },
+      "image_url": "https://i1.feedspot.com/5417397.jpg?t=1721194773"
+    },
+    {
+      "title": "Seeking Alpha",
+      "feed_url": "https://seekingalpha.com/feed.xml",
+      "website_url": "https://seekingalpha.com/market-news",
+      "description": "Seeking Alpha is the premier website for actionable stock market opinion and analysis, and vibrant, intelligent finance discussion. Seeking Alpha is a platform for investment research, with broad coverage of stocks, asset classes, ETFs and investment strategy.",
+      "followers": {
+        "facebook": 67300,
+        "twitter": 294700,
+        "instagram": 26800
+      },
+      "image_url": "https://i1.feedspot.com/4668593.jpg"
+    },
+    {
+      "title": "The Motley Fool UK",
+      "feed_url": "https://www.fool.co.uk/feed/",
+      "website_url": "https://www.fool.co.uk/",
+      "description": "The Motley Fool is dedicated to helping the world invest - better.Founded in the US in 1993 by brothers Tom and David Gardner (those two handsome chaps on the right), The Motley Fool helps people attain financial freedom through our website, our selection of premium investing newsletters and reports.",
+      "followers": {
+        "facebook": 13500,
+        "twitter": 19600,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4904412.jpg?t=1613569869"
+    },
+    {
+      "title": "AlphaStreet",
+      "feed_url": "https://news.alphastreet.com/feed/",
+      "website_url": "https://news.alphastreet.com/",
+      "description": "AlphaStreet is a one-stop shop for financial news, data and resources for investment professionals, investors, analysts and fund managers. We empower your decision making by offering high quality data that is customized, flexible to use, precise and time sensitive.",
+      "followers": {
+        "facebook": 525,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5004025.jpg"
+    },
+    {
+      "title": "Raging Bull",
+      "feed_url": "https://ragingbull.com/feed/",
+      "website_url": "https://ragingbull.com/",
+      "description": "Raging Bull simplifies trading so you can become confident, take control, and live without limits. At Raging Bull, our millionaire traders such as Jason Bond, Jeff Bishop, Kyle Dennis, and Jeff Williams are dedicated to your trading success.",
+      "followers": {
+        "facebook": 77200,
+        "twitter": 26200
+      },
+      "image_url": "https://i1.feedspot.com/5269317.jpg"
+    },
+    {
+      "title": "INO.com Blog",
+      "feed_url": "https://www.ino.com/blog/feed/",
+      "website_url": "https://www.ino.com/blog/",
+      "description": "We specialize in the futures and options markets, serving traders worldwide with a continuous information service of quotes, charts and news. We are also a storefront for trading tools, charts, publications, educational courses and other resources. We are privately-held and independent. Follow this blog to get financial news, analysis and unique perspectives from some of the most trusted financial analysts on the web - covering stocks, futures, forex, mutual funds, political and economic events.",
+      "followers": {
+        "facebook": 2300
+      },
+      "image_url": "https://i1.feedspot.com/3711832.jpg?t=1605157024"
+    },
+    {
+      "title": "Moneycontrol",
+      "feed_url": "https://www.moneycontrol.com/rss/latestnews.xml",
+      "website_url": "https://www.moneycontrol.com/",
+      "description": "Moneycontrol is India's leading financial information source. Manage your finance with our online Investment Portfolio, Live Stock Price, Stock Trading news, Live CNBC TV18, Share Market, Views and Analysis on Equity and Stock Markets Tips, sensex, nifty, Commodity Market, personal finance, mutual funds, insurance, bank and loans.",
+      "followers": {
+        "facebook": 789,
+        "twitter": 1500000,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/4892244.jpg?t=1526109152"
+    },
+    {
+      "title": "Scanz Blog",
+      "feed_url": "https://scanz.com/feed/",
+      "website_url": "https://scanz.com/blog/",
+      "description": "Scanz is the most comprehensive and effective scanning tool on the market. Find the RIGHT stocks to trade at the RIGHT time by choosing from hundreds of different real-time scanning criteria or selecting a professional scan from our Scanz library.",
+      "followers": {
+        "facebook": 313,
+        "twitter": 16700,
+        "instagram": 259
+      },
+      "image_url": "https://i1.feedspot.com/5269319.jpg?t=1618408511"
+    },
+    {
+      "title": "Nasdaq \u00bb Stocks",
+      "feed_url": "https://www.nasdaq.com/feed/rssoutbound?category=Stocks",
+      "website_url": "https://www.nasdaq.com/news-and-insights/topic/markets/stocks",
+      "description": "Get timely analysis and expert opinions on stocks to make informed investment decisions. Stay up to date on the latest news and insights from Nasdaq.",
+      "followers": {
+        "facebook": 825600,
+        "twitter": 148000,
+        "instagram": 594700
+      },
+      "image_url": "https://i1.feedspot.com/5211728.jpg?t=1733996924"
+    },
+    {
+      "title": "FinanceAsia",
+      "feed_url": "https://www.financeasia.com/rss/latest",
+      "website_url": "https://www.financeasia.com/",
+      "description": "FinanceAsia is Asia's authoritative source for finance, investment banking, economic and capital markets news, for those involved in corporate finance, banking, asset management and market regulation.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 11800
+      },
+      "image_url": "https://i1.feedspot.com/4836356.jpg?t=1752836469"
+    },
+    {
+      "title": "Mint \u00bb Stock Markets",
+      "feed_url": "https://www.livemint.com/rss/markets",
+      "website_url": "https://www.livemint.com/market/stock-market-news",
+      "description": "Get share market latest news & headlines. Check share market news live, NIFTY, SENSEX today live, BSE/ NSE live, forex commodity market news, analysis on equity at Mint.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 2100000,
+        "instagram": 719000
+      },
+      "image_url": "https://i1.feedspot.com/5043311.jpg?t=1753187341"
+    },
+    {
+      "title": "S&P \u00bb Research",
+      "feed_url": "https://www.spglobal.com/spdji/en/rss/rss-details/?rssFeedName=research",
+      "website_url": "https://www.spglobal.com/spdji/en/research-insights/research/",
+      "description": "Get the latest content from S&P Dow Jones Indices. Find latest index news including thought leadership content and more.",
+      "followers": {
+        "facebook": 57400,
+        "twitter": 44000,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5485874.jpg?t=1752815910"
+    },
+    {
+      "title": "Business Standard \u00bb Stock Market Today",
+      "feed_url": "https://www.business-standard.com/rss/markets/stock-market-news-10618.rss",
+      "website_url": "https://www.business-standard.com/markets/stock-market-news",
+      "description": "Stay Updated with Latest Stock Market News and Headlines, Read Stock market Breaking news, Get Stock Market News Live Updates on Business Standard.",
+      "followers": {
+        "facebook": 591900,
+        "twitter": 2200000,
+        "instagram": 707800
+      },
+      "image_url": "https://i1.feedspot.com/7313299.jpg?t=1753188068"
+    },
+    {
+      "title": "CNBC TV18 \u00bb Market",
+      "feed_url": "https://www.cnbctv18.com/commonfeeds/v1/cne/rss/market.xml",
+      "website_url": "https://www.cnbctv18.com/market",
+      "description": "Get the stock and share market live news from BSE/NSE sensex, share markets updates, NIFTY 50, SENSEX today. Check world stock market news, live market news, share market today and forex commodity market news.",
+      "followers": {
+        "facebook": 2300000,
+        "twitter": 1400000,
+        "instagram": 916500
+      },
+      "image_url": "https://i1.feedspot.com/7838102.jpg?t=1752818729"
+    },
+    {
+      "title": "Business Line \u00bb Stocks",
+      "feed_url": "https://www.thehindubusinessline.com/markets/stock-markets/feeder/default.rss",
+      "website_url": "https://www.thehindubusinessline.com/markets/stock-markets/",
+      "description": "Get the latest stock/share market live news from BSE/NSE sensex, share markets updates, NIFTY 50, SENSEX today news from Businessline.",
+      "followers": {
+        "facebook": 644000,
+        "twitter": 115000,
+        "instagram": 113000
+      },
+      "image_url": "https://i1.feedspot.com/5520704.jpg?t=1678863795"
+    },
+    {
+      "title": "MoneyWorks4me \u00bb Global Markets",
+      "feed_url": "https://www.moneyworks4me.com/company/news/latest-stock-news-rss/global-markets",
+      "website_url": "https://www.moneyworks4me.com/indianstocks/global-markets-news",
+      "description": "Get Latest news on Global Markets in India. Also get Global Markets Analysis, Updates with latest stock/share market news and reports.",
+      "followers": {
+        "facebook": 23100,
+        "twitter": 11800,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/7880375.jpg?t=1740477034"
+    },
+    {
+      "title": "The Hindu \u00bb Markets",
+      "feed_url": "https://www.thehindu.com/business/markets/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/business/markets/",
+      "description": "Stay up to date with all the latest news about Sensex, Nifty, BSE, NSE, indian Stock market, global stock market from The Hindu.",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/8535719.jpg?t=1753182041"
+    },
+    {
+      "title": "The Indian Express \u00bb Market",
+      "feed_url": "https://indianexpress.com/section/business/market/feed/",
+      "website_url": "https://indianexpress.com/section/business/market/",
+      "description": "All articles about Markets from The Indian Express.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8643422.jpg?t=1753131223"
+    },
+    {
+      "title": "Shutterstock",
+      "feed_url": "https://investor.shutterstock.com/rss/news-releases.xml",
+      "website_url": "https://investor.shutterstock.com/news-events/press-releases",
+      "description": "The Investor Relations website contains information about Shutterstock, Inc.'s business for stockholders, potential investors, and financial analysts.",
+      "followers": {
+        "facebook": 975700,
+        "twitter": 272000,
+        "instagram": 400600
+      },
+      "image_url": "https://i1.feedspot.com/8644317.jpg?t=1753164488"
+    },
+    {
+      "title": "Amman Stock Exchange",
+      "feed_url": "https://www.exchange.jo/en/rss_news_en/rss.xml",
+      "website_url": "https://www.ase.com.jo/en/news",
+      "description": "The ASE Company aims to operate, manage and develop the operations and activities of securities, commodities, and derivatives markets inside and outside Jordan.",
+      "followers": {
+        "facebook": 13400,
+        "twitter": 614,
+        "instagram": 684
+      },
+      "image_url": "https://i1.feedspot.com/8644484.jpg?t=1753178706"
+    },
+    {
+      "title": "Equitymaster",
+      "feed_url": "https://www.equitymaster.com/",
+      "website_url": "https://www.equitymaster.com/",
+      "description": "Since 1996, Equitymaster has been the source for honest and credible opinions on investing in India. Equitymaster is India's leading independent equity research initiative. The happenings in the stock markets, including a pre-open and closing commentary.",
+      "followers": {
+        "twitter": 12700
+      },
+      "image_url": "https://i1.feedspot.com/389764.jpg?t=1610093312"
+    },
+    {
+      "title": "IIFL Securities",
+      "feed_url": "https://www.indiainfoline.com/news",
+      "website_url": "https://www.indiainfoline.com/news",
+      "description": "IIFL is a financial services conglomerate which was started by a group of passionate entrepreneurs in 1995. The genesis of IIFL lies in the power of dreaming big and believing in your dreams. IIFL serves more than 4 million satisfied customers across various business segments and is continuously building on its strengths to deliver excellent service to its expanding customer base.",
+      "followers": {
+        "facebook": 107
+      },
+      "image_url": "https://i1.feedspot.com/4901056.jpg?t=1748414421"
+    },
+    {
+      "title": "Stock Market",
+      "feed_url": "https://stockmarket.com/feed",
+      "website_url": "https://stockmarket.com/",
+      "description": "StockMarket.com provides comprehensive financial information, including stock market news, quotes, charts, and analysis. The site offers detailed coverage of various stock categories like biotech, tech, energy, and more. It features articles on top stocks to watch, investment strategies, and market trends. The platform aims to educate and empower users with resources such as stock analyst ratings, SEC filings, and financial data.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/7326966.jpg?t=1721113236"
+    },
+    {
+      "title": "Market Screener",
+      "feed_url": "https://www.marketscreener.com/",
+      "website_url": "https://www.marketscreener.com/",
+      "followers": {
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/7327023.jpg?t=1721282848"
+    }
+  ]
+}

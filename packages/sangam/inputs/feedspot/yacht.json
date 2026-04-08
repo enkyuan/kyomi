@@ -1,0 +1,586 @@
+{
+  "category": "Yacht",
+  "source_url": "https://rss.feedspot.com/yacht_rss_feeds",
+  "feeds": [
+    {
+      "title": "Yachting World",
+      "feed_url": "https://www.yachtingworld.com/feed?x=1",
+      "website_url": "https://www.yachtingworld.com/",
+      "description": "Yacht racing, sailing news, events and blogs from Yachting World, covering the world's biggest yacht races.",
+      "followers": {
+        "facebook": 268000,
+        "twitter": 34500
+      },
+      "image_url": "https://i1.feedspot.com/4515851.jpg?t=1613797152"
+    },
+    {
+      "title": "Yachting Monthly",
+      "feed_url": "https://www.yachtingmonthly.com/news/feed",
+      "website_url": "https://www.yachtingmonthly.com/news",
+      "description": "Yachting Monthly is the home of yacht news, blogs, boat and gear reviews",
+      "followers": {
+        "facebook": 59800,
+        "twitter": 30800
+      },
+      "image_url": "https://i1.feedspot.com/4515850.jpg"
+    },
+    {
+      "title": "Interesting Sailboats Blog",
+      "feed_url": "https://interestingsailboats.blogspot.com/feeds/posts/default",
+      "website_url": "https://interestingsailboats.blogspot.com/",
+      "description": "As an architect I could understand the differences in the interior concepts and as a sailor I surely was interested in understanding all those differences regarding rig, hull, rudder and keel. A long time learning about Naval Architecture, following the work of the best Na, many sail test (read and made), many exchange of information with sailors with new boats provided me with an amount of information that I thought it would be interesting to share with other passionate people.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5202163.jpg?t=1601393799"
+    },
+    {
+      "title": "CharterWorld",
+      "feed_url": "https://www.charterworld.com/news/feed",
+      "website_url": "https://www.charterworld.com/news/",
+      "description": "The World's leading luxury yacht charter company has every boat for your perfect sailing or motor yacht charter vacation & crewed super or mega yacht rental.",
+      "followers": {
+        "facebook": 100700,
+        "twitter": 11600,
+        "instagram": 24700
+      },
+      "image_url": "https://i1.feedspot.com/752003.jpg?t=1674471463"
+    },
+    {
+      "title": "Your Boat Holiday",
+      "feed_url": "https://www.yourboatholiday.com/news-trends-2/feed/",
+      "website_url": "https://www.yourboatholiday.com/news-trends-2/",
+      "description": "YourBoatHoliday, travel portal dedicated to the sea and its lovers was born from the desire to transmit and share a passion, that has transformed itself in a professional and qualified service of boat booking.",
+      "followers": {
+        "facebook": 58800,
+        "twitter": 140,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4740071.jpg?t=1674471490"
+    },
+    {
+      "title": "Heesen Yachts",
+      "feed_url": "https://www.heesenyachts.com/feed/",
+      "website_url": "https://www.heesenyachts.com/news/",
+      "description": "Keep up to date and follow the news and events from Heesen Yachts. Heesen Yachts is a well known Dutch shipyard building refined superyachts known for their exceptional performance, cutting-edge technology & timeless design.",
+      "followers": {
+        "facebook": 66300,
+        "twitter": 9700,
+        "instagram": 118100
+      },
+      "image_url": "https://i1.feedspot.com/4516748.jpg?t=1613797163"
+    },
+    {
+      "title": "LUXUO \u00bb Yachts",
+      "feed_url": "https://www.luxuo.com/yachting/feed",
+      "website_url": "https://www.luxuo.com/yachting",
+      "description": "Blogs on Luxury motor yachts-Luxury megayachts.",
+      "followers": {
+        "facebook": 301200,
+        "twitter": 101000,
+        "instagram": 26200
+      },
+      "image_url": "https://i1.feedspot.com/4516282.jpg?t=1613797165"
+    },
+    {
+      "title": "Megayacht News",
+      "feed_url": "https://megayachtnews.com/feed/",
+      "website_url": "https://megayachtnews.com/",
+      "description": "Distinguished Luxury-yacht site MegayachtNews.com educates American luxury-yacht buyers and owners plus their advisors about the best ways to enjoy the yachting lifestyle. Discover our all-original content on new launches, designs, and more articles in this feed.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4732249.jpg?t=1674473575"
+    },
+    {
+      "title": "Florida Yachts International",
+      "feed_url": "https://fyiyachts.com/feed/",
+      "website_url": "https://fyiyachts.com/fyi-news/",
+      "description": "Embark on a beautiful exploration of majestic blue water crafts. Florida Yachts International showcases a burgeoning catalog of exquisite, timeless luxury yachts sourced from a wide range of international brands. Florida Yachts International (FYI) is a premier yacht dealer in Miami offering world-class high-performance yachts to match your yachting demands.",
+      "followers": {
+        "facebook": 106000,
+        "instagram": 21900
+      },
+      "image_url": "https://i1.feedspot.com/5737192.jpg?t=1702631693"
+    },
+    {
+      "title": "Nordhavn Yachts",
+      "feed_url": "https://nordhavn.com/feed/",
+      "website_url": "https://nordhavn.com/all-the-latest-from-nordhavn-yachts/articles/",
+      "description": "Designing and building the best quality and most seaworthy yachts available worldwide.",
+      "followers": {
+        "facebook": 18100,
+        "twitter": 2600,
+        "instagram": 26400
+      },
+      "image_url": "https://i1.feedspot.com/5293820.jpg?t=1674471616"
+    },
+    {
+      "title": "Luxury Yacht Charters Blog",
+      "feed_url": "https://luxuryyachtcharters.com/feed/",
+      "website_url": "https://luxuryyachtcharters.com/category/blog/",
+      "description": "Luxury Yacht Charter will take you where you want to go, weather permitting. Perhaps you would like to jaunt through the Caribbean, or around the Mediterranean Sea, or the New England coast. Or, maybe you want to visit a particular destination or an ideal island chain elsewhere in the world. Let us be your guides. We will help you realize your luxury yacht charter vacation dreams. Our blog highlights yacht charter vacations in Asia, Caribbean, Bahamas, Mediterranean, North America, and South Pacific.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 84
+      },
+      "image_url": "https://i1.feedspot.com/5267782.jpg?t=1674471668"
+    },
+    {
+      "title": "Al Ali Yachts Blog",
+      "feed_url": "https://alaliyachts.com/feed/",
+      "website_url": "https://alaliyachts.com/blog/",
+      "description": "Al Ali Yachts official blog is regularly updated about latest happenings at the company and on the sea. We are delighted to serve our audience. Al Ali Yacht is highly recommended for the role and trusted yachts rentals in Dubai Marina and Jumeirah. We offer top-of-the-line services to our clients, mixed with excellent customer service.",
+      "followers": {
+        "facebook": 920,
+        "twitter": 15,
+        "instagram": 6000
+      },
+      "image_url": "https://i1.feedspot.com/5434636.jpg?t=1661249932"
+    },
+    {
+      "title": "Silver Star Yachting Blog",
+      "feed_url": "https://www.silverstaryachting.com/en/blog/feed/",
+      "website_url": "https://www.silverstaryachting.com/en/blog/",
+      "description": "A blog about the world of luxury yacht charters.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 163,
+        "instagram": 6200
+      },
+      "image_url": "https://i1.feedspot.com/4515880.jpg?t=1628229293"
+    },
+    {
+      "title": "Miami International Yacht Sales Blog",
+      "feed_url": "https://www.miamiinternationalyachtsales.com/feed/",
+      "website_url": "https://www.miamiinternationalyachtsales.com/blog/",
+      "description": "Miami International blogs on different topics related to yachting, and things that make it fun. Their goal is to spread knowledge about yachts and yachting. Miami International Yacht Sales is a prominent Riva yachts & boat dealer in Miami.",
+      "followers": {
+        "facebook": 46,
+        "twitter": 17,
+        "instagram": 440
+      },
+      "image_url": "https://i1.feedspot.com/5386978.jpg?t=1710166353"
+    },
+    {
+      "title": "Yacht Charter South Florida",
+      "feed_url": "https://yachtchartersnow.com/feed/",
+      "website_url": "https://yachtchartersnow.com/blogs/",
+      "description": "Read our blog for weekly tips, advise, and more about chartering yachts in the beautiful South Florida. The perfect venue for any of your upcoming events",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4515904.jpg?t=1613797262"
+    },
+    {
+      "title": "Antibes Yachting Blog",
+      "feed_url": "https://antibesyachting.com/feed/",
+      "website_url": "https://antibesyachting.com/news-blog/",
+      "description": "Antibes Yachting goes beyond conventional business to connect you with opportunities and industry-specific advice.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 1500,
+        "instagram": 6500
+      },
+      "image_url": "https://i1.feedspot.com/5230659.jpg?t=1674471691"
+    },
+    {
+      "title": "Yacht N Gulets \u00bb News",
+      "feed_url": "https://yachtsngulets.com/feed/",
+      "website_url": "https://yachtsngulets.com/news.html#/",
+      "description": "Covers articles all about gulets, the destinations they go to and ideas as well as interesting information. Yachts N Gulets is a professional and well organized private yacht charters and luxury gulet blue cruise holidays in Turkey Greece and Croatia.",
+      "followers": {
+        "facebook": 17400,
+        "twitter": 480
+      },
+      "image_url": "https://i1.feedspot.com/4516261.jpg?t=1613797177"
+    },
+    {
+      "title": "Epic Yacht Charters Blog",
+      "feed_url": "https://www.epicyachtcharters.com/feed/",
+      "website_url": "https://www.epicyachtcharters.com/blog-news/",
+      "description": "Michelle Heyns is the owner of Epic Yacht Charters and is well equipped to guide you on a journey that will lead to the trip of a lifetime aboard a luxury charter yacht in the Caribbean, the Virgin Islands, the Bahamas, or Belize. With over 300 charter weeks and 16+ years of experience as a hostess and charter chef, Michelle has a unique perspective on the industry.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 171,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5267781.jpg?t=1674471726"
+    },
+    {
+      "title": "Digital Yacht",
+      "feed_url": "https://digitalyacht.net/feed/",
+      "website_url": "https://digitalyacht.net/",
+      "description": "Blogs on Next Generation Marine Electronics.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1700,
+        "instagram": 847
+      },
+      "image_url": "https://i1.feedspot.com/4516251.jpg"
+    },
+    {
+      "title": "All Yachts Worldwide Blog",
+      "feed_url": "https://www.allyachtsworldwide.com/blog/3/feed",
+      "website_url": "https://www.allyachtsworldwide.com/blogs/karen",
+      "description": "All Yachts Worldwide has been chartering yachts worldwide for over 30 years! We will find the perfect yacht and crew for your dream vacation. Guaranteed!",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 155,
+        "instagram": 468
+      },
+      "image_url": "https://i1.feedspot.com/4516236.jpg?t=1613797205"
+    },
+    {
+      "title": "Dudley Dix Yacht Design",
+      "feed_url": "https://dudleydix.blogspot.com/feeds/posts/default",
+      "website_url": "https://dudleydix.blogspot.com/",
+      "description": "Get the news about what is happening at Dudley Dix Yacht Design, from new designs to boat shows or anything else of interest to our followers.",
+      "followers": {
+        "facebook": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5202149.jpg?t=1601392289"
+    },
+    {
+      "title": "212 Yachts Blog",
+      "feed_url": "https://www.212-yachts.com/blog/feed/",
+      "website_url": "https://www.212-yachts.com/blog/",
+      "description": "212 Yachts are experts in the field of yacht charters, motorboat rental and superyacht tender hire on the French Riviera and beyond. To ensure that you have the best yachting experience possible, we continue to share industry knowledge, itinerary advice and local insights.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 655,
+        "instagram": 13400
+      },
+      "image_url": "https://i1.feedspot.com/4515902.jpg?t=1613797200"
+    },
+    {
+      "title": "MacGregor Yachts Blog",
+      "feed_url": "https://macgregoryachts.com/feed/",
+      "website_url": "https://macgregoryachts.com/news-and-events/",
+      "description": "MacGregor Yachts is south Florida's premier yacht brokerage firm. We offer complete services for both buyers and sellers of custom sportfishing boats and luxurious motor yachts. Customer service is our number one priority at MacGregor Yachts. We have a dedicated staff comprised of knowledgeable marketing and sales team members who can assist you with your every boating need. Each member of our team is a member of the Florida Yacht Brokers Association, the official licensing board for bonded yacht brokers in the state of Florida.",
+      "followers": {
+        "facebook": 10200,
+        "twitter": 136,
+        "instagram": 34600
+      },
+      "image_url": "https://i1.feedspot.com/5293819.jpg?t=1623921509"
+    },
+    {
+      "title": "Regency Yacht Charters Blog",
+      "feed_url": "https://yachtfleet.com/feed/",
+      "website_url": "https://yachtfleet.com/chartering-a-yacht/blog/",
+      "description": "Our Yacht & Charter Brokers are the professionals who will help you find the perfect match: the perfect yacht and the perfect crew who will help you unwind, have fun, and have a terrific vacation. Your charter brokers all have experience with chartering, they know the area you plan to visit and the yachts crews that they are recommending. To do this, our charter brokers visit the yachts at charter and brokerage shows around the world and socialize with the crew. They have also traveled extensively to many parts of the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5293818.jpg?t=1674471992"
+    },
+    {
+      "title": "Columbus Yacht",
+      "feed_url": "https://www.columbusyachts.it/feed/",
+      "website_url": "https://www.columbusyachts.it/news-events/",
+      "description": "Stay up-to-date on all News and Programs from Columbus Yachts. Find the latest Yacht-related information and news innovation in these posts. Columbus Yachts, a brand of Palumbo Superyachts, is a dedicated to providing a pleasurable boating experience to customers through their service.",
+      "followers": {
+        "facebook": 6700,
+        "instagram": 19500
+      },
+      "image_url": "https://i1.feedspot.com/5498292.jpg?t=1674472669"
+    },
+    {
+      "title": "Yachting News",
+      "feed_url": "https://www.yachtingnews.com/feed/",
+      "website_url": "https://www.yachtingnews.com/",
+      "description": "Yachting News belongs to The International yachting Media, the most-read boating magazine network in the world. Our web portals are the main source of information for yacht and boat owners, the place where they can find anything about their boating passion.",
+      "followers": {
+        "facebook": 94200,
+        "twitter": 6200,
+        "instagram": 27900
+      },
+      "image_url": "https://i1.feedspot.com/5453441.jpg?t=1672749727"
+    },
+    {
+      "title": "Explorer Yacht Vanguard Blog",
+      "feed_url": "https://www.exploreryacht.com/blog-feed.xml",
+      "website_url": "https://www.exploreryacht.com/blog",
+      "description": "Read about the design and build of Vanguard. The equipment used, reasons for specification and design. Problems encountered, voyages of the crew during this build and after completion. Explorer Yacht Vanguard is a 78-ft long design by Artnautica, capable of safe, long-range operation worldwide under most sea and weather conditions.",
+      "followers": {
+        "instagram": 289
+      },
+      "image_url": "https://i1.feedspot.com/5498290.jpg?t=1674473643"
+    },
+    {
+      "title": "Super Sail Yachts Blog",
+      "feed_url": "https://www.supersailyachts.com/blog/feed/",
+      "website_url": "https://www.supersailyachts.com/blog/",
+      "description": "SuperSailYachts is a luxury yacht chartering service with a great team of yachting enthusiasts ready to support, advise and assist you in every aspect of a superyacht charter. Read our blog articles on Basic Yachting tips, Lifestyle, and Exclusivity.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5498289.jpg?t=1674472900"
+    },
+    {
+      "title": "World Yacht Group Blog",
+      "feed_url": "https://worldyachtgroup.com/feed/",
+      "website_url": "https://worldyachtgroup.com/blog/",
+      "description": "World Yacht Hotel, is a world-class yachting accommodation platform where people can book staterooms on yachts worldwide. Our blog offers a glimpse in the luxurious lifestyle experiences delivered by our services along with crucial Yacht-buying/renting insights and more.",
+      "followers": {
+        "facebook": 85000,
+        "twitter": 1000,
+        "instagram": 103600
+      },
+      "image_url": "https://i1.feedspot.com/5498286.jpg?t=1674472665"
+    },
+    {
+      "title": "You've Yacht To Be Kidding",
+      "feed_url": "https://youveyachttobekidding.com/feed/",
+      "website_url": "https://youveyachttobekidding.com/",
+      "description": "A blog giving an insight and peek into the real life work onboard a super yacht. My name is Dylan and I am a superyacht stew. Join me weekly for blogs about the rich and luxurious lifestyle of the industry I work in. Giving you a real life look at the working world of yachting.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 33,
+        "instagram": 641
+      },
+      "image_url": "https://i1.feedspot.com/5593618.jpg?t=1686289283"
+    },
+    {
+      "title": "Flying Fish Online",
+      "feed_url": "https://www.flyingfishonline.com/news/feed/",
+      "website_url": "https://www.flyingfishonline.com/news/",
+      "description": "All the latest news and features from Flying Fish. Find out the latest about our watersports courses, yacht and crew training.",
+      "followers": {
+        "facebook": 10500,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5053756.jpg?t=1613797171"
+    },
+    {
+      "title": "Isabella Yachts Blog",
+      "feed_url": "https://www.isabellayachtsphuket.com/feed/",
+      "website_url": "https://www.isabellayachtsphuket.com/blog/",
+      "description": "Isabella Yachts has been established in Phuket since 2012 specializing in crewed and bareboat charters for day/weekly trips around the islands in Thailand and Myanmar. With a team of over 10 people, working full time, and based in Phuket all year round, we can provide 24/7 assistance and are always there to help. Get all the latest information and tips on yacht activities and much more. Get inspired with our blog and get lost in your dream.",
+      "followers": {
+        "facebook": 9200,
+        "instagram": 25300
+      },
+      "image_url": "https://i1.feedspot.com/5293822.jpg?t=1623923613"
+    },
+    {
+      "title": "Yacht Registration Company Blog",
+      "feed_url": "https://www.yachtregistration.company/feed/",
+      "website_url": "https://www.yachtregistration.company/blog/",
+      "description": "European market leader in pleasure and commercial yacht and boat registration services! Register your motor yacht or sailboat online under the Polish, Dutch, UK or Gibraltar flag. We also provide worldwide registrations and MMSI radio licenses.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5267785.jpg?t=1618398093"
+    },
+    {
+      "title": "Nicholson Yacht Charters Blog",
+      "feed_url": "https://www.yachtvacations.com/feed/",
+      "website_url": "https://www.yachtvacations.com/blog/",
+      "description": "Nicholson Yacht Charters is the Oldest Established Yacht Charter Company in the World - and We're Still First! Nicholson Yacht Charters is still a family business with offices in Maine and Massachusetts and takes pride in offering the most satisfying and luxurious yachting experience possible to guests. No other charter company knows the craft and the cruising grounds as well as Nicholson Yacht Charter's caring, experienced staff. Follow to learn more about Chartering a Yacht and Yacht Vacations with our Yacht Charter Blog at Nicholson Yacht Charters.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 224
+      },
+      "image_url": "https://i1.feedspot.com/5267784.jpg?t=1618397940"
+    },
+    {
+      "title": "Freedom Yacht Blog",
+      "feed_url": "https://freedomyachtservices.com/feed/",
+      "website_url": "https://freedomyachtservices.com/blog/",
+      "description": "We provide the best boat detailing South Florida has to offer. Freedom Yacht Services specializes in boat detailing / boat cleaning in Fort Lauderdale, Florida.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 63
+      },
+      "image_url": "https://i1.feedspot.com/4516265.jpg?t=1674472437"
+    },
+    {
+      "title": "Claremont Yachting",
+      "feed_url": "https://claremontyachting.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://claremontyachting.blogspot.com/",
+      "description": "Claremont yachting rentals afford for training in numerous fun activities like fishing, speed boating for the amateurs and the experts, water skiing and water tubing. All the activities accomplished with the boat rentals are purposely performed for the fun of each and every person involved.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5070950.jpg?t=1613797249"
+    },
+    {
+      "title": "What Yacht To Do Blog",
+      "feed_url": "https://www.whatyachttodo.com/feed/",
+      "website_url": "https://www.whatyachttodo.com/our-blog/",
+      "description": "Sam and Rev Crouse created What Yacht To Do to show how you can be sitting in your living room one day and then living on the water the next. Sam is a former AF pilot and retiree from American Airlines. Rev's background is in education and marketing. Here on What Yacht To Do as they learn how to turn it on, move it around, live aboard and go around America's Great Loop.",
+      "followers": {
+        "facebook": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5267786.jpg?t=1618398207"
+    },
+    {
+      "title": "The Yacht Owner",
+      "feed_url": "https://theyachtowner.net/feed/",
+      "website_url": "https://theyachtowner.net/",
+      "description": "Daniel Mihai Popescu is a ship engineer with background in yacht brokerage, real estate, construction, entrepreneurship. The Yacht Owner is dedicated to all the yachtsmen of the world, owning or not owning their yacht & to yacht brokers, a category I feel it's on the verge of extinction. Read it well, former colleagues, you'll be able to give some more advice, better advice. Also for the adventurers, the guys and galls wanting to buy a yacht, a motor yacht or a sailing one.",
+      "followers": {
+        "facebook": 527,
+        "twitter": 12900
+      },
+      "image_url": "https://i1.feedspot.com/4896286.jpg?t=1674472311"
+    },
+    {
+      "title": "YachtCreators Blog",
+      "feed_url": "https://yachtcreators.com/blog/feed/",
+      "website_url": "https://yachtcreators.com/blog/",
+      "description": "Stay current on Announcements and Breaking News updates from YachtCreators and the Boating Industry. YachtCreators is a premier Yacht-designing company founded by Barin Cardenas delivering quality, and entertaining Yachting experiences to their customers.",
+      "followers": {
+        "facebook": 364,
+        "twitter": 35,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5498288.jpg?t=1674473655"
+    },
+    {
+      "title": "Breaking The Mould Accounting",
+      "feed_url": "https://news.btmaccounting.com/rss.xml",
+      "website_url": "https://btmgroupci.com/news",
+      "description": "Covers maritime industry insights, research, articles about owning, maintaining, or managing a luxury yacht and facts, from superyacht accountants targeted at captains, yacht managers, maritime businesses, fiscal agents, family offices and corporate service providers.",
+      "followers": {
+        "instagram": 731
+      },
+      "image_url": "https://i1.feedspot.com/5368499.jpg?t=1644060953"
+    },
+    {
+      "title": "YACHT Solutions",
+      "feed_url": "https://yachtsolutions.ca/feed",
+      "website_url": "https://yachtsolutions.ca//blog/",
+      "description": "Explore recent stories and observations from Yacht Solutions Inc. in this blog. Features boating tips, Vacation ideas, Yacht reviews, recommendations, and more. YACHT Solutions strives to create memorable experiences on the water. We introduce people to yachting and provide fully customized options to boating enthusiasts",
+      "followers": {
+        "facebook": 329,
+        "instagram": 501
+      },
+      "image_url": "https://i1.feedspot.com/5498285.jpg?t=1674473813"
+    },
+    {
+      "title": "Yacht Rental UAE Blog",
+      "feed_url": "https://yachtrentaluae.ae/feed/",
+      "website_url": "https://yachtrentaluae.ae/blog/",
+      "description": "Yacht Rental Dubai, UAE is where luxury sailing dreams turn into reality. They ensure that their customers are spoilt for choice with their wide range of phenomenal superyacht and mega-yacht models. Their professional crew is highly experienced in creating opulent and memorable yacht charter experiences. Dive into their blog and learn more about the latest luxury yacht updates, well-researched articles, interesting sailing facts, services, and more for a memorable trip.",
+      "followers": {
+        "facebook": 111,
+        "twitter": 8,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5498287.jpg?t=1674472657"
+    },
+    {
+      "title": "The Aquanaut",
+      "feed_url": "https://www.theaquanaut.net/feed/",
+      "website_url": "https://www.boatinternational.com/yachts/news",
+      "description": "Get ready to dive into the captivating journey of our yacht and boat blog. Whether you're an avid sailor or simply drawn to the allure of the open sea, The Aquanaut blog is your go-to resource for all things nautical. Aquanaut keeps you up to date with news and facts about the boating and yachting industry.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7293849.jpg?t=1712650251"
+    },
+    {
+      "title": "Power & Motoryacht",
+      "feed_url": "https://www.powerandmotoryacht.com/.rss/full/",
+      "website_url": "https://powerandmotoryacht.com/",
+      "description": "Power & Motoryacht is the world's leading boating magazine. We're your source for honest boat tests, expert how-to advice and award-winning story telling. A true media company, our offerings include immersive video, podcasts, social media and buyer's guides.",
+      "followers": {
+        "facebook": 119900,
+        "twitter": 3600,
+        "instagram": 96100
+      },
+      "image_url": "https://i1.feedspot.com/4963247.jpg?t=1623917898"
+    },
+    {
+      "title": "Yachts International Blog",
+      "feed_url": "https://yachtsinternational.com/.rss/full/",
+      "website_url": "http://yachtsinternational.com/blogs/",
+      "description": "Yachts International is the worldwide leader in the superyacht category with its sophisticated global editorial reach, superior distribution, high-profile events, online community network, and exclusive partnerships with the industry's leading boat shows. The magazine offers an insider's view of the luxury yachting experience with a dynamic mix of quintessential print media, advanced digital platforms, and exclusive yacht owner's clubs at boat shows.",
+      "followers": {
+        "facebook": 28800,
+        "twitter": 7800,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/5267780.jpg?t=1674471582"
+    },
+    {
+      "title": "Nanje Yachts Blog",
+      "feed_url": "https://nanjeyachts.com/feed/",
+      "website_url": "https://nanjeyachts.com/blog-2/",
+      "description": "Nanje Yachts is Dubai's top yacht rental company in Dubai Marina that provides you with luxurious yachts to cruise along the highlights of Dubai offering the best services at affordable prices. Read their blog to get detailed info related to yachts, rentals, travel tips, and more.",
+      "followers": {
+        "facebook": 14500,
+        "twitter": 442,
+        "instagram": 18800
+      },
+      "image_url": "https://i1.feedspot.com/5475588.jpg?t=1670235269"
+    },
+    {
+      "title": "Northrop-Johnson Yacht Charters",
+      "feed_url": "https://www.njcharters.com/feed/",
+      "website_url": "https://www.njcharters.com/travel-news/",
+      "description": "Northrop-Johnson Newport is a blog by Missy Johnston, Senior Yacht Charter Specialist who travels constantly to personally review yachts, and cruising areas and stay in contact with yacht crews for the latest information. Get the latest in Luxury Yachting and travel destinations by following this blog.",
+      "followers": {
+        "facebook": 4400,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4922944.jpg?t=1613797183"
+    },
+    {
+      "title": "Power Yacht Mag",
+      "feed_url": "https://www.blogger.com/feeds/5107347295488607982/posts/default",
+      "website_url": "https://www.poweryachtblog.com/",
+      "description": "Started up in 2007 PowerYacht is a daily updated online mag for motor boats and yachts with New Models, Project articles and more!",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 651
+      },
+      "image_url": "https://i1.feedspot.com/4515897.jpg"
+    },
+    {
+      "title": "Yacht Silhouette",
+      "feed_url": "https://yachtsilhouette.com/feed/",
+      "website_url": "https://yachtsilhouette.com/",
+      "description": "The Moors family preparation, build up and adventures on our yacht Silhouette. A Beneteau Oceanis 473 blog proving that if we can do it, anyone can.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4516259.jpg?t=1613797210"
+    },
+    {
+      "title": "IK Yacht Design Blog",
+      "feed_url": "https://ikyacht.com/feed/",
+      "website_url": "https://ikyacht.com/blog/",
+      "description": "IK Yacht Design is a leader in providing value-added high performance custom interiors for commercial automotive, luxury motor coach, and yacht interiors. Our pledge is to continue creating lasting partnerships with our clients by exceeding their expectations for innovative solutions, high-end products, superior quality workmanship and personalized service. Find latest updates on yacht design at IK Yacht Design.",
+      "followers": {
+        "facebook": 781,
+        "twitter": 556,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5202147.jpg?t=1601390971"
+    },
+    {
+      "title": "Neptune Yachts Dubai",
+      "feed_url": "https://www.blogger.com/feeds/354346617878676066/posts/default",
+      "website_url": "https://neptuneyachtsdubai.blogspot.com/",
+      "description": "Neptune Yacht Dubai provides you to best deals for yacht bookings in Dubai for your meeting and party celebrations.",
+      "followers": {
+        "facebook": 20700,
+        "twitter": 196,
+        "instagram": 11200
+      },
+      "image_url": "https://i1.feedspot.com/5086301.jpg?t=1613797251"
+    },
+    {
+      "title": "Cozmo Yachts Blog",
+      "feed_url": "https://cozmoyachts.com/blog/feed",
+      "website_url": "https://cozmoyachts.com/blog",
+      "description": "Cozmo Yacht, Yacht Rental Dubai, Charter have access to a diverse range of boats and yachts, all types available for short or long term rental.",
+      "followers": {
+        "facebook": 26300,
+        "twitter": 414,
+        "instagram": 10100
+      },
+      "image_url": "https://i1.feedspot.com/4516268.jpg?t=1613797267"
+    },
+    {
+      "title": "Superyachts",
+      "feed_url": "https://www.superyachts.news/feed/",
+      "website_url": "https://www.superyachts.news/",
+      "description": "Superyachts magazine and website publishes news related to leisure boats over 24 meters including sailing yachts, motor yachts, or multihulls. Read articles, news, and tests of the giants of the sea, that exceed 100 meters in length. Superyachts is part of the International Yachting Media Group, the largest boating magazine network in the world.",
+      "followers": {
+        "facebook": 94300,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5498294.jpg?t=1674472676"
+    }
+  ]
+}

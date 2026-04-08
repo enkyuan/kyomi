@@ -1,0 +1,49 @@
+{
+  "category": "Invertebrate",
+  "source_url": "https://rss.feedspot.com/invertebrate_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Invertebrate Collections",
+      "feed_url": "https://invertebrate.w.uib.no/feed/",
+      "website_url": "https://invertebrate.w.uib.no/",
+      "description": "The Invertebrate Collections is one of the University Museum's large collections of scientific zoological material. We use this blog to inform those interested in Cultural History, Natural history, and Botanical Gardens.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4825880.jpg?t=1610785652"
+    },
+    {
+      "title": "North West Invertebrates",
+      "feed_url": "https://www.northwestinvertebrates.org.uk/category/blog/feed/",
+      "website_url": "https://www.northwestinvertebrates.org.uk/category/blog/",
+      "description": "North West Invertebrates is the website of 'The Tanyptera Project', funded by the Tanyptera Trust to promote the study and conservation of insects and other invertebrates. The website aims to inform and inspire future entomology and wildlife conservation.",
+      "followers": {
+        "facebook": 41900,
+        "twitter": 1400,
+        "instagram": 590
+      },
+      "image_url": "https://i1.feedspot.com/5437070.jpg?t=1661854102"
+    },
+    {
+      "title": "Davisinvertebrates",
+      "feed_url": "https://davisinvertebrates.wordpress.com/feed/",
+      "website_url": "https://davisinvertebrates.wordpress.com/",
+      "description": "We are Instructors, TAs, and students of Biology of Invertebrates, an undergraduate course taught at UC Davis. Specifically, we are Eric Sanford, a team of two TAs, Collin Gross and Keira Monuki, and approximately 48 undergraduate students. We use this blog to share our knowledge of the amazing diversity of invertebrates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5437069.jpg?t=1661854263"
+    },
+    {
+      "title": "Invertebrate Dude",
+      "feed_url": "https://www.invertebratedude.com/feeds/posts/default",
+      "website_url": "https://www.invertebratedude.com/",
+      "description": "Invertebrate Dude is a personal blog by an Invertebrate breeding enthusiast specializing in Blattodea, but also quite experienced with certain Coleoptera, Isopoda, and a few other groups. You will find all about his experiences keeping a variety of invertebrates, mostly roaches, and beetles on his blog page.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 43,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5437068.jpg?t=1663333676"
+    }
+  ]
+}

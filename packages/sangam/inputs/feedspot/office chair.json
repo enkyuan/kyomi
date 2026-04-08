@@ -1,0 +1,28 @@
+{
+  "category": "Office Chair",
+  "source_url": "https://rss.feedspot.com/office_chair_rss_feeds",
+  "feeds": [
+    {
+      "title": "Office Chairs Unlimited",
+      "feed_url": "https://blog.officechairsunlimited.com/feed",
+      "website_url": "https://blog.officechairsunlimited.com/",
+      "description": "All about office chairs and the online store, OfficeChairsUnlimted.com. Our mission is to create lifelong customers by offering a large selection of quality office chairs at guaranteed low prices and provide exceptional customer service.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 189
+      },
+      "image_url": "https://i1.feedspot.com/4738723.jpg?t=1608117486"
+    },
+    {
+      "title": "Chair Suggest Blog",
+      "feed_url": "http://www.chairsuggest.com/feed/",
+      "website_url": "http://www.chairsuggest.com/blog/",
+      "description": "Chair Suggest is your home of value when it comes to choosing and purchasing the best office chairs, office chairs manufacturer, office chairs repairing. They are specialized in the field of advanced productions of Office Chairs, Sofas & Furniture.",
+      "followers": {
+        "facebook": 82,
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/4738141.jpg?t=1608117497"
+    }
+  ]
+}

@@ -1,0 +1,645 @@
+{
+  "category": "Military",
+  "source_url": "https://rss.feedspot.com/military_rss_feeds",
+  "feeds": [
+    {
+      "title": "Military Watch Magazine",
+      "feed_url": "https://militarywatchmagazine.com/feed/headlines.rss",
+      "website_url": "https://militarywatchmagazine.com/",
+      "description": "Military Watch is a provider of reliable and insightful analysis into military and military related affairs across the world. From Asia-Pacific tensions to conflict in Europe and Africa, an understanding of military developments is key to fully comprehending foreign relations and politics today.",
+      "followers": {
+        "facebook": 76600
+      },
+      "image_url": "https://i1.feedspot.com/4968946.jpg?t=1605275441"
+    },
+    {
+      "title": "Defence Blog",
+      "feed_url": "https://defence-blog.com/feed/",
+      "website_url": "https://defence-blog.com/category/news/",
+      "description": "Defence Blog is your reliable news source of everything that you need to know about what is going on in the military community and abroad including military vehicles and equipment, breaking news, international news and more. We focus on the people, the issues, the events and the technologies that drive tomorrow's response.",
+      "followers": {
+        "facebook": 93800,
+        "twitter": 51500
+      },
+      "image_url": "https://i1.feedspot.com/4624447.jpg?t=1666011878"
+    },
+    {
+      "title": "GOV.UK \u00bb Ministry of Defence",
+      "feed_url": "https://www.gov.uk/government/organisations/ministry-of-defence.atom",
+      "website_url": "https://www.gov.uk/government/organisations/ministry-of-defence",
+      "description": "We protect the security, independence and interests of our country at home and abroad. We work with our allies and partners whenever possible. Our aim is to ensure that the armed forces have the training, equipment and support necessary for their work, and that we keep within budget.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 1900000,
+        "instagram": 319800
+      },
+      "image_url": "https://i1.feedspot.com/4343616.jpg?t=1605275454"
+    },
+    {
+      "title": "New York's Division of Military and Naval Affairs",
+      "feed_url": "https://dmna.ny.gov/rss/",
+      "website_url": "https://dmna.ny.gov/",
+      "description": "This website comprises of News, history, Services about Military and Naval Affairs.",
+      "followers": {
+        "facebook": 105900,
+        "twitter": 12100,
+        "instagram": 28500
+      },
+      "image_url": "https://i1.feedspot.com/4625565.jpg?t=1647862533"
+    },
+    {
+      "title": "U.S. Navy",
+      "feed_url": "https://www.navy.mil/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=1067&max=10",
+      "website_url": "https://www.navy.mil/Press-Office/News-Stories/Term/3087/",
+      "description": "The U.S. Navy website provides all the latest news and updates about America's Navy. It features top stories, Videos, photos, articles and more.",
+      "followers": {
+        "facebook": 3900000,
+        "twitter": 1800000,
+        "instagram": 2500000
+      },
+      "image_url": "https://i1.feedspot.com/3488927.jpg?t=1605275461"
+    },
+    {
+      "title": "Tinker Air Force Base",
+      "feed_url": "https://www.tinker.af.mil/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=147&isdashboardselected=0&max=20",
+      "website_url": "https://www.tinker.af.mil/",
+      "description": "The Air Force will provides physical fitness assessment alternatives - three for the cardio portion and sit-up components and two for the push-up component of the physical fitness assessment",
+      "followers": {
+        "facebook": 99200,
+        "twitter": 10900
+      },
+      "image_url": "https://i1.feedspot.com/4626080.jpg?t=1605275464"
+    },
+    {
+      "title": "Task & Purpose",
+      "feed_url": "https://taskandpurpose.com/feed/",
+      "website_url": "https://taskandpurpose.com/",
+      "description": "Founded in 2014 Task & Purpose, with a mission to inform, engage, entertain, and stand up for active-duty military members, veterans, and their families. See the latest News stories, trends, tips, reviews, and more at Task & Purpose.",
+      "followers": {
+        "facebook": 838700,
+        "twitter": 77500,
+        "instagram": 264600
+      },
+      "image_url": "https://i1.feedspot.com/4052821.jpg?t=1666011845"
+    },
+    {
+      "title": "War on the Rocks",
+      "feed_url": "https://warontherocks.com/feed/",
+      "website_url": "https://warontherocks.com/",
+      "description": "War on the Rocks is a platform for analysis, commentary, debate, and multimedia content on foreign policy and national security issues through a realist lens. It features articles and podcasts produced by an array of writers with deep experience in these matters.",
+      "followers": {
+        "facebook": 34400,
+        "twitter": 170400
+      },
+      "image_url": "https://i1.feedspot.com/4617823.jpg?t=1673197022"
+    },
+    {
+      "title": "Army Technology",
+      "feed_url": "https://www.army-technology.com/feed/",
+      "website_url": "https://www.army-technology.com/?cf-view/",
+      "description": "Army-technology.com is one of a network of 40 proprietary B2B websites, with an unrivaled global audience of active decision-makers, influencers, and opinion leaders across the world. Army news covering the latest stories in land-based defense technology, military vehicles, soldier armor, robotics, and trends in global warfare and security.",
+      "followers": {
+        "facebook": 8700,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/2152.jpg?t=1755843537"
+    },
+    {
+      "title": "Daily Press - U.S. Military News",
+      "feed_url": "https://www.dailypress.com/tag/military/feed/",
+      "website_url": "https://www.dailypress.com/tag/military/",
+      "description": "News on the military, Navy SEALs and Navy bases across the United States.",
+      "followers": {
+        "facebook": 62300,
+        "twitter": 65500,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4624943.jpg?t=1605275484"
+    },
+    {
+      "title": "BulgarianMilitary.com",
+      "feed_url": "https://bulgarianmilitary.com/feed/",
+      "website_url": "https://bulgarianmilitary.com/",
+      "description": "Quickly, easily and freely access the most critical international defense industry, military-political relations, and military conflicts. Launched in february 2017, BulgarianMilitary.com is an online media for news, analyses, and comments on the Bulgarian and international defence industry, and the Bulgarian and international military situation.",
+      "followers": {
+        "facebook": 30500,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4990169.jpg?t=1666011426"
+    },
+    {
+      "title": "Ministry of Defence",
+      "feed_url": "https://feeds.english.defensie.nl/news.rss",
+      "website_url": "https://english.defensie.nl/",
+      "description": "News items on the Dutch Ministry of Defence.",
+      "followers": {
+        "facebook": 39000,
+        "twitter": 11100,
+        "instagram": 67600
+      },
+      "image_url": "https://i1.feedspot.com/4626098.jpg?t=1608546925"
+    },
+    {
+      "title": "DODReads.com",
+      "feed_url": "https://www.dodreads.com/feed/",
+      "website_url": "https://www.dodreads.com/",
+      "description": "Keep up with articles from DODReads.com",
+      "followers": {
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5055330.jpg?t=1605275528"
+    },
+    {
+      "title": "National Guard",
+      "feed_url": "https://www.nationalguard.mil/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=688&Category=11200&max=20/feed",
+      "website_url": "https://www.nationalguard.mil/News/Overseas-Operations/",
+      "description": "The National Guard continues its historic dual mission, providing trained units to the states, territories and the District of Columbia and keeping itself equipped to protect life and property. The Guard also provides trained units to the nation equipped and ready to defend the United States and its interests all over the globe.",
+      "followers": {
+        "facebook": 367800,
+        "twitter": 689500,
+        "instagram": 436500
+      },
+      "image_url": "https://i1.feedspot.com/4626042.jpg?t=1605275978"
+    },
+    {
+      "title": "The Duffel Blog",
+      "feed_url": "https://www.duffelblog.com/feed",
+      "website_url": "https://www.duffelblog.com/",
+      "description": "The Duffel Blog, The American Military's Most-Trusted News Source, is updated daily with the latest news from the armed forces. Duffel Blog was originally founded by Lance Corporal Alfred Whittingham, a U.S. Marine. Since 1797, Duffel Blog has been serving the men and women of the American military with insightful commentary and hard-hitting journalism.",
+      "followers": {
+        "facebook": 297900,
+        "twitter": 48600,
+        "instagram": 87100
+      },
+      "image_url": "https://i1.feedspot.com/908864.jpg?t=1605275522"
+    },
+    {
+      "title": "U.S. Central Command",
+      "feed_url": "https://www.centcom.mil/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=808&max=20/feed",
+      "website_url": "https://www.centcom.mil/",
+      "description": "U.S. Central Command (CENTCOM) is a combatant command working with national and international partners to promote development and cooperation among nations, respond to crises, and deter or defeat state and transnational aggression in order to establish regional security and stability.",
+      "followers": {
+        "facebook": 686100,
+        "twitter": 498900
+      },
+      "image_url": "https://i1.feedspot.com/4625643.jpg?t=1647868682"
+    },
+    {
+      "title": "Bosphorus Naval News",
+      "feed_url": "https://devrimyaylali.com/feed/",
+      "website_url": "https://devrimyaylali.com/",
+      "description": "Frequently updated news, photos, comments and links about naval issues in the Black Sea and Eastern Mediterranean region",
+      "followers": {
+        "facebook": 965,
+        "twitter": 14300
+      },
+      "image_url": "https://i1.feedspot.com/4589835.jpg?t=1605275537"
+    },
+    {
+      "title": "From the Green Notebook",
+      "feed_url": "https://fromthegreennotebook.com/feed/",
+      "website_url": "https://fromthegreennotebook.com/",
+      "description": "I started this site in 2013 as a personal blog to add my thoughts to a growing global professional discussion on leadership and war. Since then, From The Green Notebook has grown to include several guest authors ranging from First Lieutenant to Three Star General with many of the articles featured in professional publications.",
+      "followers": {
+        "facebook": 11600,
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/4624644.jpg?t=1605275544"
+    },
+    {
+      "title": "China Defense Blog",
+      "feed_url": "http://china-defense.blogspot.com/feeds/posts/default",
+      "website_url": "http://china-defense.blogspot.com/",
+      "description": "This is the blog of China defense, where professional analysts and serious defense enthusiasts share findings on a rising military power.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/345642.jpg?t=1605275914"
+    },
+    {
+      "title": "Eagle Speak",
+      "feed_url": "https://www.eaglespeak.us/feeds/posts/default",
+      "website_url": "https://www.eaglespeak.us/",
+      "description": "The main focus of this blog is maritime security. Issues in the Navy and various security over waters.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5934.jpg?t=1605275584"
+    },
+    {
+      "title": "Carrying the Gun",
+      "feed_url": "https://carryingthegun.com/feed/",
+      "website_url": "https://carryingthegun.com/",
+      "description": "Critical thinking on war and warfare from a life-long professional soldier, student of the Middle East, and unapologetic gamer. The author is a prior-service Army officer with research interests in information warfare, political warfare, psychological operations, military culture, and the Middle East.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/2160857.jpg?t=1630750748"
+    },
+    {
+      "title": "China-Arms",
+      "feed_url": "https://www.china-arms.com/feed/",
+      "website_url": "https://www.china-arms.com/",
+      "description": "China-Arms is a website established by military fans who are very interested in China's military development, and what we do here is to help publicize news and reviews about China's military, including its army and weapons. We are committed to providing unique, authentic, and valuable information.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5225341.jpg?t=1666011471"
+    },
+    {
+      "title": "Heroes Media Group",
+      "feed_url": "https://heroesmediagroup.com/category/featured-blogs/feed/",
+      "website_url": "https://heroesmediagroup.com/category/featured-blogs/",
+      "description": "Providing education, entertainment and empowerment to: Active Duty Service Members, Veterans, Firefighters, First Responders, Law Enforcement, Educators, Medical Professionals, and Clergy. Heroes Media Group (HMG) which is a Digital Media, Branding and Publishing platform committed to providing a voice for our community heroes and those who support them.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5357656.jpg?t=1640674783"
+    },
+    {
+      "title": "Soldier Systems",
+      "feed_url": "https://soldiersystems.net/feed/",
+      "website_url": "https://soldiersystems.net/",
+      "description": "Know about the latest Matbock and Scubapro products that were recently launched. Soldier Systems Daily is the premier daily web publication covering the tactical industry. Government and Military Acquisition professionals, Industry leaders, and consumers alike rely on Soldier Systems Daily for its up-to-date reporting and in-depth analysis.",
+      "followers": {
+        "facebook": 48400,
+        "twitter": 18200
+      },
+      "image_url": "https://i1.feedspot.com/38712.jpg?t=1605275498"
+    },
+    {
+      "title": "The Angry Staff Officer",
+      "feed_url": "https://angrystaffofficer.com/feed/",
+      "website_url": "https://angrystaffofficer.com/",
+      "description": "The author of this blog is himself an on-again, off-again angry staff officer, who made the odd jump from enlisted infantry to engineer officer and is now meandering the warrens of Army doctrine, one dog-eared page at a time. Most often focused on historical events, national security, and occasional rants on Army doctrine.",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 86900
+      },
+      "image_url": "https://i1.feedspot.com/4624652.jpg?t=1605275572"
+    },
+    {
+      "title": "Unbiased Jottings on Global Maritime Issues",
+      "feed_url": "https://skulshrestha.net/feed/",
+      "website_url": "https://skulshrestha.net/",
+      "description": "I am an alumnus of Jodhpur University with Gold Medal in Solid state Physics in my Post Graduation. I joined Indian Navy in the year 1975 and was awarded with Silver Medal, the Telescope at the Naval Academy and the Sword of Honour for being adjudged the best Naval Officer during initial training. I contribute regularly to defence journals on maritime issues and defence technology.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4771553.jpg?t=1605275882"
+    },
+    {
+      "title": "Global Military Justice Reform",
+      "feed_url": "https://globalmjreform.blogspot.com/feeds/posts/default",
+      "website_url": "https://globalmjreform.blogspot.com/",
+      "description": "It is a blog about Global Military Justice Reform.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3695541.jpg?t=1605277646"
+    },
+    {
+      "title": "Aviation and Defense Reports",
+      "feed_url": "https://aviationanddefensemarketreports.com/feed/",
+      "website_url": "https://aviationanddefensemarketreports.com/",
+      "description": "Aviation And Defense Market Reports are dedicated to aerospace and defense market research and finding solutions for our clients in the Global Aviation and Defense Market. Access a library of comprehensive, detailed, and objective market reports compiled by a team of industry experts and armed forces veterans.",
+      "followers": {
+        "twitter": 26
+      },
+      "image_url": "https://i1.feedspot.com/5447031.jpg?t=1663330210"
+    },
+    {
+      "title": "DefenseScoop",
+      "feed_url": "https://defensescoop.com/feed/",
+      "website_url": "https://defensescoop.com/",
+      "description": "DefenseScoop is the premier community-driven news source dedicated to the U.S. military's acquisition, development and use of technology as a force for modern defense.",
+      "followers": {
+        "facebook": 272,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5623800.jpg?t=1689154449"
+    },
+    {
+      "title": "The War Zone",
+      "feed_url": "https://www.twz.com/feed",
+      "website_url": "https://www.twz.com/",
+      "description": "The War Zone has become an essential resource for the defense industry, the national security community, and the interested public at large since it was launched in 2016. The site stands at the nexus of military technology, strategy, and foreign policy.",
+      "followers": {
+        "facebook": 98100,
+        "twitter": 137900,
+        "instagram": 25300
+      },
+      "image_url": "https://i1.feedspot.com/7262658.jpg?t=1749802609"
+    },
+    {
+      "title": "Military Realism Blog",
+      "feed_url": "https://militaryrealism.blog/feed/",
+      "website_url": "https://militaryrealism.blog/",
+      "description": "Military Realism is author's take on popular depictions of military organisation and technology.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8537964.jpg?t=1749801233"
+    },
+    {
+      "title": "Military Africa",
+      "feed_url": "https://www.military.africa/feed/",
+      "website_url": "https://www.military.africa/",
+      "description": "\u76f8\u64b2\u3000\u304a\u76bf\u3000\u4e09\u6d66\u6625\u99ac",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8537966.jpg?t=1753089701"
+    },
+    {
+      "title": "MilitaryLeak",
+      "feed_url": "https://militaryleak.com/feed/",
+      "website_url": "https://militaryleak.com/",
+      "description": "Military Leak is a defense blog for military enthusiasts. Providing video, news, images, and publications from military operations and tactical stuff around the world. This includes news and updates on operations, vessels, vehicles, equipment, research, companies, and the authorities dominating the defense industry.",
+      "followers": {
+        "facebook": 90,
+        "twitter": 15,
+        "instagram": 7400
+      },
+      "image_url": "https://i1.feedspot.com/5238053.jpg?t=1749800369"
+    },
+    {
+      "title": "The Bridge",
+      "feed_url": "https://feeds.feedburner.com/strategy_bridge",
+      "website_url": "https://thestrategybridge.org/the-bridge-index",
+      "description": "The Bridge is a collaborative effort that provides an online forum for the discussion of Strategy, National Security, and Military Affairs. Also published a journal discussing strategy, national security, military affairs, war, conflict, veterans, and writing.",
+      "followers": {
+        "facebook": 10000,
+        "twitter": 31900
+      },
+      "image_url": "https://i1.feedspot.com/4624668.jpg?t=1647866930"
+    },
+    {
+      "title": "Military Connection Blog",
+      "feed_url": "https://militaryconnection.com/feed/",
+      "website_url": "https://militaryconnection.com/blog/",
+      "description": "MilitaryConnection.com's Military Blog is the place for you! We are a military veteran blog that features information for veterans, families, military supporters, and more. We feature a mix of military blog news with historical references, opinion articles, and military bloggers who are willing to share their experiences and stories.",
+      "followers": {
+        "facebook": 149200,
+        "twitter": 289300
+      },
+      "image_url": "https://i1.feedspot.com/5202640.jpg?t=1605275525"
+    },
+    {
+      "title": "The Military Leader",
+      "feed_url": "https://feeds.feedburner.com/TheMilitaryLeader",
+      "website_url": "https://themilitaryleader.com/",
+      "description": "The Military Leader is hosted by an Army Infantry officer with 16 years experience and four deployments to Iraq/Afghanistan. He has been a student of leadership for two decades and designed The Military Leader to help other leaders develop themselves and grow their organizations.",
+      "followers": {
+        "facebook": 15600,
+        "twitter": 11600
+      },
+      "image_url": "https://i1.feedspot.com/4624712.jpg?t=1647925482"
+    },
+    {
+      "title": "Russian Military Reform",
+      "feed_url": "https://russiamil.wordpress.com/feed/",
+      "website_url": "https://russiamil.wordpress.com/",
+      "description": "I am Dmitry Gorenbu a Senior Research Scientist at CNA, a non-profit think tank, where I conduct research on security issues in the former Soviet Union, Russian military reform, Russian foreign policy, ethnic politics and identity, and Russian regional politics. The goal of this blog is to track the progress of the most recent iteration of the Russian government's effort to modernize its military.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4624757.jpg?t=1647924254"
+    },
+    {
+      "title": "ASVAB Tutoring",
+      "feed_url": "https://www.asvab-tutoring.com/feed/",
+      "website_url": "https://www.asvab-tutoring.com/blog/",
+      "description": "Are you planning to take ASVAB exam? Are you looking for a experienced ASVAB tutor? we could help you out to pass the test. In a private, one-on-one environment, we will help you to improve study habits an increase the composite ASVAB score needed in the branch and/or specific military occupation specialty you desire. This blog is for complete ASVAB prep Solutions with online practice tests",
+      "followers": {
+        "facebook": 15300,
+        "twitter": 18,
+        "instagram": 31600
+      },
+      "image_url": "https://i1.feedspot.com/5239517.jpg?t=1611737639"
+    },
+    {
+      "title": "Reaper Feed",
+      "feed_url": "https://reaperfeed.com/feed/",
+      "website_url": "https://reaperfeed.com/",
+      "description": "Reaper Feed brings you the birds-eye view on global defence, military news, the latest battlefield technology, weapons & global conflict both past & present",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5158236.jpg?t=1605275548"
+    },
+    {
+      "title": "Chinese Military Aviation",
+      "feed_url": "https://chinese-military-aviation.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://chinese-military-aviation.blogspot.com/",
+      "description": "Information on Chinese Military Aviation and China Air Force.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5222462.jpg?t=1607002159"
+    },
+    {
+      "title": "China Defence Blog",
+      "feed_url": "http://chinadefense.blogspot.co.il/feeds/posts/default",
+      "website_url": "https://chinadefense.blogspot.com/",
+      "description": "This is the blog of Chinese defense where professional analysts and serious defense enthusiasts share findings on a rising military power.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3760079.jpg?t=1607001464"
+    },
+    {
+      "title": "Indian Military",
+      "feed_url": "http://www.indianmilitary.info/feeds/posts/default?alt=rss",
+      "website_url": "http://www.indianmilitary.info/",
+      "description": "Major Navdeep Singh author of Indian Military: Service Benefits and Issues blog, contributes to burning issues concerning the armed forces. This is a pro bono online journal in public service.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 82400
+      },
+      "image_url": "https://i1.feedspot.com/2005079.jpg?t=1605275601"
+    },
+    {
+      "title": "philwalter1058 Writings",
+      "feed_url": "https://philwalter1058.com/writings/feed/",
+      "website_url": "https://philwalter1058.com/writings/",
+      "description": "My name is Phil Walter. I have served in the Military, the Intelligence Community, and the Interagency. This is where I share my thoughts on how the United States applies the instruments of national power.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4624708.jpg?t=1647925418"
+    },
+    {
+      "title": "Demolition Ranch Fans Club",
+      "feed_url": "https://demolitionranchfansclub.blogspot.com/feeds/posts/default",
+      "website_url": "https://demolitionranchfansclub.blogspot.com/",
+      "description": "Hi there! From this site you can learn awesome guns and military powers you can take a lot of Knowledge.",
+      "followers": {
+        "facebook": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5147782.jpg?t=1605276036"
+    },
+    {
+      "title": "Bouhammer.com",
+      "feed_url": "http://bouhammer.com/feed/",
+      "website_url": "http://bouhammer.com/",
+      "description": "A blog about Military Issues, Domestic Policy, Foreign Policy, Security and maybe even a little Politics thrown in. The mission of this site is to keep the world stage apprised of what has happened, what is happening and what will probably happen in Afghanistan.",
+      "followers": {
+        "facebook": 688,
+        "twitter": 5300,
+        "instagram": 281
+      },
+      "image_url": "https://i1.feedspot.com/4624829.jpg?t=1647926291"
+    },
+    {
+      "title": "Russian Military Analysis - A blog on the Russian military",
+      "feed_url": "https://russianmilitaryanalysis.wordpress.com/feed/",
+      "website_url": "https://russianmilitaryanalysis.wordpress.com/",
+      "description": "I am Michael Kofman a Research Scientist at CNA Corporation and a Fellow at the Wilson Center, Kennan Institute.The point of this blog is to contribute to the field Russian military analysis. The content is entirely my opinion, without any connection to my professional affiliations.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4624745.jpg?t=1605275557"
+    },
+    {
+      "title": "In From the Cold",
+      "feed_url": "http://formerspook.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://formerspook.blogspot.com/",
+      "description": "Random thoughts on almost anything and everything, with an emphasis on defense, intelligence, politics and national security matters.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/345650.jpg?t=1605275870"
+    },
+    {
+      "title": "Oryx Blog",
+      "feed_url": "https://www.oryxspioenkop.com/feeds/posts/default",
+      "website_url": "https://www.oryxspioenkop.com/",
+      "followers": {
+        "twitter": 84700
+      },
+      "image_url": "https://i1.feedspot.com/4118210.jpg?t=1749800766"
+    },
+    {
+      "title": "Cavok Brasil",
+      "feed_url": "https://www.cavok.com.br/feed",
+      "website_url": "https://www.cavok.com.br/",
+      "description": "The best information on the world of aviation, released 24 hours a day, 7 days a week, by a team of passionate about airplanes, helicopters and all flying machines. The best aviation photography, the most interesting subjects in the aeronautical environment, everything to bring you, who likes aviation, the most important subjects in the civil, military, executive and sports sectors.",
+      "followers": {
+        "facebook": 84100,
+        "twitter": 12300,
+        "instagram": 30900
+      },
+      "image_url": "https://i1.feedspot.com/1865803.jpg?t=1605275512"
+    },
+    {
+      "title": "China Military",
+      "feed_url": "http://eng.chinamil.com.cn/",
+      "website_url": "http://eng.chinamil.com.cn/",
+      "description": "The Only Official English-Language News Website of the Chinese People's Liberation Army(PLA), Featuring the Latest and Exclusive News and Information from the Chinese Military, Covering the PLA Army, Navy, Air Force, Rocket Force, and Strategic Support Force.",
+      "followers": {
+        "twitter": 343
+      },
+      "image_url": "https://i1.feedspot.com/4625529.jpg?t=1752487822"
+    },
+    {
+      "title": "American Military University Edge",
+      "feed_url": "https://amuedge.com/feed/",
+      "website_url": "https://amuedge.com/",
+      "description": "AMU Edge is an online resource featuring content designed for military, veterans, public safety, intelligence, homeland security, emergency management, space, and cybersecurity professionals, brought to you by American Military University.",
+      "followers": {
+        "facebook": 123400,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4624840.jpg?t=1631947553"
+    },
+    {
+      "title": "DoDLive - Department of Defense Blog",
+      "feed_url": "https://www.defense.gov/DesktopModules/ArticleCS/RSS.ashx?max=10&ContentType=1&Site=945",
+      "website_url": "https://www.defense.gov/News/",
+      "description": "The Department of Defense Social Media team was created to facilitate DoD's participation in online and social media communications. Our team manages a number of platforms, including this blog, that enable commands and organizationsthroughout the services and DoD to provide information about their missions and activities to service members.",
+      "followers": {
+        "facebook": 22,
+        "twitter": 6500000
+      },
+      "image_url": "https://i1.feedspot.com/626734.jpg?t=1605275965"
+    },
+    {
+      "title": "IHS Jane's 360",
+      "feed_url": "https://www.janes.com/rss",
+      "website_url": "https://www.janes.com/",
+      "description": "Jane's is the renowned global open-source intelligence provider to militaries, governments, intelligence agencies and industry. Jane delivers critical insight and independent analysis of military capabilities, defense industry and market trends, terrorism and insurgency trends, country risk, competitive intelligence, and strategy.",
+      "followers": {
+        "facebook": 18400,
+        "twitter": 115
+      },
+      "image_url": "https://i1.feedspot.com/3708349.jpg?t=1605275473"
+    },
+    {
+      "title": "USNI Blog",
+      "feed_url": "https://blog.usni.org/feed",
+      "website_url": "https://blog.usni.org/",
+      "description": "The United States Naval Institute (USNI), based in Annapolis, Maryland, is a private, non-profit, professional military association that provides an open, independent, and nonpartisan forums for debate of national defense and security issues. In addition to publishing magazines and books, the Naval Institute holds several annual conferences.",
+      "followers": {
+        "facebook": 769000,
+        "twitter": 242600
+      },
+      "image_url": "https://i1.feedspot.com/4467161.jpg?t=1605275476"
+    },
+    {
+      "title": "Coffee or Die Magazine",
+      "feed_url": "https://www.coffeeordie.com/",
+      "website_url": "https://www.coffeeordie.com/",
+      "description": "Coffee or Die Magazine is an online news and lifestyle magazine for the military, veteran, first responder, and coffee enthusiast communities.",
+      "followers": {
+        "facebook": 80400,
+        "twitter": 40000,
+        "instagram": 178300
+      },
+      "image_url": "https://i1.feedspot.com/5076957.jpg?t=1605275508"
+    },
+    {
+      "title": "Australian Army",
+      "feed_url": "https://www.army.gov.au/",
+      "website_url": "https://www.army.gov.au/",
+      "description": "Latest news, announcements, speeches, publications and updates from the department of military and defence of Australia.",
+      "followers": {
+        "twitter": 61200
+      },
+      "image_url": "https://i1.feedspot.com/4626148.jpg?t=1605275516"
+    },
+    {
+      "title": "US Military Blog",
+      "feed_url": "https://usmilitary.com/feed/",
+      "website_url": "https://usmilitary.com/blog/",
+      "description": "Official source for US military jobs, careers, information, and much more. Compare Army, Navy, Marines, Air Force & National Guard careers!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4732061.jpg?t=1605275531"
+    },
+    {
+      "title": "3\u00d75 Leadership",
+      "feed_url": "https://www.3x5leadership.com/feed/",
+      "website_url": "https://www.3x5leadership.com/",
+      "description": "I Joshua Bowen am an Army Engineer Officer spending my entire career directly working with and supporting maneuver forces. My goal is to leverage my experience reflections to share lessons learned to grow readers professionally and ultimately improve their organizations.",
+      "followers": {
+        "facebook": 8200,
+        "twitter": 2000,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4624784.jpg?t=1605275569"
+    },
+    {
+      "title": "Information Dissemination",
+      "feed_url": "https://feeds.feedburner.com/InformationDissemination",
+      "website_url": "https://www.informationdissemination.net/",
+      "description": "Professional discussions covering topics including Foreign Policy, Maritime Strategy, Emerging Technology, and Military Affairs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2160913.jpg?t=1605275677"
+    },
+    {
+      "title": "Military Times",
+      "feed_url": "https://www.militarytimes.com/rss/",
+      "website_url": "https://www.militarytimes.com/",
+      "description": "Military Times is published by Sightline Media Group. Military Times provides Military News, pay, benefits, photos, videos, discussions, blogs. Military Times also offers a variety of special reports throughout the year, including valuable military resource guides and important second career and educational supplements.",
+      "followers": {
+        "facebook": 494900,
+        "twitter": 261800,
+        "instagram": 270200
+      },
+      "image_url": "https://i1.feedspot.com/4624920.jpg?t=1647927155"
+    },
+    {
+      "title": "Military.com",
+      "feed_url": "https://www.military.com/daily-news",
+      "website_url": "https://www.military.com/daily-news",
+      "description": "Daily updates of everything that you need know about what is going on in the military community and abroad including military gear and equipment, breaking news, international news and more.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 242300,
+        "instagram": 64000
+      },
+      "image_url": "https://i1.feedspot.com/2270818.jpg?t=1605276000"
+    }
+  ]
+}

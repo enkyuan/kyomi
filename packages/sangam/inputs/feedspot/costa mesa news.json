@@ -1,0 +1,52 @@
+{
+  "category": "Costa Mesa News",
+  "source_url": "https://rss.feedspot.com/costa_mesa_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of Costa Mesa News",
+      "feed_url": "https://www.cityofcostamesanews.com/feed/",
+      "website_url": "https://www.cityofcostamesanews.com/",
+      "description": "The Costa Mesa Communications and Marketing Division is committed to becoming the public's main source of city information through credibility, innovation, and collaboration. The two main goals of the Costa Mesa Communications and Marketing Division are to promote information and events through a clear and unified voice; and to ensure the public's business is being handled in a transparent matter.",
+      "followers": {
+        "facebook": 14400,
+        "twitter": 10800,
+        "instagram": 19400
+      },
+      "image_url": "https://i1.feedspot.com/5142546.jpg?t=1623300882"
+    },
+    {
+      "title": "Costa Mesa Insider",
+      "feed_url": "https://www.costamesainsider.com/feed/",
+      "website_url": "https://www.costamesainsider.com/",
+      "description": "The City Of Costa Mesa is called the City of the Arts because of its great cultural arts centers such as the Performing Arts Center, South Coast Reparatory, and Segerstrom Hall but it is so much more. From the OC Event Center to world-class shopping at South Coast Plaza, amazing restaurants and parks Costa Mesa really is a special place. Costa Mesa is a great town but it's time that it had its own voice Hopefully this site can be that voice while also sharing news, reviews, and, information about the great city.",
+      "followers": {
+        "instagram": 800
+      },
+      "image_url": "https://i1.feedspot.com/5246924.jpg?t=1692174402"
+    },
+    {
+      "title": "KTLA 5 \u00bb Costa Mesa",
+      "feed_url": "https://ktla.com/tag/costa-mesa/feed/",
+      "website_url": "https://ktla.com/tag/costa-mesa/",
+      "description": "L.A.'s Very Own, KTLA is Southern California's source for Los Angeles-area breaking news, streaming live video, traffic and weather in L.A., Orange and Ventura counties, plus the Inland Empire and beyond. Read the latest Costa Mesa news at KTLA.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1000000,
+        "instagram": 952400
+      },
+      "image_url": "https://i1.feedspot.com/5142548.jpg?t=1587640291"
+    },
+    {
+      "title": "CostaMesaonline.us",
+      "feed_url": "https://news.costamesaonline.us/",
+      "website_url": "https://news.costamesaonline.us/",
+      "description": "We are Costa Mesa's No.1 portal that provides resources for Businesses, General users and Visitors to Costa Mesa. We bring you complete business, leisure, travel and tourism, weather, the latest news and all other related information about Costa Mesa. USA Online Network is USA's largest online network of 976 inter-linked yet dedicated websites for all US States, US Territories, Cities and towns with up to 40000 population in the United States.",
+      "followers": {
+        "facebook": 8,
+        "twitter": 429,
+        "instagram": 40
+      },
+      "image_url": "https://i1.feedspot.com/5501795.jpg?t=1675169699"
+    }
+  ]
+}

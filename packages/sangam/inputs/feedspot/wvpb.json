@@ -1,0 +1,86 @@
+{
+  "category": "WVPB",
+  "source_url": "https://rss.feedspot.com/wvpb_rss_feeds",
+  "feeds": [
+    {
+      "title": "West Virginia Public Broadcasting",
+      "feed_url": "https://wvpublic.org/feed/",
+      "website_url": "https://wvpublic.org/",
+      "description": "All articles from West Virginia Public Broadcasting.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8540124.jpg"
+    },
+    {
+      "title": "West Virginia Public Broadcasting \u00bb Economy",
+      "feed_url": "https://wvpublic.org/category/economy/feed/",
+      "website_url": "https://wvpublic.org/category/economy/",
+      "description": "Stories, articles and podcasts related to Economy on West Virginia Public Broadcasting Economy stories.",
+      "followers": {
+        "facebook": 53400,
+        "twitter": 9600,
+        "instagram": 9100
+      },
+      "image_url": "https://i1.feedspot.com/5249842.jpg?t=1614595922"
+    },
+    {
+      "title": "West Virginia Public Broadcasting \u00bb Health & Science",
+      "feed_url": "https://wvpublic.org/category/health-science/feed/",
+      "website_url": "https://wvpublic.org/category/health-science/",
+      "description": "Stories, articles and podcasts related to Health & Science on West Virginia Public Broadcasting Health & Science stories and home of Appalachia Health News.",
+      "followers": {
+        "facebook": 53400,
+        "twitter": 9600,
+        "instagram": 9100
+      },
+      "image_url": "https://i1.feedspot.com/5249858.jpg?t=1614597393"
+    },
+    {
+      "title": "West Virginia Public Broadcasting \u00bb Arts & Culture",
+      "feed_url": "https://wvpublic.org/category/arts-culture/feed/",
+      "website_url": "https://wvpublic.org/category/arts-culture/",
+      "description": "Stories, articles and podcasts related to Arts & Culture on West Virginia Public Broadcasting Arts & Culture stories.",
+      "followers": {
+        "facebook": 53400,
+        "twitter": 9600,
+        "instagram": 9100
+      },
+      "image_url": "https://i1.feedspot.com/5249835.jpg?t=1614595358"
+    },
+    {
+      "title": "West Virginia Public Broadcasting \u00bb Government",
+      "feed_url": "https://wvpublic.org/category/government/feed/",
+      "website_url": "https://wvpublic.org/category/government/",
+      "description": "Presidential politics and political news from WVPB. News about political parties, political campaigns, world and international politics, politics news headlines plus in-depth features and video clips.",
+      "followers": {
+        "facebook": 53400,
+        "twitter": 9600,
+        "instagram": 9100
+      },
+      "image_url": "https://i1.feedspot.com/5249876.jpg?t=1614599164"
+    },
+    {
+      "title": "West Virginia Public Broadcasting \u00bb Education",
+      "feed_url": "https://wvpublic.org/category/education/feed/",
+      "website_url": "https://wvpublic.org/category/education/",
+      "description": "Stories, articles and podcasts related to Education on West Virginia Public Broadcasting PreK-12 and Higher Education stories.",
+      "followers": {
+        "facebook": 53400,
+        "twitter": 9600,
+        "instagram": 9100
+      },
+      "image_url": "https://i1.feedspot.com/5249848.jpg?t=1614596443"
+    },
+    {
+      "title": "West Virginia Public Broadcasting \u00bb Energy & Environment",
+      "feed_url": "https://wvpublic.org/category/energy-environment/feed/",
+      "website_url": "https://wvpublic.org/category/energy-environment/",
+      "description": "Stories, articles and podcasts related to Energy & Environment on West Virginia Public Broadcasting Energy & Environment stories.",
+      "followers": {
+        "facebook": 53400,
+        "twitter": 9600,
+        "instagram": 9100
+      },
+      "image_url": "https://i1.feedspot.com/5249855.jpg?t=1614596984"
+    }
+  ]
+}

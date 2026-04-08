@@ -1,0 +1,60 @@
+{
+  "category": "Mennonites",
+  "source_url": "https://rss.feedspot.com/mennonites_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mennonite Church USA",
+      "feed_url": "https://www.mennoniteusa.org/feed/",
+      "website_url": "https://www.mennoniteusa.org/",
+      "description": "Members of Mennonite Church USA share a Mennonite or Anabaptist perspective on matters of faith. Learn about the anabaptist denomination and find a church congregation.",
+      "followers": {
+        "twitter": 4900,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5075233.jpg?t=1622899090"
+    },
+    {
+      "title": "The Drunken Menno Blog",
+      "feed_url": "https://www.slklassen.com/category/the-drunken-menno-blog/feed/",
+      "website_url": "https://www.slklassen.com/category/the-drunken-menno-blog/",
+      "description": "The Drunken Menno Blog is a reflection of all things Mennonite and cocktail recipes.",
+      "followers": {
+        "facebook": 669,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5075235.jpg"
+    },
+    {
+      "title": "Canadian Mennonite Magazine",
+      "feed_url": "https://canadianmennonite.org/rss.xml",
+      "website_url": "https://canadianmennonite.org/",
+      "description": "Canadian Mennonite educates, inspires, informs, and fosters dialogue on issues facing Mennonites in Canada as it shares the good news of Jesus Christ from an Anabaptist perspective. It offers a regular round-up of viewpoints and stories about Mennonites in Canada and beyond.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 2700,
+        "instagram": 994
+      },
+      "image_url": "https://i1.feedspot.com/5075228.jpg?t=1618841869"
+    },
+    {
+      "title": "Mennonite Creation Care Network Blog",
+      "feed_url": "https://www.mennocreationcare.org/blog/feed",
+      "website_url": "https://www.mennonitewomenusa.org/blog",
+      "description": "Mennonite Creation Care Network (MCCN) is a Christian organization affiliated with the Mennonite Church USA and the Mennonite Church Canada. As a Network, we engage people with their peers and facilitate partnerships, share resources based on needs and requests, bring lessons learned by individual congregations to the broader community and support each other in prayer.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5075231.jpg?t=1622899106"
+    },
+    {
+      "title": "Mennonite Women USA Blog",
+      "feed_url": "https://www.mennonitewomenusa.org/feed",
+      "website_url": "https://www.mennonitewomenusa.org/blog",
+      "description": "Mennonite Women USA is a sisterhood of Anabaptist women following Jesus. Mennonite Women USA includes any woman who desires to connect with other Mennonite women through our publications, events and social media. We honor our stories, share grace, practice justice and embrace healing.",
+      "followers": {
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5075232.jpg?t=1622899109"
+    }
+  ]
+}

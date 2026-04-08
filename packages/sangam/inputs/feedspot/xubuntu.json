@@ -1,0 +1,49 @@
+{
+  "category": "Xubuntu",
+  "source_url": "https://rss.feedspot.com/xubuntu_rss_feeds",
+  "feeds": [
+    {
+      "title": "Xubuntu Blog",
+      "feed_url": "https://xubuntu.org/feed/",
+      "website_url": "https://xubuntu.org/blog/",
+      "description": "Find more articles about all things related to Xubuntu and its development in the team blog. Xubuntu is an elegant and easy-to-use operating system.",
+      "followers": {
+        "facebook": 17200,
+        "twitter": 12000
+      },
+      "image_url": "https://i1.feedspot.com/274584.jpg?t=1651817284"
+    },
+    {
+      "title": "Ubunlog \u00bb Xubuntu",
+      "feed_url": "https://ubunlog.com/category/xubuntu/feed/",
+      "website_url": "https://en.ubunlog.com/category/xubuntu/",
+      "description": "Explore Xubuntu with our tutorials and articles. Xubuntu is an Ubuntu distribution optimized to be used with few resources.",
+      "followers": {
+        "facebook": 16700,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5397379.jpg?t=1651817232"
+    },
+    {
+      "title": "OSBoxes \u00bb Xubuntu",
+      "feed_url": "https://www.osboxes.org/category/xubuntu/feed/",
+      "website_url": "https://www.osboxes.org/category/xubuntu/",
+      "description": "Get the latest news and updates on Xubuntu, features and more. We provide ready-to-use Linux/Unix virtual machines, so you can use/play/work on them. VMs on our site are guaranteed clean as originally supplied by projects.",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 780
+      },
+      "image_url": "https://i1.feedspot.com/5397380.jpg?t=1651817239"
+    },
+    {
+      "title": "Xfce Blog",
+      "feed_url": "https://blog.xfce.org/feed/",
+      "website_url": "https://blog.xfce.org/",
+      "description": "Learn more about Xfce, tutorials, articles and more. Xfce is a lightweight desktop environment for UNIX-like operating systems. It aims to be fast and low on system resources, while still being visually appealing and user friendly.",
+      "followers": {
+        "twitter": 19500
+      },
+      "image_url": "https://i1.feedspot.com/112919.jpg?t=1651823388"
+    }
+  ]
+}

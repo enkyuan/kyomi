@@ -1,0 +1,150 @@
+{
+  "category": "Hack The Box",
+  "source_url": "https://rss.feedspot.com/hackthebox_rss_feeds",
+  "feeds": [
+    {
+      "title": "Hack The Box",
+      "feed_url": "https://www.hackthebox.com/rss/blog/all",
+      "website_url": "https://www.hackthebox.com/blog/",
+      "description": "All the latest news and insights about cybersecurity from Hack The Box. Hacking trends, insights, interviews, stories, and much more.",
+      "followers": {
+        "facebook": 64300,
+        "twitter": 222400,
+        "instagram": 245300
+      },
+      "image_url": "https://i1.feedspot.com/7887585.jpg?t=1741766468"
+    },
+    {
+      "title": "Hack The Box \u00bb Red Teaming",
+      "feed_url": "https://www.hackthebox.com/rss/blog/red-teaming",
+      "website_url": "https://www.hackthebox.com/blog/category/red-teaming",
+      "description": "All latest articles about Red Teaming from Hack The Box.",
+      "followers": {
+        "facebook": 64300,
+        "twitter": 222400,
+        "instagram": 245300
+      },
+      "image_url": "https://i1.feedspot.com/7887595.jpg?t=1741766467"
+    },
+    {
+      "title": "Hack The Box \u00bb Blue Teaming",
+      "feed_url": "https://www.hackthebox.com/rss/blog/blue-teaming",
+      "website_url": "https://www.hackthebox.com/blog/category/blue-teaming",
+      "description": "All latest articles about Blue Teaming from Hack The Box.",
+      "followers": {
+        "facebook": 64300,
+        "twitter": 222400,
+        "instagram": 245300
+      },
+      "image_url": "https://i1.feedspot.com/7887584.jpg?t=1741766467"
+    },
+    {
+      "title": "Hack The Box \u00bb Cyber Teams",
+      "feed_url": "https://www.hackthebox.com/rss/blog/cyber-teams",
+      "website_url": "https://www.hackthebox.com/blog/category/cyber-teams",
+      "description": "All latest articles about Cyber Teams from Hack The Box.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7887583.jpg?t=1741766466"
+    },
+    {
+      "title": "Hack The Box \u00bb CISO Diaries",
+      "feed_url": "https://www.hackthebox.com/rss/blog/ciso-diaries",
+      "website_url": "https://www.hackthebox.com/blog/category/ciso-diaries",
+      "description": "All latest articles about CISO Diaries from Hack The Box.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7887589.jpg?t=1741766465"
+    },
+    {
+      "title": "Hack The Box \u00bb Write-Ups",
+      "feed_url": "https://www.hackthebox.com/rss/blog/write-ups",
+      "website_url": "https://www.hackthebox.com/blog/category/write-ups",
+      "description": "All latest articles about Write-Ups from Hack The Box.",
+      "followers": {
+        "facebook": 64300,
+        "twitter": 222400,
+        "instagram": 245300
+      },
+      "image_url": "https://i1.feedspot.com/7887588.jpg?t=1741766463"
+    },
+    {
+      "title": "Hack The Box \u00bb CVE Explained",
+      "feed_url": "https://www.hackthebox.com/rss/blog/cve-explained",
+      "website_url": "https://www.hackthebox.com/blog/category/cve-explained",
+      "description": "All latest articles about CVE Explained from Hack The Box.",
+      "followers": {
+        "facebook": 64300,
+        "twitter": 222400,
+        "instagram": 245300
+      },
+      "image_url": "https://i1.feedspot.com/7887594.jpg?t=1741766462"
+    },
+    {
+      "title": "Hack The Box \u00bb News",
+      "feed_url": "https://www.hackthebox.com/rss/blog/news",
+      "website_url": "https://www.hackthebox.com/blog/category/news",
+      "description": "All latest news articles from Hack The Box.",
+      "followers": {
+        "facebook": 64300,
+        "twitter": 222400,
+        "instagram": 245300
+      },
+      "image_url": "https://i1.feedspot.com/7887592.jpg?t=1741766461"
+    },
+    {
+      "title": "Hack The Box \u00bb Career Stories",
+      "feed_url": "https://www.hackthebox.com/rss/blog/career-stories",
+      "website_url": "https://www.hackthebox.com/blog/category/career-stories",
+      "description": "All latest articles about Career Stories from Hack The Box.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7887593.jpg?t=1741766460"
+    },
+    {
+      "title": "Hack The Box \u00bb Humans of HTB",
+      "feed_url": "https://www.hackthebox.com/rss/blog/humans-of-htb",
+      "website_url": "https://www.hackthebox.com/blog/category/humans-of-htb",
+      "description": "All latest articles about Humans of HTB from Hack The Box.",
+      "followers": {
+        "facebook": 64300,
+        "twitter": 222400,
+        "instagram": 245300
+      },
+      "image_url": "https://i1.feedspot.com/7887587.jpg?t=1741766460"
+    },
+    {
+      "title": "Hack The Box \u00bb Attack Anatomy",
+      "feed_url": "https://www.hackthebox.com/rss/blog/attack-anatomy",
+      "website_url": "https://www.hackthebox.com/blog/category/attack-anatomy",
+      "description": "All latest articles about Attack Anatomy from Hack The Box.",
+      "followers": {
+        "facebook": 64300,
+        "twitter": 222400,
+        "instagram": 245300
+      },
+      "image_url": "https://i1.feedspot.com/7887586.jpg?t=1741766459"
+    },
+    {
+      "title": "Hack The Box \u00bb Education",
+      "feed_url": "https://www.hackthebox.com/rss/blog/education",
+      "website_url": "https://www.hackthebox.com/blog/category/education",
+      "description": "All latest articles about Education from Hack The Box.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7887591.jpg?t=1741766465"
+    },
+    {
+      "title": "Hack The Box \u00bb Artificial Intelligence",
+      "feed_url": "https://www.hackthebox.com/rss/blog/artificial-intelligence",
+      "website_url": "https://www.hackthebox.com/blog/category/artificial-intelligence",
+      "description": "All latest articles about Artificial Intelligence from Hack The Box.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7887596.jpg"
+    },
+    {
+      "title": "Hack The Box \u00bb Customer Stories",
+      "feed_url": "https://www.hackthebox.com/rss/blog/customer-stories",
+      "website_url": "https://www.hackthebox.com/blog/category/customer-stories",
+      "description": "All latest articles about Customer Stories from Hack The Box.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7887590.jpg?t=1741766464"
+    }
+  ]
+}

@@ -1,0 +1,335 @@
+{
+  "category": "Oxford",
+  "source_url": "https://rss.feedspot.com/oxford_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Oxford Times",
+      "feed_url": "https://www.oxfordmail.co.uk/news/rss/",
+      "website_url": "https://www.oxfordmail.co.uk/news/",
+      "description": "The Oxford Times is a weekly newspaper. Follow us to keep up with latest articles on news, sports, business, education and more.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 29900
+      },
+      "image_url": "https://i1.feedspot.com/4953587.jpg?t=1621576851"
+    },
+    {
+      "title": "Oxford City Council News",
+      "feed_url": "https://www.oxford.gov.uk/rss/news",
+      "website_url": "https://www.oxford.gov.uk/news",
+      "description": "Oxford City Council is providing latest news on Planning, Waste and Recycling, Housing, local Councillors and Democracy, Leisure, Culture, Transport, and Services in the Oxford Area.",
+      "followers": {
+        "facebook": 32600,
+        "twitter": 57000,
+        "instagram": 10400
+      },
+      "image_url": "https://i1.feedspot.com/4953014.jpg?t=1621576859"
+    },
+    {
+      "title": "University of Oxford",
+      "feed_url": "https://www.ox.ac.uk/feeds/rss/news",
+      "website_url": "https://www.ox.ac.uk/news-and-events",
+      "description": "The University of Oxford is one of the leading universities in the world. Follow us to keep up with articles on news and events from University of Oxford.",
+      "followers": {
+        "facebook": 5100000,
+        "twitter": 1000000,
+        "instagram": 2100000
+      },
+      "image_url": "https://i1.feedspot.com/4460554.jpg?t=1621576864"
+    },
+    {
+      "title": "The Oxford Magazine",
+      "feed_url": "https://theoxfordmagazine.com/feed/",
+      "website_url": "https://theoxfordmagazine.com/",
+      "description": "The Oxford Magazine is a luxury lifestyle magazine celebrating Oxford City and its surrounding towns and villages, the people, the places, the events, and the organisations that shape our lives.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 136,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4953029.jpg?t=1621576868"
+    },
+    {
+      "title": "The Oxford Student",
+      "feed_url": "https://www.oxfordstudent.com/feed/",
+      "website_url": "https://www.oxfordstudent.com/",
+      "description": "The Oxford Student is Oxford's one of the biggest student newspaper, produced by and for members of the University of Oxford. It provides articles on News, Entertainment, Culture, Sports and Reviews to the students of Oxford University.",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 13500
+      },
+      "image_url": "https://i1.feedspot.com/4953329.jpg?t=1621576873"
+    },
+    {
+      "title": "BBC News",
+      "feed_url": "https://feeds.bbci.co.uk/news/england/oxford/rss.xml",
+      "website_url": "https://www.bbc.com/news/england/oxford",
+      "description": "BBC News is a news website with breaking news on sports, weather, politics and more. Follow us to keep up with news on Oxford from the BBC.",
+      "followers": {
+        "facebook": 61300000,
+        "twitter": 15400000,
+        "instagram": 29600000
+      },
+      "image_url": "https://i1.feedspot.com/3795696.jpg?t=1621576882"
+    },
+    {
+      "title": "Bodleian History Faculty Library at Oxford Blog",
+      "feed_url": "https://blogs.bodleian.ox.ac.uk/history/feed/",
+      "website_url": "https://blogs.bodleian.ox.ac.uk/history/",
+      "description": "The Bodleian History Faculty Library at Oxford houses the University of Oxford's main collection of undergraduate lending materials in both Medieval and Modern History, as well as in the History of Art and History of Science & Medicine. This blog will update you on new information resources and tools for historians as well as services in the History Faculty Library and relevant parts of the Bodleian Libraries.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 9300
+      },
+      "image_url": "https://i1.feedspot.com/4952559.jpg?t=1621578914"
+    },
+    {
+      "title": "Stock Gumshoe",
+      "feed_url": "https://www.stockgumshoe.com/tag/oxford-club/feed/",
+      "website_url": "https://www.stockgumshoe.com/tag/oxford-club/",
+      "description": "Stock Gumshoe brings reality to the teasers and crazy promises of investment newsletters. Follow us to keep up with secret Teaser Stocks and investment Newsletters from Stock Gumshoe.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4953145.jpg?t=1621578923"
+    },
+    {
+      "title": "Oxford Health NHS Foundation Trust",
+      "feed_url": "https://www.oxfordhealth.nhs.uk/feed/",
+      "website_url": "https://www.oxfordhealth.nhs.uk/",
+      "description": "Oxford Health NHS Foundation Trust provides physical and mental health and social care with the aim of improving the health and well-being of all our patients and their families.",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 16400,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/4953052.jpg?t=1621579609"
+    },
+    {
+      "title": "Bitten Oxford Blog",
+      "feed_url": "https://bittenoxford.co.uk/feed/",
+      "website_url": "https://bittenoxford.co.uk/category/blog/",
+      "description": "Bitten Oxford is your ultimate Oxford food and drinks guide with restaurant listings, news, events, recommendations and more. It helps you decide where to eat, and also where not to. It will be bringing you all the latest news and reviews on Oxford restaurants, pop-ups and street food.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 4500,
+        "instagram": 13300
+      },
+      "image_url": "https://i1.feedspot.com/4951355.jpg?t=1621579613"
+    },
+    {
+      "title": "Bluestocking",
+      "feed_url": "https://blue-stocking.org.uk/feed/",
+      "website_url": "https://blue-stocking.org.uk/",
+      "description": "Bluestocking is an online journal that investigates the intellectual and artistic achievements of women throughout history. It acts as a base for critical and insightful research into the work of female thinkers, raising the profile of women as major actors in the history of ideas, both past and present.",
+      "followers": {
+        "twitter": 257,
+        "instagram": 673
+      },
+      "image_url": "https://i1.feedspot.com/4952703.jpg?t=1621579617"
+    },
+    {
+      "title": "Philippa James Wedding Photography",
+      "feed_url": "https://philippajamesphotography.com/feed/",
+      "website_url": "https://philippajamesphotography.com/oxford-wedding-blog/",
+      "description": "Looking for creative wedding photography in Oxford? This blog is full useful planning advice, inspiration, and ideas to help you plan your wedding your way",
+      "followers": {
+        "facebook": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5063290.jpg?t=1621579631"
+    },
+    {
+      "title": "Oxford Symposium on Food & Cookery Blog",
+      "feed_url": "https://www.oxfordsymposium.org.uk/feed/",
+      "website_url": "https://www.oxfordsymposium.org.uk/blog/",
+      "description": "The Oxford Symposium is an international conference for people with a broad interest in food, attended by scholars in different fields, enthusiastic amateurs, writers and chefs held in Oxford. The three-day meeting is a convivial event with ideas and information exchanged over great food. Follow us to keep up with articles from Oxford Symposium on Food & Cookery.",
+      "followers": {
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/4952583.jpg?t=1621579635"
+    },
+    {
+      "title": "Wandering Danny",
+      "feed_url": "https://wanderingdanny.com/oxford/feed/",
+      "website_url": "https://wanderingdanny.com/oxford/",
+      "description": "Follow us to keep up with articles on books, travel & technology from Wandering Danny.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4951729.jpg?t=1621579796"
+    },
+    {
+      "title": "Oxford College of Marketing Blog",
+      "feed_url": "https://blog.oxfordcollegeofmarketing.com/feed/",
+      "website_url": "https://blog.oxfordcollegeofmarketing.com/",
+      "description": "Oxford College of Marketing is one of the leading Marketing Colleges with Study Centres across the UK and Distance Learning students who come to us from across the world. The college offers a wide range of study and training options for individuals and companies. Follow us to keep up with articles from your Training and Development Partner.",
+      "followers": {
+        "facebook": 19600,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4953140.jpg?t=1621579649"
+    },
+    {
+      "title": "Nuffield College Library's blog",
+      "feed_url": "https://nuffieldcollegelibrary.wordpress.com/feed/",
+      "website_url": "https://nuffieldcollegelibrary.wordpress.com/",
+      "description": "Nuffield College Library's blog gives advice on using the library and researching the social sciences.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4953284.jpg?t=1621579663"
+    },
+    {
+      "title": "The Guardian | Oxford",
+      "feed_url": "https://www.theguardian.com/uk/oxford/rss",
+      "website_url": "https://www.theguardian.com/uk/oxford",
+      "description": "The Guardian is the world's leading liberal voice. Follow us to keep up with articles latest news, sports, business, opinion, analysis and reviews on Oxford from The Guardian.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4953426.jpg?t=1621578906"
+    },
+    {
+      "title": "OxPol Blog",
+      "feed_url": "https://blog.politics.ox.ac.uk/feed/",
+      "website_url": "https://blog.politics.ox.ac.uk/",
+      "description": "OxPol is sharing research and analysis from Oxford's Department of Politics and International Relations. The Department of Politics and International Relations at Oxford is a centre for teaching and research. Follow us to keep up with news, insights and research from OxPol.",
+      "followers": {
+        "facebook": 7300,
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/4952759.jpg?t=1621578910"
+    },
+    {
+      "title": "The Brick Kitchen",
+      "feed_url": "https://www.thebrickkitchen.com/feed/",
+      "website_url": "https://www.thebrickkitchen.com/",
+      "description": "Featuring Claudia's favourite recipes, photography alongside travel shots and recommendations from recent trips.",
+      "followers": {
+        "facebook": 1600,
+        "instagram": 26800
+      },
+      "image_url": "https://i1.feedspot.com/4372702.jpg?t=1600346904"
+    },
+    {
+      "title": "FitFest Oxford Blog",
+      "feed_url": "https://fitfestoxford.com/feed/",
+      "website_url": "https://fitfestoxford.com/blog/",
+      "description": "FitFest Oxford is an annual, one-day event, which will be taking place at The Oxford Academy. Follow us to learn, taste, sample and experience everything that the industry has to offer.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 334
+      },
+      "image_url": "https://i1.feedspot.com/4953164.jpg?t=1621579622"
+    },
+    {
+      "title": "Oxford's Elite Personal Training service Blog",
+      "feed_url": "https://immortal-training.com/feed/",
+      "website_url": "https://immortal-training.com/blog/",
+      "description": "Oxford's Elite Personal Training service is built on a lifetime of sports, fitness and nutrition experience. It offers gym, fitness instructor and personal training services in North Oxford Elite Gym to its customers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4953171.jpg?t=1621579771"
+    },
+    {
+      "title": "Oxford University Language Centre",
+      "feed_url": "https://oxforduniversitylanguagecentre.wordpress.com/feed/",
+      "website_url": "https://oxforduniversitylanguagecentre.wordpress.com/",
+      "description": "Follow us to keep up with the articles from the Oxford University Language Centre.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4953268.jpg?t=1621579677"
+    },
+    {
+      "title": "Peter Lang Oxford",
+      "feed_url": "https://peterlangoxford.wordpress.com/feed/",
+      "website_url": "https://peterlangoxford.wordpress.com/",
+      "description": "Peter Lang Oxford publishes a wide range of academic titles, including monographs and edited collections. Their catalogue is recently established series in fields such as visual culture, cultural studies, education and religious studies.",
+      "followers": {
+        "facebook": 478,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4952490.jpg?t=1621579681"
+    },
+    {
+      "title": "A Rosie Life",
+      "feed_url": "http://www.arosielife.co.uk/feed/",
+      "website_url": "https://www.arosielife.co.uk/",
+      "description": "A Rosie Life is an independent Lifestyle Store run by Rosie Jacobs. It is a mix of colour, fun and style underpin the brand, and the A Rosie Life collection, bringing a little slice of happiness into your home.",
+      "followers": {
+        "facebook": 452,
+        "twitter": 641,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4951739.jpg?t=1621579687"
+    },
+    {
+      "title": "The Oxford Culture Review",
+      "feed_url": "https://theoxfordculturereview.com/feed/",
+      "website_url": "https://theoxfordculturereview.com/",
+      "description": "The Oxford Culture Review is dedicated to promoting arts and humanities events and research based in Oxford.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4952468.jpg?t=1621579695"
+    },
+    {
+      "title": "Oxford University Press",
+      "feed_url": "https://oupeltglobalblog.com/feed/",
+      "website_url": "https://teachingenglishwithoxford.oup.com/",
+      "description": "Welcome to Oxford University Press Blog. This blog is intended for teachers, trainers, lecturers, authors and anyone else with an interest in keeping up with what's happening in the world of ELT and what we're up to. We'll bring you resources you can use in your classrooms, hints and tips for teaching, insights into the lives of publishers and authors.",
+      "followers": {
+        "facebook": 318800,
+        "twitter": 107700
+      },
+      "image_url": "https://i1.feedspot.com/4510435.jpg?t=1607493236"
+    },
+    {
+      "title": "EC English Blog",
+      "feed_url": "https://ecenglish.com/en/blog/feed/",
+      "website_url": "https://ecenglish.com/en/blog/",
+      "description": "EC Oxford offers tailored language course shaped to deliver the solutions you're looking for. The courses offered are suitable for all levels of understanding and are designed to focus on the area of your choice. Follow us to learn to work, to pass exams or just for the sake of it.",
+      "followers": {
+        "facebook": 271900,
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/4951802.jpg?t=1621578918"
+    },
+    {
+      "title": "Oxford Summer Courses",
+      "feed_url": "https://oxfordsummercourses.com/feed",
+      "website_url": "https://oxfordsummercourses.com/",
+      "description": "Oxford Summer Courses was established by a network of Oxford alumni determined to share the magic of the university and the city with the wider world. It offers a range of study courses to students. Follow us to keep up with articles from Oxford Summer Courses.",
+      "followers": {
+        "facebook": 331600,
+        "instagram": 150000
+      },
+      "image_url": "https://i1.feedspot.com/4952476.jpg?t=1621578929"
+    },
+    {
+      "title": "Good Food Oxford Blog",
+      "feed_url": "https://goodfoodoxford.org/feed/",
+      "website_url": "https://goodfoodoxford.org/blog/",
+      "description": "Good Food Oxford is a network for a better food system in Oxford. It is open to anyone with an interest in food and food production and aims to bring together citizens, local authorities, businesses, academics and other stakeholders to help us all work together towards the shared goal of healthy, fair, sustainable and tasty food.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4951648.jpg?t=1621579627"
+    },
+    {
+      "title": "Sophie Siddons Photography Blog",
+      "feed_url": "https://sophiesiddonsphotography.co.uk/blog-feed.xml",
+      "website_url": "https://sophiesiddonsphotography.co.uk/blog/",
+      "description": "Sophie Siddons is a family, couples and wedding photographer in Oxford, Cheshire and beyond. Follow us to keep up with articles, beautiful and natural candid shots from Sophie Siddons Photography.",
+      "followers": {
+        "facebook": 515
+      },
+      "image_url": "https://i1.feedspot.com/4952982.jpg?t=1621579691"
+    }
+  ]
+}

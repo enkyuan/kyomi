@@ -1,0 +1,39 @@
+{
+  "category": "Termux",
+  "source_url": "https://rss.feedspot.com/termux_rss_feeds",
+  "feeds": [
+    {
+      "title": "Learn Termux",
+      "feed_url": "https://www.learntermux.tech/feeds/posts/default",
+      "website_url": "https://www.learntermux.tech/",
+      "description": "In this blog, you will learn about the Termux app from Beginner to pro. Blogger Saad Maqsood is committed to delivering a comprehensive resource on the Termux app. His goal is to provide articles written in simple, understandable language, ensuring that Termux's potential is accessible to everyone.",
+      "followers": {
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/5206721.jpg?t=1606114553"
+    },
+    {
+      "title": "Ivon's Blog \u00bb Termux",
+      "feed_url": "https://ivonblog.com/en-us/tags/termux/index.xml",
+      "website_url": "https://ivonblog.com/en-us/tags/termux/",
+      "description": "Explore Termux's potential, as these articles guide you through app development, scripting automation, and unleashing hidden functionalities. Ivon Huang, is a Linux & FOSS software enthusiast from Taiwan. He is interested in Computer Science, history, aircraft, philosophy, and ESL teaching methods.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 605
+      },
+      "image_url": "https://i1.feedspot.com/5729827.jpg?t=1701884499"
+    },
+    {
+      "title": "DotCom Magazine \u00bb Termux",
+      "feed_url": "https://dotcommagazine.com/tag/termux/feed/",
+      "website_url": "https://dotcommagazine.com/tag/termux/",
+      "description": "Step inside the Termux community with articles sharing tips, troubleshooting challenges, and celebrating successes. DotCom Magazine is a leading news platform providing fascinating interviews with newsmakers, thought leaders, and worldwide leading entrepreneurs, providing a comprehensive and insightful view of the world of business and innovation.",
+      "followers": {
+        "facebook": 11600,
+        "twitter": 5500,
+        "instagram": 83400
+      },
+      "image_url": "https://i1.feedspot.com/5729826.jpg?t=1701884534"
+    }
+  ]
+}

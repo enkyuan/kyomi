@@ -1,0 +1,2 @@
+- Popularity scores aren't exactly what we wanted. For example, Stack overflow CSS-tagged posts shouldn't rank #4 on software engineering.
+  - I think we can keep re-applying popularity prompt on 80-100 score range. 

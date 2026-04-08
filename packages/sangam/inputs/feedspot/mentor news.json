@@ -1,0 +1,30 @@
+{
+  "category": "Mentor News",
+  "source_url": "https://rss.feedspot.com/mentor_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of Mentor, Ohio",
+      "feed_url": "https://cityofmentor.com/feed/",
+      "website_url": "https://cityofmentor.com/news/",
+      "description": "The City of Mentor is located on the shores of Lake Erie in Northeast Ohio and is home to nearly 50,000 residents and 1,700 businesses. Get local news, entertainment, weather and alerts about Mentor, Ohio.",
+      "followers": {
+        "facebook": 24300,
+        "twitter": 6400,
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/5155286.jpg"
+    },
+    {
+      "title": "Fox 8 Cleveland WJW \u00bb Mentor",
+      "feed_url": "https://fox8.com/tag/mentor-news/feed/",
+      "website_url": "https://fox8.com/tag/mentor-news/",
+      "description": "Fox 8 News is the Cleveland's source breaking news, weather alerts and topics that impact you. The Latest News and Updates in Mentor News brought to you by the team at fox8.com.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 293700,
+        "instagram": 217600
+      },
+      "image_url": "https://i1.feedspot.com/5155285.jpg"
+    }
+  ]
+}

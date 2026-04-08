@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<opml version="1.0">
+    <head>
+        <title>Simon subscriptions in feedly Cloud</title>
+    </head>
+    <body>
+        <outline text="Forums" title="Forums">
+            <outline type="rss" text="Jay Carlson" title="Jay Carlson" xmlUrl="https://jaycarlson.net/feed/" htmlUrl="https://jaycarlson.net"/>
+            <outline type="rss" text="Analog Circuit Design" title="Analog Circuit Design" xmlUrl="http://www.edaboard.com/external.php?type=RSS2&amp;forumids=38" htmlUrl="https://www.edaboard.com/"/>
+        </outline>
+        <outline text="Tech" title="Tech">
+            <outline type="rss" text="MCU on Eclipse" title="MCU on Eclipse" xmlUrl="http://mcuoneclipse.com/feed/" htmlUrl="https://mcuoneclipse.com"/>
+            <outline type="rss" text="EETimes" title="EETimes" xmlUrl="http://www.eetimes.com/rss/rss-all.jhtml" htmlUrl="https://www.eetimes.com"/>
+            <outline type="rss" text="Better Embedded System SW" title="Better Embedded System SW" xmlUrl="http://betterembsw.blogspot.com/feeds/posts/default" htmlUrl="http://betterembsw.blogspot.com/"/>
+            <outline type="rss" text="Optics &amp; Photonics News - Optics, Photonics, Physics News" title="Optics &amp; Photonics News - Optics, Photonics, Physics News" xmlUrl="http://phys.org/rss-feed/physics-news/optics-photonics/" htmlUrl="https://phys.org/physics-news/optics-photonics"/>
+            <outline type="rss" text="Better Programming - Medium" title="Better Programming - Medium" xmlUrl="https://medium.com/feed/better-programming" htmlUrl="https://betterprogramming.pub?source=rss----d0b105d10f0a---4"/>
+            <outline type="rss" text="Stack Overflow" title="Stack Overflow" xmlUrl="http://embeddedgurus.com/stack-overflow/feed/" htmlUrl="https://embeddedgurus.com/stack-overflow"/>
+            <outline type="rss" text="telecom • networking • design" title="telecom • networking • design" xmlUrl="http://blog.eventhelix.com/feed/" htmlUrl="http://blog.eventhelix.com"/>
+            <outline type="rss" text="Embedded Software" title="Embedded Software" xmlUrl="http://blogs.mentor.com/colinwalls/feed/" htmlUrl="https://blogs.sw.siemens.com/embedded-software"/>
+            <outline type="rss" text="Interrupt" title="Interrupt" xmlUrl="https://interrupt.memfault.com/blog/feed.xml" htmlUrl="https://interrupt.memfault.com/"/>
+            <outline type="rss" text="Dave Ford's  Programming Blog" title="Dave Ford's  Programming Blog" xmlUrl="http://Dave-ford.blogspot.com/feeds/posts/default" htmlUrl="http://dave-ford.blogspot.com/"/>
+            <outline type="rss" text="ElectroOptical Innovations" title="ElectroOptical Innovations" xmlUrl="https://electrooptical.net/News/feeds/rss/" htmlUrl="https://electrooptical.net/News/"/>
+            <outline type="rss" text="Embedded Use" title="Embedded Use" xmlUrl="http://www.embeddeduse.com/feed/" htmlUrl="https://embeddeduse.com"/>
+            <outline type="rss" text="Light: Science &amp; Applications" title="Light: Science &amp; Applications" xmlUrl="http://feeds.nature.com/lsa/rss/current" htmlUrl="http://feeds.nature.com/lsa/rss/current"/>
+            <outline type="rss" text="Industrial Embedded Systems" title="Industrial Embedded Systems" xmlUrl="http://www.industrial-embedded.com/news/rss.xml" htmlUrl="http://industrial.embedded-computing.com"/>
+            <outline type="rss" text="Questionable Advice" title="Questionable Advice" xmlUrl="https://devhellop.com/feeds/rss/" htmlUrl="https://devhellop.com/"/>
+            <outline type="rss" text="Design World Online" title="Design World Online" xmlUrl="http://feeds.feedburner.com/DesignWorldOnline" htmlUrl="https://www.designworldonline.com"/>
+            <outline type="rss" text="Electronic Design - Engineering Essentials Curated By Experts" title="Electronic Design - Engineering Essentials Curated By Experts" xmlUrl="http://electronicdesign.com/rss.xml" htmlUrl="https://www.electronicdesign.com/"/>
+            <outline type="rss" text="FPGARelated.com Blogs" title="FPGARelated.com Blogs" xmlUrl="https://www.fpgarelated.com/blogs_rss.php" htmlUrl="https://www.fpgarelated.com/blogs.php"/>
+            <outline type="rss" text="The Embedded Blog" title="The Embedded Blog" xmlUrl="http://embeddedblog.blogspot.com/feeds/posts/default" htmlUrl="http://embeddedblog.blogspot.com/"/>
+            <outline type="rss" text="Digilent Blog" title="Digilent Blog" xmlUrl="https://blog.digilentinc.com/index.php/feed/" htmlUrl="https://digilent.com/blog"/>
+            <outline type="rss" text="Blog – Embedded Artistry" title="Blog – Embedded Artistry" xmlUrl="https://embeddedartistry.com/blog/feed/" htmlUrl="https://embeddedartistry.com"/>
+            <outline type="rss" text="All Articles" title="All Articles" xmlUrl="http://www.edn.com/rss/all" htmlUrl="https://www.edn.com"/>
+            <outline type="rss" text="Optics.org News" title="Optics.org News" xmlUrl="http://optics.org/rss/news.xml" htmlUrl="https://optics.org"/>
+            <outline type="rss" text="Optics and Photonics News RSS" title="Optics and Photonics News RSS" xmlUrl="http://www.osa-opn.org/home/rss.aspx?rss=News" htmlUrl="https://www.optica-opn.org/gallery/"/>
+            <outline type="rss" text="ACS Photonics: Latest Articles (ACS Publications)" title="ACS Photonics: Latest Articles (ACS Publications)" xmlUrl="http://feeds.feedburner.com/acs/apchd5" htmlUrl="https://pubs.acs.org"/>
+            <outline type="rss" text="designnews.com - Serving the 21st Century Design Engineer" title="designnews.com - Serving the 21st Century Design Engineer" xmlUrl="http://www.designnews.com/rss_simple.asp" htmlUrl="https://www.designnews.com/"/>
+            <outline type="rss" text="nixCraft: Linux Tips, Hacks, Tutorials, And Ideas In Blog Format (RSS/FEED)" title="nixCraft: Linux Tips, Hacks, Tutorials, And Ideas In Blog Format (RSS/FEED)" xmlUrl="http://www.cyberciti.biz/faq/feed/" htmlUrl="https://www.cyberciti.biz/atom/"/>
+            <outline type="rss" text="Physics Today Magazine" title="Physics Today Magazine" xmlUrl="http://physicstoday.org/feed.xml" htmlUrl="https://physicstoday.scitation.org/loi/pto?af=R&amp;feed=most-recent"/>
+            <outline type="rss" text="Journal of the Optical Society of America A" title="Journal of the Optical Society of America A" xmlUrl="http://metadata.osa.org/rss/infobase/josaa_feed.xml" htmlUrl="http://www.osapublishing.org/josaa"/>
+            <outline type="rss" text="MacroFab" title="MacroFab" xmlUrl="https://macrofab.com/feed/" htmlUrl="https://macrofab.com"/>
+            <outline type="rss" text="Optics Letters" title="Optics Letters" xmlUrl="http://metadata.osa.org/rss/infobase/ol_feed.xml" htmlUrl="http://www.osapublishing.org/ol"/>
+            <outline type="rss" text="Jay Carlson" title="Jay Carlson" xmlUrl="https://jaycarlson.net/feed/" htmlUrl="https://jaycarlson.net"/>
+            <outline type="rss" text="The Signal Path" title="The Signal Path" xmlUrl="http://thesignalpath.com/blogs/feed/" htmlUrl="https://thesignalpath.com/blogs"/>
+            <outline type="rss" text="Embedded processing" title="Embedded processing" xmlUrl="http://e2e.ti.com/blogs_/b/msp430blog/rss.aspx" htmlUrl="https://e2e.ti.com/blogs_/b/process"/>
+            <outline type="rss" text="Applied Optics" title="Applied Optics" xmlUrl="http://metadata.osa.org/rss/infobase/ao_feed.xml" htmlUrl="http://www.osapublishing.org/ao"/>
+            <outline type="rss" text="Embedded Star" title="Embedded Star" xmlUrl="http://feeds.feedburner.com/EmbeddedStar" htmlUrl="http://www.embeddedstar.com/weblog"/>
+            <outline type="rss" text="Embedded" title="Embedded" xmlUrl="http://embedded.fm/episodes?format=rss" htmlUrl="https://embedded.fm/"/>
+            <outline type="rss" text="EmbeddedRelated.com Blogs" title="EmbeddedRelated.com Blogs" xmlUrl="http://www.embeddedrelated.com/blogs_rss.php" htmlUrl="https://www.embeddedrelated.com/blogs.php"/>
+            <outline type="rss" text="EDN" title="EDN" xmlUrl="http://www.edn.com/rss/" htmlUrl="https://www.edn.com"/>
+            <outline type="rss" text="Latest Posts - Embedded" title="Latest Posts - Embedded" xmlUrl="http://embedded.fm/blog?format=RSS" htmlUrl="https://embedded.fm/blog/"/>
+            <outline type="rss" text="Circuit Cellar" title="Circuit Cellar" xmlUrl="http://circuitcellar.com/feed/" htmlUrl="https://circuitcellar.com"/>
+            <outline type="rss" text="Embedds" title="Embedds" xmlUrl="http://www.embedds.com/feed/" htmlUrl="https://embedds.com"/>
+            <outline type="rss" text="Adafruit Industries – Makers, hackers, artists, designers and engineers!" title="Adafruit Industries – Makers, hackers, artists, designers and engineers!" xmlUrl="http://www.adafruit.com/blog/feed/adacast" htmlUrl="https://blog.adafruit.com"/>
+            <outline type="rss" text="SparkFun: Commerce Blog" title="SparkFun: Commerce Blog" xmlUrl="http://www.sparkfun.com/commerce/rss.php" htmlUrl="https://www.sparkfun.com/news"/>
+            <outline type="rss" text="Embedded Gurus - Experts on Embedded Software Posts" title="Embedded Gurus - Experts on Embedded Software Posts" xmlUrl="http://embeddedgurus.com/wp-content/recent-global-posts-feed.php" htmlUrl="https://embeddedgurus.com"/>
+            <outline type="rss" text="Applied Spectroscopy" title="Applied Spectroscopy" xmlUrl="http://metadata.osa.org/rss/infobase/as_feed.xml" htmlUrl="http://www.osapublishing.org/as"/>
+            <outline type="rss" text="mbed" title="mbed" xmlUrl="http://mbed.org/blog/feeds/entries/" htmlUrl="https://os.mbed.com/blog/"/>
+            <outline type="rss" text="IEEE Photonics Technology Letters - new TOC" title="IEEE Photonics Technology Letters - new TOC" xmlUrl="http://ieeexplore.ieee.org/rss/TOC68.XML" htmlUrl="http://ieeexplore.ieee.org"/>
+            <outline type="rss" text="ElectronVector - Test-First Embedded Software" title="ElectronVector - Test-First Embedded Software" xmlUrl="http://www.electronvector.com/blog?format=RSS" htmlUrl="http://www.electronvector.com/"/>
+            <outline type="rss" text="Embedded Artistry" title="Embedded Artistry" xmlUrl="https://embeddedartistry.com/feed/" htmlUrl="https://embeddedartistry.com"/>
+            <outline type="rss" text="The Amp Hour Electronics Podcast" title="The Amp Hour Electronics Podcast" xmlUrl="http://feeds.feedburner.com/TheAmpHour" htmlUrl="https://theamphour.com"/>
+            <outline type="rss" text="physics.optics updates on arXiv.org" title="physics.optics updates on arXiv.org" xmlUrl="http://arxiv.org/rss/physics.optics" htmlUrl="http://arxiv.org/"/>
+        </outline>
+        <outline text="News" title="News">
+            <outline type="rss" text="Entrepreneur" title="Entrepreneur" xmlUrl="http://feeds.feedburner.com/entrepreneur/latest" htmlUrl="https://www.entrepreneur.com/latest"/>
+            <outline type="rss" text="Jay Carlson" title="Jay Carlson" xmlUrl="https://jaycarlson.net/feed/" htmlUrl="https://jaycarlson.net"/>
+            <outline type="rss" text="Forbes - Entrepreneurs" title="Forbes - Entrepreneurs" xmlUrl="http://www.forbes.com/entrepreneurs/index.xml" htmlUrl="https://www.forbes.com/entrepreneurs/"/>
+            <outline type="rss" text="Fast Company" title="Fast Company" xmlUrl="http://feeds.feedburner.com/fastcompany/headlines" htmlUrl="https://www.fastcompany.com"/>
+            <outline type="rss" text="Alkaline Heros" title="Alkaline Heros" xmlUrl="https://eatabattery.com/blog/feeds/rss/" htmlUrl="https://eatabattery.com/blog/"/>
+            <outline type="rss" text="The Art of Manliness" title="The Art of Manliness" xmlUrl="http://feeds2.feedburner.com/TheArtOfManliness" htmlUrl="https://www.artofmanliness.com"/>
+            <outline type="rss" text="AskMen" title="AskMen" xmlUrl="http://www.askmen.com/rss/homepage.rss" htmlUrl="http://www.askmen.com/homepage.xml"/>
+            <outline type="rss" text="designnews.com - Serving the 21st Century Design Engineer" title="designnews.com - Serving the 21st Century Design Engineer" xmlUrl="http://www.designnews.com/rss_simple.asp" htmlUrl="https://www.designnews.com/"/>
+            <outline type="rss" text="Design World Online" title="Design World Online" xmlUrl="http://feeds.feedburner.com/DesignWorldOnline" htmlUrl="https://www.designworldonline.com"/>
+            <outline type="rss" text="SparkFun: Commerce Blog" title="SparkFun: Commerce Blog" xmlUrl="http://www.sparkfun.com/commerce/rss.php" htmlUrl="https://www.sparkfun.com/news"/>
+            <outline type="rss" text="Wired UK" title="Wired UK" xmlUrl="http://www.wired.co.uk/rss.aspx" htmlUrl="https://www.wired.co.uk"/>
+        </outline>
+    </body>
+</opml>

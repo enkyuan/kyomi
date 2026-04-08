@@ -1,0 +1,749 @@
+{
+  "category": "Crossfit",
+  "source_url": "https://rss.feedspot.com/crossfit_rss_feeds",
+  "feeds": [
+    {
+      "title": "Boxlife Magazine",
+      "feed_url": "https://boxlifemagazine.com/feed/",
+      "website_url": "https://boxlifemagazine.com/",
+      "description": "BoxLife gives readers the tools they need to enhance their workout experience, covering everything from diet and nutrition, weightlifting, product reviews, overall mental and physical fitness, motivation and more. Anyone familiar with the movement knows the lifestyle doesn't end when an athlete steps out of the box. Simply put, Boxlife is the magazine for individuals living the CrossFit lifestyle.",
+      "followers": {
+        "facebook": 366000,
+        "twitter": 10200,
+        "instagram": 71300
+      },
+      "image_url": "https://i1.feedspot.com/4981456.jpg?t=1614585885"
+    },
+    {
+      "title": "CrossFit Sanctify Blog",
+      "feed_url": "https://www.crossfitsanctify.com/wod-blog?format=rss",
+      "website_url": "https://www.crossfitsanctify.com/wod-blog",
+      "description": "Explore workouts of the day along with educational blogs to help support your mindset, nutrition, training, improving fitness, competition prep, and weightlifting. CrossFit Sanctify offers personalized coaching, proven training methods.",
+      "followers": {
+        "facebook": 6,
+        "instagram": 951
+      },
+      "image_url": "https://i1.feedspot.com/5296552.jpg?t=1624625506"
+    },
+    {
+      "title": "CrossFit Ireland Blog",
+      "feed_url": "https://crossfitireland.ie/feed/",
+      "website_url": "https://crossfitireland.ie/blog/",
+      "description": "At CrossFit Ireland we believe that training can be an enjoyable experience that delivers results in terms of happiness, achievement and confidence. Far more than you could imagine. We do this by creating an environment that's welcoming and supportive. We combine this with well thought out programming and positive coaching.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 1000,
+        "instagram": 5400
+      },
+      "image_url": "https://i1.feedspot.com/4549210.jpg?t=1614585928"
+    },
+    {
+      "title": "BOXROX",
+      "feed_url": "https://www.boxrox.com/crossfit/feed",
+      "website_url": "https://www.boxrox.com/crossfit/",
+      "description": "Borox is a competitive Fitness Magazine and is the world's biggest online magazine for fans of CrossFit and functional fitness. An online magazine for competitive fitness and functional sports. Find the tools to expand your physical and mental fitness and health.",
+      "followers": {
+        "facebook": 511400,
+        "twitter": 5700,
+        "instagram": 44700
+      },
+      "image_url": "https://i1.feedspot.com/4100189.jpg?t=1669709067"
+    },
+    {
+      "title": "CrossFit Marrickville Blog",
+      "feed_url": "https://crossfitmarrickville.com.au/feed/",
+      "website_url": "https://crossfitmarrickville.com.au/blog/",
+      "description": "Keep up to date with what's happening in the CrossFit Marrickville community. We provide a combination of skill, strength and conditioning using functional-based exercises. All workouts are scaled to your individual fitness level by experienced coaches.",
+      "followers": {
+        "facebook": 1800,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4916561.jpg?t=1672825263"
+    },
+    {
+      "title": "CrossFit South Brooklyn Blog",
+      "feed_url": "https://crossfitsouthbrooklyn.com/feed/",
+      "website_url": "https://crossfitsouthbrooklyn.com/blog/",
+      "description": "We are Brooklyn's first CrossFit affiliate, and an internationally consulted gym for our progressive and professional business practices. CFSBK's mission is to provide a safe, effective and inclusive training environment for all our members. We pride ourselves on our top-notch coaching, intelligent programming, and professional yet relaxed atmosphere. Browse through our blog for workouts of the day, tips and advice, fitness regime and more!",
+      "followers": {
+        "facebook": 4700,
+        "instagram": 9100
+      },
+      "image_url": "https://i1.feedspot.com/5296549.jpg?t=1624627520"
+    },
+    {
+      "title": "CrossFit Midtown",
+      "feed_url": "https://crossfitmidtown.com/feed/",
+      "website_url": "https://crossfitmidtown.com/wod/",
+      "description": "Check out our blog for more information on CrossFit, daily workout routines, tips and more! We offer effective workout programming. Our training program is customized for our students with built-in cycles to work on specific movements and muscle groups.",
+      "followers": {
+        "facebook": 1800,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5359520.jpg?t=1672826139"
+    },
+    {
+      "title": "CrossFIt King Of Prussia",
+      "feed_url": "http://aimeesfitnessblog.blogspot.com/feeds/posts/default",
+      "website_url": "http://aimeesfitnessblog.blogspot.com/",
+      "description": "We offer three main types of classes: Daily W.O.D, Express W.O.D. and Open Strength. Check out the blog for the daily workout routines, tips, fitness and health advice and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5487399.jpg?t=1672825402"
+    },
+    {
+      "title": "CrossFit Santa Cruz Central",
+      "feed_url": "https://www.crossfitsantacruzcentral.com/home?format=rss",
+      "website_url": "https://www.crossfitsantacruzcentral.com/",
+      "description": "Founded in 2008 by five 'original' crossfitters, CrossFit Santa Cruz Central is located about 200m from where the very first CrossFit gym was located on Research Park Drive in Soquel, California. Get all the information on CrossFit, health and fitness, nutrition tips and more!",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 60
+      },
+      "image_url": "https://i1.feedspot.com/5487402.jpg?t=1672825056"
+    },
+    {
+      "title": "BTWB Blog",
+      "feed_url": "https://btwb.blog/feed/",
+      "website_url": "https://btwb.blog/",
+      "description": "We help thousands of CrossFitters (including most CrossFit Games Athletes) Plan, Log and Analyze their fitness journey. Our most innovative feature, Fitness Level, will help guide you every step of the way. Explore our blog for fitness and health tips, CrossFit world news, information and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5487403.jpg?t=1672825060"
+    },
+    {
+      "title": "Diablo CrossFit Blog",
+      "feed_url": "https://diablocrossfit.com/feed/",
+      "website_url": "https://diablocrossfit.com/blog/",
+      "description": "Diablo CrossFit is one of the most recognized names in the CrossFit affiliate world. Founded in 2005, we have focused on our mission: 'make our clients fit beyond expectation.' The result is an amazing gym with beautiful facilities, programs for beginners and experts, talented Coaches, a heritage of competition success, and most importantly, a fun, welcoming community of members. Check out our workout tips and schedules, reps tips and more!",
+      "followers": {
+        "facebook": 5200,
+        "instagram": 10500
+      },
+      "image_url": "https://i1.feedspot.com/5487404.jpg?t=1672825065"
+    },
+    {
+      "title": "CrossFit Linchpin Blog",
+      "feed_url": "https://crossfitlinchpin.com/blogs/wod.atom",
+      "website_url": "https://crossfitlinchpin.com/blogs/wod",
+      "description": "Our team at CF Linchpin is fully dedicated to providing the highest quality training possible to you, and every other member of our community. We believe in six core values: Unequivocal Excellence, Results, Integrity, Honesty, Virtuosity, and Fun. Our blog features daily workout regimes, tips and more!",
+      "followers": {
+        "twitter": 1100,
+        "instagram": 123100
+      },
+      "image_url": "https://i1.feedspot.com/5487406.jpg?t=1672825075"
+    },
+    {
+      "title": "12 Labours CrossFit Blog",
+      "feed_url": "https://www.12labourscrossfit.com//feed/rss2",
+      "website_url": "https://www.12labourscrossfit.com/blog",
+      "description": "Check out our latest news or read the WOD Blog in the CrossFit Columbia and Annapolis areas. We service the greater Baltimore CrossFit Communities. 12 Labours CrossFit will continue to improve the lives of our members every single day through fitness, health, and wellness. We stand to build an inclusive community and provide world-class fitness facilities",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5487409.jpg?t=1672825633"
+    },
+    {
+      "title": "The Rx Review",
+      "feed_url": "https://www.therxreview.com/feed/",
+      "website_url": "https://www.therxreview.com/",
+      "description": "The Rx Review is an independent fitness website, reporting on the Sport of Fitness, functional fitness news, The CrossFit Games, health and diet-related information, and also provides reviews on sports performance products.",
+      "followers": {
+        "facebook": 51900,
+        "twitter": 2300,
+        "instagram": 6400
+      },
+      "image_url": "https://i1.feedspot.com/5487410.jpg?t=1672825100"
+    },
+    {
+      "title": "CrossFit Valor",
+      "feed_url": "https://crossfitvalor.com/wod?format=rss",
+      "website_url": "https://crossfitvalor.com/wod",
+      "description": "Check out The WOD Blog for our daily workouts. Our mission at CrossFit Valor is to provide our clients and community with the absolute best fitness program and education available. Through a combination of CrossFit training and nutrition guidance we assist our members in exceeding their fitness goals and expectations.",
+      "followers": {
+        "facebook": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5487416.jpg?t=1672825133"
+    },
+    {
+      "title": "CrossFit Cove News",
+      "feed_url": "https://crossfitcove.com/feed/",
+      "website_url": "https://crossfitcove.com/cove-news/",
+      "description": "The Cove is a gym designed to optimize health and connect people through the power of fitness. With Crossfit Cove's extensive class schedules, expert coaching staff, open gym access, child care, family programs and a supportive community you will see there's a solution for any situation. Check out the blog for the latest news and updates along with our coaches' insights, Workout of the day, tips and more!",
+      "followers": {
+        "facebook": 1300,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5487433.jpg?t=1672825270"
+    },
+    {
+      "title": "CrossFit Kent Island Blog",
+      "feed_url": "https://crossfitkentisland.com/feed/",
+      "website_url": "https://crossfitkentisland.com/blog/",
+      "description": "We offer over 30 class options each week including CrossFit along with Specialty seminars in Olympic Weightlifting, Gymnastics, and Mobility. Our staff is made up of highly experienced and qualified coaches who hold a variety of certifications that make us the most diverse gym in the area. Browse through our clients' stories, fitness and health tips, advice and more!",
+      "followers": {
+        "facebook": 1200,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5487444.jpg?t=1672825708"
+    },
+    {
+      "title": "Iron Hero CrossFit Blog",
+      "feed_url": "https://ironherocrossfit.com/feed/",
+      "website_url": "https://ironherocrossfit.com/blog/",
+      "description": "See what's happening in the Iron Hero CrossFit community on our blog posts. At Iron Hero CrossFit in Omaha, NE, we build strong bodies. We'll help you make a plan to hit your health and fitness goals.",
+      "followers": {
+        "facebook": 1200,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5487447.jpg?t=1672825351"
+    },
+    {
+      "title": "CrossFit Queens Blog",
+      "feed_url": "https://crossfitqueensny.com/feed/",
+      "website_url": "https://crossfitqueensny.com/blog/",
+      "description": "CrossFit Queens is a welcoming, supportive and inclusive training community. Our 4,500 square foot facility is decked out with barbells, kettlebells, dumbbells, a massive pull-up bar rig from Rogue, Concept2 rowers, Assault Bikes, Echo Bikes, and a TrueForm runner. We train anyone and everyone. At CFQ you'll find students, executives, stay-at-home parents, athletes, artists, techies, educators, lawyers, and more. Check out our blog for more information on CrossFit, daily workout routines, tips and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5487451.jpg?t=1672825852"
+    },
+    {
+      "title": "CrossFit Malibu Blog",
+      "feed_url": "https://www.crossfitmalibu.com/wod-blog/feed/",
+      "website_url": "https://www.crossfitmalibu.com/wod-blog/",
+      "description": "CrossFit Malibu is a group CrossFit and Personal Training Center in the heart of Malibu. We have been training local Malibu clients for over a decade. From World Record-holding athletes to 84-year-olds, we help all fitness levels and ages. Avid surfers, CEOs, and students have found extra energy to thrive in their everyday lives. We provide daily Workout routines curated for every goal in our blog.",
+      "followers": {
+        "facebook": 910,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5487457.jpg?t=1672825408"
+    },
+    {
+      "title": "CrossFit Rage Blog",
+      "feed_url": "https://cfrage.com/blog/feed/",
+      "website_url": "http://cfrage.com/blog/",
+      "description": "CrossFit Rage is an officially licensed 3,000-square-foot CrossFit facility. Our mission is to change people's lives by using CrossFit methodologies. CrossFit Rage is equipped with barbells, bumper plates, kettlebells, medicine balls, Concept 2 rowers, climbing ropes, plyometric boxes, pullup bars, gymnastic rings, 'Strongman' equipment and more. Check out our Workout of The Day routines, tips and more in the blog.",
+      "followers": {
+        "facebook": 1200,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5487460.jpg?t=1672825427"
+    },
+    {
+      "title": "CrossFit Wonderland Blog",
+      "feed_url": "https://www.crossfitwonderland.com/blog-feed.xml",
+      "website_url": "https://www.crossfitwonderland.com/blog",
+      "description": "We were founded back in 2017 to be a place where anyone can come to improve their health and fitness, one day at a time. We look at the big picture and combine the best aspects of a fitness, nutrition, lifestyle and mindset coaching to embody this approach and redefine how to best reach your goals. Explore our blog for fitness and health tips, CrossFit world news, information and more!",
+      "followers": {
+        "facebook": 1200,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5487461.jpg?t=1672825434"
+    },
+    {
+      "title": "CrossFit Fireside Blog",
+      "feed_url": "https://crossfitfireside.com/feed/",
+      "website_url": "https://crossfitfireside.com/blog/",
+      "description": "CrossFit Fireside was founded by Ben and Catie Bristow in 2014. Together they have built a diverse community of passionate members and coaches that genuinely care about each other, both in and outside of the gym. Our community comes from all different fitness backgrounds and walks of life, from non-athletes to elite athletes, kids, teens, adults, seniors, busy professionals, and stay-at-home parents. Keep up with the most up-to-date updates from us, workout routines, tips, fitness and health advice and more!",
+      "followers": {
+        "facebook": 1800,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5487462.jpg?t=1672825443"
+    },
+    {
+      "title": "CrossFit Eclipse Blog",
+      "feed_url": "https://crossfiteclipse.com/feed/",
+      "website_url": "https://crossfiteclipse.com/eclipse-blog/",
+      "description": "Our gym is led by incredible coaches and every day is filled with the most incredible, hard-working, and loving members that any facility could ask for. Over 11,200 sq. feet of space with showers, heat, air conditioning, and other amenities. Our blog is a resource for all the information on CrossFit, fitness and health advice, workout routines and more!",
+      "followers": {
+        "facebook": 3000,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5487467.jpg?t=1672825478"
+    },
+    {
+      "title": "Driven Mind Blog",
+      "feed_url": "https://drivenmindtraining.com/blog/feed/",
+      "website_url": "https://drivenmindtraining.com/blog/",
+      "description": "I'm Dawn Fletcher, creator of Driven Mind previously known as Mentality WOD, and your head coach. I've had nearly every job in the fitness industry over the last 15+ years and I've coached more than 20 CrossFit games athletes, Olympic, and national level competitors, marines, entrepreneurs, doctors, weekend warriors, coaches, and thousands of others to championships and MAJOR life achievements.I absolutely love coaching those who want to optimize themselves, their performance, and their lives.",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 5200,
+        "instagram": 17300
+      },
+      "image_url": "https://i1.feedspot.com/5274491.jpg?t=1619779843"
+    },
+    {
+      "title": "Foundation CrossFit Blog",
+      "feed_url": "http://www.foundationcrossfit.com/feed/",
+      "website_url": "http://www.foundationcrossfit.com/blog/",
+      "description": "Foundation CrossFit is a group and personal fitness instruction facility in the Capitol Hill neighborhood of Seattle.",
+      "followers": {
+        "facebook": 3,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4549234.jpg?t=1614585879"
+    },
+    {
+      "title": "Boxletes",
+      "feed_url": "https://www.boxletes.com/feed/",
+      "website_url": "https://www.boxletes.com/",
+      "description": "Boxletes is an online destination for CrossFit athletes, from beginner to advanced, featuring gyms, gear reviews, fitness tips, and more.",
+      "followers": {
+        "instagram": 564
+      },
+      "image_url": "https://i1.feedspot.com/5373997.jpg?t=1645440469"
+    },
+    {
+      "title": "Four Barrel CrossFit Blog",
+      "feed_url": "http://4bfit.com/feed/",
+      "website_url": "https://4bfit.com/blog/",
+      "description": "Four Barrel CrossFit is an Elite CrossFit training facility with locations in New Albany, Indiana and Louisville, Kentucky. We offer daily classes, seminars, sport specific training, personal training, and a one of a kind community fitness atmosphere.",
+      "followers": {
+        "twitter": 355,
+        "instagram": 928
+      },
+      "image_url": "https://i1.feedspot.com/4549222.jpg?t=1672824407"
+    },
+    {
+      "title": "CrossFit Shrewsbury WOD Blog",
+      "feed_url": "https://crossfitshrewsbury.wordpress.com/feed/",
+      "website_url": "https://crossfitshrewsbury.wordpress.com/",
+      "description": "Since 2009, Monmouth County's first ELITE CrossFit Training Facility",
+      "followers": {
+        "facebook": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4549239.jpg?t=1614586100"
+    },
+    {
+      "title": "CrossFit 7220 Blog",
+      "feed_url": "https://www.crossfit7220.com/blog-feed.xml",
+      "website_url": "https://www.crossfit7220.com/blog-1",
+      "description": "rossFit 7220 has friendly, encouraging, knowledgable trainers with a passion for movement and overall health. Our athletes work hard and thrive to improve themselves on a daily basis. This is a community of people with diversity and a grasp on their goals. Interested in trying CrossFit? We'd love to have you!",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 101
+      },
+      "image_url": "https://i1.feedspot.com/4549391.jpg"
+    },
+    {
+      "title": "CrossFit Pineville Blog",
+      "feed_url": "https://pinevillecrossfit.com/blog/feed/",
+      "website_url": "http://pinevillecrossfit.com/blog/",
+      "description": "CrossFit Pineville advances the fitness, health & wellness for each gym member through encouragement & community!",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 92
+      },
+      "image_url": "https://i1.feedspot.com/4549750.jpg?t=1614586066"
+    },
+    {
+      "title": "Inside the Affiliate",
+      "feed_url": "http://www.insidetheaffiliate.com/blog/rss.xml",
+      "website_url": "http://www.insidetheaffiliate.com/",
+      "description": "Inside the Affiliate is a blog, which I'll be using to share what I've learned over the last 12+ years running a CrossFit gym. In the spirit of CrossFit's open source affiliate model, I'll be discussing our class management principles, continuing education programs, and the lessons my coaches and I have learned since starting CrossFit South Brooklyn in 2007. The ultimate goal of this blog is to promote strategies that help affiliates create professional, inclusive, effective and Fun training experiences for their members.",
+      "followers": {
+        "twitter": 148
+      },
+      "image_url": "https://i1.feedspot.com/3607405.jpg?t=1672826016"
+    },
+    {
+      "title": "Twin Bridges CrossFit Blog",
+      "feed_url": "https://twinbridgescrossfit.com/feed/",
+      "website_url": "https://twinbridgescrossfit.com/blog/",
+      "description": "At TBCF we focus on building sustainable exercise and nutrition habits that will help you reach your goals and stay there. Our mission is to build humble, driven, happy people who are free of chronic disease and embrace fitness as a lifelong pursuit. Our blog features the latest CrossFit updates, tips, fitness and health advice from our team and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5487398.jpg?t=1672825032"
+    },
+    {
+      "title": "CrossFit Virtuosity Blog",
+      "feed_url": "https://crossfitvirtuosity.com/feed/",
+      "website_url": "https://crossfitvirtuosity.com/blog/",
+      "description": "CrossFit Virtuosity began in 2008 as two coaches and a group of hardy athletes working out in the Central Park Pinetum, rain or shine. We provide CrossFit, Gymnastics, Weightlifting, Kettlebells, Fitness, Mastery of Movement. Keep up with the most up-to-date updates from us, workout routines, tips, fitness and health advice and more!",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 4400,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5487400.jpg?t=1672825043"
+    },
+    {
+      "title": "WODprep Blog",
+      "feed_url": "https://feeds.feedburner.com/wodprep",
+      "website_url": "https://wodprep.com/blog/",
+      "description": "Discover how to improve for the Crossfit open as a Masters athlete. From tips & tricks to strategy advice, we've got you covered. WODprep is here to help athletes from all over the world break through their sticking points, hit new PRs, and learn to RX every workout.",
+      "followers": {
+        "facebook": 262100,
+        "instagram": 243800
+      },
+      "image_url": "https://i1.feedspot.com/5487405.jpg?t=1672825071"
+    },
+    {
+      "title": "CrossFit Southie",
+      "feed_url": "https://www.crossfitsouthie.com/feed/",
+      "website_url": "https://www.crossfitsouthie.com/community/education/",
+      "description": "CrossFit Southie is one of the largest CrossFit Gyms in the country, occupying 15,000 square feet of space in a convenient Boston location between Andrew and Broadway station in South Boston just off of 93. The gym has been in business since 2010 and has maintained membership numbers ranging between 400-600 for monthly enrollment.",
+      "followers": {
+        "facebook": 6300,
+        "instagram": 7500
+      },
+      "image_url": "https://i1.feedspot.com/5487408.jpg?t=1672825090"
+    },
+    {
+      "title": "CrossFit South Bend Blog",
+      "feed_url": "https://crossfitsouthbend.com/blog/cfsb-crossfit-blog/feed/",
+      "website_url": "https://crossfitsouthbend.com/blog/cfsb-crossfit-blog/",
+      "description": "At CrossFit South Bend, we're here to align, guide and empower the individuals we work with toward lasting success in their fitness and health journey. Check out the latest in fitness, including posts on nutrition, our community, tips and more.",
+      "followers": {
+        "facebook": 3500,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5487412.jpg?t=1672825313"
+    },
+    {
+      "title": "CrossFit Verve",
+      "feed_url": "https://crossfitverve.com/feed/",
+      "website_url": "https://crossfitverve.com/",
+      "description": "CrossFit Verve's mission is to cultivate a fit Denver community that transforms lives by providing elite functional fitness, so that people may live happier and healthier. Keep up with the most up-to-date updates from us, workout routines, tips, fitness and health advice and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5487414.jpg?t=1672825589"
+    },
+    {
+      "title": "CrossFit Central",
+      "feed_url": "https://www.crossfitcentral.com/the-press?format=rss",
+      "website_url": "https://www.crossfitcentral.com/the-press/",
+      "description": "We use a proven system that combines fitness, nutrition, recovery, and mindset. And, we have the best community. You can expect constant variation, strength training, conditioning, and world-class coaching in every class. The CrossFit Central is full of tips, tricks and information on CrossFit, health and personal fitness.",
+      "followers": {
+        "facebook": 15700,
+        "instagram": 15500
+      },
+      "image_url": "https://i1.feedspot.com/5487415.jpg?t=1672825128"
+    },
+    {
+      "title": "CrossFit Pendle Blog",
+      "feed_url": "https://www.crossfitpendle.com/feed/",
+      "website_url": "https://www.crossfitpendle.com/blog/",
+      "description": "Keep up with the most up-to-date updates from us, workout routines, tips, fitness and health advice and more! At CrossFit Pendle, we work hard to help our members reach personal goals and be the best they can be. But we work even harder to make a welcoming, inclusive workout space where all abilities and ages can come together for fitness and fun.",
+      "followers": {
+        "facebook": 3300,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5487418.jpg?t=1672825146"
+    },
+    {
+      "title": "Cross Fit Mean Streets",
+      "feed_url": "https://crossfitmeanstreets.com/feed/",
+      "website_url": "https://crossfitmeanstreets.com/",
+      "description": "Find fitness and health tips and advice, nutritional advice, the latest news from the health industry and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5487420.jpg?t=1672825181"
+    },
+    {
+      "title": "Misfit Athletics",
+      "feed_url": "https://misfitathletics.com/articles/feed/",
+      "website_url": "https://misfitathletics.com/articles/",
+      "description": "With over 10 years of experience in the world of competitive Crossfit, Misfit Athletics knows what it takes to perform at the highest levels. Whether you are just beginning your competitive journey or are a seasoned veteran looking to take the next step in your career, we've got programming and resources for you. Learn more about CrossFit, tips and advice, fitness and health advice and more!",
+      "followers": {
+        "facebook": 22600,
+        "instagram": 95000
+      },
+      "image_url": "https://i1.feedspot.com/5487422.jpg?t=1672825173"
+    },
+    {
+      "title": "CrossFit Pleasanton Blog",
+      "feed_url": "https://crossfitpleasanton.com/feed/",
+      "website_url": "https://crossfitpleasanton.com/blog/",
+      "description": "CrossFit Pleasanton is a community of positive clients and trainers that works together in a supportive society to achieve outstanding health and fitness. The Blog features articles, workouts, and inspiration from CrossFit Pleasanton.",
+      "followers": {
+        "facebook": 4,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5487424.jpg?t=1672825190"
+    },
+    {
+      "title": "CrossFit SISU Blog",
+      "feed_url": "https://crossfitsisu.com/blog/feed/",
+      "website_url": "https://crossfitsisu.com/blog/",
+      "description": "CrossFit SISU started in late 2009 with a single vision in mind - to enrich people's lives both mentally and physically by evangelizing the life-changing benefits that CrossFit offers. Our entire team's DNA is made up of former athletes with the same vision. CrossFit SISU is a purpose-driven organization, and we have quickly become the West Metro's largest and leading CrossFit affiliate by offering a refreshing change to people seeking Community, Challenge and Coaching. Stay up to date with the latest news and updates, fitness tips, nutritional nd health advice and more!",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 86,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5487436.jpg?t=1672825287"
+    },
+    {
+      "title": "CrossFit Winter Garden Blog",
+      "feed_url": "https://crossfitwintergarden.com/blog/feed/",
+      "website_url": "https://crossfitwintergarden.com/blog/",
+      "description": "The CrossFit Winter Garden Blog is full of tips, tricks and information on CrossFit, health and personal fitness. All ages and levels of athletes will become stronger and accomplish fitness goals together with the varied workouts our 'Wolf Den' has to offer. We support military, police, first responders and teachers. We look forward to you joining our pack, and us becoming your Winter Garden Gym.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5487437.jpg?t=1672825930"
+    },
+    {
+      "title": "Overland Park CrossFit Blog",
+      "feed_url": "https://overlandparkcrossfit.com/blog/feed/",
+      "website_url": "https://overlandparkcrossfit.com/blog/",
+      "description": "The Overland Park CrossFit blog is a great resource to learn about fitness, nutrition, mindset, and achieving your goals. At Overland Park CrossFit, our goal is to bring effective, efficient, and fun fitness to the Overland Park community. We design programs to get you in the best shape of your life, under the guidance of highly skilled coaches.",
+      "followers": {
+        "facebook": 1500,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5487439.jpg?t=1672825301"
+    },
+    {
+      "title": "Niche CrossFit Blog",
+      "feed_url": "https://nichecrossfit.com.au/feed/",
+      "website_url": "https://nichecrossfit.com.au/blog/",
+      "description": "We are the first CrossFit facility in Western Australia to offer specialised gymnastics training and classes. The goal is always to maintain a balance between authentic gymnastics technique and drills and the goals of CrossFit athletes. Stay up to date with new healthy recipes, expert coaches' insights on CrossFit and fitness, our members' stories and more!",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 13,
+        "instagram": 6500
+      },
+      "image_url": "https://i1.feedspot.com/5487441.jpg?t=1672825313"
+    },
+    {
+      "title": "CrossFit Train 97333 Blog",
+      "feed_url": "https://crossfittrain97333.com/blog-1?format=rss",
+      "website_url": "https://crossfittrain97333.com/blog-1",
+      "description": "CrossFit Train 97333 was founded in 2011 and started as a true garage gym with just a handful of members. Our mission is to provide a fun, safe, and inclusive environment for people to achieve their health and fitness goals. At CrossFit Train we do not discriminate based on age, athletic ability, gender, sexual orientation, race, or ethnicity. Our blog features various Workout of the Day routines for different goals, tips and fitness and more!",
+      "followers": {
+        "facebook": 150,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5487442.jpg?t=1672825319"
+    },
+    {
+      "title": "BarBend \u00bb CrossFit",
+      "feed_url": "https://barbend.com/crossfit/feed/",
+      "website_url": "https://barbend.com/crossfit/",
+      "description": "BarBend is supported by a team of over 70 experts, contributors, researchers, photographers, and athletes from around the globe. Through news coverage, training and nutrition content, product reviews and more, BarBend is your home for all things strength. Stay up to date on the latest from CrossFit community, informative articles, athletes, tips and more!",
+      "followers": {
+        "facebook": 74700,
+        "twitter": 9400,
+        "instagram": 167300
+      },
+      "image_url": "https://i1.feedspot.com/5487446.jpg?t=1672825346"
+    },
+    {
+      "title": "CrossFit Liberate Blog",
+      "feed_url": "https://crossfitliberate.com/feed/",
+      "website_url": "https://crossfitliberate.com/blog/",
+      "description": "We strive to improve the overall wellness of our community by focusing on fitness, nutrition and fun. Simply put, we are committed to offering the benefits of CrossFit to everyone in our community, regardless of previous athletic background or ability. Explore our blog for more information on CrossFit, nutrition tips and advice, daily workout routines and more!",
+      "followers": {
+        "facebook": 926,
+        "twitter": 1000000,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5487452.jpg?t=1672825669"
+    },
+    {
+      "title": "Seaward CrossFit News",
+      "feed_url": "https://seawardcrossfit.com/news/feed/",
+      "website_url": "https://seawardcrossfit.com/news/",
+      "description": "At Seaward CrossFit, we believe health and fitness is a tools to help us reach our peak self-expression. That's where our high-energy expert coaches come in. It is our duty to help you reach a higher quality of life by using hard work and discipline to create a happy, confident, and physically capable individual who is ready to take on whatever challenges the seas ahead might bring. Stay up to date with the latest news, updates and more on our training schedules, classes and more!",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 151,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5487453.jpg?t=1672825385"
+    },
+    {
+      "title": "CrossFit Harrogate",
+      "feed_url": "https://www.crossfitharrogate.com/workout?format=rss",
+      "website_url": "https://www.crossfitharrogate.com/workout",
+      "description": "Check out our workout tips and schedules, reps tips and more! At CrossFit Harrogate, we provide CrossFit, Weightlifting, functional fitness & HIIT for all abilities taking the utmost pride in what we do & the community we are building.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5487454.jpg?t=1672825888"
+    },
+    {
+      "title": "Grey Coast CrossFit Blog",
+      "feed_url": "https://www.greycoastcrossfit.com/category/blogs/feed/",
+      "website_url": "https://www.greycoastcrossfit.com/category/blogs/",
+      "description": "Grey Coast Crossfit was founded in 2016. We have new equipment, most of which was purchased locally, and friendly and experienced coaching staff available anytime to help you reach your fitness goals. Check out our blog for more information on CrossFit, tips and advice, fitness tips and more!",
+      "followers": {
+        "facebook": 940,
+        "instagram": 705
+      },
+      "image_url": "https://i1.feedspot.com/5487455.jpg?t=1672825394"
+    },
+    {
+      "title": "Ohio Strength Blog",
+      "feed_url": "https://ohiostrength.com/feed/",
+      "website_url": "https://ohiostrength.com/blog/",
+      "description": "Ohio Strength specializes in Health Coaching, CrossFit Classes, and Nutrition Coaching and supports a wide array of athletes and average folks with the common goal of improving their health and performance every day. Their expert coach will help you build a plan that's right for your strength & conditioning, weight loss, CrossFit, fitness, nutrition, and lifestyle goals! Keep up to date with what's happening in the Best CrossFit Gym in Columbus, Ohio.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 197,
+        "instagram": 22800
+      },
+      "image_url": "https://i1.feedspot.com/5487458.jpg?t=1672825413"
+    },
+    {
+      "title": "CrossFit Oakdale Blog",
+      "feed_url": "https://cfoakdale.com/feed/",
+      "website_url": "https://cfoakdale.com/blog/",
+      "description": "Our community started its journey in 2008, but opened the doors of CrossFit Oakdale in 2011. We have worked out in garages, outdoors, in stadiums and on beaches. We have trained with first responders, athletes, expecting mothers and grandparents. If you fall into the category of a 'person looking for a change through fitness, nutrition and community support,' this is at the place for you. Learn more about CrossFit, tips and advice, fitness and health advice and more!",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 159,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5487468.jpg?t=1672825487"
+    },
+    {
+      "title": "CrossFit Roots Blog",
+      "feed_url": "https://crossfitroots.com/feed/",
+      "website_url": "https://crossfitroots.com/blog/",
+      "description": "Explore our blog for more information on CrossFit, nutrition tips and advice, daily workout routines and more! We opened CrossFit Roots with the belief that everyone deserved world-class fitness. We are the home for fitness misfits - those who believe in the CrossFit methodology, hard work, dedication, responsibility, and the power of community. We turn our heads to gimmicks, quick fixes, and fancy facades.",
+      "followers": {
+        "facebook": 6600,
+        "instagram": 9200
+      },
+      "image_url": "https://i1.feedspot.com/5296563.jpg?t=1624628361"
+    },
+    {
+      "title": "Boulder CrossFit Blog",
+      "feed_url": "https://bouldercrossfit.com/feed/",
+      "website_url": "https://bouldercrossfit.com/blog/",
+      "description": "Boulder's premier fitness-driven community. Comprehensive Crossfit programs for all levels and abilities. Check out our blog for more information on CrossFit, daily workout routines, tips and more!",
+      "followers": {
+        "facebook": 931,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5487423.jpg?t=1672825187"
+    },
+    {
+      "title": "Badger CrossFit Blog",
+      "feed_url": "https://www.badgercrossfit.com/feed",
+      "website_url": "https://www.badgercrossfit.com/blog",
+      "description": "Badger CrossFit is a full-service strength and conditioning gym, which caters to individuals who desire true fitness.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 1000,
+        "instagram": 8800
+      },
+      "image_url": "https://i1.feedspot.com/4543444.jpg?t=1617359385"
+    },
+    {
+      "title": "Invictus Fitness Blog",
+      "feed_url": "https://invictusfitness.com/feed/",
+      "website_url": "https://invictusfitness.com/blog/",
+      "description": "Invictus Fitness is more than a CrossFit gym, it's a community of support, education, and encouragement. Our goal at Invictus is to provide you with a fun path to achieve your health and fitness goals. Whether you want to win the CrossFit Games or just be healthy and happy so that you can be a better parent, spouse, or employee, our coaches can help.",
+      "followers": {
+        "facebook": 168200,
+        "twitter": 33200,
+        "instagram": 249500
+      },
+      "image_url": "https://i1.feedspot.com/5274489.jpg?t=1619764728"
+    },
+    {
+      "title": "Community Fitness Davis Blog",
+      "feed_url": "https://www.crossfitdavis.com/category/blog/feed/",
+      "website_url": "https://www.communityfitnessdavis.com/blog",
+      "description": "CrossFit Davis is a school of elite fitness in Davis, CA. We can help you achieve fitness that will improve your everyday life and make you capable of things you never thought possible.",
+      "followers": {
+        "facebook": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4549203.jpg?t=1672824830"
+    },
+    {
+      "title": "Alchemy Community Fitness Blog",
+      "feed_url": "https://www.alchemyfitness.com/blog/feed/",
+      "website_url": "https://www.alchemyfitness.com/blog/",
+      "description": "Alchemy Community Fitness Blog features announcements and tips from Alchemy on health and fitness, nutrition, and CrossFit. Alchemy Community Fitness provides customized workout programming and next-level coaching for group fitness classes in Hamilton and Brantford. Our mission is to provide the best gym experience in the world.",
+      "followers": {
+        "facebook": 4800,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5296553.jpg?t=1624626344"
+    },
+    {
+      "title": "CrossFit Wilmette Blog",
+      "feed_url": "https://www.crossfitwilmette.com/feed",
+      "website_url": "https://www.crossfitwilmette.com/blogs",
+      "description": "Your premier source for fitness, CrossFit, group classes, and personal trainers in Wilmette, Evanston, and Winnetka. Anyone at any fitness level can work out at CrossFit Wilmette! We're here to ensure you have an excellent, safe workout every time you come to the gym. Getting started with us is a simple yet tailored experience for each individual. The blog features the CrossFit workout tips and advice, routines, nutritional advice and more!",
+      "followers": {
+        "facebook": 741,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5487401.jpg?t=1672825050"
+    },
+    {
+      "title": "JerseyDevilCrossFit Blog",
+      "feed_url": "https://www.jerseydevilcrossfit.com/blog?format=rss",
+      "website_url": "https://www.albanycrossfit.com/wod",
+      "description": "Jersey Devil CrossFit is a core strength and conditioning program housed within Adrenaline Fitness, an inclusive health and fitness facility. We utilize CrossFit's cutting-edge methodology to create a fitness program that will enhance ANY individual's fitness, improving life inside and outside of the gym. Check out The WOD Blog for our daily workouts.",
+      "followers": {
+        "twitter": 30,
+        "instagram": 828
+      },
+      "image_url": "https://i1.feedspot.com/5487417.jpg?t=1672825140"
+    },
+    {
+      "title": "Albany CrossFit",
+      "feed_url": "https://www.albanycrossfit.com/feed",
+      "website_url": "https://www.albanycrossfit.com/wod",
+      "description": "Read about fitness advice from Albany CrossFit on our blog, where we cover different topics across the fitness industry. Albany CrossFit has been helping our community lead happier, healthier lives since 2007.",
+      "followers": {
+        "facebook": 5500,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5487419.jpg?t=1672825159"
+    },
+    {
+      "title": "Queen City Crossfit Blog",
+      "feed_url": "https://www.queencitycrossfit.com/feed",
+      "website_url": "https://www.queencitycrossfit.com/blog",
+      "description": "At Queen City CrossFit, we provide a strength, conditioning and wellness programming that is safe and effective. We offer a supportive community where you can achieve your fullest potential while having fun. Our programming focuses on all 10 general physical skills, including cardiorespiratory endurance, stamina, strength, flexibility, power, speed, coordination, agility, balance and accuracy. Check out our blog for daily workout regimes for strength and flexibility, tips and more!",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 77,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5487426.jpg?t=1672825203"
+    },
+    {
+      "title": "CrossFit Allatoona Blog",
+      "feed_url": "https://www.crossfitallatoona.com/feed",
+      "website_url": "https://www.crossfitallatoona.com/blog",
+      "description": "The CrossFit Allatoona Blog is a great resource to learn about fitness, nutrition, mindset, and achieving your goals. CrossFit Allatoona is coaching in a group to help you get better in your fitness. Build strength, discipline, look better, move better, feel better. We offer a variety of plans to meet your needs and your goals. One of our coaches will help you select the plan that works best for.",
+      "followers": {
+        "facebook": 1600,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5487434.jpg?t=1672825275"
+    },
+    {
+      "title": "CrossFit OC3 Blog",
+      "feed_url": "https://crossfitoc3.com/category/blog/feed/",
+      "website_url": "https://crossfitoc3.com/category/blog/",
+      "description": "CrossFit OC3 opened its doors in October 2015 and is owned and operated by Colin and Jessie Cartee, and Kolton O'Day. We opened OC3 with the goal to provide a safe, educational and encouraging atmosphere for clients to reach their highest fitness potential. Browse through our blog for workouts of the day, tips and advice, fitness regime and more!",
+      "followers": {
+        "facebook": 2600,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5487443.jpg?t=1672825330"
+    },
+    {
+      "title": "CrossFit 405 Blog",
+      "feed_url": "https://www.crossfit405.com/feed",
+      "website_url": "https://www.crossfit405.com/blog",
+      "description": "At CrossFit 405 our entire reason for being here is our commitment to you. We want you to realize your potential, see you succeed and reach your personal goals, and provide that motivation and accountability you get as a member of our community! CrossFit 405 Blog is your source for all the information you need on CrossFit, fitness, health, people's success stories and more!",
+      "followers": {
+        "facebook": 2700,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5487459.jpg?t=1672825420"
+    },
+    {
+      "title": "Crossfit Clitheroe Blog",
+      "feed_url": "https://www.crosstrainingclitheroe.com/category/blogs/feed",
+      "website_url": "https://www.crosstrainingclitheroe.com/category/blogs/",
+      "description": "Our extensive CrossFit timetable offers something for everyone at a time that suits, from early morning to late at night we have a session that will suit your schedule. Our daily WOD program will take the complete beginner to the advanced exerciser to the limits of their fitness potential in a matter of months. Find our workout routines curated to suit everyone in the blog.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5487464.jpg?t=1672825455"
+    }
+  ]
+}

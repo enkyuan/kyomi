@@ -1,0 +1,54 @@
+{
+  "category": "Microsoft Bing",
+  "source_url": "https://rss.feedspot.com/microsoft_bing_rss_feeds",
+  "feeds": [
+    {
+      "title": "Bing Blog",
+      "feed_url": "https://blogs.bing.com/search/feed",
+      "website_url": "https://blogs.bing.com/search",
+      "description": "Bing is using advances in technology to make it even easier to quickly find what you're looking for. This is a place devoted to giving you deeper insight into the news, trends, people, and technology behind Bing.",
+      "followers": {
+        "facebook": 3400000,
+        "twitter": 684900,
+        "instagram": 280800
+      },
+      "image_url": "https://i1.feedspot.com/4405925.jpg?t=1620642895"
+    },
+    {
+      "title": "Bing Maps Blog",
+      "feed_url": "https://blogs.bing.com/maps/feed",
+      "website_url": "https://blogs.bing.com/maps",
+      "description": "This is Official Bing Maps Blog. This is a place devoted to giving you deeper insight into the news, trends, people, and technology behind Bing.",
+      "followers": {
+        "facebook": 3400000,
+        "twitter": 684900,
+        "instagram": 280800
+      },
+      "image_url": "https://i1.feedspot.com/4918723.jpg?t=1620642900"
+    },
+    {
+      "title": "Bing Webmaster Blog",
+      "feed_url": "https://blogs.bing.com/webmaster/feed",
+      "website_url": "https://blogs.bing.com/webmaster/",
+      "description": "Bing is using advances in technology to make it even easier to quickly find what you're looking for, whether it's an answer to a complicated question or an item in an image you want to learn more about. This is Bing Webmaster Blog.",
+      "followers": {
+        "facebook": 3400000,
+        "twitter": 684900,
+        "instagram": 280800
+      },
+      "image_url": "https://i1.feedspot.com/4413084.jpg?t=1620642910"
+    },
+    {
+      "title": "Bing Search Quality Insights",
+      "feed_url": "https://blogs.bing.com/search-quality-insights/feed",
+      "website_url": "https://blogs.bing.com/search-quality-insights",
+      "description": "Bing is using advances in technology to make it even easier to quickly find what you're looking for. This is a place devoted to giving you deeper insight into the news, trends, people, and technology behind Bing.",
+      "followers": {
+        "facebook": 3400000,
+        "twitter": 684900,
+        "instagram": 280800
+      },
+      "image_url": "https://i1.feedspot.com/4918728.jpg?t=1620642905"
+    }
+  ]
+}

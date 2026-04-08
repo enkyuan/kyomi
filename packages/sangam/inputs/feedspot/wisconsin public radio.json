@@ -1,0 +1,161 @@
+{
+  "category": "Wisconsin Public Radio",
+  "source_url": "https://rss.feedspot.com/wisconsin_public_radio_rss_feeds",
+  "feeds": [
+    {
+      "title": "Wisconsin Public Radio",
+      "feed_url": "https://www.wpr.org/feed",
+      "website_url": "https://www.wpr.org/",
+      "description": "All articles from Wisconsin Public Radio.",
+      "followers": {
+        "facebook": 79900,
+        "twitter": 28500,
+        "instagram": 16700
+      },
+      "image_url": "https://i1.feedspot.com/5250523.jpg?t=1750315941"
+    },
+    {
+      "title": "Wisconsin Public Radio \u00bb News",
+      "feed_url": "https://www.wpr.org/topic/news/feed",
+      "website_url": "https://www.wpr.org/topic/news",
+      "description": "Wisconsin and the World.",
+      "followers": {
+        "facebook": 79900,
+        "instagram": 16700
+      },
+      "image_url": "https://i1.feedspot.com/8540060.jpg"
+    },
+    {
+      "title": "Wisconsin Public Radio \u00bb Justice",
+      "feed_url": "https://www.wpr.org/topic/justice/feed",
+      "website_url": "https://www.wpr.org/topic/justice",
+      "description": "Wisconsin and the World.",
+      "followers": {
+        "facebook": 79900,
+        "instagram": 16700
+      },
+      "image_url": "https://i1.feedspot.com/8540035.jpg"
+    },
+    {
+      "title": "Wisconsin Public Radio \u00bb Politics",
+      "feed_url": "https://www.wpr.org/topic/politics/feed",
+      "website_url": "https://www.wpr.org/politics",
+      "description": "Presidential politics and political news from Wisconsin Public Radio. News about political parties, political campaigns, world and international politics, politics news headlines plus in-depth features and video clips.",
+      "followers": {
+        "facebook": 79900,
+        "twitter": 28500
+      },
+      "image_url": "https://i1.feedspot.com/5250523.jpg?t=1750315941"
+    },
+    {
+      "title": "Wisconsin Public Radio \u00bb Culture",
+      "feed_url": "https://www.wpr.org/topic/culture/feed",
+      "website_url": "https://www.wpr.org/topic/culture",
+      "description": "Get the latest articles about Culture from Wisconsin Public Radio.",
+      "followers": {
+        "facebook": 79900,
+        "twitter": 28500
+      },
+      "image_url": "https://i1.feedspot.com/5250523.jpg?t=1750315941"
+    },
+    {
+      "title": "Wisconsin Public Radio \u00bb Art",
+      "feed_url": "https://www.wpr.org/topic/art/feed",
+      "website_url": "https://www.wpr.org/topic/art",
+      "description": "All articles about Art from Wisconsin Public Radio.",
+      "followers": {
+        "facebook": 79900,
+        "instagram": 16700
+      },
+      "image_url": "https://i1.feedspot.com/8540036.jpg"
+    },
+    {
+      "title": "Wisconsin Public Radio \u00bb Sports",
+      "feed_url": "https://www.wpr.org/topic/sports/feed",
+      "website_url": "https://www.wpr.org/topic/sports",
+      "description": "All articles about Sports from Wisconsin Public Radio.",
+      "followers": {
+        "facebook": 79900,
+        "instagram": 16700
+      },
+      "image_url": "https://i1.feedspot.com/8540037.jpg"
+    },
+    {
+      "title": "Wisconsin Public Radio \u00bb Social Issues",
+      "feed_url": "https://www.wpr.org/topic/social-issues/feed",
+      "website_url": "https://www.wpr.org/topic/social-issues",
+      "description": "All articles about Social Issues from Wisconsin Public Radio.",
+      "followers": {
+        "facebook": 79900,
+        "instagram": 16700
+      },
+      "image_url": "https://i1.feedspot.com/8540033.jpg"
+    },
+    {
+      "title": "Wisconsin Public Radio \u00bb Science and Technology",
+      "feed_url": "https://www.wpr.org/topic/science-and-technology/feed",
+      "website_url": "https://www.wpr.org/topic/science-and-technology",
+      "description": "All articles about Science and Technology from Wisconsin Public Radio.",
+      "followers": {
+        "facebook": 79900,
+        "instagram": 16700
+      },
+      "image_url": "https://i1.feedspot.com/8540034.jpg"
+    },
+    {
+      "title": "Wisconsin Public Radio \u00bb Economy",
+      "feed_url": "https://www.wpr.org/topic/economy/feed",
+      "website_url": "https://www.wpr.org/topic/economy",
+      "description": "All articles about Economy from Wisconsin Public Radio.",
+      "followers": {
+        "facebook": 79900,
+        "instagram": 16700
+      },
+      "image_url": "https://i1.feedspot.com/8540032.jpg"
+    },
+    {
+      "title": "Wisconsin Public Radio \u00bb Health",
+      "feed_url": "https://www.wpr.org/topic/health/feed",
+      "website_url": "https://www.wpr.org/topic/health",
+      "description": "All articles about Health from Wisconsin Public Radio.",
+      "followers": {
+        "facebook": 79900,
+        "instagram": 16700
+      },
+      "image_url": "https://i1.feedspot.com/8540039.jpg"
+    },
+    {
+      "title": "Wisconsin Public Radio \u00bb Environment",
+      "feed_url": "https://www.wpr.org/topic/environment/feed",
+      "website_url": "https://www.wpr.org/topic/environment",
+      "description": "All articles about Environment from Wisconsin Public Radio.",
+      "followers": {
+        "facebook": 79900,
+        "instagram": 16700
+      },
+      "image_url": "https://i1.feedspot.com/8540040.jpg"
+    },
+    {
+      "title": "Wisconsin Public Radio \u00bb Education",
+      "feed_url": "https://www.wpr.org/topic/education/feed",
+      "website_url": "https://www.wpr.org/topic/education",
+      "description": "All articles about Education from Wisconsin Public Radio.",
+      "followers": {
+        "facebook": 79900,
+        "instagram": 16700
+      },
+      "image_url": "https://i1.feedspot.com/8540038.jpg"
+    },
+    {
+      "title": "Wisconsin Public Radio \u00bb Agriculture",
+      "feed_url": "https://www.wpr.org/topic/agriculture/feed",
+      "website_url": "https://www.wpr.org/topic/agriculture",
+      "description": "Get the latest agriculture news and updates from Wisconsin Public Radio.",
+      "followers": {
+        "facebook": 79900,
+        "twitter": 28500
+      },
+      "image_url": "https://i1.feedspot.com/5250523.jpg?t=1750315941"
+    }
+  ]
+}

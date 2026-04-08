@@ -1,0 +1,40 @@
+{
+  "category": "Affordable Watch",
+  "source_url": "https://rss.feedspot.com/affordable_watch_rss_feeds",
+  "feeds": [
+    {
+      "title": "Ben's Watch Club Blog",
+      "feed_url": "https://www.benswatchclub.com/blog?format=rss",
+      "website_url": "https://www.benswatchclub.com/blog",
+      "description": "Ben's Watch Club is the UK's leading independent wristwatch reviewer. We have been producing affordable wristwatch content since 2019. Our aim is to provide you with the information you need to make a wise purchasing decision; to prevent you from wasting money on overpriced or overhyped junk.",
+      "followers": {
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5380461.jpg?t=1647004758"
+    },
+    {
+      "title": "WatchTime \u00bb Affordable Watches",
+      "feed_url": "https://www.watchtime.com/tag/affordable-watches/feed/",
+      "website_url": "https://www.watchtime.com/tag/affordable-watches/",
+      "description": "Watchtime.com reviews affordable luxury watches, posts updates about the top affordable and cheap watches, and has a database full of affordable watches and cheap watches. Our magazine covers all aspects of fine timepieces: the watches themselves; the companies and countries that manufacture them; and the community of watch lovers.",
+      "followers": {
+        "facebook": 489700,
+        "twitter": 43100,
+        "instagram": 330800
+      },
+      "image_url": "https://i1.feedspot.com/5380459.jpg?t=1647003730"
+    },
+    {
+      "title": "The Thrifty Gentleman Blog",
+      "feed_url": "https://www.thrifty-gentleman.com/blog-feed.xml",
+      "website_url": "https://thrifty-gentleman.com/blogs/blog",
+      "description": "Get the latest updates and news regarding watches and straps by browsing our blog section. The Thrifty Gentleman is an online affordable watch straps and watch parts shop based in Winchester, UK.",
+      "followers": {
+        "facebook": 21,
+        "twitter": 211,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5303015.jpg?t=1626503067"
+    }
+  ]
+}

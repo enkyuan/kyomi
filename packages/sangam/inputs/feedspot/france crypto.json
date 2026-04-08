@@ -1,0 +1,109 @@
+{
+  "category": "France Crypto",
+  "source_url": "https://rss.feedspot.com/france_crypto_rss_feeds",
+  "feeds": [
+    {
+      "title": "The \u20bflog",
+      "feed_url": "https://the-blog.fr/feed/",
+      "website_url": "https://the-blog.fr/",
+      "description": "The blog is an independent web magazine, whose team is currently growing! Their Media is gradually being structured, with the ambition of becoming a source of reliable and well-sourced information on the subjects that fascinate our authors.",
+      "followers": {
+        "facebook": 73,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5500171.jpg?t=1675061253"
+    },
+    {
+      "title": "Cryptocast",
+      "feed_url": "https://cryptoast.fr/feed/",
+      "website_url": "https://cryptoast.fr/actu/",
+      "description": "The site that explains everything from A to Z about Bitcoin, blockchain and crypto-currencies. News and explanatory articles to discover and progress in these sectors! Follow their blog for News, guides and tutorials to understand everything about Bitcoin, cryptocurrencies and blockchain technologies",
+      "followers": {
+        "facebook": 13600,
+        "twitter": 463
+      },
+      "image_url": "https://i1.feedspot.com/5500170.jpg?t=1675061362"
+    },
+    {
+      "title": "Bitcoin.fr",
+      "feed_url": "https://bitcoin.fr/feed/",
+      "website_url": "https://bitcoin.fr/",
+      "description": "bitcoin.fr is an information and news site about Bitcoin. Follow the blog to get all the latest updates, inside news and informative articles about bitcoins. The articles published on the blog are LocalBitcoins shuts down, Bitcoin, AI, and Nuclear Fusion, The Magical Origins of Bitcoin, Bitcoin, common knowledge and more.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 49100
+      },
+      "image_url": "https://i1.feedspot.com/5067495.jpg?t=1675061408"
+    },
+    {
+      "title": "Cryptonaute",
+      "feed_url": "https://cryptonaute.fr/feed/",
+      "website_url": "https://cryptonaute.fr/",
+      "description": "Founded in September 2017 under a first domain name, Cryptonaute.fr is an independent French web media blog. Cryptonaute covers all the news concerning cryptocurrencies (Bitcoin, Ethereum, Altcoins), NFTs, blockchain, decentralized finance (DeFi) as well as web 3.0. Their goal is to democratize crypto-currencies and make this sector accessible to everyone.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5313861.jpg?t=1675061432"
+    },
+    {
+      "title": "Cointelegraph France",
+      "feed_url": "https://fr.cointelegraph.com/rss",
+      "website_url": "https://fr.cointelegraph.com/",
+      "description": "Founded in 2013, Cointelegraph is the leading independent digital media blog covering a wide range of news on blockchain technology, crypto assets, and emerging fintech trends. Each day their team delivers the most accurate and up-to-date news from both the decentralized and centralized worlds.",
+      "followers": {
+        "facebook": 169,
+        "twitter": 999,
+        "instagram": 425600
+      },
+      "image_url": "https://i1.feedspot.com/5516777.jpg?t=1678095055"
+    },
+    {
+      "title": "Crypto-France",
+      "feed_url": "https://www.crypto-france.com/feed/",
+      "website_url": "https://www.crypto-france.com/",
+      "description": "Find all the news about Crypto-currencies (Bitcoin, Ethereum, Ripple,...) and Blockchain on Crypto-France. The topics covered on the blog include cryptocurrencies, blockchain, bitcoin, democratization, and similar subjects.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4792328.jpg?t=1675061336"
+    },
+    {
+      "title": "Ethereum France",
+      "feed_url": "https://www.ethereum-france.com/feed/",
+      "website_url": "https://www.ethereum-france.com/blogs/",
+      "description": "A French reference site dedicated to Ethereum and its ecosystem. They are a small team fans of cryptosmonnaies and created this page in order to give information on developments of BTC and ETH. The artic less they publish is about Ethereum events of 2023, DevCon VI Recap, Ethereum's consensus mechanism after the Merger, and similar topics.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 32700
+      },
+      "image_url": "https://i1.feedspot.com/4818339.jpg?t=1609933288"
+    },
+    {
+      "title": "Coins.fr",
+      "feed_url": "https://coins.fr/magazine/feed/",
+      "website_url": "https://coins.fr/magazine/",
+      "description": "Founded in Paris by Christophe Auffray and Stanislas Pogorzelski, Coins.fr is a digital media blog that deals with the latest & trending news around web 3.0: crypto-currencies, decentralized finance, Metaverse, or NFT and many more informative articles around the indusrty.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5500172.jpg?t=1675061240"
+    },
+    {
+      "title": "Cryptoslate \u00bb France",
+      "feed_url": "https://cryptoslate.com/places/france/feed/",
+      "website_url": "https://cryptoslate.com/places/france/",
+      "description": "Follow the blog to learn about the latest France blockchain news, events, and companies from CryptoSlate, a leading destination for cryptocurrency and blockchain news.",
+      "followers": {
+        "twitter": 55000,
+        "instagram": 102800
+      },
+      "image_url": "https://i1.feedspot.com/5500173.jpg?t=1675061277"
+    },
+    {
+      "title": "Bybit Learn",
+      "feed_url": "https://learn.bybit.com/",
+      "website_url": "https://learn.bybit.com/",
+      "description": "Established in March 2018, Bybit is one of the fastest-growing cryptocurrency exchanges, with more than 10 million registered users. The blog features articles on derivatives. launch pads, altcoins, governance and more.",
+      "followers": {
+        "facebook": 4500000,
+        "twitter": 131,
+        "instagram": 366800
+      },
+      "image_url": "https://i1.feedspot.com/5500177.jpg?t=1675944114"
+    }
+  ]
+}

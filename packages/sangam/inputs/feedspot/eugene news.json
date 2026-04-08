@@ -1,0 +1,48 @@
+{
+  "category": "Eugene News",
+  "source_url": "https://rss.feedspot.com/eugene_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Eugene Weekly",
+      "feed_url": "https://eugeneweekly.com/feed/",
+      "website_url": "https://eugeneweekly.com/",
+      "description": "We are the liberal media. Eugene Weekly is the mullet of news sources: Business in the front; party in the back.",
+      "followers": {
+        "facebook": 19000,
+        "twitter": 14000,
+        "instagram": 12500
+      },
+      "image_url": "https://i1.feedspot.com/4955068.jpg?t=1621602776"
+    },
+    {
+      "title": "The Register-Guard",
+      "feed_url": "https://www.registerguard.com/news?template=rss&mime=xml",
+      "website_url": "https://www.registerguard.com/",
+      "description": "The Register-Guard delivers up-to-the-minute news and information on the latest top stories, weather, entertainment, politics and more.",
+      "followers": {
+        "facebook": 38900,
+        "twitter": 31100,
+        "instagram": 7600
+      },
+      "image_url": "https://i1.feedspot.com/5136232.jpg"
+    },
+    {
+      "title": "KLCC",
+      "feed_url": "https://www.klcc.org/rss.xml",
+      "website_url": "https://www.klcc.org/",
+      "description": "KLCC is a listener-supported, non-commercial, non-promotional, independent radio station. KLCC News aspires to the highest journalistic standards. KLCC is the primary source of news for many of our listeners. We seek to lead, not follow, the local media. Our reporting advances the stories of the day and provides coverage not found elsewhere.",
+      "followers": {
+        "facebook": 10,
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5136546.jpg?t=1623302402"
+    },
+    {
+      "title": "Eugene Daily News",
+      "feed_url": "https://eugenedailynews.com/feed/",
+      "description": "Eugene Daily News is the region's go-to daily source of news, bringing a fresh local perspective on regional as well as bigger national stories. Catch up on current News, Sports, Weather forcasts, Diverse viewpoints, Wellness and Lifestyle articles, and much more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4874289.jpg?t=1677072480"
+    }
+  ]
+}

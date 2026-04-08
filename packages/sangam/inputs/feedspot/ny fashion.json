@@ -1,0 +1,793 @@
+{
+  "category": "NY Fashion",
+  "source_url": "https://rss.feedspot.com/new_york_fashion_rss_feeds",
+  "feeds": [
+    {
+      "title": "Color Me Courtney",
+      "feed_url": "https://www.colormecourtney.com/feed/",
+      "website_url": "https://www.colormecourtney.com/category/style/",
+      "description": "Covers fun fashion tips, style advice, & colorful outfit ideas. Inspiring all to dress outside the lines! Color Me Courtney blog catalogs Courtney's color obsession, out-of-the-box outfits and new life as a twenty-something mess of a New Yorker.",
+      "followers": {
+        "facebook": 9400,
+        "twitter": 6000,
+        "instagram": 931600
+      },
+      "image_url": "https://i1.feedspot.com/4467710.jpg?t=1608299032"
+    },
+    {
+      "title": "Natalie Off Duty",
+      "feed_url": "https://natalieoffduty.com/feed/",
+      "website_url": "https://natalieoffduty.com/",
+      "description": "Covers the unique fashion perspective of New York model Natalie Suarez. Sharing her stories, inspirations, and projects through her own photography and writing",
+      "followers": {
+        "facebook": 78300,
+        "twitter": 25200,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/4217156.jpg?t=1608299313"
+    },
+    {
+      "title": "We Wore What",
+      "feed_url": "https://weworewhat.com/blogs/fashion.atom",
+      "website_url": "https://weworewhat.com/blogs/fashion/",
+      "description": "Covers everything from fashion to interior design to menswear, your single-source destination for the delectable world of Danielle. WeWoreWhat provides up-to-date info on the nightlife-leading, plant-slutting, Frenchie-coveting entrepreneur.",
+      "followers": {
+        "facebook": 221700,
+        "twitter": 26900,
+        "instagram": 3300000
+      },
+      "image_url": "https://i1.feedspot.com/823446.jpg?t=1600351070"
+    },
+    {
+      "title": "Leandra Medine Cohen",
+      "feed_url": "https://leandramcohen.substack.com/feed",
+      "website_url": "https://leandramcohen.substack.com/",
+      "description": "The Cereal Aisle is about fashion and style and how to get dressed with occasional thoughts on life: being a mom, turning inwards to the mystical, and finding ground in the early stages of a new phase of life.",
+      "followers": {
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/5441534.jpg?t=1663138232"
+    },
+    {
+      "title": "Atlantic Pacific",
+      "feed_url": "https://www.the-atlantic-pacific.com/feed/",
+      "website_url": "https://www.the-atlantic-pacific.com/",
+      "description": "Hi, my name is Blair Eadie and I am the owner and operator of the personal style site Atlantic-Pacific. I began Atlantic-Pacific in 2010 as a passion project to document my east-coast-meets-west-coast style aesthetic. My photographs have allowed me to tell an ongoing narrative of my evolving personal style. I love all things feminine - think timeless meets classic with a hint of quirk.",
+      "followers": {
+        "facebook": 200200,
+        "instagram": 1900000
+      },
+      "image_url": "https://i1.feedspot.com/4613219.jpg?t=1605157474"
+    },
+    {
+      "title": "Fashion Magazine NYC",
+      "feed_url": "https://www.fashionmagazinenyc.com/blog-feed.xml",
+      "website_url": "https://www.fashionmagazinenyc.com/",
+      "description": "Fashion Magazine NYC is a vibrant exploration of the city's fashion scene, capturing the essence of New York's unique style. The magazine covers everything from high-end fashion events to streetwear culture, offering a look at what's trending in the city that never sleeps. Whether it's a deep dive into local designers or a profile of the latest boutique openings, Fashion Magazine NYC serves as the ultimate guide to navigating the ever-evolving fashion landscape of New York.",
+      "followers": {
+        "instagram": 237300
+      },
+      "image_url": "https://i1.feedspot.com/5686576.jpg?t=1696931007"
+    },
+    {
+      "title": "Fashionista",
+      "feed_url": "https://fashionista.com/.rss/excerpt/",
+      "website_url": "https://fashionista.com/",
+      "description": "Fashionista is a trusted source of fashion news, criticism, and career advice for the fashion fanatic and is an agenda-setter for the industry as well as influential fashion-focused consumers. Read articles from the experts, debating and discussing the industry trends, beauty tips, and business from the fashion world.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 2600000,
+        "instagram": 624000
+      },
+      "image_url": "https://i1.feedspot.com/87231.jpg?t=1642509743"
+    },
+    {
+      "title": "Daily Front Row",
+      "feed_url": "https://fashionweekdaily.com/feed/",
+      "website_url": "https://fashionweekdaily.com/",
+      "description": "Daily Front Row is your online fashion news source for the latest fashion industry news, fashion trends, and fashion designers.",
+      "followers": {
+        "facebook": 36500,
+        "twitter": 105000,
+        "instagram": 180700
+      },
+      "image_url": "https://i1.feedspot.com/4652298.jpg?t=1642507799"
+    },
+    {
+      "title": "Stroller in the City",
+      "feed_url": "https://strollerinthecity.com/feed/",
+      "website_url": "https://strollerinthecity.com/tag/kids-fashion/",
+      "description": "Brianne Manz writes about fashion, travel and all things kids while living a fast-paced NYC life as a wife and mom to three. This Blog is about fashion, trends and styles for Children and Moms in New York City.",
+      "followers": {
+        "facebook": 21700,
+        "twitter": 15800,
+        "instagram": 197500
+      },
+      "image_url": "https://i1.feedspot.com/4540931.jpg?t=1608298804"
+    },
+    {
+      "title": "Style Sprinter",
+      "feed_url": "https://katyabychkova.com",
+      "website_url": "https://stylesprinter.com/",
+      "description": "Covers everything from outfit choices to parties and everything in between. Style Sprinter is the creative space of blogger Katya Bychkova.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 6300,
+        "instagram": 37600
+      },
+      "image_url": "https://i1.feedspot.com/4468095.jpg?t=1600352382"
+    },
+    {
+      "title": "Lisa D Cahue",
+      "feed_url": "https://www.lisadcahue.com/feed/",
+      "website_url": "https://www.lisadcahue.com/",
+      "description": "Covers styling tips, outfit ideas, wardrobe must-haves and more, by Lisa DiCicco Cahue, an elite model and a fashion and lifestyle blogger.",
+      "followers": {
+        "facebook": 7800,
+        "twitter": 752,
+        "instagram": 220000
+      },
+      "image_url": "https://i1.feedspot.com/4387784.jpg?t=1600352869"
+    },
+    {
+      "title": "Styled Snapshots",
+      "feed_url": "https://styledsnapshots.com/feed",
+      "website_url": "https://styledsnapshots.com/category/style",
+      "description": "Hi! I'm Kendall Kremer the voice and creator behind Styled Snapshots. This site is meant to be a place to find inspiration, connect with others and become empowered. I hope you enjoy these snapshots of my style, life, home, travel and so much more.",
+      "followers": {
+        "facebook": 4100,
+        "instagram": 438100
+      },
+      "image_url": "https://i1.feedspot.com/4468173.jpg?t=1600351571"
+    },
+    {
+      "title": "Fashion Bomb Daily",
+      "feed_url": "https://fashionbombdaily.com/feed/",
+      "website_url": "https://fashionbombdaily.com/",
+      "description": "Your source for celeb style, show reviews & news from a multicultural point of view. The Fashion Daily provides daily doses of chic to stylistas of color. They highlight designers, models, celebrities, and everyday people of color.",
+      "followers": {
+        "facebook": 855400,
+        "twitter": 52100,
+        "instagram": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/779813.jpg?t=1605103472"
+    },
+    {
+      "title": "He Spoke Style Blog",
+      "feed_url": "https://hespokestyle.com/feed/",
+      "website_url": "https://hespokestyle.com/blog/",
+      "description": "Covers Men's Style, Fashion, Grooming, Tips and Advice. He Spoke Style was created as a way to blend men's style inspiration with men's style information, to provide practical style advice, and to offer approachable, honest and relatable content for regular guys interested in menswear.",
+      "followers": {
+        "facebook": 179000,
+        "twitter": 7700,
+        "instagram": 352900
+      },
+      "image_url": "https://i1.feedspot.com/1389067.jpg?t=1605103337"
+    },
+    {
+      "title": "Kelly in the City",
+      "feed_url": "https://kellyinthecity.com/feed/",
+      "website_url": "https://kellyinthecity.com/",
+      "description": "Kelly in the City is a Preppy Chicago Life, Style, and Fashion Blog. My name is Kelly Larkin, and this blog is where I document my life. You'll find a whole lot of fashion- and home-related content on Kelly in the City.",
+      "followers": {
+        "facebook": 139000,
+        "twitter": 2300,
+        "instagram": 109900
+      },
+      "image_url": "https://i1.feedspot.com/1870466.jpg?t=1629871059"
+    },
+    {
+      "title": "Style Girlfriend Blog",
+      "feed_url": "https://feeds.feedburner.com/StyleGirlfriend",
+      "website_url": "https://stylegirlfriend.com/blog/",
+      "description": "Covers friendly advice for guys from a female perspective on lifestyle topics like personal style and fashion. Style Girlfriend helps millennial guys improve their style and show up in their lives with more confidence.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 16000,
+        "instagram": 32400
+      },
+      "image_url": "https://i1.feedspot.com/101533.jpg?t=1600351053"
+    },
+    {
+      "title": "wit & whimsy",
+      "feed_url": "https://witwhimsy.com/feed/",
+      "website_url": "https://witwhimsy.com/",
+      "description": "Wit & Whimsy was created in December of 2006 to develop a platform for my passions of fashion and beauty and to allow me to curate in a creative space. As my life has progressed, wit & whimsy has grown to be a place I love sharing more about my outfits, my life, and career in New York City and my travels. With wit & whimsy, you can expect to find fashion inspiration, the best beauty products, travel recommendations, great sale items and much more.",
+      "followers": {
+        "twitter": 6300,
+        "instagram": 54000
+      },
+      "image_url": "https://i1.feedspot.com/4651700.jpg?t=1608298992"
+    },
+    {
+      "title": "Nazmiyal Antique Rugs Blog",
+      "feed_url": "https://nazmiyalantiquerugs.com/feed/",
+      "website_url": "https://nazmiyalantiquerugs.com/blog/",
+      "description": "Nazmiyal antique rugs in New York City is the premier antique rug gallery for beautiful antique carpets, rare Persian rugs and vintage rugs.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 17300,
+        "instagram": 22000
+      },
+      "image_url": "https://i1.feedspot.com/4541058.jpg"
+    },
+    {
+      "title": "Penny Pincher Fashion",
+      "feed_url": "https://www.pennypincherfashion.com/feed/",
+      "website_url": "https://www.pennypincherfashion.com/",
+      "description": "Penny Pincher Fashion is the ultimate source for style inspiration, hair & beauty ideas, and affordable fashion finds. Our goal is to provide opportunities for readers to maximize their wardrobe with capsule wardrobe guides, outfit inspiration, and more. Discover news and unique fashion ideas, and trends in the latest posts.",
+      "followers": {
+        "facebook": 22600,
+        "twitter": 8600
+      },
+      "image_url": "https://i1.feedspot.com/1163735.jpg?t=1605103622"
+    },
+    {
+      "title": "Keiko Lynn",
+      "feed_url": "https://keikolynn.com/feed/",
+      "website_url": "https://keikolynn.com/",
+      "description": "A very personal take on beauty, beauty tips, style, and general musings by Keiko Lynn. You can get to know her on this site, where she shares a peek into her daily life, style, and beauty tips.",
+      "followers": {
+        "facebook": 59700,
+        "twitter": 17900,
+        "instagram": 314500
+      },
+      "image_url": "https://i1.feedspot.com/4536723.jpg?t=1605179432"
+    },
+    {
+      "title": "Fashion Steele NYC",
+      "feed_url": "http://fashionsteelenyc.com/feed/",
+      "website_url": "http://fashionsteelenyc.com/",
+      "description": "Monroe Steele founded Fashion Steele NYC in 2010, it has since become a staple in the New York City fashion scene. Fashion Steele NYC is a personal fashion, lifestyle and travel website where luxury, thrift and high street meet that showcases her life and shopping experiences in New York City.",
+      "followers": {
+        "facebook": 42700,
+        "twitter": 2900,
+        "instagram": 198800
+      },
+      "image_url": "https://i1.feedspot.com/4651789.jpg?t=1617113767"
+    },
+    {
+      "title": "NYC Pretty",
+      "feed_url": "http://www.nycpretty.com/feed/",
+      "website_url": "https://www.nycpretty.com/",
+      "description": "NYCpretty is a fashion, beauty and fitness blog created by fashion editor/expert and spokesperson Christine Bibbo Herr. Get daily updates on insider products and fun, flirty fashion for girls everywhere.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 5100,
+        "instagram": 33900
+      },
+      "image_url": "https://i1.feedspot.com/2066222.jpg?t=1617113779"
+    },
+    {
+      "title": "Amy Marietta",
+      "feed_url": "https://amymarietta.com/feed/",
+      "website_url": "https://amymarietta.com/",
+      "description": "Amy Marietta is a fashion blog with sprinkles of other aspects of life. Amy loves to spread inspiration and knowledge.",
+      "followers": {
+        "facebook": 14300,
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/4387762.jpg?t=1617113771"
+    },
+    {
+      "title": "Gabrielle Arruda",
+      "feed_url": "https://gabriellearruda.com/feed/",
+      "website_url": "https://gabriellearruda.com/",
+      "description": "Fashion and Style Inspiration and Tips about how to find strength through style. Fashion can be powerful and we can help you find your voice through your style choices.",
+      "followers": {
+        "facebook": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5138514.jpg?t=1617114010"
+    },
+    {
+      "title": "My Stiletto Life",
+      "feed_url": "https://mystilettolife.com/feed/",
+      "website_url": "https://mystilettolife.com/",
+      "description": "My Stiletto Life is a lifestyle blog by Tillie Adelson all about personal style, fashion, food, shopping, travel, and life advice. Tillie creates informative, zingy content surrounding buzzing fashion-related topics, like Beauty & Makeup, Travel, Entertainment, Health & Fitness, and more.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 493,
+        "instagram": 55600
+      },
+      "image_url": "https://i1.feedspot.com/4651315.jpg?t=1617114144"
+    },
+    {
+      "title": "Simply by Simone",
+      "feed_url": "https://simplybysimone.com/feed/",
+      "website_url": "https://simplybysimone.com/",
+      "description": "I feature inspiring outfits and advice for women and girls everywhere. To do this, I always mix key investment pieces matched with an overall affordable style. Plus, advice & motivation to get you through the week! This blog is Fashion and inspiration for a stylish lifestyle.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 20,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/4652090.jpg?t=1617114165"
+    },
+    {
+      "title": "Simply Audree Kate",
+      "feed_url": "https://www.simplyaudreekate.com/feed/",
+      "website_url": "https://www.simplyaudreekate.com/",
+      "description": "Simply Audree Kate is a New York City-based style blog that showcases fashion, beauty and lifestyle posts. he website focuses on fashion, lifestyle, beauty and travel topics. I also talk about styling tips and tricks you can implement into your everyday dressing.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4641228.jpg?t=1617114175"
+    },
+    {
+      "title": "Kayleigh's Kloset",
+      "feed_url": "https://www.kayleighskloset.com/feed",
+      "website_url": "https://www.kayleighskloset.com/",
+      "description": "Kayleigh's Kloset is a personal style blog by Kayleigh Adam, Lifestyle Blogger, and TikTok personality. The posts her mainly cover buzzing trends and news from Style, Beauty, Lifestyle, Fitness, Home Decor, Shopping, and Travel. Stay tuned for the latest updates.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 1200,
+        "instagram": 66000
+      },
+      "image_url": "https://i1.feedspot.com/4387788.jpg?t=1617114204"
+    },
+    {
+      "title": "Shopaholic's Closet",
+      "feed_url": "https://www.shopaholicscloset.blog/feeds/posts/default",
+      "website_url": "https://www.shopaholicscloset.blog/",
+      "description": "I am a fashionista in EVERY sense of the word. I love clothes and shoes and all things fashion. I let my friend's shop in my closet so I thought I might invite you too.",
+      "followers": {
+        "facebook": 77,
+        "twitter": 248,
+        "instagram": 960
+      },
+      "image_url": "https://i1.feedspot.com/4993523.jpg?t=1617114208"
+    },
+    {
+      "title": "New York Style Guide",
+      "feed_url": "https://newyorkstyleguide.com/feed/",
+      "website_url": "https://newyorkstyleguide.com/fashion/",
+      "description": "New York Style Guide - Fashion, Entertainment & Lifestyle Magazine covering the latest fashion trends, events, beauty tips, designers & celebrity news. An exclusive inside view of the fashion world showcasing exciting emerging designers and hot new products.",
+      "followers": {
+        "facebook": 190700,
+        "twitter": 2300,
+        "instagram": 324600
+      },
+      "image_url": "https://i1.feedspot.com/5482708.jpg?t=1671705659"
+    },
+    {
+      "title": "Where Did U Get That",
+      "feed_url": "https://feeds.feedburner.com/wheredidugetthat",
+      "website_url": "https://wheredidugetthat.com/category/outfits",
+      "description": "Karen Blanchard is a British blogger obssessed with shopping and fashion in New York. Documenting personal style and street style, best places to shop, cool boutiques and shopping.",
+      "followers": {
+        "twitter": 9400,
+        "instagram": 276100
+      },
+      "image_url": "https://i1.feedspot.com/1658574.jpg?t=1617113746"
+    },
+    {
+      "title": "Advanced Style",
+      "feed_url": "https://www.advanced.style/feed",
+      "website_url": "https://www.advanced.style/",
+      "description": "Ari Seth Cohen's blog-based ode to the confidence, beauty, and fashion that can only be achieved through the experience of a life lived glamorously. It is a collection of street fashion unlike any seen before- focused on the over-60 set in the world's most stylish locales.",
+      "followers": {
+        "facebook": 81300,
+        "twitter": 12900,
+        "instagram": 989200
+      },
+      "image_url": "https://i1.feedspot.com/25829.jpg?t=1605104465"
+    },
+    {
+      "title": "THEFASHIONGUITAR",
+      "feed_url": "https://thefashionguitar.com/feed/",
+      "website_url": "https://thefashionguitar.com/",
+      "description": "It was only after working with several fashion blogs in her former job, Charlotte realized she wanted to start her own. This is one of the best fashion blogs for women by charlotte which is completely based on quality of real factors. Charlotte made this blog by truly inspiration of fashion to become master in ways to find perfect dress, wedding shoes and many more.",
+      "followers": {
+        "facebook": 322600,
+        "twitter": 6600,
+        "instagram": 584100
+      },
+      "image_url": "https://i1.feedspot.com/158266.jpg?t=1610694231"
+    },
+    {
+      "title": "Covering the Bases Blog",
+      "feed_url": "https://www.coveringbases.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.coveringbases.com/p/blog-page_27.html",
+      "description": "Launched in 2013, Covering the Bases is a New York lifestyle blog and a community of readers who want to live their happiest life by working hard, dressing well and traveling often.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 6100,
+        "instagram": 71500
+      },
+      "image_url": "https://i1.feedspot.com/4467714.jpg?t=1608299001"
+    },
+    {
+      "title": "F I G T N Y",
+      "feed_url": "http://figtny.com/feed/",
+      "website_url": "http://figtny.com/",
+      "description": "F I G T N Y is a fashion blog by a New York fashion blogger who has a perfect minimalist style. The author here not only shares but also analytically breakdown each outfit's look, and accessories that go with it, and reviews in a simple, easy-to-follow language. Check out some extremely cool summer outfits and look at the newest posts.",
+      "followers": {
+        "instagram": 416900
+      },
+      "image_url": "https://i1.feedspot.com/4387778.jpg?t=1605075318"
+    },
+    {
+      "title": "Faviana",
+      "feed_url": "https://faviana.com/blogs/glam-gowns.atom",
+      "website_url": "https://faviana.com/blogs/glam-gowns/",
+      "description": "Covers the latest tips and trends on all things fashion, beauty and lifestyle. Our mission is to help women feel good and to celebrate themselves.",
+      "followers": {
+        "facebook": 529900,
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/4465490.jpg?t=1605103633"
+    },
+    {
+      "title": "Brooklyn Blonde",
+      "feed_url": "http://www.brooklynblonde.com/feed/",
+      "website_url": "https://www.brooklynblonde.com/category/outfit-of-the-day/",
+      "description": "Brooklyn Blonde is a Fashion & Lifestyle Blog by Helena Glazer. She started Brooklyn Blonde with no one in mind but herself.",
+      "followers": {
+        "facebook": 80000,
+        "instagram": 443200
+      },
+      "image_url": "https://i1.feedspot.com/4468122.jpg?t=1613550731"
+    },
+    {
+      "title": "CHRISTIE FERRARI Blog",
+      "feed_url": "https://www.christieferrari.com/blog?format=RSS",
+      "website_url": "https://www.christieferrari.com/blog",
+      "description": "New York City Fashion & Travel blogger mixing high end with high street. Outfits of the Day, fashion and styling tips from NYC.",
+      "followers": {
+        "facebook": 31800,
+        "twitter": 663,
+        "instagram": 541500
+      },
+      "image_url": "https://i1.feedspot.com/4651715.jpg?t=1617113999"
+    },
+    {
+      "title": "Olivia Jeanette",
+      "feed_url": "http://oliviajeanette.com/feed/",
+      "website_url": "http://oliviajeanette.com/",
+      "description": "Hi Everyone! My name is Olivia Trewatha, writer for Corporate Catwalk. Olivia Jeanette was started to inspire the modern day corporate woman across all aspects of her life with a particular focus on fashion and beauty. I share ideas on workwear, daily lifestyle, beauty, travel, and more.",
+      "followers": {
+        "twitter": 9,
+        "instagram": 676000
+      },
+      "image_url": "https://i1.feedspot.com/3954394.jpg"
+    },
+    {
+      "title": "Mimosas & Manhattan",
+      "feed_url": "http://www.mimosasmanhattan.com/feed/",
+      "website_url": "http://www.mimosasmanhattan.com/",
+      "description": "Mimosas and Manhattan is a fashion and lifestyle blog chronicling the lives of two cousins who have played dress-up since childhood. They have a spunky and cool attitude along with a killer style to match. They often post style shots of the two of them together, but it is clear that each has their own very distinctive style.",
+      "followers": {
+        "facebook": 556,
+        "twitter": 258,
+        "instagram": 58200
+      },
+      "image_url": "https://i1.feedspot.com/4651267.jpg?t=1617113750"
+    },
+    {
+      "title": "Levitate Style",
+      "feed_url": "http://www.levitatestyle.com/feeds/posts/default",
+      "website_url": "http://www.levitatestyle.com/",
+      "description": "Levitate Style is a Men's Style & Travel Blog by Leo Chan based in New York City. Check out inspiration looks from menswear, street style, and travels around the world.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 1700,
+        "instagram": 110500
+      },
+      "image_url": "https://i1.feedspot.com/4387789.jpg?t=1617113776"
+    },
+    {
+      "title": "NICOLE ALYSE",
+      "feed_url": "https://www.nicolealyse.com/feed/",
+      "website_url": "https://www.nicolealyse.com/",
+      "description": "NICOLE ALYSE is a New York City personal style blog covering fashion, lifestyle, beauty and more. Author Nicole Alyse is a Fashion writer and Influencer having featured many noteworthy publications. Enjoy cool-looking Recipes, Fashion & Travel ideas, Products reviews and more here.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 3100,
+        "instagram": 354700
+      },
+      "image_url": "https://i1.feedspot.com/4648213.jpg?t=1616761542"
+    },
+    {
+      "title": "FOREVERVANNY",
+      "feed_url": "https://www.forevervanny.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.forevervanny.com/",
+      "description": "FOREVERVANNY's style is as diverse as the people who roam this city. Chic, polished, and a little bit of contrast between delicate details and tomboy-ish vibe is what she aims to show. Beyond fashion, FOREVERVANNY seeks to find other forms of inspirations through different cultures.",
+      "followers": {
+        "facebook": 643,
+        "twitter": 268,
+        "instagram": 41900
+      },
+      "image_url": "https://i1.feedspot.com/4647048.jpg?t=1616761550"
+    },
+    {
+      "title": "Steffys Pros And Cons",
+      "feed_url": "https://steffysprosandcons.com/feed",
+      "website_url": "https://steffysprosandcons.com/category/fashion",
+      "description": "Steffy Kuncman shares daily outfits, vintage and vintage inspired outfit posts, travel adventures, home inspiration and photography.",
+      "followers": {
+        "facebook": 41700,
+        "twitter": 3000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/4468141.jpg?t=1600352356"
+    },
+    {
+      "title": "Michelle's Pa(i)ge",
+      "feed_url": "http://www.michellespaige.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.michellespaige.com/",
+      "description": "Michelle Paige Orsi is a New York based fashion, style & beauty blogger. She describes her style as part classic, part modern with a pop of color.",
+      "followers": {
+        "facebook": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4468170.jpg?t=1617114158"
+    },
+    {
+      "title": "Kathleen's Fashion Fix",
+      "feed_url": "http://www.katsfashionfix.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.katsfashionfix.com/",
+      "description": "A forum for inspiring style ideas and fashionable looks created by Kathleen Harper, fashion enthusiast.",
+      "followers": {
+        "facebook": 515,
+        "twitter": 618
+      },
+      "image_url": "https://i1.feedspot.com/4652254.jpg?t=1617114149"
+    },
+    {
+      "title": "New York Fashion Hunter Blog",
+      "feed_url": "https://www.newyorkfashionhunter.com/feed/",
+      "website_url": "https://www.newyorkfashionhunter.com/fashion-blog/",
+      "description": "New York Fashion Hunter is Stephanie's alter ego - a groovy and chic blog that offers a glimpse of the world through the eyes of an obsessed style hound, clothes horse, shoe snob, and bag lady. She is hunting the globe for the latest in style and fashion inspiration, it's where she gets in touch with her inner fashionista.",
+      "followers": {
+        "facebook": 789,
+        "twitter": 1200,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/4465574.jpg?t=1617114154"
+    },
+    {
+      "title": "Gastro Chic",
+      "feed_url": "https://www.gastrochic.com/feed/",
+      "website_url": "https://www.gastrochic.com/",
+      "description": "Gastro Chic blog provides the latest trends in Food and Fashion, in New York and Beyond. Follow New York street chic, the latest bar openings, incognito restaurant reviews, travel, fashion commentary, new recipes, East Village rants and more with Gastro Chic.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 622
+      },
+      "image_url": "https://i1.feedspot.com/711708.jpg?t=1617114179"
+    },
+    {
+      "title": "De Lune",
+      "feed_url": "http://www.deluneblog.com/feeds/posts/default",
+      "website_url": "http://www.deluneblog.com/",
+      "description": "De Lune is a style & self-photographed personal style blog by a Brooklyn-based redhead working in tech and getting into shenanigans by Claire Geist.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 3100,
+        "instagram": 11400
+      },
+      "image_url": "https://i1.feedspot.com/188464.jpg?t=1616761608"
+    },
+    {
+      "title": "Lexicon of Style Blog",
+      "feed_url": "https://lexiconofstyle.co/feed/",
+      "website_url": "https://lexiconofstyle.co/blog/",
+      "description": "Lexicon of Style is a Fashion Design and Style Blog by Alexandra Dieck. Lexicon of style is meant as a visual dictionary where everyone can unite to find inspiration to express themselves through fashion, beauty, travel, and everyday life. She encourages readers to dream big and to live an exciting, creative, and extraordinary life.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 524,
+        "instagram": 162000
+      },
+      "image_url": "https://i1.feedspot.com/4651310.jpg?t=1617114200"
+    },
+    {
+      "title": "To Be Bright",
+      "feed_url": "https://tobebright.com/feed/",
+      "website_url": "https://tobebright.com/category/outfits/",
+      "description": "Tilden Brighton thinks that taking pride of your appearance is a very important thing, professionally and mentally. If you look good, you feel good. To Be Bright contributes to the morning dilemmas suffered by many by making it just a little bit easier to get dressed.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 2700,
+        "instagram": 37300
+      },
+      "image_url": "https://i1.feedspot.com/4014047.jpg?t=1617114211"
+    },
+    {
+      "title": "CeCe Olisa",
+      "feed_url": "https://ceceolisa.com/feed/",
+      "website_url": "https://ceceolisa.com/",
+      "description": "I'm a Nigerian girl, born in California, living in NYC. This blog is your Guide to Plus Size Fitness, Fashion & beauty.",
+      "followers": {
+        "facebook": 34000,
+        "twitter": 15000,
+        "instagram": 91200
+      },
+      "image_url": "https://i1.feedspot.com/4643370.jpg?t=1605098499"
+    },
+    {
+      "title": "City Laundry",
+      "feed_url": "http://www.citylaundryblog.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.citylaundryblog.com/",
+      "description": "My name is Maria. This is my little blog where I have been sharing my personal style since I was 16. I am a fashion student, blogger, & lover of all things vintage.",
+      "followers": {
+        "twitter": 476,
+        "instagram": 15800
+      },
+      "image_url": "https://i1.feedspot.com/4387774.jpg"
+    },
+    {
+      "title": "T-Curate",
+      "feed_url": "https://tcurate.com/blog?format=rss",
+      "website_url": "https://tcurate.com/",
+      "description": "A fashion & lifestyle blog written by New York-based marketing specialist Tracy Qiu, featuring daily fashion photos, traveling, and NYC fun spots. This city has captured my eye and my heart. With luxury retail experience at brands like Cartier and Saks Fifth Avenue, I began to really see the root of fashion within this city. Using my own skills and passions, I have created this website to help share my experiences. I'd like to think I'm extremely lucky for the life I live and support I have.",
+      "followers": {
+        "facebook": 2800,
+        "instagram": 46700
+      },
+      "image_url": "https://i1.feedspot.com/4880324.jpg?t=1617114231"
+    },
+    {
+      "title": "the view from 5 ft. 2",
+      "feed_url": "https://www.viewfrom5ft2.com/feed/",
+      "website_url": "https://www.viewfrom5ft2.com/outfits/",
+      "description": "A personal style and lifestyle blog based in New York City, inspiring others with doses of daily style and a peek into my life. This blog is focused on everyday style, interiors, exploring the Big Apple and more!",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 1900,
+        "instagram": 16800
+      },
+      "image_url": "https://i1.feedspot.com/2163372.jpg?t=1605157859"
+    },
+    {
+      "title": "Life Of A Lady Bear",
+      "feed_url": "https://lifeofaladybear.com/feed/",
+      "website_url": "https://lifeofaladybear.com/",
+      "description": "I started Life Of A Lady Bear back in 2013 while I was in final year of college studying Biomedical Science! Since then it is grown into space where I share everything I love. From Fashion Lookbooks, Travel Diaries, fitness tips, and my guide for the best things to see and do in New York City you'll find it all right here!",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 11,
+        "instagram": 29300
+      },
+      "image_url": "https://i1.feedspot.com/4467715.jpg?t=1610718579"
+    },
+    {
+      "title": "Looking Fly on a Dime",
+      "feed_url": "https://lookingflyonadime.com/category/fashion/feed/",
+      "website_url": "https://lookingflyonadime.com/category/fashion/",
+      "description": "Affordable style expert helping women look their best, for less. Looking Fly on a Dime author. Thrift shopping pro. Glitter in my veins.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 3400,
+        "instagram": 9000
+      },
+      "image_url": "https://i1.feedspot.com/779721.jpg?t=1611055815"
+    },
+    {
+      "title": "My Style Pill",
+      "feed_url": "http://www.mystylepill.com/feed/",
+      "website_url": "https://www.mystylepill.com/",
+      "description": "Christine Cameron is a personal stylist, writer, and editor of the website she launched in the fall of 2008, My Style Pill. She collaborates with brands as an ambassador, merchandising looks, creating dynamic content for online channels and in-store experiences, hosting events, and trend forecasting. Her ever growing site is a content hub full of personal style and outfit remixes.",
+      "followers": {
+        "facebook": 6800
+      },
+      "image_url": "https://i1.feedspot.com/6947.jpg?t=1606141830"
+    },
+    {
+      "title": "This Time Tomorrow",
+      "feed_url": "https://thistimetomorrow.com/feed",
+      "website_url": "https://thistimetomorrow.com/fashion",
+      "description": "On This Time Tomorrow , Krystal features daily images of her creative office attire. She loves to mix things up, too, wearing her favourite pieces in unique, innovative ways.",
+      "followers": {
+        "facebook": 9400,
+        "twitter": 10100
+      },
+      "image_url": "https://i1.feedspot.com/4642160.jpg?t=1616575498"
+    },
+    {
+      "title": "And I Get Dressed",
+      "feed_url": "https://andigetdressed.com/feed/",
+      "website_url": "https://andigetdressed.com/",
+      "description": "Articles on Beauty, fashion, lifestyle and travel. And I Get Dressed (AIGD) is a community founded by Kellie Brown has evolved into a global network where stylish women from all walks of life, see themselves reflected.",
+      "followers": {
+        "facebook": 43400,
+        "twitter": 5900,
+        "instagram": 24600
+      },
+      "image_url": "https://i1.feedspot.com/4166384.jpg?t=1605097104"
+    },
+    {
+      "title": "The Werk! Place",
+      "feed_url": "https://www.the-werk-place.com/feed/",
+      "website_url": "https://www.the-werk-place.com/",
+      "description": "This is a personal style and fashion blog by Tiffany Battle, Fashion writer and consultant. As a contemporary lifestyle blog dedicated to enhancing and highlighting the lifestyle of women through a fashion lens, The Werk! Place explores all aspects of today's woman.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 1300,
+        "instagram": 128000
+      },
+      "image_url": "https://i1.feedspot.com/1443602.jpg?t=1611902501"
+    },
+    {
+      "title": "Scout Sixteen",
+      "feed_url": "https://scoutsixteen.com/feed/atom/",
+      "website_url": "https://scoutsixteen.com/",
+      "description": "Covers posts on fashion, travel, food and drink, and mental wellness. Scout Sixteen is a New York-based lifestyle blog.",
+      "followers": {
+        "facebook": 32800,
+        "twitter": 12900,
+        "instagram": 269000
+      },
+      "image_url": "https://i1.feedspot.com/344187.jpg?t=1601734415"
+    },
+    {
+      "title": "Scout The City",
+      "feed_url": "https://scoutthecity.com/feed/",
+      "website_url": "https://scoutthecity.com/",
+      "description": "Here is what you will find on STC: A sense of humor! Life is short so let's have a little fun. You will find beauty tips, style advice as well as relatable family content on this blog. I'm transparent and authentic and I'm here to inspire and motivate you!",
+      "followers": {
+        "facebook": 23100,
+        "twitter": 1400,
+        "instagram": 159
+      },
+      "image_url": "https://i1.feedspot.com/4460855.jpg?t=1603039417"
+    },
+    {
+      "title": "Dylana Suarez \u00bb Fashion",
+      "feed_url": "https://dylanasuarez.com/category/fashion/feed/",
+      "website_url": "https://www.thewanderlustgirls.com/articles",
+      "description": "Hi! I'm Dylana Lim Suarez, a fashion blogger, writer, stylist, and photographer. This blog is my tool for storytelling about my personal style, beauty, and lifestyle. It is also in a way my online diary. I hope you enjoy reading it and coming along for the ride. My goal is to make my readers look and feel confident every single day and I personally believe that fashion is one great step in that process.",
+      "followers": {
+        "facebook": 467400,
+        "twitter": 7300,
+        "instagram": 214000
+      },
+      "image_url": "https://i1.feedspot.com/4397935.jpg?t=1657021038"
+    },
+    {
+      "title": "WanderLust Girls",
+      "feed_url": "https://www.thewanderlustgirls.com/feed",
+      "website_url": "https://www.thewanderlustgirls.com/articles",
+      "description": "Best friend blogger duo Emily & Abigail based in New York City covering Fashion, Lifestyle, & Travel. Learn more about our Wardrobe Styling and Personal Shopping! When they went away to college on the opposite ends of the East Coast, they decided they needed a more fashionable way to keep in touch. Thus, the WanderLust Girls blog was born.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 2500,
+        "instagram": 20100
+      },
+      "image_url": "https://i1.feedspot.com/4651684.jpg?t=1617113763"
+    },
+    {
+      "title": "the Shira Rose - A NYC Body Positive Fashion Blog",
+      "feed_url": "https://theshirarose.com/feed/",
+      "website_url": "http://theshirarose.com/",
+      "description": "the Shira Rose is a Style and fashion Blog. Fashion, beauty, and style are all other parts of my life that I really enjoy. I created this blog to share my style and creativity in the hopes that other may enjoy it too.",
+      "followers": {
+        "facebook": 2700,
+        "instagram": 82300
+      },
+      "image_url": "https://i1.feedspot.com/4387149.jpg?t=1617114433"
+    },
+    {
+      "title": "Winston & Willow",
+      "feed_url": "https://www.winstonandwillow.com/feed",
+      "website_url": "https://bycharlotteb.com/category/my-outfits/",
+      "description": "New York based, Australian born. Fashion, personal style and lifestyle blog, Winston & Willow, by Charlotte Bridgeman.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 2100,
+        "instagram": 329800
+      },
+      "image_url": "https://i1.feedspot.com/4468106.jpg?t=1617114244"
+    },
+    {
+      "title": "Jessica Wang",
+      "feed_url": "https://www.notjessfashion.com/feed/",
+      "website_url": "https://www.jessicawang.com/",
+      "description": "A fashion blog is written by NYC fashion blogger and influencer Jessica Wang. Featuring daily fashion, lifestyle, travel inspirations and more.",
+      "followers": {
+        "facebook": 165000,
+        "twitter": 32400
+      },
+      "image_url": "https://i1.feedspot.com/4646933.jpg?t=1608298801"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "category": "NC Teacher",
+  "source_url": "https://rss.feedspot.com/nc_teacher_rss_feeds",
+  "feeds": [
+    {
+      "title": "MiddleWeb",
+      "feed_url": "https://www.middleweb.com/feed/",
+      "website_url": "https://www.middleweb.com/",
+      "description": "MiddleWeb is all about middle school & the middle grades with a sharp focus on teaching and learning in grades 4-8. Since 1996, we've been providing resources for teachers, school leaders, parents and others interested in the success of young adolescents.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 12500
+      },
+      "image_url": "https://i1.feedspot.com/5296089.jpg?t=1624532015"
+    },
+    {
+      "title": "Teachable Moments",
+      "feed_url": "http://teachablemomentsnc.blogspot.com/feeds/posts/default",
+      "website_url": "http://teachablemomentsnc.blogspot.com/",
+      "description": "Stories about the people, places and organizations in the North Carolina environmental education community.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5532541.jpg?t=1680522301"
+    },
+    {
+      "title": "NC New Teacher Support Program Blog",
+      "feed_url": "https://ncntsp.org/feed/",
+      "website_url": "https://ncntsp.org/category/blog/",
+      "description": "NCNTSP.org is a North Carolina Network of Trainers for School-based Mental Health and Suicide Prevention. The organization provides training and technical assistance to school personnel and community members in North Carolina on topics related to mental health and suicide prevention",
+      "followers": {},
+      "image_url": "https://i.imgur.com/Crpkdts_d.webp?maxwidth=760&fidelity=grand?t=1680522352"
+    },
+    {
+      "title": "Notes from the Chalkboard",
+      "feed_url": "https://notesfromthechalkboard.com/feed/",
+      "website_url": "https://notesfromthechalkboard.com/",
+      "description": "The blog Notes from the Chalkboard is a collection of reflections, stories, and insights about education and teaching. The blog is written by a group of experienced teachers and covers a range of topics related to education, such as teaching strategies, student engagement, the challenges of teaching, and the role of technology in the classroom.",
+      "followers": {
+        "twitter": 51200
+      },
+      "image_url": "https://i1.feedspot.com/5532543.jpg?t=1680522862"
+    },
+    {
+      "title": "Teacher On the Go Blog",
+      "feed_url": "https://myteacheronthego.com/feed/",
+      "website_url": "https://myteacheronthego.com/blog/",
+      "description": "The Teacher On the Go Blog is about education and teaching strategies. The articles cover a range of topics related to education, including tips for online teaching, strategies for teaching different subjects, advice for parents on how to support their children's learning, and ideas for incorporating technology into the classroom.",
+      "followers": {
+        "facebook": 1100,
+        "instagram": 144
+      },
+      "image_url": "https://i1.feedspot.com/5532544.jpg?t=1680522189"
+    }
+  ]
+}

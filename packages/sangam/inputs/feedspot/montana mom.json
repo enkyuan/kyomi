@@ -1,0 +1,63 @@
+{
+  "category": "Montana Mom",
+  "source_url": "https://rss.feedspot.com/montana_mom_rss_feeds",
+  "feeds": [
+    {
+      "title": "TravelingMel Blog",
+      "feed_url": "https://travelingmel.com/feed/",
+      "website_url": "https://travelingmel.com/blog/",
+      "description": "I'm Melynda. We are a family of four that loves traveling and outdoor recreation and sharing it with others. From destination guides, to travel planning tips, to stories about our journey, we hope you will find the inspiration to explore your world.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 1300,
+        "instagram": 36500
+      },
+      "image_url": "https://i1.feedspot.com/4895894.jpg?t=1612762522"
+    },
+    {
+      "title": "Healthy Mothers, Healthy Babies Blog",
+      "feed_url": "https://hmhb-mt.org/blog/feed/",
+      "website_url": "https://hmhb-mt.org/blog/",
+      "description": "HMHB-MT works to improve the health, safety, and well-being of Montana families by supporting mothers and babies, from pregnancy to age three.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 149,
+        "instagram": 566
+      },
+      "image_url": "https://i1.feedspot.com/5314713.jpg?t=1629705316"
+    },
+    {
+      "title": "Dianne Parker",
+      "feed_url": "https://diannemontana.com/feed/",
+      "website_url": "https://diannemontana.com/",
+      "description": "Covers posts on parenting, motherhood, beauty and fashion, lifestyle, and more. Dianne is a SAHM living the Montana dream in Billings and beyond with her two beautiful, spirited kids Natalya & Victoria, her Montana Mountain Man husband Andy & their family dogs.",
+      "followers": {
+        "facebook": 487,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5314399.jpg?t=1629545310"
+    },
+    {
+      "title": "Jillian Johnsrud",
+      "feed_url": "https://www.jillianjohnsrud.com/feed/",
+      "website_url": "https://www.jillianjohnsrud.com/",
+      "description": "Hi, I'm Jillian! It's my mission to help people custom build a lifestyle that perfectly reflects their values, passion, and purpose. Get access to all the free resources that I've created to help you start custom building your best life with Passion+Passive Income.",
+      "followers": {
+        "twitter": 5900,
+        "instagram": 6500
+      },
+      "image_url": "https://i1.feedspot.com/5314445.jpg?t=1629549722"
+    },
+    {
+      "title": "Abigail Maki Blog",
+      "feed_url": "https://abigailmaki.com/blog/feed/",
+      "website_url": "https://abigailmaki.com/blog/",
+      "description": "I'm Abigail - a mother, a photographer, and a business owner. Find posts on weddings, engagement, maternity photography and more.",
+      "followers": {
+        "facebook": 837,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5314648.jpg?t=1629693625"
+    }
+  ]
+}

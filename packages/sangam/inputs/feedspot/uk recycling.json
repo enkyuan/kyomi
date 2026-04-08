@@ -1,0 +1,278 @@
+{
+  "category": "UK Recycling",
+  "source_url": "https://rss.feedspot.com/uk_recycling_rss_feeds",
+  "feeds": [
+    {
+      "title": "Waste Managed",
+      "feed_url": "https://www.wastemanaged.co.uk/feed/",
+      "website_url": "https://www.wastemanaged.co.uk/our-news/",
+      "description": "Find all the latest news, articles on waste collection, disposal, management, recycling, commercial bins, business waste and more on Waste Managed.Waste Managed helps thousands of customers to take control of their business costs by offering simple, fair and fixed fees for waste collection.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5438791.jpg?t=1662443860"
+    },
+    {
+      "title": "Tyre and Rubber Recycling",
+      "feed_url": "https://www.tyreandrubberrecycling.com/feed/",
+      "website_url": "https://www.tyreandrubberrecycling.com/articles/latest-news/",
+      "description": "Tyre and Rubber Recycling is Europe's leading specialist magazine for the tyre recycling industry. Read the news items from the tyre recycling industry from around the world taken from our latest issues.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 559
+      },
+      "image_url": "https://i1.feedspot.com/5236698.jpg?t=1610802478"
+    },
+    {
+      "title": "Ammanford Recycling Blog",
+      "feed_url": "https://ammanfordrecyclingmetals.co.uk/feed/",
+      "website_url": "https://ammanfordrecyclingmetals.co.uk/blog/",
+      "description": "Check out the latest news and updates on Ammanford Recycling blog. We are an Authorised Treatment Facility that is well equipped to process and dispose of end of life vehicles. We can efficiently recycle ferrous and non-ferrous metals. We always aim to reduce what is sent to landfill, and we can recycle a wide range of commercial and industrial waste.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5384231.jpg?t=1648023211"
+    },
+    {
+      "title": "Recycled Clothing Banks Blog",
+      "feed_url": "https://recycledclothingbanks.co.uk/feed/",
+      "website_url": "https://recycledclothingbanks.co.uk/blog/",
+      "description": "Know more about textile recycling, its benefits, cloth recycling bins and more! We are already a well-established recycling supplier with over 10 years' experience and Recycled Clothing Banks is a new initiative working exclusively with public sector and private commercial organisations.",
+      "followers": {
+        "facebook": 80,
+        "instagram": 85
+      },
+      "image_url": "https://i1.feedspot.com/5384233.jpg?t=1648023220"
+    },
+    {
+      "title": "Bio Collectors Ltd Blog",
+      "feed_url": "https://www.biocollectors.com/blog/feed/",
+      "website_url": "https://www.biocollectors.com/blog/",
+      "description": "The blog features articles on Bio Collector food recycling, AD plant and its benefits, news from the Bio Collectors and more! Bio Collectors is one of the only Anerobic Digestion sites in the U.K certified by the British Gas Council to provide bio-gas directly into the National Grid. The energy produced from recycling food waste is provided straight to homes and businesses, helping reduce the U.K's reliance on far less sustainable sources, such as fracking.",
+      "followers": {
+        "facebook": 56
+      },
+      "image_url": "https://i1.feedspot.com/5384227.jpg?t=1648036187"
+    },
+    {
+      "title": "CDDL Recycling Blog",
+      "feed_url": "https://cddlrecycling.co.uk/feed/",
+      "website_url": "https://cddlrecycling.co.uk/blog/",
+      "description": "Explore our blog to know more about recycling, how to recycle profitably and more. We hope to help you and our clients recycle your waste and save or make you money from the waste you produce. CDDL have over 35 years experience in waste management. We offer Total Waste Management Solutions for our clients large and small. We look to improve recycling rates and save costs.",
+      "followers": {
+        "facebook": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5384215.jpg?t=1648032463"
+    },
+    {
+      "title": "Forge Recycling Blog",
+      "feed_url": "https://www.forgerecycling.co.uk/blog/feed/",
+      "website_url": "https://www.forgerecycling.co.uk/blog/",
+      "description": "Follow us to keep up with the latest recycling and waste management tips and info as well as company and industry news and information.",
+      "followers": {
+        "facebook": 807,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4700180.jpg?t=1619185922"
+    },
+    {
+      "title": "MY ZERO WASTE Blog",
+      "feed_url": "https://myzerowaste.com/category/blog/feed/",
+      "website_url": "https://myzerowaste.com/category/blog/",
+      "description": "Learn how to reduce, reuse, recycle and compost your way to a zero waste future!",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 10100
+      },
+      "image_url": "https://i1.feedspot.com/4912134.jpg?t=1620199151"
+    },
+    {
+      "title": "Phoenix Compactors Blog",
+      "feed_url": "https://www.phoenixcompactors.co.uk/blog/feed",
+      "website_url": "https://www.phoenixcompactors.co.uk/blog",
+      "description": "Read a wide range of informative blogs on topical recycling & waste management issues. These blogs will help you drive towards a greener culture.",
+      "followers": {
+        "twitter": 51
+      },
+      "image_url": "https://i1.feedspot.com/4912115.jpg?t=1648041086"
+    },
+    {
+      "title": "KwikSweep Waste management and recycling Blog",
+      "feed_url": "https://www.kwiksweep.co.uk/blog/feed",
+      "website_url": "https://www.kwiksweep.co.uk/blog/",
+      "description": "All things Recycling, waste collection and rubbish removal in London.",
+      "followers": {
+        "facebook": 110,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4912159.jpg?t=1620199100"
+    },
+    {
+      "title": "The University of Edinburgh Blog \u00bb Waste, reuse and recycling",
+      "feed_url": "https://blogs.ed.ac.uk/sustainability/category/waste-recycling/feed/",
+      "website_url": "https://blogs.ed.ac.uk/sustainability/category/waste-recycling/",
+      "description": "Find articles on waste management, reuse and recycling in this section along with information on awareness campaigns and activities. This blog is A place for conversations from the University of Edinburgh community on topics around social responsibility and sustainability.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5384225.jpg?t=1648033966"
+    },
+    {
+      "title": "Recycle Your Electricals",
+      "feed_url": "https://www.recycleyourelectricals.org.uk/feed/",
+      "website_url": "https://www.recycleyourelectricals.org.uk/electrical-recycling-stories/",
+      "description": "Read your stories from around the UK and learn how others are putting their unwanted electrical items to good use and how they've started recycling. We've launched the Recycle Your Electricals campaign, to get the UK reusing and recycling their unwanted electricals - instead of throwing away or hoarding them.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 1400,
+        "instagram": 14100
+      },
+      "image_url": "https://i1.feedspot.com/5384232.jpg?t=1648023216"
+    },
+    {
+      "title": "SL Recycling",
+      "feed_url": "https://www.slrecyclingltd.co.uk/feed/",
+      "website_url": "https://www.slrecyclingltd.co.uk/latest-news/",
+      "description": "Keep up to date with all the latest industry news, updates and insights from SL Recycling, waste management experts in South Wales. We specialise in total waste management services and metal recycling.",
+      "followers": {
+        "facebook": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5384216.jpg?t=1648023128"
+    },
+    {
+      "title": "Recycle a Bike Blog",
+      "feed_url": "https://www.recycleabike.co.uk/blog-feed.xml",
+      "website_url": "https://www.recycleabike.co.uk/blog",
+      "description": "At RAB we love to share our knowledge, thoughts and experience with you on bikes and cycling! Our thoughts are from a personal perspective so please treat them as such! We'll cover bike news, new reburbs, gravel and bikepacking adventures to name a few. We'll also review some new or unusual bikes.",
+      "followers": {
+        "facebook": 673,
+        "twitter": 274,
+        "instagram": 544
+      },
+      "image_url": "https://i1.feedspot.com/5384238.jpg?t=1648023254"
+    },
+    {
+      "title": "Whites Recycling Blog",
+      "feed_url": "https://whitesrecycling.co.uk/feed/",
+      "website_url": "https://whitesrecycling.co.uk/blog/",
+      "description": "Stay up to date with the latest rules and regulations surrounding recycling and disposing of waste, get expert insights into agronomy and more. Transportation and management of non-hazardous liquids to agricultural land as an organic nutrient fertiliser.",
+      "followers": {
+        "facebook": 424,
+        "twitter": 219,
+        "instagram": 693
+      },
+      "image_url": "https://i1.feedspot.com/5384239.jpg?t=1648023264"
+    },
+    {
+      "title": "Recycling Your IT Blog",
+      "feed_url": "https://www.recyclingyourit.co.uk/feed/",
+      "website_url": "https://www.recyclingyourit.co.uk/blog/",
+      "description": "Find out the latest in the IT Recycling Industry, from company and industry news through to changes in legislation. Based in Essex, we collect throughout the UK and the rest of Europe. We provide IT Equipment Recycling services to small and large businesses, with our computer recycling processes being 100% eco-friendly. We adhere to the WEEE directive and other best practices around IT Equipment recycling and disposal.",
+      "followers": {
+        "facebook": 436,
+        "twitter": 288
+      },
+      "image_url": "https://i1.feedspot.com/5384234.jpg?t=1648034267"
+    },
+    {
+      "title": "SMS Recycling Blog",
+      "feed_url": "https://www.smsrecycling.co.uk/blog-feed.xml",
+      "website_url": "https://www.smsrecycling.co.uk/blog",
+      "description": "The blog includes articles on E-waste, IT waste management, refurbished hardware, IT recycling and more! SMS Recycling is a UK-based company with an emphasis on efficient end to end recycling of computers and other IT equipment that serves nationwide.",
+      "followers": {
+        "facebook": 24
+      },
+      "image_url": "https://i1.feedspot.com/5384230.jpg?t=1648023208"
+    },
+    {
+      "title": "Commercial Recycling",
+      "feed_url": "https://www.commercialrecycling.co.uk/feed/",
+      "website_url": "https://www.commercialrecycling.co.uk/news/",
+      "description": "Get the latest news & guides on recycling and waste management from Bournemouth waste specialists, Commercial Recycling. Commercial Recycling provides waste disposal, waste management and recycling solutions to businesses and individuals throughout Dorset, Somerset, Hampshire",
+      "followers": {
+        "facebook": 870
+      },
+      "image_url": "https://i1.feedspot.com/5384223.jpg?t=1648023162"
+    },
+    {
+      "title": "The Forge Skip Hire Blog \u00bb Waste & Recycling",
+      "feed_url": "https://www.forgeskiphire.co.uk/blog/category/waste-recycling/feed/",
+      "website_url": "https://www.forgeskiphire.co.uk/blog/category/waste-recycling/",
+      "description": "Read more about our Skip hire, services offered for waste management, recycling and more! Forge Waste & Recycling offers a bespoke waste management service across West & North Yorkshire and with an emphasis on making recycling easy. We offer a wide range of waste collection services & skip hire.",
+      "followers": {
+        "facebook": 807,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5384222.jpg?t=1648023157"
+    },
+    {
+      "title": "The Shredding Alliance \u00bb Recycling and Environment",
+      "feed_url": "https://www.theshreddingalliance.co.uk/category/recycling-environment/feed/",
+      "website_url": "https://www.theshreddingalliance.co.uk/category/recycling-environment/",
+      "description": "Our news and articles about recycling and the environment have been collated for you to discover more about how your shredding is recycled. The Shredding Alliance (TSA) is a nationwide single-source supplier of both mobile and off-site confidential shredding and recycling services.",
+      "followers": {
+        "facebook": 109,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5384221.jpg?t=1648023153"
+    },
+    {
+      "title": "Fercell",
+      "feed_url": "https://fercell.com/blog/feed/",
+      "website_url": "https://fercell.com/blog/",
+      "description": "Read The Fercell.com Blog to Learn About Our Industrial Recycling And Size Reduction Equipment - Shredders, Briquette Presses, Granulators And Conveyors. We use the perfect blend of progressive technology and attention to the needs of you, our customer, to deliver the most efficient and effective industrial recycling solutions.",
+      "followers": {
+        "twitter": 331,
+        "instagram": 224
+      },
+      "image_url": "https://i1.feedspot.com/5384241.jpg?t=1648028527"
+    },
+    {
+      "title": "Cherry Hill Waste",
+      "feed_url": "https://www.cherryhillwaste.com/blog-feed.xml",
+      "website_url": "https://www.cherryhillwaste.com/",
+      "description": "Get Recycling news and tips on cutting waste from your home and business, From Cherry Hill Waste. At Cherry Hill Waste, recycling is just one of our core initiatives. Our waste removal services in Newcastle-under-Lyme and Stoke-on-Trent aim to be the most cost-effective in the area. Almost all the waste we collect is salvaged and we use landfill sites far less often than most of our competitors. This makes us one of the area's most environmentally friendly waste retrieval and disposal services.",
+      "followers": {
+        "facebook": 554
+      },
+      "image_url": "https://i1.feedspot.com/5384218.jpg?t=1648023138"
+    },
+    {
+      "title": "Recycling Waste World News",
+      "feed_url": "https://www.recyclingwasteworld.co.uk/rss/news/4",
+      "website_url": "https://www.markallengroup.com/our-news/",
+      "description": "Recycling & Waste World is a monthly publication exclusively dedicated to the UK's recycling & waste management industries.",
+      "followers": {
+        "twitter": 12200
+      },
+      "image_url": "https://i1.feedspot.com/4912149.jpg?t=1620199087"
+    },
+    {
+      "title": "PLASgran Ltd",
+      "feed_url": "https://plasgranltd.co.uk/feed/",
+      "website_url": "https://www.berryglobal.com/en/news",
+      "description": "Read news about PLASgran and plastic recycling topics. Our blog keeps you up to date with all the plastic recycling news within the industry.",
+      "followers": {
+        "facebook": 426
+      },
+      "image_url": "https://i1.feedspot.com/4912130.jpg?t=1620199197"
+    },
+    {
+      "title": "Commercial Recycling",
+      "feed_url": "https://www.commercialrecycling.co.uk/index.php/news/feed/",
+      "website_url": "https://www.commercialrecycling.co.uk/news/",
+      "description": "Latest news on recycling and waste management from Bournemouth waste specialists, Commercial Recycling.",
+      "followers": {
+        "facebook": 870
+      },
+      "image_url": "https://i1.feedspot.com/4912123.jpg?t=1620199144"
+    },
+    {
+      "title": "The TerraCycle Blog",
+      "feed_url": "https://terracycleblog.co.uk/feed/",
+      "website_url": "https://blog.terracycle.com/",
+      "description": "Read our blog to know more about recycling solutions and services, interviews with various eco-conscious people, tips and advice for waste management and reduction and much more! We're Eliminating the Idea of Waste by creating recycling solutions for the non-recyclable, like crisp packets and pens.",
+      "followers": {
+        "facebook": 38800,
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/5384214.jpg?t=1648023120"
+    }
+  ]
+}

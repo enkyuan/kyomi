@@ -1,0 +1,89 @@
+{
+  "category": "Angular",
+  "source_url": "https://rss.feedspot.com/angular_rss_feeds",
+  "feeds": [
+    {
+      "title": "Angular Training Blog",
+      "feed_url": "https://blog.angulartraining.com/feed",
+      "website_url": "https://blog.angulartraining.com/",
+      "description": "Learn about the Angular framework with tutorials, guides, tips and tricks on Angular Training Blog.",
+      "followers": {
+        "twitter": 265
+      },
+      "image_url": "https://i1.feedspot.com/5495570.jpg?t=1674039098"
+    },
+    {
+      "title": "TO THE NEW",
+      "feed_url": "https://www.tothenew.com/blog/category/technology/angular/feed",
+      "website_url": "https://www.tothenew.com/blog/category/technology/angular/",
+      "description": "A digital technology services company that drives digital transformation and builds disruptive products by leveraging UX, cutting edge technologies, and cloud.",
+      "followers": {
+        "facebook": 10400,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4784907.jpg?t=1609249119"
+    },
+    {
+      "title": "Muhammad Hassan",
+      "feed_url": "https://hassantariqblog.wordpress.com/feed/",
+      "website_url": "https://hassantariqblog.wordpress.com/",
+      "description": "Five years of demonstrated work experience in developing and implementing business technology applications, systems integration and testing solutions with in-depth domain knowledge of industries like Healthcare, Telecom, Call Center etc.",
+      "followers": {
+        "twitter": 581
+      },
+      "image_url": "https://i1.feedspot.com/4784915.jpg?t=1609249133"
+    },
+    {
+      "title": "Brecht Blog",
+      "feed_url": "https://blog.brecht.io/feed.xml",
+      "website_url": "https://blog.brecht.io/",
+      "description": "I'm Brecht! I specialize in developing, architecting, rescuing large-scale web-projects and making technology choices for small and large companies. My focus lies on performance, scalability, pragmatism, and coaching professionals to become rockstar engineers. My passion is mastering future-proof cut-edge technologies and applying them in large-scale web-projects. My main focus lies on software-web-projects that involve lots of javascript, and clientside coding. I have been giving trainers as an angular mentor when it was still in Beta stage.",
+      "followers": {
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/5439800.jpg?t=1662637144"
+    },
+    {
+      "title": "Simplified Courses Blog",
+      "feed_url": "https://blog.simplified.courses/feed.xml",
+      "website_url": "https://blog.simplified.courses/",
+      "description": "Simplified Courses Blog covers articles about Angular where we make complexity simple. We will explain complex subjects in simplified articles. Simplified Courses teach you how we use the technologies and tackle complexities that are hard to find in documentation. We want to gather all our experience that we gathered in real projects and inject that into your brain!",
+      "followers": {
+        "twitter": 289
+      },
+      "image_url": "https://i1.feedspot.com/5482932.jpg?t=1671774504"
+    },
+    {
+      "title": "Angular.love",
+      "feed_url": "https://angular.love/",
+      "website_url": "https://angular.love/",
+      "description": "inDepthDev is a community of experienced software engineers with a common goal of constant professional growth and inclination to help others. We all here like to explore & teach. And we also like to write, so today the community mostly revolves around the publishing platform we're building together. Here, you will find the latest on Angular.",
+      "followers": {
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5287708.jpg?t=1622617512"
+    },
+    {
+      "title": "Envato Tuts Code",
+      "feed_url": "https://code.tutsplus.com/categories/angular.atom",
+      "website_url": "https://code.tutsplus.com/c/javascript/s/angular",
+      "description": "Envato Tuts is home to an enormous range of tutorials, courses, articles, eBooks, news and community to help you learn fun and useful new skills. Whether you're looking at learning to design, code, compose or create, there's something to help you.",
+      "followers": {
+        "facebook": 497800,
+        "twitter": 138100
+      },
+      "image_url": "https://i1.feedspot.com/4784930.jpg"
+    },
+    {
+      "title": "SitePen",
+      "feed_url": "https://www.sitepen.com/blog/category/angular/feed",
+      "website_url": "https://www.sitepen.com/blog/category/angular",
+      "description": "SitePen pioneered Enterprise JavaScript by creating a first-of-its-kind open source JavaScript framework that scales and sustains some of the world's largest web applications - and this before the advent of the modern browser. Today, we continue to engineer performance-driven apps for companies like IBM, Intuit & Marriott, maintaining our foothold at the forefront of the modern web.",
+      "followers": {
+        "facebook": 2,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4781202.jpg?t=1609249145"
+    }
+  ]
+}

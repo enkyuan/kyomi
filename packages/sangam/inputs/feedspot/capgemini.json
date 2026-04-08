@@ -1,0 +1,36 @@
+{
+  "category": "Capgemini",
+  "source_url": "https://rss.feedspot.com/capgemini_rss_feeds",
+  "feeds": [
+    {
+      "title": "Capgemini",
+      "feed_url": "https://www.capgemini.com/feed/",
+      "website_url": "https://www.capgemini.com/news/",
+      "description": "Get to know news and key information on corporate news, reports, partners, and more about Capgemini. Capgemini is a global leader in partnering with companies to transform and manage their business by harnessing the power of technology. We enable you to transform your organization and improve performance. We aim to empower you to respond more quickly and intuitively to changing market dynamics.",
+      "followers": {
+        "facebook": 122700,
+        "twitter": 138400,
+        "instagram": 72900
+      },
+      "image_url": "https://i1.feedspot.com/4826196.jpg?t=1662532237"
+    },
+    {
+      "title": "Capgemini",
+      "feed_url": "https://www.capgemini.com/feed/",
+      "website_url": "https://www.capgemini.com/insights/research-library/",
+      "description": "Capgemini Engineering blog posts provide us with information on Artificial Intelligence, automotive, industry 4.0, and more! It combines its broad industry knowledge and cutting-edge technologies in digital and software to support the convergence of the physical and digital worlds. Coupled with the capabilities of the rest of the Group, it helps clients to accelerate their journey towards Intelligent Industry.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5433531.jpg?t=1662533135"
+    },
+    {
+      "title": "SogetiLabs",
+      "feed_url": "https://labs.sogeti.com/feed/",
+      "website_url": "https://labs.sogeti.com/",
+      "description": "Since 1994, Sogeti Labs provides insight, research, and inspiration through articles, presentations, and videos on DevOps tools, big data analytics tools & various other technologies that can be downloaded from our website. SogetiLabs covers a wide range of digital technology expertise, the focus is always on leveraging technologies, systems, and applications in actual business situations to maximize results.",
+      "followers": {
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5433735.jpg?t=1662532737"
+    }
+  ]
+}

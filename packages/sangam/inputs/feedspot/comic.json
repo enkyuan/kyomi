@@ -1,0 +1,2121 @@
+{
+  "category": "Comic",
+  "source_url": "https://rss.feedspot.com/comics_rss_feeds",
+  "feeds": [
+    {
+      "title": "xkcd",
+      "feed_url": "https://xkcd.com/rss.xml",
+      "website_url": "https://xkcd.com/",
+      "description": "xkcd is webcomic of romance, sarcasm, math, and language.",
+      "followers": {
+        "twitter": 385800
+      },
+      "image_url": "https://i1.feedspot.com/534378.jpg?t=1655356915"
+    },
+    {
+      "title": "The Beat",
+      "feed_url": "https://www.comicsbeat.com/feed/",
+      "website_url": "https://www.comicsbeat.com/",
+      "description": "The Comics Beat is the premier comics news blog. Started by esteemed editor and reporter Heidi MacDonald, The Beat keeps you in the loop on everything comics related from books to television and film. Our reporters conduct insightful interviews, review comics and movies, and write longform op-eds that weigh in on the issues of the day.",
+      "followers": {
+        "facebook": 12400,
+        "twitter": 16700,
+        "instagram": 9900
+      },
+      "image_url": "https://i1.feedspot.com/9390.jpg?t=1615895034"
+    },
+    {
+      "title": "INCIDENTAL COMICS",
+      "feed_url": "https://feeds.feedburner.com/blogspot/lTBMF",
+      "website_url": "http://www.incidentalcomics.com/",
+      "description": "Words and Pictures by Grant Snider in comical representation of values of life.",
+      "followers": {
+        "facebook": 803600,
+        "twitter": 35300,
+        "instagram": 133800
+      },
+      "image_url": "https://i1.feedspot.com/116564.jpg?t=1615895039"
+    },
+    {
+      "title": "Every Day is Like Wednesday",
+      "feed_url": "https://www.everydayislikewednesday.com/feeds/posts/default",
+      "website_url": "http://everydayislikewednesday.blogspot.com/",
+      "description": "The site will be a repository for much of my comics writing that I can't find a home for. Every Wednesday night I'll publish a 'Weekly Haul,' which will be a list of mini-reviews of everything new that week. The rest of the week you can find 'Delayed Reaction' reviews of books that have been out for near forever. I am J. Caleb Mozzocco, library clerk by day, semi-professional comic book critic and comics blogger by later in the day.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/567342.jpg?t=1675081313"
+    },
+    {
+      "title": "Relic Keep",
+      "feed_url": "https://relickeep.com/feed/",
+      "website_url": "https://relickeep.com/",
+      "description": "Relic Keep is the home for vintage and new release comic book reviews and articles based on my personal collection.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5509015.jpg?t=1676544834"
+    },
+    {
+      "title": "Graphic Medicine",
+      "feed_url": "https://www.graphicmedicine.org/feed/",
+      "website_url": "https://www.graphicmedicine.org/",
+      "description": "Graphic Medicine is a site that explores the interaction between the medium of comics and the discourse of healthcare. We are a community of academics, health carers, authors, artists, and fans of comics and medicine bringing news, interviews and other interesting facets of the Medico-comic book space.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5604915.jpg?t=1687419609"
+    },
+    {
+      "title": "Earth's Mightiest Blog",
+      "feed_url": "https://earthsmightiestblog.com/feed/",
+      "website_url": "https://earthsmightiestblog.com/",
+      "description": "I'm Ekko. I've been blogging since 2001. I got the crazy idea to read and review every single Marvel 616 Universe comic. This is where I do that. I started with music, then added some humor and miscellany, and now also write extensively about comic books.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5411782.jpg?t=1655544065"
+    },
+    {
+      "title": "Third Eye Comics Blog",
+      "feed_url": "https://thirdeyecomics.com/feed/",
+      "website_url": "https://thirdeyecomics.com/blog/",
+      "description": "Get updates on New arrivals, Galleries, Weekly spotlights, and other important announcements from Third Eye Comics via their blog. Read breakdowns of your favorite artists series in these articles. Third Eye Comics is a chain of public-favorite comic book shops based in Maryland and Virginia.",
+      "followers": {
+        "facebook": 122500,
+        "twitter": 15700,
+        "instagram": 38600
+      },
+      "image_url": "https://i1.feedspot.com/5604910.jpg?t=1687419300"
+    },
+    {
+      "title": "Criminal Comic Blog",
+      "feed_url": "https://criminalcomic.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://criminalcomic.blogspot.com/",
+      "description": "Dedicated to the Crime Comics by Ed Brubaker and Sean Phillips: Criminal, Kill Or Be Killed, Pulp, Reckless, and more, the Criminal Comic Blog dive deep into the Criminal and Noir comic book realms and brings out some truly splendid reads for comic book folks here.",
+      "followers": {
+        "twitter": 37900
+      },
+      "image_url": "https://i1.feedspot.com/5604909.jpg?t=1687419294"
+    },
+    {
+      "title": "The Comic Blog",
+      "feed_url": "https://thecomicblog.com/feed/",
+      "website_url": "https://thecomicblog.com/",
+      "description": "The Comic Blog pulls together news, speculation, and general info from the comic world as well as expresses the author's personal opinions and views. Find assorted Reading guides, Latest entries, Comic Book investing tips, and many more fantastic ideas in here.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5604919.jpg?t=1687419481"
+    },
+    {
+      "title": "Something Central Blog",
+      "feed_url": "https://somethingcentral.com/feed/",
+      "website_url": "https://somethingcentral.com/comic-book-blog/",
+      "description": "Welcome to Something Central's comic book blog! Here, you can find regularly updated content from our Youtube channel. Read current and future videos before they even release! Check out the Original Work page for more of our own web series and short stories!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5604912.jpg?t=1687419427"
+    },
+    {
+      "title": "Cryptid Creator Corner from Comic Book Yeti - A Comic Book Interview Podcast",
+      "feed_url": "https://www.comicbookyeti.com/blog-feed.xml",
+      "website_url": "https://www.comicbookyeti.com/blog-1",
+      "description": "The Comic Book Yeti team interviews comic creators of all kinds on this one-of-a-kind podcast. Hosted by Byron O'Neal and Jimmy Gaspero.VO work by Minerva Fox. Yeti logo by Norm Konyu.New episodes every Friday and most Tuesdays.2022 & 2023 Grantie Award Winner.",
+      "followers": {
+        "facebook": 502,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5604920.jpg?t=1745422121"
+    },
+    {
+      "title": "House to Astonish",
+      "feed_url": "https://www.housetoastonish.com/?feed=rss2",
+      "website_url": "https://www.housetoastonish.com/",
+      "description": "Blog updates about House to Astonish, including news and topics. House to Astonish is an irreverent podcast about comics by Paul O'Brien (The X-Axis, Ninth Art) and Al Kennedy (Ninth Art, 100 Days of Comics) featuring news, reviews, Scottish accents, and a near-official Handbook of the Marvel Universe.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/327487.jpg?t=1687437596"
+    },
+    {
+      "title": "Rusty Staples",
+      "feed_url": "https://michaelowencarroll.wordpress.com/feed/",
+      "website_url": "https://michaelowencarroll.wordpress.com/",
+      "description": "Discover everything you ever needed to know about comics. Rusty Staples is a personal blog created, maintained, and (unless otherwise stated) written by Michael Carroll. Michael reviews, analyses, and shares his thoughts and knowledge on everything from Superhero Comics, to little-known histories behind them.",
+      "followers": {
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5604917.jpg?t=1687419336"
+    },
+    {
+      "title": "ComicBook.com",
+      "feed_url": "https://comicbook.com/feed/",
+      "website_url": "https://comicbook.com/",
+      "description": "Covers Comic Book Movies, News, & Digital Comic Books. ComicBook.com is an independent media company focused on pop culture, influenced by the robust comic book industry.",
+      "followers": {
+        "facebook": 4800000,
+        "twitter": 366500,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/5072390.jpg?t=1630739977"
+    },
+    {
+      "title": "Questionable Content",
+      "feed_url": "https://questionablecontent.net/QCRSS.xml",
+      "website_url": "https://questionablecontent.net/",
+      "description": "Jeph Jacques writes and draws Questionable Content. It is an internet comic strip about romance and robots and it updates five times a week.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1888592.jpg?t=1615895154"
+    },
+    {
+      "title": "Gunnerkrigg Court",
+      "feed_url": "https://www.gunnerkrigg.com/rss.xml",
+      "website_url": "https://www.gunnerkrigg.com/",
+      "description": "Gunnerkrigg Court is a science-fantasy webcomic created by Tom Siddell. It is updated online three days a week.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 16500
+      },
+      "image_url": "https://i1.feedspot.com/4040689.jpg?t=1615895179"
+    },
+    {
+      "title": "Kill Six Billion Demons - Comics",
+      "feed_url": "https://killsixbilliondemons.com/comic/feed/",
+      "website_url": "https://killsixbilliondemons.com/comic/",
+      "description": "This is a webcomic! It's graphic novel.",
+      "followers": {
+        "twitter": 59900
+      },
+      "image_url": "https://i1.feedspot.com/4618033.jpg?t=1615895175"
+    },
+    {
+      "title": "9Mood",
+      "feed_url": "http://www.9mood.com/feed/",
+      "website_url": "https://www.9mood.com/category/comics/",
+      "description": "9Mood have lots of categories for entertainment, All the things are at single place. 9Mood will make your every single minute interesting and happy.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 106
+      },
+      "image_url": "https://i1.feedspot.com/5015956.jpg?t=1615895212"
+    },
+    {
+      "title": "Comic Book Herald",
+      "feed_url": "https://www.comicbookherald.com/feed/",
+      "website_url": "https://www.comicbookherald.com/",
+      "description": "Comic Book Herald is a blog focused on suggested reading orders for both new & long-time fans, comic book reader technology for multiple devices, and talking about awesome comics. Comic Book Herald is a site dedicated to guiding enthusiastic comic book readers through the immense amounts of Marvel books and trade paperbacks available.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 8200,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4615876.jpg?t=1615901513"
+    },
+    {
+      "title": "The Comics Journal Blog",
+      "feed_url": "https://www.tcj.com/feed/",
+      "website_url": "https://www.tcj.com/blog/",
+      "description": "The Comics Journal covers the widest range of cartooning - newspaper strips, alternative and mainstream graphic novels, international works, editorial cartoons, webcomics, manga and much more.",
+      "followers": {
+        "facebook": 11100,
+        "twitter": 29600
+      },
+      "image_url": "https://i1.feedspot.com/5912.jpg?t=1611746588"
+    },
+    {
+      "title": "Comics Alliance",
+      "feed_url": "https://comicsalliance.com/feed/",
+      "website_url": "https://comicsalliance.com/",
+      "description": "Heralded as a great voice in comics media, Eisner Award-nominated Comics Alliance is the go-to online resource for industry insiders and casual comic book fans alike. Follow to get everything about Marvel Comics, DC Comics, comics downloads, comic book movies, digital comics, and more.",
+      "followers": {
+        "facebook": 96200,
+        "twitter": 96900
+      },
+      "image_url": "https://i1.feedspot.com/1823405.jpg?t=1620038216"
+    },
+    {
+      "title": "Goblins",
+      "feed_url": "https://www.goblinscomic.org/comic/rss",
+      "website_url": "https://www.goblinscomic.org/",
+      "description": "Goblins is a web comic created and published by Canadian artist Tarol Hunt aka Thunt. It is a comic that presents the life of goblins (somewhat based on Dungeon and Dragons) from their viewpoint as they try to defend their home from roaming adventurers who seek to destroy them for their experience point value as well as their treasure.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 10700
+      },
+      "image_url": "https://i1.feedspot.com/1783389.jpg?t=1615895193"
+    },
+    {
+      "title": "Geeks of Doom",
+      "feed_url": "https://geeksofdoom.com/feed",
+      "website_url": "https://geeksofdoom.com/",
+      "description": "Geeks of Doom brings you the latest geek-related news in movies, comic books, video games, music and more. We are staffed by a cabal of self-certified geeks, who write about what we love! We're the comic readers, we're the movie goers, we ARE the target market. We write from a perspective of average unbiased fans, because we ARE those fans.",
+      "followers": {
+        "facebook": 68800,
+        "twitter": 9100
+      },
+      "image_url": "https://i1.feedspot.com/4649171.jpg?t=1615895241"
+    },
+    {
+      "title": "Comics Worth Reading",
+      "feed_url": "https://comicsworthreading.com/feed/",
+      "website_url": "https://comicsworthreading.com/",
+      "description": "Comics Worth Reading is the longest-running independent review site online that covers all genres of comic books, including graphic novels, independent press, alternative, manga, graphic memoirs, superheroes, and mainstream. We aim to inform the reader looking for honest opinions on good reads. Subscribe to get independent opinions, news, and reviews of graphic novels, manga, & comic books.",
+      "followers": {
+        "facebook": 766,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/41039.jpg?t=1620038873"
+    },
+    {
+      "title": "San Diego Comic Con Unofficial Blog",
+      "feed_url": "https://sdccblog.com/feed/",
+      "website_url": "https://sdccblog.com/",
+      "description": "The ultimate source of news, film, TV, comics, toys, info , and so much more.",
+      "followers": {
+        "facebook": 38500,
+        "twitter": 83900
+      },
+      "image_url": "https://i1.feedspot.com/1495042.jpg?t=1615895198"
+    },
+    {
+      "title": "The Batman Universe",
+      "feed_url": "https://thebatmanuniverse.net/feed/",
+      "website_url": "https://thebatmanuniverse.net/",
+      "description": "Check out TBU for news, editorials, reviews, and podcasts related to Batman and the characters that surround him including Joker, Harley Quinn, and more.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 6400,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4616634.jpg?t=1663243031"
+    },
+    {
+      "title": "Bleeding Fool",
+      "feed_url": "https://bleedingfool.com/feed/",
+      "website_url": "https://bleedingfool.com/",
+      "description": "An alternative, opinionated commentary & news source for comics, film, TV, and geek-culture; regularly weighing in on related items with savvy, reason, & satire",
+      "followers": {
+        "twitter": 8900
+      },
+      "image_url": "https://i1.feedspot.com/5128236.jpg?t=1615895223"
+    },
+    {
+      "title": "Bizarro Blog",
+      "feed_url": "https://feeds.feedburner.com/BizarroBlog-BizarroByDanPiraro",
+      "website_url": "https://www.bizarro.com/blog/",
+      "description": "Bizarro, created by cartoonist Dan Piraro, offers a uniquely eccentric perspective through detailed artwork and offbeat humour, captivating fans of alternative comedy. The Bizarro Blog features weekly cartoons and additional quirky content for enthusiasts.",
+      "followers": {
+        "facebook": 149400,
+        "twitter": 10100,
+        "instagram": 92500
+      },
+      "image_url": "https://i1.feedspot.com/4615999.jpg?t=1615901824"
+    },
+    {
+      "title": "Berkeley Place Blog",
+      "feed_url": "https://berkeleyplaceblog.com/feed/",
+      "website_url": "http://berkeleyplaceblog.com/",
+      "description": "I'm Ekko. I've been blogging since 2001. I started with music, then added some humor and miscellany, and now also write extensively about comic books. These are my lifelong loves.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1713921.jpg?t=1615898779"
+    },
+    {
+      "title": "A Place to Hang Your Cape",
+      "feed_url": "https://ap2hyc.com/feed/",
+      "website_url": "https://ap2hyc.com/",
+      "description": "A Place To Hang Your Cape is made by and for comic book fans of every kind. We cover everything from the British indie comics scene all the way up to Hollywood blockbusters. Whether it's superhero TV shows or films, comics of any kind, or even cosplay, we've got it all.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 2500,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/5281333.jpg?t=1621086565"
+    },
+    {
+      "title": "Westfield Comics Blog",
+      "feed_url": "http://westfieldcomics.com/blog/feed/",
+      "website_url": "http://westfieldcomics.com/blog/",
+      "description": "Serving the comics community for over 30 years! Westfield Comics Blog provide comics, graphic novels and pop-culture collectibles to the masses.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4615981.jpg?t=1615895247"
+    },
+    {
+      "title": "Spider Man Crawlspace",
+      "feed_url": "https://www.spidermancrawlspace.com/feed/",
+      "website_url": "https://www.spidermancrawlspace.com/category/reviews/comic-book-reviews/",
+      "description": "Created by Brad Douglas in 1998. A website for all your Spider-Man needs. Podcasts, news, pictures, discussion and more.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 473,
+        "instagram": 628
+      },
+      "image_url": "https://i1.feedspot.com/4616615.jpg?t=1615895597"
+    },
+    {
+      "title": "Tim Hanley Blog",
+      "feed_url": "https://thanley.wordpress.com/feed/",
+      "website_url": "https://thanley.wordpress.com/blog/",
+      "description": "Tim Hanley is a comic book historian and the author of Wonder Woman Unbound and many other famous comics. find some interesting book recommendations, superhero graphic novels, news Women in Comics Statistics: DC and Marvel, reviews and updates on female characters. and much more.",
+      "followers": {
+        "facebook": 88,
+        "twitter": 906
+      },
+      "image_url": "https://i1.feedspot.com/4616626.jpg?t=1684737849"
+    },
+    {
+      "title": "Broken Frontier Blog",
+      "feed_url": "https://www.brokenfrontier.com/section/blog/feed/",
+      "website_url": "https://www.brokenfrontier.com/section/blog/",
+      "description": "Bite-sized chunks on what's going on in the comics industry & beyond. Broken Frontier is a comic book and graphic novel news and community site featuring articles, reviews, and previews about the best independent and mainstream stories in publication.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 9000
+      },
+      "image_url": "https://i1.feedspot.com/5319018.jpg?t=1630739836"
+    },
+    {
+      "title": "THE HORRORS OF IT ALL",
+      "feed_url": "http://thehorrorsofitall.blogspot.com/feeds/posts/default",
+      "website_url": "http://thehorrorsofitall.blogspot.com/",
+      "description": "Horror and mystery comics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/319121.jpg?t=1615895883"
+    },
+    {
+      "title": "How To Love Comics",
+      "feed_url": "https://www.howtolovecomics.com/feed/",
+      "website_url": "https://www.howtolovecomics.com/",
+      "description": "Helping new comic book readers readers through recommendations, tips and communication. How to Love Comics aims to inform a wider audience about comics - especially those new to the medium - and create new readers.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/3974606.jpg?t=1615895236"
+    },
+    {
+      "title": "ComicMix",
+      "feed_url": "https://comicmix.com/feed/",
+      "website_url": "https://comicmix.com/",
+      "description": "ComicMix is the site for news and views on comics culture and original comics by top creators.",
+      "followers": {
+        "facebook": 8900,
+        "twitter": 3500,
+        "instagram": 249
+      },
+      "image_url": "https://i1.feedspot.com/5297525.jpg?t=1624968979"
+    },
+    {
+      "title": "Attack of the 50 Year Old Comic Books",
+      "feed_url": "https://50yearoldcomics.com/feed/",
+      "website_url": "https://50yearoldcomics.com/",
+      "description": "A look back at some really old comics by an even older comics fan",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5015959.jpg?t=1615895653"
+    },
+    {
+      "title": "Duck Comics Revue",
+      "feed_url": "http://duckcomicsrevue.blogspot.com/feeds/posts/default",
+      "website_url": "http://duckcomicsrevue.blogspot.com/",
+      "description": "It is a blog on wonderful comic stories about Donald Duck.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/944236.jpg?t=1615898891"
+    },
+    {
+      "title": "The Four Color Media Monitor",
+      "feed_url": "https://fourcolormedmon.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://fourcolormedmon.blogspot.com/",
+      "description": "This blog focuses on both the good and the bad use of our favorite comics and their protagonists by the companies that write and publish them. I'm Avi Green, from Jerusalem, Israel. I enjoy reading a lot of comics since I was young.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5297508.jpg?t=1624972705"
+    },
+    {
+      "title": "Dave's Comic Heroes Blog",
+      "feed_url": "http://davescomicheroes.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://davescomicheroes.blogspot.com/",
+      "description": "A blog about comic books, and enjoying the stories, characters and creators of them...and occasionally subjects that relate to comic books as well.",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4616619.jpg?t=1615898188"
+    },
+    {
+      "title": "dorkaholics",
+      "feed_url": "https://www.dorkaholics.com/feed/",
+      "website_url": "https://www.dorkaholics.com/",
+      "description": "dorkaholics.com is collection of Asian American voices adding to the discussion on comic books, video games, and pop culture.",
+      "followers": {
+        "twitter": 714,
+        "instagram": 7700
+      },
+      "image_url": "https://i1.feedspot.com/4984087.jpg?t=1615895579"
+    },
+    {
+      "title": "Supergirl Comic Box Commentary",
+      "feed_url": "http://comicboxcommentary.blogspot.com/feeds/posts/default",
+      "website_url": "http://comicboxcommentary.blogspot.com/",
+      "description": "A blog to talk about all things Supergirl: comics past and present, TV, toys, etc.",
+      "followers": {
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/763550.jpg?t=1615898349"
+    },
+    {
+      "title": "Voyage Comics Blog",
+      "feed_url": "https://voyagecomics.com/feed/",
+      "website_url": "https://voyagecomics.com/blog/",
+      "description": "Our Voyage Blog is devoted to testing everything and finding God in popular entertainment, focusing on comics, fantasy, and sci-fi. At Voyage Comics & Publishing, our mission is to create exceptional entertainment, informed by Catholic values, that inspires people to live heroic life.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 821,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5297522.jpg?t=1625213594"
+    },
+    {
+      "title": "Pencil Ink",
+      "feed_url": "https://feeds.feedburner.com/PencilInk-1950s1960s1970s1980sComicBookArtistsBlogChecklist",
+      "website_url": "https://pencilink.blogspot.com/",
+      "description": "This blog rates and reviews the 1950s 1960s 1970s comics. It showcases comic book artists and artwork from the golden, silver, and bronze ages.",
+      "followers": {
+        "twitter": 55
+      },
+      "image_url": "https://i1.feedspot.com/5297511.jpg?t=1624974089"
+    },
+    {
+      "title": "Superman Super Site",
+      "feed_url": "https://supermansupersite.com/rssfeed.xml",
+      "website_url": "https://supermansupersite.com/",
+      "description": "Since 1998, the Superman Super Site's mission statement has been to bring you all the latest news, updates, and information pertaining to the Man of Steel and the Superman universe in general. It is a mission we are proud to maintain for all our fellow Superman fans of the world.",
+      "followers": {
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/763553.jpg?t=1615895560"
+    },
+    {
+      "title": "The Comic Book Addicts",
+      "feed_url": "https://www.comicbookaddicts.com/feed/",
+      "website_url": "https://www.comicbookaddicts.com/",
+      "description": "Comic Book Addicts, your source for online comic book and graphic novel news, reviews, and information.",
+      "followers": {
+        "twitter": 7200,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5172343.jpg?t=1615895207"
+    },
+    {
+      "title": "Bleeding Cool \u00bb Comics",
+      "feed_url": "https://bleedingcool.com/comics/feed/",
+      "website_url": "https://bleedingcool.com/comics/",
+      "description": "The source for comic book and movie rumors, breaking news, and more. Check out quality comic book news, rumors, and related information here.",
+      "followers": {
+        "facebook": 69500,
+        "twitter": 81800,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4618182.jpg?t=1615895161"
+    },
+    {
+      "title": "The Comics Curmudgeon",
+      "feed_url": "https://joshreads.com/feed/",
+      "website_url": "https://joshreads.com/",
+      "description": "The Comics Curmudgeon is a blog by Josh Fruhlinger which contains regular updates from the comic world.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 12600
+      },
+      "image_url": "https://i1.feedspot.com/4616095.jpg?t=1615895550"
+    },
+    {
+      "title": "Weird Science DC Comics",
+      "feed_url": "https://www.weirdsciencedccomics.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.weirdsciencedccomics.com/",
+      "description": "Welcome to Weird Science DC Comics, the DC Comics site for the common man and woman. A blog about DC Comics featuring reviews, previews and articles from past and present. From Batman to Superman and everything in between.",
+      "followers": {
+        "facebook": 679,
+        "twitter": 20700
+      },
+      "image_url": "https://i1.feedspot.com/4615933.jpg?t=1615895589"
+    },
+    {
+      "title": "Attack On Geek",
+      "feed_url": "https://attackongeek.com/feed/",
+      "website_url": "https://attackongeek.com/",
+      "description": "What began as a personal blog called The Vanguard is now a fully fledged pop culture, gaming and entertainment brand known as Attack On Geek, carrying out activities across multiple platforms to foster its steady growth as a local hub in Australasia.",
+      "followers": {
+        "facebook": 24600,
+        "twitter": 3000,
+        "instagram": 947
+      },
+      "image_url": "https://i1.feedspot.com/4950596.jpg?t=1615895616"
+    },
+    {
+      "title": "The Blog of OA",
+      "feed_url": "https://www.blogofoa.com/feed",
+      "website_url": "https://www.blogofoa.com/",
+      "description": "A Green Lantern fan website containing news, reviews and commentary on the fictional DC Comics characters Green Lantern.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/1846501.jpg?t=1615898179"
+    },
+    {
+      "title": "Psychostick",
+      "feed_url": "https://psychostick.com/rss",
+      "website_url": "https://psychostick.com/comics",
+      "description": "Psychostick is a comedy metal/hardcore band and the comics are based on same.",
+      "followers": {
+        "facebook": 369600,
+        "twitter": 10500,
+        "instagram": 58700
+      },
+      "image_url": "https://i1.feedspot.com/4616564.jpg?t=1615898213"
+    },
+    {
+      "title": "Fuzzy Poet",
+      "feed_url": "https://fuzzypoet.com/feed/",
+      "website_url": "https://fuzzypoet.com/",
+      "description": "A great place to find comic, cartoons, illustrations and more.",
+      "followers": {
+        "facebook": 498,
+        "twitter": 2400,
+        "instagram": 11500
+      },
+      "image_url": "https://i1.feedspot.com/5015963.jpg?t=1615898218"
+    },
+    {
+      "title": "Blimey!",
+      "feed_url": "http://lewstringer.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://lewstringer.blogspot.com/",
+      "description": "Established in 2006, BLIMEY! is a blog by Lew Stringer creator of Combat Colin, Tom Thug, Brickman, Derek the Troll and many more. This blog looks back at classic British comics and sometimes reports on current and upcoming titles.",
+      "followers": {
+        "twitter": 5200,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4615977.jpg?t=1615898229"
+    },
+    {
+      "title": "The Lantern Cast",
+      "feed_url": "https://lanterncast.com/feed/",
+      "website_url": "https://lanterncast.com/",
+      "description": "The Lantern Cast provides insight and discussion on all things Green Lantern!",
+      "followers": {
+        "facebook": 560,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4618142.jpg?t=1615898248"
+    },
+    {
+      "title": "High-Low",
+      "feed_url": "http://highlowcomics.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://highlowcomics.blogspot.com/",
+      "description": "This is the blog of comics critic Rob Clough, who also has a column of the same name and reviews the comics sent to him.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/735782.jpg?t=1655362423"
+    },
+    {
+      "title": "Forbidden Planet International \u00bb Comics",
+      "feed_url": "https://forbiddenplanet.co.uk/category/comics/feed/",
+      "website_url": "https://forbiddenplanet.co.uk/category/comics/",
+      "description": "News, Reviews and Interviews from the world of comics!",
+      "followers": {
+        "facebook": 21700,
+        "twitter": 28800
+      },
+      "image_url": "https://i1.feedspot.com/4615983.jpg?t=1615898329"
+    },
+    {
+      "title": "Old Comics world",
+      "feed_url": "https://feeds.feedburner.com/OldComicsWorld",
+      "website_url": "http://oldcomicsworld.blogspot.com/",
+      "description": "Classic comics from Archie, Charlton, Dell, DC, GoldKey, Harvey, King, Whitman and many more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/735910.jpg?t=1615901891"
+    },
+    {
+      "title": "The Library of American Comics Blog",
+      "feed_url": "http://libraryofamericancomics.com/blog/feed/",
+      "website_url": "http://libraryofamericancomics.com/blog/",
+      "description": "The Library of American Comics is dedicated to preserving, in definitive editions, the long and jubilantly creative history of the American newspaper comic strip. While our production values are archival, the material we present is fresh and exciting.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 831
+      },
+      "image_url": "https://i1.feedspot.com/4616053.jpg?t=1615898341"
+    },
+    {
+      "title": "Longbox Junk!",
+      "feed_url": "http://longboxjunk.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://longboxjunk.blogspot.com/",
+      "description": "Comic book reviews that nobody has ever asked for. Hidden treasure and trash from the Golden Age to Modern Age. Expect the unexpected!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4957036.jpg?t=1615899035"
+    },
+    {
+      "title": "The Brown Bag",
+      "feed_url": "https://thebrownbagaeccb.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://thebrownbagaeccb.blogspot.com/",
+      "description": "An English Comic Collector Blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4845630.jpg?t=1615899375"
+    },
+    {
+      "title": "Crivens! Comics & Stuff",
+      "feed_url": "https://kidr77.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://kidr77.blogspot.com/",
+      "description": "A cascading cornucopia of cool comics, cartoons & classic collectibles - plus other completely captivating & occasionally controversial content!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1651705.jpg?t=1625214284"
+    },
+    {
+      "title": "ComicsDC",
+      "feed_url": "http://comicsdc.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://comicsdc.blogspot.com/",
+      "description": "ComicsDC is a blog for information and events relating to cartoons, cartoonists, and comics including comic books, webcomics, comic strips, political cartoons, animation, and caricature in Washington, DC, and its environs.",
+      "followers": {
+        "facebook": 326,
+        "twitter": 397
+      },
+      "image_url": "https://i1.feedspot.com/5297503.jpg?t=1624972140"
+    },
+    {
+      "title": "Yet Another Comics Blog",
+      "feed_url": "https://yetanothercomicsblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://yetanothercomicsblog.blogspot.com/",
+      "description": "Ramblings on things directly and tangentially related to comic books.",
+      "followers": {
+        "facebook": 601,
+        "twitter": 441,
+        "instagram": 691
+      },
+      "image_url": "https://i1.feedspot.com/5297505.jpg?t=1624974604"
+    },
+    {
+      "title": "Portrait of the Artist",
+      "feed_url": "https://wcgcomics.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://wcgcomics.blogspot.com/",
+      "description": "This is the official blog for Randy Reynaldo, publisher of WCG Comics and the creator-writer-artist of Rob Hanes Adventures.",
+      "followers": {
+        "facebook": 241,
+        "twitter": 769
+      },
+      "image_url": "https://i1.feedspot.com/5297504.jpg?t=1624974481"
+    },
+    {
+      "title": "Boys Adventure Comics",
+      "feed_url": "https://boysadventurecomics.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://boysadventurecomics.blogspot.com/",
+      "description": "Boys Adventure Comics is run by comics feature writer and archivist Richard Sheaf, who has written for a number of British comic magazines and websites, including Comic Scene and Downthetubes.",
+      "followers": {
+        "twitter": 732
+      },
+      "image_url": "https://i1.feedspot.com/5297506.jpg?t=1624972852"
+    },
+    {
+      "title": "Comics Price Guide",
+      "feed_url": "http://blog.comicspriceguide.com/feed/?format=xml",
+      "website_url": "https://blog.comicspriceguide.com/",
+      "description": "Follow this blog to get best comic articles ever.",
+      "followers": {
+        "facebook": 156600,
+        "twitter": 1200,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5014627.jpg?t=1615895189"
+    },
+    {
+      "title": "Smash Pages",
+      "feed_url": "https://smashpages.net/feed/",
+      "website_url": "https://smashpages.net/",
+      "description": "The comics super blog! We are a team of dedicated journalists bringing you the best and latest in comic book news and insight from indies to mainstream! Smash Pages is a comics news site that exclusively focuses on the print and digital worlds found in comic books, graphic novels, manga and webcomics.",
+      "followers": {
+        "facebook": 519,
+        "twitter": 1200,
+        "instagram": 207
+      },
+      "image_url": "https://i1.feedspot.com/5411765.jpg?t=1655531835"
+    },
+    {
+      "title": "Comics Heating Up",
+      "feed_url": "https://comicsheatingup.net/feed/",
+      "website_url": "https://comicsheatingup.net/",
+      "description": "Get the latest Informed Comic Book Speculation and Pop Culture News. Anthony H. has been reading and collecting comics for 30 years. He used his knowledge to frequent message boards and give tips and advice on buying hot comics for flipping on the secondary market. Instead of giving out the advice on other people's sites all the time, he brought that experience into launching a site of his own in March of 2013. Comics Heating Up was born.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 666
+      },
+      "image_url": "https://i1.feedspot.com/5411775.jpg?t=1655554078"
+    },
+    {
+      "title": "AIPT \u00bb Comic Books",
+      "feed_url": "https://aiptcomics.com/category/comic-books/feed/",
+      "website_url": "https://aiptcomics.com/category/comic-books+news/",
+      "description": "Explore the latest news and updates on comics worldwide. AIPT posts the most comic reviews anywhere every Wednesday, gaming, movies, pro wrestling and more.",
+      "followers": {
+        "facebook": 10600,
+        "twitter": 22000,
+        "instagram": 5500
+      },
+      "image_url": "https://i1.feedspot.com/5411768.jpg?t=1655549595"
+    },
+    {
+      "title": "Good Comics for Kids",
+      "feed_url": "https://goodcomicsforkids.slj.com/feed/",
+      "website_url": "https://goodcomicsforkids.slj.com/",
+      "description": "A collaborative blog covering good comics for kids by Brigid Alverson, Robin Brenner, Johanna Draper Carlson, Lori Henderson, Esther Keller, J. Caleb Mozzocco, Mike Pawuk, Renee Scott, and Eva Volin. We are a group of librarians, parents, and writers - and most of us wear at least two of those hats - who started writing about kids' comics in 2008 because, well, nobody else was. We like everything from Literary Graphic Novels to blatantly commercial (but fun!) licensed properties.",
+      "followers": {
+        "facebook": 69600,
+        "twitter": 113100,
+        "instagram": 33200
+      },
+      "image_url": "https://i1.feedspot.com/5411769.jpg?t=1655547673"
+    },
+    {
+      "title": "Batman News \u00bb Comics",
+      "feed_url": "https://batman-news.com/category/comics/feed/",
+      "website_url": "https://batman-news.com/category/comics/",
+      "description": "Get the latest news and reviews for Batman and Justice League comics. Batman News is a leading source for Justice League news, photos, videos & more.",
+      "followers": {
+        "facebook": 109000,
+        "twitter": 84900,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5411766.jpg?t=1655531840"
+    },
+    {
+      "title": "DC Comics News",
+      "feed_url": "https://dccomicsnews.com/category/news/feed/",
+      "website_url": "https://dccomicsnews.com/category/news/",
+      "description": "Here you will find the latest DC News that covers Film (animated / Motion Picture), merchandise, comics, novels, art, news, & community activities (cosplay, fan films), and exclusive interviews with industry stars, directors, writers, & celebrities. DC Comics News is a fan based site. We want to give you the best view of what is happening across the DC world. Our news covers film (motion picture & animation), comics, TV, merchandise, art, news, and reviews. Watch out for exclusive interviews with industry heavyweights, comic book artists, actors, producers, directors, and fan activities!",
+      "followers": {
+        "facebook": 25000,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5411770.jpg?t=1655552784"
+    },
+    {
+      "title": "CBSI Comics",
+      "feed_url": "https://comicbookinvest.com/feed/",
+      "website_url": "https://comicbookinvest.com/",
+      "description": "Your one stop spot for all the latest comic book speculation, investing and breaking comic related news from around the web. Comicbookinvest.com (CBSI) is your home for all things comic book related. The comic collecting community is vast and with the myriad of information, misinformation and other pitfalls out there, it can be difficult to navigate and keep up. With our ever changing and evolving hobby you may find yourself in need of a roadmap - We are that guide!",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 1600,
+        "instagram": 20100
+      },
+      "image_url": "https://i1.feedspot.com/5411767.jpg?t=1655531848"
+    },
+    {
+      "title": "ComicList: New Comic Book Releases List Blog",
+      "feed_url": "https://ncrl.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://ncrl.blogspot.com/",
+      "description": "ComicList: New Comic Book Releases List blog publishes a weekly list of the comic books, graphic novels, and other products that should be available at your local or online comic book shop next week.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5411773.jpg?t=1655547504"
+    },
+    {
+      "title": "downthetubes.net",
+      "feed_url": "https://downthetubes.net/feed/",
+      "website_url": "https://downthetubes.net/",
+      "description": "Exploring Comics and more on the Web since 1998. DownTheTubes was originally created to be a resource base for people seeking comics artists and writers but has mushroomed over the years to deliver British comics news, interviews and other features. downthetubes also includes information on events and links to comics, SF and other resources on the web.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 8700,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5411789.jpg?t=1655531968"
+    },
+    {
+      "title": "Learn to Read Comics Blog",
+      "feed_url": "https://learntoreadcomics.org/feed/",
+      "website_url": "https://learntoreadcomics.org/blog/",
+      "description": "Stay up to date with new artist postings, events, educational research, items for sale, and fundraising auctions. The specific purpose of this corporation is to provide free comic books, dictionaries and related supplies to children. We strive to deliver opportunities for kids to develop reading, writing and artistic skills though a medium which captivates their attention, inspires imagination and generates motivation.",
+      "followers": {
+        "facebook": 145
+      },
+      "image_url": "https://i1.feedspot.com/5411786.jpg?t=1655531952"
+    },
+    {
+      "title": "Comics Byte",
+      "feed_url": "https://comicsbyte.com/feed/",
+      "website_url": "https://comicsbyte.com/",
+      "description": "Explore our articles as we discuss the comics supremacy era and upcoming comics. As a comics enthusiast, we're always passionate about the comics and the culture related to that. We thought that it's our time to contribute and grow along with this beautiful industry. There was a time when the circulation of comics was quite common in India but with time its scope kept shrinking. Comics Byte is trying to expand this circle through itself, in which some unique people are supporting it.",
+      "followers": {
+        "facebook": 2100,
+        "instagram": 561
+      },
+      "image_url": "https://i1.feedspot.com/5411784.jpg?t=1655531931"
+    },
+    {
+      "title": "International Journal of Comic Art blog",
+      "feed_url": "http://ijoca.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://ijoca.blogspot.com/",
+      "description": "Find News about the premier academic journal devoted to all aspects of cartooning and comics. The International Journal of Comic Art (ISSN 1531-6793) is published and edited by John Lent.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5411783.jpg?t=1655555115"
+    },
+    {
+      "title": "Major Spoilers",
+      "feed_url": "https://majorspoilers.com/feed/",
+      "website_url": "https://majorspoilers.com/",
+      "description": "Stay up to date with Daily Comic Book Reviews, News, Previews, and Podcasts. Major Spoilers is dedicated to bringing news, reviews, and interviews about the comic book and related industries to fans around the world. Major Spoilers was created in July 2006 by Stephen Schleicher and is intended for entertainment purposes only.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 7700,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5411779.jpg?t=1655531913"
+    },
+    {
+      "title": "Trending Pop Culture",
+      "feed_url": "https://feeds.feedburner.com/TrendingPopCulture",
+      "website_url": "https://trendingpopculture.com/",
+      "description": "Trending Pop Culture covers the trends in Comic Books, toys and everything in pop culture. Also covering the speculation side of comics. We are the FIRST comic book speculation website on the internet (2005). We also cover Conventions, Interviews, Reviews and so much more!",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 1600,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5411778.jpg?t=1655531908"
+    },
+    {
+      "title": "Steve Does Comics",
+      "feed_url": "https://stevedoescomics.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://stevedoescomics.blogspot.com/",
+      "description": "Browse through Comic Book blatherings from the backyard of nostalgia. Explore my recollections of comic books incidents in various articles. I inflicted the novels 'Danny Yates Must Die,' 'Mr Landen Has No Brain' and 'Fatal Inheritance' on the world, as well as a bunch of short stories under a bunch of pseudonyms.",
+      "followers": {
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/4911232.jpg?t=1620122371"
+    },
+    {
+      "title": "Comics Blog",
+      "feed_url": "https://www.comicsblog.fr/comicsblog.rss",
+      "website_url": "https://www.comicsblog.fr/",
+      "description": "Get the latest news and updates on various comics from around the world. Comics Blog is our go-to Comics news site!",
+      "followers": {
+        "facebook": 30900,
+        "twitter": 20300
+      },
+      "image_url": "https://i1.feedspot.com/949431.jpg?t=1655556260"
+    },
+    {
+      "title": "Super-Team Family: The Lost Issues!",
+      "feed_url": "https://braveandboldlost.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://braveandboldlost.blogspot.com/",
+      "description": "A blog presenting covers to imaginary comic books featuring the greatest team ups that never happened... but should have! The blog includes Imaginary Covers created by comics fan Ross featuring the greatest stars from DC, Marvel and beyond.",
+      "followers": {
+        "facebook": 6600,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/1825966.jpg?t=1655552260"
+    },
+    {
+      "title": "The Big Blog of Kids' Comics!",
+      "feed_url": "http://www.bigblogcomics.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.bigblogcomics.com/",
+      "description": "This blog was created for children and adults that love beautiful comic book art and stories.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2293278.jpg?t=1703566123"
+    },
+    {
+      "title": "It's OK, I'm a Senator",
+      "feed_url": "https://itsokimasenator.livejournal.com/data/rss",
+      "website_url": "https://itsokimasenator.livejournal.com/",
+      "description": "Hi everyone, this is Tom Bierbaum, being guided and advised by my lovely wife Mary in how to set up a live journal page. Various friends have suggested over the years that I create a spot on the Internet where I can post the various reminiscences I've been writing about our years on DC Comics' Legion of Super-Heroes. So this blog will have everything you need to know about Legion.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2367134.jpg?t=1703566341"
+    },
+    {
+      "title": "The Daily SuperHero",
+      "feed_url": "http://www.dailysuperhero.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.dailysuperhero.com/",
+      "description": "Find all the updates, theories and celebrities news focused coverage on movies and TV related content for Marvel, DC, Star Wars, and more. The Daily SuperHero originally launched on February 27, 2012 under the name 'SuperHero Authority.' It was re-branded on September 3, 2012 as a play off of comic book newspapers The Daily Bugle and The Daily Planet.",
+      "followers": {
+        "facebook": 104900,
+        "twitter": 11900
+      },
+      "image_url": "https://i1.feedspot.com/3538258.jpg?t=1655712862"
+    },
+    {
+      "title": "World of Black Heroes",
+      "feed_url": "http://worldofblackheroes.com/feed/",
+      "website_url": "http://worldofblackheroes.com/",
+      "description": "Dedicated to Black superhero News, Reviews, Previews, Sales figures, Interviews, Galleries and the people who bring them to us. World of Black heroes is a website dedicated to following the portrayal of Black heroes.",
+      "followers": {
+        "facebook": 112,
+        "twitter": 830
+      },
+      "image_url": "https://i1.feedspot.com/3797877.jpg?t=1655713060"
+    },
+    {
+      "title": "Bear Alley Blog",
+      "feed_url": "https://bearalley.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://bearalley.blogspot.com/",
+      "description": "This blog is Somewhere I can talk about my favourite subjects: old British comics, story papers and paperbacks. Freelance author and editor for the past 30 years.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4047862.jpg?t=1655553470"
+    },
+    {
+      "title": "2000 AD",
+      "feed_url": "https://2000ad.com/feed/",
+      "website_url": "https://2000ad.com/news/",
+      "description": "2000 AD is the cutting edge powerhouse of British comics.Imaginative, hard-hitting stories and eye-popping art have made 2000 AD essential reading - from the violent satire of futuristic lawman Judge Dredd and the war-torn world of Rogue Trooper to the robot mayhem of the ABC Warriors and the stone-cold mutant killers of Strontium Dog.",
+      "followers": {
+        "facebook": 90500,
+        "twitter": 50200
+      },
+      "image_url": "https://i1.feedspot.com/5350904.jpg?t=1638955304"
+    },
+    {
+      "title": "OK Comics Blog",
+      "feed_url": "https://okcomics.co.uk/blogs/news.atom",
+      "website_url": "https://okcomics.co.uk/blogs/news",
+      "description": "Get the latest news and updates about comic book releases and events organized by us here. OK Comics is an independent Book Shop specialising in Graphic Novels and Comics. Every type of comic and graphic novel can be found at OK Comics, from great independent books to the latest superhero action adventure comics with everything in between. Popular genres here are crime, horror, biographies, history, gender issues, and music.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 10700,
+        "instagram": 6300
+      },
+      "image_url": "https://i1.feedspot.com/5350976.jpg?t=1655554766"
+    },
+    {
+      "title": "Comic Book Daily",
+      "feed_url": "https://www.comicbookdaily.com/feed/",
+      "website_url": "https://www.comicbookdaily.com/",
+      "description": "Comic Book Daily is a website dedicated to bringing a virtual comic shop environment to you: a discussion of the minutiae of comic book collecting.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 836
+      },
+      "image_url": "https://i1.feedspot.com/5411764.jpg?t=1684737857"
+    },
+    {
+      "title": "Bully Says Blog",
+      "feed_url": "https://bullyscomics.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://bullyscomics.blogspot.com/",
+      "description": "Browse through some of the remarkable comic strips from popular comics throughout the years.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5403372.jpg?t=1655550807"
+    },
+    {
+      "title": "Get Your Comic On Blog \u00bb Comics",
+      "feed_url": "https://getyourcomicon.co.uk/blog/category/comics/feed/",
+      "website_url": "https://getyourcomicon.co.uk/blog/category/comics/",
+      "description": "All posts relating to comic books. This section will include all news posts, press releases and reviews from across GYCO relating to comic books. Get Your Comic On' is a labour of love created by three friends.",
+      "followers": {
+        "facebook": 657,
+        "twitter": 3400,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5351022.jpg?t=1638957965"
+    },
+    {
+      "title": "The Comic Book Dispatch",
+      "feed_url": "https://comicbookdispatch.com/feed/",
+      "website_url": "https://comicbookdispatch.com/",
+      "description": "We write news, previews, and reviews of comic books and related media. Our reviews are honest, down-to-Earth, and fair. As we discover comic news, we will keep you in the loop! I am a Comic Journalist who loves comics, movies, tv, and basically all things pop culture related.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 7300,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5411808.jpg?t=1655532080"
+    },
+    {
+      "title": "Todd's Blog",
+      "feed_url": "https://kleinletters.com/Blog/feed/",
+      "website_url": "https://kleinletters.com/Blog/",
+      "description": "I post lots of comics history articles and book reviews for my blog. I have worked as a letterer at DC comics before starting as a freelancer lettering expert.",
+      "followers": {
+        "facebook": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5411820.jpg?t=1655532153"
+    },
+    {
+      "title": "All Star Comics Melbourne Blog",
+      "feed_url": "http://ascmelbourne.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://ascmelbourne.blogspot.com/",
+      "description": "Welcome to Melbourne's most innovative Comic Book Store. Owners Mitch and Troy each have over 20 years of experience working in comic book retail. Together, their aim is to make All-Star Comics a unique and friendly shopping experience in the heart of Melbourne.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5411792.jpg?t=1655540916"
+    },
+    {
+      "title": "Fred Egg Comics Blog",
+      "feed_url": "https://fredeggcomics.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://fredeggcomics.blogspot.com/",
+      "description": "Hi! I'm David Robertson. I make comics. I read comics. I write about comics. Through Fred Egg Comics, I self-publish my comics Berserkotron; Dump; Zero Sum Bubblegum; Wow! Retracted; Break the Cake, But a Dream!; Bell Time; Mount a Rescue, That Comic Smell Comic, The Tay Bridge Disaster, and Booze Ha Ha.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5411815.jpg?t=1655549695"
+    },
+    {
+      "title": "Comics, Old-Time Radio And Other Cool Stuff",
+      "feed_url": "https://feeds.feedburner.com/ComicsOldTimeRadioAndOtherCoolStuff",
+      "website_url": "http://comicsradio.blogspot.com/",
+      "description": "Comics, Old-Time Radio And Other Cool Stuff blog is about random thoughts about pre-digital Pop Culture, covering subjects such as Pulp Fiction, B-movies, Comic Strips, Comic Books, and Old-time Radio.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5411794.jpg?t=1655549480"
+    },
+    {
+      "title": "Word for Word Bible Comic's Blog",
+      "feed_url": "https://www.wordforwordbiblecomic.com/blog?format=rss",
+      "website_url": "https://www.wordforwordbiblecomic.com/blog",
+      "description": "Unabridged, a historically accurate graphic novel of the Bible with a high view of scripture. This page contains a blog of the features and discoveries that have been made through the work and research of this project. Based in Bristol, England, Simon has a degree in graphic design and has been creating comics for over 20 years.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 2100,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5411809.jpg?t=1655554400"
+    },
+    {
+      "title": "Bob's Comic Book Blog",
+      "feed_url": "https://bobscomicbookblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://bobscomicbookblog.blogspot.com/",
+      "description": "Bob's Comic Book Blog is famous for bringing you all the famous and to-read detective comics. Find your next thriller and mystery comic to read here!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5411810.jpg?t=1655556187"
+    },
+    {
+      "title": "#1 Comic Books Blog",
+      "feed_url": "https://1comicbooksblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://1comicbooksblog.blogspot.com/",
+      "description": "#1 Comic Books Blog is all about comic books. From vintage comics to new releases, read about all the comics, their characters, storyline, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5411816.jpg?t=1655555903"
+    },
+    {
+      "title": "Greenlight Comics Blog",
+      "feed_url": "https://greenlightcomics.com/feed/",
+      "website_url": "https://greenlightcomics.com/blog/",
+      "description": "Check out all the latest comic reviews and reading recommendations from our crew! The Blog collects all our thoughts on new and upcoming books. Everything from Marvel to Manga, Greenlight Comics is South Australia's newest comic store! Our Graphic Novels are ready to go home with you!",
+      "followers": {
+        "facebook": 3600,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5411819.jpg?t=1655532148"
+    },
+    {
+      "title": "Den of Geek \u00bb Comics",
+      "feed_url": "https://www.denofgeek.com/comics/feed/",
+      "website_url": "https://www.denofgeek.com/comics/",
+      "description": "Den of Geek brings you the latest comic reviews and news in this segment of the blog. The Den of Geek is packed with exclusive features, interviews, previews, and deep dives into geek culture. It is dedicated to serving the interests of today's entertainment enthusiasts.",
+      "followers": {
+        "facebook": 481500,
+        "twitter": 73100,
+        "instagram": 60000
+      },
+      "image_url": "https://i1.feedspot.com/5411798.jpg?t=1655532016"
+    },
+    {
+      "title": "SuperHeroHype \u00bb Comics",
+      "feed_url": "https://www.superherohype.com/comics/feed",
+      "website_url": "https://www.superherohype.com/comics",
+      "description": "Read the latest from the world of comics by the experts of SuperHeroHype. The cape-wearing team of editors at SuperHeroHype aims to provide up-to-the-minute news and an insider look into the universe of comics, superheroes, fantasy, sci-fi, and geek culture written by superfans for the highest level of authenticity.",
+      "followers": {
+        "facebook": 171400,
+        "twitter": 50500
+      },
+      "image_url": "https://i1.feedspot.com/5411806.jpg?t=1655532070"
+    },
+    {
+      "title": "Library of American Comics Blog",
+      "feed_url": "https://libraryofamericancomics.com/blog/feed/",
+      "website_url": "https://libraryofamericancomics.com/blog/",
+      "description": "The Library of American Comics is dedicated to preserving, in definitive editions, the long and jubilantly creative history of the American newspaper comic strip.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 831,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5411797.jpg?t=1655532005"
+    },
+    {
+      "title": "Julian Peters Comics",
+      "feed_url": "https://julianpeterscomics.com/feed/",
+      "website_url": "https://julianpeterscomics.com/",
+      "description": "Julian Peters is a comic book artist and illustrator living in Montreal. In recent years, he has focused primarily on the adaptation of classic poems into comics. Find a selection of his comics, poetry comics, and other illustration work on his artistic-looking blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5411799.jpg?t=1684737931"
+    },
+    {
+      "title": "Coliseum of Comics Blog",
+      "feed_url": "https://coliseumofcomics.com/feed/",
+      "website_url": "https://coliseumofcomics.com/blog/",
+      "description": "Founded in 1983, Coliseum of Comics is one of the largest comics and games retailers in the Southeast. It has been an advocate and active partner in bringing literacy through comics to both reluctant readers and to long-time fans who enjoy the graphic storytelling medium.",
+      "followers": {
+        "facebook": 19800,
+        "twitter": 2400,
+        "instagram": 10400
+      },
+      "image_url": "https://i1.feedspot.com/5411801.jpg?t=1655532035"
+    },
+    {
+      "title": "The Unspoken Decade",
+      "feed_url": "https://theunspokendecade.com/feed/",
+      "website_url": "https://theunspokendecade.com/tag/comics/",
+      "description": "Hey there, We are Dean Compton and Angel Eena and we have been into comics for as long as we can recall. The Unspoken Decade looks at 90s comics beyond the stereotypes, finding great and awful comics alike. The Gimmick Era has never been covered so well.",
+      "followers": {
+        "facebook": 30000
+      },
+      "image_url": "https://i1.feedspot.com/5411802.jpg?t=1655549917"
+    },
+    {
+      "title": "Mike Sterling's Progressive Ruin",
+      "feed_url": "https://www.progressiveruin.com/feed/",
+      "website_url": "https://www.progressiveruin.com/",
+      "description": "My name is Mike. I sell funny books. I also write for Fake AP Stylebook and The Bureau Chiefs. Read my blog post on the hot comic book collection from the 90s and old era, and in-depth articles on Progressive Ruin.",
+      "followers": {
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/6869.jpg?t=1655555737"
+    },
+    {
+      "title": "Fantagraphics Blog",
+      "feed_url": "https://blog.fantagraphics.com/feed/",
+      "website_url": "https://blog.fantagraphics.com/",
+      "description": "For over 40 years, Fantagraphics has published the very best comics and graphic novels that the medium has to offer. Our mission is to celebrate great cartooning in all of its incarnations. We honor the rich history of comics while providing a platform for bold new stories, styles, and perspectives that push the boundaries of the medium.",
+      "followers": {
+        "facebook": 67400,
+        "twitter": 55500,
+        "instagram": 99700
+      },
+      "image_url": "https://i1.feedspot.com/5411804.jpg?t=1676625496"
+    },
+    {
+      "title": "Simon Spurrier Blog",
+      "feed_url": "https://www.simonspurrier.com/blog?format=rss",
+      "website_url": "https://www.simonspurrier.com/blog",
+      "description": "Simon 'Si' Spurrier writes novels and comics. His work in the latter field stretches from award-winning creator-owned books such as Numbercruncher, Six-Gun Gorilla, and The Spire to projects in the U.S. mainstream like Hellblazer, The Dreaming, and X-Men.",
+      "followers": {
+        "twitter": 20000
+      },
+      "image_url": "https://i1.feedspot.com/5411805.jpg?t=1655532054"
+    },
+    {
+      "title": "ComicScene",
+      "feed_url": "https://comicscene.org/feed/",
+      "website_url": "https://comicscene.org/",
+      "description": "ComicScene Magazine presents a series of stories and plots on its page. Offering you a great deal of entertainment and also providing news and reports.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/5352389.jpg?t=1655553093"
+    },
+    {
+      "title": "Lew Stringer Comics",
+      "feed_url": "http://lewstringercomics.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://lewstringercomics.blogspot.com/",
+      "description": "I am Lew Stringer. I have been working as a freelance artist and writer in British humour comics professionally since 1983. Clients include D.C. Thomson, Egmont, Marvel UK, IPC, Panini UK, Dark Horse Comics, Image Comics, and many more.",
+      "followers": {
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4949751.jpg?t=1638957281"
+    },
+    {
+      "title": "Battle Quest Comics Blog",
+      "feed_url": "https://battlequestcomics.com/feed/",
+      "website_url": "https://battlequestcomics.com/blog/",
+      "description": "The official blog from Battle Quest Comics. Check back often to keep up with what the team is up to, and for sneak peaks at art and future Battle Quests! Battle Quest Comics publishes All Ages/YA fantasy adventure comic books and graphic novels made by industry professionals and up-and-coming creators.",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 1500,
+        "instagram": 10500
+      },
+      "image_url": "https://i1.feedspot.com/5411824.jpg?t=1655532183"
+    },
+    {
+      "title": "Commons Comics",
+      "feed_url": "https://www.commonscomics.com/feed/",
+      "website_url": "https://www.commonscomics.com/",
+      "description": "A bi-weekly review blog of new comics and graphic novels by writer, professor, and comics scholar Jessica Baldanzi. I'll be reviewing mostly brand new works, as well as some foundational classics. My expertise lies with what many people call 'graphic novels'n - works that take books like Art Spiegelman's Pulitzer Prize-winning 'Maus' (1986) and Marjane Satrapi's 'Persepolis' (English translation 2003) as models to tell longer and sometimes weightier stories than superhero serials tend to tell.",
+      "followers": {
+        "twitter": 10200
+      },
+      "image_url": "https://i1.feedspot.com/4950422.jpg?t=1621512840"
+    },
+    {
+      "title": "Cosmic Book News",
+      "feed_url": "https://cosmicbook.news/feed",
+      "website_url": "https://cosmicbook.news/",
+      "description": "Find the latest comic book movie news, TV, video game, articles, reviews, trailers and more. Established in 2008, Matt McGloin created and designed Cosmic Book News, an independent website that covers entertainment news including movies, comics, tv, video games and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5478136.jpg?t=1671020150"
+    },
+    {
+      "title": "The Tom Brevoort Experience",
+      "feed_url": "https://tombrevoort.com/feed/",
+      "website_url": "https://tombrevoort.com/",
+      "description": "Read the stuff from the self-indulgent world of Tom Brevoort. Tom Brevoort is an American comic book editor, known for his work for Marvel Comics, where he has overseen titles such as New Avengers, Civil War, and Fantastic Four.",
+      "followers": {
+        "twitter": 40500
+      },
+      "image_url": "https://i1.feedspot.com/5500880.jpg?t=1675081253"
+    },
+    {
+      "title": "Flying Colors Comics",
+      "feed_url": "http://flyingcolorscomics.blogspot.com/feeds/posts/default",
+      "website_url": "http://flyingcolorscomics.blogspot.com/",
+      "description": "Flying Colors Comics is a blog about comics, comic books, graphic novels, music, baseball, pop culture and other cool stuff. Joe Field is the founder of Flying Colors Comics as well as the author of the articles published on the website.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5500876.jpg?t=1675081235"
+    },
+    {
+      "title": "Nerd Soup 4 U",
+      "feed_url": "https://www.nerdsoup4u.com/blog-feed.xml",
+      "website_url": "https://www.nerdsoup4u.com/",
+      "description": "Nerd Soup 4 U is a blog that focuses mainly on X-Men comics. I invite you to join me as I take a journey through every X-Men (and most X-Men related) comic series from the very beginning through present day.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5500883.jpg?t=1675081614"
+    },
+    {
+      "title": "Comic Bits Online",
+      "feed_url": "http://feeds.feedburner.com/ComicBits",
+      "website_url": "http://hoopercomicart.blogspot.com/",
+      "description": "Comic Bits Online is comicdom's favourite news and reviews website. Find out about the latest comic releases and get detailed information about comics reviewed, including the price of the comic and where you can buy it. The website is managed by Terry Hooper-Scharf who is an artist, writer, editor, and publisher.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5500873.jpg?t=1675081449"
+    },
+    {
+      "title": "Minna Sundberg Art and Comics Blog",
+      "feed_url": "https://hummingfluffstudio.substack.com/feed",
+      "website_url": "https://hummingfluffstudio.substack.com/",
+      "description": "Hello there, my name is Minna, Hummingfluff being my frequent social media nick, and I'm a comic artist. Check out updates on my new ongoing comic on my website and get exclusive behind-the-scenes information as a subscriber.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5500874.jpg?t=1675081412"
+    },
+    {
+      "title": "Florida Comic Cons Blog",
+      "feed_url": "https://floridacomiccons.com/blog/feed/",
+      "website_url": "https://floridacomiccons.com/blog/",
+      "description": "Check out the blogs and news releases, report event updates, guest announcements and other info important to the fandom of comic cons in Florida. Florida Comic Cons is a news media website that covers comic conventions and cosplayers in The Sunshine State.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 80,
+        "instagram": 11600
+      },
+      "image_url": "https://i1.feedspot.com/5500872.jpg?t=1675081396"
+    },
+    {
+      "title": "Steve Ditko Comics Weblog",
+      "feed_url": "http://ditko.blogspot.com/feeds/posts/default",
+      "website_url": "http://ditko.blogspot.com/",
+      "description": "This will be an attempt to post on every single comic publication I have with Steve Ditko artwork, currently about 500 out of about 2000 eligible books, both numbers will probably grow by the time I'm done.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2013999.jpg?t=1675141576"
+    },
+    {
+      "title": "Comic Book Couples Counseling Blog",
+      "feed_url": "https://www.comicbookcouplescounseling.com/blog-feed.xml",
+      "website_url": "https://www.comicbookcouplescounseling.com/blog",
+      "description": "Comic Book Couples Counseling is a celebration of comics in all their fabulous forms, featuring reviews, essays, and podcasts. Join married couple, Brad Gullickson and Lisa Gullickson, as they explore the various dynamics of comic book relationships throughout pop culture and publishing history. Each week they tackle a new storyline, or interview a new creator, bringing a lifetime of passion to the conversation.",
+      "followers": {
+        "twitter": 18900
+      },
+      "image_url": "https://i1.feedspot.com/5500882.jpg?t=1675081261"
+    },
+    {
+      "title": "First Comics News",
+      "feed_url": "https://www.firstcomicsnews.com/feed/",
+      "website_url": "https://www.firstcomicsnews.com/",
+      "description": "First Comics News is your source for all the latest comics news and updates since 1998. Explore the latest news on comics, new releases, reviews and more!",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5478137.jpg?t=1670824711"
+    },
+    {
+      "title": "Titan Comics",
+      "feed_url": "https://titan-comics.com/rss/",
+      "website_url": "https://titan-comics.com/",
+      "description": "Titan Comics is a bold new publishing initiative from Titan Publishing, offering readers the best new stories from new and established comics creators, and offering those creators a great deal to bring their stories to a worldwide audience.",
+      "followers": {
+        "facebook": 57800,
+        "twitter": 714
+      },
+      "image_url": "https://i1.feedspot.com/5239607.jpg?t=1611750194"
+    },
+    {
+      "title": "Comic Strip Blog",
+      "feed_url": "https://comicstripblog.com/feed/",
+      "website_url": "https://comicstripblog.com/",
+      "description": "Comic Strip Blog is a collection of comic strips on different topics including pop culture, news, popular topics and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5500875.jpg?t=1675081644"
+    },
+    {
+      "title": "Oink Blog",
+      "feed_url": "https://oink.blog/feed/",
+      "website_url": "https://oink.blog/",
+      "description": "In 1986 I bought my first comic, OiNK! It introduced me to the world of comics and a few years back I decided to relive it issue-by-issue in real time, reading and reviewing each one on its original release date on my blog.",
+      "followers": {
+        "facebook": 652,
+        "twitter": 508
+      },
+      "image_url": "https://i1.feedspot.com/5350935.jpg?t=1638956537"
+    },
+    {
+      "title": "Hall of Justice Blog",
+      "feed_url": "https://www.hallofjusticecomics.com/rss.php?action=newblogs&type=rss",
+      "website_url": "https://www.hallofjusticecomics.com/blog/",
+      "description": "The latest news from Hall of Justice Comics & Collectibles. A comic book shop specializing in new comics, and lots of back-issue books at reasonable prices, plus toys, Funko Pops, supplies and more!",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 1100,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5500877.jpg?t=1675081242"
+    },
+    {
+      "title": "Kids Comics Unite Blog",
+      "feed_url": "https://kidscomicsunite.com/blog/feed/",
+      "website_url": "https://kidscomicsunite.com/blog/",
+      "description": "Kids Comics Unite (KCU) offers both paid and free resources, courses, membership programs, and networking opportunities to kids comics creators. Our blog features resources for kids' comic creators to improve their craft, build an audience, make more money, and maximize their impact on readers.",
+      "followers": {
+        "twitter": 396,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5500881.jpg?t=1675081620"
+    },
+    {
+      "title": "TMNT Blog",
+      "feed_url": "https://tmnt-ninjaturtles.com/feed/",
+      "website_url": "https://tmnt-ninjaturtles.com/tmnt-blog/",
+      "description": "This blog, TMNT: A Collection is home to the most complete and professionally cataloged collection of Teenage Mutant Ninja Turtles comics and memorabilia in existence. Keep track of the upcoming TMNT comics and all the variant covers and read interesting news about the collection along with breaking news in the TMNT comics realm.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 126400
+      },
+      "image_url": "https://i1.feedspot.com/5319017.jpg?t=1630739496"
+    },
+    {
+      "title": "Gay League Blog",
+      "feed_url": "https://gayleague.com/feed/",
+      "website_url": "https://gayleague.com/news-blog/",
+      "description": "The Gay League is one of the first and largest groups in the world for LGBT comics fans. The group had its start in the summer of 1997 after a man enigmatically referred to as 'Ulu Vakk' attended Andy Mangels' 'Gays In Comics' panel at San Diego Comic Con. The panel served as inspiration for bringing LGBT fans together online. It seemed the perfect solution to the few people who were posting campy and very gay remarks on the old DC Comics message board",
+      "followers": {
+        "facebook": 34,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5406338.jpg?t=1654320802"
+    },
+    {
+      "title": "The Comics Digest",
+      "feed_url": "https://thecomicsdigest.blogspot.com/feeds/posts/default",
+      "website_url": "https://thecomicsdigest.blogspot.com/",
+      "description": "Reviews of comics, manga and graphic novels",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8832317.jpg?t=1764337992"
+    },
+    {
+      "title": "Fleen",
+      "feed_url": "http://fleen.com/feed/",
+      "website_url": "http://fleen.com/",
+      "description": "Fleen is dedicated to discussing webcomics of all kinds. The author, in his own impersonal style pens down the recent Highs & Normals of the webcomic industry, while also taking reviews of new stories and graphic novels. Enjoy learning more about comic in the latest articles.",
+      "followers": {
+        "twitter": 873
+      },
+      "image_url": "https://i1.feedspot.com/2111826.jpg?t=1687419530"
+    },
+    {
+      "title": "They don't count as reading Blog",
+      "feed_url": "https://comicsinclass.school.blog/feed/",
+      "website_url": "https://comicsinclass.school.blog/",
+      "description": "They don't count as reading by Richard Ruddick is a blog all about comic books in the classroom. It offers Books reviews and updates from the author's desk. Richard is a classroom teacher and shares his love and passion for reading Comic books as showcased here. Get to know what he's up to in daily updates.",
+      "followers": {
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5604916.jpg?t=1687419329"
+    },
+    {
+      "title": "Marvel Mysteries and Comics Minutiae",
+      "feed_url": "https://nick-caputo.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://nick-caputo.blogspot.com/",
+      "description": "Nick Caputo is a published Comic Book writer, artist, and biographer. Having previously contributed to numerous comic publications, Nick in his blog Marvel Mysteries and Comics Minutiae now shares beautiful artist stories, witty anecdotes, trivia, and personal experiences from during the Golden Age of Comics.",
+      "followers": {
+        "facebook": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4306245.jpg?t=1687419497"
+    },
+    {
+      "title": "Double-Sized Issue Comic Blog",
+      "feed_url": "https://doublesizedissue.com/feed/",
+      "website_url": "https://doublesizedissue.com/",
+      "description": "Read explorative, in-depth DC and Marvel Comics Reviews featuring all your Favorite and Upcoming new superheroes. The Double-Sized Issue Comic Blog is dedicated to bringing forward the best insights and perspectives on comics on the shelf. Editor-in-Chief Thom LaPorte loves comics and sharing his comic book journey here.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5604913.jpg?t=1687419448"
+    },
+    {
+      "title": "Comic Vine",
+      "feed_url": "https://comicvine.gamespot.com/feeds/news",
+      "website_url": "https://comicvine.gamespot.com/news/",
+      "description": "Stay tuned for the latest stories and news breaks covering all comic-related Media and products. As one of the largest comic databases online, Comic Vine features Comic Reviews, News, Videos, and Forums for the latest in and more! Read about your favorite storylines in this space.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 474
+      },
+      "image_url": "https://i1.feedspot.com/5604908.jpg?t=1687419291"
+    },
+    {
+      "title": "PopCult Blog \u00bb Comic Book",
+      "feed_url": "https://popcult.blog/category/comic-books/feed/",
+      "website_url": "https://popcult.blog/category/comic-books/",
+      "description": "Take a deep dive into PopCult's Comic Book reviews covering a stream of under-the-radar but brilliant comic and comics-inspired media. Find more profound, insightful, critiques and acknowledgments of classic styles, gritty plots, and nostalgia from golden comic books. PopCult is a review blog capturing modern media from a leftist perspective.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5604914.jpg?t=1687419319"
+    },
+    {
+      "title": "Comic Years",
+      "feed_url": "https://comicyears.com/feed/",
+      "website_url": "https://comicyears.com/",
+      "description": "Celebrate your love of all things nerdy with the latest news and best nostalgia for everything entertainment, gaming, and comics.",
+      "followers": {
+        "facebook": 126400,
+        "twitter": 3800,
+        "instagram": 16600
+      },
+      "image_url": "https://i1.feedspot.com/5056676.jpg?t=1615895227"
+    },
+    {
+      "title": "Arkhaven Comics Blog",
+      "feed_url": "https://arkhavencomics.com/feed/",
+      "website_url": "https://arkhavencomics.com/blog/",
+      "description": "Arkhaven publishes comic books and develops games and produces movies that represent creative people bringing original projects to life, and that connect people around creative projects and the creative process. Arkhaven Comics is an independent publisher of comic books and graphic novels.",
+      "followers": {
+        "twitter": 259
+      },
+      "image_url": "https://i1.feedspot.com/5297521.jpg?t=1624969554"
+    },
+    {
+      "title": "The Comic Vault",
+      "feed_url": "https://thecomicvault.wordpress.com/feed/",
+      "website_url": "https://thecomicvault.wordpress.com/",
+      "description": "Welcome to The Comic Vault, a place for all things geeky and comic related. It is dedicated to a tireless crusade of bringing reviews, observations and underrepresented characters into the spotlight.",
+      "followers": {
+        "twitter": 408
+      },
+      "image_url": "https://i1.feedspot.com/4618680.jpg?t=1615895611"
+    },
+    {
+      "title": "Ryan C.'s Four Color Apocalypse",
+      "feed_url": "https://fourcolorapocalypse.wordpress.com/feed/",
+      "website_url": "https://fourcolorapocalypse.wordpress.com/",
+      "description": "This Is An Imaginary Website --- Aren't They All?",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4950581.jpg?t=1615895851"
+    },
+    {
+      "title": "Reading With a Flight Ring",
+      "feed_url": "https://readingwithaflightring.weebly.com/1/feed",
+      "website_url": "https://readingwithaflightring.weebly.com/reviews",
+      "description": "Hi, I'm Steven. Reading With a Flight Ring features reviews, press releases, cosplay, and convention news. This is a place for the reviews of comics I'm reading, industry news, cosplay of the day, and My Best of the Week selections.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 793
+      },
+      "image_url": "https://i1.feedspot.com/5287830.jpg?t=1622632230"
+    },
+    {
+      "title": "Who Created the Comic Books?",
+      "feed_url": "http://martinohearn.blogspot.com/feeds/posts/default",
+      "website_url": "http://martinohearn.blogspot.com/",
+      "description": "Searching for the Uncredited Writers and Artists, also provides information regarding the existence of comic books over the years.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/736093.jpg?t=1615898938"
+    },
+    {
+      "title": "Talking Comics",
+      "feed_url": "http://feeds.feedburner.com/TalkingComicBooks",
+      "website_url": "http://talkingcomicbooks.com/",
+      "description": "Talking Comics is a web site dedicated to covering the latest and greatest in comic book releases. The Talking Comics team is here to tell you all about what's out there in the geek world with reviews, podcasts, columns and more by fans FOR fans. We also aim to provide you with fresh content that you can read, enjoy and share.",
+      "followers": {
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/1734232.jpg?t=1615895626"
+    },
+    {
+      "title": "Michel Fiffe",
+      "feed_url": "https://michelfiffe.com/?feed=rss2",
+      "website_url": "https://michelfiffe.com/",
+      "description": "Michel Fiffe is the creator of the monthly action series Copra as well as the one-man anthology Zegas.",
+      "followers": {
+        "twitter": 13000,
+        "instagram": 15900
+      },
+      "image_url": "https://i1.feedspot.com/69625.jpg?t=1615895647"
+    },
+    {
+      "title": "Comics Talk News Blog",
+      "feed_url": "https://comicstalkblog.com/feed/",
+      "website_url": "https://comicstalkblog.com/",
+      "description": "Comics have been a media outlet for many for over fifty years. Youth and adult have enjoyed the story and art I am one who enjoys and writes about this media!",
+      "followers": {
+        "facebook": 154,
+        "twitter": 78
+      },
+      "image_url": "https://i1.feedspot.com/4699515.jpg?t=1615898238"
+    },
+    {
+      "title": "EdGosney",
+      "feed_url": "https://edgosney.com/feed/",
+      "website_url": "https://edgosney.com/",
+      "description": "Author and Comic Book Blogger. I'm a graduate of the Writer's Digest Novel Writing course, under the instruction of author John DeChancie.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4950590.jpg?t=1615898244"
+    },
+    {
+      "title": "Mr. Jarvis",
+      "feed_url": "https://mrjarvis98.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://mrsuperuniverse.blogspot.com/",
+      "description": "Hi i'm vinayak. I am a civil engineer graduate student. This blog is dedicated to all the enthusiastic readers, fans, comic lovers, marvel fans, DC fans out there.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5165372.jpg?t=1615899157"
+    },
+    {
+      "title": "From Earth's End",
+      "feed_url": "http://fromearthsend.blogspot.com/feeds/posts/default",
+      "website_url": "http://fromearthsend.blogspot.com/",
+      "description": "From Earth's End is a New Zealand Comics blog featuring exclusive news, reviews, interviews with creators and reports on the latest events and happenings in the New Zealand comics community.",
+      "followers": {
+        "facebook": 441
+      },
+      "image_url": "https://i1.feedspot.com/2111991.jpg?t=1615898317"
+    },
+    {
+      "title": "Pappy's Golden Age Comics Blogzine",
+      "feed_url": "https://pappysgoldenage.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://pappysgoldenage.blogspot.com/",
+      "description": "Pappy's Golden Age Comics Blogzine features updates about famous comic characters.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4616602.jpg?t=1615899074"
+    },
+    {
+      "title": "Jade Giante.Com",
+      "feed_url": "https://thejadegiant.wordpress.com/feed/",
+      "website_url": "https://thejadegiant.wordpress.com/category/hulk-in-comics/",
+      "description": "A smashing source for Hulk news and updates.",
+      "followers": {
+        "facebook": 534,
+        "twitter": 60
+      },
+      "image_url": "https://i1.feedspot.com/4616621.jpg?t=1615898335"
+    },
+    {
+      "title": "paintedcomic",
+      "feed_url": "https://paintedcomic.wordpress.com/feed/",
+      "website_url": "https://paintedcomic.wordpress.com/",
+      "description": "'UNTITLED' painted comics by C.Ghirardo.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5015961.jpg?t=1655363155"
+    },
+    {
+      "title": "Adventures of Superchum",
+      "feed_url": "https://www.superchum.com/feed/rss2",
+      "website_url": "https://www.superchum.com/updates",
+      "description": "The regular news, updates, and articles about The Adventures of Superchum, the Mighty Befrienders, Oddity Prodigy Productions and all things involving the Power of Friendship! Peruse the Paths of Chumliness with your fellow 'Chum Fans!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5043117.jpg?t=1655363373"
+    },
+    {
+      "title": "Retcon Punch",
+      "feed_url": "https://retcon-punch.com/feed/",
+      "website_url": "https://retcon-punch.com/",
+      "description": "Retcon Punch is a crack-team of art and literature enthusiasts that narrowed their critical sights on COMIC BOOKS. Primarily focusing on new series from DC and Marvel, Retcon Punch always seeks the beautiful in the everyday, and then has some kind of smart-ass comment to make about it. Join in on the conversation.",
+      "followers": {
+        "facebook": 331,
+        "twitter": 680
+      },
+      "image_url": "https://i1.feedspot.com/4648865.jpg?t=1615898647"
+    },
+    {
+      "title": "Comic Art Tips Blog",
+      "feed_url": "https://comicart.tips/feed/",
+      "website_url": "https://comicart.tips/blog/",
+      "description": "Weekly highlights of the best new original comic art auction offerings and the most impressive results for recently auctioned lots. Subscribe to know everything that is happening in the Original Comic Art world every week.",
+      "followers": {
+        "facebook": 183
+      },
+      "image_url": "https://i1.feedspot.com/5152416.jpg?t=1615899190"
+    },
+    {
+      "title": "ComicSpectrum",
+      "feed_url": "https://comicspectrumblog.wordpress.com/feed/",
+      "website_url": "https://comicspectrumblog.wordpress.com/",
+      "description": "ComicSpectrum provides a one-stop reference for everything about & related to comics and comics culture.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 7
+      },
+      "image_url": "https://i1.feedspot.com/4615893.jpg?t=1655367741"
+    },
+    {
+      "title": "Drunken Cat Comics",
+      "feed_url": "https://feeds.feedburner.com/DrunkenCatComics",
+      "website_url": "http://www.unsungsuperheroes.com/blog/",
+      "description": "Follow Drunken Cat Comics to get the best comic articles ever.",
+      "followers": {
+        "facebook": 227,
+        "twitter": 217
+      },
+      "image_url": "https://i1.feedspot.com/5157566.jpg?t=1615901488"
+    },
+    {
+      "title": "Unsung Superheroes Blog",
+      "feed_url": "https://www.unsungsuperheroes.com/feed/",
+      "website_url": "http://www.unsungsuperheroes.com/blog/",
+      "description": "Keep up with articles from Unsung Superheroes.",
+      "followers": {
+        "facebook": 1100,
+        "instagram": 358
+      },
+      "image_url": "https://i1.feedspot.com/5170006.jpg?t=1615901492"
+    },
+    {
+      "title": "Abstract Comics",
+      "feed_url": "https://abstractcomics.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://abstractcomics.blogspot.com/",
+      "description": "The first and most comprehensive source of abstract comics on the web, tracing the history and surveying the contemporary landscape of abstract sequential art.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5297509.jpg?t=1625214919"
+    },
+    {
+      "title": "WOZTI: Comic Blog",
+      "feed_url": "https://victoriatb123adoba.wixsite.com/website-1/blog-feed.xml",
+      "website_url": "https://victoriatb123adoba.wixsite.com/website-1",
+      "description": "Welcome to WOZTI: Comic Blog, my very own passion project filled with unique and engaging content. Explore my site and all that I have to offer; perhaps WOZTI: Comic Blog will ignite your own passions as well.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5161757.jpg?t=1655372214"
+    },
+    {
+      "title": "ComicsTrove.com",
+      "feed_url": "https://comicstrove.com/feed/",
+      "website_url": "https://comicstrove.com/",
+      "description": "Reviews, advice, and discussion of Comic Books published by Marvel Comics and DC Comics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5191649.jpg?t=1598960879"
+    },
+    {
+      "title": "You Don't Read Comics",
+      "feed_url": "https://www.youdontreadcomics.com/blog?format=RSS",
+      "website_url": "https://www.youdontreadcomics.com/articles",
+      "description": "oudontreadcomics.com is an independent media company focused on the COMIC BOOKS, that influence today's robust pop-culture industry.",
+      "followers": {
+        "instagram": 11600
+      },
+      "image_url": "https://i1.feedspot.com/4665397.jpg?t=1615898740"
+    },
+    {
+      "title": "X-men Supreme",
+      "feed_url": "http://feeds.feedburner.com/X-menSupreme",
+      "website_url": "http://xmen-supreme.blogspot.com/",
+      "description": "X-men Supreme Official Blog is home to updates for the X-men Supreme fanfiction series.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1089038.jpg?t=1615895706"
+    },
+    {
+      "title": "The Comics Reporter",
+      "feed_url": "https://www.comicsreporter.com/index.php/briefings/rss_1.0/",
+      "website_url": "https://www.comicsreporter.com/",
+      "description": "The Comics Reporter covers all about comic books, comic strips, or any of the related cartooning fields.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/70513.jpg?t=1615901791"
+    },
+    {
+      "title": "Catsu The Cat - Comics",
+      "feed_url": "https://www.catsuthecat.com/blogs/comics.atom",
+      "website_url": "https://www.catsuthecat.com/blogs/comics",
+      "description": "Daria the creator of this blog, features a comic series based on her beloved cat Dita.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4616047.jpg?t=1615901819"
+    },
+    {
+      "title": "Superworld Comics Blog",
+      "feed_url": "https://www.superworldcomics.com/feed/",
+      "website_url": "https://www.superworldcomics.com/blog/",
+      "description": "Superworld's blog has lively information about buying & selling your comics as well as stories about up and coming characters and hot investment comics. Superworld Comics, Inc. is a highly reputable dealer of high grade Silver and Golden Age Comic Books and original art.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 314,
+        "instagram": 5500
+      },
+      "image_url": "https://i1.feedspot.com/5411790.jpg?t=1655531980"
+    },
+    {
+      "title": "Multiversity Comics",
+      "feed_url": "http://www.multiversitycomics.com/feed/",
+      "website_url": "http://www.multiversitycomics.com/",
+      "description": "Welcome to Multiversity Comics, a web site written by people who love comics for people who love comics. Check in for daily content including updates on all you favorite books and publishers as well as weekly reviews and recommendations! There's a whole lot of comic books out there. Multiversity helps you sort through that big bad world so you can just stick to the awesome.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 10800
+      },
+      "image_url": "https://i1.feedspot.com/5236198.jpg?t=1655555411"
+    },
+    {
+      "title": "Sell My Comic Art Blog",
+      "feed_url": "https://www.sellmycomicart.com/comic-art.xml",
+      "website_url": "https://www.sellmycomicart.com/comic-art-blog.html",
+      "description": "Sell My Comic Art blog is a resource for comic artists with articles based on various pricing attributes written by cmic arts auctioneers. Sell My Comic Art appraises and provides tentative pricing ideas for comics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5411817.jpg?t=1655704220"
+    },
+    {
+      "title": "Steve's Comics Blog",
+      "feed_url": "https://graysonfan.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://graysonfan.blogspot.com/",
+      "description": "Steve posts reviews and musings on the various comics he has read and collected over the years. Steve is Journalist, father, husband, reader, writer and comic collector.",
+      "followers": {
+        "twitter": 41
+      },
+      "image_url": "https://i1.feedspot.com/5411818.jpg?t=1655709309"
+    },
+    {
+      "title": "BuyComics.in Blog",
+      "feed_url": "https://buycomics.in/feed/",
+      "website_url": "https://buycomics.in/comics-blog/",
+      "description": "Explore our blog for the latest news and updates on your favorite comics. A Online Comics Store located in Delhi from where you can buy your favourite Comics of all well-known Publishers like Raj Comics, Diamond Comics, Bullseye, Hollycow , Yali Dreams, Comics India, Fiction Comics etc.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5411823.jpg"
+    },
+    {
+      "title": "Comics Down Under Blog",
+      "feed_url": "http://comicsdownunder.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://comicsdownunder.blogspot.com/",
+      "description": "This blog is an ongoing history of comic books in Australia. Kevin Patrick is an independent academic researcher in media and communication studies. He has a longstanding interest in Australian comics and curated the exhibition, Heroes and Villains: Australian Comics and their Creators, which was held at the State Library of Victoria (Melbourne, Australia) in 2006-2007.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5411793.jpg?t=1655711835"
+    },
+    {
+      "title": "Comics Comics Comics Blog",
+      "feed_url": "https://comicscomicscomics.blog/feed/",
+      "website_url": "https://comicscomicscomics.blog/",
+      "description": "Hi! I'm J. Jones-Goldstein.This blog is for the fans of comics, movies, science fiction, and other fun stuff. It is my intention to use this site to write about comics. I am a lifetime collector of comics and have started recently writing my own on this comics-related blog.",
+      "followers": {
+        "twitter": 676
+      },
+      "image_url": "https://i1.feedspot.com/5411803.jpg?t=1655549347"
+    },
+    {
+      "title": "Rare Comics",
+      "feed_url": "https://rarecomics.wordpress.com/feed/",
+      "website_url": "https://rarecomics.wordpress.com/",
+      "description": "My name is Benjamin Nobel, and I'd like to welcome you to the Rare Comics Blog! On this blog, I will post about general comic book collecting 'themes' that I find to be particularly interesting - like newsstand vs. direct edition comics. This blog is also now the home for the hobby's very first online comic book price guide for Type 1A 1980's newsstand cover price variants from Marvel & DC.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5411812.jpg?t=1655554893"
+    },
+    {
+      "title": "The Canada Comics Open Library Blog",
+      "feed_url": "https://www.canadacomicsol.org/feed/",
+      "website_url": "https://www.canadacomicsol.org/blog/",
+      "description": "The Canada Comics Open Library (CCOL) is a registered non-profit organization that aims to be an inclusive, educational, and recreational public space for comics and graphic novels showcasing Canadian creators and supporting comics communities. Find reviews, events, new launches, guides, updates and much more on comics.",
+      "followers": {
+        "facebook": 548,
+        "twitter": 803,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5411822.jpg?t=1684737864"
+    },
+    {
+      "title": "Book Creator \u00bb Comics",
+      "feed_url": "https://bookcreator.com/category/comics/feed/",
+      "website_url": "https://bookcreator.com/category/comics/",
+      "description": "Book Creator is your one-stop shop to read about comics, competition, and new software launches for comic book creators. Tools for Schools are the developers of Book Creator - the simplest, most inclusive way to create content in the classroom. Our mission is to empower the next generation of content creators and improve their educational outcomes with creative tools for schools.",
+      "followers": {
+        "facebook": 13300,
+        "twitter": 73700,
+        "instagram": 10500
+      },
+      "image_url": "https://i1.feedspot.com/5411814.jpg?t=1655532128"
+    },
+    {
+      "title": "Magic Torch Comics Blog",
+      "feed_url": "https://www.magictorchcomics.co.uk//feed/rss2",
+      "website_url": "https://www.magictorchcomics.co.uk/blog",
+      "description": "Magic Torch Comics was developed from an art and heritage charity, which has been delivering community projects in Inverclyde for over 20 years. We work with schools, community groups and organisations to tell stories using comics. The website is full of work produced by the wonderful artists we have been lucky enough to work with including Mhairi M Robertson, Andy Lee, Norrie Millar, and more.",
+      "followers": {
+        "facebook": 359,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5350978.jpg?t=1638957486"
+    },
+    {
+      "title": "ALIA Graphic Novels",
+      "feed_url": "https://aliagraphic.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://aliagraphic.blogspot.com/",
+      "description": "ALIA Graphic Novels and Comics is intended to be a resource and network for library and information professionals who are responsible for and/or interested in comics and graphic novels.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5411811.jpg?t=1676625390"
+    },
+    {
+      "title": "Golden Apple Blog",
+      "feed_url": "https://goldenapplecomics.com/blogs/golden-apple-comics-blog.atom",
+      "website_url": "https://goldenapplecomics.com/blogs/golden-apple-comics-blog",
+      "description": "Check out Golden Apple Comics Los Angeles store for new and back issue comic books, exclusive variants, toys and pop culture items. We buy your collectibles and offer consignment services. Stay up to date on events, creator signings, new releases and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5500871.jpg?t=1675081432"
+    },
+    {
+      "title": "iFanboy",
+      "feed_url": "https://ifanboy.com/feed/",
+      "website_url": "https://ifanboy.com/",
+      "description": "At iFanboy, we like comic books and we like talking about comic books. Whether it's examining notable comic book runs or a hidden gem of a trade paperback, attending conventions and interviewing comic book luminaries, or just talking about whatever is interesting in the industry, iFanboy has the world of comic books covered. Every day on iFanboy you'll find the latest in comic book news, reviews, and commentary filtered through the unique viewpoint of iFanboy's founders: Josh Flanagan, Conor Kilpatrick, and Ron Richards.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5500878.jpg?t=1675081521"
+    },
+    {
+      "title": "Rooster Tails",
+      "feed_url": "https://www.roostertailscomic.com/feed/",
+      "website_url": "https://www.roostertailscomic.com/",
+      "description": "Rooster Tails is an autobiographical comic about the life and times of me! I'm a simple queer transboy, transitioning in New Zealand, with my partner Joe.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4722643.jpg?t=1607406373"
+    },
+    {
+      "title": "Dark Horse Comics Blog",
+      "feed_url": "https://www.darkhorse.com/Blog/rss",
+      "website_url": "https://www.darkhorse.com/Blog/",
+      "description": "Dark Horse Comics was founded in 1986 by Mike Richardson, behind the concept of establishing an ideal atmosphere for creative professionals. Dark Horse Comics has over 350 properties currently represented under the Dark Horse banner, serving as the jumping-off point for comics, books, films, television, electronic games, toys, and collectibles.",
+      "followers": {
+        "facebook": 749700,
+        "twitter": 498000,
+        "instagram": 363300
+      },
+      "image_url": "https://i1.feedspot.com/4615887.jpg?t=1615895054"
+    },
+    {
+      "title": "GoCollect Blog \u00bb Comics",
+      "feed_url": "https://gocollect.com/blog/category/comics/",
+      "website_url": "https://gocollect.com/blog/category/comics/",
+      "description": "Keep up with the latest articles on comics collecting, comics in TV & movies, and comics list. GoCollect is the ultimate tool for collectors - comics, concert posters, and video games.",
+      "followers": {
+        "facebook": 18600,
+        "twitter": 3700,
+        "instagram": 7300
+      },
+      "image_url": "https://i1.feedspot.com/5298544.jpg?t=1625220374"
+    },
+    {
+      "title": "TheGWW \u00bb Comics",
+      "feed_url": "https://thegww.com/category/comics/feed/",
+      "website_url": "https://thegww.com/category/comics/",
+      "description": "The GWW talks geeky things with geeky people! We are lovers of Comics, Entertainment, Gaming, and all things in the realm of Geek.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 31500,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4764358.jpg?t=1615895231"
+    },
+    {
+      "title": "13th Dimension",
+      "feed_url": "https://13thdimension.com/feed/",
+      "website_url": "https://13thdimension.com/",
+      "description": "Get the latest comic book, variant, convention and action figure news, previews & reviews from 13th Dimension.",
+      "followers": {
+        "facebook": 15700,
+        "twitter": 11300
+      },
+      "image_url": "https://i1.feedspot.com/5411771.jpg?t=1655531868"
+    },
+    {
+      "title": "CartoonConnie Blog",
+      "feed_url": "https://blog.cartoonconnie.com/feed",
+      "website_url": "https://blog.cartoonconnie.com/",
+      "description": "Browse her comic strips and journey as comic illustrator here. Connie Sun is a cartoonist and writer, based in NYC. She draws a comic strip about being a single, odd, and introspective human with a wise elephant companion. Her cartoons have been featured in The New Yorker, NPR, Buzzfeed, Upworthy, GoComics, McSweeney's, Climbing Magazine, Tabi Labo, Angry Asian Man, and She Explores.",
+      "followers": {
+        "twitter": 5100,
+        "instagram": 55200
+      },
+      "image_url": "https://i1.feedspot.com/5411772.jpg?t=1655531872"
+    },
+    {
+      "title": "How to Draw Comics",
+      "feed_url": "https://www.howtodrawcomicsacademy.com/blog-feed.xml",
+      "website_url": "https://www.howtodrawcomicsacademy.com/vault",
+      "description": "Hi! I'm Clayton Barton. Here on How to Draw Comics. Net you're going to discover the same techniques taught a year in and year out to my students who've used what they've learned to visually tell their stories in the most compelling, dynamic, and immersive ways possible.",
+      "followers": {
+        "facebook": 21400,
+        "twitter": 3500,
+        "instagram": 20300
+      },
+      "image_url": "https://i1.feedspot.com/5411800.jpg?t=1655554972"
+    },
+    {
+      "title": "GetComics Blog",
+      "feed_url": "https://getcomics.org/feed/",
+      "website_url": "https://getcomics.org/cat/blog/",
+      "description": "GetComics is an awesome place to download DC, Marvel, Image, Dark Horse, Dynamite, IDW, Oni, Valiant, Zenescope and many more Comics totally for FREE. GetComics started as an alternative place to get downloaded comic files, particularly US based comics published by DC and Marvel. The comics that shared in GetComics are totally free.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5411830.jpg?t=1655718940"
+    },
+    {
+      "title": "Marvel",
+      "feed_url": "https://www.marvel.com/articles",
+      "website_url": "https://www.marvel.com/articles",
+      "description": "Marvel is the best place to connect with other fans and get news about comics' greatest super-heroes: Iron Man, Thor, Captain America, Spider-Man, Hulk, the X-Men, Wolverine and the heroes of the Marvel Universe..",
+      "followers": {
+        "facebook": 37900000,
+        "twitter": 19500000,
+        "instagram": 63900000
+      },
+      "image_url": "https://i1.feedspot.com/491227.jpg?t=1615895017"
+    },
+    {
+      "title": "Dilbert Blog",
+      "feed_url": "https://dilbert.com/feed",
+      "website_url": "https://dilbertblog.typepad.com/the_dilbert_blog/",
+      "description": "Dilbert is a Daily Strip by Scott Adams featuring strips, animation, mashups and more.",
+      "followers": {
+        "facebook": 221500
+      },
+      "image_url": "https://i1.feedspot.com/4318774.jpg?t=1615895059"
+    },
+    {
+      "title": "Comic Book Resources \u00bb Comic",
+      "feed_url": "https://www.cbr.com/category/comics/news/feed/",
+      "website_url": "https://marvel-dc-art.tumblr.com/",
+      "description": "ComicBookResources.com is the leading pop culture Web site devoted to comic books, graphic novels, super hero films, comic book movies and everything that is comics culture. As comics drive pop culture, CBR is there to cover all aspects of this exciting industry.",
+      "followers": {
+        "facebook": 1900000,
+        "twitter": 323200
+      },
+      "image_url": "https://i1.feedspot.com/4616569.jpg?t=1615895145"
+    },
+    {
+      "title": "Comics and nothin' but",
+      "feed_url": "https://marvel-dc-art.tumblr.com/rss",
+      "website_url": "https://marvel-dc-art.tumblr.com/",
+      "description": "This is a blog dedicated soley to cool DC and Marvel comic characters.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4618761.jpg"
+    },
+    {
+      "title": "Sheldon Comic Strip Blog",
+      "feed_url": "http://cdn.sheldoncomics.com/rss.xml",
+      "website_url": "https://www.sheldoncomics.com/category/blog/",
+      "description": "A daily webcomic by Dave Kellett centers around the odd family unit of Sheldon, his grandfather, and his duck named Arthur. It is a daily comic strip with geeky characters, all-ages storylines, and lots of pop-culture nerdiness. It centers",
+      "followers": {
+        "facebook": 6300,
+        "twitter": 9700
+      },
+      "image_url": "https://i1.feedspot.com/1744999.jpg?t=1630741002"
+    },
+    {
+      "title": "Comics Forever",
+      "feed_url": "https://comicsforever.tumblr.com/rss",
+      "website_url": "https://comicsforever.tumblr.com/",
+      "description": "A blog dedicated to the review and appreciation of Marvel and DC comics books, art, animation, movies and more.",
+      "followers": {
+        "facebook": 789
+      },
+      "image_url": "https://i1.feedspot.com/4002626.jpg?t=1655362451"
+    },
+    {
+      "title": "CLASSIC X-MEN",
+      "feed_url": "https://classicxmen.tumblr.com/rss",
+      "website_url": "https://classicxmen.tumblr.com/",
+      "description": "This blog is all about classic X-Men characters.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4618760.jpg?t=1537419623"
+    },
+    {
+      "title": "Sufi Comics Blog",
+      "feed_url": "https://www.suficomics.com/blog/feed/",
+      "website_url": "https://www.suficomics.com/blog/",
+      "description": "Sufi Comics discovers Nuggets of Spiritual Wisdom from Islamic Traditions. Comics and Graphic Novels that illustrate the spiritual values in Islam. Spiritual Islamic comics include 40 Sufi Comics, Wise Fool of Baghdad & Rumi.",
+      "followers": {
+        "facebook": 30400,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4616056.jpg?t=1615901503"
+    },
+    {
+      "title": "IGN \u00bb Comics",
+      "feed_url": "https://www.ign.com/news/comics",
+      "website_url": "https://www.ign.com/news/comics",
+      "description": "Explore the latest news and updates of all the comics from DC to Marvel in this section. IGN provides Daily coverage of all things games and entertainment for more than 283 million fans across 35 platforms and 110 countries.",
+      "followers": {
+        "twitter": 10000000,
+        "instagram": 5600000
+      },
+      "image_url": "https://i1.feedspot.com/5411777.jpg?t=1655701193"
+    },
+    {
+      "title": "Comics Kingdom Blog",
+      "feed_url": "https://comicskingdom.com/feed",
+      "website_url": "https://comicskingdom.com/blog",
+      "description": "Have a laugh exploring Comics Kingdom's archive of 250K favorite, vintage and new comics: Zits, Mutts, Hagar The Horrible, Popeye, Blondie and more. Comics Kingdom has the best comic strips, editorial cartoons, interactive puzzles and Sunday funnies in all the land.",
+      "followers": {
+        "facebook": 28000,
+        "twitter": 5400,
+        "instagram": 31100
+      },
+      "image_url": "https://i1.feedspot.com/5411788.jpg?t=1655531965"
+    },
+    {
+      "title": "ComicAttack.net",
+      "feed_url": "https://comicattack.net/category/news/feed/",
+      "website_url": "https://comicattack.net/category/news/",
+      "description": "Since 2009 ComicAttack.Net has been proudly usurping the inner geeks of fans from across the globe, covering the comic industry at large while spotlighting the outstanding writers, artists and fandoms of the medium. From the juggernauts of Marvel and DC to indie stalwarts such as Image, Boom Studios and Dynamite Press, ComicAttack.Net's goal is to provide a diversity of content featuring stories and opinions from our dedicated writers and editorial staff to reflect the communities that share our passion for comics media in all of its forms.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 5200,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5411781.jpg?t=1655531918"
+    },
+    {
+      "title": "Collected Editions",
+      "feed_url": "https://feeds.feedburner.com/collectededitions",
+      "website_url": "https://collectededitions.blogspot.com/",
+      "description": "Collected Editions is the wait-for-trade paperback headquarters, featuring reviews, comics news, graphic novel discount alerts, and the occasional scoop. The latest headlines for your collected comics library. Collected Editions began in 2005, when trade paperback collections of your favorite series or storyline weren't guaranteed, as a place for trade lovers to review books, speculate on upcoming titles, and generally find others experimenting with the 'wait for trade' approach to comics collecting.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/1368907.jpg"
+    },
+    {
+      "title": "Good Comics Blog",
+      "feed_url": "https://goodcomics.co.uk/blog-feed.xml",
+      "website_url": "https://goodcomics.co.uk/blogs/",
+      "description": "Good Comics is a UK-based independent publisher and distributor of comics, zines and graphic novels. Our aim is to nurture new talent in comics and bring new voices to the community of independent comics, in the UK and internationally. We're all about great stories, distinct voices, and unique talents.",
+      "followers": {
+        "twitter": 1800,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5350979.jpg?t=1638957384"
+    },
+    {
+      "title": "Bam Smack Pow \u00bb Comics",
+      "feed_url": "https://bamsmackpow.com/comics/feed/",
+      "website_url": "https://bamsmackpow.com/comics/",
+      "description": "Bam Smack Pow brings you updates on superhero comics, DC Comics, Marvel Comics, Comic-Con, comics online, Archie Comics, characters, and more in this segment. Welcome to Bam Smack Pow, the Superheroes and Comics news and opinions site brought to you by the FanSided Network. Bam Smack Pow is dedicated to providing top-notch Superheroes and Comics news, views, and original content.",
+      "followers": {
+        "facebook": 47600,
+        "twitter": 15300,
+        "instagram": 38900
+      },
+      "image_url": "https://i1.feedspot.com/5411796.jpg?t=1655553760"
+    },
+    {
+      "title": "Proud Lion Comics and Games Blog",
+      "feed_url": "https://blog.proudlion.co.uk/feed/",
+      "website_url": "https://blog.proudlion.co.uk/",
+      "description": "Get all the latest information for new release comics and games, preorders, upcoming events, and more from Proud Lion, your local store in Cheltenham!",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 904,
+        "instagram": 513
+      },
+      "image_url": "https://i1.feedspot.com/5500879.jpg?t=1675081625"
+    }
+  ]
+}

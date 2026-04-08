@@ -1,0 +1,33 @@
+{
+  "category": "Phonetics",
+  "source_url": "https://rss.feedspot.com/phonetics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Phonetics at Stockholm University Blog",
+      "feed_url": "https://stockholmuniversityphonetics.com/feed/",
+      "website_url": "https://stockholmuniversityphonetics.com/",
+      "description": "Phonetics is a Lab at Stockholm University. It offers top-class higher education in Linguistics, Phonetics, Sign Language, and Computational Linguistics, intimately linked to the cutting-edge research carried out by the department's scientists.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5453220.jpg?t=1666183470"
+    },
+    {
+      "title": "English Speech Services",
+      "feed_url": "https://www.englishspeechservices.com/feed/",
+      "website_url": "https://www.englishspeechservices.com/blog/king-charles-rp-accent/",
+      "description": "I am Dr. Geoff Lindsey, providing online English speech coaching services. Explore my website which contains a huge number of articles on phonetics and pronunciation, especially in English, all illustrated with audio or video.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5453221.jpg?t=1665035005"
+    },
+    {
+      "title": "Linguism",
+      "feed_url": "https://www.linguism.co.uk/feed",
+      "website_url": "https://www.linguism.co.uk/",
+      "description": "Linguism is a language and linguistics blog written by Graham Pointon. Find out more about language in a word, linguistics, pronunciation, and Phonetics on our feed.",
+      "followers": {
+        "facebook": 132,
+        "twitter": 152
+      },
+      "image_url": "https://i1.feedspot.com/5042286.jpg?t=1666181729"
+    }
+  ]
+}

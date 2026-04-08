@@ -1,0 +1,582 @@
+{
+  "category": "Web Performance",
+  "source_url": "https://rss.feedspot.com/web_performance_rss_feeds",
+  "feeds": [
+    {
+      "title": "Dotcom-Monitor Web Performance Blog",
+      "feed_url": "https://www.dotcom-monitor.com/blog/feed/",
+      "website_url": "https://www.dotcom-monitor.com/blog/",
+      "description": "Monitoring solutions for websites, web applications, and Internet network infrastructure A unified SaaS suite of on-demand external Monitoring solutions Multiple, worldwide monitoring agents. Learn more about Web Performance, performance monitoring tool, tips for better performance and more!",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4719965.jpg?t=1615789074"
+    },
+    {
+      "title": "DebugBear Blog",
+      "feed_url": "https://www.debugbear.com/blog/atom.xml",
+      "website_url": "https://www.debugbear.com/blog",
+      "description": "DebugBear is a site speed monitoring service. Start tracking Lighthouse scores and Core Web Vitals in minutes. Get the latest insights in the web performance monitoring tools, DebugBear and more!",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5437445.jpg?t=1662020083"
+    },
+    {
+      "title": "Yottaa Blog",
+      "feed_url": "https://www.yottaa.com/feed/",
+      "website_url": "https://www.yottaa.com/blog/",
+      "description": "The YOTTAA eCommerce blog is providing insight to build a better online experience for your shoppers. YOTTAA was founded in 2009 by veteran technologists who saw two trends on a collision course: traditional 'websites' were rapidly becoming more complex and sophisticated - and online shoppers were becoming more and more impatient when waiting for slow web pages to load.",
+      "followers": {
+        "facebook": 633,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5437454.jpg?t=1662020277"
+    },
+    {
+      "title": "WP Rocket Blog \u00bb Page speed and caching",
+      "feed_url": "https://wp-rocket.me/blog/wordpress-cache/feed/",
+      "website_url": "https://wp-rocket.me/blog/wordpress-cache/",
+      "description": "All the tips to improve WordPress page speed: from page caching to CDNs, from browser caching to object caching. WP Rocket is much more than just a WordPress caching plugin. It's the most powerful solution to boost your loading time, improve your PageSpeed score, and optimize your Core Web Vitals.",
+      "followers": {
+        "facebook": 12000,
+        "twitter": 9100
+      },
+      "image_url": "https://i1.feedspot.com/5437449.jpg?t=1662019359"
+    },
+    {
+      "title": "FastComet Blog \u00bb Performance Optimization",
+      "feed_url": "https://www.fastcomet.com/blog/category/optimization/feed",
+      "website_url": "https://www.fastcomet.com/blog/category/optimization",
+      "description": "Check out this section for Tips and In-Depth articles on Performance Optimization. We are one of the few privately-owned, independent global web hosting companies nowadays. Established in 2013, from a humble beginning, we evolved into the first choice for web hosting services of more than 750,000 personal and small-business website owners.",
+      "followers": {
+        "facebook": 15200,
+        "twitter": 806
+      },
+      "image_url": "https://i1.feedspot.com/5437447.jpg?t=1662018662"
+    },
+    {
+      "title": "Kinsta \u00bb WordPress Performance",
+      "feed_url": "https://kinsta.com/topic/wordpress-performance/feed/",
+      "website_url": "https://kinsta.com/topic/wordpress-performance/",
+      "description": "Check out all of our WordPress Performance related content in one place, to learn more about this topic. Kinsta was founded in 2013 with a desire to change the status quo. We set out to create the best WordPress hosting platform in the world, and that's our promise.",
+      "followers": {
+        "facebook": 23600,
+        "twitter": 16300,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/5437444.jpg?t=1662018432"
+    },
+    {
+      "title": "GTmetrix Blog",
+      "feed_url": "https://gtmetrix.com/blog/feed/",
+      "website_url": "https://gtmetrix.com/blog/",
+      "description": "Get the latest news, updates and guides on GTmetrix and general web performance insights. GTmetrix was developed by Carbon60 as a tool for customers to easily test the performance of their webpages.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5222768.jpg?t=1662019594"
+    },
+    {
+      "title": "Planet Performance",
+      "feed_url": "https://feed.perfplanet.com/rss.xml",
+      "website_url": "https://feed.perfplanet.com/",
+      "description": "Get the latest news and views from the web performance blogosphere. Planet Performance posts articles from many blogs available on web performance across the internet.",
+      "followers": {
+        "facebook": 132,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5437440.jpg?t=1662019741"
+    },
+    {
+      "title": "LoadView Blog",
+      "feed_url": "https://www.loadview-testing.com/feed/",
+      "website_url": "https://www.loadview-testing.com/blog/",
+      "description": "Find tools and tips for testing the performance of your website, API or web applications. Website monitoring you can trust, since 1998. The complete web performance solution for DevOps, IT Operations and Developers. We monitor, alert, and report on website speed, web application performance and server issues.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 28
+      },
+      "image_url": "https://i1.feedspot.com/5437455.jpg?t=1662018599"
+    },
+    {
+      "title": "Sematext \u00bb Real User Monitoring",
+      "feed_url": "https://sematext.com/category/real-user-monitoring/feed/",
+      "website_url": "https://sematext.com/category/real-user-monitoring/",
+      "description": "Sematext gives businesses full-stack visibility by exposing logs, metrics, real user & synthetic data and traces through a single Cloud or On-Premise solution. Get tips, how-tos, and news about web performance, Sematext Cloud news and updates.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5437450.jpg?t=1662020180"
+    },
+    {
+      "title": "Dotcom-Tools Web Performance Blog",
+      "feed_url": "https://www.dotcom-tools.com/web-performance/feed/",
+      "website_url": "https://www.dotcom-tools.com/web-performance/blog/",
+      "description": "Gain insights into the world of web performance with the latest posts from Dotcom-Tools. Our mission is to give our customers cutting edge features such as 'image matching' within a real browser, element level trend charting, and video capture of website and web application errors, all completed on our consistent, world-wide monitoring locations sitting on the backbone of the Internet.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5437446.jpg?t=1662020053"
+    },
+    {
+      "title": "Tim Kadlec",
+      "feed_url": "https://timkadlec.com/remembers/atom.xml",
+      "website_url": "https://timkadlec.com/remembers/",
+      "description": "I'm Tim Kadlec. Working on WebPageTest, part-time book writer, co-chair of Performance.now(). Learn more about web testing, performance testing and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5437442.jpg?t=1662019657"
+    },
+    {
+      "title": "Marc Radziwills Blog",
+      "feed_url": "https://marcradziwill.com/blog/rss.xml",
+      "website_url": "https://marcradziwill.com/blog/",
+      "description": "Hi folks, my name is Marc. I live in Kempten (Allg\u00e4u) and since 2012 I am working as a freelance consultant for web performance, web sustainability and as a web developer. Find Tutorials and hacks about web performance, news and trends in web performance and expert knowledge.",
+      "followers": {
+        "twitter": 122
+      },
+      "image_url": "https://i1.feedspot.com/5437438.jpg?t=1662019981"
+    },
+    {
+      "title": "Optimal Blog",
+      "feed_url": "https://thisisoptimal.com/blog/index.xml",
+      "website_url": "https://thisisoptimal.com/blog/",
+      "description": "We work hard to source the latest news and trends that help you achieve and maintain Optimal web performance and optimization for your business. Optimal is your ally in retaining online customers. We are performance and optimization ambassadors that help your team measure, identify and resolve web performance and site speed issues.",
+      "followers": {
+        "twitter": 27
+      },
+      "image_url": "https://i1.feedspot.com/5437437.jpg?t=1662018911"
+    },
+    {
+      "title": "Web-Performance Blog",
+      "feed_url": "https://web-performance.ch/feed",
+      "website_url": "https://web-performance.ch",
+      "description": "The significance of website performance is constantly increasing. Over the past few years, I have been committed to enhancing website speed and security.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8661351.jpg?t=1755684685"
+    },
+    {
+      "title": "VWO Blog",
+      "feed_url": "https://vwo.com/blog/feed/",
+      "website_url": "https://vwo.com/blog",
+      "description": "VWO is a conversion optimization platform hosting an impressive CRO blog where you can pick up plenty of practical insights backed up by actual data. Case studies and CRO idea lists will be a helpful tool to freshen up or structure your knowledge about CRO.",
+      "followers": {
+        "facebook": 25300,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/3978677.jpg?t=1755684948"
+    },
+    {
+      "title": "KeyCDN Blog",
+      "feed_url": "https://www.keycdn.com/blog/feed",
+      "website_url": "https://www.keycdn.com/blog",
+      "description": "The Key CDN Blog is a go-to source for articles, tutorials, and news related to CDNs and website performance. With a focus on providing cutting-edge CDN technology and solutions, the blog explores topics such as CDN implementation, caching strategies, security measures, and performance optimization techniques.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4614864.jpg?t=1755688571"
+    },
+    {
+      "title": "WebSitePulse Blog",
+      "feed_url": "https://www.websitepulse.com/blog/feed",
+      "website_url": "https://www.websitepulse.com/blog",
+      "description": "Check out latest posts and news from WebSitePulse about Internet, Website & Server Monitoring Market. WebSitePulse is a web-based remote monitoring service that keeps a constant watch over your servers and network components, web sites, web applications and email infrastructure.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 787
+      },
+      "image_url": "https://i1.feedspot.com/5432256.jpg?t=1755685044"
+    },
+    {
+      "title": "Performance @ Shopify Blog",
+      "feed_url": "https://performance.shopify.com/blogs/blog.atom",
+      "website_url": "https://performance.shopify.com/blogs/blog",
+      "description": "The latest thinking on web performance craft and culture from the Shopify Web Performance team.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5726629.jpg?t=1755685166"
+    },
+    {
+      "title": "Netguru Blog",
+      "feed_url": "https://www.netguru.com/blog/rss.xml",
+      "website_url": "https://www.netguru.com/blog",
+      "description": "Netguru blogs about code, Agile, web development, startups, Ruby on Rails, Node.js, React Native, mobile, remote work & more.",
+      "followers": {
+        "facebook": 30100,
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/7880684.jpg?t=1755686480"
+    },
+    {
+      "title": "SpeedVitals Blog",
+      "feed_url": "https://speedvitals.com/blog/rss.xml",
+      "website_url": "https://speedvitals.com/blog",
+      "description": "SpeedVitals Blog provides Web Performance Optimization Guides, Hosting Comparison, and latest updates from SpeedVitals.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8661333.jpg?t=1755685941"
+    },
+    {
+      "title": "SpeedCurve Blog",
+      "feed_url": "https://www.speedcurve.com/blog/rss/",
+      "website_url": "https://www.speedcurve.com/blog",
+      "description": "Speed matters. Get the latest on how the areas of design and performance overlap with a focus on creating great user experiences.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8661334.jpg?t=1755686980"
+    },
+    {
+      "title": "Varnish Software \u00bb Web Performance",
+      "feed_url": "https://info.varnish-software.com/blog/topic/web-performance/rss.xml",
+      "website_url": "https://info.varnish-software.com/blog/topic/web-performance",
+      "description": "Stay up to date with Varnish Software's latest insights, updates, and stories on Varnish Cache, web performance, and more. Explore articles from experts and enhance your content delivery operations.",
+      "followers": {
+        "facebook": 867
+      },
+      "image_url": "https://i1.feedspot.com/8661335.jpg?t=1755685512"
+    },
+    {
+      "title": "allegro.tech Blog",
+      "feed_url": "https://blog.allegro.tech/feed.xml",
+      "website_url": "https://blog.allegro.tech",
+      "description": "All latest articles from allegro tech.",
+      "followers": {
+        "facebook": 16100,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/8661336.jpg?t=1755687950"
+    },
+    {
+      "title": "Trevor I. Lasn",
+      "feed_url": "https://www.trevorlasn.com/rss.xml",
+      "website_url": "https://www.trevorlasn.com",
+      "description": "All latest articles from Trevor I. Lasn's blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8661337.jpg?t=1755688813"
+    },
+    {
+      "title": "WebyKing \u00bb Website Optimization",
+      "feed_url": "https://www.webyking.com/blog/category/website-optimization/feed",
+      "website_url": "https://www.webyking.com/blog/category/website-optimization",
+      "description": "Elevate your website's performance with optimization latest articles. Explore tips for speed, user experience, and overall excellence.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8661338.jpg?t=1755690013"
+    },
+    {
+      "title": "UptimeRobot Blog",
+      "feed_url": "https://uptimerobot.com/blog/feed",
+      "website_url": "https://uptimerobot.com/blog/",
+      "description": "All latest articles from UptimeRobot.",
+      "followers": {
+        "facebook": 5700
+      },
+      "image_url": "https://i1.feedspot.com/8661339.jpg?t=1755684793"
+    },
+    {
+      "title": "freeCodeCamp \u00bb Web Performance",
+      "feed_url": "https://www.freecodecamp.org/news/tag/web-performance/rss",
+      "website_url": "https://www.freecodecamp.org/news/tag/web-performance",
+      "description": "All latest articles about Web Performance from freeCodeCamp.",
+      "followers": {
+        "twitter": 836300
+      },
+      "image_url": "https://i1.feedspot.com/8661340.jpg?t=1755688128"
+    },
+    {
+      "title": "Frontend Masters \u00bb Performance",
+      "feed_url": "https://frontendmasters.com/blog/tag/performance/feed",
+      "website_url": "https://frontendmasters.com/blog/tag/performance",
+      "description": "All latest articles about Performance from Frontend Masters.",
+      "followers": {
+        "facebook": 69600,
+        "twitter": 128100
+      },
+      "image_url": "https://i1.feedspot.com/8661341.jpg?t=1755688873"
+    },
+    {
+      "title": "ui pencil \u00bb Performance",
+      "feed_url": "https://uipencil.com/tag/performance/feed",
+      "website_url": "https://uipencil.com/tag/performance",
+      "description": "All latest articles about Performance from ui pencil.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8661342.jpg?t=1755689484"
+    },
+    {
+      "title": "Web Performance \u00bb Load Testing Blog",
+      "feed_url": "https://feeds.feedburner.com/LoadTestingBlog",
+      "website_url": "https://www.webperformance.com/load-testing-tools/blog",
+      "description": "All latest articles about Load Testing from Web Performance.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8661343.jpg?t=1755685739"
+    },
+    {
+      "title": "Smartlook Blog",
+      "feed_url": "https://www.smartlook.com/blog/feed/",
+      "website_url": "https://www.smartlook.com/blog",
+      "description": "All latest articles from Smartlook.",
+      "followers": {
+        "facebook": 31600
+      },
+      "image_url": "https://i1.feedspot.com/8661344.jpg?t=1755688025"
+    },
+    {
+      "title": "Astral Internet Canada \u00bb Performance",
+      "feed_url": "https://www.astralinternet.com/en/category/performance/feed",
+      "website_url": "https://www.astralinternet.com/en/category/performance",
+      "description": "This category explores all aspects of website performance, from speed optimization and caching techniques to server efficiency and front-end improvements.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/8661345.jpg?t=1755689714"
+    },
+    {
+      "title": "Pingdom Blog",
+      "feed_url": "https://www.pingdom.com/blog/feed/",
+      "website_url": "https://www.pingdom.com/blog",
+      "description": "All latest articles from Pingdom Blog.",
+      "followers": {
+        "facebook": 121600
+      },
+      "image_url": "https://i1.feedspot.com/8661346.jpg?t=1755685253"
+    },
+    {
+      "title": "InMotion Hosting Blog",
+      "feed_url": "https://www.inmotionhosting.com/blog/feed",
+      "website_url": "https://www.inmotionhosting.com/blog",
+      "description": "All latest articles from InMotion Hosting.",
+      "followers": {
+        "facebook": 15000,
+        "twitter": 13500
+      },
+      "image_url": "https://i1.feedspot.com/8661347.jpg?t=1755687229"
+    },
+    {
+      "title": "RabbitLoader Articles",
+      "feed_url": "https://rabbitloader.com/articles/feed",
+      "website_url": "https://rabbitloader.com/articles",
+      "description": "All latest articles from RabbitLoader.",
+      "followers": {
+        "facebook": 1300
+      },
+      "image_url": "https://i1.feedspot.com/8661348.jpg?t=1755691794"
+    },
+    {
+      "title": "Edstem Technologies Blog",
+      "feed_url": "https://www.edstem.com/rss.xml",
+      "website_url": "https://www.edstem.com/blog",
+      "description": "All latest articles about Edstem Technologies.",
+      "followers": {
+        "facebook": 1500,
+        "instagram": 307
+      },
+      "image_url": "https://i1.feedspot.com/8661349.jpg?t=1755686688"
+    },
+    {
+      "title": "DevDreaming By CodeBucks Blogs",
+      "feed_url": "https://devdreaming.com/feeds/main.xml",
+      "website_url": "https://devdreaming.com/blogs",
+      "description": "Read in-depth tutorials, guides, and articles about web development, programming, and software engineering. Learn React, Next.js, TypeScript, and more.",
+      "followers": {
+        "instagram": 372
+      },
+      "image_url": "https://i1.feedspot.com/8661350.jpg?t=1755686388"
+    },
+    {
+      "title": "RUMvision Blog",
+      "feed_url": "https://www.rumvision.com/rss.xml",
+      "website_url": "https://www.rumvision.com/blog",
+      "description": "All latest articles from RUMvision.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8661352.jpg?t=1755687728"
+    },
+    {
+      "title": "NetSwifter \u00bb Website Performance & Security",
+      "feed_url": "https://netswifter.com/category/website-performance-and-security/feed",
+      "website_url": "https://netswifter.com/category/website-performance-and-security",
+      "description": "Website performance and security ensure that your site remains fast, reliable, and protected against cyber threats. This category covers speed optimization, hosting solutions, security best practices, and technical troubleshooting.",
+      "followers": {
+        "facebook": 81
+      },
+      "image_url": "https://i1.feedspot.com/8661353.jpg?t=1755689746"
+    },
+    {
+      "title": "web.dev Blog",
+      "feed_url": "https://web.dev/static/blog/feed.xml",
+      "website_url": "https://web.dev/blog",
+      "description": "All of web.dev's blog posts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8661354.jpg?t=1755688464"
+    },
+    {
+      "title": "Makimo Blog",
+      "feed_url": "https://makimo.com/feed/",
+      "website_url": "https://makimo.com/blog/",
+      "description": "All latest articles form Makimo.",
+      "followers": {
+        "facebook": 229
+      },
+      "image_url": "https://scontent.fbom3-3.fna.fbcdn.net/v/t39.30808-6/220161528_4237096189647100_6322112942302645884_n.png?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Jng4u6PMVXAQ7kNvwEQxFC7&_nc_oc=Adml1zmdaywvuzPKrra504RPYFG0ZarfL4MO_9ohbVWe2rg_qLFxnG5lkYtJyi-Uf0E9srf0OrB"
+    },
+    {
+      "title": "ClouDNS Blog",
+      "feed_url": "https://www.cloudns.net/blog/feed",
+      "website_url": "https://www.cloudns.net/blog",
+      "description": "All latest articles from ClouDNS.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8661356.jpg?t=1755684867"
+    },
+    {
+      "title": "AxiomQ \u00bb Web Performance",
+      "feed_url": "https://axiomq.com/search/web%20performance/feed/rss2",
+      "website_url": "https://axiomq.com/?s=web+performance",
+      "description": "All latest articles about Web Performance from AxiomQ.",
+      "followers": {
+        "facebook": 338
+      },
+      "image_url": "https://i1.feedspot.com/8661357.jpg?t=1755689796"
+    },
+    {
+      "title": "VernalWeb \u00bb Web Performance",
+      "feed_url": "https://www.vernalweb.com/blog/search/web%20performance/feed/rss2",
+      "website_url": "https://www.vernalweb.com/blog/?s=web+performance&post_type=post",
+      "description": "All latest articles about Web Performance from VernaWeb.",
+      "followers": {
+        "facebook": 134
+      },
+      "image_url": "https://i1.feedspot.com/8661358.jpg?t=1755689924"
+    },
+    {
+      "title": "Ploogins \u00bb Performance",
+      "feed_url": "https://ploogins.com/category/performance/feed/",
+      "website_url": "https://ploogins.com/category/performance",
+      "description": "All latest articles about Performance from Ploogins.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8661359.jpg?t=1755689410"
+    },
+    {
+      "title": "PixelFreeStudio \u00bb Web Performance Optimization",
+      "feed_url": "https://blog.pixelfreestudio.com/category/web-performance-optimization/feed",
+      "website_url": "https://blog.pixelfreestudio.com/category/web-performance-optimization",
+      "description": "All latest articles about Web Performance Optimization from PixelFree Studio.",
+      "followers": {
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/8661360.jpg?t=1755685851"
+    },
+    {
+      "title": "Blog by Simon Frey \u00bb Website Performance",
+      "feed_url": "https://simon-frey.com/blog/category/website-performance/feed/",
+      "website_url": "https://simon-frey.com/blog/category/website-performance",
+      "description": "All latest articles about Website Performance from Simon Frey's blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8661361.jpg?t=1755689223"
+    },
+    {
+      "title": "Atatus Blog",
+      "feed_url": "https://www.atatus.com/blog/rss/",
+      "website_url": "https://www.atatus.com/blog",
+      "description": "Stay tuned to get the application performance monitoring, end user monitoring, infrastructure monitoring updates and greatest web development technology at Atatus blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8661362.jpg?t=1755689970"
+    },
+    {
+      "title": "5ly.co Blog",
+      "feed_url": "https://5ly.co/blog/rss/",
+      "website_url": "https://5ly.co/blog",
+      "description": "All latest articles from 5ly.co.",
+      "followers": {
+        "facebook": 60
+      },
+      "image_url": "https://i1.feedspot.com/8661363.jpg?t=1755687592"
+    },
+    {
+      "title": "GlobalDots Blog",
+      "feed_url": "https://www.globaldots.com/feed/",
+      "website_url": "https://www.globaldots.com/resources/blog",
+      "description": "All latest articles from GlobalDots.",
+      "followers": {
+        "facebook": 611
+      },
+      "image_url": "https://i1.feedspot.com/8661364.jpg?t=1755686830"
+    },
+    {
+      "title": "NamasteDev Blogs",
+      "feed_url": "https://namastedev.com/blog/feed/",
+      "website_url": "https://namastedev.com/blog",
+      "description": "All latest articles from NamasteDev.",
+      "followers": {
+        "instagram": 17500
+      },
+      "image_url": "https://i1.feedspot.com/8661365.jpg?t=1755687461"
+    },
+    {
+      "title": "Stoyan's phpied.com \u00bb Performance",
+      "feed_url": "https://www.phpied.com/category/performance/feed",
+      "website_url": "https://www.phpied.com/category/performance",
+      "description": "All latest articles about Performance from Stoyan's blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8661366.jpg?t=1755689358"
+    },
+    {
+      "title": "Pressable \u00bb Website Performance",
+      "feed_url": "https://pressable.com/blog/category/website-performance/feed/",
+      "website_url": "https://pressable.com/blog/category/website-performance",
+      "description": "Browse through Pressable's website performance articles and blog posts to learn how you keep your WordPress website running fast.",
+      "followers": {
+        "facebook": 2400
+      },
+      "image_url": "https://i1.feedspot.com/8661367.jpg?t=1755688194"
+    },
+    {
+      "title": "Vikalp Development \u00bb Web Performance",
+      "feed_url": "https://www.vikalpdevelopment.com/blog/tag/web-performance/feed/",
+      "website_url": "https://www.vikalpdevelopment.com/blog/tag/web-performance",
+      "description": "All latest articles about Web Performance from Vikalp Development.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8661368.jpg?t=1755689661"
+    },
+    {
+      "title": "4GoodHosting \u00bb Web Performance",
+      "feed_url": "https://4goodhosting.com/blog/search/web%20performance/feed/rss2",
+      "website_url": "https://4goodhosting.com/blog/?s=web+performance",
+      "description": "All latest articles about Web Performance from 4GoodHosting.",
+      "followers": {
+        "facebook": 1500
+      },
+      "image_url": "https://i1.feedspot.com/8661369.jpg?t=1755689871"
+    },
+    {
+      "title": "The Blue Triangle \u00bb Website Performance",
+      "feed_url": "https://bluetriangle.com/blog/tag/website-performance/rss.xml",
+      "website_url": "https://bluetriangle.com/blog/tag/website-performance",
+      "description": "Solve user friction points and learn about site performance with Blue Triangle's blog! Our team of experts produce articles and case studies from real user data.",
+      "followers": {
+        "facebook": 182,
+        "twitter": 306
+      },
+      "image_url": "https://i1.feedspot.com/5437439.jpg?t=1662018488"
+    },
+    {
+      "title": "Fasterize Blog",
+      "feed_url": "https://www.fasterize.com/en/blog/feed/",
+      "website_url": "https://www.catchpoint.com/blog?tags=WebPageTest",
+      "description": "Web performance news, web performance optimization features, e-commerce case studies and everything you need to know about the loading times and website speed. Our optimization engine works in real-time on gross website performance as well as - and above all - on the perceived speed and the user experience.",
+      "followers": {
+        "twitter": 882
+      },
+      "image_url": "https://i1.feedspot.com/5437452.jpg?t=1662018766"
+    },
+    {
+      "title": "WebPageTest Blog",
+      "feed_url": "https://blog.webpagetest.org/feed.xml",
+      "website_url": "https://www.catchpoint.com/blog?tags=WebPageTest",
+      "description": "WebPageTest by Catchpoint enables the future of website performance, ensuring your users have incredible experiences everywhere. WebPageTest strives to provide performance products and resources to our global and growing community of developers, third-party platforms, technical consultants and others. With in-depth metrics, industry-leading accuracy and advanced visualizations including filmstrips comparisons and video capture, WebPageTest provides you with all the information you need to improve the performance of your site and applications.",
+      "followers": {
+        "facebook": 927,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5437443.jpg?t=1662019469"
+    },
+    {
+      "title": "Jeremy Wagner",
+      "feed_url": "https://jlwagner.net/rss.php",
+      "website_url": "https://jlwagner.net/",
+      "description": "Hi, I'm Jeremy. I'm a technical writer and I write about the web. I wrote Responsible JavaScript and other books. I've also written for publications such as A List Apart and CSS-Tricks. Explore my articles in web performance, my codes and updates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5437441.jpg?t=1662019784"
+    }
+  ]
+}

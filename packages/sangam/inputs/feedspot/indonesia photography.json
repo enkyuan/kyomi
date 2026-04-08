@@ -1,0 +1,40 @@
+{
+  "category": "Indonesia Photography",
+  "source_url": "https://rss.feedspot.com/indonesia_photography_rss_feeds",
+  "feeds": [
+    {
+      "title": "Bali Pixtura",
+      "feed_url": "https://www.gusmank.com/feed/",
+      "website_url": "https://www.balipixtura.com/",
+      "description": "We are a team of young, enthusiastic and creative photographers specializing in documenting destination wedding and pre-wedding/engagement. Our candid, documentary story-telling approach to wedding photography leaves you free to enjoy your day while we preserve your memories",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 14
+      },
+      "image_url": "https://i1.feedspot.com/5333899.jpg?t=1634723755"
+    },
+    {
+      "title": "Evermotion Photography Blog",
+      "feed_url": "https://evermotionphoto.com/category/blog/feed/",
+      "website_url": "https://evermotionphoto.com/category/blog/",
+      "description": "At Evermotion photo, we believe in creating authentic imagery through human connection & movement. We are Bali based wedding photo & videographers available to travel worldwide.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 37,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5343054.jpg?t=1636984219"
+    },
+    {
+      "title": "Bali Photo Shooting Blog",
+      "feed_url": "https://www.baliphotoshooting.com/feed",
+      "website_url": "https://www.baliphotoshooting.com/blog",
+      "description": "Get the latest updated news and articles around the photography world at Bali Photo Shooting. Your one stop destination for photography and videography services.",
+      "followers": {
+        "facebook": 518,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5343053.jpg?t=1636983672"
+    }
+  ]
+}

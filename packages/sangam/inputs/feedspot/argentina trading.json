@@ -1,0 +1,43 @@
+{
+  "category": "Argentina Trading",
+  "source_url": "https://rss.feedspot.com/argentina_trading_rss_feeds",
+  "feeds": [
+    {
+      "title": "Rankia Blog \u00bb Trading",
+      "feed_url": "https://www.rankia.com.ar/blogs/trading-argentina/feed.rss",
+      "website_url": "https://www.rankia.com.ar/blog/trading-argentina",
+      "description": "Read articles and guides on finance, banking, the stock market, and other financial topics, particularly in Argentina. Rankia is one of the main Spanish-speaking financial communities across the world, with a presence in thirteen countries, from Europe to Latin America, and more than one million registered users.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7269116.jpg?t=1709815416"
+    },
+    {
+      "title": "Ichimoku Fibonacci Blog",
+      "feed_url": "https://ichimokufibonacci.com/feed/",
+      "website_url": "https://ichimokufibonacci.com/blog/",
+      "description": "Get Ideas, tutorials, and guides on trading, investments, and personal finances on the Ichimoku Fibonacci blog. Explore a growing collection of articles to improve your trading skills. Join the world of smart money. Ichimoku Fibonacci is one of the biggest trading platforms in Argentina with clients from more than 8 countries in Latin America and Europe.",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 33900
+      },
+      "image_url": "https://i1.feedspot.com/7269118.jpg?t=1709815316"
+    },
+    {
+      "title": "Quiena Inversiones Blog",
+      "feed_url": "https://blog.quiena.com/rss/",
+      "website_url": "https://blog.quiena.com/",
+      "description": "Quiena Blog covers real-life scenarios, offers practical advice, and provides helpful resources so you can ditch the financial confusion and build a strong financial foundation. Quiena Inversione is a regulated platform to invest in Wall Street from Latin America.",
+      "followers": {
+        "facebook": 38800
+      },
+      "image_url": "https://i1.feedspot.com/7269117.jpg?t=1709815308"
+    },
+    {
+      "title": "WINA Blog",
+      "feed_url": "https://www.wina.com.ar/blog/rss.xml",
+      "website_url": "https://www.wina.com.ar/blog",
+      "description": "In this blog, you will find many notes related to the world of investments. Common Investment Funds, Fixed Term, savings in different types of capital market instruments such as stocks, bonds, and others. Stay current with WINA Inversiones a digital community of savers and investors",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7269115.jpg?t=1709815364"
+    }
+  ]
+}

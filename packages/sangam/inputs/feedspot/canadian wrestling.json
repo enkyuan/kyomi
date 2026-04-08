@@ -1,0 +1,61 @@
+{
+  "category": "Canadian Wrestling",
+  "source_url": "https://rss.feedspot.com/canadian_wrestling_rss_feeds",
+  "feeds": [
+    {
+      "title": "Wrestleview.com",
+      "feed_url": "https://www.wrestleview.com/feed/",
+      "website_url": "https://www.wrestleview.com/",
+      "description": "Your source for everything pro wrestling since 1997 featuring news, results and information. WWE News and rumors, weekly WWE RAW Results and WWE Smackdown results, spoilers, PPV Results, TNA News and results, ROH News.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 8500,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4795333.jpg?t=1645708059"
+    },
+    {
+      "title": "Maple Leaf Wrestling",
+      "feed_url": "https://mapleleafwrestling.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://mapleleafwrestling.blogspot.com/",
+      "description": "I am Andrew. It's been a fun trip learning about the classic Toronto & Ontario wrestling scene. We started in 2003 with just a few old photos and little insight. Thanks to Roger Baker and Gary Will and Griff Henderson. And everyone who has been a part of it. You'll find all the news and updates from the wrestling world written by passionate wrestling experts.",
+      "followers": {
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5344607.jpg?t=1637331524"
+    },
+    {
+      "title": "FLOQ",
+      "feed_url": "http://floq.ca/feed/",
+      "website_url": "http://floq.ca/",
+      "description": "The F\u00e9d\u00e9ration de Lutte Olympique du Qu\u00e9bec (FLOQ) is the governing body that oversees the sport of Women Wrestling, Freestyle Wrestling & Greco Roman wrestling in the province of Qu\u00e9bec.",
+      "followers": {
+        "facebook": 809,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5344651.jpg?t=1645708412"
+    },
+    {
+      "title": "Sportsnet \u00bb WWE",
+      "feed_url": "https://www.sportsnet.ca/blogs/wwe/feed/",
+      "website_url": "https://www.sportsnet.ca/wwe/",
+      "description": "The following section of Sportsnet.ca is dedicated to news and insights from the rings of World Wrestling Entertainment (WWE). Sportsnet connects Canadian sports fans to their favorite teams and athletes, using four platforms: TV, Radio, Online, and Mobile. As Canada's #1 Sports Media Brand, Sportsnet delivers storytelling on a local, regional, national and global level.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 1100000,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/5344650.jpg?t=1637331117"
+    },
+    {
+      "title": "Scotts Blog of Doom!",
+      "feed_url": "https://blogofdoom.com/index.php/feed/",
+      "website_url": "https://www.blogofdoom.com/",
+      "description": "Scotts Blog of Doom is for the wrestling passionates, eager to know all the insights from the world of wrestling.",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5344605.jpg?t=1637332108"
+    }
+  ]
+}

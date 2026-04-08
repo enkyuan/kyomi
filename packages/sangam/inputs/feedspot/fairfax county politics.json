@@ -1,0 +1,51 @@
+{
+  "category": "Fairfax County Politics",
+  "source_url": "https://rss.feedspot.com/fairfax_county_politics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Fairfax County Republican Committee",
+      "feed_url": "https://fairfaxgop.org/feed/",
+      "website_url": "https://fairfaxgop.org/news/",
+      "description": "The purpose of the Fairfax Republican Party is to promote Republican values to their members and throughout their community and to support Republican candidates in their election campaigns. Get all the latest news about Fairfax County Republican Committee, elections, and more on Fairfax County Republican Committee website. The committee is running under the chairmanship of Tim Hannigan.",
+      "followers": {
+        "facebook": 9000,
+        "twitter": 7800,
+        "instagram": 989
+      },
+      "image_url": "https://i1.feedspot.com/5648401.jpg?t=1692168810"
+    },
+    {
+      "title": "Annandale Today \u00bb Politics",
+      "feed_url": "https://annandaletoday.com/tag/politics/feed/",
+      "website_url": "https://annandaletoday.com/tag/politics/",
+      "description": "Annandale Today is a free local news website covering Annandale and the Bailey's Crossroads, Seven Corners, Lincolnia, and Falls Church communities in the Mason District area of Fairfax County, Va. They report on redevelopment projects, new businesses and restaurants, transportation, crime, schools, local government, parks, politics (with a progressive perspective), and much more.",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5648400.jpg?t=1692168807"
+    },
+    {
+      "title": "ConnectionNewspapers \u00bb Politics",
+      "feed_url": "https://www.connectionnewspapers.com/rss/headlines/Connection/Politics/",
+      "website_url": "https://www.connectionnewspapers.com/news/Connection/Politics/",
+      "description": "Connection Newspapers publishes 15 award-winning weekly newspapers in Northern Virginia and suburban Maryland, dedicated to public service. Go through their newspaper to get all the political news and updates around the region along with in-depth editorials.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 4700,
+        "instagram": 873
+      },
+      "image_url": "https://i1.feedspot.com/5648403.jpg?t=1692168813"
+    },
+    {
+      "title": "Alexandria Gazette \u00bb Politics",
+      "feed_url": "https://www.alexandriagazette.com/rss/headlines/Alexandria/Politics/",
+      "website_url": "https://www.alexandriagazette.com/news/Alexandria/Politics/",
+      "description": "The Alexandria Gazette Packet is a newspaper that has been serving Alexandria for over 200 years. It is a part of the Connection Newspapers and covers local news, events, and issues in the Alexandria area. Some of the topics covered by the newspaper include hurricane preparedness, local law enforcement, education, and community events. They have a dedicated political section covering news about the political landscape of the region, breaking news elections insights, feature stories, and more.",
+      "followers": {
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5648402.jpg?t=1692169017"
+    }
+  ]
+}

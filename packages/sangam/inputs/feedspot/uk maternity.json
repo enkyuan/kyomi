@@ -1,0 +1,28 @@
+{
+  "category": "UK Maternity",
+  "source_url": "https://rss.feedspot.com/uk_maternity_rss_feeds",
+  "feeds": [
+    {
+      "title": "Maternity Action Blog",
+      "feed_url": "https://maternityaction.org.uk/feed/",
+      "website_url": "https://maternityaction.org.uk/blog/",
+      "description": "Maternity Action is the UK's leading charity committed to ending inequality and improving the health of pregnant women, partners, and young children.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 13000
+      },
+      "image_url": "https://i1.feedspot.com/4905830.jpg?t=1613710391"
+    },
+    {
+      "title": "Maternity Nurse Blog",
+      "feed_url": "https://www.maternitynurse.co.uk/feed/",
+      "website_url": "https://www.maternitynurse.co.uk/blog/",
+      "description": "Maternity Nurse agency is dedicated to finding you the perfect childcare solution. We help parents looking for a little support after the birth of their child and subsequently their long term childcare needs.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 452
+      },
+      "image_url": "https://i1.feedspot.com/4885818.jpg?t=1613710395"
+    }
+  ]
+}

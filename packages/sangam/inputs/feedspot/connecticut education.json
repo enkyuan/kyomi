@@ -1,0 +1,78 @@
+{
+  "category": "Connecticut Education",
+  "source_url": "https://rss.feedspot.com/connecticut_education_rss_feeds",
+  "feeds": [
+    {
+      "title": "Education Week \u00bb Connecticut",
+      "feed_url": "https://www.edweek.org/connecticut.rss",
+      "website_url": "https://www.edweek.org/connecticut",
+      "description": "Education Week is a national publication that covers education policy and practice, and they have a specific section of their website dedicated to news and analysis related to Connecticut. Their coverage includes K-12 education, higher education, and issues affecting students and families.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547772.jpg?t=1682077840"
+    },
+    {
+      "title": "Connecticut Rise Network Blog",
+      "feed_url": "https://www.ctrise.org/feed/",
+      "website_url": "https://www.ctrise.org/blog/",
+      "description": "Connecticut Rise Network Blog is a nonprofit organization that is focused on improving educational outcomes for all students in the state. Founded in 2014, their mission is to build a statewide network of schools and organizations that can work together to create positive change in Connecticut's education system. Their blog covers topics related to educational equity, leadership, and innovation.",
+      "followers": {
+        "facebook": 258,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5547773.jpg?t=1682077840"
+    },
+    {
+      "title": "Connecticut Public \u00bb Education",
+      "feed_url": "https://www.ctpublic.org/news/education.rss",
+      "website_url": "https://www.ctpublic.org/news/education",
+      "description": "Connecticut Public is a media organization that is focused on providing news and information to the people of Connecticut. Their education coverage includes news stories, features, and analysis of the latest developments in the state's education system.",
+      "followers": {
+        "facebook": 20800,
+        "twitter": 32600,
+        "instagram": 20100
+      },
+      "image_url": "https://i1.feedspot.com/5547771.jpg?t=1682077835"
+    },
+    {
+      "title": "CT ED Watch",
+      "feed_url": "https://ctedwatch.org/feed/",
+      "website_url": "https://ctedwatch.org/category/news/",
+      "description": "CT ED Watch is an education advocacy blog that is focused on providing information and analysis of Connecticut's education policies and politics. Founded by a group of educators and parents, the blog covers a range of topics related to education reform, including charter schools, teacher evaluation, and school funding.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547769.jpg?t=1682077828"
+    },
+    {
+      "title": "CT Mirror \u00bb Education",
+      "feed_url": "https://ctmirror.org/feed/",
+      "website_url": "https://ctmirror.org/education/",
+      "description": "CT Mirror is a nonprofit news organization that provides in-depth coverage of a wide range of issues affecting Connecticut. Their education coverage includes news stories, features, and analysis of the latest developments in the state's education system, with a particular focus on issues related to school funding and educational equity.",
+      "followers": {
+        "facebook": 18900,
+        "twitter": 37100,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5547774.jpg?t=1682077824"
+    },
+    {
+      "title": "ConnCAN Blog",
+      "feed_url": "https://conncan.org/feed/",
+      "website_url": "https://conncan.org/blog/",
+      "description": "ConnCAN Blog is an education advocacy blog that is focused on providing a high-quality education to every student in Connecticut. Founded in 2005, the organization believes that all students should have access to great schools, regardless of their zip code or background. Their blog covers a range of topics related to education reform, including teacher quality, school choice, and accountability.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5547768.jpg?t=1682077841"
+    },
+    {
+      "title": "Diane Ravitch's Blog \u00bb Connecticut",
+      "feed_url": "https://dianeravitch.net/category/connecticut/feed/",
+      "website_url": "https://dianeravitch.net/category/connecticut/",
+      "description": "Diane Ravitch's Blog is a nationally recognized education blog that features commentary on education policy and politics. Ravitch is a research professor of education at New York University, and she has been a vocal critic of many of the policies that have been enacted in recent years. Her blog includes news and analysis of education policy at both the national and state level, including coverage of Connecticut.",
+      "followers": {
+        "twitter": 132700
+      },
+      "image_url": "https://i1.feedspot.com/5547767.jpg?t=1682077839"
+    }
+  ]
+}

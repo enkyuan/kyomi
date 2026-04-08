@@ -1,0 +1,51 @@
+{
+  "category": "Wimbledon Championship",
+  "source_url": "https://rss.feedspot.com/wimbledon_championship_rss_feeds",
+  "feeds": [
+    {
+      "title": "Wimbledon Debenture Holders",
+      "feed_url": "https://www.wimbledondebentureholders.com/articles/feed/",
+      "website_url": "https://www.wimbledondebentureholders.com/articles/",
+      "description": "Wimbledon Debenture Holders is a specialist marketplace set up by Wimbledon Debenture Holders to provide a secure platform to sell tickets directly to international tennis fans. A Debenture ticket not only offers the best seats with the best views for the day's play but also grants you access to the exclusive debenture holder lounges, offering a wonderful choice of bars and restaurants.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4918034.jpg?t=1620630648"
+    },
+    {
+      "title": "The Independent \u00bb Wimbledon",
+      "feed_url": "http://www.independent.co.uk/topic/Wimbledon/rss",
+      "website_url": "https://www.independent.co.uk/topic/Wimbledon",
+      "description": "The Independent is the world's most free-thinking newspaper. Get all the latest breaking news on Wimbledon. Browse The Independent's complete collection of articles and commentary on Wimbledon.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/4918039.jpg?t=1620630822"
+    },
+    {
+      "title": "Tennis Majors \u00bb Wimbledon",
+      "feed_url": "https://www.tennismajors.com/category/wimbledon-news/feed",
+      "website_url": "https://www.tennismajors.com/category/wimbledon-news",
+      "description": "Tennis Majors is the ultimate platform for tennis lovers. This section of the Tennis Majors will keep you updated on the latest news from Wimbledon Championship.",
+      "followers": {
+        "facebook": 49600,
+        "twitter": 10200
+      },
+      "image_url": "https://i1.feedspot.com/5350258.jpg?t=1638618450"
+    },
+    {
+      "title": "The Guardian \u00bb Wimbledon",
+      "feed_url": "https://www.theguardian.com/sport/wimbledon/rss",
+      "website_url": "https://www.theguardian.com/sport/wimbledon",
+      "description": "A news section of The Guardian covering Wimbledon Championship news and updates. Follow and keep up with the latest from this feed.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/1038679.jpg?t=1638613812"
+    }
+  ]
+}

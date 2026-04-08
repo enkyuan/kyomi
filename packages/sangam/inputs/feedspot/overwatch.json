@@ -1,0 +1,58 @@
+{
+  "category": "Overwatch",
+  "source_url": "https://rss.feedspot.com/overwatch_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Game Haus \u00bb Overwatch",
+      "feed_url": "https://thegamehaus.com/category/overwatch/feed/",
+      "website_url": "https://thegamehaus.com/category/overwatch/",
+      "description": "The Game Haus is the best place to find Overwatch and OWL news. Be sure to check out the team pages for individual team news! The mission of The Game Haus is to bring unbiased, factually sound opinions to audiences across a range of mediums that are not readily accessible in the day-to-day media outlets.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5362774.jpg?t=1642234406"
+    },
+    {
+      "title": "Dot Esports \u00bb Overwatch",
+      "feed_url": "https://dotesports.com/overwatch/feed",
+      "website_url": "https://dotesports.com/overwatch",
+      "description": "Dot Esports is the premier destination for Overwatch esports coverage, including breaking news, features, analysis, opinion, tournament coverage, and more. Here you'll find quality breaking news, investigative reporting, tournament coverage, and analysis of every important event within the esports world. And also read high-quality gaming guides, reviews of gaming gears, and interviews with top streamers. Dot Esports covers a cultural phenomenon, not just a sport.",
+      "followers": {
+        "facebook": 966200,
+        "twitter": 52000
+      },
+      "image_url": "https://i1.feedspot.com/5362775.jpg?t=1642232853"
+    },
+    {
+      "title": "Game News 24 \u00bb Overwatch",
+      "feed_url": "https://game-news24.com/category/overwatch/feed/",
+      "website_url": "https://game-news24.com/category/overwatch/",
+      "description": "The following section of Game News 24 covers articles and news related to Overwatch. Game News 24 is your source to stay updated on what is happening in gaming and read the latest and trendy news.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5362776.jpg?t=1642233349"
+    },
+    {
+      "title": "ESTNN \u00bb Overwatch",
+      "feed_url": "https://estnn.com/tag/overwatch-esports/feed/",
+      "website_url": "https://estnn.com/tag/overwatch-esports/",
+      "description": "Read news and updates on Overwatch League, esports videos, news, roster changes, scores, schedules, streams, and more in the following section. At ESTNN, we strive to provide esports news, interviews, features, guides, videos, tournament coverage, and all aspects of competitive gaming to our users in a fan-friendly environment.",
+      "followers": {
+        "facebook": 19400,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5362773.jpg?t=1642234004"
+    },
+    {
+      "title": "Fragster \u00bb Overwatch",
+      "feed_url": "https://www.fragster.com/overwatch/feed/",
+      "website_url": "https://www.fragster.com/overwatch/",
+      "description": "Fragster is the premier destination for overwatch esports coverage, including breaking news, reviews, guides and news updates! Fragster.de is THE esport portal. We report daily on current Esport titles such as CS: GO, Valorant, League of Legends, Dota2, PUBG, Rainbow6 and many more.",
+      "followers": {
+        "facebook": 939,
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/5362780.jpg?t=1642234220"
+    }
+  ]
+}

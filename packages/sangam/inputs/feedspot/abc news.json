@@ -1,0 +1,126 @@
+{
+  "category": "ABC News",
+  "source_url": "https://rss.feedspot.com/abc_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "ABC News",
+      "feed_url": "https://abcnews.go.com/abcnews/topstories",
+      "website_url": "https://abcnews.go.com/",
+      "description": "Your trusted source for breaking news, analysis, exclusive interviews, headlines, and videos at ABCNews.com",
+      "followers": {
+        "facebook": 20600000,
+        "twitter": 120900,
+        "instagram": 5300000
+      },
+      "image_url": "https://i1.feedspot.com/8678.jpg?t=1613826624"
+    },
+    {
+      "title": "ABC News \u00bb International News",
+      "feed_url": "https://abcnews.go.com/abcnews/internationalheadlines",
+      "website_url": "https://abcnews.go.com/international",
+      "description": "Get the latest international news and world events from Asia, Europe, the Middle East, and more. See world news photos and videos at ABCNews.com",
+      "followers": {
+        "facebook": 20600000,
+        "twitter": 17800000,
+        "instagram": 5300000
+      },
+      "image_url": "https://i1.feedspot.com/8678.jpg?t=1613826624"
+    },
+    {
+      "title": "ABC News \u00bb U.S.",
+      "feed_url": "https://abcnews.go.com/abcnews/usheadlines",
+      "website_url": "https://abcnews.go.com/us",
+      "description": "Get the latest breaking news across the U.S. on ABCNews.com.",
+      "followers": {
+        "facebook": 20600000,
+        "twitter": 17800000,
+        "instagram": 5300000
+      },
+      "image_url": "https://i1.feedspot.com/8678.jpg?t=1613826624"
+    },
+    {
+      "title": "ABC News \u00bb Politics",
+      "feed_url": "https://abcnews.go.com/abcnews/politicsheadlines",
+      "website_url": "https://abcnews.go.com/Politics",
+      "description": "ABC News is your trusted source on political news stories and videos. Get the latest coverage and analysis on everything from the Trump presidency, Senate, House, and Supreme Court.",
+      "followers": {
+        "facebook": 20600000,
+        "twitter": 120900,
+        "instagram": 5300000
+      },
+      "image_url": "https://i1.feedspot.com/8678.jpg?t=1613826624"
+    },
+    {
+      "title": "ABC News \u00bb Business",
+      "feed_url": "https://abcnews.go.com/abcnews/businessheadlines",
+      "website_url": "https://abcnews.go.com/business",
+      "description": "Find the latest business news on Wall Street, jobs and the economy, the housing market, personal finance, and money investments, and much more on ABC News.",
+      "followers": {
+        "facebook": 20600000,
+        "twitter": 17800000,
+        "instagram": 5300000
+      },
+      "image_url": "https://i1.feedspot.com/8678.jpg?t=1613826624"
+    },
+    {
+      "title": "ABC News \u00bb Health",
+      "feed_url": "https://abcnews.go.com/abcnews/healthheadlines",
+      "website_url": "https://abcnews.go.com/health",
+      "description": "Get the latest health news, diet & fitness information, medical research, health care trends, and health issues that affect you and your family on ABCNews.com.",
+      "followers": {
+        "facebook": 20600000,
+        "twitter": 17800000,
+        "instagram": 5300000
+      },
+      "image_url": "https://i1.feedspot.com/8678.jpg?t=1613826624"
+    },
+    {
+      "title": "ABC News \u00bb Sports",
+      "feed_url": "https://abcnews.go.com/abcnews/sportsheadlines",
+      "website_url": "https://abcnews.go.com/sports",
+      "description": "Find the latest sports news and articles on the NFL, MLB, NBA, NHL, NCAA college football, NCAA college basketball, and more at ABC News.",
+      "followers": {
+        "facebook": 20600000,
+        "twitter": 17800000,
+        "instagram": 5300000
+      },
+      "image_url": "https://i1.feedspot.com/8678.jpg?t=1613826624"
+    },
+    {
+      "title": "ABC News \u00bb Entertainment",
+      "feed_url": "https://abcnews.go.com/abcnews/entertainmentheadlines",
+      "website_url": "https://abcnews.go.com/entertainment",
+      "description": "Get up to the minute entertainment news, celebrity interviews, celeb videos, photos, movies, TV, music news, and pop culture on ABCNews.com.",
+      "followers": {
+        "facebook": 20600000,
+        "twitter": 17800000,
+        "instagram": 5300000
+      },
+      "image_url": "https://i1.feedspot.com/8678.jpg?t=1613826624"
+    },
+    {
+      "title": "ABC News \u00bb Technology",
+      "feed_url": "https://abcnews.go.com/abcnews/technologyheadlines",
+      "website_url": "https://abcnews.go.com/Technology",
+      "description": "Get the latest science news and technology news, read tech reviews, and more at ABC News.",
+      "followers": {
+        "facebook": 20600000,
+        "twitter": 66,
+        "instagram": 5300000
+      },
+      "image_url": "https://i1.feedspot.com/8678.jpg?t=1613826624"
+    },
+    {
+      "title": "ABC News \u00bb Travel",
+      "feed_url": "http://feeds.abcnews.com/abcnews/travelheadlines",
+      "website_url": "http://abcnews.go.com/travel",
+      "description": "Get the latest lifestyle news with articles and videos on pets, parenting, fashion, beauty, food, travel, relationships, and more on ABCNews.com",
+      "followers": {
+        "facebook": 20600000,
+        "twitter": 17800000,
+        "instagram": 5300000
+      },
+      "image_url": "https://i1.feedspot.com/8678.jpg?t=1613826624"
+    }
+  ]
+}

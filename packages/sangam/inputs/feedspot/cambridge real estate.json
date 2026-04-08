@@ -1,0 +1,56 @@
+{
+  "category": "Cambridge Real Estate",
+  "source_url": "https://rss.feedspot.com/cambridge_real_estate_rss_feeds",
+  "feeds": [
+    {
+      "title": "Associated Brokerage Group Blog",
+      "feed_url": "https://abgrealty.com/feed/",
+      "website_url": "https://abgrealty.com/news/",
+      "description": "Associated Brokerage Group, is a locally owned commercial real estate brokerage firm, specializing in the sale and leasing of office, retail, industrial, and other unique commercial properties throughout Greater Boston and Eastern Massachusetts. Our professionalism and integrity are key, combined with decades of collective commercial real estate experience, with our extraordinary service and knowledge of the regional real estate market.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5440173.jpg?t=1662726476"
+    },
+    {
+      "title": "coUrbanize Blog",
+      "feed_url": "https://www.courbanize.com/feed",
+      "website_url": "https://www.courbanize.com/blog",
+      "description": "Read the latest blog posts from the coUrbanize team on community engagement for real estate development projects and municipal planning initiatives. Everything we do at coUrbanize revolves around a singular mission, improving the real estate development process so our customers can build better neighborhoods. coUrbanize gives people a way to share their feedback without going to a public meeting and in their native language by posting a comment online, texting their feedback, or leaving comments via voicemail.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 3200,
+        "instagram": 868
+      },
+      "image_url": "https://i1.feedspot.com/5440174.jpg?t=1662725561"
+    },
+    {
+      "title": "Ryan Prince Real Estate Centre Inc. Blog",
+      "feed_url": "https://www.princeofrealestate.com/rss",
+      "website_url": "https://www.princeofrealestate.com/Blog.php",
+      "description": "Here you'll find resources to assist you with all your realty needs. Whether you are a first-time homebuyer, looking to sell your property or an experienced investor, I can provide you with comprehensive real estate solutions. I can assist you in buying the home of your dreams or selling the one you have for the price you want, in the time frame you need. The whole experience is 100% positive, too.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5440176.jpg?t=1662726353"
+    },
+    {
+      "title": "Lara Gordon Caralis Real Estate Blog",
+      "feed_url": "https://www.cambridgeville.com/blog-feed.xml",
+      "website_url": "https://www.cambridgeville.com/blog",
+      "description": "Blog posts on selling a home, buying a home, local real estate market, hot properties, mortgage, real estate industry, historic homes, home ownership, home design, and more! Lara Gordon Caralis Real Estate specializes in Cambridge, Somerville & neighboring communities. Lara is a real estate agent in the Cambridge and Somerville markets. She works with both buyers and sellers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5323112.jpg?t=1662988995"
+    },
+    {
+      "title": "Sage Jankowitz Cambridge Real Estate Blog",
+      "feed_url": "https://www.cambridgesage.com/blog?format=rss",
+      "website_url": "https://www.cambridgesage.com/blog",
+      "description": "Articles on Housing Market, Selling Your Home, Real Estate Market, First-Time Homebuyer, Sellers, and more. Cambridge Sage Real Estate provides services for sellers, buyers, landlords, and tenants. I'm Sage, I provide outstanding and personalized service to clients in the Cambridge and Somerville areas. My goal is to build life-long relationships with buyers and sellers while we achieve your real estate goals.",
+      "followers": {
+        "facebook": 40,
+        "instagram": 317
+      },
+      "image_url": "https://i1.feedspot.com/5323110.jpg?t=1631969150"
+    }
+  ]
+}

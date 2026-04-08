@@ -9,7 +9,8 @@ import {
 import { db } from "@adapters/db/client";
 import { env } from "@config/env";
 
-const baseURL = resolveBetterAuthBaseUrl(env.BETTER_AUTH_URL ?? env.WEB_ORIGIN, env.WEB_ORIGIN);
+const defaultApiOrigin = `http://localhost:${env.PORT}`;
+const baseURL = resolveBetterAuthBaseUrl(env.BETTER_AUTH_URL ?? defaultApiOrigin, defaultApiOrigin);
 
 export const auth = betterAuth({
   secret: env.BETTER_AUTH_SECRET,

@@ -1,0 +1,151 @@
+{
+  "category": "Richmond",
+  "source_url": "https://rss.feedspot.com/richmond_rss_feeds",
+  "feeds": [
+    {
+      "title": "Richmond Magazine | Richmond Food, Travel, news, events and more",
+      "feed_url": "https://richmondmagazine.com/api/rss/content.rss",
+      "website_url": "https://richmondmagazine.com/",
+      "description": "Richmond magazine uncovers the best in dining, entertainment, shopping, travel and provides news on both political and personal issues in the Richmond.",
+      "followers": {
+        "facebook": 38500,
+        "twitter": 67100,
+        "instagram": 52400
+      },
+      "image_url": "https://i1.feedspot.com/4926295.jpg?t=1620980512"
+    },
+    {
+      "title": "Boomer Magazine",
+      "feed_url": "https://www.boomermagazine.com/feed/",
+      "website_url": "https://www.boomermagazine.com/",
+      "description": "Boomer Magazine is Richmond's premier lifestyle magazine that engages readers with informative and entertaining articles on nostalgia, food, drink, travel, arts, entertainment, home, health, family and much more.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 3600,
+        "instagram": 725
+      },
+      "image_url": "https://i1.feedspot.com/4734469.jpg?t=1607922229"
+    },
+    {
+      "title": "eating bird food Blog",
+      "feed_url": "https://www.eatingbirdfood.com/blog/feed/",
+      "website_url": "https://www.eatingbirdfood.com/blog/",
+      "description": "Eating Bird Food is a healthy living blog that shares different recipes and food and show others that eating healthy doesn't have to be hard and it can taste good too.",
+      "followers": {
+        "facebook": 670600,
+        "twitter": 14100,
+        "instagram": 832700
+      },
+      "image_url": "https://i1.feedspot.com/4686011.jpg?t=1620980521"
+    },
+    {
+      "title": "Bar Solita",
+      "feed_url": "https://barsolita.com/blogs?format=RSS",
+      "website_url": "https://barsolita.com/blogs",
+      "description": "Keep up with articles from Bar Solita.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5046009.jpg"
+    },
+    {
+      "title": "RVA | Richmond Police Blog",
+      "feed_url": "http://richmondvapolice.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://richmondvapolice.blogspot.com/",
+      "description": "Follow this blog to get latest updates, news and information related to police in Richmond.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4926420.jpg?t=1620980569"
+    },
+    {
+      "title": "Richmond Mom",
+      "feed_url": "https://feeds.feedburner.com/RichmondMom",
+      "website_url": "https://richmondmom.com/",
+      "description": "Richmond Mom is the go to source for families in the Richmond and discovers the best summer camp, chooses a family friendly restaurant to eat and things to do in Richmond.",
+      "followers": {
+        "facebook": 8200,
+        "twitter": 10100,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4926270.jpg?t=1620980517"
+    },
+    {
+      "title": "RVA | Richmond News Blog",
+      "feed_url": "http://richmondvaannouncements.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://richmondvaannouncements.blogspot.com/",
+      "description": "Follow this blog to get latest updates and news for the city Richmond in Virginia.",
+      "followers": {
+        "twitter": 428
+      },
+      "image_url": "https://i1.feedspot.com/4926281.jpg?t=1620980532"
+    },
+    {
+      "title": "Em Busy Living | Richmond Lifestyle and Travel Blog",
+      "feed_url": "https://embusyliving.com/feed",
+      "website_url": "https://embusyliving.com/",
+      "description": "Em Busy Living is a blog that covers travel and life's other adventures in Richmond, Virginia.",
+      "followers": {
+        "facebook": 150,
+        "twitter": 361
+      },
+      "image_url": "https://i1.feedspot.com/4926305.jpg?t=1620980535"
+    },
+    {
+      "title": "Small Richmond",
+      "feed_url": "https://smallrichmond.com/rss.xml",
+      "website_url": "https://smallrichmond.com/",
+      "description": "Small Richmond is a simple collection of independent news sites from Richmond, Virginia. Follow this site to stay up to date with latest news in city Richmond.",
+      "followers": {
+        "facebook": 685,
+        "twitter": 520
+      },
+      "image_url": "https://i1.feedspot.com/4926454.jpg?t=1620980573"
+    },
+    {
+      "title": "Richmond Virginia Mayor Blog",
+      "feed_url": "http://richmondvirginiamayor.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://richmondvirginiamayor.blogspot.com/",
+      "description": "Follow this blog to get updates, news and information about Richmond Virginia Mayor.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4926440.jpg?t=1620980605"
+    },
+    {
+      "title": "Coates & Davenport | Richmond Law Blog",
+      "feed_url": "https://www.coateslaw.com/blog/atom.xml",
+      "website_url": "https://www.coateslaw.com/blog/",
+      "description": "Coates & Davenport provides information on family law, child custody and parenting plans, estate planning and criminal defense law in Richmond.",
+      "followers": {
+        "facebook": 142
+      },
+      "image_url": "https://i1.feedspot.com/4926332.jpg?t=1620980542"
+    },
+    {
+      "title": "Richmond Weddings Blog",
+      "feed_url": "https://richmondweddings.com/feed/",
+      "website_url": "https://richmondweddings.com/blog/",
+      "description": "The Wedding Blog from Richmond Weddings helps brides and grooms find reception venues, photographers, planners and other vendors in Richmond.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 1100,
+        "instagram": 10700
+      },
+      "image_url": "https://i1.feedspot.com/4926302.jpg?t=1620980547"
+    },
+    {
+      "title": "ahaapps",
+      "feed_url": "https://ahaapps.com/feed/",
+      "website_url": "https://ahaapps.com/blog/",
+      "description": "Keep up with articles from ahaapps.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5072333.jpg"
+    },
+    {
+      "title": "Bowen Ten Cardani | Richmond Family Law Blog",
+      "feed_url": "https://3341514.findlaw4.flsitebuilder.com/blog/",
+      "website_url": "https://btclawva.com/blog/",
+      "description": "Bowen Ten Cardani blog provides information on family law for residents of Richmond, Virginia.",
+      "followers": {
+        "facebook": 975,
+        "twitter": 113
+      },
+      "image_url": "https://i1.feedspot.com/4926328.jpg?t=1620980564"
+    }
+  ]
+}

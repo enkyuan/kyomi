@@ -1,0 +1,40 @@
+{
+  "category": "Maori",
+  "source_url": "https://rss.feedspot.com/maori_rss_feeds",
+  "feeds": [
+    {
+      "title": "Reo Ora Blog",
+      "feed_url": "https://reoora.com/feed/",
+      "website_url": "https://reoora.com/our-blog/",
+      "description": "Read posts and articles that provide you with useful information about language acquisition and our unique method of teaching and learning Te Reo Maori. My name is Dr. Rapata Wiri and I have been a Maori language lecturer within universities and wananga in New Zealand and Hawaii for the last 25 years. Through Reo Ora, I have taught thousands of students to become confident speakers of Te Reo Maori.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 7,
+        "instagram": 438
+      },
+      "image_url": "https://i1.feedspot.com/5438890.jpg?t=1662450939"
+    },
+    {
+      "title": "Waatea News",
+      "feed_url": "https://waateanews.com/feed/",
+      "website_url": "https://waateanews.com/",
+      "description": "Keep up to date with the latest Maori news from around regional Aotearoa at Waatea News by Radio Waatea. They cover all topics and features concerning Maori and the English-speaking population. Radio Waatea is Aucklands' only Maori radio station that provides an extensive bi-lingual broadcast to its listeners.",
+      "followers": {
+        "facebook": 113200,
+        "twitter": 5300,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5438891.jpg?t=1662450946"
+    },
+    {
+      "title": "Maori Millionaire Blog",
+      "feed_url": "https://www.maorimillionaire.com/blog-feed.xml",
+      "website_url": "https://www.maorimillionaire.com/home",
+      "description": "Maori Millionaire is a blog where we share our stories of personal finance, how we are growing generational wealth, and what we are doing to achieve our financial goals. I am Te Kahukura Boynton, an 18-year-old law student, entrepreneur, and content creator. I am on my own journey of financial and self-development. Maori Millionaire is a resource to learn with me and alongside me about the things that matter.",
+      "followers": {
+        "twitter": 204
+      },
+      "image_url": "https://i1.feedspot.com/5438892.jpg?t=1662450950"
+    }
+  ]
+}

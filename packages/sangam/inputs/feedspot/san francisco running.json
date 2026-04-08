@@ -1,0 +1,76 @@
+{
+  "category": "San Francisco Running",
+  "source_url": "https://rss.feedspot.com/san_francisco_running_rss_feeds",
+  "feeds": [
+    {
+      "title": "The San Francisco Marathon Blog",
+      "feed_url": "https://www.thesfmarathon.com/feed/",
+      "website_url": "https://www.thesfmarathon.com/blog/",
+      "description": "The San Francisco Marathon Blog talks about our races, details, course, runners, full and half marathon training, California racing, and more. Read more. The San Francisco Marathon is an annual USATF-certified road running event held in San Francisco, California.",
+      "followers": {
+        "facebook": 85700,
+        "twitter": 12600,
+        "instagram": 44100
+      },
+      "image_url": "https://i1.feedspot.com/5671360.jpg?t=1696857768"
+    },
+    {
+      "title": "Run Club SF Blog",
+      "feed_url": "https://sanfranciscorunningclub.com/feed/",
+      "website_url": "https://sanfranciscorunningclub.com/blog/",
+      "description": "Run Club SF Blog is your source dedicated to all things Running the vibrant SF community. Follow all news and developments from the Run Club, as well as information on all upcoming events in the city. Run Club SF is a team of experienced coaches and captains can help you run farther and faster than you thought possible.",
+      "followers": {
+        "facebook": 807,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5687757.jpg?t=1697096778"
+    },
+    {
+      "title": "Berkeley Half Marathon Blog",
+      "feed_url": "https://berkeleyhalfmarathon.com/feed/",
+      "website_url": "https://berkeleyhalfmarathon.com/blog/",
+      "description": "The Biofreeze Berkeley Half Marathon's Official Blog talks about upcoming races, details, runners, how to train for a half marathon and race training, California, and more. Stay informed of the latest updates, alerts, race weekend information, and more!",
+      "followers": {
+        "facebook": 10600,
+        "twitter": 659,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/5671357.jpg?t=1694667890"
+    },
+    {
+      "title": "San Francisco Half Marathon",
+      "feed_url": "https://sanfranciscohalfmarathon.org/news/feed/",
+      "website_url": "https://sanfranciscohalfmarathon.org/news/",
+      "description": "Stay tuned to the pulse of our San Francisco Half Marathon with this official news blog! Get ready to dive into the exhilarating world of running as you explore exclusive insights, race updates, and behind-the-scenes stories leading up to the most anticipated running event of the year.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 67,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5687755.jpg?t=1697097052"
+    },
+    {
+      "title": "San Francisco Running Company Blog",
+      "feed_url": "https://www.sfrunco.com/feed/",
+      "website_url": "https://www.sfrunco.com/about-us/blog/",
+      "description": "Venture into the San Francisco Running Company Blog sharing Race reports, Amazing trails, Wellness resources, and more. If you are a runner looking for a great place to shop for gear, get advice, and connect with the local running community, then SFRC is the place for you.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 4000,
+        "instagram": 18200
+      },
+      "image_url": "https://i1.feedspot.com/5671355.jpg?t=1696857971"
+    },
+    {
+      "title": "Trail & Kale",
+      "feed_url": "https://www.trailandkale.com/tips/feed/",
+      "website_url": "https://www.trailandkale.com/tips/",
+      "description": "Enjoy helpful Trail running advice and tips from Trail & Kale, a blog focused on sharing the best trail running advice and inspiration. Trail & Kale online platform empowers and educates outdoor enthusiasts of all experience levels, to give you the confidence and knowledge required to live a healthy, active lifestyle.",
+      "followers": {
+        "facebook": 1500,
+        "instagram": 71400
+      },
+      "image_url": "https://i1.feedspot.com/5687756.jpg?t=1697096768"
+    }
+  ]
+}

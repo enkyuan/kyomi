@@ -1,0 +1,822 @@
+{
+  "category": "American Music",
+  "source_url": "https://rss.feedspot.com/american_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "NPR \u00bb All Songs Considered",
+      "feed_url": "https://feeds.npr.org/15709577/rss.xml",
+      "website_url": "https://www.npr.org/sections/allsongs/",
+      "description": "This section of the NPR blog is home to the best new music and a community of fans always ready to share their opinions on the current music scene. NPR covers top stories from business, politics, health, science, technology, music, arts, and culture.",
+      "followers": {
+        "facebook": 127800,
+        "twitter": 361800,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/23474.jpg?t=1608539202"
+    },
+    {
+      "title": "Alternative Press",
+      "feed_url": "https://www.altpress.com/feed/",
+      "website_url": "https://www.altpress.com/",
+      "description": "A leader in alternative culture news covering everything from new music releases to exclusive artist merchandise. Alternative Press is an American music magazine based in Cleveland, Ohio.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 628200,
+        "instagram": 848800
+      },
+      "image_url": "https://i1.feedspot.com/5015702.jpg?t=1608539209"
+    },
+    {
+      "title": "BrooklynVegan",
+      "feed_url": "https://www.brooklynvegan.com/feed/",
+      "website_url": "https://www.brooklynvegan.com/category/music/",
+      "description": "BrooklynVegan is an NYC-centric, multi-genre, mostly music blog that focuses on international music news, album and live show reviews, pictures, festivals, tour dates, gossip, tips, song and album streams, videos, industry and tech news, and special events, and more.",
+      "followers": {
+        "facebook": 131200,
+        "twitter": 185400,
+        "instagram": 245400
+      },
+      "image_url": "https://i1.feedspot.com/4478921.jpg?t=1608812660"
+    },
+    {
+      "title": "American Blues Scene",
+      "feed_url": "https://www.americanbluesscene.com/feed/",
+      "website_url": "https://www.americanbluesscene.com/",
+      "description": "Stay up-to-date on the latest happenings one Mississippi's blues and folk scene. Founded in 2010, American Blues Scene is an independent roots music content site consisting of music news, artist interviews, album/concert/book reviews, op-eds, videos, and other industry insights.",
+      "followers": {
+        "facebook": 171100,
+        "twitter": 30400,
+        "instagram": 16600
+      },
+      "image_url": "https://i1.feedspot.com/4716326.jpg?t=1700483846"
+    },
+    {
+      "title": "Spin.com \u00bb New Music",
+      "feed_url": "https://www.spin.com/new-music/feed/",
+      "website_url": "https://www.spin.com/new-music/",
+      "description": "From the concert stage to the dressing room, from the recording studio to the digital realm, SPIN surveys the modern musical landscape and the culture around it with reporting, interviews and a discerning critical ear.",
+      "followers": {
+        "facebook": 907700,
+        "twitter": 488800,
+        "instagram": 868900
+      },
+      "image_url": "https://i1.feedspot.com/4761946.jpg?t=1608539218"
+    },
+    {
+      "title": "MusIc Connection",
+      "feed_url": "https://www.musicconnection.com/feed/",
+      "website_url": "https://www.musicconnection.com/",
+      "description": "Join me, Mike Redman on 'GIG' where I have conversations with some of the most interesting people in the Film & Music industry. I'll be talking toi Music Supervisors to Re-Recording Engineers, Composers to Directors, DP's, Production Designers, and Make-up Artists.\u00a0If you are trying to figure out where to take your career, I want to help you be successful \u2026 Or, maybe you're just an enthusiast and want to know the difference between a grip and a gaffer, well you'll find it right here!",
+      "followers": {
+        "facebook": 37200,
+        "twitter": 14600,
+        "instagram": 8700
+      },
+      "image_url": "https://i1.feedspot.com/4762798.jpg?t=1750414933"
+    },
+    {
+      "title": "XXL Magazine",
+      "feed_url": "https://www.xxlmag.com/feed/",
+      "website_url": "https://www.xxlmag.com/",
+      "description": "A leading voice in hip-hop since 1997, XXL delivers the latest hip-hop music, news and features to a highly engaged urban audience in print and online.",
+      "followers": {
+        "facebook": 3200000,
+        "twitter": 4800000,
+        "instagram": 9400000
+      },
+      "image_url": "https://i1.feedspot.com/274305.jpg?t=1608539228"
+    },
+    {
+      "title": "Los Angeles Times",
+      "feed_url": "https://www.latimes.com/entertainment/music/posts/rss2.0.xml",
+      "website_url": "https://www.latimes.com/music",
+      "description": "Read Pop & Hiss, the Los Angeles Times music blog. Get a look at L.A.'s many music scenes from the mainstream to the underground.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 3800000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/68234.jpg?t=1608539231"
+    },
+    {
+      "title": "Rolling Stone \u00bb Music",
+      "feed_url": "https://www.rollingstone.com/music/feed/",
+      "website_url": "https://www.rollingstone.com/music/",
+      "description": "The latest news and more from Rolling Stone magazine. Get the latest Rolling Stone new music news, song and album reviews, free music downloads, artist videos & pictures, playlists and more.",
+      "followers": {
+        "facebook": 5400000,
+        "twitter": 6100000
+      },
+      "image_url": "https://i1.feedspot.com/4131394.jpg?t=1608539235"
+    },
+    {
+      "title": "American Songwriter",
+      "feed_url": "https://americansongwriter.com/feed/",
+      "website_url": "https://americansongwriter.com/news/",
+      "description": "American Songwriter brings you interviews, songwriting tips, news, reviews and lyric contests, business insight, blogs, and online exclusive content for aspiring or professional songwriters and serious music enthusiasts. American Songwriter is a bimonthly magazine, established in 1984 covering every aspect of the craft and art of songwriting.",
+      "followers": {
+        "facebook": 16600,
+        "twitter": 64000,
+        "instagram": 181400
+      },
+      "image_url": "https://i1.feedspot.com/4761349.jpg?t=1670994969"
+    },
+    {
+      "title": "Dancing Astronaut",
+      "feed_url": "https://dancingastronaut.com/feed/",
+      "website_url": "https://dancingastronaut.com/music/",
+      "description": "A leading dance music media site in the US. The mission is to expose and promote electronic dance music in the digital media space in order to grow the industry's reach and support talented artists.",
+      "followers": {
+        "facebook": 831800,
+        "twitter": 279200,
+        "instagram": 448200
+      },
+      "image_url": "https://i1.feedspot.com/3372856.jpg?t=1608539249"
+    },
+    {
+      "title": "Rap Radar",
+      "feed_url": "https://rapradar.com/feed/",
+      "website_url": "https://rapradar.com/",
+      "description": "Rap Radar is the Premiere Rap Blog for the latest news, music and video in Hip Hop Culture. Articles cover albums, mixtapes, songs, and videos.",
+      "followers": {
+        "facebook": 46400,
+        "twitter": 192200
+      },
+      "image_url": "https://i1.feedspot.com/321657.jpg?t=1625465934"
+    },
+    {
+      "title": "Global Media Blog",
+      "feed_url": "https://globalmoneyworld.com/index.php/category/global-media-blog/feed/",
+      "website_url": "https://globalmoneyworld.com/index.php/category/global-media-blog/",
+      "description": "Our mission at Global Money Group is to bring you the best in urban entertainment. We don't to go with the flow but be the flow and go against what is popular but go with what is true. With each release we want to bring the listener an enjoyable and authentic experience.",
+      "followers": {
+        "facebook": 945
+      },
+      "image_url": "https://i1.feedspot.com/5007127.jpg?t=1608539668"
+    },
+    {
+      "title": "Aquarium Drunkard",
+      "feed_url": "https://feeds.feedburner.com/AnAquariumDrunkard",
+      "website_url": "https://aquariumdrunkard.com/",
+      "description": "Aquarium Drunkard is an eclectic audio blog featuring daily music reviews, interviews, features, mp3 samples and sessions. Digging globally, AD bridges contemporary sounds with psych, jazz, avant-garde, folk, garage, soul, funk, r&b and beyond.",
+      "followers": {
+        "facebook": 43100,
+        "twitter": 60200,
+        "instagram": 74900
+      },
+      "image_url": "https://i1.feedspot.com/4761955.jpg?t=1629209985"
+    },
+    {
+      "title": "Obscure Sound",
+      "feed_url": "https://www.obscuresound.com/feed/",
+      "website_url": "https://www.obscuresound.com/",
+      "description": "Obscure Sound is an indie music site that I formed in February 2006 out of a love for finding new and emerging quality music. My name is Mike Mineo and I'm the site's founder and editor. This site aims to provide music fans with the latest and greatest music, preferably from artists you've never heard of before.",
+      "followers": {
+        "facebook": 11300,
+        "twitter": 6200
+      },
+      "image_url": "https://i1.feedspot.com/3497692.jpg?t=1669264698"
+    },
+    {
+      "title": "The Scenestar",
+      "feed_url": "https://feeds.feedburner.com/typepad/thescenestar/ss",
+      "website_url": "https://thescenestar.typepad.com/",
+      "description": "Los Angeles-based music blog featuring news, band interviews, show and album reviews, set times and more.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 29400,
+        "instagram": 9000
+      },
+      "image_url": "https://i1.feedspot.com/724989.jpg"
+    },
+    {
+      "title": "We All Want Someone To Shout For",
+      "feed_url": "https://weallwantsomeone.org/feed/",
+      "website_url": "https://weallwantsomeone.org/",
+      "description": "We All Want Someone To Shout For is a music blog run by Will Oliver. The blog is your Arctic Monkeys-inspired home for music reviews (singles and albums), mp3's, news, album reviews, concert reviews & photography, and film reviews.",
+      "followers": {
+        "facebook": 8800,
+        "twitter": 6900,
+        "instagram": 6500
+      },
+      "image_url": "https://i1.feedspot.com/162196.jpg?t=1608539314"
+    },
+    {
+      "title": "Ear To The Ground Music",
+      "feed_url": "https://www.eartothegroundmusic.co/feed/",
+      "website_url": "https://www.eartothegroundmusic.co/",
+      "description": "EarToTheGround Music features emerging artists primarily in folk, indie rock, and roots music scenes. The site has album reviews, artist interviews, and artist spotlights featuring a number of lesser-known musicians. It is the purpose of the site to curate the digital music world, helping artists find an audience and music fans find exceptional, high-quality music",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4392284.jpg?t=1638968400"
+    },
+    {
+      "title": "Stereogum",
+      "feed_url": "https://www.stereogum.com/feed/",
+      "website_url": "https://www.stereogum.com/all/",
+      "description": "Follow us to keep up with articles from Stereogum.",
+      "followers": {
+        "facebook": 437400,
+        "twitter": 347300,
+        "instagram": 601200
+      },
+      "image_url": "https://i1.feedspot.com/4759416.jpg?t=1608539239"
+    },
+    {
+      "title": "Gapplegate Classical-Modern Music Review Blog",
+      "feed_url": "https://classicalmodernmusic.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://classicalmodernmusic.blogspot.com/",
+      "description": "Grego Applegate Edwards's Classical-Modern Music Review blogsite covers recent releases or re-issues of recordings that feature classical and concert music, primarily of the 20th and 21st Centuries, but earlier music as well when warranted. All styles of relevance will be addressed from Late-Romantic and Neo-Romantic through High-Modern, Avant Garde and Post-Modern styles. Chamber music, orchestral, choral, operatic, and electronic forms will be considered as well as music that combines a classical element with one or more other stylistic elements.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/909008.jpg?t=1647931545"
+    },
+    {
+      "title": "Alt Citizen Magazine",
+      "feed_url": "http://altcitizen.com/feed/",
+      "website_url": "http://altcitizen.com/",
+      "description": "Alt Citizen Magazine is a Brooklyn based music & culture blog.",
+      "followers": {
+        "facebook": 6300,
+        "twitter": 23900,
+        "instagram": 9000
+      },
+      "image_url": "https://i1.feedspot.com/3680073.jpg?t=1608539431"
+    },
+    {
+      "title": "Powerpopaholic",
+      "feed_url": "https://feeds.feedburner.com/Powerpopaholic",
+      "website_url": "https://www.powerpopaholic.com/",
+      "description": "The Power Popaholic is a premier music blog that focuses on the genre of power pop and melodic rock. We also report on live shows, tour dates, gossip, MP3's, videos and just about anything a power pop fan could want.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4666601.jpg?t=1668660752"
+    },
+    {
+      "title": "Boston Classical Review",
+      "feed_url": "https://bostonclassicalreview.com/feed/",
+      "website_url": "https://bostonclassicalreview.com/",
+      "description": "Boston Classical Review was created in September 2011 by music critic and editor Lawrence A. Johnson to provide comprehensive coverage of Boston's rich and varied classical music scene.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4762084.jpg?t=1608539782"
+    },
+    {
+      "title": "Buzzbands LA",
+      "feed_url": "http://buzzbands.la/feed/",
+      "website_url": "http://buzzbands.la/",
+      "description": "Kevin Bronson and Seraphina Lotkhamnga on the music scene in Los Angeles and beyond. Buzzbands LA is premier coverage of the music scene in Los Angeles.",
+      "followers": {
+        "facebook": 12900,
+        "twitter": 16000,
+        "instagram": 25700
+      },
+      "image_url": "https://i1.feedspot.com/1421221.jpg?t=1608539296"
+    },
+    {
+      "title": "Girl Underground Music",
+      "feed_url": "https://girlundergroundmusic.com/feed/",
+      "website_url": "https://girlundergroundmusic.com/",
+      "description": "Girl Underground Music is primarily a place for local, and lesser known artists, voices to be discovered and heard, through the form of interviews, music reviews, and in the old art of sharing music.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 1600,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4762380.jpg?t=1608539470"
+    },
+    {
+      "title": "Switched on Pop",
+      "feed_url": "https://nysmusic.com/feed/",
+      "website_url": "https://nysmusic.com/",
+      "description": "A podcast all about the making and meaning of popular music. Musicologist Nate Sloan & songwriter Charlie Harding pull back the curtain on how pop hits work magic on our ears & our culture. From Vulture and the Vox Media Podcast Network.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4762145.jpg?t=1745431000"
+    },
+    {
+      "title": "Twangville",
+      "feed_url": "https://twangville.com/feed/",
+      "website_url": "https://twangville.com/",
+      "description": "Twangville is a Music Review blog featuring Alt-Country, Americana, Indie, Rock, Folk & Blues. Emphasizing the Alt side of Alt-country, we cover releases, reviews, downloads, links, and more. Explore Reader's Picks, Artist interviews, and more in our latest posts.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 5100,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/1705115.jpg?t=1670995016"
+    },
+    {
+      "title": "Sound of Boston",
+      "feed_url": "https://soundofboston.com/feed/",
+      "website_url": "https://soundofboston.com/",
+      "description": "Sound of Boston is the face of Boston's music scene. Sound of Boston is an online music publication that covers the culture, events, and artists comprising Boston's vibrant music scene. Follow this blog to stay updated on the latest local music news, releases, shows, and reviews in Boston.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/3620569.jpg?t=1610796709"
+    },
+    {
+      "title": "Kings of A&R",
+      "feed_url": "https://kingsofar.com/feed/",
+      "website_url": "https://kingsofar.com/",
+      "description": "Kings of A&R is music site read by music industry and creative professionals. Over the years, the blog has been a hub for industry execs and various creative professionals looking to work with or strike deals with new artists.",
+      "followers": {
+        "facebook": 52000,
+        "twitter": 45600,
+        "instagram": 13400
+      },
+      "image_url": "https://i1.feedspot.com/4478712.jpg?t=1608539473"
+    },
+    {
+      "title": "LA Music Blog",
+      "feed_url": "https://lamusicblog.com/feed/",
+      "website_url": "https://lamusicblog.com/",
+      "description": "Los Angeles-based music blog featuring album and concert reviews, music news, giveaways, concert dates, musician interviews, and more. The blog posts interesting articles about music.",
+      "followers": {
+        "facebook": 8100,
+        "twitter": 8500,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4762308.jpg?t=1608539480"
+    },
+    {
+      "title": "Fluxblog",
+      "feed_url": "https://www.fluxblog.org/feed/",
+      "website_url": "https://www.fluxblog.org/",
+      "description": "Fluxblog is the very first MP3 Blog. It was founded by Matthew Perpetua in 2002. He updates the blog with reviews of new music and sample mp3s, and also maintains a podcast.",
+      "followers": {
+        "facebook": 348,
+        "twitter": 17600
+      },
+      "image_url": "https://i1.feedspot.com/78149.jpg?t=1608539507"
+    },
+    {
+      "title": "Allston Pudding Blog",
+      "feed_url": "http://allstonpudding.com/feed/",
+      "website_url": "http://allstonpudding.com/",
+      "description": "Your source for Boston music, concert listings, show reviews, news, videos, and ticket giveaways. Allston Pudding is operated and written by fans and musicians to highlight new music and live music from all over.",
+      "followers": {
+        "facebook": 10900,
+        "twitter": 9600,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/4762046.jpg?t=1632202393"
+    },
+    {
+      "title": "Buffa Blog",
+      "feed_url": "https://buffablog.com/feed/",
+      "website_url": "https://buffablog.com/",
+      "description": "We write about music. Follow us to keep up with national and international music. Hypothetical and imaginary music, tertiarily. We'll keep you suitably well-informed about recently released music and upcoming shows in the Buffalo area by local and national acts.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 6300
+      },
+      "image_url": "https://i1.feedspot.com/4402950.jpg?t=1608539626"
+    },
+    {
+      "title": "Seattle Music News",
+      "feed_url": "http://www.seattlemusicnews.com/feed/",
+      "website_url": "https://www.seattlemusicnews.com/music/",
+      "description": "Seattle Music News is hiding in the shadows with gear at the ready. We take pride in the time and focus spent on reflecting our shows accurately and efficiently, and, as a growing grassroots effort, our reviews stand for themselves.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 390
+      },
+      "image_url": "https://i1.feedspot.com/4762326.jpg?t=1608539631"
+    },
+    {
+      "title": "Visible Voice",
+      "feed_url": "http://www.visiblevoice.net/new-posts/atom.xml",
+      "website_url": "http://www.visiblevoice.net/",
+      "description": "Visible Voice is a Indie Live Music News, Photos, Reviews and Recordings.",
+      "followers": {
+        "facebook": 811,
+        "twitter": 890
+      },
+      "image_url": "https://i1.feedspot.com/498488.jpg?t=1608539639"
+    },
+    {
+      "title": "Greenleaf Music",
+      "feed_url": "https://greenleafmusic.com/feed/",
+      "website_url": "https://greenleafmusic.com/",
+      "description": "Read the latest news, updates, and releases from Greenleaf Music. Curated by trumpeter Dave Douglas, Greenleaf Music is an independent jazz record label with podcasts and exclusive releases. While concentrating on releasing jazz, post-jazz and world music, the company's primary focus is creativity in musical expression.",
+      "followers": {
+        "facebook": 3000,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4761397.jpg?t=1670566065"
+    },
+    {
+      "title": "American Music Institute",
+      "feed_url": "https://www.amimusic.org/blog/feed/",
+      "website_url": "https://www.amimusic.org/blog/",
+      "description": "American Music Institute has been a standard of excellence in music education in Chicago since 2006. AMI provides lessons in-home and in-school at our two locations in Clarendon Hills and St Charles, IL. AMI's mission is to provide a high level of music education to all student's in all instruments, levels, ages, and styles of music.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 91,
+        "instagram": 663
+      },
+      "image_url": "https://i1.feedspot.com/4759306.jpg?t=1608539675"
+    },
+    {
+      "title": "AllHipHop.com",
+      "feed_url": "https://allhiphop.com/feed/",
+      "website_url": "https://allhiphop.com/",
+      "description": "Daily Hip-Hop News, Exclusives, Interviews, Reviews, and Breaking Info From AllHipHop. Read up on what's happening with rappers like Drake, Lil Wayne, Kanye West and upcoming artists too!",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 325600,
+        "instagram": 323500
+      },
+      "image_url": "https://i1.feedspot.com/1211.jpg?t=1675838370"
+    },
+    {
+      "title": "Rap Radar -",
+      "feed_url": "https://rapradar.com/feed",
+      "website_url": "https://rapradar.com/",
+      "description": "Rap Radar is a premier hip\u2011hop news and culture website\u2014founded by Elliott 'YN' Wilson\u2014that delivers the latest rap music releases, videos, and in\u2011depth interviews, alongside its popular 'Rap Radar Podcast' hosted by Wilson and Brian 'B.Dot' Miller featuring candid conversations with top-tier artists in hip-hop culture",
+      "followers": {
+        "facebook": 46400,
+        "twitter": 192200
+      },
+      "image_url": "https://i1.feedspot.com/1124376.jpg"
+    },
+    {
+      "title": "AV Club \u00bb Music",
+      "feed_url": "https://www.avclub.com/article-category/music/feed",
+      "website_url": "https://www.avclub.com/music/",
+      "description": "The A.V. Club began in the back pages of satirical newspaper The Onion in 1993, but there was nothing fake about the passionate arts coverage that grew to become a beloved entity in its own right. Paste Media acquired the A.V. Club in 2024, pledging to provide a supportive home for the some of the web's best writing on TV, films, music, videogames, books and more. We're proud to carry on the tradition of people immersed in pop culture and entertainment media to a somewhat obsessive degree.",
+      "followers": {
+        "facebook": 490100,
+        "twitter": 385100,
+        "instagram": 57200
+      },
+      "image_url": "https://i1.feedspot.com/8522936.jpg?t=1753793449"
+    },
+    {
+      "title": "Los Angeles Times \u00bb Music",
+      "feed_url": "https://www.latimes.com/entertainment-arts/music.rss",
+      "website_url": "https://www.latimes.com/entertainment-arts/music/",
+      "description": "Read music news, album and concert reviews, interviews here at the Los Angeles Times.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8540319.jpg?t=1753097725"
+    },
+    {
+      "title": "Spin",
+      "feed_url": "https://www.spin.com/feed/",
+      "website_url": "https://www.spin.com/",
+      "description": "From the concert stage to the dressing room, from the recording studio to the digital realm, SPIN surveys the modern musical landscape and the culture around it with reporting, interviews, and a discerning critical ear.",
+      "followers": {
+        "facebook": 907700,
+        "twitter": 488800,
+        "instagram": 868900
+      },
+      "image_url": "https://i1.feedspot.com/4786773.jpg?t=1609402703"
+    },
+    {
+      "title": "VIBE",
+      "feed_url": "https://www.vibe.com/c/music/feed/",
+      "website_url": "https://www.vibe.com/c/music/",
+      "description": "Get to know the latest in music news and Hip-Hop, R&B, Style, and Black Culture with Vibe Magazine. With over 25 years of celebrating Black culture, Vibe continues to embrace the soulful roots that chronicle the artists, celebrities, sounds, sounds, fashion, and events - from Hip Hop and R&B to the modern-day converging music landscape.",
+      "followers": {
+        "facebook": 2300000,
+        "twitter": 819400,
+        "instagram": 361700
+      },
+      "image_url": "https://i1.feedspot.com/5463125.jpg?t=1667557159"
+    },
+    {
+      "title": "Power Popholic",
+      "feed_url": "https://www.powerpopaholic.com/feed",
+      "website_url": "https://www.powerpopaholic.com/",
+      "description": "The latest power pop music reviews and opinions, updated frequently. Powerpopholic - The latest power pop music reviews and opinions, updated frequently.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 3100,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5697149.jpg?t=1698231148"
+    },
+    {
+      "title": "Fluxblog",
+      "feed_url": "http://www.fluxblog.org/feed",
+      "website_url": "https://www.fluxblog.org/",
+      "description": "Fluxblog is the pioneering MP3\u2011blog launched in 2002 by Matthew Perpetua, offering daily curated music selections\u2014typically two MP3s with insightful commentary\u2014that helped define and inspire the modern online music-criticism era .",
+      "followers": {
+        "twitter": 17600
+      },
+      "image_url": "https://i1.feedspot.com/5191417.jpg"
+    },
+    {
+      "title": "New Music USA",
+      "feed_url": "https://newmusicusa.org/feed/",
+      "website_url": "https://newmusicusa.org/",
+      "description": "New Music USA: fostering connections, deepening knowledge, encouraging appreciation, and providing financial support for new music created in the United States.",
+      "followers": {
+        "facebook": 27700,
+        "twitter": 19100,
+        "instagram": 15600
+      },
+      "image_url": "https://i1.feedspot.com/4761281.jpg?t=1608539303"
+    },
+    {
+      "title": "Elmore Magazine",
+      "feed_url": "http://www.elmoremagazine.com/feed",
+      "website_url": "http://www.elmoremagazine.com/",
+      "description": "Elmore Magazine covers American music with a deep knowledge and respect for its historical traditions. They seek to cover the best in blues, folk, Americana, country, rock, soul, jazz, and many more.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 8900
+      },
+      "image_url": "https://i1.feedspot.com/207591.jpg?t=1650889776"
+    },
+    {
+      "title": "Upcoming Hip-Hop",
+      "feed_url": "http://upcominghiphop.net/feed/",
+      "website_url": "http://upcominghiphop.net/",
+      "description": "We at Upcoming Hip Hop believe every upcoming artist and producer deserves the chance to get their music heard. We also believe that artists and producers should get paid for their work. We share interviews, ciphers, in the studio web series, premieres, album reviews, advice/opinion articles, news, and events to the Upcoming Hip Hop brand.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 12100,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4707445.jpg?t=1670566726"
+    },
+    {
+      "title": "Ovrld | The Austin Music Blog",
+      "feed_url": "https://ovrld.com/feed/",
+      "website_url": "https://ovrld.com/",
+      "description": "We provide songs, interviews, reviews, podcasts and more, with hopes to expand over time to include even more ways for you to explore Austin music. Our goal is to help you sift through the vibrant music scene here to find whatever it is you're looking for. Whether you're an Austinite looking for a cool concert this weekend, or you've never been to the music capital of the world but want to get the latest on what's happening here, we are here for you.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4479354.jpg?t=1610778958"
+    },
+    {
+      "title": "Music Enthusiast",
+      "feed_url": "https://musicenthusiast.net/feed/",
+      "website_url": "https://musicenthusiast.net/",
+      "description": "The Music Enthusiast blog talks about rock and roll, blues, jazz, pop, r&b, soul, and other genres that this author finds interesting. Discover reviews and commentary on some under-the-radar albums and songs from artists you may or may not have heard of.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4633508.jpg?t=1681476606"
+    },
+    {
+      "title": "Lo-Fi music",
+      "feed_url": "https://lofimusicblog.com/feed/",
+      "website_url": "https://lofimusicblog.com/",
+      "description": "Links, discussion, commentary, and reviews of experimental, electronic, ambient, new weird america, indie and lo-fi music.",
+      "followers": {
+        "twitter": 308
+      },
+      "image_url": "https://i1.feedspot.com/4671795.jpg?t=1608539621"
+    },
+    {
+      "title": "Manhattan City Music",
+      "feed_url": "https://manhattancitymusic.com/blog/feed/",
+      "website_url": "https://manhattancitymusic.com/blog/",
+      "description": "Manhattan City Music provides the finest music and entertainment in the New York area to make your corporate event, wedding reception or other special event memorable, elegant and fun! We have done thousands of parties and many high profile events around NY.",
+      "followers": {
+        "facebook": 419,
+        "twitter": 48
+      },
+      "image_url": "https://i1.feedspot.com/4762202.jpg?t=1608539642"
+    },
+    {
+      "title": "Lou Harrison: American Musical Maverick",
+      "feed_url": "http://louharrison.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://louharrison.blogspot.com/",
+      "description": "Bill Alves is a southern California composer of acoustic and electronic microtonal music, music for gamelan, video, and other works. He is the author of Music of the Peoples of the World and his discs are available from MicroFest Records, Spectral Harmonies, and Kinetica Video Library.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4761389.jpg?t=1608539813"
+    },
+    {
+      "title": "Grimy Goods | New Music",
+      "feed_url": "https://www.grimygoods.com/new-music-2/feed/",
+      "website_url": "https://www.grimygoods.com/new-music-2/",
+      "description": "Grimy Goods is L.A.'s premier music lifestyle blog. It's a hip site to discover the best new indie music, concerts, fashion and L.A. life.",
+      "followers": {
+        "facebook": 18400,
+        "twitter": 11900,
+        "instagram": 67200
+      },
+      "image_url": "https://i1.feedspot.com/4759374.jpg?t=1536133634"
+    },
+    {
+      "title": "American Music Awards",
+      "feed_url": "https://www.theamas.com/feed/",
+      "website_url": "https://www.theamas.com/",
+      "description": "Each fall, the American Music Awards celebrates the latest and greatest talents of the contemporary music scene.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 2000000,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/4762107.jpg?t=1608539671"
+    },
+    {
+      "title": "The Source \u00bb Music",
+      "feed_url": "https://thesource.com/category/music/feed/",
+      "website_url": "https://thesource.com/category/music/",
+      "description": "Listen to the latest Hip Hop tracks and mixtapes, brought to you by The Source. Watch new music videos and reminisce with your old Hip Hop favorites. The Source is an American hip hop and entertainment website and a magazine. It is the world's longest-running rap periodical, being founded as a newsletter in 1988 by Jonathan Shecter.",
+      "followers": {
+        "facebook": 1900000,
+        "twitter": 804400
+      },
+      "image_url": "https://i1.feedspot.com/4761952.jpg?t=1608539246"
+    },
+    {
+      "title": "Rap Up",
+      "feed_url": "https://www.rap-up.com/rss.xml",
+      "website_url": "https://www.rap-up.com/",
+      "description": "The latest hip-hop and R&B new music, news, photos, interviews, and videos. Rap-Up is the national hip-hop and R&B magazine that has featured music's biggest stars.",
+      "followers": {
+        "facebook": 2100000,
+        "twitter": 396000,
+        "instagram": 822200
+      },
+      "image_url": "https://i1.feedspot.com/4479339.jpg?t=1608539242"
+    },
+    {
+      "title": "Magnetic Magazine",
+      "feed_url": "https://magneticmag.com/feed/",
+      "website_url": "https://magneticmag.com/",
+      "description": "Magnetic Magazine, the edm-culture blog featuring interviews, edm-downloads, house music and new electronic music. Founded in 2011 by BPM founder/publisher, David Ireland and editor Rob Simas, Magnetic is the EDM focused e-zine that combines social media, culture, style and music via a custom- designed, user-centered URL.",
+      "followers": {
+        "facebook": 64000,
+        "twitter": 20300,
+        "instagram": 45600
+      },
+      "image_url": "https://i1.feedspot.com/4709831.jpg?t=1608539263"
+    },
+    {
+      "title": "Largehearted Boy",
+      "feed_url": "https://largeheartedboy.com/feed/",
+      "website_url": "https://largeheartedboy.com/",
+      "description": "Largehearted Boy is a literature and music website featuring daily free and legal music downloads as well as news and features from the world of music, literature, and pop culture.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 30900
+      },
+      "image_url": "https://i1.feedspot.com/531648.jpg?t=1608539439"
+    },
+    {
+      "title": "Music Savage",
+      "feed_url": "https://www.musicsavage.com/feed/",
+      "website_url": "https://www.musicsavage.com/",
+      "description": "Music Savage is a place to discover great music.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 3300,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/309174.jpg?t=1608539646"
+    },
+    {
+      "title": "Soulsville Foundation",
+      "feed_url": "https://soulsvillefoundation.org/feed/",
+      "website_url": "https://www.rap-up.com/",
+      "description": "If you believe in the power of music and opportunity to shape a young person's life and rebuild communities, please give now to the Soulsville Foundation.",
+      "followers": {
+        "facebook": 94300
+      },
+      "image_url": "https://i1.feedspot.com/5016835.jpg?t=1608539660"
+    },
+    {
+      "title": "Billboard",
+      "feed_url": "https://www.billboard.com/feed/rss/",
+      "website_url": "https://www.billboard.com/",
+      "description": "Billboard is a leading American music platform that provides chart rankings, music news, artist interviews, and industry insights across genres.",
+      "followers": {
+        "facebook": 14600000,
+        "twitter": 14300000,
+        "instagram": 17600000
+      },
+      "image_url": "https://i1.feedspot.com/7338830.jpg?t=1753793039"
+    },
+    {
+      "title": "Raptology",
+      "feed_url": "https://raptology.com/feed/",
+      "website_url": "https://raptology.com/",
+      "description": "Breaking news, songs, video, and mixtapes updated daily. Plus interviews, album reviews, girls and editorials. Raptology has got it all.",
+      "followers": {
+        "facebook": 602,
+        "twitter": 699,
+        "instagram": 50900
+      },
+      "image_url": "https://i1.feedspot.com/5064274.jpg?t=1754476563"
+    },
+    {
+      "title": "Remezcla \u00bb Music",
+      "feed_url": "https://remezcla.com/music/feed/",
+      "website_url": "https://remezcla.com/music/",
+      "description": "Remezcla is your source for emerging Latin music, culture, and entertainment.",
+      "followers": {
+        "facebook": 867100,
+        "twitter": 69700,
+        "instagram": 247100
+      },
+      "image_url": "https://i1.feedspot.com/4759800.jpg?t=1608539252"
+    },
+    {
+      "title": "BaebleMusic",
+      "feed_url": "https://www.baeblemusic.com/rss/baebleContentRSS.aspx",
+      "website_url": "https://www.baeblemusic.com/",
+      "description": "Baeble Music is a Brooklyn-based music platform dedicated to providing high quality, originally produced video programming that extends far beyond its web-based home and its city borders. It is devoted to providing daily coverage on all things music and pop culture.",
+      "followers": {
+        "facebook": 72700,
+        "twitter": 10000
+      },
+      "image_url": "https://i1.feedspot.com/4762211.jpg?t=1608539299"
+    },
+    {
+      "title": "Boston Hassle | Music",
+      "feed_url": "https://bostonhassle.com/new-music/feed/",
+      "website_url": "https://bostonhassle.com/new-music/",
+      "description": "The Boston Hassle is an arts and music organization brought to you by the musicians, artists, writers, and enthusiasts in the Boston area. We foster an innovative, compelling, and interconnected music, art, and film community in the greater Boston area through our inclusive grassroots participatory culture.",
+      "followers": {
+        "facebook": 13600,
+        "twitter": 4200,
+        "instagram": 17100
+      },
+      "image_url": "https://i1.feedspot.com/4762063.jpg"
+    },
+    {
+      "title": "The Joy Of 6 Music",
+      "feed_url": "https://thejoyof6.com/feed/",
+      "website_url": "https://chorusamerica.org/",
+      "description": "Latest Hip Hop Music Source. Subscribe to get the latest updates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5399536.jpg?t=1653136123"
+    },
+    {
+      "title": "Nash Country Daily | Country Music News",
+      "feed_url": "https://www.nashcountrydaily.com/feed",
+      "website_url": "https://chorusamerica.org/",
+      "description": "Exclusive interviews, up-to-date news, videos and podcasts for country music fans across the globe.",
+      "followers": {
+        "facebook": 3
+      },
+      "image_url": "https://i1.feedspot.com/4715019.jpg?t=1608539370"
+    },
+    {
+      "title": "Chorus America | Advocacy & Research",
+      "feed_url": "https://chorusamerica.org/feed/term/6/rss.xml",
+      "website_url": "https://chorusamerica.org/",
+      "description": "Chorus America is dedicated to the advancement of choral music organizations, their leaders, and singers.",
+      "followers": {
+        "facebook": 13300,
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/4761323.jpg?t=1613110607"
+    },
+    {
+      "title": "SYFFAL.com",
+      "feed_url": "http://www.syffal.com/rss.xml",
+      "website_url": "http://www.syffal.com/",
+      "description": "SYFFAL.com started out as a group of friends emailing their music finds to one another with clever little write ups that eschewed the traditional album review format. We started SYFFAL as a way to share our love for the music that moved us and connect artists we loved with people beyond our small group. We cover Independent Music, write Album Reviews, conduct Interviews & discuss burritos aplenty.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/708176.jpg?t=1608539504"
+    },
+    {
+      "title": "Faronheit",
+      "feed_url": "http://faronheit.com/feed/",
+      "website_url": "http://faronheit.com/",
+      "description": "Faronheit is a Chicago-based music blog featuring daily album reviews and mp3s. We support independent, up-and-coming artists seeking to gain a wider listening audience.",
+      "followers": {
+        "facebook": 577,
+        "twitter": 1600,
+        "instagram": 331
+      },
+      "image_url": "https://i1.feedspot.com/4762004.jpg?t=1608539607"
+    },
+    {
+      "title": "FIDDLEFREAK | Your Folk Music Since 2008",
+      "feed_url": "https://fiddlefreak.com/feed/",
+      "website_url": "https://fiddlefreak.com/",
+      "description": "Fiddlefreak is the blog of Stuart Mason. I review alt.country, old time, bluegrass, Celtic, blues, and other music of the people, on a purely subjective basis.",
+      "followers": {
+        "facebook": 512,
+        "twitter": 267
+      },
+      "image_url": "https://i1.feedspot.com/4715391.jpg?t=1608539635"
+    },
+    {
+      "title": "Flotzam",
+      "feed_url": "https://www.flotzam.com/syndication.axd",
+      "website_url": "https://www.flotzam.com/",
+      "description": "Flotzam is a blog focused on Seattle Music. It is a Seattle music website with reviews, interviews, mp3s and more.",
+      "followers": {
+        "facebook": 33,
+        "twitter": 36
+      },
+      "image_url": "https://i1.feedspot.com/4762332.jpg?t=1608539657"
+    }
+  ]
+}

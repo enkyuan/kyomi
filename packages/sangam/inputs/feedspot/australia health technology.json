@@ -1,0 +1,49 @@
+{
+  "category": "Australia Health Technology",
+  "source_url": "https://rss.feedspot.com/australia_health_technology_rss_feeds",
+  "feeds": [
+    {
+      "title": "Talking Health Tech News",
+      "feed_url": "https://www.talkinghealthtech.com/rss",
+      "website_url": "https://www.talkinghealthtech.com/news",
+      "description": "Talking HealthTech represents the large community of people around Australia who are creating health technology, providing healthcare services and receiving care. It is bringing together key players and influencers to promote innovation and collaboration for better healthcare enabled by technology.",
+      "followers": {
+        "facebook": 448,
+        "twitter": 788,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5354219.jpg?t=1639649741"
+    },
+    {
+      "title": "Australian Health Information Technology",
+      "feed_url": "https://feeds.feedburner.com/AustralianHealthInformationTechnology",
+      "website_url": "https://aushealthit.blogspot.com/index.html",
+      "description": "This blog has only three major objectives- inform readers of news and happenings in the e-Health domain, provide commentary on e-Health in Australia, and encourage discussion of the matters raised in the blog so hopefully, readers can get a balanced view of what is really happening.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5354156.jpg?t=1639646767"
+    },
+    {
+      "title": "Coviu Blog",
+      "feed_url": "https://www.coviu.com/en-au/blog/rss.xml",
+      "website_url": "https://www.coviu.com/en-au/blog",
+      "description": "The latest telehealth industry news, case studies and product updates. We're on a mission to provide the best software for video visits so you can extend the outstanding face-to-face care you give patients to online consultations.",
+      "followers": {
+        "facebook": 541,
+        "twitter": 922,
+        "instagram": 312
+      },
+      "image_url": "https://i1.feedspot.com/5354160.jpg?t=1639648654"
+    },
+    {
+      "title": "Pulse+IT News",
+      "feed_url": "https://www.pulseit.news/feed/",
+      "website_url": "https://www.pulseit.news/",
+      "description": "Pulse+IT features an editorial platform and digital circulation that reflects the importance of holistic and comprehensive Health IT education and reporting.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/4467540.jpg?t=1639645587"
+    }
+  ]
+}

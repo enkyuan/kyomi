@@ -1,0 +1,573 @@
+{
+  "category": "Liverpool",
+  "source_url": "https://rss.feedspot.com/liverpool_rss_feeds",
+  "feeds": [
+    {
+      "title": "This Is Anfield",
+      "feed_url": "https://www.thisisanfield.com/feed/",
+      "website_url": "https://www.thisisanfield.com/",
+      "description": "Liverpool FC news, opinion and videos updated daily with LFC photographs, fixtures, match reports, football quizzes, features and discussion from Anfield.",
+      "followers": {
+        "facebook": 1900000,
+        "twitter": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/4763132.jpg?t=1608636667"
+    },
+    {
+      "title": "The Empire of The Kop",
+      "feed_url": "https://www.empireofthekop.com/feed/",
+      "website_url": "https://www.empireofthekop.com/",
+      "description": "Liverpool Blog, Empire of the Kop, is a fan site for LFC player and team live news and video highlights.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 1900000
+      },
+      "image_url": "https://i1.feedspot.com/4380922.jpg?t=1608636674"
+    },
+    {
+      "title": "Anfield Online",
+      "feed_url": "https://www.anfield-online.co.uk/feed/",
+      "website_url": "https://www.anfield-online.co.uk/",
+      "description": "Anfield Online is the independent Liverpool FC website covering all the news, fixtures and events surrounding the World's number one football club.",
+      "followers": {
+        "facebook": 202300,
+        "twitter": 171800,
+        "instagram": 9700
+      },
+      "image_url": "https://i1.feedspot.com/4763500.jpg?t=1608636678"
+    },
+    {
+      "title": "The Anfield Wrap",
+      "feed_url": "https://www.theanfieldwrap.com/feed/",
+      "website_url": "https://www.theanfieldwrap.com/",
+      "description": "The Anfield Wrap shares with the world honest, uncensored experiences of supporting Liverpool home and away through the eyes of passionate, match-going supporters",
+      "followers": {
+        "facebook": 316300,
+        "twitter": 569900,
+        "instagram": 320800
+      },
+      "image_url": "https://i1.feedspot.com/4763187.jpg?t=1597298173"
+    },
+    {
+      "title": "Liverpool FC",
+      "feed_url": "https://www.koptalk.com/feed/",
+      "website_url": "https://www.koptalk.com/",
+      "description": "Liverpool FC news brought to you by KopTalk, the ultimate Liverpool FC website. KopTalk is the most successful fans website in the world. Established in 1998, KopTalk is the Liverpool FC website that the others try to rival.",
+      "followers": {
+        "facebook": 87100,
+        "twitter": 19700
+      },
+      "image_url": "https://i1.feedspot.com/4763473.jpg?t=1608636694"
+    },
+    {
+      "title": "The Liverpool Offside",
+      "feed_url": "https://liverpooloffside.sbnation.com/rss/current.xml",
+      "website_url": "https://liverpooloffside.sbnation.com/",
+      "description": "Your best source for quality Liverpool news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 80800,
+        "twitter": 11000
+      },
+      "image_url": "https://i1.feedspot.com/4763149.jpg?t=1608636698"
+    },
+    {
+      "title": "Paisley Gates",
+      "feed_url": "https://paisleygates.com/feed",
+      "website_url": "https://paisleygates.com/",
+      "description": "Keep up with Liverpool news, including Team updates, Transfer rumors, Editorials and Opinions, and many more special features. Liverpool Blog Paisley Gates is an LFC fan news blog that provides the latest news, and transfer stories for the Anfield faithful.",
+      "followers": {
+        "facebook": 4400
+      },
+      "image_url": "https://i1.feedspot.com/1372895.jpg?t=1608636721"
+    },
+    {
+      "title": "LFCHistory.net",
+      "feed_url": "https://www.lfchistory.net/feeds.ashx",
+      "website_url": "https://www.lfchistory.net/Articles/BySeries/9",
+      "description": "LFCHistory.net is the number one website for all kinds of Liverpool FC related facts, stats and etc.",
+      "followers": {
+        "facebook": 54800,
+        "twitter": 34600,
+        "instagram": 6300
+      },
+      "image_url": "https://i1.feedspot.com/4763776.jpg?t=1608636713"
+    },
+    {
+      "title": "AnfieldIndex.com",
+      "feed_url": "https://anfieldindex.com/feed",
+      "website_url": "https://anfieldindex.com/",
+      "description": "Anfieldindex is a statistical blogging community for fans of Liverpool Football Club.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5394111.jpg?t=1650970450"
+    },
+    {
+      "title": "Live4Liverpool",
+      "feed_url": "https://live4liverpool.com/feed/",
+      "website_url": "https://live4liverpool.com/",
+      "description": "Liverpool News and Blogs. Everything you need to know about the best team in the world.",
+      "followers": {
+        "facebook": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4763470.jpg?t=1608636730"
+    },
+    {
+      "title": "And Could He Play",
+      "feed_url": "https://www.andcouldheplay.com/feed/",
+      "website_url": "https://www.andcouldheplay.com/",
+      "description": "A blog about all things #LFC. Liverpool FC Transfer Rumours, Analysis & LFC Match Reports.",
+      "followers": {
+        "twitter": 6600
+      },
+      "image_url": "https://i1.feedspot.com/4763697.jpg?t=1608636862"
+    },
+    {
+      "title": "LFC Globe",
+      "feed_url": "https://lfcglobe.co.uk/feed/",
+      "website_url": "https://lfcglobe.co.uk/",
+      "description": "Liverpool FC news, highlights, transfer news & live streams for LFC fixtures. Daily updates of the latest LFC news and discussion from Anfield.",
+      "followers": {
+        "facebook": 10,
+        "twitter": 10300
+      },
+      "image_url": "https://i1.feedspot.com/5057661.jpg?t=1608636812"
+    },
+    {
+      "title": "Friends Of Liverpool",
+      "feed_url": "https://www.friendsofliverpool.com/feed/",
+      "website_url": "https://www.friendsofliverpool.com/",
+      "description": "A website dedicated to bringing you news, views, opinions, podcasts and way, way more of the greatest club in the history of football. #LFC #YNWA #LiverpoolFC",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4465837.jpg?t=1608636837"
+    },
+    {
+      "title": "The LFC File",
+      "feed_url": "https://www.thelfcfile.com/feed/",
+      "website_url": "https://www.thelfcfile.com/",
+      "description": "The LFC File is a blog about Liverpool Football Club. The articles here are informative and come to you by knowledgeable and well-informed writers who have a passion for the club. The content includes weekly match previews and reports, Opinion and links to similar sites and sources of information about the club.",
+      "followers": {
+        "facebook": 26300
+      },
+      "image_url": "https://i1.feedspot.com/4951529.jpg?t=1608636880"
+    },
+    {
+      "title": "Daily Mail Online \u00bb Liverpool",
+      "feed_url": "https://www.dailymail.co.uk/sport/liverpool/index.rss",
+      "website_url": "https://www.dailymail.co.uk/sport/liverpool/index.html/",
+      "description": "Find the latest Liverpool team news including live scores, fixtures and results plus transfer and manager updates right here.",
+      "followers": {
+        "facebook": 6600000
+      },
+      "image_url": "https://i1.feedspot.com/8645476.jpg?t=1753355156"
+    },
+    {
+      "title": "BBC \u00bb Liverpool",
+      "feed_url": "https://feeds.bbci.co.uk/sport/football/teams/liverpool/rss.xml",
+      "website_url": "https://www.bbc.com/sport/football/teams/liverpool/",
+      "description": "The home of Liverpool on BBC Sport online. Includes the latest news stories, transfers, results, fixtures, video and audio.",
+      "followers": {
+        "facebook": 15300000,
+        "twitter": 10600000,
+        "instagram": 3600000
+      },
+      "image_url": "https://i1.feedspot.com/8645480.jpg?t=1753355223"
+    },
+    {
+      "title": "The Athletic \u00bb Liverpool",
+      "feed_url": "https://www.nytimes.com/athletic/rss/football/liverpool/",
+      "website_url": "https://www.nytimes.com/athletic/football/team/liverpool/",
+      "description": "Breaking Liverpool news and in-depth analysis from the best newsroom in sports. Follow your favorite clubs. Get the latest injury updates, player news and more from around the league.",
+      "followers": {
+        "facebook": 707100,
+        "twitter": 612600,
+        "instagram": 328300
+      },
+      "image_url": "https://i1.feedspot.com/8645474.jpg?t=1753355237"
+    },
+    {
+      "title": "The Sun \u00bb Porto",
+      "feed_url": "https://www.thesun.co.uk/feed/",
+      "website_url": "https://www.thesun.co.uk/sport/football/team/2974521/fc-porto/",
+      "description": "Get the latest news, exclusives, sports, celebrities, showbiz, politics, business, and lifestyle from The Sun. The Best for News, Sport, Showbiz, Celebrities, etc. The Sun was launched in 1969 with the slogan 'forward with the people,' because that is what we believe in. It cares about the quality of life, the kind of world we live in, and about people. The Sun is more than a newspaper. It is an instigator, an entertainer, a cultural reference point, a finger on the pulse, and a daily relationship.",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 2100000,
+        "instagram": 483100
+      },
+      "image_url": "https://i1.feedspot.com/4464042.jpg?t=1684197121"
+    },
+    {
+      "title": "The US Sun \u00bb New York Yankees",
+      "feed_url": "https://www.the-sun.com/feed",
+      "website_url": "https://www.the-sun.com/topic/new-york-yankees/",
+      "description": "Latest from Liverpool FC with transfer news and rumours, fixtures, match predictions and commentary plus exclusives, pictures and videos from the Sun from The US Sun",
+      "followers": {
+        "facebook": 864600,
+        "twitter": 12100
+      },
+      "image_url": "https://i1.feedspot.com/5127218.jpg?t=1753355495"
+    },
+    {
+      "title": "talkSPORT \u00bb Liverpool",
+      "feed_url": "https://talksport.com/feed/",
+      "website_url": "https://talksport.com/sport/football/team/113209/liverpool/",
+      "description": "We are the world's biggest sports radio station. Get the latest and exclusive sports updates on our site. The talkSPORT network, incorporating talkSPORT and sister station talkSPORT 2, has more exclusive English football than any other UK broadcaster.",
+      "followers": {
+        "facebook": 4099999,
+        "twitter": 2400000,
+        "instagram": 987700
+      },
+      "image_url": "https://i1.feedspot.com/5128747.jpg?t=1660806545"
+    },
+    {
+      "title": "Football365 \u00bb Liverpool",
+      "feed_url": "https://www.football365.com/liverpool/rss2",
+      "website_url": "https://www.football365.com/liverpool/",
+      "description": "Latest Liverpool news, transfer news, fixtures, results and features from Football365.",
+      "followers": {
+        "facebook": 529100,
+        "twitter": 76700,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/8645478.jpg?t=1753355711"
+    },
+    {
+      "title": "Sports Mole \u00bb Porto",
+      "feed_url": "https://www.sportsmole.co.uk/rss.xml",
+      "website_url": "https://www.sportsmole.co.uk/football/porto/",
+      "description": "The Houston Dynamo page on Sports Mole offers up-to-date news, fixtures, results, transfer rumours, injury reports, and match previews\u2014everything a Houston Dynamo fan needs to stay informed in one place.",
+      "followers": {
+        "facebook": 202100,
+        "instagram": 11100
+      },
+      "image_url": "https://i1.feedspot.com/5125235.jpg?t=1748428411"
+    },
+    {
+      "title": "Rush The Kop",
+      "feed_url": "https://rushthekop.com/feed",
+      "website_url": "https://rushthekop.com/",
+      "description": "Find the latest Liverpool FC news, transfers, rumors, signings, and EPL news, brought to you by the insider fans and analysts at Rush the Kop",
+      "followers": {
+        "facebook": 17700
+      },
+      "image_url": "https://i1.feedspot.com/5009005.jpg?t=1753372130"
+    },
+    {
+      "title": "Liverpool Echo",
+      "feed_url": "https://www.liverpoolecho.co.uk/rss.xml",
+      "website_url": "https://www.liverpoolecho.co.uk/",
+      "description": "Liverpool Echo, the very latest Liverpool and Merseyside news, sport, what's on, weather and travel. Plus the latest Liverpool FC and Everton FC news.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 589900,
+        "instagram": 245900
+      },
+      "image_url": "https://i1.feedspot.com/4130740.jpg?t=1753355999"
+    },
+    {
+      "title": "Dave OCKOP",
+      "feed_url": "https://www.daveockop.com/feed/",
+      "website_url": "https://www.daveockop.com/",
+      "description": "Read about transfers, team news, boardroom changes and more related to Liverpool Football Club",
+      "followers": {
+        "facebook": 29200,
+        "twitter": 561600,
+        "instagram": 125500
+      },
+      "image_url": "https://i1.feedspot.com/8645483.jpg?t=1753356027"
+    },
+    {
+      "title": "Sport Witness \u00bb Liverpool",
+      "feed_url": "https://sportwitness.co.uk/category/premier-league/liverpool/feed/",
+      "website_url": "https://sportwitness.co.uk/category/premier-league/liverpool/",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 141700
+      },
+      "image_url": "https://i1.feedspot.com/8645479.jpg?t=1753356283"
+    },
+    {
+      "title": "Liverpool World \u00bb Liverpool FC",
+      "feed_url": "https://www.liverpoolworld.uk/sport/football/liverpool/rss",
+      "website_url": "https://www.liverpoolworld.uk/sport/football/liverpool/",
+      "description": "Liverpool FC transfer updates, breaking news, latest injury and team news, match reports, fixtures and stadium updates from Liverpool World.",
+      "followers": {
+        "facebook": 64000,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/8645477.jpg?t=1753356299"
+    },
+    {
+      "title": "Foootball Talk \u00bb Liverpool",
+      "feed_url": "https://football-talk.co.uk/topics/liverpool/feed/",
+      "website_url": "https://football-talk.co.uk/topics/liverpool/",
+      "description": "Latest Liverpool news including transfer news, match reports, match previews, team news, video goals and editorial pieces.",
+      "followers": {
+        "facebook": 39000,
+        "twitter": 10900
+      },
+      "image_url": "https://i1.feedspot.com/8645484.jpg?t=1753356345"
+    },
+    {
+      "title": "Football Transfer Tavern \u00bb Liverpool",
+      "feed_url": "https://www.footballtransfertavern.com/feed/",
+      "website_url": "https://www.footballtransfertavern.com/liverpool-fc-news/",
+      "description": "The Transfer Tavern provides News, breakdown, and analysis on all things about football. The Football Transfer Tavern is your one-stop shop for all transfer rumors, news, and breaking headlines.",
+      "followers": {
+        "facebook": 8100,
+        "twitter": 10700
+      },
+      "image_url": "https://i1.feedspot.com/5415332.jpg?t=1656401985"
+    },
+    {
+      "title": "Sport Bible \u00bb Liverpool",
+      "feed_url": "https://www.sportbible.com/liverpool.rss",
+      "website_url": "https://www.sportbible.com/liverpool/",
+      "description": "SPORTbible brings you the latest Liverpool news and stories of the day. Stay up to date with the latest Liverpool news, videos and exclusive stories",
+      "followers": {
+        "facebook": 14600000,
+        "instagram": 7700000
+      },
+      "image_url": "https://i1.feedspot.com/8645475.jpg?t=1753356383"
+    },
+    {
+      "title": "Kop Blog",
+      "feed_url": "https://www.kopblog.com/feed/",
+      "website_url": "https://www.kopblog.com/",
+      "description": "Liverpool Betting Tips & Everything LFC",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8645487.jpg?t=1753356603"
+    },
+    {
+      "title": "The Scottish Sun \u00bb Liverpool FC",
+      "feed_url": "https://www.thescottishsun.co.uk/feed/",
+      "website_url": "https://www.thescottishsun.co.uk/sport/football/team/173659/liverpool/",
+      "description": "Get the latest Scottish, UK and world news, sport, celebrity gossip, showbiz, politics, business and lifestyle from The Scottish Sun. The Scottish Sun strives to the very highest standards of accuracy in its reporting and continues to invest in original journalism in print and online.",
+      "followers": {
+        "facebook": 433600,
+        "twitter": 61600
+      },
+      "image_url": "https://i1.feedspot.com/4629738.jpg?t=1608117650"
+    },
+    {
+      "title": "Liverpool.com",
+      "feed_url": "https://www.liverpool.com/?service=rss",
+      "website_url": "https://www.liverpool.com/",
+      "description": "Get the latest Liverpool FC news and updates with Liverpool.com. Featuring breaking news, live match coverage, transfer updates and more for LFC fans.",
+      "followers": {
+        "facebook": 132900,
+        "twitter": 20100
+      },
+      "image_url": "https://i1.feedspot.com/8645481.jpg?t=1753356625"
+    },
+    {
+      "title": "The Anfield Talk Blog",
+      "feed_url": "https://theanfieldtalk.com/feed/",
+      "website_url": "https://theanfieldtalk.com/blog/",
+      "description": "Your ultimate source for Liverpool FC news, match analysis, and fan insights.",
+      "followers": {
+        "facebook": 3700
+      },
+      "image_url": "https://i1.feedspot.com/8645486.jpg?t=1753356817"
+    },
+    {
+      "title": "OLSC Toronto Blog",
+      "feed_url": "https://lfctoronto.com/feed/",
+      "website_url": "https://lfctoronto.com/community/blog/",
+      "description": "The LFCToronto community blog shares club updates, matchday recaps, fan events, member stories, contests, and celebrations\u2014keeping Liverpool FC supporters in Toronto connected and engaged.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/8645473.jpg?t=1753356870"
+    },
+    {
+      "title": "Liverool FC Hub",
+      "feed_url": "https://liverpoolfchub.com/feed/",
+      "website_url": "https://liverpoolfchub.com/",
+      "description": "Liverpool FC Hub is a fan-driven news platform focused on Liverpool Football Club\u2014providing up-to-date transfer updates, rumors, youth prospects, and match analysis for Reds supporters.",
+      "followers": {
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/8645485.jpg?t=1753371819"
+    },
+    {
+      "title": "LFC Betting",
+      "feed_url": "https://www.lfcbetting.co.uk/feed/",
+      "website_url": "https://www.lfcbetting.co.uk/",
+      "description": "If you're a big red and you like a bet, then LFC Betting is the place to be. The blog is written by true Liverpool FC fans who love nothing more than to write about their beloved club. Covering stats & facts, upcoming fixtures and analysis and everything in between.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8645482.jpg"
+    },
+    {
+      "title": "Kopworld",
+      "feed_url": "http://kopworld.net/feed/",
+      "website_url": "http://kopworld.net/",
+      "description": "All the latest LFC news & views in one place! Official page of Kopworld - the independent Liverpool FC website.",
+      "followers": {
+        "facebook": 11000,
+        "twitter": 312800
+      },
+      "image_url": "https://i1.feedspot.com/4465829.jpg?t=1608636681"
+    },
+    {
+      "title": "The Tomkins Times",
+      "feed_url": "https://tomkinstimes.com/feed/",
+      "website_url": "https://tomkinstimes.com/",
+      "description": "News, Opinion, Statistics and Discussion about Liverpool FC Football Club. Website focusing on thoughtful analysis of Liverpool FC, and home to Liverpool fans.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 6800
+      },
+      "image_url": "https://i1.feedspot.com/4763195.jpg?t=1608636736"
+    },
+    {
+      "title": "Liverpool F.C.",
+      "feed_url": "https://liverpoolfc-thereds.tumblr.com/rss",
+      "website_url": "https://liverpoolfc-thereds.tumblr.com/",
+      "description": "A post on everything related to Liverpool F.C.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4763847.jpg"
+    },
+    {
+      "title": "oh you beauty",
+      "feed_url": "https://ohyoubeauty.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://ohyoubeauty.blogspot.com/",
+      "description": "oh you beauty is a blog dedicated to the best team 'Liverpool FC'.",
+      "followers": {
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/4763480.jpg?t=1608636819"
+    },
+    {
+      "title": "Anfield Road",
+      "feed_url": "https://www.anfieldroad.com/feed/",
+      "website_url": "https://www.anfieldroad.com/",
+      "description": "Anfield Road, home of Liverpool FC, the most successful side in English football history. AnfieldRoad.com is an independent LFC fansite established in 2004.",
+      "followers": {
+        "facebook": 22600,
+        "twitter": 20700,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/1316813.jpg?t=1608636825"
+    },
+    {
+      "title": "LIVERPOOLKITA",
+      "feed_url": "http://liverpoolkita.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://liverpoolkita.blogspot.com/",
+      "description": "Liverpool Fan Malaysia, Liverpool Fc Malaysia Liverpool fc news, articles, facts, comments etc in Bahasa Malaysia. News, articles, facts about Liverpool fc in Malaysia.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4763792.jpg?t=1608636828"
+    },
+    {
+      "title": "Liverpool-Kop",
+      "feed_url": "https://feeds.feedburner.com/liverpool-kop.com",
+      "website_url": "https://www.liverpool-kop.com/",
+      "description": "The No 1 site for critical realism about Liverpool Football Club, with analysis of Liverpool FC matches, Liverpool FC players, and Liverpool FC transfer news.",
+      "followers": {
+        "facebook": 23900
+      },
+      "image_url": "https://i1.feedspot.com/3694269.jpg?t=1608636849"
+    },
+    {
+      "title": "YNWA Rousing The Kop",
+      "feed_url": "https://anfieldcentral.tumblr.com/rss",
+      "website_url": "https://anfieldcentral.tumblr.com/",
+      "description": "English Liverpool FC fan living in Sydney, Australia. Occasional Podcast guest, writer for Rousing.",
+      "followers": {
+        "twitter": 28500
+      },
+      "image_url": "https://i1.feedspot.com/4763855.jpg"
+    },
+    {
+      "title": "LFCladiesfans",
+      "feed_url": "http://liverpoolladiesfans.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://liverpoolladiesfans.blogspot.com/",
+      "description": "All the news related to Liverpool Ladies football.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4763799.jpg?t=1753372003"
+    },
+    {
+      "title": "Play Up, Liverpool F.C.",
+      "feed_url": "https://playupliverpool.com/feed/",
+      "website_url": "https://playupliverpool.com/",
+      "description": "The history of Liverpool Football Club from John Houlding and John McKenna to Matt Busby, Bill Shankly, Kenny Dalglish and Steven Gerrard. Facts, figures and statistics.",
+      "followers": {
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4763703.jpg?t=1608636911"
+    },
+    {
+      "title": "Quickly Taken Corner",
+      "feed_url": "https://quicklytakencorner.com/feed/",
+      "website_url": "https://quicklytakencorner.com/",
+      "description": "Analysis of football and tactics. Musings about the gifts of joy that football can bring us. By an obsessed American fan of Liverpool Football Club.",
+      "followers": {
+        "facebook": 56
+      },
+      "image_url": "https://i1.feedspot.com/5446890.jpg?t=1663325101"
+    },
+    {
+      "title": "Liverpool FC Blog",
+      "feed_url": "https://www.lfczone.com/feed/",
+      "website_url": "https://www.lfczone.com/",
+      "description": "News about Liverpool FC, highlights, transfer gossip and videos.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4763562.jpg?t=1608637081"
+    },
+    {
+      "title": "Liverpool Core",
+      "feed_url": "https://liverpoolcore.com/feed/",
+      "website_url": "https://liverpoolcore.com/",
+      "description": "At Liverpool Core, we provide you with latest Liverpool Football Club Updates. Our efficient content writers are dedicated Liverpool FC Fans and very passionate about blogging. We consistently update with latest Liverpool fixtures, injury news, transfer news and much more. Stay tuned with all happenings at LFC with us.",
+      "followers": {
+        "twitter": 327
+      },
+      "image_url": "https://i1.feedspot.com/5206068.jpg?t=1674039528"
+    },
+    {
+      "title": "Anfield Watch",
+      "feed_url": "https://anfieldwatch.co.uk/feed/",
+      "website_url": "https://www.anfieldwatch.co.uk/",
+      "description": "We are Anfield Watch, the three-time award-winning independent Liverpool Football Club site, with news, views, exclusive interviews, and analysis. From the fans for the fans.",
+      "followers": {
+        "facebook": 254200,
+        "twitter": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/4763528.jpg?t=1611124840"
+    },
+    {
+      "title": "Liverpool FC",
+      "feed_url": "https://www.liverpoolfc.com/news/media-watch.rss",
+      "website_url": "https://www.liverpoolfc.com/news",
+      "description": "The only place for all your official Liverpool Football Club news. Find out about the latest injury updates, transfer information, ticket availability, academy progress and team news.",
+      "followers": {
+        "twitter": 24700000,
+        "instagram": 49100000
+      },
+      "image_url": "https://i1.feedspot.com/4380920.jpg?t=1753371935"
+    },
+    {
+      "title": "Red and White Kop",
+      "feed_url": "https://www.redandwhitekop.com/forum/index.php?PHPSESSID=hk0g5t3g2efai0hird8sc9qbhv&type=rss;action=.xml",
+      "website_url": "https://www.redandwhitekop.com/",
+      "description": "Live information from Red and White Kop Liverpool FC Forum. They are an independent forum for intelligent debate about Liverpool FC that encourages good new writing about the club and football more generally.",
+      "followers": {
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4763705.jpg"
+    },
+    {
+      "title": "LFC Liverpool FC",
+      "feed_url": "https://lfc-liverpoolfc.tumblr.com/rss",
+      "website_url": "https://lfc-liverpoolfc.tumblr.com/",
+      "description": "Liverpool FC news updates, opinion, stream links, match commentary & more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4763841.jpg"
+    }
+  ]
+}

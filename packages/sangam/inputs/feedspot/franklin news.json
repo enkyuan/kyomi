@@ -1,0 +1,38 @@
+{
+  "category": "Franklin News",
+  "source_url": "https://rss.feedspot.com/franklin_new_jersey_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Franklin Reporter & Advocate",
+      "feed_url": "https://franklinreporter.com/feed/",
+      "website_url": "https://franklinreporter.com/",
+      "description": "Get the latest Franklin Township news, updates and information you need from the only local, independent news source in town.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 544
+      },
+      "image_url": "https://i1.feedspot.com/5165115.jpg"
+    },
+    {
+      "title": "Franklin Township, NJ",
+      "feed_url": "https://www.franklintownshipnj.org/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.franklintownshipnj.org/CivicAlerts.aspx",
+      "description": "Franklin Township, NJ is dedicated to keeping residents informed and up-to-date by providing the latest news about sports, business, performing arts, health/safety issues, human interest and more.",
+      "followers": {
+        "facebook": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5165082.jpg?t=1593093046"
+    },
+    {
+      "title": "TAPinto \u00bb Franklin Township",
+      "feed_url": "https://www.tapinto.net/towns/franklin-township/",
+      "website_url": "https://www.tapinto.net/towns/franklin-township/",
+      "description": "TAPinto is a network of franchised local newspapers. Here you can get updates, learn about franchising and see some of our best stories. It covers local news about sports, police, fire, and government issues. It is an all-online, objective, newspaper that serves the residents, organizations, and business owners of Franklin Township, New Jersey.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 286
+      },
+      "image_url": "https://i1.feedspot.com/5165060.jpg?t=1593092454"
+    }
+  ]
+}

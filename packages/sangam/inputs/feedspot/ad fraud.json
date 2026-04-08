@@ -1,0 +1,70 @@
+{
+  "category": "Ad Fraud",
+  "source_url": "https://rss.feedspot.com/ad_fraud_rss_feeds",
+  "feeds": [
+    {
+      "title": "Fraud Blocker",
+      "feed_url": "https://fraudblocker.com/feed",
+      "website_url": "https://fraudblocker.com/articles",
+      "description": "Our platform detects some of the most popular and sophisticated fraudulent click activity used today. Our mission is to improve advertising performance by reducing or eliminating clicks from bots and other non-human sources. Learn about click fraud, our blocking services, and all the latest industry news on our official blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5504037.jpg?t=1675667964"
+    },
+    {
+      "title": "Anura Blog",
+      "feed_url": "https://www.anura.io/blog/rss.xml",
+      "website_url": "https://www.anura.io/blog",
+      "description": "Anura takes the guesswork out of fraud detection. We provide the industry's leading fraud solution with definitive results to improve your conversions and marketing spending. We deliver the level of accuracy, thoroughness, and analytics to exceed the demands of every industry. Stay updated on the latest insights on how to protect your business from fraud that may be hurting your marketing efforts.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 280,
+        "instagram": 354
+      },
+      "image_url": "https://i1.feedspot.com/5504038.jpg?t=1675667166"
+    },
+    {
+      "title": "Fraudlogix Blog",
+      "feed_url": "https://www.fraudlogix.com/feed/",
+      "website_url": "https://www.fraudlogix.com/our-blog/",
+      "description": "Fraudlogix has been fighting ad fraud since it was founded in 2010. We specialize in verification solutions for Advertisers, DSPs, Networks, Exchanges & SSPs. Fraudlogix develops robust solutions with an emphasis on flat-fee pricing, allowing our clients to affordably monitor 100% of their traffic vs. having to sample to keep costs down.",
+      "followers": {
+        "facebook": 311,
+        "twitter": 314
+      },
+      "image_url": "https://i1.feedspot.com/5504035.jpg?t=1675667467"
+    },
+    {
+      "title": "Pixalate Blog",
+      "feed_url": "https://www.pixalate.com/blog/rss.xml",
+      "website_url": "https://www.pixalate.com/blog",
+      "description": "Pixalate serves all digital ad industry stakeholders, including brands, publishers, agencies, ad platforms, analysts, compliance, privacy, and more. We can fit any client's specific needs thanks to a full suite of tools covering every corner of the digital ad industry, including global supply chain intelligence, ad fraud monitoring and blocking, and campaign measurement.",
+      "followers": {
+        "facebook": 641,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5504034.jpg?t=1675667291"
+    },
+    {
+      "title": "Integral Ad Science \u00bb Ad Fraud",
+      "feed_url": "https://integralads.com/apac/insider/category/topics-apac/ad-fraud-apac/feed/",
+      "website_url": "https://integralads.com/apac/insider/category/topics-apac/ad-fraud-apac/",
+      "description": "IAS is a global leader in digital media quality, going beyond verification to set the benchmark for trust and transparency for the world's leading brands, publishers, and platforms. Our mission is to be the global benchmark for trust and transparency in digital media quality for the world's leading brands, publishers, and platforms. Here, on the following page, we share insights and our knowledge on and about Ad Fraud.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 9200
+      },
+      "image_url": "https://i1.feedspot.com/5504036.jpg?t=1675667878"
+    },
+    {
+      "title": "Opticks Security Blog",
+      "feed_url": "https://blog.optickssecurity.com/rss.xml",
+      "website_url": "https://blog.optickssecurity.com/",
+      "description": "Opticks Security Blog is an Opticks resource on ad fraud and mobile advertising. Launched in 2018, we've made it our mission to deliver innovative and reliable software to beat advertising fraud. We're making digital advertising fair and transparent for marketers. We've built the solutions and expertise to help you succeed - one campaign at a time.",
+      "followers": {
+        "facebook": 63,
+        "twitter": 240
+      },
+      "image_url": "https://i1.feedspot.com/5504039.jpg?t=1675667241"
+    }
+  ]
+}

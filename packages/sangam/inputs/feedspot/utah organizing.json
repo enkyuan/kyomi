@@ -1,0 +1,48 @@
+{
+  "category": "Utah Organizing",
+  "source_url": "https://rss.feedspot.com/utah_organizing_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Whole Package Organizing Blog",
+      "feed_url": "https://thewholepackageorganizing.com/feed/",
+      "website_url": "https://thewholepackageorganizing.com/blog/",
+      "description": "The Whole Package Organizing: A SLC-based professional organizing partnership specializing in whole home organization.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7275729.jpg?t=1712664534"
+    },
+    {
+      "title": "Nice & Neat Homes Blog",
+      "feed_url": "https://www.niceandneathomes.com/feed/",
+      "website_url": "https://www.niceandneathomes.com/blog/",
+      "description": "Professional Home Organizers in the Greater Salt Lake Area.Professional hands-on home organizing service that creates declutters your spaces and creates an organization system that works. Their Salt Lake City-based team creates manageable organizing solutions for homes across Utah.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7275727.jpg?t=1710757439"
+    },
+    {
+      "title": "Reset Your Nest Blog",
+      "feed_url": "https://www.resetyournest.com/blog-feed.xml",
+      "website_url": "https://www.resetyournest.com/blog",
+      "description": "Curated organization for your unique needs that is both beautiful and functional. Reset Your Nest is a premier home organization and relocation company with locations across Utah. Our blog is full of before and afters and organization tips.",
+      "followers": {
+        "facebook": 1500
+      },
+      "image_url": "https://i1.feedspot.com/7275730.jpg?t=1739255507"
+    },
+    {
+      "title": "Utah County Homes Blog \u00bb Home Organization",
+      "feed_url": "https://utahcountyhomes.blog/category/home-organization-2/feed/",
+      "website_url": "https://utahcountyhomes.blog/category/home-organization-2/",
+      "description": "Utah County Homes is a valuable resource for anyone interested in real estate in Utah County, UT. Whether you're buying, selling, or simply curious about the local market, this blog provides insights, tips, and information related to home listings, preparing for photoshoots, and more. If you're navigating the real estate landscape, explore their content to stay informed!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7275726.jpg?t=1710757477"
+    },
+    {
+      "title": "Britnee Tanner Home Blog",
+      "feed_url": "https://britneetanner.com/blog?format=rss",
+      "website_url": "https://britneetanner.com/blog",
+      "description": "This home organizer blog features Britnee Tanner's organizing ideas and declutter checklists for a minimalist home.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7275728.jpg?t=1710757544"
+    }
+  ]
+}

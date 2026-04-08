@@ -1,0 +1,76 @@
+{
+  "category": "Australian Economics",
+  "source_url": "https://rss.feedspot.com/australian_economics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Evolving Economics Blog",
+      "feed_url": "https://www.jasoncollins.blog/index.xml",
+      "website_url": "https://www.jasoncollins.blog/",
+      "description": "A blog by Jason Collins on economics, evolution and those areas in between. Posts mainly focussed on topics such as Economics, Behavioural and Data science.",
+      "followers": {
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4531552.jpg?t=1618407624"
+    },
+    {
+      "title": "William Mitchell Blog",
+      "feed_url": "https://billmitchell.org/blog/?feed=rss2",
+      "website_url": "https://billmitchell.org/blog/",
+      "description": "Bill Mitchell is a Professor of Economics and Director of the Centre of Full Employment and Equity (CofFEE), at the University of Newcastle, NSW, Australia. His blog is about Modern Monetary Theory with importance to macroeconomic reality. The blog provides information about macroeconomic research, teaching, and advocacy!",
+      "followers": {
+        "twitter": 20800
+      },
+      "image_url": "https://i1.feedspot.com/270947.jpg?t=1663139270"
+    },
+    {
+      "title": "John Quiggin",
+      "feed_url": "https://johnquiggin.com/feed/",
+      "website_url": "https://johnquiggin.com/",
+      "description": "John Quiggin's blog focuses on Australian economics and politics. He delivers an interesting perspective on current events in Australia. He also hosts a weekly 'sandpit' forum style discussion.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 15100
+      },
+      "image_url": "https://i1.feedspot.com/271156.jpg?t=1618405785"
+    },
+    {
+      "title": "MacroBusiness",
+      "feed_url": "https://www.macrobusiness.com.au/feed/",
+      "website_url": "https://www.macrobusiness.com.au/",
+      "description": "MacroBusiness uses reason, history and ideas to bring you a bigger picture of the choices they face for their economy, businesses and investments. T",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 7400
+      },
+      "image_url": "https://i1.feedspot.com/4925762.jpg?t=1620970907"
+    },
+    {
+      "title": "Core Economics",
+      "feed_url": "https://economics.com.au/feed/",
+      "website_url": "https://economics.com.au/",
+      "description": "This blog is authored by Joshua Gans, an economics professor at the University of Melbourne. In 2008, the blog became multi-authored with other academic economists joining Core Economics. Here you will find commentary about economic policy, issues, strategy and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4925736.jpg?t=1620970695"
+    },
+    {
+      "title": "Conus Business Consultancy Services Blog",
+      "feed_url": "https://www.conus.com.au/blog/feed/",
+      "website_url": "https://www.conus.com.au/blog/",
+      "description": "Conus Consultancy Services provide you with clarity over your business direction, your achievements, your financial position, your greatest challenges and the economic environment that you operate within and more.",
+      "followers": {
+        "twitter": 523
+      },
+      "image_url": "https://i1.feedspot.com/4925749.jpg?t=1620970633"
+    },
+    {
+      "title": "Thomas the Think Engine",
+      "feed_url": "https://thomasthethinkengine.com/feed/",
+      "website_url": "https://thomasthethinkengine.com/",
+      "description": "This blog is authored by Jason Murphy, a Melbourne-based economist. This blog focuses on current economic news, finance, and economic policy.",
+      "followers": {
+        "twitter": 7900
+      },
+      "image_url": "https://i1.feedspot.com/4925801.jpg?t=1620970626"
+    }
+  ]
+}

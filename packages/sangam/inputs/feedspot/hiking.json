@@ -1,0 +1,1380 @@
+{
+  "category": "Hiking",
+  "source_url": "https://rss.feedspot.com/hiking_rss_feeds",
+  "feeds": [
+    {
+      "title": "Hike",
+      "feed_url": "https://www.rei.com/blog/hike/feed",
+      "website_url": "https://www.rei.com/blog/hike",
+      "description": "The Hike category of REI Co-op Journal features every information a hiker must know. Read the REI Co-op Journal for stories about a life outdoors.",
+      "followers": {
+        "facebook": 2100000,
+        "twitter": 452900,
+        "instagram": 2300000
+      },
+      "image_url": "https://i1.feedspot.com/4492892.jpg?t=1611118179"
+    },
+    {
+      "title": "The Hiking Life \u00bb Colorado Trail",
+      "feed_url": "https://www.thehikinglife.com/feed/",
+      "website_url": "https://www.thehikinglife.com/tag/colorado-trail/",
+      "description": "The Hiking Life is a compilation of tips, tales & trip reports from the backcountry. It's author, Cam 'Swami' Honan, has hiked more than 55,000 miles in some 56 countries, and has been described by Backpacker magazine as the most travelled hiker on earth.",
+      "followers": {
+        "facebook": 41600,
+        "twitter": 1400,
+        "instagram": 10000
+      },
+      "image_url": "https://i1.feedspot.com/1715775.jpg?t=1705038457"
+    },
+    {
+      "title": "Big Sky Walker",
+      "feed_url": "https://bigskywalker.com/feed/",
+      "website_url": "https://bigskywalker.com/",
+      "description": "Welcome! My name is Rod Benson: born in 1959, grew up in Harlem (MT), taught high school science for 37 yrs. I enjoy hiking, peak-bagging, trail-running, snowshoeing, kayaking, meteorology, geology, Nordic skating, and photography. To truly appreciate the featured hikes, you'll need to check out the photo tours. I will post a new hiking adventure as often as I can.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5261989.jpg?t=1616739110"
+    },
+    {
+      "title": "Vancouver Trails Blog",
+      "feed_url": "https://www.vancouvertrails.com/blog/feed/",
+      "website_url": "https://www.vancouvertrails.com/blog/",
+      "description": "The Vancouver Trails blog covers hiking in southwest British Columbia. It provides hiking information for south western British Columbia, including Vancouver, Whistler, Squamish, Chilliwack, and more. Vancouver Trails' mission is to get people outside and enjoying the nature surrounding Vancouver.",
+      "followers": {
+        "facebook": 21600,
+        "twitter": 5200,
+        "instagram": 82100
+      },
+      "image_url": "https://i1.feedspot.com/4492377.jpg?t=1611118196"
+    },
+    {
+      "title": "Lotsafreshair Blog",
+      "feed_url": "https://lotsafreshair.com/feed/",
+      "website_url": "https://lotsafreshair.com/blog/",
+      "description": "Lotsafreshair is all about sharing tips, tricks and adventures in the great outdoors. Encouraging one another to get out into the freshair, maybe try something they haven't done before. The blog provides bushwalking and hiking tips from an unexpected outdoors chick, Caro Ryan.",
+      "followers": {
+        "facebook": 27000,
+        "twitter": 1700,
+        "instagram": 11100
+      },
+      "image_url": "https://i1.feedspot.com/4399451.jpg?t=1611118661"
+    },
+    {
+      "title": "Scenes From The Trail",
+      "feed_url": "https://scenesfromthetrail.com/feed/",
+      "website_url": "https://scenesfromthetrail.com/",
+      "description": "Exploring the outdoors and capturing images of my journeys. Detailed hike descriptions for all skill levels, history of the areas and trails along with images of ruins, mines, waterfalls and scenic views.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4743654.jpg?t=1611119247"
+    },
+    {
+      "title": "Great American Hikes Blog",
+      "feed_url": "https://www.greatamericanhikes.com/blog-feed.xml",
+      "website_url": "https://www.greatamericanhikes.com/blog",
+      "description": "Great American Hikes brings you epic outdoor adventures to help discover incredible places all over the United States. We're an outdoor adventure blog with an emphasis on hiking and backpacking. Our adventure guides detail incredible hiking trips in some of America's most beautiful areas.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5513570.jpg?t=1677499790"
+    },
+    {
+      "title": "Section Hiker",
+      "feed_url": "https://sectionhiker.com/feed/",
+      "website_url": "https://sectionhiker.com/",
+      "description": "SectionHiker provides information on hiking, camping, and backpacking for beginners and experts. Outdoor instruction, gear reviews, gear lists, destinations and trip reports. The blogs mission is to promote lightweight hiking, backpacking, and mountaineering so that people of all ages can hike safely, comfortably and mindfully.",
+      "followers": {
+        "facebook": 20100,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/85089.jpg?t=1604381407"
+    },
+    {
+      "title": "HikingGuy",
+      "feed_url": "https://hikingguy.com/feed/",
+      "website_url": "https://hikingguy.com/",
+      "description": "HikingGuy blog provides detailed hiking directions, hiking gear recommendations, and hiking tips for everyone. The blog provides everything you need to know for your next hiking adventure.",
+      "followers": {
+        "facebook": 14600,
+        "twitter": 2900,
+        "instagram": 12400
+      },
+      "image_url": "https://i1.feedspot.com/4492322.jpg?t=1611118194"
+    },
+    {
+      "title": "American Hiking Society",
+      "feed_url": "https://americanhiking.org/feed/",
+      "website_url": "https://americanhiking.org/hiking-resources/",
+      "description": "As the national voice for America's hikers, American Hiking Society promotes and protects foot trails, their surrounding natural areas, and the hiking experience.",
+      "followers": {
+        "facebook": 252900,
+        "twitter": 75800,
+        "instagram": 87500
+      },
+      "image_url": "https://i1.feedspot.com/4492356.jpg"
+    },
+    {
+      "title": "NJ Hiking",
+      "feed_url": "https://www.njhiking.com/feed/",
+      "website_url": "https://www.njhiking.com/",
+      "description": "The focus of this site is providing resources for hiking in New Jersey, as well as the surrounding areas in New York and Pennsylvania. The site is useful for anyone already hiking who is looking for hike ideas, for someone interested in trying hiking out to see if they like it, and for out-of-area hikers who have moved to NJ (or are visiting) and want to know where the best hiking is.",
+      "followers": {
+        "facebook": 28500,
+        "twitter": 4700,
+        "instagram": 21300
+      },
+      "image_url": "https://i1.feedspot.com/4492405.jpg?t=1611118654"
+    },
+    {
+      "title": "Bearfoot Theory \u00bb Hiking",
+      "feed_url": "https://bearfoottheory.com/category/hiking/feed/",
+      "website_url": "https://bearfoottheory.com/category/hiking/",
+      "description": "Hiking posts by Kristen Bor to help you hit the trail. Whether you're looking for an awesome day hike with big views, the best hiking gear, or tips for taking your hiking skills to the next level, we've got you covered.",
+      "followers": {
+        "facebook": 59200,
+        "twitter": 3000,
+        "instagram": 55100
+      },
+      "image_url": "https://i1.feedspot.com/5306335.jpg?t=1627553407"
+    },
+    {
+      "title": "She Dreams Of Alpine Blog",
+      "feed_url": "https://www.shedreamsofalpine.com/blog?format=RSS",
+      "website_url": "https://www.shedreamsofalpine.com/blog/",
+      "description": "Mountaineer and Blogger Allison Boyle teaches women how to become safe, sufficient, and confident back-packers. Her shes gives impartial and very informative articles covering Mountains Climbing, Bouldering, Gear Reviews Hiking Backpacking Backcountry Tips Camping, and more.",
+      "followers": {
+        "twitter": 34,
+        "instagram": 61500
+      },
+      "image_url": "https://i1.feedspot.com/4797398.jpg?t=1688105661"
+    },
+    {
+      "title": "Moon & Honey Travel Blog",
+      "feed_url": "https://www.moonhoneytravel.com/blog/feed/",
+      "website_url": "https://www.moonhoneytravel.com/blog/",
+      "description": "Moon & Honey Travel is a blog dedicated to travelers who love to hike. It's for travelers who strive to integrate the great outdoors into their travel plans.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 38,
+        "instagram": 43200
+      },
+      "image_url": "https://i1.feedspot.com/5233535.jpg?t=1609841375"
+    },
+    {
+      "title": "Wildland Trekking Blog",
+      "feed_url": "https://wildlandtrekking.com/blog/feed",
+      "website_url": "https://wildlandtrekking.com/blog/",
+      "description": "A Hiking, Adventure, and Travel Blog featuring articles on hiking & backpacking trips, trekking adventures, gear reviews, and stories. Wildland connects people to nature on guided hiking adventures in some of the world's most beautiful landscapes.",
+      "followers": {
+        "facebook": 20000,
+        "twitter": 145,
+        "instagram": 22500
+      },
+      "image_url": "https://i1.feedspot.com/5306336.jpg?t=1627553323"
+    },
+    {
+      "title": "Exploring Wild",
+      "feed_url": "https://exploringwild.com/feed/",
+      "website_url": "https://exploringwild.com/",
+      "description": "Detailed resources for hikers, bikepackers and bicycle tourers, and thoughtful travelers, based on years of exploring our wild and wonderful world.",
+      "followers": {
+        "facebook": 958,
+        "twitter": 278
+      },
+      "image_url": "https://i1.feedspot.com/5145034.jpg?t=1611118215"
+    },
+    {
+      "title": "Monkeys and Mountains Adventure Travel Blog",
+      "feed_url": "https://monkeysandmountains.com/feed/",
+      "website_url": "https://monkeysandmountains.com/hiking-adventure-travel-blog/",
+      "description": "I'm Laurel, the founder of Monkeys and Mountains Adventure Travel, a tour company and travel blog to help you plan your active holidays. The ultimate guide to adventure travel & personally curated adventure holidays to ease your travel planning by award-winning travel blogger, Laurel Robbins.",
+      "followers": {
+        "facebook": 10800,
+        "twitter": 71800
+      },
+      "image_url": "https://i1.feedspot.com/7389.jpg?t=1614669604"
+    },
+    {
+      "title": "PMags",
+      "feed_url": "https://pmags.com/feed",
+      "website_url": "https://pmags.com/",
+      "description": "PMags is all about lightweight backpacking, camping, and thru-hiking and other Ramblings by Paul Magnanti. The blog provides practical advice and musings on the outdoors, hiking, backpacking , ski touring and camping.",
+      "followers": {
+        "facebook": 980,
+        "twitter": 1900,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/246900.jpg?t=1611118641"
+    },
+    {
+      "title": "Walking Hiking Blog",
+      "feed_url": "https://www.hillwalktours.com/walking-hiking-blog/feed/",
+      "website_url": "https://www.hillwalktours.com/walking-hiking-blog/",
+      "description": "Hillwalk Tours hiking blog is the place to go to find out about hiking trails in Ireland, England, Scotland and further afield.",
+      "followers": {
+        "facebook": 21400,
+        "twitter": 4700,
+        "instagram": 11100
+      },
+      "image_url": "https://i1.feedspot.com/5030868.jpg?t=1611118621"
+    },
+    {
+      "title": "Hiking For Her",
+      "feed_url": "https://www.hiking-for-her.com/best-hiking-tips-for-women.xml",
+      "website_url": "https://www.hiking-for-her.com/",
+      "description": "Hiking For Her Website provides best hiking tips for women hikers. The author this blog knows that best hiking tips for women hikers are built around the reality that hiking females have different needs and approach hiking differently than the guys.",
+      "followers": {
+        "facebook": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4493640.jpg?t=1616741195"
+    },
+    {
+      "title": "The Ultralight Hiker",
+      "feed_url": "https://www.theultralighthiker.com/feed/",
+      "website_url": "https://www.theultralighthiker.com/",
+      "description": "The Ultralight Hiker is all about light weight, ultra light hiking, backpacking, bushwalking, hunting, tracks, trails, adventures, gear and reviews. Sharing over sixty years experience of ultralight hiking & hunting in Australia & New Zealand.",
+      "followers": {
+        "facebook": 10800,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4492846.jpg?t=1611118698"
+    },
+    {
+      "title": "Best Hike",
+      "feed_url": "https://besthike.com/feed/",
+      "website_url": "https://besthike.com/",
+      "description": "Best Hike is an index of the best hikes, treks and tramps in the world. Its mission is simply catalogue the best hikes, walks that can change your life. It is a day-to-day update on what's happening with the site. And what's happening around the world.",
+      "followers": {
+        "twitter": 720
+      },
+      "image_url": "https://i1.feedspot.com/4492780.jpg?t=1611118157"
+    },
+    {
+      "title": "Ultralight Hiker Blog",
+      "feed_url": "https://ultralighthiker.com.au/blogs/all.atom",
+      "website_url": "https://ultralighthiker.com.au/blogs/all",
+      "description": "Covers everything from hiking advice, news, hiking gear lists, ultralight backpacking dry bags and stuff sacks, dyneema products, sawyer water filtration, hiking food, cooking and quilts and more.",
+      "followers": {
+        "facebook": 3000,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5320492.jpg?t=1654840952"
+    },
+    {
+      "title": "Pinoy Mountaineer",
+      "feed_url": "https://feeds.feedburner.com/pinoymountaineer/pzyI",
+      "website_url": "http://www.pinoymountaineer.com/",
+      "description": "The online portal for hiking in the Philippines. Pinoy Mountaineer has the most comprehensive list of guides for mountains and outdoor destinations in the country, as well as bulletins to keep you updated with the local mountaineering scene. This blog is authored by Gideon Lasco, physician, anthropologist, writer, and environmental advocate.",
+      "followers": {
+        "facebook": 298300,
+        "twitter": 65000,
+        "instagram": 21400
+      },
+      "image_url": "https://i1.feedspot.com/4493614.jpg?t=1637848891"
+    },
+    {
+      "title": "Live And Let Hike",
+      "feed_url": "https://liveandlethike.com/feed/",
+      "website_url": "https://liveandlethike.com/",
+      "description": "Live And Let Hike is an incomplete guide to hiking Utah, Colorado, Virginia, and beyond. Andrew Wojtanik is a 26-year-old budding foreign affairs scholar and practitioner, but also an avid hiker with an affinity for exploration.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4493714.jpg?t=1611118740"
+    },
+    {
+      "title": "Hiking Dude Blog",
+      "feed_url": "https://feeds.feedburner.com/HikingDudeBlog",
+      "website_url": "https://hikingdude.com/blog.php",
+      "description": "A blog about long-distance hiking where the author hikes the scenic trails of the world. The goal is to carrying less and hiking more in a safe, comfortable way.",
+      "followers": {
+        "facebook": 900,
+        "twitter": 168
+      },
+      "image_url": "https://i1.feedspot.com/312009.jpg?t=1627553519"
+    },
+    {
+      "title": "Planned Spontaneity",
+      "feed_url": "https://plannedspontaneityhiking.com/feed/",
+      "website_url": "https://plannedspontaneityhiking.com/",
+      "description": "Planned Spontaneity is a blog about hiking around the Midwest and beyond. The author loves to discover new places and share them with the readers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4492824.jpg"
+    },
+    {
+      "title": "Arizona Hiking",
+      "feed_url": "https://arizonahiking.blogspot.com/feeds/posts/default",
+      "website_url": "https://arizonahiking.blogspot.com/",
+      "description": "Mare Czinar has been exploring Arizona trails for more than 20 years. Mare sought to create a fully vetted, frequently updated online hike travelogue with current driving and hiking directions to spare fellow hikers the mental and physical wear and tear of aimless wandering. In addition, blog entries are amended when road closures or wildfires restrict trail access. When not working, blogging, writing about the great outdoors, or picking up dog poo, Mare attempts to 'stay found' while checking out new trails.",
+      "followers": {
+        "twitter": 379
+      },
+      "image_url": "https://i1.feedspot.com/5273637.jpg?t=1623655041"
+    },
+    {
+      "title": "Hiking Las Vegas Blog",
+      "feed_url": "https://www.hikinglasvegas.com/2/feed",
+      "website_url": "https://www.hikinglasvegas.com/blog",
+      "description": "Hiking Las Vegas blog provides Branch Whitney's free hiking maps to the best hikes around Las Vegas, NV and the Southwest.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4492378.jpg?t=1611119639"
+    },
+    {
+      "title": "Around The Bend Friends Hiking Club Of Las Vegas",
+      "feed_url": "http://aroundthebendfriends2.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://aroundthebendfriends2.blogspot.com/",
+      "description": "Around The Bend Friends Hiking Club Of Las Vegas is a group of young-at-heart people age 50 and over who participate in outdoor activities in the areas and states surrounding Las Vegas. They welcome adult guests from anywhere in the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4493591.jpg?t=1611118861"
+    },
+    {
+      "title": "Nutty Hiker Adventures",
+      "feed_url": "https://nuttyhiker.com/feed/",
+      "website_url": "https://nuttyhiker.com/",
+      "description": "Nutty Hiker Adventures is an online publication for those who love the outdoors and exploring their local area or traveling. An Outdoor Adventure Travel & Lifestyle Blog of Outdoor Adventures, Backpacking, Hiking, Camping, and Outdoor Photography. Offering expert tips, gear reviews, and trip-planning advice on America's best hiking, backpacking, and outdoor adventures as well as travel destinations to explore.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 2900,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4769186.jpg?t=1604381771"
+    },
+    {
+      "title": "Three Hiking Sisters",
+      "feed_url": "https://3hikingsisters.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://3hikingsisters.blogspot.com/",
+      "description": "We are 3 sisters who love to hike together. Sometimes it is only two of us, and sometimes we hike with others. This is a record of some of our hikes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5334890.jpg?t=1634888954"
+    },
+    {
+      "title": "Hike 734 Blog",
+      "feed_url": "https://hike734.com/feed/",
+      "website_url": "https://hike734.com/blog/",
+      "description": "See video blogs and descriptions of every mile of trail in Glacier National Park. Every trail has video of the trail including animals and plants along the way! In 2011, Jake hiked all 734 miles of trail in Glacier National Park in one summer. He's now using his hiking expertise to help you have an amazing trip.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 2000,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4492364.jpg?t=1665129382"
+    },
+    {
+      "title": "She-ra Hikes",
+      "feed_url": "https://sherahikes.com/feed/",
+      "website_url": "https://sherahikes.com/",
+      "description": "The author of this blog has been exploring the world, one step at a time. She shares her hiking experiences and tips about hiking on her blog.",
+      "followers": {
+        "instagram": 12600
+      },
+      "image_url": "https://i1.feedspot.com/4493634.jpg?t=1647513375"
+    },
+    {
+      "title": "Hiking In The White Mountains & Adirondacks",
+      "feed_url": "http://dailey7779.blogspot.com/feeds/posts/default",
+      "website_url": "http://dailey7779.blogspot.com/",
+      "description": "Chris Dailey's blog provides trip reports and pictures about hiking in the White Mountains of New Hampshire and the Adirondacks of New York. 48, 4,000 footers in New Hampshire.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2458311.jpg?t=1611120388"
+    },
+    {
+      "title": "Jan's Jaunts and Jabberings",
+      "feed_url": "https://jansjaunts.wordpress.com/feed/",
+      "website_url": "https://jansjaunts.wordpress.com/",
+      "description": "Follow along with me, Jan, aka BeeKeeper, as I travel around finding the best Cherry Pickin' spots. I'm proud to be a Cherry Picker \ud83d\ude42 I love Disneyland hikes, minus the people. I tend to adventure off season in the popular places. I'm happy to follow the path less traveled. And that folks is what you'll find on my blog.",
+      "followers": {
+        "facebook": 496
+      },
+      "image_url": "https://i1.feedspot.com/4505957.jpg?t=1611120438"
+    },
+    {
+      "title": "Florida Hikes",
+      "feed_url": "https://floridahikes.com/feed/",
+      "website_url": "https://floridahikes.com/",
+      "description": "Thousands of miles of hiking trails, biking, paddling, camping, and more! Explore Florida's outdoors with hiking experts and authors Sandra Friend and John Keatley.",
+      "followers": {
+        "facebook": 42300,
+        "twitter": 1800,
+        "instagram": 18000
+      },
+      "image_url": "https://i1.feedspot.com/4492348.jpg?t=1610630502"
+    },
+    {
+      "title": "Fat Man Little Trail",
+      "feed_url": "https://fatmanlittletrail.com/feed/",
+      "website_url": "https://fatmanlittletrail.com/",
+      "description": "A blog meant to get unlikely hikers out on the trail with articles covering trial reviews from a non athlete perspective, reviews of locally owned restaurants near each hike, product reviews, a getting started tips segment. Fat Man Little Trail is about a fat guy hiking hills and finding the best local restaurants!",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5376382.jpg?t=1646139031"
+    },
+    {
+      "title": "Steve and Noelle",
+      "feed_url": "https://steveandnoelle.com/feed/",
+      "website_url": "https://steveandnoelle.com/blog-posts/",
+      "description": "Exploring our relationship as we live together in a small tent attempting to thru-hike the Pacific Crest Trail. Living in the moment. Hiker Trash & Van Life.",
+      "followers": {
+        "instagram": 283
+      },
+      "image_url": "https://i1.feedspot.com/5041680.jpg?t=1611120681"
+    },
+    {
+      "title": "Hiking With Shawn Blog",
+      "feed_url": "https://www.hikingwithshawn.com/feed/",
+      "website_url": "https://www.hikingwithshawn.com/blog/",
+      "description": "Covers articles about hiking, backpacking, biking and outdoor recreation tips, reviews and guides. The mission of Hiking with Shawn is to promote the Shawnee National Forest and State Parks in southern Illinois in terms of outdoor recreational activities with conservation in mind while advocating for local economic stabilization.",
+      "followers": {
+        "facebook": 33000,
+        "twitter": 6200,
+        "instagram": 6400
+      },
+      "image_url": "https://i1.feedspot.com/5346147.jpg?t=1637664371"
+    },
+    {
+      "title": "Must Hike Must Eat",
+      "feed_url": "https://www.musthikemusteat.com/feed/",
+      "website_url": "https://www.musthikemusteat.com/",
+      "description": "Must Hike Must Eat provides trail stories and recipes from life as a paleo inspired outdoor adventurer. The author has been sharing the adventures of his hiking and backpacking obsessed life fueled by a love of God's country and a whole foods, nightshade free, paleo-inspired lifestyle.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4493779.jpg?t=1611120395"
+    },
+    {
+      "title": "Long Distance Hiker",
+      "feed_url": "https://www.longdistancehiker.com/feed/",
+      "website_url": "https://www.longdistancehiker.com/",
+      "description": "Long Distance Hiker features the adventures of hikers Beardoh! & SweetPea, with journals, photos, thoughts on hiking and interviews with other hikers.",
+      "followers": {
+        "facebook": 2600,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4492861.jpg?t=1611119792"
+    },
+    {
+      "title": "The Texas Trailhead",
+      "feed_url": "https://www.thetexastrailhead.com/feed/",
+      "website_url": "https://www.thetexastrailhead.com/",
+      "description": "The Texas Trailhead is your source for the best hiking, camping, and gear for the lone star state. Find trail ideas, camp suggestions and product reviews.",
+      "followers": {
+        "facebook": 4500,
+        "instagram": 15400
+      },
+      "image_url": "https://i1.feedspot.com/5096152.jpg?t=1611119881"
+    },
+    {
+      "title": "JCXC",
+      "feed_url": "http://www.jccrosscountry.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.jccrosscountry.com/",
+      "description": "JCXC was founded in 2013 as an outdoor blog primarily focused on cross country travel. It has since evolved into a database for hikers across the United States, but is primarily focused on Northeast Hiking.",
+      "followers": {
+        "twitter": 5,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4608004.jpg?t=1611118908"
+    },
+    {
+      "title": "Canadian Rockies Trail Guide Blog",
+      "feed_url": "https://canadianrockiestrailguide.com/feed/",
+      "website_url": "https://canadianrockiestrailguide.com/hiking-blog/",
+      "description": "Canadian Rockies Trail Guide is a guide to hiking trails in the Canadian Rockies. It is published by Summerthought Publishing. Based in Banff, Canada, since 1971.",
+      "followers": {
+        "facebook": 2700,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4492927.jpg?t=1611120427"
+    },
+    {
+      "title": "The Helpful Hiker",
+      "feed_url": "https://thehelpfulhiker.com/feed/",
+      "website_url": "https://thehelpfulhiker.com/",
+      "description": "The Helpful Hiker provides ideas & inspiration to help everyone enjoy the great outdoors. The blog features personal recommendations for camping, walks and great days out.",
+      "followers": {
+        "facebook": 853,
+        "twitter": 4900,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4493826.jpg?t=1611119220"
+    },
+    {
+      "title": "Hiking Adventures",
+      "feed_url": "https://www.hikingadventures.net/feed/",
+      "website_url": "https://www.hikingadventures.net/hikes/",
+      "description": "Welcome to Hiking Adventures blog. Here you will find documented hiking trips on mountains, hills and trails, from countries around the world.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 306,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4970827.jpg?t=1611120966"
+    },
+    {
+      "title": "Arizona Hiking",
+      "feed_url": "http://arizonahiking.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://arizonahiking.blogspot.com/",
+      "description": "Mare Czinar is a serial blogger, manic hiker and mom to a dozen adopted dogs, she has been exploring Arizona trails for more than 20 years. After being lead astray by outdated hiking books and online resources, Mare sought to create a fully vetted, frequently updated online hike travelogue with current driving and hiking directions for fellow hikers.",
+      "followers": {
+        "twitter": 379
+      },
+      "image_url": "https://i1.feedspot.com/2244115.jpg?t=1611120413"
+    },
+    {
+      "title": "Hike for Purpose",
+      "feed_url": "https://www.hikeforpurpose.com/feed/",
+      "website_url": "https://www.hikeforpurpose.com/posts/",
+      "description": "Welcome to the website HikeforPurpose, this site is meant for all the people that love to Hike, Backpack or spending time in Nature.",
+      "followers": {
+        "twitter": 26
+      },
+      "image_url": "https://i1.feedspot.com/5166452.jpg?t=1647510940"
+    },
+    {
+      "title": "Just Two Hikers Blog",
+      "feed_url": "https://just2hikers.wordpress.com/feed/",
+      "website_url": "https://just2hikers.wordpress.com/blog/",
+      "description": "Just Two Hikers is a blog about two hikers, Dormouse and Dirt Stew. They hiked the Appalachian Trail northbound from Georgia to Maine in 2010, and hiked the Pacific Crest Trail southbound from Canada to Mexico in 2014. This blog is all about their adventures.",
+      "followers": {
+        "facebook": 403
+      },
+      "image_url": "https://i1.feedspot.com/4493845.jpg?t=1611120539"
+    },
+    {
+      "title": "Hiking the GTA",
+      "feed_url": "https://hikingthegta.com/feed/",
+      "website_url": "https://hikingthegta.com/",
+      "description": "Hiking the GTA provides information about places to hike and things to see in and around the Greater Toronto Area.",
+      "followers": {
+        "facebook": 42600,
+        "twitter": 1,
+        "instagram": 870
+      },
+      "image_url": "https://i1.feedspot.com/4492865.jpg?t=1611118674"
+    },
+    {
+      "title": "Alice Adventuring Blog",
+      "feed_url": "https://aliceadventuring.com/feed/",
+      "website_url": "https://aliceadventuring.com/the-blog/",
+      "description": "A blog about New Zealand tramping / hiking. I'm a Kiwi who loves adventuring in the outdoors. And eating a lot of chocolate. I write about tramping (hiking) trips and anything vaguely related. Enjoy!",
+      "followers": {
+        "facebook": 499,
+        "instagram": 10100
+      },
+      "image_url": "https://i1.feedspot.com/5243951.jpg?t=1692875016"
+    },
+    {
+      "title": "Blissful Hiking",
+      "feed_url": "https://blissfulhiking.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://blissfulhiking.blogspot.com/",
+      "description": "Lauralee Bliss is here to help fellow hikers by offering wisdom, ideas, and lessons learned from a two-time AT North and South, Long Trail, Foothills Trail, Allegheny Trail, Shenandoah 500 miler completions. Ridgerunner, Speaker, and Author",
+      "followers": {
+        "facebook": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4492294.jpg?t=1611119865"
+    },
+    {
+      "title": "Easy Hiker",
+      "feed_url": "https://feeds.feedburner.com/easy-hiker/zSkw",
+      "website_url": "https://www.easyhiker.co.uk/",
+      "description": "Easy Hiker has been Identifying the easy hiking trails in your holiday destinations, to help you discover the small outdoors wherever you are. The blog features a variety of easy hikes and urban walks that the authors have chosen and done themselves for you to try and enjoy.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4492829.jpg?t=1611119878"
+    },
+    {
+      "title": "One Hike A Week",
+      "feed_url": "https://onehikeaweek.com/feed/",
+      "website_url": "https://onehikeaweek.com/",
+      "description": "Sharing hiking and climbing adventures with my dogs in the mountains, pictures and words. Hiking places near me and in the backcountry.",
+      "followers": {
+        "twitter": 100,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4986925.jpg?t=1611120398"
+    },
+    {
+      "title": "David on Earth Blog",
+      "feed_url": "https://www.davidonearth.com/rss.xml",
+      "website_url": "https://www.davidonearth.com/blog",
+      "description": "Articles feature Hiking and backpacking adventures, random thoughts and ideas about anything, and stories about places I've been and people I've met. David's mission is to inspire an active outdoor lifestyle through stories and photos.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4717234.jpg?t=1611120475"
+    },
+    {
+      "title": "Making Waves",
+      "feed_url": "https://stillmakingwaves.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://stillmakingwaves.blogspot.com/",
+      "description": "Alexandra, on her blog, Making Waves shares her hiking experiences and provides her readers with tips about hiking.",
+      "followers": {
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/2377734.jpg?t=1611120595"
+    },
+    {
+      "title": "Andy's walks in the world",
+      "feed_url": "https://andyintheworld.com/feed/",
+      "website_url": "https://andyintheworld.com/",
+      "description": "A blog about travel, hiking, adventures, and misadventures. Andrea is a blogger from Georgia who loves to travel, especially active travel- hiking, biking, kayaking, etc., and experiencing other cultures. Read about her newest hiking adventures and travel stories across the globe here.",
+      "followers": {
+        "facebook": 16200
+      },
+      "image_url": "https://i1.feedspot.com/4505959.jpg?t=1611120862"
+    },
+    {
+      "title": "HikeIt",
+      "feed_url": "https://hikeit.info/feed/",
+      "website_url": "https://hikeit.info/",
+      "description": "Covers everything you need to know as an introduction to hiking and backpacking. Focused on the Pacific Northwest and primarily around Mount Hood. Filled with trip reports from day hikes to thru hikes, planning, advice and tips for folks looking to get out into the outdoors.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5363200.jpg?t=1642413499"
+    },
+    {
+      "title": "Heart and Sole",
+      "feed_url": "https://www.pjwetzel.com/feeds/posts/default",
+      "website_url": "https://www.pjwetzel.com/",
+      "description": "Hi! I'm Peter J. Wetzel and this site is about traveling the natural way - on foot. Our compulsion to walk, to seek out new horizons, is the defining characteristic of our species. We are the ape who left the trees to explore the world. Walking upright led to tool use, agriculture, community, and technology. Sadly, with each new step, we are straying further from the sustainable ways of our ancestors.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5415496.jpg?t=1656419533"
+    },
+    {
+      "title": "Hikematic Articles Blog",
+      "feed_url": "https://hikematic.com/feed/",
+      "website_url": "https://hikematic.com/blog/",
+      "description": "Hikematic is your complete guide and go to source to all things outdoors including gear, camping destinations, hiking and guides on various subjects.",
+      "followers": {
+        "facebook": 38,
+        "instagram": 671
+      },
+      "image_url": "https://i1.feedspot.com/5088633.jpg?t=1669201419"
+    },
+    {
+      "title": "CloudLine Apparel - The CloudLine Hiking & Backpacking Blog",
+      "feed_url": "https://feeds.feedburner.com/TheCloudlineHikingBackpackingBlog",
+      "website_url": "https://www.cloudlineapparel.com/blogs/cloudline",
+      "description": "Premium merino wool #hiking #socks proudly made in the USA. Sharing hiking, backpacking and outdoor adventures!",
+      "followers": {
+        "twitter": 16700,
+        "instagram": 42100
+      },
+      "image_url": "https://i1.feedspot.com/4505880.jpg?t=1611121271"
+    },
+    {
+      "title": "Modern Hiker Blog",
+      "feed_url": "https://modernhiker.com/feed/",
+      "website_url": "https://modernhiker.com/blog/",
+      "description": "Modern Hiker blog provides information about the best hikes in Los Angeles, Southern California and Beyond. It is the oldest and most-read hiking blog in California. Its mission is to highlight local trails, educate and inspire local hikers, and get people outside.",
+      "followers": {
+        "facebook": 37900,
+        "twitter": 31200,
+        "instagram": 39300
+      },
+      "image_url": "https://i1.feedspot.com/4492331.jpg?t=1611118177"
+    },
+    {
+      "title": "Exploring Slovenia Blog",
+      "feed_url": "https://www.exploringslovenia.com/blog/feed/",
+      "website_url": "https://www.exploringslovenia.com/blog/",
+      "description": "Read our blog to discover adventure amid the breathtaking scenery of the Alps, and experience imposing mountains in heart-pounding hikes, backpacking excursions, family trips, and some serious adrenalin-pumping climbs.",
+      "followers": {
+        "facebook": 37600,
+        "twitter": 4100,
+        "instagram": 46100
+      },
+      "image_url": "https://i1.feedspot.com/5261990.jpg?t=1616739638"
+    },
+    {
+      "title": "Our Family Hikes Blog",
+      "feed_url": "https://www.ourlittlehiker.com/feed/",
+      "website_url": "https://www.ourlittlehiker.com/blog/",
+      "description": "Articles from a young family that spends most of their free time hiking and exploring Ireland's treasures.",
+      "followers": {
+        "instagram": 13900
+      },
+      "image_url": "https://i1.feedspot.com/5361526.jpg?t=1641815489"
+    },
+    {
+      "title": "Trail to Peak",
+      "feed_url": "https://trailtopeak.com/feed/",
+      "website_url": "https://trailtopeak.com/hiking-trail-guides/",
+      "description": "Trail To Peak covers hiking, backpacking, adventure travel, and gear review. See the outdoors come alive with breathtaking photos and trip reports.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4493574.jpg?t=1611118173"
+    },
+    {
+      "title": "Bike Hike Safari",
+      "feed_url": "https://bikehikesafari.com/feed/",
+      "website_url": "https://bikehikesafari.com/",
+      "description": "Brad McCartney is an adventure Cyclist, Hiker and Nature Lover. His dream is to cycle and hike the most amazing places on the planet.He is a former Wilderness Guide, Police Officer, specialist in Youth Restorative Justice Programs, aspiring author and photographer. He hopes to inspire others to follow their dreams.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 618,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4492851.jpg?t=1611118184"
+    },
+    {
+      "title": "Your Adventure Coach Blog",
+      "feed_url": "https://youradventurecoach.com/feed/",
+      "website_url": "https://youradventurecoach.com/blog/",
+      "description": "Long distance hiking made simple. Finally, make that dream of hiking the Appalachian Trail a reality with free information and personalized support.",
+      "followers": {
+        "facebook": 697
+      },
+      "image_url": "https://i1.feedspot.com/4717232.jpg?t=1611118648"
+    },
+    {
+      "title": "Wild West Trail Blog",
+      "feed_url": "https://wildwesttrail.co/feed/",
+      "website_url": "https://wildwesttrail.co/blog/",
+      "description": "Articles about wilderness hiking, backpacking, and the great outdoors. Learn more and start exploring today. The Wild West Trail expands on the Idaho Centennial Trail, connecting the largest wilderness areas in the lower 48 with a long distance backpacking trail.",
+      "followers": {
+        "facebook": 307,
+        "twitter": 5100,
+        "instagram": 371
+      },
+      "image_url": "https://i1.feedspot.com/5147709.jpg?t=1629721833"
+    },
+    {
+      "title": "Hiking in Finland",
+      "feed_url": "https://hikinginfinland.com/atom.xml",
+      "website_url": "https://hikinginfinland.com/",
+      "description": "Hiking in Finland is a blog dedicated to ultralight outdoor adventures in the Nordics. You can read about lightweight & ultralight backpacking, climbing, bikepacking, packrafting and skiing trips gear, interviews with cottage gear manufacturers, and other interesting topics related to outdoor activities.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 5400,
+        "instagram": 10800
+      },
+      "image_url": "https://i1.feedspot.com/932030.jpg?t=1604382474"
+    },
+    {
+      "title": "The Modern Female Hiker",
+      "feed_url": "https://www.femalehiker.com/feed/",
+      "website_url": "https://www.femalehiker.com/",
+      "description": "The Modern Female Hiker provides top hikes around the world from a New England based hiker joining a growing outdoor community. The blog provides trip reports from a female perspective to help you plan your weekend getaway, road less traveled vacation, or spur of the moment trip.",
+      "followers": {
+        "facebook": 364,
+        "twitter": 61,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4493807.jpg?t=1611119205"
+    },
+    {
+      "title": "HelloTrail",
+      "feed_url": "https://hellotrail.com/feed/",
+      "website_url": "https://hellotrail.com/",
+      "description": "HelloTrail was founded by outdoor enthusiasts to provide you the best outdoor adventure information to get outside, experience nature and say HelloTrail.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4966615.jpg?t=1611118781"
+    },
+    {
+      "title": "Hiking Daily",
+      "feed_url": "https://hikingdaily.com/feed/",
+      "website_url": "https://hikingdaily.com/",
+      "description": "Hiking Daily is a resource for everyone who enjoys hiking, backpacking, trekking, or camping in the wilderness. Learn everything you need to know about hiking gear, backpacking gear, outdoors skills, and the best hikes and hiking travel destinations from the Hiking Daily blog.",
+      "followers": {
+        "facebook": 30
+      },
+      "image_url": "https://i1.feedspot.com/5275309.jpg?t=1620020983"
+    },
+    {
+      "title": "Travel Hike and Be Well",
+      "feed_url": "https://travelhikeandbewell.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://travelhikeandbewell.blogspot.com/",
+      "description": "A place for people that love to Hike, Travel, and maintain positive well-being to come together as a community of like-minded individuals to share & grow together. Through this blog, Author Kendall shares her itinerary guides, hints, tips, and tricks, and much more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5334889.jpg?t=1635417944"
+    },
+    {
+      "title": "Average Hiker",
+      "feed_url": "https://averagehiker.com/feed/",
+      "website_url": "https://averagehiker.com/",
+      "description": "Average Hiker is a blog on Hiking and Backpacking. This blog feed contains hiking insights, guides, gear reviews, stories, and a hodgepodge of other mostly hiking-related content about the wilderness and trails the authors love to discuss and recoomend.",
+      "followers": {
+        "twitter": 6500,
+        "instagram": 694
+      },
+      "image_url": "https://i1.feedspot.com/4740042.jpg?t=1608128807"
+    },
+    {
+      "title": "AZ Utopia Blog",
+      "feed_url": "https://www.azutopia.com/feed/",
+      "website_url": "https://www.azutopia.com/blog/",
+      "description": "AZ Utopia is An Arizona insider's guide to the best Arizona hiking trails for all levels. Includes the Grand Canyon, Sedona and beyond. Detailed descriptions & photos. The mission of this blog is sharing quality visual and written information to help others enjoy Arizona's incredible hikes, alongside timely hiking news and events, hiking tips and inspiring posts.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 13,
+        "instagram": 381
+      },
+      "image_url": "https://i1.feedspot.com/4492367.jpg?t=1611120402"
+    },
+    {
+      "title": "Hiking and Climbing Adventures",
+      "feed_url": "http://cys-hiking-adventures.blogspot.com/feeds/posts/default",
+      "website_url": "http://cys-hiking-adventures.blogspot.com/",
+      "description": "Welcome to Hiking & Mountaineering Blog! Sharing my personal hiking & climbing experiences, photos, other excursions, upcoming hiking events mainly in So Cal, other blogs mainly in the news plus links to information of interest to all hikers, mountaineers & mountain lovers. Run by Cy Kaicener.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2425828.jpg?t=1611119675"
+    },
+    {
+      "title": "Two Trailbirds Blog",
+      "feed_url": "https://twotrailbirds.com/feed/",
+      "website_url": "https://twotrailbirds.com/blog/",
+      "description": "Welcome to Two Trailbirds! We are Alyssa and Brady, and we started this site to catalog our adventure stories as a couple and to help everyday people get outside more.",
+      "followers": {
+        "facebook": 323,
+        "instagram": 318
+      },
+      "image_url": "https://i1.feedspot.com/5237103.jpg?t=1610973414"
+    },
+    {
+      "title": "Appalachian Trail Girl",
+      "feed_url": "https://mountainswithmegan.com/feed/",
+      "website_url": "https://mountainswithmegan.com/",
+      "description": "Appalachian Trail Girl is a how-to blog for hiker girls. Megan created this blog with the hopes that she can inspire other women to hit the trail and have confidence in their hiking and camping abilities.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 387
+      },
+      "image_url": "https://i1.feedspot.com/4492352.jpg?t=1647505306"
+    },
+    {
+      "title": "That One Cool Hiking Blog",
+      "feed_url": "https://www.thatonecoolhikingblog.com/feed/",
+      "website_url": "https://www.thatonecoolhikingblog.com/",
+      "description": "That One Cool Hiking Blog exists to inspire, enable, and motivate others to embark on their own adventures.",
+      "followers": {
+        "facebook": 145,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4493806.jpg?t=1611119807"
+    },
+    {
+      "title": "Trek Maharashtra",
+      "feed_url": "https://trek-maharashtra.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://trek-maharashtra.blogspot.com/",
+      "description": "On trek Maharashtra, we share our knowledge of the places in Maharashtra. Guiding you to the great culture and places from Maharashtra. Read our blogs, we share the detail information about the places.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5194495.jpg?t=1599548507"
+    },
+    {
+      "title": "Halfway Hike",
+      "feed_url": "http://halfwayhike.com/feed/",
+      "website_url": "http://halfwayhike.com/",
+      "description": "Halfway Hike blog provides information about hikes on the West Yorkshire hills and further afield. Blogger and Walking-enthusiast Mark narrates his hikes in the beautiful corner of the West Yorkshire hills and moors. A dog person, Mark is also joined on these hikes by his Border Collie Jasper as he explores trails across UK and Europe.",
+      "followers": {
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4492370.jpg?t=1611120360"
+    },
+    {
+      "title": "London Hiker",
+      "feed_url": "https://londonhiker.com/feed/",
+      "website_url": "https://londonhiker.com/",
+      "description": "Catherine, through her blog, London Hiker, helps frustrated London-based hikers to get out on the hills by providing inspiration, practical advice and encouragement.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4492834.jpg?t=1611120369"
+    },
+    {
+      "title": "Family Peak Seekers",
+      "feed_url": "https://www.familypeakseekers.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.familypeakseekers.com/",
+      "description": "This site is dedicated to multigenerational enjoyment of hiking, backpacking, camping, and summit seeking. It's a place where we share our experiences of hiking with our children and as a way to share the many family pictures we have taken while enjoying the outdoors.",
+      "followers": {
+        "facebook": 105,
+        "twitter": 45
+      },
+      "image_url": "https://i1.feedspot.com/5053196.jpg?t=1611120547"
+    },
+    {
+      "title": "Lumberjacktac",
+      "feed_url": "https://lumberjacktac.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://lumberjacktac.blogspot.com/",
+      "description": "Lumberjacktac is a blog on a soldier's guide to walking with heavy things on your back. I'm Jimmy, a Canadian special forces veteran and my main goal behind this blog is to offer some of my experiences with the outdoors and document my past and upcoming travels while giving my own points to improve and help others enjoy the outside as I do.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5045577.jpg?t=1611120620"
+    },
+    {
+      "title": "Ozark Hiking Life",
+      "feed_url": "http://www.ozarkhikinglife.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.ozarkhikinglife.com/",
+      "description": "I'm Mike Edwards, a hiker who started exploring the Ozarks during the pandemic. I want to share my trips in hopes that my experiences will give you the desire to get out and explore. I hope my stories and pictures inspire you to take a day trip to an Ozark stop....I'll bet it won't be your last.",
+      "followers": {
+        "twitter": 251
+      },
+      "image_url": "https://i1.feedspot.com/5191425.jpg?t=1598934864"
+    },
+    {
+      "title": "Open Notch",
+      "feed_url": "https://opennotch.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://opennotch.blogspot.com/",
+      "description": "Keep up with articles and news from Open Notch, a hiking blog that charts journeys and trips of hiking aficionado and writer A. G. Fuller. Fuller abtractifies and detangles common misconceptions about hiking spots in the region while also providing insightful reviews on various hiking equipment.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5037523.jpg?t=1647517416"
+    },
+    {
+      "title": "GB Coast Walk Blog",
+      "feed_url": "https://gbcoastwalk.com/feed/",
+      "website_url": "https://gbcoastwalk.com/category/blog/",
+      "description": "Mad dogs and Englishmen decide to walk the coast of Britain! I don't think I'm a mad dog but many think I'm a mad Englishman!",
+      "followers": {
+        "twitter": 205
+      },
+      "image_url": "https://i1.feedspot.com/4553782.jpg?t=1629273170"
+    },
+    {
+      "title": "Swiss Mountaineers",
+      "feed_url": "https://www.swissmountaineers.ch/news?format=rss",
+      "website_url": "https://www.swissmountaineers.ch/news",
+      "description": "Outdoor trip reports and gear reviews of outdoor equipment; Europe-based hiking and mountaineering team sharing their experiences online.",
+      "followers": {
+        "instagram": 956
+      },
+      "image_url": "https://i1.feedspot.com/5166058.jpg?t=1647501600"
+    },
+    {
+      "title": "A View With A Brew",
+      "feed_url": "http://aviewwithabrew.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://aviewwithabrew.blogspot.com/",
+      "description": "A View With A Brew, a blog about hiking but with more of an emphasis on enjoying the now by stopping and enjoying the views and most importantly, stopping for that all important cup of tea.",
+      "followers": {
+        "facebook": 22
+      },
+      "image_url": "https://i1.feedspot.com/4654106.jpg?t=1611120934"
+    },
+    {
+      "title": "Hike With Edna",
+      "feed_url": "http://hikewithedna.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://hikewithedna.blogspot.com/",
+      "description": "Edna Daugherty's passion for hiking, backpacking and Starved Rock State Park and Lodge has led her to share her adventures with all. She also does her best to bring some of her personal outdoor experiences on the blog, for everyone to enjoy, especially those who can no longer journey on the trail.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4493763.jpg?t=1611120996"
+    },
+    {
+      "title": "Adventures with Aubrey",
+      "feed_url": "https://summitmommy.wordpress.com/feed/",
+      "website_url": "https://summitmommy.wordpress.com/",
+      "description": "Keep up with articles related to hiking, trip reports, and adventures from Adventures with Aubrey, where a hiking-passionate mom documents her hiking adventures with her daughter Aubrey. The stories, tips, tricks, and other information found here can help other families get out and explore the world around them.",
+      "followers": {
+        "facebook": 73
+      },
+      "image_url": "https://i1.feedspot.com/5054105.jpg?t=1611120963"
+    },
+    {
+      "title": "Here I Hike",
+      "feed_url": "https://hereihike.com/feed/",
+      "website_url": "https://hereihike.com/",
+      "description": "Here I Hike provides travel ideas, places to see, and hiking routes in Romania and Europe. Find details and information about destinations, hiking routes, cycling adventures, city breaks, and travel tips.",
+      "followers": {
+        "facebook": 660,
+        "instagram": 662
+      },
+      "image_url": "https://i1.feedspot.com/4493768.jpg?t=1611120969"
+    },
+    {
+      "title": "Hiking Photography",
+      "feed_url": "https://www.hikingphoto.com/blog?format=rss",
+      "website_url": "https://www.hikingphoto.com/",
+      "description": "Hiking Photography provides photographic stories about hiking. Patrick Latter, the author, is a programmer with a passion for all things photography and hiking.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 188
+      },
+      "image_url": "https://i1.feedspot.com/3606137.jpg?t=1611121170"
+    },
+    {
+      "title": "I Hike San Diego Blog",
+      "feed_url": "https://www.ihikesandiego.com/feed/",
+      "website_url": "https://www.ihikesandiego.com/blog/",
+      "description": "I Hike San Diego blog is a definitive guide to Hiking in San Diego. Brad Spiess, the author, is a personal trainer and one of his passions is hiking. As he goes on his hikes, he tries to gather information on the trail, the topographic map, photos of the trail and descriptions of the trail, and offer them on his blog for your enjoyment.",
+      "followers": {
+        "facebook": 6700
+      },
+      "image_url": "https://i1.feedspot.com/4492354.jpg?t=1611121188"
+    },
+    {
+      "title": "Trailside Fitness Blog",
+      "feed_url": "https://trailsidefitness.com/feed/",
+      "website_url": "https://trailsidefitness.com/blog/",
+      "description": "We help hikers avoid injuries through fitness training to complete the hike of their dreams! Don't let injuries and a lack of fitness ruin your dream hike!",
+      "followers": {
+        "facebook": 973,
+        "twitter": 30
+      },
+      "image_url": "https://i1.feedspot.com/5120980.jpg?t=1611121206"
+    },
+    {
+      "title": "Hikers For Life Blog",
+      "feed_url": "https://hikersforlife.com/feed/",
+      "website_url": "https://hikersforlife.com/blog/",
+      "description": "Hikers For Life is a Hiking Portal, gathering all the hiking information you need. Join the community and follow them on their hikes, make new friends and share your adventures. The blog aims to provide people the opportunity to share their experience.",
+      "followers": {
+        "facebook": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4493855.jpg?t=1611121313"
+    },
+    {
+      "title": "positiveoutdoor365",
+      "feed_url": "https://positiveoutdoor365.com/feed/",
+      "website_url": "https://positiveoutdoor365.com/blog-clogscompass/",
+      "description": "Just a couple of ordinary blokes with a passion for the outdoors both in the UK and the Netherlands.",
+      "followers": {
+        "facebook": 302,
+        "twitter": 379,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5320458.jpg?t=1631515174"
+    },
+    {
+      "title": "Lady on a Rock",
+      "feed_url": "https://ladyonarock.com/feed/",
+      "website_url": "https://ladyonarock.com/",
+      "description": "Lady on a Rock is a resource for hiking, health, and adventure. Christy Rosander has hiked the Sierra High Route, climbed many of the country's fourteen thousand foot peaks, and backpacked countless cross-country treks through the Sierras.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 273,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4492339.jpg?t=1611118677"
+    },
+    {
+      "title": "Outdoorsy Tribe Blog",
+      "feed_url": "https://www.outdoorsytribe.com/blog-feed.xml",
+      "website_url": "https://www.outdoorsytribe.com/blog",
+      "description": "Best Blog about Hiking, Outdoor Adventure, Mountain Biking, Motorcycle Rides, Nature Photography, Dog Adventure.",
+      "followers": {
+        "instagram": 16100
+      },
+      "image_url": "https://i1.feedspot.com/5178177.jpg?t=1647505375"
+    },
+    {
+      "title": "Hike & Cycle",
+      "feed_url": "https://hikeandcycle.com/feed/",
+      "website_url": "https://hikeandcycle.com/",
+      "description": "Let us help you explore the wild safely. Our informative guides are an enjoyable and effortless way to prepare for any troubles you may face during your outdoor activities. The purpose of Hike & Cycle is to teach adventurers how to travel safely \u2014 both for themselves and the environment. We admire wild nature and wish to minimize the harm from hikers and campers during their outdoor activities.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4759402.jpg?t=1611118658"
+    },
+    {
+      "title": "Day Hikes Near Denver",
+      "feed_url": "https://dayhikesneardenver.com/feed/",
+      "website_url": "https://dayhikesneardenver.com/",
+      "description": "Day Hikes Near Denver helps you and your family quickly find Colorado hikes and get out on the trail. Enjoy the best trails and hiking in Colorado.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 139
+      },
+      "image_url": "https://i1.feedspot.com/4493790.jpg?t=1611121256"
+    },
+    {
+      "title": "Hiking Experience",
+      "feed_url": "https://www.hikingexperience.net/feed",
+      "website_url": "https://www.hikingexperience.net/",
+      "description": "This Hiking Blog is all about top long-distance trails in Europe. Browse our reports, maps, tour tips, and enjoy our videos. Find your hike!",
+      "followers": {
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5232750.jpg?t=1609573022"
+    },
+    {
+      "title": "Back o' Beyond - Hiking and Camping Blog",
+      "feed_url": "http://backobeyond.blog/feed/",
+      "website_url": "https://backobeyond.blog/",
+      "description": "Back o' Beyond is an outdoor blog featuring original photography, stories, tips, and gear reviews.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4701809.jpg?t=1611118613"
+    },
+    {
+      "title": "Take a Hike Blog",
+      "feed_url": "https://hikinggypsy.home.blog/feed/",
+      "website_url": "https://hikinggypsy.home.blog/",
+      "description": "Keep up with articles from HikeVentures. Being an avid hiker and traveler in Central NY, Carly has had the chance to experience the Adirondack & Catskill Mountains. She documents her experiences to share with other hiking adventurists and maybe even inspire some new ones!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5064140.jpg?t=1701671467"
+    },
+    {
+      "title": "HikeTriCities",
+      "feed_url": "http://hiketricities.com/feed/",
+      "website_url": "http://hiketricities.com/",
+      "description": "Hike Tri-Cities is a web site and blog designed to support your desires to be more active while providing you with specific directions on where you can go to enjoy the beauty that surrounds us. It features maps, directions and tips on more than 40 hikes and trails around the Columbia Basin.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4493759.jpg?t=1629273256"
+    },
+    {
+      "title": "HD Carolina's Blog",
+      "feed_url": "https://www.hdcarolina.com/blog/feed/",
+      "website_url": "https://www.hdcarolina.com/blog/",
+      "description": "HD Carolina produces high definition videos of fun and interesting things to see and do in the Carolina's.",
+      "followers": {
+        "facebook": 782,
+        "twitter": 42,
+        "instagram": 20000
+      },
+      "image_url": "https://i1.feedspot.com/4726376.jpg?t=1611121281"
+    },
+    {
+      "title": "Hiking San Diego County",
+      "feed_url": "https://feeds.feedburner.com/HikingSanDiegoCounty",
+      "website_url": "https://hikingsdcounty.com/",
+      "description": "Hiking San Diego County is all about hiking trails in and around San Diego County. The blog tries to provide very detailed descriptions of the trails, the author visits so you can get a full sense of what you will find.",
+      "followers": {
+        "facebook": 10200,
+        "twitter": 522
+      },
+      "image_url": "https://i1.feedspot.com/4339567.jpg?t=1611121285"
+    },
+    {
+      "title": "Simply Hike Blog",
+      "feed_url": "https://www.simplyhike.co.uk/blogs/blog.atom",
+      "website_url": "https://www.simplyhike.co.uk/blogs/blog",
+      "description": "Explore The Great Outdoors Online, Check Out Specialist Hiking Equipment Product Reviews And Technical Advice Videos From The Team At Simply Hike.",
+      "followers": {
+        "facebook": 37400,
+        "twitter": 11700,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4492288.jpg?t=1611121298"
+    },
+    {
+      "title": "Hiking Lady Blog",
+      "feed_url": "http://feeds.feedburner.com/HikingLady",
+      "website_url": "https://hikinglady.com/blog/",
+      "description": "Hiking Lady is an online publication for women who love the outdoors, and choose to explore it by hiking, backpacking, and camping. Additionally, the blog is an up-to-date resource with articles of interest, events, environmental issues, book and movie reviews, organizations to join, and deals on hiking gear and apparel.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 21300
+      },
+      "image_url": "https://i1.feedspot.com/3361121.jpg?t=1608127415"
+    },
+    {
+      "title": "My Outdoor Basecamp Blog",
+      "feed_url": "https://myoutdoorbasecamp.com/feed/",
+      "website_url": "https://myoutdoorbasecamp.com/blog/",
+      "description": "Hiking and fishing tips, experiences, pictures & videos. Hiking guides, fishing guides, equipment reviews, outdoor apparel, and more. Enjoy gorgeous outdoor videography & photography.",
+      "followers": {
+        "twitter": 260,
+        "instagram": 826
+      },
+      "image_url": "https://i1.feedspot.com/5084432.jpg?t=1611118666"
+    },
+    {
+      "title": "The Big Outside",
+      "feed_url": "https://thebigoutside.com/feed/",
+      "website_url": "https://thebigoutside.com/",
+      "description": "A Travel Blog of Family Outdoors Adventures and Backpacking, Hiking, Paddling, Skiing, and Climbing Stories, plus Gear Reviews, by Michael Lanza. Offering professional stories, photos, gear reviews, and expert trip-planning advice on America's and the world's best hiking, backpacking, paddling, skiing, family, and other outdoor adventures.",
+      "followers": {
+        "facebook": 11800,
+        "twitter": 5400,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4492362.jpg?t=1604381603"
+    },
+    {
+      "title": "Amigo Treks & Expedition Blog",
+      "feed_url": "https://www.amigotrekking.com/blog/feed/",
+      "website_url": "http://www.hikingrmnp.org/",
+      "description": "Amigo Treks & Expedition is based in Kathmandu and offers a wide range of adventure and cultural tours in Nepal. Check out our Nepal Trekking Blog to get the latest trekking updates, travel tips, and more.",
+      "followers": {
+        "facebook": 1,
+        "twitter": 303
+      },
+      "image_url": "https://i1.feedspot.com/5364909.jpg?t=1654857170"
+    },
+    {
+      "title": "Hiking Rocky Mountain National Park",
+      "feed_url": "https://www.blogger.com/feeds/1054703443670594402/posts/default",
+      "website_url": "http://www.hikingrmnp.org/",
+      "description": "There are 355 miles of trail and over 400 named destinations in Rocky Mountain National Park. It is my goal to hike every mile of trail, and stand at every named destination.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/4493867.jpg?t=1611121191"
+    },
+    {
+      "title": "HikersBlog",
+      "feed_url": "https://www.hikersblog.co.uk/feed/",
+      "website_url": "https://www.hikersblog.co.uk/",
+      "description": "On the HikersBlog, get gear reviews, trip Reports, photo Galleries and Interactive 3D Panoramas from the Mourne Mountains, Ireland.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 838,
+        "instagram": 982
+      },
+      "image_url": "https://i1.feedspot.com/4492312.jpg?t=1611121219"
+    },
+    {
+      "title": "Clever Hiker Blog",
+      "feed_url": "https://www.cleverhiker.com/blog?format=RSS",
+      "website_url": "https://www.cleverhiker.com/",
+      "description": "We're Dave & Annie, the outdoor adventurers behind CleverHiker. We love backpacking, international travel, useful gear, and all things nature.",
+      "followers": {
+        "facebook": 62700,
+        "twitter": 1600,
+        "instagram": 17500
+      },
+      "image_url": "https://i1.feedspot.com/4988584.jpg?t=1622115255"
+    },
+    {
+      "title": "Hike it Baby Blog",
+      "feed_url": "https://hikeitbaby.com/feed/",
+      "website_url": "https://www.weareoutgrown.org/blog/",
+      "description": "Hike it Baby is an organization dedicated to getting families together and out into nature with birth to school age kids. Follow this blog to find hikes and read blogs to help you get outside.",
+      "followers": {
+        "facebook": 37500,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4492886.jpg?t=1611118223"
+    },
+    {
+      "title": "SoCal Hiker",
+      "feed_url": "https://socalhiker.net/feed/",
+      "website_url": "https://socalhiker.net/",
+      "description": "SoCal Hiker provides detailed trail guides for day hikes and multi-day backpacking trips that whet your appetite for bigger adventures. I'm Jeff, a second-generation Angeleno. Our roots may be in SoCal, but I have hiked and shared adventures across the US.",
+      "followers": {
+        "facebook": 22700,
+        "twitter": 11300,
+        "instagram": 17900
+      },
+      "image_url": "https://i1.feedspot.com/4492402.jpg?t=1681901360"
+    },
+    {
+      "title": "The Hiking Adventure",
+      "feed_url": "https://thehikingadventure.com/feed",
+      "website_url": "https://thehikingadventure.com/",
+      "description": "The Hiking Adventure is the ultimate destination for all things hiking, camping, backpacking, trekking, kayaking, bouldering, and more. We have a simple mission of being the best resource for helping you plan for, pack for, and get going on your hiking adventures!",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5384313.jpg?t=1648035608"
+    },
+    {
+      "title": "Raacho Trekkers Blog",
+      "feed_url": "https://raachotrekkers.com/feed/",
+      "website_url": "https://raachotrekkers.com/blog/",
+      "description": "At Raacho Trekkers, We offer a complete Himalayan experience starting from non-technical or semi-technical trekking to technical climbing and Snow leopard photography tours. Our cultural experiences include tribal festival tours, monastery/temple tours, and village homestay experiences.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 120,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5283495.jpg?t=1621950918"
+    },
+    {
+      "title": "Hike Like A Woman",
+      "feed_url": "https://www.hikelikeawoman.net/howtohike?format=rss",
+      "website_url": "https://knownothingnomads.com/category/hiking/",
+      "description": "Hike Like A Woman is a community dedicated to inspiring women to hit the trails. Outdoor women inspiring each other, it's what they are all about.",
+      "followers": {
+        "facebook": 44400,
+        "twitter": 4600,
+        "instagram": 19000
+      },
+      "image_url": "https://i1.feedspot.com/4493707.jpg?t=1611118800"
+    },
+    {
+      "title": "Hiker to Hiker",
+      "feed_url": "https://www.hikertohiker.net/feed/",
+      "website_url": "https://hikertohiker.net/",
+      "description": "Danny Bernstein, the autherof the blog Hiker to Hiker, feels that no place is too far to walk if you have the time. She is a hiker, hike leader, and outdoor writer. Her blog will inspire you to go and explore the outdoors, wherever you are.",
+      "followers": {
+        "twitter": 180
+      },
+      "image_url": "https://i1.feedspot.com/4493612.jpg?t=1611120365"
+    },
+    {
+      "title": "Misfit Wanders Blog",
+      "feed_url": "https://misfitwanders.com/feed/",
+      "website_url": "https://misfitwanders.com/blog/",
+      "description": "Misfit Wanders will take outdoor lovers on a hike in Sweden. With her articles, youll learn so much about the outdoors.",
+      "followers": {
+        "facebook": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5120385.jpg?t=1611120373"
+    },
+    {
+      "title": "Nomad Colorado",
+      "feed_url": "https://www.nomadcolorado.com/feed/",
+      "website_url": "https://www.nomadcolorado.com/",
+      "description": "The Colorado Hiker is your guide to the best Colorado hikes, including numerous hiking trails near Denver, Boulder, and Colorado Springs. If you are looking for Colorado hiking trails, backpacking information, and landscape photography, then you're in the right place.",
+      "followers": {
+        "facebook": 579,
+        "twitter": 12,
+        "instagram": 672
+      },
+      "image_url": "https://i1.feedspot.com/4493717.jpg?t=1611120406"
+    },
+    {
+      "title": "Beyond Limits on Foot!",
+      "feed_url": "https://beyond-limits-on-foot.com/feed/",
+      "website_url": "https://beyond-limits-on-foot.com/",
+      "description": "My therapy is hiking and the outdoors. I might take a few pictures and share my adventures along the way.",
+      "followers": {
+        "facebook": 191,
+        "twitter": 31
+      },
+      "image_url": "https://i1.feedspot.com/4911930.jpg?t=1611120695"
+    },
+    {
+      "title": "Himalaya Trekking Team Blog",
+      "feed_url": "https://www.himalayatrekkingteam.com/blog/feed/",
+      "website_url": "https://www.himalayatrekkingteam.com/blog/",
+      "description": "The Himalaya Trekking Team is an authentic and reliable trekking agency established by experienced Guides and Porters in 2010.",
+      "followers": {
+        "facebook": 992,
+        "twitter": 509
+      },
+      "image_url": "https://i1.feedspot.com/5053751.jpg?t=1611121303"
+    },
+    {
+      "title": "Hiking With Heather",
+      "feed_url": "https://hikingwithheather.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://hikingwithheather.blogspot.com/",
+      "description": "Heather Treige has been documenting the ongoing journey with her ever-active dog, Charlie, as they play, hike, and road-trip around Wisconsin, bringing awareness to the state's bountiful natural beauty while encouraging people to enjoy nature.",
+      "followers": {
+        "facebook": 420,
+        "twitter": 105,
+        "instagram": 603
+      },
+      "image_url": "https://i1.feedspot.com/4492882.jpg?t=1611121179"
+    },
+    {
+      "title": "IndiaHikes Blog",
+      "feed_url": "https://indiahikes.com/feed",
+      "website_url": "https://indiahikes.com/category/Blog",
+      "description": "Indiahikes' website is the largest curated trek information about trekking in India. It is the complete guide to trekking in India.",
+      "followers": {
+        "facebook": 79000,
+        "twitter": 5700,
+        "instagram": 617400
+      },
+      "image_url": "https://i1.feedspot.com/4493841.jpg?t=1611118131"
+    },
+    {
+      "title": "Trekhunt Blog",
+      "feed_url": "https://www.trekhunt.com/blog/en/rss/",
+      "website_url": "https://www.trekhunt.com/blog/en/",
+      "description": "The world's biggest selection of Hiking, Biking, Rock Climbing, Mountain-Biking, Mountaineering, Rafting, Skiing, Snowboarding, Paragliding Tours and Activities.",
+      "followers": {
+        "facebook": 16500,
+        "twitter": 42
+      },
+      "image_url": "https://i1.feedspot.com/5033625.jpg?t=1611119817"
+    },
+    {
+      "title": "Meanderthals",
+      "feed_url": "https://internetbrothers.org/feed/",
+      "website_url": "https://internetbrothers.org/",
+      "description": "Meanderthals is a series of trail reports for many of the best hikes in Western North Carolina. Jeff Clark is the founder of Internet Brothers, producer of this blog, and passionate about hiking. He has been sharing experiences hiking the forests and mountains of western North Carolina with trail descriptions, trip reports, maps and photos.",
+      "followers": {
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/246894.jpg?t=1611118627"
+    }
+  ]
+}

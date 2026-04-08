@@ -1,0 +1,54 @@
+{
+  "category": "Vallejo News",
+  "source_url": "https://rss.feedspot.com/vallejo_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Times-Herald",
+      "feed_url": "https://www.timesheraldonline.com/feed/",
+      "website_url": "https://www.timesheraldonline.com/",
+      "description": "Times-Herald covers local news in Vallejo, California. Keep up with all business, local sports, outdoors, local columnists and more.",
+      "followers": {
+        "facebook": 34000,
+        "twitter": 9600,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5139526.jpg?t=1623648331"
+    },
+    {
+      "title": "Open Vallejo",
+      "feed_url": "https://openvallejo.org/feed/",
+      "website_url": "https://openvallejo.org/",
+      "description": "Featured News articles and Opinions that impact local community conversations. Open Vallejo is an award-winning, independent, non-partisan, nonprofit newsroom serving the public interest. We seek to illuminate a small city long burdened by police violence, corruption, and neglect.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 3300,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/5510222.jpg?t=1676879573"
+    },
+    {
+      "title": "The Vallejo Sun",
+      "feed_url": "https://www.vallejosun.com/rss/",
+      "website_url": "https://www.vallejosun.com/",
+      "description": "The valley's trusted source of in-depth reporting about local government, policing, and extremist movements in the region. Get by-the-minute coverage of local news and events. The Vallejo Sun is an independent news publication illuminating Solano County, California.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 1500,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5510221.jpg?t=1676880661"
+    },
+    {
+      "title": "CBS San Francisco \u00bb Vallejo",
+      "feed_url": "https://sanfrancisco.cbslocal.com/tag/vallejo/feed/",
+      "website_url": "https://www.cbsnews.com/sanfrancisco/tag/vallejo/",
+      "description": "CBS San Francisco is powered by the Bay Area's KPIX 5. Get all the local news and information you need plus other fun stuff from the team at KPIX and CBSSF.com.",
+      "followers": {
+        "facebook": 322700,
+        "twitter": 122400,
+        "instagram": 65300
+      },
+      "image_url": "https://i1.feedspot.com/5139534.jpg"
+    }
+  ]
+}

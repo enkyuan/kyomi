@@ -1,0 +1,97 @@
+{
+  "category": "Dog Show",
+  "source_url": "https://rss.feedspot.com/dog_show_rss_feeds",
+  "feeds": [
+    {
+      "title": "Westminster Kennel Club",
+      "feed_url": "https://www.westminsterkennelclub.org/feed/",
+      "website_url": "https://www.westminsterkennelclub.org/blog/",
+      "description": "The Westminster Kennel Club, established in 1877, is America's oldest non-profit organization dedicated to the sport of dogs. The Club hosts the iconic Westminster Kennel Club Dog Show. The Club's mission, which enhances the lives of all dogs, celebrates the companionship of dogs, promote responsible dog ownership, and breed preservation.",
+      "followers": {
+        "facebook": 727800,
+        "twitter": 67900,
+        "instagram": 406100
+      },
+      "image_url": "https://i1.feedspot.com/5416137.jpg?t=1656481079"
+    },
+    {
+      "title": "Canine Chronicle",
+      "feed_url": "https://caninechronicle.com/feed/",
+      "website_url": "https://caninechronicle.com/",
+      "description": "The Canine Chronicle covers a variety of dog-related events as well as canine award ceremonies that announce the winners of the competition.",
+      "followers": {
+        "facebook": 108500,
+        "twitter": 3900,
+        "instagram": 6000
+      },
+      "image_url": "https://i1.feedspot.com/5415530.jpg?t=1656421093"
+    },
+    {
+      "title": "Dog Show Tv Blog",
+      "feed_url": "https://dogshowtv.com/feed/",
+      "website_url": "https://dogshowtv.com/category/blog/",
+      "description": "The first-ever Westminster Dog Show went down on May 8, 1877. Gauging from this timeline, this sporting event is one of the oldest events. This event is a showcase for dog talents. It comprises numerous categories, breeds, and a class of dogs. The event is often held for two or more days.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5415528.jpg?t=1656479759"
+    },
+    {
+      "title": "Silvestre Show Dogs Blog",
+      "feed_url": "https://www.silvestrehungarianvizsla.com/blog/feed",
+      "website_url": "https://www.silvestrehungarianvizsla.com/blog",
+      "description": "Mrs. Rachel Savage and Mr. Darryl Savage founded Silvestre and are not just breeders of dogs we have a passion and learning in the same field. we wanted to do everything to the best of our ability. We breed to the Kennel Club breed standard and our dogs are shown to prove we are breeding from excellent dogs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5415526.jpg?t=1656422790"
+    },
+    {
+      "title": "Dog Talent Association Blog",
+      "feed_url": "https://www.dogtalentassociation.com/blog-feed.xml",
+      "website_url": "https://www.dogtalentassociation.com/blog",
+      "description": "The Dog Talent Association provides online Trick Dog Titles and Talent Show Dog Titles. We believe that every dog has a talent and the potential to be great. We will help you to discover and develop your dog's talents while enjoying every minute together. Choose between Performer, Helper, Athlete, or Thinker dog development tracks.",
+      "followers": {
+        "facebook": 1600,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5415532.jpg?t=1656422046"
+    },
+    {
+      "title": "The National Dog Show Blog",
+      "feed_url": "https://nds.nationaldogshow.com/blog/feed/",
+      "website_url": "https://nds.nationaldogshow.com/blog/",
+      "description": "All the things we can learn from our dogs! Come and take a deep dive with one of God's greatest species at The National Dog Show hosted by the Kennel Club of Philadelphia.",
+      "followers": {
+        "facebook": 14400,
+        "twitter": 10700
+      },
+      "image_url": "https://i1.feedspot.com/5415529.jpg?t=1656420800"
+    },
+    {
+      "title": "Dog Lovers Show Blog",
+      "feed_url": "https://dogloversfestival.com.au/blog/feed/",
+      "website_url": "https://dogloversfestival.com.au/blog/",
+      "description": "A range of wonderful articles, tips & ideas to help you become the best Fur-parent.The Dog Lovers Show is owned by Event Management International Pty Ltd. The Dog Lovers Show is a tribute to the unconditional love that we share with our dogs and can't wait to see you at our events in Melbourne & Sydney.",
+      "followers": {
+        "facebook": 3,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5415531.jpg?t=1656480285"
+    },
+    {
+      "title": "Tennessee Valley Kennel Club Blog",
+      "feed_url": "http://www.tvkc.org/1/feed",
+      "website_url": "http://www.tvkc.org/walters-blog",
+      "description": "The Tennessee Valley Kennel Club was founded in 1934 to promote all breeds of purebred dogs by conducting competitive shows, events, and public education under the rules of the American Kennel Club. All our activities are designed to provide purebred dogs and their owners with engaging, lasting, and fun ways to celebrate the canine-human connection.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5415525.jpg?t=1656479094"
+    },
+    {
+      "title": "Galavanting Poodles Blog \u00bb Dog Show",
+      "feed_url": "https://galavantingpoodles.com/poodle-blog/category/Dog%20Shows?format=rss",
+      "website_url": "https://galavantingpoodles.com/poodle-blog/category/Dog+Shows",
+      "description": "In this section of the blog, you will witness content on dog shows, but apart from that on the site, you may read about different breeds of dogs and their characteristics. Breeding purebred standard poodles is a passion for us at Galavanting Poodles. Life for Galavanting Poodles includes hiking, camping, lake, and river adventures, as well as backcountry experiences. All puppies at Galavanting Poodles are nurtured through the Puppy Culture program.",
+      "followers": {
+        "facebook": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5415527.jpg?t=1656479295"
+    }
+  ]
+}

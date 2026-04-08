@@ -1,0 +1,40 @@
+{
+  "category": "Asus",
+  "source_url": "https://rss.feedspot.com/asus_rss_feeds",
+  "feeds": [
+    {
+      "title": "PhoneArena \u00bb Asus News",
+      "feed_url": "https://www.phonearena.com/feed/asus",
+      "website_url": "https://www.phonearena.com/asus",
+      "description": "PhoneArena is the premium website for new phone information such as full specifications, in-depth reviews, latest news, carrier available and upcoming phones. It features advanced phone filters, visual size comparison and 360-degree views of all hot phones. Follow this blog that offers new Asus information including full phone specifications, in-depth reviews, latest news.",
+      "followers": {
+        "facebook": 494300,
+        "twitter": 75200
+      },
+      "image_url": "https://i1.feedspot.com/4923216.jpg?t=1611034040"
+    },
+    {
+      "title": "ASUS Edge Up",
+      "feed_url": "https://edgeup.asus.com/feed/",
+      "website_url": "https://edgeup.asus.com/category/inside-asus/news-inside-asus/",
+      "description": "Edge Up is a resource for ASUS aficionados who want the inside scoop on new products and technologies. We go hands-on with the latest gear to see how it works in the real world and in-depth with the latest tech to explain what's happening under the hood. We also offer guides and tips to help you get the most out of everything from individual components to complete systems to the hottest games.",
+      "followers": {
+        "facebook": 26200000,
+        "twitter": 458000,
+        "instagram": 691200
+      },
+      "image_url": "https://i1.feedspot.com/4923219.jpg?t=1611034035"
+    },
+    {
+      "title": "ASUS Blog",
+      "feed_url": "https://press.asus.com/feed/",
+      "website_url": "https://press.asus.com/blog/",
+      "description": "Follow ASUS Press Room to receive the latest updates from ASUS Global PR- announcements, product launches, press releases.",
+      "followers": {
+        "facebook": 26300000,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4899906.jpg?t=1611034038"
+    }
+  ]
+}

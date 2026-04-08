@@ -1,0 +1,70 @@
+{
+  "category": "Arkansas Gardening",
+  "source_url": "https://rss.feedspot.com/arkansas_gardening_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Beginner's Garden Blog",
+      "feed_url": "https://journeywithjill.net/feed/",
+      "website_url": "https://journeywithjill.net/blog/",
+      "description": "Hi! I'm Jill McSheehy. If you're a beginning gardener needing help getting started or an everyday gardener looking for new ideas, you're in the right place!",
+      "followers": {
+        "facebook": 25900,
+        "twitter": 207,
+        "instagram": 40200
+      },
+      "image_url": "https://i1.feedspot.com/5311786.jpg?t=1628775389"
+    },
+    {
+      "title": "The Good Earth Garden Center Blog",
+      "feed_url": "https://thegoodearthgarden.com/feed/",
+      "website_url": "https://thegoodearthgarden.com/articles/",
+      "description": "Receive timely tips, sales, events, and education program information. Experience The Good Earth Garden Center's outdoor plant nursery, landscape services, and gift shop to find your quality selection of perennials, seasonal color, houseplants, shrubs, trees, mulch, and more.",
+      "followers": {
+        "facebook": 20500,
+        "twitter": 375,
+        "instagram": 6800
+      },
+      "image_url": "https://i1.feedspot.com/5311739.jpg?t=1628769181"
+    },
+    {
+      "title": "Arkansas Native Plant Society Blog",
+      "feed_url": "https://anps.org/feed/",
+      "website_url": "https://anps.org/blog/",
+      "description": "Information regarding the value of native plants and their habitats. We preserve, conserve, and study the native plants of Arkansas.",
+      "followers": {
+        "facebook": 11400
+      },
+      "image_url": "https://i1.feedspot.com/5311754.jpg?t=1628769794"
+    },
+    {
+      "title": "Arkansas Living Magazine \u00bb Gardening with Janet",
+      "feed_url": "https://arkansaslivingmagazine.com/story-category/gardening-with-janet/feed/",
+      "website_url": "https://arkansaslivingmagazine.com/story-category/gardening-with-janet/",
+      "description": "The following section of Arkansas Living Magazine is exclusively dedicated to gardening. Arkansas Living is a monthly lifestyle magazine serving Arkansas rural electric cooperative members. We began as REA News in 1946, then became Rural Arkansas magazine, then Rural Arkansas Living magazine, and now we are simply Arkansas Living magazine.",
+      "followers": {
+        "facebook": 20000
+      },
+      "image_url": "https://i1.feedspot.com/5311781.jpg?t=1628772410"
+    },
+    {
+      "title": "Grace Grits and Gardening \u00bb Gardening",
+      "feed_url": "https://gracegritsgarden.com/category/gardening/feed",
+      "website_url": "https://gracegritsgarden.com/category/gardening",
+      "description": "Hi! I'm Talya. Writer, Reader, Arkansas Master Naturalist / Master Gardener, Baylor graduate. This section is dedicated to gardening in Arkansas.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 2200,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5311755.jpg?t=1628770616"
+    },
+    {
+      "title": "Raised Bed Gardening in Arkansas",
+      "feed_url": "http://arkansasraisedbedgardening.blogspot.com/feeds/posts/default",
+      "website_url": "http://arkansasraisedbedgardening.blogspot.com/",
+      "description": "Raised Bed Gardening in Arkansas is a gardening blog based in Arkansas managed by Duane Clancy.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5311750.jpg?t=1628769473"
+    }
+  ]
+}

@@ -1,0 +1,860 @@
+{
+  "category": "Environment",
+  "source_url": "https://rss.feedspot.com/environmental_rss_feeds",
+  "feeds": [
+    {
+      "title": "Grist - A nonprofit news org",
+      "feed_url": "https://grist.org/feed/",
+      "website_url": "https://grist.org/",
+      "description": "A nonprofit news org for people who want a planet that doesn't burn and a future that doesn't suck. Grist has been dishing out environmental news and commentary with a wry twist since 1999 - which, to be frank, was way before most people cared about such things.",
+      "followers": {
+        "facebook": 271700,
+        "twitter": 235100,
+        "instagram": 67600
+      },
+      "image_url": "https://i1.feedspot.com/61422.jpg?t=1606209733"
+    },
+    {
+      "title": "Earth911 - More Ideas, Less Waste",
+      "feed_url": "http://earth911.com/feed/",
+      "website_url": "https://earth911.com/",
+      "description": "We provide Environmental news and content to help you, as a consumer, live a zero waste lifestyle. A community forum to share ideas and also iInformation about environmental causes.",
+      "followers": {
+        "facebook": 108100,
+        "twitter": 67800,
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/1976.jpg?t=1606900041"
+    },
+    {
+      "title": "Earth University",
+      "feed_url": "https://news.climate.columbia.edu/feed/",
+      "website_url": "https://news.climate.columbia.edu/",
+      "description": "Tapping experts in climate, geology, oceanography, ecology, sustainable development, global health, energy, food and water, State of the Planet captures stories of how the Earth works and how we can sustainably make our lives better.",
+      "followers": {
+        "facebook": 22500,
+        "twitter": 92700,
+        "instagram": 20500
+      },
+      "image_url": "https://i1.feedspot.com/520952.jpg?t=1606209747"
+    },
+    {
+      "title": "The Ecologist - Setting The Environmental Agenda Since 1970",
+      "feed_url": "https://theecologist.org/whats_new/feed",
+      "website_url": "https://theecologist.org/",
+      "description": "The Ecologist gives information about news and investigations on the environment, climate change, farming, energy, food, health, green living, eco friendly product",
+      "followers": {
+        "facebook": 236600,
+        "twitter": 138400
+      },
+      "image_url": "https://i1.feedspot.com/520177.jpg?t=1606209752"
+    },
+    {
+      "title": "Going True Green Blog",
+      "feed_url": "https://www.goingtruegreen.com/1/feed",
+      "website_url": "https://www.goingtruegreen.com/gtg-blog",
+      "description": "The goal of this Web Site is to teach individuals, families and businesses to achieve the deepest green color possible by becoming educated and committed within their own budget of time and money.",
+      "followers": {
+        "facebook": 117,
+        "twitter": 77,
+        "instagram": 113
+      },
+      "image_url": "https://i1.feedspot.com/5090011.jpg?t=1606211824"
+    },
+    {
+      "title": "Eco News",
+      "feed_url": "https://econews.com.au/feed/",
+      "website_url": "https://econews.com.au/",
+      "description": "Eco News provides 'as it happens' news articles, from an Australian perspective. Make it your daily source of environmental information.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/3219581.jpg?t=1606211101"
+    },
+    {
+      "title": "The Independent \u00bb Climate Change",
+      "feed_url": "https://www.independent.co.uk/climate-change/news/rss",
+      "website_url": "https://www.independent.co.uk/climate-change/news",
+      "description": "Check out the latest news, impacts, facts, and the latest climate change updates. The Independent is an international newspaper, published in serval languages. It publishes news from politics, sports, travel, lifestyle, culture, and more.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/1038771.jpg?t=1606210249"
+    },
+    {
+      "title": "Yale E360",
+      "feed_url": "https://e360.yale.edu/feed.xml",
+      "website_url": "https://e360.yale.edu/",
+      "description": "Yale Environment 360 is an online magazine offering opinion, analysis, reporting, and debate on global environmental issues published at the Yale School of Forestry & Environmental Studies.",
+      "followers": {
+        "facebook": 73100,
+        "twitter": 149300
+      },
+      "image_url": "https://i1.feedspot.com/4693480.jpg?t=1606210254"
+    },
+    {
+      "title": "Clean Innovations Blog",
+      "feed_url": "https://cleannovate.home.blog/feed/",
+      "website_url": "https://cleannovate.home.blog/",
+      "description": "Environmental Pollutants affects health & cause environmental degradation. The solutions to this is water treatment, soil remediation, air filters & sustainable practices.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5149814.jpg"
+    },
+    {
+      "title": "Greenpeace Canada",
+      "feed_url": "https://www.greenpeace.org/canada/en/feed/",
+      "website_url": "https://www.greenpeace.org/canada/en/news-stories/",
+      "description": "Greenpeace is the leading independent campaigning organization that uses peaceful direct action and creative communication to expose global environmental problems and to promote solutions that are essential to a green and peaceful future. Greenpeace Canada's blog provides updates on environmental campaigns, activism, and initiatives.",
+      "followers": {
+        "facebook": 314400,
+        "twitter": 51100,
+        "instagram": 129800
+      },
+      "image_url": "https://i1.feedspot.com/4698748.jpg?t=1606210273"
+    },
+    {
+      "title": "Audubon",
+      "feed_url": "https://www.audubon.org/rss.xml",
+      "website_url": "https://www.audubon.org/news",
+      "description": "Audubon's mission is to conserve and restore natural ecosystems, focusing on birds, other wildlife, and their habitats for the benefit of humanity and the earth's biological diversity.",
+      "followers": {
+        "facebook": 1500000,
+        "twitter": 224200,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/4629305.jpg?t=1606210283"
+    },
+    {
+      "title": "Envirotec Magazine",
+      "feed_url": "https://envirotecmagazine.com/feed/",
+      "website_url": "https://envirotecmagazine.com/",
+      "description": "Envirotec magazine provides the most comprehensive coverage of the UK environmental technology and services industry and delivers comprehensive news and current issues examined in informative features, profiles and interviews keeping its readers informed and up-to-date.",
+      "followers": {
+        "facebook": 550,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4700758.jpg?t=1622035667"
+    },
+    {
+      "title": "Environmental Soulutions Blog",
+      "feed_url": "https://www.environmentalsoulutions.com/blog-feed.xml",
+      "website_url": "https://www.environmentalsoulutions.com/blog",
+      "description": "Bodhing Well A Blog for Those Enlightened By Nature 'Bodhing Well' explores topics related to Natural Beauty, Enlightenment, Rewilding Spirituality, Biomimicry, Nature Therapy, Nature-Inspired Design, and Navigating Significant Change by Imitating Nature. Composting the Soul is how it begins. \u200b Finding Enlightenment beneath the Bodhi Tree is an apt image for those who love Nature and long to flourish in Nature's embrace. Life's fullness invites us to rest a while, and to bode well with the wider 'WE' of creation.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/fsppublisher/9118063/page/8521404/logo_1746028834.jpg"
+    },
+    {
+      "title": "Eco Friend - Green, Environment friendly, sustainable, energy saving, solar and organic products.",
+      "feed_url": "https://ecofriend.org/feed/",
+      "website_url": "https://ecofriend.org/",
+      "description": "The Blog covers the latest news about environment, global warming, sustainable solutions, renewable energy and green design",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 140
+      },
+      "image_url": "https://i1.feedspot.com/4697780.jpg?t=1606211045"
+    },
+    {
+      "title": "Environmental Defence Blog",
+      "feed_url": "https://environmentaldefence.ca/feed/",
+      "website_url": "https://environmentaldefence.ca/blog/",
+      "description": "Environmental Defence is a group of innovative and determined problem-solvers who are making a difference defending clean water, a safe climate and healthy communities.They challenge, and inspire change in government, business and people to ensure a greener, healthier and prosperous life for all.",
+      "followers": {
+        "facebook": 97600,
+        "twitter": 35400,
+        "instagram": 31300
+      },
+      "image_url": "https://i1.feedspot.com/4629666.jpg?t=1606211059"
+    },
+    {
+      "title": "Terrain.org - Online Environmental Magazine of Literature and Place",
+      "feed_url": "https://www.terrain.org/feed/",
+      "website_url": "https://www.terrain.org/",
+      "description": "Terrain.org is an online environmental magazine of poetry, nonfiction, fiction, editorials, interviews, reviews, Unsprawl case studies, and art since 1998.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 3500,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4698815.jpg?t=1606211090"
+    },
+    {
+      "title": "The Environmental Blog",
+      "feed_url": "https://www.theenvironmentalblog.org/feed/",
+      "website_url": "https://www.theenvironmentalblog.org/",
+      "description": "We provide information on every aspect of green living, green technology, climate change, green energy, etc and also provide our readers with a source of knowledge that can be used in everyday life to help make this world a greener place. With our blog, we want to get readers involved in community events,and local, national, and international dialogues that influence 'Green movement'",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 928
+      },
+      "image_url": "https://i1.feedspot.com/4697740.jpg?t=1606211055"
+    },
+    {
+      "title": "Inside track - Green Alliance's blog on environmental policy and politics",
+      "feed_url": "https://greenallianceblog.org.uk/feed/",
+      "website_url": "https://green-alliance.org.uk/",
+      "description": "Green Alliance is a think tank working to ensure UK political leaders deliver ambitious solutions to global environmental issues. Our three core aims are: To make the environment a central political issue; To integrate the environment into public policy and decision making; To stimulate new thinking and advance the environmental agenda into new areas.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 40600
+      },
+      "image_url": "https://i1.feedspot.com/4698466.jpg?t=1606211768"
+    },
+    {
+      "title": "Ontario Nature Blog",
+      "feed_url": "https://ontarionature.org/feed/",
+      "website_url": "https://ontarionature.org/blog/",
+      "description": "Ontario Nature is the leading voice in the promotion and preservation of Ontario's natural environment through the creation of parks and nature reserves, the responsible management of forests, and the protection of rare, threatened, and endangered species.",
+      "followers": {
+        "facebook": 28900,
+        "twitter": 31700,
+        "instagram": 21300
+      },
+      "image_url": "https://i1.feedspot.com/4620156.jpg?t=1606900208"
+    },
+    {
+      "title": "Environmental News Bits",
+      "feed_url": "https://envnewsbits.info/feed/",
+      "website_url": "https://envnewsbits.info/",
+      "description": "The blog is about Browsing environmental news everyday.",
+      "followers": {
+        "facebook": 183,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4698890.jpg"
+    },
+    {
+      "title": "Environment Journal",
+      "feed_url": "https://environmentjournal.online/feed/",
+      "website_url": "https://environmentjournal.online/",
+      "description": "Environment Journal consists of News, analysis and features on environmental management issues.",
+      "followers": {
+        "facebook": 785,
+        "twitter": 2600,
+        "instagram": 811
+      },
+      "image_url": "https://i1.feedspot.com/4700419.jpg?t=1622034546"
+    },
+    {
+      "title": "Triumvirate Environmental \u00bb Waste Management",
+      "feed_url": "https://www.triumvirate.com/blog/rss.xml",
+      "website_url": "https://www.triumvirate.com/blog/topic/waste-management",
+      "description": "Triumvirate Environmental's blog offers expert advice and innovative solutions for handling EH&S across the Healthcare, Education, Life Sciences, and Industrial markets.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 882,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4698446.jpg?t=1608618840"
+    },
+    {
+      "title": "A greener life, a greener world",
+      "feed_url": "https://agreenerlifeagreenerworld.net/feed/",
+      "website_url": "https://agreenerlifeagreenerworld.net/",
+      "description": "Telling the green news stories that need telling. A greener life, a greener world is a progressive environmental news website with a focus on climate change and all the areas it impacts. We produce news, opinions, analysis, and reflections and have a host of contributors across the world. It features local and global environmental news stories as well as showcase solutions and seeks to stimulate debate, discussion and idea generation.",
+      "followers": {
+        "facebook": 351,
+        "twitter": 526
+      },
+      "image_url": "https://i1.feedspot.com/5023087.jpg?t=1606211902"
+    },
+    {
+      "title": "Good Environmental News Blog",
+      "feed_url": "http://www.ijdesign.com/blog/feed/",
+      "website_url": "http://www.ijdesign.com/blog/",
+      "description": "This blog was created to share good news about the environment, since the majority of news from the media is negative. Many of these posts show that the planet",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 28
+      },
+      "image_url": "https://i1.feedspot.com/4700312.jpg?t=1606211926"
+    },
+    {
+      "title": "Conservation International",
+      "feed_url": "https://feeds.feedburner.com/ConservationInternationalBlog",
+      "website_url": "https://www.conservation.org/blog/",
+      "description": "This blog is written by a diverse group of passionate people who believe in CI's mission to safeguard nature's critical services for the well-being of all of us. Authors include members of our global staff working in more than 25 countries, as well as valued partners with whom we team up to guide our efforts and extend our impact.",
+      "followers": {
+        "facebook": 707100,
+        "twitter": 177000,
+        "instagram": 516100
+      },
+      "image_url": "https://i1.feedspot.com/810892.jpg?t=1606212709"
+    },
+    {
+      "title": "Earthava",
+      "feed_url": "https://www.earthava.com/feed/",
+      "website_url": "https://www.earthava.com/category/environment/",
+      "description": "Earthava is the ultimate source to help you Learn about environment and renewable energy, its potential to change the world and ways to go green.",
+      "followers": {
+        "facebook": 503,
+        "twitter": 393,
+        "instagram": 252
+      },
+      "image_url": "https://i1.feedspot.com/5033749.jpg?t=1646640661"
+    },
+    {
+      "title": "Plant for the Planet",
+      "feed_url": "https://blog.plant-for-the-planet.org/feed/",
+      "website_url": "https://blog.plant-for-the-planet.org/",
+      "description": "The news, views, and updates from Climate Justice Ambassadors and initiatives that are restoring and conserving forest ecosystems worldwide. A free software toolset to fund, manage, and monitor forest restoration. Used by over 200 projects around the world.",
+      "followers": {
+        "facebook": 36400,
+        "twitter": 5700,
+        "instagram": 25400
+      },
+      "image_url": "https://i1.feedspot.com/5426729.jpg?t=1661160133"
+    },
+    {
+      "title": "PlanetSave - Global Warming News, Science News, Animal News, Green Living.",
+      "feed_url": "https://planetsave.com/feed/",
+      "website_url": "https://planetsave.com/topics/nature-2/",
+      "description": "The blog is all about helping the world - plants, animals and people through green living action and activism and education.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/9260.jpg?t=1606210228"
+    },
+    {
+      "title": "Environment Directory and Magazine",
+      "feed_url": "https://www.environmentuk.net/index.php?format=feed&type=rss",
+      "website_url": "https://www.environmentuk.net/",
+      "description": "Fin information on Energy, Food, Recycling, Green Business News, Climate change,etc",
+      "followers": {
+        "twitter": 453
+      },
+      "image_url": "https://i1.feedspot.com/4700393.jpg?t=1606212073"
+    },
+    {
+      "title": "Creative Green Living",
+      "feed_url": "https://feeds.feedburner.com/CreativeGreenLiving",
+      "website_url": "https://www.creativegreenliving.com/",
+      "description": "Healthy choices that are BEAUTIFUL & DELICIOUS. Healthy food and organic recipes, recycled and eco-friendly crafts and DIY, gardening, upcycling, re-used, repurposed DIY projects, non-toxic living, homemaking, green parenting, kids activities and modern farmhouse decor.",
+      "followers": {
+        "twitter": 3400,
+        "instagram": 10000
+      },
+      "image_url": "https://i1.feedspot.com/4967994.jpg?t=1606212701"
+    },
+    {
+      "title": "Environmental Progress",
+      "feed_url": "https://environmentalprogress.org/big-news?format=RSS",
+      "website_url": "https://environmentalprogress.org/big-news",
+      "description": "Environmental Progress (EP) is a research and policy organization fighting for clean power and energy justice to achieve nature and prosperity for all.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4699602.jpg?t=1606212679"
+    },
+    {
+      "title": "Greyish Green",
+      "feed_url": "https://greyishgreen.com/feed/",
+      "website_url": "https://greyishgreen.com/",
+      "description": "Greyish Green is dedicated to sharing creative and innovative ideas around sustainability such as eco-fashion, zero-waste living, circular design, fair trade, and humanism all in balance with nature. It is about making everything ecological.",
+      "followers": {
+        "facebook": 16
+      },
+      "image_url": "https://i1.feedspot.com/5157292.jpg"
+    },
+    {
+      "title": "Environment & Urbanization blogs",
+      "feed_url": "https://www.environmentandurbanization.org/blog/feed",
+      "website_url": "https://www.environmentandurbanization.org/blogs",
+      "description": "Environment and Urbanization aims to provide an effective means for the exchange of research findings, ideas and information in the fields of human settlements and environment among researchers, activists and non-governmental organizations (NGOs) in low- and middle-income nations and between these and researchers, international agency staff, students and teachers in high-income nations.",
+      "followers": {
+        "facebook": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4701155.jpg?t=1606212689"
+    },
+    {
+      "title": "Environmental Europe",
+      "feed_url": "https://environmentaleurope.ideasoneurope.eu/feed/",
+      "website_url": "https://environmentaleurope.ideasoneurope.eu/",
+      "description": "We are three early career researchers studying European Union environmental politics. We hope that you will enjoy this blog, where we will post regularly on ongoing environmental and climate policy developments in the EU.",
+      "followers": {
+        "twitter": 300
+      },
+      "image_url": "https://i1.feedspot.com/4699554.jpg"
+    },
+    {
+      "title": "Environmental Entrepreneurs",
+      "feed_url": "https://e2.org/feed/",
+      "website_url": "https://e2.org/resources/",
+      "description": "Environmental Entrepreneurs is a national, nonpartisan business group advocating for policies that are good for the economy and good for the environment.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 7300
+      },
+      "image_url": "https://i1.feedspot.com/4699035.jpg?t=1606211081"
+    },
+    {
+      "title": "the enough company",
+      "feed_url": "https://enough.co/feed/",
+      "website_url": "https://enough.co/",
+      "description": "we can and must use markets to fight the climate crisis",
+      "followers": {
+        "facebook": 160,
+        "twitter": 319
+      },
+      "image_url": "https://i1.feedspot.com/5119440.jpg?t=1606211830"
+    },
+    {
+      "title": "Environment, Law, and History",
+      "feed_url": "https://environmentlawhistory.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://environmentlawhistory.blogspot.com/",
+      "description": "The crossroads of environmental history and legal history.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4700936.jpg?t=1606902100"
+    },
+    {
+      "title": "GAB Report",
+      "feed_url": "https://gabreport.com/feed",
+      "website_url": "https://gabreport.com/",
+      "description": "The Green Architecture and Building Report (GAB Report) is a resource for sharing information on responsible, green, and sustainable design, ranging from the architecture to the building details, and from the site features to the building products.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 136
+      },
+      "image_url": "https://i1.feedspot.com/4700337.jpg?t=1606211858"
+    },
+    {
+      "title": "Easy Eco Blog - Easy ways to be Green - Eco Friendly and Save Green",
+      "feed_url": "https://www.easyecoblog.com/feed/",
+      "website_url": "https://www.easyecoblog.com/category/environment/",
+      "description": "Welcome to Easy Eco Blog. This website is designed to help you become more green and eco friendly with tips that are doable with a minimal of effort. Our goal is to help the environment, while saving you money and improving the entire world's quality of life.",
+      "followers": {
+        "facebook": 101,
+        "twitter": 266
+      },
+      "image_url": "https://i1.feedspot.com/4698360.jpg?t=1606211898"
+    },
+    {
+      "title": "Earth Kids Superheroes",
+      "feed_url": "https://earthkidssuperheroes.com/feed/",
+      "website_url": "https://earthkidssuperheroes.com/",
+      "description": "The Earth Kids are environmental superheroes. Their superpowers clean up pollution in the air, water, and soil. Creating a green environment is their mission. They teach communities how to protect the environment through sustainable life choices.",
+      "followers": {
+        "twitter": 47,
+        "instagram": 640
+      },
+      "image_url": "https://i1.feedspot.com/5135337.jpg?t=1606211889"
+    },
+    {
+      "title": "IV Words Blog",
+      "feed_url": "https://ivwords.com/feed/",
+      "website_url": "https://ivwords.com/iv-words-blog/",
+      "description": "A forward-looking and -thinking blog where every post is an introduction to what comes next in politics, progressive causes, government, climate change and the environment, always with a good dose of social commentary sprinkled in. We'll jump into life, family, experiences, lessons learned and the way it is once in a while, too.",
+      "followers": {
+        "twitter": 392
+      },
+      "image_url": "https://i1.feedspot.com/5059591.jpg?t=1606211162"
+    },
+    {
+      "title": "U.S. Green Chamber of Commerce Blog",
+      "feed_url": "https://usgreenchamber.com/feed/",
+      "website_url": "https://usgreenchamber.com/blog/",
+      "description": "The Green Chamber empowers businesses and communities to create environmentally friendly, sustainable business practices. The Green Chamber assist your business as you chart a course, turn intent into action and ultimately harness the potential of sustainable business models to create value.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 20600
+      },
+      "image_url": "https://i1.feedspot.com/4967972.jpg?t=1606212723"
+    },
+    {
+      "title": "Wildflower",
+      "feed_url": "https://swatikulheria.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://swatikulheria.blogspot.com/",
+      "description": "It's not surprising that new, popular movements and organizations are emerging in response to the ecological crisis. Climate change is the most important challenge faced by humanity and the rest of the planet today. It's threatening the balance of the global systems.These threats are serious, and demand immediate attention. Writing about it is my smallest step towards the direction.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5043397.jpg"
+    },
+    {
+      "title": "EcoFriendly Sask",
+      "feed_url": "https://www.ecofriendlysask.ca/feeds/posts/default?alt=rss",
+      "website_url": "https://www.ecofriendlysask.ca/",
+      "description": "EcoFriendly Sask strives to inform, encourage, and support Saskatchewan environmental initiatives. As a small, personal undertaking, we provide an online publication as well as grants to support local environmental projects.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4700941.jpg?t=1606211192"
+    },
+    {
+      "title": "Ocean Conservancy Blog",
+      "feed_url": "https://oceanconservancy.org/blog/feed/",
+      "website_url": "https://oceanconservancy.org/blog/",
+      "description": "Ocean Conservancy is working with you to protect the ocean from today's greatest global challenges. Together, we create science-based solutions for a healthy ocean and the wildlife and communities that depend on it",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 430700,
+        "instagram": 466800
+      },
+      "image_url": "https://i1.feedspot.com/4698741.jpg?t=1606210318"
+    },
+    {
+      "title": "WSP USA - Green Scene",
+      "feed_url": "http://us.wsp-pb.com/blogs/green-scene/feed/",
+      "website_url": "http://us.wsp-pb.com/blogs/green-scene/category/environmental/",
+      "description": "WSP USA's water & environment practice has delivered pragmatic, innovative, and outstanding technical solutions to clients on environmental, compliance, air quality, water, wastewaster, health and safety, sustainability and energy challenges.",
+      "followers": {
+        "facebook": 25300,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4699562.jpg?t=1606900212"
+    },
+    {
+      "title": "The Grow Network",
+      "feed_url": "https://thegrownetwork.com/feed/",
+      "website_url": "https://thegrownetwork.com/articles/",
+      "description": "Blog broke down the elements of sustainable living into bite-sized chunks, featuring methods for growing your own food, making your own remedies, caring for your soil, and composting everything. The Grow Network helps you build your eco-friendly way of life.",
+      "followers": {
+        "facebook": 33900,
+        "twitter": 869,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5080166.jpg?t=1606211026"
+    },
+    {
+      "title": "Green Diary Green Revolution Guide - Environment",
+      "feed_url": "https://greendiary.com/environment/feed/",
+      "website_url": "https://greendiary.com/environment/",
+      "description": "Green Diary is all about the green, the glorious and the gorgeous. Let's go green and save the environment for a sustainable future. All about green technology, solar energy, wind energy, renewable energy, green design and eco friendly tips for a sustainable future",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 572
+      },
+      "image_url": "https://i1.feedspot.com/4735901.jpg?t=1606211020"
+    },
+    {
+      "title": "Environment blog - The Guardian",
+      "feed_url": "https://www.theguardian.com/environment/blog/rss",
+      "website_url": "https://www.theguardian.com/environment/blog",
+      "description": "The Guardian's blog on the environment, climate change and global warming",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4693435.jpg?t=1606212706"
+    },
+    {
+      "title": "HuffPost",
+      "feed_url": "https://www.huffpost.com/section/green/feed",
+      "website_url": "https://www.huffpost.com/impact/green",
+      "description": "The blog consists of all the latest Green news and opinion.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4700353.jpg?t=1606210267"
+    },
+    {
+      "title": "Environment America",
+      "feed_url": "https://environmentamerica.org/blog/feed",
+      "website_url": "https://environmentamerica.org/latest/",
+      "description": "Environment America helps us protect to the places we love and promote core environmental values, such as clean air to breathe, clean water to drink, and clean energy to power our lives. With staff, members and supporters in every state, together we focus on timely, targeted action that wins tangible improvements in the quality of our environment and our lives.",
+      "followers": {
+        "facebook": 44400,
+        "twitter": 33500
+      },
+      "image_url": "https://i1.feedspot.com/4701187.jpg?t=1606211034"
+    },
+    {
+      "title": "The Conservation Fund",
+      "feed_url": "https://www.conservationfund.org/our-impact/news-insights/",
+      "website_url": "https://www.conservationfund.org/our-impact/news-insights/",
+      "description": "The Conservation Fund is the nation's top environmental nonprofit dedicated to protecting America's most important landscapes and waterways for future generations. We have consistently shown that effective land conservation makes good economic sense. In addition to saving land directly, we act swiftly to accelerate and sustain conservation.",
+      "followers": {
+        "facebook": 16500,
+        "twitter": 7800,
+        "instagram": 8200
+      },
+      "image_url": "https://i1.feedspot.com/4699104.jpg?t=1606211076"
+    },
+    {
+      "title": "Trellis Group",
+      "feed_url": "https://trellis.net/feed/",
+      "website_url": "https://trellis.net/",
+      "description": "Trellis Group empowers sustainability professionals to tackle the climate crisis through our industry-leading events, media and peer network.",
+      "followers": {
+        "facebook": 22200,
+        "twitter": 21
+      },
+      "image_url": "https://i1.feedspot.com/4552972.jpg?t=1660811109"
+    },
+    {
+      "title": "The Last Environmentalist",
+      "feed_url": "https://www.lastenvironmentalist.com/feed/",
+      "website_url": "https://lazyenvironmentalist.com/",
+      "description": "Action, ingenuity, and hope in the face of climate change. Podcast host Josh Dorfman features heroes and innovators leading humanity's rising response.",
+      "followers": {
+        "facebook": 312,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5090231.jpg?t=1606211842"
+    },
+    {
+      "title": "Physics World",
+      "feed_url": "https://physicsworld.com/c/environment-energy/feed/",
+      "website_url": "https://blog.ucs.org/",
+      "description": "The Environment and Energy section of Physics World provides quality information in the form of news, views, and updates about the Environment. Check the articles to get unique ideas and know more.",
+      "followers": {
+        "facebook": 587700,
+        "twitter": 420700
+      },
+      "image_url": "https://i1.feedspot.com/4698766.jpg?t=1606901060"
+    },
+    {
+      "title": "Union of Concerned Scientists Blog",
+      "feed_url": "https://blog.ucs.org/feed/",
+      "website_url": "https://blog.ucs.org/",
+      "description": "A blog on science, politics, activism, climate change, energy,food, agriculture, and transportation. The Union of Concerned Scientists puts rigorous, independent science to work to solve our planet's most pressing problems.",
+      "followers": {
+        "facebook": 246000,
+        "twitter": 75000
+      },
+      "image_url": "https://i1.feedspot.com/5310962.jpg?t=1633003681"
+    },
+    {
+      "title": "Inhabitat",
+      "feed_url": "https://inhabitat.com/environment/feed/",
+      "website_url": "https://inhabitat.com/environment/",
+      "description": "Inhabitat is a website dedicated to green design, innovation, and the future of clean technology, cataloging great ideas and emerging technologies which will change our world for the better.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 155500,
+        "instagram": 54800
+      },
+      "image_url": "https://i1.feedspot.com/4698949.jpg?t=1606899939"
+    },
+    {
+      "title": "ClientEarth News",
+      "feed_url": "https://www.clientearth.org/latest/news/",
+      "website_url": "https://www.clientearth.org/latest/news/",
+      "description": "We are activist lawyers committed to securing a healthy planet. We use environmental law to protect oceans, forests, and other habitats as well as all people.",
+      "followers": {
+        "facebook": 43500,
+        "twitter": 42300
+      },
+      "image_url": "https://i1.feedspot.com/4642080.jpg?t=1608698640"
+    },
+    {
+      "title": "WildInAfrica",
+      "feed_url": "https://wildinafrica.store/blog?format=rss",
+      "website_url": "https://wildinafrica.store/blogs/wildlife-conservation",
+      "description": "Go behind the scenes of the incredible wildlife conservation organizations we support in Africa and India.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 568,
+        "instagram": 13100
+      },
+      "image_url": "https://i1.feedspot.com/5139357.jpg?t=1606212668"
+    },
+    {
+      "title": "Gulf Restoration Network",
+      "feed_url": "https://healthygulf.org/blog/feed",
+      "website_url": "https://healthygulf.org/",
+      "description": "The Gulf Restoration Network is committed to uniting and empowering people to protect and restore the natural resources of the Gulf Region. Our work include Conserving Marine Life, Sustaining Coastal Communities, Defending Wetlands, Protecting Water, Resisting Dirty Energy.",
+      "followers": {
+        "facebook": 25400,
+        "twitter": 8000,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4698762.jpg?t=1606212664"
+    },
+    {
+      "title": "The Seattle Times \u00bb Environment",
+      "feed_url": "https://www.seattletimes.com/seattle-news/environment/feed/",
+      "website_url": "https://www.seattletimes.com/seattle-news/environment/",
+      "description": "Find stories on land use, climate change, air and water quality, radiation, toxins and other environmental issues.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900
+      },
+      "image_url": "https://i1.feedspot.com/4700404.jpg?t=1606210262"
+    },
+    {
+      "title": "CIWEM - Chartered Institution of Water And Environmental Management",
+      "feed_url": "https://www.ciwem.org/feed",
+      "website_url": "https://www.ciwem.org/news/",
+      "description": "We are the only Royal Chartered professional body dedicated to the water and environment sector. The Chartered Institution of Water and Environmental Management is an independent professional body & charity, working for a clean, green and sustainable world.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 12000,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4700387.jpg?t=1606211105"
+    },
+    {
+      "title": "Law and the Environment",
+      "feed_url": "https://www.lawandenvironment.com/feed/",
+      "website_url": "https://disruptiveenvironmentalist.com/",
+      "description": "The blog provides us with the opportunity to introduce you to Foley Hoag's Environmental Practice Group. The blog is about updating, commenting and discussing legal issues regarding environmental law.",
+      "followers": {
+        "facebook": 942,
+        "twitter": 204
+      },
+      "image_url": "https://i1.feedspot.com/4699089.jpg?t=1608698644"
+    },
+    {
+      "title": "Disruptive Environmentalist",
+      "feed_url": "https://disruptiveenvironmentalist.com/feed/",
+      "website_url": "https://disruptiveenvironmentalist.com/",
+      "description": "Seeking new solutions to big environmental problems: An exploratory podcast and blog shining a light on innovators and thought leaders taking direct actions to tackle environmental issues.",
+      "followers": {
+        "facebook": 606,
+        "twitter": 491
+      },
+      "image_url": "https://i1.feedspot.com/5016827.jpg?t=1606211748"
+    },
+    {
+      "title": "The Civil Analyst",
+      "feed_url": "https://www.blogger.com/feeds/4047786387031360562/posts/default",
+      "website_url": "https://thecivilanalyst.blogspot.com/",
+      "description": "This blog is for Environmental Awareness, Economy, and World Affairs. Get articles, stories, newsletters, and bulletins on the economy, environment, and world affairs.",
+      "followers": {
+        "twitter": 11
+      },
+      "image_url": "https://i1.feedspot.com/5202719.jpg?t=1606211759"
+    },
+    {
+      "title": "The IECA Blog",
+      "feed_url": "https://theieca.org/rss.xml",
+      "website_url": "https://theieca.org/blogpost/2099981/IECA-News-Blog",
+      "description": "Our mission is to foster effective and inspiring communication that alleviates environmental issues and conflicts, and solves the problems that cause them. We do this by bringing together and supporting practitioners, teachers, scholars, students, artists and organizations that share these goals.",
+      "followers": {
+        "facebook": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4699073.jpg"
+    },
+    {
+      "title": "Environmental Law Centre Blog",
+      "feed_url": "https://elc.ab.ca/stay-informed/blogs/",
+      "website_url": "https://elc.ab.ca/stay-informed/blogs/",
+      "description": "he Environmental Law Centre (ELC) is Alberta's oldest and most active public interest environmental law organization with a mission is to educate and champion for strong environmental laws and rights so that all Albertans can enjoy clean water, clean air and a healthy environment.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4699558.jpg?t=1606211809"
+    },
+    {
+      "title": "Ecojustice Blog",
+      "feed_url": "https://ecojustice.ca/blog/feed/",
+      "website_url": "https://ecojustice.ca/blog/",
+      "description": "Canada's largest environmental law charity, Ecojustice is building the case for a better earth. Learn more and get involved. Our strategic, innovative public interest lawsuits lead to legal precedents that deliver lasting solutions to our most urgent environmental problems.",
+      "followers": {
+        "facebook": 61100,
+        "twitter": 38300,
+        "instagram": 18000
+      },
+      "image_url": "https://i1.feedspot.com/4698264.jpg?t=1606211063"
+    },
+    {
+      "title": "The Green Times",
+      "feed_url": "https://thegreentimes.co.za/",
+      "website_url": "http://thegreentimes.co.za/",
+      "description": "The Green Times fills this gap by providing stories about what can be done - and how fun and rewarding it is to live a greener life. Climate change is the most widespread & complex problem humanity has ever faced! There is no time to waste and we need to turn green talk into profound green action. This is the intention of the GREEN TIMES.",
+      "followers": {
+        "facebook": 6600
+      },
+      "image_url": "https://i1.feedspot.com/4698877.jpg?t=1606211149"
+    },
+    {
+      "title": "Softback Travel",
+      "feed_url": "https://softbacktravel.com/feed/",
+      "website_url": "https://www.ecowatch.com/",
+      "description": "Blog posts on sustainability, camping, environment, wildlife, and more. Softback Travel offers stories and explains things to inform and encourage you to go on your own adventure, travel sustainably, and enjoy our planet's wonderful and valuable wildlife.",
+      "followers": {
+        "facebook": 193
+      },
+      "image_url": "https://i1.feedspot.com/5156075.jpg?t=1622526309"
+    },
+    {
+      "title": "EcoWatch",
+      "feed_url": "https://www.ecowatch.com/feeds/feed.rss",
+      "website_url": "https://www.ecowatch.com/",
+      "description": "Blog topics include climate change, energy, oceans, animals, food, politics, and health. EcoWatch is a leading online environmental news company, publishing timely stories every day for a healthier planet and life.",
+      "followers": {
+        "facebook": 552800,
+        "twitter": 236700,
+        "instagram": 53800
+      },
+      "image_url": "https://i1.feedspot.com/4978873.jpg?t=1632999069"
+    },
+    {
+      "title": "Environment Blog - The Environment Matters",
+      "feed_url": "https://www.environmentblog.net/feed/",
+      "website_url": "https://environmentblog.net/",
+      "description": "Environment Blog brings you environmental news and insightful articles on the environment, pollution, energy, recycling, climate change and much more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4698964.jpg"
+    },
+    {
+      "title": "Earthjustice",
+      "feed_url": "https://earthjustice.org/blog/feed",
+      "website_url": "https://earthjustice.org/stories",
+      "description": "Earthjustice is the premier nonprofit environmental law organization. We wield the power of law and the strength of partnership to protect people's health, to preserve magnificent places and wildlife, to advance clean energy, and to combat climate change. We are here because the earth needs a good lawyer. Earthjustice holds those who break our nation's laws accountable for their actions.",
+      "followers": {
+        "facebook": 535500,
+        "twitter": 250200,
+        "instagram": 177000
+      },
+      "image_url": "https://i1.feedspot.com/4698309.jpg?t=1606210312"
+    },
+    {
+      "title": "Ecology Global Network",
+      "feed_url": "https://www.ecology.com/ecology-today/feed/",
+      "website_url": "https://pateblog.nma.gov.au/",
+      "description": "The blog uses the modern tools of information and communication to inform, educate and inspire the global community to respect, restore and protect our natural and human world, and to encourage all people to become stewards of the environment in which we live.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 873
+      },
+      "image_url": "https://i1.feedspot.com/1257977.jpg?t=1606212720"
+    },
+    {
+      "title": "Environmental Conscience Blog",
+      "feed_url": "https://environmental-conscience.com/feed/",
+      "website_url": "https://pateblog.nma.gov.au/",
+      "description": "Blog is meant to educate people about environmental problems and how we can solve them. Key topics covered are contamination & pollution, daily life, energy sources, environment & ecosystems, environmental facts, environmental holidays, environmental problems, green investments, health, inequality, insurance. politics, quality of life, resources, sustainability & technology, vehicles, and waste management.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5348548.jpg?t=1638265456"
+    },
+    {
+      "title": "National Museum Australia - The People & Environment Blog",
+      "feed_url": "https://pateblog.nma.gov.au/feed/",
+      "website_url": "https://pateblog.nma.gov.au/",
+      "description": "The People & Environment Blog - People's relationships with Australia's natural and built environments. They focus on Indigenous histories and cultures, European settlement and our interaction with the environment.",
+      "followers": {
+        "facebook": 120100,
+        "twitter": 39400
+      },
+      "image_url": "https://i1.feedspot.com/4698987.jpg?t=1606210328"
+    },
+    {
+      "title": "Pew Charitable Trusts \u00bb Environmental science",
+      "feed_url": "https://www.pewtrusts.org/en/search?tag=Environmental%20science&contentFilterType=content&sortBy=date&sortOrder=desc&page=1",
+      "website_url": "https://www.pewtrusts.org/en/search?tag=Environmental%20science&contentFilterType=content&sortBy=date&sortOrder=desc&page=1",
+      "description": "Pew works to protect our shared environment, encourage responsive government, support scientific research, and improve civic life. Good conservation decisions depend on good science. Through support for talented scientists studying our oceans, Pew is working to improve our knowledge about environmental challenges and the policies that can help solve them.",
+      "followers": {
+        "facebook": 132900,
+        "twitter": 66300,
+        "instagram": 30100
+      },
+      "image_url": "https://i1.feedspot.com/4700410.jpg?t=1606210288"
+    },
+    {
+      "title": "Earth Times",
+      "feed_url": "http://feeds.earthtimes.org/earthtimes/?format=xml",
+      "website_url": "https://earthtimes.org/blogs/categories",
+      "description": "News and blog articles about the environment and information on current environmental issues and topics affecting planet earth",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/4463093.jpg?t=1606212714"
+    }
+  ]
+}

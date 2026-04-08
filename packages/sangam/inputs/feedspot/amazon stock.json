@@ -1,0 +1,65 @@
+{
+  "category": "Amazon Stock",
+  "source_url": "https://rss.feedspot.com/amazon_stock_rss_feeds",
+  "feeds": [
+    {
+      "title": "TheStreet \u00bb Technology",
+      "feed_url": "https://www.thestreet.com/.rss/feed/0189c085-b1f6-4e4c-be08-989d56d0fa86.xml",
+      "website_url": "https://www.thestreet.com/technology/",
+      "description": "All latest articles about Technology from TheStreet.",
+      "followers": {
+        "facebook": 313300,
+        "twitter": 848800,
+        "instagram": 123000
+      },
+      "image_url": "https://i1.feedspot.com/5391811.jpg?t=1758695661"
+    },
+    {
+      "title": "Nasdaq \u00bb AMZN",
+      "feed_url": "https://www.nasdaq.com/feed/rssoutbound?symbol=AMZN",
+      "website_url": "https://www.nasdaq.com/market-activity/stocks/amzn",
+      "description": "Find the latest news on AMZN stock. Nasdaq offers stock quotes & market activity data for US and global markets.",
+      "followers": {
+        "facebook": 825600,
+        "twitter": 148000,
+        "instagram": 594700
+      },
+      "image_url": "https://i1.feedspot.com/5391783.jpg?t=1650262328"
+    },
+    {
+      "title": "Kiplinger",
+      "feed_url": "https://www.kiplinger.com/feeds.xml",
+      "website_url": "https://www.kiplinger.com/",
+      "description": "This section features articles on AMZN stock. Kiplinger is your destination for trusted personal finance and investing advice for all stages of life.",
+      "followers": {
+        "facebook": 104800,
+        "twitter": 56500,
+        "instagram": 13100
+      },
+      "image_url": "https://i1.feedspot.com/5391817.jpg?t=1650268609"
+    },
+    {
+      "title": "Investing.com \u00bb Amazon",
+      "feed_url": "https://www.investing.com/equities/amazon-com-inc",
+      "website_url": "https://www.investing.com/equities/amazon-com-inc",
+      "description": "View today's Amazon.com Inc stock price and latest AMZN news and analysis. Investing.com is a financial markets platform providing real-time data, quotes, charts, financial tools, breaking news and analysis across 250 exchanges around the world.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/5391818.jpg?t=1650268437"
+    },
+    {
+      "title": "The Motley Fool \u00bb AMZN",
+      "feed_url": "https://www.fool.com/quote/nasdaq/amzn/",
+      "website_url": "https://www.fool.com/quote/nasdaq/amzn/",
+      "description": "Find Amazon (AMZN) stock price, news & info. The Motley Fool seeks to teach individual investors how to invest in a smart and strategic way. Our investing advice focuses on buying great stocks of great companies that will build wealth over the long term.",
+      "followers": {
+        "facebook": 930900,
+        "twitter": 858800,
+        "instagram": 313100
+      },
+      "image_url": "https://i1.feedspot.com/5391789.jpg?t=1650265535"
+    }
+  ]
+}

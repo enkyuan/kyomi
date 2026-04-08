@@ -1,0 +1,79 @@
+{
+  "category": "Iowa Art",
+  "source_url": "https://rss.feedspot.com/iowa_art_rss_feeds",
+  "feeds": [
+    {
+      "title": "Charles City Arts Blog",
+      "feed_url": "https://www.charlescityarts.org/blog-feed.xml",
+      "website_url": "https://www.charlescityarts.org/blog",
+      "description": "The Charles City Arts Center is a vibrant community hub dedicated to fostering creativity and celebrating the arts. Housed in the historic Carnegie Library in downtown Charles City, the center features galleries that showcase rotating exhibitions of painting, sculpture, photography, and mixed media works by local and regional artists.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7271927.jpg?t=1710241286"
+    },
+    {
+      "title": "Cecelia Comito Art Blog",
+      "feed_url": "https://data.fineartstudioonline.com/rssfeed.asp?id=109733",
+      "website_url": "https://www.ceceliacomitoart.com/blog",
+      "description": "Cecelia Comito employs a mixed media style that incorporates salvaged materials to create layered, nostalgic depictions of rural landscapes and scenes inspired by her Iowa roots. Her artwork evokes joy, charm, and connections to forgotten stories, aiming to resonate with viewers and make them feel happier and more hopeful.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7271918.jpg?t=1710240877"
+    },
+    {
+      "title": "Shelby Prindaville Blog",
+      "feed_url": "https://shelbyprindaville.com/upcoming-events-and-blog?format=rss",
+      "website_url": "https://shelbyprindaville.com/upcoming-events-and-blog",
+      "description": "Explore artist Shelby Prindaville's blog containing news and information about upcoming exhibitions, residencies, and other\u00a0opportunities as well as general interest posts relating to nature, science, and art. Shelby Prindaville is an internationally acclaimed artist who creates art pieces centered on the beautiful fragility and resilience of the natural world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7271919.jpg?t=1710241326"
+    },
+    {
+      "title": "Liz Lidgett Gallery and Design Blog",
+      "feed_url": "https://www.lizlidgett.com//feed/rss2",
+      "website_url": "https://www.lizlidgett.com/blog",
+      "description": "Liz Lidgett's Journal is a lifestyle and interior design blog that celebrates creativity, personal style, and finding inspiration in both the every day and the extraordinary. Founded by design enthusiast and storyteller Liz Lidgett, the blog is a curated collection of home tours, DIY projects, styling tips, and design advice that caters to a range of aesthetics and budgets.",
+      "followers": {
+        "facebook": 3100,
+        "instagram": 36900
+      },
+      "image_url": "https://i1.feedspot.com/7271923.jpg?t=1710240901"
+    },
+    {
+      "title": "Jill Wells Art Blog",
+      "feed_url": "https://www.jillwellsart.com/blog-feed.xml",
+      "website_url": "https://www.jillwellsart.com/blog",
+      "description": "Jill Wells's Art blog shares Midwest art news, artists, socially engaged art, art and advocacy work, and art events in the Midwest. Explore new exhibits and artist spotlights that introduce underrated local artists and art exhibits to a wider audience.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7271926.jpg?t=1710241392"
+    },
+    {
+      "title": "Artdose Magazine",
+      "feed_url": "https://artdosemagazine.com/feed/",
+      "website_url": "https://artdosemagazine.com/archives/articles/",
+      "description": "Established in 2013, Artdose Magazine LLC, led by Frank Ju\u00e1rez, is a vital platform for Midwest visual arts. Committed to fostering connections and support, it aims to introduce, engage, educate, and diversify art experiences, uniting enthusiasts under a common goal.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7271591.jpg?t=1710236064"
+    },
+    {
+      "title": "The University of Iowa",
+      "feed_url": "https://art.uiowa.edu/news/feed",
+      "website_url": "https://art.uiowa.edu/news",
+      "description": "Read the latest articles from the School of Art and Art History covering the local independent art scene and programs in Iowa. The School of Art and Art History is a unit of the College of Liberal Arts and Sciences and currently offers the BA, BFA, and MFA degrees in studio art and the BA, MA, and PhD in art history.",
+      "followers": {
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/7271925.jpg?t=1710241468"
+    },
+    {
+      "title": "Iowa State Daily \u00bb Arts & Culture",
+      "feed_url": "https://iowastatedaily.com/category/arts-culture/feed/",
+      "website_url": "https://iowastatedaily.com/category/arts-culture/",
+      "description": "Here you'll find coverage of student art exhibitions, music and theater performances, dance showcases, literary readings, film screenings, and other artistic events happening at Iowa State University. The Iowa State Daily is an independent student news organization established in 1890 and is staffed by Iowa State students.",
+      "followers": {
+        "facebook": 32500,
+        "twitter": 20000,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/7271921.jpg?t=1710240890"
+    }
+  ]
+}

@@ -1,0 +1,388 @@
+{
+  "category": "Tennis News",
+  "source_url": "https://rss.feedspot.com/tennis_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Tennis World USA",
+      "feed_url": "https://www.tennisworldusa.org/rss/news.php",
+      "website_url": "https://www.tennisworldusa.org/",
+      "description": "Tennis World featuring tennis news, stats, rankings, player and tournament information, video highlights.",
+      "followers": {
+        "facebook": 405800,
+        "twitter": 9300
+      },
+      "image_url": "https://i1.feedspot.com/4788388.jpg?t=1603204591"
+    },
+    {
+      "title": "Tennis-X",
+      "feed_url": "https://feeds.feedburner.com/tennisx",
+      "website_url": "https://www.tennis-x.com/",
+      "description": "Tennis-X.com provides readers with an in-depth look into the world of professional ATP and WTA tennis with the latest tennis news, results, rankings, quotes and information.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 19500
+      },
+      "image_url": "https://i1.feedspot.com/1622100.jpg?t=1603202119"
+    },
+    {
+      "title": "Tennis Now",
+      "feed_url": "https://www.tennisnow.com/cmspages/blogrss.aspx",
+      "website_url": "https://www.tennisnow.com/",
+      "description": "Tennis Now is for the latest tennis news, blogs, forum discussions, and social networking. Join our community to meet, stay in touch, and interact with tennis players, coaches, and enthusiasts in your area.",
+      "followers": {
+        "facebook": 704900,
+        "twitter": 40400,
+        "instagram": 23500
+      },
+      "image_url": "https://i1.feedspot.com/2107720.jpg?t=1603202103"
+    },
+    {
+      "title": "Tennis Australia",
+      "feed_url": "https://feeds.feedburner.com/tennis-australia",
+      "website_url": "https://www.tennis.com.au/news-and-events/news-and-features/all-news/",
+      "description": "Tennis Australia is the governing body of tennis within Australia which conduct national and international tournaments such as the Australian Open Grand Slam.It provides various news, events and details of clubs, coaches, tournaments and much more on this site.",
+      "followers": {
+        "facebook": 253000,
+        "twitter": 82700,
+        "instagram": 124300
+      },
+      "image_url": "https://i1.feedspot.com/4788174.jpg?t=1603204668"
+    },
+    {
+      "title": "Tennis Infinity",
+      "feed_url": "https://tennis-infinity.com/sitemap/news.xml",
+      "website_url": "https://tennis-infinity.com/",
+      "description": "Latest Tennis News, ATP & WTA, Rankings, Interviews, Matches, and more. Number one source for all tennis news. We're dedicated to providing you with the best stories from the world of men's and women's tennis.",
+      "followers": {
+        "facebook": 44000,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5515681.jpg?t=1677757721"
+    },
+    {
+      "title": "Perfect Tennis",
+      "feed_url": "https://www.perfect-tennis.com/feed/",
+      "website_url": "https://www.perfect-tennis.com/",
+      "description": "UK based Tennis Blog with a strong focus on Roger Federer. Includes match reports, analysis, predictions, general tennis news, videos and anything Federer related.",
+      "followers": {
+        "facebook": 90500,
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4788569.jpg?t=1603204673"
+    },
+    {
+      "title": "US Open",
+      "feed_url": "https://www.usopen.org/en_US/news/rss/usopen.rss",
+      "website_url": "https://www.usopen.org/en_US/news/index.html?promo=topnav",
+      "description": "Find news, live updates, photos,videos and interviews related to US Open on this site.",
+      "followers": {
+        "facebook": 5400000,
+        "twitter": 2300000,
+        "instagram": 3800000
+      },
+      "image_url": "https://i1.feedspot.com/249053.jpg?t=1603204649"
+    },
+    {
+      "title": "Novak Djokovic",
+      "feed_url": "https://novakdjokovic.com/en/feed/",
+      "website_url": "https://novakdjokovic.com/en/n/news/",
+      "description": "The official website of Novak Djokovic with exclusive photos, videos, results,news, biographical information, articles and interviews.",
+      "followers": {
+        "facebook": 10300000,
+        "twitter": 9200000,
+        "instagram": 16100000
+      },
+      "image_url": "https://i1.feedspot.com/62452.jpg?t=1606124434"
+    },
+    {
+      "title": "USTA Florida",
+      "feed_url": "https://www.ustaflorida.com/feed/",
+      "website_url": "https://www.ustaflorida.com/news/",
+      "description": "Get the latest USTA Florida adult and youth tennis news from around the state and in your community.",
+      "followers": {
+        "facebook": 18700,
+        "twitter": 6300
+      },
+      "image_url": "https://i1.feedspot.com/4787433.jpg?t=1603204788"
+    },
+    {
+      "title": "World Tennis Magazine",
+      "feed_url": "https://worldtennismagazine.com/feed",
+      "website_url": "https://worldtennismagazine.com/",
+      "description": "World Tennis Magazine is a tennis website and media outlet that offers unique tennis news and views from around the world. It features professional writing talent and exclusive content that provides tennis fans and insiders with unique content and expert opinions from many different perspectives of the sport. World Tennis Magazine prides itself for being among the top tennis-related news outlet worldwide.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/1492.jpg?t=1603204754"
+    },
+    {
+      "title": "The Grandstand",
+      "feed_url": "https://tenngrand.com/feed/",
+      "website_url": "https://tenngrand.com/category/news/",
+      "description": "Find latest news, match previews, match recaps, photos, predictions, live reports and much more on this site.",
+      "followers": {
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/540323.jpg?t=1652180937"
+    },
+    {
+      "title": "Tennis Panorama",
+      "feed_url": "https://www.tennispanorama.com/feed",
+      "website_url": "https://www.tennispanorama.com/",
+      "description": "Tennis News and Information, Tournament Coverage and Features",
+      "followers": {
+        "twitter": 22200
+      },
+      "image_url": "https://i1.feedspot.com/4788359.jpg?t=1653136342"
+    },
+    {
+      "title": "Tennis View Magazine",
+      "feed_url": "http://www.tennisviewmag.com/rss.xml",
+      "website_url": "http://www.tennisviewmag.com/tennis-view-magazine/news",
+      "description": "Tennis View Magazine offers breaking news, unique perspectives of the pro tour, gear reviews, exclusive interviews, and high quality photography.",
+      "followers": {
+        "facebook": 23000,
+        "twitter": 19500
+      },
+      "image_url": "https://i1.feedspot.com/4787052.jpg?t=1603202110"
+    },
+    {
+      "title": "Asian Tennis Federation",
+      "feed_url": "https://www.asiantennis.com/feed/",
+      "website_url": "https://www.asiantennis.com/news/",
+      "description": "Find latest events and news related to tennis on this site.",
+      "followers": {
+        "facebook": 13800,
+        "instagram": 6400
+      },
+      "image_url": "https://i1.feedspot.com/4788916.jpg?t=1603204812"
+    },
+    {
+      "title": "Tennis Ireland",
+      "feed_url": "https://www.tennisireland.ie/feed",
+      "website_url": "https://www.tennisireland.ie/",
+      "description": "Find latest news, details of clubs and many other information on this site.",
+      "followers": {
+        "facebook": 13800,
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/4787032.jpg?t=1603204826"
+    },
+    {
+      "title": "Tennis Threads",
+      "feed_url": "http://tennisthreads.net/feed/",
+      "website_url": "https://tennisthreads.net/",
+      "description": "Tennis Threads features Tennis News and Live Scores.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 213,
+        "instagram": 392
+      },
+      "image_url": "https://i1.feedspot.com/4788602.jpg?t=1603204849"
+    },
+    {
+      "title": "Chandos Tennis Club",
+      "feed_url": "https://chandosltc.com/feed/",
+      "website_url": "https://chandosltc.com/category/news/",
+      "description": "Find all the latest events, news, tournaments and much more on this site.",
+      "followers": {
+        "twitter": 137,
+        "instagram": 448
+      },
+      "image_url": "https://i1.feedspot.com/4788277.jpg?t=1603204854"
+    },
+    {
+      "title": "Tennis Connected",
+      "feed_url": "https://tennisconnected.com/home/feed/",
+      "website_url": "https://tennisconnected.com/",
+      "description": "TennisConnected is where tennis fans from around the world come to view the latest insider news. Hottest tennis fashion trends, newest product releases, and reviews, engaging podcasts, insightful interviews, and enticing articles.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 29100,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/540302.jpg?t=1632142164"
+    },
+    {
+      "title": "Tennis News",
+      "feed_url": "https://the-tennisnews.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://the-tennisnews.blogspot.com/",
+      "description": "Your Daily Dose To Tennis World.At Tennis News, we try to give you each and every bit of information about Tennis World.",
+      "followers": {
+        "facebook": 191
+      },
+      "image_url": "https://i1.feedspot.com/4788565.jpg?t=1603204610"
+    },
+    {
+      "title": "Brisbane International Tennis",
+      "feed_url": "https://www.brisbaneinternational.com.au/feed/",
+      "website_url": "https://www.brisbaneinternational.com.au/",
+      "description": "Find the latest scores, news, videos, schedules on this site.",
+      "followers": {
+        "facebook": 82300,
+        "twitter": 33200
+      },
+      "image_url": "https://i1.feedspot.com/4788225.jpg?t=1603204808"
+    },
+    {
+      "title": "The Slice",
+      "feed_url": "https://www.theslicetennis.com/articles?format=rss",
+      "website_url": "https://www.theslicetennis.com/articles",
+      "description": "The Slice Tennis entertains and informs fans on the happenings of the tennis world. Get closer to the action than anywhere else on the web. By tennis fans, for tennis fans.",
+      "followers": {
+        "facebook": 190,
+        "twitter": 866,
+        "instagram": 11000
+      },
+      "image_url": "https://i1.feedspot.com/4789079.jpg?t=1603204842"
+    },
+    {
+      "title": "The MyTennisLessons Blog | Tennis News, Tips and Pop Culture",
+      "feed_url": "http://blog.mytennislessons.com/feed/",
+      "website_url": "https://blog.mytennislessons.com/",
+      "description": "The MyTennisLessons Blog is for tennis fanatics. Whether you're looking for the latest pro news or tennis tips and advice, we cover all things tennis.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4439330.jpg?t=1603204872"
+    },
+    {
+      "title": "ATP Tour",
+      "feed_url": "https://www.atptour.com/en/media/rss-feed/xml-feed",
+      "website_url": "https://www.atptour.com/en/news",
+      "description": "The official source for the latest news from the ATP World Tour and the world of men's professional tennis. Featuring tennis scores, stats, rankings, player and tournament information, news, video highlights & more.",
+      "followers": {
+        "facebook": 39,
+        "twitter": 472,
+        "instagram": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/4347314.jpg?t=1603202097"
+    },
+    {
+      "title": "Racquet Sports Industry",
+      "feed_url": "https://tennisindustrymag.com/news/index.xml",
+      "website_url": "https://tennisindustrymag.com/news/",
+      "description": "Tennis Industry is the only magazine covering the racquet sports industry. Tennis Industry magazine provides unmatched coverage of the business, equipment, apparel, and racquet service of tennis, racquetball, squash, and badminton.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4788610.jpg?t=1603204583"
+    },
+    {
+      "title": "Stevegtennis",
+      "feed_url": "https://www.stevegtennis.com/",
+      "website_url": "https://www.stevegtennis.com/",
+      "description": "Tennis results from the ATP Tour, Challengers and Futures tournaments. The latest tennis news about Roger Federer, Novak Djokovic, Rafael Nadal and Andy Murray.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/540286.jpg?t=1723802144"
+    },
+    {
+      "title": "Tennishead",
+      "feed_url": "https://tennishead.net/wp-content/uploads/2019/01/News.jpg",
+      "website_url": "https://tennishead.net/tennis/news/",
+      "description": "Tennishead brings you the latest tennis news, scores, stats and products. With exclusive features and interviews, plus equipment reviewed in depth.",
+      "followers": {
+        "facebook": 281000,
+        "twitter": 10600
+      },
+      "image_url": "https://i1.feedspot.com/4478223.jpg?t=1603202237"
+    },
+    {
+      "title": "Tennisbuzz",
+      "feed_url": "https://tennisbuzz.net/feed/",
+      "website_url": "https://tennisbuzz.net/",
+      "description": "Tennisbuzz is a tennis news and features website dedicated to covering the ATP Tour, WTA Tour, Grand Slams, and more with original content. Our small but dedicated team of experienced journalists covers daily news from the ATP Tour and WTA Tour. Original features are also a cornerstone of Tennisbuzz, as well as interactive content such as topical quizzes.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5283009.jpg?t=1621592290"
+    },
+    {
+      "title": "Tennis Canada News",
+      "feed_url": "https://www.tenniscanada.com/news",
+      "website_url": "https://www.tenniscanada.com/news",
+      "description": "Founded in 1890, Tennis Canada is a non-profit, national sports association with a mission to lead the growth of tennis in Canada and a vision to become a world-leading tennis nation.",
+      "followers": {
+        "facebook": 66500,
+        "twitter": 60200,
+        "instagram": 69400
+      },
+      "image_url": "https://i1.feedspot.com/4786974.jpg?t=1632143316"
+    },
+    {
+      "title": "Love Tennis Blog",
+      "feed_url": "https://www.lovetennisblog.com/",
+      "website_url": "https://www.lovetennisblog.com/",
+      "description": "Tennis Blog with tennis news, tennis advice and tennis tips",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 195
+      },
+      "image_url": "https://i1.feedspot.com/4477549.jpg?t=1652163313"
+    },
+    {
+      "title": "10sBalls.com",
+      "feed_url": "https://www.specificfeeds.com/10sballs/rss",
+      "website_url": "https://10sballs.com/",
+      "description": "10sballs.com serves the latest tennis updates, news, and top stories from a talented team of writers and tennis-lovers. We offer innovative stories, draws and results, order of play, live scores, breaking videos, special blogs from our unique contributors, and even chances to win excellent prizes. As we hit you with the best quality coverage, and find out why/how we play the sport.",
+      "followers": {
+        "facebook": 16500,
+        "twitter": 4700,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5153511.jpg?t=1603204801"
+    },
+    {
+      "title": "Rafael Nadal Fans",
+      "feed_url": "https://rafaelnadalfans.com/",
+      "website_url": "https://rafaelnadalfans.com/",
+      "description": "RafaelNadalFans.com is not just another fan site! It's the largest community dedicated to tennis star Rafael Nadal. Get the latest news, insights and updates here! A warm welcome everyone, wherever you are, to our friendly community.",
+      "followers": {
+        "facebook": 467900,
+        "twitter": 98600,
+        "instagram": 84000
+      },
+      "image_url": "https://i1.feedspot.com/4478211.jpg?t=1603202128"
+    },
+    {
+      "title": "Racquet Industry Research Group News",
+      "feed_url": "https://www.tennisindustry.org/cms/tasks/feed/?feedID=A547E543-B896-17ED-95CE655F70CD474C",
+      "website_url": "https://www.racquetindustryresearch.org/news/",
+      "description": "The Tennis Industry Association (TIA) is the not for profit trade association for tennis providing research reports and grow the game initiatives to increase the economic vitality of the sport.Also find news on tennis industry on this site.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 6200
+      },
+      "image_url": "https://i1.feedspot.com/4788301.jpg?t=1603204876"
+    },
+    {
+      "title": "Great Missenden LTC",
+      "feed_url": "https://www.gmltc.com/news/feed",
+      "website_url": "https://www.gmltc.com/",
+      "description": "Find News Articles of Great Missenden Lawn Tennis Club.",
+      "followers": {
+        "facebook": 297,
+        "twitter": 428
+      },
+      "image_url": "https://i1.feedspot.com/4788311.jpg?t=1603204860"
+    },
+    {
+      "title": "Swiss Indoors Basel",
+      "feed_url": "https://www.swissindoorsbasel.ch/en-us/Home/ctl/rss/mid/5500",
+      "website_url": "https://www.swissindoorsbasel.ch/en/tournament/tournament-news/",
+      "description": "you will find everything worth knowing about the sporting and social highlight of the year and during the tournament also the latest news, results and statistics.",
+      "followers": {
+        "facebook": 19200,
+        "instagram": 24500
+      },
+      "image_url": "https://i1.feedspot.com/4788260.jpg?t=1603204882"
+    }
+  ]
+}

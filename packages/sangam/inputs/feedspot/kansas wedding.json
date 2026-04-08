@@ -1,0 +1,52 @@
+{
+  "category": "Kansas Wedding",
+  "source_url": "https://rss.feedspot.com/kansas_wedding_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Brownstone Topeka Blog",
+      "feed_url": "https://thebrownstonetopeka.com/feed/",
+      "website_url": "https://thebrownstonetopeka.com/blog/",
+      "description": "Brownstone provides premier amenities, personal coordination, ceremony packages, bridal lounges, and more. If you are looking for an elegant Topeka wedding venue, then the Brownstone is for you!",
+      "followers": {
+        "facebook": 6200,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5321532.jpg?t=1631530882"
+    },
+    {
+      "title": "Simple Elegance Blog",
+      "feed_url": "https://iplanyourwedding.com/feed/",
+      "website_url": "https://iplanyourwedding.com/blog/",
+      "description": "Get inspired by our real weddings. Each one is filled with thoughtful details, charming moments, and romance. Simple Elegance is a full-service Kansas City wedding planning and wedding coordinator firm specializing in crafting beautiful weddings with expertise & style.",
+      "followers": {
+        "facebook": 8,
+        "twitter": 256,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5321460.jpg?t=1631603549"
+    },
+    {
+      "title": "Melissa & Beth Blog",
+      "feed_url": "https://feeds.feedburner.com/melissaandbeth",
+      "website_url": "http://melissaandbeth.com/blog/",
+      "description": "Hi, we are Melissa & Beth, wedding photographers based in Kansas City. Check out our blog to see our beautiful brides and wedding features!",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 47,
+        "instagram": 7400
+      },
+      "image_url": "https://i1.feedspot.com/5321459.jpg?t=1631539489"
+    },
+    {
+      "title": "Heather Brulez Blog",
+      "feed_url": "https://feeds.feedburner.com/midwestweddingphotographer",
+      "website_url": "https://heatherbrulez.com/blog/",
+      "description": "Heather Brulez is an award-winning and published Kansas City wedding photographer. She has photographed couples in Grand Cayman, Punta Cana, Colorado, Chicago, and Boston.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 392
+      },
+      "image_url": "https://i1.feedspot.com/5321457.jpg?t=1631529961"
+    }
+  ]
+}

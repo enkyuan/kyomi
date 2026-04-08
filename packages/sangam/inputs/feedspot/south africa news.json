@@ -1,0 +1,281 @@
+{
+  "category": "South Africa News",
+  "source_url": "https://rss.feedspot.com/south_africa_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mail & Guardian",
+      "feed_url": "https://mg.co.za/feed/",
+      "website_url": "https://mg.co.za/",
+      "description": "The Mail & Guardian Online is South Africa's oldest quality news source on the web and Africa's first online newspaper. Find News, comment and analysis and much more on this site.",
+      "followers": {
+        "facebook": 515400,
+        "twitter": 1200000,
+        "instagram": 47000
+      },
+      "image_url": "https://i1.feedspot.com/4880301.jpg?t=1523855868"
+    },
+    {
+      "title": "Daily Maverick",
+      "feed_url": "https://www.dailymaverick.co.za/dmrss/",
+      "website_url": "https://www.dailymaverick.co.za/",
+      "description": "Daily Maverick is a wholly independent and always entertaining source for all the news and insight South Africans need. It is a unique blend of global and local news, analysis and opinion.",
+      "followers": {
+        "facebook": 277700,
+        "twitter": 582200,
+        "instagram": 81700
+      },
+      "image_url": "https://i1.feedspot.com/4880335.jpg"
+    },
+    {
+      "title": "SowetanLIVE",
+      "feed_url": "https://www.sowetanlive.co.za/rss/?publication=sowetan-live",
+      "website_url": "https://www.sowetanlive.co.za/",
+      "description": "SowetanLIVE is the website of the Sowetan which is the the English-language South African daily newspaper. We bring you a unique perspective of South Africa and International news.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/4879885.jpg?t=1522935916"
+    },
+    {
+      "title": "IOL",
+      "feed_url": "https://rss.iol.io/iol/news",
+      "website_url": "https://www.iol.co.za/",
+      "description": "IOL (Independent Online) is a leading South African news website that provides comprehensive coverage of local and international news. The site features sections on politics, business, sports, entertainment, and lifestyle. It offers breaking news, in-depth reports, and opinion pieces, ensuring readers stay informed about significant events and trends.",
+      "followers": {
+        "facebook": 838000,
+        "twitter": 715500
+      },
+      "image_url": "https://i1.feedspot.com/4376343.jpg?t=1721731461"
+    },
+    {
+      "title": "The Citizen",
+      "feed_url": "https://www.citizen.co.za/feed/",
+      "website_url": "https://www.citizen.co.za/",
+      "description": "The Citizen brings you breaking news, current affairs, celebrity and entertainment news, as well as sport news throughout the day.",
+      "followers": {
+        "facebook": 311300,
+        "twitter": 266200
+      },
+      "image_url": "https://i1.feedspot.com/4880312.jpg"
+    },
+    {
+      "title": "MyBroadband",
+      "feed_url": "https://mybroadband.co.za/news/feed",
+      "website_url": "https://mybroadband.co.za/news/",
+      "description": "MyBroadband is South Africa's biggest and best IT news website, covering the latest international and local IT and tech news.",
+      "followers": {
+        "facebook": 290300,
+        "twitter": 114200,
+        "instagram": 15100
+      },
+      "image_url": "https://i1.feedspot.com/4885742.jpg?t=1638784647"
+    },
+    {
+      "title": "The South African",
+      "feed_url": "https://www.thesouthafrican.com/feed/",
+      "website_url": "https://www.thesouthafrican.com/",
+      "description": "The South African is an independent, no agenda and bias online news platform that gives the latest news updates. The South African is all about South Africa and the stories that affect South Africans, wherever they are in the world.",
+      "followers": {
+        "facebook": 913700,
+        "twitter": 41500,
+        "instagram": 11300
+      },
+      "image_url": "https://i1.feedspot.com/4857309.jpg?t=1658401701"
+    },
+    {
+      "title": "TechCentral",
+      "feed_url": "https://techcentral.co.za/feed/",
+      "website_url": "https://techcentral.co.za/",
+      "description": "TechCentral is the leading quality news and information resource for people involved in South Africa's fast-growing information and communications technology industry and those interested in the fast-changing world of information technology.",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 87100
+      },
+      "image_url": "https://i1.feedspot.com/4885701.jpg?t=1637226946"
+    },
+    {
+      "title": "The Bulrushes",
+      "feed_url": "https://thebulrushes.com/feed/",
+      "website_url": "https://thebulrushes.com/",
+      "description": "Stay on top of news developments in South Africa. The Bulrushes is an online news website founded in 2021 by veteran editor Moses Mudzwiti. It aims to provide an interesting one-stop window of authentic global news, sports, and entertainment reports that are well-written and generally understandable by any English speaker.",
+      "followers": {
+        "facebook": 511
+      },
+      "image_url": "https://i1.feedspot.com/7300693.jpg?t=1713354438"
+    },
+    {
+      "title": "African Insider",
+      "feed_url": "https://www.africaninsider.com/feed/",
+      "website_url": "https://www.africaninsider.com/",
+      "description": "African Insider is an extensive and all-inclusive round-the-clock online news publication. It covers the latest breaking news, daily news in Africa. African politics, African business, African sports, business, and technology.",
+      "followers": {
+        "facebook": 34100,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5424023.jpg?t=1658405431"
+    },
+    {
+      "title": "Who? SA",
+      "feed_url": "https://whoswho.co.za/feed/",
+      "website_url": "https://whoswho.co.za/",
+      "description": "Who? SA brings you SA news, sports, music, business, lifestyle and more. Follow to get updates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5198079.jpg?t=1600684072"
+    },
+    {
+      "title": "African Entertainment",
+      "feed_url": "https://africanentertainment.com/feed/",
+      "website_url": "https://africanentertainment.com/",
+      "description": "African Entertainment is for all the breaking news, sports, latest music videos, trending entertainment stories from Nigeria, Ghana, South Africa, and Top International Stories. African Entertainment is a global media, entertainment, lifestyle, sports and fashion website. We provide you with the latest breaking news from around Africa",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 7200
+      },
+      "image_url": "https://i1.feedspot.com/5245796.jpg?t=1613539293"
+    },
+    {
+      "title": "Surge Zirc SA",
+      "feed_url": "https://surgezirc.co.za/feed/",
+      "website_url": "https://surgezirc.co.za/",
+      "description": "SurgeZirc South Africa is the South African edition of the SurgeZirc global multimedia blogging platform which publishes news, politics, entertainment, lifestyle, sports and technology.",
+      "followers": {
+        "facebook": 66500,
+        "twitter": 5300,
+        "instagram": 107600
+      },
+      "image_url": "https://i1.feedspot.com/5185624.jpg?t=1637300995"
+    },
+    {
+      "title": "Over Saturated",
+      "feed_url": "https://oversaturated.co.za/feed/",
+      "website_url": "https://oversaturated.co.za/",
+      "description": "Over Saturated is a website where South African creatives and storytellers can tell the stories they want to tell. It is currently the home to South Africa's Not Really Radio podcast and Tyrone Fisher's blog.",
+      "followers": {
+        "facebook": 189,
+        "twitter": 80,
+        "instagram": 168
+      },
+      "image_url": "https://i1.feedspot.com/5143081.jpg?t=1587710485"
+    },
+    {
+      "title": "Exclusive Africa",
+      "feed_url": "https://theexclusiveafrica.net/feed/",
+      "website_url": "https://theexclusiveafrica.net/",
+      "description": "Exclusive Africa is Nigeria's leading business information portal delivering progressive news about Africa to our readers across the African continent.",
+      "followers": {
+        "twitter": 245
+      },
+      "image_url": "https://i1.feedspot.com/5237006.jpg?t=1610965478"
+    },
+    {
+      "title": "Alt News Network",
+      "feed_url": "https://altnewsnetwork.co.za/feed/",
+      "website_url": "https://altnewsnetwork.co.za/",
+      "description": "We are an independent alternative news platform, where real news matters. All news is independently fact-checked and verified before going to the press.",
+      "followers": {
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/5263185.jpg?t=1617173719"
+    },
+    {
+      "title": "iAfrica",
+      "feed_url": "https://iafrica.com/feed/",
+      "website_url": "https://iafrica.com/",
+      "description": "We offer an unbiased news source with a South African perspective on happenings around the world, in Africa and within our own borders.Our content includes local and international news, sports and business as well as our specialized and popular niche communities.",
+      "followers": {
+        "facebook": 15900,
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/4880345.jpg?t=1612588111"
+    },
+    {
+      "title": "Mzansipedia",
+      "feed_url": "https://mzansipedia.blogspot.com/feeds/posts/default",
+      "website_url": "https://mzansipedia.blogspot.com/",
+      "description": "Discover the essence of South African culture with Mzansipedia, a vibrant blog celebrating the nation's rich history, diverse landscapes, and dynamic urban life. Explore articles, cultural events, and engaging stories that bridge the past and present, fostering a sense of community and connection. Join us on a journey of curiosity, warmth, and celebration of the extraordinary stories that define Mzansi. Explore, connect, and embrace the beauty of diversity at Mzansipedia!",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/5746315.jpg?t=1704112191"
+    },
+    {
+      "title": "News24",
+      "feed_url": "http://feeds.news24.com/articles/News24/TopStories/rss",
+      "website_url": "https://www.news24.com/",
+      "description": "News24, South Africa's premier news source, provides breaking news on national, world, Africa, sport, entertainment, technology & more.",
+      "followers": {
+        "facebook": 7600000,
+        "twitter": 6400000
+      },
+      "image_url": "https://i1.feedspot.com/15212.jpg?t=1522910750"
+    },
+    {
+      "title": "BusinessTech",
+      "feed_url": "https://businesstech.co.za/news/feed/",
+      "website_url": "https://businesstech.co.za/news/",
+      "description": "BusinessTech serves the South African business community with the latest business news and views. They have a team of journalists and marketing staff who are passionate about ensuring that they serve the needs of the South African business IT community.",
+      "followers": {
+        "facebook": 345400,
+        "twitter": 39300
+      },
+      "image_url": "https://i1.feedspot.com/4886497.jpg?t=1637300632"
+    },
+    {
+      "title": "eNCA",
+      "feed_url": "https://www.enca.com/",
+      "website_url": "https://www.enca.com/",
+      "description": "ENCA is 24-hour news channels focusing on news from across SA and Africa. Find live reports, breaking news, sport, weather, entertainment and business updates.",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 4099999,
+        "instagram": 403800
+      },
+      "image_url": "https://i1.feedspot.com/4880287.jpg?t=1522994515"
+    },
+    {
+      "title": "Moneyweb",
+      "feed_url": "https://www.moneyweb.co.za/feed/",
+      "website_url": "https://www.moneyweb.co.za/",
+      "description": "Moneyweb is a South African media company producing independent, high-quality investment information and business news. We offer market updates and online financial tools, credible business, finance, and investment news to empower and inform our community. Find views from the experts, the latest on companies and deals, and more.",
+      "followers": {
+        "facebook": 141900,
+        "twitter": 162000
+      },
+      "image_url": "https://i1.feedspot.com/4806741.jpg?t=1663925362"
+    },
+    {
+      "title": "SuperSport",
+      "feed_url": "https://supersport.com/rss",
+      "website_url": "https://supersport.com/",
+      "description": "Comprehensive coverage of all your major sporting events on SuperSport.com, including live video streaming, video highlights, results, fixtures, logs, news, TV broadcast schedules and more.",
+      "followers": {
+        "facebook": 6500000,
+        "twitter": 3200000
+      },
+      "image_url": "https://i1.feedspot.com/4885833.jpg?t=1523876015"
+    },
+    {
+      "title": "SA Shares News",
+      "feed_url": "https://sashares.co.za/breaking-news/",
+      "website_url": "https://sashares.co.za/breaking-news/",
+      "description": "The New Age newspaper is a national daily newspaper. The New Age covers news from all nine provinces, along with national events, Op-Ed columns, politics, Africa and International news, sports, business, entertainment, lifestyle, science and technology.",
+      "followers": {
+        "facebook": 30200,
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/4885654.jpg?t=1523857854"
+    },
+    {
+      "title": "Africa Online News",
+      "feed_url": "https://africaonlinenews.blog/feed/",
+      "website_url": "https://africaonlinenews.blog/",
+      "description": "Africa Online News is an online media publication by covering Global news and Information from an African perspective. Africa Online News brings well-researched and newsworthy materials using intelligent systems of information gathering and a delivery model that reports to the soul of our young progressive and tech-savvy African population.",
+      "followers": {
+        "facebook": 9400,
+        "twitter": 11
+      },
+      "image_url": "https://i1.feedspot.com/5144940.jpg?t=1660287206"
+    }
+  ]
+}

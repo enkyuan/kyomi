@@ -1,0 +1,18 @@
+{
+  "category": "Turkey Music",
+  "source_url": "https://rss.feedspot.com/turkey_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "06 Records",
+      "feed_url": "https://www.06records.com/en/news",
+      "website_url": "https://www.06records.com/en/news",
+      "description": "Find the latest music news, artist news, music releases, videos, events and reviews by 06 Records.06 Records is an entertainment agency and record label, located in Istanbul. It is focused on finding and developing new artists in Turkey, creating conceptual music events, and building stronger relations between artists and brands.",
+      "followers": {
+        "facebook": 809,
+        "twitter": 427,
+        "instagram": 686
+      },
+      "image_url": "https://i1.feedspot.com/5337670.jpg?t=1635423253"
+    }
+  ]
+}

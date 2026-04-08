@@ -1,0 +1,51 @@
+{
+  "category": "UK Pets Food",
+  "source_url": "https://rss.feedspot.com/uk_pets_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Haith's",
+      "feed_url": "https://haiths.com/blogs/wildlife.atom",
+      "website_url": "https://haiths.com/blogs/wildlife",
+      "description": "Leading wild bird food and nature news blog updated by amateur naturalists and avian experts. For people who care about garden birds, wildlife and bird food.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4913043.jpg?t=1620297640"
+    },
+    {
+      "title": "Pero Pet Foods Blog",
+      "feed_url": "https://pero-online.co.uk/blogs/news.atom",
+      "website_url": "https://pero-online.co.uk/blogs/news",
+      "description": "Stories, nutritional advice, competitions and much, much more! Don't miss a bark in the world of Pero. Suitable for Doggo's and their feline friends.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 668,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4912970.jpg?t=1620297645"
+    },
+    {
+      "title": "Poppy's Picnic",
+      "feed_url": "https://poppyspicnic.co.uk/blogs/raw-pet-food.atom",
+      "website_url": "https://poppyspicnic.co.uk/blogs/raw-pet-food/",
+      "description": "If you are looking to find out more about healthy raw dog food, our blog will help guide you from a raw newbie to a raw know-it-all.",
+      "followers": {
+        "facebook": 18100,
+        "twitter": 1300,
+        "instagram": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4912954.jpg?t=1620297649"
+    },
+    {
+      "title": "Little Peckers",
+      "feed_url": "https://www.littlepeckers.co.uk/blogs/articles.atom",
+      "website_url": "https://www.littlepeckers.co.uk/blogs/articles",
+      "description": "Little Peckers offers a wide range of high quality bird food and supplies. This includes wild bird food, pet bird food and poultry supplies. Here you will find guides and information about birds.",
+      "followers": {
+        "twitter": 69
+      },
+      "image_url": "https://i1.feedspot.com/4908488.jpg?t=1614076878"
+    }
+  ]
+}

@@ -1,0 +1,389 @@
+{
+  "category": "Mechanical Engg",
+  "source_url": "https://rss.feedspot.com/mechanical_engineering_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mechanical Booster",
+      "feed_url": "https://mechanicalbooster.com/feed",
+      "website_url": "https://mechanicalbooster.com/",
+      "description": "Mechanical Booster is a blog for those students who want to know about mechanical engineering subjects such as automobile, production, heat transfer, thermodynamics, etc.",
+      "followers": {
+        "facebook": 11400,
+        "twitter": 491
+      },
+      "image_url": "https://i1.feedspot.com/5272637.jpg?t=1619179526"
+    },
+    {
+      "title": "COMSOL Blog",
+      "feed_url": "https://www.comsol.com/blogs/feed",
+      "website_url": "https://www.comsol.com/blogs",
+      "description": "Learn how to use multiphysics modeling and simulation to innovate and optimize your engineering designs. Get inspired by the COMSOL Blog today.",
+      "followers": {
+        "facebook": 27400,
+        "twitter": 7800
+      },
+      "image_url": "https://i1.feedspot.com/4657610.jpg?t=1617453170"
+    },
+    {
+      "title": "Nearby Engineers Blog",
+      "feed_url": "https://www.ny-engineers.com/blog/rss.xml",
+      "website_url": "https://www.ny-engineers.com/blog",
+      "description": "The New York Engineers' MEP Engineering blog provides the best information and tips on MEP design, energy saving, building codes, and new trends in the industry.",
+      "followers": {
+        "facebook": 364,
+        "twitter": 883
+      },
+      "image_url": "https://i1.feedspot.com/4822906.jpg?t=1617453161"
+    },
+    {
+      "title": "Fractory Blog",
+      "feed_url": "https://fractory.com/feed/",
+      "website_url": "https://fractory.com/engineering-blog/",
+      "description": "An engineering blog about materials, their applications, engineering tips, etc. Industry articles based on research and in-house engineering know-how.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 429
+      },
+      "image_url": "https://i1.feedspot.com/5303730.jpg?t=1626760433"
+    },
+    {
+      "title": "AutoForm Blog",
+      "feed_url": "https://formingworld.com/feed/",
+      "website_url": "https://formingworld.com/blog/",
+      "description": "AutoForm offers software solutions for the die-making and sheet metal forming industries along the entire process chain. With 300 employees dedicated to this field, AutoForm is recognized as the leading provider of software for product manufacturability, tool and material cost calculation, die face design and virtual process optimization.",
+      "followers": {
+        "facebook": 16800,
+        "twitter": 323
+      },
+      "image_url": "https://i1.feedspot.com/4657155.jpg?t=1617453192"
+    },
+    {
+      "title": "UGears News",
+      "feed_url": "https://ugears.online/blogs/news.atom",
+      "website_url": "https://ugears.online/blogs/news",
+      "description": "Unique wooden mechanical construction kits made in Europe. Precise laser cut details ready for self-assembly without any special tools, glue and chemicals.",
+      "followers": {
+        "facebook": 22000
+      },
+      "image_url": "https://i1.feedspot.com/4657428.jpg?t=1617453398"
+    },
+    {
+      "title": "Mechanical Business",
+      "feed_url": "https://mechanicalbusiness.com/feed/",
+      "website_url": "https://mechanicalbusiness.com/",
+      "description": "Mechanical Business is dedicated to the ICI and residential market sectors in the plumbing, heating, air conditioning, ventilation, refrigeration and IAQ industry.",
+      "followers": {
+        "twitter": 2800,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4657496.jpg?t=1617453205"
+    },
+    {
+      "title": "Mechanical Basics \u00bb Technology",
+      "feed_url": "https://mechanicalbasics.com/feed/",
+      "website_url": "https://mechanicalbasics.com/technology/",
+      "description": "Mechanical Basics is all about Mechanical Engineering; you can find Academic Basics of each subject separately, not only academic basics but also the Project Ideas, Technical Articles, and Interview Questions with a responsible mission. We are here to help you to score better and learn out of the box so, let us learn what actually Mechanical Engineering and Mechanical Basics is all about.",
+      "followers": {
+        "facebook": 987,
+        "twitter": 28
+      },
+      "image_url": "https://i1.feedspot.com/5243610.jpg?t=1612936279"
+    },
+    {
+      "title": "Mechanical Engineering HQ Blog",
+      "feed_url": "https://mechanicalengineeringhq.com/feed/",
+      "website_url": "https://mechanicalengineeringhq.com/blog/",
+      "description": "Welcome to the Mechanical Engineering HQ! This is the one-stop-shop to enhance your career as a mechanical engineer. We want to bring mechanical engineering down to an accessible level for someone who doesn't have the slightest idea of what engineering even means, while also providing valuable content to those either on their way to an engineering degree or in the field already.",
+      "followers": {
+        "facebook": 44,
+        "twitter": 37,
+        "instagram": 52
+      },
+      "image_url": "https://i1.feedspot.com/5209375.jpg?t=1603367893"
+    },
+    {
+      "title": "The Mechanical Engineering",
+      "feed_url": "https://themechanicalengineering.com/feed/",
+      "website_url": "https://themechanicalengineering.com/",
+      "description": "Blog topics cover automobile engineering, engineering mechanics, fluid mechanics and machinery, heat and mass transfer, manufacturing technology, material science, measurement and metrology, piping engineering, power plant engineering, refrigeration and air conditioning, theory of machines, and thermodynamics. themechanicalengineering.com is a one-stop solution for Mechanical Engineers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5298106.jpg?t=1625206883"
+    },
+    {
+      "title": "Mechanical Boost",
+      "feed_url": "https://mechanicalboost.com/feed/",
+      "website_url": "https://mechanicalboost.com/",
+      "description": "We cover a range of topics, including compressors, engines, boilers, turbines, and Power Plant Engineering. Mechanical Boost is the source for mechanical engineers who want to learn about the latest mechanical technologies.",
+      "followers": {
+        "twitter": 491
+      },
+      "image_url": "https://i1.feedspot.com/5298100.jpg?t=1625206628"
+    },
+    {
+      "title": "Learn Mech",
+      "feed_url": "https://learnmech.com/feed/",
+      "website_url": "https://learnmech.com/",
+      "description": "Learn Mech blog is all about Mechanical Basic Concepts, Mechanical Project and Seminar, Mechanical Amazing Facts, Engineering E-books ,New trends and Tech news.",
+      "followers": {
+        "facebook": 57700
+      },
+      "image_url": "https://i1.feedspot.com/4657054.jpg?t=1617453137"
+    },
+    {
+      "title": "RiansClub",
+      "feed_url": "https://www.riansclub.com/feed/",
+      "website_url": "https://www.riansclub.com/",
+      "description": "RiansClub is a technology blog dedicated to kinds of stuff on Mechanical Engineering. RiansClub is a virtual platform to gain industry-oriented knowledge on Mechanical Engineering focusing on Product Design, Manufacturing, CAD, Process & Quality.",
+      "followers": {
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/5148929.jpg?t=1648706263"
+    },
+    {
+      "title": "EnggStudy",
+      "feed_url": "https://www.enggstudy.com/feed/",
+      "website_url": "https://www.enggstudy.com/",
+      "description": "EnggStudy provides engineering study material for different subjects for mechanical, electronics, computer, and IT engineering students. We post articles about different mechanical engineering subjects.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5205343.jpg?t=1602494650"
+    },
+    {
+      "title": "The Engineers Post",
+      "feed_url": "https://www.theengineerspost.com/feed/",
+      "website_url": "https://www.theengineerspost.com/",
+      "description": "This is a free learning platform for all engineering students who want to get better in their professional life as an engineer. We are here to learn the exciting information about engineering and it's technology. This website is run by well experienced and professional engineers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5181195.jpg?t=1597304259"
+    },
+    {
+      "title": "CAD Outsourcing Services Blog",
+      "feed_url": "https://www.cadoutsourcingservices.com/feed/",
+      "website_url": "https://www.cadoutsourcingservices.com/blog/",
+      "description": "CAD Outsourcing Services, established in 1992, delivers comprehensive services for industrial engineering and AEC firms in more than 50 countries.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 565
+      },
+      "image_url": "https://i1.feedspot.com/4657154.jpg?t=1617454567"
+    },
+    {
+      "title": "The Mech Guy",
+      "feed_url": "https://the-mechguy.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://the-mechguy.blogspot.com/",
+      "description": "The Mech Guy is all about complete mechanical engineering concepts of some of the most important subjects of mechanical. I am trying to teach you the basics of mechanical engineering in a most simplest way possible.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 5,
+        "instagram": 112100
+      },
+      "image_url": "https://i1.feedspot.com/5160423.jpg?t=1617454571"
+    },
+    {
+      "title": "Mechanical freak",
+      "feed_url": "https://www.blogger.com/feeds/1243735832045948541/posts/default",
+      "website_url": "https://mechanicalfreakclub.blogspot.com/",
+      "description": "This blog is related to all branches of the mechanical like thermodynamics, heat transfer, manufacturing, robotics, the strength of the material, the theory of machine,computer-aided design, computer-aided manufacturing, and other all topic related to the mechanical engineering, information about the production, information about cmm, information about CNC.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5202074.jpg?t=1601369718"
+    },
+    {
+      "title": "The Mechanical Engineering Blog",
+      "feed_url": "https://mechanicalengineeringblog.tumblr.com/rss",
+      "website_url": "https://mechanicalengineeringblog.tumblr.com/",
+      "description": "Tips & Tricks from Mechanical Engineers with emphasis on simulation and related matters.",
+      "followers": {
+        "facebook": 685,
+        "twitter": 509
+      },
+      "image_url": "https://i1.feedspot.com/4657134.jpg?t=1617454602"
+    },
+    {
+      "title": "Absolute Mechanical Co Inc Blog",
+      "feed_url": "http://www.absolutemechanicalcoinc.com/blog?format=RSS",
+      "website_url": "http://www.absolutemechanicalcoinc.com/blog/",
+      "description": "Absolute Mechanical is on the forefront of heating technology, focusing on energy efficiency and green initiatives for your boiler installation.",
+      "followers": {
+        "facebook": 42,
+        "twitter": 55,
+        "instagram": 251
+      },
+      "image_url": "https://i1.feedspot.com/4657417.jpg?t=1617454612"
+    },
+    {
+      "title": "Mech n Flow Blog",
+      "feed_url": "https://www.mechnflow.com/blog-feed.xml",
+      "website_url": "https://www.mechnflow.com/blog",
+      "description": "We are a team of young enthusiasts proficient in the core and basics of mechanics and fluid dynamics. The primary focus is to help and encourage the mechanical engineering students in building their concepts.",
+      "followers": {
+        "facebook": 80,
+        "twitter": 64,
+        "instagram": 333
+      },
+      "image_url": "https://i1.feedspot.com/5274412.jpg?t=1619701676"
+    },
+    {
+      "title": "Mechanical Engineering",
+      "feed_url": "https://www.blogger.com/feeds/8819036016985187078/posts/default",
+      "website_url": "https://www.aboutmech.com/",
+      "description": "Best website for Mechanical Engineers with complete guidance about courses, universities, careers, education, projects, and companies.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 385
+      },
+      "image_url": "https://i1.feedspot.com/5276711.jpg?t=1620203183"
+    },
+    {
+      "title": "ClubTechnical - A Mechanical Engineering Blog",
+      "feed_url": "https://clubtechnical.com/feed",
+      "website_url": "https://clubtechnical.com/",
+      "description": "Hi, welcome to ClubTechnical. This blog is here to tell the technical aspects of different things in short and precise way.",
+      "followers": {
+        "facebook": 507,
+        "twitter": 80
+      },
+      "image_url": "https://i1.feedspot.com/4903663.jpg?t=1617454625"
+    },
+    {
+      "title": "MECHANICAL CONSTRUCTION ENGINEER",
+      "feed_url": "https://hareeshkv.blogspot.com/feeds/posts/default",
+      "website_url": "https://hareeshkv.blogspot.com/",
+      "description": "A blog for a mechanical construction engineer. This blog discusses all the activities that happen in the OIL & Gas industry.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5131803.jpg?t=1648707088"
+    },
+    {
+      "title": "Mechanical Engineering Blog",
+      "feed_url": "https://www.mechanicalengineering.blog/feeds/posts/default",
+      "website_url": "https://www.mechanicalengineering.blog/",
+      "description": "Me Mechanical is an online portal for mechanical engineers on new innovations, inventions and technological advancements.",
+      "followers": {
+        "facebook": 63300,
+        "twitter": 556,
+        "instagram": 13700
+      },
+      "image_url": "https://i1.feedspot.com/4657130.jpg?t=1647848241"
+    },
+    {
+      "title": "iMechanica - Zhigang Suo's Blog",
+      "feed_url": "https://imechanica.org/blog/feed",
+      "website_url": "https://mechanicalenotes.com/",
+      "description": "iMechanica is blog about mechanics and mechanicians.",
+      "followers": {
+        "twitter": 25900
+      },
+      "image_url": "https://i1.feedspot.com/3631533.jpg?t=1617453156"
+    },
+    {
+      "title": "SolidProfessor Blog",
+      "feed_url": "https://www.solidprofessor.com/feed/",
+      "website_url": "https://mechanicalenotes.com/",
+      "description": "SolidProfessor provides online engineering courses for individuals, teams and schools. They deliver a world-class educational experience to engineers and designers who want to confidently and efficiently create innovative designs with CAD, CAM, and BIM software programs.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4657661.jpg?t=1617453176"
+    },
+    {
+      "title": "Mechanical E-Notes",
+      "feed_url": "https://mechanicalenotes.com/feed/",
+      "website_url": "https://mechanicalenotes.com/",
+      "description": "At Mechanical E-notes, we want to provide aspirants with a wide pool of knowledge in Mechanical Engineering by providing them access to our curated easy to understand electronic notes free of cost from the professors around the globe.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4657205.jpg?t=1611554368"
+    },
+    {
+      "title": "LEARN MECHANICAL",
+      "feed_url": "https://learnmechanical.com/feed/",
+      "website_url": "https://learnmechanical.com/",
+      "description": "The biggest Mechanical blog in India. Learnmechanical.com is a small educational startup operated by a group of Mechanical Engineers who are well educated in this field. In this platform, you will get related articles on subjects like Thermal Engineering, Theory of Machine, Manufacturing Process, Automobile Engineering, Power Engineering, and much more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5058818.jpg?t=1648703644"
+    },
+    {
+      "title": "The Mechanical Post",
+      "feed_url": "https://www.mechanicalpost.site/feeds/posts/default",
+      "website_url": "https://extrudesign.com/",
+      "description": "The Mechanical post (TMP) is a blog by and for mechanical people. TMP aims to provide quality information to help engineering and diploma students. TMP strives to make its blog posts as simple as possible for better understanding and learning. This blog covers a wide range of Mechanical topics.",
+      "followers": {
+        "twitter": 39
+      },
+      "image_url": "https://i1.feedspot.com/5200994.jpg?t=1600920772"
+    },
+    {
+      "title": "ExtruDesign",
+      "feed_url": "https://extrudesign.com/feed/",
+      "website_url": "https://extrudesign.com/",
+      "description": "As an Engineer we apply science, Engineering concepts and mathematical methods to innovate things that never existed, design better machines, build Astonishing Constructions, develop procedures and systems, and maintain and operate the system and organizations. Our intention is to help the Engineers to understand such concepts, laws, procedures, definitions.",
+      "followers": {
+        "facebook": 173,
+        "twitter": 14
+      },
+      "image_url": "https://i1.feedspot.com/4903665.jpg?t=1617453201"
+    },
+    {
+      "title": "Blogmech.com",
+      "feed_url": "https://blogmech.com/feed/",
+      "website_url": "https://mechanicrealm.com/",
+      "description": "A Complete Online Guide For Every Mechanical Engineers Blogmech.com is equipped with the best of resources to enrich the bloodline of the mechanical ensuring high quality learnings.",
+      "followers": {
+        "facebook": 30100,
+        "twitter": 8
+      },
+      "image_url": "https://i1.feedspot.com/5144981.jpg?t=1617454579"
+    },
+    {
+      "title": "Mechanic Realm",
+      "feed_url": "https://mechanicrealm.com/feed/",
+      "website_url": "https://mechanicrealm.com/",
+      "description": "Rajkumar shares articles to to spread knowledge about Mechnical Engineering.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5315857.jpg?t=1630042887"
+    },
+    {
+      "title": "Mechanical Engineering",
+      "feed_url": "https://mechanical-engineering.com/feed/",
+      "website_url": "https://mechanical-engineering.com/",
+      "description": "EngineeringClicks is the leading place for the latest Mechanical Engineering, CAD knowledge and engineering fun for students and engineers. It was inspired by the lack of a simple and efficient online forum where mechanical design engineers could find advice and share knowledge. The forum has gradually been maturing into a friendly and knowledgeable community and resource.",
+      "followers": {
+        "facebook": 10600,
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/5297000.jpg?t=1624878946"
+    },
+    {
+      "title": "Hi-Tech",
+      "feed_url": "https://www.hitechcaddservices.com/news/feed/",
+      "website_url": "https://www.hitechcaddservices.com/news/",
+      "description": "BIM is on its way up, and with software technology advancements in its court, it has trashed out all the redundant AEC industry practices to replace with the digitized workflows.",
+      "followers": {
+        "twitter": 1100,
+        "instagram": 167
+      },
+      "image_url": "https://i1.feedspot.com/4677236.jpg?t=1617453196"
+    },
+    {
+      "title": "TrueCADD",
+      "feed_url": "https://www.truecadd.com/news/",
+      "website_url": "https://www.truecadd.com/news/",
+      "description": "TrueCADD is your trusted CAD services company in India offering 2D AutoCAD Drafting, Engineering Drawings, 3D CAD Design and Modeling services at affordable cost.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 815,
+        "instagram": 333
+      },
+      "image_url": "https://i1.feedspot.com/4657158.jpg?t=1616139631"
+    },
+    {
+      "title": "Workshop Insider",
+      "feed_url": "https://workshopinsider.com/feed/",
+      "website_url": "https://workshopinsider.com/",
+      "description": "Workshop Insider aims to be the practical online resource for welding, non-destructive testing, mechanical engineering, shipbuilding, and ship repair.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 93
+      },
+      "image_url": "https://i1.feedspot.com/5243945.jpg?t=1613024888"
+    }
+  ]
+}

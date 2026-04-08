@@ -1,0 +1,465 @@
+{
+  "category": "Hanoi",
+  "source_url": "https://rss.feedspot.com/hanoi_rss_feeds",
+  "feeds": [
+    {
+      "title": "Matca",
+      "feed_url": "https://matca.vn/feed/",
+      "website_url": "https://matca.vn/",
+      "description": "A gathering space for photographers & visual artists in Vietnam. Matca is an independent project promoting the role of photography as a visual art form.",
+      "followers": {
+        "facebook": 19300,
+        "twitter": 15,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/5344733.jpg?t=1637321507"
+    },
+    {
+      "title": "VnExpress \u00bb Business",
+      "feed_url": "https://e.vnexpress.net/rss/business.rss",
+      "website_url": "https://e.vnexpress.net/news/business",
+      "description": "News and analyses on Vietnam business affairs by VnExpress. VnExpress International is a leading source for politics, economic, finance, travel & food from Vietnam and ASEAN.",
+      "followers": {
+        "facebook": 242700,
+        "twitter": 268500
+      },
+      "image_url": "https://i1.feedspot.com/5343066.jpg?t=1636982858"
+    },
+    {
+      "title": "An International Educator in Viet Nam",
+      "feed_url": "https://markashwill.com/feed/",
+      "website_url": "https://markashwill.com/",
+      "description": "I have spent my entire career as an international educator and educational entrepreneur working in the public, non-profit, and private sectors in three different countries. Follow this blog to get information and insights on international education.",
+      "followers": {
+        "twitter": 473
+      },
+      "image_url": "https://i1.feedspot.com/4846117.jpg?t=1607331026"
+    },
+    {
+      "title": "Atomi | Screen Recorder, Video Editor & E-Learning Authoring Software",
+      "feed_url": "https://atomisystems.com/feed/",
+      "website_url": "https://atomisystems.com/blog/",
+      "description": "Follow the blog to find advanced tips on screen recording, video editing and interactive HTML5, E-learning content authoring.",
+      "followers": {
+        "facebook": 38700,
+        "twitter": 505
+      },
+      "image_url": "https://i1.feedspot.com/4620091.jpg?t=1642144773"
+    },
+    {
+      "title": "Vietnam Business Law",
+      "feed_url": "https://vietnam-business-law.info/blog?format=RSS",
+      "website_url": "https://vietnam-business-law.info/",
+      "description": "English blog on Vietnam business law written by experienced Vietnamese lawyers. Vietnam Business Law is managed by lawyers of Venture North Law Limited (VNLaw). VNLaw is a boutique professional law firm focusing on corporate, commercial, and M&A practices in Vietnam.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/200/4757290.jpg?t=1608533645"
+    },
+    {
+      "title": "Vietnam Visa Blog",
+      "feed_url": "https://www.vietnam-visa.com/feed/",
+      "website_url": "https://www.vietnam-visa.com/blog/",
+      "description": "Get updated with useful tips and guide about Vietnam visas and Vietnam travel. Vietnam-visa.com is a reliable Vietnam visa and Airport assistance portal operated by Vietnam Discovery Travel, assisting both foreign tourists and businessmen with Vietnam visa approval letters, fast-track, and car transfer services.",
+      "followers": {
+        "facebook": 12600,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5222185.jpg?t=1641193448"
+    },
+    {
+      "title": "Vietlong Housing Blog",
+      "feed_url": "https://vietlonghousing.com/feed/",
+      "website_url": "https://vietlonghousing.com/blog/",
+      "description": "Vietlong Housing is a real estate agency, specializing in helping Expatriates find their new Home in Hanoi city to rent and also to buy.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 125
+      },
+      "image_url": "https://i1.feedspot.com/5334456.jpg?t=1634816360"
+    },
+    {
+      "title": "Flavors of Hanoi Blog",
+      "feed_url": "https://flavorsofhanoi.com/feed/",
+      "website_url": "https://flavorsofhanoi.com/blog/",
+      "description": "Covers articles about about food, culture and history, and foodie tours to experience authentic flavors of Hanoi. Flavors of Hanoi is the leading food tour company specializing in exclusive, customized private foodie experiences in Hanoi.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 554,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5325129.jpg?t=1632489957"
+    },
+    {
+      "title": "iRender \u00bb 3ds Max Render Farm",
+      "feed_url": "https://irendering.net/category/3ds-max-render-farm/feed/",
+      "website_url": "https://irendering.net/category/3ds-max-render-farm/",
+      "description": "iRender, a powerful GPU-Acceleration render farm supporting 3dsmax projects with Arnold, V-Ray (RT), Redshift, Octane, and so on. iRender provides High-performance machines for GPU-based & CPU-based rendering on the Cloud. We bring the power of thousands of friendly and easy-to-use GPUs directly to your desk.",
+      "followers": {
+        "facebook": 413,
+        "twitter": 168,
+        "instagram": 398
+      },
+      "image_url": "https://i1.feedspot.com/5431279.jpg?t=1660205004"
+    },
+    {
+      "title": "iRender \u00bb Cloud rendering for Maya",
+      "feed_url": "https://irendering.net/category/cloud-rendering-for-maya/feed/",
+      "website_url": "https://irendering.net/category/maya-cloud-rendering/cloud-rendering-for-maya/",
+      "description": "Simple and fast cloud rendering solutions for Maya on the iRender blog. iRender farm provides high configuration and high-performance machines to serve people who need to leverage the power of CPUs & GPUs. Users can take advantage of our machines for 3D rendering, AI modeling, VR&AR, simulation, and so on.",
+      "followers": {
+        "facebook": 413,
+        "twitter": 168,
+        "instagram": 398
+      },
+      "image_url": "https://i1.feedspot.com/5436439.jpg?t=1661758330"
+    },
+    {
+      "title": "Vietnam News Agency",
+      "feed_url": "https://vnanet.vn/en/rss/society-1007.rss",
+      "website_url": "https://vnanet.vn/en/tin-tuc/society-1007/",
+      "description": "Vietnam News Agency, fast and reliable information service about Society.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5333835.jpg?t=1634714912"
+    },
+    {
+      "title": "Kenh14.vn \u00bb Music",
+      "feed_url": "https://kenh14.vn/musik.rss",
+      "website_url": "https://kenh14.vn/musik.chn",
+      "description": "Read the latest music news, concert, artists, music releases and reviews by Kenh14.vnKenh14.vn is the leading entertainment information channel for young people in Vietnam covering fashion news, star videos, movies, love, school, and social movements.",
+      "followers": {
+        "facebook": 8800000,
+        "twitter": 2100,
+        "instagram": 923900
+      },
+      "image_url": "https://i1.feedspot.com/5303250.jpg?t=1635506567"
+    },
+    {
+      "title": "Vietnam News.Net",
+      "feed_url": "http://feeds.vietnamnews.net/rss/fc849e836694179b",
+      "website_url": "https://www.vietnamnews.net/",
+      "description": "Vietnam News.Net presents headlines and articles around the clock. The main focus is Vietnam supplemented by international news and business & finance reports.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5333845.jpg?t=1634715846"
+    },
+    {
+      "title": "Landofcoder Blog",
+      "feed_url": "https://blog.landofcoder.com/feed/",
+      "website_url": "https://blog.landofcoder.com/",
+      "description": "Grow your eCommerce Store with the help of Landofcoder Blog. Find many articles, tutorials and marketing tips to boost your business!",
+      "followers": {
+        "twitter": 422
+      },
+      "image_url": "https://i1.feedspot.com/5056961.jpg?t=1616591193"
+    },
+    {
+      "title": "VnExpress - The most read Vietnamese newspaper",
+      "feed_url": "https://e.vnexpress.net/rss/news.rss",
+      "website_url": "https://e.vnexpress.net/news/news",
+      "description": "VnExpress International is a leading source for politics, economic, finance, travel & food from Vietnam and ASEAN.",
+      "followers": {
+        "facebook": 242700,
+        "twitter": 268500
+      },
+      "image_url": "https://i1.feedspot.com/4854037.jpg?t=1611735921"
+    },
+    {
+      "title": "Sofi Home Blog",
+      "feed_url": "http://sofihome.vn/feed/",
+      "website_url": "http://sofihome.vn/blog/",
+      "description": "Read more tips for interior designing, modern constructions, luxury lifestyle and more through the blog. Sofi Homes is an construction and interior designs company mainly doing high-end and luxurious interiors and the company's motto is to be more than a perfect in providing interior design ideas for the customers.",
+      "followers": {
+        "facebook": 8100
+      },
+      "image_url": "https://i1.feedspot.com/5348623.jpg?t=1645794951"
+    },
+    {
+      "title": "AgileTech Blog",
+      "feed_url": "https://agiletech.vn/feed/",
+      "website_url": "https://agiletech.vn/blog/",
+      "description": "With 5+ years of experience in the technology industry, AgileTech covers the latest news, insights and trends, about Mobile App/ Website development, AI/ Big Data. AgileTech is a quality outsourcing/offshoring company that specializes in Website/Mobile Apps, Blockchain services, AI - big data services.",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 30
+      },
+      "image_url": "https://i1.feedspot.com/5346902.jpg?t=1639987097"
+    },
+    {
+      "title": "Landofcoder Blog",
+      "feed_url": "https://blog.landofcoder.com/feed/",
+      "website_url": "https://blog.landofcoder.com/",
+      "description": "Grow your eCommerce Store with the help of Landofcoder Blog. Find many articles, tutorials and marketing tips to boost your business. A leading provider of magento 2 extensions with mega menu for magento 2, page builder, Blog.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 422
+      },
+      "image_url": "https://i1.feedspot.com/4641872.jpg?t=1616591852"
+    },
+    {
+      "title": "N Guoi Dua Tin \u00bb Policy",
+      "feed_url": "https://www.nguoiduatin.vn/rss/toan-canh/chinh-sach.rss",
+      "website_url": "https://www.nguoiduatin.vn/toan-canh/chinh-sach.htm",
+      "description": "The latest current Vietnamese political news, the current political situation, and updates, analysis of Vietnamese and World politics. N Guoi Dua Tin is a digital platform for the latest news and reports from Vietnam on Economy, Life, Society, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5347293.jpg?t=1638514259"
+    },
+    {
+      "title": "Luxury Travel's Blog \u00bb Vietnam",
+      "feed_url": "https://luxtraveldmc.com/blog/category/vietnam/feed",
+      "website_url": "https://luxtraveldmc.com/blog/category/vietnam",
+      "description": "Read articles covering the best of Vietnam tours, culture, destinations, and more in the following segment of Luxury Travel's Blog. We strive to ensure that travellers experience the best of each country we specialize in. With us, you'll find long and complex history, wonderful tourist attractions, luxury hotels, and some of the best-suggested itineraries.",
+      "followers": {
+        "facebook": 9
+      },
+      "image_url": "https://i1.feedspot.com/5362637.jpg?t=1642397312"
+    },
+    {
+      "title": "B\u00e1o Ki\u1ebfn Th\u1ee9c",
+      "feed_url": "https://kienthuc.net.vn/rss/home.rss",
+      "website_url": "https://kienthuc.net.vn/",
+      "description": "It covers daily news, Health, beauty, entertainment, online community, the latest knowledge store, read environmental updates day",
+      "followers": {
+        "facebook": 123500
+      },
+      "image_url": "https://i1.feedspot.com/5262644.jpg?t=1634711258"
+    },
+    {
+      "title": "Magenest Blog",
+      "feed_url": "https://magenest.com/en/feed/",
+      "website_url": "https://magenest.com/en/blog/",
+      "description": "Magenest is leading E-commerce company with professional E-commerce solutions by Magento and Woocommerce.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 408,
+        "instagram": 104
+      },
+      "image_url": "https://i1.feedspot.com/4642171.jpg?t=1616591133"
+    },
+    {
+      "title": "Biking Vietnam",
+      "feed_url": "https://bikingvietnam.com/category/blogs/feed/",
+      "website_url": "https://bikingvietnam.com/category/blogs/",
+      "description": "Marco Polo Vietnam with Mountain bike, Asphalt Road cycling was founder by Joe Nguyen (local Vietnamese). After more than 10 years' experience in the tour business working, challenge passing but thoughtful characteristic, knowledge of Vietnam, Joe was open Marco Polo Adventure since 2002 tries his best to give pleasure to the tourists.",
+      "followers": {
+        "facebook": 80,
+        "twitter": 449,
+        "instagram": 441
+      },
+      "image_url": "https://i1.feedspot.com/4853678.jpg?t=1611736176"
+    },
+    {
+      "title": "Tigren \u00bb eCommerce Website Development",
+      "feed_url": "https://www.tigren.com/blog/category/ecommerce/feed/",
+      "website_url": "https://www.tigren.com/blog/category/ecommerce/",
+      "description": "The demand for eCommerce website development has been higher than ever. If you want to get on board with eCommerce, here is what you need to know. Tigren is a prestigious e-commerce agency specializing in web design and development.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 652
+      },
+      "image_url": "https://i1.feedspot.com/5384542.jpg?t=1648106471"
+    },
+    {
+      "title": "Deluxe Blog Tips",
+      "feed_url": "https://deluxeblogtips.com/feed/",
+      "website_url": "https://deluxeblogtips.com/",
+      "description": "My name is Tran Ngoc Tuan Anh (a.k.a. Rilwis), a WordPress developer based in Hanoi, Vietnam.I started Deluxe Blog Tips 6 years ago to share tutorials, tips and tricks on using WordPress that I found myself while working with it. I try to make it easy for both beginning and advanced WordPress users.",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4826546.jpg?t=1610951834"
+    },
+    {
+      "title": "The Shortsighted Podcast",
+      "feed_url": "https://feeds.buzzsprout.com/941854.rss",
+      "website_url": "https://feeds.buzzsprout.com/941854",
+      "description": "You are shortsighted. Myopic. You're wearing glasses to see clearly at a distance, and you wish you didn't have to. Many others feel the same as you do. Join us as we explore the vision improvement journeys of our guest. Learn about natural myopia control, known vision biology, science, and practical ways to reduce your dependence on glasses and contact lenses. https://endmyopia.org",
+      "followers": {
+        "twitter": 12800
+      },
+      "image_url": "https://i1.feedspot.com/5212519.jpg?t=1752318123"
+    },
+    {
+      "title": "Colin Newcomer Blog",
+      "feed_url": "https://www.cnewcomer.com/blog/feed/",
+      "website_url": "https://www.cnewcomer.com/blog/",
+      "description": "Colin is a freelance writer for hire specializing in WordPress and digital marketing. Grow your business with in-depth, conversational blog posts.",
+      "followers": {
+        "twitter": 631
+      },
+      "image_url": "https://i1.feedspot.com/4731245.jpg?t=1605935126"
+    },
+    {
+      "title": "Magezon Blog",
+      "feed_url": "https://blog.magezon.com/feed/",
+      "website_url": "https://blog.magezon.com/",
+      "description": "Magezon Blog keeps you updated with everything about Magento. We share tutorials, news, tips, and tricks for Magento users.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 126
+      },
+      "image_url": "https://i1.feedspot.com/5181774.jpg?t=1597409770"
+    },
+    {
+      "title": "Travel Vietnam | Vietnam Travel Blog",
+      "feed_url": "https://www.travelvietnam.com/blog.feed?type=rss",
+      "website_url": "https://www.travelvietnam.com/blog.html",
+      "description": "At Travel Vietnam our mission is to provide an authentic travel experience that intimately connects you to the cultures of Southeast Asia. We offer private tours at affordable prices and invite you to work with our expert travel consultants to customize the dream vacation that accommodates your schedule, budget and personal interests.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 572
+      },
+      "image_url": "https://i1.feedspot.com/4854006.jpg?t=1611735996"
+    },
+    {
+      "title": "Shinkids Blog",
+      "feed_url": "https://shinkids.vn/blog-me-be/feed/",
+      "website_url": "https://shinkids.vn/blog-me-be/",
+      "description": "Welcome to the Shinkids Mom and Baby Blog. Coming to this blog, ShinKids shares experiences for pregnant women and postpartum women. Since then, parents know how to take care of babies and raise children. Help fathers and mothers become more confident when becoming parents for the first time.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 87
+      },
+      "image_url": "https://i1.feedspot.com/5343909.jpg?t=1637144742"
+    },
+    {
+      "title": "Viet Center Tourist Blog",
+      "feed_url": "https://vietcentertourist.com/rss",
+      "website_url": "https://vietcentertourist.com/blog",
+      "description": "We are an inbound tour operator specializing in providing tour packages in Vietnam, Laos and Cambodia. Our blog page contains articles offering more information on the locality. Perhaps as you're getting deep into our tales, you'll find your own curiosity in travelling to new lands or saving more useful tips that could make your trips easier.",
+      "followers": {
+        "facebook": 2200,
+        "instagram": 51
+      },
+      "image_url": "https://i1.feedspot.com/5362630.jpg?t=1642398603"
+    },
+    {
+      "title": "MageTop Blog",
+      "feed_url": "https://www.magetop.com/blog/feed/",
+      "website_url": "https://www.magetop.com/blog/",
+      "description": "A Magento blog featuring various tutorials, Devdocs, insights, tips, news, and guides to upscale your online-to-offline business. MageTop offers high-quality Magento extensions and customization services.",
+      "followers": {
+        "facebook": 465,
+        "twitter": 24
+      },
+      "image_url": "https://i1.feedspot.com/5307844.jpg?t=1627898256"
+    },
+    {
+      "title": "Beauty-n-Beasts",
+      "feed_url": "https://bnbilfarohanoi.wordpress.com/feed/",
+      "website_url": "https://bnbilfarohanoi.wordpress.com/",
+      "description": "Il Faro (the lighthouse) Beauty n Beasts is a Hanoi blog. For Hanoi foodies check out the Recipes, from Italian, French to Vietnamese and Cambodian dishes. For Wine Lovers, events and wine tastings in Hanoi and 'Nights out in the city' for those who enjoy live music. Much more too: Posts on archeological and cultural sites to visit in Vietnam, a collection of Hanoi Street Photography and our regul",
+      "followers": {
+        "facebook": 387
+      },
+      "image_url": "https://i1.feedspot.com/4853615.jpg?t=1611736204"
+    },
+    {
+      "title": "BSS Commerce Blog \u00bb Magento",
+      "feed_url": "https://bsscommerce.com/magento/blog/feed/",
+      "website_url": "https://bsscommerce.com/magento/blog/",
+      "description": "BssCommerce is one of the leading providers in the field of Magento extensions, a reliable address for those desiring to empower their Magento Store to be much more efficient and multifunctional.",
+      "followers": {
+        "facebook": 462,
+        "twitter": 576
+      },
+      "image_url": "https://i1.feedspot.com/4642718.jpg?t=1616591032"
+    },
+    {
+      "title": "K\u00eanh14.vn",
+      "feed_url": "https://kenh14.vn/home.rss",
+      "website_url": "https://kenh14.vn/",
+      "description": "The leading entertainment information channel for young people in Vietnam. K\u00eanh14.vn covers the Fastest news, fashion, star videos, movies, love, school, social movements, and more.",
+      "followers": {
+        "facebook": 8800000,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/632963.jpg?t=1634709844"
+    },
+    {
+      "title": "Netbase (CMSmart) - Magento Extensions Free",
+      "feed_url": "https://magentoextensionsfree.com/feed",
+      "website_url": "https://magentoextensionsfree.com/",
+      "description": "A professional partner providing e-commerce solutions for Virtuemart and Magento users in the world with well-designed templates and fully useful extensions",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 464
+      },
+      "image_url": "https://i1.feedspot.com/4642799.jpg?t=1616591730"
+    },
+    {
+      "title": "Soha \u00bb Technology",
+      "feed_url": "https://soha.vn/cong-nghe.rss",
+      "website_url": "https://soha.vn/cong-nghe.htm",
+      "description": "This section provides articles on technology. Soha is the place that provides the latest knowledge and information about the various fields and industries in Vietnam and the world.",
+      "followers": {
+        "facebook": 156500,
+        "twitter": 22
+      },
+      "image_url": "https://i1.feedspot.com/5346908.jpg?t=1639988532"
+    },
+    {
+      "title": "HANOITV.vn \u00bb Music",
+      "feed_url": "https://meviet.vn/",
+      "website_url": "https://meviet.vn/",
+      "description": "Latest music news, concerts, shows, reviews and interviews by HANOITV.vn. HANOITV.vn covers articles on politics, entertainment, arts & culture, health and travel.",
+      "followers": {
+        "facebook": 659900
+      },
+      "image_url": "https://i1.feedspot.com/5338360.jpg?t=1635513989"
+    },
+    {
+      "title": "Me Viet",
+      "feed_url": "https://meviet.vn/feed",
+      "website_url": "https://meviet.vn/",
+      "description": "Meviet.vn is a special project for Vietnamese parents. A place to synthesize and share useful information to help each of our families have a healthier and better life. Founded by Ms. Pham Thuan.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5343162.jpg?t=1637124888"
+    },
+    {
+      "title": "B\u00e1o D\u00e2n Vi\u1ec7t",
+      "feed_url": "https://danviet.vn/rss/home.rss",
+      "website_url": "https://danviet.vn/",
+      "description": "Read Dan Viet newspaper with the fastest news updates in 24 hours, read online newspapers, breaking news, new entertainment laws during the day, continuously updated",
+      "followers": {
+        "facebook": 402400,
+        "twitter": 12
+      },
+      "image_url": "https://i1.feedspot.com/5333769.jpg?t=1634712265"
+    },
+    {
+      "title": "Vietnam Motorbike Tours & Motorbike Rentals Blog",
+      "feed_url": "https://vietnammotorbiketoursclub.com/blog.htm",
+      "website_url": "https://vietnammotorbiketoursclub.com/blog.htm",
+      "description": "Vietnam motorbike blog is not only about motorbike blogs, but also mentions Vietnam Travel Tip By Motorbike, Motorbike Route, Destinations & Road Trip. BM Travel Adventure has been a home gathering of leading experts in motorbike tourism in Indochina and shows you everything about Motorcycle Tips in Vietnam and Indochina.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 89,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5362638.jpg?t=1642396443"
+    },
+    {
+      "title": "VenusTheme - Premium Magento Themes Blog",
+      "feed_url": "https://www.venustheme.com/feed/",
+      "website_url": "https://www.venustheme.com/blog/",
+      "description": "VenusTheme is a leading provider of Magento themes. Having many years of experience in web development, they produce premium responsive themes for Magento.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 291
+      },
+      "image_url": "https://i1.feedspot.com/4641996.jpg"
+    },
+    {
+      "title": "RulaHome",
+      "feed_url": "https://rulahome.vn/feed/",
+      "description": "A blog detailing modern and classic interior designs, tips for house remodeling, constructions and more. Rula Home is Vietnam's leading high-end Architectural & Interior Designer and a company for modern interior architecture.",
+      "followers": {
+        "facebook": 691,
+        "twitter": 2,
+        "instagram": 60
+      },
+      "image_url": "https://i1.feedspot.com/5348652.jpg?t=1638262978"
+    }
+  ]
+}

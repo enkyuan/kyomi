@@ -1,0 +1,42 @@
+{
+  "category": "Sword",
+  "source_url": "https://rss.feedspot.com/sword_rss_feeds",
+  "feeds": [
+    {
+      "title": "Hanbon Forge Blog",
+      "feed_url": "https://www.hanbonforge.com/index.php?route=journal3/blog/feed&journal_blog_feed_category_id=6",
+      "website_url": "https://www.hanbonforge.com/BLOG/Swords-Buyer-Guide",
+      "description": "Sword-buying guides, histories and entertaining facts behind the sword-making process, and much more. Know all about it in the Hanbon Forge Blog. Hanbon Forge is a group of highly qualified master sword smiths in Long Quan, China with a strong reputation for quality and service with countless martial arts practitioners, and sword enthusiasts all over the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5524822.jpg?t=1679473135"
+    },
+    {
+      "title": "The Sword Experience Blog",
+      "feed_url": "https://swordxp.com/feed/",
+      "website_url": "https://swordxp.com/blog/",
+      "description": "Discover all things sword. from films, martial arts, and historical facts. The Sword Experience Blog cuts through the unnecessary barrage and brings unadulterated, pure sword talk, expert interviews and articles for your entertainment. The Sword Experience Academy is an online sword training school structured after Martial Arts levels.",
+      "followers": {},
+      "image_url": "https://swordxp.com/wp-content/uploads/2021/01/sxpfavicon.png?t=1679472947"
+    },
+    {
+      "title": "Chinese sword Blog",
+      "feed_url": "https://www.chinesesword.store/blogs/news.atom",
+      "website_url": "https://www.chinesesword.store/blogs/news",
+      "description": "Dive into the Chinese sword Blog for interesting, factual, and entertaining information on the history of Chinese swords. Chinese sword.store is an online store that offers high-quality Chinese and Japanese swords that are perfect for collectors and self-defense.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 816,
+        "instagram": 18300
+      },
+      "image_url": "https://i1.feedspot.com/5524819.jpg?t=1679473207"
+    },
+    {
+      "title": "Tozando Katana Shop Blog",
+      "feed_url": "https://japanesesword.net/blogs/news.atom",
+      "website_url": "https://japanesesword.net/blogs/news",
+      "description": "The ultimate resource for selecting, buying, and learning to handle a Katana sword. Tozando Katana Shop Blog gives in-depth knowledge and Japanese facts for all sword enthusiasts. Tozandi Katana Shop specializes in antique and new Japanese swords. We offer a wide range of Japanese swords from the olden times to the recent works of modern swordsmiths.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5524820.jpg?t=1685693266"
+    }
+  ]
+}

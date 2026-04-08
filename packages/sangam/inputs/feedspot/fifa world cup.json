@@ -1,0 +1,80 @@
+{
+  "category": "FIFA World Cup",
+  "source_url": "https://rss.feedspot.com/fifa_world_cup_rss_feeds",
+  "feeds": [
+    {
+      "title": "Football Rankings",
+      "feed_url": "http://www.football-rankings.info/feeds/posts/default",
+      "website_url": "http://www.football-rankings.info/",
+      "description": "Dutchman, proud to continue the work of Eduard Ranghiuc since April 2018. He provided a relevant platform for those interested in the mechanics of the rank calculation. After that, all kinds of rankings, seedings, and prognosis followed swiftly. And that's still the main subject of the blog.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/675031.jpg?t=1620310527"
+    },
+    {
+      "title": "The Independent \u00bb Football World Cup",
+      "feed_url": "http://www.independent.co.uk/sport/football/world-cup/rss",
+      "website_url": "https://www.independent.co.uk/sport/football/world-cup",
+      "description": "The Independent is the world's most free-thinking, British online newspaper. Get all the latest news and updates about Football World Cup here.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/4915550.jpg?t=1620310531"
+    },
+    {
+      "title": "The Sun \u00bb Latest World Cup 2018 news",
+      "feed_url": "https://www.thesun.co.uk/world-cup-2018/feed/",
+      "website_url": "https://www.thesun.co.uk/world-cup-2018/",
+      "description": "The Sun is a tabloid newspaper published in the United Kingdom and the Republic of Ireland. Keeping you up to date on the latest World Cup 2018 news, with live scores, fixtures, and news.",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 2100000
+      },
+      "image_url": "https://i1.feedspot.com/4915556.jpg?t=1620310535"
+    },
+    {
+      "title": "The Guardian \u00bb World Cup 2018",
+      "feed_url": "https://www.theguardian.com/football/world-cup-2018/rss",
+      "website_url": "https://www.theguardian.com/football/world-cup-2018",
+      "description": "Get the Latest World Cup 2018 news, comment, and analysis from the Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4915590.jpg?t=1620310541"
+    },
+    {
+      "title": "The Panenka",
+      "feed_url": "https://thepanenkablog.com/feed/",
+      "website_url": "https://thepanenkablog.com/",
+      "description": "A blog dedicated to European Football, World Soccer, and the 2018 World Cup in Russia.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4915585.jpg?t=1620310606"
+    },
+    {
+      "title": "ESPN \u00bb FIFA WC",
+      "feed_url": "https://www.espn.in/football/league/_/name/fifa.world/",
+      "website_url": "https://www.espn.in/football/league/_/name/fifa.world/",
+      "description": "Get the latest Football news, scores, stats, and features from the world's leading football website.",
+      "followers": {
+        "facebook": 14500000,
+        "twitter": 16600000
+      },
+      "image_url": "https://i1.feedspot.com/4913199.jpg?t=1620310569"
+    },
+    {
+      "title": "FIFA Football Museum Blog",
+      "feed_url": "https://www.fifamuseum.com/stories/blog/rss.xml",
+      "website_url": "https://www.fifamuseum.com/en/blog-stories/blog",
+      "description": "The FIFA World Football Museum tells the story of how world football's governing body has developed association football globally and made it the undisputed number one sport in the world, uniting nations and bringing continents together. The museum celebrates the rich heritage of football and the game's ability to connect and inspire the world.",
+      "followers": {
+        "facebook": 623000,
+        "twitter": 39400,
+        "instagram": 444400
+      },
+      "image_url": "https://i1.feedspot.com/4572078.jpg?t=1615022914"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "category": "Vietnam Health",
+  "source_url": "https://rss.feedspot.com/vietnam_health_rss_feeds",
+  "feeds": [
+    {
+      "title": "Pacific Cross Vietnam Blog",
+      "feed_url": "https://pacificcross.com.vn/feed/",
+      "website_url": "https://pacificcross.com.vn/blog/",
+      "description": "Get the latest healthcare news, health insurance news and more on the Pacific Cross Vietnam Blog.Pacific Cross Vietnam is a leading Medical Insurance Administrator specializing in Health and Travel insurance for people living and working in Asia.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 16,
+        "instagram": 16
+      },
+      "image_url": "https://i1.feedspot.com/5347375.jpg?t=1638262058"
+    },
+    {
+      "title": "ByNature Blog",
+      "feed_url": "https://bynature.vn/feed/",
+      "website_url": "https://bynature.vn/blog/",
+      "description": "Read more about ByNature, healthy lifestyle choices, our products and our partners and farms.ByNature delights you with high quality vegetables, fruits, proteins and pantry delicacies; farm fresh at your doorstep. 100% natural and safe to eat.",
+      "followers": {
+        "facebook": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5347318.jpg?t=1638262020"
+    },
+    {
+      "title": "Garmin Vietnam Blog \u00bb Health & News",
+      "feed_url": "https://www.garmin.com/vi-VN/blog/category/healthandnews/feed/",
+      "website_url": "https://www.garmin.com/vi-VN/blog/category/healthandnews/",
+      "description": "Garmin Vietnam Health Blog covers articles on health, wellness, health tips and more. Garmin strives to be the number one brand for everyone who wants to enjoy life. Garmin has been pioneering the aviation industry with outstanding GPS navigation products for nearly three decades.",
+      "followers": {
+        "facebook": 123800,
+        "instagram": 29
+      },
+      "image_url": "https://i1.feedspot.com/5347367.jpg?t=1638262055"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "category": "Ember.js",
+  "source_url": "https://rss.feedspot.com/emberjs_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Ember Times",
+      "feed_url": "https://embertimes.substack.com/feed",
+      "website_url": "https://embertimes.substack.com/",
+      "description": "The blog is a newsletter that provides updates from the Ember.js Learning Team and friends1. It covers topics such as Ember releases, RFCs, addons, events, tutorials, and more1. The blog is managed by The Ember Times, a group of volunteers who provide regular information about Ember.js and the Ember community2.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5553887.jpg?t=1683011232"
+    }
+  ]
+}

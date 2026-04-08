@@ -1,0 +1,170 @@
+{
+  "category": "React",
+  "source_url": "https://rss.feedspot.com/react_rss_feeds",
+  "feeds": [
+    {
+      "title": "React Native Blog",
+      "feed_url": "https://reactnative.dev/blog/rss.xml",
+      "website_url": "https://reactnative.dev/blog",
+      "description": "A framework for building native apps using React. React Native Blog is the best place to stay up-to-date with the latest React Native news and events.",
+      "followers": {
+        "twitter": 180900
+      },
+      "image_url": "https://i1.feedspot.com/4515899.jpg?t=1580721602"
+    },
+    {
+      "title": "Mark's Dev Blog",
+      "feed_url": "https://blog.isquaredsoftware.com/index.xml",
+      "website_url": "https://blog.isquaredsoftware.com/",
+      "description": "Random musings on React, Redux, and more, by Redux maintainer Mark 'acemarke' Erikson.",
+      "followers": {
+        "twitter": 28900
+      },
+      "image_url": "https://i1.feedspot.com/4861003.jpg?t=1652336693"
+    },
+    {
+      "title": "Josh W. Comeau",
+      "feed_url": "https://www.joshwcomeau.com/rss.xml",
+      "website_url": "https://www.joshwcomeau.com/",
+      "description": "Josh writes articles with a focus on React, Gatsby, CSS, and animation. His goal is to create helpful content for front-end web developers.",
+      "followers": {
+        "twitter": 106900
+      },
+      "image_url": "https://i1.feedspot.com/5354568.jpg?t=1639746302"
+    },
+    {
+      "title": "Aman Mittal Blog",
+      "feed_url": "https://amanhimself.dev/rss.xml",
+      "website_url": "https://amanhimself.dev/blog/",
+      "description": "Aman is a software developer and technical writer who often writes about React.js, React Native, Node.js, and Developer Advocacy. Currently, he's working on documentation at Expo. Previously, he was a consultant and a technical writer with companies like Draftbit and Vercel. He also writes a newsletter in which I share my latest tutorials and articles.",
+      "followers": {
+        "twitter": 10800,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5354572.jpg?t=1639743807"
+    },
+    {
+      "title": "Emma Goto's Blog",
+      "feed_url": "https://www.emgoto.com/rss.xml",
+      "website_url": "https://www.emgoto.com/blog/",
+      "description": "Emma writes about React, Gatsby, and anything else that has piqued her interest. She currently works as a front-end developer at Atlassian.",
+      "followers": {
+        "twitter": 604
+      },
+      "image_url": "https://i1.feedspot.com/5354573.jpg?t=1639744131"
+    },
+    {
+      "title": "Mike Bifulco's Blog",
+      "feed_url": "https://mikebifulco.com/rss.xml",
+      "website_url": "https://mikebifulco.com/",
+      "description": "Resources for modern software designers and developers. Tips and walkthroughs on using developer tools like React, node, and javascript. Authored by Mike Bifulco.",
+      "followers": {
+        "twitter": 1900,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5354570.jpg?t=1639745569"
+    },
+    {
+      "title": "The T-Shaped Dev",
+      "feed_url": "https://thetshaped.dev/feed",
+      "website_url": "https://thetshaped.dev/",
+      "description": "Practical tips helping you become a better software engineer. JavaScript, React, Node, Software Design, Architecture, and Career Growth.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7f66bb7c-c96f-4c71-ba2d-d561152c83a2_600x600.png"
+    },
+    {
+      "title": "ReactScript",
+      "feed_url": "https://feeds.feedburner.com/ReactjsComponents",
+      "website_url": "https://reactscript.com/",
+      "description": "Reactscript.com aims to offer the latest free ReactJS and React Native components/widgets/modules/apps/tools and other related resources with live demos for web/mobile application developers.",
+      "followers": {
+        "facebook": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4891730.jpg?t=1580722223"
+    },
+    {
+      "title": "Robin Wieruch's Blog",
+      "feed_url": "https://www.robinwieruch.de/index.xml",
+      "website_url": "https://www.robinwieruch.de/blog/",
+      "description": "Robin writes guides and tutorials about React.js, Node.js, GraphQL, and JavaScript. He is a self-employed software and web engineer dedicated to learning and teaching JavaScript for client-server architectures.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 21500
+      },
+      "image_url": "https://i1.feedspot.com/4568467.jpg?t=1639745210"
+    },
+    {
+      "title": "Dave Ceddia's Blog",
+      "feed_url": "https://daveceddia.com/feed.xml",
+      "website_url": "https://daveceddia.com/archives/",
+      "description": "This blog contains the best answers to questions that UI developers struggle with. Most of the posts are about React or Angular, with a few other random things thrown in. Authored by Dave Ceddia.",
+      "followers": {
+        "twitter": 7200
+      },
+      "image_url": "https://i1.feedspot.com/5090043.jpg?t=1639744753"
+    },
+    {
+      "title": "SurviveJS Blog",
+      "feed_url": "https://survivejs.com/atom.xml",
+      "website_url": "https://survivejs.com/blog/",
+      "description": "Juho Veps\u00e4l\u00e4inen writes about ReactJS, JavaScript, Webpack, and modern frontend testing. He also interviews creators and open source maintainers in the JavaScript ecosystem about their experiences.",
+      "followers": {
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/5354569.jpg?t=1639743601"
+    },
+    {
+      "title": "React Native Coach",
+      "feed_url": "https://blog.reactnativecoach.com/feed",
+      "website_url": "https://blog.reactnativecoach.com/",
+      "description": "Bringing you the best React Native, GraphQL, Redux, and Mobile Design resources from around the web.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4891462.jpg?t=1580722386"
+    },
+    {
+      "title": "Made with React Blog",
+      "feed_url": "https://madewithreact.com/rss/",
+      "website_url": "https://madewithreact.com/blog/",
+      "description": "A collection of websites and applications using the React or React Native JavaScript library.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4891468.jpg?t=1640591050"
+    },
+    {
+      "title": "Overreacted",
+      "feed_url": "https://overreacted.io/rss.xml",
+      "website_url": "https://overreacted.io/",
+      "description": "Dan Abramov writes about UI engineering, software development practices, and concepts in React.js. He is a member of the React Core Team and the author of Redux.",
+      "followers": {
+        "facebook": 471,
+        "twitter": 375900
+      },
+      "image_url": "https://i1.feedspot.com/4971675.jpg?t=1639746234"
+    },
+    {
+      "title": "React Blog",
+      "feed_url": "https://reactjs.org/feed.xml",
+      "website_url": "https://reactjs.org/blog/all.html",
+      "description": "React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It is an important source material for anyone who creates apps with the framework.",
+      "followers": {
+        "facebook": 138100,
+        "twitter": 704800
+      },
+      "image_url": "https://i1.feedspot.com/4509584.jpg?t=1606108025"
+    },
+    {
+      "title": "Ui.dev Blog",
+      "feed_url": "https://ui.dev/rss.xml",
+      "website_url": "https://ui.dev/blog",
+      "description": "Articles and tutorials on the latest JavaScript and Web technologies like React, TypeScript, and AngularJS. Ui.dev provides comprehensive learning resources for mastering the JavaScript ecosystem.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 9300,
+        "instagram": 11100
+      },
+      "image_url": "https://i1.feedspot.com/5215990.jpg?t=1639742996"
+    }
+  ]
+}

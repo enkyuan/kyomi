@@ -1,0 +1,88 @@
+{
+  "category": "Yemen News",
+  "source_url": "https://rss.feedspot.com/yemen_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Yemenat News",
+      "feed_url": "https://yemenat.net/feed",
+      "website_url": "https://yemenat.net/",
+      "description": "Yemenat provides its readers with follow-ups, analyses and readings in the fields of politics, economics, sociology, culture, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5344701.jpg?t=1645454973"
+    },
+    {
+      "title": "yemen-saeed",
+      "feed_url": "https://yemen-saeed.com/rss.php?cat=1",
+      "website_url": "https://yemen-saeed.com/",
+      "description": "Local news covering sports, politics, entertainment, economy and more!",
+      "followers": {
+        "facebook": 109100
+      },
+      "image_url": "https://i1.feedspot.com/5344696.jpg?t=1645455862"
+    },
+    {
+      "title": "Yemen Voice News",
+      "feed_url": "https://ye-voice.com/rss.php?cat=5",
+      "website_url": "https://ye-voice.com/",
+      "description": "A distinguished Yemeni website that deals with all Yemeni and international news.",
+      "followers": {
+        "facebook": 43800,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5344695.jpg?t=1645456048"
+    },
+    {
+      "title": "Saada Press Network",
+      "feed_url": "https://www.saadahpress.net/news/rsslastnews.php",
+      "website_url": "https://www.saadahpress.net/news/",
+      "description": "Saada Press Network is a comprehensive independent Yemeni electronic news newspaper that covers all developments, news and events on the local, Arab and international.",
+      "followers": {
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/5344698.jpg?t=1645455976"
+    },
+    {
+      "title": "The New York Times \u00bb Yemen",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/topic/destination/yemen/rss.xml",
+      "website_url": "https://www.nytimes.com/topic/destination/yemen",
+      "description": "This section features articles on Yemen news. The New York Times is an American daily newspaper based in New York City with a worldwide readership.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/5344656.jpg?t=1645454532"
+    },
+    {
+      "title": "Al-Thawra Net",
+      "feed_url": "http://en.althawranews.net//feed",
+      "website_url": "https://en.althawranews.net/",
+      "description": "Latest news and headlines on politics, sports, economy, society, etc.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 390
+      },
+      "image_url": "https://i1.feedspot.com/5344655.jpg?t=1645454320"
+    },
+    {
+      "title": "sa24",
+      "feed_url": "https://www.sa24.co/rss.php",
+      "website_url": "https://www.sa24.co/",
+      "description": "sa24 is a Yemeni news reader that was launched in November 2014 as an independent search engine concerned with Yemeni and Arab affairs.",
+      "followers": {
+        "facebook": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5344700.jpg?t=1645454808"
+    },
+    {
+      "title": "Yemen Press",
+      "feed_url": "https://yemen-press.net/rss.php?cat=1",
+      "website_url": "https://yemen-press.net/",
+      "description": "Yemen Press is an independent Yemeni news site that transmits all that is new from local news, international news, sports, and economics.",
+      "followers": {
+        "facebook": 320400,
+        "twitter": 364000
+      },
+      "image_url": "https://i1.feedspot.com/5344699.jpg?t=1645455907"
+    }
+  ]
+}

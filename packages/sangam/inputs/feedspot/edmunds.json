@@ -1,0 +1,37 @@
+{
+  "category": "Edmunds",
+  "source_url": "https://rss.feedspot.com/edmunds_rss_feeds",
+  "feeds": [
+    {
+      "title": "Edmunds \u00bb Car Buying",
+      "feed_url": "https://www.edmunds.com/feeds/rss/car-buying.xml",
+      "website_url": "https://www.edmunds.com/car-buying/",
+      "description": "Car buying tips and advice that you need to know before buying your next car, truck or SUV. The automotive experts at Edmunds provide you with in-depth information to help you make an informed car buying decision.",
+      "followers": {
+        "facebook": 473000,
+        "instagram": 212600
+      },
+      "image_url": "https://i1.feedspot.com/5369877.jpg?t=1644306543"
+    },
+    {
+      "title": "Edmunds \u00bb Press Releases",
+      "feed_url": "https://www.edmunds.com/feeds/rss/press-releases.xml",
+      "website_url": "https://www.edmunds.com/industry/press/",
+      "description": "Edmunds' Industry Center keeps dealers informed of the latest news and events relevant to the Automotive Industry including recalls, announcements, industry commentary, sales trends, and safety reports.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/84572.jpg?t=1609567043"
+    },
+    {
+      "title": "Edmunds",
+      "feed_url": "https://www.edmunds.com/feeds/rss/articles.xml",
+      "website_url": "https://www.edmunds.com/car-news/",
+      "description": "Research new and used cars including car prices, view incentives and dealer inventory listings, compare vehicles, get car buying advice and reviews at Edmunds.com",
+      "followers": {
+        "facebook": 473000,
+        "twitter": 111300,
+        "instagram": 212600
+      },
+      "image_url": "https://i1.feedspot.com/84572.jpg?t=1609567043"
+    }
+  ]
+}

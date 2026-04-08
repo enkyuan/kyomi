@@ -1,0 +1,17 @@
+{
+  "category": "Wylie News",
+  "source_url": "https://rss.feedspot.com/wylie_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Wylie News",
+      "feed_url": "https://wylienews.com/feed/",
+      "website_url": "https://wylienews.com/",
+      "description": "The Wylie News has been covering Wylie and the surrounding area for almost 65 years. Get the latest local news, information, sports, education, life and style, opinion, events and everything that matters to you in the city Wylie, TX.",
+      "followers": {
+        "facebook": 14800,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4833858.jpg?t=1625637151"
+    }
+  ]
+}

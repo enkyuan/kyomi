@@ -1,0 +1,96 @@
+{
+  "category": "Colocation",
+  "source_url": "https://rss.feedspot.com/colocation_rss_feeds",
+  "feeds": [
+    {
+      "title": "LightWave Networks",
+      "feed_url": "https://www.lightwavenetworks.com/feed/",
+      "website_url": "https://www.lightwavenetworks.com/blog/",
+      "description": "Covers articles about cloud security, colocation services, and everything else having to do with colocation. LightWave Networks helps countless businesses nationwide stay connected with fast speeds, reliable servers, and access to around-the-clock support and security.",
+      "followers": {
+        "facebook": 30,
+        "twitter": 18
+      },
+      "image_url": "https://i1.feedspot.com/5332001.jpg?t=1634367541"
+    },
+    {
+      "title": "Colocation America",
+      "feed_url": "https://www.colocationamerica.com/feed",
+      "website_url": "https://www.colocationamerica.com/blog",
+      "description": "Colocation America has grown to become one of the most reliable colocation hosting providers nationwide. Follow to get data center news, tips, and up to the minute news in technology from Colocation America Staff Writers",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 6200,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5061900.jpg?t=1622802116"
+    },
+    {
+      "title": "Data Center And Colocation \u00bb Colocation",
+      "feed_url": "https://datacenterandcolocation.com/category/colocation/feed/",
+      "website_url": "https://datacenterandcolocation.com/category/colocation/",
+      "description": "Data Center And Colocation's mission is to save clients money and time by assisting them with finding a data center or colocation site. Follow our blog posts to stay updated.",
+      "followers": {
+        "facebook": 134,
+        "twitter": 345
+      },
+      "image_url": "https://i1.feedspot.com/5061892.jpg?t=1622802132"
+    },
+    {
+      "title": "Cisco \u00bb Colocation",
+      "feed_url": "https://blogs.cisco.com/tag/colocation/feed",
+      "website_url": "https://blogs.cisco.com/tag/colocation",
+      "description": "Cisco helps companies seize the opportunities of tomorrow by proving that amazing things can happen when you connect the unconnected. Follow us to get the latest news and updates about colocation.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 740700,
+        "instagram": 569200
+      },
+      "image_url": "https://i1.feedspot.com/5061894.jpg?t=1622802143"
+    },
+    {
+      "title": "Hosting Journalist \u00bb Colocation",
+      "feed_url": "https://www.hostingjournalist.com/rss",
+      "website_url": "https://hostingjournalist.com/news?category%5B%5D=Colocation/",
+      "description": "Colocation (or colo) is the practice where a colocation provider houses private or company servers in their colocation datacenter. Follow Hosting Journalist to get the latest updates and news about the colocation.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 2300,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5061906.jpg?t=1622802120"
+    },
+    {
+      "title": "AnD Cable Products | Cable Management Blog",
+      "feed_url": "https://andcable.com/feed/",
+      "website_url": "https://andcable.com/data-center-cable-management-blog/",
+      "description": "AnD Cable Products manufactures and supplies Cable Management and Cable Management Rack products along with systems for Data Centers across the United States and internationally. Follow this Cable Management Blog where you'll find network cable management ideas, server rack cabling techniques and rack space saving tips, data center trends, latest innovations, and more.",
+      "followers": {
+        "facebook": 39,
+        "twitter": 82
+      },
+      "image_url": "https://i1.feedspot.com/5178411.jpg?t=1622802139"
+    },
+    {
+      "title": "INAP \u00bb Colocation & Data Centers",
+      "feed_url": "https://www.inap.com/blog/category/colocation-data-centers/feed/",
+      "website_url": "https://www.inap.com/blog/category/colocation-data-centers/",
+      "description": "INAP is a full-spectrum data center and cloud solutions provider focused on performance for every application and every use case. Follow us to learn about colocation today.",
+      "followers": {
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5061896.jpg?t=1622802146"
+    },
+    {
+      "title": "Go4hosting \u00bb Colocation Hosting",
+      "feed_url": "https://go4hosting.in/blog/category/colocation-hosting/feed/",
+      "description": "Go4hosting is a leading provider of cloud, VPS & dedicated servers hosting services in India. Follow us to get instant updates on Colocation Hosting from our Go4hosting Cloud Hosting Platform.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 5500,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5061909.jpg?t=1622802151"
+    }
+  ]
+}

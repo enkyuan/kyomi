@@ -1,0 +1,30 @@
+{
+  "category": "Portage News",
+  "source_url": "https://rss.feedspot.com/portage_indiana_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Times of Northwest Indiana \u00bb Portage",
+      "feed_url": "https://www.nwitimes.com/search/?f=rss&t=article&c=news/local/porter/portage&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.nwitimes.com/news/local/porter/portage/",
+      "description": "The Times of Northwest Indiana is the source for crime, business, government, education and sports news and information in the Porter County Region.",
+      "followers": {
+        "facebook": 163900,
+        "twitter": 69100,
+        "instagram": 13100
+      },
+      "image_url": "https://i1.feedspot.com/5157514.jpg?t=1590822626"
+    },
+    {
+      "title": "Portage.Life",
+      "feed_url": "https://portage.life/",
+      "website_url": "https://portage.life/",
+      "description": "Portage.Life is an exclusively positive news network of everything that is great about Portage, Indiana. People, groups, events, places, businesses, and anything else fun in words, images, and video.",
+      "followers": {
+        "facebook": 13100,
+        "twitter": 5000,
+        "instagram": 431
+      },
+      "image_url": "https://i1.feedspot.com/5157518.jpg?t=1590822774"
+    }
+  ]
+}

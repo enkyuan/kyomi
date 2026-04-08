@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<opml version="2.0">
+  <head>
+    <title>Sam Davies - Blogroll</title>
+  </head>
+  <body>
+    <outline type="rss" text="Ross&#x2019;s Microblog" xmlUrl="https://ross.catrow.net/feed.xml" htmlUrl="https://ross.catrow.net" category="Recommendations"/>
+    <outline type="rss" text="Good Morning RVA" xmlUrl="" htmlUrl="https://gmrva.com/" category="Recommendations"/>
+    <outline type="rss" text="Dan Warshaw" xmlUrl="https://danielwarshaw.com/feed/" htmlUrl="https://danielwarshaw.com/archive/" category="Recommendations"/>
+    <outline type="rss" text="Neverending Pretending" xmlUrl="https://neverendingpretending.net/&#10;feeds/all.atom.xml" htmlUrl="https://neverendingpretending.net/" category="Recommendations"/>
+    <outline type="rss" text="South Richmond News" xmlUrl="https://southrichmondnews.com/rss" htmlUrl="https://southrichmondnews.com/" category="Recommendations"/>
+    <outline type="rss" text="Tim Nahumck" xmlUrl="https://nahumck.me/feed.xml" htmlUrl="https://nahumck.me/" category="Recommendations"/>
+    <outline type="rss" text="Atomic Robo" xmlUrl="" htmlUrl="http://www.atomic-robo.com/atomicrobo/" category="Recommendations"/>
+    <outline type="rss" text="Buttermilk and Molasses v2" xmlUrl="https://sarvay.micro.blog/feed.xml" htmlUrl="https://sarvay.micro.blog" category="Recommendations"/>
+  </body>
+</opml>

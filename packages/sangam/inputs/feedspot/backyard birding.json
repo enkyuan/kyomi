@@ -1,0 +1,57 @@
+{
+  "category": "Backyard Birding",
+  "source_url": "https://rss.feedspot.com/backyard_birding_rss_feeds",
+  "feeds": [
+    {
+      "title": "Wild Bird Store Blog",
+      "feed_url": "https://wildbirdstore.com/blog/feed/",
+      "website_url": "https://wildbirdstore.com/blog/",
+      "description": "Follow this blog to find information on the best bird feeding products like birds feeders, pole systems, books and their exclusive seed mixes to satisfy the needs of backyard birding beginners and experts alike.",
+      "followers": {
+        "facebook": 2400,
+        "instagram": 439
+      },
+      "image_url": "https://i1.feedspot.com/4926871.jpg?t=1621000575"
+    },
+    {
+      "title": "Backyard Birding...And Beyond",
+      "feed_url": "http://backyardbirdingandbeyond.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://backyardbirdingandbeyond.blogspot.com/",
+      "description": "Margo D. Beller was Born in Brooklyn, and now living in New Jersey, have been seriously watching birds for over a decade and writing for longer, including stints on newspapers and magazines as a reporter and editor.",
+      "followers": {
+        "twitter": 31
+      },
+      "image_url": "https://i1.feedspot.com/4926804.jpg?t=1621000583"
+    },
+    {
+      "title": "The Backyard Birder",
+      "feed_url": "http://jjthebackyardbirder.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://jjthebackyardbirder.blogspot.com/",
+      "description": "Jennifer J. Meyer started this blog to communicate with the followers of The Backyard Birder. In this blog she covers the basics, interviewing key people in the OC birding world, showing off some great photography from a few friends and having a great time talking about the antics of their backyard birds.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4926806.jpg?t=1621000635"
+    },
+    {
+      "title": "Backyard Birding....and Nature",
+      "feed_url": "https://feeds.feedburner.com/blogspot/ibPPY",
+      "website_url": "https://screech-owls.blogspot.com/",
+      "description": "Backyard Birder shares original photos and videos of Nature with an emphasis on Birds, especially Owls. The everyday wonder of Nature and the unique moments when creatures interact or reveal unusual behavior.",
+      "followers": {
+        "facebook": 758,
+        "twitter": 519,
+        "instagram": 197300
+      },
+      "image_url": "https://i1.feedspot.com/4629605.jpg?t=1616156379"
+    },
+    {
+      "title": "Nature Anywhere",
+      "feed_url": "https://www.nature-anywhere.com/blogs/bird-feeding-academy.atom",
+      "website_url": "https://www.nature-anywhere.com/blogs/bird-feeding-academy",
+      "description": "Covers articles on bird feeders, birdhouses, seed feeders, window feeders, and backyard birding tips. Nature Anywhere offers bird feeders that bring the joy of nature close to home.",
+      "followers": {
+        "facebook": 7300
+      },
+      "image_url": "https://i1.feedspot.com/5381873.jpg?t=1647500348"
+    }
+  ]
+}

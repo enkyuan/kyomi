@@ -1,0 +1,546 @@
+{
+  "category": "Boxing",
+  "source_url": "https://rss.feedspot.com/boxing_rss_feeds",
+  "feeds": [
+    {
+      "title": "Boxing News 24",
+      "feed_url": "https://www.boxingnews24.com/feed/",
+      "website_url": "https://www.boxingnews24.com/",
+      "description": "Established in 2007, Boxing News 24 is your go-to destination for the latest boxing news stories and live fight results. Known as the most reliable source for prompt and precise boxing updates, expert commentary, and comprehensive fight recaps, Boxing News 24 ensures you stay informed. Keep ahead of the game with Boxing News 24.",
+      "followers": {
+        "facebook": 83700,
+        "twitter": 59800,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/578195.jpg?t=1615201295"
+    },
+    {
+      "title": "Boxing News",
+      "feed_url": "https://boxingnewsonline.net/feed/",
+      "website_url": "https://boxingnewsonline.net/",
+      "description": "Boxing News Magazine is all about the sport of boxing. It covers big fights, rankings, and stories about famous and upcoming boxers. The magazine also gives previews, results, and expert opinions on matches. It's made for boxing fans who want the latest updates and insights on the sport.",
+      "followers": {
+        "facebook": 2800000,
+        "twitter": 316000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/3962674.jpg?t=1615201248"
+    },
+    {
+      "title": "East Side Boxing",
+      "feed_url": "https://feeds.feedburner.com/boxing247/tuVW",
+      "website_url": "https://www.boxing247.com/",
+      "description": "Since 2001, Boxing247.com has provided comprehensive boxing news stories and recent boxing results. Our team of expert writers and historians offers in-depth fight analysis, historical insights, and current updates in the world of boxing, making us a trusted source for fight fans.",
+      "followers": {
+        "facebook": 22400,
+        "twitter": 6300
+      },
+      "image_url": "https://i1.feedspot.com/4582923.jpg?t=1750310514"
+    },
+    {
+      "title": "Bad Left Hook",
+      "feed_url": "https://www.badlefthook.com/rss/current",
+      "website_url": "https://www.badlefthook.com/",
+      "description": "Your best source for Boxing news, results, rumors, fights and rankings from the fan perspective.",
+      "followers": {
+        "facebook": 178200,
+        "twitter": 24400
+      },
+      "image_url": "https://i1.feedspot.com/441786.jpg?t=1750310915"
+    },
+    {
+      "title": "The Fight City",
+      "feed_url": "https://www.thefightcity.com/feed/",
+      "website_url": "https://www.thefightcity.com/",
+      "description": "An independent boxing website with a literary edge that embraces this brutal, cruel, glorious, heartbreaking sport in all its facets -- the good, the bad and the ugly. Boxing news, videos, history, Top 12 lists, profiles and more.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 13400,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4583729.jpg?t=1615201309"
+    },
+    {
+      "title": "FIGHTHYPE",
+      "feed_url": "http://www.fighthype.com/rss/",
+      "website_url": "http://www.fighthype.com/",
+      "description": "The one-stop source for all of your boxing and mixed martial arts news from around the internet. Get exclusive interviews, videos, breaking news, interactive features and more.",
+      "followers": {
+        "facebook": 134700,
+        "twitter": 36200
+      },
+      "image_url": "https://i1.feedspot.com/4583810.jpg?t=1615201260"
+    },
+    {
+      "title": "All The Best Fights",
+      "feed_url": "https://www.allthebestfights.com/feed/",
+      "website_url": "https://www.allthebestfights.com/",
+      "description": "Watch and rate all the best fights & videos of boxing, mma, muay thai & k-1 creating the best fighting online database!",
+      "followers": {
+        "facebook": 15200
+      },
+      "image_url": "https://i1.feedspot.com/243940.jpg?t=1615201292"
+    },
+    {
+      "title": "Irish Boxing",
+      "feed_url": "https://www.irish-boxing.com/feed/",
+      "website_url": "https://www.irish-boxing.com/",
+      "description": "Ireland's longest serving and most prolific boxing website.For over 15 years we have been keeping people up to date on Irish boxing.",
+      "followers": {
+        "facebook": 100100,
+        "twitter": 24200
+      },
+      "image_url": "https://i1.feedspot.com/4583758.jpg?t=1615201316"
+    },
+    {
+      "title": "Big Fight Weekend",
+      "feed_url": "https://bigfightweekend.com/feed/",
+      "website_url": "https://bigfightweekend.com/",
+      "description": "Big Fight Weekend provides the latest boxing news, rumors, analysis, schedule, and betting information that you need on daily basis.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5062902.jpg?t=1750311586"
+    },
+    {
+      "title": "Round By Round Boxing",
+      "feed_url": "https://roundbyroundboxing.com/feed/",
+      "website_url": "https://roundbyroundboxing.com/",
+      "description": "Live round by round boxing results, news and opinion on the sweet science.",
+      "followers": {
+        "facebook": 23600,
+        "twitter": 8500,
+        "instagram": 35600
+      },
+      "image_url": "https://i1.feedspot.com/4582860.jpg?t=1615201413"
+    },
+    {
+      "title": "Boxing Social",
+      "feed_url": "https://boxing-social.com/feed/",
+      "website_url": "https://boxing-social.com/news/",
+      "description": "Get the latest boxing news, boxing results, and videos from the UK and the world. Established in January 2017 by co-creators Ryan Fletcher and Jay Robinson, Boxing Social quickly proved itself as a reliable, trusted source for the latest boxing news around the globe.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 51900,
+        "instagram": 123300
+      },
+      "image_url": "https://i1.feedspot.com/4767217.jpg?t=1615201280"
+    },
+    {
+      "title": "Pro Boxing Fans",
+      "feed_url": "https://www.proboxing-fans.com/feed/",
+      "website_url": "https://www.proboxing-fans.com/",
+      "description": "The best boxing news on the web, with tonight's boxing results, pound for pound and top 10 divisional rankings, photos, videos, interviews, fight previews.",
+      "followers": {
+        "twitter": 13800,
+        "instagram": 39500
+      },
+      "image_url": "https://i1.feedspot.com/4583000.jpg?t=1615201320"
+    },
+    {
+      "title": "REAL COMBAT MEDIA RCM BOXING NEWS",
+      "feed_url": "https://realcombatmedia.com/rcm-boxing-news/feed/",
+      "website_url": "https://realcombatmedia.com/rcm-boxing-news/",
+      "description": "We are the top independent international mma and boxing news source.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4738143.jpg?t=1615201419"
+    },
+    {
+      "title": "MaxBoxing News",
+      "feed_url": "http://www.maxboxing.com/Syndication/DF.cfm?f=1220&ft=10/feed",
+      "website_url": "https://www.maxboxing.com/",
+      "description": "Boxing news updated daily. We cover Boxing.",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4582984.jpg?t=1615201398"
+    },
+    {
+      "title": "Saddo Boxing",
+      "feed_url": "https://www.saddoboxing.com/feed",
+      "website_url": "https://www.saddoboxing.com/",
+      "description": "Boxing News from Saddo Boxing.",
+      "followers": {
+        "twitter": 9600
+      },
+      "image_url": "https://i1.feedspot.com/1965.jpg?t=1750312097"
+    },
+    {
+      "title": "Mirage Boxing Chronicles",
+      "feed_url": "http://mirageboxing.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://mirageboxing.blogspot.com/",
+      "description": "Independent boxing frontline news.",
+      "followers": {
+        "twitter": 92
+      },
+      "image_url": "https://i1.feedspot.com/4786996.jpg?t=1615201638"
+    },
+    {
+      "title": "The Ring Boxing Community Singapore Blog",
+      "feed_url": "https://thering.sg/feed/",
+      "website_url": "https://thering.sg/blog/",
+      "description": "Want to stay updated with the sport of boxing? Follow the informative boxing blog of The Ring, your Boxing Community in Singapore! The goal is to create an arena for passionate people who train together for a stronger, healthier, and happier community, through boxing.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 2,
+        "instagram": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5296426.jpg?t=1624617490"
+    },
+    {
+      "title": "The Jewish Boxing Blog",
+      "feed_url": "https://www.jewishboxingblog.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.jewishboxingblog.com/",
+      "description": "The place for Jewish boxing news. Subscribe to keep up with the latest updates.",
+      "followers": {
+        "twitter": 531,
+        "instagram": 952
+      },
+      "image_url": "https://i1.feedspot.com/5314426.jpg?t=1629547584"
+    },
+    {
+      "title": "The Weigh-In",
+      "feed_url": "http://www.theweighinpodcast.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.theweighinpodcast.com/",
+      "description": "A blog about the sport of boxing. The Weigh-In Boxing Podcast. Matt Ward is a boxing historian and writer from the Greater Philadelphia area.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 446
+      },
+      "image_url": "https://i1.feedspot.com/4940436.jpg?t=1615201462"
+    },
+    {
+      "title": "Brawl Bros Blog",
+      "feed_url": "https://brawlbros.com/feed/",
+      "website_url": "https://brawlbros.com/brawl-blog/",
+      "description": "Brawl Bros is the fight fans paradise. Whether you love boxing or MMA, you love the fight game. Here you will find training tips, fight news, fight gear, product reviews, fight strategy, fight philosophy and so much more! Brawl all day!",
+      "followers": {
+        "facebook": 18900,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5164996.jpg?t=1615201416"
+    },
+    {
+      "title": "South Beach Boxing Blog",
+      "feed_url": "https://southbeachboxing.com/feed/",
+      "website_url": "https://southbeachboxing.com/blog/",
+      "description": "Best Miami Beach Boxing & Gym. Established since 1998, South Beach Boxing is dedicated to building fit, confident, strong and healthy minds and bodies.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 1300,
+        "instagram": 20900
+      },
+      "image_url": "https://i1.feedspot.com/5058289.jpg?t=1615201526"
+    },
+    {
+      "title": "BoxingScene",
+      "feed_url": "https://www.boxingscene.com/feed",
+      "website_url": "https://www.boxingscene.com/",
+      "description": "Since launching in 2003, BoxingScene has established itself as the world's most trusted outlet for boxing news and information. With comprehensive and continuous coverage of fights and fighters from around the world, the newsfeed never stops and informed readers routinely engage in spirited discussion and debate in the forums. We cover every corner of the sport - breaking news, feature stories and ringside reports from the sport's most trusted writers.",
+      "followers": {
+        "facebook": 500500,
+        "twitter": 280900
+      },
+      "image_url": "https://i1.feedspot.com/5487505.jpg?t=1672826307"
+    },
+    {
+      "title": "BOXRAW",
+      "feed_url": "https://boxraw.com/blogs/blog.atom",
+      "website_url": "https://boxraw.com/blogs/blog/",
+      "description": "Stay up to date with the latest from BOXRAW. From fight previews, Boxer highlights, Boxing news and more.",
+      "followers": {
+        "facebook": 187100,
+        "twitter": 23300,
+        "instagram": 704300
+      },
+      "image_url": "https://i1.feedspot.com/8539983.jpg?t=1753096495"
+    },
+    {
+      "title": "BBC Sport \u00bb Boxing",
+      "feed_url": "https://feeds.bbci.co.uk/sport/boxing/rss.xml",
+      "website_url": "https://www.bbc.com/sport/boxing/",
+      "description": "The latest stories from the Boxing section of the BBC Sport web site.",
+      "followers": {
+        "facebook": 15300000,
+        "twitter": 10600000,
+        "instagram": 3600000
+      },
+      "image_url": "https://i1.feedspot.com/1833354.jpg?t=1750316856"
+    },
+    {
+      "title": "The Boxing Tribune",
+      "feed_url": "https://theboxingtribune.com/feed/",
+      "website_url": "https://theboxingtribune.com/",
+      "description": "This boxing news site delivers recent stories and updates, exclusive interviews, live results, and comprehensive previews and recaps of major fights. Enjoy expert commentary and analysis, keeping you up to date with the latest in boxing news and results.",
+      "followers": {
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/8539984.jpg?t=1753096496"
+    },
+    {
+      "title": "Evolve Daily \u00bb Boxing",
+      "feed_url": "https://evolve-mma.com/blog/category/boxing/feed/",
+      "website_url": "https://evolve-mma.com/blog/category/boxing/",
+      "description": "The #1 boxing blog and website on the latest news and articles, training tips, techniques, workouts and videos by Evolve MMA.",
+      "followers": {
+        "facebook": 563900,
+        "twitter": 21100,
+        "instagram": 146500
+      },
+      "image_url": "https://i1.feedspot.com/8539980.jpg?t=1753096470"
+    },
+    {
+      "title": "Fightbook MMA \u00bb Boxing",
+      "feed_url": "https://www.fightbookmma.com/category/boxing/feed/",
+      "website_url": "https://www.fightbookmma.com/category/boxing/",
+      "description": "Stay updated with the latest Boxing News. Discover fight results, upcoming events, and expert opinions in our comprehensive coverage.",
+      "followers": {
+        "facebook": 34700
+      },
+      "image_url": "https://i1.feedspot.com/8539982.jpg"
+    },
+    {
+      "title": "Boxing Junkie",
+      "feed_url": "https://boxingjunkie.usatoday.com/feed",
+      "website_url": "https://boxingjunkie.usatoday.com/",
+      "description": "BoxingJunkie is brought to you by @USATODAYSports and is devoted to the latest boxing news, interviews, features, event info and best buzz on the web.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4582876.jpg"
+    },
+    {
+      "title": "Fighter Mind Blog",
+      "feed_url": "https://fighter-mind.com/feed/",
+      "website_url": "https://fighter-mind.com/category/blog/",
+      "description": "The Fighter Mind team consists of former fighters and current coaches. We have been in the game for years and now do our best to provide stories, guides, reviews, and overall good relevant articles. We know our way around a fight gym and would love to help you understand the beauty of boxing and MMA!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/fsppublisher/8047160/page/5673612/logo_1696276669.png"
+    },
+    {
+      "title": "Best Boxing",
+      "feed_url": "https://bestboxing.net/feed/",
+      "website_url": "https://bestboxing.net/",
+      "description": "Best Boxing is your ultimate guide to the exciting world of boxing: Step into the ring to explore its history, techniques, and culture. it is perfect for beginners and fans! Featuring updates on the latest boxing news, events, and competitions. Discover a diverse range of training regimes and technical guidance designed to enhance your agility, power, and tactics in the ring.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7299065.jpg?t=1713233018"
+    },
+    {
+      "title": "British Boxing News",
+      "feed_url": "https://www.britishboxers.co.uk/feed/",
+      "website_url": "https://www.britishboxers.co.uk/category/general/",
+      "description": "British Boxers was formed in July 2009 as a boxing blog. Dedicated to covering the very latest news, reviews, reports, interviews and videos from the British Boxing scene.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 20700
+      },
+      "image_url": "https://i1.feedspot.com/4583737.jpg?t=1615201447"
+    },
+    {
+      "title": "Hannibal Boxing",
+      "feed_url": "https://hannibalboxing.com/feed/",
+      "website_url": "https://hannibalboxing.com/",
+      "description": "Hannibal Boxing publishes articles and features that celebrate the history, artistry, and culture of the sweet science. Enjoy.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4894116.jpg?t=1615201422"
+    },
+    {
+      "title": "Boxen247",
+      "feed_url": "https://www.boxen247.com/feed/",
+      "website_url": "https://www.boxen247.com/",
+      "description": "A blog by Boxen247 covering the latest boxing news & boxing results, boxer interviews, previews, and so much more.",
+      "followers": {
+        "facebook": 999,
+        "twitter": 569,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5266357.jpg?t=1617952611"
+    },
+    {
+      "title": "Precision Striking",
+      "feed_url": "https://precisionstriking.com/feed/",
+      "website_url": "https://precisionstriking.com/blog/",
+      "description": "Your Premiere Online Boxing Coach. Improve your boxing skills, techniques, and mindset with Precision Striking's Boxing Blog. Precision Striking offers boxing training programs to make you the best boxer you can possibly be!",
+      "followers": {
+        "facebook": 23200
+      },
+      "image_url": "https://i1.feedspot.com/5314427.jpg?t=1629548526"
+    },
+    {
+      "title": "FitBOX Dedham",
+      "feed_url": "https://fitboxdedham.com/feed/",
+      "website_url": "https://fitboxdedham.com/blog/",
+      "description": "FitBOX Dedham for men, women, & youth. Boxing training facility that teaches perfect form, technique, & workout. Small group & personal programs & classes.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 366,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4583925.jpg?t=1615201477"
+    },
+    {
+      "title": "One Round Boxing",
+      "feed_url": "https://oneroundboxing.com/news/feed/",
+      "website_url": "https://oneroundboxing.com/news/",
+      "description": "We, through sharing our knowledge and experience, are attempting to help bring about a new golden age of boxing. By highlighting forgotten fighters, lost knowledge, and classic fights, we are attempting to bring value and educate our readership who will hopefully share the knowledge they receive.",
+      "followers": {
+        "facebook": 42200,
+        "instagram": 837
+      },
+      "image_url": "https://i1.feedspot.com/5209475.jpg"
+    },
+    {
+      "title": "Boxing Along The Beltway",
+      "feed_url": "https://feeds.feedburner.com/BoxingAlongTheBeltway",
+      "website_url": "http://boxingalongthebeltway.blogspot.com/",
+      "description": "The place to go if you want to know about any upcoming show or results, from amateur to the pros, in Virginia, Maryland and the District.",
+      "followers": {
+        "twitter": 619
+      },
+      "image_url": "https://i1.feedspot.com/4582989.jpg?t=1615201430"
+    },
+    {
+      "title": "Box.Live",
+      "feed_url": "https://box.live/feed/",
+      "website_url": "https://box.live/boxing-news/",
+      "description": "Box.live brings you the latest news & results of all the biggest fights in boxing. The most fan friendly site online, follow your favorite fighters & fights.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 1600,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4944588.jpg?t=1615201537"
+    },
+    {
+      "title": "Pound 4 Pound Boxing Report",
+      "feed_url": "https://p4pboxingreport.wordpress.com/feed/",
+      "website_url": "https://p4pboxingreport.wordpress.com/",
+      "description": "Talking all things boxing!",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 427
+      },
+      "image_url": "https://i1.feedspot.com/4582916.jpg?t=1615201465"
+    },
+    {
+      "title": "How to Box Blog",
+      "feed_url": "https://expertboxing.com/feed",
+      "website_url": "https://expertboxing.com/blog",
+      "description": "The #1 boxing training website since 2008. Techniques and tips for boxers, fighters, trainers, and fitness enthusiasts to learn how to box.",
+      "followers": {
+        "facebook": 18100,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/503325.jpg?t=1615201714"
+    },
+    {
+      "title": "The Ring",
+      "feed_url": "https://ringmagazine.com/en",
+      "website_url": "https://ringmagazine.com/en",
+      "description": "The Bible of Boxing! Your destination for Boxing, MMA, and Kickboxing news, events and ratings. Winner Of 11 Awards For Editorial Excellence. Stay tuned to get the latest updates.",
+      "followers": {
+        "facebook": 181600,
+        "twitter": 345500,
+        "instagram": 120
+      },
+      "image_url": "https://i1.feedspot.com/4582943.jpg?t=1624262211"
+    },
+    {
+      "title": "Boxing Insider",
+      "feed_url": "https://www.boxinginsider.com/feed/",
+      "website_url": "https://www.boxinginsider.com/",
+      "description": "Your leading provider for everything boxing. News, Event Coverage, Columns, and much more. Established in 1997 as a premier boxing destination.",
+      "followers": {
+        "facebook": 591300,
+        "twitter": 76900,
+        "instagram": 41500
+      },
+      "image_url": "https://i1.feedspot.com/4111.jpg?t=1615201251"
+    },
+    {
+      "title": "World Boxing News",
+      "feed_url": "https://www.worldboxingnews.com/feed/",
+      "website_url": "https://www.worldboxingnews.com/",
+      "description": "World Boxing News was founded in 2010 and quickly became established as one of the most visited boxing websites on the planet. WBN is dedicated to reporting boxing news and results from around the world. The website features interviews with the biggest names in the sport.",
+      "followers": {
+        "facebook": 121900,
+        "twitter": 130100,
+        "instagram": 5700
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/9085462/page/4421501/logo_1738153866.jpg"
+    },
+    {
+      "title": "Seconds Out Boxing",
+      "feed_url": "https://www.secondsout.com/Syndication/DF.cfm?f=175&ft=10/feed",
+      "website_url": "https://www.secondsout.com/",
+      "description": "SecondsOut.com is the world's leading boxing portal, providing our visitors with unparalleled editorial content, columns, fight reports, interviews, results, rankings, stats and of course all boxing related news.",
+      "followers": {
+        "facebook": 102600,
+        "twitter": 10100,
+        "instagram": 9800
+      },
+      "image_url": "https://i1.feedspot.com/4582881.jpg?t=1615201312"
+    },
+    {
+      "title": "Fightnews",
+      "feed_url": "https://fightnews.com/feed",
+      "website_url": "https://www.skysports.com/boxing/",
+      "description": "At Fightnews.com\u00ae, our mission is to bring you the most current boxing news available. We strive to keep our news, rankings, schedules, and results pages as accurate and up-to-date as possible. There is also a vibrant online community discussing everything boxing.",
+      "followers": {
+        "facebook": 23800,
+        "twitter": 25900
+      },
+      "image_url": "https://i1.feedspot.com/1348.jpg?t=1750312658"
+    },
+    {
+      "title": "FanSided \u00bb Boxing",
+      "feed_url": "https://fansided.com/boxing/feed/",
+      "website_url": "https://fansided.com/boxing/",
+      "description": "The latest boxing news, videos, highlights, and more from FanSided. From Pacquiao to Mayweather and Canelo, we have you covered. FanSided is a network of fandom-focused sports, entertainment, and lifestyle sites on the Internet.",
+      "followers": {
+        "facebook": 972900,
+        "twitter": 46700
+      },
+      "image_url": "https://i1.feedspot.com/5314425.jpg?t=1629546379"
+    },
+    {
+      "title": "12 Rounds Boxing | What will you fight for?",
+      "feed_url": "https://12roundsboxing.co.uk/feed/",
+      "website_url": "https://12roundsboxing.co.uk/blog/",
+      "description": "Creating a boxing community for those who're fed up of gyms and want fitness that's fun and enjoyable. Boxing sessions for all from mums to fighters.....",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 283
+      },
+      "image_url": "https://i1.feedspot.com/4583795.jpg?t=1615201451"
+    },
+    {
+      "title": "Arcaro Boxing Gym",
+      "feed_url": "https://www.arcaroboxing.com/feed/",
+      "website_url": "https://www.arcaroboxing.com/blog/",
+      "description": "Arcaro Boxing Gym | Training Athletes in Professional, Amateur and Fitness Boxing Classes in Seattle, WA, Arcaro Boxing Gym is Located in the Central District adjacent to the Seattle University Campus.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 491,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4583942.jpg?t=1615201454"
+    },
+    {
+      "title": "Boxing Gloves Review",
+      "feed_url": "https://boxingglovesreviews.com/blog/feed/",
+      "website_url": "https://boxingglovesreviews.com/blog/",
+      "description": "We test hundreds of boxing gloves products and analyze all the reviews so you can choose the best gloves for your money.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 444
+      },
+      "image_url": "https://i1.feedspot.com/4583015.jpg?t=1615201492"
+    }
+  ]
+}

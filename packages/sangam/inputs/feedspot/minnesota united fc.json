@@ -1,0 +1,88 @@
+{
+  "category": "Minnesota United FC",
+  "source_url": "https://rss.feedspot.com/minnesota_united_fc_rss_feeds",
+  "feeds": [
+    {
+      "title": "DARK CLOUDS",
+      "feed_url": "https://www.dark-clouds.com/feed/",
+      "website_url": "https://www.dark-clouds.com/",
+      "description": "Formed in 2004, the Dark Clouds are Minnesota's largest independent soccer supporters group. Find anything and everything related to Minnesota United FC along with quality content on Dark Clouds.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 10200,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5208010.jpg?t=1603176049"
+    },
+    {
+      "title": "Yahoo! Sports \u00bb Minnesota United FC",
+      "feed_url": "https://sports.yahoo.com/soccer/teams/minnesota-united-fc/rss/",
+      "website_url": "https://sports.yahoo.com/soccer/teams/minnesota-united-fc/",
+      "description": "The latest Minnesota United FC news from Yahoo Sports. Find Minnesota United FC fixtures, results, top scorers, transfer rumours and player profiles, with exclusive photos and video highlights.",
+      "followers": {
+        "facebook": 4099999,
+        "twitter": 573300,
+        "instagram": 478000
+      },
+      "image_url": "https://i1.feedspot.com/5208057.jpg?t=1603179087"
+    },
+    {
+      "title": "E Pluribus Loonum",
+      "feed_url": "https://www.epluribusloonum.com/rss/current.xml",
+      "website_url": "https://www.epluribusloonum.com/",
+      "description": "Your best source for quality Minnesota United FC news, rumors, analysis, stories, stats, and opinion from the fan perspective along with Minnesota United schedule and roster.",
+      "followers": {
+        "facebook": 563,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5207976.jpg?t=1603172740"
+    },
+    {
+      "title": "Zone Coverage \u00bb Minnesota United FC",
+      "feed_url": "https://zonecoverage.com/mn-united/feed/",
+      "website_url": "https://zonecoverage.com/mn-united/",
+      "description": "Get the latest Minnesota United FC news and all the latest updates from Zone Coverage, your one-stop source for Minnesota sports.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 6700,
+        "instagram": 529
+      },
+      "image_url": "https://i1.feedspot.com/5207995.jpg?t=1603174868"
+    },
+    {
+      "title": "SBI Soccer \u00bb Minnesota United",
+      "feed_url": "https://sbisoccer.com/category/mls-minnesota/feed",
+      "website_url": "https://sbisoccer.com/category/mls-minnesota",
+      "description": "SBI Soccer is the soccer news website covering the sport from an American perspective, while also providing news and analysis on the international game as well. Get the latest updates and quality information about Minnesota United on SBI Soccer.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 8800,
+        "instagram": 662
+      },
+      "image_url": "https://i1.feedspot.com/5208037.jpg?t=1603177482"
+    },
+    {
+      "title": "Minnesota United FC",
+      "feed_url": "https://www.mnufc.com/rss.xml",
+      "website_url": "https://www.mnufc.com/",
+      "description": "Official home of the Minnesota United FC. Find the latest information, news, updates, schedule, roster, photos, videos, stats, tickets info, player updates, analysis, and much more about the MNUFC on the official site.",
+      "followers": {
+        "facebook": 318500,
+        "twitter": 169800,
+        "instagram": 170100
+      },
+      "image_url": "https://i1.feedspot.com/5207954.jpg?t=1603171087"
+    },
+    {
+      "title": "MLS Multiplex \u00bb Minnesota United FC",
+      "feed_url": "https://mlsmultiplex.com/mls-western-conference/minnesota-united/feed/",
+      "website_url": "https://mlsmultiplex.com/mls-western-conference/minnesota-united/",
+      "description": "Find out the latest top-notch Minnesota United information in the form of news, rumors, GIFs, predictions, updates, player information, and much more on MLS Multiplex.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5208051.jpg?t=1603178424"
+    }
+  ]
+}

@@ -1,0 +1,650 @@
+{
+  "category": "Ham Radio",
+  "source_url": "https://rss.feedspot.com/ham_radio_rss_feeds",
+  "feeds": [
+    {
+      "title": "AMSAT",
+      "feed_url": "https://www.amsat.org/feed/",
+      "website_url": "https://www.amsat.org/",
+      "description": "Latest news and articles on amateur radio operators, space research and communication at AMSAT. The Radio Amateur Satellite Corporation (as AMSAT is officially known) was first formed in the District of Columbia in 1969 as an educational organization. It was founded to continue the efforts, begun in 1961, by Project OSCAR, a west coast USA-based group which built and launched the very first Amateur Radio satellite.",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 23600
+      },
+      "image_url": "https://i1.feedspot.com/5286216.jpg?t=1622289086"
+    },
+    {
+      "title": "Q R P e r",
+      "feed_url": "https://qrper.com/feed/",
+      "website_url": "https://qrper.com/",
+      "description": "Articles and news on QRP radios, portable operations, product announcements and reviews. QRPer is a personal website administered by Tom Witherspoon - K4SWL. He's goal is to promote all things QRP.",
+      "followers": {
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5286179.jpg?t=1622285901"
+    },
+    {
+      "title": "The K\u00d8NR Radio Site",
+      "feed_url": "https://www.k0nr.com/wordpress/feed/",
+      "website_url": "https://www.k0nr.com/wordpress/",
+      "description": "Read articles about amateur (ham) radio, VHF/UHF, portable operating and technical stuff. Bob is an Electrical Engineer by background, education and (probably) genetic. He received a BSEE from Purdue University and an MSEE from Colorado State University. While attending Purdue University, he got interested in amateur radio (W9YB Purdue Amateur Radio Club) and received his first amateur radio license in 1977.",
+      "followers": {
+        "facebook": 342,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/717608.jpg?t=1622725668"
+    },
+    {
+      "title": "The SWLing Post",
+      "feed_url": "https://swling.com/blog/feed/",
+      "website_url": "https://swling.com/blog/",
+      "description": "The SWLing Post is a community of shortwave radio and amateur radio enthusiasts sharing shortwave radio reviews, news, broadcasting, pirate radio, numbers stations, interviews, and much more. We aim to provide quality content in the form of everything radio, with a focus on the HF/Shortwave portions of the spectrum.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 7200
+      },
+      "image_url": "https://i1.feedspot.com/5143002.jpg?t=1622282349"
+    },
+    {
+      "title": "Our HAM Station",
+      "feed_url": "https://stationproject.blog/feed/",
+      "website_url": "https://stationproject.blog/",
+      "description": "This blog shares Fred (AB1OC) and Anita's (AB1QB) experiences in building and operating a state of the art Amateur Radio station. Fred and Anita are relatively new HAMs having been licensed in 2010/2011. We also plan to share other information related to our Amateur Radio experiences here.",
+      "followers": {
+        "twitter": 233
+      },
+      "image_url": "https://i1.feedspot.com/5286125.jpg?t=1622281340"
+    },
+    {
+      "title": "ARRL Blog",
+      "feed_url": "http://www.arrl.org/arrl.rss",
+      "website_url": "http://www.arrl.org/on-the-air-blog",
+      "description": "News, information and resources on amateur radio.The American Radio Relay League (ARRL) is the national association for amateur radio and connecting hams around the U.S.",
+      "followers": {
+        "facebook": 117000,
+        "twitter": 46500
+      },
+      "image_url": "https://i1.feedspot.com/108092.jpg?t=1682501003"
+    },
+    {
+      "title": "OnAllBands",
+      "feed_url": "https://feeds.feedburner.com/OnAllBands",
+      "website_url": "https://www.onallbands.com/",
+      "description": "Read helpful technical articles, product features, industry news and event coverage at OnAllBrands. An Amateur Radio blog powered by DX Engineering, OnAllBands is dedicated to educating and informing the Amateur Radio community.",
+      "followers": {
+        "facebook": 96400,
+        "twitter": 21800
+      },
+      "image_url": "https://i1.feedspot.com/5286120.jpg?t=1622280249"
+    },
+    {
+      "title": "With Varying Frequency - Amateur Radio Ponderings",
+      "feed_url": "https://k9zw.wordpress.com/feed/",
+      "website_url": "https://k9zw.wordpress.com/",
+      "description": "Articles on amateur radio, array solution and K9ZW operation.K9ZW Steve is an amateur extra first licensed in 1989 as KB9GPN.",
+      "followers": {
+        "twitter": 925
+      },
+      "image_url": "https://i1.feedspot.com/246833.jpg?t=1622284989"
+    },
+    {
+      "title": "WS1SM Ham Radio",
+      "feed_url": "https://blogws1sm.wordpress.com/feed/",
+      "website_url": "https://blogws1sm.wordpress.com/",
+      "description": "Stories, articles and projects on amateur radio by WS1SM.The Wireless Society of Southern Maine is an amateur radio club founded in 2010, which actively promotes amateur radio through education and on-air activities.",
+      "followers": {
+        "facebook": 648,
+        "twitter": 124
+      },
+      "image_url": "https://i1.feedspot.com/5286142.jpg?t=1622282114"
+    },
+    {
+      "title": "The DXZone",
+      "feed_url": "https://feeds.feedburner.com/dxzone/xml",
+      "website_url": "https://www.dxzone.com/",
+      "description": "Posts on ham radio, antennas, DX resources and radio equipment. The DXZone is the largest human created and maintained library of web sites dedicated to Amateur Radio, currently listing 20.000+ links organized into 600+ categories and subcategories. Ham Radio operators review new sites every day since 1998, for potential inclusion in the Directory, and to evaluate the best place to list them.",
+      "followers": {
+        "facebook": 29800,
+        "twitter": 17800,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5286154.jpg?t=1622282982"
+    },
+    {
+      "title": "KM1NDY",
+      "feed_url": "https://km1ndy.com/feed/",
+      "website_url": "https://km1ndy.com/",
+      "description": "Author KM1NDY is a licensed ham radio operator and is fond of posting snippets from her ham radio and other bit adventures. She talks about her latest Outdoor adventures and Ham Radio stories, experiences in the latest posts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5551378.jpg?t=1682510323"
+    },
+    {
+      "title": "Roger G3XBM's (Mainly) Amateur Radio Blog",
+      "feed_url": "https://feeds.feedburner.com/blogspot/nnsl",
+      "website_url": "http://g3xbm-qrp.blogspot.com/",
+      "description": "Check out Roger G3XBM's (Mainly) Amateur Radio Blog for information and opinions on Simple QRP projects, 10m, 8m, 6m, 4m, FT8, 160m, WSPR, LF/MF, sub-9kHz, nano waves, and other random stuff, not related to amateur radio. Roger is a retired telecommunication expert and operates mostly QRP projects.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1738793.jpg?t=1682514046"
+    },
+    {
+      "title": "M1KTA's QRP ham radio blog",
+      "feed_url": "http://m1kta-qrp.blogspot.com/feeds/posts/default",
+      "website_url": "http://m1kta-qrp.blogspot.com/",
+      "description": "M1KTA's QRP ham radio blog details the projects that he is currently working on among his other work. You will also find catalogs of his past QRP projects here. M1KTA is an IT professional and ham radio operator by hobby. Check out his ham trips and adventures in the latest post.",
+      "followers": {
+        "twitter": 774
+      },
+      "image_url": "https://i1.feedspot.com/1738785.jpg?t=1564657612"
+    },
+    {
+      "title": "AmateurLogic.TV",
+      "feed_url": "https://www.amateurlogic.tv/blog/?feed=rss2",
+      "website_url": "https://www.amateurlogic.tv/blog/",
+      "description": "Youtube videos discussing Ham Radio & Technology from user AmateurLogic 180. Find answers to common issues and FAQs for telecommunication professionals in our Ham College posts. We also showcase demonstrations, explanations and other Ham-related information",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5551386.jpg?t=1682510541"
+    },
+    {
+      "title": "Brightleaf Amateur Radio Club",
+      "feed_url": "https://w4amc.com/feed/",
+      "website_url": "https://w4amc.com/",
+      "description": "Brightleaf Amateur Radio Club was formed by a group of amateur radio enthusiasts getting together to explore and expand the hobby, and to provide communications service to the community at large when needed in emergencies. View our blog posts to know more about the latest activities, projects, club elections, and more.",
+      "followers": {
+        "facebook": 211
+      },
+      "image_url": "https://i1.feedspot.com/5551383.jpg?t=1682510980"
+    },
+    {
+      "title": "Off Grid Ham Radio OH8STN",
+      "feed_url": "http://oh8stn.org/feed/",
+      "website_url": "https://oh8stn.org/",
+      "description": "Ultra-Portable, Digital QRP fanatic, and video-creator, Julian OH8STN is a retired broadcast engineer and expat living in Scandinavia. His blog features insights and analyses of his digital micro-expeditions, designing and building bespoke gear, and solving many practical problems associated with man-portable off grid communications on HF.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 6000,
+        "instagram": 9600
+      },
+      "image_url": "https://i1.feedspot.com/5551382.jpg?t=1682510588"
+    },
+    {
+      "title": "Off Grid Ham",
+      "feed_url": "https://offgridham.com/feed/",
+      "website_url": "https://offgridham.com/",
+      "description": "Chris Warren is an electronics technician and specializes in transmission equipment, optical & digital circuits (DSx, OCxxx, Ethernet, etc.), and backup power systems. Off Grid Ham blog is dedicated to addressing amateur radio technical topics, and sharing Chris's experiences as both a professional and a hobbyist.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5551367.jpg?t=1682510631"
+    },
+    {
+      "title": "Radio Artisan",
+      "feed_url": "https://blog.radioartisan.com/feed/",
+      "website_url": "https://blog.radioartisan.com/",
+      "description": "Anthony Good K3NG is a Radio amateur and documents his journey, ideas, experiences, and latest projects in this blog. He enjoys QRP, 6 meters, CW, Summits on the Air (SOTA), DXing, making microcontrollers do cool things, and hiking with Amateur Radio.",
+      "followers": {
+        "twitter": 26
+      },
+      "image_url": "https://i1.feedspot.com/246821.jpeg"
+    },
+    {
+      "title": "Lincoln County Amateur Radio Club",
+      "feed_url": "https://n7oy.org/feed/",
+      "website_url": "https://n7oy.org/",
+      "description": "News and updates from the Lincoln County Amateur Radio Club. Stay ahead hamming with Radio workshops, classes, and events by the club. LCARC is a nonprofit, and an ARRL-affiliated association of amateur radio operators in Lincoln County, Oregon.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5551392.jpg?t=1682510938"
+    },
+    {
+      "title": "KB9VBR Antennas Blog",
+      "feed_url": "https://www.jpole-antenna.com/feed/",
+      "website_url": "https://www.jpole-antenna.com/blog/",
+      "description": "KB9VBR Antennas Blog dives deep into Ham radio and offers all the information and resources you need to have about portable antennas. www.jpole-antenna.com also features and sells VHF/UHF Antennas for Amateur Radio, Public Safety, Business, Scanning, and Broadcast.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5551395.jpg?t=1682510654"
+    },
+    {
+      "title": "KA7OEI's blog",
+      "feed_url": "http://ka7oei.blogspot.com/feeds/posts/default",
+      "website_url": "http://ka7oei.blogspot.com/",
+      "description": "Read random musings - usually on a technical (nerdy) subject - perhaps related to amateur radio and things found at ka7oei.com and modulatedlight.org. Author Clint holds the call sign KA7OEI as a Ham Radio operator and provides information on various Ham Radio topics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5551369.jpg?t=1682510703"
+    },
+    {
+      "title": "EI7GL....A diary of amateur radio activity",
+      "feed_url": "https://ei7gl.blogspot.com/feeds/posts/default",
+      "website_url": "https://ei7gl.blogspot.com/",
+      "description": "John EI7GL is an amateur radio enthusiast and likes to detail his escapades across radiowaves in these posts. The blog covers radio experiments and propagation primarily on the VHF and UHF bands. Read the latest posts covering 40 MHz and other low frequency propagation.",
+      "followers": {
+        "twitter": 2000,
+        "instagram": 331
+      },
+      "image_url": "https://i1.feedspot.com/1738765.jpg?t=1682576104"
+    },
+    {
+      "title": "ZS6BNE's Blog",
+      "feed_url": "https://zs6bne.wordpress.com/feed/",
+      "website_url": "https://zs6bne.wordpress.com/",
+      "description": "ZS6BNE's blog is dedicated to providing information about ham radio and features his insights on anything ham radio related including, Digital communications, Satellite communications, and Shortwave communications. Learn more in recent posts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5551376.jpg?t=1682510351"
+    },
+    {
+      "title": "N1CLC",
+      "feed_url": "https://www.n1clc.com/feeds/posts/default",
+      "website_url": "https://www.n1clc.com/",
+      "description": "I'm Chris Claborne, an IT professional and technology geek. Welcome to my amateur radio BLOG. Here at N1CLC.com (aka HamNinja.com), I hope to cover my exploration of ham radio, summits on the air (SOTA), and general RF geek stuff. Stay for useful tips on Ham Radio.",
+      "followers": {
+        "twitter": 138
+      },
+      "image_url": "https://i1.feedspot.com/5551366.jpg?t=1682511034"
+    },
+    {
+      "title": "Loudoun Amateur Radio Group Blog",
+      "feed_url": "https://k4lrg.org/feed/",
+      "website_url": "https://k4lrg.org/blog/",
+      "description": "Loudoun Amateur Radio Group is a family-oriented club with a wide variety of activities and interests that include public service, emergency communications support, high altitude balloon radio, camera, and video flights, fox hunts, contesting, and radio sport 'DX-ing'. Find out more about the club's recent meetings, programs, and members in these weekly blog posts.",
+      "followers": {
+        "twitter": 52
+      },
+      "image_url": "https://i1.feedspot.com/5551380.jpg?t=1682511074"
+    },
+    {
+      "title": "Barstow Amateur Radio Club Blog",
+      "feed_url": "https://wa6tst.club/feed/",
+      "website_url": "https://wa6tst.club/blog-2/",
+      "description": "Updates and information about the club and activities. We post information on a reasonably consistent basis, and things come up. The Barstow Amateur Radio Club is a full-service amateur radio club serving the Barstow community. We also provide regular license instruction classes and exam sessions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5551373.jpg?t=1682513510"
+    },
+    {
+      "title": "shenandoah Valley Amateur Radio Club",
+      "feed_url": "https://svarc.us/feed/",
+      "website_url": "https://svarc.us/category/news/",
+      "description": "One of the oldest clubs in the US, the Shenandoah Valley Amateur Radio Club is a nonprofit club dedicated to the advancement and enjoyment of amateur radio operators in the northern Shenandoah Valley. These blog updates will bring reader ahead on the latest club activities and news.",
+      "followers": {
+        "facebook": 928
+      },
+      "image_url": "https://i1.feedspot.com/5551389.jpg?t=1682513554"
+    },
+    {
+      "title": "Ham Radio Operator - M0YKS",
+      "feed_url": "https://hamradiooperator.blogspot.com/feeds/posts/default",
+      "website_url": "https://hamradiooperator.blogspot.com/",
+      "description": "Simon M0YKS is a Ham Radio Operator and writes the UK's Longest Running Ham Radio Blog. This blog contains information about the project of making an antenna tower, its procedure, etc. Surely follow to stay updated with the contents of this blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1738749.jpg?t=1682513567"
+    },
+    {
+      "title": "WWFF Blog",
+      "feed_url": "https://wwff.co/feed/",
+      "website_url": "https://wwff.co/blog/",
+      "description": "Follow News and Activities by WWFF. The WWFF program aims to draw attention to the importance of Protected Flora@Fauna (PFF) by having amateur radio operators set up and operate their radio stations from designated nature parks and Protected Flora@Fauna areas (PFF).",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5551388.jpg?t=1682510334"
+    },
+    {
+      "title": "Fleetwood Digital Blog",
+      "feed_url": "https://www.fleetwooddp.com/blogs/news.atom",
+      "website_url": "https://www.fleetwooddp.com/blogs/news",
+      "description": "The Fleetwood Digital Blog delivers information on all things Amateur Ham Radio from news, product announcements, and reviews, to helpful tips for the new ham radio operators. Fleetwood Digital Products is an online store, that supplies Radio equipment, including Amateur Ham Radios to hobbyists, enthusiasts, and commercial/recreational drivers.",
+      "followers": {
+        "facebook": 696,
+        "twitter": 634,
+        "instagram": 512
+      },
+      "image_url": "https://i1.feedspot.com/5551371.jpg?t=1682510239"
+    },
+    {
+      "title": "G0KYA's Amateur Radio Blog",
+      "feed_url": "http://g0kya.blogspot.com/feeds/posts/default",
+      "website_url": "http://g0kya.blogspot.com/",
+      "description": "G0KYA's blog devoting to amateur radio/ham radio, featuring articles on antennas, propagation, Marconi, and much more. Steve Nichols (call sign G0KYA) is an author, freelance journalist, photographer, and communicator specializing in aerospace, science, and technology.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1738745.jpg?t=1682513449"
+    },
+    {
+      "title": "Waltham Amateur Radio Association Blog",
+      "feed_url": "https://walthamara.org/feed/",
+      "website_url": "https://walthamara.org/blog/",
+      "description": "Blog updates keeping readers and followers up-to-date on the Waltham Amateur Radio Association's latest events. View Meeting details, Program announcements, and other news snippets. The Association was founded in 1938 and presently operates 4 repeaters, all located on Prospect Hill in Waltham, MA.",
+      "followers": {
+        "facebook": 688
+      },
+      "image_url": "https://i1.feedspot.com/5551396.jpg?t=1682513624"
+    },
+    {
+      "title": "International Amateur Radio Union",
+      "feed_url": "https://www.iaru.org/feed/",
+      "website_url": "https://www.iaru.org/",
+      "description": "Browse News and Event-related information from the International Amateur Radio Union. Recent updates feature Study reports, Theme announcements for upcoming events, and other information. The IARU is the global federation of national amateur radio organizations working to represent the best interests of Ham Radio operators worldwide.",
+      "followers": {
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/5551390.jpg?t=1682510338"
+    },
+    {
+      "title": "Humber Fortress DX Amateur Radio Club ( M0HFC & MX0HFC & M6C ) - Affiliated to the Radio Society of",
+      "feed_url": "https://hfdxarc.com/feed/",
+      "website_url": "https://hfdxarc.com/",
+      "description": "We represent the Humber Fortress DX Amateur Radio Club, identified as MX0HFC / M0HFC / M6C, situated at Millhouse, Haven Road, Patrington, East Yorkshire HU12 0PS. Our club calls include MX0HFC, M0HFC, and M6C for contests.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7287220.jpg?t=1711963750"
+    },
+    {
+      "title": "AmateurRadio.com",
+      "feed_url": "https://feeds.feedburner.com/amateurradiocom",
+      "website_url": "https://www.amateurradio.com/",
+      "description": "International Ham Radio News & Opinion.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 22300
+      },
+      "image_url": "https://i1.feedspot.com/1738771.jpg?t=1614144522"
+    },
+    {
+      "title": "KB6NU's Ham Radio",
+      "feed_url": "https://www.kb6nu.com/feed/",
+      "website_url": "https://www.kb6nu.com/",
+      "description": "Covers articles on Rules, Regulations, Enforcement and Arduino. KB6NU's Ham Radio is the Author of the No Nonsense amateur radio study guides and The CW Geek's Guide to Having Fun With Morse Code.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/2112727.jpg?t=1622277570"
+    },
+    {
+      "title": "SolderSmoke Daily News",
+      "feed_url": "https://feeds.feedburner.com/SoldersmokeDailyNews",
+      "website_url": "https://soldersmoke.blogspot.com/",
+      "description": "Articles on Radio History, Knack Stories, Old Radio, Astronomy, Satellites, Minimalist Radio and Troubleshooting by SolderSmoke.Serving the worldwide community of radio-electronic homebrewers.",
+      "followers": {
+        "twitter": 943
+      },
+      "image_url": "https://i1.feedspot.com/615530.jpg?t=1622283320"
+    },
+    {
+      "title": "PA9X",
+      "feed_url": "https://www.pa9x.com/feed/",
+      "website_url": "https://www.pa9x.com/",
+      "description": "Tips, reviews and experiments on Amateur Radio, Interference, Transceiver, Antenna and Propagation by Jean-Paul Suijs, PA9X.",
+      "followers": {
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5286152.jpg?t=1622282722"
+    },
+    {
+      "title": "Amateur Radio Newsline",
+      "feed_url": "https://www.arnewsline.org/news?format=rss",
+      "website_url": "https://www.arnewsline.org/",
+      "description": "Amateur Radio related weekly news digest.",
+      "followers": {
+        "twitter": 431
+      },
+      "image_url": "https://i1.feedspot.com/5142886.jpg?t=1622285967"
+    },
+    {
+      "title": "Mac Ham Radio",
+      "feed_url": "https://machamradio.com/feed/",
+      "website_url": "https://machamradio.com/",
+      "description": "News and Information about Amateur Radio / Ham Radio using MacOS and iOS by Mac Ham Radio. It also covers Digital Modes, Logging, MacLoggerDX, Open source, RUMlogNG, IOS, Contesting, DogParkSoftware, and Flex Radio.",
+      "followers": {
+        "facebook": 745
+      },
+      "image_url": "https://i1.feedspot.com/5286182.jpg?t=1622287130"
+    },
+    {
+      "title": "AA7EE",
+      "feed_url": "https://aa7ee.wordpress.com/feed/",
+      "website_url": "https://aa7ee.wordpress.com/",
+      "description": "Covers articles on AA7EE, Altoids homebrew, Direct Conversion Receiver, Elecraft K2, NT7S and QRP. Dave have been a radio amateur since 1978, when he was licensed as G8RYQ, and then G4IFA in the UK. About 10 years later, he became AA7EE here in the US.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/1738799.jpg?t=1622286475"
+    },
+    {
+      "title": "It's Ham Radio",
+      "feed_url": "https://itshamradio.com/feed/",
+      "website_url": "https://itshamradio.com/",
+      "description": "It's Ham Radio writes about Ham Radios also known as Amateur Radio along with its tutorials, News, DIY instructions, Ham radio concepts, latest circuit ideas and much more.",
+      "followers": {
+        "facebook": 496,
+        "twitter": 60
+      },
+      "image_url": "https://i1.feedspot.com/5447673.jpg?t=1663669779"
+    },
+    {
+      "title": "Ham Radio",
+      "feed_url": "https://www.hamradio.me/feed",
+      "website_url": "https://www.hamradio.me/",
+      "description": "News on Antennas, experiments and engineering to radio folks. Also covers articles on portable, digital modes, promoting, power supply, test gear and connectors.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/246811.jpg?t=1622728676"
+    },
+    {
+      "title": "m0xpd's 'Shack Nasties'",
+      "feed_url": "http://m0xpd.blogspot.com/feeds/posts/default",
+      "website_url": "http://m0xpd.blogspot.com/",
+      "description": "m0xpd's 'Shack Nasties' blog is a series of random and irregular jottings, documenting matters of interest (to me) in the sphere of amateur radio and beyond. The author is an engineer and amateur radio enthusiast, and operates the station m0xpd, conducts experiments, and plays with frequencies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/717609.jpg?t=1682515187"
+    },
+    {
+      "title": "HAM Radio for Non-Techies Blog",
+      "feed_url": "https://hamradiofornontechies.com/feed/",
+      "website_url": "https://hamradiofornontechies.com/blog/",
+      "description": "Learn About HAM radio in Layman's Terms.HAM Radio for Non-Techies delves into the basics to deliver simple, and effective Ham Radio insights to beginners and hobbyists. We cover topics on how to get your ham radio license, making your first contact, and equipment you will want to consider when getting into the hobby.",
+      "followers": {
+        "twitter": 268
+      },
+      "image_url": "https://i1.feedspot.com/5551375.jpg?t=1682510249"
+    },
+    {
+      "title": "Ham Radio - QRP",
+      "feed_url": "https://www.hamradioqrp.com/feeds/posts/default",
+      "website_url": "https://www.hamradioqrp.com/",
+      "description": "Hi, I am ham radio operator Richard AA4OO. As I learn about the hobby I'm sharing what I discover in my blog. I enjoy communicating across the county, the state, the country, and even the world using Amateur Radio (aka Ham Radio). My particular interests are in low-power QRP operations and using Morse Code.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5551362.jpg?t=1682510463"
+    },
+    {
+      "title": "CQ Amateur Radio magazine",
+      "feed_url": "https://cqnewsroom.blogspot.com/feeds/posts/default",
+      "website_url": "https://cqnewsroom.blogspot.com/",
+      "description": "News and information of interest to ham radio operators from CQ Amateur Radio magazine, the world's leading independent ham radio magazine. Discover articles to deepen your understanding of ham radio science and technology or fun-to-build projects that will have practical use in your ham shack.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5551377.jpg?t=1682510531"
+    },
+    {
+      "title": "HamStudy Blog",
+      "feed_url": "https://blog.hamstudy.org/feed/",
+      "website_url": "https://blog.hamstudy.org/",
+      "description": "Ace your Ham Radio license exam with the help of HamStudy Blog. Dedicated to those who take Amateur Radio seriously, our experts at HamStudy offer thoughtful insights, tips, and assessments of several topics from the exam syllabus as well as others. HamStudy is an online education resource for Ham Radio operators.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5551368.jpg?t=1682511012"
+    },
+    {
+      "title": "VE7SL - Steve - Amateur Radio Blog",
+      "feed_url": "http://ve7sl.blogspot.com/feeds/posts/default",
+      "website_url": "http://ve7sl.blogspot.com/",
+      "description": "A blog about amateur radio and homebrewing at VE7SL located on Mayne Island, BC. topics include 630m, 2200m, 6m, DX, and vintage radios. Ham operator Steve shares Homebrewing and Operating Adventures From 2200m To Nanowaves.",
+      "followers": {
+        "twitter": 238
+      },
+      "image_url": "https://i1.feedspot.com/5551364.jpg?t=1682510195"
+    },
+    {
+      "title": "Ham Imports",
+      "feed_url": "https://hamimports.com/feed/",
+      "website_url": "https://hamimports.com/",
+      "description": "Welcome to Ham Imports, your ultimate guide to Chinese Ham Radios. We provide an unbiased, comprehensive database of various models to help you find the perfect radio for your needs. We're here to show you that you don't need expensive kits from big brands to have fun with ham radio. With the explosion of open-source designs, cheap manufacturing, and global delivery, you can now get on the bands and explore for less than ever before.",
+      "followers": {
+        "twitter": 85
+      },
+      "image_url": "https://i1.feedspot.com/5688851.jpg?t=1697199233"
+    },
+    {
+      "title": "Steve G1KQH's Amateur Radio Blog",
+      "feed_url": "http://g1kqh.blogspot.com/feeds/posts/default",
+      "website_url": "http://g1kqh.blogspot.com/",
+      "description": "Find news and info on QRP construction, Innovation, Software, Ham Radio news, and views. Steve is a licensed Ham since 1984 and shares his latest QRp projects, outdoor trips, reviews and comments on news equipment he uses in this blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5551361.jpg?t=1682510678"
+    },
+    {
+      "title": "DuWayne's Place",
+      "feed_url": "http://kv4qb.blogspot.com/feeds/posts/default",
+      "website_url": "http://kv4qb.blogspot.com/",
+      "description": "Hi! I am DuWayne, a licensed ham radio operator and own the call sign KV4QB. My blog is a place for me to share information about my latest Ham Radio and electronics projects. Check insightful articles on QRP projects, New equipment and other musings.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5551372.jpg?t=1682510723"
+    },
+    {
+      "title": "Hendricks County Amateur Radio Society",
+      "feed_url": "https://n9hc.org/feed/",
+      "website_url": "https://n9hc.org/?page_id=20",
+      "description": "HCARS (Hendricks County Amateur Radio Society) is an amateur radio club representing the county dedicated to helping and alerting authorities in times of natural crises. The articles given here provide a host of ham radio education and keep you informed on the club's latest activities.",
+      "followers": {
+        "facebook": 351,
+        "instagram": 15
+      },
+      "image_url": "https://i1.feedspot.com/5551391.jpg?t=1682510344"
+    },
+    {
+      "title": "N0UN's Ham Radio Blog",
+      "feed_url": "https://www.n0un.net/feed/",
+      "website_url": "https://www.n0un.net/",
+      "description": "N0UN by Wayne Ordakowski is a one-stop blog for all things Amateur (Ham) Radio DX. The latest posts provide updates on Solar numbers, Lookups, DX, and ARRL News. Wayne is a long-time Ham Operator and shares updates and his views on Ham Radio on-goings. He also owns and run HamSupply.com",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2049758.jpg?t=1682583576"
+    },
+    {
+      "title": "Schulman Auction Blog",
+      "feed_url": "https://www.schulmanauction.com/feed/",
+      "website_url": "https://www.schulmanauction.com/blog/",
+      "description": "Schulman Auction, is an online auction company specializing in the sale of amateur/ham radio equipment, vintage audio, antique radios, and related items. Check out our blog for the latest offering, news, company updates and special articles on vintage electronics.",
+      "followers": {
+        "facebook": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5551363.jpg?t=1682510191"
+    },
+    {
+      "title": "VK1DA.blog",
+      "feed_url": "https://vk1da.blog/feed/",
+      "website_url": "https://vk1da.blog/",
+      "description": "I'm Andrew Davis. VK1DA is my amateur radio callsign, which was allocated to me by the Australian Government once I satisfied the requirements for an amateur radio license. My blog, VK1DA.blog publishes content covering Amateur Radio in and around Australia. Discover SoTA experiences and other updates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5551374.jpg?t=1682513594"
+    },
+    {
+      "title": "West Hudson Amateur Radio Club Blog",
+      "feed_url": "https://www.wharc.org/feed/",
+      "website_url": "https://www.wharc.org/blog/",
+      "description": "Stay informed and ahead on all news, announcements, and activities taking place over at the WHARC. West Hudson Amateur Radio Club (WHARC) was founded in 2021 to promote the art and science of amateur radio in the Hudson County, New Jersey towns of East Newark, Harrison, and Kearny as well as the surrounding communities.",
+      "followers": {
+        "facebook": 66,
+        "instagram": 81
+      },
+      "image_url": "https://i1.feedspot.com/5551393.jpg?t=1682510357"
+    },
+    {
+      "title": "A Blog for the Peninsula CERT Community \u00bb Ham Radio |",
+      "feed_url": "https://bsccert.wordpress.com/category/ham-radio/feed/",
+      "website_url": "https://bsccert.wordpress.com/category/ham-radio/",
+      "description": "Updates and full details of upcoming Ham Radio Classes and Equipment Upgrade News. Keep track of what's new in the Ham Radio space with our updates. This blog serves as the online communication portal for the Peninsula CERT community, covering Belmont, Redwood City, San Carlos, Foster City and San Mateo cities.",
+      "followers": {
+        "twitter": 85
+      },
+      "image_url": "https://i1.feedspot.com/5551379.jpg?t=1682510266"
+    },
+    {
+      "title": "VU2NSB Blog",
+      "feed_url": "https://vu2nsb.com/feed/",
+      "website_url": "https://vu2nsb.com/ham-blog/",
+      "description": "Amateur radio blog with posts sorted and listed under relevant categories of topics like Antennas, HF radio propagation, Radio transceivers, etc. VU2NSB is aBasu Bhattacharya, a retired telecommunications professional offering critical advice and engineering tips to Ham Radio users.",
+      "followers": {
+        "facebook": 179,
+        "twitter": 18
+      },
+      "image_url": "https://i1.feedspot.com/5551384.jpg?t=1682510365"
+    },
+    {
+      "title": "W3ATB",
+      "feed_url": "https://w3atb.com/feed/",
+      "website_url": "https://w3atb.com/",
+      "description": "A ham radio blog devoted to the adventures of low-powered amateur radio operator Tim Carter. Tim is a professional writer that likes to dabble in amateur radio. Tim here describes his everyday ham activities - installations, PoTA (Parks on The Air) activations, and the places he visits.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5551381.jpg?t=1682510395"
+    },
+    {
+      "title": "QRZ NOW",
+      "feed_url": "https://qrznow.com/feed/",
+      "website_url": "https://qrznow.com/",
+      "description": "Ham Radio News by QRZ NOW. Covers articles on Antenna, DXing, Propogation, Equipment and Amateur radio.",
+      "followers": {
+        "facebook": 181100,
+        "twitter": 19900,
+        "instagram": 28900
+      },
+      "image_url": "https://i1.feedspot.com/5286169.jpg?t=1622284515"
+    },
+    {
+      "title": "VE2DPE's Ham Radio",
+      "feed_url": "http://feeds.feedblitz.com/hamradiosecrets",
+      "website_url": "https://www.hamradiosecrets.com/ham-radio-blog.html",
+      "description": "News and events related to amateur-radio. They also cover posts about ham radio equipment such as transceivers, receivers, antennas, and software. Claude is Ham radio op VE2DPE. Retired Wx specialist & MIS analyst.",
+      "followers": {
+        "twitter": 190
+      },
+      "image_url": "https://i1.feedspot.com/5286076.jpg?t=1622277155"
+    },
+    {
+      "title": "Ham Radio Science",
+      "feed_url": "https://hamradioscience.com/feed/",
+      "website_url": "https://hamradioscience.com/",
+      "description": "Covers SDR Radio, SDR, Flex Radio, RTL-2832U SDR, ADS-B and Network Radio. Ham Radio Science is dedicated to sharing innovative projects relating to Amateur Radio.",
+      "followers": {
+        "facebook": 828,
+        "twitter": 320,
+        "instagram": 211
+      },
+      "image_url": "https://i1.feedspot.com/5286195.jpg?t=1622287417"
+    },
+    {
+      "title": "Brick O'Lore",
+      "feed_url": "https://www.brickolore.com/feeds/posts/default",
+      "website_url": "https://www.brickolore.com/",
+      "description": "Brick O'Lore is a jack of many hobbies and a master of none - spends a lot of time on amateur/ham radio, running, and technology. In his blog, he talks on a myriad of topics, but mostly center's on Ham Radio. Read his daily musings in the latest posts.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5551370.jpg?t=1682510221"
+    },
+    {
+      "title": "Ripples in the Ether",
+      "feed_url": "https://nt7s.com/feed/",
+      "website_url": "https://nt7s.com/",
+      "description": "Ripples in the Ether is the blog of Jason Milldrum, NT7S. It's mostly related to amateur radio (especially homebrewing and QRP) but occasionally other topics will pop up when they strike me as amusing. The QTH is in Oregon wine country. Jason shares is QRP projects here.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5551365.jpg?t=1682510568"
+    },
+    {
+      "title": "Simple Ham Radio Antennas",
+      "feed_url": "https://www.blogger.com/feeds/3151423644013078076/posts/default",
+      "website_url": "https://www.simplehamradioantennas.com/",
+      "description": "A Hawaii-based Amateur Radio Antenna Blog focusing on the theory, design, and use of homemade antennas.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5417395.jpg?t=1656674175"
+    },
+    {
+      "title": "DX Explorer",
+      "feed_url": "https://dxexplorer.com/feed/",
+      "description": "Amateur radio related articles, dedicated to schematics and discussions about: receivers, transmitters, transceivers, QRP and more. Welcome to DX Explorer, a blog dedicated to those passionate about the amateur radio hobby, especially to those into building homebrew amateur radio equipment.",
+      "followers": {
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5439247.jpg?t=1662525806"
+    }
+  ]
+}

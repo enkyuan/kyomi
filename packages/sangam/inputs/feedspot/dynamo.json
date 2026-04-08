@@ -1,0 +1,81 @@
+{
+  "category": "Dynamo",
+  "source_url": "https://rss.feedspot.com/dynamo_rss_feeds",
+  "feeds": [
+    {
+      "title": "Dynamo BIM Blog",
+      "feed_url": "https://dynamobim.org/blog/feed/",
+      "website_url": "https://dynamobim.org/blog/",
+      "description": "Explore the latest news, information, and updates about Dynamo, Computational Design, and Tutorials on Dynamo BIM Blog. Dynamo is a team of designers architects, engineers, software engineers, and users like you who have created an open-source platform for computational design and for building information modeling (BIM).",
+      "followers": {
+        "facebook": 11600,
+        "twitter": 13500
+      },
+      "image_url": "https://i1.feedspot.com/5016854.jpg?t=1627474343"
+    },
+    {
+      "title": "Between the Lines Blog",
+      "feed_url": "https://autodesk.blogs.com/between_the_lines/atom.xml",
+      "website_url": "https://autodesk.blogs.com/between_the_lines/",
+      "description": "Hi! I am Shaan Hurley the blog by an Autodesk employee covering many topics from Autodesk, Dynamo AEC, 2D, 3D, BIM, CAD, Cloud, Construction, Design, Generative Design, Technology, Travel, XR, Innovation, and much more.",
+      "followers": {
+        "twitter": 14400
+      },
+      "image_url": "https://i1.feedspot.com/81510.jpg?t=1655813823"
+    },
+    {
+      "title": "The Building Coder",
+      "feed_url": "https://feeds.feedburner.com/typepad/the-building-coder",
+      "website_url": "https://thebuildingcoder.typepad.com/",
+      "description": "Jeremy is The Building Coder and The 3D Web Coder. He is a prolific author and passionate about cooperation and sharing, working with the Forge Partner Development team on Autodesk APIs and web services, providing developer support, training, conferences, presentations, and blogging on the Revit API and cloud and mobile technologies.",
+      "followers": {
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/1713926.jpg?t=1642157190"
+    },
+    {
+      "title": "Archi-Lab",
+      "feed_url": "https://archi-lab.net/feed/",
+      "website_url": "https://archi-lab.net/",
+      "description": "Hi! I am Konrad K Sobon the founder of archi-lab, where you will get a collection of my works in the realm of design, working on Dynamo computation, and architecture.",
+      "followers": {
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5413194.jpg?t=1655814347"
+    },
+    {
+      "title": "Parametric Monkey",
+      "feed_url": "https://parametricmonkey.com/feed/",
+      "website_url": "https://parametricmonkey.com/",
+      "description": "Parametric Monkey helps businesses do better things. We provide innovative solutions to the way that buildings are designed, built, and operated. We achieve this by developing digital tools to automate your workflows. With a focus on collaboration and agility, our work spans BIM, computational design, and digital fabrication.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5413191.jpg?t=1655812765"
+    },
+    {
+      "title": "Sixty Second Revit",
+      "feed_url": "https://www.sixtysecondrevit.com/feed.xml",
+      "website_url": "https://www.sixtysecondrevit.com/",
+      "description": "My name is John, I am a computational design and BIM person. This blog is my place to share my Revit and Dynamo findings. All my materials are for educational and informational purposes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5362406.jpg?t=1642154964"
+    },
+    {
+      "title": "Enjoy Revit",
+      "feed_url": "http://plevit1.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://plevit1.blogspot.com/",
+      "description": "This blog mostly contains simple tips and unique ideas about Revit and Dynamo Revit. My videos are usually about simple tips for using Revit which are out of textbooks or user guides.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5413192.jpg?t=1655814039"
+    },
+    {
+      "title": "Design Tech Unraveled",
+      "feed_url": "https://designtechunraveled.com/feed/",
+      "description": "Design Tech Unraveled is a place for sharing. Originally started as a simple one-page blog titled, sixtysecondrevit, this place represents years of sharing knowledge.If you are interested in all things Design Technology Dynamo follow along John has over 10 years of experience in the AEC industry. He is well known for his Dynamo packages that are freely available to the community",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5389756.jpg?t=1656656780"
+    }
+  ]
+}

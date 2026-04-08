@@ -1,0 +1,43 @@
+{
+  "category": "MBTI",
+  "source_url": "https://rss.feedspot.com/mbti_rss_feeds",
+  "feeds": [
+    {
+      "title": "Psychology Junkie Blog",
+      "feed_url": "https://www.psychologyjunkie.com/feed/",
+      "website_url": "https://www.psychologyjunkie.com/blog/",
+      "description": "Read about your Personality Type and how to use this information to grow into the best version of yourself. Susan Storm is the founder of Psychology Junkie, a certified MBTI practitioner, and a lover of all things psychology-related.",
+      "followers": {
+        "twitter": 39
+      },
+      "image_url": "https://i1.feedspot.com/5289679.jpg?t=1662961665"
+    },
+    {
+      "title": "Stellar Maze",
+      "feed_url": "https://www.stellarmaze.com/feed/",
+      "website_url": "https://www.stellarmaze.com/",
+      "description": "Stellar Maze features articles on Astrology and Myers-Briggs. Explore articles on personality traits, astrology based personality and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5440413.jpg?t=1662961850"
+    },
+    {
+      "title": "Personality Growth",
+      "feed_url": "https://personalitygrowth.com/feed/",
+      "website_url": "https://personalitygrowth.com/",
+      "description": "Personality Growth is your source to learn more about MBTI, personality, traits, communication, and overcoming anxiety! Also read about your happy place based on your personality, online therapy, how to handle bullying, along with write-ups on compatibility, relationships, and friendships.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5440411.jpg?t=1662962471"
+    },
+    {
+      "title": "Better Future Blog",
+      "feed_url": "https://betterfuturecoaching.com/feed/",
+      "website_url": "https://betterfuturecoaching.com/blog/",
+      "description": "Helping purpose driven leaders and organizations gain clarity through leveraging their unique personality types. Explore our blog to know more about the personality tests, growth and more!",
+      "followers": {
+        "facebook": 106,
+        "instagram": 863
+      },
+      "image_url": "https://i1.feedspot.com/5441303.jpg?t=1663068779"
+    }
+  ]
+}

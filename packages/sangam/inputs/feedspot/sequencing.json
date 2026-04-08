@@ -1,0 +1,193 @@
+{
+  "category": "Sequencing",
+  "source_url": "https://rss.feedspot.com/sequencing_rss_feeds",
+  "feeds": [
+    {
+      "title": "RNA-Seq Blog",
+      "feed_url": "https://www.rna-seqblog.com/feed/",
+      "website_url": "https://www.rna-seqblog.com/blog/",
+      "description": "RNA-Seq is a transcriptome research & industry news blog. The optimum goal of the site is to provide readers with updated and most recent research news, analysis, and results. On the site, you can come across countless articles debating and informing covering topics such as data analysis, technology, statistical analysis, and more.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 8700
+      },
+      "image_url": "https://i1.feedspot.com/769978.jpg?t=1607346492"
+    },
+    {
+      "title": "PacBio Blog",
+      "feed_url": "https://www.pacb.com/blog/feed/",
+      "website_url": "https://www.pacb.com/blog/",
+      "description": "This blog features PacBio partners and colleagues discussing the latest research, publications, and updates about HiFi Sequencing. PacBio long-read sequencing provides the most comprehensive view of genomes, transcriptomes, and epigenomes.PacBio develops comprehensive solutions for scientists that propel the field of genomics, improve science and research, and create a positive impact globally. Our mission is to enable the promise of genomics to better human health by creating the world's most advanced sequencing technologies.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 44600
+      },
+      "image_url": "https://i1.feedspot.com/5415352.jpg?t=1656404007"
+    },
+    {
+      "title": "Zymo Research Blog",
+      "feed_url": "https://www.zymoresearch.com/blogs/blog.atom",
+      "website_url": "https://www.zymoresearch.com/blogs/blog",
+      "description": "Zymo Research's blog features the latest in biotechnology trends, technology, current events, and more. Find articles on DNA, RNA, Sequencing, epigenetics, microbiomics, sample collection, and plasmid purification. Since its inception in 1994, Zymo Research has been proudly serving the scientific community by providing innovative, high-quality research tools at affordable prices.",
+      "followers": {
+        "facebook": 11200,
+        "twitter": 2500,
+        "instagram": 8200
+      },
+      "image_url": "https://i1.feedspot.com/5415350.jpg?t=1656403998"
+    },
+    {
+      "title": "Omics! Omics!",
+      "feed_url": "http://omicsomics.blogspot.com/feeds/posts/default",
+      "website_url": "http://omicsomics.blogspot.com/",
+      "description": "A computational biologist's personal views on new technologies & publications on genomics, genome sequencing, proteomics, and their impact on drug discovery. Dr. Robison spent 10 years at Millennium Pharmaceuticals working with various genomics & proteomics technologies & working on multiple teams attempting to apply these throughout the drug discovery process.",
+      "followers": {
+        "twitter": 10000
+      },
+      "image_url": "https://i1.feedspot.com/103650.jpg?t=1607347465"
+    },
+    {
+      "title": "Psomagen Blog",
+      "feed_url": "https://www.psomagen.com/blog/rss.xml",
+      "website_url": "https://www.psomagen.com/blog",
+      "description": "Find out more on Sequencing, Next Generation Sequencing, and Different types of Sequencing on Psomagen Blog. Psomagen is CLIA & CAP, a US-based contract services lab making multi-omics tools and technologies accessible and scalable for research and drug discovery.",
+      "followers": {
+        "facebook": 396,
+        "twitter": 1300,
+        "instagram": 380
+      },
+      "image_url": "https://i1.feedspot.com/5415354.jpg?t=1656404018"
+    },
+    {
+      "title": "The DNA Universe",
+      "feed_url": "https://the-dna-universe.com/feed/",
+      "website_url": "https://the-dna-universe.com/the-dna-universe-overview/",
+      "description": "This blog, dedicated to DNA and Genomics, is all about the infinite possibilities for your research and diagnostics. Eurofins Genomics is an international provider of genomic services around the core business lines next generation sequencing, genotyping, and gene expression.",
+      "followers": {
+        "facebook": 33700,
+        "twitter": 728,
+        "instagram": 320
+      },
+      "image_url": "https://i1.feedspot.com/5299185.jpg?t=1625465266"
+    },
+    {
+      "title": "DNASTAR Blog",
+      "feed_url": "https://www.dnastar.com/feed/",
+      "website_url": "https://www.dnastar.com/resources/blog/",
+      "description": "Visit DNASTAR's life science blog to stay up to date on Lasergene product notifications, newsletters, customer stories, clinical research, and more. A global software company that has been meeting the needs of life scientists. DNASTAR provides applications for traditional sequence analysis, as well as for next-gen sequence assembly and analysis, gene expression studies, RNA-Seq, ChIP-Seq, and transcriptome analysis, and even includes an application for creating publication-quality graphics to present your data.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 924
+      },
+      "image_url": "https://i1.feedspot.com/5417845.jpg?t=1656762628"
+    },
+    {
+      "title": "Fios Genomics \u00bb Sequencing Blogs",
+      "feed_url": "https://www.fiosgenomics.com/category/sequencing/feed/",
+      "website_url": "https://www.fiosgenomics.com/category/genomics/sequencing/",
+      "description": "In this blog, you will read articles on Sequencing by Fios Genomics. Fios Genomics provides a great range of bioinformatic data analysis services to Pharma, CROs, and academia for drug discovery, development, and applied research across all species.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5417843.jpg?t=1656762616"
+    },
+    {
+      "title": "Oncomine Solutions Blog",
+      "feed_url": "https://www.oncomine.com/blog/rss.xml",
+      "website_url": "https://www.oncomine.com/blog",
+      "description": "Get the latest news, and information about Next Generation Sequencing on the Oncomine Solutions Blog Oncomine Solutions, an integrated next-generation sequencing-based approach carefully designed for oncology labs easy to implement and easy to use.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5415351.jpg?t=1656408538"
+    },
+    {
+      "title": "NIH Director's Blog \u00bb Sequencing",
+      "feed_url": "https://directorsblog.nih.gov/tag/dna-sequencing/feed/",
+      "website_url": "https://directorsblog.nih.gov/tag/dna-sequencing/",
+      "description": "This section of our blog features articles that have to do exclusively with DNA sequencing. The National Institutes of Health (NIH), a part of the U.S. Department of Health and Human Services, is the nation's medical research agency,making important discoveries that improve health and save lives.",
+      "followers": {
+        "facebook": 587000,
+        "twitter": 183200,
+        "instagram": 321300
+      },
+      "image_url": "https://i1.feedspot.com/5415349.jpg?t=1656403992"
+    },
+    {
+      "title": "Genomics Education Blog \u00bb Genomic Sequencing",
+      "feed_url": "https://www.genomicseducation.hee.nhs.uk/blog/tag/genomic-sequencing/feed/",
+      "website_url": "https://www.genomicseducation.hee.nhs.uk/blog/tag/genomic-sequencing/",
+      "description": "In the following part of the\u00a0 Genomics Education, you can find news, stories, and articles about Genomic Sequencing.Genomics Education Programme exists to deliver and advise on learning and development opportunities that prepare current and future NHS professionals to make the best use of genomics in their practice.The GEP has taken an innovative and adaptable approach to education in order to reach a diverse and busy healthcare workforce.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 22200
+      },
+      "image_url": "https://i1.feedspot.com/5417846.jpg?t=1656762640"
+    },
+    {
+      "title": "Single Cell Discoveries Blog",
+      "feed_url": "https://www.scdiscoveries.com/blog/feed/",
+      "website_url": "https://www.scdiscoveries.com/blog/",
+      "description": "Read about our latest news, updates, and top-notch science, and learn more about the ins and outs of single-cell sequencing on our Blog. Single Cell Discoveries is your dedicated service provider for all your single-cell sequencing projects. We help you get the best out of your single-cell experiments by offering everything you need for a successful project - planning, experiments, and data analysis - under one roof. To provide high-quality, state-of-the-art single-cell sequencing methods and expertise.",
+      "followers": {
+        "facebook": 75,
+        "twitter": 525
+      },
+      "image_url": "https://i1.feedspot.com/5417844.jpg?t=1656762622"
+    },
+    {
+      "title": "Next Generation Technologist",
+      "feed_url": "https://yuzuki.org/feed/",
+      "website_url": "https://yuzuki.org/",
+      "description": "My name is Dale Yuzuki My subject-matter expertise is in Next-Generation Sequencing (NGS), targeted selection for NGS, whole-genome genotyping, whole-genome expression, microRNA, methylation profiling, and digital PCR. Commercialization of new genetic & genomic technologies for both scientists and non-scientists interested in life sciences research and diagnostics.",
+      "followers": {
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/4752776.jpg?t=1656409451"
+    },
+    {
+      "title": "CD Genomics Blog",
+      "feed_url": "https://www.cd-genomics.com/blog/feed/",
+      "website_url": "https://www.goldenhelix.com/blog/",
+      "description": "Keys topics covered are genomic education, genomic technologies, genomic advances, and genomics news & views. CD Genomics aims at providing the research community with high quality Next Generation Sequencing, PacBio SMRT sequencing, and microarray services.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 646
+      },
+      "image_url": "https://i1.feedspot.com/5299549.jpg?t=1625552261"
+    },
+    {
+      "title": "The Golden Helix Blog",
+      "feed_url": "https://www.goldenhelix.com/blog/feed/",
+      "website_url": "https://www.goldenhelix.com/blog/",
+      "description": "Golden Helix is a global bioinformatics company with an industry-leading clinical platform for Next-Gen Sequencing data interpretation and clinical reporting.We develop and sell an industry-leading clinical solution that supports the analysis of sequencing data and the creation of clinical reports.",
+      "followers": {
+        "facebook": 512,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5119091.jpg?t=1616070514"
+    },
+    {
+      "title": "Discovery Life Sciences Blog",
+      "feed_url": "https://dls.com/blog/",
+      "website_url": "https://dls.com/blog/",
+      "description": "The world's largest biospecimen inventory and procurement network with preeminent multi-omic service laboratories to accelerate precision medicine programs. We are the biospecimen and biomarker specialists. We accomplish this with a biobank of over 10 million biospecimens and hundreds of clinical sites that allow researchers to build bespoke study cohorts and seamlessly interrogate them using our CLIA-certified, GLP-compliant service laboratories, including our world-renowned genomic sequencing.",
+      "followers": {
+        "facebook": 497,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5417853.jpg?t=1656765845"
+    },
+    {
+      "title": "seqWell Blog",
+      "feed_url": "https://www.biodiscovery.com/blog/rss.xml/",
+      "website_url": "https://seqwell.com/blog/",
+      "description": "Find articles about Sequencing on seqWell Blog. seqWell was created to revolutionize NGS library prep to unlock the full potential of today's DNA sequencing instruments. Our plexWell platform is a transformative library prep technology that allows for simple, scalable multiplexing of 100s to 1000s of samples without time- and cost-consuming normalization. plexWell has a wide-ranging impact on applications from synthetic biology, targeted sequencing, and single-cell analysis to low and high-depth sequencing of human, plant, animal, and microbial genomes.",
+      "followers": {
+        "facebook": 15,
+        "twitter": 1100,
+        "instagram": 124
+      },
+      "image_url": "https://i1.feedspot.com/5415355.jpg?t=1656404024"
+    }
+  ]
+}

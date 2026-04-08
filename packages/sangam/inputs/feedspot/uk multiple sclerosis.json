@@ -1,0 +1,80 @@
+{
+  "category": "UK Multiple Sclerosis",
+  "source_url": "https://rss.feedspot.com/uk_multiple_sclerosis_rss_feeds",
+  "feeds": [
+    {
+      "title": "The MS-Blog",
+      "feed_url": "https://multiple-sclerosis-research.org/feed/",
+      "website_url": "https://multiple-sclerosis-research.org/",
+      "description": "A blog for people with MS and their families, by Barts and The London School of Medicine and Dentistry.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1778813.jpg?t=1620037079"
+    },
+    {
+      "title": "Dinosaurs Donkeys and MS Blog",
+      "feed_url": "https://dinosaursdonkeysandms.com/blog/feed/",
+      "website_url": "https://dinosaursdonkeysandms.com/blog/",
+      "description": "I'm Heather, a 27 year old actor, teacher and MS Society Support Volunteer, who lives in England and was diagnosed with MS 2 years ago. Blogging about Life with MS.",
+      "followers": {
+        "facebook": 965,
+        "twitter": 7500
+      },
+      "image_url": "https://i1.feedspot.com/4740543.jpg?t=1620037823"
+    },
+    {
+      "title": "Life on a Seesaw",
+      "feed_url": "https://www.lifeonaseesaw.co.uk/feed/",
+      "website_url": "https://www.lifeonaseesaw.co.uk/",
+      "description": "Kat Naish created Life on a Seesaw blog as a place to share her journey as a working mummy and dealing with a recent diagnosis of multiple sclerosis.",
+      "followers": {
+        "facebook": 196,
+        "twitter": 699,
+        "instagram": 539
+      },
+      "image_url": "https://i1.feedspot.com/5311042.jpg?t=1628579502"
+    },
+    {
+      "title": "It's a Shit Business",
+      "feed_url": "https://feeds.feedburner.com/ItsAShitBusiness",
+      "website_url": "https://itsashitbusiness.blogspot.com/",
+      "description": "online diary-cum-therapy-hole for a young(ish) man chronicling his life with Multiple Sclerosis - there will be jokes, too.",
+      "followers": {
+        "twitter": 487
+      },
+      "image_url": "https://i1.feedspot.com/4911601.jpg?t=1620137170"
+    },
+    {
+      "title": "myMSrollercoasterride",
+      "feed_url": "https://mymsrollercoasterride.wordpress.com/feed/",
+      "website_url": "https://mymsrollercoasterride.wordpress.com/",
+      "description": "I started this blog I guess, to help my family and friends understand the ups and downs of this invisible disease, and to encourage fellow MSers to stay positive, but it is still OK to break occasionally\u2026..this is me bearing my soul through the highs and lows of my journey.",
+      "followers": {
+        "facebook": 991
+      },
+      "image_url": "https://i1.feedspot.com/4911600.jpg?t=1620137180"
+    },
+    {
+      "title": "Tripping Through Treacle",
+      "feed_url": "https://trippingthroughtreacle.com/feed/",
+      "website_url": "https://trippingthroughtreacle.com/",
+      "description": "Want to know what life is like with Secondary Progressive Multiple Sclerosis? Read on! In my personal lifestyle blog, I share my daily trials and tribulations and my current treatment using HSCT. I am a 'spoonie' parent and try to live as healthily as I can with a chronic, progressive disease.",
+      "followers": {
+        "facebook": 669,
+        "twitter": 2100,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4716270.jpg?t=1620037752"
+    },
+    {
+      "title": "MS-UK Blog",
+      "feed_url": "https://www.ms-uk.org/rss.xml",
+      "website_url": "https://www.ms-uk.org/category/blog/",
+      "description": "MS-UK was established in 1993, and is a national charity dedicated to empowering people with multiple sclerosis to make the most of today, and live life to the full. We put people affected by MS at the heart of our work. We provide Multiple Sclerosis Information, Helpline, support, MS news and research information.",
+      "followers": {
+        "facebook": 12800,
+        "twitter": 7800
+      },
+      "image_url": "https://i1.feedspot.com/4911565.jpg?t=1620137158"
+    }
+  ]
+}

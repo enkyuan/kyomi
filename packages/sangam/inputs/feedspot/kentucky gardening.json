@@ -1,0 +1,93 @@
+{
+  "category": "Kentucky Gardening",
+  "source_url": "https://rss.feedspot.com/kentucky_gardening_rss_feeds",
+  "feeds": [
+    {
+      "title": "Grow Appalachia Blog",
+      "feed_url": "https://growappalachia.berea.edu/feed/",
+      "website_url": "https://growappalachia.berea.edu/blog/",
+      "description": "Garden resources and technical assistance to farmers and market gardeners. Grow Appalachia partners with families, communities, and organizations in Appalachia to create healthy, resilient, and economically viable food systems.",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 1300,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5315185.jpg?t=1629805326"
+    },
+    {
+      "title": "Michler's News Blog",
+      "feed_url": "https://www.michlers.com/blogs/news.atom",
+      "website_url": "https://www.michlers.com/blogs/news",
+      "description": "A Lexington, KY blog about floral design, garden design, native plants, and anything else that comes across the worktable at Michler's Florist, Greenhouses & Garden Design.",
+      "followers": {
+        "facebook": 12500,
+        "instagram": 9700
+      },
+      "image_url": "https://i1.feedspot.com/4922650.jpg?t=1620817136"
+    },
+    {
+      "title": "A&A Lawn Care & Landscaping",
+      "feed_url": "https://aalawns.com/feed/",
+      "website_url": "https://aalawns.com/tips-trends-news/",
+      "description": "Lawn Care & Landscaping Tips, Trends, & News. A & A Lawn Care & Landscaping can beautify your lawn with our quality lawn maintenance experience in commercial and residential turf grass management",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 274,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5322639.jpg?t=1631856576"
+    },
+    {
+      "title": "Kentucky Fried Garden",
+      "feed_url": "http://kentuckyfriedgarden.blogspot.com/feeds/posts/default",
+      "website_url": "http://kentuckyfriedgarden.blogspot.com/",
+      "description": "Kentucky Fried Garden is my journal of vegetable gardening in humid western Kentucky, USDA zone 7a. Knowing where my food comes from and whether it comes from non-genetically modified seed is important to me. I try to use open pollinated varieties in an effort to continue maintaining the diversity of food plants available to humans. Trying to extend the harvest by experimenting with hardier varieties and overwintering plants will be one of my projects.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5315172.jpg?t=1629803370"
+    },
+    {
+      "title": "Klausing Group Commercial Landscaping Blog",
+      "feed_url": "https://www.klausinggroup.com/blog/rss.xml",
+      "website_url": "https://www.klausinggroup.com/blog",
+      "description": "Expert commercial landscaping insight and advice for property and facility management professionals. Klausing Group is an award-winning company providing landscape and snow management facility services from our offices in Lexington & Louisville Kentucky.",
+      "followers": {
+        "facebook": 675,
+        "twitter": 54
+      },
+      "image_url": "https://i1.feedspot.com/4660921.jpg?t=1607150930"
+    },
+    {
+      "title": "2YardPros Blog",
+      "feed_url": "https://2yardpros.com/blog/feed/",
+      "website_url": "https://2yardpros.com/blog/",
+      "description": "Get the healthy and green lawn you deserve with the help of 2YardPros's lawn care tips articles.",
+      "followers": {
+        "facebook": 290,
+        "twitter": 45
+      },
+      "image_url": "https://i1.feedspot.com/5322636.jpg?t=1631855865"
+    },
+    {
+      "title": "Wallitsch Garden Center Blog",
+      "feed_url": "https://www.wallitsch.net/feed/",
+      "website_url": "https://www.wallitsch.net/blog/",
+      "description": "Your garden experts since 1946! Wallitsch Garden Center offers a full selection of hardy trees and shrubs, tropical plants, perennials, and annuals.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 25
+      },
+      "image_url": "https://i1.feedspot.com/5315182.jpg?t=1629804012"
+    },
+    {
+      "title": "Farison Lawn Care Blog",
+      "feed_url": "https://farison.com/feed/",
+      "website_url": "https://farison.com/blog/",
+      "description": "Find answers in our blogs to help you get a beautiful, healthy lawn you can be proud of. Farison Lawn Care is your one stop shop for premium lawn care service in Louisville KY. We offer commercial and residential lawn care to help you get the lush, beautiful lawn you need!",
+      "followers": {
+        "facebook": 916,
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/5322631.jpg?t=1631854913"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "category": "Boston Cycling",
+  "source_url": "https://rss.feedspot.com/boston_cycling_rss_feeds",
+  "feeds": [
+    {
+      "title": "Montague Bikes Blog",
+      "feed_url": "https://www.montaguebikes.com/feed/",
+      "website_url": "https://www.montaguebikes.com/folding-bikes-blog/",
+      "description": "Explore stories, tutorials, and advice from the Montague Bikes team. Since 1987, Montague Bikes has been dedicated to crafting high-performance, full-size folding bikes. As the world's leading maker of such bikes, Montague prioritizes performance and ride quality, offering some of the most versatile bikes available.",
+      "followers": {
+        "facebook": 20400,
+        "twitter": 2400,
+        "instagram": 5500
+      },
+      "image_url": "https://i1.feedspot.com/5394123.jpg?t=1650967665"
+    },
+    {
+      "title": "MIT Cycling Team Blog",
+      "feed_url": "https://cycling.mit.edu/feed/",
+      "website_url": "https://cycling.mit.edu/blog/",
+      "description": "The MIT cycling club fosters cycling enjoyment within the MIT community. Open to members and friends, they host group rides, classes, and community service events. MIT cycling also houses four racing teams covering the Track, Road, Cyclocross, and Mountain disciplines, enriching the campus cycling experience.",
+      "followers": {
+        "twitter": 1300,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4475539.jpg?t=1600923968"
+    },
+    {
+      "title": "StreetsblogMASS \u00bb Bicycling",
+      "feed_url": "https://mass.streetsblog.org/category/bicycling/feed",
+      "website_url": "https://mass.streetsblog.org/category/bicycling",
+      "description": "StreetsblogMASS serves as a daily news source, connecting individuals to strategies for reducing car dependence and enhancing walking, biking, and transit conditions. Since 2006, Streetsblog has championed urban transformation, covering vital topics like transit funding, pedestrian safety, and bicycle policy. Their insightful reporting raises public awareness and drives reforms, advocating for equitable and sustainable urban environments.",
+      "followers": {
+        "facebook": 503,
+        "instagram": 832
+      },
+      "image_url": "https://i1.feedspot.com/5699122.jpg?t=1698398607"
+    },
+    {
+      "title": "Boston By Bike",
+      "feed_url": "https://bostonbybike.blogspot.com/feeds/posts/default",
+      "website_url": "https://bostonbybike.blogspot.com/",
+      "description": "Boston By Bike's blog offers a wealth of articles, stories, and updates centred around biking. From insightful discussions to practical tips, it's a go-to resource for bike enthusiasts. Dive into the world of biking with Boston By Bike and explore a variety of engaging content.",
+      "followers": {
+        "twitter": 270
+      },
+      "image_url": "https://i1.feedspot.com/5699121.jpg?t=1698398605"
+    },
+    {
+      "title": "Boston Cyclists Union Blog",
+      "feed_url": "https://bostoncyclistsunion.org/feed",
+      "website_url": "https://bostoncyclistsunion.org/blog",
+      "description": "Since 2015, the Boston Cyclists Union has evolved significantly, nearly tripling its budget and staff to meet rising challenges in bicycling advocacy. Amidst climate and congestion crises, progress in infrastructure lags, despite growing support and ridership. Explore Bos/tr\u00e9al insights from select scholarship riders on their blog.",
+      "followers": {
+        "facebook": 9800,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/2060575.jpg?t=1709882932"
+    }
+  ]
+}

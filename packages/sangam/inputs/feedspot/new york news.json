@@ -1,0 +1,384 @@
+{
+  "category": "New York News",
+  "source_url": "https://rss.feedspot.com/new_york_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The New York Times",
+      "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+      "website_url": "https://www.nytimes.com/",
+      "description": "Live news, investigations, opinion, photos and video by the journalists of The New York Times from more than 150 countries around the world.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000,
+        "instagram": 19600000
+      },
+      "image_url": "https://i1.feedspot.com/5061330.jpg?t=1658494852"
+    },
+    {
+      "title": "New York Post",
+      "feed_url": "https://nypost.com/feed/",
+      "website_url": "https://nypost.com/",
+      "description": "New York Post is your source for breaking news, news about New York, sports, business, entertainment, opinion, real estate, culture, fashion, and more.",
+      "followers": {
+        "facebook": 6900000,
+        "twitter": 3500000,
+        "instagram": 2100000
+      },
+      "image_url": "https://i1.feedspot.com/3294268.jpg?t=1608298185"
+    },
+    {
+      "title": "The New Yorker",
+      "feed_url": "https://www.newyorker.com/feed/everything",
+      "website_url": "https://www.newyorker.com/",
+      "description": "The New Yorker is a weekly magazine with a signature mix of reporting on national and international politics and culture, humor and cartoons, fiction and poetry, and reviews and criticism of books, movies, theatre, classical and popular music, television, art, and fashion.",
+      "followers": {
+        "facebook": 5000000,
+        "twitter": 8300000,
+        "instagram": 8900000
+      },
+      "image_url": "https://i1.feedspot.com/4775673.jpg?t=1658495179"
+    },
+    {
+      "title": "The City NYC",
+      "feed_url": "https://www.thecity.nyc/feed/",
+      "website_url": "https://www.thecity.nyc/",
+      "description": "THE CITY is an independent nonprofit newsroom focused on providing in-depth reporting on New York City's most pressing issues. The site covers topics such as politics, housing, education, transportation, and public safety. It features investigative journalism, community stories, and resources to help New Yorkers navigate city life.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 67200,
+        "instagram": 31100
+      },
+      "image_url": "https://i1.feedspot.com/7327551.jpg?t=1721738210"
+    },
+    {
+      "title": "NBC New York",
+      "feed_url": "https://www.nbcnewyork.com/?rss=y",
+      "website_url": "https://www.nbcnewyork.com/",
+      "description": "Get the latest New York news, weather, traffic, entertainment and health. Get local NY news, NYC breaking news, and national news from NBC New York.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 356900,
+        "instagram": 409600
+      },
+      "image_url": "https://i1.feedspot.com/4774834.jpg"
+    },
+    {
+      "title": "FOX5 NY",
+      "feed_url": "https://www.fox5ny.com/rss/category/news",
+      "website_url": "https://www.fox5ny.com/",
+      "description": "FOX 5 NY covers local news, weather, sports, and entertainment for the New York City area. The site features breaking news, live broadcasts, and in-depth reports on various topics affecting the community. It also provides video content, weather forecasts, and information on local events.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 144400,
+        "instagram": 299100
+      },
+      "image_url": "https://i1.feedspot.com/7327552.jpg?t=1721738634"
+    },
+    {
+      "title": "New York Daily News",
+      "feed_url": "https://www.nydailynews.com/feed/",
+      "website_url": "https://www.nydailynews.com/",
+      "description": "Find breaking US news, local New York news coverage, sports, entertainment news, celebrity gossip, autos, videos and photos at nydailynews.com.",
+      "followers": {
+        "facebook": 3700000,
+        "twitter": 771900,
+        "instagram": 163000
+      },
+      "image_url": "https://i1.feedspot.com/363915.jpg?t=1603896138"
+    },
+    {
+      "title": "Daily Intelligencer",
+      "feed_url": "https://feeds.feedburner.com/nymag/intelligencer",
+      "website_url": "https://nymag.com/intelligencer/",
+      "description": "Daily Intelligencer is a Magazine that defines the news, culture, fashion, food, and personalities that drive New York.",
+      "followers": {
+        "facebook": 3300000,
+        "twitter": 79100,
+        "instagram": 1900000
+      },
+      "image_url": "https://i1.feedspot.com/1059334.jpg?t=1608298327"
+    },
+    {
+      "title": "ABC7 New York",
+      "feed_url": "https://abc7ny.com/feed/",
+      "website_url": "https://abc7ny.com/",
+      "description": "Get the latest updates from abc7NY on Fairfield county news stories. New York's source for breaking news and live streaming video online. Covering New York City, New Jersey, Long Island and all of the greater New York Area.",
+      "followers": {
+        "facebook": 2700000,
+        "twitter": 769100,
+        "instagram": 699900
+      },
+      "image_url": "https://i1.feedspot.com/4454184.jpg?t=1685616201"
+    },
+    {
+      "title": "Gothamist",
+      "feed_url": "https://gothamist.com/feed",
+      "website_url": "https://gothamist.com/",
+      "description": "Gothamist is a website about New York City news, arts and events, and food, brought to you by New York Public Radio.",
+      "followers": {
+        "facebook": 289000,
+        "twitter": 976800,
+        "instagram": 353600
+      },
+      "image_url": "https://i1.feedspot.com/26964.jpg?t=1608298497"
+    },
+    {
+      "title": "Vulture",
+      "feed_url": "https://feeds.feedburner.com/nymag/vulture",
+      "website_url": "https://www.vulture.com/",
+      "description": "Vulture is a New York magazine that features arts and entertainment, including witty analysis of movies, TV, music, books, theater, and art, plus original video and sneak previews of upcoming releases.",
+      "followers": {
+        "facebook": 659400,
+        "twitter": 492500,
+        "instagram": 481500
+      },
+      "image_url": "https://i1.feedspot.com/160605.jpg?t=1608298419"
+    },
+    {
+      "title": "Gazetteller",
+      "feed_url": "https://gazetteller.com/feed/",
+      "website_url": "https://gazetteller.com/",
+      "description": "Welcome to Gazetteller.com, the ultimate platform for unbiased, unfiltered news and thought-provoking perspectives. As a staunch advocate for free speech, we provide a space for a diverse range of voices to be heard, fostering open dialogue and the exchange of ideas.",
+      "followers": {
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/6701005.jpg?t=1707135010"
+    },
+    {
+      "title": "Observer",
+      "feed_url": "https://observer.com/feed/",
+      "website_url": "https://observer.com/",
+      "description": "Observer delivers authoritative content that informs and inspires an educated audience of over 6.75MM influential readers each month. Topics include News & Politics, Arts & Entertainment, Style & Design and Business & Technology.",
+      "followers": {
+        "facebook": 270300,
+        "twitter": 167600,
+        "instagram": 61200
+      },
+      "image_url": "https://i1.feedspot.com/19235.jpg?t=1752048225"
+    },
+    {
+      "title": "Village Voice",
+      "feed_url": "https://www.villagevoice.com/feed/",
+      "website_url": "https://www.villagevoice.com/",
+      "description": "The Village Voice introduced free-form, high-spirited, and passionate journalism into the public discourse. The Voice's unique mix of in-depth news writing and reporting, incisive arts, culture, music, dance, film, and theater reviews, and comprehensive entertainment listings provides readers with an indispensable perspective on the inner workings of the world's most vibrant city.",
+      "followers": {
+        "facebook": 138800,
+        "twitter": 229500,
+        "instagram": 62000
+      },
+      "image_url": "https://i1.feedspot.com/4774890.jpg?t=1663304578"
+    },
+    {
+      "title": "NEWS10 ABC",
+      "feed_url": "https://www.news10.com/feed/",
+      "website_url": "https://www.news10.com/",
+      "description": "NEWS10 ABC servers Albany, Schenectady, Troy, Saratoga and surrounding communities. Get current local Albany, New York news, crime, politics, weather, sports, entertainment, arts, real estate and all other stories relevant to residents of Albany.",
+      "followers": {
+        "facebook": 246000,
+        "twitter": 90100,
+        "instagram": 14500
+      },
+      "image_url": "https://i1.feedspot.com/4308138.jpg?t=1603896685"
+    },
+    {
+      "title": "Crain's New York Business",
+      "feed_url": "http://feeds.crainsnewyork.com/crainsnewyork/latestnews",
+      "website_url": "https://www.crainsnewyork.com/",
+      "description": "Business in New York is constantly changing and Crain's New York Business brings you the continuous coverage of local business news you need to stay informed and ahead of the competition.",
+      "followers": {
+        "facebook": 42000,
+        "twitter": 54500,
+        "instagram": 12500
+      },
+      "image_url": "https://i1.feedspot.com/301763.jpg?t=1621318703"
+    },
+    {
+      "title": "The Federal Reserve Bank of New York",
+      "feed_url": "https://feeds.feedburner.com/LibertyStreetEconomics",
+      "website_url": "https://libertystreeteconomics.newyorkfed.org/",
+      "description": "The New York Fed's Liberty Street Economics blog provides commentary on current economic topics relating to monetary policy, macroeconomic developments, financial stability issues, and regional trends in the Second Federal Reserve District.",
+      "followers": {
+        "facebook": 54000,
+        "twitter": 16300
+      },
+      "image_url": "https://i1.feedspot.com/307288.jpg?t=1608298608"
+    },
+    {
+      "title": "Bushwick Daily",
+      "feed_url": "https://bushwickdaily.com/feed/",
+      "website_url": "https://bushwickdaily.com/",
+      "description": "Bushwick Daily is a local news website celebrating world's most interesting neighborhood, Bushwick, Brooklyn.",
+      "followers": {
+        "facebook": 29000,
+        "twitter": 11800,
+        "instagram": 42700
+      },
+      "image_url": "https://i1.feedspot.com/1437800.jpg?t=1608298746"
+    },
+    {
+      "title": "Finger Lakes Daily News",
+      "feed_url": "https://www.fingerlakesdailynews.com/feed/",
+      "website_url": "https://www.fingerlakesdailynews.com/",
+      "description": "The Finger Lakes source for local news, weather, sports and music.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 965
+      },
+      "image_url": "https://i1.feedspot.com/4775697.jpg?t=1694151686"
+    },
+    {
+      "title": "City Limits",
+      "feed_url": "https://citylimits.org/feed/",
+      "website_url": "https://citylimits.org/",
+      "description": "City Limits uses in-depth reporting to expose problems, uncover solutions and empower communities in New York City.",
+      "followers": {
+        "twitter": 34300,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4634021.jpg?t=1603896696"
+    },
+    {
+      "title": "Manhattan Times",
+      "feed_url": "https://www.manhattantimesnews.com/feed/",
+      "website_url": "https://www.manhattantimesnews.com/",
+      "description": "The Manhattan Times covers local news and events that the dailies don't. From community boards to precincts, politics to culture, schools to senior centers, the website provides editorial and photographic coverage of Northern Manhattan.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/4775630.jpg?t=1625663895"
+    },
+    {
+      "title": "NYC News Network",
+      "feed_url": "https://nycnewsnetwork.blogspot.com/feeds/posts/default",
+      "website_url": "https://nycnewsnetwork.blogspot.com/",
+      "description": "NYC News Network Local news affecting all the neighborhoods in NYC.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5731304.jpg?t=1702012452"
+    },
+    {
+      "title": "Curbed NY",
+      "feed_url": "https://ny.curbed.com/rss/index.xml",
+      "website_url": "https://ny.curbed.com/",
+      "description": "Curbed NY covers every aspect of living in New York, for people who care about their city, their streets and their homes.",
+      "followers": {
+        "facebook": 820500,
+        "instagram": 200500
+      },
+      "image_url": "https://i1.feedspot.com/4648049.jpg?t=1608298478"
+    },
+    {
+      "title": "Catholic New York",
+      "feed_url": "https://www.cny.org/browse.rss?format=xml",
+      "website_url": "https://www.cny.org/",
+      "description": "Newspaper of the Roman Catholic Archdiocese of New York.",
+      "followers": {
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4775540.jpg"
+    },
+    {
+      "title": "The Daily News",
+      "feed_url": "https://www.dailynewsview.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.dailynewsview.com/",
+      "description": "Get breaking news, in-depth coverage and analysis of US News; Health and Fitness; Lifestyle, Offbeat; Technology; Travel and Leisure news and more.",
+      "followers": {
+        "twitter": 247,
+        "instagram": 86
+      },
+      "image_url": "https://i1.feedspot.com/5040960.jpg?t=1563861295"
+    },
+    {
+      "title": "CBS New York",
+      "feed_url": "https://www.cbsnews.com/newyork/",
+      "website_url": "https://www.cbsnews.com/newyork/",
+      "description": "CBS New York offers Local News, Sports, Traffic, Weather, and the Best Of New York.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 201400,
+        "instagram": 185500
+      },
+      "image_url": "https://i1.feedspot.com/2362.jpg?t=1603896082"
+    },
+    {
+      "title": "The Real Deal",
+      "feed_url": "https://therealdeal.com/new-york/feed/",
+      "website_url": "https://therealdeal.com/",
+      "description": "The Real Deal provides cutting edge news on the real estate market in New York and beyond.",
+      "followers": {
+        "twitter": 76600,
+        "instagram": 438200
+      },
+      "image_url": "https://i1.feedspot.com/4620145.jpg?t=1621073658"
+    },
+    {
+      "title": "amNewYork",
+      "feed_url": "https://www.amny.com/feed/amnyrss",
+      "website_url": "https://www.amny.com/",
+      "description": "Get the latest New York City news, entertainment, sports, reviews, and much more local information that is important to you, all in one place on am New York.",
+      "followers": {
+        "facebook": 51800,
+        "twitter": 76400
+      },
+      "image_url": "https://i1.feedspot.com/4774842.jpg"
+    },
+    {
+      "title": "The New York Sun",
+      "feed_url": "https://www.nysun.com/rss.xml",
+      "website_url": "https://www.nysun.com/",
+      "description": "The New York Sun is published on the Web by TWO SL LLC, which was formed, after the Sun ceased print publication in the fall of 2008, by the founding editor of the Sun, Seth Lipsky, to acquire the intellectual property of the Sun.",
+      "followers": {
+        "facebook": 29500,
+        "twitter": 23000
+      },
+      "image_url": "https://i1.feedspot.com/119.jpg?t=1603896699"
+    },
+    {
+      "title": "Brooklyn Magazine",
+      "feed_url": "https://www.bkmag.com/feed/flipboard",
+      "website_url": "https://www.bkmag.com/",
+      "description": "Scott and Daniel Stedman's Brooklyn Magazine is a guide to the life and lifestyle of Brooklyn's people and news.",
+      "followers": {
+        "facebook": 49200,
+        "twitter": 39800,
+        "instagram": 131500
+      },
+      "image_url": "https://i1.feedspot.com/3567305.jpg?t=1613550826"
+    },
+    {
+      "title": "Newsday",
+      "feed_url": "https://www.newsday.com/",
+      "website_url": "https://www.newsday.com/",
+      "description": "Breaking News, data and opinions in business, sports, entertainment, travel, lifestyle, plus much more. Newsday.com is the leading news source for Long Island and NYC.",
+      "followers": {
+        "facebook": 690500,
+        "twitter": 315400,
+        "instagram": 105800
+      },
+      "image_url": "https://i1.feedspot.com/4486434.jpg"
+    },
+    {
+      "title": "News 12 Hudson Valley",
+      "feed_url": "https://hudsonvalley.news12.com/",
+      "website_url": "https://hudsonvalley.news12.com/",
+      "description": "News 12 Hudson Valley: Breaking Hudson Valley News, Weather, Traffic and more. News 12 Hudson Valley is the exclusive 24-hour local news service dedicated to bringing residents of Rockland and Orange Counties the best local news and information about their neighborhoods.",
+      "followers": {
+        "facebook": 143900,
+        "twitter": 57100
+      },
+      "image_url": "https://i1.feedspot.com/4775636.jpg?t=1523943895"
+    },
+    {
+      "title": "Democrat and Chronicle",
+      "feed_url": "https://www.democratandchronicle.com/",
+      "website_url": "https://www.democratandchronicle.com/",
+      "description": "DemocratandChronicle.com is the home page of Rochester NY, with-in-depth and updated local news, sports, things to do, investigative journalism and opinions.",
+      "followers": {
+        "facebook": 175300,
+        "twitter": 143600,
+        "instagram": 44300
+      },
+      "image_url": "https://i1.feedspot.com/4775547.jpg?t=1669874878"
+    }
+  ]
+}

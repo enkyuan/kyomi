@@ -1,0 +1,88 @@
+{
+  "category": "Kentucky Music",
+  "source_url": "https://rss.feedspot.com/kentucky_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kentucky Bangerz Blog",
+      "feed_url": "https://kentuckybangerz.blogspot.com/feeds/posts/default",
+      "website_url": "https://kentuckybangerz.blogspot.com/",
+      "description": "Kentucky Bangerz is the #1 Kentucky Music Blog, powered by USA Blog Network. We are given the mission of empowering local artists & events while still covering mainstream news and bringing America 1 step closer to you.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 392
+      },
+      "image_url": "https://i1.feedspot.com/5319769.jpg?t=1630997126"
+    },
+    {
+      "title": "Never Nervous Blog",
+      "feed_url": "https://www.nevernervousrecords.com/feed/",
+      "website_url": "https://www.nevernervousrecords.com/category/blog/",
+      "description": "Formed in 2011, Never Nervous is the brainchild of Phillip Olympia. What started as a music blog that covers bands & artists from Louisville, NN morphed into a record label and music blog hybrid in 2021. Our mission is to release records from bands we like while also writing about bands & artists that we like.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5319845.jpg?t=1663573389"
+    },
+    {
+      "title": "Overtones Live Blog",
+      "feed_url": "https://www.overtoneslive.com/blog-feed.xml",
+      "website_url": "https://www.overtoneslive.com/blog",
+      "description": "Overtones Live Blog covers music reviews and concert news, bringing the best this great state of Kentucky has to offer music fans. Our multi-genre radio show's live performances and interviews are recorded before a weekly audience at various venues within Kentucky which support live original music of all genres.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5447379.jpg?t=1663574438"
+    },
+    {
+      "title": "Flying Hands Music School Blog",
+      "feed_url": "https://www.flyinghands.net/blog?format=rss",
+      "website_url": "https://www.flyinghands.net/blog",
+      "description": "Flying Hands offers private and group lessons in most instruments and in voice.",
+      "followers": {
+        "facebook": 792,
+        "twitter": 8,
+        "instagram": 95
+      },
+      "image_url": "https://i1.feedspot.com/5319848.jpg?t=1631011123"
+    },
+    {
+      "title": "Fringe Zine",
+      "feed_url": "https://bgfringezine.wordpress.com/feed/",
+      "website_url": "https://bgfringezine.wordpress.com/",
+      "description": "Music blog based in Bowling Green, Kentucky. My name is Sam Osborne and I'm a freelance journalist residing in Bowling Green, Ky.This blog spotlights voices and stories of musicians who hail from Bowling Green, memorable acts passing through and other bands that tickle my fancy.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5447385.jpg?t=1663574524"
+    },
+    {
+      "title": "91.9 WFPK",
+      "feed_url": "https://wfpk.org/feed/",
+      "website_url": "https://www.lpm.org/music",
+      "description": "Latest music news, contests, events, tracks, and reviews on WFPK. WFPK is a 24-hour listener-supported, noncommercial radio station broadcasting at 91.9 MHz FM featuring an adult album alternative format.",
+      "followers": {
+        "facebook": 38200,
+        "twitter": 19900,
+        "instagram": 19300
+      },
+      "image_url": "https://i1.feedspot.com/5319814.jpg?t=1631003185"
+    },
+    {
+      "title": "LEO Weekly \u00bb Music",
+      "feed_url": "https://www.leoweekly.com/gyrobase/Category?url=https://www.leoweekly.com/category/music/feed/",
+      "website_url": "https://www.leoweekly.com/music",
+      "description": "Latest music news, festivals. concerts and albums on LEO Weekly.LEO Weekly is Louisville's source for arts and entertainment news, community-focused stories, and colorful local commentary.",
+      "followers": {
+        "facebook": 34000,
+        "twitter": 28700,
+        "instagram": 25900
+      },
+      "image_url": "https://i1.feedspot.com/5319856.jpg?t=1631011414"
+    },
+    {
+      "title": "Sacred Music Library Blog",
+      "feed_url": "https://sacredmusiclibrary.com/feed/",
+      "website_url": "https://sacredmusiclibrary.com/blog",
+      "description": "Sacred Music Library is a music resource for Catholic organists & choir directors.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5320596.jpg?t=1663573487"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "category": "UK Watch",
+  "source_url": "https://rss.feedspot.com/uk_watch_rss_feeds",
+  "feeds": [
+    {
+      "title": "First Class Watches Singapore Blog",
+      "feed_url": "https://www.firstclasswatches.co.uk/blog/feed/",
+      "website_url": "https://www.firstclasswatches.co.uk/blog/",
+      "description": "Read all the latest news, fashions, reviews, news, trends and technology from the watch industry. First Class Watches are authorised dealers for over 40 designer and luxury watch brands.",
+      "followers": {
+        "facebook": 27700,
+        "twitter": 20300,
+        "instagram": 9700
+      },
+      "image_url": "https://i1.feedspot.com/4656986.jpg?t=1689056634"
+    },
+    {
+      "title": "Watch Guy",
+      "feed_url": "https://watchguy.co.uk/feed/",
+      "website_url": "https://watchguy.co.uk/",
+      "description": "Christian Dannemann has been working as a professional watchmaker since January 2012, and has been a member of The British Watch & Clock Makers' Guild since April 2015. The blog shows his attempts and failures at fixing and servicing watches.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4656933.jpg?t=1613989005"
+    },
+    {
+      "title": "Chronopolis Watches Blog",
+      "feed_url": "https://www.chronopolis.co.uk/blogs/news.atom",
+      "website_url": "https://www.chronopolis.co.uk/blogs/news",
+      "description": "I'm Lee. Owner of the one-man operation that is Chronopolis Watches. I like to think of myself as a Robin Hood of the watch world. I'm a passionate fan of affordable watches and I try and pass on my knowledge and enthusiasm. I run a watch blog, posting multiple times a week. I do round up lists and watch reviews. I've been in the watch trade for several years and have extensive knowledge of affordable watches.",
+      "followers": {
+        "facebook": 206,
+        "twitter": 50
+      },
+      "image_url": "https://i1.feedspot.com/5250422.jpg?t=1614695081"
+    },
+    {
+      "title": "Paulin Watches News",
+      "feed_url": "https://www.paulinwatches.com/blogs/news.atom",
+      "website_url": "https://www.paulinwatches.com/blogs/news/",
+      "description": "Situated in Glasgow's west end is Paulin's workshop, a creative space that acts as an office, shop, studio, and leather workshop. Open seven days a week, space offers a bespoke service for leather straps, instantly providing you with a personal touch to your watch.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 1100,
+        "instagram": 27900
+      },
+      "image_url": "https://i1.feedspot.com/4907138.jpg?t=1613988983"
+    },
+    {
+      "title": "WatchPro",
+      "feed_url": "https://www.watchpro.com/feed/",
+      "website_url": "https://www.watchpro.com/",
+      "description": "Watch news, reviews, interviews and information on new watches and brands. WatchPro is the UK's only title specialising in business news, information and trends for executives in the watch industry.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 19
+      },
+      "image_url": "https://i1.feedspot.com/4657184.jpg?t=1613988958"
+    },
+    {
+      "title": "The Watch Blog",
+      "feed_url": "https://www.thewatchblog.co.uk/feed/",
+      "website_url": "https://www.thewatchblog.co.uk/",
+      "description": "News & Reviews Of Popular Affordable Watches. Accessories, Alcohol And More.",
+      "followers": {
+        "facebook": 600,
+        "twitter": 2000,
+        "instagram": 435
+      },
+      "image_url": "https://i1.feedspot.com/4730702.jpg?t=1613989008"
+    },
+    {
+      "title": "The Thrifty Gentleman Blog",
+      "feed_url": "https://www.thrifty-gentleman.com/blog-feed.xml",
+      "website_url": "https://thrifty-gentleman.com/blogs/blog",
+      "description": "Get the latest updates and news regarding watches and straps by browsing our blog section. The Thrifty Gentleman is an online affordable watch straps and watch parts shop based in Winchester, UK.",
+      "followers": {
+        "facebook": 21,
+        "twitter": 211,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5303015.jpg?t=1626503067"
+    }
+  ]
+}

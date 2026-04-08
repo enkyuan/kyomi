@@ -1,0 +1,28 @@
+{
+  "category": "Houma News",
+  "source_url": "https://rss.feedspot.com/houma_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Houma Times",
+      "feed_url": "https://houmatimes.com/feed/",
+      "website_url": "https://houmatimes.com/",
+      "description": "The Times of Houma-Thibodaux is an online news source for Terrebonne and Lafourche parishes. Our 100% local coverage includes relevant, in-depth information about community and business issues: government, crime, education, the economy, environment as well as breaking news and comprehensive sports coverage.",
+      "followers": {
+        "facebook": 29200,
+        "twitter": 444
+      },
+      "image_url": "https://i1.feedspot.com/5146984.jpg?t=1588411991"
+    },
+    {
+      "title": "Houma Today",
+      "feed_url": "https://www.houmatoday.com/",
+      "website_url": "https://www.houmatoday.com/",
+      "description": "Houma Today is a Newspaper in southern Louisiana providing comprehensive coverage of Terrebonne Parish since 1878. It features up-to-the-minute news and information on the latest top stories, weather, entertainment, politics and more.",
+      "followers": {
+        "facebook": 69000,
+        "twitter": 7100
+      },
+      "image_url": "https://i1.feedspot.com/5146985.jpg"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "category": "Sacramento News",
+  "source_url": "https://rss.feedspot.com/sacramento_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "KCRA 3 News",
+      "feed_url": "https://www.kcra.com/topstories-rss",
+      "website_url": "https://www.kcra.com/",
+      "description": "KCRA 3 is where the news comes first in Northern California. Look to KCRA 3 for the latest breaking news, daily headlines, California weather, political coverage and more. Get the latest Modesto, Stockton and Sacramento news and weather from the KCRA news team.",
+      "followers": {
+        "facebook": 768000,
+        "twitter": 291800
+      },
+      "image_url": "https://i1.feedspot.com/5131481.jpg?t=1586864509"
+    },
+    {
+      "title": "FOX40",
+      "feed_url": "https://fox40.com/feed/",
+      "website_url": "https://fox40.com/",
+      "description": "We tell local Sacramento news & weather stories, and we do what we do to make Sacramento and the rest of Central California a better place to live.",
+      "followers": {
+        "facebook": 385200,
+        "twitter": 141500,
+        "instagram": 49300
+      },
+      "image_url": "https://i1.feedspot.com/5131484.jpg?t=1585200266"
+    },
+    {
+      "title": "ABC10",
+      "feed_url": "https://feeds.feedblitz.com/kxtv/news",
+      "website_url": "https://www.abc10.com/",
+      "description": "ABC10's promise to empower people with clear, practical information to help them make smart decisions. Currently, ABC10 continues to expand its staff, improve the news product, aggressively promote the station, and reach out to the community. it also Sacramento's leading source of local news, weather, traffic, sports and more.",
+      "followers": {
+        "facebook": 616100,
+        "twitter": 156600
+      },
+      "image_url": "https://i1.feedspot.com/5131483.jpg?t=1585143069"
+    },
+    {
+      "title": "Sacramento Press",
+      "feed_url": "https://www.sacramentopress.com/feed/",
+      "website_url": "https://www.sacramentopress.com/",
+      "description": "Sacramento Press is an online newspaper covering local news and stories that keep you connected to what's happening in the city. Our aim is to spur interest in the local businesses, events, and people that make the community of Sacramento unique.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 29300,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5131485.jpg?t=1585201296"
+    },
+    {
+      "title": "Roseville Today \u00bb Sacramento",
+      "feed_url": "https://rosevilletoday.com/news/sacramento/feed/",
+      "website_url": "https://rosevilletoday.com/news/sacramento/",
+      "description": "Travel, entertainment, and business. A locally owned and operated online newspaper business since 2003. We're located in Roseville, California and proudly serve communities throughout the entire state of California. Sacramento, the California capital is never short on news. Select news and event info in Sacramento along with feature coverage.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 995,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5131497.jpg?t=1585201691"
+    },
+    {
+      "title": "CBS Sacramento",
+      "feed_url": "https://www.cbsnews.com/sacramento/",
+      "website_url": "https://www.cbsnews.com/sacramento/",
+      "description": "Sacramento, Stockton, and Modesto news and weather from CBS 13 Read news, sports, weather, traffic and the best of Sacramento.",
+      "followers": {
+        "facebook": 353300,
+        "twitter": 151100,
+        "instagram": 76600
+      },
+      "image_url": "https://i1.feedspot.com/3101.jpg?t=1585200777"
+    },
+    {
+      "title": "Sacramento Business Journal",
+      "feed_url": "https://www.bizjournals.com/sacramento/",
+      "website_url": "https://www.bizjournals.com/sacramento/",
+      "description": "At the Sacramento Business Journal Online, you'll find the latest breaking business news, updated throughout the day, this week's top stories from the Sacramento Business Journal, and other popular features from the print edition. SBJ is part of American City Business Journals (ACBJ), one of the largest publishers of metropolitan business newsweeklies.",
+      "followers": {
+        "facebook": 35400,
+        "twitter": 60500,
+        "instagram": 11200
+      },
+      "image_url": "https://i1.feedspot.com/5486290.jpg?t=1672655973"
+    }
+  ]
+}

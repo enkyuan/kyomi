@@ -1,0 +1,603 @@
+{
+  "category": "Chicago Food",
+  "source_url": "https://rss.feedspot.com/chicago_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Eater Chicago",
+      "feed_url": "https://chicago.eater.com/rss/index.xml",
+      "website_url": "https://chicago.eater.com/",
+      "description": "The Chicago Restaurant, Bar, and Nightlife Blog. Food news and dining guides for Chicago. Eater Chicago avails vivid cuisines present all around the world.",
+      "followers": {
+        "facebook": 136800,
+        "twitter": 94900,
+        "instagram": 212100
+      },
+      "image_url": "https://i1.feedspot.com/4784719.jpg?t=1629459871"
+    },
+    {
+      "title": "Del's cooking twist",
+      "feed_url": "https://www.delscookingtwist.com/feed/",
+      "website_url": "https://www.delscookingtwist.com/",
+      "description": "Hi, I'm Del! Originally from France, I lived in Stockholm, Chicago, and I now call Vancouver my home Del's cooking twist is a food blog focusing on healthy flexitarian recipes & comfort food.",
+      "followers": {
+        "facebook": 51300,
+        "twitter": 1300,
+        "instagram": 44800
+      },
+      "image_url": "https://i1.feedspot.com/5009617.jpg?t=1622267674"
+    },
+    {
+      "title": "The Kittchen",
+      "feed_url": "https://thekittchen.com/feed/",
+      "website_url": "https://thekittchen.com/",
+      "description": "The Kittchen features inexpensive, quick, and healthy recipes, and Chicago restaurant reviews. Brought to you by the author of The Gourmet Grilled Cheese Cookbook Kit Graham.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 7900,
+        "instagram": 47900
+      },
+      "image_url": "https://i1.feedspot.com/4784847.jpg?t=1609322867"
+    },
+    {
+      "title": "The Tasty World",
+      "feed_url": "https://thetastyworld.com/feed/",
+      "website_url": "https://thetastyworld.com/",
+      "description": "I am Tina M. Knapp originally from West Virginia and now live in Chicago. I have been a chef for eight years. Cooking has become a hobby for me. The Tasty World is a gourmet kitchen store, I strive on providing best coffee grinder, best mini rice cooker, best Japanese rice cookers, quality stainless kitchenware, cookware, and more cooking products at an affordable price through my website.",
+      "followers": {
+        "facebook": 188,
+        "twitter": 11
+      },
+      "image_url": "https://i1.feedspot.com/5476879.jpg?t=1670411605"
+    },
+    {
+      "title": "Diethood",
+      "feed_url": "https://feeds.feedburner.com/diethood/dOOG",
+      "website_url": "https://diethood.com/",
+      "description": "Diethood Covers easy, healthy, mouth-watering recipes you can enjoy without feeling like you're on a diet! Diethood is a food blog by Katerina - a cookie-maker, baker-faker, food-taker, and picture-taker.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 10400,
+        "instagram": 68300
+      },
+      "image_url": "https://i1.feedspot.com/1978154.jpg?t=1600345229"
+    },
+    {
+      "title": "Love and Lemons",
+      "feed_url": "https://www.loveandlemons.com/feed/",
+      "website_url": "https://www.loveandlemons.com/",
+      "description": "Healthy, vegetarian recipes and seasonal cooking tips from Jeanine Donofrio, writer of The Love and Lemons Cookbook. The blog also covers vegetarian recipes, gluten-free recipes, and vegan recipes. Jeanine Donofrio is a recipe developer and author of two bestselling cookbooks, The Love & Lemons Cookbook and Love & Lemons Every Day. Her veggie-centric recipes celebrate how nourishing, fun, and delicious cooking with seasonal, plant-based ingredients can be.",
+      "followers": {
+        "facebook": 196700,
+        "twitter": 44400,
+        "instagram": 714900
+      },
+      "image_url": "https://i1.feedspot.com/4533130.jpg?t=1697535285"
+    },
+    {
+      "title": "Chicago magazine \u00bb Dining & Drinking",
+      "feed_url": "https://www.chicagomag.com/dining-drinking/feed/",
+      "website_url": "https://www.chicagomag.com/dining-drinking/",
+      "description": "Produced by the city's best writers and editors, Chicago magazine offers an award-winning combination of smart service journalism and provocative narrative stories, knit together with top-notch photography and elegant design. Chicago magazine has been a part of the fabric of the city since 1970, chronicling the people, places, and events that shape their world.",
+      "followers": {
+        "facebook": 182900,
+        "twitter": 264800,
+        "instagram": 146400
+      },
+      "image_url": "https://i1.feedspot.com/4946303.jpg?t=1622267689"
+    },
+    {
+      "title": "Bits & Bites Blog",
+      "feed_url": "https://bitsandbitesblog.com/feed/",
+      "website_url": "https://bitsandbitesblog.com/",
+      "description": "Katie Kelly is a 24-year-old social media manager, and cooker/baker/blogger by night bouncing between Chicago and the south burbs. Katie feels cooking isn't a chore if you love what you cook. here you'll find the perfect balance of recipes you are looking for.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 621,
+        "instagram": 84100
+      },
+      "image_url": "https://i1.feedspot.com/4853491.jpg?t=1609323548"
+    },
+    {
+      "title": "Greater Chicago Food Depository Blog",
+      "feed_url": "https://www.chicagosfoodbank.org/feed/",
+      "website_url": "https://www.chicagosfoodbank.org/blog/",
+      "description": "Our blog aims to inform, uplift and inspire our allies in the mission to end hunger. Follow along with new and noteworthy developments as we work to end hunger. Find the latest news updates and press releases from the Food Depository here. The Greater Chicago Food Depository is Chicago's food bank. We provide food and hope for Chicago and Cook County. Find food and get involved.",
+      "followers": {
+        "facebook": 42000,
+        "twitter": 15200,
+        "instagram": 13300
+      },
+      "image_url": "https://i1.feedspot.com/5181280.jpg?t=1597320930"
+    },
+    {
+      "title": "The Chopping Block Blog \u00bb Bagel",
+      "feed_url": "https://www.thechoppingblock.com/blog/rss.xml",
+      "website_url": "https://www.thechoppingblock.com/blog/topic/bagel",
+      "description": "The Chopping blog shares recipes, cooking tips, and techniques for favorite carvings and travel adventures. The Chopping Block is Chicago's largest recreational cooking school and gourmet retail store, offers guests a large slate of demonstration and hands-on classes, as well as wine classes, private cooking parties, and corporate team building events",
+      "followers": {
+        "facebook": 11900,
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/5314380.jpg?t=1629542665"
+    },
+    {
+      "title": "Make It Like a Man!",
+      "feed_url": "https://www.makeitlikeaman.com/feed/",
+      "website_url": "https://www.makeitlikeaman.com/",
+      "description": "I am Jeff the Chef. Explore my Recipes and Reviews, Recklessly Declaimed. I like to find ways to use on-hand ingredients. I also cook from recipes and spend a lot of time searching for good ones. My interest in cooking stems from an even stronger interest in eating good food; dining out is part of my regular diet. Make It Like a Man stems from those three things.",
+      "followers": {
+        "facebook": 365
+      },
+      "image_url": "https://i1.feedspot.com/5311502.jpg?t=1628683729"
+    },
+    {
+      "title": "Stuck On Sweet",
+      "feed_url": "https://www.stuckonsweet.com/feed/",
+      "website_url": "https://www.stuckonsweet.com/",
+      "description": "I'm Jessica Erin and I am the recipe developer, photographer, and writer behind stuckonsweet.com! You will find a little of everything including healthy meals, comfort food, and my favorite - sweets.",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 964,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4778337.jpg?t=1655534339"
+    },
+    {
+      "title": "Proud Italian Cook",
+      "feed_url": "https://feeds.feedburner.com/ProudItalianCook",
+      "website_url": "https://www.prouditaliancook.com/",
+      "description": "Besides creating recipes I enjoy sharing local food finds here in Chicagoland, my favorite restaurants and hidden treasures that I frequent, my favorite gadgets and kitchen musts that work for me. I'm Marie, a wife, mother, mother-in-law, and gramma of two beautiful girls. My passion is food, clear and simple but especially Italian food, hence the name of my blog, Proud Italian Cook.",
+      "followers": {
+        "facebook": 25600,
+        "instagram": 16400
+      },
+      "image_url": "https://i1.feedspot.com/1798545.jpg?t=1655537263"
+    },
+    {
+      "title": "Catering by Michaels Blog",
+      "feed_url": "https://www.cateringbymichaels.com/feed/",
+      "website_url": "https://www.cateringbymichaels.com/chicago-catering-blog/",
+      "description": "Welcome to a chronicle of our creative and passionate journey! Here you will find ideas and inspiration, unique recipes, event recaps, tips, and so much more. Since 1980, Catering by Michaels has created countless unforgettable experiences for weddings, corporate events and social gatherings in and around Chicago. We believe that catering is more than just food on a plate; it's about building a relationship with you, understanding your personal style, and delivering an unforgettable experience for you and your guests.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 1300,
+        "instagram": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4604169.jpg?t=1615455087"
+    },
+    {
+      "title": "Lottie + Doof",
+      "feed_url": "https://www.lottieanddoof.com/feed/",
+      "website_url": "https://www.lottieanddoof.com/",
+      "description": "Chicago-based food/recipe blog focusing on baking and the politics of food. When I started Lottie + Doof, back in 2008, I had no idea it would be come such an important part of my life. I started blogging as an outlet for what had become an increasingly serious obsession with cooking, hosting, and the politics of food.",
+      "followers": {
+        "instagram": 7700
+      },
+      "image_url": "https://i1.feedspot.com/119755.jpg?t=1655531368"
+    },
+    {
+      "title": "Chicago Waffles Blog",
+      "feed_url": "https://www.chicagowaffles.com/blog/feed/",
+      "website_url": "https://www.chicagowaffles.com/blog/",
+      "description": "Welcome to Chicago Waffles. Check out our blog for the latest news and stories of all things breakfast. Chicago Waffles has been serving up the breakfast of champions for years, along with a five-star brunch and lunch menu.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 117,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/5411666.jpg?t=1655472804"
+    },
+    {
+      "title": "Sky Full of Bacon Blog",
+      "feed_url": "https://skyfullofbacon.com/blog/?feed=rss2",
+      "website_url": "https://skyfullofbacon.com/blog/",
+      "description": "Explore Michael Gebert's blog about food in Chicago and the Midwest. Sky Full of Bacon is the podcasts (video and audio) and blog of Michael Gebert, James Beard Award-winning food video producer and writer, final editor of the late Grub Street Chicago and contributor to the Chicago Reader, Chicago Sun-Times, Time Out Chicago, Serious Eats, Saveur.com and other publications.",
+      "followers": {
+        "facebook": 549,
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/339915.jpg?t=1655532087"
+    },
+    {
+      "title": "Chic Food \u00bb Food",
+      "feed_url": "http://www.thechic.us/category/food-guide-chicago/feed/",
+      "website_url": "http://www.thechic.us/category/food-guide-chicago/",
+      "description": "Your guide to clean, delicious, healthy and unprocessed eating and superfood guides along with hip Chicago food and Restaurant Guides and reviews. The Chic is a modern lifestyle website with a focus on sustainability, entrepreneurship, diversity, design, innovation, parenting, food & wellness.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 618,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/5411661.jpg?t=1655472768"
+    },
+    {
+      "title": "Chicago Foodie Sisters",
+      "feed_url": "https://chicagofoodiesisters.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://chicagofoodiesisters.blogspot.com/",
+      "description": "Keep up with the adventures of two food-loving sisters and their niece, Kelly, as they share their culinary adventures. We like them for the wide variety of restaurants and events they report on, from the uber fancy to wear-your-flip-flops casual and, they're as friendly as they come",
+      "followers": {
+        "facebook": 17200,
+        "twitter": 1600,
+        "instagram": 6000
+      },
+      "image_url": "https://i1.feedspot.com/5180344.jpg?t=1655538437"
+    },
+    {
+      "title": "Plus Size in Chicago Blog",
+      "feed_url": "https://plussizeinchicago.com/feed",
+      "website_url": "https://plussizeinchicago.com/blog",
+      "description": "Plus Size in Chicago embraced being a foodie and began exploring restaurants and other hot spots in Chicago and beyond. Angela spotlights foods and drinks at popular restaurants and shares recipes of her favorite meals. Owned and operated by Angela Vaughn, Plus Size in Chicago was launched in January 2017, and highlighted non-diversity and exclusion towards the plus-size community in everyday normal activities.",
+      "followers": {
+        "facebook": 1300,
+        "instagram": 14500
+      },
+      "image_url": "https://i1.feedspot.com/5411665.jpg?t=1655472792"
+    },
+    {
+      "title": "Sabri Nihari Blog",
+      "feed_url": "https://sabrinihari.com/feed/",
+      "website_url": "https://sabrinihari.com/blog/",
+      "description": "Explore various scrumptious Pakistani dishes, history and more in the blog. Sabri Nihari restaurant is the best Pakistani restaurant in Chicago that opened its doors to the lovely people of Chicago in 1996 to offer delicious Pakistani cuisine.",
+      "followers": {
+        "facebook": 41500,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5411658.jpg?t=1655472754"
+    },
+    {
+      "title": "Pilot Light Blog",
+      "feed_url": "https://pilotlightchefs.org/feed/",
+      "website_url": "https://pilotlightchefs.org/feeding-minds-blog/",
+      "description": "Through our Feeding Minds blog, we provide engaging content weekly that connects our audience to all things food; Bon app\u00e9tit! Pilot Light's mission is to support students as they learn and advocate for informed choices by bridging the lessons they learn in their classrooms to the foods on their lunch trays, at home, and in their communities.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 1200,
+        "instagram": 6300
+      },
+      "image_url": "https://i1.feedspot.com/5411653.jpg?t=1655472732"
+    },
+    {
+      "title": "Chicago Food Policy Action Council Blog",
+      "feed_url": "https://www.chicagofoodpolicy.com/blog?format=rss",
+      "website_url": "https://www.chicagofoodpolicy.com/blog",
+      "description": "Stay up to date with the latest news and updates from the council along with updates and schedules of events. CFPAC facilitates the development of responsible policies that improve access for Chicago residents to culturally appropriate, nutritionally sound, and affordable food that is grown through environmentally sustainable practices.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 1300,
+        "instagram": 6200
+      },
+      "image_url": "https://i1.feedspot.com/5303539.jpg?t=1655533446"
+    },
+    {
+      "title": "Chicago Loves Panini Blog",
+      "feed_url": "https://chicagolovespanini.com/feed/",
+      "website_url": "https://chicagolovespanini.com/blog/",
+      "description": "This is the perfect place to find recipes inspired by different cultures, and to read great stories. Cooking and writing have never looked better together! My name is Michaela and I have a passion for writing and an appetite for cooking. I love to tell stories about foods, cultures, and people - and I love to eat!",
+      "followers": {
+        "facebook": 141,
+        "twitter": 724,
+        "instagram": 6400
+      },
+      "image_url": "https://i1.feedspot.com/5009583.jpg?t=1655535485"
+    },
+    {
+      "title": "Chicago Tribune \u00bb Food & Dining",
+      "feed_url": "https://www.chicagotribune.com/tag/recipes/feed/",
+      "website_url": "https://www.chicagotribune.com/tag/recipes/",
+      "followers": {
+        "facebook": 721400,
+        "twitter": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5748528.jpg?t=1704362205"
+    },
+    {
+      "title": "Damn Delicious",
+      "feed_url": "https://damndelicious.net/feed/",
+      "website_url": "https://damndelicious.net/",
+      "description": "Covers recipes about quick/easy meals for the everyday home cook. Damn Delicious creates recipes, step-by-step tutorials, and videos that focus on quick and easy meals for the everyday home cook to show you that it really doesn't take much to make a homemade meal completely from scratch.",
+      "followers": {
+        "facebook": 619900,
+        "twitter": 14500,
+        "instagram": 530200
+      },
+      "image_url": "https://i1.feedspot.com/2433137.jpg?t=1600344901"
+    },
+    {
+      "title": "Resy Blog \u00bb Chicago",
+      "feed_url": "https://blog.resy.com/city/chicago/feed/",
+      "website_url": "https://blog.resy.com/city/chicago/",
+      "description": "Resy powers the world's best restaurants, using technology to imagine the future of hospitality.",
+      "followers": {
+        "facebook": 9000,
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/5748531.jpg?t=1704362293"
+    },
+    {
+      "title": "Urban Foodie Kitchen",
+      "feed_url": "https://www.urbanfoodiekitchen.com/feed/",
+      "website_url": "https://www.urbanfoodiekitchen.com/",
+      "description": "California Inspired Small Scale Recipes",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5748536.jpg?t=1704362417"
+    },
+    {
+      "title": "Michael Nagrant",
+      "feed_url": "https://thehunger.substack.com/feed",
+      "website_url": "https://thehunger.substack.com/",
+      "description": "Mike Nagrant, the last and former Chicago Sun-Times food critic and contributor to the James Beard-Winning Alinea cookbook writes about culture, life, food, cooking, restaurants, and food media.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5748530.jpg?t=1704362283"
+    },
+    {
+      "title": "Last Ingredient",
+      "feed_url": "https://www.lastingredient.com/feed/",
+      "website_url": "https://www.lastingredient.com/",
+      "description": "Looking for breakfast, lunch or dinner recipes? Last Ingredient celebrates the seasons with fruits, vegetables and home cooking from scratch.",
+      "followers": {
+        "facebook": 1500,
+        "instagram": 218700
+      },
+      "image_url": "https://i1.feedspot.com/1692938.jpg?t=1704442600"
+    },
+    {
+      "title": "What's Cookin' Chicago",
+      "feed_url": "https://whatscookinchicago.com/feed",
+      "website_url": "https://whatscookinchicago.com/",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/5748529.jpg?t=1704362376"
+    },
+    {
+      "title": "UChicago Bite Blog",
+      "feed_url": "https://uchicagobite.com/blog?format=rss",
+      "website_url": "https://uchicagobite.com/blog",
+      "description": "Welcome to Bite's Blog! Here you can find more reviews, features, recipes and more exclusive content!",
+      "followers": {
+        "facebook": 983
+      },
+      "image_url": "https://i1.feedspot.com/5748533.jpg?t=1704362305"
+    },
+    {
+      "title": "InspiringKitchen Blog",
+      "feed_url": "https://inspiringkitchen.com/feed/",
+      "website_url": "https://inspiringkitchen.com/blog/",
+      "description": "Inspiring those interested in cooking, housewares, kitchen design and culinary travel.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 7200,
+        "instagram": 43000
+      },
+      "image_url": "https://i1.feedspot.com/5748535.jpg?t=1704362320"
+    },
+    {
+      "title": "Back for Seconds",
+      "feed_url": "https://feeds.feedburner.com/BackForSeconds",
+      "website_url": "https://backforseconds.com/",
+      "followers": {
+        "facebook": 55800
+      },
+      "image_url": "https://i1.feedspot.com/3845969.jpg?t=1704443184"
+    },
+    {
+      "title": "Plant-based Tamika",
+      "feed_url": "https://www.plantbasedtamika.com/blog-feed.xml",
+      "website_url": "https://www.plantbasedtamika.com/",
+      "description": "Tamika is a Chicago-based vegan food blogger sharing plant-based recipes, vegan-friendly restaurants and more. Before switching to a plant-based diet, she suffered from asthma, got sinus infections like clockwork and struggled to maintain a healthy weight. Since switching to a plant-based diet, she lost (and kept off) 40 lbs without feeling deprived and cured her asthma! This not only renewed my quality of life but made her want to share her experiences in hopes of helping someone else. Her mission is to spread joy and inspire healing from the inside out.",
+      "followers": {
+        "facebook": 24600,
+        "twitter": 181,
+        "instagram": 131900
+      },
+      "image_url": "https://i1.feedspot.com/5691234.jpg?t=1704362324"
+    },
+    {
+      "title": "Chicago Food Magazine",
+      "feed_url": "https://www.chicagofoodmagazine.com/feed.xml",
+      "website_url": "https://www.chicagofoodmagazine.com/",
+      "description": "Chicago Food Magazine explores Chicago's growing restaurant population and also updates Delicious and delectable delicacies every day. Chicago Food Magazine represents the best way to engage a food-centric audience in Chicago. Get to know about the best restaurants and chefs in Chicago.",
+      "followers": {
+        "facebook": 36100,
+        "twitter": 13000,
+        "instagram": 65200
+      },
+      "image_url": "https://i1.feedspot.com/4919650.jpg?t=1622267666"
+    },
+    {
+      "title": "Blissful Basil",
+      "feed_url": "https://www.blissfulbasil.com/feed/",
+      "website_url": "https://www.blissfulbasil.com/",
+      "description": "Browse plant-based vegan recipes and wellness tips that will unearth vibrancy, health and happiness in your daily life!",
+      "followers": {
+        "facebook": 15400,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4864258.jpg?t=1612170951"
+    },
+    {
+      "title": "A Beautiful Plate",
+      "feed_url": "https://www.abeautifulplate.com/feed/",
+      "website_url": "https://www.abeautifulplate.com/",
+      "description": "A Beautiful Plate is a seasonal food blog dedicated to simplifying the art of cooking. Whether it's through cooking guides and how-to's, artful plating, or delicious recipes, this blog sparks inspiration and creativity in your kitchen!",
+      "followers": {
+        "facebook": 37500,
+        "twitter": 2700,
+        "instagram": 44600
+      },
+      "image_url": "https://i1.feedspot.com/5009609.jpg?t=1622267670"
+    },
+    {
+      "title": "Smile Sandwich",
+      "feed_url": "https://smilesandwich.com/feed/",
+      "website_url": "https://smilesandwich.com/",
+      "description": "Jordan is a recipe blogger and creator of Smile Sandwich, which she sometimes refers to as simply 'The Sammich.' She loves cooking with local, seasonal ingredients at home and exploring Chicago's restaurant scene.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 402,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4401712.jpg?t=1629461921"
+    },
+    {
+      "title": "Anti Foodie \u00bb A Picky Eater",
+      "feed_url": "https://www.antifoodie.com/feed/",
+      "website_url": "https://www.antifoodie.com/",
+      "description": "You'll find restaurant reviews, tips on making food at home, and anything else related to food (and sometimes drinks). Follow me as I venture into the world of strange foods and fancy restaurants around Chicago, I am the opposite of a foodie, I am an Antifoodie.",
+      "followers": {
+        "facebook": 455,
+        "twitter": 147,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5009566.jpg?t=1622267681"
+    },
+    {
+      "title": "West of the Loop",
+      "feed_url": "https://feeds.feedburner.com/WestOfTheLoop",
+      "website_url": "https://www.westoftheloop.com/",
+      "description": "I am Emily. An Ivy League-educated lawyer turned food writer, I bring passion, a sharp intellect, and attention to detail to my globally-inspired Jewish and Mediterranean cuisine. Find scratch cooking for weeknight dinners and special occasions; DIY kitchen projects and restaurant reviews.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 2500,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5009589.jpg?t=1622267685"
+    },
+    {
+      "title": "Lake Shore Lady",
+      "feed_url": "https://www.lakeshorelady.com/feed/",
+      "website_url": "https://www.lakeshorelady.com/category/recipes/",
+      "description": "Step by step recipes & cooking videos for the food lovers. Personal style & shopping tips for the fashion obsessed. Brought to you from the Windy City.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 2500,
+        "instagram": 74100
+      },
+      "image_url": "https://i1.feedspot.com/4768865.jpg?t=1609322916"
+    },
+    {
+      "title": "Fab Food Chicago",
+      "feed_url": "https://www.fabfoodchicago.com/feed/",
+      "website_url": "https://www.fabfoodchicago.com/",
+      "description": "Fab Soo Park. Fab Appetite. Living the Fab Food Life. Restaurant Reviews, Recipes, Chef Interviews, and more.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 1600,
+        "instagram": 107500
+      },
+      "image_url": "https://i1.feedspot.com/4784937.jpg?t=1609323314"
+    },
+    {
+      "title": "BALANCED BABE \u00bb Whole Food Healthy Recipes",
+      "feed_url": "https://balancedbabe.com/category/whole-food-healthy-recipes/feed/",
+      "website_url": "https://balancedbabe.com/category/whole-food-healthy-recipes/",
+      "description": "Sarah Baker is a certified holistic nutrition and health coach, motivational speaker, certified business consultant, and founder of the Balanced Babe brand.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 10000
+      },
+      "image_url": "https://i1.feedspot.com/5009572.jpg?t=1622267692"
+    },
+    {
+      "title": "Here Here Market Blog",
+      "feed_url": "https://hereheremarket.com/blogs/news.atom",
+      "website_url": "https://hereheremarket.com/blogs/news",
+      "description": "The Here Here Market culinary blog features chef spotlights, recipe ideas, restaurant recommendations, and so much more. We created this local food blog to highlight everything we love about the world of culinary talent so we can share it with you! If you're looking for a dining and cooking blog that covers diverse topics, people, and places, you've come to the right place. Here Here Market is a boutique marketplace for true food enthusiasts and a launchpad for the next generation of culinary talent.",
+      "followers": {
+        "facebook": 580,
+        "instagram": 5700
+      },
+      "image_url": "https://i1.feedspot.com/5411654.jpg?t=1655472735"
+    },
+    {
+      "title": "Chicago foodie girl",
+      "feed_url": "http://www.chicagofoodiegirl.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.chicagofoodiegirl.com/",
+      "description": "Chicago foodie girl is about food & adventure in the Windy City and beyond.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 3400,
+        "instagram": 40400
+      },
+      "image_url": "https://i1.feedspot.com/5009581.jpg?t=1622267696"
+    },
+    {
+      "title": "Bunny and Brandy's Brunchtime Blog",
+      "feed_url": "http://www.bunnyandbrandy.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.bunnyandbrandy.com/",
+      "description": "Bunny and Brandy are two friends who lives in Chicago and are Chicago's foremost brunch experts",
+      "followers": {
+        "facebook": 488,
+        "twitter": 856,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5009574.jpg?t=1622267700"
+    },
+    {
+      "title": "Chefdruck",
+      "feed_url": "http://feeds.feedburner.com/ChefdruckMusings",
+      "website_url": "https://chefdruck.com/",
+      "description": "Find food reviews and recipes from Chicago and France. Vanessa Druckman is a French foodie mom recipe writer living in Chicago. She has been writing her food, family and travel lifestyle blog for over a decade.",
+      "followers": {
+        "twitter": 6600,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/962796.jpg?t=1655532760"
+    },
+    {
+      "title": "Steve Dolinsky Blog",
+      "feed_url": "https://stevedolinsky.com/blog/feed",
+      "website_url": "https://stevedolinsky.com/blog",
+      "description": "Stay up to date on the latest news, videos and events. Steve Dolinsky is a food reporter based in Chicago providing best places to eat in Chicago along with recipes and food guides.",
+      "followers": {
+        "facebook": 12900,
+        "twitter": 25000
+      },
+      "image_url": "https://i1.feedspot.com/5411659.jpg?t=1655472757"
+    },
+    {
+      "title": "Chicago Food Girl",
+      "feed_url": "https://www.chicagofoodgirl.com/feed/",
+      "website_url": "https://www.chicagofoodgirl.com/",
+      "description": "Lover of Food, Beauty, Travel and all Things Glitz, Glam & Sparkles.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 2700,
+        "instagram": 78900
+      },
+      "image_url": "https://i1.feedspot.com/5748532.jpg?t=1704362451"
+    },
+    {
+      "title": "VegOut Magazine \u00bb Chicago",
+      "feed_url": "https://vegoutmag.com/cities/chicago/feed/",
+      "website_url": "https://vegoutmag.com/cities/chicago/",
+      "description": "VegOut is the premier digital plant-based food and culture magazine. From dining out to cooking at home, from ethical fashion to celeb interviews, it is your source for all things vegan. Its mission is to inspire changemakers, leaders, and trendsetters to adopt a more sustainable and plant-based lifestyle. Explore VegOut Magazine's vegan Chicago guide, including Chicago's best burgers (meat-free, of course), deep dish pizza (no dairy), and more!",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 1600,
+        "instagram": 59200
+      },
+      "image_url": "https://i1.feedspot.com/5691227.jpg?t=1697534935"
+    },
+    {
+      "title": "Ann Marie Scheidler \u00bb Recipes",
+      "feed_url": "https://www.annmariescheidler.com/category/recipes/feed/",
+      "website_url": "https://www.annmariescheidler.com/category/recipes/",
+      "description": "Follow my recipes and food reviews in this section. My name is Ann Marie Scheidler. I'm a pearl-loving yogi with a thing for travel, a weakness for beautiful bags, and a passion for storytelling. On Ann Marie On The Shore, I'll be sharing my wellness journey, go-to recipes, style favorites, and my love for Chicago's North Shore.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5411656.jpg?t=1655797117"
+    },
+    {
+      "title": "The Ghost Guest",
+      "feed_url": "http://www.theghostguest.com/feeds/posts/default",
+      "website_url": "http://www.theghostguest.com/",
+      "description": "Rating and sharing my foodie finds in Chicago (and beyond) since 2010!",
+      "followers": {
+        "facebook": 670,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5748534.jpg?t=1704362312"
+    }
+  ]
+}

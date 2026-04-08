@@ -1,0 +1,51 @@
+{
+  "category": "Bow Hunting",
+  "source_url": "https://rss.feedspot.com/bowhunting_rss_feeds",
+  "feeds": [
+    {
+      "title": "BOWHUNTING.NET",
+      "feed_url": "https://bowhunting.net/feed/",
+      "website_url": "https://bowhunting.net/",
+      "description": "Bowhunting.Net is daily bowhunting news for bowhunters and archery hunters. Get daily bowhunting articles, bowhunting video clips, bowhunting gear reviews, and new bowhunting and archery gear from the bowhunting world.",
+      "followers": {
+        "facebook": 12200,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4536018.jpg?t=1670232920"
+    },
+    {
+      "title": "Bowhunting.com Blog",
+      "feed_url": "https://www.bowhunting.com/blog/feed/",
+      "website_url": "https://www.bowhunting.com/blog/",
+      "description": "Bowhunting.com is a leading bowhunting community. Get the latest bowhunting articles, archery product reviews, how-to's, blogs, forums, free hunting videos and much more.",
+      "followers": {
+        "facebook": 552400,
+        "twitter": 43100
+      },
+      "image_url": "https://i1.feedspot.com/4536013.jpg?t=1614241181"
+    },
+    {
+      "title": "Wide Open Spaces \u00bb Bowhunting",
+      "feed_url": "https://www.wideopenspaces.com/category/hunting/bowhunting/feed/",
+      "website_url": "https://www.wideopenspaces.com/category/hunting/bowhunting/",
+      "description": "Your daily source of hunting and fishing content that's smart, funny, engaging and as outdoor-obsessed as you are. Follow to get articles on bowhunting.",
+      "followers": {
+        "facebook": 430300,
+        "twitter": 34200,
+        "instagram": 21300
+      },
+      "image_url": "https://i1.feedspot.com/5133332.jpg?t=1625645329"
+    },
+    {
+      "title": "Hunting Bow",
+      "feed_url": "https://feeds.feedburner.com/Hunting-bow-News",
+      "website_url": "https://www.hunting-bow.com/blogs/news",
+      "description": "All you need to know about archery & bow hunting whether you are a complete beginner or a more advanced shooter.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 717
+      },
+      "image_url": "https://i1.feedspot.com/5045487.jpg?t=1622537410"
+    }
+  ]
+}

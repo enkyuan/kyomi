@@ -1,0 +1,74 @@
+{
+  "category": "USC Football",
+  "source_url": "https://rss.feedspot.com/usc_football_rss_feeds",
+  "feeds": [
+    {
+      "title": "Trojan Daily Blog",
+      "feed_url": "https://trojandailyblog.com/feed/",
+      "website_url": "https://trojandailyblog.com/",
+      "description": "Long-time USC supporters and graduates, Allen Wallace and John Weld, both combine their efforts to bring you the most objective, truthful, and an enlightening daily snapshot of Trojan athletics. Trojan Daily Blog is a forum for fans to discuss about their favorite team.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5447783.jpg?t=1663657478"
+    },
+    {
+      "title": "InsideUSC with Scott Wolf Blog",
+      "feed_url": "https://insideusc.blog/feed/",
+      "website_url": "https://insideusc.blog/",
+      "description": "Inside USC with Scott Wolf digs deep into USC Sports and brings to you Raw highlights, Interviews, Game Recaps, and more. Check out recent posts for the latest Morning Buzz. Dedicated to USC Football and basketball, Scott Wolf has been a long-time observer and enthusiast of the game.",
+      "followers": {
+        "twitter": 22400
+      },
+      "image_url": "https://i1.feedspot.com/5447781.jpg?t=1663655963"
+    },
+    {
+      "title": "The Athletic \u00bb USC Trojans",
+      "feed_url": "https://www.nytimes.com/athletic/rss/college-football/usc-trojans-college-football/",
+      "website_url": "https://www.nytimes.com/athletic/college-football/team/usc-trojans-college-football/",
+      "description": "Breaking USC Trojans news and in-depth analysis from the best newsroom in sports. Follow your favorite clubs. Get the latest injury updates, player news, and more from around the league. The Athletic delivers powerful stories, breaking news, live commentary, and smart analysis that bring sports fans closer to the heart of the game.",
+      "followers": {
+        "facebook": 707100,
+        "twitter": 612600,
+        "instagram": 328300
+      },
+      "image_url": "https://i1.feedspot.com/5447798.jpg?t=1663658225"
+    },
+    {
+      "title": "The Spun \u00bb USC",
+      "feed_url": "https://thespun.com/.rss/full/pac-12/usc",
+      "website_url": "https://thespun.com/pac-12/usc",
+      "description": "Get a lowdown of the buzzing activities happening over at USC. Learn the latest about USC Trojans football, basketball news, recruiting, scores, predictions, previews, analysis, and more. The Spun covers the most interesting sports stories for the NFL, the NBA, college football, college basketball, Major League Baseball and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5447784.jpg?t=1663657616"
+    },
+    {
+      "title": "Sports Illustrated \u00bb USC Trojans",
+      "feed_url": "https://www.si.com/college/usc/.rss/full/",
+      "website_url": "https://www.si.com/college/usc/",
+      "description": "Find news about the USC Trojans. AllTrojans is a Sports Illustrated channel bringing you the latest Highlights, Analysis, Recruiting, and News surrounding the USC Trojans. Sports Illustrated, and SI.com provide sports news, expert analysis, highlights, stats, and scores for the NFL, NBA, MLB, NHL, college football, and soccer.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5447779.jpg?t=1663657592"
+    },
+    {
+      "title": "Trojans Wire",
+      "feed_url": "https://trojanswire.usatoday.com/feed/",
+      "website_url": "https://trojanswire.usatoday.com/",
+      "description": "Get the latest USC Trojans news, schedule, photos, and rumors from Trojans Wire, the definitive source for Trojans fans. Trojans Wire, a team website by USA TODAY Sports Media Group, is a great source for news, analysis, viral storylines and wall-to-wall coverage about college sports, the NFL and the NBA.",
+      "followers": {
+        "facebook": 8500,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5447782.jpg?t=1663655972"
+    },
+    {
+      "title": "Conquest Chronicles",
+      "feed_url": "https://www.conquestchronicles.com/rss/index.xml",
+      "website_url": "https://www.conquestchronicles.com/",
+      "description": "Conquest Chronicles is the premium destination for quality USC Trojans news, rumors, analysis, stats, and scores from the fan perspective. The Conquest Chronicles website is made by SBNation to cover all football news and updates concerning the USC Trojans team.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5447780.jpg?t=1663657325"
+    }
+  ]
+}

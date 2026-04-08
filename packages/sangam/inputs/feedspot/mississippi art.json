@@ -1,0 +1,79 @@
+{
+  "category": "Mississippi Art",
+  "source_url": "https://rss.feedspot.com/mississippi_art_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mississippi Arts Commission Blog",
+      "feed_url": "https://arts.ms.gov/category/blog/feed/",
+      "website_url": "https://arts.ms.gov/category/blog/",
+      "description": "Check out the Mississippi Arts Commission Blog to keep up with their latest news. The Mississippi Arts Commission's mission is to foster creativity that enhances the quality of life in Mississippi communities through statewide investment in the arts. MAC provides financial and technical assistance for arts programming to arts organizations and educational institutions throughout Mississippi.",
+      "followers": {
+        "facebook": 13300
+      },
+      "image_url": "https://i1.feedspot.com/7275014.jpg?t=1710511096"
+    },
+    {
+      "title": "Mississippi Museum of Art",
+      "feed_url": "https://www.msmuseumart.org/feed/",
+      "website_url": "https://www.msmuseumart.org/press/",
+      "description": "View the recent press releases, news stories, and articles issued by the Mississippi Museum of Art. The Mississippi Museum of Art connects Mississippi to the world and the power of art to the power of community. Committed to honesty, equity, and inclusion, the Mississippi Museum of Art is a leader in engaging art, artists, and participants in the critical work of reckoning with the past, connecting with each other in the present, and envisioning a future without division.",
+      "followers": {
+        "facebook": 38900
+      },
+      "image_url": "https://i1.feedspot.com/7275013.jpg?t=1710510761"
+    },
+    {
+      "title": "Caron Gallery Blog",
+      "feed_url": "https://thecarongallery.com/blogs/news.atom",
+      "website_url": "https://thecarongallery.com/blogs/news",
+      "description": "The Caron Gallery Blog covers articles and news about art in Mississippi. A gallery for all tastes, Caron Gallery showcases approximately 50 Mississippi artists featuring a wide variety of styles and mediums\u2014abstracts, modern and traditional landscapes, figures, sculptures, ceramics, and the unexpected.",
+      "followers": {
+        "facebook": 12300
+      },
+      "image_url": "https://i1.feedspot.com/7275010.jpg?t=1710510490"
+    },
+    {
+      "title": "Mississippi School of the Arts",
+      "feed_url": "https://msabrookhaven.org/feed",
+      "website_url": "https://msabrookhaven.org/newsroom",
+      "description": "The Mississippi School of the Arts is a statewide residential school that will provide advanced programs of study in music, theatre, visual arts, dance, literary arts, and media arts for artistically gifted eleventh and twelfth grade students. The mission at Mississippi School of the Arts is to provide a challenging arts education for artistically gifted Mississippi students in a residential learning environment that promotes honor, integrity, service, and life-long learning.",
+      "followers": {
+        "facebook": 6400
+      },
+      "image_url": "https://i1.feedspot.com/7288941.jpg?t=1714557127"
+    },
+    {
+      "title": "The Meridian Council for the Arts",
+      "feed_url": "https://www.meridianartscouncil.org/blog-feed.xml",
+      "website_url": "https://www.meridianartscouncil.org/news",
+      "description": "The Mission of the Meridian Council for the Arts is to foster and promote diverse art and cultural organizations, events, education and individual art. Since 1978, the Meridian Council for the Arts has proudly served as the designated local arts agency for Meridian and Lauderdale County.",
+      "followers": {
+        "facebook": 1900
+      },
+      "image_url": "https://i1.feedspot.com/7275011.jpg?t=1710510497"
+    },
+    {
+      "title": "Jacqueline White-Ivey Blog",
+      "feed_url": "https://www.artbyjacquelinewhiteivey.com/blog-feed.xml",
+      "website_url": "https://www.artbyjacquelinewhiteivey.com/blog-1",
+      "description": "Stay updated with the Mississippi author who writes inspirational short stories about country life. Here you can read artist Jacqueline White-Ivey's original art for the original you. She hopes her passion for art will increase opportunities that allow open dialogue for improving access to mental healthcare for all, regardless of ability to pay.",
+      "followers": {
+        "facebook": 339,
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/7275012.jpg?t=1710510810"
+    },
+    {
+      "title": "The University of Mississippi Museum",
+      "feed_url": "https://museum.olemiss.edu/category/museum-news-iii/feed/",
+      "website_url": "https://museum.olemiss.edu/category/museum-news-iii/",
+      "description": "Get to know more about the ongoing exhibitions in The University of Mississippi Museum. Established in 1939 in Oxford as the Mary Buie Museum, the University of Mississippi Museum and Historic Houses holds the largest collection of fine arts and artifacts at an academic museum in the state of Mississippi.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 1700,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/7288940.jpg?t=1712084250"
+    }
+  ]
+}

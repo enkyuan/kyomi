@@ -1,0 +1,104 @@
+{
+  "category": "Fantasy Hockey",
+  "source_url": "https://rss.feedspot.com/fantasy_hockey_rss_feeds",
+  "feeds": [
+    {
+      "title": "DobberHockey",
+      "feed_url": "https://dobberhockey.com/feed/",
+      "website_url": "https://dobberhockey.com/",
+      "description": "Daily Fantasy NHL projections, tips, and analysis from DobberHockey.Dobber Hockey provides the readers with the most current and reliable information and opinion to best set them up to win their hockey fantasy leagues as often as possible.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 27300
+      },
+      "image_url": "https://i1.feedspot.com/5301307.jpg?t=1626161716"
+    },
+    {
+      "title": "FantraxHQ \u00bb Fantasy Hockey",
+      "feed_url": "https://fantraxhq.com/category/fantasy-hockey/feed/",
+      "website_url": "https://fantraxhq.com/category/fantasy-hockey/",
+      "description": "FantraxHQ is upping our game with more fantasy hockey than ever before, bringing you all the news and trends you need to stay on top of the fantasy ice.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 22700,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5301396.jpg?t=1626173095"
+    },
+    {
+      "title": "Razzball",
+      "feed_url": "https://hockey.razzball.com/feed/",
+      "website_url": "https://hockey.razzball.com/",
+      "description": "Razzball provides free expert fantasy hockey advice, rankings, and projections. It is a fantasy sports blog where we dispense opinions, mathy stat stuff, and humor in equal measure.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 26000
+      },
+      "image_url": "https://i1.feedspot.com/5301435.jpg?t=1626178070"
+    },
+    {
+      "title": "Apples And Ginos",
+      "feed_url": "https://applesandginos.com/feed/",
+      "website_url": "https://applesandginos.com/blog-2/",
+      "description": "Apples & Ginos helps the fantasy hockey managers build a process that wins leagues. Here you'll find a great community to ask any fantasy hockey questions you may have and also get the latest tips and tricks related to it.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5434200.jpg?t=1661162540"
+    },
+    {
+      "title": "The Win Column \u00bb NHL Fantasy",
+      "feed_url": "https://thewincolumn.ca/category/fantasy/feed/",
+      "website_url": "https://thewincolumn.ca/category/fantasy/",
+      "description": "NHL Fantasy stats, strategies, and advice for fantasy managers.The Win Column is a hockey blog, focused on providing critical analysis on trends and stats for the Calgary Flames and NHL.",
+      "followers": {
+        "facebook": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5301438.jpg?t=1626179405"
+    },
+    {
+      "title": "The Fantasy Hockey Report",
+      "feed_url": "https://www.fantasyhockeyreport.com/feeds/posts/default",
+      "website_url": "https://www.fantasyhockeyreport.com/",
+      "description": "A source to find the latest NHL fantasy hockey rankings, projections, and analysis.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5374472.jpg?t=1645527100"
+    },
+    {
+      "title": "Fantasy Hockey Hacks Blog",
+      "feed_url": "https://fantasyhockeyhacks.com/feed/",
+      "website_url": "https://thehockeywriters.com/fantasy/",
+      "description": "Check out the Fantasy Hockey Hacks blog for up to date content on fantasy hockey, rankings, strategies, debates, and more! Fantasy Hockey Hacks is the newest source for all things fantasy hockey related - rankings, tips, and podcast.",
+      "followers": {
+        "twitter": 2300,
+        "instagram": 856
+      },
+      "image_url": "https://i1.feedspot.com/5301554.jpg?t=1626243363"
+    },
+    {
+      "title": "Daily Faceoff \u00bb Fantasy Hockey",
+      "feed_url": "https://www.dailyfaceoff.com/category/fantasy-hockey/feed",
+      "website_url": "https://www.dailyfaceoff.com/category/fantasy-hockey/",
+      "description": "Find everything you will need to have Fantasy Hockey success whether it is Season-Long or Daily Fantasy Hockey. Keep up to date on the latest NHL player updates, starting goalies, line combinations, fantasy hockey analysis, news on Daily Faceoff.",
+      "followers": {
+        "facebook": 45400,
+        "twitter": 51200,
+        "instagram": 145300
+      },
+      "image_url": "https://i1.feedspot.com/5301402.jpg?t=1626174284"
+    },
+    {
+      "title": "The Athletic \u00bb Fantasy Hockey",
+      "feed_url": "https://theathletic.com/fantasy-hockey/?rss",
+      "website_url": "https://www.nytimes.com/athletic/fantasy/hockey/",
+      "description": "Get the Fantasy Hockey sports stories that matter. From breaking news to in-depth analysis, get expert coverage from the best newsroom in sports. The Athletic provides the latest sports news, stories, scores, schedules, podcasts, and more.",
+      "followers": {
+        "facebook": 707100,
+        "twitter": 15800,
+        "instagram": 328300
+      },
+      "image_url": "https://i1.feedspot.com/5301583.jpg?t=1626247472"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "category": "Catan",
+  "source_url": "https://rss.feedspot.com/catan_rss_feeds",
+  "feeds": [
+    {
+      "title": "Colonist Strategies Blog",
+      "feed_url": "https://blog.colonist.io/rss/",
+      "website_url": "https://blog.colonist.io/",
+      "description": "Visit the Colonist Strategies blog for the best tips and strategy guides in playing Colonist, an online game alternative to the board game Catan! Colonist.io is a web based, free online alternative to the challenging social and strategy based board game Settlers of Catan. You take on the role of a Colonist by building settlements and expanding your territory. Colonist combines extremely simple rules with tremendously deep gameplay.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 914
+      },
+      "image_url": "https://i1.feedspot.com/5466790.jpg?t=1668490888"
+    },
+    {
+      "title": "Catan Studio News",
+      "feed_url": "https://www.catanstudio.com/feed/",
+      "website_url": "https://www.catanstudio.com/news/",
+      "description": "Catan Studio focuses on developing excellent Catan content - including game, story, event, and merchandise development - as well as growing, supporting and nurturing our great Catan community. Get the latest news and updates from Catan community, tournaments and more!",
+      "followers": {
+        "facebook": 494,
+        "twitter": 292
+      },
+      "image_url": "https://i1.feedspot.com/5466788.jpg?t=1668490914"
+    },
+    {
+      "title": "King of Catan Blog",
+      "feed_url": "https://kingofcatan.net/blog/feed/",
+      "website_url": "https://www.dicebreaker.com/games/catan-1",
+      "description": "'King of Catan' is a combination of all the different online Catan tournaments hosted in the King of Catan Discord-server. King of Catan is known for having an active community, full of high-profile Catan players, like CATAN World Champions, National Champions and Premier League Champions. Learn more about CATAN game, features, updates and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5466789.jpg?t=1668491069"
+    }
+  ]
+}

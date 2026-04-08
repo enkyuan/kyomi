@@ -67,9 +67,7 @@ async function doEnsureFeedIndex(): Promise<void> {
   });
 
   if (!settingsResponse.ok) {
-    throw new Error(
-      `Meilisearch searchable-attributes update failed (${settingsResponse.status})`,
-    );
+    throw new Error(`Meilisearch searchable-attributes update failed (${settingsResponse.status})`);
   }
 }
 

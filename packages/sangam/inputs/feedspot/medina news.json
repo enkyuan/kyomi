@@ -1,0 +1,30 @@
+{
+  "category": "Medina News",
+  "source_url": "https://rss.feedspot.com/medina_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "FOX 8 \u00bb Medina",
+      "feed_url": "https://fox8.com/tag/medina-news/feed/",
+      "website_url": "https://fox8.com/tag/medina-news/",
+      "description": "Cleveland's source for news, weather, Cleveland Browns, Cleveland Indians, and Cleveland Cavaliers team updates. Read the latest news and updates about Medina City at fox8.com.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 293700,
+        "instagram": 217600
+      },
+      "image_url": "https://i1.feedspot.com/5174289.jpg"
+    },
+    {
+      "title": "News 5 Cleveland \u00bb Medina",
+      "feed_url": "https://www.news5cleveland.com/news/local-news/oh-medina.rss",
+      "website_url": "https://www.news5cleveland.com/news/local-news/oh-medina",
+      "description": "News 5 Cleveland brings you breaking and developing news, weather, traffic and sports coverage from the Cleveland metro area and across Ohio. Get to know everything that is happening in Medina at News 5 Cleveland.",
+      "followers": {
+        "facebook": 632300,
+        "twitter": 132600,
+        "instagram": 68700
+      },
+      "image_url": "https://i1.feedspot.com/5174287.jpg?t=1595830518"
+    }
+  ]
+}

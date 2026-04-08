@@ -1,0 +1,54 @@
+{
+  "category": "Alabama NewsCenter",
+  "source_url": "https://rss.feedspot.com/alabama_news_center_rss_feeds",
+  "feeds": [
+    {
+      "title": "Alabama NewsCenter \u00bb Business",
+      "feed_url": "https://alabamanewscenter.com/category/business/feed/",
+      "website_url": "https://alabamanewscenter.com/category/business/",
+      "description": "Get the latest headlines for business news, and tips around the world only from Alabama News Center.",
+      "followers": {
+        "facebook": 74500,
+        "twitter": 6100,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5241253.jpg?t=1612245479"
+    },
+    {
+      "title": "Alabama NewsCenter \u00bb Community",
+      "feed_url": "https://alabamanewscenter.com/category/community/feed/",
+      "website_url": "https://alabamanewscenter.com/category/community/",
+      "description": "Alabama NewsCenter is a credible, direct source of the news and information that matter most to Alabama Power customers. Stay up to date with the latest community news.",
+      "followers": {
+        "facebook": 74500,
+        "twitter": 6100,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5241256.jpg?t=1612245634"
+    },
+    {
+      "title": "Alabama NewsCenter \u00bb Innovation",
+      "feed_url": "https://alabamanewscenter.com/category/innovation/feed/",
+      "website_url": "https://alabamanewscenter.com/category/innovation/",
+      "description": "News and stories about Alabama Power Company's work toward improving tomorrow.",
+      "followers": {
+        "facebook": 74500,
+        "twitter": 6100,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5241257.jpg?t=1612246383"
+    },
+    {
+      "title": "Alabama NewsCenter \u00bb Weather Center",
+      "feed_url": "https://alabamanewscenter.com/category/weather-center/feed/",
+      "website_url": "https://alabamanewscenter.com/category/weather-center/",
+      "description": "Stay up to date with the news covering weather forecast and much more only from the Alabama News Center.",
+      "followers": {
+        "facebook": 74500,
+        "twitter": 6100,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5241259.jpg?t=1612246573"
+    }
+  ]
+}

@@ -1,0 +1,386 @@
+{
+  "category": "Radiology",
+  "source_url": "https://rss.feedspot.com/radiology_rss_feeds",
+  "feeds": [
+    {
+      "title": "Diagnostic Imaging",
+      "feed_url": "https://www.diagnosticimaging.com/rss",
+      "website_url": "https://www.diagnosticimaging.com/",
+      "description": "The latest news and commentary for radiologists and medical imaging professionals. Radiology news, features, case studies, and blogs for radiologists, technologists, administrators and medical imaging professionals.",
+      "followers": {
+        "facebook": 15400,
+        "twitter": 29100
+      },
+      "image_url": "https://i1.feedspot.com/2940227.jpg?t=1621315961"
+    },
+    {
+      "title": "Journal of Vascular and Interventional Radiology (JVIR)",
+      "feed_url": "https://www.jvir.org/current.rss",
+      "website_url": "https://www.jvir.org/",
+      "description": "The official journal of the Society of Interventional Radiology, JVIR is the peer-reviewed journal of choice for interventional radiologists, radiologists, cardiologists, vascular surgeons, neurosurgeons, and other clinicians who seek current and reliable information on every aspect of vascular and interventional radiology.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 22500
+      },
+      "image_url": "https://i1.feedspot.com/4699494.jpg?t=1606911795"
+    },
+    {
+      "title": "Medscape Radiology Headlines",
+      "feed_url": "https://www.medscape.com/cx/rssfeeds/2695.xml",
+      "website_url": "https://www.medscape.com/radiology",
+      "description": "Find Radiology Continuing Medical Education (CME), Radiology medical journal articles, MEDLINE, Radiology medical news, thought leader perspectives, Radiology conference coverage and comprehensive drug information on Medscape, a free resource for physicians.",
+      "followers": {
+        "facebook": 877800,
+        "twitter": 256399,
+        "instagram": 893800
+      },
+      "image_url": "https://i1.feedspot.com/297404.jpg?t=1606911800"
+    },
+    {
+      "title": "UCSF Radiology Blog",
+      "feed_url": "https://radiology.ucsf.edu/blog/feed",
+      "website_url": "https://radiology.ucsf.edu/blog",
+      "description": "UCSF Radiology is committed to providing the highest level of imaging quality and radiation safety to patients through nationally accredited practices.The Department of Radiology and Biomedical Imaging at the University of California, San Francisco, is a leading health sciences center focused on serving patients, conducting research, and training the next generation of radiologists.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 10300,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4699468.jpg?t=1606911889"
+    },
+    {
+      "title": "Brett Mollard Blog",
+      "feed_url": "https://brettmollard.com/feed",
+      "website_url": "https://brettmollard.com/blog",
+      "description": "Dr. Mollard is a board-certified radiologist who specializes in abdominal imaging and nuclear medicine. He served as Chief Resident during his radiology residency at the University of Michigan and was awarded the Outstanding Fellow Teaching Award at the University of California, San Francisco. He is passionate about education and mentorship and has a goal of spreading awareness about the power of imaging to improve patient care.",
+      "followers": {
+        "instagram": 7200
+      },
+      "image_url": "https://i1.feedspot.com/5593014.jpg?t=1686223959"
+    },
+    {
+      "title": "Daily radiology news - Radiography",
+      "feed_url": "https://www.medimaging.net/rss/211/radiography.rss",
+      "website_url": "https://www.medimaging.net/",
+      "description": "The MedImaging Radiology channel covers fluoroscopy, digital radiography, computerized tomography, mammography, interventional radiology, and other medical uses of X-ray imaging as well as related instrumentation, trends and safety issues.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 414
+      },
+      "image_url": "https://i1.feedspot.com/4700446.jpg?t=1606911957"
+    },
+    {
+      "title": "ISCT Radiology Blog",
+      "feed_url": "https://www.isct.org/computed-tomography-blog?format=RSS",
+      "website_url": "https://www.isct.org/computed-tomography-blog/",
+      "description": "ISCT is dedicated to promoting and coordinating the scientific, philanthropic, intellectual and professional activities of computed tomography. The Society's mission is to serve the health care needs of the general public through the support of science, teaching and research and the quality of service in the field of computed tomography.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4699376.jpg?t=1606913223"
+    },
+    {
+      "title": "Vet X-ray",
+      "feed_url": "https://vetxray.com/category/blog/feed/",
+      "website_url": "https://vetxray.com/category/blog/",
+      "description": "Diagnostic Imaging Systems is a leader in veterinary diagnostic imaging. The mission is to help veterinarians reach the next step in radiology, the digital age.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 483
+      },
+      "image_url": "https://i1.feedspot.com/4626217.jpg?t=1606912185"
+    },
+    {
+      "title": "Everything Rad Blog",
+      "feed_url": "https://www.carestream.com/blog/feed",
+      "website_url": "https://www.carestream.com/blog/",
+      "description": "Perspectives from Carestream on Trends and Technology in Diagnostic Imaging. Leading provider of medical imaging and healthcare IT solutions, dental imaging systems and non-destructive testing equipment.",
+      "followers": {
+        "facebook": 181400,
+        "twitter": 10700,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4699367.jpg?t=1606911892"
+    },
+    {
+      "title": "Teleradiology Solutions Blog",
+      "feed_url": "https://telradsol.com/feed/",
+      "website_url": "https://telradsol.com/blog/",
+      "description": "Teleradiology Solutions rated the No.1 national teleradiology company for teleradiology services in the U.S. by KLAS & was among the first JC accredited Co.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4699663.jpg?t=1606912235"
+    },
+    {
+      "title": "Atlantis Worldwide - Sensible Solutions for Refurbished Radiology Blog",
+      "feed_url": "https://info.atlantisworldwide.com/blog/rss.xml",
+      "website_url": "https://info.atlantisworldwide.com/blog",
+      "description": "Atlantis Worldwide Radiology blog is a trusted resource on medical imaging equipment like C-arms, MRI, CT scanner, Provides information for buying & selling of equipment's.",
+      "followers": {
+        "facebook": 565,
+        "twitter": 1300,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4699473.jpg?t=1606911913"
+    },
+    {
+      "title": "Amber USA - Radiology News, MRI, CT Scanner, Medical Imaging Blog",
+      "feed_url": "https://www.amberusa.com/feed/",
+      "website_url": "https://www.amberusa.com/blog/",
+      "description": "Amber USA buys and sells used and refurbished radiology equipment. They add blog posts on Monday and Wednesday. Thanks for reading Amber Diagnostic's blog.",
+      "followers": {
+        "facebook": 12000,
+        "twitter": 854,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4700023.jpg"
+    },
+    {
+      "title": "Veterinary Radiology Blog",
+      "feed_url": "https://www.veterinaryradiology.net/feed/",
+      "website_url": "https://www.veterinaryradiology.net/",
+      "description": "This blog shares teaching and learning about veterinary diagnostic imaging.",
+      "followers": {
+        "facebook": 54200,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4699545.jpg?t=1606911933"
+    },
+    {
+      "title": "Clermont Radiology",
+      "feed_url": "https://www.clermontradiology.com/feed/",
+      "website_url": "https://www.clermontradiology.com/news-on-radiology-clermont/",
+      "description": "Featuring articles that have to do exclusively with Radiology. Clermont Radiology offers a variety of outpatient radiological services to meet your diagnostic imaging needs.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 326
+      },
+      "image_url": "https://i1.feedspot.com/5326680.jpg?t=1632920227"
+    },
+    {
+      "title": "Iowa Radiology Blog",
+      "feed_url": "https://info.iowaradiology.com/rss.xml",
+      "website_url": "https://info.iowaradiology.com/",
+      "description": "Iowa Radiology's blog discusses the latest trends in Mammography, MRIs and much more. Iowa Radiology was formed in 2001 by a group of local doctors who wanted to focus on the personal side of radiology as well as the technical side. They created a patient-centered practice that promotes a more compassionate approach to medicine.",
+      "followers": {
+        "facebook": 864,
+        "twitter": 832
+      },
+      "image_url": "https://i1.feedspot.com/4699476.jpg?t=1606912168"
+    },
+    {
+      "title": "Sumer's Radiology Blog",
+      "feed_url": "https://feeds.feedburner.com/blogspot/MshIz",
+      "website_url": "https://www.indianradiology.com/",
+      "description": "Pioneer in Rad Blogging. First mover in Radiology & Web 2.0. Check out Sumer's Radiology Blog to find out quality information in the field of Radiology.",
+      "followers": {
+        "twitter": 39100
+      },
+      "image_url": "https://i1.feedspot.com/1396930.jpg?t=1622108385"
+    },
+    {
+      "title": "Direct Radiology - Emergency Imaging & Teleradiology Practice Blog",
+      "feed_url": "https://www.directradiology.com/feed/",
+      "website_url": "https://www.directradiology.com/master-blog/",
+      "description": "Direct Radiology is a physician-owned and operated teleradiology practice comprising more than 40 radiologists and 40 support staff working in close partnership with 200 facilities across the country.",
+      "followers": {
+        "facebook": 182,
+        "twitter": 302
+      },
+      "image_url": "https://i1.feedspot.com/4700238.jpg?t=1606912151"
+    },
+    {
+      "title": "Pure Mammography Blog",
+      "feed_url": "https://www.radnet.com/pure-mammography/",
+      "website_url": "https://www.puremammo.com/blog/",
+      "description": "Mammography is a specific type of breast imaging that uses low-dose x-rays to detect cancer before women experience symptoms and when it is most treatable. At PURE Mammography on Long Island, they specialize in state-of-the-art 3D mammograms, performed in a spa-like environment.",
+      "followers": {
+        "facebook": 1100,
+        "instagram": 924
+      },
+      "image_url": "https://i1.feedspot.com/4700196.jpg?t=1606913298"
+    },
+    {
+      "title": "Future Teleradiology Blog",
+      "feed_url": "https://futureteleradiology.com/blog/feed/",
+      "website_url": "https://futureteleradiology.com/blog/",
+      "description": "Future Teleradiology Solutions is one of the globally largest team of qualified and experienced Radiologists focused on dedicated and fast reporting of the highest quality to global overseas and local clients.",
+      "followers": {
+        "facebook": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5099281.jpg?t=1606912192"
+    },
+    {
+      "title": "Harding Radiology New Jersey",
+      "feed_url": "https://harding-radiology-services-nj.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://harding-radiology-services-nj.blogspot.com/",
+      "description": "Keep up wwith articles on Radiology from Harding Radiology New Jersey.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5026931.jpg?t=1606913071"
+    },
+    {
+      "title": "JGershon Breast Imaging Blog",
+      "feed_url": "https://www.jgershon.com/blog/feed",
+      "website_url": "https://www.jgershon.com/blog",
+      "description": "J Gershon Breast Imaging is a dedicated breast imaging center, specializing in digital mammography and breast ultrasound",
+      "followers": {
+        "facebook": 201
+      },
+      "image_url": "https://i1.feedspot.com/4700020.jpg?t=1606912955"
+    },
+    {
+      "title": "Charter Radiology Blog",
+      "feed_url": "https://www.charterradiology.com/feed/",
+      "website_url": "https://www.charterradiology.com/blog/",
+      "description": "Charter Radiology Blog is all about Musculoskeletal radiology, MR Arthrography, Body MR imaging including MR Enterography and MR Defecography, Pelvic MRI and Coronary CT Angiography.",
+      "followers": {
+        "facebook": 138
+      },
+      "image_url": "https://i1.feedspot.com/4700183.jpg?t=1606912244"
+    },
+    {
+      "title": "The Academy for Radiology & Biomedical Imaging Research Blog",
+      "feed_url": "https://www.acadrad.org/feed/",
+      "website_url": "https://www.acadrad.org/blog/",
+      "description": "Academy for Radiology & Biomedical Imaging Research's mission is to advocate for imaging research funding & raise its profile via education.",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4699382.jpg?t=1606912318"
+    },
+    {
+      "title": "Block Imaging - Refurbished Medical Imaging Industry Blog",
+      "feed_url": "https://info.blockimaging.com/rss.xml",
+      "website_url": "https://www.blockimaging.com/medical-imaging-equipment-resources",
+      "description": "This blog shares News, advice and resources for extending the life of your medical imaging equipment like mri, ct scanner, c-arm, digital x-ray and more.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4699445.jpg?t=1606911909"
+    },
+    {
+      "title": "Capitol Imaging Services Blog",
+      "feed_url": "https://capitolimagingservices.com/blog/feed/",
+      "website_url": "https://capitolimagingservices.com/blog/",
+      "description": "We provide diagnostic imaging services in a caring, comforting patient environment with leading-edge imaging technologies. Our extensive expertise in medical imaging allows us to give physicians and patients the very best in service and care. Blog posts cover cancer, imaging, and MRI.",
+      "followers": {
+        "facebook": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5326635.jpg?t=1644565114"
+    },
+    {
+      "title": "MedPage Today - Radiology",
+      "feed_url": "https://www.medpagetoday.com/rss/Radiology.xml",
+      "website_url": "https://www.medpagetoday.com/radiology",
+      "description": "Get the latest breaking news on Radiology. MedPage Today, a CE and CME accredited medical news service, provides free continuing education to healthcare professionals in addition to the latest news.",
+      "followers": {
+        "facebook": 220300,
+        "twitter": 74700
+      },
+      "image_url": "https://i1.feedspot.com/4434434.jpg?t=1606912227"
+    },
+    {
+      "title": "Radiopaedia Blog",
+      "feed_url": "https://radiopaedia.org/blog.atom",
+      "website_url": "https://radiopaedia.org/blog",
+      "description": "Radiopaedia.org is a rapidly growing, open-edit radiology resource, compiled by radiologists and other health professionals from across the globe.",
+      "followers": {
+        "facebook": 586700,
+        "twitter": 98500
+      },
+      "image_url": "https://i1.feedspot.com/4699103.jpg?t=1606911877"
+    },
+    {
+      "title": "The European Society of Radiology (ESR) Blog",
+      "feed_url": "https://blog.myesr.org/feed/",
+      "website_url": "https://blog.myesr.org/",
+      "description": "The European Society of Radiology is an apolitical, non-profit organisation that is dedicated to promoting and coordinating the scientific, philanthropic, intellectual and professional activities of radiology in all European countries.",
+      "followers": {
+        "facebook": 181500,
+        "twitter": 20400
+      },
+      "image_url": "https://i1.feedspot.com/4699470.jpg?t=1606911896"
+    },
+    {
+      "title": "SonoSim Blog",
+      "feed_url": "https://sonosim.com/blog/feed/",
+      "website_url": "https://sonosim.com/blog",
+      "description": "Regular blog posts on advances in ultrasonography, articles, company news, ultrasound video challenges, sonography tips, and more. SonoSim, Inc. is dedicated to improving and transforming medical care by serving as a global leader in ultrasound education and training.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 2000,
+        "instagram": 6100
+      },
+      "image_url": "https://i1.feedspot.com/4700457.jpg?t=1606911917"
+    },
+    {
+      "title": "The Joint Review Committee on Education in Radiologic Technology (JRCERT)",
+      "feed_url": "https://www.jrcert.org/m.blog/1029/feed/rss",
+      "website_url": "https://www.jrcert.org/",
+      "description": "The Joint Review Committee on Education in Radiologic Technology (JRCERT) promotes excellence in education and elevates quality and safety of patient care through the accreditation of educational programs in radiography, radiation therapy, magnetic resonance, and medical dosimetry.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 22
+      },
+      "image_url": "https://i1.feedspot.com/4699110.jpg?t=1606911948"
+    },
+    {
+      "title": "Global Radiology CME Blog",
+      "feed_url": "https://www.globalradcme.com/feed.xml",
+      "website_url": "https://www.globalradiologycme.com/global-radiology-cme-blog",
+      "description": "Global Radiology CME caters to the demands of today's radiologists with cutting edge Radiology Continuing Medical Education experiences in culturally enriching settings. The meetings provide ample opportunity to interface and collaborate with fellow colleagues from around the globe.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 928
+      },
+      "image_url": "https://i1.feedspot.com/4699460.jpg?t=1606912155"
+    },
+    {
+      "title": "The American Journal of Neuroradiology (AJNR) Blog",
+      "feed_url": "https://www.ajnrblog.org/feed/",
+      "website_url": "https://www.ajnrblog.org/",
+      "description": "The Official Blog of the American Journal of Neuroradiology. The American Journal of Neuroradiology is a peer-reviewed journal focusing on diagnostic and interventional neuroradiology.",
+      "followers": {
+        "facebook": 27600,
+        "twitter": 19000,
+        "instagram": 18900
+      },
+      "image_url": "https://i1.feedspot.com/4699485.jpg?t=1606912164"
+    },
+    {
+      "title": "Open MRI of Pueblo's Blog",
+      "feed_url": "https://www.openmripueblo.com/blog/feed/",
+      "website_url": "https://www.openmripueblo.com/blog/",
+      "description": "Open MRI of Pueblo's Blog shares information about MRI of Puevlo. Open MRI of Pueblo is an independent, physician owned outpatient Open MRI center that is dedicated to providing quality care to all.",
+      "followers": {
+        "facebook": 633,
+        "twitter": 122
+      },
+      "image_url": "https://i1.feedspot.com/4700026.jpg"
+    },
+    {
+      "title": "Radiology Cafe Blog",
+      "feed_url": "https://www.radiologycafe.com/blog/feed/rss/",
+      "website_url": "https://www.radiologycafe.com/blog/",
+      "description": "Radiology Cafe is a blog helping junior doctors applying for clinical radiology training in the UK and supporting radiology registrars in training. They have ST1 interview and application advice, information on competition ratios, improving CVs and portfolios and what its like working as a radiology trainee.",
+      "followers": {
+        "facebook": 15800,
+        "twitter": 6700,
+        "instagram": 43600
+      },
+      "image_url": "https://i1.feedspot.com/4699333.jpg?t=1606911889"
+    },
+    {
+      "title": "Medical Imaging",
+      "feed_url": "https://mifimaging.com/contact-us/blog/feed/",
+      "website_url": "https://mifimaging.com/resources",
+      "description": "This blog about the various medical imaging services like MRI services, including Open MRI and 3T MRI, CT angiography, PET/CT, fluoroscopy, 3D and 4D ultrasound, digital mammography, breast biopsy, bone densitometry (DEXA) and x-rays.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 163
+      },
+      "image_url": "https://i1.feedspot.com/4699681.jpg"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "category": "Beyblade",
+  "source_url": "https://rss.feedspot.com/beyblade_rss_feeds",
+  "feeds": [
+    {
+      "title": "BeyBase",
+      "feed_url": "https://beybase.com/feed/",
+      "website_url": "https://beybase.com/",
+      "description": "BeyBase is a blog created by a group of dedicated Beyblade enthusiasts who provide the latest news, updates, and insights about the Beyblade game. The blog aims to connect with the Beyblade community and provide valuable resources for fans. The blog was founded in 2018.",
+      "followers": {
+        "twitter": 863,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5538050.jpg?t=1681189222"
+    },
+    {
+      "title": "BeyToys Blog",
+      "feed_url": "https://beytoys.com/blogs/news.atom",
+      "website_url": "https://beytoys.com/blogs/news",
+      "description": "Welcome to BeyToys Blog! Our founder, Sarah, started this blog in 2020 with the goal of providing Beyblade fans with news and updates on the latest toys and accessories. We also offer tips and tricks for getting the most out of your Beyblade battles.",
+      "followers": {
+        "facebook": 802
+      },
+      "image_url": "https://i1.feedspot.com/5538049.jpg?t=1681189339"
+    },
+    {
+      "title": "The Beybladers Blog",
+      "feed_url": "https://www.buybeyblades.com/blogs/buybeyblades-ultimate-blog.atom",
+      "website_url": "https://www.buybeyblades.com/blogs/buybeyblades-ultimate-blog",
+      "description": "Hi, I'm Kevin, the founder of The Beybladers Blog. I created this blog in 2017 to connect with other Beyblade enthusiasts and share my knowledge of the game. Here, you'll find articles on everything from Beyblade history to gameplay tips.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5538043.jpg?t=1681189073"
+    },
+    {
+      "title": "Beystation Blog",
+      "feed_url": "https://beystation.com/blogs/beyblade-blog.atom",
+      "website_url": "https://beystation.com/blogs/beyblade-blog",
+      "description": "Beystation Blog is a blog dedicated to Beyblade games and products. Founded in 2020, the blog features reviews, news, and analysis of the latest Beyblade products and games. The blog also provides insights into the strategies and techniques for playing the game.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5538046.jpg?t=1681189257"
+    },
+    {
+      "title": "Beybade Premier Blog",
+      "feed_url": "https://beybladepremier.com/blogs/beyblade.atom",
+      "website_url": "https://beybladepremier.com/en-in/blogs/beyblade",
+      "description": "Beyblade Premier Blog is a blog started by Beyblade enthusiasts who share their insights, opinions, and knowledge about everything related to the spinning tops game. Founded in 2019, the blog features reviews, tips, and tricks for Beyblade fans worldwide.",
+      "followers": {
+        "facebook": 450,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5538042.jpg?t=1681189174"
+    }
+  ]
+}

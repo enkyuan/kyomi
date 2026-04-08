@@ -1,0 +1,116 @@
+{
+  "category": "Hackathon",
+  "source_url": "https://rss.feedspot.com/hackathon_rss_feeds",
+  "feeds": [
+    {
+      "title": "Merced College \u00bb Hackathon",
+      "feed_url": "https://cspathways.us/news/?feed=rss2&cat=17",
+      "website_url": "https://cspathways.us/news/?cat=17",
+      "description": "Updates, opportunities, and news from the CS department and Hackathons at Merced College! We work with the K 12 schools, as well as the Universities and State Colleges to make pathways into Computational Science for our students. Using Community of Practice we are making a difference in their lives, in our community, and the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5456630.jpg?t=1665732884"
+    },
+    {
+      "title": "Grafana Labs \u00bb Hackathon",
+      "feed_url": "https://grafana.com/tags/hackathon/index.xml",
+      "website_url": "https://grafana.com/tags/hackathon/",
+      "description": "Recent content in a hackathon on Grafana Labs! Grafana was built on the principle that data should be accessible to everyone in your organization, not just the single Ops person. By democratizing data, Grafana helps to facilitate a culture where data can easily be used and accessed by the people that need it, helping to break down data silos and empower teams.",
+      "followers": {
+        "facebook": 18800,
+        "twitter": 65099
+      },
+      "image_url": "https://i1.feedspot.com/5456617.jpg?t=1665729785"
+    },
+    {
+      "title": "Microsoft Garage Blog \u00bb Hackathon",
+      "feed_url": "https://www.microsoft.com/en-us/garage/blog/category/hackathons/feed/",
+      "website_url": "https://www.microsoft.com/en-us/garage/blog/category/hackathons/",
+      "description": "Check out everything about Hackathons on our blog! The Microsoft Garage delivers programs and experiences to our employees, customers, and partners that drive collaboration, creativity, and experimentation. Our motto 'doers, not talkers' continues to be the core of what we are. The Garage attracts people who are passionate about making a difference in the world.",
+      "followers": {
+        "twitter": 9700
+      },
+      "image_url": "https://i1.feedspot.com/5456623.jpg?t=1665733106"
+    },
+    {
+      "title": "Nvidia Developer Blog \u00bb Hackathon",
+      "feed_url": "https://developer.nvidia.com/blog/tag/hackathon/feed/",
+      "website_url": "https://developer.nvidia.com/blog/tag/hackathon/",
+      "description": "Hackathon's news and tutorials for developers, data scientists, and IT admins. AI is transforming every industry and solving real-world problems. Learn about the researchers, startups, and business leaders shaping the future.",
+      "followers": {
+        "facebook": 186400,
+        "twitter": 1500,
+        "instagram": 275400
+      },
+      "image_url": "https://i1.feedspot.com/5456618.jpg?t=1665730651"
+    },
+    {
+      "title": "UT Dallas \u00bb Hackathon",
+      "feed_url": "https://cs.utdallas.edu/category/hackathon/feed/",
+      "website_url": "https://cs.utdallas.edu/category/hackathon/",
+      "description": "Check out for all the updates and information about Hackathon. UT Dallas is a top public university located in one of the nation's fastest-growing metropolitan regions. Our eight schools offer more than 140 undergraduate and graduate programs, plus professional certificates and fast-track programs.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 552
+      },
+      "image_url": "https://i1.feedspot.com/5456632.jpg?t=1665728822"
+    },
+    {
+      "title": "Hackathons International",
+      "feed_url": "https://www.hackathonsinternational.com/blog-feed.xml",
+      "website_url": "https://www.hackathonsinternational.com/resources",
+      "description": "Read our articles, templates, and guides to know about what is hackathon, what happens there, what is the secret sauce to creating it, and more! Hackathons International delivers the best Hackathon experiences for our communities. Our people are at the core of what we do, and we LOVE Hackathons. Yes, we have the Hackathon-bug and we want to vigorously spread it around the world by running best-in-class Hackathon events.",
+      "followers": {
+        "twitter": 416
+      },
+      "image_url": "https://i1.feedspot.com/5456629.jpg?t=1665731136"
+    },
+    {
+      "title": "HackerEarth Blog \u00bb Hackathon",
+      "feed_url": "https://www.hackerearth.com/blog/innovation-management/hackathons/feed/",
+      "website_url": "https://www.hackerearth.com/blog/innovation-management/hackathons/",
+      "description": "Check out the latest blog articles, webinars, insights, and other resources on Hackathons on the HackerEarth blog now! Creating the tech behind building great tech teams has taught us that the key to real, lasting success is always the people. So we've built a culture of acceptance where introverts and extroverts, early birds and night owls, and left-brainers, as well as right-brainers, feel at home.",
+      "followers": {
+        "facebook": 436100,
+        "twitter": 27200
+      },
+      "image_url": "https://i1.feedspot.com/5456628.jpg?t=1665733598"
+    },
+    {
+      "title": "Entrepreneurship at Cornell \u00bb Hackathon",
+      "feed_url": "https://eship.cornell.edu/category/hackathon/feed/",
+      "website_url": "https://eship.cornell.edu/category/hackathon/",
+      "description": "Hackathon's section contains articles on Optimizing Human Performance, Teams taking a crack at world food issues at the digital ag hackathon, Student innovation shines in Animal Health Hackathon, and more! Entrepreneurship at Cornell is a diverse, university-wide program that finds and fosters the entrepreneurial spirit in participants from every college, every field, and in every stage of life.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5456626.jpg?t=1665731354"
+    },
+    {
+      "title": "Hack The Hub Blog",
+      "feed_url": "https://www.hackthehub.com/feed/",
+      "website_url": "https://www.hackthehub.com/blog/",
+      "description": "HackTheHub's blog where we share insights, tips, and lessons about hackathons, talent, startups, and developer relations. Hackathons that bring highly-skilled tech teams together, to innovate, create and collaborate - all while having fun.",
+      "followers": {
+        "twitter": 1700,
+        "instagram": 203
+      },
+      "image_url": "https://i1.feedspot.com/5456625.jpg?t=1665730103"
+    },
+    {
+      "title": "Alvin Ramoutar \u00bb Hackathon",
+      "feed_url": "https://alvinr.ca/category/hackathon/feed/",
+      "website_url": "https://alvinr.ca/category/hackathon/",
+      "description": "Know all about HJackathons on our blog. Find articles on topics like HP 17-by3063st Screen Replacement, 1.25' Telescope Eyepiece & Adapter Caps, Zoom, enhance, zoom some more, Tweaking a Red Dot ViewFinder, and many more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5456622.jpg?t=1665731535"
+    },
+    {
+      "title": "Tips.Hackathon.com",
+      "feed_url": "https://tips.hackathon.com/article/rss.xml",
+      "website_url": "https://tips.hackathon.com/",
+      "description": "If you're thinking about running a corporate hackathon or attending a hackathon, read our blog and discover the best tips, best practices, and case studies from global leaders. Tips.Hackathon.com works to bring you the best in web3 & hackathons",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5456621.jpg?t=1665732687"
+    }
+  ]
+}

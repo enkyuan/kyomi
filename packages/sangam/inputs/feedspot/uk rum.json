@@ -1,0 +1,73 @@
+{
+  "category": "UK Rum",
+  "source_url": "https://rss.feedspot.com/uk_rum_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Fat Rum Pirate",
+      "feed_url": "https://thefatrumpirate.com/feed",
+      "website_url": "https://thefatrumpirate.com/",
+      "description": "The Fat Rum Pirate is the rum blog that offers an unsophisticated review of the world of rum.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 1900,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4908055.jpg?t=1614061420"
+    },
+    {
+      "title": "Rumming",
+      "feed_url": "https://rumming.co.uk/feed/",
+      "website_url": "http://rumming.co.uk/",
+      "description": "Rumming can be described as a fun experience, which involves a bit more than drinking rum; it is the appreciation of the rum. It is origin, characteristics and history, and the journey of discovering new rums.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4908045.jpg?t=1614061426"
+    },
+    {
+      "title": "The Lone Caner",
+      "feed_url": "https://thelonecaner.com/category/rum-reviews-by-country/uk/feed/",
+      "website_url": "https://thelonecaner.com/category/rum-reviews-by-country/uk/",
+      "description": "The Lone Caner is an offshoot from the Liquorature book club, where the original rum reviews were posted.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 287
+      },
+      "image_url": "https://i1.feedspot.com/4908060.jpg?t=1614061434"
+    },
+    {
+      "title": "The Rum Barrel Blog",
+      "feed_url": "https://therumbarrel.co.uk/feed/",
+      "website_url": "https://therumbarrel.co.uk/category/article/",
+      "description": "The Rum Barrel Blog is a blog about rum by Alexandru Sandu. He writes rum reviews and personal opinions to help educate others about the intricacies of rum. He is a cocktail bartender and rum enthusiast based in London.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 302,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5351545.jpg?t=1638966198"
+    },
+    {
+      "title": "The Rum Company Blog",
+      "feed_url": "https://www.therum.company/blog?format=rss",
+      "website_url": "https://www.therum.company/blog",
+      "description": "A one-stop-shop for everything rum, providing helpful taste notes, the latest rum news, mixer recommendations, and cocktail recipes. The Rum Company is a dedicated online rum shop selling rums from all over Britain.",
+      "followers": {
+        "facebook": 9400,
+        "instagram": 9500
+      },
+      "image_url": "https://i1.feedspot.com/5351549.jpg?t=1669029902"
+    },
+    {
+      "title": "Craft Rum Club",
+      "feed_url": "https://www.craftrumclub.co/lets-talk-rum/feed/",
+      "website_url": "https://www.craftrumclub.co/lets-talk-rum/",
+      "description": "Covers the latest rum news, rums of the month, and cocktail recipes. Craft Rum Club is a UK-based rum subscription service of premium crafted rums from around the world.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 514
+      },
+      "image_url": "https://i1.feedspot.com/5351550.jpg?t=1638965473"
+    }
+  ]
+}

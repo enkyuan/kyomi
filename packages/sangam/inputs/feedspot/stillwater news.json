@@ -1,0 +1,28 @@
+{
+  "category": "Stillwater News",
+  "source_url": "https://rss.feedspot.com/stillwater_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Stillwater News Press",
+      "feed_url": "https://www.stwnewspress.com/search/?f=rss&t=article&c=news&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.stwnewspress.com/",
+      "description": "Stillwater News Press is a daily newspaper and 24-hour news web and mobile digital site serving the Stillwater, Oklahoma, community and surrounding area with local and state news, sports, opinion, classifieds and more.",
+      "followers": {
+        "facebook": 28900,
+        "twitter": 7700
+      },
+      "image_url": "https://i1.feedspot.com/5155395.jpg?t=1590060352"
+    },
+    {
+      "title": "Stillwater News Network",
+      "feed_url": "https://www.stillwaternews.net/category/news/feed",
+      "website_url": "https://www.stillwaternews.net/",
+      "description": "Stillwater News Network delivers up-to-the-minute news and information on the latest top stories, weather, entertainment, sports, lifestyle and more.",
+      "followers": {
+        "facebook": 10500,
+        "twitter": 428
+      },
+      "image_url": "https://i1.feedspot.com/5155396.jpg"
+    }
+  ]
+}

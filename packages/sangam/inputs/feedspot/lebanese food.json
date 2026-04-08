@@ -1,0 +1,87 @@
+{
+  "category": "Lebanese Food",
+  "source_url": "https://rss.feedspot.com/lebanese_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Lebanese Recipes",
+      "feed_url": "https://feeds.feedburner.com/homemade-Lebanese-Recipes",
+      "website_url": "https://homemade-recipes.blogspot.com/",
+      "description": "Browse Lebanese and Arabic food cooking recipes including main dishes, chicken, lamb, beef, vegetarian and traditional desserts.",
+      "followers": {
+        "facebook": 15900,
+        "twitter": 268
+      },
+      "image_url": "https://i1.feedspot.com/4637362.jpg?t=1616412299"
+    },
+    {
+      "title": "The Lemon Bowl Lebanese",
+      "feed_url": "https://thelemonbowl.com/middle-eastern/feed/",
+      "website_url": "https://thelemonbowl.com/middle-eastern/",
+      "description": "From grape leaves to baba ganoush, hummus and everything in between these Lebanese recipes are a reflection of my Lebanese heritage. A healthy food and travel blog containing simple Lebanese recipes and tips on keeping you and your family active and healthy.",
+      "followers": {
+        "facebook": 292900,
+        "twitter": 12500,
+        "instagram": 46100
+      },
+      "image_url": "https://i1.feedspot.com/4635547.jpg?t=1616412321"
+    },
+    {
+      "title": "Rose Water and Orange Blossoms",
+      "feed_url": "https://maureenabood.com/feed/",
+      "website_url": "https://maureenabood.com/",
+      "description": "Browse Lebanese recipes, techniques, and stories from the trained chef, food writer, and photographer Maureen Abood. From my Lebanese kitchen to yours.",
+      "followers": {
+        "twitter": 1600,
+        "instagram": 35800
+      },
+      "image_url": "https://i1.feedspot.com/1156156.jpg?t=1619413041"
+    },
+    {
+      "title": "Beirutista",
+      "feed_url": "https://www.beirutista.co/feeds/posts/default?alt=rss",
+      "website_url": "https://www.beirutista.co/",
+      "description": "Danielle Issa a Lebanese-American girl dishes up her adventures living between two worlds serving Beirut to the public.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1100,
+        "instagram": 6900
+      },
+      "image_url": "https://i1.feedspot.com/4640477.jpg?t=1616412335"
+    },
+    {
+      "title": "Taste of Beirut",
+      "feed_url": "https://www.tasteofbeirut.com/feed/",
+      "website_url": "https://www.tasteofbeirut.com/",
+      "description": "Taste of Beirut started in 2009 and its main purpose is to share my Lebanese heritage with the world through recipes, anecdotes, and cultural tidbits. The Taste of Beirut Blog is filled with recipes, anecdotes, and cultural tidbits about Joumana Accad's Lebanese heritage.",
+      "followers": {
+        "facebook": 17200,
+        "twitter": 1600,
+        "instagram": 52900
+      },
+      "image_url": "https://i1.feedspot.com/4635341.jpg?t=1609843075"
+    },
+    {
+      "title": "The Lebanese Plate",
+      "feed_url": "https://thelebaneseplate.com/feed/",
+      "website_url": "https://thelebaneseplate.com/recipes/",
+      "description": "Welcome to The Lebanese Plate! If you're a lover of Lebanese food then this is the place for you. Although traditional Lebanese food tends to look simple & sometimes drab, we all know it tastes delicious, at The Lebanese Plate we are going to change all that through our unique styling & photography so that all can see that it can look as great as it tastes.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 72
+      },
+      "image_url": "https://i1.feedspot.com/4635529.jpg?t=1616412331"
+    },
+    {
+      "title": "A Pinch of Adventure",
+      "feed_url": "https://apinchofadventure.com/feed/",
+      "website_url": "https://apinchofadventure.com/",
+      "description": "A Pinch Of Adventure is a cultural cuisine and family recipe blog that specializes in Lebanese food, Mediterranean cuisine and family friendly recipes.",
+      "followers": {
+        "facebook": 762,
+        "twitter": 613,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5263356.jpg?t=1617191803"
+    }
+  ]
+}

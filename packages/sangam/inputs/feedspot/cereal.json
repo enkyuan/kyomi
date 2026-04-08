@@ -1,0 +1,39 @@
+{
+  "category": "Cereal",
+  "source_url": "https://rss.feedspot.com/cereal_rss_feeds",
+  "feeds": [
+    {
+      "title": "Cerealously",
+      "feed_url": "https://www.cerealously.net/feed/",
+      "website_url": "https://www.cerealously.net/",
+      "description": "Your morning bowl of breakfast cereal reviews, news, and more.Cerealously aims to be your online hub for all information on breakfast cereal and its surrounding culture.",
+      "followers": {
+        "twitter": 12900,
+        "instagram": 14400
+      },
+      "image_url": "https://i1.feedspot.com/5385535.jpg?t=1648453880"
+    },
+    {
+      "title": "The Cereal Aisle Blog",
+      "feed_url": "https://cerealaisle.home.blog/feed/",
+      "website_url": "https://cerealaisle.home.blog/",
+      "description": "Joe Evans shares his love for cereals in their blog where they taste-test one bowl of cereal at a time. The Cereal Aisle is your source to read more about cereals news, reviews, stuff, and more.",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5385532.jpg?t=1648455073"
+    },
+    {
+      "title": "Mulberry Tree Breakfast Cereals Blog",
+      "feed_url": "https://mulberry-tree.com.au/feed/",
+      "website_url": "https://mulberry-tree.com.au/blog/",
+      "description": "Mulberry Tree Fine Foods is a wholesaler of fine foods, an Australian family-owned registered business name that is long established in premium-quality breakfast cereals. We produce superb quality muesli using an inspiring array of fruits, nuts, and grains.",
+      "followers": {
+        "facebook": 53,
+        "twitter": 7,
+        "instagram": 35
+      },
+      "image_url": "https://i1.feedspot.com/5385533.jpg?t=1651126955"
+    }
+  ]
+}

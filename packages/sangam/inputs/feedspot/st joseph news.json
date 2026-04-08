@@ -1,0 +1,26 @@
+{
+  "category": "St. Joseph News",
+  "source_url": "https://rss.feedspot.com/st_joseph_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Griffon News",
+      "feed_url": "https://www.griffonnews.com/",
+      "website_url": "https://www.griffonnews.com/",
+      "description": "Your source for Missouri Western news online.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5148365.jpg"
+    },
+    {
+      "title": "News-Press NOW",
+      "feed_url": "https://www.newspressnow.com/search/?f=rss&t=article&c=news/local_news&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.newspressnow.com/",
+      "description": "News-Press NOW is the most comprehensive and in-depth news source covering Northwest Missouri and Northeast Kansas.",
+      "followers": {
+        "twitter": 10100
+      },
+      "image_url": "https://i1.feedspot.com/5148370.jpg"
+    }
+  ]
+}

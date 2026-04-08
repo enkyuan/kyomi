@@ -1,0 +1,53 @@
+{
+  "category": "Lakeland News",
+  "source_url": "https://rss.feedspot.com/lakeland_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "LkldNow",
+      "feed_url": "https://www.lkldnow.com/feed/",
+      "website_url": "https://www.lkldnow.com/",
+      "description": "lkldnow is mobile news to connect you with Lakeland, Fla. - your quick and complete source for what's happening.",
+      "followers": {
+        "facebook": 24100,
+        "twitter": 3000,
+        "instagram": 11700
+      },
+      "image_url": "https://i1.feedspot.com/5139404.jpg?t=1671167300"
+    },
+    {
+      "title": "ABC Action News \u00bb Lakeland",
+      "feed_url": "https://www.abcactionnews.com/news/region-polk/lakeland.rss",
+      "website_url": "https://www.abcactionnews.com/news/region-polk/lakeland",
+      "description": "Stay current on all news releases and scoops from Lakeland and Polk County. ABC Action News delivers trending local news stories in Sports, Business, and Crime in this section. ABC Action News - WFTS is the primary ABC network affiliate for the Tampa-Bay television market, programming a strong schedule of news, sports, and entertainment.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 181700,
+        "instagram": 79000
+      },
+      "image_url": "https://i1.feedspot.com/5467072.jpg?t=1671167491"
+    },
+    {
+      "title": "The Ledger",
+      "feed_url": "https://www.theledger.com/",
+      "website_url": "https://www.theledger.com/",
+      "description": "theledger.com delivers up-to-the-minute news and information on the latest top stories, weather, entertainment, politics and more.",
+      "followers": {
+        "facebook": 71400,
+        "twitter": 12600
+      },
+      "image_url": "https://i1.feedspot.com/5139393.jpg?t=1671167548"
+    },
+    {
+      "title": "LALtoday",
+      "feed_url": "https://laltoday.6amcity.com/",
+      "website_url": "https://laltoday.6amcity.com/",
+      "description": "LALtoday is Your Resource for the Best of What You Need to Know About Lakeland, FL Curated, Condensed & Delivered to Your Inbox & Social Feeds.",
+      "followers": {
+        "facebook": 35900,
+        "twitter": 5100,
+        "instagram": 45200
+      },
+      "image_url": "https://i1.feedspot.com/5139406.jpg?t=1671167390"
+    }
+  ]
+}

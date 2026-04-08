@@ -1,0 +1,999 @@
+{
+  "category": "Non Profit",
+  "source_url": "https://rss.feedspot.com/nonprofit_rss_feeds",
+  "feeds": [
+    {
+      "title": "TechSoup Blog",
+      "feed_url": "https://blog.techsoup.org/posts/rss.xml",
+      "website_url": "https://blog.techsoup.org/posts",
+      "description": "TechSoup equips changemakers with transformative technology solutions and skills they need to improve lives globally and locally. TechSoup supports nonprofits, charities, and libraries by providing access to donations and discount rates on software, hardware, and services from major brands.",
+      "followers": {
+        "facebook": 53900,
+        "twitter": 52000,
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/5224385.jpg?t=1621081477"
+    },
+    {
+      "title": "Candid Blog",
+      "feed_url": "https://blog.candid.org/feed/",
+      "website_url": "https://blog.candid.org/",
+      "description": "We are Candid. We connect people who want to change the world to the resources they need to do it. Formerly Foundation Center and GuideStar. Stay in the know with Candid's blog for nonprofits and funders. Get the latest on philanthropy, including tips and training, trends and issues, and data and insights.",
+      "followers": {
+        "facebook": 67000,
+        "twitter": 136800,
+        "instagram": 12400
+      },
+      "image_url": "https://i1.feedspot.com/1402035.jpg?t=1622109286"
+    },
+    {
+      "title": "NonProfit PRO",
+      "feed_url": "https://www.nonprofitpro.com/feed/",
+      "website_url": "https://www.nonprofitpro.com/",
+      "description": "NonProfit PRO magazine is a strategy guide for nonprofit professionals. It is the go-to source for nonprofit management and strategy. Developed for thought leaders and innovators, we cover topics ranging from internal issues such human resources, board and volunteer management to technology to tax and legal matters, news and, of course, raising funds.",
+      "followers": {
+        "twitter": 17200
+      },
+      "image_url": "https://i1.feedspot.com/4677347.jpg?t=1614681215"
+    },
+    {
+      "title": "Nonprofit Marketing Guide Blog",
+      "feed_url": "https://www.nonprofitmarketingguide.com/feed/",
+      "website_url": "https://www.nonprofitmarketingguide.com/blog/",
+      "description": "Nonprofit Marketing Guide helps nonprofit communicators learn their jobs, love their work, and lead their teams. Get the latest tips and insights from the world of nonprofit communications on everything from strategies and tactics to self-care and leadership.",
+      "followers": {
+        "facebook": 20600,
+        "twitter": 1100,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5281203.jpg?t=1621077790"
+    },
+    {
+      "title": "Nonprofit AF",
+      "feed_url": "https://nonprofitaf.com/feed/",
+      "website_url": "https://nonprofitaf.com/",
+      "description": "Exploring the fun and frustrations of nonprofit work. Vu Le ('voo lay') is a writer, speaker, vegan, Pisces, and the former Executive Director of RVC, a nonprofit in Seattle that promotes social justice by developing leaders of color, strengthening organizations led by communities of color, and fostering collaboration between diverse communities.",
+      "followers": {
+        "facebook": 62200,
+        "twitter": 433,
+        "instagram": 53200
+      },
+      "image_url": "https://i1.feedspot.com/4677940.jpg?t=1621263202"
+    },
+    {
+      "title": "Mersky, Jaffe & Associates Blog",
+      "feed_url": "https://merskyjaffe.com/feed/",
+      "website_url": "https://merskyjaffe.com/knowledge-archive/blog/",
+      "description": "Learn how we think with our blog filled with hundreds of articles on nonprofit fundraising, leadership, and executive search. Mersky, Jaffe & Associates is committed to the financial sustainability of those nonprofit organizations and the communities they serve.",
+      "followers": {
+        "facebook": 7,
+        "twitter": 82
+      },
+      "image_url": "https://i1.feedspot.com/5452128.jpg?t=1664790476"
+    },
+    {
+      "title": "Donorbox Nonprofit Blog",
+      "feed_url": "https://donorbox.org/nonprofit-blog/feed",
+      "website_url": "https://donorbox.org/nonprofit-blog",
+      "description": "A resource center where nonprofits can learn about fundraising best practices. You'll find helpful strategies, advice, and tips on topics ranging from donor management to receiving donations and making the most of various fundraising seasons. Donorbox is a recurring donation platform that provides nonprofits with a better donation checkout process.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 6300
+      },
+      "image_url": "https://i1.feedspot.com/5311716.jpg?t=1628770740"
+    },
+    {
+      "title": "Bloomerang Blog",
+      "feed_url": "https://bloomerang.com/feed/",
+      "website_url": "https://bloomerang.co/blog/",
+      "description": "The Bloomerang blog publishes Insights, updates, and articles for nonprofits and fundraising professionals. Bloomerang is the community-focused nonprofit donor management software built to deliver a better giving experience and help organizations thrive.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 7700,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4387207.jpg?t=1651062466"
+    },
+    {
+      "title": "SSIR",
+      "feed_url": "https://ssir.org/site/rss_2.0",
+      "website_url": "https://ssir.org/",
+      "description": "Stanford Social Innovation Review (SSIR) is an award-winning magazine and website that covers cross-sector solutions to global problems. SSIR's mission is to advance, educate, and inspire the field of social innovation by seeking out, cultivating, and disseminating the best in research- and practice-based knowledge.",
+      "followers": {
+        "facebook": 81200,
+        "twitter": 135800
+      },
+      "image_url": "https://i1.feedspot.com/5004393.jpg?t=1663246505"
+    },
+    {
+      "title": "Double the Donation Blog",
+      "feed_url": "https://doublethedonation.com/feed/",
+      "website_url": "https://doublethedonation.com/blog/",
+      "description": "Looking to raise more money from employee matching gift programs? Double the Donation provides matching gift tools to nonprofits of all sizes. Double the Donation's mission is simple. We strive to help nonprofit organizations and schools increase fundraising from corporate employee matching gift and volunteer grant programs.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/5449711.jpg?t=1664187915"
+    },
+    {
+      "title": "CharityVillage",
+      "feed_url": "https://charityvillage.com/feed/",
+      "website_url": "https://charityvillage.com/learning-centre/articles/",
+      "description": "Since 1995, CharityVillage has been the HR partner for recruitment in the Canadian nonprofit sector. Our specialized job and volunteer board for Canadian nonprofit professionals have helped thousands of organizations find exceptional talent. Stay up to date on the latest nonprofit and charitable sector articles in Canada. Plus, read articles written by subject matter experts in the sector.",
+      "followers": {
+        "facebook": 10800,
+        "twitter": 36500,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/5449713.jpg?t=1664187927"
+    },
+    {
+      "title": "GiveSmart",
+      "feed_url": "https://www.givesmart.com/feed/",
+      "website_url": "https://www.givesmart.com/resources/",
+      "description": "The MobileCause Blog is your resource for the industry's best nonprofit fundraising ideas, donor engagement strategies, and best practices.",
+      "followers": {
+        "facebook": 45700,
+        "twitter": 3800,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4683180.jpg?t=1618827638"
+    },
+    {
+      "title": "Nonprofit Quarterly",
+      "feed_url": "https://nonprofitquarterly.org/feed/",
+      "website_url": "https://nonprofitquarterly.org/",
+      "description": "The Nonprofit Quarterly is a nonprofit magazine publication providing research-based articles and resources to educate the nonprofit sector. NPQ envisions a world in which we live in an active democracy whose values are fully grounded in human rights, economic and social justice, racial equity, and thriving communities. Our mission is to foster an active, engaged, and sometimes disruptive civil sector.",
+      "followers": {
+        "facebook": 33400,
+        "twitter": 135100
+      },
+      "image_url": "https://i1.feedspot.com/4682543.jpg?t=1618827101"
+    },
+    {
+      "title": "GiveCentral Blog",
+      "feed_url": "https://blog.givecentral.org/feed/",
+      "website_url": "https://blog.givecentral.org/",
+      "description": "Find all the latest news about nonprofits, social media marketing, apps, & softwares. Get ideas on fundraising for nonprofits and easy fundraising ideas for schools & churches. An online donation platform to help nonprofits with fundraising and donor management.",
+      "followers": {
+        "facebook": 8800,
+        "twitter": 798
+      },
+      "image_url": "https://i1.feedspot.com/4972210.jpg?t=1616562301"
+    },
+    {
+      "title": "Nonprofit Hub",
+      "feed_url": "https://nonprofithub.org/feed/",
+      "website_url": "https://nonprofithub.org/",
+      "description": "The Nonprofit Hub is a place where you'll find the most relevant information to your organization, all in one handy place. You've got an organization you care about, and we care about helping you and your org succeed.",
+      "followers": {
+        "facebook": 6600,
+        "twitter": 14500
+      },
+      "image_url": "https://i1.feedspot.com/4222169.jpg?t=1618827230"
+    },
+    {
+      "title": "NMBL Strategies",
+      "feed_url": "https://www.nmblstrategies.com/blog?format=rss",
+      "website_url": "https://www.nmblstrategies.com/blog",
+      "description": "Our blog focuses on educating nonprofits on the best practices in the industry. Our team contributes insights based on 30+ years of nonprofit executive experience managing parks, museums, fundraising campaigns, and more. We use this experience to offer tried and true strategies but also embrace forward-thinking innovations.",
+      "followers": {
+        "facebook": 150,
+        "twitter": 352,
+        "instagram": 81
+      },
+      "image_url": "https://i1.feedspot.com/5274355.jpg?t=1619697083"
+    },
+    {
+      "title": "The Agitator",
+      "feed_url": "https://agitator.thedonorvoice.com/feed/",
+      "website_url": "https://agitator.thedonorvoice.com/",
+      "description": "Read Fundraising and Advocacy Strategies ... Trends, tips, with an edge.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1334778.jpg?t=1611125224"
+    },
+    {
+      "title": "Blue Avocado",
+      "feed_url": "https://blueavocado.org/feed/",
+      "website_url": "https://blueavocado.org/",
+      "description": "Blue Avocado is an online magazine designed to provide practical, tactical tips and tools to nonprofit leaders. A small but mighty team of committed social sector leaders produces the publication, enlisting content from a wide range of practitioners, funders, and experts.",
+      "followers": {
+        "facebook": 8400,
+        "instagram": 297
+      },
+      "image_url": "https://i1.feedspot.com/5449710.jpg?t=1664187909"
+    },
+    {
+      "title": "Nonprofit Law Blog",
+      "feed_url": "https://nonprofitlawblog.com/feed/",
+      "website_url": "https://nonprofitlawblog.com/",
+      "description": "The NEO Law Group believes that healthy nonprofits are more effective at creating positive change. We help create and maintain legally compliant nonprofits that have strong foundations on which to build great programs. And we provide practical and affordable counsel, giving leaders reassurance and confidence to best further their valuable missions.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/3648803.jpg?t=1612244574"
+    },
+    {
+      "title": "re: charity",
+      "feed_url": "https://recharity.ca/feed/",
+      "website_url": "https://recharity.ca/",
+      "description": "A site with ideas, resources, and tips to help your fundraising, create impact, and re-think the world of charity.",
+      "followers": {
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/5281205.jpg?t=1669900716"
+    },
+    {
+      "title": "Top Nonprofits",
+      "feed_url": "https://topnonprofits.com/feed/",
+      "website_url": "https://topnonprofits.com/",
+      "description": "Blog and resources focused on learning from the best in nonprofit management, fundraising, marketing, & technology.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 9600
+      },
+      "image_url": "https://i1.feedspot.com/4682672.jpg?t=1618827155"
+    },
+    {
+      "title": "M+R",
+      "feed_url": "https://www.mrss.com/feed/",
+      "website_url": "https://www.mrss.com/lab/",
+      "description": "Since 1991, M+R has been an active leader in many of the biggest movements, breakthroughs, and victories on behalf of people and the planet. Our founders are organizers at heart, and this grassroots spirit still guides our work today as we use online marketing, PR, and social media to engage the masses and raise money + raise hell for causes we believe in.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 5500,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/3579878.jpg?t=1664779234"
+    },
+    {
+      "title": "Nonprofit Learning Lab",
+      "feed_url": "https://www.nonprofitlearninglab.org/blog-feed.xml",
+      "website_url": "https://www.nonprofitlearninglab.org/",
+      "description": "The NLL is a national organization that connects, supports and develops professionals working in or connected to the nonprofit sector.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/4683468.jpg?t=1618827217"
+    },
+    {
+      "title": "Getting Attention",
+      "feed_url": "https://gettingattention.org/feed/",
+      "website_url": "https://gettingattention.org/resources/",
+      "description": "Marketing problem solver Nancy Schwartz helps nonprofit organizations hone messages and campaigns to grow loyal relationships with key supporters and spur them to donate, volunteer, and participate. Read Guidance, ideas and models for nonprofit communicators striving to help their organizations succeed through effective marketing.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 11900
+      },
+      "image_url": "https://i1.feedspot.com/4677231.jpg?t=1611125144"
+    },
+    {
+      "title": "Nonprofit HR Blog",
+      "feed_url": "https://www.nonprofithr.com/feed/",
+      "website_url": "https://www.nonprofithr.com/blog/",
+      "description": "Articles on HR from Nonprofit HR. Nonprofit HR is a full-service consulting firm dedicated exclusively to meeting the human resources needs of nonprofit organizations",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/4683350.jpg?t=1618827191"
+    },
+    {
+      "title": "Gail Perry Group \u00bb Fundraising",
+      "feed_url": "https://gailperrygroup.com/feed/",
+      "website_url": "https://gailperrygroup.com/nonprofit-fundraising-best-practices/",
+      "description": "Discover our advice for better fundraising. Get the latest insights and actionable advice from leading experts at Gail Perry Group. At Gail Perry Group, we empower nonprofits to achieve extraordinary fundraising results and build a better world. We equip you with actionable strategies, skills and tools tailored for your organization. With you at every step, we champion you to create real change - the kind you can measure.",
+      "followers": {
+        "facebook": 9400,
+        "twitter": 20400
+      },
+      "image_url": "https://i1.feedspot.com/5394475.jpg?t=1651063483"
+    },
+    {
+      "title": "Clairification",
+      "feed_url": "http://clairification.com/feed/",
+      "website_url": "https://clairification.com/",
+      "description": "Welcome to Clairification. Join me on the pathway to passionate philanthropy, not forgettable fundraising. A journey, not a destination. I'll be your guide, so you can be your donor's.",
+      "followers": {
+        "twitter": 7900
+      },
+      "image_url": "https://i1.feedspot.com/4677062.jpg?t=1612244579"
+    },
+    {
+      "title": "Nonprofit Tech for Good",
+      "feed_url": "https://www.nptechforgood.com/feed/",
+      "website_url": "https://www.nptechforgood.com/",
+      "description": "Founded in 2005 by Heather Mansfield, Nonprofit Tech for Good provides useful, easy-to-understand news and resources related to digital marketing and fundraising.",
+      "followers": {
+        "facebook": 110800,
+        "twitter": 769500,
+        "instagram": 77600
+      },
+      "image_url": "https://i1.feedspot.com/2245462.jpg?t=1618827111"
+    },
+    {
+      "title": "The Fundraising Coach Blog",
+      "feed_url": "https://fundraisingcoach.com/feed/",
+      "website_url": "https://fundraisingcoach.com/from-blog/",
+      "description": "An international leadership coach and fundraising trainer, Marc A. Pitman helps nonprofit board members and staff get excited about asking for money. It is a chock full of free articles and excellent fundraising trainings and nonprofit seminars.",
+      "followers": {
+        "facebook": 304,
+        "twitter": 11900
+      },
+      "image_url": "https://i1.feedspot.com/1468258.jpg?t=1616563512"
+    },
+    {
+      "title": "Foundation Group, Inc.",
+      "feed_url": "https://www.501c3.org/blog/feed/",
+      "website_url": "https://www.501c3.org/blog/",
+      "description": "Empowering Nonprofit Success Since 1995.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 912,
+        "instagram": 129
+      },
+      "image_url": "https://i1.feedspot.com/4683223.jpg?t=1618827167"
+    },
+    {
+      "title": "Christian Leadership Alliance (CLA) Blog",
+      "feed_url": "https://christianleadershipalliance.org/blog/feed/",
+      "website_url": "https://christianleadershipalliance.org/blog/",
+      "description": "Join the Christian Leadership Alliance (CLA) to build mission-critical competencies informed by biblical principles. CLA convenes and equips Christian nonprofit professionals worldwide. For five decades, this community has been foundational to the leadership development construct for organizations such as World Vision, The Salvation Army, Cru, Compassion International, The Navigators, and thousands more.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 10200,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/858960/page/4420593/logo_1746578491.png"
+    },
+    {
+      "title": "Whole Whale | Tech & Tactics for Social Impact",
+      "feed_url": "https://www.wholewhale.com/feed/?post_type=tips",
+      "website_url": "https://www.wholewhale.com/tips/",
+      "description": "Whole Whale is a digital agency that uses data and tech to increase the impact of nonprofits and for-benefit orgs through products, content, and services.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 4500,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4899302.jpg?t=1618827146"
+    },
+    {
+      "title": "OSIbeyond",
+      "feed_url": "https://www.osibeyond.com/feed/",
+      "website_url": "https://www.osibeyond.com/blog/",
+      "description": "Strategic IT Consulting Services for Nonprofits & Associations in Washington DC, Maryland, and Virginia.",
+      "followers": {
+        "twitter": 111
+      },
+      "image_url": "https://i1.feedspot.com/4683268.jpg?t=1618827195"
+    },
+    {
+      "title": "Joyaux Associates",
+      "feed_url": "https://feeds.feedburner.com/SimoneUncensored",
+      "website_url": "https://www.simonejoyaux.com/",
+      "description": "Simone Joyaux, ACFRE, Adv Dip, consultant for nonprofits and NGOs, specializes in fund development, fundraising, board development and strategic planning.",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4387204.jpg?t=1618827525"
+    },
+    {
+      "title": "Blackbaud Blog",
+      "feed_url": "https://blog.blackbaud.com/feed/",
+      "website_url": "https://blog.blackbaud.com/",
+      "description": "The go-to resource for best practices in marketing, social media, management, technology, and fundraising for nonprofits and other social good organizations.",
+      "followers": {
+        "facebook": 38600,
+        "twitter": 35200
+      },
+      "image_url": "https://i1.feedspot.com/4682528.jpg?t=1611124608"
+    },
+    {
+      "title": "Media Cause Blog",
+      "feed_url": "https://mediacause.com/blog/feed/",
+      "website_url": "https://mediacause.com/blog/",
+      "description": "Media Cause is a digital marketing agency for nonprofits. We use digital marketing strategies to drive growth and create impact for our mission-driven clients. Find out how we can help scale your impact.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 3600,
+        "instagram": 862
+      },
+      "image_url": "https://i1.feedspot.com/4683179.jpg?t=1611124615"
+    },
+    {
+      "title": "Tony Martignetti",
+      "feed_url": "https://tonymartignetti.com/feed/",
+      "website_url": "https://tonymartignetti.com/",
+      "description": "I deliver nonprofit fundraising solutions in Planned Giving & Charity Registration, designed for program growth. Also, host Tony Martignetti Nonprofit Radio.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/4677323.jpg?t=1618827520"
+    },
+    {
+      "title": "Ann Green's Nonprofit Blog",
+      "feed_url": "https://anngreennonprofit.com/feed/",
+      "website_url": "https://anngreennonprofit.com/",
+      "description": "Hi, I'm Ann Green and I'm a Nonprofit Communications Consultant. Connecting and engaging with your audience is the key to good communication. I have over 20 years of nonprofit experience and can help you with writing & editing, and planning & strategy.",
+      "followers": {
+        "facebook": 221,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4387189.jpg?t=1618827546"
+    },
+    {
+      "title": "Carolyn's Nonprofit Blog",
+      "feed_url": "https://carolynmappleton.com/feed/",
+      "website_url": "https://carolynmappleton.com/",
+      "description": "This blog shares Carolyn's experiences and advice regarding nonprofit fundraising and more!",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4683329.jpg?t=1618827555"
+    },
+    {
+      "title": "Big Duck Blog",
+      "feed_url": "https://bigduck.com/feed/",
+      "website_url": "http://bigduck.com/insights/",
+      "description": "Big Duck develops the voices of nonprofit organizations by developing strong brands, campaigns, and communications teams. Read about Effective branding, fundraising, and marketing for nonprofits.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 48
+      },
+      "image_url": "https://i1.feedspot.com/4682716.jpg?t=1618827560"
+    },
+    {
+      "title": "CANDLE, Inc. | Community-Based Drug Prevention",
+      "feed_url": "https://candleinc.org/feed/",
+      "website_url": "https://candleinc.org/",
+      "description": "CANDLE Inc. is 501c3 non-profit best known for their parent/child Reality Tour drug prevention program. It is the only program ready for any community to replicate to keep healthy families healthy. There is a startup guide at RealityTour.org (CANDLE is the acronym for Community Action Network for Drugfree Lifestyle Empowerment)",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 350
+      },
+      "image_url": "https://i1.feedspot.com/5005995.jpg?t=1618827572"
+    },
+    {
+      "title": "Thunderhead Works",
+      "feed_url": "http://www.thunderheadworks.com/feed/",
+      "website_url": "https://www.thunderheadworks.com/",
+      "description": "Accelerate audacious world change. Make the world a better place. Grow personally and grow support for your nonprofit and cause.",
+      "followers": {
+        "facebook": 76,
+        "twitter": 21
+      },
+      "image_url": "https://i1.feedspot.com/4683262.jpg?t=1618827610"
+    },
+    {
+      "title": "Nonprofit Utopia",
+      "feed_url": "https://nonprofitutopia.com/feed/",
+      "website_url": "https://nonprofitutopia.com/blog/",
+      "description": "Nonprofit Utopia is an online community of emerging nonprofit leaders. We provide ongoing professional development and networking opportunities in which experienced nonprofit professionals can share expertise with the next generation of ethical leaders.",
+      "followers": {
+        "facebook": 597,
+        "twitter": 208
+      },
+      "image_url": "https://i1.feedspot.com/5211547.jpg?t=1603967904"
+    },
+    {
+      "title": "Mary Cahalane Blog",
+      "feed_url": "https://mcahalane.com/feed/",
+      "website_url": "https://mcahalane.com/hands-on-fundraising-blog/",
+      "description": "Welcome to Hands-On Fundraising Blog! Read on for fundraising advice and insights for fundraisers like you. My fundraising experience includes arts, community, social service, and education organizations. I've helped to build successful fundraising programs by focusing on great communications, sensible planning, and strong donor relationships.",
+      "followers": {
+        "facebook": 421,
+        "twitter": 12400
+      },
+      "image_url": "https://i1.feedspot.com/1847696.jpg?t=1616562343"
+    },
+    {
+      "title": "Beth Kanter",
+      "feed_url": "https://bethkanter.org/feed/",
+      "website_url": "https://bethkanter.org/beths-blog/",
+      "description": "Beth Kanter is the author of Beth's Blog: How Nonprofits Can Use Social Media, one of the longest-running and most popular blogs for nonprofits. Beth has over 30 years working in the nonprofit sector in technology, training, capacity building, evaluation, fundraising, and marketing.",
+      "followers": {
+        "facebook": 20500,
+        "twitter": 328800,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/81324.jpg?t=1611124583"
+    },
+    {
+      "title": "SocialPros Blog",
+      "feed_url": "https://socialpros.io/blog/feed/",
+      "website_url": "https://socialpros.io/blog/",
+      "description": "Socialpros is here to make your dreams of social media stardom a reality. We have worked with thousands of influencers, musicians, and brands across the globe! With social media growing daily, standing out from the crowd can become a near impossible task! Let us do the heavy lifting while you focus on making great content.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5449715.jpg?t=1664433777"
+    },
+    {
+      "title": "Get Fully Funded",
+      "feed_url": "https://getfullyfunded.com/blog/feed/?x=1",
+      "website_url": "https://getfullyfunded.com/blog/",
+      "description": "Ready to master fundraising so you can spend more time helping people? Get great ideas from the fundraising blog at Get Fully Funded. Fundraising tips, resources and training to help your nonprofit raise the money of your dreams.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 8000,
+        "instagram": 747
+      },
+      "image_url": "https://i1.feedspot.com/4723479.jpg?t=1618827179"
+    },
+    {
+      "title": "The Fundraising Authority",
+      "feed_url": "https://thefundraisingauthority.com/feed/",
+      "website_url": "https://thefundraisingauthority.com/",
+      "description": "Tools and information for schools, churches, and other non-profits...",
+      "followers": {
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/4682669.jpg?t=1618827619"
+    },
+    {
+      "title": "Care2Blog | Online Fundraising, Advocacy, and Social Media",
+      "feed_url": "https://www.care2services.com/care2blog/rss.xml",
+      "website_url": "https://www.care2services.com/care2blog",
+      "description": "Care2.com is an online social action network with over 40 million members around the world. Learn how to grow your nonprofit through Donor Recruitment, Online Fundraising, Advocacy, and Social Media with Care2.s team of expert nonprofit professionals.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4343374.jpg?t=1618827208"
+    },
+    {
+      "title": "Ignited Fundraising",
+      "feed_url": "https://ignitedfundraising.com/feed/",
+      "website_url": "https://ignitedfundraising.com/blog/",
+      "description": "Lori L. Jacobwith is a master storyteller, keynote speaker, and trainer who teaches how to use powerful storytelling to raise more money. She's helped thousands of nonprofits raise $500+ million. She is passionate about making conscious choices to live a vital, healthy life.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 7700,
+        "instagram": 496
+      },
+      "image_url": "https://i1.feedspot.com/4387199.jpg?t=1616564327"
+    },
+    {
+      "title": "Qgiv Blog",
+      "feed_url": "https://www.qgiv.com/blog/feed/",
+      "website_url": "https://www.qgiv.com/blog/",
+      "description": "A fundraising platform that will grow with your organization. Branded, easy-to-use online donation pages, customizable peer-to-peer fundraising sites, in person donations with Qgiv kiosks and more.",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 1900,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4683288.jpg?t=1618827141"
+    },
+    {
+      "title": "Center for Nonprofit Excellence",
+      "feed_url": "http://feeds.feedburner.com/CenterForNonprofitExcellenceNewsAndEvents",
+      "website_url": "https://www.cnpe.org/",
+      "description": "Co-creating a vibrant, exemplary nonprofit community in Greater Louisville through collaboration, shared learning, advocacy, and promotion of innovation and excellence.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4683457.jpg?t=1618827221"
+    },
+    {
+      "title": "Nonprofit Information A Site Full of Tips for Nonprofits",
+      "feed_url": "https://nonprofitinformation.com/feed/",
+      "website_url": "https://nonprofitinformation.com/",
+      "description": "Nonprofit Information is a resource for nonprofits who need help such as starting a nonprofit, choosing a board, retaining volunteers, fundraising and more.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 9900
+      },
+      "image_url": "https://i1.feedspot.com/4682750.jpg?t=1618827225"
+    },
+    {
+      "title": "Leading by Design: A Resource for Nonprofits",
+      "feed_url": "http://leadingbydesign.blogspot.com/feeds/posts/default",
+      "website_url": "http://leadingbydesign.blogspot.com/",
+      "description": "Nonprofit leadership is more complex and demanding than ever before, requiring updated and innovative ways to meet mission and keep organizations healthy. This blog explores issues about forward-looking governance and leadership.",
+      "followers": {
+        "twitter": 865
+      },
+      "image_url": "https://i1.feedspot.com/1710002.jpg?t=1618827568"
+    },
+    {
+      "title": "Take Two",
+      "feed_url": "https://take2services.com/feed/",
+      "website_url": "https://take2services.com/",
+      "description": "We heart everything nonprofit - well, almost everything. But we specialize in combining communications and development strategies for nonprofits.",
+      "followers": {
+        "facebook": 165,
+        "twitter": 839
+      },
+      "image_url": "https://i1.feedspot.com/4683255.jpg?t=1618827577"
+    },
+    {
+      "title": "DonorDreams Blog",
+      "feed_url": "https://donordreams.wordpress.com/feed/",
+      "website_url": "https://donordreams.wordpress.com/",
+      "description": "Let's discover together what it means to be donor centered.",
+      "followers": {
+        "twitter": 941
+      },
+      "image_url": "https://i1.feedspot.com/4387208.jpg?t=1618827582"
+    },
+    {
+      "title": "Nonprofit Nate",
+      "feed_url": "https://nonprofitnate.com/feed/",
+      "website_url": "https://nonprofitnate.com/",
+      "description": "Nathan Hand is a professional fundraiser and nonprofit blogger who enjoys helping people help the causes that need them. He has advised local, national and international organizations and guided philanthropists on strategic giving. For donors, nonprofit managers, fundraisers, marketers & more!",
+      "followers": {
+        "facebook": 342,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4683283.jpg?t=1618827588"
+    },
+    {
+      "title": "Donor Relations Guru",
+      "feed_url": "http://donorguru.blogspot.com/feeds/posts/default",
+      "website_url": "http://donorguru.blogspot.com/",
+      "description": "Donor Fundraising Guru, dynamic speaker, resource provider, consultant, author, MS in Strategic Philanthropy and Fundraising, Proud Gamecock alumna. Blog by Lynne Wester.",
+      "followers": {
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/2345731.jpg?t=1618827599"
+    },
+    {
+      "title": "Nonprofit Jenni",
+      "feed_url": "https://www.nonprofitjenni.com/blog?format=rss",
+      "website_url": "https://www.nonprofitjenni.com/blog",
+      "description": "Nonprofit Jenni provides consulting services, hosts the Nonprofit Jenni Show podcast, and runs the Nonprofit Roundtable event series.",
+      "followers": {
+        "facebook": 570,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5150698.jpg?t=1618827603"
+    },
+    {
+      "title": "Pamela Grow",
+      "feed_url": "https://www.pamelagrow.com/feed/",
+      "website_url": "https://www.pamelagrow.com/",
+      "description": "Nonprofit fundraising solutions for small nonprofits. Key topics covered are direct mail fundraising, digital fundraising, board fundraising, monthly giving fundraising, major gift fundraising and more. Pam's over-riding goal is to provide results-focused fundraising training to small nonprofit organizations.",
+      "followers": {
+        "twitter": 19000
+      },
+      "image_url": "https://i1.feedspot.com/65269.jpg?t=1616561560"
+    },
+    {
+      "title": "The Nerdy Nonprofit",
+      "feed_url": "https://www.thenerdynonprofit.com/feed/",
+      "website_url": "https://www.thenerdynonprofit.com/",
+      "description": "Get the latest in nonprofit digital marketing and technology! Run by ArcStone, a digital agency in Minneapolis.",
+      "followers": {
+        "facebook": 610,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4683338.jpg?t=1611125085"
+    },
+    {
+      "title": "Nonprofit MarCommunity",
+      "feed_url": "http://feeds.feedburner.com/NonprofitMarCommunity",
+      "website_url": "https://nonprofitmarcommunity.com/",
+      "description": "The Nonprofit MarCommunity is a space for nonprofit marketers and communicators to learn from and share knowledge with each other. Created by Marlene Oliveira of moflow, the idea for the Nonprofit MarCommunity came from working in the sector as both an in-house professional and consultant to nonprofit clients since 1999.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4683172.jpg"
+    },
+    {
+      "title": "The Giving Block",
+      "feed_url": "https://medium.com/feed/@thegivingblock",
+      "website_url": "https://medium.com/@thegivingblock",
+      "description": "Where nonprofits meet blockchain. We make learning about and accepting cryptocurrency easy.",
+      "followers": {
+        "twitter": 26700
+      },
+      "image_url": "https://i1.feedspot.com/5029658.jpg?t=1618827633"
+    },
+    {
+      "title": "Banking Crowded Blog",
+      "feed_url": "https://bankingcrowded.com/feed/",
+      "website_url": "https://www.broadinstitute.org/",
+      "description": "Get helpful financial management tips for your nonprofit group from the Crowded blog, designed to help nonprofit leaders, treasurers, and organizers. Check out our best tips, expert advice, and practical tools to help your nonprofit thrive financially. Crowded's digital banking platform, simplifies financial management for nonprofits at the chapter and national level.",
+      "followers": {
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/8451758/page/7249020/logo_1707745110.png"
+    },
+    {
+      "title": "Bonterra Blog \u00bb Thought Leadership",
+      "feed_url": "https://www.bonterratech.com/blog/feed",
+      "website_url": "https://www.bonterratech.com/blog",
+      "description": "Social Solutions provides easy-to-use tools to track data, manage cases, and measure outcomes. Social Solutions was founded with the mission of giving human services professionals a better way to collect data so they could better understand their impact.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 2200,
+        "instagram": 895
+      },
+      "image_url": "https://i1.feedspot.com/2278774.jpg?t=1618827176"
+    },
+    {
+      "title": "ELEVATION Blog",
+      "feed_url": "https://www.elevationweb.org/feed/",
+      "website_url": "https://www.elevationweb.org/blog/",
+      "description": "Stay up to date with the latest in nonprofit marketing, communications, and web design. Elevation is a full-service digital agency created for nonprofit organizations and the social sector. Founded back in 2007, we've built a team of industry specialists with a passion to make the world a better place.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5449712.jpg?t=1664433822"
+    },
+    {
+      "title": "Tech Impact",
+      "feed_url": "https://techimpact.org/access-resources/thought-leadership",
+      "website_url": "https://techimpact.org/access-resources/thought-leadership",
+      "description": "Tech Impact is a nonprofit whose mission is to ensure all nonprofits can use technology to better serve our world. We are the place nonprofits can call to make sense of anything from large-scale technology projects, to technology maintenance and support. Our mission is to ensure all nonprofits can use technology to better serve our world.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 32000
+      },
+      "image_url": "https://i1.feedspot.com/5003434.jpg?t=1664431432"
+    },
+    {
+      "title": "Campbell & Company",
+      "feed_url": "https://www.campbellcompany.com/resources/feed/",
+      "website_url": "https://www.campbellcompany.com/resources/",
+      "description": "Connecting you with great ideas, resources and the latest news in the nonprofit world.",
+      "followers": {
+        "twitter": 932
+      },
+      "image_url": "https://i1.feedspot.com/4683436.jpg?t=1618827516"
+    },
+    {
+      "title": "Future Fundraising Now",
+      "feed_url": "https://www.futurefundraisingnow.com/future-fundraising/rss.xml",
+      "website_url": "https://futurefundraisingnow.com/",
+      "description": "The future of fundraising is not about social media, online video, or SEM. It's not about any technology, medium, or technique. It's about donors. If you need to raise funds from donors, you need to study them, respect them, and build everything you do around them. And the future? It's already here.",
+      "followers": {
+        "twitter": 8900
+      },
+      "image_url": "https://i1.feedspot.com/707904.jpg?t=1621079203"
+    },
+    {
+      "title": "Amy Eisenstein",
+      "feed_url": "https://www.amyeisenstein.com/blog/",
+      "website_url": "https://www.amyeisenstein.com/blog/",
+      "description": "Discover hundreds of simple fundraising tips for nonprofits in fundraising expert Amy Eisenstein's blog. Advice for general fundraising, asking, and more.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/4387191.jpg?t=1616562339"
+    },
+    {
+      "title": "Joan Garry Consulting Blog",
+      "feed_url": "https://blog.joangarry.com/feed/",
+      "website_url": "https://joangarry.com/blog/",
+      "description": "Not enough money. Too many cooks. An abundance of passion. Leading a nonprofit can be difficult, but it's so important. And we're here to help.",
+      "followers": {
+        "facebook": 50100,
+        "twitter": 5700,
+        "instagram": 6200
+      },
+      "image_url": "https://i1.feedspot.com/3583971.jpg?t=1607490850"
+    },
+    {
+      "title": "Marketing for the Modern Nonprofit Blog",
+      "feed_url": "https://jcsocialmarketing.com/feed/",
+      "website_url": "https://jcsocialmarketing.com/blog/",
+      "description": "My mission is to give nonprofits the confidence and skills that they need to leverage digital tools to raise awareness and raise more money. I do this through my book, my blog, and my consulting services.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 16500,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4972839.jpg?t=1616562355"
+    },
+    {
+      "title": "Bonterra Blog \u00bb Thought Leadership",
+      "feed_url": "https://www.bonterratech.com/blog/feed",
+      "website_url": "https://www.bonterratech.com/blog",
+      "description": "GiveGab is simple, modern, and robust software that enables nonprofits to conduct online fundraising, supporter engagement, donor management, and more - all in one place. The Nonprofit Giving Platform - Specializing in Fundraising Campaigns, Volunteer and Donor Management, and Giving Days. Raise More. Engage More.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 2500,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4728982.jpg?t=1618827163"
+    },
+    {
+      "title": "Bonterra Blog",
+      "feed_url": "https://www.bonterratech.com/blog/feed",
+      "website_url": "https://www.bonterratech.com/blog",
+      "description": "Network for Good provides online fundraising software and coaching for nonprofits and corporate partners to unleash generosity and advance good causes.",
+      "followers": {
+        "facebook": 79000,
+        "twitter": 63600
+      },
+      "image_url": "https://i1.feedspot.com/4387184.jpg?t=1616561556"
+    },
+    {
+      "title": "Georgia Center for Nonprofits",
+      "feed_url": "https://gcn.org/feed/",
+      "website_url": "https://gcn.org/about/media/",
+      "description": "Through a powerful mix of advocacy, solutions for nonprofit effectiveness, and insight building tools, GCN provides nonprofits, board members and donors with the tools they need to strengthen organizations that make a difference on important causes throughout Georgia.",
+      "followers": {
+        "twitter": 176
+      },
+      "image_url": "https://i1.feedspot.com/4683346.jpg?t=1618827628"
+    },
+    {
+      "title": "The Storytelling Non-Profit",
+      "feed_url": "https://www.thestorytellingnonprofit.com/feed/",
+      "website_url": "https://www.thestorytellingnonprofit.com/blog/",
+      "description": "My name is Vanessa Chase Lockshin and I've helped non-profits raise over $10 million by telling stories that engage and inspire donors. I'm the author of The Storytelling Non-Profit: A practical guide to telling stories that raise money and awareness, and the creator of immersive online training programs that have trained thousands of non-profit professionals.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/3912361.jpg?t=1664514761"
+    },
+    {
+      "title": "Wild Apricot",
+      "feed_url": "https://feeds.feedburner.com/WildApricot",
+      "website_url": "https://www.wildapricot.com/blog",
+      "description": "The Wild Apricot blog is about technology for non-profit organizations: how to do more with less; Usability issues; how to properly select and implement technology - and a sprinkling of humor and posts on general non-profit industry issues.",
+      "followers": {
+        "facebook": 12500,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4677397.jpg?t=1618827130"
+    },
+    {
+      "title": "Classy",
+      "feed_url": "https://www.classy.org/blog/feed/",
+      "website_url": "https://www.classy.org/blog/",
+      "description": "Formerly StayClassy, Classy's all-in-one fundraising solution offers nonprofits easy and customizable software to help manage their fundraising efforts.",
+      "followers": {
+        "facebook": 68600,
+        "twitter": 16700,
+        "instagram": 10800
+      },
+      "image_url": "https://i1.feedspot.com/4682619.jpg?t=1618827115"
+    },
+    {
+      "title": "Charity Navigator Blog",
+      "feed_url": "https://publish-p61203-e558128.adobeaemcloud.com/404/",
+      "website_url": "https://blog.charitynavigator.org/",
+      "description": "Professionals from Charity Navigator, the nation's largest independent charity evaluator and leading donor advocate, share their thoughts on emerging issues relating to the nonprofit sector and offer tips to help you make the most of your charitable endeavors.",
+      "followers": {
+        "facebook": 54200,
+        "twitter": 70300,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/5281202.jpg?t=1621078065"
+    },
+    {
+      "title": "VolunteerHub",
+      "feed_url": "https://volunteerhub.com/feed/",
+      "website_url": "https://volunteerhub.com/blog",
+      "description": "Read the VolunteerHub blog for tips on managing and engaging volunteers. Learn more about VolunteerHub's software for nonprofits.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/3639617.jpg?t=1618827159"
+    },
+    {
+      "title": "Bonterra Blog \u00bb Salsalabs",
+      "feed_url": "https://www.bonterratech.com/blog?utm_source=salsalabs&utm_medium=redirect/",
+      "website_url": "https://www.bonterratech.com/blog?utm_source=salsalabs&utm_medium=redirect/",
+      "description": "Our nonprofit resources provide in-depth information on a range of topics from fundraising and advocacy, to organizing and nonprofit technology. Salsa is a technology company that provides powerful fundraising, advocacy, and marketing engagement software to nonprofit organizations all over the world.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 10600
+      },
+      "image_url": "https://i1.feedspot.com/4682739.jpg?t=1618827150"
+    },
+    {
+      "title": "CalNonprofits",
+      "feed_url": "https://calnonprofits.org/?format=feed&type=rss",
+      "website_url": "https://calnonprofits.org/",
+      "description": "The California Association of Nonprofits is a statewide alliance of nonprofits that works to bring the full power of California's nonprofits to strengthening communities.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4683445.jpg?t=1618827199"
+    },
+    {
+      "title": "Nonprofit Chronicles",
+      "feed_url": "https://nonprofitchronicles.com/feed/",
+      "website_url": "https://nonprofitchronicles.com/",
+      "description": "Nonprofit Chronicles is a blog by journalist Marc Gunther about nonprofit organizations and their impact. Follow and discover reporting on foundations, nonprofits, global poverty, animal welfare, climate change.",
+      "followers": {
+        "facebook": 800,
+        "twitter": 35800
+      },
+      "image_url": "https://i1.feedspot.com/4683385.jpg?t=1618827212"
+    },
+    {
+      "title": "Oklahoma Center For Nonprofits",
+      "feed_url": "https://www.oklahomacenterfornonprofits.org/feed/",
+      "website_url": "https://www.oklahomacenterfornonprofits.org/resources/blog/",
+      "description": "Building Better Communities Through Effective Nonprofits.",
+      "followers": {
+        "facebook": 10600,
+        "twitter": 3200,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4683459.jpg?t=1618827202"
+    },
+    {
+      "title": "Front Range Source",
+      "feed_url": "https://frontrangesource.com/feed/",
+      "website_url": "https://frontrangesource.com/blog/",
+      "description": "Front Range Source serves a national clientele from its home base in Boulder, Colorado. Founders Leslie Allen and Ann Goldman provide consulting, coaching and training services to the nonprofit community.",
+      "followers": {
+        "facebook": 298
+      },
+      "image_url": "https://i1.feedspot.com/5041252.jpg"
+    },
+    {
+      "title": "Bullock Consulting",
+      "feed_url": "https://bullockconsulting.net/feed/",
+      "website_url": "https://bullockconsulting.net/articles/",
+      "description": "Helping leaders develop stronger organizations through leadership, communications and strategic fundraising planning.",
+      "followers": {
+        "facebook": 136,
+        "twitter": 37
+      },
+      "image_url": "https://i1.feedspot.com/4387190.jpg?t=1618827585"
+    },
+    {
+      "title": "Neon One Blog",
+      "feed_url": "https://neonone.com/feed/",
+      "website_url": "https://neonone.com/resources/blog/",
+      "description": "Thousands of nonprofits use Neon's nonprofit CRM to manage their fundraising, membership, events, and website \u2014 and ultimately grow their organization.",
+      "followers": {
+        "facebook": 6600
+      },
+      "image_url": "https://i1.feedspot.com/4677902.jpg?t=1618827715"
+    },
+    {
+      "title": "Future Fundraising Now",
+      "feed_url": "https://www.futurefundraisingnow.com/future-fundraising/index.rdf",
+      "website_url": "https://futurefundraisingnow.typepad.com/",
+      "description": "This blog has been around since September 2009. Future Fundraising Now is for fundraising professionals who get it. I post almost every work day, on topics ranging from donor demographics to creative tips for fundraising professionals.",
+      "followers": {
+        "twitter": 8900
+      },
+      "image_url": "https://i1.feedspot.com/5449716.jpg?t=1664426707"
+    },
+    {
+      "title": "Fresh Research, a NonProfit Times Podcast",
+      "feed_url": "https://thenonprofittimes.com/feed/",
+      "website_url": "https://thenonprofittimes.com/",
+      "description": "A Podcast by The NonProfit Times: The Leading Business Publication For Nonprofit Management",
+      "followers": {
+        "facebook": 26300,
+        "twitter": 119300
+      },
+      "image_url": "https://i1.feedspot.com/5048649.jpg?t=1618827643"
+    },
+    {
+      "title": "Socialbrite | Social media for nonprofits",
+      "feed_url": "https://www.socialbrite.org/feed/",
+      "website_url": "https://childhelpfoundation.in/blog/posts",
+      "description": "Socialbrite.org is a social media consultancy for nonprofits and social good organizations. To share tips about the tools and best practices that drive the social Web and advance the social good.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 11900
+      },
+      "image_url": "https://i1.feedspot.com/1259134.jpg?t=1618827183"
+    },
+    {
+      "title": "Nonprofit Board Crisis Blog",
+      "feed_url": "https://nonprofitboardcrisis.typepad.com/mbblog/rss.xml",
+      "website_url": "https://nonprofitboardcrisis.typepad.com/mbblog/",
+      "description": "Critical review of today's news and events from a nonprofit governance perspective. Mike focuses on improving the capacity of organizations to solve their own problems. He serves as a facilitator and resource for nonprofits addressing issues of governance, strategic planning, business planning, and marketing, helping each organization set goals and priorities and establish appropriate budgeting and monitoring processes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5495110.jpg?t=1674018408"
+    }
+  ]
+}

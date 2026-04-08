@@ -1,0 +1,36 @@
+{
+  "category": "Gifted Education",
+  "source_url": "https://rss.feedspot.com/gifted_education_rss_feeds",
+  "feeds": [
+    {
+      "title": "Gifted Guru",
+      "feed_url": "https://giftedguru.com/feed/",
+      "website_url": "https://giftedguru.com/",
+      "description": "Gifted Guru is a website devoted to sharing information and resources with parents and teachers of gifted children. Gifted educators and parents will find support, encouragement, and the occasional terrific book recommendation.",
+      "followers": {
+        "facebook": 9200,
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/818138.jpg?t=1620994156"
+    },
+    {
+      "title": "NYC Gifted and Talented Blog",
+      "feed_url": "https://nycgiftedandtalented.wordpress.com/feed/",
+      "website_url": "https://nycgiftedandtalented.wordpress.com/",
+      "description": "Our Experience with the Gifted and Talented Program for NYC Public Schools.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4926439.jpg?t=1620994168"
+    },
+    {
+      "title": "Ramblings of a Gifted Teacher",
+      "feed_url": "https://ramblingsofagiftedteacher.wordpress.com/feed/",
+      "website_url": "https://ramblingsofagiftedteacher.wordpress.com/",
+      "description": "Ramblings from one Gifted Education Teacher to Teachers, Parents, and Advocates. I am Jeffrey Shoemaker a Gifted Intervention Specialist (GIS) for the Lima City Schools since 2006. I currently teach gifted education classes to 7th and 8th graders.",
+      "followers": {
+        "facebook": 115,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4926436.jpg?t=1620994116"
+    }
+  ]
+}

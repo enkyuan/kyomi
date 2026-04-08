@@ -1,0 +1,97 @@
+{
+  "category": "Machine Design",
+  "source_url": "https://rss.feedspot.com/machinedesign_rss_feeds",
+  "feeds": [
+    {
+      "title": "Machine Design",
+      "feed_url": "https://www.machinedesign.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22:%22home%22%7D",
+      "website_url": "https://www.machinedesign.com/",
+      "description": "Machine Design covers exclusive insights on machinery, design tutorials, and innovative solutions in the ever-evolving industrial and manufacturing landscape.",
+      "followers": {
+        "facebook": 32400,
+        "twitter": 4700,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/7879012.jpg?t=1740049972"
+    },
+    {
+      "title": "Machine Design \u00bb Learning Resources",
+      "feed_url": "https://www.machinedesign.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22:%22learning-resources%22%7D",
+      "website_url": "https://www.machinedesign.com/learning-resources",
+      "description": "Articles, news, products, blogs and videos covering the Learning Resources market.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7879012.jpg?t=1740049819"
+    },
+    {
+      "title": "Machine Design \u00bb Additive/3D Printing",
+      "feed_url": "https://www.machinedesign.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22:%223d-printing-cad%22%7D",
+      "website_url": "https://www.machinedesign.com/3d-printing-cad",
+      "description": "Articles, news, products, blogs and videos covering the Additive/3D Printing market.",
+      "followers": {
+        "facebook": 32400,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/7879012.jpg?t=1740049815"
+    },
+    {
+      "title": "Machine Design \u00bb CAD/CAM Software++",
+      "feed_url": "https://www.machinedesign.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22:%22cad-cam-software%22%7D",
+      "website_url": "https://www.machinedesign.com/cad-cam-software",
+      "description": "Articles, news, products, blogs and videos covering the CAD/CAM Software++ market.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7879012.jpg?t=1740049809"
+    },
+    {
+      "title": "Machine Design \u00bb Videos",
+      "feed_url": "https://www.machinedesign.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22:%22video%22%7D",
+      "website_url": "https://www.machinedesign.com/video",
+      "description": "Articles, news, products, blogs and videos covering the Video market.",
+      "followers": {
+        "facebook": 32400,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/7879012.jpg?t=1740049778"
+    },
+    {
+      "title": "Machine Design \u00bb Materials",
+      "feed_url": "https://www.machinedesign.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22:%22materials%22%7D",
+      "website_url": "https://www.machinedesign.com/materials",
+      "description": "Articles, news, products, blogs and videos covering the Materials market.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7879012.jpg?t=1740049785"
+    },
+    {
+      "title": "Machine Design \u00bb Mechanical & Motion Systems",
+      "feed_url": "https://www.machinedesign.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22:%22mechanical-motion-systems%22%7D",
+      "website_url": "https://www.machinedesign.com/mechanical-motion-systems",
+      "description": "Articles, news, products, blogs and videos covering the Mechanical & Motion Systems market.",
+      "followers": {
+        "facebook": 32400,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/7879012.jpg?t=1740049791"
+    },
+    {
+      "title": "Machine Design \u00bb Robotics",
+      "feed_url": "https://www.machinedesign.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22:%22markets/robotics%22%7D",
+      "website_url": "https://www.machinedesign.com/markets/robotics",
+      "description": "Articles, news, products, blogs and videos covering the Industry Markets > Robotics market.",
+      "followers": {
+        "facebook": 32400,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/7837842.jpg?t=1734097251"
+    },
+    {
+      "title": "Machine Design \u00bb Automation & IIoT",
+      "feed_url": "https://www.machinedesign.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22:%22automation-iiot%22%7D",
+      "website_url": "https://www.machinedesign.com/automation-iiot",
+      "description": "Articles, news, products, blogs and videos covering the Automation & IIoT market.",
+      "followers": {
+        "facebook": 32400,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/7837842.jpg?t=1734097251"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "category": "Mahjong",
+  "source_url": "https://rss.feedspot.com/mahjong_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Mahjong Line Blog",
+      "feed_url": "https://themahjongline.com/blogs/mahjong-tales.atom",
+      "website_url": "https://themahjongline.com/blogs/mahjong-tales",
+      "description": "Hi! this is Annie, Kate, and Bianca. We are inspired by art and design and we don't take ourselves too seriously. We like to celebrate the colorful personalities that belly up to the game table. The Mahjong Line was created with fun and fellowship in mind. We will help you learn more about the game of mahjong and the players that enjoy the game through our blogs.",
+      "followers": {
+        "facebook": 1900,
+        "instagram": 78400
+      },
+      "image_url": "https://i1.feedspot.com/5412830.jpg?t=1655730684"
+    },
+    {
+      "title": "Jellicode's Jansou",
+      "feed_url": "https://jellicodemahjong.wordpress.com/feed/",
+      "website_url": "https://jellicodemahjong.wordpress.com/",
+      "description": "No-Rate Mahjong Blog",
+      "followers": {
+        "twitter": 97700
+      },
+      "image_url": "https://i1.feedspot.com/8545627.jpg?t=1753110228"
+    },
+    {
+      "title": "Oh My Mahjong",
+      "feed_url": "https://ohmymahjong.com/blogs/the-game-of-mahjong.atom",
+      "website_url": "https://ohmymahjong.com/blogs/the-game-of-mahjong/",
+      "description": "In our comprehensive guide, we'll teach you how to play American Mahjong, best practices for strategic play, and tips for maximizing your fun. Whether you're a seasoned pro or a beginner, we've got you covered.",
+      "followers": {
+        "facebook": 1600,
+        "instagram": 142800
+      },
+      "image_url": "https://i1.feedspot.com/8545629.jpg?t=1753110230"
+    },
+    {
+      "title": "Bubbe's Mah Jongg Blog",
+      "feed_url": "http://bubbemj.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://bubbemj.blogspot.com/",
+      "description": "Greetings and salutations from Bubbe, always ready to give you more backup advice that you can use while playing. Buckle in to know the best tactics that you can use to win. Read an in-depth and thorough explanation!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5412833.jpg?t=1655730231"
+    },
+    {
+      "title": "Mahjong Academy",
+      "feed_url": "https://medium.com/feed/mahjong-academy",
+      "website_url": "https://medium.com/mahjong-academy",
+      "description": "Hi! I'm Kuan Rong Chan. This is a publication that focuses on mahjong strategies that can increase your chances of winning and help you become an expert player of mahjong. Medium is where ideas take shape, take off, and spark powerful conversations. Here, expert and undiscovered voices alike dive into the heart of any topic and bring new ideas to the surface.",
+      "followers": {
+        "twitter": 491
+      },
+      "image_url": "https://i1.feedspot.com/5412835.jpg?t=1655789096"
+    },
+    {
+      "title": "Maj by Daron Blog",
+      "feed_url": "https://www.majbydaron.com/blog-feed.xml",
+      "website_url": "https://www.majbydaron.com/blog",
+      "description": "Hi! I'm Daron. I am passionate and motivated to teach Mah Jongg for the opportunity to share my knowledge and utilize creative methods of instruction while strictly adhering to the National Mah Jongg League rules of play. My blogs will help you learn to play Mah Jongg o, strengthen your strategy, and up your game!",
+      "followers": {
+        "facebook": 532
+      },
+      "image_url": "https://i1.feedspot.com/5412828.jpg?t=1655729684"
+    },
+    {
+      "title": "Mahjong Time",
+      "feed_url": "http://mahjongtime.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://mahjongtime.blogspot.com/",
+      "description": "Mahjong Time is the premier online mahjong community in the world. Offers real mahjong in various rules sets, including Riichi, Chinese Official, Hong Kong, and American style among others. Mahjong Time exists to meet the individual needs of the estimated 600,000,000 mahjong players worldwide.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5412831.jpg?t=1655786782"
+    },
+    {
+      "title": "The Hopeless Girl on the Path of Houou",
+      "feed_url": "https://pathofhouou.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://pathofhouou.blogspot.com/",
+      "description": "The Hopeless Girl on the Path of Houou blog provides analysis, guides, and tools for improving your Riichi game! Read articles on analysis, replay review, resources, tools, and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5412829.jpg?t=1655729323"
+    },
+    {
+      "title": "American Riichi Mahjong League Blog",
+      "feed_url": "https://americanriichi.org/blog?format=rss",
+      "website_url": "https://americanriichi.org/blog",
+      "description": "Follow our blogs to get all updates related toThe American Riichi Mahjong League. The League's mission is to create a space where players from all over the country can compete against each other in a long-term structured format.",
+      "followers": {
+        "twitter": 262
+      },
+      "image_url": "https://i1.feedspot.com/5412834.jpg?t=1655787375"
+    },
+    {
+      "title": "Mahjongg Blog",
+      "feed_url": "https://mahjblog.blogspot.com/feeds/posts/default",
+      "website_url": "https://mahjblog.blogspot.com/",
+      "description": "A player's experiences playing National Mah Jongg League mah jongg",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8545628.jpg?t=1753110229"
+    }
+  ]
+}

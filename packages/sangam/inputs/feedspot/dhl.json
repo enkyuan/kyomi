@@ -1,0 +1,48 @@
+{
+  "category": "DHL",
+  "source_url": "https://rss.feedspot.com/dhl_rss_feeds",
+  "feeds": [
+    {
+      "title": "DHL Express Belgium",
+      "feed_url": "https://www.dhlexpress.be/en/feed/",
+      "website_url": "https://www.dhlexpress.be/en/",
+      "description": "DHL is the leading global brand in the logistics industry. DHL's family of divisions offer an unrivaled portfolio of logistics services ranging from national and international parcel delivery, international express, road, air and ocean transport to industrial supply chain management.",
+      "followers": {
+        "facebook": 11800,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4913102.jpg?t=1620302498"
+    },
+    {
+      "title": "DHL Express Blog",
+      "feed_url": "https://parcel.dhl.co.uk/blog/rss/",
+      "website_url": "https://parcel.dhl.co.uk/blog/",
+      "description": "DHL offers courier services for parcel delivery within the UK and internationally. Follow this blog to discover the latest news from DHL and know more about DHL's sponsorship activities.",
+      "followers": {
+        "facebook": 11800,
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/4913131.jpg?t=1620302503"
+    },
+    {
+      "title": "DHL",
+      "feed_url": "https://www.dhl.com/discover/en-gb/",
+      "website_url": "https://www.dhl.com/discover/en-gb/",
+      "description": "Welcome to DHL Guide, whether you're looking for help with importing or exporting, learn how to grow your business and develop in new markets with our essential guide to international trade. Follow this blog that covers all the latest news and information on international shipping, importing and exporting, how to get started with DHL, emerging markets and much more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4913108.jpg?t=1620302488"
+    },
+    {
+      "title": "DHL Consulting",
+      "feed_url": "https://dhl-consulting.com/news/",
+      "website_url": "https://dhl-consulting.com/news/",
+      "description": "Get the latest insights from our award-winning consulting projects, helping you to navigate the business challenges of today and tomorrow. DHL Consulting is an independent management consultancy dedicated to creating value for Deutsche Post DHL Group, its customers and external companies that seek to improve their supply chain performance. Our mission is always looking for qualified individuals who have what it takes to rise to the top.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 519,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5297979.jpg?t=1625062668"
+    }
+  ]
+}

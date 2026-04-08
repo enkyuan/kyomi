@@ -1,0 +1,238 @@
+{
+  "category": "Health Informatics",
+  "source_url": "https://rss.feedspot.com/health_informatics_rss_feeds",
+  "feeds": [
+    {
+      "title": "MobiHealth News",
+      "feed_url": "https://www.mobihealthnews.com/feed/",
+      "website_url": "https://www.mobihealthnews.com/",
+      "description": "MobiHealthNews is the publication of records for digital health, providing news, analysis, and data to innovators at provider groups, payers, pharma companies, tech, and venture capital firms as well as startups. We identify and contextualize the emerging trends in digital health helping readers shape what's next in healthcare.",
+      "followers": {
+        "facebook": 15000,
+        "twitter": 33800
+      },
+      "image_url": "https://i1.feedspot.com/49748.jpg?t=1626954081"
+    },
+    {
+      "title": "HealthTech Magazine",
+      "feed_url": "https://feeds.feedburner.com/HealthTechMagazine",
+      "website_url": "https://healthtechmagazine.net/",
+      "description": "HealthTech Magazine explores technology and healthcare issues relevant to IT leaders and managers at healthcare organizations evaluating and implementing technology solutions. HealthTech is published by CDW, a leading multi-brand technology solutions provider to business, government, education, and healthcare organizations.",
+      "followers": {
+        "twitter": 6800
+      },
+      "image_url": "https://i1.feedspot.com/4755862.jpg?t=1627020591"
+    },
+    {
+      "title": "HIStalk",
+      "feed_url": "https://histalk2.com/feed/",
+      "website_url": "https://histalk2.com/",
+      "description": "Get a glimpse of the latest Healthcare IT news and opinion. HIStalk has been bringing the healthcare IT industry together since 2003 with reader-contributed material such as interviews, guest articles, news and rumor reports, and advisory panel participation.",
+      "followers": {
+        "twitter": 14500
+      },
+      "image_url": "https://i1.feedspot.com/1822385.jpg?t=1650539738"
+    },
+    {
+      "title": "Digital Health",
+      "feed_url": "https://www.digitalhealth.net/feed/",
+      "website_url": "https://www.digitalhealth.net/",
+      "description": "Digital Health provides daily news and analysis on the UK health IT sector, spanning NHS IT infrastructure, enterprise and clinical systems such as EPR (electronic patient records) to emerging and disruptive technologies, including AI, apps, and wearables. The company is led by Jon Hoeksma, a highly experienced health IT journalist and commentator.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 34000
+      },
+      "image_url": "https://i1.feedspot.com/4671523.jpg?t=1627018015"
+    },
+    {
+      "title": "Healthcare IT Today",
+      "feed_url": "https://www.healthcareittoday.com/feed/",
+      "website_url": "https://www.healthcareittoday.com/",
+      "description": "Healthcare IT Today (HITT) is an online-only publication that analyzes daily events to create actionable insights for our readers. We provide Healthcare and Health IT commentary in our social feeds, produce quick-hit videos on YouTube and deliver answers to unasked questions about current healthcare trends.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4856923.jpg?t=1627019235"
+    },
+    {
+      "title": "BMJ Health & Care Informatics",
+      "feed_url": "https://informatics.bmj.com/rss/current.xml",
+      "website_url": "https://informatics.bmj.com/",
+      "description": "BMJ Health & Care Informatics (BMJ HCI) is an open-access, peer-reviewed journal covering all aspects of informatics in healthcare. The essential scope of the journal is how informatics supports improvements in direct health and care service provision, but also incorporates public health strategies, and implementation of learning health systems.",
+      "followers": {
+        "facebook": 473,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5304845.jpg?t=1627043511"
+    },
+    {
+      "title": "JMIR Medical Informatics",
+      "feed_url": "https://medinform.jmir.org/feed/atom",
+      "website_url": "https://medinform.jmir.org/",
+      "description": "JMIR Medical Informatics is an open-access PubMed/SCIE-indexed journal that focuses on the challenges and impacts of clinical informatics and digitalization of care processes among other issues. JMI disseminates high-quality research and aims to influence the implementation of informatics solutions to improve health care and care systems.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 36000
+      },
+      "image_url": "https://i1.feedspot.com/5304828.jpg?t=1663657030"
+    },
+    {
+      "title": "Medical Xpress \u00bb Health Informatics News",
+      "feed_url": "https://medicalxpress.com/rss-feed/health-informatics-news/",
+      "website_url": "https://medicalxpress.com/health-informatics-news/",
+      "description": "Get the lowdown on what's happening in the medical informatics sector (healthcare, medical, nursing, clinical, or biomedical informatics) research from Medical Xpress. Medical Xpress, a part of Science X group is a premium publication providing thorough daily coverage of the full sweep of medicine news.",
+      "followers": {
+        "facebook": 183500,
+        "twitter": 170600
+      },
+      "image_url": "https://i1.feedspot.com/5304850.jpg?t=1627043901"
+    },
+    {
+      "title": "Perficient \u00bb Healthcare",
+      "feed_url": "https://blogs.perficient.com/category/industries/healthcare/feed/",
+      "website_url": "https://blogs.perficient.com/healthcare/",
+      "description": "View our perspectives and insights on digital healthcare technology and address existing healthcare challenges with Telehealth, Machine Intelligence, Cloud, Data Intelligence, and other technologies. Perficient is the leading digital transformation consulting firm connecting brands with customers and helping their businesses grow.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 5700,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4947894.jpg?t=1621417069"
+    },
+    {
+      "title": "HIT Consultant",
+      "feed_url": "https://hitconsultant.net/feed/",
+      "website_url": "https://hitconsultant.net/",
+      "description": "HIT Consultant is the leading publication source of healthcare technology news, analysis, and insights for healthcare executives, physicians, and providers. Our content provides editorial insights on health IT, EHRs, population health management, digital health, telehealth, accountable care, patient engagement, and startups.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 20100
+      },
+      "image_url": "https://i1.feedspot.com/4237011.jpg?t=1611819802"
+    },
+    {
+      "title": "Spok Blog",
+      "feed_url": "https://www.spok.com/feed/",
+      "website_url": "https://www.spok.com/blog/",
+      "description": "Stay informed on the latest updates in clinical communications with the Spok blog. We expand on challenges faced by healthcare professionals and help hospitals and health systems improve patient outcomes and support public safety. Spok is a globally-renowned communication services provider to healthcare institutions worldwide.",
+      "followers": {
+        "facebook": 10200,
+        "twitter": 47
+      },
+      "image_url": "https://i1.feedspot.com/5304619.jpg?t=1626962614"
+    },
+    {
+      "title": "Sue Schade",
+      "feed_url": "https://sueschade.com/feed/",
+      "website_url": "https://sueschade.com/",
+      "description": "In this weekly blog, Sue Schade shares perspectives on the critical issues facing Health Care IT, the organizational transformations that IT organizations face, the challenges of leadership, and the work we need to do together to keep the paths of opportunity open for all. Sue Schade is a nationally recognized health IT leader and Principal at StarBridge Advisors.",
+      "followers": {
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5004789.jpg?t=1626963946"
+    },
+    {
+      "title": "PHII Blog",
+      "feed_url": "https://phii.org/feed/",
+      "website_url": "https://phii.org/blog/",
+      "description": "Keep up with projects, views, and news from PHII. Browse from articles, Case studies, Expert opinions, and more. The Public Health Informatics Institute works at all levels of domestic public health, committed to applying the best practices of the emerging field of public health informatics to drive more effective use of data in public health.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5447795.jpg?t=1663657493"
+    },
+    {
+      "title": "Health IT Buzz Blog",
+      "feed_url": "https://feeds.feedburner.com/healthitbuzzblog",
+      "website_url": "https://www.healthit.gov/buzz-blog/",
+      "description": "Information on health IT from those at HHS's Office of the National Coordinator. Get in the know about the nation's transition to EHRs, and discover solutions to common issues. The Office of the National Coordinator for Health IT (ONC) improves the health & well-being of individuals through the use of technology & health information.",
+      "followers": {
+        "twitter": 96800
+      },
+      "image_url": "https://i1.feedspot.com/743971.jpg?t=1611820232"
+    },
+    {
+      "title": "Connect Care Informatics Blog",
+      "feed_url": "https://informatics.bytesblog.ca/feeds/posts/default",
+      "website_url": "https://informatics.bytesblog.ca/",
+      "description": "The Connect Care Informatics Blog brings news and ideas for medical informatics. These updates focus on guides, tips and insights shared in the Connect Care medical informatics community. Connect Care is a clinical information system initiative by Alberta Health Services in Canada.",
+      "followers": {
+        "twitter": 261
+      },
+      "image_url": "https://i1.feedspot.com/5447794.jpg?t=1663657466"
+    },
+    {
+      "title": "Pharmacy Informatics Academy",
+      "feed_url": "https://pharmacyinformaticsacademy.com/feed/",
+      "website_url": "https://pharmacyinformaticsacademy.com/search/",
+      "description": "Pharmacy Informatics Academy is your hub for all things related to pharmacy informatics. Our blog is a directory of all posts related to pharmacy informatics on the Pharmacy Informatics Academy website and community. Learn more about the skills and experience required to build a successful career in Pharmacy Informatics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5304815.jpg?t=1627036642"
+    },
+    {
+      "title": "Dispatch from the Digital Health Frontier",
+      "feed_url": "http://geekdoctor.blogspot.com/feeds/posts/default",
+      "website_url": "http://geekdoctor.blogspot.com/",
+      "description": "This blog by John Halamka documents the stories of the extraordinary team of people at Mayo Clinic who make possible transforming health by leveraging artificial intelligence, the internet of things, and assembling an ecosystem of partners for Mayo Clinic. John is the president of the Mayo Clinic platform.",
+      "followers": {
+        "twitter": 22200
+      },
+      "image_url": "https://i1.feedspot.com/49750.jpg?t=1614608072"
+    },
+    {
+      "title": "Informatics Professor",
+      "feed_url": "http://informaticsprofessor.blogspot.com/feeds/posts/default",
+      "website_url": "http://informaticsprofessor.blogspot.com/",
+      "description": "This blog maintains the thoughts on various topics related to biomedical and health informatics by Dr. William Hersh, Professor, and Chair, Department of Medical Informatics & Clinical Epidemiology, Oregon Health & Science University. He also co-leads efforts to teach clinical informatics to other health professions students.",
+      "followers": {
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/1361652.jpg?t=1607347469"
+    },
+    {
+      "title": "KevinMD.com \u00bb Tech",
+      "feed_url": "https://www.kevinmd.com/blog/category/tech/feed",
+      "website_url": "https://kevinmd.com/category/tech",
+      "description": "This section of KevinMD.com is dedicated to health informatics. Flick through articles on technology in healthcare. Founded in 2004 by Kevin Pho, MD, KevinMD.com is the web's leading platform where physicians, advanced practitioners, nurse, medical students, and patients share their insights and tell their stories.",
+      "followers": {
+        "facebook": 121000,
+        "twitter": 151300,
+        "instagram": 9300
+      },
+      "image_url": "https://i1.feedspot.com/5304576.jpg?t=1626954902"
+    },
+    {
+      "title": "Digital Health Today Blog",
+      "feed_url": "https://digitalhealthtoday.com/feed/",
+      "website_url": "https://www.himss.org/resources-all",
+      "description": "Articles featuring the leading innovators and latest innovations from around the world that are addressing today's health, care and wellness challenges. Digital Health Today's mission is to connect people to the stories that empower, shape, and improve the present and what's next, in healthcare and well-being.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 11800,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4947759.jpg?t=1621417073"
+    },
+    {
+      "title": "Healthcare IT News",
+      "feed_url": "https://www.healthcareitnews.com/",
+      "website_url": "https://www.healthcareitnews.com/",
+      "description": "Healthcare IT news blog delivers cutting-edge info and crucial business insights into Health care. Check out routine updates and more. Healthcare IT News is the industry's authoritative source covering the people, policy & technology driving next-generation healthcare in the U.S.",
+      "followers": {
+        "facebook": 28700,
+        "twitter": 120700
+      },
+      "image_url": "https://i1.feedspot.com/743988.jpg?t=1611819777"
+    },
+    {
+      "title": "AAMI Blog",
+      "feed_url": "https://aamiblog.org/feed/",
+      "website_url": "https://array.aami.org/blog",
+      "description": "Read conversational, thoughtful, engaging, and timely posts from AAMI discussing the advances in the Healthcare IT industry. The Association for the Advancement of Medical Instrumentation (AAMI) is a nonprofit dedicated to increasing the safe and effective use of healthcare technology.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4855484.jpg?t=1663657102"
+    }
+  ]
+}

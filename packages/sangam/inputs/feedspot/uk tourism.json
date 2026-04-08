@@ -1,0 +1,58 @@
+{
+  "category": "UK Tourism",
+  "source_url": "https://rss.feedspot.com/uk_tourism_rss_feeds",
+  "feeds": [
+    {
+      "title": "Golden Tours Blog",
+      "feed_url": "https://www.goldentours.com/travelblog/feed",
+      "website_url": "https://www.goldentours.com/travelblog/",
+      "description": "Golden Tours are experts in London and UK sightseeing, providing day trips around London and the UK for over 30 years. Plan your London trip by choosing from a range of sightseeing tours, day trips and things to do in/from London.",
+      "followers": {
+        "facebook": 91900,
+        "twitter": 11700,
+        "instagram": 10800
+      },
+      "image_url": "https://i1.feedspot.com/4529341.jpg?t=1613055539"
+    },
+    {
+      "title": "Women in Tourism Blog",
+      "feed_url": "http://www.womenintourism.co.uk/feed/",
+      "website_url": "http://www.womenintourism.co.uk/blog/",
+      "description": "Formed by destination leaders in June 2015, Women in Tourism aims to inspire, motivate, mentor & support women into leadership positions within the tourism sector.",
+      "followers": {
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4907450.jpg?t=1613985483"
+    },
+    {
+      "title": "Holiday Lettings",
+      "feed_url": "https://www.holidaylettings.co.uk/",
+      "website_url": "https://www.holidaylettings.co.uk/",
+      "description": "The Holiday Lettings Blog is where we showcase some of our amazing and totally unique vacation rentals of UK. We also share the latest tourism trends, give you a glimpse of faraway and exotic locations and provide you with useful tips and advice on running successful holiday rentals.",
+      "followers": {
+        "facebook": 241600,
+        "twitter": 13200,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4529896.jpg?t=1613055428"
+    },
+    {
+      "title": "Parkdean Holidays",
+      "feed_url": "http://feeds.feedburner.com/parkdeanholidaysLatestDeals-24AwardWinningUkHolidayParks",
+      "website_url": "https://www.parkdeanresorts.co.uk/discover-more/",
+      "description": "Discover the latest UK holiday news, reviews & tips from Parkdean Holidays. Follow us to keep up with helpful guides, expert advice and useful tips for a memorable UK holiday.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4907488.jpg?t=1613985521"
+    },
+    {
+      "title": "Scottish Tourist",
+      "feed_url": "https://www.scottish-tourist.com/feed/",
+      "website_url": "https://www.scottish-tourist.com/",
+      "description": "There are a million ways to fill your holiday in Scotland with many things to see and do. Follow us to keep up with how to discover the Real Scotland.",
+      "followers": {
+        "twitter": 10800
+      },
+      "image_url": "https://i1.feedspot.com/4740561.jpg?t=1608118619"
+    }
+  ]
+}

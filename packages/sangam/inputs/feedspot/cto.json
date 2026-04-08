@@ -1,0 +1,152 @@
+{
+  "category": "CTO",
+  "source_url": "https://rss.feedspot.com/cto_rss_feeds",
+  "feeds": [
+    {
+      "title": "stealthpuppy",
+      "feed_url": "https://stealthpuppy.com/feed",
+      "website_url": "https://stealthpuppy.com/posts/",
+      "description": "stealthpuppy focuses on end-user computing and enterprise mobility and is a way for me to not only write about interesting topics, but a way to give back the IT community. My name is Aaron Parker and I'm an IT professional, consultant, developer, and a builder of things.",
+      "followers": {
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4983152.jpg?t=1622097291"
+    },
+    {
+      "title": "The CTO Advisor",
+      "feed_url": "https://ctoadvisor.substack.com/feed",
+      "website_url": "https://ctoadvisor.substack.com/",
+      "description": "The CTO Advisor's Short thoughts. These thoughts are longer than a tweet but shorter than a blog post. Visit the website to read The CTO Advisor, by Keith Townsend. The CTO Advisor dissects what enterprise IT vendors promise vs. what they actually do.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5478861.jpg?t=1670914836"
+    },
+    {
+      "title": "NINETHSENSE OWNZ ME Blog",
+      "feed_url": "https://blog.ninethsense.com/feed/",
+      "website_url": "https://blog.ninethsense.com/",
+      "description": "Check out Praveen's CTO Blog to learn about topics like CTO, automation, cloud computing, data science, enterprise architecture, business intelligence, product design, tips & tricks, and much more. NinethSense is a thinker, technology evangelist, and a human being.",
+      "followers": {
+        "twitter": 561
+      },
+      "image_url": "https://i1.feedspot.com/5478867.jpg?t=1670912812"
+    },
+    {
+      "title": "Irrational Exuberance",
+      "feed_url": "https://lethain.com/feeds.xml",
+      "website_url": "https://lethain.com/",
+      "description": "Hi folks, I'm Will Larson! I'm a writer and a software engineering leader. I currently have the good fortune to serve as the CTO for Calm's engineering team. I've previously worked at Stripe, Uber, Digg, a few other places. I've been writing on this blog, Irrational Exuberance, since 2007.",
+      "followers": {
+        "twitter": 24600
+      },
+      "image_url": "https://i1.feedspot.com/5478860.jpg?t=1670914755"
+    },
+    {
+      "title": "CTO Craft Blog",
+      "feed_url": "https://ctocraft.com/feed/",
+      "website_url": "https://ctocraft.com/blog/",
+      "description": "Read all about how CTOs around the world are solving problems across Culture, Technology, Operations, Product and Scalability, and hear interviews with CTOs who've been through the learning process and come out on top. CTO Craft works with CTOs, engineering managers, teams and entire businesses to build strategy and leadership skills through organised and bespoke coaching, mentoring, workshops and training.",
+      "followers": {
+        "facebook": 86,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5478866.jpg?t=1670914897"
+    },
+    {
+      "title": "NetmanageIT Blog",
+      "feed_url": "https://blog.netmanageit.com/rss/",
+      "website_url": "https://blog.netmanageit.com/",
+      "description": "Dan Bender is a 25-year veteran in the IT/MSP industry and the CTO of NetmanageIT. His blog offers Cybersecurity News, Threat Intel Reports, Open Source, Tech Industry Musings, and how-to Articles on the installation and usage of various tools.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5722666.jpg?t=1701151233"
+    },
+    {
+      "title": "CTOvision",
+      "feed_url": "https://ctovision.com/feed/",
+      "website_url": "https://ctovision.com/",
+      "description": "CTOvision provides context and reporting for the CTO, CIO, CISO, and CDO. At CTOvision.com we write about technology, with a focus on topics of relevance to enterprise technologists. The blog was founded by Bob Gourley, our editor and publisher, in 2007. Bob is the CTO and Co-Founder of OODA LLC, an Artificial Intelligence and Cybersecurity consultancy.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 12000
+      },
+      "image_url": "https://i1.feedspot.com/4730866.jpg?t=1622097278"
+    },
+    {
+      "title": "CTO Academy Blog",
+      "feed_url": "https://cto.academy/blog/feed/",
+      "website_url": "https://cto.academy/blog/",
+      "description": "CTO Academy specialized in tech leadership training and coaching. Our blog is full of interesting content covering all aspects of leadership in technology. The CTO Academy's mission is to enhance the leadership capabilities and career impact of global technology leaders.",
+      "followers": {
+        "twitter": 475
+      },
+      "image_url": "https://i1.feedspot.com/4983083.jpg?t=1622097325"
+    },
+    {
+      "title": "The Startup CTO",
+      "feed_url": "https://startup-cto.net/rss.xml",
+      "website_url": "https://startup-cto.net/",
+      "description": "The Startup CTO is building companies with web technology. Get information about marketing, competitive analysis, books, typescript, and a lot more. Daniel Bartholomae is a Berlin based founder, developer and startup mentor.",
+      "followers": {
+        "twitter": 670
+      },
+      "image_url": "https://i1.feedspot.com/5478864.jpg?t=1670912978"
+    },
+    {
+      "title": "Off Grid CTO Blog",
+      "feed_url": "https://www.offgridcto.com/feed/",
+      "website_url": "https://www.offgridcto.com/blog/",
+      "description": "Off grid CTO is a blogging site dedicated to the challenges, the art, and the skill of living life as a CTO of a tech company off the grid. I will be regularly updating the site with information about the tools, technologies, and techniques I use to make it all work. My name is Jim Olsen, and I am currently the Chief Technology Officer for a software startup.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5478868.jpg?t=1670912622"
+    },
+    {
+      "title": "CTO.ai Blog",
+      "feed_url": "https://cto.ai/blog/rss/",
+      "website_url": "https://cto.ai/blog/",
+      "description": "Visit our blog to know how CTO.ai simplifies your cloud with a Developer Control Plane that will measurably increase your teams CI/CD velocity by up to 200% without hiring more DevOps. At CTO.ai we're passionate about helping companies enable their developers to the best work without having to compromise on the need for complex and custom software needs.",
+      "followers": {
+        "twitter": 4000,
+        "instagram": 439
+      },
+      "image_url": "https://i1.feedspot.com/5478863.jpg?t=1670914866"
+    },
+    {
+      "title": "VMware",
+      "feed_url": "https://www.vmware.com/feed/",
+      "website_url": "https://blogs.vmware.com/",
+      "description": "Learn more about VMware's technical areas of expertise and key CTO focus areas. This blog will highlight the various efforts, programs, and people of VMware's Office of the CTO. VMware is a leading provider of multi-cloud services for all apps, enabling digital innovation with enterprise control.",
+      "followers": {
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4982995.jpg?t=1622097318"
+    },
+    {
+      "title": "The CTO Advisor Blog",
+      "feed_url": "https://www.thectoadvisor.com/blog?format=RSS",
+      "website_url": "https://thectoadvisor.com/blog/",
+      "description": "The CTO Advisor provides commentary on enterprise IT trends for the CTO and CIO level resources. The CTO Dose and CTO Advisor Podcast From light boards to interviews with C-level, CTO Dose are thought-provoking conversations. The CTO Advisor podcast includes interviews with some of the most interesting people in enterprise technology.",
+      "followers": {
+        "facebook": 254,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4982974.jpg?t=1622097286"
+    },
+    {
+      "title": "Global CTO Forum Blog",
+      "feed_url": "https://globalctoforum.org/blog/feed/",
+      "website_url": "https://globalctoforum.org/blog/",
+      "description": "Global CTO Forum provides Enterprise IT Leadership and CTO Level Resources. Global CTO Forum (GCF) is the world's leading organization for technology executives and those interested in technological leadership. With members from over 40 countries, GCF unites the world's leading minds in tech with stakeholders.",
+      "followers": {
+        "twitter": 123
+      },
+      "image_url": "https://i1.feedspot.com/5478865.jpg?t=1670912555"
+    },
+    {
+      "title": "HireCTO Blog",
+      "feed_url": "https://hirecto.blog/feed/",
+      "website_url": "https://hirecto.blog/",
+      "description": "In the HireCTO blog, we discuss all CTO matters. Learn about CTOs and Technological Transformations, the roles of a CTO, what skills are required by a CTO, what challenges does a CTO face, and much more. HireCTO.io is your unbiased technological partner that act just like your CTO, without any of the headache.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5478862.jpg?t=1670912900"
+    }
+  ]
+}

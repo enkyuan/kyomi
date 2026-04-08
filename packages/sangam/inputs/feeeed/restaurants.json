@@ -1,0 +1,1039 @@
+{
+  "id": "restaurants",
+  "display_name": "Restaurants",
+  "feeds": [
+    {
+      "id": "feed:feeds.feedburner.com:Eater - New York",
+      "cleaned_title": "Eater",
+      "summary": "A blog offering insights into New York City's vibrant restaurant and nightlife scene. Readers can discover the latest openings and notable culinary highlights.",
+      "title": "Eater - New York",
+      "kind": "feed",
+      "feed_url": "http://feeds.feedburner.com/eater/nyc",
+      "details": "Popular",
+      "sources": [
+        "original_feed_db",
+        "crowdsourced_popular"
+      ],
+      "popularity_score": 2.7595419669077423,
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Local",
+        "Restaurants",
+        "Cities",
+        "NYC"
+      ],
+      "language": "en",
+      "keywords": [
+        "restaurants",
+        "New York",
+        "nightlife",
+        "food"
+      ],
+      "top_level_category": "News & Current Events"
+    },
+    {
+      "id": "feed:thetakeout.com:The Takeout",
+      "cleaned_title": "The Takeout",
+      "summary": "A food-focused site that explores all aspects of culinary life, providing insightful articles, recipes, and product recommendations.",
+      "title": "The Takeout",
+      "kind": "feed",
+      "feed_url": "https://thetakeout.com/rss",
+      "details": "Food & Drink",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Cooking",
+        "Restaurants"
+      ],
+      "language": "en",
+      "keywords": [
+        "food articles",
+        "recipes",
+        "cooking tips"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "youtube:Gordon Ramsay",
+      "cleaned_title": "Gordon Ramsay",
+      "summary": "A YouTube channel featuring cooking tutorials, recipe demonstrations, and entertaining content from the renowned chef Gordon Ramsay.",
+      "title": "Gordon Ramsay",
+      "kind": "youtube",
+      "channel_id": "UCIEv3lZ_tNXHzL3ox-_uUGQ",
+      "thumbnail_url": "https://yt3.ggpht.com/bFpwiiOB_NLCVsIcVQ9UcwBjb1RzipnMmtNfLSWpeIaHboyGkBCq4KBitmovRbStk9WvIWIZOyo=s240-c-k-c0xffffffff-no-rj-mo",
+      "details": "Food & Drink > Restaurants",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Cooking",
+        "Restaurants"
+      ],
+      "language": "en",
+      "keywords": [
+        "cooking tutorials",
+        "recipe demonstrations",
+        "entertaining content"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:news.google.com:\"wine spectator\" - Google News",
+      "cleaned_title": "Wine Spectator",
+      "summary": "A leading authority on wine, providing expert ratings, reviews, and news about the world of wine.",
+      "title": "\"wine spectator\" - Google News",
+      "kind": "feed",
+      "feed_url": "http://news.google.com/news?hl=en&gl=us&q=wine%20spectator&um=1&ie=UTF-8&output=rss",
+      "details": "Food & Drink > Wine & Spirits",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "USA",
+        "Restaurants",
+        "Finance",
+        "Education"
+      ],
+      "language": "en",
+      "keywords": [
+        "wine",
+        "reviews",
+        "restaurant recommendations",
+        "events"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:vinepair.com:VinePair",
+      "cleaned_title": "VinePair",
+      "summary": "An online publication that covers wine, spirits, and beer, offering articles, reviews, and guides for the curious drinker.",
+      "title": "VinePair",
+      "kind": "feed",
+      "feed_url": "http://vinepair.com/feed/",
+      "details": "Food & Drink > Wine & Spirits",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Education",
+        "Restaurants"
+      ],
+      "language": "en",
+      "keywords": [
+        "wine",
+        "spirits",
+        "reviews",
+        "cultural insights"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:feeds.feedburner.com:Eater -  All",
+      "cleaned_title": "Eater",
+      "summary": "Eater is a website that covers the latest news and trends in the restaurant industry, including reviews, guides, and interviews with chefs.",
+      "title": "Eater -  All",
+      "kind": "feed",
+      "feed_url": "http://feeds.feedburner.com/EaterNational",
+      "details": "Travel > Food & Drink",
+      "sources": [
+        "original_feed_db",
+        "crowdsourced_popular"
+      ],
+      "popularity_score": 22.514924106053122,
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Cooking",
+        "Restaurants"
+      ],
+      "language": "en",
+      "keywords": [
+        "restaurant news",
+        "food trends",
+        "chef interviews"
+      ],
+      "top_level_category": "Travel & Geography"
+    },
+    {
+      "id": "youtube:Insider Food",
+      "cleaned_title": "Insider Food",
+      "summary": "Food Insider is a YouTube channel that explores the world of food and restaurants, featuring behind-the-scenes looks, food challenges, and unique dining experiences.",
+      "title": "Insider Food",
+      "kind": "youtube",
+      "channel_id": "UCwiTOchWeKjrJZw7S1H__1g",
+      "thumbnail_url": "https://yt3.ggpht.com/my5fZEjea_-N5p8mhqrdNIxghb-KjP9AcH4lQlYzNrRlwzjx3Gbay0JlOCZqJOcp_sTjF3rmBV8=s240-c-k-c0xffffffff-no-rj-mo",
+      "details": "Food & Drink > Restaurants",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Restaurants",
+        "Cooking"
+      ],
+      "language": "en",
+      "keywords": [
+        "food challenges",
+        "restaurant experiences",
+        "cooking"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:weeklyspecial.substack.com:Weekly Special",
+      "cleaned_title": "Weekly Special",
+      "summary": "Weekly Special features intriguing intersections of art and food, presenting bite-sized pieces that will appeal to anyone interested in the creative aspects of culinary culture.",
+      "title": "Weekly Special",
+      "kind": "feed",
+      "feed_url": "https://weeklyspecial.substack.com/feed",
+      "details": "Food & Drink > Restaurants",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Arts & Culture",
+        "Art",
+        "Restaurants"
+      ],
+      "language": "en",
+      "keywords": [
+        "art and food",
+        "creative culture",
+        "food dispatches"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "youtube:Strictly Dumpling",
+      "cleaned_title": "Strictly Dumpling",
+      "summary": "Strictly Dumpling is a YouTube channel hosted by Mike Chen, who explores and reviews Asian street food and restaurants.",
+      "title": "Strictly Dumpling",
+      "kind": "youtube",
+      "channel_id": "UCXOKEdfOFxsHO_-Su3K8SHg",
+      "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqNm55cB2h6hAvrdUV1UpZ6yrnXysB6rdhPlvXCD9g=s240-c-k-c0xffffffff-no-rj-mo",
+      "details": "Local > Asia",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": "Mike Chen",
+      "tags": [
+        "Living",
+        "Arts & Culture",
+        "Cooking",
+        "Restaurants"
+      ],
+      "language": "en",
+      "keywords": [
+        "food",
+        "street food",
+        "Asian cuisine",
+        "YouTube"
+      ],
+      "top_level_category": "Regional & Local"
+    },
+    {
+      "id": "youtube:Eater",
+      "cleaned_title": "Eater",
+      "summary": "A YouTube channel that features food and dining content, including restaurant reviews, food trends, and local culinary news in Los Angeles.",
+      "title": "Eater",
+      "kind": "youtube",
+      "channel_id": "UCRzPUBhXUZHclB7B5bURFXw",
+      "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqMjL5MMEDDpOHmmKdqabvkc7qcBApjQ_nbRImMvEvc=s240-c-k-c0xffffffff-no-rj-mo",
+      "details": "Local > Los Angeles",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Local",
+        "Restaurants",
+        "Cooking",
+        "Cities"
+      ],
+      "language": "en",
+      "keywords": [
+        "food",
+        "dining",
+        "restaurants",
+        "Los Angeles"
+      ],
+      "top_level_category": "Regional & Local"
+    },
+    {
+      "id": "youtube:the Luxury Travel Expert",
+      "cleaned_title": "the Luxury Travel Expert",
+      "summary": "A YouTube channel that showcases luxury hotels and accommodations around the world, providing detailed reviews and recommendations.",
+      "title": "the Luxury Travel Expert",
+      "kind": "youtube",
+      "channel_id": "UCYxsXxbjJO1YYa9yQ3lKC8w",
+      "thumbnail_url": "https://yt3.ggpht.com/8pTWfgrXfrGin2LbwiuSARil48hGkyml2P2a-bRFCrWodkiA3sfnSjGl0aa2uFhXxGtSgazmEW0=s240-c-k-c0xffffffff-no-rj-mo",
+      "details": "Travel > Hotels & Accommodation",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Arts & Culture",
+        "Cities",
+        "Restaurants",
+        "Wanderlust"
+      ],
+      "language": "en",
+      "keywords": [
+        "luxury travel",
+        "hotel reviews",
+        "travel guides"
+      ],
+      "top_level_category": "Travel & Geography"
+    },
+    {
+      "id": "feed:http://www.nytimes.com/services/xml/rss/nyt/DiningandWine.xml",
+      "title": "NYT > Food \u2013 nytimes.com",
+      "kind": "feed",
+      "feed_url": "http://www.nytimes.com/services/xml/rss/nyt/DiningandWine.xml",
+      "sources": [
+        "curated"
+      ],
+      "cleaned_title": "NYT Food",
+      "cleaned_author": null,
+      "summary": "The New York Times Food section explores culinary delights and trends, celebrating diverse cooking through features and reviews.",
+      "tags": [
+        "Living",
+        "Cooking",
+        "Restaurants"
+      ],
+      "language": "en",
+      "keywords": [
+        "food",
+        "cooking",
+        "restaurants",
+        "reviews"
+      ]
+    },
+    {
+      "id": "feed:http://nrn.com/rss.xml",
+      "title": "Nation's Restaurant News \u2013 nrn.com",
+      "kind": "feed",
+      "feed_url": "http://nrn.com/rss.xml",
+      "sources": [
+        "curated"
+      ],
+      "cleaned_title": "Nation's Restaurant News",
+      "cleaned_author": null,
+      "summary": "A reliable source for the latest trends in the restaurant industry, featuring updates on major players and market dynamics. Coverage includes notable restaurant developments and consumer insights.",
+      "tags": [
+        "Local",
+        "USA",
+        "Restaurants",
+        "Cooking"
+      ],
+      "language": "en",
+      "keywords": [
+        "restaurant news",
+        "Papa John's",
+        "Taco Bell",
+        "Chipotle",
+        "Sweetgreen"
+      ]
+    },
+    {
+      "id": "feed:https://restaurant-ingthroughhistory.com/feed/",
+      "title": "Restaurant-ing through history",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://restaurant-ingthroughhistory.com/feed/",
+      "summary": "Exploring American restaurants over the centuries.",
+      "details": "Recreation > Food And Drink > Restaurants",
+      "cleaned_title": "Restaurant-ing through history",
+      "cleaned_author": null,
+      "tags": [
+        "Arts & Culture",
+        "Living",
+        "History",
+        "Restaurants",
+        "USA"
+      ],
+      "language": "en",
+      "keywords": [
+        "American restaurants",
+        "culinary history",
+        "dining culture"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:https://janestuart.co.uk/feed/",
+      "title": "Jane Stuart - Writer",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://janestuart.co.uk/feed/",
+      "summary": "My musings on beer and football culture.",
+      "details": "Recreation > Food And Drink > Restaurants > Pubs",
+      "cleaned_title": "Jane Stuart",
+      "cleaned_author": "Jane Stuart",
+      "tags": [
+        "Arts & Culture",
+        "Sports",
+        "Restaurants"
+      ],
+      "language": "en",
+      "keywords": [
+        "beer",
+        "football culture",
+        "pub reviews"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:https://bangkokglutton.com/feed/",
+      "title": "Bangkok Glutton",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://bangkokglutton.com/feed/",
+      "summary": "\"Tasting it to the streets...\".",
+      "details": "Recreation > Food And Drink",
+      "cleaned_title": "Bangkok Glutton",
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Restaurants",
+        "Cooking"
+      ],
+      "language": "en",
+      "keywords": [
+        "Bangkok",
+        "food",
+        "street food"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:https://benviveur.blogspot.com/feeds/posts/default",
+      "title": "Ben Viveur",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://benviveur.blogspot.com/feeds/posts/default",
+      "summary": "The Epicurean musings of Benjamin Nunn. Recipes. Reviews. Beer. Swearing.",
+      "details": "Recreation > Food And Drink",
+      "cleaned_title": "Ben Viveur",
+      "cleaned_author": "Benjamin Nunn",
+      "tags": [
+        "Living",
+        "Cooking",
+        "Restaurants",
+        "Writing"
+      ],
+      "language": "en",
+      "keywords": [
+        "beer",
+        "recipes",
+        "food reviews"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:https://driftingclouds.net/feed/",
+      "title": "Drifting Clouds \u7247\u96f2\u306e\u98a8",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://driftingclouds.net/feed/",
+      "summary": "Travels with Jani.",
+      "details": "Recreation > Food And Drink",
+      "cleaned_title": "Drifting Clouds \u7247\u96f2\u306e\u98a8",
+      "cleaned_author": "Jani",
+      "tags": [
+        "Living",
+        "Cities",
+        "Restaurants"
+      ],
+      "language": "en",
+      "keywords": [
+        "travel",
+        "food",
+        "culture"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:https://smittenkitchen.com/feed/",
+      "title": "smitten kitchen",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://smittenkitchen.com/feed/",
+      "summary": "Fearless cooking from a tiny NYC kitchen.",
+      "details": "Recreation > Food And Drink > Recipes",
+      "cleaned_title": "smitten kitchen",
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Arts & Culture",
+        "Cooking",
+        "Restaurants"
+      ],
+      "language": "en",
+      "keywords": [
+        "recipes",
+        "home cooking",
+        "NYC food"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:https://andershusa.com/feed/",
+      "title": "Anders Husa & Kaitlin Orr",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://andershusa.com/feed/",
+      "summary": "Discover the best restaurants and places to eat in Scandinavia, through guides, maps, and stories from a traveling foodie.",
+      "details": "Recreation > Food And Drink > Restaurants",
+      "cleaned_title": "Anders Husa & Kaitlin Orr",
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Restaurants"
+      ],
+      "language": "en",
+      "keywords": [
+        "Scandinavia",
+        "restaurant reviews",
+        "food travel"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:https://cheesenbiscuits.blogspot.com/feeds/posts/default",
+      "title": "Cheese and Biscuits",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://cheesenbiscuits.blogspot.com/feeds/posts/default",
+      "summary": "Restaurant reviews in London and beyond.",
+      "details": "Recreation > Food And Drink > Restaurants",
+      "cleaned_title": "Cheese and Biscuits",
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Restaurants"
+      ],
+      "language": "en",
+      "keywords": [
+        "London dining",
+        "restaurant reviews",
+        "food experiences"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:https://meatandoneveg.blog/feed/",
+      "title": "Meat & One Veg",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://meatandoneveg.blog/feed/",
+      "summary": "The multi-award winning restaurant blog from me, Simon Carlo.",
+      "details": "Recreation > Food And Drink > Restaurants",
+      "cleaned_title": "Meat & One Veg",
+      "cleaned_author": "Simon Carlo",
+      "tags": [
+        "Living",
+        "Restaurants"
+      ],
+      "language": "en",
+      "keywords": [
+        "restaurant blog",
+        "Simon Carlo",
+        "food reviews"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:https://pickyglutton.com/feed/",
+      "title": "The Picky Glutton",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://pickyglutton.com/feed/",
+      "details": "Countries > UK > London",
+      "cleaned_title": "The Picky Glutton",
+      "cleaned_author": null,
+      "summary": "This blog provides insightful restaurant reviews from London, helping readers make informed dining choices and avoid disappointments.",
+      "tags": [
+        "Living",
+        "Restaurants"
+      ],
+      "language": "en",
+      "keywords": [
+        "London food",
+        "restaurant critiques",
+        "dining advice"
+      ],
+      "top_level_category": "Regional & Local"
+    },
+    {
+      "id": "feed:https://boakandbailey.com/feed/",
+      "title": "Boak & Bailey's Beer Blog",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://boakandbailey.com/feed/",
+      "summary": "UK beer blog running since 2007, with tasting notes, beer history, pub reports and commentary on British booze culture.",
+      "details": "Recreation > Food And Drink > Drink > Beer",
+      "cleaned_title": "Boak & Bailey's Beer Blog",
+      "cleaned_author": "Boak & Bailey",
+      "tags": [
+        "Living",
+        "Science",
+        "Drinks",
+        "Restaurants",
+        "UK",
+        "Poetry"
+      ],
+      "language": "en",
+      "keywords": [
+        "craft beer",
+        "real ale",
+        "pub culture",
+        "beer history"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:https://simeyeveritt.wixsite.com/brapa/blog-feed.xml",
+      "title": "BRAPA | Blog",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://simeyeveritt.wixsite.com/brapa/blog-feed.xml",
+      "summary": "On 5th April 2014, I had a dream.  Or was it a nightmare?  To tick every pub in the Good Beer Guide!",
+      "details": "Uncategorizable > Completionists",
+      "cleaned_title": "BRAPA",
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Drinks",
+        "Restaurants"
+      ],
+      "language": "en",
+      "keywords": [
+        "pubs",
+        "Good Beer Guide",
+        "beer"
+      ],
+      "top_level_category": "Home & Hobbies"
+    },
+    {
+      "id": "feed:http://realpubsuk.blogspot.com/feeds/posts/default",
+      "title": "Campaign for Real Pubs",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "http://realpubsuk.blogspot.com/feeds/posts/default",
+      "summary": "They can still be found if you know where to look...",
+      "details": "Recreation > Food And Drink > Restaurants > Pubs",
+      "cleaned_title": "Campaign for Real Pubs",
+      "cleaned_author": null,
+      "tags": [
+        "Local",
+        "Poetry",
+        "Restaurants",
+        "UK"
+      ],
+      "language": "en",
+      "keywords": [
+        "real pubs",
+        "British pubs",
+        "local drinking"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:http://closedpubs.blogspot.com/feeds/posts/default",
+      "title": "Closed Pubs",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "http://closedpubs.blogspot.com/feeds/posts/default",
+      "summary": "Recording the slow, sad death of the British pub.",
+      "details": "Recreation > Food And Drink > Restaurants > Pubs",
+      "cleaned_title": "Closed Pubs",
+      "cleaned_author": null,
+      "tags": [
+        "Local",
+        "Restaurants",
+        "UK",
+        "History"
+      ],
+      "language": "en",
+      "keywords": [
+        "pub closures",
+        "British pub history"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:https://mappiman.blogspot.com/feeds/posts/default",
+      "title": "Mappiman's Real Ale Walks",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://mappiman.blogspot.com/feeds/posts/default",
+      "summary": "Walking the UK, ticking off CAMRA Good Beer Guide Pubs and hunting for Geocaches.",
+      "details": "Recreation > Food And Drink > Restaurants > Pubs",
+      "cleaned_title": "Mappiman's Real Ale Walks",
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Drinks",
+        "Restaurants",
+        "UK"
+      ],
+      "language": "en",
+      "keywords": [
+        "walking",
+        "CAMRA",
+        "Geocaching"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:http://merseypub.blogspot.com/feeds/posts/default",
+      "title": "Merseyside Pub Guide",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "http://merseypub.blogspot.com/feeds/posts/default",
+      "summary": "The Researcher's Blog.",
+      "details": "Countries > UK",
+      "cleaned_title": "Merseyside Pub Guide",
+      "cleaned_author": null,
+      "tags": [
+        "Local",
+        "Restaurants",
+        "UK"
+      ],
+      "language": "en",
+      "keywords": [
+        "Merseyside pubs",
+        "UK drinking"
+      ],
+      "top_level_category": "Regional & Local"
+    },
+    {
+      "id": "feed:https://micropubadventures.co.uk/feed/",
+      "title": "Micropub Adventures",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://micropubadventures.co.uk/feed/",
+      "summary": "Micropubs, Breweries, Pubs and more\u2026\u2026.",
+      "details": "Recreation > Food And Drink > Restaurants > Pubs",
+      "cleaned_title": "Micropub Adventures",
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Restaurants",
+        "Poetry",
+        "UK"
+      ],
+      "language": "en",
+      "keywords": [
+        "micropubs",
+        "breweries"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:http://propupthebar.blogspot.com/feeds/posts/default",
+      "title": "Prop Up the Bar",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "http://propupthebar.blogspot.com/feeds/posts/default",
+      "summary": "Travelling the land looking for the perfect pub.  Then wondering what the one around the corner is like...",
+      "details": "Recreation > Food And Drink > Restaurants > Pubs",
+      "cleaned_title": "Prop Up the Bar",
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Restaurants",
+        "Poetry",
+        "UK"
+      ],
+      "language": "en",
+      "keywords": [
+        "pub crawls",
+        "local experiences"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:https://pubcurmudgeon.blogspot.com/feeds/posts/default",
+      "title": "The Pub Curmudgeon",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://pubcurmudgeon.blogspot.com/feeds/posts/default",
+      "summary": "A jaundiced view of life from the darkest recess of the saloon bar...",
+      "details": "Recreation > Food And Drink > Restaurants > Pubs",
+      "cleaned_title": "The Pub Curmudgeon",
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Restaurants",
+        "Poetry",
+        "Drinks"
+      ],
+      "language": "en",
+      "keywords": [
+        "pubs",
+        "culture",
+        "beer"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:https://pubhistoryproject.co.uk/feed/",
+      "title": "Pub History Project \u2013 Leicester",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://pubhistoryproject.co.uk/feed/",
+      "summary": "History and Beer.",
+      "details": "Recreation > Food And Drink > Restaurants > Pubs",
+      "cleaned_title": "Pub History Project \u2013 Leicester",
+      "cleaned_author": null,
+      "tags": [
+        "Local",
+        "Restaurants",
+        "Poetry"
+      ],
+      "language": "en",
+      "keywords": [
+        "pub history",
+        "Leicester",
+        "beer"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:https://chrisdyson55.blogspot.com/feeds/posts/default",
+      "title": "Real Ale, Real Music",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://chrisdyson55.blogspot.com/feeds/posts/default",
+      "summary": "A celebration of the intersection of real ale and music, featuring highlights from various locations and events.",
+      "details": "Recreation > Food And Drink > Restaurants > Pubs",
+      "cleaned_title": "Real Ale, Real Music",
+      "cleaned_author": null,
+      "tags": [
+        "Arts & Culture",
+        "Music",
+        "Restaurants",
+        "Poetry"
+      ],
+      "language": "en",
+      "keywords": [
+        "real ale",
+        "live music",
+        "events"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:https://retiredmartin.com/feed/",
+      "title": "retiredmartin",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://retiredmartin.com/feed/",
+      "summary": "On permanent exploration of places, pubs, people and new music.",
+      "details": "Recreation > Food And Drink > Restaurants > Pubs",
+      "cleaned_title": "retiredmartin",
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Poetry",
+        "Restaurants"
+      ],
+      "language": "en",
+      "keywords": [
+        "travel",
+        "pub culture",
+        "music"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:http://feeds.feedburner.com/Blog-WillHawkes",
+      "title": "Will Hawkes \u2014 Blog",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "http://feeds.feedburner.com/Blog-WillHawkes",
+      "summary": "Beer, food and travel journalist.",
+      "details": "Recreation > Food And Drink > Drink > Beer",
+      "cleaned_title": "Will Hawkes \u2014 Blog",
+      "cleaned_author": "Will Hawkes",
+      "tags": [
+        "Living",
+        "Restaurants",
+        "Poetry",
+        "Drinks"
+      ],
+      "language": "en",
+      "keywords": [
+        "pubs",
+        "food",
+        "travel"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:https://beerinsider.com/feed/",
+      "title": "Beer Insider",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://beerinsider.com/feed/",
+      "summary": "Taking a look behind the obvious.",
+      "details": "Recreation > Food And Drink > Drink > Beer",
+      "cleaned_title": "Beer Insider",
+      "cleaned_author": null,
+      "tags": [
+        "Tech",
+        "Drinks",
+        "Restaurants"
+      ],
+      "language": "en",
+      "keywords": [
+        "beer trends",
+        "brewery culture"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:http://abetterbeerblog427.com/feed/",
+      "title": "A Good Beer Blog \u2013 Second Gen (2003-2016, 2016- )",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "http://abetterbeerblog427.com/feed/",
+      "summary": "Allegedly the second oldest beer blog on the planet.",
+      "details": "Recreation > Food And Drink > Drink > Beer",
+      "cleaned_title": "A Good Beer Blog \u2013 Second Gen",
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Drinks",
+        "Restaurants"
+      ],
+      "language": "en",
+      "keywords": [
+        "beer news",
+        "tasting notes"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "title": "Bon App\u00e9tit",
+      "popularity_score": 2.6883104792378987,
+      "sources": [
+        "crowdsourced_popular"
+      ],
+      "feed_url": "https://www.bonappetit.com/feed/rss",
+      "kind": "feed",
+      "id": "feed:https://www.bonappetit.com/feed/rss",
+      "cleaned_title": "Bon App\u00e9tit",
+      "cleaned_author": null,
+      "summary": "A food-oriented website delivering current culinary advice and insights, featuring expert recommendations for kitchenware and recipes, aimed at both amateur cooks and culinary enthusiasts.",
+      "tags": [
+        "Living",
+        "Cooking",
+        "Restaurants"
+      ],
+      "language": "en",
+      "keywords": [
+        "cooking",
+        "kitchen",
+        "recipes",
+        "food"
+      ]
+    },
+    {
+      "id": "feed:feeds.feedburner.com:The Impulsive Buy",
+      "cleaned_title": "The Impulsive Buy",
+      "summary": "A humorous and candid review site that critiques a variety of products you might find on grocery shelves or fast food menus, often with a pop culture twist.",
+      "title": "The Impulsive Buy",
+      "kind": "feed",
+      "feed_url": "http://feeds.feedburner.com/theimpulsivebuy/aRIJ",
+      "details": "Food & Drink",
+      "sources": [
+        "original_feed_db",
+        "ooh_directory"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Cooking",
+        "Restaurants",
+        "_hip",
+        "_artsy"
+      ],
+      "language": "en",
+      "keywords": [
+        "product reviews",
+        "snack foods",
+        "fast food",
+        "humor"
+      ],
+      "top_level_category": "Food & Drink"
+    }
+  ],
+  "child_categories": []
+}

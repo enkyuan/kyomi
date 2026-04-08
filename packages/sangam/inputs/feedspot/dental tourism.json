@@ -1,0 +1,48 @@
+{
+  "category": "Dental Tourism",
+  "source_url": "https://rss.feedspot.com/dental_tourism_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Dental Tourist",
+      "feed_url": "https://www.thedentaltourist.com/feeds/posts/default",
+      "website_url": "https://www.thedentaltourist.com/",
+      "description": "I head to beautiful Costa Rica for major dental work in order to avoid the high prices in the U.S. Here is my story.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5408191.jpg?t=1654590034"
+    },
+    {
+      "title": "Good Sam Dental Blog",
+      "feed_url": "https://www.goodsamdental.org/feed/",
+      "website_url": "https://www.goodsamdental.org/blog/",
+      "description": "Samaritan Dental's informational blog about Tijuana, and travel help for dental tourism in Mexico. We are a Mexican dental clinic in Tijuana, Mexico. Our staff is made up of highly-trained, board-certified dentists. Our modern office has been recently remodeled, and outfitted with the latest in dental equipment.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5408189.jpg?t=1654590384"
+    },
+    {
+      "title": "Dental Work and Holidays: A Guide for Travellers Blog",
+      "feed_url": "https://catalog-nim.com/categories/blog/index.xml",
+      "website_url": "https://www.catalog-nim.com/categories/blog/",
+      "description": "Just because you go on holiday, doesn't mean that the bacteria in your mouth does. Hi! My name is Mandi, and as a lover of travelling, I have taken a lot of trips. Unfortunately, I have also had the misfortune to suffer from dental issues on those trips. This blog focuses on everything related to travelling and dental work.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5408190.jpg?t=1654590513"
+    },
+    {
+      "title": "Dental Travel Services Blog",
+      "feed_url": "https://www.dentaltravelservices.com/dental-tourism-blogs?format=feed&type=rss",
+      "website_url": "https://www.klironomoudental.com/blog-dental-tourism/",
+      "description": "The site features dental tourism and travel-related blogs, for Asia, Europe, and Latin America. Dental Travel Services connects qualified dentists with overseas patients.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5408184.jpg?t=1654589046"
+    },
+    {
+      "title": "Klironomou Dental Clinic Blog",
+      "feed_url": "https://www.klironomoudental.com/feed/",
+      "website_url": "https://www.klironomoudental.com/blog-dental-tourism/",
+      "description": "In this section, we will post an informative post on Dental tourism in Greece. Dental implants, teeth whitening, aesthetics and all you need to know is here!",
+      "followers": {
+        "twitter": 16
+      },
+      "image_url": "https://i1.feedspot.com/5408186.jpg?t=1654589915"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "category": "UK Classroom",
+  "source_url": "https://rss.feedspot.com/uk_classroom_rss_feeds",
+  "feeds": [
+    {
+      "title": "Class Teaching",
+      "feed_url": "https://classteaching.wordpress.com/feed/",
+      "website_url": "https://classteaching.wordpress.com/",
+      "description": "With content which focuses on how to improve CPD (continuing professional development), ideas on how to improve the teaching and learning experience, and information on speaking sessions held at the school, the blog attracts a network of teachers who are on the search for resources to help them in their careers.",
+      "followers": {
+        "facebook": 221,
+        "twitter": 20000
+      },
+      "image_url": "https://i1.feedspot.com/4645556.jpg?t=1611131375"
+    },
+    {
+      "title": "Mr P's ICT blog | Tech to raise standards!",
+      "feed_url": "http://mrparkinsonict.blogspot.com/feeds/posts/default",
+      "website_url": "http://mrparkinsonict.blogspot.com/",
+      "description": "A blog about using iPads to enhance teaching and learning in the classroom, especially Primary Education. Mr P is a primary teacher and iPad advocate.",
+      "followers": {
+        "facebook": 498500,
+        "twitter": 63400,
+        "instagram": 282800
+      },
+      "image_url": "https://i1.feedspot.com/4528775.jpg?t=1605680141"
+    },
+    {
+      "title": "Eversfield Blog",
+      "feed_url": "https://www.eversfield.co.uk/blog/rss",
+      "website_url": "https://www.eversfield.co.uk/blog/",
+      "description": "Eversfield Preparatory School is an independent day school and registered nursery, providing high-quality education for boys and girls from the term of their 3rd birthday to the age of 11 years.",
+      "followers": {
+        "twitter": 971
+      },
+      "image_url": "https://i1.feedspot.com/4917673.jpg"
+    },
+    {
+      "title": "Burravoe Primary School",
+      "feed_url": "https://blogs.glowscotland.org.uk/sh/BurravoePrimarySchool/feed/",
+      "website_url": "https://blogs.glowscotland.org.uk/sh/BurravoePrimarySchool/",
+      "description": "We are a very small island primary school in Shetland. We are P1 - P7. We are great learners and we are good at using Glow. We are very good at working together.",
+      "followers": {
+        "twitter": 288
+      },
+      "image_url": "https://i1.feedspot.com/4730139.jpg?t=1607670616"
+    },
+    {
+      "title": "Learning Resources UK Blog",
+      "feed_url": "https://blog.learningresources.co.uk/feed/",
+      "website_url": "https://www.learningresources.co.uk/blog",
+      "description": "Keeping you up-to-date with engaging and inspiring activities that will develop young children and encourage them to learn both at home and in the classroom on Learning Resources UK.",
+      "followers": {
+        "facebook": 61200,
+        "twitter": 13100,
+        "instagram": 70900
+      },
+      "image_url": "https://i1.feedspot.com/4827288.jpg?t=1610952634"
+    }
+  ]
+}

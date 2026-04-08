@@ -1,0 +1,29 @@
+{
+  "category": "Niagara Falls News",
+  "source_url": "https://rss.feedspot.com/niagara_falls_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Niagara Gazette",
+      "feed_url": "https://www.niagara-gazette.com/search/?f=rss&t=article&c=news&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.niagara-gazette.com/",
+      "description": "From inception in 1854, the Niagara Falls Gazette has been the record of local news and events in and around Niagara Falls.",
+      "followers": {
+        "facebook": 33100,
+        "twitter": 3,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5148759.jpg?t=1588912346"
+    },
+    {
+      "title": "The Niagara Reporter",
+      "feed_url": "https://niagarafallsreporter.com/feed/",
+      "website_url": "https://niagarafallsreporter.com/",
+      "description": "The Niagara Reporter is a newspaper publication that has served Niagara & Erie County since 2000. Follow the website to get the latest local news, stories and updates in Niagara Falls, NY.",
+      "followers": {
+        "facebook": 31300,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5148764.jpg?t=1588913293"
+    }
+  ]
+}

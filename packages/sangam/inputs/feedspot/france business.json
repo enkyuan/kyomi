@@ -1,0 +1,52 @@
+{
+  "category": "France Business",
+  "source_url": "https://rss.feedspot.com/france_business_rss_feeds",
+  "feeds": [
+    {
+      "title": "France 24 \u00bb Business / Tech",
+      "feed_url": "https://www.france24.com/en/business-tech/rss",
+      "website_url": "https://www.france24.com/en/business-tech/",
+      "description": "Get all the business and technology news. France 24 offers business news, Internet and media news, and economy and banking news.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 445600,
+        "instagram": 481800
+      },
+      "image_url": "https://i1.feedspot.com/5344308.jpg?t=1753961524"
+    },
+    {
+      "title": "Euro Start Enterprises \u00bb Business Advice",
+      "feed_url": "https://www.eurostartentreprises.com/en/business-advice?format=feed&type=rss",
+      "website_url": "https://www.eurostartentreprises.com/en/business-advice",
+      "description": "We help foreign businesses open companies in France, Europe, US, Asia and the Emirates with access to banks, accountants and tax consultants.",
+      "followers": {
+        "facebook": 506,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5344312.jpg?t=1637220627"
+    },
+    {
+      "title": "VIE Business France",
+      "feed_url": "https://vie.businessfrance.fr/feed/",
+      "website_url": "https://vie.businessfrance.fr/",
+      "description": "Business France is the national agency serving the internationalization of the French economy. It is responsible for the international development of companies and their exports, as well as the prospecting and reception of international investments in France.",
+      "followers": {
+        "facebook": 28700,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5344310.jpg?t=1637220578"
+    },
+    {
+      "title": "Dropbox Business Blog",
+      "feed_url": "https://dropboxbusinessblog.fr/feed/",
+      "website_url": "https://dropboxbusinessblog.fr/",
+      "description": "This blog is a space where decision-makers and business leaders share their vision of collaboration and give you advice to support the growth of your teams while ensuring the security of exchanges. Dropbox is the world's first smart workspace that helps people and teams focus on the work that matters.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 46900,
+        "instagram": 100200
+      },
+      "image_url": "https://i1.feedspot.com/5344309.jpg?t=1637221357"
+    }
+  ]
+}

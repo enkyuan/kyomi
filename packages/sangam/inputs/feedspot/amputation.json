@@ -1,0 +1,76 @@
+{
+  "category": "Amputation",
+  "source_url": "https://rss.feedspot.com/amputation_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Active Amputee Blog",
+      "feed_url": "https://www.theactiveamputee.org/rss/blog",
+      "website_url": "https://www.theactiveamputee.org/blog/",
+      "description": "I am Bjoern Eser, the creator of The Active Amputee. The Active Amputee will inform you about new developments in the prosthetic sector, about inspiring stories by other people with limb differences, about special events for amputees, about funding options and peer support groups for people with disabilities and about new posts on my blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5043043.jpg?t=1667805857"
+    },
+    {
+      "title": "Diabetic Foot Online",
+      "feed_url": "https://diabeticfootonline.com/feed/",
+      "website_url": "https://diabeticfootonline.com/",
+      "description": "A David G. Armstrong blog on diabetic foot, wound healing, amputation prevention, and the merger of consumer tech with medical devices. Their goal is to eliminate amputation in people with diabetes over the next generation. At its core, SALSA is a collaborative clinical and research alliance that is dedicated to advancing care of the diabetic foot.",
+      "followers": {
+        "facebook": 13300,
+        "twitter": 11900,
+        "instagram": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5410066.jpg?t=1667806027"
+    },
+    {
+      "title": "American Endovascular Blog",
+      "feed_url": "https://americanendovascular.com/feed/",
+      "website_url": "https://americanendovascular.com/blog/",
+      "description": "The American Endovascular centers and affiliated physicians have an extraordinary track record of saving more than 80% of patient limbs. American Endovascular affiliated physicians to undertake highly complex procedures for Peripheral Arterial Disease and Critical Limb Ischemia and provide world-class amputation prevention care. They are the primary go-to limb salvage resource for doctors before scheduling amputations.",
+      "followers": {
+        "facebook": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5463552.jpg?t=1667806210"
+    },
+    {
+      "title": "Amputee Store Blog",
+      "feed_url": "https://amputeestore.com/blogs/amputee-life.atom",
+      "website_url": "https://amputeestore.com/blogs/amputee-life",
+      "description": "At Amputee Store, they are passionate about helping you easily access the prosthetic supplies you need, so that you can live your life on your own terms. The Amputee Store Channel is the place for product information, reviews, personal care guidelines, and issues and news that affect our customers. Head straight to their blog for information, guidelines, issues, and news that affect our customers.",
+      "followers": {
+        "twitter": 1100,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5463554.jpg?t=1667805942"
+    },
+    {
+      "title": "Amplitude Magazine",
+      "feed_url": "https://livingwithamplitude.com/feed/",
+      "website_url": "https://livingwithamplitude.com/online-exclusive/",
+      "description": "People with limb differences have more dynamic lives than ever. Amplitude Magazine tells their stories. Exclusive digital content from Amplitude, the top amputee lifestyle magazine. Amputee news, interviews, videos, and other amputee resources. Stay tuned for regular updates.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5463557.jpg?t=1667806260"
+    },
+    {
+      "title": "InMotion Prosthetics Blog",
+      "feed_url": "https://www.inmotionprosthetics.com//feed/rss2",
+      "website_url": "https://www.inmotionprosthetics.com/blog",
+      "description": "InMotion Prosthetics prides itself on being responsive and aims to guide you through the complexity of modern technology so you can make an informed decision. Learn about the latest practices in orthotics and prosthetics with the inMotion Prosthetics Blog. inMotion Prosthetics is a Bi-lingual mobile prosthetic service in San Antonio that serves amputees and improves their quality of life.",
+      "followers": {
+        "facebook": 465
+      },
+      "image_url": "https://i1.feedspot.com/5332112.jpg?t=1667805999"
+    },
+    {
+      "title": "Amputee Coalition Blog",
+      "feed_url": "https://blog.amputee-coalition.org/feed/",
+      "website_url": "https://worldabilitysport.org/news/",
+      "description": "The Amputee Coalition is dedicated to enhancing the quality of life for amputees and their families, improving patient care and preventing limb loss.Elevating the Amputee Community. Learn how you can get involved in advocacy with the Amputee Coalition to make a difference for people living with limb loss and limb difference.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5463553.jpg?t=1667805911"
+    }
+  ]
+}

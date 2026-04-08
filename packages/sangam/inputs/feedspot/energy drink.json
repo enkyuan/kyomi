@@ -1,0 +1,59 @@
+{
+  "category": "Energy Drink",
+  "source_url": "https://rss.feedspot.com/energy_drink_rss_feeds",
+  "feeds": [
+    {
+      "title": "PricePlow \u00bb Energy Drinks",
+      "feed_url": "https://blog.priceplow.com/energy-drinks/feed",
+      "website_url": "https://blog.priceplow.com/energy-drinks",
+      "description": "PricePlow's Blog gives the latest supplement news and ingredient research! PricePlow began as a deals site for nutritional supplements but is far more.",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 3500,
+        "instagram": 22700
+      },
+      "image_url": "https://i1.feedspot.com/5011972.jpg?t=1622276330"
+    },
+    {
+      "title": "The Rad Blog \u00bb Energy Drink",
+      "feed_url": "https://chasrad.wordpress.com/category/energy-drink/feed/",
+      "website_url": "https://chasrad.wordpress.com/category/energy-drink/",
+      "description": "The Rad Blog is all about reviews, tastes tests, and overall Energy Drink Reactions. Posts about Energy Drink written by Chas Rad.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5012045.jpg?t=1681448523"
+    },
+    {
+      "title": "Caffeine Informer \u00bb Energy Drinks Brands",
+      "feed_url": "https://www.caffeineinformer.com/category/energy-drink-brands/feed",
+      "website_url": "https://www.caffeineinformer.com/category/energy-drink-brands",
+      "description": "Caffeine dangers, benefits, and safety. Find the caffeine amounts in energy drinks, coffee, tea, soda, and food with our extensive interactive database. We investigate energy drink ingredients, side effects, dangers, caffeine levels, addiction, and popularity.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5011973.jpg?t=1622276346"
+    },
+    {
+      "title": "REIZE Energy Drink",
+      "feed_url": "https://reizeclub.com/feed/",
+      "website_url": "https://reizeclub.com/",
+      "description": "Hi, I'm Marty Spargo. I've been fascinated by powder energy drinks and launched my own energy drink brand. On this website, I share information about energy drinks so that you can be more informed about all of the different brands. I hope you find it helpful.",
+      "followers": {
+        "facebook": 17700,
+        "twitter": 3400,
+        "instagram": 13200
+      },
+      "image_url": "https://i1.feedspot.com/5011998.jpg?t=1622276327"
+    },
+    {
+      "title": "Thin Energy Blog",
+      "feed_url": "https://thinenergy.com/blogs/news.atom",
+      "description": "Thin Energy's aim is to provide energy supplements to people with products that combine the best of health and wellness while simultaneously encouraging people to get out and pursue a healthy, active lifestyle. Check out the blogs to stay up-to-date on the current Thin Energy news and other topics.",
+      "followers": {
+        "twitter": 285,
+        "instagram": 9500
+      },
+      "image_url": "https://i1.feedspot.com/5011819.jpg?t=1622276351"
+    }
+  ]
+}

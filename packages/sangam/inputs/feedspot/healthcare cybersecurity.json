@@ -1,0 +1,88 @@
+{
+  "category": "Healthcare Cybersecurity",
+  "source_url": "https://rss.feedspot.com/healthcare_cybersecurity_rss_feeds",
+  "feeds": [
+    {
+      "title": "Healthcare IT News \u00bb Privacy & Security",
+      "feed_url": "https://www.healthcareitnews.com/taxonomy/term/6156/feed",
+      "website_url": "https://www.healthcareitnews.com/taxonomy/term/6156/",
+      "description": "Get the latest updates on Privacy & Security in this segment. Healthcare IT News is the industry's authoritative source covering the people, policy, and technology driving next-generation healthcare in the U.S. and throughout the world. Since 2003, it has been the voice of health IT, delivering editorial insights about compelling topics such as electronic health records, health information exchange, privacy and security, data analytics, and more.",
+      "followers": {
+        "facebook": 28700,
+        "twitter": 120700
+      },
+      "image_url": "https://i1.feedspot.com/5310780.jpg?t=1654327878"
+    },
+    {
+      "title": "CyberScoop \u00bb Healthcare",
+      "feed_url": "https://cyberscoop.com/news/healthcare/feed/",
+      "website_url": "https://cyberscoop.com/news/healthcare/",
+      "description": "CyberScoop's healthcare section covers the most up-to-date technology and policy news surrounding cybersecurity in the healthcare space. CyberScoop is the leading media brand in the cybersecurity market. It reports on news and events impacting technology and security.",
+      "followers": {
+        "facebook": 6600,
+        "twitter": 22700,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5406680.jpg?t=1654325190"
+    },
+    {
+      "title": "HIT Consultant \u00bb Healthcare Cybersecurity",
+      "feed_url": "https://hitconsultant.net/tag/cybersecurity/feed/",
+      "website_url": "https://hitconsultant.net/tag/cybersecurity/",
+      "description": "Get the latest updates on what is happening in the Healthcare Cybersecurity field all in one place from HIT Consultant. Founded in 2012, HIT Consultant is the leading source of healthcare technology news, analysis, and insights for healthcare executives, physicians, and providers. Our content provides editorial insights on health IT, EHRs, population health management, digital health, telehealth, accountable care, patient engagement, and startups.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 20100
+      },
+      "image_url": "https://i1.feedspot.com/5406676.jpg?t=1654325170"
+    },
+    {
+      "title": "HIPAA Guide \u00bb Healthcare Cybersecurity News",
+      "feed_url": "https://www.hipaaguide.net/healthcare-cybersecurity/feed/",
+      "website_url": "https://www.hipaaguide.net/healthcare-cybersecurity/",
+      "description": "The latest news about healthcare cybersecurity, including updates about the latest cybersecurity threats. The HIPAA Guide is an important source of information for individuals and organizations covered by the Health Insurance Portability and Accountability Act (HIPAA), the Health Information Technology for Economic and Clinical Health (HITECH), and regulations issued by the Centers for Medicare & Medicaid Services (CMS) relating to patient privacy and data security.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5406681.jpg?t=1654328188"
+    },
+    {
+      "title": "Fortified Health Security Blog",
+      "feed_url": "https://fortifiedhealthsecurity.com/feed/",
+      "website_url": "https://fortifiedhealthsecurity.com/resources/blog/",
+      "description": "Fortified's team of cybersecurity specialists is dedicated to helping healthcare providers, payers and business associates protect their patient data across the Fortified Healthcare Ecosystem. We provide a wide variety of purpose-built services to help healthcare organizations evaluate their unique risk appetite, strengthen their cybersecurity posture, and improve operations along their security journey.",
+      "followers": {
+        "facebook": 73,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5406684.jpg?t=1654325210"
+    },
+    {
+      "title": "Compliance Junction \u00bb Healthcare Cybersecurity News",
+      "feed_url": "https://www.compliancejunction.com/category/cybersecurity/feed/",
+      "website_url": "https://www.compliancejunction.com/category/cybersecurity/",
+      "description": "The latest news about healthcare cybersecurity, IT security threats, cyber threats to healthcare systems, and healthcare data breaches. We are an agile team of HIPAA subject matter experts, software engineers, content writers, eLearning specialists, and multimedia specialists. We have come together to help solve the most persistent challenges related to the engagement and effectiveness of HIPAA compliance training.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5406679.jpg?t=1654327743"
+    },
+    {
+      "title": "Wakefield Brunswick Blog",
+      "feed_url": "https://www.wakefieldbrunswick.com/blog?format=rss",
+      "website_url": "https://www.wakefieldbrunswick.com/blog",
+      "description": "Read our recent articles addressing the challenges most commonly faced in healthcare when it comes to emergency preparedness and management, resilience training, and continuity planning. Our team partners with you to create an integrated resiliency program that includes strong governance and alignment with strategic priorities to achieve organizational resilience that supports the ability to provide patient care under any circumstances.",
+      "followers": {
+        "twitter": 89
+      },
+      "image_url": "https://i1.feedspot.com/5406678.jpg?t=1654325179"
+    },
+    {
+      "title": "Becker's Hospital Review \u00bb Cybersecurity",
+      "feed_url": "https://www.beckershospitalreview.com/healthcare-information-technology/cybersecurity/feed/",
+      "website_url": "https://www.beckershospitalreview.com/cybersecurity/",
+      "description": "The leading hospital magazine for hospital business news and analysis for hospital and healthcare system executives. Read Cybersecurity news and updates. Becker's Healthcare is the go-to source for healthcare decision-makers and one of the fastest-growing media platforms in the industry.",
+      "followers": {
+        "facebook": 10800,
+        "twitter": 52400
+      },
+      "image_url": "https://i1.feedspot.com/5406677.jpg?t=1654325176"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "category": "Egypt Movie",
+  "source_url": "https://rss.feedspot.com/egypt_movie_rss_feeds",
+  "feeds": [
+    {
+      "title": "Cairo International Film Festival Blog",
+      "feed_url": "https://www.ciff.org.eg/feed/",
+      "website_url": "https://www.ciff.org.eg/mediaold/",
+      "description": "The Cairo International Film Festival (CIFF) is the oldest annually running film festival in Africa and The Middle East.",
+      "followers": {
+        "facebook": 233000,
+        "twitter": 16000,
+        "instagram": 96500
+      },
+      "image_url": "https://i1.feedspot.com/5351466.jpg?t=1638959940"
+    },
+    {
+      "title": "What Women Want \u00bb Film",
+      "feed_url": "https://whatwomenwant-mag.com/tag/film/feed/",
+      "website_url": "https://whatwomenwant-mag.com/tag/film/",
+      "description": "This section features articles on films. Since its launch in 2006 WHAT WOMEN WANT MAGAZINE has established itself as one of the leading women's magazines issued monthly in English. Our reader is the modern Egyptian woman who wants to read real deal stories of real deal women, be up-to-date with the latest trends in fashion and know what's new on the home & decoration front, get the latest insights on career development, and so much more.",
+      "followers": {
+        "facebook": 356400,
+        "twitter": 3200,
+        "instagram": 393400
+      },
+      "image_url": "https://i1.feedspot.com/5351469.jpg?t=1638960136"
+    }
+  ]
+}

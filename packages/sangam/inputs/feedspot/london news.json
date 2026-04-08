@@ -1,0 +1,129 @@
+{
+  "category": "London News",
+  "source_url": "https://rss.feedspot.com/london_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Evening Standard",
+      "feed_url": "https://www.standard.co.uk/rss",
+      "website_url": "https://www.standard.co.uk/",
+      "description": "Latest London news, business, sport, showbiz and entertainment from the London Evening Standard.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 687600,
+        "instagram": 221300
+      },
+      "image_url": "https://i1.feedspot.com/4896210.jpg?t=1686554985"
+    },
+    {
+      "title": "South London Press & Mercury | South London News",
+      "feed_url": "https://londonnewsonline.co.uk/feed/",
+      "website_url": "https://londonnewsonline.co.uk/",
+      "description": "South London Press is the local newspaper covering Southwark, Lambeth, Lewisham and Wandsworth.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 39800
+      },
+      "image_url": "https://i1.feedspot.com/4896222.jpg?t=1525266811"
+    },
+    {
+      "title": "LondonLovesBusiness",
+      "feed_url": "https://londonlovesbusiness.com/feed/",
+      "website_url": "https://londonlovesbusiness.com/",
+      "description": "Get the latest London and business news from London's most exciting business website. We bring you need-to-know news, the hottest entrepreneur interviews, insights into growth and trends, London property and a dash of London lifestyle too.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 26400
+      },
+      "image_url": "https://i1.feedspot.com/2449976.jpg"
+    },
+    {
+      "title": "City A.M.",
+      "feed_url": "https://www.cityam.com/feed/",
+      "website_url": "https://www.cityam.com/",
+      "description": "Explore the latest business and finance news from the UK and rest of the World - including breaking economic & political news, comments & analysis from City A.M. City A.M. is London's most-read financial and business newspaper, enjoyed by thousands of workers across the capital each weekday. Launched in 2006, it covers the latest economic, political and business news as well as comment, sport and lifestyle features.",
+      "followers": {
+        "facebook": 25000,
+        "twitter": 79400
+      },
+      "image_url": "https://i1.feedspot.com/4896250.jpg?t=1678436558"
+    },
+    {
+      "title": "The London Free Press",
+      "feed_url": "https://lfpress.com/feed",
+      "website_url": "https://lfpress.com/",
+      "description": "Follow to keep up with breaking news, multimedia, reviews, opinion, business, sports, entertainment, travel, agriculture, energy, technology, food, health.",
+      "followers": {
+        "facebook": 99400,
+        "twitter": 125300,
+        "instagram": 18000
+      },
+      "image_url": "https://i1.feedspot.com/4896539.jpg"
+    },
+    {
+      "title": "MyLondon",
+      "feed_url": "https://www.mylondon.news/?service=rss",
+      "website_url": "https://www.mylondon.news/",
+      "description": "Check out the latest London local news, opinion, sport, business, and more on MyLondon.",
+      "followers": {
+        "facebook": 379700,
+        "twitter": 33000,
+        "instagram": 29100
+      },
+      "image_url": "https://i1.feedspot.com/4896623.jpg?t=1609847306"
+    },
+    {
+      "title": "On London",
+      "feed_url": "https://www.onlondon.co.uk/feed/",
+      "website_url": "https://www.onlondon.co.uk/",
+      "description": "A small site covering the UK capital's politics, development, and culture with a team of top writers, OnLondon carries articles by a wide range of contributors who disagree about many things, but share a common desire to improve the quality of reporting and debate about London and to make it a better place for those who live and work here.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/7261332.jpg?t=1708943168"
+    },
+    {
+      "title": "This Is Local London",
+      "feed_url": "https://www.thisislocallondon.co.uk/news/rss/",
+      "website_url": "https://www.thisislocallondon.co.uk/",
+      "description": "This Is Local London provides latest news, travel, weather, crime and quirky stories from around London.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4411297.jpg"
+    },
+    {
+      "title": "London Evening Standard",
+      "feed_url": "https://www.homesandproperty.co.uk/rss",
+      "website_url": "https://www.standard.co.uk/homesandproperty",
+      "description": "Homes & Property is the leading newspaper property supplement in the country.Follow us to keep up with all the latest property news, area guides, buying, renting, interiors & design trends.",
+      "followers": {
+        "facebook": 30500,
+        "twitter": 50800
+      },
+      "image_url": "https://i1.feedspot.com/4842562.jpg?t=1611211898"
+    },
+    {
+      "title": "Financial News London",
+      "feed_url": "https://www.fnlondon.com/",
+      "website_url": "https://www.fnlondon.com/",
+      "description": "Financial News London is the leading source of information about Europe's investment banking, fund management and securities industries. Also find Breaking news, analysis and commentary on hedge funds, pensions, private equity, fintech, financial regulation and trading.",
+      "followers": {
+        "twitter": 106000
+      },
+      "image_url": "https://i1.feedspot.com/4896550.jpg?t=1525326132"
+    },
+    {
+      "title": "East London Advertiser",
+      "feed_url": "https://www.eastlondonadvertiser.co.uk/",
+      "website_url": "https://www.eastlondonadvertiser.co.uk/",
+      "description": "Find Latest news, sport, and what's on for Canary Wharf, Docklands, Bethnal Green and the surrounding London Borough of Tower Hamlets area.",
+      "followers": {
+        "facebook": 10200,
+        "twitter": 10900
+      },
+      "image_url": "https://i1.feedspot.com/4896614.jpg"
+    }
+  ]
+}

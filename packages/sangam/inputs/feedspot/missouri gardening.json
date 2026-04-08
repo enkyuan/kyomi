@@ -1,0 +1,63 @@
+{
+  "category": "Missouri Gardening",
+  "source_url": "https://rss.feedspot.com/missouri_gardening_rss_feeds",
+  "feeds": [
+    {
+      "title": "Deep Roots KC Blog",
+      "feed_url": "https://deeproots.org/feed/",
+      "website_url": "https://deeproots.org/blog/",
+      "description": "Stay up to date with announcements and news about native plants. Deep Roots is a collective impact organization of multi-sector Partners. Together with our partners, we work to increase native plant landscapes. Our mission is to encourage the appreciation, conservation, and use of native plants in the heartland through educating, collaborating, and facilitating the planting of regenerative native landscapes that are essential for a healthy planet.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 793,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5318401.jpg?t=1630575207"
+    },
+    {
+      "title": "Master Gardeners of Greene County Blog",
+      "feed_url": "https://mggreene.org/feed/",
+      "website_url": "https://mggreene.org/blog/",
+      "description": "Helping Others Learn to Grow. The Master Gardener Program is a public service program offered by the Cooperative Extension Service that provides university training to volunteers for the purpose of enabling them to serve their communities through horticulture, gardening, and pest management.",
+      "followers": {
+        "facebook": 5700
+      },
+      "image_url": "https://i1.feedspot.com/5318408.jpg?t=1630575754"
+    },
+    {
+      "title": "Discover + Share",
+      "feed_url": "https://discoverandshare.org/feed/",
+      "website_url": "https://discoverandshare.org/",
+      "description": "To discover and share knowledge about plants and their environment in order to preserve and enrich life. the Missouri Botanical Garden is the nation's oldest botanical garden in continuous operation and a National Historic Landmark.The Garden is a center for botanical research and science education, as well as an oasis in the city of St. Louis.",
+      "followers": {
+        "facebook": 211500,
+        "twitter": 55800
+      },
+      "image_url": "https://i1.feedspot.com/5310551.jpg?t=1633080557"
+    },
+    {
+      "title": "Good Earth Water Gardens Blog",
+      "feed_url": "https://www.goodearthwatergardens.com/feed",
+      "website_url": "https://www.goodearthwatergardens.com/koi-pond-water-garden-blog",
+      "description": "Learn the 'ins and outs' about building the best water features for your home or business, as well as maintaining your water garden to stand the test of time! Good Earth Water Gardens is proud to design, install and maintain home and business water features for the greater Kansas City area.",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 92,
+        "instagram": 49400
+      },
+      "image_url": "https://i1.feedspot.com/5318406.jpg?t=1630575466"
+    },
+    {
+      "title": "Colonial Gardens Blog",
+      "feed_url": "https://www.colonialgardenskc.com/blog/feed/",
+      "website_url": "https://www.colonialgardenskc.com/blog",
+      "description": "Posts on agriculture, gardening tips, home & lawn, landscaping, plant care, and more. Colonial Gardens is a garden center and agritourism destination in Blue Springs, MO. Creating a healthy planet, by connecting mind, body, & spirit to healthy plants and soil.",
+      "followers": {
+        "facebook": 47500,
+        "twitter": 93,
+        "instagram": 6000
+      },
+      "image_url": "https://i1.feedspot.com/5318249.jpg?t=1630504491"
+    }
+  ]
+}

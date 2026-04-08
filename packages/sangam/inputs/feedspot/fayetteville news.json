@@ -1,0 +1,64 @@
+{
+  "category": "Fayetteville News",
+  "source_url": "https://rss.feedspot.com/fayetteville_arkansas_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "KNWA FOX24",
+      "feed_url": "https://www.nwahomepage.com/feed/",
+      "website_url": "https://www.nwahomepage.com/",
+      "description": "KNWA FOX24 delivers the latest breaking news information and alerts to you and your family to issues impacting your life and community. KNWA FOX24 investigations are uncovering who's doing wrong and getting laws changed to help better protect your family. It covers the rapidly growing and vibrant Northwest Arkansas and River Valley community filled with rolling hills, rivers, lakes and Fortune 500 company headquarters.",
+      "followers": {
+        "facebook": 175500,
+        "twitter": 52100,
+        "instagram": 34700
+      },
+      "image_url": "https://i1.feedspot.com/5131437.jpg?t=1585130176"
+    },
+    {
+      "title": "City of Fayetteville, AR",
+      "feed_url": "https://www.fayetteville-ar.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.fayetteville-ar.gov/CivicAlerts.aspx?sort=date",
+      "description": "Fayetteville, AR is dedicated to keeping residents informed and up-to-date by providing the latest news about sports, business, performing arts, health/safety issues, human interest and more.",
+      "followers": {
+        "facebook": 23600,
+        "twitter": 4200,
+        "instagram": 12700
+      },
+      "image_url": "https://i1.feedspot.com/5209861.jpg?t=1603463724"
+    },
+    {
+      "title": "Fayetteville Flyer",
+      "feed_url": "https://fayettevilleflyer.com/feed/",
+      "website_url": "https://fayettevilleflyer.com/",
+      "description": "The Fayetteville Flyer is an online news source focusing on professional city government reporting and coverage of local arts and events. It is a locally owned online news source. Find the specific information on news, events and other interesting things around Fayetteville town at Fayetteville Flyer.",
+      "followers": {
+        "facebook": 56100,
+        "twitter": 27100,
+        "instagram": 52500
+      },
+      "image_url": "https://i1.feedspot.com/5209860.jpg?t=1603463576"
+    },
+    {
+      "title": "The Free Weekly",
+      "feed_url": "https://freeweekly.com/feed/",
+      "website_url": "https://freeweekly.com/",
+      "description": "The Free Weekly is Northwest Arkansas' only alternative newsweekly, serving the entire Northwest Arkansas community since 1994. Get the latest news and updates from and around Fayetteville city.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5209871.jpg?t=1603464018"
+    },
+    {
+      "title": "40/29 News",
+      "feed_url": "https://www.4029tv.com/topstories-rss",
+      "website_url": "https://www.4029tv.com/",
+      "description": "Get the top Fayetteville and Fort Smith news of the day. With live, local coverage and the latest weather, KHBS/KHOG gives you more of what you want. KHBS/KHOG ABC 40/29 and THE ARKANSAS CW cover news and weather in Northwest Arkansas, and is a trusted local news and information provider.",
+      "followers": {
+        "facebook": 346800,
+        "twitter": 72800
+      },
+      "image_url": "https://i1.feedspot.com/5475386.jpg?t=1670216039"
+    }
+  ]
+}

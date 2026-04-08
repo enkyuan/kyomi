@@ -1,0 +1,229 @@
+{
+  "category": "Seattle Food",
+  "source_url": "https://rss.feedspot.com/seattle_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Eater Seattle",
+      "feed_url": "https://seattle.eater.com/rss/index.xml",
+      "website_url": "https://seattle.eater.com/",
+      "description": "Eater is the one-stop shop for food and restaurant obsessives, coming to you from 24 cities across North America with new adventures around the world. The mission is to bring the most delicious food content ever with features, explainers, animations, recipes, and much more.",
+      "followers": {
+        "facebook": 41200,
+        "twitter": 23600,
+        "instagram": 74800
+      },
+      "image_url": "https://i1.feedspot.com/4827521.jpg?t=1610961618"
+    },
+    {
+      "title": "Vegan Richa",
+      "feed_url": "https://www.veganricha.com/feed/",
+      "website_url": "https://www.veganricha.com/",
+      "description": "The blog is about flavorful and delicious beans, lentils, veggies, whole grains, nuts, seeds, spices and herbs and a lot more. Vegan Food Blog with Indian Vegan Recipes, Vegetarian, Eggless, Dairy-free. Many Gluten-free, Soy-free.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 25700,
+        "instagram": 409500
+      },
+      "image_url": "https://i1.feedspot.com/4795032.jpg?t=1610027856"
+    },
+    {
+      "title": "Eat Seattle",
+      "feed_url": "https://www.eatinseattle.com/feed/",
+      "website_url": "https://www.eatinseattle.com/",
+      "description": "Eat Seattle is a leading food and lifestyle publication that showcases restaurant news, reviews, and eye-catching photography in the Pacific Northwest.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 9600,
+        "instagram": 62300
+      },
+      "image_url": "https://i1.feedspot.com/5010042.jpg?t=1622269193"
+    },
+    {
+      "title": "Eat, Drink, Travel, Y'all!",
+      "feed_url": "https://eatdrinktravelyall.com/feed/",
+      "website_url": "https://eatdrinktravelyall.com/",
+      "description": "Stephanie Forrer is a passionate food and travel writer and photographer and one of Seattle's most beloved social media personalities. She has spent the last five years eating and drinking her way through Seattle (and beyond!), and all the while photographing it, writing about it, and sharing it with the world.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 45000,
+        "instagram": 29600
+      },
+      "image_url": "https://i1.feedspot.com/5302520.jpg?t=1626353014"
+    },
+    {
+      "title": "The Stranger \u00bb Food & Drink",
+      "feed_url": "https://www.thestranger.com/seattle/Rss.xml?collection=21583813",
+      "website_url": "https://www.thestranger.com/collections/21583813/food-and-drink",
+      "description": "The Stranger, Seattle covers Seattle news, politics, music, film, and arts; plus movie times, club calendars, restaurant listings, forums, blogs, and Savage Love. Read articles about Food & Drink, The Stranger, Seattle's only newspaper.",
+      "followers": {
+        "facebook": 122400,
+        "twitter": 137600,
+        "instagram": 127800
+      },
+      "image_url": "https://i1.feedspot.com/5507872.jpg?t=1676379976"
+    },
+    {
+      "title": "Seattle India Bistro Blog",
+      "feed_url": "https://www.seattleindiabistro.com/feed/",
+      "website_url": "https://www.seattleindiabistro.com/blog/",
+      "description": "Since 1998, India Bistro has brought those complex flavors and rich textures of authentic Indian cuisine to the Seattle neighborhood of Ballard. Mukesh 'Mike' Punjabi dreamed of bringing the authentic tastes of his homeland to his new home of Seattle and the Ballard area. Wishing to bring classic dishes like Biriyani where we slow cook the rice and use only the freshest meats and the numerous spices known in Indian Cuisine.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5507880.jpg?t=1676380054"
+    },
+    {
+      "title": "Living Healthy in Seattle",
+      "feed_url": "https://livinghealthyinseattle.com/feed/",
+      "website_url": "https://livinghealthyinseattle.com/",
+      "description": "Hi! I'm Elizabeth, Seattleite who loves cooking healthily with some desserts thrown in there. Come visit my blog for healthy recipes (mostly plant-based and gluten-free options) plus some treats too. The key here is moderation! I might even mention a few restaurants I can't get enough of.",
+      "followers": {
+        "twitter": 86,
+        "instagram": 683
+      },
+      "image_url": "https://i1.feedspot.com/5507871.jpg?t=1676379970"
+    },
+    {
+      "title": "Capitol Hill Seattle Blog \u00bb FOOD & DRINK",
+      "feed_url": "https://www.capitolhillseattle.com/archive/food-drink/feed/",
+      "website_url": "https://www.capitolhillseattle.com/archive/food-drink/",
+      "description": "CHS Capitol Hill Seattle is a community site dedicated to the Capitol Hill neighborhood in lovely Seattle, Washington USA. We started as an independent, place-focused blog in January 2006 and have grown to incorporate voices from all over the Hill. Read about food & drinks in the following section of the blog.",
+      "followers": {
+        "facebook": 20700,
+        "twitter": 54500
+      },
+      "image_url": "https://i1.feedspot.com/5010050.jpg?t=1554724114"
+    },
+    {
+      "title": "Seattle Met \u00bb Eat & Drink",
+      "feed_url": "https://www.seattlemet.com/eat-and-drink/feed",
+      "website_url": "https://www.seattlemet.com/eat-and-drink",
+      "description": "Seattle Met illuminates a thriving city for newcomers and longtime residents. We cover arts, dining, fashion, travel, and the great outdoors. Seattle Met is essential reading for understanding the city and making the most of living here. Seattle's best restaurants, bars, and food trucks, with restaurant listings by price, cuisine, and neighborhood, along with daily food news and recent openings.",
+      "followers": {
+        "facebook": 66600,
+        "twitter": 183100,
+        "instagram": 82800
+      },
+      "image_url": "https://i1.feedspot.com/5507875.jpg?t=1676379996"
+    },
+    {
+      "title": "Slow Food Blog",
+      "feed_url": "https://www.slowfoodseattle.org/blog?format=rss",
+      "website_url": "https://www.slowfoodseattle.org/blog",
+      "description": "Slow Food is a global, grassroots organization, founded in 1989 to prevent the disappearance of local food cultures and traditions, counteract the rise of fast life, and combat people's dwindling interest in the food they eat, where it comes from, and how our food choices affect the world around us.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 8200,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5507877.jpg?t=1676380009"
+    },
+    {
+      "title": "The Eating Places",
+      "feed_url": "https://www.theeatingplaces.com/feed/",
+      "website_url": "https://www.theeatingplaces.com/recipes/",
+      "description": "Welcome to my food blog. I have been very fortunate to travel extensively and combined with my passion for all things food, I've had the opportunity to sample many examples of the food we all love. So you will see foods from the US, Europe, South America, and Asia or wherever I happen to be.",
+      "followers": {
+        "facebook": 120,
+        "twitter": 13
+      },
+      "image_url": "https://i1.feedspot.com/5507881.jpg?t=1676380033"
+    },
+    {
+      "title": "Seattle Magazine \u00bb Eat & Drink",
+      "feed_url": "https://seattlemag.com/eat-drink/feed/",
+      "website_url": "https://seattlemag.com/eat-drink/",
+      "description": "Through award-winning photography and stories, Seattle magazine at once celebrates the city's status as the birthplace of technology, innovation, and trends; the surrounding natural beauty; and the pioneering spirit that draws and keeps us all here. Bringing you all the best place to eat and drink while in Seattle is what the magazine do. Read recipes, interviews, places to visit, and more.",
+      "followers": {
+        "facebook": 36200,
+        "twitter": 301100,
+        "instagram": 84400
+      },
+      "image_url": "https://i1.feedspot.com/5507873.jpg?t=1676379982"
+    },
+    {
+      "title": "Eat Seattle Blog",
+      "feed_url": "https://www.eatseattlefoodblog.com/eat-seattle?format=RSS",
+      "website_url": "https://www.eatseattlefoodblog.com/eat-seattle",
+      "description": "Eat Seattle, based in Seattle's iconic Pike Place Market, offers chef-guided food tours. We connect you to the farmers, fishermen, and producers that bring the Pacific NW to our tables. Led by founder and Cordon Bleu Paris graduate, Chef Liz Philpot, we are a team of chefs passionate about uniting both travelers and locals alike, cooking, tasting, and learning about seasonal food.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5053263.jpg?t=1677477838"
+    },
+    {
+      "title": "Heather Christo",
+      "feed_url": "https://heatherchristo.com/feed/",
+      "website_url": "https://heatherchristo.com/",
+      "description": "Heather Christo is a food, entertaining and lifestyle blog dedicated to making your life easier! Heather Christo's mission is to change the way the world sees and eats the allergy-free life.",
+      "followers": {
+        "facebook": 45000,
+        "twitter": 6000,
+        "instagram": 48400
+      },
+      "image_url": "https://i1.feedspot.com/4854387.jpg?t=1622269186"
+    },
+    {
+      "title": "Seattle Weekly \u00bb Eat Drink Toke",
+      "feed_url": "https://www.seattleweekly.com/food/feed/",
+      "website_url": "https://www.seattleweekly.com/food/",
+      "description": "Seattle Weekly connects its readers to the doers, thinkers, businesses, and entertainers that shape this city and give it life. Get regular updates on Seattle food.",
+      "followers": {
+        "facebook": 40400,
+        "twitter": 148900,
+        "instagram": 19900
+      },
+      "image_url": "https://i1.feedspot.com/5010118.jpg?t=1622269201"
+    },
+    {
+      "title": "The Emerald Palate \u00bb Recipes",
+      "feed_url": "https://www.emeraldpalate.com/recipes/feed/",
+      "website_url": "https://www.emeraldpalate.com/recipes/",
+      "description": "The Emerald Palate is your guide to the Pacific Northwest. Use it to find custom travel itineraries, Seattle food tours, travel guides, things to do, gift guides, and more. Easy, yummy, and often healthy recipes inspired by Pacific Northwest flavors and ingredients. Bring some of the PNW to your table.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 883,
+        "instagram": 94700
+      },
+      "image_url": "https://i1.feedspot.com/5507878.jpg?t=1676380015"
+    },
+    {
+      "title": "Female Foodie \u00bb Seattle",
+      "feed_url": "https://www.femalefoodie.com/category/restaurant-reviews/washington/seattle/feed/",
+      "website_url": "https://www.femalefoodie.com/category/restaurant-reviews/washington/seattle/",
+      "description": "Hi there. I'm Brooke Eliason, a Salt Lake City native that's simply obsessed with all things food. We have hundreds of restaurant guides and restaurant-inspired recipes powered by yours truly and our incredibly talented team of food writers and recipe developers across the country.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 1100,
+        "instagram": 471000
+      },
+      "image_url": "https://i1.feedspot.com/5507874.jpg?t=1676379989"
+    },
+    {
+      "title": "Herbivoracious",
+      "feed_url": "https://www.herbivoracious.com/feed/",
+      "website_url": "https://www.herbivoracious.com/",
+      "description": "My name is Michael Natkin, and I live in Seattle, WA with my wife and our two kids. Herbivoracious is all about reinvigorating vegetarian cuisine with modern techniques and bold, authentic flavors.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5507879.jpg?t=1676380332"
+    },
+    {
+      "title": "Seattle Met \u00bb Eat & Drink",
+      "feed_url": "https://www.seattlemet.com/eat-and-drink/feed.atom",
+      "website_url": "https://www.seattlemet.com/eat-and-drink",
+      "description": "Seattle's best restaurants, bars, and food trucks, with restaurant listings by price, cuisine, and neighborhood, along with daily food news and recent openings.",
+      "followers": {
+        "twitter": 183100,
+        "instagram": 82800
+      },
+      "image_url": "https://i1.feedspot.com/5009860.jpg?t=1622269189"
+    },
+    {
+      "title": "The Seattle Times \u00bb Food & Drink",
+      "feed_url": "https://www.seattletimes.com/life/food-drink/feed/",
+      "website_url": "https://www.seattletimes.com/life/food-drink/",
+      "description": "The Food & Drink section brings you news about the Seattle restaurant and bar scene such as openings, closings, news about chefs, and advice on where to go for a great meal or happy hour in Seattle, the Eastside, or Snohomish County. Read the local news, sports, business, politics, entertainment, travel, restaurants, and opinion for Seattle and the Pacific Northwest.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900
+      },
+      "image_url": "https://i1.feedspot.com/5507876.jpg?t=1676380003"
+    }
+  ]
+}

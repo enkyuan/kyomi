@@ -1,0 +1,36 @@
+{
+  "category": "Galatasaray S.K.",
+  "source_url": "https://rss.feedspot.com/galatasaray_sk_rss_feeds",
+  "feeds": [
+    {
+      "title": "TheHardTackle \u00bb Galatasaray",
+      "feed_url": "https://thehardtackle.com/tag/galatasaray/feed/",
+      "website_url": "https://thehardtackle.com/tag/galatasaray/",
+      "description": "The TheHardTackle blog shares detailed information about the Galatasaray food club and post blog about the Latest transfer news, rumours, match previews and player ratings from Premier League, Champions League, La Liga, Serie A and Bundesliga.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5753249.jpg?t=1704978057"
+    },
+    {
+      "title": "Galatasaray S.K.",
+      "feed_url": "https://www.galatasaray.org/xml/gs_en.rss",
+      "website_url": "https://www.galatasaray.org/en/Homepage",
+      "description": "Galatasaray Spor Kul\u00fcb\u00fc, or Galatasaray, is a Turkish sports club that was founded in 1905. The club's website, galatasaray.org, has information about football, basketball, volleyball, branches, history, and more.",
+      "followers": {
+        "twitter": 865600
+      },
+      "image_url": "https://i1.feedspot.com/5753248.jpg?t=1708925509"
+    },
+    {
+      "title": "FootballTransfers Inc. \u00bb Galatasaray",
+      "feed_url": "https://www.footballtransfers.com/us/teams/tr/galatasaray/transfer-news/feed",
+      "website_url": "https://www.footballtransfers.com/us/teams/tr/galatasaray/transfer-news",
+      "description": "This page contains all the latest transfer news of Galatasaray. Check all the latest Galatasaray transfer news and rumors here!",
+      "followers": {
+        "facebook": 210300,
+        "twitter": 37700,
+        "instagram": 183400
+      },
+      "image_url": "https://i1.feedspot.com/5753247.jpg?t=1704978047"
+    }
+  ]
+}

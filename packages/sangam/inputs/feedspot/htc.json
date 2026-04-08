@@ -1,0 +1,29 @@
+{
+  "category": "HTC",
+  "source_url": "https://rss.feedspot.com/htc_rss_feeds",
+  "feeds": [
+    {
+      "title": "HTC Source",
+      "feed_url": "http://feeds.feedburner.com/htcsource",
+      "website_url": "https://htcsource.com/",
+      "description": "HTC Source offers all the latest HTC news. It has exclusive coverage of HTC and their products.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 14500
+      },
+      "image_url": "https://i1.feedspot.com/355053.jpg"
+    },
+    {
+      "title": "VIVE Blog",
+      "feed_url": "https://blog.vive.com/us/feed/",
+      "website_url": "https://blog.vive.com/us/",
+      "description": "Follow this blog to get latest news and information about HTC VIVE.",
+      "followers": {
+        "facebook": 976200,
+        "twitter": 260399,
+        "instagram": 92000
+      },
+      "image_url": "https://i1.feedspot.com/4910955.jpg?t=1620120034"
+    }
+  ]
+}

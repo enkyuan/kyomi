@@ -1,0 +1,127 @@
+{
+  "category": "France Music",
+  "source_url": "https://rss.feedspot.com/france_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "New Noise Magazine",
+      "feed_url": "https://www.noisemag.net/feed/",
+      "website_url": "https://www.noisemag.net/category/news/",
+      "description": "The bimonthly of modern and adventurous music, 132 pages of interviews, original columns, reviews of records, DVDs, books, etc.",
+      "followers": {
+        "facebook": 39800,
+        "twitter": 8100
+      },
+      "image_url": "https://i1.feedspot.com/5330328.jpg?t=1633949119"
+    },
+    {
+      "title": "IDOL",
+      "feed_url": "https://idol.io/feed/",
+      "website_url": "https://idol.io/news/",
+      "description": "IDOL always has something new to share: achievements, signings, releases. Read our magazine to get to know us better! IDOL is specialized in digital music distribution and provides a large range of marketing services for ambitious artists and labels.",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 1300,
+        "instagram": 6500
+      },
+      "image_url": "https://i1.feedspot.com/5330342.jpg?t=1633949864"
+    },
+    {
+      "title": "Country Music France",
+      "feed_url": "https://countrymusicfrance.fr/feed/",
+      "website_url": "https://countrymusicfrance.fr/",
+      "description": "Welcome to this music blog dedicated to traditional country and red dirt music. I'm French, living in Toulouse, Southwestern France. I created this blog in December 2017, to write about my passion, real country music, share my views about it, and review new albums and songs, as long as they belong to the genre.",
+      "followers": {
+        "facebook": 484,
+        "twitter": 1900,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5330343.jpg?t=1654513199"
+    },
+    {
+      "title": "What The France",
+      "feed_url": "https://whatthefrance.org/feed/",
+      "website_url": "https://whatthefrance.org/news/",
+      "description": "Receive the latest news about Made in France music. What The France is a recommendation brand created by CNM (Centre national de la musique) to shine a light on the finest music made in France.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 937,
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5330365.jpg?t=1633953018"
+    },
+    {
+      "title": "INFO MUSIC",
+      "feed_url": "https://www.infomusic.fr/feed/",
+      "website_url": "https://www.infomusic.fr/",
+      "description": "INFO MUSIC, Site d'actualit\u00e9 musicale du groupe Delit Music France. Musiciens, Managers, Compositeurs, Djs, Labels, Producteurs...",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8644035.jpg?t=1753132317"
+    },
+    {
+      "title": "DezFlight",
+      "feed_url": "https://dezflight-underground.com/feed",
+      "website_url": "https://dezflight-underground.com/",
+      "description": "DezFlight\u2011Underground is a blog dedicated to sharing rare and hard-to-find underground and hardcore rap/hip\u2011hop albums, instrumentals, and compilations from around the world in high-quality MP3 format",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1123948.jpg?t=1751439964"
+    },
+    {
+      "title": "Purple Sage PR Blog",
+      "feed_url": "https://purplesagepr.com/feed/",
+      "website_url": "https://purplesagepr.com/blog/",
+      "description": "Independent music PR specializing in purveyors of heavy riffs and loud grooves. European print & web promotion.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 1800,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5330334.jpg?t=1633949284"
+    },
+    {
+      "title": "Indeflagration",
+      "feed_url": "https://indeflagration.fr/feed/",
+      "website_url": "https://indeflagration.fr/",
+      "description": "Indeflagration is an independent and retro music webzine: reviews, concerts, interviews, playlists, sessions. Discover the best songs.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 1400,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5330346.jpg?t=1633950103"
+    },
+    {
+      "title": "ELEKTRAMUSIC News",
+      "feed_url": "http://elektramusic.eu/feed/",
+      "website_url": "http://elektramusic.eu/news/",
+      "description": "News from Elektramusic, contemporary music label. Elektramusic is a music label for contemporary, experimental music, improvisation, and sound art. Our aim is to create a platform that would present some of the great music that exists outside the mainstream music industry.",
+      "followers": {
+        "facebook": 3000,
+        "instagram": 44100
+      },
+      "image_url": "https://i1.feedspot.com/5330348.jpg?t=1633950245"
+    },
+    {
+      "title": "French Touch Music Blog",
+      "feed_url": "https://frenchtouch.music/feed/",
+      "website_url": "https://frenchtouch.music/en/blog/",
+      "description": "Retrouve les derni\u00e8res actus et des interviews exclusives des DJs et producteurs fran\u00e7ais Electro, Dance, EDM.",
+      "followers": {
+        "facebook": 2900,
+        "instagram": 55
+      },
+      "image_url": "https://i1.feedspot.com/8644034.jpg?t=1753132315"
+    },
+    {
+      "title": "Groover Blog",
+      "feed_url": "https://blog.groover.co/feed/",
+      "website_url": "https://www.thelocal.fr/tag/music/",
+      "description": "Tips for musicians and music professionals to promote their music and accelerate their careers. Groover connects artists who want to promote their music with the top media outlets, radios and pros of their choice.",
+      "followers": {
+        "facebook": 14600,
+        "twitter": 2900,
+        "instagram": 32500
+      },
+      "image_url": "https://i1.feedspot.com/5330340.jpg?t=1633949730"
+    }
+  ]
+}

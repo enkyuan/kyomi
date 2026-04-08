@@ -1,0 +1,45 @@
+{
+  "category": "Louisiana Christian",
+  "source_url": "https://rss.feedspot.com/louisiana_christian_rss_feeds",
+  "feeds": [
+    {
+      "title": "Family Missions Company Blog",
+      "feed_url": "https://www.familymissionscompany.com/category/blog-1/feed/",
+      "website_url": "https://www.familymissionscompany.com/category/blog-1/",
+      "description": "Lay Catholic Missionaries bringing Jesus to the World",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7251838.jpg?t=1707835726"
+    },
+    {
+      "title": "Pastor Frank Bailey Blog",
+      "feed_url": "https://pastorfrankbailey.com/feed/",
+      "website_url": "https://pastorfrankbailey.com/blog/",
+      "description": "The Bailey Drink",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7251835.jpg?t=1707835747"
+    },
+    {
+      "title": "Louisiana Baptists",
+      "feed_url": "https://louisianabaptists.org/feed/",
+      "website_url": "https://louisianabaptists.org/resources/articles/",
+      "description": "Statewide Association of Baptist Churches",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/7251837.jpg?t=1707835767"
+    },
+    {
+      "title": "Michelle Lesley",
+      "feed_url": "https://michellelesley.com/feed/",
+      "website_url": "https://michellelesley.com/",
+      "description": "Discipleship for Christian Women",
+      "followers": {
+        "facebook": 20500,
+        "twitter": 22300,
+        "instagram": 12400
+      },
+      "image_url": "https://i1.feedspot.com/7251836.jpg?t=1707835633"
+    }
+  ]
+}

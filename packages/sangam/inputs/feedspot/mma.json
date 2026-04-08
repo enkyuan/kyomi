@@ -1,0 +1,631 @@
+{
+  "category": "MMA",
+  "source_url": "https://rss.feedspot.com/mma_rss_feeds",
+  "feeds": [
+    {
+      "title": "MMA Fighting",
+      "feed_url": "https://www.mmafighting.com/rss/current",
+      "website_url": "https://www.mmafighting.com/latest-news",
+      "description": "MMA Fighting is your home for the latest news, videos and much more from the world of mixed martial arts.",
+      "followers": {
+        "facebook": 3500000,
+        "twitter": 1600000
+      },
+      "image_url": "https://i1.feedspot.com/165691.jpg?t=1603370758"
+    },
+    {
+      "title": "LowKickMMA.com",
+      "feed_url": "https://www.lowkickmma.com/feed/",
+      "website_url": "https://www.lowkickmma.com/",
+      "description": "MMA News daily updated by Lowkick MMA, the best independent source in UFC News and mixed martial arts, rumors, blogs, videos, photos, podcasts and more.",
+      "followers": {
+        "facebook": 592800,
+        "twitter": 9700,
+        "instagram": 38400
+      },
+      "image_url": "https://i1.feedspot.com/5070007.jpg?t=1603370801"
+    },
+    {
+      "title": "MMA Mania",
+      "feed_url": "https://www.mmamania.com/rss/current",
+      "website_url": "https://www.mmamania.com/",
+      "description": "MMA and UFC news, results, rumors, fights and MMA rankings from the fan perspective.",
+      "followers": {
+        "facebook": 985300,
+        "twitter": 112100
+      },
+      "image_url": "https://i1.feedspot.com/1667452.jpg?t=1603370772"
+    },
+    {
+      "title": "BJPENN.COM",
+      "feed_url": "https://www.bjpenn.com/feed/",
+      "website_url": "https://www.bjpenn.com/mma-news/",
+      "description": "BJPENN.COM is the premier MMA latest news and UFC news source, we keep you updated with the latest mixed martial arts news and videos and exclusive UFC fight video.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 594900,
+        "instagram": 413500
+      },
+      "image_url": "https://i1.feedspot.com/3770171.jpg?t=1603370767"
+    },
+    {
+      "title": "MMAWeekly.com",
+      "feed_url": "https://www.mmaweekly.com/.rss/full/",
+      "website_url": "https://www.mmaweekly.com/",
+      "description": "MMAWeekly.com is the world leader in mixed martial arts news including the UFC, Bellator, Invicta, One Championship, etc., providing the latest news, interviews, videos, photos, and the gold standard of rankings for the world's biggest UFC and MMA events.",
+      "followers": {
+        "facebook": 561500,
+        "twitter": 151200,
+        "instagram": 15600
+      },
+      "image_url": "https://i1.feedspot.com/3074.jpg?t=1603370780"
+    },
+    {
+      "title": "My MMA News.com",
+      "feed_url": "https://mymmanews.com/feed/",
+      "website_url": "https://mymmanews.com/category/mma-news/",
+      "description": "MMA news and the latest UFC fight results from My MMA News.com. Get free MMA videos and check out our exclusive fighter interviews, podcasts, and more!",
+      "followers": {
+        "facebook": 233600,
+        "twitter": 5200,
+        "instagram": 13500
+      },
+      "image_url": "https://i1.feedspot.com/4637676.jpg?t=1643011303"
+    },
+    {
+      "title": "Sherdog.com",
+      "feed_url": "https://www.sherdog.com/rss/news.xml",
+      "website_url": "https://www.sherdog.com/",
+      "description": "Sherdog is the industry pioneer in UFC, Bellator and all things MMA . The blog features MMA news, interviews, pictures, videos and more since 1997.",
+      "followers": {
+        "facebook": 223400,
+        "twitter": 91300
+      },
+      "image_url": "https://i1.feedspot.com/11274.jpg?t=1623239296"
+    },
+    {
+      "title": "Evolve Mixed Martial Arts Blog",
+      "feed_url": "https://evolve-mma.com/blog/feed/",
+      "website_url": "https://evolve-mma.com/blog/",
+      "description": "Evolve MMA is a premier martial arts organization with locations in Singapore, offering training in various disciplines such as Muay Thai, Brazilian Jiu-Jitsu, and boxing. Their blog covers a wide range of topics, including training advice, nutrition tips, and stories of transformation through martial arts. With contributions from world-class instructors and professional fighters, the blog provides a wealth of knowledge for martial arts enthusiasts seeking to enhance their skills and overall well-being.",
+      "followers": {
+        "facebook": 563900,
+        "twitter": 21100,
+        "instagram": 145400
+      },
+      "image_url": "https://i1.feedspot.com/4635562.jpg?t=1603370822"
+    },
+    {
+      "title": "Cageside Press",
+      "feed_url": "https://cagesidepress.com/feed/",
+      "website_url": "https://cagesidepress.com/",
+      "description": "Hello, Cageside Press is one of the leading MMA sites on the internet. It is UFC credentialed and produces fight news, exclusive interviews, and has the best prospect articles on the internet.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 11100,
+        "instagram": 7600
+      },
+      "image_url": "https://i1.feedspot.com/5391706.jpg?t=1650259610"
+    },
+    {
+      "title": "FightBookMMA",
+      "feed_url": "https://www.fightbookmma.com/feed/",
+      "website_url": "https://www.fightbookmma.com/",
+      "description": "FightBookMMA.com is the only place where you will find Real Combat Sports News from all over the world. We strive to do our best in bringing you up to date Combat Sports News from around the World. We are #1 source for all Combat Sports News, MMA News, Boxing News, Kickboxing News, Interviews, videos.",
+      "followers": {
+        "facebook": 34700,
+        "twitter": 5100,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4736353.jpg?t=1603370844"
+    },
+    {
+      "title": "Tiger Muay Thai & MMA Blog",
+      "feed_url": "https://www.tigermuaythai.com/news-blog/feed",
+      "website_url": "https://www.tigermuaythai.com/news-blog",
+      "description": "Tiger Muay Thai and MMA Training Camp in Phuket, Thailand. Find indormation on Muay Thai, MMA, BJJ, Bootcamp, Yoga, Krabi Krabong and so much more!",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 53800,
+        "instagram": 921500
+      },
+      "image_url": "https://i1.feedspot.com/4635850.jpg?t=1610456906"
+    },
+    {
+      "title": "Fight News Australia Mixed Martial Arts (MMA) News Australia",
+      "feed_url": "https://www.fightnewsaustralia.com/feed/",
+      "website_url": "https://www.fightnewsaustralia.com/category/mma/",
+      "description": "Fight News Australia is Australia's leading news source for Australian MMA. Covering all aspects of the local Mixed Martial Arts scene since 2010.",
+      "followers": {
+        "facebook": 20800,
+        "twitter": 4100,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4636164.jpg?t=1603371277"
+    },
+    {
+      "title": "Black Belt White Hat Blog",
+      "feed_url": "https://blackbeltwhitehat.com/feed/",
+      "website_url": "https://blackbeltwhitehat.com/mma-fitness-blog/",
+      "description": "Welcome to my Fitness Blog & MMA Blog UK. I am Drew Griffiths. It's basically a mash-up of all things I'm interested in. I am a former MMA fighter and kickboxer. I have a first class Degree in Sport Science from Loughborough University and a Master's degree in Exercise & Nutrition. Find articles on equipment reviews, nutrition, strength and conditioning tips.",
+      "followers": {
+        "facebook": 16900,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4910554.jpg?t=1603372539"
+    },
+    {
+      "title": "MMA Viking",
+      "feed_url": "https://www.mmaviking.com/feed/",
+      "website_url": "https://www.mmaviking.com/category/all/",
+      "description": "MMA Viking's goal is to provide the world insight into the Nordic mixed martial arts scene. The team covers the most local events in person, delivering unique coverage in an entertaining manner to help grow the sport in Iceland, Norway, Sweden, Finland, and Denmark. They take pictures of local events, write previews, and reports, and maintain the official Nordic MMA Rankings.",
+      "followers": {
+        "facebook": 11300,
+        "twitter": 1900,
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/926541.jpg?t=1603371106"
+    },
+    {
+      "title": "REAL COMBAT MEDIA RCM MMA NEWS",
+      "feed_url": "https://realcombatmedia.com/mma-news-2/feed/",
+      "website_url": "https://realcombatmedia.com/mma-news-2/",
+      "description": "The best international mma news. We are the top independent international mma and boxing news source.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4725407.jpg?t=1603371092"
+    },
+    {
+      "title": "MMA UK",
+      "feed_url": "https://mmauk.net/feed/",
+      "website_url": "https://mmauk.net/",
+      "description": "MMA UK is an independent MMA media outlet, providing you with up-to-date news, live show coverage, rumours and more from the world of mixed martial arts.",
+      "followers": {
+        "twitter": 7700,
+        "instagram": 7700
+      },
+      "image_url": "https://i1.feedspot.com/4741873.jpg?t=1603371121"
+    },
+    {
+      "title": "MMARising.com",
+      "feed_url": "https://www.mmarising.com/feed/",
+      "website_url": "https://www.mmarising.com/category/news/",
+      "description": "MMARising.com was founded in July of 2007. Since the site's inception, we have worked diligently to provide coverage of all major mixed martial arts events and fighters from all over the world. Our prime focus is to promote and develop the sport in any way possible, as we are fans first and believe that MMA is nothing without the talented fighters who dedicate themselves to becoming world champions. MMARising.com is proud to support the women's division of mixed martial arts and welcomes any opportunity to assist talented female fighters in developing their careers.",
+      "followers": {
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5272363.jpg?t=1619101442"
+    },
+    {
+      "title": "Absolute MMA Blog",
+      "feed_url": "https://absolutemma.com/feed/",
+      "website_url": "https://absolutemma.com/blog/",
+      "description": "Absolute MMA is Utah's premier MMA gym. We train students and athletes of all levels, including beginners, hobbyists, fitness enthusiasts, amateur and professional MMA fighters. Our MMA blog is designed to be a learning resource & to share our stories of happy students and athletes. Check it out today!",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 487,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5264688.jpg?t=1617599747"
+    },
+    {
+      "title": "MMAStalker.com",
+      "feed_url": "https://mmastalker.com/feed/",
+      "website_url": "https://mmastalker.com/",
+      "description": "Fighter Database for the up & coming talent in the Mixed Martial Arts Community! New local resource for MMA results, photos, and videos!",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5178674.jpg?t=1603371305"
+    },
+    {
+      "title": "Extreme MMA Blog",
+      "feed_url": "https://www.extrememma.com.au/feed/",
+      "website_url": "https://www.extrememma.com.au/blog/",
+      "description": "Extreme MMA published the latest detail and information about Mixed Martial Arts, MMA training, wrestling classes and boxing classes in Melbourne, Australia.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 380,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4635599.jpg"
+    },
+    {
+      "title": "Diamond MMA - News",
+      "feed_url": "https://www.diamondmma.com/blogs/news.atom",
+      "website_url": "https://www.diamondmma.com/blogs/news",
+      "description": "Diamond MMA - a sports equipment company that designs, manufactures, and distributes high-end groin protection, athletic cups, jockstraps & compression shorts. Realizing that the existing products were inadequate, our award-winning designers worked with professional mixed martial artists and countless other athletes for years of research and development.",
+      "followers": {
+        "facebook": 14400,
+        "twitter": 2800,
+        "instagram": 13600
+      },
+      "image_url": "https://i1.feedspot.com/4635836.jpg"
+    },
+    {
+      "title": "Octagon MMA Blog",
+      "feed_url": "https://octagonmma.com/blog/feed/",
+      "website_url": "https://octagonmma.com/blog/",
+      "description": "Explore the Octagon MMA blog for expert training tips, fighter stories, and the latest in MMA. Elevate your game with us!",
+      "followers": {
+        "facebook": 4000,
+        "instagram": 4300
+      },
+      "image_url": "https://i1.feedspot.com/8537733.jpg?t=1753088840"
+    },
+    {
+      "title": "MMATorch Blog",
+      "feed_url": "https://mmatorch.com/feed/",
+      "website_url": "https://mmatorch.com/",
+      "description": "MMATorch is a comprehensive MMA platform founded in 1993 that blends news, event reports, analysis, columns, and interactive content for fight fans and insiders.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 40400
+      },
+      "image_url": "https://pbs.twimg.com/profile_images/1497133149532217345/Ef8jgtGu.jpg"
+    },
+    {
+      "title": "Fight Matrix Blog \u00bb MMA",
+      "feed_url": "https://www.fightmatrix.com/category/mma/feed/",
+      "website_url": "https://www.fightmatrix.com/category/mma/",
+      "description": "Mixed Martial Arts (MMA) blogs, records, and statistics",
+      "followers": {
+        "facebook": 1500
+      },
+      "image_url": "https://i1.feedspot.com/8537732.jpg?t=1753088832"
+    },
+    {
+      "title": "MMA Futures",
+      "feed_url": "https://mmafutures.com/feed/",
+      "website_url": "https://mmafutures.com/",
+      "description": "MMA Futures is your home for everything MMA for local and regional news and promotions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8537735.jpg?t=1753088843"
+    },
+    {
+      "title": "Fight IQ Blog \u00bb MMA",
+      "feed_url": "https://fightiq.nl/feed/",
+      "website_url": "https://fightiq.nl/mma-blog/",
+      "description": "Fight IQ is Amsterdam's Mixed Martial Arts gym! Whether one is an aspiring MMA fighter, a grappling enthusiast, a kickboxing aficionado, or someone simply looking to learn self-defence, they have found your new home.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8537736.jpg?t=1753088854"
+    },
+    {
+      "title": "MMA Fighters Blog",
+      "feed_url": "https://www.mmafighters.co.uk/feed/",
+      "website_url": "https://www.mmafighters.co.uk/blog/",
+      "description": "At MMA Fighters, they are more than just fans of mixed martial arts; they are enthusiasts on a mission to celebrate the incredible athletes who define this sport. This platform provides one with a front-row seat to the world of MMA fighters, their journeys, and the inspiring stories that make them the warriors they are.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8537738.jpg?t=1753088858"
+    },
+    {
+      "title": "MMAjunkie",
+      "feed_url": "https://mmajunkie.usatoday.com/feed",
+      "website_url": "https://mmajunkie.usatoday.com/",
+      "description": "MMAjunkie, a five-time World MMA Awards 'Best Media Source' winner, is devoted to the latest MMA breaking news, interviews, fight announcements and event information.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/3341839.jpg"
+    },
+    {
+      "title": "MMA Fight Report",
+      "feed_url": "https://mmafightreport.com/feed/",
+      "website_url": "https://mmafightreport.com/",
+      "description": "MMA Fight Report is a go-to source for everything in Mixed Martial Arts. Our mission is simple: to keep you informed, entertained, and engaged with high-quality, accurate, and timely MMA content.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7834354.jpg?t=1733144248"
+    },
+    {
+      "title": "Way of Martial Arts",
+      "feed_url": "https://wayofmartialarts.com/feed/",
+      "website_url": "https://wayofmartialarts.com/",
+      "description": "We bring you everything you need to know about Martial Arts",
+      "followers": {
+        "facebook": 2400,
+        "instagram": 400
+      },
+      "image_url": "https://i1.feedspot.com/5150962.jpg?t=1603371367"
+    },
+    {
+      "title": "Markey Martial Arts",
+      "feed_url": "https://rossmarkey.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://rossmarkey.blogspot.com/",
+      "description": "Daily posts on Fight Breakdown, Fight Coverage, Exciting MMA features, Interviews, and all the latest news in the MMA community. Written by Ross Markey, an aspiring MMA reporter, lead Writer & Jr. Editor for MMA Power Hour.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5342331.jpg?t=1636964070"
+    },
+    {
+      "title": "Battle MMA",
+      "feed_url": "https://battlemma.com/feed/",
+      "website_url": "https://battlemma.com/blogs/",
+      "description": "Covers fight previews, nostalgic moments and opinion. Battle MMA is the Premier Amateur Promotion in the US featuring battles from every gym across the country.",
+      "followers": {
+        "facebook": 53600,
+        "twitter": 52,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5300287.jpg?t=1625724738"
+    },
+    {
+      "title": "Mixed Martial Arts Lifestyle Blog",
+      "feed_url": "https://mixedmartialarts.life/feed/",
+      "website_url": "https://mixedmartialarts.life/blog/",
+      "description": "A blog that talks about how the various martial arts styles overcome obstacles in life. Covers multiple topics such as Boxing, Muay Thai & Kickboxing, MMA, Brazilian Jiu-jitsu, Wrestling, Fitness, Health, Life, & different Martial Arts Equipment. Austin Hoang created Mixed Martial Arts Lifestyle (MMAL) to help people new to martial arts understand that it is more than just a self-defensive sport.",
+      "followers": {
+        "facebook": 98,
+        "twitter": 2,
+        "instagram": 135
+      },
+      "image_url": "https://i1.feedspot.com/5313823.jpg?t=1629379472"
+    },
+    {
+      "title": "Crosstrain Fight Club",
+      "feed_url": "https://crosstrainfightclub.com/feed/",
+      "website_url": "https://crosstrainfightclub.com/blogs/",
+      "description": "Crosstrain Fight Club is the only authentic Mix Martial Art club in Delhi, Best in Jiu-Jitsu, Boxing, Muay Thai, Kick Boxing in Delhi.",
+      "followers": {
+        "facebook": 13900,
+        "twitter": 58
+      },
+      "image_url": "https://i1.feedspot.com/5285571.jpg?t=1622184385"
+    },
+    {
+      "title": "WMMA Rankings",
+      "feed_url": "https://wmmarankings.com/feed/",
+      "website_url": "https://wmmarankings.com/",
+      "description": "WMMA Rankings is your home for all the top women's mixed martial arts news, results, articles, photos, world rankings and much more.",
+      "followers": {
+        "twitter": 43900,
+        "instagram": 21300
+      },
+      "image_url": "https://i1.feedspot.com/5076678.jpg?t=1603370864"
+    },
+    {
+      "title": "SportsGeeks - The Latest in WMMA / MMA News",
+      "feed_url": "https://mysportsgeeks.com/category/fight-news-2015-wmma/feed/",
+      "website_url": "https://mysportsgeeks.com/category/fight-news-2015-wmma/",
+      "description": "SportsGeeks, the leader in Women's MMA and MMA news coverage from around the world.",
+      "followers": {
+        "facebook": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4635813.jpg?t=1603371864"
+    },
+    {
+      "title": "MMA BLASTER",
+      "feed_url": "http://mmablaster.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://mmablaster.blogspot.com/",
+      "description": "The best source for developments in mixed martial arts. Discussion on current topics, recent developments, and of course, the long and distinguished history of the fighting arts.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 215
+      },
+      "image_url": "https://i1.feedspot.com/4636201.jpg?t=1603371882"
+    },
+    {
+      "title": "Kimekai MMA",
+      "feed_url": "http://kimekaimma.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://kimekaimma.blogspot.com/",
+      "description": "Kimekai MMA is a Premium Mixed Martial Arts School that combines the true values of Martial Arts and Modern Progressive Techniques. Kimekai MMA is under the supervision of Head Coach Ed Bavelock, UFC Coach and former U.S. Muay Thai Boxing Champion and Gracie Jiu Jitsu & Karate Champion Marco Mazzanti.",
+      "followers": {
+        "facebook": 4
+      },
+      "image_url": "https://i1.feedspot.com/4636177.jpg?t=1603372273"
+    },
+    {
+      "title": "SKILL MMA",
+      "feed_url": "http://skillmma.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://skillmma.blogspot.com/",
+      "description": "Mixed Martial Arts information (Skill analysis,history, news, interview and photo archieve) from Japan.Japanese MMA and International MMA.",
+      "followers": {
+        "facebook": 58,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4636086.jpg?t=1603372307"
+    },
+    {
+      "title": "Speak MMA Blog",
+      "feed_url": "https://speak-mma.com/feed/",
+      "website_url": "https://speak-mma.com/blog/",
+      "description": "Speak MMA is a blog which was created to answer all your MMA questions. Come on in and take a look at our gear review and MMA news!",
+      "followers": {
+        "twitter": 4300,
+        "instagram": 827
+      },
+      "image_url": "https://i1.feedspot.com/5133954.jpg?t=1603372136"
+    },
+    {
+      "title": "Women's MMA Today",
+      "feed_url": "https://wmmatoday.wordpress.com/feed/",
+      "website_url": "https://wmmatoday.wordpress.com/",
+      "description": "The Unified Women's World MMA Rankings are updated on the first of each month and are acknowledged by most media outlets as the official women's MMA rankings assembled by division and weight class.",
+      "followers": {
+        "facebook": 11600,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4635794.jpg"
+    },
+    {
+      "title": "Cage Logic",
+      "feed_url": "https://cagelogic.wordpress.com/feed/",
+      "website_url": "https://cagelogic.wordpress.com/",
+      "description": "I've been a fan of the sport of MMA since I was 19 years old. I'm passionate about learning as many facets as I can. I don't want to be left in ignorance. So I try to have as nuanced an opinion as possible and I try to emulate this with every subject I involve myself in. My blog is for posting my insights into the world of MMA, hoping to develop this into a hobby.",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/5294130.jpg?t=1624001433"
+    },
+    {
+      "title": "Engage",
+      "feed_url": "https://engageind.com/blogs/articles.atom",
+      "website_url": "https://engageind.com/blogs/articles",
+      "description": "Find the best MMA gear, clothing, and training equipment online at Engage store. The largest MMA clothing high-quality products of gloves, shorts, t-shirts and more ready to ship.",
+      "followers": {
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5058225.jpg?t=1603370853"
+    },
+    {
+      "title": "Elite MMA",
+      "feed_url": "https://elite-mma.com/feed/",
+      "website_url": "https://elite-mma.com/blogs/",
+      "description": "Blog cover articles on Kickboxing, Brazilian Jiu-Jitsu, Self-Defense Training, and General Tips. Elite MMA is a martial arts school that provides alternative Karate Classes for adults & children.",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 349,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5291611.jpg?t=1623239503"
+    },
+    {
+      "title": "Fan2Fighter MMA Blog",
+      "feed_url": "https://fan2fighter.co.uk/feed/",
+      "website_url": "https://fan2fighter.co.uk/blogs/",
+      "description": "Explore our MMA blog for beginner tips, FAQs, and exclusive insights into the Fan2Fighter experience. Dive into the world of MMA training with us!",
+      "followers": {
+        "facebook": 1200,
+        "instagram": 280
+      },
+      "image_url": "https://i1.feedspot.com/8537739.jpg?t=1753088866"
+    },
+    {
+      "title": "MMASucka",
+      "feed_url": "https://mmasucka.com/feed/",
+      "website_url": "https://mmasucka.com/",
+      "description": "Keep up to date with latest articles on MMA news, rumors and more from MMASucka.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 4600,
+        "instagram": 21500
+      },
+      "image_url": "https://i1.feedspot.com/4910588.jpg?t=1603370834"
+    },
+    {
+      "title": "Playing Rules",
+      "feed_url": "https://www.playingrule.com/feed/",
+      "website_url": "https://www.playingrule.com/",
+      "description": "We are your go-to source for all things sports and games. Our mission is to provide clear and concise information on the rules, objectives, and origins of various sports and games. Whether you're a novice looking to learn the basics or a seasoned enthusiast seeking in-depth knowledge, we're here to help. Explore our site and become a pro in your favorite activities!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5669712.jpg?t=1694504645"
+    },
+    {
+      "title": "Bloody Elbow",
+      "feed_url": "https://bloodyelbow.com/rss/current",
+      "website_url": "https://bloodyelbow.com/",
+      "description": "MMA and UFC news, results, rumors, fights and MMA rankings from the fan perspective.",
+      "followers": {
+        "facebook": 379900,
+        "twitter": 179600
+      },
+      "image_url": "https://i1.feedspot.com/165590.jpg?t=1603370787"
+    },
+    {
+      "title": "MMA News",
+      "feed_url": "https://www.mmanews.com/",
+      "website_url": "https://www.mmanews.com/",
+      "description": "MMA News provides daily coverage of Mixed Martial Arts, including news, results, exclusive interviews, rankings, and more. MMA News channel is owned by the Arena group.",
+      "followers": {
+        "facebook": 261600,
+        "twitter": 4300,
+        "instagram": 760
+      },
+      "image_url": "https://i1.feedspot.com/4635775.jpg?t=1603370792"
+    },
+    {
+      "title": "FanSided - MMA",
+      "feed_url": "https://fansided.com/mma/feed/",
+      "website_url": "https://fansided.com/mma/",
+      "description": "The latest MMA news, rumors, GIFs, predictions, and more from FanSided.",
+      "followers": {
+        "facebook": 973500,
+        "twitter": 46700,
+        "instagram": 38900
+      },
+      "image_url": "https://i1.feedspot.com/4635580.jpg?t=1603370814"
+    },
+    {
+      "title": "The Underground",
+      "feed_url": "https://www.mixedmartialarts.com/feed/",
+      "website_url": "https://www.mixedmartialarts.com/",
+      "description": "Leader for UFC and Mixed Martial Arts (MMA) news, including rumors, blog posts, interviews and more. Home of the Official MMA fighter database for title holders, statistics, bios and records.",
+      "followers": {
+        "facebook": 2100000,
+        "twitter": 29600,
+        "instagram": 8300
+      },
+      "image_url": "https://i1.feedspot.com/4635823.jpg?t=1603370817"
+    },
+    {
+      "title": "Attack The Back",
+      "feed_url": "https://www.attacktheback.com/feed/",
+      "website_url": "https://mmacoach.net/",
+      "description": "Attack The Back bring you the latest BJJ news and editorial pieces. We provide you with some of the latest action and up-to-date community information. Find posts and updates on BJJ.",
+      "followers": {
+        "facebook": 18900,
+        "twitter": 1000,
+        "instagram": 12200
+      },
+      "image_url": "https://i1.feedspot.com/4752573.jpg?t=1610353805"
+    },
+    {
+      "title": "MMA Coach",
+      "feed_url": "https://mmacoach.net/feed/",
+      "website_url": "https://mmacoach.net/",
+      "description": "Welcome to MMA Coach.net! My name is Mark Lajhner and my goal is to help coaches, fighters, and enthusiasts train smart, not just hard, and reach their combat goals. Follow to explore this MMA Blog and especially my MMA Course.",
+      "followers": {
+        "facebook": 8300
+      },
+      "image_url": "https://i1.feedspot.com/5272370.jpg?t=1619099191"
+    },
+    {
+      "title": "Spartan Fitness MMA Blog",
+      "feed_url": "https://spartanfitnessmma.com/feed",
+      "website_url": "https://spartanfitnessmma.com/blog/",
+      "description": "Birmingham Alabama's premier MMA, Muay Thai Kickboxing, Brazilian Jiu-Jitsu, Fitness Kickboxing and Martial Arts training facility for both Adult and Kids programs. Check out our lastest blog posts by our head coach for news about our fighters, sales, upcoming events, and more.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 47
+      },
+      "image_url": "https://i1.feedspot.com/4635771.jpg"
+    },
+    {
+      "title": "Evolution MMA Miami | Mixed Martial Arts Blog and Tips",
+      "feed_url": "https://mmamiami.com/feed",
+      "website_url": "https://mmamiami.com/blog/",
+      "description": "Get Mixed Martial Arts tips and news as well as info. Evolution MMA is a mixed martial arts school that specializes in the instruction of kickboxing, Muay Thai, wrestling, Brazilian Jiu-Jitsu, and Aikido.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 285,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4635858.jpg"
+    },
+    {
+      "title": "MMA TV",
+      "feed_url": "https://www.mmatv.co.uk/feed/",
+      "website_url": "https://mmatvlive.co.uk/posts",
+      "description": "MMA TV brings you the best in live sports actions from around the globe, with a focus on the best of the best from the UK and Europe. It also gives you behind the scenes footage from live events and keeps you up to date with news on your favourite mma and combat sports superstars and athletes.",
+      "followers": {
+        "facebook": 23100,
+        "twitter": 1300,
+        "instagram": 27400
+      },
+      "image_url": "https://i1.feedspot.com/4636225.jpg?t=1620816684"
+    },
+    {
+      "title": "The DuCross Brothers: The Sports Warriors",
+      "feed_url": "http://feeds.feedburner.com/PodcastTheDucrossBrothersTheSportsWarriors",
+      "website_url": "https://www.ducrossbrothers.com/",
+      "description": "The DuCross Bros. have their cross hairs set on being at the top spot of jock talk. These lively identical twins are well on their way to becoming the first native duo on mainstream sports radio and have aspirations of becoming the next '2 Live Stews' of ESPN fame. Shaun and Tristen DuCross were born in Santa Ana, CA to Canadian parents in 1985.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4752586.jpg?t=1603372057"
+    }
+  ]
+}

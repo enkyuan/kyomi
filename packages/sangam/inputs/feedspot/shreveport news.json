@@ -1,0 +1,61 @@
+{
+  "category": "Shreveport News",
+  "source_url": "https://rss.feedspot.com/shreveport_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "KTBS",
+      "feed_url": "https://www.ktbs.com/search/?f=rss&t=article&c=news&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.ktbs.com/",
+      "description": "Breaking news in Shreveport, LA from KTBS 3. Get updated local news, weather, and sports. All the latest local Shreveport news and more at ABC TV's local affiliate in Shreveport.",
+      "followers": {
+        "facebook": 289800,
+        "twitter": 48800,
+        "instagram": 27600
+      },
+      "image_url": "https://i1.feedspot.com/5136018.jpg?t=1623302328"
+    },
+    {
+      "title": "Shreveport-Bossier Journal",
+      "feed_url": "https://shreveportbossierjournal.com/feed/",
+      "website_url": "https://shreveportbossierjournal.com/",
+      "description": "Shreveport-Bossier Journal is Shreveport's local source for News, Sports information, and Community updates. Read our online edition also features exclusive op-eds, recipes, obituaries, Public notices, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5499078.jpg?t=1674562864"
+    },
+    {
+      "title": "News Radio 710 KEEL",
+      "feed_url": "https://710keel.com/feed/",
+      "website_url": "https://710keel.com/",
+      "description": "Grab a hold of Breaking News and Trending Talk in the Shreveport Entertainment scene here at 710keel.com. News Radio 710 KEEL is Shreveport-Bossier's trusted source for local news. Listen online or on your radio for the latest news, traffic, weather and more.",
+      "followers": {
+        "facebook": 15300,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5499077.jpg?t=1674562885"
+    },
+    {
+      "title": "KTAL NBC 6",
+      "feed_url": "https://www.arklatexhomepage.com/feed/",
+      "website_url": "https://www.ktalnews.com/",
+      "description": "Arklatex homepage is your local source for ArkLaTex news, weather, and sports. Through KTAL NBC 6, KMSS FOX 33, and KSHV 45, we bring you local news that matters. We bring you coverage on topics and issues that impact your community, from severe weather and safety matters to local events and sports coverage!",
+      "followers": {
+        "facebook": 113200,
+        "twitter": 13100,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5136000.jpg"
+    },
+    {
+      "title": "Shreveport Times",
+      "feed_url": "http://rssfeeds.shreveporttimes.com/shreveport/news",
+      "website_url": "https://www.shreveporttimes.com/news/",
+      "description": "The Shreveport Times' mission is to be the most reliable and engaged local news source and first choice for information in Northwest Louisiana. Stay informed with both Shreveport Louisiana news as well as headlines and stories from around the world.",
+      "followers": {
+        "facebook": 63000,
+        "twitter": 41000,
+        "instagram": 20800
+      },
+      "image_url": "https://i1.feedspot.com/5136025.jpg?t=1623302325"
+    }
+  ]
+}

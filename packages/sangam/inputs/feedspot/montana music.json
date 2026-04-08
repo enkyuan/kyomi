@@ -1,0 +1,109 @@
+{
+  "category": "Montana Music",
+  "source_url": "https://rss.feedspot.com/montana_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "Music Villa Blog",
+      "feed_url": "https://musicvilla.com/blogs/news.atom",
+      "website_url": "https://musicvilla.com/blogs/news/",
+      "description": "Music Villa is a hub for musicians across Montana and has successfully created a support network that helps fellow musicians promote their bands and connect with other musicians throughout the state. It is Montana's Premier favorite music store, musician community, and lesson program.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 672,
+        "instagram": 9300
+      },
+      "image_url": "https://i1.feedspot.com/5327558.jpg?t=1633082293"
+    },
+    {
+      "title": "Helena Symphony",
+      "feed_url": "https://www.helenasymphony.org/feed/",
+      "website_url": "https://www.helenasymphony.org/news-events/",
+      "description": "Stay up to date with the latest news, concerts, events, and announcements by the Helena Symphony.Helena Symphony Orchestra is a 75-member regional professional orchestra in Helena, Montana. The Symphony performs several concert series each season.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 101,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5327590.jpg?t=1633084917"
+    },
+    {
+      "title": "Montana Public Radio \u00bb Music",
+      "feed_url": "https://www.mtpr.org/music.rss",
+      "website_url": "https://www.mtpr.org/music",
+      "description": "Music, artist interviews, and upcoming performances around western Montana.Montana Public Radio is Western Montana's NPR affiliate. Serving up Montana news, arts and hand-picked music on your radio online and on demand.",
+      "followers": {
+        "facebook": 15000,
+        "twitter": 16900,
+        "instagram": 5700
+      },
+      "image_url": "https://i1.feedspot.com/5327568.jpg?t=1633083372"
+    },
+    {
+      "title": "Missoulian \u00bb Music",
+      "feed_url": "https://missoulian.com/search/?f=rss",
+      "website_url": "https://missoulian.com/life-entertainment/nation-world/music/",
+      "description": "Find the latest music news, concerts, shows, videos, and reviews by Missoulian in Missoula and western Montana.The Missoulian has been proudly serving Western Montana since 1870. Breaking Missoula news, sports, advertising, events and information from western Montana.",
+      "followers": {
+        "facebook": 69600,
+        "twitter": 42300,
+        "instagram": 22900
+      },
+      "image_url": "https://i1.feedspot.com/5327564.jpg?t=1633082738"
+    },
+    {
+      "title": "North Valley Music School",
+      "feed_url": "https://northvalleymusicschool.org/feed/",
+      "website_url": "https://northvalleymusicschool.org/",
+      "description": "Find the latest music news, events, programs, camps and announcements by the North Valley Music School. North Valley Music School is the only non profit community-based, intergenerational music school.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 16,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5327601.jpg?t=1633085992"
+    },
+    {
+      "title": "Grow Music Grow",
+      "feed_url": "https://www.growmusicmissoula.com/grow_music_news/feed",
+      "website_url": "https://www.growmusicmissoula.com/grow_music_news",
+      "description": "Latest music news, shows, programs, and announcements by Grow Music Grow.Grow music is home to the cello mafia, viol conspiracy, string mafia, and the nearly spring strings festival. We offer violin, fiddle, viola, and cello lessons as well as early childhood music classes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5327608.jpg?t=1633328835"
+    },
+    {
+      "title": "Montana Folk Festival Blog",
+      "feed_url": "https://montanafolkfestival.com/feed/",
+      "website_url": "https://montanafolkfestival.com/blog/",
+      "description": "Stay up to date with the latest festival news, events, and announcements by the Montana Folk Festival. The Montana Folk Festival is one of the Northwest's largest free outdoor music Festivals. It features performances and demonstrations by over 200 of the nation's finest musicians, dancers, and craftspeople.",
+      "followers": {
+        "facebook": 32600,
+        "twitter": 544
+      },
+      "image_url": "https://i1.feedspot.com/5327543.jpg?t=1633080418"
+    },
+    {
+      "title": "Glacier Country Montana \u00bb Concerts/Music Festivals",
+      "feed_url": "https://blog.glaciermt.com/category/music-festivals/feed/",
+      "website_url": "https://blog.glaciermt.com/category/music-festivals/",
+      "description": "Latest music concerts and festival news around Western Montana.Montana's Glacier Country Regional Tourism Commission is dedicated to promoting Western Montana as a travel and tourism destination.",
+      "followers": {
+        "facebook": 329900,
+        "twitter": 11100,
+        "instagram": 59300
+      },
+      "image_url": "https://i1.feedspot.com/5327390.jpg?t=1633070850"
+    },
+    {
+      "title": "KBGA Missoula 89.9 FM Blog",
+      "feed_url": "https://www.kbga.org/blog?format=rss",
+      "website_url": "https://www.kbga.org/blog",
+      "description": "Find the latest music news, new releases, and top 20 weekly music by the KBGA 89.9 FM college radio. KBGA Missoula 89.9 FM is a radio station by the students of The University of Montana that provides refreshing music and podcasts.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 1600,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5327546.jpg?t=1633081124"
+    }
+  ]
+}

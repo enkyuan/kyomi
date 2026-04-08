@@ -1,0 +1,59 @@
+{
+  "category": "Yuma News",
+  "source_url": "https://rss.feedspot.com/yuma_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Yuma Sun",
+      "feed_url": "https://www.yumasun.com/search/?f=rss&t=article&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.yumasun.com/",
+      "description": "The Yuma Daily Sun was officially born on April 10, 1896, but its history is linked to the Arizona Sentinel, which was the first newspaper in this community. The Yuma Sun is Yuma's daily news source, both in print and online. Read the latest news and breaking headlines on what's happening in Yuma city and community.",
+      "followers": {
+        "facebook": 28700,
+        "twitter": 7700
+      },
+      "image_url": "https://i1.feedspot.com/5139662.jpg?t=1587106189"
+    },
+    {
+      "title": "KYMA",
+      "feed_url": "https://kyma.com/feed/",
+      "website_url": "https://kyma.com/",
+      "description": "We are No. 1 in local news in Yuma, Arizona. We are the NBC affiliate covering Yuma County, Arizona, and Imperial County, California. As well as, the states of Sonora and Baja California in Mexico. We are committed to strong journalism values, providing local news, information and community services in Yuma, Arizona.",
+      "followers": {
+        "facebook": 93500,
+        "twitter": 14700
+      },
+      "image_url": "https://i1.feedspot.com/5139650.jpg?t=1587106088"
+    },
+    {
+      "title": "ABC15 Arizona \u00bb Yuma",
+      "feed_url": "https://www.abc15.com/news/region-central-southern-az/yuma.rss",
+      "website_url": "https://www.abc15.com/news/region-central-southern-az/yuma",
+      "description": "ABC15 Arizona's mission is to save you money and help you live a better life in Arizona. We empower our community, expose wrongdoing and force accountability. We are #1 source for breaking news in Arizona. Subscribe this feed to stay up to date on topics such as local news, politics, business, and crime in Yuma, Arizona, USA.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 474900,
+        "instagram": 280400
+      },
+      "image_url": "https://i1.feedspot.com/5139653.jpg?t=1587105007"
+    },
+    {
+      "title": "My Local News \u00bb Yuma",
+      "feed_url": "https://mylocalnews.us/arizona/category/arizona-community-websites/yuma-news/feed/",
+      "website_url": "https://mylocalnews.us/arizona/category/arizona-community-websites/yuma-news/",
+      "description": "My Local News is a serious effort by community journalists to bring engaging local news to cities and towns throughout Arizona and the U.S. Where topics include local news, events, opinions, politics, education, foodie reviews, sports, business profiles and much more.",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 625,
+        "instagram": 213
+      },
+      "image_url": "https://i1.feedspot.com/5139657.jpg?t=1587105582"
+    },
+    {
+      "title": "Yuma News Now",
+      "feed_url": "https://www.yumanewsnow.com/index.php?format=feed&type=rss",
+      "description": "Yuma News Now is the source of all things Yuma, San Luis, and Somerton. Get current local Yuma and surrounding area news, crime, politics, weather, sports, entertainment, arts, features, obituaries, real estate and all other stories relevant to residents of Yuma, Arizona, USA.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5139648.jpg"
+    }
+  ]
+}

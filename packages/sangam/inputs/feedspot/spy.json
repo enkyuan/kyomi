@@ -1,0 +1,111 @@
+{
+  "category": "Spy",
+  "source_url": "https://rss.feedspot.com/spy_rss_feeds",
+  "feeds": [
+    {
+      "title": "Spy Vibe Blog",
+      "feed_url": "https://spyvibe.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://spyvibe.blogspot.com/",
+      "description": "Secret agents, bachelor pads, and mini skirts! This is Spy Vibe, where the baby boom, the space race, and the cold war influenced style in the world of fashion, film, design, music, and beyond. Welcome to the secret lair of well-dressed mystery, adventure, and Sixties culture- then & now.",
+      "followers": {
+        "facebook": 689,
+        "twitter": 309
+      },
+      "image_url": "https://i1.feedspot.com/475879.jpg?t=1660305180"
+    },
+    {
+      "title": "The Spy Command Blog",
+      "feed_url": "https://hmssweblog.wordpress.com/feed/",
+      "website_url": "https://hmssweblog.wordpress.com/",
+      "description": "The Spy Command, formerly The HMSS Weblog, began in 2008 as an extension of the Her Majesty's Secret Servant website. The blog provides news and commentary about James Bond, 'The Other Spies,' and other entertainment-related topics.",
+      "followers": {
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/2115193.jpg?t=1660299341"
+    },
+    {
+      "title": "In Search of the Classic Mystery Novel Blog",
+      "feed_url": "https://classicmystery.blog/feed/",
+      "website_url": "https://classicmystery.blog/",
+      "description": "I've read detective fiction since very young, starting with the Famous Five and progressing to the proper stuff. I've got very eclectic tastes in the mystery genre and here you will find a spoiler-free review of fair play detective fiction.",
+      "followers": {
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4671768.jpg?t=1659588175"
+    },
+    {
+      "title": "The Real Book Spy",
+      "feed_url": "https://therealbookspy.com/feed/",
+      "website_url": "https://therealbookspy.com/",
+      "description": "Since launching The Real Book Spy, Steck has broken relevant industry news, written hundreds of book reviews, and conducted interviews with many of the genre's top thriller authors on his way to becoming one of the most respected voices among thriller fans.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 17800,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5317128.jpg?t=1659588598"
+    },
+    {
+      "title": "Spy Spot Blog",
+      "feed_url": "https://spy-spot.com/blogs/news.atom",
+      "website_url": "https://spy-spot.com/blogs/news",
+      "description": "Spy Spot Investigations is a full-service Private Investigation Agency, selling all of the latest spy equipment. The agency specializes in real-time GPS Trackers, hidden video cameras, WIFI cameras, audio recorders, bug detectors, and phone data recovery software.",
+      "followers": {
+        "facebook": 13300,
+        "twitter": 81,
+        "instagram": 10300
+      },
+      "image_url": "https://i1.feedspot.com/5428762.jpg?t=1659588666"
+    },
+    {
+      "title": "Mail Order Mystery Blog",
+      "feed_url": "https://www.mailordermystery.com/blogs/news.atom",
+      "website_url": "https://www.mailordermystery.com/blogs/news",
+      "description": "I am a writer and Mom living in Toronto and I founded Mail Order Mystery in late 2015. With my kids as my greatest inspiration (and greatest critics), I set out to create an extraordinary, story-based experience. We deliver mysteries for kids through the mail. Over a number of weeks, your child receives letters and objects from the characters in the mystery.",
+      "followers": {
+        "facebook": 33500,
+        "instagram": 14900
+      },
+      "image_url": "https://i1.feedspot.com/5428763.jpg?t=1660302058"
+    },
+    {
+      "title": "Mobile Spy Blog",
+      "feed_url": "https://mobilespy.io/feed/",
+      "website_url": "https://mobilespy.io/blogs/",
+      "description": "MobileSpy is a remote spying and control app that allows users to spy on and track various activities of a target device, such as monitoring social media, multimedia, texts, calls, apps, internet data, location tracking, and more. It comes with user-friendly features and cutting-edge technology being the perfect spy solution for users to keep an eye on someone.",
+      "followers": {
+        "facebook": 721,
+        "twitter": 262,
+        "instagram": 96
+      },
+      "image_url": "https://i1.feedspot.com/5428764.jpg?t=1659532000"
+    },
+    {
+      "title": "Detective Store Blog",
+      "feed_url": "https://www.detective-store.com/blog_en/feed/",
+      "website_url": "https://www.detective-store.com/blog_en/",
+      "description": "Detective Store blog is a platform with interesting articles from the spy world. Find out innovative security solutions and our related products! Detective Store is a team of experts in the field of security, both in business and at home. We help you to safely spend holidays, reach school or work without problems, and solve everyday problems.",
+      "followers": {
+        "facebook": 403,
+        "twitter": 86
+      },
+      "image_url": "https://i1.feedspot.com/5428767.jpg?t=1659589071"
+    },
+    {
+      "title": "Sassy Detective Blog",
+      "feed_url": "https://sassydetective.com/blog?format=rss",
+      "website_url": "https://sassydetective.com/blog",
+      "description": "Need you mystery fix? We've got you covered! Read the Sassy Detective Blog to find your next thriller book, suspenseful series & shows, games, and more. Read reviews and recommendations.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5428765.jpg?t=1659587885"
+    },
+    {
+      "title": "Spyic",
+      "feed_url": "https://spyic.com/phone-spy/feed/",
+      "website_url": "https://spyic.com/phone-spy/",
+      "description": "At Spyic, we want to help you protect what matters to you the most. That's why we strive to provide the most cutting-edge digital security and risk management software on the market. Spyic is a reliable mobile tracker app that lets you monitor the location, texts, calls, and more of your kids easily.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5428766.jpg?t=1659589244"
+    }
+  ]
+}

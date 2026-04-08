@@ -1,0 +1,35 @@
+{
+  "category": "Vietnam Gaming",
+  "source_url": "https://rss.feedspot.com/vietnam_gaming_rss_feeds",
+  "feeds": [
+    {
+      "title": "Saigon Dragon Studios Blog",
+      "feed_url": "https://saigondragonstudios.com/feed/",
+      "website_url": "https://saigondragonstudios.com/blogs/",
+      "description": "External Art Studio, Saigon Dragon Studios is a fast growing team of artists, animators and developers, located in South Vietnam. Saigon Dragon Studios takes pride in bringing our creativity to your projects and help you make your projects a worldwide success.",
+      "followers": {
+        "facebook": 729
+      },
+      "image_url": "https://i1.feedspot.com/5768700.jpg?t=1706597656"
+    },
+    {
+      "title": "AdOne Blog",
+      "feed_url": "https://blog.adone.net/blog/feed",
+      "website_url": "https://blog.adone.net/blog",
+      "description": "ADONE PTE. LTD. (known as AdOne) was established by FPT AdTrue Joint Stock Company - the leading company in the mobile advertising industry. Here at AdOne, we put passion, connection and creativity first, we always look into the potential of our talented partners and make them proud on each project published with us.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5768701.jpg?t=1710506552"
+    },
+    {
+      "title": "Ancient8 Blog",
+      "feed_url": "https://blog.ancient8.gg/rss/",
+      "website_url": "https://blog.ancient8.gg/",
+      "description": "A gaming-focused, community-driven Ethereum layer2, built to onboard the next 100M Web3 citizens.",
+      "followers": {
+        "facebook": 8800,
+        "twitter": 150200
+      },
+      "image_url": "https://i1.feedspot.com/5768697.jpg?t=1706597647"
+    }
+  ]
+}

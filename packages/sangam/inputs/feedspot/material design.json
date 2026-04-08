@@ -1,0 +1,50 @@
+{
+  "category": "Material Design",
+  "source_url": "https://rss.feedspot.com/material_design_rss_feeds",
+  "feeds": [
+    {
+      "title": "Proto.io Blog",
+      "feed_url": "https://blog.proto.io/feed/",
+      "website_url": "https://blog.proto.io/",
+      "description": "Bring your idea to life in no time. The prototyping solution for all your needs. For UX designers, entrepreneurs, product managers, marketers, and anyone with a great idea. Create fully-interactive high-fidelity prototypes in minutes that look and feel like the real thing.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 34600
+      },
+      "image_url": "https://i1.feedspot.com/1963408.jpg?t=1643605610"
+    },
+    {
+      "title": "Creative Tim's Blog - Material Design",
+      "feed_url": "https://www.creative-tim.com/blog/material-design/rss",
+      "website_url": "https://www.creative-tim.com/blog/material-design/",
+      "description": "Discover fully coded design resources for web developers on our blog page. We have created the tools that will help you in your next project. From plugin to the complex kit, we've got you covered in all in all areas regarding front-end development.",
+      "followers": {
+        "facebook": 15100,
+        "twitter": 51100
+      },
+      "image_url": "https://i1.feedspot.com/5366553.jpg?t=1643871019"
+    },
+    {
+      "title": "MUI",
+      "feed_url": "https://medium.com/feed/material-ui",
+      "website_url": "https://medium.com/material-ui",
+      "description": "Announcements, guides, and articles about Material-UI. MUI (formerly Material-UI) is the React UI library you always wanted. Follow your design system, or start with Material Design.",
+      "followers": {
+        "facebook": 277,
+        "twitter": 19200
+      },
+      "image_url": "https://i1.feedspot.com/5366552.jpg?t=1643603656"
+    },
+    {
+      "title": "googblogs.com \u00bb Material Design",
+      "feed_url": "https://www.googblogs.com/tag/material-design/feed/",
+      "website_url": "https://www.googblogs.com/tag/material-design/",
+      "description": "The following section of googblogs.com features articles related to Material Designs. Other major categories to explore are Ads Developer, Data Liberation, Google Analytics, Official Gmail, Student, YouTube, and more.",
+      "followers": {
+        "facebook": 42500,
+        "twitter": 204400
+      },
+      "image_url": "https://i1.feedspot.com/5366554.jpg?t=1643603668"
+    }
+  ]
+}

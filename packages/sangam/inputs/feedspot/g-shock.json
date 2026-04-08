@@ -1,0 +1,60 @@
+{
+  "category": "G-Shock",
+  "source_url": "https://rss.feedspot.com/gshock_rss_feeds",
+  "feeds": [
+    {
+      "title": "G-Central",
+      "feed_url": "https://www.g-central.com/feed/",
+      "website_url": "https://www.g-central.com/",
+      "description": "G-Central is an independent fan site covering the latest G-Shock watch releases and news, including regional and worldwide releases, limited editions, collaborations, events, and more.",
+      "followers": {
+        "facebook": 51600,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5380419.jpg?t=1647000508"
+    },
+    {
+      "title": "StrapHabit Blog \u00bb G-Shock",
+      "feed_url": "https://straphabit.com/blogs/straphabit-reviews/tagged/g-shock.atom",
+      "website_url": "https://straphabit.com/blogs/straphabit-reviews/tagged/g-shock",
+      "description": "StrapHabit Blog shares in-depth reviews and opinions about G-Shock watch in this section of the blog. StrapHabit is your source for high-quality and comfortable watch straps.",
+      "followers": {
+        "facebook": 958,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/5380418.jpg?t=1647001528"
+    },
+    {
+      "title": "CasioFan Magazine",
+      "feed_url": "https://casiofanmag.com/feed/",
+      "website_url": "https://casiofanmag.com/",
+      "description": "CasioFan is a magazine about Casio Watches and Parts and is run by enthusiasts who want to collect all Casio information in one place. Recent News, Reviews, Guides from popular Casio Watches. Manuals, Batteries, Bands are also here.",
+      "followers": {
+        "twitter": 206
+      },
+      "image_url": "https://i1.feedspot.com/5380421.jpg?t=1647001490"
+    },
+    {
+      "title": "G-Shock Australia",
+      "feed_url": "https://gshock.com.au/blogs/news.atom",
+      "website_url": "https://gshock.com.au/blogs/news",
+      "description": "Get the latest G-Shock news straight from the source. This is the official home of G-Shock Australia bringing you news on all the latest and trendy watch releases & additions, design inspiration, specification, stories behind the watches, and more.",
+      "followers": {
+        "facebook": 54900,
+        "instagram": 68000
+      },
+      "image_url": "https://i1.feedspot.com/5380417.jpg?t=1647000502"
+    },
+    {
+      "title": "G-Shock New Zealand",
+      "feed_url": "https://gshocknz.com/blogs/news.atom",
+      "website_url": "https://gshocknz.com/blogs/news",
+      "description": "Keep up to date with the latest news, including monthly releases, limited edition drops and more from G-Shock New Zealand.",
+      "followers": {
+        "facebook": 80000,
+        "instagram": 18600
+      },
+      "image_url": "https://i1.feedspot.com/5380416.jpg?t=1647001859"
+    }
+  ]
+}

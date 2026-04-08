@@ -1,0 +1,92 @@
+{
+  "category": "Canadian Sailing",
+  "source_url": "https://rss.feedspot.com/canadian_sailing_rss_feeds",
+  "feeds": [
+    {
+      "title": "Sailing Wild Horses Blog",
+      "feed_url": "https://www.sailingwildhorses.com/3/feed",
+      "website_url": "https://www.sailingwildhorses.com/blog",
+      "description": "We are a Canadian couple living and sailing on our boat, Wild Horses, with our cute and sailboat-ready German Shepherd pup, Ocean. We have left our careers and the colder temps of Ottawa, Ontario behind for new adventures down south.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5326474.jpg?t=1632910548"
+    },
+    {
+      "title": "Distant Shores Blog",
+      "feed_url": "https://www.distantshores.ca/boatblog_files/blog.xml",
+      "website_url": "https://www.distantshores.ca/boatblog.php",
+      "description": "Hints and tips for cruising sailors exploring the world by sailboat. We're Paul and Sheryl Shard, a Canadian couple who set sail from Lake Ontario with a dream of sailing south when we were in our early 30's. We have sailed and lived aboard since 1989. We've learned a lot sailing to 'distant shores' on 5 continents over 30 years of international cruising, putting 110,000 miles under the keel and doing 9 ocean crossings during that time.",
+      "followers": {
+        "facebook": 20500
+      },
+      "image_url": "https://i1.feedspot.com/5326477.jpg?t=1632914251"
+    },
+    {
+      "title": "Safe Harbour Insurance Blog",
+      "feed_url": "https://harbourinsurance.ca/blog/feed/",
+      "website_url": "https://harbourinsurance.ca/blog/",
+      "description": "Read the Captain's blog and stay up to date with the Ontario, British Columbia and Quebec boating scene and Safe Harbour Insurance. We are a team of pleasure craft insurance experts with operations in ON, BC, & AB with over 50 years of experience.",
+      "followers": {
+        "facebook": 275,
+        "twitter": 43,
+        "instagram": 326
+      },
+      "image_url": "https://i1.feedspot.com/5326478.jpg?t=1632915041"
+    },
+    {
+      "title": "Boating in Canada News",
+      "feed_url": "https://boatingincanada.blogspot.com/feeds/posts/default",
+      "website_url": "https://boatingincanada.blogspot.com/",
+      "description": "Providing Canadian boaters with information to improve their enjoyment on the water.",
+      "followers": {
+        "facebook": 41,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5326475.jpg?t=1632913326"
+    },
+    {
+      "title": "AHOY British Columbia Blog",
+      "feed_url": "https://ahoybc.com/feed/",
+      "website_url": "https://ahoybc.com/blogbook/",
+      "description": "Explore the wild, hospitable coast of British Columbia. Find all your boating BC info here including marinas, communities, fishing & on-shore activities.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 746,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5326473.jpg?t=1632915896"
+    },
+    {
+      "title": "Sail Nelson Blog",
+      "feed_url": "https://sailnelson.com/feed/",
+      "website_url": "https://sailnelson.com/blog/",
+      "description": "Explore Nelson BC from the water! Sail Nelson is our local recreational boating school offering you professional boating courses! Our courses lead to Sail Canada certifications which are recognized internationally and we are all about safe, professional, sailing fun!",
+      "followers": {
+        "facebook": 715,
+        "instagram": 10600
+      },
+      "image_url": "https://i1.feedspot.com/5326481.jpg?t=1632916446"
+    },
+    {
+      "title": "Ontario Sailing News",
+      "feed_url": "https://ontariosailing.ca/category/news/feed/",
+      "website_url": "https://ontariosailing.ca/category/news/",
+      "description": "The latest news from Ontario Sailing. Ontario Sailing is a not-for-profit, volunteer organization committed to the promotion & development of all aspects of boating and sailing in Ontario.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4584997.jpg?t=1613797814"
+    },
+    {
+      "title": "BOATsmart! Blog",
+      "feed_url": "https://www.boatsmartexam.com/blog/feed/",
+      "description": "Your destination for boating resources and stories to keep you safe and informed on the waterways. BOATsmart is the easiest and fastest way to get your Boating License, Boater Education Card or Pleasure Craft Operator Card online today!",
+      "followers": {
+        "facebook": 20000,
+        "twitter": 2400,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5326480.jpg?t=1632910139"
+    }
+  ]
+}

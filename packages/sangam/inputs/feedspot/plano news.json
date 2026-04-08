@@ -1,0 +1,53 @@
+{
+  "category": "Plano News",
+  "source_url": "https://rss.feedspot.com/plano_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Plano Star Courier",
+      "feed_url": "https://starlocalmedia.com/search/?f=rss&t=article&c=planocourier&l=50&s=start_time&sd=desc",
+      "website_url": "https://starlocalmedia.com/planocourier/",
+      "description": "Plano Star Courier serves the community of Plano, Texas with the latest news, business, sports, entertainment and more.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 3900,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5136581.jpg?t=1586517758"
+    },
+    {
+      "title": "Plano BubbleLife",
+      "feed_url": "https://plano.bubblelife.com/rss?c=35660940",
+      "website_url": "https://plano.bubblelife.com/",
+      "description": "Plano BubbleLife is a digital newspaper, bringing together all of the local news and events in Plano, Texas.",
+      "followers": {
+        "facebook": 180,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5136593.jpg"
+    },
+    {
+      "title": "Plano Magazine",
+      "feed_url": "https://planomagazine.com/feed/",
+      "website_url": "https://planomagazine.com/plano_news/",
+      "description": "Stay up-to-date on the latest Plano News and Information from Plano Magazine News. Explore local news, events, announcements, and featured magazine stories that provide an in-depth, microscopic look at a particular buzzing topic or cover a special personalities.",
+      "followers": {
+        "facebook": 25900,
+        "twitter": 4100,
+        "instagram": 27400
+      },
+      "image_url": "https://i1.feedspot.com/5508893.jpg?t=1676534402"
+    },
+    {
+      "title": "CBS Texas \u00bb Plano",
+      "feed_url": "https://dfw.cbslocal.com/tag/plano/feed/",
+      "website_url": "https://www.cbsnews.com/texas/tag/plano/",
+      "description": "CBS DFW is the Metroplex's source for breaking news, weather, traffic, and sports. Here you will find all the local news and information you need plus other fun stuff in Plano, TX from the team at CBS DFW.",
+      "followers": {
+        "facebook": 591600,
+        "twitter": 167300,
+        "instagram": 602
+      },
+      "image_url": "https://i1.feedspot.com/5136585.jpg?t=1625739117"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "category": "Rave",
+  "source_url": "https://rss.feedspot.com/rave_rss_feeds",
+  "feeds": [
+    {
+      "title": "iHeartRaves Blog",
+      "feed_url": "https://www.iheartraves.com/blogs/post.atom",
+      "website_url": "https://www.iheartraves.com/blogs/post",
+      "description": "iHeartRaves' mission is to inspire individual creativity and self-expression through rave clothing and festival fashion at EDM events, music festivals, EDC, and beyond. We strive to bring in the hottest rave wear trends because we know rave clothes should be far from basic and boring. Keep up with the latest trends in rave fashion, festival fashion & rave culture at the iHeartRaves blog, where we celebrate your creativity and personal style.",
+      "followers": {
+        "facebook": 604800,
+        "twitter": 101400,
+        "instagram": 674400
+      },
+      "image_url": "https://i1.feedspot.com/5499957.jpg?t=1674798459"
+    },
+    {
+      "title": "Devil Walking Blog",
+      "feed_url": "https://devilwalking.com/blogs/festivals-and-rave.atom",
+      "website_url": "https://devilwalking.com/blogs/festivals-and-rave",
+      "description": "Devil Walking is an online boutique that offers collections of festival, alternative, goth, and rave clothing. Explore the blogs and get the latest and trendy fashion tips for EDM & PLUR lovers. Learn what is popular in the rave community and how to dress for your next rave festival.",
+      "followers": {
+        "facebook": 13500,
+        "instagram": 82300
+      },
+      "image_url": "https://i1.feedspot.com/5388402.jpg?t=1674798481"
+    },
+    {
+      "title": "Freedom Rave Wear Blog",
+      "feed_url": "https://freedomravewear.com/blogs/freedom-rave-wear-blog.atom",
+      "website_url": "https://freedomravewear.com/blogs/freedom-rave-wear-blog",
+      "description": "FRW is a new breed of the sustainable clothing company, where all styles are created in-house. FRW is known for its commitment to sustainability and the best quality in festival fashion. It's never been about making products as cheap as possible in far-off lands to maximize profits like other brands. Freedom Rave Wear is a blog for ravers and festival-goers with tips and tutorials on EDM news, fashion, and rave outfits. We love to write about the latest and best clothing",
+      "followers": {
+        "facebook": 29800,
+        "instagram": 164000
+      },
+      "image_url": "https://i1.feedspot.com/5499958.jpg?t=1674798468"
+    },
+    {
+      "title": "Rave Bae Couture Blog",
+      "feed_url": "https://www.ravebaecouture.com/blogs/rave-life.atom",
+      "website_url": "https://www.ravebaecouture.com/blogs/rave-life",
+      "description": "Rave Bae Couture is dedicated to helping you express yourself through fashion and look as amazing as possible for your next rave! From our unique outfits to health products to our blog filled with tons useful of information for ravers, we want to help you not only look better, but also feel free, confident, and have fun.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5499954.jpg?t=1674798446"
+    },
+    {
+      "title": "The Rave Cave Blog",
+      "feed_url": "https://the-rave-cave.com/blogs/blog.atom",
+      "website_url": "https://the-rave-cave.com/blogs/blog",
+      "description": "The Rave Cave is the UK's leading online store for Modern Rave Gear. We are the original specialist retailer of visual enhancement products for live music events, the exclusive distributor of GloFX products in the UK, and the first-choice supplier of Diffraction Glasses in Europe. Our non-faltering commitment to providing the best quality products on the market and only outstanding customer service meant that our company smashed the competition and became the largest supplier of diffraction glasses in the UK.",
+      "followers": {
+        "facebook": 8800,
+        "instagram": 7100
+      },
+      "image_url": "https://i1.feedspot.com/5499956.jpg?t=1674798495"
+    }
+  ]
+}

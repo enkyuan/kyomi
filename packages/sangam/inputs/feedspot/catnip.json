@@ -1,0 +1,58 @@
+{
+  "category": "Catnip",
+  "source_url": "https://rss.feedspot.com/catnip_rss_feeds",
+  "feeds": [
+    {
+      "title": "Tufts Catnip",
+      "feed_url": "https://www.tuftscatnip.com/feed/",
+      "website_url": "https://www.tuftscatnip.com/",
+      "description": "Catnip magazine is an excellent resource for cat owners and Vets alike. It is published by the Tufts Cummings School of Veterinary Medicine and its publisher partner Belvoir Media Group. The Cummings School is one of the leading veterinary colleges in America, responsible for training the next generation of veterinary doctors.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5440392.jpg?t=1662961739"
+    },
+    {
+      "title": "Meowijuana Blog",
+      "feed_url": "https://www.meowijuana.com/blogs/news.atom",
+      "website_url": "https://www.meowijuana.com/blogs/news",
+      "description": "A blog featuring news and updates from Meowjiuana. Read articles with tips and solutions for common cat issues and other interesting cat facts. Meowijuana brand creates high-grade organic catnip products, catnip toys, and flavored cat treats. Cat accessories, for our pawed friends. Cats go crazy for our unique catnip blends and cat parents love our premium quality.",
+      "followers": {
+        "facebook": 200900,
+        "twitter": 1900,
+        "instagram": 22300
+      },
+      "image_url": "https://i1.feedspot.com/5440393.jpg?t=1662961409"
+    },
+    {
+      "title": "The Catnip Times",
+      "feed_url": "https://www.thecatniptimes.com/feed/",
+      "website_url": "https://www.thecatniptimes.com/",
+      "description": "Check out The Catnip Times for amazing and interesting information about cat facts and learn more about cats as pets, cat safety tips, care for your cat, and cat declawing alter. The Catnip Times is a cat lifestyle and advocacy site, designed to strengthen the bond between humans and the cats who own them.",
+      "followers": {
+        "facebook": 798400,
+        "twitter": 6300,
+        "instagram": 60800
+      },
+      "image_url": "https://i1.feedspot.com/4496814.jpg?t=1662960498"
+    },
+    {
+      "title": "AKC Reunite \u00bb The Catnip Times",
+      "feed_url": "https://www.akcreunite.org/category/the-catnip-times/feed/",
+      "website_url": "https://www.akcreunite.org/category/the-catnip-times/",
+      "description": "Find valuable tips, theories, and advice to take care of your cats in the Catnip Times Category of AKC Reunite. AKC Reunite is a Pet Microchips & Lost Pet Recovery Service. We work with AKC Clubs to donate K-9 police dogs to police departments around the United States.",
+      "followers": {
+        "facebook": 32900,
+        "twitter": 1200,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5440391.jpg?t=1662961319"
+    },
+    {
+      "title": "PoC \u00bb Catnip",
+      "feed_url": "https://pictures-of-cats.org/tag/catnip/feed",
+      "website_url": "https://pictures-of-cats.org/tag/catnip",
+      "description": "Pictures od Cats (PoC) blog share useful insights and tips on Catnip, whether its harmful for cat and whether you should let your cat indulge in it. You can also read archived articles from other categories. PoC is a website by Michael Broad in which he writes on animal welfare, especially cats, with an objective but at times, passionate view.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5440394.jpg?t=1662960470"
+    }
+  ]
+}

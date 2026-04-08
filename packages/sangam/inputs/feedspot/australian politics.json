@@ -1,0 +1,449 @@
+{
+  "category": "Australian Politics",
+  "source_url": "https://rss.feedspot.com/australian_politics_rss_feeds",
+  "feeds": [
+    {
+      "title": "ABC News",
+      "feed_url": "https://www.abc.net.au/news/feed/51120/rss.xml",
+      "website_url": "https://www.abc.net.au/news/politics",
+      "description": "Australian politics, policy analysis, explainers, election coverage and more.",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 42400,
+        "instagram": 465300
+      },
+      "image_url": "https://i1.feedspot.com/8666.jpg?t=1620635329"
+    },
+    {
+      "title": "Sydney Morning Herald \u00bb Politics",
+      "feed_url": "https://www.smh.com.au/rss/politics/federal.xml",
+      "website_url": "https://www.smh.com.au/politics",
+      "description": "The latest Politics breaking news, comment, and analysis from The Sydney Morning Herald covering State & Federal politics and politicians.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 923400,
+        "instagram": 383700
+      },
+      "image_url": "https://i1.feedspot.com/4883045.jpg?t=1616594798"
+    },
+    {
+      "title": "Crikey",
+      "feed_url": "https://www.crikey.com.au/politics/feed/",
+      "website_url": "https://www.crikey.com.au/politics/",
+      "description": "Crikey is an Australian news and commentary website and newsletter, offering unique perspectives on politics. News and independent commentary on Australian federal, state and local government moves and politics in Crikey's unique style.",
+      "followers": {
+        "facebook": 89000,
+        "twitter": 197900,
+        "instagram": 57900
+      },
+      "image_url": "https://i1.feedspot.com/4533702.jpg?t=1618462506"
+    },
+    {
+      "title": "Independent Australia",
+      "feed_url": "https://feeds.feedburner.com/IndependentAustralia",
+      "website_url": "https://independentaustralia.net/",
+      "description": "Independent Australia is a progressive journal, that supports freedom and justice for individuals, and getting to the truth. IA opposes governments of the country beholden to vested interests. Our main editorial focus is on federal politics, democratic government, the environment, human rights, Australian identity, and more.",
+      "followers": {
+        "facebook": 25700,
+        "twitter": 44500
+      },
+      "image_url": "https://i1.feedspot.com/4530092.jpg?t=1620635334"
+    },
+    {
+      "title": "Ask Bucko",
+      "feed_url": "https://askbucko.com/feed/",
+      "website_url": "https://askbucko.com/",
+      "description": "askbucko.com is written by Mark Buckley, a citizen of Melbourne. His interests include history, literature, politics, footy and people.",
+      "followers": {
+        "twitter": 122
+      },
+      "image_url": "https://i1.feedspot.com/5026751.jpg?t=1620635344"
+    },
+    {
+      "title": "The Spectator Australia",
+      "feed_url": "https://www.spectator.com.au/feed/",
+      "website_url": "https://www.spectator.com.au/",
+      "description": "The Spectator Australia is a conservative weekly magazine and online platform offering political commentary, opinion, and cultural analysis. It is the Australian edition of the UK-based Spectator, known for its centre-right to right-wing editorial stance, featuring prominent conservative voices and debates on Australian politics, society, and global affairs.",
+      "followers": {
+        "facebook": 42600,
+        "twitter": 17400
+      },
+      "image_url": "https://i1.feedspot.com/5667381.jpg?t=1694152228"
+    },
+    {
+      "title": "Council Magazine",
+      "feed_url": "https://councilmagazine.com.au/feed/",
+      "website_url": "https://councilmagazine.com.au/",
+      "description": "Council",
+      "followers": {
+        "facebook": 116,
+        "twitter": 198
+      },
+      "image_url": "https://i1.feedspot.com/5667390.jpg?t=1694152321"
+    },
+    {
+      "title": "Australian Local Government Association",
+      "feed_url": "https://alga.com.au/feed/",
+      "website_url": "https://alga.com.au/category/news-and-events/news/",
+      "description": "The News section of the Australian Local Government Association (ALGA) site is a central hub for timely updates\u2014featuring ALGA News bulletins, media releases, federal budget statements, reports, and event announcements like their National General Assembly and infrastructure congress\u2014aimed at promoting and informing local government initiatives across Australia.",
+      "followers": {
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5667389.jpg?t=1694152309"
+    },
+    {
+      "title": "Pearls and Irritations",
+      "feed_url": "https://johnmenadue.com/feed/",
+      "website_url": "https://johnmenadue.com/",
+      "description": "Read progressive, liberal commentary on issues that impact Australians. Our daily articles focus on politics, public policy and world affairs.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 11200
+      },
+      "image_url": "https://i1.feedspot.com/5410025.jpg?t=1694159475"
+    },
+    {
+      "title": "Women's Agenda \u00bb Politics",
+      "feed_url": "https://womensagenda.com.au/category/politics/feed/",
+      "website_url": "https://womensagenda.com.au/category/politics/",
+      "description": "News for professional women and female entrepreneurs",
+      "followers": {
+        "facebook": 46100,
+        "twitter": 37100,
+        "instagram": 74100
+      },
+      "image_url": "https://i1.feedspot.com/5667383.jpg?t=1694152460"
+    },
+    {
+      "title": "Open Forum \u00bb Politics and Policy",
+      "feed_url": "https://www.openforum.com.au/category/politics-and-policy/feed/",
+      "website_url": "https://www.openforum.com.au/category/politics-and-policy/",
+      "description": "Open Forum offers an independent platform for Australian debate",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5667385.jpg?t=1694152544"
+    },
+    {
+      "title": "Inside Story \u00bb Books & Arts",
+      "feed_url": "https://insidestory.org.au/feed/",
+      "website_url": "https://insidestory.org.au/category/books-arts/",
+      "description": "Inside Story's Books & Arts section delivers cultural journalism that blends sharp literary and art criticism with essays, reporting, and commentary from leading Australian thinkers.",
+      "followers": {
+        "facebook": 3800
+      },
+      "image_url": "https://i1.feedspot.com/442030.jpg?t=1756367764"
+    },
+    {
+      "title": "Overland literary journal \u00bb Politics",
+      "feed_url": "https://overland.org.au/topics/politics-political/feed/",
+      "website_url": "https://overland.org.au/topics/politics-political/",
+      "description": "Progressive culture since 1954",
+      "followers": {
+        "facebook": 19000,
+        "twitter": 20300,
+        "instagram": 12700
+      },
+      "image_url": "https://i1.feedspot.com/5667388.jpg?t=1694152646"
+    },
+    {
+      "title": "Canberra CityNews \u00bb Politics",
+      "feed_url": "https://citynews.com.au/category/politics/feed/",
+      "website_url": "https://citynews.com.au/category/politics/",
+      "description": "All about Canberra",
+      "followers": {
+        "facebook": 18900,
+        "twitter": 15800,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5667387.jpg?t=1694152297"
+    },
+    {
+      "title": "Rolling Stone Australia \u00bb Politics",
+      "feed_url": "https://au.rollingstone.com/politics/feed/",
+      "website_url": "https://au.rollingstone.com/politics/",
+      "description": "Music, Film, TV and Political News Coverage",
+      "followers": {
+        "facebook": 83000,
+        "twitter": 2900,
+        "instagram": 36300
+      },
+      "image_url": "https://i1.feedspot.com/5667391.jpg?t=1694152325"
+    },
+    {
+      "title": "Progress in Political Economy",
+      "feed_url": "https://www.ppesydney.net/feed/",
+      "website_url": "https://www.ppesydney.net/",
+      "description": "This blog is a venue for thought about political economy in and beyond the academy. It is linked to faculty members, students, alumni, journalists, and others associated with the Department of Political Economy at the University of Sydney.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5384723.jpg?t=1648126422"
+    },
+    {
+      "title": "The Strategist",
+      "feed_url": "https://www.aspistrategist.org.au/feed/",
+      "website_url": "https://www.aspistrategist.org.au/posts/",
+      "description": "The Climate change section on The Strategist gives more on latest news and updates regarding the climate change in Australia. The Strategist is the commentary and analysis site of the Australian Strategic Policy Institute, an independent, non-partisan think tank based in Canberra.",
+      "followers": {
+        "facebook": 27700,
+        "twitter": 50300
+      },
+      "image_url": "https://i1.feedspot.com/198291.jpg?t=1636953407"
+    },
+    {
+      "title": "Devpolicy Blog",
+      "feed_url": "https://devpolicy.org/feed/",
+      "website_url": "https://devpolicy.org/",
+      "description": "Established in September 2010, the Devpolicy Blog provides a platform for the best in aid and development analysis, research, and policy comment, with global coverage and a focus on Australia, the Pacific, and Papua New Guinea.",
+      "followers": {
+        "facebook": 14600,
+        "twitter": 13900
+      },
+      "image_url": "https://i1.feedspot.com/442024.jpg?t=1662031251"
+    },
+    {
+      "title": "The Poll Bludger",
+      "feed_url": "https://www.pollbludger.net/feed/",
+      "website_url": "https://www.pollbludger.net/",
+      "description": "Poll Bludger is a website that focuses on opinion poll analysis and Australian politics. The newspaper Crikey has labeled it 'one of the most heavily trafficked forums for an online discussion of Australian politics'. Read more to explore the analysis and discussion of elections and opinion polls in Australia.",
+      "followers": {
+        "twitter": 11100
+      },
+      "image_url": "https://i1.feedspot.com/5474247.jpg?t=1669891584"
+    },
+    {
+      "title": "The Tally Room",
+      "feed_url": "https://www.tallyroom.com.au/feed",
+      "website_url": "https://www.tallyroom.com.au/",
+      "description": "The Tally Room is an electoral analysis website covering elections in Australia, New Zealand and occasionally other countries, run by. This is a blog by Ben Raue. I have a particular interest in politics, and particularly elections, in Australia and other English-speaking countries.",
+      "followers": {
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5474250.jpg?t=1669890692"
+    },
+    {
+      "title": "Antony Green's Election Blog",
+      "feed_url": "https://antonygreen.com.au/feed/",
+      "website_url": "https://antonygreen.com.au/",
+      "description": "Antony Green is the ABC's Chief Elections Analyst. This is where he writes on elections, electoral systems, Australian electoral history and various bits and pieces that are an adjunct to his day job with the ABC. For election guides, results, news and more, head to ABC's Elections page.",
+      "followers": {
+        "twitter": 218500
+      },
+      "image_url": "https://i1.feedspot.com/5474249.jpg?t=1672239964"
+    },
+    {
+      "title": "Club Troppo \u00bb Politics",
+      "feed_url": "https://clubtroppo.com.au/category/politics-national/feed/",
+      "website_url": "https://clubtroppo.com.au/category/politics-national/",
+      "description": "Club Troppo is a group blog that has existed in various guises since 2003. Troppo has numerous contributors who post with varying frequency on an eclectic range of topics, including politics, law, economics, life, philosophy, sport and the arts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8539638.jpg?t=1753095248"
+    },
+    {
+      "title": "Michael West",
+      "feed_url": "https://michaelwest.com.au/feed/",
+      "website_url": "https://michaelwest.com.au/",
+      "description": "Michael West Media - always independent. Dedicated to the public interest and investigations into big business and government abuse of power .",
+      "followers": {
+        "facebook": 34700,
+        "twitter": 99300,
+        "instagram": 31400
+      },
+      "image_url": "https://i1.feedspot.com/8539637.jpg?t=1753095238"
+    },
+    {
+      "title": "Kangaroo Court of Australia",
+      "feed_url": "https://kangaroocourtofaustralia.com/feed",
+      "website_url": "https://kangaroocourtofaustralia.com/",
+      "description": "Kangaroo Court of Australia is published by independent journalist Shane Dowling. This website is focused on investigating and reporting political corruption, judicial corruption and associated police corruption.",
+      "followers": {
+        "twitter": 18000
+      },
+      "image_url": "https://i1.feedspot.com/1444846.jpg?t=1750233196"
+    },
+    {
+      "title": "Australian Journal of Politics & History",
+      "feed_url": "https://onlinelibrary.wiley.com/action/showFeed?type=etoc&feed=rss&jc=14678497",
+      "website_url": "https://onlinelibrary.wiley.com/journal/14678497/",
+      "description": "Australian Journal of Politics & History addresses significant problems in the fields of history, political science and international relations.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8539632.jpg?t=1753095221"
+    },
+    {
+      "title": "New Politics",
+      "feed_url": "https://newpolitics.com.au/feed/",
+      "website_url": "https://newpolitics.com.au/",
+      "description": "New Politics publishes independent news and analysis on Australian politics, and produces a specialist weekly podcast.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8539634.jpg?t=1753095226"
+    },
+    {
+      "title": "On Line Opinion",
+      "feed_url": "http://feeds.nationalforum.com.au/onlineopinion/",
+      "website_url": "https://www.onlineopinion.com.au/",
+      "description": "On Line Opinion is a not-for-profit e-journal that aims to provide a forum for public social and political debate about current Australian issues.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/442037.jpg?t=1750234896"
+    },
+    {
+      "title": "The Shot",
+      "feed_url": "https://theshot.net.au/feed/",
+      "website_url": "https://theshot.net.au/",
+      "description": "The Shot provides witty yet thoughtful news, opinion and analysis pieces that are 'Profane and Profound'.",
+      "followers": {
+        "facebook": 21000,
+        "twitter": 23800
+      },
+      "image_url": "https://i1.feedspot.com/8539633.jpg?t=1753095225"
+    },
+    {
+      "title": "Dr Kevin Bonham",
+      "feed_url": "https://kevinbonham.blogspot.com/feeds/posts/default",
+      "website_url": "https://kevinbonham.blogspot.com/",
+      "description": "Tasmanian and Australian psephology, opinion poll analysis, election analysis and political commentary by Dr Kevin Bonham.",
+      "followers": {
+        "twitter": 18500
+      },
+      "image_url": "https://i1.feedspot.com/2309254.jpg?t=1750235348"
+    },
+    {
+      "title": "John Quiggin",
+      "feed_url": "https://johnquiggin.com/feed/",
+      "website_url": "https://johnquiggin.com/",
+      "description": "John Quiggin's blog focuses on Australian economics and politics. He delivers an interesting perspective on current events in Australia. He also hosts a weekly 'sandpit' forum style discussion.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 15100
+      },
+      "image_url": "https://i1.feedspot.com/271156.jpg?t=1618405785"
+    },
+    {
+      "title": "Financial Times \u00bb Australian Politics",
+      "feed_url": "https://www.ft.com/australian-politics?format=rss",
+      "website_url": "https://www.ft.com/australian-politics/",
+      "description": "Get the latest news, analysis and opinion on Australian politics",
+      "followers": {
+        "twitter": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/8539636.jpg?t=1753095235"
+    },
+    {
+      "title": "Semper Floreat \u00bb Australian Politics",
+      "feed_url": "https://www.semperfloreat.com.au/category/australian-politics/feed/",
+      "website_url": "https://www.semperfloreat.com.au/category/australian-politics/",
+      "description": "Semper Floreat is the independent, University of Queensland student newspaper featuring robust political opinion, analysis, and news\u2014particularly focused on issues affecting young people and campus communities, such as gender equity, transport, and local government policies .",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8539635.jpg?t=1753095230"
+    },
+    {
+      "title": "Daily Mail \u00bb Australian Politics",
+      "feed_url": "https://www.dailymail.co.uk/news/australia-politics/articles.rss",
+      "website_url": "https://www.dailymail.co.uk/news/australia-politics/index.html/",
+      "description": "Get the latest news on Australian politics from MailOnline.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8539631.jpg?t=1753095213"
+    },
+    {
+      "title": "The Guardian | Australian politics",
+      "feed_url": "https://www.theguardian.com/australia-news/australian-politics/rss",
+      "website_url": "https://www.theguardian.com/australia-news/australian-politics",
+      "description": "Latest news and features from theguardian.com, the world's leading liberal voice. Get news on Australian Politics.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4918259.jpg?t=1620635366"
+    },
+    {
+      "title": "Australian Politics",
+      "feed_url": "http://australian-politics.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://australian-politics.blogspot.com/",
+      "description": "Events of interest from a libertarian conservative perspective. Blog by John J. Ray.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2218210.jpg?t=1618463166"
+    },
+    {
+      "title": "New Matilda",
+      "feed_url": "https://newmatilda.com/feed",
+      "website_url": "https://newmatilda.com/",
+      "description": "New Matilda is independent journalism at its best. The site has been publishing intelligent coverage of Australian and international politics, media and culture since 2004. You'll find new stories on the homepage daily.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4943889.jpg?t=1750338010"
+    },
+    {
+      "title": "Centre of Democracy",
+      "feed_url": "https://www.centreofdemocracy.sa.gov.au/blog/feed/",
+      "website_url": "https://www.centreofdemocracy.sa.gov.au/blog/",
+      "description": "The blog features regular posts by people passionate about politics, participation and democracy in all its forms.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 673
+      },
+      "image_url": "https://i1.feedspot.com/8539630.jpg?t=1753095211"
+    },
+    {
+      "title": "The Conversation \u00bb Australian Politics",
+      "feed_url": "https://theconversation.com/topics/australian-politics-32/articles.atom",
+      "website_url": "https://theconversation.com/global/topics/australian-politics-32",
+      "description": "Browse Australian politics news, research and analysis from The Conversation",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 8000
+      },
+      "image_url": "https://i1.feedspot.com/5667380.jpg?t=1694152221"
+    },
+    {
+      "title": "The Australia Institute",
+      "feed_url": "https://australiainstitute.org.au/news//feed",
+      "website_url": "https://australiainstitute.org.au/news/",
+      "description": "The News & Analysis section of The Australia Institute is a central platform publishing timely research-based articles, opinion pieces, podcasts, live blogs, charts, and more\u2014covering economics, climate, democracy, security, and social issues to deepen public policy debate.",
+      "followers": {
+        "facebook": 97400,
+        "twitter": 47200,
+        "instagram": 116400
+      },
+      "image_url": "https://i1.feedspot.com/5667384.jpg?t=1694152259"
+    },
+    {
+      "title": "Parliament of Australia Flagpost Blog",
+      "feed_url": "https://www.aph.gov.au/About_Parliament/Parliamentary_departments/Parliamentary_Library/Research?publicationTypes=%7Bb23bf2d2-5e26-4a97-8ce5-a1a06eebf192%7D",
+      "website_url": "https://www.aph.gov.au/About_Parliament/Parliamentary_departments/Parliamentary_Library/Research?publicationTypes=%7Bb23bf2d2-5e26-4a97-8ce5-a1a06eebf192%7D",
+      "description": "The Research section of the Parliamentary Library on the Parliament of Australia website features confidential, impartial, and timely research publications.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 11600,
+        "instagram": 9300
+      },
+      "image_url": "https://i1.feedspot.com/5666533.jpg?t=1694152373"
+    },
+    {
+      "title": "9News \u00bb Politics",
+      "feed_url": "https://www.9news.com.au/politics",
+      "website_url": "https://www.9news.com.au/politics",
+      "description": "Latest political news from Australia and around the world, covering elections, by-elections, our regular leadership spills, poll results, Question Time debates and daily Australian party politics",
+      "followers": {
+        "facebook": 3500000,
+        "twitter": 1100000,
+        "instagram": 756900
+      },
+      "image_url": "https://i1.feedspot.com/5666554.jpg?t=1694089275"
+    },
+    {
+      "title": "News.com.au \u00bb Politics",
+      "feed_url": "https://www.news.com.au/national/politics/feed",
+      "website_url": "https://www.news.com.au/national/politics",
+      "followers": {
+        "facebook": 3400000,
+        "twitter": 692700,
+        "instagram": 321200
+      },
+      "image_url": "https://i1.feedspot.com/5667382.jpg?t=1694152243"
+    }
+  ]
+}

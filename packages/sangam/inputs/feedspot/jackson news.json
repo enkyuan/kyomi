@@ -1,0 +1,81 @@
+{
+  "category": "Jackson News",
+  "source_url": "https://rss.feedspot.com/jackson_tennessee_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "WBBJ-TV",
+      "feed_url": "https://www.wbbjtv.com/feed/",
+      "website_url": "https://www.wbbjtv.com/",
+      "description": "News & information from WBBJ 7 Eyewitness News. Grab the latest headlines, videos, trending pictures, Weather & Flood advisories, and more here at wbbjtv.com. WBBJ-TV ABC & CBS 7 is the top source of news, weather, and sports information in West Tennessee.",
+      "followers": {
+        "facebook": 279800,
+        "twitter": 17300
+      },
+      "image_url": "https://i1.feedspot.com/5147650.jpg?t=1677831165"
+    },
+    {
+      "title": "WNWS-FM \u00bb Jackson",
+      "feed_url": "https://wnws.com/category/jackson-news/feed/",
+      "website_url": "https://wnws.com/category/jackson-news/",
+      "description": "WNWS 101.5 FM is Jackson Tennessee's News/Talk Leader. Get the latest news, weather, sports, and community events.",
+      "followers": {
+        "facebook": 68100,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5147667.jpg"
+    },
+    {
+      "title": "WNWS-FM",
+      "feed_url": "https://wnws.com/feed/",
+      "website_url": "https://wnws.com/",
+      "description": "WNWS-FM is Jackson, Tennessee's premier radio news destination, bringing together a mix of Local news and perspectives as well as updates on National and International coverage. The updates on wnws.com cover breaking news, pressing local matters, and community information.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5516088.jpg?t=1677831198"
+    },
+    {
+      "title": "The Jackson Press",
+      "feed_url": "https://thejacksonpress.org/?feed=rss2&cat=6",
+      "website_url": "https://thejacksonpress.org/",
+      "description": "Keep up with the latest local news from and around Jackson, Tennessee.",
+      "followers": {
+        "twitter": 97
+      },
+      "image_url": "https://i1.feedspot.com/5147659.jpg"
+    },
+    {
+      "title": "WNBJ 39",
+      "feed_url": "https://www.nbc39.com/",
+      "website_url": "https://www.nbc39.com/",
+      "description": "Track the latest local news and weather updates through wnbjtv.com. WNBJ is home to Jackson's own NBC and CW affiliates. We appear in Jackson and the surrounding communities on cable and satellite providers and are dedicated to bringing the best in programming from the NBC and CW networks.",
+      "followers": {
+        "twitter": 338,
+        "instagram": 280
+      },
+      "image_url": "https://i1.feedspot.com/5516087.jpg?t=1677831087"
+    },
+    {
+      "title": "Jackson County Sentinel",
+      "feed_url": "https://www.jacksoncountysentinel.net/",
+      "website_url": "https://www.jacksoncountysentinel.net/",
+      "description": "The Jackson County Sentinel has been serving the citizens of Jackson County Tennessee with all the news they need to know for over 100 years.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5147653.jpg?t=1588573673"
+    },
+    {
+      "title": "The Jackson Sun",
+      "feed_url": "https://www.jacksonsun.com/",
+      "website_url": "https://www.jacksonsun.com/",
+      "description": "Engaging Community News and a rundown of the latest local newsworthy events. Read opinions and public discussions on what's happening in the county. The Jackson Sun is West Tennessee's number-one source for breaking news, sports scores, weather updates, and more.",
+      "followers": {
+        "facebook": 70300,
+        "twitter": 12200
+      },
+      "image_url": "https://i1.feedspot.com/5516086.jpg?t=1677831221"
+    }
+  ]
+}

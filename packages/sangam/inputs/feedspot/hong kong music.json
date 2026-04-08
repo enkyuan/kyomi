@@ -1,0 +1,82 @@
+{
+  "category": "Hong Kong Music",
+  "source_url": "https://rss.feedspot.com/hong_kong_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "Underground Hong Kong",
+      "feed_url": "https://undergroundhk.com/news/feed/",
+      "website_url": "https://undergroundhk.com/news/",
+      "description": "Original Music For Original People - Whether you're a musician with a wish-list or a music lover on the prowl, The Underground HK is here to help.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 2800,
+        "instagram": 6300
+      },
+      "image_url": "https://i1.feedspot.com/5340754.jpg?t=1636368339"
+    },
+    {
+      "title": "Hong Kong Buzz \u00bb Music",
+      "feed_url": "https://hongkongbuzz.hk/category/culture/music/feed",
+      "website_url": "https://hongkongbuzz.hk/category/culture/music",
+      "description": "Find the latest music news, concerts, shows and reviews by Hong Kong Buzz. Hong Kong Buzz online newspaper aims to be a celebration of our city and its people presented in news and features.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 13,
+        "instagram": 210
+      },
+      "image_url": "https://i1.feedspot.com/5340757.jpg?t=1636368839"
+    },
+    {
+      "title": "Chris B: My Blog",
+      "feed_url": "https://blog.undergroundhk.com/feed/",
+      "website_url": "https://blog.undergroundhk.com/",
+      "description": "I'm Chris B. I was born and raised in Hong Kong. I organize, create and curate live music events under the brand known as The Underground HK.In 2019 I launched Mellow Yellow Music Festival. Stay up to date with all the Hong Kong music news and information on the Mellow Yellow Music Festival.",
+      "followers": {
+        "facebook": 349,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5340632.jpg?t=1636350916"
+    },
+    {
+      "title": "Premiere Performances",
+      "feed_url": "https://www.pphk.org/feed/",
+      "website_url": "https://www.pphk.org/news/",
+      "description": "Stay up to date with the latest news, programs, events and announcements by the Premiere Performances. Premiere Performances brings internationally celebrated artists and the world's brightest rising stars to Hong Kong for solo recitals, chamber music and community outreach, building a vibrant local arts scene.",
+      "followers": {
+        "facebook": 11500,
+        "instagram": 9700
+      },
+      "image_url": "https://i1.feedspot.com/5340756.jpg?t=1636368610"
+    },
+    {
+      "title": "Inspirem Music, Art & Therapy Blog",
+      "feed_url": "https://www.inspiremmusictherapy.com/blog-feed.xml",
+      "website_url": "https://www.inspiremmusictherapy.com/blog-2",
+      "description": "Read the latest music therapy news, music production and community music news by Inspirem Music, Art & Therapy.Inspirem Music Therapy believes in the power of music to inspire, empower and transform individuals through musical interaction.",
+      "followers": {
+        "facebook": 143,
+        "instagram": 18
+      },
+      "image_url": "https://i1.feedspot.com/5340772.jpg?t=1636373131"
+    },
+    {
+      "title": "Lifestyle Asia \u00bb Music",
+      "feed_url": "https://www.lifestyleasia.com/hk/culture/music/feed/",
+      "website_url": "https://www.lifestyleasia.com/hk/culture/music/",
+      "description": "Stay up to date with the latest Hong Kong music news, updates and announcements by the Lifestyle Asia.Lifestyle Asia is Asia's ultimate online guide to luxury living. From dining and drinking to style, fashion, travel and more.",
+      "followers": {
+        "facebook": 34100,
+        "twitter": 25500,
+        "instagram": 110100
+      },
+      "image_url": "https://i1.feedspot.com/5340753.jpg?t=1636367776"
+    },
+    {
+      "title": "Music Universe Blog",
+      "feed_url": "https://musicuniverse.hk/category/blog/feed/",
+      "description": "Stay up to date with the latest news, programs, courses and announcements by the Music Universe.Music Universe offers student-centred home-visiting instrument classes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5340639.jpg?t=1636469642"
+    }
+  ]
+}

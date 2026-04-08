@@ -1,0 +1,230 @@
+{
+  "category": "Telegraph",
+  "source_url": "https://rss.feedspot.com/telegraph_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Telegraph",
+      "feed_url": "https://www.telegraph.co.uk/rss.xml",
+      "website_url": "https://www.telegraph.co.uk/",
+      "description": "Latest news, business, sport, comment, lifestyle, and culture from the Daily Telegraph and Sunday Telegraph newspapers and video from Telegraph TV.",
+      "followers": {
+        "facebook": 5600000,
+        "twitter": 3400000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/8605.jpg?t=1615291245"
+    },
+    {
+      "title": "The Telegraph \u00bb News",
+      "feed_url": "https://www.telegraph.co.uk/news/rss.xml",
+      "website_url": "https://www.telegraph.co.uk/news/",
+      "description": "Latest breaking news, including politics, crime, and celebrity. Find stories, updates, and expert opinions from The Telegraph.",
+      "followers": {
+        "facebook": 5600000,
+        "twitter": 3400000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/4880356.jpg?t=1751610032"
+    },
+    {
+      "title": "The Telegraph \u00bb Sport",
+      "feed_url": "https://www.telegraph.co.uk/sport/rss.xml",
+      "website_url": "https://www.telegraph.co.uk/sport/",
+      "description": "Find all the latest real-time sports coverage, live reports, analysis, and comment on Telegraph Sport. News, fixtures, scores, and video.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 266000
+      },
+      "image_url": "https://i1.feedspot.com/4880360.jpg?t=1751610072"
+    },
+    {
+      "title": "The Telegraph \u00bb Business",
+      "feed_url": "https://www.telegraph.co.uk/business/rss.xml",
+      "website_url": "https://www.telegraph.co.uk/business/",
+      "description": "Expert guides and analysis for the UK and global business. News, tips, updates, and advice from The Telegraph.",
+      "followers": {
+        "facebook": 5600000,
+        "twitter": 3400000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/4880373.jpg?t=1751610082"
+    },
+    {
+      "title": "The Telegraph \u00bb Health",
+      "feed_url": "https://www.telegraph.co.uk/health-fitness/rss.xml",
+      "website_url": "https://www.telegraph.co.uk/health-fitness/",
+      "description": "Scientifically backed guides, expertly written news and opinion from leaders in the health & fitness field to help you live a longer, happier life.",
+      "followers": {
+        "facebook": 5600000,
+        "twitter": 3400000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/8545072.jpg"
+    },
+    {
+      "title": "The Telegraph \u00bb Money",
+      "feed_url": "https://www.telegraph.co.uk/money/rss.xml",
+      "website_url": "https://www.telegraph.co.uk/money/",
+      "description": "Latest news, expert advice, and information on money. Pensions, property, and more from The Telegraph.",
+      "followers": {
+        "facebook": 50100,
+        "twitter": 23100
+      },
+      "image_url": "https://i1.feedspot.com/4880376.jpg?t=1751610158"
+    },
+    {
+      "title": "The Telegraph \u00bb Football",
+      "feed_url": "https://www.telegraph.co.uk/football/rss.xml",
+      "website_url": "https://www.telegraph.co.uk/football/",
+      "description": "Find all the latest football news on Telegraph Sport. Live reports, results, transfer news and expert analysis.",
+      "followers": {
+        "facebook": 5600000,
+        "twitter": 3400000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/4880380.jpg?t=1751610266"
+    },
+    {
+      "title": "The Telegraph \u00bb Travel",
+      "feed_url": "https://www.telegraph.co.uk/travel/rss.xml",
+      "website_url": "https://www.telegraph.co.uk/travel/",
+      "description": "Telegraph Travel offers the best holiday inspiration, advice, hotel reviews, news and interviews, first-person stories, analysis, comment, data, and interactive tools from the best writers in the business.",
+      "followers": {
+        "facebook": 209900,
+        "twitter": 288700
+      },
+      "image_url": "https://i1.feedspot.com/4880384.jpg?t=1751610176"
+    },
+    {
+      "title": "The Telegraph \u00bb Films",
+      "feed_url": "https://www.telegraph.co.uk/films/rss.xml",
+      "website_url": "https://www.telegraph.co.uk/films/",
+      "description": "Find all the latest film news, with features, interviews and more.",
+      "followers": {
+        "facebook": 5600000,
+        "twitter": 3400000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/8545074.jpg"
+    },
+    {
+      "title": "The Telegraph \u00bb TV",
+      "feed_url": "https://www.telegraph.co.uk/tv/rss.xml",
+      "website_url": "https://www.telegraph.co.uk/tv/",
+      "description": "Find all the latest TV news, reviews and upcoming episode guides, including interviews and features with your favourite celebrities.",
+      "followers": {
+        "facebook": 5600000,
+        "twitter": 3400000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/8545080.jpg"
+    },
+    {
+      "title": "The Telegraph \u00bb Food & Drink",
+      "feed_url": "https://www.telegraph.co.uk/food-and-drink/rss.xml",
+      "website_url": "https://www.telegraph.co.uk/food-and-drink/",
+      "description": "Find the latest food and drink news, as well as recipes, healthy eating advice and restaurant reviews from the Telegraph.",
+      "followers": {
+        "facebook": 5600000,
+        "twitter": 3400000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/4880380.jpg?t=1751610266"
+    },
+    {
+      "title": "The Telegraph \u00bb Cricket",
+      "feed_url": "https://www.telegraph.co.uk/cricket/rss.xml",
+      "website_url": "https://www.telegraph.co.uk/cricket/",
+      "description": "Cricket on Telegraph Sport. Latest news, fixtures, results and video.",
+      "followers": {
+        "facebook": 5600000,
+        "twitter": 3400000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/4880380.jpg?t=1751610266"
+    },
+    {
+      "title": "The Telegraph \u00bb Politics",
+      "feed_url": "https://www.telegraph.co.uk/politics/rss.xml",
+      "website_url": "https://www.telegraph.co.uk/politics/",
+      "description": "The latest news and breaking stories on UK politics. Find updates, comments, and expert analyses on government policies and bills from The Telegraph.",
+      "followers": {
+        "facebook": 5600000,
+        "twitter": 3400000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/4880358.jpg?t=1751610044"
+    },
+    {
+      "title": "The Telegraph \u00bb Technology",
+      "feed_url": "https://www.telegraph.co.uk/technology/rss.xml",
+      "website_url": "https://www.telegraph.co.uk/technology/",
+      "description": "Tech news and expert opinion from The Telegraph's technology team. Read articles and watch videos on the tech giants and innovative startups.",
+      "followers": {
+        "facebook": 266700,
+        "twitter": 80700
+      },
+      "image_url": "https://i1.feedspot.com/4880380.jpg?t=1751610266"
+    },
+    {
+      "title": "The Telegraph \u00bb Books",
+      "feed_url": "https://www.telegraph.co.uk/books/rss.xml",
+      "website_url": "https://www.telegraph.co.uk/books/",
+      "description": "The latest book news and best seller from the Telegraph. Your source for literature, novel reviews, features and interviews.",
+      "followers": {
+        "facebook": 5600000,
+        "twitter": 3400000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/8545073.jpg"
+    },
+    {
+      "title": "The Telegraph \u00bb Science",
+      "feed_url": "https://www.telegraph.co.uk/science/rss.xml",
+      "website_url": "https://www.telegraph.co.uk/science/",
+      "description": "Latest science news, analysis, and expert opinion, plus advice and updates from The Telegraph.",
+      "followers": {
+        "facebook": 5600000,
+        "twitter": 3400000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/4880380.jpg?t=1751610266"
+    },
+    {
+      "title": "The Telegraph \u00bb Music",
+      "feed_url": "https://www.telegraph.co.uk/music/rss.xml",
+      "website_url": "https://www.telegraph.co.uk/music/",
+      "description": "The latest rock and pop music news and reviews from the Telegraph. Your source for album and live music, new releases, artist interviews and features, plus video, MP3 and downloads.",
+      "followers": {
+        "facebook": 5600000,
+        "twitter": 3400000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/8545078.jpg"
+    },
+    {
+      "title": "The Telegraph \u00bb Fashion",
+      "feed_url": "https://www.telegraph.co.uk/fashion/rss.xml",
+      "website_url": "https://www.telegraph.co.uk/fashion/",
+      "description": "The latest fashion news, style tips and show reports from Fashion on Telegraph. In depth analysis, advice, photos and videos.",
+      "followers": {
+        "facebook": 5600000,
+        "twitter": 3400000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/8545077.jpg"
+    },
+    {
+      "title": "The Telegraph \u00bb Property",
+      "feed_url": "https://www.telegraph.co.uk/property/rss.xml",
+      "website_url": "https://www.telegraph.co.uk/money/property/",
+      "description": "Read The Telegraph's expert advice and the latest headlines on property here.",
+      "followers": {
+        "facebook": 5600000,
+        "twitter": 3400000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/8545076.jpg"
+    }
+  ]
+}

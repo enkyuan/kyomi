@@ -1,0 +1,478 @@
+{
+  "category": "Unitarian",
+  "source_url": "https://rss.feedspot.com/unitarian_rss_feeds",
+  "feeds": [
+    {
+      "title": "UU World",
+      "feed_url": "https://feeds.feedburner.com/uuworld",
+      "website_url": "https://www.uuworld.org/department/editorial",
+      "description": "Find links, updates, and commentary, including UUs in the media and the interdependent web on the UU World Blog. UU World, the magazine of the Unitarian Universalist Association, celebrates liberal religion and the people it inspires.",
+      "followers": {
+        "facebook": 28000,
+        "twitter": 8200,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5376132.jpg?t=1646122781"
+    },
+    {
+      "title": "Unitarian Universalist Ministry for Earth",
+      "feed_url": "https://www.uumfe.org/feed/",
+      "website_url": "https://www.uumfe.org/blog/",
+      "description": "Action alerts, educational opportunities, inspirational stories, news, and more for Unitarian Universalists and other people of faith and conscience committed to environmental and climate justice. Unitarian Universalist Ministry for Earth aims to be a wellspring of spiritual and educational grounding and practical support for bold, accountable action for environmental justice, climate justice, and the flourishing of all life.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5375960.jpg?t=1646040608"
+    },
+    {
+      "title": "Yet Another Unitarian Universalist",
+      "feed_url": "https://www.danielharper.org/yauu/feed/",
+      "website_url": "https://www.danielharper.org/yauu/",
+      "description": "Welcome to Yet Another Unitarian Universalist, written by Dan Harper. Generally speaking, I post several times a week. Professionally, I'm the Associate Minister of Religious Education at the Unitarian Universalist Church of Palo Alto, California.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4430054.jpg?t=1646041692"
+    },
+    {
+      "title": "Unitarian Universalist Church of Reading",
+      "feed_url": "https://uureading.org/category/news/feed/",
+      "website_url": "https://uureading.org/category/news/",
+      "description": "The Unitarian Universalist Church of Reading, a regional church, brings together people of all ages, all backgrounds, and many beliefs. Connections are our strength; caring for one another and the wider community is at our heart. Together, we create a space to grow in spirit, relationship, and compassion, working for more justice and more love in our own lives and in the world.",
+      "followers": {
+        "facebook": 747,
+        "twitter": 210
+      },
+      "image_url": "https://i1.feedspot.com/5376008.jpg?t=1646040883"
+    },
+    {
+      "title": "Quest for Meaning",
+      "feed_url": "https://www.questformeaning.org/feed/",
+      "website_url": "https://www.questformeaning.org/",
+      "description": "We are a Unitarian Universalist church with no geographical boundary. The Church of the larger fellowship is faith without walls and love without exception.",
+      "followers": {
+        "facebook": 12700,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5375989.jpg?t=1646040785"
+    },
+    {
+      "title": "Unitarian Universalist Congregation of Cleveland",
+      "feed_url": "https://uucleveland.org/category/news/feed/",
+      "website_url": "https://uucleveland.org/category/news/",
+      "description": "The Unitarian Universalist Congregation of Cleveland traces its roots to The Church of the Unity, founded in Cleveland in 1846 by Unitarians from New England. We strive to be a large, vibrant spiritual community, known for our warm welcome and fierce, compassionate commitment to justice.",
+      "followers": {
+        "facebook": 749,
+        "twitter": 71,
+        "instagram": 446
+      },
+      "image_url": "https://i1.feedspot.com/5375994.jpg?t=1646040805"
+    },
+    {
+      "title": "UU Humanist Association Blog",
+      "feed_url": "https://huumanists.org/rss.xml",
+      "website_url": "https://huumanists.org/blog",
+      "description": "Find the latest news and updates by the members of the association on the UU Humanist Association Blog. The Unitarian Universalist Humanist Association supports Humanism among UUs and acts as a bridge to the secular world.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5375962.jpg?t=1656505292"
+    },
+    {
+      "title": "Unitarian Universalist Congregation of Asheville Blog",
+      "feed_url": "https://uuasheville.org/feed/",
+      "website_url": "https://uuasheville.org/uuca-blog-2/",
+      "description": "Our open and welcoming congregation connects hearts, challenges minds and nurtures spirits while serving and transforming our community and the world. We connect & inspire with compassion & justice and express who we are and guide what we do.",
+      "followers": {
+        "facebook": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5375966.jpg?t=1646040640"
+    },
+    {
+      "title": "Woodinville Unitarian Universalist Church Blog",
+      "feed_url": "https://wuuc.org/feed/",
+      "website_url": "https://wuuc.org/dll-blog/",
+      "description": "Woodinville Unitarian Universalist Church is a diverse religious community dedicated to lifelong spiritual exploration and growth and community support. As a liberal presence in the community, we challenge ourselves to act for peace and justice in the world.",
+      "followers": {
+        "facebook": 623,
+        "twitter": 51
+      },
+      "image_url": "https://i1.feedspot.com/5375970.jpg?t=1646040663"
+    },
+    {
+      "title": "First Unitarian Church of Chicago",
+      "feed_url": "https://firstuchicago.org/category/news/feed/",
+      "website_url": "https://firstuchicago.org/category/news/",
+      "description": "The First Unitarian Church of Chicago welcomes all who seek a religious home free of creeds and guided by love, reason, and conscience. We are a diverse congregation, joyously united to address personal and societal challenges with passionate action for the healing of the world.",
+      "followers": {
+        "facebook": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5376009.jpg?t=1646040886"
+    },
+    {
+      "title": "First Parish of Arlington",
+      "feed_url": "https://www.firstparish.info/feed/",
+      "website_url": "https://www.firstparish.info/news-events/news/",
+      "description": "Find the latest news and updates from the First Parish of Arlington.At First Parish, we choose to be a liberal religious community, welcoming to all. We encourage each other on our spiritual journeys, support one another through the changes in our lives and challenge the excesses and injustices of our time.",
+      "followers": {
+        "facebook": 491
+      },
+      "image_url": "https://i1.feedspot.com/5376015.jpg?t=1646040925"
+    },
+    {
+      "title": "Unitarian Universalist Church of Akron Blog",
+      "feed_url": "https://uuakron.org/category/blog-posts/feed/",
+      "website_url": "https://uuakron.org/category/blog-posts/",
+      "description": "Unitarian Universalist Church of Akron community is a place of love, acceptance, and service where people with different beliefs and diverse spiritual paths come together to seek truth and meaning, to support one another through life's joys and struggles, and to reach out to the local community and the wider world through acts of justice and compassion.",
+      "followers": {
+        "facebook": 783,
+        "twitter": 300,
+        "instagram": 124
+      },
+      "image_url": "https://i1.feedspot.com/5375973.jpg?t=1646040683"
+    },
+    {
+      "title": "Unitarian Universalist Fellowship of San Dieguito Blog",
+      "feed_url": "https://uufsd.org/feed/",
+      "website_url": "https://uufsd.org/blog/",
+      "description": "Unitarian Universalist Fellowship of San Dieguito is a vibrant, intentionally diverse congregation that models and promotes both locally and globally: love, spiritual growth, service, right relations and sustainable living.",
+      "followers": {
+        "facebook": 945,
+        "twitter": 179
+      },
+      "image_url": "https://i1.feedspot.com/5375971.jpg?t=1646040666"
+    },
+    {
+      "title": "Chalice Unitarian Universalist Congregation Blog",
+      "feed_url": "https://chaliceuucongregation.org/category/chalice-blog/feed/",
+      "website_url": "https://chaliceuucongregation.org/category/chalice-blog/",
+      "description": "Chalice Unitarian Universalist Congregation is a house of love, hope, and dreams. We strive to be a beacon of liberal religion. We are diverse in faith, ethnicity, history and spirituality, but aligned in our desire to practice our faith in tangible ways.",
+      "followers": {
+        "facebook": 516,
+        "instagram": 320
+      },
+      "image_url": "https://i1.feedspot.com/5375975.jpg?t=1646040692"
+    },
+    {
+      "title": "Unitarian Universalist Church of Elgin Blog",
+      "feed_url": "https://uuce.org/feed/",
+      "website_url": "https://uuce.org/blog/",
+      "description": "Welcome to the Unitarian Universalist Church of Elgin. Our church has been a leading voice for liberal religion since 1866. We are a welcoming, spiritual community where people gather to find their paths to truth and meaning. We embrace freedom of belief, engage in lifelong learning, and advocate for environmental sustainability and social justice.",
+      "followers": {
+        "facebook": 676,
+        "twitter": 10,
+        "instagram": 97
+      },
+      "image_url": "https://i1.feedspot.com/5375965.jpg?t=1646040637"
+    },
+    {
+      "title": "UU San Mateo Blog",
+      "feed_url": "https://www.uusanmateo.org/blog-feed.xml",
+      "website_url": "https://www.uusanmateo.org/blog",
+      "description": "UU San Mateo is a welcoming, diverse, and vibrant community; a sanctuary for spiritual growth; a center for transformative love and justice; and a home for liberal religious exploration, education, and empowerment.",
+      "followers": {
+        "facebook": 132
+      },
+      "image_url": "https://i1.feedspot.com/5375974.jpg?t=1646040687"
+    },
+    {
+      "title": "Unitarian Universalist of Annapolis Blog",
+      "feed_url": "https://www.uuannapolis.org/feed/",
+      "website_url": "https://www.uuannapolis.org/uuca-blog/",
+      "description": "Find tha latest news and updates by the Unitarian Universalist of Annapolis Blog.We are a growing religious community of 400 members accepting and engaging many paths to truth.",
+      "followers": {
+        "facebook": 1700,
+        "instagram": 494
+      },
+      "image_url": "https://i1.feedspot.com/5375968.jpg?t=1646040649"
+    },
+    {
+      "title": "Unitarian Church North",
+      "feed_url": "https://ucnorth.org/feed/",
+      "website_url": "https://ucnorth.org/news/",
+      "description": "In Unitarian Universalism, you can bring your whole self: your full identity, your questioning mind, your expansive heart. The mission of Unitarian Church North is to: create a diverse and inclusive community, promote free religious expression, inspire spiritual and ethical growth and work for justice in our world.",
+      "followers": {
+        "facebook": 508
+      },
+      "image_url": "https://i1.feedspot.com/5376002.jpg?t=1646040853"
+    },
+    {
+      "title": "Cedars Unitarian Universalist Church",
+      "feed_url": "https://www.cedarsuuchurch.org/feed/",
+      "website_url": "https://www.cedarsuuchurch.org/news/",
+      "description": "Find the latest news and announcements from the Cedars Unitarian Universalist Church.Cedars UU Church is a liberal religious church serving Bainbridge Island and Greater Kitsap County. Together, we create a force more powerful than one person or one belief system.",
+      "followers": {
+        "facebook": 573,
+        "twitter": 351
+      },
+      "image_url": "https://i1.feedspot.com/5376001.jpg?t=1646040850"
+    },
+    {
+      "title": "First Unitarian Society of Milwaukee",
+      "feed_url": "https://uumilwaukee.org/feed/",
+      "website_url": "https://uumilwaukee.org/news/",
+      "description": "Find the latest news, announcements and views from the First Unitarian Society of Milwaukee.At First Unitarian Society of Milwaukee, we connect and care, learn and grow, explore questions, and join with others to make a difference in the world.",
+      "followers": {
+        "facebook": 2400,
+        "instagram": 614
+      },
+      "image_url": "https://i1.feedspot.com/5376005.jpg?t=1646040865"
+    },
+    {
+      "title": "Unitarian Universalists of the Cumberland Valley",
+      "feed_url": "https://uucv.org/feed/",
+      "website_url": "https://uucv.org/about/news/",
+      "description": "Unitarian Universalists of the Cumberland Valley is a liberal religious community in Boiling Springs, PA whose mission is to transform lives and care for the world. We strive to come as an enduring liberal religious community in the Unitarian Universalist tradition is to transform lives and care for the world.",
+      "followers": {
+        "facebook": 866,
+        "twitter": 103,
+        "instagram": 150
+      },
+      "image_url": "https://i1.feedspot.com/5376010.jpg?t=1646040890"
+    },
+    {
+      "title": "Allen Avenue Unitarian Universalist Church",
+      "feed_url": "https://www.a2u2.org/category/news/feed/",
+      "website_url": "https://www.a2u2.org/category/news/",
+      "description": "Allen Avenue Unitarian Universalist Church is a community that welcomes people from all ethnicities, races, sexual orientations and religious backgrounds. We have no doctrine that our members must accept. We rely on our ethical principles to guide us, individually and as a community.",
+      "followers": {
+        "facebook": 925,
+        "instagram": 260
+      },
+      "image_url": "https://i1.feedspot.com/5376011.jpg?t=1646047770"
+    },
+    {
+      "title": "Unitarian Universalist Church West",
+      "feed_url": "https://uucw.org/category/news/feed/",
+      "website_url": "https://uucw.org/category/news/",
+      "description": "Find the latest news and announcements from the Unitarian Universalist Church West.Unitarian Universalist Church West is a vibrant, growing, multi-generational spiritual community of adults and youth, diverse in identity and beliefs.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 216,
+        "instagram": 414
+      },
+      "image_url": "https://i1.feedspot.com/5376004.jpg?t=1646040862"
+    },
+    {
+      "title": "Westminster Unitarian Church",
+      "feed_url": "https://www.westminsteruu.org/feed/",
+      "website_url": "https://www.westminsteruu.org/connect/westminster-weekly-echimes/",
+      "description": "Westminster Unitarian Church is a welcoming congregation member of the Unitarian Universalist Association of Congregations. We are brave, curious, and compassionate thinkers and doers, diverse in faith, ethnicity, history, and spirituality, but aligned in our desire to make a difference for the good.",
+      "followers": {
+        "facebook": 704
+      },
+      "image_url": "https://i1.feedspot.com/5376013.jpg?t=1646040908"
+    },
+    {
+      "title": "Tree of Life",
+      "feed_url": "https://treeoflifeuu.org/category/news/feed/",
+      "website_url": "https://treeoflifeuu.org/category/news/",
+      "description": "At Tree of Life, we are brave, curious, and compassionate thinkers and doers. We have radical roots and a history as self-motivated spiritual people: we think for ourselves and recognize that life experience influences our beliefs more than anything.",
+      "followers": {
+        "facebook": 865,
+        "twitter": 149
+      },
+      "image_url": "https://i1.feedspot.com/5376014.jpg?t=1646040915"
+    },
+    {
+      "title": "Universal Unitarian Fellowship of Kern County Blog",
+      "feed_url": "https://www.uufkc.org/blog-feed.xml",
+      "website_url": "https://www.uufkc.org/blog",
+      "description": "Find the latest news, worship services, social justice and more from the Universal Unitarian Fellowship of Kern County.The Unitarian Universalist Fellowship of Kern County is a welcoming, diverse, spiritual community where love inspires us to work for a peaceful, sustainable and socially just world.",
+      "followers": {
+        "facebook": 555,
+        "instagram": 225
+      },
+      "image_url": "https://i1.feedspot.com/5375984.jpg?t=1646040755"
+    },
+    {
+      "title": "Live Oak Unitarian Universalist Church",
+      "feed_url": "https://liveoakuu.org/feed/",
+      "website_url": "https://liveoakuu.org/news/",
+      "description": "Live Oak is a multi-generational congregation that is committed to providing a secure and loving environment in which one can receive a world-based religious education. We gather together to explore our spiritual journeys, make connections, transform lives, and work to heal our world.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 163
+      },
+      "image_url": "https://i1.feedspot.com/5376000.jpg?t=1646040839"
+    },
+    {
+      "title": "Starr King Blog",
+      "feed_url": "https://starrking.org/category/blog/feed/",
+      "website_url": "https://starrking.org/category/blog/",
+      "description": "Starr King Unitarian Universalist Church is a welcoming congregation that strives to foster respect and compassion for all people and a reverence for nature. We support one another in our search for spiritual and religious meaning, and are committed to working for justice in the larger community.",
+      "followers": {
+        "facebook": 567
+      },
+      "image_url": "https://i1.feedspot.com/5375980.jpg?t=1646040736"
+    },
+    {
+      "title": "Shoreline Unitarian Universalist Society Blog",
+      "feed_url": "https://www.shorelineunitarian.org/feed/",
+      "website_url": "https://www.shorelineunitarian.org/the-latest-news/",
+      "description": "Find the latest news and announcement from Shoreline Unitarian Universalist Society. Shoreline Unitarian Universalist Society is a welcoming congregation that supports lifelong spiritual growth, fosters reverence for nature, promotes justice and serves the local and global community.",
+      "followers": {
+        "facebook": 454,
+        "twitter": 56
+      },
+      "image_url": "https://i1.feedspot.com/5375963.jpg?t=1646040623"
+    },
+    {
+      "title": "Another Possibility",
+      "feed_url": "https://revgretchenhaley.wordpress.com/feed/",
+      "website_url": "https://revgretchenhaley.wordpress.com/",
+      "description": "You'll find here sermon texts, theological reflections and musings on church life in today's changing world - all based in a Unitarian Universalist faith context.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5375999.jpg?t=1646053137"
+    },
+    {
+      "title": "Daily Compass",
+      "feed_url": "https://www.dailycompass.org/feed/",
+      "website_url": "https://www.dailycompass.org/",
+      "description": "The Daily Compass offers words and images to inspire spiritual reflection and encourage the creation of a more loving, inclusive and just world. Produced by the Church of the Larger Fellowship, the Unitarian Universalist congregation with no geographical boundary.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5375996.jpg?t=1646053666"
+    },
+    {
+      "title": "Albany Unitarian Universalist Blog",
+      "feed_url": "https://albanyuu.org/feed/",
+      "website_url": "https://albanyuu.org/",
+      "description": "Albany Unitarian Universalist celebrates Unitarian Universalism - a liberal, non-creedal, covenantal faith tradition that is based on a free and responsible search for truth and meaning and the inherent worth and dignity of every person. Learn more about our values, stories and faith with our articles.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5375972.jpg?t=1646040674"
+    },
+    {
+      "title": "First Unitarian Universalist Church of Indiana Blog",
+      "feed_url": "https://firstuu-indianapa.org/category/first-uu-photo-blog/feed/",
+      "website_url": "https://firstuu-indianapa.org/category/first-uu-photo-blog/",
+      "description": "Find the latest news and announcements on the community blog by First Unitarian Universalist Church of Indiana.First UU is a vibrant Unitarian Universalist congregation in Indiana, Pennsylvania. We are a congregation of people who seek individual spiritual growth and truth, from within a shared community of support and love.",
+      "followers": {
+        "facebook": 453
+      },
+      "image_url": "https://i1.feedspot.com/5375976.jpg?t=1646040699"
+    },
+    {
+      "title": "Foothills Unitarian Blog",
+      "feed_url": "https://foothillsuu.org/feed/",
+      "website_url": "https://foothillsuu.org/blog/",
+      "description": "We are a church of humanity, progressive in spirit, and hospitable to all forms of thought. Here we believe that every person is worthy of love without exception and that we are all in this life together.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 95,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5375967.jpg?t=1646040645"
+    },
+    {
+      "title": "Unitarian Universalist Church of Little Rock",
+      "feed_url": "https://www.uuclr.org/feed/",
+      "website_url": "https://www.uuclr.org/category/news/",
+      "description": "Like so many Unitarian Universalist churches, fellowships and societies around the world, the Unitarian Universalist Church of Little Rock, Arkansas provides a religious centre where diversity is cherished in the warmth of wholehearted acceptance.",
+      "followers": {
+        "facebook": 924
+      },
+      "image_url": "https://i1.feedspot.com/5376012.jpg?t=1646050311"
+    },
+    {
+      "title": "Palomar Blog",
+      "feed_url": "https://www.vistauu.org/feed/",
+      "website_url": "https://www.vistauu.org/news/",
+      "description": "Palomar Unitarian Universalist Fellowship is a liberal religious community that values connecting, learning, and serving. We connect across beliefs and identities.",
+      "followers": {
+        "facebook": 628
+      },
+      "image_url": "https://i1.feedspot.com/5375993.jpg?t=1646040802"
+    },
+    {
+      "title": "Unitarian Universalist Mass Action Blog",
+      "feed_url": "https://www.uumassaction.org/blog-posts?format=rss",
+      "website_url": "https://www.uumassaction.org/blog-posts",
+      "description": "Find the latest news and updates from the Unitarian Universalist Mass Action Blog UU Mass Action helps to provide pathways towards justice and identify opportunities in which we can live our shared values.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 575
+      },
+      "image_url": "https://i1.feedspot.com/5375985.jpg?t=1646992175"
+    },
+    {
+      "title": "First Parish UU Scituate Blog",
+      "feed_url": "https://firstparishscituate.org/blog/rss",
+      "website_url": "https://firstparishscituate.org/blog",
+      "description": "First Parish Unitarian Universalist Church of Scituate MA is a vibrant, inclusive community of faith. We are a non-credal church stressing love, service, and religious freedom. If you are seeking a new spiritual home, or are curious about Unitarian Universalism in general, then we are here for you.",
+      "followers": {
+        "facebook": 377
+      },
+      "image_url": "https://i1.feedspot.com/5375982.jpg?t=1646113281"
+    },
+    {
+      "title": "Boots and Blessings",
+      "feed_url": "https://bootsandblessings.blogspot.com/feeds/posts/default",
+      "website_url": "https://bootsandblessings.blogspot.com/",
+      "description": "Boots and Blessings is the blog of the Rev. Joanna Fontaine Crawford, Unitarian Universalist minister. Boots and Blessings Blog is ruminations and opinions from a Texas Unitarian Universalist pastor.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5375992.jpg?t=1646109502"
+    },
+    {
+      "title": "bobjanisdillon",
+      "feed_url": "https://spiritbob.com/feed/",
+      "website_url": "https://spiritbob.com/",
+      "description": "I am a Unitarian Universalist minister and I intend to use this site to post reflections, quotes, sermons, prayers - anything that might nurture the spirit or serve justice.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5375983.jpg?t=1646052005"
+    },
+    {
+      "title": "Second Unitarian Church of Omaha",
+      "feed_url": "https://2uomaha.org/news/feed",
+      "website_url": "https://2uomaha.org/news",
+      "description": "Second Unitarian Church of Omaha, the meaning and purpose of our church are to nurture each other toward our better selves, to transform our community and the world to be more just and kind, and toward becoming better stewards of the earth.",
+      "followers": {
+        "facebook": 695,
+        "twitter": 213
+      },
+      "image_url": "https://i1.feedspot.com/5376007.jpg?t=1646040875"
+    },
+    {
+      "title": "First UU Wilmington",
+      "feed_url": "https://firstuuwilm.org/feed/",
+      "website_url": "https://firstuuwilm.org/about/news-and-events/",
+      "description": "First Unitarian Church is a liberal religious community that encourages and supports each of its members in their search for personal religious truth and meaning.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5376003.jpg?t=1646050095"
+    },
+    {
+      "title": "Orange Coast Unitarian Universalist Church Blog",
+      "feed_url": "https://ocuuc.org/feed/",
+      "website_url": "https://ocuuc.org/blogs/",
+      "description": "Orange Coast Unitarian Universalist Church is one of more than 1,050 member congregations in the Boston-based Unitarian Universalist Association denomination, a liberal, creedless religion with Judeo-Christian roots.",
+      "followers": {
+        "facebook": 768
+      },
+      "image_url": "https://i1.feedspot.com/5375964.jpg?t=1646040629"
+    },
+    {
+      "title": "East Shore Unitarian Church",
+      "feed_url": "https://esuc.org/feed/",
+      "website_url": "https://esuc.org/news/",
+      "description": "At East Shore Unitarian Church, we come together in our shared mission to practice love, explore spirituality, build community, and promote justice.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 60,
+        "instagram": 308
+      },
+      "image_url": "https://i1.feedspot.com/5376006.jpg?t=1646040871"
+    },
+    {
+      "title": "Unitarian Universalism Church of The Verdugo Hills Blog",
+      "feed_url": "https://www.uuverdugo.org/blog/rss.xml",
+      "website_url": "https://www.uuverdugo.org/blog",
+      "description": "At UUVerdugo, we value the process of developing our own spiritual path while supporting the paths of others, respecting the inherent worth and dignity of every person. In our work, we strive to embody what we hope to see in the world - just, loving humanity and community in which people are free to be themselves fully and without fear",
+      "followers": {
+        "facebook": 480,
+        "twitter": 84
+      },
+      "image_url": "https://i1.feedspot.com/5375977.jpg?t=1646040715"
+    }
+  ]
+}

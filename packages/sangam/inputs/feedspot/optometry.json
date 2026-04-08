@@ -1,0 +1,655 @@
+{
+  "category": "Optometry",
+  "source_url": "https://rss.feedspot.com/optometry_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Optical Journal",
+      "feed_url": "https://www.opticaljournal.com/feed/",
+      "website_url": "https://www.opticaljournal.com/",
+      "description": "The Optical Journal is the most visited optical news and eyewear fashion website in the world. We listen to you, our optical industry friends, associates, and the ECP's, about their needs and incorporate these into our blog. Check the blog now!",
+      "followers": {
+        "facebook": 17700,
+        "twitter": 10100,
+        "instagram": 60600
+      },
+      "image_url": "https://i1.feedspot.com/4891879.jpg?t=1604918614"
+    },
+    {
+      "title": "American Optometric Association News",
+      "feed_url": "https://www.aoa.org/news/news-rss-feed?sso=y",
+      "website_url": "https://www.aoa.org/news/?sso=y",
+      "description": "The American Optometric Association is the acknowledged leader and recognized authority for eye and vision care in the world.",
+      "followers": {
+        "facebook": 41300,
+        "twitter": 16900
+      },
+      "image_url": "https://i1.feedspot.com/4591435.jpg?t=1615285584"
+    },
+    {
+      "title": "Natural Eye Care Blog",
+      "feed_url": "https://www.naturaleyecare.com/blog/feed/",
+      "website_url": "https://www.naturaleyecare.com/blog/",
+      "description": "NaturalEyeCare was created in May, 1999 to help health care professionals and the public become aware of the role of complementary care in the treatment of eye disease. We believe that combining the best in traditional and complementary care creates the greatest opportunity for individuals to protect and improve vision.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/4586467.jpg?t=1615285588"
+    },
+    {
+      "title": "Insight Vision Center Blog",
+      "feed_url": "https://www.insightvisioncenter.com/blog/feed/",
+      "website_url": "https://www.insightvisioncenter.com/blog/",
+      "description": "InSight Vision Center is your first choice for LASIK, Glaucoma, Cataract, Blepharoplasty, Eye Surgery and Eye Care Services. Drs. Poulsen and Salahuddin plus, InSight's experienced optometrists, Drs. Hiyama and Scott use the latest eye care technology to provide precise vision results. We believe in providing quality eye care services, clearly explaining the eye exam process and results.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 402,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4587194.jpg?t=1615285610"
+    },
+    {
+      "title": "London Vision Clinic Blog",
+      "feed_url": "https://www.londonvisionclinic.com/blogs/feed/",
+      "website_url": "https://www.londonvisionclinic.com/blogs/",
+      "description": "London Vision Clinic is a London based Laser Eye Surgery Clinic dedicated to providing the best quality treatments using pioneering technology, techniques, highly trained surgeons and the best customer care service in the industry.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4587064.jpg?t=1608014407"
+    },
+    {
+      "title": "Mann Eye Institute Blog",
+      "feed_url": "https://www.manneye.com/blog/feed/",
+      "website_url": "https://www.manneye.com/blog/",
+      "description": "For over 20 years, Mann Eye Institute has been committed to personalized patient care and advanced surgical expertise, including Blade-Free LASIK. Our mission is to provide excellence in eye care with a commitment to personalized patient care, advanced surgical expertise and outstanding results.",
+      "followers": {
+        "facebook": 18100,
+        "twitter": 978
+      },
+      "image_url": "https://i1.feedspot.com/4586528.jpg?t=1608014707"
+    },
+    {
+      "title": "Discovery Eye Foundation Blog",
+      "feed_url": "https://discoveryeye.org/blog/feed/",
+      "website_url": "https://discoveryeye.org/blog/",
+      "description": "The Discovery Eye Foundation supports research, education and advocacy related to sight-threatening eye diseases and their treatments, improving the quality of life for patients and their families.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4586480.jpg?t=1615285595"
+    },
+    {
+      "title": "INVISIONMAG.COM - Eyecare Industry News, Analysis & Tips For Professionals & Opticians",
+      "feed_url": "https://invisionmag.com/feed/",
+      "website_url": "https://invisionmag.com/",
+      "description": "As the Eyecare industry's top publication, we are an essential resource for the eyecare business. Get the latest eyecare news, eyewear trends, and new product innovations at INVISIONMAG.COM.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 2700,
+        "instagram": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4587541.jpg?t=1615285591"
+    },
+    {
+      "title": "ASCO",
+      "feed_url": "https://optometriceducation.org/feed/",
+      "website_url": "https://optometriceducation.org/eye-on-optometry/",
+      "description": "The Association of Schools and Colleges of Optometry (ASCO) is the academic leadership organization committed to advancing optometric education and research to enhance the health and well-being of the public. Since 1941, ASCO has pursued this mission by representing the interests of institutions of optometric education & by enhancing the efforts of these institutions as they prepare highly qualified graduates for entrance into the profession of optometry in order to best serve the public's eye & vision needs.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 1900,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5293191.jpg?t=1623763811"
+    },
+    {
+      "title": "Optometry Students Blog",
+      "feed_url": "https://www.optometrystudents.com/feed/",
+      "website_url": "https://www.optometrystudents.com/",
+      "description": "OptometryStudents.com is the #1 resource for optometry student life! The website hosts top-notch articles, news, videos, and clinical pearls, which are all created by optometry student journalists from all over the country and Canada! OptometryStudents.com allows students to become more involved in optometry and to help move the profession forward in a positive way.",
+      "followers": {
+        "facebook": 9900,
+        "twitter": 3700,
+        "instagram": 10000
+      },
+      "image_url": "https://i1.feedspot.com/5267003.jpg?t=1618215564"
+    },
+    {
+      "title": "Eye Health Nepal",
+      "feed_url": "https://www.eyehealthnepal.com/feed/",
+      "website_url": "https://www.eyehealthnepal.com/category/articles/",
+      "description": "Eye Health Nepal is an eye health awareness platform. Useful for Ophthalmologist, Optometrist, Ophthalmic Assistant & Technicians. Follow this blog to find everything related to healthy eyes.",
+      "followers": {
+        "facebook": 13900,
+        "twitter": 65
+      },
+      "image_url": "https://i1.feedspot.com/4841344.jpg?t=1615285622"
+    },
+    {
+      "title": "Asheville Optometrists & Eyewear: Envision Eyecare Blog",
+      "feed_url": "https://www.myenvisioneyecare.com/blog/feed/",
+      "website_url": "https://www.myenvisioneyecare.com/blog/",
+      "description": "Asheville Optometrist Larry Golson and Envision Eyecare provide complete eye care, eye exams, contact lenses, designer frames, glasses and sunglasses. The Optometry Team at Envision Eyecare focuses on your best eye health and vision in an inviting atmosphere with impeccable customer service.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 858,
+        "instagram": 689
+      },
+      "image_url": "https://i1.feedspot.com/4587185.jpg?t=1615286351"
+    },
+    {
+      "title": "Optical Prism Magazine",
+      "feed_url": "https://opticalprism.ca/feed/",
+      "website_url": "https://opticalprism.ca/",
+      "description": "As one of the leading publications for eyecare professionals, Optical Prism assists its readers and clients in successfully navigating the new and changing optical world. The magazine provides timely and thought-provoking features, profiles, and informational articles related to eye care, eyewear, practice management, marketing, merchandising, and more.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 2500,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4587354.jpg?t=1669005871"
+    },
+    {
+      "title": "Cargo Eye Care of Las Colinas",
+      "feed_url": "https://cargoeyecare.com/feed/",
+      "website_url": "https://cargoeyecare.com/optometry-office-irving/news-events/",
+      "description": "How clear is your vision? Cargo Eye Care of Las Colinas is the leading provider of optometry services and vision care products in the Irving community. We change lives by providing our patients with innovative eye care products and services. We constantly strive to provide the latest in technology and improve our service with the goal of exceeding every patient's expectations.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 98,
+        "instagram": 573
+      },
+      "image_url": "https://i1.feedspot.com/4587044.jpg?t=1615286347"
+    },
+    {
+      "title": "Tosee2020 Optometrist Blog",
+      "feed_url": "https://tosee2020.net/feed/",
+      "website_url": "https://tosee2020.net/optometrist-blog/",
+      "description": "Our blogs cover all aspects of optometry. Follow this blog to find information about latest eye health tips and informative articles about eye health.",
+      "followers": {
+        "twitter": 254
+      },
+      "image_url": "https://i1.feedspot.com/5181007.jpg"
+    },
+    {
+      "title": "Optometry Times",
+      "feed_url": "https://www.optometrytimes.com/rss",
+      "website_url": "https://www.optometrytimes.com/",
+      "description": "Optometry Times is the leading source of breaking news, news analysis, and emerging research reports in optometry. It is an optometry-driven publication that disseminates news and information of a clinical, socioeconomic, and political nature in a timely and accurate manner. Explore more through their blog about news, reports, articles, podcasts, case studies, interviews, insights, resources, and more.",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 21600,
+        "instagram": 7800
+      },
+      "image_url": "https://i1.feedspot.com/5293192.jpg?t=1623763418"
+    },
+    {
+      "title": "Scartho Eyecare, Independent Opticians in Grimsby",
+      "feed_url": "https://www.scarthoeyecare.co.uk/blog?format=rss",
+      "website_url": "https://www.scarthoeyecare.co.uk/blog/",
+      "description": "Proud Independent Opticians serving Scartho, Grimsby and the Lincolnshire area. Professional, caring staff, looking after the eye health of you and your family. Our intention is to provide an outstanding level of eye care tailored to every individual's needs.",
+      "followers": {
+        "facebook": 422,
+        "twitter": 518
+      },
+      "image_url": "https://i1.feedspot.com/4587232.jpg?t=1615286243"
+    },
+    {
+      "title": "Spectacle Optometry Blog",
+      "feed_url": "https://www.spectacleoptometry.com/blog?format=rss",
+      "website_url": "https://www.spectacleoptometry.com/blog/",
+      "description": "At Spectacle Optometry, we offer a wide range of services from comprehensive eye examinations for patients of all ages to contact lens examinations, dry eye workups, and medical checks for any emergency situations that may arise. Our professional objective is to provide the highest quality eye care to every patient we see. Check out our eye facts about frames, glasses, selection, diseases and disorders, and even some stories!",
+      "followers": {
+        "facebook": 218,
+        "twitter": 28,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5293279.jpg?t=1623766637"
+    },
+    {
+      "title": "Lifetime Vision Care Blog",
+      "feed_url": "https://www.lvcbend.com/feed/",
+      "website_url": "https://www.lvcbend.com/optometry-blog/",
+      "description": "Lifetime Vision Care is a full-service eye and vision care provider. We offer services like eye examinations, vision therapy, contact, glasses, and more! Read our vision blog for all things eye-related. We love the fact that you care about health and well-being! This is why we continue to add meaningful content, eye health tips, and more for our patients.",
+      "followers": {
+        "facebook": 502,
+        "twitter": 15
+      },
+      "image_url": "https://i1.feedspot.com/5293277.jpg?t=1623767220"
+    },
+    {
+      "title": "Uptown Eye Care",
+      "feed_url": "https://www.uptowneyecare.com/feed/",
+      "website_url": "https://www.uptowneyecare.com/about-us/contact-us/whats-new/",
+      "description": "Uptown Eye Care provides preventative & emergency eye health care to surrounding communities including Monticello, Big Lake, Becker & Buffalo Minnesota. Our team is dedicated to providing you and your family with superior eye care. Our goal is to do this in an efficient, personal and professional environment.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4586518.jpg?t=1615286364"
+    },
+    {
+      "title": "Seema Eye Care Blog",
+      "feed_url": "https://seemaeye.com/feed/",
+      "website_url": "https://seemaeye.com/blog/",
+      "description": "The highly qualified medical personnel at Seema Eye Care Centre, headed by Dr. Ahmed Al-Ghoul and Dr. Jamie Bhamra, are experts in applying the latest medical and surgical treatments with excellent outcomes for the eye.",
+      "followers": {
+        "facebook": 240,
+        "twitter": 63
+      },
+      "image_url": "https://i1.feedspot.com/4587269.jpg?t=1615286185"
+    },
+    {
+      "title": "Good iSight Blog",
+      "feed_url": "https://goodisight.com/feed/",
+      "website_url": "https://goodisight.com/blog/",
+      "description": "Explore our various optometry blogs at Good iSight Optometry and Vision located in Parker, Colorado. Schedule with our team today!",
+      "followers": {
+        "facebook": 92
+      },
+      "image_url": "https://i1.feedspot.com/7892909.jpg?t=1743071296"
+    },
+    {
+      "title": "Optometry Admissions Blog",
+      "feed_url": "https://optometryadmissions.com/feed/",
+      "website_url": "https://optometryadmissions.com/",
+      "description": "Southern California College of Optometry at Marshall B. Ketchum University",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892901.jpg?t=1743071360"
+    },
+    {
+      "title": "Style Optique Blog",
+      "feed_url": "https://styleoptique.com/feed/",
+      "website_url": "https://styleoptique.com/blog/",
+      "followers": {
+        "facebook": 174
+      },
+      "image_url": "https://i1.feedspot.com/7892908.jpg?t=1743071520"
+    },
+    {
+      "title": "Urban Optiks Optometry Blog",
+      "feed_url": "https://www.uoosd.com/feed/rss2",
+      "website_url": "https://www.uoosd.com/blog",
+      "description": "Explore the Urban Optiks blog for expert tips on maintaining optimal eye health, choosing the perfect eyewear and accessories, mastering the art of contact lenses, and adopting a healthy lifestyle for your eyes. Stay informed and take control of your vision care journey today!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892905.jpg?t=1743071584"
+    },
+    {
+      "title": "Prairie Eye Care Optometry Blog",
+      "feed_url": "https://www.prairieeye.com/blog-feed.xml",
+      "website_url": "https://www.prairieeye.com/blog/",
+      "description": "Prairie Eye Care",
+      "followers": {
+        "facebook": 579
+      },
+      "image_url": "https://i1.feedspot.com/7892903.jpg"
+    },
+    {
+      "title": "20/20 Eye Care Blog",
+      "feed_url": "https://www.2020eyecarehsv.com/feed/",
+      "website_url": "https://www.2020eyecarehsv.com/blog/",
+      "description": "Welcome to our blog. 20/20 Eye Care is excited to bring you the latest information about research and advancements in eye care.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892904.jpg?t=1743071765"
+    },
+    {
+      "title": "Vibe Optometry Blog",
+      "feed_url": "https://vibeoptometry.com/blog/feed/",
+      "website_url": "https://vibeoptometry.com/blog/",
+      "description": "Read the latest blog post from Vibe Optometry in Austin, Texas.",
+      "followers": {
+        "facebook": 505
+      },
+      "image_url": "https://i1.feedspot.com/7892899.jpg?t=1743071813"
+    },
+    {
+      "title": "Eye to Eye Family Vision Care Blog",
+      "feed_url": "https://eyetoeyefamilyvisioncare.com/blog/feed/",
+      "website_url": "https://eyetoeyefamilyvisioncare.com/blog/",
+      "description": "Optometrists Sapulpa OK",
+      "followers": {
+        "facebook": 951
+      },
+      "image_url": "https://i1.feedspot.com/7892898.jpg?t=1743072044"
+    },
+    {
+      "title": "Women In Optometry",
+      "feed_url": "https://www.womeninoptometry.com/feed/",
+      "website_url": "https://www.womeninoptometry.com/home/",
+      "description": "Women In Optometry (WO) is an online business & lifestyle publication that targets the fast-growing female OD segment. It caters to women ODs' professional informational needs with one key distinction: articles are written from a uniquely female perspective. Women In Optometry provide their unique, first-hand experience on professional and lifestyle topics including new practice ownership models, building for growth, balancing other interests with career, mid-career transitions, patient experience and research breakthroughs that WO's readers can relate to.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 1600,
+        "instagram": 5400
+      },
+      "image_url": "https://i1.feedspot.com/5478018.jpg?t=1670822720"
+    },
+    {
+      "title": "Review of Optometric Business",
+      "feed_url": "https://reviewob.com/feed/",
+      "website_url": "https://reviewob.com/",
+      "description": "Review of Optometric Business is a weekly online publication designed to provide the optometrist with a tool set to manage and grow the practice as a business.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5201412.jpg?t=1670850413"
+    },
+    {
+      "title": "Cookie Magazine",
+      "feed_url": "https://cookiemagazine.org/feed/",
+      "website_url": "https://cookiemagazine.org/",
+      "description": "The world's first funky ophthalmology magazine and Asia-Pacific's first magazine on the Posterior Segment. Check out the latest optometry content, debates, issues, research and more!",
+      "followers": {
+        "facebook": 530,
+        "twitter": 334
+      },
+      "image_url": "https://i1.feedspot.com/5478016.jpg?t=1670822700"
+    },
+    {
+      "title": "CooperVision",
+      "feed_url": "https://coopervision.com/blog/feed",
+      "website_url": "https://coopervision.com/blog/eye-health",
+      "description": "Global provider of contacts for your eyes: CooperVision provides a great choice for contact lens wearers worldwide. Our offical web site has product information and advice on contact lenses. We help improve the way people see each day. No matter where you are\u2014from New York to New Delhi\u2014we design contact lenses to help correct your vision and help keep you in comfort, too!",
+      "followers": {
+        "facebook": 19900,
+        "twitter": 7400
+      },
+      "image_url": "https://i1.feedspot.com/4586496.jpg?t=1615285598"
+    },
+    {
+      "title": "Berkeley Eye Center Blog",
+      "feed_url": "https://www.berkeleyeye.com/feed",
+      "website_url": "https://www.berkeleyeye.com/blog",
+      "description": "With a reputation that spans more than 50 years, Berkeley Eye Center is recognized as one of Texas' most established comprehensive eye care facilities. The goal for Berkeley Eye Center is to provide you with affordable, superior eye care and unparalleled customer service.",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 58
+      },
+      "image_url": "https://i1.feedspot.com/4587030.jpg?t=1615285619"
+    },
+    {
+      "title": "Northeastern Eye Insitute Blog",
+      "feed_url": "https://www.neivision.com/feed",
+      "website_url": "https://www.neivision.com/blog.html",
+      "description": "We offer comprehensive eye care for the entire family from pediatric eye care services to cataract treatment and LASIK surgery. We accept just about every type of vision plan and insurance package. We have 15 conveniently located offices throughout Northeastern Pennsylvania (NEPA). We're family owned and operated, with decades of experience serving the community.",
+      "followers": {
+        "facebook": 11700,
+        "twitter": 3200,
+        "instagram": 982
+      },
+      "image_url": "https://i1.feedspot.com/4587153.jpg?t=1615286203"
+    },
+    {
+      "title": "Midwest Eye Consultants Blog",
+      "feed_url": "https://www.midwesteyeconsultants.com/feed/",
+      "website_url": "https://www.midwesteyeconsultants.com/blog/",
+      "description": "Midwest Eye Consultants provides total eye care from eye health exams to the treatment of eye diseases. See our locations page to find an office near you.",
+      "followers": {
+        "facebook": 11400,
+        "twitter": 1100,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4586522.jpg?t=1615286343"
+    },
+    {
+      "title": "OptoPrep Blog",
+      "feed_url": "https://blog.optoprep.com/rss.xml",
+      "website_url": "https://blog.optoprep.com/",
+      "description": "OptoPrep is the culmination of years of hard work by a group of medical professionals passionate about streamlining board prep for students. OptoPrep was launched in 2011 to provide a less stressful one-stop shop for board prep. We enjoy the challenge of constantly pushing to improve the prep experience, and we thrive on the knowledge that we're helping students succeed each and every day.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 1200,
+        "instagram": 5700
+      },
+      "image_url": "https://i1.feedspot.com/5128343.jpg?t=1623762532"
+    },
+    {
+      "title": "Galbrecht Eyecare Blog",
+      "feed_url": "https://www.galbrechteyecare.com/feed/",
+      "website_url": "https://www.galbrechteyecare.com/our-blog/",
+      "description": "Galbrecht Eyecare is your local Optometrist in Olathe, KS. 80% of learning is through vision, so get those eyes checked once a year at Galbrecht Eyecare!",
+      "followers": {
+        "facebook": 734,
+        "twitter": 26
+      },
+      "image_url": "https://i1.feedspot.com/4587261.jpg?t=1615286236"
+    },
+    {
+      "title": "Stone Canyon Eye Care Blog",
+      "feed_url": "https://stonecanyoneyecare.com/category/blog/feed/",
+      "website_url": "https://stonecanyoneyecare.com/category/blog/",
+      "description": "Dr. Smith has been working in the St. George area for almost 6 years. He has finally decided to open his own office in order to better serve his patients. The new office will specialize in yearly wellness exams, medical eye exams, and dry eye treatments.",
+      "followers": {
+        "facebook": 1000,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4891863.jpg?t=1615286251"
+    },
+    {
+      "title": "Sphere Optometry Blog",
+      "feed_url": "https://sphereoptometry.ca/feed/",
+      "website_url": "https://sphereoptometry.ca/blog/",
+      "description": "Sphere Optometry is a purpose-driven full-scope optometry clinic and optical shop in southeast Calgary. At Sphere, we believe in making a positive difference with every patient, in our community, our city, and the world, and our goal is to help our patients live fully and joyfully. Simply put, we're all about kindness and connection, ocular and holistic wellness, and giving back to our local and global community.",
+      "followers": {
+        "facebook": 145,
+        "twitter": 16,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5293363.jpg?t=1623769144"
+    },
+    {
+      "title": "opt MAGAZINE - The Best Resource for Eyecare Professionals",
+      "feed_url": "http://www.optmagazine.com/feed/",
+      "website_url": "http://www.optmagazine.com/",
+      "description": "OPT Magazine is a trade magazine for opticians, optometrists, and ophthalmologists.",
+      "followers": {
+        "facebook": 998,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4587542.jpg?t=1615286212"
+    },
+    {
+      "title": "Dr. Stephanie Woo | Optometry Consulting Blog",
+      "feed_url": "https://www.drstephaniewoo.com/optometry-consulting-blog?format=rss",
+      "website_url": "https://www.drstephaniewoo.com/optometry-consulting-blog",
+      "description": "Features articles that have to do exclusively with Optometry Consulting. Authored by Dr. Stephanie Woo, an Optometrist at Contact Lens Institute of Nevada & Founder of Woo University. She is committed to helping you achieve your personal and career goals in Optometry.",
+      "followers": {
+        "facebook": 2200,
+        "instagram": 19700
+      },
+      "image_url": "https://i1.feedspot.com/5315961.jpg?t=1629984314"
+    },
+    {
+      "title": "Redondo Optometry",
+      "feed_url": "https://www.redondooptometry.net/blog?format=rss",
+      "website_url": "https://www.redondooptometry.net/blog",
+      "description": "Redondo Optometry is the home of the South Bay's most trusted eye experts. Come in for a visit if you're in need of an exam or consultation.",
+      "followers": {
+        "facebook": 114,
+        "twitter": 89
+      },
+      "image_url": "https://i1.feedspot.com/4587338.jpg?t=1615286368"
+    },
+    {
+      "title": "Maine Eye Center Blog",
+      "feed_url": "https://maineeyecenter.com/about/blog/feed/",
+      "website_url": "https://maineeyecenter.com/about/blog/",
+      "description": "Maine Eye Center is northern New England's most comprehensive eye specialty practice. Are you looking for an eye physician or surgeon in southern Maine? Contact the eye care specialists at Maine Eye, conveniently located in Portland, ME",
+      "followers": {
+        "twitter": 132
+      },
+      "image_url": "https://i1.feedspot.com/4587266.jpg?t=1615285643"
+    },
+    {
+      "title": "Lifetime Eyecare Doctors of Optometry Blog",
+      "feed_url": "https://lifetimeeyecare.ca/blog/feed/",
+      "website_url": "https://lifetimeeyecare.ca/blog/",
+      "description": "Lifetime Eyecare is a company dedicated to saving Canada money on contact lenses & saving the planet too. Check our blog to learn more about our efforts.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 386
+      },
+      "image_url": "https://i1.feedspot.com/4587157.jpg"
+    },
+    {
+      "title": "Pearle Vision Blog",
+      "feed_url": "https://www.ownapearlevision.com/feed/",
+      "website_url": "https://www.ownapearlevision.com/optometry-news/",
+      "description": "Read the latest optometry news from Pearle Vision, including industry insights, business growth opportunities, and more.",
+      "followers": {
+        "facebook": 381000
+      },
+      "image_url": "https://i1.feedspot.com/7892902.jpg?t=1743071393"
+    },
+    {
+      "title": "Northern Virginia Doctors of Optometry Blog",
+      "feed_url": "https://novaeyedocs.com/blog/feed/",
+      "website_url": "https://novaeyedocs.com/blog/",
+      "description": "Eye Care Blog - Read the Northern Virginia Doctors of Optometry blog for tips, news, and updates on maintaining optimal eye health and vision.",
+      "followers": {
+        "facebook": 972,
+        "twitter": 73
+      },
+      "image_url": "https://i1.feedspot.com/7892900.jpg"
+    },
+    {
+      "title": "Optometry Marketing Blog",
+      "feed_url": "https://optometrymarketing.com/feed/",
+      "website_url": "https://optometrymarketing.com/blog/",
+      "description": "11 Ways to Attract New Patients Into Your Medical Practice: Get More Patients This Year What's the hardest part of being a practice owner? The schooling? Dealing with insurance companies? Staying up-to-date with the latest research? None of the above [\u2026]",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892907.jpg?t=1743071993"
+    },
+    {
+      "title": "Relf EyeCare Blog",
+      "feed_url": "https://www.relfeyecare.com/feed/",
+      "website_url": "https://www.relfeyecare.com/blog/",
+      "description": "Relf EyeCare is passionate professionals, focused on patient care. Eye Care Specialists and Doctors providing eye examination, ophthalmology, LASIK and eye disease diagnosis in the Duluth Hermantown area of Minnesota. The mission of Relf EyeCare Specialists is to help our patients see their very best by providing quality, personalized care.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/4586524.jpg?t=1615286318"
+    },
+    {
+      "title": "Attentive Eye Care Optometry Blog",
+      "feed_url": "https://attentiveeyecareoptometry.com/feed/",
+      "website_url": "https://attentiveeyecareoptometry.com/blog/",
+      "description": "Since 2009, Attentive Eye Care Optometry has been offering quality vision care products & personalized optometric services to our patients in Buena Park and the surrounding areas. Our experienced doctors & staff offer comprehensive vision examinations and are trained in the diagnosis & treatment of a wide array of eye diseases, conditions, and problems. Read the latest blog post from Attentive Eye Care Optometry.",
+      "followers": {
+        "facebook": 81,
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/5293362.jpg?t=1623768755"
+    },
+    {
+      "title": "ReVision Optometry Blog",
+      "feed_url": "https://revisionoptometry.com/feed/",
+      "website_url": "https://revisionoptometry.com/blog/",
+      "description": "ReVision Optometry is an independent private practice attuned to the changing landscape of eye care delivery. ReVision Optometry blog covers timely news about eye-related topics, especially for optometry patients in San Diego.",
+      "followers": {
+        "facebook": 209,
+        "twitter": 8
+      },
+      "image_url": "https://i1.feedspot.com/5266998.jpg?t=1618215264"
+    },
+    {
+      "title": "Eye Care Associates Blog",
+      "feed_url": "https://eyecareassociatestx.com/blog/feed/",
+      "website_url": "https://eyecareassociatestx.com/blog/",
+      "description": "Eye Care Associates is a full service eye and vision care provider and will take both eye emergencies as well as scheduled appointments.",
+      "followers": {
+        "facebook": 180,
+        "twitter": 3,
+        "instagram": 235
+      },
+      "image_url": "https://i1.feedspot.com/4891896.jpg?t=1615286215"
+    },
+    {
+      "title": "EyesChoice | Optometrist in Santa Ana | Eye Doctor",
+      "feed_url": "https://eyeschoice.com/feed/",
+      "website_url": "https://eyeschoice.com/",
+      "description": "Optometrist in Santa Ana CA, Best eye doctor for EYE exam, Contact lens, Post-surgery care. WE Customize our exams UNIQUELY to each patient.",
+      "followers": {
+        "facebook": 306,
+        "twitter": 2,
+        "instagram": 100
+      },
+      "image_url": "https://i1.feedspot.com/5054798.jpg?t=1615286240"
+    },
+    {
+      "title": "Everything Eyes",
+      "feed_url": "https://www.everythingeyesboca.com/feed/",
+      "website_url": "http://",
+      "description": "The Everything Eyes Blog Contains Eyecare News, Eye Conditions, and Updates on the Latest Designer Fashions. Everything Eyes is a boutique optical, offering concierge service from thorough eye exams to fabulous eyewear!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5371248.jpg?t=1644579697"
+    },
+    {
+      "title": "myeye.health",
+      "feed_url": "https://myeye.health/feed",
+      "website_url": "https://myeye.health/blog/",
+      "description": "myeye.health's goal is to give you quality eye care starting from home and to make it as specific to you as possible. Follow this blog to find everything related to healthy eyes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5178574.jpg?t=1615287601"
+    },
+    {
+      "title": "Bella Eye Care Optometry",
+      "feed_url": "https://www.bella-eyecare.com/blog/feed/",
+      "website_url": "https://www.bella-eyecare.com/blog/",
+      "description": "From our viewpoint here at Bella Eye Care Optometry the world should present itself to you in majestic high definition! After all, we live in one of the most beautiful areas of the world. At the same time, your eyes tell a story about your health and your vision that our experienced Doctors of Optometry can precisely diagnose and treat to improve how you see our world and how the world sees you.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 393,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4587182.jpg?t=1615285606"
+    },
+    {
+      "title": "EyeCare Associates",
+      "feed_url": "https://visionsource-eyecareyork.com/blog/feed/",
+      "website_url": "https://visionsource-eyecareyork.com/blog/",
+      "description": "EyeCare Associates is dedicated to providing the highest level of comprehensive, personalized eyecare in a warm, professional, family oriented environment. The leading provider of optometry services and vision care products in York, Nebraska. Schedule an appointment with an eye care professional today.",
+      "followers": {
+        "facebook": 522,
+        "twitter": 209
+      },
+      "image_url": "https://i1.feedspot.com/4587033.jpg?t=1615286192"
+    },
+    {
+      "title": "Sun Valley Optometry Blog",
+      "feed_url": "https://sunvalleyoptometry.com/feed/",
+      "website_url": "https://orchardparkoptometry.com/blog/",
+      "description": "Sun Valley Optometry is here for your eye care needs in Kelowna. Our team of optometrists offer eye exams, emergency services, contact lens options and more. Our friendly, well educated staff and doctors will take the time to make sure every concern is addressed and have you walk away with education about your eye health and visual system.",
+      "followers": {
+        "facebook": 172,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4587331.jpg?t=1615286200"
+    },
+    {
+      "title": "Optometrists Clinic Blog",
+      "feed_url": "https://www.optometristsclinic.com/blog-feed.xml",
+      "website_url": "https://www.optometristsclinic.com/blog/",
+      "description": "Stay informed on a variety of topics related to optometry with Optometrists Clinic Inc's blog. Call to book an appointment with our optometrists in Edmonton.",
+      "followers": {
+        "facebook": 523
+      },
+      "image_url": "https://i1.feedspot.com/7892906.jpg"
+    },
+    {
+      "title": "mivision",
+      "feed_url": "https://mivision.com.au/feed/",
+      "website_url": "https://mivision.com.au/",
+      "description": "mivision is the key communication portal for eye care professionals who live and work in Australia and New Zealand. Our aim is to enhance the patient pathway and influence optimum patient outcomes by sharing knowledge and improving communication within the eye care professions.",
+      "followers": {
+        "facebook": 29200,
+        "twitter": 518
+      },
+      "image_url": "https://i1.feedspot.com/5478013.jpg?t=1670822676"
+    }
+  ]
+}

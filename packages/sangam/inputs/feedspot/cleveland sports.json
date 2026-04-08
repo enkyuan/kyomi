@@ -1,0 +1,73 @@
+{
+  "category": "Cleveland Sports",
+  "source_url": "https://rss.feedspot.com/cleveland_sports_rss_feeds",
+  "feeds": [
+    {
+      "title": "Cleveland Sports Talk",
+      "feed_url": "https://clesportstalk.com/feed/",
+      "website_url": "https://clesportstalk.com/",
+      "description": "At Cleveland Sports Talk Cavs, Browns, and Indians fans unite to talk about Cleveland Sports. Follow us to know more.",
+      "followers": {
+        "facebook": 32400,
+        "twitter": 142200
+      },
+      "image_url": "https://i1.feedspot.com/4927459.jpg?t=1620985659"
+    },
+    {
+      "title": "NEO Sports Insiders",
+      "feed_url": "http://feeds.feedburner.com/NeoSportsInsiders",
+      "website_url": "https://www.neosportsinsiders.com/",
+      "description": "NEO Sports Insiders is a place for Cleveland sports fans to have a voice, give their input on the teams we all know and love, and have their say on the teams we have followed for years. NEO (Northeast Ohio) Sports Insiders is your one-stop shop for everything in Cleveland and Northeast Ohio sports! Check out our stories and columns from great writers from all facets of sports that bring years and even decades of experience to the table!",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 10400
+      },
+      "image_url": "https://i1.feedspot.com/5484708.jpg?t=1672223623"
+    },
+    {
+      "title": "News 5 Cleveland \u00bb Sports",
+      "feed_url": "https://www.news5cleveland.com/sports.rss",
+      "website_url": "https://www.news5cleveland.com/sports",
+      "description": "Stay updated on sports news, events, and more. The oldest television station in the state of Ohio, News 5 is a Scripps-owned ABC affiliate based in Cleveland. Long recognized for our dedication to journalism. We investigate solutions, hold the powerful accountable, ask the tough questions, provide alerts, and tell memorable stories about our viewers.",
+      "followers": {
+        "facebook": 632300,
+        "twitter": 132600
+      },
+      "image_url": "https://i1.feedspot.com/5484706.jpg?t=1672223614"
+    },
+    {
+      "title": "Cleveland Sports Perspective",
+      "feed_url": "https://clevelandsportsperspective.com/feed/",
+      "website_url": "https://clevelandsportsperspective.com/",
+      "description": "Cleveland Sports Perspective is a blog that writes commentary on Cleveland's Pro sports team. You will find game analysis, player performance reviews, and much more.",
+      "followers": {
+        "twitter": 927
+      },
+      "image_url": "https://i1.feedspot.com/5484707.jpg?t=1758798977"
+    },
+    {
+      "title": "Cleveland Scene \u00bb Cleveland Sports",
+      "feed_url": "https://www.clevescene.com/cleveland/Rss.xml?oid=38417010",
+      "website_url": "https://www.clevescene.com/category/cleveland-sports-38417010",
+      "description": "Get full coverage of Cleveland sports news, events, and more. Since its founding in 1970, the Cleveland Scene has been dedicated to providing fearless, high-quality local journalism, especially in times of crisis. We are your free source for Cleveland and Northeast Ohio news, arts and culture coverage, restaurant reviews, music, things to do, photos, and more.",
+      "followers": {
+        "facebook": 145200,
+        "twitter": 135000,
+        "instagram": 159800
+      },
+      "image_url": "https://i1.feedspot.com/5484705.jpg?t=1672223610"
+    },
+    {
+      "title": "Factory of Sadness",
+      "feed_url": "https://factoryofsadness.co/feed/",
+      "website_url": "https://factoryofsadness.co/",
+      "description": "The idea of FanSided was born in 2007 when two brothers felt that their favorite team, the Kansas City Chiefs, was being under-covered by the mainstream media. Taking matters into their own hands, they launched Arrowhead Addict, a move that would spawn the creation of FanSided in 2009, a network of over 300+ fan-powered unique sports, entertainment, and lifestyle sites dedicated to team-specific, sport-specific, genre-specific, and fanbase-specific coverage.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 1800,
+        "instagram": 38900
+      },
+      "image_url": "https://i1.feedspot.com/5484704.jpg?t=1672223898"
+    }
+  ]
+}

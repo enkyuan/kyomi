@@ -1,0 +1,37 @@
+{
+  "category": "RuneScape",
+  "source_url": "https://rss.feedspot.com/runescape_rss_feeds",
+  "feeds": [
+    {
+      "title": "RuneScape News",
+      "feed_url": "https://secure.runescape.com/m=news/latest_news.rss",
+      "website_url": "https://secure.runescape.com/m=news/",
+      "description": "Find the latest RuneScape news. Keep up to date with the community round-up, find out behind the scenes and new development information. RuneScape takes place in the world of Gielinor, a medieval fantasy realm divided into different kingdoms, regions, and cities. The game offers different types of monsters, resources, quests and magical spells to challenge players. The game's fictional universe has also been explored through the popular novels Betrayal at Falador and Return to Canifis.",
+      "followers": {
+        "facebook": 965300,
+        "twitter": 317800
+      },
+      "image_url": "https://i1.feedspot.com/5375486.jpg?t=1645769839"
+    },
+    {
+      "title": "Old School Runescape Guides",
+      "feed_url": "https://runescapeguides.com/feed/",
+      "website_url": "https://runescapeguides.com/",
+      "description": "Read more about RuneScape, old school RuneScape, guides, gameplay and more! Your #1 Source for Old School Runescape Guides. Sophisticated Bossing & Skilling Guides.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5375483.jpg?t=1646827985"
+    },
+    {
+      "title": "MMORPG.GG \u00bb Runescape News",
+      "feed_url": "https://mmorpg.gg/runescape/feed/",
+      "website_url": "https://mmorpg.gg/runescape/",
+      "description": "Runescape News Hub with the latest news, reviews, and articles about Runescape by Jagex. MMORPG.GG is an MMORPG news blog focusing on fantasy & sci-fi MMOs. Our main focus is providing you with news for your favorite MMORPGs in a fast and reliable way, with minimal clutter and ads.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 847,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5375484.jpg?t=1645769831"
+    }
+  ]
+}

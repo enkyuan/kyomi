@@ -1,0 +1,795 @@
+{
+  "category": "Workout",
+  "source_url": "https://rss.feedspot.com/workout_rss_feeds",
+  "feeds": [
+    {
+      "title": "A Workout Routine Blog",
+      "feed_url": "https://www.aworkoutroutine.com/blog/feed/",
+      "website_url": "https://www.aworkoutroutine.com/blog/",
+      "description": "Covers articles that help you to learn how to create the workout routine and diet plan you need to lose fat, build muscle, and get the best results possible. A Workout Routine provides the best workouts, routines, programs, and plans for your exact weight training goal.",
+      "followers": {
+        "facebook": 20200,
+        "twitter": 4400,
+        "instagram": 26700
+      },
+      "image_url": "https://i1.feedspot.com/4542506.jpg?t=1614574502"
+    },
+    {
+      "title": "Eric Cressey Blog",
+      "feed_url": "https://feeds.feedburner.com/cresseytrainingsystems",
+      "website_url": "https://ericcressey.com/blog/",
+      "description": "Covers articles about high performance training, online sports training, performance and health. Cressey specializes in applied kinesiology and biomechanics as they relate to program design and corrective exercise; maximal relative strength development; and athletic performance enhancement.",
+      "followers": {
+        "facebook": 87600,
+        "twitter": 87000,
+        "instagram": 134300
+      },
+      "image_url": "https://i1.feedspot.com/4543396.jpg?t=1614574514"
+    },
+    {
+      "title": "12 Minute Athlete Blog",
+      "feed_url": "https://www.12minuteathlete.com/blog/feed/",
+      "website_url": "https://www.12minuteathlete.com/blog/",
+      "description": "Provides short, efficient HIIT, bodyweight, and minimal equipment workouts. 12 Minute Athlete is a HIIT workout regimen consisting of incredibly short, effective workouts based on calisthenics, cross-training and functional fitness.",
+      "followers": {
+        "facebook": 143700,
+        "twitter": 11200,
+        "instagram": 50600
+      },
+      "image_url": "https://i1.feedspot.com/4943293.jpg?t=1634735255"
+    },
+    {
+      "title": "Skimble Blog",
+      "feed_url": "https://blog.skimble.com/feed/",
+      "website_url": "https://blog.skimble.com/",
+      "description": "Skimble is a wellness platform of fun & dynamic coaching applications for everyone. It is a mobile fitness company that strives to empower people to achieve their health & fitness goals anytime, anywhere. The company's blog gives you fun and easy workouts to do at home, fun activities, and tips to develop better fitness.",
+      "followers": {
+        "facebook": 24100,
+        "twitter": 4800,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4542509.jpg?t=1609394065"
+    },
+    {
+      "title": "TRX Training Blog",
+      "feed_url": "https://www.trxtraining.com/blogs/news.atom",
+      "website_url": "https://www.trxtraining.com/blogs/news",
+      "description": "Covers articles about effective workouts with simple equipment, and education capable of transforming total-body health. TRX Training is the leader in movement, providing world-class equipment, training & education to empower every body.",
+      "followers": {
+        "facebook": 928000,
+        "twitter": 165700,
+        "instagram": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/4543322.jpg?t=1614574522"
+    },
+    {
+      "title": "Muscle & Fitness",
+      "feed_url": "https://www.muscleandfitness.com/feed/",
+      "website_url": "https://www.muscleandfitness.com/",
+      "description": "Your ultimate source for full workout plans and advice on building muscle, improving nutrition, and using supplements. Get access to killer workouts, fitness inspiration, nutrition tips, and all-around awesome advice.",
+      "followers": {
+        "facebook": 6400000,
+        "twitter": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/4795489.jpg?t=1605702581"
+    },
+    {
+      "title": "Set For Set Blog",
+      "feed_url": "https://www.setforset.com/blogs/news.atom",
+      "website_url": "https://www.setforset.com/blogs/news",
+      "description": "Covers workout videos that are designed to supplement your current training program and to help provide you with the extra boost you need to take your performance to the next level. Our focus is on increasing strength, coordination, mobility, flexibility and endurance for anyone who joins the Set For Set community.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 169,
+        "instagram": 7800
+      },
+      "image_url": "https://i1.feedspot.com/5280844.jpg?t=1620997487"
+    },
+    {
+      "title": "Two Rep Cave | Gym equipment blog",
+      "feed_url": "https://www.tworepcave.com/feed/",
+      "website_url": "https://www.tworepcave.com/",
+      "description": "Hands-on product reviews, showcase gyms, and the most comprehensive gym equipment shopping guides anywhere. Blog with gym equipment tips, comparisons, and hands-on reviews by garage gym junkies.",
+      "followers": {
+        "facebook": 189,
+        "twitter": 36,
+        "instagram": 616
+      },
+      "image_url": "https://i1.feedspot.com/4973182.jpg?t=1614574838"
+    },
+    {
+      "title": "Stronger by Science",
+      "feed_url": "https://www.strongerbyscience.com/articles/feed/",
+      "website_url": "https://www.strongerbyscience.com/articles/",
+      "description": "Stronger by Science was founded in 2011 by Greg Nuckols, who is dedicated to providing high-quality strength and conditioning content to help people improve their performance and achieve their goals. The mission of the blog is to bridge the gap between science and practice in strength training and other related areas.",
+      "followers": {
+        "facebook": 55800,
+        "twitter": 7000,
+        "instagram": 92600
+      },
+      "image_url": "https://i1.feedspot.com/4943313.jpg?t=1614574566"
+    },
+    {
+      "title": "Nourish, Move, Love Blog \u00bb Kettlebell",
+      "feed_url": "https://www.nourishmovelove.com/feed/",
+      "website_url": "https://www.nourishmovelove.com/category/workouts/move-blog/by-equipment/kettlebell-workout/",
+      "description": "Lindsey Bomgren shares quick, effective home workouts for women, and healthy recipes. She aspires to inspire women to actively live their best life and love their bodies for the first, second or 100th time.",
+      "followers": {
+        "facebook": 227700,
+        "twitter": 1100,
+        "instagram": 622600
+      },
+      "image_url": "https://i1.feedspot.com/5274418.jpg?t=1619702966"
+    },
+    {
+      "title": "Chuze Fitness Blog",
+      "feed_url": "https://chuzefitness.com/blog/feed/?x=1",
+      "website_url": "https://chuzefitness.com/blog/",
+      "description": "Covers wellness tips, healthy recipes, workouts, and more! Chuze Fitness is a place that is free of distraction and intimidation, where everyone is welcomed and accepted, no matter what their current physical condition may be. We know some days it takes a little extra motivation to stay on track, and that's exactly why we're here!",
+      "followers": {
+        "facebook": 61500,
+        "twitter": 12400,
+        "instagram": 62000
+      },
+      "image_url": "https://i1.feedspot.com/4473036.jpg?t=1600444706"
+    },
+    {
+      "title": "NOOB GAINS Blog",
+      "feed_url": "https://noobgains.com/feed/",
+      "website_url": "https://noobgains.com/blog/",
+      "description": "Keep up with best tips and strategies for creating a dramatic muscular transformation without disrupting your life.",
+      "followers": {
+        "facebook": 25800
+      },
+      "image_url": "https://i1.feedspot.com/4984273.jpg?t=1614576722"
+    },
+    {
+      "title": "The Perfect Workout Blog",
+      "feed_url": "https://www.theperfectworkout.com/feed/",
+      "website_url": "https://www.theperfectworkout.com/resources/blog/",
+      "description": "Whether you are an exercise guru or looking to live healthier, The blog features informative articles about nutrition, health, and fitness. The Perfect Workout specializes in a unique slow-motion method of strength training.",
+      "followers": {
+        "facebook": 17000
+      },
+      "image_url": "https://i1.feedspot.com/5296093.jpg?t=1624532953"
+    },
+    {
+      "title": "HASfit",
+      "feed_url": "https://hasfit.com/feed/",
+      "website_url": "https://hasfit.com/",
+      "description": "HASfit's mission is to empower your heart and soul with all of the motivation, knowledge, and tools needed to be more fit than you ever thought possible.",
+      "followers": {
+        "facebook": 195200,
+        "twitter": 12600
+      },
+      "image_url": "https://i1.feedspot.com/4943712.jpg?t=1614575311"
+    },
+    {
+      "title": "Sworkit Blog",
+      "feed_url": "https://sworkit.com/blog/feed",
+      "website_url": "https://sworkit.com/blog",
+      "description": "SWORKIT allows you to customize and play personalized video workouts that fit your life. Never get bored, never have an excuse.",
+      "followers": {
+        "twitter": 20300,
+        "instagram": 16500
+      },
+      "image_url": "https://i1.feedspot.com/4943650.jpg?t=1614574569"
+    },
+    {
+      "title": "EVO Fitness Blog",
+      "feed_url": "https://evofitness.ch/feed/",
+      "website_url": "https://evofitness.ch/blog-evo/",
+      "description": "Stay up to date with the latest fitness and exercise tips on EVO Fitness Blog.EVO Fitness is a forward-thinking training space that provides the optimal fitness experience.",
+      "followers": {
+        "facebook": 10700,
+        "instagram": 7700
+      },
+      "image_url": "https://i1.feedspot.com/4943562.jpg?t=1614574830"
+    },
+    {
+      "title": "Australian Fitness Academy Blog",
+      "feed_url": "https://www.fitnesseducation.edu.au/blog/feed/",
+      "website_url": "https://www.fitnesseducation.edu.au/blog/",
+      "description": "Keep up to date with the latest health and fitness news, educational articles and other fitness tips.Australian Fitness Academy is a leading fitness institute specialising in the delivery of fitness certification courses",
+      "followers": {
+        "facebook": 12400,
+        "twitter": 697,
+        "instagram": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4943902.jpg?t=1614574594"
+    },
+    {
+      "title": "HiDow News",
+      "feed_url": "https://news.hidow.com/feed/",
+      "website_url": "https://news.hidow.com/",
+      "description": "At HiDow International Inc, our goal is to provide you with courteous, expedient, professional service of the highest caliber. HiDow products employ the latest in TENS and EMS technology that can provide effective sciatic pain relief.",
+      "followers": {
+        "facebook": 9,
+        "twitter": 286,
+        "instagram": 13700
+      },
+      "image_url": "https://i1.feedspot.com/4767286.jpg?t=1614574860"
+    },
+    {
+      "title": "FitFrek",
+      "feed_url": "https://fitfrek.com/feed/",
+      "website_url": "https://fitfrek.com/",
+      "description": "Your #1 source for brutally honest advice on muscle building, supplement reviews, nutrition, lifestyle and relationships.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 182,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4660345.jpg?t=1614574907"
+    },
+    {
+      "title": "Jason Ferruggia Blog",
+      "feed_url": "http://jasonferruggia.com/blog/feed/",
+      "website_url": "https://jasonferruggia.com/blog/",
+      "description": "Jasson Ferruggia is dedicated to helping you become the strongest version of yourself.",
+      "followers": {
+        "facebook": 43800,
+        "twitter": 26900
+      },
+      "image_url": "https://i1.feedspot.com/4943594.jpg?t=1614575280"
+    },
+    {
+      "title": "IronMag",
+      "feed_url": "https://www.ironmagazine.com/category/articles/feed/",
+      "website_url": "https://www.ironmagazine.com/category/articles/",
+      "description": "Online bodybuilding and fitness magazine and community. It contains in-depth information on the usefulness of supplements, training videos and a forum where you can talk with other bodybuilders.",
+      "followers": {
+        "facebook": 34000,
+        "twitter": 8900
+      },
+      "image_url": "https://i1.feedspot.com/4756121.jpg?t=1608378409"
+    },
+    {
+      "title": "TGFFitness",
+      "feed_url": "https://tgffitness.com/feed/",
+      "website_url": "https://tgffitness.com/",
+      "description": "Our goal is to make people start being healthy for the long-run. We created our fitness program to help people stay loyal to their new healthy lifestyle. With several useful information, tips, and fitness-related information, TGFFitness aims at transforming your life for the better!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5253630.jpg?t=1615013648"
+    },
+    {
+      "title": "Paragon Training Methods Blog",
+      "feed_url": "https://paragontrainingmethods.com/feed/",
+      "website_url": "https://paragontrainingmethods.com/blog/",
+      "description": "Discover workout programs online with Paragon Training Programs! The life-changing workouts, coaching, & online community you've been searching for to help you build muscle, achieve your goals, and look/feel great in just 30 to 90 min/day. At Paragon, we believe that life is too short to spend at war w/ your body, and that the way you eat and exercise should provide freedom and peace of mind.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5455259.jpg"
+    },
+    {
+      "title": "The Hollywood Trainer Blog",
+      "feed_url": "https://thehollywoodtrainer.com/blog/feed/",
+      "website_url": "http://thehollywoodtrainer.com/blog/",
+      "description": "Jeanette Jenkins is one of Hollywood's most sought after Health & Fitness Experts with over 25years of experience, founder and President of The Hollywood Trainer LLC. Author of The Hollywood Trainer Weight-Loss Plan and creator of 'The Hollywood Trainer Club' a Virtual Online Healthy Living & Weight Loss Club with everything you need to lose weight, get in shape & make healthy living a lifetime",
+      "followers": {
+        "facebook": 837400,
+        "instagram": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/4543238.jpg"
+    },
+    {
+      "title": "Pittsburgh Fitness Project Blog - More than exercise, customized wellness",
+      "feed_url": "https://www.pittsburghfitnessproject.com/blog-1?format=rss",
+      "website_url": "https://www.pittsburghfitnessproject.com/blog-1",
+      "description": "Pittsburgh Fitness Project for you best in fitness and wellness experts take the time to get to know you and tailor the best solution for you, including personalized workouts, nutritional support, recovery services, and lifestyle coaching.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 240,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4943660.jpg?t=1614574945"
+    },
+    {
+      "title": "Workout Clarity - Time To Become More",
+      "feed_url": "https://workoutclarity.com/feed/",
+      "website_url": "https://workoutclarity.com/",
+      "description": "Vladimiros Mangenakis from Workout Clarity is a proficient fitness and nutrition coach. He blends both his over 3 years of experience as a fitness trainer and his explicit knowledge in nutrition for training people into transitioning their lifestyle for the better.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 95
+      },
+      "image_url": "https://i1.feedspot.com/5178047.jpg?t=1614574937"
+    },
+    {
+      "title": "Knocked-Up Fitness Blog",
+      "feed_url": "https://knocked-upfitness.com/feed/",
+      "website_url": "https://knocked-upfitness.com/blog/",
+      "description": "Knocked-Up Fitness is managed and owned by Erica Ziel, a mother of three is the creator behind Core Athletica Inc., having over 10 years of experience training a variety of clients. She is an expert pre/postnatal coach and trainer teaching women about strengthening their bodies. Check out her blog which is a home for pregnancy workouts, advice, wellness, and more.",
+      "followers": {
+        "facebook": 70200,
+        "twitter": 2000,
+        "instagram": 55400
+      },
+      "image_url": "https://i1.feedspot.com/5274417.jpg?t=1673933136"
+    },
+    {
+      "title": "Gold's Gym Blog",
+      "feed_url": "https://www.goldsgym.com/feed/",
+      "website_url": "https://www.goldsgym.com/blog/",
+      "description": "Get fitness workout tips, nutrition and lifestyle advice, and motivational success stories from Gold's Gym experts and members. Stay motivated and informed with Gold Gym's personalized transformation plans, state-of-the-art equipment, certified personal trainers, a diverse group exercise program, and a supportive, motivating environment.",
+      "followers": {
+        "facebook": 864500,
+        "twitter": 109000,
+        "instagram": 450500
+      },
+      "image_url": "https://i1.feedspot.com/4943558.jpg?t=1619025113"
+    },
+    {
+      "title": "Mind To Muscle Fitness",
+      "feed_url": "https://www.mindtomusclefitness.com/feed/",
+      "website_url": "https://www.mindtomusclefitness.com/",
+      "description": "If your goal is to build a stronger and leaner physique without supplements or drugs then this is the site for you! My goal is to provide science based solutions to help you reach your goals, no gimmicks, no special diet pills...\u200b My mission is to help you get strong, healthy and fit without supplements or drugs!\u200b",
+      "followers": {
+        "facebook": 30,
+        "twitter": 835
+      },
+      "image_url": "https://i1.feedspot.com/4730632.jpg?t=1614576678"
+    },
+    {
+      "title": "POUND: Rockout. Workout Blog",
+      "feed_url": "https://poundfit.com/feed/",
+      "website_url": "https://poundfit.com/blog/",
+      "description": "Explore the POUND lifestyle with the POUND Blog! Get tips and tricks, balanced recipes, quick POUND moves, motivation, support, and more!",
+      "followers": {
+        "facebook": 359900,
+        "twitter": 4800,
+        "instagram": 180900
+      },
+      "image_url": "https://i1.feedspot.com/4542529.jpg?t=1614576682"
+    },
+    {
+      "title": "Breaking Muscle",
+      "feed_url": "https://breakingmuscle.com/feed/",
+      "website_url": "https://breakingmuscle.com/",
+      "description": "Covers daily workouts, exclusive interviews, how-to videos, fitness news, product reviews, health, nutrition, and more. Breaking Muscle is the fitness world's preeminent destination for timely, high-quality information on exercise, fitness, health, and nutrition.",
+      "followers": {
+        "facebook": 355700,
+        "twitter": 15900,
+        "instagram": 21200
+      },
+      "image_url": "https://i1.feedspot.com/4402374.jpg?t=1614574494"
+    },
+    {
+      "title": "Exercise.com",
+      "feed_url": "https://www.exercise.com/learn/feed/?x=1",
+      "website_url": "https://www.exercise.com/learn/",
+      "description": "Covers articles about the latest and greatest in exercise, workouts, and motivation, and everything you need to manage and grow your fitness business all in one place! Since 2010, the Exercise.com team has been working hard every day to make it easier for you to reach your goals. We want to kick down the obstacles that stand in your way, so you can focus on making the most of your time in the gym.",
+      "followers": {
+        "facebook": 121300,
+        "twitter": 8100,
+        "instagram": 10800
+      },
+      "image_url": "https://i1.feedspot.com/4543333.jpg?t=1634734913"
+    },
+    {
+      "title": "Bare Performance Nutrition Blog",
+      "feed_url": "https://www.bareperformancenutrition.com/blogs/fitness.atom",
+      "website_url": "https://www.bareperformancenutrition.com/blogs/fitness",
+      "description": "Covers the latest bare performance nutrition news, fitness tips, products, promotions, and recipes. Bare Performance Nutrition is a brand built for people who want to perform at their highest level.",
+      "followers": {
+        "facebook": 42500,
+        "twitter": 8600,
+        "instagram": 446800
+      },
+      "image_url": "https://i1.feedspot.com/4943530.jpg?t=1614574527"
+    },
+    {
+      "title": "Team Body Project Blog",
+      "feed_url": "https://teambodyproject.com/feed/",
+      "website_url": "https://teambodyproject.com/blog/",
+      "description": "Sharing real workouts for real people that deliver real results. Team Body Project creates to provide achievable, sustainable and realistic workout plans, for every BODY. They created Team Body Project to share their passion for exercise and excellent movement with others who want to feel good about their body and experience great health.",
+      "followers": {
+        "facebook": 86500,
+        "instagram": 184500
+      },
+      "image_url": "https://i1.feedspot.com/4943708.jpg?t=1614576673"
+    },
+    {
+      "title": "Fitplan Blog",
+      "feed_url": "https://blog.fitplanapp.com/feed/",
+      "website_url": "https://blog.fitplanapp.com/",
+      "description": "Fitplan is a dynamic, mobile personal training app that provides unique workouts from over 25 of the world's top trainers and fitness influencers. With HD video tutorials, custom trainer tips for each exercise, nutrition guides and a global community of over 100,000 people worldwide",
+      "followers": {
+        "facebook": 57800,
+        "twitter": 8100,
+        "instagram": 350800
+      },
+      "image_url": "https://i1.feedspot.com/4679998.jpg?t=1614574573"
+    },
+    {
+      "title": "Wellbeats Blog",
+      "feed_url": "https://www.wellbeats.com/feed/",
+      "website_url": "https://www.wellbeats.com/news-blog/",
+      "description": "Wellbeats is the premier on-demand fitness provider that delivers fitness classes, workout plans, and fitness assessments to users anytime, anywhere. Wellbeats proprietary content and technology enable individuals to take control of their health with fitness solutions that fit their lives.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4943606.jpg?t=1614574586"
+    },
+    {
+      "title": "LiveFit Blog",
+      "feed_url": "https://livefit.com/blogs/livefit.atom",
+      "website_url": "https://livefit.com/blogs/livefit",
+      "description": "Covers the latest fitness trends, workout plans, and advice from the industry's best fitness equipment leaders, for beginners and seasoned athletes. G&G Fitness strives to enrich the health, fitness, and quality of life of people of all ages and fitness levels.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 517
+      },
+      "image_url": "https://i1.feedspot.com/4943642.jpg?t=1614574559"
+    },
+    {
+      "title": "Dr. John Rusin Blog",
+      "feed_url": "https://drjohnrusin.com/blog/feed/",
+      "website_url": "https://drjohnrusin.com/blog/",
+      "description": "John Rusin is strength and conditioning coach specializing in sports performance physical therapy and rehabilitation. John's single-minded goal is to gap the ever-growing bridge between high performance strength and conditioning and cutting edge rehabilitation programming for the elite strength athlete.",
+      "followers": {
+        "facebook": 113300
+      },
+      "image_url": "https://i1.feedspot.com/4656647.jpg?t=1614574577"
+    },
+    {
+      "title": "Strength Matters Blog",
+      "feed_url": "https://strengthmatters.com/feed/",
+      "website_url": "https://strengthmatters.com/blog/",
+      "description": "The Strength Matters Blog is perfect for people over 30 who want to unleash their inner athlete & live a pain-free athletic lifestyle.",
+      "followers": {
+        "facebook": 28500,
+        "twitter": 3100,
+        "instagram": 17500
+      },
+      "image_url": "https://i1.feedspot.com/4943639.jpg?t=1614574856"
+    },
+    {
+      "title": "The Workout Mama",
+      "feed_url": "https://theworkoutmama.com/feed/",
+      "website_url": "https://theworkoutmama.com/",
+      "description": "I love working out and while I was pregnant with my first baby, Caden (born June 7th, 2012), I set a goal for myself to remain active. After Caden was born I knew I wanted to document and share all my adventures into mommyhood as well as inspire others to get sweaty, and thus The Workout Mama was born.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 443
+      },
+      "image_url": "https://i1.feedspot.com/3850980.jpg"
+    },
+    {
+      "title": "Pilates Andrea Blog",
+      "feed_url": "https://pilatesandrea.com/feed/",
+      "website_url": "https://pilatesandrea.com/new-blog/",
+      "description": "Find blog posts, videos and teasers on pilats by author Andrea Maida. True Pilates in Solana Beach, California.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4715486.jpg?t=1613999904"
+    },
+    {
+      "title": "KIPS Blog",
+      "feed_url": "https://kipsonline.org/blog/feed/",
+      "website_url": "https://kipsonline.org/blog/",
+      "description": "The KIPS blog provides free knowledge from health and fitness professional. Topics include: fitness, Weight Lifting, powerlifting and athletic performance.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 284,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4543373.jpg?t=1614574949"
+    },
+    {
+      "title": "Lee Boyce Blog",
+      "feed_url": "https://www.leeboyce.com/blog/feed/",
+      "website_url": "https://www.leeboyce.com/blog/",
+      "description": "Lee Boyce is no stranger to controversy, and his opinions and firm resolve to popularize the brutal truth about training have landed him countless features in some of the largest publications in the world, including Men's Health, Esquire, Men's Fitness.",
+      "followers": {
+        "twitter": 12500,
+        "instagram": 44600
+      },
+      "image_url": "https://i1.feedspot.com/4943301.jpg?t=1614576716"
+    },
+    {
+      "title": "Focus Fitness UK News",
+      "feed_url": "https://www.focusfitnessuk.com/feed/",
+      "website_url": "https://www.focusfitnessuk.com/news/",
+      "description": "Focus Fitness UK is a market-leading fitness training organisation and the number one provider of REPs approved Level 3 Fitness and Personal Training Diplomas.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 1400,
+        "instagram": 7300
+      },
+      "image_url": "https://i1.feedspot.com/4943718.jpg?t=1614574976"
+    },
+    {
+      "title": "Adaptive Strength Blog",
+      "feed_url": "https://adaptivestrength.com.au/blog/feed/",
+      "website_url": "https://adaptivestrength.com.au/blog/",
+      "description": "Box 33 is Perth's premiere Personal Training experience and is located in Booragoon. We specialise in movement restoration, progressive strength training and fat loss. Fitness success is defined as developing strength, improving muscle mass, reducing body fat and acquiring endurance, mobility and vitality.",
+      "followers": {
+        "facebook": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4543364.jpg?t=1614574982"
+    },
+    {
+      "title": "39 Minute Workout Blog",
+      "feed_url": "https://39minuteworkout.com/feed/",
+      "website_url": "https://39minuteworkout.com/blog/",
+      "description": "We are both excited and driven to share our tools with the world in the treatment room and beyond. We seek to work with people who may lack the knowledge or clarity, but who are motivated and ready to be healthier. We will work diligently to empower you along the way.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 140
+      },
+      "image_url": "https://i1.feedspot.com/4542612.jpg?t=1614575255"
+    },
+    {
+      "title": "TJ's Gym Blog",
+      "feed_url": "https://tjsgym.wordpress.com/feed/",
+      "website_url": "https://tjsgym.wordpress.com/",
+      "description": "A thriving community making lives better, one workout at a time. TJ's Gym mixes the science of strength and conditioning and the social nature of human beings to create a community of of athletes who strive for a better life. Using CrossFit ,empathy , compassion & high level of instruction we are able to guarantee the shortest path possible to improvement in performance aesthetic & health.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 536,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4543237.jpg"
+    },
+    {
+      "title": "ReboundAir Blog",
+      "feed_url": "https://rebound-air.com/feed/",
+      "website_url": "https://rebound-air.com/blog/",
+      "description": "Featured on The Doctors & winner of Health Trends. Get ReboundAir products today!",
+      "followers": {
+        "facebook": 6200,
+        "instagram": 966
+      },
+      "image_url": "https://i1.feedspot.com/5142290.jpg?t=1614575196"
+    },
+    {
+      "title": "Kubex Fitness Blog",
+      "feed_url": "https://kubexfitness.com/feed/",
+      "website_url": "https://kubexfitness.com/kubex-fitness-blog/",
+      "description": "Kubex is a new way to workout. Unlike any other gym in Utah, Kubex takes just 30 minutes, 3 times a week.",
+      "followers": {
+        "facebook": 314,
+        "twitter": 306,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4943625.jpg?t=1614574834"
+    },
+    {
+      "title": "Laurie Christine King Blog",
+      "feed_url": "https://lauriechristineking.com/feed/",
+      "website_url": "https://lauriechristineking.com/blog/",
+      "description": "Get all the information related to fitness, workout methods, nutrition, healthy lifestyle and more on the blog. The author Laurie Christine King is a content creator, nutrition, fitness coach, and total fun junkie who loves lifting, being active, being outside, and living a BIG life.",
+      "followers": {
+        "instagram": 95100
+      },
+      "image_url": "https://i1.feedspot.com/5458414.jpg?t=1666172428"
+    },
+    {
+      "title": "Nia Shanks Blog",
+      "feed_url": "https://niashanks.com/feed/",
+      "website_url": "https://niashanks.com/blog/",
+      "description": "Nia Shanks is a coach, writer, and author of Lift Like a Girl with a BS in Exercise Physiology from the University of Louisville. She specializes in helping women 'unleash their awesome' with an empowering approach to health and fitness. A blog about Simple, no nonsense, and effective strength training and nutrition information for becoming the most awesome and strongest version of yourself.",
+      "followers": {
+        "facebook": 59000,
+        "twitter": 8600,
+        "instagram": 7
+      },
+      "image_url": "https://i1.feedspot.com/4943367.jpg?t=1614574823"
+    },
+    {
+      "title": "V Shred Blog",
+      "feed_url": "https://vshred.com/blog/feed/",
+      "website_url": "https://vshred.com/blog/",
+      "description": "Features workouts for every part of your body including chest, arms, abs, legs, and shoulder. Articles also cover cardio, HIIT, weight loss, nutrition, diet plan, and supplements. V Shred is a brand with many different fitness-related products and online personal training and meal plans.",
+      "followers": {
+        "facebook": 9000000,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/5319868.jpg?t=1631014061"
+    },
+    {
+      "title": "WeckMethod Blog",
+      "feed_url": "https://www.weckmethod.com/feed",
+      "website_url": "https://www.weckmethod.com/articles",
+      "description": "Learn the techniques redefining functional training, balance training, body mechanics, and HIIT including Rotational Movement Training, Non-Dominant Side Training, Spiraling.",
+      "followers": {
+        "facebook": 20600,
+        "twitter": 1600,
+        "instagram": 70000
+      },
+      "image_url": "https://i1.feedspot.com/4943265.jpg?t=1614574590"
+    },
+    {
+      "title": "Little Bloke Fitness Blog",
+      "feed_url": "https://www.littleblokefitness.com.au/blogs/fitblog.atom",
+      "website_url": "https://www.littleblokefitness.com.au/blogs/fitblog",
+      "description": "Little Bloke Fitness wants you to get the best workout possible, which is why we created our home gym and training blog. Get advice and information online.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 127,
+        "instagram": 6900
+      },
+      "image_url": "https://i1.feedspot.com/4542606.jpg?t=1614575287"
+    },
+    {
+      "title": "End of Three Fitness Blog",
+      "feed_url": "https://www.endofthreefitness.com/eo3blog/feed/",
+      "website_url": "https://www.endofthreefitness.com/eo3blog/",
+      "description": "The site was founded by Jerred Moon whose mission is to make 10,000 people better in the upcoming three years. Better means stronger, healthier, faster, smarter, more productive, less negative, helping you eat healthier foods, helping you build your own gym etc. They provide efficient methods to get more agile, stronger and fitter, various tips and tricks to make fitness closer to home, dietary tips that will help you recover from training faster and customized workout programs.",
+      "followers": {
+        "facebook": 33300,
+        "twitter": 2000,
+        "instagram": 13600
+      },
+      "image_url": "https://i1.feedspot.com/4943339.jpg?t=1614575318"
+    },
+    {
+      "title": "Advanced Human Performance Blog",
+      "feed_url": "https://www.advancedhumanperformance.com/blog?format=rss",
+      "website_url": "https://www.advancedhumanperformance.com/blog",
+      "description": "Advanced Human Performance (AHP) was founded in 2006 by Dr Joel and Joshua Seedman, known as The Exercise Brothers. AHP is the go-to global hub for all related athletic performance, fitness, healthcare, and wellness transformation. For almost 15 years, AHP has been helping clients across the globe break through their genetic barriers as well as overcome their training, fitness, health, and nutritional obstacles.",
+      "followers": {
+        "facebook": 58800,
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/5274161.jpg?t=1620994726"
+    },
+    {
+      "title": "Gripad Blog",
+      "feed_url": "http://gripads.com/feed/",
+      "website_url": "https://gripads.com/blog/",
+      "description": "GRIPAD is an innovative company of fitness accessories which provide increased protection and comfort any level athlete. Follow us to keep up with Workout and Exercise tips from Gripad.",
+      "followers": {
+        "facebook": 31700,
+        "twitter": 1300,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4543370.jpg?t=1621345681"
+    },
+    {
+      "title": "Anabolic Bodies",
+      "feed_url": "https://anabolicbodies.com/feed/",
+      "website_url": "https://anabolicbodies.com/",
+      "description": "Build Muscle, Stay Lean, Get Strong!",
+      "followers": {
+        "twitter": 85,
+        "instagram": 89
+      },
+      "image_url": "https://i1.feedspot.com/4836386.jpg?t=1614574863"
+    },
+    {
+      "title": "Gym Flow 100 Blog",
+      "feed_url": "https://gymflow100.com/feed/",
+      "website_url": "https://gymflow100.com/",
+      "description": "Gym Flow 100 blog shares workout videos, training tips, news and updated articles regarding health, nutrition and fitness.",
+      "followers": {
+        "facebook": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/4943352.jpg"
+    },
+    {
+      "title": "Suzanne Bowen Fitness Blog",
+      "feed_url": "https://suzannebowenfitness.com/blog/feed/",
+      "website_url": "https://suzannebowenfitness.com/blog/",
+      "description": "Suzanne Bowen's streaming Workouts. Workout anytime on any device with over 150 workouts including: Barre, Interval, Mat, Cardio and more! Food Guide Included!",
+      "followers": {
+        "facebook": 19000,
+        "twitter": 1500,
+        "instagram": 8000
+      },
+      "image_url": "https://i1.feedspot.com/4543266.jpg"
+    },
+    {
+      "title": "Daily Body Workout",
+      "feed_url": "https://dailybodyworkouts.blogspot.com/feeds/posts/default",
+      "website_url": "https://dailybodyworkouts.blogspot.com/",
+      "description": "Daily Body Workouts is a blog about health and fitness where you will get info about body workouts, gym workouts, and exercises to live healthily.",
+      "followers": {
+        "facebook": 14500
+      },
+      "image_url": "https://i1.feedspot.com/5054420.jpg"
+    },
+    {
+      "title": "SuppVersity",
+      "feed_url": "https://suppversity.blogspot.com/feeds/posts/default",
+      "website_url": "https://suppversity.blogspot.com/",
+      "description": "The SuppVersity is your place to go for daily news on staying and/or getting healthy, on losing fat and building muscle, and on improving your athletic and sexual performance. Follow this blog for complete articles on the latest developments in exercise, nutrition and supplementation science.",
+      "followers": {
+        "facebook": 23800,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/81748.jpg?t=1614574510"
+    },
+    {
+      "title": "Fitness and Power",
+      "feed_url": "https://www.fitnessandpower.com/feed",
+      "website_url": "https://www.fitnessandpower.com/",
+      "description": "The ultimate resource on the web where you can find info on natural bodybuilding, fitness, nutrition and supplements. No muscle magazine stuff, only real and proven techniques to help you build muscle, lose excess body fat and get in the shape of your life.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4943359.jpg?t=1614574600"
+    },
+    {
+      "title": "Tony Gentilcore Blog",
+      "feed_url": "https://tonygentilcore.com/blog/feed/",
+      "website_url": "https://tonygentilcore.com/blog/",
+      "description": "Tony Gentilcore is a strength coach, owner of CORE (his gym in Boston), and writes stuff. Mostly about lifting heavy things.",
+      "followers": {
+        "facebook": 21000,
+        "twitter": 32200,
+        "instagram": 47200
+      },
+      "image_url": "https://i1.feedspot.com/4943274.jpg?t=1614574820"
+    },
+    {
+      "title": "He & She Eat Clean",
+      "feed_url": "https://www.heandsheeatclean.com/?format=RSS",
+      "website_url": "https://www.heandsheeatclean.com/",
+      "description": "He & She Eat Clean share healthy recipes, workouts and helpful tips about living the clean lifestyle. By Scott & Whitney Carlson.",
+      "followers": {
+        "facebook": 69900,
+        "twitter": 3500,
+        "instagram": 14400
+      },
+      "image_url": "https://i1.feedspot.com/4474452.jpg"
+    },
+    {
+      "title": "Pilates In The Grove Blog",
+      "feed_url": "https://www.pilatesinthegrove.com/blog.rss",
+      "website_url": "https://www.pilatesinthegrove.com/blog",
+      "description": "Miami's premier Pilates studio in Coconut Grove offering Pilates, Yoga, Massage and Physical Therapy. Pilates is a mind-body exercise system designed to efficiently strengthen the muscles of the abdomen, back, arms and legs while improving flexibility.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 1900,
+        "instagram": 18300
+      },
+      "image_url": "https://i1.feedspot.com/4543253.jpg?t=1621580275"
+    },
+    {
+      "title": "Supp Hub Blog",
+      "feed_url": "https://supphubreviews.com/feed/",
+      "website_url": "https://supphubreviews.com/blog/",
+      "description": "The best reviews for training supplements, exercises, and athletic equipment. Recommended brands and products based on our team's experience.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5246285.jpg?t=1613630890"
+    },
+    {
+      "title": "NASM Blog",
+      "feed_url": "https://blog.nasm.org/feed",
+      "website_url": "https://blog.nasm.org/",
+      "description": "Get health, fitness, and training tips from NASM, the global leader in delivering evidence-based certifications and advanced credentials.",
+      "followers": {
+        "facebook": 709100,
+        "twitter": 61600,
+        "instagram": 273500
+      },
+      "image_url": "https://i1.feedspot.com/4403793.jpg?t=1614576663"
+    },
+    {
+      "title": "Best Workout Supplements Blog",
+      "feed_url": "https://www.bestworkoutsupplementsblog.com/feed/",
+      "website_url": "https://blog.vulcanstrength.com/",
+      "description": "Covers news, updates, solid advice on bodybuilding supplements and reviews and comparisons of workout supplements.",
+      "followers": {
+        "facebook": 18500,
+        "twitter": 117
+      },
+      "image_url": "https://i1.feedspot.com/4542512.jpg?t=1614576670"
+    },
+    {
+      "title": "Vulcan Strength Training Systems Blog",
+      "feed_url": "https://blog.vulcanstrength.com/feeds/posts/default?alt=rss",
+      "website_url": "https://blog.vulcanstrength.com/",
+      "description": "Vulcan Strength Training Systems is a provider of strength and conditioning equipment for CrossFit\u00ae and all forms of strength & Conditioning. We are the primary source for Vulcan Bumper Plates, Olympic Bars, Kettlebells, Med balls, Squat Stands, and full gym equipment packages.",
+      "followers": {
+        "facebook": 44500,
+        "twitter": 238
+      },
+      "image_url": "https://i1.feedspot.com/4543365.jpg"
+    }
+  ]
+}

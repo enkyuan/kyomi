@@ -1,0 +1,83 @@
+{
+  "category": "Montana Travel",
+  "source_url": "https://rss.feedspot.com/montana_travel_rss_feeds",
+  "feeds": [
+    {
+      "title": "Travel Montana Blog",
+      "feed_url": "https://travelmontana.com/feed/",
+      "website_url": "https://travelmontana.com/travel-montana-blog/",
+      "description": "Get news and updates from the Montana Vacation Company. Travel Montana is a small outfit headquartered in Red Lodge, Montana, with 24 years of experience creating unforgettable vacations for its travelers.",
+      "followers": {
+        "facebook": 2400,
+        "instagram": 806
+      },
+      "image_url": "https://i1.feedspot.com/5325950.jpg?t=1632808324"
+    },
+    {
+      "title": "Visit Great Falls Montana Blog",
+      "feed_url": "https://visitgreatfallsmontana.org/blog/feed/",
+      "website_url": "https://visitgreatfallsmontana.org/blog/",
+      "description": "Stories, adventure updates, and information on what makes Great Falls Montana's Basecamp for Art & Adventure. Great Falls Montana is a place for independent, outdoor adventurers and planners of meetings looking for a true, authentic Montana experience.",
+      "followers": {
+        "twitter": 221,
+        "instagram": 8800
+      },
+      "image_url": "https://i1.feedspot.com/5325916.jpg?t=1632806065"
+    },
+    {
+      "title": "Stay Montana Blog",
+      "feed_url": "https://www.staymontana.com/feed/",
+      "website_url": "https://www.staymontana.com/blog/",
+      "description": "Spectacular places and getaways in Montana. Stay Montana is a passionate team striving to operate industry-leading property management and vacation rental business.",
+      "followers": {
+        "facebook": 4700,
+        "instagram": 17200
+      },
+      "image_url": "https://i1.feedspot.com/5328131.jpg?t=1633338667"
+    },
+    {
+      "title": "Travel Montana Now Blog",
+      "feed_url": "https://travelmontananow.com/feed/",
+      "website_url": "https://travelmontananow.com/blog/",
+      "description": "We are a family-run Montana blog, and our roots are in Montana! We were all born here and two out of three of us live here (and the third visits a lot). We are thrilled to share with you the best parts of Montana and why you should travel around Montana more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5325904.jpg?t=1632804849"
+    },
+    {
+      "title": "Bearfoot Theory \u00bb Montana",
+      "feed_url": "https://bearfoottheory.com/category/destinations/united-states/montana/feed/",
+      "website_url": "https://bearfoottheory.com/category/montana/",
+      "description": "Plan an adventurous trip to Montana with our outdoor travel guide featuring the best outdoor activities, destinations & most popular Montana blog posts. Kristen Bor is the founder of Bearfoot Theory - the adventure travel blog for the everyday explorer.",
+      "followers": {
+        "facebook": 59200,
+        "twitter": 3000,
+        "instagram": 55100
+      },
+      "image_url": "https://i1.feedspot.com/5325910.jpg?t=1632805732"
+    },
+    {
+      "title": "Central Montana Blog",
+      "feed_url": "https://centralmontana.com/blog/feed/",
+      "website_url": "https://centralmontana.com/blog/",
+      "description": "We feature places to visit, things to see and do tourist information, and the genuine side of life in Montana.",
+      "followers": {
+        "facebook": 64800,
+        "twitter": 332,
+        "instagram": 16500
+      },
+      "image_url": "https://i1.feedspot.com/4896100.jpg?t=1612762465"
+    },
+    {
+      "title": "Southwest Montana Blog",
+      "feed_url": "https://southwestmt.com/blog/feed/",
+      "website_url": "https://southwestmt.com/blog/",
+      "description": "Montana tourism information for Southwest Montana. Our mission is to promote economic development through tourism and film production for the Southwest Montana Tourism Region of the nine counties of Beaverhead, Broadwater, Deer Lodge, Granite, Jefferson, Lewis and Clark, Madison, Powell, and Silver Bow County.",
+      "followers": {
+        "facebook": 77900,
+        "twitter": 3400,
+        "instagram": 7900
+      },
+      "image_url": "https://i1.feedspot.com/4895863.jpg?t=1612762472"
+    }
+  ]
+}

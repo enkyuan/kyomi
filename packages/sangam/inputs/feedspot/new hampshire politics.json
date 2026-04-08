@@ -1,0 +1,129 @@
+{
+  "category": "New Hampshire Politics",
+  "source_url": "https://rss.feedspot.com/new_hampshire_politics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Josiah Bartlett Blog",
+      "feed_url": "https://jbartlett.org/feed/",
+      "website_url": "https://jbartlett.org/blog/",
+      "description": "The Josiah Bartlett Center for Public Policy is a non-profit, non-partisan, independent think tank focused on state and local public policy issues that affect the quality of life for New Hampshire's citizens.",
+      "followers": {
+        "facebook": 599,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5317140.jpg?t=1630403347"
+    },
+    {
+      "title": "New Hampshire Union Leader Politics",
+      "feed_url": "https://www.unionleader.com/search/?f=rss&t=article&c=news/politics&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.unionleader.com/news/politics/",
+      "description": "The New Hampshire Union Leader is the state's largest and only statewide circulated newspaper with the stories, events, and resources essential to living in the Granite State. Covers articles on political updates.",
+      "followers": {
+        "facebook": 45700,
+        "twitter": 61800
+      },
+      "image_url": "https://i1.feedspot.com/5317177.jpg?t=1630405700"
+    },
+    {
+      "title": "New Hampshire Fiscal Policy Institute Blog",
+      "feed_url": "https://nhfpi.org/feed/",
+      "website_url": "https://nhfpi.org/blog/",
+      "description": "The New Hampshire Fiscal Policy Institute (NHFPI) is an independent, non-profit, non-partisan organization dedicated to exploring, developing, and promoting public policies that foster economic opportunity and prosperity for all New Hampshire residents.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5317142.jpg?t=1630403573"
+    },
+    {
+      "title": "NH Journal Politics",
+      "feed_url": "https://nhjournal.com/category/politics/feed/",
+      "website_url": "https://nhjournal.com/category/politics/",
+      "description": "NH Journal is an online news publication dedicated to providing fair, unbiased reporting on, and analysis of, political news of interest to NH. Covers articles on political updates.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 13200
+      },
+      "image_url": "https://i1.feedspot.com/5317182.jpg?t=1630406202"
+    },
+    {
+      "title": "City of Nashua OEM",
+      "feed_url": "https://www.nashuanh.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.nashuanh.gov/CivicAlerts.aspx?sort=date",
+      "description": "Nashua, NH is dedicated to keeping residents informed and up-to-date by providing the latest news about sports, business, performing arts, health/safety issues, human interest and more.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5212100.jpg?t=1604128842"
+    },
+    {
+      "title": "New Hampshire Public Radio Politics",
+      "feed_url": "https://www.nhpr.org/tags/nh-politics.rss",
+      "website_url": "https://www.nhpr.org/tags/nh-politics",
+      "description": "NHPR fosters civil discourse by producing and distributing objective, in-depth reporting, and engaging content. They are New Hampshire's independent and trusted source for news and information. Covers articles on Political updates and news.",
+      "followers": {
+        "facebook": 36100,
+        "twitter": 44600,
+        "instagram": 30700
+      },
+      "image_url": "https://i1.feedspot.com/5317121.jpg?t=1630402160"
+    },
+    {
+      "title": "NH Business Review Government",
+      "feed_url": "https://www.nhbr.com/category/government/feed/",
+      "website_url": "https://www.nhbr.com/category/government/",
+      "description": "NHBR is the Granite State's oldest and only statewide business newspaper, in publication since 1978. Covers articles on Government updates and news.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 9500
+      },
+      "image_url": "https://i1.feedspot.com/5317189.jpg?t=1630409332"
+    },
+    {
+      "title": "New Hampshire Coalition Against Domestic and Sexual Violence",
+      "feed_url": "https://www.nhcadsv.org/1/feed",
+      "website_url": "https://www.nhcadsv.org/news",
+      "description": "New Hampshire Coalition Against Domestic and Sexual Violence is committed to ending domestic and sexual violence. They save lives and promote healing from the trauma of domestic and sexual violence and stalking in communities across New Hampshire.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 5000,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5317154.jpg?t=1630404233"
+    },
+    {
+      "title": "Volunteer NH",
+      "feed_url": "https://volunteernh.org/feed/",
+      "website_url": "https://volunteernh.org/blog-news/",
+      "description": "The mission of VNH is to promote the tradition of volunteerism and the ethic of service in New Hampshire. They bring the vision to life by engaging those communities to solve local challenges through volunteerism.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5317147.jpg?t=1630403923"
+    },
+    {
+      "title": "New Hampshire Democratic Party",
+      "feed_url": "https://www.nhdp.org/news/feed/blog-feed.xml",
+      "website_url": "https://www.nhdp.org/news/",
+      "description": "The New Hampshire Democratic Party ( NHDP ) fights for the interests of working families and equal opportunities for all Americans. Read the New Hampshire Democratic Party's recent press releases.",
+      "followers": {
+        "facebook": 16500,
+        "twitter": 19200
+      },
+      "image_url": "https://i1.feedspot.com/5317245.jpg?t=1630412813"
+    },
+    {
+      "title": "Open Democracy Blog",
+      "feed_url": "https://www.opendemocracynh.org/blog.rss",
+      "website_url": "https://www.opendemocracynh.org/blog",
+      "description": "Founded in 2009 by Doris 'Granny D' Haddock, Open Democracy is leading the NH movement to strengthen democracy and stop special interest money in politics.",
+      "followers": {
+        "facebook": 725,
+        "twitter": 554
+      },
+      "image_url": "https://i1.feedspot.com/5317126.jpg?t=1630402570"
+    }
+  ]
+}

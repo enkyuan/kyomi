@@ -1,0 +1,64 @@
+{
+  "category": "Logitech",
+  "source_url": "https://rss.feedspot.com/logitech_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Verge \u00bb Logitech",
+      "feed_url": "https://www.theverge.com/rss/logitech/index.xml",
+      "website_url": "https://www.theverge.com/logitech",
+      "description": "The Verge's mission is to offer breaking news coverage and in-depth reporting, product information, and community content via a unified, modern platform. Follow for news and updates about Logitech from The Verge.",
+      "followers": {
+        "facebook": 3600000,
+        "twitter": 3500000,
+        "instagram": 1600000
+      },
+      "image_url": "https://i1.feedspot.com/5051492.jpg?t=1622613320"
+    },
+    {
+      "title": "Engadget \u00bb Logitech",
+      "feed_url": "https://www.engadget.com/tag/logitech/rss.xml",
+      "website_url": "https://www.engadget.com/tag/logitech/",
+      "description": "Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics. Follow for updates and information about Logitech from Engadget.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 2300000,
+        "instagram": 367700
+      },
+      "image_url": "https://i1.feedspot.com/5051493.jpg?t=1622613313"
+    },
+    {
+      "title": "logitech blog",
+      "feed_url": "https://www.logitech.com/blog/feed/",
+      "website_url": "https://www.logitech.com/blog/",
+      "description": "Insights from Logitech employees into our products, technologies and the digital lifestyle. Follow to keep up with the blog.",
+      "followers": {
+        "facebook": 3600000,
+        "twitter": 315100,
+        "instagram": 830900
+      },
+      "image_url": "https://i1.feedspot.com/5051474.jpg?t=1622613304"
+    },
+    {
+      "title": "Techthusiast \u00bb Logitech",
+      "feed_url": "https://techthusiast.net/tag/logitech/feed/",
+      "website_url": "https://www.rockpapershotgun.com/tag/logitech/",
+      "description": "Techthusiast is a blog from getgeeked Media that makes the best content from your favorite tech brands available in one place for the first time. Subscribe for information about Logitech product releases and reviews from Techthusiast.",
+      "followers": {
+        "facebook": 551,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5051488.jpg?t=1622613317"
+    },
+    {
+      "title": "Rock Paper Shotgun \u00bb Logitech",
+      "feed_url": "https://www.rockpapershotgun.com/tag/logitech/feed",
+      "website_url": "https://www.rockpapershotgun.com/tag/logitech/",
+      "description": "Rock Paper Shotgun provides PC games reviews, news and more with enthusiasm and personality, from some of the most experienced writers in the business. Follow now for the latest Logitech product reviews by Rock Paper Shotgun.",
+      "followers": {
+        "facebook": 95000,
+        "twitter": 176600
+      },
+      "image_url": "https://i1.feedspot.com/5051499.jpg?t=1622613325"
+    }
+  ]
+}

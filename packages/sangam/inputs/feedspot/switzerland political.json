@@ -1,0 +1,50 @@
+{
+  "category": "Switzerland Political",
+  "source_url": "https://rss.feedspot.com/switzerland_political_rss_feeds",
+  "feeds": [
+    {
+      "title": "POLITICO \u00bb Switzerland",
+      "feed_url": "https://www.politico.eu/country/switzerland/feed/",
+      "website_url": "https://www.politico.eu/country/switzerland/",
+      "description": "Latest politics, government and election news for Switzerland. POLITICO delivers journalism about politics and policymaking that is more authoritative in its sophistication and nonpartisan perspective than any other news source.",
+      "followers": {
+        "facebook": 240600,
+        "twitter": 358700
+      },
+      "image_url": "https://i1.feedspot.com/5349214.jpg?t=1638368337"
+    },
+    {
+      "title": "Swiss Labor Party",
+      "feed_url": "https://pda.ch/feed/",
+      "website_url": "https://pda.ch/",
+      "description": "Swiss Labor Party is a Swiss communist party. At the national level, the Swiss Labor Party is a small party, but one that has a large, future-oriented ideology. Read more about ideology of the party, their goals for the country, interviews and more!",
+      "followers": {
+        "facebook": 690
+      },
+      "image_url": "https://i1.feedspot.com/5349215.jpg?t=1638427885"
+    },
+    {
+      "title": "SP Switzerland",
+      "feed_url": "https://www.sp-ps.ch/de/overview/content/26/all/rss",
+      "website_url": "https://www.sp-ps.ch/",
+      "description": "We are the SP Switzerland - The SP has been making politics for everyone instead of a privileged few for over 125 years. We say yes to a Switzerland of coexistence instead of opposition.",
+      "followers": {
+        "facebook": 32400,
+        "twitter": 52500,
+        "instagram": 62000
+      },
+      "image_url": "https://i1.feedspot.com/5349216.jpg?t=1638427159"
+    },
+    {
+      "title": "The Local \u00bb Politics",
+      "feed_url": "https://www.thelocal.ch/tag/politics/feed/",
+      "website_url": "https://www.thelocal.ch/tag/politics",
+      "description": "All the latest political news and essential information from Switzerland.The Local is an entertaining blend of Switzerland's latest news headlines, politics, sport, business, and features.",
+      "followers": {
+        "facebook": 45400,
+        "twitter": 9300
+      },
+      "image_url": "https://i1.feedspot.com/5349212.jpg?t=1638425377"
+    }
+  ]
+}

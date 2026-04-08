@@ -1,0 +1,155 @@
+{
+  "category": "Algorithm",
+  "source_url": "https://rss.feedspot.com/algorithm_rss_feeds",
+  "feeds": [
+    {
+      "title": "Vienna Center for Logic and Algorithms",
+      "feed_url": "https://www.vcla.at/feed/",
+      "website_url": "https://www.vcla.at/",
+      "description": "Explore research done in the areas of logic, philosophy, mathematics, computer science, and artificial intelligence among the general public alike. The annual reports offer a detailed overview of all VCLA activities. Vienna Center for Logic and Algorithms is an initiative of TU Wien, enhancing open academic exchange across the fields of logic and algorithms while promoting the role of computer sciences among the experts and laymen alike.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4962399.jpg?t=1621865652"
+    },
+    {
+      "title": "Algorithms Weekly by Petr Mitrichev",
+      "feed_url": "https://feeds.feedburner.com/PetrMitrichev",
+      "website_url": "https://blog.mitrichev.ch/",
+      "description": "Petr Mitrichev's blog Algorithms Weekly by Petr Mitrichev is all about algorithms.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/1977378.jpg?t=1621865684"
+    },
+    {
+      "title": "Stack Overflow \u00bb Algorithm",
+      "feed_url": "https://stackoverflow.com/feeds/tag/algorithm",
+      "website_url": "https://stackoverflow.com/questions/tagged/?tagnames=algorithm&sort=active",
+      "description": "Read the most recent 30 Algorithm posts from Stack Overflow. The world's largest online community for developers, helping write the script of the future by serving developers and all technologists.",
+      "followers": {
+        "facebook": 529500,
+        "twitter": 251500,
+        "instagram": 50900
+      },
+      "image_url": "https://i1.feedspot.com/280242.jpg?t=1658838112"
+    },
+    {
+      "title": "MDPI \u00bb Algorithms",
+      "feed_url": "https://www.mdpi.com/rss/journal/algorithms",
+      "website_url": "https://www.mdpi.com/journal/algorithms",
+      "description": "A pioneer in scholarly, open access publishing, MDPI has supported academic communities since 1996. Algorithms is a peer-reviewed, open access journal which provides an advanced forum for studies related to algorithms and their applications. Algorithms is published monthly online by MDPI.",
+      "followers": {
+        "facebook": 80200,
+        "twitter": 45100
+      },
+      "image_url": "https://i1.feedspot.com/4682421.jpg?t=1658838414"
+    },
+    {
+      "title": "Algorithms For The Masses",
+      "feed_url": "https://feeds.feedburner.com/boyet/blog",
+      "website_url": "https://boyet.com/",
+      "description": "The personal website and blog of Julian M Bucknall, in which he discusses algorithms, photography, and anything else that takes his fancy.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5425377.jpg?t=1658838530"
+    },
+    {
+      "title": "Algorithmic Assertions",
+      "feed_url": "https://algassert.com/feed.xml",
+      "website_url": "https://algassert.com/",
+      "description": "Algorithmic Assertions is a computer science blog. Posts are usually technical, on the order of a couple thousand words long, and focused on some idea in mathematics, software engineering, algorithmic complexity, quantum computing, or computers in general.",
+      "followers": {
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/3648743.jpg?t=1658839030"
+    },
+    {
+      "title": "QuantInsti Blog",
+      "feed_url": "https://blog.quantinsti.com/rss/",
+      "website_url": "https://blog.quantinsti.com/",
+      "description": "QuantInsti's Blog on Algo Trading and Quantitative Finance. Articles on skill development and individual success stories. Tutorials on trading indicators & strategies, portfolio & risk management, automated trading, Python programming and more. QuantInsti is your go-to resource for all things quant.",
+      "followers": {
+        "facebook": 17400,
+        "twitter": 11400,
+        "instagram": 11200
+      },
+      "image_url": "https://i1.feedspot.com/5052497.jpg?t=1658839434"
+    },
+    {
+      "title": "AlgorithmWatch Blog",
+      "feed_url": "https://algorithmwatch.org/en/feed/",
+      "website_url": "https://algorithmwatch.org/en/blog/",
+      "description": "AlgorithmWatch is a non-profit research and advocacy organisation to evaluate and shed light on algorithmic decision making processes that have a social relevance.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 20000,
+        "instagram": 5500
+      },
+      "image_url": "https://i1.feedspot.com/5194823.jpg?t=1658839764"
+    },
+    {
+      "title": "Learning Algorithms with Rachit Jain",
+      "feed_url": "https://rachitiitr.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://rachitiitr.blogspot.com/",
+      "description": "Hi! I am Rachit Jain. This is my blog dedicated to competitive programming. I write about interesting data structures, algorithms and beautiful problems that have awesome analysis and thus offer great learning.",
+      "followers": {
+        "facebook": 12800
+      },
+      "image_url": "https://i1.feedspot.com/4962396.jpg?t=1621865664"
+    },
+    {
+      "title": "Healthy Algorithms",
+      "feed_url": "https://healthyalgorithms.com/feed/",
+      "website_url": "https://healthyalgorithms.com/",
+      "description": "A blog about algorithms, combinatorics, and optimization applications in global health informatics.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/1086146.jpg?t=1658838934"
+    },
+    {
+      "title": "Banach's Algorithmic Corner",
+      "feed_url": "https://corner.mimuw.edu.pl/?feed=rss2",
+      "website_url": "https://corner.mimuw.edu.pl/",
+      "description": "This blog is maintained by members of Algorithmic group at University of Warsaw. The research of our group focuses on several branches of modern algorithmics and the underlying fields of discrete mathematics. The latter include combinatorics on words and on ordered sets, graph theory, formal languages, computational geometry, information theory, foundation of cryptography.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/629330.jpg?t=1658839367"
+    },
+    {
+      "title": "Crio Blog \u00bb Data Structures and Algorithms",
+      "feed_url": "https://www.crio.do/blog/tag/data-structures-and-algorithms/rss/",
+      "website_url": "https://www.crio.do/blog/tag/data-structures-and-algorithms/",
+      "description": "Strengthen your data structures and algorithms basics with fun activities. Explained with simple examples.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 1000,
+        "instagram": 14400
+      },
+      "image_url": "https://i1.feedspot.com/5425379.jpg?t=1658839613"
+    },
+    {
+      "title": "Coding Club Of Competitive Programmers",
+      "feed_url": "https://cp-algorithms.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://cp-algorithms.blogspot.com/",
+      "description": "Competitive programming guides eg. algorithms, problems, tricks, datastructure based on CP. Very efficient solution of SPOJ and other competitive programming sites like - codechef, codeforces. Here we mainly focus on sphere online judge.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5425392.jpg?t=1658841203"
+    },
+    {
+      "title": "GeeksforGeeks",
+      "feed_url": "https://www.geeksforgeeks.org/feed/",
+      "website_url": "https://www.geeksforgeeks.org/",
+      "description": "A Computer Science portal for geeks. It contains well written, well thought and well explained computer science and programming articles, quizzes, and practice/competitive programming/company interview questions.",
+      "followers": {
+        "facebook": 215700,
+        "twitter": 84300,
+        "instagram": 471600
+      },
+      "image_url": "https://i1.feedspot.com/3365675.jpg?t=1658840981"
+    }
+  ]
+}

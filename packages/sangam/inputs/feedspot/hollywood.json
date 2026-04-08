@@ -1,0 +1,686 @@
+{
+  "category": "Hollywood",
+  "source_url": "https://rss.feedspot.com/hollywood_rss_feeds",
+  "feeds": [
+    {
+      "title": "Hollywood Life",
+      "feed_url": "https://hollywoodlife.com/feed/",
+      "website_url": "https://hollywoodlife.com/",
+      "description": "HollywoodLife brings you the latest celebrity and entertainment news, exclusive celebrity pics and videos - plus the hottest celebrity fashion and beauty trends. First launched in 2009, HollywoodLife.com is your digital destination for the very latest celebrity, entertainment, pop culture, fashion, beauty, fitness, women's issues, and political news.",
+      "followers": {
+        "facebook": 5200000,
+        "twitter": 343700,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/45422.jpg?t=1761301711"
+    },
+    {
+      "title": "TMZ.com",
+      "feed_url": "https://www.tmz.com/rss.xml",
+      "website_url": "https://www.tmz.com/",
+      "description": "TMZ, Thirty Mile Zone, is one of the most cited entertainment news sources in the world. It is the first entertainment news magazine to cover Hollywood as it really is... and celebrities as they really are. It has consistently been credited for breaking the biggest stories dominating the entertainment news landscape and changing the way the public gets their news.",
+      "followers": {
+        "facebook": 9500000,
+        "twitter": 8400000,
+        "instagram": 7800000
+      },
+      "image_url": "https://i1.feedspot.com/4679176.jpg?t=1612339849"
+    },
+    {
+      "title": "Perez Hilton",
+      "feed_url": "https://perezhilton.com/feed/",
+      "website_url": "https://perezhilton.com/",
+      "description": "Since 2004, Hollywood's most sassy website has been delivering the juiciest celebrity gossip. The blog is the go-to source for daily happenings in Hollywood. Written by the internet's most notorious gossip columnist, Perez Hilton (Mario Lavandeira). She dishes up the juiciest celebrity gossip on all your favorite stars.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 5300000,
+        "instagram": 599600
+      },
+      "image_url": "https://i1.feedspot.com/679418.jpg?t=1671622425"
+    },
+    {
+      "title": "The Hollywood Gossip",
+      "feed_url": "http://feeds.thehollywoodgossip.com/thehollywoodgossip",
+      "website_url": "https://www.thehollywoodgossip.com/",
+      "description": "Dishing up the latest celebrity news, Hollywood gossip, entertainment news, scandals, celebrity feuds and fashion for 15 years and running. The Hollywood Gossip is one of the Web's leading sources for celebrity gossip, news and information. We work around the clock to bring you updates on the biggest celebrities in the world.",
+      "followers": {
+        "facebook": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/4679166.jpg?t=1666328594"
+    },
+    {
+      "title": "The Shade Room",
+      "feed_url": "https://theshaderoom.com/feed/",
+      "website_url": "https://theshaderoom.com/",
+      "description": "Find all the trending news on theshaderoom.com. We have everything covered right from celebrity news, fashion news, beauty, headline news, photos, videos and everything else you love about The Shade Room. Stay updated with all the trending topics. The Shade Room is the leading black-owned independent media company covering entertainment and celebrity news.",
+      "followers": {
+        "facebook": 5900000,
+        "twitter": 848600,
+        "instagram": 29000000
+      },
+      "image_url": "https://i1.feedspot.com/4681052.jpg?t=1612339862"
+    },
+    {
+      "title": "Deadline",
+      "feed_url": "https://deadline.com/feed/",
+      "website_url": "https://deadline.com/",
+      "description": "Deadline.com is always the first to break up-to-the-minute entertainment, Hollywood and media news, with an unfiltered, no-holds-barred analysis of events. The site is the go-to source for breaking news about the business of TV, film, media and other entertainment",
+      "followers": {
+        "twitter": 1200000,
+        "instagram": 599600
+      },
+      "image_url": "https://i1.feedspot.com/4114544.jpg?t=1612339874"
+    },
+    {
+      "title": "Heroic Hollywood",
+      "feed_url": "https://heroichollywood.com/feed/",
+      "website_url": "https://heroichollywood.com/",
+      "description": "Covering the greatest heroes of the big and small screen ranging from comic book legends to iconic characters in cinema.",
+      "followers": {
+        "facebook": 429000,
+        "twitter": 65700,
+        "instagram": 159200
+      },
+      "image_url": "https://i1.feedspot.com/4479462.jpg?t=1612339878"
+    },
+    {
+      "title": "Celebrity Insider",
+      "feed_url": "https://celebrityinsider.org/feed/",
+      "website_url": "https://celebrityinsider.org/",
+      "description": "Celebrity Insider is an independent network of reporters and contributors with access to insider celebrity reports, unbiased news and other information related to celebrities.",
+      "followers": {
+        "facebook": 96300
+      },
+      "image_url": "https://i1.feedspot.com/4682685.jpg?t=1612339882"
+    },
+    {
+      "title": "Variety",
+      "feed_url": "https://variety.com/feed/",
+      "website_url": "https://variety.com/",
+      "description": "Features entertainment news, film reviews, awards, film festivals, box office, and entertainment industry conferences. Variety is the most authoritative and trusted source of entertainment business news, recognized and respected throughout the world.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 3000000,
+        "instagram": 2800000
+      },
+      "image_url": "https://i1.feedspot.com/440210.jpg?t=1686305895"
+    },
+    {
+      "title": "FirstShowing.net",
+      "feed_url": "https://www.firstshowing.net/feed/?full",
+      "website_url": "https://www.firstshowing.net/",
+      "description": "FirstShowing is a professional web-based destination providing complete media coverage of mainstream and independent movies, the latest on the movie going experience, and the connection between Hollywood and the audience. We only cover theatrically released films, and updates from film festivals all over the world. Follow us to keep up with the latest movie trailers, interviews, reviews, hype, and everything about the cinematic experience straight from Hollywood and beyond.",
+      "followers": {
+        "facebook": 18300,
+        "twitter": 42900
+      },
+      "image_url": "https://i1.feedspot.com/1940753.jpg?t=1612340229"
+    },
+    {
+      "title": "The Anonymous Production Assistant",
+      "feed_url": "https://theanonymousproductionassistant.substack.com/feed",
+      "website_url": "https://theanonymousproductionassistant.substack.com/",
+      "description": "The Anonymous Production Assistant is a lonely PA, struggling to make her or his way in Hollywood. It offers advice, complaints, and occasionally job leads.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/1660878.jpg?t=1612340249"
+    },
+    {
+      "title": "Black Hollywood Education & Resource Center",
+      "feed_url": "https://bherc.org/feed/",
+      "website_url": "https://bherc.org/",
+      "description": "The Black Hollywood Education and Resource Center, a nonprofit, public benefit organization, is designed to advocate, educate, research, develop, and preserve the history, and the future, of blacks in the film and television industries.",
+      "followers": {
+        "twitter": 1700,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5055102.jpg?t=1612340245"
+    },
+    {
+      "title": "Press Pass LA",
+      "feed_url": "https://www.presspassla.com/feed/",
+      "website_url": "https://www.presspassla.com/",
+      "description": "Press Pass LA is an entertainment company whose goal is to bring you coverage of the latest industry news, celebrity red carpet and charity events, and highlight up & coming talent and local happenings in and around Los Angeles.",
+      "followers": {
+        "facebook": 20300,
+        "twitter": 6400,
+        "instagram": 54200
+      },
+      "image_url": "https://i1.feedspot.com/5178178.jpg?t=1609402318"
+    },
+    {
+      "title": "Hollywood in Toto",
+      "feed_url": "https://www.hollywoodintoto.com/feed/",
+      "website_url": "https://www.hollywoodintoto.com/",
+      "description": "Hollywood in Toto covers entertainment from a conservative perspective, offering smart movie reviews and commentary not found on other news sites. HiT is the only dedicated entertainment news site for conservatives that offers a hearty defense of pro-freedom values.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 21000,
+        "instagram": 134
+      },
+      "image_url": "https://i1.feedspot.com/4665921.jpg?t=1612340234"
+    },
+    {
+      "title": "HollywoodGlee",
+      "feed_url": "https://hollywoodglee.com/feed/",
+      "website_url": "https://hollywoodglee.com/",
+      "description": "Welcome to my web news page on film, filmmaking, film festivals, film reviews and more. In addition to writing reviews and covering film festivals, I am currently seeking new films for distribution. I have contacts in several major markets including Chicago, Los Angeles, New York, and Toronto and as I write this post I'm actively developing contacts in Mumbai, India.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5063372.jpg?t=1612340311"
+    },
+    {
+      "title": "Toofab.com",
+      "feed_url": "https://feeds.toofab.com/atom",
+      "website_url": "https://toofab.com/",
+      "description": "Toofab.com features latest entertainment news for TV, Movies, Music. Red Carpet Fashion and Celebrity Style. It is dedicated to pop culture news fanatics. The latest and greatest on the buzziest celebrities, TV shows, movies, music and fashion. We've got our finger on Hollywood's pulse.",
+      "followers": {
+        "facebook": 228100,
+        "twitter": 49600,
+        "instagram": 242900
+      },
+      "image_url": "https://i1.feedspot.com/4681005.jpg?t=1612339886"
+    },
+    {
+      "title": "Magic Image Hollywood Magazine",
+      "feed_url": "https://magicimagemagazine.com/feed/",
+      "website_url": "https://magicimagemagazine.com/",
+      "description": "Magic Image Hollywood Magazine is a Bi-monthly Magazine serving the Entertainment Industry as an important information resource and marketing tool to promote both new and established talent.",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 642
+      },
+      "image_url": "https://i1.feedspot.com/4872381.jpg?t=1643289272"
+    },
+    {
+      "title": "Classic Actresses",
+      "feed_url": "https://www.classicactresses.org/feeds/posts/default",
+      "website_url": "https://www.classicactresses.org/",
+      "description": "Dedicated to all the beautiful and talented actresses from Hollywood's Golden Age - the superstars who battled addiction, the tragic actresses who committed suicide, the silent stars who were forgotten, and the lesbian actresses who were forced to hide. These are their true and often heartbreaking stories.",
+      "followers": {
+        "instagram": 239500
+      },
+      "image_url": "https://i1.feedspot.com/5339363.jpg?t=1635834759"
+    },
+    {
+      "title": "Hollywood Network",
+      "feed_url": "https://holywoodnetwork.org/feed/",
+      "website_url": "https://holywoodnetwork.org/",
+      "description": "Your Source to Faith-Based Media. Holywood Network features moves of God in media, arts, and entertainment, as well as technology and politics.",
+      "followers": {
+        "facebook": 1600,
+        "instagram": 9300
+      },
+      "image_url": "https://i1.feedspot.com/5413127.jpg?t=1750402185"
+    },
+    {
+      "title": "In Touch Weekly \u00bb Entertainment",
+      "feed_url": "https://www.intouchweekly.com/posts/category/entertainment/feed/",
+      "website_url": "https://www.intouchweekly.com/posts/category/entertainment/",
+      "description": "Read the latest updates and articles on entertainment at In Touch Weekly. Your go-to destination for reality TV and celebrity gossip, bringing loyal, passionate readers the most up-to-date and compelling news about their favorite shows and stars.",
+      "followers": {
+        "facebook": 2200000,
+        "twitter": 222600,
+        "instagram": 569700
+      },
+      "image_url": "https://i1.feedspot.com/5326599.jpg?t=1672291821"
+    },
+    {
+      "title": "The Hollywood Reporter",
+      "feed_url": "https://www.hollywoodreporter.com/feed/",
+      "website_url": "https://www.hollywoodreporter.com/",
+      "description": "The Hollywood Reporter (THR) is the entertainment industry's flagship media brand, offering in-depth reporting, analysis, unparalleled access, world-class photography and video, and feature exclusives in its award-winning weekly magazine and dynamic website. The Hollywood Reporter also boasts prestigious live events, industry-leading philanthropic, empowerment, and diversity initiatives, and a hugely successful video series.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 3400000,
+        "instagram": 2900000
+      },
+      "image_url": "https://i1.feedspot.com/5594244.jpg?t=1743057489"
+    },
+    {
+      "title": "Hollywood Elsewhere",
+      "feed_url": "https://hollywood-elsewhere.com/feed/",
+      "website_url": "https://hollywood-elsewhere.com/",
+      "description": "Jeffrey Wells writes a daily stream-of-Hollywood-consciousness column for Hollywood Elsewhere, which he's been running on his own since August 2004. Well, the editorial part at least. Sean Jacobs handles HE's advertising. Hollywood Elsewhere is your neighborhood dive where you get the ugly truth, a good laugh and a damn good scotch.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 9800
+      },
+      "image_url": "https://i1.feedspot.com/5484928.jpg?t=1672292114"
+    },
+    {
+      "title": "Hollywood Insider",
+      "feed_url": "https://www.hollywoodinsider.com/feed/",
+      "website_url": "https://www.hollywoodinsider.com/",
+      "description": "Hollywood Insider is a trusted platform for substance and meaningful entertainment while being against gossip and scandal, by combining entertainment, education, and philanthropy.",
+      "followers": {
+        "facebook": 27500,
+        "twitter": 1400,
+        "instagram": 11100
+      },
+      "image_url": "https://i1.feedspot.com/5365774.jpg?t=1672292475"
+    },
+    {
+      "title": "Wonderwall",
+      "feed_url": "https://www.wonderwall.com/feed",
+      "website_url": "https://www.wonderwall.com/",
+      "description": "Wonderwall is your top destination for the latest celebrity photos, news, gossip, videos, and more. Get the latest dish and see all the hottest celeb pics. Wonderwall.com is the one-stop celebrity hot spot that covers entertainment news from all angles. We interview celebrity talent and cover breaking news, fashion, music, red carpet events, junkets and more.",
+      "followers": {
+        "facebook": 374300,
+        "twitter": 64900,
+        "instagram": 80800
+      },
+      "image_url": "https://i1.feedspot.com/5365779.jpg?t=1672292443"
+    },
+    {
+      "title": "Hometowns To Hollywood",
+      "feed_url": "https://hometownstohollywood.com/feed/",
+      "website_url": "https://hometownstohollywood.com/",
+      "description": "Exploring the hometowns and legacies of Hollywood's Golden Age stars. My name is Annette Bochenek and I am a film historian and perpetual scholar of Hollywood's Golden Age. One of my favorite pastimes includes exploring the hometowns of Hollywood legends. Since the lives of many actors and actresses are well documented from their Hollywood careers onward, I find it fascinating to examine their lives prior to this time. I focus upon places of relevance to them during their early days, while also researching how their legacies are celebrated in their hometowns and beyond.",
+      "followers": {
+        "facebook": 64000,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5484922.jpg?t=1672290290"
+    },
+    {
+      "title": "Hollywood News Source",
+      "feed_url": "https://hollywoodnewssource.com/feed/",
+      "website_url": "https://hollywoodnewssource.com/",
+      "description": "Hollywood News Source provides you with the latest news and videos straight from the entertainment industry. We cover a wide variety of TV shows, films, books, music, and all things pop culture.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5484923.jpg?t=1672291963"
+    },
+    {
+      "title": "ExtraTV",
+      "feed_url": "https://feeds.extratv.com/rss/",
+      "website_url": "https://extratv.com/",
+      "description": "Extra has the hottest celebrity and entertainment news, photos, gossip, scandals, videos, games, music, movies, television, star sightings and more! Emmy Award-winning 'Extra' brings you the latest entertainment news and A-list interviews. Currently in Season 29.",
+      "followers": {
+        "facebook": 2000000,
+        "twitter": 334400,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5484924.jpg?t=1672291791"
+    },
+    {
+      "title": "Discover Hollywood Blog",
+      "feed_url": "https://www.discoverhollywood.com/Blog/Recent-Blog-Posts/RSS.xml",
+      "website_url": "https://www.discoverhollywood.com/Discover-Hollywood-Blog.aspx",
+      "description": "Discover Hollywood brings readers the very best of what hollywood has to offer - its people, politics, restaurants, plays, movies, walk of fame, events, culture, news, entertainment, art, real estate, community and travel information for residents and visitors to hollywood.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 590,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5484925.jpg?t=1672290149"
+    },
+    {
+      "title": "Showbiz411",
+      "feed_url": "https://www.showbiz411.com/feed",
+      "website_url": "https://www.showbiz411.com/",
+      "description": "Check out exclusive Hollywood News in Movies, Music, Broadway and Celebrity Headlines.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 10700
+      },
+      "image_url": "https://i1.feedspot.com/5484926.jpg?t=1672292234"
+    },
+    {
+      "title": "Koimoi \u00bb Hollywood News",
+      "feed_url": "https://www.koimoi.com/category/hollywood-news/feed/",
+      "website_url": "https://www.koimoi.com/category/hollywood-news/",
+      "description": "Get the latest Hollywood news, gossip, celebrity updates, trivia & other entertainment news on Koimoi. If you're a fan of Hollywood then there is a lot for you to explore here. Koimoi is India's top digital entertainment portal where you will find all the latest information from the world of flicks and clicks.",
+      "followers": {
+        "facebook": 2200000,
+        "twitter": 249000
+      },
+      "image_url": "https://i1.feedspot.com/5484929.jpg?t=1672292391"
+    },
+    {
+      "title": "Hollywood Unlocked",
+      "feed_url": "https://hollywoodunlocked.com/feed/",
+      "website_url": "https://hollywoodunlocked.com/",
+      "description": "Get the daily tea and access to private events with Hollywood Unlocked including Entertainment News, Gossip & Celebrity Interviews.",
+      "followers": {
+        "facebook": 2100000,
+        "twitter": 154300
+      },
+      "image_url": "https://i1.feedspot.com/5210146.jpg?t=1672290696"
+    },
+    {
+      "title": "Hollywood Street King",
+      "feed_url": "https://hollywoodstreetking.com/feed/",
+      "website_url": "https://hollywoodstreetking.com/",
+      "description": "Spilling Raw & Uncut Celebrity Tabloid News & Gossip since 2007. As seen on the NY Times, Vanity Fair, Dateline NBC, Access Hollywood, Entertainment Tonight and so damn much more!",
+      "followers": {
+        "facebook": 56400,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5484930.jpg?t=1750402353"
+    },
+    {
+      "title": "Heart of Hollywood Magazine",
+      "feed_url": "https://www.heartofhollywoodmagazine.com/blog-feed.xml",
+      "website_url": "https://www.heartofhollywoodmagazine.com/",
+      "description": "Heart Of Hollywood Magazine is a global enterprise devoted to fashion, entertainment, lifestyle, and empowerment. They offer local, national, and international content. Across the globe, they are also a window into the industry for readers who want to know what is happening in Hollywood. They offer celebrity news, major announcements, and stories of people who have become legends in their fields.",
+      "followers": {
+        "facebook": 10800,
+        "instagram": 31200
+      },
+      "image_url": "https://i1.feedspot.com/5484931.jpg?t=1672290234"
+    },
+    {
+      "title": "Greg In Hollywood",
+      "feed_url": "http://feeds.greginhollywood.com/greginhollywood",
+      "website_url": "http://greginhollywood.com/",
+      "description": "Veteran Hollywood reporter Greg Hernandez covers the gay celebrity scene, bringing you the scoop from newsmakers, creative types and keeping you up to date on entertainment, LGBT and political news.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/1307620.jpg?t=1672291139"
+    },
+    {
+      "title": "Grand Old Movies Blog",
+      "feed_url": "https://grandoldmovies.wordpress.com/feed/",
+      "website_url": "https://grandoldmovies.wordpress.com/",
+      "description": "Our blog covers the films of Hollywood's Golden Age - movies that came out during the 1930s, 40s, 50s, and 60s, produced by such great Hollywood studios as MGM, Warner Bros., Paramount, 20th-Century Fox, and Columbia. We'll even look at movies produced by the not-so-great outfits - Monogram and PRC - when the mood strikes.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 9000
+      },
+      "image_url": "https://i1.feedspot.com/4945541.jpg?t=1672292164"
+    },
+    {
+      "title": "Comet Over Hollywood",
+      "feed_url": "https://cometoverhollywood.com/feed/",
+      "website_url": "https://cometoverhollywood.com/",
+      "description": "This website is for classic film lovers and explores different aspects of old movies-not just film reviews. From Musical Monday, to classic actress beauty tips to a look into the lives of favorite actors, they discuss their favorite films with daily photos posted and blog articles.",
+      "followers": {
+        "facebook": 20700,
+        "twitter": 9000
+      },
+      "image_url": "https://i1.feedspot.com/4945495.jpg?t=1672289943"
+    },
+    {
+      "title": "Hollywood Movie Costumes & Props",
+      "feed_url": "https://feeds.feedburner.com/HollywoodMovieCostumesAndProps",
+      "website_url": "https://hollywoodmoviecostumesandprops.blogspot.com/",
+      "description": "This blog is for movie enthusiasts, fans of film and costume design. Living in Hollywood I'm lucky enough to see in person these fantastic outfits, props, vehicles and models. This blog is my chance to share those creations with the rest of the world who don't have the same opportunity.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1536910.jpg?t=1672292026"
+    },
+    {
+      "title": "All About The Tea",
+      "feed_url": "https://allaboutthetea.com/feed/",
+      "website_url": "https://allaboutthetea.com/",
+      "description": "Follow All About the Tea for the latest and breaking in celebrity, and entertainment news with stories, photos, and videos from the hottest reality stars. All About the Tea is updated daily and we cover a wide range of shows: The Real Housewives franchise, Married to Medicine, Southern Charm, Dance Moms, Sister Wives, Vanderpump Rules, Shahs of Sunset, Teen Mom, Keeping Up with the Kardashians, Little Women series, Below Deck and much more.",
+      "followers": {
+        "facebook": 22600,
+        "twitter": 26300,
+        "instagram": 107900
+      },
+      "image_url": "https://i1.feedspot.com/4681185.jpg?t=1672291081"
+    },
+    {
+      "title": "Premium Hollywood Blog",
+      "feed_url": "https://www.premiumhollywood.com/feed/",
+      "website_url": "https://www.premiumhollywood.com/",
+      "description": "A blog covering Hollywood, movies, DVDs, the film industry, the entertainment industry and television. We will be posting movie reviews, DVDs, features, lists, trailers, polls, actor and actress profiles and more.",
+      "followers": {
+        "facebook": 882,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/2109524.jpg?t=1672292605"
+    },
+    {
+      "title": "TheWrap",
+      "feed_url": "https://www.thewrap.com/feed/",
+      "website_url": "https://www.thewrap.com/",
+      "description": "The Wrap News Inc. is the leading digital news organization covering the business of entertainment and media. Founded by award-winning journalist Sharon Waxman in 2009, The Wrap News Inc. is comprised of the award-winning, industry-leading website with its high-profile newsbreaks, investigative stories and authoritative analysis.",
+      "followers": {
+        "facebook": 440000,
+        "twitter": 257899,
+        "instagram": 171000
+      },
+      "image_url": "https://i1.feedspot.com/4417373.jpg?t=1641387875"
+    },
+    {
+      "title": "Just Jared",
+      "feed_url": "https://www.justjared.com/feed/",
+      "website_url": "https://www.justjared.com/",
+      "description": "Just Jared offers you the latest in celebrity news, photos, and gossip in entertainment, celebrities, tv, movies, pop culture and more! An established internet presence since 2005, Just Jared is a multi-media entertainment group providing premium pop culture trends, extensive celebrity photo galleries and breaking entertainment news.",
+      "followers": {
+        "facebook": 411400,
+        "twitter": 710900,
+        "instagram": 1600000
+      },
+      "image_url": "https://i1.feedspot.com/1094933.jpg?t=1641449946"
+    },
+    {
+      "title": "Page Six",
+      "feed_url": "https://pagesix.com/feed/",
+      "website_url": "https://pagesix.com/",
+      "description": "Page Six is your source for the latest celebrity news, entertainment headlines and celeb gossip, with exclusive stories, photos, video, and more. Page Six provides celebrity and pop culture news from the New York Post.",
+      "followers": {
+        "facebook": 1500000,
+        "twitter": 386100,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/4926387.jpg?t=1666329685"
+    },
+    {
+      "title": "Collider",
+      "feed_url": "https://collider.com/feed",
+      "website_url": "https://collider.com/",
+      "description": "Collider is the ultimate source for impactful entertainment news. We deliver the biggest, most important industry happenings, and provide deep analysis and sharp commentary through interviews, reviews, and much more. Since the site began, we've been dedicated to delivering content that is thoughtful, analytical, and all-encompassing, with a tinge of personality for good measure...",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 153100,
+        "instagram": 130900
+      },
+      "image_url": "https://i1.feedspot.com/5205982.jpg?t=1758201604"
+    },
+    {
+      "title": "OK! Magazine",
+      "feed_url": "https://okmagazine.com/rss/",
+      "website_url": "https://okmagazine.com/",
+      "description": "Read about celebrity news, stories, style, beauty & fashion and more. OK! is a weekly magazine that primarily specializes in royal and celebrity news. With exclusive offerings on a variety of platforms featuring authentic and aspirational content, OK! provides readers a unique look at the day-to-day lives of their favorite celebrities and trendsetters.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 471200,
+        "instagram": 448200
+      },
+      "image_url": "https://i1.feedspot.com/5319934.jpg?t=1660050313"
+    },
+    {
+      "title": "LA Times",
+      "feed_url": "https://www.latimes.com/entertainment-arts.rss",
+      "website_url": "https://www.latimes.com/entertainment-arts/",
+      "description": "L.A. Times entertainment news from Hollywood including event coverage, celebrity gossip and deals. The Los Angeles Times is the only news organization in the West with the resources and commitment to cover important stories wherever they happen.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 3800000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/5360206.jpg?t=1641388488"
+    },
+    {
+      "title": "CelebMix",
+      "feed_url": "https://celebmix.com/feed/",
+      "website_url": "https://celebmix.com/",
+      "description": "For the latest celebrity and entertainment news, look no further than CelebMix. One Direction, 5SOS, The Vamps, Little Mix, Fifth Harmony and more.",
+      "followers": {
+        "facebook": 13200,
+        "twitter": 235100,
+        "instagram": 15100
+      },
+      "image_url": "https://i1.feedspot.com/4681776.jpg?t=1618580277"
+    },
+    {
+      "title": "Closer Weekly",
+      "feed_url": "https://www.closerweekly.com/feed/",
+      "website_url": "https://www.closerweekly.com/",
+      "description": "Your ultimate source for breaking celebrity news \u2014 get closer to the stars you love!",
+      "followers": {
+        "facebook": 115100,
+        "twitter": 4200,
+        "instagram": 211100
+      },
+      "image_url": "https://i1.feedspot.com/4682632.jpg?t=1727072402"
+    },
+    {
+      "title": "Film School Rejects",
+      "feed_url": "https://filmschoolrejects.com/feed/",
+      "website_url": "https://filmschoolrejects.com/",
+      "description": "A movie blog for the people - a space for anyone who loves the work of filmmaking.",
+      "followers": {
+        "facebook": 41200,
+        "twitter": 117900,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4665319.jpg?t=1600494894"
+    },
+    {
+      "title": "PopWrapped",
+      "feed_url": "https://popwrapped.com/feed/",
+      "website_url": "https://popwrapped.com/",
+      "description": "All Your Favorite Entertainment News, Pop-Culture Tidbits, Movies, Music, Fandoms, Television, Technology & Video Games Wrapped Up! Just Reheat & Serve!",
+      "followers": {
+        "facebook": 85800,
+        "twitter": 495500,
+        "instagram": 31900
+      },
+      "image_url": "https://i1.feedspot.com/5126945.jpg?t=1612340239"
+    },
+    {
+      "title": "The HOLLYWOOD Dog",
+      "feed_url": "https://www.thehollywooddog.com/feed/",
+      "website_url": "https://www.thehollywooddog.com/",
+      "description": "The Hollywood Dog offers independent musicians, comedians, actors, directors, producers, authors, and visual artists of all kinds, a new type of web presence that melds public consumption with its artistic creators.",
+      "followers": {
+        "facebook": 791,
+        "twitter": 294,
+        "instagram": 3800000
+      },
+      "image_url": "https://i1.feedspot.com/5383290.jpg?t=1647838532"
+    },
+    {
+      "title": "Hollywood Mask",
+      "feed_url": "https://hollywoodmask.com/rss.xml",
+      "website_url": "https://hollywoodmask.com/",
+      "description": "Hollywood Mask is the home to everything entertainment. We tailor content for the pop culture and entertainment enthusiasts in the Western realm who like to keep their fingers on the pulse. Tune in to Hollywoodmask.com to get impactful stories, opinions, gossips, and news related to Hollywood & western media industry and pop/minority culture.",
+      "followers": {
+        "facebook": 228,
+        "twitter": 186
+      },
+      "image_url": "https://i1.feedspot.com/5289400.jpg?t=1623049522"
+    },
+    {
+      "title": "Rych McCain Hollyhood Notes",
+      "feed_url": "https://rychmccainhollyhoodnotes.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://rychmccainhollyhoodnotes.blogspot.com/",
+      "description": "I interview celebs from music,film,stage,TV and make notes on the happenings.",
+      "followers": {
+        "twitter": 762
+      },
+      "image_url": "https://i1.feedspot.com/4993180.jpg?t=1612340286"
+    },
+    {
+      "title": "Project: Fangirl",
+      "feed_url": "https://cjhawkings.com/feed/",
+      "website_url": "https://cjhawkings.com/",
+      "description": "Born in the early 90s to a space-loving father and a mother who loves true love stories and crime dramas, there was always a chance she would inherit some of those qualities. A massive fan of Star Wars (thanks daddy dearest!), C.J. is an amateur at anything and everything to do with Starfighters and ships but she does know a thing or two about the Clone Wars era! She also inherited her paternal grandmother's love of mystery shows.",
+      "followers": {
+        "facebook": 91,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5037337.jpg?t=1612340315"
+    },
+    {
+      "title": "Under the Hollywood Sign Blog",
+      "feed_url": "https://underthehollywoodsign.wordpress.com/feed/",
+      "website_url": "https://underthehollywoodsign.wordpress.com/",
+      "description": "I started Under the Hollywood Sign in February of 2009 to help publicize my documentary of the same name featuring history and filmmaking in the heart of hollywood. It soon became far more successful than the film. My blog has allowed me to explore not only the topics my documentary, but life in Los Angeles, Japanese films and filmmaking in general, and I am glad for it.",
+      "followers": {
+        "instagram": 379
+      },
+      "image_url": "https://i1.feedspot.com/5484927.jpg?t=1672290906"
+    },
+    {
+      "title": "Hollywood Glam Magazine",
+      "feed_url": "https://www.hollywoodglammagazine.com/feed/",
+      "website_url": "https://www.hollywoodglammagazine.com/",
+      "description": "Hollywood Glam Magazine is your news entertainment, music, art, and fashion website. We provide you with the latest breaking newsand videos straight from the entertainment industry world.",
+      "followers": {
+        "facebook": 51
+      },
+      "image_url": "https://i1.feedspot.com/5365775.jpg?t=1672289961"
+    },
+    {
+      "title": "In The Good Old Days Of Classic Hollywood",
+      "feed_url": "https://crystalkalyana.wordpress.com/feed/",
+      "website_url": "https://crystalkalyana.wordpress.com/",
+      "description": "Hi I'm Crystal, I'm a classic film enthusiast, and have been passionate about the golden age for years. Some of my favourite stars include: Ethel Barrymore, Bette Davis, Katharine Hepburn, Carole Lombard among others. I study journalism at the Morris Journalism Academy, and I have commenced research for a proposed classic film biography.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4945516.jpg?t=1672291610"
+    },
+    {
+      "title": "JoBlo.com",
+      "feed_url": "https://www.joblo.com/newsfeeds/rss.xml",
+      "website_url": "https://www.joblo.com/",
+      "description": "The JoBlo Movie Network features the latest movie trailers, posters, previews & interviews all in one place! Updated daily with the latest news from Hollywood!",
+      "followers": {
+        "facebook": 468800,
+        "twitter": 44600,
+        "instagram": 19200
+      },
+      "image_url": "https://i1.feedspot.com/880.jpg?t=1612340226"
+    },
+    {
+      "title": "The Hollywood News",
+      "feed_url": "https://thehollywoodnews.com/feed/",
+      "website_url": "https://people.com/entertainment/",
+      "description": "The Hollywood News is a small fan-made entertainment website created by Paul Heath. Everyone who voluntarily writes for the website is first and foremost a film and TV fan through and through, and we produce the website because of that love. We're absolutely committed to sourcing the latest news from the entertainment industry and keeping you updated, along with bringing you our steady stream of movie reviews too.",
+      "followers": {
+        "facebook": 23700
+      },
+      "image_url": "https://i1.feedspot.com/4419643.jpg?t=1672292893"
+    },
+    {
+      "title": "Women and Hollywood",
+      "feed_url": "https://womenandhollywood.com/news/",
+      "website_url": "https://womenandhollywood.com/news/",
+      "description": "Women and Hollywood educates, advocates, and agitates for gender parity across the entertainment industry. The site was founded in 2007 by Melissa Silverstein. She is a writer with extensive expertise in the area of women and Hollywood.",
+      "followers": {
+        "facebook": 21000,
+        "twitter": 45200
+      },
+      "image_url": "https://i1.feedspot.com/4643967.jpg?t=1631194001"
+    },
+    {
+      "title": "The Shock News",
+      "feed_url": "https://theshocknews.com/feed/",
+      "website_url": "https://theshocknews.com/",
+      "description": "TheShockNews is your news website about breaking news entertainment, music fashion, and technology. We provide you with the latest breaking news and videos from around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5394575.jpg?t=1651060979"
+    },
+    {
+      "title": "Eyes On Hollywood",
+      "feed_url": "https://eyesonhollywood.com/index.php/feed/",
+      "website_url": "https://eyesonhollywood.com/",
+      "description": "Eyes on Hollywood is a weekly Lifestyle and Entertainment online magazine. Find latest breaking news straight from the entertainment industry world.",
+      "followers": {
+        "facebook": 940
+      },
+      "image_url": "https://i1.feedspot.com/5484932.jpg?t=1672291742"
+    }
+  ]
+}

@@ -1,0 +1,310 @@
+{
+  "category": "Commodity",
+  "source_url": "https://rss.feedspot.com/commodity_rss_feeds",
+  "feeds": [
+    {
+      "title": "OilPrice.com",
+      "feed_url": "https://oilprice.com/rss/main",
+      "website_url": "https://oilprice.com/",
+      "description": "Oilprice.com is the most popular energy news site in the world. Our analysis focuses on Oil and Gas, Alternative Energy, and Geopolitics. We offer extensive coverage of all energy sectors from crude oil & natural gas to solar energy and wind power.",
+      "followers": {
+        "facebook": 100000,
+        "twitter": 71800
+      },
+      "image_url": "https://i1.feedspot.com/4773746.jpg?t=1669957883"
+    },
+    {
+      "title": "The Economic Times \u00bb Commodities",
+      "feed_url": "https://economictimes.indiatimes.com/markets/commodities/rssfeeds/1808152121.cms",
+      "website_url": "https://economictimes.indiatimes.com/markets/commodities",
+      "description": "Commodities Market: Get all the latest commodities prices and news on Economic Times. Things you need to know about the spot market prices, Gold rate/price in India, crude oil price, silver and more Commodities",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 4400000,
+        "instagram": 2400000
+      },
+      "image_url": "https://i1.feedspot.com/4836182.jpg?t=1611061643"
+    },
+    {
+      "title": "Business Standard",
+      "feed_url": "https://www.business-standard.com/rss/markets-commodities-10608.rss",
+      "website_url": "https://www.business-standard.com/markets-commodities",
+      "description": "Business Standard, India's leading business site for Live Markets, Live BSE & NSE quotes, latest news, breaking news, political news, analysis and opinion on markets, companies, industry, economy, policy, banking and personal finance news and more.",
+      "followers": {
+        "facebook": 591900,
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/3351682.jpg?t=1611061981"
+    },
+    {
+      "title": "Business Line",
+      "feed_url": "https://www.thehindubusinessline.com/markets/commodities/?service=rss",
+      "website_url": "https://www.thehindubusinessline.com/markets/commodities/",
+      "description": "BusinessLine India's leading website for business and financial news, BSE and NSE quotes, stock recommendations, market analysis and research, politics, gadgets & auto.",
+      "followers": {
+        "facebook": 644000,
+        "twitter": 115000
+      },
+      "image_url": "https://i1.feedspot.com/766867.jpg?t=1611061987"
+    },
+    {
+      "title": "GoldSilve.com",
+      "feed_url": "https://goldsilver.com/industry-news/rss/",
+      "website_url": "https://goldsilver.com/industry-news/",
+      "description": "Discover the latest in gold and silver News. At GoldSilver.com\u2122 you can stay up to date with the condition of the gold and silver market, as well as obtain the opinions of experts in the gold and silver industry.",
+      "followers": {
+        "facebook": 31300,
+        "twitter": 32299
+      },
+      "image_url": "https://i1.feedspot.com/4836053.jpg?t=1611061990"
+    },
+    {
+      "title": "SpreadCharts Blog",
+      "feed_url": "https://spreadcharts.com/feed/",
+      "website_url": "https://spreadcharts.com/blog/",
+      "description": "Articles on commodity markets - gold, grains, coffee, cocoa, wheat, sugar, natural gas, soybeans, crude oil, soybean oil and more.SpreadCharts offers the widest range of tools for analyzing commodity futures and spreads, which gives you a unique insight into the market.",
+      "followers": {
+        "facebook": 703,
+        "twitter": 878
+      },
+      "image_url": "https://i1.feedspot.com/4858384.jpg?t=1608180779"
+    },
+    {
+      "title": "ITM Trading Blog",
+      "feed_url": "https://www.itmtrading.com/blog/feed/",
+      "website_url": "https://www.itmtrading.com/blog/",
+      "description": "ITM Trading is a full buy/sell precious metals brokerage firm specializing in gold, silver, and platinum products. Through this blog, we provide weekly videos on Gold and Silver, macroeconomics, and headline news related to the markets.",
+      "followers": {
+        "facebook": 20700,
+        "twitter": 11000
+      },
+      "image_url": "https://i1.feedspot.com/5403811.jpg?t=1653471706"
+    },
+    {
+      "title": "CMI Gold & Silver Blog",
+      "feed_url": "https://cmi-gold-silver.com/feed/",
+      "website_url": "https://cmi-gold-silver.com/blog-articles/",
+      "description": "CMI Gold & Silver is the trusted place for buying/selling gold and silver and gold/silver coins. Learn about investing in gold and silver investing on this. CMI Gold & Silver Inc. specializes in gold and silver bullion investments, notably Krugerrands, American Eagle gold coins,silver bars and American Eagle silver coins.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 365
+      },
+      "image_url": "https://i1.feedspot.com/4836003.jpg?t=1611062026"
+    },
+    {
+      "title": "Episode 3",
+      "feed_url": "https://episode3.net/feed/",
+      "website_url": "https://episode3.net/reports/grain/",
+      "description": "Episode 3 (EP3) is an independent, data-driven market analysis service that provides premium insights and reports to the agriculture industry, food manufacturing sector and their associated commodity markets.",
+      "followers": {
+        "facebook": 434,
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/5202913.jpg?t=1668171622"
+    },
+    {
+      "title": "World Oil",
+      "feed_url": "https://www.worldoil.com/rss?feed=news",
+      "website_url": "https://www.worldoil.com/",
+      "description": "World Oil, established in 1916 as The Oil Weekly, is published monthly by Gulf Energy Information. World Oil provides news, oil prices, data, statistics, shale reports and upstream industry trends relating to the exploration, drilling, completion and production of oil and gas, both onshore and offshore.",
+      "followers": {
+        "facebook": 87500,
+        "twitter": 146600
+      },
+      "image_url": "https://i1.feedspot.com/1844493.jpg?t=1613727604"
+    },
+    {
+      "title": "Optimus Futures Blog",
+      "feed_url": "https://optimusfutures.com/blog/feed/",
+      "website_url": "https://optimusfutures.com/blog/",
+      "description": "Futures trading education, articles, and strategies. Optimus Futures is a leading online futures broker offering Online Futures and Commodity Trading, Automated Trading Systems, Managed Futures, and Broker-Assisted Programs. We offer a variety of trading platforms and several different services and facilities giving each customer an abundance of choices leading to an ideal suited trading strategy.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4836037.jpg?t=1611062016"
+    },
+    {
+      "title": "Oil & Gas Investments Bulletin",
+      "feed_url": "https://oilandgas-investments.com/feed/",
+      "website_url": "https://oilandgas-investments.com/",
+      "description": "Oil & Gas Investments Bulletin gives the finest independent news source and blog commentary on the North America Oil and Gas Industry. Its mission is to cover the technology revolution that is happening in the oil and gas industry.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 45900
+      },
+      "image_url": "https://i1.feedspot.com/4629223.jpg?t=1611062044"
+    },
+    {
+      "title": "Mecardo Blog",
+      "feed_url": "https://mecardo.com.au/feed/",
+      "website_url": "https://mecardo.com.au/",
+      "description": "Become an expert on cattle, sheep, wool and grain markets by reading the latest opinion and general market information on the Mecardo blog.",
+      "followers": {
+        "facebook": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4836126.jpg?t=1611062085"
+    },
+    {
+      "title": "Commodity Market 2008 Advisory Services",
+      "feed_url": "https://feeds.feedburner.com/blogspot/LKbcZ",
+      "website_url": "https://commoditymarket2008.blogspot.com/",
+      "description": "We are pleased to introduce ourselves as one of the most prestigious And Leading MCX Advisory Service Provider. With More Than 8 Years of Experience, we are proud to have major national And International firms in our client database.",
+      "followers": {
+        "twitter": 58
+      },
+      "image_url": "https://i1.feedspot.com/4836217.jpg?t=1611062155"
+    },
+    {
+      "title": "The Commodity.com Blog",
+      "feed_url": "https://commodity.com/blog/feed/",
+      "website_url": "https://commodity.com/blog/",
+      "description": "Everything you wanted to know about commodity trading. Learn how to start commodity trading online, including popular commodities gold, silver & oil, as well as more obscure commodities like rubber, palladium & more.",
+      "followers": {
+        "twitter": 143
+      },
+      "image_url": "https://i1.feedspot.com/4836095.jpg?t=1611062004"
+    },
+    {
+      "title": "MCX-NCDEX",
+      "feed_url": "http://mcx-ncdex.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://mcx-ncdex.blogspot.com/",
+      "description": "TIPS FOR Indian Commodity Markets. MCX-NCDEX Blog will not be responsible for any errors or omissions in articles or postings, for hyperlinks embedded in messages, or for any results obtained from the use of such information. MCX-NCDEX Blog will not be liable for any loss or damage caused by a reader's reliance on information obtained in our area, or in a hyperlinked area. MAIL US AT INDIAS",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4836131.jpg?t=1611062059"
+    },
+    {
+      "title": "Commodity Research Group Blog",
+      "feed_url": "https://www.commodityresearchgroup.com/blog/feed/",
+      "website_url": "https://www.commodityresearchgroup.com/blog/",
+      "description": "An Independant blog of commodity reasearch group",
+      "followers": {
+        "twitter": 67
+      },
+      "image_url": "https://i1.feedspot.com/4836096.jpg?t=1611062069"
+    },
+    {
+      "title": "The Crude Oil Trader",
+      "feed_url": "https://feeds.feedburner.com/TheCrudeOilTrader",
+      "website_url": "https://crudeoiltrader.blogspot.com/",
+      "description": "Trade ideas and analysis focusing on commodities, crude oil, natural gas, gold, silver and the indexes. We work hard to help you find low risk set ups while keeping your emotions out of your trading.",
+      "followers": {
+        "twitter": 19200
+      },
+      "image_url": "https://i1.feedspot.com/330785.jpg?t=1611062090"
+    },
+    {
+      "title": "Cascade Commodity Consulting LLC Blog",
+      "feed_url": "https://www.cashwheatreport.com/blog/feed/",
+      "website_url": "https://www.cashwheatreport.com/blog/",
+      "description": "Cascade Commodity Consulting, was founded by Al Conway in 2007 and is based in Oregon City, Oregon. The company has extensive industry knowledge of the US and world wheat market creating a platform for traders, end users and producers.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4836110.jpg?t=1611062095"
+    },
+    {
+      "title": "Capital Stars",
+      "feed_url": "https://freeagricalls.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://freeagricalls.blogspot.com/",
+      "description": "Capitalstars financial research private limited is an advisory company incepted with a vision of providing fair and accurat MCX Tips, NCDEX Tips, MCX tips.Keep up with the latest posts from Capital Stars.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4836204.jpg?t=1611062506"
+    },
+    {
+      "title": "Live Commodity Tips",
+      "feed_url": "http://livecommoditytips.blogspot.com/feeds/posts/default",
+      "website_url": "http://livecommoditytips.blogspot.com/",
+      "description": "Market Magnify Is a leading Stock & Commodity Research Company In India.We are providing Commodity Tips,Mcx Tips,Free Commodities Market Tips,Mcx Commodity Market Trading Tips with High Accuracy.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4011666.jpg?t=1611062174"
+    },
+    {
+      "title": "Stock & Commodity Levels",
+      "feed_url": "http://rnsuretip.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://rnsuretip.blogspot.com/",
+      "description": "I like to work with traders discuss their trading strategies & style. I come to know after the 7 Years of Research max trader losing Money because lack of Profitable Strategy, Risk Management & Psychology, after lot of Research we build strategy which is Profitable, Very Powerful, Unique, Robust, This Blogger will change your Trading Carrier & Profit Graph.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4836136.jpg?t=1611062397"
+    },
+    {
+      "title": "S&P Global",
+      "feed_url": "https://www.spglobal.com/commodity-insights/en/",
+      "website_url": "https://www.spglobal.com/commodity-insights/en/",
+      "description": "We are the leading independent provider of information & benchmark prices for energy & commodity markets.",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 175
+      },
+      "image_url": "https://i1.feedspot.com/1133611.jpg?t=1611061621"
+    },
+    {
+      "title": "Investing News Network",
+      "feed_url": "https://investingnews.com/category/daily/resource-investing/base-metals-investing/copper-investing/feed/",
+      "website_url": "https://investingnews.com/category/daily/resource-investing/base-metals-investing/copper-investing/",
+      "description": "Copper Investing News provides independent unbiased news and education for investors interested in copper and investing in copper companies & copper stocks",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/4836018.jpg?t=1611061995"
+    },
+    {
+      "title": "Commodity HQ.com",
+      "feed_url": "https://commodityhq.com/feed/",
+      "website_url": "https://www.financialexpress.com/market/commodities/",
+      "description": "The leading source for the latest developments on commodities and more. Home to detailed data and analytics related to all aspects of commodity and hard asset investing.",
+      "followers": {
+        "facebook": 14800,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4691713.jpg?t=1611061626"
+    },
+    {
+      "title": "The Financial Express",
+      "feed_url": "https://www.financialexpress.com/market/commodities/feed/",
+      "website_url": "https://www.financialexpress.com/market/commodities/",
+      "description": "Commodities News - Find latest commodities news india, commodities news updates, commodities news analysis, commodities news today, commodities market news, commodities market in india, Gold Rate Today, Silver Rate Today and more only on financialexpress.com!",
+      "followers": {
+        "facebook": 2000000,
+        "twitter": 816300
+      },
+      "image_url": "https://i1.feedspot.com/4836195.jpg?t=1611061972"
+    },
+    {
+      "title": "MCX Control",
+      "feed_url": "https://mcxcontrol.com/feed",
+      "website_url": "https://mcxcontrol.com/",
+      "description": "Daily free tips about commodity market India.",
+      "followers": {
+        "facebook": 6700
+      },
+      "image_url": "https://i1.feedspot.com/4836252.jpg?t=1611062021"
+    },
+    {
+      "title": "Moneycontrol",
+      "feed_url": "https://www.moneycontrol.com/rss/commodities.xml",
+      "website_url": "https://www.moneycontrol.com/commodity/",
+      "description": "Live commodities market price and stock news, spot market prices, live gold price/rate in India, crude oil price, silver price, metal prices and commodity trading tips and information.",
+      "followers": {
+        "facebook": 789,
+        "twitter": 1500000,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/767228.jpg?t=1611061957"
+    },
+    {
+      "title": "Aliceblue",
+      "feed_url": "https://aliceblueonline.com/feed/",
+      "website_url": "https://aliceblueonline.com/stock-market-news/",
+      "description": "Latest updates on what's happening around online stocks and commodity trading from AliceBlueOnline.com in the Blog. Gold hits 1-month top as dollar slides.",
+      "followers": {
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4836264.jpg?t=1611062180"
+    }
+  ]
+}

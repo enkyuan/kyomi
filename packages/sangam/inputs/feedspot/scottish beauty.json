@@ -1,0 +1,69 @@
+{
+  "category": "Scottish Beauty",
+  "source_url": "https://rss.feedspot.com/scottish_beauty_rss_feeds",
+  "feeds": [
+    {
+      "title": "Ellis Tuesday",
+      "feed_url": "https://www.ellistuesday.com/feed/",
+      "website_url": "https://www.ellistuesday.com/",
+      "description": "Ellis Tuesday is a beauty, fashion & lifestyle blog brought to you by Ellis, a self-confessed shopaholic from Scotland with an overwhelming stash of beauty products and a love for all things leopard print. A blog about beauty, travel, lifestyle, and fashion from a twenty-something Glasgow girl.",
+      "followers": {
+        "facebook": 15000,
+        "twitter": 5300,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4368393.jpg?t=1608118510"
+    },
+    {
+      "title": "Glasgow Beauty Blogger",
+      "feed_url": "https://feeds.feedburner.com/GlasgowBeautyBlogger",
+      "website_url": "http://www.glasgowbeautyblogger.com/",
+      "description": "Glasgow Beauty Blogger is a Scottish beauty and lifestyle blog written by Lori, a Glasgow girl, qualified makeup artist and hedgehog mother.Here you'll find the latest beauty must-haves, some old favourites and the odd makeup tutorial.",
+      "followers": {
+        "twitter": 3600,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4104744.jpg?t=1611309480"
+    },
+    {
+      "title": "The Black Pearl Blog",
+      "feed_url": "https://feeds.feedburner.com/blogspot/MwDeL",
+      "website_url": "https://www.theblackpearlblog.com/",
+      "description": "My name is Sandra, I am 34. I am married and I am a mother to Zachary (10) and Mia (6). I decided to start The Black Pearl Blog to share my passion for skincare, make-up, fashion, photography, interior design and DIY projects, and in the past 10 years, blogging became a big part of my life.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 9100
+      },
+      "image_url": "https://i1.feedspot.com/5365535.jpg?t=1643263829"
+    },
+    {
+      "title": "Beauty Balm",
+      "feed_url": "https://bbalm.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://bbalm.blogspot.com/",
+      "description": "Hi, I'm Sandra and love beauty! I will mainly be blogging about beauty but also other things that interest me.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4790160.jpg?t=1609563972"
+    },
+    {
+      "title": "Deerieo Blog",
+      "feed_url": "https://deerieo.com/blogs/news.atom",
+      "website_url": "https://deerieo.com/blogs/news",
+      "description": "Deerieo News is blog by a Scottish natural skincare brand sharing their brand development journey, skincare tips and routines from the founder to give you the best no-fuss skincare routine and glowing skin out there.",
+      "followers": {
+        "facebook": 757,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5291830.jpg?t=1623306364"
+    },
+    {
+      "title": "Nicole Corbett",
+      "feed_url": "http://www.nicolecorbettblog.co.uk/feeds/posts/default?alt=rss",
+      "description": "My name is Nicole and I am a beauty, lifestyle and advice blogger based here in Scotland. I love helping others, and hope that my posts can inspire and help others!",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4857119.jpg?t=1609564609"
+    }
+  ]
+}

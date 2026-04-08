@@ -1,0 +1,17 @@
+{
+  "category": "Kotaku",
+  "source_url": "https://rss.feedspot.com/kotaku_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kotaku",
+      "feed_url": "https://kotaku.com/rss",
+      "website_url": "https://kotaku.com/",
+      "description": "Kotaku is the definitive digital hub for video game news, reviews, cheats, design, and entertainment. It aims to be an inclusive site for gamers of any ethnicity, gender or sexual orientation.",
+      "followers": {
+        "twitter": 2600000,
+        "instagram": 49600
+      },
+      "image_url": "https://i1.feedspot.com/1115.jpg?t=1609821542"
+    }
+  ]
+}

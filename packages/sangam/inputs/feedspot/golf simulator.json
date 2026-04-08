@@ -1,0 +1,103 @@
+{
+  "category": "Golf Simulator",
+  "source_url": "https://rss.feedspot.com/golf_simulator_rss_feeds",
+  "feeds": [
+    {
+      "title": "Simply Golf Simulators Blog",
+      "feed_url": "https://simplygolfsimulators.com/blogs/news.atom",
+      "website_url": "https://simplygolfsimulators.com/blogs/news",
+      "description": "Simply Golf Simulators is an online retailer providing competitive prices on Golf Simulators and related products. We aim to provide a memorable experience when you shop in our online store by offering quality products with top-rated customer service.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5385549.jpg?t=1648461042"
+    },
+    {
+      "title": "My Golf Simulator Blog",
+      "feed_url": "https://mygolfsimulator.com/feed/",
+      "website_url": "https://mygolfsimulator.com/blog/",
+      "description": "My name is Alex and it is my mission to bring you all the information you need to build your own home golf simulator.",
+      "followers": {
+        "twitter": 10
+      },
+      "image_url": "https://i1.feedspot.com/5314702.jpg?t=1629710983"
+    },
+    {
+      "title": "TracerGolf Blog",
+      "feed_url": "https://tracergolf.ca/feed/",
+      "website_url": "https://tracergolf.ca/blog/",
+      "description": "Keep up with the latest news in the indoor golf industry. Follow the growth of Tracer Golf's fully automated indoor golf and golf simulator facility business. TracerGolf is Canada's first fully automated launch monitor golf driving range that combines tracer, smart IoT, and e-commerce tech.",
+      "followers": {
+        "facebook": 672,
+        "twitter": 35,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/7270981.jpg?t=1710162215"
+    },
+    {
+      "title": "SwingSense Blog",
+      "feed_url": "https://swingsense.com/feed/",
+      "website_url": "https://swingsense.com/blog/",
+      "description": "SwingSense Blog covers articles on golf simulators, golf supplies, equipments and more.SwingSense is a one-stop-shop for indoor golf equipment and supplies and a full-service digital marketing agency offering a wide range of marketing solutions for the golf industry.",
+      "followers": {
+        "facebook": 33,
+        "twitter": 29,
+        "instagram": 53
+      },
+      "image_url": "https://i1.feedspot.com/5314709.jpg?t=1648452708"
+    },
+    {
+      "title": "NiftyGolf.com \u00bb Golf Simulators",
+      "feed_url": "https://www.niftygolf.com/simulators/feed/",
+      "website_url": "https://www.niftygolf.com/simulators/",
+      "description": "Here you can find the best golf simulators, in-depth product reviews, and all the resources you need to perfectly play golf at your home. we are an information website providing information about golf, we aim to provide the best possible golfing resources & guidelines. At Nifty Golf, we are committed to building the best golf resources on the internet, including various golf product reviews, accessory and gear guides, and golfing how-tos.",
+      "followers": {
+        "facebook": 388,
+        "twitter": 70,
+        "instagram": 770
+      },
+      "image_url": "https://i1.feedspot.com/5385550.jpg?t=1648461333"
+    },
+    {
+      "title": "Black Box Golf Blog",
+      "feed_url": "https://www.blackboxgolf.es/blog?format=rss",
+      "website_url": "https://www.blackboxgolf.es/blog",
+      "description": "Latest news and blog posts from Black Box Golf. Black Box Golf design the very best golf simulators in Spain, perfect for use in luxury villas, hotels, golf academies and golf courses.",
+      "followers": {
+        "facebook": 125,
+        "twitter": 42,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5315921.jpg?t=1629979022"
+    },
+    {
+      "title": "Halfway House Indoor Golf Blog",
+      "feed_url": "https://halfwayhousegolf.com/feed/",
+      "website_url": "https://halfwayhousegolf.com/blog/",
+      "description": "Halfway House Indoor Golf is the next best thing to playing golf outdoors. We feature four professional-quality golf simulators inside HB Jones restaurant. The combination of perfectly replicated courses, high-tech graphics, and fluid ball movement creates an enjoyable golf game for all levels of golfers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5385551.jpg?t=1648461461"
+    },
+    {
+      "title": "Swing Golf Lounge Blog",
+      "feed_url": "https://swinggolflounge.ca/feed/",
+      "website_url": "https://swinggolflounge.ca/blog/",
+      "description": "Play the world's most famous golf courses with Swing Golf Lounge's indoor simulators in Toronto. Swing Golf Lounge is Toronto's premiere Indoor Golf Simulation venue featuring TrackMan technology.",
+      "followers": {
+        "facebook": 324,
+        "twitter": 229,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5315916.jpg?t=1629978577"
+    },
+    {
+      "title": "Golf Swing Systems",
+      "feed_url": "https://www.golfswingsystems.com/feed/",
+      "website_url": "https://www.golfswingsystems.com/blog/",
+      "description": "Keep up to date on all the latest news here on the Golf Swing Systems blog page. We provide complete solutions for golf academies based on the latest technology. No matter how big or small the area, as long as you can swing a golf club we can help make the most of your space for an academy.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5314704.jpg?t=1629704374"
+    }
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "category": "ESPN",
+  "source_url": "https://rss.feedspot.com/espn_rss_feeds",
+  "feeds": [
+    {
+      "title": "ESPN",
+      "feed_url": "https://www.espn.com/espn/rss/news",
+      "website_url": "https://www.espn.com/",
+      "description": "Visit ESPN to get up-to-the-minute sports news coverage, scores, highlights, and commentary for NFL, MLB, NBA, College Football, NCAA Basketball, and more.",
+      "followers": {
+        "facebook": 24200000,
+        "twitter": 59200000,
+        "instagram": 28300000
+      },
+      "image_url": "https://i1.feedspot.com/4474672.jpg?t=1752487545"
+    },
+    {
+      "title": "ESPN \u00bb NFL",
+      "feed_url": "https://www.espn.com/espn/rss/nfl/news?null",
+      "website_url": "https://www.espn.com/nfl/",
+      "description": "Visit ESPN for NFL live scores, video highlights and latest news. Stream Monday Night Football on ESPN+ and play Fantasy Football.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 4200000,
+        "instagram": 28300000
+      },
+      "image_url": "https://i1.feedspot.com/4757576.jpg?t=1752488417"
+    },
+    {
+      "title": "ESPN \u00bb Racing",
+      "feed_url": "https://www.espn.com/espn/rss/rpm/news",
+      "website_url": "https://www.espn.in/racing/",
+      "description": "Autos news, commentary, scores, stats, standings, audio, and video highlights from ESPN.",
+      "followers": {
+        "facebook": 24200000,
+        "twitter": 59200000,
+        "instagram": 28300000
+      },
+      "image_url": "https://i1.feedspot.com/4474672.jpg?t=1752487545"
+    },
+    {
+      "title": "ESPN \u00bb NHL",
+      "feed_url": "https://www.espn.com/espn/rss/nhl/news",
+      "website_url": "https://www.espn.in/nhl/",
+      "description": "Visit ESPN for NHL live scores, video highlights and latest news. Stream exclusive ESPN+ games and play Fantasy Hockey.",
+      "followers": {
+        "facebook": 24200000,
+        "twitter": 59200000,
+        "instagram": 28300000
+      },
+      "image_url": "https://i1.feedspot.com/4474672.jpg?t=1752487545"
+    },
+    {
+      "title": "ESPN \u00bb MLB",
+      "feed_url": "https://www.espn.in/espn/rss/mlb/news",
+      "website_url": "https://www.espn.in/mlb/",
+      "description": "Visit ESPN for MLB live scores, video highlights and latest news. Stream exclusive games on ESPN+ and play Fantasy Baseball.",
+      "followers": {
+        "facebook": 24200000,
+        "twitter": 59200000,
+        "instagram": 28300000
+      },
+      "image_url": "https://i1.feedspot.com/4474672.jpg?t=1752487545"
+    },
+    {
+      "title": "ESPN \u00bb NBA",
+      "feed_url": "https://www.espn.in/espn/rss/nba/news",
+      "website_url": "https://www.espn.in/nba/",
+      "description": "Visit ESPN for NBA live scores, video highlights and latest news. Stream games on ESPN and play Fantasy Basketball.",
+      "followers": {
+        "facebook": 24200000,
+        "twitter": 59200000,
+        "instagram": 28300000
+      },
+      "image_url": "https://i1.feedspot.com/4882215.jpg?t=1752489414"
+    },
+    {
+      "title": "ESPN \u00bb NCAA",
+      "feed_url": "https://www.espn.in/espn/rss/espnu/news",
+      "website_url": "https://www.espn.in/college-sports/",
+      "description": "Get the latest college sports news, NCAA scores, and NCAA rankings from ESPN.",
+      "followers": {
+        "facebook": 24200000,
+        "twitter": 38900,
+        "instagram": 28300000
+      },
+      "image_url": "https://i1.feedspot.com/4474672.jpg?t=1752487545"
+    },
+    {
+      "title": "ESPN \u00bb Horse Racing",
+      "feed_url": "https://www.espn.in/espn/rss/horse/news",
+      "website_url": "https://www.espn.in/horse-racing/",
+      "description": "Horse Racing news, commentary, race results, audio and video highlights from ESPN.",
+      "followers": {
+        "facebook": 24200000,
+        "twitter": 59200000,
+        "instagram": 28300000
+      },
+      "image_url": "https://i1.feedspot.com/4474672.jpg?t=1752487545"
+    },
+    {
+      "title": "ESPN \u00bb Tennis",
+      "feed_url": "https://www.espn.in/espn/rss/tennis/news",
+      "website_url": "https://www.espn.in/tennis/",
+      "description": "Tennis news, commentary, results, stats, audio and video highlights from ESPN.",
+      "followers": {
+        "facebook": 24200000,
+        "twitter": 59200000,
+        "instagram": 28300000
+      },
+      "image_url": "https://i1.feedspot.com/4474672.jpg?t=1752487545"
+    },
+    {
+      "title": "ESPN \u00bb Olympic",
+      "feed_url": "https://www.espn.com/espn/rss/oly/news",
+      "website_url": "https://www.espn.in/olympics/",
+      "description": "Olympic sport and Summer and Winter Olympics coverage on ESPN.com.",
+      "followers": {
+        "facebook": 24200000,
+        "twitter": 59200000,
+        "instagram": 28300000
+      },
+      "image_url": "https://i1.feedspot.com/4474672.jpg?t=1752487545"
+    },
+    {
+      "title": "ESPN \u00bb Golf",
+      "feed_url": "https://www.espn.in/espn/rss/golf/news",
+      "website_url": "https://www.espn.in/golf/",
+      "description": "Complete golf coverage on ESPN.com, including tournament schedules, results, news, highlights, and more from ESPN.",
+      "followers": {
+        "facebook": 24200000,
+        "twitter": 59200000,
+        "instagram": 28300000
+      },
+      "image_url": "https://i1.feedspot.com/4474672.jpg?t=1752487545"
+    },
+    {
+      "title": "ESPN \u00bb Boxing",
+      "feed_url": "https://www.espn.in/espn/rss/boxing/news",
+      "website_url": "https://www.espn.in/boxing/",
+      "description": "Boxing news, commentary, results, audio and video highlights from ESPN.",
+      "followers": {
+        "facebook": 24200000,
+        "twitter": 323800,
+        "instagram": 28300000
+      },
+      "image_url": "https://i1.feedspot.com/1580213.jpg?t=1752491900"
+    },
+    {
+      "title": "ESPN \u00bb Sports Betting",
+      "feed_url": "https://www.espn.com/espn/rss/sports-betting",
+      "website_url": "https://www.espn.in/sports-betting/",
+      "description": "Get everything you need for your next sports bet with ESPN. Includes the latest expert picks, predictions and updated odds.",
+      "followers": {
+        "facebook": 24200000,
+        "twitter": 59200000,
+        "instagram": 28300000
+      },
+      "image_url": "https://i1.feedspot.com/4882232.jpg?t=1615967639"
+    },
+    {
+      "title": "ESPN \u00bb NASCAR",
+      "feed_url": "https://www.espn.in/espn/rss/nascar/news",
+      "website_url": "https://www.espn.in/racing/nascar/",
+      "description": "Live race coverage and the latest NASCAR news, results, schedules, and race highlights from ESPN.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8641555.jpg?t=1752491902"
+    },
+    {
+      "title": "ESPN \u00bb Moto GP",
+      "feed_url": "https://www.espn.in/espn/rss/motogp/news",
+      "website_url": "https://www.espn.in/motogp/",
+      "description": "Latest MOTOGP news from www.espn.in",
+      "followers": {
+        "twitter": 132400
+      },
+      "image_url": "https://i1.feedspot.com/8641561.jpg?t=1752491904"
+    },
+    {
+      "title": "ESPN \u00bb WWE",
+      "feed_url": "https://www.espn.in/espn/rss/wwe/news",
+      "website_url": "https://www.espn.in/wwe/",
+      "description": "WWE on ESPN.com: latest news, analysis, schedule, and highlights from ESPN.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8641559.jpg?t=1752491906"
+    },
+    {
+      "title": "ESPN \u00bb MMA",
+      "feed_url": "https://www.espn.in/espn/rss/mma/news",
+      "website_url": "https://www.espn.in/mma/",
+      "description": "ESPN is your go-to source for Mixed Martial Arts fight coverage, including UFC, PFL and Bellator. Find out how to stream the fights on ESPN and ESPN+.",
+      "followers": {
+        "twitter": 1600000
+      },
+      "image_url": "https://i1.feedspot.com/8641556.jpg?t=1752491911"
+    },
+    {
+      "title": "ESPN \u00bb Rugby",
+      "feed_url": "https://www.espn.in/espn/rss/rugby/news",
+      "website_url": "https://www.espn.in/rugby/",
+      "description": "ESPN Scrum.com brings you all the latest rugby news and scores from the Rugby World Cup, all 2015 Internationals, Aviva Premiership, European Rugby Champions Cup, RFU Championship, Super Rugby, Six Nations and Top 14.",
+      "followers": {
+        "twitter": 162800
+      },
+      "image_url": "https://i1.feedspot.com/8641562.jpg"
+    },
+    {
+      "title": "ESPN \u00bb Badminton",
+      "feed_url": "https://www.espn.in/espn/rss/badminton/news",
+      "website_url": "https://www.espn.in/badminton/",
+      "description": "Get up to date news, reports, articles on Badminton matches, players only on ESPN.in.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4474672.jpg?t=1752487545"
+    },
+    {
+      "title": "ESPN \u00bb Hockey",
+      "feed_url": "https://www.espn.in/espn/rss/field-hockey/news",
+      "website_url": "https://www.espn.in/field-hockey/",
+      "description": "Be up to date on the latest field hockey news, updates only on ESPN.in.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4474672.jpg?t=1752487545"
+    },
+    {
+      "title": "ESPN \u00bb F1",
+      "feed_url": "https://www.espn.in/espn/rss/f1/news",
+      "website_url": "https://www.espn.in/f1/",
+      "description": "Latest F1 news from www.espn.in",
+      "followers": {
+        "twitter": 981500
+      },
+      "image_url": "https://i1.feedspot.com/8641563.jpg?t=1752491630"
+    },
+    {
+      "title": "ESPN \u00bb Chess",
+      "feed_url": "https://www.espn.in/espn/rss/chess/news",
+      "website_url": "https://www.espn.in/chess/",
+      "description": "Follow the latest chess news and updates only on ESPN.in. Checkout the videos, features & articles on chess tournaments, interviews, championships & more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4474672.jpg?t=1752487545"
+    },
+    {
+      "title": "ESPN \u00bb Cricket",
+      "feed_url": "https://www.espn.in/espn/rss/cricket/news",
+      "website_url": "https://www.espn.in/cricket/",
+      "description": "Get cricket scores, schedules, match commentary, team stats, fixtures, series results, video highlights, news, and more on ESPN.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4474672.jpg?t=1752487545"
+    },
+    {
+      "title": "ESPN \u00bb Shooting",
+      "feed_url": "https://www.espn.in/espn/rss/shooting/news",
+      "website_url": "https://www.espn.in/shooting/",
+      "description": "Latest SHOOTING news from www.espn.in",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4474672.jpg?t=1752487545"
+    },
+    {
+      "title": "ESPN \u00bb Football",
+      "feed_url": "http://www.espnfc.com/rss",
+      "website_url": "https://www.espn.in/football/",
+      "description": "Visit ESPN for football live scores, highlights and news from all major football leagues. Stream games on ESPN and play Fantasy Football.",
+      "followers": {
+        "facebook": 14500000,
+        "twitter": 16600000,
+        "instagram": 6500000
+      },
+      "image_url": "https://i1.feedspot.com/4114059.jpg?t=1615964157"
+    }
+  ]
+}

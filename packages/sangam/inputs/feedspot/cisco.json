@@ -1,0 +1,83 @@
+{
+  "category": "Cisco",
+  "source_url": "https://rss.feedspot.com/cisco_rss_feeds",
+  "feeds": [
+    {
+      "title": "Cisco Blogs",
+      "feed_url": "https://blogs.cisco.com/feed",
+      "website_url": "https://blogs.cisco.com/",
+      "description": "Follow Cisco Threat Research Blog to get the latest news, updates, and information on Threat Research. Cisco was founded in 1984 and enables people to make powerful connections-whether in business, education, philanthropy, or creativity. Cisco hardware, software, and service offerings are used to create the Internet solutions that make networks possible. It provides easy access to information anywhere, at any time.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 740700
+      },
+      "image_url": "https://i1.feedspot.com/4908828.jpg?t=1658231245"
+    },
+    {
+      "title": "Webex Blog",
+      "feed_url": "https://blog.webex.com/feed/",
+      "website_url": "https://blog.webex.com/",
+      "description": "Cisco Webex is the global leader in video and web conferencing. They offer services to scale to your needs, reach wherever you work and deliver what's next for your business.",
+      "followers": {
+        "facebook": 355700,
+        "twitter": 156400,
+        "instagram": 62200
+      },
+      "image_url": "https://i1.feedspot.com/4908948.jpg?t=1614085691"
+    },
+    {
+      "title": "Cisco's Talos Intelligence Group Blog",
+      "feed_url": "https://feeds.feedburner.com/feedburner/Talos",
+      "website_url": "https://blog.talosintelligence.com/",
+      "description": "Cisco Talos Intelligence Group is one of the largest commercial threat intelligence teams in the world, comprised of world-class researchers, analysts, and engineers. A blog from the world class Intelligence Group, Talos, Cisco's Intelligence Group.",
+      "followers": {
+        "twitter": 48700
+      },
+      "image_url": "https://i1.feedspot.com/4898014.jpg?t=1614085703"
+    },
+    {
+      "title": "Cisco Blog \u00bb Meraki",
+      "feed_url": "https://meraki.cisco.com/blog/feed/",
+      "website_url": "https://meraki.cisco.com/blog/",
+      "description": "All latest articles about Meraki from Cisco Blog",
+      "followers": {
+        "facebook": 27100,
+        "twitter": 31600
+      },
+      "image_url": "https://i1.feedspot.com/4908841.jpg?t=1760596390"
+    },
+    {
+      "title": "Cisco Umbrella Blog",
+      "feed_url": "https://umbrella.cisco.com/blog/feed",
+      "website_url": "https://umbrella.cisco.com/blog",
+      "description": "Cisco Umbrella provides the first line of defense against threats on the internet wherever users go. This blog covers articles and resources from the Cisco Umbrella engineering and security research teams.",
+      "followers": {
+        "facebook": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4834206.jpg?t=1614085696"
+    },
+    {
+      "title": "Cisco Education Blog",
+      "feed_url": "https://blogs.cisco.com/education/feed",
+      "website_url": "https://blogs.cisco.com/education",
+      "description": "Cisco is leading the digital transformation in K-12 and higher education around the world with technologies that allow students to learn without limits.",
+      "followers": {
+        "twitter": 11,
+        "instagram": 569200
+      },
+      "image_url": "https://i1.feedspot.com/4846314.jpg?t=1614085709"
+    },
+    {
+      "title": "Cisco Newsroom",
+      "feed_url": "https://newsroom.cisco.com/data/syndication/rss2/headlinesAndNewsReleases_20.xml",
+      "website_url": "https://blogs.cisco.com/",
+      "description": "Dedicated to producing engaging multimedia content about technology, industry trends, and Cisco's latest endeavors.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 740700,
+        "instagram": 569200
+      },
+      "image_url": "https://i1.feedspot.com/4908881.jpg?t=1614085681"
+    }
+  ]
+}

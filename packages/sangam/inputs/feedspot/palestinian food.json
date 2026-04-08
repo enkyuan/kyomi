@@ -1,0 +1,66 @@
+{
+  "category": "Palestinian Food",
+  "source_url": "https://rss.feedspot.com/palestinian_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Cool Food Dude",
+      "feed_url": "https://coolfooddude.com/feed/",
+      "website_url": "https://coolfooddude.com/",
+      "description": "Hey there, I'm Marc, a.k.a. Cool Food Dude. I'm obsessed with everything that has to do with food, cooking and eating out! This blog is my outlet to explore all these things. Check out the different cuisines and food from different regions like Palestine, Italy, Persia, Jamaica, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5482263.jpg?t=1671621993"
+    },
+    {
+      "title": "Palestine In A Dish",
+      "feed_url": "https://palestineinadish.com/feed/",
+      "website_url": "https://palestineinadish.com/",
+      "description": "This blog is about my mother's Palestinian authentic recipes I grew up with. I did not realize my interest and passion for cooking until after moving to the US and missing my mom's home cooking. My name is Wafa, I'm a humanist, a feminist and a mother who is passionate about food, loves to cook and share with others.",
+      "followers": {
+        "facebook": 3300,
+        "instagram": 12900
+      },
+      "image_url": "https://i1.feedspot.com/5482264.jpg?t=1671622079"
+    },
+    {
+      "title": "Canaan Palestine Blog",
+      "feed_url": "https://blog.canaanpalestine.com/feed/",
+      "website_url": "https://blog.canaanpalestine.com/",
+      "description": "Read about Canaanite and Palestinian Food including recipes, identifying high grade ingredients and more. At Canaan, our story is of farmers who work the land from dawn to dusk to feed their families and produce amazing food for the world to savor.",
+      "followers": {
+        "facebook": 19900,
+        "instagram": 34500
+      },
+      "image_url": "https://i1.feedspot.com/5482262.jpg?t=1760688423"
+    },
+    {
+      "title": "When Apricots Bloom Blog",
+      "feed_url": "https://www.whenapricotsbloom.com/feed/",
+      "website_url": "https://www.whenapricotsbloom.com/",
+      "description": "Check out my traditional Palestinian Recipes from my kitchen to yours. My name is Sarah and here you can read about Palestinian food and my mama's recipes that I've tried to figure out through tons of attempts and bring you measurements and step by step instructions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5482261.jpg?t=1671622201"
+    },
+    {
+      "title": "Fufu's Kitchen",
+      "feed_url": "https://www.fufuskitchen.com/feed/",
+      "website_url": "https://www.fufuskitchen.com/",
+      "description": "Fufu's Kitchen is a food blog that shares delicious and quick recipes that you are sure to enjoy! You don't have to be a professional chef or spend hours in the kitchen to enjoy amazing tastes from around the world. I'll show you how quick and easy it is to make your favorite dishes at home.",
+      "followers": {
+        "instagram": 146900
+      },
+      "image_url": "https://i1.feedspot.com/5075770.jpg?t=1622263415"
+    },
+    {
+      "title": "Chef in disguise",
+      "feed_url": "https://chefindisguise.com/",
+      "website_url": "https://chefindisguise.com/",
+      "description": "Sawsan is the Chef in Disguise that shares easy authentic middle eastern recipes along with family favorites from around the globe. You will also get a taste of life in the middle east, the culture, and the famous landmarks.",
+      "followers": {
+        "facebook": 23200,
+        "twitter": 1200,
+        "instagram": 30700
+      },
+      "image_url": "https://i1.feedspot.com/4432649.jpg?t=1607685835"
+    }
+  ]
+}

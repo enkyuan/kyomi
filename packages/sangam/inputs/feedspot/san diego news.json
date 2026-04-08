@@ -1,0 +1,333 @@
+{
+  "category": "San Diego News",
+  "source_url": "https://rss.feedspot.com/san_diego_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "NBC 7 San Diego",
+      "feed_url": "https://www.nbcsandiego.com/?rss=y",
+      "website_url": "https://www.nbcsandiego.com/",
+      "description": "Get the latest San Diego news, weather, traffic, entertainment and breaking news. Get local San Diego news and national news from NBC 7 San Diego.",
+      "followers": {
+        "facebook": 552000,
+        "twitter": 262500,
+        "instagram": 205900
+      },
+      "image_url": "https://i1.feedspot.com/4824971.jpg?t=1551188164"
+    },
+    {
+      "title": "FOX5 KUSI NEWS",
+      "feed_url": "https://fox5sandiego.com/feed/",
+      "website_url": "https://fox5sandiego.com/",
+      "description": "Get the latest San Diego news, breaking news, weather, traffic, sports, entertainment and video from fox5sandiego.com. Watch live streaming newscasts from FOX 5 San Diego, KSWB Channel 5.",
+      "followers": {
+        "facebook": 659200,
+        "twitter": 217500,
+        "instagram": 158000
+      },
+      "image_url": "https://i1.feedspot.com/3696356.jpg?t=1603896546"
+    },
+    {
+      "title": "CBS 8",
+      "feed_url": "https://feeds.feedblitz.com/cbs8/news",
+      "website_url": "https://www.cbs8.com/",
+      "description": "News 8 and CBS8.com is the local source for San Diego breaking news and top story headlines. Get the latest local San Diego TV news, sports, weather & traffic - KFMB Channel 8, San Diego, Calif.",
+      "followers": {
+        "facebook": 332100,
+        "twitter": 173100
+      },
+      "image_url": "https://i1.feedspot.com/4825005.jpg?t=1516086487"
+    },
+    {
+      "title": "Times of San Diego",
+      "feed_url": "https://timesofsandiego.com/feed/",
+      "website_url": "https://timesofsandiego.com/",
+      "description": "Independent news site covering politics, crime, business, sports, education, arts, military, science, life and thoughtful opinion for the San Diego metro area.",
+      "followers": {
+        "facebook": 11200,
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/4825036.jpg?t=1679635054"
+    },
+    {
+      "title": "Voice of San Diego",
+      "feed_url": "https://voiceofsandiego.org/feed/",
+      "website_url": "https://voiceofsandiego.org/",
+      "description": "Voice of San Diego is a member-based nonprofit investigative news organization that gives citizens the tools they need to engage in important conversations.",
+      "followers": {
+        "facebook": 44200,
+        "twitter": 79800,
+        "instagram": 40000
+      },
+      "image_url": "https://i1.feedspot.com/4825108.jpg?t=1548230530"
+    },
+    {
+      "title": "County News Center",
+      "feed_url": "https://www.countynewscenter.com/news/rss",
+      "website_url": "https://www.countynewscenter.com/",
+      "description": "The purpose of the San Diego County News Center is to share with the public information about the County of San Diego's programs and services that add value to the public's health, safety, neighborhood, and environment.",
+      "followers": {
+        "facebook": 96600,
+        "twitter": 16500,
+        "instagram": 65400
+      },
+      "image_url": "https://i1.feedspot.com/4825080.jpg?t=1679635129"
+    },
+    {
+      "title": "The Coronado Times",
+      "feed_url": "https://coronadotimes.com/feed/",
+      "website_url": "https://coronadotimes.com/",
+      "description": "Find informaion on Coronado Island news, Coronado events, dining, Coronado real estate & homes from Coronado Times News.",
+      "followers": {
+        "facebook": 32299,
+        "twitter": 5600,
+        "instagram": 13100
+      },
+      "image_url": "https://i1.feedspot.com/4825145.jpg?t=1516097251"
+    },
+    {
+      "title": "inewsource",
+      "feed_url": "https://inewsource.org/feed/",
+      "website_url": "https://inewsource.org/",
+      "description": "inewsource is a nonprofit, nonpartisan newsroom dedicated to improving lives in the San Diego region and beyond through impactful, data-based investigative and accountability journalism.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 7300,
+        "instagram": 11200
+      },
+      "image_url": "https://i1.feedspot.com/4825101.jpg?t=1548230205"
+    },
+    {
+      "title": "San Diego Union-Tribune \u00bb Del Mar Times",
+      "feed_url": "https://www.sandiegouniontribune.com/del-mar-times/feed/",
+      "website_url": "https://www.sandiegouniontribune.com/del-mar-times/",
+      "description": "Local news coverage of Del Mar. Featuring local news and events, discussions, announcements, photos and videos.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4825150.jpg?t=1516097528"
+    },
+    {
+      "title": "SDM News",
+      "feed_url": "https://sdmonitornews.com/feed/",
+      "website_url": "https://sdmonitornews.com/",
+      "description": "The New SD Monitor News is a tool, not a source of yesterday's news. What's important to us is that we become instruments of prosperity. In the new San Diego Monitor News you will find great resources that will improve and enlighten you.",
+      "followers": {
+        "facebook": 1000,
+        "instagram": 877
+      },
+      "image_url": "https://i1.feedspot.com/5526793.jpg?t=1679661173"
+    },
+    {
+      "title": "City Times",
+      "feed_url": "https://sdcitytimes.com/feed/",
+      "website_url": "https://sdcitytimes.com/",
+      "description": "City Times is an award-winning news publication based out of the San Diego City College journalism department. Students on the CT staff work on multimedia news reporting and production, including video, podcast, and interactives of all kinds, covering the San Diego City College campus and community better than anyone.",
+      "followers": {
+        "facebook": 614,
+        "twitter": 912,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5526796.jpg?t=1679661109"
+    },
+    {
+      "title": "The San Diego Union-Tribune",
+      "feed_url": "https://www.sandiegouniontribune.com/feed/",
+      "website_url": "https://www.sandiegouniontribune.com/",
+      "description": "PACIFIC covers the latest in lifestyle trends and things to do around San Diego, California, and beyond. PACIFIC strives to improve the lives of America's Finest citizens by keeping you up-to-date with the best concerts, parties, restaurants, and events, while also shining a spotlight on the locals who make it all happen. We connect locals and tourists with the best our city has to offer - via print, mobile, email, online, social media, and events.",
+      "followers": {
+        "facebook": 86200,
+        "twitter": 28100,
+        "instagram": 36300
+      },
+      "image_url": "https://i1.feedspot.com/5526792.jpg?t=1679661078"
+    },
+    {
+      "title": "LGBTQ San Diego County News",
+      "feed_url": "https://lgbtqsd.news/feed/",
+      "website_url": "https://lgbtqsd.news/",
+      "description": "The Paper of Record for the Community",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 3800,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/5648160.jpg?t=1692105838"
+    },
+    {
+      "title": "The Clairemont Times",
+      "feed_url": "https://clairemonttimes.com/feed/",
+      "website_url": "https://clairemonttimes.com/",
+      "description": "'News of the Neighborhoods' serving Clairemont, Bay Park, Linda Vista & Kearny Mesa",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 1600,
+        "instagram": 779
+      },
+      "image_url": "https://i1.feedspot.com/5648158.jpg?t=1692105825"
+    },
+    {
+      "title": "The Coronado News",
+      "feed_url": "https://thecoronadonews.com/feed/",
+      "website_url": "https://thecoronadonews.com/",
+      "description": "The Coronado News is a 24-hour news website and direct-mail free newspaper to all residents and businesses of Coronado as we cover city government, schools, businesses, entertainment, and the Navy.",
+      "followers": {
+        "twitter": 322
+      },
+      "image_url": "https://i1.feedspot.com/5505717.jpg?t=1675862530"
+    },
+    {
+      "title": "The Mesa Press",
+      "feed_url": "https://www.mesapress.com/feed/",
+      "website_url": "https://www.mesapress.com/",
+      "description": "The independent student news site of San Diego Mesa College.",
+      "followers": {
+        "facebook": 462,
+        "twitter": 408,
+        "instagram": 473
+      },
+      "image_url": "https://i1.feedspot.com/5648157.jpg?t=1692105819"
+    },
+    {
+      "title": "Chula Vista Today",
+      "feed_url": "https://www.chulavistatoday.com/feed/",
+      "website_url": "https://www.chulavistatoday.com/",
+      "description": "Chula Vista Local News",
+      "followers": {
+        "facebook": 22000,
+        "twitter": 135,
+        "instagram": 479
+      },
+      "image_url": "https://i1.feedspot.com/5648161.jpg?t=1692105909"
+    },
+    {
+      "title": "The Triton",
+      "feed_url": "https://triton.news/feed/",
+      "website_url": "https://triton.news/",
+      "description": "Independent, student-run news source for the University of California, San Diego.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4834330.jpg?t=1610972710"
+    },
+    {
+      "title": "GaySD Blog",
+      "feed_url": "https://gay-sd.com/feed/",
+      "website_url": "https://gay-sd.com/blog/",
+      "description": "Gay San Diego includes local and national news; insightful social and political commentary; humor; art criticism; film, theater and dining reviews; travel stories; fitness and wellbeing tips; home improvement; gay parenting issues; LGBT history; fun and functional tech advice; regular business information and more.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 153
+      },
+      "image_url": "https://i1.feedspot.com/4825068.jpg?t=1679635188"
+    },
+    {
+      "title": "SDNews.",
+      "feed_url": "https://sdnews.com/feed/",
+      "website_url": "https://sdnews.com/",
+      "description": "The San Diego Community News Group, SDNEWS locally owned and operated and has been delivering high-quality news, community voice, and storytelling since 1988. Currently, we publish seven locally unique community newspapers delivered to the central, affluent neighborhoods of San Diego.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5371893.jpg?t=1681297591"
+    },
+    {
+      "title": "The San Diego Union-Tribune",
+      "feed_url": "https://www.sandiegouniontribune.com/news/rss2.0.xml",
+      "website_url": "https://www.sandiegouniontribune.com/",
+      "description": "Breaking San Diego news from The San Diego Union-Tribune including, national, business, technology, sports, entertainment, lifestyle and local news",
+      "followers": {
+        "facebook": 259700,
+        "twitter": 217100,
+        "instagram": 75800
+      },
+      "image_url": "https://i1.feedspot.com/4539004.jpg?t=1516085026"
+    },
+    {
+      "title": "FOX 5 San Diego",
+      "feed_url": "https://www.kusi.com/feed/",
+      "website_url": "https://fox5sandiego.com/",
+      "description": "KUSI News 9 51 is the source for San Diego news, weather, sports, Turko Files and PPR serving Chula Vista, Oceanside, El Cajon, Poway, National City, Downtown San Diego, Escondido and Pacific Beach.",
+      "followers": {
+        "facebook": 212000,
+        "twitter": 99800
+      },
+      "image_url": "https://i1.feedspot.com/4825014.jpg?t=1679635139"
+    },
+    {
+      "title": "La Prensa",
+      "feed_url": "https://laprensa.org/rss.xml",
+      "website_url": "https://laprensa.org/",
+      "description": "La Prensa San Diego strives to provide compelling and impactful local, national, and international content to inform and empower the Latino community; from breaking news to politics, from arts and entertainment to sports, and everything in between.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 3600,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5526791.jpg?t=1679661094"
+    },
+    {
+      "title": "San Diego County News",
+      "feed_url": "https://sandiegocountynews.com/feed/",
+      "website_url": "https://sandiegocountynews.com/",
+      "description": "San Diego County News is an independent online publication based in Oceanside, CA. We are not owned or operated by a corporation which gives us the ability to pursue stories without interference from top executives. The publication covers national, regional, and local news. We continue to expand our publication and welcome any feedback from readers.",
+      "followers": {
+        "twitter": 70
+      },
+      "image_url": "https://i1.feedspot.com/5526794.jpg?t=1679660982"
+    },
+    {
+      "title": "San Diego County News",
+      "feed_url": "https://sandiegocountynews.com/?feed=rss",
+      "website_url": "https://sandiegocountynews.com/",
+      "description": "Independent publication serving San Diego County",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/news@sandiegocountynews.com5648162.jpg?t=1692106106"
+    },
+    {
+      "title": "WhatNow \u00bb San Diego",
+      "feed_url": "https://whatnow.com/san-diego/feed/",
+      "website_url": "https://whatnow.com/san-diego/",
+      "description": "What Now San Diego is the premier news source for planned restaurants, retail, and real estate in the San Diego, CA area. Learn what's trending in SD today!",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 218
+      },
+      "image_url": "https://i1.feedspot.com/5648165.jpg?t=1692108189"
+    },
+    {
+      "title": "San Marcos Daily Record",
+      "feed_url": "https://www.sanmarcosrecord.com/rss.xml",
+      "website_url": "https://www.sanmarcosrecord.com/",
+      "description": "We bring you your latest San Marcos news, all in one place. Construction, education, local businesses and events are just a few topics found in our publication.",
+      "followers": {
+        "facebook": 23900,
+        "twitter": 4500,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4825189.jpg?t=1516099427"
+    },
+    {
+      "title": "San Diego News Desk",
+      "feed_url": "https://www.sandiegonewsdesk.com/feed/",
+      "website_url": "https://sandiegonewsdesk.com/",
+      "description": "San Diego News Desk is a news site that is dedicated to bringing the latest breaking news and what is happening in our county. San Diego News Desk is committed to covering politics, economy, education, military, and opinion, and keeping the public informed.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 411,
+        "instagram": 789
+      },
+      "image_url": "https://i1.feedspot.com/5526795.jpg?t=1679909540"
+    },
+    {
+      "title": "Point Loma & OB Monthly",
+      "feed_url": "https://www.pointloma-obmonthly.com/index.rss",
+      "website_url": "https://www.sandiegouniontribune.com/point-loma-ob-monthly/",
+      "description": "Local news coverage of Point Loma and Ocean Beach. Featuring local news and events, business listings, discussions, announcements, photos and videos.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5648159.jpg?t=1692106194"
+    }
+  ]
+}

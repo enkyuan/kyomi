@@ -1,0 +1,62 @@
+{
+  "category": "Chicago Dance",
+  "source_url": "https://rss.feedspot.com/chicago_dance_rss_feeds",
+  "feeds": [
+    {
+      "title": "South Chicago Dance Theatre Blog",
+      "feed_url": "https://www.southchicagodancetheatre.com/feed/",
+      "website_url": "https://www.southchicagodancetheatre.com/blog/",
+      "description": "The official website of the South Chicago Dance Theatre updates followers on what's coming at the SCDT. Keep track of the latest programs, events, and announcements here. South Chicago Dance Theatre (SCDT) is a multicultural organization seamlessly fusing classical and contemporary dance styles as well as preserving historic dance work.",
+      "followers": {
+        "facebook": 1700,
+        "instagram": 10400
+      },
+      "image_url": "https://i1.feedspot.com/5566572.jpg?t=1699446332"
+    },
+    {
+      "title": "WTTW \u00bb Dance",
+      "feed_url": "https://news.wttw.com/taxonomy/term/4054/all/feed",
+      "website_url": "https://news.wttw.com/tags/dance",
+      "description": "Enjoy a spirited, dynamic coverage of Chicago's native Dance Communities from WTTW, as you read the latest Dance-focused headlines and running stories here. As Chicago's PBS station, WTTW is committed to producing and presenting independent, trusted, best-in-class content fueled by a distinctly Chicago sensibility.",
+      "followers": {
+        "twitter": 80600,
+        "instagram": 41100
+      },
+      "image_url": "https://i1.feedspot.com/5708364.jpg?t=1699446220"
+    },
+    {
+      "title": "The Sway Dance Blog",
+      "feed_url": "https://www.swaydancechicago.com/blog?format=rss",
+      "website_url": "https://www.swaydancechicago.com/blog",
+      "description": "The Sway Dance is a collaborative, energetic dance community located in the heart of Chicago. They offer a variety of ways for individuals to learn and explore the art of dancing. View their blog updates to know more about their upcoming lessons, classes, events, and venue.",
+      "followers": {
+        "facebook": 1900,
+        "instagram": 694
+      },
+      "image_url": "https://i1.feedspot.com/5708361.jpg?t=1699446194"
+    },
+    {
+      "title": "Ballroom College Blog",
+      "feed_url": "https://www.ballroomcollege.com/dance-blog?format=rss",
+      "website_url": "https://www.ballroomcollege.com/dance-blog",
+      "description": "Ballroom College is a BYOB, Budget-friendly Dance lesson school teaching some of the most up-to-date dance steps and teaching techniques through its amazing team of teachers. Their blog offers resources and updates about their curriculum, class timings, and other things that dance well.",
+      "followers": {
+        "facebook": 81,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5708362.jpg?t=1699446389"
+    },
+    {
+      "title": "Windy City Wedding Dance Blog",
+      "feed_url": "https://windycityweddingdance.com/feed",
+      "website_url": "https://windycityweddingdance.com/blog",
+      "description": "Find perfect ideas and inspiration to start dance lessons and master the skill as a beginner. Windy City Wedding Dance offers custom Wedding Dance and Ballroom lessons for beginner, intermediate, and advanced-level clients. Tell your love story through your first dance.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 212,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4825745.jpg?t=1699446425"
+    }
+  ]
+}

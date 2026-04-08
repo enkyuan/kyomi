@@ -1,0 +1,37 @@
+{
+  "category": "Turner Syndrome",
+  "source_url": "https://rss.feedspot.com/turner_syndrome_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Butterfly Mum",
+      "feed_url": "https://thebutterflymum.com/feed/",
+      "website_url": "https://thebutterflymum.com/blog-2/",
+      "description": "Hello, world! My name is Gina Parpart. I am married to my husband Josh. We have 3 beautiful children, 2 girls and 1 boy, Arabella, Gracie, and Jamis. I homeschool my children and love it! My daughter Gracie was diagnosed with Turner Syndrome when I was only 12 weeks pregnant. It was a day I will never forget. A day that changed my life forever. I will reveal to you all my struggles, pain, heartache, you name it, I probably went through it. I bet you're wondering why a Butterfly? Well, the symbol for Turner Syndrome girls is a butterfly symbol.",
+      "followers": {
+        "facebook": 47,
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/5289557.jpg?t=1623068705"
+    },
+    {
+      "title": "My Turner Syndrome Journey",
+      "feed_url": "https://myturnersyndromejourney.blogspot.com/feeds/posts/default",
+      "website_url": "https://myturnersyndromejourney.blogspot.com/",
+      "description": "Hi. My name is Donna. Lori and I have become united in a desire to bring awareness about TS, and vital information to others, by creating this blog and organizing a blog hop with many of our creatively supportive friends.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5289556.jpg?t=1623068377"
+    },
+    {
+      "title": "Turner Syndrome Foundation Blog",
+      "feed_url": "https://turnersyndromefoundation.org/feed/",
+      "website_url": "https://turnersyndromefoundation.org/blog-latest-articles/",
+      "description": "The mission of the Turner Syndrome Foundation (TSF) is to support research initiatives and facilitate education programs that increase professional awareness and enhance the medical care of those affected by Turner syndrome. Early diagnosis and comprehensive treatments over the lifespan may lead to a brighter and healthier future for all young girls and women with Turner syndrome. TSF is a registered 501(c)(3) nonprofit organization.",
+      "followers": {
+        "facebook": 16000,
+        "twitter": 231,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5289554.jpg?t=1623067602"
+    }
+  ]
+}

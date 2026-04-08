@@ -1,0 +1,69 @@
+{
+  "category": "European Economics",
+  "source_url": "https://rss.feedspot.com/european_economics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Global & European Dynamics",
+      "feed_url": "https://globaleurope.eu/feed/",
+      "website_url": "https://globaleurope.eu/",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5695238.jpg?t=1698054319"
+    },
+    {
+      "title": "European Centre for International Political Economy (ECIPE) Blog",
+      "feed_url": "https://ecipe.org/feed/",
+      "website_url": "https://ecipe.org/blog/",
+      "description": "The European Centre for International Political Economy (ECIPE) is an independent and non-profit policy research think tank. We are a research-based think tank with the ambition of providing decision-makers and observers with sound economic and political analysis.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 9600
+      },
+      "image_url": "https://i1.feedspot.com/5384722.jpg?t=1648126404"
+    },
+    {
+      "title": "European Historical Economics Society Blog",
+      "feed_url": "https://ehes.org/category/blog/feed/",
+      "website_url": "https://ehes.org/category/blog/",
+      "description": "EHES website and blog",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5695242.jpg?t=1698054470"
+    },
+    {
+      "title": "Ecoscope Blog",
+      "feed_url": "https://oecdecoscope.blog/feed/",
+      "website_url": "https://oecdecoscope.blog/",
+      "description": "AN ECONOMIC LENS ON POLICIES FOR GROWTH AND WELLBEING",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5695237.jpg?t=1698054313"
+    },
+    {
+      "title": "Centre for Economic Strategy News",
+      "feed_url": "https://ces.org.ua/en/feed/",
+      "website_url": "https://ces.org.ua/en/category/news-list-en/",
+      "description": "Non-governmental research center on economic policy issues",
+      "followers": {
+        "facebook": 13500,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5695239.jpg?t=1698054324"
+    },
+    {
+      "title": "OFCE Blog",
+      "feed_url": "https://www.ofce.sciences-po.fr/blog/en/feed/",
+      "website_url": "https://www.ofce.sciences-po.fr/blog/en/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5695240.jpg?t=1698054445"
+    },
+    {
+      "title": "Euro Economics Blog",
+      "feed_url": "https://www.euroeconomics.com/en/feed/",
+      "website_url": "https://www.euroeconomics.com/en/blog/",
+      "description": "Quality Partner Spain",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5695241.jpg?t=1698054525"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "category": "Natural Wine",
+  "source_url": "https://rss.feedspot.com/natural_wine_rss_feeds",
+  "feeds": [
+    {
+      "title": "Natural Merchants Blog",
+      "feed_url": "https://naturalmerchants.com/feed/",
+      "website_url": "https://naturalmerchants.com/blog",
+      "description": "Founded in 2004, Natural Merchants is one of North America's leading importers of the finest natural organic and Biodynamic wines from leading family-produced wineries across the globe. Natural Merchants' product selection represents the best the planet has to offer - high-quality natural wine brands including organic wine without sulfites, wine made with 100% organically grown grapes, and Biodynamic wine.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 568,
+        "instagram": 556
+      },
+      "image_url": "https://i1.feedspot.com/5385626.jpg?t=1648464615"
+    },
+    {
+      "title": "The Feiring Line",
+      "feed_url": "https://thefeiringline.com/feed/",
+      "website_url": "https://thefeiringline.com/blog/",
+      "description": "The Feiring Line, the world's first independent natural wine newsletter was launched in the fury of Hurricane Sandy, Halloween 2013. This is a fully searchable database packed with the best people, vineyards, and bottles the natural wine world has to offer.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 15800,
+        "instagram": 32900
+      },
+      "image_url": "https://i1.feedspot.com/5254619.jpg?t=1648465061"
+    }
+  ]
+}

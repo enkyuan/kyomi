@@ -1,0 +1,71 @@
+{
+  "category": "Spain Basketball",
+  "source_url": "https://rss.feedspot.com/spain_basketball_rss_feeds",
+  "feeds": [
+    {
+      "title": "Eurohoops \u00bb Spain",
+      "feed_url": "https://www.eurohoops.net/basket/spain/feed/",
+      "website_url": "https://www.eurohoops.net/basket/spain/",
+      "description": "Eurohoops is a basketball news website that focuses on Spanish basketball. It provides news, scores, standings, statistics, and schedules for the Spanish ACB league, as well as the Spanish national basketball team. The blog also features interviews with players and coaches and an analysis of Spanish basketball.",
+      "followers": {
+        "facebook": 93900,
+        "twitter": 110000,
+        "instagram": 274100
+      },
+      "image_url": "https://i1.feedspot.com/5640563.jpg?t=1690883869"
+    },
+    {
+      "title": "As.com \u00bb Baloncesto",
+      "feed_url": "https://feeds.as.com/mrss-s/pages/as/site/as.com/section/baloncesto/portada/",
+      "website_url": "https://as.com/baloncesto/",
+      "description": "Baloncesto en AS.com - Noticias de baloncesto ACB, NBA, Euroliga y Eurocup adem\u00e1s del Eurobasket con resultados, clasificaciones y equipos en As.com.",
+      "followers": {
+        "facebook": 4300000,
+        "twitter": 3300000,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/5640562.jpg?t=1743570790"
+    },
+    {
+      "title": "Blog de Basket",
+      "feed_url": "https://feeds.feedburner.com/blogdebasket/feed",
+      "website_url": "https://www.blogdebasket.com/",
+      "description": "Basket Blog offers you the best news about basketball and ACB, Euroleague, NBA teams, enter the world of basketball.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/5640564.jpg?t=1690883889"
+    },
+    {
+      "title": "Basketing",
+      "feed_url": "https://encestando.es/feed/",
+      "website_url": "https://encestando.es/",
+      "description": "Encestando.es is your basketball blog in Spanish. Be informed of the latest news related to the world of basketball. The blog provides news, updates, team information, player profiles, and feature stories about the basketball world.",
+      "followers": {
+        "facebook": 3300
+      },
+      "image_url": "https://i1.feedspot.com/785997.jpg?t=1691567015"
+    },
+    {
+      "title": "Basketball Giants",
+      "feed_url": "https://www.gigantes.com/feed/",
+      "website_url": "https://www.gigantes.com/",
+      "description": "Gigantes del Basket is the quintessential basketball magazine in Spain. A historic header that since its birth in 1985 has been punctually attending its monthly appointment with its readers for more than 35 years and is present wherever news related to the sport of baskets is produced. But now, in 2021, Gigantes del Basket is much more than a magazine. They are a group dedicated to information and news about basketball and that seeks to promote the practice of our sport and bring it closer to all corners.",
+      "followers": {
+        "facebook": 94100,
+        "twitter": 174600,
+        "instagram": 111600
+      },
+      "image_url": "https://i1.feedspot.com/5640565.jpg?t=1690883906"
+    },
+    {
+      "title": "Vive El Basket Con Eduardo Burgos",
+      "feed_url": "https://viveelbasket.blogspot.com/feeds/posts/default",
+      "website_url": "https://viveelbasket.blogspot.com/",
+      "description": "Vive El Basket Con Eduardo Burgos blog is managed by Edwards Burgos a Senior Basketball Coach, Specialist Teacher in Physical Education and Superior Sports. The blog shares Tips and drills for players of all skill levels. This could include drills for improving shooting, passing, dribbling, and defense. The blog also shares in-depth articles on the basketball world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5640561.jpg?t=1690883979"
+    }
+  ]
+}

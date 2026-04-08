@@ -1,0 +1,81 @@
+{
+  "category": "Tableau Software",
+  "source_url": "https://rss.feedspot.com/tableau_software_rss_feeds",
+  "feeds": [
+    {
+      "title": "Biztory blog",
+      "feed_url": "https://www.biztory.com/blog/rss.xml",
+      "website_url": "https://www.biztory.com/blog",
+      "description": "With offices in Belgium, The Netherlands, The United Kingdom, and Germany, we are ideally situated to help you achieve your analytical goals. We have the most skilled and certified Tableau consultants , bringing significant expertise to our client portfolio. Biztory can help you solve any analytical challenge, whether on a technical or business level. Get the latest Tableau News from the Biztory team.",
+      "followers": {
+        "facebook": 233,
+        "twitter": 696
+      },
+      "image_url": "https://i1.feedspot.com/5122204.jpg?t=1623821556"
+    },
+    {
+      "title": "Vizartpandey \u00bb Tableau",
+      "feed_url": "https://medium.com/feed/@rajvivan11",
+      "website_url": "https://alexloth.com/tag/tableau/",
+      "description": "The heart and soul of this blog are here where I share my Tableau visualizations along with a detailed step-by-step breakdown of how I did it.",
+      "followers": {
+        "twitter": 2300,
+        "instagram": 478
+      },
+      "image_url": "https://i1.feedspot.com/5122375.jpg?t=1623051945"
+    },
+    {
+      "title": "Alexloth.com \u00bb Tableau",
+      "feed_url": "https://alexloth.com/tag/tableau/feed/",
+      "website_url": "https://alexloth.com/tag/tableau/",
+      "description": "Alexander Loth is an entrepreneur and published author who believes in turning ideas into reality. This blog covers topics such as Visual Analytics with Tableau, Data visualization with Tableau, Tableau Training & Tutorial Videos.",
+      "followers": {
+        "twitter": 13600
+      },
+      "image_url": "https://i1.feedspot.com/5122202.jpg"
+    },
+    {
+      "title": "Data Vizzes",
+      "feed_url": "https://vizzingdata.com/feed/",
+      "website_url": "https://vizzingdata.com/",
+      "description": "This blog aims at individuals who would like to make a career transition to Analytics and Data Visualization as well as those who are working in this domain and would like to expand their skillsets.",
+      "followers": {
+        "facebook": 87,
+        "twitter": 224
+      },
+      "image_url": "https://i1.feedspot.com/5126911.jpg?t=1625555713"
+    },
+    {
+      "title": "TAR Solutions",
+      "feed_url": "https://tarsolutions.co.uk/feed/",
+      "website_url": "https://tarsolutions.co.uk/blog/",
+      "description": "We create business solutions based on knowledge, expertise and understanding. We can help you manage the data so you concentrate on managing the assets We understand the complexity of your business, from the Front Office to Back Office, Risk to Compliance, we can assist in all areas of investment banking.",
+      "followers": {
+        "twitter": 110
+      },
+      "image_url": "https://i1.feedspot.com/5129017.jpg?t=1625555724"
+    },
+    {
+      "title": "Tableau Blog",
+      "feed_url": "https://www.tableau.com/feed.rss",
+      "website_url": "https://www.tableau.com/blog",
+      "description": "Tableau is a visual analytics software for business intelligence. Get a collection of news, tips & tricks, training, entertainment, and happenings around Tableau.",
+      "followers": {
+        "facebook": 345100,
+        "twitter": 175000
+      },
+      "image_url": "https://i1.feedspot.com/4669966.jpg?t=1625555664"
+    },
+    {
+      "title": "Infotopics Blog",
+      "feed_url": "https://appsfortableau.infotopics.com/blog/",
+      "website_url": "https://appsfortableau.infotopics.com/blog/",
+      "description": "Apps for Tableau is our platform to share extensions for Tableau Dashboard creators. Boost Tableau's performance, interactivity, and flexibility!",
+      "followers": {
+        "facebook": 169,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5122296.jpg?t=1625555671"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "category": "ELLE",
+  "source_url": "https://rss.feedspot.com/elle_rss_feeds",
+  "feeds": [
+    {
+      "title": "Elle",
+      "feed_url": "https://www.elle.com/rss/default.xml",
+      "website_url": "https://www.elle.com/",
+      "description": "Watch runway shows from the hottest fashion designers, scope out the best-dressed celebrities on the red carpet, discover the latest and greatest beauty products to maintain a healthy glow, and get a sneak peek at our celebrity cover shoots.",
+      "followers": {
+        "facebook": 5900000,
+        "twitter": 6800000,
+        "instagram": 7600000
+      },
+      "image_url": "https://i1.feedspot.com/7843889.jpg?t=1736331133"
+    },
+    {
+      "title": "Elle \u00bb Fashion",
+      "feed_url": "https://www.elle.com/rss/fashion.xml",
+      "website_url": "https://www.elle.com/fashion/",
+      "description": "From fashion week coverage and the best-dressed stars on the red carpet, to what's chic on the streets and trends to watch out for this season, the ELLE editors give you behind-the-scenes access to everything that's fashionable.",
+      "followers": {
+        "facebook": 5900000,
+        "twitter": 6800000,
+        "instagram": 7600000
+      },
+      "image_url": "https://i1.feedspot.com/7843889.jpg?t=1736331133"
+    },
+    {
+      "title": "Elle \u00bb Beauty",
+      "feed_url": "https://www.elle.com/rss/beauty.xml",
+      "website_url": "https://www.elle.com/beauty/",
+      "description": "Get each month's beauty 'it list', find out what beauty products your favorite celebrities use, and see which celebs underwent this year's biggest beauty makeovers.",
+      "followers": {
+        "facebook": 5900000,
+        "twitter": 6800000,
+        "instagram": 7600000
+      },
+      "image_url": "https://i1.feedspot.com/7843889.jpg?t=1736331133"
+    },
+    {
+      "title": "Elle \u00bb Culture",
+      "feed_url": "https://www.elle.com/rss/culture.xml",
+      "website_url": "https://www.elle.com/culture/",
+      "description": "The latest and greatest in pop culture: go behind the scenes to view ELLE cover shoots and read exclusive interviews with the biggest celebrities.",
+      "followers": {
+        "facebook": 5900000,
+        "twitter": 6800000,
+        "instagram": 7600000
+      },
+      "image_url": "https://i1.feedspot.com/7843889.jpg?t=1736331133"
+    },
+    {
+      "title": "Elle \u00bb Horoscopes",
+      "feed_url": "https://www.elle.com/rss/horoscopes.xml",
+      "website_url": "https://www.elle.com/horoscopes/",
+      "description": "The Astro Twins forecast every sign's horoscope for today, this week, this month, and your love compatibility matches. Find out your health, body, love, romance, career, and money horoscopes.",
+      "followers": {
+        "facebook": 5900000,
+        "twitter": 6800000,
+        "instagram": 7600000
+      },
+      "image_url": "https://i1.feedspot.com/7843889.jpg?t=1736331133"
+    }
+  ]
+}

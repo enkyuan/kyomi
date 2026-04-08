@@ -1,0 +1,493 @@
+{
+  "category": "California News",
+  "source_url": "https://rss.feedspot.com/california_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Los Angeles Times",
+      "feed_url": "https://www.latimes.com/news/rss2.0.xml",
+      "website_url": "https://www.latimes.com/",
+      "description": "The LA Times is a leading source of breaking news, entertainment, sports, politics, and more for the nation, world and California.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 3800000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/94.jpg?t=1541479676"
+    },
+    {
+      "title": "NBC Los Angeles",
+      "feed_url": "https://www.nbclosangeles.com/?rss=y",
+      "website_url": "https://www.nbclosangeles.com/",
+      "description": "Get the latest Los Angeles weather, traffic, politics, sports, and entertainment news in LA, Orange County, San Bernardino, Riverside, and Ventura. Get LA news, LA breaking local and national news from NBC Southern California.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 598900,
+        "instagram": 369800
+      },
+      "image_url": "https://i1.feedspot.com/4821568.jpg?t=1551333704"
+    },
+    {
+      "title": "Cal Matters",
+      "feed_url": "https://calmatters.org/feed/",
+      "website_url": "https://calmatters.org/",
+      "description": "CalMatters is a nonprofit news organization focused on California policy and politics. It provides in-depth coverage and analysis of state issues such as education, healthcare, environment, and economic policies. The site features articles, opinion pieces, data visualizations, and multimedia content aimed at informing and engaging the public on critical state matters.",
+      "followers": {
+        "facebook": 26500,
+        "twitter": 48100,
+        "instagram": 34200
+      },
+      "image_url": "https://i1.feedspot.com/4983121.jpg?t=1721740593"
+    },
+    {
+      "title": "The Mercury News",
+      "feed_url": "https://www.mercurynews.com/feed/",
+      "website_url": "https://www.mercurynews.com/",
+      "description": "The Mercury News is the leading source of breaking news, local news, sports, business, entertainment, lifestyle and opinion for Silicon Valley, San Francisco Bay Area and beyond.",
+      "followers": {
+        "facebook": 195500,
+        "twitter": 276900,
+        "instagram": 31900
+      },
+      "image_url": "https://i1.feedspot.com/4823433.jpg?t=1515998119"
+    },
+    {
+      "title": "Los Angeles Daily News",
+      "feed_url": "https://www.dailynews.com/feed/",
+      "website_url": "https://www.dailynews.com/",
+      "description": "The Los Angeles Daily News is the local news source for Los Angeles and the San Fernando Valley region, providing breaking news, sports, business, entertainment, things to do, opinion, photos, videos and more from L.A.",
+      "followers": {
+        "facebook": 63000,
+        "twitter": 66000,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4821501.jpg?t=1754309937"
+    },
+    {
+      "title": "Silicon Valley",
+      "feed_url": "https://www.siliconvalley.com/feed/",
+      "website_url": "https://www.siliconvalley.com/",
+      "description": "SiliconValley.com is a leading source of news and commentary about technology, startups, innovation, and tech policy. They are covering the latest innovations, start-up funding, local government, big tech news, and more. Stay current on Silicon Valley and World tech news with their updates.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4823533.jpg?t=1705923086"
+    },
+    {
+      "title": "East Bay Express",
+      "feed_url": "https://eastbayexpress.com/feed/",
+      "website_url": "https://eastbayexpress.com/",
+      "description": "The East Bay Express is the local alternative to mainstream media. We seek to promote truth, expose wrongdoing, and give voice to the voiceless. We are dedicated to local arts and culture. Get News, arts, and dining coverage for Oakland, Berkeley, and the greater East Bay.",
+      "followers": {
+        "facebook": 20000,
+        "twitter": 61600,
+        "instagram": 16900
+      },
+      "image_url": "https://i1.feedspot.com/4663888.jpg?t=1612934613"
+    },
+    {
+      "title": "KTLA",
+      "feed_url": "https://ktla.com/feed/",
+      "website_url": "https://ktla.com/",
+      "description": "Get round-the-clock news stories and updates on trending Los Angeles affairs here at ktla.com. LA's very own KTLA 5 news team covers News, Sports, Weather, Community and your Daily morning rundowns. KTLA 5 is a Los Angeles News and Video for Southern California.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1000000,
+        "instagram": 952400
+      },
+      "image_url": "https://i1.feedspot.com/927031.jpg?t=1754310252"
+    },
+    {
+      "title": "UC Berkeley News",
+      "feed_url": "https://news.berkeley.edu/feed/",
+      "website_url": "https://news.berkeley.edu/",
+      "description": "Berkeley News is UC Berkeley's main news and information engine. Stories are posted daily by the team of writers, editors and digital media producers in the Editorial Services and Media Relations sections of the Office of Communications and Public Affairs.",
+      "followers": {
+        "facebook": 514700,
+        "twitter": 247500,
+        "instagram": 375300
+      },
+      "image_url": "https://i1.feedspot.com/5311057.jpg?t=1761286923"
+    },
+    {
+      "title": "Orange County Register",
+      "feed_url": "https://www.ocregister.com/feed/",
+      "website_url": "https://www.ocregister.com/",
+      "description": "The Orange County Register is a three-time Pulitzer Prize-winning newspaper focused on serving Orange County and helping it thrive. The Orange County Register is part of Southern California News Group, which operates 11 daily newspapers and associated websites in Southern California. It covers local news in Orange County, California national news, sports, things to do, and the best places to eat, business, and the Orange County housing market.",
+      "followers": {
+        "facebook": 186400,
+        "twitter": 262600,
+        "instagram": 107300
+      },
+      "image_url": "https://i1.feedspot.com/4823457.jpg?t=1587039910"
+    },
+    {
+      "title": "KRON4",
+      "feed_url": "https://www.kron4.com/feed/",
+      "website_url": "https://www.kron4.com/",
+      "description": "We tell local San Francisco news & weather stories, and we do what we do to make the Bay Area a better place to live. On Nov. 15, 1949, Harry Truman was in the White House, World War II had ended, the Cold War was beginning, and in the basement of the San Francisco Chronicle Building at 5th and Mission, KRON4 News first signed on.",
+      "followers": {
+        "facebook": 742500,
+        "twitter": 293200,
+        "instagram": 102200
+      },
+      "image_url": "https://i1.feedspot.com/4407213.jpg?t=1603896528"
+    },
+    {
+      "title": "NBC Bay Area",
+      "feed_url": "https://www.nbcbayarea.com/?rss=y",
+      "website_url": "https://www.nbcbayarea.com/",
+      "description": "Get the latest Bay Area news, weather, traffic, entertainment and health. Get local Bay Area new, breaking news, and national news from NBC Bay Area.",
+      "followers": {
+        "facebook": 667900,
+        "twitter": 399300,
+        "instagram": 229000
+      },
+      "image_url": "https://i1.feedspot.com/4823484.jpg?t=1515830255"
+    },
+    {
+      "title": "Marin Independent Journal",
+      "feed_url": "https://www.marinij.com/feed/",
+      "website_url": "https://www.marinij.com/",
+      "description": "Marin Independent Journal, Your local source for breaking news, sports, business, classifieds, and entertainment in San Rafael.",
+      "followers": {
+        "facebook": 22300,
+        "twitter": 28100,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/4824396.jpg?t=1516011355"
+    },
+    {
+      "title": "Monterey Herald",
+      "feed_url": "https://www.montereyherald.com/feed/",
+      "website_url": "https://www.montereyherald.com/",
+      "description": "Monterey County Herald is your local source for breaking news, sports, business, classifieds, and entertainment in Monterey.",
+      "followers": {
+        "facebook": 18800,
+        "twitter": 25900,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4824108.jpg?t=1515992884"
+    },
+    {
+      "title": "Santa Barbara Independent",
+      "feed_url": "https://www.independent.com/feed/",
+      "website_url": "https://www.independent.com/",
+      "description": "Find Santa Barbara's latest news, features, opinions, arts coverage, and entertainment calendar, every week!",
+      "followers": {
+        "facebook": 61000,
+        "twitter": 4,
+        "instagram": 51500
+      },
+      "image_url": "https://i1.feedspot.com/4824540.jpg?t=1516020285"
+    },
+    {
+      "title": "SLO New Times",
+      "feed_url": "https://www.newtimesslo.com/sanluisobispo/Rss.xml",
+      "website_url": "https://www.newtimesslo.com/",
+      "description": "New Times has been publishing for more than 30 years in San Luis Obispo County, CA and is the largest circulated paper in the region covering local news and entertainment each week.",
+      "followers": {
+        "facebook": 12100,
+        "twitter": 10600,
+        "instagram": 10600
+      },
+      "image_url": "https://i1.feedspot.com/4824530.jpg?t=1516019674"
+    },
+    {
+      "title": "The Mendocino Voice",
+      "feed_url": "https://mendovoice.com/feed/",
+      "website_url": "https://mendovoice.com/",
+      "description": "We are The Mendocino Voice, news for all of Mendocino County.",
+      "followers": {
+        "facebook": 24400,
+        "twitter": 3300,
+        "instagram": 6400
+      },
+      "image_url": "https://i1.feedspot.com/4824410.jpg?t=1516012197"
+    },
+    {
+      "title": "Capitol Weekly",
+      "feed_url": "http://capitolweekly.net/feed/",
+      "website_url": "https://capitolweekly.net/",
+      "description": "This is a non-profit organization which helps to inform, enlighten and educate Californians about public policy and state governance, and to provide a platform for engagement with public officials, advocates and political interests.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 17000
+      },
+      "image_url": "https://i1.feedspot.com/4823559.jpg?t=1515837927"
+    },
+    {
+      "title": "BenitoLink",
+      "feed_url": "https://benitolink.com/feed/",
+      "website_url": "https://benitolink.com/",
+      "description": "Benitolink is a community news service for San Benito County.",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 1200,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4824495.jpg?t=1516017697"
+    },
+    {
+      "title": "The Berkeley Scanner",
+      "feed_url": "https://www.berkeleyscanner.com/rss/",
+      "website_url": "https://www.berkeleyscanner.com/",
+      "description": "Find timely, comprehensive crime and public safety news for Berkeley, CA. The Berkeley Scanner is an independent online news outlet that's laser-focused on public safety stories and trends in Berkeley, California.",
+      "followers": {
+        "facebook": 760,
+        "twitter": 6500,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5460772.jpg?t=1666959417"
+    },
+    {
+      "title": "The Sacramento Observer",
+      "feed_url": "https://sacobserver.com/feed/",
+      "website_url": "https://sacobserver.com/",
+      "description": "The online resource for the African American community in Sacramento.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 2700,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4823517.jpg?t=1515834670"
+    },
+    {
+      "title": "Paso Robles Press",
+      "feed_url": "https://pasoroblespress.com/feed/",
+      "website_url": "https://pasoroblespress.com/",
+      "description": "We are the No. 1 online and weekly printed news source for Paso Robles and North San Luis Obispo County, since 1916. Get all the latest breaking news, commentary, comprehensive coverage, and local profiles from The Paso Robles Press, we are the best-read, most-trusted news source for our community.",
+      "followers": {
+        "facebook": 8,
+        "twitter": 43,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5084769.jpg?t=1588221682"
+    },
+    {
+      "title": "Chico Enterprise-Record",
+      "feed_url": "https://www.chicoer.com/news/feed/",
+      "website_url": "https://www.chicoer.com/news/",
+      "description": "In-depth coverage of Local news articles, photos, videos and breaking news for Chico and the US and more.",
+      "followers": {
+        "facebook": 24300,
+        "twitter": 14200,
+        "instagram": 6700
+      },
+      "image_url": "https://i1.feedspot.com/4824275.jpg?t=1626688811"
+    },
+    {
+      "title": "North Coast Journal",
+      "feed_url": "https://www.northcoastjournal.com/humboldt/Rss.xml",
+      "website_url": "https://www.northcoastjournal.com/",
+      "description": "The North Coast Journal is the definitive source of information for local news, music, art, entertainment, restaurants, reviews, and events in Humboldt County.",
+      "followers": {
+        "facebook": 19900,
+        "twitter": 6200,
+        "instagram": 10900
+      },
+      "image_url": "https://i1.feedspot.com/4824340.jpg?t=1676462824"
+    },
+    {
+      "title": "San Benito News",
+      "feed_url": "https://www.sbnewspaper.com/feed/",
+      "website_url": "https://www.sbnewspaper.com/",
+      "description": "San Benito News aim is to provide fair and comprehensive coverage of local news, events, sports and entertainment.",
+      "followers": {
+        "facebook": 14000,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4824500.jpg?t=1516018048"
+    },
+    {
+      "title": "Mendocino Sports Plus",
+      "feed_url": "https://mendocinosports.plus/feed/",
+      "website_url": "https://mendocinosports.plus/",
+      "description": "Mendocino Sports Plus is an independent (pending) non-profit, hyperlocal website dedicated to covering coastal news as well as sports on the Mendocino Coast, particularly high school sports. MSP has covered everything from Mendocino T-ball games to the National Division 1A College Rugby Championships.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5045697.jpg"
+    },
+    {
+      "title": "The San Diego Union-Tribune",
+      "feed_url": "https://www.sandiegouniontribune.com/news/rss2.0.xml",
+      "website_url": "https://www.sandiegouniontribune.com/",
+      "description": "Breaking San Diego news from The San Diego Union-Tribune including, national, business, technology, sports, entertainment, lifestyle and local news",
+      "followers": {
+        "facebook": 259700,
+        "twitter": 217100,
+        "instagram": 75800
+      },
+      "image_url": "https://i1.feedspot.com/4539004.jpg?t=1516085026"
+    },
+    {
+      "title": "Berkeleyside",
+      "feed_url": "https://www.berkeleyside.org/feed",
+      "website_url": "https://www.berkeleyside.org/",
+      "description": "Berkeleyside is the leading local news source for breaking news, public safety, politics, food, real estate and development, education and more in Berkeley, California.",
+      "followers": {
+        "facebook": 39000,
+        "twitter": 70300,
+        "instagram": 23500
+      },
+      "image_url": "https://i1.feedspot.com/99197.jpg?t=1587447749"
+    },
+    {
+      "title": "SFGate",
+      "feed_url": "https://www.sfgate.com/",
+      "website_url": "https://www.sfgate.com/",
+      "description": "Your San Francisco Bay Area local news source plus the latest in sports, culture, weather, food and drink, politics, real estate, Lake Tahoe and California Parks. Launched in 1994, SFGATE.com was one of the first large-market media sites in the world and served as the exclusive digital home of the San Francisco Chronicle. The site, which was initially known as The Gate until officially becoming SFGATE in 1998",
+      "followers": {
+        "facebook": 802000,
+        "twitter": 493100,
+        "instagram": 337500
+      },
+      "image_url": "https://i1.feedspot.com/135151.jpg?t=1667302818"
+    },
+    {
+      "title": "The Sacramento Bee",
+      "feed_url": "https://feeds.mcclatchy.com/sacbee/stories",
+      "website_url": "https://www.sfchronicle.com/",
+      "description": "Find daily local breaking news, opinion columns, videos and community events Northern California news.",
+      "followers": {
+        "facebook": 202000,
+        "twitter": 254800
+      },
+      "image_url": "https://i1.feedspot.com/4823445.jpg?t=1515827844"
+    },
+    {
+      "title": "The Fresno Bee",
+      "feed_url": "https://feeds.mcclatchy.com/fresnobee/sections/news/stories",
+      "website_url": "https://www.laweekly.com/",
+      "description": "Read the latest local news, from Fresno and the Central Valley area, and around the country and world by The Fresno Bee and FresnoBee.com.",
+      "followers": {
+        "facebook": 154000,
+        "twitter": 98700
+      },
+      "image_url": "https://i1.feedspot.com/4823523.jpg?t=1515835275"
+    },
+    {
+      "title": "L.A. Weekly",
+      "feed_url": "https://www.laweekly.com/feed/",
+      "website_url": "https://www.laweekly.com/",
+      "description": "LA Weekly magazine is the definitive source of information for news, music, movies, restaurants, reviews, and events in Los Angeles.",
+      "followers": {
+        "facebook": 366200,
+        "twitter": 705400,
+        "instagram": 208800
+      },
+      "image_url": "https://i1.feedspot.com/4414845.jpg?t=1603896548"
+    },
+    {
+      "title": "CBS Sacramento",
+      "feed_url": "https://www.cbsnews.com/sacramento/",
+      "website_url": "https://www.cbsnews.com/sacramento/",
+      "description": "Sacramento, Stockton, and Modesto news and weather from CBS 13 Read news, sports, weather, traffic and the best of Sacramento.",
+      "followers": {
+        "facebook": 353300,
+        "twitter": 151100,
+        "instagram": 76600
+      },
+      "image_url": "https://i1.feedspot.com/3101.jpg?t=1585200777"
+    },
+    {
+      "title": "Daily Republic",
+      "feed_url": "https://www.dailyrepublic.com/feed/",
+      "website_url": "https://www.dailyrepublic.com/",
+      "description": "The Daily Republic is Solano County's leading news source.",
+      "followers": {
+        "facebook": 13400,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4824552.jpg?t=1587119224"
+    },
+    {
+      "title": "The Union",
+      "feed_url": "https://www.theunion.com/feed/",
+      "website_url": "https://www.theunion.com/",
+      "description": "Breaking News, Crime, Public Safety, Weather, Business, Obituaries and Opinion for Nevada County, CA.",
+      "followers": {
+        "facebook": 27800,
+        "twitter": 3500,
+        "instagram": 6600
+      },
+      "image_url": "https://i1.feedspot.com/4824459.jpg?t=1516015283"
+    },
+    {
+      "title": "Mountain Democrat",
+      "feed_url": "https://www.mtdemocrat.com/feed/",
+      "website_url": "https://www.mtdemocrat.com/",
+      "description": "The Mountain Democrat, located in Placerville, CA, is the oldest newspaper in California, boasting continuous publication since 1851. The Mountain Democrat is a local newspaper covering news, sports, and features in El Dorado County.",
+      "followers": {
+        "facebook": 14400,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4824310.jpg?t=1516004858"
+    },
+    {
+      "title": "The Bakersfield Californian",
+      "feed_url": "https://www.bakersfield.com/search/?q=",
+      "website_url": "https://www.bakersfield.com/",
+      "description": "The Bakersfield Californian is an independent, family-owned newspaper and local media company that is part of the TBC Media family of products serving Bakersfield and Kern County, California.",
+      "followers": {
+        "facebook": 31500,
+        "twitter": 16400,
+        "instagram": 8800
+      },
+      "image_url": "https://i1.feedspot.com/4823492.jpg"
+    },
+    {
+      "title": "Lassen News",
+      "feed_url": "https://www.lassennews.com/feed/",
+      "website_url": "https://www.lassennews.com/",
+      "description": "Lassen County's most up-to-date news, weather, sports, classifieds, real estate, legal notices, births, obituaries, etc.",
+      "followers": {
+        "facebook": 7000
+      },
+      "image_url": "https://i1.feedspot.com/4824371.jpg?t=1516010331"
+    },
+    {
+      "title": "Gold Country Media",
+      "feed_url": "http://www.placerherald.com/taxonomy/term/2/all/feed",
+      "website_url": "https://goldcountrymedia.com/",
+      "description": "Find latest current news, breaking news, local newspaper's online edition withs news, classified and editorials from Rocklin's Placer Herald.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4824479.jpg?t=1623734510"
+    },
+    {
+      "title": "Merced Sun-Star",
+      "feed_url": "https://www.plumasnews.com/",
+      "website_url": "https://www.plumasnews.com/",
+      "description": "Merced Sun Star newspaper in Merced, CA offers local news coverage online. Serving in California, MercedSunStar.com has local, breaking, weather, traffic, crime, sports and national news stories, articles and columns.",
+      "followers": {
+        "facebook": 49800,
+        "twitter": 7800
+      },
+      "image_url": "https://i1.feedspot.com/4824418.jpg?t=1516012615"
+    },
+    {
+      "title": "Plumas News",
+      "feed_url": "https://www.plumasnews.com/",
+      "website_url": "https://www.plumasnews.com/",
+      "description": "Company Overview - Feather Publishing is a family of six hometown weekly newspapers covering Plumas and Lassen counties. Each newspaper is independently edited for its own community with local pictures and features every Tuesday in Lassen County and every Wednesday in Plumas County.",
+      "followers": {
+        "facebook": 11200,
+        "twitter": 698
+      },
+      "image_url": "https://i1.feedspot.com/4824483.jpg?t=1516016475"
+    },
+    {
+      "title": "The Madera Tribune",
+      "feed_url": "https://www.maderatribune.com/feed.xml",
+      "website_url": "https://www.maderatribune.com/",
+      "description": "A biweekly newspaper serving the heart of California since 1892.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4824385.jpg?t=1626329308"
+    }
+  ]
+}

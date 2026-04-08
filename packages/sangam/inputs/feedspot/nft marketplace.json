@@ -1,0 +1,76 @@
+{
+  "category": "NFT Marketplace",
+  "source_url": "https://rss.feedspot.com/nft_marketplace_rss_feeds",
+  "feeds": [
+    {
+      "title": "Rarible Blog",
+      "feed_url": "https://rarible.com/blog/rss/",
+      "website_url": "https://rarible.com/blog/",
+      "description": "Explore the blog to know more about NFT, NFT market, trends and more! The first community-owned NFT marketplace. Create, sell or collect digital items secured with blockchain.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 509400,
+        "instagram": 255400
+      },
+      "image_url": "https://i1.feedspot.com/5385269.jpg?t=1649078329"
+    },
+    {
+      "title": "DappRadar Blog",
+      "feed_url": "https://dappradar.com/blog/feed",
+      "website_url": "https://dappradar.com/blog/category/blockchains",
+      "description": "DappRadar provides information and insights about all the existing dapps! At the tap of your finger, find the most successful and used decentralized games, casinos, and marketplaces, among others. In the blogs discover the latest news and trends on everything decentralized. Find reports on DeFi, blockchain games, NFTs, and more here on the world's dapp store.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 208500,
+        "instagram": 9800
+      },
+      "image_url": "https://i1.feedspot.com/5150928.jpg?t=1612001017"
+    },
+    {
+      "title": "NFT Culture",
+      "feed_url": "https://www.nftculture.com/feed/",
+      "website_url": "https://www.nftculture.com/category/nft-news/",
+      "description": "NFT Culture exists at the intersection of art, culture, and the blockchain. We highlight art, artists, the marketplace and trends on a daily basis providing the latest news and insights around blockchain, crypto art, and other related news and topics.",
+      "followers": {
+        "twitter": 29400,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5285891.jpg?t=1644928461"
+    },
+    {
+      "title": "MakersPlace Blog",
+      "feed_url": "https://rare.makersplace.com/feed/",
+      "website_url": "https://rare.makersplace.com/",
+      "description": "Discover new artists, preview upcoming Drops, and keep up-to-date with NFT news on the MakersPlace blog. The easiest way to create and sell unique digital creations, using blockchain technology. MakersPlace helps you protect and sell your unique digital creations without much hassle.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 435
+      },
+      "image_url": "https://i1.feedspot.com/5385268.jpg?t=1651133787"
+    },
+    {
+      "title": "OpenSea Blog",
+      "feed_url": "https://opensea.io/blog",
+      "website_url": "https://opensea.io/blog",
+      "description": "Discover unique NFTs and receive news, updates, tips, and tricks on the world's first and largest NFT marketplace. OpenSea is the world's first and largest digital marketplace for crypto collectibles and non-fungible tokens (NFTs).",
+      "followers": {
+        "facebook": 16300,
+        "twitter": 2000000,
+        "instagram": 962300
+      },
+      "image_url": "https://i1.feedspot.com/5300999.jpg?t=1649078257"
+    },
+    {
+      "title": "NFTically Blog",
+      "feed_url": "https://www.nftically.com/blog/feed/",
+      "website_url": "https://www.nftically.com/blog/",
+      "description": "NFTically is the world's best NFT marketplace to buy or sell NFT, digital arts, and tokens in minutes or set up your own NFT store, shop, website, or storefront in minutes. We are a group of Blockchain developers & business executives who love to solve real-world problems at scale. We are passionate about NFTs & how they are bringing changes in the world through proof-of-existence, proof-of-ownership & proof-of-copyright.",
+      "followers": {
+        "facebook": 869,
+        "twitter": 22400,
+        "instagram": 465
+      },
+      "image_url": "https://i1.feedspot.com/5326154.jpg?t=1632831374"
+    }
+  ]
+}

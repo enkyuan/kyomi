@@ -1,0 +1,48 @@
+{
+  "category": "Cargo Bike",
+  "source_url": "https://rss.feedspot.com/cargo_bike_rss_feeds",
+  "feeds": [
+    {
+      "title": "EBike24 Blog \u00bb E-Cargo",
+      "feed_url": "https://www.ebike24.com/blog/e-cargo-bike-news/feed",
+      "website_url": "https://www.ebike24.com/blog/e-cargo-bike-news",
+      "description": "We are the e-bike specialists in Europe. Our mission is happy customers and satisfied employees: We create a positive working environment in which we like to work independently. We cultivate collegial interaction as the most important basic value of our corporate culture.",
+      "followers": {
+        "facebook": 8100,
+        "instagram": 8600
+      },
+      "image_url": "https://i1.feedspot.com/5413800.jpg?t=1655976509"
+    },
+    {
+      "title": "Ferla Family Bikes Blog",
+      "feed_url": "https://ferlafamilybikes.com/blogs/news.atom",
+      "website_url": "https://ferlafamilybikes.com/blogs/news",
+      "description": "Ferla Family Bikes make leaving the house with the kids fun again. Creating high-quality vehicles built for safety and accessibility drives our California-based company day in and out. Why? Because cargo bikes offer sustainable family travel, transportation for differently-abled loved ones, fun exercise in the fresh air, and riding with Ferla is a simple blast. Here we'll share a bit more about how our products prioritize safety, the environment, and our signature Ferla charm.",
+      "followers": {
+        "facebook": 557,
+        "instagram": 6600
+      },
+      "image_url": "https://i1.feedspot.com/5413797.jpg?t=1655972099"
+    },
+    {
+      "title": "AddBike Blog",
+      "feed_url": "https://add-bike.com/en/feed/",
+      "website_url": "https://add-bike.com/en/blog/",
+      "description": "Discover the latest news from the cycling community: bicycles, cargo bikes, sustainable mobility, new trends, laws and so much more! AddBike is a young company from Lyon that seeks to revolutionize the culture of cycling in urban areas. It offers innovative products that make cycling a credible alternative to other means of transport for everyone's daily trips.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 1600,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5413799.jpg?t=1655972241"
+    },
+    {
+      "title": "Top Cargo Bike Blog",
+      "feed_url": "https://www.topcargobike.com/feed/",
+      "website_url": "https://www.topcargobike.com/blog/",
+      "description": "Electric Delivery Cargo Bikes Manufacturer. Our company was established in March 2003, we are specialized in special cargo bike, bicycle, tricycle. 100 workers, 120 acres non-dust workshop, ISO, CE &SGS certificate, we carries out the principle of scientific management, advanced equipment, upgraded technology, offers high quality products.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5413801.jpg?t=1655976303"
+    }
+  ]
+}

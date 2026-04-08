@@ -1,0 +1,29 @@
+{
+  "category": "Starbucks",
+  "source_url": "https://rss.feedspot.com/starbucks_rss_feeds",
+  "feeds": [
+    {
+      "title": "Discover Starbucks Reserve",
+      "feed_url": "https://www.discoverstarbucksreserve.com/home?format=rss",
+      "website_url": "https://www.discoverstarbucksreserve.com/",
+      "description": "This blog is a place for pure coffee education. It's for those who love a great cup of coffee and the fun cards that come with Starbucks Reserve coffees.",
+      "followers": {
+        "twitter": 8900,
+        "instagram": 7200
+      },
+      "image_url": "https://i1.feedspot.com/4917869.jpg?t=1620627662"
+    },
+    {
+      "title": "StarbucksMelody",
+      "feed_url": "http://www.starbucksmelody.com/feed/",
+      "website_url": "http://www.starbucksmelody.com/",
+      "description": "StarbucksMelody website is the best source of unofficial Starbucks news and information about Starbucks and their brands: Teavana, Seattle's Best Coffee, Evolution Fresh, La Boulange, and Tazo Tea. It is a place for a community of Starbucks enthusiasts in a positive, informative and uplifting setting.",
+      "followers": {
+        "facebook": 11200,
+        "twitter": 8900,
+        "instagram": 7200
+      },
+      "image_url": "https://i1.feedspot.com/1906822.jpg?t=1620627667"
+    }
+  ]
+}

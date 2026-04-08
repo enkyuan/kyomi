@@ -1,0 +1,85 @@
+{
+  "category": "Benin News",
+  "source_url": "https://rss.feedspot.com/benin_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Benin Web TV",
+      "feed_url": "https://beninwebtv.com/feed/",
+      "website_url": "https://beninwebtv.com/",
+      "description": "News and Info from Benin, Africa and the World in photos and videos. Follow our programs and debates on politics, people, culture, economy, society, fashion, and more.",
+      "followers": {
+        "facebook": 357300,
+        "twitter": 11800
+      },
+      "image_url": "https://i1.feedspot.com/4635842.jpg?t=1639733352"
+    },
+    {
+      "title": "24 Heures au B\u00e9nin",
+      "feed_url": "https://www.24haubenin.info/spip.php?page=backend",
+      "website_url": "https://www.24haubenin.info/",
+      "description": "Real time information from Benin.",
+      "followers": {
+        "facebook": 41600,
+        "twitter": 9600
+      },
+      "image_url": "https://i1.feedspot.com/4298375.jpg?t=1639736840"
+    },
+    {
+      "title": "Benin Site",
+      "feed_url": "http://beninsite.net/feed/",
+      "website_url": "http://beninsite.net/",
+      "description": "Stay updated and ahead on Benin and global news coverage by the experts.",
+      "followers": {
+        "facebook": 18000,
+        "twitter": 69
+      },
+      "image_url": "https://i1.feedspot.com/5354427.jpg?t=1639725796"
+    },
+    {
+      "title": "L-integration",
+      "feed_url": "https://www.l-integration.com/feed/",
+      "website_url": "http://www.l-integration.com/",
+      "description": "L'integration brings essential reporting on the people, places, and issues that matter.",
+      "followers": {
+        "twitter": 220
+      },
+      "image_url": "https://i1.feedspot.com/5354425.jpg?t=1642261195"
+    },
+    {
+      "title": "Visages-du-Benin",
+      "feed_url": "https://visages-du-benin.com/feed/",
+      "website_url": "https://visages-du-benin.com/",
+      "description": "Visages-du-Benin is a web journal created in 2009. The newspaper processes and disseminates all political, social, economic, cultural, sports, information from Benin and the rest of the world.",
+      "followers": {
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5354423.jpg?t=1639732447"
+    },
+    {
+      "title": "L'\u00e9conomiste du b\u00e9nin",
+      "feed_url": "https://leconomistebenin.com/feed/",
+      "website_url": "https://leconomistebenin.com/",
+      "description": "L'Economiste is an online news portal covering reports and updates on ongoing and groundbreaking affairs, headlines, and more from various industries and fields.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5354745.jpg?t=1639738228"
+    },
+    {
+      "title": "L'Evenement Precis",
+      "feed_url": "https://levenementprecis.com/feed/",
+      "website_url": "https://levenementprecis.com/",
+      "description": "News and headlines on politics, health, sports, art, and more.",
+      "followers": {
+        "twitter": 65
+      },
+      "image_url": "https://i1.feedspot.com/4298379.jpg?t=1639736216"
+    },
+    {
+      "title": "Benin Info",
+      "feed_url": "https://www.benininfo.com/feed/",
+      "website_url": "https://www.benininfo.com/",
+      "description": "Information portal of Benin and the diaspora.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5354426.jpg?t=1642260168"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "category": "Ford",
+  "source_url": "https://rss.feedspot.com/ford_rss_feeds",
+  "feeds": [
+    {
+      "title": "Auto Express \u00bb Ford",
+      "feed_url": "https://www.autoexpress.co.uk/ford/feed",
+      "website_url": "https://www.autoexpress.co.uk/ford",
+      "description": "Auto Express is the UK's best-selling weekly car magazine. Auto Express provides all the latest car news, car reviews, features, pictures and videos.",
+      "followers": {
+        "facebook": 113200,
+        "twitter": 145900
+      },
+      "image_url": "https://i1.feedspot.com/4908365.jpg?t=1665746664"
+    },
+    {
+      "title": "Ultimate Ford Blog",
+      "feed_url": "https://www.ultimatefordinc.com/blog/rss/index.xml",
+      "website_url": "https://www.ultimatefordinc.com/blog/index.htm",
+      "description": "Your local Automotive Dealerships is right around the corner, here to serve our community with the best prices, highest level of customer satisfaction, and service beyond compare. Please visit ultimate Auto Group for all of your automotive needs. Know more about the latest Ford automobiles, their features, upgrades, launch and more!",
+      "followers": {
+        "facebook": 5200
+      },
+      "image_url": "https://i1.feedspot.com/5456896.jpg?t=1665746608"
+    },
+    {
+      "title": "Mac Haik Ford Blog",
+      "feed_url": "https://www.machaikfordjackson.com/blog/rss/index.xml",
+      "website_url": "https://www.machaikfordjackson.com/blog/index.htm",
+      "description": "Finding a vehicle that you'll be happy with might be at the top of your priority list, and Jackson Mac Haik Ford are excited to help you find the new or used vehicle that will be just right for you. Whether you are looking for a truck, SUV, or sedan, when you shop at Jackson Mac Haik Ford, we're going to be able to find you a Ford vehicle that you're going to love. Explore our reviews, for motor services, news and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5456897.jpg?t=1665749253"
+    },
+    {
+      "title": "Brandon Ford Blog",
+      "feed_url": "https://brandonford.com/blog/feed",
+      "website_url": "https://brandonford.com/blog",
+      "description": "Brandon Ford is the world's largest volume Ford dealership, and the only Automotive Dealership in the Orlando Region (virtually all of the Southeastern US) and one of only 22 dealers nationwide to win Ford's President's Award 19 years in a row. Stay up to date with Ford's latest news, updates, features upgrades, launch events and dates and more!",
+      "followers": {
+        "facebook": 11100,
+        "twitter": 297,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5456893.jpg?t=1666006005"
+    },
+    {
+      "title": "Sherwood Ford Blog",
+      "feed_url": "https://www.sherwoodford.ca/blog/feed/",
+      "website_url": "https://www.sherwoodford.ca/blog",
+      "description": "Sherwood Ford is a new Ford and used vehicle dealership, an AMVIC-licensed business. We also service all makes and supply Ford and Motorcraft Parts for Ford vehicles and aftermarket parts. Get the latest updates on Ford, launch news and more!",
+      "followers": {
+        "facebook": 28700,
+        "twitter": 2500,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5323367.jpg?t=1632118684"
+    },
+    {
+      "title": "Chastang Ford Blog",
+      "feed_url": "https://www.chastangford.com/blog/feed/",
+      "website_url": "https://www.chastangford.com/blog/",
+      "description": "Chastang Ford is a family-owned Ford truck dealer in Houston TX specializing in Ford truck, SUV, fleet sales and offers new and used commercial trucks for sale.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 627
+      },
+      "image_url": "https://i1.feedspot.com/5285786.jpg?t=1665746594"
+    },
+    {
+      "title": "Bickford Ford Blog",
+      "feed_url": "https://www.bickford.net/blog/feed/",
+      "website_url": "https://www.bickford.net/blog/",
+      "description": "Bickford Ford was established in 1934 with one goal in mind - to serve the region's automotive needs. For four generations the Bickford Family has always focused on offering the highest level of service and respect to every individual who walks through the doors of Bickford Ford. Get the latest information on Ford Automotives, launches, updates and more!",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 505
+      },
+      "image_url": "https://i1.feedspot.com/5456895.jpg?t=1665746860"
+    }
+  ]
+}

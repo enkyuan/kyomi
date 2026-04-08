@@ -1,0 +1,67 @@
+{
+  "category": "Ice Yachting",
+  "source_url": "https://rss.feedspot.com/ice_yachting_rss_feeds",
+  "feeds": [
+    {
+      "title": "New England Ice Yacht Association",
+      "feed_url": "https://neiya.org/feed/",
+      "website_url": "https://neiya.org/",
+      "description": "Welcome to the New England Ice Yacht Association. The largest group of iceboat enthusiasts in the Northeast. We are dedicated to the promotion of safe sailing activities throughout the New England region and beyond.",
+      "followers": {
+        "facebook": 848,
+        "twitter": 31
+      },
+      "image_url": "https://i1.feedspot.com/5016749.jpg?t=1622287234"
+    },
+    {
+      "title": "The Four Lakes Ice Yacht Club",
+      "feed_url": "https://www.iceboat.org/feed/",
+      "website_url": "https://www.iceboat.org/",
+      "description": "The Four Lakes Ice Yacht Club is one of the most active iceboat clubs in North America. We've been building and sailing iceboats for over 100 years in Madison, WI, USA. Get started iceboating by learning about the different types of iceboats, how to get started, regattas, history, and so much more.",
+      "followers": {
+        "twitter": 15
+      },
+      "image_url": "https://i1.feedspot.com/5017160.jpg?t=1622287238"
+    },
+    {
+      "title": "White Wings and Black Ice",
+      "feed_url": "http://hudsonrivericeyachting.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://hudsonrivericeyachting.blogspot.com/",
+      "description": "This blog explores the history of the antique, stern steering, gaff-rigged ice yachts of the Hudson River valley. An on-line archive of boats, pictures, races, stories and historic articles on ice yachting.",
+      "followers": {
+        "twitter": 83
+      },
+      "image_url": "https://i1.feedspot.com/5016741.jpg?t=1622287242"
+    },
+    {
+      "title": "Chickawaukie Ice Boat Club",
+      "feed_url": "https://iceboat.me/feed/",
+      "website_url": "https://iceboat.me/",
+      "description": "The Chickawaukee Ice Boat Club was founded in the early sixties by Warner St. Clair and Paul Wolter to promote the building and racing of DN iceboats.",
+      "followers": {
+        "facebook": 786
+      },
+      "image_url": "https://i1.feedspot.com/5018271.jpg?t=1622287248"
+    },
+    {
+      "title": "IDNIYRA",
+      "feed_url": "https://idniyra.eu/feed/",
+      "website_url": "https://idniyra.eu/",
+      "description": "IDNIYRA is an International DN Ice Yacht Racing Association in Europe which gives information on all things ice yachting.",
+      "followers": {
+        "facebook": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5016748.jpg?t=1622287252"
+    },
+    {
+      "title": "International Nite Class Association",
+      "feed_url": "https://niteracing.org/",
+      "website_url": "https://niteracing.org/",
+      "description": "Nite Iceboat racing official home site providing up to date information on local racing, championship regattas, rules, regulations, and social events. It is dedicated to promoting the sport of iceboating and specifically those that sail Nite iceboats.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5016745.jpg?t=1622287257"
+    }
+  ]
+}

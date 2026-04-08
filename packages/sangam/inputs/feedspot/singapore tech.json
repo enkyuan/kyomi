@@ -1,0 +1,334 @@
+{
+  "category": "Singapore Tech",
+  "source_url": "https://rss.feedspot.com/singapore_tech_rss_feeds",
+  "feeds": [
+    {
+      "title": "Vulcan Post",
+      "feed_url": "https://vulcanpost.com/feed/",
+      "website_url": "https://vulcanpost.com/",
+      "description": "Key knowledge areas: Electric Vehicle, Blockchain Technology, E-commerce, Startups, Digital Banking, COVID-19, and GovTech. Vulcan Post is where you find news about technology and products that affect your daily lifestyle.",
+      "followers": {
+        "facebook": 115600,
+        "twitter": 1900,
+        "instagram": 11400
+      },
+      "image_url": "https://i1.feedspot.com/4281201.jpg?t=1600350305"
+    },
+    {
+      "title": "Little Big Red Dot",
+      "feed_url": "https://littlebigreddot.com/feed/",
+      "website_url": "https://littlebigreddot.com/",
+      "description": "Little Big Red Dot is Singapore's leading lifestyle blog. Our articles touch on Food, Shopping, Travel, Health & Fitness, Parenting, Social, Business, Invest, Tech and so much more!",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 10
+      },
+      "image_url": "https://i1.feedspot.com/4803160.jpg?t=1610366452"
+    },
+    {
+      "title": "Zit Seng's Blog",
+      "feed_url": "https://zitseng.com/feed",
+      "website_url": "https://zitseng.com/",
+      "description": "A Singaporean's blog on technology, lifestyle, and the occasional rants on all things Singapore.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 116
+      },
+      "image_url": "https://i1.feedspot.com/4317920.jpg?t=1610366276"
+    },
+    {
+      "title": "Reed Smith | Technology Law Dispatch",
+      "feed_url": "https://www.technologylawdispatch.com/feed/",
+      "website_url": "https://www.technologylawdispatch.com/category/tech-outsourcing/",
+      "description": "Technology Law Dispatch is authored by Reed Smith's IP, Information & Innovation and offers updates on technology law.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 18900
+      },
+      "image_url": "https://i1.feedspot.com/4901307.jpg?t=1612857339"
+    },
+    {
+      "title": "alexlogy.io",
+      "feed_url": "https://alexlogy.io/rss/",
+      "website_url": "https://alexlogy.io/",
+      "description": "Singapore tech blog focusing on cloud infrastructure design and management, DevOps philosophies, etc. I am Alex Ng. I work as a Cloud Infrastructure Manager in a Singapore software development company. I have been dabbling with infrastructure since early before moving into cloud infrastructure in 2016. This site contains some of my thoughts on these technologies and cloud infrastructure.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5521156.jpg?t=1679288002"
+    },
+    {
+      "title": "Apixel's Blog",
+      "feed_url": "https://www.apixel.com.sg/blog/feed/",
+      "website_url": "https://www.apixel.com.sg/blog/category/singapore/",
+      "description": "Stay updated on the latest technology trends, insights and initiatives within our organisation and the innovation landscape today. Apixel delivers proactive IT maintenance services through our flat-rate Managed IT Support Service. Designed to reduce your costs, increase your profits and mitigate your business risks, we partner with you as your Virtual CIO and IT Department, allowing you to focus on running your business, not your technology.",
+      "followers": {
+        "facebook": 171,
+        "twitter": 281
+      },
+      "image_url": "https://i1.feedspot.com/5521162.jpg?t=1678885766"
+    },
+    {
+      "title": "Win-Pro Blog",
+      "feed_url": "https://winpro.com.sg/feed/",
+      "website_url": "https://winpro.com.sg/it-support-blog/",
+      "description": "Established in 1993, Win-Pro is a proud legacy of excellence and innovation in the IT industry providing top-notch outsource IT support services to businesses of all sizes. Our mission is to deliver exceptionally high-quality IT services to support and secure IT systems that allow our clients to focus, grow and scale their business",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 16,
+        "instagram": 208
+      },
+      "image_url": "https://i1.feedspot.com/5570370.jpg?t=1684403195"
+    },
+    {
+      "title": "Tech Jio Blog",
+      "feed_url": "https://techjioblog.com/feed/",
+      "website_url": "https://techjioblog.com/category/blog/",
+      "description": "This blog aims to help readers to make a better purchase decision, by allowing them to view and understand the product in a detailed and honest review. Deals and discount codes are also shared on this blog so that readers can enjoy the best bang for their buck. We have worked with brands such as ASUS, Audio-Technica, BenQ, Creative, Harman Kardon, JBL, Klipsch, Plantronics, Sudio, as well as other start-ups such as APOL, Gaius Walks, and MOFT.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5521155.jpg?t=1679058636"
+    },
+    {
+      "title": "Lingua Technologies International Blog",
+      "feed_url": "https://www.translationsingapore.com/feed/",
+      "website_url": "https://www.translationsingapore.com/translation-blog/",
+      "description": "Lingua Technologies International is today a major player in the global translation and localization industry. Founded in 1996, the company provides top-tier translation services through a network of professionally trained native-speaking translators with subject matter expertise. Explore the blog for the latest news in the translation industry, project management, content management and more!",
+      "followers": {
+        "facebook": 1400,
+        "instagram": 86
+      },
+      "image_url": "https://i1.feedspot.com/5521167.jpg?t=1678885793"
+    },
+    {
+      "title": "Tech For Good Institute Blog",
+      "feed_url": "https://techforgoodinstitute.org/feed/",
+      "website_url": "https://techforgoodinstitute.org/blog/",
+      "description": "The latest updates on our research, programmes and events as we examine innovation and digital progress, through the lens of sustainable growth for Southeast Asia. The Tech for Good Institute's mission is to raise understanding of issues and inform policy so that the promise of technology and the digital economy may be leveraged to advance inclusive and sustainable growth.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5521158.jpg?t=1679288313"
+    },
+    {
+      "title": "The Tech Revolutionist",
+      "feed_url": "https://thetechrevolutionist.com/feed",
+      "website_url": "https://thetechrevolutionist.com/category/tech-explained",
+      "description": "The Tech Revolutionist is a technology site. As enthusiasts with Computer Science and Engineering backgrounds, we aim to provide quality technology-related content from an Asian perspective.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 155,
+        "instagram": 312
+      },
+      "image_url": "https://i1.feedspot.com/5007662.jpg?t=1679287495"
+    },
+    {
+      "title": "SME horizon \u00bb Technology",
+      "feed_url": "https://www.smehorizon.com/category/technology/feed/",
+      "website_url": "https://www.smehorizon.com/category/technology/",
+      "description": "Explore insights, analysis, news, and case studies on the Small-Medium technology enterprise landscape in Asia. SMEhorizon's role is to give our readers insights, analysis, case studies and tips on how to grow their small-medium enterprise in this ever-changing, challenging and competitive environment. The emphasis of the publication is on the effective use of technology, finance, HR management, and sales & marketing tools.",
+      "followers": {
+        "facebook": 37,
+        "twitter": 25
+      },
+      "image_url": "https://i1.feedspot.com/5521157.jpg?t=1678885721"
+    },
+    {
+      "title": "KrASIA",
+      "feed_url": "https://console.kr-asia.com/feed",
+      "website_url": "https://kr-asia.com/",
+      "description": "Reporting on the most promising tech-driven businesses and news in the world's emerging markets. Bridging the tech community across Asia with local perspectives and insights. KrASIA is a digital media company reporting on the most promising technology-driven businesses and trends in the world's emerging markets.",
+      "followers": {
+        "facebook": 50200,
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5521289.jpg?t=1678943181"
+    },
+    {
+      "title": "Shopee Blog",
+      "feed_url": "https://shopee.sg/blog/category/lifestyle/tech-gadgets/feed/",
+      "website_url": "https://shopee.sg/blog/category/lifestyle/tech-gadgets/",
+      "description": "Shopee Singapore's Official Blog. Shopee is the leading e-commerce platform in Southeast Asia and Taiwan. We offer product categories ranging from consumer electronics to home & living, health & beauty, baby & toys, fashion and fitness equipment.",
+      "followers": {
+        "facebook": 27200000,
+        "twitter": 20600,
+        "instagram": 158700
+      },
+      "image_url": "https://i1.feedspot.com/5333295.jpg?t=1634629780"
+    },
+    {
+      "title": "TechCrunch",
+      "feed_url": "https://techcrunch.com/feed/",
+      "website_url": "https://techcrunch.com/",
+      "description": "TechCrunch is a leading technology media platform dedicated to profiling startups, reviewing new internet products, and breaking the latest tech news. Founded in 2005, it has established itself as a vital source of information for the tech industry. TechCrunch is spearheaded by Editor in Chief and General Manager Connie Loizos, who has a deep background in Silicon Valley journalism. The editorial team includes notable contributors like Matt Rosoff, Ingrid Lunden, Frederic Lardinois, and Kirsten Korosec, among others, who bring a wealth of experience and expertise to their respective beats.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/4447421.jpg?t=1634630003"
+    },
+    {
+      "title": "Music Photo Life",
+      "feed_url": "https://musicphotolife.com/feed/",
+      "website_url": "https://musicphotolife.com/",
+      "description": "Hands-on review of headphones, speakers, smartphones, smarthome, networking products for Singapore",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 1000,
+        "instagram": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5058345.jpg?t=1610366281"
+    },
+    {
+      "title": "Techgoondu",
+      "feed_url": "https://www.techgoondu.com/feed/",
+      "website_url": "https://www.techgoondu.com/",
+      "description": "Started in June 2008 in Singapore, Techgoondu covers technology news for the user, whether you are a consumer or a corporate CEO.",
+      "followers": {
+        "facebook": 9900,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/670642.jpg?t=1634631294"
+    },
+    {
+      "title": "SUPERADRIANME",
+      "feed_url": "https://www.superadrianme.com/category/technology/feed/",
+      "website_url": "https://www.superadrianme.com/",
+      "description": "Global and Local lifestyle experiences.",
+      "followers": {
+        "facebook": 47800,
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5333352.jpg?t=1634633832"
+    },
+    {
+      "title": "Lester Chan",
+      "feed_url": "https://lesterchan.net/feed/",
+      "website_url": "https://lesterchan.net/",
+      "description": "Lester Chan's Website is a personal blog that adds content about technology and gaming in singapore",
+      "followers": {
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5333355.jpg?t=1634633874"
+    },
+    {
+      "title": "SME horizon",
+      "feed_url": "https://www.smehorizon.com/feed/",
+      "website_url": "https://www.smehorizon.com/category/technology/",
+      "description": "SME horizon's role is to give our readers insights, analysis, case studies and tips on how to grow their small-medium enterprise in this ever-changing, challenging and competitive environment. The emphasis of the publication is on the effective use of technology, finance, HR management, and sales & marketing tools.",
+      "followers": {
+        "facebook": 37,
+        "twitter": 25
+      },
+      "image_url": "https://i1.feedspot.com/5333474.jpg?t=1634648798"
+    },
+    {
+      "title": "Tech in Asia",
+      "feed_url": "https://www.techinasia.com/feed",
+      "website_url": "https://www.techinasia.com/",
+      "description": "Tech in Asia is the largest English-language technology media company that focuses on Asia. From the latest news to the hottest trends and the boldest startups to the strongest titans, we cover everything tech in the region. Our goal is to build and serve Asia's tech and startup community. Apart from producing and delivering quality editorial content, we connect brands with early adopters via Studios, our advertising agency unit. We organize tech conferences and events across Asia, and we operate the region's go-to startup and technology jobs marketplace.",
+      "followers": {
+        "facebook": 828000,
+        "twitter": 126300,
+        "instagram": 68400
+      },
+      "image_url": "https://i1.feedspot.com/4502560.jpg?t=1678944091"
+    },
+    {
+      "title": "MicroLogic Blog",
+      "feed_url": "https://micrologic.com.sg/feed/",
+      "website_url": "https://micrologic.com.sg/tech-blog/",
+      "description": "We are publishing our tech blog which features some common or interesting IT problems that we have fixed so that you can easily fix these problems like us. Providing top IT services has been an endeavor of MicroLogic Solutions; as an authorized hardware repair center for Sony product, we have been providing a complete suite of IT services, since inception, and we have steadily transformed ourselves into a proficient IT service provider that is able to meet today's growing number of demands for IT services that evolve within the existing and new customer that have approached us.",
+      "followers": {
+        "facebook": 429
+      },
+      "image_url": "https://i1.feedspot.com/5521161.jpg?t=1678885752"
+    },
+    {
+      "title": "Asian Scientist Magazine \u00bb Technology",
+      "feed_url": "https://www.asianscientist.com/category/tech/feed/",
+      "website_url": "https://www.asianscientist.com/category/tech/",
+      "description": "Stay up to date with the latest in science, technology and medical news updates from Asia. Asian Scientist Magazine is an award-winning science and technology magazine that highlights R&D news stories from Asia to a global audience. The magazine is published by Singapore-headquartered Wildtype Media Group, Asia's leading STEM and healthcare media company. Wildtype Media Group also publishes books and Supercomputing Asia, a print magazine focusing on the high performance computing sector.",
+      "followers": {
+        "facebook": 95100,
+        "twitter": 4700,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5521159.jpg?t=1678944350"
+    },
+    {
+      "title": "IT Block Blog",
+      "feed_url": "https://www.itblock.sg/blog-feed.xml",
+      "website_url": "https://www.itblock.sg/blog",
+      "description": "IT Block's very own blog for IT solutions tips. Improve your basic knowledge of IT support and technology simplified for your digestion. It is an MSP that provides IT support for business infrastructures in Singapore. We offer a unique customer-centric model.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 192,
+        "instagram": 775
+      },
+      "image_url": "https://i1.feedspot.com/5333339.jpg?t=1634633659"
+    },
+    {
+      "title": "Chemtron",
+      "feed_url": "https://www.chemtron.asia/feed/",
+      "website_url": "https://www.chemtron.asia/news-events/",
+      "description": "With the rise in the adoption of 3D Technology, Chemtron has ventured into providing and end to end 3D Solutions to its customers. Targeting a wide spectrum of industries ranging from Manufacturing, Aerospace, Education, Jewelry, Medical and Dentistry, Chemtron has a 3D Solution for it. Chemtron is set to make waves in the 3D Industry!",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 52,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5181348.jpg?t=1610367119"
+    },
+    {
+      "title": "TechieLobang Blog",
+      "feed_url": "https://techielobang.com/blog/feed/",
+      "website_url": "https://techielobang.com/blog/tag/singapore/",
+      "description": "Founded by Joe Teh in November 2007, TechieLobang has been providing latest Tech News from all over the world, one news at a time. Stationed in Singapore, TechieLobang has been able to support brands and products in reaching to the masses.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 143,
+        "instagram": 322
+      },
+      "image_url": "https://i1.feedspot.com/802927.jpg?t=1678943278"
+    },
+    {
+      "title": "TechTIQ Solutions",
+      "feed_url": "https://techtiqsolutions.com/blog/",
+      "website_url": "https://techtiqsolutions.com/blog/",
+      "description": "Read the latest insights about Digital Transformation and software development trends. We showcase the solutions for enterprises & startups on our blog. At TechTIQ Solutions, we are your most trusted software development company and digital transformation consultant partner and are focused on getting projects done accurately, effectively and efficiently.",
+      "followers": {
+        "facebook": 122
+      },
+      "image_url": "https://i1.feedspot.com/5521160.jpg?t=1678885739"
+    },
+    {
+      "title": "NXT Magazine",
+      "feed_url": "https://nxtmag.tech/feed/",
+      "website_url": "https://hipster-inc.com/blog/",
+      "description": "NXT Magazine is the leading lifestyle consumer gadget title for Singapore and Malaysia's market. Our readers desire the best and the latest in gadgets and gear, but don't want to wade through reams of technical jargon to find out what's best. NXT Magazine is about the user experience and understanding the technology behind the world's favourite gadgets.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 47,
+        "instagram": 433
+      },
+      "image_url": "https://i1.feedspot.com/5521165.jpg?t=1678885787"
+    },
+    {
+      "title": "Adrian Tan Blog",
+      "feed_url": "https://adriantan.com.sg/feed/",
+      "website_url": "https://adriantan.com.sg/blog/",
+      "description": "Adrian helps companies and individuals acquire the skills necessary to recruit better talents and succeed at work. Blog posts cover Trends, Entrepreneurship and Future of HR",
+      "followers": {
+        "facebook": 181,
+        "twitter": 988,
+        "instagram": 598
+      },
+      "image_url": "https://i1.feedspot.com/4459023.jpg?t=1600235054"
+    },
+    {
+      "title": "smart-nation-voices-blog",
+      "feed_url": "https://feeds.feedburner.com/sg-en/smart-nation-voices-blog",
+      "website_url": "http://",
+      "description": "smart-nation-voices-blog,Accenture is a leading global professional services company, providing services and solutions in strategy & consulting, interactive, technology and operations.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5333319.jpg?t=1634633326"
+    }
+  ]
+}

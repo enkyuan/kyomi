@@ -1,0 +1,93 @@
+{
+  "category": "Nebraska Cornhuskers",
+  "source_url": "https://rss.feedspot.com/huskers_rss_feeds",
+  "feeds": [
+    {
+      "title": "Inside Nebraska",
+      "feed_url": "https://nebraska.rivals.com/feed",
+      "website_url": "https://nebraska.rivals.com/",
+      "description": "HuskerOnline.com is the largest website covering Nebraska football on the Internet and home of the Red Sea Scrolls message board.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 41000
+      },
+      "image_url": "https://i1.feedspot.com/4920444.jpg?t=1620718258"
+    },
+    {
+      "title": "HuskerMax",
+      "feed_url": "https://www.huskermax.com/feed/",
+      "website_url": "https://www.huskermax.com/",
+      "description": "Nebraska Husker football news, game results, archives, statistics, articles, forums and more. The most complete site online dedicated to Husker fans.",
+      "followers": {
+        "facebook": 15600,
+        "twitter": 7600
+      },
+      "image_url": "https://i1.feedspot.com/4920413.jpg?t=1620718349"
+    },
+    {
+      "title": "Husker Hoops Central",
+      "feed_url": "https://huskerhoopscentral.com/home/?rss=1/feed",
+      "website_url": "https://huskerhoopscentral.com/",
+      "description": "Husker Hoops Central is the leading Nebrasketball fansite. Get the latest news, activity, podcast and all thing Huskers.",
+      "followers": {
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/4920441.jpg?t=1620718321"
+    },
+    {
+      "title": "B1G Red Revival",
+      "feed_url": "https://b1gredrevival.blogspot.com/feeds/posts/default",
+      "website_url": "https://b1gredrevival.blogspot.com/",
+      "description": "A Weekly Podcast and Blog for Husker Nation!",
+      "followers": {
+        "twitter": 730
+      },
+      "image_url": "https://i1.feedspot.com/5122357.jpg?t=1620718284"
+    },
+    {
+      "title": "Husker Mike's Blasphemy",
+      "feed_url": "http://huskermike.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://huskermike.blogspot.com/",
+      "description": "Omaha's longest-running sports blog, covering local sports including the Nebraska Cornhuskers and the Nebraska-Omaha Mavericks.",
+      "followers": {
+        "facebook": 145,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4920412.jpg?t=1620718316"
+    },
+    {
+      "title": "Husker Corner",
+      "feed_url": "https://huskercorner.com/feed/",
+      "website_url": "https://huskercorner.com/",
+      "description": "The ultimate home for Nebraska Cornhuskers news, rumors, player and team updates, commentary, recruiting analysis, and opinion. Covering Nebraska football, Nebraska basketball, Nebraska baseball, and more!",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 3000,
+        "instagram": 38900
+      },
+      "image_url": "https://i1.feedspot.com/4920410.jpg?t=1620718263"
+    },
+    {
+      "title": "Corn Nation",
+      "feed_url": "https://www.cornnation.com/rss/index.xml",
+      "website_url": "https://www.cornnation.com/",
+      "description": "Your best source for quality Nebraska Cornhuskers news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 230800,
+        "twitter": 25100
+      },
+      "image_url": "https://i1.feedspot.com/4920403.jpg?t=1620718288"
+    },
+    {
+      "title": "Huskers.com",
+      "feed_url": "https://huskers.com/rss.aspx",
+      "website_url": "https://huskers.com/",
+      "description": "Huskers.com is the Nebraska Athletics Official Web Site. Keep up to date with the latest news, highlights, press conferences and much more.",
+      "followers": {
+        "facebook": 593800,
+        "twitter": 421900
+      },
+      "image_url": "https://i1.feedspot.com/3905631.jpg?t=1620718245"
+    }
+  ]
+}

@@ -1,0 +1,612 @@
+{
+  "category": "Canadian Political",
+  "source_url": "https://rss.feedspot.com/canadian_political_rss_feeds",
+  "feeds": [
+    {
+      "title": "iPolitics",
+      "feed_url": "https://www.ipolitics.ca/feed/",
+      "website_url": "https://www.ipolitics.ca/",
+      "description": "iPolitics delivers political news, information, and analysis from Ottawa. It provides insightful content to those whose professional or personal interests require that they stay on top of political developments in Ottawa and the provinces.",
+      "followers": {
+        "facebook": 19300,
+        "twitter": 82000
+      },
+      "image_url": "https://i1.feedspot.com/4862195.jpg?t=1611992007"
+    },
+    {
+      "title": "rabble.ca",
+      "feed_url": "https://rabble.ca/feed/",
+      "website_url": "https://rabble.ca/",
+      "description": "Rabble.ca was built on the efforts of progressive journalists, writers, artists and activists across the country and has a unique role of reporting on stories from civil society while providing a counter balance to corporate-owned media. It provides a needed space for issues, a place to explore political passions and an opportunity to expand ideas.",
+      "followers": {
+        "facebook": 20600,
+        "twitter": 37900,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/591364.jpg?t=1611992011"
+    },
+    {
+      "title": "All the Canadian Politics",
+      "feed_url": "https://allthecanadianpolitics.tumblr.com/rss",
+      "website_url": "https://allthecanadianpolitics.tumblr.com/",
+      "description": "All the Canadian Politics is about Canadian Politics, News & Social Justice. This blog is left leaning politically.",
+      "followers": {
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4862333.jpg?t=1650006550"
+    },
+    {
+      "title": "Loonie Politics",
+      "feed_url": "https://looniepolitics.com/feed/",
+      "website_url": "https://looniepolitics.com/",
+      "description": "Loonie Politics is a trusted news source that selects the must read daily political stories and analysis on line and provides a view of the Canadian political landscape in one location.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 7900
+      },
+      "image_url": "https://i1.feedspot.com/4862424.jpg?t=1611992024"
+    },
+    {
+      "title": "Canada's NDP",
+      "feed_url": "https://www.ndp.ca/rss.xml",
+      "website_url": "https://www.ndp.ca/news",
+      "description": "The Official website of New Democratic Party of Canada. And about their Fight for fairness and results.",
+      "followers": {
+        "facebook": 140000,
+        "twitter": 270600
+      },
+      "image_url": "https://i1.feedspot.com/548990.jpg?t=1611992029"
+    },
+    {
+      "title": "Progressive Bloggers",
+      "feed_url": "https://progressivebloggers.ca/feed/",
+      "website_url": "https://progressivebloggers.ca/",
+      "description": "Progressive Bloggers is a group of Canadian bloggers who firmly believe that this great country needs to move forward, not backwards. Be they Liberal or liberal, New Democrats or democrats, Green voters or voters who want a green country, or even Red Tories searching for a home, these bloggers believe that Canadian politics should move in a progressive direction.",
+      "followers": {
+        "twitter": 751
+      },
+      "image_url": "https://i1.feedspot.com/4862306.jpg?t=1611992044"
+    },
+    {
+      "title": "Angus Reid Institute",
+      "feed_url": "https://angusreid.org/feed/",
+      "website_url": "https://angusreid.org/",
+      "description": "The Angus Reid Institute is a national, not-for-profit, non-partisan public opinion research foundation established to enhance and encourage better understanding of issues and trends affecting economic, social, governance, philanthropy, public administration, domestic and foreign policy in Canada and its world.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 12600
+      },
+      "image_url": "https://i1.feedspot.com/4862962.jpg?t=1611992070"
+    },
+    {
+      "title": "Canadian Dimension",
+      "feed_url": "https://canadiandimension.com/feeds/articles",
+      "website_url": "https://canadiandimension.com/",
+      "description": "Canadian Dimension is published four times per year. We are a magazine which shows there is an alternative to the corporate agenda and the dictates of the global market; that the dream of a better society is still alive.",
+      "followers": {
+        "facebook": 8700,
+        "twitter": 8900,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4862342.jpg?t=1650009144"
+    },
+    {
+      "title": "Alberta Politics",
+      "feed_url": "https://albertapolitics.ca/feed/",
+      "website_url": "https://albertapolitics.ca/",
+      "description": "David J. Climenhaga is an award-winning journalist, author, post-secondary teacher, poet, and trade union, communicator. Alberta Politics is David Climenhaga's Polical Diary",
+      "followers": {
+        "twitter": 13500
+      },
+      "image_url": "https://i1.feedspot.com/4214104.jpg?t=1752228640"
+    },
+    {
+      "title": "EKOS Politics",
+      "feed_url": "https://www.ekospolitics.com/index.php/feed/",
+      "website_url": "https://www.ekospolitics.com/",
+      "description": "EKOS Politics updating this site frequently with new polls, analysis and insight into Canadian politics. EKOS's experience, knowledge and sophisticated research designs have contributed positively to many previous elections.",
+      "followers": {
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/3630506.jpg?t=1611993084"
+    },
+    {
+      "title": "Politics and its Discontents",
+      "feed_url": "https://politicsanditsdiscontents.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://politicsanditsdiscontents.blogspot.com/",
+      "description": "Politics and its Discontents is about Reflections, Observations, and Analyses Pertaining to the Canadian Political Scene",
+      "followers": {
+        "twitter": 358
+      },
+      "image_url": "https://i1.feedspot.com/4862420.jpg?t=1650010885"
+    },
+    {
+      "title": "Accidental Deliberations",
+      "feed_url": "http://accidentaldeliberations.blogspot.com/feeds/posts/default",
+      "website_url": "http://accidentaldeliberations.blogspot.com/",
+      "description": "Greg Fingas is a Regina lawyer, blogger and freelance political commentator who writes about provincial and national issues from a progressive NDP perspective.",
+      "followers": {
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/548858.jpg?t=1611993049"
+    },
+    {
+      "title": "The Canadian Progressive",
+      "feed_url": "https://www.canadianprogressiveworld.com/feed/",
+      "website_url": "https://www.canadianprogressiveworld.com/",
+      "description": "The Canadian Progressive is a hard-hitting, provocative, unapologetic, activism-oriented political blog. They provide you with hard-hitting, controversial, insightful, thoughtful, provocative and progressive ideas on Canadian and global politics, institutions, rights, policies, systems, values, culture and diversity.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 371
+      },
+      "image_url": "https://i1.feedspot.com/4862323.jpg?t=1611992149"
+    },
+    {
+      "title": "Paul Forseth - Conservative Comments",
+      "feed_url": "https://paulforseth.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://paulforseth.blogspot.com/",
+      "description": "Paul Forseth lives in Powell River, BC. Paul, for 21 years was a Family Justice Counselor, Divorce Mediator, Child Custody Investigator, Probation and Parole Officer, and Youth Court Officer in the Corrections Branch and Courts of B.C. Paul has spent considerable time on human rights issues, democratic renewal, and religious freedom in other countries. His opinions are related to Canadian political culture. Follow this blog to read articles from Paul Forseth.",
+      "followers": {
+        "twitter": 363
+      },
+      "image_url": "https://i1.feedspot.com/5179002.jpg?t=1650011230"
+    },
+    {
+      "title": "Tracking the Politics of Criminalization and Punishment in Canada",
+      "feed_url": "http://tpcp-canada.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://tpcp-canada.blogspot.com/",
+      "description": "Tracking the Politics of Criminalization and Punishment in Canada provides commentary that aims to make sense of recent developments in the politics of criminalization and punishment in the Canadian context.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4863358.jpg?t=1611992164"
+    },
+    {
+      "title": "Joerge Dyrkton",
+      "feed_url": "https://joergedyrkton.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://joergedyrkton.blogspot.com/",
+      "description": "Joerge Dyrkton attended Trent University in Peterborough, Ontario where he graduated with an Honours B.A. in History. This blog is his thoughts on Canadian Political Culture: Criticisms, Reviews and the Poverty of Parliament.",
+      "followers": {
+        "twitter": 8
+      },
+      "image_url": "https://i1.feedspot.com/4863379.jpg?t=1611992192"
+    },
+    {
+      "title": "OpenCanada.org",
+      "feed_url": "https://opencanada.org/feed/",
+      "website_url": "https://opencanada.org/",
+      "description": "OpenCanada.org is a publication of the Canadian International Council, the Centre for International Governance Innovation and the Bill Graham Centre. They produce multimedia content to explain, analyze and tell stories about the increasingly complex and rapidly shifting world of foreign policy and international affairs.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 15100,
+        "instagram": 222
+      },
+      "image_url": "https://i1.feedspot.com/4862155.jpg?t=1650015401"
+    },
+    {
+      "title": "Stephen Taylor",
+      "feed_url": "https://www.stephentaylor.ca/feed/",
+      "website_url": "https://www.stephentaylor.ca/",
+      "description": "Stephen Taylor is a digital campaign pioneer in Canada. Taylor has been involved in national politics since 2004 and got his start organizing political bloggers in support of the nascent Conservative Party of Canada.",
+      "followers": {
+        "facebook": 17900,
+        "twitter": 77500
+      },
+      "image_url": "https://i1.feedspot.com/773226.jpg?t=1752148565"
+    },
+    {
+      "title": "CCPA",
+      "feed_url": "https://www.policyalternatives.ca/feed/",
+      "website_url": "https://www.policyalternatives.ca/",
+      "description": "The CCPA works with top-notch researchers on the key issues facing Canada. Whether it's the growing gap between the rich and the rest of us, the push to privatize our health care system, or gas companies gouging us at the pump, we set the record straight.",
+      "followers": {
+        "facebook": 44600,
+        "twitter": 31800,
+        "instagram": 11200
+      },
+      "image_url": "https://i1.feedspot.com/5391054.jpg?t=1650000178"
+    },
+    {
+      "title": "Centre for International Policy Studies Blog",
+      "feed_url": "https://www.cips-cepi.ca/feed/",
+      "website_url": "https://www.cips-cepi.ca/blog-2/",
+      "description": "A focal point for scholarship and debate on international affairs in Canada Created in 2007, the Centre for International Policy Studies is jointly funded by the Faculty of Social Sciences and the Office of the Vice President-Research at the University of Ottawa, Canada.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 6200
+      },
+      "image_url": "https://i1.feedspot.com/5295303.jpg?t=1624346772"
+    },
+    {
+      "title": "Steve Munro",
+      "feed_url": "https://stevemunro.ca/feed/",
+      "website_url": "https://stevemunro.ca/",
+      "description": "The blog discusses the transit & politics of Toronto. I am Steve Munro, born in Toronto in September 1948. This site is not just me and my opinions, but the contributions of many to the discussions over the years.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4227145.jpg?t=1650001383"
+    },
+    {
+      "title": "National Post \u00bb Canadian Politics",
+      "feed_url": "https://nationalpost.com/category/news/politics/feed.xml",
+      "website_url": "https://nationalpost.com/category/news/politics/",
+      "description": "The National Post covers the latest in Politics News. Get the latest news, photos, and videos coverage on politics and government issues. The Postmedia Network is one of Canada's largest news networks. Our network gives you the benefit of exclusive access to an owned and operated advertising channel, as well as a wealth of first-party data that enables better campaign performance, not just on our network but on search and social channels as well.",
+      "followers": {
+        "facebook": 457200,
+        "twitter": 1100000,
+        "instagram": 101200
+      },
+      "image_url": "https://i1.feedspot.com/5298858.jpg?t=1625299638"
+    },
+    {
+      "title": "James W.J. Bowden's Blog",
+      "feed_url": "https://parliamentum.org/feed/",
+      "website_url": "https://parliamentum.org/",
+      "description": "A blog (primarily) on Canadian and Commonwealth political history and institutions. I started this blog in 2011, originally as a means of making the Manual of Official Procedure of the Government of Canada publicly available online. My area of academic expertise lies in Canadian political institutions, especially the Crown, political executive, and conventions of Responsible Government.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3644030.jpg?t=1673436876"
+    },
+    {
+      "title": "The Walrus \u00bb Politics",
+      "feed_url": "https://thewalrus.ca/category/current-affairs/politics/feed/",
+      "website_url": "https://thewalrus.ca/category/current-affairs/politics/",
+      "description": "Our latest stories on Canadian politics, elections, parties, and policy, from the municipal to the federal level, plus the politics of the world around us and how they affect our democratic systems. The Walrus provokes new thinking and sparks conversation on matters vital to Canadians. As a registered charity, we publish independent, fact-based journalism, produce national, ideas-focused events, and train emerging professionals in publishing and nonprofit management.",
+      "followers": {
+        "facebook": 51200,
+        "twitter": 85600,
+        "instagram": 19400
+      },
+      "image_url": "https://i1.feedspot.com/5298905.jpg?t=1625307074"
+    },
+    {
+      "title": "Gordon Prentice at Large - Politics in Newmarket",
+      "feed_url": "https://www.shrinkslessorsquare.ca/?format=feed&type=rss",
+      "website_url": "https://www.shrinkslessorsquare.ca/",
+      "description": "Gordon Prentice's Blog is your source to read more about the Politics in Newmarket. Stay updated on the latest news, policies, conspiracy, election updates, and more all in one place.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5403127.jpg?t=1653284216"
+    },
+    {
+      "title": "Dogwood",
+      "feed_url": "https://www.dogwoodbc.ca/feed/",
+      "website_url": "https://www.dogwoodbc.ca/news/",
+      "description": "Named after B.C.'s provincial flower, Dogwood is a people-powered organization driven by a shared love of place. We bring together people across the political spectrum to work on the urgent challenges facing our home. The goal is to build a grassroots base of engaged citizens ready to take action outside of the existing political party system.",
+      "followers": {
+        "facebook": 32700,
+        "twitter": 18300,
+        "instagram": 40200
+      },
+      "image_url": "https://i1.feedspot.com/5403126.jpg?t=1653280706"
+    },
+    {
+      "title": "Speakers' Spotlight \u00bb Politics",
+      "feed_url": "https://www.speakers.ca/category/politics/feed/",
+      "website_url": "https://www.speakers.ca/category/politics/",
+      "description": "Stay updated on the latest political headlines, breaking news, and timely updated reports with Speakers' Spotlight. Speakers' Spotlight is North America's most innovative speakers bureau, representing the most extraordinary speakers, leading thinkers, practitioners, celebrities, and inspiring individuals. Our mission is to change the world by helping put the right speaker in front of the right audience at the right time.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 10100,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5403123.jpg?t=1653280690"
+    },
+    {
+      "title": "IN-SIGHTS",
+      "feed_url": "https://in-sights.ca/feed/",
+      "website_url": "https://in-sights.ca/",
+      "description": "Personal commentary on political and social issues in western Canada. After a career in accounting and small business management, I began writing In-Sights (initially called Northern Insights) in April 2009, covering Canadian public affairs with a focus on British Columbia. I was schooled in Powell River and at the University of British Columbia. My wife Gwen and I, and our three adult children and seven grandchildren, live in North Vancouver.",
+      "followers": {
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5403122.jpg?t=1653283941"
+    },
+    {
+      "title": "The Conversation Canada \u00bb Politics",
+      "feed_url": "https://theconversation.com/ca/politics/articles.atom",
+      "website_url": "https://theconversation.com/ca/politics",
+      "description": "The Conversation Canada launched in June 2017. The Conversation is an independent source of news and views, from the academic and research community, delivered directly to the public. Curated by professional editors, The Conversation offers informed commentary and debate on the issues affecting our world.",
+      "followers": {
+        "facebook": 15500,
+        "twitter": 21800,
+        "instagram": 54600
+      },
+      "image_url": "https://i1.feedspot.com/5493648.jpg?t=1673855055"
+    },
+    {
+      "title": "Canada's National Observer \u00bb Politics",
+      "feed_url": "https://www.nationalobserver.com/taxonomy/term/4/rss",
+      "website_url": "https://www.nationalobserver.com/sections/politics",
+      "description": "Canada's National Observer reports on climate, environment, and society. Our award-winning journalists and columnists set the agenda on the climate conversation, with investigations, analysis, and special reports. Canada's National Observer team explains everything you need to know about what's going on in Canada politics, and more.",
+      "followers": {
+        "facebook": 34700,
+        "twitter": 67900,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5493647.jpg?t=1673854889"
+    },
+    {
+      "title": "Alberta Views \u00bb Politics",
+      "feed_url": "https://albertaviews.ca/category/politics/feed/",
+      "website_url": "https://albertaviews.ca/category/politics/",
+      "description": "Welcome to the must-read magazine for the people who are shaping the new Alberta. Read Alberta Views publishes stories about politics, social issues, and the arts. Our stories are written by Alberta's best writers and thinkers.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 4200,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5468590.jpg?t=1673855134"
+    },
+    {
+      "title": "Graham Thomson Blog",
+      "feed_url": "https://grahamthomson.ca/blog/feed/",
+      "website_url": "https://grahamthomson.ca/category/alberta-politics/",
+      "description": "Graham is a major figure in Alberta media and is sought after as a conference speaker and panelist to bring his uncanny understanding of politics to a broad range of audiences. He can often be heard explaining what's happening in Alberta on national radio and television programs, including The Current and Power and Politics.",
+      "followers": {
+        "twitter": 14700
+      },
+      "image_url": "https://i1.feedspot.com/5468589.jpg?t=1673854759"
+    },
+    {
+      "title": "Policy Magazine",
+      "feed_url": "https://www.policymagazine.ca/feed/",
+      "website_url": "https://www.policymagazine.ca/",
+      "description": "Policy Magazine provides online analysis, emerging voices, and policy specials. Read about Canadian Politics and Public Policy in the Policy Magazine, published six times a year.",
+      "followers": {
+        "facebook": 364,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5458290.jpg?t=1673854793"
+    },
+    {
+      "title": "Calgary Herald \u00bb Politics",
+      "feed_url": "https://calgaryherald.com/category/news/politics/feed.xml",
+      "website_url": "https://calgaryherald.com/category/news/politics/",
+      "description": "Read breaking news in politics, including images, videos, and community conversations on political news in Calgary and the rest of Canada. Read the latest breaking news, updates, and headlines. Calgary Herald offers information on the latest national and international events & more.",
+      "followers": {
+        "facebook": 159900,
+        "twitter": 217600,
+        "instagram": 44700
+      },
+      "image_url": "https://i1.feedspot.com/5298888.jpg?t=1747382038"
+    },
+    {
+      "title": "Edmonton Journal \u00bb Politics",
+      "feed_url": "https://edmontonjournal.com/category/news/politics/feed.xml",
+      "website_url": "https://edmontonjournal.com/category/news/politics/",
+      "description": "Read the news on municipal and federal politics. Edmonton Journal is your online source of current Canadian political headlines. Follow the journal for all the latest breaking news, updates, and headlines. Edmonton Journal offers information on the latest national and international events & more.",
+      "followers": {
+        "facebook": 139100,
+        "twitter": 195300,
+        "instagram": 85000
+      },
+      "image_url": "https://i1.feedspot.com/5298894.jpg?t=1673854912"
+    },
+    {
+      "title": "The Hill Times",
+      "feed_url": "https://www.hilltimes.com/feed/",
+      "website_url": "https://www.hilltimes.com/",
+      "description": "The Hill Times is Independent, non-partisan, essential, and feisty. Breaking exclusive stories and blazing trails every week, we're an influential must-read for the savvy political and government insider. Our reporters break exclusive news stories that delve deep into Canada's federal political world from the backrooms to Cabinet and caucus meetings.",
+      "followers": {
+        "facebook": 8800,
+        "twitter": 93300
+      },
+      "image_url": "https://i1.feedspot.com/4862394.jpg?t=1665644548"
+    },
+    {
+      "title": "Liberal Party of Canada Blog",
+      "feed_url": "https://liberal.ca/category/blog/feed/",
+      "website_url": "https://liberal.ca/category/blog/",
+      "description": "Discover articles about the Liberal Party of Canada and learn more about their vision for real change in Canada.",
+      "followers": {
+        "facebook": 484600,
+        "twitter": 420000,
+        "instagram": 182200
+      },
+      "image_url": "https://i1.feedspot.com/4535400.jpg?t=1611992063"
+    },
+    {
+      "title": "Political Commentaries Canada",
+      "feed_url": "https://politicalcommentariescanada.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://politicalcommentariescanada.blogspot.com/",
+      "description": "Political Commentaries Canada features articles on Canadian and International Political Issues, Legal Matters, Politicians and Other Rascals",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5037283.jpg?t=1673440548"
+    },
+    {
+      "title": "Canadian Election Atlas",
+      "feed_url": "http://canadianelectionatlas.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://canadianelectionatlas.blogspot.com/",
+      "description": "Earl has a BA from Carleton University in Political Science with a concentration in Canada politics. He concentrates his contributions to Canadian politics, and his passion of curling. Most Canadian election maps on Wikipedia were uploaded by him (User:Earl Andrew). His interest in politics and cartography has led him to create this site.",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4863006.jpg?t=1611992170"
+    },
+    {
+      "title": "FY Canadian Politics",
+      "feed_url": "https://fycanadianpolitics.tumblr.com/rss",
+      "website_url": "https://fycanadianpolitics.tumblr.com/",
+      "description": "FY Canadian Politics is a blog dedicated to the horrifying world of Canadian Politics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4863420.jpg?t=1611992382"
+    },
+    {
+      "title": "The Sir Robert Bond Papers",
+      "feed_url": "https://bondpapers.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://bondpapers.blogspot.com/",
+      "description": "A contrary view of politics in Newfoundland and Labrador",
+      "followers": {
+        "facebook": 317
+      },
+      "image_url": "https://i1.feedspot.com/5085909.jpg?t=1611992286"
+    },
+    {
+      "title": "Policy Fix",
+      "feed_url": "http://policyfix.ca/feed/",
+      "website_url": "http://policyfix.ca/",
+      "description": "The CCPA Manitoba was formed in 1997 to challenge the onslaught of neo-liberal policies in our province. We made a strong entrance with two publications on the provincial Conservative government's attempt to privatize a portion of Winnipeg's home care system. Within two hours of the release of those first two reports the provincial government announced that it was abandoning the privatization experiment.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5391051.jpg?t=1650000045"
+    },
+    {
+      "title": "Susan on the Soapbox",
+      "feed_url": "https://susanonthesoapbox.com/feed/",
+      "website_url": "https://susanonthesoapbox.com/",
+      "description": "A commentary on political, social and cultural issues - from a lawyer with a degree in anthropology. I'm a lawyer with 26 years of experience in petrochemicals, pipelines, oil and natural gas. I've worked in Canada and the US on projects located in North America, Britain, Europe and Asia.",
+      "followers": {
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/2161251.jpg?t=1752220463"
+    },
+    {
+      "title": "ROCK SOLID POLITICS",
+      "feed_url": "https://rocksolidpolitics.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://rocksolidpolitics.blogspot.com/",
+      "description": "Here's to the crazy ones, the misfits, the rebels, the troublemakers, the round pegs in the square holes, the ones who see things differently they're not fond of rules. Read articles by Brad Cabana on Canadian politics. The blog posts cover all the major topics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5493649.jpg?t=1673855021"
+    },
+    {
+      "title": "338Canada",
+      "feed_url": "https://338canada.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://338canada.blogspot.com/",
+      "description": "The 338Canada project is a statistical model of electoral projections based on opinion polls, electoral history, and demographic data. This web site is a creation of Philippe J. Fournier, physics and astrophysics professor at C\u00e9gep de Saint-Laurent in Montreal. Philippe J. Fournier is a political columnist for Politico and L'actualit\u00e9 magazine, as well as a regular political contributor for CTV Montreal, Noovo, and Radio-Canada.",
+      "followers": {
+        "facebook": 36700,
+        "twitter": 33800
+      },
+      "image_url": "https://i1.feedspot.com/5493646.jpg?t=1673855166"
+    },
+    {
+      "title": "Macleans.ca \u00bb Politics",
+      "feed_url": "https://macleans.ca/politics/",
+      "website_url": "https://macleans.ca/politics/",
+      "description": "Maclean's is Canada's only national weekly current affairs magazine. Maclean's enlightens, engages, and entertains 2.8 million readers with strong investigative reporting and exclusive stories from leading journalists in the fields of international affairs, social issues, national politics.",
+      "followers": {
+        "facebook": 196400,
+        "instagram": 27000
+      },
+      "image_url": "https://i1.feedspot.com/4534789.jpg?t=1611992059"
+    },
+    {
+      "title": "Broadbent Institute",
+      "feed_url": "https://broadbentinstitute.ca/updates/feed/",
+      "website_url": "https://broadbentinstitute.ca/updates/",
+      "description": "The Broadbent Institute is Canada's leading progressive, independent organization championing change through the promotion of democracy, equality, and sustainability and the training of a new generation of leaders.",
+      "followers": {
+        "facebook": 18,
+        "twitter": 29100,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4862129.jpg?t=1611992079"
+    },
+    {
+      "title": "CCPA Policy Note",
+      "feed_url": "https://www.policynote.ca/feed/",
+      "website_url": "https://www.policynote.ca/",
+      "description": "The Canadian Centre for Policy Alternatives is an independent, non-partisan research institute concerned with issues of social and economic justice. The CCPA is one of Canada's leading progressive voices in public policy debates.",
+      "followers": {
+        "facebook": 44600,
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/1838728.jpg?t=1650000086"
+    },
+    {
+      "title": "Fraser Institute",
+      "feed_url": "https://www.fraserinstitute.org/search/",
+      "website_url": "https://www.fraserinstitute.org/search/",
+      "description": "Our mission is to improve the quality of life for Canadians, their families, and future generations by studying, measuring, and broadly communicating the effects of government policies, entrepreneurship, and choice on their well-being.",
+      "followers": {
+        "facebook": 44500,
+        "twitter": 34500,
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/5321390.jpg?t=1650000968"
+    },
+    {
+      "title": "Global News \u00bb Politics",
+      "feed_url": "https://globalnews.ca/category/politics/feed/",
+      "website_url": "https://globalnews.ca/politics/",
+      "description": "Get the latest breaking news on municipal and federal politics & current Canadian political news headlines. Global News is your source for the latest from across Canada and beyond.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 971600
+      },
+      "image_url": "https://i1.feedspot.com/5298853.jpg?t=1625298889"
+    },
+    {
+      "title": "Routine Proceedings",
+      "feed_url": "https://www.routineproceedings.com/feed/",
+      "website_url": "https://www.routineproceedings.com/",
+      "description": "My Question Period recaps, Q&As with MPs and Senators, and essays about issues of the day or my own particular musings will now be found here. I've been a member of the Canadian Parliamentary Press Gallery since 2008, and I have a fairly obsessive knowledge about Canadian politics.",
+      "followers": {
+        "twitter": 29500
+      },
+      "image_url": "https://i1.feedspot.com/5402955.jpg?t=1653126878"
+    },
+    {
+      "title": "Toronto Star \u00bb Politics",
+      "feed_url": "https://www.thestar.com/search/?f=rss&t=article&c=politics&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.thestar.com/politics/",
+      "description": "Canadian politics news and opinion from the Star's leading journalists. Visit thestar.com for full coverage of political issues that matter to you. Founded in 1892, the Toronto Star has long been Canada's largest daily newspaper. Get the latest news, alerts, sports, photos, and more from Canada's largest daily newspaper.",
+      "followers": {
+        "facebook": 499700,
+        "twitter": 1200000,
+        "instagram": 164000
+      },
+      "image_url": "https://i1.feedspot.com/5403124.jpg?t=1653280698"
+    },
+    {
+      "title": "National Newswatch",
+      "feed_url": "https://www.nationalnewswatch.com/feed/",
+      "website_url": "https://www.nationalnewswatch.com/",
+      "description": "National Newswatch is Canada's most comprehensive site for political news and views. All day, every day, we help readers find and access must-see news and opinion articles and help authors and publishers find the readers and viewers who'll most appreciate their content.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 66500
+      },
+      "image_url": "https://i1.feedspot.com/4862118.jpg?t=1611992020"
+    },
+    {
+      "title": "Mind Bending Politics",
+      "feed_url": "https://mindbendingpolitics.wordpress.com/feed/",
+      "website_url": "https://mindbendingpolitics.wordpress.com/",
+      "description": "Mind Bending Politics is an Independent Mind Bending Political Blog Focusing on Canadian Politics and Policy.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4862352.jpg?t=1611992440"
+    },
+    {
+      "title": "Unravel Halifax \u00bb Politics",
+      "feed_url": "https://unravelhalifax.ca/category/politics/feed/",
+      "website_url": "https://duncanmatheson.ca/blog/category/Political",
+      "description": "The following section of Unravel Halifax covers articles and news on Canadian Politics. Unravel is a magazine for a city that is rediscovering itself. Unravel's award-winning journalists will also confront our city's challenges, attack its injustices, and amplify the voices of changemakers.",
+      "followers": {
+        "facebook": 9900,
+        "twitter": 7400
+      },
+      "image_url": "https://i1.feedspot.com/5403131.jpg?t=1653280731"
+    },
+    {
+      "title": "Politics Today",
+      "feed_url": "https://www.politicstoday.news/feed/",
+      "website_url": "https://www.politicstoday.news/",
+      "description": "Politics Today is a collection of daily news publications, covering Canada's Parliament and provincial legislatures. In Ontario, Alberta, British Columbia and on Parliament Hill we aim to be your top news source for in-depth politics, policy and expert analysis.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5493650.jpg?t=1673854979"
+    },
+    {
+      "title": "Ken Chapman",
+      "feed_url": "https://ken-chapman.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://ken-chapman.blogspot.com/",
+      "description": "I am interested in progressive politics, citizen participation, real democracy, and a full range of public policy issues from an Albertan and Canadian perspective. This blog is about progressive politics in Alberta, Canada, and United States, in that order.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 9800
+      },
+      "image_url": "https://i1.feedspot.com/5468587.jpg?t=1673854778"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "category": "UK Barbecue",
+  "source_url": "https://rss.feedspot.com/uk_barbecue_rss_feeds",
+  "feeds": [
+    {
+      "title": "KungFuBBQ",
+      "feed_url": "https://kungfubbq.co.uk/feed",
+      "website_url": "https://kungfubbq.co.uk/",
+      "description": "KungFuBBQ is a UK BBQ Blog, documenting recipe cooks from various cookbooks, reviews of BBQ's and Accessories plus handy hints and tips to help you improve your cooks and wow your guests!",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 4700,
+        "instagram": 8700
+      },
+      "image_url": "https://i1.feedspot.com/4657033.jpg?t=1607327027"
+    },
+    {
+      "title": "Red's True Barbecue Blog",
+      "feed_url": "https://truebarbecue.com/blog/feed/",
+      "website_url": "https://truebarbecue.com/blog/",
+      "description": "Red's True Barbecue is the home of true barbecue. Feast your eyes on the menu and find a Red's restaurant nearby to worship the best BBQ in the U.K.",
+      "followers": {
+        "twitter": 28900,
+        "instagram": 37800
+      },
+      "image_url": "https://i1.feedspot.com/4912524.jpg?t=1620224131"
+    },
+    {
+      "title": "Tasty Trotter Blog",
+      "feed_url": "https://tastytrotter.com/feed/",
+      "website_url": "https://tastytrotter.com/blog/",
+      "description": "Tasty Trotter specializes in designing and manufacturing a wide variety of catering products ideal for outdoor events such as markets. We are dedicated to offering BBQ side dishes and recipes with professional equipment and products.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 182
+      },
+      "image_url": "https://i1.feedspot.com/4912534.jpg?t=1620224216"
+    },
+    {
+      "title": "CountryWoodSmoke",
+      "feed_url": "http://countrywoodsmoke.com/feed/",
+      "website_url": "http://countrywoodsmoke.com/",
+      "description": "Follow CountryWoodSmoke to get inspiring recipes and techniques using the best British produce cooked on fire and smoke. Hot and cold smoking, wood-fired ovens and BBQ of all forms.",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 23500,
+        "instagram": 38000
+      },
+      "image_url": "https://i1.feedspot.com/4640785.jpg?t=1607327030"
+    },
+    {
+      "title": "Love2BBQ",
+      "feed_url": "https://www.love2bbq.co.uk/feed",
+      "website_url": "https://www.love2bbq.co.uk/",
+      "description": "Love2BBQ is a UK BBQ blog dedicated to all things BBQ and cooking outdoors all year round. We are aiming to inspire more people to BBQ not only in fair weather but all year round. This blog covers recipes, news, reviews, articles and useful BBQ hints and tips.",
+      "followers": {
+        "twitter": 7100,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4912529.jpg?t=1620224138"
+    }
+  ]
+}

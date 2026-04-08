@@ -1,0 +1,318 @@
+{
+  "category": "Financial Times",
+  "source_url": "https://rss.feedspot.com/financial_times_rss_feeds",
+  "feeds": [
+    {
+      "title": "Financial Times",
+      "feed_url": "https://www.ft.com/rss/home",
+      "website_url": "https://www.ft.com/",
+      "description": "News, analysis, and comment from the Financial Times. The Financial Times is one of the world's leading news organizations, recognized internationally for its authority, integrity, and accuracy. They provide essential news and analysis to ambitious individuals and companies around the world, alongside a suite of leadership services that put their content and expertise to practical use.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 7400000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5359994.jpg?t=1658493364"
+    },
+    {
+      "title": "Financial Times \u00bb World",
+      "feed_url": "https://www.ft.com/world?format=rss",
+      "website_url": "https://www.ft.com/world/",
+      "description": "Breaking news and top stories from around the world. Stay up-to-date with the latest developments from Europe, Asia, the Middle East and the Americas.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 6200000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5182001.jpg?t=1615805541"
+    },
+    {
+      "title": "Financial Times \u00bb Global Economy",
+      "feed_url": "https://www.ft.com/global-economy?format=rss",
+      "website_url": "https://www.ft.com/global-economy",
+      "description": "Get the latest global economic news and updates only on the Financial Times.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 6200000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/4874375.jpg?t=1615806328"
+    },
+    {
+      "title": "Financial Times \u00bb Emerging Markets",
+      "feed_url": "https://www.ft.com/emerging-markets?format=rss",
+      "website_url": "https://www.ft.com/emerging-markets",
+      "description": "The Financial Times is one of the world's leading news organizations, recognized internationally for its authority, integrity, and accuracy. Subscribe and get the latest news, analysis, and comment on emerging markets from the Financial Times.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 6200000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5185592.jpg?t=1615806431"
+    },
+    {
+      "title": "Financial Times \u00bb Companies",
+      "feed_url": "https://www.ft.com/companies?format=rss",
+      "website_url": "https://www.ft.com/companies",
+      "description": "News from the world's largest and most influential companies. Get the latest from global brands across various industries, including Amazon, Netflix, Disney, Adidas, and more from Financial Times.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 6200000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5185592.jpg?t=1615806431"
+    },
+    {
+      "title": "Financial Times\u00bb Markets",
+      "feed_url": "https://www.ft.com/markets?format=rss",
+      "website_url": "https://www.ft.com/markets",
+      "description": "Stay up to date with the latest market trends and updates only on the Financial Times.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 6200000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5257697.jpg?t=1615814414"
+    },
+    {
+      "title": "Financial Times \u00bb Climate Capital",
+      "feed_url": "https://www.ft.com/climate-capital?format=rss",
+      "website_url": "https://www.ft.com/climate-capital",
+      "description": "Stay up to date with the climate, pollution, pesticides, and environmental news.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 6200000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5257703.jpg?t=1615815074"
+    },
+    {
+      "title": "Financial Times \u00bb Opinion",
+      "feed_url": "https://www.ft.com/opinion?format=rss",
+      "website_url": "https://www.ft.com/opinion",
+      "description": "Opinion, op-eds, letters to the editor, analysis, and policy ideas from the Financial Times.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 6200000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5257706.jpg?t=1615815219"
+    },
+    {
+      "title": "Financial Times \u00bb Work & Careers",
+      "feed_url": "https://www.ft.com/work-careers?format=rss",
+      "website_url": "https://www.ft.com/work-careers",
+      "description": "The latest news across work and careers. Extensive coverage across leadership and the future of work, interviews with industry thought leaders and business book reviews only on Financial Times.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 6200000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5257708.jpg?t=1615815572"
+    },
+    {
+      "title": "Financial Times \u00bb UK",
+      "feed_url": "https://www.ft.com/world/uk?format=rss",
+      "website_url": "https://www.ft.com/world/uk",
+      "description": "Breaking news and top stories from the UK. The latest on the UK economy, politics and government and in-depth analysis on the housing market and energy sector.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 6200000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5027861.jpg?t=1615806550"
+    },
+    {
+      "title": "Financial Times \u00bb US",
+      "feed_url": "https://www.ft.com/world/us?format=rss",
+      "website_url": "https://www.ft.com/world/us",
+      "description": "Get the latest financial news and updates covering the US region only on the Financial Times.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 6200000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5257637.jpg?t=1615807830"
+    },
+    {
+      "title": "Financial Times \u00bb Africa",
+      "feed_url": "https://www.ft.com/africa?format=rss",
+      "website_url": "https://www.ft.com/africa",
+      "description": "All articles about Africa from Financial Times.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 7400000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5060462.jpg?t=1615808869"
+    },
+    {
+      "title": "Financial Times \u00bb Asia Pacific",
+      "feed_url": "https://www.ft.com/world/asia-pacific?format=rss",
+      "website_url": "https://www.ft.com/world/asia-pacific",
+      "description": "Breaking news and top stories from Asia-Pacific. The latest on the economy, politics, government, and business from Financial Times.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 6200000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5257640.jpg?t=1615809081"
+    },
+    {
+      "title": "Financial Times \u00bb Europe",
+      "feed_url": "https://www.ft.com/world/europe?format=rss",
+      "website_url": "https://www.ft.com/world/europe",
+      "description": "Breaking news and top stories from Europe. The latest on the economy, politics, government, and business from Financial Times.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 6200000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5257641.jpg?t=1615809257"
+    },
+    {
+      "title": "Financial Times \u00bb Financials",
+      "feed_url": "https://www.ft.com/companies/financials?format=rss",
+      "website_url": "https://www.ft.com/companies/financials",
+      "description": "The latest financial news and top stories from companies around the world. Market insights and in-depth financial analysis across every industry and sector from Financial Times.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 6200000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5257658.jpg?t=1615811264"
+    },
+    {
+      "title": "Financial Times \u00bb Health Sector",
+      "feed_url": "https://www.ft.com/companies/health?format=rss",
+      "website_url": "https://www.ft.com/companies/health",
+      "description": "Get the latest health care news and updates only on the financial times.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 6200000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5257660.jpg?t=1615811446"
+    },
+    {
+      "title": "Financial Times \u00bb Technology",
+      "feed_url": "https://www.ft.com/companies/technology?format=rss",
+      "website_url": "https://www.ft.com/companies/technology",
+      "description": "News for Hardware, software, networking, and Internet media. Reporting on information technology, technology, and business news from Financial Times.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 6200000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5185592.jpg?t=1615806431"
+    },
+    {
+      "title": "Financial Times \u00bb Americas",
+      "feed_url": "https://www.ft.com/world/americas?format=rss",
+      "website_url": "https://www.ft.com/world/americas",
+      "description": "Breaking news and top stories from Americas. The latest on the economy, politics, government, and business from Financial Times.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 6200000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5185592.jpg?t=1615806431"
+    },
+    {
+      "title": "Financial Times \u00bb Middle East & North Africa",
+      "feed_url": "https://www.ft.com/world/mideast?format=rss",
+      "website_url": "https://www.ft.com/world/mideast",
+      "description": "Breaking news and top stories from Middle East & North Africa. The latest on the economy, politics, government, and business from Financial Times.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 6200000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5185592.jpg?t=1615806431"
+    },
+    {
+      "title": "Financial Times \u00bb Energy",
+      "feed_url": "https://www.ft.com/energy?format=rss",
+      "website_url": "https://www.ft.com/energy",
+      "description": "The Energy Sector section talks about the latest energy news on renewable energy, natural gas, and more! Find the latest news and analysis, headlines, blogs, and videos about energy markets, gas, oil, coal, commodities, and nuclear power in Financial Times. We are one of the world's leading business news and information organizations, recognized for our authority, integrity, and accuracy.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 6200000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5185592.jpg?t=1615806431"
+    },
+    {
+      "title": "Financial Times \u00bb Industrials",
+      "feed_url": "https://www.ft.com/companies/industrials?format=rss",
+      "website_url": "https://www.ft.com/companies/industrials",
+      "description": "Stay up to date with the latest industrial news and updates only on Financial Times.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 6200000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5185592.jpg?t=1615806431"
+    },
+    {
+      "title": "Financial Times \u00bb Media",
+      "feed_url": "https://www.ft.com/companies/media?format=rss",
+      "website_url": "https://www.ft.com/companies/media",
+      "description": "The latest media news and updates only on the Financial Times.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 6200000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5185592.jpg?t=1615806431"
+    },
+    {
+      "title": "Financial Times \u00bb Professional Services",
+      "feed_url": "https://www.ft.com/companies/professional-services?format=rss",
+      "website_url": "https://www.ft.com/companies/professional-services",
+      "description": "Get the latest updates on accounting & consulting services, legal services, and recruitment services from Financial Times.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 6200000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5185592.jpg?t=1615806431"
+    },
+    {
+      "title": "Financial Times \u00bb Retail & Consumer Industry",
+      "feed_url": "https://www.ft.com/companies/retail-consumer?format=rss",
+      "website_url": "https://www.ft.com/companies/retail-consumer",
+      "description": "Extensive coverage of the retail and consumer goods industries. The latest retail news and insights and in-depth reporting and analysis of the consumer goods sector from Financial Times.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 6200000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5185592.jpg?t=1615806431"
+    },
+    {
+      "title": "Financial Times \u00bb Telecoms",
+      "feed_url": "https://www.ft.com/companies/telecoms?format=rss",
+      "website_url": "https://www.ft.com/companies/telecoms",
+      "description": "Get the latest telecom news and updates only on Financial Times.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 6200000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5257690.jpg?t=1615813965"
+    },
+    {
+      "title": "Financial Times \u00bb Transport",
+      "feed_url": "https://www.ft.com/companies/transport?format=rss",
+      "website_url": "https://www.ft.com/companies/transport",
+      "description": "Get the latest transport news and updates only on the Financial Times.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 6200000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5257692.jpg?t=1615814245"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "category": "Warframe",
+  "source_url": "https://rss.feedspot.com/warframe_rss_feeds",
+  "feeds": [
+    {
+      "title": "Ordis-Warframe",
+      "feed_url": "https://ordis-warframe.blogspot.com/feeds/posts/default",
+      "website_url": "https://ordis-warframe.blogspot.com/",
+      "description": "Warframe Blog. Covers Warframe Builds, Warframe Guides, How to play Solo Warframe, and Arbitration Guides.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5345229.jpg?t=1637404637"
+    },
+    {
+      "title": "Warframe Today",
+      "feed_url": "https://warframe.today/feed/",
+      "website_url": "https://warframe.today/",
+      "description": "Warframe Today is your all-in-one spot for finding information about different frames, mods, where to farm them, and how to make the most out of your time in the game.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5345213.jpg?t=1637403361"
+    },
+    {
+      "title": "Grind Hard Squad",
+      "feed_url": "https://feeds.feedburner.com/blogspot/XYFvbl",
+      "website_url": "https://grindhardsquad.blogspot.com/",
+      "description": "Grind Hard Squad blog focuses on guides, tips, tricks and resources for playing Warframe.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4921090.jpg?t=1620804356"
+    },
+    {
+      "title": "Warframe Guides",
+      "feed_url": "https://warframeguide.com/feed/",
+      "website_url": "https://warframeguide.com/",
+      "description": "WarframeGuide.com provides all the most useful information of the game from high-level players- to other players of Warframe in one place- to save time and help players become better, faster.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4921164.jpg?t=1620804366"
+    },
+    {
+      "title": "Warframe School",
+      "feed_url": "https://warframe-school.com/feed/",
+      "website_url": "https://warframe-school.com/",
+      "description": "A place where you can find the best Warframe Builds, Farming Guides, News, and much more.",
+      "followers": {
+        "facebook": 108,
+        "twitter": 524
+      },
+      "image_url": "https://i1.feedspot.com/5344446.jpg?t=1637232997"
+    },
+    {
+      "title": "PlayerAuction \u00bb Warframe",
+      "feed_url": "https://blog.playerauctions.com/category/warframe/feed/",
+      "website_url": "https://blog.playerauctions.com/category/warframe/",
+      "description": "Warframe Tips & Guides Blog. Whether you need advice on the best frames & weapons, run-downs of new content updates, strategies for acquiring in-game currency & items, or just more info about DE's soulful sci-fi third-person shooter, this is the place to find it. PlayerAuctions has been the premier network for trading game-related products since 1999.",
+      "followers": {
+        "facebook": 15500,
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5345118.jpg?t=1637395855"
+    },
+    {
+      "title": "PlayerAuctions Blog \u00bb Warframe",
+      "feed_url": "https://blog.playerauctions.com/category/warframe/feed/",
+      "website_url": "https://blog.playerauctions.com/category/warframe/",
+      "description": "Warframe Guides, News, and Leaks. Pro Game Guides is the best place to get in-depth guides for your favorite games!",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 6300,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5345121.jpg?t=1637400665"
+    },
+    {
+      "title": "Game News 24 \u00bb Warframe",
+      "feed_url": "https://game-news24.com/category/warframe/feed/",
+      "website_url": "https://lootandgrind.com/category/warframe/",
+      "description": "This section of the Game News 24 Blog covers the latest news and updates about Warframe. Game News 24 is a hub for the latest news from the gaming industry.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5345120.jpg?t=1637397067"
+    },
+    {
+      "title": "Loot and Grind \u00bb Warframe",
+      "feed_url": "https://lootandgrind.com/category/warframe/feed/",
+      "website_url": "https://lootandgrind.com/category/warframe/",
+      "description": "Warframe is one of the best RPG games with massive amounts of content and gameplay value. This blog will keep you up to date on all Warframe updates and gameplay tips. 'Land Grind' covers the best games worthy of hours of grinding & looting.",
+      "followers": {
+        "facebook": 276,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5345126.jpg"
+    },
+    {
+      "title": "Digital Extremes",
+      "feed_url": "https://www.digitalextremes.com/rss.xml",
+      "website_url": "https://www.digitalextremes.com/",
+      "description": "Digital Extremes Ltd. proudly ranks as one of the world's top development studios in the interactive entertainment industry. Digital Extremes is the Creators of Warframe.",
+      "followers": {
+        "facebook": 12500,
+        "twitter": 86200
+      },
+      "image_url": "https://i1.feedspot.com/4921134.jpg?t=1620804350"
+    }
+  ]
+}

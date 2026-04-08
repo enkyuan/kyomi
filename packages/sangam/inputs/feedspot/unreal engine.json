@@ -1,0 +1,85 @@
+{
+  "category": "Unreal Engine",
+  "source_url": "https://rss.feedspot.com/unreal_engine_rss_feeds",
+  "feeds": [
+    {
+      "title": "Tom Looman",
+      "feed_url": "https://www.tomlooman.com/feed/",
+      "website_url": "https://www.tomlooman.com/?post_type=post",
+      "description": "My name is Tom, a game developer with 10+ years of Unreal Engine experience. Both as an indie developer and at Epic Games. Over the years I created 70+ tutorials, courses, and sample projects for the Unreal Engine community. Ranging from beginner to advanced level. I had the opportunity to teach Unreal Engine C++ to students at Stanford University (CS193U) in 2020.",
+      "followers": {
+        "twitter": 10600
+      },
+      "image_url": "https://i1.feedspot.com/4006170.jpg?t=1681734712"
+    },
+    {
+      "title": "Orfeas Eleftheriou",
+      "feed_url": "https://www.orfeasel.com/feed/",
+      "website_url": "https://www.orfeasel.com/",
+      "description": "I'm Orfeas - a tireless being that codes stuff and runs on coffee. I've been programming since I was 12 years old. I still remember writing my first program on Turbo Pascal in a compiler that didn't include mouse support. Currently, I'm working on several projects for Chalmers University of Technology and on my own Steam game, named Mark One. This blog offers unreal engine 4 C++ tutorials.",
+      "followers": {
+        "twitter": 333,
+        "instagram": 259
+      },
+      "image_url": "https://i1.feedspot.com/5543521.jpg?t=1681734539"
+    },
+    {
+      "title": "Ben UI",
+      "feed_url": "https://benui.ca/feed.xml",
+      "website_url": "https://benui.ca/",
+      "description": "Hi, I'm Ben. After growing up in the UK, I've lived and worked in the video games industry in Tokyo, Paris, and Vancouver. I have over 7 years of experience as an Unreal Engine UI programmer, as well as experience with Unity and custom C++ engines. I'm passionate about creating amazing user experiences not only for players but for fellow devs. I love sharing what I learn about Unreal Engine through tutorials, documentation, and running an Unreal UI Discord.",
+      "followers": {
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5543516.jpg?t=1681734743"
+    },
+    {
+      "title": "UT-HUB Blog",
+      "feed_url": "https://www.ut-hub.com/feed/",
+      "website_url": "https://www.ut-hub.com/blog/",
+      "description": "The UT-HUB team, a specialist in the Unreal Engine, offers the necessary tools and resources to guarantee excellence for its students. We promote your talent to turn your vocation into your professional future. We differentiate ourselves by our relationship with the technology sector and its professionals starting with the manufacturer EPIC itself.",
+      "followers": {
+        "facebook": 385,
+        "twitter": 742,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5543520.jpg?t=1681734866"
+    },
+    {
+      "title": "Laura's (Mostly) Unreal Blog",
+      "feed_url": "https://landelare.github.io/feed.xml",
+      "website_url": "https://landelare.github.io/",
+      "description": "Laura's (Mostly) Unreal Blog features articles that navigate students while developing unreal engines, other programs, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5543517.jpg?t=1681734901"
+    },
+    {
+      "title": "Devtricks",
+      "feed_url": "https://vorixo.github.io/devtricks//feed",
+      "website_url": "https://vorixo.github.io/devtricks/",
+      "description": "I am a gameplay programmer that likes to design and program coherent-cohesive systems of any type of game. Usually with Unreal Engine 5, however, I am always open to learn new technology.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5543515.jpg?t=1681734932"
+    },
+    {
+      "title": "Awesome Tuts Blog \u00bb Unreal Engine",
+      "feed_url": "https://awesometuts.com/blog/category/unreal/feed/",
+      "website_url": "https://awesometuts.com/blog/category/unreal/",
+      "description": "We create games and videos about video game development. In our blog, you will find written tutorials for Unity and Unreal engines.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5543518.jpg?t=1681734528"
+    },
+    {
+      "title": "Unreal Engine",
+      "feed_url": "https://www.unrealengine.com/rss",
+      "website_url": "https://www.unrealengine.com/en-US/feed",
+      "description": "Unreal Engine enables game developers and creators across industries to realize next-generation real-time 3D content and experiences with greater freedom, fidelity, and flexibility than ever before. Create games and worlds with massive amounts of geometric detail with Nanite, a virtualized micropolygon geometry system, and Virtual Shadow Maps.",
+      "followers": {
+        "facebook": 585300,
+        "twitter": 575500,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/4058400.jpg?t=1681734689"
+    }
+  ]
+}

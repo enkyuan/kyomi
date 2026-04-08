@@ -1,0 +1,77 @@
+{
+  "category": "Cobol",
+  "source_url": "https://rss.feedspot.com/cobol_rss_feeds",
+  "feeds": [
+    {
+      "title": "Treehouse Software's Blog",
+      "feed_url": "https://treehousesoftware.wordpress.com/feed/",
+      "website_url": "https://treehousesoftware.wordpress.com/",
+      "description": "Welcome to 'The Branches' -- Treehouse Software's Blog",
+      "followers": {
+        "facebook": 223
+      },
+      "image_url": "https://i1.feedspot.com/5729294.jpg?t=1701862342"
+    },
+    {
+      "title": "Open Mainframe Project \u00bb COBOL",
+      "feed_url": "https://openmainframeproject.org/category/cobol/feed/",
+      "website_url": "https://openmainframeproject.org/category/cobol/",
+      "description": "Linux Foundation Project",
+      "followers": {
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5729291.jpg?t=1707301108"
+    },
+    {
+      "title": "DevOps \u00bb COBOL",
+      "feed_url": "https://devops.com/tag/cobol/feed/",
+      "website_url": "https://devops.com/tag/cobol/",
+      "description": "Where the world meets DevOps",
+      "followers": {
+        "facebook": 13300,
+        "twitter": 57700
+      },
+      "image_url": "https://i1.feedspot.com/5729296.jpg?t=1701862358"
+    },
+    {
+      "title": "Demystifying COBOL Blog",
+      "feed_url": "https://demystifyingcobol.com/feed/",
+      "website_url": "https://demystifyingcobol.com/blog/",
+      "description": "Taking the mystery out of the COBOL Programming Language",
+      "followers": {
+        "facebook": 452,
+        "twitter": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/5729297.jpg?t=1701862421"
+    },
+    {
+      "title": "OpenText Blog \u00bb COBOL",
+      "feed_url": "https://blogs.opentext.com/tag/cobol/feed/",
+      "website_url": "https://blogs.opentext.com/tag/cobol/",
+      "description": "OpenText - The Information Company",
+      "followers": {
+        "twitter": 21700
+      },
+      "image_url": "https://i1.feedspot.com/5729295.jpg?t=1701862346"
+    },
+    {
+      "title": "CloudFrame",
+      "feed_url": "https://cloudframe.com/feed",
+      "website_url": "https://cloudframe.com/resources",
+      "description": "The Cure For COBOL",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5729292.jpg?t=1701862328"
+    },
+    {
+      "title": "FairCom Corporation Blog",
+      "feed_url": "https://www.faircom.com/feed",
+      "website_url": "https://www.faircom.com/learn/blog",
+      "description": "High Performance, Engineering-level database technology",
+      "followers": {
+        "facebook": 6600,
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5729293.jpg?t=1701862335"
+    }
+  ]
+}

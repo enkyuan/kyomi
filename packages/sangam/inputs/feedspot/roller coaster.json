@@ -1,0 +1,49 @@
+{
+  "category": "Roller Coaster",
+  "source_url": "https://rss.feedspot.com/roller_coaster_rss_feeds",
+  "feeds": [
+    {
+      "title": "CoasterBuzz",
+      "feed_url": "https://coasterbuzz.com/rss",
+      "website_url": "https://coasterbuzz.com/",
+      "description": "Ride along with CoasterBuzz, the one spot for the latest Roller coaster, and Amusement Park News. Jeff Putz launched CoasterBuzz to serve a passionate vertical enthusiast community on the Web. CoasterBuzz delivers daily roller coaster and amusement park news to enthusiasts and industry professionals.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 7700
+      },
+      "image_url": "https://i1.feedspot.com/4781111.jpg?t=1663649424"
+    },
+    {
+      "title": "Coaster101",
+      "feed_url": "https://www.coaster101.com/feed/",
+      "website_url": "https://www.coaster101.com/",
+      "description": "View buzzing Roller coaster and theme park photos, news, reviews, videos, articles, and more. Coaster101.com is a trusted and nifty source for the ins and outs and twists and turns of roller coasters. Our goal is to provide our readers with interesting, engaging, and unique content that relates to roller coasters and the amusement industry.",
+      "followers": {
+        "facebook": 44800,
+        "twitter": 12700,
+        "instagram": 17300
+      },
+      "image_url": "https://i1.feedspot.com/4781169.jpg?t=1609237468"
+    },
+    {
+      "title": "Coaster Kings",
+      "feed_url": "https://thecoasterkings.com/feed/",
+      "website_url": "https://thecoasterkings.com/",
+      "description": "Coaster Kings is a combination of 4 brands. We frequently provide our readers with insightful and detailed park updates from parks around the globe. In addition, we post many other kinds of coverage, such as exclusive tour reports, specials, series of articles, interviews, ride reviews, show reviews, etc.",
+      "followers": {
+        "facebook": 679,
+        "twitter": 1500,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5447691.jpg?t=1663649593"
+    },
+    {
+      "title": "Heartline Coaster",
+      "feed_url": "https://heartlinecoaster.com/feed/",
+      "website_url": "https://heartlinecoaster.com/",
+      "description": "Discover Featured posts in this Rollercoaster & Theme Park travel blog. Join Roller Coaster enthusiasts Heartline and Will on their journey to explore and visit the world of roller coaster. Read their reviews, Trips reports, lists and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5447692.jpg?t=1663649577"
+    }
+  ]
+}

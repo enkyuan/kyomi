@@ -1,0 +1,273 @@
+{
+  "category": "Canadian Movie",
+  "source_url": "https://rss.feedspot.com/canadian_movie_rss_feeds",
+  "feeds": [
+    {
+      "title": "Get Reel Movies",
+      "feed_url": "https://getreelmovies.com/feed/",
+      "website_url": "https://getreelmovies.com/",
+      "description": "Get Reel Movies website and podcast was founded on the belief that people need to start getting real with movies. Our team of writers brings you the latest film and TV reviews.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4944110.jpg?t=1621428288"
+    },
+    {
+      "title": "In The Seats Blog",
+      "feed_url": "http://intheseats.ca/feed/",
+      "website_url": "https://intheseats.ca/category/blog/",
+      "description": "In The Seat won't just review, but we'll have news, opinion pieces and anything else we can dream up relating to the worlds of cinema, TV and beyond. We're all about creating as wide of a discussion as we possibly can and bringing you a diverse selection of experienced writers that you as an audience can engage with so you can find out news on the latest releases, or something a little more under the radar that we think might be pretty cool, either at screens in Toronto or across the globe.",
+      "followers": {
+        "facebook": 726,
+        "twitter": 1500,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4944317.jpg?t=1621428295"
+    },
+    {
+      "title": "Hollywood North Magazine",
+      "feed_url": "https://hnmag.ca/feed/",
+      "website_url": "https://hnmag.ca/",
+      "description": "Hollywood North publishes news on the Canadian film industry five days a week, highlighting homegrown and independent film and television projects. We have been hard at work since 2015 to be a forum where readers can inform themselves about the diverse opportunities out here, and make the vital connections pertinent to their filmmaking careers.",
+      "followers": {
+        "facebook": 538
+      },
+      "image_url": "https://i1.feedspot.com/4944478.jpg?t=1621428310"
+    },
+    {
+      "title": "The Academy of Canadian Cinema & Television",
+      "feed_url": "https://www.academy.ca/feed/",
+      "website_url": "https://www.academy.ca/news/",
+      "description": "The Academy of Canadian Cinema & Television is a national, non-profit, professional association dedicated to the recognition and celebration of exceptional achievements in Canadian film, television and digital media. Unifying industry professionals across Canada, the Academy is a vital force representing all screen-based industries.",
+      "followers": {
+        "facebook": 26900,
+        "twitter": 39500,
+        "instagram": 35900
+      },
+      "image_url": "https://i1.feedspot.com/4944324.jpg?t=1621428368"
+    },
+    {
+      "title": "Mr. Will Wong",
+      "feed_url": "http://www.mrwillwong.com/feed/",
+      "website_url": "http://www.mrwillwong.com/",
+      "description": "Entertainment and Pop Culture from a Toronto Perspective with exclusive Celebrity Sightings, Film Reviews, and Filming News.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 9400,
+        "instagram": 8800
+      },
+      "image_url": "https://i1.feedspot.com/5373324.jpg?t=1645177212"
+    },
+    {
+      "title": "National Screen Institute",
+      "feed_url": "https://feeds.feedburner.com/nsi_default",
+      "website_url": "https://nsi-canada.ca/",
+      "description": "The National Screen Institute Canada (NSI) is the only national training organization for writers, directors, and producers in film, television and digital media in Western Canada.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 10500,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4944459.jpg?t=1621428360"
+    },
+    {
+      "title": "Exclaim",
+      "feed_url": "https://feeds.feedburner.com/FilmExclaimca",
+      "website_url": "https://exclaim.ca/all/news",
+      "description": "Follow us to keep up with articles from Exclaim.",
+      "followers": {
+        "facebook": 52300,
+        "twitter": 56000,
+        "instagram": 39600
+      },
+      "image_url": "https://i1.feedspot.com/2125867.jpg?t=1621428448"
+    },
+    {
+      "title": "Kingston Canadian Film Festival",
+      "feed_url": "https://kingcanfilmfest.com/feed/",
+      "website_url": "https://kingcanfilmfest.com/news/",
+      "description": "The mission of KCFF is grounded in the belief that Canadian film and filmmakers are distinctive and vital to our country's culture. We seek to develop an audience for our national cinema by celebrating and showcasing Canadian film and by supporting and encouraging Canadian film production.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 5300,
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/4944419.jpg?t=1621428352"
+    },
+    {
+      "title": "Canadian Lutheran",
+      "feed_url": "https://www.canadianlutheran.ca/category/columns/culture-watch/movie-review-culture-watch/feed/",
+      "website_url": "https://www.canadianlutheran.ca/category/columns/culture-watch/movie-review-culture-watch/",
+      "description": "Follow us to keep up with articles on movie review from Canadian Lutheran.",
+      "followers": {
+        "twitter": 1500,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4944206.jpg?t=1621428346"
+    },
+    {
+      "title": "Cartoon North",
+      "feed_url": "http://www.canadiananimationresources.ca/feed/",
+      "website_url": "http://www.canadiananimationresources.ca/",
+      "description": "Cartoon North was founded in 2008 as Canadian Animation Resources. The goal then, as it is now, is to bring together the Canadian Animation community in a positive and meaningful way, and to provide access to jobs, news, and other resources.",
+      "followers": {
+        "facebook": 14300,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/1156705.jpg?t=1637918768"
+    },
+    {
+      "title": "MUSKRAT Magazine",
+      "feed_url": "http://muskratmagazine.com/category/genre/film-tv/feed/",
+      "website_url": "http://muskratmagazine.com/category/genre/film-tv/",
+      "description": "MUSKRAT is an on-line Indigenous arts, culture, and living magazine that honors the connection between humans and our traditional ecological knowledge by exhibiting original works and critical commentary.",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 5900,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4944480.jpg?t=1621428377"
+    },
+    {
+      "title": "REEL CANADA",
+      "feed_url": "https://reelcanada.ca/feed/",
+      "website_url": "https://reelcanada.ca/",
+      "description": "REEL CANADA is a non-profit organization that celebrates Canada through a film. Canadian films are the stories we tell about ourselves, they open the door to so many conversations about place, nation, identity, and what it means to be Canadian.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 10100,
+        "instagram": 6600
+      },
+      "image_url": "https://i1.feedspot.com/4944085.jpg?t=1621428382"
+    },
+    {
+      "title": "Toronto Black Film Festival",
+      "feed_url": "https://torontoblackfilm.com/feed/",
+      "website_url": "https://torontoblackfilm.com/",
+      "description": "The Toronto Black Film Festival is dedicated to showing the diversity within the black communities! In connecting black films with viewers of all colors and ethnic origins we recognize the differences that make us unique and celebrate the shared values that bring us together.",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 3900,
+        "instagram": 10300
+      },
+      "image_url": "https://i1.feedspot.com/4944232.jpg?t=1630649346"
+    },
+    {
+      "title": "Vancouver International Film Festival",
+      "feed_url": "https://blog.viff.org/feed/",
+      "website_url": "https://blog.viff.org/",
+      "description": "The Official Blog of the Vancouver International Film Festival and Vancity Theatre. The festival's mission is to encourage the understanding of other nations through the art of cinema, to foster the art of cinema, to facilitate the meeting in British Columbia of cinema professionals from around the world, and to stimulate the motion picture industry in British Columbia and Canada.",
+      "followers": {
+        "facebook": 45900,
+        "twitter": 32600
+      },
+      "image_url": "https://i1.feedspot.com/4781196.jpg?t=1609227475"
+    },
+    {
+      "title": "NOW Toronto \u00bb Movies & TV Reviews",
+      "feed_url": "https://nowtoronto.com/category/movies/movies-reviews/feed/",
+      "website_url": "https://nowtoronto.com/category/movies/movies-reviews/",
+      "description": "NOW's film critics review the movies from blockbusters, indie films to documentaries opening in Toronto.",
+      "followers": {
+        "facebook": 70500,
+        "twitter": 215800,
+        "instagram": 98100
+      },
+      "image_url": "https://i1.feedspot.com/4944483.jpg?t=1621428305"
+    },
+    {
+      "title": "The GATE",
+      "feed_url": "https://www.thegate.ca/film/feed/",
+      "website_url": "https://www.thegate.ca/film/",
+      "description": "The GATE is proud to celebrate 17 years covering all things entertainment, culture, and style; from film, music, and television, to travel, gaming and electronics.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 5900,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4944479.jpg?t=1621428321"
+    },
+    {
+      "title": "CBC \u00bb Entertainment",
+      "feed_url": "https://www.cbc.ca/webfeed/rss/rss-arts",
+      "website_url": "https://www.cbc.ca/news/entertainment",
+      "description": "The latest arts & entertainment news and reviews from CBC.",
+      "followers": {
+        "facebook": 918200,
+        "twitter": 758600,
+        "instagram": 699100
+      },
+      "image_url": "https://i1.feedspot.com/8607.jpg?t=1616762746"
+    },
+    {
+      "title": "TorontoStar",
+      "feed_url": "http://www.thestar.com/content/thestar/feed.RSSManagerServlet.articles.entertainment.movies.rss",
+      "website_url": "https://www.thestar.com/entertainment/movies.html",
+      "description": "Coverage of new movies and movie reviews from the Star's leading film critics.",
+      "followers": {
+        "facebook": 499700,
+        "twitter": 1200000,
+        "instagram": 164000
+      },
+      "image_url": "https://i1.feedspot.com/4944199.jpg?t=1621428301"
+    },
+    {
+      "title": "ETCanada",
+      "feed_url": "https://etcanada.com/movies/feed/",
+      "website_url": "https://www.etonline.com/movies",
+      "description": "A trusted news source amongst the stars, the industry and the viewers, the nation's entertainment powerhouse, ET Canada has earned a reputation for honest, sensible, high-quality reporting - covering everything from music to film, television to sports, theatre to fashion, award shows to special events.",
+      "followers": {
+        "facebook": 250100,
+        "twitter": 382000
+      },
+      "image_url": "https://i1.feedspot.com/4944362.jpg?t=1621428325"
+    },
+    {
+      "title": "Ottawa Canadian Film Festival",
+      "feed_url": "https://ocanfilmfest.ca/feed/",
+      "website_url": "https://ocanfilmfest.ca/",
+      "description": "The Ottawa Canadian Film Festival (formerly known as the Ottawa Indie Fest) is a cultural, not-for-profit organization whose mission is to recognize and celebrate the art of cinema by showcasing independent Ottawa, Canadian and international films by Canadian filmmakers. Our mission is grounded in the belief that Canadian film and filmmakers are distinctive and vital to our country's culture and the development of the local economy.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 788,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4944119.jpg?t=1621428330"
+    },
+    {
+      "title": "Toronto Film School Blog",
+      "feed_url": "https://www.torontofilmschool.ca/blog/",
+      "website_url": "https://www.torontofilmschool.ca/blog/",
+      "description": "The Toronto Film School offers fast-track diploma programs to exciting careers in film, television, theatre and lots more.",
+      "followers": {
+        "facebook": 162200,
+        "twitter": 3400,
+        "instagram": 54100
+      },
+      "image_url": "https://i1.feedspot.com/4944455.jpg?t=1621428334"
+    },
+    {
+      "title": "indiefilmTO Blog",
+      "feed_url": "https://www.indiefilmto.com/feed",
+      "website_url": "https://www.indiefilmto.com/blog",
+      "description": "indiefilmTO that we're more passionate about the filmmaker than the film. We do teach you how to get a great producer yourself",
+      "followers": {
+        "twitter": 938
+      },
+      "image_url": "https://i1.feedspot.com/4944139.jpg?t=1672039719"
+    },
+    {
+      "title": "National Canadian Film Day News",
+      "feed_url": "https://canfilmday.ca/feed/",
+      "website_url": "https://canfilmday.ca/about/news/",
+      "description": "National Canadian Film Day has always been about encouraging all Canadians to celebrate the incredible achievements of our nation's filmmakers.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 7000,
+        "instagram": 8300
+      },
+      "image_url": "https://i1.feedspot.com/4944090.jpg?t=1621428395"
+    }
+  ]
+}

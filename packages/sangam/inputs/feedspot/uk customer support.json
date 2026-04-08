@@ -1,0 +1,59 @@
+{
+  "category": "UK Customer Support",
+  "source_url": "https://rss.feedspot.com/uk_customer_support_rss_feeds",
+  "feeds": [
+    {
+      "title": "Lady Janey",
+      "feed_url": "https://ladyjaney.co.uk/feed/",
+      "website_url": "https://ladyjaney.co.uk/",
+      "description": "Hi, welcome to Lady Janey, my unique Customer Service blog, the first of its kind in the UK. Whether it be in the hospitality or service industry; in the high street, local shopping mall or online, I'm here to share what's good and what's not so good in the world of Customer Service today and how to ensure that what you spend your hard earned money on is worth every penny.",
+      "followers": {
+        "facebook": 567,
+        "twitter": 3200,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4909162.jpg?t=1673931911"
+    },
+    {
+      "title": "RSVP Blog \u00bb Customer Service",
+      "feed_url": "https://www.rsvp.co.uk/blog/customer-service/feed/",
+      "website_url": "https://www.rsvp.co.uk/blog/customer-service/",
+      "description": "Founded in 1988, RSVP is the UK's oldest contact center, with a proud heritage of supporting a wide range of clients across a great variety of different sectors. Read articles on customer service in the following section of the RSVP Blog.",
+      "followers": {},
+      "image_url": "https://www.rsvp.co.uk/wp-content/uploads/2021/12/logo-svg-1.png?t=1676639533"
+    },
+    {
+      "title": "Kayako Blog",
+      "feed_url": "http://kayako.com/blog/feed/",
+      "website_url": "https://kayako.com/blog/",
+      "description": "Learn about better customer service, startup life and more on the Kayako blog. Help Desk Software and Customer Service Software that helps you be more productive and build customer loyalty. Join over 131,000 customer support heroes and start your free trial today!",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 10000
+      },
+      "image_url": "https://i1.feedspot.com/4665957.jpg?t=1614145005"
+    },
+    {
+      "title": "Adrian Swinscoe",
+      "feed_url": "https://www.adrianswinscoe.com/feed/",
+      "website_url": "https://www.adrianswinscoe.com/",
+      "description": "Adrian Swinscoe brings over 16 years experience to focusing on helping companies large and small develop and implement customer focused, sustainable growth strategies. He is a huge fan of organisations that do great things for their customers and their employees and also a helper to many wanting to achieve their own level of greatness.",
+      "followers": {
+        "twitter": 8000,
+        "instagram": 806
+      },
+      "image_url": "https://i1.feedspot.com/3503995.jpg?t=1614145013"
+    },
+    {
+      "title": "Groove Blog",
+      "feed_url": "https://blog.groovehq.com/feed",
+      "website_url": "https://blog.groovehq.com/customer-support",
+      "description": "Tips and best practices from customer support insiders to help you increase customer satisfaction and forge stronger relationships with your audience. Groove is the Shared Inbox for small businesses looking for an alternative to Email. Organize all your support emails in one place, route them to the right people, and get more work done as a team.",
+      "followers": {
+        "facebook": 8,
+        "twitter": 6800
+      },
+      "image_url": "https://i1.feedspot.com/4423993.jpg?t=1608024856"
+    }
+  ]
+}

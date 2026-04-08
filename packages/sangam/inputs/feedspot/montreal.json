@@ -1,0 +1,406 @@
+{
+  "category": "Montreal",
+  "source_url": "https://rss.feedspot.com/montreal_rss_feeds",
+  "feeds": [
+    {
+      "title": "Habs Eyes on the Prize",
+      "feed_url": "https://www.habseyesontheprize.com/feed/",
+      "website_url": "https://www.habseyesontheprize.com/",
+      "description": "Your best source for quality Montreal Canadiens news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 35200,
+        "twitter": 18500
+      },
+      "image_url": "https://i1.feedspot.com/4789465.jpg?t=1609571218"
+    },
+    {
+      "title": "Cult MTL Magazine",
+      "feed_url": "https://cultmtl.com/feed/",
+      "website_url": "https://cultmtl.com/",
+      "description": "Cult MTL delivers daily coverage of Montreal's cultural scene, from music and nightlife news to artist profiles to politics and lifestyle columns to event listings and recommendations for things to do.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 81800,
+        "instagram": 424700
+      },
+      "image_url": "https://i1.feedspot.com/1275551.jpg?t=1609571222"
+    },
+    {
+      "title": "YUL Deals",
+      "feed_url": "https://yuldeals.com/atom/1",
+      "website_url": "https://yuldeals.com/",
+      "description": "Montreal's travel deal community. Find cheap flights, holiday packages, and all inclusive vacations from YUL. Featuring articles, guides, alerts, forums, discount promo codes, sales and more.",
+      "followers": {
+        "facebook": 22200,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/1155950.jpg?t=1609571227"
+    },
+    {
+      "title": "She loves biscotti",
+      "feed_url": "https://www.shelovesbiscotti.com/feed/",
+      "website_url": "https://www.shelovesbiscotti.com/",
+      "description": "She loves biscotti is about sharing good, simple food with people that mean the most to you. It is a personal food blog where you will find some of Maria's favourite recipes. Some of these favourites are based on her Italian cultural heritage and others are just fantastic recipes she has collected along the way.",
+      "followers": {
+        "facebook": 23500,
+        "twitter": 1100,
+        "instagram": 8700
+      },
+      "image_url": "https://i1.feedspot.com/4942069.jpg?t=1652339809"
+    },
+    {
+      "title": "Best Kept Montreal",
+      "feed_url": "https://bestkeptmontreal.com/feed/",
+      "website_url": "https://bestkeptmontreal.com/",
+      "description": "We at Best Kept Montreal are the leading source for all the hidden gems of Montreal. From underground parties & music concerts to fashion festivals, we cover everything!",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 12900,
+        "instagram": 12400
+      },
+      "image_url": "https://i1.feedspot.com/4789865.jpg?t=1609571257"
+    },
+    {
+      "title": "West Island Blog",
+      "feed_url": "https://westislandblog.com/feed/",
+      "website_url": "https://westislandblog.com/",
+      "description": "West Island Blog featuring local news, relevant topics, and timely information and updates",
+      "followers": {
+        "facebook": 15800,
+        "twitter": 384
+      },
+      "image_url": "https://i1.feedspot.com/4790030.jpg?t=1609571261"
+    },
+    {
+      "title": "Montreal Rampage",
+      "feed_url": "https://montrealrampage.com/feed/",
+      "website_url": "https://montrealrampage.com/",
+      "description": "Montreal Rampage is a daily blog that publishes about the art, festivals, music, theatre, film, food, events, dance, culture and happenings in Montreal.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 588,
+        "instagram": 391
+      },
+      "image_url": "https://i1.feedspot.com/4789449.jpg?t=1609571480"
+    },
+    {
+      "title": "Coolopolis",
+      "feed_url": "http://coolopolis.blogspot.com/feeds/posts/default",
+      "website_url": "http://coolopolis.blogspot.com/",
+      "description": "Coolooplis is where untold, forgotten and weird stories of past and present Montreal are woven.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/72741.jpg?t=1609571541"
+    },
+    {
+      "title": "Haunted Montreal Blog",
+      "feed_url": "https://hauntedmontreal.com/feed",
+      "website_url": "https://hauntedmontreal.com/blog/",
+      "description": "Haunted Montreal Ghost Tours take place on Mount Royal, Downtown and in Griffin town! The monthly Haunted Montreal Blog complements the ghost walks.",
+      "followers": {
+        "facebook": 14500,
+        "twitter": 34
+      },
+      "image_url": "https://i1.feedspot.com/4789728.jpg?t=1609571484"
+    },
+    {
+      "title": "Montreal Review of Books",
+      "feed_url": "https://mtlreviewofbooks.ca/feed/",
+      "website_url": "https://mtlreviewofbooks.ca/",
+      "description": "The Montreal Review of Books is a free, nationally distributed journal of reviews, features, and essays on English-language books by Quebec writers and publishers. The mRb covers literature, non-fiction, poetry, memoirs, history, graphic novels, children's books, and more.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/3785642.jpg?t=1636633658"
+    },
+    {
+      "title": "Shari Blaukopf's Sketchbook",
+      "feed_url": "https://shariblaukopf.com/feed/",
+      "website_url": "https://shariblaukopf.com/",
+      "description": "Sketch blog by Shari Blaukopf. Mostly Montreal, most of the time.",
+      "followers": {
+        "facebook": 7700
+      },
+      "image_url": "https://i1.feedspot.com/4459415.jpg?t=1609571506"
+    },
+    {
+      "title": "Montreal Rocks",
+      "feed_url": "https://montrealrocks.ca/feed/",
+      "website_url": "https://montrealrocks.ca/",
+      "description": "Montreal Rocks brings you music news, reviews and interviews for fans of all genres from punk & metal to pop and electronica.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 736
+      },
+      "image_url": "https://i1.feedspot.com/4745677.jpg?t=1609571513"
+    },
+    {
+      "title": "Montreal City Weblog",
+      "feed_url": "https://mtlcityweblog.com/feed/",
+      "website_url": "https://mtlcityweblog.com/",
+      "description": "Montreal news, a feed from Montreal City Weblog.",
+      "followers": {
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/4789753.jpg"
+    },
+    {
+      "title": "Vanishing Montreal",
+      "feed_url": "https://www.vanishingmontreal.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.vanishingmontreal.com/",
+      "description": "Blog about the changing urban face of Montreal.",
+      "followers": {
+        "twitter": 370
+      },
+      "image_url": "https://i1.feedspot.com/4789887.jpg?t=1609571526"
+    },
+    {
+      "title": "Eater Montreal",
+      "feed_url": "https://montreal.eater.com/rss/index.xml",
+      "website_url": "https://montreal.eater.com/",
+      "description": "The Montreal restaurant, bar and nightlife Blog. Food news and dining guides for Montreal.",
+      "followers": {
+        "facebook": 24100,
+        "twitter": 8700,
+        "instagram": 14800
+      },
+      "image_url": "https://i1.feedspot.com/4789945.jpg?t=1609571210"
+    },
+    {
+      "title": "Montreal Dog Blog",
+      "feed_url": "https://www.montrealdogblog.com/feed/",
+      "website_url": "https://www.montrealdogblog.com/",
+      "description": "It's Montreal's Official Online Dog Park! As a community of pet lovers, we may have differing opinions - but that's what helps us learn!",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 370
+      },
+      "image_url": "https://i1.feedspot.com/3940400.jpg?t=1609571509"
+    },
+    {
+      "title": "MTL Blurb",
+      "feed_url": "http://mtlblurb.com/feed/",
+      "website_url": "http://mtlblurb.com/",
+      "description": "MTL Blurb aims to create engaging and consumable Montreal-centric short form content while providing a new honest platform for content creators and advertisers alike.",
+      "followers": {
+        "facebook": 15300,
+        "twitter": 128,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4789439.jpg?t=1609571613"
+    },
+    {
+      "title": "Roasted Montreal",
+      "feed_url": "http://www.roastedmontreal.com/feed",
+      "website_url": "http://www.roastedmontreal.com/",
+      "description": "A Montreal lifestyle, food & fashion blog written by a stylish Montreal Mom. The best in restaurants, boutiques, beauty, decor, and kids.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4789441.jpg?t=1609571625"
+    },
+    {
+      "title": "Global News \u00bb Montreal",
+      "feed_url": "https://globalnews.ca/montreal/feed/",
+      "website_url": "https://globalnews.ca/montreal/",
+      "description": "Globalnews.ca offers Canadians from coast to coast a host of news and information - from breaking news in their community to deep engaging content that puts complex world issues in perspective. Get Montreal breaking news & headlines, local weather forecasts, sports, and traffic reports on Global News.",
+      "followers": {
+        "facebook": 233000,
+        "twitter": 971600,
+        "instagram": 333000
+      },
+      "image_url": "https://i1.feedspot.com/4883658.jpg?t=1750828853"
+    },
+    {
+      "title": "Montr\u00e9al centre-ville News",
+      "feed_url": "https://montrealcentreville.ca/en/feed/",
+      "website_url": "https://montrealcentreville.ca/en/news",
+      "description": "All latest articles from Montr\u00e9al centre-ville News.",
+      "followers": {
+        "facebook": 36400,
+        "twitter": 7800,
+        "instagram": 34800
+      },
+      "image_url": "https://i1.feedspot.com/5534393.jpg?t=1754036064"
+    },
+    {
+      "title": "CityNews Montreal",
+      "feed_url": "https://montreal.citynews.ca/feed/",
+      "website_url": "https://montreal.citynews.ca/",
+      "description": "All latest articles from CityNews Montreal.",
+      "followers": {
+        "facebook": 62900,
+        "twitter": 21700,
+        "instagram": 20700
+      },
+      "image_url": "https://i1.feedspot.com/5552315.jpg?t=1682595272"
+    },
+    {
+      "title": "The Tribune \u00bb Montreal",
+      "feed_url": "https://www.thetribune.ca/category/news/montreal-news/feed/",
+      "website_url": "https://www.thetribune.ca/category/news/montreal-news",
+      "description": "All latest articles about Montreal from The Tribune.",
+      "followers": {
+        "facebook": 6300,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/8654525.jpg?t=1754033885"
+    },
+    {
+      "title": "McGill University Newsroom",
+      "feed_url": "https://www.mcgill.ca/newsroom/channels_item/19/rss",
+      "website_url": "https://www.mcgill.ca/newsroom",
+      "description": "All latest articles from McGill University.",
+      "followers": {
+        "facebook": 303200,
+        "twitter": 158000
+      },
+      "image_url": "https://i1.feedspot.com/8654534.jpg?t=1754035053"
+    },
+    {
+      "title": "The Suburban News",
+      "feed_url": "https://www.thesuburban.com/search/?f=rss&t=article&c=news&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.thesuburban.com/news",
+      "description": "All latest articles from The Suburban News.",
+      "followers": {
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/8654549.jpg?t=1754035244"
+    },
+    {
+      "title": "Montreal West News",
+      "feed_url": "https://montreal-west.ca/en/our-town/news/feed/",
+      "website_url": "https://montreal-west.ca/en/our-town/news/",
+      "description": "All latest articles from Montreal West.",
+      "followers": {
+        "facebook": 2800
+      },
+      "image_url": "https://i1.feedspot.com/8654555.jpg?t=1754035779"
+    },
+    {
+      "title": "National Post \u00bb Montreal",
+      "feed_url": "https://nationalpost.com/tag/montreal/feed.xml",
+      "website_url": "https://nationalpost.com/tag/montreal",
+      "description": "All latest articles about Montreal from National Post.",
+      "followers": {
+        "facebook": 457200,
+        "twitter": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/8654563.jpg?t=1754036619"
+    },
+    {
+      "title": "Service de police de la Ville de Montr\u00e9al News",
+      "feed_url": "https://spvm.qc.ca/en/News/Rss",
+      "website_url": "https://spvm.qc.ca/en/News",
+      "description": "All latest articles from Police Montr\u00e9al",
+      "followers": {
+        "facebook": 73400,
+        "twitter": 266100
+      },
+      "image_url": "https://i1.feedspot.com/8654576.jpg?t=1754036914"
+    },
+    {
+      "title": "The Montreal Hacker",
+      "feed_url": "https://montrealhacker.ca/feed",
+      "website_url": "https://montrealhacker.ca",
+      "description": "All latest articles from The Montreal Hacker.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8654579.jpg?t=1754037012"
+    },
+    {
+      "title": "ACTRA Montreal News Release",
+      "feed_url": "https://www.actra.ca/news-release/feed/",
+      "website_url": "https://www.actra.ca/news-release",
+      "description": "All latest articles about ACTRA Montreal News Release.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 10200
+      },
+      "image_url": "https://i1.feedspot.com/8654585.jpg?t=1754040398"
+    },
+    {
+      "title": "NightLife",
+      "feed_url": "https://nightlife.ca/feed/",
+      "website_url": "https://nightlife.ca/",
+      "description": "Plan your outings to Montreal with a calendar of events and a directory of establishments. NIGHTLIFE.CA is the reference to enjoy urban and cultural life in Montreal.",
+      "followers": {
+        "facebook": 113200,
+        "twitter": 54500
+      },
+      "image_url": "https://i1.feedspot.com/3497848.jpg?t=1609571214"
+    },
+    {
+      "title": "West Island News",
+      "feed_url": "https://www.westislandnews.com/blog-feed.xml",
+      "website_url": "https://www.westislandtoday.com/",
+      "description": "Covers all of the latest news and events for Montreal, QC, Canada. Restaurants, community news, fun things to do in West Island.",
+      "followers": {
+        "twitter": 1200,
+        "instagram": 24200
+      },
+      "image_url": "https://i1.feedspot.com/5353851.jpg?t=1639570521"
+    },
+    {
+      "title": "MTL Blog",
+      "feed_url": "https://www.mtlblog.com/feed",
+      "website_url": "https://www.mtlblog.com/",
+      "description": "MTL Blog has become one of Montreal's leading English, online, media publishing companies. Showcasing interesting things from Montreal. Cover the coolest events around Montreal.",
+      "followers": {
+        "facebook": 465800,
+        "twitter": 154400
+      },
+      "image_url": "https://i1.feedspot.com/4789424.jpg?t=1609571199"
+    },
+    {
+      "title": "All Habs",
+      "feed_url": "https://feeds.feedburner.com/blogspot/HreT",
+      "website_url": "https://www.crossfitmontreal.ca/en",
+      "description": "Your trusted source for news, opinion and in-depth analysis about the Montreal Canadiens.",
+      "followers": {
+        "facebook": 51900,
+        "twitter": 60600,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/4789876.jpg?t=1609571489"
+    },
+    {
+      "title": "CrossFit Montreal",
+      "feed_url": "https://www.crossfitmontreal.ca/en/feed",
+      "website_url": "https://www.crossfitmontreal.ca/en",
+      "description": "CrossFit Montreal is the first CrossFit Affiliate centre in Quebec, and continues to provide excellence and to be a reference for Crossfit in Quebec.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 146,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4789868.jpg?t=1609571606"
+    },
+    {
+      "title": "News Montreal Palais des Congress",
+      "feed_url": "https://congresmtl.com/blog/en/feed/",
+      "website_url": "https://congresmtl.com/actualites/",
+      "description": "Finaliste du prix du \u00abMeilleur centre de congr\u00e8s au monde\u00bb, le Palais des congr\u00e8s de Montr\u00e9al vous propose un emplacement exceptionnel au c\u0153ur de Montr\u00e9al.",
+      "followers": {
+        "facebook": 25300,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4789880.jpg?t=1609571254"
+    },
+    {
+      "title": "Montreal Times",
+      "feed_url": "https://mtltimes.ca/feed/",
+      "website_url": "https://mtltimes.ca/",
+      "description": "All latest articles from Montreal Times.",
+      "followers": {
+        "facebook": 10000,
+        "twitter": 1400,
+        "instagram": 11800
+      },
+      "image_url": "https://i1.feedspot.com/5552316.jpg?t=1754035538"
+    }
+  ]
+}

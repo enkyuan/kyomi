@@ -1,0 +1,17 @@
+{
+  "category": "Woodridge News",
+  "source_url": "https://rss.feedspot.com/woodridge_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "CBS Chicago \u00bb Woodridge",
+      "feed_url": "https://chicago.cbslocal.com/tag/woodridge/feed/",
+      "website_url": "https://www.cbsnews.com/chicago/tag/woodridge/",
+      "description": "CBS Chicago provides you with 24/7 access to the latest updates in local news, sports, traffic, and weather. Read the latest news and breaking headlines on what's happening in the Woodridge community by following this feed.",
+      "followers": {
+        "facebook": 400300,
+        "twitter": 213900
+      },
+      "image_url": "https://i1.feedspot.com/5151032.jpg?t=1589632601"
+    }
+  ]
+}

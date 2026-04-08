@@ -1,0 +1,96 @@
+{
+  "category": "UK Toy",
+  "source_url": "https://rss.feedspot.com/uk_toy_rss_feeds",
+  "feeds": [
+    {
+      "title": "Toy World Magazine",
+      "feed_url": "https://toyworldmag.co.uk/feed/",
+      "website_url": "https://toyworldmag.co.uk/blog/",
+      "description": "Since its launch in September 2011, Toy World has firmly established itself as the market leading UK toy trade magazine. Here at Toy World, we are committed to delivering a fresh and exciting magazine which everyone connected with the toy trade wants to read, and which gets people talking.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 9900
+      },
+      "image_url": "https://i1.feedspot.com/4908245.jpg?t=1614064837"
+    },
+    {
+      "title": "My Shiny Toy Robots",
+      "feed_url": "https://www.myshinytoyrobots.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.myshinytoyrobots.com/",
+      "description": "Review site dedicated to toys, tokusatsu, anime, superheroes and more! Featuring the likes of S.H. Figuarts, Figma, Nendoroids, Super Sentai, Kamen Rider, Ultraman, Garo, Power Rangers Doctor Who, LEGO, Marvel Comics, DC Comics and everything in-between.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 892
+      },
+      "image_url": "https://i1.feedspot.com/4611551.jpg?t=1614064841"
+    },
+    {
+      "title": "The Toy Scavenger Blog",
+      "feed_url": "http://toyscavenger.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://toyscavenger.blogspot.com/",
+      "description": "The Toy Scavenger brings you the best Vintage Action Figures from the 80s & 90s. It specialises in MOC, Carded, Loose, Vintage Action Figures, Vehicles and Play sets from Aliens to Zoids.",
+      "followers": {
+        "facebook": 39600,
+        "twitter": 9500,
+        "instagram": 56300
+      },
+      "image_url": "https://i1.feedspot.com/4611196.jpg?t=1614064851"
+    },
+    {
+      "title": "ChildrensToyBox",
+      "feed_url": "https://childrenstoybox.co.uk/feed/",
+      "website_url": "https://childrenstoybox.co.uk/",
+      "description": "Articles focused on writing about toys, to also include a very comprehensive section for off-road bikes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5352013.jpg"
+    },
+    {
+      "title": "Simon's Collectibles",
+      "feed_url": "https://dollstoysngifts.co.uk/blogs/news.atom",
+      "website_url": "https://dollstoysngifts.co.uk/blogs/news",
+      "description": "A UK-based shop specializing in collectible fashion dolls, action figures, and retro toys and collectibles. We blog about the latest toy news and trends too.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 141,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5417812.jpg?t=1656757946"
+    },
+    {
+      "title": "The Toy Chronicle",
+      "feed_url": "https://www.thetoychronicle.com/feed/",
+      "website_url": "https://www.thetoychronicle.com/",
+      "description": "Number One UK Designer Vinyl Toy Blog which focuses on Vinyl Toys & Art scene everything & anything that will spark your interest.",
+      "followers": {
+        "facebook": 21800,
+        "twitter": 6000,
+        "instagram": 82900
+      },
+      "image_url": "https://i1.feedspot.com/4610496.jpg?t=1614064832"
+    },
+    {
+      "title": "My Doll Best Friend Blog",
+      "feed_url": "https://www.mydollbestfriend.co.uk/blog/feed/",
+      "website_url": "https://www.mydollbestfriend.co.uk/intl/blog",
+      "description": "My Doll Best Friend, the UK's destination online shop for standing and jointed play dolls from around the world for children and collectors. Follow this blog for the latest news and releases about dolls and doll related stuff.",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 929,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4785611.jpg?t=1605943642"
+    },
+    {
+      "title": "Bigjigs Toys",
+      "feed_url": "http://blog.bigjigstoys.co.uk/feed/",
+      "website_url": "https://www.bigjigstoys.co.uk/blogs/posts",
+      "description": "This Blog provides widest range of wooden toys, gifts and games. It designes, innovates and produces good value quality wooden toys that help to create perfect playrooms across the UK and beyond",
+      "followers": {
+        "facebook": 23900,
+        "twitter": 18700,
+        "instagram": 31600
+      },
+      "image_url": "https://i1.feedspot.com/4611184.jpg?t=1614064846"
+    }
+  ]
+}

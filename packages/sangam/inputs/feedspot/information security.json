@@ -1,0 +1,1022 @@
+{
+  "category": "Information Security",
+  "source_url": "https://rss.feedspot.com/information_security_rss_feeds",
+  "feeds": [
+    {
+      "title": "Krebs on Security",
+      "feed_url": "https://krebsonsecurity.com/feed/",
+      "website_url": "https://krebsonsecurity.com/",
+      "description": "Brian Krebs is a household name in information security, and his blog is among the most well known and respected in the space. A daily blog dedicated to investigative stories on cybercrime and computer security.",
+      "followers": {
+        "facebook": 34700,
+        "twitter": 337300
+      },
+      "image_url": "https://i1.feedspot.com/36111.jpg?t=1642677031"
+    },
+    {
+      "title": "Dark Reading",
+      "feed_url": "https://www.darkreading.com/rss.xml",
+      "website_url": "https://www.darkreading.com/",
+      "description": "Dark Reading is the premier online resource helping information security professionals manage the balance between protection and access. It offers breaking news and analysis on attacks, breaches and vulnerabilities, as well as strategies for protecting enterprise data. It also offers guidance on setting risk management and compliance policies.",
+      "followers": {
+        "facebook": 27200,
+        "twitter": 338900
+      },
+      "image_url": "https://i1.feedspot.com/85701.jpg?t=1612932606"
+    },
+    {
+      "title": "Schneier on Security",
+      "feed_url": "https://www.schneier.com/tag/cybersecurity/feed/",
+      "website_url": "https://www.schneier.com/tag/cybersecurity/",
+      "description": "A blog by Bruce Schneier covering security and security technology also frequent posts about homeland security in particular. Bruce Schneier is an internationally renowned security technologist and author. He is described by The Economist as a 'Security Guru'.",
+      "followers": {
+        "facebook": 24800,
+        "twitter": 146400
+      },
+      "image_url": "https://i1.feedspot.com/1158963.jpg?t=1642676864"
+    },
+    {
+      "title": "Graham Cluley",
+      "feed_url": "https://grahamcluley.com/feed/",
+      "website_url": "https://grahamcluley.com/writing/",
+      "description": "If your computer, and the data on it, is important to you - keep yourself informed about the latest security news by following Graham Cluley Security blog from veteran anti-virus expert Graham Cluley.",
+      "followers": {
+        "twitter": 113100
+      },
+      "image_url": "https://i1.feedspot.com/4428657.jpg?t=1612932620"
+    },
+    {
+      "title": "Sophos",
+      "feed_url": "https://news.sophos.com/en-us/feed/",
+      "website_url": "https://news.sophos.com/en-us/",
+      "description": "All latest articles from Sophos.",
+      "followers": {
+        "facebook": 236500,
+        "twitter": 86900,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4046947.jpg?t=1746006603"
+    },
+    {
+      "title": "AWS Security Blog",
+      "feed_url": "https://aws.amazon.com/blogs/security/feed/",
+      "website_url": "https://aws.amazon.com/blogs/security/",
+      "description": "Amazon Web Services offers reliable, scalable, and inexpensive cloud computing services. Get more information about cloud security by following our feed",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/4522668.jpg?t=1617631314"
+    },
+    {
+      "title": "Cisco Blogs \u00bb Security",
+      "feed_url": "https://blogs.cisco.com/security/feed",
+      "website_url": "https://blogs.cisco.com/security/",
+      "description": "All latest articles about Security from Cisco Blogs.",
+      "followers": {
+        "facebook": 362700,
+        "twitter": 2,
+        "instagram": 569200
+      },
+      "image_url": "https://i1.feedspot.com/4661233.jpg?t=1760600037"
+    },
+    {
+      "title": "Helen Patton",
+      "feed_url": "https://medium.com/feed/@hpatton",
+      "website_url": "https://hpatton.medium.com/",
+      "description": "Stories by Helen Patton on Medium about data security, security tools and software, latest technology and more! Helen is an Advisory CISO at Cisco, where she shares security strategies with the security community. Previously she was the CISO at The Ohio State University.",
+      "followers": {
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5370434.jpg?t=1644404359"
+    },
+    {
+      "title": "Nairuz Abulhul",
+      "feed_url": "https://medium.com/feed/@nairuzabulhul",
+      "website_url": "https://nairuzabulhul.medium.com/",
+      "description": "Data security news, opinion, advice and research. Nairuz Abulhul is Penetration tester and interested in Reverse Engineering.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5370438.jpg?t=1644404385"
+    },
+    {
+      "title": "Catalyic Security Blog",
+      "feed_url": "https://catalyicsecurity.com/feed/",
+      "website_url": "https://catalyicsecurity.com/blogs/",
+      "description": "Catalyic Security is a cybersecurity company based in Lahore, Pakistan. They have been providing IT and information security services for over 12 years. Their services include third-party security testing, compliance and consultancy, information security training, and managed security services.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 45,
+        "instagram": 369
+      },
+      "image_url": "https://i1.feedspot.com/5639426.jpg?t=1690799476"
+    },
+    {
+      "title": "IT Security Guru",
+      "feed_url": "https://www.itsecurityguru.org/feed/",
+      "website_url": "https://www.itsecurityguru.org/",
+      "description": "The IT Security Guru offers a daily news digest of all the best breaking IT security news stories first thing in the morning!",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 20500
+      },
+      "image_url": "https://i1.feedspot.com/4660474.jpg?t=1617631540"
+    },
+    {
+      "title": "Avast! blog",
+      "feed_url": "https://blog.avast.com/rss.xml",
+      "website_url": "https://blog.avast.com/",
+      "description": "The global #cybersecurity leader for businesses and consumers, protecting over 400 million people under the Avast and AVG brands.",
+      "followers": {
+        "facebook": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/1099174.jpg?t=1617631319"
+    },
+    {
+      "title": "Data Privacy Security Insider",
+      "feed_url": "https://www.dataprivacyandsecurityinsider.com/feed/",
+      "website_url": "https://www.dataprivacyandsecurityinsider.com/",
+      "description": "Leveraging Knowledge to Manage Your Data Risks",
+      "followers": {
+        "facebook": 554,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4660964.jpg?t=1617631954"
+    },
+    {
+      "title": "Google Online Security Blog",
+      "feed_url": "https://feeds.feedburner.com/GoogleOnlineSecurityBlog",
+      "website_url": "https://security.googleblog.com/",
+      "description": "The latest news and insights from Google on security and safety on the Internet.",
+      "followers": {
+        "facebook": 34800000
+      },
+      "image_url": "https://i1.feedspot.com/85709.jpg?t=1622642742"
+    },
+    {
+      "title": "Geek Flare",
+      "feed_url": "https://geekflare.com/feed/",
+      "website_url": "https://geekflare.com/news/",
+      "description": "Geek Flare blog by Chandan Kumar, is focused on Web Security, Infrastructure, Middleware, Tools, Optimization, WordPress and Trending Topics. I aim to cover Web Security, Cloud Computing, CDN, Web Optimisation & Artificial Intelligence.",
+      "followers": {
+        "twitter": 595
+      },
+      "image_url": "https://i1.feedspot.com/4762277.jpg?t=1617631328"
+    },
+    {
+      "title": "Trend Micro Simply Security",
+      "feed_url": "http://feeds.trendmicro.com/TrendMicroResearch",
+      "website_url": "https://www.trendmicro.com/en_us/research.html",
+      "description": "Simply Security News, Views and Opinions from Trend Micro offers breaking security research and threat news that impacts your life everyday.",
+      "followers": {
+        "facebook": 193400,
+        "twitter": 113900,
+        "instagram": 7200
+      },
+      "image_url": "https://i1.feedspot.com/2059623.jpg?t=1642739976"
+    },
+    {
+      "title": "Qualys Security Blog",
+      "feed_url": "https://blog.qualys.com/feed",
+      "website_url": "https://blog.qualys.com/",
+      "description": "The Qualys community offers a space for professionals to meet and talk about the different information security trends. Qualys, Inc. is the pioneer and leading provider of cloud-based information security and compliance solutions.",
+      "followers": {
+        "facebook": 6600,
+        "twitter": 33000
+      },
+      "image_url": "https://i1.feedspot.com/4661393.jpg?t=1651576822"
+    },
+    {
+      "title": "CSO Australia",
+      "feed_url": "https://www.csoonline.com/feed/",
+      "website_url": "https://www.csoonline.com/au/blogs/",
+      "description": "News, Industry Blogs, Tools and Resources for Data Security Executives",
+      "followers": {
+        "facebook": 134,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4661028.jpg?t=1617631332"
+    },
+    {
+      "title": "GBHackers on Security",
+      "feed_url": "https://gbhackers.com/feed/",
+      "website_url": "https://gbhackers.com/",
+      "description": "GBHackers on Security is a Cyber Security platform that covers daily Cyber Security News, Hacking News, Technology updates, and SOC Resources, Kali Linux tutorials. Their mission is to keep the community up to date with happenings in the Cyber World. Their blog features technological articles, cyber security, AI, and more.",
+      "followers": {
+        "facebook": 54700
+      },
+      "image_url": "https://i1.feedspot.com/4668131.jpg?t=1617631347"
+    },
+    {
+      "title": "Sentinel One Blog",
+      "feed_url": "https://www.sentinelone.com/feed/",
+      "website_url": "https://www.sentinelone.com/blog/",
+      "description": "Endpoint security software that defends every endpoint against every type of attack, at every stage in the threat lifecycle",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5010886.jpg?t=1597393730"
+    },
+    {
+      "title": "Troy Hunt",
+      "feed_url": "https://www.troyhunt.com/rss/",
+      "website_url": "https://www.troyhunt.com/",
+      "description": "Troy Hunt is a cybersecurity expert known for creating Have I Been Pwned (HIBP), a service that allows users to check if their personal data has been exposed in a data breach. He regularly publishes research on breaches and their impact, aiming to raise awareness about privacy and security risks. Through his work, Hunt encourages better cybersecurity practices, such as using strong, unique passwords and enabling two-factor authentication.",
+      "followers": {
+        "twitter": 237400
+      },
+      "image_url": "https://i1.feedspot.com/4508493.jpg?t=1642752900"
+    },
+    {
+      "title": "eSecurity Planet",
+      "feed_url": "https://www.esecurityplanet.com/feed/",
+      "website_url": "https://www.esecurityplanet.com/",
+      "description": "eSecurity Planet provides the latest cybersecurity news, trends, and software reviews for IT leaders. Browse our buyer's guides and analysis now.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/463776.jpg?t=1756297035"
+    },
+    {
+      "title": "Securelist",
+      "feed_url": "https://securelist.com/feed/",
+      "website_url": "https://securelist.com/",
+      "description": "The resource for Kaspersky Lab experts' technical research, analysis, and thoughts. Blog topics cover Industrial threats, DDoS reports, Malware descriptions, Security technologies, Software, Spam, and Phishing reports.",
+      "followers": {
+        "facebook": 27900,
+        "twitter": 19600,
+        "instagram": 107900
+      },
+      "image_url": "https://i1.feedspot.com/4025386.jpg?t=1617631356"
+    },
+    {
+      "title": "Cloud Security Alliance",
+      "feed_url": "https://cloudsecurityalliance.org/feed",
+      "website_url": "https://cloudsecurityalliance.org/blog?search=Information+Security",
+      "description": "The Cloud Security Alliance (CSA) is the world's leading organization dedicated to defining and raising awareness of best practices to help ensure a secure cloud computing environment. CSA harnesses the subject matter expertise of industry practitioners, associations, governments, and its corporate and individual members to offer cloud security-specific research, education, certification & events.",
+      "followers": {
+        "twitter": 18600
+      },
+      "image_url": "https://i1.feedspot.com/4036719.jpg?t=1617631370"
+    },
+    {
+      "title": "Infoblox",
+      "feed_url": "https://blogs.infoblox.com/feed/",
+      "website_url": "https://blogs.infoblox.com/",
+      "description": "Infoblox helps customers control their networks. Our innovative solutions help businesses automate complex network control functions to reduce costs, increase security and maximize uptime. Here, we share our thoughts on market trends and technology best practices on all aspects of core networking and security.",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 11300
+      },
+      "image_url": "https://i1.feedspot.com/5121482.jpg?t=1617631365"
+    },
+    {
+      "title": "Bank Info Security",
+      "feed_url": "https://www.bankinfosecurity.com/rss-feeds",
+      "website_url": "https://www.bankinfosecurity.com/blogs",
+      "description": "Articles covering top risk management issues, from compliance to latest technology, including authentication, mobile and cloud on bank information security",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/835277.jpg?t=1617631343"
+    },
+    {
+      "title": "Cyber Defense Magazine",
+      "feed_url": "https://www.cyberdefensemagazine.com/feed/",
+      "website_url": "https://www.cyberdefensemagazine.com/news/",
+      "description": "Cyber Defense Magazine offers information on threats, trends, and solutions in cybersecurity. It addresses many different subjects, such as malware, data breaches, cyberattacks, and security best practices. The journal provides in-depth research, leader interviews, and advice on how individuals and companies may improve their digital security posture. It is a useful tool for both cybersecurity experts and hobbyists, with an emphasis on cutting-edge technologies and new threats.",
+      "followers": {
+        "facebook": 32299,
+        "twitter": 54700
+      },
+      "image_url": "https://i1.feedspot.com/3940449.jpg?t=1642761893"
+    },
+    {
+      "title": "Lenny Zeltser Blog",
+      "feed_url": "https://zeltser.com/blog/feed/",
+      "website_url": "https://zeltser.com/information-security/",
+      "description": "I'm Lenny Zeltser. I design practical security solutions and shepherd them to a sustainable state. I used to be hands-on in many areas of cybersecurity and IT. Now I focus on strategy and leadership, treating security as an enabler that helps people and companies achieve their goals. This Blog focuses on information security, with topics ranging from broad IT trends to detailed technical advice on malware.",
+      "followers": {
+        "twitter": 51100
+      },
+      "image_url": "https://i1.feedspot.com/4660621.jpg?t=1617639297"
+    },
+    {
+      "title": "Pivot Point Security Blog",
+      "feed_url": "https://www.pivotpointsecurity.com/feed/",
+      "website_url": "https://www.pivotpointsecurity.com/blog/",
+      "description": "Pivot Point Security is a trusted leader in information security consulting. We help clients master their information security management systems.",
+      "followers": {
+        "facebook": 265,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4661025.jpg?t=1642766976"
+    },
+    {
+      "title": "Black Hills Information Security Blog",
+      "feed_url": "https://www.blackhillsinfosec.com/blog/feed/",
+      "website_url": "https://www.blackhillsinfosec.com/blog/",
+      "description": "At Black Hills Information Security (BHIS), we strive to strengthen our customer's information security infrastructure and employees through penetration testing, consulting, and defensive security services. Since our founding in 2008, companies of all sizes, from small community banks to Fortune 100 companies, have entrusted us with their business.",
+      "followers": {
+        "twitter": 48000
+      },
+      "image_url": "https://i1.feedspot.com/5279944.jpg?t=1620814059"
+    },
+    {
+      "title": "Gov Info Security",
+      "feed_url": "https://www.govinfosecurity.com/rss-feeds",
+      "website_url": "https://www.govinfosecurity.com/news",
+      "description": "GovInfoSecurity.com covers the latest news, laws, regulations and directives related to government information security, focusing on the White House's cybersecurity initiatives, the latest legislative efforts in Congress, as well as thought leadership from top government CISOs.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 35
+      },
+      "image_url": "https://i1.feedspot.com/2207949.jpg?t=1617631545"
+    },
+    {
+      "title": "Cloudbric",
+      "feed_url": "https://www.cloudbric.com/feed/",
+      "website_url": "https://www.cloudbric.com/blogs/",
+      "description": "Cloudbric provides free website security for everyone. Cloudbric aims to bring mainstream enterprise level website security to small and medium businesses. Cloubric's blog aims to provide readers with the latest company news and trending infosec topics.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4509055.jpg?t=1641898242"
+    },
+    {
+      "title": "G Data CyberDefense Blog",
+      "feed_url": "https://feeds.feedblitz.com/GDataSecurityBlog-EN&x=1",
+      "website_url": "https://www.gdatasoftware.com/blog/",
+      "description": "We keep you posted on the latest cyber threats: Learn more about what is new in the world of IT security. Knowledge is the best protection. G DATA CyberDefense AG, based in Bochum, is an innovative and rapidly expanding software house with a focus on IT security solutions.",
+      "followers": {
+        "facebook": 51700,
+        "twitter": 14,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4660777.jpg?t=1617631528"
+    },
+    {
+      "title": "VISTA InfoSec Blog",
+      "feed_url": "https://vistainfosec.com/feed/",
+      "website_url": "https://vistainfosec.com/category/cybersecurity/",
+      "description": "Covers articles related to cybersecurity, information security, and Risk & Security Management solutions. Vendor neutral Cyber Security Consulting company based in India, US, EU and Singapore with services in SOC 2, PCI, GDPR, ISO 27001, Cloud Security and Pen Testing.",
+      "followers": {
+        "facebook": 848,
+        "twitter": 114
+      },
+      "image_url": "https://i1.feedspot.com/5171115.jpg?t=1612932830"
+    },
+    {
+      "title": "WinMagic Blog",
+      "feed_url": "https://winmagic.com/en/feed/",
+      "website_url": "https://winmagic.com/en/blog/",
+      "description": "Concerned about data security & encryption to protect your business? WinMagic's SecureDoc software will ensure that you feel secure & protected. Learn More.",
+      "followers": {
+        "facebook": 600,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4660962.jpg?t=1617631846"
+    },
+    {
+      "title": "Elie's Cybersecurity Blog",
+      "feed_url": "https://elie.net/rss.xml",
+      "website_url": "https://elie.net/blog",
+      "description": "Elie Bursztein leads Google's anti-abuse research efforts, sharing his insights on topics relevant to the world of InfoSec on his personal blog.",
+      "followers": {
+        "twitter": 62200,
+        "instagram": 772
+      },
+      "image_url": "https://i1.feedspot.com/4660543.jpg?t=1651578843"
+    },
+    {
+      "title": "TCDI Blog",
+      "feed_url": "https://www.tcdi.com/feed/",
+      "website_url": "https://www.tcdi.com/blog/",
+      "description": "TCDI provides computer forensics, cybersecurity, advanced litigation support software & services for electronic discovery to the legal and business communities. On the TCDI blog, you'll find viewpoints on current events, news about the Cybersecurity and Legal industries, and the latest from thought leaders.",
+      "followers": {
+        "facebook": 266,
+        "twitter": 1500,
+        "instagram": 143
+      },
+      "image_url": "https://i1.feedspot.com/4661027.jpg?t=1651577501"
+    },
+    {
+      "title": "HealthcareInfoSecurity.com",
+      "feed_url": "https://www.healthcareinfosecurity.com/rss-feeds",
+      "website_url": "https://www.healthcareinfosecurity.com/news",
+      "description": "HealthInfoSecurity.com is your source for health industry information security related news, articles, interviews and analysis, focusing on electronic health records, health information exchanges, HIPAA and HITECH compliance, as well as the latest breaches to healthcare organizations and what it means for the industry and those directly affected.",
+      "followers": {
+        "facebook": 740,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/3972331.jpg"
+    },
+    {
+      "title": "Bentham's Gaze",
+      "feed_url": "https://www.benthamsgaze.org/feed/",
+      "website_url": "https://www.benthamsgaze.org/",
+      "description": "'Bentham's Gaze' is a blog written by Information Security researchers in University College London (UCL).",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4473924.jpg"
+    },
+    {
+      "title": "Flying Penguin",
+      "feed_url": "https://www.flyingpenguin.com/?feed=rss2",
+      "website_url": "https://www.flyingpenguin.com/?cat=2",
+      "description": "Davi Ottenheimer, David Willson, Matthew Wallace, and Bryan Zimmer comprise the team behind security consultancy flyingpenguin. Davi Ottenheimer is the chief blogger behind the flyingpenguin blog, offering in-depth analysis of information security news, events, and developments.",
+      "followers": {
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/637365.jpg?t=1612932869"
+    },
+    {
+      "title": "Adam Levin",
+      "feed_url": "https://adamlevin.com/feed/",
+      "website_url": "https://adamlevin.com/cybersecurity/",
+      "description": "AdamLevin.com is the official homepage of identity theft and credit expert Adam Levin. This blog features his articles surrounding the issues of personal finance, data security, identity theft, and privacy.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 59200,
+        "instagram": 31100
+      },
+      "image_url": "https://i1.feedspot.com/4509051.jpg?t=1612932856"
+    },
+    {
+      "title": "Cadre Blog",
+      "feed_url": "https://blog.cadre.net/rss.xml",
+      "website_url": "https://blog.cadre.net/",
+      "description": "Cadre is a network and information security solutions provider that serves large and medium sized firms. Widely recognized as a pioneer in the security industry, Cadre delivers value through superior customer service, advanced engineering and a resolute focus on design, assessment, installation, training and support of information security systems. All over the world, clients rely on Cadre to provide guidance and technical expertise on compliance, controlling technical risks, and achieving security goals.",
+      "followers": {
+        "facebook": 183,
+        "twitter": 926
+      },
+      "image_url": "https://i1.feedspot.com/4982155.jpg?t=1617631950"
+    },
+    {
+      "title": "BadCyber",
+      "feed_url": "https://badcyber.com/feed/",
+      "website_url": "https://badcyber.com/",
+      "description": "Making infosec journalism great again!",
+      "followers": {
+        "facebook": 179,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4686014.jpg?t=1617632521"
+    },
+    {
+      "title": "Privacy & Data Security Insight",
+      "feed_url": "https://www.privacyanddatasecurityinsight.com/feed/",
+      "website_url": "https://www.privacyanddatasecurityinsight.com/",
+      "description": "Privacy and Data Security Insight is a legal blog showcasing nuanced perspectives and robust analysis on compliance with today's complex data security laws and more.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4660965.jpg?t=1617632625"
+    },
+    {
+      "title": "Amazing Support Blog",
+      "feed_url": "https://www.amazingsupport.co.uk/feed/",
+      "website_url": "https://www.amazingsupport.co.uk/blog/",
+      "description": "Award-winning & Cyber Essentials certified Managed IT Support & Cyber Security for SMEs in London & Hertfordshire. Contact us for help with your IT Support.",
+      "followers": {
+        "facebook": 249,
+        "twitter": 831
+      },
+      "image_url": "https://i1.feedspot.com/5064915.jpg?t=1617639198"
+    },
+    {
+      "title": "Privacy, Cyber & Data Strategy Blog",
+      "feed_url": "https://www.alstonprivacy.com/feed/",
+      "website_url": "https://www.alstonprivacy.com/",
+      "description": "This blog is a service of Alston & Bird's Privacy, Cyber & Data Strategy team and focuses on key data privacy & data security issues. Topics covered are CCPA, Children's Privacy, Cybersecurity, Data Breach, Privacy Shield, Data Breach, and Privacy Litigation.",
+      "followers": {
+        "twitter": 232
+      },
+      "image_url": "https://i1.feedspot.com/4660974.jpg?t=1617632548"
+    },
+    {
+      "title": "Defensive Security Podcast",
+      "feed_url": "https://defensivesecurity.org/feed/",
+      "website_url": "https://defensivesecurity.org/",
+      "description": "Defensive Security is a cyber security podcast covering breaches and strategies for defense.",
+      "followers": {
+        "facebook": 461,
+        "twitter": 7100
+      },
+      "image_url": "https://i1.feedspot.com/4661213.jpg"
+    },
+    {
+      "title": "Palo Alto Networks Blog",
+      "feed_url": "https://www.paloaltonetworks.com/blog/feed/",
+      "website_url": "https://www.paloaltonetworks.com/blog/",
+      "description": "Palo Alto Networks enables your team to prevent successful cyberattacks with an automated approach that delivers consistent security across cloud, network, and mobile.",
+      "followers": {
+        "facebook": 51800,
+        "twitter": 127100
+      },
+      "image_url": "https://i1.feedspot.com/4985535.jpg?t=1606225301"
+    },
+    {
+      "title": "Pulse Secure Blog",
+      "feed_url": "https://www.ivanti.com/blog/topics/security/rss",
+      "website_url": "https://www.ivanti.com/blog/topics/security",
+      "description": "Pulse Secure, LLC is a leading provider of access and mobile security solutions to both enterprises and service providers. Enterprises from every vertical and of all sizes utilize the company's Pulse virtual private network, network access control and mobile security products to enable workers mobility securely and seamlessly in their organizations. Pulse Secures mission is to deliver secure access solutions for people, devices, things, and services.",
+      "followers": {
+        "facebook": 23200,
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/4661383.jpg?t=1617631352"
+    },
+    {
+      "title": "Tao Security",
+      "feed_url": "https://taosecurity.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://taosecurity.blogspot.com/",
+      "description": "Richard Bejtlich's blog on digital security, strategic thought, and military history.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 59100
+      },
+      "image_url": "https://i1.feedspot.com/4508487.jpg?t=1612932843"
+    },
+    {
+      "title": "Bishop Fox Blog",
+      "feed_url": "https://bishopfox.com/feeds/blog.rss",
+      "website_url": "https://bishopfox.com/blog",
+      "description": "See our take on the latest hacks, tools, news, and cybersecurity trends and read the latest research and security insights from the Bishop Fox team.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 25600
+      },
+      "image_url": "https://i1.feedspot.com/5070406.jpg?t=1617632956"
+    },
+    {
+      "title": "Vircom Blog",
+      "feed_url": "https://www.vircom.com/feed/",
+      "website_url": "https://www.vircom.com/blog/",
+      "description": "Vircom provides on-premise and cloud email security solutions for SMBs, with archiving, secure encryption, phishing and spam protection, and more. Vircom's commitment to security, innovative technology, and industry-leading service levels provides a complete solution designed to ease the burden of managing threats to your organization's network and messaging infrastructure.",
+      "followers": {
+        "facebook": 251,
+        "twitter": 615
+      },
+      "image_url": "https://i1.feedspot.com/4774427.jpg?t=1617639281"
+    },
+    {
+      "title": "Data Breach Today Podcast",
+      "feed_url": "https://www.databreachtoday.com/itunes_rss_podcasts.php",
+      "website_url": "https://www.databreachtoday.com/interviews",
+      "description": "Exclusive, insightful audio interviews by our staff with data breach/security leading practitioners and thought-leaders",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 10200
+      },
+      "image_url": "https://i1.feedspot.com/7153660.jpg?t=1746025401"
+    },
+    {
+      "title": "Threatpost",
+      "feed_url": "https://threatpost.com/feed/",
+      "website_url": "https://threatpost.com/",
+      "description": "Threatpost, is an independent news site which is a leading source of information about IT and business security for hundreds of thousands of professionals.",
+      "followers": {
+        "facebook": 21800,
+        "twitter": 225000,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/2048938.jpg?t=1612932609"
+    },
+    {
+      "title": "Martin Connarty",
+      "feed_url": "https://medium.com/feed/@martinconnarty",
+      "website_url": "https://medium.com/@martinconnarty",
+      "description": "Explore the blog to know more about data security, cyber security, managing vulnerabilities with tools, new technologies, etc. Lead SOC Analyst with over 5 years InfoSec experience and 10 Years Communications Systems Engineering experience in the Royal Signals.",
+      "followers": {
+        "twitter": 47
+      },
+      "image_url": "https://i1.feedspot.com/5370437.jpg?t=1644411326"
+    },
+    {
+      "title": "Sai Karthik",
+      "feed_url": "https://medium.com/feed/@sai.51192",
+      "website_url": "https://medium.com/@sai.51192",
+      "description": "Read more about data security, AWS, Azure and other technologies. I am a Cloud Security Engineer experienced public cloud security with extended experience in network and data center security.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5370433.jpg?t=1644404348"
+    },
+    {
+      "title": "Avi Lumelsky",
+      "feed_url": "https://medium.com/feed/@avi-lumelsky",
+      "website_url": "https://avi-lumelsky.medium.com/",
+      "description": "Find articles on data security, cyber security, databse management and more on the blog. Avi Lumelsky, A business-oriented security researcher, who loves Privacy and AI, with deep security insights.",
+      "followers": {
+        "twitter": 145
+      },
+      "image_url": "https://i1.feedspot.com/5370439.jpg?t=1644410126"
+    },
+    {
+      "title": "InfoSecSherpa",
+      "feed_url": "https://medium.com/feed/@infosecsherpa",
+      "website_url": "https://infosecsherpa.medium.com/",
+      "description": "Articles on information and data security, news from around the world about information industry and more! Librarian turned Information Security professional.",
+      "followers": {
+        "twitter": 51100
+      },
+      "image_url": "https://i1.feedspot.com/5370440.jpg?t=1644411879"
+    },
+    {
+      "title": "Veracode Security Blog",
+      "feed_url": "https://www.veracode.com/blog/feed",
+      "website_url": "https://www.veracode.com/blog",
+      "description": "Level up your appsec knowledge with research, news, and guidelines for enterprise application security programs from the world-class minds at Veracode.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 22500
+      },
+      "image_url": "https://i1.feedspot.com/19048.jpg?t=1642749454"
+    },
+    {
+      "title": "Hacking Articles",
+      "feed_url": "https://www.hackingarticles.in/feed/",
+      "website_url": "https://www.hackingarticles.in/",
+      "description": "A comprehensive source of information on cybersecurity, ethical hacking, penetration testing, and other topics of interest for information security professionals. Authored by Raj Chandel. Chandel's primary interests lie in system exploitation and vulnerability research, but you'll find tools, resources, and tutorials on everything.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/242231.jpg?t=1617634740"
+    },
+    {
+      "title": "WiKID Systems Blog",
+      "feed_url": "https://www.wikidsystems.com/blog/feeds/rss/",
+      "website_url": "https://www.wikidsystems.com/blog/",
+      "description": "WiKID is a two-factor authentication solution, and the company's blog is a valuable source of information on authentication, security, major industry news, and other information. You'll find tips and tutorials, insights about risks, resources, security news about Google and social media, and other relevant information.",
+      "followers": {
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4660609.jpg?t=1651577922"
+    },
+    {
+      "title": "Xavier Mertens Blog",
+      "feed_url": "https://blog.rootshell.be/feed/",
+      "website_url": "https://blog.rootshell.be/",
+      "description": "Xavier Mertens holds seven different certifications which means that he is a security expert with all the letters to prove it. The information on here is perfect for those who are looking to follow events at conferences as well as some updated information from within the industry.",
+      "followers": {
+        "twitter": 15900
+      },
+      "image_url": "https://i1.feedspot.com/4661403.jpg?t=1617637186"
+    },
+    {
+      "title": "Tech-Wreck InfoSec Blog",
+      "feed_url": "https://tech-wreckblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://tech-wreckblog.blogspot.com/",
+      "description": "The Tech Wreck InfoSec Blog is run by an Information Assurance Engineer, covering a variety of topics pertaining to information security and related news and information. The blog provides articles of use to both consumers and security professionals.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4546957.jpg?t=1617634550"
+    },
+    {
+      "title": "Marco Ramilli's Blog",
+      "feed_url": "https://marcoramilli.com/feed/",
+      "website_url": "https://marcoramilli.com/",
+      "description": "Hacking, Malware Evasions, Penetration testing, Targeted attacks, Malware analysis and everything related to Cyber Security Field.",
+      "followers": {
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/243376.jpg?t=1643003089"
+    },
+    {
+      "title": "JeffSoh on NetSec",
+      "feed_url": "https://jeffsoh.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://jeffsoh.blogspot.com/",
+      "description": "Jeff Soh began blogging in 2007, and continues to share suggestions on the new intrusion analyst and other miscellaneous news on information security. Soh also offers book recommendations, product recommendations, and useful tips for information security professionals and everyday users.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/637421.jpg?t=1617634812"
+    },
+    {
+      "title": "Robert Penz Blog",
+      "feed_url": "https://robert.penz.name/feed/",
+      "website_url": "https://robert.penz.name/",
+      "description": "About Linux, IT security, tips and tricks and otherstuff that comes into my mind",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/494982.jpg?t=1617639294"
+    },
+    {
+      "title": "Chronicles of a CISO",
+      "feed_url": "https://johnmasserini.com/feed/",
+      "website_url": "https://johnmasserini.com/",
+      "description": "An unabashed, unfiltered and unbiased view of the Information Security world. A bit of pontification, a touch of sarcasm, but mostly just sharing my experiences of a career in the wonderful world we call InfoSec.",
+      "followers": {
+        "twitter": 473
+      },
+      "image_url": "https://i1.feedspot.com/5032683.jpg?t=1617632602"
+    },
+    {
+      "title": "PerezBox \u00bb Security",
+      "feed_url": "https://perezbox.com/category/security/feed/",
+      "website_url": "https://perezbox.com/category/security/",
+      "description": "Tony Perez On Security, Business, And Life. This is the professional page of Tony Perez, Co-Founder and former CEO of Sucuri, Vice President of Product Management at GoDaddy, Sucuri business unit.",
+      "followers": {
+        "facebook": 139,
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/4660548.jpg?t=1617631946"
+    },
+    {
+      "title": "Holistic InfoSec",
+      "feed_url": "https://holisticinfosec.blogspot.com/feeds/posts/default",
+      "website_url": "https://holisticinfosec.blogspot.com/",
+      "description": "Russ McRee's HolisticInfoSec includes articles and research, as well as feedback and an occasional rant. The goal is promoting standards, simplicity, and efficiency in achieving holistic information security.",
+      "followers": {
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/172534.jpg?t=1617632479"
+    },
+    {
+      "title": "ReThink Security",
+      "feed_url": "https://rethinksecurity.io/posts/index.xml",
+      "website_url": "https://rethinksecurity.io/",
+      "description": "Recent content in Posts on ReThink Security.",
+      "followers": {
+        "twitter": 63
+      },
+      "image_url": "https://i1.feedspot.com/5159197.jpg?t=1617632494"
+    },
+    {
+      "title": "1st Security News",
+      "feed_url": "https://1stsecuritynews.com/feed",
+      "website_url": "https://1stsecuritynews.com/",
+      "description": "Our goal is to help make your world a safer place showcasing the latest in security news, products and services. An online global portal we offer a simple translation feature in 45 languages, informing thousands of security professionals and keeping them up to speed on the latest advances in the industry.",
+      "followers": {
+        "facebook": 32
+      },
+      "image_url": "https://i1.feedspot.com/4661308.jpg?t=1617632510"
+    },
+    {
+      "title": "Andrew Hay Blog",
+      "feed_url": "http://feeds.feedburner.com/andrewhayca",
+      "website_url": "https://www.andrewhay.ca/blog",
+      "description": "Andrew Hay is an information security industry veteran with close to 20 years of experience as a security practitioner, industry analyst, and executive.",
+      "followers": {
+        "twitter": 15200
+      },
+      "image_url": "https://i1.feedspot.com/4660517.jpg"
+    },
+    {
+      "title": "Lucius on Security",
+      "feed_url": "http://feeds.feedburner.com/LuciusOnSecurity",
+      "website_url": "http://luciusonsecurity.blogspot.com/",
+      "description": "A cybersecurity awareness and cybercrime blog which aims to highlight Global and India specific security risks faced by computer and mobile users. Simplifying the jargon in a complex world of spam, computer viruses, trojans, spyware, corporate espionage, hacks,cyber war,cyber protests, social networking privacy and complicated security technologies for all.",
+      "followers": {
+        "twitter": 463
+      },
+      "image_url": "https://i1.feedspot.com/637431.jpg?t=1617632643"
+    },
+    {
+      "title": "Matt Flynn's Blog",
+      "feed_url": "https://feeds.feedburner.com/MattFlynnsIdentityManagementBlog",
+      "website_url": "http://360tek.blogspot.com/",
+      "description": "This is a personal blog, which reflects his own opinions and not those of Oracle, covers identity management and security, software, services, processes, and analyses. Matt Flynn is an information security and identity management specialist who works at Oracle.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/2186221.jpg?t=1617632650"
+    },
+    {
+      "title": "Cyber Sins",
+      "feed_url": "https://cybersins.com/index.xml",
+      "website_url": "https://cybersins.com/",
+      "description": "Cyber Sins is the blog of Rishi Narang, a consultant, writer, and researcher who focuses on cyber security and threat intelligence. The blog offers information about cyber attacks, web security, and more subjects in information security.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4660627.jpg?t=1617632978"
+    },
+    {
+      "title": "Architect Security Blog",
+      "feed_url": "https://architectsecurity.org/feed/",
+      "website_url": "https://architectsecurity.org/blog/",
+      "description": "Hey, I'm Wright. Information protection, security awareness, and personal privacy are my passion, and I love to teach others how to implement simple actions that can lead to a safer world. I am an international speaker and trainer, educating and advising on matters of privacy and information security with the goal of safeguarding the digital components we rely on every day.",
+      "followers": {
+        "twitter": 18800
+      },
+      "image_url": "https://i1.feedspot.com/5279945.jpg?t=1620819059"
+    },
+    {
+      "title": "Blog of Chandika",
+      "feed_url": "https://clasiru.blogspot.com/feeds/posts/default",
+      "website_url": "https://clasiru.blogspot.com/",
+      "description": "Follow this blog to get articles and updates related to networking and information security.",
+      "followers": {
+        "twitter": 78
+      },
+      "image_url": "https://i1.feedspot.com/5123052.jpg?t=1617631937"
+    },
+    {
+      "title": "The Hacker News",
+      "feed_url": "https://thehackernews.com/feeds/posts/default",
+      "website_url": "https://thehackernews.com/",
+      "description": "A leading cybersecurity news platform for IT professionals, researchers, hackers, technologists, and enthusiasts. Here, you'll find the latest cybersecurity news, hacking news, cyber attacks, computer security, and in-depth reports on current and future Infosec trends and how they are shaping the cyber world.",
+      "followers": {
+        "facebook": 1900000,
+        "twitter": 922200,
+        "instagram": 142900
+      },
+      "image_url": "https://i1.feedspot.com/349733.jpg?t=1617631309"
+    },
+    {
+      "title": "SC Media",
+      "feed_url": "https://www.scworld.com/",
+      "website_url": "https://www.scworld.com/",
+      "description": "Security Weekly is the best podcast network created for security professionals, by security professionals. We features interviews with security luminaries, how-to technical segments and security news coverage.",
+      "followers": {
+        "facebook": 10800,
+        "twitter": 75500
+      },
+      "image_url": "https://i1.feedspot.com/4660479.jpg?t=1610970807"
+    },
+    {
+      "title": "IBM \u00bb Security",
+      "feed_url": "https://www.ibm.com/think/security/",
+      "website_url": "https://www.ibm.com/think/security/",
+      "description": "Find the latest security analysis and insight from top IT security experts and leaders, made exclusively for security professionals and CISOs.",
+      "followers": {
+        "facebook": 199900,
+        "twitter": 77100
+      },
+      "image_url": "https://i1.feedspot.com/4356630.jpg?t=1617631361"
+    },
+    {
+      "title": "SecurityWeek",
+      "feed_url": "https://www.securityweek.com",
+      "website_url": "https://www.securityweek.com/",
+      "description": "IT Security News and Information Security News, Cyber Security, Network Security, Enterprise Security Threats, Cybercrime News and more. Information Security Industry Expert insights and analysis from IT security experts around the world.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 224600
+      },
+      "image_url": "https://i1.feedspot.com/121911.jpg?t=1617631338"
+    },
+    {
+      "title": "Tripwire Blog",
+      "feed_url": "https://www.tripwire.com/state-of-security/feed/",
+      "website_url": "https://www.tripwire.com/state-of-security?f%5B0%5D=topic%3A2275",
+      "description": "Tripwire's IT security (infosec) blog covers cyber security, threats, vulnerabilities, incident detection, and regulatory compliance news & trends. Security blog by Tripwire. Tripwire is a leading provider of endpoint detection and response, security, compliance, and IT operation solutions for enterprises, service providers, and government agencies. Get serious about protecting your business, customers, and intellectual property from cybersecurity threats. Data-driven, automated security solutions.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 50000,
+        "instagram": 619
+      },
+      "image_url": "https://i1.feedspot.com/4510017.jpg?t=1612932705"
+    },
+    {
+      "title": "The Security Ledger",
+      "feed_url": "https://securityledger.com/feed/",
+      "website_url": "https://848.co/news-and-insights/the-848-blog/",
+      "description": "Security Ledger is an independent security news website that explores the intersection of cyber security with business, commerce, politics and everyday life.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 4700,
+        "instagram": 160
+      },
+      "image_url": "https://i1.feedspot.com/4660612.jpg?t=1617639238"
+    },
+    {
+      "title": "Trail of Bits Blog",
+      "feed_url": "https://blog.trailofbits.com/feed/",
+      "website_url": "https://blog.trailofbits.com/",
+      "description": "...And You Will Know Us by the Trail of Bits is the official blog of Trail of Bits, an enterprise infosec consulting firm founded by Dan Guido and Alexander Sotirov. The blog offers expert infosec advice based on consulting experience at some of the world's most advanced security programs. The blog provides excellent educational content focused on vulnerabilities, exploits, malware, and more.",
+      "followers": {
+        "twitter": 28800
+      },
+      "image_url": "https://i1.feedspot.com/4660760.jpg?t=1617631536"
+    },
+    {
+      "title": "Infosecurity Magazine \u00bb Blog",
+      "feed_url": "https://www.infosecurity-magazine.com/blogs/",
+      "website_url": "https://www.infosecurity-magazine.com/blogs/",
+      "description": "Infosecurity Magazine is the award-winning online magazine dedicated to the strategy, insight and technology of information security. Infosecurity Magazine has over ten years of experience providing knowledge and insight into the information security industry. Its multiple award-winning editorial content provides compelling features both online and in print that focus on hot topics and trends, in-depth news analysis and opinion columns from industry experts.",
+      "followers": {
+        "facebook": 26100,
+        "twitter": 240700
+      },
+      "image_url": "https://i1.feedspot.com/5279946.jpg?t=1620813457"
+    },
+    {
+      "title": "HackNos",
+      "feed_url": "https://www.hacknos.com/feed/",
+      "website_url": "https://www.hacknos.com/",
+      "description": "hackNos is a comprehensive source of information on cyber security, penetration testing, Red Teaming , Web Penetration Testing etc. HackNos.Com is a Information Security Blog",
+      "followers": {
+        "twitter": 99
+      },
+      "image_url": "https://i1.feedspot.com/5252668.jpg?t=1614939868"
+    },
+    {
+      "title": "Secure Works Blog",
+      "feed_url": "https://www.secureworks.com/rss?feed=blog",
+      "website_url": "https://www.secureworks.com/blog",
+      "description": "Explore the latest security trends and leading practices to boost your strategy and better protect your operations. Information security & compliance blog on various topics of IT & network security, cybersecurity events & security research. Secureworks is a cybersecurity company that keeps organizations safe in a digitally connected world. We deliver solutions by security experts for security experts to minimize risks and prevent, detect, and respond to cyberthreats.",
+      "followers": {
+        "facebook": 9000,
+        "twitter": 25100
+      },
+      "image_url": "https://i1.feedspot.com/4470166.jpg?t=1658725896"
+    },
+    {
+      "title": "Information Security Buzz",
+      "feed_url": "https://informationsecuritybuzz.com/feed/",
+      "website_url": "https://informationsecuritybuzz.com/",
+      "description": "Information Security Buzz is a new resource that provides the best in breaking news for the industry. Aggregated from many credible sources, content is carefully selected to provide you with the latest threat trends, insights, practical solutions, hot topics and advice from around the globe.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 20300
+      },
+      "image_url": "https://i1.feedspot.com/4547032.jpg?t=1617631375"
+    },
+    {
+      "title": "Privacy & Information Security Law Blog",
+      "feed_url": "https://www.huntonprivacyblog.com/feed/",
+      "website_url": "https://www.huntonak.com/privacy-and-information-security-law/",
+      "description": "Hunton Andrews Kurth's Privacy & Information Security Law Blog offers insights for responsible data use, covering data privacy law best practices, cyber event prevention, and international data protection law compliance. The firm is a known leader in the field of Privacy and Cybersecurity practice.",
+      "followers": {
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/3786512.jpg?t=1608560714"
+    },
+    {
+      "title": "Titus Blog",
+      "feed_url": "https://www.titus.com/blog/feed",
+      "website_url": "https://dataclassification.fortra.com/blog",
+      "description": "Know your Data, Protect your Data. Read what our thought leaders are saying about data security, compliance, and other topics important to those serious about data protection.",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/4660990.jpg?t=1608793078"
+    },
+    {
+      "title": "NuData Security Blog",
+      "feed_url": "https://nudatasecurity.com/feed/",
+      "website_url": "https://www.tylertech.com/solutions/transformative-technology/cybersecurity",
+      "description": "NuData Security positively verifies users online through real-time behavioral and statistical analytics to detect automated and human attacks.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4660957.jpg?t=1617631840"
+    },
+    {
+      "title": "Tyler Cybersecurity",
+      "feed_url": "https://www.tylercybersecurity.com/blog/rss.xml",
+      "website_url": "https://www.tylertech.com/solutions/transformative-technology/cybersecurity",
+      "description": "Up-to-date news and stories about information security and cybersecurity best practices.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4660958.jpg?t=1617634674"
+    },
+    {
+      "title": "Time Data Security Blog",
+      "feed_url": "https://www.timedatasecurity.com/blogs/rss.xml",
+      "website_url": "https://acresecurity.com/blog",
+      "description": "Keep up with the latest thinking from both the industry and TDS with the Time Data Security Blog.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4660960.jpg"
+    },
+    {
+      "title": "Blumira Blog",
+      "feed_url": "https://www.blumira.com/feed/",
+      "website_url": "https://www.blumira.com/blog",
+      "description": "Latest information security news, alerts, and guidance from Blumira's team of security experts. Key topics covered are security framework, security how-to, security integrations, customer success stories, and product updates. Blumira offers a scalable, cloud-based security threat detection & response platform.",
+      "followers": {
+        "facebook": 506,
+        "twitter": 882
+      },
+      "image_url": "https://i1.feedspot.com/5308897.jpg?t=1628156995"
+    },
+    {
+      "title": "The Cyber Hut",
+      "feed_url": "http://feeds.feedburner.com/InfosecProfessional",
+      "website_url": "https://www.thecyberhut.com/",
+      "description": "Industry authority blog on digital identity and cyber security. The Home of Disruptive Cyber Security.",
+      "followers": {
+        "twitter": 108
+      },
+      "image_url": "https://i1.feedspot.com/4546959.jpg?t=1617634542"
+    },
+    {
+      "title": "Skull Security",
+      "feed_url": "https://blog.skullsecurity.org/feed",
+      "website_url": "https://blog.skullsecurity.org/",
+      "description": "A personal blog that offers tutorials and other interesting information, Skull Security is written by Ron Bowes. Mr. Bowes participates in and runs local BSides meetups that also incorporate coding and CTF. His walkthroughs help readers with basic solutions to the challenges.",
+      "followers": {
+        "twitter": 5900
+      },
+      "image_url": "https://i1.feedspot.com/3759259.jpg?t=1617632986"
+    },
+    {
+      "title": "Hagai Bar-El on Security",
+      "feed_url": "https://www.hbarel.com/?tempskin=_rss2",
+      "website_url": "https://www.hbarel.com/",
+      "description": "The Hagai Bar-El on Security blog is dedicated to security engineering. Topics range from security engineering practices and security innovation to national security policy, privacy, and book reviews. Naturally, those are the areas in which I work and find interest. This blog is designed to be useful, or at least interesting, to the security practitioner.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4408307.jpg?t=1614775951"
+    }
+  ]
+}

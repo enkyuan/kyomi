@@ -1,0 +1,277 @@
+{
+  "category": "Spain Sports",
+  "source_url": "https://rss.feedspot.com/spain_sports_rss_feeds",
+  "feeds": [
+    {
+      "title": "MARCA",
+      "feed_url": "https://e00-marca.uecdn.es/rss/en/index.xml",
+      "website_url": "https://www.marca.com/en/",
+      "description": "Latest sports news, videos, and scores. Everything you need to know about Real Madrid, Barcelona, Messi, Cristiano Ronaldo, and more, can be found on Marca.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 221800
+      },
+      "image_url": "https://i1.feedspot.com/4786824.jpg?t=1635248269"
+    },
+    {
+      "title": "Football Espana",
+      "feed_url": "https://www.football-espana.net/feed",
+      "website_url": "https://www.football-espana.net/",
+      "description": "Football Espana is the leading news website for English-speaking fans of Spanish football. They cover all areas of the Spanish game, ensuring that their readers are provided with quality reporting on what matters most on a daily basis.",
+      "followers": {
+        "facebook": 10000,
+        "twitter": 53500
+      },
+      "image_url": "https://i1.feedspot.com/5335869.jpg?t=1635249019"
+    },
+    {
+      "title": "WHY SAY ANYTHING?",
+      "feed_url": "https://whysayanything.com/feed/",
+      "website_url": "https://whysayanything.com/",
+      "description": "A blog, originally about anything and everything, but now tailored more to the football market due to the larger demand for these types of articles.",
+      "followers": {
+        "facebook": 98,
+        "twitter": 7700
+      },
+      "image_url": "https://i1.feedspot.com/4737128.jpg?t=1608624709"
+    },
+    {
+      "title": "LaLiga Expert",
+      "feed_url": "https://laligaexpert.com/feed/",
+      "website_url": "https://laligaexpert.com/",
+      "description": "LaLiga Expert is an independent, Madrid-based football website covering Spanish football in the English language. Since August 2018, we have been previewing and reviewing all the actions in LaLiga and providing analysis and original insight into events at all 20 top flight clubs. We have match previews for every game in LaLiga and intend to cover much more of the Segunda Divisi\u00f3n, as well as the Copa del Rey and European fixtures involving Spanish teams.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5269481.jpg?t=1618472474"
+    },
+    {
+      "title": "Panenka",
+      "feed_url": "https://www.panenka.org/feed/",
+      "website_url": "https://www.panenka.org/",
+      "description": "Panenka is the quintessential Spanish soccer magazine and to this is joined a web page where you can find some of those stories that are printed on paper.",
+      "followers": {
+        "facebook": 110300,
+        "twitter": 128100,
+        "instagram": 119400
+      },
+      "image_url": "https://i1.feedspot.com/4883736.jpg?t=1635250143"
+    },
+    {
+      "title": "The Olive Press \u00bb Sports",
+      "feed_url": "https://www.theolivepress.es/spain-news/category/sport/feed/",
+      "website_url": "https://www.theolivepress.es/spain-news/category/sport/",
+      "description": "This news section covers articles on Spain's sports updates. The Olive Press is an English-language newspaper for the expatriate community in Spain. We bring you breaking news, videos, and featured stories.",
+      "followers": {
+        "facebook": 49000,
+        "twitter": 10100,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5335884.jpg?t=1635251314"
+    },
+    {
+      "title": "SPORT",
+      "feed_url": "https://www.sport.es/es/rss/last-news/news.xml",
+      "website_url": "https://www.sport.es/es/",
+      "description": "SPORT is the leading sports information newspaper covering the last hour of FC Barcelona.",
+      "followers": {
+        "facebook": 3200000,
+        "twitter": 2100000,
+        "instagram": 15100
+      },
+      "image_url": "https://i1.feedspot.com/5335909.jpg?t=1635253231"
+    },
+    {
+      "title": "Managing Madrid",
+      "feed_url": "https://www.managingmadrid.com/rss/current.xml",
+      "website_url": "https://www.managingmadrid.com/",
+      "description": "Your best source for quality Real Madrid news, rumors, analysis, stats, and scores from the fan perspective. They are committed to bringing intelligent, insightful, and respectfully biased analysis on Real Madrid CF and the sport of football.",
+      "followers": {
+        "facebook": 220800,
+        "twitter": 91900
+      },
+      "image_url": "https://i1.feedspot.com/5336952.jpg?t=1635309182"
+    },
+    {
+      "title": "Barcelona Football Blog",
+      "feed_url": "https://barcelonafootballblog.com/feed/atom/",
+      "website_url": "https://barcelonafootballblog.com/",
+      "description": "Dedicated to analyzing and discussing FC Barcelona's football/soccer team from differing perspectives in order to foster a better sense of community and greater understanding about the beautiful game we all love so much.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/1522063.jpg?t=1597317038"
+    },
+    {
+      "title": "Into the Calderon",
+      "feed_url": "https://www.intothecalderon.com/rss/current.xml",
+      "website_url": "https://www.intothecalderon.com/",
+      "description": "Your best source for quality Atl\u00e9tico Madrid news, rumors, analysis, stats, and scores from the fan perspective.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 96
+      },
+      "image_url": "https://i1.feedspot.com/5336964.jpg?t=1635310917"
+    },
+    {
+      "title": "FC Barcelona Live News",
+      "feed_url": "http://barcelona-livenews.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://barcelona-livenews.blogspot.com/",
+      "description": "Covers all the news and updates about FC Barcelona.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5336965.jpg?t=1635311195"
+    },
+    {
+      "title": "Barca Universal",
+      "feed_url": "https://barcauniversal.com/feed/",
+      "website_url": "https://barcauniversal.com/",
+      "description": "The number one independent FC Barcelona website. All the latest news, opinions, stats, transfers, match reviews, podcasts, interviews, match coverage, and much more on FC Barcelona.",
+      "followers": {
+        "facebook": 439,
+        "twitter": 868500,
+        "instagram": 78300
+      },
+      "image_url": "https://i1.feedspot.com/5181375.jpg"
+    },
+    {
+      "title": "Barca Blaugranes",
+      "feed_url": "https://www.barcablaugranes.com/rss/current.xml",
+      "website_url": "https://www.barcablaugranes.com/",
+      "description": "Barca Blaugranes, SB Nation's FC Barcelona blog run by, and for, Cules. Stay up-to-date with all the latest news, opinion and rumours relating to FC Barcelona.",
+      "followers": {
+        "facebook": 167400,
+        "twitter": 28100
+      },
+      "image_url": "https://i1.feedspot.com/5181314.jpg?t=1597390712"
+    },
+    {
+      "title": "Sports Mole \u00bb Barcelona",
+      "feed_url": "https://www.sportsmole.co.uk/football/barcelona.xml",
+      "website_url": "https://www.sportsmole.co.uk/football/barcelona/",
+      "description": "Latest Barcelona Fixtures, results, live scores, news, rumours, transfers and gossip from Sports Mole, updated around the clock.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 39000,
+        "instagram": 11100
+      },
+      "image_url": "https://i1.feedspot.com/5181505.jpg?t=1635322486"
+    },
+    {
+      "title": "Realmadridnews.com",
+      "feed_url": "http://www.realmadridnews.com/feed",
+      "website_url": "https://www.realmadridnews.com/",
+      "description": "Real Madrid news, transfer rumours, schedules, videos, blogs, and more. Our aim is to provide an up-to-date resource, and we'll bring you news, match reports, analysis, commentaries, and more. We hope to bring fans together from all different walks of life from all over the world to share their views on all things Los Merengues.",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4465750.jpg?t=1608624649"
+    },
+    {
+      "title": "The Leader Newspaper \u00bb Sports News",
+      "feed_url": "https://theleader.info/category/sport/feed/",
+      "website_url": "https://theleader.info/category/sport/",
+      "description": "This news section covers all the sports updates. Leader Newspaper offers News, Sport, Advertising, Property, Classifieds for Costa Blanca, Costa del Sol, Costa Calida, Costa de Almeria, Spain.",
+      "followers": {
+        "facebook": 85200
+      },
+      "image_url": "https://i1.feedspot.com/5337168.jpg?t=1635332517"
+    },
+    {
+      "title": "La Liga News",
+      "feed_url": "https://laliganews.net/feed/",
+      "website_url": "https://laliganews.net/",
+      "description": "LaLigaNews.net is a Spanish football news site covering La Liga, the Spanish national football team as well as all other transfer, player, and team news from Spain.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5337712.jpg?t=1635426857"
+    },
+    {
+      "title": "The Guardian \u00bb Barcelona",
+      "feed_url": "https://www.theguardian.com/football/barcelona/rss",
+      "website_url": "https://www.theguardian.com/football/barcelona",
+      "description": "Latest Barcelona News, fixtures, table updates, analysis, and much more on the Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 354300,
+        "twitter": 906200,
+        "instagram": 96800
+      },
+      "image_url": "https://i1.feedspot.com/5181569.jpg?t=1597394199"
+    },
+    {
+      "title": "World Padel Insider",
+      "feed_url": "https://worldpadelinsider.com/feed/",
+      "website_url": "https://worldpadelinsider.com/",
+      "description": "World Padel Insider is an online publication about the sport of padel. World Padel Insider brings you the fundamentals of both learning how to play the game and the process of becoming a better padel player.",
+      "followers": {
+        "twitter": 112
+      },
+      "image_url": "https://i1.feedspot.com/5192524.jpg?t=1673591010"
+    },
+    {
+      "title": "La Liga Blog",
+      "feed_url": "http://laligablog.com/feed/",
+      "website_url": "http://laligablog.com/",
+      "description": "Your daily source of Spanish La Liga football results, and La Liga Soccer news, views, league tables, fixtures, results and opinion.",
+      "followers": {
+        "facebook": 11800,
+        "twitter": 17300
+      },
+      "image_url": "https://i1.feedspot.com/4465923.jpg?t=1618470907"
+    },
+    {
+      "title": "RC Celta",
+      "feed_url": "https://rccelta.es/en/feed/",
+      "website_url": "https://rccelta.es/en/",
+      "description": "Discover the latest news from RC Celta, Mais Celta services, purchase tickets, and more information about the club.",
+      "followers": {
+        "facebook": 8800,
+        "twitter": 20200,
+        "instagram": 53100
+      },
+      "image_url": "https://i1.feedspot.com/5336981.jpg?t=1635313553"
+    },
+    {
+      "title": "Everything Barca",
+      "feed_url": "https://everythingbarca.com/feed/",
+      "website_url": "https://everythingbarca.com/",
+      "description": "The ultimate home for FC Barcelona news, rumors, updates, transfers, signings, injuries, commentary, analysis, and all things Barca!",
+      "followers": {
+        "facebook": 23500,
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/5181322.jpg?t=1597319584"
+    },
+    {
+      "title": "Sevilla FC",
+      "feed_url": "https://sevillafc.es/en",
+      "website_url": "https://sevillafc.es/en",
+      "description": "Sevilla FC is the oldest football club in Seville, founded in the year 1890. Sevilla FC has been the most successful club in Andalusia, with 73 seasons in the First Division and 13 national and international titles. Covers the official news and updates of Sevilla Football club.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 1200000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/5336966.jpg?t=1635311597"
+    },
+    {
+      "title": "Ethan SPORTS TV",
+      "feed_url": "https://futbol.mochilasmujer.shop/feed/",
+      "website_url": "https://futbol.ethanalvarez.top/",
+      "description": "Football Galicia National Youth and Second and Preferential Regional League with the Results, Classification, and Scorers of the 2023-2024 Season",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5738261.jpg?t=1702891194"
+    },
+    {
+      "title": "Meeting Deportivo",
+      "feed_url": "https://meetingdeportivo.com/feed/",
+      "website_url": "https://meetingdeportivo.com/",
+      "description": "Hop on the ultimate destination for the latest sports news, and radio shows! Join in and enjoy the live excitement of sport with Meeting Deportivo - a radio sports news source on the local station in the city of Boston. Here you'll finf sports of all major sports and league from all corners of the world.",
+      "followers": {
+        "facebook": 1300
+      },
+      "image_url": "https://i1.feedspot.com/7251875.jpg?t=1707894818"
+    }
+  ]
+}

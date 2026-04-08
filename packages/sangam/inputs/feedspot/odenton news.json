@@ -1,0 +1,17 @@
+{
+  "category": "Odenton News",
+  "source_url": "https://rss.feedspot.com/odenton_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "CBS News \u00bb Odenton",
+      "feed_url": "https://www.cbsnews.com/latest/rss/main",
+      "website_url": "https://www.cbsnews.com/baltimore/tag/odenton/",
+      "description": "Get the latest Odenton News, Sports, Weather, Traffic and the Best of Baltimore from CBS Baltimore.",
+      "followers": {
+        "facebook": 432200,
+        "twitter": 277400
+      },
+      "image_url": "https://i1.feedspot.com/5156485.jpg?t=1590561164"
+    }
+  ]
+}

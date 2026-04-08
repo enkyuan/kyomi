@@ -1,0 +1,898 @@
+{
+  "category": "Sales",
+  "source_url": "https://rss.feedspot.com/sales_rss_feeds",
+  "feeds": [
+    {
+      "title": "HubSpot Blog \u00bb Sales",
+      "feed_url": "https://blog.hubspot.com/sales/rss.xml",
+      "website_url": "https://blog.hubspot.com/sales",
+      "description": "Covers articles on sales qualification, operations, compensation, prospecting, training, process, methodology, pitch, job interviews, emails, strategy, entrepreneurship and more. HubSpot is a leading CRM platform that provides software and support to help businesses grow better.",
+      "followers": {
+        "facebook": 2100000,
+        "twitter": 803300,
+        "instagram": 635200
+      },
+      "image_url": "https://i1.feedspot.com/3333342.jpg?t=1607666032"
+    },
+    {
+      "title": "The Sales Blog",
+      "feed_url": "https://www.thesalesblog.com/blog/rss.xml",
+      "website_url": "https://www.thesalesblog.com/",
+      "description": "Stay up to date with the latest sales market. Find the latest posts blog from The Sales Blog here. Anthony Lannarino is an international speaker, author, and sales leader. He posts daily sales tips and insights to The Sales Blog.",
+      "followers": {
+        "twitter": 85300,
+        "instagram": 7400
+      },
+      "image_url": "https://i1.feedspot.com/5327133.jpg?t=1633006004"
+    },
+    {
+      "title": "Sales Gravy Blog",
+      "feed_url": "https://salesgravy.com/feed/podcast/",
+      "website_url": "https://salesgravy.com/blog/",
+      "description": "Sales Gravy is a global leader in sales acceleration solutions. We help our clients generate the highest possible return on sales headcount investment by helping them deploy actionable strategies for building high-performing sales teams fast.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 111700
+      },
+      "image_url": "https://i1.feedspot.com/5359906.jpg?t=1641385586"
+    },
+    {
+      "title": "Heinz Marketing Blog",
+      "feed_url": "http://www.heinzmarketing.com/blog/feed/",
+      "website_url": "https://www.heinzmarketing.com/blog/",
+      "description": "Daily b2b sales & marketing insights. Also covers topics such as sales enablement, sales management, sales pipeline, sales process and documentation, content marketing, CRM, influencer marketing and more. Heinz Marketing is a Seattle marketing agency focused on sales acceleration and helps clients achieve sustained sales success by growing revenue from existing customers and cost effectively identifying and winning new customers.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 108300,
+        "instagram": 424
+      },
+      "image_url": "https://i1.feedspot.com/4453090.jpg?t=1607666144"
+    },
+    {
+      "title": "TSL Consulting Blog",
+      "feed_url": "https://tslconsulting.in/feed/",
+      "website_url": "https://tslconsulting.in/blogs/",
+      "description": "With a deep understanding of a range of businesses and solutions, TSL's experts share their wisdom on a myriad of marketing and sales topics you'll find very important. TSL Consulting is a B2B integrated marketing company, with a strong portfolio in outbound and inbound marketing services, delivering tangible outcomes.",
+      "followers": {
+        "facebook": 780
+      },
+      "image_url": "https://i1.feedspot.com/7302359.jpg?t=1713716568"
+    },
+    {
+      "title": "SalesNexus Blog",
+      "feed_url": "https://www.salesnexus.com/blog/feed",
+      "website_url": "https://www.salesnexus.com/blog",
+      "description": "Covers topics such as sales management, sales training, marketing automation, lead generation, CRM software, integrations, email marketing and more. SalesNexus is Online CRM and Email Marketing for organizations from sales teams.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4453120.jpg?t=1641807840"
+    },
+    {
+      "title": "ClickFunnels Blog",
+      "feed_url": "https://www.clickfunnels.com/blog/feed/",
+      "website_url": "https://www.clickfunnels.com/blog/",
+      "description": "Covers topics such as sales funnel, conversion optimization, advertising, make money online and more. ClickFunnels have been training small business owners and entrepreneurs on how to grow their business with sales funnels for the last 6 years.",
+      "followers": {
+        "facebook": 441800,
+        "twitter": 24800
+      },
+      "image_url": "https://i1.feedspot.com/4930110.jpg?t=1641798590"
+    },
+    {
+      "title": "G2 Learn",
+      "feed_url": "https://learn.g2.com/rss.xml",
+      "website_url": "https://learn.g2.com/",
+      "description": "G2's Learn Hub is for marketing, sales, management, HR, technology, software, and all business topics. G2 is the world's largest and most trusted tech marketplace where people can discover, review, and manage the software they need to reach their potential.",
+      "followers": {
+        "facebook": 20200,
+        "twitter": 33300,
+        "instagram": 6500
+      },
+      "image_url": "https://i1.feedspot.com/5026725.jpg?t=1599312777"
+    },
+    {
+      "title": "Highspot Blog",
+      "feed_url": "https://www.highspot.com/feed/",
+      "website_url": "https://www.highspot.com/blog/",
+      "description": "Covers articles on sales, marketing, and sales enablement. Also covers product updates. Highspot is the sales enablement platform that empowers companies to elevate customer conversations that drive strategic growth.",
+      "followers": {
+        "facebook": 419,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4453102.jpg?t=1641799098"
+    },
+    {
+      "title": "SalesHandy Blog",
+      "feed_url": "https://www.saleshandy.com/blog/feed/",
+      "website_url": "https://www.saleshandy.com/blog/",
+      "description": "Articles on inside & outbound sales, sales recruitment, growth hacking, lead generation, emails, tools, customer service and support. SalesHandy is a sales engagement platform that enables sales teams to scale their email outreach operations seamlessly.",
+      "followers": {
+        "facebook": 874,
+        "instagram": 684
+      },
+      "image_url": "https://i1.feedspot.com/4481970.jpg?t=1607666090"
+    },
+    {
+      "title": "SalesHood Blog",
+      "feed_url": "https://saleshood.com/feed/",
+      "website_url": "https://saleshood.com/blog/",
+      "description": "Key topics covered are sales coaching, sales process, sales skills, sales tools, sales training, sales kickoffs & strategy, sales prospeecting, onboarding, culture and marketing. SalesHood delivers industry leading customer value and revenue growth by helping companies increase sales attainment with their enablement platform and expert community.",
+      "followers": {
+        "facebook": 422,
+        "twitter": 2600,
+        "instagram": 279
+      },
+      "image_url": "https://i1.feedspot.com/4481967.jpg?t=1607666118"
+    },
+    {
+      "title": "SPOTIO Blog",
+      "feed_url": "https://spotio.com/feed/",
+      "website_url": "https://spotio.com/blogs/",
+      "description": "Features best practices, canvassing tips, door-to-door tips, field sales, and sales training & recruiting. Spotio is the field sales software designed to track door-to-door and outside sales activities.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 4500,
+        "instagram": 6000
+      },
+      "image_url": "https://i1.feedspot.com/5324615.jpg?t=1632402654"
+    },
+    {
+      "title": "Rain Group Sales Blog",
+      "feed_url": "https://www.rainsalestraining.com/blog/rss.xml",
+      "website_url": "https://www.rainsalestraining.com/blog",
+      "description": "Your source for sales advice, tips, research, and insights to unleash sales potential. Also covers articles on topics such as consultative selling, insight selling, strategic account management, sales negotiation, sales prospecting, sales management, sales training and virtual selling. Named a Top Sales Training Company by Selling Power and Training Industry, RAIN Group delivers award-winning results through in-person and virtual sales training, coaching, and reinforcement.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 3300,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4451166.jpg?t=1641806526"
+    },
+    {
+      "title": "SaaStr",
+      "feed_url": "https://www.saastr.com/feed/",
+      "website_url": "https://www.saastr.com/",
+      "description": "SaaStr is one of the world's largest communities of SaaS executives, founders, and entrepreneurs. Our goal is to help everyone get from $0 to $100m ARR with less stress and more success. We do that with a combination of industry-leading content and community connections.",
+      "followers": {
+        "facebook": 8800,
+        "twitter": 63600
+      },
+      "image_url": "https://i1.feedspot.com/4397495.jpg?t=1615289877"
+    },
+    {
+      "title": "The Center for Sales Strategy Blog",
+      "feed_url": "https://blog.thecenterforsalesstrategy.com/rss.xml",
+      "website_url": "https://blog.thecenterforsalesstrategy.com/",
+      "description": "Covers topics important for B2B sales organizations under the categories of inbound marketing, sales performance, digital sales, sales process, prospecting, sales talent, sales training and more. The Center for Sales Strategy is sales performance consulting company, helping business-to-business sales organizations attract, retain, and develop the highest performing salespeople and sales managers.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 2600,
+        "instagram": 301
+      },
+      "image_url": "https://i1.feedspot.com/4451167.jpg?t=1641807314"
+    },
+    {
+      "title": "SalesPOP Blog",
+      "feed_url": "https://salespop.net/media/blog/feed/",
+      "website_url": "https://salespop.net/media/blog/",
+      "description": "Covers topics such as digital selling, sales performance, leadership, negotiations, prospecting, sales recruitment, sales management, sales training, motivating sales teams, CRM, artificial intelligence, customer experience and more. SalesPOP! an online magazine initiated by Pipeliner CRM brings all our unique content under one hood in order to empower sales leaders, sales managers as well as sales professionals.",
+      "followers": {
+        "facebook": 22,
+        "twitter": 8700
+      },
+      "image_url": "https://i1.feedspot.com/4424174.jpg?t=1607666208"
+    },
+    {
+      "title": "Membrain Blog",
+      "feed_url": "https://www.membrain.com/blog/rss.xml",
+      "website_url": "https://www.membrain.com/blog",
+      "description": "The topics cover all center around the complex B2B sale: sales management, sales process, sales methodologies, sales coaching, sales enablement, technology, CRM, and more! Membrain is the B2B CRM platform that drives successful behaviors in complex sales.",
+      "followers": {
+        "facebook": 39600,
+        "twitter": 2100,
+        "instagram": 257
+      },
+      "image_url": "https://i1.feedspot.com/4424202.jpg?t=1607666236"
+    },
+    {
+      "title": "Vanilla Soft Blog",
+      "feed_url": "https://vanillasoft.com/feed",
+      "website_url": "https://vanillasoft.com/resource-center/blog",
+      "description": "Topics covered are prospecting, inside sales, lead management, lead marketing, sales automation, sales training, sales enablement, sales development, virtual selling and more. The VanillaSoft sales engagement platform keeps your sales team busy and focused on engaging your leads and growing revenue.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 27900
+      },
+      "image_url": "https://i1.feedspot.com/4928733.jpg?t=1607666167"
+    },
+    {
+      "title": "The Retail Doctor Blog",
+      "feed_url": "https://feeds.feedburner.com/BobPhibbsTheRetailDoctorsBlogAtRetaildoccom",
+      "website_url": "https://www.retaildoc.com/blog",
+      "description": "The blog posts will provide you with retail sales training tips to attract, sell and grow customers. Also covers topics such as retail training, merchandising and personality. Bob Phibbs is The Retail Doctor who is an internationally recognized business strategist, customer service expert, sales coach, marketing mentor, author of three books, and motivational business speaker helping make retailers smarter, more competitive and more profitable since 1994.",
+      "followers": {
+        "facebook": 19100,
+        "twitter": 16000
+      },
+      "image_url": "https://i1.feedspot.com/1715522.jpg?t=1607666197"
+    },
+    {
+      "title": "The Center for Sales Strategy Blog",
+      "feed_url": "https://blog.thecenterforsalesstrategy.com/rss.xml",
+      "website_url": "https://blog.thecenterforsalesstrategy.com/",
+      "description": "Covers topics important for B2B sales organizations under the categories of Talent, Sales, Sales Management, Inbound Marketing, and Digital Sales. The Center for Sales Strategy helps business-to-business sales organizations attract, retain and develop the highest performing salespeople and sales managers.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 2600,
+        "instagram": 301
+      },
+      "image_url": "https://i1.feedspot.com/4930662.jpg?t=1621299205"
+    },
+    {
+      "title": "Spinify Blog",
+      "feed_url": "https://spinify.com/feed/",
+      "website_url": "https://spinify.com/blog/",
+      "description": "Articles and discussions about team engagement, staff motivation, sales performance, and how to improve your team, through a variety of tools and practices. Spinify is the Sales Gamification Software used by both small businesses and enterprises to motivate and drive sales teams.",
+      "followers": {
+        "twitter": 860
+      },
+      "image_url": "https://i1.feedspot.com/5324616.jpg?t=1638505971"
+    },
+    {
+      "title": "Criteria for Success",
+      "feed_url": "http://criteriaforsuccess.com/feed/",
+      "website_url": "http://criteriaforsuccess.com/insights/",
+      "description": "Topics covered are B2B sales process, prospecting, sales training, building and managing, hiring & onboarding, lead generation, remote sales, sales forecasting, sales leadership, optimization and more. Criteria for Success is a sales training and management consulting firm which uses a holistic approach to create breakthroughs, enable discovery, and accelerate long-term sales success for clients.",
+      "followers": {
+        "facebook": 509,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4453138.jpg?t=1641812543"
+    },
+    {
+      "title": "The Sales Hunter Blog",
+      "feed_url": "https://thesaleshunter.com/feed/",
+      "website_url": "https://thesaleshunter.com/blog/",
+      "description": "Sales tips from Mark Hunter. Key topics covered are sales leadership, mindset, motivation, process, prospecting and profit maximizing price. Speaker, author, and consultant Mark Hunter inspires trust and confidence by helping salespeople and companies see and achieve the impossible.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 50000,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4928729.jpg?t=1641813962"
+    },
+    {
+      "title": "LevelEleven Blog",
+      "feed_url": "https://leveleleven.com/feed/",
+      "website_url": "https://leveleleven.com/blog/",
+      "description": "LevelEleven is a Sales Management System that helps companies unlock maximum revenue potential by engaging salespeople in the behaviors that matter.",
+      "followers": {
+        "facebook": 647,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4928722.jpg?t=1641812843"
+    },
+    {
+      "title": "Peak Sales Recruiting Blog",
+      "feed_url": "http://www.peaksalesrecruiting.com/feed/",
+      "website_url": "https://www.peaksalesrecruiting.com/blog/",
+      "description": "Covers articles on topics such as sales hiring & recruiting, HR & talent acquisition, sales career, sales management, sales compensation and more. Peak Sales Recruiting specializes in providing B2B sales recruiting services for companies that need to quickly and confidently recruit account executives, sales managers, senior sales leaders and VPs, or entire sales teams.",
+      "followers": {
+        "facebook": 390,
+        "twitter": 13200
+      },
+      "image_url": "https://i1.feedspot.com/4424180.jpg?t=1641812116"
+    },
+    {
+      "title": "Veloxy Blog",
+      "feed_url": "https://veloxy.io/feed/",
+      "website_url": "https://veloxy.io/resources/blog/",
+      "description": "Topics covered are sales enablement, sales engagement, sales management, sales productivity, digital strategy, social media, email marketing, remote selling and more. Veloxy makes AI-powered sales enablement and predictive forecasting software for Salesforce CRM. Their mission is to help sales reps engage in the salesforce CRM with integrated software for sales management.",
+      "followers": {
+        "facebook": 390,
+        "twitter": 450
+      },
+      "image_url": "https://i1.feedspot.com/5218258.jpg?t=1641813272"
+    },
+    {
+      "title": "Jeff Shore Blog",
+      "feed_url": "https://jeffshore.com/feed/",
+      "website_url": "https://jeffshore.com/blog/",
+      "description": "Jeff Shore is an in-demand sales keynote speaker, author and consultant for over three decades. This company provides practical, real world sales strategies, sales techniques and sales tips to help you win the sale.",
+      "followers": {
+        "facebook": 150900,
+        "twitter": 21500,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4424185.jpg?t=1641817870"
+    },
+    {
+      "title": "SBI Growth",
+      "feed_url": "https://sbigrowth.com/news/rss.xml",
+      "website_url": "https://sbigrowth.com/news",
+      "description": "The SBI blog helps sales and marketing leaders make the number. Topics include Sales Strategy, Sales Process, Marketing Strategy, and Sales Operations. SBI is the Go-to-Market Growth Advisory for innovative companies who want more. Driven by insights and delivered from experience, SBI helps clients grow their revenue, margin, and enterprise value in ways never before possible.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 34400,
+        "instagram": 316
+      },
+      "image_url": "https://i1.feedspot.com/5426219.jpg?t=1659011830"
+    },
+    {
+      "title": "The Advantexe Advisor Blog",
+      "feed_url": "https://www.advantexe.com/blog/rss.xml",
+      "website_url": "https://www.advantexe.com/blog",
+      "description": "Covers topics such as business acumen, business simulation, business strategy, business leadership, customer intimacy, social selling, virtual learning and more. Advantexe is a global & award-winning talent development firm leveraging the power of cloud-based, digital business simulations to support the transfer of knowledge and new skills back to the job.",
+      "followers": {
+        "facebook": 157,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4477847.jpg?t=1641816447"
+    },
+    {
+      "title": "David Meerman Scott Blog",
+      "feed_url": "https://www.davidmeermanscott.com/blog/rss.xml",
+      "website_url": "https://www.davidmeermanscott.com/blog",
+      "description": "David Meerman Scott is a marketing strategist, entrepreneur, investor, and advisor to emerging companies, he has authored 12 bestsellers. His focus is on crafting strategies that transform fans into customers and vice versa, while also exploring the use of real-time strategies to disseminate ideas, influence minds, and build businesses. Visit his blog and learn more about his marketing strategies and get useful tips to boost your business.",
+      "followers": {
+        "twitter": 120500
+      },
+      "image_url": "https://i1.feedspot.com/5426354.jpg?t=1659071406"
+    },
+    {
+      "title": "Partners in Excellence Blog",
+      "feed_url": "https://partnersinexcellenceblog.com/feed/",
+      "website_url": "https://partnersinexcellenceblog.com/tag/time-management/",
+      "description": "Covers articles on topics such as building business, insight selling, lean sales and marketing, professional sales, prospecting, sales management, sales process, sales training and more. Dave Brock has spent his career developing high performance organizations.",
+      "followers": {
+        "twitter": 15200
+      },
+      "image_url": "https://i1.feedspot.com/130708.jpg?t=1641817254"
+    },
+    {
+      "title": "Kurlan & Associates",
+      "feed_url": "https://www.kurlanassociates.com/feed/",
+      "website_url": "https://www.kurlanassociates.com/understanding-the-sales-force/",
+      "description": "Dave Kurlan, sales expert, top-rated speaker, best-selling author discusses sales best practices, secrets to recruiting great salespeople, proper use of assessments, tests and evaluations on sales candidates and salespeople, sales pipeline and sales leadership.",
+      "followers": {
+        "twitter": 668
+      },
+      "image_url": "https://i1.feedspot.com/4451183.jpg?t=1629533754"
+    },
+    {
+      "title": "Engage Selling Blog",
+      "feed_url": "https://www.engageselling.com/blog/feed/",
+      "website_url": "https://www.engageselling.com/blog/",
+      "description": "Colleen Francis from Engage Selling shares her sales insights for an immediate and lasting impact on your sales results! Colleen works with business and sales leaders to synergize the sales DNA of the organization to seize market opportunities. Whether designing a strategy to target a new market or working with a team to improve its productivity, Colleen's results have attracted clients.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 16900
+      },
+      "image_url": "https://i1.feedspot.com/4424205.jpg?t=1638507605"
+    },
+    {
+      "title": "Cerebral Selling Blog",
+      "feed_url": "https://cerebralselling.com/feed/",
+      "website_url": "https://cerebralselling.com/blog/",
+      "description": "Articles and insights from David Priemer, Founder and CEO of Cerebral Selling. A sales practice built on the cornerstone principles of science and empathy. Cerebral Selling is modern sales training built on Science & Empathy, to help you become the top performer your customers will love! As the Founder and Chief Sales Scientist of Cerebral Selling, David's unique science and empathy-based approaches have been published in the Harvard Business Review and more magazines.",
+      "followers": {
+        "facebook": 138,
+        "twitter": 1700,
+        "instagram": 685
+      },
+      "image_url": "https://i1.feedspot.com/5359902.jpg?t=1641814239"
+    },
+    {
+      "title": "Score More Sales Blog",
+      "feed_url": "https://www.scoremoresales.com/blog/rss.xml",
+      "website_url": "https://www.scoremoresales.com/blog",
+      "description": "Get sales tips, ideas and strategy. Also covers articles on sales leadership, sales skills, professional development, sales process, sales productivity and more. Score More Sales is a nimble, award-winning sales enablement firm that helps mid-sized technology, distribution, and services companies grow front-line revenues in quick and focused ways.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 34900,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4424178.jpg?t=1641817389"
+    },
+    {
+      "title": "The Rainmaker Group Blog",
+      "feed_url": "https://www.therainmakergroupinc.com/blog/rss.xml",
+      "website_url": "https://www.therainmakergroupinc.com/blog",
+      "description": "Sales Wolf Blog is a blog sharing strategies on how to hire, onboard, coach, and retain the best salespeople. The Rainmaker Group uses an advanced 'Moneyball Approach' to help Clients select 'wolf class' salespeople that scare the hell out of the competition.",
+      "followers": {
+        "facebook": 569,
+        "twitter": 2200,
+        "instagram": 351
+      },
+      "image_url": "https://i1.feedspot.com/4481959.jpg?t=1641818022"
+    },
+    {
+      "title": "ELAvate Global Sales Blog",
+      "feed_url": "https://www.elavateglobal.com/sales-blogs?format=rss",
+      "website_url": "https://www.elavateglobal.com/sales-blogs",
+      "description": "Blog related to Sales Training and how to increase your sales productivity. ELAvate is the premier training and consulting company that helps organizations translate business strategy into business results through people.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 291
+      },
+      "image_url": "https://i1.feedspot.com/5345074.jpg?t=1641819640"
+    },
+    {
+      "title": "No More Cold Calling Blog",
+      "feed_url": "https://www.nomorecoldcalling.com/feed",
+      "website_url": "https://www.nomorecoldcalling.com/joannes-blogs/",
+      "description": "Joanne Black is America's leading authority on referral selling - the only business-development strategy proven to convert prospects into clients more than 50 percent of the time. As the founder of No More Cold Calling, Joanne helps salespeople, sales teams, and business owners build their referral networks so they can quickly attract more business, decrease operating costs, and ace out the competition every time.",
+      "followers": {
+        "facebook": 437,
+        "twitter": 14900
+      },
+      "image_url": "https://i1.feedspot.com/4667718.jpg?t=1632985308"
+    },
+    {
+      "title": "Anthony Cole Training Group Blog",
+      "feed_url": "https://blog.anthonycoletraining.com/sales-training-sales-brew/rss.xml",
+      "website_url": "https://blog.anthonycoletraining.com/sales-training-sales-brew",
+      "description": "Anthony cole training group blog is dedicated to salespeople and sales managers interested in driving sales growth, with its tagline 'When you have a problem, we have a problem. No other business partner will care about your success as much as we do. When you lie awake at night, we lie awake at night.'",
+      "followers": {
+        "facebook": 196,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4453081.jpg?t=1607666720"
+    },
+    {
+      "title": "TopLine Leadership Blog",
+      "feed_url": "https://toplineleadership.com/feed/",
+      "website_url": "https://toplineleadership.com/sales-management-training-blog/",
+      "description": "Sales Training and Sales Management Training TopLine Leadership's customizable sales and sales management training programs improve sales rep performance and drive up sales manager productivity.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4420508.jpg?t=1527918167"
+    },
+    {
+      "title": "Shane Gibson's Podcast Social Selling B2B Sales and Influence",
+      "feed_url": "https://closingbigger.net/feed/",
+      "website_url": "https://closingbigger.net/blog/category/sales-podcast/",
+      "description": "Sales podcast by Shane Gibson focused on B2B Sales, Sales Leadership and Social Selling. Podcasting since 2005, author and professional speaker Shane Gibson established this sales, social selling and leadership podcast. Guests include Guy Kawasaki, Bruce Philp, and tech leaders such as Jon Ferrara. Your host Shane Gibson is an international speaker, and author on social media marketing, social selling and sales performance who has addressed over 200,000 people on stages in North America, Southern Africa, India, Malaysia, Dubai and South America...",
+      "followers": {
+        "twitter": 33300
+      },
+      "image_url": "https://i1.feedspot.com/4453129.jpg?t=1752410382"
+    },
+    {
+      "title": "Barrett Blog",
+      "feed_url": "https://www.barrett.com.au/blog/feed/",
+      "website_url": "https://www.barrett.com.au/blog/",
+      "description": "Sue Barrett has been publishing sales articles in her blog for several years, Sue regarded by many business press publishers as the most authoritative leader in sales.",
+      "followers": {
+        "facebook": 255,
+        "twitter": 1900,
+        "instagram": 62
+      },
+      "image_url": "https://i1.feedspot.com/4424182.jpg?t=1622805208"
+    },
+    {
+      "title": "Predictable Revenue Blog",
+      "feed_url": "https://predictablerevenue.com/blog/feed",
+      "website_url": "https://predictablerevenue.com/blog",
+      "description": "Stay up to date with the latest B2B outbound sales trends. Also covers articles on inbound sales strategies, people management, outbound sales development, sales, and marketing strategies. Predictable Revenue is a sales development training company that helps B2B companies create repeatable, scalable, and predictable revenue.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 251,
+        "instagram": 967
+      },
+      "image_url": "https://i1.feedspot.com/5289612.jpg?t=1623073361"
+    },
+    {
+      "title": "Adaptive Business Services Blog",
+      "feed_url": "https://adaptive-business.com/feed/",
+      "website_url": "https://adaptive-business.com/blog/",
+      "description": "Adaptive Business Services is a DBA of Sales Results LLC which is owned and managed by Craig M. Jamieson, a Boise resident since 1982. My entire career since 1977 has revolved around business-to-business sales activities and I have held posts as a business owner; local, district, regional, and national sales manager; and a trainer and consultant. My workshops and seminars are consistently rated 9+ out of 10 by those who attend and I have also served as adjunct faculty at Boise State University where I taught 'Salesmanship'.",
+      "followers": {
+        "twitter": 136
+      },
+      "image_url": "https://i1.feedspot.com/5426221.jpg?t=1659012579"
+    },
+    {
+      "title": "Jill Konrath Blog",
+      "feed_url": "https://www.jillkonrath.com/sales-blog/rss.xml",
+      "website_url": "https://www.jillkonrath.com/sales-blog",
+      "description": "Get fresh sales strategies and learn new sales techniques from Jill Konrath. Discover how to crack into new accounts, speed up sales and win more business. Jill Konrath is the author of best selling books and she helps salespeople to speed up new customer acquisition and win bigger contracts.",
+      "followers": {
+        "twitter": 42800
+      },
+      "image_url": "https://i1.feedspot.com/3973443.jpg?t=1641967064"
+    },
+    {
+      "title": "CIENCE Blog",
+      "feed_url": "https://www.cience.com/blog/rss.xml",
+      "website_url": "https://www.cience.com/blog",
+      "description": "Industry insight, professional opinions, and surveys for lead generation, sales development, and prospecting - available on our blog.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 2700,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5267143.jpg?t=1618226033"
+    },
+    {
+      "title": "Spiro Blog",
+      "feed_url": "https://spiro.ai/feed/",
+      "website_url": "https://spiro.ai/blog/",
+      "description": "Sales tips, industry knowledge, techniques and motivation to help sales teams sell with greater efficiency and close more deals.Spiro is the industry's first proactive relationship management platform. Natively built on artificial intelligence, Spiro provides a single solution encompassing CRM capabilities, sales enablement and analytics.",
+      "followers": {
+        "facebook": 8200
+      },
+      "image_url": "https://i1.feedspot.com/4424172.jpg?t=1607666061"
+    },
+    {
+      "title": "Sales Insights Lab Blog",
+      "feed_url": "https://salesinsightslab.com/category/blog/feed/",
+      "website_url": "https://salesinsightslab.com/category/blog/",
+      "description": "Our mission is to improve the quality of sales strategy in a marketplace that demands excellence in order to succeed. Our team is committed to leveraging all available sales data to understand what really works in today's sales world and then help our clients achieve amazing results.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5426156.jpg?t=1659006953"
+    },
+    {
+      "title": "Accent Blog",
+      "feed_url": "https://accent-technologies.com/feed/",
+      "website_url": "https://accent-technologies.com/blog/",
+      "description": "Articles on sales enablement. Accent is a cloud-based sales enablement company helping customers sharpen sales execution and improve win rates. We combine precise content delivery with data-driven sales performance management to paint a clear picture of sales activity levels and their effectiveness enabling more effective sales rep execution, coaching, pipeline management, and forecasting.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 758
+      },
+      "image_url": "https://i1.feedspot.com/4453279.jpg?t=1641966976"
+    },
+    {
+      "title": "Selling Energy Blog",
+      "feed_url": "https://www.sellingenergy.com/blog/rss.xml",
+      "website_url": "https://www.sellingenergy.com/blog",
+      "description": "Selling Energy's blog provides tips that will motivate you to become more successful when it comes to selling energy products and services.",
+      "followers": {
+        "facebook": 573,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4927878.jpg?t=1621066436"
+    },
+    {
+      "title": "Mike Weinberg Blog",
+      "feed_url": "https://mikeweinberg.com/feed/",
+      "website_url": "https://mikeweinberg.com/blog/",
+      "description": "Mike is a #SalesTruth-teller and salespeople and sales leaders appreciate his blunt, funny, tell-it-like-it-is style, and his ability to share simple, practical, powerful, and easy-to-implement concepts. He's spoken on five continents and has become one of the most trusted and sought-after sales speakers/trainers/coaches/consultants in the world. Mike works with companies in all industries ranging in size from a few million to many billions of dollars.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 30400,
+        "instagram": 6000
+      },
+      "image_url": "https://i1.feedspot.com/5426307.jpg?t=1659069908"
+    },
+    {
+      "title": "GZ Consulting",
+      "feed_url": "https://gzconsulting.org/feed/",
+      "website_url": "https://gzconsulting.org/",
+      "description": "Dedicated, forward-thinking professional combining expertise in leading all aspects of product management and product marketing with broad-based experience leveraging sales intelligence to gain a competitive advantage. History of success driving full lifecycle development of major products. Advice for Vendors & Purchasers of Sales Intelligence, Sales Engagement, and B2B DaaS Products.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5426220.jpg?t=1659012175"
+    },
+    {
+      "title": "InsideSales Blog",
+      "feed_url": "https://www.insidesales.com/feed/",
+      "website_url": "https://www.insidesales.com/blog/",
+      "description": "Sales best practices, tips, motivation, product news and press release.Also covers articles on sales development, operations, performance, productivity, management, effectiveness and leadership. XANT offers the leading enterprise sales engagement platform that accelerates revenue.",
+      "followers": {
+        "facebook": 5000
+      },
+      "image_url": "https://i1.feedspot.com/585744.jpg?t=1641814851"
+    },
+    {
+      "title": "TaskDrive Blog",
+      "feed_url": "https://taskdrive.com/blog/feed/",
+      "website_url": "https://taskdrive.com/blog/",
+      "description": "Get the latest tips, insights, and updates on tried and proven lead research techniques, sales development and marketing tips and tricks. TaskDrive provides b2b lead generation service for sales teams and helps with tasks like list building, database enrichment, and account-based insights",
+      "followers": {
+        "facebook": 645,
+        "twitter": 341
+      },
+      "image_url": "https://i1.feedspot.com/5030622.jpg?t=1641907367"
+    },
+    {
+      "title": "Marketing Nous Blog",
+      "feed_url": "https://marketingnous.com.au/feed/",
+      "website_url": "https://marketingnous.com.au/sales-blog/",
+      "description": "Marketing Nous helps in enabling sales performance improvement in B2B services, tech and complex products.",
+      "followers": {
+        "twitter": 312
+      },
+      "image_url": "https://i1.feedspot.com/4453104.jpg?t=1607666735"
+    },
+    {
+      "title": "Sales Coach Dew",
+      "feed_url": "https://feeds.feedburner.com/Salescoachdew",
+      "website_url": "https://www.salescoachdew.com/",
+      "description": "Sales Coach Dew Tinnin's website and blog. Free sales tips, time management techniques, and attitude adjustments for sales professionals and entrepreneurs.",
+      "followers": {
+        "facebook": 487,
+        "twitter": 421
+      },
+      "image_url": "https://i1.feedspot.com/4527368.jpg?t=1607666745"
+    },
+    {
+      "title": "Eliminate Your Competition",
+      "feed_url": "http://www.thetrapper.com/feed/",
+      "website_url": "http://www.thetrapper.com/",
+      "description": "This blog will provide the management of a company with a framework to teach their salespeople how to attain their quotas with higher profits. The author, Sean helps company owners realize the maximum value of their company by improving their revenue generation capability. He helps owners enhance their sales management, methodologies, processes, teams, and messaging.",
+      "followers": {
+        "facebook": 11,
+        "twitter": 173
+      },
+      "image_url": "https://i1.feedspot.com/5017892.jpg?t=1607666759"
+    },
+    {
+      "title": "The Lost Book of Sales",
+      "feed_url": "https://www.lostbookofsales.com/rss/",
+      "website_url": "https://www.lostbookofsales.com/",
+      "description": "The Lost Book of Sales is an online publication for sales topics, marketing ideas, and technology learning. Sales is changing, but not disappearing. It will also never be fully replaced by machines or automation.",
+      "followers": {
+        "facebook": 10,
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/5211580.jpg?t=1641965628"
+    },
+    {
+      "title": "Heavy Hitter Sales",
+      "feed_url": "http://feeds.feedburner.com/typepad/lGKt",
+      "website_url": "https://heavyhittersales.typepad.com/heavy_hitter_sales_sales_/",
+      "description": "Steve W. Martin is the foremost expert on 'Sales Linguistics,' the study of how customers use language during the complex decision-making process. Steve W. Martin is the author of the critically acclaimed 'Heavy Hitter' series of books about enterprise sales strategies for senior salespeople.",
+      "followers": {
+        "twitter": 477
+      },
+      "image_url": "https://i1.feedspot.com/1905747.jpg?t=1607666704"
+    },
+    {
+      "title": "The Bridge Group Blog",
+      "feed_url": "https://blog.bridgegroupinc.com/rss.xml",
+      "website_url": "https://blog.bridgegroupinc.com/",
+      "description": "Shares modern thinking on the metrics, models, and motions for inside sales. The Bridge Group helps B2B companies optimize SDR, AE, AM, and CSM strategies since 1998. Founder is a sales development & inside sales thinker, writer, builder. Passionate about all things related to phone, web and social prospecting.",
+      "followers": {
+        "facebook": 148
+      },
+      "image_url": "https://i1.feedspot.com/3973439.jpg?t=1641811740"
+    },
+    {
+      "title": "Neuromarketing Blog",
+      "feed_url": "http://feeds.feedblitz.com/neuromarketing",
+      "website_url": "https://www.neurosciencemarketing.com/blog/home",
+      "description": "Neuromarketing is the most popular blog covering the use of neuroscience and behavioral research in marketing, advertising and sales.",
+      "followers": {
+        "facebook": 13600,
+        "twitter": 41100,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/406415.jpg?t=1607666854"
+    },
+    {
+      "title": "Closer's Coffee",
+      "feed_url": "https://closers.outfieldapp.com/feed/",
+      "website_url": "https://closers.outfieldapp.com/",
+      "description": "Tips and techniques foccused on closing sales. Closer's Coffee is the community that champions sales professionals, entrepreneurs, and hustlers around the world and highlights information, opportunity, and biz dev professionals.",
+      "followers": {
+        "facebook": 14100,
+        "twitter": 3300,
+        "instagram": 5700
+      },
+      "image_url": "https://i1.feedspot.com/4987991.jpg?t=1641815306"
+    },
+    {
+      "title": "SalesFolk Blog",
+      "feed_url": "https://salesfolk.com/blog/feed/",
+      "website_url": "https://salesfolk.com/blog/",
+      "description": "Our cold emails start warm conversations with C-level executives and generate millions of dollars in sales revenue for fast-growing B2-B startups. We live and breathe cold email, and have written 10,000+ cold emails for hundreds of companies. We leverage a highly effective sales research and copywriting process we created and pioneered with game theory and multivariate analysis to create email campaigns that are 3x more effective than anything else.",
+      "followers": {
+        "twitter": 173,
+        "instagram": 52
+      },
+      "image_url": "https://i1.feedspot.com/5327188.jpg?t=1633009414"
+    },
+    {
+      "title": "Smart Calling Blog",
+      "feed_url": "https://smartcalling.com/feed/",
+      "website_url": "https://smartcalling.com/blog/",
+      "description": "Visit the Smart Calling Blog for more tips, techniques, and other valuable info to help you get more business. And, occasionally Art throws in a rant, a call recording, a video, or something fun not even related to sales.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 6200
+      },
+      "image_url": "https://i1.feedspot.com/5426162.jpg?t=1659007311"
+    },
+    {
+      "title": "InsideSales Blog",
+      "feed_url": "https://www.insidesales.com/feed/",
+      "website_url": "https://www.insidesales.com/blog/",
+      "description": "InsideSales offers the leading Enterprise Sales Engagement Platform that accelerates revenue. With Playbooks from InsideSales, sales professionals increase productivity, optimize customer interactions, and connect to the right buyers. Playbooks manage lead follow-up and prospecting cadences automate administrative tasks and use data to predict who, when, and how to engage buyers for the best outcome all to set your sales reps up for success.",
+      "followers": {
+        "facebook": 5000,
+        "instagram": 51
+      },
+      "image_url": "https://i1.feedspot.com/5426217.jpg?t=1659011566"
+    },
+    {
+      "title": "GTMnow",
+      "feed_url": "https://www.saleshacker.com/feed/",
+      "website_url": "https://gtmnow.com/",
+      "description": "Key topics covered are sales development, management, engagement, training & coaching, life, revenue operations, lead generation, career development and more. Sales Hacker aims to uncover the innovative and cutting edge sales strategies, tactics, and hacks that are being employed by the the fastest growing companies in the world.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 133,
+        "instagram": 13100
+      },
+      "image_url": "https://i1.feedspot.com/3773872.jpg?t=1607666093"
+    },
+    {
+      "title": "Salesforce Blog",
+      "feed_url": "https://www.salesforce.com/blog/feed/",
+      "website_url": "https://www.salesforce.com/blog/",
+      "description": "New tips, trends, and insights from the world's leading enterprise cloud ecosystem. Salesforce has sought to change the world for the better through technology that builds stronger relationships. Between companies and their customers. Between employees and far-flung teams. Between governments and their citizens. Between people who want to make a difference.",
+      "followers": {
+        "twitter": 583600,
+        "instagram": 286300
+      },
+      "image_url": "https://i1.feedspot.com/5287651.jpg?t=1633002334"
+    },
+    {
+      "title": "Zoho SalesIQ Blog",
+      "feed_url": "https://www.zoho.com/blog/salesiq",
+      "website_url": "https://www.zoho.com/blog/salesiq",
+      "description": "Articles on conversational marketing and selling, customer service and support, sales automation, website engagement and more. Zoho offers beautifully smart software to help you grow your business. With over 60 million users worldwide, Zoho's 45+ products aid your sales and marketing, support and collaboration, finance and recruitment needs - letting you focus only on your business.",
+      "followers": {
+        "facebook": 230400,
+        "twitter": 102000,
+        "instagram": 199700
+      },
+      "image_url": "https://i1.feedspot.com/4929952.jpg?t=1641797935"
+    },
+    {
+      "title": "Women Sales Pros\u00a0Blog",
+      "feed_url": "https://womensalespros.com/feed/",
+      "website_url": "https://womensalespros.com/read-blog/",
+      "description": "WOMEN Sales Pros\u00a0is a Community for top women B2B sales experts, leaders, and reps. The Vision of WOMEN Sales Pros\u00ae to see more great women in B2B sales at tech, telecom, distribution, manufacturing, and other B2B companies.",
+      "followers": {
+        "facebook": 280,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4453092.jpg?t=1607666624"
+    },
+    {
+      "title": "Gong Blog",
+      "feed_url": "https://www.gong.io/feed/",
+      "website_url": "https://www.gong.io/blog/",
+      "description": "Hard data, jaw-dropping insights, game-changing plays-Learn top sellers' secrets to close more deals with the help of Gong Blog. Gong brings an experience to users, teams, and companies that is reality-based, autonomous, and aligned amongst employees. Now, not only individuals, but entire teams, functions, and companies are empowered to reach their full potential. This Reality Revolution has Gong working in ways we had never imagined.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 7600,
+        "instagram": 6900
+      },
+      "image_url": "https://i1.feedspot.com/5359901.jpg?t=1641376384"
+    },
+    {
+      "title": "Tenbound Blog",
+      "feed_url": "https://tenbound.com/feed/",
+      "website_url": "https://tenbound.com/blog/",
+      "description": "Tenbound is a Research and Advisory firm focused and dedicated to B2B SaaS GTM Sales Development Performance improvement. Tenbound helps B2B SaaS companies build Sales pipelines through our innovative research, advisory, and events. Tenbound aims to uplevel the profession through cutting-edge research, intelligence, and insights, high-quality events, and highly practical online training programs for all levels of the GTM Sales Development team.",
+      "followers": {
+        "facebook": 131,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5584184.jpg?t=1685342892"
+    },
+    {
+      "title": "Salesmate Blog",
+      "feed_url": "https://www.salesmate.io/blog/feed/",
+      "website_url": "https://www.salesmate.io/blog/",
+      "description": "Sales tips, insights and techniques for growing sales teams. Also covers articles on sales calls, sales emails, CRM, cloud CRM, small business, company news and product updates. Salesmate is a truly intelligent cloud-based CRM solution that benefits sales reps be more productive, increases their sales and engage deeply with their customers.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5042889.jpg?t=1607666134"
+    },
+    {
+      "title": "OpenView Blog",
+      "feed_url": "https://openviewpartners.com/blog/feed/",
+      "website_url": "https://openviewpartners.com/blog/",
+      "description": "OpenView Labs is insights, actionable advice & founder interviews aimed at helping you grow your expansion stage software company.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 14600
+      },
+      "image_url": "https://i1.feedspot.com/5945.jpg?t=1641796437"
+    },
+    {
+      "title": "CXL Blog",
+      "feed_url": "https://cxl.com/feed/",
+      "website_url": "https://cxl.com/blog/",
+      "description": "A blog covering all things Data-Driven Marketing. Blog posts cover Acquisition, Business Building, CRO & Testing, User Experience & Design, Digital Analytics, and Copywriting. Founded by Peep Laja, CXL brings you advanced-level marketing training.",
+      "followers": {
+        "facebook": 12300,
+        "twitter": 12600,
+        "instagram": 6900
+      },
+      "image_url": "https://i1.feedspot.com/5310775.jpg?t=1659072159"
+    },
+    {
+      "title": "Sandler Blog",
+      "feed_url": "https://www.sandler.com/category/blog/feed/",
+      "website_url": "https://www.sandler.com/blog/",
+      "description": "Latest valuable sales insights and advice from expert trainers. Key topics covered are customer relationships, management & leadership, professional development, prospecting & qualifying, sales process and self development. Sandler Training is the worldwide leader in sales training, helping salespeople take control of the sales process and helping leaders identify and train top sales talent.",
+      "followers": {
+        "facebook": 23900,
+        "twitter": 11700,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4424173.jpg?t=1621066531"
+    },
+    {
+      "title": "Sales Manager Now",
+      "feed_url": "https://salesmanagernow.com/",
+      "website_url": "https://salesmanagernow.com/sales-blog/",
+      "description": "Topics covered are sales management, motivation, planning, process, skills, technology, hiring, meetings and more. Founder and author, Rene Zamora has twenty-seven years of sales and sales management experience combined with a small business training and consulting practice which birthed Sales Manager Now.",
+      "followers": {
+        "twitter": 35
+      },
+      "image_url": "https://i1.feedspot.com/4453288.jpg?t=1641819125"
+    },
+    {
+      "title": "Sales Pro Insider Blog",
+      "feed_url": "https://www.salesproinsider.com/feed/",
+      "website_url": "https://www.salesproinsider.com/blog/",
+      "description": "Sales Pro Insider, Inc. is a sales and service productivity consulting firm. We equip our clients with tools, skills training, and measurement to implement and sustain sales and service performance and productivity.",
+      "followers": {
+        "facebook": 219,
+        "twitter": 7600
+      },
+      "image_url": "https://i1.feedspot.com/4451186.jpg?t=1632983366"
+    },
+    {
+      "title": "Call Page Blog",
+      "feed_url": "https://www.callpage.io/blog/rss.xml",
+      "website_url": "https://www.callpage.io/blog",
+      "description": "CallPage is currently the biggest international provider of automatic callback solution in the world. Enables companies to generate up to 75% more inbound calls from their websites visitors.",
+      "followers": {
+        "facebook": 12900,
+        "twitter": 442,
+        "instagram": 10700
+      },
+      "image_url": "https://i1.feedspot.com/5039172.jpg?t=1607666147"
+    },
+    {
+      "title": "The 5% Institute Blog",
+      "feed_url": "https://www.5percentinstitute.com/feed/",
+      "website_url": "https://www.shopbase.com/blog/",
+      "description": "We Teach Business Owners & Sales Professionals How To Win More Sales & Make A Bigger Impact. Khabeer Rockley, Founder of The 5% Institute and The 5% Sales Blueprint Online Sales Training Program (Sales Course Online), and featured in Entrepreneur and similar publications, teaches Business Owners & Sales Professionals how to win more sales.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5039067.jpg?t=1607666753"
+    },
+    {
+      "title": "SalesBlog!",
+      "feed_url": "https://salesblog.totallysales.com/feed/",
+      "website_url": "https://salesblog.totallysales.com/",
+      "description": "Sales Success articles by syndicated author Chris Lott. Chris will inspire you to dream, learn, do and become more. Chris has over 15 year's Sales Management experience including Business Ownership, Product Management and Web Design/Marketing.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5284560.jpg?t=1622016247"
+    },
+    {
+      "title": "STAR Results Blog",
+      "feed_url": "https://starresults.com/blog/feed/",
+      "website_url": "https://starresults.com/blog/",
+      "description": "Steven Rosen executive coaching helps sales leaders who want to breakthrough and offers highly focused sales executive coaching, training, and strategy execution to help leaders develop their skills, execute with excellence and crush their sales numbers.",
+      "followers": {
+        "facebook": 733,
+        "twitter": 9000
+      },
+      "image_url": "https://i1.feedspot.com/5017691.jpg?t=1641820157"
+    }
+  ]
+}

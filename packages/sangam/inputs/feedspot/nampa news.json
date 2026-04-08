@@ -1,0 +1,28 @@
+{
+  "category": "Nampa News",
+  "source_url": "https://rss.feedspot.com/nampa_idaho_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of Nampa, ID",
+      "feed_url": "https://www.cityofnampa.us/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.cityofnampa.us/CivicAlerts.aspx?sort=date",
+      "description": "Get the latest news, updates, information and important announcements from the official website of Nampa, ID.",
+      "followers": {
+        "facebook": 20900,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5139494.jpg?t=1629273789"
+    },
+    {
+      "title": "The Idaho Press",
+      "feed_url": "https://www.idahopress.com/search/?f=rss&t=article&c=news/local&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.idahopress.com/news/local/",
+      "description": "The Idaho Press is your source for local news, sports and community information for the entire Treasure Valley Idaho region. Covering Boise, Caldwell, Nampa, Merdian and the surrounding towns. We cover all the latest news and get to the heart of the story.",
+      "followers": {
+        "facebook": 41200,
+        "twitter": 17100
+      },
+      "image_url": "https://i1.feedspot.com/5214579.jpg?t=1604934492"
+    }
+  ]
+}

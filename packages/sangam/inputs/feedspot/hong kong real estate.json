@@ -1,0 +1,38 @@
+{
+  "category": "Hong Kong Real Estate",
+  "source_url": "https://rss.feedspot.com/hong_kong_real_estate_rss_feeds",
+  "feeds": [
+    {
+      "title": "Housing Market Group Blog",
+      "feed_url": "https://housingmarketgroup.com/blog/feed/",
+      "website_url": "https://housingmarketgroup.com/blog/",
+      "description": "Housing Market Group is a Digital Media Company that owns and operates property portal websites, We provide property searchers with the most useful resources to find their next home.",
+      "followers": {
+        "facebook": 391,
+        "twitter": 73,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5335902.jpg?t=1635253603"
+    },
+    {
+      "title": "Spacious HK Blog",
+      "feed_url": "https://www.spacious.hk/en/blog/feed",
+      "website_url": "https://www.spacious.hk/en/blog/",
+      "description": "Spacious makes the process of buying, renting or selling a property in Hong Kong simple and efficient.",
+      "followers": {
+        "facebook": 18600,
+        "twitter": 902,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5335903.jpg?t=1635253355"
+    },
+    {
+      "title": "Property Talk",
+      "feed_url": "http://propertytalk2014.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://propertytalk2014.blogspot.com/",
+      "description": "A blog by an experienced Real estate agent Kenny Law. Read about new properties available for sale, latest news about property laws and trends in Hong Kong",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5335901.jpg?t=1635253004"
+    }
+  ]
+}

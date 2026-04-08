@@ -1,0 +1,119 @@
+{
+  "category": "Webinar",
+  "source_url": "https://rss.feedspot.com/webinar_rss_feeds",
+  "feeds": [
+    {
+      "title": "ClickMeeting Blog | Webinar Best Practices",
+      "feed_url": "https://blog.clickmeeting.com/feed",
+      "website_url": "https://blog.clickmeeting.com/",
+      "description": "ClickMeeting was founded in 2011 by GetResponse, the leading email marketing platform. The idea was to provide a complete webinar solution for businesses, large and small. ClickMeeting is rich in features that help you before, during, and after your webinar. Follow for more updates.",
+      "followers": {
+        "facebook": 14000,
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/5058695.jpg?t=1622727534"
+    },
+    {
+      "title": "The Webinar Blog",
+      "feed_url": "https://wsuccess.typepad.com/webinarblog/atom.xml",
+      "website_url": "https://wsuccess.typepad.com/webinarblog/",
+      "description": "This blog includes tips, news, and opinions related to web conferencing, webinars, and webcasting. Follow this blog for more updates.",
+      "followers": {
+        "facebook": 94
+      },
+      "image_url": "https://i1.feedspot.com/5058692.jpg"
+    },
+    {
+      "title": "WorkCast Blog",
+      "feed_url": "https://info.workcast.com/blog/rss.xml",
+      "website_url": "https://info.workcast.com/blog",
+      "description": "Get the latest webinar news, trends, and best practice tips from the WorkCast blog. Follow this blog to get more information about the webinar.",
+      "followers": {
+        "facebook": 975,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5058697.jpg?t=1622727566"
+    },
+    {
+      "title": "Easy Webinar",
+      "feed_url": "https://easywebinar.com/feed/",
+      "website_url": "https://easywebinar.com/blog/",
+      "description": "EasyWebinar is a webinar platform where users can change between live and automated/evergreen webinars. We service authors, educators, coaches, e-commerce, retail and more. Follow to keep up with our blog.",
+      "followers": {
+        "facebook": 11200,
+        "twitter": 30
+      },
+      "image_url": "https://i1.feedspot.com/5058699.jpg?t=1622727569"
+    },
+    {
+      "title": "webinar.net",
+      "feed_url": "https://www.webinar.net/feed/",
+      "website_url": "https://ewebinar.com/blog",
+      "description": "webinar.net is the next-generation online presentation platform that enables organizations to connect, engage and interact with them. Keep up with Webinar strategies and tips for successful live and on-demand webinar services.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5311370.jpg?t=1628670187"
+    },
+    {
+      "title": "eWebinar Blog",
+      "feed_url": "https://ewebinar.com/blog/rss.xml",
+      "website_url": "https://ewebinar.com/blog",
+      "description": "Learn from the eWebinar blog how webinar automation is transforming the way people think about and experience webinars, including best practices, software comparisons, and how automated webinars can enhance any robust webinar strategy.",
+      "followers": {
+        "facebook": 151
+      },
+      "image_url": "https://i1.feedspot.com/5411620.jpg?t=1655466679"
+    },
+    {
+      "title": "Mega Meeting",
+      "feed_url": "https://www.megameeting.com/news/rss/",
+      "website_url": "https://www.megameeting.com/news/",
+      "description": "MegaMeeting is an all-in-one video conferencing software solution that also provides webinar services. Learn about our web conferencing software here. Follow to get the latest articles from this feed in your inbox.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5058702.jpg"
+    },
+    {
+      "title": "MeetingOne US",
+      "feed_url": "https://www.meetingone.com/blog/feed/",
+      "website_url": "https://www.meetingone.com/blog/",
+      "description": "MeetingOne is a world-wide communication solution provider for conference calls, virtual classrooms, webinars, and online meeting products and services. Learn about the latest in web conferencing from the MeetingOne blog!",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 723
+      },
+      "image_url": "https://i1.feedspot.com/5058816.jpg?t=1622727562"
+    },
+    {
+      "title": "timz.flowers",
+      "feed_url": "https://timz.flowers/feed/",
+      "website_url": "https://timz.flowers/blog/",
+      "description": "Blog covering all about async meetings and more. timz.flowers is a disruptive tool for hybrid meetings: sync and async video conferencing.",
+      "followers": {
+        "twitter": 155
+      },
+      "image_url": "https://i1.feedspot.com/5283099.jpg?t=1652701197"
+    },
+    {
+      "title": "Go To Webnar | Daniel Waas",
+      "feed_url": "https://danielwaas.com/feed/",
+      "website_url": "https://danielwaas.com/webinar-blog/",
+      "description": "At GoToWebinar I help get results from their Webinars. Get your webinars sold out with the best tips from hosting more than 500 webinars as Chief Webinar. Follow this blog for regular updates.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5058696.jpg?t=1622727539"
+    },
+    {
+      "title": "MyOwnConference blog",
+      "feed_url": "https://myownconference.com/blog/en/feed/",
+      "website_url": "https://myownconference.com/blog/en/",
+      "description": "Lifehacks, reviews, useful tips for preparing, holding and promoting webinars and web conferences.",
+      "followers": {
+        "twitter": 25
+      },
+      "image_url": "https://i1.feedspot.com/5158939.jpg?t=1622727573"
+    }
+  ]
+}

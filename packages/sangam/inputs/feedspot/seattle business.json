@@ -1,0 +1,29 @@
+{
+  "category": "Seattle Business",
+  "source_url": "https://rss.feedspot.com/seattle_business_rss_feeds",
+  "feeds": [
+    {
+      "title": "West Seattle Blog \u00bb West Seattle Businesses",
+      "feed_url": "https://westseattleblog.com/category/ws-businesses/feed/",
+      "website_url": "https://westseattleblog.com/category/ws-businesses/",
+      "description": "Get by-the-minute updates on trending topics, scoops, buzzing news, reports, and hot views from the world of West Seattle Business. The West Seattle Blog is a nifty resource for all the hottest news coming out of the City. Covering everything from local traffic to daily upcoming events.",
+      "followers": {
+        "facebook": 37800,
+        "twitter": 67900
+      },
+      "image_url": "https://i1.feedspot.com/5449149.jpg?t=1663914728"
+    },
+    {
+      "title": "The Seattle Times \u00bb Business",
+      "feed_url": "https://www.seattletimes.com/business/feed/",
+      "website_url": "https://www.seattletimes.com/business/",
+      "description": "The Seattle Times business section covers Seattle, and the Eastside including Bellevue, Snohomish County, the Puget Sound region, and Pacific Northwest. The Seattle Times enlightens, informs, and engages with storytelling that is as dynamic and vibrant as our region. We are always steadfast in our commitment to providing principled, quality, public-service journalism.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/4879165.jpg?t=1614678015"
+    }
+  ]
+}

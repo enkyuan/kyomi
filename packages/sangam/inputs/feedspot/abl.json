@@ -1,0 +1,36 @@
+{
+  "category": "ABL",
+  "source_url": "https://rss.feedspot.com/abl_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Gibraltar Business Capital Blog",
+      "feed_url": "https://www.gibraltarbc.com/feed/",
+      "website_url": "https://www.gibraltarbc.com/blog/",
+      "description": "At Gibraltar Business Capital, we help business owners and their advisors execute their plans, at their pace, to solve challenges or fuel growth at any stage of the business lifecycle. Our goal is to provide stability during periods of transition for lower middle market businesses by delivering quick access to working capital when banks and other funding sources are limited or too restrictive.",
+      "followers": {
+        "twitter": 619
+      },
+      "image_url": "https://i1.feedspot.com/5516239.jpg?t=1677838343"
+    },
+    {
+      "title": "Porter Capital \u00bb Asset Based Lending",
+      "feed_url": "https://portercap.com/category/asset-based-lending/feed/",
+      "website_url": "https://portercap.com/category/asset-based-lending/",
+      "description": "Read our blog to know about asset-based lending. At Porter Capital, we help small and medium-sized businesses across North America thrive by providing reliable funding to reduce the impact of long invoice repayment periods. We want to help more companies handle daily operations and grow while rewarding our current referral partners with a 15% commission.",
+      "followers": {
+        "facebook": 839,
+        "twitter": 267,
+        "instagram": 700
+      },
+      "image_url": "https://i1.feedspot.com/5516237.jpg?t=1677838277"
+    },
+    {
+      "title": "ABL Business Blog",
+      "feed_url": "https://abl-business.co.uk/feed/",
+      "website_url": "https://abl-business.co.uk/blog/",
+      "description": "We are a team of individuals that thrive off working together. We don't compete internally, we all work towards a common goal of ensuring that the businesses we work with get the finance facilities that they require not just now, but in the future. We work in partnership with our customers, their advisors, our funders, and the wider business community.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5516238.jpg?t=1677838434"
+    }
+  ]
+}

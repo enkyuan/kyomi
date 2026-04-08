@@ -1,0 +1,151 @@
+{
+  "category": "Lidar",
+  "source_url": "https://rss.feedspot.com/lidar_rss_feeds",
+  "feeds": [
+    {
+      "title": "Rock Robotic Blog",
+      "feed_url": "https://www.rockrobotic.com/blog-feed.xml",
+      "website_url": "https://www.rockrobotic.com/blog",
+      "description": "ROCK Robotic Blog has covered everything you need to know about ROCK Robotic. ROCK Robotic offers industry-leading LiDAR Drone Hardware and LiDAR Processing Software solutions. It makes LiDAR simple, effective, and affordable. ROCK Robotic strives to build a powerful LiDAR community rooted in unparalleled support.",
+      "followers": {
+        "facebook": 826
+      },
+      "image_url": "https://i1.feedspot.com/5428704.jpg?t=1660309482"
+    },
+    {
+      "title": "Blickfeld Blog \u00bb Lidar Applications",
+      "feed_url": "https://www.blickfeld.com/blog-category/lidar-applications/feed/",
+      "website_url": "https://www.blickfeld.com/blog-category/lidar-applications/",
+      "description": "Blickfeld is a provider of LiDAR sensors and detection software. Explore Blickfeld Blog to learn more. Blickfeld's innovative solutions empower our customers and partners to act, react, interact and navigate the complex surroundings of our modern age. We strive to make the world safer, smarter, and more efficient.",
+      "followers": {
+        "facebook": 331,
+        "twitter": 531
+      },
+      "image_url": "https://i1.feedspot.com/5428702.jpg?t=1659532288"
+    },
+    {
+      "title": "Lidar News",
+      "feed_url": "https://lidarnews.com/feed/",
+      "website_url": "https://lidarnews.com/",
+      "description": "The Lidar News website is the home of the LiDAR Industry. The industry focused on promoting, improving, and developing lidar ambitions and 3D laser scanning along with a number of related technologies such as unmanned aerial systems, UASs, and photogrammetry.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/5428697.jpg?t=1659532638"
+    },
+    {
+      "title": "Lidar News Blog",
+      "feed_url": "https://blog.lidarnews.com/feed/",
+      "website_url": "https://blog.lidarnews.com/",
+      "description": "We publish searchable content of LiDAR News, 3D news, and information on our blog. Lidar News also provides strategic planning, research, and go-to-market consulting services. The Lidar News team likes to focus on the application of technology to solve 3D problems.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/5428696.jpg?t=1659532894"
+    },
+    {
+      "title": "ACI Corporation Blog",
+      "feed_url": "https://acicorporation.com/feed/",
+      "website_url": "https://acicorporation.com/blog/",
+      "description": "The blog posts on this website are related to LiDAR services. Our LiDAR system offers the best technology for the collection of surveying data and the generation of 3D maps.ACI is an engineering consulting firm based in South Florida. The firm specializes in providing optimum solutions for the construction of urban and transportation infrastructure.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5428693.jpg?t=1659532564"
+    },
+    {
+      "title": "AEVEX Aerospace",
+      "feed_url": "https://aevex.com/feed/",
+      "website_url": "https://aevex.com/news/",
+      "description": "We are a full-spectrum airborne intelligence solutions company. AEVEX Aerospace is providing flight test support for the development of a new collection aircraft and operates a high-priority deployed unmanned aircraft system. We use elegant and customized approaches to develop and deliver specialized solutions for airborne special missions. We deliver results, every time.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5428711.jpg?t=1659588338"
+    },
+    {
+      "title": "CIRES Blog \u00bb Lidar Exploration",
+      "feed_url": "https://ciresblogs.colorado.edu/lidarexploration/feed/",
+      "website_url": "https://ciresblogs.colorado.edu/lidarexploration/",
+      "description": "CIRES Administration regularly posts important, non-confidential information concerning Lidar Exploration, climate change, and more to this blog. CIRES is an international leader in conducting cross-cutting environmental research of the highest quality while focusing on understanding the global, regional, and local environments and the human relationship with those environments, for the benefit of society.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5428691.jpg?t=1659530865"
+    },
+    {
+      "title": "Neuvition Blog",
+      "feed_url": "https://www.neuvition.com/feed",
+      "website_url": "https://www.neuvition.com/blog-neuvition",
+      "description": "Neuvition Blog covers the recent news and information about LiDAR solutions, smart city industries, and more. Neuvition provides high-quality LiDAR sensors, LiDAR software, and LiDAR solutions for autonomous vehicles, robotics, security, and industrial automation to global customers. Our high-precision LiDAR is stable and reliable, mainly used in scenarios.",
+      "followers": {
+        "facebook": 577,
+        "twitter": 132
+      },
+      "image_url": "https://i1.feedspot.com/5428698.jpg?t=1659587713"
+    },
+    {
+      "title": "Photonics Report Blog",
+      "feed_url": "https://photonicsreport.com/feed/",
+      "website_url": "https://photonicsreport.com/blog/",
+      "description": "We create blog posts & tutorials to reach photonics audiences and managers. Hi there! My name is Thomas Ako, a technical business developer. This website is all about proper storytelling for photonics and dedicated to helping fabless semiconductor companies build more robust and reliable ICs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5428694.jpg?t=1659588042"
+    },
+    {
+      "title": "Geo-Plus Blog",
+      "feed_url": "https://geo-plus.com/feed/",
+      "website_url": "https://geo-plus.com/blog/",
+      "description": "Geo-Plus Blog covers posts on LiDAR, land surveying, and Civil Engineering software solutions. Geo-plus is providing Software for Architecture, Engineering, Land, and Construction Professionals since 1987. Our Vision suite includes more than 16 3D measurements, 3D structures, geometry, cadastre, and document management software related to the territories.",
+      "followers": {
+        "facebook": 16100,
+        "twitter": 286,
+        "instagram": 267
+      },
+      "image_url": "https://i1.feedspot.com/5428690.jpg?t=1659532770"
+    },
+    {
+      "title": "rapidlasso GmbH Blog",
+      "feed_url": "https://rapidlasso.de/feed/",
+      "website_url": "https://rapidlasso.de/blog_archive/",
+      "description": "Explore Rapidlasso Blog to know more about LAStools and catch press releases along with the tutorials, workshops, and seminars. Rapidlasso's LiDAR processing tools are widely known for their blazing speeds and high productivity and are heavily used in the commercial sector, government agencies, research labs, and educational institutions.",
+      "followers": {
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/4082015.jpg?t=1659589507"
+    },
+    {
+      "title": "Level Five Supplies Blog",
+      "feed_url": "https://levelfivesupplies.com/categories/blog/feed/",
+      "website_url": "https://levelfivesupplies.com/categories/blog/",
+      "description": "Explore news, information, and reviews from across the worlds of autonomy and robotics on Level Five Supplies Blog. Level Five Supplies enabling autonomy with leading-edge LiDAR, radar, camera, ultrasonic, and positioning products and solutions. From R&D to series production, Level Five Supplies is your LiDAR partner at every stage of your development journey.",
+      "followers": {
+        "facebook": 40,
+        "twitter": 109
+      },
+      "image_url": "https://i1.feedspot.com/5428687.jpg?t=1659532679"
+    },
+    {
+      "title": "LiDAR Services",
+      "feed_url": "https://www.lidarservices.com/news",
+      "website_url": "https://www.lidarservices.com/news",
+      "description": "LiDAR Services International is a Canadian-based airborne LiDAR service provider. LSI's business focus is to provide high-quality airborne LiDAR data collection and processing services using MATRIX LiDAR airborne systems. All of LSI's LiDAR systems have been designed and assembled in LSI's facility. We are focused to deliver a great experience.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5428688.jpg?t=1659588611"
+    },
+    {
+      "title": "NeoPhotonics \u00bb Lidar",
+      "feed_url": "https://www.neophotonics.com/category/lidar/feed/",
+      "website_url": "https://www.neophotonics.com/category/lidar/",
+      "description": "Learn more about Lider modulation with us. NeoPhotonics is now part of Lumentum. Lumentum delivers innovative photonics to accelerate the speed and scalability throughout communications networks. Lumentum aims for enabling advanced manufacturing techniques for various applications including next-generation 3D sensing capabilities.",
+      "followers": {
+        "twitter": 583
+      },
+      "image_url": "https://i1.feedspot.com/5428692.jpg?t=1659531008"
+    },
+    {
+      "title": "Voyant Photonics Blog",
+      "feed_url": "https://voyantphotonics.com/feed/",
+      "website_url": "https://voyantphotonics.com/news/",
+      "description": "Read posts regarding revolutionizing machine perception on Voyant Photonics Blog. Voyant was founded on the idea that silicon photonics, or chip-scale electro-optical components, will change the physics and remove limitations on what LiDAR can do. At Voyant, our mission is to make LiDAR a ubiquitous technology, enabling machine perception for every application.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5428700.jpg?t=1659588697"
+    }
+  ]
+}

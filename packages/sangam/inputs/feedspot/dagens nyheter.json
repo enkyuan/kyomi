@@ -1,0 +1,205 @@
+{
+  "category": "Dagens Nyheter",
+  "source_url": "https://rss.feedspot.com/dagensnyheter_rss_feeds",
+  "feeds": [
+    {
+      "title": "Dagens Nyheter",
+      "feed_url": "https://www.dn.se/rss/",
+      "website_url": "https://www.dn.se/",
+      "description": "News, in-depth study, sports news, economic news, foreign news, debate, leaders, culture and web TV. Dagens Nyheter is Sweden's leading morning newspaper.",
+      "followers": {
+        "facebook": 300100,
+        "twitter": 308000,
+        "instagram": 276100
+      },
+      "image_url": "https://i1.feedspot.com/5340949.jpg?t=1645783930"
+    },
+    {
+      "title": "Dagens Nyheter \u00bb Kultur",
+      "feed_url": "https://www.dn.se/rss/kultur/",
+      "website_url": "https://www.dn.se/kultur/",
+      "description": "All latest articles about Culture from Dagens Nyheter.",
+      "followers": {
+        "facebook": 300100,
+        "instagram": 276100
+      },
+      "image_url": "https://i1.feedspot.com/8672873.jpg"
+    },
+    {
+      "title": "Dagens Nyheter \u00bb Sverige",
+      "feed_url": "https://www.dn.se/rss/sverige/",
+      "website_url": "https://www.dn.se/sverige/",
+      "description": "All latest articles about Sweden from Dagens Nyheter.",
+      "followers": {
+        "facebook": 300100,
+        "instagram": 276100
+      },
+      "image_url": "https://i1.feedspot.com/8672874.jpg"
+    },
+    {
+      "title": "Dagens Nyheter \u00bb Politik",
+      "feed_url": "https://www.dn.se/rss/om/svensk-politik/",
+      "website_url": "https://www.dn.se/om/svensk-politik/",
+      "description": "All latest articles about Politics litik from Dagens Nyheter.",
+      "followers": {
+        "facebook": 300100,
+        "instagram": 276100
+      },
+      "image_url": "https://i1.feedspot.com/8672875.jpg"
+    },
+    {
+      "title": "Dagens Nyheter \u00bb H\u00e4lsa",
+      "feed_url": "https://www.dn.se/rss/om/halsa/",
+      "website_url": "https://www.dn.se/om/halsa/",
+      "description": "All latest articles about Health from Dagens Nyheter.",
+      "followers": {
+        "facebook": 300100,
+        "instagram": 276100
+      },
+      "image_url": "https://i1.feedspot.com/8672876.jpg"
+    },
+    {
+      "title": "Dagens Nyheter \u00bb G\u00f6teborg",
+      "feed_url": "https://www.dn.se/rss/gbg/",
+      "website_url": "https://www.dn.se/gbg/",
+      "description": "All latest articles about G\u00f6teborg from Dagens Nyheter.",
+      "followers": {
+        "facebook": 300100,
+        "instagram": 276100
+      },
+      "image_url": "https://i1.feedspot.com/8672877.jpg"
+    },
+    {
+      "title": "Dagens Nyheter \u00bb Stockholm",
+      "feed_url": "https://www.dn.se/rss/sthlm/",
+      "website_url": "https://www.dn.se/sthlm/",
+      "description": "All latest articles about Stockholm from Dagens Nyheter.",
+      "followers": {
+        "facebook": 300100,
+        "instagram": 276100
+      },
+      "image_url": "https://i1.feedspot.com/8672878.jpg"
+    },
+    {
+      "title": "Dagens Nyheter \u00bb Sk\u00e5ne",
+      "feed_url": "https://www.dn.se/rss/skane/",
+      "website_url": "https://www.dn.se/skane/",
+      "description": "All latest articles about Sk\u00e5ne from Dagens Nyheter.",
+      "followers": {
+        "facebook": 300100,
+        "instagram": 276100
+      },
+      "image_url": "https://i1.feedspot.com/8672879.jpg"
+    },
+    {
+      "title": "Dagens Nyheter \u00bb Motor",
+      "feed_url": "https://www.dn.se/rss/motor/",
+      "website_url": "https://www.dn.se/motor/",
+      "description": "All latest articles about Engine from Dagens Nyheter.",
+      "followers": {
+        "facebook": 300100,
+        "instagram": 276100
+      },
+      "image_url": "https://i1.feedspot.com/8672880.jpg"
+    },
+    {
+      "title": "Dagens Nyheter \u00bb Vetenskap",
+      "feed_url": "https://www.dn.se/rss/vetenskap/",
+      "website_url": "https://www.dn.se/vetenskap/",
+      "description": "All latest articles about Science from Dagens Nyheter.",
+      "followers": {
+        "facebook": 300100,
+        "instagram": 276100
+      },
+      "image_url": "https://i1.feedspot.com/8672881.jpg"
+    },
+    {
+      "title": "Dagens Nyheter \u00bb V\u00e4rlden",
+      "feed_url": "https://www.dn.se/rss/varlden/",
+      "website_url": "https://www.dn.se/varlden/",
+      "description": "All latest articles about the World from Dagens Nyheter.",
+      "followers": {
+        "facebook": 300100,
+        "instagram": 276100
+      },
+      "image_url": "https://i1.feedspot.com/8672882.jpg"
+    },
+    {
+      "title": "Dagens Nyheter \u00bb Mat & Dryck",
+      "feed_url": "https://www.dn.se/rss/mat-dryck/",
+      "website_url": "https://www.dn.se/mat-dryck/",
+      "description": "All latest articles about Food & Drink from Dagens Nyheter.",
+      "followers": {
+        "facebook": 300100,
+        "instagram": 276100
+      },
+      "image_url": "https://i1.feedspot.com/8672883.jpg"
+    },
+    {
+      "title": "Dagens Nyheter \u00bb Ekonomi",
+      "feed_url": "https://www.dn.se/rss/ekonomi/",
+      "website_url": "https://www.dn.se/ekonomi/",
+      "description": "All latest articles about Economy from Dagens Nyheter.",
+      "followers": {
+        "facebook": 300100,
+        "instagram": 276100
+      },
+      "image_url": "https://i1.feedspot.com/8672884.jpg"
+    },
+    {
+      "title": "Dagens Nyheter \u00bb Sports",
+      "feed_url": "https://www.dn.se/rss/sport/",
+      "website_url": "https://www.dn.se/sport/",
+      "description": "All latest articles about Sports from Dagens Nyheter.",
+      "followers": {
+        "facebook": 300100,
+        "instagram": 276100
+      },
+      "image_url": "https://i1.feedspot.com/8672885.jpg"
+    },
+    {
+      "title": "Dagens Nyheter \u00bb Norra Sverige",
+      "feed_url": "https://www.dn.se/rss/norra-sverige/",
+      "website_url": "https://www.dn.se/norra-sverige/",
+      "description": "All latest articles about Norra Sverige from Dagens Nyheter.",
+      "followers": {
+        "facebook": 300100,
+        "instagram": 276100
+      },
+      "image_url": "https://i1.feedspot.com/8672886.jpg"
+    },
+    {
+      "title": "Dagens Nyheter \u00bb Psykologi",
+      "feed_url": "https://www.dn.se/rss/om/psykologi/",
+      "website_url": "https://www.dn.se/om/psykologi/",
+      "description": "All latest articles about Psychology from Dagens Nyheter.",
+      "followers": {
+        "facebook": 300100,
+        "instagram": 276100
+      },
+      "image_url": "https://i1.feedspot.com/8672887.jpg"
+    },
+    {
+      "title": "Dagens Nyheter \u00bb Privatekonomi",
+      "feed_url": "https://www.dn.se/rss/om/privatekonomi/",
+      "website_url": "https://www.dn.se/om/privatekonomi/",
+      "description": "All latest articles about Personal Finance from Dagens Nyheter.",
+      "followers": {
+        "facebook": 300100,
+        "instagram": 276100
+      },
+      "image_url": "https://i1.feedspot.com/8672888.jpg"
+    },
+    {
+      "title": "Dagens Nyheter \u00bb Recept",
+      "feed_url": "https://www.dn.se/rss/om/recept/",
+      "website_url": "https://www.dn.se/om/recept/",
+      "description": "All latest articles about Recipes from Dagens Nyheter.",
+      "followers": {
+        "facebook": 300100,
+        "instagram": 276100
+      },
+      "image_url": "https://i1.feedspot.com/8672889.jpg"
+    }
+  ]
+}

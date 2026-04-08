@@ -1,0 +1,254 @@
+{
+  "category": "RFID",
+  "source_url": "https://rss.feedspot.com/rfid_rss_feeds",
+  "feeds": [
+    {
+      "title": "RFID Journal",
+      "feed_url": "https://www.rfidjournal.com/category/news/feed/",
+      "website_url": "https://www.rfidjournal.com/category/news",
+      "description": "RFID Journal is by far the world's leading source of RFID news and insights. Their mission is help companies use RFID technologies to improve the way they do business. RFID Journal is your source for timely, objective news and information about RFID (radio frequency identification) and its many business applications - RFID tags, RFID Technology, RFID P&G, RFID Wal-Mart, etc.",
+      "followers": {
+        "facebook": 10900,
+        "twitter": 13200
+      },
+      "image_url": "https://i1.feedspot.com/4373156.jpg?t=1619087393"
+    },
+    {
+      "title": "AB&R (American Barcode and RFID) Blog",
+      "feed_url": "https://abr.com/category/blog/feed/",
+      "website_url": "https://abr.com/category/blog/",
+      "description": "Since 1980, AB&R\u00ae (American Barcode and RFID) has been a nationally-recognized integrator of proven solutions that drive efficiency and productivity in the supply chain. Those solutions include asset tracking, inventory management, work force mobilization, wireless networking, and the managed services to support them all.",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4629087.jpg?t=1616154424"
+    },
+    {
+      "title": "Lowry Solutions Blog",
+      "feed_url": "https://lowrysolutions.com/feed/",
+      "website_url": "https://lowrysolutions.com/blog/",
+      "description": "Lowry Solutions is the leader in enterprise mobility for data collection applications. Lowry Solutions implements technology innovations nationwide, and with over 10,000 customers, has earned a reputation as a premier enterprise mobility solutions provider and AIDC system integrator focused on barcode, RFID-EPC products, biometrics, and asset management solutions.",
+      "followers": {
+        "facebook": 890,
+        "twitter": 853
+      },
+      "image_url": "https://i1.feedspot.com/4629194.jpg?t=1616154428"
+    },
+    {
+      "title": "Veridify Blog",
+      "feed_url": "https://www.veridify.com/feed/",
+      "website_url": "https://www.veridify.com/security-blog/",
+      "description": "Veridify Security, formerly SecureRF, delivers fast, small footprint, ultra-low-energy, and quantum-resistant public-key security tools for low-resource processors powering the IoT. Check out the Veridify IoT Security Blog for exploring security and privacy solutions for embedded systems--keeping products smart and secure in the Internet of Things.",
+      "followers": {
+        "facebook": 167,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4626543.jpg?t=1608551319"
+    },
+    {
+      "title": "Idesco",
+      "feed_url": "https://idesco.fi/news/feed/",
+      "website_url": "https://idesco.fi/news/",
+      "description": "With 27 years of experience, RFID technology pioneer Idesco makes RFID readers, transponders, controllers and touch screen devices for customers worldwide. Every day, theirr devices collect data and enhance security for a variety of access control, vehicle identification, logistics and inventory control systems.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4629141.jpg"
+    },
+    {
+      "title": "RFID Card Blog",
+      "feed_url": "https://www.rfidcard.com/feed/",
+      "website_url": "https://www.rfidcard.com/blog/",
+      "description": "RFID Card is the most comprehensive RFID and NFC Tag provider. We provide RFID Card and RFID Labels or other types available upon request. Our blog covers discussion & information related to RFID, NFC, RFID Card, RFID Label, NFC Tag. Keep up with market news and solution articles about RFID & NFC.",
+      "followers": {
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/5287517.jpg?t=1622553972"
+    },
+    {
+      "title": "Assetpulse Blog",
+      "feed_url": "https://www.assetpulse.com/blog/feed/",
+      "website_url": "https://www.assetpulse.com/blog/",
+      "description": "AssetPulse provides customizable web-based asset tracking software for tracking IT inventory and oil field using Active RFID, passive RFID tags, fixed, Handheld RFID readers,GPS and barcodes. AssetPulse's mission is to help businesses get a better handle on all their asset related data.",
+      "followers": {
+        "twitter": 154
+      },
+      "image_url": "https://i1.feedspot.com/4626624.jpg?t=1616154529"
+    },
+    {
+      "title": "MSM Solutions Blog",
+      "feed_url": "https://msmsolutions.com/feed/",
+      "website_url": "https://msmsolutions.com/news-and-blog/",
+      "description": "Stay informed about the latest in RFID applications, best practices and trends from MSM Solution's industry and technology experts. MSM Solutions is a leading integrator of bar code and RFID products, applications and solutions for Apparel, Healthcare, Logistics and Manufacturing.",
+      "followers": {
+        "facebook": 175,
+        "twitter": 112
+      },
+      "image_url": "https://i1.feedspot.com/5293689.jpg?t=1623926216"
+    },
+    {
+      "title": "RFID Global Solution Blog",
+      "feed_url": "https://rfidgs.com/feed/",
+      "website_url": "https://rfidgs.com/category/blog/",
+      "description": "Join in the conversation on the RFID Global Solution blog to read our latest news and upcoming events. RFID Global Solution, Inc. is the leading provider of real-time asset visibility solutions for the data center and enterprise asset tracking markets.",
+      "followers": {
+        "facebook": 167,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5296014.jpg?t=1624532619"
+    },
+    {
+      "title": "SignalVault",
+      "feed_url": "https://www.signal-vault.com/blogs/news.atom",
+      "website_url": "https://www.signal-vault.com/blogs/news",
+      "description": "The SignalVault Credit & Debit Card Protector uses our E-Field Technology to protect your personal information from Crowd Hacking. he SignalVault blog is a great resource for stories related to identity theft, RFID blocking and signal protection and posts from Chris Gilpin. It is designed to fit in any wallet without any modification in order to make your debit & credit cards to hacker & thieves.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 609,
+        "instagram": 498
+      },
+      "image_url": "https://i1.feedspot.com/4626907.jpg?t=1616154411"
+    },
+    {
+      "title": "RFID Race Timing Systems Blog",
+      "feed_url": "https://rfidtiming.com/blog/feed/",
+      "website_url": "https://rfidtiming.com/blog/",
+      "description": "RFID Race Timing Systems headquarters are based in Perth, Western Australia with a custom built manufacturing workshop, electronics laboratory and administration department. All aspects of the timing system from design through to production are managed within the same facility to ensure absolute quality control and timely delivery of new orders.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4629072.jpg?t=1616154779"
+    },
+    {
+      "title": "AMI AssetTrack",
+      "feed_url": "https://www.amitracks.com/rfid/feed/",
+      "website_url": "https://www.amitracks.com/rfid/",
+      "description": "AMI helps companies track and manage their asset inventory so that they can spend less, stay compliant, and forecast the future. They offer mobility, barcode and RFID technology, reconciliation software and business processes required to keep large asset databases complete, current and accurate.",
+      "followers": {
+        "facebook": 135,
+        "twitter": 339
+      },
+      "image_url": "https://i1.feedspot.com/4626830.jpg?t=1616154517"
+    },
+    {
+      "title": "Rakinda",
+      "feed_url": "https://rakinda56112332.wordpress.com/feed/",
+      "website_url": "https://rakinda56112332.wordpress.com/",
+      "description": "Rakinda is barcode scanner manufacturer, who provides barcode scanner, barcode reader, OEM scan engine, barcode scanner module, PDA, handheld scanner, scanning solution.",
+      "followers": {
+        "facebook": 77,
+        "twitter": 92
+      },
+      "image_url": "https://i1.feedspot.com/5043145.jpg?t=1616154450"
+    },
+    {
+      "title": "Digant Technologies",
+      "feed_url": "https://diganttechnologiesss.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://diganttechnologiesss.blogspot.com/",
+      "description": "M2M solution company Bangalore India. Their Main goal is to form the usage of RFID technology less complicated for their partners and customers and contribute to quicker adaptation of Site automation solutions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5029245.jpg?t=1616154585"
+    },
+    {
+      "title": "Xinyetong Blog",
+      "feed_url": "https://rfidunion.com/feed",
+      "website_url": "https://rfidunion.com/",
+      "description": "Get articles related to smart card and RFID labels technology, basic guides, applications and much more on the blog. Shenzhen Xinyetong Technology Development Co, ltd is an industry-leading professional manufacturer and exporter of smart cards and RFID labels established since 2008.",
+      "followers": {
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5469339.jpg?t=1668775307"
+    },
+    {
+      "title": "RFID World Canada",
+      "feed_url": "https://rfidworld.ca/feed",
+      "website_url": "https://rfidworldcapr.wpengine.com/category/rfid-canadian-news/retail-rfid",
+      "description": "RFID World Canada was founded in 2010 and is based out of Toronto, Ontario with staff writers all around Canada and the US. Their editorial team supplements this information with the latest news and views on RFID technology in Canada and around the world. This powerhouse of information is an invaluable resource for professionals using RFID technology, or for anyone looking to learn more about it.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4629058.jpg?t=1606367513"
+    },
+    {
+      "title": "A2B Tracking Solutions Blog",
+      "feed_url": "https://a2btracking.com/blog/feed/",
+      "website_url": "https://a2btracking.com/blog/",
+      "description": "A2B Tracking is a leader in enterprise-class solutions for identifying, marking and tracking critical assets in highly regulated environments. It is a Cloud-Hosted IUID (Barcode) and RFID Asset Tracking Solutions. Their trusted experts evaluate, propose, and implement an effective solution based on industry best practices, driving productivity and accountability across your enterprise.",
+      "followers": {
+        "facebook": 697,
+        "twitter": 170
+      },
+      "image_url": "https://i1.feedspot.com/4626660.jpg?t=1616154443"
+    },
+    {
+      "title": "inLogic Blog",
+      "feed_url": "https://www.inlogic.com/blog/feed/",
+      "website_url": "https://www.rfiddiscovery.com/en/news/",
+      "description": "inLogic Blog covers articles on active RFID, asset tracking, passive RFID, RFID data center, and inventory IT asset. inLogic provides fixed asset tracking solutions that help organizations leverage RFID to save time, reduce operating costs, and improve asset visibility.",
+      "followers": {
+        "facebook": 14
+      },
+      "image_url": "https://i1.feedspot.com/5296023.jpg?t=1624531304"
+    },
+    {
+      "title": "DecisionPoint Technologies",
+      "feed_url": "https://www.decisionpt.com/",
+      "website_url": "https://www.decisionpt.com/",
+      "description": "Advanced Mobile Group is a workforce mobility solutions provider serving organizations that require mobile computing, RFID & wireless networking solutions. From hardware and software to integration services, Advanced Mobile Group delivers complete, end-to-end solutions providing unparalleled value to clients of all sizes.",
+      "followers": {
+        "facebook": 177,
+        "twitter": 340
+      },
+      "image_url": "https://i1.feedspot.com/4629173.jpg?t=1616154433"
+    },
+    {
+      "title": "RFID Council Blog",
+      "feed_url": "https://rfidcouncil.com/activity/feed/",
+      "website_url": "https://www.times-7.com/blog/",
+      "description": "The RFID Council is a global, non-profit organization that promotes the use of radio frequency identification (RFID) technology. The Council's blog provides news, information, and insights on the latest RFID trends and developments.",
+      "followers": {
+        "twitter": 19
+      },
+      "image_url": "https://i1.feedspot.com/5567501.jpg?t=1684156006"
+    },
+    {
+      "title": "Vizinex RFID Blog",
+      "feed_url": "https://www.vizinexrfid.com/feed/",
+      "website_url": "https://blog.hidglobal.com/",
+      "description": "Vizinex RFID is the industry leader in developing & manufacturing high-performance RFID tags that are tailored to the exact requirements of customers. Our experience, design expertise, and flexible manufacturing process, enable Vizinex to solve difficult & differentiated RFID problems. Check out our blog featuring tips, tricks & thought leadership from the Vizinex RFID team.",
+      "followers": {
+        "facebook": 864,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5287516.jpg?t=1622553489"
+    },
+    {
+      "title": "SML RFID",
+      "feed_url": "https://sml-rfid.com/feed/",
+      "website_url": "https://www.rfidreadernews.com/",
+      "description": "SML's blog will keep you updated with the latest and best practices for RFID in retail. SML is a global branding solutions provider and is the parent company of SML RFID. SML has successfully delivered RFID to many of the world's most successful retailers.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5295938.jpg?t=1624514382"
+    },
+    {
+      "title": "The Tagging Team - The expert in RFID and BLE asset tracking implementation",
+      "feed_url": "https://thetaggingteam.com/blog-feed.xml",
+      "website_url": "https://thetaggingteam.com/",
+      "description": "The Tagging Team provide expert RFID / BLE Tagging to keep your asset tracking project, on track, whether you are an RFID/BLE System Supplier or Buyer.",
+      "followers": {
+        "facebook": 130,
+        "twitter": 171
+      },
+      "image_url": "https://i1.feedspot.com/4786763.jpg?t=1616154524"
+    },
+    {
+      "title": "Dolphin RFID Blog",
+      "feed_url": "https://www.dolphinrfid.com/feed/",
+      "website_url": "https://www.dolphinrfid.com/blog/",
+      "description": "Dolphin group of companies, with more than two decades of focused experience in RFID technologies and innovation, is at the core of Internet of Things (IoT) revolution. Dolphin group of companies, with more than two decades of focused experience in RFID technologies Dolphin RFID is a globally accepted end to end solution provider working across all frequency bands.",
+      "followers": {
+        "facebook": 860,
+        "twitter": 738
+      },
+      "image_url": "https://i1.feedspot.com/4629155.jpg?t=1616154542"
+    }
+  ]
+}

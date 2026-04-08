@@ -1,0 +1,63 @@
+{
+  "category": "Madrid Fashion",
+  "source_url": "https://rss.feedspot.com/madrid_fashion_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Trendy Man Blog",
+      "feed_url": "https://www.thetrendyman.com/blog-feed.xml",
+      "website_url": "https://www.thetrendyman.com/blog-tendencias-moda-hombres-lifestyle-masculino-blogger-influencer",
+      "description": "Blog de tendencias, moda y lifestyle masculino escrito desde Madrid, Espa\u00f1a, por el periodista, blogger e influencer Miguel Biedmamiguel@thetrendyman.com",
+      "followers": {
+        "facebook": 26400,
+        "twitter": 506,
+        "instagram": 86000
+      },
+      "image_url": "https://i1.feedspot.com/7280021.jpg?t=1711091400"
+    },
+    {
+      "title": "Pasarela Espa\u00f1ola \u00bb Fashion",
+      "feed_url": "https://xn--pasarelaespaola-9qb.com/category/moda/feed",
+      "website_url": "https://xn--pasarelaespaola-9qb.com/category/moda",
+      "description": "This is an article about Pasarela Espa\u00f1ola Fashion Week Madrid 2024. It discusses fashion shows, interviews, and photographers. The article also includes contact information for the event organizers. Some of the important points are the dates of the event, March 9 and 10, and the location, Casino Gran V\u00eda.",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 21
+      },
+      "image_url": "https://i1.feedspot.com/7280024.jpg?t=1711102583"
+    },
+    {
+      "title": "Neo2 \u00bb Fashion",
+      "feed_url": "https://www.neo2.com/categoria/moda/feed/",
+      "website_url": "https://www.neo2.com/categoria/moda/",
+      "description": "The Neo2 is a Concept Magazine about Fashion, Design, Music, Art, Interior Design, Gastronomy, Architecture, Cinema. Get close to all the information about fashion and read the most interesting articles about the most current trends and designer activities.",
+      "followers": {
+        "facebook": 74400,
+        "twitter": 39600,
+        "instagram": 116300
+      },
+      "image_url": "https://i1.feedspot.com/7280025.jpg?t=1711091656"
+    },
+    {
+      "title": "VEIN Magazine \u00bb Shopping",
+      "feed_url": "https://vein.es/style/shopping/feed/",
+      "website_url": "https://vein.es/style/shopping/",
+      "description": "A young and ever and forever magazine for anyone that believes in the youth spirit.",
+      "followers": {
+        "facebook": 20400,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/7280022.jpg?t=1711091405"
+    },
+    {
+      "title": "Arena Martinez Official Blog",
+      "feed_url": "https://www.arenamartinez.com/en/feed",
+      "website_url": "https://www.arenamartinez.com/en/blog",
+      "description": "Arena Martinez is a luxury brand that unites fashion and art, making unique pieces to wear from collaborations with contemporary artists, all gargements are limited editions and handmade in Madrid, Spain.",
+      "followers": {
+        "facebook": 642,
+        "instagram": 17500
+      },
+      "image_url": "https://i1.feedspot.com/7280023.jpg?t=1711091606"
+    }
+  ]
+}

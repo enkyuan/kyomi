@@ -1,0 +1,28 @@
+{
+  "category": "Lake Stevens News",
+  "source_url": "https://rss.feedspot.com/lake_stevens_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of Lake Stevens",
+      "feed_url": "https://www.lakestevenswa.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.lakestevenswa.gov/CivicAlerts.aspx",
+      "description": "Get the latest news and information about what's happening at the City of Lake Stevens.",
+      "followers": {
+        "facebook": 8500,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5157007.jpg?t=1590666590"
+    },
+    {
+      "title": "Lake Stevens News Spot",
+      "feed_url": "https://lsnewsspot.wordpress.com/feed/",
+      "website_url": "https://lsnewsspot.wordpress.com/",
+      "description": "Lake Stevens News Spot is your independent news source in Lake Stevens. Local, unfiltered and all in one spot.",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5157013.jpg"
+    }
+  ]
+}

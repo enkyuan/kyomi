@@ -1,0 +1,30 @@
+{
+  "category": "Hobbs News",
+  "source_url": "https://rss.feedspot.com/hobbs_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Hobbs News-Sun",
+      "feed_url": "https://www.hobbsnews.com/category/local-news/feed/",
+      "website_url": "https://www.hobbsnews.com/",
+      "description": "Hobbs News-Sun staff of professionally trained journalists and sales executives work to bring readers the latest in real news.",
+      "followers": {
+        "facebook": 32000,
+        "twitter": 1100,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5150750.jpg?t=1589541736"
+    },
+    {
+      "title": "KRQE News 13 \u00bb Hobbs",
+      "feed_url": "https://www.krqe.com/tag/hobbs/feed/",
+      "website_url": "https://www.krqe.com/tag/hobbs/",
+      "description": "KRQE, located in Albuquerque, is a leading news organization that covers the state of New Mexico over-the-air and online in breaking news, local and community news, weather, and sports. Follow this feed to read the latest news and updates in Hobbs brought to you by KRQE.",
+      "followers": {
+        "facebook": 303300,
+        "twitter": 139200,
+        "instagram": 72600
+      },
+      "image_url": "https://i1.feedspot.com/5150756.jpg?t=1589540930"
+    }
+  ]
+}

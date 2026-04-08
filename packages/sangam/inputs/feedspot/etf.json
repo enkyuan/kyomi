@@ -1,0 +1,134 @@
+{
+  "category": "ETF",
+  "source_url": "https://rss.feedspot.com/etf_rss_feeds",
+  "feeds": [
+    {
+      "title": "ETF Daily News",
+      "feed_url": "https://www.etfdailynews.com/feed/",
+      "website_url": "https://www.etfdailynews.com/",
+      "description": "ETF Daily News is a source for the latest daily headlines helping you to make informed decisions about Exchange Traded Funds. Our audience is made up of retail and institutional investors, financial advisers, brokers, risk managers, members of the media and new and curious investors from different countries.",
+      "followers": {
+        "twitter": 9500
+      },
+      "image_url": "https://i1.feedspot.com/4891182.jpg?t=1612594119"
+    },
+    {
+      "title": "ETF Trends",
+      "feed_url": "https://www.etftrends.com/feed/",
+      "website_url": "https://www.etftrends.com/",
+      "description": "ETF Trends was born out of the abundant research performed by asset managers at Global Trends Investments. We offer daily news, strategy, commentary and robust research tools for Exchange Traded Funds.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 40300
+      },
+      "image_url": "https://i1.feedspot.com/4818123.jpg?t=1612594122"
+    },
+    {
+      "title": "Seeking Alpha \u00bb ETFs & Funds",
+      "feed_url": "https://seekingalpha.com/feed/etfs-and-funds",
+      "website_url": "https://seekingalpha.com/etfs-and-funds",
+      "description": "Seeking Alpha is a platform for investment research, with broad coverage of stocks, asset classes, ETFs and investment strategy. It is the premier website for actionable stock market opinion and analysis and vibrant, intelligent finance discussion.",
+      "followers": {
+        "facebook": 67300,
+        "twitter": 294700
+      },
+      "image_url": "https://i1.feedspot.com/4891193.jpg?t=1612594146"
+    },
+    {
+      "title": "ETFguide",
+      "feed_url": "https://www.etfguide.com/tv/feed/",
+      "website_url": "https://www.etfguide.com/tv/",
+      "description": "ETFguide is on a mission to re-introduce the real meaning of investment research that is prudent, pertinent, and timely. Our mission is to help people BUILD, GROW, and PROTECT their money.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 11400
+      },
+      "image_url": "https://i1.feedspot.com/4406370.jpg?t=1612594170"
+    },
+    {
+      "title": "Just One Lap \u00bb ETF",
+      "feed_url": "https://justonelap.com/tag/etf/feed/",
+      "website_url": "https://justonelap.com/tag/etf/",
+      "description": "If you have wondered how one Exchange Traded Fund (ETF) differs from another, this is where you can find out. Just One Lap is dedicated to empowering South Africans by providing free financial, investment, and trading education.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 29600
+      },
+      "image_url": "https://i1.feedspot.com/4891219.jpg?t=1635136532"
+    },
+    {
+      "title": "ETF Monkey",
+      "feed_url": "https://feeds.feedburner.com/EtfMonkey",
+      "website_url": "http://etfmonkey.blogspot.com/",
+      "description": "ETF Monkey is the premier reference to ETF investing and asset allocation for 401k and retirement accounts and the best Vanguard, Fidelity, and Charles Schwab ETFs.",
+      "followers": {
+        "facebook": 60,
+        "twitter": 379
+      },
+      "image_url": "https://i1.feedspot.com/4891212.jpg?t=1612594162"
+    },
+    {
+      "title": "Canadian Couch Potato \u00bb ETFs",
+      "feed_url": "https://canadiancouchpotato.com/category/etfs/feed/",
+      "website_url": "https://canadiancouchpotato.com/category/etfs/",
+      "description": "Welcome to Canadian Couch Potato. This blog is designed for Canadians who want to learn more about investing using index mutual funds and exchange-traded funds. The blog's author is Dan Bortolotti, an associate portfolio manager and financial planner with PWL Capital in Toronto, where he and his colleagues manage portfolios using the same strategies described in this blog.",
+      "followers": {
+        "facebook": 924,
+        "twitter": 105
+      },
+      "image_url": "https://i1.feedspot.com/4891180.jpg?t=1612594173"
+    },
+    {
+      "title": "Nottingham News",
+      "feed_url": "https://www.ncfunds.com/news/feed/",
+      "website_url": "https://www.ncfunds.com/news/",
+      "description": "Nottingham is a fund administration firm and white-label ETF provider that's been servicing fund accounting, organization and management needs since 1989.",
+      "followers": {
+        "twitter": 157
+      },
+      "image_url": "https://i1.feedspot.com/4891290.jpg?t=1612594676"
+    },
+    {
+      "title": "Invest With An Edge",
+      "feed_url": "https://investwithanedge.com/feed/",
+      "website_url": "https://investwithanedge.com/",
+      "description": "Invest With An Edge is a trading resource for everyday investors. Published by All Star Investor. We've been delivering solid investing advice since 1991, with a current focus on Exchange-Traded Funds (ETFs) and Exchange-Traded Notes (ETNs).",
+      "followers": {
+        "twitter": 107
+      },
+      "image_url": "https://i1.feedspot.com/1763488.jpg?t=1612594596"
+    },
+    {
+      "title": "ETF Model Solutions Blog",
+      "feed_url": "https://etfmodelsolutions.com/feed/",
+      "website_url": "https://etfmodelsolutions.com/blog/",
+      "description": "We are a third-party strategist that builds ETF-based model solutions for our clients. We embrace the Endowment Investment Philosophy that alternative investments can play an important role in portfolio construction. Our mission is to provide unique ETF based model solutions that are low-cost, provider agnostic, and seek to deliver superior risk-adjusted returns.",
+      "followers": {
+        "facebook": 523,
+        "twitter": 228
+      },
+      "image_url": "https://i1.feedspot.com/4891311.jpg?t=1612594602"
+    },
+    {
+      "title": "ETF.com",
+      "feed_url": "https://www.etf.com/home.feed/feed",
+      "website_url": "https://www.etf.com/",
+      "description": "ETF.com is a one-stop resource for investors interested in the world of indexing, including index funds, ETFs, index derivatives (futures, options, swaps, etc.) and relevant investment strategies. Investors can catch up on the day's breaking news, comprehensive data and research, and in-depth features, commentary and market analyses about the dynamic field of index-based investing and trading.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 30800
+      },
+      "image_url": "https://i1.feedspot.com/4891172.jpg?t=1612594114"
+    },
+    {
+      "title": "WisdomTree ETF Blog",
+      "feed_url": "https://www.wisdomtree.com/rss/blog-feed",
+      "website_url": "https://www.wisdomtree.com/blog",
+      "description": "WisdomTree launched its first ETFs in June of 2006, and is currently the industry's seventh largest ETF provider. Our ETFs are built with proprietary methodologies, smart structures or uncommon access to provide investors with the potential for income, performance, diversification and more.",
+      "followers": {
+        "twitter": 247600
+      },
+      "image_url": "https://i1.feedspot.com/4891198.jpg?t=1612594141"
+    }
+  ]
+}

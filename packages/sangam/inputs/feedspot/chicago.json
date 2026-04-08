@@ -1,0 +1,789 @@
+{
+  "category": "Chicago",
+  "source_url": "https://rss.feedspot.com/chicago_rss_feeds",
+  "feeds": [
+    {
+      "title": "Choose Chicago Blog",
+      "feed_url": "https://www.choosechicago.com/blog/feed/",
+      "website_url": "https://www.choosechicago.com/blog/",
+      "description": "Explore the official tourism website for Chicago. Find guides to attractions, events, restaurants, hotels, getting around, and other vacation planning help. Choose Chicago is the official destination marketing organization for Chicago, Illinois.",
+      "followers": {
+        "facebook": 665700,
+        "twitter": 99900,
+        "instagram": 524100
+      },
+      "image_url": "https://i1.feedspot.com/4782158.jpg?t=1631784766"
+    },
+    {
+      "title": "Eater Chicago",
+      "feed_url": "https://chicago.eater.com/rss/index.xml",
+      "website_url": "https://chicago.eater.com/",
+      "description": "The Chicago Restaurant, Bar, and Nightlife Blog. Food news and dining guides for Chicago. Eater Chicago avails vivid cuisines present all around the world.",
+      "followers": {
+        "facebook": 136800,
+        "twitter": 94900,
+        "instagram": 212100
+      },
+      "image_url": "https://i1.feedspot.com/4784719.jpg?t=1629459871"
+    },
+    {
+      "title": "Chicago magazine \u00bb Dining and Drinking",
+      "feed_url": "https://www.chicagomag.com/feed/",
+      "website_url": "https://www.chicagomag.com/",
+      "description": "Produced by the city's best writers and editors, Chicago magazine offers an award-winning combination of smart service journalism and provocative narrative stories, knit together with top-notch photography and elegant design.",
+      "followers": {
+        "facebook": 182900,
+        "twitter": 264800,
+        "instagram": 146400
+      },
+      "image_url": "https://i1.feedspot.com/4056702.jpg?t=1609322028"
+    },
+    {
+      "title": "UrbanMatter",
+      "feed_url": "https://urbanmatter.com/chicago/feed/",
+      "website_url": "https://urbanmatter.com/chicago/",
+      "description": "UrbanMatter explores the best of Chicago events, music, restaurants, bars, culture, family-friendly activities, nightlife, news, and parking.",
+      "followers": {
+        "facebook": 51700,
+        "instagram": 14900
+      },
+      "image_url": "https://i1.feedspot.com/4908530.jpg?t=1609322033"
+    },
+    {
+      "title": "Chicago Public Library Blog",
+      "feed_url": "https://www.chipublib.org/feed/",
+      "website_url": "https://www.chipublib.org/explore/?post-type=blogs",
+      "description": "Search the catalog, browse recommendations, place holds, and renew titles. Check out eBooks and use online resources. Donor-powered Library programs and resources make a real difference across our city, expanding access to information, resources, and lifelong learning opportunities for Chicagoans of all ages and stages of life.",
+      "followers": {
+        "facebook": 74800,
+        "twitter": 40100,
+        "instagram": 52700
+      },
+      "image_url": "https://i1.feedspot.com/4784759.jpg?t=1703741504"
+    },
+    {
+      "title": "The Chicago Blog | The University of Chicago Press",
+      "feed_url": "https://pressblog.uchicago.edu/feed/atom",
+      "website_url": "https://pressblog.uchicago.edu/",
+      "description": "Intelligent commentary, curated content, news, reviews, and all things digital, published by the University of Chicago Press",
+      "followers": {
+        "twitter": 55400,
+        "instagram": 14400
+      },
+      "image_url": "https://i1.feedspot.com/623524.jpg?t=1609322049"
+    },
+    {
+      "title": "Travels & Treasures Blog",
+      "feed_url": "https://travelsandtreasures.com/feed/",
+      "website_url": "https://travelsandtreasures.com/blog/",
+      "description": "Visit historic sites, buzzing restaurants, boutiques, and souvenirs from across Chicago - all virtually with the Travels & Treasures Blog. Here you will find a series of travel guides and tips to assist you in exploring the city and nearby famous attractions.",
+      "followers": {
+        "facebook": 173,
+        "twitter": 1600,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5720655.jpg?t=1700831520"
+    },
+    {
+      "title": "Red Soles and Red Wine - Chicago Fashion Style Blog",
+      "feed_url": "https://www.redsolesandredwine.com/feed",
+      "website_url": "https://www.redsolesandredwine.com/category/style",
+      "description": "This is my personal style and fashion blog. Loving fashion and food and living in Chicago. Styling, outfitting, and showcasing my daily lookbooks.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 1100,
+        "instagram": 278900
+      },
+      "image_url": "https://i1.feedspot.com/688059.jpg?t=1609322952"
+    },
+    {
+      "title": "Diethood",
+      "feed_url": "https://feeds.feedburner.com/diethood/dOOG",
+      "website_url": "https://diethood.com/",
+      "description": "Diethood Covers easy, healthy, mouth-watering recipes you can enjoy without feeling like you're on a diet! Diethood is a food blog by Katerina - a cookie-maker, baker-faker, food-taker, and picture-taker.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 10400,
+        "instagram": 68300
+      },
+      "image_url": "https://i1.feedspot.com/1978154.jpg?t=1600345229"
+    },
+    {
+      "title": "Ambitious Kitchen Blog",
+      "feed_url": "https://www.ambitiouskitchen.com/feed/",
+      "website_url": "https://www.ambitiouskitchen.com/blog/",
+      "description": "Devoted to baking, healthy bites, and living ambitiously. Ambitious Kitchen is a healthy food blog with wholesome cooking and feel-good inspiration. Here you'll find healthy recipes to fuel your wellness journey.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 19,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/711724.jpg?t=1600345355"
+    },
+    {
+      "title": "Streetsblog Chicago",
+      "feed_url": "https://chi.streetsblog.org/feed",
+      "website_url": "https://chi.streetsblog.org/",
+      "description": "Connecting people to information about how to improve walking, biking, and transit.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 21400
+      },
+      "image_url": "https://i1.feedspot.com/4784887.jpg?t=1609322361"
+    },
+    {
+      "title": "Chicago History Museum Blog",
+      "feed_url": "https://www.chicagohistory.org/feed/",
+      "website_url": "https://www.chicagohistory.org/blog/",
+      "description": "The Chicago History Museum is a place of learning, discovery, creativity, and, well, history. We encourage people to value their own stories and share them with others.",
+      "followers": {
+        "facebook": 70000,
+        "twitter": 31400,
+        "instagram": 53400
+      },
+      "image_url": "https://i1.feedspot.com/4698858.jpg?t=1609322744"
+    },
+    {
+      "title": "Kelly in the City",
+      "feed_url": "https://kellyinthecity.com/feed/",
+      "website_url": "https://kellyinthecity.com/",
+      "description": "Kelly in the City is a Preppy Chicago Life, Style, and Fashion Blog. My name is Kelly Larkin, and this blog is where I document my life. You'll find a whole lot of fashion- and home-related content on Kelly in the City.",
+      "followers": {
+        "facebook": 139000,
+        "twitter": 2300,
+        "instagram": 109900
+      },
+      "image_url": "https://i1.feedspot.com/1870466.jpg?t=1629871059"
+    },
+    {
+      "title": "South Side Sox",
+      "feed_url": "https://www.southsidesox.com/rss/current.xml",
+      "website_url": "https://www.southsidesox.com/",
+      "description": "South Side Sox is the leading Chicago White Sox blog. This blog is good source for quality Chicago White Sox news, rumors, analysis, stats and scores.",
+      "followers": {
+        "facebook": 21100,
+        "twitter": 15500
+      },
+      "image_url": "https://i1.feedspot.com/4603240.jpg?t=1603289529"
+    },
+    {
+      "title": "A Sweat Life",
+      "feed_url": "https://asweatlife.com/feed/",
+      "website_url": "https://asweatlife.com/",
+      "description": "To serve as a resource and challenge you to shake up your workout routine, one class at a time.",
+      "followers": {
+        "facebook": 10000,
+        "twitter": 2300,
+        "instagram": 21300
+      },
+      "image_url": "https://i1.feedspot.com/4784948.jpg?t=1609322748"
+    },
+    {
+      "title": "CenterCutCook",
+      "feed_url": "https://www.centercutcook.com/feed/",
+      "website_url": "https://www.centercutcook.com/",
+      "description": "CenterCutCook is dedicated to providing quick and convenient recipes using real ingredients! Recipes are written and photographed by Ashley Wagner, an average home-cook who loves preparing simple, delicious meals for those she loves!",
+      "followers": {
+        "facebook": 702600,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/596007.jpg?t=1609322793"
+    },
+    {
+      "title": "The Fox & She | Chicago Fashion Blog by Blair Staky",
+      "feed_url": "https://thefoxandshe.com/feed/",
+      "website_url": "https://thefoxandshe.com/",
+      "description": "Cataloging my passion for attainable style for everyday life. Designing blogs for the best fashion & lifestyle bloggers out there.",
+      "followers": {
+        "twitter": 2800,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/2555636.jpg?t=1609322800"
+    },
+    {
+      "title": "The Kittchen",
+      "feed_url": "https://thekittchen.com/feed/",
+      "website_url": "https://thekittchen.com/",
+      "description": "The Kittchen features inexpensive, quick, and healthy recipes, and Chicago restaurant reviews. Brought to you by the author of The Gourmet Grilled Cheese Cookbook Kit Graham.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 7900,
+        "instagram": 47900
+      },
+      "image_url": "https://i1.feedspot.com/4784847.jpg?t=1609322867"
+    },
+    {
+      "title": "Newcity Art",
+      "feed_url": "https://art.newcity.com/feed/",
+      "website_url": "https://art.newcity.com/",
+      "description": "Get all the unsurpassed coverage of contemporary art in Chicago, including profiles of artists and gallerists, features, essays, and more reviews of Chicago art shows. Newcity Art is a Web site dedicated to news, reviews, and features about Chicago's visual art world.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 7800,
+        "instagram": 11600
+      },
+      "image_url": "https://i1.feedspot.com/4784997.jpg?t=1663131450"
+    },
+    {
+      "title": "Style Charade",
+      "feed_url": "https://www.stylecharade.com/feed/",
+      "website_url": "https://www.stylecharade.com/",
+      "description": "Jennifer Lake is a Chicago blogger covering fashion, travel, home design, beauty, and lifestyle. Colorful style mixed with street art and murals. In 2015, she launched Style Charade as a small corner of the Internet to call her own. After spending her career helping others build their brands, she wanted a space that felt representative of the lens through which she seen the world.",
+      "followers": {
+        "facebook": 12300,
+        "twitter": 2500,
+        "instagram": 184100
+      },
+      "image_url": "https://i1.feedspot.com/4713419.jpg?t=1609322876"
+    },
+    {
+      "title": "Fountainof30",
+      "feed_url": "https://www.fountainof30.com/feed/",
+      "website_url": "https://www.fountainof30.com/",
+      "description": "Hi, We're Lauren and Carol and we believe in growing younger in mind, spirit and beauty. Fountain of 30 is an anti-aging style, beauty, health and travel site dedicated to women over 40 who feel 30 and will do whatever it takes to keep looking 30.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 17800,
+        "instagram": 174200
+      },
+      "image_url": "https://i1.feedspot.com/4782189.jpg?t=1609322939"
+    },
+    {
+      "title": "Classic Chicago Magazine",
+      "feed_url": "https://classicchicagomagazine.com/feed/",
+      "website_url": "https://classicchicagomagazine.com/",
+      "description": "Classic Chicago magazine is an online weekly publication featuring a mix of fascinating people- past and present, luxury, traditional architecture, interior design, style, food, and travel.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 293,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4784991.jpg?t=1609323002"
+    },
+    {
+      "title": "Lottie + Doof",
+      "feed_url": "https://www.lottieanddoof.com/feed/",
+      "website_url": "https://www.lottieanddoof.com/",
+      "description": "Chicago-based food/recipe blog focusing on baking and the politics of food. When I started Lottie + Doof, back in 2008, I had no idea it would be come such an important part of my life. I started blogging as an outlet for what had become an increasingly serious obsession with cooking, hosting, and the politics of food.",
+      "followers": {
+        "instagram": 7700
+      },
+      "image_url": "https://i1.feedspot.com/119755.jpg?t=1655531368"
+    },
+    {
+      "title": "Chicago Athlete Magazine",
+      "feed_url": "https://www.mychicagoathlete.com/feed/",
+      "website_url": "https://www.mychicagoathlete.com/",
+      "description": "Chicago's premier active sport publication. If you're a runner, cyclist or triathlete from the Midwest, this is your place.",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 3600,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4757311.jpg?t=1607077366"
+    },
+    {
+      "title": "Arts Club of Chicago",
+      "feed_url": "https://www.artsclubchicago.org/feed/",
+      "website_url": "https://www.artsclubchicago.org/announcements/",
+      "description": "The mission of The Arts Club, defined at its inaugural meeting, is 'to encourage higher standards of art, maintain galleries for that purpose, and to promote the mutual acquaintance of art lovers and art workers.'",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4476381.jpg?t=1602850733"
+    },
+    {
+      "title": "Gold Coast Girl Blog",
+      "feed_url": "https://goldcoastgirlblog.com/feed/",
+      "website_url": "http://goldcoastgirlblog.com/",
+      "description": "My name is Samantha and this is my personal fashion + lifestyle guide. I created this blog as a creative outlet for me to express my love for all things related to fashion, food, fitness, home decor, beauty, and more recently motherhood.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 1700,
+        "instagram": 31000
+      },
+      "image_url": "https://i1.feedspot.com/4784944.jpg?t=1629871745"
+    },
+    {
+      "title": "Sloopin - A South Loop Blog",
+      "feed_url": "http://www.sloopin.com/feeds/posts/default",
+      "website_url": "http://www.sloopin.com/",
+      "description": "A blog about the South Loop, Printer's Row, Prairie Avenue, Near South Side, Grant Park, Museum Campus in Chicago.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/1372823.jpg?t=1609323031"
+    },
+    {
+      "title": "Erica Finds...",
+      "feed_url": "https://ericafinds.com/feed/",
+      "website_url": "https://ericafinds.com/",
+      "description": "Erica Finds is a blog about things I find - deals, articles, apps, musings. I am into health, wellness, running, travel, and much more.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4782272.jpg?t=1609323272"
+    },
+    {
+      "title": "PropertyUp Blog",
+      "feed_url": "https://propertyup.com/realty/blog/feed/",
+      "website_url": "https://propertyup.com/realty/blog/",
+      "description": "Browse over 77314 homes for sale in Illinois . Find luxury, commercial, residential, rental, foreclosures property for sale in IL.",
+      "followers": {
+        "facebook": 623,
+        "twitter": 113
+      },
+      "image_url": "https://i1.feedspot.com/4908529.jpg?t=1609323292"
+    },
+    {
+      "title": "Chicago Public Education Fund",
+      "feed_url": "https://thefundchicago.org/feed/",
+      "website_url": "https://thefundchicago.org/",
+      "description": "The Chicago Public Education Fund (The Fund) is a nonprofit organization working to build a critical mass of great public schools in Chicago.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4784814.jpg?t=1609323349"
+    },
+    {
+      "title": "Bits & Bites Blog",
+      "feed_url": "https://bitsandbitesblog.com/feed/",
+      "website_url": "https://bitsandbitesblog.com/",
+      "description": "Katie Kelly is a 24-year-old social media manager, and cooker/baker/blogger by night bouncing between Chicago and the south burbs. Katie feels cooking isn't a chore if you love what you cook. here you'll find the perfect balance of recipes you are looking for.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 621,
+        "instagram": 84100
+      },
+      "image_url": "https://i1.feedspot.com/4853491.jpg?t=1609323548"
+    },
+    {
+      "title": "Sequins & Stripes | Chicago Based Fashion and Style Blog By Liz Adams",
+      "feed_url": "https://helloadamsfamily.com/feed/",
+      "website_url": "https://helloadamsfamily.com/",
+      "description": "Liz Adams is a fashion and personal style blogger living in the charming Lincoln Park neighborhood of Chicago. Sequins & Stripes started in 2011 as an outlet for Liz's background in fashion and textiles and a place to document her personal style on a daily basis.",
+      "followers": {
+        "twitter": 7800,
+        "instagram": 232400
+      },
+      "image_url": "https://i1.feedspot.com/4419590.jpg?t=1600353036"
+    },
+    {
+      "title": "Prism Litigation Technology Blog",
+      "feed_url": "https://prismlit.com/category/blog/feed/",
+      "website_url": "https://prismlit.com/category/blog/",
+      "description": "We are a consulting firm with a personalized approach and a practical vision using emerging technologies and workflow automation to reduce ediscovery burdens.",
+      "followers": {
+        "twitter": 59
+      },
+      "image_url": "https://i1.feedspot.com/5041277.jpg"
+    },
+    {
+      "title": "Lux & Concord Blog",
+      "feed_url": "https://luxandconcord.com/feed/",
+      "website_url": "https://luxandconcord.com/captivating-blog/",
+      "description": "A Chicago-based lifestyle blog offering inspiration for your closet, career, and more. Kaitlin founded Lux & Concord in December 2012 after leaving a job as an editor at a lifestyle magazine to join an interior design one",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 2200,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/3651346.jpg?t=1629872861"
+    },
+    {
+      "title": "Curbed Chicago | Chicago homes, neighborhoods, architecture, and real estate",
+      "feed_url": "https://chicago.curbed.com/rss/index.xml",
+      "website_url": "https://chicago.curbed.com/",
+      "description": "Every aspect of living in Chicago, for people who care about their city, their streets, and their homes.",
+      "followers": {
+        "facebook": 29800,
+        "twitter": 39,
+        "instagram": 200500
+      },
+      "image_url": "https://i1.feedspot.com/4784853.jpg"
+    },
+    {
+      "title": "FastModel Sports",
+      "feed_url": "https://team.fastmodelsports.com/feed/",
+      "website_url": "https://team.fastmodelsports.com/",
+      "description": "Basketball Coaching Articles on Leadership, Motivation, Conditioning, Player Development, Plays and Drills",
+      "followers": {
+        "facebook": 31200,
+        "twitter": 38600
+      },
+      "image_url": "https://i1.feedspot.com/4478726.jpg?t=1603269422"
+    },
+    {
+      "title": "YMCA of Metro Chicago",
+      "feed_url": "https://feeds.feedburner.com/ymcachicagoblog",
+      "website_url": "https://www.ymcachicago.org/",
+      "description": "The mission of the YMCA of Metro Chicago is to develop strong children, families and communities across Metropolitan Chicago through academic readiness, character development, violence prevention, fitness and healthy living.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 5300,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/1980990.jpg?t=1609322829"
+    },
+    {
+      "title": "Lake Shore Lady",
+      "feed_url": "https://www.lakeshorelady.com/feed/",
+      "website_url": "https://www.lakeshorelady.com/category/recipes/",
+      "description": "Step by step recipes & cooking videos for the food lovers. Personal style & shopping tips for the fashion obsessed. Brought to you from the Windy City.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 2500,
+        "instagram": 74100
+      },
+      "image_url": "https://i1.feedspot.com/4768865.jpg?t=1609322916"
+    },
+    {
+      "title": "Making it Lovely",
+      "feed_url": "https://feeds.feedburner.com/makingitlovely",
+      "website_url": "https://bowsandsequins.com/",
+      "description": "A design blog about living a stylish life and transforming the so-so. I'm Nicole Balch, and I started this blog in 2007 as my husband and I were moving into our first home. I write about my home (as I did in the beginning), but also about decorating and fashion, as well as my life as a wife, mother of three young children, and blogger turned breadwinner.",
+      "followers": {
+        "facebook": 58600,
+        "twitter": 16700,
+        "instagram": 29400
+      },
+      "image_url": "https://i1.feedspot.com/428097.jpg?t=1609322881"
+    },
+    {
+      "title": "Bows & Sequins",
+      "feed_url": "https://bowsandsequins.com/feed/",
+      "website_url": "https://bowsandsequins.com/",
+      "description": "A fashion-focused lifestyle and travel blog where you'll find posts about personal style, travel, beauty, fitness, wellness, and more. My name is Jessica and I'm kind of a coffee snob, a bit of a foodie, and a self-proclaimed cocktail connoisseur. While this blog is a big part of my life, I'm also a creative consultant and a personal stylist.",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 13900,
+        "instagram": 82700
+      },
+      "image_url": "https://i1.feedspot.com/4778361.jpg?t=1609322886"
+    },
+    {
+      "title": "Charmingly Styled",
+      "feed_url": "https://charminglystyled.com/feed",
+      "website_url": "https://charminglystyled.com/",
+      "description": "Charmingly Styled is a life and style blog written by social media specialist, Maya McDonald.",
+      "followers": {
+        "facebook": 2800,
+        "instagram": 20600
+      },
+      "image_url": "https://i1.feedspot.com/4784815.jpg?t=1609323706"
+    },
+    {
+      "title": "Emma Lenhart",
+      "feed_url": "http://emmalenhart.com/feed/",
+      "website_url": "http://emmalenhart.com/",
+      "description": "Emma Lenhart is a Chicago-based Lifestyle blog covering various topics including Fashion, Style, Money, College, Travel, and more!",
+      "followers": {
+        "facebook": 1600,
+        "instagram": 16900
+      },
+      "image_url": "https://i1.feedspot.com/4784820.jpg?t=1609323017"
+    },
+    {
+      "title": "Chicago Jogger",
+      "feed_url": "http://www.chicagojogger.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.chicagojogger.com/",
+      "description": "Healthy food blogger Chicago resident runner new mama. Energy professional by day. Chicago Jogger is a healthy recipe and running blog with a focus on city living!",
+      "followers": {
+        "facebook": 690,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4782266.jpg?t=1609323305"
+    },
+    {
+      "title": "Fab Food Chicago",
+      "feed_url": "https://www.fabfoodchicago.com/feed/",
+      "website_url": "https://www.fabfoodchicago.com/",
+      "description": "Fab Soo Park. Fab Appetite. Living the Fab Food Life. Restaurant Reviews, Recipes, Chef Interviews, and more.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 1600,
+        "instagram": 107500
+      },
+      "image_url": "https://i1.feedspot.com/4784937.jpg?t=1609323314"
+    },
+    {
+      "title": "Eat Right Chicago | CAND",
+      "feed_url": "https://eatrightchicago.org/blog/feed/",
+      "website_url": "https://eatrightchicago.org/blog/",
+      "description": "Our members represent a wide variety of practice areas and the association is committed to lobbying for the purpose of including the Registered Dietitian as the Nutrition Expert in all legislative areas.",
+      "followers": {
+        "twitter": 2500,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4785018.jpg"
+    },
+    {
+      "title": "Chicago Clout",
+      "feed_url": "https://www.chicagoclout.com/feed/",
+      "website_url": "https://www.chicagoclout.com/",
+      "description": "Keep up with articles from Chicago Clout.",
+      "followers": {
+        "twitter": 27
+      },
+      "image_url": "https://i1.feedspot.com/5039850.jpg?t=1609323656"
+    },
+    {
+      "title": "The Chi-Athlete",
+      "feed_url": "http://feeds.feedburner.com/TheChi-athlete",
+      "website_url": "http://www.thechiathlete.com/",
+      "description": "A Texan's Journey Through the Windy City and Beyond FitFluential, Fit Approach, #TNFLocals & Girls Gone Sporty Ambassador.",
+      "followers": {
+        "facebook": 355,
+        "twitter": 2700,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/3807763.jpg?t=1609323617"
+    },
+    {
+      "title": "Style Plus Curves",
+      "feed_url": "https://stylepluscurves.com/feed/",
+      "website_url": "https://stylepluscurves.com/",
+      "description": "Style Plus Curves is a Chicago plus size fashion blog celebrating plus size style, clothes, and shopping.",
+      "followers": {
+        "facebook": 151200,
+        "twitter": 2500,
+        "instagram": 60600
+      },
+      "image_url": "https://i1.feedspot.com/4643657.jpg?t=1605097109"
+    },
+    {
+      "title": "Chicago Semester",
+      "feed_url": "https://chicagosemester.org/blog/feed/",
+      "website_url": "https://chicagosemester.org/blog/",
+      "description": "Chicago Semester is an experience-based academic program that provides real-world opportunities for college students seeking personal and professional growth.",
+      "followers": {
+        "facebook": 850,
+        "twitter": 255
+      },
+      "image_url": "https://i1.feedspot.com/4784864.jpg?t=1609323647"
+    },
+    {
+      "title": "Nutrition Unplugged",
+      "feed_url": "http://feeds.feedburner.com/nutritionunplugged",
+      "website_url": "https://chorereliefonline.blogspot.com/",
+      "description": "Helping people cut through the clutter and focus on the fad-free facts about nutrition.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 17400,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4782165.jpg?t=1609323721"
+    },
+    {
+      "title": "ChoreRelief",
+      "feed_url": "https://chorereliefonline.blogspot.com/feeds/posts/default",
+      "website_url": "https://chorereliefonline.blogspot.com/",
+      "description": "ChoreRelief was launched to provide property managers and owners, businesses and homeowners with quick and easy access to the general contracting services they need at the prices they can afford.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5202928.jpg?t=1609323084"
+    },
+    {
+      "title": "Cision",
+      "feed_url": "https://www.cision.com/resources/",
+      "website_url": "https://www.cision.com/resources/",
+      "description": "Public relations and marketing insights to help you navigate the changing media landscape. Including free media updates, best practices and trends.",
+      "followers": {
+        "facebook": 204400,
+        "twitter": 50500,
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/4431115.jpg"
+    },
+    {
+      "title": "Windy City Gridiron",
+      "feed_url": "https://www.windycitygridiron.com/rss/index.xml",
+      "website_url": "https://www.windycitygridiron.com/",
+      "description": "Your best source for quality Chicago Bears news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 43100,
+        "twitter": 14200
+      },
+      "image_url": "https://i1.feedspot.com/4756925.jpg?t=1607075648"
+    },
+    {
+      "title": "1871 Blog",
+      "feed_url": "https://blog.1871.com/rss.xml",
+      "website_url": "https://blog.1871.com/",
+      "description": "1871 is Chicago's entrepreneurial hub for digital startups. It provides Chicago startups with programming, access to mentors, educational resources, potential investors and a community of like-minded entrepreneurs that help them on their path to building successful businesses.",
+      "followers": {
+        "facebook": 21700,
+        "twitter": 57000
+      },
+      "image_url": "https://i1.feedspot.com/4784731.jpg?t=1609322060"
+    },
+    {
+      "title": "Dream Town Real Estate Blog",
+      "feed_url": "https://www.dreamtown.com/blog/feed",
+      "website_url": "https://www.dreamtown.com/blog",
+      "description": "Get real estate news about new developments, information on buying and selling, and keep up to date with what's happening in Chicago at the Dream Town blog. Chicago real estate by Dream Town Realty. Buy and Sell Chicago homes, lofts or condos in Chicago neighborhoods with the best real estate agents.",
+      "followers": {
+        "facebook": 78800,
+        "twitter": 1900,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4621140.jpg?t=1603804988"
+    },
+    {
+      "title": "Dr. Mercola",
+      "feed_url": "https://articles.mercola.com/sites/articles/rss.aspx",
+      "website_url": "https://www.mercola.com/",
+      "description": "Covers health articles, health videos, interviews, optimal wellness products, medical news, and free natural newsletter from natural health expert Dr. Joseph Mercola.Dr. Joseph Mercola the founder of Mercola.com, an osteopathic physician, his primary vision is to change the modern health paradigm by providing people with a valuable resource to help them take control of their health.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 426600,
+        "instagram": 530900
+      },
+      "image_url": "https://i1.feedspot.com/80170.jpg?t=1609322329"
+    },
+    {
+      "title": "ChicagoNow",
+      "feed_url": "http://www.chicagonow.com/rss/?x=1",
+      "website_url": "http://www.chicagonow.com/",
+      "description": "ChicagoNow is an online source for Chicagoans to network and discuss Chicago local news, Chicago weather, Chicago sports and more.",
+      "followers": {
+        "facebook": 32200,
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/4527249.jpg?t=1609322371"
+    },
+    {
+      "title": "Domu Blog",
+      "feed_url": "https://www.domu.com/blog/feed",
+      "website_url": "https://www.domu.com/blog",
+      "description": "Search Chicago's largest apartment site and find your perfect apartment that's worthy of calling home.",
+      "followers": {
+        "facebook": 6300,
+        "twitter": 3300,
+        "instagram": 8700
+      },
+      "image_url": "https://i1.feedspot.com/4782236.jpg?t=1610774423"
+    },
+    {
+      "title": "Origin Investments Blog",
+      "feed_url": "https://origininvestments.com/blog/feed/",
+      "website_url": "https://origininvestments.com/education-center/",
+      "description": "A top-ranked commercial real estate firm with almost $500 million in assets under management. Empowering real estate investors with streamlined ways to select and manage investments, from anywhere.",
+      "followers": {
+        "facebook": 754,
+        "twitter": 2000,
+        "instagram": 936
+      },
+      "image_url": "https://i1.feedspot.com/4635790.jpg?t=1609322776"
+    },
+    {
+      "title": "Third Coast Review",
+      "feed_url": "https://thirdcoastreview.com/feed",
+      "website_url": "https://thirdcoastreview.com/",
+      "description": "Third Coast Review is your source for Chicago arts, culture, and news. From reviews and previews to recipes, events, and breaking news, get it all at Third Coast Review.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 1300,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5397730.jpg?t=1651920247"
+    },
+    {
+      "title": "Luxury Chicago Apartments Blog",
+      "feed_url": "https://www.luxurychicagoapartments.com/blog/feed/",
+      "website_url": "https://www.luxurychicagoapartments.com/blog/",
+      "description": "Luxury Living Chicago is a rental-focused real estate brokerage. We offer an exceptional client experience & rent the newest downtown Chicago apartments.",
+      "followers": {
+        "facebook": 4300,
+        "instagram": 12000
+      },
+      "image_url": "https://i1.feedspot.com/4782229.jpg?t=1621423904"
+    },
+    {
+      "title": "Blog a Bull | Chicago Bulls community",
+      "feed_url": "https://www.blogabull.com/rss/index.xml",
+      "website_url": "https://www.blogabull.com/",
+      "description": "Your best source for quality Chicago Bulls news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 47200,
+        "twitter": 17200
+      },
+      "image_url": "https://i1.feedspot.com/4784723.jpg?t=1609322811"
+    },
+    {
+      "title": "Natalie in the City Blog",
+      "feed_url": "https://www.natalieinthecity.com/feeds/posts/default",
+      "website_url": "https://natalieinthecity.com/blog/",
+      "description": "Natalie shares her petite plus style tips with you and show the world that short, plus size women belong in fashion! Natalie is a plus size blogger, editor and journalist.",
+      "followers": {
+        "facebook": 18700,
+        "instagram": 160300
+      },
+      "image_url": "https://i1.feedspot.com/4352400.jpg?t=1609323242"
+    },
+    {
+      "title": "Shannon in the City | Chicago Fashion & Lifestyle Blog",
+      "feed_url": "https://www.shannoninthecity.com/feed/",
+      "website_url": "https://www.realpropertymgt.com/expert-tips",
+      "description": "An affordable Chicago fashion & lifestyle blog. Chicago based fashion blogger. My style is hipster classic wannabe art student.",
+      "followers": {
+        "facebook": 206,
+        "twitter": 128
+      },
+      "image_url": "https://i1.feedspot.com/4784830.jpg?t=1609323280"
+    },
+    {
+      "title": "Real Property Management",
+      "feed_url": "https://rpmnbly.site/wp-signup.php?new=www.rpmchicagoedge.com",
+      "website_url": "https://www.realpropertymgt.com/expert-tips",
+      "description": "Chicago Property Management services for all residential properties including single family homes, condominiums, townhomes, multi-family homes and apartment buildings.",
+      "followers": {
+        "facebook": 249,
+        "twitter": 93
+      },
+      "image_url": "https://i1.feedspot.com/4631067.jpg?t=1609323562"
+    },
+    {
+      "title": "Chicago Running Bloggers",
+      "feed_url": "https://www.chicagorunningbloggers.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.chicagorunningbloggers.com/",
+      "description": "Connecting local running and fitness bloggers in and around Chicago.",
+      "followers": {
+        "facebook": 697,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4782243.jpg?t=1609323577"
+    },
+    {
+      "title": "Health Data Management - Healthcare IT News for CIOs | Health Data Management",
+      "feed_url": "https://www.healthdatamanagement.com/feed?rss=true",
+      "website_url": "https://www.healthdatamanagement.com/opinion",
+      "description": "Health Data Management offers Healthcare IT news & analysis on health technology, HIPAA, meaningful use, health information exchange, EHRs & ICD-10. #digitalhealth",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 20300
+      },
+      "image_url": "https://i1.feedspot.com/4483512.jpg?t=1600768106"
+    },
+    {
+      "title": "LiftUpBros.com | Garage Door Repair Chicago",
+      "feed_url": "https://www.liftupbros.com/feed/",
+      "website_url": "https://www.liftupbros.com/blogs/",
+      "description": "LiftUpBros is pleased to help you with garage door installing and garage door parts in Chicago. Read some more helpful blogs to take care of any garage maintenance problems.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5072557.jpg?t=1609323678"
+    },
+    {
+      "title": "Eat Chic Chicago - Healthy Food and Nutrition Blog",
+      "feed_url": "https://www.eatchicchicago.com/feed/",
+      "website_url": "https://www.livinglifelessordinary.com/food",
+      "description": "As a Registered Dietitian Consultant in Chicago, Amari offers nutrition and wellness coaching to everyone and anyone looking to lead a healthier lifestyle. Whether you have weight loss goals, need assistance managing a chronic medical condition, or would just like a few fresh tips for your grocery list, Eat Chic Chicago is for you!",
+      "followers": {
+        "facebook": 774
+      },
+      "image_url": "https://i1.feedspot.com/4496458.jpg"
+    }
+  ]
+}

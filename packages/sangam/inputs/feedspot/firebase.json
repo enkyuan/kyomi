@@ -1,0 +1,17 @@
+{
+  "category": "Firebase",
+  "source_url": "https://rss.feedspot.com/firebase_rss_feeds",
+  "feeds": [
+    {
+      "title": "Firebase Blog",
+      "feed_url": "https://firebase.blog/rss.xml",
+      "website_url": "https://firebase.blog/",
+      "description": "News, tutorials, and updates from the Firebase team. Firebase helps make your app the best it can be for users and your business. It is an app development platform that helps you build and grow apps and games users love. Backed by Google and trusted by millions of businesses around the world.",
+      "followers": {
+        "facebook": 65,
+        "twitter": 173600
+      },
+      "image_url": "https://i1.feedspot.com/5429696.jpg?t=1659936937"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "category": "UK Feminist",
+  "source_url": "https://rss.feedspot.com/uk_feminist_rss_feeds",
+  "feeds": [
+    {
+      "title": "Nomipalony",
+      "feed_url": "https://www.nomipalony.com/feed/",
+      "website_url": "https://www.nomipalony.com/",
+      "description": "Feminist family lifestyle blog from North East England.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 4700,
+        "instagram": 6700
+      },
+      "image_url": "https://i1.feedspot.com/4749071.jpg?t=1601463231"
+    },
+    {
+      "title": "Womens Budget Group",
+      "feed_url": "https://www.wbg.org.uk/feed/",
+      "website_url": "https://www.wbg.org.uk/",
+      "description": "The Women's Budget Group scrutinises government policy from a gender perspective. Independent, not-for-profit monitoring the impact of government policies on men & women. We put forward policies for a gender equal future #feministeconomics",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 15600
+      },
+      "image_url": "https://i1.feedspot.com/4906296.jpg?t=1613657231"
+    },
+    {
+      "title": "language: a feminist guide",
+      "feed_url": "https://debuk.wordpress.com/feed/",
+      "website_url": "https://debuk.wordpress.com/",
+      "description": "A feminist blog about language, written by a feminist Debbie Cameron who is also a linguist. In this space, the author will try to address some frequently asked questions, debunk some common myths, and ponder some of the linguistic dilemmas confronting feminists in the 21st century.",
+      "followers": {
+        "twitter": 10200
+      },
+      "image_url": "https://i1.feedspot.com/4389212.jpg?t=1752573201"
+    },
+    {
+      "title": "The Guardian | Feminism",
+      "feed_url": "https://www.theguardian.com/world/feminism/rss",
+      "website_url": "https://www.theguardian.com/world/feminism",
+      "description": "Top stories, special features, live blogs and more. The world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4538797.jpg?t=1613657249"
+    },
+    {
+      "title": "The F-Word",
+      "feed_url": "https://thefword.org.uk/feed/",
+      "website_url": "https://thefword.org.uk/",
+      "description": "Articles on topics such as politics, film & tv, music, life and books. The F-Word publishes feminist reviews, blogs, features, news and also promotes discussion of contemporary feminism.",
+      "followers": {
+        "facebook": 7800,
+        "twitter": 42200
+      },
+      "image_url": "https://i1.feedspot.com/4538685.jpg?t=1659424306"
+    },
+    {
+      "title": "Another angry woman",
+      "feed_url": "https://anotherangrywoman.com/feed/",
+      "website_url": "https://anotherangrywoman.com/",
+      "description": "Thoughts and rants from another angry woman. Anarchist. Feminist. Queer. All angry.",
+      "followers": {
+        "facebook": 937,
+        "twitter": 29500
+      },
+      "image_url": "https://i1.feedspot.com/4906291.jpg?t=1613657259"
+    },
+    {
+      "title": "The Guilty Feminist",
+      "feed_url": "https://guiltyfeminist.com/feed/",
+      "website_url": "https://guiltyfeminist.com/",
+      "description": "Comedian Deborah Frances-White and her special guests as they discuss topics 'all 21st century feminists agree on' while confessing their insecurities, hypocrisies and fears that underlie their lofty principles.",
+      "followers": {
+        "facebook": 61800,
+        "twitter": 79600,
+        "instagram": 434100
+      },
+      "image_url": "https://i1.feedspot.com/4906293.jpg?t=1613657266"
+    }
+  ]
+}

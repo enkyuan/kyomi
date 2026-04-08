@@ -1,0 +1,68 @@
+{
+  "category": "UK Garage",
+  "source_url": "https://rss.feedspot.com/uk_garage_rss_feeds",
+  "feeds": [
+    {
+      "title": "5 Magazine \u00bb UK Garage",
+      "feed_url": "https://5mag.net/category/uk-garage/feed/",
+      "website_url": "https://5mag.net/category/uk-garage/",
+      "description": "Find out more about UK Garage music, playlists, singers, music producers and composers, etc. 5 Magazine is an electronic music magazine from Chicago. We cover Deep House, Soulful House, Techno, Disco, Tech House and all flavors of underground dance music.",
+      "followers": {
+        "facebook": 14900,
+        "twitter": 17200,
+        "instagram": 8300
+      },
+      "image_url": "https://i1.feedspot.com/5376086.jpg?t=1646049973"
+    },
+    {
+      "title": "electronica.org.uk Blog \u00bb UK Garage",
+      "feed_url": "https://electronica.org.uk/blog/category/future-uk-garage/feed/",
+      "website_url": "https://electronica.org.uk/blog/category/future-uk-garage/",
+      "description": "Discover the Latest in IDM, Glitch, Dub, Downtempo, Experimental, Ambient, and Drone Music",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 1600,
+        "instagram": 792
+      },
+      "image_url": "https://i1.feedspot.com/7337079.jpg?t=1726121097"
+    },
+    {
+      "title": "SVARA Blog \u00bb Garage",
+      "feed_url": "https://svararadio.com/blogs/latest-shows/tagged/garage.atom",
+      "website_url": "https://svararadio.com/blogs/latest-shows/tagged/garage/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7337080.jpg?t=1726121543"
+    },
+    {
+      "title": "Stamp The Wax \u00bb UK Garage",
+      "feed_url": "https://www.stampthewax.com/category/select-genre/house/feed/",
+      "website_url": "https://www.stampthewax.com/category/select-genre/house/",
+      "description": "Know more about UK Garage genre, alt Rock, news from artists and more. Founded as a student blog in 2011, Stamp The Wax has grown into one of the leading online voices in the UK for global-facing underground music, across editorial, film, radio and events.",
+      "followers": {
+        "facebook": 38300,
+        "twitter": 9000
+      },
+      "image_url": "https://i1.feedspot.com/5376089.jpg?t=1646049986"
+    },
+    {
+      "title": "Records I Like \u00bb Garage",
+      "feed_url": "https://recordsilike.co.uk/category/garage/feed/",
+      "website_url": "https://recordsilike.co.uk/category/garage/",
+      "description": "Find the list of records and playlists of the Garage genre in this section with bit of history thrown in. A music collection blog where the author posts various new and old records of music and playlists from various genres.",
+      "followers": {
+        "twitter": 894
+      },
+      "image_url": "https://i1.feedspot.com/5376085.jpg?t=1646049967"
+    },
+    {
+      "title": "UK Garage Live Blog",
+      "feed_url": "https://www.ukgarage.live//feed/rss2",
+      "website_url": "https://www.ukgarage.live/blog",
+      "description": "Find all the latest info on everything UKG from your favorite UK Garage DJ or Producer to the latest track releases and events. DJ's and Producers can promote their Shows, Events and Tracks, Record labels can promote their Artists and the UK Garage loving public can get their fill on all the latest goings on as well as finding tracks from days gone by.",
+      "followers": {
+        "twitter": 265
+      },
+      "image_url": "https://i1.feedspot.com/5376088.jpg?t=1646049980"
+    }
+  ]
+}

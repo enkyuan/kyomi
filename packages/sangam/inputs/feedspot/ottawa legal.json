@@ -1,0 +1,390 @@
+{
+  "category": "Ottawa Legal",
+  "source_url": "https://rss.feedspot.com/ottawa_legal_rss_feeds",
+  "feeds": [
+    {
+      "title": "Ottawa Law Review Blog",
+      "feed_url": "https://rdo-olr.org/feed/",
+      "website_url": "https://rdo-olr.org/blog/",
+      "description": "The Ottawa Law Review, crafted by students of the Common Law Section at the University of Ottawa, is a premier bilingual peer-reviewed journal, that fosters legal scholarship and professional insight. Its blog offers a vital resource for Canadian legal discourse and student development.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5742283.jpg?t=1703568025"
+    },
+    {
+      "title": "Daniels Law Firm Blog",
+      "feed_url": "https://www.lawyerinottawa.com/feed/",
+      "website_url": "https://www.lawyerinottawa.com/blog/",
+      "description": "Daniels Law Firm, a distinguished Ottawa boutique, houses adept courtroom lawyers and solicitors adept in Ontario law. Offering a spectrum of legal services, they customize approaches for each client, from dispute resolution to assertive advocacy. Their law blog caters to Ottawa's legal landscape, inviting valuable insights.",
+      "followers": {
+        "facebook": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5742945.jpg?t=1703592191"
+    },
+    {
+      "title": "Labour Pains",
+      "feed_url": "https://www.ottawaemploymentlaw.com/feeds/posts/default",
+      "website_url": "https://www.ottawaemploymentlaw.com/",
+      "description": "At Labour Pains, Sean P. Bawden, a seasoned trial lawyer and strategic advisor at Kelly Santini LLP, Ottawa, brings vast expertise in employment law and commercial disputes. With a background as Director of Litigation and Employment for a publicly listed corporation, he offers proactive counsel and advocacy on global judicial platforms. His prowess encompasses wrongful dismissal, workplace harassment, human rights, and employment implications in corporate transactions. Sean's blog stands as Canada's premier Employment Law resource.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5742928.jpg?t=1703592279"
+    },
+    {
+      "title": "Bayne Sellar Ertel Macrae Blog",
+      "feed_url": "https://bsbcriminallaw.com/feed/",
+      "website_url": "https://bsbcriminallaw.com/blog/",
+      "description": "Founded in 1972 by Donald Bayne, Bayne Sellar Ertel Macrae boasts premier defence representation in criminal law. Renowned for their dedication and discretion, they safeguard clients' rights across eastern Ontario. Explore their insightful criminal law blog for expert perspectives from their seasoned lawyers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5742931.jpg?t=1703593333"
+    },
+    {
+      "title": "Droit Ouimet-McPherson Blog",
+      "feed_url": "https://ottawa.law/feed/",
+      "website_url": "https://ottawa.law/blog/",
+      "description": "Droit Ouimet-McPherson Law Blog caters to businesses in the Ottawa-Rockland-Hawkesbury corridor, Ontario. With 20 years of collective expertise, they prioritize client needs, offering tailored solutions and transparent pricing. Explore their articles on Estate Planning, Real Estate, and Business law for insightful guidance and reach out for legal advice today.",
+      "followers": {
+        "facebook": 162
+      },
+      "image_url": "https://i1.feedspot.com/5742932.jpg?t=1703592366"
+    },
+    {
+      "title": "Marwah Law Blog",
+      "feed_url": "https://www.marwahlaw.com/blogs/ontario-law-firm.atom",
+      "website_url": "https://www.marwahlaw.com/blogs/ontario-law-firm",
+      "description": "Marwah Law, an Ontario-wide firm, prioritizes simplicity, innovation, and virtual accessibility in legal services. With physical offices across Ontario, they offer both virtual and in-person consultations. Stay updated on Immigration, Real Estate, and Business law through their blog, serving Ottawa and beyond.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/5742947.jpg?t=1703589467"
+    },
+    {
+      "title": "Tierney Stauffer LLP Law Blog",
+      "feed_url": "https://www.tslawyers.ca/feed/",
+      "website_url": "https://www.tslawyers.ca/blog/",
+      "description": "With over 40 years of service in Ottawa and expanded locations, Tierney Stauffer LLP offers professional, affordable legal assistance. Their integrity, experience, and dedication are reflected in their successful client interactions. Striving for excellence, they maintain loyalty through honest, affordable representation, fighting for clients at every turn. Follow their law blog for insightful updates and commentary.",
+      "followers": {
+        "facebook": 207,
+        "twitter": 353,
+        "instagram": 311
+      },
+      "image_url": "https://i1.feedspot.com/5742929.jpg?t=1703589373"
+    },
+    {
+      "title": "Vice & Hunter LLP Blog",
+      "feed_url": "https://viceandhunter.ca/blog/feed/",
+      "website_url": "https://viceandhunter.ca/blog/",
+      "description": "Vice and Hunter LLP excels in promptly identifying key legal issues and offering efficient advice to pursue client goals. Their resourceful approach often challenges larger firms. By fostering teamwork, they leverage diverse expertise to craft comprehensive solutions, ensuring client success.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5742923.jpg?t=1703593064"
+    },
+    {
+      "title": "Kelly Santini LLP",
+      "feed_url": "https://kellysantini.com/feed/",
+      "website_url": "https://kellysantini.com/news-and-resources/",
+      "description": "Kelly Santini LLP prioritizes equality, diversity, and inclusion, viewing them as moral imperatives. Their commitment extends beyond firm walls, strengthening communities. With decades of experience, they advise diverse clientele, fostering a better workplace and community since 1976.",
+      "followers": {
+        "facebook": 583,
+        "twitter": 1200,
+        "instagram": 226
+      },
+      "image_url": "https://i1.feedspot.com/5742939.jpg?t=1703589428"
+    },
+    {
+      "title": "Badre Law Blog",
+      "feed_url": "https://badrelaw.com/feed/",
+      "website_url": "https://badrelaw.com/blog/",
+      "description": "Badre Law, led by Mazen Badre, specializes in personal injury and insurance law in Toronto. With a focus on personalized representation, they offer practical insights through their blog. Covering disability claims, car accidents, and insurance matters, they provide valuable tips and legal updates for clients.",
+      "followers": {
+        "facebook": 553,
+        "twitter": 142
+      },
+      "image_url": "https://i1.feedspot.com/5503717.jpg?t=1675429604"
+    },
+    {
+      "title": "Quinn Thiele Mineault Grodzki LLP Blog",
+      "feed_url": "https://www.ottawalawyers.com/feed/",
+      "website_url": "https://www.ottawalawyers.com/blog/",
+      "description": "QTMG Injury Lawyers, comprising compassionate individuals, address community issues with dedication. Collaborating with clients, they pursue realistic goals and strive for maximum compensation. Ensuring comfort and comprehensive support, they fight tirelessly for rights, securing comfortable futures for clients.",
+      "followers": {
+        "facebook": 295,
+        "twitter": 143
+      },
+      "image_url": "https://i1.feedspot.com/5742925.jpg?t=1703593102"
+    },
+    {
+      "title": "Perley-Robertson, Hill & McDougall LLP Blog",
+      "feed_url": "https://perlaw.ca/feed/",
+      "website_url": "https://perlaw.ca/newsroom/",
+      "description": "Perley-Robertson, Hill and McDougall LLP, an esteemed Ottawa law firm, prioritizes client-centric approaches. They simplify legal processes with plain language, offering clear options and recommendations for informed decisions. Stay updated on legal developments and firm news, ensuring you're informed and empowered.",
+      "followers": {
+        "facebook": 165,
+        "twitter": 271
+      },
+      "image_url": "https://i1.feedspot.com/5742946.jpg?t=1703589460"
+    },
+    {
+      "title": "McNally & Gervan LLP Blog",
+      "feed_url": "https://www.ottawa-attorneys.ca/feed/",
+      "website_url": "https://www.ottawa-attorneys.ca/blog/",
+      "description": "McNally Gervan LLP, renowned Ottawa personal injury lawyers, assist accident victims with compassion and expertise. Specializing in catastrophic injuries, they tirelessly negotiate for fair compensation. Their latest news and blogs offer valuable insights into personal injury and accident law.",
+      "followers": {
+        "facebook": 278,
+        "twitter": 1300,
+        "instagram": 124
+      },
+      "image_url": "https://i1.feedspot.com/5742934.jpg?t=1703589401"
+    },
+    {
+      "title": "EXCESS COPYRIGHT",
+      "feed_url": "https://excesscopyright.blogspot.com/feeds/posts/default",
+      "website_url": "https://excesscopyright.blogspot.com/",
+      "description": "This Excess Copyright blog delves into Canadian and international intellectual property law, cautioning against its excesses. Authored by an experienced IP lawyer with a background in prestigious firms, government, and academia, it offers personal insights. Views expressed are individual, not legal advice.",
+      "followers": {
+        "twitter": 285
+      },
+      "image_url": "https://i1.feedspot.com/5742924.jpg?t=1703592958"
+    },
+    {
+      "title": "MG Law Blog",
+      "feed_url": "https://mginjurylawyers.com/feed/",
+      "website_url": "https://mginjurylawyers.com/blog/",
+      "description": "Founded in 2010 by Salvatore Grillo and Antonio Marino, MG Law delivers compassionate legal representation for personal injury cases. Their dedicated team offers valuable insights through the MG Law Injury Lawyers Blog, keeping clients informed on Ontario's personal injury laws, news, and events.",
+      "followers": {
+        "facebook": 647,
+        "twitter": 43,
+        "instagram": 502
+      },
+      "image_url": "https://i1.feedspot.com/5503690.jpg?t=1675428771"
+    },
+    {
+      "title": "Davidson Houle Allen LLP",
+      "feed_url": "https://dhacondolaw.ca/feed/",
+      "website_url": "https://dhacondolaw.ca/condo-law-news/",
+      "description": "Davidson Houle Allen LLP, a premier boutique condominium and joint property law firm established in 2017, serves Eastern Ontario. They offer comprehensive legal services for condominium corporations, homeowners' associations, and co-tenancy associations. Specializing in Accommodation, By-laws, Declarations, and more, they provide expert guidance on co-ownership legal matters.",
+      "followers": {
+        "facebook": 192,
+        "twitter": 797
+      },
+      "image_url": "https://i1.feedspot.com/5302675.jpg?t=1626421564"
+    },
+    {
+      "title": "Davies Family Law Blog",
+      "feed_url": "https://www.daviesfamilylaw.com/blog-feed.xml",
+      "website_url": "https://www.daviesfamilylaw.com/blog",
+      "description": "Davies Law Blog, curated by Jared, a University of Ottawa law graduate, delves into family law intricacies. With a passion kindled during his internship at an Ottawa family law firm, Jared covers divorce, custody, support, and domestic contracts. Explore insights on family legal matters and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5500849.jpg?t=1675081633"
+    },
+    {
+      "title": "Robeside Assistance",
+      "feed_url": "https://robesideassistance.ca/feed/",
+      "website_url": "https://robesideassistance.ca/",
+      "description": "'The Robeside Assistance' blog, curated by the County of Carleton Law Association's library staff, offers legal resources and research insights. Since 1888, CCLA, a non-profit law association, has managed the Ottawa Lawyers' Courthouse library, fostering legal knowledge and support.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5742950.jpg?t=1703593000"
+    },
+    {
+      "title": "Mann Lawyers",
+      "feed_url": "https://www.mannlawyers.com/feed/",
+      "website_url": "https://www.mannlawyers.com/resources/",
+      "description": "Mann Lawyers LLP offers comprehensive legal services in Ottawa and Perth, specializing in family and business law and commercial and residential real estate. Their blog provides valuable insights into various legal matters, empowering clients to stay informed.",
+      "followers": {
+        "facebook": 564,
+        "twitter": 541,
+        "instagram": 894
+      },
+      "image_url": "https://imgur.com/nPCsJWF?t=1709469345"
+    },
+    {
+      "title": "Affordable Defence",
+      "feed_url": "https://affordabledefence.com/feed/",
+      "website_url": "https://affordabledefence.com/articles/",
+      "description": "Affordable Defence, Ottawa's premier criminal law firm, offers top-tier legal defence regardless of financial means. With a dedicated team versed in domestic assault, motor vehicle law, impaired driving, and DUI charges, they empower clients to shape their futures post-arrest.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5742926.jpg?t=1703738898"
+    },
+    {
+      "title": "Nelligan Law",
+      "feed_url": "https://nelliganlaw.ca/feed/",
+      "website_url": "https://nelliganlaw.ca/resources/",
+      "description": "Founded by John P. Nelligan and Denis Power, Nelligan Law, formerly Nelligan Power, boasts extensive expertise across diverse practice groups. With a committed team of lawyers and professionals, they guide clients through pivotal life moments with top-notch services and dedication.",
+      "followers": {
+        "facebook": 825,
+        "twitter": 879
+      },
+      "image_url": "https://i1.feedspot.com/5500825.jpg?t=1675083037"
+    },
+    {
+      "title": "Law Bytes",
+      "feed_url": "https://www.michaelgeist.ca/feed/",
+      "website_url": "https://www.michaelgeist.ca/",
+      "description": "In recent years the intersection between law, technology, and policy has exploded as digital policy has become a mainstream concern in Canada and around the world. This podcast explores digital policies in conversations with people studying the legal and policy challenges, set the rules, or are experts in the field. It provides a Canadian perspective, but since the internet is global, examining international developments and Canada's role in shaping global digital policy is be an important part of the story...",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 18200
+      },
+      "image_url": "https://i1.feedspot.com/5542879.jpg?t=1745422861"
+    },
+    {
+      "title": "Library Boy",
+      "feed_url": "https://micheladrien.blogspot.com/feeds/posts/default",
+      "website_url": "https://micheladrien.blogspot.com/",
+      "description": "Library Boy blog, curated by Michel-Adrien, an Ottawa-based Law Librarian, presents legal research news. With a disclaimer, Michel-Adrien shares personal views while disentangling legal complexities. His blog serves as a trusted resource for legal insights, unearthing diverse perspectives within Ottawa's legal realm.",
+      "followers": {
+        "twitter": 487
+      },
+      "image_url": "https://i1.feedspot.com/5742927.jpg?t=1703589364"
+    },
+    {
+      "title": "Public Law Centre Blog",
+      "feed_url": "https://publiclawdroitpublic.ca/feed/",
+      "website_url": "https://publiclawdroitpublic.ca/blog/",
+      "description": "The University of Ottawa emphasizes public law's pivotal role in tackling Canada's and the global community's pressing issues. From sustainable development to human rights in technological advancements, public law navigates complexities, paving the way for progress and reconciliation with Indigenous peoples.",
+      "followers": {
+        "facebook": 224,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5742940.jpg?t=1703589434"
+    },
+    {
+      "title": "Dabros Law Blog",
+      "feed_url": "https://www.dabroslaw.com/feed/",
+      "website_url": "https://www.dabroslaw.com/blog/",
+      "description": "Shane A. Dabros, founder of Dabros Law, pioneers a modern legal approach in Estate Planning, Personal Injury, and Real Estate. With a focus on hassle-free, responsive service, he builds strong client relationships, understanding their unique circumstances and goals. Explore their blog for valuable insights on Wills and Estates, Personal Injury Laws, and more.",
+      "followers": {
+        "facebook": 518
+      },
+      "image_url": "https://i1.feedspot.com/5742935.jpg?t=1703589406"
+    },
+    {
+      "title": "Low Murchison Radnoff LLP Blog",
+      "feed_url": "https://lmrlawyers.com/feed/",
+      "website_url": "https://lmrlawyers.com/blog/",
+      "description": "Low Murchison Radnoff LLP, a respected Ottawa law firm since 1938, offers comprehensive legal services. Formed from the merger of Low Murchison and Radnoff Pearl in 2011, their storied history combines with forward-thinking approaches. With creative solutions and years of experience, they prioritize client excellence. Stay updated on legal news and opportunities with their insightful resources.",
+      "followers": {
+        "facebook": 281,
+        "twitter": 299
+      },
+      "image_url": "https://i1.feedspot.com/5742937.jpg?t=1703593030"
+    },
+    {
+      "title": "Woods LaFortune LLP Blog",
+      "feed_url": "https://www.wl-tradelaw.com/feed/",
+      "website_url": "https://www.wl-tradelaw.com/blog/",
+      "description": "Woods, LaFortune LLP, an innovative law firm, prioritizes international trade, investment, and government relations. Offering advocacy, strategic advice, and business planning, their experienced team ensures unmatched excellence. Their lean model delivers personalized, cost-effective solutions to legal and business challenges.",
+      "followers": {
+        "twitter": 126
+      },
+      "image_url": "https://i1.feedspot.com/5742949.jpg?t=1703589476"
+    },
+    {
+      "title": "The Law21 Blog",
+      "feed_url": "https://www.law21.ca/feed/",
+      "website_url": "https://www.law21.ca/blog/",
+      "description": "Jordan Furlong, a prominent analyst of the global legal market, offers invaluable insights into its evolution. Legal firms seek Law21 consultancy to grasp radical changes and build sustainable enterprises. Jordan advises lawyers on crafting competitive strategies to thrive in the evolving legal services landscape.",
+      "followers": {
+        "twitter": 16500
+      },
+      "image_url": "https://i1.feedspot.com/751031.jpg?t=1658925859"
+    },
+    {
+      "title": "Connolly Obagi LLP",
+      "feed_url": "https://www.connollyobagi.com/feed/",
+      "website_url": "https://www.connollyobagi.com/ottawa-legal-news/",
+      "description": "Connolly Obagi LLP, with experienced personal injury lawyers in Ottawa, excels in representing clients with various injuries. From brain to spinal cord and orthopaedic injuries, they provide successful legal representation. Stay informed with their latest legal news and local event updates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5742948.jpg?t=1703593152"
+    },
+    {
+      "title": "Real Estate Lawyer Ottawa Blog",
+      "feed_url": "https://realestatelawyerottawa.ca/feed/",
+      "website_url": "https://realestatelawyerottawa.ca/real-estate-law-blog/",
+      "description": "Real Estate Lawyer Ottawa boasts a seasoned team offering top-notch legal support for property matters. Specializing in buying, selling, leasing, and disputes, they prioritize client satisfaction with personalized service. Their expertise in Ottawa's property market ensures adept navigation of complexities.",
+      "followers": {
+        "facebook": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5742933.jpg?t=1703592605"
+    },
+    {
+      "title": "Graeme B. Fraser Law Firm Blog",
+      "feed_url": "https://gfraserlaw.ca/feed/",
+      "website_url": "https://gfraserlaw.ca/blog/",
+      "description": "Established in 1994, this thriving Ottawa West Law Firm, led by Graeme Fraser, serves Kanata, Nepean, Stittsville, and the Ottawa Valley. Fraser's stellar reputation and tenacious advocacy, coupled with negotiation prowess, have garnered success for numerous clients. Specializing in various legal areas, their collaborative approach ensures tailored solutions for clients' needs.",
+      "followers": {
+        "facebook": 167,
+        "twitter": 34
+      },
+      "image_url": "https://i1.feedspot.com/5742941.jpg?t=1703589438"
+    },
+    {
+      "title": "Edelson Foord Law",
+      "feed_url": "https://edelsonlaw.ca/feed/",
+      "website_url": "https://edelsonlaw.ca/all-posts/",
+      "description": "Edelson Foord Law features a dedicated team of lawyers committed to criminal law principles. With expertise in trial appellate litigation, they challenge unfair legislation and prioritize academic excellence. Offering discreet representation across Ontario, they handle cross-jurisdictional cases, even appearing internationally when needed.",
+      "followers": {
+        "twitter": 452
+      },
+      "image_url": "https://i1.feedspot.com/5742936.jpg?t=1703592859"
+    },
+    {
+      "title": "Fresh Legal",
+      "feed_url": "https://freshlegal.ca/blog/?format=rss",
+      "website_url": "https://www.freshlegal.ca/resources",
+      "description": "Fresh Legal's team supports clients through various family life stages, offering both legal information and advice. Advocating for clients' best interests, they cover separation, prenuptial agreements, adoption, child protection, and estate planning. Trusted guidance for families' legal needs.",
+      "followers": {
+        "facebook": 692,
+        "twitter": 400
+      },
+      "image_url": "https://i1.feedspot.com/5742943.jpg?t=1703589447"
+    },
+    {
+      "title": "Auger Hollingsworth Blog",
+      "feed_url": "https://criminaldefence.law/feed/",
+      "website_url": "https://criminaldefence.law/blog/",
+      "description": "Full-Service Criminal Defence Law Firm",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5742938.jpg?t=1703592657"
+    },
+    {
+      "title": "RPB Family Law Blog",
+      "feed_url": "https://rpblaw.ca/feed/",
+      "website_url": "https://rpblaw.ca/blog/",
+      "description": "RPB Family Law prioritizes family matters, leveraging technology for efficient and prompt client communication. Their Ottawa-based legal services cover child custody, spousal support, and property division. With complex dynamics in family law, their trusted lawyers offer invaluable support through challenging legal processes.",
+      "followers": {
+        "facebook": 158
+      },
+      "image_url": "https://i1.feedspot.com/5509774.jpg?t=1687844886"
+    },
+    {
+      "title": "David Gardiner Blog",
+      "feed_url": "https://dginjurylaw.ca/feed/",
+      "website_url": "https://dginjurylaw.ca/blog/",
+      "description": "David Gardiner, an esteemed Ottawa Personal Injury Lawyer, has advocated for over 5,000 clients in Ontario, securing millions in compensation over his 20+ year tenure. His diverse clientele, united by challenging circumstances, find solace in his relentless pursuit of justice. David tirelessly fights for accident victims and disability claimants, ensuring they receive the compensation and dignity they rightfully deserve.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5742942.jpg?t=1703739310"
+    },
+    {
+      "title": "Administrative Law Matters",
+      "feed_url": "https://www.administrativelawmatters.com/feed/",
+      "website_url": "https://www.michaelspratt.com/opinion/",
+      "description": "Paul Daly, curator of the Administrative Law Matters blog, is a sought-after legal voice on matters of public importance. His insights are valued by parliamentary committees, governmental agencies, and legal practitioners across public and private sectors.",
+      "followers": {
+        "twitter": 6800
+      },
+      "image_url": "https://i1.feedspot.com/4040695.jpg?t=1611552681"
+    },
+    {
+      "title": "Charitsis Sheikh LLP Blog",
+      "feed_url": "https://www.ottawa-criminal-lawyers.ca/feed/",
+      "website_url": "https://www.ottawa-criminal-lawyers.ca/criminal-lawyer-blog/",
+      "description": "Charitsis Sheikh LLP, renowned Ottawa criminal lawyers, guarantee winning defence strategies. With expertise in assault, DUI charges, and more, they secure unmatched success for clients. Highly acclaimed in Ontario, their Criminal Lawyer Blog provides invaluable insights for navigating legal challenges.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5742944.jpg?t=1703592564"
+    }
+  ]
+}

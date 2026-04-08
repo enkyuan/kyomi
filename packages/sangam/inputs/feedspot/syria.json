@@ -1,0 +1,360 @@
+{
+  "category": "Syria",
+  "source_url": "https://rss.feedspot.com/syria_rss_feeds",
+  "feeds": [
+    {
+      "title": "Syrian Arab News Agency",
+      "feed_url": "https://sana.sy/en/?feed=rss2",
+      "website_url": "https://sana.sy/en/",
+      "description": "Syrian Arab News Agency (SANA) is the national official news agency in Syria.",
+      "followers": {
+        "twitter": 19000,
+        "instagram": 21800
+      },
+      "image_url": "https://i1.feedspot.com/4744169.jpg?t=1608211054"
+    },
+    {
+      "title": "The New York Times \u00bb Syria",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/http://www.nytimes.com/topic/destination/syria/rss.xml",
+      "website_url": "https://www.nytimes.com/topic/destination/syria?mcubz=1",
+      "description": "The New York Times is a hub for conversation about news and ideas. Find breaking news, multimedia, reviews & opinion on Syria.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/4744692.jpg?t=1608211092"
+    },
+    {
+      "title": "Daily Mail \u00bb Syria",
+      "feed_url": "https://www.dailymail.co.uk/news/syria/index.rss",
+      "website_url": "https://www.dailymail.co.uk/news/syria/index.html",
+      "description": "Get the latest Syria breaking news with videos and pictures of Aleppo, Raqqa, the war in Syria, plus more on Russian, US and international military attacks on ISIS on Daily Mail.",
+      "followers": {
+        "facebook": 23200000,
+        "twitter": 797200
+      },
+      "image_url": "https://i1.feedspot.com/4744702.jpg?t=1608211100"
+    },
+    {
+      "title": "The Sun \u00bb Syria",
+      "feed_url": "https://www.thesun.co.uk/where/syria/feed/",
+      "website_url": "https://www.thesun.co.uk/where/syria/",
+      "description": "Get the Latest news, pictures and video for Syria from the Sun.",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 2100000
+      },
+      "image_url": "https://i1.feedspot.com/4745575.jpg?t=1608211107"
+    },
+    {
+      "title": "TheJournal.ie \u00bb Syria",
+      "feed_url": "https://www.thejournal.ie/topic/syria/feed/",
+      "website_url": "https://www.thejournal.ie/syria/news/",
+      "description": "TheJournal.ie delivers timely news and analysis direct on app, mobile and desktop. Get breaking news and analysis on Syria from TheJournal.ie",
+      "followers": {
+        "facebook": 470100,
+        "twitter": 759400
+      },
+      "image_url": "https://i1.feedspot.com/4744813.jpg?t=1614756955"
+    },
+    {
+      "title": "Syria News",
+      "feed_url": "https://syrianews.cc/feed/",
+      "website_url": "https://syrianews.cc/",
+      "description": "News and AnalysLatest updates on the conflict in Syria. Information and articles about the war in Syria and the Syrian situation.es about Syria",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5164358.jpg"
+    },
+    {
+      "title": "The Syria Campaign",
+      "feed_url": "https://diary.thesyriacampaign.org/feed/",
+      "website_url": "https://diary.thesyriacampaign.org/",
+      "description": "The Syria Campaign is a global advocacy group launched in 2014 with the mission to mobilize people around the world to advocate to protect Syrian civilians and accelerate progress towards a peaceful and democratic future for Syria.",
+      "followers": {
+        "facebook": 280900,
+        "twitter": 45500
+      },
+      "image_url": "https://i1.feedspot.com/4744230.jpg?t=1608211129"
+    },
+    {
+      "title": "Syria Freedom Forever",
+      "feed_url": "https://syriafreedomforever.wordpress.com/feed/",
+      "website_url": "https://syriafreedomforever.wordpress.com/",
+      "description": "Syria Freedom Forever is dedicated to the struggle of the Syrian people in their uprising to overthrow the Assad authoritarian regime and to build a Democratic, Secular, Socialist, Anti imperialist and Pro Resistance Syria",
+      "followers": {
+        "facebook": 159200,
+        "twitter": 123200
+      },
+      "image_url": "https://i1.feedspot.com/4744743.jpg?t=1608211351"
+    },
+    {
+      "title": "ikhwan syria",
+      "feed_url": "https://ikhwansyria.com/feed/",
+      "website_url": "https://ikhwansyria.com/",
+      "description": "ikhwan syria is the official page of the Muslim Brotherhood in Syria. We provide official group statements, statements of leadership and symbols and some news related to the revolution and the homeland.",
+      "followers": {
+        "facebook": 168000,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4744861.jpg?t=1608211173"
+    },
+    {
+      "title": "Zaina Erhaim",
+      "feed_url": "https://zaina-erhaim.com/feed/",
+      "website_url": "https://zaina-erhaim.com/",
+      "description": "I am Syrian journalist, forced to leave Syria by Assad and then by foreign Jihadis. I am now managing campaigns to break stereotypes imposed on Syrian women",
+      "followers": {
+        "twitter": 41200
+      },
+      "image_url": "https://i1.feedspot.com/4744248.jpg?t=1608211593"
+    },
+    {
+      "title": "The Guardian \u00bb Syria",
+      "feed_url": "https://www.theguardian.com/world/syria/rss",
+      "website_url": "https://www.theguardian.com/world/syria",
+      "description": "Get the Latest news from Syria as covered by the Guardian. Find News and stories about the country, people and politics.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4744699.jpg?t=1608211096"
+    },
+    {
+      "title": "Syria Stories",
+      "feed_url": "https://syriastories.net/feed/",
+      "website_url": "https://syriastories.net/",
+      "description": "Syria Stories (previously Damascus Bureau) is a platform for independent Syrian journalists to share powerful stories from the conflict. These original pieces tell unique stories and provide honest and human perspectives on the personal struggles and suffering of Syrians both inside and outside the country.",
+      "followers": {
+        "facebook": 31300,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4729079.jpg?t=1607686566"
+    },
+    {
+      "title": "Syria Comment",
+      "feed_url": "https://feeds.feedburner.com/Syriacomment",
+      "website_url": "https://syriacomment.com/",
+      "description": "Syria Comment is an authoritative source of news, commentary, and analysis on Syria and its neighbors. Joshua Landis writes about Syrian politics, history, and religion.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 78600
+      },
+      "image_url": "https://i1.feedspot.com/98250.jpg?t=1607686706"
+    },
+    {
+      "title": "Ahmad Sufian Bayram",
+      "feed_url": "https://ahmadsb.com/feed/",
+      "website_url": "https://ahmadsb.com/",
+      "description": "I am a Syrian social entrepreneur, startup, and collaborative economy activist. I've been working on supporting Syrian nationals to gain access to entrepreneurship and build a supportive environment",
+      "followers": {
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4744782.jpg?t=1608211146"
+    },
+    {
+      "title": "Syrian War Daily",
+      "feed_url": "https://syrianwardaily.com/feed/",
+      "website_url": "https://syrianwardaily.com/",
+      "description": "Syrian War Daily is a private, non monetized project aimed at informing, educating and raising awareness on the topic of Syrian war and Syria itself. The main aim of the project is to deliver daily unbiased updates from Syria with occasional in-depth specialized articles",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4744807.jpg?t=1608211149"
+    },
+    {
+      "title": "News Of The Revolution In Syria",
+      "feed_url": "http://notris.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://notris.blogspot.com/",
+      "description": "I am Dick Gregory. I discuss about Syrian revolution and give my analysis on the same.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4744779.jpg?t=1608211266"
+    },
+    {
+      "title": "Syrian Free Press",
+      "feed_url": "https://syrianfreepress.wordpress.com/feed/",
+      "website_url": "https://syrianfreepress.wordpress.com/",
+      "description": "Syrian Free Press contains the archives of most important and Reliable Global War News.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4729947.jpg?t=1607686602"
+    },
+    {
+      "title": "Syria General",
+      "feed_url": "https://syriagenerals.wordpress.com/feed/",
+      "website_url": "https://syriagenerals.wordpress.com/",
+      "description": "Our goal is to educate people about the Syrian war with news updates",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4744797.jpg?t=1608211220"
+    },
+    {
+      "title": "The Azraq Education and Community Fund",
+      "feed_url": "http://theazraqfund.org/blog?format=RSS",
+      "website_url": "http://theazraqfund.org/",
+      "description": "Providing education initiatives and humanitarian aid to Syrian refugees and other vulnerable families in south Azraq, Jordan.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 297,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4729944.jpg?t=1607687466"
+    },
+    {
+      "title": "Orange Blossom Water",
+      "feed_url": "https://orangeblossomwater.net/index.php/feed/",
+      "website_url": "https://orangeblossomwater.net/",
+      "description": "My name is Dimah. I'm from Syria. Most of my posts are about Syrian cuisine, I'm sharing with you dishes and techniques that you will never find in cookbooks because Syrians learn recipes from their mothers and grandmothers not from books or chefs.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 85,
+        "instagram": 401
+      },
+      "image_url": "https://i1.feedspot.com/4744194.jpg?t=1608211165"
+    },
+    {
+      "title": "Maysaloon | Arab Blogger",
+      "feed_url": "http://www.maysaloon.org/feeds/posts/default?alt=rss",
+      "website_url": "http://www.maysaloon.org/",
+      "description": "A Syrian awakening in a modern world that's gone insane. Maysaloon is significant to all Syrians and is remembered every year on July 24th. I am now sufficiently motivated to add my voice to the growing community of Arab bloggers giving a critical and Arabic perspective on the events and people of the Middle East, free from Orientalist assumptions and prejudice.",
+      "followers": {
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/4729861.jpg?t=1607686632"
+    },
+    {
+      "title": "The Atlantic Council \u00bb SyriaSource",
+      "feed_url": "https://www.atlanticcouncil.org/category/blogs/syriasource/feed/",
+      "website_url": "https://www.atlanticcouncil.org/category/blogs/syriasource/",
+      "description": "The Atlantic Council promotes constructive leadership and engagement in international affairs based on the central role of the Atlantic Community in meeting global challenges.",
+      "followers": {
+        "facebook": 62200,
+        "twitter": 218000
+      },
+      "image_url": "https://i1.feedspot.com/4744018.jpg?t=1608211605"
+    },
+    {
+      "title": "Beloved Syria",
+      "feed_url": "https://belovedsyria.com.au/feed/",
+      "website_url": "https://belovedsyria.com.au/",
+      "description": "Beloved Syria is a magazine project Norma and Susan are working on with a professional graphic artist. It presents the views of Syrians currently living in Syria or of Syrians who have left since the crisis began. Beloved Syria aims to give a respectful voice to the people of Syria as they focus on uniting and rebuilding their country.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 59
+      },
+      "image_url": "https://i1.feedspot.com/4744817.jpg?t=1608211666"
+    },
+    {
+      "title": "Syrian Network for Human Rights",
+      "feed_url": "https://snhr.org/",
+      "website_url": "https://snhr.org/",
+      "description": "The Syrian Network for Human Rights, founded in June 2011, is a non-governmental, non-profit independent organization that is a primary source for the United Nations on all death toll-related statistics in Syria.",
+      "followers": {
+        "facebook": 533400,
+        "twitter": 82100,
+        "instagram": 23300
+      },
+      "image_url": "https://i1.feedspot.com/4744222.jpg?t=1608211060"
+    },
+    {
+      "title": "Syria Support Movement",
+      "feed_url": "https://syriasupportmovement.org/feed/",
+      "website_url": "https://syriasupportmovement.org/",
+      "description": "We advocate massive provision of humanitarian aid for all displaced Syrians, wherever they may be, including Syrian territory.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 45
+      },
+      "image_url": "https://i1.feedspot.com/4745529.jpg?t=1608211177"
+    },
+    {
+      "title": "Raqqa is Being Slaughtered Silently",
+      "feed_url": "https://www.raqqa-sl.com/en/?feed=rss2",
+      "website_url": "https://www.newsdeeply.com/syria",
+      "description": "Raqqa is Being Slaughtered Silently is a campaign launched by a group of non-violent activists in Raqqa to expose the atrocities committed by the terrorist extremist group 'the Islamic State of Iraq and Syria toward the civilian populations in the city.",
+      "followers": {
+        "facebook": 702900,
+        "twitter": 69800
+      },
+      "image_url": "https://i1.feedspot.com/4744729.jpg?t=1608211072"
+    },
+    {
+      "title": "Friends of Syria | Revealing the Truth",
+      "feed_url": "https://friendsforsyria.com/feed/",
+      "website_url": "https://www.newsdeeply.com/syria",
+      "description": "Having being in Syria when the troubles unfolded and witnessing how the country loves their president, I was shocked to see the lies coming from the International Press on the events in Syria, giving a totally twisted view of events. So i reveal the truth about Syria.",
+      "followers": {
+        "facebook": 33100,
+        "twitter": 763
+      },
+      "image_url": "https://i1.feedspot.com/4744792.jpg?t=1608211083"
+    },
+    {
+      "title": "News Deeply \u00bb Syria",
+      "feed_url": "https://www.newsdeeply.com/syria/rss",
+      "website_url": "https://www.newsdeeply.com/syria",
+      "description": "News deeply provides In-depth coverage of the many facets of the ongoing war in Syria, featuring reporting, analysis, expert interviews and commentary.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/4743961.jpg?t=1608211122"
+    },
+    {
+      "title": "The Levant \u00bb Syria",
+      "feed_url": "https://the-levant.com/category/news/syria/feed/",
+      "website_url": "https://www.syrianembassy.ro/en/",
+      "description": "The Levant was established in 2014 by Dr. Haytham Mouzahem with a group of like-minded journalists, analysts, activists and researchers with an interest for the Middle East. Read the blog to find news and analysis on Syria.",
+      "followers": {
+        "facebook": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4745553.jpg?t=1608211127"
+    },
+    {
+      "title": "Syrian Embassy",
+      "feed_url": "https://www.syrianembassy.ro/en/feed/",
+      "website_url": "https://www.syrianembassy.ro/en/",
+      "description": "Syrian Embassy is the embassy of the Syrian Arab Republic in Bucharest. It provides news and analysis on Syria.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4745545.jpg?t=1608211512"
+    },
+    {
+      "title": "The Aleppo Project",
+      "feed_url": "https://www.thealeppoproject.com/cgi-sys/suspendedpage.cgi",
+      "website_url": "https://www.thealeppoproject.com/blog/",
+      "description": "The Aleppo Project is an open collaboration to capture information about the past of the Syrian city, analyse the conflict that is destroying it, and help residents plan for the future.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 463
+      },
+      "image_url": "https://i1.feedspot.com/4744823.jpg?t=1608211138"
+    },
+    {
+      "title": "Rise for Syria",
+      "feed_url": "https://riseforsyria.world/feed/",
+      "website_url": "https://riseforsyria.world/news/",
+      "description": "Rise for Syria is a global action campaign aimed at uplifting the people of Syria and providing the victims of this war with valuable, tangible support.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 243
+      },
+      "image_url": "https://i1.feedspot.com/4744868.jpg?t=1608211161"
+    },
+    {
+      "title": "Tight-Knit Syria",
+      "feed_url": "https://www.tightknitsyria.com/feed/",
+      "website_url": "https://www.tightknitsyria.com/blog/",
+      "description": "Tight-Knit Syria (TKS) is a non-profit organization helping to rebuild the lives of Syrian Refugee women displaced across the Middle East",
+      "followers": {
+        "facebook": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4744160.jpg?t=1608211180"
+    }
+  ]
+}

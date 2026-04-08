@@ -1,0 +1,1566 @@
+{
+  "category": "Artificial Intelligence",
+  "source_url": "https://rss.feedspot.com/ai_rss_feeds",
+  "feeds": [
+    {
+      "title": "Machine Learning Mastery Blog",
+      "feed_url": "https://machinelearningmastery.com/blog/feed/",
+      "website_url": "https://machinelearningmastery.com/blog/",
+      "description": "Blog by Jason Brownlee. Jason started this blog because he is passionate about helping professional developers to get started and confidently apply machine learning to address complex problems.",
+      "followers": {
+        "facebook": 80400,
+        "twitter": 69000
+      },
+      "image_url": "https://i1.feedspot.com/4575009.jpg?t=1615179945"
+    },
+    {
+      "title": "MarkTechPost",
+      "feed_url": "https://www.marktechpost.com/feed/",
+      "website_url": "https://www.marktechpost.com/",
+      "description": "Providing easy-to-consume, byte size updates in machine learning, deep learning, and data science research. The vision of MarkTechPost is to showcase the hottest research trends in AI from around the world using our innovative method of search and discovery.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 9300
+      },
+      "image_url": "https://i1.feedspot.com/5362468.jpg?t=1753177625"
+    },
+    {
+      "title": "Google Research Blog",
+      "feed_url": "https://research.google/blog/rss/",
+      "website_url": "https://research.google/blog/",
+      "description": "Google AI is focused on bringing the benefits of AI to everyone. In conducting and applying our research, we advance the state-of-the-art in many domains.The latest news and updates directly from Google bring the benefits of AI to everyone.",
+      "followers": {
+        "twitter": 2000000
+      },
+      "image_url": "https://i1.feedspot.com/4971488.jpg?t=1660037143"
+    },
+    {
+      "title": "Analytics Vidhya Blog",
+      "feed_url": "https://www.analyticsvidhya.com/feed/",
+      "website_url": "https://www.analyticsvidhya.com/blog/",
+      "description": "Here at Analytics Vidhya, beginners or professionals feel free to ask any questions on business analytics, data science, big data, data visualization tools & or techniques. Analytics Vidhya provides a community-based knowledge portal for Analytics and Data Science professionals. The aim of the platform is to become a complete portal serving all knowledge and career needs of Data Science Professionals.",
+      "followers": {
+        "facebook": 95600,
+        "twitter": 30600
+      },
+      "image_url": "https://i1.feedspot.com/5397384.jpg?t=1651817534"
+    },
+    {
+      "title": "MIT News - Artificial intelligence",
+      "feed_url": "https://news.mit.edu/rss/topic/artificial-intelligence2",
+      "website_url": "https://news.mit.edu/topic/artificial-intelligence2",
+      "description": "MIT News is dedicated to communicating to the media and the public the news and achievements of the students, faculty, staff and the greater MIT community.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 1400000,
+        "instagram": 500
+      },
+      "image_url": "https://i1.feedspot.com/4611685.jpg?t=1615870226"
+    },
+    {
+      "title": "Unite.AI",
+      "feed_url": "https://www.unite.ai/feed/",
+      "website_url": "https://www.unite.ai/",
+      "description": "Unite AI offers detailed analysis and news on the latest advancements in machine learning and AI technology.",
+      "followers": {
+        "facebook": 721,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5172579.jpg?t=1614944309"
+    },
+    {
+      "title": "Artificial-Intelligence.Blog - Artificial Intelligence News",
+      "feed_url": "https://www.artificial-intelligence.blog/ai-news?format=rss",
+      "website_url": "https://www.artificial-intelligence.blog/ai-news",
+      "description": "A great blog covering Artificial Intelligence news, research, people in AI & companies in AI, as well as great A.I. books and conferences. Loads of videos and links to great artificial intelligence resources.",
+      "followers": {
+        "facebook": 10200,
+        "twitter": 1000,
+        "instagram": 7900
+      },
+      "image_url": "https://i1.feedspot.com/4611100.jpg?t=1615870631"
+    },
+    {
+      "title": "AI 2 People",
+      "feed_url": "https://ai2people.com/feed/",
+      "website_url": "https://ai2people.com/news/",
+      "description": "At AI 2 People, we care deeply about how AI shapes our lives and the impact it has on society. That's why we have made it our mission to bring you the latest news, research, insights, and infographics related to Artificial Intelligence. Our team of experts and enthusiasts is dedicated to curating the most relevant and accurate information on AI so that you can stay informed and make informed decisions about this rapidly evolving technology.",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/5520272.jpg?t=1678787121"
+    },
+    {
+      "title": "TechSpective",
+      "feed_url": "https://techspective.net/category/technology/artificial-intelligence/feed/",
+      "website_url": "https://techspective.net/category/technology/artificial-intelligence/",
+      "description": "TechSpective covers technology trends and breaking news in a meaningful way that brings value to the story, and provides you with information that is relevant to you. Follow us to keep up with articles on Artificial Intelligence from TechSpective",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 570,
+        "instagram": 257
+      },
+      "image_url": "https://i1.feedspot.com/4954435.jpg?t=1615870507"
+    },
+    {
+      "title": "Qudata",
+      "feed_url": "https://qudata.com/en/news/rss.xml",
+      "website_url": "https://qudata.com/en/news/",
+      "description": "Gather the latest news, data updates, and research results about Machine learning and Artificial intelligence development services. QuData is a startup that emerged from a game development company in 2018, transitioning to focus on solving complex machine learning and artificial intelligence challenges.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/fsppublisher/8022960/page/5667926/logo_1694531325.png"
+    },
+    {
+      "title": "MetaDevo AI Blog",
+      "feed_url": "https://metadevo.com/feed/",
+      "website_url": "https://metadevo.com/",
+      "description": "Sam shares ideas about Strong AI, 4E (Embodied, Ecological/Embedded, Extended and Enactive) cognition, cognitive architectures, interfaces, robots, cyborgs and philosophy of mind.",
+      "followers": {
+        "facebook": 109
+      },
+      "image_url": "https://i1.feedspot.com/5352322.jpg?t=1639128362"
+    },
+    {
+      "title": "Cogito Tech Blog",
+      "feed_url": "https://www.cogitotech.com/feed/",
+      "website_url": "https://www.cogitotech.com/blog/",
+      "description": "Cogito provides the best quality training data sets for machine learning and AI. Get deep learning training data for object detection with data enrichment services. Cogito Tech Blog Page for the latest news, updates, and applications of data training or data sets in machine learning and artificial intelligence.",
+      "followers": {
+        "facebook": 242,
+        "twitter": 2200,
+        "instagram": 273
+      },
+      "image_url": "https://i1.feedspot.com/5126939.jpg?t=1606815587"
+    },
+    {
+      "title": "O'Reilly Media \u00bb AI & ML",
+      "feed_url": "https://www.oreilly.com/radar/topics/ai-ml/feed/index.xml",
+      "website_url": "https://www.oreilly.com/radar/topics/ai-ml/",
+      "description": "O'Reilly's mission is to change the world by sharing the knowledge of innovators. For over 40 years, we've inspired companies & individuals to do new things by providing them with the skills & understanding that are necessary for success. Few technologies have the potential to change the nature of work & how we live as artificial intelligence (AI) and machine learning (ML). Read our AI & ML blog to receive weekly insight from industry insiders.",
+      "followers": {
+        "facebook": 121500,
+        "twitter": 107200
+      },
+      "image_url": "https://i1.feedspot.com/5280061.jpg?t=1620824501"
+    },
+    {
+      "title": "AI nyheter",
+      "feed_url": "https://nyheter.aitool.se/feed/",
+      "website_url": "https://nyheter.aitool.se/",
+      "description": "We cover the latest AI news, including ChatGPT, Claude, Gemini, AI tools, AI startups, OpenAI, Meta AI and more. This way, you can stay up-to-date on the latest AI trends and advancements",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/6700597.jpg?t=1711446182"
+    },
+    {
+      "title": "Spritle Blog",
+      "feed_url": "https://www.spritle.com/blog/feed/",
+      "website_url": "https://www.spritle.com/blog/",
+      "description": "Software is created for people, and so is our mission-focused towards people-centric solutions! From creating the questful ambiance for working on tech tools to honoring the harbor that goes into making great software, we are a hub of software innovators. We always strive towards making futuristic software cost-effective and user-friendly!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7284404.jpg?t=1711619833"
+    },
+    {
+      "title": "Yatter Blog",
+      "feed_url": "https://yatter.in/feed/",
+      "website_url": "https://yatter.in/blogs/",
+      "description": "Yatter AI is an intelligent WhatsApp AI powered by ChatGPT, offering features like seamless communication, personalized learning, and productivity tools. It partners with industry giants to enhance user experience. Users can enjoy voice chat messaging, image detection, reminder scheduling, real-time weather updates, multilingual conversation support, and more. Yatter caters to various interests, from providing insights on career-related queries to offering personalized assistance for different professions.",
+      "followers": {
+        "facebook": 317,
+        "twitter": 560,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/7274618.jpg?t=1710502331"
+    },
+    {
+      "title": "Shaip Blog",
+      "feed_url": "https://www.shaip.com/feed/",
+      "website_url": "https://www.shaip.com/blog/",
+      "description": "Shaip is a global leader and innovator in the structured AI data solutions category. Our strength is in the ability to bridge the gap between industries with AI initiatives and the massive amounts of high-quality data they require. The ultimate benefit Shaip provides is the vast amounts of structured data to train AI models with superior accuracy to achieve the highest possible outcomes.",
+      "followers": {
+        "facebook": 799,
+        "twitter": 111
+      },
+      "image_url": "https://i1.feedspot.com/5735232.jpg?t=1702462895"
+    },
+    {
+      "title": "AIIOT Artificial Intelligence",
+      "feed_url": "https://www.aiiottalk.com/feed/",
+      "website_url": "https://www.aiiottalk.com/artificial-intelligence-new/",
+      "description": "Get Artificial Intelligence, Machine Learning, Internet of Things, Cyber Security, Robotics and other technology news and updates from AIIOT",
+      "followers": {
+        "twitter": 70
+      },
+      "image_url": "https://i1.feedspot.com/5087298.jpg?t=1615870524"
+    },
+    {
+      "title": "Microsoft \u00bb AI",
+      "feed_url": "https://news.microsoft.com/source/topics/ai/feed/",
+      "website_url": "https://news.microsoft.com/source/topics/ai/",
+      "description": "Learn more about Microsoft AI. This AI blog by Microsoft will cover Microsoft AI for business, Microsoft innovation stories, Microsoft research, and more.",
+      "followers": {
+        "facebook": 13300000,
+        "twitter": 13900000,
+        "instagram": 4500000
+      },
+      "image_url": "https://i1.feedspot.com/5280060.jpg?t=1620825062"
+    },
+    {
+      "title": "Marketing Artificial Intelligence Institute Blog",
+      "feed_url": "https://www.marketingaiinstitute.com/blog/rss.xml",
+      "website_url": "https://www.marketingaiinstitute.com/blog",
+      "description": "Get the latest exclusive content on AI, machine learning, cognitive computing and related AI technologies - created by marketers for marketers. A content hub that explores the current and future potential of AI, machine learning, deep learning and cognitive computing to transform marketing.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 5400,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4611122.jpg?t=1615870338"
+    },
+    {
+      "title": "Clarifai Blog",
+      "feed_url": "https://www.clarifai.com/blog/rss.xml",
+      "website_url": "https://www.clarifai.com/blog",
+      "description": "Clarifai is an artificial intelligence company that excels in visual recognition, solving real-world problems for businesses and developers alike.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 600
+      },
+      "image_url": "https://i1.feedspot.com/4611177.jpg?t=1615870342"
+    },
+    {
+      "title": "Kore.ai",
+      "feed_url": "https://blog.kore.ai/rss.xml",
+      "website_url": "https://blog.kore.ai/",
+      "description": "Kore.ai is an enterprise software provider of an all-in-one Chatbots Platform (as-a-service) and cutting-edge smart technology for enterprises to build and deploy out-of-the-box or completely customized chatbots for their customers and workforce.",
+      "followers": {
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4893815.jpg?t=1610790983"
+    },
+    {
+      "title": "Big Data Analytics News",
+      "feed_url": "https://bigdataanalyticsnews.com/category/artificial-intelligence/feed/",
+      "website_url": "https://bigdataanalyticsnews.com/category/artificial-intelligence/",
+      "description": "Offers information, case studies, insights on big data, Data science, Analytics, Hadoop News, Blockchain, Fintech and artificial Intelligence.",
+      "followers": {
+        "facebook": 14600,
+        "twitter": 15700
+      },
+      "image_url": "https://i1.feedspot.com/5361360.jpg?t=1641801576"
+    },
+    {
+      "title": "viAct.ai Blog",
+      "feed_url": "https://www.viact.ai/blog-feed.xml",
+      "website_url": "https://www.viact.ai/blogs",
+      "description": "Covers everything about Artificial Intelligence, Computer Vision & Automations for Construction Sites, construction technology solutions developed by viAct. viAct is the leading construction AI company developed 50+ AI modules in order to save construction worker's life, enhance productivity and ensure environmental compliances.",
+      "followers": {
+        "twitter": 128,
+        "instagram": 152
+      },
+      "image_url": "https://i1.feedspot.com/5313956.jpg?t=1629444782"
+    },
+    {
+      "title": "DataRobot Blog",
+      "feed_url": "https://www.datarobot.com/blog/feed/",
+      "website_url": "https://www.datarobot.com/blog/",
+      "description": "Learn what's happening in the world of automated machine learning and data science by DataRobot. They are the AI Cloud leader, delivering a unified platform for all users, all data types, and all environments to accelerate delivery of AI to production for every organization.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 19700
+      },
+      "image_url": "https://i1.feedspot.com/4563135.jpg?t=1614925156"
+    },
+    {
+      "title": "Robot Writers AI",
+      "feed_url": "https://robotwritersai.com/feed/",
+      "website_url": "https://robotwritersai.com/",
+      "description": "Robot Writers AI offers an objective view of how artificial intelligence is automating writing. Follow to get updates from this blog.",
+      "followers": {
+        "twitter": 330
+      },
+      "image_url": "https://i1.feedspot.com/5072295.jpg"
+    },
+    {
+      "title": "Marek Rosa - Goodai Blog",
+      "feed_url": "https://blog.marekrosa.org/feeds/posts/default",
+      "website_url": "https://blog.marekrosa.org/",
+      "description": "GoodAI, they are building general artificial intelligence, a software program that can learn, be creative, and adapt to the environment in the way a human does. Their artificial intelligences will respond to what they perceive, and will interact with their environment to achieve goals defined by human mentors.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 10400
+      },
+      "image_url": "https://i1.feedspot.com/3710654.jpg?t=1615870592"
+    },
+    {
+      "title": "Isentia",
+      "feed_url": "https://www.isentia.com/feed/",
+      "website_url": "https://www.isentia.com/latest-reads/",
+      "description": "Isentia is your cutting-edge media intelligence and insights solution, driving decisions and opening possibilities.",
+      "followers": {
+        "facebook": 6600,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5210480.jpg?t=1615870353"
+    },
+    {
+      "title": "\u0391\u0399hub",
+      "feed_url": "https://aihub.org/feed/?cat=-473",
+      "website_url": "https://aihub.org/",
+      "description": "The Association for the Understanding of Artificial Intelligence is a non-profit dedicated to connecting the AI community to the public by providing free, high-quality information.",
+      "followers": {
+        "facebook": 145,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5437991.jpg?t=1662113150"
+    },
+    {
+      "title": "SAS Blog",
+      "feed_url": "https://blogs.sas.com/content/topic/artificial-intelligence/feed/",
+      "website_url": "https://blogs.sas.com/content/topic/artificial-intelligence/",
+      "description": "Covers articles about artificial intelligence, data management, visualization, programming tips, machine learning, etc. Through innovative Analytics, Artificial Intelligence and Data Management software and services, SAS helps turn your data into better decisions.",
+      "followers": {
+        "facebook": 289100,
+        "twitter": 62400
+      },
+      "image_url": "https://i1.feedspot.com/5070623.jpg?t=1633434285"
+    },
+    {
+      "title": "RStudio AI Blog",
+      "feed_url": "https://blogs.rstudio.com/ai/index.xml",
+      "website_url": "https://blogs.rstudio.com/ai/",
+      "description": "Welcome to our blog! Here you'll find the latest news, insights, and examples of using AI-related technologies (deep learning frameworks such as TensorFlow and Keras, distributed computing and automation-related frameworks like sparklyr & mlflow, and data ingestion (pins)) from R.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5280062.jpg?t=1620890782"
+    },
+    {
+      "title": "MIT Technology Review \u00bb Artificial Intelligence",
+      "feed_url": "https://www.technologyreview.com/topic/artificial-intelligence/feed",
+      "website_url": "https://www.technologyreview.com/topic/artificial-intelligence/",
+      "description": "What is AI? It's the quest to build machines that can reason, learn, and act intelligently, and it has barely begun. We cover the latest advances in machine learning, neural networks, and robots. Founded at the Massachusetts Institute of Technology in 1899, MIT Technology Review is a world-renowned, independent media company whose insight, analysis, reviews, interviews and live events explain the newest technologies and their commercial, social and political impacts.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 1200000,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5280059.jpg?t=1620825800"
+    },
+    {
+      "title": "Nanonets Blog",
+      "feed_url": "https://nanonets.com/blog/rss/",
+      "website_url": "https://nanonets.com/blog/",
+      "description": "Check out the latest blog articles, webinars, insights, and other resources on Machine Learning, Deep Learning on Nanonets blog.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 681
+      },
+      "image_url": "https://i1.feedspot.com/5068109.jpg?t=1622025595"
+    },
+    {
+      "title": "KDnuggets",
+      "feed_url": "https://www.kdnuggets.com/feed",
+      "website_url": "https://www.kdnuggets.com/news/index.html",
+      "description": "KDnuggets is a leading site on Business Analytics, Big Data, Data Mining, and Data Science. It is managed by Gregory Piatetsky-Shapiro, a leading expert in the field.",
+      "followers": {
+        "facebook": 39500,
+        "twitter": 219600
+      },
+      "image_url": "https://i1.feedspot.com/3800693.jpg?t=1612619286"
+    },
+    {
+      "title": "Fusemachines Insights",
+      "feed_url": "https://insights.fusemachines.com/feed/",
+      "website_url": "https://insights.fusemachines.com/",
+      "description": "Fusemachines' blogs provide its users with a platform to stay aligned with the latest AI and sales trends. The updates layout a sketch enabling the users to map out their basic necessities on factual data and past data content prior. Fusemachines is an enterprise AI services and solutions provider on a mission to democratize AI.",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/9146221/page/4611147/logo_1744960052.png"
+    },
+    {
+      "title": "Artificial Intelligence Weekly News - Weekly newsletter on Deep Learning & AI",
+      "feed_url": "https://aiweekly.co/issues.rss",
+      "website_url": "https://aiweekly.co/",
+      "description": "AI Weekly is a weekly collection of the best news and resources on Artificial Intelligence and Machine Learning.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4611230.jpg?t=1611211574"
+    },
+    {
+      "title": "Kavita Ganesan",
+      "feed_url": "http://kavita-ganesan.com/feed/",
+      "website_url": "https://kavita-ganesan.com/kavitas-tutorials/",
+      "description": "The blog is a collection of self written tutorials which include topics related to AI, analytics, programming tips and much more. Kavita Ganesan is an AI advisor, strategist, educator, and founder of Opinosis Analytics who works with teams across the organization to help them integrate AI strategically and get meaningful outcomes from every initiative.",
+      "followers": {
+        "twitter": 398
+      },
+      "image_url": "https://i1.feedspot.com/5092548.jpg?t=1667813701"
+    },
+    {
+      "title": "AI Time Journal",
+      "feed_url": "https://www.aitimejournal.com/feed/",
+      "website_url": "https://www.aitimejournal.com/journal/",
+      "description": "The mission of the AI Time Journal is to divulge information and knowledge about AI, the changes that are coming as well as the opportunities that arise in a world dominated by AI.",
+      "followers": {
+        "facebook": 205,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4979214.jpg?t=1615870552"
+    },
+    {
+      "title": "DLabs.AI",
+      "feed_url": "https://dlabs.ai/feed/",
+      "website_url": "https://dlabs.ai/blog/category/ai/",
+      "description": "DLabs.AI Blog is a perfect source of information about artificial intelligence, technologies connected to it, and their applications in business and everyday life. DLabs.AI is a Central European software development and consulting company that designs and builds automated custom AI software solutions for businesses of all sizes.",
+      "followers": {
+        "facebook": 596,
+        "twitter": 932,
+        "instagram": 162
+      },
+      "image_url": "https://i1.feedspot.com/5414243.jpg?t=1656073356"
+    },
+    {
+      "title": "Artificial Lawyer",
+      "feed_url": "https://www.artificiallawyer.com/feed/",
+      "website_url": "https://www.artificiallawyer.com/",
+      "description": "Artificial Lawyer is all about changing the business of law, often through the use of technology, but also through the better deployment of people inside organizations and within new business structures, as well as innovation around process improvement. At the heart of this is a focus on the economic aspects of the law and the related areas of efficiency in the production of legal work, and the increased insight into the data that is produced by all legal activity and how that insight, in turn, adds new value to legal work and helps drive efficiency.",
+      "followers": {
+        "twitter": 13000
+      },
+      "image_url": "https://i1.feedspot.com/4611544.jpg?t=1658922244"
+    },
+    {
+      "title": "Computational Intelligence",
+      "feed_url": "http://computational-intelligence.blogspot.com/feeds/posts/default",
+      "website_url": "http://computational-intelligence.blogspot.com/",
+      "description": "The Computational Intelligence Blog covers all topics related to computational intelligence. The major focus is on artificial neural networks, evolutionary algorithms, fuzzy systems and the applications of these methods. Calls for papers, new journals, tutorials and software are also covered.",
+      "followers": {
+        "twitter": 160
+      },
+      "image_url": "https://i1.feedspot.com/1814486.jpg?t=1615870772"
+    },
+    {
+      "title": "Artificial Intelligence +",
+      "feed_url": "https://www.aiplusinfo.com/feed/",
+      "website_url": "https://www.aiplusinfo.com/blog/tag/top-post/",
+      "description": "Artificial intelligence is the quest to build machines that can understand, learn, and act smartly, and it is at its nascent stage. Artificial Intelligence + is the quest to collate and curate all interesting materials in artificial intelligence, automation, machine learning, neural networks, internet of things and robotics technology.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5202269.jpg?t=1601449222"
+    },
+    {
+      "title": "DeepCognition.ai Blog",
+      "feed_url": "https://deepcognition.ai/feed/",
+      "website_url": "https://deepcognition.ai/blog/",
+      "description": "Our goal is to provide developers, engineers and researchers with an easy to use AI development and deployment platform. Our platform can be used in the cloud or on your infrastructure. Our mission is to help developers realize the potential of AI by providing them with the next generation AI platform called Deep Learning Studio.",
+      "followers": {
+        "twitter": 126
+      },
+      "image_url": "https://i1.feedspot.com/5206168.jpg?t=1602776140"
+    },
+    {
+      "title": "SAAL - Insight",
+      "feed_url": "https://saal.ai/feed/",
+      "website_url": "https://saal.ai/insights/",
+      "description": "At Saal.ai we offer leading cognitive AI solutions to information-intensive domains such as healthcare, financial services, and public services to advance businesses into the digital era. Stay informed on the latest AI breakthroughs in finance, healthcare, energy, and beyond. Our expert-written blog covers it all. Discover the latest insights and trends from Saal.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 2000,
+        "instagram": 926
+      },
+      "image_url": "https://i1.feedspot.com/5571675.jpg?t=1684475159"
+    },
+    {
+      "title": "Vue.ai Blog",
+      "feed_url": "https://www.vue.ai/blog/feed/",
+      "website_url": "https://www.vue.ai/blog/",
+      "description": "Witness how AI is revolutionizing Retail via the Vue.ai Blog. Join over 20k retailers in finding out the latest trends in retail, AI, automation, and fashion. Vue.ai by Mad Street Den is the world's only end-to-end Artificial Intelligence stack for brands and retailers",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 13400,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5400190.jpg?t=1652435918"
+    },
+    {
+      "title": "Digital Thought Disruption",
+      "feed_url": "https://digitalthoughtdisruption.com/feed/",
+      "website_url": "https://digitalthoughtdisruption.com/category/azure/",
+      "description": "The Digital Thought Disruption features articles and tutorials by Paul Bryant, focusing on automating IT infrastructure tasks. The content primarily covers topics related to Nutanix, such as snapshot management, cluster expansion, and VM provisioning using tools like Ansible and Bash.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5037201.jpg?t=1754041748"
+    },
+    {
+      "title": "BAIR Blog",
+      "feed_url": "https://bair.berkeley.edu/blog/feed.xml",
+      "website_url": "https://bair.berkeley.edu/blog/",
+      "description": "The BAIR Blog provides an accessible, general-audience medium for BAIR researchers to communicate research findings, perspectives on the field, and various updates. Posts are written by students, post-docs, and faculty in BAIR, and are intended to provide relevant and timely discussion of research findings and results, both to experts and the general audience. The Berkeley Artificial Intelligence Research (BAIR) Lab brings together UC Berkeley graduate students, post-docs, and faculty working in AI.",
+      "followers": {
+        "facebook": 16500,
+        "twitter": 103100
+      },
+      "image_url": "https://i1.feedspot.com/4954351.jpg?t=1615870301"
+    },
+    {
+      "title": "AIRoboticsPro",
+      "feed_url": "https://airoboticsprof.blogspot.com/feeds/posts/default",
+      "website_url": "https://airoboticsprof.blogspot.com/",
+      "description": "We can make Robots as smart as a human by using a cloud brain. Helpful humanoid robots will be affordable for homes by 2025. This will be achieved by cloud-connected robots, where diverse models of robots share a brain hosted on a cloud platform. In this blog, we will discuss such topics. You will be provided with the latest information on robotics and artificial intelligence.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5194667.jpg?t=1599566028"
+    },
+    {
+      "title": "La Biblia de la IA",
+      "feed_url": "https://editorialia.com/feed/",
+      "website_url": "https://editorialia.com/",
+      "description": "Covers International scientific and technical publication on the states of Artificial Intelligence",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5319878.jpg?t=1631084826"
+    },
+    {
+      "title": "DailyAI",
+      "feed_url": "https://dailyai.com/feed/",
+      "website_url": "https://dailyai.com/",
+      "description": "Launched in 2023, we're an initiative by Intent, a forward-thinking digital media company based in London. We're here to simplify the world of Artificial Intelligence, providing insights that are clear and engaging, whether you're new to AI or an established expert. Our wide-ranging content provides a holistic view of the AI industry. Spanning news, current affairs, interviews, opinions, product reviews, prompt libraries, and much more.",
+      "followers": {
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5667882.jpg?t=1694177092"
+    },
+    {
+      "title": "DatumBox - Blog on Machine Learning, Statistics & Software Development",
+      "feed_url": "http://blog.datumbox.com/feed/",
+      "website_url": "http://blog.datumbox.com/",
+      "description": "Datumbox blog focuses on Machine Learning, Statistics, Artificial Intelligence and their applications on Software Development and Online Marketing.",
+      "followers": {
+        "facebook": 679,
+        "twitter": 667
+      },
+      "image_url": "https://i1.feedspot.com/3947764.jpg?t=1615180128"
+    },
+    {
+      "title": "Dale on AI",
+      "feed_url": "https://daleonai.com/feed.xml",
+      "website_url": "https://daleonai.com/",
+      "description": "Dale Markowitz writes about autoML chatbots, computer vision, Dialogflow, generative models, google cloud, gpt3, machine learning, machine translation, natural language processing, Tensorflow.js, and video intelligence. Dale is Applied AI Engineer at Google.",
+      "followers": {
+        "twitter": 6300,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5231478.jpg?t=1628146601"
+    },
+    {
+      "title": "Theodo Data & IA Blog",
+      "feed_url": "https://data-ai.theodo.com/en/technical-blog/rss.xml",
+      "website_url": "https://data-ai.theodo.com/en/technical-blog",
+      "description": "Sicara is a deep tech startup that enables all sizes of businesses to build custom-made image recognition solutions and projects thanks to a team of experts.",
+      "followers": {
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5115686.jpg?t=1615870533"
+    },
+    {
+      "title": "Lorien Pratt",
+      "feed_url": "https://www.lorienpratt.com/category/artificial-intelligence/feed/",
+      "website_url": "https://www.lorienpratt.com/category/artificial-intelligence/",
+      "description": "My name's Lorien Pratt, and I'm Chief Scientist and co-founder of Quantellia. As part of this work, I've been promoting decision intelligence in a number of ways over the years.",
+      "followers": {
+        "twitter": 960
+      },
+      "image_url": "https://i1.feedspot.com/4954449.jpg?t=1615871099"
+    },
+    {
+      "title": "1redDrop",
+      "feed_url": "https://1reddrop.com/feed/",
+      "website_url": "https://1reddrop.com/category/artificial-intelligence/",
+      "description": "1redDrop is built on the premise that anyone can make a difference. All it takes is one red drop in a blue ocean to turn it red - it's the intensity that counts, not the size of the drop. Our collective professional experience of over 50 years puts us in a unique position to have a strong opinion on what's going on in the world of technology. We believe we can truly make a difference to the world of business and finance but 1redDrop at a time.",
+      "followers": {
+        "facebook": 217,
+        "twitter": 12
+      },
+      "image_url": "https://i1.feedspot.com/4990627.jpg?t=1615870556"
+    },
+    {
+      "title": "Zeroth Principles of AI",
+      "feed_url": "https://zerothprinciples.substack.com/feed",
+      "website_url": "https://zerothprinciples.substack.com/",
+      "description": "Taking the discourse down to epidemiology, Zeroth Principles of AI by Monica Anderson offers interesting views and reasoning on impending AI trends and challenges. Follow the substack to know more. The author is an experimental AI Epistemologist and currently researching super-effective Machine Learning algorithms that can create SSMs.",
+      "followers": {
+        "twitter": 747
+      },
+      "image_url": "https://i1.feedspot.com/5607850.jpg?t=1687777789"
+    },
+    {
+      "title": "Unbabel Blog",
+      "feed_url": "https://unbabel.com/category/blog/feed/",
+      "website_url": "https://unbabel.com/category/blog/",
+      "description": "Learn more about our language operation solutions! At Unbabel we offer multilingual translation services in more than 30 languages to enhance your customer service experiences. We works with leading customer support teams to communicate effortlessly with customers around the world, no matter what language they speak.",
+      "followers": {
+        "facebook": 20500,
+        "twitter": 3700,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5051106.jpg?t=1615870323"
+    },
+    {
+      "title": "AI Summer",
+      "feed_url": "https://theaisummer.com/feed.xml",
+      "website_url": "https://theaisummer.com/resources/",
+      "description": "The Blog to Help You Learn Artificial Intelligence.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5121731.jpg?t=1615870543"
+    },
+    {
+      "title": "Becoming Human",
+      "feed_url": "https://becominghuman.ai/feed",
+      "website_url": "https://becominghuman.ai/",
+      "description": "Explore Artificial Intelligence and what it means to be human. Keep up with the latest news, info, and tutorials on Artificial Intelligence, Machine Learning, Deep Learning, Big Data, and more.",
+      "followers": {
+        "facebook": 736
+      },
+      "image_url": "https://i1.feedspot.com/4839624.jpg?t=1611211228"
+    },
+    {
+      "title": "Chatbots Magazine",
+      "feed_url": "https://chatbotsmagazine.com/feed",
+      "website_url": "https://chatbotsmagazine.com/",
+      "description": "Chatbots Magazine is the place to learn about Chatbots, AI, NLP, Facebook Messenger, Slack, Telegram, and more.",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 11500
+      },
+      "image_url": "https://i1.feedspot.com/4470814.jpg?t=1612613471"
+    },
+    {
+      "title": "Dan Rose AI Blog",
+      "feed_url": "https://www.danrose.ai/blog?format=rss",
+      "website_url": "https://www.danrose.ai/blog",
+      "description": "This blog is about applied artificial intelligence and mostly focuses on the here-and-now relevant knowledge for people wanting to apply AI. The angle is the business side of AI much more than the technical side. As a result the posts are mostly practical advice for product managers, leaders or for those curious how AI works in business.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5172760.jpg"
+    },
+    {
+      "title": "EDIA Blog",
+      "feed_url": "https://www.edia.nl/edia-blog?format=rss",
+      "website_url": "https://www.edia.nl/edia-blog",
+      "description": "Posts feature articles related to the future of AI in education, different events, news about the latest developments, and disruptive trends that impact education publishers, universities, and edtech players. EDIA helps you to create smart content that saves costs and drives more revenue.",
+      "followers": {
+        "facebook": 78,
+        "twitter": 199
+      },
+      "image_url": "https://i1.feedspot.com/4954379.jpg?t=1615870883"
+    },
+    {
+      "title": "AIMultiple",
+      "feed_url": "https://research.aimultiple.com/feed/",
+      "website_url": "https://research.aimultiple.com/",
+      "description": "Our in-depth, transparent research helps firms find AI solutions. We help companies build their AI capabilities so they can take advantage of AI and multiply their value.",
+      "followers": {
+        "twitter": 606
+      },
+      "image_url": "https://i1.feedspot.com/5196586.jpg?t=1615870410"
+    },
+    {
+      "title": "TOPBOTS",
+      "feed_url": "https://www.topbots.com/feed/",
+      "website_url": "https://www.topbots.com/category/research-summaries/",
+      "description": "TOPBOTS create and source the best content about applied artificial intelligence for business.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 8300
+      },
+      "image_url": "https://i1.feedspot.com/4797146.jpg?t=1615870623"
+    },
+    {
+      "title": "Pandio Blog",
+      "feed_url": "https://pandio.com/feed/",
+      "website_url": "https://pandio.com/blog/",
+      "description": "Stay up to date with the latest news, tips, use cases, and product updates for Apache Pulsar and other cutting-edge technologies. A new way of moving data was needed, but did not exist. Pandio was created to solve this problem. It is more performant, flexible, modular, capable, and robust than anything out there.",
+      "followers": {
+        "facebook": 76,
+        "twitter": 235
+      },
+      "image_url": "https://i1.feedspot.com/5470298.jpg?t=1669098136"
+    },
+    {
+      "title": "Find New AI",
+      "feed_url": "https://findnewai.com/feed/",
+      "website_url": "https://findnewai.com/",
+      "description": "Get the latest artificial intelligence products, services, and examples. Read the best AI reviews and work smarter and faster than before!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5220499.jpg?t=1606388623"
+    },
+    {
+      "title": "USM Systems",
+      "feed_url": "https://usmsystems.com/blog/feed/",
+      "website_url": "https://usmsystems.com/category/artificial-intelligence/",
+      "description": "USM is pioneer in providing AI solutions based on your business needs, We provide solutions related to Artificial intelligence in application development, Machine learning and more...",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 362
+      },
+      "image_url": "https://i1.feedspot.com/5060582.jpg?t=1615870511"
+    },
+    {
+      "title": "ELEDIA E-AIR",
+      "feed_url": "http://www.eledia.org/e-air/feed/",
+      "website_url": "http://www.eledia.org/e-air/",
+      "description": "ELEDIA is a Artificial Intelligence Research Blog. News and updates about our research and project activities.",
+      "followers": {
+        "twitter": 290,
+        "instagram": 189
+      },
+      "image_url": "https://i1.feedspot.com/5164081.jpg"
+    },
+    {
+      "title": "Top Marketing AI",
+      "feed_url": "https://topmarketingai.com/feed/",
+      "website_url": "https://topmarketingai.com/",
+      "description": "Welcome to TopMarketingAI! We are a team of passionate marketers and AI enthusiasts who believe in the power of artificial intelligence to revolutionize the world of marketing. Discover how Artificial Intelligence is revolutionizing the world of Marketing. Explore innovative strategies and tools at TopMarketingAI.",
+      "followers": {
+        "facebook": 383,
+        "twitter": 64
+      },
+      "image_url": "https://i1.feedspot.com/5733924.jpg?t=1702361442"
+    },
+    {
+      "title": "Ankit-AI",
+      "feed_url": "http://ankit-ai.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://ankit-ai.blogspot.com/",
+      "description": "Machine Learning, Artificial Intelligence and Deep Learning concepts made easy with code examples.",
+      "followers": {
+        "twitter": 44
+      },
+      "image_url": "https://i1.feedspot.com/5032613.jpg?t=1615870799"
+    },
+    {
+      "title": "AI Roadmap Institute Blog",
+      "feed_url": "https://medium.com/feed/ai-roadmap-institute",
+      "website_url": "https://medium.com/ai-roadmap-institute",
+      "description": "AI Roadmap Institute Blog mission is to accelerate the search for safe human-level artificial intelligence by encouraging, studying, mapping and comparing roadmaps towards this goal.",
+      "followers": {
+        "facebook": 334,
+        "twitter": 730
+      },
+      "image_url": "https://i1.feedspot.com/4611588.jpg?t=1615870815"
+    },
+    {
+      "title": "Another Datum",
+      "feed_url": "https://anotherdatum.com/feeds/all.atom.xml?format=xml",
+      "website_url": "https://anotherdatum.com/",
+      "description": "My name is Yoel Zeldes. I am an algorithm engineer at Taboola. I completed my M.Sc. and B.Sc in computer science at the Hebrew University of Jerusalem. I made a living participating in projects related to cyber, computer vision, machine learning, web, mobile and distributed computing. Here you'll find resources about data science, software engineering",
+      "followers": {
+        "twitter": 216
+      },
+      "image_url": "https://i1.feedspot.com/4949575.jpg?t=1615179965"
+    },
+    {
+      "title": "AI Revolution Blog",
+      "feed_url": "https://airevolution.blog/feed/",
+      "website_url": "https://airevolution.blog/blog/",
+      "description": "The AI Revolution blog is a personal journey through the world of artificial intelligence, capturing my experiences, questions, and discoveries. It's a platform where I share the highs and lows of navigating AI, aiming to connect with others on a similar path. This blog isn't just about my exploration; it's an invitation to a community eager to understand and engage with AI, making the complex world of artificial intelligence accessible and relatable to all.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7274609.jpg?t=1710498778"
+    },
+    {
+      "title": "KocharTech",
+      "feed_url": "https://www.kochartech.com/feed/",
+      "website_url": "https://www.kochartech.com/",
+      "description": "We design and provide solutions using AI and Machine Learning in BPM, Connected Customer Experience, Knowledge Management, M2M & IoT Solutions and Self-care platforms for End-Customers and Enterprises.",
+      "followers": {
+        "twitter": 503
+      },
+      "image_url": "https://i1.feedspot.com/5158362.jpg?t=1615870873"
+    },
+    {
+      "title": "Francesco Corea",
+      "feed_url": "https://medium.com/feed/@Francesco_AI",
+      "website_url": "https://medium.com/@Francesco_AI",
+      "description": "Stories by Francesco Corea on Medium. AI technologist and data strategist. I simply post about everything I read and write on AI, datascience, machinelearning, bigdata, vc, cvc.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4756982.jpg?t=1615870862"
+    },
+    {
+      "title": "Medium - Archie.AI",
+      "feed_url": "https://medium.com/feed/archieai",
+      "website_url": "https://medium.com/archieai",
+      "description": "Articles From The Team Behind Archie.AI - Medium. The Artificially Intelligent Data Scientist to help you make better decisions.",
+      "followers": {
+        "facebook": 564
+      },
+      "image_url": "https://i1.feedspot.com/4716233.jpg?t=1615870856"
+    },
+    {
+      "title": "AICorr.com",
+      "feed_url": "https://aicorr.com/feed/",
+      "website_url": "https://aicorr.com/latest/",
+      "description": "AICorr.com is a resource for those with immense passion and enthusiasm for AI. Enthusiasts can find tutorials, articles, and data and learn about Data Science, Machine Learning, Artificial Intelligence, and Statistics. In addition, there are theory tutorials as well as coding practice in Python and SQL programming languages.",
+      "followers": {
+        "facebook": 46
+      },
+      "image_url": "https://i1.feedspot.com/5759327.jpg?t=1705924515"
+    },
+    {
+      "title": "Machine Intelligence Research Institute Blog",
+      "feed_url": "https://intelligence.org/blog/feed/",
+      "website_url": "https://intelligence.org/blog/",
+      "description": "MIRI's artificial intelligence research is focused on developing the mathematical theory of trustworthy reasoning for advanced autonomous AI systems.",
+      "followers": {
+        "facebook": 18600,
+        "twitter": 38900
+      },
+      "image_url": "https://i1.feedspot.com/4611084.jpg?t=1615870565"
+    },
+    {
+      "title": "SecureChain AI",
+      "feed_url": "https://medium.com/feed/@securechainai",
+      "website_url": "https://medium.com/@securechainai",
+      "description": "Read writing from SecureChain AI on Medium. SecureChain AI is an AI-powered blockchain platform with having ICE algorithm to empower next-generation Dapps with security and speed. Explore the distinctive features that render SecureChain AI deflationary, shedding light on its impact in the broader context of economic dynamics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5739049.jpg?t=1702975747"
+    },
+    {
+      "title": "Data Machina",
+      "feed_url": "https://datamachina.substack.com/feed",
+      "website_url": "https://datamachina.substack.com/",
+      "description": "Keep up with the latest AI / ML research, projects & repos. A weekly deep dive into what's new in Artificial Intelligence / Machine Learning. Click to read Data Machina, by Carlos, a Substack publication with tens of thousands of readers.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,h_256,c_fill,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Faa4afd3f-665d-45b6-bd8c-e3dd44277dcd_400x400.jpeg?t=1675682382"
+    },
+    {
+      "title": "WIRED \u00bb Artificial Intelligence",
+      "feed_url": "https://www.wired.com/feed/tag/ai/latest/rss",
+      "website_url": "https://www.wired.com/tag/artificial-intelligence/",
+      "description": "Find the latest Artificial Intelligence news from WIRED. See related science and technology articles, photos, slideshows and videos.",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 9700000,
+        "instagram": 2100000
+      },
+      "image_url": "https://i1.feedspot.com/7327613.jpg?t=1753161193"
+    },
+    {
+      "title": "The Guardian \u00bb Artificial Intelligence (AI)",
+      "feed_url": "https://www.theguardian.com/technology/artificialintelligenceai/rss",
+      "website_url": "https://www.theguardian.com/technology/artificialintelligenceai",
+      "description": "Latest articles about Artificial Intelligence (AI) from The Guardian.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/1545611.jpg?t=1753075274"
+    },
+    {
+      "title": "ScienceDaily \u00bb Artificial Intelligence News",
+      "feed_url": "https://www.sciencedaily.com/rss/computers_math/artificial_intelligence.xml",
+      "website_url": "https://www.sciencedaily.com/news/computers_math/artificial_intelligence/",
+      "description": "Artificial Intelligence News. Everything on AI including futuristic robots with artificial intelligence, computer msodels of human intelligence and more.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 306500
+      },
+      "image_url": "https://i1.feedspot.com/4611682.jpg?t=1753090562"
+    },
+    {
+      "title": "Vectra AI Blog",
+      "feed_url": "https://www.vectra.ai/blog/rss.xml",
+      "website_url": "https://www.vectra.ai/blog",
+      "description": "The Vectra blog covers a wide range of cybersecurity topics, including exploits, vulnerabilities, malware, insider attacks, threat actors, AI, and more.",
+      "followers": {
+        "facebook": 929,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4661345.jpg?t=1753360393"
+    },
+    {
+      "title": "AI News",
+      "feed_url": "https://www.artificialintelligence-news.com/feed/",
+      "website_url": "https://www.artificialintelligence-news.com/",
+      "description": "Explore the blog for all AI-related news and updates. They write about how AI is changing the world and making an impact on the future. Discover the new possibilities of AI tools from their articles and stay up to date with the upcoming technology. Artificial intelligence News, part of the TechForge Media portfolio is a practical resource providing news, analysis, and opinion on the AI ecosystem, from standardization to business use cases, and development opportunities.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4859841.jpg?t=1691477520"
+    },
+    {
+      "title": "VentureBeat \u00bb Artificial Intelligence",
+      "feed_url": "https://venturebeat.com/category/ai/feed/",
+      "website_url": "https://venturebeat.com/category/ai/",
+      "description": "All latest articles about Artificial Intelligence from VentureBeat.",
+      "followers": {
+        "facebook": 443000,
+        "twitter": 705000
+      },
+      "image_url": "https://i1.feedspot.com/4922559.jpg?t=1753098055"
+    },
+    {
+      "title": "The Verge \u00bb AI",
+      "feed_url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+      "website_url": "https://www.theverge.com/ai-artificial-intelligence",
+      "description": "All articles about AI from The Verge.",
+      "followers": {
+        "facebook": 3600000,
+        "instagram": 1600000
+      },
+      "image_url": "https://i1.feedspot.com/5071016.jpg"
+    },
+    {
+      "title": "Analytics India Magazine \u00bb Artificial Intelligence News",
+      "feed_url": "https://analyticsindiamag.com/ai-news-updates/feed/",
+      "website_url": "https://analyticsindiamag.com/ai-news-updates/",
+      "description": "All latest articles about Artificial Intelligence from Analytics India Magazine.",
+      "followers": {
+        "facebook": 48300,
+        "twitter": 18400,
+        "instagram": 18800
+      },
+      "image_url": "https://i1.feedspot.com/5087440.jpg?t=1753078383"
+    },
+    {
+      "title": "Mint \u00bb Artificial Intelligence",
+      "feed_url": "https://www.livemint.com/rss/AI",
+      "website_url": "https://www.livemint.com/ai/artificial-intelligence",
+      "description": "Get all the latest News and updates on AI. Explore mint to know more about Artificial Intelligence news in India and across the world.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 2100000
+      },
+      "image_url": "https://i1.feedspot.com/5320232.jpg?t=1753162946"
+    },
+    {
+      "title": "MarkTechPost",
+      "feed_url": "https://www.marktechpost.com/feed/",
+      "website_url": "https://www.marktechpost.com/",
+      "description": "Providing easy-to-consume, byte size updates in machine learning, deep learning, and data science research. The vision of MarkTechPost is to showcase the hottest research trends in AI from around the world using our innovative method of search and discovery.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 9300
+      },
+      "image_url": "https://i1.feedspot.com/5362468.jpg?t=1753177625"
+    },
+    {
+      "title": "The Datastax Blog",
+      "feed_url": "https://www.datastax.com/rss.xml",
+      "website_url": "https://www.datastax.com/blog",
+      "description": "All latest articles from The Datastax Blog.",
+      "followers": {
+        "facebook": 13900,
+        "twitter": 98300
+      },
+      "image_url": "https://i1.feedspot.com/5419121.jpg?t=1753359994"
+    },
+    {
+      "title": "TechCrunch \u00bb AI",
+      "feed_url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "website_url": "https://techcrunch.com/category/artificial-intelligence/",
+      "description": "Read the latest on artificial intelligence and machine learning tech, the companies that are building them, and the ethical issues AI raises today from Techcrunch.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/4822258.jpg?t=1752730078"
+    },
+    {
+      "title": "Ars Technica \u00bb AI",
+      "feed_url": "https://arstechnica.com/ai/feed/",
+      "website_url": "https://arstechnica.com/ai/",
+      "description": "All latest articles about AI from Ars Technica.",
+      "followers": {
+        "facebook": 413200,
+        "instagram": 41400
+      },
+      "image_url": "https://i1.feedspot.com/7835604.jpg?t=1759572819"
+    },
+    {
+      "title": "AIwire",
+      "feed_url": "https://www.aiwire.net/feed/",
+      "website_url": "https://www.aiwire.net",
+      "description": "All latest articles from AIwire.",
+      "followers": {
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/7876648.jpg?t=1753164366"
+    },
+    {
+      "title": "Computerworld \u00bb Artificial Intelligence",
+      "feed_url": "https://www.computerworld.com/artificial-intelligence/feed/",
+      "website_url": "https://www.computerworld.com/artificial-intelligence/",
+      "description": "Al latest articles about Artificial Intelligence from Computerworld.",
+      "followers": {
+        "facebook": 865000,
+        "twitter": 244800
+      },
+      "image_url": "https://i1.feedspot.com/7924245.jpg?t=1753167822"
+    },
+    {
+      "title": "Just AI News: Daily Artificial Intelligence News",
+      "feed_url": "https://justainews.com/feed/",
+      "website_url": "https://justainews.com",
+      "description": "Stay ahead in the fast-moving world of artificial intelligence with our weekly podcast, Just AI News Weekly. We bring you the most relevant updates from the AI industry, covering groundbreaking innovations, business trends, and real-world applications\u2014all in a concise, engaging format. Whether you're an AI enthusiast, a tech professional, or a business leader, our episodes offer clear, insightful summaries designed for a global audience. Tune in every week to stay informed and inspired by the latest developments shaping the future of artificial intelligence.",
+      "followers": {
+        "facebook": 4,
+        "twitter": 35
+      },
+      "image_url": "https://i1.feedspot.com/8464314.jpg?t=1753171714"
+    },
+    {
+      "title": "The Rundown AI",
+      "feed_url": "https://rss.beehiiv.com/feeds/2R3C6Bt5wj.xml",
+      "website_url": "https://www.therundown.ai",
+      "description": "All latest articles from The Rundown AI.",
+      "followers": {
+        "twitter": 201000,
+        "instagram": 221100
+      },
+      "image_url": "https://i1.feedspot.com/8524615.jpg?t=1753171479"
+    },
+    {
+      "title": "Open AI News",
+      "feed_url": "https://openai.com/news/rss.xml",
+      "website_url": "https://openai.com/news/",
+      "description": "All latest articles from Open AI News.",
+      "followers": {
+        "twitter": 4200000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/8530822.jpg?t=1753263520"
+    },
+    {
+      "title": "Financial Times \u00bb Artificial intelligence",
+      "feed_url": "https://www.ft.com/artificial-intelligence?format=rss",
+      "website_url": "https://www.ft.com/artificial-intelligence",
+      "description": "Comprehensive coverage of artificial intelligence and machine learning. Insights, analysis and opinions on how AI technology is shaping the future of business and finance.",
+      "followers": {
+        "twitter": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/8640224.jpg?t=1753091390"
+    },
+    {
+      "title": "The New York Times \u00bb Artificial Intelligence",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/spotlight/artificial-intelligence/rss.xml",
+      "website_url": "https://www.nytimes.com/spotlight/artificial-intelligence",
+      "description": "All articles about Artificial Intelligence from The New York Times.",
+      "followers": {
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/8641753.jpg?t=1753074586"
+    },
+    {
+      "title": "The Conversation \u00bb Artificial intelligence (AI)",
+      "feed_url": "https://theconversation.com/topics/artificial-intelligence-ai-90/articles.atom",
+      "website_url": "https://theconversation.com/topics/artificial-intelligence-ai-90",
+      "description": "Browse Artificial intelligence (AI) news, research and analysis from The Conversation",
+      "followers": {
+        "facebook": 117400,
+        "twitter": 65300,
+        "instagram": 54600
+      },
+      "image_url": "https://i1.feedspot.com/8643885.jpg?t=1753132028"
+    },
+    {
+      "title": "AI Insider",
+      "feed_url": "https://theaiinsider.tech/feed/",
+      "website_url": "https://theaiinsider.tech",
+      "description": "AI Insider offers in-depth articles, exclusive interviews, and up-to-date funding news to keep you at the forefront of the AI revolution.",
+      "followers": {
+        "twitter": 163
+      },
+      "image_url": "https://i1.feedspot.com/8643927.jpg?t=1753132097"
+    },
+    {
+      "title": "Government Technology News \u00bb Artificial Intelligence",
+      "feed_url": "https://www.govtech.com/artificial-intelligence.rss",
+      "website_url": "https://www.govtech.com/artificial-intelligence",
+      "description": "Latest news and developments in the world of ChatGPT and Generative AI for state and local government.",
+      "followers": {
+        "facebook": 14100,
+        "twitter": 27900
+      },
+      "image_url": "https://i1.feedspot.com/8643943.jpg?t=1753132124"
+    },
+    {
+      "title": "France 24 \u00bb Artificial intelligence",
+      "feed_url": "https://www.france24.com/en/tag/artificial-intelligence/rss",
+      "website_url": "https://www.france24.com/en/tag/artificial-intelligence/",
+      "description": "Find all the latest articles and watch TV shows, reports and podcasts related to Artificial intelligence on France 24",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8644138.jpg?t=1753132536"
+    },
+    {
+      "title": "Scripps News \u00bb Artificial Intelligence",
+      "feed_url": "https://www.scrippsnews.com/science-and-tech/artificial-intelligence.rss",
+      "website_url": "https://www.scrippsnews.com/science-and-tech/artificial-intelligence",
+      "description": "All latest articles about Artificial Intelligence from Scripps News.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 78000,
+        "instagram": 41900
+      },
+      "image_url": "https://i1.feedspot.com/8644477.jpg?t=1753177966"
+    },
+    {
+      "title": "AWS News Blog \u00bb Artificial Intelligence",
+      "feed_url": "https://aws.amazon.com/blogs/aws/category/artificial-intelligence/feed/",
+      "website_url": "https://aws.amazon.com/blogs/aws/category/artificial-intelligence/",
+      "description": "All latest articles about Artificial Intelligence from AWS News Blog.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 2200000,
+        "instagram": 673000
+      },
+      "image_url": "https://i1.feedspot.com/8644500.jpg?t=1753179561"
+    },
+    {
+      "title": "Live Science \u00bb Artificial Intelligence",
+      "feed_url": "https://www.livescience.com/feeds/tag/artificial-intelligence",
+      "website_url": "https://www.livescience.com/technology/artificial-intelligence",
+      "description": "All the latest artificial-intelligence content from the Live Science team.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 429800,
+        "instagram": 31400
+      },
+      "image_url": "https://i1.feedspot.com/8644856.jpg?t=1753259056"
+    },
+    {
+      "title": "The India Express \u00bb Artificial Intelligence",
+      "feed_url": "https://indianexpress.com/section/technology/artificial-intelligence/feed/",
+      "website_url": "https://indianexpress.com/section/technology/artificial-intelligence/",
+      "description": "All latest articles about Artificial Intelligence from The India Express.",
+      "followers": {
+        "facebook": 7600000,
+        "twitter": 4300000,
+        "instagram": 1600000
+      },
+      "image_url": "https://i1.feedspot.com/8644891.jpg?t=1753258516"
+    },
+    {
+      "title": "Science News \u00bb Artificial intelligence",
+      "feed_url": "https://www.sciencenews.org/topic/artificial-intelligence/feed",
+      "website_url": "https://www.sciencenews.org/topic/artificial-intelligence",
+      "description": "All latest articles about Artificial Intelligence from Science News.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 5300000,
+        "instagram": 102400
+      },
+      "image_url": "https://i1.feedspot.com/8644896.jpg?t=1753258753"
+    },
+    {
+      "title": "insideAI News",
+      "feed_url": "https://insideainews.com/feed/",
+      "website_url": "https://insideainews.com/",
+      "description": "All latest articles from insideAI News.",
+      "followers": {
+        "twitter": 778
+      },
+      "image_url": "https://i1.feedspot.com/8644899.jpg?t=1753259180"
+    },
+    {
+      "title": "eWeek \u00bb Artificial Intelligence",
+      "feed_url": "https://www.eweek.com/artificial-intelligence/feed/",
+      "website_url": "https://www.eweek.com/artificial-intelligence/",
+      "description": "All latest articles about Artificial Intelligence from wWeek.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 22700
+      },
+      "image_url": "https://i1.feedspot.com/8644904.jpg?t=1753262349"
+    },
+    {
+      "title": "InfoWorld \u00bb Artificial Intelligence",
+      "feed_url": "https://www.infoworld.com/artificial-intelligence/feed/",
+      "website_url": "https://www.infoworld.com/artificial-intelligence/",
+      "description": "All latest articles about Artificial Intelligence from InfoWorld.",
+      "followers": {
+        "facebook": 72300,
+        "twitter": 88400
+      },
+      "image_url": "https://i1.feedspot.com/8644918.jpg?t=1753262487"
+    },
+    {
+      "title": "Crunchbase News \u00bb AI",
+      "feed_url": "https://news.crunchbase.com/sections/ai/feed/",
+      "website_url": "https://news.crunchbase.com/sections/ai/",
+      "description": "All latest articles about AI from Crunchbase News.",
+      "followers": {
+        "facebook": 40400,
+        "twitter": 152900,
+        "instagram": 49800
+      },
+      "image_url": "https://i1.feedspot.com/8644920.jpg?t=1753262688"
+    },
+    {
+      "title": "Fast Company \u00bb Artificial Intelligence",
+      "feed_url": "https://www.fastcompany.com/section/artificial-intelligence/rss",
+      "website_url": "https://www.fastcompany.com/section/artificial-intelligence",
+      "description": "All latest articles about Artificial Intelligence from Fast Company.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 2200000,
+        "instagram": 752900
+      },
+      "image_url": "https://i1.feedspot.com/8644922.jpg?t=1753262852"
+    },
+    {
+      "title": "Edmonton Journal \u00bb Artificial Intelligence",
+      "feed_url": "https://edmontonjournal.com/tag/artificial-intelligence/feed.xml",
+      "website_url": "https://edmontonjournal.com/tag/artificial-intelligence/",
+      "description": "All latest articles about Artificial Intelligence from Edmonton Journal.",
+      "followers": {
+        "facebook": 139100,
+        "twitter": 195300,
+        "instagram": 85000
+      },
+      "image_url": "https://i1.feedspot.com/8644928.jpg?t=1753263012"
+    },
+    {
+      "title": "Adweek \u00bb Artificial Intelligence",
+      "feed_url": "https://www.adweek.com/category/artificial-intelligence/feed/",
+      "website_url": "https://www.adweek.com/category/artificial-intelligence/",
+      "description": "Breaking News in Advertising, Media and Technology",
+      "followers": {
+        "facebook": 624000,
+        "twitter": 676200,
+        "instagram": 598500
+      },
+      "image_url": "https://i1.feedspot.com/8644931.jpg?t=1753263141"
+    },
+    {
+      "title": "GeekWire \u00bb AI",
+      "feed_url": "https://www.geekwire.com/tag/ai/feed/",
+      "website_url": "https://www.geekwire.com/tag/ai/",
+      "description": "Stories and news about AI from GeekWire.",
+      "followers": {
+        "facebook": 141300,
+        "instagram": 10300
+      },
+      "image_url": "https://i1.feedspot.com/8644934.jpg?t=1753263273"
+    },
+    {
+      "title": "Federal News Network \u00bb Artificial Intelligence",
+      "feed_url": "https://federalnewsnetwork.com/category/technology-main/artificial-intelligence/feed/",
+      "website_url": "https://federalnewsnetwork.com/category/technology-main/artificial-intelligence/",
+      "description": "Federal News Radio looks at the full spectrum of efforts by the federal government to incorporate artificial intelligence (AI), focusing on all the technological challenges that may present.",
+      "followers": {
+        "facebook": 33600
+      },
+      "image_url": "https://i1.feedspot.com/8644936.jpg?t=1753263379"
+    },
+    {
+      "title": "ALEPH ALPHA Blog",
+      "feed_url": "https://aleph-alpha.com/feed/",
+      "website_url": "https://aleph-alpha.com/blog/",
+      "description": "All latest articles from ALEPH ALPHA Blog.",
+      "followers": {
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/8645574.jpg?t=1753357726"
+    },
+    {
+      "title": "Artisse AI Blog",
+      "feed_url": "https://artisse.ai/feed/",
+      "website_url": "https://artisse.ai/blog/",
+      "description": "The World's First AI Self-Image App Disrupting Photography and Photo-Editing Industries.",
+      "followers": {
+        "twitter": 8400
+      },
+      "image_url": "https://i1.feedspot.com/8645576.jpg?t=1753357876"
+    },
+    {
+      "title": "Berkshire Grey Blog",
+      "feed_url": "https://www.berkshiregrey.com/feed/",
+      "website_url": "https://www.berkshiregrey.com/resources/blog/",
+      "description": "All latest articles from Berkshire Grey Blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8645577.jpg?t=1753358010"
+    },
+    {
+      "title": "Contextual AI Blog",
+      "feed_url": "https://contextual.ai/blog/feed/",
+      "website_url": "https://contextual.ai/blog/",
+      "description": "All latest articles from Contextual AI Blog.",
+      "followers": {
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/8645578.jpg?t=1753358339"
+    },
+    {
+      "title": "Copyleaks Blog",
+      "feed_url": "https://copyleaks.com/blog/feed",
+      "website_url": "https://copyleaks.com/blog",
+      "description": "The definitive resource for learning about responsible AI, best plagiarism practices, the latest findings, and much more.",
+      "followers": {
+        "twitter": 2900,
+        "instagram": 603
+      },
+      "image_url": "https://i1.feedspot.com/8645595.jpg?t=1753359900"
+    },
+    {
+      "title": "Dxcover Blog",
+      "feed_url": "https://www.dxcover.com/feed/",
+      "website_url": "https://www.dxcover.com/blog/",
+      "description": "All latest articles about Dxcover.",
+      "followers": {
+        "twitter": 704
+      },
+      "image_url": "https://i1.feedspot.com/8645597.jpg"
+    },
+    {
+      "title": "GPTZero Blog",
+      "feed_url": "https://gptzero.me/news/rss/",
+      "website_url": "https://gptzero.me/news/",
+      "description": "All latest articles about GPTZero.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/8645598.jpg?t=1753360200"
+    },
+    {
+      "title": "Neysa Newsroom",
+      "feed_url": "https://neysa.ai/feed/",
+      "website_url": "https://neysa.ai/newsroom/",
+      "description": "Find the latest news and updates from Neysa. Learn more about our funding, team, products, and new developments on the Cloud AI Platform,",
+      "followers": {
+        "instagram": 540
+      },
+      "image_url": "https://i1.feedspot.com/8645599.jpg?t=1753360279"
+    },
+    {
+      "title": "OpenAI Blog",
+      "feed_url": "https://openai.com/news/rss.xml",
+      "website_url": "https://openai.com/blog/",
+      "description": "OpenAI is an AI research and deployment company. Our mission is to ensure that artificial general intelligence (AGI) benefits all of humanity. We will attempt to directly build safe and beneficial AGI, but will also consider our mission fulfilled if our work aids others to achieve this outcome. Explore our blog to learn everything you need on AI, machine learning, deep learning and more!",
+      "followers": {
+        "facebook": 42400,
+        "twitter": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/4682400.jpg?t=1611211550"
+    },
+    {
+      "title": "DeepMind - News & Blog",
+      "feed_url": "https://deepmind.com/blog/feed/basic/",
+      "website_url": "https://deepmind.google/discover/blog/",
+      "description": "DeepMind is the world leader in artificial intelligence research and its application for positive impact. They are on a scientific mission to push the boundaries of AI, developing programs that can learn to solve any complex problem without needing to be taught how.",
+      "followers": {
+        "facebook": 358
+      },
+      "image_url": "https://i1.feedspot.com/4611191.jpg?t=1615870318"
+    },
+    {
+      "title": "AIParabellum.com Blog",
+      "feed_url": "https://aiparabellum.com/feed/",
+      "website_url": "https://aiparabellum.com/category/blog/",
+      "description": "AIParabellum.com stands as a curated hub for AI tools, offering a platform that highlights the latest and most innovative solutions in artificial intelligence. It not only showcases a wide array of AI applications across various sectors but also serves as a gateway for startups and developers to submit and promote their own AI tools. This directory facilitates the connection between AI tool creators and potential users, supporting the growth of the AI community and the advancement of AI technology.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5750654.jpg?t=1704709429"
+    },
+    {
+      "title": "IBM Developer",
+      "feed_url": "https://developer.ibm.com/technologies/artificial-intelligence/",
+      "website_url": "https://developer.ibm.com/technologies/artificial-intelligence/",
+      "description": "IBM Developer offers Open source, code patterns, tutorials, meet-ups, challenges, mentoring, and a global coding community all in one place. Follow us to keep up with articles on Artificial Intelligence.",
+      "followers": {
+        "facebook": 151,
+        "twitter": 126100
+      },
+      "image_url": "https://i1.feedspot.com/4954414.jpg?t=1615870231"
+    },
+    {
+      "title": "Chatbot's Life",
+      "feed_url": "https://rss.beehiiv.com/feeds/W0866OdVPj.xml",
+      "website_url": "https://www.chatbotslife.com/",
+      "description": "Best place to learn about Conversational AI. We share the latest News, Info, AI & NLP, Tools, Tutorials & More. Our mission is to help people understand the value of chatbots, AI, Voice technologies and to help them implement it in their business.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4504512.jpg?t=1655890599"
+    },
+    {
+      "title": "AI Quantum Intelligence",
+      "feed_url": "https://aiquantumintelligence.com/",
+      "website_url": "https://aiquantumintelligence.com/",
+      "description": "AI Quantum Intelligence is an AI-driven news platform providing you with accurate, timely, and personalized news. Stay at the forefront of the digital AI revolution, with fast industry scops, expert analyses, perspectives, and opinions from a variety of concerned fields.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5720651.jpg?t=1700831733"
+    },
+    {
+      "title": "Rainbird AI Blog",
+      "feed_url": "https://rainbird.ai/feed/",
+      "website_url": "https://rainbird.ai/blog/?sector=artificial-intelligence",
+      "description": "Posts feature insightful, practical, and imaginative content on intelligent automation and artificial intelligence. Rainbird is an intelligent automation platform that enables organizations to scale great decision-making.",
+      "followers": {
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4611186.jpg?t=1615870895"
+    },
+    {
+      "title": "Great Learning \u00bb AI and Machine Learning",
+      "feed_url": "https://www.mygreatlearning.com/blog/artificial-intelligence/feed/",
+      "website_url": "https://www.mygreatlearning.com/blog/artificial-intelligence/",
+      "description": "Learn about Artificial Intelligence on Great Learning Blog. Get a complete guide on Artificial Intelligence Reality, companies, career scope & how it works.",
+      "followers": {
+        "facebook": 354200,
+        "twitter": 31700,
+        "instagram": 311700
+      },
+      "image_url": "https://i1.feedspot.com/5056161.jpg?t=1615870305"
+    },
+    {
+      "title": "Iris AI Your Science Assistant Blog",
+      "feed_url": "https://iris.ai/feed",
+      "website_url": "https://iris.ai/blog",
+      "description": "Iris AI Blog with regular updates, news, articles and interesting information on AI. Iris AI is an Artificial Intelligence helping entrepreneurs and innovators navigate the world of science.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4611187.jpg?t=1615870583"
+    },
+    {
+      "title": "Impacts of AI on emails, sales, SMS, data, tasks, & triggers Blog",
+      "feed_url": "https://biglysales.com/blog?format=rss",
+      "website_url": "https://biglysales.com/blog/",
+      "description": "Know how businesses are using AI to write & send emails, messages, sales pitches, assign tasks, grab data, schedule meetings, create autoresponders, tasks, etc. Stay tuned to the Bigly Sales blog for up-to-date coverage of the latest industry trends. Bigly Sales is an automation marketing platform helping businesses thrive globally.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 289,
+        "instagram": 7600
+      },
+      "image_url": "https://i1.feedspot.com/5695913.jpg?t=1698142775"
+    },
+    {
+      "title": "MassTLC",
+      "feed_url": "https://www.masstlc.org/category/ai/feed/",
+      "website_url": "https://www.mtlc.co/category/ai/",
+      "description": "As the largest and most powerful technology association in the region, MassTLC's mission is to accelerate growth and innovation in the Massachusetts technology industry. Follow us to keep up with articles on artificial intelligence from MassTLC.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4954443.jpg?t=1615870561"
+    },
+    {
+      "title": "Wobot.ai Blog",
+      "feed_url": "https://wobot.ai/feed",
+      "website_url": "https://wobot.ai/blog",
+      "description": "Wobot Intelligence provides everything that you need to know about AI based emerging video analytics and top trends news and analysis.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 148
+      },
+      "image_url": "https://i1.feedspot.com/5266566.jpg?t=1617974135"
+    },
+    {
+      "title": "ParallelDots Blog",
+      "feed_url": "https://blog.paralleldots.com/feed",
+      "website_url": "https://www.paralleldots.com/resources/blog",
+      "description": "We are an applied AI research group, doing our bit to transform the world by bringing AI at your fingertips using Natural Language Processing ,text analysis deep learning, AI etc",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4839718.jpg?t=1611211082"
+    },
+    {
+      "title": "Omdena Blog",
+      "feed_url": "https://www.omdena.com/feed",
+      "website_url": "https://www.omdena.com/blog",
+      "description": "Covers AI and data science projects including comprehensive case studies in health, finance, environment, public sector, and many more areas. Using different AI and Data science fields, eg. Computer Vision, Remote Sensing, Deep Learning, and Natural Language Processing. Omdena is the collaborative platform to build innovative, ethical, and efficient AI and Data Science solutions to real-world problems.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 3200,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5305571.jpg?t=1627367334"
+    },
+    {
+      "title": "AI World School",
+      "feed_url": "https://aiworldschool.com/feed/",
+      "website_url": "https://b2b.mastercard.com/news-and-insights/blogs/?SelectedTopic=AI",
+      "description": "We are a team of educators & technologists who are passionate about helping students explore & understand the fundamentals of Artificial Intelligence and Coding technology.",
+      "followers": {
+        "facebook": 244,
+        "twitter": 318,
+        "instagram": 274
+      },
+      "image_url": "https://i1.feedspot.com/5245068.jpg?t=1613378015"
+    },
+    {
+      "title": "Mastercard blogs \u00bb AI",
+      "feed_url": "https://b2b.mastercard.com/news-and-insights/blogs/?SelectedTopic=AI",
+      "website_url": "https://b2b.mastercard.com/news-and-insights/blogs/?SelectedTopic=AI",
+      "description": "Recent blog articles, news and thought leadership on artificial intelligence and machine learning for mission critical applications",
+      "followers": {
+        "facebook": 134,
+        "twitter": 547
+      },
+      "image_url": "https://i1.feedspot.com/4575131.jpg?t=1644907908"
+    },
+    {
+      "title": "Inbenta Blog",
+      "feed_url": "https://www.inbenta.com/en/blog/feed/",
+      "website_url": "https://www.inbenta.com/resources/articles/",
+      "description": "Inbenta is a leader in natural language processing and artificial intelligence for customer support, e-commerce and conversational chatbots, providing an easy-to-deploy solution that improves customer satisfaction, reduces support costs, and increases revenue.",
+      "followers": {
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4611136.jpg?t=1612613522"
+    },
+    {
+      "title": "Mantra Labs Blog",
+      "feed_url": "https://www.mantralabsglobal.com/blog/feed/",
+      "website_url": "https://www.mantralabsglobal.com/blog/",
+      "description": "Mantra Labs is an AI First InsurTech Products and Solutions Firm working with the largest Insurance companies in India & the World.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 226
+      },
+      "image_url": "https://i1.feedspot.com/5041900.jpg?t=1615870515"
+    },
+    {
+      "title": "swivl Blog",
+      "feed_url": "https://www.tryswivl.com/blog/feed",
+      "website_url": "https://www.tryswivl.com/blog",
+      "description": "Explore the latest news about swivl and thoughts on augmenting your customer success efforts with artificial intelligence.",
+      "followers": {
+        "facebook": 133,
+        "twitter": 416
+      },
+      "image_url": "https://i1.feedspot.com/5049208.jpg?t=1615870588"
+    },
+    {
+      "title": "Clear Image AI",
+      "feed_url": "https://clearimageai.com/blog?format=rss",
+      "website_url": "https://clearimageai.com/blog",
+      "description": "AI Blog that keeps up up to date on all the information about AI and business integration. Get daily updates about Info Business and AI information.",
+      "followers": {
+        "facebook": 247,
+        "twitter": 8700,
+        "instagram": 520
+      },
+      "image_url": "https://i1.feedspot.com/5292861.jpg?t=1623677861"
+    },
+    {
+      "title": "Microsoft Learn Blog \u00bb Machine Learning",
+      "feed_url": "https://learn.microsoft.com/en-us/archive/blogs/machinelearning/",
+      "website_url": "https://learn.microsoft.com/en-us/archive/blogs/machinelearning/",
+      "description": "The official blog for the Cortana Intelligence. Follow for news and updates from the team and the community. #MSAdvAnalytics",
+      "followers": {
+        "twitter": 20800
+      },
+      "image_url": "https://i1.feedspot.com/4431827.jpg?t=1615180335"
+    }
+  ]
+}

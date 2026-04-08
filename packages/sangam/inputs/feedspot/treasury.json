@@ -1,0 +1,64 @@
+{
+  "category": "Treasury",
+  "source_url": "https://rss.feedspot.com/treasury_rss_feeds",
+  "feeds": [
+    {
+      "title": "Treasury & Risk",
+      "feed_url": "https://feeds.feedblitz.com/treasuryandrisk",
+      "website_url": "https://www.treasuryandrisk.com/",
+      "description": "Treasury & Risk provides high-level treasury and finance executives with the strategic content and critical information they need to keep their businesses moving in the right direction. You can rely on Treasury & Risk as your trusted source of thought leadership on regulatory changes, economic trends, best practices, corporate success stories, and tactical solutions for treasurers, CFOs, risk managers, controllers, and other finance professionals.",
+      "followers": {
+        "facebook": 698,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5446968.jpg?t=1663327427"
+    },
+    {
+      "title": "Simply Treasury blog",
+      "feed_url": "https://www.simplytreasury.com/blog-feed.xml",
+      "website_url": "https://www.simplytreasury.com/blog",
+      "description": "Fran\u00e7ois Masquelier, Senior Vice President & Head of Treasury and Enterprise Risk Management at RTL has been associated with Corporate treasury for the past 20 years. Go through his expert advice and insights as treasurer in the blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5446957.jpg?t=1663328118"
+    },
+    {
+      "title": "State Treasury of Mississippi",
+      "feed_url": "https://treasury.ms.gov/feed/",
+      "website_url": "https://treasury.ms.gov/newsroom/",
+      "description": "Whether we're getting the state's bills paid and overseeing its funds, issuing bonds that help keep our communities strong, helping families save for college, or returning unclaimed property, customer service is at the heart of what we do. We serve every citizen in Mississippi, so our team is focused on making the Treasury more efficient and accountable to you, the taxpayers, our customers. Get the latest news and press updates from our newsroom.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5447231.jpg?t=1663564244"
+    },
+    {
+      "title": "Hedgebook Blog",
+      "feed_url": "https://hedgebook.com/resources/blogs/feed/",
+      "website_url": "https://hedgebook.com/resources/blogs/",
+      "description": "View the Hedgebook blog archives. Everything you need to know about FX risk, hedging, treasury management and much more here. Hedgebook was formed in 2011 with a mission to help businesses of all sizes make sense of treasury risk, devise profit-protecting strategies and collaborate more efficiently with their bank and broker via our market-leading SaaS platform.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5446955.jpg?t=1663327354"
+    },
+    {
+      "title": "TreasuryDirect",
+      "feed_url": "https://www.treasurydirect.gov/news/",
+      "website_url": "https://www.treasurydirect.gov/news/",
+      "description": "TreasuryDirect is the first and only financial services website that lets you buy and redeem securities directly from the U.S. Department of the Treasury in paperless electronic form. We offer product information and research across the entire line of Treasury securities, from Series EE Savings Bonds to Treasury Notes. Get all the latest news and updates from us.",
+      "followers": {
+        "facebook": 15600,
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/5446958.jpg?t=1663327805"
+    },
+    {
+      "title": "ION Blog \u00bb Treasury",
+      "feed_url": "https://iongroup.com/blog/treasury/feed/",
+      "website_url": "https://iongroup.com/blog/treasury/",
+      "description": "Get industry updates, insight to ION's solution, trending news and exclusive content on ION Treasury blog. ION software helps you improve decision-making, increase efficiency, simplify complex processes and empower your people. We enable financial institutions, central banks and corporations to digitize and automate their most business critical processes.",
+      "followers": {
+        "twitter": 849
+      },
+      "image_url": "https://i1.feedspot.com/5446956.jpg?t=1663327733"
+    }
+  ]
+}

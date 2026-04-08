@@ -1,0 +1,76 @@
+{
+  "category": "Julia Programming",
+  "source_url": "https://rss.feedspot.com/julia_programming_rss_feeds",
+  "feeds": [
+    {
+      "title": "Juliabloggers.com",
+      "feed_url": "https://www.juliabloggers.com/feed/",
+      "website_url": "https://www.juliabloggers.com/",
+      "description": "A re-syndication of the posts on Julia Bloggers, the most comprehensive source of information on the Julia Programming Language. A blog aggregating posts related to the Julia programming language.",
+      "followers": {
+        "facebook": 754,
+        "twitter": 35200
+      },
+      "image_url": "https://i1.feedspot.com/4971696.jpg?t=1669097212"
+    },
+    {
+      "title": "The Julia Blog",
+      "feed_url": "https://julialang.org/feed.xml",
+      "website_url": "https://julialang.org/blog/",
+      "description": "Julia is a high-level, high-performance dynamic programming language for technical computing. The Julia blog discusses issues of numerical, technical, distributed and parallel computing, as well as programming language design, and how these issues touch upon the design and implementation of the Julia programming language.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 29800
+      },
+      "image_url": "https://i1.feedspot.com/4971658.jpg"
+    },
+    {
+      "title": "Medium \u00bb Logan Kilpatrick",
+      "feed_url": "https://medium.com/feed/@logankilpatrick",
+      "website_url": "https://logankilpatrick.medium.com/",
+      "description": "Read all things Julia, open source, machine learning, and more by Logan Kilpatrick. We're an open platform where over 100 million readers come to find insightful and dynamic thinking. Our purpose is to spread these ideas and deepen our understanding of the world.",
+      "followers": {
+        "twitter": 139300
+      },
+      "image_url": "https://i1.feedspot.com/5470291.jpg?t=1669615270"
+    },
+    {
+      "title": "JuliaGPU",
+      "feed_url": "https://juliagpu.org/post/index.xml",
+      "website_url": "https://juliagpu.org/post/",
+      "description": "JuliaGPU is a Github organization created to unify the many packages for programming GPUs in Julia. With its high-level syntax and flexible compiler, Julia is well-positioned to productively program hardware accelerators like GPUs without sacrificing performance.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5470288.jpg?t=1669612074"
+    },
+    {
+      "title": "The Julia Computing Blog",
+      "feed_url": "https://juliacomputing.com/feed.xml",
+      "website_url": "https://info.juliahub.com/blog",
+      "description": "Julia Computing was founded with a mission to make Julia easy to use, easy to deploy and easy to scale. Julia is the fastest modern open-source language for data science, machine learning, and scientific computing.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 13000
+      },
+      "image_url": "https://i1.feedspot.com/4634726.jpg?t=1621937117"
+    },
+    {
+      "title": "Analytics Vidhya \u00bb Julia",
+      "feed_url": "https://www.analyticsvidhya.com/blog/category/julia/feed/",
+      "website_url": "https://www.analyticsvidhya.com/blog/category/julia/",
+      "description": "Covers Julia programming, data visualization, machine learning and tutorials. Analytics Vidhya is a community-based knowledge portal for Analytics and Data Science professionals.",
+      "followers": {
+        "facebook": 95200,
+        "twitter": 30600
+      },
+      "image_url": "https://i1.feedspot.com/5298059.jpg?t=1625121359"
+    },
+    {
+      "title": "AlgebraicJulia Blog",
+      "feed_url": "https://www.algebraicjulia.org/blog/feed.xml",
+      "website_url": "https://blog.algebraicjulia.org/",
+      "description": "AlgebraicJulia aims to create novel approaches to scientific computing based on applied category theory. On our blog, you can find information on topics like using categorical logic for AI planning, the chases: data repair and logical reasoning, composing open dynamical systems II: Undirected composition, and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5470290.jpg?t=1669097587"
+    }
+  ]
+}

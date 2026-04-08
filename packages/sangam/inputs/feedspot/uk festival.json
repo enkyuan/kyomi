@@ -1,0 +1,77 @@
+{
+  "category": "UK Festival",
+  "source_url": "https://rss.feedspot.com/uk_festival_rss_feeds",
+  "feeds": [
+    {
+      "title": "Hidden Door Arts Blog",
+      "feed_url": "https://hiddendoorarts.org/blog/feed/",
+      "website_url": "https://hiddendoorarts.org/blog/",
+      "description": "Hidden Door is a Nonprofit, volunteer-run art / music / theatre / dance / spoken word / film festival transforming abandoned spaces. Our mission is to Develop a platform for delivering the arts to the general public through events that create an exciting, innovative and high-impact audience experience, and bring about a deeper engagement with the arts as a result.",
+      "followers": {
+        "facebook": 23000,
+        "twitter": 10700,
+        "instagram": 17200
+      },
+      "image_url": "https://i1.feedspot.com/4780119.jpg?t=1609227688"
+    },
+    {
+      "title": "Ilkley Literature Festival Blog",
+      "feed_url": "http://www.ilkleyliteraturefestival.org.uk/feed/rdf",
+      "website_url": "http://www.ilkleyliteraturefestival.org.uk/news/blog",
+      "description": "Follow us to keep up with articles from Ilkley Literature Festival.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 9600,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4781033.jpg?t=1609228860"
+    },
+    {
+      "title": "Festival Brides Wedding Blog",
+      "feed_url": "https://www.festivalbrides.co.uk/feed/",
+      "website_url": "https://www.festivalbrides.co.uk/",
+      "description": "Festival Wedding Inspiration is a cool and alternative UK wedding blog focusing on festival wedding inspiration, bohemian style ideas and quirky suppliers for free spirited brides and grooms.",
+      "followers": {
+        "facebook": 21300,
+        "twitter": 10300,
+        "instagram": 132200
+      },
+      "image_url": "https://i1.feedspot.com/890174.jpg?t=1609227522"
+    },
+    {
+      "title": "World Yoga Festival",
+      "feed_url": "https://www.yogafestival.world/blog-feed.xml",
+      "website_url": "https://www.yogafestival.world/blog",
+      "description": "LEARN, REJUVENATE & ENJOY With around 1500 people from over 40 nations celebrating classes, workshops and concerts, the World Yoga Festival has become the largest Yoga festival in the World. The festival is also a time for great enjoyment. Dancing and music performances from world class performers will take you into a different realm of experience giving your mind a chance to rest and connect with the moment once more.",
+      "followers": {
+        "facebook": 15200,
+        "twitter": 899,
+        "instagram": 17100
+      },
+      "image_url": "https://i1.feedspot.com/4780296.jpg?t=1609229278"
+    },
+    {
+      "title": "Oxfam Blog",
+      "feed_url": "https://www.oxfam.org.uk/oxfam-in-action/oxfam-blog/",
+      "website_url": "https://www.oxfam.org.uk/oxfam-in-action/oxfam-blog/",
+      "description": "The UK's largest grassroots music festival made up of hundreds of music events all across the UK.",
+      "followers": {
+        "facebook": 10400,
+        "twitter": 10100,
+        "instagram": 13400
+      },
+      "image_url": "https://i1.feedspot.com/4781211.jpg?t=1609229311"
+    },
+    {
+      "title": "London Screenwriters Festival Blog",
+      "feed_url": "https://www.londonscreenwritersfestival.com/feed/",
+      "website_url": "https://londonscreenwritersfestival.com/blog/",
+      "description": "A festival for writers & filmmakers, with insights into the screenwriting and filmmaking process as well as workshops and talks from top industry professionals.",
+      "followers": {
+        "facebook": 9200,
+        "twitter": 15800
+      },
+      "image_url": "https://i1.feedspot.com/4780286.jpg?t=1609227649"
+    }
+  ]
+}

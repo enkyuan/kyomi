@@ -1,0 +1,29 @@
+{
+  "category": "International Business Times",
+  "source_url": "https://rss.feedspot.com/international_business_times_rss_feeds",
+  "feeds": [
+    {
+      "title": "International Business Times",
+      "feed_url": "https://www.ibtimes.com/rss",
+      "website_url": "https://www.ibtimes.com/",
+      "description": "International Business Times is the leading provider of business news and financial news from the US and around the world.",
+      "followers": {
+        "facebook": 423900,
+        "twitter": 115200,
+        "instagram": 66600
+      },
+      "image_url": "https://i1.feedspot.com/5257915.jpg?t=1750916994"
+    },
+    {
+      "title": "International Business Times \u00bb Entertainment",
+      "feed_url": "https://www.ibtimes.com/media-culture/entertainment",
+      "website_url": "https://www.ibtimes.com/media-culture/entertainment",
+      "description": "Covering the intersection of entertainment featuring analysis, commentary, and interviews with the newsmakers themselves from International Business Times.",
+      "followers": {
+        "facebook": 423900,
+        "twitter": 115200
+      },
+      "image_url": "https://i1.feedspot.com/5257915.jpg?t=1750916994"
+    }
+  ]
+}

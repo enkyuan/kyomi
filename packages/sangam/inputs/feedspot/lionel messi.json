@@ -1,0 +1,49 @@
+{
+  "category": "Lionel Messi",
+  "source_url": "https://rss.feedspot.com/lionel_messi_rss_feeds",
+  "feeds": [
+    {
+      "title": "Web oficial Leo Messi",
+      "feed_url": "https://messi.com/en/feed/",
+      "website_url": "https://messi.com/en/news/",
+      "description": "Official website of Lionel Messi, player of Football Club Barcelona and one of the best players in the world. Get the latest news and updates on Messi, game statistics, scores and more.",
+      "followers": {
+        "facebook": 116900000,
+        "instagram": 509900000
+      },
+      "image_url": "https://i1.feedspot.com/5396394.jpg?t=1651562381"
+    },
+    {
+      "title": "Planet Football \u00bb Lionel Messi",
+      "feed_url": "https://www.planetfootball.com/tag/lionel-messi/feed",
+      "website_url": "https://www.planetfootball.com/tag/lionel-messi",
+      "description": "Get all the latest Lionel Messi news, quizzes, trending videos, quick read articles, featured interviews, match reports, tributes and nostalgia only on planetfootball. Established in 2017, Planet Football is part of Planet Sport Ltds network. Planet Football is a celebration of everything that's great about football. We publish feature articles every day including in-depth interviews, football nostalgia - including football in the 1990s and football in the Noughties - and regular football quizzes.",
+      "followers": {
+        "facebook": 288300,
+        "twitter": 12100,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5396389.jpg?t=1651562353"
+    },
+    {
+      "title": "Lionel Messi \u00bb Articles",
+      "feed_url": "https://www.lionel-messi.eu/category/articles/feed/",
+      "website_url": "https://www.lionel-messi.eu/category/articles/",
+      "description": "Explore the latest news and updates on the world-renowned player - Lionel Messi. Find articles, interviews, other players' opinions and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5396390.jpg?t=1651842357"
+    },
+    {
+      "title": "Football Transfers \u00bb Lionel Messi",
+      "feed_url": "https://www.footballtransfers.com/en/players/lionel-messi/transfer-news/feed",
+      "website_url": "https://www.footballtransfers.com/en/players/lionel-messi/transfer-news",
+      "description": "All the latest transfer news of Lionel Messi (34), an Argentine professional footballer. FootballTransfers is a new platform dedicated to scouting, analysis and reporting of all the major deals from across the world. FT has all the ITK information you'll ever need.",
+      "followers": {
+        "facebook": 337100,
+        "twitter": 37700,
+        "instagram": 183400
+      },
+      "image_url": "https://i1.feedspot.com/5396395.jpg?t=1651562388"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "category": "Open Source",
+  "source_url": "https://rss.feedspot.com/open_source_rss_feeds",
+  "feeds": [
+    {
+      "title": "Google Open Source Blog",
+      "feed_url": "https://feeds.feedburner.com/GoogleOpenSourceBlog",
+      "website_url": "https://opensource.googleblog.com/",
+      "description": "Bringing all the value of open source to Google and all the resources of Google to open source. Google open source experts host monthly events focused on different open source technologies and areas of expertise. Google believes that open source is good for everyone. By being open and freely available, it enables and encourages collaboration and the development of technology, solving real-world problems. Find the latest news from Google on open source releases, major projects, events, and student outreach programs.",
+      "followers": {
+        "facebook": 3,
+        "twitter": 74700
+      },
+      "image_url": "https://i1.feedspot.com/98439.jpg?t=1624094787"
+    },
+    {
+      "title": "AWS Open Source Blog",
+      "feed_url": "https://aws.amazon.com/blogs/opensource/feed/",
+      "website_url": "https://aws.amazon.com/blogs/opensource/",
+      "description": "Amazon Web Services (AWS) is the world's most comprehensive and broadly adopted cloud platform, offering over 200 fully-featured services from data centers globally. This section features articles on Open Source Technologies, softwares and platforms.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/5294428.jpg?t=1624096142"
+    },
+    {
+      "title": "Cloud Native Computing Foundation Blog",
+      "feed_url": "https://www.cncf.io/feed/",
+      "website_url": "https://www.cncf.io/blog/",
+      "description": "The Cloud Native Computing Foundation (CNCF) hosts critical components of the global technology infrastructure. CNCF brings together the world's top developers, end users, and vendors and runs the largest open source developer conferences. CNCF is part of the nonprofit Linux Foundation. Get the latest updates, event info, webinars, and the latest community news.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 108100
+      },
+      "image_url": "https://i1.feedspot.com/5294427.jpg?t=1663216978"
+    },
+    {
+      "title": "Instaclustr | Open source Technologies",
+      "feed_url": "https://www.instaclustr.com/feed/",
+      "website_url": "https://www.instaclustr.com/blog/",
+      "description": "Read the most interesting developments at Instaclustr and in the world of open source technologies. Instaclustr Managed and supported open source solutions for Apache Cassandra, Apache Kafka, Elasticsearch, PostgreSQL, Spark, and Redis.",
+      "followers": {
+        "facebook": 563,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4786959.jpg?t=1612883515"
+    },
+    {
+      "title": "FOSS Post",
+      "feed_url": "https://fosspost.org/feed",
+      "website_url": "https://fosspost.org/",
+      "description": "An independent publishing about Linux and open source software, providing high-quality articles, tutorials, reviews and analysis.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5223811.jpg?t=1625491528"
+    },
+    {
+      "title": "OpenLogic",
+      "feed_url": "https://www.openlogic.com/blog/feed",
+      "website_url": "https://www.openlogic.com/blog",
+      "description": "OpenLogic delivers comprehensive open source services, including mission-critical support, ready-to-go solution stacks, design guidance, and training. By engaging OpenLogic, global organizations can quickly adopt the right open source technologies to drive innovation, boost efficiency, and improve agility. Learn about open source software including databases, operating systems, containers, and middleware as well as open source tools for analytics, virtualization, and development in technology blogs written by the open source experts at OpenLogic.",
+      "followers": {
+        "twitter": 218
+      },
+      "image_url": "https://i1.feedspot.com/5294425.jpg?t=1624095238"
+    },
+    {
+      "title": "VMware Open Source Blog",
+      "feed_url": "https://blogs.vmware.com/opensource/feed/",
+      "website_url": "https://blogs.vmware.com/opensource/",
+      "description": "Open source project news, technical updates and industry news and innovation, curated by the VMware Open Source Program Office.",
+      "followers": {
+        "facebook": 391400,
+        "twitter": 19900
+      },
+      "image_url": "https://i1.feedspot.com/5294426.jpg?t=1624095609"
+    },
+    {
+      "title": "FOSSASIA",
+      "feed_url": "https://blog.fossasia.org/feed/",
+      "website_url": "https://blog.fossasia.org/",
+      "description": "FOSSASIA is an organization developing Open Source software applications and Open Hardware together with a global community from its base in Asia. It is our goal to provide access to open technologies, science applications, and knowledge that improve people's lives.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 7900
+      },
+      "image_url": "https://i1.feedspot.com/5294434.jpg?t=1624099553"
+    },
+    {
+      "title": "Microsoft Open Source Blog",
+      "feed_url": "https://opensource.microsoft.com/blog/feed/",
+      "website_url": "https://opensource.microsoft.com/blog/",
+      "description": "We believe in what people make possible. Our mission is to empower every person and every organization on the planet to achieve more. Read the latest insights and news about Microsoft's Open Source practices, standards, and interoperability from Microsoft's team of experts.",
+      "followers": {
+        "twitter": 85600
+      },
+      "image_url": "https://i1.feedspot.com/5294433.jpg?t=1624099203"
+    },
+    {
+      "title": "The Rasa Blog",
+      "feed_url": "https://rasa.com/blog/",
+      "website_url": "https://rasa.com/blog/",
+      "description": "At Rasa, we're building the standard infrastructure for conversational AI. With over 10m downloads since launch, our open source tools are loved by developers worldwide, and Rasa runs in production everywhere from startups to Fortune 500s. We are open source tools for conversational AI. Read the latest product news, developer success stories, and cutting-edge research on the Rasa Blog.",
+      "followers": {
+        "facebook": 734,
+        "twitter": 7300
+      },
+      "image_url": "https://i1.feedspot.com/5294431.jpg?t=1624098335"
+    },
+    {
+      "title": "ZDNET \u00bb Open Source",
+      "feed_url": "https://www.zdnet.com/topic/open-source/",
+      "website_url": "https://www.zdnet.com/topic/open-source/",
+      "description": "ZDNet's breaking news, analysis, and research keeps business technology professionals in touch with the latest IT trends, issues and events. Find the latest news and views on all things Linux and open source.",
+      "followers": {
+        "facebook": 3,
+        "twitter": 456200
+      },
+      "image_url": "https://i1.feedspot.com/5294896.jpg?t=1624255212"
+    },
+    {
+      "title": "Percona Community Blog",
+      "feed_url": "https://percona.community/blog/index.xml",
+      "website_url": "https://percona.community/blog/",
+      "description": "Percona delivers enterprise-class support, consulting, managed services, and software for MySQL, PostgreSQL, MongoDB, and other open-source databases across traditional and cloud-based platforms.Find articles about open source databases contributed by the community.",
+      "followers": {
+        "facebook": 43500,
+        "twitter": 16500
+      },
+      "image_url": "https://i1.feedspot.com/5294432.jpg?t=1624097237"
+    }
+  ]
+}

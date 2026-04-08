@@ -1,0 +1,52 @@
+{
+  "category": "Yucaipa News",
+  "source_url": "https://rss.feedspot.com/yucaipa_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Yucaipa-Calimesa News Mirror",
+      "feed_url": "https://www.newsmirror.net/search/?f=rss&t=article&c=news/local&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.newsmirror.net/news/local/",
+      "description": "Yucaipa-Calimesa News Mirror is a Century Group newspaper. Providing strong coverage of local issues, people and events, plus local advertising information for shoppers.",
+      "followers": {
+        "facebook": 8900,
+        "twitter": 777
+      },
+      "image_url": "https://i1.feedspot.com/5152408.jpg?t=1589784842"
+    },
+    {
+      "title": "KTLA 5 \u00bb Yucaipa",
+      "feed_url": "https://ktla.com/tag/yucaipa/feed/",
+      "website_url": "https://ktla.com/tag/yucaipa/",
+      "description": "L.A.'s Very Own, KTLA is Southern California's source for Los Angeles-area breaking news, streaming live video, traffic and weather in L.A., Orange and Ventura counties, plus the Inland Empire and beyond.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1000000,
+        "instagram": 952400
+      },
+      "image_url": "https://i1.feedspot.com/5152405.jpg?t=1589785435"
+    },
+    {
+      "title": "City of Yucaipa, CA",
+      "feed_url": "https://yucaipa.org/category/news/feed/",
+      "website_url": "https://yucaipa.org/category/news/",
+      "description": "Keep up with the latest local and breaking news about Yucaipa, CA from City of Yucaipa.",
+      "followers": {
+        "facebook": 13600,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5152411.jpg?t=1589785203"
+    },
+    {
+      "title": "Press Enterprise \u00bb Yucaipa",
+      "feed_url": "https://www.pressenterprise.com/location/california/san-bernardino-county/yucaipa/",
+      "website_url": "https://www.pressenterprise.com/location/california/san-bernardino-county/yucaipa/",
+      "description": "Dig into our exclusive and topical coverage of Yucaipa city, featuring Local News, Op-eds, Lifestyle articles, and more. The Press-Enterprise and PressEnterprise.com are the leading sources for news, video, things to do, sports, and lifestyle information in Riverside and San Bernardino counties.",
+      "followers": {
+        "facebook": 104300,
+        "twitter": 100400,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5493759.jpg?t=1673856840"
+    }
+  ]
+}

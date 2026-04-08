@@ -1,0 +1,166 @@
+{
+  "category": "Boston Bruins",
+  "source_url": "https://rss.feedspot.com/boston_bruins_rss_feeds",
+  "feeds": [
+    {
+      "title": "Boston Hockey Now",
+      "feed_url": "https://bostonhockeynow.com/feed/",
+      "website_url": "https://bostonhockeynow.com/",
+      "description": "The best Boston Bruins and NHL coverage, news, analysis and trade rumors from the Boston Hockey Now team.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 6300
+      },
+      "image_url": "https://i1.feedspot.com/5175466.jpg?t=1597042438"
+    },
+    {
+      "title": "Boston.com \u00bb Bruins",
+      "feed_url": "https://www.boston.com/tag/boston-bruins/feed/",
+      "website_url": "https://www.boston.com/tag/boston-bruins/",
+      "description": "Get the latest Boston Bruins news on Boston.com. Read more and check more insider and rumors related to Boston Bruins.",
+      "followers": {
+        "facebook": 482800,
+        "twitter": 459600,
+        "instagram": 503800
+      },
+      "image_url": "https://i1.feedspot.com/5175540.jpg"
+    },
+    {
+      "title": "Yahoo Sports \u00bb Boston Bruins",
+      "feed_url": "https://sports.yahoo.com/nhl/teams/boston/rss/",
+      "website_url": "https://sports.yahoo.com/nhl/teams/boston/",
+      "description": "Comprehensive and up-to-date Boston Bruins news, scores, schedule, stats and roster.",
+      "followers": {
+        "facebook": 4099999,
+        "twitter": 573300,
+        "instagram": 478000
+      },
+      "image_url": "https://i1.feedspot.com/5175631.jpg"
+    },
+    {
+      "title": "SportSpyder.com \u00bb Boston Bruins News",
+      "feed_url": "https://sportspyder.com/nhl/boston-bruins/news.xml",
+      "website_url": "https://sportspyder.com/nhl/boston-bruins/news",
+      "description": "SportSpyder makes it easy to find and subscribe to sports news for your favourite teams. The Latest Boston Bruins NHL news articles from around the web.",
+      "followers": {
+        "facebook": 701,
+        "twitter": 873
+      },
+      "image_url": "https://i1.feedspot.com/5175651.jpg?t=1626271094"
+    },
+    {
+      "title": "Bruins Daily",
+      "feed_url": "https://www.bruinsdaily.com/feed/",
+      "website_url": "https://www.bruinsdaily.com/",
+      "description": "Bruins Daily is a NHL credentialed media organization that is dedicated to being the leading provider of Boston Bruins news, analysis, and commentary, by focusing exclusively on the Boston organization.",
+      "followers": {
+        "facebook": 12600,
+        "twitter": 10400,
+        "instagram": 826
+      },
+      "image_url": "https://i1.feedspot.com/4835956.jpg"
+    },
+    {
+      "title": "Boston Herald \u00bb Boston Bruins news",
+      "feed_url": "https://www.bostonherald.com/sports/bruins/feed/",
+      "website_url": "https://www.bostonherald.com/sports/nhl/boston-bruins/",
+      "description": "Boston Bruins news and analysis from the Boston Herald. Get the latest on the Bruins schedule, scores, stats, players, photos, video and roster.",
+      "followers": {
+        "facebook": 158300,
+        "twitter": 145000,
+        "instagram": 20500
+      },
+      "image_url": "https://i1.feedspot.com/5175564.jpg?t=1626271079"
+    },
+    {
+      "title": "The New York Times \u00bb Boston Bruins",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/topic/organization/boston-bruins/rss.xml",
+      "website_url": "https://www.nytimes.com/topic/organization/boston-bruins",
+      "description": "News about the Boston Bruins, including commentary and archival articles published in The New York Times.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/5175621.jpg"
+    },
+    {
+      "title": "Stanley Cup of Chowder",
+      "feed_url": "https://www.stanleycupofchowder.com/rss/index.xml",
+      "website_url": "https://www.stanleycupofchowder.com/",
+      "description": "Your best source for quality Boston Bruins news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 8800,
+        "twitter": 11800
+      },
+      "image_url": "https://i1.feedspot.com/5175441.jpg?t=1597042530"
+    },
+    {
+      "title": "Causeway Crowd",
+      "feed_url": "https://causewaycrowd.com/feed/",
+      "website_url": "https://causewaycrowd.com/",
+      "description": "The ultimate home for Boston Bruins news, rumors, updates, trades, signings, injuries, commentary, analysis, and more.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5175448.jpg"
+    },
+    {
+      "title": "NESN.com \u00bb Boston Bruins",
+      "feed_url": "https://nesn.com/feed/",
+      "website_url": "https://nesn.com/teams/nhl/boston-bruins/",
+      "description": "NESN.com provides sports news and video about the Boston Bruins and also tries to keep their fan updated regarding the latest rumors of Boston Bruins.",
+      "followers": {
+        "facebook": 750700,
+        "twitter": 358100
+      },
+      "image_url": "https://i1.feedspot.com/4760832.jpg?t=1626271087"
+    },
+    {
+      "title": "Bruins Diehards",
+      "feed_url": "https://www.bruinsdiehards.com/feed",
+      "website_url": "https://www.bruinsdiehards.com/",
+      "description": "A blog, podcast, and social media entity that shares news, opinions, and humor with millions of impressions per month. Boston Bruins fan driven website to keep everyone updated.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 25500
+      },
+      "image_url": "https://i1.feedspot.com/5175514.jpg?t=1597042499"
+    },
+    {
+      "title": "WBZ",
+      "feed_url": "https://boston.cbslocal.com/category/sports/bruins/feed/",
+      "website_url": "https://www.cbsnews.com/boston/sports/bruins/",
+      "description": "Boston News, Sports, Weather, Traffic and Boston's Best. Boston Bruins Hockey News & Updates from WBZ, CBS Boston.",
+      "followers": {
+        "facebook": 782500,
+        "twitter": 238000,
+        "instagram": 96700
+      },
+      "image_url": "https://i1.feedspot.com/5175523.jpg?t=1626271083"
+    },
+    {
+      "title": "The Athletic \u00bb Boston Bruins",
+      "feed_url": "https://theathletic.com/team/bruins/?rss",
+      "website_url": "https://www.nytimes.com/athletic/nhl/team/bruins/",
+      "description": "Get access to smart, in-depth Bruins sports coverage from an all-star team of writers.",
+      "followers": {
+        "facebook": 707100,
+        "twitter": 612600,
+        "instagram": 328300
+      },
+      "image_url": "https://i1.feedspot.com/5175644.jpg?t=1597042693"
+    },
+    {
+      "title": "Yardbarker \u00bb Boston Bruins",
+      "feed_url": "https://www.yardbarker.com/",
+      "website_url": "https://www.yardbarker.com/nhl/teams/boston_bruins/97",
+      "description": "Recent articles about Boston Bruins. Boston Bruins rumors, news and videos from the best sources on the web. Sign up for the Bruins newsletter.",
+      "followers": {
+        "facebook": 151800,
+        "twitter": 28800
+      },
+      "image_url": "https://i1.feedspot.com/5175640.jpg?t=1626271091"
+    }
+  ]
+}

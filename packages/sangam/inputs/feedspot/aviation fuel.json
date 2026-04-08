@@ -1,0 +1,28 @@
+{
+  "category": "Aviation Fuel",
+  "source_url": "https://rss.feedspot.com/aviation_fuel_rss_feeds",
+  "feeds": [
+    {
+      "title": "Aviation International News \u00bb Fuel",
+      "feed_url": "https://www.ainonline.com/channel/fuel/",
+      "website_url": "https://www.ainonline.com/channel/fuel/",
+      "description": "Get news and developments about aviation fuel, including jet fuel, aviation gasoline, and biofuel. The Aviation International News (AIN) publication is providing timely, accurate, and balanced business aviation and aerospace news, analysis, and data from around the world.",
+      "followers": {
+        "facebook": 120500,
+        "twitter": 46700
+      },
+      "image_url": "https://i1.feedspot.com/5450399.jpg?t=1664281807"
+    },
+    {
+      "title": "Avfuel Blog",
+      "feed_url": "https://avfuelblog.com/index.php/feed/",
+      "website_url": "https://www.spglobal.com/commodityinsights/en/oil/refined-products/jetfuel",
+      "description": "Explore blog posts related to commercial aviation, FBOs, pilots, fuel, and others. Avfuel is a leading independent global supplier of aviation fuel and services. We are connecting aviators and businesses with systems for success.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5450400.jpg?t=1664281701"
+    }
+  ]
+}

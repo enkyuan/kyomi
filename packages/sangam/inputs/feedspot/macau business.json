@@ -1,0 +1,30 @@
+{
+  "category": "Macau Business",
+  "source_url": "https://rss.feedspot.com/macau_business_rss_feeds",
+  "feeds": [
+    {
+      "title": "Macao Startup Club Blog",
+      "feed_url": "https://www.macaostartupclub.com/blog-feed.xml",
+      "website_url": "https://www.macaostartupclub.com/blog",
+      "description": "Macao Startup Club is a non-profit organization which believe everyone shall freely create value and contribute back to their own community.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7273970.jpg?t=1710420486"
+    },
+    {
+      "title": "MACAU DAILY TIMES \u00bb Business",
+      "feed_url": "https://macaudailytimes.com.mo/category/business/feed",
+      "website_url": "https://macaudailytimes.com.mo/category/business",
+      "description": "\u6fb3\u9580\u6bcf\u65e5\u6642\u5831 Macau Daily News Macau Affairs Macau business Macau gaming. The Macau Daily Times (Chinese: \u6fb3\u9580\u6bcf\u65e5\u6642\u5831) is a daily English-language newspaper published in Macau. It was launched on June 1, 2007. The paper started among one English and several Chinese and Portuguese language newspapers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7273971.jpg?t=1710420531"
+    },
+    {
+      "title": "Macau Spin Incubator Blog",
+      "feed_url": "https://macauspin.mo/en/feed/",
+      "website_url": "https://macauspin.mo/en/blog/",
+      "description": "Macau Spin Incubator is a Macau-based business incubator center offering startups in the Portuguese-speaking countries and the Greater Bay Area, the opportunity to connect, network, and pairing. Macau Spin Incubator expert services will guide you towards achieving your goals and succeeding in your business endeavours.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7273972.jpg?t=1710420443"
+    }
+  ]
+}

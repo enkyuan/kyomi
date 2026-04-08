@@ -1,0 +1,59 @@
+{
+  "category": "UK GIS",
+  "source_url": "https://rss.feedspot.com/uk_gis_rss_feeds",
+  "feeds": [
+    {
+      "title": "Esri UK Blog",
+      "feed_url": "https://resource.esriuk.com/feed/",
+      "website_url": "https://resource.esriuk.com/blog/",
+      "description": "Esri UK is the world's leading provider of geographic information systems (GIS), creating technology that gives you access to maps, apps, and analytics. The people of Esri UK, share more about their work, inspiration, and how to get the most out of Esri UK technology on their blog.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 10100
+      },
+      "image_url": "https://i1.feedspot.com/4912924.jpg?t=1620294498"
+    },
+    {
+      "title": "GeoPlanIT",
+      "feed_url": "https://www.geoplanit.co.uk/?feed=rss2",
+      "website_url": "https://www.geoplanit.co.uk/",
+      "description": "The intention of this blog is to discuss themes related to technology, geography and town planning. It's a broad topic area I know but it should provide me with some material! The blog will be a place where you find out useful information such as methods to make maps, or cool plugins for SketchUp that I like.",
+      "followers": {
+        "facebook": 130
+      },
+      "image_url": "https://i1.feedspot.com/4729891.jpg?t=1607665761"
+    },
+    {
+      "title": "Lovell Johns Blog",
+      "feed_url": "https://www.lovelljohns.com/feed/",
+      "website_url": "https://www.lovelljohns.com/blog/",
+      "description": "Lovell Johns is a cartographic and GIS company founded in 1965. Lovell Johns is a leading UK mapping company providing GIS and other map services to the public sector, publishers and all sizes of business.Keep up to date with the Lovell Johns blog to find out the latest news from the mapping Industry.",
+      "followers": {
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/4782195.jpg?t=1609305041"
+    },
+    {
+      "title": "The CASA Blog \u00bb GIS",
+      "feed_url": "http://blogs.casa.ucl.ac.uk/category/gis/feed/",
+      "website_url": "http://blogs.casa.ucl.ac.uk/category/gis/",
+      "description": "The latest outputs from researchers, alumni and friends at the UCL Centre for Advanced Spatial Analysis (CASA). Find information on GIS in this blog.",
+      "followers": {
+        "facebook": 288400,
+        "twitter": 141700
+      },
+      "image_url": "https://i1.feedspot.com/4730191.jpg?t=1607664861"
+    },
+    {
+      "title": "1Spatial",
+      "feed_url": "https://1spatial.com/feed/",
+      "website_url": "https://1spatial.com/au/news-events/news/",
+      "description": "We are leaders in managing Geospatial, Spatial & GIS Data Information & Intelligence. Delivering value from smarter data",
+      "followers": {
+        "facebook": 484,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4912935.jpg?t=1620294502"
+    }
+  ]
+}

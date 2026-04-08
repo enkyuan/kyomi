@@ -1,0 +1,17 @@
+{
+  "category": "Mount Airy News",
+  "source_url": "https://rss.feedspot.com/mount_airy_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City Of Mount Airy",
+      "feed_url": "https://www.mountairy.org/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.mountairy.org/CivicAlerts.aspx?CID=1",
+      "description": "Get the latest news, updates, and alerts in Mount Airy, NC.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 776
+      },
+      "image_url": "https://i1.feedspot.com/5169247.jpg"
+    }
+  ]
+}

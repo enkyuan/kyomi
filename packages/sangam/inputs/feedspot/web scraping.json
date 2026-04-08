@@ -1,0 +1,280 @@
+{
+  "category": "Web Scraping",
+  "source_url": "https://rss.feedspot.com/web_scraping_rss_feeds",
+  "feeds": [
+    {
+      "title": "Apify Blog",
+      "feed_url": "https://blog.apify.com/rss/",
+      "website_url": "https://blog.apify.com/",
+      "description": "Product updates, tips, and stories from the world of web scraping, data extraction, and web automation. Apify is a software platform that lets you automate anything a person can do manually in a web browser, and then run it at scale.",
+      "followers": {
+        "facebook": 658,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5367592.jpg?t=1643864722"
+    },
+    {
+      "title": "ScrapingBee Blog",
+      "feed_url": "https://www.scrapingbee.com/index.xml",
+      "website_url": "https://www.scrapingbee.com/blog/",
+      "description": "We help you get better at web-scraping with our detailed tutorials, case studies and writings by industry experts. ScrapingBee API handles headless browsers and rotates proxies for you.",
+      "followers": {
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5367590.jpg?t=1643864713"
+    },
+    {
+      "title": "ScraperAPI Blog",
+      "feed_url": "https://www.scraperapi.com/feed/",
+      "website_url": "https://www.scraperapi.com/blog/",
+      "description": "Having built many web scrapers, we repeatedly went through the tiresome process of finding proxies, setting up headless browsers, and handling CAPTCHAs. That's why we decided to start ScraperAPI, it handles all of this for you so you can scrape any page with a simple API call!",
+      "followers": {
+        "twitter": 459
+      },
+      "image_url": "https://i1.feedspot.com/5367605.jpg?t=1643876140"
+    },
+    {
+      "title": "Datahut Blog",
+      "feed_url": "https://www.blog.datahut.co/blog-feed.xml",
+      "website_url": "https://www.blog.datahut.co/",
+      "description": "A blog for people & companies looking to make a big business impact with data acquired using web scraping and web crawling. Learn the best practices, business use cases, legality, and how you can do your job better with data. Datahut helps businesses get structured data feeds from any website through our cloud-based data as a service platform. Our fully-managed Web Scraping and Web crawling solutions help customers get data without setting up servers, coding or expensive softwares.",
+      "followers": {
+        "facebook": 605,
+        "twitter": 370
+      },
+      "image_url": "https://i1.feedspot.com/5367607.jpg?t=1643864792"
+    },
+    {
+      "title": "ScrapeHero",
+      "feed_url": "https://www.scrapehero.com/feed/",
+      "website_url": "https://www.scrapehero.com/articles/",
+      "description": "Articles, tutorials and analyis on data extraction, web scraping and alternative data. We are one of the Top 3 data scraping companies in the world providing custom data gathering and data analysis solutions to customers ranging from startups to Fortune 50 companies",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5118397.jpg?t=1644312606"
+    },
+    {
+      "title": "SerpApi Blog",
+      "feed_url": "https://serpapi.com/blog/rss/",
+      "website_url": "https://serpapi.com/blog/",
+      "description": "Search engine scraping tutorials, API updates and other tips. SerpApi is a real time API to access Google search results. It solves the issues of having to rent proxies, solving captchas, and JSON parsing.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 1100,
+        "instagram": 163
+      },
+      "image_url": "https://i1.feedspot.com/5367604.jpg?t=1643864780"
+    },
+    {
+      "title": "PromptCloud \u00bb Web Scraping",
+      "feed_url": "https://www.promptcloud.com/category/web-scraping/feed/",
+      "website_url": "https://www.promptcloud.com/category/web-scraping/",
+      "description": "Articles on web scraping. PromptCloud is a Bengaluru-based web scraping service working on the DaaS model.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5367616.jpg?t=1643864836"
+    },
+    {
+      "title": "3i Data Scraping Blog",
+      "feed_url": "https://www.3idatascraping.com/feed/",
+      "website_url": "https://www.3idatascraping.com/main-blog/",
+      "description": "3i Data Scraping provides different blogs to provide knowledge about web data scraping to its customers and users. Get more knowledge about data scraping through out blog.",
+      "followers": {
+        "facebook": 559,
+        "twitter": 353
+      },
+      "image_url": "https://i1.feedspot.com/5615491.jpg?t=1688369825"
+    },
+    {
+      "title": "My{Data}Provider Blog",
+      "feed_url": "https://mydataprovider.com/feed/",
+      "website_url": "https://mydataprovider.com/blog/",
+      "description": "Articles on data extraction and web scraping. We develop cloud-based software for web scraping and price monitoring.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5367606.jpg?t=1644316047"
+    },
+    {
+      "title": "Scraping Robot Blog",
+      "feed_url": "https://scrapingrobot.com/feed/",
+      "website_url": "https://scrapingrobot.com/blog/",
+      "description": "Read all there is to know about web scraping. Topics include data extraction, social media scraping, price scraping, and more! Scraping Robot is a culture-oriented, emerging company specializing in data scraping that is headquartered in the United States. With premier capacity paired with a top-notch infrastructure, we are capable of scraping & structuring data more efficiently than anyone.",
+      "followers": {
+        "twitter": 27
+      },
+      "image_url": "https://i1.feedspot.com/5367600.jpg?t=1643880265"
+    },
+    {
+      "title": "WebHarvy Blog",
+      "feed_url": "https://www.webharvy.com/blog/feed/",
+      "website_url": "https://www.webharvy.com/blog/",
+      "description": "WebHarvy is a Visual Web Scraping Software. Our mission is to build the planet's most easy to use software for web data extraction.",
+      "followers": {
+        "facebook": 343,
+        "twitter": 73
+      },
+      "image_url": "https://i1.feedspot.com/5367612.jpg?t=1643882727"
+    },
+    {
+      "title": "The Web Scraping Club",
+      "feed_url": "https://substack.thewebscraping.club/feed",
+      "website_url": "https://substack.thewebscraping.club/",
+      "description": "News, solutions and interviews about web scraping.In this substack you will find weekly content about:- Web Scraping techniques- Interviews with key people in the industry- Anti bot infos and counter measures- Real world examples and code",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F1e343ec9-7946-4440-8c00-57209a1d99a1_1024x1024.png"
+    },
+    {
+      "title": "Aimleap Blog",
+      "feed_url": "https://outsourcebigdata.com/feed/",
+      "website_url": "https://outsourcebigdata.com/blog/",
+      "description": "Aimleap's team of experts shares views and insight on how AI-enabled web-scraping tools are transforming the industry. Read articles on a range of related topics about web-scraping. AIMLEAP is a certified global technology consulting and service provider offering Digital IT, AI augmented Data Solutions.",
+      "followers": {
+        "facebook": 547,
+        "twitter": 27,
+        "instagram": 424
+      },
+      "image_url": "https://i1.feedspot.com/5673485.jpg?t=1695021793"
+    },
+    {
+      "title": "Ujeebu Blog",
+      "feed_url": "https://ujeebu.com/blog/rss/",
+      "website_url": "https://ujeebu.com/blog/",
+      "description": "The Ujeebu blog provides extensive resources and tutorials on web data scraping using tools like Puppeteer. It covers topics such as advanced scraping techniques, rule-based extraction, legal and ethical considerations, and handling JavaScript-heavy pages. The blog is aimed at helping developers efficiently extract data from websites using practical, detailed guides.",
+      "followers": {
+        "facebook": 5,
+        "twitter": 122
+      },
+      "image_url": "https://i1.feedspot.com/7317679.jpg?t=1716875730"
+    },
+    {
+      "title": "ParseHub Blog",
+      "feed_url": "https://www.parsehub.com/blog/rss/",
+      "website_url": "https://parsehub.com/blog/",
+      "description": "Insights about web scraping, data and the internet. ParseHub is an easy-to-learn web scraper for gathering data from the web. Use ParseHub to power products, research, visualizations, and key business decisions.",
+      "followers": {
+        "facebook": 320,
+        "twitter": 898
+      },
+      "image_url": "https://i1.feedspot.com/5367596.jpg?t=1643864745"
+    },
+    {
+      "title": "Scrapestorm Blog",
+      "feed_url": "https://www.scrapestorm.com/tutorial-list/blog/feed/",
+      "website_url": "https://www.scrapestorm.com/tutorial-list/blog/",
+      "description": "Articles and tutorials for beginners that will teach you how to scrape data using ScrapeStorm. ScrapeStorm is an AI-Powered visual web scraping tool, which can be used to extract data from almost any website without writing any code.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5367594.jpg?t=1643868852"
+    },
+    {
+      "title": "Python Awesome \u00bb Scrape",
+      "feed_url": "https://pythonawesome.com/tag/scrape/rss/",
+      "website_url": "https://pythonawesome.com/tag/scrape/",
+      "description": "Find articles on web scraping in python, libraries and frameworks and various tools for web scraping. PythonAwesome's goal is to be the go-to website for developers looking for Python libraries and open source projects to get their work done.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5367613.jpg?t=1643864822"
+    },
+    {
+      "title": "ProWebScraper Blog",
+      "feed_url": "https://prowebscraper.com/blog/feed/",
+      "website_url": "https://prowebscraper.com/blog/",
+      "description": "Articles on web scraping, data extraction, and more! We help you extract web data at a scale, provide you machine-readable data and help you seize competitive advantage in your business",
+      "followers": {
+        "facebook": 261,
+        "twitter": 239
+      },
+      "image_url": "https://i1.feedspot.com/5118395.jpg?t=1643873094"
+    },
+    {
+      "title": "ScrapingAnt Blog",
+      "feed_url": "https://scrapingant.com/blog/rss.xml",
+      "website_url": "https://scrapingant.com/blog/",
+      "description": "Web Scraping API useful articles on headless browsers, rotating proxies, DOM traversal. ScrapingAnt uses the latest Chrome browser and rotates proxies for you.",
+      "followers": {
+        "facebook": 52,
+        "twitter": 69
+      },
+      "image_url": "https://i1.feedspot.com/5367588.jpg?t=1643882176"
+    },
+    {
+      "title": "Bright Data Blog",
+      "feed_url": "https://brightdata.com/blog/feed",
+      "website_url": "https://brightdata.com/blog",
+      "description": "Learn useful tips and practical advice on web-data collecting tools that make innovative use of proxy networks to gain a competitive edge and to keep you from getting locked out. Bright Data Inc is the world's #1 web data platform. Fortune 500 companies, academic institutions and small businesses all rely on Bright Data's solutions to retrieve crucial public web data in the most efficient, reliable and flexible way, so they can research, monitor, analyze data, and make better decisions.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/5367595.jpg?t=1643864739"
+    },
+    {
+      "title": "Datamam Blog",
+      "feed_url": "https://datamam.com/feed/",
+      "website_url": "https://datamam.com/blog/",
+      "description": "Datamam blogs get you the latest updates and news on web scraping, data mining, and data extraction tools and technology. We are a Web Scraping Company that specializes in data extraction from websites. Our technology extracts valuable data from any website.",
+      "followers": {
+        "facebook": 28700,
+        "twitter": 16600
+      },
+      "image_url": "https://i1.feedspot.com/5367593.jpg?t=1643864727"
+    },
+    {
+      "title": "ProxyScrape Blog",
+      "feed_url": "https://proxyscrape.com/blog/feed",
+      "website_url": "https://proxyscrape.com/blog",
+      "description": "Find information and tutorials on web scraping and proxies in our blog. Here at ProxyScrape, our mission is to provide the best proxy experience possible at an affordable price for small & big customers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5367621.jpg?t=1643876944"
+    },
+    {
+      "title": "Zyte Blog",
+      "feed_url": "https://www.zyte.com/blog/feed/",
+      "website_url": "https://www.zyte.com/blog/",
+      "description": "We cover everything you need to know about web scraping with the right amount of detail without being overwhelming. We're game changers in web data extraction, obsessed with removing barriers so our customers can access valuable data. Quickly and easily, whenever and however they need it.",
+      "followers": {
+        "facebook": 508,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5367589.jpg?t=1643893832"
+    },
+    {
+      "title": "Scraping-bot.io Blog",
+      "feed_url": "https://www.scraping-bot.io//feed/",
+      "website_url": "https://www.scraping-bot.io/web-scraping-blog",
+      "description": "Articles and tips about data extraction from websites. We share our knowledge about html scraping, scraping tools, do's and don'ts, etc. Scraping Bot offers a powerful web scraping API to extract HTML content without getting blocked.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5367608.jpg?t=1643870356"
+    },
+    {
+      "title": "WebScrapingAPI Blog",
+      "feed_url": "https://www.webscrapingapi.com/rss",
+      "website_url": "https://www.webscrapingapi.com/blog",
+      "description": "Stay tuned with Web Scraping trends and news. WebScrapingAPI is the leading REST API for web scraping.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5367610.jpg?t=1644316444"
+    },
+    {
+      "title": "DataOx Blog",
+      "feed_url": "https://data-ox.com/feed/",
+      "website_url": "https://data-ox.com/blog",
+      "description": "Find DataOx expertise in web scraping made simple & up-to-date: latest news, trends & legal aspects of data scraping and parsing. We offer data scraping solutions for startups and ongoing businesses.",
+      "followers": {
+        "facebook": 27,
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/5367591.jpg?t=1643864719"
+    },
+    {
+      "title": "WebDataGuru Blog",
+      "feed_url": "https://www.webdataguru.com/feed",
+      "website_url": "https://www.webdataguru.com/blog",
+      "description": "WebDataGuru is a leading provider of data solutions, offering web scraping, custom data extraction, and data as a service to help businesses make better decisions. Our price intelligence tools provide valuable insights into market trends and pricing strategies, making us a trusted partner for companies looking to stay ahead in a competitive marketplace.",
+      "followers": {
+        "facebook": 805,
+        "twitter": 102
+      },
+      "image_url": "https://i1.feedspot.com/5367617.jpg?t=1678810305"
+    }
+  ]
+}

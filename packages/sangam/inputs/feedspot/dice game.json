@@ -1,0 +1,82 @@
+{
+  "category": "Dice Game",
+  "source_url": "https://rss.feedspot.com/dice_game_rss_feeds",
+  "feeds": [
+    {
+      "title": "Dice Masters North",
+      "feed_url": "https://www.dm-north.com/feed/",
+      "website_url": "https://www.dm-north.com/",
+      "description": "Dice Masters North is a site by some Dice Masters fans from the Great White North. We are a couple of Canadian Dice Masters fans, whose focus is on Team Building.",
+      "followers": {
+        "facebook": 113
+      },
+      "image_url": "https://i1.feedspot.com/4945371.jpg?t=1621425757"
+    },
+    {
+      "title": "Devon Dice",
+      "feed_url": "https://devondice.co.uk/feed/",
+      "website_url": "https://devondice.co.uk/",
+      "description": "We are Devon Dice, two guys, one mission to talk about board games, on this adventure we will be doing reviews, podcasts, and videos all about Board Games and the industry around them.",
+      "followers": {
+        "twitter": 314,
+        "instagram": 106
+      },
+      "image_url": "https://i1.feedspot.com/4945210.jpg?t=1621425611"
+    },
+    {
+      "title": "Dice Hate Me",
+      "feed_url": "http://dicehateme.com/feed/",
+      "website_url": "http://dicehateme.com/",
+      "description": "Dice Hate Me is a website dedicated to talking about and reviewing games, previewing upcoming titles, writing ridiculous and humorous things and generally spreading some paper and board gaming love.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 10400
+      },
+      "image_url": "https://i1.feedspot.com/721229.jpg?t=1621425598"
+    },
+    {
+      "title": "Dice Dice Kitty",
+      "feed_url": "https://thegeekkitty.wordpress.com/feed/",
+      "website_url": "https://thegeekkitty.wordpress.com/",
+      "description": "Follow this blog where a Dice Masters, HeroClix, and Board Games, gamer shares her thoughts and experience on Dice Masters and Board games.",
+      "followers": {
+        "facebook": 342
+      },
+      "image_url": "https://i1.feedspot.com/4945356.jpg?t=1621425655"
+    },
+    {
+      "title": "Dark Elf Dice Blog",
+      "feed_url": "https://feeds.feedburner.com/DarkElfDiceBlog",
+      "website_url": "https://darkelfdice.com/blogs/news",
+      "description": "Dark Elf Dice is an online specialty store that sells RPG dice and role-playing game supplies. The official blog of Dark Elf Dice discusses the latest in RPG dice, games, and more.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 1300,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/4945352.jpg?t=1621425619"
+    },
+    {
+      "title": "Red Dice Diaries",
+      "feed_url": "https://reddicediaries.substack.com/feed",
+      "website_url": "https://reddicediaries.substack.com/",
+      "description": "Red Dice Diaries is my channel, providing tips and advice for roleplaying, broadcast games showing that advice in action & highlight interesting games.",
+      "followers": {
+        "facebook": 600,
+        "twitter": 699
+      },
+      "image_url": "https://i1.feedspot.com/4945337.jpg?t=1621425600"
+    },
+    {
+      "title": "The Dice Tower",
+      "feed_url": "https://www.dicetower.com/master-feed.xml/feed",
+      "website_url": "https://www.dicetower.com/",
+      "description": "The Dice Tower is dedicated to getting folks to learn about the wide world of exciting new board games. We do video reviews, and an audio show, and more.",
+      "followers": {
+        "facebook": 50400,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4718379.jpg?t=1607410786"
+    }
+  ]
+}

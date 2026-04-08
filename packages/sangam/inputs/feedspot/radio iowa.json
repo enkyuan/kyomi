@@ -1,0 +1,50 @@
+{
+  "category": "Radio Iowa",
+  "source_url": "https://rss.feedspot.com/radio_iowa_rss_feeds",
+  "feeds": [
+    {
+      "title": "Radio Iowa \u00bb Health-Medicine",
+      "feed_url": "https://www.radioiowa.com/category/health-medicine/feed/",
+      "website_url": "https://www.radioiowa.com/category/health-medicine/",
+      "description": "Get the latest health and medicine news from the health care industry only on Radio Iowa.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5242744.jpg?t=1612611649"
+    },
+    {
+      "title": "Radio Iowa \u00bb Business",
+      "feed_url": "https://www.radioiowa.com/category/business/feed/",
+      "website_url": "https://www.radioiowa.com/category/business/",
+      "description": "Find the top business news, headlines, and videos about entrepreneurs, venture capital, jobs, start-ups, and more.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5242731.jpg?t=1612609499"
+    },
+    {
+      "title": "Radio Iowa \u00bb Crime-Courts",
+      "feed_url": "https://www.radioiowa.com/category/crime-courts/feed/",
+      "website_url": "https://www.radioiowa.com/category/crime-courts/",
+      "description": "Get the latest crime news and updates covering the Iowa region only on Radio Iowa.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5242738.jpg?t=1612610558"
+    },
+    {
+      "title": "Radio Iowa \u00bb Sports",
+      "feed_url": "https://www.radioiowa.com/category/sports/feed/",
+      "website_url": "https://www.radioiowa.com/category/sports/",
+      "description": "The latest scores, news, videos, photos, and standings in high school, college, and professional sports.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5242746.jpg?t=1612611804"
+    }
+  ]
+}

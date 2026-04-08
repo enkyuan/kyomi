@@ -1,0 +1,41 @@
+{
+  "category": "Beaufort News",
+  "source_url": "https://rss.feedspot.com/beaufort_south_carolina_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Island News",
+      "feed_url": "https://yourislandnews.com/feed/",
+      "website_url": "https://yourislandnews.com/",
+      "description": "The Island News is a locally owned and operated newspaper that is dedicated to bringing you hyper-local news and sports. We go to great lengths to cover all aspects of island life in Beaufort (north of the Broad), from local interest stories, local sports, social and student events, business items, and more complicated matters affecting our local government.",
+      "followers": {
+        "facebook": 11200,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5179342.jpg?t=1605269636"
+    },
+    {
+      "title": "City of Beaufort, SC",
+      "feed_url": "https://www.cityofbeaufort.org/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.cityofbeaufort.org/CivicAlerts.aspx?sort=date",
+      "description": "City of Beaufort, SC is dedicated to keeping residents informed and up-to-date by providing the latest news about schools, sports, business, performing arts, health/safety issues, human interest and more.",
+      "followers": {
+        "facebook": 21400,
+        "twitter": 1800,
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5179360.jpg?t=1605270483"
+    },
+    {
+      "title": "Explore Beaufort, SC",
+      "feed_url": "https://explorebeaufortsc.com/category/local-news/feed/",
+      "website_url": "https://explorebeaufortsc.com/category/local-news/",
+      "description": "Find the best places to eat, play, sleep and EXPLORE beautiful Beaufort South Carolina. Read all the local Beaufort SC news that matters at Explore Beaufort SC.",
+      "followers": {
+        "facebook": 202500,
+        "twitter": 155,
+        "instagram": 17100
+      },
+      "image_url": "https://i1.feedspot.com/5179353.jpg?t=1605270322"
+    }
+  ]
+}

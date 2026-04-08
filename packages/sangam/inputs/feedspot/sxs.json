@@ -1,0 +1,60 @@
+{
+  "category": "SXS",
+  "source_url": "https://rss.feedspot.com/sxs_rss_feeds",
+  "feeds": [
+    {
+      "title": "Side By Side Stuff",
+      "feed_url": "https://blog.sidebysidestuff.com/feed/",
+      "website_url": "https://blog.sidebysidestuff.com/",
+      "description": "On our blog, you'll find exclusive store news, industry updates, and other topics of interest for all side-by-side enthusiasts. No matter how long you've been riding or what model you choose to go with, there's something for every SxS rider and off-road enthusiast. SideBySideStuff is an online retailer of side-by-side parts and accessories.",
+      "followers": {
+        "facebook": 655600,
+        "twitter": 7100,
+        "instagram": 134000
+      },
+      "image_url": "https://i1.feedspot.com/5413051.jpg?t=1655874007"
+    },
+    {
+      "title": "UTV Off-Road Magazine",
+      "feed_url": "https://utvoffroadmag.com/feed/",
+      "website_url": "https://utvoffroadmag.com/",
+      "description": "UTV Off-Road Magazine is a website and magazine dedicated to UTVs and side-by-sides. They offer in-depth reviews of new vehicles, custom builds, trail rides, products, and events.",
+      "followers": {
+        "facebook": 18000,
+        "twitter": 4100,
+        "instagram": 49700
+      },
+      "image_url": "https://i1.feedspot.com/5413054.jpg?t=1655804006"
+    },
+    {
+      "title": "The SXS Guys",
+      "feed_url": "https://sxsguys.com/topics/news/feed/",
+      "website_url": "https://sxsguys.com/topics/news/",
+      "description": "Explore UTV and Off-Road News, Reviews & Videos! A group of UTV specialists and personalities that will explore, test and experience the offroad community, products and events!",
+      "followers": {
+        "facebook": 22100,
+        "twitter": 290,
+        "instagram": 19000
+      },
+      "image_url": "https://i1.feedspot.com/5427020.jpg?t=1659352811"
+    },
+    {
+      "title": "Rad Parts Blog",
+      "feed_url": "https://radutvparts.com/blogs/news.atom",
+      "website_url": "https://radutvparts.com/blogs/news",
+      "description": "Rad Parts is a U.S.A.-based UTV store that provides top-of-the-line side-by-side UTV parts. Our company is proud to offer some of the best products available on the market.",
+      "followers": {
+        "facebook": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5450549.jpg?t=1664350077"
+    },
+    {
+      "title": "Side by Side Kings",
+      "feed_url": "https://sidebysidekings.com/feed/",
+      "website_url": "https://sidebysidekings.com/",
+      "description": "Side by Side Kings is a place where SXS enthusiasts from across the globe come to share their passion for the hobby with one another. We love the freedom, exhilaration and flexibility of UTVing and we want to share that with you.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5450584.jpg?t=1664350926"
+    }
+  ]
+}

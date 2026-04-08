@@ -1,0 +1,47 @@
+{
+  "category": "Rose Gardening",
+  "source_url": "https://rss.feedspot.com/rose_gardening_rss_feeds",
+  "feeds": [
+    {
+      "title": "Garden Roses Direct Blog",
+      "feed_url": "https://gardenrosesdirect.com/blog/feed/",
+      "website_url": "https://gardenrosesdirect.com/blog/",
+      "description": "Read articles and blog posts about garden roses and wedding roses. Learn how to care for your roses to ensure a long life and maximum enjoyment. Garden Roses Direct provides wholesale garden roses, shipped straight from our farm to you.",
+      "followers": {
+        "facebook": 2200,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5307810.jpg?t=1627882328"
+    },
+    {
+      "title": "The Rose Journal",
+      "feed_url": "https://therosejournal.wordpress.com/feed/",
+      "website_url": "https://therosejournal.wordpress.com/",
+      "description": "Welcome to The Rose Journal. We created this blog to share our knowledge of rose gardening and to post about our other passion, travel, as well as other topics that interest us.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5312512.jpg?t=1629116466"
+    },
+    {
+      "title": "Hedgerow rose Blog",
+      "feed_url": "https://hedgerowrose.com/feed/",
+      "website_url": "https://hedgerowrose.com/blog/",
+      "description": "A blog by Laurie - Gardener, Photographer & Metalsmith. The Hedgerow Rose blog now has close to 500 original posts, the majority of which focus on roses.",
+      "followers": {
+        "twitter": 261,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5312522.jpg?t=1629110949"
+    },
+    {
+      "title": "Rose Notes",
+      "feed_url": "https://www.rosenotes.com/atom.xml",
+      "website_url": "https://www.rosenotes.com/",
+      "description": "Carolyn Parker is a rose author and photographer living and gardening in California. She offers tips on everything you need to know about roses in a friendly, conversational manner with gorgeous photography.",
+      "followers": {
+        "facebook": 281,
+        "twitter": 11
+      },
+      "image_url": "https://i1.feedspot.com/5307396.jpg?t=1627725360"
+    }
+  ]
+}

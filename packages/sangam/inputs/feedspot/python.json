@@ -1,0 +1,481 @@
+{
+  "category": "Python",
+  "source_url": "https://rss.feedspot.com/python_rss_feeds",
+  "feeds": [
+    {
+      "title": "Python Library Blog",
+      "feed_url": "https://www.blog.pythonlibrary.org/feed/",
+      "website_url": "https://www.blog.pythonlibrary.org/",
+      "description": "Python Programming from the Frontlines",
+      "followers": {
+        "facebook": 95,
+        "twitter": 5900
+      },
+      "image_url": "https://i1.feedspot.com/113307.jpg?t=1618383553"
+    },
+    {
+      "title": "Planet Python",
+      "feed_url": "https://planetpython.org/rss20.xml",
+      "website_url": "https://planetpython.org/",
+      "description": "Recent postings from Python-related blogs.",
+      "followers": {
+        "twitter": 18800
+      },
+      "image_url": "https://i1.feedspot.com/4093081.jpg"
+    },
+    {
+      "title": "Real Python",
+      "feed_url": "https://realpython.com/atom.xml?format=xml",
+      "website_url": "https://realpython.com/",
+      "description": "The Real Python course and sequel Real Python for the Web course provide Python programming training through hands-on, interesting examples that are both useful and fun.",
+      "followers": {
+        "facebook": 153600,
+        "twitter": 217200,
+        "instagram": 58700
+      },
+      "image_url": "https://i1.feedspot.com/4318254.jpg"
+    },
+    {
+      "title": "Daniel Feldroy",
+      "feed_url": "https://daniel.feldroy.com/feeds/atom.xml",
+      "website_url": "https://daniel.feldroy.com/",
+      "description": "Hi, I'm Daniel Roy Greenfeld also known as 'pydanny'. I do Python, JavaScript, and C# out of Los Angeles, California. I love to read, write, hang out with my wife, and play with my daughter. For physical activity, I enjoy Brazilian Jiu-Jitsu and cycling. I am a total Space and NASA geek. I attend lots of software industry events. I also write books.",
+      "followers": {
+        "twitter": 17800
+      },
+      "image_url": "https://i1.feedspot.com/5270541.jpg?t=1618652948"
+    },
+    {
+      "title": "Finxter Blog",
+      "feed_url": "https://blog.finxter.com/feed/",
+      "website_url": "https://blog.finxter.com/",
+      "description": "This site is all about learning Python in small byte-sized chunks you can easily absorb during your coffee break.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 301
+      },
+      "image_url": "https://i1.feedspot.com/4973057.jpg?t=1618383556"
+    },
+    {
+      "title": "Python Software Foundation",
+      "feed_url": "https://feeds.feedburner.com/PythonSoftwareFoundationNews",
+      "website_url": "https://pyfound.blogspot.com/",
+      "description": "News from the Python Software Foundation",
+      "followers": {
+        "twitter": 608700
+      },
+      "image_url": "https://i1.feedspot.com/1110198.jpg?t=1667279033"
+    },
+    {
+      "title": "Yasoob Khalid",
+      "feed_url": "https://yasoob.me/index.xml",
+      "website_url": "https://yasoob.me/",
+      "description": "Yasoob Khalid is the author of Intermediate Python and the Practical Python Projects books. Millions of people have read his work. He helps programmers level up by writing blog posts, giving talks, and leading workshops.",
+      "followers": {
+        "facebook": 52900,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5270540.jpg?t=1618653139"
+    },
+    {
+      "title": "PyCharm Blog",
+      "feed_url": "https://blog.jetbrains.com/pycharm/feed/",
+      "website_url": "https://blog.jetbrains.com/pycharm/",
+      "description": "Python IDE built on IntelliJ platform",
+      "followers": {
+        "facebook": 117500,
+        "twitter": 201100
+      },
+      "image_url": "https://i1.feedspot.com/4528522.jpg"
+    },
+    {
+      "title": "Microsoft Dev Blog - Python",
+      "feed_url": "https://devblogs.microsoft.com/python/feed/",
+      "website_url": "https://devblogs.microsoft.com/python/",
+      "description": "Read the latest updates about all things Python at Microsoft",
+      "followers": {
+        "twitter": 23000
+      },
+      "image_url": "https://i1.feedspot.com/5270539.jpg?t=1618653029"
+    },
+    {
+      "title": "Python Insider",
+      "feed_url": "https://feeds.feedburner.com/PythonInsider",
+      "website_url": "https://blog.python.org/",
+      "description": "Python core development news and information.",
+      "followers": {
+        "twitter": 608700
+      },
+      "image_url": "https://i1.feedspot.com/118998.jpg?t=1654164898"
+    },
+    {
+      "title": "python Red Hat Developer Blog",
+      "feed_url": "https://developers.redhat.com/taxonomy/term/12611/feed",
+      "website_url": "https://developers.redhat.com/topics/python/all",
+      "description": "Insights and news on Red Hat developer tools, platforms and more",
+      "followers": {
+        "facebook": 623
+      },
+      "image_url": "https://i1.feedspot.com/4528494.jpg?t=1618383694"
+    },
+    {
+      "title": "AskPython",
+      "feed_url": "https://www.askpython.com/feed",
+      "website_url": "https://www.askpython.com/",
+      "description": "AskPython was founded by Pankaj Kumar. Askpython provides Python tutorials for beginners and experienced programmers.",
+      "followers": {
+        "facebook": 16900,
+        "twitter": 18
+      },
+      "image_url": "https://i1.feedspot.com/5289567.jpg?t=1623070494"
+    },
+    {
+      "title": "Anvil - Drag and Drop Python web apps Blog",
+      "feed_url": "https://anvil.works/blog/feed.xml",
+      "website_url": "https://anvil.works/blog",
+      "description": "Anvil is a Python-based drag-and-drop web app builder",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4528523.jpg?t=1654165595"
+    },
+    {
+      "title": "Armin Ronacher",
+      "feed_url": "https://lucumr.pocoo.org/feed.atom",
+      "website_url": "https://lucumr.pocoo.org/",
+      "description": "My name is Armin Ronacher and I'm a passionate developer interested in web development, graphics, realtime rendering and tons of other stuff. I am one of the founding members of the Pocoo Team and lead developer on a couple of popular Python projects.",
+      "followers": {
+        "twitter": 51700
+      },
+      "image_url": "https://i1.feedspot.com/21872.jpg"
+    },
+    {
+      "title": "Docodehere",
+      "feed_url": "https://feeds.feedburner.com/BestWayToLearnProgrammingLanguage-CodeGladiators",
+      "website_url": "https://www.docodehere.com/",
+      "description": "DoCodehere blog provides you an easy way and simple way to learn python and python examples. DocodeHere is my attempt to teach basics and those coding techniques to people in a short time which took me ages to learn.",
+      "followers": {
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/5285027.jpg?t=1622097925"
+    },
+    {
+      "title": "The PyCon blog",
+      "feed_url": "https://pycon.blogspot.com/feeds/posts/default",
+      "website_url": "https://pycon.blogspot.com/",
+      "description": "This is the blog of PyCon US, with guest contributions from Python conferences everywhere!",
+      "followers": {
+        "twitter": 58700
+      },
+      "image_url": "https://i1.feedspot.com/123300.jpg"
+    },
+    {
+      "title": "Python for Engineers",
+      "feed_url": "https://www.pythonforengineers.in/feeds/posts/default?alt=rss",
+      "website_url": "https://www.pythonforengineers.in/",
+      "description": "A blog about python and different tools.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5007945.jpg"
+    },
+    {
+      "title": "PythonHunter",
+      "feed_url": "http://pransukh.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://pransukh.blogspot.com/",
+      "description": "This blog is for newbies in python, and experienced are warmly welcomed to share their experience on any topic or can make correction on any topic.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4910662.jpg?t=1618385270"
+    },
+    {
+      "title": "pythonslearning",
+      "feed_url": "https://pythonslearning.com/feed",
+      "website_url": "https://pythonslearning.com/",
+      "description": "pythonslearning is a Largest online learning platform, where you can learn about latest technology, programming languages, online exams preparations and more. They publish tutorials and articles related to Python Programming Languages. Their mission is to deliver high quality content to those who wish to stay connected with programming languages.",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/5164114.jpg?t=1618385031"
+    },
+    {
+      "title": "PyImageSearch Blog",
+      "feed_url": "https://pyimagesearch.com/feed/",
+      "website_url": "https://pyimagesearch.com/blog/",
+      "description": "Hi there, I'm Adrian Rosebrock, PhD. Getting started with Computer Vision and Deep Learning is easier than you think. I created this website to show you what I believe is the best possible way to get your start. Follow me and I promise you'll find your way to Computer Vision, Deep Learning, and OpenCV mastery.",
+      "followers": {
+        "facebook": 26600,
+        "twitter": 25400
+      },
+      "image_url": "https://i1.feedspot.com/5451909.jpg?t=1664728524"
+    },
+    {
+      "title": "Miguel Grinberg Blog",
+      "feed_url": "https://blog.miguelgrinberg.com/feed",
+      "website_url": "https://blog.miguelgrinberg.com/",
+      "description": "Hi, my name is Miguel. I'm a software engineer but also tinker with photography and filmmaking when I have time. The software that powers this blog was all written by myself. It seemed like a pretty interesting project to write a blog engine from scratch, and now that I have blog software that I like, I might as well use it! The topics that I will be blogging about are going to be mostly related to one of two things: programming or photography.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 12200
+      },
+      "image_url": "https://i1.feedspot.com/4533024.jpg?t=1666790137"
+    },
+    {
+      "title": "Matt Layman",
+      "feed_url": "https://www.mattlayman.com/index.xml",
+      "website_url": "https://www.mattlayman.com/",
+      "description": "Matt Layman is a software engineer from Frederick, MD. He is an open-source software maintainer and advocates for the Python programming language.",
+      "followers": {
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/5456171.jpg?t=1665645104"
+    },
+    {
+      "title": "Doug Hellmann",
+      "feed_url": "https://feeds.feedburner.com/DougHellmann/",
+      "website_url": "https://doughellmann.com//",
+      "description": "Doug Hellmann's Blog is a source for Python, Open Source and OpenStack. He is a Developer, editor, and author with a wide range of experience in application areas and types. He creates design that meet requirements, are flexible, and can be maintained for long product lifetimes.",
+      "followers": {
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/133418.jpg?t=1629292535"
+    },
+    {
+      "title": "Practity Blog",
+      "feed_url": "https://practity.com/feed/",
+      "website_url": "https://practity.com/blog/",
+      "description": "The Practity Blog offers Tips, News, and Guides on Python and Excel-related topics. Discover interesting, well-researched articles for Python learners and Excel students from Practity, an online resource of real-life practice projects of Python for beginners, intermediate and advanced students focused on specific subjects and libraries.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5600172.jpg?t=1686899024"
+    },
+    {
+      "title": "Practical Business Python",
+      "feed_url": "https://pbpython.com/feeds/all.atom.xml?format=xml",
+      "website_url": "https://pbpython.com/",
+      "description": "Taking care of business, one python script at a time.",
+      "followers": {
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4213817.jpg?t=1618384376"
+    },
+    {
+      "title": "Open Source Automation Blog",
+      "feed_url": "https://theautomatic.net/feed/",
+      "website_url": "https://theautomatic.net/blog/",
+      "description": "Learn to automate everyday tasks using open source coding, Python, and R.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5011780.jpg?t=1618384306"
+    },
+    {
+      "title": "PyShark",
+      "feed_url": "https://pyshark.com/feed/",
+      "website_url": "https://pyshark.com/",
+      "description": "Hey and welcome to my Python blog! My name is Misha and all of the articles you see on this website are my original content that is a mix of Python programming along with data science and machine learning.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5255777.jpg?t=1615377565"
+    },
+    {
+      "title": "The Python Corner",
+      "feed_url": "https://thepythoncorner.com/feed.xml",
+      "website_url": "https://thepythoncorner.com/",
+      "description": "The Python Corner is a website about the Python programming language providing tutorials, guides, and advice on using python for building various applications.",
+      "followers": {
+        "twitter": 131
+      },
+      "image_url": "https://i1.feedspot.com/4912541.jpg?t=1618384088"
+    },
+    {
+      "title": "Compucademy Blog",
+      "feed_url": "https://compucademy.net/feed/",
+      "website_url": "https://compucademy.net/blog/",
+      "description": "Learn Python programming and Computer Science with awsome articles full of code examples and clear explanations.",
+      "followers": {
+        "facebook": 270,
+        "twitter": 345
+      },
+      "image_url": "https://i1.feedspot.com/5175609.jpg?t=1623157536"
+    },
+    {
+      "title": "The Glowing Python",
+      "feed_url": "https://feeds.feedburner.com/TheGlowingPython",
+      "website_url": "https://glowingpython.blogspot.com/",
+      "description": "A collection of sloppy snippets for scientific computing and data visualization in Python.",
+      "followers": {
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5183967.jpg?t=1597755043"
+    },
+    {
+      "title": "The No\u00a0Title Tech\u00a0Blog",
+      "feed_url": "https://no-title.victordomingos.com/feeds/all_rss.xml",
+      "website_url": "https://no-title.victordomingos.com/",
+      "description": "A personal blog about learning programming technologies, including programming Python, Pelican, tkinter, HTML, CSS, SQL, Flask, and other stuff.",
+      "followers": {
+        "facebook": 875,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4921147.jpg?t=1618383668"
+    },
+    {
+      "title": "Python Programs for 11",
+      "feed_url": "https://python4xistudents.blogspot.com/feeds/posts/default",
+      "website_url": "https://python4xistudents.blogspot.com/",
+      "description": "Python Programs for 11 is a blog to search the Python\u00a0Program that you want and output findings.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5202091.jpg?t=1618383848"
+    },
+    {
+      "title": "Ken Pythonic",
+      "feed_url": "https://kenpythonic.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://kenpythonic.blogspot.com/",
+      "description": "Keep up with articles from Ken Pythonic.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5035559.jpg"
+    },
+    {
+      "title": "PySnacks",
+      "feed_url": "https://pysnacks.com/rss.xml",
+      "website_url": "https://pysnacks.com/",
+      "description": "PySnacks is a Python learning platform, focused to bring high-quality tutorials, guides and blogs for problems in machine learning, algorithms and backend development.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5149368.jpg"
+    },
+    {
+      "title": "Subclassed",
+      "feed_url": "http://blog.pythonaro.com/feeds/posts/default",
+      "website_url": "http://blog.pythonaro.com/",
+      "description": "Pythonaro, oh-oh-oh. A Python blog authored by Giacomo Lacava.",
+      "followers": {
+        "twitter": 216
+      },
+      "image_url": "https://i1.feedspot.com/4528524.jpg?t=1618385138"
+    },
+    {
+      "title": "Medium",
+      "feed_url": "https://medium.com/feed/python4you",
+      "website_url": "https://medium.com/python4you",
+      "description": "Publications about python, tips and tricks and some useful pieces of code",
+      "followers": {
+        "facebook": 520799,
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/5007950.jpg"
+    },
+    {
+      "title": "Python For Finance",
+      "feed_url": "https://www.pythonforfinance.net/feed/",
+      "website_url": "https://www.pythonforfinance.net/",
+      "description": "A blog about everything python and finance related full of comprehensive examples of how to combine the two.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 925
+      },
+      "image_url": "https://i1.feedspot.com/4987657.jpg"
+    },
+    {
+      "title": "Sobolevn's Personal Blog",
+      "feed_url": "https://sobolevn.me/feed.xml",
+      "website_url": "https://sobolevn.me/",
+      "description": "I am Nikita Sobolev. I work as a CTO at wemake.services, I also happen to be a founder of this company. I also run a few side projects. I work with python, elixir, and javascript (typescript too). But, I am also familiar with many other languages.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5456170.jpg?t=1666790324"
+    },
+    {
+      "title": "Neopythonic",
+      "feed_url": "http://neopythonic.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://neopythonic.blogspot.com/",
+      "description": "Ramblings through technology, politics, culture, and philosophy by the creator of the Python programming language.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/22147.jpg?t=1666790175"
+    },
+    {
+      "title": "life is short - you need Python!",
+      "feed_url": "https://feeds.feedburner.com/LifeIsShort-YouNeedPython",
+      "website_url": "http://love-python.blogspot.com/",
+      "description": "A blog on Python with tutorials, code, programs, tips and tricks, how-to, book lists, crawler/spider help, data structure, algorithm implementation, and many more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/645892.jpg?t=1666790370"
+    },
+    {
+      "title": "Python Central",
+      "feed_url": "https://feeds.feedburner.com/PythonCentral",
+      "website_url": "https://www.pythoncentral.io/",
+      "description": "Python Central is a resource for anyone and everyone interested in the Python programming language. We aim to cover the Python language itself, the libraries/modules that are associated with it, and many of the tools that are incorporated along with it. Python Central aims to provide beginner, intermediate, and advanced Python developers and enthusiasts with engaging content on the language.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2068215.jpg"
+    },
+    {
+      "title": "PythonAnywhere",
+      "feed_url": "https://blog.pythonanywhere.com/feed/",
+      "website_url": "https://blog.pythonanywhere.com/",
+      "description": "All the latest updates from the PythonAnywhere team. PythonAnywhere lets you program in Python, in your browser. No need to install any software, just start coding straight away. There's a fully-functional web-based console and a programmer's text-editor.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 27700
+      },
+      "image_url": "https://i1.feedspot.com/4528509.jpg?t=1618383575"
+    },
+    {
+      "title": "STX Next Blog",
+      "feed_url": "https://www.stxnext.com/blog/rss.xml",
+      "website_url": "https://www.stxnext.com/blog",
+      "description": "Read STX Next Blog to learn about Python web development, new trends in tech and outsourcing software development the right way. They are Europe's Python Powerhouse. Over 250 developers stand ready to supercharge your business, the Agile way. Their toolbox of frameworks includes Django, Angular and ReactJS, each chosen to create reliable solutions in short order.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 851,
+        "instagram": 989
+      },
+      "image_url": "https://i1.feedspot.com/4921883.jpg?t=1605850601"
+    },
+    {
+      "title": "Python Pool",
+      "feed_url": "https://www.pythonpool.com/feed/",
+      "website_url": "https://www.pythonpool.com/blog/",
+      "description": "Python Pool is a platform where you can learn and become an expert in every aspect of Python programming language as well as in AI, ML and Data Science.",
+      "followers": {
+        "twitter": 110
+      },
+      "image_url": "https://i1.feedspot.com/5238520.jpg?t=1611298799"
+    },
+    {
+      "title": "Python Land",
+      "feed_url": "https://python.land/blog/feed",
+      "website_url": "https://python.land/blog",
+      "description": "Python Land is a resource for beginning and advanced Python programmers, with a Python tutorial, tips & tricks, and a forum to ask questions. Follow this feed to read the latest blog articles from Python Land, about Python and related topics.",
+      "followers": {
+        "twitter": 112
+      },
+      "image_url": "https://i1.feedspot.com/5281782.jpg?t=1621248606"
+    },
+    {
+      "title": "Miguendes's Blog",
+      "feed_url": "https://miguendes.me/rss.xml",
+      "website_url": "https://miguendes.me/",
+      "description": "Miguel covers Python features, testing techniques, libraries, experiments, and best practices. He writes contents geared towards intermediate Python developers and students, and folks who already know the basics and want to broaden their knowledge.",
+      "followers": {
+        "twitter": 196
+      },
+      "image_url": "https://i1.feedspot.com/5231019.jpg?t=1623075228"
+    },
+    {
+      "title": "Python Statistics | Statistics, Python and Data science learning center",
+      "feed_url": "https://pythonstatistics.net/feed/",
+      "website_url": "https://importpython.com/",
+      "description": "Python Statistics features Statistics and Exploratory Data Analysis using Python programming language.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4824652.jpg?t=1618383688"
+    },
+    {
+      "title": "Import Python Weekly Blog",
+      "feed_url": "https://importpython.com/feed/",
+      "website_url": "https://importpython.com/",
+      "description": "Ankur has coded and deployed numerous Python software over the last 10 years, at three venture funded startup and a fortune 10 company. ImportPython is his side project with Python being his go to programming language.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4430911.jpg?t=1618384123"
+    }
+  ]
+}

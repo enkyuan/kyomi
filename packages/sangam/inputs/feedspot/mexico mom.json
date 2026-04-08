@@ -1,0 +1,29 @@
+{
+  "category": "Mexico Mom",
+  "source_url": "https://rss.feedspot.com/mexico_mom_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mama Latina Tips",
+      "feed_url": "https://www.mamalatinatips.com/feed",
+      "website_url": "https://www.mamalatinatips.com/",
+      "description": "Born and raised in Mexico, where she worked as a human resources executive and university instructor, Silvia moved to California 16 years ago where she lives with her husband and two very active boys. She loves dancing, cooking, watching movies, reading, throwing Mexican parties, and spending time with her family and friends.",
+      "followers": {
+        "facebook": 57000,
+        "twitter": 10300,
+        "instagram": 24700
+      },
+      "image_url": "https://i1.feedspot.com/686732.jpg?t=1626766260"
+    },
+    {
+      "title": "Tips de Madre",
+      "feed_url": "https://tipsdemadre.com/feed/",
+      "website_url": "https://tipsdemadre.com/en/",
+      "description": "I'm Dafne. I am a mom blogger from Mexico. I have been through various circumstances that can help you in your experience as a mother. I have a 10 year old son and I suffered from H.E.L.L.P. syndrome.",
+      "followers": {
+        "facebook": 96300,
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/5352800.jpg?t=1639391929"
+    }
+  ]
+}

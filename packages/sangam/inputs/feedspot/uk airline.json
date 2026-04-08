@@ -1,0 +1,320 @@
+{
+  "category": "UK Airline",
+  "source_url": "https://rss.feedspot.com/uk_airline_rss_feeds",
+  "feeds": [
+    {
+      "title": "Simple Flying",
+      "feed_url": "https://simpleflying.com/feed/",
+      "website_url": "https://www.busyaviation.co.uk/blog",
+      "description": "Launched in June 2018. Our goal is to provide a one-stop hub for all the key stories on commercial aviation, sharing the news in a simple, accessible way. We cover all regions, and all aspects of commercial aviation. We're digital first, and all of our content is free to read and access.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5096672.jpg?t=1705400161"
+    },
+    {
+      "title": "Busy Aviation Blog",
+      "feed_url": "https://www.busyaviation.co.uk/rss",
+      "website_url": "https://www.busyaviation.co.uk/blog",
+      "description": "Dive into Busy Aviation's blog for recent Aviation news, reviews, and articles. Stay up to date on what flying. Busy Aviation is an aerospace business agency that helps solve online promotion questions and provides innovative online business solutions to aviation companies from light general aviation to commercial.",
+      "followers": {
+        "facebook": 147,
+        "twitter": 18
+      },
+      "image_url": "https://i1.feedspot.com/5680904.jpg?t=1695905315"
+    },
+    {
+      "title": "The OAG Blog",
+      "feed_url": "https://www.oag.com/blog/rss.xml",
+      "website_url": "https://www.oag.com/blog",
+      "description": "Provides information on airlines, airports & travel-related service companies with real-time flight schedules, flight status data feeds and aviation analytics. The world leader in aviation intelligence, OAG is relied upon globally for essential information and insight.",
+      "followers": {
+        "facebook": 17900,
+        "twitter": 11900,
+        "instagram": 598
+      },
+      "image_url": "https://i1.feedspot.com/4775848.jpg?t=1608210396"
+    },
+    {
+      "title": "Plane Talking",
+      "feed_url": "https://planetalking.com/feed/",
+      "website_url": "https://planetalking.com/",
+      "description": "Stay ahead of the curve with real-time updates on major airline developments, from fleet expansions to route expansions. Plane Talking provides a comprehensive view of the dynamic landscape, ensuring you're always in the loop about the industry's most significant happenings.",
+      "followers": {
+        "twitter": 66100
+      },
+      "image_url": "https://i1.feedspot.com/5680894.jpg?t=1695905237"
+    },
+    {
+      "title": "Airport Spotting",
+      "feed_url": "https://www.airportspotting.com/feed/",
+      "website_url": "https://www.airportspotting.com/",
+      "description": "Airport Spotting blog by Matt Falcus is the go-to place for finding out the latest news about airport developments, aircraft deliveries, new airline routes, and all things that the aviation enthusiast loves to keep on top of. Matt is a UK-based aviation writer and airport tourist.",
+      "followers": {
+        "facebook": 17800,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5680898.jpg?t=1695905269"
+    },
+    {
+      "title": "Mersey Radar",
+      "feed_url": "https://www.merseyradar.co.uk/feed/",
+      "website_url": "https://www.merseyradar.co.uk/",
+      "description": "The Mersey Radar blog documents this author's experiments with amateur radio and electronics. Here you will find some information about contrail spotting photography and radio/airband-related articles. Delve into the latest posts for some cool aviation electronics gadgets info.",
+      "followers": {
+        "twitter": 718
+      },
+      "image_url": "https://i1.feedspot.com/5680900.jpg?t=1695905277"
+    },
+    {
+      "title": "NATS Blog",
+      "feed_url": "https://nats.aero/blog/feed/",
+      "website_url": "https://nats.aero/blog/",
+      "description": "NATS is a global leader in innovative air traffic control and airport solutions. Learn about what NATS do from the people that do it. Their Air Traffic Control experts share their expertise on a wide range of topics via their company blog.",
+      "followers": {
+        "facebook": 33900,
+        "twitter": 47600,
+        "instagram": 16400
+      },
+      "image_url": "https://i1.feedspot.com/4777253.jpg?t=1609134276"
+    },
+    {
+      "title": "Miles Aviation Consultancy Blog",
+      "feed_url": "https://www.milesaviation.com/blog?format=rss",
+      "website_url": "https://www.milesaviation.com/blog",
+      "description": "Miles Aviation regularly updates its blog with aviation industry updates, as well as links to its published articles and features in magazines. It is a consultancy that specializes in providing advice and services within the Ground Operations and Ground Handling fields to Airlines, and many other areas with extensive experience.",
+      "followers": {
+        "twitter": 57
+      },
+      "image_url": "https://i1.feedspot.com/5680903.jpg?t=1695905300"
+    },
+    {
+      "title": "Leading Edge Aviation Blog",
+      "feed_url": "https://leadingedgeaviation.com/feed/",
+      "website_url": "https://leadingedgeaviation.com/news-and-blog/",
+      "description": "Browse the latest news and blog posts - from exciting expansion plans and industry updates to pilot careers and essential training information, Leading Edge Aviation Blog provides everything to keep readers in the loop. Leading Edge Aviation is a flight training company that offers both modular and integrated routes to achieving Pilot License.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 531,
+        "instagram": 11200
+      },
+      "image_url": "https://i1.feedspot.com/5680896.jpg?t=1695905245"
+    },
+    {
+      "title": "Oxford Aviation Group Blog",
+      "feed_url": "https://www.oxfordaviationgroup.co.uk/feed/",
+      "website_url": "https://www.oxfordaviationgroup.co.uk/blog/",
+      "description": "Oxford Aviation Group is a platform created by a group of aviation enthusiasts who share their experiences as they pursue their hobby. This can include photographs, airfield and trip reports, and spotting information. Div into their blog for interesting aviation-related facts, stories and trip accounts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5680895.jpg?t=1695905417"
+    },
+    {
+      "title": "Aviation Insider Blog",
+      "feed_url": "https://aviationinsider.com/aviation-insider-blog/feed/",
+      "website_url": "https://aviationinsider.com/aviation-insider-blog/",
+      "description": "Explore the cutting-edge technologies and sustainable practices that are revolutionizing the way you fly. The Aviation Insider blog aims to bring news and views from pilots and aviation staff together all in one place. Aviation Insider is a platform created by aviation specialists to offer Training, Information, and News related to all kinds of aircraft.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 47,
+        "instagram": 38900
+      },
+      "image_url": "https://i1.feedspot.com/5680906.jpg?t=1695905337"
+    },
+    {
+      "title": "Smart Aviation Blog",
+      "feed_url": "https://smart-aviation.co.uk/feed/",
+      "website_url": "https://smart-aviation.co.uk/news-blogs/",
+      "description": "Delve into thought-provoking features that dissect the trends, challenges, and innovations that shape the aviation industry. Smart Aviation's team of industry experts offers deep insights, offering you a nuanced understanding of the forces driving the future of air travel.",
+      "followers": {
+        "twitter": 2200,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5680907.jpg?t=1695905338"
+    },
+    {
+      "title": "Aviation Business News",
+      "feed_url": "https://www.aviationbusinessnews.com/feed/",
+      "website_url": "https://www.aviationbusinessnews.com/",
+      "description": "The home of MRO Management, Aircraft Cabin Management, Airline Cargo Management and Low-cost & Regional Airline Business News. Bringing you the latest aviation news, including airlines, airports, aircraft, air cargo, regional and low cost airline business, aviation events and conferences.",
+      "followers": {
+        "twitter": 845,
+        "instagram": 121
+      },
+      "image_url": "https://i1.feedspot.com/5609144.jpg?t=1687850074"
+    },
+    {
+      "title": "Aviation Source News",
+      "feed_url": "https://aviationsourcenews.com/feed/",
+      "website_url": "https://aviationsourcenews.com/",
+      "description": "AviationSource is the newest aviation website to hit the market, offering an analytical and complex look at the industry. Whilst everyday news will be provided on the website, AviationSource aims to look at the different segues of aviation and how it will affect itself going into the future. AviationSource Is one of the Fastest Growing Aviation News Outlets in the UK.",
+      "followers": {
+        "facebook": 32299,
+        "twitter": 5200,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5459566.jpg?t=1666761342"
+    },
+    {
+      "title": "UK Aviation News",
+      "feed_url": "https://ukaviation.news/feed/",
+      "website_url": "https://ukaviation.news/category/news/",
+      "description": "UK Aviation News is a leading independent resource for Aviation, Aerospace, Air Travel, Airline, and Airport news from across the United Kingdom. Get news, insight and analysis from the United Kingdom aviation, airline, travel and airport industries. Get the latest headlines from the world of aviation.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 2300,
+        "instagram": 705
+      },
+      "image_url": "https://i1.feedspot.com/5330638.jpg?t=1666761746"
+    },
+    {
+      "title": "Business Airport International Magazine",
+      "feed_url": "https://www.businessairportinternational.com/feed",
+      "website_url": "https://www.businessairportinternational.com/",
+      "description": "Business Airport International is the international review of the world's FBOs and general and business aviation airports for executive jet operators",
+      "followers": {
+        "twitter": 241
+      },
+      "image_url": "https://i1.feedspot.com/5295056.jpg?t=1624282718"
+    },
+    {
+      "title": "GreenAir News",
+      "feed_url": "https://www.greenairnews.com/?feed=rss2",
+      "website_url": "https://www.greenairnews.com/",
+      "description": "GreenAir is an online publication dedicated to publishing independent, informative and up-to-the-minute news, features and analysis on current issues surrounding aviation and its impact on climate change and the environment. It has no association with the industry, environmental groups or government bodies and so is able to present opinions from all sides of this debate without fear or favor.",
+      "followers": {
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5459564.jpg?t=1666760852"
+    },
+    {
+      "title": "InsideFlyer UK",
+      "feed_url": "https://insideflyer.co.uk/feed/",
+      "website_url": "https://insideflyer.co.uk/",
+      "description": "Required Reading for Frequent Flyers. The UK's most widely-read site for British Airways Executive Club, Virgin Flying Club and other major airlines and hotel loyalty schemes",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4776814.jpg?t=1609134295"
+    },
+    {
+      "title": "Head For Points",
+      "feed_url": "https://www.headforpoints.com/feed/",
+      "website_url": "https://www.headforpoints.com/",
+      "description": "Head for Points is the UK's biggest frequent flyer websitefor Avios, British Airways Executive Club, Virgin Flying Club and other major airlines. We are focussed on helping you earn more miles and points and spending your existing pile more effectively. Thousands of UK business travellers visit Head for Points every day. They read the latest business travel news, flight and hotel reviews and learn UK 'travel hacking' tips to make the most of their miles and points.",
+      "followers": {
+        "facebook": 30400,
+        "twitter": 16800,
+        "instagram": 16900
+      },
+      "image_url": "https://i1.feedspot.com/4910605.jpg?t=1620051688"
+    },
+    {
+      "title": "Routes",
+      "feed_url": "https://www.routesonline.com/news/29/breaking-news.rss",
+      "website_url": "https://www.routesonline.com/news/",
+      "description": "Routesonline\u2019s enhanced Breaking News and Analysis brings together the regular schedule updates of Airline Route with the more detailed news and analysis of The HUB to provide daily coverage of all the major developments in the network development community.\u00a0 Registration is free and open to everyone - click here to register for a daily news digest from Airline Route and here to register for Routesonline and a",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 12200
+      },
+      "image_url": "https://i1.feedspot.com/41753.jpg"
+    },
+    {
+      "title": "Air Experiences Blog",
+      "feed_url": "https://airexperiences.co.uk/feed/",
+      "website_url": "https://airexperiences.co.uk/blog/",
+      "description": "Air Experiences is a flying gift experiences website run by pilots. Read their blog for all our latest flying news, views, and interesting aircraft. Indulge in a digest of stories, flying histories and breathtaking flying experiences for all the family, including planes, helicopters and gliders.",
+      "followers": {
+        "facebook": 546,
+        "twitter": 281
+      },
+      "image_url": "https://i1.feedspot.com/5329283.jpg?t=1633589556"
+    },
+    {
+      "title": "Aviation By Brian Mellor Blog",
+      "feed_url": "https://bmaviation.wordpress.com/feed/",
+      "website_url": "https://bmaviation.wordpress.com/category/bm-aviation-blog/",
+      "description": "Browse the Aviation blog by Brian Mellor, an airline instructor's captivating blog that offers an insider's perspective on the world of aviation. Join him on a thrilling journey through the clouds as he talks about flying experiences, shares valuable insights, and photos, and recounts unforgettable trips.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5680899.jpg?t=1695905351"
+    },
+    {
+      "title": "G6 Aviation Blog",
+      "feed_url": "https://www.g6aviation.com/blog-feed.xml",
+      "website_url": "https://www.g6aviation.com/blog",
+      "description": "Enjoy weekly news and blogs from G6 AVIATION providing the very latest information on the world of charter aviation. G6 Aviation is a private jet charter air service deliveriverig a tailored, first-class experience, with an exclusive concierge service to enhance every journey from door to door.",
+      "followers": {
+        "facebook": 1300,
+        "instagram": 6900
+      },
+      "image_url": "https://i1.feedspot.com/5680902.jpg?t=1695905298"
+    },
+    {
+      "title": "ITF Aviation Blog",
+      "feed_url": "https://www.itfaviation.org/feed/",
+      "website_url": "https://www.itfaviation.org/",
+      "description": "Browse the ITF Aviation for news. Here you will find an ever-expanding resource covering aviation issues that affect all categories of civil aviation workers including cabin crew, airline ground staff, pilots, airport workers, and air traffic management staff. The ITF connects transport workers' trade unions and workers' networks across the world.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4531449.jpg?t=1608211086"
+    },
+    {
+      "title": "RAF Museum Blog",
+      "feed_url": "https://www.rafmuseum.org.uk/blog/feed/",
+      "website_url": "https://www.rafmuseum.org.uk/blog/",
+      "description": "RAF Museum Blog shares the story of the Royal Air Force, past, present, and future - using the stories of its people and our collections in order to engage, inspire, and encourage learning. The Royal Air Force Museum is a National Museum, a Government non-departmental public body (NDPB), and a registered charity.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 61100,
+        "instagram": 51900
+      },
+      "image_url": "https://i1.feedspot.com/5517603.jpg?t=1678280126"
+    },
+    {
+      "title": "Microlite Aviation Blog",
+      "feed_url": "https://www.microliteaviation.com/blog-feed.xml",
+      "website_url": "https://www.microliteaviation.com/blog",
+      "description": "Microlite Aviation is a manufacturer & supplier of sub70 Nanolight microlights & SSDR aircraft in the UK. Here you will find a showcase of their latest offering along with other projects and company updates. Gain a unique perspective on microlight aviation technology, safety protocols, and industry trends.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5680905.jpg?t=1695905458"
+    },
+    {
+      "title": "British Airways Flight Status Blog",
+      "feed_url": "https://britishairwaysflightstatus.com/feed/",
+      "website_url": "https://britishairwaysflightstatus.com/blog/",
+      "description": "Stay connected to the British Airways flight timing charts with comprehensive destination guides, travel tips, and insider advice for seamless journeys around the globe. British Airways Flight Status is a fan blog presenting readers with exciting news, updates, and information about the British Airways.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5680897.jpg?t=1695905551"
+    },
+    {
+      "title": "Air Cargo News",
+      "feed_url": "https://www.aircargonews.net/feed/",
+      "website_url": "https://www.aircargonews.net/",
+      "description": "Established in 1983, Air Cargo News is the leading source of news, information, interviews, analyses, and reports to the global airfreight industry. Their leading portfolio includes print, digital, and events that give businesses in the airfreight industry the ability to connect with decision-makers in this sector. Read news, analysis, features, interviews, and data covering the air cargo, freight, and supply chain industries, and much more from their blog.",
+      "followers": {
+        "facebook": 17700,
+        "twitter": 16600
+      },
+      "image_url": "https://i1.feedspot.com/4649783.jpg?t=1617103722"
+    },
+    {
+      "title": "Airline Economics",
+      "feed_url": "https://www.aviationnews-online.com/feed",
+      "website_url": "https://www.aviationnews-online.com/",
+      "description": "Aviation News Ltd is a publishing and events company dedicated to reporting on the aviation finance and leasing industry. It provides daily aviation news covering airlines, airports, aviation life, cargo, corporate jets, defense, environmental, finance, insurance, leasing, maintenance, regulatory, space, and activities of key players and personalities in the global aviation industry.",
+      "followers": {
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5330639.jpg?t=1666760237"
+    },
+    {
+      "title": "Lime Blog",
+      "feed_url": "https://www.lime-management.com/news/",
+      "website_url": "https://www.lime-management.com/news/",
+      "description": "Enjoy all recent British Airways news, hot industry topics, and the latest from Lime. Keep a pulse on the world of British aviation. Lime is an online resource that provides a search, booking, and ticketing service to the UK travel trade-seeking industry British Airways trade fares.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5680669.jpg?t=1695905502"
+    }
+  ]
+}

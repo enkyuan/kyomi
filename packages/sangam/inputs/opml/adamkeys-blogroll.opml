@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<opml version="2.0">
+  <head>
+    <title>Adam Keys - Blogroll</title>
+  </head>
+  <body>
+    <outline type="rss" text="Craig Mod" xmlUrl="https://craigmod.com/index.xml" htmlUrl="https://craigmod.com" category="Recommendations"/>
+    <outline type="rss" text="Ribbonfarm" xmlUrl="https://www.ribbonfarm.com/feed/" htmlUrl="https://www.ribbonfarm.com" category="Recommendations"/>
+    <outline type="rss" text="Escaping Flatland" xmlUrl="https://www.henrikkarlsson.xyz/feed" htmlUrl="https://www.henrikkarlsson.xyz/" category="Recommendations"/>
+    <outline type="rss" text="Austin Kleon" xmlUrl="https://austinkleon.com/feed/" htmlUrl="https://austinkleon.com" category="Recommendations"/>
+    <outline type="rss" text="Rasmus Andersson" xmlUrl="https://rsms.me/atom.xml" htmlUrl="https://rsms.me" category="Recommendations"/>
+    <outline type="rss" text="Kent Beck" xmlUrl="https://tidyfirst.substack.com/feed" htmlUrl="https://tidyfirst.substack.com" category="Recommendations"/>
+    <outline type="rss" text="Rands in Repose" xmlUrl="https://randsinrepose.com/feed/" htmlUrl="https://randsinrepose.com" category="Recommendations"/>
+    <outline type="rss" text="Manuel Moreale" xmlUrl="https://manuelmoreale.com/feed/rss" htmlUrl="https://manuelmoreale.com" category="Recommendations"/>
+  </body>
+</opml>

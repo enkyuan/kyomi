@@ -1,0 +1,157 @@
+{
+  "category": "CISO (Chief Information Security Officer)",
+  "source_url": "https://rss.feedspot.com/ciso_rss_feeds",
+  "feeds": [
+    {
+      "title": "Cybereason Blog",
+      "feed_url": "https://www.cybereason.com/blog/rss.xml",
+      "website_url": "https://www.cybereason.com/blog",
+      "description": "Get the latest research, expert insights, and security industry news. Cybereason's Blog for cybersecurity news and analysis, from the researchers behind our cybersecurity data analytics platform. Cybereason is the leader in endpoint protection, offering endpoint detection and response, next-generation antivirus, managed to monitor, and IR services.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 16700,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4897985.jpg?t=1658729499"
+    },
+    {
+      "title": "CSO",
+      "feed_url": "https://www.csoonline.com/feed/",
+      "website_url": "https://www.csoonline.com/news/",
+      "description": "CSO offers the latest information and best practices on business continuity and data protection, best practices for prevention of social engineering scams, malware and breaches, and tips and advice abut security careers and leadership.",
+      "followers": {
+        "facebook": 18000,
+        "twitter": 63400
+      },
+      "image_url": "https://i1.feedspot.com/4811766.jpg?t=1622092043"
+    },
+    {
+      "title": "Compuquip Cybersecurity Blog",
+      "feed_url": "https://www.compuquip.com/blog/rss.xml",
+      "website_url": "https://www.compuquip.com/blog",
+      "description": "Compuquip's Cybersecurity Blog will keep you up to date on the latest news, information, and insights about the ever-changing enterprise cybersecurity industry.",
+      "followers": {
+        "facebook": 310,
+        "twitter": 692,
+        "instagram": 233
+      },
+      "image_url": "https://i1.feedspot.com/4981711.jpg?t=1622092061"
+    },
+    {
+      "title": "CISO MAG",
+      "feed_url": "https://cisomag.com/feed/",
+      "website_url": "https://cisomag.com/",
+      "description": "With insights into the newest threats, trends, and solutions, CISOMAG provides news on cybersecurity, privacy, and compliance. It looks at many subjects, including malware, data breaches, new technology, and changes in regulations. The platform, which focuses on C-suite executives and security specialists, offers expert analysis, interviews, and opinion pieces to assist firms in staying ahead of the constantly changing digital landscape.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/4973606.jpg?t=1622092067"
+    },
+    {
+      "title": "24By7Security Blog",
+      "feed_url": "https://blog.24by7security.com/rss.xml",
+      "website_url": "https://blog.24by7security.com/",
+      "description": "Get the latest news in cybersecurity, compliance and more from 24By7Security.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 1900,
+        "instagram": 745
+      },
+      "image_url": "https://i1.feedspot.com/4982116.jpg?t=1622092081"
+    },
+    {
+      "title": "Cadre Blog",
+      "feed_url": "https://blog.cadre.net/rss.xml",
+      "website_url": "https://blog.cadre.net/",
+      "description": "Cadre is a network and information security solutions provider that serves large and medium sized firms. Widely recognized as a pioneer in the security industry, Cadre delivers value through superior customer service, advanced engineering and a resolute focus on design, assessment, installation, training and support of information security systems. All over the world, clients rely on Cadre to provide guidance and technical expertise on compliance, controlling technical risks, and achieving security goals.",
+      "followers": {
+        "facebook": 183,
+        "twitter": 926
+      },
+      "image_url": "https://i1.feedspot.com/4982155.jpg?t=1617631950"
+    },
+    {
+      "title": "K logix Blog",
+      "feed_url": "https://www.klogixsecurity.com/blog/rss.xml",
+      "website_url": "https://www.klogixsecurity.com/blog",
+      "description": "Content that helps security professionals align information security with business objectives.",
+      "followers": {
+        "twitter": 345
+      },
+      "image_url": "https://i1.feedspot.com/5134483.jpg?t=1622092090"
+    },
+    {
+      "title": "Anton on Security",
+      "feed_url": "https://medium.com/feed/anton-on-security",
+      "website_url": "https://medium.com/anton-on-security",
+      "description": "Anton on Security is your go-to source to read informational articles and insights on security, cyber security, and more.",
+      "followers": {
+        "twitter": 39800
+      },
+      "image_url": "https://i1.feedspot.com/5375125.jpg?t=1650374387"
+    },
+    {
+      "title": "Hoxhunt \u00bb Resource Hub",
+      "feed_url": "https://www.hoxhunt.com/blog/rss.xml",
+      "website_url": "https://hoxhunt.com/resource-hub/",
+      "description": "Follow the Hoxhunt blog to learn about cyber security awareness training, phishing trends, and social engineering. We are on a mission to reduce your human risk by putting Hoxhunt into the inboxes of employees worldwide.",
+      "followers": {
+        "facebook": 219,
+        "twitter": 450
+      },
+      "image_url": "https://i1.feedspot.com/5392338.jpg?t=1650373694"
+    },
+    {
+      "title": "CISO Forum Blog",
+      "feed_url": "https://www.cisoforum.com/blog/feed/",
+      "website_url": "https://www.cisoforum.com/blog/",
+      "description": "CISO Journal Information security insights for today's Chief Information Security Officers.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 288
+      },
+      "image_url": "https://i1.feedspot.com/4981508.jpg?t=1622041652"
+    },
+    {
+      "title": "Chronicles of a CISO",
+      "feed_url": "https://johnmasserini.com/feed/",
+      "website_url": "https://johnmasserini.com/",
+      "description": "An unabashed, unfiltered and unbiased view of the Information Security world. A bit of pontification, a touch of sarcasm, but mostly just sharing my experiences of a career in the wonderful world we call InfoSec.",
+      "followers": {
+        "twitter": 473
+      },
+      "image_url": "https://i1.feedspot.com/5032683.jpg?t=1617632602"
+    },
+    {
+      "title": "CISO Street",
+      "feed_url": "https://www.cisostreet.com/feed/",
+      "website_url": "https://www.cisostreet.com/ciso-perspectives/ciso-blogs/",
+      "description": "CISO Street is an online community for cybersecurity professionals. Our Security blog highlights posts written by CISOs and cybersecurity experts alike. The topics include many key areas that all cybersecurity professionals should be aware of, including current and future trends, advice, guides, best practices, and more!",
+      "followers": {
+        "twitter": 184
+      },
+      "image_url": "https://i1.feedspot.com/5392326.jpg?t=1650371771"
+    },
+    {
+      "title": "CISO Series",
+      "feed_url": "https://cisoseries.com/feed/",
+      "website_url": "https://cisoseries.com/",
+      "description": "Acting as a media network for cyber information and exchange, CISO Series is just a member of this fantastic community that unfortunately has some conflicts. We're just putting ourselves at the center of the conversation, acting as couples counseling for security vendors and practitioners.",
+      "followers": {
+        "twitter": 932
+      },
+      "image_url": "https://i1.feedspot.com/5392333.jpg?t=1650371833"
+    },
+    {
+      "title": "Kudelski Security",
+      "feed_url": "https://modernciso.com/feed/",
+      "website_url": "https://kudelskisecurity.com/modern-ciso-blog/blogs/",
+      "description": "Kudelski Security is a premier cybersecurity solutions provider, working with the most security-conscious organizations in Europe and across the United States. Kudelski Security provides intelligent cybersecurity that addresses challenges through MSS, advisory, customized innovation, and technology consulting.",
+      "followers": {
+        "twitter": 9100
+      },
+      "image_url": "https://i1.feedspot.com/4981520.jpg?t=1650373882"
+    }
+  ]
+}

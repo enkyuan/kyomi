@@ -1,0 +1,191 @@
+{
+  "category": "Poland News",
+  "source_url": "https://rss.feedspot.com/poland_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Wyborcza.pl",
+      "feed_url": "https://wyborcza.pl/pub/rss/najnowsze_wyborcza.xml",
+      "website_url": "https://wyborcza.pl/0,0.html",
+      "description": "News from the country and the world, science, culture, and sport, as well as current comments.",
+      "followers": {
+        "facebook": 816300,
+        "twitter": 901200,
+        "instagram": 204700
+      },
+      "image_url": "https://i1.feedspot.com/5334416.jpg?t=1634812115"
+    },
+    {
+      "title": "Notes From Poland",
+      "feed_url": "https://notesfrompoland.com/feed/",
+      "website_url": "https://notesfrompoland.com/",
+      "description": "Independent and informed news and insight on Polish current affairs, politics, culture, business and history.",
+      "followers": {
+        "facebook": 74800,
+        "twitter": 40500,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/5334422.jpg?t=1634812514"
+    },
+    {
+      "title": "Rzeczpospolita",
+      "feed_url": "https://www.rp.pl/rss_main?unknown-old-rss",
+      "website_url": "https://www.rp.pl/",
+      "description": "'Rzeczpospolita' is one of the leaders of the daily press in Poland. It is the most cited newspaper in our country, without which neither company bosses, politicians, nor ordinary readers can imagine work without it.",
+      "followers": {
+        "facebook": 201100,
+        "twitter": 350900
+      },
+      "image_url": "https://i1.feedspot.com/5308843.jpg?t=1634812928"
+    },
+    {
+      "title": "Gazeta Krakowska",
+      "feed_url": "https://gazetakrakowska.pl/rss/gazetakrakowska.xml",
+      "website_url": "https://gazetakrakowska.pl/",
+      "description": "The latest news from Krakow and Lesser Poland in Gazeta Krakowska. Here you will find the most interesting information from the region as well as news from the world of sports, business and many others.",
+      "followers": {
+        "facebook": 172700,
+        "twitter": 12000
+      },
+      "image_url": "https://i1.feedspot.com/5334433.jpg?t=1634813197"
+    },
+    {
+      "title": "Nowy Dziennik",
+      "feed_url": "https://dziennik.com/feed/",
+      "website_url": "https://dziennik.com/",
+      "description": "One of the Polish newspapers published in New York, United States. It has held the position of the largest and most prestigious Polish newspaper.",
+      "followers": {
+        "facebook": 14100,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5334448.jpg?t=1634814044"
+    },
+    {
+      "title": "Dziennik Wschodni",
+      "feed_url": "https://www.dziennikwschodni.pl/rss",
+      "website_url": "https://www.dziennikwschodni.pl/",
+      "description": "News and information from Lublin and the Lublin Province.",
+      "followers": {
+        "facebook": 170800,
+        "twitter": 6500,
+        "instagram": 9000
+      },
+      "image_url": "https://i1.feedspot.com/5334450.jpg?t=1634814524"
+    },
+    {
+      "title": "Nowa Trybuna Opolska",
+      "feed_url": "https://nto.pl/rss/nowatrybunaopolska.xml",
+      "website_url": "https://nto.pl/",
+      "description": "Nowa Trybuna Opolska covers the latest news and events from Opole and the Opole region.",
+      "followers": {
+        "facebook": 143800,
+        "twitter": 3500,
+        "instagram": 6100
+      },
+      "image_url": "https://i1.feedspot.com/5147712.jpg?t=1634814740"
+    },
+    {
+      "title": "Kurier Poranny",
+      "feed_url": "https://poranny.pl/rss/kurierporanny.xml",
+      "website_url": "https://poranny.pl/",
+      "description": "The latest news from Bialystok, Bielsk Podlaski, Hajn\u00f3wka and Sok\u00f3lka in Kurier Poranny. Information from Podlasie and news from the world of sport, business, and many others.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5334451.jpg?t=1634819557"
+    },
+    {
+      "title": "G\u0142os Wielkopolski",
+      "feed_url": "https://gloswielkopolski.pl/rss/gloswielkopolski.xml",
+      "website_url": "https://gloswielkopolski.pl/",
+      "description": "News from Poznan and Greater Poland in Glos Wielkopolski. See the most interesting news from the region, Sports, business, culture, education, and more.",
+      "followers": {
+        "facebook": 185200,
+        "twitter": 6600
+      },
+      "image_url": "https://i1.feedspot.com/5334452.jpg?t=1634815698"
+    },
+    {
+      "title": "Warsaw Insider",
+      "feed_url": "https://warsawinsider.pl/feed/",
+      "website_url": "https://warsawinsider.pl/",
+      "description": "The Warsaw Insider is a comprehensive monthly guide to good living and fast times in Poland's capital. We provide essential and sought after information about entertainment, culture, travel, food and drink, all in a compact, well-organized, glossy magazine.",
+      "followers": {
+        "facebook": 63700,
+        "twitter": 438900,
+        "instagram": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4921537.jpg?t=1620795052"
+    },
+    {
+      "title": "Fakt.pl",
+      "feed_url": "https://www.fakt.pl/rss",
+      "website_url": "https://www.fakt.pl/",
+      "description": "The latest news from Polish and the world, show business and politics. Rumors and news. Watch videos and photos.",
+      "followers": {
+        "facebook": 1500000,
+        "twitter": 60100,
+        "instagram": 74300
+      },
+      "image_url": "https://i1.feedspot.com/4419267.jpg?t=1634822720"
+    },
+    {
+      "title": "\u017bycie Warszawy",
+      "feed_url": "https://www.zw.com.pl/rss/1.html",
+      "website_url": "https://www.zw.com.pl/",
+      "description": "We live with what the city lives. In the online version of Zycie Warszawy, you will easily find all the necessary information about how the city works, who rules it and how, how to get around Warsaw. We also show our daily affairs, that is the life of the inhabitants.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5334446.jpg?t=1634813729"
+    },
+    {
+      "title": "Przegl\u0105d Sportowy Onet",
+      "feed_url": "https://przegladsportowy.onet.pl/",
+      "website_url": "https://przegladsportowy.onet.pl/",
+      "description": "Sports newspaper published in Poland. Founded in 1921Sportowy is the oldest sports newspaper in Poland. It covers basketball, golf, tennis, football (soccer), volleyball, and other sports.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5334426.jpg?t=1634812719"
+    },
+    {
+      "title": "Nasz Dziennik",
+      "feed_url": "https://naszdziennik.pl/articles/rss.xml",
+      "website_url": "https://wbj.pl/",
+      "description": "Polish daily newspaper was founded in 1998. It provides information that other media are silent about which includes social, cultural, political, and religious life.",
+      "followers": {
+        "facebook": 16600,
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/5334435.jpg?t=1634813495"
+    },
+    {
+      "title": "Polish Press Agency",
+      "feed_url": "https://www.thefirstnews.com/rss",
+      "website_url": "https://www.pap.pl/",
+      "description": "The First News (TFN) aims to bring readers entertaining, engaging, and informative news, features, and reportage from across Poland and beyond.",
+      "followers": {
+        "facebook": 10800,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5321323.jpg?t=1634811101"
+    },
+    {
+      "title": "Puls Biznesu",
+      "feed_url": "https://www.pb.pl/",
+      "website_url": "https://www.pb.pl/",
+      "description": "Puls Biznesu portal covers news, analyses, and comments from the economy and financial markets. The most influential business medium of the decade.",
+      "followers": {
+        "facebook": 131500,
+        "twitter": 66800
+      },
+      "image_url": "https://i1.feedspot.com/5334553.jpg?t=1634822268"
+    },
+    {
+      "title": "Super Express",
+      "feed_url": "https://www.se.pl/",
+      "website_url": "https://www.se.pl/",
+      "description": "Super Express covers the latest events, hard politics, gossip, quizzes, and the best photos in Poland.",
+      "followers": {
+        "facebook": 706500,
+        "twitter": 28400,
+        "instagram": 52400
+      },
+      "image_url": "https://i1.feedspot.com/5334557.jpg?t=1634822858"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "category": "Haines City News",
+  "source_url": "https://rss.feedspot.com/haines_city_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Haines City, FL",
+      "feed_url": "https://hainescity.com/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://hainescity.com/CivicAlerts.aspx?CID=1",
+      "description": "Haines City is conveniently located in Central Florida and is referred to as the 'Heart of Florida' due to its location. Keep up with the latest news and updates about Haines City, FL.",
+      "followers": {
+        "facebook": 21000,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5164284.jpg?t=1592891966"
+    }
+  ]
+}

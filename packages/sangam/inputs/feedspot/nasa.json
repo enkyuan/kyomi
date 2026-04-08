@@ -1,0 +1,524 @@
+{
+  "category": "NASA",
+  "source_url": "https://rss.feedspot.com/nasa_rss_feeds",
+  "feeds": [
+    {
+      "title": "Space.com",
+      "feed_url": "https://www.space.com/feeds.xml",
+      "website_url": "https://www.space.com/",
+      "description": "Space.com is the news coverage and conversation about space science, astronomy, and exploration. Get the latest space exploration, innovation, and astronomy news. It celebrates humanity's ongoing expansion across the final frontier.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 1600000,
+        "instagram": 147700
+      },
+      "image_url": "https://i1.feedspot.com/4707531.jpg?t=1609308890"
+    },
+    {
+      "title": "NASA Watch",
+      "feed_url": "https://nasawatch.com/feed/",
+      "website_url": "https://nasawatch.com/",
+      "description": "NASA Watch is focused on the space sector that is a pioneer in news aggregation it also creates original content in the form of timely news stories, coverage of ongoing events and unique editorial content.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 112700
+      },
+      "image_url": "https://i1.feedspot.com/92047.jpg?t=1609308900"
+    },
+    {
+      "title": "AmericaSpace",
+      "feed_url": "http://www.americaspace.com/feed/",
+      "website_url": "https://www.americaspace.com/",
+      "description": "AmericaSpace was founded in 2009 by two former aerospace engineers. Since then, this site has been dedicated to reporting on the state of America's space and aerospace activities, which for many have been, and remain, synonymous with America's willingness and enthusiasm to reach new horizons.",
+      "followers": {
+        "facebook": 21600,
+        "twitter": 13100
+      },
+      "image_url": "https://i1.feedspot.com/4785657.jpg?t=1609308957"
+    },
+    {
+      "title": "Spaceflight History",
+      "feed_url": "http://spaceflighthistory.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://spaceflighthistory.blogspot.com/",
+      "description": "Spaceflight History blog is the latest in a series going back to 1996. The author David S. F. Portree started his first blog to make people aware of the many concepts proposed in the past half-century for accomplishing piloted moon and Mars programs.",
+      "followers": {
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4625523.jpg?t=1609309032"
+    },
+    {
+      "title": "What's Up? The Space Place",
+      "feed_url": "http://www.whatsupthespaceplace.com/feeds/posts/default",
+      "website_url": "http://www.whatsupthespaceplace.com/",
+      "description": "Greg Redfern is an amateur astronomer, astrophotographer; meteorite collector; appear on Fox 5 & WTOP, cruise ship lecturer; NASA JPL Solar System. Follow this blog to get a personal daily comment on astronomy along with space missions, NASA, observing and lots more.",
+      "followers": {
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4784771.jpg?t=1609309151"
+    },
+    {
+      "title": "NASA Wavelength",
+      "feed_url": "https://nasawavelength.org/feed/",
+      "website_url": "https://nasawavelength.org/",
+      "description": "NASA Wavelength is a digital collection of NASA Science Mission Directorate funded Earth and Space Science Educational Resources. All resources are peer-reviewed to ensure accuracy and usefulness in an educational setting.",
+      "followers": {
+        "facebook": 13400,
+        "twitter": 3700,
+        "instagram": 96800000
+      },
+      "image_url": "https://i1.feedspot.com/4784711.jpg?t=1609308968"
+    },
+    {
+      "title": "Many Worlds",
+      "feed_url": "https://manyworlds.space/feed/",
+      "website_url": "https://manyworlds.space/",
+      "description": "Bringing in-depth stories on exoplanet & astrobiology news, Many Worlds is supported by the Lunar & Planetary Institute and NASA's NExSS initiative. Many Worlds is for everyone interested in the burgeoning field of exoplanet detection and research, from the general public to scientists in the field.",
+      "followers": {
+        "twitter": 584
+      },
+      "image_url": "https://i1.feedspot.com/4784722.jpg?t=1609309043"
+    },
+    {
+      "title": "The Mars Generation \u00bb Nasa News",
+      "feed_url": "https://themarsgeneration.org/category/news/nasa-news/feed/",
+      "website_url": "https://www.themarsgeneration.org/category/news/nasa-news/",
+      "description": "The mission of The Mars Generation is to excite young people and adults about human space exploration and STEM/STEAM (Science, Technology, Engineering, Art, Math) education and foster an understanding of the importance of these two elements to the future of humankind on Earth.",
+      "followers": {
+        "facebook": 51700,
+        "twitter": 44200
+      },
+      "image_url": "https://i1.feedspot.com/4784852.jpg?t=1609309061"
+    },
+    {
+      "title": "Disk Detective",
+      "feed_url": "https://blog.diskdetective.org/feed/",
+      "website_url": "https://blog.diskdetective.org/",
+      "description": "NASA Citizen Science Project help us comb the Galaxy to search for new planetary systems! Planets like ours form in disks around stars. Citizen scientists used Disk Detective to find thousands of these disks, including new kinds of disks that had never been seen before.",
+      "followers": {
+        "facebook": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4784735.jpg?t=1609309076"
+    },
+    {
+      "title": "The Gravity Well Blog",
+      "feed_url": "http://www.thegravitywell.org/blog?format=RSS",
+      "website_url": "http://www.thegravitywell.org/blog",
+      "description": "The Gravity Well Blog covers how the public space program can renew America's economy, international standing, and technological prowess.",
+      "followers": {
+        "facebook": 188,
+        "twitter": 33
+      },
+      "image_url": "https://i1.feedspot.com/4748031.jpg?t=1609309108"
+    },
+    {
+      "title": "The Independent \u00bb NASA",
+      "feed_url": "https://www.the-independent.com/topic/nasa/rss",
+      "website_url": "https://www.the-independent.com/topic/nasa",
+      "description": "The latest breaking news, comment and features from The Independent.",
+      "followers": {
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/8661668.jpg?t=1755755972"
+    },
+    {
+      "title": "Friends of NASA",
+      "feed_url": "https://www.friendsofnasa.org/feeds/posts/default",
+      "website_url": "https://www.friendsofnasa.org/",
+      "description": "Friends of NASA (FoN) is an independent non-governmental organization (NGO) dedicated to building international support for peaceful space exploration, commerce, scientific discovery and STEM education.",
+      "followers": {
+        "facebook": 250900
+      },
+      "image_url": "https://i1.feedspot.com/2458332.jpg?t=1755769011"
+    },
+    {
+      "title": "ScienceDaily \u00bb NASA",
+      "feed_url": "https://www.sciencedaily.com/rss/space_time/nasa.xml",
+      "website_url": "https://www.sciencedaily.com/news/space_time/nasa",
+      "description": "All latest articles about NASA from ScienceDaily.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 306500
+      },
+      "image_url": "https://i1.feedspot.com/8661659.jpg?t=1755756126"
+    },
+    {
+      "title": "The Conversation \u00bb NASA",
+      "feed_url": "https://theconversation.com/topics/nasa-97/articles.atom",
+      "website_url": "https://theconversation.com/topics/nasa-97",
+      "description": "All latest articles about NASA from The Conversation.",
+      "followers": {
+        "facebook": 117400,
+        "twitter": 65300
+      },
+      "image_url": "https://i1.feedspot.com/8661660.jpg?t=1755768022"
+    },
+    {
+      "title": "Orlando Sentinel \u00bb NASA",
+      "feed_url": "https://www.orlandosentinel.com/tag/nasa/feed",
+      "website_url": "https://www.orlandosentinel.com/tag/nasa",
+      "description": "All latest articles about NASA from Orlando Sentinel.",
+      "followers": {
+        "facebook": 240200
+      },
+      "image_url": "https://i1.feedspot.com/8661661.jpg?t=1755769097"
+    },
+    {
+      "title": "SciTechDaily \u00bb NASA",
+      "feed_url": "https://scitechdaily.com/tag/nasa/feed",
+      "website_url": "https://scitechdaily.com/tag/nasa",
+      "description": "NASA, the National Aeronautics and Space Administration, is the United States' civil space agency, responsible for the nation's civilian space exploration, aeronautics research, and scientific discovery in space and Earth sciences.",
+      "followers": {
+        "facebook": 167700
+      },
+      "image_url": "https://i1.feedspot.com/8661662.jpg?t=1755756835"
+    },
+    {
+      "title": "The Hill \u00bb NASA",
+      "feed_url": "https://thehill.com/tag/nasa/feed",
+      "website_url": "https://thehill.com/tag/nasa",
+      "description": "All latest articles about NASA from The Hill.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8661663.jpg?t=1755756400"
+    },
+    {
+      "title": "Patricia Huffman Smith NASA Museum",
+      "feed_url": "https://nasacolumbiamuseum.com/feed",
+      "website_url": "https://nasacolumbiamuseum.com/about/news-updates",
+      "description": "All latest articles about NASA from Patricia Huffman Smith NASA Museum.",
+      "followers": {
+        "facebook": 1500
+      },
+      "image_url": "https://i1.feedspot.com/8661664.jpg?t=1755757051"
+    },
+    {
+      "title": "The Week \u00bb NASA",
+      "feed_url": "https://theweek.com/feeds/tag/nasa",
+      "website_url": "https://theweek.com/tag/nasa",
+      "description": "Read the latest Nasa news and briefings, brought to you by the team at The Week.",
+      "followers": {
+        "twitter": 117400
+      },
+      "image_url": "https://i1.feedspot.com/8661665.jpg?t=1755756728"
+    },
+    {
+      "title": "Union of Concerned Scientists \u00bb NASA",
+      "feed_url": "https://blog.ucs.org/tag/nasa/feed/",
+      "website_url": "https://blog.ucs.org/tag/nasa/",
+      "description": "All latest articles about NASA from Union of Concerned Scientists.",
+      "followers": {
+        "facebook": 246000,
+        "twitter": 75000
+      },
+      "image_url": "https://i1.feedspot.com/8661666.jpg?t=1755769914"
+    },
+    {
+      "title": "New York Post \u00bb NASA",
+      "feed_url": "https://nypost.com/tag/nasa/feed/",
+      "website_url": "https://nypost.com/tag/nasa/",
+      "description": "All latest articles about NASA from New York Post.",
+      "followers": {
+        "facebook": 6900000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/8661667.jpg"
+    },
+    {
+      "title": "Live Science \u00bb NASA",
+      "feed_url": "https://www.livescience.com/feeds/tag/nasa",
+      "website_url": "https://www.livescience.com/tag/nasa",
+      "description": "All the latest nasa content from the Live Science team.",
+      "followers": {
+        "facebook": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/8661669.jpg?t=1755769244"
+    },
+    {
+      "title": "NASA's Break the Ice Lunar Challenge",
+      "feed_url": "https://breaktheicechallenge.com/feed/",
+      "website_url": "https://breaktheicechallenge.com/resources-media/",
+      "description": "NASA's Break the Ice Lunar Challenge seeks to incentivize innovative approaches for excavating icy regolith and delivering water in extreme lunar conditions such as the lunar south pole.",
+      "followers": {
+        "facebook": 3
+      },
+      "image_url": "https://i1.feedspot.com/8661670.jpg?t=1755768432"
+    },
+    {
+      "title": "France 24 \u00bb NASA",
+      "feed_url": "https://www.france24.com/en/tag/nasa/rss",
+      "website_url": "https://www.france24.com/en/tag/nasa",
+      "description": "Find all the latest articles and watch TV shows, reports and podcasts related to NASA on France 24.",
+      "followers": {
+        "twitter": 445600
+      },
+      "image_url": "https://i1.feedspot.com/8661671.jpg?t=1755769643"
+    },
+    {
+      "title": "Zooniverse \u00bb NASA",
+      "feed_url": "https://blog.zooniverse.org/tag/nasa/feed/",
+      "website_url": "https://blog.zooniverse.org/tag/nasa",
+      "description": "All latest articles about NASA from Zooniverse.",
+      "followers": {
+        "facebook": 31000
+      },
+      "image_url": "https://i1.feedspot.com/8661672.jpg?t=1755769530"
+    },
+    {
+      "title": "Federal News Network \u00bb NASA",
+      "feed_url": "https://federalnewsnetwork.com/tag/nasa/feed/",
+      "website_url": "https://federalnewsnetwork.com/tag/nasa",
+      "description": "All latest articles about NASA from Federal News Network.",
+      "followers": {
+        "facebook": 33600
+      },
+      "image_url": "https://i1.feedspot.com/8661673.jpg?t=1755769430"
+    },
+    {
+      "title": "American Enterprise Institute (AEI) \u00bb NASA",
+      "feed_url": "https://www.aei.org/tag/nasa/feed/",
+      "website_url": "https://www.aei.org/tag/nasa/",
+      "description": "All latest articles about NASA from American Enterprise Institute (AEI).",
+      "followers": {
+        "twitter": 162500
+      },
+      "image_url": "https://i1.feedspot.com/8661674.jpg?t=1755768621"
+    },
+    {
+      "title": "Space Generation Advisory Council \u00bb NASA SCaN",
+      "feed_url": "https://spacegeneration.org/tag/nasa-scan/feed",
+      "website_url": "https://spacegeneration.org/tag/nasa-scan",
+      "description": "All latest articles about NASA from Space Generation Advisory Council.",
+      "followers": {
+        "facebook": 20100
+      },
+      "image_url": "https://i1.feedspot.com/8661675.jpg?t=1755757294"
+    },
+    {
+      "title": "Ars Technica \u00bb NASA",
+      "feed_url": "https://arstechnica.com/tag/nasa/feed",
+      "website_url": "https://arstechnica.com/tag/nasa",
+      "description": "All latest articles about NASA from Ars Technica.",
+      "followers": {
+        "facebook": 413200
+      },
+      "image_url": "https://i1.feedspot.com/8661676.jpg?t=1755756192"
+    },
+    {
+      "title": "The Register \u00bb NASA",
+      "feed_url": "https://feed.theregister.com/atom?q=NASA",
+      "website_url": "https://www.theregister.com/Tag/NASA",
+      "description": "All latest articles about NASA from The Register.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8661677.jpg?t=1755769200"
+    },
+    {
+      "title": "Casey Handmer's Blog \u00bb NASA",
+      "feed_url": "https://caseyhandmer.wordpress.com/tag/nasa/feed",
+      "website_url": "https://caseyhandmer.wordpress.com/tag/nasa",
+      "description": "All latest articles about NASA from Casey Handmer's Blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8661678.jpg?t=1755768863"
+    },
+    {
+      "title": "The Guardian \u00bb NASA",
+      "feed_url": "https://www.theguardian.com/science/nasa/rss",
+      "website_url": "https://www.theguardian.com/science/nasa",
+      "description": "All latest articles about NASA from The Guardian.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/8661679.jpg?t=1755770003"
+    },
+    {
+      "title": "NASA Acres News",
+      "feed_url": "https://www.nasaacres.org/news?format=rss",
+      "website_url": "https://www.nasaacres.org/news",
+      "description": "All latest articles about NASA from NASA Acres.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8661681.jpg?t=1755756928"
+    },
+    {
+      "title": "NBC 7 San Diego \u00bb NASA",
+      "feed_url": "https://www.nbcsandiego.com/tag/nasa/feed/",
+      "website_url": "https://www.nbcsandiego.com/tag/nasa/",
+      "description": "All latest articles about NASA from NBC 7 San Diego.",
+      "followers": {
+        "facebook": 552000,
+        "twitter": 262500
+      },
+      "image_url": "https://i1.feedspot.com/8661682.jpg?t=1755770202"
+    },
+    {
+      "title": "NBC New York \u00bb NASA",
+      "feed_url": "https://www.nbcnewyork.com/tag/nasa/feed/",
+      "website_url": "https://www.nbcnewyork.com/tag/nasa",
+      "description": "All latest articles about NASA from NBC New York.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 356900
+      },
+      "image_url": "https://i1.feedspot.com/8661683.jpg"
+    },
+    {
+      "title": "The Space Store Blog",
+      "feed_url": "https://thespacestore.com/blogs/blog.atom",
+      "website_url": "https://thespacestore.com/blogs/blog",
+      "description": "The Space Store is the worldwide leader of NASA and space related merchandise since 1996. We have served space enthusiasts of all ages with NASA licensed products, unique items, and one of a kind gifts for 2 decades. We look forward to serving you!",
+      "followers": {
+        "facebook": 8200
+      },
+      "image_url": "https://i1.feedspot.com/8661684.jpg?t=1755768900"
+    },
+    {
+      "title": "NSS \u00bb NASA",
+      "feed_url": "https://nss.org/category/blog/nasa/feed/",
+      "website_url": "https://nss.org/category/blog/nasa/",
+      "description": "All latest articles about NASA from NSS.",
+      "followers": {
+        "twitter": 21700
+      },
+      "image_url": "https://i1.feedspot.com/8661685.jpg?t=1755757107"
+    },
+    {
+      "title": "SCMP \u00bb NASA",
+      "feed_url": "https://www.scmp.com/rss/520902/feed/",
+      "website_url": "https://www.scmp.com/topics/nasa",
+      "description": "The latest news, analysis and opinion on NASA. In-depth analysis, industry insights and expert opinion.",
+      "followers": {
+        "facebook": 5000000,
+        "twitter": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/8661686.jpg?t=1755768786"
+    },
+    {
+      "title": "NewsForKids.net \u00bb NASA",
+      "feed_url": "https://newsforkids.net/tag/nasa/feed/",
+      "website_url": "https://newsforkids.net/tag/nasa/",
+      "description": "All latest articles about NASA from NewsForKids.net.",
+      "followers": {
+        "facebook": 273
+      },
+      "image_url": "https://i1.feedspot.com/8661687.jpg?t=1755764884"
+    },
+    {
+      "title": "Eos \u00bb NASA",
+      "feed_url": "https://eos.org/tag/nasa/feed",
+      "website_url": "https://eos.org/tag/nasa",
+      "description": "All latest articles about NASA from Eos.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8661688.jpg?t=1755769297"
+    },
+    {
+      "title": "SpaceNews \u00bb NASA",
+      "feed_url": "https://spacenews.com/tag/nasa/feed",
+      "website_url": "https://spacenews.com/tag/nasa",
+      "description": "All latest articles about NASA from SpaceNews.",
+      "followers": {
+        "facebook": 24500,
+        "twitter": 134400
+      },
+      "image_url": "https://i1.feedspot.com/8661689.jpg?t=1755756305"
+    },
+    {
+      "title": "NBC Bay Area \u00bb NASA",
+      "feed_url": "https://www.nbcbayarea.com/tag/nasa/feed/",
+      "website_url": "https://www.nbcbayarea.com/tag/nasa/",
+      "description": "All latest articles about NASA from NBC Bay Area.",
+      "followers": {
+        "facebook": 667900,
+        "twitter": 399300
+      },
+      "image_url": "https://i1.feedspot.com/8661690.jpg"
+    },
+    {
+      "title": "The Space Report \u00bb NASA",
+      "feed_url": "https://www.thespacereport.org/tag/nasa/feed",
+      "website_url": "https://www.thespacereport.org/tag/nasa",
+      "description": "All latest articles about NASA from The Space Report.",
+      "followers": {
+        "facebook": 26600
+      },
+      "image_url": "https://i1.feedspot.com/8661691.jpg?t=1755769352"
+    },
+    {
+      "title": "Challenger Center \u00bb NASA",
+      "feed_url": "https://challenger.org/news-insights/tag/nasa/feed/",
+      "website_url": "https://challenger.org/news-insights/tag/nasa/",
+      "description": "All latest articles about NASA from Challenger Center.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8661692.jpg?t=1755768295"
+    },
+    {
+      "title": "Space Park Leicester \u00bb NASA",
+      "feed_url": "https://www.space-park.co.uk/tag/nasa/feed/",
+      "website_url": "https://www.space-park.co.uk/tag/nasa/",
+      "description": "All latest articles about NASA from Space Park Leicester.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8661693.jpg?t=1755757161"
+    },
+    {
+      "title": "US News \u00bb NASA",
+      "feed_url": "https://www.usnews.com/topics/organizations/nasa/rss",
+      "website_url": "https://www.usnews.com/topics/organizations/nasa",
+      "description": "All latest articles about NASA from US News.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 192600
+      },
+      "image_url": "https://i1.feedspot.com/8661694.jpg?t=1755769588"
+    },
+    {
+      "title": "Futuramic \u00bb NASA Articles",
+      "feed_url": "https://futuramic.com/tag/nasa/feed/",
+      "website_url": "https://futuramic.com/tag/nasa/",
+      "description": "All latest articles about NASA from Futuramic.",
+      "followers": {
+        "facebook": 671
+      },
+      "image_url": "https://i1.feedspot.com/8661695.jpg?t=1755757227"
+    },
+    {
+      "title": "International Space Station Blog",
+      "feed_url": "https://www.nasa.gov/feed/",
+      "website_url": "https://www.nasa.gov/blogs/spacestation/",
+      "description": "Explore the universe and discover our home planet NASA's mission to pioneer the future in space exploration, scientific discovery and aeronautics research.",
+      "followers": {
+        "facebook": 26900000,
+        "twitter": 88100000,
+        "instagram": 96800000
+      },
+      "image_url": "https://i1.feedspot.com/4207479.jpg?t=1609308846"
+    },
+    {
+      "title": "Official NASA Tumblr Account",
+      "feed_url": "https://nasa.tumblr.com/rss",
+      "website_url": "https://nasa.tumblr.com/",
+      "description": "Explore the universe and discover our home planet with the official NASA Tumblr account.",
+      "followers": {
+        "twitter": 88100000
+      },
+      "image_url": "https://i1.feedspot.com/4357629.jpg?t=1609309003"
+    },
+    {
+      "title": "New Scientist",
+      "feed_url": "https://www.newscientist.com/article-topic/nasa/feed/",
+      "website_url": "https://www.newscientist.com/article-topic/nasa/",
+      "description": "New Scientist is the world's number one science and technology magazine, and online we are the go-to site for breaking news, exclusive content, and breakthroughs that will change your world.",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 4400000
+      },
+      "image_url": "https://i1.feedspot.com/4785592.jpg?t=1609308926"
+    },
+    {
+      "title": "Parabolic Arc",
+      "feed_url": "https://parabolicarc.com/feed/",
+      "description": "Parabolic Arc is the blog for new space, covering events here and around the world. If it's happening in commercial space, you will read about it here.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 15800
+      },
+      "image_url": "https://i1.feedspot.com/1655663.jpg?t=1609309097"
+    }
+  ]
+}

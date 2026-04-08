@@ -1,0 +1,282 @@
+{
+  "category": "Russian News",
+  "source_url": "https://rss.feedspot.com/russian_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Moscow Times",
+      "feed_url": "https://www.themoscowtimes.com/rss/news",
+      "website_url": "https://www.themoscowtimes.com/",
+      "description": "The Moscow Times offers everything you need to know about Russia: Breaking news, top stories, business, analysis, opinion, multimedia, upcoming cultural events, and more. The Moscow Times is Russia's leading, independent English-language publication. Our mission is to provide foreigners and internationally oriented Russians with breaking news, engaging stories and well-researched journalism about Russia.",
+      "followers": {
+        "facebook": 773900,
+        "twitter": 223700,
+        "instagram": 26100
+      },
+      "image_url": "https://i1.feedspot.com/5070078.jpg?t=1646047910"
+    },
+    {
+      "title": "TASS",
+      "feed_url": "https://tass.com/rss/v2.xml",
+      "website_url": "https://tass.com/",
+      "description": "TASS is the leading Russian state information agency, a legend of national news journalism. With us news becomes stories and events become history. For more than 113 years, TASS has ceaselessly strived to deliver the latest and most accurate news from around the world.",
+      "followers": {
+        "facebook": 78600,
+        "twitter": 111500,
+        "instagram": 298400
+      },
+      "image_url": "https://i1.feedspot.com/4608578.jpg?t=1646054609"
+    },
+    {
+      "title": "The Russian Government",
+      "feed_url": "http://government.ru/en/all/rss/",
+      "website_url": "http://government.ru/en/news/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3886283.jpg?t=1721202118"
+    },
+    {
+      "title": "Russia Today",
+      "feed_url": "https://www.rt.com/rss/",
+      "website_url": "https://www.rt.com/",
+      "description": "RT is the first Russian 24/7 English-language news channel which brings the Russian view on global news. RT creates news with an edge for viewers who Question More. RT covers stories overlooked by the mainstream media, provides alternative perspectives on current affairs, and acquaints international audiences with a Russian viewpoint on major global events.",
+      "followers": {
+        "facebook": 6300000,
+        "twitter": 3300000,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/4371835.jpg?t=1742208780"
+    },
+    {
+      "title": "RIA Novosti",
+      "feed_url": "https://ria.ru/export/rss2/index.xml?page_type=google_newsstand",
+      "website_url": "https://ria.ru/",
+      "description": "Get News in Russia and the world, the most up-to-date information: topics of the day, reviews, analysis. Photo and video from the scene, infographics, radio, podcasts. Follow us to keep abreast of key regional, federal and international news.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 439500,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5376226.jpg?t=1646118675"
+    },
+    {
+      "title": "Sputnik \u00bb Russia",
+      "feed_url": "https://sputnikglobe.com/export/rss2/archive/index.xml",
+      "website_url": "https://sputnikglobe.com/russia/",
+      "description": "All the latest news and stories from Russia. Stay tuned for updates and breaking news on Russian politics, economy and cultural events. Only relevant insights into Russia and its relations with other countries around the globe. Sputnik is a major new media brand with multimedia centers in dozens of countries.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 435900,
+        "instagram": 144800
+      },
+      "image_url": "https://i1.feedspot.com/5376237.jpg?t=1646118767"
+    },
+    {
+      "title": "Meduza",
+      "feed_url": "https://meduza.io/rss2/all",
+      "website_url": "https://meduza.io/",
+      "description": "Every day Meduza brings you the most important news and feature stories from hundreds of sources in Russia and across the former Soviet Union. Their team includes some of Russia's top professionals in news and reporting.",
+      "followers": {
+        "facebook": 459600,
+        "twitter": 1600000,
+        "instagram": 983800
+      },
+      "image_url": "https://i1.feedspot.com/4219024.jpg"
+    },
+    {
+      "title": "Russia in Global Affairs",
+      "feed_url": "https://eng.globalaffairs.ru/feed/",
+      "website_url": "https://eng.globalaffairs.ru/",
+      "description": "Russia in Global Affairs offers an international platform for publication in English and Russian of the results of individual and collective research in political science and materials discussing social, historical, economic, cultural and military issues related to international relations.",
+      "followers": {
+        "facebook": 577,
+        "twitter": 732
+      },
+      "image_url": "https://i1.feedspot.com/5376225.jpg?t=1646118669"
+    },
+    {
+      "title": "FiNE News",
+      "feed_url": "https://fine-news.ru/feed/",
+      "website_url": "https://fine-news.ru/",
+      "description": "FiNE NEWS is the perfect solution for those who want to receive high-quality news without unnecessary garbage. We select only what is really worth your attention.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5602310.jpg?t=1687177727"
+    },
+    {
+      "title": "Lenta.ru",
+      "feed_url": "https://lenta.ru/rss/google-newsstand/main/",
+      "website_url": "https://lenta.ru/",
+      "description": "Get News, articles, photos, videos from Russia on science and technology, sports, culture, economy among other things. Seven days a week, 24 hours a day.Lenta.ru is a Russian news publication. We have been working around the clock without breaks and days off since 1999.",
+      "followers": {
+        "facebook": 828800,
+        "twitter": 1100000,
+        "instagram": 78000
+      },
+      "image_url": "https://i1.feedspot.com/5376229.jpg?t=1646120578"
+    },
+    {
+      "title": "AiF Adygea",
+      "feed_url": "https://adigea.aif.ru/rss/googlearticles",
+      "website_url": "https://adigea.aif.ru/",
+      "description": "Find Arguments and facts in Adygea: news and events of Maikop and the Republic of Adygea. Today's picture, experts' forecasts. The Arguments and Facts weekly is one of the most authoritative and successful publications in Russia, a leader among socio-political weeklies.",
+      "followers": {
+        "twitter": 164700
+      },
+      "image_url": "https://i1.feedspot.com/5376231.jpg?t=1646118714"
+    },
+    {
+      "title": "Nizhny Novgorod News",
+      "feed_url": "https://nnews.nnov.ru/rss",
+      "website_url": "https://nnews.nnov.ru/",
+      "description": "Read daily updated latest news and headlines related with economy, society, sports, technology, international news and more. The newspaper and website provide daily news from Nizhny Novgorod region.",
+      "followers": {
+        "facebook": 58,
+        "twitter": 7
+      },
+      "image_url": "https://i1.feedspot.com/5376227.jpg?t=1646118681"
+    },
+    {
+      "title": "Evening Moscow",
+      "feed_url": "https://vm.ru/rss",
+      "website_url": "https://vm.ru/",
+      "description": "The most up-to-date information about what happened in Moscow, the Russian Federation and the world today. Analytics. Reports, photos and videos from the scene. Vechernyaya Moskva is a city newspaper of influence, widely and promptly covering the main events in the capital, the work of city services, the activities of government bodies, as well as top events in the country and the world.",
+      "followers": {
+        "facebook": 39800,
+        "twitter": 9500,
+        "instagram": 10100
+      },
+      "image_url": "https://i1.feedspot.com/4422128.jpg?t=1646132505"
+    },
+    {
+      "title": "Chita.Ru",
+      "feed_url": "https://www.chita.ru/rss-feeds/rss.xml",
+      "website_url": "https://www.chita.ru/",
+      "description": "Get news on culture, lifestyle, society, economy and other news. Providing residents of the Trans-Baikal Territory with complete and truthful information about the life of the region.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 3600,
+        "instagram": 144300
+      },
+      "image_url": "https://i1.feedspot.com/5376222.jpg?t=1646127114"
+    },
+    {
+      "title": "Amic.ru",
+      "feed_url": "https://feeds.feedburner.com/amic/news",
+      "website_url": "https://www.amic.ru/",
+      "description": "News in Barnaul and Altai Krai: live reports with photos and videos. Interesting topics, experts, answers to questions, tests, games. Information agency 'Amitel' is the most popular and widely read mass media in the Altai Territory. Every day, the publication with a 25-year history informs thousands of residents of the region and other regions about the most important events, explains the essence and meaning of what is happening in the country and abroad.",
+      "followers": {
+        "instagram": 41100
+      },
+      "image_url": "https://i1.feedspot.com/5376240.jpg?t=1646133168"
+    },
+    {
+      "title": "province.ru",
+      "feed_url": "https://www.province.ru/rss/",
+      "website_url": "https://www.province.ru/",
+      "description": "province.ru covers 26 regions of Russia and publishes news from different parts of Russia and the world. Our journalists follow the regional news especially closely. This is a network of weekly newspapers for the whole family, covering about a third of Russian regions. We publish weekly newspapers with a total circulation of about 550,000 copies in 26 regions of Russia.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5376224.jpg?t=1646126128"
+    },
+    {
+      "title": "Economics and Life",
+      "feed_url": "https://www.eg-online.ru/news/news_rss.php?SID=605",
+      "website_url": "https://www.eg-online.ru/",
+      "description": "Get the latest news of economics, accounting, taxes and law. Economy and Life is a one-stop business publication for doing business. Published since 1918.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5376236.jpg?t=1646134441"
+    },
+    {
+      "title": "Nezavisimoye Voyennoye Obozreniye",
+      "feed_url": "https://nvo.ng.ru/rss/",
+      "website_url": "https://nvo.ng.ru/",
+      "description": "Latest Russian news and world news. Politics. Economy. Wars. Culture. All the latest news in Nezavisimaya Gazeta. Nezavisimaya Gazeta is one of the largest periodicals in modern Russia, dedicated to topical issues of social, political and cultural life in Russia and abroad.",
+      "followers": {
+        "facebook": 21200,
+        "twitter": 9900
+      },
+      "image_url": "https://i1.feedspot.com/5376230.jpg?t=1646131160"
+    },
+    {
+      "title": "English Russia",
+      "feed_url": "https://englishrussia.com/feed/",
+      "website_url": "https://englishrussia.com/",
+      "description": "English Russia provides interesting news from Russia in English language.",
+      "followers": {
+        "facebook": 60500,
+        "twitter": 36200
+      },
+      "image_url": "https://i1.feedspot.com/506248.jpg"
+    },
+    {
+      "title": "Pravda.ru",
+      "feed_url": "https://www.pravdareport.com/export.xml",
+      "website_url": "https://www.pravda.ru/",
+      "description": "Pravda On-Line was launched in January of 1999, the first Russian newspaper of its kind. The newspaper Pravda analyzes events from the point of view of the Party's interests, whereas Pravda On-line takes a pro-Russian approach to forming its policy.",
+      "followers": {
+        "facebook": 80100,
+        "twitter": 23300
+      },
+      "image_url": "https://i1.feedspot.com/4386160.jpg"
+    },
+    {
+      "title": "Nezavisimaya Gazeta",
+      "feed_url": "https://www.ng.ru/",
+      "website_url": "https://www.ng.ru/",
+      "description": "Latest Russian news and world news. Politics. Economy. Wars. Culture. All the latest news in Nezavisimaya Gazeta. Nezavisimaya Gazeta is one of the largest periodicals in modern Russia, dedicated to topical issues of social, political and cultural life in Russia and abroad.",
+      "followers": {
+        "facebook": 21200,
+        "twitter": 9900
+      },
+      "image_url": "https://i1.feedspot.com/5376220.jpg?t=1646127848"
+    },
+    {
+      "title": "Novye Izvestia",
+      "feed_url": "https://newizv.ru/rss",
+      "website_url": "https://newizv.ru/",
+      "description": "The website of Novye Izvestia contains the latest news, analysis of major events, impartial journalistic investigations, intriguing photo reports and videos. 'Novye Izvestia' is a daily socio-political newspaper.",
+      "followers": {
+        "facebook": 31400,
+        "twitter": 3500,
+        "instagram": 31700
+      },
+      "image_url": "https://i1.feedspot.com/5376221.jpg?t=1646127225"
+    },
+    {
+      "title": "Vesti",
+      "feed_url": "https://www.vesti.ru/vesti.rss",
+      "website_url": "https://www.vesti.ru/",
+      "description": "The latest news from Russia and the world, politics, economics, business, exchange rates, culture, technology, sports, interviews, special reports, incidents and much more. The site 'Vesti.Ru' is the main information resource of the All-Russian State Television and Radio Broadcasting Company on the Internet.",
+      "followers": {
+        "facebook": 2100000,
+        "twitter": 2900000,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/323577.jpg?t=1646130982"
+    },
+    {
+      "title": "Sobesednik.ru",
+      "feed_url": "https://sobesednik.ru/rss.xml",
+      "website_url": "https://tverlife.ru/",
+      "description": "articles about the life of celebrities, interviews with directors and actors, topical texts about social problems. Independent socio-political publication. Journalistic investigations, publications by Dmitry Bykov. Find",
+      "followers": {
+        "facebook": 16500,
+        "twitter": 4800,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/3567906.jpg?t=1646135139"
+    },
+    {
+      "title": "Tverlife.ru",
+      "feed_url": "https://tverlife.ru/feed/",
+      "website_url": "https://tverlife.ru/",
+      "description": "Find Important news, a poster of the brightest events in the region, author's blogs, photo reports and interviews. Tverlife is the main cultural portal of the Tver region.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 395,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5376228.jpg?t=1646118699"
+    }
+  ]
+}

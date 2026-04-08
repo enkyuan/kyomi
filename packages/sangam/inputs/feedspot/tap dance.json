@@ -1,0 +1,27 @@
+{
+  "category": "Tap Dance",
+  "source_url": "https://rss.feedspot.com/tap_dance_rss_feeds",
+  "feeds": [
+    {
+      "title": "Love to Tap Dance",
+      "feed_url": "https://booyahtapdancing.tumblr.com/rss",
+      "website_url": "https://booyahtapdancing.tumblr.com/",
+      "description": "Love to Tap Dance is a blog dedicated to everything tap!",
+      "followers": {
+        "twitter": 43
+      },
+      "image_url": "https://i1.feedspot.com/4508965.jpg?t=1603187805"
+    },
+    {
+      "title": "Terrence Taps' Dance Blog",
+      "feed_url": "https://www.tapdanceman.com/feed/",
+      "website_url": "https://www.tapdanceman.com/",
+      "description": "Terrence is a tap dancer, instructor, & internet entrepreneur who has dedicated his life to helping tap dancers with resources, encouragement, helpful products, & new ideas.",
+      "followers": {
+        "facebook": 988,
+        "twitter": 749
+      },
+      "image_url": "https://i1.feedspot.com/5081357.jpg?t=1607085463"
+    }
+  ]
+}

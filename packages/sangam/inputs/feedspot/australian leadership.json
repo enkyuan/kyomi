@@ -1,0 +1,61 @@
+{
+  "category": "Australian Leadership",
+  "source_url": "https://rss.feedspot.com/australian_leadership_rss_feeds",
+  "feeds": [
+    {
+      "title": "Leading Teams Blog",
+      "feed_url": "https://www.leadingteams.net.au/feed/",
+      "website_url": "https://www.leadingteams.net.au/blog/",
+      "description": "Leading Teams creates high performing leaders and teams. Read the latest on leadership and team development from our team of expertly trained facilitators on the Leading Teams blog.",
+      "followers": {
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4905902.jpg?t=1613711177"
+    },
+    {
+      "title": "Rapport Leadership Blog",
+      "feed_url": "https://www.rapportleadership.com.au/feed/",
+      "website_url": "https://www.rapportleadership.com.au/blog/",
+      "description": "Because a great leader lies within each one of us. Intensive leadership training and personal development programs to empower people with the confidence and communication skills to be effective leaders.",
+      "followers": {
+        "facebook": 10,
+        "twitter": 583
+      },
+      "image_url": "https://i1.feedspot.com/4905911.jpg"
+    },
+    {
+      "title": "IML ANZ Blog",
+      "feed_url": "https://managersandleaders.com.au/feed/",
+      "website_url": "https://managersandleaders.com.au/resources/leadership-matters-blog/",
+      "description": "Keep abreast of emerging management and leadership trends with our blog, Leadership Matters. The Institute of Managers and Leaders Australia and New Zealand (IML ANZ) is a nonprofit peak body association for management and leadership professionals.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 7000,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5329166.jpg?t=1633529665"
+    },
+    {
+      "title": "The Human Enterprise Blog",
+      "feed_url": "https://www.thehumanenterprise.com.au/feed/",
+      "website_url": "https://www.thehumanenterprise.com.au/blog/",
+      "description": "The Human Enterprise believes that leadership can exist at every level of the organisation. Take charge of your own leadership development via our blog.",
+      "followers": {
+        "twitter": 144,
+        "instagram": 279
+      },
+      "image_url": "https://i1.feedspot.com/4905909.jpg?t=1613711193"
+    },
+    {
+      "title": "Global Leadership Foundation",
+      "feed_url": "https://www.globalleadershipfoundation.com/insights",
+      "website_url": "https://www.globalleadershipfoundation.com/insights",
+      "description": "Global Leadership Foundation was established to provide leadership pathways and build leadership capability for people from all walks of life.",
+      "followers": {
+        "facebook": 845,
+        "twitter": 728
+      },
+      "image_url": "https://i1.feedspot.com/4438548.jpg?t=1607490827"
+    }
+  ]
+}

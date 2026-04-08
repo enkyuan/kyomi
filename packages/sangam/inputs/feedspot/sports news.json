@@ -1,0 +1,1434 @@
+{
+  "category": "Sports News",
+  "source_url": "https://rss.feedspot.com/sports_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Sky Sports",
+      "feed_url": "https://www.skysports.com/rss/12040",
+      "website_url": "https://www.skysports.com/",
+      "description": "Follow us to keep up with the news on Football, Golf, Rugby, Cricket, Tennis, F1, Boxing and more from Sky Sports.",
+      "followers": {
+        "facebook": 17000000,
+        "twitter": 7600000
+      },
+      "image_url": "https://i1.feedspot.com/9995.jpg?t=1603205385"
+    },
+    {
+      "title": "FOX Sports",
+      "feed_url": "https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30",
+      "website_url": "https://www.foxsports.com/",
+      "description": "FOX Sports is a comprehensive sports news platform offering the latest scores, schedules, odds, and updates across various sports. It features extensive coverage of major leagues such as the NFL, NBA, MLB, NCAA Football, and more. The site includes articles, videos, podcasts, and live streaming options, providing fans with in-depth analysis, exclusive interviews, and expert opinions. Users can also personalize their experience by following their favorite teams and players.",
+      "followers": {
+        "facebook": 9700000,
+        "twitter": 2100000,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/5686155.jpg?t=1696870920"
+    },
+    {
+      "title": "Sportskeeda",
+      "feed_url": "https://www.sportskeeda.com/feed",
+      "website_url": "https://www.sportskeeda.com/",
+      "description": "Latest Sports News & Live Updates: Also find live scores, fixtures or schedules, points table or team standings & match updates on all sports like cricket, football, kabaddi, tennis, hockey, wwe wrestling and more at Sportskeeda",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 295800
+      },
+      "image_url": "https://i1.feedspot.com/4780065.jpg?t=1510984694"
+    },
+    {
+      "title": "Deadspin",
+      "feed_url": "https://deadspin.com/rss/",
+      "website_url": "https://deadspin.com",
+      "description": "Deadspin brings you the latest sports news, stories, videos, and more. It is a sports blog founded by Will Leitch in 2005 and based in Chicago.",
+      "followers": {
+        "facebook": 356700,
+        "twitter": 771500
+      },
+      "image_url": "https://i1.feedspot.com/4778187.jpg?t=1749642787"
+    },
+    {
+      "title": "Sports Brackets",
+      "feed_url": "https://sportsbrackets.net/feed/",
+      "website_url": "https://sportsbrackets.net/",
+      "description": "Welcome to sportsbrackets.net! We are here to bring you the full range of information across all major sports. Whether you need an NFL playoff bracket, or a printable March Madness bracket or schedule when the time comes, we have you covered. Our staff and writers have more than 17 years of experience publishing sports content Online across a variety of sports Websites, and we aim to build a rewarding experience for our visitors here.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5778689.jpg?t=1706613379"
+    },
+    {
+      "title": "SuperWest Sports",
+      "feed_url": "https://superwestsports.com/feed/",
+      "website_url": "https://superwestsports.com/",
+      "description": "SuperWest Sports is a comprehensive sports website dedicated to delivering news and insights on a wide range of athletic disciplines, encompassing both professional and collegiate levels. Their coverage spans the Western United States, including the Conference of Champions. Notably, they provide in-depth analysis of prominent teams within the region, along with historical data and recruiting information.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7838389.jpg?t=1734099673"
+    },
+    {
+      "title": "SportsNewsIreland",
+      "feed_url": "https://www.sportsnewsireland.com/feed",
+      "website_url": "https://www.sportsnewsireland.com/",
+      "description": "Irish based independent sports news website, offering live score commentary updates on GAA, Airtricity League, RaboPro12, Athletics and Heineken Cup.",
+      "followers": {
+        "twitter": 14700
+      },
+      "image_url": "https://i1.feedspot.com/4780999.jpg?t=1529906753"
+    },
+    {
+      "title": "Inquirer.net \u00bb Sports",
+      "feed_url": "https://sports.inquirer.net/feed",
+      "website_url": "https://sports.inquirer.net/",
+      "description": "The latest sports news, video, analysis, scores and bettor info. Covering the PBA, NFL, MLB, NBA, NHL, NASCAR, soccer and more",
+      "followers": {
+        "facebook": 9300000,
+        "twitter": 3800000
+      },
+      "image_url": "https://i1.feedspot.com/1584177.jpg?t=1760531597"
+    },
+    {
+      "title": "Rivals",
+      "feed_url": "https://n.rivals.com/feed",
+      "website_url": "https://n.rivals.com/",
+      "description": "Rivals is respected name in team-specific college sports coverage and the country's No. 1 authority on college football and basketball recruiting.",
+      "followers": {
+        "facebook": 2,
+        "twitter": 316900
+      },
+      "image_url": "https://i1.feedspot.com/4779318.jpg?t=1642077139"
+    },
+    {
+      "title": "EssentiallySports",
+      "feed_url": "https://www.essentiallysports.com/feed/",
+      "website_url": "https://www.essentiallysports.com/",
+      "description": "EssentiallySports is a multi-sport news website that delivers the latest news, articles, features, and updates on global sports such as UFC, NBA, NFL, NASCAR, eSports, Tennis, Formula 1, Boxing, WWE and Golf.",
+      "followers": {
+        "facebook": 85400,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4779272.jpg?t=1642078056"
+    },
+    {
+      "title": "What Pros Wear",
+      "feed_url": "https://www.whatproswear.com/feed",
+      "website_url": "https://www.whatproswear.com/",
+      "description": "Our mission is to help you find the best equipment from the premier sports brands, including gloves, bats, batting gloves, cleats, basketball shoes, and other gear. The best way to find the best equipment is to consult the true professionals, the superstars of baseball and basketball. We bring you the most accurate and up-to-date information on pro sports equipment used by the best in the business and show you where you can find those products so you can add them to your game.",
+      "followers": {
+        "facebook": 28100,
+        "twitter": 11300,
+        "instagram": 214200
+      },
+      "image_url": "https://i1.feedspot.com/4603128.jpg?t=1603288130"
+    },
+    {
+      "title": "Boxing News",
+      "feed_url": "https://boxingnewsonline.net/feed/",
+      "website_url": "https://boxingnewsonline.net/",
+      "description": "Boxing News Magazine is all about the sport of boxing. It covers big fights, rankings, and stories about famous and upcoming boxers. The magazine also gives previews, results, and expert opinions on matches. It's made for boxing fans who want the latest updates and insights on the sport.",
+      "followers": {
+        "facebook": 2800000,
+        "twitter": 316000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/3962674.jpg?t=1615201248"
+    },
+    {
+      "title": "Mariners After Midnight",
+      "feed_url": "https://www.midnightmariners.com/feed",
+      "website_url": "https://www.midnightmariners.com/",
+      "description": "Prospect Insider covers the draft, prospects and the Seattle Mariners, with an eye toward scouting and player development.",
+      "followers": {
+        "facebook": 159,
+        "twitter": 14600
+      },
+      "image_url": "https://i1.feedspot.com/5098651.jpg?t=1626089142"
+    },
+    {
+      "title": "Sportsnet",
+      "feed_url": "https://www.sportsnet.ca/feed/",
+      "website_url": "https://www.sportsnet.ca/",
+      "description": "Sportsnet is your ultimate guide for the latest sports news, scores, standings, video highlights and more. Catch up to the minute sports headlines, news, results, sports standings, forums and blogs. Sportsnet connects Canadian sports fans to their favourite teams and athletes using four platforms: TV, Radio, Online and Mobile. Sportsnet delivers storytelling on a local, regional, national and global level.",
+      "followers": {
+        "facebook": 1900000,
+        "twitter": 1100000,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/1639548.jpg?t=1745828285"
+    },
+    {
+      "title": "Sport360",
+      "feed_url": "https://sport360.com/rss",
+      "website_url": "https://sport360.com/",
+      "description": "Latest sports news from aroud the globe, including breaking news, analysis and interviews.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 105100,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/4780188.jpg?t=1642078038"
+    },
+    {
+      "title": "Defector",
+      "feed_url": "https://defector.com/feed",
+      "website_url": "https://defector.com/",
+      "description": "Defector is an employee-owned sports and culture website brought to you by the former staffers of Deadspin. We write about sports, politics, TV, movies, science, weird stuff that happens on the internet, and anything else that catches our attention, because we believe that a good publication is one that reflects the genuine interests and obsessions of its staff.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 112600
+      },
+      "image_url": "https://i1.feedspot.com/5396540.jpg?t=1651570608"
+    },
+    {
+      "title": "Pro Sports Outlook",
+      "feed_url": "https://prosportsoutlook.com/feed/",
+      "website_url": "https://prosportsoutlook.com/",
+      "description": "Pro Sports Outlook is a new sports information & entertainment platform that helps fans learn more about their favorite teams & players through exciting innovative content, top highlights, and proprietary intel as the Front Office for Fans. Our exclusive content helps fans better enjoy the game by gaining a better understanding of their favorite teams & players.",
+      "followers": {
+        "facebook": 974,
+        "twitter": 5400,
+        "instagram": 10400
+      },
+      "image_url": "https://i1.feedspot.com/5186461.jpg?t=1598441755"
+    },
+    {
+      "title": "The Cold Wire",
+      "feed_url": "https://www.thecoldwire.com/feed/",
+      "website_url": "https://www.thecoldwire.com/",
+      "description": "The Cold Wire is a global platform for the most sought-after trending sports and entertainment news.",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/7442179/page/5312156/logo_1675880631.jpg"
+    },
+    {
+      "title": "PurplePTSD",
+      "feed_url": "https://purpleptsd.com/feed/",
+      "website_url": "https://purpleptsd.com/",
+      "description": "purplePTSD is your leading local and independent source for Vikings News, opinions and Content! Part of the VikingsTerritory Family.",
+      "followers": {
+        "facebook": 23600,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5184871.jpg?t=1605588925"
+    },
+    {
+      "title": "Sportsdark",
+      "feed_url": "https://sportsdark.com/feed/",
+      "website_url": "https://sportsdark.com/",
+      "description": "Stay updated with the latest news from sports like football, cricket, tennis, golf, motorsports, and others.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5389914.jpg?t=1649837102"
+    },
+    {
+      "title": "UNAFRAID SHOW",
+      "feed_url": "https://unafraidshow.com/feed/",
+      "website_url": "https://unafraidshow.com/",
+      "description": "The Sports world collides with People, Business, Entertainment, and Culture on UnafraidShow.com. Your one-stop shop for fearless, influential, and fun. We entertain thoughtful sports fans daily with fresh, creative, and powerful content.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 63400,
+        "instagram": 10200
+      },
+      "image_url": "https://i1.feedspot.com/5026218.jpg?t=1570183546"
+    },
+    {
+      "title": "Sports Danka",
+      "feed_url": "https://sportsdanka.com/feed/",
+      "website_url": "https://sportsdanka.com/",
+      "description": "All Sports News and Events Coverage. Sports News, Live Updates, Cricket Live Scores, Schedules, Match Updates and more.",
+      "followers": {
+        "facebook": 78,
+        "twitter": 12,
+        "instagram": 30
+      },
+      "image_url": "https://i1.feedspot.com/5312446.jpg?t=1629099634"
+    },
+    {
+      "title": "Vikings Territory",
+      "feed_url": "https://vikingsterritory.com/feed",
+      "website_url": "https://vikingsterritory.com/",
+      "description": "Vikings Territory is the leading local/independent resource for the Minnesota Vikings latest News, rumors, speculation, reaction, and content from the fans and for the fans! New articles daily!",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 18000
+      },
+      "image_url": "https://i1.feedspot.com/3998273.jpg?t=1607074966"
+    },
+    {
+      "title": "SportsRation",
+      "feed_url": "https://sportsration.com/feed/",
+      "website_url": "https://sportsration.com/",
+      "description": "SportsRation serves you the latest sports, NPFL, NNL, UCL, World Cup, F1; Nigerian Football, and most importantly Super Eagles and Super Falcons news.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 12400,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5158243.jpg?t=1623072638"
+    },
+    {
+      "title": "The Sports Mirror",
+      "feed_url": "https://www.thesportsmirror.com/feed/",
+      "website_url": "https://www.thesportsmirror.com/",
+      "description": "The Sports Mirror is your one stop guide to all the sports news, reviews and opinions from India and around the world, plus fixtures, live scores and much more.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 828
+      },
+      "image_url": "https://i1.feedspot.com/4780179.jpg?t=1644576930"
+    },
+    {
+      "title": "Westwood One Sports",
+      "feed_url": "https://westwoodonesports.com/feed/",
+      "website_url": "https://westwoodonesports.com/",
+      "description": "Westwood One Sports is Radio Home of the NFL, NCAA Football March Madness, Olympics and MastersWestwood One Sports.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 16400
+      },
+      "image_url": "https://i1.feedspot.com/4781331.jpg?t=1644575170"
+    },
+    {
+      "title": "DK Pittsburgh Sports",
+      "feed_url": "https://www.dkpittsburghsports.com/feed/",
+      "website_url": "https://www.dkpittsburghsports.com/",
+      "description": "Pittsburgh's pioneering independent sports news site, covering Steelers, Penguins, Pirates, Pitt, Penn State, more!",
+      "followers": {
+        "facebook": 70600,
+        "twitter": 51600,
+        "instagram": 17500
+      },
+      "image_url": "https://i1.feedspot.com/4894119.jpg?t=1642078219"
+    },
+    {
+      "title": "22bet News",
+      "feed_url": "https://news.22bet.com/news/feed/",
+      "website_url": "https://news.22bet.com/news/",
+      "description": "Read all the sports news, predictions, and round-ups on 22Bet for today. See the news for football, basketball, hockey, tennis, and more.",
+      "followers": {
+        "twitter": 24300
+      },
+      "image_url": "https://i1.feedspot.com/5213456.jpg?t=1604559410"
+    },
+    {
+      "title": "Sports Management Magazine",
+      "feed_url": "https://www.leisureopportunities.co.uk/rss/google_feed_SM.cfm",
+      "website_url": "https://www.sportsmanagement.co.uk/index.cfm",
+      "description": "Sports Management is the only business magazine serving the whole of the global sports industry, read by owners, managers and other key decision makers.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4779255.jpg?t=1628747643"
+    },
+    {
+      "title": "Complete Sports",
+      "feed_url": "https://www.completesports.com/feed/",
+      "website_url": "https://www.completesports.com/",
+      "description": "Complete Sports (CS) is Nigeria's number one all-sports daily newspaper. Latest Sports News, Latest Nigeria Sports News, Latest Premier League News, World Football, Latest International News, Super Eagles, and more.",
+      "followers": {
+        "facebook": 464700,
+        "twitter": 69900,
+        "instagram": 97300
+      },
+      "image_url": "https://i1.feedspot.com/4779050.jpg?t=1644838095"
+    },
+    {
+      "title": "Sports Pages",
+      "feed_url": "https://sportspages.in/blog/feed/",
+      "website_url": "https://sportspages.in/",
+      "description": "Find blog articles with the latest news and interesting stories around sports in India. Dedicated to creating an online sporting community in India",
+      "followers": {
+        "facebook": 192,
+        "twitter": 14
+      },
+      "image_url": "https://i1.feedspot.com/5084400.jpg?t=1644838806"
+    },
+    {
+      "title": "CWN Sports",
+      "feed_url": "https://www.cwnsports.com/rss.php",
+      "website_url": "https://www.cwnsports.com/index.php",
+      "description": "CWN Sports is a division of Comedy World Network. We present Sports Talk, Music and Comedy in multiple media, website blog posts, articles, e-zines, podcasts and radio streams. We feature NBA, NFL, NCAA, NBL, World Cup - men's and women's sports.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5070034.jpg?t=1573562607"
+    },
+    {
+      "title": "Powcast Sports",
+      "feed_url": "https://www.powcast.net/feeds/posts/default?alt=rss",
+      "website_url": "https://www.powcast.net/",
+      "description": "Powcast.net Sports Hub is the most awesome sports blog for real sports fans. We love NBA basketball, PBA, Boxing, MMA and other sports.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4902957.jpg?t=1644840089"
+    },
+    {
+      "title": "SportsMint Media",
+      "feed_url": "https://sportsmintmedia.com/feed/",
+      "website_url": "https://sportsmintmedia.com/",
+      "description": "SportsMint Media is an online community dedicated to reporting timely and precise information on the trends in the sports business world.",
+      "followers": {
+        "facebook": 9900,
+        "twitter": 117,
+        "instagram": 6100
+      },
+      "image_url": "https://i1.feedspot.com/5235301.jpg?t=1612444867"
+    },
+    {
+      "title": "SportsWeez",
+      "feed_url": "https://sportsweez.com/feed/",
+      "website_url": "https://sportsweez.com/",
+      "description": "Get your daily dose of Free Sports Picks and stay up-to-date with the latest Sports News at sportsweez.com. The expert team at SportsWeez delivers accurate predictions and insightful analysis for a wide range of sports, helping you make informed decisions. Stay ahead of the game with comprehensive coverage and enjoy the thrill of winning.",
+      "followers": {
+        "facebook": 98100,
+        "twitter": 322
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/7500498/page/5628056/logo_1691129014.png"
+    },
+    {
+      "title": "GamePass",
+      "feed_url": "https://gamepass.tv/feed/",
+      "website_url": "https://gamepass.tv/",
+      "description": "Live Stream Anywhere",
+      "followers": {
+        "facebook": 20,
+        "twitter": 222
+      },
+      "image_url": "https://i1.feedspot.com/6700992.jpg"
+    },
+    {
+      "title": "Franchise Sports",
+      "feed_url": "https://franchisesports.co.uk/feed/",
+      "website_url": "https://franchisesports.co.uk/",
+      "description": "US Sports from across the Atlantic. Coverage of MLB, NBA and NFL from the UK. Features, discussion and analysis of baseball, basketball and football.",
+      "followers": {
+        "facebook": 347,
+        "twitter": 2400,
+        "instagram": 125
+      },
+      "image_url": "https://i1.feedspot.com/4926676.jpg?t=1542711673"
+    },
+    {
+      "title": "The Sports News",
+      "feed_url": "https://www.thesportsnews.in/feed/",
+      "website_url": "https://www.thesportsnews.in/",
+      "description": "TheSportsNews is all about all those sports freak who live and breathe cricket, football, and any sports that you name.",
+      "followers": {
+        "facebook": 43600,
+        "twitter": 8
+      },
+      "image_url": "https://i1.feedspot.com/5148440.jpg?t=1644576604"
+    },
+    {
+      "title": "SportsCrunch",
+      "feed_url": "https://sportscrunch.in/feed/",
+      "website_url": "https://sportscrunch.in/",
+      "description": "We are a young global sports news website with an aim to bring forward news from all galleries of sports.",
+      "followers": {
+        "facebook": 93000,
+        "instagram": 16800
+      },
+      "image_url": "https://i1.feedspot.com/4779417.jpg?t=1571128185"
+    },
+    {
+      "title": "Sportelo",
+      "feed_url": "https://www.sportelo.com.ng/feed/",
+      "website_url": "https://www.sportelo.com.ng/",
+      "description": "We welcome you to your number one sports blog sportelo.com.ng we promise to give you sports news, various sports activities both local and international transfer news, live scores and much more that are worth your time and keep you updated with current happenings in sport all around the world.",
+      "followers": {
+        "twitter": 32
+      },
+      "image_url": "https://i1.feedspot.com/5136656.jpg?t=1588855235"
+    },
+    {
+      "title": "Pacific Northwest Sports",
+      "feed_url": "https://pacificnwsports.com/feed/",
+      "website_url": "https://pacificnwsports.com/",
+      "description": "Welcome to Pacific Northwest Sports, a site for fans by fans. We are dedicated to providing top-notch area sports news, views, and original content.",
+      "followers": {
+        "twitter": 30
+      },
+      "image_url": "https://i1.feedspot.com/5196662.jpg?t=1600096130"
+    },
+    {
+      "title": "D Sports",
+      "feed_url": "https://daenadsports.blogspot.com/feeds/posts/default",
+      "website_url": "https://daenadsports.blogspot.com/",
+      "description": "DAENAD Sports brings to you news information, score cards and performances of different sports clubs around the world. We give you updates on cricket, football, e-sports and many other sports happening around the world.",
+      "followers": {
+        "facebook": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5148600.jpg?t=1588844221"
+    },
+    {
+      "title": "Ben's sports blog",
+      "feed_url": "https://benwsportblog.wordpress.com/feed/",
+      "website_url": "https://benwsportblog.wordpress.com/",
+      "description": "Keep up with news and updates from Ben's sports Blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5035339.jpg"
+    },
+    {
+      "title": "Kridangan",
+      "feed_url": "https://kridangan.com/feed/",
+      "website_url": "https://kridangan.com/",
+      "description": "Kridangan have the most popular sports section covering latest news and top sports stories about Cricket, IPL2017, Hockey, Football, Tennis,Kabaddi World Cup.",
+      "followers": {
+        "facebook": 14600,
+        "twitter": 890,
+        "instagram": 25
+      },
+      "image_url": "https://i1.feedspot.com/4779444.jpg?t=1511260587"
+    },
+    {
+      "title": "Global Supports Latest News",
+      "feed_url": "https://supportslatestnews.blogspot.com/feeds/posts/default",
+      "website_url": "https://supportslatestnews.blogspot.com/",
+      "description": "Follow to get updates on the latest sports news.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5131118.jpg"
+    },
+    {
+      "title": "Allourthanks.com",
+      "feed_url": "https://allourthanks.com/feed/",
+      "website_url": "https://allourthanks.com/",
+      "description": "the online home of the best sports news and information on the net! Our team of experienced reporters and editors bring you breaking news, in-depth analysis, and insights into everything from the NFL to NHL. Whether you're a die-hard fan or just looking to stay up-to-date on the latest sports news, Allourthanks.com is the site for you.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5422009.jpg?t=1657886827"
+    },
+    {
+      "title": "Atojsports",
+      "feed_url": "https://atojsports.game.blog/feed/",
+      "website_url": "https://atojsports.game.blog/",
+      "description": "Be the first to know",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5061911.jpg?t=1644908736"
+    },
+    {
+      "title": "NDTV Sports",
+      "feed_url": "https://feeds.feedburner.com/ndtvsports-latest",
+      "website_url": "https://sports.ndtv.com/",
+      "description": "NDTV Sports is the ultimate destination for Sports fans from around the World. Get the latest sports news and updates from Cricket, Tennis, Football, Formula One, Hockey, NBA, and Golf with Live scores and Stats. New Delhi Television is, and has been for more than a quarter century, a pioneer in India's news television and digital journalism. Founded in 1988 by Radhika Roy and Prannoy Roy, NDTV is today the most watched, credible, and respected news network in India and a leader on the Internet.",
+      "followers": {
+        "facebook": 111800,
+        "twitter": 584000,
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/5493018.jpg?t=1760618892"
+    },
+    {
+      "title": "ESPNcricinfo",
+      "feed_url": "https://www.espncricinfo.com/rss/content/story/feeds/0.xml",
+      "website_url": "https://www.espncricinfo.com/",
+      "description": "ESPNcricinfo is the world's leading cricket website and among the top five single-sport websites in the world. You'll find here Live Cricket Scores, match updates, fixtures, results, news, articles, video highlights only at ESPNcricinfo.",
+      "followers": {
+        "facebook": 9600000,
+        "twitter": 7300000,
+        "instagram": 2500000
+      },
+      "image_url": "https://i1.feedspot.com/264.jpg?t=1623419320"
+    },
+    {
+      "title": "CBS Sports",
+      "feed_url": "https://www.cbssports.com/rss/headlines/",
+      "website_url": "https://www.cbssports.com/",
+      "description": "The latest sports news from CBSSports.com",
+      "followers": {
+        "facebook": 4500000,
+        "twitter": 1500000,
+        "instagram": 2000000
+      },
+      "image_url": "https://i1.feedspot.com/167181.jpg?t=1753336335"
+    },
+    {
+      "title": "Manchester Evening News \u00bb Sports",
+      "feed_url": "https://www.manchestereveningnews.co.uk/sport/?service=rss",
+      "website_url": "https://www.manchestereveningnews.co.uk/sport/",
+      "description": "Get the latest sports news on Manchester City, Manchester United, Greater Manchester non-league football, rugby union, boxing, cricket, ice hockey, basketball, speedway and local grassroots sports.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 25900,
+        "instagram": 437000
+      },
+      "image_url": "https://i1.feedspot.com/1052083.jpg?t=1753339952"
+    },
+    {
+      "title": "Sports News Australia",
+      "feed_url": "https://www.sportsnews.com.au/feed",
+      "website_url": "https://www.sportsnews.com.au/",
+      "description": "Read up on by-the-minute sports updates and discussions. Sports News aims to provide readers with the latest Australian & International sports news including AFL, NRL, A-League, Cricket, Tennis, Motor Sport, Basketball, Golf, and many more.",
+      "followers": {
+        "facebook": 302,
+        "twitter": 246
+      },
+      "image_url": "https://i1.feedspot.com/4528635.jpg?t=1753338758"
+    },
+    {
+      "title": "BBC Sport - Scores, Fixtures, News - Live Sport",
+      "feed_url": "https://feeds.bbci.co.uk/sport/rss.xml",
+      "website_url": "https://www.bbc.com/sport/",
+      "description": "Breaking news & live sports coverage including results, video, audio, and analysis on Football, F1, Cricket, Rugby Union, Rugby League, Golf, Tennis, and all the main world sports, plus major events such as the Olympic Games.",
+      "followers": {
+        "facebook": 61300000,
+        "twitter": 15400000,
+        "instagram": 3600000
+      },
+      "image_url": "https://i1.feedspot.com/236623.jpg?t=1752666204"
+    },
+    {
+      "title": "Times of India \u00bb Sports",
+      "feed_url": "https://timesofindia.indiatimes.com/rssfeeds/4719148.cms",
+      "website_url": "https://timesofindia.indiatimes.com/sports",
+      "description": "Get the latest sports news, live scores. IPL match results, and in-depth coverage of Cricket, Football, NBA, NFL, WWE, F1, Tennis, and more on The Times of India. Stay updated with breaking sports stories, player stats, and event highlights.",
+      "followers": {
+        "facebook": 12500000,
+        "twitter": 14900000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/4781375.jpg?t=1752403935"
+    },
+    {
+      "title": "The Sydney Morning Herald \u00bb Sports",
+      "feed_url": "https://www.smh.com.au/rss/sport.xml",
+      "website_url": "https://www.smh.com.au/sport",
+      "description": "The latest Sport news and results from The Sydney Morning Herald covering AFL, NRL, Cricket, Soccer, Rugby Union, Basketball, Athletics, Swimming, Cycling, Tennis, Golf, Motorsports & more.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 923400,
+        "instagram": 383700
+      },
+      "image_url": "https://i1.feedspot.com/4883363.jpg?t=1753343786"
+    },
+    {
+      "title": "Global News \u00bb Sports",
+      "feed_url": "https://globalnews.ca/sports/feed/",
+      "website_url": "https://globalnews.ca/sports/",
+      "description": "Global News Sports - breaking sports news & scores, stats and results; NHL, MLB, NBA, CFL news and updates on GlobalNews.ca",
+      "followers": {
+        "facebook": 232600,
+        "twitter": 971600,
+        "instagram": 332900
+      },
+      "image_url": "https://i1.feedspot.com/4884107.jpg?t=1753338835"
+    },
+    {
+      "title": "The Independent \u00bb Sports",
+      "feed_url": "http://www.independent.co.uk/sport/rss",
+      "website_url": "https://www.independent.co.uk/sport",
+      "description": "Follow the latest sports news and breaking sports stories including Football, Tennis, F1, Golf and Rugby from The Independent.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/4887576.jpg?t=1753339438"
+    },
+    {
+      "title": "Sport-Express.ru",
+      "feed_url": "https://www.sport-express.ru/services/materials/news/se",
+      "website_url": "https://www.sport-express.ru/",
+      "description": "All articles about Sports from Sport-Express.ru",
+      "followers": {
+        "facebook": 443200,
+        "twitter": 232200,
+        "instagram": 161500
+      },
+      "image_url": "https://i1.feedspot.com/5133662.jpg?t=1753345400"
+    },
+    {
+      "title": "San Francisco 49ers",
+      "feed_url": "https://www.49ers.com/rss/news",
+      "website_url": "https://www.49ers.com/news/",
+      "description": "The official source of the latest 49ers headlines, news, roster transactions, injury updates, key matchups, and more from San Francisco 49ers.",
+      "followers": {
+        "facebook": 4099999,
+        "twitter": 2500000,
+        "instagram": 3900000
+      },
+      "image_url": "https://i1.feedspot.com/5159660.jpg?t=1753942292"
+    },
+    {
+      "title": "The Indian Express \u00bb Sports",
+      "feed_url": "https://indianexpress.com/section/sports/feed/",
+      "website_url": "https://indianexpress.com/section/sports/",
+      "description": "Latest News, India News, Breaking News, Today's News Headlines Online from the Indian Express.",
+      "followers": {
+        "facebook": 7600000,
+        "twitter": 4300000,
+        "instagram": 1600000
+      },
+      "image_url": "https://i1.feedspot.com/5216635.jpg?t=1753336066"
+    },
+    {
+      "title": "Washington Times \u00bb Sports",
+      "feed_url": "https://www.washingtontimes.com/rss/headlines/sports/",
+      "website_url": "https://www.washingtontimes.com/sports/",
+      "description": "The Washington Times is your source for the latest scores, stats, and coverage of DC sports.",
+      "followers": {
+        "facebook": 723100,
+        "twitter": 469800,
+        "instagram": 120800
+      },
+      "image_url": "https://i1.feedspot.com/5239830.jpg?t=1611816215"
+    },
+    {
+      "title": "Fox News \u00bb Sports",
+      "feed_url": "https://moxie.foxnews.com/google-publisher/sports.xml",
+      "website_url": "https://www.foxnews.com/sports",
+      "description": "Check out trending sports news with Fox News. See sports team updates, sports videos, stats, schedules and standings from the NFL, MLB, NBA, NHL, NASCAR, NCAA Football, Basketball and more with Fox.",
+      "followers": {
+        "facebook": 30300000,
+        "twitter": 26900000,
+        "instagram": 10800000
+      },
+      "image_url": "https://i1.feedspot.com/5244018.jpg?t=1753342420"
+    },
+    {
+      "title": "Mint \u00bb Sports",
+      "feed_url": "https://www.livemint.com/rss/sports",
+      "website_url": "https://www.livemint.com/sports",
+      "description": "Latest Sports News: Get all live coverage and news on different sports, from Cricket to Football, Tennis, and Hockey along with the latest updates on IPL 2024.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 2100000,
+        "instagram": 719000
+      },
+      "image_url": "https://i1.feedspot.com/5320229.jpg?t=1753337942"
+    },
+    {
+      "title": "Hindustan Times \u00bb Sports",
+      "feed_url": "https://www.hindustantimes.com/feeds/rss/sports/rssfeed.xml",
+      "website_url": "https://www.hindustantimes.com/sports",
+      "description": "Sports News - Check out latest sports news and headlines from Cricket, Football, Tennis, Badminton, sports coverage, live cricket score, match results and more at Hindustan Times",
+      "followers": {
+        "facebook": 7400000,
+        "twitter": 8700000,
+        "instagram": 3300000
+      },
+      "image_url": "https://i1.feedspot.com/5404430.jpg?t=1753342772"
+    },
+    {
+      "title": "The West Australian \u00bb Sports",
+      "feed_url": "https://thewest.com.au/sport/rss",
+      "website_url": "https://thewest.com.au/sport",
+      "description": "All latest sports news from The West Australian.",
+      "followers": {
+        "facebook": 412700,
+        "twitter": 197500,
+        "instagram": 62100
+      },
+      "image_url": "https://i1.feedspot.com/5447543.jpg?t=1753344163"
+    },
+    {
+      "title": "Business Standard \u00bb Sports",
+      "feed_url": "https://www.business-standard.com/rss/sports-192.rss",
+      "website_url": "https://www.business-standard.com/sports",
+      "description": "BS provides the latest news and updates on sports events like football, cricket, FIFA 2019, hockey, badminton, lawn tennis, IPL and more related sports news. Catch sports breaking news at Business Standard.",
+      "followers": {
+        "facebook": 591900,
+        "twitter": 2200000,
+        "instagram": 707800
+      },
+      "image_url": "https://i1.feedspot.com/5586536.jpg?t=1685520705"
+    },
+    {
+      "title": "The Age \u00bb Sports",
+      "feed_url": "https://www.theage.com.au/rss/sport.xml",
+      "website_url": "https://www.theage.com.au/sport",
+      "description": "The latest Sport news and results from The Age covering AFL, NRL, Cricket, Soccer, Rugby Union, Basketball, Athletics, Swimming, Cycling, Tennis, Golf, Motorsports & more.",
+      "followers": {
+        "facebook": 534400,
+        "twitter": 945200,
+        "instagram": 217100
+      },
+      "image_url": "https://i1.feedspot.com/5593148.jpg?t=1753338908"
+    },
+    {
+      "title": "KUSA.com \u00bb Sports",
+      "feed_url": "https://www.9news.com/feeds/syndication/rss/sports",
+      "website_url": "https://www.9news.com/sports",
+      "description": "Local News and Information for Denver, Colorado and surrounding areas. 9NEWS.com is the official website for KUSA-TV, your trusted source for breaking news, weather and sports in Denver, CO. 9NEWS.com",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 551000,
+        "instagram": 272200
+      },
+      "image_url": "https://i1.feedspot.com/5595368.jpg?t=1753342949"
+    },
+    {
+      "title": "Boston.com \u00bb Sports",
+      "feed_url": "https://www.boston.com/category/sports/feed/",
+      "website_url": "https://www.boston.com/category/sports/",
+      "description": "The latest news, scores, stats, and analysis on the Bruins, Celtics, Patriots, Red Sox, and Revolution. Plus, more Boston and New England sports updates.",
+      "followers": {
+        "facebook": 482800,
+        "twitter": 459600,
+        "instagram": 503800
+      },
+      "image_url": "https://i1.feedspot.com/5598304.jpg?t=1753344445"
+    },
+    {
+      "title": "The Hindu \u00bb Sports",
+      "feed_url": "https://www.thehindu.com/sport/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/sport/",
+      "description": "Stay Up To Date With The Latest Sports News & Updates From The World Of Cricket, Football, Tennis, Badminton & Much More At The Hindu.",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/5598489.jpg?t=1753342708"
+    },
+    {
+      "title": "PhillyVoice \u00bb Sports",
+      "feed_url": "https://www.phillyvoice.com/feed/section/sports/",
+      "website_url": "https://www.phillyvoice.com/sports/",
+      "description": "The latest local Philadelphia and national sports news for the Eagles, Phillies, Flyers, 76ers, Union, Temple Owls, Villanova Wildcats, La Salle Explorers, Saint Joe's Hawks, Penn Quakers, Drexel Dragons, NFL, MLB, NHL, NBA, MLS and WWE.",
+      "followers": {
+        "facebook": 117500,
+        "twitter": 52500,
+        "instagram": 31300
+      },
+      "image_url": "https://i1.feedspot.com/5644964.jpg?t=1753339864"
+    },
+    {
+      "title": "Los Angeles Times \u00bb Sports",
+      "feed_url": "https://www.latimes.com/sports.rss",
+      "website_url": "https://www.latimes.com/sports",
+      "description": "The Los Angeles Times is a regional American daily newspaper that started publishing in Los Angeles, California in 1881. The Los Angeles Times covers a range of topics, including: Breaking news, Entertainment, Sports, Politics, Science and medicine. Their sports section covers sports news from various sports such as NBA, NFL, MLB, NHL college and high school sports teams and more.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 3800000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/5686154.jpg?t=1753339153"
+    },
+    {
+      "title": "WFAA \u00bb Sports",
+      "feed_url": "https://www.wfaa.com/feeds/syndication/rss/sports",
+      "website_url": "https://www.wfaa.com/sports",
+      "description": "Here, you'll find the latest news, scores, standings, and analysis on your favorite North Texas teams, from the Cowboys and Mavericks to the Stars and FC Dallas. WFAA primarily covers the Dallas-Fort Worth metroplex, also known as North Texas. This includes the major cities of Dallas and Fort Worth, along with surrounding areas in Texas.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 673800,
+        "instagram": 265500
+      },
+      "image_url": "https://i1.feedspot.com/5687787.jpg?t=1753341763"
+    },
+    {
+      "title": "France 24 \u00bb Sports",
+      "feed_url": "https://www.france24.com/en/sport/rss",
+      "website_url": "https://www.france24.com/en/sport/",
+      "description": "Follow FRANCE 24's coverage of the major sporting events from across the globe, including match results, portraits and interviews. From the Olympics to the World Cup to the African Cup of Nations, follow football, tennis, rugby, cycling including the Tour de France and judo, as well as the world of parasports.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 4300000,
+        "instagram": 481800
+      },
+      "image_url": "https://i1.feedspot.com/7323635.jpg?t=1753339786"
+    },
+    {
+      "title": "Deutsche Welle \u00bb Sports",
+      "feed_url": "https://rss.dw.com/rdf/rss-en-sports",
+      "website_url": "https://www.dw.com/en/sports/s-8171",
+      "description": "Stay up to date on German football, Formula One and international sports news. In-depth reporting, analysis and exclusive interviews with Bundesliga stars from Deutsche Welle.",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 182900,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/7844100.jpg?t=1736400531"
+    },
+    {
+      "title": "KSAT \u00bb Sports",
+      "feed_url": "https://www.ksat.com/arc/outboundfeeds/rss/category/sports/?outputType=xml&size=10",
+      "website_url": "https://www.ksat.com/sports/",
+      "description": "Sports news and Spurs headlines from KSAT 12, the San Antonio, Texas leader in breaking news, weather and sports.",
+      "followers": {
+        "facebook": 896300,
+        "twitter": 353500,
+        "instagram": 196100
+      },
+      "image_url": "https://i1.feedspot.com/7862693.jpg?t=1753344498"
+    },
+    {
+      "title": "KING5 \u00bb Sports",
+      "feed_url": "https://www.king5.com/feeds/syndication/rss/sports",
+      "website_url": "https://www.king5.com/sports",
+      "description": "Sports news and scores from KING 5 in Seattle, Washington.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 727100,
+        "instagram": 186200
+      },
+      "image_url": "https://i1.feedspot.com/7864747.jpg?t=1753339605"
+    },
+    {
+      "title": "WHAS11 \u00bb Sports",
+      "feed_url": "https://www.whas11.com/feeds/syndication/rss/sports",
+      "website_url": "https://www.whas11.com/sports",
+      "description": "All articles about Sports from WHAS11.",
+      "followers": {
+        "facebook": 406100,
+        "twitter": 184900,
+        "instagram": 44000
+      },
+      "image_url": "https://i1.feedspot.com/7876140.jpg?t=1753341844"
+    },
+    {
+      "title": "WXYZ Channel 7 \u00bb Sports",
+      "feed_url": "https://www.wxyz.com/sports.rss",
+      "website_url": "https://www.wxyz.com/sports",
+      "description": "The latest metro Detroit area sports headlines from 7 News Detroit and WXYZ.com.",
+      "followers": {
+        "facebook": 996600,
+        "twitter": 458100,
+        "instagram": 155500
+      },
+      "image_url": "https://i1.feedspot.com/7878461.jpg"
+    },
+    {
+      "title": "kare11.com \u00bb Sports",
+      "feed_url": "https://www.kare11.com/feeds/syndication/rss/sports",
+      "website_url": "https://www.kare11.com/sports",
+      "description": "All articles about Sports from KARE 11.",
+      "followers": {
+        "facebook": 635000,
+        "twitter": 394000,
+        "instagram": 179900
+      },
+      "image_url": "https://i1.feedspot.com/7878705.jpg?t=1753343504"
+    },
+    {
+      "title": "KHOU \u00bb Sports",
+      "feed_url": "https://www.khou.com/feeds/syndication/rss/sports",
+      "website_url": "https://www.khou.com/sports",
+      "description": "Sports news and scores from KHOU in Houston, Texas.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 883400,
+        "instagram": 303700
+      },
+      "image_url": "https://i1.feedspot.com/7879556.jpg?t=1753339679"
+    },
+    {
+      "title": "Firstpost \u00bb Sports",
+      "feed_url": "https://www.firstpost.com/commonfeeds/v1/mfp/rss/sports.xml",
+      "website_url": "https://www.firstpost.com/category/sports/",
+      "description": "Get all the sports news coverage including live cricket scores, football updates, latest hockey news, tennis, badminton, NBA and more. Find live blogs, previews, analysis and results on Indian Sports and many more on Firstpost.",
+      "followers": {
+        "facebook": 3600000,
+        "twitter": 2200000,
+        "instagram": 2500000
+      },
+      "image_url": "https://i1.feedspot.com/7887849.jpg?t=1753336734"
+    },
+    {
+      "title": "The Wall Street Journal \u00bb Sports",
+      "feed_url": "https://feeds.content.dowjones.io/public/rss/rsssportsfeed",
+      "website_url": "https://www.wsj.com/sports",
+      "description": "The latest Sports news from The Wall Street Journal, including Baseball, Basketball, Football, Golf, Hockey, Olympics, Soccer, Tennis and more.",
+      "followers": {
+        "facebook": 7700000,
+        "twitter": 20800000,
+        "instagram": 5600000
+      },
+      "image_url": "https://i1.feedspot.com/8640174.jpg?t=1753338648"
+    },
+    {
+      "title": "Onmanorama \u00bb Sports",
+      "feed_url": "https://www.onmanorama.com/sports.feeds.rss.xml",
+      "website_url": "https://www.onmanorama.com/sports.html",
+      "description": "Latest Sports News Updates from Onmanorama. Football News. Cricket News. Match Updates. Tennis News. Latest Sports News from English Manorama.Sports News, Cricket News, Football News, Tennis News.",
+      "followers": {
+        "facebook": 165900,
+        "instagram": 43000
+      },
+      "image_url": "https://i1.feedspot.com/8640572.jpg?t=1753344788"
+    },
+    {
+      "title": "Page Six \u00bb Sports",
+      "feed_url": "https://pagesix.com/sports/feed/",
+      "website_url": "https://pagesix.com/sports/",
+      "description": "All latest articles about Sports from Page Six",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 386100,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/8645276.jpg?t=1764245352"
+    },
+    {
+      "title": "KTVB \u00bb Sports",
+      "feed_url": "https://www.ktvb.com/feeds/syndication/rss/sports",
+      "website_url": "https://www.ktvb.com/sports",
+      "description": "Sports news and scores from KTVB in Boise, Idaho.",
+      "followers": {
+        "facebook": 253600,
+        "twitter": 133000,
+        "instagram": 81300
+      },
+      "image_url": "https://i1.feedspot.com/8645277.jpg?t=1753342633"
+    },
+    {
+      "title": "The New York Times \u00bb Sports",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/spotlight/new-york-times-sports/rss.xml",
+      "website_url": "https://www.nytimes.com/spotlight/new-york-times-sports",
+      "description": "All articles about Sports from The New York Times.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000,
+        "instagram": 19600000
+      },
+      "image_url": "https://i1.feedspot.com/8645278.jpg?t=1753336840"
+    },
+    {
+      "title": "La Gazzetta dello Sport",
+      "feed_url": "https://www.gazzetta.it/dynamic-feed/rss/section/last.xml",
+      "website_url": "https://www.gazzetta.it/",
+      "description": "All articles about Sports from La Gazzetta dello Sport.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 2000000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/8645279.jpg?t=1753345296"
+    },
+    {
+      "title": "The Salt Lake Tribune \u00bb Sports",
+      "feed_url": "https://www.sltrib.com/arc/outboundfeeds/sports/?outputType=xml",
+      "website_url": "https://www.sltrib.com/sports/",
+      "description": "Coverage of the Utah Jazz, Utah Utes, BYU Cougars, Utah State, Weber State, Real Salt Lake and Utah's high school sports from The Salt Lake Tribune.",
+      "followers": {
+        "facebook": 130000,
+        "twitter": 217200,
+        "instagram": 106300
+      },
+      "image_url": "https://i1.feedspot.com/8645280.jpg?t=1753342012"
+    },
+    {
+      "title": "GMA Network \u00bb Sports",
+      "feed_url": "https://data.gmanetwork.com/gno/rss/sports/feed.xml",
+      "website_url": "https://www.gmanetwork.com/news/sports/",
+      "description": "Get all the latest sports news, scores, schedules, and more for local and international sports from GMA News Online.",
+      "followers": {
+        "facebook": 28200000,
+        "twitter": 6800000,
+        "instagram": 2100000
+      },
+      "image_url": "https://i1.feedspot.com/8645281.jpg?t=1753339324"
+    },
+    {
+      "title": "ClickOnDetroit | WDIV Local 4 \u00bb Sports",
+      "feed_url": "https://www.clickondetroit.com/arc/outboundfeeds/rss/category/sports/?outputType=xml&size=10",
+      "website_url": "https://www.clickondetroit.com/sports/",
+      "description": "Sports news from around Metro Detroit and Michigan ClickOnDetroit and WDIV Local 4.",
+      "followers": {
+        "facebook": 732000,
+        "twitter": 470900,
+        "instagram": 149600
+      },
+      "image_url": "https://i1.feedspot.com/8645282.jpg?t=1753343208"
+    },
+    {
+      "title": "The Tribune \u00bb Sports",
+      "feed_url": "https://publish.tribuneindia.com/newscategory/sports/feed/",
+      "website_url": "https://www.tribuneindia.com/news/sports",
+      "description": "Catch the latest sports news, live scores, and updates from cricket, football, tennis, and more. Stay informed on major sports events, match results, player performances, and breaking sports headlines from India and around the world.",
+      "followers": {
+        "facebook": 786800,
+        "twitter": 199700,
+        "instagram": 28500
+      },
+      "image_url": "https://i1.feedspot.com/8645283.jpg?t=1753344101"
+    },
+    {
+      "title": "SportzWire",
+      "feed_url": "https://feeds.feedburner.com/sportzwire/IlZkQmMNRf7",
+      "website_url": "https://sportzwire.com/",
+      "description": "Revolutionizing the way athletes are recognized and celebrated.",
+      "followers": {
+        "twitter": 231
+      },
+      "image_url": "https://i1.feedspot.com/8645284.jpg?t=1753338474"
+    },
+    {
+      "title": "Sportschau.de",
+      "feed_url": "https://www.sportschau.de/index~rss2.xml",
+      "website_url": "https://www.sportschau.de/",
+      "description": "News, reports from the Bundesliga, live tickers and results, live streams and the goal of the month - the sports offering from ARD.",
+      "followers": {
+        "facebook": 897500,
+        "instagram": 658900
+      },
+      "image_url": "https://i1.feedspot.com/8645285.jpg?t=1753344708"
+    },
+    {
+      "title": "The Argus \u00bb Sport",
+      "feed_url": "https://www.theargus.co.uk/sport/rss/",
+      "website_url": "https://www.theargus.co.uk/sport/",
+      "description": "Get all the latest sport news from across Sussex including local leagues and Brighton and Hove Albion, constantly updated with the latest news.",
+      "followers": {
+        "facebook": 15800,
+        "twitter": 118200,
+        "instagram": 13000
+      },
+      "image_url": "https://i1.feedspot.com/8645286.jpg?t=1753344348"
+    },
+    {
+      "title": "WKYC \u00bb Sports",
+      "feed_url": "https://www.wkyc.com/feeds/syndication/rss/sports",
+      "website_url": "https://www.wkyc.com/sports",
+      "description": "WKYC 3 Studios sports coverage including the Cleveland Browns, Cleveland Guardians, Cavaliers and OSU for Cleveland and Northeast Ohio.",
+      "followers": {
+        "facebook": 514799,
+        "twitter": 209700,
+        "instagram": 72700
+      },
+      "image_url": "https://i1.feedspot.com/8645287.jpg?t=1753342544"
+    },
+    {
+      "title": "Yonhap News Agency \u00bb Sports",
+      "feed_url": "https://en.yna.co.kr/RSS/sports.xml",
+      "website_url": "https://en.yna.co.kr/sports/index",
+      "description": "Yonhap news articles produced by building a network covering domestic supplies in various newspapers, broadcasting and government departments, major institutions, major corporations, media ,K-pop, K-wave, Hallyu, Korean Wave, Korean pop, Korean pop culture, Korean culture, Korean idol, Korean movies, Internet media and international agreements of the Republic of Korea.",
+      "followers": {
+        "facebook": 19000,
+        "twitter": 125700
+      },
+      "image_url": "https://i1.feedspot.com/8645288.jpg?t=1753340137"
+    },
+    {
+      "title": "ET Now \u00bb Sports",
+      "feed_url": "https://www.etnownews.com/feeds/gns-etn-sports.xml",
+      "website_url": "https://www.etnownews.com/sports",
+      "description": "Sports News: Read the latest sports news and headlines from Cricket - IPL 2025, Football coverage, live cricket score, match results and more. Get all updates on 2025 Indian Premier League Cricket team players and coaches at ET Now.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 871000,
+        "instagram": 184000
+      },
+      "image_url": "https://i1.feedspot.com/8645289.jpg?t=1753339509"
+    },
+    {
+      "title": "newsarenaindia.com \u00bb Sports",
+      "feed_url": "https://newsarenaindia.com/category/sports/feed",
+      "website_url": "https://newsarenaindia.com/category/sports",
+      "description": "Explore the latest updates on Cricket, Tennis, Football, and more at News Arena India, your ultimate sports destination.",
+      "followers": {
+        "twitter": 249600,
+        "instagram": 11400
+      },
+      "image_url": "https://i1.feedspot.com/8645290.jpg?t=1753343987"
+    },
+    {
+      "title": "PTC News \u00bb Sports",
+      "feed_url": "https://www.ptcnews.tv/rssfeed/sports",
+      "website_url": "https://www.ptcnews.tv/sports",
+      "description": "Sports News - Get Latest Sports News Today Headlines on PTC News. Find latest cricket news, tennis, football, hockey, World cup 2021, IPL 2021, Live Score Updates. Stay updated on Sports News at Times Now.",
+      "followers": {
+        "facebook": 2700000,
+        "twitter": 103200,
+        "instagram": 755600
+      },
+      "image_url": "https://i1.feedspot.com/8645291.jpg?t=1753344591"
+    },
+    {
+      "title": "Ferris State Bulldogs",
+      "feed_url": "https://www.ferrisstatebulldogs.com/landing/headlines-featured?feed=rss_2.0",
+      "website_url": "https://www.ferrisstatebulldogs.com/",
+      "description": "All articles from Ferris State Bulldogs.",
+      "followers": {
+        "facebook": 15900,
+        "twitter": 1300,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/8645292.jpg?t=1753337033"
+    },
+    {
+      "title": "SB Nation",
+      "feed_url": "https://www.sbnation.com/rss/index.xml",
+      "website_url": "https://www.sbnation.com/",
+      "description": "SB Nation is the largest independent sports media brand. SB Nation is a place for people who like sports.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 283200
+      },
+      "image_url": "https://i1.feedspot.com/4778174.jpg?t=1599745519"
+    },
+    {
+      "title": "SuperWest Sports",
+      "feed_url": "https://superwestsports.com/feed/",
+      "website_url": "https://superwestsports.com/",
+      "description": "Covering the best teams in the West from the Big Ten, Big 12, Mountain West, Pac-12, WCC basketball, and SuperWest players in the pros.",
+      "followers": {
+        "facebook": 39
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/4455012/page/5180997/logo_1734040214.jpg"
+    },
+    {
+      "title": "IndianSportsNews",
+      "feed_url": "http://www.indiansportsnews.com/?format=feed&type=rss",
+      "website_url": "http://www.indiansportsnews.com/",
+      "description": "Read Indian Sports News for latest news on cricket, hockey, golf, tennis, football, motorsports, chess, other sports and sports blogs.",
+      "followers": {
+        "facebook": 29200,
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/4779414.jpg?t=1571132711"
+    },
+    {
+      "title": "InsideSport",
+      "feed_url": "https://www.insidesport.in/feed/",
+      "website_url": "https://www.insidesport.in/",
+      "description": "InsideSport - India's premier sports business news website. For news and analysis regarding sports business,cricket, Sports business league,sports business.",
+      "followers": {
+        "twitter": 9700
+      },
+      "image_url": "https://i1.feedspot.com/4779240.jpg?t=1644566861"
+    },
+    {
+      "title": "Abstract Sports Blog",
+      "feed_url": "https://abstractsports.com/blog/",
+      "website_url": "https://abstractsports.com/blog/",
+      "description": "Abstract Sports is Bringing Sports Back to Life with a fresh perspective on the game from abstract, yet popular angles. Founded in November of 2016, our goal is to cultivate and share sports stories as they relate to the human condition.",
+      "followers": {
+        "facebook": 148,
+        "twitter": 230,
+        "instagram": 81
+      },
+      "image_url": "https://i1.feedspot.com/5220199.jpg?t=1606302032"
+    },
+    {
+      "title": "FanSided",
+      "feed_url": "https://fansided.com/feed",
+      "website_url": "https://fansided.com/",
+      "description": "The ultimate home for fans. News & blogs on NFL, MLB, NBA, NHL, MMA, college, NASCAR, fantasy sports and more. FanSided is one of the fastest-growing networks of fandom-focused sports, entertainment and lifestyle sites on the Internet.",
+      "followers": {
+        "facebook": 973500,
+        "twitter": 46700,
+        "instagram": 38900
+      },
+      "image_url": "https://i1.feedspot.com/4779104.jpg?t=1644580299"
+    },
+    {
+      "title": "Sportstar",
+      "feed_url": "https://sportstar.thehindu.com/feeder/default.rss",
+      "website_url": "https://sportstar.thehindu.com/",
+      "description": "Sports News: Get the latest sports news, today's live sports coverage, live score updates, match schedules, and results of various sports events.",
+      "followers": {
+        "facebook": 566000,
+        "twitter": 45700,
+        "instagram": 20300
+      },
+      "image_url": "https://i1.feedspot.com/4780167.jpg?t=1612339219"
+    },
+    {
+      "title": "Sport Grill",
+      "feed_url": "https://sportgrill.co.uk/feed/",
+      "website_url": "https://sportgrill.co.uk/",
+      "description": "Sports Grill is the perfect blog for those wanting in-depth articles and interviews across, Football, Motorsport, and Tennis. Whether you are a footy, petrolhead or tennis and perhaps fan of all three sports, you will find something to enjoy around Sports Grill.",
+      "followers": {
+        "facebook": 18000,
+        "twitter": 366
+      },
+      "image_url": "https://i1.feedspot.com/5091918.jpg"
+    },
+    {
+      "title": "Canoe",
+      "feed_url": "https://canoe.com/feed/atom",
+      "website_url": "https://canoe.com/",
+      "description": "Canoe Sports presents an abundant variety of news, articles, videos, photos, sports results, scoreboard and statistics",
+      "followers": {
+        "facebook": 11100,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4780273.jpg?t=1644910065"
+    },
+    {
+      "title": "FootballCritic",
+      "feed_url": "https://www.footballcritic.com/",
+      "website_url": "https://www.footballcritic.com/",
+      "description": "Find out who are the best-performing players and teams in the world on FootballCritic. FootballCritic (FC) is an accessible, user-friendly news and statistics platform that has one main purpose - to help football fans of every level of obsession understand and enjoy the game just a little more.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 8100
+      },
+      "image_url": "https://i1.feedspot.com/5084656.jpg?t=1608624186"
+    },
+    {
+      "title": "Yardbarker",
+      "feed_url": "https://www.yardbarker.com/",
+      "website_url": "https://www.yardbarker.com/",
+      "description": "Realtime rumors, news and gossip from thousands of sports blogs",
+      "followers": {
+        "facebook": 151800,
+        "twitter": 28800
+      },
+      "image_url": "https://i1.feedspot.com/406217.jpg?t=1644560829"
+    },
+    {
+      "title": "MLB.com",
+      "feed_url": "http://www.sportsonearth.com/gen/hb/rss/writers.xml",
+      "website_url": "https://www.mlb.com/news",
+      "description": "Coverage of every sport, 24/7, featuring news, live scores and analysis.",
+      "followers": {
+        "facebook": 11600000,
+        "twitter": 12700000,
+        "instagram": 13100000
+      },
+      "image_url": "https://i1.feedspot.com/1072038.jpg?t=1541997184"
+    },
+    {
+      "title": "SEC Network",
+      "feed_url": "https://www.secsports.com/rss",
+      "website_url": "https://www.secsports.com/",
+      "description": "Comprehensive coverage of SEC football, basketball, baseball and more, including live games, scores, schedules, standings and news",
+      "followers": {
+        "facebook": 904800,
+        "twitter": 730700,
+        "instagram": 879100
+      },
+      "image_url": "https://i1.feedspot.com/4779179.jpg?t=1644561167"
+    },
+    {
+      "title": "CODE Sports",
+      "feed_url": "https://www.codesports.com.au/feed",
+      "website_url": "https://www.codesports.com.au/",
+      "description": "For the latest news and updates for all Australian and international sports, CODE has you covered. Find total sports coverage for your favorite teams, players, and leagues you follow.",
+      "followers": {
+        "facebook": 131500,
+        "twitter": 6800,
+        "instagram": 23700
+      },
+      "image_url": "https://i1.feedspot.com/5408949.jpg?t=1654773920"
+    },
+    {
+      "title": "Usa Today High School Sports",
+      "feed_url": "https://www.usatodayhss.com/feed/",
+      "website_url": "https://www.usatodayhss.com/",
+      "description": "USA TODAY High School Sports is for athletes, coaches, parents and fans with more schools, teams, events, and photos and videos than any other site.",
+      "followers": {
+        "facebook": 187800,
+        "twitter": 42300,
+        "instagram": 35300
+      },
+      "image_url": "https://i1.feedspot.com/4779457.jpg?t=1644567284"
+    },
+    {
+      "title": "Xtratime",
+      "feed_url": "https://xtratime.in/feed/",
+      "website_url": "https://xtratime.in/",
+      "description": "traTime, the ultimate destination for sports fans! Get latest news on Cricket, Football, ISL, IPL, Hockey, Kabaddi, Tennis. Subscribe with us today!",
+      "followers": {
+        "instagram": 32000
+      },
+      "image_url": "https://i1.feedspot.com/4780086.jpg?t=1623647633"
+    },
+    {
+      "title": "The Roar \u00bb Cricket",
+      "feed_url": "https://www.theroar.com.au/feed/",
+      "website_url": "https://www.theroar.com.au/cricket/",
+      "description": "Get expert & fan-submitted sports opinion and video, plus the latest news, scores, live coverage, and must-see sports video highlights. The Roar is Australia's leading sports opinion website, mixing expert commentary with reader-generated articles. We focus on sports opinion and engaging conversation amongst our passionate community of readers.",
+      "followers": {
+        "facebook": 142500,
+        "twitter": 23700,
+        "instagram": 16200
+      },
+      "image_url": "https://i1.feedspot.com/1420305.jpg?t=1603354605"
+    },
+    {
+      "title": "Sideline Sources",
+      "feed_url": "https://sidelinesources.com/feed/",
+      "website_url": "https://www.sportsmediaguy.com/blog",
+      "description": "Get the latest in the sports world. Sideline Sources bloggers provide you with the best in the NBA, NFL and Culture.",
+      "followers": {
+        "facebook": 194700,
+        "twitter": 11100,
+        "instagram": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/5252549.jpg?t=1614919746"
+    },
+    {
+      "title": "Sports Media Guy",
+      "feed_url": "https://www.sportsmediaguy.com/blog",
+      "website_url": "https://www.sportsmediaguy.com/blog",
+      "description": "Sports Media Guy Brian Moritz offers in-depth, expert insights into current events and trends in sports media, journalism, communications, digital and social media. Brian is a professor of communications at SUNY Oswego in New York. His research centers sports, athletics, and journalist and newsroom routines.",
+      "followers": {
+        "facebook": 192,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5363673.jpg?t=1642575068"
+    },
+    {
+      "title": "SportsCafe",
+      "feed_url": "https://sportscafe.in/rss",
+      "website_url": "https://sportscafe.in/",
+      "description": "Live scores, news, commentary, live-blogs, schedules, fixtures, match reports for Cricket, Football, Tennis, Hockey, Kabaddi here at SportsCafe",
+      "followers": {
+        "facebook": 640500
+      },
+      "image_url": "https://i1.feedspot.com/4780236.jpg?t=1644565570"
+    },
+    {
+      "title": "Dimers",
+      "feed_url": "https://www.dimers.com/",
+      "website_url": "https://www.dimers.com/",
+      "description": "Dimers NFL Bet Hub has everything you need to make a winning bet, using analytics to run over 10,000 simulations per game to predict the most likely outcomes and find value against the sportsbooks. Get the best free NFL betting picks, parlays and predictions here.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 50200,
+        "instagram": 8200
+      },
+      "image_url": "https://i1.feedspot.com/5295653.jpg?t=1624435178"
+    },
+    {
+      "title": "A Sports",
+      "feed_url": "https://a-sports.tv/feed",
+      "website_url": "https://a-sports.tv/",
+      "description": "ARYSports endeavors to provide up-to-date news, blogs and analysis of sports events and sports persons.",
+      "followers": {
+        "facebook": 2700000,
+        "twitter": 142100,
+        "instagram": 141700
+      },
+      "image_url": "https://i1.feedspot.com/4781277.jpg?t=1644567959"
+    },
+    {
+      "title": "247Sports",
+      "feed_url": "https://247sports.com/",
+      "website_url": "https://247sports.com/",
+      "description": "Scout is a multi-channel media network. Scout covers NFL, fantasy sports, college football/basketball, recruiting, outdoors, military & more.",
+      "followers": {
+        "facebook": 3400000,
+        "twitter": 493400,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4781230.jpg"
+    },
+    {
+      "title": "The Seattle Times \u00bb Sports",
+      "feed_url": "https://www.seattletimes.com/sports/feed/",
+      "website_url": "https://www.seattletimes.com/sports/",
+      "description": "The Seattle Times Sports section covers teams and athletes in the Seattle area and Pacific Northwest, including the Seahawks, Mariners, UW Huskies, WSU Cougars, Seattle Sounders FC, Seattle Storm, Seattle Reign, high-school teams, and coverage of plans for an NBA/NHL arena.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/4879169.jpg?t=1753339084"
+    },
+    {
+      "title": "News.com.au \u00bb Sports",
+      "feed_url": "https://www.news.com.au/content-feeds/latest-news-sport/",
+      "website_url": "https://www.news.com.au/sport",
+      "description": "Read up on the latest sports news, including live coverage of NRL, AFL, Cricket, Football, Tennis, Motorsport, and the Olympic Games at news.com.au. We are one of Australia's top commercial news site, delivering extensive breaking news and national interest stories put together by our team of dedicated journalists.",
+      "followers": {
+        "facebook": 3400000,
+        "twitter": 711600,
+        "instagram": 320200
+      },
+      "image_url": "https://i1.feedspot.com/5447500.jpg?t=1663589937"
+    }
+  ]
+}

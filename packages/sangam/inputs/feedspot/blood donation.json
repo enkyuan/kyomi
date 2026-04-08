@@ -1,0 +1,83 @@
+{
+  "category": "Blood Donation",
+  "source_url": "https://rss.feedspot.com/blood_donation_rss_feeds",
+  "feeds": [
+    {
+      "title": "Carter BloodCare Blog",
+      "feed_url": "https://www.carterbloodcare.org/feed/",
+      "website_url": "https://www.carterbloodcare.org/blog/",
+      "description": "Articles on upcoming events, featured blood drive coordinators and the latest news on the blood banking industry. Carter BloodCare is the provider of blood components & transfusion services for Texas healthcare facilities.",
+      "followers": {
+        "facebook": 23000,
+        "twitter": 3300,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5036290.jpg?t=1622457166"
+    },
+    {
+      "title": "Stanford Blood Center Blog",
+      "feed_url": "https://stanfordbloodcenter.org/feed/",
+      "website_url": "https://stanfordbloodcenter.org/sbc-stories/sbc-blog/",
+      "description": "Our blog covers posts on Blood donation, Transplants, Community partners, Platelets, Research/Innovation Blood products, and more. It also features Donor stories and Patient stories. Stanford Blood Center was created with a vision of connecting our communities to provide hope for healing and continues to do so more steadfastly than ever.",
+      "followers": {
+        "facebook": 10600,
+        "twitter": 2500,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5039292.jpg?t=1663245661"
+    },
+    {
+      "title": "Bloodworks Northwest Blog",
+      "feed_url": "https://blog.bloodworksnw.org/feed/",
+      "website_url": "https://blog.bloodworksnw.org/",
+      "description": "Impact stories, podcasts and articles from the Bloodworks Northwest, a community-based nonprofit organization that aims at saving lives through research, innovation, education, and excellence in blood and laboratory services",
+      "followers": {
+        "facebook": 26800,
+        "twitter": 4200,
+        "instagram": 8300
+      },
+      "image_url": "https://i1.feedspot.com/5038521.jpg?t=1625554080"
+    },
+    {
+      "title": "Blood Bank Guy Blog",
+      "feed_url": "https://www.bbguy.org/feed/",
+      "website_url": "https://www.bbguy.org/blog/",
+      "description": "Blood Bank Guy by Joe Chaffin teaches the essentials of Transfusion Medicine to learners everywhere.",
+      "followers": {
+        "facebook": 14800,
+        "twitter": 7200
+      },
+      "image_url": "https://i1.feedspot.com/5039403.jpg?t=1625551295"
+    },
+    {
+      "title": "Ayush Bindu",
+      "feed_url": "https://medium.com/feed/@ayushbindu",
+      "website_url": "https://ayushbindu.medium.com/",
+      "description": "Articles on Blood donation from Ayush Bindu. Ayush Bindu is an application that brings blood donors closer to those who need it, that caters to the immediate requirement of the patients requesting blood.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5235148.jpg?t=1610372152"
+    },
+    {
+      "title": "BioBridge Global Blog",
+      "feed_url": "https://biobridgeglobal.org/feed/",
+      "website_url": "https://biobridgeglobal.org/donors/blog/",
+      "description": "Connecting donors and patients, and supporting the development of medical therapies. BioBridge Global (BBG) is a nonprofit company that oversees and supports the South Texas Blood & Tissue Center, QualTex Laboratories, GenCure, and The Blood and Tissue Center Foundation.",
+      "followers": {
+        "facebook": 15900,
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5307277.jpg?t=1627714500"
+    },
+    {
+      "title": "Incept Saves",
+      "feed_url": "https://www.incept-health.com/insights",
+      "website_url": "https://www.incept-health.com/insights/category/Blood+Donor+Recruitment",
+      "description": "Blood donor recruitment blog.\u00a0Covers blood donation stories, blood donor recruitment tips, success stories, and more. Incept is a conversational marketing firm that has specialized in having productive conversations with blood donors since 1998.",
+      "followers": {
+        "facebook": 3,
+        "twitter": 987
+      },
+      "image_url": "https://i1.feedspot.com/5370694.jpg?t=1644491482"
+    }
+  ]
+}

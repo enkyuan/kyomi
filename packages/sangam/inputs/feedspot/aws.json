@@ -1,0 +1,276 @@
+{
+  "category": "AWS",
+  "source_url": "https://rss.feedspot.com/aws_rss_feeds",
+  "feeds": [
+    {
+      "title": "AWS Blog",
+      "feed_url": "https://feeds.feedburner.com/AmazonWebServicesBlog",
+      "website_url": "https://aws.amazon.com/blogs/",
+      "description": "Amazon Web Services offers reliable, scalable, and inexpensive cloud computing services. Follow this blog to get the latest news and information on AWS.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/19717.jpg?t=1613740647"
+    },
+    {
+      "title": "AWSInsider",
+      "feed_url": "https://awsinsider.net/rss-feeds/news.aspx",
+      "website_url": "https://awsinsider.net/Home.aspx",
+      "description": "Follow this blog to get how-to, tips, tricks and more hands-on advice for working with Amazon Web Services (AWS).",
+      "followers": {
+        "twitter": 762
+      },
+      "image_url": "https://i1.feedspot.com/4906445.jpg?t=1613740656"
+    },
+    {
+      "title": "cloudonaut",
+      "feed_url": "https://cloudonaut.io/feed/rss.xml",
+      "website_url": "https://cloudonaut.io/page/1/",
+      "description": "Follow this blog to know to build a highly availabe, scalable and cost efficient cloud infrastructure based on Amazon Web Services (AWS).",
+      "followers": {
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4906505.jpg?t=1613740660"
+    },
+    {
+      "title": "Cloud Wizard Blog",
+      "feed_url": "https://cloudwizardconsulting.com/feed/",
+      "website_url": "https://cloudwizardconsulting.com/blogs/",
+      "description": "A lack of digital skills hampers the progress of any IT organization today. For the last 7+ years, we have worked with Small, Medium, and Large Enterprises, enabling teams across different business units. By providing access to subject matter experts, and delivering official AWS Training through Virtual Instructor-led delivery format, we set the stage for the success of our customers, by reducing the Cloud skill gaps. Topics to read about like AWS, GCP, Azure, Cloud Computing, AI, Machine Learning, and Data. News and recent stories in Cloud by Cloud Wizard",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 428
+      },
+      "image_url": "https://i1.feedspot.com/5758959.jpg?t=1705901203"
+    },
+    {
+      "title": "CloudKatha",
+      "feed_url": "https://cloudkatha.com/feed/",
+      "website_url": "https://cloudkatha.com/",
+      "description": "Welcome to CloudKatha - A platform, where we will be sharing our experience of designing, developing, and deploying applications into the AWS cloud environment.",
+      "followers": {
+        "facebook": 238,
+        "twitter": 671,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5230208.jpg?t=1608637389"
+    },
+    {
+      "title": "My Devops Journal \u00bb AWS",
+      "feed_url": "https://skundunotes.com/category/aws/feed/",
+      "website_url": "https://skundunotes.com/category/aws/",
+      "description": "Hi! I'm Sourav Kundu and in the follwoing section of My DevOps Journal, I publish articles related to AWS. Over the years I have dabbled with creating hundreds of build and release definitions in Azure DevOps, provisioning resources in the cloud, production releases, writing small productivity (.net) utilities to help me with my day to day job - auto-merge of branches, automated check-in, automated linking of work items with changesets, and such.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5362658.jpg?t=1642400879"
+    },
+    {
+      "title": "TechMagic \u00bb AWS",
+      "feed_url": "https://www.techmagic.co/blog/tag/aws/rss",
+      "website_url": "https://www.techmagic.co/blog/tag/aws",
+      "description": "Here you can find a collection of articles related to AWS best practices, AWS services, news from the Amazon community, and Serverless trends in the AWS world. TechMagic is a software development company focused on JavaScript application development, mobile app development, AWS, and Serverless consulting. Our narrow technology focus helps to build highly skilled remote dedicated teams for startups and established organizations.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 942,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5362663.jpg?t=1642400118"
+    },
+    {
+      "title": "Jayendra's Blog",
+      "feed_url": "https://jayendrapatil.com/feed/",
+      "website_url": "https://jayendrapatil.com/category/aws/",
+      "description": "Jayendra Patil is AWS Certified Solution Architect Professional. He has hands on experience on Technical & Solution Architect. He has been working on Java, Web, Big Data and Cloud technologies for over 13 years. Follow this blog to get in depth knowledge on AWS Certification.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4906534.jpg?t=1613741172"
+    },
+    {
+      "title": "Be a Better Dev",
+      "feed_url": "https://www.beabetterdev.com/feed/",
+      "website_url": "https://www.beabetterdev.com/category/aws/",
+      "description": "Articles focused on cloud computing topics but specifically focuses on AWS. Also covers new service launches, service overviews, step by step walkthroughs, and cloud design articles.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5349456.jpg?t=1638434387"
+    },
+    {
+      "title": "Cloud Tech Simplified",
+      "feed_url": "https://www.cloudtechsimplified.com/rss/",
+      "website_url": "https://www.cloudtechsimplified.com/",
+      "description": "Learn more about the practical tips, tricks and development techniques for building cloud native applications and services. The Cloud Tech simplified is a blog by Mugilan Ragupathi. who builds cloud native applications & services and along with that he shares his learnings.",
+      "followers": {
+        "twitter": 42
+      },
+      "image_url": "https://i1.feedspot.com/5454775.jpg?t=1665397728"
+    },
+    {
+      "title": "techyfella \u00bb AWS",
+      "feed_url": "https://www.techyfella.com/aws/blog-feed.xml",
+      "website_url": "https://www.techyfella.com/aws/",
+      "description": "With techyfella, you can learn, practice, and share the knowledge about Amazon Web Services and DevOps. Learn AWS topics in simple and layman's perspective",
+      "followers": {
+        "facebook": 23
+      },
+      "image_url": "https://i1.feedspot.com/5170975.jpg?t=1613740716"
+    },
+    {
+      "title": "Cloud Vedas",
+      "feed_url": "https://www.cloudvedas.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.cloudvedas.com/search/label/AWS",
+      "description": "Saurabh Gupta is a Cloud Evangelist and a Certified Solution Architect working on different public and private cloud technologies like AWS, Azure, Openstack, VMware, etc. He has interest and experience in diverse areas from Technical Architecture, Development to DevOps. Most of the posts on this site are How-tos and guides with practical examples.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5150440.jpg?t=1613740972"
+    },
+    {
+      "title": "Alestic.com",
+      "feed_url": "http://feeds.alestic.com/alestic",
+      "website_url": "https://alestic.com/",
+      "description": "Alestic.com is a technical blog published by Eric Hammond. It covers personal experience and thoughts about Amazon AWS.",
+      "followers": {
+        "twitter": 12300
+      },
+      "image_url": "https://i1.feedspot.com/117606.jpg?t=1613740733"
+    },
+    {
+      "title": "Cloud Avenue Blog",
+      "feed_url": "https://cloudavenue.in/feed/",
+      "website_url": "https://cloudavenue.in/blog/",
+      "description": "Varun Kumar is an Engineering Leader and Architect with more than 14 years of experience helping organizations of all sizes and scales in their Cloud migration, transformation, and modernization Journeys. It covers articles focused on the latest updates on Azure and AWS, the how-to part and why art of using different offerings from Cloud providers, er, and the differences in similar offerings.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5365904.jpg?t=1643357683"
+    },
+    {
+      "title": "Stelligent Blog",
+      "feed_url": "https://stelligent.com/blog/feed/",
+      "website_url": "https://stelligent.com/blog/",
+      "description": "Stelligent, is a technology services company that provides DevOps automation in the Amazon Web Services (AWS) cloud. Follow this blog to know more about DevOps automation in the Amazon Web Services.",
+      "followers": {
+        "facebook": 539,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4906538.jpg?t=1613740684"
+    },
+    {
+      "title": "Last Week in AWS Blog",
+      "feed_url": "https://www.lastweekinaws.com/feed/",
+      "website_url": "https://www.lastweekinaws.com/blog/",
+      "description": "Keeping up with AWS announcements is like drinking from a firehose. The Last Week in AWS blog filters it all to find the gems worth reading.",
+      "followers": {
+        "twitter": 13600
+      },
+      "image_url": "https://i1.feedspot.com/5283206.jpg?t=1756270990"
+    },
+    {
+      "title": "Analytics India Magazine (AIM) \u00bb AWS",
+      "feed_url": "https://analyticsindiamag.com/news/aws/feed/",
+      "website_url": "https://analyticsindiamag.com/news/aws/",
+      "description": "AWS Latest tech and AI news, pictures, videos, stories and Reports from AIM. AWS blogs, comments and stories on Analytics India Magazine (AIM).",
+      "followers": {
+        "facebook": 50800,
+        "twitter": 18400
+      },
+      "image_url": "https://i1.feedspot.com/8664139.jpg"
+    },
+    {
+      "title": "TO THE NEW Blog",
+      "feed_url": "https://www.tothenew.com/blog/category/aws-2/feed/",
+      "website_url": "https://www.tothenew.com/blog/category/technology/aws-2/",
+      "description": "AWS blog posts. Read blog posts around AWS at TO THE NEW blog. In-depth blog posts about AWS by experts.",
+      "followers": {
+        "facebook": 10400,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/8664140.jpg"
+    },
+    {
+      "title": "AWS Fundamentals Blog",
+      "feed_url": "https://awsfundamentals.com/blog/rss.xml",
+      "website_url": "https://awsfundamentals.com/blog/",
+      "description": "Discover AWS concepts, best practices, and real-world implementations. Expert tutorials and guides for AWS services, serverless, and cloud architecture.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8664141.jpg"
+    },
+    {
+      "title": "BroadcastPro ME \u00bb AWS",
+      "feed_url": "https://www.broadcastprome.com/tag/aws/feed/",
+      "website_url": "https://www.broadcastprome.com/tag/aws/",
+      "description": "All latest articles about AWS from BroadcastPro ME.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/8664142.jpg"
+    },
+    {
+      "title": "Financial Times \u00bb Amazon Web Services",
+      "feed_url": "https://www.ft.com/stream/3fb2b2a7-7421-4f59-86d6-5ffdb73e8b1c?format=rss",
+      "website_url": "https://www.ft.com/stream/3fb2b2a7-7421-4f59-86d6-5ffdb73e8b1c/",
+      "description": "Stay up-to-date with breaking news and top stories on Amazon Web Services. In-depth analysis, industry insights and expert opinion,",
+      "followers": {
+        "twitter": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/8664143.jpg"
+    },
+    {
+      "title": "SAP News Center \u00bb AWS",
+      "feed_url": "https://news.sap.com/tags/aws/feed/",
+      "website_url": "https://news.sap.com/tags/aws/",
+      "description": "All latest articles about AWS from SAP News Center.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 301800
+      },
+      "image_url": "https://i1.feedspot.com/8664144.jpg"
+    },
+    {
+      "title": "Towards The Cloud Blog",
+      "feed_url": "https://towardsthecloud.com/feed",
+      "website_url": "https://towardsthecloud.com/blog",
+      "description": "Follow Danny's cloud as Danny documents his learnings on AWS, Automation, Cloud development, and get motivated to start your technical career.",
+      "followers": {
+        "twitter": 36000
+      },
+      "image_url": "https://i1.feedspot.com/5156464.jpg?t=1635399350"
+    },
+    {
+      "title": "N2WS Blog",
+      "feed_url": "https://n2ws.com/feed",
+      "website_url": "https://n2ws.com/blog",
+      "description": "N2W Software is CPM (Cloud Protection Manager), enterprise-class EC2 Backup and Disaster Recovery software. Follow this blog which is a complete guide to EC2 AWS Disaster Recovery solutions.",
+      "followers": {
+        "facebook": 777,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4947886.jpg?t=1598601007"
+    },
+    {
+      "title": "Whizlabs Blog",
+      "feed_url": "https://www.whizlabs.com/blog/",
+      "website_url": "https://www.whizlabs.com/blog/aws-certifications/",
+      "description": "Whizlabs is the pioneer among the online certification training providers over the world. Follow this blog for AWS certifications' preparation guides, resources, latest updates, technical topics, up-to-date study & practice material, and get connected with the experts.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4982143.jpg?t=1613740991"
+    },
+    {
+      "title": "Trek10 Blog",
+      "feed_url": "https://www.trek10.com/blog/feed.xml",
+      "website_url": "https://www.trek10.com/blog/",
+      "description": "Trek10 designs, builds and supports cutting-edge solutions for clients using the absolute best tools and AWS platform services. Their superpower is building serverless applications on AWS and enabling enterprises to realize the benefits of adopting serverless technologies. They are fully staffed by AWS Certified Solutions rock stars. Follow this blog to get resources and articles on AWS.",
+      "followers": {
+        "facebook": 226,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4906497.jpg?t=1613741227"
+    },
+    {
+      "title": "Arcadian Cloud",
+      "feed_url": "https://arcadian.cloud/feed/",
+      "website_url": "https://arcadian.cloud/",
+      "description": "This is a personal blog of author Chris Hart where he shares interesting things that he has done or discovered. Blog features posts mainly related to his work focusing on AWS, DevOps, and DevEx.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5448891.jpg?t=1663845269"
+    }
+  ]
+}

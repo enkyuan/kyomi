@@ -1,0 +1,70 @@
+{
+  "category": "Australian Coding",
+  "source_url": "https://rss.feedspot.com/australian_coding_rss_feeds",
+  "feeds": [
+    {
+      "title": "Irregularly Schedule Programming",
+      "feed_url": "https://jcarroll.com.au/index.xml",
+      "website_url": "https://jcarroll.com.au/",
+      "description": "Irregularly Schedule Programming is run by Dr. Jonathan Carroll. He is a theoretical physicist turned R developer. He builds nonsense packages to help him learn new skills and tools. He is always open to new opportunities, so this argument is able to interact with most arguments. Go through the highly informative Irregularly Schedule Programming blog for coding, objects of coding, using them right, industry insights and more.",
+      "followers": {
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5645110.jpg?t=1691564977"
+    },
+    {
+      "title": "Web Directions Blog",
+      "feed_url": "https://webdirections.org/category/blog/feed/",
+      "website_url": "https://webdirections.org/blog/",
+      "description": "Web Directions Blog was founded in 2004. It is run by John Allsopp. Their conferences bring together the web industry's leading experts from around the world to educate and inspire their attendees. Safe and feasible they look forward to hosting their annual Summit, covering all things web and digital-engineering, design, product, culture and leadership. Get the latest news from the coding community right here on the blog.",
+      "followers": {
+        "twitter": 9100
+      },
+      "image_url": "https://i1.feedspot.com/5645111.jpg?t=1691565045"
+    },
+    {
+      "title": "She Codes Blog",
+      "feed_url": "https://shecodes.com.au/feed/",
+      "website_url": "https://shecodes.com.au/blog/",
+      "description": "She Codes goal is to inspire 100,000 women by 2025. They do this by teaching technical skills, connecting women to career pathways, and working with fantastic partners. They are committed to solving diversity challenges, whilst positively impacting women. They believe in practical learning opportunities and tangible outcomes that are measured and tracked. Read the stories of their community - on the blog, in case studies, and in the news.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 1100,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5645114.jpg?t=1691564889"
+    },
+    {
+      "title": "Rahul Nath",
+      "feed_url": "https://www.rahulpnath.com/blog/rss/",
+      "website_url": "https://www.rahulpnath.com/",
+      "description": "Rahul Nath is a software engineer, currently working in Brisbane, Australia. He is also a blogger, YouTuber, and teacher. He currently works with Oztix. On his blog, he shares his opinions about coding, the intricacies of the job, how AWS works, and more.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5645113.jpg?t=1691565765"
+    },
+    {
+      "title": "Site Point Blog",
+      "feed_url": "https://www.sitepoint.com/sitepoint.rss",
+      "website_url": "https://www.sitepoint.com/blog/",
+      "description": "SitePoint is one of the largest online communities of web professionals. Their large, vibrant forum, thousands of top-quality tutorials, and their wide range of educational products on their learning platform learnable.com make sitepoint.com the top online resource for web designers and developers. Learn web design and development with SitePoint tutorials, courses, and books - HTML, CSS, JavaScript, PHP, and Responsive Web Design. Head to their blog to get detailed information about the site, their services, products, and more helpful articles.",
+      "followers": {
+        "facebook": 91700,
+        "twitter": 114600
+      },
+      "image_url": "https://i1.feedspot.com/5358672.jpg?t=1676010630"
+    },
+    {
+      "title": "Jason Watmore's Blog",
+      "feed_url": "https://jasonwatmore.com/rss",
+      "website_url": "https://jasonwatmore.com/",
+      "description": "Jason Watmore is a web developer in Sydney, Australia and she has been building websites and web applications since 1998. In this blog, she is focusing on Angular, React, Vue, Node, and NET Technologies. She finds it extremely rewarding to contribute to the web development community and help other developers from around the world.",
+      "followers": {
+        "facebook": 257,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5305301.jpg?t=1691565011"
+    }
+  ]
+}

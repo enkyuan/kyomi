@@ -1,0 +1,51 @@
+{
+  "category": "Mitsubishi",
+  "source_url": "https://rss.feedspot.com/mitsubishi_rss_feeds",
+  "feeds": [
+    {
+      "title": "Auto Express \u00bb Mitsubishi",
+      "feed_url": "https://www.autoexpress.co.uk/mitsubishi/feed",
+      "website_url": "https://www.autoexpress.co.uk/mitsubishi",
+      "description": "Auto Express is the UK's favorite weekly car magazine. Every new car reviewed and rated by Auto Express road test experts. Find Mitsubishi new and Used Car Reviews, News & Advice and in-depth video reviews.",
+      "followers": {
+        "facebook": 113200,
+        "twitter": 145900
+      },
+      "image_url": "https://i1.feedspot.com/4917838.jpg?t=1620627423"
+    },
+    {
+      "title": "Autoblog \u00bb Mitsubishi",
+      "feed_url": "https://www.autoblog.com/category/mitsubishi/rss.xml",
+      "website_url": "https://www.autoblog.com/mitsubishi/",
+      "description": "Autoblog brings you car news; expert reviews of cars, trucks, crossovers, and SUVs; and pictures and video. Get Mitsubishi news, press releases and expert reviews along with detailed photos, spy shots and road tests of new Mitsubishi vehicles.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 449300,
+        "instagram": 165900
+      },
+      "image_url": "https://i1.feedspot.com/4917842.jpg?t=1620627419"
+    },
+    {
+      "title": "CMH Mitsubishi",
+      "feed_url": "https://www.cmhmitsubishi.co.za/mitsubishi-blog/feed/",
+      "website_url": "https://cmhmitsubishi.co.za/blogs/",
+      "description": "Welcome to the CMH Mitsubishi blog. From the ASX to the all-new Mirage, here you will find the latest news and the best reviews on all Mitsubishi models.",
+      "followers": {
+        "facebook": 533,
+        "twitter": 159
+      },
+      "image_url": "https://i1.feedspot.com/4917847.jpg"
+    },
+    {
+      "title": "Mitsubishi Heavy Industries",
+      "feed_url": "https://www.mhi.com/",
+      "website_url": "https://www.mhi.com/",
+      "description": "At Mitsubishi Heavy Industries Group, we channel big thinking into solutions that MOVE THE WORLD FORWARD advancing the lives of everyone who shares our planet. Find out how we bring people and businesses around the globe together to pave the way to a future of shared success. Mitsubishi Heavy Industries (MHI) Group is one of the world's leading industrial groups, spanning energy, logistics & infrastructure, industrial machinery, aerospace, and defense.",
+      "followers": {
+        "facebook": 93600,
+        "twitter": 138400
+      },
+      "image_url": "https://i1.feedspot.com/5295076.jpg?t=1624277482"
+    }
+  ]
+}

@@ -11,7 +11,7 @@ const nodeEnv =
 export const env = createEnv({
   server: {
     NODE_ENV: z.enum(["development", "production", "test"]),
-    PORT: z.coerce.number().int().positive().default(3000),
+    PORT: z.coerce.number().int().positive().default(8000),
     DATABASE_URL: z.string().min(1),
     REDIS_URL: z.string().min(1),
     WEB_ORIGIN: z.string().min(1),
@@ -32,7 +32,7 @@ export const env = createEnv({
     REDIS_URL:
       process.env.REDIS_URL?.trim() || (nodeEnv === "production" ? "" : "redis://localhost:6379"),
     WEB_ORIGIN:
-      process.env.WEB_ORIGIN?.trim() || (nodeEnv === "production" ? "" : "http://localhost:5173"),
+      process.env.WEB_ORIGIN?.trim() || (nodeEnv === "production" ? "" : "http://localhost:3000"),
     BETTER_AUTH_SECRET: process.env.BETTER_AUTH_SECRET,
     BETTER_AUTH_URL: process.env.BETTER_AUTH_URL,
     BETTER_AUTH_TRUSTED_ORIGINS: process.env.BETTER_AUTH_TRUSTED_ORIGINS,

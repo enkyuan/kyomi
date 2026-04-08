@@ -1,0 +1,121 @@
+{
+  "category": "BPM",
+  "source_url": "https://rss.feedspot.com/bpm_rss_feeds",
+  "feeds": [
+    {
+      "title": "BP Logix Blog",
+      "feed_url": "https://www.bplogix.com/blog/rss.xml",
+      "website_url": "https://www.bplogix.com/blog",
+      "description": "BP Logix BPM blog offers information, discussion, and resources on everything related to business process management and workflow management.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5069566.jpg?t=1622893404"
+    },
+    {
+      "title": "Solutions Review \u00bb Business Process Management",
+      "feed_url": "https://solutionsreview.com/business-process-management/feed/",
+      "website_url": "https://solutionsreview.com/business-process-management/",
+      "description": "Solutions Review brings all of the technology news, opinion, best practices and buying information together in one place. This blog by Solutions review delivers content on the latest BPM best practices, BPM news and reviews, BPM tools, vendor reviews and more.",
+      "followers": {
+        "facebook": 579
+      },
+      "image_url": "https://i1.feedspot.com/5069608.jpg?t=1622893408"
+    },
+    {
+      "title": "Lucidea Blog",
+      "feed_url": "https://lucidea.com/feed/",
+      "website_url": "https://lucidea.com/blog/",
+      "description": "With Lucidea's knowledge management solutions you can create a single venue to manage, find, and share your knowledge resources. Discover how-tos, issues, ideas, challenges, and solutions special librarians, knowledge management professionals, archivists, and museum managers need to know.",
+      "followers": {
+        "facebook": 290,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5055619.jpg?t=1609583245"
+    },
+    {
+      "title": "Process Street Blog",
+      "feed_url": "https://www.process.st/feed/",
+      "website_url": "https://www.process.st/blog/",
+      "description": "Want to be a productivity ninja? Find more customers for your business? Systemize your business so it runs on autopilot? It's all here and more at the Process Street blog. Process Street is a simple, free and powerful way to manage your team's recurring checklists and procedures.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4463897.jpg?t=1607511997"
+    },
+    {
+      "title": "Cogneesol For an Ecosystem of Digital Transformation Blog",
+      "feed_url": "https://www.cogneesol.com/blog/feed",
+      "website_url": "https://www.cogneesol.com/blog/",
+      "description": "A global pioneer in business transformation, technology, and consulting services, Cogneesol enables its clients across service lines and industries to overcome challenges, unlock business value, and drive growth. Read insightful articles by our subject matter experts and business leaders across service lines and industries on market trends, business perspectives, technology inroads, and future preparedness.",
+      "followers": {
+        "facebook": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5554124.jpg?t=1683019702"
+    },
+    {
+      "title": "Triaster Blog",
+      "feed_url": "https://blog.triaster.co.uk/blog/rss.xml",
+      "website_url": "https://blog.triaster.co.uk/blog",
+      "description": "Triaster has been developing beautifully engineered software since our foundation in 1994. The Triaster Solution is the optimal way to discover, manage and improve your processes, to achieve a specific strategic objective.",
+      "followers": {
+        "facebook": 244,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5625891.jpg?t=1689314934"
+    },
+    {
+      "title": "Agility System Blog",
+      "feed_url": "https://www.agilitysystem.net/feed/",
+      "website_url": "https://www.agilitysystem.net/blog/",
+      "description": "Keeping you up to date on process, document, risk, compliance and sustainability developments.BusinessPort are a leading provider of integrated Business Management System software (iBMS) that guides the workforce to increase process performance while providing robust compliance.",
+      "followers": {
+        "twitter": 255
+      },
+      "image_url": "https://i1.feedspot.com/5448150.jpg?t=1663740871"
+    },
+    {
+      "title": "ProcessMaker Blog",
+      "feed_url": "https://www.processmaker.com/feed/",
+      "website_url": "https://www.processmaker.com/blog/",
+      "description": "ProcessMaker is an easy to use BPM and workflow software solution. The blog covers topics such as Implementing BPM, BPM training, workflow processes, digital transformation, business applications, workflow software, industry analysis, and more.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5069565.jpg?t=1622893421"
+    },
+    {
+      "title": "Leonardo \u00bb Business Process Management",
+      "feed_url": "https://blog.leonardo.com.au/topic/bpm-business-process-management/rss.xml",
+      "website_url": "https://blog.leonardo.com.au/topic/bpm-business-process-management",
+      "description": "This is a blog discussing all things process - including business process management, process automation, integration, and platform. Follow us and get the latest insights.",
+      "followers": {
+        "facebook": 100,
+        "twitter": 695
+      },
+      "image_url": "https://i1.feedspot.com/5069577.jpg?t=1622893429"
+    },
+    {
+      "title": "Kissflow Blog",
+      "feed_url": "https://kissflow.com/feed/",
+      "website_url": "https://kissflow.com/blog",
+      "description": "This Kissflow blog helps IT, Finance and HR heads for their automation process and speaks more about workflow management software and BPM usage. Catch up with the latest trends in the BPM industry through our blog.",
+      "followers": {
+        "facebook": 20100,
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/5069564.jpg?t=1622893414"
+    },
+    {
+      "title": "Heflo Blog",
+      "feed_url": "https://www.heflo.com/blog/feed",
+      "website_url": "https://www.heflo.com/blog",
+      "description": "Follow this blog to get the best tips to boost your business from our BPM experts. The blog provides information on business management, process automation, process mapping, process optimization, workflow, and more.",
+      "followers": {
+        "facebook": 274,
+        "twitter": 159
+      },
+      "image_url": "https://i1.feedspot.com/5069563.jpg?t=1622893418"
+    }
+  ]
+}

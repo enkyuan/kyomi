@@ -1,0 +1,18 @@
+{
+  "category": "Hays",
+  "source_url": "https://rss.feedspot.com/hays_rss_feeds",
+  "feeds": [
+    {
+      "title": "Hays Social",
+      "feed_url": "https://social.hays.com/feed/",
+      "website_url": "https://social.hays.com/",
+      "description": "Read our blog for the latest careers and workplace advice, including CV and job search tips, recruitment and hiring advice, and leadership insights. We are Hays, the leading global experts in qualified, professional and skilled recruitment.",
+      "followers": {
+        "facebook": 11300,
+        "twitter": 9900,
+        "instagram": 6200
+      },
+      "image_url": "https://i1.feedspot.com/5214623.jpg?t=1640696351"
+    }
+  ]
+}

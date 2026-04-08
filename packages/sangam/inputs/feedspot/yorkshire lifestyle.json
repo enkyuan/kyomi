@@ -1,0 +1,44 @@
+{
+  "category": "Yorkshire Lifestyle",
+  "source_url": "https://rss.feedspot.com/yorkshire_lifestyle_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Inspiration Highway",
+      "feed_url": "https://www.theinspirationhighway.com/feeds/posts/default",
+      "website_url": "https://www.theinspirationhighway.com/",
+      "description": "The Inspiration Highway is a parenting blog about country life in Yorkshire with our little ones, growing food, recipes, decorating our cottage and adventures near and far",
+      "followers": {
+        "twitter": 8700
+      },
+      "image_url": "https://i1.feedspot.com/5521654.jpg?t=1678960078"
+    },
+    {
+      "title": "Rachel Nicole \u00bb Lifestyle",
+      "feed_url": "https://www.rachelnicole.co.uk/search/label/lifestyle/feed",
+      "website_url": "https://www.rachelnicole.co.uk/search/label/lifestyle",
+      "description": "I'm Rachel, a 24-Year-old from a town on the Yorkshire Coast. I started this blog way back in 2010 when I was in Secondary School to write about the Fashion World. I've blogged my way through College and University (where I got a Fashion Retail Management degree) and it's now my full-time job! In the blog I share details about my daily life and adventures.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 12600,
+        "instagram": 10900
+      },
+      "image_url": "https://i1.feedspot.com/5521657.jpg?t=1678960028"
+    },
+    {
+      "title": "Adventures of a Yorkshire Mum",
+      "feed_url": "https://www.adventuresofayorkshiremum.co.uk/feed/",
+      "website_url": "https://www.adventuresofayorkshiremum.co.uk/",
+      "description": "Adventures of a Yorkshire Mum was established in April 2012 by Michaela a mum of three lovely boys. I'm a 30 something mum who is Yorkshire through and through. I was born in York and moved to the Yorkshire coast when I was 3. In my blog I feature intersting articles on the adventures of me and my family's life.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5521656.jpg?t=1678960154"
+    },
+    {
+      "title": "Yorkshire Post \u00bb Lifestyle",
+      "feed_url": "https://www.yorkshirepost.co.uk/lifestyle/rss",
+      "website_url": "https://www.yorkshirepost.co.uk/lifestyle",
+      "description": "Yorkshire Post is a UK-based newspaper. Their blog section of lifestyle features articles related to fashion, health, travel, food, and other topics related to the everyday life of its readers. The blog covers a range of topics related to lifestyle and culture, including articles on local events, arts and entertainment, and opinions on current trends",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5521655.jpg?t=1678960424"
+    }
+  ]
+}

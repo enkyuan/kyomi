@@ -1,0 +1,84 @@
+{
+  "category": "DevSecOps",
+  "source_url": "https://rss.feedspot.com/devsecops_rss_feeds",
+  "feeds": [
+    {
+      "title": "AutoRABIT Blog",
+      "feed_url": "https://www.autorabit.com/feed/",
+      "website_url": "https://www.autorabit.com/blog/",
+      "description": "Informative content published by AutoRABIT ranging from Salesforce specific articles to wider technology industry related topics. AutoRABIT helps their global customers and partners achieve CI/CD while minimizing defects and ensuring their mission-critical Salesforce data is always available.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5431385.jpg?t=1660212562"
+    },
+    {
+      "title": "SEI Blog \u00bb DevSecOps",
+      "feed_url": "https://www.sei.cmu.edu/blog/feeds/topic/continuous-deployment-capability/atom/",
+      "website_url": "https://insights.sei.cmu.edu/blog/topics/devsecops/",
+      "description": "Find the latest updates and changes in the SEI blog as we continue to research DevSecOps to accelerate and assure software transformations. The Software Engineering Institute (SEI) is a Federally Funded Research and Development Center (FFRDC), a nonprofit, public-private partnership that conducts research for the United States government.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 74
+      },
+      "image_url": "https://i1.feedspot.com/5431387.jpg?t=1660212577"
+    },
+    {
+      "title": "DevOps.com \u00bb DevSecOps",
+      "feed_url": "https://devops.com/category/blogs/devsecops/feed/",
+      "website_url": "https://devops.com/category/blogs/devsecops/",
+      "description": "A comprehensive list of the most recent articles from DevOps and our partners on all things DevSecOps and similar topics. DevOps.com has established itself as an indispensable resource for DevOps education and community building. We make it our mission to cover all aspects of DevOps, including philosophy, tools, business impact, best practices and more.",
+      "followers": {
+        "facebook": 13300,
+        "twitter": 57700
+      },
+      "image_url": "https://i1.feedspot.com/5431389.jpg?t=1660212589"
+    },
+    {
+      "title": "Aqua Security Blog",
+      "feed_url": "https://blog.aquasec.com/rss.xml",
+      "website_url": "https://www.aquasec.com/blog/",
+      "description": "Aqua Security blog gives expert insight, best practices, and advice on cloud-native security, trends, threat intelligence, and compliance. Aqua Security, the cloud-native security company, helps customers create applications that are secure by design, enabling agile DevOps and hybrid cloud deployment with no compromise on security or compliance.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 7700
+      },
+      "image_url": "https://i1.feedspot.com/4800477.jpg?t=1659704892"
+    },
+    {
+      "title": "Cisco Blogs \u00bb DevSecOps",
+      "feed_url": "https://blogs.cisco.com/tag/devsecops/feed",
+      "website_url": "https://blogs.cisco.com/tag/devsecops",
+      "description": "See what advice the people behind Cisco have when it comes to DevSecOps. Cisco helps companies seize the opportunities of tomorrow by proving that amazing things can happen when you connect the unconnected.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 113800,
+        "instagram": 569200
+      },
+      "image_url": "https://i1.feedspot.com/5431386.jpg?t=1660212570"
+    },
+    {
+      "title": "Threat Stack Blog \u00bb DevSecOps",
+      "feed_url": "https://www.threatstack.com/blog/category/devsecops/feed",
+      "website_url": "https://www.f5.com/company/blog",
+      "description": "Read about Threat Stack's DevSecOps blogs to know about Cybersecurity, Operations, Cloud-based application infrastructure, and more. Our mission is to help companies securely leverage the business benefits of the cloud with real-time threat detection and proactive risk management across cloud workloads and improving their cloud security posture at every step.",
+      "followers": {
+        "facebook": 10,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5431383.jpg?t=1660212551"
+    },
+    {
+      "title": "Snyk Blog \u00bb DevSecOps",
+      "feed_url": "https://snyk.io/blog/category/devsecops/feed/",
+      "website_url": "https://snyk.io/blog/",
+      "description": "Security has an important part to play in application lifecycles and workflows. Learn how you can best integrate security into your existing pipelines. Synk's combination of developer-first tooling and best-in-class security intelligence enables businesses to build security into their continuous development process.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 19900
+      },
+      "image_url": "https://i1.feedspot.com/5431384.jpg?t=1660212559"
+    }
+  ]
+}

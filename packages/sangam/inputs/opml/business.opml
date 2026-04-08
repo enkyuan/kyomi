@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+    <head>
+        <title>Business, Tech, and Education RSS Collection</title>
+        <dateCreated>Fri, 05 Dec 2025 00:00:00 GMT</dateCreated>
+    </head>
+    <body>
+        <outline text="Business (Corporate, Small Business, Marketing, Finance)" >
+            <outline text="CNBC" 
+                type="rss" 
+                xmlUrl="https://www.cnbc.com/rss-feeds/" 
+                htmlUrl="https://www.cnbc.com/"
+                description="A leading news aggregator on business, stock market, and finance. Get real-time stock market updates, investment tips, and much more."
+                _sourceType="News"
+                _domain="Market"
+                _impact="International"/>
+            
+            <outline text="The Wall Street Journal" 
+                type="rss" 
+                xmlUrl="https://www.wsj.com/news/rss-news-and-feeds"
+                htmlUrl="https://www.wsj.com/"
+                description="Covers the business aspect of everything— economy, politics, real estate, books &amp; arts."
+                _sourceType="News"
+                _domain="Multiple (related to business)"
+                _region="International"/>
+
+            <outline text="Gartner Blog" 
+                type="rss" 
+                xmlUrl="https://www.gartner.com/en/insights"
+                htmlUrl="https://www.gartner.com/"
+                description="Gartner is a mogul in business research &amp; analytics. Their blogs deal with everything from finance to technology to legal."
+                _sourceType="Blog"
+                _domain="Market Research &amp; advise"
+                _impact="International"/>
+
+            <outline text="Financial Times" 
+                type="rss" 
+                xmlUrl="https://www.ft.com/?format=rss"
+                htmlUrl="https://www.ft.com/"
+                description="Covers market updates, opinion pieces, company news, etc. Keep track of Silicon Valley news, brand collaboration, legal battles and much more."
+                _sourceType="News"
+                _domain="Market &amp; Business in general"
+                _impact="International"/>
+
+            <outline text="Seth Godin Blog" 
+                type="rss" 
+                xmlUrl="https://www.qualtrics.com/news/poor-customer-service-threatens-4-7-trillion-in-annual-revenue-globally-as-companies-struggle-to-retain-staff/"
+                htmlUrl="https://seths.blog/"
+                description="Author and entrepreneur Seth Godin’s blog is a real gem for marketing, technology and business professionals."
+                _sourceType="Blog"
+                _domain="Marketing, Business"
+                _impact="International"/>
+
+            <outline text="Hubspot Blog" 
+                type="rss" 
+                xmlUrl="https://knowledge.hubspot.com/cos-blog/"
+                htmlUrl="https://blog.hubspot.com/"
+                description="A marketing big shot, the Hubspot blog gives fabulous insights to various marketing trends, strategies, know-hows, do’s &amp; don’ts."
+                _sourceType="Blog"
+                _domain="Marketing"
+                _impact="International"/>
+
+            <outline text="Hootsuite Blog" 
+                type="rss" 
+                xmlUrl="https://blog.hootsuite.com/feed/"
+                htmlUrl="https://blog.hootsuite.com/"
+                description="Hootsuite is a very reliable resource on social media marketing. Their tips &amp; hacks can be life-saving for businesses."
+                _sourceType="Blog"
+                _domain="Social media marketing"
+                _impact="International"/>
+
+            <outline text="TechCrunch" 
+                type="rss" 
+                xmlUrl="https://feeds.feedburner.com/TechCrunch/"
+                htmlUrl="https://techcrunch.com/"
+                description="A leading website that brings news &amp; updates on ‘business technologies’, product reviews, etc."
+                _sourceType="Blog"
+                _domain="Leadership"
+                _impact="USA"/>
+
+            <outline text="Gotham Culture" 
+                type="rss" 
+                xmlUrl="https://gothamculture.com/feed/"
+                htmlUrl="https://gothamculture.com/"
+                description="Get insights into the correlations between company culture and company performance, various leadership development strategies &amp; tips."
+                _sourceType="Blog"
+                _domain="Leadership"
+                _impact="USA"/>
+
+            <outline text="Fundera Blog" 
+                type="rss" 
+                xmlUrl="https://www.fundera.com/blog/feed"
+                htmlUrl="https://www.fundera.com/blog"
+                description="Shares tons of useful information on small business lenders, listicles on budget software for small business, and other tips &amp; advice."
+                _sourceType="Blog"
+                _domain="Lending &amp; Finance"
+                _impact="USA"/>
+
+            <outline text="Quick Sprout Blog" 
+                type="rss" 
+                xmlUrl="https://www.quicksprout.com/feed/"
+                htmlUrl="https://www.quicksprout.com/"
+                description="An exhaustive resource on several business aspects like marketing, ecommerce, finance, HR, etc."
+                _sourceType="Blog"
+                _domain="Multiple (related to Business)"
+                _impact="International"/>
+
+            <outline text="Minding the Workplace" 
+                type="rss" 
+                xmlUrl="https://newworkplace.wordpress.com/feed/"
+                htmlUrl="https://newworkplace.wordpress.com/"
+                description="Articles deal with employee dignity, psychological effects of workplace harassment, labor laws and more."
+                _sourceType="Blog"
+                _domain="Workplace Culture"
+                _impact="International, USA"/>
+
+            <outline text="Outback Team Building" 
+                type="rss" 
+                xmlUrl="https://www.outbackteambuilding.com/feed/"
+                htmlUrl="https://www.outbackteambuilding.com/"
+                description="Tips, ideas &amp; other resources on team-building activities."
+                _sourceType="Blog"
+                _domain="HR, team-building"
+                _impact="International, USA"/>
+        </outline>
+
+        <outline text="Technology for Tech-Business">
+            <outline text="VentureBeat" 
+                type="rss" 
+                xmlUrl="http://feeds.feedburner.com/venturebeat/SZYF"
+                htmlUrl="https://venturebeat.com/"
+                description="An outstanding resource on cutting-edge technological developments from around the world. Focused on disruptive trends, AI, etc."
+                _sourceType="News"
+                _domain="Modern technology, IT, Gaming"
+                _impact="International"/>
+
+            <outline text="MIT Technology Review" 
+                type="rss" 
+                xmlUrl="https://www.technologyreview.com/feed/"
+                htmlUrl="https://www.technologyreview.com/"
+                description="Best resource to gain insights into the evolving landscape of tech-business and make informed decisions."
+                _sourceType="News"
+                _domain="Modern technology, IT, space, life science"
+                _impact="International"/>
+
+            <outline text="The Verge" 
+                type="rss" 
+                xmlUrl=""
+                description="A super cool blend of science, technology and entertainment."
+                _sourceType="News"
+                _domain="Multiple"
+                _impact="International"/>
+
+            <outline text="IP Watchdog" 
+                type="rss" 
+                xmlUrl="https://www.ipwatchdog.com/feed/"
+                htmlUrl="https://www.ipwatchdog.com/"
+                description="A great resource on patent laws, copyright laws and everything that is need-to-know for businesses dealing with innovation."
+                _sourceType="News"
+                _domain="Software"
+                _impact="International"/>
+
+            <outline text="Microsoft Blog" 
+                type="rss" 
+                xmlUrl="https://blogs.microsoft.com/feed/"
+                htmlUrl="https://blogs.microsoft.com/"
+                description="Interesting insights on how Microsoft solutions can be optimized to bring the best results."
+                _sourceType="Blog"
+                _domain="Software"
+                _impact="International"/>
+
+            <outline text="ARS Technica" 
+                type="rss" 
+                xmlUrl="https://arstechnica.com/rss-feeds/"
+                htmlUrl="https://arstechnica.com/"
+                description="Get latest news and updates on tech news, reviews on gadget and gizmos, etc."
+                _sourceType="News"
+                _domain="Gadgets, IT"
+                _impact="International"/>
+        </outline>
+
+        <outline text="Educational Institutions">
+            <outline text="U.S. Department of Education Blog" 
+                type="rss" 
+                xmlUrl="https://blog.ed.gov/feed/"
+                htmlUrl="https://blog.ed.gov/"
+                description="The blog shares latest updates on educational policies, guidelines, events, awards."
+                _sourceType="Blog"
+                _domain="Education"
+                _impact="USA"/>
+
+            <outline text="NASA (Category Page)" 
+                type="rss" 
+                xmlUrl="https://www.nasa.gov/content/nasa-rss-feeds"
+                htmlUrl="https://www.nasa.gov/"
+                description="Showing NASA RSS feeds can be a great way to encourage students to build an interest in space research."
+                _sourceType="News, updates"
+                _domain="Science, space, innovation"
+                _impact="International, USA"/>
+
+            <outline text="NASA (Image of the Day)" 
+                type="rss" 
+                xmlUrl="https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss"
+                htmlUrl="https://www.nasa.gov/"
+                description="NASA Image of the day feed."
+                _sourceType="News, updates"
+                _domain="Science, space, innovation"
+                _impact="International, USA"/>
+
+            <outline text="Science Daily (Category Page)" 
+                type="rss" 
+                xmlUrl="https://www.sciencedaily.com/newsfeeds.htm"
+                htmlUrl="https://www.sciencedaily.com/"
+                description="One of the best resources to stay updated on the latest research &amp; developments in every possible branch of science."
+                _sourceType="News"
+                _domain="Science, research, higher education"
+                _impact="International"/>
+
+            <outline text="Science Daily (All News)" 
+                type="rss" 
+                xmlUrl="https://www.sciencedaily.com/rss/all.xml"
+                htmlUrl="https://www.sciencedaily.com/"
+                description="All Science Daily news."
+                _sourceType="News"
+                _domain="Science, research, higher education"
+                _impact="International"/>
+
+            <outline text="Discovery Education" 
+                type="rss" 
+                xmlUrl="https://blog.discoveryeducation.com/feed/"
+                htmlUrl="https://blog.discoveryeducation.com/"
+                description="Deals with the digital transformation of modern schools."
+                _sourceType="News, updates"
+                _domain="Science, space, innovation"
+                _impact="International, USA"/>
+
+            <outline text="Campus Technology" 
+                type="rss" 
+                xmlUrl="https://campustechnology.com/rss-feeds/all-articles.aspx"
+                htmlUrl="https://campustechnology.com/"
+                description="Useful articles on campus trends and technologies that make life on campus easier."
+                _sourceType="News"
+                _domain="Higher Education"
+                _impact="USA"/>
+
+            <outline text="PBS Nature Blog" 
+                type="rss" 
+                xmlUrl="https://www.pbs.org/wnet/nature/blog/feed/"
+                htmlUrl="https://www.pbs.org/wnet/nature/blog/"
+                description="A great way to teach school kids about the nature &amp; environment."
+                _sourceType="Blog"
+                _domain="Wildlife, Nature, Conservation"
+                _impact="International, USA"/>
+
+            <outline text="Nerdy Book Club" 
+                type="rss" 
+                xmlUrl="https://nerdybookclub.wordpress.com/feed/"
+                htmlUrl="https://nerdybookclub.wordpress.com/"
+                description="Get tons of book suggestions for the young bibliophiles."
+                _sourceType="Blog"
+                _domain="Literature, Young Adults"
+                _impact="International, USA"/>
+
+            <outline text="Storytime Magazine" 
+                type="rss" 
+                xmlUrl="https://www.storytimemagazine.com/news/feed/"
+                htmlUrl="https://www.storytimemagazine.com/"
+                description="A good resource for elementary to middle school teachers to hunt different children books."
+                _sourceType="Blog"
+                _domain="Children literature, book reviews"
+                _impact="UK"/>
+
+            <outline text="TinkerLab" 
+                type="rss" 
+                xmlUrl="https://tinkerlab.com/feed/"
+                htmlUrl="https://tinkerlab.com/"
+                description="Find DIY projects ideas on art &amp; craft, science and more for kids."
+                _sourceType="Blog"
+                _domain="Children activity"
+                _impact="USA"/>
+        </outline>
+
+        <outline text="Media and Entertainment">
+            <outline text="BuzzFeed" 
+                type="rss" 
+                xmlUrl="https://www.buzzfeed.com/rss"
+                htmlUrl="https://www.buzzfeed.com/"
+                description="BuzzFeed covers breaking news, trends, discussions, opinions, quizzes, and life hacks."
+                _sourceType="Blog, News"
+                _domain="Multiple"
+                _impact="International"/>
+
+            <outline text="ESPN (News Info)" 
+                type="rss" 
+                xmlUrl="https://www.espn.in/espn/news/story?page=rssinfo"
+                htmlUrl="https://www.espn.com/"
+                description="ESPN RSS feed brings the latest updates on events &amp; matches from around the world."
+                _sourceType="News"
+                _domain="Sports"
+                _impact="International"/>
+
+            <outline text="ESPN (Top Headlines)" 
+                type="rss" 
+                xmlUrl="https://www.espn.com/espn/rss/news"
+                htmlUrl="https://www.espn.com/"
+                description="Top headlines from ESPN."
+                _sourceType="News"
+                _domain="Sports"
+                _impact="International"/>
+
+            <outline text="Smithsonian Magazine (Category)" 
+                type="rss" 
+                xmlUrl="https://www.smithsonianmag.com/rss/"
+                htmlUrl="https://www.smithsonianmag.com/"
+                description="Covers everything from travel to art &amp; culture, design and more."
+                _sourceType="Magazine"
+                _domain="Multiple"
+                _impact="International"/>
+
+            <outline text="Smithsonian Magazine (Articles)" 
+                type="rss" 
+                xmlUrl="https://www.smithsonianmag.com/rss/articles/"
+                htmlUrl="https://www.smithsonianmag.com/"
+                description="Articles feed."
+                _sourceType="Magazine"
+                _domain="Multiple"
+                _impact="International"/>
+
+            <outline text="The New Yorker (Feeds)" 
+                type="rss" 
+                xmlUrl="https://www.newyorker.com/about/feeds?verso=true"
+                htmlUrl="https://www.newyorker.com/"
+                description="The widely popular hub of culture, humor, storytelling."
+                _sourceType="Magazine"
+                _domain="Multiple"
+                _impact="International"/>
+
+            <outline text="The New Yorker (Everything)" 
+                type="rss" 
+                xmlUrl="https://www.newyorker.com/feed/everything"
+                htmlUrl="https://www.newyorker.com/"
+                description="All New Yorker content."
+                _sourceType="Magazine"
+                _domain="Multiple"
+                _impact="International"/>
+
+            <outline text="Situation Normal" 
+                type="rss" 
+                xmlUrl="https://michaelestrin.substack.com/feed"
+                htmlUrl="https://michaelestrin.substack.com/"
+                description="Stories and humor shared by Michael Estrin to add some dose of laughter at work or at school."
+                _sourceType="Blog"
+                _domain="Multiple"
+                _impact="International"/>
+
+            <outline text="Yahoo Sports (Syndication)" 
+                type="rss" 
+                xmlUrl="https://sports.yahoo.com/syndication/"
+                htmlUrl="https://sports.yahoo.com/"
+                description="Get sports news on NBA, soccer, MMA, boxing, college football and much more."
+                _sourceType="News"
+                _domain="Sports"
+                _impact="USA, International"/>
+
+            <outline text="Yahoo Sports (All Feeds)" 
+                type="rss" 
+                xmlUrl="https://sports.yahoo.com/rss/"
+                htmlUrl="https://sports.yahoo.com/"
+                description="All Yahoo Sports feeds."
+                _sourceType="News"
+                _domain="Sports"
+                _impact="USA, International"/>
+        </outline>
+    </body>
+</opml>

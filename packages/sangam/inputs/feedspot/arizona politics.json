@@ -1,0 +1,71 @@
+{
+  "category": "Arizona Politics",
+  "source_url": "https://rss.feedspot.com/arizona_politics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Progress Arizona Blog",
+      "feed_url": "https://www.progressarizona.org/feed/",
+      "website_url": "https://www.progressarizona.org/blog/",
+      "description": "Promoting progressive issues and public policy solutions, correcting right-wing misinformation, and holding elected officials accountable.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 11400,
+        "instagram": 11600
+      },
+      "image_url": "https://i1.feedspot.com/5310471.jpg?t=1628492290"
+    },
+    {
+      "title": "Arizona List Blog",
+      "feed_url": "https://www.arizonalist.org/category/blog/feed/",
+      "website_url": "https://www.arizonalist.org/category/blog/",
+      "description": "Empowering, equipping, and electing progressive pro-choice Democratic women leaders. The latest columns, posts, and discussion items from Arizona List staff, board members, interns, and allies.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5310492.jpg?t=1628495142"
+    },
+    {
+      "title": "Blog for Arizona Politics",
+      "feed_url": "https://blogforarizona.net/category/az-politics/feed/",
+      "website_url": "https://blogforarizona.net/category/az-politics/",
+      "description": "Blog for Arizona is a truly independent news source. It focuses on Arizona politics, the shenanigans of the Legislature, and the state of education in Arizona.",
+      "followers": {
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5310482.jpg?t=1628494310"
+    },
+    {
+      "title": "Tucson Sentinel",
+      "feed_url": "https://www.tucsonsentinel.com/category/rss/politics/",
+      "website_url": "https://www.tucsonsentinel.com/category/politics/",
+      "description": "TucsonSentinel.com is an independent nonpartisan news organization, dedicated to the idea that a smarter Tucson is a better Tucson. Under this blog section, it covers Government and political updates.",
+      "followers": {
+        "facebook": 20100,
+        "twitter": 11400
+      },
+      "image_url": "https://i1.feedspot.com/5310510.jpg?t=1628496983"
+    },
+    {
+      "title": "Cronkite News",
+      "feed_url": "https://cronkitenews.azpbs.org/category/politics/feed/",
+      "website_url": "https://cronkitenews.azpbs.org/category/politics/",
+      "description": "Cronkite News provides news, feature, and investigative stories each week on issues critical to Arizonans. This section of the blog covers Political news & updates.",
+      "followers": {
+        "facebook": 18400,
+        "twitter": 25800
+      },
+      "image_url": "https://i1.feedspot.com/5310520.jpg?t=1628497715"
+    },
+    {
+      "title": "Arizona's Politics",
+      "feed_url": "https://feeds.feedburner.com/ArizonasPolitics",
+      "website_url": "http://arizonaspolitics.blogspot.com/",
+      "description": "Arizona's Politics Blog reporting on Arizona state government and AZ's Senators and Congress people, also county/local.",
+      "followers": {
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4950182.jpg?t=1621408569"
+    }
+  ]
+}

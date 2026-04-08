@@ -1,0 +1,90 @@
+{
+  "category": "UK Bird",
+  "source_url": "https://rss.feedspot.com/uk_bird_rss_feeds",
+  "feeds": [
+    {
+      "title": "BirdLife International News",
+      "feed_url": "https://www.birdlife.org/feed/",
+      "website_url": "https://www.birdlife.org/news/",
+      "description": "BirdLife International is the world's largest nature conservation network, with 122 Partners in 120 countries. It is widely recognised as the world leader in bird conservation. Its mission is to conserve birds, their habitats and global biodiversity, working with people towards sustainability in the use of natural resources.",
+      "followers": {
+        "facebook": 334500,
+        "twitter": 95200
+      },
+      "image_url": "https://i1.feedspot.com/4629075.jpg?t=1612597696"
+    },
+    {
+      "title": "Cornwall Birding",
+      "feed_url": "http://cornwall-birding.co.uk/feed/",
+      "website_url": "https://cornwall-birding.co.uk/",
+      "description": "This blog provides information about birds in Cornwall. This blog includes superb Galleries, recent sightings, site guides and much more.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4629317.jpg?t=1614076813"
+    },
+    {
+      "title": "Portland Bird Observatory and Field Centre",
+      "feed_url": "https://www.portlandbirdobs.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.portlandbirdobs.com/",
+      "description": "We are an independent organisation and a UK registered charity. We cater not just for birders but for naturalists of all persuasions, and our accommodation in the Old Lower Lighthouse is available to anyone who wishes to stay with us and enjoy any aspect of the natural environment of Portland.",
+      "followers": {
+        "twitter": 12300
+      },
+      "image_url": "https://i1.feedspot.com/4629690.jpg"
+    },
+    {
+      "title": "Dungeness Bird Observatory",
+      "feed_url": "http://www.dungenessbirdobs.org.uk/feeds/posts/default?alt=rss",
+      "website_url": "http://www.dungenessbirdobs.org.uk/",
+      "description": "At Dungeness Bird Observatory we take security of your data very seriously. Birdwatching at Dungeness can be excellent at any time and the Observatory remains open for most of the year.",
+      "followers": {
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4908484.jpg?t=1614076832"
+    },
+    {
+      "title": "Islay Birds",
+      "feed_url": "http://islaybirds.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://islaybirds.blogspot.com/",
+      "description": "This page is dedicated to the birds and wildlife of the Isle of Islay. Islay is a beautiful and fertile Island and hosts a fantastic and varied population of birds and wildlife, due to the varied habitat, large wild areas and generally mild climate it is home to many species that are scarce across the rest of the UK.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4629257.jpg?t=1614076843"
+    },
+    {
+      "title": "A life at the shoreline .. .. .. .. .. by J L Copner",
+      "feed_url": "http://www.alifeattheshoreline.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.alifeattheshoreline.com/",
+      "description": "A decade of life as a Birdtracker Wildlife phototaker & Surfer roaming the Atlantic coast Burren & lands of County Clare Ireland and sometimes beyond...",
+      "followers": {
+        "facebook": 287
+      },
+      "image_url": "https://i1.feedspot.com/5037029.jpg"
+    },
+    {
+      "title": "British Trust for Ornithology | BTO",
+      "feed_url": "https://www.bto.org/news-events/news/news-feed/feed",
+      "website_url": "https://www.bto.org/news-events/news",
+      "description": "The British Trust for Ornithology (BTO) is the UK's leading charity working with volunteers to improve our knowledge of birds through monitoring and research. Its mission is to deliver objective information and advice, through undertaking impartial research and analysis, about birds, other species and habitats, to advance understanding of nature.",
+      "followers": {
+        "facebook": 57100,
+        "twitter": 119300,
+        "instagram": 37500
+      },
+      "image_url": "https://i1.feedspot.com/4629081.jpg?t=1614076809"
+    },
+    {
+      "title": "Little Peckers",
+      "feed_url": "https://www.littlepeckers.co.uk/blogs/articles.atom",
+      "website_url": "https://www.littlepeckers.co.uk/blogs/articles",
+      "description": "Little Peckers offers a wide range of high quality bird food and supplies. This includes wild bird food, pet bird food and poultry supplies. Here you will find guides and information about birds.",
+      "followers": {
+        "twitter": 69
+      },
+      "image_url": "https://i1.feedspot.com/4908488.jpg?t=1614076878"
+    }
+  ]
+}

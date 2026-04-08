@@ -1,0 +1,100 @@
+{
+  "category": "Iowa Travel",
+  "source_url": "https://rss.feedspot.com/iowa_travel_rss_feeds",
+  "feeds": [
+    {
+      "title": "Clear Lake Iowa Blog",
+      "feed_url": "https://clearlakeiowa.com/feed/",
+      "website_url": "https://clearlakeiowa.com/blog/",
+      "description": "Welcome to the Clear Lake blog! You will find the latest news, announcements, events, and activities in and around Clear Lake, Iowa.",
+      "followers": {
+        "facebook": 23900,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4981472.jpg?t=1629721947"
+    },
+    {
+      "title": "The Iowa Gallivant",
+      "feed_url": "https://theiowagallivant.com/feed/",
+      "website_url": "https://theiowagallivant.com/",
+      "description": "Jay's love of travel, food, and family will drive this blog.",
+      "followers": {
+        "facebook": 112500,
+        "twitter": 633,
+        "instagram": 12900
+      },
+      "image_url": "https://i1.feedspot.com/5314715.jpg?t=1629720637"
+    },
+    {
+      "title": "Travel With Sara",
+      "feed_url": "https://travelwithsara.com/feed/",
+      "website_url": "https://travelwithsara.com/",
+      "description": "Travel With Sara Is Your Place To Find Your Next Adventure! Based in Iowa and co-founder of the Midwest Travel Network. Showing you vacation experiences that will inspire you to travel.",
+      "followers": {
+        "facebook": 9000,
+        "twitter": 9300,
+        "instagram": 6700
+      },
+      "image_url": "https://i1.feedspot.com/5314716.jpg?t=1629721023"
+    },
+    {
+      "title": "Olio in Iowa Blog",
+      "feed_url": "https://olioiniowa.com/feed/",
+      "website_url": "https://olioiniowa.com/blog/",
+      "description": "Olio in Iowa is a Midwest-based travel blog inspired by offbeat destinations, roadside attractions, and 'world's largest' things.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 1300,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5321486.jpg?t=1631527203"
+    },
+    {
+      "title": "The Walking Tourists \u00bb Iowa",
+      "feed_url": "https://thewalkingtourists.com/category/iowa/feed/",
+      "website_url": "https://thewalkingtourists.com/category/iowa/",
+      "description": "Exploring our world one step at a time. Travel bloggers and Authors basing most of our travels in the US.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 6000,
+        "instagram": 7100
+      },
+      "image_url": "https://i1.feedspot.com/5314721.jpg?t=1629721810"
+    },
+    {
+      "title": "IOWANDERERS Blog",
+      "feed_url": "https://www.iowanderers.com/blog/feed/",
+      "website_url": "https://www.iowanderers.com/blog/",
+      "description": "We are two Iowans who are passionate about our local community and traveling globally. We share our own travel experiences & interview Iowans who have traveled the world or those who have left and still have their Iowa roots.",
+      "followers": {
+        "facebook": 414,
+        "instagram": 367
+      },
+      "image_url": "https://i1.feedspot.com/5314712.jpg?t=1629720220"
+    },
+    {
+      "title": "Think Iowa City",
+      "feed_url": "https://thinkiowacity.com/feed/",
+      "website_url": "https://thinkiowacity.com/curious-communities-blog/",
+      "description": "Hotels, Restaurants, Events, and Things To Do. Iowa City and its curious communities are full of progressive, cultured, and thoughtful people. We invite curious minds to see for themselves.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 3800,
+        "instagram": 6100
+      },
+      "image_url": "https://i1.feedspot.com/5314753.jpg?t=1629722389"
+    },
+    {
+      "title": "Catch Des Moines Blog",
+      "feed_url": "https://www.catchdesmoines.com/blog/rss/",
+      "website_url": "https://www.catchdesmoines.com/blog/",
+      "description": "Explore all there is to do and see in Greater Des Moines from arts and culture to a buzz-worthy restaurant scene. Let us help you plan a safe fun trip to Des Moines.",
+      "followers": {
+        "facebook": 61200,
+        "twitter": 55300,
+        "instagram": 44800
+      },
+      "image_url": "https://i1.feedspot.com/4925536.jpg?t=1629723786"
+    }
+  ]
+}

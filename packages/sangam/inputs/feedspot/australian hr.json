@@ -1,0 +1,463 @@
+{
+  "category": "Australian HR",
+  "source_url": "https://rss.feedspot.com/australian_hr_rss_feeds",
+  "feeds": [
+    {
+      "title": "Human Capital Magazine",
+      "feed_url": "https://www.hcamag.com/us/rss",
+      "website_url": "https://www.hcamag.com/us",
+      "description": "HRD America, part of Key Media Business Information, provides a robust platform dedicated to delivering news, analysis, and insights within the human resources sector. The blog specifically caters to HR professionals looking for guidance on best practices, leadership, employment law, technology, and compensation and benefits. This comprehensive coverage makes HRD America an invaluable resource for HR managers, directors, and other industry experts seeking to stay informed on the latest trends and developments in the field.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/4906099.jpg?t=1613718814"
+    },
+    {
+      "title": "Australian Human Resources Institute Blog",
+      "feed_url": "http://www.hrmonline.com.au/feed/",
+      "website_url": "https://www.hrmonline.com.au/",
+      "description": "The blog contains essential news, tips and information for human resource professionals and those who manage a team of people. Covers Diversity and Inclusion, leadership, employee engagement productivity and how-tos.",
+      "followers": {
+        "facebook": 17300,
+        "twitter": 6400,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4459309.jpg?t=1613718821"
+    },
+    {
+      "title": "ELMO Software Blog",
+      "feed_url": "https://elmosoftware.com.au/feed",
+      "website_url": "https://elmosoftware.com.au/resources/blog/",
+      "description": "Here you'll find plenty of great news, guides, case studies, and videos to keep you informed of the latest HR trends and insights.",
+      "followers": {
+        "twitter": 808
+      },
+      "image_url": "https://i1.feedspot.com/5007959.jpg?t=1613718835"
+    },
+    {
+      "title": "Employment Hero",
+      "feed_url": "https://employmenthero.com/feed/",
+      "website_url": "https://employmenthero.com/resources/",
+      "description": "Australia's First All-In-One HR Platform. Employment Hero is Australia's first & leading employment management platform. A robust, easy to use, Compliant All-In-One HR Platform with Employee Benefits. Find useful and practical resources on latest HR technology (HRIS) and HR trends.",
+      "followers": {
+        "facebook": 31700,
+        "twitter": 13600,
+        "instagram": 29900
+      },
+      "image_url": "https://i1.feedspot.com/4906095.jpg?t=1613718843"
+    },
+    {
+      "title": "Subscribe-HR Blog",
+      "feed_url": "https://www.subscribe-hr.com.au/blog/rss.xml",
+      "website_url": "https://www.subscribe-hr.com.au/blog/",
+      "description": "Subscribe-HR is the leading provider of Cloud e-Recruitment Software and HR Software for medium sized enterprises. Helping the world by enhancing Wellness at work for People. Automating HR Friction Points for HR Professionals. e-Recruitment, e-HR, HR Big Data Management.",
+      "followers": {
+        "facebook": 153,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4906096.jpg?t=1753964108"
+    },
+    {
+      "title": "HR Central Blog",
+      "feed_url": "https://hrcentral.com.au/feed/",
+      "website_url": "https://hrcentral.com.au/blog/",
+      "description": "HR Central is an Australian owned company, specialising in Human Resource Management for Small and Medium Business, the Franchise Sector and Membership-based Organisations. Working in partnership with our clients, we provide HR Software and Services to ensure that your business is compliant in its HR obligations. We are practical and affordable with our advice and guidance and work hard to give you the confidence so that you are in control of your HR.",
+      "followers": {
+        "facebook": 777,
+        "twitter": 68
+      },
+      "image_url": "https://i1.feedspot.com/4906142.jpg?t=1754043842"
+    },
+    {
+      "title": "HR On Call Blog",
+      "feed_url": "https://www.blog.hroncall.com.au/blog/rss.xml",
+      "website_url": "https://www.blog.hroncall.com.au/blog",
+      "description": "The HR On Call Blog provides expert insight into HR services for small business in Australia, particularly industrial relations and employee relations",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5227196.jpg?t=1607922860"
+    },
+    {
+      "title": "CIRCLE Recruitment & HR Blog",
+      "feed_url": "https://circlerhr.com.au/feed/",
+      "website_url": "https://circlerhr.com.au/recruitment-blog/",
+      "description": "The latest from the news desk at CIRCLE Recruitment & HR, as well as all the buzz from the Recruitment & HR industry. CIRCLE Recruitment & HR provides client-focused, HR, & recruitment solutions with commitment & the highest ethical standards.",
+      "followers": {
+        "facebook": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5329168.jpg?t=1633530562"
+    },
+    {
+      "title": "HR Gurus Blog",
+      "feed_url": "https://hrgurus.com.au/feed/",
+      "website_url": "https://hrgurus.com.au/blog/",
+      "description": "We are a provider of HR services to Australian businesses like you. As business owners ourselves, we understand what you need - simple, straight forward advice that can get you back to running your core business as soon as possible.",
+      "followers": {
+        "facebook": 851,
+        "twitter": 313
+      },
+      "image_url": "https://i1.feedspot.com/4906140.jpg?t=1613718885"
+    },
+    {
+      "title": "Melbourne HR Blog",
+      "feed_url": "https://www.melbournehr.com.au/hrblog?format=RSS",
+      "website_url": "https://www.melbournehr.com.au/hrblog/",
+      "description": "Founded in 2014 by David Simpson, Melbourne HR is changing the face of HR and Management Consulting in Melbourne. Our mission is to bring fast and sophisticated HR solutions to small businesses.",
+      "followers": {
+        "facebook": 275,
+        "twitter": 34
+      },
+      "image_url": "https://i1.feedspot.com/4906134.jpg?t=1613718897"
+    },
+    {
+      "title": "Navigo Blog",
+      "feed_url": "https://navigo.com.au/feed/",
+      "website_url": "https://navigo.com.au/blogs/",
+      "description": "Articles and insights from leading Australian HR thought leaders. Keep ahead of the curve with Navigo HR tech news and research blog",
+      "followers": {
+        "facebook": 141
+      },
+      "image_url": "https://i1.feedspot.com/8654218.jpg?t=1754043967"
+    },
+    {
+      "title": "HRM",
+      "feed_url": "https://www.hrmonline.com.au/feed/",
+      "website_url": "https://www.hrmonline.com.au/",
+      "description": "HRM offers essential news, tips, and information for human resource professionals and anybody who manages a team of people.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 871
+      },
+      "image_url": "https://i1.feedspot.com/5322236.jpg?t=1631860759"
+    },
+    {
+      "title": "HRD Australia",
+      "feed_url": "https://www.hcamag.com/au/rss",
+      "website_url": "https://www.hcamag.com/au/",
+      "description": "One stop shop for HR professionals, bringing the latest local & global HR news, reports, trends & analysis. HRD is a leading magazine written exclusively for senior human resource professionals and top corporate decision-makers.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/1040152.jpg?t=1753948604"
+    },
+    {
+      "title": "Australian Employee Manual Blog",
+      "feed_url": "https://www.employeemanual.com.au/feed/",
+      "website_url": "https://www.employeemanual.com.au/blog/",
+      "description": "Looking for great tips on how to manage and motivate your team? This blog is filled with useful human resource management articles for SMEs & NFPs.",
+      "followers": {
+        "facebook": 124
+      },
+      "image_url": "https://i1.feedspot.com/8654306.jpg"
+    },
+    {
+      "title": "Liquid HR Blog",
+      "feed_url": "https://liquidhr.com.au/feed/",
+      "website_url": "https://liquidhr.com.au/hr-blog/",
+      "description": "Follow the HR Blog from Liquid HR, the specialist HR consultants and outsourcing service in Australia. The blog regularly posts human resources articles with the latest news and advice for small and medium sized businesses.",
+      "followers": {
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/8654304.jpg?t=1753964210"
+    },
+    {
+      "title": "MyHR Blog",
+      "feed_url": "https://blog.myhr.works/en-au/rss.xml",
+      "website_url": "https://blog.myhr.works/en-au/",
+      "description": "Learn everything you need to manage your day to day operations as a small business. Australasia's most trusted HR provider with over 700 companies use MyHR daily.",
+      "followers": {
+        "facebook": 1400
+      },
+      "image_url": "https://i1.feedspot.com/8654301.jpg"
+    },
+    {
+      "title": "People Matters ANZ",
+      "feed_url": "https://anz.peoplemattersglobal.com/feed.atom",
+      "website_url": "https://anz.peoplemattersglobal.com/",
+      "description": "Your trusted source for the latest HR news, trends, and insights across Australia and New Zealand. Stay informed with latest updates for HR professionals.",
+      "followers": {
+        "facebook": 24900,
+        "twitter": 25900,
+        "instagram": 46300
+      },
+      "image_url": "https://i1.feedspot.com/8654200.jpg?t=1753964323"
+    },
+    {
+      "title": "Happy HR Blog",
+      "feed_url": "https://www.happyhr.com/feed",
+      "website_url": "https://www.happyhr.com/blog/",
+      "description": "Find out about the latest HR news and best practices or brush up on your HR knowledge with our range of blogs and resources here.",
+      "followers": {
+        "facebook": 972,
+        "twitter": 27
+      },
+      "image_url": "https://i1.feedspot.com/8654303.jpg?t=1753964343"
+    },
+    {
+      "title": "Workstem AU Blog",
+      "feed_url": "https://www.workstem.com/au/feed/",
+      "website_url": "https://www.workstem.com/au/blog/",
+      "description": "Stay up-to-date with the latest HR news, tips and compliance regulations on our blog. Workstem offers a comprehensive HRMS solution to support your business growth. Learn more now!",
+      "followers": {
+        "facebook": 248
+      },
+      "image_url": "https://i1.feedspot.com/8654302.jpg?t=1753964104"
+    },
+    {
+      "title": "Sentrient Blog",
+      "feed_url": "https://www.sentrient.com.au/blog/feed",
+      "website_url": "https://www.sentrient.com.au/blog/",
+      "description": "Stay informed with the latest insights on HR and compliance trends, best practices, and legal updates.",
+      "followers": {
+        "facebook": 384
+      },
+      "image_url": "https://i1.feedspot.com/4498635.jpg"
+    },
+    {
+      "title": "Employee Matters",
+      "feed_url": "https://www.employeematters.com.au/feed/",
+      "website_url": "https://www.employeematters.com.au/resources-all/",
+      "description": "Employee Matters provides employee support to small businesses that want to maximize profitability through their employees but struggle with hiring the best, understanding the legislation, and firing non-performers. We have a team of highly skilled and resourceful Recruitment Experts who can source the best candidates, giving you back time and costing you 30% of an agency fee for a far superior service.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5611412.jpg?t=1753965578"
+    },
+    {
+      "title": "Linq HR Blog",
+      "feed_url": "https://www.linqhr.com/blogs//feed",
+      "website_url": "https://www.linqhr.com/blogs/",
+      "description": "HR blog, Human resources insights, Global recruitment trends, HR best practices, Workplace culture tips, Talent acquisition strategies, Hiring tips for employers, Workforce management blog, HR strategy articles, Recruitment blog for businesses, How to retain top talent in logistics companies, Best recruitment strategies for manufacturing firms, Tips to improve workplace performance globally, What is workforce planning and why it matters, Remote hiring challenges and how to solve them, How to build a high-performing team across countries, HR checklist for international compliance, Global HR ..",
+      "followers": {
+        "facebook": 9
+      },
+      "image_url": "https://i1.feedspot.com/8654649.jpg"
+    },
+    {
+      "title": "BespokeHR Blog",
+      "feed_url": "https://bespokehr.com.au/feed/",
+      "website_url": "https://bespokehr.com.au/blog/",
+      "description": "Want to learn more about HR & Recruitment? Our blogs will educate you on how to lead with confidence, build a thriving culture and hire exceptional talent.",
+      "followers": {
+        "facebook": 613
+      },
+      "image_url": "https://i1.feedspot.com/8654643.jpg"
+    },
+    {
+      "title": "Catalina Consultants Blog",
+      "feed_url": "https://catalinaconsultants.com.au/feed/",
+      "website_url": "https://catalinaconsultants.com.au/blog/",
+      "description": "Read our HR blog where we share our thoughts about HR consulting, bespoke HR and the benefits of virtual HR services by Catalina Consultants.",
+      "followers": {
+        "facebook": 386,
+        "twitter": 166
+      },
+      "image_url": "https://i1.feedspot.com/8654651.jpg?t=1754044289"
+    },
+    {
+      "title": "The HR Ally Blog",
+      "feed_url": "https://www.thehrally.com.au/blog-feed.xml",
+      "website_url": "https://www.thehrally.com.au/blog/",
+      "description": "The HR Ally blog and case studies page provides articles and case studies related to human resources. The content includes case studies on culture transformation and improving employee performance, as well as professional guides on performance management, embracing a skill-based culture, and the role of strategic human resource management.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8654635.jpg"
+    },
+    {
+      "title": "performHR Blog",
+      "feed_url": "https://performhr.com.au/feed/",
+      "website_url": "https://performhr.com.au/blog/",
+      "description": "Think Differently about HR Issues, Ideas, Tips and Advice. Watch, Read and Learn about what is possible in the world of HR.",
+      "followers": {
+        "facebook": 26
+      },
+      "image_url": "https://i1.feedspot.com/8654645.jpg"
+    },
+    {
+      "title": "Seed People Consulting Blog",
+      "feed_url": "https://seedpeopleconsulting.com.au/feed/",
+      "website_url": "https://seedpeopleconsulting.com.au/blog/",
+      "description": "Read our blog to understand the importance of leadership diagnostic tools in assessing and improving work culture.",
+      "followers": {
+        "facebook": 504
+      },
+      "image_url": "https://i1.feedspot.com/8654650.jpg"
+    },
+    {
+      "title": "HR Coach Australasia Blog",
+      "feed_url": "https://www.hrcoach.com.au/blog-feed.xml",
+      "website_url": "https://www.hrcoach.com.au/blog/",
+      "description": "The HR Coach Australasia blog provides articles on various HR topics, including practical advice for consultants and business owners on measuring productivity, handling employee turnover, and addressing workplace issues like anxiety, bias, and swearing.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8654637.jpg"
+    },
+    {
+      "title": "Revolution Consulting Group Blog",
+      "feed_url": "https://www.revolutionconsultinggroup.com.au/feed/rss2",
+      "website_url": "https://www.revolutionconsultinggroup.com.au/blog/",
+      "description": "From finding the right talent to staying up-to-date on the latest hiring trends, browse our blog posts for insights into Human Resources and recruitment.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8654640.jpg"
+    },
+    {
+      "title": "People By Design Blog",
+      "feed_url": "https://www.peoplebydesignhr.com.au/feed/",
+      "website_url": "https://www.peoplebydesignhr.com.au/blog/",
+      "description": "The People By Design blog offers articles on human resources, organizational psychology, and workplace culture. It covers topics like employee overload, smart team growth strategies, the use of AI in HR, leadership accountability, and modern trends such as the four-day work week.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8654642.jpg"
+    },
+    {
+      "title": "HRStaffnStuff Blog",
+      "feed_url": "https://www.hrstaffnstuff.com.au/feed/",
+      "website_url": "https://www.hrstaffnstuff.com.au/blog/",
+      "description": "atest news from HR Stuff n' Stuff.",
+      "followers": {
+        "facebook": 280
+      },
+      "image_url": "https://i1.feedspot.com/8654639.jpg?t=1754044603"
+    },
+    {
+      "title": "Oxygen Recruitment & HR Blog",
+      "feed_url": "https://www.oxygenrecruitment.com.au/blog/feed/",
+      "website_url": "https://www.oxygenrecruitment.com.au/blog/",
+      "description": "The Oxygen Recruitment & HR blog offers articles on career development, recruitment, and HR. It provides advice for job seekers on crafting resumes and cover letters, interview skills, and networking.",
+      "followers": {
+        "facebook": 527
+      },
+      "image_url": "https://i1.feedspot.com/8654652.jpg"
+    },
+    {
+      "title": "Preston HR Blog",
+      "feed_url": "https://www.prestonhr.com.au/feed/",
+      "website_url": "https://www.prestonhr.com.au/blog/",
+      "description": "The Preston HR blog from Cairns offers articles on various HR topics, including recent legal rulings on gender pay gaps and wage underpayment, and changes to casual employment.",
+      "followers": {
+        "facebook": 168
+      },
+      "image_url": "https://i1.feedspot.com/8654638.jpg"
+    },
+    {
+      "title": "HRAnywhere Blog",
+      "feed_url": "https://www.hranywhere.com.au/hr-blogs?format=rss",
+      "website_url": "https://www.hranywhere.com.au/hr-blogs/",
+      "description": "Discover the latest insights and trends in human resources with HR Anywhere's expert blogs. Stay informed and elevate your HR strategies today!",
+      "followers": {
+        "facebook": 23
+      },
+      "image_url": "https://i1.feedspot.com/8654648.jpg"
+    },
+    {
+      "title": "HR Business Direction Blog",
+      "feed_url": "https://www.hrbd.com.au/category/blog/feed/",
+      "website_url": "https://www.hrbd.com.au/category/blog/",
+      "description": "The HR Business Direction blog covers a wide range of human resources topics. It features articles on workplace health and safety, industrial relations, leadership, strategic HR, and company culture.",
+      "followers": {
+        "facebook": 183,
+        "twitter": 374
+      },
+      "image_url": "https://i1.feedspot.com/8654647.jpg"
+    },
+    {
+      "title": "Seed HR Blog",
+      "feed_url": "https://www.seedhr.com.au/blog/seed-hr-blog-library-1/feed",
+      "website_url": "https://www.seedhr.com.au/blog/seed-hr-blog-library-1/",
+      "description": "The Seed HR blog provides a library of articles on various human resources topics. It covers subjects like the cost of not addressing menopause in the workplace, the importance of diversity and inclusion, the impact of AI on the future of work, and strategies for managing underperforming employees.",
+      "followers": {
+        "instagram": 213
+      },
+      "image_url": "https://i1.feedspot.com/8654644.jpg"
+    },
+    {
+      "title": "GroundedHR Blog",
+      "feed_url": "https://www.groundedhr.com.au/blog.rss",
+      "website_url": "https://www.groundedhr.com.au/blog/",
+      "description": "Welcome to HR Simplified, your go-to resource for unlocking the potential of your small business. Join us on this exciting journey as we share valuable knowledge, foster a sense of community, provide clarity, and offer unwavering support. Together, let's navigate the world of HR.",
+      "followers": {
+        "facebook": 401
+      },
+      "image_url": "https://i1.feedspot.com/8654636.jpg"
+    },
+    {
+      "title": "Aster HR Blog",
+      "feed_url": "https://asterhr.com.au/feed/",
+      "website_url": "https://asterhr.com.au/blog/",
+      "description": "The Aster HR blog features articles and podcasts on a wide range of human resources topics. The content covers performance management, leadership, employee engagement, workplace culture, recruitment, and legislative changes.",
+      "followers": {
+        "facebook": 991
+      },
+      "image_url": "https://i1.feedspot.com/8654641.jpg"
+    },
+    {
+      "title": "Weploy Blog",
+      "feed_url": "https://www.weployapp.com/blog/rss.xml",
+      "website_url": "https://www.weployapp.com/blog",
+      "description": "Weploy shares insights on temp hiring, on-demand staff, the future of work, HR tech, empowering HR, and the freelance/gig economy.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 269,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4983672.jpg?t=1613718859"
+    },
+    {
+      "title": "Infinity HR Blog",
+      "feed_url": "https://www.infinityhr.com.au/blogs?format=rss",
+      "website_url": "https://www.infinityhr.com.au/blogs/",
+      "description": "Get to know the latest updates & news on the world of HR.",
+      "followers": {
+        "facebook": 212
+      },
+      "image_url": "https://i1.feedspot.com/8654634.jpg"
+    },
+    {
+      "title": "Zenith HR Blog",
+      "feed_url": "https://zenithhr.com.au/blog/feed/",
+      "website_url": "https://zenithhr.com.au/blog/",
+      "description": "Zenith HR is Australia's leading provider of HR advice and services. Access the latest industry news, thought-leadership insights and practical guidance on topics such as employee management and compliance, through our regularly-updated blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8654646.jpg"
+    },
+    {
+      "title": "Citation Group",
+      "feed_url": "https://citationgroup.com.au/feed/",
+      "website_url": "https://citationgroup.com.au/resources/",
+      "description": "The Best Practice Recruitment Blog contains insights and information for both candidates and organisations to help navigate the marketplace as well as recent organisational news. They work with organisations to help them achieve their ecological, technical and quality-driven goals. Subscribe for news & free ISO Learning Resources.",
+      "followers": {
+        "facebook": 14000
+      },
+      "image_url": "https://i1.feedspot.com/5723394.jpg?t=1753964549"
+    },
+    {
+      "title": "HR Daily Community Blog",
+      "feed_url": "https://www.hrdaily.com.au/RDF/All_AllArticles.xml/feed",
+      "website_url": "https://www.hrdaily.com.au/",
+      "description": "Daily news and information for HR professionals. HR Daily reports on news, developments, guidance, analysis and opinion on the issues and challenges facing human resources professionals.",
+      "followers": {
+        "twitter": 9500
+      },
+      "image_url": "https://i1.feedspot.com/4906119.jpg?t=1613718829"
+    },
+    {
+      "title": "Better HR News",
+      "feed_url": "https://www.workforceguardian.com.au/rss",
+      "website_url": "https://betterhr.com.au/news/",
+      "description": "Founded in 2006, Workforce Guardian believe hiring, managing and exiting workers - and ensuring a safe workplace - should be easy and affordable for every Australian business. That's why for 10 years we've been providing Australia's #1 HR Compliance System. Latest HR and employment relations news for Australian employers.",
+      "followers": {
+        "facebook": 284
+      },
+      "image_url": "https://i1.feedspot.com/4906124.jpg?t=1613719177"
+    },
+    {
+      "title": "Blake Thomson Blog",
+      "feed_url": "https://www.blakethomson.com.au/feed/",
+      "website_url": "https://www.blakethomson.com.au/blog",
+      "description": "Blake is Co-Founder of a Software for Recruitment, Staffing and Labour Hire companies. I give clients the systematic blueprint to fill more shifts, more quickly, with less staff for a much higher profit. It's much more than just software, it's 'done for you' end to end system with apps, all supported by our white glove customer service that includes a direct phone line to call. Follow our blog to know more.",
+      "followers": {
+        "facebook": 1,
+        "twitter": 26
+      },
+      "image_url": "https://i1.feedspot.com/5193745.jpg?t=1613718879"
+    }
+  ]
+}

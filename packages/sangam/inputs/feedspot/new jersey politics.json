@@ -1,0 +1,172 @@
+{
+  "category": "New Jersey Politics",
+  "source_url": "https://rss.feedspot.com/new_jersey_politics_rss_feeds",
+  "feeds": [
+    {
+      "title": "New Jersey Globe",
+      "feed_url": "https://newjerseyglobe.com/feed/",
+      "website_url": "https://newjerseyglobe.com/",
+      "description": "New Jersey Politics",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4920961.jpg?t=1630476165"
+    },
+    {
+      "title": "Insider NJ",
+      "feed_url": "https://www.insidernj.com/feed/",
+      "website_url": "https://www.insidernj.com/category/news/",
+      "description": "Dedicated to political news in the state of New Jersey. InsiderNJ is a nonpartisan website which brings you bold and insightful must-read real-time news for New Jersey's political and government insiders.",
+      "followers": {
+        "facebook": 13600,
+        "twitter": 12000
+      },
+      "image_url": "https://i1.feedspot.com/4825280.jpg?t=1614250413"
+    },
+    {
+      "title": "New Jersey Democratic State Committee",
+      "feed_url": "https://www.njdems.org/feed/",
+      "website_url": "https://www.njdems.org/news/",
+      "description": "The New Jersey Democratic State Committee (NJDSC) promotes Democratic values by supporting the good work of Democrats at every level of New Jersey politics and government. Stay connected to the ground situation with timely updates, analyses and fresh perspectives from the experts.",
+      "followers": {
+        "facebook": 26000,
+        "twitter": 14000
+      },
+      "image_url": "https://i1.feedspot.com/5317973.jpg?t=1630479900"
+    },
+    {
+      "title": "New Jersey Libertarian Party",
+      "feed_url": "https://njlp.org/news/latest-news?format=feed&type=rss",
+      "website_url": "https://njlp.org/news/latest-news",
+      "description": "New Jersey Libertarian Party is the third-largest and fastest-growing party. It is the only political Party that embraces freedom all the time.",
+      "followers": {
+        "facebook": 12900,
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/5317977.jpg?t=1630480400"
+    },
+    {
+      "title": "New Jersey Republican Party",
+      "feed_url": "https://www.njgop.org/feed/",
+      "website_url": "https://www.njgop.org/news/",
+      "description": "The New Jersey Republican State Committee stands for a prosperous and safe New Jersey. Get the latest party insider news and updates.",
+      "followers": {
+        "facebook": 93300,
+        "twitter": 25300
+      },
+      "image_url": "https://i1.feedspot.com/5317979.jpg?t=1630480614"
+    },
+    {
+      "title": "Sunlight Policy Center Blog",
+      "feed_url": "https://sunlightpolicynj.org/feed/",
+      "website_url": "https://sunlightpolicynj.org/blog/",
+      "description": "Informing New Jersey citizens of the facts behind the state's dysfunctional status quo and supporting policy solutions to put NJ back on the right path.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5317981.jpg?t=1630480750"
+    },
+    {
+      "title": "New Jersey Future",
+      "feed_url": "https://feeds.feedburner.com/NJFuture",
+      "website_url": "https://www.njfuture.org/",
+      "description": "New Jersey Future is a nonprofit, nonpartisan organization that promotes sensible growth, redevelopment and infrastructure investments to foster vibrant cities and towns through its smart growth policy and advocacy resource and organization.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 12200,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4825679.jpg?t=1544014014"
+    },
+    {
+      "title": "ROI-NJ Politics",
+      "feed_url": "https://www.roi-nj.com/category/politics/feed/",
+      "website_url": "https://www.roi-nj.com/category/politics/",
+      "description": "ROI-NJ is an omnichannel business media company and the authoritative source for news and connections impacting New Jersey's economic movers and shakers. Covers articles on political updates and news.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/5318040.jpg?t=1630484284"
+    },
+    {
+      "title": "NJBIZ Government",
+      "feed_url": "https://njbiz.com/government/feed/",
+      "website_url": "https://njbiz.com/government/",
+      "description": "NJBIZ is the definitive voice of business news in New Jersey. NJBIZ's coverage of New Jersey government news, from the Statehouse in Trenton and all the areas it affects across South, Central, and North Jersey.",
+      "followers": {
+        "facebook": 6300,
+        "twitter": 19600
+      },
+      "image_url": "https://i1.feedspot.com/5318048.jpg?t=1630484023"
+    },
+    {
+      "title": "New Jersey Business Magazine Government",
+      "feed_url": "https://njbmagazine.com/industry/government/feed/",
+      "website_url": "https://njbmagazine.com/industry/government/",
+      "description": "New Jersey Business provides timely news and information to help businesses succeed. This section of news covers the Government updates.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5318049.jpg?t=1630483886"
+    },
+    {
+      "title": "New Jersey Monitor",
+      "feed_url": "https://newjerseymonitor.com/feed/",
+      "website_url": "https://newjerseymonitor.com/category/politics/",
+      "description": "The New Jersey Monitor is an independent, nonprofit and nonpartisan news site that strives to be a watchdog for all residents of the Garden State. Created and run by passionate staff, the Monitor aims to empower readers with the information they need to understand the world around them and make informed choices.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5757308.jpg?t=1712229790"
+    },
+    {
+      "title": "The Press of Atlantic City Government & Politics",
+      "feed_url": "https://pressofatlanticcity.com/search/?f=rss&t=article&c=news/local/govt-and-politics&l=50&s=start_time&sd=desc",
+      "website_url": "https://pressofatlanticcity.com/news/local/govt-and-politics/",
+      "description": "The Press of Atlantic City has been the leading South Jersey media and news source for over 100 years. This section of news covers the Political and Government updates.",
+      "followers": {
+        "facebook": 101800
+      },
+      "image_url": "https://i1.feedspot.com/5318047.jpg?t=1630484138"
+    },
+    {
+      "title": "NJ Spotlight News Politics",
+      "feed_url": "https://www.njspotlight.com/politics/feed/",
+      "website_url": "https://www.njspotlight.com/politics/",
+      "description": "NJ Spotlight provides insight and information on issues critical to New Jersey, with the aim of informing and engaging the state's communities and businesses. Covers articles on political updates and news.",
+      "followers": {
+        "facebook": 11600,
+        "twitter": 41900,
+        "instagram": 13700
+      },
+      "image_url": "https://i1.feedspot.com/5317947.jpg?t=1630477194"
+    },
+    {
+      "title": "Save Jersey",
+      "feed_url": "https://savejersey.com/feed/",
+      "website_url": "https://savejersey.com/",
+      "description": "The Save Jersey Blog is the New Jersey's number 1 source for conservative news, commentary, analysis and humor. New Jersey's #1 Source of Conservative News, Commentary, Humor & Analysis.",
+      "followers": {
+        "facebook": 33200,
+        "twitter": 20800
+      },
+      "image_url": "https://i1.feedspot.com/4921565.jpg?t=1620721597"
+    },
+    {
+      "title": "Green Party of New Jersey",
+      "feed_url": "https://www.gpnj.org/gpnjwp/feed/rss/",
+      "website_url": "https://www.gpnj.org/gpnjwp/",
+      "description": "The Green Party of New Jersey runs candidates for political office aligned with the party's 4 pillars, peace, ecology, democracy, and social justice, 10 key values, and platform. They are an activist organization working in our North, Central, South, and Jersey Shore communities.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 7500
+      },
+      "image_url": "https://i1.feedspot.com/5317976.jpg?t=1630480078"
+    }
+  ]
+}

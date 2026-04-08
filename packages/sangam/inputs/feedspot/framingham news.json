@@ -1,0 +1,41 @@
+{
+  "category": "Framingham News",
+  "source_url": "https://rss.feedspot.com/framingham_massachusetts_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City Of Framingham",
+      "feed_url": "https://www.framinghamma.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.framinghamma.gov/CivicAlerts.aspx?CID=1",
+      "description": "City Of Framingham is dedicated to keeping residents informed and up-to-date by providing the latest news about sports, business, performing arts, health/safety issues, human interest and more.",
+      "followers": {
+        "facebook": 13300,
+        "twitter": 5800,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5179633.jpg?t=1605275660"
+    },
+    {
+      "title": "Framingham SOURCE",
+      "feed_url": "https://framinghamsource.com/index.php/feed/",
+      "website_url": "https://framinghamsource.com/",
+      "description": "Framingham SOURCE is an independent, community news site. SOURCE is a 365-day a year, 24-hour a day news organization. Stay tuned to get the latest updates.",
+      "followers": {
+        "facebook": 16400,
+        "twitter": 3700,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5130706.jpg?t=1625546277"
+    },
+    {
+      "title": "MetroWest Daily News",
+      "feed_url": "https://www.metrowestdailynews.com/news?template=rss&mime=xml",
+      "website_url": "https://www.metrowestdailynews.com/",
+      "description": "Get the latest breaking news, sports, entertainment and obituaries in Framingham, MA from MetroWest Daily News.",
+      "followers": {
+        "facebook": 26900,
+        "twitter": 21200
+      },
+      "image_url": "https://i1.feedspot.com/5179610.jpg?t=1625546290"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "category": "San Francisco Flooring",
+  "source_url": "https://rss.feedspot.com/san_francisco_flooring_rss_feeds",
+  "feeds": [
+    {
+      "title": "Dublin Carpet Blog",
+      "feed_url": "https://dublincarpet.com/feed/",
+      "website_url": "https://dublincarpet.com/blog/",
+      "description": "Are you looking for professional flooring advice? We offer a wide range of high-quality options for your home or office. Call us if you have any questions!",
+      "followers": {
+        "facebook": 152,
+        "twitter": 70,
+        "instagram": 6100
+      },
+      "image_url": "https://i1.feedspot.com/5730327.jpg?t=1701934989"
+    },
+    {
+      "title": "Floortex Design News",
+      "feed_url": "https://floortexdesign.com/feed/",
+      "website_url": "https://floortexdesign.com/news/",
+      "description": "Brilliant floors make the room feel like home.",
+      "followers": {
+        "facebook": 859,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5730326.jpg?t=1701934984"
+    },
+    {
+      "title": "TC Floors & Design Blog",
+      "feed_url": "https://iluvmyfloors.com/feed/",
+      "website_url": "https://tcdesigncenter.com/blog/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5730325.jpg?t=1707307723"
+    },
+    {
+      "title": "Floor Dimensions Inc Blog",
+      "feed_url": "https://floordimensions.com/blog.aspx/",
+      "website_url": "https://floordimensions.com/blog.aspx/",
+      "description": "Stay up-to-date on the latest in flooring industry news, design tips, care advice, sales & promotions from the experts at Floor Dimensions in Albany, CA.",
+      "followers": {
+        "facebook": 281
+      },
+      "image_url": "https://i1.feedspot.com/5730328.jpg?t=1701934994"
+    }
+  ]
+}

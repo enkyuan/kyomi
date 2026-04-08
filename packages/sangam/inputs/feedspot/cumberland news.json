@@ -1,0 +1,28 @@
+{
+  "category": "Cumberland News",
+  "source_url": "https://rss.feedspot.com/cumberland_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Cumberland Times-News",
+      "feed_url": "https://www.times-news.com/search/?f=rss&t=article&l=50&s=start_time&sd=desc&c=news",
+      "website_url": "https://www.times-news.com/",
+      "description": "The Cumberland Times-News is a seven-day morning daily newspaper serving Cumberland, Maryland, USA, and the surrounding areas of Allegany and Garrett counties in Maryland, and Mineral County in West Virginia.",
+      "followers": {
+        "facebook": 33700,
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5148671.jpg?t=1588853372"
+    },
+    {
+      "title": "City of Cumberland, MD",
+      "feed_url": "https://www.cumberlandmd.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.cumberlandmd.gov/CivicAlerts.aspx",
+      "description": "The official website of Cumberland, MD provides the latest in City news and upcoming events for the community. Founded in 1787, Cumberland is situated in the beautiful mountains of Western Maryland.",
+      "followers": {
+        "facebook": 6600,
+        "twitter": 462
+      },
+      "image_url": "https://i1.feedspot.com/5148675.jpg"
+    }
+  ]
+}

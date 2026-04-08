@@ -1,0 +1,52 @@
+{
+  "category": "Hammond News",
+  "source_url": "https://rss.feedspot.com/hammond_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of Hammond, Indiana",
+      "feed_url": "https://www.gohammond.com/news/feed/",
+      "website_url": "https://www.gohammond.com/news/",
+      "description": "Welcome to the official government website for the city of Hammond, Indiana. We provide information to the Hammond city and community. Hammond is the 5th largest city in the State of Indiana on the southern edge of Lake Michigan and a part of the Chicago Metropolitan area.",
+      "followers": {
+        "facebook": 20100,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5145226.jpg?t=1623157474"
+    },
+    {
+      "title": "Northwest Indiana Times \u00bb Hammond",
+      "feed_url": "https://www.nwitimes.com/search/?f=rss&t=article&c=news/local/lake/hammond&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.nwitimes.com/news/local/lake/hammond/",
+      "description": "The Times Media Co. is the news and information leader in Northwest Indiana. We have the largest news gathering and sports staff in the Region, and we inform residents 24/7 through the daily Times of Northwest Indiana newspaper, a bustling website, www.nwi.com, apps, and an e-edition. Subscribe this feed for crime, business, government, education, and sports news and information in Hammond Region.",
+      "followers": {
+        "facebook": 163900,
+        "twitter": 69100,
+        "instagram": 13100
+      },
+      "image_url": "https://i1.feedspot.com/5145222.jpg?t=1675255150"
+    },
+    {
+      "title": "FOX 32 News \u00bb Hammond",
+      "feed_url": "https://www.fox32chicago.com/tag/us/in/lake-county-in/hammond",
+      "website_url": "https://www.fox32chicago.com/tag/us/in/lake-county-in/hammond",
+      "description": "Latest news from the city of Hammond in Lake County, Indiana. Fox 32 News WFLD is a television station in Chicago, Illinois, United States, airing programming from the Fox network. It is owned and operated by the network's Fox Television Stations division.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 177900,
+        "instagram": 178700
+      },
+      "image_url": "https://i1.feedspot.com/5502411.jpg?t=1675255076"
+    },
+    {
+      "title": "CBS Chicago \u00bb Hammond",
+      "feed_url": "https://chicago.cbslocal.com/tag/hammond/feed/",
+      "website_url": "https://www.cbsnews.com/chicago/tag/hammond-indiana/",
+      "description": "CBS Chicago is comprised of Chicago's biggest media brands in news, sports, and entertainment. CBSChicago.com provides you with 24/7 access to the latest updates in local news, sports, traffic, and weather. Read the latest news and breaking headlines on what's happening in Hammond city and community by following this feed.",
+      "followers": {
+        "facebook": 400300,
+        "twitter": 213900
+      },
+      "image_url": "https://i1.feedspot.com/5145224.jpg?t=1588066650"
+    }
+  ]
+}

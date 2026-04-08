@@ -1,0 +1,135 @@
+{
+  "category": "Mozilla",
+  "source_url": "https://rss.feedspot.com/mozilla_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Mozilla Blog",
+      "feed_url": "https://blog.mozilla.org/feed/",
+      "website_url": "https://blog.mozilla.org/en/category/mozilla/",
+      "description": "Mozilla is a proudly non-profit organization dedicated to keeping the power of the Web in people's hands. It is a global community of users, contributors and developers working to innovate on your behalf.",
+      "followers": {
+        "facebook": 219000,
+        "twitter": 269600,
+        "instagram": 13300
+      },
+      "image_url": "https://i1.feedspot.com/1306579.jpg?t=1620108281"
+    },
+    {
+      "title": "Planet Mozilla",
+      "feed_url": "https://planet.mozilla.org/rss20.xml",
+      "website_url": "https://planet.mozilla.org/",
+      "description": "Mozilla makes browsers, apps, code and tools that put people before profit. Get the latest news and updates about Mozilla from the Mozilla community.",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4910682.jpg?t=1620108346"
+    },
+    {
+      "title": "Mozilla Hacks",
+      "feed_url": "https://hacks.mozilla.org/feed/",
+      "website_url": "https://hacks.mozilla.org/",
+      "description": "Mozilla Hacks is written for web developers, designers and everyone who builds for the Web. Hacks are produced by Mozilla's Developer Relations team and feature hundreds of posts from Mozilla.",
+      "followers": {
+        "twitter": 96400
+      },
+      "image_url": "https://i1.feedspot.com/1143647.jpg?t=1620108291"
+    },
+    {
+      "title": "Firefox Nightly News",
+      "feed_url": "https://blog.nightly.mozilla.org/feed/",
+      "website_url": "https://blog.nightly.mozilla.org/",
+      "description": "Firefox Nightly is the earliest development stage of Firefox, rebuilt every night from the latest code produced by Mozilla. This blog intends is to be a stable point of information about what happens on Nightly, what features or core technologies landed, how Nightly users can help Mozilla fix bugs and regressions and more generally how a tech-savvy person can move from being a consumer of Firefox to a contributor of Firefox.",
+      "followers": {
+        "twitter": 26600,
+        "instagram": 13300
+      },
+      "image_url": "https://i1.feedspot.com/4748906.jpg?t=1620108309"
+    },
+    {
+      "title": "Mozilla Gfx Team Blog",
+      "feed_url": "https://mozillagfx.wordpress.com/feed/",
+      "website_url": "https://mozillagfx.wordpress.com/",
+      "description": "The primary purpose of this blog is to help communication across and around the Mozilla Gfx team. In particular, we want to help non-employee contributors be better connected and better informed of any relevant developments.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5354805.jpg?t=1639985845"
+    },
+    {
+      "title": "Windows Report \u00bb Firefox",
+      "feed_url": "https://windowsreport.com/category/browsers/firefox/feed/",
+      "website_url": "https://windowsreport.com/category/browsers/firefox/",
+      "description": "A complete guide on discovering Firefox web browser. Here we cover Firefox - Mozilla's browser that is always trying to reinvent itself with newer and better features. Windows Report is an independent online publication that covers Microsoft's Windows platform along with its many related products & services.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 428
+      },
+      "image_url": "https://i1.feedspot.com/5354801.jpg?t=1639985131"
+    },
+    {
+      "title": "AskVG \u00bb Mozilla Firefox",
+      "feed_url": "https://www.askvg.com/category/mozilla-firefox/feed/",
+      "website_url": "https://www.askvg.com/category/mozilla-firefox/",
+      "description": "This category contains a list of useful tips-n-tricks, troubleshooting, and how-to guides about the Mozilla Firefox web browser. This section also provides regular latest version updates and news whenever new versions are released for Firefox. You'll also find the latest updates about Nightly builds of the Firefox web browser here. AskVG is a popular website that covers Windows tips, tweaks, troubleshooting and customization.",
+      "followers": {
+        "facebook": 24600,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5354802.jpg?t=1639987623"
+    },
+    {
+      "title": "Mozilla",
+      "feed_url": "https://blog.thunderbird.net/feed/",
+      "website_url": "https://blog.thunderbird.net/",
+      "description": "Mozilla makes browsers, apps, code and tools that put people before profit. Our mission is to ensure the Internet is a global public resource, open and accessible to all. An Internet that truly puts people first, where individuals can shape their own experience and are empowered, safe and independent. Mozilla Thunderbird is a free, open-source, cross-platform application for managing email, news feeds, chat, and news groups. It is a local (rather than browser or web-based) email application that is powerful yet easy-to-use.",
+      "followers": {
+        "facebook": 23500,
+        "twitter": 25300
+      },
+      "image_url": "https://i1.feedspot.com/5288455.jpg?t=1622730527"
+    },
+    {
+      "title": "Firefox Add-ons Blog",
+      "feed_url": "https://addons.mozilla.org/blog/feed.xml",
+      "website_url": "https://addons.mozilla.org/blog/",
+      "description": "A Mozilla's official site for discovering and installing add-ons for the Firefox browser. This Firefox Add-ons Blog will help you modify & personalize your browsing experience by adding new features to Firefox, enhancing your interactions with Web content, and changing the way your browser looks.",
+      "followers": {
+        "facebook": 15800000,
+        "twitter": 2500000,
+        "instagram": 111300
+      },
+      "image_url": "https://i1.feedspot.com/5354803.jpg?t=1639985662"
+    },
+    {
+      "title": "Mozilla Foundation Blog",
+      "feed_url": "https://foundation.mozilla.org/en/blog/rss/",
+      "website_url": "https://foundation.mozilla.org/en/blog/",
+      "description": "Mozilla's blog features guides to making your online life better, stories from the movement, and critical analysis of issues around internet health. At Mozilla, we work to ensure the internet remains a public resource that is open and accessible to all.",
+      "followers": {
+        "facebook": 219000,
+        "twitter": 269600,
+        "instagram": 51500
+      },
+      "image_url": "https://i1.feedspot.com/5354806.jpg?t=1639986748"
+    },
+    {
+      "title": "Release Management Blog",
+      "feed_url": "https://release.mozilla.org/feed.xml",
+      "website_url": "https://release.mozilla.org/",
+      "description": "Hello and welcome to the Release Management team's blog for all things related to shipping Mozilla products. This blog will include posts with automated stats pulled on each release as well as occasional posts by humans regarding our methodologies, process, improvements, and planning for continuing to ship quality Mozilla software.",
+      "followers": {
+        "twitter": 1500,
+        "instagram": 13300
+      },
+      "image_url": "https://i1.feedspot.com/4910776.jpg?t=1620108321"
+    },
+    {
+      "title": "How-To Geek \u00bb Firefox",
+      "feed_url": "https://www.howtogeek.com/category/mozilla-firefox/feed/",
+      "description": "Features articles that have to do exclusively with Mozilla Firefox. How-To Geek is an online technology magazine that explains technology with articles, tips, and provides answers to your tech questions.",
+      "followers": {
+        "facebook": 576000,
+        "twitter": 62600
+      },
+      "image_url": "https://i1.feedspot.com/5354800.jpg?t=1639987114"
+    }
+  ]
+}

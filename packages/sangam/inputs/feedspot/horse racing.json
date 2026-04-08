@@ -1,0 +1,602 @@
+{
+  "category": "Horse Racing",
+  "source_url": "https://rss.feedspot.com/horse_racing_rss_feeds",
+  "feeds": [
+    {
+      "title": "BloodHorse",
+      "feed_url": "https://www.bloodhorse.com/horse-racing/feeds/news/all-news",
+      "website_url": "https://www.bloodhorse.com/horse-racing",
+      "description": "For nearly a century, professionals and racing enthusiasts have relied on The Blood-Horse for accurate and timely racing and breeding news. Each week, Thoroughbred owners, breeders, trainers, and racing fanatics turn to The Blood-Horse for the most comprehensive package of international thoroughbred news and analysis.",
+      "followers": {
+        "facebook": 177900,
+        "twitter": 96100
+      },
+      "image_url": "https://i1.feedspot.com/4605814.jpg?t=1608704589"
+    },
+    {
+      "title": "America's Best Racing",
+      "feed_url": "https://www.americasbestracing.net/rss",
+      "website_url": "https://www.americasbestracing.net/",
+      "description": "Welcome to America's Best Racing, your home for learning all about horse racing! From the parties to the races and beyond, ABR gives you the inside scoop on what you need to know to get started in the world of Thoroughbred racing.",
+      "followers": {
+        "facebook": 231200,
+        "twitter": 60000,
+        "instagram": 96500
+      },
+      "image_url": "https://i1.feedspot.com/4605464.jpg?t=1615534756"
+    },
+    {
+      "title": "Just Horse Racing",
+      "feed_url": "https://www.justhorseracing.com.au/feed",
+      "website_url": "https://www.justhorseracing.com.au/",
+      "description": "Just Horse Racing was created to fulfil the demand of horse racing enthusiasts. With a team consisting of writers and photographers, Just Horse Racing is Australia's best source of daily free horse racing tips and horse racing news from around the country.",
+      "followers": {
+        "facebook": 18400,
+        "twitter": 15400
+      },
+      "image_url": "https://i1.feedspot.com/4605718.jpg?t=1615534795"
+    },
+    {
+      "title": "US Racing News",
+      "feed_url": "https://usracing.com/feed",
+      "website_url": "https://usracing.com/news",
+      "description": "US Racing is an award-winning, online horse racing service that offers reviews of thoroughbred, harness, and greyhound wagering content from over 200 of the world's premier racetracks. US Racing features reviews of the best tracks in the United States. The goal is to entertain, educate and inform people about the sport of thoroughbred horse racing.",
+      "followers": {
+        "twitter": 2100,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/5272132.jpg?t=1619074973"
+    },
+    {
+      "title": "Horse Canada News",
+      "feed_url": "https://horse-canada.com/news/feed/",
+      "website_url": "https://horse-canada.com/news/",
+      "description": "Horse-Canada, the Family Horse Magazine, is an all-breed, multi-discipline magazine with emphasis on equine health, horse care, and rural living and recognizes the inclusion of horses into family life.",
+      "followers": {
+        "twitter": 2000,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4605111.jpg?t=1615535848"
+    },
+    {
+      "title": "HorseRacing.com.au",
+      "feed_url": "http://www.horseracing.com.au/feed",
+      "website_url": "https://www.horseracing.com.au/",
+      "description": "Australia's fastest growing portal on thoroughbred Horse racing in Australia. Comprehensive information on all the major tracks and group one races; as well as fashion, videos and jobs from within the industry.",
+      "followers": {
+        "facebook": 630,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4605727.jpg?t=1615534825"
+    },
+    {
+      "title": "The Turk: Turf Handicapping and Exacta Betting.",
+      "feed_url": "https://theturkandlittleturk.blogspot.com/feeds/posts/default",
+      "website_url": "https://theturkandlittleturk.blogspot.com/",
+      "description": "The Turk Blog, established in September 2008, has a narrow purpose: We analyze Turf Horse Races and Form Exacta Bets. Little Turk has retired from the blog and is now a Chiropractor.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5565465.jpg?t=1702888031"
+    },
+    {
+      "title": "BBC Sport \u00bb Horse Racing",
+      "feed_url": "https://feeds.bbci.co.uk/sport/horse-racing/rss.xml",
+      "website_url": "https://www.bbc.com/sport/horse-racing",
+      "description": "The home of Horse Racing on BBC Sport online. Includes the latest news stories, results, fixtures, video and audio.",
+      "followers": {
+        "facebook": 15300000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4605636.jpg?t=1615534763"
+    },
+    {
+      "title": "Matched Betting Blog \u00bb Horse Racing",
+      "feed_url": "http://matchedbettingblog.com/horse-racing/feed/",
+      "website_url": "https://matchedbettingblog.com/horse-racing/",
+      "description": "The horse racing betting tips page shows you how to profit from horse racing free bets and offers using a technique called matched betting.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 27400
+      },
+      "image_url": "https://i1.feedspot.com/4605119.jpg?t=1615534799"
+    },
+    {
+      "title": "Horse betting",
+      "feed_url": "https://horsebetting.com.au/feed/",
+      "website_url": "https://horsebetting.com.au/",
+      "description": "Punting on the horses is one of Australia's greatest passions and our goal is to provide tips, news, free and betting advice for punters.",
+      "followers": {
+        "facebook": 837
+      },
+      "image_url": "https://i1.feedspot.com/4762285.jpg?t=1615534802"
+    },
+    {
+      "title": "Harnesslink",
+      "feed_url": "https://harnesslink.com/feed/",
+      "website_url": "https://harnesslink.com/",
+      "description": "Harnesslink is a harness racing website dedicated to covering news and events in the Standardbred Industry worldwide. Keep up with the latest harness racing updates and get to know about racing events, entries, and results in the USA, Canada, Australia, New Zealand, Europe, the UK, Ireland, and more.",
+      "followers": {
+        "facebook": 17600,
+        "twitter": 6700,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5413072.jpg?t=1655805477"
+    },
+    {
+      "title": "EZ Horse Betting Blog",
+      "feed_url": "https://www.ezhorsebetting.com/feed/",
+      "website_url": "https://www.ezhorsebetting.com/blog/",
+      "description": "EZ Horse Betting was created by real handicappers and horseracing insiders to give our readers an edge in betting the horses. It is packed with information and resources that will help with online horse betting.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5294156.jpg?t=1624022117"
+    },
+    {
+      "title": "Horse Race Insider",
+      "feed_url": "https://www.horseraceinsider.com/feed/",
+      "website_url": "https://www.horseraceinsider.com/",
+      "description": "Horse Race Insider (HRI) is a source of information and commentary on issues having a deep impact on horseplayers and racing enthusiasts. Keep up with the latest insight on everything thoroughbred horse racing.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 31,
+        "instagram": 58
+      },
+      "image_url": "https://i1.feedspot.com/5272136.jpg?t=1619075591"
+    },
+    {
+      "title": "American Racehorse",
+      "feed_url": "https://americanracehorse.com/feed/",
+      "website_url": "https://americanracehorse.com/",
+      "description": "The only horse racing magazine covering the sport in Texas, Oklahoma, Indiana, Iowa, Minnesota and around the region. American Racehorse is a print magazine that covers the Thoroughbred racing and breeding industry in Texas, Oklahoma, Arkansas and Indiana.",
+      "followers": {
+        "facebook": 10400,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4605819.jpg?t=1615534833"
+    },
+    {
+      "title": "Marten Julian Blog",
+      "feed_url": "https://www.martenjulian.com/blogs/feed/",
+      "website_url": "https://www.martenjulian.com/blogs/",
+      "description": "Marten Julian has been involved with horse racing for over forty years and has contributed to numerous specialist publications including the Racing Post.",
+      "followers": {
+        "facebook": 419,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4605109.jpg?t=1615535614"
+    },
+    {
+      "title": "Horse4course-Racetips.com",
+      "feed_url": "https://www.horse4course-racetips.com/horse-racing-tips.xml",
+      "website_url": "https://www.horse4course-racetips.com/",
+      "description": "The Horse Racing Tips Service that puts you in the picture. Finding the right course for a horse is my winning strategy. our mission is to provide our members with the best information available when it comes down to what really counts on the track. By offering professional experience and data, we hope to empower our members to make well informed and educated decisions.",
+      "followers": {
+        "facebook": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4605562.jpg?t=1615534829"
+    },
+    {
+      "title": "The Mansion Blog \u00bb Horse Racing",
+      "feed_url": "https://www.mansionbet.com/blog/sports/horse-racing/feed/",
+      "website_url": "https://www.mansionbet.com/blog/horse-racing/",
+      "description": "At MansionBet, we pride ourselves on providing a vast selection of sports markets for our punters. Whether you're crafting that ultimate football ACCA, backing an outsider in the next race meet, or following a Japanese baseball game live and betting In-Play, you'll feel right at home. In this section, you'll get the latest horse racing news, previews, betting tips, and more.",
+      "followers": {
+        "facebook": 22900,
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/5294160.jpg?t=1624010146"
+    },
+    {
+      "title": "Charle Hills News",
+      "feed_url": "https://charleshills.co.uk/news?format=rss",
+      "website_url": "https://charleshills.co.uk/news",
+      "description": "As part of the Hills dynasty created by his father Barry, Charlie has spent his entire life immersed in horse racing. Find the latest news and updates related to horse racing and training.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 24000,
+        "instagram": 13900
+      },
+      "image_url": "https://i1.feedspot.com/4605831.jpg?t=1629555462"
+    },
+    {
+      "title": "Get Your Tips Out",
+      "feed_url": "https://www.getyourtipsout.co.uk/feed/",
+      "website_url": "https://www.getyourtipsout.co.uk/horse-racing-tips/",
+      "description": "GetYourTipsOut is a site for horse racing enthusiasts covering daily horse racing tips.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 149500
+      },
+      "image_url": "https://i1.feedspot.com/5295009.jpg?t=1624268926"
+    },
+    {
+      "title": "ERIC WINNER",
+      "feed_url": "https://www.ericwinner.co.uk/feeds/posts/default?alt=rss",
+      "website_url": "https://www.ericwinner.co.uk/",
+      "description": "Winning racing tips. Daily racing tips. Eric Winner says these are my racing tips. Win at the races.",
+      "followers": {
+        "facebook": 302,
+        "twitter": 221
+      },
+      "image_url": "https://i1.feedspot.com/4750374.jpg?t=1615535578"
+    },
+    {
+      "title": "The Race Advisor Blog",
+      "feed_url": "https://raceadvisor.co.uk/blog/feed/",
+      "website_url": "https://raceadvisor.co.uk/blog/",
+      "description": "The Race Advisor is one of the leading blogs on betting in the UK. Our goal is to help you generate more profit from your betting than you're currently doing. With thousands of blog posts and some of the leading horse racing analysis software out there, if you've got a question about betting then we're here to make sure you get the right answer.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4605097.jpg?t=1615534837"
+    },
+    {
+      "title": "National Steeplechase Association",
+      "feed_url": "https://nationalsteeplechase.com/feed/",
+      "website_url": "https://nationalsteeplechase.com/",
+      "description": "The National Steeplechase Association is the governing body of jump racing in America. Steeplechasing offers exciting horse racing as it moves from community to community on the East Coast and Midwest from March through November. This racing extends the productive careers of Thoroughbred racehorses, preserves open space, and raises tens of thousands of dollars for worthy charities each year.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 2400,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4605774.jpg?t=1615535595"
+    },
+    {
+      "title": "The Racing Biz",
+      "feed_url": "https://www.theracingbiz.com/feed/",
+      "website_url": "https://www.theracingbiz.com/",
+      "description": "The Racing Biz covers Thoroughbred racing and breeding in the mid-Atlantic region. We cover the sport, business, and personalities of horse racing in Maryland, Pennsylvania, New Jersey, Delaware, Virginia, and West Virginia.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 5300,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4605834.jpg?t=1615535582"
+    },
+    {
+      "title": "Richard Phillips Racing Blog",
+      "feed_url": "https://richardphillipsracing.com/feed/",
+      "website_url": "https://richardphillipsracing.com/richards-blog/",
+      "description": "A National Hunt and Flat racehorse trainer, based in the beautiful village of Adlestrop in the Cotswolds. We hope to give you a taste of the excitement and fun of owning a racehorse.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 6800
+      },
+      "image_url": "https://i1.feedspot.com/4605533.jpg?t=1610533662"
+    },
+    {
+      "title": "Horseracing Wrongs Blog",
+      "feed_url": "https://horseracingwrongs.org/blog/feed/",
+      "website_url": "https://horseracingwrongs.org/blog/",
+      "description": "Horseracing Wrongs is an organization working to end horseracing through education and supporting grassroots activism in the United States.",
+      "followers": {
+        "facebook": 19900,
+        "twitter": 3700,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4605433.jpg?t=1615535599"
+    },
+    {
+      "title": "Horse Racing in Korea",
+      "feed_url": "https://korearacing.live/feed/",
+      "website_url": "https://korearacing.live/",
+      "description": "The Horse Racing in Korea blog covers thoroughbred horse racing on the Korean peninsula.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4605079.jpg?t=1615535602"
+    },
+    {
+      "title": "Philip Kirby Racing",
+      "feed_url": "https://philipkirbyracing.co.uk/feed/",
+      "website_url": "https://philipkirbyracing.co.uk/",
+      "description": "Racehorse trainer based at Green Oaks, Richmond. Proud to be sponsored by TopSpec Feeds. Every winner counts!",
+      "followers": {
+        "facebook": 79000,
+        "twitter": 10700
+      },
+      "image_url": "https://i1.feedspot.com/4605701.jpg?t=1615536177"
+    },
+    {
+      "title": "2YO Racing Tips",
+      "feed_url": "https://www.skyequine.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.skyequine.com/",
+      "description": "Expert Racing Tips. Sky Equine details the best of two-year-old horse racing.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 14000
+      },
+      "image_url": "https://i1.feedspot.com/4750370.jpg?t=1615535621"
+    },
+    {
+      "title": "nationalhuntwolo",
+      "feed_url": "https://nationalhuntwolo.wordpress.com/feed/",
+      "website_url": "https://nationalhuntwolo.wordpress.com/",
+      "description": "Daily horseracing tips and betting advice. Horse racing-loving individual who will one day land that life-changing Cheltenham acca.",
+      "followers": {
+        "twitter": 663
+      },
+      "image_url": "https://i1.feedspot.com/4920422.jpg?t=1615535610"
+    },
+    {
+      "title": "The Turk: Turf Handicapping and Exacta Betting.",
+      "feed_url": "http://theturkandlittleturk.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://theturkandlittleturk.blogspot.com/",
+      "description": "The Turk, along with his son, the Little Turk, provide handicapping and bet construction to people who never asked for it.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4669405.jpg?t=1615536083"
+    },
+    {
+      "title": "JPW Racing Tipster Blog",
+      "feed_url": "https://jpwracingtipster.com/feed/",
+      "website_url": "https://jpwracingtipster.com/blog/",
+      "description": "Articles feature free tips every Saturday, a big race preview for the big meetings, as well as insightful posts about hot topics in the horse racing industry. JPW is a Professional Horse Racing Tipster who provides an honest and profitable betting service.",
+      "followers": {
+        "twitter": 13200
+      },
+      "image_url": "https://i1.feedspot.com/4605146.jpg?t=1615535648"
+    },
+    {
+      "title": "Mull It Over",
+      "feed_url": "https://mully1.wordpress.com/feed/",
+      "website_url": "https://mully1.wordpress.com/",
+      "description": "Hello, I'm Steve Mullington and this is a blog charting my personal punting day plus topical horse racing discussion.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5294152.jpg?t=1624021293"
+    },
+    {
+      "title": "Paddy Power News \u00bb Horse Racing",
+      "feed_url": "https://news.paddypower.com/horse-racing/feed/",
+      "website_url": "https://news.paddypower.com/horse-racing/",
+      "description": "A blog by Paddy Power! Read our tips and all the news about horse racing and much more!",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 702200,
+        "instagram": 257600
+      },
+      "image_url": "https://i1.feedspot.com/4605100.jpg?t=1615536264"
+    },
+    {
+      "title": "Timeform",
+      "feed_url": "https://www.timeform.com/horse-racing/news-feed/rss20",
+      "website_url": "https://www.timeform.com/horse-racing/",
+      "description": "Stay up to date with all the latest horse racing news with Timeform. Includes the breaking news stories, results, and fixtures from the UK & Ireland, plus the top International races.",
+      "followers": {
+        "facebook": 57500,
+        "twitter": 34600
+      },
+      "image_url": "https://i1.feedspot.com/4605688.jpg?t=1615534760"
+    },
+    {
+      "title": "Eclipse Magazine",
+      "feed_url": "https://eclipsemagazine.co.uk/feed/",
+      "website_url": "https://eclipsemagazine.co.uk/",
+      "description": "Eclipse was an 18th-century British thoroughbred racehorse who was undefeated during his entire career. In 2008 a website was launched, named after the great horse. We are an online magazine all about the social side of horseracing. We talk about comps, interviews, fashion, blogs, offers, tips, trends, what's on at a racecourse near you and more!",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 7500
+      },
+      "image_url": "https://i1.feedspot.com/4605540.jpg?t=1614065960"
+    },
+    {
+      "title": "Turf 'n' Sport",
+      "feed_url": "https://turfnsport.com/feed/",
+      "website_url": "https://turfnsport.com/",
+      "description": "Horse bettors will find expert online horse racing picks from top rated handicappers as well as information on where to wager on horse races including the Triple Crown.",
+      "followers": {
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/1655366.jpg?t=1615534813"
+    },
+    {
+      "title": "WinningPonies.com Blog",
+      "feed_url": "https://feeds.feedburner.com/winningponies",
+      "website_url": "http://blog.winningponies.com/",
+      "description": "Get Horse racing news, handicapping and betting tips, picks, and results.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4605411.jpg?t=1615534817"
+    },
+    {
+      "title": "Horse Racing Chat",
+      "feed_url": "https://www.horseracingchat.co.uk/feed/",
+      "website_url": "https://www.horseracingchat.co.uk/",
+      "description": "Horse Racing Chat is a blog run by journalist Jason Heavey, who is also Racing Editor of the Sunday Express and Daily Star Sunday newspapers. My aim is to provide a heady mix of free horse racing content including interviews, features, horses to follow, previews and reviews",
+      "followers": {
+        "facebook": 999,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4605090.jpg?t=1614065965"
+    },
+    {
+      "title": "Horse Racing Scoop Blog",
+      "feed_url": "https://horseracingscoop.com/blog/feed/",
+      "website_url": "https://horseracingscoop.com/blog/",
+      "description": "Danny Brewer's thoroughbred horse racing blog. Thoroughbred polls published by the National Thoroughbred Racing Association. Danny still covers a variety of sporting events throughout the year, but Thoroughbred horse racing holds a special place in the heart of 'the Sports Brew'.",
+      "followers": {
+        "facebook": 233,
+        "twitter": 269
+      },
+      "image_url": "https://i1.feedspot.com/4605447.jpg?t=1615535627"
+    },
+    {
+      "title": "horsereporter.com",
+      "feed_url": "https://horsereporter.com/feed/",
+      "website_url": "https://horsereporter.com/",
+      "description": "horsereporter.com covers Arabian horse events worldwide.",
+      "followers": {
+        "facebook": 866,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5162333.jpg?t=1615535586"
+    },
+    {
+      "title": "Lady and The Track",
+      "feed_url": "https://ladyandthetrack.com/feed",
+      "website_url": "https://ladyandthetrack.com/",
+      "description": "LadyAndTheTrack.com is a news site and beginner's guide to the exciting world of horse racing. Here you can easily read daily updates on everything happening in horse racing to help you become a fearless lady at the track.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4605617.jpg?t=1608706855"
+    },
+    {
+      "title": "Tom Noonan",
+      "feed_url": "https://tenoonan.com/feed/",
+      "website_url": "https://tenoonan.com/",
+      "description": "Commentary on horse racing and politics. Blog by Tom Noonan.",
+      "followers": {
+        "twitter": 245
+      },
+      "image_url": "https://i1.feedspot.com/4605438.jpg?t=1615535618"
+    },
+    {
+      "title": "www.mjayphotography.co.uk",
+      "feed_url": "http://mjayphotograph.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://mjayphotograph.blogspot.com/",
+      "description": "Sports photographer, specialising in Football and Horse Racing and Equestrianism.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4605469.jpg?t=1615535631"
+    },
+    {
+      "title": "Value Horse Tips Blog",
+      "feed_url": "http://www.valuehorsetips.co.uk/feed/",
+      "website_url": "http://www.valuehorsetips.co.uk/blog/",
+      "description": "Welcome to Value Horse Tips, your way to start making money on daily horse racing in the UK.If you want professional, profitable and good value horse tips then we are the service for you.",
+      "followers": {
+        "facebook": 281,
+        "twitter": 16900
+      },
+      "image_url": "https://i1.feedspot.com/4605115.jpg?t=1653567598"
+    },
+    {
+      "title": "JC / Railbird",
+      "feed_url": "http://jessicachapel.com/feed/",
+      "website_url": "http://jessicachapel.com/",
+      "description": "Jessica Chapel is a digital producer, editor, and horse racing fan. She currently works with the Breeders' Cup; she previously worked for the Daily Racing Form, Atlantic, American Prospect, and Harvard University. Railbird was the first Thoroughbred racing blog, launching in June 2004 with an interest in all things racing, from horses and handicapping to business and politics. Based in Boston.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/298098.jpg?t=1653567610"
+    },
+    {
+      "title": "RACING GENIUS - INDIAN HORSE RACING TOP TIPSTER SINCE 2001",
+      "feed_url": "http://racinggenius.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://racinggenius.blogspot.com/",
+      "description": "Racing Genius is all about Indian horse race tips.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4605479.jpg?t=1615535676"
+    },
+    {
+      "title": "View From the Racetrack Grandstand",
+      "feed_url": "https://feeds.feedburner.com/blogspot/UyGJ",
+      "website_url": "https://viewfromthegrandstand.blogspot.com/",
+      "description": "Discussing harness racing from the fan's perspective.",
+      "followers": {
+        "twitter": 974
+      },
+      "image_url": "https://i1.feedspot.com/4605524.jpg?t=1615535683"
+    },
+    {
+      "title": "Sports and Racing News",
+      "feed_url": "https://sportsandracing.news/feed/",
+      "website_url": "https://sportsandracing.news/",
+      "description": "Get the latest sports and horse racing news, results, free picks and tips, and much more to back winners with our trusted forms.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5163933.jpg?t=1653566995"
+    },
+    {
+      "title": "THE VAULT: Horse racing past and present",
+      "feed_url": "https://thevaulthorseracing.wordpress.com/feed/",
+      "website_url": "https://thevaulthorseracing.wordpress.com/",
+      "description": "Abigail Anderson launched The Vault in February 2011. The mission of The Vault is to tell the stories of great and forgotten horses, on whose hooves and hearts we gallop into today.",
+      "followers": {
+        "twitter": 765
+      },
+      "image_url": "https://i1.feedspot.com/5294155.jpg?t=1624012549"
+    },
+    {
+      "title": "Montjeu.com",
+      "feed_url": "https://www.montjeu.com/feed/",
+      "website_url": "https://www.montjeu.com/",
+      "description": "An Independent View of the Bloodstock World",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5097740.jpg?t=1615536164"
+    },
+    {
+      "title": "Kenwood Racing Blog",
+      "feed_url": "https://www.kenwoodracing.com/blog/feed",
+      "website_url": "https://www.kenwoodracing.com/blog",
+      "description": "One of the leading thoroughbred racing stables on the east coast, Kenwood Racing is known for winning stake races at huge odds with horses purchased for very modest prices. The Kenwood Blog provides unique commentary on the horse ownership industry as well as racing and betting tips.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 741
+      },
+      "image_url": "https://i1.feedspot.com/5294159.jpg?t=1624011601"
+    },
+    {
+      "title": "Past The Wire",
+      "feed_url": "https://pastthewire.com/feed/",
+      "website_url": "https://pastthewire.com/",
+      "description": "Past the Wire is the Horse Racing column where Professional Handicapper Jonathan Stettin shares his knowledge, experience and passion for The Sport of Kings. This is where you will find Horse Racing's most interesting and well-informed columns, articles and broadcasts on every aspect of the game. Jonathan tackles everything in the sport unbiased, with a unique insight that stems from his vast experience in so many areas of Thoroughbred Racing.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 7700,
+        "instagram": 956
+      },
+      "image_url": "https://i1.feedspot.com/5005988.jpg?t=1615534806"
+    },
+    {
+      "title": "Paulick Report",
+      "feed_url": "https://paulickreport.com/feed/",
+      "website_url": "https://paulickreport.com/",
+      "description": "PaulickReport.com covers all horse racing and Thoroughbred industry news, including business, people, racing, bloodstock, breeding, horse care and horseplayers.",
+      "followers": {
+        "facebook": 72800,
+        "twitter": 39900,
+        "instagram": 26900
+      },
+      "image_url": "https://i1.feedspot.com/969724.jpg?t=1615534752"
+    },
+    {
+      "title": "The Roar \u00bb Racing",
+      "feed_url": "https://www.theroar.com.au/racing/feed/",
+      "website_url": "https://www.theroar.com.au/racing/",
+      "description": "Find the latest Horse Racing news, live coverage, video, analysis, and opinions. The Roar is Australia's leading sports opinion website, mixing expert commentary with reader-generated articles. The Roar aims to make a difference in Australian sports.",
+      "followers": {
+        "facebook": 142500,
+        "twitter": 23700,
+        "instagram": 16200
+      },
+      "image_url": "https://i1.feedspot.com/4605204.jpg?t=1615534789"
+    },
+    {
+      "title": "Fans of Horse Racing",
+      "feed_url": "https://www.fansofhorseracing.com/feed/",
+      "website_url": "https://www.mcbookie.com/blog/category/horses/",
+      "description": "Here on Positive Stories, you will find the latest and interesting articles about horse racing. It covers various horse racing topics such as racetrack travel, history, media, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5246429.jpg?t=1613648728"
+    },
+    {
+      "title": "Palmerbet Blog \u00bb Horse Racing",
+      "feed_url": "https://blog.palmerbet.com/",
+      "website_url": "https://blog.palmerbet.com/horse-racing/",
+      "description": "Palmerbet Blog offers horse racing betting tips, previews, and all the latest horse racing news with practical betting insights. Palmerbet is a trusted betting operator and offers a huge range of betting markets on Australian and International racing, American sports, Aussie rules, rugby league, Soccer, Tennis plus loads more. Palmerbet is committed to providing punters with bigger odds and better service.",
+      "followers": {
+        "facebook": 66000,
+        "twitter": 19400,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5294161.jpg?t=1624010937"
+    }
+  ]
+}

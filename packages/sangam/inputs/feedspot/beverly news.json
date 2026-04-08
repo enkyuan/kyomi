@@ -1,0 +1,17 @@
+{
+  "category": "Beverly News",
+  "source_url": "https://rss.feedspot.com/beverly_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Wicked Local",
+      "feed_url": "https://www.wickedlocal.com/",
+      "website_url": "https://www.wickedlocal.com/",
+      "description": "Wicked Local Beverly delivers news and information on the latest top stories, weather, entertainment, politics and more.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 41600
+      },
+      "image_url": "https://i1.feedspot.com/5150585.jpg?t=1589517451"
+    }
+  ]
+}

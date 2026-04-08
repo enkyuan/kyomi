@@ -1,0 +1,397 @@
+{
+  "category": "Xamarin",
+  "source_url": "https://rss.feedspot.com/xamarin_rss_feeds",
+  "feeds": [
+    {
+      "title": "In The Hand Ltd Blog",
+      "feed_url": "https://inthehand.com/feed/",
+      "website_url": "https://inthehand.com/blog/",
+      "description": "Sharing Xamarin concepts, images, screen designs, text, etc. In The Hand Ltd. hand-crafts apps and components for mobile and IoT devices. Peter Foot is Microsoft Windows Development MVP and Xamarin-Certified Mobile Developer.",
+      "followers": {
+        "twitter": 62
+      },
+      "image_url": "https://i1.feedspot.com/4654078.jpg?t=1622703998"
+    },
+    {
+      "title": "Stories by Ahmed Fouad",
+      "feed_url": "https://medium.com/feed/@csharpwriter",
+      "website_url": "https://medium.com/@csharpwriter",
+      "description": "Hello, I'm Ahmed. I'm a software engineer living in Vienna, Austria. I am a fan of technology, web development, and programming. I'm also interested in xamarin.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5049240.jpg?t=1617340213"
+    },
+    {
+      "title": "The Syncfusion Company Blog",
+      "feed_url": "https://www.syncfusion.com/blogs/feed",
+      "website_url": "https://www.syncfusion.com/blogs/",
+      "description": "Covers .NET development, cross-platform, mobile apps, Syncfusion UI controls, news and more. Syncfusion is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application lifecycle.",
+      "followers": {
+        "facebook": 38300,
+        "twitter": 12100
+      },
+      "image_url": "https://i1.feedspot.com/4654804.jpg?t=1617341052"
+    },
+    {
+      "title": "AskXammy",
+      "feed_url": "https://askxammy.com/feed/",
+      "website_url": "https://askxammy.com/",
+      "description": "Leomaris Reyes shares knowledge of Xamarin Forms, accessibility, data caching, replicating UI, Xamarin workshops and more.",
+      "followers": {
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5306079.jpg?t=1627471571"
+    },
+    {
+      "title": "MotzCod.es Blog",
+      "feed_url": "https://montemagno.com/rss/",
+      "website_url": "https://montemagno.com/",
+      "description": "I crush code and share it with the world, publish NuGet packages, speak at conferences, upload videos, live stream coding, tweet up a storm. I'm James Montemagno, and my primary focus is on ensuring a delightful experience for developers using Xamarin to build mobile applications in C# for iOS, Android, macOS, and Windows.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 26300
+      },
+      "image_url": "https://i1.feedspot.com/3845276.jpg?t=1617340157"
+    },
+    {
+      "title": "Xamarin Official Blog",
+      "feed_url": "https://devblogs.microsoft.com/xamarin/feed/",
+      "website_url": "https://devblogs.microsoft.com/xamarin/",
+      "description": "Covers the latest Xamarin news, upcoming events, tips for building native cross-platform mobile apps. Xamarin's products simplify creation and maintenance of high-performance, cross-platform mobile applications targeting phones, tablets and embedded devices running iOS, Android and Windows.",
+      "followers": {
+        "facebook": 76800,
+        "twitter": 66000
+      },
+      "image_url": "https://i1.feedspot.com/4653656.jpg?t=1634044275"
+    },
+    {
+      "title": "XamGirl",
+      "feed_url": "https://xamgirl.com/feed/",
+      "website_url": "https://xamgirl.com/",
+      "description": "Covers articles about Xamarin Forms, Xamarin Essentials, QuickTip and more. Charlin has 5 years of experience in .NET, developing in Xamarin Forms. Currently Xamarin Certified Developer and Microsoft MVP.",
+      "followers": {
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4870811.jpg?t=1617341064"
+    },
+    {
+      "title": "Xamboy",
+      "feed_url": "https://www.xamboy.com/feed/",
+      "website_url": "https://www.xamboy.com/",
+      "description": "Rendy Del Rosario shares his experiences and lessons learned with Xamarin.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5178153.jpg?t=1617341079"
+    },
+    {
+      "title": "Kym Phillpotts",
+      "feed_url": "https://kymphillpotts.com/feed",
+      "website_url": "https://kymphillpotts.com/",
+      "description": "Kym Phillpotts writes about Xamarin Forms, mobile development, Azure, and Connected Apps.",
+      "followers": {
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4654223.jpg?t=1617341086"
+    },
+    {
+      "title": "Xamarin Coding Tutorial",
+      "feed_url": "https://xamarincodingtutorial.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://xamarincodingtutorial.blogspot.com/",
+      "description": "Covers articles about Xamarin.Forms, Xamarin.iOS, Xamarin.Android, Custom Renderer, Xamarin Custom Control, Push Notification, Play Video From URI, Data Bindings.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5084440.jpg?t=1634044756"
+    },
+    {
+      "title": "C# Corner",
+      "feed_url": "https://www.c-sharpcorner.com/rss/articles/xamarin-articles",
+      "website_url": "https://www.c-sharpcorner.com/rss/articles/xamarin-articles",
+      "description": "Covers various Xamarin related source code samples, articles, tutorials, and tips.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 119600
+      },
+      "image_url": "https://i1.feedspot.com/4654212.jpg?t=1634044978"
+    },
+    {
+      "title": "The First Prototype",
+      "feed_url": "https://medium.com/feed/@prototypemakers",
+      "website_url": "https://prototypemakers.medium.com/",
+      "description": "Read writings from The First Prototype related to Xamarin, its features, codes, integrations, applications and much more.",
+      "followers": {
+        "facebook": 288,
+        "twitter": 456,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5435207.jpg?t=1661343889"
+    },
+    {
+      "title": "Mallibone",
+      "feed_url": "https://mallibone.com/feed.xml",
+      "website_url": "https://mallibone.com/",
+      "description": "Covers articles and updates related to Xamarin, by Mark Allibone, a developer, mainly mobile, MS MVP, Xamarin & IoT apps.",
+      "followers": {
+        "twitter": 973
+      },
+      "image_url": "https://i1.feedspot.com/5123232.jpg?t=1619783490"
+    },
+    {
+      "title": "Javier Su\u00e1rez",
+      "feed_url": "https://javiersuarezruiz.wordpress.com/feed/",
+      "website_url": "https://javiersuarezruiz.wordpress.com/",
+      "description": "Covers articles about XAML, Xamarin, Xamarin.Forms, UWP and much more! Javier Su\u00e1rez Ruiz is a MVP Visual Studio Dev Technologies and Windows Dev, Xamarin MVP & Xamarin Certified Developer, Community Helper & Geek.",
+      "followers": {
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/4654810.jpg?t=1617341055"
+    },
+    {
+      "title": "I am a programmer - Alessandro Caliaro",
+      "feed_url": "https://acaliaro.wordpress.com/feed/",
+      "website_url": "https://acaliaro.wordpress.com/",
+      "description": "This blog shares Articles on programming of mobile devices.",
+      "followers": {
+        "twitter": 354
+      },
+      "image_url": "https://i1.feedspot.com/4653700.jpg"
+    },
+    {
+      "title": "Jonathan Peppers",
+      "feed_url": "http://jonathanpeppers.com/Home/Feed/feed",
+      "website_url": "http://jonathanpeppers.com/",
+      "description": "Xamarin MVP and lead developer on the game, Draw a Stickman: EPIC. Jonathan Peppers works at Hitcents, on cross platform C# development using Xamarin.iOS, Xamarin.Android, and plain ol' .Net on Windows.",
+      "followers": {
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/4651694.jpg"
+    },
+    {
+      "title": "Jon Douglas",
+      "feed_url": "https://www.jon-douglas.com/atom.xml?format=xml",
+      "website_url": "https://www.jon-douglas.com/",
+      "description": "Jon Douglas is software developer, Xamarin Certified organizer and blogger.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4653678.jpg?t=1617341277"
+    },
+    {
+      "title": "Fabio Cozzolino's blog",
+      "feed_url": "http://www.fabiocozzolino.eu/feed",
+      "website_url": "http://www.fabiocozzolino.eu/",
+      "description": "A lap around Microsoft .NET, Xamarin, Integration, WCF, Azure.",
+      "followers": {
+        "twitter": 533
+      },
+      "image_url": "https://i1.feedspot.com/4654129.jpg?t=1617341281"
+    },
+    {
+      "title": "Svens Blog",
+      "feed_url": "https://smstuebe.de/feed",
+      "website_url": "https://smstuebe.de/",
+      "description": "Sven is developing mobile Apps with Xamarin and MvvMCross since 2013 and the organizer of the Munich Mobile Xamarin & .NET Developers meetup group.",
+      "followers": {
+        "twitter": 618
+      },
+      "image_url": "https://i1.feedspot.com/4653723.jpg?t=1617341299"
+    },
+    {
+      "title": "XamarinAppDev.com - All About Xamarin",
+      "feed_url": "http://feeds.feedburner.com/XamarinAppDev",
+      "website_url": "https://links.danrigby.com/",
+      "description": "The latest tips, tutorials, news, and resources for Xamarin app developers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3915658.jpg"
+    },
+    {
+      "title": "DevEnvExe.Com Blog",
+      "feed_url": "https://xamarininterviewquestion.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://xamarininterviewquestion.blogspot.com/",
+      "description": "DevEnvExe.Com/Xamarin shares tutorials, tips and tricks to design a Cross Mobile Development, Xamarin.Forms Application , Xamarin Interview Question.",
+      "followers": {
+        "twitter": 263
+      },
+      "image_url": "https://i1.feedspot.com/4654135.jpg?t=1617342550"
+    },
+    {
+      "title": "Into the Mind of Ai",
+      "feed_url": "https://mindofai.github.io/feed",
+      "website_url": "https://mindofai.github.io/",
+      "description": "A blog about mobile, .net, xamarin, cross-platform, uwp, xaml, azure, ui, etc.",
+      "followers": {
+        "twitter": 149
+      },
+      "image_url": "https://i1.feedspot.com/4654094.jpg?t=1617342545"
+    },
+    {
+      "title": "Xamarin Insider",
+      "feed_url": "https://xamarininsider.com/feed/",
+      "website_url": "https://xamarininsider.com/",
+      "description": "Weekly Tutorials, Tips, and Insights for Xamarin developers.",
+      "followers": {
+        "twitter": 106
+      },
+      "image_url": "https://i1.feedspot.com/5076379.jpg?t=1617342554"
+    },
+    {
+      "title": "Code Mill Technologies",
+      "feed_url": "https://codemilltech.com/rss/",
+      "website_url": "https://codemilltech.com/",
+      "description": "Matthew Soucoup is a Senior Cloud Developer Advocate at Microsoft spreading the love of integrating Azure with Xamarin. Code Mill is a boutique consulting and training firm founded by Microsoft and Xamarin MVP Matt Soucoup.",
+      "followers": {
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4654083.jpg?t=1617341102"
+    },
+    {
+      "title": "Xamarin how-to",
+      "feed_url": "https://xamarinhowto.com/feed/",
+      "website_url": "https://xamarinhowto.com/",
+      "description": "Covers Xamarin how-to's, tutorials, guides and general Xamarin, Xamarin.Forms and iOS + Android development articles.",
+      "followers": {
+        "facebook": 14
+      },
+      "image_url": "https://i1.feedspot.com/5303529.jpg?t=1626692412"
+    },
+    {
+      "title": "Alex Dunn",
+      "feed_url": "https://alexdunn.org/feed/",
+      "website_url": "https://alexdunn.org/",
+      "description": "Alex Dunn build applications and teach people along the way.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4653729.jpg?t=1617342534"
+    },
+    {
+      "title": "Marcofolio - Marco Kuiper",
+      "feed_url": "https://feeds.feedburner.com/marcofolio",
+      "website_url": "https://marcofolio.net/",
+      "description": "Learn how to make an App Widget with Xamarin.Android in this tutorial., A presentation at DotNedSaturday about how to make your app smarter with Microsoft Cognitive Services and Xamarin., Learn how to set alternate app icons in iOS 10.3 using Xamarin.iOS, Learn what's now for Visual Studio for Mac that replaced Xamarin Studio as the IDE for C# on MacOS announced at Microsoft Build.",
+      "followers": {
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/89753.jpg"
+    },
+    {
+      "title": "Subramanyam Raju Blog",
+      "feed_url": "https://feeds.feedburner.com/SubramanyamrajuWindowsPhoneBlog",
+      "website_url": "http://bsubramanyamraju.blogspot.com/",
+      "description": "This blog is all about Xamarin & Windows App Dev Tutorials.",
+      "followers": {
+        "twitter": 285
+      },
+      "image_url": "https://i1.feedspot.com/4654218.jpg?t=1617341097"
+    },
+    {
+      "title": "Almir Vuk",
+      "feed_url": "https://almirvuk.blogspot.in//feeds/posts/default",
+      "website_url": "https://almirvuk.com/",
+      "description": "Almir Vuk blog is my place to write about app development and about IT in general.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4653690.jpg?t=1617342570"
+    },
+    {
+      "title": "Vicente G. Guzman Lucio",
+      "feed_url": "https://vicenteguzman.mx/feed/",
+      "website_url": "https://vicenteguzman.mx/",
+      "description": "Development Xamarin.Forms. Lucio is a Microsoft MVP & Xamarin Certified.",
+      "followers": {
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4912508.jpg?t=1617341092"
+    },
+    {
+      "title": "Xamarin eXpert",
+      "feed_url": "https://www.xamarinexpert.it/feed/",
+      "website_url": "https://www.xamarinexpert.it/",
+      "description": "Covers articles, tutorials, plugins guides and more on how to improve your code and apps with Xamarin and Microsoft. Discover how to optimise your C# code.",
+      "followers": {
+        "twitter": 47
+      },
+      "image_url": "https://i1.feedspot.com/5037556.jpg?t=1634044494"
+    },
+    {
+      "title": "Planet Xamarin",
+      "feed_url": "https://www.planetxamarin.com/feed",
+      "website_url": "https://www.wearedotnet.io/",
+      "description": "Features content from Xamarin Community members.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4646529.jpg?t=1634044624"
+    },
+    {
+      "title": "Gerald Versluis",
+      "feed_url": "https://blog.verslu.is/feed/",
+      "website_url": "https://blog.verslu.is/",
+      "description": "Awesome geeky software development stuff. Mostly Xamarin, Web things, C# and a little unicorn.",
+      "followers": {
+        "twitter": 8500
+      },
+      "image_url": "https://i1.feedspot.com/4654150.jpg?t=1617341059"
+    },
+    {
+      "title": "Compiled Experience",
+      "feed_url": "https://compiledexperience.com/blog/syndicate/",
+      "website_url": "https://compiledexperience.com/",
+      "description": "Nigel Sampson shares articles ranging from cloud based web applications, native mobile applications, custom API integrations and everything in between. Compiled Experience blog is focused on distributed cloud systems and microservices. Nigel is a software developer in the .NET ecosystem building mobile and web solutions since 2002.",
+      "followers": {
+        "twitter": 908
+      },
+      "image_url": "https://i1.feedspot.com/113654.jpg?t=1617342371"
+    },
+    {
+      "title": "Diego Ponce de Le\u00f3n",
+      "feed_url": "https://xleon.net/feed",
+      "website_url": "https://xleon.net/",
+      "description": "Diego Ponce de Le\u00f3n is interested in mobile development with Xamarin and REST services with .NET apis. I also enjoy python, UI design/usability and making things look and move smoothly.",
+      "followers": {
+        "twitter": 754
+      },
+      "image_url": "https://i1.feedspot.com/4654099.jpg?t=1617341291"
+    },
+    {
+      "title": "Thomas Bandt Blog",
+      "feed_url": "https://thomasbandt.com/feed",
+      "website_url": "https://thomasbandt.com/articles",
+      "description": "The personal Blog of Thomas Bandt \u2010 Developer and Entrepreneur of Passion.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4653687.jpg"
+    },
+    {
+      "title": "The Wooden Moose .NET Blog",
+      "feed_url": "https://www.timothelariviere.com/feed",
+      "website_url": "https://blog.timothelariviere.com/",
+      "description": "The Wooden Moose .NET Blog explains UWP and Xamarin.",
+      "followers": {
+        "twitter": 343
+      },
+      "image_url": "https://i1.feedspot.com/4653704.jpg?t=1617342516"
+    },
+    {
+      "title": "Curly Brackets - Stefan Thewissen",
+      "feed_url": "https://thewissen.io/feed/",
+      "website_url": "https://thewissen.io/",
+      "description": "Steven Thewissen creates mobile apps with Xamarin and love getting creative with Photoshop.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4653714.jpg?t=1617341219"
+    },
+    {
+      "title": "Evgeny Zborovsky",
+      "feed_url": "https://evgenyzborovsky.com/feed/",
+      "website_url": "https://evgenyzborovsky.com/",
+      "description": "Software development ideas and experience sharing. My current passion is a cross platform mobile development using Xamarin and to be more specific Xamarin.Forms. I have been contributing by reporting bugs, developing Visual Studio extensions, sharing my experience with the community and collaborating in open source projects.",
+      "followers": {
+        "twitter": 173
+      },
+      "image_url": "https://i1.feedspot.com/4908260.jpg?t=1617342575"
+    }
+  ]
+}

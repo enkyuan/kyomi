@@ -1,0 +1,157 @@
+{
+  "category": "Trumpet",
+  "source_url": "https://rss.feedspot.com/trumpet_rss_feeds",
+  "feeds": [
+    {
+      "title": "Trumpet Blog",
+      "feed_url": "https://www.thetrumpetblog.com/feed/?x=1",
+      "website_url": "https://www.thetrumpetblog.com/",
+      "description": "The Trumpet Blog regularly posts information related to trumpets and trumpet playing. Find information on many topics dealing with trumpet playing which will include the basics for the first timer as well as advice for the more experienced player.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4883402.jpg?t=1612505071"
+    },
+    {
+      "title": "Jeff Lewis Trumpet Blog",
+      "feed_url": "https://www.jefflewistrumpet.com/blog/feed/",
+      "website_url": "https://www.jefflewistrumpet.com/blog/",
+      "description": "Jeff Lewis Trumpet is about Jeff Lewis's trumpet playing and teaching life. Find how to play better trumpet, trumpet exercises, tutorials, lessons, and suggestions on how to improve your trumpet playing.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 81
+      },
+      "image_url": "https://i1.feedspot.com/4883520.jpg?t=1612505131"
+    },
+    {
+      "title": "Kurt Thompson",
+      "feed_url": "https://trumpetsizzle.com/collections/all.atom",
+      "website_url": "https://trumpetsizzle.com/collections",
+      "description": "Take Trumpet Lessons Online by Kurt Thompson, course for beginners, advanced, & comeback players. Learn range, endurance, embouchure, high notes, and more.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 418
+      },
+      "image_url": "https://i1.feedspot.com/5170436.jpg?t=1612505171"
+    },
+    {
+      "title": "Mihai Sorohan Trumpet Lessons",
+      "feed_url": "http://mihaisorohantrumpet.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://mihaisorohantrumpet.blogspot.com/",
+      "description": "Hi there. My name is Mihai Sorohan and I've been a professional trumpet player for quite a while now. At the moment I work as a trumpet teacher in Norway.This is a page where I share my teaching resources, my practicing routines, solutions I found while trying to fix my own playing mistakes and maybe interesting finds that concerns trumpet playing.",
+      "followers": {
+        "facebook": 674
+      },
+      "image_url": "https://i1.feedspot.com/4884147.jpg?t=1612505196"
+    },
+    {
+      "title": "Last Row Music \u00bb Trumpet",
+      "feed_url": "https://www.lastrowmusic.com/category/trumpet/feed/",
+      "website_url": "https://www.lastrowmusic.com/category/trumpet/",
+      "description": "Read news updates about Trumpet Auditions, Ensembles, Artists, and Studios in this category. Last Row Music by Jeremy Smith is an online resource for brass musicians. On this website, you will find auditions, news, reviews, and articles related to the brass world.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 329,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5540310.jpg?t=1681367421"
+    },
+    {
+      "title": "Mr. Trumpet Blog",
+      "feed_url": "https://bunnyberiganmrtrumpet.com/feed/",
+      "website_url": "https://bunnyberiganmrtrumpet.com/blog/",
+      "description": "This blog is dedicated to sharing music recordings of famous American Jazz trumpeter, Bunny Berigan along with photos and author's commentary. Author Mike Zirpolo aims the site a place for all Berigan aficionados to find his music in the best sound possible. Mike is also the author of the book The Trials, Tribulations and Triumph of Bunny Berigan.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5540304.jpg?t=1681381400"
+    },
+    {
+      "title": "Mouthpiece Online Blog",
+      "feed_url": "https://mouthpieceonline.com/blog/feed/",
+      "website_url": "https://mouthpieceonline.com/blog/",
+      "description": "Mouthpiece Online is a resource for trumpet players, educators, students and enthusiasts alike. I aim to bring you advice, product features, new artists and recordings to look out for. This resource was set up by John Hutchinson, a UK pro trumpet player, teacher and arranger with extensive experience working with leading manufacturers including Vincent Bach, Yamaha, P.Mauriat and Edwards.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 465,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4886546.jpg?t=1612505141"
+    },
+    {
+      "title": "Essential Trumpet Lessons",
+      "feed_url": "https://feeds.feedburner.com/BlowYourOwnHorn",
+      "website_url": "https://talkingtrumpet.wordpress.com/",
+      "description": "Essential Trumpet Lessons is a podcast about trumpets. Hear interviews with professional trumpeters about their practice and their playing. Find links to topics, people, and recordings mentioned in the interview are in the show notes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4884196.jpg?t=1612505787"
+    },
+    {
+      "title": "All Things Trumpet",
+      "feed_url": "https://allthingstrumpet.com/feed/",
+      "website_url": "https://allthingstrumpet.com/",
+      "description": "AllThingsTrumpet.com is a blog created by David Cooper, that contain articles on practice and performance tips, improvisation techniques, and general trumpet issues for the serious trumpet player. He also reviews equipment and trumpet literature.",
+      "followers": {
+        "twitter": 113
+      },
+      "image_url": "https://i1.feedspot.com/4883623.jpg?t=1612505151"
+    },
+    {
+      "title": "Tartellog",
+      "feed_url": "https://joeytartell.com/feed/",
+      "website_url": "https://joeytartell.com/",
+      "description": "Hi I'm Joey Tartell. I am a Trumpet teacher, trumpet player, sports fan. Tartellog is my blog about rantings of trumpets and sports.",
+      "followers": {
+        "twitter": 882
+      },
+      "image_url": "https://i1.feedspot.com/4883415.jpg"
+    },
+    {
+      "title": "The Silent Trumpet",
+      "feed_url": "https://the-silent-trumpet.tumblr.com/rss",
+      "website_url": "https://the-silent-trumpet.tumblr.com/",
+      "description": "That one trumpet girl who has a nonexistent ego and never talks. Follow the blog to find more on trumpets.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4884222.jpg?t=1612506032"
+    },
+    {
+      "title": "Trumpet Matters",
+      "feed_url": "https://philstudents.blogspot.com/feeds/posts/default",
+      "website_url": "https://philstudents.blogspot.com/",
+      "description": "In his blog Trumpet Matters, former Trumpeteer Phil Collins shares and discusses his personal musings about Trumpets, Orchestra music, Music lessons, and more Trumpet trivia. Phil is a former principal trumpet of the Cincinnati Symphony and Pops Orchestras and has authored several books on Trumpet and Classical Etudes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5540305.jpg?t=1681367992"
+    },
+    {
+      "title": "TrumpetHub Blog",
+      "feed_url": "https://www.trumpethub.com/feed/",
+      "website_url": "https://www.trumpethub.com/blog-2/",
+      "description": "Trumpet Hub is a place with trumpet tips and trumpet reviews for beginners as well as advanced players. Come by and read our blog featuring How-to guides, manuals on Trumpet playing practices, styles, song ideas, and composition breakdowns. The aim is to help new players easily sort through the tons of information available on the topic.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5262146.jpg?t=1681380564"
+    },
+    {
+      "title": "Trumpet Heroes Blog",
+      "feed_url": "https://trumpetheroes.com/feed/",
+      "website_url": "https://trumpetheroes.com/blog/",
+      "description": "The purpose of Trumpet Heroes Blog is to help you learn to play the trumpet, or perhaps just to learn more about the Trumpet. Whether you're learning a band instrument for the first time or returning to an old hobby, the content on this site is here to help you. This site is published by Jim, an orchestral trumpet player and retired high school band teacher.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5540309.jpg?t=1681368052"
+    },
+    {
+      "title": "Ari Micich Blog",
+      "feed_url": "http://www.arimicich.com/blog?format=rss",
+      "website_url": "http://www.arimicich.com/blog",
+      "description": "San Francisco trumpet player, Ari Micich performs with orchestras, opera companies, and ensembles throughout the Bay Area. His blog features updates on his latest work, upcoming songs and albums, and some personal musings.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5540307.jpg?t=1681368128"
+    },
+    {
+      "title": "Trumpet arrangements and more...",
+      "feed_url": "https://trumpetarrangements.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://trumpetarrangements.blogspot.com/",
+      "description": "Follow the blog to find more on trumpets.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4656918.jpg?t=1612505635"
+    }
+  ]
+}

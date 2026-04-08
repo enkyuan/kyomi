@@ -1,0 +1,86 @@
+{
+  "category": "Skatepark",
+  "source_url": "https://rss.feedspot.com/skatepark_rss_feeds",
+  "feeds": [
+    {
+      "title": "Southside Skatepark",
+      "feed_url": "https://southsideskatepark.com/feed",
+      "website_url": "https://southsideskatepark.com/news",
+      "description": "Southside Skatepark is a premier skatepark located in Houston, Texas. Founded in 1994, their mission is to provide a safe and inclusive space for skateboarders to enjoy and progress their skills. Check out their website for park details, event information, and their blog featuring skateboarding tips, interviews, and community highlights.",
+      "followers": {
+        "twitter": 2100,
+        "instagram": 41300
+      },
+      "image_url": "https://i1.feedspot.com/5591340.jpg?t=1686053023"
+    },
+    {
+      "title": "NJgrind Blog",
+      "feed_url": "https://www.njgrind.com/blog-feed.xml",
+      "website_url": "https://www.njgrind.com/blog-1",
+      "description": "NJgrind is a blog dedicated to the skateboarding scene in New Jersey. Their blog covers local skateparks, skateboarding events, rider profiles, and product reviews. Stay connected with the New Jersey skateboarding community by visiting their blog and discovering the latest news and happenings.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5591338.jpg?t=1686053023"
+    },
+    {
+      "title": "Spott Dreams of Skate Parks",
+      "feed_url": "http://scottdreamsofskateparks.blogspot.com/feeds/posts/default",
+      "website_url": "http://scottdreamsofskateparks.blogspot.com/",
+      "description": "Spott Dreams of Skate Parks is a blog dedicated to advocating for and promoting the development of skate parks. Their blog highlights successful skate park projects, community initiatives, and interviews with skate park advocates. Visit their blog to learn about the impact of skate parks and join the movement in creating more opportunities for skateboarders.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5591337.jpg?t=1686053022"
+    },
+    {
+      "title": "Spohn Ranch Skatepark",
+      "feed_url": "https://www.spohnranch.com/skatepark-building-news/feed/",
+      "website_url": "https://www.spohnranch.com/skatepark-building-news/",
+      "description": "Spohn Ranch is a renowned skatepark design and construction company. Founded by Aaron Spohn in 1992, their mission is to create world-class skateparks that promote creativity, inclusivity, and community engagement. Explore their website to learn about their projects and check out their blog for skatepark news, design insights, and skateboarding culture.",
+      "followers": {
+        "facebook": 7300,
+        "instagram": 18600
+      },
+      "image_url": "https://i1.feedspot.com/5591335.jpg?t=1686052846"
+    },
+    {
+      "title": "Desert Dolphin Skatepark",
+      "feed_url": "https://www.desertdolphinskatepark.com/blog-feed.xml",
+      "website_url": "https://www.desertdolphinskatepark.com/news",
+      "description": "Desert Dolphin Skatepark is a popular skatepark located in a desert region. Established in 2010, their vision is to provide a unique and challenging skateboarding experience for riders of all skill levels. Visit their website for information about the park, upcoming events, and updates on the local skateboarding scene.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5591339.jpg?t=1686053023"
+    },
+    {
+      "title": "RampFest Indoor SkatePark Blog",
+      "feed_url": "https://rampfest.com.au/blogs/rampfest.atom",
+      "website_url": "https://rampfest.com.au/blogs/rampfest",
+      "description": "RampFest Indoor SkatePark is a premier indoor skatepark located in Melbourne, Australia. Their blog features skateboarding tips, trick tutorials, event recaps, and updates on the skateboarding industry. Explore their blog to stay inspired and informed about the world of indoor skateboarding.",
+      "followers": {
+        "facebook": 15300,
+        "instagram": 18600
+      },
+      "image_url": "https://i1.feedspot.com/5591336.jpg?t=1686052883"
+    },
+    {
+      "title": "Skate Parks for Dallas Blog",
+      "feed_url": "https://skateparksfordallas.org/news?format=rss",
+      "website_url": "https://skateparksfordallas.org/news",
+      "description": "Skate Parks for Dallas is a community-driven blog focused on advocating for the development of skate parks in the Dallas area. Their blog highlights local skate park projects, fundraising efforts, and updates on skateboarding events. Stay connected with the Dallas skateboarding community by visiting their blog and supporting their initiatives.",
+      "followers": {
+        "facebook": 1200,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5591341.jpg?t=1686052878"
+    },
+    {
+      "title": "Modern Skate & Surf Blog",
+      "feed_url": "https://www.modernskate.com/blogs/modern.atom",
+      "website_url": "https://www.modernskate.com/blogs/modern",
+      "description": "Modern Skate & Surf is a skatepark and surf shop with multiple locations. Their blog covers a wide range of topics, including skateboarding, surfing, snowboarding, and lifestyle. Stay up-to-date with the latest happenings in the skate and surf community by visiting their blog and exploring their diverse content.",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 917,
+        "instagram": 31200
+      },
+      "image_url": "https://i1.feedspot.com/5595707.jpg?t=1686571243"
+    }
+  ]
+}

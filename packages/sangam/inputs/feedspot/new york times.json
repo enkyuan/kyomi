@@ -1,0 +1,257 @@
+{
+  "category": "New York Times",
+  "source_url": "https://rss.feedspot.com/nytimes_rss_feeds",
+  "feeds": [
+    {
+      "title": "The New York Times",
+      "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+      "website_url": "https://www.nytimes.com/",
+      "description": "The New York Times provides breaking news, multimedia, reviews & opinion on Washington, business, sports, movies, travel, books, jobs, education, real estate, cars & more.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000,
+        "instagram": 19600000
+      },
+      "image_url": "https://i1.feedspot.com/9470.jpg?t=1603896012"
+    },
+    {
+      "title": "The New York Times \u00bb World",
+      "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+      "website_url": "https://www.nytimes.com/section/world",
+      "description": "The latest international news, investigations and analysis from Africa, the Americas, Asia, Australia, Canada, Europe, the Middle East and the U.K.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/702593.jpg?t=1752559180"
+    },
+    {
+      "title": "The New York Times \u00bb Business",
+      "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+      "website_url": "https://www.nytimes.com/section/business",
+      "description": "Breaking news and analysis on business and the economy, including the latest news in technology, stock markets, media and finance from The New York Times.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/702593.jpg?t=1752559180"
+    },
+    {
+      "title": "The New York Times \u00bb New York",
+      "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/NYRegion.xml",
+      "website_url": "https://www.nytimes.com/section/nyregion",
+      "description": "Breaking news and the latest headlines from the New York region, including New York City, Westchester, Long Island, New Jersey and Connecticut. Politics, transit, housing, crime and more.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/702593.jpg?t=1752559180"
+    },
+    {
+      "title": "The New York Times \u00bb U.S. Politics",
+      "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+      "website_url": "https://www.nytimes.com/section/politics",
+      "description": "Breaking news and analysis on U.S. politics, including the latest coverage of the White House, Congress, the Supreme Court and more from The New York Times.",
+      "followers": {
+        "facebook": 283100,
+        "twitter": 510300
+      },
+      "image_url": "https://i1.feedspot.com/702593.jpg?t=1752559180"
+    },
+    {
+      "title": "The New York Times \u00bb Technology",
+      "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
+      "website_url": "https://www.nytimes.com/section/technology",
+      "description": "Technology industry news, commentary and analysis, with reporting on big tech, startups, and internet culture.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/702593.jpg?t=1752559180"
+    },
+    {
+      "title": "The New York Times \u00bb Education",
+      "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/Education.xml",
+      "website_url": "https://www.nytimes.com/section/education",
+      "description": "All articles about Education from The New York Times.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/702593.jpg?t=1752559180"
+    },
+    {
+      "title": "The New York Times \u00bb Science",
+      "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/Science.xml",
+      "website_url": "https://www.nytimes.com/section/science",
+      "description": "The latest science news and developments about space, animal behavior, plant life, the brain, genetics, archaeology, robots and climate change, along with Carl Zimmer and the weekly Science Times.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/702593.jpg?t=1752559180"
+    },
+    {
+      "title": "The New York Times \u00bb Health",
+      "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/Health.xml",
+      "website_url": "https://www.nytimes.com/section/health",
+      "description": "The latest news on health and medicine, covid, vaccines, global health, mental health, Obamacare, health insurance, Medicare, Medicaid, opioids, cancer, heart disease and other topics.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/702593.jpg?t=1752559180"
+    },
+    {
+      "title": "The New York Times \u00bb Arts",
+      "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/Arts.xml",
+      "website_url": "https://www.nytimes.com/section/arts",
+      "description": "News and reviews from our critics and reporters, including coverage of pop music, classical music, visual art, dance, movies, music, television and theater.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/702593.jpg?t=1752559180"
+    },
+    {
+      "title": "The New York Times \u00bb Economy",
+      "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/Economy.xml",
+      "website_url": "https://www.nytimes.com/section/business/economy",
+      "description": "The latest news on the economy, job market, real estate industry and workplace. Includes coverage of the Federal Reserve and government spending at the state and national level from The New York Times.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/702593.jpg?t=1752559180"
+    },
+    {
+      "title": "The New York Times \u00bb Climate and Environment",
+      "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/Climate.xml",
+      "website_url": "https://www.nytimes.com/section/climate",
+      "description": "All articles about Climate and Environment from The New York Times.",
+      "followers": {
+        "twitter": 115100
+      },
+      "image_url": "https://i1.feedspot.com/702593.jpg?t=1752559180"
+    },
+    {
+      "title": "The New York Times \u00bb Travel",
+      "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/Travel.xml",
+      "website_url": "https://www.nytimes.com/section/travel",
+      "description": "The latest travel news, guides, vacation tips and photography of the best places to visit around the world. Features include 52 Places and The World Through a Lens.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/702593.jpg?t=1752559180"
+    },
+    {
+      "title": "The New York Times \u00bb U.S.",
+      "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/US.xml",
+      "website_url": "https://www.nytimes.com/section/us",
+      "description": "Breaking news, photos and videos from around the United States. Read our latest coverage on education, health care, immigration, politics, race and religion from The New York Times.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/702593.jpg?t=1752559180"
+    },
+    {
+      "title": "The New York Times \u00bb Food",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/food/rss.xml",
+      "website_url": "https://www.nytimes.com/section/food",
+      "description": "Find food stories, wine news and reviews on restaurants, recipes, cooking, desserts, chefs, fine dining, cuisine, New York restaurants, four star restaurants and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/702593.jpg?t=1752559180"
+    },
+    {
+      "title": "The New York Times \u00bb Real Estate",
+      "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/RealEstate.xml",
+      "website_url": "https://www.nytimes.com/section/realestate",
+      "description": "News on renting, buying, or selling a house, apartment or condo and stories on decorating, interior design, renovation and gardening in New York, New Jersey, Connecticut, California and beyond from The New York Times.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/702593.jpg?t=1752559180"
+    },
+    {
+      "title": "The New York Times \u00bb Style",
+      "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/Style.xml",
+      "website_url": "https://www.nytimes.com/section/style",
+      "description": "Read the latest news on style, fashion, the internet, love, gender, beauty, self-care, weddings and social change. Includes the Modern Love column from The New York Times.",
+      "followers": {
+        "facebook": 189700
+      },
+      "image_url": "https://i1.feedspot.com/702593.jpg?t=1752559180"
+    },
+    {
+      "title": "The New York Times \u00bb Wellness",
+      "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/Well.xml",
+      "website_url": "https://www.nytimes.com/section/well",
+      "description": "All articles about Wellness from The New York Times.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/702593.jpg?t=1752559180"
+    },
+    {
+      "title": "The New York Times \u00bb Lifestyle",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/spotlight/lifestyle/rss.xml",
+      "website_url": "https://www.nytimes.com/spotlight/lifestyle",
+      "description": "Our full coverage of fashion, style, food, travel, wellness, relationships, and real estate from The New York Times.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/702593.jpg?t=1752559180"
+    },
+    {
+      "title": "The New York Times \u00bb Pop Culture",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/spotlight/pop-culture/rss.xml",
+      "website_url": "https://www.nytimes.com/spotlight/pop-culture",
+      "description": "News, reviews and interviews on pop culture, including television, movies, pop music and more from The New York Times.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/702593.jpg?t=1752559180"
+    },
+    {
+      "title": "The New York Times \u00bb Television",
+      "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/Television.xml",
+      "website_url": "https://www.nytimes.com/section/arts/television",
+      "description": "Television news, features, TV show reviews, episode and season recaps from our critics and reporters, spanning the worlds of broadcast, cable, streaming and online from The New York Times.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/702593.jpg?t=1752559180"
+    },
+    {
+      "title": "The New York Times \u00bb Music",
+      "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/Music.xml",
+      "website_url": "https://www.nytimes.com/section/arts/music",
+      "description": "The latest music news, reviews, playlists and interviews from critics and reporters covering classical, pop, rock, jazz, hip-hop, dance, country and avant music from The New York Times.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/702593.jpg?t=1752559180"
+    },
+    {
+      "title": "The New York Times \u00bb Movies",
+      "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/Movies.xml",
+      "website_url": "https://www.nytimes.com/section/movies",
+      "description": "Stay up-to-date on the latest movie news. Reviews of new movies, art, foreign and documentary films by co-chief critics A.O. Scott and Manohla Dargis from The New York Times.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/702593.jpg?t=1752559180"
+    },
+    {
+      "title": "The New York Times \u00bb Artificial Intelligence",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/spotlight/artificial-intelligence/rss.xml",
+      "website_url": "https://www.nytimes.com/spotlight/artificial-intelligence",
+      "description": "All articles about Artificial Intelligence from The New York Times.",
+      "followers": {
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/8641753.jpg?t=1753074586"
+    },
+    {
+      "title": "The New York Times \u00bb Weather",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/weather/rss.xml",
+      "website_url": "https://www.nytimes.com/section/weather/",
+      "description": "All articles about Weather from The New York Times.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/702593.jpg?t=1752559180"
+    },
+    {
+      "title": "The New York Times \u00bb Sports",
+      "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/Sports.xml",
+      "website_url": "https://www.nytimes.com/section/sports",
+      "description": "Find breaking news & sports news on the NFL, the NBA, the NCAA, the NHL, baseball, golf, tennis, soccer, the World Series, Super Bowl, the Olympics and more.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/702593.jpg?t=1752559180"
+    }
+  ]
+}

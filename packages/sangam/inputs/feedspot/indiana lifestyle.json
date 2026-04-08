@@ -1,0 +1,85 @@
+{
+  "category": "Indiana Lifestyle",
+  "source_url": "https://rss.feedspot.com/indiana_lifestyle_rss_feeds",
+  "feeds": [
+    {
+      "title": "Indy Maven",
+      "feed_url": "https://indymaven.com/feed/",
+      "website_url": "https://indymaven.com/articles/",
+      "description": "A lifestyle media company for women by women. Read refreshing female-led stories, subscribe to our newsletter, and check out our latest events. Indy Maven connects women in Indianapolis through captivating news stories, crazy fun events, and partnerships with local businesses.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 1300,
+        "instagram": 12400
+      },
+      "image_url": "https://i1.feedspot.com/5315832.jpg?t=1629968493"
+    },
+    {
+      "title": "Two Twenty One",
+      "feed_url": "https://www.twotwentyone.net/feed/",
+      "website_url": "https://www.twotwentyone.net/",
+      "description": "Two Twenty One is a DIY home and lifestyle blog, where Chelsea shares her home improvement projects, crafts, recipes, home & seasonal decor ideas, organization ideas, tips & tricks, and more. Chelsea, the author of Two Twenty One, is a millennial wife and mom living in Indianapolis, Indiana.",
+      "followers": {
+        "facebook": 40100,
+        "twitter": 4000,
+        "instagram": 52300
+      },
+      "image_url": "https://i1.feedspot.com/4899316.jpg?t=1612772663"
+    },
+    {
+      "title": "Abby Saylor Armbruster",
+      "feed_url": "https://abbysaylor.com/feed/",
+      "website_url": "https://abbysaylor.com/",
+      "description": "Abby is an Indianapolis-based blogger and newlywed working in the PR industry, sharing all things life and style. Her blog is a hub for all of her thoughts, interests, tips and inspiration directed toward fellow style lovers and young professionals. You'll find all of those things and more here with a glimpse into her personal life, travels and trusted recommendations!",
+      "followers": {
+        "facebook": 227,
+        "twitter": 325
+      },
+      "image_url": "https://i1.feedspot.com/4899249.jpg?t=1612772810"
+    },
+    {
+      "title": "Kathleen Post Blog",
+      "feed_url": "https://www.kathleenpost.com/blog?format=rss",
+      "website_url": "https://www.kathleenpost.com/blog",
+      "description": "Lemon Blonde is a lifestyle blog by Kathleen Post featuring all things fashion, hair, beauty, recipes, exercise, and home. Based out of Indianapolis, Indiana, Kathleen takes a fresh and trendy approach to life in her twenties.",
+      "followers": {
+        "instagram": 673000
+      },
+      "image_url": "https://i1.feedspot.com/5315920.jpg?t=1629980077"
+    },
+    {
+      "title": "Karina Style Diaries",
+      "feed_url": "https://karinastylediaries.com/feed/",
+      "website_url": "https://karinastylediaries.com/",
+      "description": "Karina Style Diaries is a popular Indianapolis Life and Style Blog in which Karina shares her beauty tips, makeup tutorials, beauty products and much more.",
+      "followers": {
+        "facebook": 4300,
+        "instagram": 451700
+      },
+      "image_url": "https://i1.feedspot.com/5315936.jpg?t=1629981528"
+    },
+    {
+      "title": "Kelsee B. Hankins",
+      "feed_url": "https://kelseebhankins.com/feed/",
+      "website_url": "https://kelseebhankins.com/",
+      "description": "I'm Kelsee!Welcome to my piece of internet real estate! My life is full of various activities and this blog is no different! Join me for all things Indy, travel, millennial life, and creativity. No two days (or blog posts) are alike!",
+      "followers": {
+        "facebook": 267,
+        "twitter": 1400,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5315887.jpg?t=1633427655"
+    },
+    {
+      "title": "Tales & Turbans",
+      "feed_url": "https://talesandturbans.com/feed",
+      "website_url": "https://talesandturbans.com/",
+      "description": "Tales & Turbans is a lifestyle blog created with the millennial mom in mind. It's a space to come for inspiration, conversation, tips, and how-to's on all things motherhood, fashion, travel, and even food.",
+      "followers": {
+        "facebook": 7100,
+        "instagram": 153600
+      },
+      "image_url": "https://i1.feedspot.com/5311787.jpg?t=1628773492"
+    }
+  ]
+}

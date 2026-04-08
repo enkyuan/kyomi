@@ -1,0 +1,76 @@
+{
+  "category": "Sydney Lifestyle",
+  "source_url": "https://rss.feedspot.com/sydney_lifestyle_rss_feeds",
+  "feeds": [
+    {
+      "title": "Sydney Chic",
+      "feed_url": "https://www.sydneychic.com.au/blog-feed.xml",
+      "website_url": "https://www.sydneychic.com.au/",
+      "description": "Explore the hidden gems of Sydney's bustling streets, from trendy cafes and high-end boutiques to cultural events that ignite the city's spirit. Sydney Chic blog is your key to unlocking the essence of Sydney's cosmopolitan lifestyle, where the old-world charm meets modern elegance.",
+      "followers": {
+        "facebook": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4870759.jpg?t=1620818029"
+    },
+    {
+      "title": "Travel & Lifestyle",
+      "feed_url": "https://travlifestyle.com/feed/",
+      "website_url": "https://travlifestyle.com/category/lifestyle/",
+      "description": "Travel & Lifestyle is a blog by Rafael Ruiz that focuses on the latest travel, hotel, restaurant, bar, lifestyle, and events in Sydney. This blog is your portal to experiencing all that Sydney has to offer, from the latest travel trends to hidden culinary gems, pulsating nightlife serene escapes, and cultural events that ignite your soul.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 899,
+        "instagram": 45000
+      },
+      "image_url": "https://i1.feedspot.com/4922357.jpg?t=1620817618"
+    },
+    {
+      "title": "Your Boys & Mine",
+      "feed_url": "https://www.yourboysandmine.com.au/feed/",
+      "website_url": "https://www.yourboysandmine.com.au/",
+      "description": "Your Boys and Mine is Belinda McKellar's lifestyle and family travel blog, offering daily inspiration to mothers of boys. Covering travel, Sydney exploration, and boy parenting, it features beloved products, home play and learn ideas, plus expert insights on all things related to raising boys.",
+      "followers": {
+        "facebook": 324,
+        "twitter": 288,
+        "instagram": 6500
+      },
+      "image_url": "https://i1.feedspot.com/5182252.jpg?t=1660134508"
+    },
+    {
+      "title": "Mr and Mrs Romance \u00bb Lifestyle",
+      "feed_url": "https://mrandmrsromance.com/category/lifestyle/feed/",
+      "website_url": "https://mrandmrsromance.com/category/lifestyle/",
+      "description": "Mr and Mrs Romance is an award-winning travel and lifestyle blog by blogger couple Jim & Christina exploring the adventure of life through travel and photography. Uncover amazing hacks on Fashion, Clothes, Gift ideas and more in this section.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 10200,
+        "instagram": 11100
+      },
+      "image_url": "https://i1.feedspot.com/5717323.jpg?t=1700571455"
+    },
+    {
+      "title": "Man of Many",
+      "feed_url": "https://manofmany.com//feed",
+      "website_url": "https://manofmany.com/",
+      "description": "Uncover hidden Lifestyle secrets and style advice from experts. Learn and be the best version of yourself as a man. Man of Many is a premier lifestyle site in Australia. The blog serves as a modern men's lifestyle guide to fitness, food, drinks, sex, relationships, travel, advice, exclusive events and so much more.",
+      "followers": {
+        "facebook": 215200,
+        "twitter": 45800,
+        "instagram": 300800
+      },
+      "image_url": "https://i1.feedspot.com/5717324.jpg?t=1700571457"
+    },
+    {
+      "title": "Daily Telegraph \u00bb Lifestyle",
+      "feed_url": "https://www.dailytelegraph.com.au/lifestyle/feed",
+      "website_url": "https://www.dailytelegraph.com.au/lifestyle",
+      "description": "Embark on a journey through Sydney's vibrant lifestyle scene with Daily Telegraph's handpicked curation of the latest trends and happenings, bringing you the pulse of the city's dynamic lifestyle landscape. Follow for breaking news in Sydney. NRL News, Sport, Entertainment and Business.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 227500,
+        "instagram": 240900
+      },
+      "image_url": "https://i1.feedspot.com/5717322.jpg?t=1700571444"
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "category": "San Francisco News",
+  "source_url": "https://rss.feedspot.com/san_francisco_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "KRON4",
+      "feed_url": "https://www.kron4.com/news/app-feed",
+      "website_url": "https://www.kron4.com/",
+      "description": "San Francisco Bay Area's local news & weather station. Local reporting to make San Francisco, San Jose, Oakland and the rest of the Bay Area a better place to live.",
+      "followers": {
+        "facebook": 742500,
+        "twitter": 293200,
+        "instagram": 102200
+      },
+      "image_url": "https://i1.feedspot.com/5131360.jpg"
+    },
+    {
+      "title": "NBC Bay Area",
+      "feed_url": "https://www.nbcbayarea.com/?rss=y",
+      "website_url": "https://www.nbcbayarea.com/",
+      "description": "NBC Bay Area provides Bay Area news, local news, weather, traffic, entertainment, breaking news and much more. KNTV, branded as NBC Bay Area, founded in 1955, is a television station licensed to San Jose, California, broadcasting NBC programming to the San Francisco Bay Area.",
+      "followers": {
+        "facebook": 667900,
+        "twitter": 399300,
+        "instagram": 229000
+      },
+      "image_url": "https://i1.feedspot.com/5131367.jpg?t=1667303381"
+    },
+    {
+      "title": "SFist",
+      "feed_url": "https://sfist.com/rss/",
+      "website_url": "https://sfist.com/",
+      "description": "SFist is San Francisco's source for fun, witty, & serious news. With updates about restaurants, events, sports, politics & more, we give you everything you need to know about San Francisco and the Bay Area.",
+      "followers": {
+        "facebook": 58000,
+        "twitter": 274900
+      },
+      "image_url": "https://i1.feedspot.com/26493.jpg?t=1667381770"
+    },
+    {
+      "title": "The Mercury News \u00bb Local News",
+      "feed_url": "https://www.mercurynews.com/location/california/bay-area/feed/",
+      "website_url": "https://www.mercurynews.com/location/california/bay-area/",
+      "description": "Latest Silicon Valley and San Francisco Bay Area news, sports, business, entertainment, lifestyle and commentary from reporters & columnists at The Mercury News.",
+      "followers": {
+        "facebook": 195500,
+        "twitter": 276900,
+        "instagram": 31900
+      },
+      "image_url": "https://i1.feedspot.com/5131361.jpg?t=1743158402"
+    },
+    {
+      "title": "Local News Matters",
+      "feed_url": "https://localnewsmatters.org/feed/",
+      "website_url": "https://localnewsmatters.org/",
+      "description": "Local News Matters is a nonprofit site bringing community coverage to the San Francisco Bay Area region so that the people, places and topics that deserve more attention get it. Bay City News Foundation serves the greater San Francisco Bay Area. We are backed by charitable donations from contributors who care about local news, a free press, democratic values and an informed citizenry.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5461880.jpg?t=1667302720"
+    },
+    {
+      "title": "The San Francisco Standard",
+      "feed_url": "https://sfstandard.com/feed/",
+      "website_url": "https://sfstandard.com/",
+      "description": "The San Francisco Standard is San Francisco Bay Area's essential source for daily news, politics, business, food, tech and culture coverage. The San Francisco Standard is a news organization serving everyone with a stake in the future of San Francisco. We aim to build the city's most trusted, authoritative and contemporary source of news and information.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5459146.jpg?t=1667304427"
+    },
+    {
+      "title": "48 Hills",
+      "feed_url": "https://48hills.org/feed/",
+      "website_url": "https://48hills.org/",
+      "description": "48 Hills is San Francisco's largest daily, independent community news and culture site, launched by the editors of the legendary SF Bay Guardian alternative weekly newspaper. 48 Hills has covered local and global music, arts, nightlife, and cultural events from a deep and fiercely independent point of view, as well as reporting on vital news stories and issues, with a diverse array of community voices.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 8900,
+        "instagram": 9700
+      },
+      "image_url": "https://i1.feedspot.com/5461874.jpg?t=1753944429"
+    },
+    {
+      "title": "San Francisco News",
+      "feed_url": "https://www.thesfnews.com/feed",
+      "website_url": "https://www.thesfnews.com/",
+      "description": "Providing unbiased, accurate, and uninterrupted news coverage of San Francisco's daily happenings. Browse updates on Local News, Sports, California, and the Entertainment world. San Francisco News is a community newspaper that tells news to San Fran resident without any political agenda or spin.",
+      "followers": {
+        "facebook": 9000,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5478162.jpg?t=1681303124"
+    },
+    {
+      "title": "Mission Local",
+      "feed_url": "https://missionlocal.org/feed/",
+      "website_url": "https://missionlocal.org/",
+      "description": "San Francisco's Mission Local is reporting on most critical issues: police reform, corruption, education, public health, housing and homelessness. Since 2008, Mission Local, an independent news site, has been focused on high-impact, enterprise reporting on everything. Core to our mission is training the next generation of journalists who reflect the diversity of San Francisco.",
+      "followers": {
+        "facebook": 27000,
+        "twitter": 42800,
+        "instagram": 47100
+      },
+      "image_url": "https://i1.feedspot.com/384331.jpg?t=1667381366"
+    },
+    {
+      "title": "San Francisco Bay View",
+      "feed_url": "https://sfbayview.com/feed/",
+      "website_url": "https://sfbayview.com/#",
+      "description": "Exciting, thought-provoking stories and commentary on the full range of Black trials and triumphs, covering the Black economy, politics, arts, education, history, current events, health, religion, and those of other communities, along with stunning color photography, fill the website and the pages of each paper, a paper so popular that it disappears within hours of hitting the stands.",
+      "followers": {
+        "twitter": 6800,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/5042076.jpg?t=1667382597"
+    },
+    {
+      "title": "SFBay",
+      "feed_url": "https://sfbayca.com/feed/",
+      "website_url": "https://sfbayca.com/",
+      "description": "SFBay.com provides coverage of people, places, and issues that deserve more attention from readers across the area. SFBay is a news website by Bay City News, a 24/7 news service covering the greater Bay Area.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5478159.jpg?t=1681303281"
+    },
+    {
+      "title": "San Francisco Bay Times",
+      "feed_url": "https://sfbaytimes.com/feed/",
+      "website_url": "https://sfbaytimes.com/",
+      "description": "The San Francisco Bay Times is the oldest LGBTQ newspaper in the Bay Area that is now and always has been fully funded and owned by LGBTQ individuals. The San Francisco Bay Times in 1978 became the first LGBT newspaper in California, and among the first in the world, to be jointly and equally produced by lesbians and gay men.",
+      "followers": {
+        "facebook": 30800,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5459147.jpg?t=1667382382"
+    },
+    {
+      "title": "The San Francisco Standard",
+      "feed_url": "https://sfstandard.com/feed",
+      "website_url": "https://sfstandard.com/",
+      "description": "The San Francisco Bay Area's essential source for daily news, politics, business, food, tech and culture coverage.",
+      "followers": {
+        "facebook": 46700,
+        "twitter": 34600,
+        "instagram": 176000
+      },
+      "image_url": "https://i1.feedspot.com/7862969.jpg?t=1753941825"
+    },
+    {
+      "title": "ABC7 San Francisco",
+      "feed_url": "https://abc7news.com/feed/",
+      "website_url": "https://abc7news.com/",
+      "description": "The Bay Area's source for music news stories, get the latest updates from ABC7. Covering San Francisco, Oakland and San Jose and all of the greater Bay Area.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 589000,
+        "instagram": 375500
+      },
+      "image_url": "https://i1.feedspot.com/4418692.jpg?t=1753942363"
+    },
+    {
+      "title": "San Francisco 49ers",
+      "feed_url": "https://www.49ers.com/rss/news",
+      "website_url": "https://www.49ers.com/news/",
+      "description": "The official source of the latest 49ers headlines, news, roster transactions, injury updates, key matchups, and more from San Francisco 49ers.",
+      "followers": {
+        "facebook": 4099999,
+        "twitter": 2500000,
+        "instagram": 3900000
+      },
+      "image_url": "https://i1.feedspot.com/5159660.jpg?t=1753942292"
+    },
+    {
+      "title": "Giants365.com",
+      "feed_url": "https://feeds.feedburner.com/giants365-news",
+      "website_url": "https://www.giants365.com/",
+      "description": "Your best resource for San Francisco Giants baseball news. Includes a forum, chat, multimedia, and much more.",
+      "followers": {
+        "facebook": 958,
+        "twitter": 589,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/5180426.jpg?t=1753942919"
+    },
+    {
+      "title": "48 Hills",
+      "feed_url": "https://48hills.org/feed/",
+      "website_url": "https://48hills.org/",
+      "description": "48 Hills is San Francisco's largest daily, independent community news and culture site, launched by the editors of the legendary SF Bay Guardian alternative weekly newspaper. 48 Hills has covered local and global music, arts, nightlife, and cultural events from a deep and fiercely independent point of view, as well as reporting on vital news stories and issues, with a diverse array of community voices.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 8900,
+        "instagram": 9700
+      },
+      "image_url": "https://i1.feedspot.com/5461874.jpg?t=1753944429"
+    },
+    {
+      "title": "The Business Journals \u00bb San Francisco",
+      "feed_url": "https://feeds.bizjournals.com/sanfrancisco",
+      "website_url": "https://www.bizjournals.com/sanfrancisco",
+      "description": "The San Francisco Business Times features local business news about San Francisco. We also provide tools to help businesses grow, network and hire.",
+      "followers": {
+        "facebook": 18200,
+        "twitter": 44000,
+        "instagram": 5900
+      },
+      "image_url": "https://i1.feedspot.com/8653863.jpg?t=1753942727"
+    },
+    {
+      "title": "Good News Network \u00bb San Francisco",
+      "feed_url": "https://www.goodnewsnetwork.org/tag/san-francisco/feed/",
+      "website_url": "https://www.goodnewsnetwork.org/tag/san-francisco/",
+      "description": "All articles about San Francisco from Good News Network.",
+      "followers": {
+        "facebook": 610300,
+        "twitter": 38100,
+        "instagram": 47100
+      },
+      "image_url": "https://i1.feedspot.com/8653864.jpg?t=1753944188"
+    },
+    {
+      "title": "The Epoch Times \u00bb San Francisco",
+      "feed_url": "https://www.theepochtimes.com/us/nor-cal-san-francisco/feed",
+      "website_url": "https://www.theepochtimes.com/us/nor-cal-san-francisco",
+      "description": "The Epoch Times is an independent voice in print and on the web. We report news responsibly and truthfully so that readers can improve their own lives and increase their understanding and respect for their neighbors next door and around the globe.",
+      "followers": {
+        "facebook": 8700000,
+        "twitter": 828700,
+        "instagram": 375900
+      },
+      "image_url": "https://i1.feedspot.com/8653865.jpg?t=1753944070"
+    },
+    {
+      "title": "Bay Area Reporter",
+      "feed_url": "https://www.ebar.com/rss/23/News",
+      "website_url": "https://www.ebar.com/",
+      "description": "All articles from Bay Area Reporter.",
+      "followers": {
+        "facebook": 16100,
+        "twitter": 7200,
+        "instagram": 6700
+      },
+      "image_url": "https://i1.feedspot.com/8653866.jpg?t=1753942567"
+    },
+    {
+      "title": "CBS News \u00bb San Francisco",
+      "feed_url": "https://sanfrancisco.cbslocal.com/category/news/feed/",
+      "website_url": "https://www.cbsnews.com/sanfrancisco/",
+      "description": "San Francisco Bay Area news, weather, sports from KPIX news, sports, weather, traffic and the best of SF.",
+      "followers": {
+        "facebook": 322700,
+        "twitter": 122400,
+        "instagram": 65300
+      },
+      "image_url": "https://i1.feedspot.com/5131362.jpg"
+    },
+    {
+      "title": "WhatNow \u00bb San Francisco",
+      "feed_url": "https://whatnow.com/san-francisco/feed/",
+      "website_url": "https://whatnow.com/san-francisco/",
+      "description": "What Now San Francisco is the premier news source for planned restaurants, retail, and real estate in the San Francisco, CA area. Wherever the newly charted destination, What Now San Francisco will be there to chronicle the journey.",
+      "followers": {
+        "facebook": 564,
+        "twitter": 130
+      },
+      "image_url": "https://i1.feedspot.com/5461862.jpg?t=1667381485"
+    },
+    {
+      "title": "SFGate",
+      "feed_url": "https://www.sfgate.com/",
+      "website_url": "https://www.sfgate.com/",
+      "description": "Your San Francisco Bay Area local news source plus the latest in sports, culture, weather, food and drink, politics, real estate, Lake Tahoe and California Parks. Launched in 1994, SFGATE.com was one of the first large-market media sites in the world and served as the exclusive digital home of the San Francisco Chronicle. The site, which was initially known as The Gate until officially becoming SFGATE in 1998",
+      "followers": {
+        "facebook": 802000,
+        "twitter": 493100,
+        "instagram": 337500
+      },
+      "image_url": "https://i1.feedspot.com/135151.jpg?t=1667302818"
+    },
+    {
+      "title": "San Francisco Examiner",
+      "feed_url": "https://www.sfexaminer.com/",
+      "website_url": "https://www.sfexaminer.com/",
+      "description": "Get current local San Francisco and Bay area news, crime, politics, weather, sports, entertainment, arts, features, obituaries, real estate and all other stories relevant to residents of San Francisco, California, USA.",
+      "followers": {
+        "facebook": 22800,
+        "twitter": 72200
+      },
+      "image_url": "https://i1.feedspot.com/5131357.jpg?t=1585121825"
+    },
+    {
+      "title": "SF Weekly",
+      "feed_url": "https://www.sfweekly.com/",
+      "website_url": "https://www.sfweekly.com/",
+      "description": "SF Weekly is your go-to publication for comprehensive coverage of San Francisco news, music, food, and arts scenes. We are San Francisco's smartest publication and we take journalism seriously. We pride ourselves on bringing you alternative takes on San Francisco.",
+      "followers": {
+        "facebook": 69700,
+        "twitter": 203400,
+        "instagram": 11200
+      },
+      "image_url": "https://i1.feedspot.com/5131356.jpg?t=1585120702"
+    },
+    {
+      "title": "San Francisco Business Times",
+      "feed_url": "https://www.bizjournals.com/sanfrancisco/",
+      "website_url": "https://www.bizjournals.com/sanfrancisco/",
+      "description": "The San Francisco Business Times features local business news about San Francisco. Read breaking news and developing stories directly via bizjournals.com/sanfrancisco. We also provide tools to help businesses grow, network, and hire.",
+      "followers": {
+        "facebook": 18200,
+        "twitter": 44000,
+        "instagram": 5900
+      },
+      "image_url": "https://i1.feedspot.com/5478167.jpg?t=1670825660"
+    },
+    {
+      "title": "The San Francisco Times",
+      "feed_url": "https://sftimes.com/feed/",
+      "website_url": "https://sftimes.com/",
+      "description": "Stay connected and informed on what's happening in Bay Area with Crime, Business, Politics, and Health updates. The San Francisco Times is dedicated to covering the stories of our community and neighborhoods. Join us in covering what matters to our city and the greater surrounding Bay Area.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5230873.jpg?t=1681303308"
+    }
+  ]
+}

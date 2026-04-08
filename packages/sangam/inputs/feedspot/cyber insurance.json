@@ -1,0 +1,36 @@
+{
+  "category": "Cyber Insurance",
+  "source_url": "https://rss.feedspot.com/cyber_insurance_rss_feeds",
+  "feeds": [
+    {
+      "title": "ProWriters Cyber Insurance Blog",
+      "feed_url": "https://prowritersins.com/feed/",
+      "website_url": "https://prowritersins.com/cyber-insurance-blog/",
+      "description": "Understand Cyber Insurance and security threats with ProWriters' Cyber Insurance blog. ProWriters is an independent underwriting and brokerage facility serving agents & brokers. We focus on E&O, D&O, and Cyber Insurance.",
+      "followers": {
+        "facebook": 53,
+        "twitter": 269
+      },
+      "image_url": "https://i1.feedspot.com/5403856.jpg?t=1653481216"
+    },
+    {
+      "title": "Cowbell Cyber Blog",
+      "feed_url": "https://cowbell.insure/feed/",
+      "website_url": "https://cowbell.insure/blog/",
+      "description": "Stay up-to-date with Cowbell Cyber. Grow your cyber IQ with our insights into cyber insurance, cyber risk, and cybersecurity. Cowbell Cyber is the leading provider of cyber insurance for small and medium-sized enterprises (SMEs). Cowbell delivers standalone cyber coverage tailored to the unique needs of each business.",
+      "followers": {
+        "facebook": 478,
+        "twitter": 637
+      },
+      "image_url": "https://i1.feedspot.com/5403860.jpg?t=1653481164"
+    },
+    {
+      "title": "Data Breach Insurance Blog",
+      "feed_url": "https://databreachinsurancequote.com/feed/",
+      "website_url": "https://databreachinsurancequote.com/blog/",
+      "description": "Learn more about cyber insurance, data security and quotes with our blog. Founded in 2011, Cyber Data-Risk Managers is a digital insurance broker synonymous with cyber insurance.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5403859.jpg?t=1653482586"
+    }
+  ]
+}

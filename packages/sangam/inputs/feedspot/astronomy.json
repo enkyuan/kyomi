@@ -1,0 +1,449 @@
+{
+  "category": "Astronomy",
+  "source_url": "https://rss.feedspot.com/astronomy_rss_feeds",
+  "feeds": [
+    {
+      "title": "Space.com",
+      "feed_url": "https://www.space.com/feeds.xml",
+      "website_url": "https://www.space.com/",
+      "description": "From rocket launches to cosmic discoveries, NASA announcements, space missions and satellite data, we are here to keep you updated and informed on all things SPACE. Get the latest space exploration, innovation and astronomy news. Space.com celebrates humanity's ongoing expansion across the final frontier.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 1600000,
+        "instagram": 147700
+      },
+      "image_url": "https://i1.feedspot.com/4997991.jpg?t=1625214059"
+    },
+    {
+      "title": "Sky and Telescope",
+      "feed_url": "https://skyandtelescope.org/astronomy-blogs/feed/",
+      "website_url": "https://skyandtelescope.org/astronomy-blogs/",
+      "description": "Our astronomy blogs have editors and contributors to Sky & Telescope writing about everything from the night sky to astrophotography to upcoming launches. Sky & Tel covers the latest night-sky events, astronomy news, astrophotography and observing tips.",
+      "followers": {
+        "facebook": 606000,
+        "twitter": 127000,
+        "instagram": 24300
+      },
+      "image_url": "https://i1.feedspot.com/4728027.jpg?t=1607693695"
+    },
+    {
+      "title": "Armagh Planetarium's Stellar Blog",
+      "feed_url": "https://armaghplanet.com/feed",
+      "website_url": "https://armaghplanet.com/",
+      "description": "Latest news and views from the exciting worlds of astronomy and space brought to you by the world-renowned Armagh Planetarium.",
+      "followers": {
+        "facebook": 36400,
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/4624196.jpg?t=1608533106"
+    },
+    {
+      "title": "Astroblog",
+      "feed_url": "http://astroblogger.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://astroblogger.blogspot.com/",
+      "description": "Obscured by Clouds. The rough and ready blog of a cloud benighted biologist and amateur astronomer. Astroblog will cover my interests in astronomy, biology and Life, the Universe and Everything.",
+      "followers": {
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/682598.jpg?t=1607693734"
+    },
+    {
+      "title": "Women In Astronomy",
+      "feed_url": "https://womeninastronomy.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://womeninastronomy.blogspot.com/",
+      "description": "The AAS Committee on the Status of Women in Astronomy maintains this blog to disseminate information relevant to astronomers who identify as women and share the perspectives of astronomers from varied backgrounds.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 2300,
+        "instagram": 6000
+      },
+      "image_url": "https://i1.feedspot.com/5298456.jpg?t=1753706250"
+    },
+    {
+      "title": "National Radio Astronomy Observatory",
+      "feed_url": "https://public.nrao.edu/feed/",
+      "website_url": "https://public.nrao.edu/blogs/",
+      "description": "The National Radio Astronomy Observatory (NRAO) conceives, designs, builds, operates, and maintains world-class radio telescopes used by scientists from around the world to study virtually all types of astronomical objects, from bodies in our own Solar System to galaxies in the distant Universe.",
+      "followers": {
+        "facebook": 81700,
+        "twitter": 44000,
+        "instagram": 15800
+      },
+      "image_url": "https://i1.feedspot.com/5298130.jpg?t=1625128154"
+    },
+    {
+      "title": "Philip Pugh's Astronomy Blog",
+      "feed_url": "https://sungazer127mak.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://sungazer127mak.blogspot.com/",
+      "description": "Welcome to my new blog. I am a telecommunications trainer by day and solar observer during breaks and observe the wonders of the night. I use affordable techniques to take snaps of the Sun, Moon, planets and anything else I can get on my limited equipment.",
+      "followers": {
+        "twitter": 7900
+      },
+      "image_url": "https://i1.feedspot.com/5003418.jpg?t=1605776519"
+    },
+    {
+      "title": "Clear Skies Blog",
+      "feed_url": "https://clearskies.eu/feed/",
+      "website_url": "https://clearskies.eu/blog/",
+      "description": "Home of the Clear Skies Observing Guides. A site focused on visual astronomy and a place to share a passion for the nighttime sky. Stargazing with a side of photography.",
+      "followers": {
+        "facebook": 740,
+        "twitter": 398
+      },
+      "image_url": "https://i1.feedspot.com/5405252.jpg?t=1653984917"
+    },
+    {
+      "title": "Astronomy Magazine",
+      "feed_url": "https://www.astronomy.com/feed/",
+      "website_url": "https://www.astronomy.com/",
+      "description": "Astronomy.com is for anyone who wants to learn more about astronomy and space, including planets, galaxies, asteroids, and NASA.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 264800,
+        "instagram": 32400
+      },
+      "image_url": "https://i1.feedspot.com/1390890.jpg?t=1753867622"
+    },
+    {
+      "title": "Sky Lights",
+      "feed_url": "https://sky-lights.org/feed/",
+      "website_url": "https://sky-lights.org/",
+      "description": "The only good night lights are billions of miles away.",
+      "followers": {},
+      "image_url": "https://sky-lights.org/wp-content/uploads/2021/03/heim-3.jpg?t=1753867368"
+    },
+    {
+      "title": "Forsyth Astronomical Society Blog",
+      "feed_url": "https://www.fas37.org/wp/feed/",
+      "website_url": "https://www.fas37.org/wp/fas-astronomers-blog/",
+      "description": "The FAS Astronomers Blog is a platform for discussions on science, astronomy, and the universe. It features articles on topics such as planets, stars, constellations, astronomical discoveries, spaceflight, and the history of the Earth.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 7
+      },
+      "image_url": "https://i1.feedspot.com/8653431.jpg?t=1753867994"
+    },
+    {
+      "title": "Name A Star Blog",
+      "feed_url": "https://www.nameastar.com/feed/",
+      "website_url": "https://www.nameastar.com/blog/",
+      "description": "The Name a Star blog is full of fun facts about space, stars, and more! Be sure to read our blog to learn fun information and start shopping for your Name a Star gift now.",
+      "followers": {
+        "twitter": 18
+      },
+      "image_url": "https://i1.feedspot.com/8653419.jpg?t=1753868215"
+    },
+    {
+      "title": "In the Dark",
+      "feed_url": "https://telescoper.blog/feed/",
+      "website_url": "https://telescoper.blog/",
+      "description": "A blog about the Universe, and all that surrounds it",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/103397.jpg?t=1753867322"
+    },
+    {
+      "title": "EarthSky",
+      "feed_url": "https://earthsky.org/feed/",
+      "website_url": "https://earthsky.org/",
+      "description": "Based in Austin, TX, the EarthSky team has a blast bringing you daily updates on Earth, Space, Science news, great photos,and sky alerts.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 832300,
+        "instagram": 118900
+      },
+      "image_url": "https://i1.feedspot.com/79933.jpg?t=1513776319"
+    },
+    {
+      "title": "NASA",
+      "feed_url": "https://www.nasa.gov/feed/",
+      "website_url": "https://www.nasa.gov/",
+      "description": "NASA.gov brings you the latest news, images and videos from America's space agency, pioneering the future in space exploration, scientific discovery and aeronautics research.",
+      "followers": {
+        "facebook": 26900000,
+        "instagram": 96800000
+      },
+      "image_url": "https://i1.feedspot.com/5810153.jpg?t=1743532641"
+    },
+    {
+      "title": "The Planetary Society",
+      "feed_url": "https://www.planetary.org/rss/articles",
+      "website_url": "https://www.planetary.org/articles/",
+      "description": "The latest stories from The Planetary Society, featuring humanity's quest to explore worlds, find life, and defend Earth.",
+      "followers": {
+        "facebook": 939000,
+        "twitter": 247600,
+        "instagram": 659100
+      },
+      "image_url": "https://i1.feedspot.com/5411041.jpg?t=1753867323"
+    },
+    {
+      "title": "SpaceDaily",
+      "feed_url": "https://www.spacedaily.com/spacedaily.xml",
+      "website_url": "https://www.spacedaily.com/",
+      "description": "Space News from across the world and distant stars and planets.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 255
+      },
+      "image_url": "https://i1.feedspot.com/108902.jpg?t=1616136172"
+    },
+    {
+      "title": "The Space Review",
+      "feed_url": "https://www.thespacereview.com/articles.xml",
+      "website_url": "https://www.thespacereview.com/",
+      "description": "Find latest news on space and astronomy.",
+      "followers": {
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/325974.jpg?t=1513860574"
+    },
+    {
+      "title": "Astrobites",
+      "feed_url": "https://astrobites.org/feed/",
+      "website_url": "https://astrobites.org/",
+      "description": "Astrobites is a daily journal that summarizes new astrophysical research from astro-ph for undergraduates, written by graduate students. It also includes articles on career navigation, personal experiences in astronomy, current events, and various astronomical topics.",
+      "followers": {
+        "facebook": 7200
+      },
+      "image_url": "https://i1.feedspot.com/8653421.jpg?t=1753868443"
+    },
+    {
+      "title": "European Southern Observatory",
+      "feed_url": "https://feeds.feedburner.com/EsoTopNews",
+      "website_url": "https://www.eso.org/public/news/",
+      "description": "The European Southern Observatory (ESO) website provides news, press releases, images, and videos related to astronomical discoveries. It also details ESO's observatories, telescopes, instruments, and information on events, outreach programs, and career opportunities.",
+      "followers": {
+        "facebook": 268600,
+        "instagram": 104300
+      },
+      "image_url": "https://i1.feedspot.com/1366566.jpg?t=1753868601"
+    },
+    {
+      "title": "The Daily Galaxy \u00bb Astronomy",
+      "feed_url": "https://dailygalaxy.com/category/astronomy/feed/",
+      "website_url": "https://dailygalaxy.com/category/astronomy/",
+      "description": "The Daily Galaxy -Great Discoveries Channel, is an eclectic text and video presentation of news and original insights on science, space exploration and the environment and their reflections in popular culture (film, books, events). It provides news and original insights on science, space exploration, cosmology, astrobiology, and astrophysics.",
+      "followers": {
+        "twitter": 347400
+      },
+      "image_url": "https://i1.feedspot.com/8653418.jpg"
+    },
+    {
+      "title": "Astronomy Cast",
+      "feed_url": "https://feeds.libsyn.com/18112/rss",
+      "website_url": "https://www.astronomycast.com/",
+      "description": "Take a fact-based journey through the cosmos. Tune in to hear weekly discussions on astronomical topics ranging from planets to cosmology. Hosted by Fraser Cain (Universe Today) and Dr. Pamela L. Gay (Planetary Science Institute), this show brings the questions of an avid astronomy lover direct to an astronomer. Together Fraser and Pamela explore what is known and being discovered about the universe around us. Astronomy Cast is supported thru patreon.com/AstronomyCast.",
+      "followers": {
+        "twitter": 10900
+      },
+      "image_url": "https://i1.feedspot.com/8653425.jpg?t=1753868635"
+    },
+    {
+      "title": "Astronomy Now Magazine",
+      "feed_url": "https://astronomynow.com/feed/",
+      "website_url": "https://astronomynow.com/",
+      "description": "Astronomy Now is the UK's biggest astronomy magazine. For over 25 years Astronomy Now magazine has provided a monthly source of information for amateur and professional astronomers alike. A wide range of feature articles cover subjects such as observing, cosmology, the history of astronomy and space science.",
+      "followers": {
+        "facebook": 532000,
+        "twitter": 116800
+      },
+      "image_url": "https://i1.feedspot.com/4624223.jpg?t=1616135705"
+    },
+    {
+      "title": "HobbySpace",
+      "feed_url": "https://hobbyspace.com/Blog/?feed=rss2",
+      "website_url": "https://hobbyspace.com/Blog/",
+      "description": "The Space-for-All at HobbySpace blog is dedicated to space, astronomy, and exploration, featuring reports on solar system formation, space habitats, and links to research and news from space agencies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8653426.jpg?t=1753868761"
+    },
+    {
+      "title": "Galaxy Zoo",
+      "feed_url": "https://blog.galaxyzoo.org/feed/",
+      "website_url": "https://blog.galaxyzoo.org/",
+      "description": "Galaxy Zoo is a Zooniverse citizen science project, asking you to help astronomers classify galaxies",
+      "followers": {
+        "facebook": 10600
+      },
+      "image_url": "https://i1.feedspot.com/717633.jpg?t=1753868830"
+    },
+    {
+      "title": "HiRISE: High Resolution Imaging Science Experiment",
+      "feed_url": "https://hirise.lpl.arizona.edu/togo/rss.php",
+      "website_url": "https://www.uahirise.org/",
+      "description": "The HiRISE (High Resolution Imaging Science Experiment) website, operated by the University of Arizona, is a hub for information, images, and updates related to the HiRISE instrument, showcasing Martian features and offering scientific, educational, and image resources.",
+      "followers": {
+        "twitter": 86500,
+        "instagram": 50000
+      },
+      "image_url": "https://i1.feedspot.com/3918388.jpg?t=1753868924"
+    },
+    {
+      "title": "AstrOceanOmy",
+      "feed_url": "https://astroceanomy.com/feed/",
+      "website_url": "https://astroceanomy.com/",
+      "description": "Mundhir's Blog of Astronomy & Universe",
+      "followers": {
+        "facebook": 417,
+        "twitter": 220
+      },
+      "image_url": "https://i1.feedspot.com/8653423.jpg?t=1753869002"
+    },
+    {
+      "title": "Astronomy Journals",
+      "feed_url": "https://www.astrojournals.com/3/feed",
+      "website_url": "https://www.astrojournals.com/",
+      "description": "An amateur astronomer observes the universe from Washington, D.C.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8653424.jpg?t=1753869085"
+    },
+    {
+      "title": "Deep Space Astronomy Blog",
+      "feed_url": "https://deep-space-astronomy.ch/en/feed/",
+      "website_url": "https://deep-space-astronomy.ch/en/blogs/",
+      "description": "Discover our exciting events, meetings, and discussions around astronomy.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/8653441.jpg?t=1753869205"
+    },
+    {
+      "title": "Astrography Blog",
+      "feed_url": "https://astrography.com/blogs/news.atom",
+      "website_url": "https://astrography.com/blogs/news/",
+      "description": "Verified news from the world of Space, Astronomy, Astrophysics, Astrophotography and.... more. Dive into the mysteries of the Universe.",
+      "followers": {
+        "facebook": 32500
+      },
+      "image_url": "https://i1.feedspot.com/8653430.jpg?t=1753869233"
+    },
+    {
+      "title": "Astronomy For Change",
+      "feed_url": "https://astronomyforchange.org/feed/",
+      "website_url": "https://astronomyforchange.org/",
+      "description": "Promoting Global Awareness of How Astronomy Benefits Society and Humankind",
+      "followers": {
+        "twitter": 654
+      },
+      "image_url": "https://i1.feedspot.com/8653422.jpg"
+    },
+    {
+      "title": "Nautilus \u00bb Astronomy",
+      "feed_url": "https://nautil.us/topics/astronomy/feed/",
+      "website_url": "https://nautil.us/topics/astronomy/",
+      "description": "The Nautilus magazine's Astronomy feature 313 articles on astronomy, with the most recent articles displayed first. Each entry includes an image, title, author, and publication date.",
+      "followers": {
+        "facebook": 548700,
+        "twitter": 87100,
+        "instagram": 242700
+      },
+      "image_url": "https://i1.feedspot.com/8653420.jpg?t=1753869296"
+    },
+    {
+      "title": "Science News \u00bb Astronomy",
+      "feed_url": "https://www.sciencenews.org/topic/astronomy/feed",
+      "website_url": "https://www.sciencenews.org/topic/astronomy/",
+      "description": "Science News features news articles, videos and more about the latest scientific advances. Independent, accurate nonprofit news. We were founded as an independent nonprofit in 1921 by newspaper magnate E.W. Scripps and zoologist W.E. Ritter, who wanted to improve the quality and accuracy of science journalism. We remain true to that mission today.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 5300000,
+        "instagram": 102400
+      },
+      "image_url": "https://i1.feedspot.com/8653427.jpg"
+    },
+    {
+      "title": "Starts With A Bang",
+      "feed_url": "https://www.forbes.com/sites/startswithabang/feed",
+      "website_url": "https://www.forbes.com/sites/startswithabang/?sh=216ae1982c5e",
+      "description": "Starts With A Bang is dedicated to exploring the story of what we know about the Universe as well as how we know it, with a focus on physics, astronomy, and the scientific story that the Universe tells us about itself. Written by Ph.D. scientists and edited/created by astrophysicist Ethan Siegel, our goal is to share the joy, wonder and awe of scientific discovery.",
+      "followers": {
+        "facebook": 12400,
+        "twitter": 31500
+      },
+      "image_url": "https://i1.feedspot.com/4408379.jpg"
+    },
+    {
+      "title": "Physics and Astronomy outreach",
+      "feed_url": "https://blogs.cardiff.ac.uk/physicsoutreach/feed/",
+      "website_url": "https://blogs.cardiff.ac.uk/physicsoutreach/",
+      "description": "Covers astronomy, pythagorean astronomy, physics and more. We have a large outreach programme made possible by members of the School volunteering their own time. As part of this programme, we offer a range of talks on cutting edge scientific research from academics in the School.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 1800,
+        "instagram": 96800
+      },
+      "image_url": "https://i1.feedspot.com/4505484.jpg?t=1605784120"
+    },
+    {
+      "title": "TheSpacewriter's Ramblings",
+      "feed_url": "https://feeds.feedburner.com/TheSpacewriter",
+      "website_url": "https://thespacewriter.com/wp/",
+      "description": "A site for astronomy, space exploration, and everything they touch. My name is Carolyn Collins Petersen. My blog is a daily, or semi-daily record of thoughts and impressions about astronomy and space science, primarily, although I'm not limited to those two. I also write about other aspects of science, particularly as various disciplines relate to politics, education, critical thinking, and other cultural aspects.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1425498.jpg"
+    },
+    {
+      "title": "University Lowbrow Astronomers",
+      "feed_url": "http://lowbrows.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://lowbrows.blogspot.com/",
+      "description": "The University Lowbrow Astronomers (Lowbrows for short) are a group of telescope makers and users, and people with a common interest in all aspects of astronomy. We are based in Ann Arbor, Michigan.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 280
+      },
+      "image_url": "https://i1.feedspot.com/5298472.jpg?t=1753869508"
+    },
+    {
+      "title": "CosmoBC.com AstroBlog",
+      "feed_url": "https://astroblog.cosmobc.com/feed/",
+      "website_url": "https://astroblog.cosmobc.com/",
+      "description": "The blog about Astronomy and Space Exploration. We publish astronomy pictures, as well as articles about astrophysics, space science, the solar system, stars, galaxies, etc. CosmoBC.com was founded in 2008.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4624691.jpg?t=1616135988"
+    },
+    {
+      "title": "10 Minute Astronomy",
+      "feed_url": "https://10minuteastronomy.wordpress.com/feed/",
+      "website_url": "https://10minuteastronomy.wordpress.com/",
+      "description": "Stargazing for people who think they don't have time for stargazing.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1366526.jpg?t=1753867676"
+    },
+    {
+      "title": "Astronomy Technology Today",
+      "feed_url": "https://astronomytechnologytoday.com/feed/",
+      "website_url": "https://astronomytechnologytoday.com/",
+      "description": "Astronomy Technology Today is a resource for astronomy enthusiasts, featuring news, reviews, and information on astronomical equipment and publications, including new products, articles, and video content.",
+      "followers": {
+        "facebook": 438
+      },
+      "image_url": "https://i1.feedspot.com/4927770.jpg?t=1753869396"
+    },
+    {
+      "title": "Physics World \u00bb Astronomy and Space",
+      "feed_url": "https://physicsworld.com/c/astronomy-space/feed/",
+      "website_url": "https://www.jameswebbdiscovery.com/",
+      "description": "News, views and information for the global physics community from Institute of Physics Publishing. It contains features from the world's leading physicists and science writers, comprehensive news and analysis, incisive opinion pieces, sound careers advice, reviews of the best new books and multimedia.",
+      "followers": {
+        "facebook": 587700,
+        "twitter": 420700
+      },
+      "image_url": "https://i1.feedspot.com/5299539.jpg?t=1626157040"
+    },
+    {
+      "title": "Universe Today",
+      "feed_url": "https://feeds.fireside.fm/universetoday/rss",
+      "website_url": "https://www.universetoday.com/",
+      "description": "Universe Today is all about Astronomy & space news. If you're a fan of Astronomy, space, sci-fi and pop culture, you'll love our Guide to Space.",
+      "followers": {
+        "facebook": 125800,
+        "twitter": 300400,
+        "instagram": 174100
+      },
+      "image_url": "https://i1.feedspot.com/5051596.jpg?t=1753438143"
+    }
+  ]
+}

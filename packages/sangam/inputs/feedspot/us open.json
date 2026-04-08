@@ -1,0 +1,30 @@
+{
+  "category": "US Open",
+  "source_url": "https://rss.feedspot.com/us_open_rss_feeds",
+  "feeds": [
+    {
+      "title": "Diario AS \u00bb US Open",
+      "feed_url": "https://feeds.as.com/mrss-s/list/as/site/en.as.com/tag/us_open_a",
+      "website_url": "https://en.as.com/news/us-open/",
+      "description": "Diario AS is a Spanish daily sports newspaper that concentrates particularly on football. The US Open blog will give you the latest sports coverage, breaking news, live events, scoreboards, and complete US Open sports information.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5491097.jpg?t=1673355736"
+    },
+    {
+      "title": "Last Word On Sports \u00bb US Open",
+      "feed_url": "https://lastwordonsports.com/tennis/category/us-open/feed/",
+      "website_url": "https://lastwordonsports.com/tennis/category/us-open/",
+      "description": "LastWordOnSports.com is essentially a network of sports-related entities encompassing type media . It includes new, niche sports sites as well as gaming and lifestyle brands. The US Open section of the website is here to provide you with the latest and updated Tennis news, analysis, tournament coverage, and rumors.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5491098.jpg?t=1673355479"
+    },
+    {
+      "title": "Lob and Smash \u00bb US Open",
+      "feed_url": "https://lobandsmash.com/majors/us-open/feed/",
+      "website_url": "https://lobandsmash.com/majors/us-open/",
+      "description": "Lob and Smash is dedicated to providing top-notch Tennis news, views, and original content. This site also serves as a community for like-minded fans to come together to catch up on the latest news and discuss their passion. Read the US Open section on the Lob and Smash a professional tennis site to get the latest news updates, blogs posts, detailed articles, analysis, and more",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5491096.jpg?t=1673355443"
+    }
+  ]
+}

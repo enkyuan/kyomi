@@ -1,0 +1,32 @@
+{
+  "category": "Delaware Art",
+  "source_url": "https://rss.feedspot.com/delaware_art_rss_feeds",
+  "feeds": [
+    {
+      "title": "Delaware Arts Info",
+      "feed_url": "http://www.deartsinfo.com/feeds/posts/default",
+      "website_url": "http://www.deartsinfo.com/",
+      "description": "This site offers suggestions for arts lovers to discover established and emerging artists, musicians, and performers in and around Delaware. Although the site's curators particularly like to celebrate smaller arts organizations and individual artists, they cover nearly anything that strikes them or that they feel their audience should know about.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7276813.jpg?t=1710838812"
+    },
+    {
+      "title": "IN Wilmington \u00bb Arts & Entertainment",
+      "feed_url": "https://inwilmde.com/blog/category/arts-entertainment/feed/",
+      "website_url": "https://inwilmde.com/blog/category/arts-entertainment/",
+      "description": "IN Wilmington is your entertainment source for live music, fine arts, dining, and special events of all kinds in Wilmington, Delaware. Whether you are looking for a getaway with friends or are planning a weekend with the kids, you are sure to find something to enjoy.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7276811.jpg?t=1710838887"
+    },
+    {
+      "title": "Delaware Fun A Day Blog",
+      "feed_url": "http://www.delawarefunaday.com/blog?format=rss",
+      "website_url": "https://www.delawarefunaday.com/blog",
+      "description": "Delaware Fun-A-Day is an all ages art project and show that encourages anyone and everyone to make art every day for a month. The works created are then displayed in a massive group exhibition celebrating the diversity of visions and mediums. Follow along on social media to see projects in progress, artist interviews, and updates about the art show.",
+      "followers": {
+        "facebook": 769
+      },
+      "image_url": "https://i1.feedspot.com/7276812.jpg?t=1710838865"
+    }
+  ]
+}

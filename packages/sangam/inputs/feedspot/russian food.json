@@ -1,0 +1,90 @@
+{
+  "category": "Russian Food",
+  "source_url": "https://rss.feedspot.com/russian_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Natasha's Kitchen",
+      "feed_url": "https://natashaskitchen.com/feed/",
+      "website_url": "https://natashaskitchen.com/",
+      "description": "A family food blog with hundreds of simple, tested and approved recipes. Find easy step-by-step photo cooking instructions and video recipes.",
+      "followers": {
+        "facebook": 9500000,
+        "twitter": 4600,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/826751.jpg?t=1600345208"
+    },
+    {
+      "title": "Peter's Food Adventures",
+      "feed_url": "https://petersfoodadventures.com/feed/",
+      "website_url": "https://petersfoodadventures.com/",
+      "description": "Exploring Russian recipes from my childhood & my favourite recipes from around the world.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 1100,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4706592.jpg?t=1619536362"
+    },
+    {
+      "title": "Tatyana's Everyday Food \u00bb Russian/Ukrainian",
+      "feed_url": "https://tatyanaseverydayfood.com/cuisine/russian-ukrainian-eastern-european/feed/",
+      "website_url": "https://tatyanaseverydayfood.com/cuisine/russian-ukrainian-eastern-european/",
+      "description": "Discover the best Ukrainian recipes, including main entrees, salads, appetizers, side dishes, and Ukrainian desserts! Tatyana's Everyday Food brings you great recipes for elegant and delicious meals! You will find many traditional Ukrainian, Russian, and Eastern European recipes, passed down to me from my parents, alongside my own recipes.",
+      "followers": {
+        "facebook": 624000,
+        "twitter": 97,
+        "instagram": 208600
+      },
+      "image_url": "https://i1.feedspot.com/4736223.jpg?t=1656741037"
+    },
+    {
+      "title": "At the Immigrant's Table",
+      "feed_url": "https://immigrantstable.com/feed/",
+      "website_url": "https://immigrantstable.com/russian-cuisine/",
+      "description": "Wholesome Russian & Jewish recipes reinvented to accommodate allergies and dietary restrictions. Freelance writer, photographer, and brand ambassador. A food and travel blog showcasing immigrant stories and international recipes that help adventurous home cooks explore the world.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 1100,
+        "instagram": 6800
+      },
+      "image_url": "https://i1.feedspot.com/4707068.jpg?t=1668428966"
+    },
+    {
+      "title": "Girl and the Kitchen",
+      "feed_url": "https://girlandthekitchen.com/tag/russian/feed/",
+      "website_url": "https://girlandthekitchen.com/tag/russian/",
+      "description": "Hi! I'm Mila, the Girl and the Kitchen. And I know good food! Having worked in many incredible restaurant kitchens as a chef, I know what it takes to make delicious food with simple ingredients and bright flavors!",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 448,
+        "instagram": 27900
+      },
+      "image_url": "https://i1.feedspot.com/4723610.jpg?t=1619536344"
+    },
+    {
+      "title": "Food Perestroika",
+      "feed_url": "https://foodperestroika.com:443/category/recipes-by-country/russian-food/feed/",
+      "website_url": "https://foodperestroika.com/category/recipes-by-country/russian-food/",
+      "description": "My name is Florian Pinel. My goal with Food Perestroika is to rebuild culinary traditions from the former Eastern Bloc, and try to re-imagine & elevate them to haute cuisine. The word perestroika means reconstruction, but I am not interested in replication so much as I am interested in innovation inspired by what came before, and in making the most of the ingredients and flavors that can be found.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 237,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4736241.jpg?t=1619536335"
+    },
+    {
+      "title": "Milkandbun - Russian cuisine",
+      "feed_url": "https://milkandbun.com/category/russian-cuisine/feed/",
+      "website_url": "https://milkandbun.com/category/russian-cuisine/",
+      "description": "Food with mood. Homemade. Delicious and easy to cook. Cooked by me - Mila Kozlova. At ordinary kitchen using ordinary tools. With love. Simple but so delicious!",
+      "followers": {
+        "facebook": 341,
+        "twitter": 66,
+        "instagram": 510
+      },
+      "image_url": "https://i1.feedspot.com/4736984.jpg?t=1619536331"
+    }
+  ]
+}

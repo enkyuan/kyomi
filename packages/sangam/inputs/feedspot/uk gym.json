@@ -1,0 +1,268 @@
+{
+  "category": "UK Gym",
+  "source_url": "https://rss.feedspot.com/uk_gym_rss_feeds",
+  "feeds": [
+    {
+      "title": "Gym Gear",
+      "feed_url": "https://gymgear.com/feed/",
+      "website_url": "https://gymgear.com/news/",
+      "description": "We offer a total fitness solution for all of the needs of your gym including providing equipment and design. Keep up to date with the latest company and industry news from Gym Gear.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5328029.jpg?t=1666851830"
+    },
+    {
+      "title": "Hussle Blog",
+      "feed_url": "https://www.hussle.com/blog/feed/",
+      "website_url": "https://www.hussle.com/blog/",
+      "description": "A place to find your favorite fitness-focused reads. Whether it's increasing strength, improving fitness, losing weight, or staying healthy; we have loads of scroll-worthy stuff for every goal. Hussle is a network of gyms, pools, spas and health and fitness apps. With one pass, you can access fitness in exactly the way you want.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5460056.jpg?t=1697522173"
+    },
+    {
+      "title": "Stack House Gym Blog",
+      "feed_url": "https://stackhousegym.co.uk/blog?format=rss",
+      "website_url": "https://stackhousegym.co.uk/blog",
+      "description": "Read our latest blog covering topics in health and fitness, nutrition and supplementation, exercise and well-being. At Stack House Gym we pride ourselves on delivering the best fitness experience for our valued members.",
+      "followers": {
+        "facebook": 2900,
+        "instagram": 596
+      },
+      "image_url": "https://i1.feedspot.com/5393284.jpg?t=1681908337"
+    },
+    {
+      "title": "Gym Owner Monthly",
+      "feed_url": "https://www.gymownermonthly.co.uk/feed/",
+      "website_url": "https://www.gymownermonthly.co.uk/new-2/",
+      "description": "Gym Owner Monthly is a digital b2b publication dedicated specifically to gym owners and health & fitness managers in the UK. With it's back catalogue of Publications online, Gym Owner Monthly Magazine is committed to supporting everyone involved in the health, wellness, fitness, sport and activity sector around the world.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 1900,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5007979.jpg?t=1666852023"
+    },
+    {
+      "title": "TFD Health & Fitness Blog",
+      "feed_url": "https://tfdgym.co.uk/feed/",
+      "website_url": "https://tfdgym.co.uk/blog/",
+      "description": "Read our blog for exercise tips, healthy recipes and all the latest news from TFD gym. TFD health & fitness is a large privately owned gym in Grove, near Wantage, Oxfordshire. Our aim is to provide a high standard of service and a wide variety of equipment which serves the local, rural community.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 663,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5488682.jpg?t=1672982627"
+    },
+    {
+      "title": "Xplor Gym Blog",
+      "feed_url": "https://xplorgym.co.uk/feed/",
+      "website_url": "https://xplorgym.co.uk/blog/",
+      "description": "Xplor Gym is an intuitive, flexible, all-in-one gym management software solution with fully integrated payments and access control. Xplor Gym is a Total Gym Management Solution with a design for health & fitness operators, an intuitive, easy-to-use single platform, flexible, scalable technology, and more.",
+      "followers": {
+        "twitter": 191,
+        "instagram": 586
+      },
+      "image_url": "https://i1.feedspot.com/5545908.jpg?t=1681966083"
+    },
+    {
+      "title": "Home Gym Supply Blog",
+      "feed_url": "https://homegymsupply.co.uk/blogs/guides.atom",
+      "website_url": "https://homegymsupply.co.uk/blogs/guides",
+      "description": "Home Gym Supply Limited, is one of the UK's leading retailers of specialist home gym equipment. Whether you are looking to create a luxury workout environment or add extra equipment to your existing gym, we will be able to help find the perfect solution for you.",
+      "followers": {
+        "facebook": 1200,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5545907.jpg?t=1681966073"
+    },
+    {
+      "title": "Halo Gym Blog",
+      "feed_url": "https://www.halogym.co.uk/feed/",
+      "website_url": "https://www.halogym.co.uk/blog/",
+      "description": "Halo Gym Tunbridge Wells, owned and operated by personal trainer Jake Gowan, is an independent fitness center and gym in, Kent, staffed by a hand-picked team. Whether it's to lose weight, tone up, build muscle, or lower stress, at Halo Gym we are here to help each client meet their goals.",
+      "followers": {
+        "facebook": 2100,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5545917.jpg?t=1681966145"
+    },
+    {
+      "title": "Gym66 Blog",
+      "feed_url": "https://gym66.co.uk/feed/",
+      "website_url": "https://gym66.co.uk/blog/",
+      "description": "Gym66 started in 2013 & has evolved to be the functional strength & fitness facility it is today. We specialize and are known for our strength & fitness classes, which are expertly designed to improve all of our members' physical strength, mobility & cardiovascular fitness in a safe and sustainable way - regardless of ability, experience, or age.",
+      "followers": {
+        "facebook": 2100,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5545901.jpg?t=1681966037"
+    },
+    {
+      "title": "OriGym Blog",
+      "feed_url": "https://www.origym.co.uk/feed/",
+      "website_url": "https://www.origym.co.uk/blog/",
+      "description": "Origym Centre of Excellence is an education course provider specialising in personal training courses. Origym PT Courses is recognised as a trusted education course provider within the UK health and fitness sector. Origym specialising in high quality, cutting edge Personal Trainer Courses as well as Continuous Professional Development (CPD) fitness qualifications.",
+      "followers": {
+        "facebook": 23600,
+        "twitter": 14000,
+        "instagram": 40600
+      },
+      "image_url": "https://i1.feedspot.com/4891423.jpg?t=1606923569"
+    },
+    {
+      "title": "Train 2 Gain Gym Blog",
+      "feed_url": "https://www.train2gaingym.co.uk/blog/rss/",
+      "website_url": "https://www.train2gaingym.co.uk/blog/",
+      "description": "Welcome to Train 2 Gain Gym, Northampton. Our gym in Northampton is a great value health club to help you achieve your fitness goals. We strive to bring our members the best training environment in the area. Our club has top-of-the-range equipment with over 50 exercise stations, large free weights, and functional training zones.",
+      "followers": {
+        "facebook": 1700,
+        "instagram": 836
+      },
+      "image_url": "https://i1.feedspot.com/5545899.jpg?t=1681966853"
+    },
+    {
+      "title": "Gymkit UK Blog",
+      "feed_url": "https://gymkituk.com/blog/rss/index/store_id/1",
+      "website_url": "https://gymkituk.com/blog",
+      "description": "Gymkit UK is one of the leading suppliers of pre-owned commercial fitness equipment in Europe. Fitness and Gym News, Updates, Tips, Diets, Advice, and company news from Gymkit UK.",
+      "followers": {
+        "facebook": 11900,
+        "twitter": 7800,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5328152.jpg?t=1633340228"
+    },
+    {
+      "title": "Gymenix",
+      "feed_url": "https://www.gymenix.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.gymenix.com/",
+      "description": "Gymenix is the ultimate resource for bodybuilders and strength trainers packed full of workouts, exercises and bodybuilding products. Find a variety of free hypertrophy bodybuilding programmes and training ideas from some of the top professional competitors. Gymenix is also a great resource for bodybuilders looking for advice and helpful tips.",
+      "followers": {
+        "twitter": 1,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5460053.jpg?t=1666851430"
+    },
+    {
+      "title": "Daves Gym Blog",
+      "feed_url": "https://davesgym.co.uk/feed/",
+      "website_url": "https://davesgym.co.uk/blog/",
+      "description": "Keep up to date with our latest improvements to the gym. Daves Gym was founded in 1973 by Dave Mather. Today sees the gym as a hive of activity with friendships that started in Winnington all those years ago still just as strong as ever with new friendships being made all the time.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5460057.jpg?t=1666851988"
+    },
+    {
+      "title": "Gym Wear Blog",
+      "feed_url": "https://www.gymwear.co.uk/blogs/news.atom",
+      "website_url": "https://www.gymwear.co.uk/blogs/news",
+      "description": "Discover workout regimens, motivation, gym wear and advice to help you keep fit & healthy during your hectic liftstyle! A fitness blog to smash your gym goals from GymWear UK. GymWear UK stocks a brilliant range of gym wear clothing for men and women. We pride ourselves on offering fitness clothing that is not just stylish and trendy, but comfortable, durable and perfect for your workout sessions.",
+      "followers": {
+        "facebook": 14800,
+        "twitter": 1200,
+        "instagram": 13900
+      },
+      "image_url": "https://i1.feedspot.com/5460054.jpg?t=1666851944"
+    },
+    {
+      "title": "CBX Gym Blog",
+      "feed_url": "https://www.cbxgym.co.uk/blog-feed.xml",
+      "website_url": "https://www.cbxgym.co.uk/blog",
+      "description": "At CBX Gym you'll find certified, experienced, and friendly trainers, the latest cardio equipment, a superb functional training area, some top-notch cable machines, and a varied and exciting group exercise program! Our Personal Trainers have written some great blogs to help you achieve the best from your training sessions on CBX Gym Blog.",
+      "followers": {
+        "facebook": 765,
+        "twitter": 72,
+        "instagram": 403
+      },
+      "image_url": "https://i1.feedspot.com/5545912.jpg?t=1681966111"
+    },
+    {
+      "title": "The Engine House Gym Blog",
+      "feed_url": "https://enginehousegym.co.uk/feed/",
+      "website_url": "https://enginehousegym.co.uk/gym-blog/",
+      "description": "We run small group personal training classes that help to get people stronger and fitter for life. We help train people from all walks of life; women and men, teens to pensioners, and all levels of ability. We focus on technique and teaching the skills to train progressively and safely. We specialize in kettlebell, body weight, and barbell training.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5545910.jpg?t=1681966205"
+    },
+    {
+      "title": "Challenge Gym Blog",
+      "feed_url": "https://www.challengegym.co.uk/blog-feed.xml",
+      "website_url": "https://www.challengegym.co.uk/blog-1",
+      "description": "Challenge is a Family Run Gym. Wayne and Christine are currently celebrating 29 years in business, we have all the knowledge and experience you need to achieve your short and long-term goals. We offer top-class Personal Training, Physiotherapy, Personal Coaching, Peak Mind Performance, and much more!",
+      "followers": {
+        "facebook": 2000,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5545913.jpg?t=1681972265"
+    },
+    {
+      "title": "Gym Project Blog",
+      "feed_url": "https://gymproject.co.uk/feed/",
+      "website_url": "https://gymproject.co.uk/blog/",
+      "description": "We're no ordinary gym. We're a gym with personality. Gym Project is all about trying new things, having fun, and feeling great. With a range of equipment too long to list, we bring creativity, community, and innovation to gym-going and we want you to be part of it.",
+      "followers": {
+        "facebook": 2600,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5545909.jpg?t=1681971973"
+    },
+    {
+      "title": "Everybody's Gym Blog",
+      "feed_url": "https://everybodysgym.co.uk/feed/",
+      "website_url": "https://everybodysgym.co.uk/blog/",
+      "description": "Everybody's Gym is a gym for Everybody! We are an independent family-owned gym and for over 25 years we have been proudly supporting our local community with their fitness and nutrition goals. We pride ourselves on providing a community where everybody feels welcome.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 1300,
+        "instagram": 9000
+      },
+      "image_url": "https://i1.feedspot.com/5545915.jpg?t=1681966132"
+    },
+    {
+      "title": "Absolute Performance Blog",
+      "feed_url": "https://aperformance.co.uk/feed/",
+      "website_url": "https://homegymsolutions.co.uk/blog.html",
+      "description": "We are leaders in the design, installation, and equipping of high-performance training and gym spaces. With over a decade of experience in the creation of gyms, fitness spaces, and strength and conditioning facilities we have built an enviable portfolio of projects. Absolute Performance brings you fitness-related tips, insights, advice, information, and news all at your fingertips.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 2400,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5545903.jpg?t=1681966050"
+    },
+    {
+      "title": "GymRat Blog",
+      "feed_url": "https://gymrat.co.uk/blogs/news.atom",
+      "website_url": "https://gymrat.co.uk/blogs/news",
+      "description": "GymRat is a dedicated fitness training and wellness platform that is committed to providing the best tools to assist in your fitness journey. Our mission is to help and support our customers and fellow physical trainers in the industry with our state-of-the-art equipment and products.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 3800,
+        "instagram": 7800
+      },
+      "image_url": "https://i1.feedspot.com/5327944.jpg?t=1633324112"
+    },
+    {
+      "title": "Kustom Kit Gym Equipment Blog",
+      "feed_url": "https://kustomkitgymequipment.com/blogs/news.atom",
+      "website_url": "https://kustomkitgymequipment.com/blog/",
+      "description": "Kustom Kit are designers & manufacturers of high-quality, innovative gym equipment manufactured in the UK and shipped worldwide. Check out the Kustom Kit Gym blog for gym news, updates, and helpful hints.",
+      "followers": {
+        "facebook": 29200,
+        "instagram": 17700
+      },
+      "image_url": "https://i1.feedspot.com/5328138.jpg?t=1633339809"
+    },
+    {
+      "title": "Meridian Fitness Blog",
+      "feed_url": "https://www.meridian-fitness.co.uk/feed/",
+      "website_url": "https://www.meridian-fitness.co.uk/blog/",
+      "description": "Stay in the know with the latest news in health and fitness. Here you'll find interesting articles and news about Meridian Fitness. Meridian Fitness is a Greenwich-based Fitness club offering Gym, Personal Training, and Spa services for individuals and families.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 244,
+        "instagram": 636
+      },
+      "image_url": "https://i1.feedspot.com/5049746.jpg?t=1681908808"
+    }
+  ]
+}

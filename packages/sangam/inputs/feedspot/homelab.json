@@ -1,0 +1,115 @@
+{
+  "category": "Homelab",
+  "source_url": "https://rss.feedspot.com/homelab_rss_feeds",
+  "feeds": [
+    {
+      "title": "WilliamLam.com",
+      "feed_url": "https://williamlam.com/feed",
+      "website_url": "https://williamlam.com/",
+      "description": "He focuses on Cloud Native technologies, Automation, Integration, and Operation for the VMware Cloud-based Software Defined Datacenters (SDDC) in this blog. William Lam is a Senior Staff Solution Architect working in the VMware Cloud team within the Cloud Infrastructure Business Group (CIBG) at VMware.",
+      "followers": {
+        "twitter": 32700
+      },
+      "image_url": "https://i1.feedspot.com/5360471.jpg?t=1645178872"
+    },
+    {
+      "title": "b3n.org",
+      "feed_url": "https://b3n.org/feed/",
+      "website_url": "https://b3n.org/",
+      "description": "I write about a variety of topics that interest me including computers, finance, worldview, and anything that comes to my mind. This blog is hosted from my AMD EPYC server under my desk from my homelab in Sandpoint, Idaho.",
+      "followers": {
+        "twitter": 137
+      },
+      "image_url": "https://i1.feedspot.com/5373216.jpg?t=1645179938"
+    },
+    {
+      "title": "Chrisdooks.com \u00bb Homelab",
+      "feed_url": "https://chrisdooks.com/category/homelab/feed/",
+      "website_url": "https://chrisdooks.com/category/homelab/",
+      "description": "Find articles focussed on VMware, networking, and other technology areas. I'm Chris and I'm a Senior Consultant within the VMware Professional Services Organisation.",
+      "followers": {
+        "twitter": 143
+      },
+      "image_url": "https://i1.feedspot.com/5373217.jpg?t=1645178238"
+    },
+    {
+      "title": "TinkerTry",
+      "feed_url": "https://tinkertry.com/feed",
+      "website_url": "https://tinkertry.com/",
+      "description": "Find insights, reviews, and opinions on PCs, EVs, home tech, efficiency, and more, including virtualization. My career has been all about testing and adopting new technologies, then helping others effectively deploy them. I'm a technology teacher at heart, with a passion for tackling a variety of difficult technical challenges.",
+      "followers": {
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4491571.jpg?t=1645178758"
+    },
+    {
+      "title": "Cavelab Blog",
+      "feed_url": "https://blog.cavelab.dev/index.xml",
+      "website_url": "https://blog.cavelab.dev/",
+      "description": "The blog features articles on topics including Linux, electronics, and home automation things. I use most of my free time in my home office/man-cave. A 10 m\u00b2 (108 ft\u00b2) room in the basement, where I tinker with my home lab and electronics projects. I try to write about it.",
+      "followers": {
+        "twitter": 336
+      },
+      "image_url": "https://i1.feedspot.com/5373208.jpg?t=1645175850"
+    },
+    {
+      "title": "Domalab",
+      "feed_url": "https://domalab.com/feed/",
+      "website_url": "https://domalab.com/",
+      "description": "Domalab talks about Virtualisation, Storage, Cloud, Data Protection, and even more! Everything is in one place. Easy articles to try in your homelab for free. Michele Domanico (VMCE, VCP-DCV, vExpert, MCSA, and others) is a Systems Engineer for Veeam Software based in London, UK. He is passionate about cloud, virtualization, storage, data availability, and digital collaboration technologies.",
+      "followers": {
+        "twitter": 110
+      },
+      "image_url": "https://i1.feedspot.com/5125048.jpg?t=1645171806"
+    },
+    {
+      "title": "mpoore.io",
+      "feed_url": "https://mpoore.io/index.xml",
+      "website_url": "https://mpoore.io/",
+      "description": "This is a blog about cloud automation, orchestration, and virtualization in general. It's written by Michael Poore, a VMware architect based in the UK. Michael has a long history in the IT industry working with VMware platforms and infrastructure automation in particular.",
+      "followers": {
+        "twitter": 42
+      },
+      "image_url": "https://i1.feedspot.com/5373221.jpg?t=1645168584"
+    },
+    {
+      "title": "Spencer's Blog",
+      "feed_url": "https://blog.filegarden.net/feed/",
+      "website_url": "https://blog.filegarden.net/blog-posts/",
+      "description": "Just another r/homelab type blog. My personal webspace to host how-to's, hardware I'm running, or things I'm tinkering with. I just post things I've found helpful in my blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5373220.jpg?t=1645171227"
+    },
+    {
+      "title": "Zuthof.nl Blog \u00bb Homelab",
+      "feed_url": "https://blog.zuthof.nl/category/homelab/feed/",
+      "website_url": "https://blog.zuthof.nl/category/homelab/",
+      "description": "A blog about Virtualization, Cloud, and Tech. Hi, my name is Dani\u00ebl Zuthof. I mainly started this blog to have a place to share my ideas and to give knowledge back to the community. Posts will mainly be based upon my personal interest in tech, things I stumble upon at work or in the homelab, and ideas from customer engagements.",
+      "followers": {
+        "twitter": 921
+      },
+      "image_url": "https://i1.feedspot.com/5373219.jpg?t=1645178075"
+    },
+    {
+      "title": "DBplatz Blog \u00bb Homelab",
+      "feed_url": "https://blog.dbplatz.com/tag/homelab/",
+      "website_url": "https://blog.dbplatz.com/tag/homelab/",
+      "description": "Find articles featuring Database News, Databases, Db2, SQL Server, MongoDB, Oracle, MySQL, Development, Security, News, Tips, Articles, Cloud, HomeLab, Infrastructure, Systems, IT, PostgreSQL.",
+      "followers": {
+        "twitter": 160
+      },
+      "image_url": "https://i1.feedspot.com/5373222.jpg?t=1645168588"
+    },
+    {
+      "title": "Dlford.io",
+      "feed_url": "https://www.dlford.io/rss.xml",
+      "website_url": "https://www.dlford.io/",
+      "description": "I am a technology enthusiast, a doer of intricate things as I like to say, I've been coding and home labbing for over 10 years. With all of the lessons learned and all of the open-source software I've utilized in the process, I've made it my mission to give back by sharing my insights with the intent of saving others from many of the headaches I had faced along the way.",
+      "followers": {
+        "facebook": 118,
+        "twitter": 205
+      },
+      "image_url": "https://i1.feedspot.com/5055901.jpg?t=1645178099"
+    }
+  ]
+}

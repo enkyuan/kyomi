@@ -1,0 +1,61 @@
+{
+  "category": "Thailand Political",
+  "source_url": "https://rss.feedspot.com/thailand_political_rss_feeds",
+  "feeds": [
+    {
+      "title": "Saksith Saiyasombut Blog",
+      "feed_url": "https://www.saiyasombut.com/blog?format=rss",
+      "website_url": "https://www.saiyasombut.com/blog",
+      "description": "Saksith Saiyasombut is CNA's Thailand Correspondent based at its Bangkok Bureau, where he focuses on the latest political, social and economic developments in Thailand.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 34600
+      },
+      "image_url": "https://i1.feedspot.com/5348052.jpg?t=1638262508"
+    },
+    {
+      "title": "Ken Lohatepanont Blog",
+      "feed_url": "https://kenlmathis.com/feed/",
+      "website_url": "https://kenlmathis.com/blog/",
+      "description": "My name is Mathis Lohatepanont, and I go by Ken. I recently graduated in 2020 with a B.A in political science from the University of California, Berkeley. My primary interests are in comparative politics and international relations, with a special focus on Thailand and East Asia.",
+      "followers": {
+        "twitter": 6600
+      },
+      "image_url": "https://i1.feedspot.com/5348050.jpg?t=1638262508"
+    },
+    {
+      "title": "The Pattaya News \u00bb Politics",
+      "feed_url": "https://thepattayanews.com/category/politics/feed/",
+      "website_url": "https://thepattayanews.com/category/politics/",
+      "description": "Pattaya, Chonburi, Bangkok, and National Political News in Thailand, focused on breaking and daily political news in the English language.",
+      "followers": {
+        "facebook": 272200,
+        "twitter": 8700,
+        "instagram": 46100
+      },
+      "image_url": "https://i1.feedspot.com/5348051.jpg?t=1638262508"
+    },
+    {
+      "title": "INN News \u00bb Politics",
+      "feed_url": "https://www.innnews.co.th/category/news/politics/feed/",
+      "website_url": "https://www.innnews.co.th/category/news/politics/",
+      "description": "Includes political news, prime minister news, foreign political news, political issues, rallies, and more.",
+      "followers": {
+        "facebook": 627400,
+        "twitter": 312600
+      },
+      "image_url": "https://i1.feedspot.com/5348058.jpg?t=1638262533"
+    },
+    {
+      "title": "The Diplomat \u00bb Thai Politics",
+      "feed_url": "https://thediplomat.com/tag/thai-politics/feed/",
+      "website_url": "https://thediplomat.com/tag/thai-politics/",
+      "description": "This section features articles on Thai Politics. The Diplomat is a current-affairs magazine for the Asia-Pacific, with news and analysis on politics, security, business, technology and life across the region.",
+      "followers": {
+        "facebook": 826300,
+        "twitter": 269700
+      },
+      "image_url": "https://i1.feedspot.com/5348123.jpg?t=1638262572"
+    }
+  ]
+}

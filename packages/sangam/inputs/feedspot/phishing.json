@@ -1,0 +1,84 @@
+{
+  "category": "Phishing",
+  "source_url": "https://rss.feedspot.com/phishing_rss_feeds",
+  "feeds": [
+    {
+      "title": "PhishLabs",
+      "feed_url": "https://www.phishlabs.com/feed",
+      "website_url": "https://www.phishlabs.com/blog",
+      "description": "The latest thought leadership & resources for combating phishing & social engineering attacks. Key topics covered are Digital Risk Protection, Phishing Trends, Ransomware, Malware, Spear Phishing, Threat Trends & Intelligence, and Threat Analysis. PhishLabs by HelpSystems provides Digital Risk Protection through curated threat intelligence and complete mitigation.",
+      "followers": {
+        "facebook": 505,
+        "twitter": 1800,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5370560.jpg?t=1644468848"
+    },
+    {
+      "title": "Cofense Blog",
+      "feed_url": "https://cofense.com/feed/",
+      "website_url": "https://cofense.com/blog/",
+      "description": "The Cofense Phishing Prevention & Email Security Blog offers the resources and insights you need to detect, analyze and stop phishing attacks. Cofense provides phishing detection & response solutions via human reporting & advanced automation. Subscribe to get expert threat info and industry trends.",
+      "followers": {
+        "facebook": 13200,
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/5225499.jpg?t=1644470172"
+    },
+    {
+      "title": "KnowBe4 \u00bb Phishing Blog",
+      "feed_url": "https://blog.knowbe4.com/topic/phishing/rss.xml",
+      "website_url": "https://blog.knowbe4.com/topic/phishing",
+      "description": "This section of the KnowBe4 Blog will keep you informed about the latest in phishing attacks, security, and related topics. KnowBe4 is the world's largest security awareness training and simulated phishing platform that helps you manage the ongoing problem of social engineering",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 15100
+      },
+      "image_url": "https://i1.feedspot.com/5370562.jpg?t=1644468859"
+    },
+    {
+      "title": "PhishProtection.com",
+      "feed_url": "https://www.phishprotection.com/feed",
+      "website_url": "https://www.phishprotection.com/blog",
+      "description": "Phishing and Ransomware Protection Blog. Covers articles on Phishing Awareness, Cybersecurity, Advanced Threat Defense, Advanced Threat Protection, and Announcements. PhishProtection.com offers Phishing protection solutions for Office 365 and on-premise email servers.",
+      "followers": {
+        "facebook": 48,
+        "twitter": 100
+      },
+      "image_url": "https://i1.feedspot.com/5370563.jpg?t=1644478488"
+    },
+    {
+      "title": "Vade Blog",
+      "feed_url": "https://www.vadesecure.com/en/blog/rss.xml",
+      "website_url": "https://www.vadesecure.com/en/blog",
+      "description": "Get the latest insights and analysis on global email threats, plus tips and tools from our experts on how to protect your business from attacks. Vade is a predictive email security solution to protect corporations against phishing, malware, spear phishing, and spam.",
+      "followers": {
+        "facebook": 243,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5370565.jpg?t=1644471146"
+    },
+    {
+      "title": "Fortra's Email Security",
+      "feed_url": "https://emailsecurity.fortra.com/blog/",
+      "website_url": "https://emailsecurity.fortra.com/blog/",
+      "description": "Check out Agari's email security and phishing blog to find the latest email security tips, guides, and more on the growing threat of hackers, spam, and phishing. Agari is an Email Identity Company that protects enterprises and people from phishing and socially-engineered attacks.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5097814.jpg?t=1644556398"
+    },
+    {
+      "title": "INKY Blog",
+      "feed_url": "https://www.inky.com/en/blog/rss.xml",
+      "website_url": "https://www.inky.com/en/blog/",
+      "description": "Email Security Blog where you'll get the latest news on Phishing, Fresh Phish, Emerging Threats & Major Attacks, Ransomware, and Product Updates. INKY is a cloud-based email security platform that provides an effective solution in the war against phishing.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5370561.jpg?t=1644469532"
+    }
+  ]
+}

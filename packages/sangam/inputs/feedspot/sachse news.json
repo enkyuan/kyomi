@@ -1,0 +1,27 @@
+{
+  "category": "Sachse News",
+  "source_url": "https://rss.feedspot.com/sachse_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of Sachse, TX",
+      "feed_url": "https://www.cityofsachse.com/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.cityofsachse.com/CivicAlerts.aspx",
+      "description": "Sachse, TX is dedicated to keeping residents informed and up-to-date by providing the latest news and information about city programs, services and policies.",
+      "followers": {
+        "facebook": 9800
+      },
+      "image_url": "https://i1.feedspot.com/5155424.jpg?t=1590064430"
+    },
+    {
+      "title": "The Sachse News",
+      "feed_url": "https://sachsenews.com/feed/",
+      "website_url": "https://sachsenews.com/",
+      "description": "The Sachse News has been covering Sachse and the surrounding area for almost 25 years. Read the latest news and breaking headlines on what's happening in Sachse city and community by following this feed.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4833882.jpg?t=1590065926"
+    }
+  ]
+}

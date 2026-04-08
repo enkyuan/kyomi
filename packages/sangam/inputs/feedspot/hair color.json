@@ -1,0 +1,53 @@
+{
+  "category": "Hair Color",
+  "source_url": "https://rss.feedspot.com/hair_color_rss_feeds",
+  "feeds": [
+    {
+      "title": "Radico Blog",
+      "feed_url": "https://radicousa.com/blogs/news.atom",
+      "website_url": "https://radicousa.com/blogs/news",
+      "description": "The latest breaking news, comment and features from Radico USA. Radico is the first single step 100% Natural Hair Colour in world to get organic certification by ECO-CERT, a France based world's best organic certifying company.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 15,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5473236.jpg?t=1669725178"
+    },
+    {
+      "title": "Satin Hair Color Blog",
+      "feed_url": "https://satinhaircolor.com/blog/feed/",
+      "website_url": "https://satinhaircolor.com/blog/",
+      "description": "Satin Hair Color inspires individuality, commits to versatility, and promotes confidence allowing you to express your own unique hair color and style. Want to learn some fantastic hair coloring and hair care tips. Browse the articles in our hair coloring blog.",
+      "followers": {
+        "facebook": 14200,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5473235.jpg?t=1669723768"
+    },
+    {
+      "title": "StyleSeat Blog \u00bb Hair Color",
+      "feed_url": "https://www.styleseat.com/blog/category/hair/color/feed/",
+      "website_url": "https://www.styleseat.com/blog/category/hair/color/",
+      "description": "StyleSeat is the online destination for beauty & wellness professionals and clients. Professionals can showcase their work, connect with new and existing clients, and build their businesses. Clients can discover new services and providers, book appointments online, and get inspired. We offer Salon & Business Tips for Stylists in our Hair color blog.",
+      "followers": {
+        "facebook": 268000,
+        "twitter": 22400,
+        "instagram": 57600
+      },
+      "image_url": "https://i1.feedspot.com/5473239.jpg?t=1669726569"
+    },
+    {
+      "title": "Arctic Fox Hair Color Blog",
+      "feed_url": "https://arcticfoxhaircolor.com/blogs/news.atom",
+      "website_url": "https://arcticfoxhaircolor.com/blogs/news",
+      "description": "Arctic Fox Hair Color Blog is back with solutions to all your hair color problems, Q&As, tips, how-tos, and other colorful stuff. Always cruelty-free and vegan.",
+      "followers": {
+        "facebook": 849100,
+        "twitter": 22200,
+        "instagram": 928500
+      },
+      "image_url": "https://i1.feedspot.com/5473237.jpg?t=1669725103"
+    }
+  ]
+}

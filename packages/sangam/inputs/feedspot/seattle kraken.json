@@ -1,0 +1,52 @@
+{
+  "category": "Seattle Kraken",
+  "source_url": "https://rss.feedspot.com/seattle_kraken_rss_feeds",
+  "feeds": [
+    {
+      "title": "Sound Of Hockey",
+      "feed_url": "https://soundofhockey.com/feed/",
+      "website_url": "https://soundofhockey.com/articles/",
+      "description": "Sound Of Hockey is your home for hockey in the Pacific Northwest, bringing you Seattle Kraken news and more. Read the latest Sound Of Hockey articles for news and updates about the NHL's latest franchise, the Seattle Kraken, and the local hockey community.",
+      "followers": {
+        "facebook": 639,
+        "twitter": 5900,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5374384.jpg?t=1645513697"
+    },
+    {
+      "title": "Davy Jones' Locker Room",
+      "feed_url": "https://www.davyjoneslockerroom.com/feed/",
+      "website_url": "https://www.davyjoneslockerroom.com/",
+      "description": "Davy Jones Locker Room is your best source for quality Seattle Kraken news, rumours, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 68,
+        "twitter": 7500
+      },
+      "image_url": "https://i1.feedspot.com/5374388.jpg?t=1645515522"
+    },
+    {
+      "title": "KXLY \u00bb Seattle Kraken",
+      "feed_url": "https://www.kxly.com/search/?f=rss",
+      "website_url": "https://www.kxly.com/sports/seattle-kraken/",
+      "description": "Find the latest news and announcements on Seattle Kraken by KXLY. KXLY.com is your source for news, weather, sports, and entertainment headlines for Spokane, Coeur d'Alene, and the Inland Northwest.",
+      "followers": {
+        "facebook": 255200,
+        "twitter": 63300,
+        "instagram": 18200
+      },
+      "image_url": "https://i1.feedspot.com/5374387.jpg?t=1645513723"
+    },
+    {
+      "title": "The Seattle Times \u00bb Seattle Kraken",
+      "feed_url": "https://www.seattletimes.com/sports/kraken/feed/",
+      "website_url": "https://www.seattletimes.com/sports/kraken/",
+      "description": "Read Seattle Kraken hockey news, articles, scores, schedule, roster, stats, NHL updates, and live game coverage. The Seattle Times is a locally-owned, independent news source. We're known for our comprehensive local coverage that creates conversation within the Seattle community, throughout the nation and around the globe.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900
+      },
+      "image_url": "https://i1.feedspot.com/5374386.jpg?t=1645513709"
+    }
+  ]
+}

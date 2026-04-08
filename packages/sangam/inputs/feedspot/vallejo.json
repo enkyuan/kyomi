@@ -1,0 +1,80 @@
+{
+  "category": "Vallejo",
+  "source_url": "https://rss.feedspot.com/vallejo_rss_feeds",
+  "feeds": [
+    {
+      "title": "HoodCast AF Action Figure Podcast",
+      "feed_url": "https://feeds.redcircle.com/29ec69d1-0e0d-43dc-b849-4a050420d51b",
+      "website_url": "https://www.timesheraldonline.com/",
+      "description": "The bad boys of action figure podcasting. Talking Action figures/collectibles/movies/comics",
+      "followers": {
+        "twitter": 151,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5238013.jpg?t=1745428222"
+    },
+    {
+      "title": "Times-Herald",
+      "feed_url": "https://www.timesheraldonline.com/feed/",
+      "website_url": "https://www.timesheraldonline.com/",
+      "description": "Times-Herald covers local news in Vallejo, California. Keep up with all business, local sports, outdoors, local columnists and more.",
+      "followers": {
+        "facebook": 34000,
+        "twitter": 9600,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5139526.jpg?t=1623648331"
+    },
+    {
+      "title": "Virtual School Meanderings",
+      "feed_url": "https://virtualschooling.wordpress.com/feed/",
+      "website_url": "https://virtualschooling.wordpress.com/",
+      "description": "On Virtual School Meanderings, Assistant Professor of Instructional Technology and Education Evaluation & Research Michael Barbour shares distance education resources and ponders ideas on the effective online delivery of material to K-12 students in virtual and cyber classrooms.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4655769.jpg?t=1651923323"
+    },
+    {
+      "title": "Professionally Speaking Blog",
+      "feed_url": "https://www.exec-comms.com/blog/feed/",
+      "website_url": "https://www.exec-comms.com/blog/",
+      "description": "Exec|Comm LLC helps you communicate with more impact by teaching you how to focus more on others and less on yourself. In learning this, you can more powerfully impact the world.",
+      "followers": {
+        "facebook": 494,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/1861934.jpg?t=1612018022"
+    },
+    {
+      "title": "The Nova Studio",
+      "feed_url": "https://thenovastudio.com/feed/",
+      "website_url": "https://thenovastudio.com/blog/",
+      "description": "Teaching creative people how to make soap & natural bath & body products Since 2003. Our mission is to educate & support handcrafters.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 4100,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4649658.jpg?t=1616748274"
+    },
+    {
+      "title": "On Deck",
+      "feed_url": "https://feeds.buzzsprout.com/1767894.rss",
+      "website_url": "https://www.buzzsprout.com/1767894",
+      "description": "On Deck is a podcast about current events in professional sports with a focus on teams of (and formerly of) the San Francisco Bay Area. Produced by Blue Dot Entertainment, hosts Kyle, Spencer, and Colin deliver today's sports talk with an unfiltered analysis of today's worst, best, and most meh in sports today.",
+      "followers": {
+        "facebook": 90
+      },
+      "image_url": "https://i1.feedspot.com/5338742.jpg?t=1635603252"
+    },
+    {
+      "title": "Clear Water Zendo",
+      "feed_url": "https://vallejozencenter.org/feed/podcast",
+      "website_url": "https://clearwaterzen.org/category/podcasts/",
+      "description": "A Soto Zen temple in Vallejo, CA",
+      "followers": {
+        "facebook": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5173766.jpg?t=1752340652"
+    }
+  ]
+}

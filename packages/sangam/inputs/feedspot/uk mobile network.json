@@ -1,0 +1,68 @@
+{
+  "category": "UK Mobile Network",
+  "source_url": "https://rss.feedspot.com/uk_mobile_network_rss_feeds",
+  "feeds": [
+    {
+      "title": "Data Centre & Network News Magazine",
+      "feed_url": "https://dcnnmagazine.com/feed/",
+      "website_url": "https://dcnnmagazine.com/",
+      "description": "Data Centre & Network News (DCNN) is the total solution at the heart of the data center and networking industry. The industry uses DCNN to keep up to date with industry news, product developments, insight, analysis, and opinions concerning all the popular topics surrounding the industry.",
+      "followers": {
+        "twitter": 3200,
+        "instagram": 402
+      },
+      "image_url": "https://i1.feedspot.com/4690850.jpg?t=1703239926"
+    },
+    {
+      "title": "3G and 4G Wireless Blog",
+      "feed_url": "https://feeds.feedburner.com/3gAnd4gWirelessBlog",
+      "website_url": "https://blog.3g4g.co.uk/",
+      "description": "Follow us to keep up with the latest news and information on 3G, 4G, 5G and wireless technologies in general.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2064989.jpg?t=1620138492"
+    },
+    {
+      "title": "Squire Technologies Blog",
+      "feed_url": "https://squire-technologies.co.uk/blog/feed",
+      "website_url": "https://squire-technologies.co.uk/blog/",
+      "description": "Squire Technologies Blog is about SS7, VoIP & VoLTE Carrier-grade gateways with expert global service and support. Follow us to keep up with articles on SS7 VoIP Media Gateways, VoIP Softswitch, Session Border Controller, Media Gateway Controller, SS7 ISDN Protocol Converters, SMS Gateways & Wholesale Billing Solutions.",
+      "followers": {
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4690279.jpg?t=1619099581"
+    },
+    {
+      "title": "Ken's Tech Tips",
+      "feed_url": "https://kenstechtips.com/index.php/feed",
+      "website_url": "https://kenstechtips.com/",
+      "description": "Subscribe us to keep up with Ken Lo's guide to mobile technology in the UK, discussing UK mobile networks and mobile technology.",
+      "followers": {
+        "facebook": 577,
+        "twitter": 532
+      },
+      "image_url": "https://i1.feedspot.com/4910648.jpg?t=1620052028"
+    },
+    {
+      "title": "ADVA",
+      "feed_url": "https://www.blog.adva.com/en/feed",
+      "website_url": "https://www.blog.adtran.com/",
+      "description": "Technically Speaking is an online community for those interested in the networking industry. Within these pages, you will find insight and comments on the latest hot topics and industry concerns. Written by industry experts, this blog is designed to engage discussion and drive thought.",
+      "followers": {
+        "facebook": 16000,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4690361.jpg?t=1619099415"
+    },
+    {
+      "title": "Gamma",
+      "feed_url": "https://gammagroup.co/resources/blog/",
+      "website_url": "https://gammagroup.co/resources/blog/",
+      "description": "We supply voice, data, mobile and converged services to SME and enterprise businesses and the public sector.",
+      "followers": {
+        "facebook": 811,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4911662.jpg?t=1620138407"
+    }
+  ]
+}

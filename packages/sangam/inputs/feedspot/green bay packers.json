@@ -1,0 +1,287 @@
+{
+  "category": "Green Bay Packers",
+  "source_url": "https://rss.feedspot.com/green_bay_packers_rss_feeds",
+  "feeds": [
+    {
+      "title": "Packers.com",
+      "feed_url": "https://www.packers.com/rss/news",
+      "website_url": "https://www.packers.com/news/",
+      "description": "The official source of the latest Packers headlines, news, Insider Inbox, history stories, transactions, press releases, and gameday coverage.",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 2600000
+      },
+      "image_url": "https://i1.feedspot.com/5160067.jpg?t=1625827247"
+    },
+    {
+      "title": "Total Packers",
+      "feed_url": "https://totalpackers.com/feed/",
+      "website_url": "https://totalpackers.com/",
+      "description": "Total Packers was founded in 2008 to cover Green Bay Packers football - the players, the coaches, games, business, and just about anything else related to the Green Bay Packers. Follow for news, analysis, commentary, video, gossip, and humor for your Green Bay Packers.",
+      "followers": {
+        "facebook": 35300,
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5160081.jpg?t=1625827259"
+    },
+    {
+      "title": "PFF \u00bb Green Bay Packers",
+      "feed_url": "https://www.pff.com/feed/teams/12",
+      "website_url": "https://www.pff.com/nfl/teams/green-bay-packers/12",
+      "description": "The latest NFL news for the Green Bay Packers with game schedules, projected box scores and PFF grades.",
+      "followers": {
+        "facebook": 196000,
+        "twitter": 1500000,
+        "instagram": 795500
+      },
+      "image_url": "https://i1.feedspot.com/5160263.jpg?t=1625827274"
+    },
+    {
+      "title": "The Cold Wire \u00bb Green Bay Packers",
+      "feed_url": "https://www.thecoldwire.com/sports/nfl/green-bay-packers/feed/",
+      "website_url": "https://www.thecoldwire.com/sports/nfl/green-bay-packers/",
+      "description": "A go to source for trending sports news covering the NFL, MLB, NBA, college football, entertainment, and much more. The Cold Wire is a global platform for the most sought-after trending sports and entertainment news. Get the latest Green Bay Packers news, updates, rumors, trades, signings, injuries, commentary, analysis, and more!",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 1300,
+        "instagram": 100
+      },
+      "image_url": "https://i1.feedspot.com/5508459.jpg?t=1676463855"
+    },
+    {
+      "title": "The Sports Daily \u00bb Green Bay Packers",
+      "feed_url": "https://thesportsdaily.com/category/packers-press/feed/",
+      "website_url": "https://thesportsdaily.com/category/packers-press/",
+      "description": "The Sports Daily is a network comprised of 100+ sports blogs that produce cutting-edge content for readers around the world. We aim to produce a blend of original content & aggregated news and publish breaking news quick hits, analytical think pieces, rumors, list articles, viral videos, and more in order to keep readers informed in real-time.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5160320.jpg?t=1625827288"
+    },
+    {
+      "title": "Pro Football Rumors \u00bb Green Bay Packers Rumors",
+      "feed_url": "https://www.profootballrumors.com/green-bay-packers-news-rumors/feed",
+      "website_url": "https://www.profootballrumors.com/green-bay-packers-news-rumors",
+      "description": "We deliver breaking Green Bay Packers news & keep you up to date with the latest Green Bay Packers rumors. Read the latest from Pro Football Rumors.",
+      "followers": {
+        "facebook": 21100,
+        "twitter": 297000
+      },
+      "image_url": "https://i1.feedspot.com/5160315.jpg?t=1625827293"
+    },
+    {
+      "title": "SportSpyder \u00bb Green Bay Packers",
+      "feed_url": "https://sportspyder.com/nfl/green-bay-packers/news.xml",
+      "website_url": "https://sportspyder.com/nfl/green-bay-packers/news",
+      "description": "The Latest Green Bay Packers NFL news articles from around the web.",
+      "followers": {
+        "facebook": 701,
+        "twitter": 873
+      },
+      "image_url": "https://i1.feedspot.com/5160268.jpg?t=1625827297"
+    },
+    {
+      "title": "Packernet",
+      "feed_url": "https://www.packernet.com/rss/articles.php",
+      "website_url": "https://www.packernet.com/news",
+      "description": "Packernet is the one site you need to stay informed with all the latest Green Bay Packer news. We scour the web for the latest Green Bay Packers news, audio, and video and link to it all from one place.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 702
+      },
+      "image_url": "https://i1.feedspot.com/5160093.jpg?t=1625827305"
+    },
+    {
+      "title": "Packers Talk",
+      "feed_url": "https://packerstalk.com/feed/",
+      "website_url": "https://packerstalk.com/archives/",
+      "description": "Packers Talk brings you the best blog posts, podcasts, and live shows about the Green Bay Packers! Read and listen to top Packers bloggers!",
+      "followers": {
+        "facebook": 17400,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5160182.jpg?t=1625827315"
+    },
+    {
+      "title": "The Power Sweep",
+      "feed_url": "https://thepowersweep.com/blog?format=RSS",
+      "website_url": "https://thepowersweep.com/",
+      "description": "Your home for high quality Packers storytelling in all shapes and sizes. We will help you become a smarter Green Bay Packers fan with our blogs and podcasts.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4757022.jpg?t=1607075181"
+    },
+    {
+      "title": "NFLTradeRumors.co \u00bb Packers",
+      "feed_url": "https://nfltraderumors.co/category/packers-rumors-news/feed/",
+      "website_url": "https://nfltraderumors.co/category/packers-rumors-news/",
+      "description": "Looking for the latest Green Bay Packers Rumors and Insider News, NFLTradeRumors.co has you covered with the best up-to-the-minute Packers coverage.",
+      "followers": {
+        "facebook": 203700,
+        "twitter": 327700
+      },
+      "image_url": "https://i1.feedspot.com/5355736.jpg?t=1640086158"
+    },
+    {
+      "title": "WFRV Local 5 \u00bb Packers",
+      "feed_url": "https://www.wearegreenbay.com/packers/feed/",
+      "website_url": "https://www.wearegreenbay.com/packers/",
+      "description": "The Latest News and Updates in Packers brought to you by the team at WFRV Local 5.",
+      "followers": {
+        "facebook": 109500,
+        "twitter": 21500
+      },
+      "image_url": "https://i1.feedspot.com/5355732.jpg?t=1640073537"
+    },
+    {
+      "title": "PACKERVILLE, U.S.A.",
+      "feed_url": "https://packerville.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://packerville.blogspot.com/",
+      "description": "A blog about the Green Bay Packers, Lambeau Field, Packers history, Green Bay Packers players, etc.",
+      "followers": {
+        "facebook": 223,
+        "twitter": 516
+      },
+      "image_url": "https://i1.feedspot.com/5355737.jpg?t=1640072927"
+    },
+    {
+      "title": "TMJ4 \u00bb Green Bay Packers",
+      "feed_url": "https://www.tmj4.com/sports/green-bay-packers.rss",
+      "website_url": "https://www.tmj4.com/sports/green-bay-packers",
+      "description": "Explore the latest news, highlights, analysis, draft, and more surrounding the Green Bay Packers on the TMJ4 News portal. TMJ4 News brings you southeast Wisconsin breaking news as well as your weather forecast.",
+      "followers": {
+        "facebook": 657800,
+        "twitter": 82300
+      },
+      "image_url": "https://i1.feedspot.com/5355739.jpg?t=1640066298"
+    },
+    {
+      "title": "Cheesehead TV",
+      "feed_url": "https://feeds.feedburner.com/CheeseheadTv",
+      "website_url": "https://cheeseheadtv.com/",
+      "description": "Your best source for the latest Green Bay Packers news, analysis, rumors, stats, and more.",
+      "followers": {
+        "facebook": 12000,
+        "twitter": 91400
+      },
+      "image_url": "https://i1.feedspot.com/5160100.jpg?t=1625827250"
+    },
+    {
+      "title": "Acme Packing Company",
+      "feed_url": "https://www.acmepackingcompany.com/rss/index.xml",
+      "website_url": "https://www.acmepackingcompany.com/",
+      "description": "Your best source for quality Green Bay Packers news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 43700,
+        "twitter": 18700
+      },
+      "image_url": "https://i1.feedspot.com/5160036.jpg?t=1625827237"
+    },
+    {
+      "title": "Lombardi Ave",
+      "feed_url": "https://lombardiave.com/feed/",
+      "website_url": "https://lombardiave.com/",
+      "description": "Lombardi Ave is a Green Bay Packers blog brought to you by the FanSided Network. Lombardi Ave is dedicated to providing top-notch Packers news, views, and original content.",
+      "followers": {
+        "facebook": 35500,
+        "twitter": 7200
+      },
+      "image_url": "https://i1.feedspot.com/5160046.jpg"
+    },
+    {
+      "title": "NBC Sports \u00bb Green Bay Packers",
+      "feed_url": "https://www.nbcsports.com/nfl/green-bay-packers/rumor-mill/",
+      "website_url": "https://www.nbcsports.com/nfl/green-bay-packers/rumor-mill/",
+      "description": "Launched in November 2001, Profootballtalk.com seeks to entertain while informing. The PFT Rumor Mill has become a fixture for all NFL front offices, for many coaches and players, all agents, and most of the media covering the NFL.",
+      "followers": {
+        "facebook": 57400,
+        "twitter": 1900000,
+        "instagram": 50000
+      },
+      "image_url": "https://i1.feedspot.com/5160226.jpg?t=1625827263"
+    },
+    {
+      "title": "The Athletic \u00bb Green Bay Packers",
+      "feed_url": "https://www.nytimes.com/athletic/rss/nfl/packers/",
+      "website_url": "https://www.nytimes.com/athletic/nfl/team/packers/",
+      "description": "The Athletic is a subscription-based media publisher of smarter sports coverage for die-hard fans. Get access to smart, in-depth Packers sports coverage from an all-star team of writers.",
+      "followers": {
+        "facebook": 707100,
+        "twitter": 612600,
+        "instagram": 328300
+      },
+      "image_url": "https://i1.feedspot.com/5160329.jpg?t=1625827270"
+    },
+    {
+      "title": "Heavy \u00bb Green Bay Packers",
+      "feed_url": "https://heavy.com/sports/nfl/green-bay-packers/feed/",
+      "website_url": "https://heavy.com/sports/nfl/green-bay-packers/",
+      "description": "Heavy on Packers is your go-to source for Green Bay Packers news, rumors and roster moves.",
+      "followers": {
+        "facebook": 120800,
+        "twitter": 36
+      },
+      "image_url": "https://i1.feedspot.com/5355735.jpg?t=1640084758"
+    },
+    {
+      "title": "FanSided \u00bb Green Bay Packers",
+      "feed_url": "https://fansided.com/nfl/green-bay-packers/",
+      "website_url": "https://fansided.com/nfl/green-bay-packers/",
+      "description": "The latest Green Bay Packers news, trade rumors, draft, playoffs and more from FanSided. From NFL Spin Zone to NFL Mocks, we have you covered.",
+      "followers": {
+        "facebook": 973500,
+        "twitter": 46700,
+        "instagram": 38900
+      },
+      "image_url": "https://i1.feedspot.com/5355733.jpg?t=1640078751"
+    },
+    {
+      "title": "Packers Wire",
+      "feed_url": "https://packerswire.usatoday.com/feed/",
+      "website_url": "https://packerswire.usatoday.com/",
+      "description": "Get the latest Packers news, schedule, photos and rumors from Packers Wire, the best Packers blog available.",
+      "followers": {
+        "facebook": 13700,
+        "twitter": 40800
+      },
+      "image_url": "https://i1.feedspot.com/5160161.jpg?t=1625827242"
+    },
+    {
+      "title": "Yardbarker \u00bb Green Bay Packers",
+      "feed_url": "https://www.yardbarker.com/",
+      "website_url": "https://www.yardbarker.com/nfl/teams/green_bay_packers/53",
+      "description": "Green Bay Packers rumors, news and videos from the best sources on the web. Sign up for the Packers newsletter!",
+      "followers": {
+        "facebook": 151800,
+        "twitter": 28800
+      },
+      "image_url": "https://i1.feedspot.com/5160256.jpg?t=1625827278"
+    },
+    {
+      "title": "The Spun \u00bb Green Bay Packers",
+      "feed_url": "https://thespun.com/tag/green-bay-packers/",
+      "website_url": "https://thespun.com/tag/green-bay-packers/",
+      "description": "The Spun covers the most interesting sports stories for the NFL, the NBA, college football, college basketball, Major League Baseball and more.",
+      "followers": {
+        "facebook": 871400,
+        "twitter": 15700,
+        "instagram": 51300
+      },
+      "image_url": "https://i1.feedspot.com/5160310.jpg?t=1625827284"
+    },
+    {
+      "title": "Dairyland Express \u00bb Green Bay Packers",
+      "feed_url": "https://dairylandexpress.com/green-bay-packers/feed/",
+      "website_url": "https://dairylandexpress.com/green-bay-packers/",
+      "description": "Dairyland Express is dedicated to providing top-notch Wisconsin Sports updates. Get access to the latest Green Bay Packers news, rumors, GIFs, predictions, and more.",
+      "followers": {
+        "facebook": 341,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5160213.jpg?t=1625827300"
+    }
+  ]
+}

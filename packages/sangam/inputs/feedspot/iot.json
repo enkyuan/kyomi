@@ -1,0 +1,872 @@
+{
+  "category": "IOT",
+  "source_url": "https://rss.feedspot.com/iot_rss_feeds",
+  "feeds": [
+    {
+      "title": "Connected World",
+      "feed_url": "https://connectedworld.com/feed/",
+      "website_url": "https://connectedworld.com/category/expert-opinions/",
+      "description": "Connected World is the adviser to business leaders who are making decisions about connectivity, innovation, technology, and collaboration. Specialty Publishing Media is dedicated to on-the-go people who are looking to stay connected in a hypercompetitive IoT world.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4605074.jpg?t=1615528032"
+    },
+    {
+      "title": "IoT council, a thinktank for the Internet of Things",
+      "feed_url": "https://theinternetofthings.eu/category/iot/feed",
+      "website_url": "https://theinternetofthings.eu/category/iot",
+      "description": "IoT Council brings you news on Internet of Things. It aims to offer the latest on technical building blocks but also tries to put this digital transition into a social and circular economy context. Rob van Kranenburg is the founder of IOT Council.",
+      "followers": {
+        "twitter": 17800
+      },
+      "image_url": "https://i1.feedspot.com/80723.jpg?t=1654500697"
+    },
+    {
+      "title": "IoT Tech News",
+      "feed_url": "https://iottechnews.com/feed/",
+      "website_url": "https://iottechnews.com/news/",
+      "description": "A practical resource providing news, analysis, and opinion on the burgeoning Internet of Things ecosystem, from standardization to business use cases, and development opportunities. Explore industry research and reports from the frontline of IoT technology news.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4666817.jpg?t=1617952302"
+    },
+    {
+      "title": "IoT Now",
+      "feed_url": "https://www.iot-now.com/feed/",
+      "website_url": "https://www.iot-now.com/iot-insights/",
+      "description": "IoT Now is the leading global magazine and online news source covering machine-to-machine communications in a whole host of industry verticals. Daily IoT news, white papers, product reviews and a bi-monthly magazine focused on the IoT.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 29300
+      },
+      "image_url": "https://i1.feedspot.com/4666681.jpg?t=1614850306"
+    },
+    {
+      "title": "Amazon Web Services \u00bb The Internet of Things",
+      "feed_url": "https://aws.amazon.com/blogs/iot/feed/",
+      "website_url": "https://aws.amazon.com/blogs/iot/",
+      "description": "Amazon Web Services offers reliable, scalable, and inexpensive cloud computing services. This section covers information about IoT.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/5279889.jpg?t=1620826276"
+    },
+    {
+      "title": "Very Technology Blogs",
+      "feed_url": "https://www.verytechnology.com/feed",
+      "website_url": "https://www.verytechnology.com/blog",
+      "description": "Deepen your knowledge and prepare to collaborate with our team. Explore Very Technology's IoT thought leadership for insights shared by tenacious problem solvers who tackle IoT challenges daily. Very Technology is an end-to-end IoT development company producing scalable IoT solutions for businesses all over the world.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/7295850.jpg?t=1712839222"
+    },
+    {
+      "title": "IOTDunia",
+      "feed_url": "https://iotdunia.com/feed/",
+      "website_url": "https://iotdunia.com/",
+      "description": "IoTDunia provides all information about the new things happening in IoT. We focus on educating and making aware students about the Internet of things. Our mission is to Help tech community in enhancing knowledge on internet of things.",
+      "followers": {
+        "facebook": 718,
+        "twitter": 981,
+        "instagram": 342
+      },
+      "image_url": "https://i1.feedspot.com/5026016.jpg?t=1624458481"
+    },
+    {
+      "title": "ScienceSoft",
+      "feed_url": "https://www.scnsoft.com/blog/category/internet-of-things/atom",
+      "website_url": "https://www.scnsoft.com/blog/category/internet-of-things",
+      "description": "ScienceSoft's IoT blog shows CIOs, CTOs, and project managers how to solve their acute business challenges with IoT technologies focusing on Industrial IoT, connected products, smart cities, and connected health.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 915
+      },
+      "image_url": "https://i1.feedspot.com/4958947.jpg?t=1617957226"
+    },
+    {
+      "title": "IoT Times",
+      "feed_url": "https://iot.eetimes.com/feed/",
+      "website_url": "https://iot.eetimes.com/",
+      "description": "IoT Times covers the latest news, analysis, and technical studies about technologies used in the Internet of Things. Follow IoT Times to stay up-to-date on all that is happening in and around the Internet of Things.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5252357.jpg?t=1620823306"
+    },
+    {
+      "title": "RTInsights - Internet of Things",
+      "feed_url": "https://www.rtinsights.com/category/internet-of-things/feed/",
+      "website_url": "https://www.rtinsights.com/category/internet-of-things/",
+      "description": "Analysis and market insights on real-time analytics including Big Data, the IoT, and cognitive computing. Business use cases and technologies are discussed.",
+      "followers": {
+        "facebook": 527,
+        "twitter": 5900
+      },
+      "image_url": "https://i1.feedspot.com/4668083.jpg?t=1617953504"
+    },
+    {
+      "title": "IoT Analytics Blog",
+      "feed_url": "https://iot-analytics.com/feed/",
+      "website_url": "https://iot-analytics.com/research-blog/",
+      "description": "IoT Analytics is the leading provider of market insights for the Internet of Things (IoT), M2M, and Industry 4.0. More than 30,000 IoT decision-makers rely on IoT Analytics' data-driven market research every month.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/4666567.jpg?t=1617953516"
+    },
+    {
+      "title": "IoT Business News",
+      "feed_url": "https://iotbusinessnews.com/feed/",
+      "website_url": "https://iotbusinessnews.com/category/iot-insights/",
+      "description": "IoT Business News is a leading media platform focusing on the business side of the Internet of Things. Created in 2011 and fully independent, IoT Business News has become over the years the reference news source for all M2M and IoT business professionals across the world. Served by a responsive team, we publish every day, fresh, relevant and reliable content on the Internet of Things with a business perspective, all in a clear and illustrated way.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 28000
+      },
+      "image_url": "https://i1.feedspot.com/4666251.jpg?t=1617953509"
+    },
+    {
+      "title": "IIoT World -the first global publication focused 100% on Industrial IoT",
+      "feed_url": "https://www.iiot-world.com/feed/",
+      "website_url": "https://www.iiot-world.com/",
+      "description": "IIoT World combines journalistic coverage with data analysis to expose the stories, players, trends and innovations that shape the IIoT.",
+      "followers": {
+        "facebook": 856,
+        "twitter": 53700
+      },
+      "image_url": "https://i1.feedspot.com/4666594.jpg?t=1617953523"
+    },
+    {
+      "title": "Link Labs Blog",
+      "feed_url": "https://www.link-labs.com/blog/rss.xml",
+      "website_url": "https://www.link-labs.com/blog",
+      "description": "We're leading innovators in technology for the IoT. Our flagship product offering, AirFinder makes locating and monitoring anything, anywhere easy and impactful. We believe that unique solutions built by solving hard technical problems can transform businesses of any scale.",
+      "followers": {
+        "facebook": 399,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4666229.jpg?t=1617953519"
+    },
+    {
+      "title": "The IOT Magazine",
+      "feed_url": "https://theiotmagazine.com/feed",
+      "website_url": "https://theiotmagazine.com/",
+      "description": "The IOT Magazine is the #1 place to learn about IoT. Stay tuned to get the latest updates on the Internet Of Things at The IoT Magazine.",
+      "followers": {
+        "twitter": 287
+      },
+      "image_url": "https://i1.feedspot.com/4666869.jpg?t=1620804760"
+    },
+    {
+      "title": "Automated Home",
+      "feed_url": "https://automatedhome.com/feed/",
+      "website_url": "https://automatedhome.com/",
+      "description": "Automated Home is the Centre of the Home Automation Community with home automation news, reviews, forums, wiring guides, and tutorials. Read, learn about, and shop innovatively designed products and smart systems within the Automated Home blog page.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 36600,
+        "instagram": 33
+      },
+      "image_url": "https://i1.feedspot.com/4604338.jpg?t=1619531766"
+    },
+    {
+      "title": "IoT Marketing",
+      "feed_url": "https://iotmktg.com/feed/",
+      "website_url": "https://iotmktg.com/blog/",
+      "description": "Stay up to date on technology and IoT trends and solutions by reading IoT blogs on topics such as smart cities, connected health, energy efficiency, and telecom. IoT Marketing provides end-to-end marketing services to IoT companies.",
+      "followers": {
+        "twitter": 2400,
+        "instagram": 64
+      },
+      "image_url": "https://i1.feedspot.com/5310201.jpg?t=1628317471"
+    },
+    {
+      "title": "Veridify Blog",
+      "feed_url": "https://www.veridify.com/feed/",
+      "website_url": "https://www.veridify.com/security-blog/",
+      "description": "The Veridify IoT Security Blog exploring security and privacy solutions for embedded systems keeping products smart and secure in the Internet of Things.",
+      "followers": {
+        "facebook": 167,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5121885.jpg?t=1617955981"
+    },
+    {
+      "title": "We speak IoT",
+      "feed_url": "https://www.wespeakiot.com/feed/",
+      "website_url": "https://www.wespeakiot.com/",
+      "description": "Your source for first hand news from the world of the Internet of Things.",
+      "followers": {
+        "twitter": 452
+      },
+      "image_url": "https://i1.feedspot.com/4666858.jpg?t=1654494306"
+    },
+    {
+      "title": "Rob Tiffany Blog",
+      "feed_url": "https://robtiffany.com/feed/",
+      "website_url": "https://robtiffany.com/tag/iot/",
+      "description": "Best selling author and international speaker Rob Tiffany lives in Seattle and is a thought leader and strategist in Enterprise Mobility and the Internet of Things.",
+      "followers": {
+        "facebook": 460,
+        "twitter": 28400
+      },
+      "image_url": "https://i1.feedspot.com/882957.jpg?t=1617956073"
+    },
+    {
+      "title": "SURE Universal",
+      "feed_url": "https://www.sureuniversal.com/feed/",
+      "website_url": "https://www.sureuniversal.com/blogs/",
+      "description": "SURE Universal provides the most secure, end-to-end IOT home healthcare solution for remote diagnosis, monitoring and telehealth -perfectly tailored to patient needs.",
+      "followers": {
+        "facebook": 16700,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4666835.jpg?t=1654501403"
+    },
+    {
+      "title": "Plainsight Blog",
+      "feed_url": "https://plainsight.ai/feed/",
+      "website_url": "https://plainsight.ai/blog/",
+      "description": "Sixgill builds universal sensor data and automation services that enable organizations to govern IoE assets. IoT Sensors Data & IoT Enterprise. Use our mobile proximity platform to track the key people.Get more information here about high volume sensor data for iot device location.",
+      "followers": {
+        "facebook": 41,
+        "twitter": 1100,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4752543.jpg?t=1617956919"
+    },
+    {
+      "title": "Veridify Blog",
+      "feed_url": "https://www.veridify.com/feed/",
+      "website_url": "https://www.veridify.com/security-blog/",
+      "description": "Veridify Security, formerly SecureRF, delivers fast, small footprint, ultra-low-energy, and quantum-resistant public-key security tools for low-resource processors powering the IoT. Check out the Veridify IoT Security Blog for exploring security and privacy solutions for embedded systems--keeping products smart and secure in the Internet of Things.",
+      "followers": {
+        "facebook": 167,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4626543.jpg?t=1608551319"
+    },
+    {
+      "title": "DornerWorks Blog",
+      "feed_url": "https://www.dornerworks.com/feed/",
+      "website_url": "https://www.dornerworks.com/blog/",
+      "description": "Follow for latest blog posts related to company and electronic engineering services.",
+      "followers": {
+        "twitter": 402
+      },
+      "image_url": "https://i1.feedspot.com/4668275.jpg?t=1617956966"
+    },
+    {
+      "title": "Paco Maroto's IoT Blog",
+      "feed_url": "https://pacomaroto.wordpress.com/feed/",
+      "website_url": "https://pacomaroto.wordpress.com/",
+      "description": "The Blog that all IoT experts must read.",
+      "followers": {
+        "twitter": 578
+      },
+      "image_url": "https://i1.feedspot.com/4666830.jpg?t=1617957008"
+    },
+    {
+      "title": "IoT World Magazine",
+      "feed_url": "https://iotworldmagazine.com/feed",
+      "website_url": "https://iotworldmagazine.com/robotics",
+      "description": "IoT Magazine is the world's leading online Internet of Things mag for IoT business news and IoT technology trends as IoT Industry's official trade publication in UK.",
+      "followers": {
+        "twitter": 170
+      },
+      "image_url": "https://i1.feedspot.com/4666865.jpg?t=1614845510"
+    },
+    {
+      "title": "NetofEverything IoT",
+      "feed_url": "https://netofeverything.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://netofeverything.blogspot.com/",
+      "description": "The latest on the Internet of Things (IoT). IoT is a concept of having everyday devices connected, sharing and communicating data and information.",
+      "followers": {
+        "twitter": 10400
+      },
+      "image_url": "https://i1.feedspot.com/4666293.jpg?t=1654501065"
+    },
+    {
+      "title": "Kemsys Blog",
+      "feed_url": "https://kemsys.com/feed/",
+      "website_url": "https://kemsys.com/blog/",
+      "description": "Kemsys specializes in providing turnkey IoT product design services, in addition we proactively invest in creating our own IPs with the aim to accelerate our customer's time to market and reduce their implementation risks. Want to know what's going on in the world of IoT? Follow here for the Latest news about Industrial Automation, Remote Monitoring, and Predictive maintenance.",
+      "followers": {
+        "facebook": 58,
+        "twitter": 124
+      },
+      "image_url": "https://i1.feedspot.com/5573956.jpg?t=1684829353"
+    },
+    {
+      "title": "Coreflux Blog",
+      "feed_url": "https://medium.com/feed/coreflux-blog",
+      "website_url": "https://medium.com/coreflux-blog",
+      "description": "IoT for All",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5036444.jpg?t=1654338947"
+    },
+    {
+      "title": "Electronics For You",
+      "feed_url": "https://iot.electronicsforu.com/feed/",
+      "website_url": "https://iot.electronicsforu.com/category/content/whats-new/news-whats-new/",
+      "description": "Leading resource of news on electronics and the Internet of Things (IoT) by EFY. Access circuits, videos, interviews, reviews, and career guidance for engineers. Electronics For You is a global publication focused on Electronics, covering the growing industry and market developments from India.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 1100,
+        "instagram": 15500
+      },
+      "image_url": "https://i1.feedspot.com/4666735.jpg?t=1611820351"
+    },
+    {
+      "title": "IoT Tech Expo Blog",
+      "feed_url": "https://www.iottechexpo.com/feed/",
+      "website_url": "https://www.iottechexpo.com/blog/",
+      "description": "The IoT Tech Expo is the leading Internet of Things event series which covers the entire ecosystem. 7 conferences, industry leaders and an exhibition.",
+      "followers": {
+        "facebook": 6600,
+        "twitter": 13200,
+        "instagram": 872
+      },
+      "image_url": "https://i1.feedspot.com/4666803.jpg?t=1617953554"
+    },
+    {
+      "title": "Libelium - Connecting Sensors to the Cloud",
+      "feed_url": "https://www.libelium.com/feed/",
+      "website_url": "https://www.libelium.com/libeliumworld/",
+      "description": "Libelium designs and manufactures wireless sensor network devices so that system integrators, engineering, and consultancy companies can deliver reliable Internet of Things (IoT), M2M and Smart Cities solutions with minimum time to market.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 10100,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/255050.jpg?t=1654344818"
+    },
+    {
+      "title": "Daniel Elizalde Blog",
+      "feed_url": "https://danielelizalde.com/feed/",
+      "website_url": "https://danielelizalde.com/blog/",
+      "description": "The best IoT training and courses for product professionals. Daniel Elizalde is an IoT expert who teaches his IoT courses online, at Stanford University, and works directly with top companies around the world.",
+      "followers": {
+        "twitter": 24100
+      },
+      "image_url": "https://i1.feedspot.com/4666568.jpg?t=1654346859"
+    },
+    {
+      "title": "IoT Worm",
+      "feed_url": "https://feeds.feedburner.com/InternetOfThingsWorm",
+      "website_url": "https://iotworm.com/category/iot-news/",
+      "description": "The Internet Of Things Worm aka IoTWorm is a blog fully dedicated to IoT which covers news, reviews, companies, stock, examples, applications etc.",
+      "followers": {
+        "facebook": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4666654.jpg?t=1654347352"
+    },
+    {
+      "title": "Strategy of Things Blog",
+      "feed_url": "https://strategyofthings.io/blog/feed",
+      "website_url": "https://strategyofthings.io/blog",
+      "description": "An innovation management consultancy helping businesses thrive in a hyper-connected world. We focus on IoT, IIoT, digital transformation, and lean innovation.",
+      "followers": {
+        "facebook": 197,
+        "twitter": 639
+      },
+      "image_url": "https://i1.feedspot.com/4690448.jpg?t=1617957243"
+    },
+    {
+      "title": "IoT Security News",
+      "feed_url": "https://iotsecuritynews.com/feed/",
+      "website_url": "https://iotsecuritynews.com/category/news/",
+      "description": "IoT Security News is a blog for the latest news about Industrial IoT security exploits and vulnerabilities.",
+      "followers": {
+        "twitter": 11
+      },
+      "image_url": "https://i1.feedspot.com/5279890.jpg?t=1620827292"
+    },
+    {
+      "title": "Grio Blog",
+      "feed_url": "https://blog.grio.com/feed",
+      "website_url": "https://blog.grio.com/",
+      "description": "We build custom applications for IoT connected devices. We design and build high-quality web and mobile apps. Let Grio help you build a great app!",
+      "followers": {
+        "facebook": 329
+      },
+      "image_url": "https://i1.feedspot.com/5181192.jpg?t=1597303652"
+    },
+    {
+      "title": "hIOTron Blog",
+      "feed_url": "https://www.hiotron.com/category/iot-post/feed/",
+      "website_url": "https://www.hiotron.com/category/iot-post/",
+      "description": "Get the very latest Iot News & IoT articles in this comprehensive blog. Learn how to build your own device, Create your own Cloud, Smart Home, Smart Hotel & more. Hiotron India Pvt. Ltd is an Indian technology corporation focused on the development & implementation of Internet of Things (IoT) based Products & Solutions.",
+      "followers": {
+        "facebook": 945,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4666649.jpg?t=1617953602"
+    },
+    {
+      "title": "Valarm Blog",
+      "feed_url": "https://www.valarm.net/blog/feed/",
+      "website_url": "https://www.valarm.net/blog/",
+      "description": "Valarm is Industrial Internet of Things / IoT they provide rapid, effective deployment of geo-enabled, real-time, mobile and stationary sensor networks.",
+      "followers": {
+        "facebook": 474,
+        "twitter": 289
+      },
+      "image_url": "https://i1.feedspot.com/4668130.jpg?t=1617956933"
+    },
+    {
+      "title": "IoT Tracking The Internet of Things Blog",
+      "feed_url": "https://www.iotaustralia.org.au/category/iotblog/feed/",
+      "website_url": "https://www.iotaustralia.org.au/category/iotblog/",
+      "description": "This blog is for news, views, comment and information on the exciting and rapidly developing world of the Internet of Things (IoT) in Australia and NZ.",
+      "followers": {
+        "facebook": 25,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4666642.jpg?t=1654502927"
+    },
+    {
+      "title": "Internet of Things Event",
+      "feed_url": "https://iotevent.eu/feed/",
+      "website_url": "https://iotevent.eu/",
+      "description": "A blog about Latest news, information and innovation around the Internet of Things, Internet of People, Big Data, Connected Devices and M2M.",
+      "followers": {
+        "facebook": 1,
+        "twitter": 48200
+      },
+      "image_url": "https://i1.feedspot.com/4668140.jpg?t=1617958474"
+    },
+    {
+      "title": "IoT World Online",
+      "feed_url": "https://www.iotworldonline.es/feed/",
+      "website_url": "https://www.iotworldonline.es/",
+      "description": "A website to discover articles, videos, infographics among other interesting things about the IoT or Internet of Things for all sectors.",
+      "followers": {
+        "facebook": 64,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4758865.jpg?t=1617956994"
+    },
+    {
+      "title": "Ian Skerrett Blog",
+      "feed_url": "https://ianskerrett.wordpress.com/feed/",
+      "website_url": "https://ianskerrett.wordpress.com/",
+      "description": "Ian Skerrett is VP of Marketing and Ecosystem at Eclipse Foundation; Thinking how open source will change Internet of Things.",
+      "followers": {
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/4666306.jpg?t=1617956999"
+    },
+    {
+      "title": "IOT Today",
+      "feed_url": "https://iot-today.com/main/feed/",
+      "website_url": "https://iot-today.com/blogs/",
+      "description": "IoT Today eNewsletter & website serves the rapidly expanding market for the internet of things. It covers all aspects of applications and technology development of IoT, as well as business and market news of the industry.",
+      "followers": {
+        "facebook": 85,
+        "twitter": 372
+      },
+      "image_url": "https://i1.feedspot.com/4666637.jpg?t=1617957004"
+    },
+    {
+      "title": "Social IOT Technology",
+      "feed_url": "http://feeds.feedburner.com/SocialIot",
+      "website_url": "https://socialiot.blogspot.com/",
+      "description": "This blog is all about internet of things, IoT devices, IoT software, IoT tutorial, IoT applications, AWS IoT, IoT architecture, IoT security, etc.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5119006.jpg?t=1654508613"
+    },
+    {
+      "title": "Think About The IoT",
+      "feed_url": "https://thinkabouttheiot.wordpress.com/feed/",
+      "website_url": "https://thinkabouttheiot.wordpress.com/",
+      "description": "This blog is meant to gather some relevant information related to the Internet of Things (IoT) and contents related to Machine-to-Machine (M2M) Communications.",
+      "followers": {
+        "twitter": 29
+      },
+      "image_url": "https://i1.feedspot.com/4666892.jpg?t=1617957222"
+    },
+    {
+      "title": "Attify - Internet of Things (IoT) Blog",
+      "feed_url": "https://blog.attify.com/rss/",
+      "website_url": "https://blog.attify.com/",
+      "description": "The trending latest IoT news, and blogs from Attify. practical, insightful, educational, and interesting Internet of Things (IoT) blogs.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4507264.jpg?t=1654499824"
+    },
+    {
+      "title": "Princites.com",
+      "feed_url": "https://princites.com/feed/",
+      "website_url": "https://princites.com/",
+      "description": "Read the most updated blog on Robotics, AI, Automation, and advanced technologies. Stay ahead in the field of robotics and read the industry trends.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5185970.jpg?t=1598345666"
+    },
+    {
+      "title": "Postscapes - Tracking the Internet of Things",
+      "feed_url": "https://feeds.feedburner.com/iot",
+      "website_url": "https://www.postscapes.com/iot/",
+      "description": "Frame and filter the latest connected products and Internet of Things news, products and technology trends.",
+      "followers": {
+        "facebook": 683,
+        "twitter": 9100
+      },
+      "image_url": "https://i1.feedspot.com/4429807.jpg?t=1617952310"
+    },
+    {
+      "title": "IoT Evolution",
+      "feed_url": "https://blog.iotevolutionworld.com/feed",
+      "website_url": "https://www.iotevolutionworld.com/iot/",
+      "description": "IoT Evolution will highlight how IoT technologies and the wireless network can be utilized to significantly improve business processes, minimize risk, spur innovation, and drive revenue. IoT Evolution highlights IoT applications within all vertical markets and will concentrate on specific applications within the supply chain, transportation, energy and healthcare sectors.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 32700
+      },
+      "image_url": "https://i1.feedspot.com/4348665.jpg?t=1617953532"
+    },
+    {
+      "title": "Control Any Blog",
+      "feed_url": "https://www.controlany.com/blog/feed/",
+      "website_url": "https://www.controlany.com/blog/",
+      "description": "ControlAny's IoT automation solutions make your living an intelligent living. Get smart devices and systems for home, building and infrastructure.",
+      "followers": {
+        "twitter": 430
+      },
+      "image_url": "https://i1.feedspot.com/4668258.jpg?t=1617953568"
+    },
+    {
+      "title": "Microsoft Azure Blog \u00bb Internet of things",
+      "feed_url": "https://azure.microsoft.com/en-us/blog/category/internet-of-things/feed/",
+      "website_url": "https://azure.microsoft.com/en-us/blog/category/internet-of-things/",
+      "description": "Microsoft's official Internet of Things (IoT) blog is the place to discover how businesses are unleashing the potential of IoT by harnessing Microsoft's cloud services, business intelligence and data analytics tools, and operating systems.",
+      "followers": {
+        "facebook": 13300000,
+        "twitter": 13900000
+      },
+      "image_url": "https://i1.feedspot.com/4437312.jpg?t=1617952335"
+    },
+    {
+      "title": "IoT Agenda",
+      "feed_url": "https://internetofthingsagenda.techtarget.com/rss/IoT-Agenda.xml",
+      "website_url": "https://www.techtarget.com/iotagenda/",
+      "description": "This blog provides enterprise businesses with the latest Internet of Things (IoT) news and blogs, covering technologies, platforms, deployment strategies, security, and IoT industry and vertical markets.",
+      "followers": {
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4437320.jpg?t=1654340050"
+    },
+    {
+      "title": "Thales blog \u00bb IoT",
+      "feed_url": "https://dis-blog.thalesgroup.com/supercategory/iot/feed/",
+      "website_url": "https://dis-blog.thalesgroup.com/iot/",
+      "description": "Gemalto creates the secure software and technologies needed to bring trust to an increasingly connected world. Their solutions and services generate value for businesses and governments by protecting identities and data wherever they are.",
+      "followers": {
+        "facebook": 11000,
+        "twitter": 6200,
+        "instagram": 32600
+      },
+      "image_url": "https://i1.feedspot.com/4667867.jpg?t=1617952352"
+    },
+    {
+      "title": "Enlighted",
+      "feed_url": "https://www.enlightedinc.com/about/blog/",
+      "website_url": "https://www.enlightedinc.com/about/blog/",
+      "description": "Enlighted is the Internet of Things (IoT) solutions company that delivers the leading technology platform for smart buildings.",
+      "followers": {
+        "facebook": 583,
+        "twitter": 3100,
+        "instagram": 232
+      },
+      "image_url": "https://i1.feedspot.com/4655951.jpg?t=1654348869"
+    },
+    {
+      "title": "Augury Blog",
+      "feed_url": "https://www.augury.com/feed/",
+      "website_url": "https://www.augury.com/blog/",
+      "description": "Get the latest insights & best practices on Industry 4.0, Smart Manufacturing and Industrial Artificial Intelligence. Seebo is the Predictive Quality and Yield solution. Manufacturers use Seebo to predict and prevent quality, yield and waste losses.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 616
+      },
+      "image_url": "https://i1.feedspot.com/4860963.jpg?t=1617953572"
+    },
+    {
+      "title": "Grid Connect Blog",
+      "feed_url": "https://www.gridconnect.com/blogs/news.atom",
+      "website_url": "https://www.gridconnect.com/blogs/news",
+      "description": "ConnectSense is the perfect solution for automating your home or business, allowing you to control everything from your living room to your server room. Their line of wireless products is steeped in the technology of the Internet of Things.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 2400,
+        "instagram": 195
+      },
+      "image_url": "https://i1.feedspot.com/4604886.jpg?t=1615470052"
+    },
+    {
+      "title": "Cisco Blogs \u00bb Industrial IoT",
+      "feed_url": "https://blogs.cisco.com/feed",
+      "website_url": "https://blogs.cisco.com/industrial-iot",
+      "description": "Cisco is the worldwide leader in IT, networking, and cybersecurity solutions. This section of the blog covers everything related to the Internet of Things.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5279894.jpg?t=1620828588"
+    },
+    {
+      "title": "Momenta Edge",
+      "feed_url": "https://www.momenta.partners/edge/rss.xml",
+      "website_url": "https://www.momenta.one/insights",
+      "description": "Momenta Partners are Connected Industry Growth Partners providing deep Digital Transformation Insights",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4979891.jpg?t=1617956950"
+    },
+    {
+      "title": "Geisel Software Blog",
+      "feed_url": "https://geisel.software/blog/rss.xml",
+      "website_url": "https://geisel.software/blog/",
+      "description": "A leading developer of Web apps, iOS and Android Apps, and IoT (Internet of Things) software.",
+      "followers": {
+        "facebook": 271,
+        "twitter": 677
+      },
+      "image_url": "https://i1.feedspot.com/4666600.jpg?t=1654499219"
+    },
+    {
+      "title": "Exosite Blog",
+      "feed_url": "https://blog.exosite.com/rss.xml",
+      "website_url": "https://blog.exosite.com/",
+      "description": "Exosite is a leading Internet of Things (IoT) platform that makes it easy to build connected products, solutions, and businesses.",
+      "followers": {
+        "facebook": 562,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4666249.jpg?t=1654509747"
+    },
+    {
+      "title": "Bosch - Internet of Things and Services Blog",
+      "feed_url": "https://blog.bosch-si.com/feed/",
+      "website_url": "https://blog.bosch-digital.com/",
+      "description": "From smart cities to connected cars to Industry 4.0. What's hot in IoT? This blog features all issues of the digital transformation. Stay up-to-date!",
+      "followers": {
+        "facebook": 15600
+      },
+      "image_url": "https://i1.feedspot.com/1457932.jpg?t=1617952317"
+    },
+    {
+      "title": "IBM | Internet of Things blog",
+      "feed_url": "https://www.ibm.com/blogs/internet-of-things/feed/",
+      "website_url": "https://www.ibm.com/thought-leadership/institute-business-value/en-us/technology/internet-of-things-iot",
+      "description": "The IBM IoT (Internet of Things) blog contains the very latest IoT news and blogs from IBM and also Internet of Things info on security, connected buildings, automotive, Watson IoT, and cognitive computing.",
+      "followers": {
+        "facebook": 18100,
+        "twitter": 111400
+      },
+      "image_url": "https://i1.feedspot.com/4667826.jpg?t=1613975765"
+    },
+    {
+      "title": "eInfochips Blog",
+      "feed_url": "https://www.einfochips.com/blog/feed/",
+      "website_url": "https://www.einfochips.com/blog/blogs-digital-engineering/blogs-iot/",
+      "description": "Get insights on solutions that drive the Product Engineering market. From silicon to embedded systems to software, from data to analytics and IoT, our experts will dissect technologies and engineering practices to help you stay ahead of the curve in Product Development.eInfochips, an Arrow company, is a product engineering and semiconductor design services firm, specializing in digital transformation and connected IoT solutions across various cloud platforms.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4940524.jpg?t=1621267801"
+    },
+    {
+      "title": "IoT World Today",
+      "feed_url": "https://www.iotworldtoday.com/feed",
+      "website_url": "https://www.iotworldtoday.com/search?q=iot",
+      "description": "IoT World Today connects IoT decision-makers and implementers, including those in the C-suite, IT and line-of-business managers. We inspire them by providing the latest news and analysis, and case studies about technologies used in the Internet of Things, We capture the stories of IoT leaders imbuing intelligence across vertical industries such as industrial, transportation and logistics, smart energy and utilities, smart cities, and more.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 8300
+      },
+      "image_url": "https://i1.feedspot.com/4964385.jpg?t=1620823094"
+    },
+    {
+      "title": "Stacey on IoT",
+      "feed_url": "https://staceyoniot.com/",
+      "website_url": "https://staceyoniot.com/",
+      "description": "Stacey Higginbotham is the host of the Internet of Things Podcast about IoT and the Smart Home, and published the Stacey Knows Things newsletter about IoT.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 45500
+      },
+      "image_url": "https://i1.feedspot.com/4568044.jpg?t=1617953512"
+    },
+    {
+      "title": "MOKOSmart",
+      "feed_url": "https://www.mokosmart.com/feed/",
+      "website_url": "https://www.mokosmart.com/products/iot-basic/",
+      "description": "MOKOSmart is a professional manufacturer dedicated to the research, development and manufacturing of smart devices.",
+      "followers": {
+        "twitter": 68
+      },
+      "image_url": "https://i1.feedspot.com/5150897.jpg?t=1617953564"
+    },
+    {
+      "title": "IoT global network s Blog",
+      "feed_url": "https://www.iotglobalnetwork.com/iotdir/category/knowledge-centre/blog/feed/",
+      "website_url": "https://www.iotglobalnetwork.com/iotdir/category/knowledge-centre/blog/",
+      "description": "The goal of IoT global network is to provide transparency and promote business development for the IoT market.IoT global network is the ultimate intelligence platform for the global machine-to-machine communication value chain.",
+      "followers": {
+        "twitter": 6600
+      },
+      "image_url": "https://i1.feedspot.com/4667879.jpg?t=1654346588"
+    },
+    {
+      "title": "IoT Security Foundation (IoTSF) Blog",
+      "feed_url": "https://www.iotsecurityfoundation.org/blog/feed/",
+      "website_url": "https://iotsecurityfoundation.org/blog/",
+      "description": "IoTSF is a collaborative, non-profit, international response to the complex challenges posed by cybersecurity in the expansive hyper-connected IoT world. It is a destination for IoT users & technology providers including IoT security professionals, IoT hardware & software product vendors, network operators, retailers, government agencies, and other stakeholders.",
+      "followers": {
+        "twitter": 641
+      },
+      "image_url": "https://i1.feedspot.com/4666841.jpg?t=1617953611"
+    },
+    {
+      "title": "Industrial Internet Consortium Blog",
+      "feed_url": "https://blog.iiconsortium.org/index.rdf",
+      "website_url": "https://www.digitaltwinconsortium.org/blog/",
+      "description": "The Industrial Internet Consortium is the world's leading organization transforming business and society by accelerating the Industrial Internet of Things (IIoT).",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 8800
+      },
+      "image_url": "https://i1.feedspot.com/4668145.jpg?t=1617953576"
+    },
+    {
+      "title": "SMART INDUSTRY",
+      "feed_url": "https://www.smart-industry.net/feed/",
+      "website_url": "https://smartindustry.nl/nieuws",
+      "description": "The Business Internet of Things Magazine - insights, products, interviews, background form the Industry.",
+      "followers": {
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4666872.jpg?t=1654491859"
+    },
+    {
+      "title": "IoT Worlds",
+      "feed_url": "https://www.iotworlds.com/feed/",
+      "website_url": "https://www.iotworlds.com/",
+      "description": "Discover the IoT devices, technologies and solutions. Create your smart technologies. Boost your business. Increase your visibility.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 9700,
+        "instagram": 29
+      },
+      "image_url": "https://i1.feedspot.com/5252265.jpg?t=1614835661"
+    },
+    {
+      "title": "Eleven-x Blog",
+      "feed_url": "https://eleven-x.com/feed/",
+      "website_url": "https://eleven-x.com/company/news/",
+      "description": "Eleven-x is a network operator enabling the Internet of Things. Their purpose is to built low power wide area network [LPWAN] the first of its kind in Canada, providing connectivity for a wide variety of sensors and IoT applications.",
+      "followers": {
+        "twitter": 707
+      },
+      "image_url": "https://i1.feedspot.com/4668206.jpg?t=1654493508"
+    },
+    {
+      "title": "Thethings.iO BLOG",
+      "feed_url": "https://blog.thethings.io/feed/",
+      "website_url": "https://community.intel.com/t5/Blogs/ct-p/blogs/iot",
+      "description": "THE Internet of Things cloud solution that stores real-time data from your things.",
+      "followers": {
+        "facebook": 415,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4666644.jpg?t=1617959072"
+    },
+    {
+      "title": "Intel IoT",
+      "feed_url": "https://blogs.intel.com/iot/feed/",
+      "website_url": "https://community.intel.com/t5/Blogs/ct-p/blogs/iot",
+      "description": "Intel IoT is a place for news about Intel's Internet of Things. The Intel Internet of Things is a set of interoperable solutions designed to enable connectivity, manageability, and security across devices in a consistent and scalable manner.",
+      "followers": {
+        "facebook": 76800,
+        "twitter": 135800,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/4667812.jpg?t=1613734113"
+    },
+    {
+      "title": "IoTbyHVM",
+      "feed_url": "https://iotbyhvm.ooo/feed/",
+      "website_url": "https://iotbyhvm.ooo/category/what-is/internet-of-things/",
+      "description": "Explore articles that break down sensors, connectivity protocols, edge computing, and IoT Hardware tutorials. IoTbyHVM blog by Harshvardhan Mishra is an attempt to help interested readers by sharing knowledge and ideas about the Internet of Things and other technology-related articles and videos.",
+      "followers": {
+        "facebook": 137,
+        "twitter": 88
+      },
+      "image_url": "https://i1.feedspot.com/5042555.jpg?t=1617953593"
+    },
+    {
+      "title": "Bigbelly News",
+      "feed_url": "https://bigbelly.com/news",
+      "website_url": "https://bigbelly.com/news",
+      "description": "Welcome to the Bigbelly blog featuring thoughts and experience in smart and optimized waste management, building smart cities, and enhancing the Internet of Things.",
+      "followers": {
+        "facebook": 985,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4667792.jpg?t=1654494948"
+    },
+    {
+      "title": "Deutsche Telekom IoT Blog",
+      "feed_url": "https://iot.telekom.com/en/blog/144410-144410?view=rssXml",
+      "website_url": "https://iot.telekom.com/en/blog",
+      "description": "From vision to product, from device to user: Deutsche Telekom provides customers with all components they need for an IoT solution. The Internet of Things is on the rise and changing rapidly. Read the blog for the latest articles, whitepapers, and infographics on this topic.",
+      "followers": {
+        "twitter": 11600
+      },
+      "image_url": "https://i1.feedspot.com/5192442.jpg?t=1599130891"
+    },
+    {
+      "title": "Industria 4.0 - Industry News and Trends Blog 4.0",
+      "feed_url": "http://www.industria40blog.com/feed",
+      "website_url": "https://www.factoriadelfuturo.com/",
+      "description": "Blog for professionals and interested in the Industry 4.0. To the latest in national and international news, webinars, and trends related to Industry 4.0.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4740479.jpg?t=1617957012"
+    },
+    {
+      "title": "Fathym Blog",
+      "feed_url": "https://www.fathym.com/blog/feed/",
+      "website_url": "https://www.fathym.com/blog/",
+      "description": "Fathym is the IoT platform that will keep device data usable and shareable for you and your company. They simplify the Internet of Things.",
+      "followers": {
+        "facebook": 117,
+        "twitter": 4000,
+        "instagram": 660
+      },
+      "image_url": "https://i1.feedspot.com/4667764.jpg?t=1617958597"
+    },
+    {
+      "title": "Internet of Things Consortium",
+      "feed_url": "https://iofthings.org/feed/",
+      "website_url": "https://www.hcltech.com/iot-services",
+      "description": "The Internet of Things Consortium (IoTC) is the premier business development association for the Internet of Things (IoT) ecosystem. It is comprised of leading founders, executives and global companies in IoT. The IoTC's mission is to ignite the growth of the IoT marketplace by leading the industry's efforts through strategic partnerships. The organization focuses on five key verticals: connected homes, autos, cities, retail and wearables.",
+      "followers": {
+        "facebook": 473,
+        "instagram": 736
+      },
+      "image_url": "https://i1.feedspot.com/4666796.jpg?t=1613390840"
+    }
+  ]
+}

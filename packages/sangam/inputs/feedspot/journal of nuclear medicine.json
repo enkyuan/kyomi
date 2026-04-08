@@ -1,0 +1,47 @@
+{
+  "category": "Journal of Nuclear Medicine",
+  "source_url": "https://rss.feedspot.com/journalofnuclearmedicine_rss_feeds",
+  "feeds": [
+    {
+      "title": "Journal of Nuclear Medicine \u00bb Current issues",
+      "feed_url": "https://jnm.snmjournals.org/rss/current.xml",
+      "website_url": "https://jnm.snmjournals.org/content/66/2?current-issue=y",
+      "description": "All Current issues from Journal of Nuclear Medicine.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/2006039.jpg?t=1741075717"
+    },
+    {
+      "title": "Journal of Nuclear Medicine \u00bb Recent issues",
+      "feed_url": "https://jnm.snmjournals.org/rss/recent.xml",
+      "website_url": "https://jnm.snmjournals.org/",
+      "description": "All Recent issues from Journal of Nuclear Medicine.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/2006039.jpg"
+    },
+    {
+      "title": "Journal of Nuclear Medicine \u00bb Most frequently cited articles",
+      "feed_url": "https://jnm.snmjournals.org/rss/mfc.xml",
+      "website_url": "https://jnm.snmjournals.org/articles/most-cited",
+      "description": "Most-cited rankings are recalculated at the beginning of the month based on citations to articles on this journal site from articles in other HighWire-hosted journals.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/2006039.jpg"
+    },
+    {
+      "title": "Journal of Nuclear Medicine \u00bb Publish ahead of print",
+      "feed_url": "https://jnm.snmjournals.org/rss/ahead.xml",
+      "website_url": "https://jnm.snmjournals.org/content/early/recent",
+      "description": "All articles Published ahead of print from Journal of Nuclear Medicine.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2006039.jpg?t=1741075704"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "category": "Turkey Technology",
+  "source_url": "https://rss.feedspot.com/turkey_technology_rss_feeds",
+  "feeds": [
+    {
+      "title": "Ege Haber \u00bb Technology",
+      "feed_url": "https://www.egehaber.com/teknoloji/feed/",
+      "website_url": "https://www.egehaber.com/teknoloji/",
+      "description": "This section of Ege Haber features the latest technology news, how-tos, reviews, and opinions from the Tech Industry. Explore through other categories of Ege Haber like Economy, Politics, Sports, World, and more to read accurate and real news from Turkey and around the world.",
+      "followers": {
+        "facebook": 603700,
+        "twitter": 13000
+      },
+      "image_url": "https://i1.feedspot.com/5346481.jpg?t=1637834400"
+    },
+    {
+      "title": "S\u00f6zc\u00fc Gazetesi \u00bb Science Technology News",
+      "feed_url": "https://www.sozcu.com.tr/kategori/teknoloji/feed",
+      "website_url": "https://www.sozcu.com.tr/bilim-teknoloji",
+      "description": "Science and technology news in Turkey and in the world, last minute special technology news and developments on Sozcu news site! Read fast, latest and accurate news on Sports, Life, World, Economy and more by Sozcu.",
+      "followers": {
+        "facebook": 4000000,
+        "twitter": 4099999,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/5346477.jpg?t=1637836455"
+    }
+  ]
+}

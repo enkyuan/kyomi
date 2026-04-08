@@ -1,0 +1,84 @@
+{
+  "category": "Georgia Art",
+  "source_url": "https://rss.feedspot.com/georgia_art_rss_feeds",
+  "feeds": [
+    {
+      "title": "ArtsXchange Blog",
+      "feed_url": "https://www.artsxchange.org/blog-feed.xml",
+      "website_url": "https://www.artsxchange.org/blog",
+      "description": "The ArtsXchange is a community cultural center representing all disciplines of the arts traditional to the experimental. This blog gives you an inside look at the innovative programs, valuable resources, and transformative opportunities The ArtsXchange provides to help artists grow, gain exposure, and strengthen their connections to the community.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7277528.jpg?t=1710859499"
+    },
+    {
+      "title": "Telfair Museums",
+      "feed_url": "https://www.telfair.org/news/feed/",
+      "website_url": "https://www.telfair.org/news/",
+      "description": "Stay up-to-date with the latest happenings at Telfair Museums! Below, you'll find the most recent press releases that contain the latest information on events, acquisitions, upcoming exhibitions, and more. Telfair Museums offers compelling expressions of visual culture and serves as a dynamic cultural center connecting people of all ages and backgrounds.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7277531.jpg?t=1714675410"
+    },
+    {
+      "title": "Woodstock Arts Blog",
+      "feed_url": "https://woodstockarts.org/feed/",
+      "website_url": "https://woodstockarts.org/blog/",
+      "description": "Get a behind-the-scenes tour of all the exciting events happening at Elm Street Cultural Arts Village and Downtown Woodstock. Woodstock Arts has been supplying world-class performing arts productions, engaging art exhibitions, concerts, in-depth classes, and exciting camps to north Georgia since 2002.",
+      "followers": {
+        "facebook": 10400,
+        "twitter": 745
+      },
+      "image_url": "https://i1.feedspot.com/7277527.jpg?t=1710859131"
+    },
+    {
+      "title": "Flagpole \u00bb Arts & Culture",
+      "feed_url": "https://flagpole.com/arts-culture/feed/",
+      "website_url": "https://flagpole.com/arts-culture/",
+      "description": "Immerse yourself in the captivating world of arts and culture through this engaging section. Flagpole.com is the online presence of Flagpole Magazine and covers music, art, theater, movies, books, food, drink, politics, government, people, comics, advice to the lovelorn, and a comprehensive calendar of what's happening around town.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7277529.jpg?t=1710859532"
+    },
+    {
+      "title": "University of Georgia \u00bb Arts & Humanities",
+      "feed_url": "https://news.uga.edu/topics/arts/feed/",
+      "website_url": "https://news.uga.edu/topics/arts/",
+      "description": "Discover vibrant hub of the University of Georgia's Arts & Humanities! Here, delve into a world where creative expression meets critical thinking. Explore a tapestry of news stories that illuminate the groundbreaking research, captivating performances, and thought-provoking exhibitions happening across the departments.",
+      "followers": {
+        "facebook": 367600,
+        "twitter": 147900,
+        "instagram": 281600
+      },
+      "image_url": "https://i1.feedspot.com/7277526.jpg?t=1710859125"
+    },
+    {
+      "title": "Morris Museum of Art",
+      "feed_url": "https://www.themorris.org/news/feed/",
+      "website_url": "https://www.themorris.org/news/",
+      "description": "Stay informed on the latest happenings at the Morris Museum of Art through the official news blog. Get behind-the-scenes insights into our rotating exhibitions, new acquisitions, upcoming programs, and events. The Morris Museum of Art is the oldest museum in the country dedicated to the art and artists of the American South and the only art museum in the Central Savannah River Area.",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/7277525.jpg?t=1710859119"
+    },
+    {
+      "title": "The Artisans Village Art Gallery",
+      "feed_url": "https://theartisansvillage.org/feed/",
+      "website_url": "https://theartisansvillage.org/community-news/",
+      "description": "The Artisans Village is a non-profit that advances the visual arts to strengthen the economy and enhance the quality of life in Lake Country. It operates a non-profit art gallery designed to provide an affordable outlet for area artists to market their work and is working to create an active artisans' community. Follow community news and featured stories here.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7277530.jpg?t=1714676745"
+    },
+    {
+      "title": "ArtsATL",
+      "feed_url": "https://www.artsatl.org/feed/",
+      "website_url": "https://www.artsatl.org/",
+      "description": "ARTS ATL offers comprehensive coverage of Atlanta's arts scene, including music, film and TV, books, theater, dance, and the visual arts, while supporting arts in Atlanta through independent journalism and programs. ArtsATL is a non-profit that provides comprehensive coverage of the arts in metro Atlanta and has grown to become an essential part of the city's arts community.",
+      "followers": {
+        "facebook": 35100,
+        "twitter": 8000,
+        "instagram": 43600
+      },
+      "image_url": "https://i1.feedspot.com/4819004.jpg?t=1669707284"
+    }
+  ]
+}

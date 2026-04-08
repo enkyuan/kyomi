@@ -1,0 +1,74 @@
+{
+  "category": "Victoria Food",
+  "source_url": "https://rss.feedspot.com/victoria_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Victoria Buzz \u00bb Food",
+      "feed_url": "https://victoriabuzz.com/category/lifestyle/food/feed/",
+      "website_url": "https://www.victoriabuzz.com/category/food/",
+      "description": "Victoria Buzz is your source for all of the latest news, events, and other buzz in and around Greater Victoria as it happens. Check the blogs for important topics in the community, see stunning shots posted daily by local photographers, and learn more about what's going on around town.",
+      "followers": {
+        "facebook": 129500,
+        "twitter": 23800,
+        "instagram": 72200
+      },
+      "image_url": "https://i1.feedspot.com/5466683.jpg?t=1668431560"
+    },
+    {
+      "title": "Gather Victoria",
+      "feed_url": "https://gathervictoria.com/feed/",
+      "website_url": "https://gathervictoria.com/",
+      "description": "The way I see it, gathering food is our oldest, most primal relationship to the earth, and 'wildcrafting'' is the world's oldest magic. From spring, summer, and autumn to winter, I revive the ancient culinary arts of bringing blessings to ourselves, our families, our communities, and to our Great Mother, the Earth, one delicious bite at a time.",
+      "followers": {
+        "facebook": 59600,
+        "twitter": 1100,
+        "instagram": 26800
+      },
+      "image_url": "https://i1.feedspot.com/5062484.jpg?t=1668431830"
+    },
+    {
+      "title": "Off The Eaten Track Tours Blog",
+      "feed_url": "https://offtheeatentracktours.ca/feed/",
+      "website_url": "https://offtheeatentracktours.ca/blog/",
+      "description": "Off The Eaten Track Tours Blog show you the very best hidden culinary gems in the city. Their expert local guides will show you where hip Victoria foodies go to eat, drink, shop and experience our beautiful city. We celebrate the culinary culture of Vancouver Island both in person with guided and self-guided tourists. Check the best blog in Victoria to learn where to eat, drink, and be seen.",
+      "followers": {
+        "facebook": 1500,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5466690.jpg?t=1668432073"
+    },
+    {
+      "title": "From Alana",
+      "feed_url": "https://fromalana.com/feed/",
+      "website_url": "https://fromalana.com/",
+      "description": "I trained as a pastry chef in my younger days and discovered a passion for delicious eats and treats. I love eating at tasty restaurants as much as I love puttering around my own kitchen, experimenting with ingredients and creating recipes. I hope you enjoy cooking my recipes and perusing my foodie posts!",
+      "followers": {
+        "instagram": 823
+      },
+      "image_url": "https://i1.feedspot.com/5466685.jpg?t=1668431984"
+    },
+    {
+      "title": "Downtown Victoria Business Association \u00bb Food",
+      "feed_url": "https://downtownvictoria.ca/category/food/feed/",
+      "website_url": "https://downtownvictoria.ca/category/food/",
+      "description": "The Downtown Victoria Business Association is a proactive champion for Victoria's downtown business community. We work hard to promote the economic vitality of our downtown core through events, promotions, programs, and advocacy. Get the latest news about Downtown Victoria and read about our business in our blogs.",
+      "followers": {
+        "facebook": 11800,
+        "twitter": 11200,
+        "instagram": 41100
+      },
+      "image_url": "https://i1.feedspot.com/5466681.jpg?t=1668432017"
+    },
+    {
+      "title": "Tasting Victoria",
+      "feed_url": "https://tastingvictoria.com/feed/",
+      "website_url": "https://tastingvictoria.com/",
+      "description": "Tasting Victoria is a food blog, all about the taste of delicious food around Victoria BC. Also check our blog for food events, reviews, recipes and more. Stay up to date with the food scene in Victoria, BC",
+      "followers": {
+        "facebook": 2400,
+        "instagram": 40100
+      },
+      "image_url": "https://i1.feedspot.com/5466682.jpg?t=1668431578"
+    }
+  ]
+}

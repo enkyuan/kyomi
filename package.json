@@ -29,7 +29,12 @@
     "db:migrate": "bun run --cwd packages/db db:migrate",
     "db:push": "bun run --cwd packages/db db:push",
     "db:pull": "bun run --cwd packages/db db:pull",
-    "db:studio": "bun run --cwd packages/db db:studio"
+    "db:studio": "bun run --cwd packages/db db:studio",
+    "catalog:install": "bun run --cwd packages/sangam install",
+    "catalog:export": "bun run --cwd packages/sangam export:catalog",
+    "catalog:import": "bun run --cwd apps/api catalog:import",
+    "catalog:smoke": "bun run --cwd apps/api catalog:smoke",
+    "catalog:sync": "bun run catalog:export && bun run catalog:import && bun run catalog:smoke"
   },
   "devDependencies": {
     "@typescript/native-preview": "^7.0.0-dev.20260407.1",

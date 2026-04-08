@@ -1,0 +1,29 @@
+{
+  "category": "Haltom City News",
+  "source_url": "https://rss.feedspot.com/haltom_city_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Haltom City BubbleLife",
+      "feed_url": "https://haltomcity.bubblelife.com/rss?c=35546690",
+      "website_url": "https://haltomcity.bubblelife.com/",
+      "description": "Haltom City BubbleLife is a digital newspaper, bringing together all of the local news and events in Haltom City, Texas.",
+      "followers": {
+        "facebook": 107,
+        "twitter": 303
+      },
+      "image_url": "https://i1.feedspot.com/5150200.jpg"
+    },
+    {
+      "title": "CBS Texas \u00bb Haltom City",
+      "feed_url": "https://dfw.cbslocal.com/tag/haltom-city/feed/",
+      "website_url": "https://www.cbsnews.com/texas/tag/haltom-city/",
+      "description": "CBS DFW is your home for the latest news, weather, traffic, and sports along with great lifestyle content. CBS 11 is part of CBS Television Stations, a division of CBS Corporation, and is one of the largest network-owned station groups in the country. Follow this feed to get the latest news and updates in Haltom City, TX.",
+      "followers": {
+        "facebook": 591600,
+        "twitter": 167300,
+        "instagram": 602
+      },
+      "image_url": "https://i1.feedspot.com/5150192.jpg?t=1589372110"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "category": "UK Urban",
+  "source_url": "https://rss.feedspot.com/uk_urban_rss_feeds",
+  "feeds": [
+    {
+      "title": "Street Art News",
+      "feed_url": "https://streetartnews.net/feed",
+      "website_url": "https://streetartnews.net/",
+      "description": "StreetArtNews, founded in 2009 by Rom Levy, is a premier publication dedicated to urban art, providing comprehensive coverage on street art, graffiti, and related cultural movements. As the definitive guide to the street art world, it features news, exhibition reviews, artist interviews, and in-depth analyses. The editorial team, led by Levy as Editor-in-Chief, has established the platform as a trusted source for art enthusiasts and professionals alike.",
+      "followers": {
+        "facebook": 265000,
+        "twitter": 65200,
+        "instagram": 620400
+      },
+      "image_url": "https://i1.feedspot.com/4476386.jpg?t=1602849637"
+    },
+    {
+      "title": "Urban Kultur Blog",
+      "feed_url": "https://urbankulturblog.com/feed/",
+      "website_url": "https://urbankulturblog.com/",
+      "description": "Urban Kultur Blog is an Award-winning Edingurgh based dedicated to street art, dance music & alternative culture blog.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 561,
+        "instagram": 290
+      },
+      "image_url": "https://i1.feedspot.com/4705670.jpg?t=1619510207"
+    },
+    {
+      "title": "Vamp It Up Manchester",
+      "feed_url": "https://vampitupmanchester.com/feed/",
+      "website_url": "https://vampitupmanchester.com/",
+      "description": "This is an urban lifestyle blog for cruelty free beauty, edgy style and veggie reviews. I know it can be a bit of a gamble spending money on a product or service so I'll try things for you and give you my honest opinion. Every brand and product that appears on this blog is here because I find it interesting and I think you will to.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4762869.jpg?t=1608548220"
+    },
+    {
+      "title": "Vibestyle Blog",
+      "feed_url": "https://vibestyleblog.wordpress.com/feed/",
+      "website_url": "https://vibestyleblog.wordpress.com/",
+      "description": "Welcome to Vibestyle. This is an urban lifestyle based blog, revolving around Music, Fashion, Film, Sports, Travel, and much more!",
+      "followers": {
+        "facebook": 73,
+        "twitter": 37,
+        "instagram": 90
+      },
+      "image_url": "https://i1.feedspot.com/4902078.jpg?t=1612876954"
+    },
+    {
+      "title": "Muddy Stilettos Kent",
+      "feed_url": "https://kent.muddystilettos.co.uk/feed/",
+      "website_url": "https://kent.muddystilettos.co.uk/",
+      "description": "The inside line on the quirky, cool and unmissable in Kent. Everything from eating out and pubs, what's on, beauty, fashion, spas, and travel to country walks, kids, art, education, and culture.",
+      "followers": {
+        "facebook": 7300,
+        "twitter": 9700,
+        "instagram": 13200
+      },
+      "image_url": "https://i1.feedspot.com/4703031.jpg?t=1619509379"
+    }
+  ]
+}

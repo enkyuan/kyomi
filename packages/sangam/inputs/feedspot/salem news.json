@@ -1,0 +1,59 @@
+{
+  "category": "Salem News",
+  "source_url": "https://rss.feedspot.com/salem_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Salem-News.com",
+      "feed_url": "http://www.salem-news.com/rss/rss.xml",
+      "website_url": "http://www.salem-news.com/",
+      "description": "Salem-News.com is an Independent Online Newsgroup in the United States, setting the standard for the future of News.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5135025.jpg?t=1673355685"
+    },
+    {
+      "title": "KOIN.com \u00bb Salem",
+      "feed_url": "https://www.koin.com/news/salem/feed/",
+      "website_url": "https://www.koin.com/news/salem/",
+      "description": "The Latest News and Updates in Salem brought to you by the team at KOIN.com.",
+      "followers": {
+        "facebook": 220700,
+        "twitter": 148600,
+        "instagram": 36000
+      },
+      "image_url": "https://i1.feedspot.com/5135027.jpg?t=1586156896"
+    },
+    {
+      "title": "Salem Reporter",
+      "feed_url": "https://www.salemreporter.com/feed?format=rss",
+      "website_url": "https://www.salemreporter.com/",
+      "description": "The Salem Reporter is a web-based news organization focused exclusively on reporting in the Salem area.",
+      "followers": {
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5130678.jpg?t=1586155552"
+    },
+    {
+      "title": "Statesman Journal",
+      "feed_url": "https://www.statesmanjournal.com/",
+      "website_url": "https://www.statesmanjournal.com/",
+      "description": "StatesmanJournal.com is the home page of Salem, Oregon, with in-depth and updated local news, sports, things to do, travel and opinions.",
+      "followers": {
+        "facebook": 81600,
+        "twitter": 37500,
+        "instagram": 14100
+      },
+      "image_url": "https://i1.feedspot.com/5135024.jpg"
+    },
+    {
+      "title": "City of Salem",
+      "feed_url": "https://www.cityofsalem.net/news",
+      "website_url": "https://www.cityofsalem.net/news",
+      "description": "Read the latest news and find out what the City of Salem is currently working on.",
+      "followers": {
+        "facebook": 32000,
+        "twitter": 10600
+      },
+      "image_url": "https://i1.feedspot.com/5135026.jpg"
+    }
+  ]
+}

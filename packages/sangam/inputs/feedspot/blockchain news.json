@@ -1,0 +1,74 @@
+{
+  "category": "Blockchain News",
+  "source_url": "https://rss.feedspot.com/blockchain_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Blockchain.News",
+      "feed_url": "https://blockchain.news/rss",
+      "website_url": "https://blockchain.news/",
+      "description": "Find the latest Bitcoin, Ethereum, blockchain, and crypto news, interviews, and price analyses at Blockchain.News. We aim to educate the world on the true value of blockchain technology and the reason why it is the future.",
+      "followers": {
+        "facebook": 11600,
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/5089827.jpg?t=1611137734"
+    },
+    {
+      "title": "Altcoin Buzz \u00bb Blockchain",
+      "feed_url": "https://www.altcoinbuzz.io/category/cryptocurrency-news/blockchain-technology/feed/",
+      "website_url": "https://www.altcoinbuzz.io/category/cryptocurrency-news/blockchain-technology/",
+      "description": "Latest Blockchain Technology news including distributed ledger technologies, enterprise applications, Segwit, Sharding, New Consensus, Forks, and more. Altcoin Buzz is an independent digital media outlet that delivers the latest news and opinions in the world of cryptocurrencies, blockchain technology, regulations, adoption, and blockchain gaming.",
+      "followers": {
+        "facebook": 6600,
+        "twitter": 145000,
+        "instagram": 36000
+      },
+      "image_url": "https://i1.feedspot.com/5456747.jpg?t=1665735596"
+    },
+    {
+      "title": "Chainwire \u00bb Blockchain",
+      "feed_url": "https://chainwire.org/tag/blockchain/feed/",
+      "website_url": "https://chainwire.org/tag/blockchain/",
+      "description": "Blockchain and Crypto Press Release Distribution on Chainwire. We're a newswire syndication service for the cryptocurrency and blockchain industry. Designed for cryptocurrency projects, blockchain companies, exchanges, investment firms, and PR agencies, Chainwire allows press releases to be published simultaneously across hyper-targeted media outlets.",
+      "followers": {
+        "facebook": 60,
+        "twitter": 708
+      },
+      "image_url": "https://i1.feedspot.com/5456749.jpg?t=1665735732"
+    },
+    {
+      "title": "Ripple Coin News \u00bb Blockchain",
+      "feed_url": "https://ripplecoinnews.com/blockchain-news/feed/",
+      "website_url": "https://ripplecoinnews.com/blockchain-news/",
+      "description": "RippleCoinNews.com provides news, price charts, and information on Ripple, XRP, and other Cryptocurrencies as well as Blockchain technology. Ripple Coin News is your one-stop guide for all information and updates regarding cryptocurrencies. Our goal is to bring fresh news and content regarding cryptocurrency markets and the latest developments in the world of blockchain technology.",
+      "followers": {
+        "facebook": 22500,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5322554.jpg?t=1671602129"
+    },
+    {
+      "title": "Blockchain News",
+      "feed_url": "https://www.the-blockchain.com/",
+      "website_url": "https://www.the-blockchain.com/",
+      "description": "Founded by online technology publisher Richard Kastelein. Blockchain News is the first online publication that focuses solely on Blockchain technology and theory. Our aim is to become the number one source online for Blockchain news.",
+      "followers": {
+        "facebook": 28700,
+        "twitter": 25900,
+        "instagram": 75
+      },
+      "image_url": "https://i1.feedspot.com/4512182.jpg?t=1612001062"
+    },
+    {
+      "title": "Bitnation",
+      "feed_url": "https://bitnation.co/feed/",
+      "website_url": "https://bitnation.co/news/",
+      "description": "Blockchain & cryptocurrency news, investing guides, market forecasts & reviews on Bitnation. Founded in 2014, Bitnation strives to provide reliable and accurate blockchain news, investing guides, market forecasts, and reviews.",
+      "followers": {
+        "facebook": 8700,
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/5456746.jpg?t=1665735487"
+    }
+  ]
+}

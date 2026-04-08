@@ -1,0 +1,28 @@
+{
+  "category": "Grand Island News",
+  "source_url": "https://rss.feedspot.com/grand_island_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Grand Island Independent",
+      "feed_url": "https://theindependent.com/search/?f=rss&t=article&c=news/local&l=50&s=start_time&sd=desc",
+      "website_url": "https://theindependent.com/news/local/",
+      "description": "The Grand Island Independent is Central Nebraska's Comprehensive News Authority.",
+      "followers": {
+        "facebook": 36000,
+        "twitter": 11900
+      },
+      "image_url": "https://i1.feedspot.com/5157532.jpg?t=1590824331"
+    },
+    {
+      "title": "KSNB Local4",
+      "feed_url": "https://www.ksnblocal4.com/rss/",
+      "website_url": "https://www.ksnblocal4.com/",
+      "description": "KSNB Local4 covering Grand Island, Hastings and Kearney..",
+      "followers": {
+        "facebook": 51400,
+        "twitter": 10300
+      },
+      "image_url": "https://i1.feedspot.com/5157538.jpg?t=1590824612"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "category": "Portland Gaming",
+  "source_url": "https://rss.feedspot.com/portland_gaming_rss_feeds",
+  "feeds": [
+    {
+      "title": "Digital Trends \u00bb Gaming",
+      "feed_url": "https://www.digitaltrends.com/gaming/feed/",
+      "website_url": "https://www.digitaltrends.com/gaming/",
+      "description": "Digital Trends brings the latest video game news, reviews, and guides about the biggest companies and titles in the industry. We offer coverage about everything, from PlayStation, Nintendo, and Xbox exclusives to the most exciting Nintendo Switch games, and more.",
+      "followers": {
+        "facebook": 1900000,
+        "twitter": 1900000,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/5048502.jpg?t=1744005608"
+    },
+    {
+      "title": "1985 Games Blog",
+      "feed_url": "https://1985games.com/blogs/news.atom",
+      "website_url": "https://1985games.com/blogs/news",
+      "description": "Stay current with updates and releases from the 1985 Games. Here we discuss and share our love for fantasy games, Movie reactions, and the latest announcements from our team. 1985 Games is a Design Studio that creates cool and unique Dungeons and Dragons accessories.",
+      "followers": {
+        "facebook": 11000,
+        "twitter": 1900,
+        "instagram": 21500
+      },
+      "image_url": "https://i1.feedspot.com/5455476.jpg?t=1665558766"
+    },
+    {
+      "title": "Rose City Games Blog",
+      "feed_url": "https://www.rosecitygames.com/news?format=rss",
+      "website_url": "https://www.rosecitygames.com/news",
+      "description": "Rose City Games Blog shares the latest news and updates about our team and our games. Find Release date announcements, Bug fixes news, contests, and more buzzing info. Rose City Games is an indie studio based in Portland, Oregon. We're dedicated to telling fantastical stories that immerse players through striking artwork and unforgettable soundtracks.",
+      "followers": {
+        "facebook": 519,
+        "twitter": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5455480.jpg?t=1665558753"
+    }
+  ]
+}

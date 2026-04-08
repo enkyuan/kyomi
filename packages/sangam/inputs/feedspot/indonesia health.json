@@ -1,0 +1,53 @@
+{
+  "category": "Indonesia Health",
+  "source_url": "https://rss.feedspot.com/indonesia_health_rss_feeds",
+  "feeds": [
+    {
+      "title": "Spinal Health and Wellness Blog",
+      "feed_url": "https://doc.vortala.com/gen/blogs-4003-feed.xml",
+      "website_url": "https://www.shw-indonesia.com/blog/",
+      "description": "Spinal Health and Wellness is a health care clinic in Jakarta, Indonesia that focuses on the nervous system, spine, joints, muscles, and health problems.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 16,
+        "instagram": 22400
+      },
+      "image_url": "https://i1.feedspot.com/5343025.jpg?t=1636977100"
+    },
+    {
+      "title": "PhysioActive Indonesia Blog",
+      "feed_url": "https://www.physioactive.id/feed/",
+      "website_url": "https://www.physioactive.id/blog/",
+      "description": "Health & Wellness Tips. Covers articles on weight loss, women's health, physiotherapy and more!PhysioActive has a experienced international team specialized in general physiotherapy, sports therapy, neck and back care and more.",
+      "followers": {
+        "facebook": 47,
+        "instagram": 314
+      },
+      "image_url": "https://i1.feedspot.com/5343024.jpg?t=1636976601"
+    },
+    {
+      "title": "Fullerton Health Indonesia",
+      "feed_url": "https://www.fullertonhealth.co.id/tag/news/feed/",
+      "website_url": "https://www.fullertonhealth.co.id/tag/news/",
+      "description": "Fullerton Health Indonesia is the only integrated healthcare company in Indonesia, offering a one-stop service to our corporate clients.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 383,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5343289.jpg?t=1637047983"
+    },
+    {
+      "title": "IDN Times \u00bb Health",
+      "feed_url": "https://www.idntimes.com/health",
+      "website_url": "https://www.idntimes.com/health",
+      "description": "Stay up to date with the latest health news and articles on healthcare industry in Indonesia on the IDN Times.IDNtimes.com is a multi-platform media company for affluent Millennials and Gen Z in Indonesia.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 400600,
+        "instagram": 2500000
+      },
+      "image_url": "https://i1.feedspot.com/5343742.jpg?t=1637127237"
+    }
+  ]
+}

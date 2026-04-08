@@ -1,0 +1,74 @@
+{
+  "category": "Youth Hockey",
+  "source_url": "https://rss.feedspot.com/youth_hockey_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Province \u00bb Junior Hockey",
+      "feed_url": "https://theprovince.com/category/sports/hockey/junior-hockey/feed.xml",
+      "website_url": "https://theprovince.com/category/sports/hockey/junior-hockey/",
+      "description": "Read the latest Junior Hockey League news, schedules, and updates on scores, standings, athletes, and more. View photos & video highlights. The Province is part of the Postmedia Network, one of Canada's largest print and digital news networks.",
+      "followers": {
+        "facebook": 106100,
+        "twitter": 188800,
+        "instagram": 26300
+      },
+      "image_url": "https://i1.feedspot.com/5406482.jpg?t=1654254907"
+    },
+    {
+      "title": "The Junior Hockey News",
+      "feed_url": "https://thejuniorhockeynews.com/feed/",
+      "website_url": "https://thejuniorhockeynews.com/",
+      "description": "This publication is an all-inclusive source for news concerning players, parents, and fans. It is our goal, to keep the reader informed, educated, and at times entertained with the stories we deliver.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 12600,
+        "instagram": 402
+      },
+      "image_url": "https://i1.feedspot.com/5404440.jpg?t=1653648287"
+    },
+    {
+      "title": "CrossIceHockey.com",
+      "feed_url": "https://www.crossicehockey.com/feed/",
+      "website_url": "https://www.crossicehockey.com/",
+      "description": "CrossIceHockey.com regularly features the most relevant and engaging content covering all aspects of hockey life. From in-game strategy to post-game rituals, it's the go-to source for keeping up to date on everything you need to know about the game you love.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 1800,
+        "instagram": 455
+      },
+      "image_url": "https://i1.feedspot.com/5070191.jpg?t=1615441066"
+    },
+    {
+      "title": "New England Hockey Journal \u00bb Juniors Hockey News",
+      "feed_url": "https://www.hockeyjournal.com/category/juniors/feed/",
+      "website_url": "https://www.hockeyjournal.com/category/juniors/",
+      "description": "The following section of New England Hockey Journal features articles on Juniors Hockey News. New England Hockey Journal is the region's premier hockey magazine and website covering prospects, prep/high schools, juniors, colleges, and pros.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 14800,
+        "instagram": 7500
+      },
+      "image_url": "https://i1.feedspot.com/5404448.jpg?t=1653654011"
+    },
+    {
+      "title": "Affton Hockey News",
+      "feed_url": "https://afftonhockey.org/feed/",
+      "website_url": "https://afftonhockey.org/news-archive/",
+      "description": "The Best Youth Hockey In The Midwest. The Affton Athletic Association, through the hard work and dedication of volunteers, has been providing outlets for children and young adults to experience the intangible rewards of participating in team sports.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5404452.jpg?t=1653652567"
+    },
+    {
+      "title": "Showdown Tournaments Blog",
+      "feed_url": "https://showdowntournaments.com/feed/",
+      "website_url": "https://showdowntournaments.com/category/blog/",
+      "description": "Youth Hockey Tips in our blog for everything youth hockey-related. With 30 years of experience organizing youth hockey tournaments and 50 years of playing hockey and coaching, we are experts on youth hockey and hockey tournament experience.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 13,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5640393.jpg?t=1690875948"
+    }
+  ]
+}

@@ -1,0 +1,631 @@
+{
+  "category": "3D Printing",
+  "source_url": "https://rss.feedspot.com/3d_printing_rss_feeds",
+  "feeds": [
+    {
+      "title": "3DPrint.com",
+      "feed_url": "https://3dprint.com/feed/",
+      "website_url": "https://3dprint.com/",
+      "description": "3DPrint.com is a news organization dedicated to bringing you up to date on all the latest news from the 3D printing industry. Our mission is to provide the 3D printing community with the latest breaking news and commentary concerning the industry.",
+      "followers": {
+        "facebook": 228600,
+        "twitter": 39500
+      },
+      "image_url": "https://i1.feedspot.com/4642105.jpg?t=1616578345"
+    },
+    {
+      "title": "3D Printing Industry",
+      "feed_url": "https://3dprintingindustry.com/feed/",
+      "website_url": "https://3dprintingindustry.com/",
+      "description": "3D Printing Industry (3DPI) is a global media company providing a dedicated resource for anyone interested in 3D printing and 3D scanning - two fields of technology that are rapidly growing in relevance and application across industrial and consumer sectors.",
+      "followers": {
+        "facebook": 923800,
+        "twitter": 105100,
+        "instagram": 12800
+      },
+      "image_url": "https://i1.feedspot.com/4642100.jpg?t=1669027604"
+    },
+    {
+      "title": "3DPrinting.com",
+      "feed_url": "https://3dprinting.com/news/feed/",
+      "website_url": "https://3dprinting.com/news/",
+      "description": "3DPrinting.com is for everyone interested in 3D printing, from hobbyist to industrialist. It offer quality news coverage and in-depth reporting, product information, and community content via a unified, modern platform. 3D Printing is taking the world by storm. Learn more about 3D printers and additive manufacturing companies on 3DPrinting.com.",
+      "followers": {
+        "facebook": 30500,
+        "twitter": 26100,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4641423.jpg?t=1616578339"
+    },
+    {
+      "title": "TCT Magazine",
+      "feed_url": "https://www.tctmagazine.com/api/rss/content.rss",
+      "website_url": "https://www.tctmagazine.com/additive-manufacturing-3d-printing-news",
+      "description": "TCT Magazine is the cornerstone of The TCT Group's media arm, the world's premier communications portfolio for 3D technologies (3D printing, additive manufacturing, 3D scanning, metrology, 3D services, design and more) communities.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 10800
+      },
+      "image_url": "https://i1.feedspot.com/4213602.jpg?t=1616578671"
+    },
+    {
+      "title": "Gambody, 3D Printing Blog",
+      "feed_url": "https://www.gambody.com/blog/feed/",
+      "website_url": "https://www.gambody.com/blog/",
+      "description": "This blog was created to provide you with useful 3D printing articles and the latest news of the world of 3D technology and machines.",
+      "followers": {
+        "facebook": 52900,
+        "twitter": 1600,
+        "instagram": 43200
+      },
+      "image_url": "https://i1.feedspot.com/5061652.jpg?t=1616578651"
+    },
+    {
+      "title": "3DPrintBeginner",
+      "feed_url": "https://3dprintbeginner.com/feed/",
+      "website_url": "https://3dprintbeginner.com/",
+      "description": "3DPrintBeginner is a blog for 3D printing lovers, committed to producing quality content that helps beginners and advanced users alike. Besides beginner-friendly tips, you will also find content for advanced users. From guides on improving your print quality to 3D printing hardware reviews, there's something for any 3D printing fan.",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 1400,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5514127.jpg?t=1677577023"
+    },
+    {
+      "title": "Cults Blog",
+      "feed_url": "https://cults3d.com/en/blog.rss",
+      "website_url": "https://cults3d.com/en/blog",
+      "description": "Cults is a digital marketplace for 3D printing and design. Blog is dedicated to the entire 3D printing world: 3D printers, filaments for 3D printers, 3D files, 3D models, 3D modeling, 3D scanners. We are highlighting all the news and innovative uses related to this wonderful additive manufacturing technology!",
+      "followers": {
+        "facebook": 105200,
+        "twitter": 16500,
+        "instagram": 235100
+      },
+      "image_url": "https://i1.feedspot.com/5281235.jpg?t=1621080105"
+    },
+    {
+      "title": "Shapeways Magazine - 3D Printing News and Innovation",
+      "feed_url": "https://www.shapeways.com/blog/feed",
+      "website_url": "https://www.shapeways.com/blog/categories/3d-printing-industry",
+      "description": "Shapeways is a creative community of makers, designers, technologist and entrepreneurs using digital manufacturing and 3D Printing, to bring their ideas to the physical world. It is the world's largest online 3D Printing Service, Community and Marketplace.",
+      "followers": {
+        "facebook": 171700,
+        "twitter": 315900,
+        "instagram": 53100
+      },
+      "image_url": "https://i1.feedspot.com/4641398.jpg?t=1616581231"
+    },
+    {
+      "title": "i.materialise",
+      "feed_url": "https://i.materialise.com/blog/en/feed/",
+      "website_url": "https://i.materialise.com/blog/en/",
+      "description": "i.materialise is an online 3D printing service, community and marketplace for creative people. It is a 3D printing blog that keeps you updated about outstanding 3D designs, the newest 3D printing technologies and the best 3D modeling software tutorials.",
+      "followers": {
+        "facebook": 52300,
+        "twitter": 21400
+      },
+      "image_url": "https://i1.feedspot.com/4641953.jpg?t=1616578356"
+    },
+    {
+      "title": "DEVELOP3D",
+      "feed_url": "https://develop3d.com/feed/",
+      "website_url": "https://develop3d.com/",
+      "description": "DEVELOP3D explores how leading product design and engineering firms get the most out of the latest technologies, like CAD, 3D Printing, VR, AR, and 3D Scanning. We write in-depth, hands-on reviews to help firms make informed decisions. DEVELOP3D was launched in 2008 and our team of experienced editors have been reporting on the very latest product development technologies ever since.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 11700
+      },
+      "image_url": "https://i1.feedspot.com/4640738.jpg?t=1616581091"
+    },
+    {
+      "title": "Boston Micro Fabrication Blog",
+      "feed_url": "https://bmf3d.com/blog/feed/",
+      "website_url": "https://bmf3d.com/blog/",
+      "description": "Features the latest news and information about micro 3D printing capabilities and applications. Boston Micro Fabrication (BMF) is the world leader in micro-precision 3D printers utilizing Projection Micro Stereolithography.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 484,
+        "instagram": 571
+      },
+      "image_url": "https://i1.feedspot.com/5300636.jpg?t=1631516236"
+    },
+    {
+      "title": "Treatstock Blog",
+      "feed_url": "https://www.treatstock.com/blog/rss",
+      "website_url": "https://www.treatstock.com/blog",
+      "description": "Treatstock is an online platform for consumers to search and purchase anything that can be made on a 3D printer. All members of their team are enthusiasts of what they do and they are all, to some extent, carried away by 3D printing. Their main objective is to provide the most extensive range of 3D models for both unique and everyday items that can also be personalized to your liking.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4641456.jpg?t=1616581103"
+    },
+    {
+      "title": "BigRep",
+      "feed_url": "https://bigrep.com/feed/",
+      "website_url": "https://bigrep.com/posts/",
+      "description": "BigRep creates Large-Scale 3D printers designed for professionals who are seeking high-performance 3D Printing systems that produce full-scale products. Discover all our 3D Printing posts in our blog.",
+      "followers": {
+        "facebook": 11200,
+        "twitter": 1900,
+        "instagram": 27300
+      },
+      "image_url": "https://i1.feedspot.com/5171260.jpg?t=1616578700"
+    },
+    {
+      "title": "3DWithUs",
+      "feed_url": "https://3dwithus.com/feed",
+      "website_url": "https://3dwithus.com/3d-printers",
+      "description": "3DWithUs is a reliable resource and a helping tool for those who are interested in 3D design and 3D printing. a reliable resource and a helping tool for those who are interested in 3D design and 3D printing.",
+      "followers": {
+        "facebook": 535,
+        "twitter": 2700,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5191141.jpg?t=1598868338"
+    },
+    {
+      "title": "TOM's 3D",
+      "feed_url": "https://toms3d.org/feed/",
+      "website_url": "https://toms3d.org/",
+      "description": "Tom's 3D is published by New Media Thomas Sanladerer and covers new developments in consumer and professional 3D printing. Fresh guides, reviews and projects are published every week",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 39900
+      },
+      "image_url": "https://i1.feedspot.com/4641874.jpg?t=1616581219"
+    },
+    {
+      "title": "Airwolf 3D",
+      "feed_url": "https://airwolf3d.com/3d-printing-news/feed/",
+      "website_url": "https://airwolf3d.com/3d-printing-news/",
+      "description": "Airwolf 3D is committed to manufacturing high-performance 3D printers that are fast, affordable, durable and easy to use. Stay up-to-date on the 3D printing news, including trends, tips and tricks, and 3D printing industry news from Airwolf 3D.",
+      "followers": {
+        "facebook": 19800,
+        "twitter": 5,
+        "instagram": 6100
+      },
+      "image_url": "https://i1.feedspot.com/4640716.jpg?t=1616578704"
+    },
+    {
+      "title": "3D2GO Philippines Blog",
+      "feed_url": "https://3d2go.com.ph/blog/feed/",
+      "website_url": "https://3d2go.com.ph/blog/",
+      "description": "3D2GO Philippines is the first company to offer end-to-end 3D printing services and other 3D services in the Philippines. From small to large scale, they expertise is manufacturing high quality custom 3D products.",
+      "followers": {
+        "facebook": 23000,
+        "twitter": 356,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4640735.jpg?t=1616578937"
+    },
+    {
+      "title": "Purple Platypus Blog",
+      "feed_url": "https://purpleplatypus.com/blog/feed/",
+      "website_url": "https://purpleplatypus.com/blog/",
+      "description": "Purple Platypus is the preferred dealer in the Southwestern United States who markets an extensive line of 3D printers by Stratasys Ltd., from the low-cost Desktop 3D Printers, all the way to 3D Production Systems for direct digital manufacturing. It is the preferred distributor for advanced 3D printers, benchtop milling machines, & direct 3D modeling software.",
+      "followers": {
+        "facebook": 548,
+        "twitter": 859,
+        "instagram": 708
+      },
+      "image_url": "https://i1.feedspot.com/4641479.jpg?t=1616578716"
+    },
+    {
+      "title": "Filabot",
+      "feed_url": "https://www.filabot.com/blogs/news.atom",
+      "website_url": "https://www.filabot.com/blogs/news",
+      "description": "Filabot is a desktop extruding system, capable of grinding various types of plastics, to make spools of plastic filament for 3D printers. Recycles bad prints, makes filament from recycled plastic, and even use low cost pellets for new filament.",
+      "followers": {
+        "facebook": 13800,
+        "twitter": 3000,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4641371.jpg?t=1616581223"
+    },
+    {
+      "title": "WASP Blog",
+      "feed_url": "https://www.3dwasp.com/en/feed/",
+      "website_url": "https://www.3dwasp.com/en/blog/",
+      "description": "3D printing is WASP's heart since a small and fast printer that materialises objects made of bio-plastic, clay, silicone and biocompatible materials, which mills wood and aluminium, makes it easy to start mini-productions and to create what you need by yourself. The aim of WASP is to build 'zero-mile' homes, using materials found on the surrounding area. We're dreamers we're makers: we start from 3D printing to save the world.",
+      "followers": {
+        "facebook": 16100,
+        "twitter": 4300,
+        "instagram": 104600
+      },
+      "image_url": "https://i1.feedspot.com/4641404.jpg?t=1610798010"
+    },
+    {
+      "title": "Midlands 3D Printing Blog",
+      "feed_url": "https://midlands3d.com/feed/",
+      "website_url": "https://midlands3d.com/blog/",
+      "description": "Midlands 3D Printing blog shares news and insights on 3D printing innovations, manufacturing efficiency, and digital warehousing, while showcasing the company's expertise as a UK-based provider of professional 3D printing services for businesses and individuals.",
+      "followers": {
+        "instagram": 140
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/8787298/page/8657133/logo_1754651960.jpg"
+    },
+    {
+      "title": "MatterHackers",
+      "feed_url": "https://www.matterhackers.com/rss/news",
+      "website_url": "https://www.matterhackers.com/news",
+      "description": "MatterHackers is dedicated to enabling 3D Printing. Get the latest news on 3D Printing from MatterHackers.",
+      "followers": {
+        "facebook": 21000,
+        "twitter": 39300
+      },
+      "image_url": "https://i1.feedspot.com/5239951.jpg?t=1611831825"
+    },
+    {
+      "title": "3D PRINTING UK Blog",
+      "feed_url": "https://3dprintinguk.com/feed/",
+      "website_url": "https://3dprintinguk.com/category/blog/",
+      "description": "Covers news, views and reviews from the wonderful world of 3D printing, 3D printers and 3D scanners.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5362192.jpg?t=1642055618"
+    },
+    {
+      "title": "Altered Rooms",
+      "feed_url": "https://alteredrooms.com/feed/",
+      "website_url": "https://alteredrooms.com/",
+      "description": "Alteredrooms.com promotes 3d printable home furnishings. Read all about the basics of 3D printing, projects, tips, and tricks that can help you improve your printing quality and avoid common mistakes. The blog also keeps you up-to-date on the latest news and updates in the world of 3D printing.",
+      "followers": {
+        "facebook": 5
+      },
+      "image_url": "https://i1.feedspot.com/6700734.jpg?t=1707130766"
+    },
+    {
+      "title": "Sculpteo Blog",
+      "feed_url": "https://www.sculpteo.com/blog/feed/",
+      "website_url": "https://www.sculpteo.com/blog/",
+      "description": "The sculpteo blog delivers the latest news and trends about 3d printing. You'll find information about the latest 3d printing technologies, 3d files, tutorials and the best 3d modeling software.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 12700
+      },
+      "image_url": "https://i1.feedspot.com/4640400.jpg?t=1616578640"
+    },
+    {
+      "title": "3DSourced",
+      "feed_url": "https://www.3dsourced.com/feed/",
+      "website_url": "https://www.3dsourced.com/category/3d-printer-reviews/",
+      "description": "Features stories, 3D printer reviews, interviews with key figures, and buyer's guides. 3DSourced aims to spread 3D printing to the world and be the most informative 3D printing website in the world.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 356
+      },
+      "image_url": "https://i1.feedspot.com/5315863.jpg?t=1629974027"
+    },
+    {
+      "title": "3D Insider",
+      "feed_url": "https://3dinsider.com/feed/",
+      "website_url": "https://3dinsider.com/",
+      "description": "3D Insider is a leading technology publication covering the latest news in topics such as 3D printing, drones, and virtual reality.",
+      "followers": {
+        "facebook": 31400,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4685663.jpg?t=1616578645"
+    },
+    {
+      "title": "TriMech Solutions",
+      "feed_url": "https://store.trimech.com/feed",
+      "website_url": "https://store.trimech.com/blog/",
+      "description": "TriMech is the go-to-company for engineering resources, servicing the East Coast from Maine to Florida. They are partner with SolidWorks and Stratasys to provide you with complete solutions in 3D CAD/Simulation, Rapid Prototyping, Consulting and Personnel Placement. TriMech is your engineering resource providing complete SOLIDWORKS 3D CAD and Stratasys 3D Printing product solutions.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4640464.jpg?t=1616578686"
+    },
+    {
+      "title": "Total 3D Printing",
+      "feed_url": "https://total3dprinting.org/feed/",
+      "website_url": "https://total3dprinting.org/",
+      "description": "Sam Westin has been in the media printing space for over 5 years and is an early adopter of 3d printing technology. He is excited to be a mere peon among the 21st century printing revolution! When not thinking up new things to print in multiple dimensions, Sam shares his thoughts on the industry here.",
+      "followers": {
+        "twitter": 32
+      },
+      "image_url": "https://i1.feedspot.com/4641587.jpg?t=1661412436"
+    },
+    {
+      "title": "Proto3000 \u00bb 3D Printing",
+      "feed_url": "https://proto3000.com/category/3d-printing/feed/",
+      "website_url": "https://proto3000.com/category/3d-printing/",
+      "description": "This section of the blog features articles that have to do exclusively with 3D Printing. Proto3000 provides 3D printing, 3D laser scanning, rapid prototyping, and 3D engineering solutions.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5300631.jpg?t=1625826318"
+    },
+    {
+      "title": "Profound3D",
+      "feed_url": "https://profound3d.com/blogs/news.atom",
+      "website_url": "https://profound3d.com/blogs/news",
+      "description": "Profound3D is a e-commerce site owned and operated by Media Supply, Inc. Their company has been in business since 1986, providing printing solutions and supplies to government agencies, business large & small, and individuals. 3D printing solutions, including 3D printers, 3D print filament, educational packages, accessories for classroom, office and home use.",
+      "followers": {
+        "facebook": 889,
+        "twitter": 586
+      },
+      "image_url": "https://i1.feedspot.com/4641854.jpg?t=1616578696"
+    },
+    {
+      "title": "3D Spectra Tech Blog",
+      "feed_url": "https://www.3dspectratech.com/feed/",
+      "website_url": "https://www.3dspectratech.com/blog/",
+      "description": "3D Spectra Technologies LLP is a digital solutions provider based in Pune. We provide 3D printing services to major companies in Pune and other cities of India. We are one of the few technological brains in India to embrace the potential of 3D printing in designing, manufacturing, and engineering processes.",
+      "followers": {
+        "facebook": 805,
+        "twitter": 257
+      },
+      "image_url": "https://i1.feedspot.com/5278847.jpg?t=1620645032"
+    },
+    {
+      "title": "Divide By Zero Blog",
+      "feed_url": "https://www.divbyz.com/blog/feed",
+      "website_url": "https://www.divbyz.com/blog",
+      "description": "Divide By Zero Technologies is one of the pioneer companies to take 3D printing technology to SME sector in India purely because the machines are professional, affordable and adhere to international quality standards. Our mission is to accelerate the world's innovation through advanced manufacturing developing products that deliver beyond consumer expectations.",
+      "followers": {
+        "facebook": 6300,
+        "twitter": 506
+      },
+      "image_url": "https://i1.feedspot.com/5278846.jpg?t=1620643534"
+    },
+    {
+      "title": "3D Printing world from rainy Seattle.",
+      "feed_url": "https://go3dprinting.tumblr.com/rss",
+      "website_url": "https://go3dprinting.tumblr.com/",
+      "description": "Everything that has to do with 3d printing and 3d printers. From the high end to the open source Reprap A Freemarket Anarchist.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4642009.jpg"
+    },
+    {
+      "title": "3D Printing Systems",
+      "feed_url": "https://www.3dprinting.com.au/category/3d-printing-news/feed/",
+      "website_url": "https://www.3dprinting.com.au/category/3d-printing-news/",
+      "description": "The UP range of desktop 3D printers are perfect for the office or mancave. Our Inspire line feature large build volumes, suitable for business and industry. The two Kevvox printers are DLP high resolution printers.",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 1100,
+        "instagram": 982
+      },
+      "image_url": "https://i1.feedspot.com/4641579.jpg?t=1616579510"
+    },
+    {
+      "title": "3ders.org - 3D printer and 3D printing news",
+      "feed_url": "http://www.3ders.org/rss.xml",
+      "website_url": "http://www.3ders.org/",
+      "description": "3Ders.org provides the latest news about 3D printing technology and 3D printers.",
+      "followers": {
+        "facebook": 68700,
+        "twitter": 47900
+      },
+      "image_url": "https://i1.feedspot.com/32307.jpg?t=1616578342"
+    },
+    {
+      "title": "Surface Scan",
+      "feed_url": "https://www.surfacescan.co.uk/feed/",
+      "website_url": "https://www.surfacescan.co.uk/resources/",
+      "description": "3D scanning services, reverse engineering, and 3D printing allow us to be a one-stop-shop for any 3D project. Using the latest 3D scanning tech and SLS Printers.",
+      "followers": {
+        "twitter": 53
+      },
+      "image_url": "https://i1.feedspot.com/5196619.jpg?t=1600088652"
+    },
+    {
+      "title": "Edditive",
+      "feed_url": "https://edditiveblog.wordpress.com/feed/",
+      "website_url": "https://edditiveblog.wordpress.com/",
+      "description": "Edditive is a 3D printing journey by James Novak.",
+      "followers": {
+        "twitter": 675
+      },
+      "image_url": "https://i1.feedspot.com/4641651.jpg?t=1661420474"
+    },
+    {
+      "title": "3D Quick Printing Blog",
+      "feed_url": "https://www.3dquickprinting.com/feed/",
+      "website_url": "https://www.3dquickprinting.com/3d-printing-blog/",
+      "description": "3D Quick Printing offer's a 3D printing service that thrives on its low costs and fast efficient 3d printing, throughout the UK. 3D quick printing provides in-depth news about the 3D printing industry. Read about new 3D printing developments, 3D print equipment & 3D printing services.",
+      "followers": {
+        "facebook": 4,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4641365.jpg?t=1661420999"
+    },
+    {
+      "title": "Hobby 3D Printing!",
+      "feed_url": "https://hobby3dprinting.com/feed/",
+      "website_url": "https://hobby3dprinting.com/",
+      "description": "My name is Chip, and my 10-year-old daughter Gracie (future engineer/inventor) has been bugging me for a 3D printer for a little over a year. So we are finally taking the plunge and immersing ourselves in this fascinating new hobby. We are learning as we go along and here is where we will share some of our experiences, successes, failures & what we have learned!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5118748.jpg?t=1616580854"
+    },
+    {
+      "title": "DimensionAlley Blog",
+      "feed_url": "https://dimensionalley.com/feed/",
+      "website_url": "https://dimensionalley.com/blog/",
+      "description": "DimensionAlley is a 3D printing consulting and store. 3D printing service, printer and supply sales. 3D / CAD modelling and product development using rapid prototyping. 3D print events.",
+      "followers": {
+        "facebook": 642,
+        "twitter": 267,
+        "instagram": 280
+      },
+      "image_url": "https://i1.feedspot.com/4641501.jpg?t=1616579144"
+    },
+    {
+      "title": "Blog",
+      "feed_url": "https://desktopam.com/feed/",
+      "website_url": "https://desktopam.com/category/3d-printing/",
+      "description": "This blog explores the potential of Desktop Additive Manufacturing (AM) or 3D Printing. I share my experiences using a desktop 3d printer with an enclosure and air purifier to create functional 3d printable models. My goal is to inspire others to embrace 3d printing as a way to improve their lives and share valuable information with fellow Digital Craftspeople.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5164767.jpg?t=1661421032"
+    },
+    {
+      "title": "3D Printing and more",
+      "feed_url": "https://leveroij.tumblr.com/rss",
+      "website_url": "https://leveroij.tumblr.com/",
+      "description": "3D printing, design, travel and architecture worth sharing by Dirk Janssen.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4642016.jpg?t=1661413008"
+    },
+    {
+      "title": "Filaments.ca \u00bb 3D Printing",
+      "feed_url": "https://filaments.ca/blogs/3d-printing.atom",
+      "website_url": "https://filaments.ca/blogs/3d-printing",
+      "description": "Filaments.ca is a Toronto-based leading supplier of 3D printing materials in Canada. The blog shares 3D printing materials blog, information, tips, tricks, examples, experiments, experiences and more.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5278848.jpg?t=1620644649"
+    },
+    {
+      "title": "Replicator WareHouse",
+      "feed_url": "https://replicatorwarehouse.com/feed/",
+      "website_url": "https://replicatorwarehouse.com/",
+      "description": "Replicator Warehouse is a website about Printers and 3D Printers, you can find here reviews, guides, buying guides and everything concerning printers.",
+      "followers": {
+        "twitter": 103
+      },
+      "image_url": "https://i1.feedspot.com/5126783.jpg?t=1616578676"
+    },
+    {
+      "title": "Let's Print 3D",
+      "feed_url": "https://letsprint3d.net/feed/",
+      "website_url": "https://letsprint3d.net/",
+      "description": "A collection of guides, articles and reviews written for the Maker Select and Wanhao Duplicator 3D Printing community.",
+      "followers": {
+        "facebook": 23,
+        "twitter": 142
+      },
+      "image_url": "https://i1.feedspot.com/4744851.jpg?t=1616578691"
+    },
+    {
+      "title": "Cubify 3D Printing Fans & Fun",
+      "feed_url": "http://cubifyfans.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://cubifyfans.blogspot.com/",
+      "description": "Cubify 3D Printing Fans & Fun is all about solving the problem people face if they don't have a 3d printer.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4640479.jpg?t=1616581016"
+    },
+    {
+      "title": "Afinia 3D Printer",
+      "feed_url": "https://afinia.com/blogs/3d-printers-and-printing.atom",
+      "website_url": "https://afinia.com/blogs/3d-printers-and-printing",
+      "description": "Afinia is a division of Microboards Technology LLC, a leader in specialized printing solutions. Their 3D printer line demonstrates our mechanical and electrical expertise. They offer the H-Series of 3D printers: portable, affordable plastics printers for design engineers, educators, and hobbyists.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 4800,
+        "instagram": 855
+      },
+      "image_url": "https://i1.feedspot.com/4641416.jpg?t=1616581095"
+    },
+    {
+      "title": "Reprap development and further adventures in DIY 3D printing",
+      "feed_url": "https://richrap.blogspot.com/feeds/posts/default",
+      "website_url": "https://richrap.blogspot.com/",
+      "description": "Richard's aim is to help others build technology and eventually a 3D printer of their own. He is an Electronics engineer who is highly interested in 3D printing.",
+      "followers": {
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/129624.jpg?t=1616578712"
+    },
+    {
+      "title": "Prusa Printers",
+      "feed_url": "https://blog.prusaprinters.org/feed/",
+      "website_url": "http://blog.prusa3d.com",
+      "description": "PrusaPrinters.org is community website for all Prusa 3D printer owners or fans. You can watch many interesting interviews, guides and use our amazing Calculator.",
+      "followers": {
+        "twitter": 74500
+      },
+      "image_url": "https://i1.feedspot.com/4640469.jpg?t=1616578366"
+    },
+    {
+      "title": "Adafruit Industries",
+      "feed_url": "https://blog.adafruit.com/category/3d-printing/feed",
+      "website_url": "https://blog.adafruit.com/category/3d-printing/",
+      "description": "Adafruit was founded in 2005 by MIT engineer, Limor 'Ladyada' Fried. Her goal was to create the best place online for learning electronics and making the best designed products for makers of all ages and skill levels. Find everything related to 3D printing here.",
+      "followers": {
+        "facebook": 141600,
+        "twitter": 222000
+      },
+      "image_url": "https://i1.feedspot.com/4640434.jpg?t=1616578350"
+    },
+    {
+      "title": "3devo Blog",
+      "feed_url": "https://www.3devo.com/blog/rss.xml",
+      "website_url": "https://www.3devo.com/blog/",
+      "description": "3devo develops high-end and consumer-friendly filament extruders for the 3D-printing market and Plastic Processing industry.",
+      "followers": {
+        "facebook": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4641674.jpg?t=1616579132"
+    },
+    {
+      "title": "All3DP News \u00bb 3D Printing",
+      "feed_url": "https://all3dp.com/feed/newsfeed",
+      "website_url": "https://all3dp.com/3d-printing-news/",
+      "description": "All3DP is the world's leading 3D printing magazine with compelling content. For beginners and pros, it is useful, educational, and entertaining. It is our mission to provide our readers with unbiased, consumer-oriented, and helpful content that does not necessarily require prior 3D printing knowledge.",
+      "followers": {
+        "facebook": 128600,
+        "twitter": 13200
+      },
+      "image_url": "https://i1.feedspot.com/4647830.jpg?t=1612424403"
+    },
+    {
+      "title": "3D Universe",
+      "feed_url": "https://3duniverse.org/feed/",
+      "website_url": "https://shop3duniverse.com/pages/blogs",
+      "description": "3D Universe is all about exploring the art of 3D printing and related technologies.",
+      "followers": {
+        "facebook": 43500,
+        "twitter": 1100,
+        "instagram": 802
+      },
+      "image_url": "https://i1.feedspot.com/4640459.jpg?t=1616578720"
+    },
+    {
+      "title": "3D Printing Business Directory",
+      "feed_url": "https://www.3dprintingbusiness.directory/industry-blog/feed/",
+      "website_url": "https://www.voxelmatters.com/",
+      "description": "3D Printing Business Directory has over 3,000 company pages, including addresses, telephone numbers, emails and social media pages, 3D Printing Business Directory is the most complete and up to date who's who listing for the global 3D Printing Industry. They aim to help connect 3DP/AM-related companies and their potential customers throughout the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4642029.jpg?t=1616578803"
+    },
+    {
+      "title": "Re3dtech\u200b Blog",
+      "feed_url": "https://blog.re3dtech.com/rss.xml",
+      "website_url": "https://uptivemfg.com/blog/",
+      "description": "The blog that dives deep into everything 3D Printing. At RE3DTECH, we believe that 3D printing will enable our customers to enter the 4th Industrial Revolution. By moving from mass production to mass customization, RE3DTECH will play a major role in providing industrial-grade 3D printing services, access and capacity at the point of need.",
+      "followers": {
+        "facebook": 123
+      },
+      "image_url": "https://i1.feedspot.com/5266974.jpg?t=1618208649"
+    },
+    {
+      "title": "Slant 3D",
+      "feed_url": "https://www.slant3d.com/2/feed",
+      "website_url": "https://www.slant3d.com/slant3d-blog-homepage",
+      "description": "Slant 3D is a 3D printing manufacturer. Using our High Volume 3D printing farm, small businesses and start-ups can manufacture and iterate on their products quickly and cost effectively.",
+      "followers": {
+        "twitter": 213,
+        "instagram": 24100
+      },
+      "image_url": "https://i1.feedspot.com/5058152.jpg?t=1616578724"
+    },
+    {
+      "title": "Laser Lines Blog",
+      "feed_url": "https://www.laserlines.co.uk/blog/feed/",
+      "website_url": "https://www.laserlines.co.uk/blog/",
+      "description": "Founded in 1975, Laser Lines is a leading supplier of quality lasers and accessories, 3D printers, rapid prototyping machines and vacuum casting systems.",
+      "followers": {
+        "facebook": 110,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4641358.jpg?t=1608014426"
+    }
+  ]
+}

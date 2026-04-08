@@ -1,0 +1,63 @@
+{
+  "category": "Employee Onboarding",
+  "source_url": "https://rss.feedspot.com/employee_onboarding_rss_feeds",
+  "feeds": [
+    {
+      "title": "Enboarder",
+      "feed_url": "https://enboarder.com/feed/",
+      "website_url": "https://enboarder.com/blog/category/talent-and-onboarding/",
+      "description": "Enboarder is the only employee onboarding platform that solves the onboarding issue from where it matters. Follow our blog to get full of useful knowledge about employee onboarding, EX, and engagement.",
+      "followers": {
+        "facebook": 719,
+        "twitter": 508,
+        "instagram": 900
+      },
+      "image_url": "https://i1.feedspot.com/5068549.jpg?t=1622892998"
+    },
+    {
+      "title": "HROnboard Blog",
+      "feed_url": "https://hronboard.me/feed/",
+      "website_url": "https://hronboard.me/blog/",
+      "description": "HROnboard is a mobile-first, onboarding engagement app that enables teams to create tailored new hire experiences. Follow the latest posts from our employee onboarding blog, with all the latest in HR, technology & recruitment.",
+      "followers": {
+        "facebook": 306,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5068533.jpg?t=1622892987"
+    },
+    {
+      "title": "Glassdoor Blog \u00bb Employee-experience",
+      "feed_url": "https://www.glassdoor.com/blog/category/employee-experience/",
+      "website_url": "https://www.glassdoor.com/blog/category/employee-experience/",
+      "description": "All latest articles about Employee-experience from Glassdoor Blog",
+      "followers": {
+        "facebook": 271300,
+        "twitter": 176700,
+        "instagram": 85300
+      },
+      "image_url": "https://i1.feedspot.com/5068568.jpg?t=1761726244"
+    },
+    {
+      "title": "Entrepreneur \u00bb Onboarding",
+      "feed_url": "https://www.entrepreneur.com/topic/onboarding/rss",
+      "website_url": "https://www.entrepreneur.com/topic/onboarding",
+      "description": "Entrepreneur Magazine provides advice, insight, profiles, and guides for established and aspiring entrepreneur worldwide. Follow us to get the latest news, videos, and discussion topics on Onboarding.",
+      "followers": {
+        "facebook": 517799,
+        "twitter": 3600000,
+        "instagram": 4600000
+      },
+      "image_url": "https://i1.feedspot.com/5068566.jpg?t=1622893015"
+    },
+    {
+      "title": "WalkMe \u00bb Training & Onboarding",
+      "feed_url": "https://blog.walkme.com/category/training-onboarding/feed/",
+      "website_url": "https://www.walkme.com/blog/category/training-onboarding/",
+      "description": "Follow WalkMe blog that covers topics such as digital transformation, training and onboarding, User experience, and customer experience.",
+      "followers": {
+        "facebook": 92400
+      },
+      "image_url": "https://i1.feedspot.com/5068551.jpg?t=1622893025"
+    }
+  ]
+}

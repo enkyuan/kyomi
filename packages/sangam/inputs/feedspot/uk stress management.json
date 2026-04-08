@@ -1,0 +1,62 @@
+{
+  "category": "UK Stress Management",
+  "source_url": "https://rss.feedspot.com/uk_stress_management_rss_feeds",
+  "feeds": [
+    {
+      "title": "National Elf Service",
+      "feed_url": "https://www.nationalelfservice.net/mental-health/feed/",
+      "website_url": "https://www.nationalelfservice.net/mental-health/",
+      "description": "Welcome to the Mental Elf. Our website will help you find just what you need to keep up-to-date with all of the important and reliable mental health research and guidance.",
+      "followers": {
+        "facebook": 11700,
+        "twitter": 100500
+      },
+      "image_url": "https://i1.feedspot.com/4905340.jpg?t=1613640602"
+    },
+    {
+      "title": "Student Minds Blog",
+      "feed_url": "https://www.studentmindsblog.co.uk/feeds/posts/default?alt=rss",
+      "website_url": "https://www.studentmindsblog.co.uk/",
+      "description": "The Student Minds blog is the UK's one of the biggest blogs on student wellbeing and mental health, sharing student experiences of mental health difficulties. It is the UK's student mental health charity. We empower students and members of the university community to look after their own mental health, support others and create change.",
+      "followers": {
+        "facebook": 8500,
+        "twitter": 25100
+      },
+      "image_url": "https://i1.feedspot.com/4589787.jpg?t=1626947695"
+    },
+    {
+      "title": "Calm People Blog",
+      "feed_url": "https://www.calmpeople.co.uk/category/blog/feed/",
+      "website_url": "https://www.calmpeople.co.uk/category/blog/",
+      "description": "Experts in stress, conflict, emotional resilience & anger management. Helping organisations and individuals be resilient, happy and be the calm in the storm.",
+      "followers": {
+        "facebook": 784,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4910828.jpg?t=1620051809"
+    },
+    {
+      "title": "The Stress Management Society",
+      "feed_url": "https://www.stress.org.uk/category/press/articles/feed/",
+      "website_url": "https://www.stress.org.uk/category/press/articles/",
+      "description": "At the Stress Management Society, it is our mission to help combat stress through the latest knowledge, ideas, services and products. We are a non-profit organisation with a proven and long standing track record in helping private and public sector organisations manage workplace stress.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 3000,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4776390.jpg?t=1609162516"
+    },
+    {
+      "title": "In Equilibrium Blog",
+      "feed_url": "https://www.in-equilibrium.co.uk/feed/",
+      "website_url": "https://www.in-equilibrium.co.uk/resources/",
+      "description": "Articles, resources & tips in the areas of resilience, managing stress at work, mental health awareness & preventing bullying. In Equilibrium is a training and consultancy organisation. We provide in-house courses in Mental Health Awareness, Developing Resilience, Managing Stress, Equality, Diversity & Inclusion and Tackling Bullying & Harassment throughout the UK.",
+      "followers": {
+        "facebook": 358,
+        "twitter": 668
+      },
+      "image_url": "https://i1.feedspot.com/4776766.jpg?t=1609162489"
+    }
+  ]
+}

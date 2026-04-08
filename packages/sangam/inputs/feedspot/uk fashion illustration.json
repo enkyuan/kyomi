@@ -1,0 +1,51 @@
+{
+  "category": "UK Fashion Illustration",
+  "source_url": "https://rss.feedspot.com/uk_fashion_illustration_rss_feeds",
+  "feeds": [
+    {
+      "title": "Willa Gebbie Blog",
+      "feed_url": "https://www.willagebbie.com/blog?format=RSS",
+      "website_url": "https://www.willagebbie.com/blog/",
+      "description": "Willa Gebbie is a Scottish illustrator, working in beauty, fashion and portraiture. She spends her days working from either her Islington studio in London, or her home studio in Berlin. Her illustrations, often of the female figure, use confident line, textured with feminine watercolour and contemporary digital elements.",
+      "followers": {
+        "twitter": 1800,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4689339.jpg?t=1619091215"
+    },
+    {
+      "title": "Hayden Williams Fashion Illustrations",
+      "feed_url": "https://haydenwilliamsillustrations.tumblr.com/rss",
+      "website_url": "https://haydenwilliamsillustrations.tumblr.com/",
+      "description": "Hayden Williams is a British Fashion Illustrator & Designer. Conquering the world one fashion sketch at a time.",
+      "followers": {
+        "facebook": 277400,
+        "twitter": 38400,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/1510073.jpg?t=1529135348"
+    },
+    {
+      "title": "Other Wardrobe by Leni Kauffman",
+      "feed_url": "https://otherwardrobe.com/rss",
+      "website_url": "https://otherwardrobe.com/",
+      "description": "Other Wardrobe, a weekly illustrated fashion blog by Leni Kauffman. She is an illustrator of American and Japanese heritage currently living and working in London. She works in Pencil, Watercolour and Ink as well as digitally.",
+      "followers": {
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4693263.jpg?t=1619091345"
+    },
+    {
+      "title": "HUNGRY VOID",
+      "feed_url": "https://hungryvoid.tumblr.com/rss",
+      "website_url": "https://hungryvoid.tumblr.com/",
+      "description": "HUNGRY VOID is a fashion blog, based in London, mainly focused on fashion illustration and fashion photography by Francesco LO IACONO.",
+      "followers": {
+        "facebook": 897,
+        "twitter": 15900,
+        "instagram": 57300
+      },
+      "image_url": "https://i1.feedspot.com/4693247.jpg?t=1529135319"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "category": "Fairmont News",
+  "source_url": "https://rss.feedspot.com/fairmont_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Fairmont News",
+      "feed_url": "https://www.wvnews.com/search/?f=rss&t=article&c=fairmontnews/news&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.wvnews.com/fairmontnews/news/",
+      "description": "Your locally owned source for local news, sports, events, and marketing in Fairmont, West Virginia.",
+      "followers": {
+        "facebook": 13000,
+        "twitter": 247
+      },
+      "image_url": "https://i1.feedspot.com/5156795.jpg?t=1590640565"
+    },
+    {
+      "title": "Times West Virginian",
+      "feed_url": "https://www.timeswv.com/search/?f=rss&t=article&c=news/local_news&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.timeswv.com/news/local_news/",
+      "description": "The Times West Virginian is an award-winning, community-focused multimedia company in Fairmont, West Virginia serving Marion County and North Central West Virginia. Follow this feed to read the latest local news and community happenings in Fairmont, WV.",
+      "followers": {
+        "facebook": 16800,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5156814.jpg"
+    }
+  ]
+}

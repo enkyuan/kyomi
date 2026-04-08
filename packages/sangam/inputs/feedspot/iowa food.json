@@ -1,0 +1,107 @@
+{
+  "category": "Iowa Food",
+  "source_url": "https://rss.feedspot.com/iowa_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Iowa Girl Eats Blog",
+      "feed_url": "https://feeds.feedburner.com/iowagirleats",
+      "website_url": "https://iowagirleats.com/blog/",
+      "description": "Covers delicious and approachable gluten-free recipes made with everyday, in-season ingredients. Iowa Girl Eats' focus is to share quick and healthy, family-friendly recipes.",
+      "followers": {
+        "facebook": 130100,
+        "twitter": 12800,
+        "instagram": 57800
+      },
+      "image_url": "https://i1.feedspot.com/627120.jpg?t=1600345796"
+    },
+    {
+      "title": "Ally's Sweet & Savory Eats",
+      "feed_url": "https://www.sweetandsavoryfood.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.sweetandsavoryfood.com/search",
+      "description": "Hey, I am Ally, Iowa food blogger, wife and mom.! I am passionate about food. You will find all sorts of things from delicious and easy recipes to indulgent desserts. Join me!",
+      "followers": {
+        "facebook": 19100,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5172532.jpg?t=1626177022"
+    },
+    {
+      "title": "Make the Best of Everything",
+      "feed_url": "https://makethebestofeverything.com/feed/",
+      "website_url": "https://makethebestofeverything.com/",
+      "description": "Hey there! My name is Kristen, and I am the woman behind the blog, Make The Best of Everything. This website is to help millennial families eat delicious, healthy food together while staying within a reasonable budget.",
+      "followers": {
+        "facebook": 33100,
+        "twitter": 1600,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5172605.jpg?t=1626157354"
+    },
+    {
+      "title": "Simplify, Live, Love \u00bb Recipes and Cookng Archives",
+      "feed_url": "https://simplifylivelove.com/category/recipes/feed/",
+      "website_url": "https://simplifylivelove.com/category/recipes/",
+      "description": "Welcome to Simplify, Live, Love! Simplify, Live, Love encourages busy families to lead healthier lives and to focus on what matters good food, fun memories, and dear family and friends. Find the latest Health and Delicious Recipes your kids will eat.",
+      "followers": {
+        "facebook": 12100,
+        "twitter": 19600,
+        "instagram": 40100
+      },
+      "image_url": "https://i1.feedspot.com/5172534.jpg?t=1626176858"
+    },
+    {
+      "title": "The Iowa Housewife",
+      "feed_url": "https://iowasue.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://iowasue.blogspot.com/",
+      "description": "We're sisters who like to cook and bake, talk cooking and baking, and share recipes and kitchen wisdom.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4788590.jpg?t=1609422827"
+    },
+    {
+      "title": "donnahup.com \u00bb Recipes",
+      "feed_url": "https://donnahup.com/category/food/feed/",
+      "website_url": "https://donnahup.com/category/food/",
+      "description": "Welcome to donnahup.com! I am Donna and I love to cook, craft, travel, read, and watch movies. I started blogging because I enjoyed it. I had no idea the adventure I was starting. I love being able to share with you all.",
+      "followers": {
+        "facebook": 32299,
+        "twitter": 74200,
+        "instagram": 9000
+      },
+      "image_url": "https://i1.feedspot.com/5172670.jpg?t=1626176861"
+    },
+    {
+      "title": "Farm Girl Cook'n",
+      "feed_url": "https://farmgirlcookn.com/feed/",
+      "website_url": "https://farmgirlcookn.com/",
+      "description": "Welcome to my blog! I am an Iowa Farm girl who aspires to write a cookbook featuring vintage and favorite recipes from my family and friends. I'd like to bring you the art of cooking like your mother, grandmother, or whoever is your cooking inspiration. Keep it simple and enjoy!",
+      "followers": {
+        "facebook": 659,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4981442.jpg?t=1626176865"
+    },
+    {
+      "title": "Been There Baked That",
+      "feed_url": "https://www.blogger.com/feeds/6200778877559128416/posts/default",
+      "website_url": "http://www.beenthere-bakedthat.com/",
+      "description": "Welcome! I am Steph, wife, and mother to three beautiful girls! Glad you stopped by, pull up a chair, and get comfy. Here you will find many of my family's favorite recipes featuring fresh, seasonal ingredients. With the occasional dessert thrown in as well!",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 235
+      },
+      "image_url": "https://i1.feedspot.com/5172588.jpg?t=1626176868"
+    },
+    {
+      "title": "Des Moines Foodster",
+      "feed_url": "https://desmoinesfoodster.com/feed/",
+      "website_url": "https://desmoinesfoodster.com/",
+      "description": "Des Moines Foodster is a local food blog highlighting the food, restaurants, craft breweries, events that make Des Moines the greatest city in the world.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 2900,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4925516.jpg?t=1620907867"
+    }
+  ]
+}

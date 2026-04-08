@@ -1,0 +1,1944 @@
+{
+  "category": "Liberal Political",
+  "source_url": "https://rss.feedspot.com/liberal_political_rss_feeds",
+  "feeds": [
+    {
+      "title": "Daily Kos",
+      "feed_url": "https://www.dailykos.com/blogs/main.rss",
+      "website_url": "https://www.dailykos.com/",
+      "description": "Latest news, stories and analysis to inform readers about hard-hitting issues that matter to progressives. In addition to news and activism, the Daily Kos Elections team provides detailed analysis on congressional elections, state, and local office races year-round. Founded in 2002, Daily Kos is a digital media platform for news you can do something about.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 268300
+      },
+      "image_url": "https://i1.feedspot.com/4533371.jpg?t=1614250208"
+    },
+    {
+      "title": "Mother Jones \u00bb Politics",
+      "feed_url": "https://www.motherjones.com/politics/feed/",
+      "website_url": "https://www.motherjones.com/politics/",
+      "description": "Mother Jones, a prominent independent news organization, delivers groundbreaking coverage across politics, the environment, health, and human rights. Renowned for investigative journalism and innovative reporting, it offers insightful analysis and occasionally employs a sarcastic tone to engage readers.",
+      "followers": {
+        "facebook": 1500000,
+        "twitter": 757200,
+        "instagram": 625700
+      },
+      "image_url": "https://i1.feedspot.com/1784304.jpg?t=1635605937"
+    },
+    {
+      "title": "Crooks and Liars",
+      "feed_url": "http://feeds.crooksandliars.com/crooksandliars/YaCP?format=xml",
+      "website_url": "https://crooksandliars.com/",
+      "description": "Focusing on political events and the news coverage of them. The mission of Crooks and Liars is to shatter myths pushed by the media and pundits with facts.",
+      "followers": {
+        "facebook": 129500,
+        "twitter": 96400
+      },
+      "image_url": "https://i1.feedspot.com/4469733.jpg?t=1614250229"
+    },
+    {
+      "title": "PoliticusUSA",
+      "feed_url": "https://www.politicususa.com/feed",
+      "website_url": "https://www.politicususa.com/",
+      "description": "Bringing you news, political commentary & analysis from a liberal point of view. Founded by Sarah Jones and Jason Easley, PoliticusUSA is independent and is not affiliated with any political party or organization. It is a 100% independent digital publishing site offering liberal news, commentary, and opinion without fear or favor.",
+      "followers": {
+        "facebook": 567000,
+        "twitter": 78400,
+        "instagram": 7400
+      },
+      "image_url": "https://i1.feedspot.com/1310069.jpg?t=1614250234"
+    },
+    {
+      "title": "Students For Liberty Blog",
+      "feed_url": "https://studentsforliberty.org/blog/feed/",
+      "website_url": "https://studentsforliberty.org/blog/",
+      "description": "Students For Liberty is a rapidly growing network of pro-liberty students from all over the world. We are the largest libertarian student organization in the world. Learn Liberty is your resource for exploring the ideas of a free society. We tackle big questions about what makes society free or prosperous and how we can improve the world we live in.",
+      "followers": {
+        "facebook": 179100,
+        "twitter": 88600,
+        "instagram": 72500
+      },
+      "image_url": "https://i1.feedspot.com/5544010.jpg?t=1681798463"
+    },
+    {
+      "title": "The Vermont Political Observer",
+      "feed_url": "https://thevpo.org/feed/",
+      "website_url": "https://thevpo.org/",
+      "description": "John Walters, a seasoned author, journalist, and observer of Vermont politics, runs The Vermont Political Observer. With a background in radio journalism spanning Michigan, New Hampshire, and Vermont, he offers unique insights and opinions on political affairs through his blog.",
+      "followers": {
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4059329.jpg?t=1638447734"
+    },
+    {
+      "title": "Blog For Iowa",
+      "feed_url": "https://blogforiowa.com/feed/",
+      "website_url": "https://blogforiowa.com/",
+      "description": "Democracy for Iowa is a progressive political action grassroots organization that seeks to elect socially progressive and fiscally responsible candidates to statewide and local offices in Iowa. We are affiliated with Democracy for America, the political action committee founded by former Vermont Gov. Howard Dean. Blog for Iowa is the online information source for Iowa's progressive community.",
+      "followers": {
+        "facebook": 869,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4981418.jpg?t=1682332792"
+    },
+    {
+      "title": "The Daily Blog",
+      "feed_url": "https://thedailyblog.co.nz/feed/",
+      "website_url": "https://thedailyblog.co.nz/",
+      "description": "The Daily Blog Unites Top Left-Wing Political Commentators and Progressive Opinion Shapers. Launched on Friday 1 March, 2013, the 'TheDailyBlog.co.nz' unites over 42 of the country's leading left-wing commentators and progressive opinion shapers to provide the other side of the story on today's news, media and political agendas.",
+      "followers": {
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5054641.jpg?t=1681798772"
+    },
+    {
+      "title": "Public Notice",
+      "feed_url": "https://www.publicnotice.co/feed",
+      "website_url": "https://www.publicnotice.co/",
+      "description": "Sign up for fearless, independent coverage of US politics and media, right in your inbox four times a week.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5760945.jpg?t=1706091379"
+    },
+    {
+      "title": "POLITICO",
+      "feed_url": "https://www.politico.com/rss/politicopicks.xml",
+      "website_url": "https://www.politico.com/",
+      "description": "POLITICO is the global authority on the intersection of politics, policy, and power. It is one of the most robust news operations and information services in the world specializing in politics and policy, which informs the most influential audience in the world with insight, edge, and authority.",
+      "followers": {
+        "facebook": 2000000,
+        "twitter": 4500000,
+        "instagram": 2100000
+      },
+      "image_url": "https://i1.feedspot.com/4884214.jpg?t=1658724401"
+    },
+    {
+      "title": "Dakota Free Press",
+      "feed_url": "https://dakotafreepress.com/feed/",
+      "website_url": "https://dakotafreepress.com/",
+      "description": "The Dakota Free Press, like its preceding incarnation the Madville Times, is about South Dakota politics. Cory Allen Heidelberger, editor and publisher, discusses and invites readers to discuss statewide and local issues. He occasionally turns to national and international issues, usually because of their impact on South Dakota, but sometimes just because he finds them darned interesting.",
+      "followers": {
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5319588.jpg?t=1638428265"
+    },
+    {
+      "title": "The Bleeding Heart Libertarian",
+      "feed_url": "https://bleedingheartlibertarian.substack.com/feed",
+      "website_url": "https://bleedingheartlibertarian.substack.com/",
+      "description": "Free Trade, Free Migration, and Peace",
+      "followers": {
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/5759165.jpg?t=1705909140"
+    },
+    {
+      "title": "Dissent Magazine Blog",
+      "feed_url": "https://www.dissentmagazine.org/feed/",
+      "website_url": "https://www.dissentmagazine.org/blog/",
+      "description": "Dissent Magazine is the oldest democratic socialist magazine in the United States, an independent quarterly magazine, publishing some of America's most exciting long-form political and cultural criticism since 1954.",
+      "followers": {
+        "facebook": 48400,
+        "twitter": 87700,
+        "instagram": 20900
+      },
+      "image_url": "https://i1.feedspot.com/4529282.jpg?t=1654691340"
+    },
+    {
+      "title": "The Democracy Alliance Blog",
+      "feed_url": "https://www.democracyalliance.org/feed/",
+      "website_url": "https://democracyalliance.org/news/",
+      "description": "Community. Strategy. Investment. Impact.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5760349.jpg?t=1706014302"
+    },
+    {
+      "title": "The Liberal Patriot",
+      "feed_url": "https://www.liberalpatriot.com/feed",
+      "website_url": "https://www.liberalpatriot.com/",
+      "description": "The Liberal Patriot (TLP) is a digital newsletter focused on American politics, public policy, and international affairs. TLP aims to provide readers with honest analysis and original commentary to help advance a 'pro-worker, pro-family, pro-America' agenda for the country.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5544016.jpg?t=1681798485"
+    },
+    {
+      "title": "Raw Story",
+      "feed_url": "https://www.rawstory.com/feeds/feed.rss",
+      "website_url": "https://www.rawstory.com/",
+      "description": "Raw Story is an investigative news website focused on the issues that matter and bringing underreported news to light. Raw Story delivers award-winning investigative reporting, breaking news and bold opinion columns to more than six million readers a month.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 230300
+      },
+      "image_url": "https://i1.feedspot.com/5421665.jpg?t=1659528353"
+    },
+    {
+      "title": "Truthout",
+      "feed_url": "https://truthout.org/section/politics-and-elections/feed/",
+      "website_url": "https://truthout.org/",
+      "description": "Truthout, a nonprofit news organization founded in 2001, delivers independent reporting on social justice issues. Committed to accuracy and transparency, it exposes systemic injustice and promotes progressive ideas. Through investigative reporting and critical analysis, Truthout sparks action and empowers readers to drive positive change. Visit Truthout.org for progressive perspectives on activism, politics, and social justice.",
+      "followers": {
+        "facebook": 849300,
+        "twitter": 180800,
+        "instagram": 41200
+      },
+      "image_url": "https://i1.feedspot.com/5308988.jpg?t=1628158913"
+    },
+    {
+      "title": "Eschaton",
+      "feed_url": "https://www.eschatonblog.com/feeds/posts/default",
+      "website_url": "https://www.eschatonblog.com/",
+      "followers": {
+        "twitter": 584
+      },
+      "image_url": "https://i1.feedspot.com/5760947.jpg?t=1706092511"
+    },
+    {
+      "title": "The Democratic Strategist",
+      "feed_url": "https://thedemocraticstrategist.org/feed/",
+      "website_url": "https://thedemocraticstrategist.org/",
+      "description": "Political Strategy for a Permanent Democratic Majority",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5760952.jpg?t=1706091404"
+    },
+    {
+      "title": "Informed Comment \u00bb US politics",
+      "feed_url": "https://www.juancole.com/us-politics/feed",
+      "website_url": "https://www.juancole.com/us-politics",
+      "description": "Thoughts on the Middle East, History and Religion",
+      "followers": {
+        "facebook": 12500,
+        "twitter": 855
+      },
+      "image_url": "https://i1.feedspot.com/5760950.jpg?t=1706091400"
+    },
+    {
+      "title": "Drezner's World",
+      "feed_url": "https://danieldrezner.substack.com/feed",
+      "website_url": "https://danieldrezner.substack.com/",
+      "description": "A bunch of unedited stuff about international relations, American politics, political economy, the marketplace of ideas, and popular culture written by this Drezner guy",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F8033cf46-5261-40b6-82ca-029498d66ddb_2016x1512.jpeg?t=1706100998"
+    },
+    {
+      "title": "Progressive Britain Blog",
+      "feed_url": "https://www.progressivebritain.org/feed/",
+      "website_url": "https://www.progressivebritain.org/blog/",
+      "description": "Explore topics like Business, Economy, Domestic Policy, Environment, and more, related to Labour. Progressive Britain is the platform for policymaking, political education and imaginative thinking to rebuild Labour and the nation.",
+      "followers": {
+        "facebook": 9000,
+        "twitter": 31700
+      },
+      "image_url": "https://i1.feedspot.com/5452843.jpg?t=1664954109"
+    },
+    {
+      "title": "Truthdig",
+      "feed_url": "https://www.truthdig.com/feed/",
+      "website_url": "https://www.truthdig.com/",
+      "description": "Truthdig returns with a dedicated staff committed to uncovering the truth. Expect sharp analysis and thought-provoking commentary, covering a broad spectrum of issues. With a focus on journalism that uncovers problems and explores solutions, Truthdig also showcases fresh global voices shedding light on critical humanitarian concerns, from abuse to climate change.",
+      "followers": {
+        "facebook": 297000,
+        "twitter": 82700,
+        "instagram": 7400
+      },
+      "image_url": "https://i1.feedspot.com/4865346.jpg?t=1681798800"
+    },
+    {
+      "title": "Progressive Maryland",
+      "feed_url": "https://www.progressivemaryland.org/home.rss",
+      "website_url": "https://www.progressivemaryland.org/",
+      "description": "Progressive Maryland is a statewide nonprofit advocacy organization promoting racial, social, economic, and environmental justice. With over 120,000 individual members, supporters, and organizational affiliates statewide, we are leading the fight for progressive change in Maryland through grassroots organizing, public education, and legislative advocacy. Progressive Maryland provides statewide leadership and coordination in a range of national, state, and regional campaigns.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/5315021.jpg?t=1629797797"
+    },
+    {
+      "title": "The Mahablog",
+      "feed_url": "https://www.mahablog.com/feed/",
+      "website_url": "https://www.mahablog.com/",
+      "description": "The Mahablog talks about politics and society. We are making the world safe for Liberalism. The author is also a spiritual person who has published a book on life: The circle of the way.",
+      "followers": {},
+      "image_url": "https://i.imgur.com/qn3J1bE_d.webp?maxwidth=760&fidelity=grand?t=1678881304"
+    },
+    {
+      "title": "David Blaska",
+      "feed_url": "https://davidblaska.com/feed/",
+      "website_url": "https://davidblaska.com/",
+      "description": "David Blaska, renowned for his provocative stance, challenges progressives in Madison, WI, to safeguard democracy. Delve into his incisive political coverage and articles, offering a unique perspective on the quest for a safer America.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7255905.jpg?t=1710395909"
+    },
+    {
+      "title": "Data for Progress Blog",
+      "feed_url": "https://www.dataforprogress.org/blog?format=RSS",
+      "website_url": "https://www.dataforprogress.org/blog",
+      "description": "The Data for Progress Blog is where progressive leaders of today and tomorrow use our data to illuminate the most important stories in the country. We're honored to regularly feature the words of U.S. senators and members of Congress, candidates for local and state elected office, leading activists, policy scholars, and more. We use this space to arm the progressive movement with data-driven ideas and arguments. We are a multidisciplinary group of experts using state-of-the-art techniques in data science to support progressive activists and causes.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 76600,
+        "instagram": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4978310.jpg?t=1681800272"
+    },
+    {
+      "title": "The Progressive",
+      "feed_url": "https://progressive.org/api/rss/content.rss",
+      "website_url": "https://progressive.org/",
+      "description": "The Progressive presents voices of dissent and voices that are under-represented in the mainstream with a goal of championing grassroots progressive politics, civil liberties, human rights, economic justice, a healthy environment, and a reinvigorated democracy. Stay up to date ith the latest happenings in activism around the world with us.",
+      "followers": {
+        "facebook": 47300,
+        "twitter": 32299,
+        "instagram": 6900
+      },
+      "image_url": "https://i1.feedspot.com/4571341.jpg?t=1671110737"
+    },
+    {
+      "title": "MoveOn Blog",
+      "feed_url": "https://front.moveon.org/blog/feed/",
+      "website_url": "https://front.moveon.org/blog/",
+      "description": "MoveOn is a community of millions of Americans from all walks of life who use innovative technology to lead, participate in, and win campaigns for progressive change.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 343800,
+        "instagram": 579800
+      },
+      "image_url": "https://i1.feedspot.com/5759168.jpg?t=1705909237"
+    },
+    {
+      "title": "Delaware Liberal",
+      "feed_url": "https://delawareliberal.net/feed/",
+      "website_url": "https://delawareliberal.net/",
+      "description": "Focuses primarily on local Delaware politics, but also on national politics and progressive politics from a Delaware perspective. Sprinkled in are odd bits of news, funny videos and other fun.",
+      "followers": {
+        "facebook": 770,
+        "twitter": 198
+      },
+      "image_url": "https://i1.feedspot.com/4535374.jpg?t=1614250442"
+    },
+    {
+      "title": "The Vermont Progressive Party",
+      "feed_url": "https://www.progressiveparty.org/progressive-news-and-updates?format=rss",
+      "website_url": "https://www.progressiveparty.org/progressive-news-and-updates",
+      "description": "In Vermont, the Vermont Progressive Party stands as a unique model, championing grassroots organizing and independence from corporate-owned parties. Alongside issue-focused groups and 'small p' progressives within the Democratic party, they represent diverse approaches to political change. Some politicians opt to remain outside party structures by running as Independents, contributing to Vermont's varied political landscape.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 3000,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5760356.jpg?t=1706013759"
+    },
+    {
+      "title": "New Statesman",
+      "feed_url": "https://www.newstatesman.com/feed",
+      "website_url": "https://www.newstatesman.com/",
+      "description": "The New Statesman is the leading progressive political and cultural magazine in the United Kingdom. Founded as a weekly review of politics and literature on 12 April 1913, the New Statesman has notably recognised and published new writers and critics, as well as encouraging notable careers. Today, it is a vibrant print-digital hybrid, and one of the most respected and influential titles in the United Kingdom.",
+      "followers": {
+        "facebook": 163500,
+        "twitter": 214900,
+        "instagram": 63200
+      },
+      "image_url": "https://i1.feedspot.com/5323247.jpg?t=1663246195"
+    },
+    {
+      "title": "TheArticle",
+      "feed_url": "https://www.thearticle.com/feed",
+      "website_url": "https://www.thearticle.com/",
+      "description": "Covers latest articles about politics and policies, nations, civilizations, learning and liberty, engendered debates, democracy in America and more. TheArticle aims to help you make sense of the news through free access to exchanges of ideas, rather than echo chambers of prejudice.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5196283.jpg?t=1599831565"
+    },
+    {
+      "title": "Left Wisdom",
+      "feed_url": "https://medium.com/feed/@jwgarman2",
+      "website_url": "https://jwgarman2.medium.com/",
+      "description": "Sharing political views by James, who is 66 and retired, and living his dream free, knowing that only by working with a union is he fortunate enough to be able to be where he is.",
+      "followers": {
+        "twitter": 122600
+      },
+      "image_url": "https://i1.feedspot.com/5153697.jpg?t=1626789073"
+    },
+    {
+      "title": "Blogging Belmont",
+      "feed_url": "https://www.bloggingbelmont.com/feed/",
+      "website_url": "https://www.bloggingbelmont.com/",
+      "description": "Belmont's Progressive Voice",
+      "followers": {
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/5760360.jpg?t=1706015091"
+    },
+    {
+      "title": "Reason Magazine",
+      "feed_url": "https://reason.com/feed/",
+      "website_url": "https://reason.com/",
+      "description": "Reason.com is the leading libertarian magazine and video website covering news, politics, culture, and more with reporting and analysis.",
+      "followers": {
+        "facebook": 661400,
+        "twitter": 290100,
+        "instagram": 4
+      },
+      "image_url": "https://i1.feedspot.com/1053497.jpg?t=1614250254"
+    },
+    {
+      "title": "Democracy Now!",
+      "feed_url": "https://www.democracynow.org/democracynow.rss",
+      "website_url": "https://www.democracynow.org/",
+      "description": "A daily, global, independent news hour hosted by award-winning journalists Amy Goodman and Juan Gonzalez. Reporting includes breaking daily news headlines and in-depth interviews with people on the front lines of the world's most pressing issues.",
+      "followers": {
+        "facebook": 1500000,
+        "twitter": 836100,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/4682278.jpg?t=1628665536"
+    },
+    {
+      "title": "Demand Progress",
+      "feed_url": "https://demandprogress.org/feed/",
+      "website_url": "https://demandprogress.org/the-latest/",
+      "description": "Mobilizing the public to promote freedom",
+      "followers": {
+        "facebook": 28300,
+        "twitter": 56600
+      },
+      "image_url": "https://i1.feedspot.com/5760354.jpg?t=1706013749"
+    },
+    {
+      "title": "Blue Delaware",
+      "feed_url": "https://bluedelaware.com/feed/",
+      "website_url": "https://bluedelaware.com/",
+      "description": "Blue Delaware will be reporting on Delaware politics from a liberal, progressive and Democratic perspective. We will be advocating for a liberal and progressive Delaware and a liberal and progressive Delaware Democratic party. Our end goal is results - to critique in a manner where our voices are heard.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5311671.jpg?t=1628762677"
+    },
+    {
+      "title": "Insider NJ",
+      "feed_url": "https://www.insidernj.com/feed/",
+      "website_url": "https://www.insidernj.com/category/news/",
+      "description": "Dedicated to political news in the state of New Jersey. InsiderNJ is a nonpartisan website which brings you bold and insightful must-read real-time news for New Jersey's political and government insiders.",
+      "followers": {
+        "facebook": 13600,
+        "twitter": 12000
+      },
+      "image_url": "https://i1.feedspot.com/4825280.jpg?t=1614250413"
+    },
+    {
+      "title": "This Carbon Based Life Blog",
+      "feed_url": "https://carbonbaselife.car.blog/feed/",
+      "website_url": "https://carbonbaselife.car.blog/",
+      "description": "Covers humanitarian issues and special interest articles.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5085893.jpg?t=1614250421"
+    },
+    {
+      "title": "Tom Dispatch",
+      "feed_url": "https://tomdispatch.com/feed/",
+      "website_url": "https://tomdispatch.com/archive/",
+      "description": "Tom Dispatch is a web-based publication aimed at providing 'a regular antidote to the mainstream media.' TomDispatch has regularly published three original articles weekly on subjects ranging from the American way of war and this country's 'forever wars' to economic inequality to the climate crisis. It has served as a syndicated source for websites ranging from Alternet and Common Dreams to the Nation magazine and Salon.",
+      "followers": {
+        "facebook": 43700,
+        "twitter": 22600
+      },
+      "image_url": "https://i1.feedspot.com/5413215.jpg?t=1659533003"
+    },
+    {
+      "title": "Left Foot Forward",
+      "feed_url": "https://leftfootforward.org/feed/",
+      "website_url": "https://leftfootforward.org/",
+      "description": "Left Foot Forward is a political blog for progressives. We provide evidence-based analysis on British politics, news and policy developments. Founded in 2009, we've published thousands of pieces of analysis, exclusive stories, and op eds from activists, public figures and civil society. We're here to shine a light on the right, to be a space for open debate among progressives, and to act as an evidence-based balance to the right-wing press.",
+      "followers": {
+        "facebook": 18800,
+        "twitter": 63100
+      },
+      "image_url": "https://i1.feedspot.com/4141839.jpg?t=1618462952"
+    },
+    {
+      "title": "Progressive Bloggers",
+      "feed_url": "https://progressivebloggers.ca/feed/",
+      "website_url": "https://progressivebloggers.ca/",
+      "description": "Progressive Bloggers is a group of Canadian bloggers who firmly believe that this great country needs to move forward, not backwards. Be they Liberal or liberal, New Democrats or democrats, Green voters or voters who want a green country, or even Red Tories searching for a home, these bloggers believe that Canadian politics should move in a progressive direction.",
+      "followers": {
+        "twitter": 751
+      },
+      "image_url": "https://i1.feedspot.com/4862306.jpg?t=1611992044"
+    },
+    {
+      "title": "Mark Pack",
+      "feed_url": "https://www.markpack.org.uk/browse/topics/political/feed/",
+      "website_url": "https://www.markpack.org.uk/browse/political/",
+      "description": "Covers articles about politics, technology and history from a liberal perspective, mainly British politics and with quite a lot of political opinion polling and election law thrown in too.",
+      "followers": {
+        "twitter": 22400,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4535393.jpg?t=1614250430"
+    },
+    {
+      "title": "Naked Capitalism",
+      "feed_url": "https://www.nakedcapitalism.com/feed",
+      "website_url": "https://www.nakedcapitalism.com/",
+      "description": "Naked Capitalism provides fearless commentary on finance, economics, politics, and power. As the world's most influential finance and economics blog, it offers trenchant commentary, penetrating investigation, and insider political/regulatory analysis, shaping discourse on critical issues.",
+      "followers": {
+        "twitter": 26600
+      },
+      "image_url": "https://i1.feedspot.com/4734958.jpg?t=1695188441"
+    },
+    {
+      "title": "Los Angeles Times \u00bb Politics",
+      "feed_url": "https://www.latimes.com/politics.rss",
+      "website_url": "https://www.latimes.com/politics",
+      "description": "Politics",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 3800000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/5759164.jpg?t=1705909204"
+    },
+    {
+      "title": "WisPolitics",
+      "feed_url": "https://www.wispolitics.com/feed/",
+      "website_url": "https://www.wispolitics.com/",
+      "description": "WisPolitics is a Wisconsin's premier online political news source, with thousands of pages of useful information and articles that are a resource to anyone who wants to be informed about Wisconsin politics. Get accurate, balanced, and timely inside information delivered to your desktop from WisPolitics.com",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 17500,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4922369.jpg?t=1620824723"
+    },
+    {
+      "title": "Progress Michigan Blog",
+      "feed_url": "https://progressmichigan.org/feed/",
+      "website_url": "https://progressmichigan.org/blog/",
+      "description": "Uncompromised progressive politics for Michigan. Progress Michigan blog provides a strong credible voice that holds public officials and government accountable, assists in the promotion of progressive ideas, and uses web-based new media and traditional media to creatively build grassroots support for progressive ideas.",
+      "followers": {
+        "facebook": 25600,
+        "twitter": 15600,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5315391.jpg?t=1629887702"
+    },
+    {
+      "title": "Progressive Democrats of Massachusetts",
+      "feed_url": "https://www.progressivedemsofmass.org/feed/",
+      "website_url": "https://www.progressivedemsofmass.org/archives/onward/",
+      "description": "The Progressive Democrats of Massachusetts is a group of concerned citizens organized to promote social justice, political reform, and progressive values throughout the Commonwealth focusing on local and state-level issues. Progressive Democrats of Massachusetts has been Grassroots organizers & activists since 2003 focused on local & state-level issues to promote social justice, political reform, & progressive values across MA.",
+      "followers": {
+        "facebook": 878,
+        "twitter": 850
+      },
+      "image_url": "https://i1.feedspot.com/5315247.jpg?t=1629868920"
+    },
+    {
+      "title": "Politics North Carolina",
+      "feed_url": "https://www.politicsnc.com/feed",
+      "website_url": "https://www.politicsnc.com/",
+      "description": "PoliticsNC is a blog and news site developed by political consultant Thomas Mills with the creative and technical support of Amanda Underwood. The goal is to provide at least one blog per day and a reasoned voice in the political debate at a time when throwing rocks and calling names is far more popular.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4920745.jpg?t=1613645637"
+    },
+    {
+      "title": "LPE Project",
+      "feed_url": "https://lpeproject.org/topics/neoliberalism/feed/",
+      "website_url": "https://lpeproject.org/topics/neoliberalism/",
+      "description": "The Law and Political Economy (LPE) Project brings together a network of scholars, practitioners, and students working to develop innovative intellectual, pedagogical, and political interventions to advance the study of political economy and law. Scholars in their network work to understand the relationship between market supremacy and racial, gender, and economic injustice. The Law and Political Economy Blog begins from the observation that democratic political processes have lost control over fundamental decisions about how resources are allocated in our society.",
+      "followers": {
+        "twitter": 18200
+      },
+      "image_url": "https://i1.feedspot.com/5300057.jpg?t=1625656253"
+    },
+    {
+      "title": "Progressive Democrats of America Blog",
+      "feed_url": "https://pdamerica.org/feed/",
+      "website_url": "https://pdamerica.org/blog/",
+      "description": "PDA",
+      "followers": {
+        "facebook": 86600,
+        "twitter": 11300,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5760352.jpg?t=1706013741"
+    },
+    {
+      "title": "Bleeding Heartland",
+      "feed_url": "https://www.bleedingheartland.com/feed/",
+      "website_url": "https://www.bleedingheartland.com/",
+      "description": "Bleeding Heartland is a community blog providing original reporting and commentary about Iowa politics, especially campaigns and elections, state government, social, and environmental issues.",
+      "followers": {
+        "twitter": 25600
+      },
+      "image_url": "https://i1.feedspot.com/4981426.jpg?t=1629373948"
+    },
+    {
+      "title": "Democracy Paradox",
+      "feed_url": "https://democracyparadox.com/feed/",
+      "website_url": "https://democracyparadox.com/",
+      "description": "The website Democracy Paradox is a platform that explores the intricacies of democracy beyond just elections. It features articles and podcasts that delve into various aspects of democracy, including political systems, democratic institutions, and current events.",
+      "followers": {
+        "facebook": 61,
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/5128201.jpg?t=1618469392"
+    },
+    {
+      "title": "New Polity Blog",
+      "feed_url": "https://newpolity.com/blog?format=rss",
+      "website_url": "https://newpolity.com/blog",
+      "description": "New Polity aims to investigate and construct a Christian postliberal worldview, recognizing that the defining characteristic of human societies is their fundamental orientation towards or away from God.",
+      "followers": {
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5544013.jpg?t=1681798479"
+    },
+    {
+      "title": "ABC News \u00bb Politics",
+      "feed_url": "https://abcnews.go.com/abcnews/politicsheadlines",
+      "website_url": "https://abcnews.go.com/Politics",
+      "description": "ABC News is your trusted source on political news stories and videos. Get the latest coverage and analysis on everything from the Trump presidency, Senate, House, and Supreme Court.",
+      "followers": {
+        "facebook": 20600000,
+        "twitter": 120900,
+        "instagram": 5300000
+      },
+      "image_url": "https://i1.feedspot.com/8678.jpg?t=1613826624"
+    },
+    {
+      "title": "Mediaite \u00bb Politics",
+      "feed_url": "https://www.mediaite.com/category/politics/feed/",
+      "website_url": "https://www.mediaite.com/category/politics/",
+      "description": "Mediaite, a trusted source at the political-media intersection, provides breaking news, analysis, and expert opinions with lightning-quick speed. Delivering the latest political updates and diverse perspectives, Mediaite is relied upon for its comprehensive coverage and rapid reporting.",
+      "followers": {
+        "facebook": 229600,
+        "twitter": 171500,
+        "instagram": 62800
+      },
+      "image_url": "https://i1.feedspot.com/5460552.jpg?t=1666937805"
+    },
+    {
+      "title": "The Real News Network \u00bb US Politics",
+      "feed_url": "https://therealnews.com/category/sections/politics-movements-us/feed",
+      "website_url": "https://therealnews.com/category/sections/politics-movements-us",
+      "followers": {
+        "facebook": 316300,
+        "twitter": 89000,
+        "instagram": 19900
+      },
+      "image_url": "https://i1.feedspot.com/5760936.jpg?t=1706091321"
+    },
+    {
+      "title": "Letters from an American",
+      "feed_url": "https://heathercoxrichardson.substack.com/feed",
+      "website_url": "https://heathercoxrichardson.substack.com/",
+      "description": "A newsletter about the history behind today's politics.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_224,h_224,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fd4e2f7e4-a288-4d7c-a89e-d3be6bad20dd_1279x1450.jpeg"
+    },
+    {
+      "title": "PolitiFact",
+      "feed_url": "https://www.politifact.com/rss/all/",
+      "website_url": "https://www.politifact.com/",
+      "description": "PolitiFact is a fact-checking website that rates the accuracy of claims by elected officials and others on its Truth-O-Meter. It focuses on looking at specific statements made by politicians and rating them for accuracy. PolitiFact is run by experienced editors and journalists and owned by the nonprofit Poynter Institute for Media Studies.",
+      "followers": {
+        "facebook": 831000,
+        "twitter": 641500
+      },
+      "image_url": "https://i1.feedspot.com/5460501.jpg?t=1666935692"
+    },
+    {
+      "title": "Talk Left",
+      "feed_url": "https://feeds.feedburner.com/TalkleftThePoliticsOfCrime",
+      "website_url": "http://www.talkleft.com/",
+      "description": "Provides liberal coverage of crime-related political and injustice news. TalkLeft was created by Jeralyn Merritt in 2000 as a companion site to CrimeLynx, the criminal defense practitioner's Guide to the Internet.",
+      "followers": {
+        "facebook": 720,
+        "twitter": 725
+      },
+      "image_url": "https://i1.feedspot.com/306335.jpg?t=1610514646"
+    },
+    {
+      "title": "Internationalist Perspective",
+      "feed_url": "https://internationalistperspective.org/feed/",
+      "website_url": "https://internationalistperspective.org/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5760369.jpg?t=1706014007"
+    },
+    {
+      "title": "2 Political Junkies",
+      "feed_url": "http://2politicaljunkies.blogspot.com/feeds/posts/default",
+      "website_url": "http://2politicaljunkies.blogspot.com/",
+      "description": "The blog covers progressive political articles by 2 Political Junkies, which is widely cited as one of the oldest and most-read political blogs in the city.",
+      "followers": {
+        "twitter": 919
+      },
+      "image_url": "https://i1.feedspot.com/2268954.jpg?t=1614250480"
+    },
+    {
+      "title": "OtherWords Blog",
+      "feed_url": "https://otherwords.org/feed/",
+      "website_url": "https://otherwords.org/blog/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1073008.jpg?t=1706081449"
+    },
+    {
+      "title": "Carolina Forward Blog",
+      "feed_url": "https://carolinaforward.org/feed/",
+      "website_url": "https://carolinaforward.org/blog/",
+      "description": "Building a Better North Carolina",
+      "followers": {
+        "facebook": 23700,
+        "twitter": 16600,
+        "instagram": 69000
+      },
+      "image_url": "https://i1.feedspot.com/5760365.jpg?t=1706013815"
+    },
+    {
+      "title": "SC Prog Blog",
+      "feed_url": "https://www.scpronet.com/wordpress/feed/",
+      "website_url": "https://www.scpronet.com/wordpress/",
+      "description": "This space was created for members and friends of the South Carolina Progressive Network to promote and advance the good work they are doing in communities across the state. Our purpose is to connect organizations and individuals of like mind to maximize collective power, and to grow the grass roots to change government and social policy from the ground up.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5544109.jpg?t=1681800227"
+    },
+    {
+      "title": "Blog for Arizona",
+      "feed_url": "https://blogforarizona.net/feed/",
+      "website_url": "https://blogforarizona.net/",
+      "description": "Covers articles about Arizona's and America's Politics and Culture from a Progressive Liberal Perspective.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4535338.jpg?t=1614250817"
+    },
+    {
+      "title": "The Rude Pundit",
+      "feed_url": "https://rudepundit.blogspot.com/feeds/posts/default",
+      "website_url": "https://rudepundit.blogspot.com/",
+      "description": "Proudly lowering the level of political discourse",
+      "followers": {
+        "facebook": 17800
+      },
+      "image_url": "https://i1.feedspot.com/50218.jpg?t=1706102545"
+    },
+    {
+      "title": "Carl Beijer",
+      "feed_url": "https://www.carlbeijer.com/feed",
+      "website_url": "https://www.carlbeijer.com/",
+      "description": "This is a blog about politics from a Marxist perspective. Not just from a leftist or progressive perspective, but from someone who generally agrees with the analysis of capitalism laid out by Karl Marx, and who takes the intellectual tradition that emerged from his writing quite seriously. This places me at odds with Marx's critics on the left and right and it can also place me at odds with today's popular reinterpretations of Marx, which are often either superficial or opportunistic. The author of the blog is Carl Beijer.",
+      "followers": {
+        "twitter": 57100
+      },
+      "image_url": "https://i1.feedspot.com/5673715.jpg?t=1695033820"
+    },
+    {
+      "title": "Progress Pond",
+      "feed_url": "https://www.progresspond.com/feed/",
+      "website_url": "https://www.progresspond.com/",
+      "description": "Progress Pond is a Washington Monthly. We are an online community for progressive-minded people who care about policy, elections, and global politics.",
+      "followers": {
+        "facebook": 431,
+        "twitter": 174
+      },
+      "image_url": "https://i1.feedspot.com/5240815.jpg?t=1678881272"
+    },
+    {
+      "title": "Law & Liberty",
+      "feed_url": "https://lawliberty.org/feed/",
+      "website_url": "https://lawliberty.org/",
+      "description": "Law & Liberty's focus is on the classical liberal tradition of law and how it shapes a society of free and responsible persons. This site brings together serious debate, commentary, essays, book reviews, interviews, and educational material in a commitment to the first principles of law in a free society. Law & Liberty considers a range of foundational and contemporary legal issues, legal philosophy, and pedagogy.",
+      "followers": {
+        "facebook": 45400,
+        "twitter": 11900,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5271172.jpg?t=1618901717"
+    },
+    {
+      "title": "National Memo \u00bb Politics",
+      "feed_url": "https://www.nationalmemo.com/feeds/politics.rss",
+      "website_url": "https://www.nationalmemo.com/politics/",
+      "description": "National Memo",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5759163.jpg?t=1705909125"
+    },
+    {
+      "title": "Jacobin",
+      "feed_url": "https://jacobin.com/feed/",
+      "website_url": "https://jacobin.com/",
+      "description": "Jacobin is a leading voice of the American left, offering socialist perspectives on politics, economics, and culture.",
+      "followers": {
+        "facebook": 409200,
+        "twitter": 391300
+      },
+      "image_url": "https://i1.feedspot.com/5406703.jpg?t=1654331117"
+    },
+    {
+      "title": "Washington Spectator \u00bb Politics",
+      "feed_url": "https://washingtonspectator.org/category/politics/feed/",
+      "website_url": "https://washingtonspectator.org/category/politics/",
+      "description": "Independent. Progressive. Uncompromising.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5760933.jpg?t=1706091309"
+    },
+    {
+      "title": "People's Action",
+      "feed_url": "https://peoplesaction.org/feed/",
+      "website_url": "https://peoplesaction.org/updates/",
+      "description": "Join our joyous rebellion.",
+      "followers": {
+        "facebook": 67300,
+        "twitter": 30900,
+        "instagram": 12100
+      },
+      "image_url": "https://i1.feedspot.com/5760944.jpg?t=1706091364"
+    },
+    {
+      "title": "The Brad Blog",
+      "feed_url": "https://bradblog.com/?feed=rss2",
+      "website_url": "https://www.bradblog.com/",
+      "description": "Stay informed with Brad Friedman's independent investigative news, commentary, and muckraking since 2004. Friedman's work provides invaluable insights and challenges the status quo through his fearless reporting.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 13800
+      },
+      "image_url": "https://i1.feedspot.com/5548525.jpg?t=1682316726"
+    },
+    {
+      "title": "Democratic National Committee",
+      "feed_url": "https://democrats.org/feed/",
+      "website_url": "https://democrats.org/news/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5760355.jpg?t=1706014125"
+    },
+    {
+      "title": "Overland literary journal \u00bb Politics",
+      "feed_url": "https://overland.org.au/topics/politics-political/feed/",
+      "website_url": "https://overland.org.au/topics/politics-political/",
+      "description": "Progressive culture since 1954",
+      "followers": {
+        "facebook": 19000,
+        "twitter": 20300,
+        "instagram": 12700
+      },
+      "image_url": "https://i1.feedspot.com/5667388.jpg?t=1694152646"
+    },
+    {
+      "title": "Yale University Press \u00bb Politics",
+      "feed_url": "https://yalebooks.yale.edu/category/politics/feed/",
+      "website_url": "https://yalebooks.yale.edu/category/politics/",
+      "description": "At Yale University Press, a team of professionals is dedicated to intellectual curiosity and achieving excellence. They strive to create an environment that promotes healthy discussions and mutual understanding. By publishing insightful works that contribute to the global understanding of human affairs, Yale University Press helps to spread knowledge and truth. Head to their political blog which showcases posts on political events, public opinion, community gatherings, historical significance, feature stories, and the latest news and updates.",
+      "followers": {
+        "facebook": 152900,
+        "twitter": 81100,
+        "instagram": 34700
+      },
+      "image_url": "https://i1.feedspot.com/5673718.jpg?t=1695033831"
+    },
+    {
+      "title": "Alternet",
+      "feed_url": "https://www.alternet.org/feeds/feed.rss",
+      "website_url": "https://www.alternet.org/",
+      "description": "AlterNet is an award-winning news magazine and online community that creates original journalism and amplifies the best of hundreds of other independent media sources. AlterNet's aim is to inspire action and advocacy on the environment, human rights and civil liberties, social justice, media, health care issues, and more.",
+      "followers": {
+        "facebook": 758000,
+        "twitter": 129000
+      },
+      "image_url": "https://i1.feedspot.com/5244950.jpg?t=1658725167"
+    },
+    {
+      "title": "The Intercept",
+      "feed_url": "https://theintercept.com/politics/feed/",
+      "website_url": "https://theintercept.com/politics/",
+      "description": "The Intercept is an award-winning nonprofit news organization dedicated to holding the powerful accountable through fearless, adversarial journalism. Its in-depth investigations and unflinching analysis focus on surveillance, war, corruption, the environment, technology, criminal justice, the media, and more.",
+      "followers": {
+        "facebook": 654200,
+        "twitter": 823900,
+        "instagram": 296100
+      },
+      "image_url": "https://i1.feedspot.com/4716459.jpg?t=1682330547"
+    },
+    {
+      "title": "The American Prospect",
+      "feed_url": "https://prospect.org/api/rss/content.rss",
+      "website_url": "https://prospect.org/",
+      "description": "The American Prospect is devoted to promoting informed discussion on public policy from a progressive perspective. In print and online, the Prospect brings a narrative, journalistic approach to complex issues, addressing the policy alternatives and the politics necessary to create good legislation.",
+      "followers": {
+        "facebook": 102400,
+        "twitter": 64800
+      },
+      "image_url": "https://i1.feedspot.com/5162046.jpg?t=1663303739"
+    },
+    {
+      "title": "FactCheck",
+      "feed_url": "https://www.factcheck.org/feed/",
+      "website_url": "https://www.factcheck.org/",
+      "description": "We monitor the factual accuracy of what is said by major U.S. political players in the form of TV ads, debates, speeches, interviews and news releases. Our goal is to apply the best practices of both journalism and scholarship, and to increase public knowledge and understanding.",
+      "followers": {
+        "facebook": 872200,
+        "twitter": 188200,
+        "instagram": 546000
+      },
+      "image_url": "https://i1.feedspot.com/314468.jpg?t=1543836888"
+    },
+    {
+      "title": "People's World",
+      "feed_url": "https://peoplesworld.org/article_category/news/feed/",
+      "website_url": "https://peoplesworld.org/article_category/news/",
+      "description": "Continuing the Daily Worker - Founded 1924",
+      "followers": {
+        "facebook": 84300,
+        "twitter": 16700
+      },
+      "image_url": "https://i1.feedspot.com/5760351.jpg?t=1706013735"
+    },
+    {
+      "title": "First Draft",
+      "feed_url": "https://first-draft.com/feed/",
+      "website_url": "https://first-draft.com/",
+      "description": "Liberal Politics, Media Criticism & General Mayhem",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5759167.jpg?t=1705909194"
+    },
+    {
+      "title": "Vox \u00bb Politics",
+      "feed_url": "https://www.vox.com/rss/politics/index.xml",
+      "website_url": "https://www.vox.com/politics",
+      "description": "Vox's in-depth analysis of the political decisions and legislation happening in Washington and what it means for your life. Vox's politics team explains everything you need to know about what's going on in Washington and the effect of government policies on general public life. Vox's mission is to help everyone understand their complicated world so that they can all help shape it.",
+      "followers": {
+        "facebook": 3900000,
+        "twitter": 943000,
+        "instagram": 995500
+      },
+      "image_url": "https://i1.feedspot.com/5673710.jpg?t=1695033783"
+    },
+    {
+      "title": "Das Progressive Zentrum Blog",
+      "feed_url": "https://www.progressives-zentrum.org/en/feed/",
+      "website_url": "https://www.progressives-zentrum.org/en/blog/",
+      "description": "Renewing the Promise of Progress.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 12000
+      },
+      "image_url": "https://i1.feedspot.com/5760953.jpg?t=1706091407"
+    },
+    {
+      "title": "Mad Kane's Political Madness",
+      "feed_url": "http://www.madkane.com/madness/feed/",
+      "website_url": "http://www.madkane.com/madness/",
+      "description": "Mocking The GOP 24/7: Political Humor, Limericks & Satirical Poetry By Madeleine Begun Kane (MadKane.com)",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5760958.jpg?t=1706091421"
+    },
+    {
+      "title": "Press Watch",
+      "feed_url": "https://presswatchers.org/feed/",
+      "website_url": "https://presswatchers.org/",
+      "description": "An intervention for American political journalism",
+      "followers": {
+        "facebook": 872,
+        "twitter": 66700
+      },
+      "image_url": "https://i1.feedspot.com/5760357.jpg?t=1706013763"
+    },
+    {
+      "title": "American Journal News \u00bb Politics",
+      "feed_url": "https://americanjournalnews.com/news/politics/feed/",
+      "website_url": "https://americanjournalnews.com/news/politics/",
+      "description": "News.",
+      "followers": {
+        "facebook": 1500000,
+        "twitter": 91500
+      },
+      "image_url": "https://i1.feedspot.com/5759171.jpg?t=1705909203"
+    },
+    {
+      "title": "RootsAction",
+      "feed_url": "https://rootsaction.org/news-a-views?format=feed&type=rss",
+      "website_url": "https://rootsaction.org/news-a-views",
+      "description": "RootsAction.org is a new online initiative dedicated to galvanizing millions of Americans who are committed to economic fairness, equal rights, civil liberties, environmental protection -- and defunding endless wars.",
+      "followers": {
+        "facebook": 54700,
+        "twitter": 25000,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5760956.jpg?t=1706095232"
+    },
+    {
+      "title": "Red Justice",
+      "feed_url": "https://www.redjustice.net/feed/",
+      "website_url": "https://en.redjustice.net/",
+      "description": "Red Justice's blog tries to promote scientific and democratic values such as tolerance, solidarity, equality, saving the climate and nature, efficiency, and good working conditions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5778739.jpg?t=1706602328"
+    },
+    {
+      "title": "No More Mister Nice Blog",
+      "feed_url": "https://nomoremister.blogspot.com/feeds/posts/default",
+      "website_url": "https://nomoremister.blogspot.com/",
+      "description": "No More Mister Nice Blog is about reviewing the political scenarios of the past. One can find some very interesting blogs here, that will render you thinking.",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/433498.jpg?t=1678799228"
+    },
+    {
+      "title": "Novara Media",
+      "feed_url": "https://novaramedia.com/feed/",
+      "website_url": "https://novaramedia.com/",
+      "description": "New Media for a Different Politics",
+      "followers": {
+        "facebook": 270500,
+        "twitter": 210100,
+        "instagram": 779200
+      },
+      "image_url": "https://i1.feedspot.com/5003076.jpg?t=1706015978"
+    },
+    {
+      "title": "Up North Progressive",
+      "feed_url": "https://www.upnorthprogressive.com/feed/",
+      "website_url": "https://www.upnorthprogressive.com/",
+      "description": "Up North Progressive shares Progressive news and commentary for Northern Michigan. The topics cover on this news blog include the latest community news, political updates, ongoing political scenarios, crime news, feature stories, cultural events, historical stories, and more.",
+      "followers": {
+        "facebook": 712,
+        "twitter": 900
+      },
+      "image_url": "https://i1.feedspot.com/5673716.jpg?t=1695033823"
+    },
+    {
+      "title": "Democracy Journal",
+      "feed_url": "https://democracyjournal.org/feed/",
+      "website_url": "https://democracyjournal.org/",
+      "description": "The mission of Democracy is to build a vibrant and vital progressivism for the twenty-first century that builds on the movement's proud history, is true to its central values, and is relevant to present times.The Democracy Journal features posts on Policy Analysis, Advocacy and Activism, political campaigns, opinion pieces, civil rights, government policies, public reactions, current events, news, and updates.",
+      "followers": {
+        "facebook": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5439216.jpg?t=1695034289"
+    },
+    {
+      "title": "WhoWhatWhy \u00bb Politics",
+      "feed_url": "https://whowhatwhy.org/category/politics/feed/",
+      "website_url": "https://whowhatwhy.org/category/politics/",
+      "description": "Groundbreaking Investigative Journalism",
+      "followers": {
+        "facebook": 13300,
+        "twitter": 23300,
+        "instagram": 903
+      },
+      "image_url": "https://i1.feedspot.com/5760358.jpg?t=1706013770"
+    },
+    {
+      "title": "Capitol Hill Blue",
+      "feed_url": "https://capitolhillblue.com/feed",
+      "website_url": "https://capitolhillblue.com/",
+      "description": "The oldest political news site on the Internet",
+      "followers": {
+        "twitter": 150
+      },
+      "image_url": "https://i1.feedspot.com/5760361.jpg?t=1706014335"
+    },
+    {
+      "title": "Return Of The Liberal",
+      "feed_url": "https://returnoftheliberal.wordpress.com/feed/",
+      "website_url": "https://returnoftheliberal.wordpress.com/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5759173.jpg?t=1705909550"
+    },
+    {
+      "title": "Peoples Dispatch",
+      "feed_url": "https://peoplesdispatch.org/feed/",
+      "website_url": "https://peoplesdispatch.org/",
+      "followers": {
+        "facebook": 40300,
+        "twitter": 26400,
+        "instagram": 79900
+      },
+      "image_url": "https://i1.feedspot.com/5213384.jpg?t=1706014061"
+    },
+    {
+      "title": "Indivisible Guide",
+      "feed_url": "https://medium.com/feed/@indivisibleteam",
+      "website_url": "https://indivisibleteam.medium.com/",
+      "description": "Stories by Indivisible Guide on Medium",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5760951.jpg?t=1706091402"
+    },
+    {
+      "title": "ZNetwork \u00bb Politics & Government",
+      "feed_url": "https://znetwork.org/category/topic/politics-gov/feed/",
+      "website_url": "https://znetwork.org/category/topic/politics-gov/",
+      "description": "Independent Left News, Analysis, Vision and Strategy",
+      "followers": {
+        "facebook": 738,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5759162.jpg?t=1705909121"
+    },
+    {
+      "title": "Discourse.net \u00bb Politics",
+      "feed_url": "https://www.discourse.net/category/politics/feed/",
+      "website_url": "https://www.discourse.net/category/politics/page/2/",
+      "description": "On the fringes of the public sphere",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5760934.jpg?t=1706091313"
+    },
+    {
+      "title": "Strangely Blogged",
+      "feed_url": "http://vixenstrangelymakesuncommonsense.blogspot.com/feeds/posts/default",
+      "website_url": "http://vixenstrangelymakesuncommonsense.blogspot.com/",
+      "description": "This blog kills fascists. Eventually. It's a process I'm working on. Be patient with me.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5760935.jpg?t=1706092814"
+    },
+    {
+      "title": "Greg Palast",
+      "feed_url": "https://www.gregpalast.com/feed/",
+      "website_url": "https://www.gregpalast.com/",
+      "description": "Investigative Journalism",
+      "followers": {
+        "facebook": 127700,
+        "twitter": 81400,
+        "instagram": 21800
+      },
+      "image_url": "https://i1.feedspot.com/5760938.jpg?t=1706091329"
+    },
+    {
+      "title": "Michael Moore",
+      "feed_url": "https://www.michaelmoore.com/feed",
+      "website_url": "https://www.michaelmoore.com/archive",
+      "description": "I was born in Flint, Michigan and raised on a dirt street by loving parents, two sisters and a lot of Green Giant in a can.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5759166.jpg?t=1705909193"
+    },
+    {
+      "title": "Accountable US",
+      "feed_url": "https://accountable.us/news-insights/feed/",
+      "website_url": "https://accountable.us/news-insights/",
+      "description": "Taking on Corporate Power and Washington Special Interests",
+      "followers": {
+        "facebook": 172600,
+        "twitter": 32500,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5760346.jpg?t=1706013711"
+    },
+    {
+      "title": "Action Network Blog",
+      "feed_url": "https://actionnetwork.blog/feed/",
+      "website_url": "https://actionnetwork.blog/",
+      "description": "Updates from the Action Network team",
+      "followers": {
+        "facebook": 28000,
+        "twitter": 15400
+      },
+      "image_url": "https://i1.feedspot.com/5760347.jpg?t=1706013715"
+    },
+    {
+      "title": "Americans for Democratic Action",
+      "feed_url": "https://adaction.org/category/updates/feed/",
+      "website_url": "https://adaction.org/category/updates/",
+      "description": "America's most experienced liberal organization",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5760366.jpg?t=1706013818"
+    },
+    {
+      "title": "The European Liberal Forum Blog",
+      "feed_url": "https://liberalforum.eu/blog/feed/",
+      "website_url": "https://liberalforum.eu/blog/?lm-page=1",
+      "description": "The European Liberal Forum works to bring new ideas into the political debate, to provide a platform for discussion, and to empower citizens to make their voices heard. They create liberal solutions to European problems through evidence-based research, events, and training.The European Liberal Forum Blog shares information on political liberal ideologies, longing political campaigns, political events, opinion-based articles, the latest news, and community updates.",
+      "followers": {
+        "facebook": 12200,
+        "twitter": 6800,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5673721.jpg?t=1695033858"
+    },
+    {
+      "title": "Progressive Geographies",
+      "feed_url": "https://progressivegeographies.com/feed/",
+      "website_url": "https://progressivegeographies.com/",
+      "description": "The author of the blog's name is Stuart Elden and this is a site about politics, philosophy and geography, interesting books, his own writing, and whatever else comes to mind.",
+      "followers": {
+        "twitter": 11500
+      },
+      "image_url": "https://i1.feedspot.com/1768154.jpg?t=1695189771"
+    },
+    {
+      "title": "Oliver Willis",
+      "feed_url": "https://oliverwillis.com/feed/",
+      "website_url": "https://oliverwillis.com/",
+      "description": "I'm Oliver Willis and since 2000, OliverWillis.com has provided opinions, analysis, rants and humor about politics, pop culture and anything that crosses my mind. I consider myself an FDR-style Democrat: Strong on national security, and progressive on domestic policy. I voted for Bill Clinton, Al Gore, John Kerry, Barack Obama (twice!), Hillary Clinton, and Joe Biden for President. I am a Senior Writer for The American Independent. Before that I was a Research Fellow at Media Matters for America.",
+      "followers": {
+        "twitter": 150100
+      },
+      "image_url": "https://i1.feedspot.com/5548526.jpg?t=1682317341"
+    },
+    {
+      "title": "The Paradise Progressive Blog",
+      "feed_url": "https://theparadiseprogressive.home.blog/feed/",
+      "website_url": "https://theparadiseprogressive.home.blog/",
+      "description": "The Paradise Progressive is an effort to cover, analyze and comment on news affecting the Paradise Coast of Southwest Florida that is overlooked, ignored or avoided by local traditional media. It does this to fulfill the role of a free and independent press in a democratic republic.Their blog features posts on topics such as political opinion pieces, community news, public events, election campaigns, government sessions, and more.",
+      "followers": {
+        "facebook": 669,
+        "twitter": 509500
+      },
+      "image_url": "https://i1.feedspot.com/5673714.jpg?t=1695033808"
+    },
+    {
+      "title": "emptywheel",
+      "feed_url": "https://www.emptywheel.net/feed/",
+      "website_url": "https://www.emptywheel.net/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4767879.jpg?t=1706102076"
+    },
+    {
+      "title": "Talking Points Memo",
+      "feed_url": "https://talkingpointsmemo.com/feed",
+      "website_url": "https://talkingpointsmemo.com/news",
+      "description": "Talking Points Memo (TPM) is an independent news organization renowned for its in-depth reporting and analysis of American politics, public policy, and political culture. With a focus on exposing abuses of power and breaches of public trust, TPM reporters have spearheaded coverage of scandals and major news stories spanning multiple administrations.",
+      "followers": {
+        "facebook": 354300,
+        "twitter": 268200,
+        "instagram": 16900
+      },
+      "image_url": "https://i1.feedspot.com/5544015.jpg?t=1681798997"
+    },
+    {
+      "title": "Common Dreams",
+      "feed_url": "https://www.commondreams.org/feeds/feed.rss",
+      "website_url": "https://www.commondreams.org/",
+      "description": "Common Dreams is a reader-supported independent news outlet created in 1997 as a new media model. Our nonprofit newsroom covers the most important news stories of the moment. We share our readers' progressive values of social justice, human rights, equality, and peace. Common Dreams is committed to not only being your trusted news source but to encouraging critical thinking and civic action on a diverse range of social, economic, and civil rights issues affecting individuals and their communities.",
+      "followers": {
+        "facebook": 350200,
+        "twitter": 86900,
+        "instagram": 21600
+      },
+      "image_url": "https://i1.feedspot.com/5521893.jpg?t=1681798858"
+    },
+    {
+      "title": "Politi Zoom",
+      "feed_url": "https://politizoom.com/feed/",
+      "website_url": "https://politizoom.com/",
+      "description": "PolitiZoom is an independent news magazine dedicated to exposing the lies and corruption in Washington. We cover our fast-moving political environment with a progressive, liberal approach. Politics is not just for journalists, analysits, and pundits. We all have a part to play and we should all have a voice. PolitiZoom strives to bring your our everyday voice and help you discover yours.",
+      "followers": {
+        "facebook": 251,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5548527.jpg?t=1682316737"
+    },
+    {
+      "title": "Nation of Change \u00bb Politics",
+      "feed_url": "https://www.nationofchange.org/issues/politics/feed/",
+      "website_url": "https://www.nationofchange.org/issues/politics/",
+      "description": "At Nation of Change, our mission is to help people create a more compassionate, responsible, and value-driven world, powered by communities that focus on positive solutions to social and economic problems. Browse through the latest coverage of politics, leaders and political parties and more!",
+      "followers": {
+        "facebook": 100400,
+        "twitter": 10900,
+        "instagram": 935
+      },
+      "image_url": "https://i1.feedspot.com/5548524.jpg?t=1682316706"
+    },
+    {
+      "title": "Foundation for European Progressive Studies",
+      "feed_url": "https://feps-europe.eu/feed/",
+      "website_url": "https://feps-europe.eu/news/",
+      "followers": {
+        "facebook": 17800,
+        "twitter": 14900,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5760957.jpg?t=1706091418"
+    },
+    {
+      "title": "Dunne's Weekly",
+      "feed_url": "https://honpfd.blogspot.com/feeds/posts/default",
+      "website_url": "https://honpfd.blogspot.com/",
+      "description": "An Occasional look at Politics in general from a liberal perspective",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5759170.jpg?t=1705909413"
+    },
+    {
+      "title": "Common Dreams \u00bb Politics",
+      "feed_url": "https://www.commondreams.org/feeds/politics.rss",
+      "website_url": "https://www.commondreams.org/politics",
+      "description": "Common Dreams is a reader-supported independent news outlet created in 1997 as a new media model. Our nonprofit newsroom covers the most important news stories of the moment. Common Dreams free online journalism keeps our millions of readers well-informed, inspired, and engaged. Keep up-to-date on the latest news in politics, political leaders, new and amended bills and more!",
+      "followers": {
+        "facebook": 350200,
+        "twitter": 86900,
+        "instagram": 21600
+      },
+      "image_url": "https://i1.feedspot.com/5548523.jpg?t=1682316700"
+    },
+    {
+      "title": "A Scottish Liberal",
+      "feed_url": "https://scottish-liberal.blogspot.com/feeds/posts/default",
+      "website_url": "https://scottish-liberal.blogspot.com/",
+      "description": "Saorsa - Cheartais sh\u00f2isealta - In-ghabhalacht",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5759169.jpg?t=1705909438"
+    },
+    {
+      "title": "Liberal Voice for Women Blog",
+      "feed_url": "https://liberalvoiceforwomen.org/blog?format=rss",
+      "website_url": "https://liberalvoiceforwomen.org/blog",
+      "description": "Freedom of conscience, belief, and speech is a fundamental human right and an essential liberal principle. They will always defend this principle and along with it, women's right to speak and organize free from harassment, threat, ts or coercion. Liberal Voice for Women exists to protect and advance the rights and interests of women and girls from within liberal democracies. Their blog covers topics such as women's rights, child rights, gender equality, opinion pieces, feature stories, breaking news, events an updates.",
+      "followers": {
+        "facebook": 387,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5673712.jpg?t=1695033794"
+    },
+    {
+      "title": "Center for Progressive Reform Blog",
+      "feed_url": "https://progressivereform.org/cpr-blog/feed/",
+      "website_url": "https://progressivereform.org/cpr-blog/",
+      "description": "The Center for Progressive Reform harnesses the power of law and public policy to create a responsive government, a healthy environment, and a just society. The Center for Progressive Reform is a network of more than 60 Member Scholars with a shared vision of thriving communities and a resilient planet. We drive policy reform with rigorous and accessible legal analysis designed for changemakers.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 2700,
+        "instagram": 805
+      },
+      "image_url": "https://i1.feedspot.com/5544106.jpg?t=1681800215"
+    },
+    {
+      "title": "Progressive Policy Institute",
+      "feed_url": "https://www.progressivepolicy.org/feed/",
+      "website_url": "https://www.progressivepolicy.org/our-work/",
+      "description": "The Progressive Policy Institute is a catalyst for policy innovation and political reform with offices in Washington D.C., Brussels, and the United Kingdom. Its mission is to create radically pragmatic ideas for moving America beyond ideological and partisan deadlock.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 14400
+      },
+      "image_url": "https://i1.feedspot.com/5511066.jpg?t=1676984410"
+    },
+    {
+      "title": "The Point Magazine \u00bb Politics",
+      "feed_url": "https://thepointmag.com/category/politics/feed/",
+      "website_url": "https://thepointmag.com/politics/",
+      "description": "A magazine of the examined life",
+      "followers": {
+        "facebook": 15100,
+        "twitter": 17200,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5760359.jpg?t=1706013774"
+    },
+    {
+      "title": "Robert Reich",
+      "feed_url": "https://robertreich.substack.com/feed",
+      "website_url": "https://robertreich.substack.com/",
+      "description": "On power, politics, and the real economic system.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5333463.jpg?t=1706103571"
+    },
+    {
+      "title": "Balloon Juice \u00bb Politics",
+      "feed_url": "https://balloon-juice.com/category/politics/feed/",
+      "website_url": "https://balloon-juice.com/category/politics/",
+      "description": "Come for the politics, stay for the snark.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 14600
+      },
+      "image_url": "https://i1.feedspot.com/5760955.jpg?t=1706091412"
+    },
+    {
+      "title": "The Lincoln Project",
+      "feed_url": "https://lincolnproject.us/feed/",
+      "website_url": "https://lincolnproject.us/latest-news/",
+      "description": "Dedicated Americans Protecting Democracy",
+      "followers": {
+        "facebook": 2000000,
+        "twitter": 2800000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/5760931.jpg?t=1706091298"
+    },
+    {
+      "title": "rubber hose",
+      "feed_url": "https://upyernoz.blogspot.com/feeds/posts/default",
+      "website_url": "https://upyernoz.blogspot.com/",
+      "description": "where i blather on about stuff and you read it and like it",
+      "followers": {
+        "twitter": 171800
+      },
+      "image_url": "https://i1.feedspot.com/5760940.jpg?t=1706092615"
+    },
+    {
+      "title": "Off Message",
+      "feed_url": "https://www.offmessage.net/feed",
+      "website_url": "https://www.offmessage.net/archive?sort=new",
+      "description": "Because vigorous internal debate isn't a weakness\u2014it's essential.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5760939.jpg?t=1706091337"
+    },
+    {
+      "title": "The Liberal OC",
+      "feed_url": "https://theliberaloc.com/feed/",
+      "website_url": "https://theliberaloc.com/posts/",
+      "description": "The Liberal Orange County blog, managed by a team of OC liberals, boldly advocates for progressive values. Focused on Orange County's liberal political landscape, it spotlights activists and issues. Operated by volunteers, it relies on advertising to sustain operations, prioritizing the dissemination of liberal viewpoints in the community.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5353885.jpg?t=1680612301"
+    },
+    {
+      "title": "Liberal Bureaucracy",
+      "feed_url": "https://liberalbureaucracy.blogspot.com/feeds/posts/default",
+      "website_url": "https://liberalbureaucracy.blogspot.com/search?updated-max=2024-01-12T23:13:00Z",
+      "description": "The musings of a liberal and an internationalist, living in Suffolk's county town. There may be references to parish councils, bureaucracy and travel, amongst other things. And yes, I'm a Liberal Democrat.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5760937.jpg?t=1706092915"
+    },
+    {
+      "title": "the daily howler",
+      "feed_url": "https://dailyhowler.blogspot.com/feeds/posts/default",
+      "website_url": "https://dailyhowler.blogspot.com/",
+      "description": "musings on the mainstream 'press corps' and the american discourse",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5760949.jpg?t=1706092742"
+    },
+    {
+      "title": "Radio Free",
+      "feed_url": "https://www.radiofree.org/feed/",
+      "website_url": "https://www.radiofree.org/",
+      "description": "Independent Media for People, Not Profits.",
+      "followers": {
+        "twitter": 726,
+        "instagram": 6300
+      },
+      "image_url": "https://i1.feedspot.com/5760932.jpg?t=1706093000"
+    },
+    {
+      "title": "The Smirking Chimp",
+      "feed_url": "http://www.smirkingchimp.com/rss.xml",
+      "website_url": "http://www.smirkingchimp.com/",
+      "followers": {
+        "facebook": 14900,
+        "twitter": 19300
+      },
+      "image_url": "https://i1.feedspot.com/306425.jpg?t=1706099439"
+    },
+    {
+      "title": "CounterPunch",
+      "feed_url": "https://www.counterpunch.org/feed/",
+      "website_url": "https://www.counterpunch.org/articles/",
+      "description": "CounterPunch provides free access to its website, featuring new left-leaning articles daily. Weekend editions include notable columns like Roaming Charges by Jeffrey St. Clair. Archived content offers comprehensive searchability. Additionally, CounterPunch publishes books and runs a newsletter/magazine from 1993 to 2020.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4666175.jpg?t=1706013944"
+    },
+    {
+      "title": "The Law and Policy Blog",
+      "feed_url": "https://davidallengreen.com/feed/",
+      "website_url": "https://davidallengreen.com/",
+      "description": "The blog is written and managed by David Dallen Green. The Law and Policy Blog is an independent commentary site on law and policy from a liberal constitutionalist and critical perspective. This site carries those posts which the author thinks are still relevant to the current political scenarios.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5359284.jpg?t=1641205347"
+    },
+    {
+      "title": "Progressive Mass",
+      "feed_url": "https://www.progressivemass.com/feed/",
+      "website_url": "https://www.progressivemass.com/news/",
+      "description": "Progressive Massachusetts ('Progressive Mass') is a statewide, member-driven grassroots organization committed to fighting for a vision of shared prosperity, racial and social justice, good government, and environmental sustainability in Massachusetts. Get the latest news and updates on issues in Massachusetts, political news, parties and more!",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 13600,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5544110.jpg?t=1681800235"
+    },
+    {
+      "title": "Liberal Party of New York Blog",
+      "feed_url": "https://www.liberalparty.org/LPofNY/category/blog/feed/",
+      "website_url": "https://www.liberalparty.org/LPofNY/category/blog/",
+      "description": "Official Website of the Liberal Party of New York",
+      "followers": {
+        "facebook": 43500,
+        "twitter": 7700
+      },
+      "image_url": "https://i1.feedspot.com/5760367.jpg?t=1706013821"
+    },
+    {
+      "title": "Salon.com \u00bb News & Politics",
+      "feed_url": "https://www.salon.com/category/news-and-politics/feed",
+      "website_url": "https://www.salon.com/category/news-and-politics",
+      "description": "Salon covers national news and politics through investigations, insightful reporting, commentary, and analysis. Salon is an independent publication covering news and politics through a progressive, nonpartisan editorial lens, alongside our rigorous and inquisitive coverage of culture and entertainment, science and health, and food.",
+      "followers": {
+        "facebook": 935000,
+        "twitter": 877300,
+        "instagram": 45700
+      },
+      "image_url": "https://i1.feedspot.com/4922523.jpg?t=1666937739"
+    },
+    {
+      "title": "Lawyers, Guns & Money",
+      "feed_url": "https://www.lawyersgunsmoneyblog.com/feed",
+      "website_url": "https://www.lawyersgunsmoneyblog.com/",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5760946.jpg?t=1706101492"
+    },
+    {
+      "title": "The Guardian \u00bb Liberal Democrats",
+      "feed_url": "https://www.theguardian.com/politics/liberaldemocrats/rss",
+      "website_url": "https://www.theguardian.com/politics/liberaldemocrats",
+      "description": "Latest news and features from theguardian.com, the world's leading liberal voice",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/5759172.jpg?t=1705909207"
+    },
+    {
+      "title": "ThinkProgress",
+      "feed_url": "https://archive.thinkprogress.org/links/feed.xml",
+      "website_url": "https://thinkprogress.org/",
+      "description": "Dedicated to providing readers with rigorous reporting and analysis from a progressive perspective. Also covers climate, economy, health, justice, LGBT, world, culture, sports, politics and features. ThinkProgress is an American political news blog, a project of the Center for American Progress (CAP), which is a progressive public policy research and advocacy organization.",
+      "followers": {
+        "facebook": 37,
+        "twitter": 734900,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4472446.jpg?t=1614250213"
+    },
+    {
+      "title": "TYT",
+      "feed_url": "https://platform.tyt.com/rss/reports",
+      "website_url": "https://tyt.com/reports",
+      "description": "TYT is America's largest online progressive news network and the no. 1 most engaged news and politics network. The award-winning network is one of the top multi-platform online content creators, generating over 500 million views a month.They cover breaking news across cities, political announcements, general public policies, public outrages, editorial pieces, political campaigns, and more.",
+      "followers": {
+        "facebook": 5200000,
+        "twitter": 416900
+      },
+      "image_url": "https://i1.feedspot.com/5673720.jpg?t=1695033852"
+    },
+    {
+      "title": "Biasly \u00bb Liberalism",
+      "feed_url": "https://www.biasly.com/topic/liberalism/feed/",
+      "website_url": "https://www.biasly.com/topic/liberalism/",
+      "description": "Home of the Bias Meter - Media Bias Education - Political News",
+      "followers": {
+        "facebook": 118,
+        "twitter": 3400,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5760368.jpg?t=1706013827"
+    },
+    {
+      "title": "Extreme Liberal's Blog",
+      "feed_url": "https://extremeliberal.wordpress.com/feed/",
+      "website_url": "https://extremeliberal.wordpress.com/",
+      "description": "A blog where Liberalism is alive and well, written by a liberal who is extreme in some ways and not in others.",
+      "followers": {
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4535324.jpg?t=1614250464"
+    },
+    {
+      "title": "In These Times",
+      "feed_url": "https://inthesetimes.com/rss",
+      "website_url": "https://inthesetimes.com/",
+      "description": "In These Times, an independent, nonprofit magazine, is dedicated to advancing democracy and economic justice, informing movements for a more humane world, and providing an accessible forum for debate about the policies that shape our future.",
+      "followers": {
+        "facebook": 139300,
+        "twitter": 58500
+      },
+      "image_url": "https://i1.feedspot.com/3423355.jpg?t=1628831958"
+    },
+    {
+      "title": "Shadowproof",
+      "feed_url": "https://shadowproof.com/feed/",
+      "website_url": "https://shadowproof.com/",
+      "description": "Shadowproof is committed to elevating voices from marginalized communities, as well as dissenting perspectives which deserve greater attention. It covers articles that are dedicated to exposing abuses of power in business and government.",
+      "followers": {
+        "facebook": 7300,
+        "twitter": 17200
+      },
+      "image_url": "https://i1.feedspot.com/4422622.jpg?t=1614250425"
+    },
+    {
+      "title": "The Constitution Unit Blog \u00bb Liberal Democrats",
+      "feed_url": "https://constitution-unit.com/tag/liberal-democrats/feed/",
+      "website_url": "https://constitution-unit.com/tag/liberal-democrats/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5760353.jpg?t=1706014500"
+    },
+    {
+      "title": "ALLRIOT Blog",
+      "feed_url": "https://allriot.com/feed",
+      "website_url": "https://allriot.com/blog",
+      "description": "This ALLRIOT political blog provides a behind-the-scenes insight into the collective mind of ALLRIOT: the street art that inspires them, the protests they are passionate about, the progressive causes they support, the political t-shirts they can't get enough of, and the concepts and ideas that never made it into a graphic print but are instead expressed in a random stream of their collective consciousness.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 31800,
+        "instagram": 8100
+      },
+      "image_url": "https://i1.feedspot.com/5673713.jpg?t=1695033802"
+    },
+    {
+      "title": "Liberal Party of Canada Blog",
+      "feed_url": "https://liberal.ca/category/blog/feed/",
+      "website_url": "https://liberal.ca/category/blog/",
+      "description": "Discover articles about the Liberal Party of Canada and learn more about their vision for real change in Canada.",
+      "followers": {
+        "facebook": 484600,
+        "twitter": 420000,
+        "instagram": 182200
+      },
+      "image_url": "https://i1.feedspot.com/4535400.jpg?t=1611992063"
+    },
+    {
+      "title": "The Liberal Advocate",
+      "feed_url": "https://liberaladvocate.com/feed/",
+      "website_url": "https://www.liberaladvocate.com/",
+      "description": "Covers liberal news from experts, political news and analysis, articles related to liberals, democrats, republicans, Congress and the White House.",
+      "followers": {
+        "facebook": 50,
+        "twitter": 227
+      },
+      "image_url": "https://i1.feedspot.com/4701819.jpg?t=1614250450"
+    },
+    {
+      "title": "Politic-ed",
+      "feed_url": "https://politic-ed.com/feed/",
+      "website_url": "https://politic-ed.com/",
+      "description": "Focused on reporting on politics from all over the world. Whether from France, the US, South Africa or Australia. Politic-Ed is where professors, CEOs and the average Joe come to exchange political views and opinions, and report breaking news and explain policy in depth.",
+      "followers": {
+        "twitter": 22
+      },
+      "image_url": "https://i1.feedspot.com/5070362.jpg?t=1681798211"
+    },
+    {
+      "title": "Future901 Blog",
+      "feed_url": "https://future901.com/blog?format=rss",
+      "website_url": "https://future901.com/blog",
+      "description": "Future 901 is committed to supporting candidates who strive to foster the inclusive growth of West Tennessee into a thriving community that embraces and uplifts all its residents.The blog covers topics related to political updates, news, campaigns, monthly Policy Analysis, social issues and more related topics.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 2200,
+        "instagram": 628
+      },
+      "image_url": "https://i1.feedspot.com/5673708.jpg?t=1695034254"
+    },
+    {
+      "title": "TakeAction MN",
+      "feed_url": "https://takeactionminnesota.org/feed/",
+      "website_url": "https://takeactionminnesota.org/category/our-take/",
+      "description": "TakeAction Minnesota is a people's network that brings democracy alive in the state and communities. Their mission is to unite the power of diverse individuals, communities, and organizations in active grassroots democracy that builds social, racial, and economic justice.",
+      "followers": {
+        "facebook": 17100,
+        "twitter": 13000,
+        "instagram": 9800
+      },
+      "image_url": "https://i1.feedspot.com/5315658.jpg?t=1629960590"
+    },
+    {
+      "title": "Richmond Progressive Alliance",
+      "feed_url": "https://www.richmondprogressivealliance.net/issues.rss",
+      "website_url": "https://www.richmondprogressivealliance.net/issues",
+      "description": "The RPA has this explicit goal: to take political decision-making back from corporations and put power in the hands of the people. The RPA mobilizes people in support of progressive policies and candidates, often in alliance with other local groups. They feature current political issues, community views, election campaigns, feature stories, latest news and updates.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 1100,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5673717.jpg?t=1695034075"
+    },
+    {
+      "title": "New Era Colorado",
+      "feed_url": "https://neweracolorado.org/news/feed/",
+      "website_url": "https://neweracolorado.org/news/",
+      "description": "Not left, not right, but forwardNew Era is the leading voice for young people in Colorado politics and one of the most effective youth civic engagement organizations in the country. They work alongside their peers to grow their generation's power. They fight for a better Colorado for everyone, not just for a privileged few. Since day one, New Era has set out to bring our progressive and diverse generation into the political world not to get in line and stick with the status but to take charge and reshape democracy to work better for everyone.",
+      "followers": {
+        "facebook": 22400,
+        "twitter": 4800,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5673707.jpg?t=1695033767"
+    },
+    {
+      "title": "Bay Rising Action",
+      "feed_url": "https://bayrisingaction.org/feed/",
+      "website_url": "https://bayrisingaction.org/news/",
+      "description": "Bay Rising Action builds the power of Bay Area communities of color by working with grassroots organizations & leaders with strong local roots. Paid for by Bay Rising Action. The news section features topics such as voting rights, public views, political interviews, feature stories, community control, and political opinion pieces.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 2700,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5673722.jpg?t=1695033864"
+    },
+    {
+      "title": "The Lone Liberal Republican Blog",
+      "feed_url": "https://www.theloneliberalrepublican.org/blog?format=rss",
+      "website_url": "https://www.theloneliberalrepublican.org/blog",
+      "description": "Arthur Winter, a lawyer based in Evanston, Illinois and Bangkok, Thailand, is the creator of this website on why the resurrection of Liberal Republicanism is important and what its policies might look like. The purpose of this website is to introduce young Americans and reintroduce older Americans, to a branch of the Republican Party that played an instrumental role in America's success and post entries about books and articles of interest to those who are keen to alter the conversation, both in government and the media.",
+      "followers": {
+        "facebook": 10200,
+        "twitter": 104
+      },
+      "image_url": "https://i1.feedspot.com/5544014.jpg?t=1681798897"
+    },
+    {
+      "title": "Democratic Socialists of America",
+      "feed_url": "https://www.dsausa.org/democratic-left/feed/",
+      "website_url": "https://www.dsausa.org/democratic-left/",
+      "description": "Working towards a better future for all.",
+      "followers": {
+        "facebook": 207600,
+        "twitter": 340300,
+        "instagram": 198800
+      },
+      "image_url": "https://i1.feedspot.com/5760363.jpg?t=1706013803"
+    },
+    {
+      "title": "NewsHounds",
+      "feed_url": "https://www.newshounds.us/home.rss",
+      "website_url": "https://www.newshounds.us/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/298787.jpg?t=1706081523"
+    },
+    {
+      "title": "Baby Boomer Resistance",
+      "feed_url": "https://babyboomerresistance.home.blog/feed/",
+      "website_url": "https://babyboomerresistance.com/",
+      "description": "We cover commentary on policies that Democrats oppose, strategies and solutions suggested to constructively resist Trump and his authoritarianism, written by a psychotherapist with decades of experience. Baby Boomer Resistance Blog is staunchly Anti-Trump Administration.",
+      "followers": {
+        "twitter": 62
+      },
+      "image_url": "https://i1.feedspot.com/5038715.jpg?t=1622037426"
+    },
+    {
+      "title": "Lean to the Left Blog",
+      "feed_url": "https://leantotheleft.net/feed/",
+      "website_url": "https://leantotheleft.net/blogs/",
+      "description": "Lean to the Left provides liberal political commentary about important developments involving Republicans and Democrats in power, and supports efforts to resist those who would subvert democracy and impede freedom of the press. We also present the Lean to the Left podcast and videos, with newsmaker interviews and progressive commentary. Originally launched in early 2017 as Not Fake News, the Lean to the Left blog's initial mission was to call out Donald Trump for his lies, especially regarding the news media.",
+      "followers": {
+        "twitter": 885
+      },
+      "image_url": "https://i1.feedspot.com/5544012.jpg?t=1681798834"
+    },
+    {
+      "title": "Angry Bear \u00bb Politics",
+      "feed_url": "https://angrybearblog.com/category/politics/feed",
+      "website_url": "https://naacp.org/news",
+      "description": "Relevant and even prescient commentary on news, politics and the economy.",
+      "followers": {
+        "facebook": 272,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5760954.jpg?t=1706091409"
+    },
+    {
+      "title": "HuffPost \u00bb Politics",
+      "feed_url": "https://www.huffpost.com/section/politics/feed",
+      "website_url": "https://www.huffpost.com/news/politics",
+      "description": "Follow American politics, keep up with the hottest political debates, and share your thoughts and opinions on the political news that matters to you. At HuffPost, we report with empathy and put people at the heart of every story. We take a people-first approach in everything we report - be it news and politics or lifestyle and entertainment - and we cover real stories about real life.",
+      "followers": {
+        "facebook": 2000000,
+        "twitter": 1400000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/12575.jpg?t=1618462473"
+    },
+    {
+      "title": "MSNBC",
+      "feed_url": "https://www.msnbc.com/feeds/latest",
+      "website_url": "https://www.msnbc.com/",
+      "description": "Breaking news and in-depth analysis of the headlines, as well as commentary and informed perspectives from The Rachel Maddow Show, Morning Joe & more.",
+      "followers": {
+        "facebook": 4000000
+      },
+      "image_url": "https://i1.feedspot.com/5185694.jpg?t=1705925380"
+    },
+    {
+      "title": "Progressive Turnout Project Blog",
+      "feed_url": "https://turnoutpac.org/feed/",
+      "website_url": "https://turnoutpac.org/blog/",
+      "description": "Progressive Turnout Project is the largest voter contact organization in the country, specifically dedicated to mobilizing the Democratic Party and defending democracy.The progressive Turnout Project is built around this truth, proven time and time again by researchers including them. On average, their fieldwork boosts voter turnout by more than 10 percent.Learn more about them, their past political projects, fieldwork tactics, and more through their informative blog.",
+      "followers": {
+        "facebook": 164800,
+        "twitter": 11100
+      },
+      "image_url": "https://i1.feedspot.com/5673709.jpg?t=1695033777"
+    },
+    {
+      "title": "People For the American Way",
+      "feed_url": "https://www.peoplefor.org/latest",
+      "website_url": "https://www.peoplefor.org/latest",
+      "description": "PFAW fights right-wing extremism and fights to build a democratic society that implements the ideals of freedom, equality, opportunity and justice for all.",
+      "followers": {
+        "facebook": 69900,
+        "twitter": 38800
+      },
+      "image_url": "https://i1.feedspot.com/5760364.jpg?t=1706013808"
+    },
+    {
+      "title": "UNDER NEWS",
+      "feed_url": "https://prorevnews.blogspot.com/feeds/posts/default",
+      "website_url": "https://prorevnews.blogspot.com/",
+      "description": "Explore online report of the Progressive Review. Since 1964, the news while there's still time to do something about it. The Review is edited by Sam Smith, who covered Washington under nine presidents, has edited the Progressive Review and its predecessors since 1964, wrote four books, been published in five anthologies, helped to start five organizations (including the DC Humanities Council and the DC Statehood Party), was a plaintiff in three successful class action suits, served as a Coast Guard officer, and played in jazz bands for four decades.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5544107.jpg?t=1681800316"
+    },
+    {
+      "title": "Digby's Hullabaloo",
+      "feed_url": "https://digbysblog.net/feed/",
+      "website_url": "https://digbysblog.net/",
+      "description": "Digby aka Heather Parton is an Old school blogger, columnist for Salon.com, and winner of the Hillman Prize for opinion journalism. Tom Sullivan, Dennis Hartley, Spocko, and Tristero contribute to this blog. The blog features articles on political news, events, updates, campaigns, political issues, politicians' life news, and more related subjects.",
+      "followers": {
+        "twitter": 58800,
+        "instagram": 21500
+      },
+      "image_url": "https://i1.feedspot.com/5361034.jpg?t=1678881334"
+    },
+    {
+      "title": "Texas Signal",
+      "feed_url": "https://texassignal.com/feed/",
+      "website_url": "https://texassignal.com/",
+      "description": "Texas Signal is a progressive news and media company dedicated to providing Texans with the news and opinion coverage they need while never compromising on the facts. Get stories about politics, policy, and culture in Texas.",
+      "followers": {
+        "facebook": 25800,
+        "twitter": 6700,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5521678.jpg?t=1678961785"
+    },
+    {
+      "title": "FAIR",
+      "feed_url": "https://fair.org/feed/",
+      "website_url": "https://fair.org/",
+      "description": "FAIR is the national progressive media watchdog group, challenging corporate media bias, spin and misinformation.",
+      "followers": {
+        "twitter": 48300
+      },
+      "image_url": "https://i1.feedspot.com/4826991.jpg?t=1603890523"
+    },
+    {
+      "title": "Eclectablog",
+      "feed_url": "https://www.eclectablog.com/feed/podcast",
+      "website_url": "https://www.eclectablog.com/",
+      "description": "Eclectablog is a platform that offers insights into various topics, including environmental issues, disability issues, gun violence, and more. It features posts from different contributors who are all paid for their work. The Eclectablog is known for its independent voice in holding elected officials accountable, which is increasingly critical in today's political climate. It also shares personal stories and experiences.",
+      "followers": {
+        "twitter": 19700
+      },
+      "image_url": "https://i1.feedspot.com/5673719.jpg?t=1695033843"
+    },
+    {
+      "title": "Current Affairs",
+      "feed_url": "https://www.currentaffairs.org//feed",
+      "website_url": "https://www.currentaffairs.org/",
+      "description": "Current Affairs was launched by roommates Oren Nimni and Nathan J. Robinson via a Kickstarter campaign in 2015, which promised 'a new print magazine of political analysis, satire, and entertainment' that would 'bring wit, color, and verve back to print media!'.",
+      "followers": {
+        "facebook": 164200,
+        "twitter": 166800,
+        "instagram": 7700
+      },
+      "image_url": "https://i1.feedspot.com/5760350.jpg?t=1706013729"
+    },
+    {
+      "title": "AMERICAblog",
+      "feed_url": "https://americablog.com/feed",
+      "website_url": "https://americablog.com/",
+      "description": "Focuses on American and world politics from a progressive perspective, with a particular focus on civil rights. AMERICAblog is one of America's top political sites for news and commentary.",
+      "followers": {
+        "facebook": 12700,
+        "twitter": 17300
+      },
+      "image_url": "https://i1.feedspot.com/4532942.jpg?t=1614250435"
+    },
+    {
+      "title": "Xplicit News",
+      "feed_url": "http://www.xplicitnews.org/feed/",
+      "website_url": "http://www.xplicitnews.org/",
+      "description": "Covers news about recent events, law and order, national announcements, ethnic affairs, economy, government services and more. Xplicit News is an educational nonprofit news media outlet, whose mission is to educate the public through concise insights and accurate, factual analysis of events that impact our constitutional, democratic republic.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4997783.jpg?t=1614250949"
+    },
+    {
+      "title": "Status Coup",
+      "feed_url": "https://statuscoup.com/feed/",
+      "website_url": "https://statuscoup.com/news/",
+      "description": "Giving the microphone back to the people",
+      "followers": {
+        "facebook": 24900,
+        "twitter": 77000,
+        "instagram": 81800
+      },
+      "image_url": "https://i1.feedspot.com/5760943.jpg?t=1706091358"
+    },
+    {
+      "title": "AP News \u00bb Politics",
+      "feed_url": "https://apnews.com/politics.rss",
+      "website_url": "https://apnews.com/politics",
+      "description": "The Associated Press, founded in 1846, stands as an independent global news organization committed to factual reporting. Renowned for its fast, accurate, and unbiased news across all formats, AP remains the essential provider of vital technology and services to the news industry. With its journalism reaching over half the world's population daily, AP News ensures readers stay updated on breaking political news and the latest in US politics.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 15800000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/5760362.jpg?t=1706013799"
+    },
+    {
+      "title": "Commonweal Magazine \u00bb Politics",
+      "feed_url": "https://www.commonwealmagazine.org/taxonomy/term/24/all/feed",
+      "website_url": "https://www.commonwealmagazine.org/politics",
+      "followers": {
+        "facebook": 17600,
+        "twitter": 23000
+      },
+      "image_url": "https://i1.feedspot.com/4169051.jpg?t=1706082461"
+    },
+    {
+      "title": "Pennsylvania Democratic Party Blog",
+      "feed_url": "https://www.padems.com/feed/",
+      "website_url": "https://www.wonkette.com/",
+      "description": "Electing Democrats & Organizing Voters across Pennsylvania",
+      "followers": {
+        "facebook": 54600,
+        "twitter": 32100,
+        "instagram": 20000
+      },
+      "image_url": "https://i1.feedspot.com/5760942.jpg?t=1706091351"
+    },
+    {
+      "title": "Wonkette",
+      "feed_url": "https://www.wonkette.com/feeds/feed.rss",
+      "website_url": "https://www.wonkette.com/",
+      "description": "Wonkette is woman-owned and truly independent; we have no VC funding, no grants. Get the latest news from politics unbiased, hilarious and vulgar.",
+      "followers": {
+        "facebook": 90700,
+        "twitter": 10100,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5350715.jpg?t=1681798972"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "category": "Sake",
+  "source_url": "https://rss.feedspot.com/sake_rss_feeds",
+  "feeds": [
+    {
+      "title": "Umami Mart Blog",
+      "feed_url": "https://umamimart.com/blogs/main.atom",
+      "website_url": "https://umamimart.com/blogs/main",
+      "description": "We strive to bring joy through quality products from Japan. We are an independently-owned small business, headquartered in Oakland, CA since 2012. Our shop is a space to discover something new about Japanese cuisine and culture through its kitchen tools, barware, and drinks; while the blog is a space to share recipes and knowledge. We love exploring new ideas through design, conversation, and community.",
+      "followers": {
+        "facebook": 3900,
+        "instagram": 20800
+      },
+      "image_url": "https://i1.feedspot.com/5406670.jpg?t=1654595324"
+    },
+    {
+      "title": "Sakemaru Blog",
+      "feed_url": "https://tw.sakemaru.me/blogs/%E9%83%A8%E8%90%BD%E6%A0%BC.atom",
+      "website_url": "https://tw.sakemaru.me/blogs/%E9%83%A8%E8%90%BD%E6%A0%BC",
+      "description": "Knowledge will make you love sake more. Let's learn the deep sake world together! Sakemaru is Singapore's first artisan sak\u00e9 subscription and online store that promises to bring you the best hidden artisanal sak\u00e9 direct from Japan to your doorstep in Singapore.",
+      "followers": {
+        "facebook": 8400,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5406669.jpg?t=1654595997"
+    },
+    {
+      "title": "Sorakami's Blog",
+      "feed_url": "https://sorakami.co.uk/blogs/sake-blog.atom",
+      "website_url": "https://sorakami.co.uk/blogs/sake-blog",
+      "description": "Discover A new delicious sake monthly or bi-monthly, hand-picked with love by our team. My name is Robin Sola and I'm the founder of Sorakami. Growing up in France, I had a terribly biased and false conception of what sake was. I had my sake epiphany during my five years in Japan. I then became a certified sake sommelier and embarked on a mission to change the way people perceive and drink sake in the UK!",
+      "followers": {
+        "facebook": 448,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5406671.jpg?t=1654593930"
+    },
+    {
+      "title": "Sugidama Blog",
+      "feed_url": "https://www.sugidama.co.uk/feed/",
+      "website_url": "https://www.sugidama.co.uk/blog/",
+      "description": "Alex is a London-based sake blogger, podcaster, IWC Sake judge and sake advocate. He is a publisher of the Sugidama Blog website and a host of the Sugidama Podcast. Alex has an International Kikisake-shi (Sake Specialist) qualification from SSI (Sake Service Institute). He sees his mission as expanding the awareness of Japanese sake among as many people as possible and helping the growing community of sake lovers to bring together beautiful Japanese sake and non-Japanese food as a way to build a better understanding between our cultures.",
+      "followers": {
+        "facebook": 181,
+        "twitter": 264
+      },
+      "image_url": "https://i1.feedspot.com/5406674.jpg?t=1654324361"
+    },
+    {
+      "title": "Kurashu Blog",
+      "feed_url": "https://www.kurashu.jp/blogs/sake.atom",
+      "website_url": "https://www.kurashu.jp/blogs/sake",
+      "description": "Kurashu helps to demystify Japanese sake. We have prepared informative stories and background about the Kurashu sake breweries from all over Japan. To learn more about the national drink sake we have compiled also other sake facts and articles about sake. Read more in our blog.",
+      "followers": {
+        "facebook": 242,
+        "instagram": 496
+      },
+      "image_url": "https://i1.feedspot.com/5406672.jpg?t=1654594806"
+    },
+    {
+      "title": "Jijisake Blog",
+      "feed_url": "https://www.jijisake.com/blog-feed.xml",
+      "website_url": "https://www.jijisake.com/blog",
+      "description": "Explore Sake reviews and articles about your favourite drink. Jiji is a Sake Sommelier and SSA Sake Educator from Italy. She created a series of events to combine Italian & Japanese food cultures focusing on sake",
+      "followers": {
+        "facebook": 489,
+        "twitter": 91,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5406673.jpg?t=1654594167"
+    },
+    {
+      "title": "Tippsy Sake Blog",
+      "feed_url": "https://www.tippsysake.com/blogs/post.atom",
+      "website_url": "https://www.tippsysake.com/blogs/post",
+      "description": "Team of Tippsy's writers contributes to bringing unique content around Japanese sake, food culture and trend. At Tippsy, our mission is to make sake simple and fun. By designing the platform for you to easily find your favorite brand and streamlining logistics so you can drink the freshest sake shipped from the West Coast where most sake arrives from Japan, we want you to re-evaluate your experience with sake and re-discover the flavors that you thought you knew.",
+      "followers": {
+        "facebook": 7300,
+        "twitter": 1700,
+        "instagram": 28400
+      },
+      "image_url": "https://i1.feedspot.com/5406675.jpg?t=1654324365"
+    }
+  ]
+}

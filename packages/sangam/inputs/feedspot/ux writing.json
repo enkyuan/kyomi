@@ -1,0 +1,58 @@
+{
+  "category": "UX Writing",
+  "source_url": "https://rss.feedspot.com/ux_writing_rss_feeds",
+  "feeds": [
+    {
+      "title": "UX Writing Hub Blog",
+      "feed_url": "https://uxwritinghub.com/blog/feed/",
+      "website_url": "https://uxwritinghub.com/blog/",
+      "description": "Keep up with the latest developments in the evolving industry of UX writing. UX Writing hub is the official one stop shop for online UX writing resources, providing in-depth education, articles, workshops, courses, product team training and more for UX writers and product teams from all over the world.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 2500,
+        "instagram": 8200
+      },
+      "image_url": "https://i1.feedspot.com/5305806.jpg?t=1627450120"
+    },
+    {
+      "title": "UX Content Blog",
+      "feed_url": "https://uxcontent.com/feed/",
+      "website_url": "https://uxcontent.com/blog/",
+      "description": "Get the latest updates on user experience content, craft, and community from working UX writers and content designers in the field. We are the global leader in UX content design training, online courses, workshops, jobs, and coaching.",
+      "followers": {
+        "twitter": 4300,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5504861.jpg?t=1675774928"
+    },
+    {
+      "title": "UX Writer Conference",
+      "feed_url": "https://uxwriterconference.com/feed/",
+      "website_url": "https://uxwriterconference.com/",
+      "description": "The event is specifically for writers in the user experience field. I'm Joe Welinske, the producer of the UX Writer Conference. My organization, Welinske & Associates, has been involved in conferences for writers in the tech industry since 1991.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5306262.jpg?t=1627543092"
+    },
+    {
+      "title": "UX Writing Home Blog",
+      "feed_url": "https://uxwritinghome.com/blog/feed/",
+      "website_url": "https://uxwritinghome.com/blog/",
+      "description": "Discover more about the career of a UX Writer and read articles on UX Design and UX Writing. We are an Iranian group business that operates and introduces itself on digital communication platforms. Our most important tools are words and any textual, visual and audio content that we publish with the help of words and based on the science, experience and idea of UAX Writing.",
+      "followers": {
+        "twitter": 262
+      },
+      "image_url": "https://i1.feedspot.com/5504862.jpg?t=1675774933"
+    },
+    {
+      "title": "UX Content Blog",
+      "feed_url": "https://uxcontent.com/feed/",
+      "website_url": "https://uxcontent.com/blog/",
+      "description": "Read the latest on user experience content, craft, and community from working UX writers and content designers in the field.We bring over 50 years of cumulative industry experience to life through online courses and training to arm future generations of UX writers, content strategists, and conversation designers with the knowledge they need to succeed.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 33
+      },
+      "image_url": "https://i1.feedspot.com/5305935.jpg?t=1627453427"
+    }
+  ]
+}

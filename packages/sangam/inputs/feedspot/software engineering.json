@@ -1,0 +1,585 @@
+{
+  "category": "Software Engineering",
+  "source_url": "https://rss.feedspot.com/software_engineering_rss_feeds",
+  "feeds": [
+    {
+      "title": "Martin Fowler",
+      "feed_url": "https://martinfowler.com/feed.atom",
+      "website_url": "https://martinfowler.com/",
+      "description": "A website on building software effectively that covers a wide range of topics such as agile software development, software architecture, testing, microservices, and refactoring. Authored by Martin Fowler.",
+      "followers": {
+        "facebook": 20200,
+        "twitter": 349200
+      },
+      "image_url": "https://i1.feedspot.com/4675913.jpg?t=1640263792"
+    },
+    {
+      "title": "Scott Berkun Blog",
+      "feed_url": "https://scottberkun.com/feed/",
+      "website_url": "https://scottberkun.com/blog/",
+      "description": "Scott Berkun is a bestselling author and popular speaker on UX design, innovation, leading teams, public speaking, and other subjects. Popular topics on his blog include creativity, writing well, managing, and public speaking.",
+      "followers": {
+        "twitter": 28800
+      },
+      "image_url": "https://i1.feedspot.com/2245476.jpg?t=1662525281"
+    },
+    {
+      "title": "Airbnb Engineering",
+      "feed_url": "https://medium.com/feed/airbnb-engineering",
+      "website_url": "https://medium.com/airbnb-engineering",
+      "description": "Creative engineers and data scientists building a world where you can belong anywhere. Key topics covered are data, AI & ML, mobile, web, infrastructure, and open source. Airbnb is built around the idea that everyone should be able to take the perfect trip, including where they stay, what they do, and who they meet.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 54800
+      },
+      "image_url": "https://i1.feedspot.com/4641022.jpg?t=1640264142"
+    },
+    {
+      "title": "Pinterest Engineering",
+      "feed_url": "https://medium.com/feed/pinterest-engineering",
+      "website_url": "https://medium.com/pinterest-engineering",
+      "description": "Inventive engineers building the first visual discovery engine with 300 billion ideas and counting. Pinterest is a visual discovery engine for finding ideas like recipes, home and style inspiration, and more.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 14000,
+        "instagram": 31500
+      },
+      "image_url": "https://i1.feedspot.com/5288869.jpg?t=1640263540"
+    },
+    {
+      "title": "Toptal Blog",
+      "feed_url": "https://www.toptal.com/blog.rss",
+      "website_url": "https://www.toptal.com/blog",
+      "description": "The Toptal Blog is the top hub for software engineers, designers, project managers, and entrepreneurs, featuring in-depth coverage of platforms and technologies, comprehensive tutorials by professional Toptal talent, and resources to help ambitious freelancers stay on the cutting edge.",
+      "followers": {
+        "facebook": 370700,
+        "twitter": 201,
+        "instagram": 41400
+      },
+      "image_url": "https://i1.feedspot.com/4423070.jpg?t=1640257420"
+    },
+    {
+      "title": "Meta Engineering",
+      "feed_url": "https://engineering.fb.com/feed/",
+      "website_url": "https://engineering.fb.com/",
+      "description": "Stay up-to-date with the latest open source project releases from Facebook, news about Infrastructure Systems, Open Source, Connectivity, Data Center Engineering, and Developer Tools. Meta is helping build a future where people have more ways to play and connect in the metaverse.",
+      "followers": {
+        "facebook": 92000000,
+        "twitter": 13900000,
+        "instagram": 5000000
+      },
+      "image_url": "https://i1.feedspot.com/4278042.jpg?t=1659956163"
+    },
+    {
+      "title": "Netflix Tech Blog",
+      "feed_url": "https://netflixtechblog.com/feed",
+      "website_url": "https://netflixtechblog.com/",
+      "description": "Learn about Netflix's world-class engineering efforts, company culture, product developments, and more. Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more, on thousands of internet-connected devices.",
+      "followers": {
+        "twitter": 57100
+      },
+      "image_url": "https://i1.feedspot.com/5272150.jpg?t=1715095610"
+    },
+    {
+      "title": "Slack Engineering",
+      "feed_url": "https://slack.engineering/feed/",
+      "website_url": "https://slack.engineering/",
+      "description": "Read stories about collaboration, the future at Slack from Slack Engineering blog. Slack is the collaboration hub that brings the right people together with all the right information and tools to get work done.",
+      "followers": {
+        "facebook": 139200,
+        "twitter": 461300,
+        "instagram": 97400
+      },
+      "image_url": "https://i1.feedspot.com/4641015.jpg?t=1640262751"
+    },
+    {
+      "title": "Software Engineering Daily",
+      "feed_url": "https://softwareengineeringdaily.com/feed/",
+      "website_url": "https://softwareengineeringdaily.com/",
+      "description": "The world through the lens of software. Interviews and content about software engineering.",
+      "followers": {
+        "facebook": 9100,
+        "twitter": 23600
+      },
+      "image_url": "https://i1.feedspot.com/4537208.jpg?t=1614316991"
+    },
+    {
+      "title": "DZone",
+      "feed_url": "https://feeds.dzone.com/home",
+      "website_url": "https://dzone.com/",
+      "description": "Covers articles on agile, AI, big data, cloud, database, devops, integration, IoT, java, microservices, open source, performance, ssecurity and web dev. DZone serves technology professionals with the knowledge, tools, and strategies they need to build the future.",
+      "followers": {
+        "facebook": 49500,
+        "twitter": 74000
+      },
+      "image_url": "https://i1.feedspot.com/4366858.jpg?t=1657173955"
+    },
+    {
+      "title": "Google Developers Experts",
+      "feed_url": "https://medium.com/feed/google-developer-experts",
+      "website_url": "https://medium.com/google-developer-experts",
+      "description": "Experts on various Google products talking tech including android, Kotlin, cloud, machine learning, firebase, and web technologies. Google Experts are experienced, recognized developers of Google technologies as well as outstanding professionals in product strategy, UX/UI, marketing.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 101300
+      },
+      "image_url": "https://i1.feedspot.com/4536237.jpg?t=1640264450"
+    },
+    {
+      "title": "DEV Community",
+      "feed_url": "https://dev.to/feed",
+      "website_url": "https://dev.to/",
+      "description": "DEV is a community of software developers who shares their expertise via informative blogs, with popular tags that include javascript, web dev, beginners, programming, DevOps, opensource, and productivity.",
+      "followers": {
+        "facebook": 147300,
+        "twitter": 308400,
+        "instagram": 45900
+      },
+      "image_url": "https://i1.feedspot.com/4612936.jpg?t=1640262085"
+    },
+    {
+      "title": "Carnegie Mellon University's Software Engineering Institute Blog",
+      "feed_url": "https://insights.sei.cmu.edu/blog/feeds/latest/rss/",
+      "website_url": "https://insights.sei.cmu.edu/blog/",
+      "description": "SEI Insights contains blog posts that cover Software Engineering, Vulnerability Analysis, Insider Threat, Development Operations, and our architecture technology user network. It is a federally funded research and development center (FFRDC) conducting research in a variety of software engineering practices.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 74
+      },
+      "image_url": "https://i1.feedspot.com/4507289.jpg?t=1640260092"
+    },
+    {
+      "title": "Mountain Goat Software Blog",
+      "feed_url": "https://www.mountaingoatsoftware.com/blog/rss",
+      "website_url": "https://www.mountaingoatsoftware.com/blog",
+      "description": "Mike Cohn provides certified ScrumMaster training and agile training to build extremely high-performance development organizations. Learn agile and Scrum tips and techniques from expert ScrumMaster, educator, and author Mike Cohn of Mountain Goat Software.",
+      "followers": {
+        "facebook": 13000,
+        "twitter": 59600
+      },
+      "image_url": "https://i1.feedspot.com/72554.jpg?t=1611063989"
+    },
+    {
+      "title": "Stack Overflow",
+      "feed_url": "https://stackoverflow.blog/feed/",
+      "website_url": "https://stackoverflow.blog/",
+      "description": "Essays, opinions, and advice on the act of computer programming. Stack Overflow empowers the world to develop technology through collective knowledge. Stack Overflow's public platform serves 100 million people every month, making it one of the 50 most popular websites in the world.",
+      "followers": {
+        "facebook": 528800,
+        "twitter": 251500,
+        "instagram": 50900
+      },
+      "image_url": "https://i1.feedspot.com/4744989.jpg?t=1760435691"
+    },
+    {
+      "title": "Capital One Tech",
+      "feed_url": "https://medium.com/feed/capital-one-tech",
+      "website_url": "https://medium.com/capital-one-tech",
+      "description": "Observations and insights from the tech builders and influencers that drive Capital One, featuring solutions, ideas, and stories. Key topics covered are cloud, data, DevOps, mobile, machine learning, web engineering, and open-source.",
+      "followers": {
+        "facebook": 3900000,
+        "twitter": 6900,
+        "instagram": 325400
+      },
+      "image_url": "https://i1.feedspot.com/5356101.jpg?t=1640263869"
+    },
+    {
+      "title": "Hacker Noon",
+      "feed_url": "https://cdn.hackernoon.com/feed",
+      "website_url": "https://hackernoon.com/",
+      "description": "Covers a wide range of tutorials, videos, and the most recent programming news for anyone looking to advance their programming career. Hacker Noon publishes stories and expertise from 15k+ technologists and serves 3M+ curious and insightful monthly readers.",
+      "followers": {
+        "facebook": 42600,
+        "twitter": 89000,
+        "instagram": 21700
+      },
+      "image_url": "https://i1.feedspot.com/5322840.jpg?t=1640262298"
+    },
+    {
+      "title": "Software Engineering Radio",
+      "feed_url": "https://feeds.feedburner.com/se-radio",
+      "website_url": "https://se-radio.net/",
+      "description": "Software Engineering Radio is a podcast targeted at the professional software developer. The goal is to be a lasting educational resource, not a newscast. Episodes are either tutorials on a specific topic or an interview with a well-known character from the software engineering world.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/39307.jpg?t=1640259858"
+    },
+    {
+      "title": "Sabesan Sathananthan",
+      "feed_url": "https://medium.com/feed/@sabesan96",
+      "website_url": "https://sabesan96.medium.com/",
+      "description": "The blog contains hackathon ideas, programming codes, and tutorials.",
+      "followers": {
+        "twitter": 280
+      },
+      "image_url": "https://i1.feedspot.com/5272984.jpg?t=1619430101"
+    },
+    {
+      "title": "CodeBetter Blog",
+      "feed_url": "https://codebetter.in/blog/feed/",
+      "website_url": "https://codebetter.in/blog/",
+      "description": "CodeBetter is an IT training and placement institute in Indore. It has a unique teaching style that has made 100s of students get their desired IT jobs. It has helped the students to get well trained and start their IT career within a time span of 2-3 months.",
+      "followers": {
+        "facebook": 517,
+        "twitter": 77
+      },
+      "image_url": "https://i1.feedspot.com/5438247.jpg?t=1662199530"
+    },
+    {
+      "title": "Wix Engineering",
+      "feed_url": "https://medium.com/feed/wix-engineering",
+      "website_url": "https://medium.com/wix-engineering",
+      "description": "Read articles on architecture, scaling, mobile and web development, management, and more, written by our very own Wix engineers.",
+      "followers": {
+        "facebook": 6600,
+        "twitter": 10900
+      },
+      "image_url": "https://i1.feedspot.com/5438245.jpg?t=1662526251"
+    },
+    {
+      "title": "Atlassian Blog \u00bb Atlassian Engineering",
+      "feed_url": "https://www.atlassian.com/blog/atlassian-engineering/feed",
+      "website_url": "https://www.atlassian.com/blog/atlassian-engineering/",
+      "description": "Atlassian is unleashing the potential of all teams with Engineering tips, tools, and practices. From medicine and space travel to disaster response and pizza deliveries, our products help teams all over the planet advance humanity through the power of software.",
+      "followers": {
+        "facebook": 391000,
+        "twitter": 104600
+      },
+      "image_url": "https://i1.feedspot.com/5438244.jpg?t=1662529465"
+    },
+    {
+      "title": "Coursera",
+      "feed_url": "https://blog.coursera.org/feed/",
+      "website_url": "https://blog.coursera.org/",
+      "description": "Get the latest stories and product updates from Coursera, the global online learning platform where anyone, anywhere, can transform their life by accessing the world's best learning experience. Coursera provides universal access to the world's best education, partnering with top universities and organizations to offer courses online.",
+      "followers": {
+        "facebook": 2300000,
+        "twitter": 491800,
+        "instagram": 921300
+      },
+      "image_url": "https://i1.feedspot.com/5229166.jpg?t=1761137686"
+    },
+    {
+      "title": "A List Apart",
+      "feed_url": "https://alistapart.com/main/feed/",
+      "website_url": "https://alistapart.com/articles/",
+      "description": "Since 1998, A List Apart has explored the design, development, and meaning of web content, with a special focus on web standards and best practices. Its mission is to inform, provoke, challenge, lead and educate the practice and profession of web design and related specializations.",
+      "followers": {
+        "facebook": 36100,
+        "twitter": 133600
+      },
+      "image_url": "https://i1.feedspot.com/320467.jpg?t=1608799625"
+    },
+    {
+      "title": "Cat On Mat",
+      "feed_url": "https://catonmat.net/feed",
+      "website_url": "https://catonmat.net/",
+      "description": "My name is Peter and I'm a future rich person and ace programmer. I run a cross-browser testing company called Browserling and I'm a hacker-in-residence at Hackers/Founders - the world's largest startup network. The blog is about programming, hacking, software reuse, software ideas, computer security, google, and technology.",
+      "followers": {
+        "twitter": 25900
+      },
+      "image_url": "https://i1.feedspot.com/22001.jpg?t=1662525716"
+    },
+    {
+      "title": "Lyft Engineering",
+      "feed_url": "https://eng.lyft.com/feed",
+      "website_url": "https://eng.lyft.com/",
+      "description": "Stories from Lyft Engineering. Read about the data science and engineering, and more behind the rideshare app. Lyft is your friend with a car, whenever you need one.",
+      "followers": {
+        "twitter": 6600
+      },
+      "image_url": "https://i1.feedspot.com/4793839.jpg?t=1659950853"
+    },
+    {
+      "title": "Medium Engineering",
+      "feed_url": "https://medium.engineering/feed",
+      "website_url": "https://medium.engineering/",
+      "description": "Read stories from the team building Medium. This is a publication by the Medium Engineering team, where they talk about engineering values, how they use technology, and fun oddities encountered while building their product.",
+      "followers": {
+        "twitter": 16000
+      },
+      "image_url": "https://i1.feedspot.com/4888458.jpg?t=1659950725"
+    },
+    {
+      "title": "Salesforce Engineering",
+      "feed_url": "https://engineering.salesforce.com/feed/",
+      "website_url": "https://engineering.salesforce.com/",
+      "description": "Read the latest articles on the Salesforce Engineering blog and go behind the cloud with Salesforce Engineers. Salesforce engineers are builders and together we've created a platform that helps companies around the world connect with their customers and establish lasting, trusted relationships.",
+      "followers": {
+        "twitter": 18200
+      },
+      "image_url": "https://i1.feedspot.com/4956945.jpg?t=1659951374"
+    },
+    {
+      "title": "Sentry Blog",
+      "feed_url": "https://blog.sentry.io/feed.xml",
+      "website_url": "https://blog.sentry.io/",
+      "description": "Our platform helps every developer diagnose, fix, and optimize the performance of their code. With Sentry, developers around the world save time, energy, and probably a few therapy sessions.",
+      "followers": {
+        "twitter": 17500
+      },
+      "image_url": "https://i1.feedspot.com/4988503.jpg?t=1662525442"
+    },
+    {
+      "title": "Google Developers Blog",
+      "feed_url": "https://feeds.feedburner.com/GDBcode",
+      "website_url": "https://developers.googleblog.com/",
+      "description": "Blog posts on the latest news, updates, and stories from Google Developers Blog. It is your source for announcements, pro tips from product experts, and the resources to support your development efforts.",
+      "followers": {
+        "facebook": 249600,
+        "twitter": 2700000
+      },
+      "image_url": "https://i1.feedspot.com/5042524.jpg?t=1625736709"
+    },
+    {
+      "title": "O'Reilly",
+      "feed_url": "https://www.oreilly.com/radar/feed/index.xml",
+      "website_url": "https://www.oreilly.com/radar/",
+      "description": "From books to leading tech conferences to a groundbreaking online learning platform, we've focused on creating the best technical learning content for more than four decades. O'Reilly's mission is to change the world by sharing the knowledge of innovators.",
+      "followers": {
+        "facebook": 121500,
+        "twitter": 107200
+      },
+      "image_url": "https://i1.feedspot.com/5055779.jpg?t=1627634592"
+    },
+    {
+      "title": "Machine Learning Mastery Blog",
+      "feed_url": "https://feeds.feedburner.com/MachineLearningMastery",
+      "website_url": "https://machinelearningmastery.com/blog/",
+      "description": "Welcome to Machine Learning Mastery! Hi, I'm Jason Brownlee Ph.D. and I help developers like you skip years ahead. Explore my quick start guides and tutorials on machine learning and AI.",
+      "followers": {
+        "facebook": 80500,
+        "twitter": 69000
+      },
+      "image_url": "https://i1.feedspot.com/5199192.jpg?t=1662526115"
+    },
+    {
+      "title": "ByteByteGo Newsletter",
+      "feed_url": "https://blog.bytebytego.com/feed",
+      "website_url": "https://blog.bytebytego.com/",
+      "description": "Explain complex systems with simple terms, from the authors of the best-selling system design book series. Join over 1,000,000 friendly readers.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F8a5609ae-1239-4400-9491-6010a15c4d60_504x504.png"
+    },
+    {
+      "title": "Tech World With Milan Newsletter",
+      "feed_url": "https://newsletter.techworld-with-milan.com/feed",
+      "website_url": "https://newsletter.techworld-with-milan.com/",
+      "description": "Insights into a beautiful world of Software Engineering, simplified. Join his community of 300,000 readers across different mediums.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fafd6c17b-1bdf-4b80-a7cc-bd216bbe8edb_653x653.png"
+    },
+    {
+      "title": "Byte-Sized Design",
+      "feed_url": "https://bytesizeddesign.substack.com/feed",
+      "website_url": "https://bytesizeddesign.substack.com/",
+      "description": "Engineering summaries from the biggest tech companies straight to your inbox!",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F06b64927-5de1-4edc-a245-b9b486e07503_1024x1024.png"
+    },
+    {
+      "title": "Amigoscode Newsletter",
+      "feed_url": "https://blog.amigoscode.com/feed",
+      "website_url": "https://blog.amigoscode.com/",
+      "description": "Dive into the freshest insights, best practices, and bleeding-edge trends in Backend Development and DevOps.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Feff36bbe-db18-41f1-8db5-1fa9c901ec16_1080x1080.png"
+    },
+    {
+      "title": "The T-Shaped Dev",
+      "feed_url": "https://thetshaped.dev/feed",
+      "website_url": "https://thetshaped.dev/",
+      "description": "Practical tips helping you become a better software engineer. JavaScript, React, Node, Software Design, Architecture, and Career Growth.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7f66bb7c-c96f-4c71-ba2d-d561152c83a2_600x600.png"
+    },
+    {
+      "title": "Computer Science Simplified",
+      "feed_url": "https://computersciencesimplified.substack.com/feed",
+      "website_url": "https://computersciencesimplified.substack.com/",
+      "description": "Become a real software engineer who understands the principles of computer science, system design, architecture, and software engineering in general",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2ee3613b-2ea8-4de4-94d7-944a269834c9_442x442.png"
+    },
+    {
+      "title": "Register Spill",
+      "feed_url": "https://registerspill.thorstenball.com/feed",
+      "website_url": "https://registerspill.thorstenball.com/",
+      "description": "Thoughts about software engineering I can't keep in my head. Too ephemeral for blog posts, too long for social media.It's the messages I'd sent if you'd asked me what's on my mind.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff114450f-2313-48c6-a253-a1d476c21d93_1164x1164.png"
+    },
+    {
+      "title": "Dev Leader Weekly",
+      "feed_url": "https://weekly.devleader.ca/feed",
+      "website_url": "https://weekly.devleader.ca/",
+      "description": "My weekly newsletter that simplifies software engineering for you, along with C# code examples. Join thousands of software engineers from companies like Microsoft and Amazon who are already reading!",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Faee7b925-847a-411b-a8bb-86cec91a2098_1280x1280.png"
+    },
+    {
+      "title": "Better Engineers",
+      "feed_url": "https://betterengineers.substack.com/feed",
+      "website_url": "https://betterengineers.substack.com/",
+      "description": "A Programmer's Journey of Perfections Follow LinkedIn: https://www.linkedin.com/in/devd04/X : https://x.com/BetterEngineer1",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe9f6f64c-988c-4216-9573-74644d110448_500x500.png"
+    },
+    {
+      "title": "Engineer\u00e2\u0080\u0099s Codex",
+      "feed_url": "https://read.engineerscodex.com/feed",
+      "website_url": "https://read.engineerscodex.com/",
+      "description": "Real-world software engineering explained simply.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa2baa3ff-3727-4dfa-a5c0-1b6f00b16d14_1024x1024.png"
+    },
+    {
+      "title": "Joel on Software",
+      "feed_url": "https://www.joelonsoftware.com/feed/",
+      "website_url": "https://www.joelonsoftware.com/",
+      "description": "I'm your host, Joel Spolsky, responsible for just about everything on this site. This is Joel on Software, where I've been ranting about software development, management, business, and the Internet since 2000.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/77268.jpg?t=1662525187"
+    },
+    {
+      "title": "Scott Hanselman's Blog",
+      "feed_url": "http://feeds.hanselman.com/ScottHanselman",
+      "website_url": "https://www.hanselman.com/blog/",
+      "description": "Scott Hanselman writes about technology, culture, gadgets, diversity, code, the web, open-source, .NET, and the cloud.",
+      "followers": {
+        "twitter": 325000,
+        "instagram": 24200
+      },
+      "image_url": "https://i1.feedspot.com/127673.jpg?t=1640261789"
+    },
+    {
+      "title": "BBC Product & Technology",
+      "feed_url": "https://medium.com/feed/bbc-design-engineering",
+      "website_url": "https://medium.com/bbc-product-technology",
+      "description": "Blog about building the best BBC products, platforms, and services for audiences in the UK and around the world. BBC produce programs and services for audiences throughout the UK. They also produce content which can be enjoyed across the globe.",
+      "followers": {
+        "facebook": 9300000,
+        "twitter": 2200,
+        "instagram": 6300000
+      },
+      "image_url": "https://i1.feedspot.com/4888343.jpg?t=1640265011"
+    },
+    {
+      "title": "The PayPal Technology Blog",
+      "feed_url": "https://medium.com/feed/paypal-tech",
+      "website_url": "https://medium.com/paypal-tech",
+      "description": "Articles on cyber security, javascript, machine learning & AI, product management, programming, UX from PayPal Engineering team.",
+      "followers": {
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5356100.jpg?t=1640264883"
+    },
+    {
+      "title": "The Anvil Paperwork Automation Blog",
+      "feed_url": "https://www.useanvil.com/anvil-blog-rss.xml",
+      "website_url": "https://www.useanvil.com/blog/",
+      "description": "A blog for software engineers at startups covering APIs, performance, GraphQL, React, JavaScript, and infrastructure with Kubernetes. At Anvil our mission is to build software that bridges the paperwork-centric world of today with the digital and data-first world of tomorrow.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5401128.jpg?t=1652792164"
+    },
+    {
+      "title": "Joseph Maurer",
+      "feed_url": "https://medium.com/feed/@josephamaurer",
+      "website_url": "https://josephamaurer.medium.com/",
+      "description": "Beyond the lines of code and syntactical sugar endures the true complexity of being a software engineer. The bounds of technology never cease radiating out into every facet of our lives, continually innovating on everyday plights. To be a software engineer today is to be working at the junction of logic and creativity. Joseph Maureris a Game Development Software Engineer.",
+      "followers": {
+        "twitter": 70
+      },
+      "image_url": "https://i1.feedspot.com/5295099.jpg?t=1624280933"
+    },
+    {
+      "title": "David Walsh",
+      "feed_url": "https://davidwalsh.name/feed",
+      "website_url": "https://davidwalsh.name/",
+      "description": "A blog featuring tutorials about JavaScript, HTML5, AJAX, PHP, CSS, WordPress, and everything else development. David Walsh is Mozilla's senior web developer and the core developer for the MooTools Javascript Framework.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 86400
+      },
+      "image_url": "https://i1.feedspot.com/4431048.jpg?t=1606110743"
+    },
+    {
+      "title": "Instagram Engineering",
+      "feed_url": "https://instagram-engineering.com/feed",
+      "website_url": "https://instagram-engineering.com/",
+      "description": "Get the latest updates and stories from the people that build Instagram. Instagram brings you closer to the people and things you love.",
+      "followers": {
+        "facebook": 18100,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4915551.jpg?t=1620310357"
+    },
+    {
+      "title": "Curious Engineer",
+      "feed_url": "https://vivekbansal.substack.com/feed",
+      "website_url": "https://vivekbansal.substack.com/",
+      "description": "This newsletter is about learning engineering concepts from basic to advanced. I promise to write a well-researched article every week!",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2bf2e15d-29a3-437e-a170-2466eb999f35_1280x1280.png"
+    },
+    {
+      "title": "GitHub \u00bb Engineering",
+      "feed_url": "https://github.blog/engineering/feed/",
+      "website_url": "https://github.blog/engineering/",
+      "description": "See what the GitHub Engineering team is up to\u2014from building features to solving the nagging challenges teams face as they grow.",
+      "followers": {
+        "facebook": 319800,
+        "twitter": 2600000,
+        "instagram": 651400
+      },
+      "image_url": "https://i1.feedspot.com/5356099.jpg?t=1749555721"
+    },
+    {
+      "title": "Uber Blog \u00bb Engineering",
+      "feed_url": "https://www.uber.com/en-IN/blog/mumbai/engineering/rss/",
+      "website_url": "https://www.uber.com/en-IN/blog/mumbai/engineering/",
+      "description": "Uber Blog brings you the technology behind Uber Engineering on this page. Uber Technologies, Inc. is American mobility as a service provider, allowing users to book a car and a driver to transport them in a way similar to a taxi.",
+      "followers": {
+        "facebook": 22000000,
+        "twitter": 1100000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/5438246.jpg?t=1662199522"
+    },
+    {
+      "title": "Elitex",
+      "feed_url": "https://elitex.systems/blog/feed",
+      "website_url": "https://elitex.systems/blog",
+      "description": "ELITEX is a boutique IT company based in Lviv, Ukraine. Their main expertise is custom software development using JavaScript and building dedicated development teams for businesses and startups.",
+      "followers": {
+        "facebook": 632,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/5174601.jpg?t=1606111958"
+    },
+    {
+      "title": "Wolk Software Blog",
+      "feed_url": "https://www.wolksoftware.com/blog/",
+      "website_url": "https://www.wolksoftware.com/blog/",
+      "description": "A group of young and ambitious people dedicated to creating cutting-edge applications in combination with beautiful and functional design. Empowering developers and teams to be their best!",
+      "followers": {
+        "facebook": 7,
+        "twitter": 179
+      },
+      "image_url": "https://i1.feedspot.com/4537211.jpg?t=1671529879"
+    },
+    {
+      "title": "Microsoft Azure Blog",
+      "feed_url": "https://azurecomcdn.azureedge.net/en-us/blog/feed/",
+      "website_url": "https://azure.microsoft.com/en-us/blog/",
+      "description": "Get the latest Azure news, updates, and announcements from the Azure blog. From product updates to hot topics, hear from the Azure experts. The Azure cloud platform is more than 200 products and cloud services designed to help you bring new solutions to life - to solve today's challenges and create the future.",
+      "followers": {
+        "twitter": 1000000,
+        "instagram": 237200
+      },
+      "image_url": "https://i1.feedspot.com/4950599.jpg?t=1662528227"
+    }
+  ]
+}

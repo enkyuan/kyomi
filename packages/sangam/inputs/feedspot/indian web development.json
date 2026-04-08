@@ -1,0 +1,534 @@
+{
+  "category": "Indian Web Development",
+  "source_url": "https://rss.feedspot.com/indian_web_development_rss_feeds",
+  "feeds": [
+    {
+      "title": "Webkul Blog",
+      "feed_url": "https://webkul.com/blog/feed/",
+      "website_url": "https://webkul.com/blog/",
+      "description": "Articles on eCommerce, ERP, Web, Mobile, Design, Development, Strategy and Docs for OpenSource Webkul Apps and Products.Webkul is the hook for enterprise businesses and helps enterprises to upscale easily with a wider range of ready to use and highly customizable eCommerce centric products.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5098687.jpg?t=1606110707"
+    },
+    {
+      "title": "BR Softech Blog",
+      "feed_url": "https://www.brsoftech.com/blog/feed/",
+      "website_url": "https://www.brsoftech.com/blog/",
+      "description": "Blog posts on App Development, Blockchain Development, Game Development, Infographic, Startups, Technology, Web Development and more. BR Softech is one of the top web and mobile app development company in India & Globally. We Develop Custom Android Apps To Satisfy Evolving Demand Of Modern Business Era.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5035726.jpg?t=1606108200"
+    },
+    {
+      "title": "DNG",
+      "feed_url": "https://www.dngwebdeveloper.com/blog/feed/",
+      "website_url": "https://www.dngwebdeveloper.com/blog/",
+      "description": "Articles on CRM software, Digital Marketing, eCommerce Website, MLM Software, Mobile App Development, Retail management software, Software Development, Web Developer, Website Designing and WordPress. DNG is Ahmedabad Based one of the best website Developer and Software development Companies in India.",
+      "followers": {
+        "facebook": 717,
+        "twitter": 33
+      },
+      "image_url": "https://i1.feedspot.com/5121487.jpg?t=1606108613"
+    },
+    {
+      "title": "Codingvila",
+      "feed_url": "https://www.codingvila.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.codingvila.com/",
+      "description": "Codingvila provides articles on asp.net, MVC, c#, vb.net, SQL server, angular, HTML, bootstrap, javascript, jquery, web API and SEO for beginners. The main purpose of this website is to help programmers/beginner by providing articles and blogs on web and software development and also for students to provide them free final year academic projects in various technology.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5032537.jpg?t=1614340541"
+    },
+    {
+      "title": "NWSPL Blog",
+      "feed_url": "https://nwspl.in/feed/",
+      "website_url": "https://nwspl.in/blog/",
+      "description": "As a full-service digital agency, we provide solutions in social media marketing, search engine optimization (SEO), viral marketing, email marketing, brand monitoring, and promotion with paid per-click advertising on Facebook and Google Adwords, as well as complete content marketing services such as creative writing and online press release distribution integrated with cutting-edge blogging services.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5657934.jpg?t=1693204569"
+    },
+    {
+      "title": "Iqonic Design Blog",
+      "feed_url": "https://iqonic.design/feed/",
+      "website_url": "https://iqonic.design/blog/",
+      "description": "IQONIC Design, a part of Braindora Technologies FZCO, is a technology-driven Web & App Designing and Development company serving products & solutions across the globe. Iqonic is a madhouse of designers, explorers, thinkers, and tinkers who loves to build in web and mobile technologies. Read their latest thought innovation and UX insights here.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 1400,
+        "instagram": 169500
+      },
+      "image_url": "https://i1.feedspot.com/5352899.jpg?t=1683280684"
+    },
+    {
+      "title": "Indglobal Blog",
+      "feed_url": "https://indglobal.in/feed/",
+      "website_url": "https://indglobal.in/blog-page/",
+      "description": "Check out the Indglobal Blog for news on updated & latest technologies and news of web design, Software, ERP, Mobile Apps, Digital Marketing, Ecommerce, Salesforce, and more. Indglobal Digital is the Premier partner for Enterprises and Startups in Accelerating their Digital adoption and transformation.",
+      "followers": {
+        "facebook": 50900,
+        "twitter": 1500,
+        "instagram": 7700
+      },
+      "image_url": "https://i1.feedspot.com/7252529.jpg?t=1708331082"
+    },
+    {
+      "title": "Blogs On Software Testing, Development, & Devops - Devstringx",
+      "feed_url": "https://www.devstringx.com/feed",
+      "website_url": "https://www.devstringx.com/blog",
+      "description": "Devstringx Technologies opened for business in 2014. Today, Devstringx is India's most recommended IT company for software product development, mobile app development, and independent software testing services with headquarters in Noida, India. We are dedicated to empowering businesses worldwide by providing end-to-end capabilities from product ideation to completion.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 37,
+        "instagram": 694
+      },
+      "image_url": "https://i1.feedspot.com/5745362.jpg?t=1703826048"
+    },
+    {
+      "title": "Nichetechsolution Blog",
+      "feed_url": "https://www.nichetechsolutions.com/blog/feed/",
+      "website_url": "https://www.nichetechsolutions.com/blog/",
+      "description": "Stay up-to-date in the fast-paced world of web development with Nichetech Solution's comprehensive blog! Dive into the dynamic realm of coding, design, and innovation as articles unravel the latest trends, tools, and techniques shaping the digital landscape.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5723274.jpg?t=1701173502"
+    },
+    {
+      "title": "Ailoitte Blog",
+      "feed_url": "https://www.ailoitte.com/blog/feed/",
+      "website_url": "https://www.ailoitte.com/blog/",
+      "description": "Stay up-to-date with the latest IT news, software development updates, and web design trends through the Ailoitte Blog. Discover strategies and motivation to transform ideas into mobile app development. Ailoitte is a mobile app development company that has clients in more than 18 countries and submitted over 100 projects.",
+      "followers": {
+        "facebook": 475,
+        "twitter": 28,
+        "instagram": 155
+      },
+      "image_url": "https://i1.feedspot.com/7263049.jpg?t=1709112640"
+    },
+    {
+      "title": "Colour Moon Technologies Blog",
+      "feed_url": "https://blog.thecolourmoon.com/feed/",
+      "website_url": "https://blog.thecolourmoon.com/",
+      "description": "Read the most recent blogs, from India's top web and mobile app development company. In-depth, researched blogs on upcoming tech in the fields of Web development, App development, and Digital Marketing. Colour Moon is a team of skilled professionals who specialize in creating top-notch websites and apps for its clients.",
+      "followers": {
+        "facebook": 21900,
+        "twitter": 3100,
+        "instagram": 6100
+      },
+      "image_url": "https://i1.feedspot.com/5675738.jpg?t=1695290790"
+    },
+    {
+      "title": "Apptag Blog",
+      "feed_url": "https://apptagsolution.com/feed/",
+      "website_url": "https://apptagsolution.com/blog/",
+      "description": "Unlock the intricacies of website design and mobile app development in 2024. Apptag blog features a series of articles as a guidance source for optimal Mobile App Development ideas. Apptag is a team of digital marketers you can rely on, that builds trust through communication, transparency, and results.",
+      "followers": {
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/7288595.jpg?t=1712087728"
+    },
+    {
+      "title": "24rox Blog",
+      "feed_url": "https://24rox.com/feed/",
+      "website_url": "https://24rox.com/blog/",
+      "description": "At 24rox, we are dedicated to delivering exceptional results and helping your business thrive in the digital landscape. Our solutions are based on a holistic approach that involves using a variety of digital marketing strategies and tactics to reach and engage customers across multiple channels and touchpoints.",
+      "followers": {
+        "facebook": 10,
+        "instagram": 6200
+      },
+      "image_url": "https://i1.feedspot.com/5682414.jpg?t=1696324757"
+    },
+    {
+      "title": "99Graphics Design Blog",
+      "feed_url": "https://99graphicsdesign.com/feed/",
+      "website_url": "https://99graphicsdesign.com/blog/",
+      "description": "Get tips and best practices on responsive web design, design process, content management, and no-code movement. 99Graphics Design Blog gives you the inside scoop on the newest technology trends. 99Graphics Design is a full-service Web design company offering superb Website Design, Graphic Design, Email Templates, and Mobile Application Development services.",
+      "followers": {
+        "facebook": 2700,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5701788.jpg?t=1698834179"
+    },
+    {
+      "title": "Amplework Blog",
+      "feed_url": "https://www.amplework.com/blog/feed/",
+      "website_url": "https://www.amplework.com/blog/",
+      "description": "Get ready to dive deep into industry trends, uncover practical tips and tricks, and explore the latest advancements that are shaping the future of mobile apps. Amplework is your trusted mobile app development company in the USA and offers a comprehensive range of mobile app development services, and that too at competitive prices.",
+      "followers": {
+        "facebook": 497,
+        "twitter": 2,
+        "instagram": 98
+      },
+      "image_url": "https://i1.feedspot.com/7278199.jpg?t=1710929629"
+    },
+    {
+      "title": "SpotnRides Blog",
+      "feed_url": "https://www.spotnrides.com/blog/feed/",
+      "website_url": "https://www.spotnrides.com/blog/",
+      "description": "Spotnrides is designed on the lines of the famous Uber cab booking app. Ready-to-use, totally legitimate clone app with customizable source code in any language and currency for complete branding. Read the latest updates on Cab Booking Industry, Tips, Trends, and Growth Stats.",
+      "followers": {
+        "facebook": 252,
+        "twitter": 182
+      },
+      "image_url": "https://i1.feedspot.com/5644049.jpg?t=1691400585"
+    },
+    {
+      "title": "Codei5 Blog",
+      "feed_url": "https://codei5.com/feed/",
+      "website_url": "https://codei5.com/blog/",
+      "description": "Unlock career strategies in the software development realm with advice and neat guidance from Codei5's experts. Codei5 Academy is one of the best software training institutes in Coimbatore that offers comprehensive training courses for beginners and experienced learners.",
+      "followers": {
+        "facebook": 55
+      },
+      "image_url": "https://i1.feedspot.com/7288962.jpg?t=1712107329"
+    },
+    {
+      "title": "CMARIX Blog \u00bb UI/UX",
+      "feed_url": "https://www.cmarix.com/blog/category/ui-ux/feed/",
+      "website_url": "https://www.cmarix.com/blog/category/ui-ux/",
+      "description": "A Global Technology Consulting and Custom Development firm with expertise into diverse Web Development, Custom Software and Mobile Applications. Our focus is to help you envision potential, leverage technology and reach for infinite growth.",
+      "followers": {
+        "facebook": 821,
+        "twitter": 6900,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5448466.jpg?t=1663762039"
+    },
+    {
+      "title": "RG Infotech",
+      "feed_url": "https://www.rginfotech.com/feed/",
+      "website_url": "https://www.rginfotech.com/category/mobile-app-development/",
+      "description": "RG Infotech loves to share their thoughts on tech updates & news about web development, mobile application development & digital marketing. RG Infotech or Recursive Global Infotech Pvt. Ltd. was incorporated in 2007, with a mission of servicing IT services across the globe to grow online and spread beyond the geographical borders.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 88
+      },
+      "image_url": "https://i1.feedspot.com/5162576.jpg?t=1615883576"
+    },
+    {
+      "title": "Elvira",
+      "feed_url": "https://elvirainfotech.com/feed/",
+      "website_url": "https://elvirainfotech.com/blog/",
+      "description": "Learn digital marketing strategies, custom web development tips, web design, app development and many more from our blog page. Elvira Infotech is a web development company offering a range of products and services including website design, App development, SEO services & more.",
+      "followers": {
+        "facebook": 563,
+        "twitter": 12,
+        "instagram": 112
+      },
+      "image_url": "https://i1.feedspot.com/5059103.jpg?t=1606109434"
+    },
+    {
+      "title": "Ibiixo Technologies",
+      "feed_url": "https://www.ibiixo.com/feed/",
+      "website_url": "https://www.ibiixo.com/blog/",
+      "description": "Blog posts cover articles on Web development, Android application, IOS development and Technology. Ibiixo is a web development, Mobile App, and VR Development company.",
+      "followers": {
+        "facebook": 811,
+        "twitter": 1000,
+        "instagram": 926
+      },
+      "image_url": "https://i1.feedspot.com/5123147.jpg?t=1606108959"
+    },
+    {
+      "title": "Esferasoft Solutions",
+      "feed_url": "https://www.esferasoft.com/blog/feed/",
+      "website_url": "https://www.esferasoft.com/blog/",
+      "description": "We design & develop conversion-focused websites including ecommerce stores & online portals. Get the latest insights and trending updates on Web development, Artificial Intelligence, App Development and On-demand Industry businesses.",
+      "followers": {
+        "facebook": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5050041.jpg?t=1606108539"
+    },
+    {
+      "title": "Vyrazu Labs Blog",
+      "feed_url": "https://vyrazu.com/feed/",
+      "website_url": "https://vyrazu.com/blog/",
+      "description": "Keep yourself updated with trends and innovation. We provide all the best and genuine tech information. Being one of the best software application development companies, Vyrazu Labs is offering a wide range of app development services!",
+      "followers": {
+        "facebook": 976,
+        "twitter": 815
+      },
+      "image_url": "https://i1.feedspot.com/5051628.jpg?t=1606108256"
+    },
+    {
+      "title": "Clonixtech Blog",
+      "feed_url": "https://clonixtech.com/feed/",
+      "website_url": "https://clonixtech.com/blog/",
+      "description": "Clonixtech is a dynamic and innovative software company dedicated to delivering top-notch services in web development, graphic design, SEO, content writing, and more. With a team of skilled professionals, they are committed to providing tailored solutions that empower businesses to thrive in the digital landscape. Their expertise extends to creating captivating websites, optimizing online visibility, and crafting compelling content.",
+      "followers": {
+        "facebook": 70,
+        "twitter": 16
+      },
+      "image_url": "https://i1.feedspot.com/5738985.jpg?t=1702971774"
+    },
+    {
+      "title": "Dev Technosys",
+      "feed_url": "https://devtechnosys.com/insights/feed/podcast/",
+      "website_url": "https://devtechnosys.com/insights/",
+      "description": "Get the latest news and insights of web and mobile application development. Dev Technosys share handpicked stories from the Tech-world to get you in on all the innovation. Dev Technosys is a trusted website design and development company, offering web development, mobile application development service across the world.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 1200,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5737193.jpg?t=1702639081"
+    },
+    {
+      "title": "Henceforth Solutions Blog",
+      "feed_url": "https://henceforthsolutions.com/feed/",
+      "website_url": "https://henceforthsolutions.com/blog/",
+      "description": "Henceforth is a leading website and mobile application development company with clients across the globe. Dive into its blog, which unravels the complexities of digital transformation through dynamic mediums. Stay ahead of the curve with expert insights, learnings, and solutions tailored to empower your digital journey.",
+      "followers": {
+        "facebook": 522,
+        "instagram": 450
+      },
+      "image_url": "https://i1.feedspot.com/7250705.jpg?t=1707765845"
+    },
+    {
+      "title": "Premad Software Solutions Blog",
+      "feed_url": "https://premad.in/blog/feed/",
+      "website_url": "https://premad.in/blog/",
+      "description": "Premad Software Solutions delivers innovative software development and consulting services to businesses all over India and internationally. Here, you can explore top latest and trending blogs & news about software development, mobile app development, website development, HRM software, e-commerce development, and much more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5744820.jpg?t=1703765223"
+    },
+    {
+      "title": "SPK Technosoft Blog",
+      "feed_url": "https://spktechnosoft.in/feed/",
+      "website_url": "https://spktechnosoft.in/blogs/",
+      "description": "Enjoy must-read thoughts and perspectives on Web Designing & software development. Unlock the power of e-commerce with growth hacks and trend analyses. SPK TechnoSoft is a one-stop IT Services Center providing Website Development, Digital Marketing, Logo Designing, ERP Systems, Cloud Computing services.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 19,
+        "instagram": 102
+      },
+      "image_url": "https://i1.feedspot.com/5739058.jpg?t=1702975392"
+    },
+    {
+      "title": "TechMaven IT Solutions Blog",
+      "feed_url": "https://www.techmavenit.com/blog/feed/",
+      "website_url": "https://www.techmavenit.com/blog/",
+      "description": "TechMaven IT Solutions is a professional web design and mobile application development company in Cochin, India, that develops international standard websites and mobile applications for global clients. Read all recent blogs on web design, web development, Artificial Intelligence, etc with the latest trends and techniques at TechMaven IT Solutions",
+      "followers": {
+        "facebook": 191,
+        "twitter": 12
+      },
+      "image_url": "https://i1.feedspot.com/5625886.jpg?t=1689314908"
+    },
+    {
+      "title": "Go-Tech Solution Blog",
+      "feed_url": "https://go-techsolution.com/feed/",
+      "website_url": "https://go-techsolution.com/blogs/",
+      "description": "Go-Tech Solution is the leading software development company in Udaipur, renowned for its innovative solutions and exceptional services. With a dedicated team of experts, we cater to diverse client needs, providing cutting-edge software solutions that drive business growth and success.",
+      "followers": {
+        "facebook": 15,
+        "twitter": 2,
+        "instagram": 173000
+      },
+      "image_url": "https://i1.feedspot.com/5640397.jpg?t=1690875970"
+    },
+    {
+      "title": "Blogs | Braintrain Info Solutions",
+      "feed_url": "https://braintraininfosolutions.com/blog/feed/",
+      "website_url": "https://braintraininfosolutions.com/blog/",
+      "description": "With in-depth industry knowledge, we focus on growing your brand online. We deliver custom services to lift the success of your business. Focused services, result-oriented plans, and friendly staff are our strengths. Our only mission is to deliver the very latest digital marketing solutions and insights to give wings to your business and online success. We aim to define your marketing strategies, drive sales, and surpass your competition.",
+      "followers": {
+        "facebook": 279,
+        "twitter": 12,
+        "instagram": 382
+      },
+      "image_url": "https://i1.feedspot.com/7257631.jpg?t=1708519450"
+    },
+    {
+      "title": "PlutoWebs Blog",
+      "feed_url": "https://plutowebs.com/feed/",
+      "website_url": "https://plutowebs.com/blog/",
+      "description": "Discover top-notch business and corporate website design services in Bangalore that redefine your online identity via the PlutoWebs Blog. Their expert team crafts stunning websites tailored to your brand, ensuring a powerful digital presence. Transform your business with cutting-edge web design solutions optimize, captivate, and thrive.",
+      "followers": {
+        "facebook": 713,
+        "twitter": 16,
+        "instagram": 8800
+      },
+      "image_url": "https://i1.feedspot.com/5753732.jpg?t=1705061531"
+    },
+    {
+      "title": "CronJ Blog",
+      "feed_url": "https://www.cronj.com/blog/feed/",
+      "website_url": "https://www.cronj.com/blog/",
+      "description": "Explore CronJ's blog featuring tutorial guides for a variety of IT problems and talent-driven technological solutions. CronJ is a product development company that solves problems in Video analytics, IoT, Industrial Automation, Manufacturing 4.0, Smart Factory, Smart City, BlockChain, and supply chain consulting.",
+      "followers": {
+        "twitter": 123
+      },
+      "image_url": "https://i1.feedspot.com/5263506.jpg?t=1695214500"
+    },
+    {
+      "title": "MindStick Blogs \u00bb Developersection",
+      "feed_url": "https://www.mindstick.com/developersection/blog/",
+      "website_url": "https://www.mindstick.com/developersection/blog/",
+      "description": "MindStick is a software product development and programming services company in India. Blogs section consists of an invaluable series of programing blogs and tutorials for software developers, programmers and coders.",
+      "followers": {
+        "facebook": 27000,
+        "twitter": 124
+      },
+      "image_url": "https://i1.feedspot.com/5041291.jpg?t=1606108194"
+    },
+    {
+      "title": "GrayCell Tech Blog",
+      "feed_url": "https://www.graycelltech.com/blogs/",
+      "website_url": "https://www.graycelltech.com/blogs/",
+      "description": "Developing and delivering innovative Web, Mobile and Cloud based solutions to a Global clientele of Startups, SME's and Enterprises for over a decade.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4686735.jpg?t=1606108593"
+    },
+    {
+      "title": "2Hats Logic Solutions Blog",
+      "feed_url": "https://www.2hatslogic.com/blog/",
+      "website_url": "https://www.2hatslogic.com/blog/",
+      "description": "2Hats Logic Solutions was founded in 2014 as a web agency by two technology enthusiasts who decided to come back to India after living and working in Europe and Canada for a few years. The agency is focused on providing high-end solutions for complex web and mobile applications. We write about technical solutions for the roadblocks we face in everyday work and more on trends in technology. This will help some of you to tackle issues quickly and get some useful tips.",
+      "followers": {
+        "facebook": 933,
+        "twitter": 78,
+        "instagram": 785
+      },
+      "image_url": "https://i1.feedspot.com/5074386.jpg?t=1707215458"
+    },
+    {
+      "title": "Css Author Blog",
+      "feed_url": "https://cssauthor.com/feed/",
+      "website_url": "https://cssauthor.com/",
+      "description": "CSS Author is a Design and Development related blog for Web Designers and Developers. We offer free PSD Design Resources, Daily Design Inspirations, Articles, Roundups, Tutorials, and the latest Web Trends and Techniques.",
+      "followers": {
+        "facebook": 41700,
+        "twitter": 27200
+      },
+      "image_url": "https://i1.feedspot.com/2246644.jpg?t=1623936693"
+    },
+    {
+      "title": "Pyramidion Blog",
+      "feed_url": "https://www.pyramidions.com/blog/feed/",
+      "website_url": "https://www.pyramidions.com/blogs/",
+      "description": "At Pyramidion, we build digital solutions for Mobile and Web that go over and beyond just meeting the basic expectations of functionality and performance and also deliver on establishing trust, fostering collaboration, and raising the standards of innovation. Get the latest insights from the world of technology and development. We cover everything from market trends and tech stack to best practices and case stories, handcrafted by our experts.",
+      "followers": {
+        "facebook": 1200,
+        "instagram": 107
+      },
+      "image_url": "https://i1.feedspot.com/4858461.jpg?t=1684845253"
+    },
+    {
+      "title": "Control F5 Blog",
+      "feed_url": "https://www.controlf5.in/feed/",
+      "website_url": "https://www.controlf5.in/blog/",
+      "description": "Get in on the next big e-commerce trend in the Control F5 Blog. Read and enjoy articles for the online eCommerce solution, Shopify e-commerce, WordPress website, and how to improve the website speed. Established in 2012, ControlF5 is an offshore web designing that makes your online visibility more effective and useful.",
+      "followers": {
+        "facebook": 756,
+        "twitter": 259
+      },
+      "image_url": "https://i1.feedspot.com/5757894.jpg?t=1705646243"
+    },
+    {
+      "title": "Webarial",
+      "feed_url": "https://webarial.in/feed/",
+      "website_url": "https://webdigitalmediagroup.com/blog/",
+      "description": "Webarial is the latest source of creative and informative technology news, reviews, and trends. We cover a wide range of topics, from the latest gadgets and software to emerging technologies like artificial intelligence and blockchain. Through content that is accurate, insightful, and engaging, we provide readers with the best possible experience.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 319
+      },
+      "image_url": "https://i1.feedspot.com/5602835.jpg?t=1687256151"
+    },
+    {
+      "title": "Web Digital Media Group Blog",
+      "feed_url": "https://www.webdigitalmediagroup.com/feed/",
+      "website_url": "https://webdigitalmediagroup.com/blog/",
+      "description": "Web Digital Media Group is a Digital Marketing Web Agency focused on SEO, dedicated 100% to bringing new Leads to customers. Web Digital Media Group is a company that was formed in 2010. the company consists of a team of talented professionals based both in the UK and India that between them have in-depth knowledge and expertise with years of industrial experience.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 585,
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/5717209.jpg?t=1700567585"
+    },
+    {
+      "title": "X-Strategy Services Blog",
+      "feed_url": "https://xstrategyservices.com/rsslatest.xml",
+      "website_url": "https://xstrategyservices.com/blog/",
+      "description": "X-Strategy Services LLP is a next-gen global tech company encouraging start-ups and businesses to reimagine the future in an innovative way for the digital age. We are a dynamic team of analysts, developers, marketing experts, and designers who create value by solving real-world issues and having fun doing it.",
+      "followers": {
+        "facebook": 716,
+        "instagram": 125
+      },
+      "image_url": "https://i1.feedspot.com/5625893.jpg?t=1689314946"
+    },
+    {
+      "title": "WisdmLabs Blog",
+      "feed_url": "https://wisdmlabs.com/feed/",
+      "website_url": "https://wisdmlabs.com/blog/",
+      "description": "WordPress Development Experts, Custom Plugin Solutions, Magento Ecommerce Solutions, User Experience Design and more. Keep up with the experience of the WordPress Developers, which make for some awesome tips and tricks, and WordPress-based solutions.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5186623.jpg?t=1606108039"
+    },
+    {
+      "title": "Algoworks Blog",
+      "feed_url": "http://algoworks.com/feed",
+      "website_url": "https://www.algoworks.com/blog/",
+      "description": "Get Experts Opinion for all of leading technologies we serve making this page the best reservoir for technical knowledge. Algoworks is a technology company providing end-to-end product development services globally. Leveraging our DevOps expertise, we deploy robust automated solutions that address challenges around speed and agility.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 4900,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4959452.jpg?t=1670411972"
+    },
+    {
+      "title": "Silicon IT Hub Blog",
+      "feed_url": "https://www.siliconithub.com/feed/?",
+      "website_url": "https://www.siliconithub.com/blog/",
+      "description": "Explore the tech blog for guides and insights on developing the next big thing in mobile and web development. Silicon IT Hub is a future-ready web and mobile app development company serving to drive the digital revolution. Silicon encourages seamless growth for every workforce, client, and the whole company in the context of commercial revenue, expertise, and solutions.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/5074178.jpg?t=1669722733"
+    },
+    {
+      "title": "Fibona Labs Blog",
+      "feed_url": "https://blog.fibonalabs.com/rss/",
+      "website_url": "https://www.uisort.com/blog/",
+      "description": "A number of inspirational and resourceful blogs are based on product development and design thinking, cloud solutions, user experience design, and so on. We are a family of creative designers, talented developers and enthusiastic thinkers to build a future-proof digital asset for our clients.",
+      "followers": {
+        "twitter": 152
+      },
+      "image_url": "https://i1.feedspot.com/5478388.jpg?t=1670838235"
+    },
+    {
+      "title": "Uisort Technologies",
+      "feed_url": "https://www.uisort.com/blog/feed/",
+      "website_url": "https://www.uisort.com/blog/",
+      "description": "Articles on AI and ML App Development, android app development, Android Application, AR App Development, Artificial Intelligence, Cloud-Based Products, Cross Platforms, Ecommerce Solutions, Events, News and more. UiSort Technologies is one of the leading web and mobile application development company.",
+      "followers": {
+        "facebook": 58,
+        "twitter": 11
+      },
+      "image_url": "https://i1.feedspot.com/5254813.jpg?t=1615287623"
+    },
+    {
+      "title": "Silicon IT Hub Blog",
+      "feed_url": "https://www.siliconithub.com/feed/",
+      "website_url": "https://www.siliconithub.com/blog/",
+      "description": "Covers articles from the IT field including web development, design, mobile app development, tech updates, and more. Silicon IT Hub is a Web and Mobile App Development Company in India.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/5423952.jpg?t=1658400377"
+    }
+  ]
+}

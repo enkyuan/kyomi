@@ -1,0 +1,39 @@
+{
+  "category": "Hermes Bag",
+  "source_url": "https://rss.feedspot.com/hermes_bag_rss_feeds",
+  "feeds": [
+    {
+      "title": "PurseBop \u00bb Hermes",
+      "feed_url": "https://www.pursebop.com/category/_hermes/feed/",
+      "website_url": "https://www.pursebop.com/category/_hermes/",
+      "description": "Find articles on Hermes bags. Pursebop is one of the premier online destinations for luxury market news and analysis.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 2700,
+        "instagram": 305400
+      },
+      "image_url": "https://i1.feedspot.com/5399703.jpg?t=1652264028"
+    },
+    {
+      "title": "Couture USA \u00bb Hermes",
+      "feed_url": "https://coutureusa.com/blogs/news/tagged/hermes.atom",
+      "website_url": "https://coutureusa.com/blogs/news/tagged/hermes",
+      "description": "Couture Boutique offers a wide selection of authentic pre-owned designer handbags, jewelry, clothing, and accessories and features top-name designers that include Chanel, Louis Vuitton, Hermes, Gucci, and David Yurman.",
+      "followers": {
+        "facebook": 44700
+      },
+      "image_url": "https://i1.feedspot.com/5399704.jpg?t=1652263619"
+    },
+    {
+      "title": "Angelus Direct \u00bb Hermes",
+      "feed_url": "https://angelusdirect.com/blogs/news/tagged/hermes.atom",
+      "website_url": "https://angelusdirect.com/blogs/news/tagged/hermes",
+      "description": "Keep up to date with us as we feature artists and share tips and tricks of the trade. AngelusDirect.com provide the world's best leather care products & sneaker accessories.",
+      "followers": {
+        "facebook": 179800,
+        "instagram": 469100
+      },
+      "image_url": "https://i1.feedspot.com/5399705.jpg?t=1652264280"
+    }
+  ]
+}

@@ -1,0 +1,319 @@
+{
+  "category": "Data Analytics & Data Mining",
+  "source_url": "https://rss.feedspot.com/data_analytics_rss_feeds",
+  "feeds": [
+    {
+      "title": "KDnuggets",
+      "feed_url": "https://www.kdnuggets.com/feed",
+      "website_url": "https://www.kdnuggets.com/news/index.html",
+      "description": "KDnuggets is a leading site on Business Analytics, Big Data, Data Mining, and Data Science. It is managed by Gregory Piatetsky-Shapiro, a leading expert in the field.",
+      "followers": {
+        "facebook": 39500,
+        "twitter": 219600
+      },
+      "image_url": "https://i1.feedspot.com/3800693.jpg?t=1612619286"
+    },
+    {
+      "title": "Data Science Central",
+      "feed_url": "https://feeds.feedburner.com/FeaturedBlogPosts-DataScienceCentral",
+      "website_url": "https://www.datasciencecentral.com/",
+      "description": "Data Science Central is the industry's online resource for Big Data practitioners. From Analytics to Data Integration to Visualization, we provide a community experience that includes a robust editorial platform, social interaction, forum-based technical support, the latest in technology tools and trends and industry job opportunities.",
+      "followers": {
+        "twitter": 195200
+      },
+      "image_url": "https://i1.feedspot.com/972655.jpg?t=1612619282"
+    },
+    {
+      "title": "Analytics Vidhya Blog \u00bb Prompt Engineering",
+      "feed_url": "https://www.analyticsvidhya.com/feed/",
+      "website_url": "https://www.analyticsvidhya.com/blog/category/prompt-engineering/",
+      "description": "Analytics Vidhya is a passionate community to learn every aspect of Analytics from web analytics to big data, advanced predictive modeling techniques and application of analytics in business. Follow our blog that focuses on machine learning, artificial intelligence, business analytics, data science, big data, data visualization tools, and techniques.",
+      "followers": {
+        "facebook": 95600,
+        "twitter": 30600
+      },
+      "image_url": "https://i1.feedspot.com/4575696.jpg?t=1612619278"
+    },
+    {
+      "title": "SmartData Collective",
+      "feed_url": "https://www.smartdatacollective.com/feed/",
+      "website_url": "https://www.smartdatacollective.com/",
+      "description": "martData Collective is an editorially independent, moderated community providing enterprise leaders access to the latest trends in Business Intelligence and Data Management. Our innovative model serves as a platform for recognized, global experts to share their insights through peer contributions, custom content publishing, and alignment with industry leaders.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 32000
+      },
+      "image_url": "https://i1.feedspot.com/4895122.jpg?t=1646457739"
+    },
+    {
+      "title": "Oracle Machine Learning Blog",
+      "feed_url": "https://blogs.oracle.com/machinelearning/rss",
+      "website_url": "https://blogs.oracle.com/machinelearning/",
+      "description": "Oracle is a leading enterprise and SMB SaaS application suites for ERP, HCM & CX, with best-in-class database PaaS & IaaS from data centers. Follow our blog to learn about Oracle Machine Learning for Oracle Database and Big Data, on-premises, and Oracle Cloud.",
+      "followers": {
+        "facebook": 2900000,
+        "twitter": 822000,
+        "instagram": 378500
+      },
+      "image_url": "https://i1.feedspot.com/4894912.jpg?t=1612620041"
+    },
+    {
+      "title": "Plato AiStream",
+      "feed_url": "https://platoaistream.com/feed/",
+      "website_url": "https://platoaistream.com/",
+      "description": "Plato's Ai and advanced automation curate the latest sector intelligence with insights into the people, companies, and culture driving innovation today. Plato was designed to seamlessly connect users with hundreds of sector-specific applications by providing an ultra-safe and secure environment for vertical real-time data intelligence through an intuitive and content-rich user experience.",
+      "followers": {
+        "facebook": 937,
+        "twitter": 643
+      },
+      "image_url": "https://i1.feedspot.com/5709481.jpg?t=1699598058"
+    },
+    {
+      "title": "Insight - Data as Service - M1 Data & Analytics",
+      "feed_url": "https://m1-data.com/feed/",
+      "website_url": "https://m1-data.com/insight/",
+      "description": "M1 Data & Analytics provides Data as a Service (DaaS), offering data solutions for various industries like Health & Supplements, Retail, and Automotive. Their core suite includes SmartPiXL, AudienceIQ, and LocationIQ, empowering targeted campaigns. They emphasize 1st Party Data collection, ensuring clean and compliant data through rigorous processes.",
+      "followers": {
+        "facebook": 232,
+        "twitter": 899
+      },
+      "image_url": "https://i1.feedspot.com/7271576.jpg?t=1710238641"
+    },
+    {
+      "title": "The Mobile Reality Blog",
+      "feed_url": "https://themobilereality.com/rss.xml",
+      "website_url": "https://themobilereality.com/blog",
+      "description": "Our company specializes in Web development, Mobile development, Data-Science, Big-Data science, NFT. We work with clients from all over the world, and the sectors we most often serve are real estate and media & entertainment. We cover the backend, frontend, and mobile side of their application using the most innovative tech stacks. We always choose the best frameworks possible to meet clients' business goals and satisfy their user's expectations.",
+      "followers": {
+        "facebook": 290
+      },
+      "image_url": "https://i1.feedspot.com/7275183.jpg?t=1710739178"
+    },
+    {
+      "title": "Medium \u00bb Hacking Analytics",
+      "feed_url": "https://medium.com/feed/analytics-and-data",
+      "website_url": "https://medium.com/analytics-and-data",
+      "description": "Follow Hacking Analytics blog that covers topics such as analytics, data engineering, web analytics, data science, eCommerce.",
+      "followers": {
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/5041207.jpg?t=1612620037"
+    },
+    {
+      "title": "ScienceSoft \u00bb Data Analytics Blogs",
+      "feed_url": "https://www.scnsoft.com/blog/category/data-analytics/atom",
+      "website_url": "https://www.scnsoft.com/blog/category/data-analytics",
+      "description": "ScienceSoft is a software development company delivering custom and platform-based solutions and back them up with thorough support and maintenance. Follow our Data Analytics blog to find the articles on predictive and prescriptive analytics, machine learning and other analytical domains, and discover practical tips on how to turn your company data-driven.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 915
+      },
+      "image_url": "https://i1.feedspot.com/4959155.jpg?t=1612620049"
+    },
+    {
+      "title": "Juice Analytics",
+      "feed_url": "https://www.juiceanalytics.com/writing/?format=rss",
+      "website_url": "https://www.juiceanalytics.com/writing/",
+      "description": "Juicebox is a tool for visualizing data. It helps users gather more insights from their data. This blog delivers more insights to readers, by providing posts about using data, visualizing data, and gaining a better understanding of customers through data analysis.",
+      "followers": {
+        "facebook": 411,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/3764769.jpg?t=1612620058"
+    },
+    {
+      "title": "Dataiku Blog",
+      "feed_url": "https://blog.dataiku.com/rss.xml",
+      "website_url": "https://blog.dataiku.com/",
+      "description": "The blog offers in-depth perspectives on data analytics by exploring how advanced artificial intelligence, machine learning, and data science techniques are applied to solve complex business challenges.",
+      "followers": {
+        "facebook": 10400,
+        "twitter": 23100
+      },
+      "image_url": "https://i1.feedspot.com/8796783.jpg"
+    },
+    {
+      "title": "Data Management Blog \u00bb Analytics",
+      "feed_url": "https://www.datamanagementblog.com/category/analytics/feed/",
+      "website_url": "https://www.datamanagementblog.com/category/analytics/",
+      "description": "Make highly integrated, high quality data analytics the foundation for success. The blog section at focuses on analytics within data management, offering articles, analysis, and insights on data integration, modern data management practices, and analytical approaches to optimize data utilization for business intelligence and decision-making.",
+      "followers": {
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/8796784.jpg?t=1762757599"
+    },
+    {
+      "title": "Kubit \u00bb Data Analytics",
+      "feed_url": "https://kubit.ai/category/data-analytics/feed",
+      "website_url": "https://kubit.ai/category/data-analytics/",
+      "description": "The blog category focuses on enterprise data analytics, addressing challenges, trends, and strategies to maximize the value of data in business decision-making. It offers insights on operational analytics, data infrastructure, and practical approaches to unlocking data-driven outcomes in various industries.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8796782.jpg?t=1762757582"
+    },
+    {
+      "title": "Data Plus Science",
+      "feed_url": "https://www.dataplusscience.com/RSSfeed.xml",
+      "website_url": "https://www.dataplusscience.com/insights.html",
+      "description": "Welcome to Data Plus Science by Jeffrey A. Shaffer. He is a regular speaker at conferences, symposiums, universities and corporate training programs on the topic of data visualization, data mining, and Tableau.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 36500
+      },
+      "image_url": "https://i1.feedspot.com/4557889.jpg?t=1612619274"
+    },
+    {
+      "title": "BlueWhaleApps Blog",
+      "feed_url": "https://bluewhaleapps.com/feed",
+      "website_url": "https://bluewhaleapps.com/blog",
+      "description": "Blue Whale Apps is an award-winning web and mobile app development company in the USA, providing top-notch UI & UX Design, app development and digital transformation engineering services.",
+      "followers": {
+        "twitter": 8100,
+        "instagram": 528
+      },
+      "image_url": "https://i1.feedspot.com/5081976.jpg?t=1612619263"
+    },
+    {
+      "title": "Codementor \u00bb Data Science Tutorials",
+      "feed_url": "https://www.codementor.io/community/topic/data-science/feed",
+      "website_url": "https://www.codementor.io/community/topic/data-science",
+      "description": "Codementor is the largest community for developer mentorship and an on-demand marketplace for software developers. Get instant coding help, build projects faster, and read programming tutorials from our community of developers. Follow this blog to get the latest trends in Data Science, tutorials, posts, and insights from top Data Science experts and developers.",
+      "followers": {
+        "facebook": 14100,
+        "twitter": 21400
+      },
+      "image_url": "https://i1.feedspot.com/4342188.jpg?t=1612620045"
+    },
+    {
+      "title": "Deep Data Mining Blog",
+      "feed_url": "https://www.deep-data-mining.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.deep-data-mining.com/",
+      "description": "Deep Data Mining Blog is mostly focused on the technical aspect of data mining.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/855716.jpg?t=1612620170"
+    },
+    {
+      "title": "IntelliCompute",
+      "feed_url": "https://intellicompute.com/feed",
+      "website_url": "https://intellicompute.com/insights-in-the-industry",
+      "description": "Sharing our exclusive knowledge as well as insights of AI, Business Intelligence, Data Analytics, Data Warehouse, etc through the blog.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 137
+      },
+      "image_url": "https://i1.feedspot.com/5121512.jpg?t=1612620078"
+    },
+    {
+      "title": "Data Analytics Ireland",
+      "feed_url": "https://feeds.feedburner.com/DataAnalyticsIreland",
+      "website_url": "https://www.deep-data-mining.com/",
+      "description": "Welcome to Data Analytics Ireland, to get useful tips, video how to content and articles published to help with a better understanding of data analytics.",
+      "followers": {
+        "facebook": 124,
+        "twitter": 625
+      },
+      "image_url": "https://i1.feedspot.com/5163020.jpg?t=1612620091"
+    },
+    {
+      "title": "Deep Data Mining Blog",
+      "feed_url": "https://www.deep-data-mining.com/feeds/posts/default",
+      "website_url": "https://www.deep-data-mining.com/",
+      "description": "This blog is mostly focused on the technical aspect of data mining.",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/646840.jpg"
+    },
+    {
+      "title": "Data Mining Blog",
+      "feed_url": "https://feeds.feedburner.com/dataminingblog",
+      "website_url": "https://www.dataminingblog.com/",
+      "description": "Welcome to Data Mining Research by Sandro Saitta. Data Mining Blog covers both research and applications in data science, data mining and machine learning.",
+      "followers": {
+        "twitter": 8000
+      },
+      "image_url": "https://i1.feedspot.com/118730.jpg?t=1612620067"
+    },
+    {
+      "title": "Inflexion Analytics",
+      "feed_url": "https://inflexionanalytics.com/feed/",
+      "website_url": "https://inflexionanalytics.com/blogs/",
+      "description": "Inflexion Analytics was founded to help ambitious companies level the playing field with larger competitors, by providing you access to the same high-quality data analytics services, at a market-leading price. We want to help you get more from your budget for business analytics and help drive the performance, innovation, and competitiveness that drives productivity and progress. Bringing to you the best quality content from our highly experienced authors. We provide efficient services in Data Strategy, Business Analytics, Data Science Consulting.",
+      "followers": {
+        "facebook": 199
+      },
+      "image_url": "https://i1.feedspot.com/5231215.jpg?t=1609150056"
+    },
+    {
+      "title": "Yoda Learning",
+      "feed_url": "https://yodalearning.com/feed/",
+      "website_url": "https://yodalearning.com/",
+      "description": "Yoda Learning is focused on delivering online courses to people across the world for professional development and business growth.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 716,
+        "instagram": 550
+      },
+      "image_url": "https://i1.feedspot.com/4795101.jpg"
+    },
+    {
+      "title": "AnalytiXon",
+      "feed_url": "https://analytixon.com/feed/",
+      "website_url": "https://analytixon.com/",
+      "description": "Follow AnalytiXon blog that covers topics such as Data Science, Data Mining, Text Mining, Machine Learning, Statistical Learning, Statistics, Analytics Modeling, Business Analytics, Knowledge Discovery, Soft Computing, Natural Language Processing, Data Aggregation, Econometrics, Visualization & related Programming.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4563107.jpg?t=1612619672"
+    },
+    {
+      "title": "BizAcuity Blogs",
+      "feed_url": "https://bizacuity.com/feed/",
+      "website_url": "https://bizacuity.com/blogs/",
+      "description": "BizAcuity is a BI and Data Analytics Strategy Company. We help our clients monetize internal and external data by providing actionable descriptive, predictive and prescriptive analytics solutions.",
+      "followers": {
+        "twitter": 343
+      },
+      "image_url": "https://i1.feedspot.com/4980071.jpg?t=1612620062"
+    },
+    {
+      "title": "Advancing Analytics",
+      "feed_url": "https://www.advancinganalytics.co.uk/blog/rss.xml",
+      "website_url": "https://www.advancinganalytics.co.uk/blog/",
+      "description": "On this blog, you will find a huge range of information in text, audio, and video on topics such as Data Science, Data Engineering, Machine Learning Engineering, DataOps, and much more. Advancing Analytics is an inclusive company. They are opinionated about the technologies that they use.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5649840.jpg?t=1692273918"
+    },
+    {
+      "title": "Revolutions",
+      "feed_url": "https://blog.revolutionanalytics.com/atom.xml",
+      "website_url": "https://blog.revolutionanalytics.com/",
+      "description": "Revolutions is a blog dedicated to news and information of interest to members of the R community. Follow to keep up with daily news about using open source R for data analysis, predictive modeling, data science, and visualization.",
+      "followers": {
+        "twitter": 31000
+      },
+      "image_url": "https://i1.feedspot.com/57631.jpg?t=1612588519"
+    },
+    {
+      "title": "Algoscale",
+      "feed_url": "https://algoscale.com/feed/",
+      "website_url": "https://algoscale.com/insights/",
+      "description": "Get meaningful insights on data, AI, data engineering by Algoscale. Read our case studies and blog to know more. Algoscale is a boutique Big Data Analytics and Data Science firm having offices in US, UK with its development center in Noida, India. Applying analytical tools and technology, we help organizations gain insights that accelerate business decision making.",
+      "followers": {
+        "facebook": 587,
+        "twitter": 113
+      },
+      "image_url": "https://i1.feedspot.com/5456403.jpg?t=1665658426"
+    },
+    {
+      "title": "Datahut",
+      "feed_url": "https://www.blog.datahut.co/feed",
+      "website_url": "https://www.blog.datahut.co/",
+      "description": "Datahut takes the chaos out of web data extraction so that you can focus on growing your business. Follow our blog that talks about Web scraping, Data extraction, Data scraping, Web scraping tools, Web scraping tutorial, Python web scraping and much more about Data Science.",
+      "followers": {
+        "facebook": 605,
+        "twitter": 370
+      },
+      "image_url": "https://i1.feedspot.com/5050012.jpg?t=1612620071"
+    }
+  ]
+}

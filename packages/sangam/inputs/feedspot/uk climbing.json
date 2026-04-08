@@ -1,0 +1,92 @@
+{
+  "category": "UK Climbing",
+  "source_url": "https://rss.feedspot.com/uk_climbing_rss_feeds",
+  "feeds": [
+    {
+      "title": "Dave MacLeod blog",
+      "feed_url": "https://www.davemacleod.com/blog?format=rss",
+      "website_url": "http://davemacleod.blogspot.com/",
+      "description": "Here you will find post on my personal climbing experiences.",
+      "followers": {
+        "twitter": 15100,
+        "instagram": 80500
+      },
+      "image_url": "https://i1.feedspot.com/981431.jpg?t=1613973067"
+    },
+    {
+      "title": "Climbing Gear Reviews",
+      "feed_url": "https://climbinggearreviews.com/feed/",
+      "website_url": "https://climbinggearreviews.com/",
+      "description": "Independent reviews of climbing, mountaineering, and adventure equipment. 'Climbing Gear Reviews' also covers articles on all-mountain sports activities including alpinism, bouldering, rock and winter climbing, and mountaineering.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 460
+      },
+      "image_url": "https://i1.feedspot.com/4557335.jpg?t=1611752430"
+    },
+    {
+      "title": "Tom Livingstone Climbing",
+      "feed_url": "https://www.tomlivingstone.com/climbing-blog-1?format=RSS",
+      "website_url": "https://www.tomlivingstone.com/climbing-blog-1/",
+      "description": "A Climbing Blog by Tom Livingstone - a climber and writer, based in North Wales (UK). He enjoys alpine, trad, and winter climbing in the mountains. He is an acclaimed outdoor writer, and you can read some of his published pieces here.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 325,
+        "instagram": 23400
+      },
+      "image_url": "https://i1.feedspot.com/4906518.jpg?t=1613973085"
+    },
+    {
+      "title": "Chris Craggs Blog",
+      "feed_url": "http://chriscraggs.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://chriscraggs.blogspot.com/",
+      "description": "An occasional listing covering bits and bobs about my various trips, climbing or otherwise, plus anything else that pops up.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4906536.jpg?t=1613973150"
+    },
+    {
+      "title": "Climber",
+      "feed_url": "https://www.climber.co.uk/news.rss",
+      "website_url": "https://www.climber.co.uk/",
+      "description": "Dedicated to all aspects of rock climbing and mountaineering; trad climbing, sport climbing, bouldering, alpine climbing, winter, and ice climbing and expeditions. Climber magazine includes guides and features to climbing and bouldering at UK crags, travel and adventure destinations from around the world, interviews, and profiles of top climbers and mountaineers, breathtaking photography, training and coaching features every month from Gareth Parry, advice and information on skills, technique, and safety, reviews and advice on essential climbing gear and equipment.",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 30300,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5334022.jpg?t=1634737135"
+    },
+    {
+      "title": "Great Escape. Nick Bullock.",
+      "feed_url": "https://nickbullock-climber.co.uk/feed/",
+      "website_url": "https://nickbullock-climber.co.uk/",
+      "description": "Blog by Nick Bullock. Get posts on Mountaineering, Alpine Climbing, Rock, Ice & Mixed Climbing.",
+      "followers": {
+        "twitter": 6300
+      },
+      "image_url": "https://i1.feedspot.com/469276.jpg?t=1609244593"
+    },
+    {
+      "title": "The Climbing Company",
+      "feed_url": "https://www.climbingcompany.co.uk/feed/",
+      "website_url": "https://www.climbingcompany.co.uk/climbing-blog/",
+      "description": "Details on what we get up to for work & play, adventure, misadventure, instructional blogs, coaching, guiding, and mindless rambling! The Climbing Company specializes in providing high end Summer Climbing/Mountaineering, Winter Climbing/Mountaineering courses.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 625,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4557405.jpg?t=1613973079"
+    },
+    {
+      "title": "Guy Steven",
+      "feed_url": "http://guysteven.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://guysteven.blogspot.com/",
+      "description": "Mountaineering Instructor and Trainee IFMGA Mountain Guide Guy Steven showing his Personal and Working Climbing.",
+      "followers": {
+        "twitter": 918
+      },
+      "image_url": "https://i1.feedspot.com/4557375.jpg?t=1613973097"
+    }
+  ]
+}

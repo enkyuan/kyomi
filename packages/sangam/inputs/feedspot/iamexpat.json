@@ -1,0 +1,57 @@
+{
+  "category": "IamExpat",
+  "source_url": "https://rss.feedspot.com/iamexpat_rss_feeds",
+  "feeds": [
+    {
+      "title": "IamExpat \u00bb All News, Articles and Features",
+      "feed_url": "https://www.iamexpat.de/rss/news-germany",
+      "website_url": "https://www.iamexpat.de/news-germany",
+      "description": "All latest news, articles and features from IamExpat.",
+      "followers": {
+        "facebook": 79800,
+        "twitter": 2400,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/7883045.jpg?t=1741159109"
+    },
+    {
+      "title": "IamExpat \u00bb German News",
+      "feed_url": "https://www.iamexpat.de/rss/news-germany/news",
+      "website_url": "https://www.iamexpat.de/news-germany/news",
+      "description": "All latest German News from IamExpat.",
+      "followers": {
+        "facebook": 79800,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5287982.jpg?t=1741159147"
+    },
+    {
+      "title": "IamExpat \u00bb Latest Articles",
+      "feed_url": "https://www.iamexpat.de/rss/news-germany/articles",
+      "website_url": "https://www.iamexpat.de/news-germany/articles",
+      "description": "All latest articles from IamExpat.",
+      "followers": {
+        "facebook": 79800,
+        "twitter": 2400,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/7883046.jpg?t=1741159143"
+    },
+    {
+      "title": "IamExpat \u00bb Lifestyle Agenda for Germany",
+      "feed_url": "https://www.iamexpat.de/rss/lifestyle/expat-events-festivals",
+      "website_url": "https://www.iamexpat.de/lifestyle/expat-events-festivals",
+      "description": "All latest articles about Lifestyle Agenda for Germany from IamExpat.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7883044.jpg?t=1741159150"
+    },
+    {
+      "title": "IamExpat \u00bb Jobs",
+      "feed_url": "https://www.iamexpat.de/rss/career/jobs-germany",
+      "website_url": "https://www.iamexpat.de/career",
+      "description": "All latest articles about Jobs from IamExpat.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7883043.jpg?t=1741159123"
+    }
+  ]
+}

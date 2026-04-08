@@ -1,0 +1,64 @@
+{
+  "category": "Australian Weather",
+  "source_url": "https://rss.feedspot.com/australian_weather_rss_feeds",
+  "feeds": [
+    {
+      "title": "PerthNow News \u00bb Weather",
+      "feed_url": "https://www.perthnow.com.au/news/weather/feed",
+      "website_url": "https://www.perthnow.com.au/news/weather",
+      "description": "While much of the country can look forward to some warmer weather, the same cannot be said for Western Australia.",
+      "followers": {
+        "facebook": 601700,
+        "twitter": 170200,
+        "instagram": 98000
+      },
+      "image_url": "https://i1.feedspot.com/5584986.jpg?t=1685420869"
+    },
+    {
+      "title": "7NEWS \u00bb Australian Weather News",
+      "feed_url": "https://7news.com.au/weather/australian-weather/feed",
+      "website_url": "https://7news.com.au/weather/australian-weather",
+      "description": "Catch the latest Australian weather news and headlines from Australia's most trusted news source. 7NEWS is the broadcast news service of the Seven Network and, as of 2022, the highest rating in Australia. The network also produces local news bulletins and updates for the Gold Coast, as well as regional markets in Queensland, New South Wales (including the ACT), Victoria, and Western Australia.",
+      "followers": {
+        "facebook": 2900000,
+        "twitter": 305500,
+        "instagram": 592000
+      },
+      "image_url": "https://i1.feedspot.com/5584988.jpg?t=1685420880"
+    },
+    {
+      "title": "Wally's Weather Australia Blog",
+      "feed_url": "https://www.wallysweather.com.au/blog-feed.xml",
+      "website_url": "https://www.wallysweather.com.au/blog",
+      "description": "The central focus of Wally's Weather is to inform people using a no-nonsense approach to reduce anxiety around major weather events.",
+      "followers": {
+        "facebook": 109900,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/5584989.jpg?t=1685420885"
+    },
+    {
+      "title": "Weatherzone News",
+      "feed_url": "https://www.weatherzone.com.au/news",
+      "website_url": "https://www.weatherzone.com.au/news",
+      "description": "Weatherzone is Australia's largest private weather service, bringing you clear and concise weather observations and forecasts. Read the latest weather news for states & territories across Australia.",
+      "followers": {
+        "facebook": 236500,
+        "twitter": 15300,
+        "instagram": 11600
+      },
+      "image_url": "https://i1.feedspot.com/5584991.jpg?t=1685420899"
+    },
+    {
+      "title": "Sky News Australia \u00bb Weather",
+      "feed_url": "https://www.skynews.com.au/australia-news/weather/feed",
+      "website_url": "https://www.skynews.com.au/australia-news/weather",
+      "description": "Browse our website for weather updates. As the leading news channel on Foxtel and the highest-reaching Australian news channel on social media, Sky News Australia's broadcast and digital news content features the best award-winning journalists, exclusive insights, ground-breaking special investigations, and live breaking news, sport, and weather.",
+      "followers": {
+        "facebook": 2000000,
+        "twitter": 788100
+      },
+      "image_url": "https://i1.feedspot.com/5584987.jpg?t=1685420871"
+    }
+  ]
+}

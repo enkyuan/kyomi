@@ -1,0 +1,63 @@
+{
+  "category": "Evanston News",
+  "source_url": "https://rss.feedspot.com/evanston_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Evanston Now",
+      "feed_url": "https://evanstonnow.com/feed/",
+      "website_url": "https://evanstonnow.com/",
+      "description": "Evanston Now is an independently-owned local news site for Evanston, Illinois, that covers government, schools, events, and business in the city. It is a primary source for Breaking news in Evanston and other Illinois areas. Keep up with Local news, events, schools, and sports.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 7700
+      },
+      "image_url": "https://i1.feedspot.com/5147083.jpg?t=1626690055"
+    },
+    {
+      "title": "Evanston RoundTable",
+      "feed_url": "https://evanstonroundtable.com/feed/",
+      "website_url": "https://evanstonroundtable.com/",
+      "description": "The Evanston RoundTable is the community's leading source of news about local government, schools, civic and artistic activities, and other important issues facing our city. We seek to foster civic engagement and empower people to address complex issues facing our diverse community, promoting a better understanding of people of all races, ethnicities, and income levels.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5147084.jpg?t=1678250518"
+    },
+    {
+      "title": "WGN-TV \u00bb Evanston",
+      "feed_url": "https://wgntv.com/evanston/feed/",
+      "website_url": "https://wgntv.com/evanston/",
+      "description": "Evanston local stories, opinions, and concerns. These latest articles and videos provide you with a sweeping overview of what's going on in Chicago suburb. WGN-TV is Chicago's Very Own source for news and entertainment. WGN News programs more local news than any other Chicago TV station and can be seen on WGN-TV, CLTV, WGNTV.com",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 431800,
+        "instagram": 224700
+      },
+      "image_url": "https://i1.feedspot.com/5516072.jpg?t=1677830516"
+    },
+    {
+      "title": "The Daily Northwestern",
+      "feed_url": "https://dailynorthwestern.com/feed/",
+      "website_url": "https://dailynorthwestern.com/",
+      "description": "Get hourly updates on the latest ripple-making activities of the day. Read in-depth coverage of Northwestern University Campus and Evanston city. The Daily Northwestern is Northwestern University and Evanston's Only Daily News Source Since 1881 and focuses on covering diverse topics such as Arts & Culture, Sports, Community and more.",
+      "followers": {
+        "facebook": 14800,
+        "twitter": 26700,
+        "instagram": 11900
+      },
+      "image_url": "https://i1.feedspot.com/5516073.jpg?t=1677830527"
+    },
+    {
+      "title": "Chicago Tribune \u00bb Evanston",
+      "feed_url": "https://www.chicagotribune.com/location/illinois/cook-county/evanston/feed/",
+      "website_url": "https://www.chicagotribune.com/location/illinois/cook-county/evanston/",
+      "description": "Gather today's Top news stories and trending videos from Evanston, reported by the Chicago Tribune. The Chicago Tribune is the top source of news and information in the Chicago area and the largest news organization in the Midwest.",
+      "followers": {
+        "facebook": 721400,
+        "twitter": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5516078.jpg?t=1677830598"
+    }
+  ]
+}

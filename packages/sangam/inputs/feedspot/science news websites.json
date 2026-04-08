@@ -1,0 +1,249 @@
+{
+  "category": "Science News Websites",
+  "source_url": "https://rss.feedspot.com/science_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "ScienceDaily",
+      "feed_url": "https://www.sciencedaily.com/rss/",
+      "website_url": "https://www.sciencedaily.com/",
+      "description": "ScienceDaily features breaking news about the latest scientific discoveries on everything from astrophysics to zoology from the world's leading universities and research organizations.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 306500
+      },
+      "image_url": "https://i1.feedspot.com/4478463.jpg?t=1605769996"
+    },
+    {
+      "title": "New Scientist Magazine",
+      "feed_url": "https://www.newscientist.com/feed/home/?cmpid=RSS|NSNS-Home",
+      "website_url": "https://www.newscientist.com/",
+      "description": "New Scientist is the best place to find out what's new in science. It is the world's number one science and technology magazine, and online it is the go-to site for breaking news, exclusive content and breakthroughs that will change your world.",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 4400000
+      },
+      "image_url": "https://i1.feedspot.com/4478244.jpg?t=1605769521"
+    },
+    {
+      "title": "Science.org \u00bb Latest News",
+      "feed_url": "https://www.science.org/rss/news_current.xml",
+      "website_url": "https://www.science.org/news/latest-news",
+      "description": "Science/AAAS peer-reviewed journals deliver impactful research, daily news, expert commentary, and career resources. Science continues to publish the very best in research across the sciences, with articles that consistently rank among the most cited in the world. Its mission is to 'advance science and serve society' by communicating the value of science to the public, helping governments formulate science policy, promoting advancements in science education and diversity, and helping scientists develop their careers.",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 4400000,
+        "instagram": 433600
+      },
+      "image_url": "https://i1.feedspot.com/5556893.jpg?t=1744785660"
+    },
+    {
+      "title": "Scientific American",
+      "feed_url": "http://rss.sciam.com/ScientificAmerican-Global",
+      "website_url": "https://www.scientificamerican.com/",
+      "description": "Scientific American, the longest continuously published magazine in the U.S., has been bringing its reader's unique insights about developments in science and technology for more than 170 years. It is the essential guide to the most awe-inspiring advances in science and technology, explaining how they change our understanding of the world and shape our lives.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 4400000,
+        "instagram": 567700
+      },
+      "image_url": "https://i1.feedspot.com/912.jpg?t=1609909508"
+    },
+    {
+      "title": "Science News Magazine",
+      "feed_url": "https://www.sciencenews.org/feed",
+      "website_url": "https://www.sciencenews.org/",
+      "description": "Science News online features daily news, blogs, feature stories, reviews and more in all disciplines of science, as well as Science News magazine archives back to 1924.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 5300000,
+        "instagram": 102400
+      },
+      "image_url": "https://i1.feedspot.com/2754920.jpg?t=1605770279"
+    },
+    {
+      "title": "Live Science",
+      "feed_url": "https://www.livescience.com/feeds.xml",
+      "website_url": "https://www.livescience.com/",
+      "description": "Live Science features groundbreaking developments in science, space, technology, health, the environment, our culture and history.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 429800
+      },
+      "image_url": "https://i1.feedspot.com/4806595.jpg?t=1514372098"
+    },
+    {
+      "title": "Phys.org",
+      "feed_url": "https://phys.org/rss-feed/",
+      "website_url": "https://phys.org",
+      "description": "Daily science news on research developments, technological breakthroughs and the latest scientific innovations.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/4558430.jpg?t=1753681706"
+    },
+    {
+      "title": "Advanced Science News",
+      "feed_url": "https://www.advancedsciencenews.com/feed/",
+      "website_url": "https://www.advancedsciencenews.com/",
+      "description": "Advanced Science News brings you the latest science news across a broad spectrum of disciplines. We collaborate with scientists from around the world to provide an accessible platform for cutting-edge research.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4806905.jpg?t=1642774123"
+    },
+    {
+      "title": "Sci.News",
+      "feed_url": "https://www.sci.news/feed",
+      "website_url": "https://www.sci.news",
+      "description": "Sci-News.com is an independent source for the latest news on science.Sci-News.com: archaeology, paleontology, astronomy, nanoscience, nature, physics, space exploration etc.",
+      "followers": {
+        "facebook": 27600,
+        "twitter": 8300
+      },
+      "image_url": "https://i1.feedspot.com/1716484.jpg?t=1753683555"
+    },
+    {
+      "title": "Science News Explores",
+      "feed_url": "https://www.snexplores.org/feed",
+      "website_url": "https://www.snexplores.org/",
+      "description": "Science News for Students is an award-winning, online publication dedicated to providing news from all fields of science for students from middle school and up, with resources for parents and educators.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 13800
+      },
+      "image_url": "https://i1.feedspot.com/4478758.jpg?t=1642770495"
+    },
+    {
+      "title": "Kolabtree Blog",
+      "feed_url": "https://www.kolabtree.com/blog/feed/",
+      "website_url": "https://www.kolabtree.com/blog/",
+      "description": "Latest news in tech, science and the future of work, run and managed by global expert network Kolabtree. Expert advice for entrepreneurs and scientists on science, innovation and product development",
+      "followers": {
+        "facebook": 969,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5265000.jpg?t=1617686177"
+    },
+    {
+      "title": "Undark Magazine",
+      "feed_url": "https://undark.org/feed/",
+      "website_url": "https://undark.org/",
+      "description": "Undark Magazine explores science at the point where it intersects - and sometimes collides - with politics, economics, and culture.",
+      "followers": {
+        "facebook": 243100,
+        "twitter": 61200,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4807220.jpg?t=1591711526"
+    },
+    {
+      "title": "AGU's Eos",
+      "feed_url": "https://eos.org/feed",
+      "website_url": "https://eos.org",
+      "description": "Science news by AGU. Keep up to date on the latest climate and science reporting by journalists, as well as exciting discoveries and insightful opinions from researchers and other scientist authors. Science news by AGU. Keep up to date on the latest climate and science reporting by journalists as well as exciting discoveries and insightful opinions written by scientists.",
+      "followers": {
+        "facebook": 156700,
+        "twitter": 19000,
+        "instagram": 39300
+      },
+      "image_url": "https://i1.feedspot.com/4478469.jpg?t=1753684779"
+    },
+    {
+      "title": "Lab Bulletin",
+      "feed_url": "https://www.labbulletin.com/feed.rdf",
+      "website_url": "https://www.labbulletin.com/categories/Industry-News",
+      "description": "Laboratory news updated daily for scientists and laboratory professionals. Follow Lab Bulletin for the latest news on Laboratory Products, Research and Case Studies, Industry news and more.",
+      "followers": {
+        "facebook": 321,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5118662.jpg?t=1659501475"
+    },
+    {
+      "title": "Sciworthy",
+      "feed_url": "https://sciworthy.com/feed/",
+      "website_url": "https://sciworthy.com/",
+      "description": "There are tons of science news sites written with non-scientists in mind. Why is SciWorthy different?Our goal is to invite everyone to the table. Scientists need not speak from their ivory towers, nor do they need to adopt the manipulative tactics of advertisers. Scientists need to tell their stories.",
+      "followers": {
+        "facebook": 747,
+        "twitter": 1600,
+        "instagram": 725
+      },
+      "image_url": "https://i1.feedspot.com/4807298.jpg?t=1514372818"
+    },
+    {
+      "title": "SciTechDaily",
+      "feed_url": "https://feeds.feedburner.com/scitechdaily",
+      "website_url": "https://scitechdaily.com/tag/insomnia/",
+      "description": "SciTechDaily offers the best intelligent, informed science and technology coverage and analysis you can find on a daily basis, sourcing a huge range of great writers and excellent research institutes.",
+      "followers": {
+        "facebook": 167700,
+        "twitter": 11400
+      },
+      "image_url": "https://i1.feedspot.com/397358.jpg"
+    },
+    {
+      "title": "Independent Science News",
+      "feed_url": "https://www.independentsciencenews.org/feed/",
+      "website_url": "https://www.independentsciencenews.org/",
+      "description": "Independent Science Reporting for Agriculture, Food, and Health",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4478505.jpg?t=1605771005"
+    },
+    {
+      "title": "SciDev.Net",
+      "feed_url": "https://www.scidev.net/global/global_rss.xml",
+      "website_url": "https://www.scidev.net/global/",
+      "description": "SciDev.Net offers news,analysis and information about science and technology for global development; including agriculture, environment, health, governance, and more.",
+      "followers": {
+        "facebook": 74200,
+        "twitter": 25500
+      },
+      "image_url": "https://i1.feedspot.com/4806957.jpg?t=1591711264"
+    },
+    {
+      "title": "Scimex",
+      "feed_url": "https://www.scimex.org/rss",
+      "website_url": "https://www.scimex.org/",
+      "description": "The breaking science news portal for Australia & New Zealand.We aim for a better informed society with greater access to evidence-based science.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 12600
+      },
+      "image_url": "https://i1.feedspot.com/4806773.jpg?t=1542008192"
+    },
+    {
+      "title": "Science Magazine",
+      "feed_url": "https://www.sciencemag.org/rss/current.xml",
+      "website_url": "https://www.sciencemag.org/",
+      "description": "The world's leading outlet for scientific news, commentary, and cutting-edge research.",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 4400000
+      },
+      "image_url": "https://i1.feedspot.com/43731.jpg?t=1591710747"
+    },
+    {
+      "title": "Xplore Life Science",
+      "feed_url": "https://www.xplorelifescience.com/feed/",
+      "website_url": "https://www.sourcegroupinternational.com/news/",
+      "description": "Xplore Life Science is a Life Science and Pharmaceutical recruitment consultancy providing an expert service that you and your company can rely on. Visit us to read all the latest news, updates and insights from the Xplore Life Science.",
+      "followers": {
+        "twitter": 35
+      },
+      "image_url": "https://i1.feedspot.com/5124421.jpg"
+    },
+    {
+      "title": "Physics Alert",
+      "feed_url": "https://physicsalert.com/feed/",
+      "description": "PhysicsAlert.com is a leading web-based science and technology news article service. Which covers the whole range of subjects related to science and technology. These include physics, earth science, nanotechnology, electronics, space, chemistry, computer science, engineering, mathematics, and other sciences and technologies.",
+      "followers": {
+        "facebook": 249,
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/5397722.jpg?t=1651917698"
+    }
+  ]
+}

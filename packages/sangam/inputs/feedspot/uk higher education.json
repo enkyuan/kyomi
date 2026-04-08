@@ -1,0 +1,111 @@
+{
+  "category": "UK Higher Education",
+  "source_url": "https://rss.feedspot.com/uk_higher_education_rss_feeds",
+  "feeds": [
+    {
+      "title": "Wonkhe",
+      "feed_url": "https://wonkhe.com/feed/",
+      "website_url": "https://wonkhe.com/blogs/",
+      "description": "Wonkhe is a blog about UK higher education policy. Follow us to keep up with the latest analysis, research, comments, debate, university jobs and recruitment news.",
+      "followers": {
+        "twitter": 41000
+      },
+      "image_url": "https://i1.feedspot.com/4413846.jpg?t=1617201080"
+    },
+    {
+      "title": "The PIE News",
+      "feed_url": "https://thepienews.com/feed/",
+      "website_url": "https://thepienews.com/news/",
+      "description": "The PIE News is a media, recruitment and consultancy platform for Professionals in International Education. Subscribe us to keep up with News and business analysis for Professionals in International Education.",
+      "followers": {
+        "facebook": 12700,
+        "twitter": 22300,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4655010.jpg?t=1607330785"
+    },
+    {
+      "title": "News + Views",
+      "feed_url": "https://www.advance-he.ac.uk/news-and-views/feed",
+      "website_url": "https://www.advance-he.ac.uk/news-and-views",
+      "description": "We are dedicated to helping higher education shape its future. We aim at Providing insight, so you can use the foresight.Enhancing organizational performance, so as to deliver sustainable change.Developing and connecting people, so they can deliver impact, and Accrediting achievement, so you can be recognised.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 22800
+      },
+      "image_url": "https://i1.feedspot.com/4837713.jpg?t=1611131114"
+    },
+    {
+      "title": "HEPI Blog",
+      "feed_url": "https://www.hepi.ac.uk/category/blog/feed/",
+      "website_url": "https://www.hepi.ac.uk/category/blog/",
+      "description": "The Higher Education Policy Institute was established in 2002 to shape the higher education policy debate through evidence. We are UK-wide, independent and non-partisan devoted exclusively to higher education.",
+      "followers": {
+        "twitter": 22200
+      },
+      "image_url": "https://i1.feedspot.com/4654497.jpg?t=1617201110"
+    },
+    {
+      "title": "Office for Students Blog",
+      "feed_url": "https://www.officeforstudents.org.uk/news-blog-and-events/blog/rss/",
+      "website_url": "https://www.officeforstudents.org.uk/news-blog-and-events/blog/",
+      "description": "The Office for Students (OfS) is the independent regulator of higher education in England. We aim to ensure that every student, whatever their background, has a fulfilling experience of higher education that enriches their lives and careers.",
+      "followers": {
+        "facebook": 762,
+        "twitter": 20700
+      },
+      "image_url": "https://i1.feedspot.com/5285498.jpg?t=1622178492"
+    },
+    {
+      "title": "SRHE",
+      "feed_url": "https://srheblog.com/feed/",
+      "website_url": "https://srheblog.com/",
+      "description": "The Society for Research into Higher Education is an independent and financially self-supporting international learned society, advancing the understanding of Higher Education through research and scholarship.",
+      "followers": {
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/4655043.jpg?t=1617258940"
+    },
+    {
+      "title": "Edumundo Blog",
+      "feed_url": "https://www.edumundo.com/en/blog/rss.xml",
+      "website_url": "https://www.edumundo.com/en/blog",
+      "description": "Explores topics relevant to e-learning within Higher Education, such as student engagement, student onboarding, experiential learning, and student-centred learning. Our mission is to provide higher education institutions with the most effective, updated learning materials for the students of today!",
+      "followers": {
+        "twitter": 49
+      },
+      "image_url": "https://i1.feedspot.com/5303569.jpg?t=1626696323"
+    },
+    {
+      "title": "The Guardian | Higher education",
+      "feed_url": "https://www.theguardian.com/education/higher-education/rss",
+      "website_url": "https://www.theguardian.com/education/higher-education",
+      "description": "Follow us to keep up with latest news and articles on Higher Education from The Guardian, world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4655379.jpg?t=1617200905"
+    },
+    {
+      "title": "Critical Education | Public Interest Higher Education Journalism with a focus on finance",
+      "feed_url": "https://andrewmcgettigan.org/feed/",
+      "website_url": "https://andrewmcgettigan.org/",
+      "description": "This website is used for investigative work, much of which was picked up subsequently by mainstream and industry press. Much of its content has been devoted to student loans, the 'RAB charge' and private HE providers.",
+      "followers": {
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4654557.jpg?t=1617258961"
+    },
+    {
+      "title": "ALL @ Liverpool Blog",
+      "feed_url": "https://conted.gohigher.org.uk/feed/",
+      "website_url": "https://conted.gohigher.org.uk/",
+      "description": "This blog is written by students and staff of Go Higher, Liverpool University's unique one-year, part-time access Diploma for people aged 20 without the traditional entry qualifications for degree-level study. The programme has a long history of helping hundreds of talented individuals in to higher education, many of them people who had assumed that university was beyond their reach.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4654992.jpg?t=1617258999"
+    }
+  ]
+}

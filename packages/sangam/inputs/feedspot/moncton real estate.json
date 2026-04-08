@@ -1,0 +1,48 @@
+{
+  "category": "Moncton Real Estate",
+  "source_url": "https://rss.feedspot.com/moncton_real_estate_rss_feeds",
+  "feeds": [
+    {
+      "title": "GreenLight Property Management Inc. Blog",
+      "feed_url": "https://www.rentgreenlight.com/rss",
+      "website_url": "https://www.rentgreenlight.com/Blog.php",
+      "description": "Greenlight Property Management had the vision to change the standards for property management. At Greenlight Property Management we know that time is money, and most importantly, time is family. Our clients enjoy the freedom of being able to own multiple properties and reap the benefits of residual income with the peace of mind that their investments are in good hands. Get to know about different homes and information about them which has been uploaded in the listing section of blogs.",
+      "followers": {
+        "twitter": 275
+      },
+      "image_url": "https://i1.feedspot.com/5463073.jpg?t=1667554664"
+    },
+    {
+      "title": "Royal LePage Atlantic Blog",
+      "feed_url": "https://royallepageatlantic.com/feed/",
+      "website_url": "https://royallepageatlantic.com/blog/",
+      "description": "Royal LePage considers real estate to be as much a passion as it is a business. That's why they continually led the industry in offering high-quality real estate services. The Royal LePage Atlantic Blog is a place where you will find advice for your property, tips and tricks and more.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 1100,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5463090.jpg?t=1667555729"
+    },
+    {
+      "title": "Natalie Davison Blog",
+      "feed_url": "https://nataliedavison.ca/nataliesblog?format=rss",
+      "website_url": "https://nataliedavison.ca/nataliesblog",
+      "description": "Natalie Davison is an entrepreneur, REALTOR\u00ae and marketer. Natalie's professional career has been heavily influenced by her many years in residential real estate and new construction homebuilding as a sales & marketing. In her blogs Natalie leaves her audiences with an entirely new perspective about their lives and their businesses.",
+      "followers": {
+        "twitter": 750
+      },
+      "image_url": "https://i1.feedspot.com/5463071.jpg?t=1667554499"
+    },
+    {
+      "title": "Beth Locke, Realtor Blog",
+      "feed_url": "https://blocke.ca/blog/f.rss",
+      "website_url": "https://blocke.ca/blog",
+      "description": "For over 15 years Beth has been helping Buyers and Sellers in the Greater Moncton Area. Whether it's First Time Home Buyers, People Upsizing or Downsizing Beth is passionate about helping her clients make the right, educated, and informed decisions. Find home tips, decor tips, and information about buying and selling your house on the website.",
+      "followers": {
+        "facebook": 296
+      },
+      "image_url": "https://i1.feedspot.com/5463070.jpg?t=1667554967"
+    }
+  ]
+}

@@ -1,0 +1,304 @@
+{
+  "category": "Daily Mirror",
+  "source_url": "https://rss.feedspot.com/daily_mirror_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Mirror",
+      "feed_url": "https://www.mirror.co.uk/?service=rss",
+      "website_url": "https://www.mirror.co.uk/",
+      "description": "Daily Mirror provides all the big headlines, pictures, analysis, opinion and video on the stories, news, sport and celebrity gossip that matter to you. You will also find plus weather, horoscopes, competitions, sudoku, bingo and more.",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 1400000,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/41349.jpg?t=1751622163"
+    },
+    {
+      "title": "Daily Mirror \u00bb News | Latest Stories",
+      "feed_url": "https://www.mirror.co.uk/news/?service=rss",
+      "website_url": "https://www.mirror.co.uk/news/",
+      "description": "The latest UK and World news, from Mirror Online. Find the best stories, opinion, pictures and video on the day's events.",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 1400000,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/4889106.jpg?t=1542693932"
+    },
+    {
+      "title": "The Mirror \u00bb UK News",
+      "feed_url": "https://www.mirror.co.uk/news/uk-news/?service=rss",
+      "website_url": "https://www.mirror.co.uk/news/uk-news/",
+      "description": "Read the latest breaking news from around the UK. Get all the headlines, pictures, video and analysis on the stories that matter to you.",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 1400000,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/41349.jpg?t=1751622538"
+    },
+    {
+      "title": "Daily Mirror \u00bb Politics",
+      "feed_url": "https://www.mirror.co.uk/news/politics/?service=rss",
+      "website_url": "https://www.mirror.co.uk/news/politics/",
+      "description": "The latest in UK & World Politics news, along with leading opinion and analysis. Follow our live blogs for rolling coverage of breaking political events as they happen.",
+      "followers": {
+        "facebook": 190900,
+        "twitter": 102400,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/4889106.jpg?t=1542693932"
+    },
+    {
+      "title": "The Mirror \u00bb US News",
+      "feed_url": "https://www.mirror.co.uk/news/us-news/?service=rss",
+      "website_url": "https://www.mirror.co.uk/news/us-news/",
+      "description": "All articles about US News from The Mirror.",
+      "followers": {
+        "facebook": 188200,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/41349.jpg?t=1751622557"
+    },
+    {
+      "title": "Daily Mirror \u00bb Sport",
+      "feed_url": "https://www.mirror.co.uk/sport/?service=rss",
+      "website_url": "https://www.mirror.co.uk/sport/",
+      "description": "Read the latest Sport news, including Football, UFC, Boxing, Racing and more. Get the best match reports, opinion and live blogs from Mirror Sport now.",
+      "followers": {
+        "facebook": 216500,
+        "twitter": 1400000,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/4889106.jpg?t=1542693932"
+    },
+    {
+      "title": "The Mirror \u00bb World News",
+      "feed_url": "https://www.mirror.co.uk/news/world-news/?service=rss",
+      "website_url": "https://www.mirror.co.uk/news/world-news/",
+      "description": "Get the latest international news headlines, pictures, analysis, opinion and video. At Mirror.co.uk we've got all the big stories in Europe, Asia, Africa, the Middle East and Americas covered from The Mirror.",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 1400000,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/4894183.jpg?t=1751622082"
+    },
+    {
+      "title": "Daily Mirror \u00bb Football",
+      "feed_url": "https://www.mirror.co.uk/sport/football/?service=rss",
+      "website_url": "https://www.mirror.co.uk/sport/football/",
+      "description": "Read the latest Sport news, including Football, UFC, Boxing, Racing and more. Get the best match reports, opinion and live blogs from Mirror Sport now",
+      "followers": {
+        "facebook": 5700000,
+        "twitter": 779600,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/4889106.jpg?t=1542693932"
+    },
+    {
+      "title": "Mirror \u00bb 3am",
+      "feed_url": "https://www.mirror.co.uk/3am/?service=rss",
+      "website_url": "https://www.mirror.co.uk/3am/",
+      "description": "Mirror.co.uk is the online edition of The Mirror, one of Britain's most trusted news brands. Since 1903 we have brought words and pictures from the most important world events to millions of readers both in print and, more recently, online. We are committed to reporting the news accurately and with energy and vigor. Breaking up, making up, eloping, or just popping to the shops - whatever the celebrities are doing, you'll find all the news, pictures, and videos here at Mirror.co.uk.",
+      "followers": {
+        "facebook": 915700,
+        "twitter": 108400,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/4894149.jpg?t=1684197024"
+    },
+    {
+      "title": "Daily Mirror \u00bb TV",
+      "feed_url": "https://www.mirror.co.uk/tv/?service=rss",
+      "website_url": "https://www.mirror.co.uk/tv/",
+      "description": "Get the latest news, politics, sport, celebrity, TV and lifestyle from The Mirror. Big stories with a big heart, always with you in mind.",
+      "followers": {
+        "facebook": 403300,
+        "twitter": 47400,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/4889106.jpg?t=1542693932"
+    },
+    {
+      "title": "Daily Mirror \u00bb Weird News",
+      "feed_url": "https://www.mirror.co.uk/news/weird-news/?service=rss",
+      "website_url": "https://www.mirror.co.uk/news/weird-news/",
+      "description": "The best strange but true tales that have to be read to be believed at Mirror.co.uk.",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 23200,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/4889106.jpg?t=1542693932"
+    },
+    {
+      "title": "Daily Mirror \u00bb Technology",
+      "feed_url": "https://www.mirror.co.uk/tech/?service=rss",
+      "website_url": "https://www.mirror.co.uk/tech/",
+      "description": "Keep a close eye on the fast-moving world of tech with the latest news and comment at Mirror.co.uk",
+      "followers": {
+        "facebook": 30700,
+        "twitter": 21,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/4889106.jpg?t=1542693932"
+    },
+    {
+      "title": "Daily Mirror \u00bb Money",
+      "feed_url": "https://www.mirror.co.uk/money/?service=rss",
+      "website_url": "https://www.mirror.co.uk/money/",
+      "description": "Keep up with Money Latest news and expert money saving advice from Mirror Online.",
+      "followers": {
+        "facebook": 82100,
+        "twitter": 13800,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/4889106.jpg?t=1542693932"
+    },
+    {
+      "title": "Daily Mirror \u00bb Travel",
+      "feed_url": "https://www.mirror.co.uk/travel/?service=rss",
+      "website_url": "https://www.mirror.co.uk/travel/",
+      "description": "Looking for a great holiday? Whether it's a short city break or two-week blow-out on the other side of the world we've got it covered at Mirror.co.uk",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 1400000,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/4889106.jpg?t=1542693932"
+    },
+    {
+      "title": "The Mirror \u00bb Royals",
+      "feed_url": "https://www.mirror.co.uk/news/royals/?service=rss",
+      "website_url": "https://www.mirror.co.uk/news/royals/",
+      "description": "The latest UK and World news, from Mirror Online. Find the best stories, opinion, pictures and video on the day's events.",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 1400000,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/8545252.jpg"
+    },
+    {
+      "title": "Daily Mirror \u00bb Lifestyle",
+      "feed_url": "https://www.mirror.co.uk/lifestyle/?service=rss",
+      "website_url": "https://www.mirror.co.uk/lifestyle/",
+      "description": "Get the latest news, politics, sport, celebrity, TV and lifestyle from The Mirror. Big stories with a big heart, always with you in mind.",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 1400000,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/4894183.jpg?t=1751622169"
+    },
+    {
+      "title": "Daily Mirror \u00bb Science",
+      "feed_url": "https://www.mirror.co.uk/science/?service=rss",
+      "website_url": "https://www.mirror.co.uk/science/",
+      "description": "From robots and comets to weird animal behaviour, at Mirror.co.uk we put the universe's best stories under the microscope.",
+      "followers": {
+        "facebook": 30700,
+        "twitter": 1400000,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/4894183.jpg?t=1751617811"
+    },
+    {
+      "title": "Daily Mirror \u00bb Play",
+      "feed_url": "https://www.mirror.co.uk/play/?service=rss",
+      "website_url": "https://www.mirror.co.uk/play/",
+      "description": "Play online crosswords, sudoku & loads of other games from Mirror Online.",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 1400000,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/4894183.jpg?t=1751617822"
+    },
+    {
+      "title": "The Mirror \u00bb Style",
+      "feed_url": "https://www.mirror.co.uk/3am/style/?service=rss",
+      "website_url": "https://www.mirror.co.uk/3am/style/",
+      "description": "Breaking up, making up, eloping or just popping to the shops - whatever the celebrities are doing, you'll find all the news, pictures and videos here at Mirror.co.uk.",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 1400000,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/4513890.jpg?t=1605597073"
+    },
+    {
+      "title": "The Mirror \u00bb Gardening",
+      "feed_url": "https://www.mirror.co.uk/lifestyle/gardening/?service=rss",
+      "website_url": "https://www.mirror.co.uk/lifestyle/gardening/",
+      "description": "Helpful tips on getting the most from your garden with expert advice from Diarmuid Gavin at Mirror.co.uk",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 1400000,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/8545255.jpg"
+    },
+    {
+      "title": "The Mirror \u00bb Gaming",
+      "feed_url": "https://www.mirror.co.uk/gaming/?service=rss",
+      "website_url": "https://www.mirror.co.uk/gaming/",
+      "description": "All the latest gaming news, reviews of new game releases, exciting guides as well as discover everything from hardware news to deals.",
+      "followers": {
+        "facebook": 43100,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/8545256.jpg"
+    },
+    {
+      "title": "The Mirror \u00bb Food & Drink",
+      "feed_url": "https://www.mirror.co.uk/lifestyle/food-drink/?service=rss",
+      "website_url": "https://www.mirror.co.uk/lifestyle/food-drink/",
+      "description": "Check out the latest food and drink news, as well as tips on the best restaurants to visit, recipe guides and advice on how to stay healthy.",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 1400000,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/8545254.jpg"
+    },
+    {
+      "title": "The Mirror \u00bb Film",
+      "feed_url": "https://www.mirror.co.uk/film/?service=rss",
+      "website_url": "https://www.mirror.co.uk/film/",
+      "description": "Stay up to date with the latest film news, reviews, new releases and trailers from Mirror Online.",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 1400000,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/4894183.jpg?t=1751622054"
+    },
+    {
+      "title": "The Mirror \u00bb Health",
+      "feed_url": "https://www.mirror.co.uk/news/health/?service=rss",
+      "website_url": "https://www.mirror.co.uk/news/health/",
+      "description": "Find the latest health news and advice about diseases, vaccines, mental illness, healthcare in the UK, global health, nutrition, exercise and tips for living a healthy life.",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 1400000,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/8545253.jpg"
+    },
+    {
+      "title": "The Mirror \u00bb Shopping",
+      "feed_url": "https://www.mirror.co.uk/money/shopping-deals/?service=rss",
+      "website_url": "https://www.mirror.co.uk/money/shopping-deals/",
+      "description": "Get the latest news, politics, sport, celebrity, TV and lifestyle from The Mirror. Big stories with a big heart, always with you in mind.",
+      "followers": {
+        "facebook": 82100,
+        "twitter": 13800,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/8545251.jpg"
+    }
+  ]
+}

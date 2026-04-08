@@ -1,0 +1,900 @@
+{
+  "category": "Motivational",
+  "source_url": "https://rss.feedspot.com/motivational_rss_feeds",
+  "feeds": [
+    {
+      "title": "SUCCESS",
+      "feed_url": "https://www.success.com/feed/",
+      "website_url": "https://www.success.com/",
+      "description": "SUCCESS is your guide for personal and professional development through inspiration, motivation and training.",
+      "followers": {
+        "facebook": 3900000,
+        "twitter": 332700
+      },
+      "image_url": "https://i1.feedspot.com/5267925.jpg?t=1663742257"
+    },
+    {
+      "title": "Dumb Little Man",
+      "feed_url": "https://www.dumblittleman.com/feed/",
+      "website_url": "https://www.dumblittleman.com/category/motivation/",
+      "description": "Covers articles on happiness, success, money, how-to, lifehacks, relationships, health, business, and goals. Dumb Little Man is a popular online magazine offering practical life tips and life hacks for money and happiness.",
+      "followers": {
+        "facebook": 993,
+        "twitter": 9400,
+        "instagram": 235
+      },
+      "image_url": "https://i1.feedspot.com/86272.jpg?t=1639740270"
+    },
+    {
+      "title": "Live Bold & Bloom",
+      "feed_url": "https://liveboldandbloom.com/feed",
+      "website_url": "https://liveboldandbloom.com/",
+      "description": "Live Bold and Boom covers topics such as boosting confidence, personality type, relationships, self-improvement, self-awareness, life passion, habits, and lifestyle. Barrie Davenport is the founder of the top-ranked self-improvement site, Live Bold and Bloom, established in 2010. The main mission of this page is to give you actionable, easy strategies for improving your life, one small step at a time.",
+      "followers": {
+        "facebook": 142500,
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5006962.jpg?t=1659690862"
+    },
+    {
+      "title": "Nyauriwrites Blogs",
+      "feed_url": "https://nyauriwrites.com/feed/",
+      "website_url": "https://nyauriwrites.com/blog/",
+      "description": "My name is Neha Maharjan, also known as 'nyauri'. I am a passionate writer who loves to inspire and motivate people through my blog posts. I am a social media manager, and content writer and experimenting with my SEO knowledge. Through my blog, I share my personal experiences and insights on various topics related to personal growth, mental health, productivity, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5612530.jpg?t=1688042952"
+    },
+    {
+      "title": "Daily Motivation",
+      "feed_url": "https://www.dailymotivation.site/feed/",
+      "website_url": "https://www.dailymotivation.site/",
+      "description": "Get a little boost start your day with the Daily Motivation.site. Read uplifting stories, Self-care tips, Affirmation, and more inspiring articles and insights. Follow this feed for the best Personal Development and Motivational content!",
+      "followers": {
+        "facebook": 6100,
+        "instagram": 18000
+      },
+      "image_url": "https://i1.feedspot.com/5677451.jpg?t=1695636195"
+    },
+    {
+      "title": "Lifehack \u00bb Staying Motivated",
+      "feed_url": "https://www.lifehack.org/communication/motivation/feed",
+      "website_url": "https://www.lifehack.org/communication/motivation",
+      "description": "This is a place where you can find answers to all the questions in your life - answers that will actually help you overcome any limitations that are keeping you from your goals. Lifehack is your source for tips to help improve all aspects of your life.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 97300,
+        "instagram": 19700
+      },
+      "image_url": "https://i1.feedspot.com/5395747.jpg?t=1651317655"
+    },
+    {
+      "title": "The STRIVE",
+      "feed_url": "https://thestrive.co/feed/",
+      "website_url": "https://thestrive.co/",
+      "description": "Covers articles on motivation, money, success, self-improvement, self-discipline, inspiration, mindset and strive stories. The STRIVE was founded as a site to help you live life to its fullest. Our goal is to help you strive to live the life you have always imagined, to encourage you to go for your dreams and to support you in your struggle to reach those worthy goals that will add the most value to your life.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 888
+      },
+      "image_url": "https://i1.feedspot.com/5267926.jpg?t=1618406689"
+    },
+    {
+      "title": "Stunning Motivation",
+      "feed_url": "https://stunningmotivation.com/feed/",
+      "website_url": "https://stunningmotivation.com/",
+      "description": "Covers articles on goal setting, life, mindset, motivation, productivity, quotes and success. Stunning Motivation is a blog created by Shawn to motivate you to achieve your goals and inspire you to live a better and more successful life.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 40
+      },
+      "image_url": "https://i1.feedspot.com/5239038.jpg?t=1611569629"
+    },
+    {
+      "title": "Motivation Africa",
+      "feed_url": "https://motivation.africa/feed",
+      "website_url": "https://motivation.africa/",
+      "description": "Covers motivational quotes, motivational stories, relationship and how-to. Motivation Africa is the less boring side of life. Our goal is to educate, inspire, and share African stories to the World. We want to build a community of creative people who are ready and willing to promote true African stories.",
+      "followers": {
+        "facebook": 264,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5161328.jpg?t=1605700105"
+    },
+    {
+      "title": "Motivirus \u00bb Motivation",
+      "feed_url": "https://motivirus.com/category/motivation/feed/",
+      "website_url": "https://motivirus.com/category/motivation/",
+      "description": "Motivational and Inspirational quotes, articles and stories for a successful living. Motivirus was founded in July 2017 by Nikos Alepidis to inspire as many people as possible and help them to improve their own lives.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4740482.jpg?t=1605700431"
+    },
+    {
+      "title": "Wisdom Words",
+      "feed_url": "https://wisdomword.in/feed/",
+      "website_url": "https://wisdomword.in/",
+      "description": "Covers articles on career, health, life, society, students, travel and motivational quotes. Wisdom Words is your daily motivation hub.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5149305.jpg?t=1630760117"
+    },
+    {
+      "title": "Impossible Blog",
+      "feed_url": "https://impossiblehq.com/feed/",
+      "website_url": "https://impossiblehq.com/blog/",
+      "description": "Stay up to date with our impossible list, motivational videos and articles and more! IMPOSSIBLE started off as a blog by Joel Runyon - the founder - as a way to help him push his limits and do something impossible - when he sorely needed it. Since then, IMPOSSIBLE has grown into a platform and a business designed to help other people push their limits and do something impossible in their own lives.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 4300,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4871055.jpg?t=1657967731"
+    },
+    {
+      "title": "BigSpeak Blog",
+      "feed_url": "https://www.bigspeak.com/blog/feed/",
+      "website_url": "https://www.bigspeak.com/blog/",
+      "description": "Find Trending news and events trends from motivational speakers, business experts, and thought leaders for your next keynote, event, or conference. Whether you want a motivational speaker to inspire your team, a change management guru to generate meaningful organizational transformation or a celebrity speaker to bring a high-profile and touch of class to your event, BigSpeak Speakers Bureau is your one-stop speaker shop.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 346,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5395668.jpg?t=1651314252"
+    },
+    {
+      "title": "Jef Menguin Blog",
+      "feed_url": "https://jefmenguin.com/feed/",
+      "website_url": "https://jefmenguin.com/blog/",
+      "description": "Articles on public speaking, leadership, team building, personal development, procrastination, good life, motivation, self-growth and more. Jef Menguin is a motivational speaker, training consultant, entrepreneur, author and course creator.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 292
+      },
+      "image_url": "https://i1.feedspot.com/5260665.jpg?t=1616561071"
+    },
+    {
+      "title": "The Trite Tribe",
+      "feed_url": "https://hemantrjoshi.com/feed/",
+      "website_url": "https://hemantrjoshi.com/",
+      "description": "Hemant works at Indeed.com helping people get jobs. He writes fiction with a motivation to capture the details of society that are often missed. Some of his short stories can be found in the 'The Trite Tales' collection.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5035442.jpg?t=1605704608"
+    },
+    {
+      "title": "A Dose of Hope with Hope Sheree",
+      "feed_url": "https://adoseofhope.org/a-dose-of-hope-inspires/f.rss",
+      "website_url": "https://adoseofhope.org/a-dose-of-hope-inspires",
+      "description": "A Dose of Hope is designed to Help Other People Endure through life! This motivational blog inspires, coaches and guide the human spirit towards purpose!",
+      "followers": {
+        "twitter": 16
+      },
+      "image_url": "https://i1.feedspot.com/4951912.jpg?t=1605700848"
+    },
+    {
+      "title": "KRT Consulting",
+      "feed_url": "https://krtconsulting.net/blog-1/f.rss",
+      "website_url": "https://krtconsulting.net/blog-1",
+      "description": "Coaching to enlighten, empower & enrich so you can live an outstanding life! Weight-loss, personal coach, career coach and so much more!",
+      "followers": {
+        "facebook": 8600
+      },
+      "image_url": "https://i1.feedspot.com/5172096.jpg?t=1630389399"
+    },
+    {
+      "title": "Addicted 2 Success \u00bb Motivation",
+      "feed_url": "http://addicted2success.com/category/motivation/feed/",
+      "website_url": "https://addicted2success.com/category/motivation/",
+      "description": "This section of the blog features motivational and inspirational articles. Addicted2Success.com is empowers and inspires people by spreading knowledge of self development and life changing stories to the world.",
+      "followers": {
+        "facebook": 2000000,
+        "twitter": 514200,
+        "instagram": 559400
+      },
+      "image_url": "https://i1.feedspot.com/3998544.jpg?t=1626702063"
+    },
+    {
+      "title": "Speak4MC Blog",
+      "feed_url": "https://www.speak4mc.com/blog-feed.xml",
+      "website_url": "https://www.speak4mc.com/blog",
+      "description": "Speak4MC provides free tips, tools and inspiration to take on any challenge you face! Our blog gives guidance on inspiring staff, leaders and anyone considering change. Speak4MC provides expert advice and impactful motivation to start a new journey towards not only achieving your goals, but exceeding them.",
+      "followers": {
+        "facebook": 734,
+        "twitter": 386,
+        "instagram": 413
+      },
+      "image_url": "https://i1.feedspot.com/5395675.jpg?t=1651311778"
+    },
+    {
+      "title": "Doug Dvorak Blog",
+      "feed_url": "https://dougdvorak.com/feed/",
+      "website_url": "https://dougdvorak.com/blog/",
+      "description": "Doug is one of the most well-traveled keynote motivational speakers available today. Doug has earned his spot in the motivational speaking hall of fame. He has also been inducted into the International Who's Who of Professional Speaking. Doug Dvorak has trained and impacted over one million people in each of the fifty states and in over 107 countries. Doug dedicates hours of research to each of his presentations. This dedication allows him to craft personal messages that foster real connections and atmospheres where audience members are able to learn and grow.",
+      "followers": {
+        "twitter": 10100,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5395670.jpg?t=1651311753"
+    },
+    {
+      "title": "Wishingwell Coaching Blog",
+      "feed_url": "https://wishingwellcoach.com/feed",
+      "website_url": "https://wishingwellcoach.com/blog/",
+      "description": "Wishingwell Coach by Jessica Sweet delivers practical, motivational content focused on career and personal development, with blog posts offering actionable tips.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 27300
+      },
+      "image_url": "https://i1.feedspot.com/5005653.jpg?t=1751279469"
+    },
+    {
+      "title": "The Daily Motivator",
+      "feed_url": "https://greatday.com/feed/dmfeed.xml",
+      "website_url": "https://www.greatday.com/",
+      "description": "Since 1995, people around the world have been finding motivation and inspiration on the web at The Daily Motivator. Originally started as a labor of love by Ralph Marston, the site has become one of the most popular and enduring destinations for daily positivity.",
+      "followers": {
+        "twitter": 113100,
+        "instagram": 7300
+      },
+      "image_url": "https://i1.feedspot.com/647887.jpg?t=1751279014"
+    },
+    {
+      "title": "Splendid Inspiration Blog",
+      "feed_url": "https://splendidinspiration.com/feed/",
+      "website_url": "https://splendidinspiration.com/blog/",
+      "description": "Discover a powerful inspiration blog with motivational tips to encourage and uplift your daily life. Start your journey toward purpose and positivity today.",
+      "followers": {
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/8543458.jpg?t=1753105384"
+    },
+    {
+      "title": "Motivation Matter",
+      "feed_url": "https://motivationmatter.com/feed/",
+      "website_url": "https://motivationmatter.com/",
+      "description": "Motivation Matter emerges from the idea that everyone needs a daily dose of inspiration to navigate life. Whether it's an individual, manager, startup owner, parent, student, teacher, or a couple in a relationship, the blog emphasizes the importance of a positive spark to face everyday challenges with confidence and resilience.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8543460.jpg?t=1751277136"
+    },
+    {
+      "title": "BEAST BODY Fitness Blog",
+      "feed_url": "https://www.beastbody.org/blog-feed.xml",
+      "website_url": "https://www.beastbody.org/blog/",
+      "description": "BEAST BODY Fitness Blog motivates people to stay fit.",
+      "followers": {
+        "facebook": 3000,
+        "instagram": 12100
+      },
+      "image_url": "https://i1.feedspot.com/8543461.jpg?t=1751276731"
+    },
+    {
+      "title": "Motivate Me Blog",
+      "feed_url": "https://motivatemeblog.com/f.atom",
+      "website_url": "https://motivatemeblog.com/",
+      "description": "Read our motivational blog and find the inspiration and motivation you need to excel in life.",
+      "followers": {
+        "instagram": 17
+      },
+      "image_url": "https://i1.feedspot.com/8543449.jpg?t=1753105364"
+    },
+    {
+      "title": "Motiversity",
+      "feed_url": "https://motiversity.com/blog/feed/",
+      "website_url": "https://motiversity.com/blog/",
+      "description": "Motiversity is one of the largest motivational media companies in the world and provides motivational blogs.",
+      "followers": {
+        "facebook": 1400000,
+        "instagram": 810500
+      },
+      "image_url": "https://i1.feedspot.com/8543459.jpg?t=1753105387"
+    },
+    {
+      "title": "The Arte of Motivation",
+      "feed_url": "https://thearteofmotivation.blogspot.com/feeds/posts/default",
+      "website_url": "https://thearteofmotivation.blogspot.com/",
+      "description": "Motivational Moments for Better Worklife",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8543452.jpg?t=1753105369"
+    },
+    {
+      "title": "Rise&Inspire \u00bb Motivational Blogs",
+      "feed_url": "https://riseandinspire.co.in/category/motivational-blogs/feed/",
+      "website_url": "https://riseandinspire.co.in/category/motivational-blogs/",
+      "description": "Creating motivational blog posts on my website, 'riseandinspire.co.in,' involves selecting inspiring topics, sharing personal stories or insights, incorporating quotes and references, providing practical advice, engaging with readers, using visuals, and ending with a call to action. Regularly publishing such content and promoting it helps inspire and uplift my audience, building a dedicated readership seeking motivation\u2026",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8543456.jpg?t=1753105377"
+    },
+    {
+      "title": "Motivation For Life Blog",
+      "feed_url": "https://motivateforlife.com/feed/",
+      "website_url": "https://motivateforlife.com/blog/",
+      "description": "Your Daily Dose of Motivation Welcome to the blog - a space where words inspire, stories transform, and ideas ignite personal growth. Explore insightful articles, powerful quotes, and actionable tips to fuel your journey toward success and fulfillment. Dive in and let the inspiration flow! \u2022 Recent Posts Most Read Explore our most-read blogs filled",
+      "followers": {
+        "facebook": 1300,
+        "instagram": 372
+      },
+      "image_url": "https://i1.feedspot.com/8543454.jpg?t=1753105374"
+    },
+    {
+      "title": "The Conversation \u00bb Motivation",
+      "feed_url": "https://theconversation.com/topics/motivation-3398/articles.atom",
+      "website_url": "https://theconversation.com/topics/motivation-3398/",
+      "description": "Browse Motivation news, research and analysis from The Conversation",
+      "followers": {
+        "facebook": 117400,
+        "twitter": 65300,
+        "instagram": 54600
+      },
+      "image_url": "https://i1.feedspot.com/8543448.jpg?t=1753105363"
+    },
+    {
+      "title": "Positive News",
+      "feed_url": "https://positivenewsfoundation.org/feed/",
+      "website_url": "https://positivenewsfoundation.org/",
+      "description": "All positive world news at one central place. In English only. Here you can read the best uplifting, happy news that is happening around us. Read and subscribe",
+      "followers": {
+        "facebook": 20700,
+        "twitter": 13,
+        "instagram": 102
+      },
+      "image_url": "https://i1.feedspot.com/8543457.jpg?t=1753105380"
+    },
+    {
+      "title": "Neuroscience News \u00bb Motivation",
+      "feed_url": "https://neurosciencenews.com/neuroscience-terms/motivation/feed/",
+      "website_url": "https://neurosciencenews.com/neuroscience-terms/motivation/",
+      "description": "motivation from Neuroscience News features breaking science news from research labs, scientists and colleges around the world.",
+      "followers": {
+        "facebook": 257600,
+        "twitter": 503300,
+        "instagram": 181600
+      },
+      "image_url": "https://i1.feedspot.com/8543451.jpg?t=1753105368"
+    },
+    {
+      "title": "Life Goals Magazine",
+      "feed_url": "https://lifegoalsmag.com/feed/",
+      "website_url": "https://lifegoalsmag.com/",
+      "description": "Life Goals is focused on millennial women who aspire to do more, be more, see more, and learn more. This online magazine is all about consciously choosing to work towards being the best versions of ourselves that we can be. Life Goals was created for a collaborative space where we could showcase voices from around the world and express different experiences and tips on how to be our best selves.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 658,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4647191.jpg?t=1657969159"
+    },
+    {
+      "title": "I Will Teach You To Be Rich Blog",
+      "feed_url": "https://www.iwillteachyoutoberich.com/feed",
+      "website_url": "https://www.iwillteachyoutoberich.com/blog/",
+      "description": "I Will Teach You To Be Rich Blog gives information related to career, personal development and growth of business.",
+      "followers": {
+        "twitter": 295900,
+        "instagram": 921500
+      },
+      "image_url": "https://i1.feedspot.com/4691951.jpg?t=1751264114"
+    },
+    {
+      "title": "Marc and Angel Blog",
+      "feed_url": "https://feeds.feedburner.com/MarcAndAngel",
+      "website_url": "https://www.marcandangel.com/",
+      "description": "Articles on happiness, productivity, emotional intelligence, relationships, health, aspiration, life, money, general self-improvement and more. Marc and Angel Chernoff are New York Times bestselling authors, professional coaches, full-time students of life, admirers of the human spirit, and have been recognized by Forbes as having 'one of the most popular personal development blogs.' They share inspirational advice and practical tips for life.",
+      "followers": {
+        "twitter": 47700,
+        "instagram": 104000
+      },
+      "image_url": "https://i1.feedspot.com/780652.jpg?t=1605707678"
+    },
+    {
+      "title": "The Positivity Blog",
+      "feed_url": "https://feeds.feedburner.com/ThePositivityblog-PutSomePersonalDevelopmentAndPositivityIntoYourLife",
+      "website_url": "https://www.positivityblog.com/",
+      "description": "Find articles on happiness, self-esteem, productivity and social skills. Hi, I'm Henrik Edberg, since 2006 I've written about self-esteem and happiness and much more. I create courses, a blog, and a newsletter about increasing your happiness and awesomeness.",
+      "followers": {
+        "facebook": 37500,
+        "twitter": 7500
+      },
+      "image_url": "https://i1.feedspot.com/5003842.jpg?t=1659519803"
+    },
+    {
+      "title": "Frank Sonnenberg Online Blog",
+      "feed_url": "https://www.franksonnenbergonline.com/feed/",
+      "website_url": "https://www.franksonnenbergonline.com/",
+      "description": "Articles on relationships, networking, family, trust and integrity, communication, leadership, life balance, self-help, business management, sales tips and career advice. Frank Sonnenberg is an award-winning author and a well-known advocate for moral character, personal values, and personal responsibility.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 89200,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4636153.jpg?t=1605707698"
+    },
+    {
+      "title": "Positive Provocations",
+      "feed_url": "https://positiveprovocations.com/feed/",
+      "website_url": "https://positiveprovocations.com/",
+      "description": "Positive Provocations blog is managed and owned by Zeenat a counseling psychologist, spiritual counselor, motivational speaker, naturopath, and holistic healer. She realized that with loving care and just enough positivity in thoughts and actions, everything can be achieved, not only personally but professionally as well. Explore more through her blog about all that she knows to help you heal completely.",
+      "followers": {
+        "facebook": 43900,
+        "twitter": 3400,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4524039.jpg?t=1605694598"
+    },
+    {
+      "title": "Steve Pavlina Blog",
+      "feed_url": "https://stevepavlina.com/feed/",
+      "website_url": "https://stevepavlina.com/",
+      "description": "StevePavlina.com is one of the most popular personal development websites in the world. Thousands of people come here each day for inspiration and motivation.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/359637.jpg?t=1751262831"
+    },
+    {
+      "title": "Possibility Change",
+      "feed_url": "http://feeds.feedburner.com/TheChangeBlog",
+      "website_url": "https://possibilitychange.com/",
+      "description": "Features stories on topics such as addiction, adversity, anxiety, career, confidence, creativity, depression, exercise & fitness, fear & courage, goals & dreams, gratitude, happiness, health & wellness, life passion & purpose, meditation & mindfulness, motivation, relationship, success, self discovery & improvement, forgiveness, and more. Possibility Change features over one thousand stories related to personal change with inspiration and practical actions to change your life.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/635740.jpg?t=1605704712"
+    },
+    {
+      "title": "1000 Spotlights",
+      "feed_url": "https://www.1000spotlights.com/blog-feed.xml",
+      "website_url": "https://www.1000spotlights.com/",
+      "description": "1000 Spotlights is part of Los Angeles-based UGSI, LLC, which also owns SpeakerPost.com. Through a series of interview questions, we explore intrinsic motivations behind why we give, and talk with those inclined to make a difference in the lives of others.",
+      "followers": {
+        "facebook": 265,
+        "twitter": 104,
+        "instagram": 7
+      },
+      "image_url": "https://i1.feedspot.com/5593591.jpg?t=1686287589"
+    },
+    {
+      "title": "Steffan Lynch Blog",
+      "feed_url": "https://steffanlynch.com/feed/",
+      "website_url": "https://steffanlynch.com/blog/",
+      "description": "The core of everything I do is a mission to share my life, story and lessons, in the hope that it inspires each of our best selves whatever that means to you. My life is unique to yours as yours is to mine. But not so much that we can't share, grow and learn together. So I'm doing my best to share those wise words, meaningful conversations, journal entries and everything in between so we can all grow together.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5709877.jpg?t=1699613468"
+    },
+    {
+      "title": "Jillian Haslam Blog",
+      "feed_url": "https://www.jillianhaslam.com/blog-feed.xml",
+      "website_url": "https://www.jillianhaslam.com/blogs",
+      "description": "Jillian Haslam is a Corporate & Motivational Speaker and an Author of two best-selling books 'A Voice Out of Poverty' & 'The Irrepressible Mind. Her blog covers a variety of topics including Motivation and Inspirational Posts. Learn actionable tips and insights that can steer your career path towards success and content.",
+      "followers": {
+        "facebook": 15200,
+        "twitter": 534,
+        "instagram": 11000
+      },
+      "image_url": "https://i1.feedspot.com/6700133.jpg?t=1706893368"
+    },
+    {
+      "title": "The Utopian Life",
+      "feed_url": "https://theutopianlife.com/feed/",
+      "website_url": "https://theutopianlife.com/",
+      "description": "Simple tips for living a meaningful life. Articles include mindset, productivity, healthy living, relationships, psychology, and philosophy.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 8700
+      },
+      "image_url": "https://i1.feedspot.com/5267927.jpg?t=1651317060"
+    },
+    {
+      "title": "Stephen Guise Blog",
+      "feed_url": "https://stephenguise.com/blog/feed/",
+      "website_url": "https://stephenguise.com/blog/",
+      "description": "Stephen Guise, the founder of a blog that proves motivational to a large number of people does not himself believe in philosophy of motivation. Stephen says what he writes is 12% inspiration and 88% logic. Stephen Guise has written a book called 'Mini Habits' for anyone who is struggling with self-confidence.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4519029.jpg?t=1605700441"
+    },
+    {
+      "title": "INSPIRED YOU!",
+      "feed_url": "https://inspiredyou12.blogspot.com/feeds/posts/default",
+      "website_url": "https://inspiredyou12.blogspot.com/",
+      "description": "A blog based on motivational and inspirational articles. In this blog, you will get motivational quotes, and articles to boost up your motivation.",
+      "followers": {
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/5221832.jpg?t=1606897437"
+    },
+    {
+      "title": "Motivational Brains",
+      "feed_url": "https://feeds.feedburner.com/MotivationalBrains",
+      "website_url": "https://lifestreamsabout.blogspot.com/",
+      "description": "A Motivational blog enriching your minds, here you will find motivational quotes for success, motivational quotes about life and much more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5192747.jpg?t=1605701692"
+    },
+    {
+      "title": "Motivational Humorist Speaker Blog",
+      "feed_url": "https://megsoper.com/blog/feed/",
+      "website_url": "https://megsoper.com/blog/",
+      "description": "Pump up your next event with Meg Soper! She performs her laugh out loud, inspirational keynote presentations & workshops across North America. Meg Soper is a leading motivational humorist for organizations in North America.",
+      "followers": {
+        "facebook": 546,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4519533.jpg?t=1614173888"
+    },
+    {
+      "title": "SEO Backlinks",
+      "feed_url": "https://motivking.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://motivking.blogspot.com/search/label/Self%20Motivation?&max-results=5",
+      "description": "Motivking is the best website in the world. A blog about the motivation for Everyman in the world. Get Motivation stories, Motivation studies Motivated person.",
+      "followers": {
+        "facebook": 133,
+        "twitter": 41
+      },
+      "image_url": "https://i1.feedspot.com/5198099.jpg?t=1605700857"
+    },
+    {
+      "title": "Burning Desires Motivation",
+      "feed_url": "https://burningdesiresmotivation.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://burningdesiresmotivation.blogspot.com/",
+      "description": "This is not just a normal blog, but rather, a community of warriors and beasts who have the burning desire towards their aims or goals in life. This website here will help you solve all of your problems and motivate you to become a beast in your life. Get ready to beat any competition in your life, because the purpose of this website is to make you identify all your meta-human qualities and help you succeed in your life.",
+      "followers": {
+        "twitter": 30
+      },
+      "image_url": "https://i1.feedspot.com/5055297.jpg?t=1605701862"
+    },
+    {
+      "title": "Silent Motivations",
+      "feed_url": "https://feeds.feedburner.com/silentmotivations",
+      "website_url": "https://silentmotivations.com/category/motivations/",
+      "description": "This website is all about spiritual thoughts and forecasting more divine and optimistic view towards common and day to day life situations and problems.",
+      "followers": {
+        "facebook": 15900,
+        "twitter": 6,
+        "instagram": 506
+      },
+      "image_url": "https://i1.feedspot.com/4969143.jpg?t=1605701872"
+    },
+    {
+      "title": "Life & Motivation",
+      "feed_url": "https://keys2motivation.wordpress.com/feed/",
+      "website_url": "https://keys2motivation.wordpress.com/",
+      "description": "My name is Jalon Sangster. In this blog, I would like to provide information on how important it is to stay motivated throughout life. The moment you loose motivation is the moment you lose faith in everything. Im here to make sure you stay motivated and make sure you keep the faith. I will provide tips, personal experiences and qoutes that will motivate you. Being motivated and staying motivated will result in great things to happen in your life. If it happen for me, it can happen for you.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5037154.jpg?t=1628317966"
+    },
+    {
+      "title": "Motivate yourself each and every day",
+      "feed_url": "https://motivateyourselfeachandeveryday.tumblr.com/rss",
+      "website_url": "https://motivateyourselfeachandeveryday.tumblr.com/",
+      "description": "A space where you can find your daily motivation.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4519624.jpg"
+    },
+    {
+      "title": "Combining Dreams",
+      "feed_url": "http://feeds.feedburner.com/Combiningdreams",
+      "website_url": "https://combiningdreams.blogspot.com/",
+      "description": "This is the right place for those who love food,travelling and music and also motivation.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5040757.jpg?t=1605705846"
+    },
+    {
+      "title": "Bemore Store",
+      "feed_url": "https://www.bemorestore.com/blogs/principles-of-life.atom",
+      "website_url": "https://www.bemorestore.com/blogs/principles-of-life",
+      "description": "Bemore is the brand to inspire men and women from all walks to life to overcome obstacles, achieve their goals, hit success, and live life on their own terms.",
+      "followers": {
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5043127.jpg"
+    },
+    {
+      "title": "MOTIVE OF LIFE",
+      "feed_url": "https://lifeproblemssolvehappily.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://lifeproblemssolvehappily.blogspot.com/",
+      "description": "How to understand the Goal of life, the purpose of life? Importance of living? self-helping? How to be happy? How to love everyone? Life Motivational quotes for everyone achieving success for life, motivation for a student, inspiring story quotes, and much more..",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5193426.jpg?t=1605706552"
+    },
+    {
+      "title": "The home of hope",
+      "feed_url": "https://ekasiofficial.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://ekasiofficial.blogspot.com/",
+      "description": "The home of hope is designed to inspire and give hope through motivation. Follow this blog to read motivational articles and stories.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5180943.jpg"
+    },
+    {
+      "title": "Reform & Motivate",
+      "feed_url": "https://yashuathereformer.wordpress.com/feed/",
+      "website_url": "https://yashuathereformer.wordpress.com/",
+      "description": "Accelerated Motivation Towards Success!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5148298.jpg?t=1605706392"
+    },
+    {
+      "title": "aamazingstory",
+      "feed_url": "https://aamazingstory.wordpress.com/feed/",
+      "website_url": "https://aamazingstory.wordpress.com/",
+      "description": "Follow to get updates from this blog written by Manoj Prajapati.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5156456.jpg"
+    },
+    {
+      "title": "Paballo",
+      "feed_url": "https://paballomotivations.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://paballomotivations.blogspot.com/",
+      "description": "Get motivational posts by following Paballo blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5157319.jpg"
+    },
+    {
+      "title": "The Brave Queen",
+      "feed_url": "https://estherllio.blogspot.com/feeds/posts/default",
+      "website_url": "https://estherllio.blogspot.com/",
+      "description": "Keep up with articles from The Brave Queen.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5160539.jpg"
+    },
+    {
+      "title": "ArticleRG",
+      "feed_url": "https://feeds.feedburner.com/blogspot/LQuXw",
+      "website_url": "https://articlerg.blogspot.com/?m=1",
+      "description": "Hello friends, I am a blogger, I have learned a lot from my life, I share my point with you people, tell some real facts of life.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5164080.jpg?t=1614174978"
+    },
+    {
+      "title": "MOTIVATIONAL PoohTALKS",
+      "feed_url": "https://puhuthakur.blogspot.com/feeds/posts/default",
+      "website_url": "https://puhuthakur.blogspot.com/p/homepage.html",
+      "description": "In this blog, you will find various motivational articles, stories, sayings, and much more. Follow this blog to know more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5178592.jpg"
+    },
+    {
+      "title": "Life's way",
+      "feed_url": "https://keeponmotivatingme.blogspot.com/feeds/posts/default",
+      "website_url": "https://keeponmotivatingme.blogspot.com/",
+      "description": "This Blog is about motivating people,encouraging to be healthy,talking about great people's success and general aspects of life. LIFE'S WAY talks about the psychological aspect of an individual .Its all about in what way one should live its life so that he can achieve success. It also talks about one's emotional behaviour where he get stuck.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5274665.jpg?t=1619777091"
+    },
+    {
+      "title": "Funny Motivational Speaker Amy Dee's Blogs & Videos",
+      "feed_url": "https://amydeespeaker.com/feed/",
+      "website_url": "https://amydeespeaker.com/amys-blog-funny-motivational-speaker/",
+      "description": "Amy's high energy, humorous, and captivating message motivates and inspires audience members to recognize that their destiny is paved with the everyday choices they make. Amy's sense of humor, warmth, authenticity have touched and changed many lives. Read Amy Dee's Insightful, Motivational Blog with Tips for Choosing the Life You Want, Emotional Intelligence & Resilience. Follow this blog feed for updates!",
+      "followers": {
+        "facebook": 435,
+        "twitter": 499
+      },
+      "image_url": "https://i1.feedspot.com/5267928.jpg?t=1618404253"
+    },
+    {
+      "title": "Rolistance Blog",
+      "feed_url": "https://rolistance.home.blog/feed/",
+      "website_url": "https://rolistance.home.blog/",
+      "description": "Author Anne Mary Ninsiima Romeo provides motivation and inspirational articles to keep you powered in your search for a more fulfilling life.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5120521.jpg?t=1605700219"
+    },
+    {
+      "title": "Sarasar Vivek",
+      "feed_url": "https://sarasarvivek.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://sarasarvivek.blogspot.com/",
+      "description": "This blog will display quality readings with intention to help strengthen our sarasar vivek i.e. power of discretion.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4954698.jpg?t=1605701795"
+    },
+    {
+      "title": "The Juice Box",
+      "feed_url": "https://thejuicebox1.blogspot.com/feeds/posts/default",
+      "website_url": "https://thejuicebox1.blogspot.com/",
+      "description": "The Juice Box is a motivational blog to help inspire people in their daily life through the personal experiences of a college student.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5237804.jpg?t=1611130539"
+    },
+    {
+      "title": "Your Personal Motivator",
+      "feed_url": "https://mannbhilware.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://mannbhilware.blogspot.com/?m=1",
+      "description": "We simply provide you motivation, motivational quotes, motivational stories.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5184214.jpg?t=1605701459"
+    },
+    {
+      "title": "Get Motivation Blog",
+      "feed_url": "https://www.getmotivation.com/motivationblog/feed/atom/",
+      "website_url": "https://www.getmotivation.com/motivationblog/",
+      "description": "Get Motivation is one of the best motivational blogs, focusing purely on motivational articles, stories and quotes.",
+      "followers": {
+        "twitter": 12500
+      },
+      "image_url": "https://i1.feedspot.com/969234.jpg"
+    },
+    {
+      "title": "NEVER STOP #RUKNA NAHI Blog",
+      "feed_url": "https://motivationaldiaries.home.blog/feed/",
+      "website_url": "https://motivationaldiaries.home.blog/",
+      "description": "A passion to motivate and guide people. Follow my blog to get new content delivered to your inbox.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5051331.jpg"
+    },
+    {
+      "title": "FLY, BLACK BOY Blogs",
+      "feed_url": "https://flyblackboy.com/feed/",
+      "website_url": "https://flyblackboy.com/home/",
+      "description": "Visit the post for more.",
+      "followers": {
+        "twitter": 772,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/8543450.jpg?t=1753105366"
+    },
+    {
+      "title": "Uplift My Mind Blogs \u00bb Motivation",
+      "feed_url": "https://upliftmymind.com/feed/",
+      "website_url": "https://upliftmymind.com/motivational-blogs-all-posts/",
+      "description": "Explore our Motivational blogs for inspiring posts that uplift and empower. Dive into a world of positivity and transformation.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8543453.jpg?t=1753105370"
+    },
+    {
+      "title": "Brendon Burchard Blog",
+      "feed_url": "https://brendon.com/feed/",
+      "website_url": "https://brendon.com/blog/",
+      "description": "Explore secrets to an energized, engaged, and fulfilling life from #1New York Times bestselling author Brendon Burchard. Brendon Burchard is the world's leading high-performance coach and founder of GrowthDay.com",
+      "followers": {
+        "facebook": 5000000,
+        "twitter": 96800,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/4944938.jpg?t=1659691042"
+    },
+    {
+      "title": "Tiny Buddha Blog",
+      "feed_url": "https://tinybuddha.com/feed",
+      "website_url": "https://tinybuddha.com/blog-posts/",
+      "description": "Covers articles on happiness, motivation, inspiration, love, relationships, meaning & passion, possibilities, mindfulness, yoga, spirituality, simplicity, minimalism, work fulfillment and letting go.Tiny Buddha is about reflecting on simple wisdom and learning new ways to apply it to our complex lives complete with responsibilities, struggles, dreams, and relationships.",
+      "followers": {
+        "facebook": 5500000,
+        "twitter": 634900,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/5573.jpg?t=1606733716"
+    },
+    {
+      "title": "Success Consciousness Blog",
+      "feed_url": "https://www.successconsciousness.com/blog/",
+      "website_url": "https://www.successconsciousness.com/blog/",
+      "description": "You will find the articles highly motivating, focusing on improvement, growth, happiness, positivity, meditation, mindfulness, lifestyle, and relationships. Remez Sasson, the author and creator of the website. SuccessConsciousness.com writes from his personal experience and focus on the practical side, and give practical information, guidance and advice.",
+      "followers": {
+        "facebook": 25100,
+        "twitter": 5600,
+        "instagram": 316
+      },
+      "image_url": "https://i1.feedspot.com/647865.jpg?t=1659691236"
+    },
+    {
+      "title": "Zen Habits",
+      "feed_url": "https://zenhabits.net/archives/",
+      "website_url": "https://zenhabits.net/archives/",
+      "description": "Zen Habits is about finding simplicity and mindfulness in the daily chaos of our lives. It's about clearing the clutter so we can focus on what's important, create something amazing, and find happiness. Leo Babauta is the Creator of Zen Habits living in San Diego, California.",
+      "followers": {
+        "facebook": 17400,
+        "twitter": 162800
+      },
+      "image_url": "https://i1.feedspot.com/4522589.jpg?t=1639736030"
+    },
+    {
+      "title": "Habit Stacker",
+      "feed_url": "https://thehabitstacker.com/feed/",
+      "website_url": "https://thehabitstacker.com/",
+      "description": "My name is Ian and I want to make sure you understand how I got here. The journey to Habit Stacker did not begin in a typical way. WeWake was changed to Habit Stacker. I created a course to teach people how to build habits, and shifted the mobile app to focus on habits.",
+      "followers": {
+        "twitter": 931
+      },
+      "image_url": "https://i1.feedspot.com/5145258.jpg?t=1605699560"
+    },
+    {
+      "title": "Connie Podesta Blog",
+      "feed_url": "https://conniepodesta.com/feed/",
+      "website_url": "https://conniepodesta.com/blog/",
+      "description": "Motivational Keynote Speaker Connie Podesta shares insights, how-to's, innovation, and strategy in her stand out blog!",
+      "followers": {
+        "facebook": 70500,
+        "twitter": 6200
+      },
+      "image_url": "https://i1.feedspot.com/4297350.jpg?t=1605701854"
+    },
+    {
+      "title": "Inspirational Stories",
+      "feed_url": "https://www.inspirationalstories.com/feed/",
+      "website_url": "https://www.inspirationalstories.com/",
+      "description": "Our website is the best place for Inspirational Stories, Short Stories, Quotes, Poems, Proverbs and Love Quotes, Motivational and Inspirational Affirmations.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5147768.jpg"
+    },
+    {
+      "title": "The Minds Journal \u00bb Inspiration and Motivation",
+      "feed_url": "https://themindsjournal.com/inspiration/feed/",
+      "website_url": "https://www.scottmiker.com/",
+      "description": "In this section, you can find all the inspiration and motivation you will ever need to be the best you can be. Mind Journal is a Platform for Strong Awakened Individuals which has been created keeping in mind the importance of mental health in our daily lives.",
+      "followers": {
+        "facebook": 1900000,
+        "twitter": 11600,
+        "instagram": 319200
+      },
+      "image_url": "https://i1.feedspot.com/5395673.jpg?t=1651311768"
+    },
+    {
+      "title": "We Wishes",
+      "feed_url": "https://www.wewishes.com/feed",
+      "website_url": "https://www.wewishes.com/",
+      "description": "Wewishes.com is an online collection of inspiring quotes, motivational stories, startup stories, biography, festival events on every aspect of life where you would be able to find the value and power of yourself.",
+      "followers": {
+        "facebook": 219,
+        "twitter": 22
+      },
+      "image_url": "https://i1.feedspot.com/5159208.jpg?t=1605699556"
+    },
+    {
+      "title": "Ayietim Blog",
+      "feed_url": "https://ayipost.com/",
+      "website_url": "https://ayipost.com/",
+      "description": "Covers articles on money, people, poetry, relationships, self development, reviews and previews. Ayietim is a personal development and news blog.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4669953.jpg?t=1605701327"
+    },
+    {
+      "title": "Inspiration and motivation",
+      "feed_url": "https://inspiration-and-motivation.tumblr.com/rss",
+      "website_url": "https://inspiration-and-motivation.tumblr.com/",
+      "description": "Articles on motivation, inspiration, life, success, mindset and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4519637.jpg"
+    },
+    {
+      "title": "Coach Michael Taylor",
+      "feed_url": "https://www.coachmichaeltaylor.com/feed",
+      "website_url": "https://coachmichaeltaylor.com/blogs",
+      "description": "Coach Michael Taylor is a motivational speaker, entrepreneur, author, and a radio show host who helps people around the world attain more success in the midst of great challenges. He is equipped with sound consulting principles and well-validated techniques which produces amazing results.",
+      "followers": {
+        "facebook": 692,
+        "twitter": 289,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5121543.jpg?t=1605701849"
+    },
+    {
+      "title": "Go Beyond Success",
+      "feed_url": "https://www.blogger.com/feeds/5001969214769358260/posts/default",
+      "website_url": "https://successozebro.blogspot.com/",
+      "description": "Give the way to success, way to attain it, make your own way to live, and wins everywhere.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5121649.jpg"
+    },
+    {
+      "title": "Motivational Diaries Blog",
+      "feed_url": "https://motivationaldiaries.com/blog/feed/",
+      "website_url": "https://motivationaldiaries.com/blog/",
+      "description": "Motivational diaries is a combination of daily motivational articles, audios, books and videos for anyone looking to live an extraordinary life including individuals, families and corporates all around the globe.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4519539.jpg?t=1605707316"
+    },
+    {
+      "title": "Think Kindness Blog",
+      "feed_url": "https://thinkkindness.org/our-blog/feed/",
+      "website_url": "https://thinkkindness.org/blog/",
+      "description": "Think Kindness is a non-profit organization that inspires measurable acts of Kindness in schools & communities around the world.",
+      "followers": {
+        "facebook": 8800,
+        "twitter": 11300
+      },
+      "image_url": "https://i1.feedspot.com/4519535.jpg?t=1623663516"
+    }
+  ]
+}

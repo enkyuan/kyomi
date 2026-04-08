@@ -1,0 +1,24 @@
+{
+  "category": "Tunnel",
+  "source_url": "https://rss.feedspot.com/tunnel_rss_feeds",
+  "feeds": [
+    {
+      "title": "Transforge Blog",
+      "feed_url": "https://www.transforge.co.uk/feed/",
+      "website_url": "https://www.transforge.co.uk/blog/",
+      "description": "Transforge (UK) Ltd was established in 1990, as a family run business and have built up a solid and reliable reputation with the manufacture and supply of specialist items from small cable components to highly specialized structural steelwork to BSEN 1090 execution class 3. With over 30 years of experience in Steel Fabrication, Transforge has established a reputation for reliability, performance, service and expertise. Explore our blog to know more about our projects, tunnel technology and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5439115.jpg?t=1662465240"
+    },
+    {
+      "title": "Tunnel Business Magazine",
+      "feed_url": "https://tunnelingonline.com/feed/",
+      "website_url": "https://www.tml.de/en/blog/",
+      "description": "Tunnel Business Magazine is the leading publication covering the North American tunneling industry. Get the latest industry news and updates here.",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5439116.jpg?t=1662464834"
+    }
+  ]
+}

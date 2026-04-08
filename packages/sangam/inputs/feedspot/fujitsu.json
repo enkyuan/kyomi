@@ -1,0 +1,80 @@
+{
+  "category": "Fujitsu",
+  "source_url": "https://rss.feedspot.com/fujitsu_rss_feeds",
+  "feeds": [
+    {
+      "title": "Fujitsu PostgreSQL Blog",
+      "feed_url": "https://www.postgresql.fastware.com/blog/rss.xml",
+      "website_url": "https://www.postgresql.fastware.com/blog",
+      "description": "Covers articles regarding all aspects of PostgreSQL and FUJITSU Enterprise Postgres. Fujitsu is a leader in Postgres open-source DBMS - one of the world's most advanced open-source database systems.",
+      "followers": {
+        "twitter": 396
+      },
+      "image_url": "https://i1.feedspot.com/4918237.jpg?t=1620632999"
+    },
+    {
+      "title": "Fujitsu Blog",
+      "feed_url": "https://networkblog.global.fujitsu.com/feed/",
+      "website_url": "https://networkblog.global.fujitsu.com/",
+      "description": "Fujitsu Network Communications, Inc. is a trusted partner to a broad spectrum of customers across all industries, enabling them to realize the maximum value from their communications networks. A blog of Fujitsu focusing on Fujitsu laboratories, industry news, and networking.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4918146.jpg?t=1620632946"
+    },
+    {
+      "title": "Fujitsu",
+      "feed_url": "https://www.fujitsu.com/global/rss/news_rss.html",
+      "website_url": "https://www.fujitsu.com/global/about/resources/news/press-releases/",
+      "description": "Fujitsu co-creates with customers to help them digitalize with confidence. We provide innovative IT services and digital technologies including cloud, mobile, AI and security solutions.",
+      "followers": {
+        "facebook": 73800,
+        "twitter": 71200
+      },
+      "image_url": "https://i1.feedspot.com/4918251.jpg?t=1620632940"
+    },
+    {
+      "title": "Fujitsu UK & Ireland Blog",
+      "feed_url": "https://blog.uk.fujitsu.com/feed/",
+      "website_url": "https://www.fujitsu.com/uk/themes/security/",
+      "description": "At Fujitsu, we deliver ICT services and solutions that keep the UK and Ireland running. From enabling airline bookings and driving licenses through to banking transactions, high street shopping and much more besides, Fujitsu touches the lives of millions of people every day.",
+      "followers": {
+        "twitter": 10600
+      },
+      "image_url": "https://i1.feedspot.com/4918154.jpg?t=1620632950"
+    },
+    {
+      "title": "Fujitsu",
+      "feed_url": "https://digitalworkplace.global.fujitsu.com/feed/",
+      "website_url": "https://corporate-blog.global.fujitsu.com/fgb/",
+      "description": "Digital workplace news and advice for global technology leaders brought to you by Fujitsu and partners.",
+      "followers": {
+        "facebook": 73800,
+        "twitter": 71200
+      },
+      "image_url": "https://i1.feedspot.com/4918217.jpg?t=1620632956"
+    },
+    {
+      "title": "FUJITSU BLOG - Global",
+      "feed_url": "https://blog.global.fujitsu.com/fgb/feed/",
+      "website_url": "https://www.fujitsu.com/global/about/resources/news/newsroom.html",
+      "description": "The Fujitsu Blog brings you insights on the latest technology trends and innovations to transform your organization, covering AI, IoT, Blockchain, and much more.",
+      "followers": {
+        "facebook": 73800,
+        "twitter": 71200
+      },
+      "image_url": "https://i1.feedspot.com/4918163.jpg?t=1612182950"
+    },
+    {
+      "title": "Fujitsu",
+      "feed_url": "https://www.fujitsu.com/fts/rss/news_rss.html",
+      "website_url": "https://www.fujitsu.com/global/about/resources/news/newsroom.html",
+      "description": "News about Fujitsu innovative IT services and digital technologies including cloud, mobile, AI and security solutions from Fujitsu Newsroom.",
+      "followers": {
+        "facebook": 73800,
+        "twitter": 71200
+      },
+      "image_url": "https://i1.feedspot.com/4918240.jpg?t=1620632961"
+    }
+  ]
+}

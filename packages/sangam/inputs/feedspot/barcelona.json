@@ -1,0 +1,213 @@
+{
+  "category": "Barcelona",
+  "source_url": "https://rss.feedspot.com/barcelona_rss_feeds",
+  "feeds": [
+    {
+      "title": "Barcablog.com",
+      "feed_url": "https://barcablog.com/feed",
+      "website_url": "https://barcablog.com/",
+      "description": "FC Barcelona news and opinion columns. Home of The Barcelona Podcast. Bringing you the latest breaking Barca stories from the Camp Nou!",
+      "followers": {
+        "facebook": 619600,
+        "twitter": 10300,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4789894.jpg?t=1609575117"
+    },
+    {
+      "title": "Barcelona Navigator",
+      "feed_url": "https://barcelonanavigator.com/feed/",
+      "website_url": "https://barcelonanavigator.com/",
+      "description": "Barcelona Navigator is a city guide covering local events, hotels, restaurants, nightlife, and shopping.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 11200,
+        "instagram": 11900
+      },
+      "image_url": "https://i1.feedspot.com/4923710.jpg?t=1755492682"
+    },
+    {
+      "title": "Forever Barcelona Private Tours Blog",
+      "feed_url": "https://www.foreverbarcelona.com/feed/",
+      "website_url": "https://www.foreverbarcelona.com/travel-blog/",
+      "description": "Marta Laurent is the founder of ForeverBarcelona. This blog will help people getting a city overview so they can explore Barcelona on their own the rest of their stay, or show them their favorite areas in-depth, so they can make the most out of their time here, like them to get a nice mix of history, sites, fun stories, and local life, so Barcelona comes alive for them.",
+      "followers": {
+        "facebook": 589
+      },
+      "image_url": "https://i1.feedspot.com/4789969.jpg?t=1609575134"
+    },
+    {
+      "title": "All About FC Barcelona",
+      "feed_url": "https://www.allaboutfcbarcelona.com/feeds/posts/default",
+      "website_url": "https://www.allaboutfcbarcelona.com/",
+      "description": "A Blog dedicated to the Most prestigious Club in the world, FC Barcelona by an ardent fan. All the latest news, events, rumours and pictures from futbol club Barca.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/1265853.jpg?t=1609575147"
+    },
+    {
+      "title": "Barcelona Food Experience Blog",
+      "feed_url": "https://www.barcelonafoodexperience.com/blog?format=rss",
+      "website_url": "https://www.barcelonafoodexperience.com/blog",
+      "description": "Blog about eating in Barcelona: best restaurants, cool bars, foodie experiences, and healthy eating too. Hi! here in Barcelona Food Experience, we are gathering all the places we love. My main goals are to have happy readers who find useful and interesting content on the website and social media, and restaurants who receive the attention they deserve thanks to their dedication and hard work.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 1500,
+        "instagram": 107800
+      },
+      "image_url": "https://i1.feedspot.com/4641625.jpg?t=1609575150"
+    },
+    {
+      "title": "Barcinno",
+      "feed_url": "http://www.barcinno.com/feed/",
+      "website_url": "http://www.barcinno.com/",
+      "description": "Barcinno is the innovation hub for Barcelona's entrepreneurial and technology communities. As Barcelona's no 1 English-language tech news source, Barcinno spotlights new developments, growing startups, and exciting events, while offering an unparalleled channel for the rapidly growing entrepreneurial community to expand their presence locally as well as internationally.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 7600
+      },
+      "image_url": "https://i1.feedspot.com/4072215.jpg?t=1635405457"
+    },
+    {
+      "title": "Foodie in Barcelona",
+      "feed_url": "https://foodieinbarcelona.com/feed/?x=1",
+      "website_url": "https://foodieinbarcelona.com/",
+      "description": "Foodie in Barcelona is Suzy's quest to explore the shops, restaurants and cafes of Barcelona with the goal of finding the best places to eat and drink. This blog is about discovering Barcelona through its eateries",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 2100,
+        "instagram": 24600
+      },
+      "image_url": "https://i1.feedspot.com/4640381.jpg?t=1609575200"
+    },
+    {
+      "title": "Barcelona Photoblog",
+      "feed_url": "https://www.barcelonaphotoblog.com/feeds/posts/default",
+      "website_url": "https://www.barcelonaphotoblog.com/",
+      "description": "I am Carlos. Barcelona Photoblog is meant to portray the beauty of Barcelona through an extensive catalog of pictures accompanied by helpful information. Important aspects of artistic creation as well as snapshots of everyday life are always present in my portfolio.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 3700,
+        "instagram": 405
+      },
+      "image_url": "https://i1.feedspot.com/706341.jpg?t=1638617842"
+    },
+    {
+      "title": "Barcelona Brides Blog",
+      "feed_url": "https://www.barcelonabrides.com/feed/",
+      "website_url": "https://www.barcelonabrides.com/barcelona-wedding-blog/",
+      "description": "From research and budgeting to design and decoration, we can help you with everything related to your Barcelona wedding. We have agreements with local vendors, accommodation providers, transport and venues in order to make sure you get the best overall price for your event.",
+      "followers": {
+        "facebook": 426,
+        "instagram": 9200
+      },
+      "image_url": "https://i1.feedspot.com/4790098.jpg?t=1635582265"
+    },
+    {
+      "title": "ShBarcelona",
+      "feed_url": "https://www.shbarcelona.com/blog/en/feed/",
+      "website_url": "https://www.shbarcelona.com/blog/en/",
+      "description": "ShBarcelona's blog has gathered all the necessary information about Gaud\u00ed's town. In addition, you'll discover useful advice and recommendations, whether you stay for a few days or long term in Barcelona. Our blog will satisfy your needs and rapidly inform you about possible activities and Barcelona's daily life.",
+      "followers": {
+        "facebook": 2,
+        "twitter": 1400,
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/4790203.jpg?t=1609575121"
+    },
+    {
+      "title": "What to do in Barcelona - Enjoy Barcelona in total comfort",
+      "feed_url": "http://blog.barcelonaguidebureau.com/feed/",
+      "website_url": "http://blog.barcelonaguidebureau.com/",
+      "description": "Enjoy Barcelona in total comfort.Barcelona Guide Bureau (BGB) is a well-established travel agency that specialises in providing a wide range of fascinating tours in and around Barcelona and Catalonia. Our clear mission is to deliver high quality tour services with professional guides to ensure that the expectations of both our individual clients and travel agent clients are met.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 2900,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4790164.jpg?t=1609575130"
+    },
+    {
+      "title": "Barcelona's Best Food and Restaurants Blog FoodBarcelonaFoodBarcelona",
+      "feed_url": "http://www.foodbarcelona.com/feed/",
+      "website_url": "http://www.FoodBarcelona.com/",
+      "description": "Restaurant reviews and recipes in Barcelona. Barcelona food blog by professional restaurant reviewer who's lived in the city for over 20 years.",
+      "followers": {
+        "facebook": 402,
+        "twitter": 842
+      },
+      "image_url": "https://i1.feedspot.com/4789885.jpg?t=1609575143"
+    },
+    {
+      "title": "Why Visit Barcelona Blog",
+      "feed_url": "https://whyvisitbarcelona.com/feed/",
+      "website_url": "https://whyvisitbarcelona.com/blog/",
+      "description": "Find everything you need to plan your Barcelona trip on my Why Visit Barcelona blog. I'll help you to plan your perfect trip to Barcelona with all my tips and advice for the best things to see, do and eat in Barcelona from 5 years living in this fabulous city.",
+      "followers": {
+        "facebook": 360,
+        "twitter": 1700,
+        "instagram": 6700
+      },
+      "image_url": "https://i1.feedspot.com/5547552.jpg?t=1682068815"
+    },
+    {
+      "title": "AB Apartment Barcelona",
+      "feed_url": "https://feeds.feedburner.com/ApartmentBarcelonaGuide",
+      "website_url": "https://blog.apartmentbarcelona.com/",
+      "description": "The best travel guide for your stay in Barcelona! AB Apartment Barcelona has over 1000 fully furnished and equipped apartments to rent for short and long-term stays. Ideal for vacations, business trips or even moving to the city, we have a wide range of Barcelona apartments to choose from in a range of fantastic locations. From sea views apartments to apartments in Eixample and near Las Ramblas. Check Blog for information on the best activities and things to do in Barcelona, as well as tips on events, accommodation, and more.",
+      "followers": {
+        "facebook": 44000,
+        "twitter": 2100,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4790147.jpg?t=1609575163"
+    },
+    {
+      "title": "Barcelona Guide",
+      "feed_url": "https://www.webarcelona.net/rss.xml",
+      "website_url": "https://www.webarcelona.net/",
+      "description": "WeBarcelona is a travel guide which helps to organize your travel to Barcelona and reserve your accommodation, parking and more.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 508
+      },
+      "image_url": "https://i1.feedspot.com/4790534.jpg?t=1609575167"
+    },
+    {
+      "title": "Homage to BCN \u00bb A Blog About Barcelona",
+      "feed_url": "https://feeds.feedburner.com/h2bcn",
+      "website_url": "https://homagetobcn.com/",
+      "description": "A Barcelona blog about anything relating to the city of Barcelona.This blog includes Barcelona restaurants, food and many other things related to the beautiful city of Barcelona.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4789975.jpg?t=1609575206"
+    },
+    {
+      "title": "Barca Blaugranes, For Barcelona Fans",
+      "feed_url": "https://www.barcablaugranes.com/rss/index.xml",
+      "website_url": "https://www.barcablaugranes.com/",
+      "description": "FC Barcelona blog with all the latest news, opinion and rumours relating to FC Barcelona.",
+      "followers": {
+        "facebook": 168900,
+        "twitter": 28100
+      },
+      "image_url": "https://i1.feedspot.com/4789869.jpg?t=1609575107"
+    },
+    {
+      "title": "SuiteLife s Blog",
+      "feed_url": "https://suitelife.com/blog/feed/",
+      "website_url": "https://suitelife.com/blog/",
+      "description": "SuiteLife has beautiful furnished apartments all over Barcelona for rent and sale. We are a full-service, white glove apartment rental agency that specializes in helping foreigners and locals alike find the home of their dreams.Through our blogs we are constantly creating useful content to help them navigate the city.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 3700,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4790005.jpg?t=1613451209"
+    }
+  ]
+}

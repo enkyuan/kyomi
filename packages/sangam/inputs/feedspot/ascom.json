@@ -1,0 +1,122 @@
+{
+  "category": "As.com",
+  "source_url": "https://rss.feedspot.com/asdotcom_rss_feeds",
+  "feeds": [
+    {
+      "title": "As.com \u00bb Futbol",
+      "feed_url": "https://feeds.as.com/mrss-s/pages/as/site/as.com/section/futbol/portada/",
+      "website_url": "https://as.com/futbol/",
+      "description": "Noticias, resultados y directos de los equipos de f\u00fatbol de 1\u00aa y 2\u00aa divisi\u00f3n, Champions, Europa League, Copa del Rey, la Selecci\u00f3n, la Premier y mucho m\u00e1s.",
+      "followers": {
+        "facebook": 4300000,
+        "twitter": 3300000,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/7894431.jpg?t=1743570798"
+    },
+    {
+      "title": "As.com \u00bb Baloncesto",
+      "feed_url": "https://feeds.as.com/mrss-s/pages/as/site/as.com/section/baloncesto/portada/",
+      "website_url": "https://as.com/baloncesto/",
+      "description": "Baloncesto en AS.com - Noticias de baloncesto ACB, NBA, Euroliga y Eurocup adem\u00e1s del Eurobasket con resultados, clasificaciones y equipos en As.com.",
+      "followers": {
+        "facebook": 4300000,
+        "twitter": 3300000,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/5640562.jpg?t=1743570790"
+    },
+    {
+      "title": "As.com \u00bb Tenis",
+      "feed_url": "https://feeds.as.com/mrss-s/pages/as/site/as.com/section/tenis/portada/",
+      "website_url": "https://as.com/tenis/",
+      "description": "Noticias de tenis: torneos, masters 1000, grand slam y las clasificaciones de ATP y WTA con As.com, el principal diario deportivo en espa\u00f1ol.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7894425.jpg?t=1743570783"
+    },
+    {
+      "title": "As.com \u00bb Ciclismo",
+      "feed_url": "https://feeds.as.com/mrss-s/pages/as/site/as.com/section/ciclismo/portada/",
+      "website_url": "https://as.com/ciclismo/",
+      "description": "Noticias de ciclismo: ciclistas, grandes vueltas, Giro, Tour y Vuelta, clasificaciones, etapas y con As.com, el principal diario deportivo en espa\u00f1ol.",
+      "followers": {
+        "facebook": 4300000,
+        "twitter": 3300000
+      },
+      "image_url": "https://i1.feedspot.com/7894428.jpg?t=1743570774"
+    },
+    {
+      "title": "As.com \u00bb Mas Deporte",
+      "feed_url": "https://feeds.as.com/mrss-s/pages/as/site/as.com/section/masdeporte/portada/",
+      "website_url": "https://as.com/masdeporte/",
+      "description": "Noticias de otros deportes como: balonmano, f\u00fatbol sala, atlestismo, golf, vela y polideportivo en As.com, el principal diario deportivo en espa\u00f1ol.",
+      "followers": {
+        "facebook": 4300000,
+        "twitter": 3300000
+      },
+      "image_url": "https://i1.feedspot.com/7894430.jpg?t=1743570769"
+    },
+    {
+      "title": "As.com \u00bb Atletismo",
+      "feed_url": "https://feeds.as.com/mrss-s/pages/as/site/as.com/section/masdeporte/subsection/atletismo/",
+      "website_url": "https://as.com/masdeporte/atletismo/",
+      "description": "Atletismo en AS.com Noticias de atletismo: resultados y clasificaciones de los mundiales, circuito IAAF y criteriums con As.com, el principal diario deportivo en espa\u00f1ol.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7894433.jpg?t=1743570763"
+    },
+    {
+      "title": "As.com \u00bb Polideportivo",
+      "feed_url": "https://feeds.as.com/mrss-s/pages/as/site/as.com/section/masdeporte/subsection/polideportivo/",
+      "website_url": "https://as.com/masdeporte/polideportivo/",
+      "description": "Noticias de otros deportes como : balonmano, f\u00fatbol sala, atlestismo, golf, vela y polideportivo en As.com, el principal diario deportivo en espa\u00f1ol.",
+      "followers": {
+        "facebook": 4300000,
+        "twitter": 3300000
+      },
+      "image_url": "https://i1.feedspot.com/7894434.jpg?t=1743570750"
+    },
+    {
+      "title": "As.com \u00bb Golf",
+      "feed_url": "https://feeds.as.com/mrss-s/pages/as/site/as.com/section/masdeporte/subsection/golf/",
+      "website_url": "https://as.com/masdeporte/golf/",
+      "description": "Golf en AS.com Noticias de golf: resultados y clasificaciones de Masters, Opens y Tours de golf con As.com, el principal diario deportivo en espa\u00f1ol.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7894424.jpg?t=1743570743"
+    },
+    {
+      "title": "As.com \u00bb NFL",
+      "feed_url": "https://feeds.as.com/mrss-s/pages/as/site/as.com/section/masdeporte/subsection/nfl/",
+      "website_url": "https://as.com/masdeporte/nfl/",
+      "description": "Liga Nacional de F\u00fatbol Americano - NFL. \u00daltimas noticias, fotos, v\u00eddeos y jugadores de las 32 franquicias de F\u00fatbol Americano en espa\u00f1ol con AS.com.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7894426.jpg?t=1743570735"
+    },
+    {
+      "title": "As.com \u00bb Futbol sala",
+      "feed_url": "https://feeds.as.com/mrss-s/list/as/site/as.com/tag/futbol_sala_a/",
+      "website_url": "https://as.com/noticias/futbol-sala/",
+      "description": "Todos los \u00faltimos art\u00edculos sobre f\u00fatbol de As.com.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7894429.jpg?t=1743570722"
+    },
+    {
+      "title": "As.com \u00bb Opinion",
+      "feed_url": "https://feeds.as.com/mrss-s/pages/as/site/as.com/section/opinion/portada/",
+      "website_url": "https://as.com/opinion/",
+      "description": "Conoce la opini\u00f3n de nuestros columnistas a trav\u00e9s de sus mejores art\u00edculos en As.com, el principal diario deportivo en espa\u00f1ol.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7894432.jpg?t=1743570679"
+    },
+    {
+      "title": "As.com \u00bb Balonmano",
+      "feed_url": "https://feeds.as.com/mrss-s/pages/as/site/as.com/section/masdeporte/subsection/balonmano/",
+      "website_url": "https://as.com/masdeporte/balonmano/",
+      "description": "Balonmano en AS.com Noticias de balonmano: resultados y clasificaciones de la Liga ASOBAL y la Champions League con As.com, el principal diario deportivo en espa\u00f1ol.",
+      "followers": {
+        "facebook": 4300000,
+        "twitter": 3300000
+      },
+      "image_url": "https://i1.feedspot.com/7894427.jpg?t=1743570759"
+    }
+  ]
+}

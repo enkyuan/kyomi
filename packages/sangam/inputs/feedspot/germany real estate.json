@@ -1,0 +1,73 @@
+{
+  "category": "Germany Real Estate",
+  "source_url": "https://rss.feedspot.com/germany_real_estate_rss_feeds",
+  "feeds": [
+    {
+      "title": "Lukinski Blog",
+      "feed_url": "https://lukinski.com/feed/",
+      "website_url": "https://lukinski.com/blog/",
+      "description": "The blog covers articles on Buying, Law, Real Estate, Reports, Valuation and more.Lukinski is a family office with a private network of developers, investors, asset managers, and investment funds. They specialize in the area of off-market real estate.",
+      "followers": {
+        "twitter": 36
+      },
+      "image_url": "https://i1.feedspot.com/5330909.jpg?t=1634737089"
+    },
+    {
+      "title": "First Citiz Blog",
+      "feed_url": "https://www.firstcitiz.com/feed",
+      "website_url": "https://www.firstcitiz.com/blog",
+      "description": "Discover our Berlin real estate news and lifestyle blog with information, tips, and expert advice about the property market and lifestyle in the German capital.First Citiz is a leading Berlin real estate agency. They offer a 360\u00b0 service for your property purchase or sale in the capital of Germany.",
+      "followers": {
+        "facebook": 10800,
+        "instagram": 23500
+      },
+      "image_url": "https://i1.feedspot.com/5330912.jpg?t=1634106490"
+    },
+    {
+      "title": "My Life in Germany \u00bb Real Estate",
+      "feed_url": "https://www.mylifeingermany.com/category/finance/real-estate/feed/",
+      "website_url": "https://www.mylifeingermany.com/category/finance/real-estate/",
+      "description": "This section of the blog focuses on Real Estate.Covers articles on Real Estate Investment, Mortgages, Buying a house and more.Sindy is the author of the blog My Life in Germany. She provides articles about Study, Work, Life, Finance, Relocation and more about Germany.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 538,
+        "instagram": 499
+      },
+      "image_url": "https://i1.feedspot.com/5330904.jpg?t=1634108082"
+    },
+    {
+      "title": "My Mortgage Germany Blog",
+      "feed_url": "https://mymortgagegermany.de/feed/",
+      "website_url": "https://mymortgagegermany.de/blog/",
+      "description": "We've put together some helpful thoughts and tips with topics ranging from life in Germany to managing your loan.MyMortgageGermany.de is a digital mortgage broker dedicated to bringing you the best deal on your German home loan.",
+      "followers": {
+        "facebook": 273,
+        "twitter": 36,
+        "instagram": 103
+      },
+      "image_url": "https://i1.feedspot.com/5330910.jpg?t=1634105459"
+    },
+    {
+      "title": "Investby.Immo Blog",
+      "feed_url": "https://investby.immo/blog/rss-en",
+      "website_url": "https://investby.immo/investment-blog",
+      "description": "The blog covers articles and tips on Real Estate Investments.Investby.Immo is a team of private investors, who invest amongst others in the real estate sector. They help both real estate vendors and real estate investors with their task of marketing and searching for investment objects.",
+      "followers": {
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/5330908.jpg?t=1634104742"
+    },
+    {
+      "title": "Black Label Immobilien",
+      "feed_url": "https://blacklabelimmobilien.de/feed/",
+      "website_url": "https://blacklabelimmobilien.de/news/",
+      "description": "Covers articles about the current legislation, investment opportunities, special offers, real estate market, and more.Black Label Properties is an international estate agent for property developers and private clients in Berlin. They provide support in buying and selling all kinds of property - apartments, villas, houses, building land.",
+      "followers": {
+        "facebook": 528,
+        "twitter": 448,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5330911.jpg?t=1634107188"
+    }
+  ]
+}

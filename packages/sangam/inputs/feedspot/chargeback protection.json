@@ -1,0 +1,28 @@
+{
+  "category": "Chargeback Protection",
+  "source_url": "https://rss.feedspot.com/chargeback_protection_rss_feeds",
+  "feeds": [
+    {
+      "title": "Chargeback Gurus Blog",
+      "feed_url": "https://www.chargebackgurus.com/blog/rss.xml",
+      "website_url": "https://www.chargebackgurus.com/blog",
+      "description": "Read our blog to stay up to date on the payments industry and the latest trends in chargeback & fraud management, chargeback representment, fighting chargebacks, chargeback recovery and chargeback prevention. We have been leading the charge against chargebacks for 15 years, including operating as an online merchant ourselves.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 796
+      },
+      "image_url": "https://i1.feedspot.com/5294102.jpg?t=1623998640"
+    },
+    {
+      "title": "Chargeback Expertz Blog",
+      "feed_url": "https://www.chargebackexpertz.com/feed/",
+      "website_url": "https://www.chargebackexpertz.com/our-blog/",
+      "description": "View the Chargeback Expertz Blog for helpful tips and other important information about online commerce and banking systems. Stay informed and alert on new updates, scams through blog articles. Chargeback Expertz is a Detailed Risk Management Company helping Retail and Online Merchants.",
+      "followers": {
+        "facebook": 501,
+        "instagram": 757
+      },
+      "image_url": "https://i1.feedspot.com/5635285.jpg?t=1690285872"
+    }
+  ]
+}

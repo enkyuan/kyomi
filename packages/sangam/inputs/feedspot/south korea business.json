@@ -1,0 +1,56 @@
+{
+  "category": "South Korea Business",
+  "source_url": "https://rss.feedspot.com/south_korea_business_rss_feeds",
+  "feeds": [
+    {
+      "title": "Business Korea",
+      "feed_url": "https://cdn.businesskorea.co.kr/rss/gns_allArticle.xml",
+      "website_url": "https://www.businesskorea.co.kr/",
+      "description": "Keep your finger on the pulse for the latest happenings from Korea's business world, with breaking news and market updates delivered straight to your device. BusinessKorea is the oldest and most well-known monthly magazine on business in the Korean peninsula, serving a sophisticated readership across the country and the world.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/7272977.jpg?t=1710409935"
+    },
+    {
+      "title": "InterAd Blog",
+      "feed_url": "https://www.interad.com/en/insights/feed",
+      "website_url": "https://www.interad.com/en/insights",
+      "description": "Discover the latest news and most useful strategies to improve your marketing efforts in Asia. InterAd, Inc. is a South Korean Marketing company that helps western companies achieve their sales goals in their new Asian markets through SEO, SEM, Social Media Marketing, and Online Public Relations.",
+      "followers": {
+        "facebook": 12,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/7272976.jpg?t=1710328803"
+    },
+    {
+      "title": "Korea Business News",
+      "feed_url": "https://koreabusinessnews.com/feed",
+      "website_url": "https://koreabusinessnews.com/",
+      "description": "Korea Business News is a leading online media that covers the latest trends and developments in the Korean economy, industry, and society. We provide timely and accurate information to our readers, who are interested in learning more about the opportunities and challenges facing Korea in the 21st century.",
+      "followers": {
+        "twitter": 7
+      },
+      "image_url": "https://i1.feedspot.com/5635232.jpg?t=1690285207"
+    },
+    {
+      "title": "British Chamber of Commerce in Korea",
+      "feed_url": "https://bcck.or.kr/bcck/feed/",
+      "website_url": "https://bcck.or.kr/bcck/news-events/chamber-news/",
+      "description": "Stay ahead of the curve with news and events reports from BCCK staff. The British Chamber of Commerce in Korea (BCCK) is a non-profit organization that represents a broad spectrum of British, international, and Korean companies, which share significant commercial interests in the country.",
+      "followers": {
+        "facebook": 2600
+      },
+      "image_url": "https://i1.feedspot.com/7273382.jpg?t=1710411871"
+    },
+    {
+      "title": "Thoughts on Korean Business",
+      "feed_url": "https://bridgingculturekorea.blogspot.com/feeds/posts/default",
+      "website_url": "https://bridgingculturekorea.blogspot.com/",
+      "description": "Business expert and consultant Don Southerton shares his views on Korean global business and popular culture. Explore snippy dissections of recent events, market trends, and speculation along with some personal ramblings from the author.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7273381.jpg?t=1710401202"
+    }
+  ]
+}

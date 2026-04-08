@@ -1,0 +1,59 @@
+{
+  "category": "Kalimba",
+  "source_url": "https://rss.feedspot.com/kalimba_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kalimba Magic Blog",
+      "feed_url": "https://www.kalimbamagic.com/feed",
+      "website_url": "https://www.kalimbamagic.com/category/blog",
+      "description": "Kalimba Magic offers the world high-quality kalimbas and instructional materials - both physical books and PDF ebooks with live links to the sound recordings. The kalimbas I sell reflect the journey that I am on. If I discover a new kalimba or a new kalimba tuning that makes neat and beautiful music, I will likely start selling that kalimba and start writing instructional materials for that kalimba.",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 477,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5501803.jpg?t=1675169535"
+    },
+    {
+      "title": "KalimbaTabs",
+      "feed_url": "https://www.kalimbatabs.net/feed/",
+      "website_url": "https://www.kalimbatabs.net/",
+      "description": "Your No.1 source for free kalimba tabs and tutorials. huge collection of kalimba lettered & numbered notation tabs. The blog is updated daily!",
+      "followers": {
+        "facebook": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5436954.jpg?t=1675169588"
+    },
+    {
+      "title": "Carved Culture Blog \u00bb Kalimba",
+      "feed_url": "https://www.carvedculture.com/blogs/articles/tagged/kalimba.atom",
+      "website_url": "https://www.carvedculture.com/blogs/articles/tagged/kalimba",
+      "description": "Here you will find helpful blog articles that are educational regarding materials, buying guides, news, and facts about kalimba. Founded in 2016, Carved Culture has become the leading online store for the sale of hand-crafted, eco-friendly products, in particular focusing on Fair Trade items. We pride ourselves in our ability to supply only the most intricate products for all of our customers, accompanied by an unparalleled level of customer service.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 1700,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5501802.jpg?t=1675169546"
+    },
+    {
+      "title": "Kalimba World",
+      "feed_url": "https://kalimbaworld.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://kalimbaworld.blogspot.com/",
+      "description": "I'm Flo and I'm a kalimba player or thumb pianist from India. I began my kalimba journey in August 2020 and enjoy playing the thumb piano. On this blog, I share my music, experience and also teach how to play Kamliba.",
+      "followers": {
+        "facebook": 978,
+        "instagram": 565
+      },
+      "image_url": "https://i1.feedspot.com/5501799.jpg?t=1675169561"
+    },
+    {
+      "title": "Kalimbeo Blog",
+      "feed_url": "https://kalimbeo.com/feed/",
+      "website_url": "https://kalimbeo.com/blog/",
+      "description": "Kalimbeo is a one-stop shop for all things kalimba. Our website is dedicated to providing high-quality kalimba tabs, resources, and tutorials for players of all skill levels.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5501804.jpg?t=1675169573"
+    }
+  ]
+}

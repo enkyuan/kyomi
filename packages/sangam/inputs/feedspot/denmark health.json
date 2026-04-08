@@ -1,0 +1,49 @@
+{
+  "category": "Denmark Health",
+  "source_url": "https://rss.feedspot.com/denmark_health_rss_feeds",
+  "feeds": [
+    {
+      "title": "School of Global Health",
+      "feed_url": "https://globalhealth.ku.dk/news/?get_rss=1",
+      "website_url": "https://globalhealth.ku.dk/news/",
+      "description": "School of Global Health provides the framework for collaborative, interdisciplinary, cross-faculty research and educational activities locally, with a constantly updated global perspective.The University of Copenhagen is the largest institution of research and education in Denmark.",
+      "followers": {
+        "facebook": 95800,
+        "twitter": 568,
+        "instagram": 53100
+      },
+      "image_url": "https://i1.feedspot.com/5351388.jpg?t=1638946525"
+    },
+    {
+      "title": "By Karina",
+      "feed_url": "https://bykarina.dk/feed/",
+      "website_url": "https://bykarina.dk/",
+      "description": "ByKarina.dk is a health and wellness blog dedicated to inspiring readers to live a balanced and vibrant life. Covering topics like nutrition, fitness, mental well-being, and self-care, the blog offers expert advice, practical tips, and personal experiences to empower individuals on their journey to optimal health and wellness.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5591178.jpg?t=1686047100"
+    },
+    {
+      "title": "Sumondo Blog",
+      "feed_url": "https://sumondo.co/feed/",
+      "website_url": "https://sumondo.co/blog/",
+      "description": "Find the latest wellness and health news on the Sumondo Blog. Sumondo is a digital healthcare company working on innovative digital healthcare solutions combining vital signs, bio-analytics and machine learning(ML) and AI algorithms.",
+      "followers": {
+        "facebook": 220,
+        "twitter": 38,
+        "instagram": 68
+      },
+      "image_url": "https://i1.feedspot.com/5351536.jpg?t=1638959123"
+    },
+    {
+      "title": "The Local Denmark \u00bb Health",
+      "feed_url": "https://www.thelocal.dk/tag/health/feed/",
+      "website_url": "https://www.thelocal.dk/tag/health",
+      "description": "The latest health news and practical advice from Denmark. Daily news from Denmark written in English by native English-speaking journalists.The Local is the largest English-language news network in Europe, with six million readers every month.",
+      "followers": {
+        "facebook": 82500,
+        "twitter": 16000
+      },
+      "image_url": "https://i1.feedspot.com/5351534.jpg?t=1638958268"
+    }
+  ]
+}

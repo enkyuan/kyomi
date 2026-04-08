@@ -1,0 +1,28 @@
+{
+  "category": "Trenton News",
+  "source_url": "https://rss.feedspot.com/trenton_michigan_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of Trenton",
+      "feed_url": "https://www.trentonmi.org/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.trentonmi.org/CivicAlerts.aspx?CID=12",
+      "description": "Get the latest news, alerts, and updates in Trenton, MI.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 117
+      },
+      "image_url": "https://i1.feedspot.com/5170522.jpg?t=1594708839"
+    },
+    {
+      "title": "Trenton Trib | News",
+      "feed_url": "http://trentontrib.com/feed",
+      "description": "Trenton Trib, Community Newspaper in Trenton, MI. Source for news, information and communication for the City of Trenton, Residents, and Business Owners.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 821,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5170519.jpg?t=1594708773"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "category": "UK Diet",
+  "source_url": "https://rss.feedspot.com/uk_diet_rss_feeds",
+  "feeds": [
+    {
+      "title": "Dietitian UK Blog",
+      "feed_url": "https://www.dietitianuk.co.uk/feed/",
+      "website_url": "https://www.dietitianuk.co.uk/blog/",
+      "description": "DietitianUK provides a fresh, exciting, outgoing approach to nutrition. Run by Award Winning Dietitian Priya Tew.",
+      "followers": {
+        "twitter": 30,
+        "instagram": 17800
+      },
+      "image_url": "https://i1.feedspot.com/4907783.jpg?t=1611832165"
+    },
+    {
+      "title": "KetoDiet Blog",
+      "feed_url": "https://ketodietapp.com/Blog/rss.axd",
+      "website_url": "https://ketodietapp.com/Blog",
+      "description": "I'm Martina, an x10 cookbook author, top rated keto diet app creator, recipe developer, food photographer, writer, and a firm believer in low-carb living.Here at KetoDiet App, we share easy low-carb, keto and gluten-free recipes as well as expert articles to help you make informed choices.",
+      "followers": {
+        "facebook": 260800,
+        "twitter": 24500,
+        "instagram": 160800
+      },
+      "image_url": "https://i1.feedspot.com/4685039.jpg?t=1658830714"
+    },
+    {
+      "title": "Nadia's Healthy Kitchen Blog",
+      "feed_url": "https://nadiashealthykitchen.com/blog/feed/",
+      "website_url": "https://nadiashealthykitchen.com/blog/",
+      "description": "Helping individuals live a healthy lifestyle. Sharing healthy, clean, gluten-free, dairy-free, vegan savory & sweet recipes. I also post easy healthy recipe videos,",
+      "followers": {
+        "facebook": 88800,
+        "twitter": 2700,
+        "instagram": 555500
+      },
+      "image_url": "https://i1.feedspot.com/4843429.jpg?t=1607145378"
+    },
+    {
+      "title": "Tabby Dietitian Blog",
+      "feed_url": "https://www.tabbydietitian.co.uk/blog-feed.xml",
+      "website_url": "https://www.tabbydietitian.co.uk/blog",
+      "description": "Tabby provide you with personal advice, allowing you to plan and make the right choices for your new and healthy future. She is an experienced and friendly state registered private dietitian working for 30 years to help you with:- weight loss,diabetes,bowel disorders, food and mood and healthy eating.",
+      "followers": {
+        "facebook": 1100,
+        "instagram": 613
+      },
+      "image_url": "https://i1.feedspot.com/4907840.jpg?t=1611832031"
+    },
+    {
+      "title": "Dietitian's Life",
+      "feed_url": "https://www.dietitianslife.com/feed/",
+      "website_url": "https://www.dietitianslife.com/",
+      "description": "We are UK registered dietitians who have a similar enthusiasm for all things dietetic and ensuring the right nutritional messages are getting out there. Dietitians are registered with the Health Care Professions Council and must adhere to a code of conduct, ensuring we give evidence-based nutritional advice.",
+      "followers": {
+        "facebook": 10000,
+        "twitter": 2800,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4503302.jpg?t=1611832016"
+    },
+    {
+      "title": "Nics Nutrition",
+      "feed_url": "https://nicsnutrition.com/feed/",
+      "website_url": "https://nicsnutrition.com/",
+      "description": "I'm a UK Specialist Registered Dietitian (RD). I have a passion for promoting easy to understand nutrition and diet tips. My aim is to motivate and inspire YOU to lead a healthier and subsequently happier life, one step at a time through my nutrition blogs, healthy lifestyle tips and recipes, and healthy product reviews.",
+      "followers": {
+        "facebook": 10600,
+        "twitter": 16800,
+        "instagram": 54300
+      },
+      "image_url": "https://i1.feedspot.com/4905453.jpg?t=1611832093"
+    }
+  ]
+}

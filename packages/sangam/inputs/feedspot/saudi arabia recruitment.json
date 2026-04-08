@@ -1,0 +1,34 @@
+{
+  "category": "Saudi Arabia Recruitment",
+  "source_url": "https://rss.feedspot.com/saudi_arabia_recruitment_rss_feeds",
+  "feeds": [
+    {
+      "title": "SMASCO Blog",
+      "feed_url": "https://www.smasco.com/en/category/blog/feed/",
+      "website_url": "https://www.smasco.com/en/category/blog/",
+      "description": "At SMASCO, the company culture emphasizes care and camaraderie among its staff, fostering a familial environment. Their passionate team contributes to the company's greatness, focusing on nurturing qualities that enrich their workforce. With a commitment to excellence, SMASCO aims to remain a leading company for years. Explore their blog for valuable insights on recruitment and labour laws in KSA, and discover effective strategies for attracting top talent.",
+      "followers": {
+        "twitter": 14500
+      },
+      "image_url": "https://i1.feedspot.com/7280796.jpg?t=1711262842"
+    },
+    {
+      "title": "Yaqoot Manpower Services Blog",
+      "feed_url": "https://yaqootmanpowerservices.com/feed/",
+      "website_url": "https://yaqootmanpowerservices.com/blog/",
+      "description": "Yaqoot Manpower Services, founded in 2012 and based in Jeddah, offers HR and outsourcing solutions across various industries. With a Ministry of Labor Saudi Arabia license, they aspire to lead in HR and manpower services, aligning with Vision 2030. Explore their blog for recruitment insights and HR trends, ensuring you stay up-to-date.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7280795.jpg?t=1711131807"
+    },
+    {
+      "title": "Jobskey Search",
+      "feed_url": "https://jobskeysearch.com/index.php/author/marketing/feed/",
+      "website_url": "https://jobskeysearch.com/index.php/author/marketing/",
+      "description": "Jobskey Search and Selection, based in Saudi Arabia, delivers elite talent solutions to boost productivity and reduce costs. Their hallmark values include honesty, integrity, and customer satisfaction. Renowned as a leading executive search firm in the Gulf, they set and exceed standards, providing excellence that surpasses expectations.",
+      "followers": {
+        "twitter": 300
+      },
+      "image_url": "https://i1.feedspot.com/7280797.jpg?t=1711131817"
+    }
+  ]
+}

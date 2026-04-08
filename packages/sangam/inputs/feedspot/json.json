@@ -1,0 +1,55 @@
+{
+  "category": "JSON",
+  "source_url": "https://rss.feedspot.com/json_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mathspp Blog \u00bb Json",
+      "feed_url": "https://mathspp.com/blog.atom",
+      "website_url": "https://mathspp.com/blog/tag:json",
+      "description": "Stay up-to-date with the articles on mathematics and programming that get published to mathspp.com.",
+      "followers": {
+        "twitter": 43200
+      },
+      "image_url": "https://i1.feedspot.com/5567158.jpg?t=1684144480"
+    },
+    {
+      "title": "Altova Blog \u00bb JSON",
+      "feed_url": "https://www.altova.com/blog/feed/",
+      "website_url": "https://www.altova.com/blog/category/json/",
+      "description": "News from Altova, including XMLSpy XML Editor, SQL, UML, Data Integration, and Mobile Tools",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 572
+      },
+      "image_url": "https://i1.feedspot.com/5567161.jpg?t=1684144410"
+    },
+    {
+      "title": ".NET Blog \u00bb JSON",
+      "feed_url": "https://devblogs.microsoft.com/dotnet/category/json/feed/",
+      "website_url": "https://devblogs.microsoft.com/dotnet/category/json/",
+      "description": "Free, Cross-platform and Open source - A developer platform for building all your apps. Get the latest updates on JSON, features and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5437678.jpg?t=1662037248"
+    },
+    {
+      "title": "Xojo Programming Blog \u00bb JSON",
+      "feed_url": "https://blog.xojo.com/tag/json/feed/",
+      "website_url": "https://blog.xojo.com/tag/json/",
+      "description": "Blog about the Xojo programming language and IDE",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5567160.jpg?t=1684144444"
+    },
+    {
+      "title": "The Jet Brains Blog \u00bb JSON",
+      "feed_url": "https://blog.jetbrains.com/dotnet/tag/json/feed/",
+      "website_url": "https://blog.jetbrains.com/dotnet/tag/json/",
+      "description": "Developer Tools for Professionals and Teams",
+      "followers": {
+        "facebook": 117500,
+        "twitter": 201100,
+        "instagram": 112700
+      },
+      "image_url": "https://i1.feedspot.com/5567159.jpg?t=1684144402"
+    }
+  ]
+}

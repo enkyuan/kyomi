@@ -1,0 +1,29 @@
+{
+  "category": "East Chicago News",
+  "source_url": "https://rss.feedspot.com/east_chicago_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Times of Northwest Indiana \u00bb East Chicago",
+      "feed_url": "https://www.nwitimes.com/search/?f=rss&t=article&c=news/local/lake/east-chicago&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.nwitimes.com/news/local/lake/east-chicago/",
+      "description": "The Northwest Indiana Times brings news, information and entertainment to the residents of Northwest Indiana. Follow this feed to read East Chicago, IN breaking and local news, crime, business, government, education, and sports.",
+      "followers": {
+        "facebook": 163900,
+        "twitter": 69100,
+        "instagram": 13100
+      },
+      "image_url": "https://i1.feedspot.com/5160331.jpg?t=1591679333"
+    },
+    {
+      "title": "CBS News \u00bb East Chicago",
+      "feed_url": "https://www.cbsnews.com/latest/rss/main",
+      "website_url": "https://www.cbsnews.com/chicago/tag/east-chicago/",
+      "description": "CBS Chicago provides you with 24/7 access to the latest updates in Local News, Sports, Traffic, and Weather. Get East Chicago city news and information by following this feed.",
+      "followers": {
+        "facebook": 400300,
+        "twitter": 213900
+      },
+      "image_url": "https://i1.feedspot.com/5160340.jpg?t=1591682485"
+    }
+  ]
+}

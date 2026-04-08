@@ -1,0 +1,38 @@
+{
+  "category": "Australian Passive Income",
+  "source_url": "https://rss.feedspot.com/australian_passive_income_rss_feeds",
+  "feeds": [
+    {
+      "title": "Passive Investing Australia Blog",
+      "feed_url": "https://passiveinvestingaustralia.com/feed/",
+      "website_url": "https://passiveinvestingaustralia.com/blog/",
+      "description": "Learn to design your own passive investment portfolio",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5701423.jpg?t=1698758729"
+    },
+    {
+      "title": "Captain FI \u00bb Making Money",
+      "feed_url": "https://captainfi.com/category/making-money/feed/",
+      "website_url": "https://captainfi.com/category/making-money/",
+      "description": "Captain FI, the retired international Air Transport Pilot from Australia, is a fervent advocate for Financial Literacy. Through writing and podcasting, he shares insights on financial education, aviation, and his journey to achieving Financial Independence and early retirement at 30. Embark on Captain FI's enriching journey towards financial freedom and early retirement.",
+      "followers": {
+        "facebook": 14000,
+        "twitter": 1200,
+        "instagram": 7600
+      },
+      "image_url": "https://i1.feedspot.com/5701239.jpg?t=1698748955"
+    },
+    {
+      "title": "Coastal Advice Group Blog",
+      "feed_url": "https://coastaladvicegroup.com.au/blog/feed/",
+      "website_url": "https://coastaladvicegroup.com.au/blog/",
+      "description": "Just another WordPress site",
+      "followers": {
+        "facebook": 253,
+        "twitter": 2,
+        "instagram": 90
+      },
+      "image_url": "https://i1.feedspot.com/5701436.jpg?t=1698759257"
+    }
+  ]
+}

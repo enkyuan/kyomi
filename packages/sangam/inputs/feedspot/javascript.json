@@ -1,0 +1,278 @@
+{
+  "category": "Javascript",
+  "source_url": "https://rss.feedspot.com/javascript_rss_feeds",
+  "feeds": [
+    {
+      "title": "Total.js Blog",
+      "feed_url": "https://blog.totaljs.com/rss",
+      "website_url": "https://blog.totaljs.com/",
+      "description": "This blog shares Node.js, JavaScript and Total.js tutorials, tips and best practices. Total.js is full-featured server-side framework which effectively improves the most important aspects of your project during its lifetime. Super fast development, extremely low maintenance costs, rock solid stability, incredible performance and easy scaling.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 823
+      },
+      "image_url": "https://i1.feedspot.com/4638763.jpg"
+    },
+    {
+      "title": "Raymond Camden Blog",
+      "feed_url": "https://www.raymondcamden.com/feed.xml",
+      "website_url": "https://www.raymondcamden.com/",
+      "description": "Raymond is a senior developer evangelist for Adobe. He focuses on document services, JavaScript, and enterprise cat demos.",
+      "followers": {
+        "twitter": 12900
+      },
+      "image_url": "https://i1.feedspot.com/4972273.jpg?t=1621934692"
+    },
+    {
+      "title": "Echo JS",
+      "feed_url": "https://www.echojs.com/rss",
+      "website_url": "https://www.echojs.com/",
+      "description": "Echo JS is a community-driven news site entirely focused on JavaScript development, HTML5, and front-end news.",
+      "followers": {
+        "twitter": 11400
+      },
+      "image_url": "https://i1.feedspot.com/106117.jpg?t=1606108550"
+    },
+    {
+      "title": "Ben Nadel's Blog",
+      "feed_url": "https://www.bennadel.com/index.cfm?event=blog.rss",
+      "website_url": "https://www.bennadel.com/index.cfm",
+      "description": "This blog posts covering JavaScript, User Experience (UX), ColdFusion, Node.js, and other topics.",
+      "followers": {
+        "twitter": 21600
+      },
+      "image_url": "https://i1.feedspot.com/4638729.jpg?t=1609338361"
+    },
+    {
+      "title": "jQWidgets Blog",
+      "feed_url": "https://www.jqwidgets.com/feed/",
+      "website_url": "https://www.jqwidgets.com/blog/",
+      "description": "jQWidgets is one the most feature rich and comprehensive JavaScript user interface library. jQWidgets specializes in the development of platform independent and cross-browser compatible jQuery UI widgets for PC & Mobile.",
+      "followers": {
+        "facebook": 36500,
+        "twitter": 829
+      },
+      "image_url": "https://i1.feedspot.com/1784373.jpg"
+    },
+    {
+      "title": "Meteor Blog",
+      "feed_url": "https://blog.meteor.com/feed",
+      "website_url": "https://blog.meteor.com/",
+      "description": "Meteor is an open-source platform for quickly building javascript apps. Product releases, community news, and project updates for the Meteor framework.",
+      "followers": {
+        "facebook": 12400,
+        "twitter": 52800,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4536311.jpg?t=1616484704"
+    },
+    {
+      "title": "Jack Franklin Blog",
+      "feed_url": "https://www.jackfranklin.co.uk/feed.xml",
+      "website_url": "https://www.jackfranklin.co.uk/blog/",
+      "description": "This site is where you'll find my blog posts where I write and record content on JavaScript, React, software development, and more.",
+      "followers": {
+        "twitter": 10600
+      },
+      "image_url": "https://i1.feedspot.com/4637364.jpg?t=1616484729"
+    },
+    {
+      "title": "The NodeSource Blog",
+      "feed_url": "https://nodesource.com/blog/rss",
+      "website_url": "https://nodesource.com/blog",
+      "description": "NodeSource products provide real-time insight into application performance and security, empowering organizations to successfully operationalize Node.js. Follow this blog for articles about the Node.js Community, how-tos, and products from NodeSource.",
+      "followers": {
+        "facebook": 662,
+        "twitter": 19100
+      },
+      "image_url": "https://i1.feedspot.com/4468102.jpg?t=1612350339"
+    },
+    {
+      "title": "DHTMLX Blog",
+      "feed_url": "https://dhtmlx.com/blog/feed/",
+      "website_url": "https://dhtmlx.com/blog/",
+      "description": "The DHTMLX JavaScript library offers a robust and comprehensive solution for building rich web apps. The library includes all necessary features required in modern apps: powerful datagrid, navigation controls, simple layout system, windows, etc.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 761
+      },
+      "image_url": "https://i1.feedspot.com/4638689.jpg?t=1616484708"
+    },
+    {
+      "title": "Node.js",
+      "feed_url": "https://nodejs.org/en/feed/blog.xml",
+      "website_url": "https://nodejs.org/en/blog/",
+      "description": "The Node.js Foundation's mission is to enable widespread adoption and help accelerate development of Node.js and other related modules.Follow this blog to get in depth knowledge on Node.js.",
+      "followers": {
+        "facebook": 39400,
+        "twitter": 858300
+      },
+      "image_url": "https://i1.feedspot.com/4777089.jpg?t=1612350354"
+    },
+    {
+      "title": "Smashing Magazine \u00bb Javascript",
+      "feed_url": "https://www.smashingmagazine.com/categories/javascript/index.xml",
+      "website_url": "https://www.smashingmagazine.com/category/javascript/",
+      "description": "Magazine on CSS, JavaScript, front-end, accessibility, UX and design. For developers, designers and front-end engineers.",
+      "followers": {
+        "twitter": 875200
+      },
+      "image_url": "https://i1.feedspot.com/8795223.jpg?t=1762618093"
+    },
+    {
+      "title": "International JavaScript Conference",
+      "feed_url": "https://javascript-conference.com/blog/feed/",
+      "website_url": "https://javascript-conference.com/blog/",
+      "description": "News, articles and interviews on the iJS topics: JavaScript, Angular, Node.js, React and more about the most sophisticated JS frameworks and libraries",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/8795225.jpg?t=1762618098"
+    },
+    {
+      "title": "The Coding Architect Blog",
+      "feed_url": "https://www.codingarchitect.ca/blog.rss",
+      "website_url": "https://www.codingarchitect.ca/blog/",
+      "description": "The blog posts under the 'javascript' tag on CodingArchitect focus on practical, beginner-to-intermediate guides for modern JavaScript and React development, aimed at full-stack growth and developer tooling.",
+      "followers": {
+        "facebook": 78600,
+        "twitter": 12700,
+        "instagram": 111400
+      },
+      "image_url": "https://i1.feedspot.com/8795224.jpg?t=1762618095"
+    },
+    {
+      "title": "David Walsh",
+      "feed_url": "https://davidwalsh.name/feed",
+      "website_url": "https://davidwalsh.name/",
+      "description": "A blog featuring tutorials about JavaScript, HTML5, AJAX, PHP, CSS, WordPress, and everything else development. David Walsh is Mozilla's senior web developer and the core developer for the MooTools Javascript Framework.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 86400
+      },
+      "image_url": "https://i1.feedspot.com/4431048.jpg?t=1606110743"
+    },
+    {
+      "title": "Writing JavaScript",
+      "feed_url": "https://writingjavascript.com/rss.xml",
+      "website_url": "https://writingjavascript.com/",
+      "description": "This blog sometimes will bring up some npm packages, it will not focus on the large frameworks like React/Angular/Vue, but rather emphasize how much is possible without them if you possess the right skills and how that can improve your code longevity and perhaps put an end to the constant code rewrites when a new framework becomes popular.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5198371.jpg?t=1600763086"
+    },
+    {
+      "title": "JSManifest",
+      "feed_url": "https://jsmanifest.com/rss.xml",
+      "website_url": "https://jsmanifest.com/",
+      "description": "Covering JavaScript for web development, phones, desktops, robots, artificial intelligence, and anything else possible with the JavaScript language.",
+      "followers": {
+        "twitter": 197
+      },
+      "image_url": "https://i1.feedspot.com/5029542.jpg?t=1616484712"
+    },
+    {
+      "title": "OpenJavaScript",
+      "feed_url": "https://openjavascript.info/feed/",
+      "website_url": "https://openjavascript.info/",
+      "description": "A blog site featuring articles, tutorials, and projects on JavaScript and related technologies to help you become a better developer.",
+      "followers": {
+        "facebook": 10200,
+        "instagram": 38
+      },
+      "image_url": "https://i1.feedspot.com/5404904.jpg?t=1653911972"
+    },
+    {
+      "title": "JSdiaries - JavaScript Diaries Blog",
+      "feed_url": "https://www.jsdiaries.com/rss.xml",
+      "website_url": "https://www.jsdiaries.com/blog/",
+      "description": "JSdiaries is a frontend inspired software blog created by Gareth Dunne. It produces high quality articles and applications focusing on Angular 4 and ionic 3.",
+      "followers": {
+        "twitter": 37
+      },
+      "image_url": "https://i1.feedspot.com/4751728.jpg?t=1616484733"
+    },
+    {
+      "title": "JavaScriptSearch Articles",
+      "feed_url": "https://www.javascriptsearch.com/rss_xmls/3_rss.xml",
+      "website_url": "https://www.javascriptsearch.com/",
+      "description": "JavaScript Search is your source for hundreds of free JavaScripts and JavaScript related information, including scripts, tutorials, FAQ's, tips, and much more.",
+      "followers": {
+        "twitter": 577
+      },
+      "image_url": "https://i1.feedspot.com/4637910.jpg?t=1616484738"
+    },
+    {
+      "title": "The API Company Blog",
+      "feed_url": "https://theapicompany.com/blog/feed/",
+      "website_url": "https://theapicompany.com/blog/",
+      "description": "Free API's to help you as a web developer. The device detection API is a simple JavaScript tool to detect information about the device of your visitors.",
+      "followers": {
+        "facebook": 93,
+        "twitter": 267,
+        "instagram": 571
+      },
+      "image_url": "https://i1.feedspot.com/5022523.jpg?t=1616484746"
+    },
+    {
+      "title": "JavaScript Weekly",
+      "feed_url": "https://javascriptweekly.com/rss",
+      "website_url": "https://javascriptweekly.com/",
+      "description": "A free, once-weekly e-mail round-up of JavaScript articles, news and cool projects.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/114551.jpg?t=1606108642"
+    },
+    {
+      "title": "2ality",
+      "feed_url": "https://2ality.com/feeds/posts.atom",
+      "website_url": "https://2ality.com/",
+      "description": "2ality is a blog about JavaScript, web development and mobile computing.",
+      "followers": {
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/91852.jpg?t=1762499298"
+    },
+    {
+      "title": "Ember.js Blog",
+      "feed_url": "https://blog.emberjs.com/",
+      "website_url": "https://blog.emberjs.com/",
+      "description": "A framework for creating ambitious web applications. Ember.js is designed to help developers build large web applications that are competitive with native apps.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 36000
+      },
+      "image_url": "https://i1.feedspot.com/4638682.jpg?t=1616480876"
+    },
+    {
+      "title": "React Blog",
+      "feed_url": "https://reactjs.org/feed.xml",
+      "website_url": "https://reactjs.org/blog/all.html",
+      "description": "React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It is an important source material for anyone who creates apps with the framework.",
+      "followers": {
+        "facebook": 138100,
+        "twitter": 704800
+      },
+      "image_url": "https://i1.feedspot.com/4509584.jpg?t=1606108025"
+    },
+    {
+      "title": "Aurelia Blog",
+      "feed_url": "https://aurelia.io/blog/",
+      "website_url": "https://aurelia.io/blog/",
+      "description": "A JavaScript client framework for mobile, desktop and web leveraging simple conventions and empowering creativity.",
+      "followers": {
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4637993.jpg"
+    },
+    {
+      "title": "React Native Blog",
+      "feed_url": "https://www.reactnative.com/rss",
+      "website_url": "https://www.reactnative.com/",
+      "description": "Learn the new way of building native apps with JavaScript.",
+      "followers": {
+        "twitter": 180900
+      },
+      "image_url": "https://i1.feedspot.com/4637998.jpg?t=1616484725"
+    }
+  ]
+}

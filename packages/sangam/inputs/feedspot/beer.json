@@ -1,0 +1,1463 @@
+{
+  "category": "Beer",
+  "source_url": "https://rss.feedspot.com/beer_rss_feeds",
+  "feeds": [
+    {
+      "title": "Craft Beer",
+      "feed_url": "https://feeds.feedburner.com/craftbeercom",
+      "website_url": "https://www.craftbeer.com/",
+      "description": "Covers in-depth information for anyone looking to learn more about beer styles, beer and food pairing, beer education, as well as the craft beer industry as a whole. Also bringing the stories of America's small & independent craft brewers to life for beer lovers, exploring different beer styles and discovering craft breweries. Craft Beer was created to communicate the passion, authenticity, excitement, creativity, camaraderie, and joy of the craft beer community.",
+      "followers": {
+        "facebook": 150800,
+        "twitter": 52100,
+        "instagram": 20500
+      },
+      "image_url": "https://i1.feedspot.com/1075870.jpg?t=1611034307"
+    },
+    {
+      "title": "Beer Street Journal",
+      "feed_url": "https://beerstreetjournal.com/feed/",
+      "website_url": "https://beerstreetjournal.com/",
+      "description": "Covering beer culture, education, and the advancement of the craft beer industry. Beer Street Journal is a national, daily website bringing you The Best in Beer!",
+      "followers": {
+        "facebook": 20000,
+        "twitter": 20600,
+        "instagram": 28900
+      },
+      "image_url": "https://i1.feedspot.com/1053574.jpg?t=1611034333"
+    },
+    {
+      "title": "TaxBanter Pty Ltd.",
+      "feed_url": "https://thebeerthrillers.com/feed/",
+      "website_url": "https://thebeerthrillers.com/",
+      "description": "We love yakking about tax!We invite a range of tax experts and practitioners to have a chat with us about all things tax. No taking notes for our listeners; just enjoy listening to some tax folk who love tax.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 291,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5055326.jpg?t=1745505066"
+    },
+    {
+      "title": "Sonoma Magazine",
+      "feed_url": "https://www.sonomamag.com/category/beer-country/feed/",
+      "website_url": "https://www.sonomamag.com/category/beer-country/",
+      "description": "Beer Country category of Sonoma Magazine provides information on craft beer and breweries in Sonoma County. The magazine captures and celebrates the Sonoma County landscape and lifestyle.",
+      "followers": {
+        "facebook": 27900,
+        "twitter": 2200,
+        "instagram": 38400
+      },
+      "image_url": "https://i1.feedspot.com/4487418.jpg"
+    },
+    {
+      "title": "Hop Culture",
+      "feed_url": "https://www.hopculture.com/feed/",
+      "website_url": "https://www.hopculture.com/",
+      "description": "A daily online lifestyle magazine for the newest generation of craft beer drinkers. In late 2016, Hop Culture was started in Pittsburgh, Pennsylvania, to provide independent craft beer journalism. Hop Culture was born as an online magazine, and has since grown to include a festival/party circuit and regular merch drops.",
+      "followers": {
+        "facebook": 37200,
+        "twitter": 4000,
+        "instagram": 102900
+      },
+      "image_url": "https://i1.feedspot.com/5393788.jpg?t=1650882932"
+    },
+    {
+      "title": "BeerSmith Home Brewing Blog",
+      "feed_url": "https://beersmith.com/blog/feed/",
+      "website_url": "https://beersmith.com/blog/",
+      "description": "Covers brewing tutorials, homebrewing techniques, product and book reviews, articles on brewing popular beer styles and brewing news. The BeerSmith Home Brewing Blog is all about making beer at home.",
+      "followers": {
+        "twitter": 22500
+      },
+      "image_url": "https://i1.feedspot.com/4488645.jpg?t=1610112182"
+    },
+    {
+      "title": "Allagash Brewing Company Blog",
+      "feed_url": "https://www.allagash.com/discover/blog/feed/",
+      "website_url": "https://www.allagash.com/discover/blog/",
+      "description": "We post a wide variety of blogs, from beer facts to new beer releases to things we love about our home of Maine. Learn more about beer, love beer more. As a brewery, we strive to create some of the best Belgian-inspired beers in the world. As a certified B Corp, we're constantly pushing the sustainability of our brewing operation, putting our employees first, and working to be a positive member of our community.",
+      "followers": {
+        "facebook": 135800,
+        "twitter": 35700,
+        "instagram": 170000
+      },
+      "image_url": "https://i1.feedspot.com/5393782.jpg?t=1650889110"
+    },
+    {
+      "title": "Porch Drinking",
+      "feed_url": "https://www.porchdrinking.com/feed/",
+      "website_url": "https://www.porchdrinking.com/",
+      "description": "Features beer news, brewery reviews, beer tasting, and more. Porch Drinking blog aims to serve as a resource to the craft beer industry while still upholding the industry's culture of community, camaraderie and passion for the craft.",
+      "followers": {
+        "facebook": 14600,
+        "twitter": 11000,
+        "instagram": 11900
+      },
+      "image_url": "https://i1.feedspot.com/4948061.jpg?t=1611035808"
+    },
+    {
+      "title": "Breweries in PA",
+      "feed_url": "https://breweriesinpa.com/feed/",
+      "website_url": "https://breweriesinpa.com/",
+      "description": "Digital promotion company focused on Pennsylvania CraftBeer. Connecting beer drinkers to the PA #Breweries they love.",
+      "followers": {
+        "facebook": 34200,
+        "twitter": 13100,
+        "instagram": 40100
+      },
+      "image_url": "https://i1.feedspot.com/4808985.jpg?t=1611036438"
+    },
+    {
+      "title": "Brookston Beer Bulletin",
+      "feed_url": "https://feeds.feedburner.com/brookston-beer-bulletin",
+      "website_url": "https://brookstonbeerbulletin.com/",
+      "description": "Jay R. Brooks on Beer - Beer writer, syndicated columnist, university lecturer, work-at-home father, potato nerd, View-Master nut, curmudgeon.",
+      "followers": {
+        "twitter": 7600
+      },
+      "image_url": "https://i1.feedspot.com/1793702.jpg?t=1611036448"
+    },
+    {
+      "title": "New School Beer + Cider",
+      "feed_url": "https://feeds.feedburner.com/newschoolbeer",
+      "website_url": "https://newschoolbeer.com/",
+      "description": "With more than 10 years of history, The New School has become established as the best place to learn about beer and cider in Oregon and Washington. From new releases to industry and style trends, interviews, commentary and opinion and breaking news and openings, The New School is the place to find it all.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 5900,
+        "instagram": 12300
+      },
+      "image_url": "https://i1.feedspot.com/4486669.jpg?t=1682336642"
+    },
+    {
+      "title": "Washington Beer Blog",
+      "feed_url": "http://washingtonbeerblog.com/feed/",
+      "website_url": "http://washingtonbeerblog.com/",
+      "description": "Covers beer news and information for Washington, the Pacific Northwest, and beyond. The goal of Washington Beer Blog is to provide a single place on the Web where beer lovers can find information about Washington beer: news, events, beer bars, the Seattle beer scene and more.",
+      "followers": {
+        "facebook": 13400,
+        "twitter": 10200
+      },
+      "image_url": "https://i1.feedspot.com/88060.jpg?t=1611036325"
+    },
+    {
+      "title": "Brewvana Blog",
+      "feed_url": "https://www.citybrewtours.com/feed/",
+      "website_url": "https://www.citybrewtours.com/news/",
+      "description": "Join our beer nerds take on a journey through all things beer and brewing. Get the latest from Brewvana's beer bloggers. Find Brewing tips, beer exploration and more. Brewvana provides Craft Beer Boxes, Beer Making Kits, Online Brewing Classes & More!",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 3400,
+        "instagram": 5400
+      },
+      "image_url": "https://i1.feedspot.com/5393786.jpg?t=1650892227"
+    },
+    {
+      "title": "Craft Beer Austin",
+      "feed_url": "https://craftbeeraustin.com/feed",
+      "website_url": "https://craftbeeraustin.com/",
+      "description": "Craft Beer Austin was founded in September 2012 by Rich Plakas to promote the burgeoning Austin beer scene. He was quickly joined by his wife Irina, as the chief editor, to help the rapidly growing site. Their mission is to centralize Austin and Central Texas Craft Beer News and Events to make it easier for you to find out what's going on, what's on tap and what's on the shelves. Wade through their blog and learn more about events, features, guides, jobs, articles, and more.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 12400,
+        "instagram": 8900
+      },
+      "image_url": "https://i1.feedspot.com/4486676.jpg?t=1701085272"
+    },
+    {
+      "title": "Micet Craft Blog",
+      "feed_url": "https://www.micetcraft.com/feed/",
+      "website_url": "https://www.micetcraft.com/blog-3/",
+      "description": "Micet Craft is a professional brewery equipment manufacturer in China. Micet Craft updates this blog related to beer and fruit wine. Of course, some articles about wine and kombucha will also include. We hope these blogs can help you complete your project.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 482,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5423315.jpg?t=1699622539"
+    },
+    {
+      "title": "Mass Brew Bros Blog",
+      "feed_url": "https://massbrewbros.com/feed/",
+      "website_url": "https://massbrewbros.com/blog/",
+      "description": "Discover latest beer shops, restaurants, breweries and more in the Massachusetts. Mass Brew Bros is The resource for Craft Beer Drinkers in Massachusetts.",
+      "followers": {
+        "facebook": 10500,
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/5393793.jpg?t=1650882957"
+    },
+    {
+      "title": "Paul's Beer & Travel Blog",
+      "feed_url": "https://feeds.feedburner.com/PaulBaileysBeerBlog",
+      "website_url": "https://baileysbeerblog.blogspot.com/",
+      "description": "Exploring and indulging Paul Bailey's passion for beer. A keen beer enthusiast with 40 years experience in beer, pubs, and brewing, both in the UK and abroad, Paul writes about my travel experiences, in order to inspire readers to check out some of these places for themselves.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4661217.jpg?t=1611036525"
+    },
+    {
+      "title": "NA Beer Club Blog",
+      "feed_url": "https://nabeerclub.com/feed/",
+      "website_url": "https://nabeerclub.com/blog/",
+      "description": "Discover the world of delicious, craft non-alcoholic beer. NA Beer Club is the perfect gift for the non-alcoholic beer drinker in your life. We curate the best NA Beers and deliver them to you each month.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 172
+      },
+      "image_url": "https://i1.feedspot.com/5312940.jpg?t=1629204770"
+    },
+    {
+      "title": "The Growler",
+      "feed_url": "https://bc.thegrowler.ca/feed/",
+      "website_url": "https://bc.thegrowler.ca/",
+      "description": "The Growler is B.C.'s quarterly craft beer guide, covering the breweries, the beer and the industry as it swells and threatens to consume them all if they don't consume it (the beer) first.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4487656.jpg?t=1611036427"
+    },
+    {
+      "title": "Great Beer Now",
+      "feed_url": "https://www.greatbeernow.com/feed/",
+      "website_url": "https://www.greatbeernow.com/category/beer-reviews/",
+      "description": "Covers great beer advice, home brewing kits, pub recommendations, and beer reviews, happenings, events from around the world.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 18600,
+        "instagram": 12300
+      },
+      "image_url": "https://i1.feedspot.com/4533729.jpg?t=1631711682"
+    },
+    {
+      "title": "MyBeerBuzz",
+      "feed_url": "https://www.mybeerbuzz.com/feeds/posts/default?alt=rss",
+      "website_url": "https://mybeerbuzz.blogspot.com/",
+      "description": "Your source for national and international craft beer news. MyBeerBuzz blog has been bringing good beers & good people together, and is the home of Northeastern Pennsylvania's craft beer scene.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 12400,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4488624.jpg?t=1611036307"
+    },
+    {
+      "title": "MikeyTopPour.com",
+      "feed_url": "https://mikeytoppour.com/feed/",
+      "website_url": "https://mikeytoppour.com/",
+      "description": "Hi, I am Mikey Seay. My blog mikeytoppour.com is here for you if you like thinking about beer things or like old-school simple blogs. It is a mix of documenting my beer drinking with thoughts of living life with a beer next to me. Plus, some posts about questions the beer-drinking realm is asking the Internet.",
+      "followers": {
+        "facebook": 58,
+        "twitter": 733
+      },
+      "image_url": "https://i1.feedspot.com/5162879.jpg?t=1611040873"
+    },
+    {
+      "title": "Brulosophy",
+      "feed_url": "https://brulosophy.com/feed/",
+      "website_url": "https://brulosophy.com/",
+      "description": "Brulosophy provides tips and news for the home brewing community. The articles here report some of our experiments, new brewing ideas, and results. Brulosophy is a website by a group of beer enthusiast friends for sharing, creating, and supporting innovation in brewing methods for beer.",
+      "followers": {
+        "facebook": 34200,
+        "twitter": 5900,
+        "instagram": 32600
+      },
+      "image_url": "https://i1.feedspot.com/3740632.jpg?t=1610111870"
+    },
+    {
+      "title": "Belgian Smaak",
+      "feed_url": "https://www.belgiansmaak.com/feed/",
+      "website_url": "https://www.belgiansmaak.com/read/",
+      "description": "Exploring the world of Belgian beer and chocolate.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 3000,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4586872.jpg?t=1611036573"
+    },
+    {
+      "title": "The British Guild Of Beer Writers",
+      "feed_url": "https://www.beerguild.co.uk/feed/",
+      "website_url": "https://www.beerguild.co.uk/news/",
+      "description": "The Beer Guild aims to improve the standards of beer writing and extend the public knowledge of beer. Browse our members directory to find your beer expert.",
+      "followers": {
+        "facebook": 671,
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/4488610.jpg?t=1611036465"
+    },
+    {
+      "title": "Beer in Big D",
+      "feed_url": "https://www.beerinbigd.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.beerinbigd.com/",
+      "description": "Beer in Big D provides coverage of the craft beer industry in Dallas, Fort Worth and the surrounding North Texas area.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4512056.jpg"
+    },
+    {
+      "title": "Tandleman's Beer Blog",
+      "feed_url": "http://tandlemanbeerblog.blogspot.com/feeds/posts/default",
+      "website_url": "http://tandlemanbeerblog.blogspot.com/",
+      "description": "Tandleman's Random and Particular Thoughts on Beer. A bit of a CV. Tandleman is a veteran beer lover, local CAMRA Chairman and activist, beer writer, beer reviewer and pursuer of all things good in beer.",
+      "followers": {
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/1792514.jpg?t=1611036542"
+    },
+    {
+      "title": "Zythophile",
+      "feed_url": "https://zythophile.co.uk/feed/",
+      "website_url": "https://zythophile.co.uk/",
+      "description": "'Zee-tho-fyle', by Martyn Cornell, an award-winning blog about beer now and then, founded in 2007.",
+      "followers": {
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4775755.jpg?t=1611036561"
+    },
+    {
+      "title": "Beer Idiots",
+      "feed_url": "https://www.idiots.beer/feed/",
+      "website_url": "https://www.idiots.beer/",
+      "description": "Join two wild and crazy guys on our adventures among the nerds. We take the piss out of pretenders while standing up for drinkers and clubs.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 103,
+        "instagram": 914
+      },
+      "image_url": "https://i1.feedspot.com/5132121.jpg"
+    },
+    {
+      "title": "The Brew Site",
+      "feed_url": "https://feeds.feedburner.com/TheBrewSite",
+      "website_url": "https://www.thebrewsite.com/",
+      "description": "The Brew Site is a beer blog dedicated to all things beer and brewing, with a particular focus on Oregon, featuring reviews of beers and breweries, industry news and events, articles on homebrewing, and more.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1900,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/248581.jpg?t=1611036655"
+    },
+    {
+      "title": "BeerCrank",
+      "feed_url": "https://feeds.feedburner.com/blogspot/bbRhaW",
+      "website_url": "https://www.beercrank.ca/",
+      "description": "I'm Cody Lobreau, the creator and blogger at BeerCrank.ca. BeerCrank is a Brandon, Manitoba based beer blog writing mostly about Canadian beer. Casual beer reviews for the casual beer drinker.",
+      "followers": {
+        "facebook": 452,
+        "twitter": 2200,
+        "instagram": 447
+      },
+      "image_url": "https://i1.feedspot.com/4486818.jpg?t=1611036669"
+    },
+    {
+      "title": "Eric's Gourmet Root Beer Blog",
+      "feed_url": "http://blog.gourmetrootbeer.com/feed/",
+      "website_url": "http://blog.gourmetrootbeer.com/",
+      "description": "This is the blog of Eric's Gourmet Root Beer site, one of the oldest root beer reviewing sites on the web and the only site to focus entirely on gourmet root beer. Eric has been reviewing gourmet root beers since 1998 but only recently added a blog. This blog will be updated with a new root beer review every Wednesday.",
+      "followers": {
+        "facebook": 735,
+        "twitter": 228
+      },
+      "image_url": "https://i1.feedspot.com/4488494.jpg?t=1611036672"
+    },
+    {
+      "title": "Bon Beer Voyage Blog",
+      "feed_url": "https://bonbeer.com/feed/",
+      "website_url": "https://bonbeer.com/beer-blog/",
+      "description": "Read the Bon Beer Voyage Beer Blog for information on Belgium beer tours and trips, craft beer reviews, travel photos and more. Bon Beer Voyage is a beer travel company specializing in exclusive custom beer tours for beer lovers and craft beer enthusiasts.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4487439.jpg?t=1611036682"
+    },
+    {
+      "title": "BeerAlien",
+      "feed_url": "http://beeralien.com/feed/",
+      "website_url": "https://beeralien.com/",
+      "description": "BeerAlien is a beer news website devoted in promoting beer through craft beer news, beer reviews and events. Learn about craft beer with the Beer Aliens. Its mission is to explore Earth's microbreweries and craft beer offering reviews of both the beer and places that brew them.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 1300,
+        "instagram": 9300
+      },
+      "image_url": "https://i1.feedspot.com/4488533.jpg?t=1611036687"
+    },
+    {
+      "title": "Florida Beer News",
+      "feed_url": "https://www.floridabeernews.com/feed/",
+      "website_url": "https://www.floridabeernews.com/",
+      "description": "Florida Beer News works to report news on Florida's craft beer and breweries from Pensacola to Key West and all points in between. It was born in 2013 when the editor, Mark, noticed that many Florida breweries were not receiving national attention for the work they did. Its mission is to be the first name in beer news, reviews, and information for Florida's burgeoning craft beer scene.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4488548.jpg"
+    },
+    {
+      "title": "A Good Beer Blog",
+      "feed_url": "http://abetterbeerblog427.com/feed/",
+      "website_url": "http://abetterbeerblog427.com/",
+      "description": "The second longest running beer blog on the planet. A Good Beer Blog is the playground of Alan McLeod, clearly Canada's favorite and surely unparalleled beer historian. Not a consultant on the side. Not even a tour guide. Beer community denier. Spits. Wants a Double Double. Unpopular globally.",
+      "followers": {
+        "twitter": 22200,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5269724.jpg"
+    },
+    {
+      "title": "#NAME?",
+      "feed_url": "https://www.totalales.co.uk/blog?format=RSS",
+      "website_url": "https://www.totalales.co.uk/blog/",
+      "description": "Total Ales started life in January 2012 as a simple beer blog and for the most part it still is. We write stories about things happening in beer that excite and interest us and photograph the beauty in the beer industry we find along the way. We strive to be an optimistic voice in beer, focusing on subjects that interest us while hoping they will inspire you to feel the same way.",
+      "followers": {
+        "facebook": 528,
+        "twitter": 19700,
+        "instagram": 8200
+      },
+      "image_url": "https://i1.feedspot.com/4502562.jpg?t=1611036697"
+    },
+    {
+      "title": "The Brewers Journal",
+      "feed_url": "https://www.brewersjournal.info/feed/",
+      "website_url": "https://www.brewersjournal.info/",
+      "description": "The Brewers Journal is the professional magazine for the beer brewing industry. It is a brand new bi-monthly publication designed to give UK breweries, distributors, and suppliers an essential insight into the issues that matter to them, and also how to take advantage of this growing market.",
+      "followers": {
+        "facebook": 853,
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/4487661.jpg?t=1611036736"
+    },
+    {
+      "title": "Ben's Beer Blog",
+      "feed_url": "https://bensbeerblog.com/feed/",
+      "website_url": "https://bensbeerblog.com/",
+      "description": "Ben Johnson lives, parents, writes, and drinks beer in London, Ontario, Canada. He is the host of the podcast Beer and Bullshit and his writing about beer, politics, and the places where the two intertwine has appeared in The Globe and Mail, Toronto Life, Post City, blogTO, and Torontoist.",
+      "followers": {
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/4486660.jpg?t=1688013333"
+    },
+    {
+      "title": "Beerploma",
+      "feed_url": "https://beerploma.com/feed/",
+      "website_url": "https://beerploma.com/news/",
+      "description": "Beerploma LLC is an organization of craft beer advocates. We aim to educate the craft beer consumer, and support our local craft beer establishments.",
+      "followers": {
+        "twitter": 777,
+        "instagram": 947
+      },
+      "image_url": "https://i1.feedspot.com/4948069.jpg"
+    },
+    {
+      "title": "The Gnarly Gnome",
+      "feed_url": "https://thegnarlygnome.com/feed/",
+      "website_url": "https://thegnarlygnome.com/",
+      "description": "The Gnarly Gnome, Cincinnati's Gnarliest Beer Blogger. News and updates on Cincinnati's growing beer scene. Find out all there is to know about your local Cincinnati Breweries.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 2100,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4487462.jpg?t=1611036753"
+    },
+    {
+      "title": "Florida Beer Blog",
+      "feed_url": "https://floridabeerblog.wordpress.com/feed/",
+      "website_url": "https://floridabeerblog.wordpress.com/",
+      "description": "Florida Beer Blog is devoted to great beers in the Sunshine State. It provides news, reviews, and information about the burgeoning Florida craft beer scene.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4487496.jpg?t=1610631050"
+    },
+    {
+      "title": "Virginia Craft Beer Magazine",
+      "feed_url": "https://virginiacraftbeer.com/feed/",
+      "website_url": "https://virginiacraftbeer.com/",
+      "description": "Virginia Craft Beer is both a print magazine and website focused entirely on beer and ciders brewed within the Commonwealth of Virginia. In addition to serving as a guide to all the breweries and beers they brew, Virginia Craft Beer will also include beer events, beer reviews, business updates and feature length articles penned by award-wining journalists and beer experts.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 1200,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4487627.jpg?t=1611036760"
+    },
+    {
+      "title": "Craft Beer Time",
+      "feed_url": "https://craftbeertime.com/feed",
+      "website_url": "https://craftbeertime.com/",
+      "description": "Exploring the world of craft beer and brewing with beer gadgets, pictures, reviews, news, discussions, insight, events, travels, and more.",
+      "followers": {
+        "facebook": 983,
+        "twitter": 43200,
+        "instagram": 48000
+      },
+      "image_url": "https://i1.feedspot.com/60890.jpg"
+    },
+    {
+      "title": "Fuggled",
+      "feed_url": "https://feeds.feedburner.com/Fuggled",
+      "website_url": "http://www.fuggled.net/",
+      "description": "Drink Responsibly, Don't Spill. A blog about beer, pubs and homebrewing. Based in Charlottesville but with a view of the world.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4502559.jpg?t=1611036781"
+    },
+    {
+      "title": "BeerTengoku",
+      "feed_url": "https://beertengoku.com/feed/",
+      "website_url": "https://beertengoku.com/",
+      "description": "BeerTengoku is Japan's only 100% independent guide to Japanese Craft Beer, Craft Beer Bars, Breweries, Events, and more.",
+      "followers": {
+        "facebook": 911,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4892612.jpg?t=1611037686"
+    },
+    {
+      "title": "MNBeer",
+      "feed_url": "https://www.mnbeer.com/feed/",
+      "website_url": "https://www.mnbeer.com/news-updates/",
+      "description": "MNBeer is Minnesota's source for craft beer news, events and information. It covers all aspects of the craft beer scene in Minnesota, including news about breweries, brewpubs, homebrew shops, craft beer bars, beer stores and more.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 14700
+      },
+      "image_url": "https://i1.feedspot.com/328650.jpg?t=1611037006"
+    },
+    {
+      "title": "rivernorthbrewery Blog",
+      "feed_url": "https://www.rivernorthbrewery.com/blog-feed.xml",
+      "website_url": "https://www.rivernorthbrewery.com/blog",
+      "description": "Founded in 2012 by Matt and Jessica Hess, we are a small, tight-knit crew of brewers and beer fanatics. We brew what we love to drink: original, no-compromise ales and lagers that exemplify what independent beer is all about.",
+      "followers": {
+        "facebook": 9000,
+        "twitter": 7600,
+        "instagram": 12000
+      },
+      "image_url": "https://i1.feedspot.com/5049717.jpg?t=1611037014"
+    },
+    {
+      "title": "The Beer Nut",
+      "feed_url": "https://thebeernut.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://thebeernut.blogspot.com/",
+      "description": "The Beer Nut documents this blog author's journey and travels as he explores Beer destinations, Breweries, Festivals, and Brands around the world. Read in-depth, tasteful, and beautifully detailed reviews of Beers and some travelogues.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 9500
+      },
+      "image_url": "https://i1.feedspot.com/4488641.jpg?t=1611037695"
+    },
+    {
+      "title": "The Best Beer Blog",
+      "feed_url": "https://bestbeerblog.net/feed/",
+      "website_url": "https://bestbeerblog.net/blog/",
+      "description": "For all things beer look no further! Great craft beer, bar, brewery and events reviews as well a news and current events with an ease of understanding! With a local Charlotte and North Carolina view.",
+      "followers": {
+        "twitter": 210
+      },
+      "image_url": "https://i1.feedspot.com/4488626.jpg"
+    },
+    {
+      "title": "The Adventures of Drunk Polkaroo",
+      "feed_url": "https://drunkpolkaroo.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://drunkpolkaroo.blogspot.com/",
+      "description": "The Adventures of Drunk Polkaroo follows this Beer-loving author's travails as he explores, trundles, tastes, and celebrates Beers, Breweries, and Cultures. Read personal, witty accounts, Beer stories, reviews, and more in this crafty, informative beer blog.",
+      "followers": {
+        "facebook": 924,
+        "twitter": 4200,
+        "instagram": 10600
+      },
+      "image_url": "https://i1.feedspot.com/4506372.jpg?t=1611037729"
+    },
+    {
+      "title": "John's Beer Blog",
+      "feed_url": "https://www.johnlikesbeer.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.johnlikesbeer.com/",
+      "description": "John's Beer Blog has been providing simple, straight-from-the-bottle beer experiences to the whole internet.",
+      "followers": {
+        "facebook": 55,
+        "twitter": 69
+      },
+      "image_url": "https://i1.feedspot.com/4488628.jpg?t=1611037733"
+    },
+    {
+      "title": "Pints and Panels",
+      "feed_url": "https://www.pintsandpanels.com/?format=rss",
+      "website_url": "https://www.pintsandpanels.com/",
+      "description": "Pints and Panels provides beer reviews in the sequential tradition drawn by a Level 2 Cicerone and BJCP Provisional Judge. You will find new reviews on Tuesdays and Thursdays.",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 16100,
+        "instagram": 82400
+      },
+      "image_url": "https://i1.feedspot.com/4488607.jpg?t=1611040445"
+    },
+    {
+      "title": "Houston Beer Guide",
+      "feed_url": "https://houstonbeerguide.com/feed/",
+      "website_url": "https://houstonbeerguide.com/",
+      "description": "Houston Beer Guide provides online beer news and reviews for the city of Houston. It is the place to go to learn about the new breweries and bars before they open. Their goal is to give Houston's beer community a voice. Follow their blog and learn more about the latest beer news, products, articles, videos, reviews, and more.",
+      "followers": {
+        "facebook": 3200,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4487728.jpg?t=1611040741"
+    },
+    {
+      "title": "Humebrew",
+      "feed_url": "https://humebrew.com/rss/",
+      "website_url": "https://humebrew.com/",
+      "description": "My name is Dean Hume and I am passionate about beer! I started this blog because I am a keen homebrewer that is interested in learning more about this great, frothy beverage.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5150435.jpg"
+    },
+    {
+      "title": "So Cal Craft Beer Blog",
+      "feed_url": "https://socalcraftbeerblog.com/feed/",
+      "website_url": "https://socalcraftbeerblog.com/",
+      "description": "Collectively, we've been drinking beer, covering beer developments, and expanding our beer horizons for too many years to admit out loud. We come from backgrounds as writers, brewers, connoisseurs, and business professionals. We hope to stimulate not only our palates but expand our knowledge and foster a lively discussion around the subject we're all passionate about: beer!",
+      "followers": {
+        "instagram": 192
+      },
+      "image_url": "https://i1.feedspot.com/5393783.jpg?t=1650888989"
+    },
+    {
+      "title": "North Texas Beer Blog",
+      "feed_url": "https://northtexasbeerblog.com/feed/",
+      "website_url": "https://northtexasbeerblog.com/",
+      "description": "North Texas Beer Blog is owned by Paul Hightower, a freelance writer for science, technology and educational topics. Writing about craft beer and local brewers has been a passion of his for decades. He has tried many different styles and concepts, some successful and some that fell flat. Explore his observations on the North Texas Craft Beer blog and Brewing Industry.",
+      "followers": {
+        "facebook": 221,
+        "twitter": 92
+      },
+      "image_url": "https://i1.feedspot.com/5393794.jpg?t=1698153367"
+    },
+    {
+      "title": "Satire Brewing Company Blog",
+      "feed_url": "https://satirebrewingcompany.com/feed/",
+      "website_url": "https://satirebrewingcompany.com/blog/",
+      "description": "Know more about our latest brews, events and other beer spots to enjoy in our blog. Satire Brewing Company is Thornton's most inappropriate small-batch brewpub and eatery. We serve both food & FRESH cheeky beers.",
+      "followers": {
+        "facebook": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5393795.jpg?t=1650882965"
+    },
+    {
+      "title": "Craft Beer Newcastle Blog",
+      "feed_url": "https://craftbeernewcastle.co.uk/feed/",
+      "website_url": "https://craftbeernewcastle.co.uk/blog/",
+      "description": "Features brewery news, what's happening in the wonderful world of craft beer, brewery and bottle shop directories, buy local options, and more. Craft Beer Newcastle is your guide to the best of the North East England beer scene!",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 7000,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5301656.jpg?t=1626258010"
+    },
+    {
+      "title": "010 Beer Blog",
+      "feed_url": "https://www.010beerblog.com/feed/",
+      "website_url": "https://www.010beerblog.com/",
+      "description": "I'm a craft beer enthusiast from Rotterdam, The Netherlands.This blog is all about the craft beer lifestyle and is for everyone who loves craft beer or wants to know more about the Rotterdam beer experience and beyond!",
+      "followers": {
+        "facebook": 717,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5393799.jpg?t=1650882998"
+    },
+    {
+      "title": "The Brewmistress",
+      "feed_url": "https://brewmistress.co.za/feed/",
+      "website_url": "https://brewmistress.co.za/",
+      "description": "Welcome to The Brewmistress, a South African beer blog by Lucy Corne, featuring beer reviews, news, brew musings and restaurant reviews. Lucy Corne has been 'researching' beer for many years, tasting microbrews in North and South Korea, propping up bars across Canada and enjoying more than the occasional ale in her native UK. Since settling in South Africa she has become an avid participant in the booming beer scene.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 13
+      },
+      "image_url": "https://i1.feedspot.com/5393801.jpg?t=1650883017"
+    },
+    {
+      "title": "Ding's Beer Blog",
+      "feed_url": "https://dingsbeerblog.com/feed/",
+      "website_url": "https://dingsbeerblog.com/",
+      "description": "Since 2011, a place for sensible beer talk focused on critiquing the contemporary beer scene through a traditional lens.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 231
+      },
+      "image_url": "https://i1.feedspot.com/5408513.jpg?t=1654680204"
+    },
+    {
+      "title": "Iron Horse Brewery Blog",
+      "feed_url": "https://www.ironhorsebrewery.com/feed/",
+      "website_url": "https://www.ironhorsebrewery.com/the-blog/",
+      "description": "Get the latest craft beer news and updates from iron horse brewery. Iron Horse Brewery is a family-owned business of Beer Makers for Beer Drinkers who Drink Craft Beer.",
+      "followers": {
+        "facebook": 22200,
+        "twitter": 9100,
+        "instagram": 11100
+      },
+      "image_url": "https://i1.feedspot.com/5393790.jpg?t=1650882942"
+    },
+    {
+      "title": "Beer & Brewer",
+      "feed_url": "https://www.beerandbrewer.com/feed/",
+      "website_url": "https://www.beerandbrewer.com/",
+      "description": "Beer & Brewer is a consumer lifestyle magazine that celebrates all things beer in Australia & New Zealand. Read by consumers and trade, the title delivers entertaining and authoritative content via a quarterly magazine, a website and a weekly e-newsletter.",
+      "followers": {
+        "facebook": 9400,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4487634.jpg?t=1611036313"
+    },
+    {
+      "title": "New Jersey Craft Beer",
+      "feed_url": "https://newjerseycraftbeer.com/feed/",
+      "website_url": "https://newjerseycraftbeer.com/news/",
+      "description": "New Jersey Craft Beer is the source for all things craft beer in New Jersey. The blog provides information on craft beer news & events. Save on craft beer around New Jersey at these events and many more.",
+      "followers": {
+        "facebook": 16800,
+        "twitter": 15500,
+        "instagram": 15100
+      },
+      "image_url": "https://i1.feedspot.com/4488549.jpg"
+    },
+    {
+      "title": "Boak & Bailey",
+      "feed_url": "https://boakandbailey.com/feed/",
+      "website_url": "https://boakandbailey.com/",
+      "description": "Boak & Bailey is a blog dedicated to the exploration of beer and pub culture. Founded by Jessica Boak and Ray Bailey, this blog offers insightful articles, beer reviews, historical anecdotes, and reflections on the ever-evolving beer and pub scene. Engage with their passionate community of beer enthusiasts and gain a deeper understanding of the traditions, trends, and stories behind the UK's beer and pub industry.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 10800
+      },
+      "image_url": "https://i1.feedspot.com/1902148.jpg?t=1685105883"
+    },
+    {
+      "title": "People Power Beer",
+      "feed_url": "https://www.peoplepowerbeer.com/feed/",
+      "website_url": "https://www.peoplepowerbeer.com/",
+      "description": "Explore the universe of beer with People Power Beer, delving into the intricate art and science that transform humble ingredients into a symphony of aromas and tastes. Learn about the diverse brewing techniques that yield unique profiles, and discover the stories behind the labels that grace bottles and cans alike.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5761557.jpg?t=1706167314"
+    },
+    {
+      "title": "Beer Cartel Blog",
+      "feed_url": "https://www.beercartel.com.au/rss.php?action=newblogs&type=rss",
+      "website_url": "https://www.beercartel.com.au/blog/",
+      "description": "Covers the latest craft beer insights, interviews, scoops, beer recommendations, and much more. At Beer Cartel we believe there is simply too little time to waste on poor beer - our founding philosophy is to put good beer in the hands of consumers, allowing people to enjoy quality craft beer sourced from across the world.",
+      "followers": {
+        "facebook": 51900,
+        "twitter": 4300,
+        "instagram": 37700
+      },
+      "image_url": "https://i1.feedspot.com/4488655.jpg?t=1611035804"
+    },
+    {
+      "title": "52 Brews",
+      "feed_url": "https://52brews.com/feed/",
+      "website_url": "https://52brews.com/",
+      "description": "Your online resource on all things craft beer and homebrewing! Craft beer reviews, beer of the month club and subscription reviews, homebrewing equipment reviews, homebrewing tips, overall craft beer knowledge.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 24,
+        "instagram": 19900
+      },
+      "image_url": "https://i1.feedspot.com/5087312.jpg?t=1611036443"
+    },
+    {
+      "title": "Realbeer.com Beer Therapy",
+      "feed_url": "https://www.realbeer.com/feed/",
+      "website_url": "https://www.realbeer.com/",
+      "description": "Realbeer.com covers articles about beer, beer culture, home brewing, beer news, beer breweries, and more. Dive into a stream of coverage on the latest Beer events in the country displaying authentic local culture, Beer & Food, Breweries, Beer news and more.",
+      "followers": {
+        "twitter": 19300
+      },
+      "image_url": "https://i1.feedspot.com/1105426.jpg?t=1631711606"
+    },
+    {
+      "title": "Canadian Beer News",
+      "feed_url": "https://www.canadianbeernews.com/feed/",
+      "website_url": "https://www.canadianbeernews.com/",
+      "description": "Canadian Beer News is a website dedicated exclusively to covering news about Canada's beer and brewing industry. Presenting information with minimal editorializing, CBN features announcements of new beer releases, brewery openings and closures, news about festivals and events, and other information from breweries all across the country.",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 13000
+      },
+      "image_url": "https://i1.feedspot.com/548961.jpg?t=1611036435"
+    },
+    {
+      "title": "Beer Is OK Blog",
+      "feed_url": "https://beerisok.com.au/comments/feed/",
+      "website_url": "https://beerisok.com.au/blog/",
+      "description": "Beer Is OK was created in December 2019 as a place for Australian beer enthusiasts to come and find amazing new breweries, beer venues and bottle shops in Western Australia that stock their favourite craft beer. It's also a place for the Beer Is OK team to share our thoughts on local events and venues, writing about brewery tours, pub crawls and upcoming local beer-related events.",
+      "followers": {
+        "facebook": 326
+      },
+      "image_url": "https://i1.feedspot.com/5393796.jpg?t=1650882980"
+    },
+    {
+      "title": "The Beeroness",
+      "feed_url": "https://domesticfits.com/tag/beverages/feed/",
+      "website_url": "https://domesticfits.com/tag/beverages/",
+      "description": "Jackie Dodd, on The Beeroness blog shares recipes for baking and cooking with beer that marry her love of food and good craft beer.",
+      "followers": {
+        "facebook": 23200,
+        "twitter": 7500,
+        "instagram": 25500
+      },
+      "image_url": "https://i1.feedspot.com/1600966.jpg?t=1611036330"
+    },
+    {
+      "title": "SD Beer Blog",
+      "feed_url": "https://www.sdbeer.com/1/feed",
+      "website_url": "https://www.sdbeer.com/blog",
+      "description": "Known as the 'Capital of Craft', San Diego is home to over 150 independent craft breweries and is the birth place of some of our industry's most respected breweries. Explore all different breweries in San Diego in this blog.",
+      "followers": {
+        "facebook": 19100,
+        "twitter": 6400,
+        "instagram": 38600
+      },
+      "image_url": "https://i1.feedspot.com/5393785.jpg?t=1650882915"
+    },
+    {
+      "title": "LowerCase Brewing Blog",
+      "feed_url": "https://www.lowercasebrewing.com/beer-blog?format=rss",
+      "website_url": "https://www.lowercasebrewing.com/beer-blog",
+      "description": "Find articles featuring more information on beer, breweries, and more! LowerCase is a beer company producing acclaimed beers present throughout Northwest bars & liquor stores. We have a warm and friendly taproom located in the historic Georgetown neighborhood.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 2200,
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5393784.jpg?t=1650891063"
+    },
+    {
+      "title": "Social Fox Brewing Blog",
+      "feed_url": "https://www.socialfoxbrewing.com/feed/",
+      "website_url": "https://www.socialfoxbrewing.com/blog/",
+      "description": "Norcross Brewery Social Fox Brewing is the first Craft Brewery in downtown Norcross. Read what's brewing in Norcross Georgia on the brewery blog. Norcross Georgia's First Award Winning Craft Brewery Located in Historic Downtown Norcross. 18 craft beers on tap. Hard Seltzers, Beer Slushies and Beermosas. Family and Dog Friendly hosting various events, food vendors, live music and comedy.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 170,
+        "instagram": 12700
+      },
+      "image_url": "https://i1.feedspot.com/5393792.jpg?t=1650882953"
+    },
+    {
+      "title": "Guys Drinking Beer",
+      "feed_url": "https://www.guysdrinkingbeer.com/feed/",
+      "website_url": "https://www.guysdrinkingbeer.com/",
+      "description": "Guys Drinking Beer is all about Chicago-based journalists, covering the world for craft beer folks & policy geeks since 2010. Today they bring you beer reviews from their personal cellar, beer news from Illinois and across the Midwest and act as a beacon for those who love both beer and politics.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 14200,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/1820164.jpg?t=1611036452"
+    },
+    {
+      "title": "What's Brewing Magazine",
+      "feed_url": "https://www.whatsbrewing.ca/feed/",
+      "website_url": "https://www.whatsbrewing.ca/news/",
+      "description": "What's Brewing is a magazine about the craft beer movement in BC, Canada. It features great original beer writing from front to back. It also features craft beer community contributions and spotlight some of the best recent articles by BC beer bloggers and authors in order to help bring attention to the craft beer movement as well as the writing talent that exists in BC and Western Canada.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 1800,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4487643.jpg?t=1611036458"
+    },
+    {
+      "title": "Beer-Pedia.com - \u03a0\u03b5\u03c1\u03b9\u03bf\u03b4\u03b9\u03ba\u03cc",
+      "feed_url": "https://www.beer-pedia.com/index.php/news?format=feed&type=rss&x=1",
+      "website_url": "https://athomebrewer.com/",
+      "description": "Europe's Best Web Site About Beer, Beer News, Beer Encyclopedia, Beer & Brewing Awards Greece.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4776731.jpg?t=1611036469"
+    },
+    {
+      "title": "At Home Brewer",
+      "feed_url": "https://athomebrewer.com/feed/",
+      "website_url": "https://athomebrewer.com/",
+      "description": "Covers articles about reviewing equipment, beer clubs, and different styles of beer. At Home Brewer is a website about homebrewing and beer in general.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5149824.jpg?t=1611036477"
+    },
+    {
+      "title": "Craft Beer Joe",
+      "feed_url": "https://www.craftbeerjoe.com/feed/",
+      "website_url": "https://www.craftbeerjoe.com/",
+      "description": "Craft Beer Joe is a place for us to learn more about the craft beer and the craft beer community. It is all about getting to know more about craft beer. We'll discuss what craft beer is and isn't. There will be articles about beer styles, events, and the community.",
+      "followers": {
+        "facebook": 955,
+        "twitter": 2200,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5129875.jpg?t=1611036481"
+    },
+    {
+      "title": "Let Us Drink Beer Blog",
+      "feed_url": "https://letusdrinkbeer.blog/feed/",
+      "website_url": "https://letusdrinkbeer.blog/",
+      "description": "Beer reviews are intended to help beer enthusiasts easily determine if they would want to try a particular beer. Most beer consumers are looking for three main types of information: how bitter is the taste, what is the alcohol content, and are there any interesting or distinguishing characteristics. Instead of a traditional numbered rating system, I chose to focus on those three areas",
+      "followers": {
+        "twitter": 369,
+        "instagram": 996
+      },
+      "image_url": "https://i1.feedspot.com/5067468.jpg?t=1611036623"
+    },
+    {
+      "title": "KC Beer Blog",
+      "feed_url": "https://kcbeerblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://kcbeerblog.blogspot.com/",
+      "description": "KC Beer Blog is Kansas City's source for craft beer info since 2007. Subscribe us to keep up with events, news, and more from local breweries and bars in the KC metro area.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4486687.jpg?t=1611036658"
+    },
+    {
+      "title": "The Tale Of The Ale",
+      "feed_url": "https://feeds2.feedburner.com/TheTaleOfTheAle",
+      "website_url": "https://www.taleofale.com/",
+      "description": "The Tale Of The Ale is a blog about Craft Beer. Reuben Gray is a beer writer based in Ireland but travels the world and writes about beer.",
+      "followers": {
+        "facebook": 290,
+        "twitter": 3900,
+        "instagram": 556
+      },
+      "image_url": "https://i1.feedspot.com/4486812.jpg?t=1611036666"
+    },
+    {
+      "title": "Beer Selfie",
+      "feed_url": "https://beerselfie.com/feed/",
+      "website_url": "https://beerselfie.com/",
+      "description": "Beer Selfie brings you the top beers around you and where to find them. Get the latest updates on whats happening in the Beer world - Meetups, New breweries, and more in one place. Beer Selfie is a website founded by Beer lovers who post selfies holding a beer.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 1500,
+        "instagram": 64099
+      },
+      "image_url": "https://i1.feedspot.com/5087755.jpg?t=1611036731"
+    },
+    {
+      "title": "South Jersey Beer Scene",
+      "feed_url": "https://sjbeerscene.com/feed/",
+      "website_url": "https://sjbeerscene.com/",
+      "description": "Your source for the latest in craft beer news, events, culture, and commentary in the South Jersey region and beyond. Enjoy your pour!",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 1300,
+        "instagram": 12100
+      },
+      "image_url": "https://i1.feedspot.com/4729987.jpg?t=1611036734"
+    },
+    {
+      "title": "Hoppy Boston",
+      "feed_url": "https://hoppyboston.com/feed/",
+      "website_url": "https://hoppyboston.com/",
+      "description": "Hoppy Boston is a site dedicated to craft beer with a focus on New England breweries, Boston area beer bars, and home-brewing. It is a Boston based blog for all things craft beer, including reviews of beers and beer bars.",
+      "followers": {
+        "facebook": 514,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4487477.jpg?t=1610797104"
+    },
+    {
+      "title": "The Not So Professional Beer Blog",
+      "feed_url": "https://www.notsoprofessionalbeer.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.notsoprofessionalbeer.com/",
+      "description": "The Not So Professional Beer Blog is all about an amateur's explorations of craft beer, homebrewing, and Portland beer culture. Follow us to keep up with the articles on The Not So Professional Beer Blog.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4488599.jpg?t=1610112317"
+    },
+    {
+      "title": "Homebrewing Deal",
+      "feed_url": "https://homebrewingdeal.com/feed/",
+      "website_url": "https://homebrewingdeal.com/",
+      "description": "Homebrewing Deal is the best source for homebrewing deals on the web. Save money and learn about home brewing with helpful reviews, beer brewing coupons and promo codes.",
+      "followers": {
+        "facebook": 399,
+        "twitter": 117
+      },
+      "image_url": "https://i1.feedspot.com/4488585.jpg?t=1610112287"
+    },
+    {
+      "title": "Drinkible",
+      "feed_url": "https://www.drinkible.com/feed/",
+      "website_url": "https://www.drinkible.com/news/",
+      "description": "Drinkible celebrates the nation's craft beverage community as a leading source for industry news, content management, brand storytelling, and promotion. We're all about the drink in your hand. The drink that accompanies life's celebrations, hardships, the ordinary days.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 6800,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4488522.jpg?t=1622012194"
+    },
+    {
+      "title": "The Barley Blog",
+      "feed_url": "http://www.thebarleyblog.com/feed/",
+      "website_url": "http://www.thebarleyblog.com/",
+      "description": "The Barley Blog is a Beer blog discussing beer news, beer reviews and more. It is dedicated to all things beer. You'll find commentary on a range of topics from beer reviews to beer culture to just about anything in between. Throughout this blog, you'll find beer reviews, beer news, press releases, hilarious commercials and more.",
+      "followers": {
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4487470.jpg"
+    },
+    {
+      "title": "Colorado Beer Girl",
+      "feed_url": "https://coloradobeergirl.com/feed/",
+      "website_url": "https://coloradobeergirl.com/",
+      "description": "Colorado is a beer lover's dream. Colorado Beer Girl is a blog focusing on Colorado beer, breweries, bars, beer & food pairings, restaurants with craft beer, beer events & more. I talk about upcoming beer events, beer restaurants and cafes in the area, recipes, and more.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4486774.jpg?t=1611037005"
+    },
+    {
+      "title": "Maritime Beer Report",
+      "feed_url": "http://maritimebeerreport.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://maritimebeerreport.blogspot.com/",
+      "description": "The Maritime Beer Report reports on beer, breweries, events and more in New Brunswick, Prince Edward Island and Nova Scotia.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4502555.jpg"
+    },
+    {
+      "title": "Beerism",
+      "feed_url": "https://beerism.ca/feed/",
+      "website_url": "https://beerism.ca/",
+      "description": "Noah Forrest created this site/blog in order to explore the ever growing craft beer scene that she have fallen for. She will be reviewing, examining, and providing information about beer, food, breweries, and the beer community in general, with a special emphasis on Quebec.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 540
+      },
+      "image_url": "https://i1.feedspot.com/4487724.jpg?t=1632233925"
+    },
+    {
+      "title": "Hoppy Travels & Cider Sightings",
+      "feed_url": "http://hoppytravelsbeer.com/~hoppytra/feed/",
+      "website_url": "http://hoppytravelsbeer.com/",
+      "description": "Well first I'm passionate about travel and I also happen to be very passionate about the craft beer industry as well as small business. I also realized that I really do not want to do the 9-5 grind and work for vacation days. I also want to bring the world together through good beer and cider and travel.",
+      "followers": {
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5044791.jpg"
+    },
+    {
+      "title": "Brew Dad",
+      "feed_url": "https://brewdad.com/feed/",
+      "website_url": "https://brewdad.com/",
+      "description": "Brew Dad is a beer blog by Mike who is a beer geek and loves Barley Pops. Subscribe us to know more about festivals, beers, brewers, breweries and happenings in the beer business.",
+      "followers": {
+        "facebook": 940,
+        "twitter": 5900,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4922516.jpg?t=1611037876"
+    },
+    {
+      "title": "Beers of the World",
+      "feed_url": "https://beersoftheworldproject.wordpress.com/feed/",
+      "website_url": "https://beersoftheworldproject.wordpress.com/",
+      "description": "Beers of the World Project is a blog following Norwegian Jarle Wiig Nyb\u00f8 in his quest to taste beer from as many countries in the world as possible.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4654066.jpg?t=1611040415"
+    },
+    {
+      "title": "The beermonster's blog",
+      "feed_url": "http://fozzy21.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://fozzy21.blogspot.com/",
+      "description": "Independant reviews of Real Ale and Pubs at home and away. An Independant blog featuring both local, and national Real Ales, and the pubs they are served in, with a bit of humour added.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4893051.jpg?t=1611040427"
+    },
+    {
+      "title": "Craft Beers 101/ Alberta Beer",
+      "feed_url": "https://craftbeer101.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://craftbeer101.blogspot.com/",
+      "description": "Sharing experiences of different breweries and their brews along my travels throughout Alberta and beyond. I am trying to get out of my comfort zone and express my experiences and thoughts with everyone about the booming business of Craft beer and their Breweries. I also just talk about specialty one off craft beers when I can get my hands on them.",
+      "followers": {
+        "twitter": 60
+      },
+      "image_url": "https://i1.feedspot.com/4883297.jpg?t=1611040438"
+    },
+    {
+      "title": "BEER FOB",
+      "feed_url": "https://infobeerfob.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://infobeerfob.blogspot.com/",
+      "description": "Articles on Beer, Craft Beer, beer waste, beer control system, finest beer equipment, and much more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5197425.jpg?t=1600343424"
+    },
+    {
+      "title": "Beer There, Drunk That",
+      "feed_url": "https://beerthere-drunkthat.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://beerthere-drunkthat.blogspot.com/",
+      "description": "Beer There, Drunk That blog discusses this most noble drink produced through natural processes with such wonderful, simple ingredients, and the important role it plays, or should play, in people's everyday lives.",
+      "followers": {
+        "twitter": 76
+      },
+      "image_url": "https://i1.feedspot.com/4948088.jpg?t=1611040725"
+    },
+    {
+      "title": "Big Alex's World Beer Blog",
+      "feed_url": "https://bloggingworldbeer.wordpress.com/feed/",
+      "website_url": "https://bloggingworldbeer.wordpress.com/blog-feed/",
+      "description": "I've been wanting to put this blog into action for many years but I've packed the motivation and the know-how to get it off the ground. I have finally got things straight so that I can put some effort into It! The plan is simple, Drink 1 beer from every country in the world. However, I'm not one to do things the simple way and so I gave decided to break the USA down into all states. I've also decided to break down England, Scotland, and Wales down into counties. I hope this means that the blog will be a bit more diverse.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5076697.jpg"
+    },
+    {
+      "title": "Taiheiyogan",
+      "feed_url": "https://www.taiheiyogan.com/feed/",
+      "website_url": "https://www.taiheiyogan.com/",
+      "description": "Our mission is to bring you all of the information you need to make an informed choice on craft beer establishments and breweries.",
+      "followers": {
+        "facebook": 440,
+        "twitter": 63,
+        "instagram": 700
+      },
+      "image_url": "https://i1.feedspot.com/5084284.jpg"
+    },
+    {
+      "title": "SHADE TX Craft",
+      "feed_url": "https://www.shadetxcraft.com/feed/",
+      "website_url": "https://www.shadetxcraft.com/",
+      "description": "Do you like craft beer, but feel the #DrinkLocal movement is important? The best way to do that in Texas is to follow this blog. It gives you information on upcoming events, product rollouts, brewery openings, etc. throughout the entire state. It is dedicated to the Texas craft brewing scene that has been growing rapidly for the past 20 years.",
+      "followers": {
+        "facebook": 634,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4488487.jpg?t=1609855834"
+    },
+    {
+      "title": "Beer and Baking",
+      "feed_url": "https://beerandbaking.com/feed/",
+      "website_url": "https://beerandbaking.com/",
+      "description": "Beer and Baking is a beer reviewing and baking blog. Jessica Rice is a beer and baking enthusiast who travels for beer, within reason.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 917
+      },
+      "image_url": "https://i1.feedspot.com/4486814.jpg"
+    },
+    {
+      "title": "Beer God Blog",
+      "feed_url": "https://www.beergodblog.com/feed/",
+      "website_url": "https://www.beergodblog.com/",
+      "description": "Beer God Blog is a craft beer blog written for the everyday craft beer drinker. The blog provides beer and brewery reviews daily.",
+      "followers": {
+        "facebook": 617,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4486827.jpg?t=1611040813"
+    },
+    {
+      "title": "Mike's Craft Beer",
+      "feed_url": "https://mikescraftbeer.com/feed/",
+      "website_url": "https://mikescraftbeer.com/",
+      "description": "The team behind Mike's Craft Beer Blog reviews craft beer from around the world. They strive to help introduce people to the best of the Craft Beer available to us locally and around the world.",
+      "followers": {
+        "facebook": 538
+      },
+      "image_url": "https://i1.feedspot.com/4486764.jpg?t=1611040930"
+    },
+    {
+      "title": "Accidentalis Brewing",
+      "feed_url": "https://www.accidentalis.com/feed/",
+      "website_url": "https://www.accidentalis.com/",
+      "description": "At Accidentalis, you will find some long winded and long form articles on brewing beer, mead, and fiddling around with fun (or not so fun) brewery gear and gadgets.",
+      "followers": {
+        "twitter": 233
+      },
+      "image_url": "https://i1.feedspot.com/4493834.jpg?t=1611040855"
+    },
+    {
+      "title": "BeerPulse",
+      "feed_url": "https://beerpulse.com/feed/",
+      "website_url": "https://beerpulse.com/",
+      "description": "Beerpulse is one of the world's most trusted sources of beer information, 8 years running. It's mission is to disseminate beer news as fast as it becomes available. Delivering daily news updates on breweries like Sierra Nevada Brewing, Stone Brewing, Dogfish Head, Russian River and more.",
+      "followers": {
+        "facebook": 36700,
+        "twitter": 82200
+      },
+      "image_url": "https://i1.feedspot.com/828675.jpg?t=1611040902"
+    },
+    {
+      "title": "The Italian Craft Beer",
+      "feed_url": "https://theitaliancraftbeer.wordpress.com/feed/",
+      "website_url": "https://theitaliancraftbeer.wordpress.com/",
+      "description": "A humble blog about Italian craft beers and breweries. This is my humble beer blog, where I try to tell you something about Italian Craft Beer, in my broken English. In this special period, for the beer tasting, I am helped by my mate Davide Salvalaio, brewer and beer expert! This blog is designed for non-Italian people looking for information about Italian craft beers.",
+      "followers": {
+        "instagram": 12100
+      },
+      "image_url": "https://i1.feedspot.com/5393791.jpg?t=1650891316"
+    },
+    {
+      "title": "Hazy and Hoppy",
+      "feed_url": "https://hazyandhoppy.com/feed/",
+      "website_url": "https://hazyandhoppy.com/",
+      "description": "Hazy and Hoppy is my latest venture focused around craft beer and homebrewing. While we're just getting started, this blog will focus on my homebrew journey in the past 7-8 years and everything I've learned along the way. My hope is that this blog will be a helpful resource and an inspiration to both beginner and intermediate homebrewers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5216075.jpg?t=1605769514"
+    },
+    {
+      "title": "The Tap Takeover",
+      "feed_url": "https://thetaptakeover.com/feed/",
+      "website_url": "https://thetaptakeover.com/",
+      "description": "The Tap Takeover is a craft beer blog focused primarily on beer reviews, with some reviews of breweries as well as other assorted beer thoughts.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5321563.jpg?t=1631534213"
+    },
+    {
+      "title": "Kegerator Blog",
+      "feed_url": "https://www.kegerators.com/blog/feed/",
+      "website_url": "https://www.kegerators.com/blog/",
+      "description": "Kegerators, beer dispensers and conversion kits for your home bar. Compare top kegerator brands and draft beer dispensing equipment at Kegerators.com for the best possible price.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 946
+      },
+      "image_url": "https://i1.feedspot.com/4686398.jpg?t=1611036296"
+    },
+    {
+      "title": "Home Brew Answers Blog",
+      "feed_url": "https://homebrewanswers.com/feed/",
+      "website_url": "https://homebrewanswers.com/blog/",
+      "description": "Covers articles all about home brewing and beer. Home Brew Answers is dedicated to helping people learn about making beer at home!",
+      "followers": {
+        "facebook": 992,
+        "twitter": 571,
+        "instagram": 111
+      },
+      "image_url": "https://i1.feedspot.com/4808999.jpg?t=1611036301"
+    },
+    {
+      "title": "Beer Me British Columbia",
+      "feed_url": "https://www.beermebc.com/feed/",
+      "website_url": "https://www.beermebc.com/bc-craft-beer-blogs-the-whos-who-of-bc-craft-beer/",
+      "description": "Beer Me BC is the #1 source for British Columbia Craft Beer and Brewery News, Events and Reviews. Let them help find your new favourite BC craft beer.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 2700,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4486769.jpg?t=1611036290"
+    },
+    {
+      "title": "Beer O'clock Show Podcasts",
+      "feed_url": "http://www.beeroclockshow.co.uk/feed/",
+      "website_url": "http://www.beeroclockshow.co.uk/",
+      "description": "Since 2012",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5774181.jpg?t=1750347732"
+    },
+    {
+      "title": "Craft Beer and Brewing",
+      "feed_url": "https://beerandbrewing.com/rss/",
+      "website_url": "https://beerandbrewing.com/",
+      "description": "Your go-to place to get daily fix of brewing tips, beer news, and the scoop on the latest in beer gear. Craft Beer and Brewing is a magazine and online community for people who love to drink and make great beer.",
+      "followers": {
+        "facebook": 88900,
+        "twitter": 13100
+      },
+      "image_url": "https://i1.feedspot.com/4946763.jpg?t=1611034291"
+    },
+    {
+      "title": "Monday Night Brewing Blog",
+      "feed_url": "https://mondaynightbrewing.com/feed/",
+      "website_url": "https://mondaynightbrewing.com/blog/",
+      "description": "Monday Night Brewing is an Atlanta-based craft brewery. We brew beers for the weeknights balanced, flavorful ales that pair well with food.",
+      "followers": {
+        "facebook": 50000,
+        "twitter": 20200,
+        "instagram": 58800
+      },
+      "image_url": "https://i1.feedspot.com/2022623.jpg?t=1611036311"
+    },
+    {
+      "title": "Homebrew Academy",
+      "feed_url": "https://homebrewacademy.com/feed/",
+      "website_url": "https://homebrewacademy.com/",
+      "description": "It's a Brew Life is a blog by two craft beer enthusiasts that love exploring the world of brew. Get to know more about our beer adventures brewery day trips and traveling around on beercations.",
+      "followers": {
+        "facebook": 985,
+        "twitter": 763,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4948079.jpg?t=1611036727"
+    },
+    {
+      "title": "Brewbound",
+      "feed_url": "https://www.brewbound.com/feed/",
+      "website_url": "https://www.brewbound.com/",
+      "description": "Brewbound is a leading industry trade publication providing comprehensive information about the beer space, analysis of industry trends, and in-depth interviews with industry leaders. The Brewbound.com website features up-to-the-minute news, a robust industry jobs board, a frequently updated database of U.S. beer companies, and a growing marketplace with listings for equipment, services, and more.",
+      "followers": {
+        "facebook": 23700,
+        "twitter": 28000,
+        "instagram": 14400
+      },
+      "image_url": "https://i1.feedspot.com/4488516.jpg?t=1611034337"
+    },
+    {
+      "title": "RahrBSG Blog",
+      "feed_url": "https://rahrbsg.com/blog/",
+      "website_url": "https://rahrbsg.com/blog/",
+      "description": "Learn more about product innovation, promotions, events, brewing inspiration and trending topics. The largest variety of quality ingredients with the reliability you need to create outstanding beers.",
+      "followers": {
+        "facebook": 4700,
+        "instagram": 9200
+      },
+      "image_url": "https://i1.feedspot.com/5393789.jpg"
+    },
+    {
+      "title": "Craft Beering",
+      "feed_url": "https://www.craftbeering.com/feed/",
+      "website_url": "https://www.craftbeering.com/",
+      "description": "Covers articles centered around craft beer, including articles about cooking with beer recipes, craft beer cocktails, tasting beer and home brewing, pairing beer and food tips, beer decor and beer gifts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5169018.jpg?t=1631711212"
+    },
+    {
+      "title": "Beer Bottle",
+      "feed_url": "https://beerbottle.ru/en/feed/",
+      "website_url": "https://beerbottle.ru/en/",
+      "description": "I am Alexander Idjon 'Djons', author of this blog about beer and about beer, and also, contract brewer of ID Jons Brewery. This blog expresses my private opinion of the beers I've tasted. And while I try to be objective, as they say - you can't argue about tastes. Subscribe for the latest updates.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 131,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5401070.jpg?t=1652785350"
+    },
+    {
+      "title": "Pubinno Blog",
+      "feed_url": "https://pubinno.com/feed/",
+      "website_url": "https://pubinno.com/blog/",
+      "description": "Ensuring more sustainable draft beer operations and brewery management via the reduction of water waste. Pubinno, Inc. is a San Francisco-based technology company with its smart solutions powered by Artificial Intelligence, Cloud Platforms, and Robotics builds the Internet of Beer. Pubinno supports all stakeholders in the entire draft beer ecosystem by enabling them to manage their draft beer operations more efficiently and in excellent quality of pub service.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 791
+      },
+      "image_url": "https://i1.feedspot.com/5301492.jpg?t=1670237223"
+    },
+    {
+      "title": "Craft Beer Nomads",
+      "feed_url": "https://craftbeernomads.com/feed/",
+      "website_url": "https://craftbeernomads.com/",
+      "description": "Craft Beer Nomads is a new blog about artisan beer, microbreweries, and craft beer culture in Europe and beyond. The blog is written by FinnsAway, a nomad couple who has been on the road since 2017 and enjoys tasting new craft beers, wherever we may roam.",
+      "followers": {
+        "facebook": 421,
+        "twitter": 49,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5416657.jpg?t=1656565838"
+    },
+    {
+      "title": "Australian Brews News",
+      "feed_url": "https://brewsnews.com.au/feed/",
+      "website_url": "https://brewsnews.com.au/",
+      "description": "Part blog, part online magazine, Australian Brews News delivers the best beer discussion and commentary daily to you. It also publishes in-depth features about beer, brewing, beer history, breweries and just about everything else of interest to beer lovers and aims to be your comprehensive source for Australian beer knowledge.",
+      "followers": {
+        "facebook": 14000,
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4488469.jpg?t=1611035805"
+    },
+    {
+      "title": "Ale/Sessions",
+      "feed_url": "https://alesessions.com/feed/",
+      "website_url": "https://alesessions.com/",
+      "description": "Established in 2015, Ale/Sessions is dedicated to the love of craft beer, spirits, cocktails and everything in-between.As a Canadian based publication, Ale/Sessions highlights the most interesting and diverse craft options within Canada, while offering a unique perspective on some of the global highlights happening in the broader industry around us.",
+      "followers": {
+        "twitter": 489,
+        "instagram": 6000
+      },
+      "image_url": "https://i1.feedspot.com/4676457.jpg?t=1632209674"
+    },
+    {
+      "title": "PairingwithBeer",
+      "feed_url": "http://pairingwithbeer.com/feed/",
+      "website_url": "http://pairingwithbeer.com/",
+      "description": "PairingwithBeer is a craft beer lifestyle blog that looks at craft breweries, beer, local, artisan businesses and how together they create community, culture and lifestyle.",
+      "followers": {
+        "facebook": 176,
+        "twitter": 108,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5058517.jpg?t=1611037686"
+    },
+    {
+      "title": "Beers Without Fears",
+      "feed_url": "https://beerswithoutfears.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://beerswithoutfears.blogspot.com/",
+      "description": "Every type of beer. The best non-alcoholic beers. The best alcohol-free beers. The best no-alcohol beers. The best low-alcohol beers. Well, OK, not every type, but if it's 0.5% ABV or below, this is where it gets a tasting, a brief review and a score (out of ten). So find the best of these beers and the not so best, in the opinion of one hard-working beer drinker. It's a tough job, but someone's got to do it.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5167716.jpg"
+    },
+    {
+      "title": "Trails Then Ales",
+      "feed_url": "https://trailsthenales.com/feed/",
+      "website_url": "https://trailsthenales.com/",
+      "description": "Trails Then Ales is all about trails and ales. For lovers of hiking, the outdoors, beer, and craft cocktails. Explore wonderful articles chronicling the best Beer and Hiking spots in the city and other fun things to do.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5130642.jpg?t=1611037855"
+    },
+    {
+      "title": "Boozy Beer Blog",
+      "feed_url": "https://boozybeerblog.co.uk/?feed=rss2",
+      "website_url": "https://boozybeerblog.co.uk/",
+      "description": "Boozy Beer Blog provides information on beers around the West Country and from further afield. It is about beer, Chris Mulliss's home brewed real ale beers and commercial real ales, craft beers, breweries and micro-breweries and all other things brewing that come to mind.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4488620.jpg?t=1611037871"
+    },
+    {
+      "title": "West Coaster San Diego Beer News",
+      "feed_url": "http://archives.csusm.edu/westcoastersd/feed/",
+      "website_url": "https://archives.csusm.edu/westcoastersd/",
+      "description": "West Coaster is a monthly magazine and website dedicated to the San Diego Craft Beer Community. Their mission is to coordinate, educate, and advocate the growing San Diego Craft Beer Community through a monthly newspaper, frequently updated website, and social media.",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 6800,
+        "instagram": 17800
+      },
+      "image_url": "https://i1.feedspot.com/84590.jpg?t=1610972771"
+    },
+    {
+      "title": "Beer Merchants",
+      "feed_url": "https://www.beermerchants.com/mpblog/rss/post/",
+      "website_url": "https://www.beermerchants.com/features",
+      "description": "Welcome to Beer Merchants, the perfect place to browse and buy amazing beers from our huge collection of craft beer, world beer and real ales.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 11400,
+        "instagram": 13100
+      },
+      "image_url": "https://i1.feedspot.com/4506385.jpg?t=1611040877"
+    }
+  ]
+}

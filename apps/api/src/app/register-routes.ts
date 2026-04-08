@@ -1,4 +1,5 @@
 import { Elysia } from "elysia";
+import { authRoutes } from "@adapters/auth/auth.routes";
 import { healthPlugin } from "@modules/health/health.routes";
 import { apiV1Router } from "./api-v1.router";
 
@@ -7,6 +8,7 @@ export const httpRouter = new Elysia({
   name: "cronos.http",
 })
   .use(healthPlugin)
+  .use(authRoutes)
   .use(apiV1Router);
 
 export function registerRoutes(app: Elysia) {

@@ -1,0 +1,274 @@
+{
+  "category": "Wisconsin News",
+  "source_url": "https://rss.feedspot.com/wisconsin_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Isthmus",
+      "feed_url": "https://isthmus.com/api/rss/content.rss",
+      "website_url": "https://isthmus.com/",
+      "description": "Isthmus is a Madison, Wisconsin's alt-weekly covering local news, politics, restaurants, beer, music, movies, arts and entertainment, restaurants, dining, and events.",
+      "followers": {
+        "facebook": 32200,
+        "twitter": 42000,
+        "instagram": 35900
+      },
+      "image_url": "https://i1.feedspot.com/4923339.jpg?t=1620824716"
+    },
+    {
+      "title": "WisPolitics",
+      "feed_url": "https://www.wispolitics.com/feed/",
+      "website_url": "https://www.wispolitics.com/",
+      "description": "WisPolitics is a Wisconsin's premier online political news source, with thousands of pages of useful information and articles that are a resource to anyone who wants to be informed about Wisconsin politics. Get accurate, balanced, and timely inside information delivered to your desktop from WisPolitics.com",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 17500,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4922369.jpg?t=1620824723"
+    },
+    {
+      "title": "The Center Square Wisconsin",
+      "feed_url": "https://www.thecentersquare.com/search/?f=rss&t=article&l=20&s=start_time&fulltext=showtext&sd=desc&c[]=wisconsin",
+      "website_url": "https://www.thecentersquare.com/wisconsin/",
+      "description": "The Center Square was launched in May 2019 to fulfill the need for high-quality statehouse and statewide news across the United States. Get essential news, data and analysis delivered with velocity, frequency and consistency.",
+      "followers": {
+        "facebook": 252600,
+        "twitter": 15500
+      },
+      "image_url": "https://i1.feedspot.com/5130628.jpg?t=1694516728"
+    },
+    {
+      "title": "WisconsinEye",
+      "feed_url": "https://wiseye.org/feed/",
+      "website_url": "https://wiseye.org/",
+      "description": "WisconsinEye is a non-profit, private public affairs cable network delivering nonpartisan, unedited, state government news. Reality TV matters. Discover the Top stories, Conversations, Analytical studies, and debates on Public policy. Also features in-depth, by-the-minute coverage of Government proceedings.",
+      "followers": {
+        "facebook": 20600,
+        "twitter": 11200,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5482853.jpg?t=1671773787"
+    },
+    {
+      "title": "Wisconsin Examiner",
+      "feed_url": "https://wisconsinexaminer.com/feed/",
+      "website_url": "https://wisconsinexaminer.com/",
+      "description": "As a nonpartisan, nonprofit news site offering a fresh perspective on politics and policy in our state, The Wisconsin Examiner is one of the largest news bureaus covering state government in Madison and offers investigative reporting and daily coverage dedicated to the public interest. Read news and opinions on latest topics online here.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5482857.jpg?t=1671770341"
+    },
+    {
+      "title": "UpNorthNews",
+      "feed_url": "https://upnorthnewswi.com/feed/",
+      "website_url": "https://upnorthnewswi.com/",
+      "description": "UpNorthNews is the prime online source for up-to-date coverage of local WI county news and politics. Explore Wisconsin politics, health, and economic news. Our comprehensive coverage of Wisconsin through credible, fact-based journalism aims to create an informed and progressive society representing everyone.",
+      "followers": {
+        "facebook": 130300,
+        "twitter": 5100,
+        "instagram": 61700
+      },
+      "image_url": "https://i1.feedspot.com/5482859.jpg?t=1671773419"
+    },
+    {
+      "title": "Wisconsin Newspaper Association",
+      "feed_url": "https://wnanews.com/feed/",
+      "website_url": "https://wnanews.com/",
+      "description": "Read top news stories, Industry news, and announcements from the Wisconsin Newspaper Association. Representing all small and big local publications, The Wisconsin Newspaper Association is dedicated to protecting, empowering, and advancing Wisconsin newspapers by providing advocacy, resources, and education.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5482851.jpg?t=1671770295"
+    },
+    {
+      "title": "WISN 12 News",
+      "feed_url": "https://www.wisn.com/topstories-rss",
+      "website_url": "https://www.wisn.com/",
+      "description": "Get the top Milwaukee news weather and sports. With the day's biggest stories and ones you may have missed, our Wisconsin news team has you covered here on wisn.com, WISN-TV online platform for live digital coverage. WISN-TV is the ABC affiliate in Milwaukee, Wisconsin.",
+      "followers": {
+        "facebook": 561700,
+        "twitter": 107300
+      },
+      "image_url": "https://i1.feedspot.com/5131806.jpg?t=1671770509"
+    },
+    {
+      "title": "WFRV Local 5",
+      "feed_url": "https://www.wearegreenbay.com/feed/",
+      "website_url": "https://www.wearegreenbay.com/",
+      "description": "Explore our informative and concise coverage of regional news, weather forecasts, community news, and events. WFRV Local 5, affiliated with CBS is a quality news and entertainment Channel serving the Fox Cities, Lakeshore, and all of Northeastern Wisconsin. Read their online news updates on the current state and national affairs",
+      "followers": {
+        "facebook": 109500,
+        "twitter": 21500,
+        "instagram": 8000
+      },
+      "image_url": "https://i1.feedspot.com/5482858.jpg?t=1671773356"
+    },
+    {
+      "title": "Kaukauna Community News",
+      "feed_url": "https://kaukaunacommunitynews.com/feed/",
+      "website_url": "https://kaukaunacommunitynews.com/",
+      "description": "Kaukauna Community News is an online news outlet. devoted to reporting exclusive stories from the town of Kaukauna, Wisconsin. We are an independent source focused on local coverage. Discover Breaking news, Popular events, people, businesses, and places in Kaukauna.",
+      "followers": {
+        "facebook": 11600,
+        "twitter": 485
+      },
+      "image_url": "https://i1.feedspot.com/5482860.jpg?t=1671774682"
+    },
+    {
+      "title": "Wisconsin Watch",
+      "feed_url": "https://wisconsinwatch.org/feed/",
+      "website_url": "https://wisconsinwatch.org/",
+      "description": "Wisconsin Watch is a nonpartisan, nonprofit investigative news outlet. They increase the quality and quantity of investigative reporting in Wisconsin while training current and future investigative journalists. Its work fosters an informed citizenry and strengthens democracy.",
+      "followers": {
+        "facebook": 11900,
+        "twitter": 10800,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4922759.jpg?t=1750309324"
+    },
+    {
+      "title": "Central Wisconsin News",
+      "feed_url": "https://www.centralwinews.com/centralwinews/news/feed/",
+      "website_url": "https://www.centralwinews.com/",
+      "description": "Central Wisconsin News combines extensive coverage of the Central Wisconsin region from three local newspapers - The Star-News, The Record-Review, and The Tribune Phonograph to provide a succinct overview of the daily events and happenings in Wisconsin. Read articles and opinions on issues that matter locally as well as nationally.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5482861.jpg?t=1671773693"
+    },
+    {
+      "title": "Fox2548 & WIProud",
+      "feed_url": "https://www.wiproud.com/feed/",
+      "website_url": "https://www.wiproud.com/",
+      "description": "WIProud is the state news leader for the La Crosse & Eau Claire region providing News, Weather, & Sports coverage timely while also updating its content regularly to keep readers and viewers informed of the latest developments. WIProud digital platform and TV station are owned by Nexstar Media Inc.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 589
+      },
+      "image_url": "https://i1.feedspot.com/5482856.jpg?t=1671774773"
+    },
+    {
+      "title": "Milwaukee Journal Sentinel",
+      "feed_url": "https://www.jsonline.com/",
+      "website_url": "https://www.jsonline.com/",
+      "description": "The Milwaukee Journal Sentinel is Wisconsin's largest news organization and your source for breaking news, analysis and investigative reporting.",
+      "followers": {
+        "facebook": 351600,
+        "twitter": 91900,
+        "instagram": 84800
+      },
+      "image_url": "https://i1.feedspot.com/5130596.jpg?t=1694516526"
+    },
+    {
+      "title": "WKOW 27",
+      "feed_url": "https://www.wkow.com/",
+      "website_url": "https://www.wkow.com/",
+      "description": "We've got you covered on all things news, weather and sports in South Central Wisconsin.",
+      "followers": {
+        "facebook": 230500,
+        "twitter": 44300,
+        "instagram": 13800
+      },
+      "image_url": "https://i1.feedspot.com/5130600.jpg?t=1669284840"
+    },
+    {
+      "title": "The Sheboygan Press",
+      "feed_url": "https://www.sheboyganpress.com/",
+      "website_url": "https://www.sheboyganpress.com/",
+      "description": "Complete coverage of Sheboygan area news and weather, sports, business, community, entertainment, technology, obituaries, photos, videos, and opinions at sheboyganpress.com. The Sheboygan Press is Sheboygan County's source for news, photos, videos, and conversation.",
+      "followers": {
+        "facebook": 33800,
+        "twitter": 8300
+      },
+      "image_url": "https://i1.feedspot.com/5482852.jpg?t=1671773499"
+    },
+    {
+      "title": "News 8000",
+      "feed_url": "https://www.news8000.com/",
+      "website_url": "https://www.news8000.com/",
+      "description": "News8000.com is the digital home to WKBT, a local TV Station based in La Crosse, Wisconsin. Get local news updates on Weather, Sports, and Community information such as Classifieds, Obituaries, and more from La Crosse, Wisconsin area. WKBT-TV is a local CBS affiliate that broadcasts local, community-focused journalism to its viewers.",
+      "followers": {
+        "facebook": 154900,
+        "twitter": 9000,
+        "instagram": 14100
+      },
+      "image_url": "https://i1.feedspot.com/5145292.jpg?t=1671774523"
+    },
+    {
+      "title": "The Press Times",
+      "feed_url": "https://gopresstimes.com/feed/",
+      "website_url": "https://gopresstimes.com/",
+      "description": "Here at GoPresstimes.com, you will find sweeping coverage of City news and events, with regular updates added throughout the day. The Press Times is a weekly paid newspaper published every Friday by Multi Media Channels and is Green Bay's number one newspaper covering local news and local sports",
+      "followers": {
+        "facebook": 14900
+      },
+      "image_url": "https://i1.feedspot.com/5135964.jpg?t=1671773819"
+    },
+    {
+      "title": "Green Bay Press-Gazette",
+      "feed_url": "https://rssfeeds.greenbaypressgazette.com/greenbay/news",
+      "website_url": "https://www.greenbaypressgazette.com/",
+      "description": "Green Bay Press-Gazette is a locally trusted news outlet providing the latest news, sports, obituaries, business, entertainment, and more from the Green Bay area. Discover more in-depth news coverage and information on our website, along with exclusive photos and video galleries.",
+      "followers": {
+        "facebook": 103200,
+        "twitter": 32299
+      },
+      "image_url": "https://i1.feedspot.com/5482850.jpg?t=1671773482"
+    },
+    {
+      "title": "Wausau Daily Herald",
+      "feed_url": "https://www.wausaudailyherald.com/",
+      "website_url": "https://www.wausaudailyherald.com/",
+      "description": "Browse from a range of categories offering complete coverage of Wausau area news and weather, sports, business, community, entertainment, technology, obituaries, photos, videos, and opinions at wausaudailyherald.com. The Wausau Daily Herald Media is a daily news and information service covering central and north central Wisconsin.",
+      "followers": {
+        "facebook": 23300,
+        "twitter": 7600
+      },
+      "image_url": "https://i1.feedspot.com/5482854.jpg?t=1671770315"
+    },
+    {
+      "title": "Wisconsin Rapids City Times",
+      "feed_url": "https://wrcitytimes.com/feed/",
+      "website_url": "https://wrcitytimes.com/",
+      "description": "The Wisconsin Rapids City Times covers news, events, sports, entertainment, and much more in the city of Wisconsin Rapids, Wisconsin. On their online platform, you will find in-depth news and blog articles supplementing and updates on their print coverage.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5482855.jpg?t=1671774630"
+    },
+    {
+      "title": "Fond du Lac Reporter",
+      "feed_url": "https://www.fdlreporter.com/",
+      "website_url": "https://www.fdlreporter.com/",
+      "description": "The Fond du Lac Reporter is one of the daily newspapers within Gannett Wisconsin Media that provides readers with news, information and local advertising offers. We provide our readers with news and information that is relevant and timely.",
+      "followers": {
+        "facebook": 28400,
+        "twitter": 6200,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5127477.jpg?t=1671774447"
+    },
+    {
+      "title": "The Post-Crescent",
+      "feed_url": "https://www.postcrescent.com/",
+      "website_url": "https://www.postcrescent.com/",
+      "description": "The trusted source for Appleton Wisconsin News - postcrescent.com is the home page of Appleton Wisconsin with in-depth and updated Appleton local news. Stay informed with both Appleton Wisconsin news as well as headlines and stories from around the world.",
+      "followers": {
+        "facebook": 67200,
+        "twitter": 24700
+      },
+      "image_url": "https://i1.feedspot.com/5133733.jpg?t=1671773801"
+    },
+    {
+      "title": "Channel 3000",
+      "feed_url": "https://www.channel3000.com/",
+      "website_url": "https://www.channel3000.com/",
+      "description": "Get your daily fix for News, Weather, Sports, and Entertainment headlines for Madison and Southern Wisconsin. Channel3000 is a nationally-renowned leader and trendsetter among media websites and the digital partner to WISC-TV, the station of record for the capital city and a vital and vibrant touchstone for communities throughout southern Wisconsin.",
+      "followers": {
+        "facebook": 285800,
+        "twitter": 56700,
+        "instagram": 31000
+      },
+      "image_url": "https://i1.feedspot.com/5136551.jpg?t=1671770679"
+    }
+  ]
+}

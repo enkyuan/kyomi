@@ -1,0 +1,98 @@
+{
+  "category": "Intel",
+  "source_url": "https://rss.feedspot.com/intel_rss_feeds",
+  "feeds": [
+    {
+      "title": "ServeTheHome \u00bb Intel",
+      "feed_url": "https://www.servethehome.com/tag/intel/feed/",
+      "website_url": "https://www.servethehome.com/tag/intel/",
+      "description": "A selection of the best posts from ServeTheHome on Intel. ServeTheHome provides insights and analysis delivered to you since 2009.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 14600,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5354058.jpg?t=1639658147"
+    },
+    {
+      "title": "Intel RealSense Blog",
+      "feed_url": "https://www.intelrealsense.com/feed/",
+      "website_url": "https://www.intelrealsense.com/blog/",
+      "description": "Intel RealSense technology 3D depth processors, cameras and modules give devices the ability to perceive and interact with their surroundings. Follow this blog to get the latest updates, news and depth sensing thoughts on the Intel RealSense blog.",
+      "followers": {
+        "facebook": 35800000,
+        "twitter": 4700000,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4906332.jpg?t=1613734121"
+    },
+    {
+      "title": "Medium",
+      "feed_url": "https://medium.com/feed/intel-tech",
+      "website_url": "https://medium.com/intel-tech",
+      "description": "Intel tech stories are designed to share candid information on Intel's unique ability to innovate across Intel's Super Powers and the building blocks of technology innovation. Stories posted on this site focus on Intel's technology innovations, technical leadership, and Intel products.",
+      "followers": {
+        "facebook": 35800000,
+        "twitter": 50500,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/5354060.jpg?t=1639657653"
+    },
+    {
+      "title": "Intel Newsroom",
+      "feed_url": "https://feeds.feedburner.com/intelnewsroom",
+      "website_url": "https://newsroom.intel.com/",
+      "description": "Intel, the world leader in silicon innovation, develops technologies, products, and initiatives to continually advance how people work and live.",
+      "followers": {
+        "facebook": 35800000,
+        "twitter": 163100
+      },
+      "image_url": "https://i1.feedspot.com/4906305.jpg?t=1613734109"
+    },
+    {
+      "title": "The NUC Blog",
+      "feed_url": "https://nucblog.net/feed/",
+      "website_url": "https://nucblog.net/",
+      "description": "Follow this blog which is a source for your Intel NUC miniature computer news, tips, and tricks.",
+      "followers": {
+        "twitter": 720
+      },
+      "image_url": "https://i1.feedspot.com/4209281.jpg?t=1613734117"
+    },
+    {
+      "title": "Intel Blog",
+      "feed_url": "https://blogs.intel.com/feed/",
+      "website_url": "https://community.intel.com/t5/Blogs/ct-p/blogs",
+      "description": "This network of Intel technology blogs features several of Intel's top leaders, researchers, and technologists who share their perspectives and invite discussion on the issues they and our customers are facing today.",
+      "followers": {
+        "facebook": 35800000,
+        "twitter": 4700000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/1457445.jpg?t=1605965149"
+    },
+    {
+      "title": "ExtremeTech \u00bb Intel",
+      "feed_url": "https://www.extremetech.com/tag/intel/feed",
+      "website_url": "https://www.extremetech.com/tag/intel",
+      "description": "Features articles that have to do exclusively with Intel and related topics. ExtremeTech is the Web's top destination for news and analysis of emerging science and technology trends, and important software, hardware, and gadgets.",
+      "followers": {
+        "facebook": 496400,
+        "twitter": 112300
+      },
+      "image_url": "https://i1.feedspot.com/5354057.jpg?t=1639657404"
+    },
+    {
+      "title": "Intel IoT",
+      "feed_url": "https://blogs.intel.com/iot/feed/",
+      "website_url": "https://community.intel.com/t5/Blogs/ct-p/blogs/iot",
+      "description": "Intel IoT is a place for news about Intel's Internet of Things. The Intel Internet of Things is a set of interoperable solutions designed to enable connectivity, manageability, and security across devices in a consistent and scalable manner.",
+      "followers": {
+        "facebook": 76800,
+        "twitter": 135800,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/4667812.jpg?t=1613734113"
+    }
+  ]
+}

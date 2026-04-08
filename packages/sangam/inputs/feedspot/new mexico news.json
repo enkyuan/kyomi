@@ -1,0 +1,418 @@
+{
+  "category": "New Mexico News",
+  "source_url": "https://rss.feedspot.com/new_mexico_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "KRQE",
+      "feed_url": "https://www.krqe.com/feed/",
+      "website_url": "https://www.krqe.com/top-news/",
+      "description": "KRQE, located in Albuquerque, is a leading news organization providing the latest news, sports, and accurate weather forecasts from Albuquerque to across the state of New Mexico. The news website provides local reporting you can trust.",
+      "followers": {
+        "facebook": 303300,
+        "twitter": 139200,
+        "instagram": 72600
+      },
+      "image_url": "https://i1.feedspot.com/5131001.jpg?t=1586242624"
+    },
+    {
+      "title": "Santa Fe New Mexican",
+      "feed_url": "https://www.santafenewmexican.com/search/?f=rss&t=article&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.santafenewmexican.com/",
+      "description": "The oldest newspaper company in the West, featuring local news, arts and opinion coverage in Santa Fe and Northern New Mexico.",
+      "followers": {
+        "facebook": 64200,
+        "twitter": 46300,
+        "instagram": 25500
+      },
+      "image_url": "https://i1.feedspot.com/5131009.jpg?t=1585029780"
+    },
+    {
+      "title": "The Eastern New Mexico News",
+      "feed_url": "https://www.easternnewmexiconews.com/rss",
+      "website_url": "https://www.easternnewmexiconews.com/",
+      "description": "The Eastern New Mexico news and information website in the Clovis area!",
+      "followers": {
+        "facebook": 27500,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5131015.jpg?t=1585026643"
+    },
+    {
+      "title": "KOAT 7",
+      "feed_url": "https://www.koat.com/topstories-rss",
+      "website_url": "https://www.koat.com/",
+      "description": "Get the latest Albuquerque, NM news, weather and sports from KOAT Action News 7.",
+      "followers": {
+        "facebook": 360900,
+        "twitter": 127500
+      },
+      "image_url": "https://i1.feedspot.com/5131018.jpg?t=1586245937"
+    },
+    {
+      "title": "Carlsbad Current-Argus",
+      "feed_url": "https://www.currentargus.com/feed/",
+      "website_url": "https://www.currentargus.com/",
+      "description": "Current Argus is your local source for breaking news, sports, business, classifieds, and entertainment in Carlsbad and the surrounding area.",
+      "followers": {
+        "facebook": 20200,
+        "twitter": 3300,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5131022.jpg?t=1593430347"
+    },
+    {
+      "title": "NM Political Report",
+      "feed_url": "https://nmpoliticalreport.com/feed/",
+      "website_url": "https://nmpoliticalreport.com/",
+      "description": "NMPR is New Mexico's largest news online outlet covering politics and elections. We deliver real news as fast as it happens in the digital age.",
+      "followers": {
+        "facebook": 17700,
+        "twitter": 7000,
+        "instagram": 136
+      },
+      "image_url": "https://i1.feedspot.com/5118849.jpg?t=1585024452"
+    },
+    {
+      "title": "Hobbs News Sun",
+      "feed_url": "https://www.hobbsnews.com/feed/",
+      "website_url": "https://www.hobbsnews.com/",
+      "description": "Hobbs and Lea County's local news source for the latest news and breaking headlines on what's happening in cities and communities in New Mexico.",
+      "followers": {
+        "facebook": 32000,
+        "twitter": 1100,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5131029.jpg?t=1585028561"
+    },
+    {
+      "title": "Questa News",
+      "feed_url": "https://questanews.com/feed/",
+      "website_url": "https://questanews.com/",
+      "description": "Questa Del R\u00edo News delivers community centered northern New Mexico news and columns for the Enchanted Circle area. Questa Del Rio News is a monthly newspaper serving northern Taos County and the Enchanted Circle, a project funded by the Questa Economic Development Fund",
+      "followers": {
+        "facebook": 6100,
+        "instagram": 770
+      },
+      "image_url": "https://i1.feedspot.com/5520309.jpg?t=1678791608"
+    },
+    {
+      "title": "Los Alamos Reporter",
+      "feed_url": "https://losalamosreporter.com/feed/",
+      "website_url": "https://losalamosreporter.com/",
+      "description": "The Los Alamos Reporter was founded in September 2018 by Maire O'Neill as a forum for news from the Los Alamos, New Mexico area and beyond. Find all the news from Los Alamos & beyond.",
+      "followers": {
+        "facebook": 5500
+      },
+      "image_url": "https://i1.feedspot.com/5520302.jpg?t=1678792762"
+    },
+    {
+      "title": "Searchlight New Mexico",
+      "feed_url": "https://searchlightnm.org/feed/",
+      "website_url": "https://searchlightnm.org/",
+      "description": "Searchlight New Mexico is a nonpartisan, nonprofit news organization dedicated to investigative and public service journalism in the interest of the people of New Mexico. Searchlight New Mexico delivers high-impact investigative reporting to inspire New Mexicans to demand action on systemic problems that plague New Mexico.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 3300,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5400970.jpg?t=1652773428"
+    },
+    {
+      "title": "New Mexico In Depth",
+      "feed_url": "https://nmindepth.com/feed/",
+      "website_url": "https://nmindepth.com/",
+      "description": "A New Mexico news organization dedicated to fostering, promoting and publishing journalism in the public interest. It covers topics such as money in politics, good governance, criminal justice, child welfare, and environment.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 7800,
+        "instagram": 994
+      },
+      "image_url": "https://i1.feedspot.com/4903677.jpg?t=1678792553"
+    },
+    {
+      "title": "Los Alamos Daily Post",
+      "feed_url": "https://ladailypost.com/feed/",
+      "website_url": "https://ladailypost.com/",
+      "description": "The Los Alamos Daily Post is the Official Newspaper of Record in Los Alamos County. Owned and operated by Carol A. Clark, the online newspaper launched Feb. 7, 2012 and is a member of the National Newspaper Association, the Online Newspaper Association and the New Mexico Press Association. On this site readers also will find the latest news from Los Alamos County, Los Alamos Police and Fire Departments, Los Alamos Public Schools and UNM-Los Alamos.",
+      "followers": {
+        "facebook": 19300,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5520304.jpg?t=1678792515"
+    },
+    {
+      "title": "Silvercity Daily Press",
+      "feed_url": "https://www.scdailypress.com/silvercitydailypress/news/feed/",
+      "website_url": "https://www.scdailypress.com/",
+      "description": "The Silver City Daily Press was born June 24, 1935, when the owners of the Silver City Independent, our weekly predecessor, determined it was time to grow - along with Grant County, its people and its advertisers. In its modern incarnation, the Independent covers Grant County's vibrant arts, entertainment and outdoors scenes, with an energetic stable of columnists and contributors who bring readers the exciting happenings in Silver City and its environs every Thursday.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5520308.jpg?t=1678792185"
+    },
+    {
+      "title": "Source New Mexico",
+      "feed_url": "https://sourcenm.com/feed/",
+      "website_url": "https://sourcenm.com/",
+      "description": "Source New Mexico is an independent, nonprofit news organization that shines a light on governments, policies, and public officials so you get the information you need to make choices - about yourself, your family, your neighborhoods, and your communities. Through a lens of public health and equity, they'll bring you original news reporting along with analysis and opinion.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5520305.jpg?t=1678791575"
+    },
+    {
+      "title": "New Mexico News Port",
+      "feed_url": "https://newmexiconewsport.com/feed/",
+      "website_url": "https://newmexiconewsport.com/",
+      "description": "Journalism and Innovation from The University of New Mexico publishing real stories for real New Mexicans. In April 2014, our idea to start a news lab at the University of New Mexico won a grant from the Online News Association as part of the Challenge Fund for Innovation in Journalism Education.",
+      "followers": {
+        "facebook": 581,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5318184.jpg?t=1630503741"
+    },
+    {
+      "title": "Albuquerque Express",
+      "feed_url": "http://feeds.albuquerqueexpress.com/rss/d867a54a6fc00b3b",
+      "website_url": "https://www.albuquerqueexpress.com/",
+      "description": "Provides the latest rss feeds for albuquerqueexpress.com. For more headlines on Breaking, National, Business, Finance, Sports and World News, visit our home page",
+      "followers": {
+        "facebook": 2200
+      },
+      "image_url": "https://i1.feedspot.com/7330412.jpg?t=1724221604"
+    },
+    {
+      "title": "Artesia Daily Press",
+      "feed_url": "https://www.artesianews.com/feed/",
+      "website_url": "https://www.artesianews.com/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7330416.jpg?t=1724236235"
+    },
+    {
+      "title": "New Mexico Political Report",
+      "feed_url": "https://nmpoliticalreport.com/feed/",
+      "website_url": "https://nmpoliticalreport.com/",
+      "description": "NM Political Report is New Mexico's largest news online outlet covering politics and elections. As a not-for-profit outlet. It is the best political reporting for New Mexico.",
+      "followers": {
+        "facebook": 17700,
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/4903902.jpg?t=1613547687"
+    },
+    {
+      "title": "Your News New Mexico",
+      "feed_url": "https://yournewsnm.com/feed/",
+      "website_url": "https://yournewsnm.com/",
+      "description": "SERVING EASTERN NEW MEXICO AND WEST TEXAS",
+      "followers": {
+        "facebook": 5300
+      },
+      "image_url": "https://i1.feedspot.com/7330414.jpg?t=1724221359"
+    },
+    {
+      "title": "Valencia County News Bulletin",
+      "feed_url": "https://www.news-bulletin.com/search/?f=rss&t=article",
+      "website_url": "https://www.news-bulletin.com/",
+      "description": "www.news-bulletin.com - RSS Results only for asset type(s) of article",
+      "followers": {
+        "facebook": 31200,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/7330411.jpg?t=1724221173"
+    },
+    {
+      "title": "Rio Grande Sun",
+      "feed_url": "https://www.riograndesun.com/search/?f=rss&t=article",
+      "website_url": "https://www.riograndesun.com/",
+      "description": "www.riograndesun.com - RSS Results only for asset type(s) of article",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/7330417.jpg?t=1724221206"
+    },
+    {
+      "title": "The Grant County Beat",
+      "feed_url": "https://www.grantcountybeat.com/?format=feed&type=rss",
+      "website_url": "https://www.grantcountybeat.com/",
+      "followers": {
+        "facebook": 4000
+      },
+      "image_url": "https://i1.feedspot.com/7330424.jpg?t=1724221245"
+    },
+    {
+      "title": "The Round Up",
+      "feed_url": "https://nmsuroundup.com/feed/",
+      "website_url": "https://nmsuroundup.com/",
+      "description": "The Independent Student Voice of NMSU Since 1907",
+      "followers": {
+        "facebook": 2100
+      },
+      "image_url": "https://i1.feedspot.com/7330425.jpg?t=1724223833"
+    },
+    {
+      "title": "Las Vegas Optics",
+      "feed_url": "https://www.lasvegasoptic.com/search/?f=rss&t=article",
+      "website_url": "https://www.lasvegasoptic.com/",
+      "description": "www.lasvegasoptic.com - RSS Results only for asset type(s) of article",
+      "followers": {
+        "facebook": 12800,
+        "twitter": 732
+      },
+      "image_url": "https://i1.feedspot.com/7330427.jpg?t=1724224004"
+    },
+    {
+      "title": "Rio Rancho Observer",
+      "feed_url": "https://www.rrobserver.com/search/?f=rss&t=article",
+      "website_url": "https://www.rrobserver.com/",
+      "description": "www.rrobserver.com - RSS Results only for asset type(s) of article",
+      "followers": {
+        "facebook": 14800,
+        "twitter": 3500,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/7330426.jpg?t=1724223979"
+    },
+    {
+      "title": "Gallup Sun",
+      "feed_url": "https://gallupsun.com/index.php?format=feed&type=rss",
+      "website_url": "https://gallupsun.com/index.php",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7330423.jpg?t=1724221474"
+    },
+    {
+      "title": "Lea County Tribune",
+      "feed_url": "https://www.leacountytribune.com/feed/",
+      "website_url": "https://www.leacountytribune.com/",
+      "description": "Serving Southeastern New Mexico",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 354
+      },
+      "image_url": "https://i1.feedspot.com/7330422.jpg?t=1724221234"
+    },
+    {
+      "title": "Edgewood News",
+      "feed_url": "https://edgewood.nm.news/feed/",
+      "website_url": "https://edgewood.nm.news/",
+      "description": "The Independent has been serving the East Mountains and Estancia Valley as a locally-owned and operated newspaper since 1999. Read Continuous updated news on International, Democratic Republic of the Congo, Politics, Society, Economy, Sport, Employment, Culture, etc.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5520310.jpg?t=1678792638"
+    },
+    {
+      "title": "Edgewood News",
+      "feed_url": "https://edgewood.nm.news/feed/",
+      "website_url": "https://edgewood.nm.news/",
+      "description": "The hometown news source for the East Mountains, Edgewood and Estancia valley.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7330421.jpg?t=1724221391"
+    },
+    {
+      "title": "KOB 4",
+      "feed_url": "https://www.kob.com/",
+      "website_url": "https://www.kob.com/",
+      "description": "KOB 4, Eyewitness News 4 is your best source for Albuquerque news, Santa Fe news and New Mexico news, weather and sports.",
+      "followers": {
+        "facebook": 283800,
+        "twitter": 117400,
+        "instagram": 38200
+      },
+      "image_url": "https://i1.feedspot.com/5131002.jpg?t=1589450574"
+    },
+    {
+      "title": "Roswell Daily Record",
+      "feed_url": "https://www.rdrnews.com/",
+      "website_url": "https://www.rdrnews.com/",
+      "description": "The Roswell Daily Record is a local newspaper located in Roswell, New Mexico. Stay up to date on topics such as local news, politics, business, and crime.",
+      "followers": {
+        "facebook": 28900,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5131028.jpg?t=1658990790"
+    },
+    {
+      "title": "The Tri-City Record",
+      "feed_url": "http://rssfeeds.daily-times.com/farmington/news",
+      "website_url": "https://www.tricityrecordnm.com/",
+      "description": "The Daily Times covers the Four Corners, including Farmington, Aztec, Bloomfield, and the Navajo Nation.",
+      "followers": {
+        "facebook": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5131023.jpg?t=1724235915"
+    },
+    {
+      "title": "Las Cruces Sun-News",
+      "feed_url": "https://www.lcsun-news.com/",
+      "website_url": "https://www.lcsun-news.com/",
+      "description": "The Las Cruces Sun-News. Your source for news, sports, politics, business, and entertainment in Do\u00f1a Ana County and the Mesilla Valley.",
+      "followers": {
+        "facebook": 77400,
+        "twitter": 35800,
+        "instagram": 11500
+      },
+      "image_url": "https://i1.feedspot.com/5131024.jpg?t=1585027655"
+    },
+    {
+      "title": "Albuquerque Business First",
+      "feed_url": "https://www.bizjournals.com/albuquerque/",
+      "website_url": "https://www.bizjournals.com/albuquerque/",
+      "description": "Albuquerque Business First Online is where you'll find the latest breaking business news, updated throughout the day, this week's top stories from the Albuquerque Business First, and other popular features from the print edition. Albuquerque Business First is part of American City Business Journals, a national publisher of metropolitan business weeklies.",
+      "followers": {
+        "facebook": 27300,
+        "twitter": 16600
+      },
+      "image_url": "https://i1.feedspot.com/5491120.jpg?t=1673355793"
+    },
+    {
+      "title": "Ruidoso News",
+      "feed_url": "https://rssfeeds.ruidosonews.com/ruidoso/news",
+      "website_url": "https://www.ruidosonews.com/",
+      "description": "Get the latest updates in news, entertainment, sports, and local life for Ruidoso and the surrounding area. Explore Ruidoso Village & cool mountain adventure, nature, outdoor sports, vacation/resort fun!",
+      "followers": {
+        "facebook": 58400,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5520300.jpg?t=1678791567"
+    },
+    {
+      "title": "Valencia County News-Bulletin",
+      "feed_url": "https://www.news-bulletin.com/feed/",
+      "website_url": "https://www.news-bulletin.com/",
+      "description": "The Valencia County News-Bulletin is a locally owned and operated community newspaper, dedicated to serving Valencia County since 1910 through the highest journalistic and professional business standards. Stay up to date with all the latest news and updates from New Mexico with us.",
+      "followers": {
+        "facebook": 31200,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5520311.jpg?t=1678792435"
+    },
+    {
+      "title": "El Defensor Chieftain",
+      "feed_url": "https://www.dchieftain.com/feed/",
+      "website_url": "https://www.dchieftain.com/",
+      "description": "The El Defensor Chieftain is a locally owned and operated community newspaper, dedicated to serving Socorro County and surrounding areas through the highest professional business and journalistic standards. Read daily updated latest news and headlines related with the economy, politics, sports, technology, international news and more.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 229
+      },
+      "image_url": "https://i1.feedspot.com/5520303.jpg?t=1678792375"
+    },
+    {
+      "title": "Alamogordo Daily News",
+      "feed_url": "https://rssfeeds.alamogordonews.com/alamogordo/news",
+      "website_url": "https://www.alamogordonews.com/",
+      "description": "Serving the Tularosa Basin since 1898, covering the communities of Alamogordo, La Luz, Tularosa and Cloudcroft, as well as Holloman Air Force Base and WSMR",
+      "followers": {
+        "facebook": 20100,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5520301.jpg?t=1678792327"
+    },
+    {
+      "title": "The Health City Sun",
+      "feed_url": "https://healthcitysun.com/",
+      "website_url": "https://healthcitysun.com/",
+      "description": "Founded in 1929, The Health City Sun, has been continuously published for over 84 years - mainly servicing a subscriber base in Bernalillo County. The Health City Sun is the premiere legal and financial news source for NM. We specialize in the publication of legal notices and business advertising. Look to the Health City Sun to be the expert source for information, articles, commentary and advice for New Mexico's Legal & Financial readers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5520321.jpg?t=1678792239"
+    }
+  ]
+}

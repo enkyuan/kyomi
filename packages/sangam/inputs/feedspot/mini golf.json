@@ -1,0 +1,98 @@
+{
+  "category": "Mini Golf",
+  "source_url": "https://rss.feedspot.com/mini_golf_rss_feeds",
+  "feeds": [
+    {
+      "title": "A Couple of Putts",
+      "feed_url": "https://acoupleofputts.com/feed/",
+      "website_url": "https://acoupleofputts.com/",
+      "description": "A Couple of Putts follows Mr. Tee (Tom) & The Pink Putter (Robin) as they play, review, document, and design miniature golf courses around the world.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 581
+      },
+      "image_url": "https://i1.feedspot.com/5312792.jpg?t=1629185819"
+    },
+    {
+      "title": "World Minigolf Sport Federation",
+      "feed_url": "https://gov.minigolfsport.com/?format=feed&type=rss",
+      "website_url": "https://gov.minigolfsport.com/",
+      "description": "Read the latest news, stories, and articles about Mini Golf on our website. Officially formed in 1963, The WMF is the umbrella organization of minigolf sports associations worldwide and continental associations in Africa, America, Asia, Europe, and Oceania.",
+      "followers": {
+        "facebook": 29400,
+        "twitter": 560,
+        "instagram": 7400
+      },
+      "image_url": "https://i1.feedspot.com/5416405.jpg?t=1656500496"
+    },
+    {
+      "title": "Mini Golf Reviews",
+      "feed_url": "https://minigolfreviews.com/feed/",
+      "website_url": "https://minigolfreviews.com/",
+      "description": "Karl Barth also known as Mister Mini Golf in his Minigolfreviews Blog writes reviews for mini-golf courses and shares photos of the courses. He's your go-to expert for all things mini golf.",
+      "followers": {
+        "facebook": 661,
+        "twitter": 284
+      },
+      "image_url": "https://i1.feedspot.com/4893056.jpg?t=1629200134"
+    },
+    {
+      "title": "The Ham and Egger Files",
+      "feed_url": "https://hamandeggerfiles.blogspot.com/feeds/posts/default",
+      "website_url": "https://hamandeggerfiles.blogspot.com/",
+      "description": "A blog about mini golf, crazy golf, and adventure golf where I share the great (and not-so-great) things I find and learn about this amazing sport. Hi! Emily and Richard Gottfried Here, we take a look at and explore Mini Golf facilities in the UK and other countries.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 3700,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5312991.jpg?t=1629210879"
+    },
+    {
+      "title": "Pro Mini Golf",
+      "feed_url": "https://www.prominigolf.com/feed/",
+      "website_url": "https://www.prominigolf.com/",
+      "description": "Pro Mini Golf is the website where you can read the latest news and keep tabs about everything concerning Mini Golf in the American circle.",
+      "followers": {
+        "facebook": 995,
+        "twitter": 260
+      },
+      "image_url": "https://i1.feedspot.com/5416406.jpg?t=1656500510"
+    },
+    {
+      "title": "Mini Golf Creations Blog",
+      "feed_url": "https://minigolfcreations.com/feed/",
+      "website_url": "https://minigolfcreations.com/blog/",
+      "description": "Read about Mini Golf in the Mini Golf Creations Blog. Mini Golf Creations is the brainchild of Geoff Bennell and Richard Chamberlain, two-lifetime golf connoisseurs. Geoff and Richard have vast experience as golf course superintendents and designers so they can produce all technical specifications and detailed drainage plans for your course. They create Mini Golf designs and construct and install Mini Golf courses across Australia & SE Asia and the rest of the World.",
+      "followers": {
+        "facebook": 814,
+        "twitter": 121,
+        "instagram": 193
+      },
+      "image_url": "https://i1.feedspot.com/5312757.jpg?t=1629180902"
+    },
+    {
+      "title": "Smugglers Golf Blog \u00bb Mini Golf",
+      "feed_url": "https://www.smugglersgolf.com/blog/tag/mini-golf/rss.xml",
+      "website_url": "https://www.smugglersgolf.com/blog/tag/mini-golf",
+      "description": "This section of our blog features articles that have to do exclusively with Mini Golf. Smugglers Cove Adventure Golf courses feature 18 Holes of adventure-style golf in which you'll navigate through caves, pirate ships, waterfalls, and live alligators.",
+      "followers": {
+        "facebook": 520,
+        "twitter": 1500,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5416404.jpg?t=1656500491"
+    },
+    {
+      "title": "Mini Golf News",
+      "feed_url": "https://www.minigolfnews.com/feed.php",
+      "website_url": "https://www.minigolfnews.com/",
+      "description": "Minigolfnews covers Minigolf sport and provides the latest news from all over the world. Topics covered include tournaments, interviews, miniature golf used throughout everyday life, and just about anything else minigolf related!",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 635
+      },
+      "image_url": "https://i1.feedspot.com/5312859.jpg?t=1629196650"
+    }
+  ]
+}

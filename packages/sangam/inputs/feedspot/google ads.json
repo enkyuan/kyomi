@@ -1,0 +1,65 @@
+{
+  "category": "Google Ads",
+  "source_url": "https://rss.feedspot.com/google_ads_rss_feeds",
+  "feeds": [
+    {
+      "title": "Google Marketing Platform Blog",
+      "feed_url": "https://blog.google/products/marketingplatform/rss/",
+      "website_url": "https://blog.google/products/marketingplatform/",
+      "description": "The latest news, perspectives, and insights from Google Marketing Platform and Google Analytics products.",
+      "followers": {
+        "facebook": 29200000,
+        "twitter": 32799999
+      },
+      "image_url": "https://i1.feedspot.com/4920395.jpg?t=1620716938"
+    },
+    {
+      "title": "Google Ads Developer Blog",
+      "feed_url": "https://feeds.feedburner.com/GoogleAdsDeveloperBlog",
+      "website_url": "https://ads-developers.googleblog.com/",
+      "description": "The official blog for information about the Google Ads, Google Ad Manager, Google Mobile Ads SDKs for AdMob and IMA SDKs, and other Google Advertising Platform developer tools.",
+      "followers": {
+        "facebook": 12
+      },
+      "image_url": "https://i1.feedspot.com/198751.jpg?t=1620716943"
+    },
+    {
+      "title": "Google Ad Manager Blog",
+      "feed_url": "https://blog.google/products/admanager/rss/",
+      "website_url": "https://blog.google/products/admanager/",
+      "description": "Grow revenue and protect your brand wherever people are watching, playing and engaging. Discover all the latest about our products, technology, and Google culture on our official blog. Get the latest news and perspectives from the Ad Manager.",
+      "followers": {
+        "facebook": 29200000,
+        "twitter": 32799999
+      },
+      "image_url": "https://i1.feedspot.com/4920388.jpg?t=1620716931"
+    },
+    {
+      "title": "Google Blog \u00bb Ads",
+      "feed_url": "https://blog.google/technology/ads/rss/",
+      "website_url": "https://blog.google/technology/ads/",
+      "description": "Ads help people discover interesting products and businesses and keep the web free. All the updates about the version releases of Google Adwords will be updated in this blog.",
+      "followers": {
+        "facebook": 12,
+        "instagram": 15700000
+      },
+      "image_url": "https://i1.feedspot.com/4920424.jpg?t=1620716983"
+    },
+    {
+      "title": "googs.com Blog \u00bb DoubleClick Advertiser",
+      "feed_url": "https://www.googblogs.com/category/doubleclick-advertiser-blog/feed/",
+      "website_url": "https://www.googblogs.com/category/doubleclick-advertiser-blog/",
+      "description": "All the latest news, features, tips and training related to Doubleclick will be updated through this blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4920406.jpg?t=1620717077"
+    },
+    {
+      "title": "googs.com Blog \u00bb DoubleClick Publishers",
+      "feed_url": "https://www.googblogs.com/category/doubleclick-publishers-blog/feed/",
+      "website_url": "https://www.googblogs.com/category/doubleclick-publishers-blog/",
+      "description": "DoubleClick connects the right people, in the right moments, to make digital advertising work better. This blog will update the latest news related to DoubleClick.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4920431.jpg?t=1620717034"
+    }
+  ]
+}

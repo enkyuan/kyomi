@@ -1,0 +1,17 @@
+{
+  "category": "Hong Kong Art",
+  "source_url": "https://rss.feedspot.com/hong_kong_art_rss_feeds",
+  "feeds": [
+    {
+      "title": "Szabotage",
+      "feed_url": "https://szabotage.co.uk/blogs/szabotage-news.atom",
+      "website_url": "https://szabotage.co.uk/blogs/szabotage-news/",
+      "description": "Gustav Szabo, better known as Szabotage, born in Brighton, is recognised as a prolific contemporary urban artist and designer. Szabotage's work is characterised by bright colours mixed with popular cultural references. His vision takes a critical view of its immediate surroundings and often references the landscape of world cities, exploring the relationship between urban architecture and their communities.",
+      "followers": {
+        "facebook": 3000,
+        "instagram": 7500
+      },
+      "image_url": "https://i1.feedspot.com/5349524.jpg?t=1638800120"
+    }
+  ]
+}

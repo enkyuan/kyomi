@@ -1,0 +1,82 @@
+{
+  "category": "Google Analytics",
+  "source_url": "https://rss.feedspot.com/google_analytics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Simo Ahava",
+      "feed_url": "https://www.simoahava.com/index.xml",
+      "website_url": "https://www.simoahava.com/",
+      "description": "Simo Ahava is a Google Developer Expert for Google Analytics and Google Tag Manager. This is a blog all about web analytics development.",
+      "followers": {
+        "twitter": 24600
+      },
+      "image_url": "https://i1.feedspot.com/4575725.jpg?t=1611136633"
+    },
+    {
+      "title": "Adswerve Blog",
+      "feed_url": "https://adswerve.com/blog/rss.xml",
+      "website_url": "https://adswerve.com/blog",
+      "description": "As a leading Google Marketing and Cloud partner, Adswerve helps thousands of digital marketers, data analysts and agencies make stronger connections with their customers through successful data-driven strategies.",
+      "followers": {
+        "facebook": 375,
+        "twitter": 9800
+      },
+      "image_url": "https://i1.feedspot.com/4923843.jpg?t=1611136609"
+    },
+    {
+      "title": "Analytify Blog",
+      "feed_url": "https://analytify.io/feed/",
+      "website_url": "https://analytify.io/blog/",
+      "description": "Analytify is one of the most popular Google Analytics WordPress plugins that will help you to integrate, WordPress website with Google Analytics.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5221531.jpg?t=1606817330"
+    },
+    {
+      "title": "Google Analytics Products Blog \u00bb Analytics",
+      "feed_url": "https://blog.google/products/marketingplatform/analytics/rss/",
+      "website_url": "https://blog.google/products/marketingplatform/analytics/",
+      "description": "Get the latest news, product updates, and tips on Google Analytics, Data Studio, Optimize, Surveys, and Tag Manager.",
+      "followers": {
+        "facebook": 257899,
+        "twitter": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/938301.jpg?t=1611136615"
+    },
+    {
+      "title": "Analytics Mania Blog",
+      "feed_url": "https://www.analyticsmania.com/feed/",
+      "website_url": "https://www.analyticsmania.com/blog/",
+      "description": "Hi, I'm Julius Fedorovicius, founder of Analytics Mania. I'm here to help you learn Google Tag Manager and GA. A blog dedicated to Web Analytics, mainly Google Tag Manager and Google Analytics.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 249
+      },
+      "image_url": "https://i1.feedspot.com/4923858.jpg?t=1611136588"
+    },
+    {
+      "title": "Analytics Canvas Blog",
+      "feed_url": "https://analyticscanvas.com/blog/feed/",
+      "website_url": "https://analyticscanvas.com/blog/",
+      "description": "Analytics Canvas dramatically improves the speed and accuracy of your Google Analytics reporting processes and is designed to make you a better analyst. We blog about Google Analytics, upcoming product releases, tutorials, as well as our insights into the rapidly changing world of data analysis.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 817
+      },
+      "image_url": "https://i1.feedspot.com/4923849.jpg?t=1611136605"
+    },
+    {
+      "title": "Loves Data Blog",
+      "feed_url": "https://www.lovesdata.com/blog?format=RSS",
+      "website_url": "https://www.lovesdata.com/blog/",
+      "description": "Loves Data is all about getting the most out of your data. We're specialists in Google Analytics and Google AdWords and have consulted with some of the biggest brands and trained thousands of people to do it themselves.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/4923850.jpg?t=1611136607"
+    }
+  ]
+}

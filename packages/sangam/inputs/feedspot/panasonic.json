@@ -1,0 +1,36 @@
+{
+  "category": "Panasonic",
+  "source_url": "https://rss.feedspot.com/panasonic_rss_feeds",
+  "feeds": [
+    {
+      "title": "Panasonic News",
+      "feed_url": "https://news.panasonic.com/global/rss/all/index.xml",
+      "website_url": "https://news.panasonic.com/global/",
+      "description": "Panasonic Newsroom updates with the latest Panasonic news from around the world by gathering news in the form of news articles, videos, press releases, and various SNS activities.",
+      "followers": {
+        "facebook": 744900,
+        "twitter": 141200
+      },
+      "image_url": "https://i1.feedspot.com/4917900.jpg?t=1620628153"
+    },
+    {
+      "title": "Panasonic",
+      "feed_url": "https://blogs.panasonic.com.au/consumer/feed/",
+      "website_url": "https://blogs.panasonic.com.au/consumer/",
+      "description": "Find Panasonic latest news, launches and reviews from Panasonic Australia Blog.",
+      "followers": {
+        "facebook": 78800,
+        "twitter": 13200
+      },
+      "image_url": "https://i1.feedspot.com/4917905.jpg?t=1620628163"
+    },
+    {
+      "title": "Panasonic Blog",
+      "feed_url": "https://logiscend.panasonic.com/feed/",
+      "website_url": "https://logiscend.panasonic.com/blog",
+      "description": "Logiscend is the first IoT-based system to offer a true paperless workflow for manufacturing. Our solution combines the immediate reliability and visual instruction inherent with paper labels along with automated tracking, and capability for two-way human interaction all inherent in Industrial IoT technologies. Welcome to the Panasonic Logiscend Blog. Read more about the latest news in the modern manufaturing.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5293211.jpg?t=1623765773"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "category": "Canton News",
+  "source_url": "https://rss.feedspot.com/canton_georgia_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Cherokee Tribune & Ledger News",
+      "feed_url": "https://www.tribuneledgernews.com/search/?f=rss&t=article&c=local_news&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.tribuneledgernews.com/local_news/",
+      "description": "Cherokee Tribune & Ledger covers local news and community events and sports in Cherokee County, GA. Our mission is to serve and represent the people of Cherokee County by providing stories that are honest, fair, accurate and have editorial integrity.",
+      "followers": {
+        "facebook": 30100,
+        "twitter": 7100
+      },
+      "image_url": "https://i1.feedspot.com/5171968.jpg"
+    }
+  ]
+}

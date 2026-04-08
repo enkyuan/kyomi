@@ -1,0 +1,904 @@
+{
+  "category": "Celebrity",
+  "source_url": "https://rss.feedspot.com/celebrity_rss_feeds",
+  "feeds": [
+    {
+      "title": "EMINEM",
+      "feed_url": "https://www.eminem.com/news/feed/",
+      "website_url": "https://www.eminem.com/news/",
+      "description": "Eminem is an American rapper, record producer, and actor. He regularly uses his online influence to help promote causes such as the Elton John AIDS Foundation.",
+      "followers": {
+        "facebook": 93900000,
+        "twitter": 22000000,
+        "instagram": 45400000
+      },
+      "image_url": "https://i1.feedspot.com/3639620.jpg?t=1606124178"
+    },
+    {
+      "title": "Jackie Chan",
+      "feed_url": "https://www.jackiechan.com/news/feed/",
+      "website_url": "https://www.jackiechan.com/news/",
+      "description": "Jackie Chan is a Hong Kong martial artist, actor, film director, producer, stuntman, and singer.",
+      "followers": {
+        "facebook": 69800000,
+        "twitter": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/4685659.jpg?t=1606124197"
+    },
+    {
+      "title": "Goop by Gwyneth Paltrow",
+      "feed_url": "https://goop.com/feed/",
+      "website_url": "https://goop.com/",
+      "description": "A modern lifestyle brand, offering cutting-edge wellness advice from doctors & experts, vetted travel recommendations, and a curated shop of clean beauty and timeless fashion. Key topics covered are beauty, food & home, style, travel, and wellness. Gwyneth Paltrow an American actress, singer, and food writer.",
+      "followers": {
+        "facebook": 547300,
+        "twitter": 93800,
+        "instagram": 1900000
+      },
+      "image_url": "https://i1.feedspot.com/4652228.jpg?t=1606124235"
+    },
+    {
+      "title": "Celebhub.co.uk",
+      "feed_url": "https://celebhub.co.uk/feed/",
+      "website_url": "https://celebhub.co.uk/",
+      "description": "Celebrity profiles, news, videos, and images. Check out our huge archive of celebrity media brought to you through our hub!",
+      "followers": {
+        "twitter": 269,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5555173.jpg?t=1683108562"
+    },
+    {
+      "title": "Bill O'Reilly",
+      "feed_url": "https://www.billoreilly.com/blog?rss=true&size=50&useBlurbs=true&categoryID=2?format=xml",
+      "website_url": "https://www.billoreilly.com/blog#month=7&year=2024",
+      "description": "Bill O'Reilly is an American journalist, author, and host of the No Spin News podcast.",
+      "followers": {
+        "facebook": 2700000,
+        "twitter": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4685709.jpg?t=1606124266"
+    },
+    {
+      "title": "Amitabh Bachchan's Official Blog",
+      "feed_url": "https://srbachchan.tumblr.com/rss",
+      "website_url": "https://srbachchan.tumblr.com/",
+      "description": "I am Amitabh Bachchan an Indian film actor.",
+      "followers": {
+        "facebook": 38000000,
+        "twitter": 49000000
+      },
+      "image_url": "https://i1.feedspot.com/18276.jpg?t=1608190110"
+    },
+    {
+      "title": "Dolly Parton",
+      "feed_url": "https://dollyparton.com/feed",
+      "website_url": "https://dollyparton.com/latest-news",
+      "description": "Dolly Parton is an American singer, songwriter, multi-instrumentalist, record producer, actress, author, businesswoman, and philanthropist, known primarily for her work in country music",
+      "followers": {
+        "facebook": 8100000,
+        "twitter": 5300000
+      },
+      "image_url": "https://i1.feedspot.com/4685711.jpg?t=1606124391"
+    },
+    {
+      "title": "Sean Hannity",
+      "feed_url": "https://hannity.com/feed/",
+      "website_url": "https://hannity.com/",
+      "description": "Sean Patrick Hannity is an American radio and television host, author, and conservative political commentator.",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 7200000,
+        "instagram": 2100000
+      },
+      "image_url": "https://i1.feedspot.com/4685715.jpg?t=1606124270"
+    },
+    {
+      "title": "The Official Bob Dylan Site",
+      "feed_url": "https://www.bobdylan.com/news/feed/",
+      "website_url": "https://www.bobdylan.com/news/",
+      "description": "Bob Dylan is an American poetic songwriter, singer, painter, writer, and Nobel prize laureate.",
+      "followers": {
+        "facebook": 7000000,
+        "twitter": 503600,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/4686289.jpg?t=1606124296"
+    },
+    {
+      "title": "Rick Stein Blog",
+      "feed_url": "https://rickstein.com/blog/feed/",
+      "website_url": "https://rickstein.com/blog/",
+      "description": "Chef, restaurateur and television presenter",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 427100,
+        "instagram": 232500
+      },
+      "image_url": "https://i1.feedspot.com/4686066.jpg?t=1606124380"
+    },
+    {
+      "title": "The Martha Stewart Blog",
+      "feed_url": "https://www.themarthablog.com/feed",
+      "website_url": "https://www.themarthablog.com/",
+      "description": "Martha Stewart's official blog. On the Martha Blog, Martha Stewart an American businesswoman, writer, and television personality shares an up-close and personal perspective of her life through blog posts, photos and",
+      "followers": {
+        "facebook": 4000000,
+        "twitter": 3300000
+      },
+      "image_url": "https://i1.feedspot.com/4349.jpg?t=1639730926"
+    },
+    {
+      "title": "Novak Djokovic",
+      "feed_url": "https://novakdjokovic.com/en/feed/",
+      "website_url": "https://novakdjokovic.com/en/n/news/",
+      "description": "The official website of Novak Djokovic with exclusive photos, videos, results,news, biographical information, articles and interviews.",
+      "followers": {
+        "facebook": 10300000,
+        "twitter": 9200000,
+        "instagram": 16100000
+      },
+      "image_url": "https://i1.feedspot.com/62452.jpg?t=1606124434"
+    },
+    {
+      "title": "WIL WHEATON",
+      "feed_url": "https://wilwheaton.net/feed/",
+      "website_url": "https://wilwheaton.net/",
+      "description": "WIL WHEATON is an American actor, blogger, voice actor, and writer. Wheaton is a real-life geek. He's been blogging since the medium started in the early '00s, posting on everything from his computers to his personal life. Follow to keep up with our blog.",
+      "followers": {
+        "twitter": 2600000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/131350.jpg?t=1622630864"
+    },
+    {
+      "title": "Ice Cube",
+      "feed_url": "https://icecube.com/feed/",
+      "website_url": "https://icecube.com/news/",
+      "description": "The official website for Ice Cube. Providing up to date news, videos, albums, movies, tour info, and merch.",
+      "followers": {
+        "facebook": 17800000,
+        "twitter": 5800000,
+        "instagram": 30500000
+      },
+      "image_url": "https://i1.feedspot.com/4686164.jpg?t=1606124418"
+    },
+    {
+      "title": "Nicklaus.com",
+      "feed_url": "https://nicklaus.com/feed/",
+      "website_url": "https://nicklaus.com/news/",
+      "description": "The Official Site of Jack Nicklaus. Jack William Nicklaus, nicknamed The Golden Bear, is a retired American professional golfer.",
+      "followers": {
+        "facebook": 398400,
+        "twitter": 522900,
+        "instagram": 12400
+      },
+      "image_url": "https://i1.feedspot.com/4686321.jpg?t=1606124543"
+    },
+    {
+      "title": "Katie Couric",
+      "feed_url": "https://katiecouric.com/feed/",
+      "website_url": "https://katiecouric.com/",
+      "description": "This is the Official Website of Katherine Anne 'Katie' Couric an American journalist and author.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 1600000,
+        "instagram": 2100000
+      },
+      "image_url": "https://i1.feedspot.com/4683363.jpg?t=1606124911"
+    },
+    {
+      "title": "Ernie Els",
+      "feed_url": "https://ernieels.com/feed/",
+      "website_url": "https://ernieels.com/",
+      "description": "Theodore Ernest 'Ernie' Els is a South African professional golfer. A former World No. 1, he is known as 'The Big Easy' due to his imposing physical stature along with his fluid golf swing.",
+      "followers": {
+        "facebook": 142200,
+        "twitter": 137300,
+        "instagram": 164700
+      },
+      "image_url": "https://i1.feedspot.com/4686331.jpg?t=1606124551"
+    },
+    {
+      "title": "Gul Panag",
+      "feed_url": "https://www.gulpanag.net/feed/",
+      "website_url": "https://www.gulpanag.net/news-media/",
+      "description": "Official Website of Gul Panag an actor and an entrepreneur who is one of India's most powerful opinion makers and thought leaders.",
+      "followers": {
+        "facebook": 641400,
+        "twitter": 2700000,
+        "instagram": 594900
+      },
+      "image_url": "https://i1.feedspot.com/4684076.jpg?t=1606124517"
+    },
+    {
+      "title": "Katie Lee Blog",
+      "feed_url": "https://www.katieleebiegel.com/blog?format=rss",
+      "website_url": "https://www.katieleebiegel.com/blog",
+      "description": "Official website of Katie Lee, co-host of The FoodNetwork's The Kitchen, author, novelist, and food critic. The site features her latest recipes, fashion, travel tips, and more!",
+      "followers": {
+        "facebook": 27100,
+        "twitter": 123300
+      },
+      "image_url": "https://i1.feedspot.com/4686107.jpg?t=1606124684"
+    },
+    {
+      "title": "superstarcentral",
+      "feed_url": "https://superstarcentral.ning.com/leaderboards/topcontent/month?feed=yes&xn_auth=no&n=20&images=yes&imageMaxSize=240",
+      "website_url": "https://superstarcentral.ning.com/",
+      "description": "Welcome to the Home of Super Stars (Past, Present & Future)",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5171285.jpg?t=1606124842"
+    },
+    {
+      "title": "Celebrities Income",
+      "feed_url": "https://celebritiesincome.com/feed/",
+      "website_url": "https://celebritiesincome.com/",
+      "description": "Hi friends! My name is Muzamil Akhtar. This blog is about celebrities' information like their net worth and lifestyle. And the motive of the blog is to help you with your questions. We will share necessary daily details about your favorite personality, so keep visiting and support us for quality information.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5221960.jpg?t=1606915061"
+    },
+    {
+      "title": "Just Jared",
+      "feed_url": "https://www.justjared.com/feed/",
+      "website_url": "https://www.justjared.com/",
+      "description": "Just Jared offers you the latest in celebrity news, photos, and gossip in entertainment, celebrities, tv, movies, pop culture and more! An established internet presence since 2005, Just Jared is a multi-media entertainment group providing premium pop culture trends, extensive celebrity photo galleries and breaking entertainment news.",
+      "followers": {
+        "facebook": 411400,
+        "twitter": 710900,
+        "instagram": 1600000
+      },
+      "image_url": "https://i1.feedspot.com/1094933.jpg?t=1641449946"
+    },
+    {
+      "title": "WHO",
+      "feed_url": "https://www.who.com.au/feed/",
+      "website_url": "https://www.who.com.au/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8542631.jpg"
+    },
+    {
+      "title": "RSVP \u00bb Celebs",
+      "feed_url": "https://www.rsvplive.ie/news/celebs/?service=rss",
+      "website_url": "https://www.rsvplive.ie/news/celebs/",
+      "description": "Get all the latest celebrity news and pictures from RSVP. News on celebs in Ireland, the UK and across the world.",
+      "followers": {
+        "facebook": 340700,
+        "twitter": 29800,
+        "instagram": 122900
+      },
+      "image_url": "https://i1.feedspot.com/8542628.jpg?t=1753103603"
+    },
+    {
+      "title": "Bossip",
+      "feed_url": "https://bossip.com/feed/",
+      "website_url": "https://bossip.com/",
+      "description": "Bossip is the premier destination for African American popular culture and entertainment, with a voice that's edgy, viciously hilarious, politically aware - and completely unique.",
+      "followers": {
+        "facebook": 727300,
+        "twitter": 323500,
+        "instagram": 643000
+      },
+      "image_url": "https://i1.feedspot.com/326839.jpg?t=1658390417"
+    },
+    {
+      "title": "Daily Mail Online \u00bb US Celebrity News",
+      "feed_url": "https://www.dailymail.co.uk/usshowbiz/index.rss",
+      "website_url": "https://www.dailymail.co.uk/usshowbiz/index.html/",
+      "description": "Discover Daily Mail US showbiz and latest celebrity news. Always stay informed about US celebrity news and gossip, photos, videos, scandals, and more.",
+      "followers": {
+        "facebook": 23200000
+      },
+      "image_url": "https://i1.feedspot.com/1426092.jpg"
+    },
+    {
+      "title": "Entertainment Weekly \u00bb Celebrity",
+      "feed_url": "https://feeds-api.dotdashmeredith.com/v1/rss/google/5243da45-c90c-46a6-a2f2-014d0023fb28",
+      "website_url": "https://ew.com/celebrity/",
+      "description": "Latest celebrity news, including interviews, photos, red carpet and premiere events, and more from Entertainment Weekly.",
+      "followers": {
+        "facebook": 4900000,
+        "instagram": 2600000
+      },
+      "image_url": "https://i1.feedspot.com/7892796.jpg?t=1743067470"
+    },
+    {
+      "title": "Nicki Swift Blog",
+      "feed_url": "https://www.nickiswift.com/feed",
+      "website_url": "https://www.nickiswift.com/",
+      "description": "Get the latest celebrity news and gossip, exclusive takes, and more from the Nicki Swift experts.",
+      "followers": {
+        "facebook": 1800000,
+        "instagram": 132200
+      },
+      "image_url": "https://i1.feedspot.com/4977472.jpg?t=1750930739"
+    },
+    {
+      "title": "Wonderwall \u00bb Celebrity",
+      "feed_url": "https://www.wonderwall.com/celebrity/feed",
+      "website_url": "https://www.wonderwall.com/celebrity/",
+      "description": "Wonderwall.com is a celebrity-focused entertainment site launched by MSN/BermanBraun that delivers breaking star news, photo galleries, red carpet coverage,/video features in a dynamic, magazine-style scrolling format",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8542629.jpg?t=1753103604"
+    },
+    {
+      "title": "Page Six",
+      "feed_url": "https://pagesix.com/feed/",
+      "website_url": "https://pagesix.com/",
+      "description": "Page Six is your source for the latest celebrity news, entertainment headlines and celeb gossip, with exclusive stories, photos, video, and more. Page Six provides celebrity and pop culture news from the New York Post.",
+      "followers": {
+        "facebook": 1500000,
+        "twitter": 386100,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/4926387.jpg?t=1666329685"
+    },
+    {
+      "title": "TMZ",
+      "feed_url": "https://www.tmz.com/rss.xml",
+      "website_url": "https://www.tmz.com/",
+      "description": "Breaking the biggest stories in celebrity and entertainment news. Get exclusive access to the latest stories, photos, and video as only TMZ can. TMZ altered the entertainment news landscape by changing the way the public gets its news. TMZ is one of the most-cited entertainment news sources, utilized by national networks and local newsgathering organizations across the country.",
+      "followers": {
+        "facebook": 9500000,
+        "twitter": 8400000,
+        "instagram": 7800000
+      },
+      "image_url": "https://i1.feedspot.com/4410355.jpg?t=1641389012"
+    },
+    {
+      "title": "E! Online",
+      "feed_url": "https://eol-feeds.eonline.com/rssfeed/us/top_stories",
+      "website_url": "https://www.eonline.com/",
+      "description": "E! News is your source for entertainment news, celebrities, celeb news, and celebrity gossip, and much more. Check out the hottest fashion, photos, movies and TV shows! E! is the only global, multiplatform brand for all things entertainment, pop culture and lifestyle.",
+      "followers": {
+        "facebook": 14600000,
+        "instagram": 25100000
+      },
+      "image_url": "https://i1.feedspot.com/5459153.jpg?t=1666329606"
+    },
+    {
+      "title": "Atlanta Blackstar \u00bb Celebrity News & Gossip",
+      "feed_url": "https://atlantablackstar.com/category/entertainment/celebrity-news/feed/",
+      "website_url": "https://atlantablackstar.com/category/entertainment/celebrity-news/",
+      "description": "Atlanta Black Star's celebrity news section delivers culturally attuned coverage of music, film, TV, and pop culture moments\u2014presenting viral red carpet photos, standout social media reactions, family updates, and lifestyle highlights\u2014all framed through an African\u2011American community lens.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8542630.jpg?t=1753103605"
+    },
+    {
+      "title": "Perez Hilton",
+      "feed_url": "https://perezhilton.com/feed/",
+      "website_url": "https://perezhilton.com/",
+      "description": "Since 2004, Hollywood's most sassy website has been delivering the juiciest celebrity gossip. The blog is the go-to source for daily happenings in Hollywood. Written by the internet's most notorious gossip columnist, Perez Hilton (Mario Lavandeira). She dishes up the juiciest celebrity gossip on all your favorite stars.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 5300000,
+        "instagram": 599600
+      },
+      "image_url": "https://i1.feedspot.com/679418.jpg?t=1671622425"
+    },
+    {
+      "title": "The Shade Room",
+      "feed_url": "https://theshaderoom.com/feed/",
+      "website_url": "https://theshaderoom.com/",
+      "description": "Find all the trending news on theshaderoom.com. We have everything covered right from celebrity news, fashion news, beauty, headline news, photos, videos and everything else you love about The Shade Room. Stay updated with all the trending topics. The Shade Room is the leading black-owned independent media company covering entertainment and celebrity news.",
+      "followers": {
+        "facebook": 5900000,
+        "twitter": 848600,
+        "instagram": 29000000
+      },
+      "image_url": "https://i1.feedspot.com/4681052.jpg?t=1612339862"
+    },
+    {
+      "title": "Celeb Secrets",
+      "feed_url": "https://celebsecrets.com/feed/",
+      "website_url": "https://celebsecrets.com/category/blog/",
+      "description": "Celeb Secrets is the ultimate destination for breaking news, interviews, and exclusive premieres on all things awards, country, lifestyle, music, movies, sports, and television.",
+      "followers": {
+        "facebook": 275300
+      },
+      "image_url": "https://i1.feedspot.com/8542633.jpg?t=1753103611"
+    },
+    {
+      "title": "Quencie",
+      "feed_url": "https://quencie.com/blog?format=rss",
+      "website_url": "https://quencie.com/blog/",
+      "description": "My name is Quencie Thomas, and I am the founder and host of Studio Q, where I deliver fun, authentic and unguarded conversations with celebrities, content creators, small business owners, artists, producers, and executives.",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/8542632.jpg?t=1753103610"
+    },
+    {
+      "title": "The Blast",
+      "feed_url": "https://theblast.com/feed/",
+      "website_url": "https://theblast.com/",
+      "description": "All the best exclusive & breaking news in the world of celebrity entertainment. We are first, accurate & always bringing you the real story. Launched in September 2017 by renowned celebrity reporter Mike Walters, The Blast provides 24/7, up-to-the-minute news about the world's biggest celebrities, all optimized for mobile consumption and social media engagement.",
+      "followers": {
+        "facebook": 189500,
+        "twitter": 11500,
+        "instagram": 80200
+      },
+      "image_url": "https://i1.feedspot.com/5310143.jpg?t=1643289798"
+    },
+    {
+      "title": "OK! Magazine",
+      "feed_url": "https://okmagazine.com/rss/",
+      "website_url": "https://okmagazine.com/",
+      "description": "Read about celebrity news, stories, style, beauty & fashion and more. OK! is a weekly magazine that primarily specializes in royal and celebrity news. With exclusive offerings on a variety of platforms featuring authentic and aspirational content, OK! provides readers a unique look at the day-to-day lives of their favorite celebrities and trendsetters.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 471200,
+        "instagram": 448200
+      },
+      "image_url": "https://i1.feedspot.com/5319934.jpg?t=1660050313"
+    },
+    {
+      "title": "Marie Claire \u00bb Celebrity",
+      "feed_url": "https://www.marieclaire.com.au/news/celebrity/feed/",
+      "website_url": "https://www.marieclaire.com.au/news/celebrity/",
+      "description": "Marie\u202fClaire\u202fAustralia's Celebrity section delivers a daily mix of entertainment headlines, red carpet coverage, fresh photo shoots, and viral pop\u2011culture moments\u2014presented with style, substance, and insight into local and international stars.",
+      "followers": {
+        "facebook": 361400,
+        "twitter": 80300,
+        "instagram": 238600
+      },
+      "image_url": "https://i1.feedspot.com/8542627.jpg?t=1753103600"
+    },
+    {
+      "title": "Paulo Coelho's Blog",
+      "feed_url": "https://feeds.feedburner.com/PauloCoelhosBlog",
+      "website_url": "https://paulocoelhoblog.com/",
+      "description": "Paulo coelho writer official blog",
+      "followers": {
+        "facebook": 30100000,
+        "twitter": 4,
+        "instagram": 2300000
+      },
+      "image_url": "https://i1.feedspot.com/81559.jpg?t=1606124229"
+    },
+    {
+      "title": "The Rush Limbaugh Show",
+      "feed_url": "https://www.rushlimbaugh.com/feed/",
+      "website_url": "https://www.rushlimbaugh.com/",
+      "description": "USH: No longer is this just gonna be a long list of stories that I might mention on the program. Now, you will get specifically the stories that I talk about on the program and a select list of a few others that I intended to get to but ran out of time. It's going to be more of a real-time base feature rather than just a generic list of places that I go to prep the show.",
+      "followers": {
+        "facebook": 2300000,
+        "twitter": 47
+      },
+      "image_url": "https://i1.feedspot.com/4571231.jpg?t=1655373762"
+    },
+    {
+      "title": "Sylvester Stallone",
+      "feed_url": "https://sylvesterstallone.com/feed/",
+      "website_url": "https://sylvesterstallone.com/news/",
+      "description": "The official website of actor, writer, director, Sylvester Stallone.",
+      "followers": {
+        "facebook": 12000000,
+        "twitter": 2900000
+      },
+      "image_url": "https://i1.feedspot.com/4683279.jpg?t=1606124907"
+    },
+    {
+      "title": "C\u00e9line Dion Official Website",
+      "feed_url": "https://www.celinedion.com/feed/",
+      "website_url": "https://www.celinedion.com/",
+      "description": "C\u00e9line Dion Official Website, an Canadian singer and businesswoman. Celine Dion news, tickets, Team Celine, Caesars Palace tickets in Las Vegas, Boutique and more.",
+      "followers": {
+        "facebook": 27800000,
+        "twitter": 1000000,
+        "instagram": 9300000
+      },
+      "image_url": "https://i1.feedspot.com/4684022.jpg?t=1606124358"
+    },
+    {
+      "title": "Russell Brand",
+      "feed_url": "https://www.russellbrand.com/feed/",
+      "website_url": "https://www.russellbrand.com/articles-new/",
+      "description": "This is the Official Website of Russell Edward Brand is an English comedian, actor, radio host, author, and activist.",
+      "followers": {
+        "facebook": 5900000,
+        "twitter": 11300000,
+        "instagram": 4900000
+      },
+      "image_url": "https://i1.feedspot.com/4081613.jpg?t=1606124816"
+    },
+    {
+      "title": "Lauren Conrad",
+      "feed_url": "https://laurenconrad.com/feed/",
+      "website_url": "https://laurenconrad.com/",
+      "description": "The official site of Lauren Conrad an American television personality, fashion designer, and author.. Here you will get insider knowledge on the latest beauty and fashion trends from Lauren Conrad.",
+      "followers": {
+        "facebook": 1900000,
+        "twitter": 2600000,
+        "instagram": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/4446083.jpg?t=1606124286"
+    },
+    {
+      "title": "Whitney Port Blog",
+      "feed_url": "https://whitneyport.com/feed/",
+      "website_url": "https://whitneyport.com/blog/",
+      "description": "Whitney Eve Port is an American television personality, fashion designer, and author shares style tips on her blog.",
+      "followers": {
+        "facebook": 505200,
+        "twitter": 830600,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/4683982.jpg?t=1606124494"
+    },
+    {
+      "title": "Robert Irvine",
+      "feed_url": "https://chefirvine.com/feed",
+      "website_url": "https://chefirvine.com/category/team-irvine-news",
+      "description": "Robert Paul Irvine is an English celebrity chef who has appeared on and hosted a variety of Food Network programs.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 393900,
+        "instagram": 599800
+      },
+      "image_url": "https://i1.feedspot.com/4686085.jpg?t=1606124446"
+    },
+    {
+      "title": "Barry Bonds",
+      "feed_url": "https://barrybonds.com/blogs/news.atom",
+      "website_url": "https://barrybonds.com/blogs/news",
+      "description": "Barry Lamar Bonds is an American former professional baseball left fielder who played 22 seasons in Major League Baseball with the Pittsburgh Pirates and San Francisco Giants.",
+      "followers": {
+        "facebook": 127900,
+        "twitter": 64099
+      },
+      "image_url": "https://i1.feedspot.com/4686360.jpg?t=1655383038"
+    },
+    {
+      "title": "Tom Watson",
+      "feed_url": "https://tomwatson.com/feed/",
+      "website_url": "https://tomwatson.com/",
+      "description": "Official Website of Tom Watson. He is an American professional golfer on the PGA Tour Champions, formerly on the PGA Tour.",
+      "followers": {
+        "facebook": 75900,
+        "twitter": 124300,
+        "instagram": 37700
+      },
+      "image_url": "https://i1.feedspot.com/4686344.jpg?t=1606124629"
+    },
+    {
+      "title": "Margaret Cho",
+      "feed_url": "https://margaretcho.com/blog/feed/",
+      "website_url": "https://margaretcho.com/blog/",
+      "description": "Margaret Cho Official Site. She is an American stand-up comedian, actress, fashion designer, author, and singer-songwriter.",
+      "followers": {
+        "facebook": 590900,
+        "twitter": 429200,
+        "instagram": 365600
+      },
+      "image_url": "https://i1.feedspot.com/4686042.jpg?t=1608187841"
+    },
+    {
+      "title": "Andrew Flintoff",
+      "feed_url": "http://andrewflintoffofficial.co.uk/feed/",
+      "website_url": "http://andrewflintoffofficial.co.uk/news/",
+      "description": "The Official Site for Andrew Flintoff an English cricketer.",
+      "followers": {
+        "facebook": 86400,
+        "twitter": 1900000
+      },
+      "image_url": "https://i1.feedspot.com/4683599.jpg?t=1608187880"
+    },
+    {
+      "title": "Florida Georgia Line",
+      "feed_url": "https://floridageorgialine.com/news/feed/",
+      "website_url": "https://floridageorgialine.com/news/",
+      "description": "Florida Georgia Line is an American country music duo consisting of vocalists Brian Kelley and Tyler Hubbard.",
+      "followers": {
+        "facebook": 4400000,
+        "twitter": 1900000,
+        "instagram": 1900000
+      },
+      "image_url": "https://i1.feedspot.com/4685729.jpg?t=1606124609"
+    },
+    {
+      "title": "Chef Sanjeev Kapoor",
+      "feed_url": "https://sanjeevkapoor.wordpress.com/feed/",
+      "website_url": "https://sanjeevkapoor.wordpress.com/",
+      "description": "Chef Sanjeev Kapoor's Blog.",
+      "followers": {
+        "facebook": 9000000,
+        "twitter": 2100000
+      },
+      "image_url": "https://i1.feedspot.com/4686008.jpg?t=1606124879"
+    },
+    {
+      "title": "hitRECordJoe by Joseph Gordon-Levitt",
+      "feed_url": "https://hitrecordjoe.tumblr.com/rss",
+      "website_url": "https://hitrecordjoe.tumblr.com/",
+      "description": "Hello again, Joe again.My professional name is Joseph Gordon-Levitt.I direct an open collaborative production company called hitRECord.org writers, filmmakers, musicians, editors, remixers, artist",
+      "followers": {
+        "facebook": 6700000,
+        "twitter": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/5048.jpg?t=1655443630"
+    },
+    {
+      "title": "Steal Her Style",
+      "feed_url": "https://stealherstyle.net/feed",
+      "website_url": "https://stealherstyle.net/",
+      "description": "Steal Her Style shows where female musicians buy their clothes and tells fans how to dress like them.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5024024.jpg"
+    },
+    {
+      "title": "PEOPLE Magazine",
+      "feed_url": "https://feeds.distribution.dotdashmeredith.com/v3/rss/4780ef1e-1952-43da-abd9-3b7c690f1f72",
+      "website_url": "https://people.com/",
+      "description": "PEOPLE is the No. 1 site for celebrity news. Get the latest news about celebrities, royals, music, TV, and real people. Find exclusive content, including photos and videos.",
+      "followers": {
+        "facebook": 11900000,
+        "twitter": 7600000,
+        "instagram": 14500000
+      },
+      "image_url": "https://i1.feedspot.com/4919270.jpg?t=1606124201"
+    },
+    {
+      "title": "Narendra Modi",
+      "feed_url": "https://www.narendramodi.in/",
+      "website_url": "https://www.narendramodi.in/",
+      "description": "The official website of Narendra Modi contains information about the PM, his life journey, his 4 terms as CM & latest news, updates.",
+      "followers": {
+        "facebook": 18500,
+        "twitter": 105000000,
+        "instagram": 97900000
+      },
+      "image_url": "https://i1.feedspot.com/23884.jpg?t=1606124216"
+    },
+    {
+      "title": "Carrie Underwood",
+      "feed_url": "https://www.carrieunderwoodofficial.com/feed",
+      "website_url": "https://www.carrieunderwoodofficial.com/news/",
+      "description": "Carrie Underwood emerged from the promise of her 2005 American Idol win to become a true multi-format, multi-media superstar, spanning achievements in music, television, and film.",
+      "followers": {
+        "facebook": 12100000,
+        "twitter": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/4684048.jpg?t=1606124423"
+    },
+    {
+      "title": "Bruce Springsteen News",
+      "feed_url": "https://brucespringsteen.net/news/",
+      "website_url": "https://brucespringsteen.net/news/",
+      "description": "The Official Bruce Springsteen Website. He is an American singer-songwriter.",
+      "followers": {
+        "facebook": 6000000,
+        "twitter": 1300000,
+        "instagram": 2100000
+      },
+      "image_url": "https://i1.feedspot.com/4685614.jpg?t=1606124375"
+    },
+    {
+      "title": "Gates Notes",
+      "feed_url": "https://www.gatesnotes.com/rss",
+      "website_url": "https://www.gatesnotes.com/",
+      "description": "I am the co-founder of Microsoft and an American business magnate, investor, author and philanthropist.This is my personal blog, where I share about the people I meet, the books I'm reading, and what I'm learning. I hope that you'll join the conversation.",
+      "followers": {
+        "facebook": 42100000,
+        "twitter": 66000000,
+        "instagram": 12000000
+      },
+      "image_url": "https://i1.feedspot.com/4469556.jpg?t=1606124255"
+    },
+    {
+      "title": "Nicole Kidman",
+      "feed_url": "https://nicolekidmanofficial.com/feed/",
+      "website_url": "https://nicolekidmanofficial.com/",
+      "description": "Welcome to nicolekidmanofficial.com - The Official Site for Academy Award winning actress and UNIFEM Goodwill Ambassador Nicole Kidman. View pictures and receive updates from Nicole on what you can do to help stop violence against women around the world.",
+      "followers": {
+        "facebook": 15300000,
+        "twitter": 65000
+      },
+      "image_url": "https://i1.feedspot.com/4683555.jpg?t=1606124413"
+    },
+    {
+      "title": "Vanessa Lachey",
+      "feed_url": "https://vanessalachey.com/feed",
+      "website_url": "https://vanessalachey.com/",
+      "description": "Official site of Vanessa Lachey, an American television personality, television host, fashion model, and actress.features her insights on love, marriage to Nick Lachey, food, fashion and parenting in her fun and practical style.",
+      "followers": {
+        "facebook": 227800,
+        "twitter": 143000
+      },
+      "image_url": "https://i1.feedspot.com/4686148.jpg?t=1606124674"
+    },
+    {
+      "title": "J.K. Rowling",
+      "feed_url": "https://www.jkrowling.com/feed/",
+      "website_url": "https://alanis.com/",
+      "description": "This is the Official Website of Joanne Rowling, who writes under the pen names J. K. Rowling and Robert Galbraith, is a British novelist, film and television producer, screenwriter and philanthropist, best known as the author of the Harry Potter fantasy series. JK Rowling has become one of the world's most successful and influential novelists.",
+      "followers": {
+        "facebook": 6400000,
+        "twitter": 14300000
+      },
+      "image_url": "https://i1.feedspot.com/4683402.jpg?t=1606124274"
+    },
+    {
+      "title": "Alanis Morissette",
+      "feed_url": "https://alanis.com/news?format=rss",
+      "website_url": "https://alanis.com/",
+      "description": "This is the Official Website of Alanis Nadine Morissette an Canadian-American alternative rock singer-songwriter, musician, multi-instrumentalist, record producer, and actress.",
+      "followers": {
+        "facebook": 4099999,
+        "twitter": 556800,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/4683342.jpg?t=1606124871"
+    },
+    {
+      "title": "The Official Cat Cora Website and Blog",
+      "feed_url": "https://catcora.com/feed",
+      "website_url": "https://catcora.com/",
+      "description": "Cat Cora is an American professional chef best known for her featured role as an 'Iron Chef' on the Food Network television show Iron Chef America and as co-host of Around the World in 80 Plates on Bravo.",
+      "followers": {
+        "twitter": 388800,
+        "instagram": 295600
+      },
+      "image_url": "https://i1.feedspot.com/4686072.jpg?t=1606124601"
+    },
+    {
+      "title": "Kendrick Lamar",
+      "feed_url": "http://www.kendricklamar.com/news/all/feed",
+      "website_url": "http://www.kendricklamar.com/news",
+      "description": "Kendrick Lamar is an American rapper and songwriter.",
+      "followers": {
+        "facebook": 13600000,
+        "twitter": 12800000,
+        "instagram": 19500000
+      },
+      "image_url": "https://i1.feedspot.com/4686170.jpg?t=1606124400"
+    },
+    {
+      "title": "Tori Kelly",
+      "feed_url": "https://www.torikellymusic.com/feed/",
+      "website_url": "https://www.torikellymusic.com/",
+      "description": "The official artist site of musician Tori Kelly.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 1100000,
+        "instagram": 4800000
+      },
+      "image_url": "https://i1.feedspot.com/4684058.jpg?t=1606124503"
+    },
+    {
+      "title": "LL Cool J",
+      "feed_url": "https://llcoolj.com/feed/",
+      "website_url": "https://llcoolj.com/",
+      "description": "This is the Official Website of James Todd Smith, known professionally as LL Cool J (short for Ladies Love Cool James),is an American rapper, actor, author, and entrepreneur from Queens, New York.",
+      "followers": {
+        "facebook": 7000000,
+        "twitter": 4800000,
+        "instagram": 3300000
+      },
+      "image_url": "https://i1.feedspot.com/4683296.jpg?t=1606124641"
+    },
+    {
+      "title": "Tobykeith.com",
+      "feed_url": "https://www.tobykeith.com/news/rss",
+      "website_url": "https://www.tobykeith.com/news",
+      "description": "Toby Keith Covel is an American singer, songwriter, actor and record producer.",
+      "followers": {
+        "facebook": 6000000,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/4685990.jpg?t=1606124621"
+    },
+    {
+      "title": "Mario Batali",
+      "feed_url": "http://www.mariobatali.com/feed",
+      "website_url": "http://www.mariobatali.com/",
+      "description": "Mario is one of the most recognized and respected chefs worldwide. He believes that food, like most things, is best when left to its own simple beauty. To that end, Mario, together with partner Joe Bastianich, create magic night after night in their restaurants.",
+      "followers": {
+        "twitter": 1600000
+      },
+      "image_url": "https://i1.feedspot.com/4590632.jpg?t=1606124596"
+    },
+    {
+      "title": "Richard Petty Motorsports",
+      "feed_url": "https://richardpettymotorsports.com/news/feed/",
+      "website_url": "https://tomboykc.com/",
+      "description": "Richard Petty , nicknamed The King, is a former NASCAR driver who raced in the Strictly Stock/Grand National Era and the NASCAR Winston Cup Series",
+      "followers": {
+        "facebook": 2,
+        "instagram": 489
+      },
+      "image_url": "https://i1.feedspot.com/4686373.jpg?t=1606124688"
+    },
+    {
+      "title": "TOMBOY KC - It's more than a look. It's a lifestyle.",
+      "feed_url": "https://tomboykc.com/feed/",
+      "website_url": "https://tomboykc.com/",
+      "description": "TOMBOY KC is a fashion and lifestyle blog written by actress Katie Cassidy and pint- sized real-life friend, Lynsey Eaton.",
+      "followers": {
+        "facebook": 13300,
+        "twitter": 4500,
+        "instagram": 26600
+      },
+      "image_url": "https://i1.feedspot.com/3613338.jpg?t=1606124916"
+    },
+    {
+      "title": "Sting.com.com",
+      "feed_url": "https://www.sting.com/news/rss",
+      "website_url": "https://www.sting.com/news",
+      "description": "Sting is an English musician, singer, songwriter, and actor.",
+      "followers": {
+        "facebook": 6900000,
+        "twitter": 413600,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/4686404.jpg?t=1606124903"
+    },
+    {
+      "title": "Luke Bryan",
+      "feed_url": "https://www.lukebryan.com/rss",
+      "website_url": "https://www.lukebryan.com/news",
+      "description": "Luke Bryan is an American country singer and songwriter.",
+      "followers": {
+        "facebook": 10300000,
+        "twitter": 527,
+        "instagram": 7400000
+      },
+      "image_url": "https://i1.feedspot.com/4685700.jpg?t=1608187835"
+    },
+    {
+      "title": "John Grisham",
+      "feed_url": "https://jgrisham.com/feed/",
+      "website_url": "https://jgrisham.com/",
+      "description": "This is the Official Website of America's Favorite Storyteller John Grisham.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 51800
+      },
+      "image_url": "https://i1.feedspot.com/4683431.jpg?t=1655381582"
+    },
+    {
+      "title": "William Shatner",
+      "feed_url": "https://williamshatner.com/ws/feed/",
+      "website_url": "https://williamshatner.com/ws/",
+      "description": "Official Website of William Shatner. William Shatner is a Canadian actor, author, producer, and director.",
+      "followers": {
+        "facebook": 1500000,
+        "twitter": 2500000
+      },
+      "image_url": "https://i1.feedspot.com/4683382.jpg?t=1606124512"
+    },
+    {
+      "title": "Celina Jaitly",
+      "feed_url": "https://www.celinajaitlyofficial.com/feed",
+      "website_url": "https://celinajaitlyofficial.com/",
+      "description": "The official website of Actress Celina Jaitly",
+      "followers": {
+        "facebook": 789600,
+        "twitter": 992100
+      },
+      "image_url": "https://i1.feedspot.com/4683529.jpg?t=1606124875"
+    },
+    {
+      "title": "MikeTyson.com - Bite Into the Boxing World of Mike Tyson",
+      "feed_url": "https://miketyson.com/feed",
+      "website_url": "https://miketyson.com/",
+      "description": "Iron Mike Tyson - brings you the entire world of boxing - past, present and future. See all the amazing stuff that happens inside and outside the ring.",
+      "followers": {
+        "facebook": 7700000,
+        "twitter": 6400000
+      },
+      "image_url": "https://i1.feedspot.com/4685523.jpg?t=1606124429"
+    },
+    {
+      "title": "Steve Stricker",
+      "feed_url": "https://stevestrickergolf.com/feed/",
+      "website_url": "https://www.mysanantonio.com/entertainment/celebrities/",
+      "description": "Steven Charles Stricker is an American professional golfer who plays on the PGA Tour.",
+      "followers": {
+        "twitter": 103000
+      },
+      "image_url": "https://i1.feedspot.com/4686351.jpg?t=1655443394"
+    }
+  ]
+}

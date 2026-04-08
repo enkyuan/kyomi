@@ -1,0 +1,66 @@
+{
+  "category": "UK Fiction",
+  "source_url": "https://rss.feedspot.com/uk_fiction_rss_feeds",
+  "feeds": [
+    {
+      "title": "Dystopian",
+      "feed_url": "https://www.dystopic.co.uk/feed/",
+      "website_url": "https://www.dystopic.co.uk/",
+      "description": "A site predominantly dedicated to dystopian fiction in books and films with reviews, blogs, and discussions. Societal strain and political uprisings really get us going but don't worry, we're also a fan of puppies and rainbows, so it won't be all bleak.",
+      "followers": {
+        "twitter": 7600
+      },
+      "image_url": "https://i1.feedspot.com/4844989.jpg?t=1646027568"
+    },
+    {
+      "title": "Deborah Swift Blog",
+      "feed_url": "https://deborahswift.com/feed/",
+      "website_url": "https://deborahswift.com/blog/",
+      "description": "Author of #historical fiction, ex costume designer, history, art and nature fan (currently both trad and indie published).",
+      "followers": {
+        "twitter": 12100
+      },
+      "image_url": "https://i1.feedspot.com/4683522.jpg?t=1614065116"
+    },
+    {
+      "title": "Western Fiction Review",
+      "feed_url": "http://westernfictionreview.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://westernfictionreview.blogspot.com/",
+      "description": "I've been a reader and collector of western fiction, mainly from series. Sometime ago I was persuaded to write reviews and these are now appearing here. Along with these reviews you'll also find interviews with authors and cover artists.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4683292.jpg?t=1618816263"
+    },
+    {
+      "title": "Ibs Writes",
+      "feed_url": "https://ibs-writes.com/feed/",
+      "website_url": "https://ibs-writes.com/",
+      "description": "Contains short stories, poems and freelance writing tips. Ibs Writes blog lets helps you to experience powerful poetry and compelling fiction in audio and written format.",
+      "followers": {
+        "twitter": 88,
+        "instagram": 630
+      },
+      "image_url": "https://i1.feedspot.com/5370719.jpg?t=1644489427"
+    },
+    {
+      "title": "The Fiction Desk News",
+      "feed_url": "https://www.thefictiondesk.com/news/feed/",
+      "website_url": "https://www.thefictiondesk.com/news/",
+      "description": "The Fiction Desk is an independent publisher of new short stories.Our anthologies are published three times a year, and feature a range of general fiction from the UK and abroad. The series also includes New Ghost Stories, an annual collection of supernatural fiction.",
+      "followers": {
+        "twitter": 7300
+      },
+      "image_url": "https://i1.feedspot.com/1799099.jpg?t=1614065046"
+    },
+    {
+      "title": "Simon & Schuster UK",
+      "feed_url": "https://www.simonandschuster.co.uk/m/Books-and-the-City/Books-and-the-City",
+      "website_url": "https://www.simonandschuster.co.uk/m/Books-and-the-City/Books-and-the-City",
+      "description": "Books and the City is a place where lovers of womens fiction can hear the inside scoop from their favourite authors and get a sneak peek into new and exciting debuts.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/4845487.jpg?t=1607167463"
+    }
+  ]
+}

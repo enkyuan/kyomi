@@ -1,0 +1,97 @@
+{
+  "category": "Digital Library",
+  "source_url": "https://rss.feedspot.com/digital_library_rss_feeds",
+  "feeds": [
+    {
+      "title": "Texas Digital Library",
+      "feed_url": "https://www.tdl.org/feed/",
+      "website_url": "https://www.tdl.org/news/",
+      "description": "The Texas Digital Library is a multi-university consortium providing the digital infrastructure to support a fully online scholarly community for institutions of higher education in Texas and the widespread availability of their enormous intellectual capital.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1453638.jpg?t=1667816672"
+    },
+    {
+      "title": "Digital Human Library Blog",
+      "feed_url": "https://www.digitalhumanlibrary.com/feed/",
+      "website_url": "https://www.digitalhumanlibrary.com/blog/",
+      "description": "Digital Human Library (DHL) was founded by Leigh Cassell to address the urban and rural gap in education by leveraging digital technologies to broaden the K-12 student experience in ways that connect them with new people, places, and ideas from around the world. DHL is a resource that provides teachers and students with unlimited access to learning partnerships, guest speakers, and the field trip experience, anytime, anywhere.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 19600
+      },
+      "image_url": "https://i1.feedspot.com/5463635.jpg?t=1667818468"
+    },
+    {
+      "title": "California Digital Library",
+      "feed_url": "https://cdlib.org/feed/",
+      "website_url": "https://cdlib.org/news/",
+      "description": "The California Digital Library (CDL) is a dynamic and ever-evolving organization, and our mission, vision, and values reflect our emerging outlook. The California Digital Library provides transformative digital library services, grounded in campus partnerships and extended through external collaborations, that amplify the impact of the libraries, scholarship, and resources.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5463633.jpg?t=1667818581"
+    },
+    {
+      "title": "Good e-Reader Blog \u00bb Digital Library",
+      "feed_url": "https://goodereader.com/blog/category/digital-library-news/feed",
+      "website_url": "https://goodereader.com/blog/category/digital-library-news",
+      "description": "Good e-Reader is the leading provider of news, reviews, and previews on e-readers, tablets, digital publishing, ebooks, and more! Digital Library of Good e-Reader reports on the latest news on Audiobooks, ebooks, and e-readers. The company also operates its own e-reader store with hundreds of brands available.",
+      "followers": {
+        "facebook": 12500,
+        "twitter": 11600
+      },
+      "image_url": "https://i1.feedspot.com/5463634.jpg?t=1667818639"
+    },
+    {
+      "title": "DLF",
+      "feed_url": "https://www.diglib.org/feed/",
+      "website_url": "https://www.diglib.org/news/",
+      "description": "The Digital Library Federation is a network of member institutions and a robust community of practice - advancing research, learning, social justice, & the public good through the creative design and wise application of digital library technologies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2222146.jpg?t=1667819621"
+    },
+    {
+      "title": "The Digital Librarian",
+      "feed_url": "https://the-digital-librarian.com/feed/",
+      "website_url": "https://the-digital-librarian.com/",
+      "description": "Nick Tanzi is a nationally recognized library technology consultant and author of the book Making the Most of Digital Collections Through Training and Outreach. He is a Technology-focused professional who is working towards the development of libraries. The Digital Librarian is a blog site where Nick Tanzi posts articles, videos, etc to pass on information.",
+      "followers": {
+        "facebook": 381,
+        "twitter": 559
+      },
+      "image_url": "https://i1.feedspot.com/5305334.jpg?t=1627297790"
+    },
+    {
+      "title": "Digital Library of Georgia Blog",
+      "feed_url": "https://blog.dlg.galileo.usg.edu/?feed=rss2",
+      "website_url": "https://blog.dlg.galileo.usg.edu/",
+      "description": "The Digital Library of Georgia is a Galileo initiative based at the University of Georgia Libraries that collaborates with Georgia's Libraries, archives, museums, and other institutions to provide access to key information resources.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 1700,
+        "instagram": 261
+      },
+      "image_url": "https://i1.feedspot.com/4962719.jpg?t=1621863423"
+    },
+    {
+      "title": "University of Bedfordshire",
+      "feed_url": "http://bedsdigital.blogspot.com/feeds/posts/default",
+      "website_url": "http://bedsdigital.blogspot.com/",
+      "description": "At Bedfordshire, we have a vibrant and cosmopolitan student population. We are a modern university that believes in nurturing our students to become educated, employable, and entrepreneurial global citizens. Our Digital library is a place where students can find information about various topics they are looking for.",
+      "followers": {
+        "facebook": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5463632.jpg?t=1667815514"
+    },
+    {
+      "title": "UC Press Blog \u00bb California Digital Library",
+      "feed_url": "https://www.ucpress.edu/blog/tag/california-digital-library/feed",
+      "website_url": "https://www.ucpress.edu/blog/tag/california-digital-library",
+      "description": "University of California Press is one of the most forward-thinking scholarly publishers, committed to influencing public discourse and challenging the status quo. UC Press Blogs is a place where bright minds share bold ideas. Read informative articles on California Digital Libraries which use technology to democratize access to content and develop tools that help users make efficient and effective use of our accumulating knowledge.",
+      "followers": {
+        "facebook": 28500,
+        "twitter": 24400,
+        "instagram": 8900
+      },
+      "image_url": "https://i1.feedspot.com/5463631.jpg?t=1667819897"
+    }
+  ]
+}

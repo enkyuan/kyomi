@@ -1,0 +1,143 @@
+{
+  "category": "MLOps",
+  "source_url": "https://rss.feedspot.com/mlops_rss_feeds",
+  "feeds": [
+    {
+      "title": "ClearML Blog",
+      "feed_url": "https://clear.ml/feed",
+      "website_url": "https://clear.ml/blog",
+      "description": "ClearML helps you manage your entire MLOps stack in one open-source tool. Read our blog to learn how to manage experiments, datasets, orchestration, and model deployment.",
+      "followers": {
+        "facebook": 366,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5457222.jpg?t=1665992269"
+    },
+    {
+      "title": "Akira Blog",
+      "feed_url": "https://www.akira.ai/blog/rss.xml",
+      "website_url": "https://www.akira.ai/blog",
+      "description": "Blogs by the Akira AI Team and Community, Advanced Analytics, Deep Learning, AI, industry perspective, product updates, company news, and more. Akira AI Platform enables you to Automate the infrastructure to train and deploy Deep Learning Models on Public Cloud as well as On-Premises.",
+      "followers": {
+        "twitter": 99
+      },
+      "image_url": "https://i1.feedspot.com/5457225.jpg?t=1665992065"
+    },
+    {
+      "title": "MLOps Community Blog",
+      "feed_url": "https://mlops.community/feed/",
+      "website_url": "https://mlops.community/blog/",
+      "description": "The MLOps Community fills the swiftly growing need to share real-world Machine Learning Operations best practices from engineers in the field. Read our blogs to find articles on topics like what a machine learning engineer does, engineers' guides to data contracts, and many more!",
+      "followers": {
+        "twitter": 10300
+      },
+      "image_url": "https://i1.feedspot.com/5374689.jpg?t=1665992171"
+    },
+    {
+      "title": "MLOps Newsletter",
+      "feed_url": "https://mlops.substack.com/feed",
+      "website_url": "https://mlops.substack.com/",
+      "description": "Machine Learning Ops is a newsletter that gives you interesting developments, and tidbits about machine learning and deep learning on a (mostly) weekly basis. Click to read MLOps Newsletter, by Bugra Akyildiz, a Substack publication with thousands of readers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5462167.jpg?t=1667377856"
+    },
+    {
+      "title": "AiThority \u00bb MLOps",
+      "feed_url": "https://aithority.com/tag/mlops/feed/",
+      "website_url": "https://aithority.com/tag/mlops/",
+      "description": "AiThority covers the Artificial Intelligence (AI), Machine Learning (ML), Blockchain, AR, VR, & SaaS verticals, through editorial insights, trends & benchmarks.",
+      "followers": {
+        "facebook": 816,
+        "twitter": 8300
+      },
+      "image_url": "https://i1.feedspot.com/5462169.jpg?t=1667381129"
+    },
+    {
+      "title": "Iguazio \u00bb MLOps",
+      "feed_url": "https://www.iguazio.com/blog/tag/mlops/feed/",
+      "website_url": "https://www.iguazio.com/blog/tag/mlops/",
+      "description": "Iguazio provides a Data Science Platform to automate machine learning pipelines. It accelerates the development, deployment, and management of AI applications at scale, enabling data scientists to focus on delivering better, more accurate, and more powerful solutions instead of spending their time on infrastructure. The platform is open and deployable anywhere - multi-cloud, on-prem, or edge. Iguazio powers real-time data science applications for financial services, healthcare, media and entertainment, retail, manufacturing, smart mobility, and telecoms.",
+      "followers": {
+        "facebook": 783,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5462138.jpg?t=1667375443"
+    },
+    {
+      "title": "The AiEdge Newsletter",
+      "feed_url": "https://newsletter.theaiedge.io/feed",
+      "website_url": "https://newsletter.theaiedge.io/",
+      "description": "A newsletter for continuous learning about Machine Learning applications, Machine Learning System Design, MLOps, the latest techniques and news. Subscribe and receive a free Machine Learning book PDF!",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Ff6e9c582-b22b-45c5-a64e-a9105824fb01_1067x1067.png"
+    },
+    {
+      "title": "Decoding ML",
+      "feed_url": "https://decodingml.substack.com/feed",
+      "website_url": "https://decodingml.substack.com/",
+      "description": "Join for battle-tested content on designing, coding, and deploying production-grade LLM, recommender and MLOps systems. Every week. Every Thursday and Saturday.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F00bc74e0-3601-49ce-8ab9-4c7b499ce597_1280x1280.png"
+    },
+    {
+      "title": "SwirlAI Newsletter",
+      "feed_url": "https://www.newsletter.swirlai.com/feed",
+      "website_url": "https://www.newsletter.swirlai.com/",
+      "description": "Learn about end-to-end Data Systems and stay up to date with what is happening in the Data World.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F27ed734e-48b5-446d-a93d-5a54178a0e34_1024x1024.png"
+    },
+    {
+      "title": "Neptune AI \u00bb MLOps",
+      "feed_url": "https://neptune.ai/blog/category/mlops/feed",
+      "website_url": "https://neptune.ai/blog/category/mlops",
+      "description": "Neptune AI contains a Metadata store for MLOps, built for teams that run a lot of experiments. We have an ambitious goal to become a collaboration standard for data scientists, similar to what GitHub built for software engineers.",
+      "followers": {
+        "facebook": 368,
+        "twitter": 7200
+      },
+      "image_url": "https://i1.feedspot.com/5457224.jpg?t=1665992445"
+    },
+    {
+      "title": "RTInsights \u00bb MLOps",
+      "feed_url": "https://www.rtinsights.com/tag/mlops/feed/",
+      "website_url": "https://www.rtinsights.com/tag/mlops/",
+      "description": "RTInsights' mission is to become the main resource for its community an independent, expert-driven clearinghouse for thought leadership, analysis, and news for CxOs, operations executives, and other IT professionals. Our goal is to help advance the field of real-time insights and massive digital transformation and innovation across many sectors.",
+      "followers": {
+        "facebook": 527,
+        "twitter": 5900
+      },
+      "image_url": "https://i1.feedspot.com/5462170.jpg?t=1667381260"
+    },
+    {
+      "title": "Knoldus Blog \u00bb MLOps",
+      "feed_url": "https://blog.knoldus.com/category/tech-blogs/mlops/feed/",
+      "website_url": "https://blog.knoldus.com/category/tech-blogs/mlops/",
+      "description": "Knoldus has the world's largest team of Functional Programming and Fast Data Intelligence engineers focused on creating customized high-performance solutions. Our mission is to 'Help businesses succeed with technology' by leveraging emerging future-ready technologies thus bringing them a competitive advantage. Our capabilities in building high-performance millisecond response real-time applications that deposit data into high-speed data mesh thus enabling the AI models have won accolades from our clients in Fintech, Healthcare, Retail, Travel, Media, Publishing, Hi-Tech, and IoT.",
+      "followers": {
+        "facebook": 960,
+        "twitter": 814,
+        "instagram": 191
+      },
+      "image_url": "https://i1.feedspot.com/5462144.jpg?t=1667376867"
+    },
+    {
+      "title": "Aporia Blog",
+      "feed_url": "https://www.aporia.com/feed/",
+      "website_url": "https://www.aporia.com/blog/",
+      "description": "Learn about machine learning, MLOps, and model monitoring with our helpful guides, tutorials, and articles from machine learning and data science experts. Aporia has strived to build a model monitoring platform that provides actual value to ML engineers and data scientists within minutes. We always prioritize ease of use, customization, and extensibility above all else.",
+      "followers": {
+        "twitter": 275
+      },
+      "image_url": "https://i1.feedspot.com/5457226.jpg?t=1665992069"
+    },
+    {
+      "title": "TrueFoundry",
+      "feed_url": "https://www.truefoundry.com/blog",
+      "website_url": "https://www.truefoundry.com/blog",
+      "description": "The TrueFoundry blog is your destination for all things MLOps and LLMOps. Read about challenges, new tools, best practices, and conversations with MLOps experts to boost your knowledge and improve your ML operations. Our mission is to make Machine Learning product ionization and monitoring simple for anyone!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5645201.jpg?t=1691574077"
+    }
+  ]
+}

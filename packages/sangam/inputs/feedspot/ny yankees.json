@@ -1,0 +1,330 @@
+{
+  "category": "NY Yankees",
+  "source_url": "https://rss.feedspot.com/ny_yankees_rss_feeds",
+  "feeds": [
+    {
+      "title": "Pinstripe Alley",
+      "feed_url": "https://www.pinstripealley.com/rss/current.xml",
+      "website_url": "https://www.pinstripealley.com/",
+      "description": "Pinstripe Alley is your best source for quality New York Yankees news, rumors, analysis, stats and scores from the fan perspective. Pinstripe Alley is a a New York Yankees community - a part of SB Nation.",
+      "followers": {
+        "facebook": 29800,
+        "twitter": 34200
+      },
+      "image_url": "https://i1.feedspot.com/4918709.jpg?t=1608298742"
+    },
+    {
+      "title": "Empire Sports Media",
+      "feed_url": "https://empiresportsmedia.com/feed/",
+      "website_url": "https://empiresportsmedia.com/",
+      "description": "Empire Sports Media is an expanding network that currently covers the New York Giants, Yankees, Jets, Knicks, Nets, and Mets. We are set out to cover with accuracy, trust, and benevolence. As one of the rapidly growing news outlets on the internet, we make it our priority to provide up-to-date coverage and analysis on your favorite team. Here at Empire Sports Media, we want you to follow YOUR team, harness YOUR voice, and make YOUR stand.",
+      "followers": {
+        "facebook": 15000,
+        "instagram": 29800
+      },
+      "image_url": "https://i1.feedspot.com/5086863.jpg?t=1620642448"
+    },
+    {
+      "title": "New York Yankees",
+      "feed_url": "https://www.mlb.com/yankees/feeds/news/rss.xml",
+      "website_url": "https://www.mlb.com/yankees",
+      "description": "The MLB Library has the greatest source of baseball footage in the world, including game broadcasts, ballpark scenics, interviews and other specialty shoots. This is the official website of the New York Yankees with the most up-to-date information on scores, schedules, stats, tickets, and team news.",
+      "followers": {
+        "facebook": 8100000,
+        "twitter": 3800000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5132032.jpg?t=1685517614"
+    },
+    {
+      "title": "Uncle Mike's Musings",
+      "feed_url": "http://unclemikesmusings.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://unclemikesmusings.blogspot.com/",
+      "description": "This is mostly about sports, and then mostly about baseball. It will favor the New York Yankees, the New Jersey Devils, Rutgers University football, and the London soccer club Arsenal.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4918743.jpg?t=1620642271"
+    },
+    {
+      "title": "New York Post \u00bb New York Yankees",
+      "feed_url": "https://nypost.com/tag/new-york-yankees/feed/",
+      "website_url": "https://nypost.com/new-york-yankees/",
+      "description": "New York Post is your source for breaking news, news about New York, sports, business, entertainment, opinion, real estate, culture, fashion, and more. et the latest New York Yankees news, scores, standings, schedules, trade rumors and more in this section of New York Post.",
+      "followers": {
+        "facebook": 6900000,
+        "twitter": 3500000,
+        "instagram": 2100000
+      },
+      "image_url": "https://i1.feedspot.com/5287964.jpg?t=1622642538"
+    },
+    {
+      "title": "MLB Trade Rumors \u00bb New York Yankees",
+      "feed_url": "https://www.mlbtraderumors.com/new-york-yankees/feed",
+      "website_url": "https://www.mlbtraderumors.com/new-york-yankees",
+      "description": "The follwoing section of MLB Trade Rumors is dedicated to news and updates on New York Yankees. Reading MLB Trade Rumors is like looking over the shoulder of every GM, agent, and player in baseball. MLBTR is a clearinghouse for relevant, legitimate baseball rumours. The site focuses on the hot stove -trades and free-agent signings.",
+      "followers": {
+        "facebook": 174600,
+        "twitter": 770500,
+        "instagram": 35500
+      },
+      "image_url": "https://i1.feedspot.com/4347943.jpg?t=1641369148"
+    },
+    {
+      "title": "SportSpyder.com \u00bb The Latest New York Yankees News",
+      "feed_url": "https://sportspyder.com/mlb/new-york-yankees/news.xml",
+      "website_url": "https://sportspyder.com/mlb/new-york-yankees/news",
+      "description": "SportSpyder crawls and categorizes sports tweets from thousands of sports Twitter personalities such as Players, Bloggers, Beat writers, media personalities and more. Get the latest New York Yankees News, Tweets, Rumors and Articles",
+      "followers": {
+        "facebook": 701,
+        "twitter": 873
+      },
+      "image_url": "https://i1.feedspot.com/4918731.jpg?t=1620642275"
+    },
+    {
+      "title": "Yankee.Blue",
+      "feed_url": "https://www.yankee.blue/feed/",
+      "website_url": "https://www.yankee.blue/",
+      "description": "We are Yankee fans that see blue, talk blue, hear blue, and feel blue - Yankee blue. At home, we light Yankee candles and watch Yankee baseball and talk with a Yankee accent about all things Yankee.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 11500
+      },
+      "image_url": "https://i1.feedspot.com/5401069.jpg?t=1652785337"
+    },
+    {
+      "title": "Bleeding Yankee Blue",
+      "feed_url": "https://bleedingyankeeblue.blogspot.com/feeds/posts/default",
+      "website_url": "https://bleedingyankeeblue.blogspot.com/",
+      "description": "Bleeding Yankee Blue is a passionate fan blog delivering bold opinions, rants, and community-driven commentary on the New York Yankees.",
+      "followers": {
+        "twitter": 428
+      },
+      "image_url": "https://i1.feedspot.com/8657169.jpg?t=1754894793"
+    },
+    {
+      "title": "It is high, it is far, it is... caught!",
+      "feed_url": "https://johnsterling.blogspot.com/feeds/posts/default",
+      "website_url": "https://johnsterling.blogspot.com/",
+      "description": "A fan blog celebrating New York Yankees broadcaster John Sterling with humorous commentary, nostalgic moments, and Yankees-focused insights.",
+      "followers": {
+        "twitter": 110
+      },
+      "image_url": "https://i1.feedspot.com/8657173.jpg?t=1754894924"
+    },
+    {
+      "title": "Newsday \u00bb Yankees",
+      "feed_url": "https://www.newsday.com/api/rss/recent",
+      "website_url": "https://www.newsday.com/sports/baseball/yankees/",
+      "description": "Complete coverage of the New York Yankees with the latest news, scores, schedule and standings.",
+      "followers": {
+        "facebook": 690500,
+        "twitter": 315400,
+        "instagram": 105800
+      },
+      "image_url": "https://i1.feedspot.com/5726383.jpg?t=1754894989"
+    },
+    {
+      "title": "ClutchPoints \u00bb New York Yankees",
+      "feed_url": "https://clutchpoints.com/mlb/new-york-yankees/feed",
+      "website_url": "https://clutchpoints.com/mlb/new-york-yankees/",
+      "description": "The latest New York Yankees news, rumors, trade updates, free agent signings, expert analysis, draft coverage, and highlights from ClutchPoints.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 336500,
+        "instagram": 981400
+      },
+      "image_url": "https://i1.feedspot.com/8657172.jpg?t=1754895012"
+    },
+    {
+      "title": "Last Word on Sports \u00bb Yankees",
+      "feed_url": "https://lastwordonsports.com/baseball/category/yankees/feed/",
+      "website_url": "https://lastwordonsports.com/baseball/category/yankees/",
+      "description": "Last Word On Sports brings you the latest New York Yankees news and rumors, analysis, schedule, and scores from around MLB.",
+      "followers": {
+        "facebook": 5100
+      },
+      "image_url": "https://i1.feedspot.com/8657175.jpg?t=1754895087"
+    },
+    {
+      "title": "The Athletic \u00bb Yankees",
+      "feed_url": "https://www.nytimes.com/athletic/rss/mlb/yankees/",
+      "website_url": "https://www.nytimes.com/athletic/mlb/team/yankees/",
+      "description": "Breaking New York Yankees news and in-depth analysis from the best newsroom in sports. Follow your favorite clubs. Get the latest injury updates, player news and more from around the league.",
+      "followers": {
+        "facebook": 707100,
+        "twitter": 612600,
+        "instagram": 328300
+      },
+      "image_url": "https://i1.feedspot.com/8657171.jpg?t=1754895234"
+    },
+    {
+      "title": "NYY UNDERGROUND",
+      "feed_url": "https://nyyunderground.com/feed/",
+      "website_url": "https://nyyunderground.com/",
+      "description": "NYY UNDERGROUND delivers real-talk Yankees news, rumors, and fan entertainment\u2014created for fans, by fans.",
+      "followers": {
+        "twitter": 8000,
+        "instagram": 9300
+      },
+      "image_url": "https://i1.feedspot.com/8657177.jpg?t=1754895392"
+    },
+    {
+      "title": "Daily News \u00bb New York Yankees",
+      "feed_url": "https://www.nydailynews.com/sports/mlb/new-york-yankees/feed/",
+      "website_url": "https://www.nydailynews.com/sports/mlb/new-york-yankees/",
+      "description": "The New York Daily News Yankees section delivers quick-breaking news, analysis, locker-room insights, and fan-fueled storytelling around the Bronx Bombers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8657168.jpg?t=1754895486"
+    },
+    {
+      "title": "Pinstripes Nation",
+      "feed_url": "https://pinstripesnation.com/feed/",
+      "website_url": "https://pinstripesnation.com/",
+      "description": "Pinstripes Nation is your go-to source for all New York Yankees News, Stories, Videos, Schedule, Stats, & Rumors. Stay up-to-date with the Expert Analysis & Highlights.",
+      "followers": {
+        "facebook": 83600,
+        "twitter": 8900,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/8657170.jpg?t=1754895746"
+    },
+    {
+      "title": "The US Sun \u00bb New York Yankees",
+      "feed_url": "https://www.the-sun.com/feed",
+      "website_url": "https://www.the-sun.com/topic/new-york-yankees/",
+      "description": "Latest from Liverpool FC with transfer news and rumours, fixtures, match predictions and commentary plus exclusives, pictures and videos from the Sun from The US Sun",
+      "followers": {
+        "facebook": 864600,
+        "twitter": 12100
+      },
+      "image_url": "https://i1.feedspot.com/5127218.jpg?t=1753355495"
+    },
+    {
+      "title": "Start Spreading the News Blog \u00bb Yankees",
+      "feed_url": "https://www.startspreadingthenews.blog/blog-feed.xml",
+      "website_url": "https://www.startspreadingthenews.blog/all-news/categories/yankees-news/",
+      "description": "Start Spreading the News is the place for some of the very best analysis and insight focusing primarily on the New York Yankees. With multiple blog post per day, our always up-to-date content includes daily game threads, recaps, opinions/analysis, history, and more! Check out Start Spreading the News for all Yankees and baseball-related needs!",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5459060.jpg?t=1666267030"
+    },
+    {
+      "title": "Keefe To The City",
+      "feed_url": "https://keefetothecity.com/feed/",
+      "website_url": "https://keefetothecity.com/",
+      "description": "Keefe To The City is a fan-driven Yankees blog and podcast\u2014hosted by Neil Keefe\u2014that delivers candid '10 thoughts' recaps after every game, serving up sharp observations and unfiltered takes on the latest from the Bronx.",
+      "followers": {
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/8657176.jpg?t=1754895814"
+    },
+    {
+      "title": "The New York Times \u00bb New York Yankees",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/topic/organization/new-york-yankees/rss.xml",
+      "website_url": "https://www.nytimes.com/topic/organization/new-york-yankees/",
+      "description": "The New York Times' Yankees topic page collects the latest articles, in-depth analysis, features, and archives on one of baseball's most storied franchises.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/8657167.jpg?t=1754895877"
+    },
+    {
+      "title": "Heavy Sports \u00bb Yankees",
+      "feed_url": "https://heavy.com/sports/mlb/new-york-yankees/feed/",
+      "website_url": "https://heavy.com/sports/mlb/new-york-yankees/",
+      "description": "Heavy on Yankees is your go-to hub for New York Yankees news alerts, trade rumors, transactions, schedule, scores, roster, depth chart and injuries.",
+      "followers": {
+        "facebook": 120800,
+        "twitter": 26800
+      },
+      "image_url": "https://i1.feedspot.com/8657174.jpg?t=1754894701"
+    },
+    {
+      "title": "The Cold Wire \u00bb New York Yankees",
+      "feed_url": "https://www.thecoldwire.com/sports/mlb/new-york-yankees/feed/",
+      "website_url": "https://www.thecoldwire.com/sports/mlb/new-york-yankees/",
+      "description": "A go-to source for trending sports news covering the NFL, MLB, NBA, college football, entertainment, and much more. Get the latest New York Yankees news, updates, rumors, trades, signings, injuries, commentary, analysis, and more!",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 1300,
+        "instagram": 100
+      },
+      "image_url": "https://i1.feedspot.com/5517282.jpg?t=1678255607"
+    },
+    {
+      "title": "Moiderer's Row",
+      "feed_url": "https://moiderersrow.com/feed/",
+      "website_url": "https://moiderersrow.com/",
+      "description": "From the New York Highlanders to Murderer's Row 2.0, the rich and glorious history of the greatest sports franchise in the world is covered here. A tribute created by and for the womb-to-the-tomb Pinstripe faithful, celebrating all things New York Yankees.",
+      "followers": {
+        "facebook": 5,
+        "twitter": 120
+      },
+      "image_url": "https://i1.feedspot.com/5027106.jpg"
+    },
+    {
+      "title": "The Genius Maker Yankee Blog",
+      "feed_url": "https://stevewigdor.blogspot.com/feeds/posts/default",
+      "website_url": "https://stevewigdor.blogspot.com/",
+      "description": "While much thought goes into what I put down on paper, I write this blog in a free form 'stream of consciousness' way to get my thoughts down very quickly. This is not meant to be a literary masterpiece but is meant to be hardcore Yankee information that is in-depth with predictions, thoughts and insight (you can judge whether I accomplish any of this). Because of my busy schedule, it is more important I get the information down rather than spend the time re-reading, re-writing and modifying.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5269328.jpg?t=1620642381"
+    },
+    {
+      "title": "Yanks Go Yard",
+      "feed_url": "https://yanksgoyard.com/feed/",
+      "website_url": "https://yanksgoyard.com/",
+      "description": "Find the latest New York Yankees news, rumors, trades, free agency updates and more from fans and analysts at Yanks Go Yard. Yanks Go Yard covers the New York Yankees as a part of the FanSided.com Sports Network.",
+      "followers": {
+        "facebook": 27200,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4918724.jpg?t=1620642257"
+    },
+    {
+      "title": "Start Spreading The News Blog",
+      "feed_url": "https://www.startspreadingthenews.blog/start-spreading-the-news?format=RSS",
+      "website_url": "https://www.startspreadingthenews.blog/",
+      "description": "An unofficial blog and podcast about baseball and the New York Yankees.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4918729.jpg?t=1620642262"
+    },
+    {
+      "title": "Sport Illustrated \u00bb New York Yankees",
+      "feed_url": "https://www.si.com/mlb/yankees/.rss/full/",
+      "website_url": "https://www.si.com/mlb/yankees/",
+      "description": "Inside the Pinstripes is a Sports Illustrated channel featuring Max Goodman to bring you the latest News, Highlights, Analysis, Hot stoves, Prospects surrounding the New York Yankees. Sports Illustrated provides sports news, expert analysis, highlights, stats and scores for the NFL, NBA, MLB, NHL, college football, soccer, and more.",
+      "followers": {
+        "facebook": 3500000,
+        "twitter": 1900000,
+        "instagram": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/5359924.jpg?t=1641371095"
+    },
+    {
+      "title": "Yardbarker \u00bb New York Yankees",
+      "feed_url": "https://www.yardbarker.com/",
+      "website_url": "https://www.yardbarker.com/mlb/teams/new_york_yankees/18",
+      "description": "Read New York Yankees rumours, news and videos from the Yardbarker. Yardbarker breaks down traditional barriers, allowing fans and athletes to debate sports, read and write articles, and watch videos. We make it easier to follow your favourite teams and talk sports.",
+      "followers": {
+        "facebook": 151800,
+        "twitter": 28800
+      },
+      "image_url": "https://i1.feedspot.com/5359925.jpg?t=1641365947"
+    },
+    {
+      "title": "River Avenue Blues",
+      "feed_url": "http://riveraveblues.com/feed/",
+      "website_url": "http://riveraveblues.com/",
+      "description": "Real Yankees fans know that they can find the best commentary, analysis, and community at River Ave. Blues. Read up on the Yankees multiple times daily.",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 41000
+      },
+      "image_url": "https://i1.feedspot.com/315927.jpg?t=1620642281"
+    }
+  ]
+}

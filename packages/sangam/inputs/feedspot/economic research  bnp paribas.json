@@ -1,0 +1,55 @@
+{
+  "category": "Economic Research \u2013 BNP Paribas",
+  "source_url": "https://rss.feedspot.com/economicresearchbnpparibas_rss_feeds",
+  "feeds": [
+    {
+      "title": "Etudes Economiques BNP Paribas \u00bb Eco TV",
+      "feed_url": "https://economic-research.bnpparibas.com/RSS/en-US/EcoTV",
+      "website_url": "https://economic-research.bnpparibas.com/Publications/EcoTV/en-US",
+      "description": "All articles from Eco TV from BNP Paribas.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/7880331.jpg"
+    },
+    {
+      "title": "Etudes Economiques BNP Paribas \u00bb Eco Week",
+      "feed_url": "https://economic-research.bnpparibas.com/RSS/en-US/Eco-Week",
+      "website_url": "https://economic-research.bnpparibas.com/Publications/Eco-Week/en-US",
+      "description": "All Eco Week articles from BNP Paribas.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880331.jpg"
+    },
+    {
+      "title": "Etudes Economiques BNP Paribas \u00bb Eco Perspectives",
+      "feed_url": "https://economic-research.bnpparibas.com/RSS/en-US/Eco-Perspectives",
+      "website_url": "https://economic-research.bnpparibas.com/Publications/Eco-Perspectives/en-US",
+      "description": "All Eco Perspectives from BNP Paribas.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/7880331.jpg"
+    },
+    {
+      "title": "Etudes Economiques BNP Paribas \u00bb Eco Brief",
+      "feed_url": "https://economic-research.bnpparibas.com/RSS/en-US/Eco-Brief",
+      "website_url": "https://economic-research.bnpparibas.com/Publications/Eco-Brief/en-US",
+      "description": "All Eco Briefs from BNP Paribas.",
+      "followers": {
+        "twitter": 1300,
+        "instagram": 45100
+      },
+      "image_url": "https://i1.feedspot.com/7880331.jpg?t=1740471958"
+    },
+    {
+      "title": "Etudes Economiques BNP Paribas \u00bb Eco Emerging",
+      "feed_url": "https://economic-research.bnpparibas.com/RSS/en-US/Eco-Emerging",
+      "website_url": "https://economic-research.bnpparibas.com/Publications/Eco-Emerging/en-US",
+      "description": "All Eco Emerging from BNP Paribas.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/7880331.jpg"
+    }
+  ]
+}

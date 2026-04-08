@@ -1,0 +1,169 @@
+{
+  "category": "Incident Response and Management",
+  "source_url": "https://rss.feedspot.com/incident_response_and_management_rss_feeds",
+  "feeds": [
+    {
+      "title": "Intezer Blog",
+      "feed_url": "https://intezer.com/feed/",
+      "website_url": "https://intezer.com/blog/",
+      "description": "Welcome to the Intezer blog: Cybersecurity DNA. You'll find posts on the latest cybersecurity news from our team of experts, along with industry insights. Intezer has created the world's first cyber immune system against malicious code. The company detects mutations of any threat seen in history by recognizing even the slightest amount of code reuse. This technology is helping security teams protect their cloud workloads and accelerate incident response.",
+      "followers": {
+        "facebook": 548,
+        "twitter": 10400
+      },
+      "image_url": "https://i1.feedspot.com/5097822.jpg?t=1647416575"
+    },
+    {
+      "title": "Cybersecurity Blog",
+      "feed_url": "https://www.crowdstrike.com/en-us/blog//feed",
+      "website_url": "https://www.crowdstrike.com/en-us/blog/",
+      "description": "Dive into topics ranging from endpoint security and threat intelligence, to incident response and forensic services. CrowdStrike has redefined security with the world's most advanced cloud-native platform that protects and enables the people, processes and technologies that drive modern enterprise.",
+      "followers": {
+        "facebook": 18000,
+        "twitter": 78600
+      },
+      "image_url": "https://i1.feedspot.com/5371118.jpg?t=1644558539"
+    },
+    {
+      "title": "incident.io Blog",
+      "feed_url": "https://incident.io/blog.xml",
+      "website_url": "https://incident.io/blog",
+      "description": "The latest news from incident.io. We're building the best way for your whole organisation to respond, review and learn from incidents. This is where we talk about how and why. incident.io is a Slack-powered incident management platform. We help high-growth companies declare, collaborate, communicate around and learn from events that disturb their normal course of business - from critical infrastructure being down, to data breaches and security incidents.",
+      "followers": {
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5371112.jpg?t=1644558501"
+    },
+    {
+      "title": "Windows Incident Response",
+      "feed_url": "http://windowsir.blogspot.com/feeds/posts/default",
+      "website_url": "http://windowsir.blogspot.com/",
+      "description": "The Windows Incident Response Blog is dedicated to the myriad information surrounding and inherent to the topics of IR and digital analysis of Windows systems. This blog provides information on 'Windows Forensic Analysis 2/e', 'Windows Registry Forensics', 'Windows Forensic Analysis Toolkit 3/e' and much more.",
+      "followers": {
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/166360.jpg?t=1612851557"
+    },
+    {
+      "title": "PagerDuty \u00bb Incident Management & Response",
+      "feed_url": "https://www.pagerduty.com/blog/category/incident-management-response/feed/",
+      "website_url": "https://www.pagerduty.com/blog/category/incident-management-response/",
+      "description": "When outages happen, make sure you've got it covered. Read about the latest best practices around incident management and response. We help developers, ITOps, DevOps & teams across the business provide a perfect digital experience to their customers.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 26100,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5371121.jpg?t=1644558549"
+    },
+    {
+      "title": "xMatters \u00bb Incident Management",
+      "feed_url": "https://www.xmatters.com/blog/category/incident-management/feed",
+      "website_url": "https://www.xmatters.com/blog/category/incident-management",
+      "description": "Learn all you need to know about incident management on the xMatters blog! xMatters combines with Everbridge Critical Event Management to power the industry's most robust enterprise-wide platform to enable organizations to manage both digital threats, along with physical security, enabling the Fusion Center via a single pane of glass.",
+      "followers": {
+        "facebook": 894,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5371122.jpg?t=1644558560"
+    },
+    {
+      "title": "DFIR Diva",
+      "feed_url": "https://dfirdiva.com/feed/",
+      "website_url": "https://dfirdiva.com/",
+      "description": "DFIR Diva is a blog and platform dedicated to providing resources and support for individuals interested in pursuing a career in Digital Forensics and Incident Response (DFIR). The DFIR Diva website is a valuable resource for anyone interested in learning more about DFIR or starting a career in this field. Whether you are a beginner or an experienced professional, DFIR Diva has something to offer you.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 19500,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5371119.jpg?t=1644558542"
+    },
+    {
+      "title": "AWS Security Blog \u00bb Incident Response",
+      "feed_url": "https://aws.amazon.com/blogs/security/tag/incident-response/feed/",
+      "website_url": "https://aws.amazon.com/blogs/security/tag/incident-response/",
+      "description": "Articles on Incident response. Amazon Web Services (AWS) delivers a set of services that together form a reliable, scalable, and inexpensive computing platform 'in the cloud'.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/5371110.jpg?t=1644558493"
+    },
+    {
+      "title": "My DFIR Blog",
+      "feed_url": "https://dfir.ru/feed/",
+      "website_url": "https://dfir.ru/",
+      "description": "The website My DFIR is a blog that covers topics related to digital forensics, incident response, and reverse engineering. The blog is written by professionals in the field of cybersecurity and provides valuable insights into the latest developments and challenges in these areas.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5371115.jpg?t=1644561451"
+    },
+    {
+      "title": "Cisco Blog \u00bb Incident Response",
+      "feed_url": "https://blogs.cisco.com/tag/incident-response/feed",
+      "website_url": "https://blogs.cisco.com/tag/incident-response",
+      "description": "This section features articles on Incident Response. Cisco helps companies seize the opportunities of tomorrow by proving that amazing things can happen when you connect the unconnected.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 378700,
+        "instagram": 569200
+      },
+      "image_url": "https://i1.feedspot.com/5371114.jpg?t=1644558518"
+    },
+    {
+      "title": "CIRCL",
+      "feed_url": "https://www.circl.lu/rss.xml",
+      "website_url": "https://www.circl.lu/",
+      "description": "The Computer Incident Response Center Luxembourg (CIRCL) is a government-driven initiative designed to gather, review, report and respond to computer security threats and incidents.",
+      "followers": {
+        "twitter": 13300
+      },
+      "image_url": "https://i1.feedspot.com/5002770.jpg?t=1644560541"
+    },
+    {
+      "title": "Rootly Blog",
+      "feed_url": "https://rootly.com/blog.rss",
+      "website_url": "http://",
+      "description": "Incident management best practices, guides, and product updates from Rootly. Rootly helps you manage incidents directly in Slack.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5371120.jpg?t=1644558544"
+    },
+    {
+      "title": "RadarFirst \u00bb Incident Response Management",
+      "feed_url": "https://www.radarfirst.com/topic/incident-response-management/feed/",
+      "website_url": "http://",
+      "description": "Explore the latest privacy and security industry news, research and trends. Fortune 100 companies and organizations subject to data privacy regulations in industries such as finance, insurance, healthcare and beyond rely on RadarFirst for an efficient and consistent process for incident response.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5371116.jpg?t=1644561869"
+    },
+    {
+      "title": "Arete",
+      "feed_url": "https://areteir.com/feed/",
+      "website_url": "http://",
+      "description": "Arete cybersecurity experts share frontline cybercrime insights with the press. Arete is a global cyber risk company whose mission is to transform the way organizations prepare for, respond to, and prevent cybercrime. We are leaders in the cyber incident response business, having worked on thousands of matters since our inception in 2016.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5371124.jpg?t=1644562830"
+    },
+    {
+      "title": "Infocyte Blog",
+      "feed_url": "https://www.infocyte.com/feed/",
+      "website_url": "http://",
+      "description": "A cybersecurity, managed detection, and incident response blog. Find cyber security insights, best practices, reports and product updates from Infocyte. Infocyte is the globally trusted leader in proactive threat detection and incident response.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5371113.jpg?t=1644558506"
+    },
+    {
+      "title": "Exabeam \u00bb Incident Response",
+      "feed_url": "https://www.exabeam.com/blog/?category=incident-response/",
+      "website_url": "https://www.exabeam.com/blog/?category=incident-response/",
+      "description": "Learn how to respond to a security incident or attack utilizing a planned incident response process and technology. Exabeam helps security teams everywhere seize the breach by eliminating blindspots.",
+      "followers": {
+        "twitter": 5200,
+        "instagram": 977
+      },
+      "image_url": "https://i1.feedspot.com/5371109.jpg?t=1644563100"
+    }
+  ]
+}

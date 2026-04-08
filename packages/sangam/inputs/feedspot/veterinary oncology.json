@@ -1,0 +1,52 @@
+{
+  "category": "Veterinary Oncology",
+  "source_url": "https://rss.feedspot.com/veterinary_oncology_rss_feeds",
+  "feeds": [
+    {
+      "title": "PetCure Oncology",
+      "feed_url": "https://petcureoncology.com/in-the-news/feed/",
+      "website_url": "https://petcureoncology.com/in-the-news/",
+      "description": "PetCure Oncology provides life-saving cancer treatment to dogs and cats with cancer. PetCure Oncology treats pet cancer with advanced technology and utilizes stereotactic radiation (SRS/SRT) treatment.",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 878
+      },
+      "image_url": "https://i1.feedspot.com/5011311.jpg?t=1602768319"
+    },
+    {
+      "title": "FidoCure Blog",
+      "feed_url": "https://blog.fidocure.com/fidocure-blog/rss.xml",
+      "website_url": "https://blog.fidocure.com/fidocure-blog",
+      "description": "Read the latest in veterinary oncology research and FidoCure scientific and clinical updates. The FidoCure team is committed to introducing the therapies that have been successfully used to treat humans with cancer into the world of veterinary medicine.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 411
+      },
+      "image_url": "https://i1.feedspot.com/5310632.jpg?t=1628507896"
+    },
+    {
+      "title": "The Animal Medical Center Blog \u00bb Oncology",
+      "feed_url": "https://www.amcny.org/blog/category/topic-oncology/feed/",
+      "website_url": "https://www.amcny.org/blog/category/topic-oncology/",
+      "description": "The Animal Medical Center (AMC), the world's largest non-profit animal hospital, provides 24/7 emergency and specialty care to dogs, cats, and exotic pets. Get to know about the pet's cancer news and updates at The Animal Medical Center.",
+      "followers": {
+        "facebook": 30300,
+        "twitter": 11800,
+        "instagram": 34800
+      },
+      "image_url": "https://i1.feedspot.com/5173690.jpg?t=1626250340"
+    },
+    {
+      "title": "Dog Cancer Blog",
+      "feed_url": "https://www.dogcancerblog.com/feed/",
+      "website_url": "https://www.dogcancerblog.com/collection/articles/",
+      "description": "Dog Cancer Blog is your resource to learn and read about the latest findings on dog cancer. Dr. Demian Dressler has been writing articles for DogCancerBlog.com since 2008. If you're looking for excellent advice and insight into your dog's cancer, this site has hundreds of articles to use.",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 2000,
+        "instagram": 838
+      },
+      "image_url": "https://i1.feedspot.com/5173741.jpg?t=1626250330"
+    }
+  ]
+}

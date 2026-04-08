@@ -1,0 +1,576 @@
+{
+  "category": "Beach",
+  "source_url": "https://rss.feedspot.com/beach_rss_feeds",
+  "feeds": [
+    {
+      "title": "Panama City Beach Blog",
+      "feed_url": "https://www.visitpanamacitybeach.com/blog/rss/",
+      "website_url": "https://www.visitpanamacitybeach.com/blog/",
+      "description": "Panama City Beach offers visitors an abundance of hotels, things to do, events, restaurants and beach activities. Start planning your vacation today!",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 41600,
+        "instagram": 104000
+      },
+      "image_url": "https://i1.feedspot.com/4542573.jpg?t=1614680538"
+    },
+    {
+      "title": "Daytona Beach Blog",
+      "feed_url": "https://www.daytonabeach.com/blog/rss/",
+      "website_url": "https://www.daytonabeach.com/blog/",
+      "description": "Plan your fun-filled Daytona Beach vacation today with official travel guides, attraction information, and hotel and restaurant guides. 23 miles of spectacular sparkling white beaches, great accommodations, dining, golf, attractions and more!",
+      "followers": {
+        "facebook": 681000,
+        "twitter": 9300,
+        "instagram": 33100
+      },
+      "image_url": "https://i1.feedspot.com/4542616.jpg?t=1614680877"
+    },
+    {
+      "title": "bestbeachreviews",
+      "feed_url": "https://bestbeachreviews.com/feed/",
+      "website_url": "https://bestbeachreviews.com/",
+      "description": "Welcome to BestBeachReviews.com, your ultimate guide to the world's most enchanting beaches and beach resorts. Here, we don't just explore beaches; we live and breathe them. Our team, a diverse group of beach aficionados, travel experts, and environmental enthusiasts, has traversed coastlines far and wide to bring you an authentic, sun-soaked experience through our reviews.",
+      "followers": {
+        "twitter": 7
+      },
+      "image_url": "https://i1.feedspot.com/5750840.jpg?t=1704718659"
+    },
+    {
+      "title": "Sandpiper Condominiums Blog",
+      "feed_url": "https://www.sandpiperportaransas.com/feed/",
+      "website_url": "https://www.sandpiperportaransas.com/mustang-island-blog/",
+      "description": "Come stay in beautiful Port Aransas condos at Sandpiper Condominiums. The finest beach resort on Mustang Island, TX! Join us on the Texas Gulf Coast today!",
+      "followers": {
+        "facebook": 3,
+        "twitter": 23
+      },
+      "image_url": "https://i1.feedspot.com/4542642.jpg?t=1614680581"
+    },
+    {
+      "title": "ALWAYS ON THE SHORE Blog",
+      "feed_url": "https://alwaysontheshore.com/feed/",
+      "website_url": "https://alwaysontheshore.com/category/blog/",
+      "description": "From the best beaches, waterfront restaurants, and the top attractions in the Sunshine State, this blog covers gives you ideas and things to do on your travels.",
+      "followers": {
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5360170.jpg?t=1641384434"
+    },
+    {
+      "title": "Visit Virginia Beach Blog",
+      "feed_url": "https://www.visitvirginiabeach.com/blog/rss/",
+      "website_url": "https://www.visitvirginiabeach.com/blog/",
+      "description": "Find Hotels, Restaurants & Things to Do. Discover Virginia Beach, a vibrant coastal city with unique districts open year-round. Enjoy the blossoming culinary scene, the variety of attractions, and unique experiences. There is truly is something for everyone. Learn more about what makes the perfect Virginia Beach vacation.",
+      "followers": {
+        "facebook": 269700,
+        "twitter": 17800,
+        "instagram": 73000
+      },
+      "image_url": "https://i1.feedspot.com/4923027.jpg?t=1610968796"
+    },
+    {
+      "title": "Ocean Home Magazine",
+      "feed_url": "https://www.oceanhomemag.com/feed/",
+      "website_url": "https://www.oceanhomemag.com/",
+      "description": "Ocean Home is the leading luxury coastal lifestyle magazine. Published bi-monthly, the magazine captures the essence of ocean home living, featuring the best architects, interior designers, landscape architects, and more. The magazine not only unveils dream homes of the top coastal communities but also reveals the best vacation escapes.",
+      "followers": {
+        "facebook": 22800,
+        "twitter": 26600,
+        "instagram": 29200
+      },
+      "image_url": "https://i1.feedspot.com/4953336.jpg?t=1660653695"
+    },
+    {
+      "title": "BeachNecessities.com Blog",
+      "feed_url": "https://www.beachnecessities.com/rss.php?action=newblogs&type=rss",
+      "website_url": "https://www.beachnecessities.com/blog/",
+      "description": "For beachgoers demanding affordable, quality and unique beach products, BeachNecessities.com reinvents the online shopping experience for the $15B US beach goods market. While many people equate the beach with the ocean, for others this could be a favorite lake, pond or river so our definition is any place you can dig your toes in some sand, go for a swim and just enjoy yourself.",
+      "followers": {
+        "twitter": 24
+      },
+      "image_url": "https://i1.feedspot.com/4838345.jpg?t=1614680588"
+    },
+    {
+      "title": "Sundial Beach Resort & Spa Sanibel Island, Florida Blog",
+      "feed_url": "https://sundialresort.com/feed/",
+      "website_url": "https://sundialresort.com/blog/",
+      "description": "Sundial Beach Resort & Spa provides a perfect paradise for your family vacations, weekend getaways, weddings and corporate meetings. We offer onsite restaurants, a fitness center, tennis courts, a spa and more!",
+      "followers": {
+        "facebook": 103300,
+        "twitter": 3100,
+        "instagram": 23800
+      },
+      "image_url": "https://i1.feedspot.com/4542646.jpg?t=1614680575"
+    },
+    {
+      "title": "Cavendish Beach Blog",
+      "feed_url": "https://cavendishbeachpei.com/feed/",
+      "website_url": "https://cavendishbeachpei.com/beach-blog/",
+      "description": "Come visit our world famous beaches for yourself. Whether you choose to marvel at the red sandstone cliffs and sandy dunes or swim in the crystal blue water warmed by the Gulf Stream, Cavendish Beach attracts thousands of visitors from around the world. And the beaches are just the beginning. At Cavendish Beach, you choose your own adventure!",
+      "followers": {
+        "facebook": 24100,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4542580.jpg?t=1614680882"
+    },
+    {
+      "title": "The Breakers Blog",
+      "feed_url": "https://www.breakersfwb.com/feed/",
+      "website_url": "https://www.breakersfwb.com/island-blog/",
+      "description": "For years people have been visiting the beautiful sugary white beaches of Northwest Florida seeking fun, sun, and relaxation. Now, you can find all this and more at The Breakers of Fort Walton Beach. You'll find our amenities enchanting and entertaining. From the two luxurious gulf-side swimming pools to the tennis court, you'll discover a world of enjoyment with your vacation beach rental.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 372,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5274165.jpg?t=1619679722"
+    },
+    {
+      "title": "Ocean's Reach Sanibel Blog",
+      "feed_url": "https://feeds.feedblitz.com/oceansreach",
+      "website_url": "https://oceansreach.com/blog",
+      "description": "Brighten up your day with a dose of Sanibel beach news from Ocean's Reach. You'll find island events, and beach tips & tricks. Ocean's Reach is Sanibel Island's vacation rental resort that offers oceanfront accommodations.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 799,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5296106.jpg?t=1624534574"
+    },
+    {
+      "title": "Beach Scenes Blog",
+      "feed_url": "https://beach-scenes.com/feed/",
+      "website_url": "https://beach-scenes.com/blog/",
+      "description": "Are You Living Your Best Beach Life? Check out the Beach Scenes Blog! It's full of featured articles about the beach, as well as reviews of great beaches to visit & hotel recommendations.",
+      "followers": {
+        "facebook": 158,
+        "twitter": 377,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5247017.jpg?t=1613804647"
+    },
+    {
+      "title": "Edisto Beach Blog",
+      "feed_url": "https://edistobeach.com/feed/",
+      "website_url": "https://edistobeach.com/blog/",
+      "description": "Edisto Beach South Carolina is one of the few uncommercialized, family-oriented beaches left. Come spend your summer vaction relaxing on the beautiful shores of the Atlantic Ocean.",
+      "followers": {
+        "facebook": 50500,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4543262.jpg?t=1614680890"
+    },
+    {
+      "title": "Beach Byron Bay",
+      "feed_url": "https://beachbyronbay.com.au/feed/",
+      "website_url": "https://beachbyronbay.com.au/news/",
+      "description": "Beach Byron Bay is a breezy restaurant and a stunning Byron Bay wedding and events venue located on absolute beach frontage.",
+      "followers": {
+        "facebook": 7300,
+        "instagram": 32500
+      },
+      "image_url": "https://i1.feedspot.com/4543410.jpg?t=1614680897"
+    },
+    {
+      "title": "Life Along The Gulf Coast",
+      "feed_url": "https://lifealongthegulfcoast.com/feed/",
+      "website_url": "https://lifealongthegulfcoast.com/",
+      "description": "I'm Eileen Saunders, a self-proclaimed coastal, nature nut and Master Beachcomber. I've spent my life playing in sand, observing shorebirds, collecting washed-up stuff on the beaches, and participating in public events to experience the culture and lifestyle. When you read my stories, you will learn about fun events to attend, how to pack your beach bag for a day trip, and wonderful seafood restaurants the locals thrive on. You will follow adventures in gardening on the coast (with recipes), growing oyster beds, and birdwatching. And, I'll have some coastal products to review for you.",
+      "followers": {
+        "facebook": 4500,
+        "instagram": 119
+      },
+      "image_url": "https://i1.feedspot.com/5495865.jpg?t=1674103341"
+    },
+    {
+      "title": "Ann Delaney Beach Blog",
+      "feed_url": "https://anndelaney.com/feed/",
+      "website_url": "https://anndelaney.com/",
+      "description": "Ann Delaney is a year-round Seven Mile Beach resident and full-time real estate agent with Tim Kerr Sotheby's International Realty. Discover life on 7 Mile Beach (Avalon, Stone Harbor, NJ) and its amazing real estate market.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5495863.jpg?t=1674103692"
+    },
+    {
+      "title": "Pismo Beach Blog",
+      "feed_url": "https://experiencepismobeach.com/feed/",
+      "website_url": "https://experiencepismobeach.com/plan/blog/",
+      "description": "Pismo Beach, a classic beach town, is located on California's famous central coast, halfway between San Francisco and Los Angeles along Pacific Coast and 101 Highways. We offer long white beaches for taking a pleasant stroll or for just enjoying the spectacular views of the Pismo Beach sunset. Check out the life on Pismo beach, adventure activities, food and dining and more!",
+      "followers": {
+        "facebook": 211900,
+        "twitter": 6100,
+        "instagram": 107800
+      },
+      "image_url": "https://i1.feedspot.com/5495866.jpg?t=1674113112"
+    },
+    {
+      "title": "Thomas Beach Vacation Blog",
+      "feed_url": "https://www.northmyrtlebeachvacations.com/feed/",
+      "website_url": "https://www.northmyrtlebeachvacations.com/blog/",
+      "description": "Welcome to Thomas Beach Vacations's Outer Banks Vacation Blog. Check back often to see all of the great Outer Banks Activities and Events happening when you stay in one of our Outer Banks Vacation Rentals. Thomas Beach Vacations is proud to serve the North Myrtle Beach area for more than 55 years. We are your trusted local experts. With over 400 North Myrtle Beach properties, we offer a wide selection of vacation rental homes and condos.",
+      "followers": {
+        "facebook": 99500,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5495855.jpg?t=1674104255"
+    },
+    {
+      "title": "Beaches Resorts Blog",
+      "feed_url": "https://www.beaches.com/blog/rss/",
+      "website_url": "https://www.beaches.com/blog/our-resorts/",
+      "description": "The official travel and lifestyle blog of Beaches Resorts featuring thoughts, stories, ideas, vacation tips and tricks, destination ideas, and much more. Beaches Resorts offer Luxury Included Vacations where kids and grownups alike can do as much - or as little - as they want. With endless land and water sports, Global Gourmet dining, luxurious rooms and suites, our resorts are the ultimate resorts for families",
+      "followers": {
+        "facebook": 717200,
+        "twitter": 218300,
+        "instagram": 272400
+      },
+      "image_url": "https://i1.feedspot.com/5495853.jpg?t=1674104515"
+    },
+    {
+      "title": "Rosemary Beach Blog",
+      "feed_url": "https://rosemarybeach.com/feed/",
+      "website_url": "https://rosemarybeach.com/blog/",
+      "description": "Rosemary Beach vacation rentals offer a delightful way for families and friends to enjoy the beauty of the Emerald Coast in an elegant and harmonious setting. A stay in one of our beautiful Rosemary Beach vacation rentals will create lasting memories that will always have you coming back for more adventures along the 30a coastline. Check out our blog for articles on life on the beach, dining, places to visit, shop and more!",
+      "followers": {
+        "facebook": 40100,
+        "twitter": 1000000,
+        "instagram": 137100
+      },
+      "image_url": "https://i1.feedspot.com/5495847.jpg?t=1674105523"
+    },
+    {
+      "title": "Myrtle Beach Blog",
+      "feed_url": "https://www.myrtlebeach.com/feed/",
+      "website_url": "https://www.myrtlebeach.com/blog/",
+      "description": "Get up close and personal with Myrtle Beach through our local experts. We'll share all you need to know about where to stay and what to do in Myrtle Beach. Myrtle Beach, South Carolina is 60 miles of beautiful sandy beaches, exciting attractions, and celebrity-designed golf courses. It is home to high-rise hotels, resorts, oceanfront condos, and vacation rentals.",
+      "followers": {
+        "facebook": 763900,
+        "twitter": 22600,
+        "instagram": 79100
+      },
+      "image_url": "https://i1.feedspot.com/5495848.jpg?t=1674105741"
+    },
+    {
+      "title": "Echoes of the Sea LLC Blog",
+      "feed_url": "https://www.echoesofthesea.shop/blogs/lifes-a-beach-beach-life-and-coastal-living.atom",
+      "website_url": "https://www.echoesofthesea.shop/blogs/lifes-a-beach-beach-life-and-coastal-living",
+      "description": "Explore beaches, coastal art, decor and more with Life's A Beach by Echoes of the Sea. Your source for seaside living, wildlife, and travel tips.",
+      "followers": {
+        "facebook": 196,
+        "instagram": 109
+      },
+      "image_url": "https://i1.feedspot.com/8532911.jpg?t=1753074715"
+    },
+    {
+      "title": "Beach Retreats",
+      "feed_url": "https://www.beachretreats.co.uk/feed",
+      "website_url": "https://www.beachretreats.co.uk/",
+      "description": "Whether you are looking for a boutique bolthole or a coastal pad in Cornwall, discover our luxury self-catering holidays within walking distance of the beach.",
+      "followers": {
+        "facebook": 62100,
+        "twitter": 5300,
+        "instagram": 112600
+      },
+      "image_url": "https://i1.feedspot.com/8654893.jpg?t=1754292839"
+    },
+    {
+      "title": "Beach Cafe",
+      "feed_url": "https://www.beachcafe.com/blogs/blog.atom",
+      "website_url": "https://www.beachcafe.com/blogs/blog/",
+      "description": "Discover the latest fashion trends, style tips, and brand updates on the Beach Cafe blog. Stay inspired with expert insights and curated looks to elevate your beachwear wardrobe.",
+      "followers": {
+        "facebook": 7300,
+        "instagram": 103700
+      },
+      "image_url": "https://i1.feedspot.com/8654892.jpg?t=1754295562"
+    },
+    {
+      "title": "Beachlets",
+      "feed_url": "https://www.beachlets.co.uk/blog/feed/",
+      "website_url": "https://www.beachlets.co.uk/blog/",
+      "description": "Beachlets is a UK-focused holiday cottage platform offering a handpicked, professionally managed selection of beachfront and sea\u2011view self\u2011catering accommodations\u2014from cosy dog-friendly bungalows to luxury beach houses with direct beach access",
+      "followers": {
+        "facebook": 6100
+      },
+      "image_url": "https://i1.feedspot.com/8654891.jpg?t=1754295978"
+    },
+    {
+      "title": "This Island Life",
+      "feed_url": "https://www.thisislandlife.com/feed/",
+      "website_url": "https://www.thisislandlife.com/",
+      "description": "Blog by Laura McWhinnie. This Island life is a blog that follows the summer around the globe to bring you warm weather Inspiring travel, fashion, beauty, surf and photography and adventures. Because its always summer somewhere.",
+      "followers": {
+        "facebook": 105800,
+        "twitter": 2400,
+        "instagram": 75700
+      },
+      "image_url": "https://i1.feedspot.com/3646143.jpg?t=1614349008"
+    },
+    {
+      "title": "Visit Newport Beach Blog",
+      "feed_url": "https://visitnewportbeach.com/blog/feed/",
+      "website_url": "https://visitnewportbeach.com/blog/",
+      "description": "Newport Beach is the gateway to southern California's unforgettable array of adventures and attractions for travelers from all over the world. Plan your escape to Newport Beach, California. Find hotels, restaurants, things to do, shopping, free Newport Beach, CA visitors guide and more!",
+      "followers": {
+        "facebook": 122700,
+        "twitter": 45400,
+        "instagram": 127800
+      },
+      "image_url": "https://i1.feedspot.com/4542593.jpg?t=1614680542"
+    },
+    {
+      "title": "Nerd Nomads",
+      "feed_url": "https://nerdnomads.com/feed?x=1",
+      "website_url": "https://nerdnomads.com/unawatuna-beach",
+      "description": "We visited Sri Lankas number one tourist attraction, Unawatuna Beach, Helping your adventures come true! Stories, photos, tips and advice for exploring our amazing planet! Start your adventure here!",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 8600,
+        "instagram": 7900
+      },
+      "image_url": "https://i1.feedspot.com/4542644.jpg?t=1614680560"
+    },
+    {
+      "title": "Beach Kids Club Blog",
+      "feed_url": "https://beachkidsclub.com/feed/",
+      "website_url": "https://beachkidsclub.com/blog/",
+      "description": "Beach Kids Club is a family-oriented beach-themed blog that will do reviews of beach-worthy products, and books and write about the best ways to enjoy the beach!",
+      "followers": {
+        "twitter": 2,
+        "instagram": 203
+      },
+      "image_url": "https://i1.feedspot.com/5686431.jpg?t=1696922948"
+    },
+    {
+      "title": "Beach Brella Blog",
+      "feed_url": "https://beachbrella.com/feed/",
+      "website_url": "https://beachbrella.com/beach-umbrella-blog/",
+      "description": "Modern-vintage chic beach umbrellas, captures the luxury lifestyle of the beach and resort experience while providing quality shade from the hot sun.",
+      "followers": {
+        "facebook": 618,
+        "instagram": 10600
+      },
+      "image_url": "https://i1.feedspot.com/4543366.jpg?t=1614680920"
+    },
+    {
+      "title": "Explore",
+      "feed_url": "https://www.beachretreats.co.uk/explore/feed",
+      "website_url": "https://www.beachretreats.co.uk/explore",
+      "description": "There's more to Beach Retreats than luxury self-catering properties on Cornwall's best beaches... but we'll leave you to discover the secret for yourself. Our mission is to deliver outstanding holidays on a beach in Cornwall with helpful reservations staff and the best properties in the best locations with the best local amenities.",
+      "followers": {
+        "facebook": 62100,
+        "twitter": 5300,
+        "instagram": 112600
+      },
+      "image_url": "https://i1.feedspot.com/4542622.jpg?t=1614680593"
+    },
+    {
+      "title": "Pagham Beach",
+      "feed_url": "http://paghambeach.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://paghambeach.blogspot.com/",
+      "description": "This is a blog recording various happenings on Pagham Beach in West Sussex on the south coast of the U.K. Although only set up in January 2014 previous mentions of the beach can be found on my paghambirder blog which is devoted to my lifelong hobby of birding but focused on sightings in and around Pagham Harbour.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 191
+      },
+      "image_url": "https://i1.feedspot.com/4543242.jpg?t=1614680908"
+    },
+    {
+      "title": "Compass and Coastline",
+      "feed_url": "https://www.compassandcoastline.com/feed/",
+      "website_url": "https://www.compassandcoastline.com/category/traveltips/",
+      "description": "Compass & Coastline is a beach travel blog helping you plan your beach vacation. Destination guides, travel tips and more. Hi, I'm Kelli, a beach blogger and the founder of Compass & Coastline. From travel tips to destination guides and itineraries, I'd love to help you plan your next coastal getaway.",
+      "followers": {
+        "facebook": 160,
+        "instagram": 579
+      },
+      "image_url": "https://i1.feedspot.com/5495864.jpg?t=1674103479"
+    },
+    {
+      "title": "Destin FWB Blog",
+      "feed_url": "https://www.destinfwb.com/sitemap.xml",
+      "website_url": "https://www.destinfwb.com/plan-your-trip/blog/",
+      "description": "Get a little out there in Destin-Fort Walton Beach. Explore adventures from Destin to Fort Walton Beach and Okaloosa Island, don't miss a thing! With 24 miles of sugar-white sands and crystal clear water, Destin-Fort Walton Beach is the best place to make childhood an adventure again.",
+      "followers": {
+        "facebook": 522500,
+        "twitter": 13200
+      },
+      "image_url": "https://i1.feedspot.com/5495869.jpg?t=1674103767"
+    },
+    {
+      "title": "Clean Beach Initiative Blog",
+      "feed_url": "https://cleanbeachinitiative.org/feed",
+      "website_url": "https://cleanbeachinitiative.org/blog",
+      "description": "Since we first founded the Clean Beach Initiative our main goal is to keep our beaches clean, to fight the pollution of our oceans and to raise awareness in our society. Since October 2018 we are working to protect our environment, by cleaning the beaches and more importantly by giving a good example. Stay up to date with our cleanliness drives, tips and advice on maintaining the beauty of the beaches and more!",
+      "followers": {
+        "facebook": 488,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5495860.jpg?t=1674103806"
+    },
+    {
+      "title": "Surf City Family Blog",
+      "feed_url": "https://www.surfcityfamily.com/feed/",
+      "website_url": "https://www.surfcityfamily.com/",
+      "description": "Surf City Family is a Huntington Beach-based Southern California Lifestyle Site. This blog features people, events, places and other stories for and about families living in Huntington Beach, CA. My name is Marcie and my husband, two sons, dog and tarantula live in HB. I started this site as a way to share Huntington Beach with the world!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5495857.jpg?t=1674105203"
+    },
+    {
+      "title": "Anna Danigelis \u00bb Beach Destinations",
+      "feed_url": "https://www.annadanigelis.com/category/travel/beach-destinations/feed",
+      "website_url": "https://www.annadanigelis.com/category/travel/beach-destinations",
+      "description": "I'm Anna! Here you'll find boho & bright style, travel adventures, and life in Nashville. Check out my beach destination travel guides, outfit inspirations and more!",
+      "followers": {
+        "facebook": 827
+      },
+      "image_url": "https://i1.feedspot.com/5495851.jpg?t=1674104428"
+    },
+    {
+      "title": "Readings From the Northside",
+      "feed_url": "https://exit63.wordpress.com/feed/",
+      "website_url": "https://exit63.wordpress.com/",
+      "description": "Life On The Beach. I take daily readings of the beach & ocean conditions on the North End of Long Beach Island, New Jersey. I do this primarily for the amusement of my family, but have created this blog to share my morning readings with you.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4543404.jpg"
+    },
+    {
+      "title": "Life's a Beach!",
+      "feed_url": "http://lifewithbeck.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://lifewithbeck.blogspot.com/",
+      "description": "Tales of a serial tropical traveler and all the silly random details of a life.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4543240.jpg?t=1614680950"
+    },
+    {
+      "title": "Simply Beach Blog",
+      "feed_url": "https://www.simplybeach.com/blogs/blog.atom",
+      "website_url": "https://www.simplybeach.com/blogs/blog",
+      "description": "Keep up to Date With the Latest Swimwear Trends, Collections and Advice Right Here At The Simply Beach Blog. Simply Beach has been around since 2004 and started out by offering just a small selection of designer swimwear to our customers via our website. Since 2004, we have added a number of new exciting designers, including some exclusive to Simply Beach, expanding the range from just a few swimsuits and bikinis to a whole range of clothing that you'll want in your holiday wardrobe.",
+      "followers": {
+        "facebook": 57000,
+        "twitter": 6900,
+        "instagram": 9000
+      },
+      "image_url": "https://i1.feedspot.com/4988018.jpg?t=1674105778"
+    },
+    {
+      "title": "Washington's Evergreen Coast",
+      "feed_url": "https://www.evergreencoastwa.com/travel-inspiration/?orderby=date",
+      "website_url": "https://www.evergreencoastwa.com/travel-inspiration/?orderby=date",
+      "description": "The Long Beach Peninsula is the premier vacation destination of the Washington Coast. The mission of the Long Beach Peninsula Visitors Bureau is to facilitate, coordinate, and implement the promotion of our communities as tourist destinations.",
+      "followers": {
+        "facebook": 1,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4542602.jpg?t=1614680584"
+    },
+    {
+      "title": "Visit Myrtle Beach",
+      "feed_url": "https://www.visitmyrtlebeach.com/blog/rss/",
+      "website_url": "https://www.visitmyrtlebeach.com/blog/blog-home",
+      "description": "Visit Myrtle Beach, SC has created this page as a hub for people who are planning to visit, have visited, or simply have a great love for our sunny vacation destination. Here you'll find the latest Myrtle Beach news, events, and special offers on hotels and attractions, as well as plenty of images and videos that help capture the Myrtle Beach experience.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 84600,
+        "instagram": 158300
+      },
+      "image_url": "https://i1.feedspot.com/4542563.jpg?t=1614680535"
+    },
+    {
+      "title": "Beach Holiday Blog",
+      "feed_url": "https://www.onthebeach.co.uk/blog/feed/",
+      "website_url": "https://www.onthebeach.co.uk/blog/",
+      "description": "We're proud to be the UK's largest online travel agent and provide our customers with the best in great value beach holidays. We give our customers piece of mind, all holiday bookings are ATOL protected, which means complete financial protection. Our mission is simple to plan, book and enjoy your perfect beach holiday.",
+      "followers": {
+        "facebook": 433000,
+        "twitter": 51600,
+        "instagram": 82900
+      },
+      "image_url": "https://i1.feedspot.com/4542591.jpg?t=1614680546"
+    },
+    {
+      "title": "Surf City USA Blog",
+      "feed_url": "https://www.surfcityusa.com/blog/rss/",
+      "website_url": "https://www.surfcityusa.com/blog/",
+      "description": "This is the official Destination Marketing Organization (DMO) for Huntington Beach, California. It is a non-profit organization which promotes tourism to Huntington Beach.",
+      "followers": {
+        "facebook": 99200,
+        "twitter": 17700,
+        "instagram": 134400
+      },
+      "image_url": "https://i1.feedspot.com/4542583.jpg?t=1614680551"
+    },
+    {
+      "title": "Aquabumps Blog",
+      "feed_url": "https://www.aquabumps.com/feed/",
+      "website_url": "https://www.aquabumps.com/blog/",
+      "description": "Aquabumps is a visual journey through beachlife...pictures are taken daily at sunrise, and distributed to ten's of thousands of people all over the globe.",
+      "followers": {
+        "facebook": 106100,
+        "twitter": 135,
+        "instagram": 164800
+      },
+      "image_url": "https://i1.feedspot.com/4542626.jpg?t=1614680556"
+    },
+    {
+      "title": "Swim Guide",
+      "feed_url": "https://www.theswimguide.org/feed/",
+      "website_url": "https://www.theswimguide.org/basics/",
+      "description": "Swim Guide is the most comprehensive beach information and water quality service on the web.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 3000,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4543377.jpg?t=1614680572"
+    },
+    {
+      "title": "Ylang Ylang Beach Resort",
+      "feed_url": "https://ylangylangbeachresort.com/blog/feed",
+      "website_url": "https://ylangylangbeachresort.com/costa-rica-vacations",
+      "description": "A family owned beach front resort in Montezuma, Costa Rica. We offer amazing resort packages, destination weddings services & more. Check availability online. This hidden gem is set in lush tropical gardens edging a white sand beach. A secluded romantic getaway for travelers who want a casual resort and love the sounds of the ocean!",
+      "followers": {
+        "facebook": 9900,
+        "twitter": 878,
+        "instagram": 7300
+      },
+      "image_url": "https://i1.feedspot.com/4543401.jpg?t=1614680912"
+    },
+    {
+      "title": "O Beach Ibiza Blog",
+      "feed_url": "https://obeachibiza.com/feed/",
+      "website_url": "https://obeachibiza.com/blog/",
+      "description": "The O Beach Ibiza brand offers a unique, lavish and fun lifestyle experience within a poolside environment enabling our customers to luxuriate in high-end service and aesthetically beautiful surroundings, all complimented with a credible soundtrack and world-class entertainment. Check out beach parties on beach Ibiza, party cocktail recipes, tips and more!",
+      "followers": {
+        "facebook": 329800,
+        "twitter": 135200,
+        "instagram": 433600
+      },
+      "image_url": "https://i1.feedspot.com/5495852.jpg?t=1674104332"
+    },
+    {
+      "title": "Beaches And Babies Blog",
+      "feed_url": "https://beachesandbabies.com/feed/",
+      "website_url": "https://beachesandbabies.com/category/at-the-beach/",
+      "description": "Beaches and Babies is a busy parent's guide to the beach featuring travel tips, planning resources, packing lists, and destination guides. I am Besa! I started this blog to inspire others - but also to have something of my own. I'm a busy parent helping other busy parents explore the world with my tips, travel resources, and destination guides.",
+      "followers": {
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5495850.jpg?t=1674105284"
+    },
+    {
+      "title": "Sandbrige Blue's Blog",
+      "feed_url": "https://www.sandbridgevacationrentals.com/blog/feed",
+      "website_url": "https://www.sandbridgevacationrentals.com/blog",
+      "description": "Premier vacation rental homes in Virginia Beach. Sandbridge is the ideal location for your family vacation. This expansive, secluded beach awaits you! Sandbridge Blue offers over 250 Sandbridge vacation rentals for your next Sandbridge vacation. Your source for Sandbridge Vacation rentals, Sandbridge Blue delivers unmatched Sandbridge vacation rental home experience & blue ribbon customer service.",
+      "followers": {
+        "facebook": 26600,
+        "twitter": 231
+      },
+      "image_url": "https://i1.feedspot.com/4543279.jpg?t=1614680565"
+    }
+  ]
+}

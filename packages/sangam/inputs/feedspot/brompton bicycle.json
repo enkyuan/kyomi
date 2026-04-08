@@ -1,0 +1,89 @@
+{
+  "category": "Brompton Bicycle",
+  "source_url": "https://rss.feedspot.com/brompton_bicycle_rss_feeds",
+  "feeds": [
+    {
+      "title": "My Orange Brompton",
+      "feed_url": "https://feeds.feedburner.com/MyOrangeBrompton",
+      "website_url": "https://www.myorangebrompton.com/",
+      "description": "A blog about cycling adventures on my Brompton folding bicycles. Read about my adventures as I cycle around London (and often further) on my bicycles.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5412768.jpg?t=1655721265"
+    },
+    {
+      "title": "Planet Brompton",
+      "feed_url": "https://www.planetbrompton.com/feed",
+      "website_url": "https://www.planetbrompton.com/",
+      "description": "Travel with the Brompton as a digital nomad.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5412771.jpg?t=1655721414"
+    },
+    {
+      "title": "The Legend of the Brompton Bumble B",
+      "feed_url": "http://www.bromptonbumbleb.com/feeds/posts/default",
+      "website_url": "http://www.bromptonbumbleb.com/",
+      "description": "Blog of Brompton Bumble B around the London area. Reviews of products used on Bromptons, Photos & Videos.",
+      "followers": {
+        "twitter": 887,
+        "instagram": 961
+      },
+      "image_url": "https://i1.feedspot.com/5412769.jpg?t=1655721649"
+    },
+    {
+      "title": "Melbourne Brompton Club",
+      "feed_url": "https://melbournebromptonclub.wordpress.com/feed/",
+      "website_url": "https://melbournebromptonclub.wordpress.com/",
+      "description": "Welcome to the Melbourne Brompton Club's blog post. Follow us to keep in touch about upcoming club rides and social events in and around Melbourne.",
+      "followers": {
+        "twitter": 712,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5412766.jpg?t=1655721816"
+    },
+    {
+      "title": "Aussie on a Brompton",
+      "feed_url": "https://aussieonabrompton.com/feed/",
+      "website_url": "https://aussieonabrompton.com/",
+      "description": "Little wheel revelations. Articles on my storage for Brompton adventures/revelations/whatever (& maybe other things?).",
+      "followers": {
+        "twitter": 103
+      },
+      "image_url": "https://i1.feedspot.com/5412786.jpg?t=1655722060"
+    },
+    {
+      "title": "The Brompton Traveler",
+      "feed_url": "https://www.bromptontraveler.com/feeds/posts/default",
+      "website_url": "https://www.bromptontraveler.com/",
+      "description": "Getting to know the world cycling on a Brompton folding bike is possible and great fun! Get honest reviews on the equipment used as well as some invaluable tips gained from an experience of 10 years of travels on a folding bike.",
+      "followers": {
+        "twitter": 8
+      },
+      "image_url": "https://i1.feedspot.com/5412761.jpg?t=1655720732"
+    },
+    {
+      "title": "The Brompton Man Blog",
+      "feed_url": "https://www.thebromptonman.com/2/feed",
+      "website_url": "https://www.thebromptonman.com/blog#/",
+      "description": "Welcome to the The Brompton Man Blog, hopefully it is simple to find what you are looking for and able to provide every piece of information a Brompton owner could desire.",
+      "followers": {
+        "facebook": 105,
+        "instagram": 787
+      },
+      "image_url": "https://i1.feedspot.com/5412787.jpg?t=1655722251"
+    },
+    {
+      "title": "Bromptoning",
+      "feed_url": "https://bromptoning.com/feed/",
+      "website_url": "https://bromptoning.com/",
+      "description": "We're two Canadians who love to cycle and travel, and in 2012 we decided to roll those passions into one by getting Bromptons! Now that we have bikes we can fold up and bring anywhere, we're exploring the world on two wheels and sharing our adventures here.",
+      "followers": {
+        "facebook": 163,
+        "twitter": 644,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5412765.jpg?t=1655721208"
+    }
+  ]
+}

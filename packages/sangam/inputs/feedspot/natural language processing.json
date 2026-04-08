@@ -1,0 +1,191 @@
+{
+  "category": "Natural Language Processing",
+  "source_url": "https://rss.feedspot.com/natural_language_processing_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kavita Ganesan",
+      "feed_url": "http://kavita-ganesan.com/feed/",
+      "website_url": "https://kavita-ganesan.com/",
+      "description": "I am a Data Scientist & Consultant with expertise in Natural Language Processing, Machine Learning, Text Mining and Search. I share text-mining and related articles with the hope that it would be useful to other researchers and engineers in the field.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4964841.jpg?t=1622295360"
+    },
+    {
+      "title": "Salmon Run",
+      "feed_url": "https://feeds.feedburner.com/SalmonRun",
+      "website_url": "http://sujitpal.blogspot.com/",
+      "description": "Swimming upstream on the technology tide, one technology at a time. A collection of articles, tips, and random musings on application development and system design.",
+      "followers": {
+        "twitter": 713
+      },
+      "image_url": "https://i1.feedspot.com/113006.jpg"
+    },
+    {
+      "title": "Analytics Vidhya \u00bb NLP",
+      "feed_url": "https://www.analyticsvidhya.com/blog/category/nlp/feed/",
+      "website_url": "https://www.analyticsvidhya.com/blog/category/nlp/",
+      "description": "All the latest Analytics Vidhya content related to natural language processing. Follow our blog feed to get updates.",
+      "followers": {
+        "facebook": 95600,
+        "twitter": 30600
+      },
+      "image_url": "https://i1.feedspot.com/5066369.jpg?t=1622295293"
+    },
+    {
+      "title": "SAS Blogs \u00bb Natural language processing",
+      "feed_url": "https://blogs.sas.com/content/tag/natural-language-processing/feed/",
+      "website_url": "https://blogs.sas.com/content/tag/natural-language-processing/",
+      "description": "We give people the powe rto know through data and analytics. to get more updates on Natural Language Processing follow us.",
+      "followers": {
+        "facebook": 289100,
+        "twitter": 62400,
+        "instagram": 24100
+      },
+      "image_url": "https://i1.feedspot.com/5033115.jpg?t=1622295307"
+    },
+    {
+      "title": "KDnuggets \u00bb Natural Language Processing",
+      "feed_url": "https://www.kdnuggets.com/tag/natural-language-processing/feed",
+      "website_url": "https://www.kdnuggets.com/tag/natural-language-processing",
+      "description": "Follow to get updates about Natural Language Processing.",
+      "followers": {
+        "facebook": 39500,
+        "twitter": 219600
+      },
+      "image_url": "https://i1.feedspot.com/5033126.jpg?t=1622295312"
+    },
+    {
+      "title": "Lexsense",
+      "feed_url": "https://lexsense.net/feed/",
+      "website_url": "https://lexsense.net/",
+      "description": "Lexsense is a data management consultancy engaged in the development of high-quality content for the improvement of artificial intelligence applications. We use our expertise to enable language data to be used effectively and accurately.",
+      "followers": {
+        "facebook": 11,
+        "twitter": 29,
+        "instagram": 125
+      },
+      "image_url": "https://i1.feedspot.com/5687853.jpg?t=1697104195"
+    },
+    {
+      "title": "NLP Newsletter",
+      "feed_url": "https://nlp.elvissaravia.com/feed",
+      "website_url": "https://nlp.elvissaravia.com/",
+      "description": "The NLP Newsletter provides weekly summaries of the latest and top AI trends, papers, tools, news, and best practices. Home of Top ML Papers of the Week and AI Agents Weekly.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F41327c80-fe59-416d-aa6f-ab6874177ac7_517x517.png"
+    },
+    {
+      "title": "Deep (Learning) Focus",
+      "feed_url": "https://cameronrwolfe.substack.com/feed",
+      "website_url": "https://cameronrwolfe.substack.com/",
+      "description": "I contextualize and explain important topics in AI research.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fab9b43fb-52d5-40da-995d-5b7cd3f91064_896x896.png"
+    },
+    {
+      "title": "The Stanford Natural Language Processing Group",
+      "feed_url": "http://feeds.feedburner.com/StanfordNLPResearchBlog",
+      "website_url": "https://nlp.stanford.edu/blog/",
+      "description": "The Natural Language Processing Group at Stanford University is a team of faculty, postdocs, programmers and students who work together on algorithms that allow computers to process and understand human languages. Our work ranges from basic research in computational linguistics to key applications in human language technology.",
+      "followers": {
+        "twitter": 152600
+      },
+      "image_url": "https://i1.feedspot.com/5032450.jpg?t=1622295273"
+    },
+    {
+      "title": "Sebastian Ruder",
+      "feed_url": "https://www.ruder.io/rss/",
+      "website_url": "https://www.ruder.io/",
+      "description": "I'm a research scientist at DeepMind, London. I completed my PhD in Natural Language Processing and Deep Learning at the Insight Research Centre for Data Analytics, while working as a research scientist at Dublin-based text analytics startup AYLIEN.",
+      "followers": {
+        "twitter": 83600
+      },
+      "image_url": "https://i1.feedspot.com/4728706.jpg?t=1622295285"
+    },
+    {
+      "title": "MAREK REI",
+      "feed_url": "https://www.marekrei.com/blog/feed/",
+      "website_url": "http://www.marekrei.com/blog/",
+      "description": "I am a researcher in Machine Learning and Natural Language Processing. My work is focused on improving machine learning architectures for representation learning, transfer learning, auto regressive modeling and multi-task optimization. Most of my research is applied in the area of Natural Language Understanding and on tasks that benefit from capturing the semantics in text, such as structured prediction, language modeling, grammatical error detection, sentiment analysis and text classification.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4472962.jpg?t=1622295320"
+    },
+    {
+      "title": "IBM Research \u00bb Natural Language Processing",
+      "feed_url": "https://research.ibm.com/topics/natural-language-processing/",
+      "website_url": "https://research.ibm.com/topics/natural-language-processing/",
+      "description": "For more than a century IBM has been dedicated to every client's success and to creating innovations that matter for the world. Follow to get updates on Natural Language Processing.",
+      "followers": {
+        "facebook": 6,
+        "twitter": 717500
+      },
+      "image_url": "https://i1.feedspot.com/5033131.jpg?t=1622295299"
+    },
+    {
+      "title": "Machine Learning in Action \u00bb Natural Language Processing",
+      "feed_url": "https://appliedmachinelearning.blog/category/applications/natural-language-processing/feed/",
+      "website_url": "https://appliedmachinelearning.blog/category/applications/natural-language-processing/",
+      "description": "Posts about Natural Language Processing written by Abhijeet Kumar",
+      "followers": {
+        "twitter": 40
+      },
+      "image_url": "https://i1.feedspot.com/5033144.jpg"
+    },
+    {
+      "title": "Lexalytics",
+      "feed_url": "https://www.lexalytics.com/blog/",
+      "website_url": "https://www.lexalytics.com/blog/category/text-analytics/",
+      "description": "We are the industry leader in translating text into profitable decisions; we make state-of-the-art cloud and on-prem text and sentiment analysis technologies that transform customers' thoughts and conversations into actionable insights.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 17100
+      },
+      "image_url": "https://i1.feedspot.com/4899117.jpg?t=1612770292"
+    },
+    {
+      "title": "ParallelDots Blog",
+      "feed_url": "https://blog.paralleldots.com/feed",
+      "website_url": "https://www.paralleldots.com/resources/blog",
+      "description": "We are an applied AI research group, doing our bit to transform the world by bringing AI at your fingertips using Natural Language Processing ,text analysis deep learning, AI etc",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4839718.jpg?t=1611211082"
+    },
+    {
+      "title": "PragnaKalp Blog",
+      "feed_url": "https://www.pragnakalp.com/blog/feed/",
+      "website_url": "https://www.pragnakalp.com/blog/",
+      "description": "At Pragnakalp, we are developing cutting-edge solutions using latest tech. Machine Learning, Natural Language Processing (NLP), Chatbots and Python development.",
+      "followers": {
+        "facebook": 607,
+        "twitter": 67
+      },
+      "image_url": "https://i1.feedspot.com/4958746.jpg?t=1612613600"
+    },
+    {
+      "title": "NLP-FOR-HACKERS",
+      "feed_url": "https://nlpforhackers.io/feed/",
+      "website_url": "https://nlpforhackers.io/",
+      "description": "I'm a Software Engineer, I hold MSc. in AI and I have a soft spot for Natural Language Processing. Worked in the area for some time, applying theoretical knowledge to practical problems. I love working with, being part of and building startups and small businesses in general.",
+      "followers": {
+        "twitter": 93
+      },
+      "image_url": "https://i1.feedspot.com/5014008.jpg?t=1622295323"
+    },
+    {
+      "title": "Linguamatics Blog",
+      "feed_url": "https://www.linguamatics.com/blog/rss-feed",
+      "website_url": "https://www.linguamatics.com/blog",
+      "description": "Linguamatics provides a high performance Natural Language Processing (NLP)-based text mining software that rapidly reveals high quality, structured facts and relationships from text. It helps to extract insights and connections from unstructured text and big data for key decision-making.",
+      "followers": {
+        "facebook": 243,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4899206.jpg?t=1612770333"
+    }
+  ]
+}

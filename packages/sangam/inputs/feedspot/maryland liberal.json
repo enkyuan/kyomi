@@ -1,0 +1,63 @@
+{
+  "category": "Maryland Liberal",
+  "source_url": "https://rss.feedspot.com/maryland_liberal_rss_feeds",
+  "feeds": [
+    {
+      "title": "Progressive Maryland",
+      "feed_url": "https://www.progressivemaryland.org/home.rss",
+      "website_url": "https://www.progressivemaryland.org/",
+      "description": "Progressive Maryland is a statewide nonprofit advocacy organization promoting racial, social, economic, and environmental justice. With over 120,000 individual members, supporters, and organizational affiliates statewide, we are leading the fight for progressive change in Maryland through grassroots organizing, public education, and legislative advocacy. Progressive Maryland provides statewide leadership and coordination in a range of national, state, and regional campaigns.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/5315021.jpg?t=1629797797"
+    },
+    {
+      "title": "Maryland Chatters",
+      "feed_url": "https://marylandmatters.org/feed/",
+      "website_url": "https://marylandmatters.org/category/politics/",
+      "description": "Maryland Chatters is the new podcast from the nonprofit, nonpartisan journalists at Maryland Matters.",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 14500,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5314987.jpg?t=1704438993"
+    },
+    {
+      "title": "The Frederick News-Post \u00bb Politics",
+      "feed_url": "https://www.fredericknewspost.com/search/?f=rss&t=article&c=news/politics_and_government&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.fredericknewspost.com/news/politics_and_government/",
+      "description": "Frederick County's leading source for news, sports, arts, entertainment, and commentary. This section of the news website covers political & government updates and news. It serves as a one-stop shop for residents of Frederick County, Maryland, to stay informed about the local political landscape.",
+      "followers": {
+        "facebook": 50900,
+        "twitter": 45700
+      },
+      "image_url": "https://i1.feedspot.com/5315023.jpg?t=1629798127"
+    },
+    {
+      "title": "The Maryland Democratic Party Blog",
+      "feed_url": "https://mddems.org/feed/",
+      "website_url": "https://mddems.org/news/",
+      "description": "The official blog of The Maryland Democratic Party amplifies the voices, values, and vision of the Democratic Party in our great state. Discover insightful commentary, in-depth policy analysis, and inspiring stories from across our communities.",
+      "followers": {
+        "facebook": 26900,
+        "twitter": 18500,
+        "instagram": 8700
+      },
+      "image_url": "https://i1.feedspot.com/7270288.jpg?t=1709917469"
+    },
+    {
+      "title": "Women's Democratic Club Blog",
+      "feed_url": "https://www.womensdemocraticclub.org/news?format=rss",
+      "website_url": "https://womensdemocraticclub.org/blog-politically-speaking",
+      "description": "The WDC Blog, includes newsletter articles about speakers, advocacy work, political activism, and committee reports. The Women's Democratic Club encourages political action and civic engagement among women. It offers programs, events, and discussions to keep members informed about current issues and involved in the political process.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/7270289.jpg?t=1712203947"
+    }
+  ]
+}

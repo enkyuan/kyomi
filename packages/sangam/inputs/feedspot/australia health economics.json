@@ -1,0 +1,37 @@
+{
+  "category": "Australia Health Economics",
+  "source_url": "https://rss.feedspot.com/australia_health_economics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Institute for Health Transformation News",
+      "feed_url": "https://iht.deakin.edu.au/domains/deakin-health-economics/feed/",
+      "website_url": "https://iht.deakin.edu.au/news/",
+      "description": "Institute for Health Transformation features articles on information, news and more on Health Economics in the following section. The Institute for Health Transformation at Deakin University aims to activate healthy populations and communities, innovate health service delivery and design, empower consumers as advocates for health system change, and drive equity and value in health and care.",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5354314.jpg?t=1639726191"
+    },
+    {
+      "title": "Australian Health Economics Society",
+      "feed_url": "https://ahes.org.au/feed/",
+      "website_url": "https://ahes.org.au/",
+      "description": "The Australian Health Economics Society promotes the study, practice and development of health economics in Australia and health economics analysis in informing policy and health practice in Australia and internationally.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5354315.jpg?t=1639726384"
+    },
+    {
+      "title": "The Conversation \u00bb Health Economics",
+      "feed_url": "https://theconversation.com/topics/health-economics-821/articles.atom",
+      "website_url": "https://theconversation.com/au/topics/health-economics-821",
+      "description": "Browse Health economics news, research and analysis from The Conversation. The Conversation Australia and New Zealand is a unique collaboration between academics and journalists that in just 10 years has become the world's leading publisher of research-based news and analysis.",
+      "followers": {
+        "facebook": 396000,
+        "twitter": 65300
+      },
+      "image_url": "https://i1.feedspot.com/4752725.jpg?t=1639726338"
+    }
+  ]
+}

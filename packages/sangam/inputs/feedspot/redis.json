@@ -1,0 +1,18 @@
+{
+  "category": "Redis",
+  "source_url": "https://rss.feedspot.com/redis_rss_feeds",
+  "feeds": [
+    {
+      "title": "Redis Blog",
+      "feed_url": "https://redis.io/blog/",
+      "website_url": "https://redis.io/blog/",
+      "description": "Covers the lhe latest on what's happening at Redis, from company news and product announcements to tips, tricks, and how-to information for database developers.",
+      "followers": {
+        "facebook": 18000,
+        "twitter": 42600,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5351216.jpg?t=1638873787"
+    }
+  ]
+}

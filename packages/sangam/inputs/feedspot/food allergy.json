@@ -1,0 +1,898 @@
+{
+  "category": "Food Allergy",
+  "source_url": "https://rss.feedspot.com/food_allergy_rss_feeds",
+  "feeds": [
+    {
+      "title": "Allergic Living",
+      "feed_url": "https://www.allergicliving.com/feed/",
+      "website_url": "https://www.allergicliving.com/",
+      "description": "Allergic Living magazine will make a difference in your life. Featuring the best coverage of food allergies, asthma, celiac disease and environmental allergies. Get latest research news, safe and superb recipes, great columns and product reviews.",
+      "followers": {
+        "facebook": 116800,
+        "twitter": 20300
+      },
+      "image_url": "https://i1.feedspot.com/5007350.jpg?t=1607323881"
+    },
+    {
+      "title": "SnackSafely Blog",
+      "feed_url": "https://snacksafely.com/feed/",
+      "website_url": "https://snacksafely.com/",
+      "description": "SnackSafely goes beyond the label to bring you the latest in food allergy news, research, and products.",
+      "followers": {
+        "facebook": 50600,
+        "twitter": 6400,
+        "instagram": 11500
+      },
+      "image_url": "https://i1.feedspot.com/5265932.jpg?t=1617865360"
+    },
+    {
+      "title": "The Pretty Bee",
+      "feed_url": "https://theprettybee.com/feed/",
+      "website_url": "https://theprettybee.com/",
+      "description": "An allergy friendly food blog with hundreds of delicious gluten free, dairy free, and vegan recipes. Kelly, the author of this blog, believes you can enjoy amazing, easy recipes even when cooking for multiple food allergies.",
+      "followers": {
+        "facebook": 10000,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4575683.jpg?t=1607323857"
+    },
+    {
+      "title": "Kids With Food Allergies Blog",
+      "feed_url": "https://community.kidswithfoodallergies.org/blog?rss=true",
+      "website_url": "https://community.kidswithfoodallergies.org/blog",
+      "description": "KFA, a division of the Asthma and Allergy Foundation of America, the nation's leading allergy and asthma charity, is dedicated to keeping 6 million U.S. children with food allergies safe and healthy through education, support, outreach, advocacy.",
+      "followers": {
+        "facebook": 107200,
+        "twitter": 12600,
+        "instagram": 27000
+      },
+      "image_url": "https://i1.feedspot.com/4717128.jpg?t=1617862734"
+    },
+    {
+      "title": "AllergicChild Blog",
+      "feed_url": "https://home.allergicchild.com/feed/",
+      "website_url": "https://home.allergicchild.com/blog/",
+      "description": "AllergicChild.com is your home for managing food allergies and living a full life!",
+      "followers": {
+        "facebook": 13100,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4587820.jpg?t=1607323866"
+    },
+    {
+      "title": "Nut Free Wok",
+      "feed_url": "https://nutfreewok.com/feed/",
+      "website_url": "https://nutfreewok.com/",
+      "description": "Allergy Aware Asian Fare by Sharon Wong who writes about recipes, cooking techniques, Asian ingredients, and food allergy related awareness and advocacy issues.",
+      "followers": {
+        "facebook": 7800,
+        "twitter": 2900,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4575726.jpg?t=1607323875"
+    },
+    {
+      "title": "My Fearless Foodie Blog",
+      "feed_url": "https://myfearlessfoodie.com/feed/",
+      "website_url": "https://myfearlessfoodie.com/blogs/",
+      "description": "Hi friends! My name is Pat, and our daughter, Lily, has multiple food allergies. Over the past 10+ years, we've lived in a food allergy-safe home by avoiding nuts, sesame, and shellfish. We developed this blog to share the places we've traveled, restaurants and products we love, and much more. This blog is an expression of creativity, inspiration, and adventure.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5714668.jpg?t=1700217435"
+    },
+    {
+      "title": "YorkTest",
+      "feed_url": "https://www.yorktest.com/advice-hub/feed/",
+      "website_url": "https://www.yorktest.com/advice-hub/",
+      "description": "Food Intolerance, Europe's leading food intolerance and allergy testing company. YorkTest develop tests to determine your food sensitivity.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/4575485.jpg?t=1607323888"
+    },
+    {
+      "title": "Allergy Awesomeness",
+      "feed_url": "https://allergyawesomeness.com/feed/",
+      "website_url": "https://allergyawesomeness.com/",
+      "description": "Hi! I'm Megan, I'm an allergy mom. On my blogs, I share every recipe & tip with you, to help you eat as you did before food allergies & dietary restrictions. You can still be awesome, even with food allergies!",
+      "followers": {
+        "facebook": 12800,
+        "twitter": 1200,
+        "instagram": 20400
+      },
+      "image_url": "https://i1.feedspot.com/4575662.jpg?t=1657877768"
+    },
+    {
+      "title": "Allergy Amulet Blog",
+      "feed_url": "https://www.allergyamulet.com/blog?format=rss",
+      "website_url": "https://www.allergyamulet.com/blog",
+      "description": "Hi, I'm Abigail Barnes. Follow our blog to read about research, updates, and more. Allergy Amulet believes food should be a source of fuel, not fear. That's why we developed the world's smallest & fastest consumer food allergen sensor. so individuals like me can feel safer when eating out.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 11,
+        "instagram": 9600
+      },
+      "image_url": "https://i1.feedspot.com/5283665.jpg?t=1621925324"
+    },
+    {
+      "title": "The Food Allergy Counselor, Inc.",
+      "feed_url": "https://www.foodallergycounselor.com/blog-feed.xml",
+      "website_url": "https://www.foodallergycounselor.com/articles",
+      "description": "The Food Allergy Counselor, Inc. is a resource website dedicated to providing quality guidance and tools focused on navigating the psychosocial and quality of allergy life.",
+      "followers": {
+        "instagram": 6800
+      },
+      "image_url": "https://i1.feedspot.com/5421868.jpg?t=1657864754"
+    },
+    {
+      "title": "Nutrimom\u00ae - Food Allergy Liason's Blog- AllergyPhoods",
+      "feed_url": "https://allergyphoods.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://allergyphoods.blogspot.com/",
+      "description": "Nutrimom a consultancy by Tracy Bush that specializes in food allergies and helps to provide guidance and support for anyone that has been diagnosed with food allergies.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4575599.jpg?t=1607323912"
+    },
+    {
+      "title": "Food Allergies Atlanta Blog",
+      "feed_url": "https://foodallergiesatlanta.com/feed/",
+      "website_url": "https://foodallergiesatlanta.com/food-allergy-blog/",
+      "description": "Stay on the latest Food Allergy News by Dr. Thomas Chacko. With the help of Dr. Chacko, you can reduce your reaction to food allergens through Oral Immunotherapy. He is Atlanta's expert in food allergies and oral immunotherapy.",
+      "followers": {
+        "facebook": 6700,
+        "instagram": 11900
+      },
+      "image_url": "https://i1.feedspot.com/5314382.jpg?t=1629543576"
+    },
+    {
+      "title": "Food Allergy Counselor Directory",
+      "feed_url": "https://www.foodallergycounselor.com/blog-feed.xml",
+      "website_url": "https://www.foodallergycounselor.com/articles",
+      "description": "Hi, I'm Tamara Hubbard. This blog is about navigating the social, relationship, and mental health impacts of living with food allergies. Food Allergy Counselor Directory is the Food Allergy Counselor, Inc. a resource website dedicated to providing quality guidance and tools focused on navigating the psychosocial and quality of allergy life. Our goal is to be a one-of-a-kind resource, helping the food allergy and allergic disease community.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 3100,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5293454.jpg?t=1623835201"
+    },
+    {
+      "title": "Irish Food Allergy Network Blog",
+      "feed_url": "https://www.ifan.ie/feed/",
+      "website_url": "https://www.ifan.ie/blog/",
+      "description": "This site is intended as a guide to assist those who, through their work, encounter children and families affected by food allergies. The site content is intended for use by regulated healthcare professionals. Its aim is to help in diagnosing and managing suspected food allergies by regulated health care staff in community and hospital settings. IFAN was conceived in 2010 by Ruth Charles, a Dietitian working in Paediatrics at a time when there was extremely limited HSE funded Allergy Services in existence.",
+      "followers": {
+        "twitter": 734
+      },
+      "image_url": "https://i1.feedspot.com/5451729.jpg?t=1664776692"
+    },
+    {
+      "title": "The Urben Life",
+      "feed_url": "https://theurbenlife.com/feed/",
+      "website_url": "https://theurbenlife.com/",
+      "description": "Find hundreds of quick, easy, and healthy meal ideas! All recipes are dairy-free and egg free, with several gluten-free and vegan options. You will also find allergy-friendly travel guides and entertaining tips. I'm Jenna Urben. I started The Urben Life is 2016 with a simple mission, to share dairy free recipes the entire family will enjoy.",
+      "followers": {
+        "facebook": 31100,
+        "twitter": 612,
+        "instagram": 9100
+      },
+      "image_url": "https://i1.feedspot.com/4918261.jpg?t=1610027945"
+    },
+    {
+      "title": "Em's NutFree Eats Blog",
+      "feed_url": "https://emsnutfreeeats.com/feed/",
+      "website_url": "https://emsnutfreeeats.com/category/blog/",
+      "description": "My name is Emily, and I'm a 22-year-old young adult who has lived with severe food allergies my whole life. I was born with severe food allergies to peanuts and most tree nuts. I share my experiences dining out at restaurants, traveling, and cooking with my food allergies, as well as continue encouraging myself to try new foods and improve my anxiety. Find tasty recipes, restaurant recommendations, and overall tips for navigating food allergy life on Em's NutFree Eats.",
+      "followers": {
+        "facebook": 190
+      },
+      "image_url": "https://i1.feedspot.com/5451740.jpg?t=1664541917"
+    },
+    {
+      "title": "Just Allergy Things Blog",
+      "feed_url": "https://www.justallergythings.com/blog-feed.xml",
+      "website_url": "https://www.justallergythings.com/blog",
+      "description": "We are a teen-led digital magazine with all the information you need to know about food allergies. Our mission at Just Allergy Things Magazine is to share our experience with food allergies and give advice, comfort, and support to those who have food allergies or those who want to learn more about the cause. We also hope to shed light on the invisible impacts of living with food allergies and expose them to the non-allergic population.",
+      "followers": {
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5451739.jpg?t=1664543457"
+    },
+    {
+      "title": "Cook It Up Blog",
+      "feed_url": "https://www.cook-it-up.com/blog-feed.xml",
+      "website_url": "https://www.cook-it-up.com/blog",
+      "description": "I'm Catherine, I am 18 years old and rising freshman in college attending Tufts University in Boston, MA. I will be studying psychology, entrepreneurship, and nutrition studies in order to pursue a career in the food allergy world. My goal is to show that food allergies don't have to limit your creativity in the kitchen and cooking healthy recipes with whole foods makes navigating food allergies easier. I share my experiences and life living with severe food allergies to advocate and support for the food allergy community.",
+      "followers": {
+        "facebook": 33,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5451737.jpg?t=1664541899"
+    },
+    {
+      "title": "Wandering Chickpea",
+      "feed_url": "https://wanderingchickpea.com/feed/",
+      "website_url": "https://wanderingchickpea.com/",
+      "description": "Find creative, healthy recipes for every occasion that all types of eaters will enjoy. Vegan, vegetarian and allergy-friendly recipes. My name's Elaine and I'm the recipe developer and food photographer behind Wandering Chickpea. The recipes you'll find here are inspired by my passion for healthy eating as well as my love for delicious food that tastes just as good as it looks!",
+      "followers": {
+        "facebook": 605,
+        "instagram": 116300
+      },
+      "image_url": "https://i1.feedspot.com/5451730.jpg?t=1664541862"
+    },
+    {
+      "title": "The Fit Cookie",
+      "feed_url": "https://thefitcookie.com/feed/",
+      "website_url": "https://thefitcookie.com/",
+      "description": "Allergy-friendly food and balanced living! We share allergy-friendly recipes, healthy living tips, and workouts. I'm Sarah, a personal trainer & food allergy mom living in Wyoming.",
+      "followers": {
+        "facebook": 11600,
+        "twitter": 3800,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/3851013.jpg?t=1631520390"
+    },
+    {
+      "title": "Strength and Sunshine",
+      "feed_url": "https://strengthandsunshine.com/feed/",
+      "website_url": "https://strengthandsunshine.com/",
+      "description": "Browse hundreds of gluten-free and allergy-free recipes that are both delicious and completely vegan! Live your best healthy life, learn to love food & cooking again, and never sacrifice taste while doing so! I am Rebecca. I'm a 25 years old entrepreneur, founder, author, content creator & recipe developer at Strength and Sunshine (aka the 'Jack of all Trades'), as well as a marketing, content, and community specialist, consultant, and podcaster!",
+      "followers": {
+        "facebook": 20400,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4326544.jpg?t=1664778058"
+    },
+    {
+      "title": "Mommy's Home Cooking",
+      "feed_url": "https://feeds.feedburner.com/mommyhoodsdiary/hSMu",
+      "website_url": "https://mommyshomecooking.com/",
+      "description": "On this site, you can find everyday recipes (most of them egg-free) from a real mom, Venezuelan recipes, anecdotes, some reviews/giveaways, and lots of photos. I'm Oriana, a wife, mom to three wonderful kids, and a passionate baker and cooker of all eggless things delicious. My goal is to give you the confidence and knowledge to cook and bake without eggs while providing quality recipes that your whole family will love.",
+      "followers": {
+        "facebook": 44100,
+        "twitter": 7100,
+        "instagram": 24100
+      },
+      "image_url": "https://i1.feedspot.com/4928679.jpg?t=1621060131"
+    },
+    {
+      "title": "Latitude Food Allergy Care News",
+      "feed_url": "https://latitudefoodallergycare.com/feed",
+      "website_url": "https://latitudefoodallergycare.com/about-us/news?page=1/",
+      "description": "From our blog, discover our food allergy community, get to know the diverse families who have sought care at Latitude, and learn from our dedicated team members. Latitude Food Allergy Care is a specialty clinic changing the lives of families living with food allergies by creating access to exceptional care from diagnosis to lifesaving treatments to long-term support.",
+      "followers": {
+        "facebook": 908,
+        "twitter": 321,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5421889.jpg?t=1657871890"
+    },
+    {
+      "title": "Lane & Grey Fare",
+      "feed_url": "https://laneandgreyfare.com/feed/",
+      "website_url": "https://laneandgreyfare.com/",
+      "description": "Gluten-Free & Nut Free Recipes can be as decadent, savory and rich as other food, while still being easy to make! All the recipes here at Lane & Grey Fare are gluten-free, nut-free and seed free. All the baked goods are also egg free and can easily be dairy-free (vegan)! I'm Lee - the creator of Lane & Grey Fare. As a mother of two children with celiac disease and multiple food allergies, I wanted to share all that I've learned with others going through the same situation in a way that's entertaining and helpful.",
+      "followers": {
+        "facebook": 13800,
+        "instagram": 538900
+      },
+      "image_url": "https://i1.feedspot.com/5451714.jpg?t=1664541730"
+    },
+    {
+      "title": "Invisibly Allergic",
+      "feed_url": "https://invisiblyallergic.com/feed/",
+      "website_url": "https://invisiblyallergic.com/",
+      "description": "My name is Zo\u00eb, I'm the food allergic individual behind the blog & website Invisibly Allergic. Invisibly Allergic is a resource for everyone, food allergic or not. This blog was started as a place to connect with others across this food allergy spectrum or caring for someone on the food allergy spectrum. My aim is to spread food allergy awareness, peanut allergy awareness, and food allergy anaphylaxis awareness far and wide.",
+      "followers": {
+        "facebook": 650,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5451719.jpg?t=1664541817"
+    },
+    {
+      "title": "Raise The Allergy Chef",
+      "feed_url": "https://raise.theallergychef.com/feed/",
+      "website_url": "https://raise.theallergychef.com/recipes/",
+      "description": "RAISE offers hundreds of gluten-free recipes, dairy-free recipes, vegan recipes, corn-free recipes, paleo recipes, and many more options. I'm Kathlena, The Allergy Chef. Starting RAISE was one of the greatest accomplishments for our family, as it's a culmination of years of research and personal experience.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 3100,
+        "instagram": 56200
+      },
+      "image_url": "https://i1.feedspot.com/5451720.jpg?t=1664541822"
+    },
+    {
+      "title": "Food Allergy Institute of North Texas Blog",
+      "feed_url": "https://foodallergynorthtexas.org/feed/",
+      "website_url": "https://foodallergynorthtexas.org/blog/",
+      "description": "Explore our board-certified doctor-approved periodic news, tips and articles. The Food Allergy Institute of North Texas is a part of Family Allergy And Asthma Care. We founded the institute to help patients gain peace of mind through innovative testing, immunotherapy, treatment and education of food allergies.",
+      "followers": {
+        "facebook": 466,
+        "instagram": 154
+      },
+      "image_url": "https://i1.feedspot.com/5451721.jpg?t=1664541827"
+    },
+    {
+      "title": "Allergy Shmallergy",
+      "feed_url": "https://shmallergy.wordpress.com/feed/",
+      "website_url": "https://shmallergy.wordpress.com/",
+      "description": "Food allergy advocate, writer, speaker and consultant Erin Malawer helping to take the stress out of living with food allergies by simple, practical solutions, positive parenting, food allergy education, and the best product reviews.",
+      "followers": {
+        "facebook": 824,
+        "twitter": 2100,
+        "instagram": 843
+      },
+      "image_url": "https://i1.feedspot.com/4574242.jpg?t=1607323964"
+    },
+    {
+      "title": "No Nuts Moms Group Blog",
+      "feed_url": "https://nonutsmomsgroup.weebly.com/1/feed",
+      "website_url": "https://nonutsmomsgroup.weebly.com/blog",
+      "description": "On our blog, we share informative articles and experiences regarding food allergies by different people. No Nuts Moms Group is a group dedicated to learning, educating, supporting, and connecting others. We have several groups for families to meet other parents and children who are dealing with life-threatening food allergies",
+      "followers": {
+        "facebook": 27100,
+        "twitter": 4100,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4574183.jpg?t=1607323935"
+    },
+    {
+      "title": "Allergylicious",
+      "feed_url": "https://allergylicious.com/feed/",
+      "website_url": "https://allergylicious.com/",
+      "description": "Hi, I'm Nicole Dawson. On this website, I provide delicious, allergy-friendly recipes that everyone can enjoy. Always free-from dairy, eggs & nuts with many also Gluten Free. Welcome to my Kitchen! My goal is to give you the confidence to bake delicious vegan and allergy-friendly desserts to satisfy your sweet tooth.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 829,
+        "instagram": 13800
+      },
+      "image_url": "https://i1.feedspot.com/4860935.jpg?t=1658384449"
+    },
+    {
+      "title": "Dairy Free Gina",
+      "feed_url": "https://dairyfreegina.com/blog-2/feed/",
+      "website_url": "https://dairyfreegina.com/blog-2/",
+      "description": "The best in dairy-free, vegan, gluten-free eating and living with recipes, product and restaurant reviews, cooking tips, and tricks.",
+      "followers": {
+        "facebook": 358,
+        "twitter": 3100,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4762138.jpg?t=1610028680"
+    },
+    {
+      "title": "Eating With Food Allergies Blog",
+      "feed_url": "https://www.eatingwithfoodallergies.com/feed/",
+      "website_url": "https://www.eatingwithfoodallergies.com/",
+      "description": "Hi, I'm Kristi. This blog is here to help you eat well, even with food allergies. You'll find nutrition tips, allergy-free meal and snack ideas, and recipes that are free of the most common allergens. Whether you have one food allergy or are on an elimination diet, Eating With Food Allergies is here to help you not only figure out what to eat but how to eat well.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 652,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5314383.jpg?t=1657872238"
+    },
+    {
+      "title": "Food Allergy Diva",
+      "feed_url": "https://www.foodallergydiva.com/blog-feed.xml",
+      "website_url": "https://www.foodallergydiva.com/",
+      "description": "The First Stop in the Fight Against Your Infant's Food Allergies: A Food Allergy Blog for the Newly Diagnosed Parent. It is my goal to change the direction of a food allergy diagnosis in the lives of others so they don't have to do things the hard way like us.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5201794.jpg?t=1607323898"
+    },
+    {
+      "title": "ALLERGIC PRINCESS Food Allergies Blog",
+      "feed_url": "http://www.allergicprincess.com/feed/",
+      "website_url": "http://www.allergicprincess.com/blog/",
+      "description": "Tips for navigating life with food allergies. With two nut and dairy allergic kids, I'm here to help and share what's worked for our family.",
+      "followers": {
+        "facebook": 55
+      },
+      "image_url": "https://i1.feedspot.com/4741419.jpg?t=1607323956"
+    },
+    {
+      "title": "My Allergy Kitchen",
+      "feed_url": "https://www.myallergykitchen.com/feed/",
+      "website_url": "https://www.myallergykitchen.com/",
+      "description": "Hello there! I'm Zoe and I'm the blogger behind My Allergy Kitchen. At My Allergy Kitchen, I share practical tips and guidance for managing life with food allergies, including allergy-friendly recipes and parenting advice. It all started because everyone in my family has some form of allergy or intolerance, and I wanted to help others in the same situation.",
+      "followers": {
+        "facebook": 978,
+        "twitter": 722
+      },
+      "image_url": "https://i1.feedspot.com/5123338.jpg?t=1658384523"
+    },
+    {
+      "title": "No Dairy No Cry",
+      "feed_url": "https://www.nodairynocry.com/feed/",
+      "website_url": "https://www.nodairynocry.com/",
+      "description": "NDNC is an allergy friendly food blog free from dairy, egg, cashew, pistachio, and beef, plus most common allergens. Delicious. Healthy. Kid Approved recipes!",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 120,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4901984.jpg?t=1607323925"
+    },
+    {
+      "title": "Friendly Pantry Blog",
+      "feed_url": "https://www.friendlypantry.com/blog?format=RSS",
+      "website_url": "https://www.friendlypantry.com/blog/",
+      "description": "Hi, I'm Corinna. The best food allergy blog for food allergy moms and families. More than a food allergy recipe website, I help food allergy families keep their kids safe while living their best life with food allergies. Go through this blog to discover the best allergy-free recipes and tips for food allergy life.",
+      "followers": {
+        "facebook": 1300,
+        "instagram": 6900
+      },
+      "image_url": "https://i1.feedspot.com/4792028.jpg?t=1607323948"
+    },
+    {
+      "title": "Allergy Girl Eats",
+      "feed_url": "https://www.thezestfull.com/feed/",
+      "website_url": "https://www.thezestfull.com/",
+      "description": "A blog for people with food allergies who love to eat! Tips about living with allergies and a resource for tasty allergy friendly recipes.",
+      "followers": {
+        "facebook": 146,
+        "twitter": 890,
+        "instagram": 6100
+      },
+      "image_url": "https://i1.feedspot.com/4575483.jpg"
+    },
+    {
+      "title": "Allergy Mums",
+      "feed_url": "https://www.allergymums.co.uk/feed/",
+      "website_url": "https://www.allergymums.co.uk/",
+      "description": "Visit us to check out our selection of dairy, egg and gluten free recipes. All of our baking is Vegan friendly, while all of our main dishes are egg and dairy free. There is also lots of helpful information about allergies and asthma.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 2200,
+        "instagram": 533
+      },
+      "image_url": "https://i1.feedspot.com/4575665.jpg?t=1607323896"
+    },
+    {
+      "title": "Food Allergy Allies Blog",
+      "feed_url": "https://foodallergyallies.org/feed/",
+      "website_url": "https://foodallergyallies.org/blog/",
+      "description": "A nonprofit organization that is dedicated to providing resources for people who face both food insecurity & dietary restrictions. Our blog explores a wide variety of topics related to food allergies & food insecurity. Articles feature testimonials, photos, and results of our efforts.",
+      "followers": {
+        "facebook": 163,
+        "instagram": 808
+      },
+      "image_url": "https://i1.feedspot.com/5314384.jpg?t=1629542872"
+    },
+    {
+      "title": "From Scratch With Love Cooking",
+      "feed_url": "https://fromscratchwithlovecooking.com/feed/",
+      "website_url": "https://fromscratchwithlovecooking.com/recipes/",
+      "description": "Hi, friends and welcome to our blog! We're Adam and Tina DaSilva, parents of two adorable kiddos who also have multiple food allergies. In this blog you'll find - what we hope - are easy, healthy, and allergy-friendly recipes that will make your family and friends smile as much as ours do. We wanted to start this blog after repeatedly hearing our family and friends say, 'how did you make that,' or 'oh my gosh that doesn't have dairy?",
+      "followers": {
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5217535.jpg?t=1605769551"
+    },
+    {
+      "title": "Grateful Foodie Blog",
+      "feed_url": "https://gratefulfoodie.com/feed/",
+      "website_url": "https://gratefulfoodie.com/blog/",
+      "description": "I talk about all things food allergy, asthma, baking and life at www.gratefulfoodie.com. It's all about finding solutions to live a grand life!",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4901973.jpg?t=1607323909"
+    },
+    {
+      "title": "Nickel Food Allergy",
+      "feed_url": "https://nickelfoodallergy.com/feed/",
+      "website_url": "https://nickelfoodallergy.com/",
+      "description": "This blog is to create awareness and community about nickel food allergies & eczema by Christy Cushing who is allergic to foods with nickel and have atopic dermatitis / eczema.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 825,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4574263.jpg?t=1607323939"
+    },
+    {
+      "title": "Allergy Superheroes Blog",
+      "feed_url": "https://allergysuperheroesblog.com/feed/",
+      "website_url": "https://allergysuperheroesblog.com/",
+      "description": "Thoughts from a food-allergic mom, Eileen of food-allergic kids.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 3800,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4574291.jpg?t=1607323950"
+    },
+    {
+      "title": "Allergic Girl",
+      "feed_url": "http://allergicgirl.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://allergicgirl.blogspot.com/",
+      "description": "Allergic Girl, resources provides supportive services designed to empower both individuals with food allergies and the food allergic community to engage the world safely, effectively and joyously.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 7200
+      },
+      "image_url": "https://i1.feedspot.com/4575493.jpg"
+    },
+    {
+      "title": "Jazzy Allergy Recipes",
+      "feed_url": "http://jazzyallergyrecipes.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://jazzyallergyrecipes.blogspot.com/",
+      "description": "Simple and delicious egg free, dairy free and nut free recipes that everyone will love.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4575672.jpg?t=1607323976"
+    },
+    {
+      "title": "Our Allergic Life",
+      "feed_url": "https://ourallergiclife.com/feed/",
+      "website_url": "https://ourallergiclife.com/",
+      "description": "Hello and Welcome to Our Allergic Life. My name is Jyoti Parmar. I am a dentist, wife, interior design fan and the mother of three kids, two of whom have life threatening food allergies. Like any parent I want my children to experience life to the fullest. Living life to the fullest while dealing with allergies to food is not easy and has its ups and downs. I hope to chronicle my journey in this blog. Thank you for joining me!",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4901988.jpg?t=1607324007"
+    },
+    {
+      "title": "Food Allergy Pantry - The Cookbook Apothecary Blog",
+      "feed_url": "https://foodallergypantry.weebly.com/2/feed",
+      "website_url": "https://foodallergypantry.weebly.com/blog",
+      "description": "Hi, I'm Nicole. \u200bWelcome to my food and health site, where I dive into allergy-friendly and heart-healthy research and recipes.",
+      "followers": {
+        "facebook": 28
+      },
+      "image_url": "https://i1.feedspot.com/4792032.jpg?t=1607324015"
+    },
+    {
+      "title": "My Allergy Advocate Blog",
+      "feed_url": "https://www.myallergyadvocate.com/feed/",
+      "website_url": "https://www.myallergyadvocate.com/blog/",
+      "description": "Making food fun for all people with autoimmune disease, food allergies, food intolerances, autoimmune disease, and chronic conditions requiring a medically-necessary diet. Feeding yourself is a total drag, but it doesn't have to be. I'm Imei Hsu, RN, LHMC, RYT, and I'm on a mission to make food fun again.",
+      "followers": {
+        "facebook": 133
+      },
+      "image_url": "https://i1.feedspot.com/4576373.jpg?t=1607324025"
+    },
+    {
+      "title": "Food Allergy Works",
+      "feed_url": "http://foodallergyworks.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://foodallergyworks.blogspot.com/",
+      "description": "As a mother of a food allergic teen, I have been through the ups and downs of food allergy, but I have also seen my teen's calm maturity and enhanced sense of responsibility. And because food allergies are not an isolated event anymore. I have enjoyed the community built around a common cause. So Welcome. You'll find recipes, comments on life with food allergies, a blog, resources and occasionally 'notes from the field.'",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5063321.jpg"
+    },
+    {
+      "title": "Nope, Can't Eat That Either",
+      "feed_url": "https://nopecanteatthateither.com/blog?format=rss",
+      "website_url": "https://nopecanteatthateither.com/",
+      "description": "Hi! I'm Kendra Chanae Chapman. In this blog, I want to take you on the journey of my life as a young, African American woman trying to navigate life with food allergies. I will highlight restaurants that I visit that are accommodating, recipes satisfying to the palate, allergen-free products that work, and any interesting things that I discover along the way.",
+      "followers": {
+        "facebook": 276,
+        "twitter": 676,
+        "instagram": 934
+      },
+      "image_url": "https://i1.feedspot.com/5293457.jpg?t=1623834997"
+    },
+    {
+      "title": "Food Allergy Wizards Blog",
+      "feed_url": "https://blog.foodallergywizards.com/feed/",
+      "website_url": "https://blog.foodallergywizards.com/",
+      "description": "We understand Food Allergies! With over 20 years of experience, we specialize in consultations and custom packages for those dealing with food allergies. At Food Allergy Wizards, our mission is to create magic in your life through key strategies, recipes, and personal support all tailored to your needs.",
+      "followers": {
+        "facebook": 7800,
+        "twitter": 39
+      },
+      "image_url": "https://i1.feedspot.com/5293458.jpg?t=1623831375"
+    },
+    {
+      "title": "Amanda MacGregor Blog",
+      "feed_url": "https://www.amandamacgregor.com/blog-feed.xml",
+      "website_url": "https://www.amandamacgregor.com/blog",
+      "description": "Sharing recipes, wellness tips, and advice for living and eating with food allergies, such as planning a wedding, traveling, family dinners, and more!",
+      "followers": {
+        "facebook": 482,
+        "twitter": 516,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5360634.jpg?t=1641461101"
+    },
+    {
+      "title": "AllergyBites Blog",
+      "feed_url": "https://allergy-bites.com/blog/feed/",
+      "website_url": "https://allergy-bites.com/blog/",
+      "description": "Hi, my name is Kathleen. I'm a Toronto-based writer, a foodie, and most recently, a mom of a food-allergic kid. I seek out & share allergy-friendly eats, treats, spaces & places.",
+      "followers": {
+        "twitter": 598
+      },
+      "image_url": "https://i1.feedspot.com/4836334.jpg?t=1607323901"
+    },
+    {
+      "title": "Allergy Free Mouse",
+      "feed_url": "https://www.allergyfreemouse.com/feed/",
+      "website_url": "https://www.allergyfreemouse.com/",
+      "description": "A one stop Disney food allergies planning guide. Whether you have a milk allergy, gluten allergy, peanut allergy or one of the many other food allergies.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4575804.jpg?t=1607323915"
+    },
+    {
+      "title": "\u200bGoodie Goodie Gluten-Free",
+      "feed_url": "https://goodiegoodieglutenfree.com/feed/",
+      "website_url": "https://goodiegoodieglutenfree.com/",
+      "description": "Hi! I'm Julie the certified health coach, photographer, recipe developer, gluten-free expert, food sensitivity queen, and spiritual coach behind Goodie Goodie Gluten-Free. Here you'll find tons of tasty gluten-free, plant-forward, dairy-free, nut-free, allergy-friendly healthy recipes, wellness tips and a side of soul.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 1500,
+        "instagram": 11400
+      },
+      "image_url": "https://i1.feedspot.com/5029765.jpg?t=1607323907"
+    },
+    {
+      "title": "Safely Delish",
+      "feed_url": "https://safelydelish.com/feed/",
+      "website_url": "https://safelydelish.com/",
+      "description": "Allergy-friendly recipes (that are tasty enough for those without!) for families with food allergies and other dietary restrictions, from a working Food Allergy Mama to a toddler in Minneapolis. I'm Lisa, a Minnesota native and food allergy mom of two. I love creating and sharing my family's 'safe' recipes.",
+      "followers": {
+        "facebook": 666,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5451736.jpg?t=1664541892"
+    },
+    {
+      "title": "The Alherrgy Mom Blog",
+      "feed_url": "https://www.thealherrgymomblog.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.thealherrgymomblog.com/search?max-results=4",
+      "description": "Explore allergy-free, gluten-free recipes in the blog along with tips and advice for managing life with allergies. Meghan is Anaphylaxis food allergy mom living in the Philly Burbs, International Selling Children's Book Author, Realtor and Food Allergy Advocate.",
+      "followers": {
+        "facebook": 183,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5451727.jpg?t=1664541851"
+    },
+    {
+      "title": "Allergy Blog",
+      "feed_url": "https://allergy.blog/rss/",
+      "website_url": "https://allergy.blog/",
+      "description": "We share allergy-friendly tips, recipes, products, and brands. Allergy Blog is an independent publication launched in March 2022 by Flappd Tech Inc. We're on a mission to enable an allergy-friendly world. It's something we're passionate about.",
+      "followers": {
+        "facebook": 8,
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/5451742.jpg?t=1664541926"
+    },
+    {
+      "title": "Miss Allergic Reactor",
+      "feed_url": "https://missallergicreactor.com/feed/",
+      "website_url": "https://missallergicreactor.com/",
+      "description": "Learn how to eat out, travel abroad & feel empowered to live life to the fullest with food allergies. Allie Bahn lived abroad for years and travels often, sharing travel and lifestyle tips and experiences.",
+      "followers": {
+        "facebook": 16000,
+        "twitter": 2000,
+        "instagram": 11400
+      },
+      "image_url": "https://i1.feedspot.com/5451738.jpg?t=1664541906"
+    },
+    {
+      "title": "Peanut Allergy Mom",
+      "feed_url": "https://peanutallergymom.com/feed/",
+      "website_url": "https://peanutallergymom.com/",
+      "description": "Welcome to Peanut Allergy Mom! Your one-stop-shop for allergy-friendly recipes, cooking guides and cool product reviews. I'm Becky - I'm a wife, mom to a teenage boy and a 4-year-old dog named Porter, and a lifestyle blogger who strives to make daily life fun and adventurous for my family.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 859,
+        "instagram": 446
+      },
+      "image_url": "https://i1.feedspot.com/5451735.jpg?t=1664541881"
+    },
+    {
+      "title": "Food Allergy Traveler Blog",
+      "feed_url": "https://foodallergygetaways.com/feed/",
+      "website_url": "https://foodallergygetaways.com/food-allergy-travel-blog/",
+      "description": "Food Allergy Blog for all things food allergy travel, restaurants, and recipes from a food allergy traveler and food allergy travel agent. With her own food allergies, Lauren lives gluten- and dairy-free, as well as some tree nuts and mushrooms. Food Allergy Traveler Lauren knows firsthand what it is like to live and travel with food allergies.",
+      "followers": {
+        "facebook": 331
+      },
+      "image_url": "https://i1.feedspot.com/5451733.jpg?t=1664541871"
+    },
+    {
+      "title": "Coffee Table Eats",
+      "feed_url": "https://coffeetableeats.com/wp/feed/",
+      "website_url": "https://coffeetableeats.com/",
+      "description": "Explore casual, delicious, allergy-friendly recipes for everyone who loves good food! Here you'll find recipes that are dairy-free, gluten-free, top 9-free, garlic free, and more! Welcome to your go-to site for easy, delicious, allergy-friendly recipes. Our family knows a little bit about food allergies: combined, we have over a dozen allergies and sensitivities.",
+      "followers": {
+        "facebook": 94,
+        "instagram": 515
+      },
+      "image_url": "https://i1.feedspot.com/5451731.jpg?t=1664541866"
+    },
+    {
+      "title": "Food Allergy Mom Blog",
+      "feed_url": "https://foodallergymom.com/feed/",
+      "website_url": "https://foodallergymom.com/blog/",
+      "description": "Hi, We're Lauren & Katie, we're food allergy moms. This blog is a compilation of what we've experienced and learned to hopefully let you know you're not alone and offer more encouragement, resources, tips, ideas, and support to navigate the world of allergies for your family. The Food allergy mom blog is about the day-to-day of raising littles with food allergies.",
+      "followers": {
+        "facebook": 766,
+        "twitter": 137,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/5421882.jpg?t=1657870757"
+    },
+    {
+      "title": "Food Allergy P.I.",
+      "feed_url": "https://foodallergypi.com/feed/",
+      "website_url": "https://foodallergypi.com/",
+      "description": "Hi! I'm Lisa. the food allergy mom. Food Allergy P.I. is a blog that follows my love for food, family & fun! Creating allergy-friendly recipes, finding and trying new products, health, beauty, home education, parenting, DIY, and all things Disney! I'm on a mission to be safe, have fun & bring awareness to food allergies.",
+      "followers": {
+        "facebook": 8800,
+        "twitter": 911,
+        "instagram": 15100
+      },
+      "image_url": "https://i1.feedspot.com/5423822.jpg?t=1658383870"
+    },
+    {
+      "title": "Black Allergy Mama",
+      "feed_url": "https://blackallergymama.com/feed/",
+      "website_url": "https://blackallergymama.com/all-articles/",
+      "description": "I'm Renia, the content creator, and curator behind the Houston-based blog Black Allergy Mama. I started this blog as a way to highlight my life as a professional foodie, but in 2018, following the birth of my daughter Emory, the vision for my blog shifted. At nine moths old Emory was diagnosed with various food allergies. It was then that I decided to use this space to highlight delicious allergy-friendly recipes, products, and a glimpse into my life as a Black allergy mom!",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 12
+      },
+      "image_url": "https://i1.feedspot.com/5451715.jpg?t=1664541735"
+    },
+    {
+      "title": "Allergy Asthma Food Allergy Centers Blog",
+      "feed_url": "https://aafacenters.com/feed/",
+      "website_url": "https://aafacenters.com/blog/",
+      "description": "Allergy, Asthma & Food Allergy Centers is a comprehensive resource for the diagnosis and treatment of children and adults with allergic conditions. We provide high-quality patient care in a personal and caring environment. Our mission is to use our expertise in allergy and immunology to improve the quality of life of adults and children through the diagnosis and management of asthma, food allergies, and allergic conditions.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 183,
+        "instagram": 244
+      },
+      "image_url": "https://i1.feedspot.com/5451716.jpg?t=1664541743"
+    },
+    {
+      "title": "The Nut-Free Vegan",
+      "feed_url": "https://thenutfreevegan.net/feed/",
+      "website_url": "https://thenutfreevegan.net/",
+      "description": "The Nut-Free Vegan is a plant-based food blog of simple and delicious vegan recipes for people who have a tree nut allergy, or just like great food. I'm Steven, a ten-year vegan and lifelong food allergy sufferer. I work as a food photographer and graphic designer.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 757,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/5451726.jpg?t=1664541847"
+    },
+    {
+      "title": "Zestfull",
+      "feed_url": "https://www.thezestfull.com/feed/",
+      "website_url": "https://www.thezestfull.com/",
+      "description": "Through educational outreach, programs, digital media, advocacy and awareness, our goal is to provide solutions to improve the health and well-being of people affected by allergic conditions. We aim to address and improve the quality of life of those affected by allergic conditions by striving to fill the gap between patients, doctors and other organizations. Food allergies, eczema and asthma are more than a medical diagnosis. Zestfull is here to help you thrive and celebrate your life.",
+      "followers": {
+        "facebook": 2800,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5451722.jpg?t=1664541831"
+    },
+    {
+      "title": "The Allergy Mom Blog",
+      "feed_url": "https://theallergymom.com/feed/",
+      "website_url": "https://theallergymom.com/category/blog/",
+      "description": "The Allergy Mom blog is for families dealing with Allergies, Anaphylaxis, Asthma, Eczema and related disorders. You can expect posts on various topics relevant to those living a life with allergies. That is my story of how I became The Allergy Mom. I hope that this website will somehow make life easier for your family. My goals for this site are to provide a place where we can share our stories, resources, advice, and more to support each other.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 1600,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5451724.jpg?t=1664541838"
+    },
+    {
+      "title": "Food Allergy Canada",
+      "feed_url": "https://foodallergycanada.ca/feed/",
+      "website_url": "https://foodallergycanada.ca/news-events-webinars-blogs/",
+      "description": "Food Allergy Canada educates, supports and advocates for the needs of people living with food allergies and the risk of anaphylaxis. They also support and participate in food allergy research.",
+      "followers": {
+        "facebook": 39300,
+        "twitter": 7600,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4576360.jpg?t=1607323891"
+    },
+    {
+      "title": "Milk Allergy Mom Blog",
+      "feed_url": "https://milkallergymom.com/feed?x=1",
+      "website_url": "https://milkallergymom.com/category/blog/",
+      "description": "Simple food ideas for anaphylaxis food allergy mom , allergy friendly recipes and milk-free food.",
+      "followers": {
+        "facebook": 18600,
+        "twitter": 126,
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/4575680.jpg?t=1607323872"
+    },
+    {
+      "title": "Food Allergy Institute Blog",
+      "feed_url": "https://foodallergyinstitute.com/resources/blog/rss.xml",
+      "website_url": "https://foodallergyinstitute.com/resources/blog/",
+      "description": "Read our blog to learn from the experts about everything food allergy & mental health. At The Food Allergy Institute, we work to provide support to food-allergic individuals, their families, communities, and advocate for safe inclusion while reducing the stress & anxiety that can come with living with food allergies.",
+      "followers": {
+        "facebook": 272,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5314385.jpg?t=1629544441"
+    },
+    {
+      "title": "Learning to Eat Allergy-Free",
+      "feed_url": "http://feeds.feedburner.com/learningtoeatallergyfree-multiplefoodallergies",
+      "website_url": "http://www.learningtoeatallergyfree.com/",
+      "description": "At Learning to Eat Allergy-Free Colette Martin share research, recipes, products and tips on eating allergen-free and gluten-free.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4575577.jpg?t=1607323944"
+    },
+    {
+      "title": "AllergyEats Blog",
+      "feed_url": "https://www.allergyeats.com/blog/feed/",
+      "website_url": "https://www.preventallergies.org/blog/",
+      "description": "AllergyEats is a crowd-sourced U.S. restaurant guide for the food allergy community.",
+      "followers": {
+        "facebook": 26600,
+        "twitter": 11000,
+        "instagram": 6000
+      },
+      "image_url": "https://i1.feedspot.com/4575520.jpg?t=1607323886"
+    },
+    {
+      "title": "Prevent Food Allergies Blog",
+      "feed_url": "https://www.preventallergies.org/blog/feed",
+      "website_url": "https://www.preventallergies.org/blog/",
+      "description": "At Prevent Food Allergies, our goal is to provide families with the information, tools, and support to bring this new research home to reverse the troubling rise in food allergies. We are a group of physicians and parents who are committed to making food allergy prevention accessible for every parent.",
+      "followers": {
+        "facebook": 486,
+        "instagram": 16
+      },
+      "image_url": "https://i1.feedspot.com/5293456.jpg?t=1623836445"
+    },
+    {
+      "title": "The Loopy Whisk",
+      "feed_url": "https://theloopywhisk.com/feed/",
+      "website_url": "https://www.allergycompanions.com/food-allergy-blog/",
+      "description": "I'm Katarina Cermelj (Kat for short) and I'm the recipe developer, writer, photographer and food science nerd behind The Loopy Whisk. I'm so excited to welcome you to The Loopy Whisk, where we're all about feel good recipes that make living with food allergies and dietary requirements easy as cake! I try to provide as much information as possible with my recipes. That includes detailed step-by-step photos in the blog posts, simple scientific explanations of WHY the recipes work, as well as fairly long recipes with my top tips scattered throughout.",
+      "followers": {
+        "facebook": 466000,
+        "twitter": 710,
+        "instagram": 2300000
+      },
+      "image_url": "https://i1.feedspot.com/5451734.jpg?t=1664541875"
+    },
+    {
+      "title": "Drizzle Kitchen",
+      "feed_url": "http://drizzlekitchen.com/feed/",
+      "website_url": "https://drizzlekitchen.com/",
+      "description": "We love finding little ways to help better our clients' lives through macro and micronutrients as well as through the benefits of certain foods, supplemental powders, herbs and spices that aren't just limited to the information on a food label. Explore our articles on food and allergies, recipes and more!",
+      "followers": {
+        "facebook": 694,
+        "twitter": 375,
+        "instagram": 6300
+      },
+      "image_url": "https://i1.feedspot.com/5451728.jpg?t=1664541855"
+    },
+    {
+      "title": "The Open Cookbook",
+      "feed_url": "https://theopencookbook.com/feed/",
+      "website_url": "https://theopencookbook.com/",
+      "description": "I'm Stephanie, a Nutritional Therapy Practitioner, AIP Certified Coach, and allergy-friendly recipe developer. I created The Open Cookbook as a space to share easy to make Top 8 allergen-free and AIP/Paleo recipes that are full of flavor, bringing joy back into the kitchen when faced with food allergies or autoimmune disease.",
+      "followers": {
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5451723.jpg?t=1664542884"
+    }
+  ]
+}

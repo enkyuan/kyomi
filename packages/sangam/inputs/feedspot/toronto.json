@@ -1,0 +1,505 @@
+{
+  "category": "Toronto",
+  "source_url": "https://rss.feedspot.com/toronto_rss_feeds",
+  "feeds": [
+    {
+      "title": "Now Toronto",
+      "feed_url": "https://nowtoronto.com/feed/",
+      "website_url": "https://nowtoronto.com/",
+      "description": "Toronto's best source for alternative news, entertainment, events, and food.",
+      "followers": {
+        "facebook": 70500,
+        "twitter": 215800,
+        "instagram": 98100
+      },
+      "image_url": "https://i1.feedspot.com/4206126.jpg?t=1609566114"
+    },
+    {
+      "title": "Narcity Toronto",
+      "feed_url": "https://www.narcity.com/feeds/toronto.rss",
+      "website_url": "https://www.narcity.com/toronto/",
+      "description": "The leading guide for everything happening, where people are hanging out and the best spots to eat in Toronto.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 20700
+      },
+      "image_url": "https://i1.feedspot.com/4789113.jpg?t=1609566196"
+    },
+    {
+      "title": "YYZ Deals",
+      "feed_url": "https://yyzdeals.com/atom/1",
+      "website_url": "https://yyzdeals.com/",
+      "description": "Toronto's travel deal community. Find cheap flights, holiday packages, and all inclusive vacations from YYZ. Featuring articles, guides, alerts, forums, discount promo codes, sales and more.",
+      "followers": {
+        "facebook": 65000,
+        "twitter": 23500
+      },
+      "image_url": "https://i1.feedspot.com/296663.jpg?t=1609566203"
+    },
+    {
+      "title": "Toronto Realty Blog",
+      "feed_url": "https://torontorealtyblog.com/feed/",
+      "website_url": "https://torontorealtyblog.com/",
+      "description": "The Realty Blog is a platform to describe the Toronto real estate market through my eyes, with my witty opinions, perceptions and descriptions of my day-to-day interactions with buyers, sellers, agents, and the entire cast of characters I come across in this thriving industry.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 5600,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4619794.jpg?t=1609566214"
+    },
+    {
+      "title": "View The Vibe",
+      "feed_url": "https://viewthevibe.com/feed/",
+      "website_url": "https://viewthevibe.com/",
+      "description": "View the Vibe is Toronto's premier online magazine, featuring local and pop culture, restaurants, reviews, events, food, fashion, gossip, entertainment, things to do, and the best of what the city has to offer.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 11000,
+        "instagram": 200500
+      },
+      "image_url": "https://i1.feedspot.com/4789076.jpg?t=1609566230"
+    },
+    {
+      "title": "The Leafs Nation",
+      "feed_url": "https://theleafsnation.com/feed",
+      "website_url": "https://theleafsnation.com/",
+      "description": "The Leafs Nation blog shares the pain and disappointment of being a Leafs fan through analysis, news, videos and humor.",
+      "followers": {
+        "facebook": 68700,
+        "twitter": 19100
+      },
+      "image_url": "https://i1.feedspot.com/3385091.jpg?t=1609566256"
+    },
+    {
+      "title": "Toronto Mike",
+      "feed_url": "https://www.torontomike.com/rss/",
+      "website_url": "https://www.torontomike.com/",
+      "description": "A Toronto blog about all sorts of things with a Toronto-centric aftertaste. This Toronto Blog and podcast tastes great and is less filling.",
+      "followers": {
+        "twitter": 12400
+      },
+      "image_url": "https://i1.feedspot.com/902105.jpg"
+    },
+    {
+      "title": "Chocolates & Chai",
+      "feed_url": "https://www.chocolatesandchai.com/feed/",
+      "website_url": "https://www.chocolatesandchai.com/",
+      "description": "Hi, my name is Riz. And I like to take photos of food. And I like to cook food. And I like to eat food. Chocolates & Chai is a food blog for comfort food and brunch lovers that looks to international cuisine for inspiration. It's about finding the love, and the narrative behind every meal.",
+      "followers": {
+        "facebook": 15900,
+        "twitter": 600,
+        "instagram": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4904415.jpg?t=1609566234"
+    },
+    {
+      "title": "The Spill Magazine",
+      "feed_url": "http://spillmagazine.com/feed/",
+      "website_url": "https://spillmagazine.com/",
+      "description": "The Spill Magazine is a Toronto-based online publication dedicated to covering the independent music scene with a strong focus on our thriving hometown talent.",
+      "followers": {
+        "facebook": 16600,
+        "twitter": 7800,
+        "instagram": 8100
+      },
+      "image_url": "https://i1.feedspot.com/4744774.jpg?t=1609566319"
+    },
+    {
+      "title": "Blue Jays Nation",
+      "feed_url": "https://bluejaysnation.com/feed",
+      "website_url": "https://bluejaysnation.com/",
+      "description": "Blue Jays Nation Blog is the official blog of Blue Jays Nation Club. They shares news related to baseball.",
+      "followers": {
+        "twitter": 3600,
+        "instagram": 23600
+      },
+      "image_url": "https://i1.feedspot.com/4603148.jpg?t=1603288202"
+    },
+    {
+      "title": "Liberty Village Toronto",
+      "feed_url": "https://libertyvillagetoronto.com/feed",
+      "website_url": "https://libertyvillagetoronto.com/",
+      "description": "Liberty Village Toronto is an online magazine which showcases the best this neighbourhood has to offer.",
+      "followers": {
+        "facebook": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4789042.jpg?t=1609566339"
+    },
+    {
+      "title": "BK Real Estate Team Blog",
+      "feed_url": "https://bkteam.ca/feed/",
+      "website_url": "https://bkteam.ca/blog/",
+      "description": "Leslie Benczik is a real estate agent in Markham, Ontario. With a proven track record of home and condominium sales, Leslie puts his clients first.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 144
+      },
+      "image_url": "https://i1.feedspot.com/4886581.jpg?t=1609566416"
+    },
+    {
+      "title": "Toronto Film Review",
+      "feed_url": "http://torontofilmreview.blogspot.com/feeds/posts/default",
+      "website_url": "http://torontofilmreview.blogspot.com/",
+      "description": "Toronto Film Listings, Reviews and Criticism.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2041072.jpg?t=1609566437"
+    },
+    {
+      "title": "Move Smartly",
+      "feed_url": "https://feeds.feedburner.com/movesmartly",
+      "website_url": "https://www.movesmartly.com/",
+      "description": "Toronto Real Estate and Neighbourhoods Blog - Original, data-driven analysis and insights into Toronto's real estate market from Realosophy's John Pasalis and fellow must-read bloggers on real estate policy, finance, law and more.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/1694075.jpg?t=1609566442"
+    },
+    {
+      "title": "Riverside BIA",
+      "feed_url": "http://riverside-to.com/feed/",
+      "website_url": "https://riverside-to.com/",
+      "description": "Historic Queen East and beloved home of Degrassi Street, Riverside is known for its award-winning restaurants and bars, art galleries and historical sites.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 6600,
+        "instagram": 8100
+      },
+      "image_url": "https://i1.feedspot.com/4788571.jpg?t=1609566448"
+    },
+    {
+      "title": "Toronto Food Blog",
+      "feed_url": "https://torontofoodblog.com/feed/",
+      "website_url": "https://torontofoodblog.com/",
+      "description": "Hi I'm Ashley Allinson. Toronto Food Blog is my blog for the budget-conscious reader who wants to know what, where and when to eat in Toronto. Toronto Food Blog is for the budget-conscious reader, willing to venture off the beaten path to find the best cheap eats in the Six.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 2300,
+        "instagram": 44900
+      },
+      "image_url": "https://i1.feedspot.com/4789085.jpg?t=1609566451"
+    },
+    {
+      "title": "Toronto Grand Prix Tourist",
+      "feed_url": "https://feeds.feedburner.com/blogspot/IXXYAM",
+      "website_url": "https://www.torontograndprixtourist.com/",
+      "description": "Growing multi-media giant, photographer and blogger in TO covering sports, entertainment and life in the big city. I am the Toronto Grand Prix Tourist.",
+      "followers": {
+        "twitter": 2300,
+        "instagram": 800
+      },
+      "image_url": "https://i1.feedspot.com/4788919.jpg?t=1609566460"
+    },
+    {
+      "title": "Wise Law Blog",
+      "feed_url": "https://feeds.feedburner.com/WiseLawBlog",
+      "website_url": "http://wiselaw.blogspot.com/",
+      "description": "Legal headlines and opinions from Toronto employment lawyer, Garry J. Wise and the lawyers of Wise Law Office, Toronto, Ontario.",
+      "followers": {
+        "facebook": 204,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4480672.jpg?t=1611553883"
+    },
+    {
+      "title": "Editors Toronto Blog",
+      "feed_url": "https://editorstorontoblog.com/feed/",
+      "website_url": "https://editorstorontoblog.com/",
+      "description": "Editors' Canada promotes professional editing as key in producing effective communication. Our 1,800 members, both salaried and freelance, work with individuals in the corporate, technical, government, not-for-profit and publishing sectors.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4789041.jpg?t=1609566514"
+    },
+    {
+      "title": "Spacing Toronto",
+      "feed_url": "https://spacing.ca/toronto/feed/",
+      "website_url": "https://spacing.ca/toronto/",
+      "description": "Spacing Toronto is your hub for daily dispatches from the streets of Toronto to cities around the world, offering both analysis and a forum for discussion. Our contributors examine city hall, architecture, urban planning, public transit, transportation infrastructure and just about anything that involves the public realm of our cities.",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 38500
+      },
+      "image_url": "https://i1.feedspot.com/5538619.jpg?t=1681208420"
+    },
+    {
+      "title": "The Local",
+      "feed_url": "https://thelocal.to/feed/",
+      "website_url": "https://thelocal.to/",
+      "description": "The Local is an independent magazine exploring urban health and social issues in Toronto. We take a data-driven, yet authentically human approach to storytelling on pressing issues facing the city, from poverty and homelessness to mental health, ageing, and food insecurity. The Local is unabashedly Toronto, reporting from corners of the city that are too often ignored or misunderstood, with bylines as diverse as the city itself. We publish in-depth features, essays, data journalism and commentary, alongside multimedia and other experimental forms of storytelling.",
+      "followers": {
+        "facebook": 645,
+        "twitter": 8900,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5534514.jpg?t=1680696034"
+    },
+    {
+      "title": "Over Here Toronto",
+      "feed_url": "https://www.overheretoronto.com/feed/",
+      "website_url": "https://www.overheretoronto.com/",
+      "description": "Over Here Toronto - Toronto's #1 blog about things to do, entertainment, trends, news, experiences, events, new restaurants, travel and more.",
+      "followers": {
+        "facebook": 2600,
+        "instagram": 14000
+      },
+      "image_url": "https://i1.feedspot.com/8544831.jpg?t=1753108524"
+    },
+    {
+      "title": "CityNews Toronto",
+      "feed_url": "https://toronto.citynews.ca/feed/",
+      "website_url": "https://toronto.citynews.ca/",
+      "description": "CityNews Toronto is all about Toronto's News, Entertainment, Lifestyle, Weather. City's unique combination of extremely cost-effective, original programming, and high-energy, award-winning news and lifestyle coverage is now heralded internationally as the television of the future. Their newsroom's mission: To tell the stories that touch hearts, as well as minds.",
+      "followers": {
+        "facebook": 822400,
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/3775197.jpg"
+    },
+    {
+      "title": "Curiocity Toronto",
+      "feed_url": "https://curiocity.com/feed/toronto",
+      "website_url": "https://curiocity.com/toronto/",
+      "description": "A curated slate of what matters in your city, Curiocity Toronto brings you the most relevant local food, experiences, deals, & adventures.",
+      "followers": {
+        "facebook": 521400,
+        "twitter": 582,
+        "instagram": 49600
+      },
+      "image_url": "https://i1.feedspot.com/8544830.jpg?t=1753108520"
+    },
+    {
+      "title": "Toronto Rentals Blog",
+      "feed_url": "https://www.torontorentals.com/blog/feed",
+      "website_url": "https://www.torontorentals.com/blog/",
+      "description": "Looking for an apartment in Toronto? TorontoRentals.com helps you find the perfect place to call home in Toronto & Greater Toronto Area GTA.",
+      "followers": {
+        "facebook": 15500,
+        "twitter": 578,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4789313.jpg?t=1609566226"
+    },
+    {
+      "title": "Neighbourhood Guide Blog",
+      "feed_url": "https://www.neighbourhoodguide.com/feed/",
+      "website_url": "https://www.neighbourhoodguide.com/blog/",
+      "description": "Neighbourhood Guide is a website with a community focus a one-stop, on-line resource for valuable, content on everything you need to know about communities in the GTA, including real estate, schools, transportation, recreation, local history, and lifestyle.",
+      "followers": {
+        "facebook": 2900,
+        "instagram": 365
+      },
+      "image_url": "https://i1.feedspot.com/5442267.jpg?t=1663242693"
+    },
+    {
+      "title": "The WEIR Team",
+      "feed_url": "https://www.theweirteam.ca/feed",
+      "website_url": "https://www.theweirteam.ca/toronto-real-estate-news-blog",
+      "description": "We're a top Toronto real estate team focused on buying and selling real estate in Leslieville, Topham Park, East York, Pickering, Ajax, Durham Region, GTA.",
+      "followers": {
+        "twitter": 948,
+        "instagram": 8900
+      },
+      "image_url": "https://i1.feedspot.com/4789298.jpg?t=1609566344"
+    },
+    {
+      "title": "Ajinkya Dharane",
+      "feed_url": "https://www.ajinkyadharane.com/blog/blog-feed.xml",
+      "website_url": "https://www.ajinkyadharane.com/blog",
+      "description": "Ajinkya started writing during the lockdown and quickly it became a therapy for him. He writes mystery thriller, crime fiction novels. His personal blog is more of an opinion of world events.",
+      "followers": {
+        "facebook": 251,
+        "twitter": 85,
+        "instagram": 448
+      },
+      "image_url": "https://i1.feedspot.com/5178946.jpg?t=1609566356"
+    },
+    {
+      "title": "Myself Think",
+      "feed_url": "https://feeds.feedburner.com/Blog-MyselfThink",
+      "website_url": "https://www.myselfthink.com/blog",
+      "description": "Midlife is just the beginning. Carol Sloan shares real stories and anecdotes meant to recharge life, inspire risk, and find meaning in the everyday.",
+      "followers": {
+        "twitter": 188
+      },
+      "image_url": "https://i1.feedspot.com/5038607.jpg?t=1609566369"
+    },
+    {
+      "title": "Toronto Etsy Street Team",
+      "feed_url": "https://torontoetsystreetteam.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://torontoetsystreetteam.blogspot.com/",
+      "description": "TEST is a collective of Toronto Etsy handmade, supplies & vintage sellers.",
+      "followers": {
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4789052.jpg?t=1609566482"
+    },
+    {
+      "title": "The Magic of Coby Blog",
+      "feed_url": "https://www.magiciantoronto.com/blog-feed.xml",
+      "website_url": "https://www.magiciantoronto.com/blog",
+      "description": "Stay up to date with Coby Elimelech. Coby Elimelech is one of the most requested Magicians and Corporate Entertainers in the Greater Toronto Area including Mississauga, Vaughan and across Canada.",
+      "followers": {
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5153357.jpg?t=1609567188"
+    },
+    {
+      "title": "Mulberry Summers",
+      "feed_url": "https://mulberrysummers.blogspot.com/feeds/posts/default",
+      "website_url": "https://mulberrysummers.blogspot.com/",
+      "description": "Hi, I'm Salonee! A Content Marketer by profession, an inquisitive learner, passionate foodie, book lover and closet chef at all other times. This is my blog about marketing, food, books, life in general.",
+      "followers": {
+        "twitter": 137
+      },
+      "image_url": "https://i1.feedspot.com/5168392.jpg?t=1609567100"
+    },
+    {
+      "title": "The Toronto Cafe and Food Blog",
+      "feed_url": "http://torontocafeandfood.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://torontocafeandfood.blogspot.com/",
+      "description": "The Toronto Cafe and Food is a review blog dedicated to cafes, restaurants, and other foodie stuff across Toronto.",
+      "followers": {
+        "facebook": 404,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4788961.jpg?t=1609566566"
+    },
+    {
+      "title": "Historic Toronto Blog",
+      "feed_url": "https://tayloronhistory.com/blog/feed/",
+      "website_url": "https://tayloronhistory.com/blog/",
+      "description": "Information on Toronto's history.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4789005.jpg?t=1609566673"
+    },
+    {
+      "title": "Spacing",
+      "feed_url": "https://spacing.ca/feed/",
+      "website_url": "https://spacing.ca/",
+      "description": "Spacing is one of the most unique magazines on Canadian newsstands. The magazine uncovers the joys, obstacles and politics of the public realm by cutting through the cynicism that often pervades any discussion about urban issues. Spacing pushes readers to think critically about how they can shape the public spaces that surround their everyday lives.",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 38500
+      },
+      "image_url": "https://i1.feedspot.com/47800.jpg?t=1751608041"
+    },
+    {
+      "title": "Jays Journal",
+      "feed_url": "https://jaysjournal.com/feed/",
+      "website_url": "https://jaysjournal.com/",
+      "description": "The ultimate home for Toronto Blue Jays news, rumors, updates, trades, signings, injuries, commentary, analysis, and more!",
+      "followers": {
+        "facebook": 38200,
+        "twitter": 9900,
+        "instagram": 38900
+      },
+      "image_url": "https://i1.feedspot.com/4788893.jpg?t=1609566259"
+    },
+    {
+      "title": "Raptors HQ",
+      "feed_url": "https://www.raptorshq.com/rss/index.xml",
+      "website_url": "https://www.raptorshq.com/",
+      "description": "Your best source for quality Toronto Raptors news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 21200
+      },
+      "image_url": "https://i1.feedspot.com/4788889.jpg?t=1609566571"
+    },
+    {
+      "title": "Daily Hive",
+      "feed_url": "https://torontoist.com/feed/",
+      "website_url": "https://dailyhive.com/",
+      "description": "Toronto News, Politics, Events, Culture and everything in between.",
+      "followers": {
+        "facebook": 56100,
+        "instagram": 167600
+      },
+      "image_url": "https://i1.feedspot.com/4788534.jpg?t=1609566161"
+    },
+    {
+      "title": "Urban Toronto",
+      "feed_url": "https://urbantoronto.ca/news/feed",
+      "website_url": "https://urbantoronto.ca/",
+      "description": "UrbanToronto is Toronto's premier website focused on condos, architecture, urban development and real estate.",
+      "followers": {
+        "facebook": 23600,
+        "twitter": 50700
+      },
+      "image_url": "https://i1.feedspot.com/548901.jpg?t=1609566200"
+    },
+    {
+      "title": "Toronto Police Service",
+      "feed_url": "https://www.torontopolice.on.ca/newsreleases/rss.php",
+      "website_url": "http://www.torontopolice.on.ca/",
+      "description": "We are dedicated to delivering police services in partnership with our communities to keep Toronto the best and safest place to be. Read the latest news on TPSNews along with stories and blogs.",
+      "followers": {
+        "facebook": 92800,
+        "twitter": 436500,
+        "instagram": 125800
+      },
+      "image_url": "https://i1.feedspot.com/963240.jpg?t=1639404031"
+    },
+    {
+      "title": "BusinessPortraits.ca Blog (requires feed url)",
+      "feed_url": "https://businessportraits.ca/blogs/blog.atom",
+      "website_url": "https://businessportraits.ca/blogs/blog",
+      "description": "The latest stories from BusinessPortraits.ca about business portraits & corporate headshots in Toronto and other surrounding cities in Ontario, Canada. It specializes in professional corporate headshots, executive, LinkedIn and business portraits.",
+      "followers": {
+        "facebook": 29,
+        "instagram": 171
+      },
+      "image_url": "https://i1.feedspot.com/5135730.jpg?t=1625829791"
+    },
+    {
+      "title": "Biking Toronto",
+      "feed_url": "https://bikingtoronto.com/feed",
+      "website_url": "https://bikingtoronto.com/",
+      "description": "Everything you need to know about cycling in Toronto. Follow the page for videos, pictures, and updates about my journey here in the city of Toronto.",
+      "followers": {
+        "twitter": 23200,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4788939.jpg?t=1609566546"
+    },
+    {
+      "title": "Women's Musical Club of Toronto News",
+      "feed_url": "https://www.wmct.on.ca/news-notes/feed/",
+      "website_url": "https://www.wmct.on.ca/news/",
+      "description": "The Women's Musical Club of Toronto presents an annual series of world-class chamber music concerts by both well-established international and Canadian performers, and exceptional musicians on the threshold of their careers. The WMCT has a special interest in exceptional young Canadian talent and the commissioning of new work by Canadian composers.",
+      "followers": {
+        "facebook": 406
+      },
+      "image_url": "https://i1.feedspot.com/4753026.jpg?t=1609566552"
+    },
+    {
+      "title": "HCDs in Toronto | Heritage Conservation District",
+      "feed_url": "https://hcdtoronto.wordpress.com/feed/",
+      "website_url": "https://hcdtoronto.wordpress.com/",
+      "description": "Up to date information about Heritage Conservation Districts in Toronto. It is an online resource for community members and stakeholders, where heritage consultants and City staff post information about ongoing HCD Study and Plan projects.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4788914.jpg?t=1609566702"
+    },
+    {
+      "title": "Urbaneer Blog",
+      "feed_url": "https://urbaneer.com/feed",
+      "website_url": "https://urbaneer.com/blog",
+      "description": "Engaging Dashing Clever Wordsmith Who Promotes Unique Character Urban Housing In Toronto. Steven Fudge, Sales Representative Bosley Real Estate Ltd. Brokerage.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4788948.jpg?t=1609566328"
+    },
+    {
+      "title": "Toronto Family Law Blog",
+      "feed_url": "https://torontofamilylawblog.ca/feed/",
+      "website_url": "https://torontofamilylawblog.ca/",
+      "description": "Toronto Family Law Blog is everything family law including mediation law, divorce law, family law or family mediation as it pertains to Ontario law.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4789064.jpg"
+    }
+  ]
+}

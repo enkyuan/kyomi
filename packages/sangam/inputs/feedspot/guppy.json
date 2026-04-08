@@ -1,0 +1,37 @@
+{
+  "category": "Guppy",
+  "source_url": "https://rss.feedspot.com/guppy_rss_feeds",
+  "feeds": [
+    {
+      "title": "Colorz Guppy Farm Blog",
+      "feed_url": "https://www.guppyfarm.ca/blog/feed/",
+      "website_url": "https://www.guppyfarm.ca/blog/",
+      "description": "Hi, my name is Denny Stamos. Colorz Guppy Farm started as a hobby when I discovered how many beautiful different strains of guppies exist, with almost endless variations. Since 2017 I have been collecting Guppies. In 2021, I launched Colorz Guppy Farm and offered high-quality pure strain guppies in pairs & trios.",
+      "followers": {
+        "facebook": 3000,
+        "instagram": 579
+      },
+      "image_url": "https://i1.feedspot.com/5414109.jpg?t=1656051834"
+    },
+    {
+      "title": "Tankful Guppy Farm Blog",
+      "feed_url": "https://tankfulguppyfarm.com/blog/feed/",
+      "website_url": "https://tankfulguppyfarm.com/blog/",
+      "description": "We are backyard hobbyists now bringing our own varieties of Guppy to the world. Follow us as we show the steps on how we are going to do this by following our blog post.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5414113.jpg?t=1656054024"
+    },
+    {
+      "title": "Betta Fish Care \u00bb Guppies",
+      "feed_url": "https://japanesefightingfish.org/category/guppies/feed/",
+      "website_url": "https://japanesefightingfish.org/category/guppies/",
+      "description": "Welcome to Japanese Fighting Fish, this website is handled by Dave Gibbins and Flora Gibbins. Here we aim to provide you with helpful information, care tips, and news on guppy fish. Since starting our Betta Fish Care website we have quickly become one of the most complete resources online. So, if you're looking to raise your very own Japanese Fighting Fish or have any questions we are here to help you.",
+      "followers": {
+        "facebook": 31700,
+        "twitter": 5500,
+        "instagram": 22200
+      },
+      "image_url": "https://i1.feedspot.com/5414115.jpg?t=1656054165"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "category": "Kalamazoo News",
+  "source_url": "https://rss.feedspot.com/kalamazoo_michigan_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kalamazoo Times",
+      "feed_url": "https://kalamazootimes.com/stories.rss",
+      "website_url": "https://kalamazootimes.com/",
+      "description": "Kalamazoo Times covers local and county policy decisions that impact businesses, schools, and residents of Kalamazoo County. Dive into cutting Opinions, News analysis, and Commentary on Local issues and events. Kalamazoo Times is a local publication owned by Metric Media LLC serving Kalamazoo residents with daily news stories.",
+      "followers": {
+        "facebook": 19
+      },
+      "image_url": "https://i1.feedspot.com/5495732.jpg?t=1674046042"
+    },
+    {
+      "title": "NowKalamazoo",
+      "feed_url": "https://nowkalamazoo.org/feed/",
+      "website_url": "https://nowkalamazoo.org/feed/",
+      "description": "NowKalamazoo is a truly local, independent news startup focused on publishing important stories that strategically fill gaps in community coverage of Kalamazoo County, with a mission to create and leverage high-quality news and information as a dialogue facilitator and thought leader. We publish original stories on our website throughout the week",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5495734.jpg?t=1674046036"
+    },
+    {
+      "title": "City of Kalamazoo",
+      "feed_url": "https://www.kalamazoocity.org/News-articles",
+      "website_url": "https://www.kalamazoocity.org/News-articles",
+      "description": "The City of Kalamazoo is dedicated to keeping residents informed and up-to-date by providing the latest news about business, performing arts, health/safety issues, human interest and more.",
+      "followers": {
+        "facebook": 33400,
+        "twitter": 5600,
+        "instagram": 10500
+      },
+      "image_url": "https://i1.feedspot.com/5212892.jpg?t=1604397637"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "category": "Microservices",
+  "source_url": "https://rss.feedspot.com/microservices_rss_feeds",
+  "feeds": [
+    {
+      "title": "DZone \u00bb Microservices Zone",
+      "feed_url": "https://feeds.dzone.com/microservices",
+      "website_url": "https://dzone.com/microservices",
+      "description": "The Microservices Zone will take you through breaking down the monolith step-by-step and designing microservices architecture from scratch. It covers everything from scalability to patterns and anti-patterns. It digs deeper than just containers to give you practical applications and business use cases.",
+      "followers": {
+        "facebook": 49500,
+        "twitter": 74000
+      },
+      "image_url": "https://i1.feedspot.com/5099223.jpg?t=1746087071"
+    },
+    {
+      "title": "Microservices.io",
+      "feed_url": "https://microservices.io/feed.xml",
+      "website_url": "https://microservices.io/",
+      "description": "Microservices.io is brought to you by Chris Richardson. Experienced software architect, author of POJOs in Action, the creator of the original CloudFoundry.com, and the author of Microservices patterns.Chris helps clients around the world adopt the microservice architecture through consulting engagements, and training classes and workshops.",
+      "followers": {
+        "twitter": 5900
+      },
+      "image_url": "https://i1.feedspot.com/5126877.jpg?t=1640673375"
+    },
+    {
+      "title": "Confluent Blog \u00bb Microservices",
+      "feed_url": "https://www.confluent.io/rss.xml",
+      "website_url": "https://www.confluent.io/blog/",
+      "description": "Find all articles on how Kafka works for event-driven microservices architecture, communication, and integration with tips, use cases, best practices, and more. Confluent is creating the foundational platform for data-in-motion. With Confluent, organizations can harness the full power of continuously flowing data to innovate and win in the modern digital world.",
+      "followers": {
+        "facebook": 16100,
+        "twitter": 43400,
+        "instagram": 19200
+      },
+      "image_url": "https://i1.feedspot.com/5372061.jpg?t=1644913175"
+    },
+    {
+      "title": "InfoQ \u00bb Microservices",
+      "feed_url": "https://feed.infoq.com/microservices/news/",
+      "website_url": "https://www.infoq.com/microservices/news/",
+      "description": "Latest Microservices News written by software developers for software developers. Since 2006, InfoQ has witnessed and reported on various trends in software development that have passed from the innovator stage to being widely adopted. We were among the first sites to report on the Agile movement, and later followed with Cloud, Containers, DevOps and Microservices.",
+      "followers": {
+        "facebook": 21500,
+        "twitter": 57100
+      },
+      "image_url": "https://i1.feedspot.com/5372057.jpg?t=1644913155"
+    },
+    {
+      "title": "System Design Classroom",
+      "feed_url": "https://newsletter.systemdesignclassroom.com/feed",
+      "website_url": "https://newsletter.systemdesignclassroom.com/",
+      "description": "A System Design Newsletter to help you build better software.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcdb90e4a-4569-433d-93c4-a4863e3d54ef_69x69.png"
+    },
+    {
+      "title": "Chris Richardson Blog",
+      "feed_url": "https://chrisrichardson.net/feed.xml",
+      "website_url": "http://chrisrichardson.net/blog.html",
+      "description": "Chris is a software architect and serial entrepreneur. Today, he is a recognized thought leader in microservices and speaks regularly at international conferences. He delivers consulting and training that helps organizations successfully adopt and use the microservice architecture.",
+      "followers": {
+        "twitter": 16400
+      },
+      "image_url": "https://i1.feedspot.com/5126879.jpg?t=1645178151"
+    },
+    {
+      "title": "Kai Waehner Blog \u00bb Microservices",
+      "feed_url": "https://www.kai-waehner.de/blog/category/microservices/feed/",
+      "website_url": "https://www.kai-waehner.de/blog/category/microservices/",
+      "description": "Read articles on microservices, architectures, app development, Apache Kafka and more! My name is Kai Waehner. My current work focuses on the open source project Apache Kafka to build mission-critical, scalable event streaming infrastructures for tech giants, modern internet startups and traditional enterprises.",
+      "followers": {
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5372058.jpg?t=1644917685"
+    },
+    {
+      "title": "OpsMatters \u00bb Microservices",
+      "feed_url": "https://opsmatters.com/taxonomy/term/1280/feed",
+      "website_url": "https://opsmatters.com/microservices",
+      "description": "Get news, reviews, events, blogs and other useful information dedicated to Microservices. The goal of the OpsMatters platform is to raise the profile of operational tools among users, developers, enthusiasts and decision-makers.",
+      "followers": {
+        "facebook": 220,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5372060.jpg?t=1644913169"
+    }
+  ]
+}

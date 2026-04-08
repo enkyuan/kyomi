@@ -1,0 +1,61 @@
+{
+  "category": "Italy Health",
+  "source_url": "https://rss.feedspot.com/italy_health_rss_feeds",
+  "feeds": [
+    {
+      "title": "Digital Health Italia",
+      "feed_url": "https://digitalhealthitalia.com/feed/",
+      "website_url": "https://digitalhealthitalia.com/",
+      "description": "News and events related to Digital Health and m-health. Digital Health Italia is an editorial project promoted by Healthware Group whose purpose is to disseminate and promote the culture of Digital Health in Italy, offering content and food for thought based on the latest trends on the national and international scene.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 294
+      },
+      "image_url": "https://i1.feedspot.com/5349800.jpg?t=1638605732"
+    },
+    {
+      "title": "MedinAction Blog",
+      "feed_url": "https://www.medinaction.com/feed/",
+      "website_url": "https://www.medinaction.com/blog/",
+      "description": "Read our blog about Health Topics, Lifestyle, and all the useful information you need when travelling to Italy.MedinAction is web-based private medical care service providing immediate home care for tourists and travelers that have difficulty finding a doctor when unexpectedly ill in foreign city.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 724,
+        "instagram": 993
+      },
+      "image_url": "https://i1.feedspot.com/5349609.jpg?t=1638451936"
+    },
+    {
+      "title": "Menarini Blog \u00bb Health",
+      "feed_url": "https://menariniblog.com/category/our-health/feed",
+      "website_url": "https://menariniblog.com/category/our-health",
+      "description": "Find all the health related news on the Menarini Blog.The Menarini Group is the leading Italian pharmaceutical company in the world, a guarantee of internationally recognised quality.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5349662.jpg?t=1638462494"
+    },
+    {
+      "title": "Elisir Life \u00bb Health",
+      "feed_url": "https://www.elisirlife.it/en/blog/tag/health/feed/",
+      "website_url": "https://www.elisirlife.it/en/blog/tag/health/",
+      "description": "Elisir Life Health Blog covers health and wellness tips. Elisir Life aims to guarantee the highest quality of its Nutraceuticals, as well as the functionality and efficiency of the raw materials used, based on the most recent scientific research.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 9,
+        "instagram": 13900
+      },
+      "image_url": "https://i1.feedspot.com/5349781.jpg?t=1638511475"
+    },
+    {
+      "title": "Men's Health Italia",
+      "feed_url": "https://www.menshealth.it/rss",
+      "website_url": "https://www.menshealth.it/",
+      "description": "Men's Health Italia is the first information magazine for man and his interests. Covers articles on health of the body and mind, advice on proper nutrition, travel, current events and more.",
+      "followers": {
+        "facebook": 23800,
+        "twitter": 574,
+        "instagram": 22300
+      },
+      "image_url": "https://i1.feedspot.com/5350538.jpg?t=1638767620"
+    }
+  ]
+}

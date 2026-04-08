@@ -1,0 +1,28 @@
+{
+  "category": "German Wine",
+  "source_url": "https://rss.feedspot.com/german_wine_rss_feeds",
+  "feeds": [
+    {
+      "title": "More Natural Wine Blog",
+      "feed_url": "https://morenaturalwine.com/blogs/natural-wine.atom",
+      "website_url": "https://morenaturalwine.com/blogs/natural-wine",
+      "description": "Natural Wine' is a space where wine lovers discuss wine styles, regions, favorite bottles, and winemaking in general. Want to learn more about Pet-Nats, Orange Wine, Biodynamic Wine, and hot producers we like alongside video reviews? Check out this natural wine blog here.",
+      "followers": {
+        "facebook": 1000,
+        "instagram": 51400
+      },
+      "image_url": "https://i1.feedspot.com/5641719.jpg?t=1690977630"
+    },
+    {
+      "title": "The WineStore Blog",
+      "feed_url": "https://the-winestore.com/en-it/blogs/the-winestory.atom",
+      "website_url": "https://the-winestore.com/en-it/blogs/the-winestory",
+      "description": "The WineStory is the official wine blog from The WineStore. Learn exciting stories about wine, South Africa, and wine routes. The blog is all about wine, wineries, winemakers, and spirits. Check new articles Now on the-winestore.com.",
+      "followers": {
+        "facebook": 825,
+        "instagram": 13400
+      },
+      "image_url": "https://i1.feedspot.com/5641720.jpg?t=1690977728"
+    }
+  ]
+}

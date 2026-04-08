@@ -1,0 +1,44 @@
+{
+  "category": "UK Nursing",
+  "source_url": "https://rss.feedspot.com/uk_nursing_rss_feeds",
+  "feeds": [
+    {
+      "title": "Nursing Times",
+      "feed_url": "https://www.nursingtimes.net/feed/",
+      "website_url": "https://www.nursingtimes.net/news/",
+      "description": "Nursing Times is the independent voice of nursing. We educate, inform and support the nursing profession through our award-winning peer-reviewed journal, online learning resources, and website.",
+      "followers": {
+        "facebook": 93200,
+        "twitter": 153300,
+        "instagram": 18100
+      },
+      "image_url": "https://i1.feedspot.com/4550830.jpg?t=1613715434"
+    },
+    {
+      "title": "Evidence-Based Nursing Blog",
+      "feed_url": "https://blogs.bmj.com/ebn/feed/",
+      "website_url": "https://blogs.bmj.com/ebn/",
+      "description": "Analysis and discussion of developments in Evidence-Based Nursing. EBN publishes critical commentaries and summaries of the most valid research in nursing, from other international healthcare journals.",
+      "followers": {
+        "twitter": 491600
+      },
+      "image_url": "https://i1.feedspot.com/2047531.jpg?t=1613715439"
+    },
+    {
+      "title": "The Nursing & Midwifery Council",
+      "feed_url": "https://www.nmc.org.uk/news/news-and-updates/news-feed/",
+      "website_url": "http://",
+      "description": "We are the UK's regulator for nurses and midwives and we exist to protect the public. Our role is to protect patients and the public through efficient and effective regulation.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4906094.jpg?t=1613715877"
+    },
+    {
+      "title": "Viv Bennett | School Nursing",
+      "feed_url": "https://vivbennett.blog.gov.uk/category/school-nursing/feed/",
+      "website_url": "http://",
+      "description": "Professor Viv Bennett is Public Health England's Chief Nurse and the principal advisor to the government on public health nursing and midwifery. Her ambition is to engage nurses and midwives to be a powerful part of creating a social movement for a 'culture of health' in our society.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4906065.jpg?t=1613715849"
+    }
+  ]
+}

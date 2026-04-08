@@ -44,12 +44,8 @@ function clipToListItem(row: typeof articleClips.$inferSelect): ArticleListItemD
   };
 }
 
-export async function createArticleClip(
-  database: DB,
-  userId: string,
-  body: CreateArticleClipBody,
-): Promise<ArticleDetailDto> {
-  const trimmedUrl = body.url.trim();
+function ensureClipUrl(rawUrl: string): string {
+  const trimmedUrl = rawUrl.trim();
   if (!trimmedUrl) {
     throw new AppError("url is required", { status: 400, code: "CLIP_URL_REQUIRED" });
   }
@@ -58,33 +54,93 @@ export async function createArticleClip(
   } catch {
     throw new AppError("Invalid URL", { status: 400, code: "INVALID_CLIP_URL" });
   }
+  return trimmedUrl;
+}
 
-  let content = body.content?.trim() || null;
+async function resolveClipContent(input: string | undefined, url: string): Promise<string | null> {
+  const trimmed = input?.trim() || null;
+  if (trimmed) {
+    return trimmed;
+  }
+  try {
+    return await extractFullTextFromUrl(url);
+  } catch {
+    return null;
+  }
+}
+
+function deriveTitleFromContent(content: string | null): string {
   if (!content) {
-    try {
-      content = await extractFullTextFromUrl(trimmedUrl);
-    } catch {
-      content = null;
-    }
+    return "";
   }
+  const firstLine = content
+    .split(/\n+/)
+    .map((part) => part.trim())
+    .find((part) => part.length > 0);
+  if (!firstLine) {
+    return "";
+  }
+  return firstLine.length > 120 ? `${firstLine.slice(0, 117)}...` : firstLine;
+}
 
-  let title = body.title?.trim() ?? "";
-  if (!title && content) {
-    const firstLine = content
-      .split(/\n+/)
-      .map((part) => part.trim())
-      .find((part) => part.length > 0);
-    if (firstLine) {
-      title = firstLine.length > 120 ? `${firstLine.slice(0, 117)}...` : firstLine;
-    }
+function deriveFallbackTitle(url: string): string {
+  try {
+    return new URL(url).hostname || CLIP_LIST_FEED_TITLE;
+  } catch {
+    return CLIP_LIST_FEED_TITLE;
   }
-  if (!title) {
-    try {
-      title = new URL(trimmedUrl).hostname || CLIP_LIST_FEED_TITLE;
-    } catch {
-      title = CLIP_LIST_FEED_TITLE;
-    }
+}
+
+function resolveClipTitle(
+  rawTitle: string | undefined,
+  content: string | null,
+  url: string,
+): string {
+  const direct = rawTitle?.trim() ?? "";
+  if (direct) {
+    return direct;
   }
+  const contentTitle = deriveTitleFromContent(content);
+  if (contentTitle) {
+    return contentTitle;
+  }
+  return deriveFallbackTitle(url);
+}
+
+function assertClipUpdateHasFields(body: ClipUpdateBody): void {
+  const hasAny =
+    Object.hasOwn(body, "isRead") ||
+    Object.hasOwn(body, "isSaved") ||
+    Object.hasOwn(body, "title") ||
+    Object.hasOwn(body, "note") ||
+    Object.hasOwn(body, "content");
+  if (!hasAny) {
+    throw new AppError("No updatable fields provided", { status: 400, code: "EMPTY_UPDATE" });
+  }
+}
+
+function resolveClipUpdateValues(body: ClipUpdateBody, prev: typeof articleClips.$inferSelect) {
+  const title =
+    Object.hasOwn(body, "title") && typeof body.title === "string"
+      ? body.title.trim() || prev.title
+      : prev.title;
+  return {
+    title,
+    note: Object.hasOwn(body, "note") ? body.note : prev.note,
+    content: Object.hasOwn(body, "content") ? body.content : prev.content,
+    isRead: Object.hasOwn(body, "isRead") ? body.isRead === true : prev.isRead,
+    isSaved: Object.hasOwn(body, "isSaved") ? body.isSaved === true : prev.isSaved,
+  };
+}
+
+export async function createArticleClip(
+  database: DB,
+  userId: string,
+  body: CreateArticleClipBody,
+): Promise<ArticleDetailDto> {
+  const trimmedUrl = ensureClipUrl(body.url);
+  const content = await resolveClipContent(body.content, trimmedUrl);
+  const title = resolveClipTitle(body.title, content, trimmedUrl);
 
   const id = crypto.randomUUID();
   const now = new Date();
@@ -148,15 +204,7 @@ export async function updateArticleClipForUser(
   clipId: string,
   body: ClipUpdateBody,
 ): Promise<boolean> {
-  const hasAny =
-    Object.hasOwn(body, "isRead") ||
-    Object.hasOwn(body, "isSaved") ||
-    Object.hasOwn(body, "title") ||
-    Object.hasOwn(body, "note") ||
-    Object.hasOwn(body, "content");
-  if (!hasAny) {
-    throw new AppError("No updatable fields provided", { status: 400, code: "EMPTY_UPDATE" });
-  }
+  assertClipUpdateHasFields(body);
 
   const existing = await database
     .select()
@@ -169,23 +217,16 @@ export async function updateArticleClipForUser(
   }
 
   const now = new Date();
-  const nextTitle =
-    Object.hasOwn(body, "title") && typeof body.title === "string"
-      ? body.title.trim() || prev.title
-      : prev.title;
-  const nextNote = Object.hasOwn(body, "note") ? body.note : prev.note;
-  const nextContent = Object.hasOwn(body, "content") ? body.content : prev.content;
-  const nextRead = Object.hasOwn(body, "isRead") ? body.isRead === true : prev.isRead;
-  const nextSaved = Object.hasOwn(body, "isSaved") ? body.isSaved === true : prev.isSaved;
+  const next = resolveClipUpdateValues(body, prev);
 
   await database
     .update(articleClips)
     .set({
-      title: nextTitle,
-      note: nextNote,
-      content: nextContent,
-      isRead: nextRead,
-      isSaved: nextSaved,
+      title: next.title,
+      note: next.note,
+      content: next.content,
+      isRead: next.isRead,
+      isSaved: next.isSaved,
       updatedAt: now,
     })
     .where(and(eq(articleClips.id, clipId), eq(articleClips.userId, userId)));

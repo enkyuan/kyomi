@@ -1,0 +1,29 @@
+{
+  "category": "Health.com",
+  "source_url": "https://rss.feedspot.com/healthdotcom_rss_feeds",
+  "feeds": [
+    {
+      "title": "Health.com",
+      "feed_url": "https://feeds-api.dotdashmeredith.com/v1/rss/google/adf185b2-ff7d-4fe3-a978-b59ff8528c53",
+      "website_url": "https://www.health.com/",
+      "description": "Latest Health Articles from Health.com",
+      "followers": {
+        "facebook": 6100000,
+        "twitter": 3500000,
+        "instagram": 894800
+      },
+      "image_url": "https://i1.feedspot.com/7902422.jpg?t=1745408431"
+    },
+    {
+      "title": "Health.com \u00bb News",
+      "feed_url": "https://feeds-api.dotdashmeredith.com/v1/rss/google/0e5c1dc5-8100-49a0-8a57-625af7fbef05",
+      "website_url": "https://www.health.com/news",
+      "description": "Get Health.com's latest health news and stories including recent medical studies, celebrity health updates, trending health stories, and more.",
+      "followers": {
+        "facebook": 6100000,
+        "instagram": 894800
+      },
+      "image_url": "https://i1.feedspot.com/7902422.jpg?t=1745408431"
+    }
+  ]
+}

@@ -1,0 +1,388 @@
+{
+  "category": "Android Developer",
+  "source_url": "https://rss.feedspot.com/android_developer_rss_feeds",
+  "feeds": [
+    {
+      "title": "Android Developers Blog",
+      "feed_url": "https://feeds.feedburner.com/blogspot/hsDu",
+      "website_url": "https://android-developers.googleblog.com/",
+      "description": "Get the latest Android news, best practices, live videos, demonstrations, tutorials, and more on Android Developers Blog. The platform is focused on bringing the best experiences and latest innovations to users. This page includes best practices and resources to help developers design and implement safe, secure, and private apps.",
+      "followers": {
+        "twitter": 105800
+      },
+      "image_url": "https://i1.feedspot.com/26339.jpg?t=1660895433"
+    },
+    {
+      "title": "Android Authority",
+      "feed_url": "https://www.androidauthority.com/feed/",
+      "website_url": "https://www.androidauthority.com/",
+      "description": "Android Authority blog dedicated to providing expert tips, Android Development news, reviews and how to guides. their 'How to' section has some great quick guides for configuring Android devices for development purposes.",
+      "followers": {
+        "facebook": 2200000,
+        "twitter": 1200000,
+        "instagram": 719800
+      },
+      "image_url": "https://i1.feedspot.com/4615844.jpg?t=1606113665"
+    },
+    {
+      "title": "Dan Lew Codes",
+      "feed_url": "https://blog.danlew.net/rss/",
+      "website_url": "https://blog.danlew.net/",
+      "description": "Dan Lew is an Android software developer at Trello, a visual collaboration tool that creates a shared perspective on any project. In this blog, he shares code as well as thoughts on life, the universe and the mystery of it all.",
+      "followers": {
+        "twitter": 12300
+      },
+      "image_url": "https://i1.feedspot.com/4616607.jpg?t=1606113691"
+    },
+    {
+      "title": "Mobile Dev Memo",
+      "feed_url": "https://mobiledevmemo.com/feed/",
+      "website_url": "https://mobiledevmemo.com/",
+      "description": "Mobile Dev Memo is the site of record for the mobile app development and marketing industry but they also publish their own posts which cover a range of engagement topics. It's a great way to find the most popular posts of the day, just check out their front page to get the latest news.",
+      "followers": {
+        "facebook": 852,
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/3775066.jpg?t=1606113711"
+    },
+    {
+      "title": "AndroidDeveloper.co.in Blog",
+      "feed_url": "https://www.androiddeveloper.co.in/blog/feed/",
+      "website_url": "https://www.androiddeveloper.co.in/blog/",
+      "description": "We are a leading Android mobile application development company in Gurgaon, India providing quality Android apps for any Android Mobile, Tablet with cool graphics.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 740
+      },
+      "image_url": "https://i1.feedspot.com/4617969.jpg"
+    },
+    {
+      "title": "Codementor \u00bb Android Tutorials",
+      "feed_url": "https://www.codementor.io/community/topic/android/feed",
+      "website_url": "https://www.codementor.io/community/topic/android",
+      "description": "This section features Android tutorials to learn, build and enhance your Android app, with tips and insight from top Android developers. Codementor is the largest community for developer mentorship and an on-demand marketplace for software developers.",
+      "followers": {
+        "facebook": 14100,
+        "twitter": 21400
+      },
+      "image_url": "https://i1.feedspot.com/4616594.jpg?t=1606113706"
+    },
+    {
+      "title": "Medium",
+      "feed_url": "https://medium.com/feed/androiddevelopers",
+      "website_url": "https://medium.com/androiddevelopers",
+      "description": "The official Android Developers publication on Medium.",
+      "followers": {
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/5259676.jpg?t=1619685144"
+    },
+    {
+      "title": "Medium",
+      "feed_url": "https://medium.com/feed/tag/android",
+      "website_url": "https://medium.com/tag/android-app-development",
+      "description": "Read writing about Android App Development. Every day, thousands of voices read, write, and share important stories on Medium about Android App Development.",
+      "followers": {
+        "facebook": 520799,
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/4616112.jpg?t=1606113696"
+    },
+    {
+      "title": "ProAndroidDev",
+      "feed_url": "https://proandroiddev.com/feed",
+      "website_url": "https://proandroiddev.com/",
+      "description": "ProAndroidDev is a publication collecting blog posts by Android professionals and Google developer experts. Read the latest articles on these categories; Android App Development, Android Architecture, Animation, Layoutanimation, and many more.",
+      "followers": {
+        "facebook": 52600,
+        "twitter": 15900
+      },
+      "image_url": "https://i1.feedspot.com/5133095.jpg?t=1659961593"
+    },
+    {
+      "title": "CommonsWare Blog",
+      "feed_url": "https://commonsware.com/blog/feed.atom",
+      "website_url": "https://commonsware.com/blog/",
+      "description": "The CommonsWare blog covers everything to do with Android and updates every couple of days. It can show you how to achieve a number of visual effects for Android and has also published a number of books on the topic of Android development.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4368015.jpg?t=1659958709"
+    },
+    {
+      "title": "Nimble App Genie",
+      "feed_url": "https://www.nimbleappgenie.com/blogs/feed/",
+      "website_url": "https://www.nimbleappgenie.com/blogs/",
+      "description": "Find the latest news & insights on mobile app development, E-wallet apps & trending news in the technology industry. Nimble AppGenie is recognized as one of the Global Leaders in Mobile and Web App Development.",
+      "followers": {
+        "facebook": 575,
+        "twitter": 166
+      },
+      "image_url": "https://i1.feedspot.com/5252637.jpg?t=1651838741"
+    },
+    {
+      "title": "Android Mad",
+      "feed_url": "https://feeds.feedburner.com/androidmad",
+      "website_url": "https://www.androidmads.info/",
+      "description": "Androidmad the Advanced Android Development Guide for Beginners and Professionals.",
+      "followers": {
+        "facebook": 115,
+        "twitter": 41
+      },
+      "image_url": "https://i1.feedspot.com/4900938.jpg?t=1606113743"
+    },
+    {
+      "title": "Learn Termux",
+      "feed_url": "https://www.learntermux.tech/feeds/posts/default",
+      "website_url": "https://www.learntermux.tech/",
+      "description": "In this blog, you will learn about the Termux app from Beginner to pro. Blogger Saad Maqsood is committed to delivering a comprehensive resource on the Termux app. His goal is to provide articles written in simple, understandable language, ensuring that Termux's potential is accessible to everyone.",
+      "followers": {
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/5206721.jpg?t=1606114553"
+    },
+    {
+      "title": "Genics Blog",
+      "feed_url": "https://genicsblog.com/rss.xml",
+      "website_url": "https://genicsblog.com/",
+      "description": "Covers well explained tutorials and stuff on coding by Gourav Khunger, a 16 years old enthusiast programmer.",
+      "followers": {
+        "twitter": 153
+      },
+      "image_url": "https://i1.feedspot.com/5324898.jpg?t=1632466211"
+    },
+    {
+      "title": "Pushing Pixels",
+      "feed_url": "https://www.pushing-pixels.org/feed",
+      "website_url": "https://www.pushing-pixels.org/",
+      "description": "\u200bAn awesome Android design blog, founded by Kirill Grouchnikov. Kirill is a user interface engineer currently working on Android project at Google (yeah, another Google guy). Also, he has been doing client side development professionally since 1999 in a variety of UI toolkits and libraries.",
+      "followers": {
+        "facebook": 878,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/99288.jpg"
+    },
+    {
+      "title": "DroidCrunch",
+      "feed_url": "https://droidcrunch.com/feed/",
+      "website_url": "https://droidcrunch.com/",
+      "description": "DroidCrunch is an android news and tips blog committed to give trustworthy reviews over helpful and new applications as well on Smartphones and gadgets.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 201,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4861614.jpg?t=1606113729"
+    },
+    {
+      "title": "More Is Not Always Better",
+      "feed_url": "https://blahti.wordpress.com/feed/",
+      "website_url": "https://blahti.wordpress.com/",
+      "description": "Bill Lahti's thoughts on android design with android apps and tutorials. He has over 15 years experience in Java development and four years in Android development.",
+      "followers": {
+        "twitter": 121
+      },
+      "image_url": "https://i1.feedspot.com/4616485.jpg"
+    },
+    {
+      "title": "Droidchef",
+      "feed_url": "https://blog.droidchef.dev/rss/",
+      "website_url": "https://blog.droidchef.dev/",
+      "description": "Ishan Khanna is a multi-award-winning software engineer, content writer, and international tech speaker with over a decade of experience.",
+      "followers": {
+        "twitter": 1600,
+        "instagram": 450
+      },
+      "image_url": "https://i1.feedspot.com/5466572.jpg?t=1668428170"
+    },
+    {
+      "title": "Blundell",
+      "feed_url": "https://blog.blundellapps.co.uk/feed/",
+      "website_url": "https://blog.blundellapps.co.uk/",
+      "description": "Android Developer tutorials sorted into categories of Beginner, Intermediate and Expert. Covering all aspects of the Android API as well as best practices.",
+      "followers": {
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4616490.jpg?t=1606114573"
+    },
+    {
+      "title": "The Android Arsenal",
+      "feed_url": "https://android-arsenal.com/rss",
+      "website_url": "https://android-arsenal.com/",
+      "description": "A categorized directory of libraries and tools for Android.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 12000
+      },
+      "image_url": "https://i1.feedspot.com/4616125.jpg?t=1608387894"
+    },
+    {
+      "title": "Android-er",
+      "feed_url": "https://feeds.feedburner.com/Android-er",
+      "website_url": "http://android-er.blogspot.com/",
+      "description": "Android-er is all about android programming development tutorial examples.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1688608.jpg?t=1606113850"
+    },
+    {
+      "title": "The Android Mania",
+      "feed_url": "https://www.theandroid-mania.com/feed/",
+      "website_url": "https://www.theandroid-mania.com/",
+      "description": "The Android Mania it's all about an Android, Android apps, How to, Tips and Tricks about android, Android Programming, Android Development, Android Smartphones and my android experience.",
+      "followers": {
+        "facebook": 955,
+        "twitter": 56
+      },
+      "image_url": "https://i1.feedspot.com/4910439.jpg?t=1606114589"
+    },
+    {
+      "title": "LEARN JAVA AND ANDROID",
+      "feed_url": "https://onlyjavaforall.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://onlyjavaforall.blogspot.com/",
+      "description": "Here, you will learn Android and Java.You will get free source code of many Apps from here.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5160812.jpg"
+    },
+    {
+      "title": "Akshay Rana | Tech Blog",
+      "feed_url": "https://www.akshayrana.in/feeds/posts/default",
+      "website_url": "https://www.akshayrana.in/",
+      "description": "Android Tutorials in java and kotlin. Learn how to make app in android studio and how to make money by AdMob.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5126803.jpg"
+    },
+    {
+      "title": "Diego Torres Milano's blog",
+      "feed_url": "https://feeds.feedburner.com/DiegoTorresMilanosBlog",
+      "website_url": "http://dtmilano.blogspot.com/",
+      "description": "\u200bDiego Torres Milano is an Android system engineer, Linux advocate, and author of a book called Android Application Testing Guide. He is also the founder of CulebraTester and AndroidViewClient. He has been sharing coding and testing stuff since 2006 in this blog.",
+      "followers": {
+        "twitter": 42
+      },
+      "image_url": "https://i1.feedspot.com/1246303.jpg?t=1606114783"
+    },
+    {
+      "title": "Square Island",
+      "feed_url": "http://feeds.feedburner.com/sqisland",
+      "website_url": "http://blog.sqisland.com/",
+      "description": "Square Island is written by Chiu-Ki Chan, a software engineer with over 6 years of experience working with Google. She gives plenty of android development tips with code examples and images.",
+      "followers": {
+        "twitter": 19300
+      },
+      "image_url": "https://i1.feedspot.com/4615583.jpg?t=1606114658"
+    },
+    {
+      "title": "Hannes Dorfmann",
+      "feed_url": "https://hannesdorfmann.com/index.xml",
+      "website_url": "http://hannesdorfmann.com/",
+      "description": "The personal blog of Hannes Dorfmann. Android enthusiast and open source lover. Hannes Dorfmann covers mobile development with a focus on Android development and UI design. He also gives insight into life as an indie developer and how he tries to improve his workflow.",
+      "followers": {
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4341737.jpg?t=1606114548"
+    },
+    {
+      "title": "Android UI Patterns",
+      "feed_url": "https://androiduipatterns.com/feed",
+      "website_url": "https://androiduipatterns.com/",
+      "description": "Founded by Juhani Lehtim\u00e4ki, an Android enthusiast and CTO of Fat Robot, the goal with this blog is to follow Android UI patterns as they develop and evolve. Juhani wants to point out good implementations and explains how to improve bad implementations of the patterns.",
+      "followers": {
+        "twitter": 10600
+      },
+      "image_url": "https://i1.feedspot.com/78390.jpg?t=1606114581"
+    },
+    {
+      "title": "Android Tutts",
+      "feed_url": "https://tutorp0int.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://tutorp0int.blogspot.com/",
+      "description": "Android tutorial and articles.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5034661.jpg"
+    },
+    {
+      "title": "Gizmodo",
+      "feed_url": "https://gizmodo.com/tag/android/rss",
+      "website_url": "https://gizmodo.com/tag/android",
+      "description": "you'll find an area that is specifically dedicated to the world of Android devices. It is not specifically a blog for developers, but it does cover Android news and offers a range of tips and useful recommendations for Android users.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 2600000
+      },
+      "image_url": "https://i1.feedspot.com/169213.jpg?t=1606113702"
+    },
+    {
+      "title": "AndroidCoding.in",
+      "feed_url": "https://androidcoding.in/feed/",
+      "website_url": "https://androidcoding.in/",
+      "description": "AndroidCoding.in helps you to learn android by providing tutorials in android which will help you to learn android programming easily. Tutorials help to learn easily, gain some knowledge in order to make a move further in development.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/5158055.jpg?t=1606113725"
+    },
+    {
+      "title": "Styling Android",
+      "feed_url": "http://feeds.feedburner.com/StylingAndroid",
+      "website_url": "https://blog.stylingandroid.com/",
+      "description": "A technical guide to improving the UI and UX of Android apps",
+      "followers": {
+        "twitter": 11300
+      },
+      "image_url": "https://i1.feedspot.com/4536234.jpg?t=1606113720"
+    },
+    {
+      "title": "Android Kotlin Weekly",
+      "feed_url": "https://vtsen.hashnode.dev/rss.xml",
+      "website_url": "https://vtsen.hashnode.dev/",
+      "description": "My name is Vincent. I'm a software engineer / Unity game developer. Besides loving my job, I'm currently learning Android development and documenting all my learnings here in this blog. I blog on the topics: Android Development Tips & Tricks, Kotlin Tips & Tricks, Android Studio Tips, and Clean Code & Architecture.",
+      "followers": {
+        "twitter": 207
+      },
+      "image_url": "https://i1.feedspot.com/5385191.jpg?t=1648277897"
+    },
+    {
+      "title": "Fragmented",
+      "feed_url": "https://fragmentedpodcast.com/",
+      "website_url": "https://fragmentedpodcast.com/",
+      "description": "You'll find something new to learn about android development every time you visit Fragmented Podcast. Donn Felker and Kaushik Gopal often engage other Android developers on the same on a biweekly basis. The topics range from Android tools, to patterns, practices, apps, and creativity.",
+      "followers": {
+        "twitter": 10700,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4384899.jpg"
+    },
+    {
+      "title": "DroidMaze",
+      "feed_url": "https://droidmaze.com/feed/",
+      "website_url": "https://blog.zealtyro.com/#google_vignette",
+      "description": "DroidMaze is an Android blog where we write about Android News, Leaks, Tutorials and Updates. Our Tutorials section have amazing guides to help you solving every problem you face in using Android devices.",
+      "followers": {
+        "facebook": 35,
+        "twitter": 61
+      },
+      "image_url": "https://i1.feedspot.com/5283460.jpg?t=1621851774"
+    },
+    {
+      "title": "ZealTyro",
+      "feed_url": "https://www.zealtyro.com/feeds/posts/default",
+      "website_url": "https://blog.zealtyro.com/#google_vignette",
+      "description": "The team of ZealTyro makes sure that you always get the maximum information and best updates. We try to bring to you the most amazing learning site for tech enthusiasts and thus work to teach you the basic and internal parts of software management, website and apps making, programming, etc. We share tutorials on - Android Developing, Graphics Design, Web Design & Development, Presentation, etc. We also help you to solve technical problems and many other things. So, Stay Connected with us.",
+      "followers": {
+        "facebook": 516,
+        "twitter": 66
+      },
+      "image_url": "https://i1.feedspot.com/5178958.jpg?t=1606114596"
+    },
+    {
+      "title": "Cyril Mottier",
+      "feed_url": "https://cyrilmottier.com/atom.xml",
+      "website_url": "https://cyrilmottier.com/",
+      "description": "This blog mainly focus on creating polished, pixel-perfect, smooth and responsive applications helping end users achieve their goals painlessly and, more importantly, as quickly as possible. This blog is where I write about my experiences and passions.",
+      "followers": {
+        "twitter": 19500
+      },
+      "image_url": "https://i1.feedspot.com/4616511.jpg?t=1630048135"
+    }
+  ]
+}

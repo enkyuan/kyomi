@@ -1,0 +1,18 @@
+{
+  "category": "CPR",
+  "source_url": "https://rss.feedspot.com/cpr_rss_feeds",
+  "feeds": [
+    {
+      "title": "Colorado Public Radio",
+      "feed_url": "https://www.cpr.org/feed",
+      "website_url": "https://www.cpr.org/",
+      "description": "All Articles from Colorado Public Radio.",
+      "followers": {
+        "facebook": 56000,
+        "twitter": 21400,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5263263.jpg?t=1749710600"
+    }
+  ]
+}

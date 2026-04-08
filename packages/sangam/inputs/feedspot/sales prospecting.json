@@ -1,0 +1,57 @@
+{
+  "category": "Sales Prospecting",
+  "source_url": "https://rss.feedspot.com/sales_prospecting_rss_feeds",
+  "feeds": [
+    {
+      "title": "Sales 2.0 \u00bb Prospecting",
+      "feed_url": "https://www.sales2.com/category/process/lead-generation-prospecting/feed/",
+      "website_url": "https://www.sales2.com/category/process/lead-generation-prospecting/",
+      "description": "Follow this blog to learn sales prospecting and how to sell more using Social Selling and Sales 2.0",
+      "followers": {
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4941014.jpg?t=1621317900"
+    },
+    {
+      "title": "ReachStream",
+      "feed_url": "https://resources.reachstream.com/feed/",
+      "website_url": "https://resources.reachstream.com/archive/",
+      "description": "ReachStream resource page offers a vast library of knowledge in the form of tips, tutorials, support and guides & tutorials for Marketing & Sales.",
+      "followers": {
+        "facebook": 310,
+        "twitter": 345
+      },
+      "image_url": "https://i1.feedspot.com/5120995.jpg?t=1621317839"
+    },
+    {
+      "title": "LeadSeek Blog",
+      "feed_url": "https://leadseek.net/blog/feed/",
+      "website_url": "https://leadseek.net/blog/",
+      "description": "LeadSeek helps to reach the right people at the right time with direct and personalized emails.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4941093.jpg?t=1621317960"
+    },
+    {
+      "title": "Sales Essentials \u00bb Sales Prospecting",
+      "feed_url": "https://www.salesessentials.com/sales-prospecting-2/feed/",
+      "website_url": "https://www.salesessentials.com/sales-prospecting-2/",
+      "description": "Sales Essentials helps to evolve your sales approach and develop a unique sales DNA that is open, honest and remarkably effective.",
+      "followers": {
+        "twitter": 421
+      },
+      "image_url": "https://i1.feedspot.com/4930681.jpg?t=1621317846"
+    },
+    {
+      "title": "SalesHive Blog",
+      "feed_url": "https://saleshive.com/feed/",
+      "website_url": "https://saleshive.com/blog/",
+      "description": "Sales prospecting and development blog, featuring cold calling, email marketing, lead generation, LinkedIn, list building, pricing, sales operations, and sales strategy. SalesHive is a B2B Sales Development Platform & Agency that uses cold calling, email, and LinkedIn to book meetings with qualified buyers.",
+      "followers": {
+        "facebook": 200,
+        "twitter": 4700,
+        "instagram": 63
+      },
+      "image_url": "https://i1.feedspot.com/5324157.jpg?t=1632302485"
+    }
+  ]
+}

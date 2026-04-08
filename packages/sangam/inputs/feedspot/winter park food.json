@@ -1,0 +1,41 @@
+{
+  "category": "Winter Park Food",
+  "source_url": "https://rss.feedspot.com/winter_park_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Tasty Chomps \u00bb Winter Park",
+      "feed_url": "https://tastychomps.com/category/winter-park/feed",
+      "website_url": "https://tastychomps.com/category/winter-park",
+      "description": "Tasty Chomps' Winter Park column showcases a local's perspective on food and drink in the surrounding. It is a food guide for all and more. Founded by Florida native Ricky Ly, TastyChomps.com is a food and restaurant blog dedicated to finding culinary adventures throughout Central Florida and around the world.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 12300,
+        "instagram": 71500
+      },
+      "image_url": "https://i1.feedspot.com/5433993.jpg?t=1661148004"
+    },
+    {
+      "title": "Park Ave Magazine \u00bb Food",
+      "feed_url": "https://parkavemagazine.com/category/food/feed/",
+      "website_url": "https://parkavemagazine.com/category/food/",
+      "description": "Read about the local and authentic places to try the best and most delicious food around Florida. Park Ave Magazine is a free publication in the Winter Park & Central Florida area. With a focus on the casual side of Park Avenue and the surrounding areas.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 34
+      },
+      "image_url": "https://i1.feedspot.com/5433995.jpg?t=1661148236"
+    },
+    {
+      "title": "the32789 \u00bb Food & Drink",
+      "feed_url": "https://the32789.com/topic/food-drink/feed/",
+      "website_url": "https://the32789.com/topic/food-drink/",
+      "description": "the32789 serves as a guide for anyone looking to try local food and drink around Winter Park, Florida recommending the best restaurants, main dishes, and more. Your digital-only, hyperlocal news platform for Winter Park, Florida, broadcasting regularly on topics of business, community, health & wellness, and more.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 196,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5433989.jpg?t=1661147908"
+    }
+  ]
+}

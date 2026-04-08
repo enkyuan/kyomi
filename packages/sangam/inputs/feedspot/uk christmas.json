@@ -1,0 +1,105 @@
+{
+  "category": "UK Christmas",
+  "source_url": "https://rss.feedspot.com/uk_christmas_rss_feeds",
+  "feeds": [
+    {
+      "title": "Christmas Countdown UK",
+      "feed_url": "https://christmascountdown.uk/feed/",
+      "website_url": "https://christmascountdown.uk/",
+      "description": "Christmas Countdown, Deals, Sales, Freebies, Craft Ideas, Festive Days Out & More.",
+      "followers": {
+        "twitter": 227
+      },
+      "image_url": "https://i1.feedspot.com/5425307.jpg?t=1658831545"
+    },
+    {
+      "title": "Christmas Countdown UK Blog",
+      "feed_url": "https://christmascountdown.uk/blog/feed/",
+      "website_url": "https://christmascountdown.uk/blog/",
+      "description": "Christmas Countdown UK - Festive Sales, Deals, Quizzes& More",
+      "followers": {
+        "facebook": 101000,
+        "twitter": 227,
+        "instagram": 36900
+      },
+      "image_url": "https://i1.feedspot.com/7314218.jpg?t=1715694731"
+    },
+    {
+      "title": "UK Christmas World Blog",
+      "feed_url": "https://www.ukchristmasworld.com/blogs/the-christmas-blog.atom",
+      "website_url": "https://www.ukchristmasworld.com/blogs/the-christmas-blog",
+      "description": "Covers Christmas decorating ideas & inspiration, product information, and Christmas-affecting news. UK Christmas World is an online retailer that sells Christmas decorations and lights all across the United Kingdom.",
+      "followers": {
+        "facebook": 45100,
+        "twitter": 1800,
+        "instagram": 7700
+      },
+      "image_url": "https://i1.feedspot.com/5349505.jpg?t=1670828479"
+    },
+    {
+      "title": "UnderTheChristmasTree",
+      "feed_url": "https://www.underthechristmastree.co.uk/feed/",
+      "website_url": "https://www.underthechristmastree.co.uk/",
+      "description": "UnderTheChristmasTree is the UK's biggest Christmas website, with news, expert advice, and suggestions plus how-to's, recipes, travel, gifts, competitions, reviews and more. Bringing you Christmas cheer 365 days a year.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 16000,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4910772.jpg?t=1670828445"
+    },
+    {
+      "title": "Christmas Everyday Club",
+      "feed_url": "https://christmaseverydayclub.com/feed/",
+      "website_url": "https://christmaseverydayclub.com/",
+      "description": "Covers all things Christmas including colouring, crafts, stories, trivia, music, traditions, recipes, movies, crafts as well as games and puzzles.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 812
+      },
+      "image_url": "https://i1.feedspot.com/5327639.jpg?t=1633349176"
+    },
+    {
+      "title": "Christmas Farm Blog",
+      "feed_url": "https://www.thechristmasfarm.co.uk/feed/",
+      "website_url": "https://www.thechristmasfarm.co.uk/blog/",
+      "description": "An organic smallholding in the heart of Northumberland",
+      "followers": {
+        "facebook": 2700
+      },
+      "image_url": "https://i1.feedspot.com/7314221.jpg?t=1715695033"
+    },
+    {
+      "title": "Christmas Trees Direct Blog",
+      "feed_url": "https://christmastreesdirect.co.uk/blogs/guides-and-information.atom",
+      "website_url": "https://christmastreesdirect.co.uk/blogs/guides-and-information",
+      "description": "Welcome to our Blog dedicated to everything Christmas from decoration guides to ornament making, Christmas trees, gifts and more! At Christmas Trees Direct you'll find an impressive selection of real freshly cut and pot-grown Christmas trees in a range of sizes. You can pre-order and pick a specific week for free UK delivery.",
+      "followers": {
+        "facebook": 3500,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5478190.jpg?t=1670828309"
+    },
+    {
+      "title": "Gower Fresh Christmas Trees Blog",
+      "feed_url": "https://www.gowerfreshchristmastrees.co.uk/feed/",
+      "website_url": "https://www.gowerfreshchristmastrees.co.uk/blog/",
+      "description": "The blog at Gower Fresh Christmas Trees offers a blend of seasonal updates, behind-the-scenes insights, and practical advice for Christmas tree enthusiasts. Managed by a family-run farm in Swansea, Wales, the blog covers topics such as tree care, festive events, and the farm's various attractions.",
+      "followers": {
+        "facebook": 64300,
+        "instagram": 12400
+      },
+      "image_url": "https://i1.feedspot.com/7314219.jpg?t=1715694848"
+    },
+    {
+      "title": "Park Christmas Savings",
+      "feed_url": "https://christmas.getpark.co.uk/feed/",
+      "website_url": "https://christmas.getpark.co.uk/",
+      "followers": {
+        "twitter": 2100,
+        "instagram": 7600
+      },
+      "image_url": "https://i1.feedspot.com/7315811.jpg"
+    }
+  ]
+}

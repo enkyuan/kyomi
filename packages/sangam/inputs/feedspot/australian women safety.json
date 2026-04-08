@@ -1,0 +1,39 @@
+{
+  "category": "Australian Women Safety",
+  "source_url": "https://rss.feedspot.com/australian_women_safety_rss_feeds",
+  "feeds": [
+    {
+      "title": "Women In Safety Blog",
+      "feed_url": "https://www.womeninsafety.net/blog-feed.xml",
+      "website_url": "https://www.womeninsafety.net/blog",
+      "description": "Women in Safety is a network designed to encourage women working as safety professionals to discuss issues, and barriers and to help each other grow and learn. They share stories and journeys and believe the group is a catalyst for change and a place for innovation and growth for our members. Dive into their blog and learn more about services, events, podcasts, news, and more.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 410300,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5427123.jpg?t=1659335218"
+    },
+    {
+      "title": "Centre For Women's Safety and Wellbeing News",
+      "feed_url": "https://cwsw.org.au/feed/",
+      "website_url": "https://cwsw.org.au/news-updates/",
+      "description": "The Centre for Women's Safety and Wellbeing acknowledges the strength and resilience of adults, children, and young people who have experienced family and domestic violence. They will take an intersectional approach that recognizes the multiple forms of discrimination women face so that responses to these issues address the particular and diverse needs of women. Get into their blog and learn more about projects, services, news, resources, articles, and more.",
+      "followers": {
+        "facebook": 5900
+      },
+      "image_url": "https://i1.feedspot.com/5685624.jpg?t=1696844613"
+    },
+    {
+      "title": "Self Defence Hub Blog",
+      "feed_url": "https://www.selfdefencehub.com.au/blog?format=feed&type=rss",
+      "website_url": "https://www.selfdefencehub.com.au/blog",
+      "description": "Self Defence Hub is a social enterprise that was founded in January 2014 by Andre Conate, who has an extraordinary passion for people's empowerment and safety. The hub focuses on creating a safe space to learn self-defense and above all, have fun doing it. Explore their blog for additional information about the advantages of self-defense training and workshops, local self-defense school information, self-defense advice, events, and more.",
+      "followers": {
+        "facebook": 553,
+        "instagram": 339
+      },
+      "image_url": "https://i1.feedspot.com/5541293.jpg?t=1681455180"
+    }
+  ]
+}

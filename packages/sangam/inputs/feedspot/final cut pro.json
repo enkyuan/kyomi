@@ -1,0 +1,84 @@
+{
+  "category": "Final Cut Pro",
+  "source_url": "https://rss.feedspot.com/final_cut_pro_rss_feeds",
+  "feeds": [
+    {
+      "title": "Alex4D Blog",
+      "feed_url": "https://alex4d.com/category/notes/feed",
+      "website_url": "https://alex4d.com/category/notes",
+      "description": "Explore notes, updates, and plugins on Final Cut Pro and Apple Motion 5. Alex4D is a site about Final Cut Pro X, Final Cut plugins, and VR videos founded by Alex Gollner. Alex has made over 60 Alex4D Final Cut Pro X plugins available for free on his old blog and his Alex4D website.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 944
+      },
+      "image_url": "https://i1.feedspot.com/5429866.jpg?t=1660815921"
+    },
+    {
+      "title": "Final Cut Pro X Babbling",
+      "feed_url": "https://fcpxpert.net/feed/",
+      "website_url": "https://fcpxpert.net/",
+      "description": "Hi there, I am Marc Bach, this is a little blog concerning FCP X. FCP X is a really powerful NLE and there are a number of things you'll need to know. Here I will be providing you with all my opinion & thoughts about FCP X and tips on why you should be using it.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5429860.jpg?t=1660815135"
+    },
+    {
+      "title": "PremiumBeat \u00bb Final Cut Pro",
+      "feed_url": "https://www.premiumbeat.com/blog/category/final-cut-pro/feed/",
+      "website_url": "https://www.premiumbeat.com/blog/category/final-cut-pro/",
+      "description": "Find video editing tutorials, tips, tricks, and updates for Apple Final Cut Pro. PremiumBeat by Shutterstock is a curated royalty-free music website that provides exclusive, high-quality tracks and sound effects at a very affordable price.",
+      "followers": {
+        "facebook": 155400,
+        "twitter": 15100,
+        "instagram": 16500
+      },
+      "image_url": "https://i1.feedspot.com/5429861.jpg?t=1659946336"
+    },
+    {
+      "title": "Idustrial Revolution Blog \u00bb FCPX",
+      "feed_url": "https://idustrialrevolution.com/blogs/tutorials/tagged/fcpx.atom",
+      "website_url": "https://idustrialrevolution.com/blogs/tutorials/tagged/fcpx",
+      "description": "Find tutorials on Final Cut Pro X, Motion, plugin usage & development, and macOS tips. The launch of Final Cut Pro X and the tight integration with Motion has opened up enormous creative possibilities for the creation of effects. At Industrial Revolution, we are a small team of designers producing plugins and templates for FCPX, After Effects, and more.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 10300,
+        "instagram": 74
+      },
+      "image_url": "https://i1.feedspot.com/5429862.jpg?t=1660810128"
+    },
+    {
+      "title": "MotionVFX Blog",
+      "feed_url": "https://blog.motionvfx.com/rss/",
+      "website_url": "https://blog.motionvfx.com/",
+      "description": "Let's unleash creativity with MotionVFX, Motion designs, and more with our blogs. MotionVFX is the market leader in the production of templates and plugins for Final Cut Pro & DaVinci Resolve and Apple Motion. The company has aimed to provide ultimate solutions for video editors and artists.",
+      "followers": {
+        "facebook": 42000,
+        "twitter": 18700,
+        "instagram": 41500
+      },
+      "image_url": "https://i1.feedspot.com/5429864.jpg?t=1659946354"
+    },
+    {
+      "title": "Future Media Concepts Blog \u00bb Final Cut Pro",
+      "feed_url": "https://blog.fmctraining.com/blog/tag/final-cut-pro/rss.xml",
+      "website_url": "https://blog.fmctraining.com/blog/tag/final-cut-pro",
+      "description": "Find insights, tips, and tricks from industry experts related to Final Cut Pro, web design, sound design, and more. Future Media Concepts provides quality, and accessible training for content creators and IT professionals. Courses offered in digital video and film editing, motion graphics, web design and development, desktop publishing, Mac IT, sound design, and 3D animation.",
+      "followers": {
+        "facebook": 209,
+        "twitter": 128
+      },
+      "image_url": "https://i1.feedspot.com/5429865.jpg?t=1659946361"
+    },
+    {
+      "title": "LenoFX Blog",
+      "feed_url": "https://lenofx.podia.com/rss",
+      "website_url": "https://www.lenofx.com/blog/",
+      "description": "Explore LenoFX Blog on Final Cut Pro, FCPX temples, Text animation, video tips, and more. We started LenoFX with a mission to provide success to every FCPX user. By developing high-level plugins for the best price ever, we assure a fantastic experience for our clients so that they can produce stunning projects.",
+      "followers": {
+        "facebook": 7400
+      },
+      "image_url": "https://i1.feedspot.com/5429863.jpg?t=1659946350"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "category": "DTG",
+  "source_url": "https://rss.feedspot.com/dtg_rss_feeds",
+  "feeds": [
+    {
+      "title": "DTG PRO Blog",
+      "feed_url": "https://blog.dtgpro.com/feeds/posts/default",
+      "website_url": "https://blog.dtgpro.com/",
+      "description": "For all the latest DTG information including blogs and news, visit DTG PRO Blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5416145.jpg?t=1656483175"
+    },
+    {
+      "title": "DTG Merch",
+      "feed_url": "https://dtgmerch.com/feed/",
+      "website_url": "https://dtgmerch.com/",
+      "description": "At DTG Merch we blog about the things we love: T-Shirt printing and Shirt design. We can help you become a POD designer and run a textile printer business!",
+      "followers": {
+        "facebook": 184,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5416147.jpg?t=1656483060"
+    },
+    {
+      "title": "ColDesi \u00bb Direct to Garment",
+      "feed_url": "https://coldesi.com/category/dtg-direct-to-garment/feed/",
+      "website_url": "https://coldesi.com/category/dtg-direct-to-garment/",
+      "description": "The DTG G4 was designed by people that print. People that know DTG. Pioneers in the DTG industry. It's the debut product that let ColDesi's Belquette Technologies engineering team loose. Operating a custom t-shirt business with a DTG printer at its heart, requires creativity, good business sense and the desire to make a lot of money! The blog features more information on DTG digital printers, t-shirt printing tips and advice and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5416135.jpg?t=1656481397"
+    },
+    {
+      "title": "Ricoh DTG Official Blog",
+      "feed_url": "https://ricohdtg.com/blog/rss.xml",
+      "website_url": "https://ricohdtg.com/blog/",
+      "description": "Ricoh DTG provides a complete ecosystem of products designed to offer profitable DTG solutions for every budget and skill level. Every Ricoh DTG printer empowers users to print crisp, high-resolution images in vibrant, eye-popping color. Delight your customers and earn repeat business by creating customized t-shirts, hoodies, shoes, tote bags, and more. The possibilities are endless.",
+      "followers": {
+        "facebook": 37600,
+        "twitter": 1900,
+        "instagram": 30500
+      },
+      "image_url": "https://i1.feedspot.com/5416146.jpg?t=1656482910"
+    }
+  ]
+}

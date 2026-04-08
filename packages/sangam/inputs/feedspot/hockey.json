@@ -1,0 +1,187 @@
+{
+  "category": "Hockey",
+  "source_url": "https://rss.feedspot.com/hockey_rss_feeds",
+  "feeds": [
+    {
+      "title": "NHL Rumors",
+      "feed_url": "https://nhlrumors.com/feed/",
+      "website_url": "https://nhlrumors.com/",
+      "description": "NHL Rumors. Your #1 Source for NHL Trade Rumors, Injury Updates, and Fantasy News.",
+      "followers": {
+        "facebook": 32900,
+        "twitter": 17500
+      },
+      "image_url": "https://i1.feedspot.com/5160891.jpg?t=1615440728"
+    },
+    {
+      "title": "Pro Stock Hockey Blog",
+      "feed_url": "https://www.prostockhockey.com/rss.php?action=newblogs&type=rss",
+      "website_url": "https://www.prostockhockey.com/blog/",
+      "description": "Pro Stock Hockey blog shares tips, news, information related to hockey equipments. Pro Stock Hockey is online source for sticks, gloves, skates, protective, game and practice jerseys, goalie gear, equipment bags, tape.",
+      "followers": {
+        "facebook": 81400,
+        "twitter": 11900,
+        "instagram": 67900
+      },
+      "image_url": "https://i1.feedspot.com/4591313.jpg?t=1653568257"
+    },
+    {
+      "title": "Top Of The Circle Blog",
+      "feed_url": "https://topofthecircle.wordpress.com/feed/",
+      "website_url": "https://topofthecircle.wordpress.com/",
+      "description": "Serving the scholastic field hockey and lacrosse community since 1998.",
+      "followers": {
+        "twitter": 569
+      },
+      "image_url": "https://i1.feedspot.com/4590641.jpg?t=1615440426"
+    },
+    {
+      "title": "Hockey World News",
+      "feed_url": "https://hockeywrldnws.com/feed/",
+      "website_url": "https://hockeywrldnws.com/",
+      "description": "The central place for Worldwide Field Hockey News at your finger tips. #HWNews",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 6000,
+        "instagram": 11500
+      },
+      "image_url": "https://i1.feedspot.com/5038328.jpg?t=1615440357"
+    },
+    {
+      "title": "Nottinghamshire Hockey Association",
+      "feed_url": "https://www.nottshockey.org.uk/feed/",
+      "website_url": "https://www.nottshockey.org.uk/news/",
+      "description": "The County Hockey Association for Nottinghamshire. Supporting our member clubs to achieve their goals.",
+      "followers": {
+        "facebook": 747,
+        "twitter": 465
+      },
+      "image_url": "https://i1.feedspot.com/4592066.jpg?t=1615440361"
+    },
+    {
+      "title": "First Line Rover",
+      "feed_url": "https://firstlinerover.wordpress.com/feed/",
+      "website_url": "https://firstlinerover.wordpress.com/",
+      "description": "My name is Jeremy Tuch, and I started this blog to share my love of hockey history with the world.",
+      "followers": {
+        "facebook": 69,
+        "twitter": 42
+      },
+      "image_url": "https://i1.feedspot.com/5160823.jpg?t=1615440290"
+    },
+    {
+      "title": "Pure Hockey",
+      "feed_url": "https://playbetterfieldhockey.wordpress.com/feed/",
+      "website_url": "https://playbetterfieldhockey.wordpress.com/",
+      "description": "Pure Hockey blog shares Tips, techniques and advice to improve hockey game skills.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4590634.jpg?t=1653568108"
+    },
+    {
+      "title": "A Hockey World",
+      "feed_url": "https://www.ahockeyworld.net/feed/?x=1",
+      "website_url": "https://www.ahockeyworld.net/",
+      "description": "Get all the latest field hockey stories, goals, drills and videos on the web! The world of hockey on one place!",
+      "followers": {
+        "facebook": 38300,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4771035.jpg?t=1615440672"
+    },
+    {
+      "title": "Studio Hockey",
+      "feed_url": "https://studiohockey.com/feed/",
+      "website_url": "https://my.studio.hockey/",
+      "description": "Studio Hockey is the home to podcasts about field hockey. In English or Dutch. Subscribe using your preferred podcast app & follow us on social media.",
+      "followers": {
+        "facebook": 284,
+        "twitter": 1300,
+        "instagram": 634
+      },
+      "image_url": "https://i1.feedspot.com/4590665.jpg?t=1615440431"
+    },
+    {
+      "title": "Jugjet's World of Field Hockey",
+      "feed_url": "http://feeds.feedburner.com/JugjetsWorldOfFieldHockey",
+      "website_url": "http://jugjet.blogspot.com/",
+      "description": "Jugjet Singh is a sports Journalist for 22 years, and counting,with the New Straits Times.",
+      "followers": {
+        "twitter": 696
+      },
+      "image_url": "https://i1.feedspot.com/4590685.jpg?t=1615440762"
+    },
+    {
+      "title": "Track Hockey Blog",
+      "feed_url": "https://trackhockey.wordpress.com/feed/",
+      "website_url": "https://trackhockey.wordpress.com/",
+      "description": "We are a hockey blog on the rise, putting out pieces of hockey news as well as hockey opinions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4749823.jpg?t=1615440586"
+    },
+    {
+      "title": "Field Hockey Sports Guide",
+      "feed_url": "https://fieldhockeyguide.com/feed/",
+      "website_url": "https://fieldhockeyguide.com/",
+      "description": "FieldHockeyGuide.com was created by David (NL) and Jessica (US) van der Kamp. Both have been playing- and teaching field hockey since their early childhoods. The goal of this website is to give honest and accurate reviews about field hockey products.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5055231.jpg?t=1615443993"
+    },
+    {
+      "title": "RUSH Field Hockey",
+      "feed_url": "https://www.rushfieldhockey.org/news/feed/",
+      "website_url": "https://www.rushfieldhockey.org/news/",
+      "description": "Enhancing, developing and providing Field Hockey playing opportunities throughout California.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 167,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4591446.jpg?t=1615440367"
+    },
+    {
+      "title": "MAX Field Hockey",
+      "feed_url": "https://maxfh.longstreth.com/feed/",
+      "website_url": "https://maxfh.longstreth.com/",
+      "description": "The most comprehensive and fasting growing website focused on youth, high school and college field hockey. MAX Field Hockey - Youth, High School, College Field Hockey Hub.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 6500,
+        "instagram": 20100
+      },
+      "image_url": "https://i1.feedspot.com/4590661.jpg?t=1615440305"
+    },
+    {
+      "title": "Hockey India League",
+      "feed_url": "http://league.hockeyindia.org/feed",
+      "website_url": "https://hockeyhooked.com/",
+      "description": "Hockey India League shares news, information about Indian hockey premier league.",
+      "followers": {
+        "facebook": 3500000,
+        "twitter": 47700
+      },
+      "image_url": "https://i1.feedspot.com/4591360.jpg?t=1615440294"
+    },
+    {
+      "title": "Hockey Hooked",
+      "feed_url": "https://hockeyhooked.com/feed/",
+      "website_url": "https://hockeyhooked.com/",
+      "description": "A Field Hockey passion site with over 200 articles specializing in the game of hockey. Featuring many tips on how to play the game plus reviews on the latest products. Our hockey legends section is filled with interesting information on champions of the game, past and present. Finally, we now have a dedicated field hockey forum. Your home of Field Hockey, with playing tips and skills advice, to some expert Hockey gear reviews. We have it all at Hockey Hooked!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5263873.jpg?t=1617288440"
+    },
+    {
+      "title": "Field Hockey Federation",
+      "feed_url": "https://www.socalfieldhockey.com/Feeds/News/?org=SOCALFIELDHOCKEY.COM",
+      "website_url": "https://www.socalfieldhockey.com/",
+      "description": "Field Hockey Federation (FHF) is a Southern California organization that has sponsored and organized field hockey clubs and leagues, public and private school field hockey programs, and adult programs to pursue the sport of field hockey.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 850,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4591324.jpg?t=1615440377"
+    }
+  ]
+}

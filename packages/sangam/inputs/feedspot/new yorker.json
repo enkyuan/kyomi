@@ -1,0 +1,161 @@
+{
+  "category": "New Yorker",
+  "source_url": "https://rss.feedspot.com/new_yorker_rss_feeds",
+  "feeds": [
+    {
+      "title": "The New Yorker",
+      "feed_url": "https://www.newyorker.com/feed/everything",
+      "website_url": "https://www.newyorker.com/",
+      "description": "In 1925, Harold Ross established The New Yorker as a lighthearted, Manhattan-centric magazine. Today The New Yorker is considered by many to be the most influential magazine in the world, renowned for its in-depth reporting, political and cultural commentary, fiction, poetry, and humor.",
+      "followers": {
+        "facebook": 5000000,
+        "twitter": 8300000,
+        "instagram": 8900000
+      },
+      "image_url": "https://i1.feedspot.com/4231663.jpg?t=1663246991"
+    },
+    {
+      "title": "The New Yorker \u00bb News",
+      "feed_url": "https://www.newyorker.com/feed/news",
+      "website_url": "https://www.newyorker.com/news",
+      "description": "In-depth reporting, commentary on breaking news, political analysis, and opinion from The New Yorker.",
+      "followers": {
+        "facebook": 5000000,
+        "twitter": 8300000,
+        "instagram": 8900000
+      },
+      "image_url": "https://i1.feedspot.com/4026127.jpg"
+    },
+    {
+      "title": "The New Yorker \u00bb Culture",
+      "feed_url": "https://www.newyorker.com/feed/culture",
+      "website_url": "https://www.newyorker.com/culture",
+      "description": "Cultural news and criticism, and conversations about TV, theatre, movies, and music, as well as Goings On About Town listings from The New Yorker.",
+      "followers": {
+        "facebook": 5000000,
+        "twitter": 8300000,
+        "instagram": 8900000
+      },
+      "image_url": "https://i1.feedspot.com/4091306.jpg"
+    },
+    {
+      "title": "The New Yorker \u00bb Humor",
+      "feed_url": "https://www.newyorker.com/feed/humor",
+      "website_url": "https://www.newyorker.com/humor",
+      "description": "Humor from The New Yorker, including satire news, funny cartoons and comics.",
+      "followers": {
+        "facebook": 5000000,
+        "twitter": 8300000,
+        "instagram": 8900000
+      },
+      "image_url": "https://i1.feedspot.com/4042965.jpg"
+    },
+    {
+      "title": "The New Yorker \u00bb Magazine",
+      "feed_url": "https://www.newyorker.com/feed/magazine/rss",
+      "website_url": "https://www.newyorker.com/magazine",
+      "description": "The New Yorker Magazine features articles including news, in-depth reporting, commentary and analysis. It also features articles with a mix of reporting on politics and culture, humor and cartoons, fiction and poetry, and reviews and criticism.",
+      "followers": {
+        "facebook": 5000000,
+        "twitter": 8300000,
+        "instagram": 8900000
+      },
+      "image_url": "https://i1.feedspot.com/4884970.jpg?t=1628834920"
+    },
+    {
+      "title": "The New Yorker \u00bb Business",
+      "feed_url": "https://www.newyorker.com/feed/business",
+      "website_url": "https://www.newyorker.com/business",
+      "description": "Analysis of the latest news in business, economics, science, and technology from The New Yorker.",
+      "followers": {
+        "facebook": 5000000,
+        "twitter": 8300000,
+        "instagram": 8900000
+      },
+      "image_url": "https://i1.feedspot.com/4006829.jpg"
+    },
+    {
+      "title": "The New Yorker \u00bb The Sporting Scene",
+      "feed_url": "https://www.newyorker.com/feed/news/sporting-scene",
+      "website_url": "https://www.newyorker.com/sports/sporting-scene",
+      "description": "Get news and information from the world of sports football, baseball, basketball, hockey, boxing, and more from The New Yorker.",
+      "followers": {
+        "facebook": 5000000,
+        "twitter": 8300000
+      },
+      "image_url": "https://i1.feedspot.com/4461234.jpg?t=1523873468"
+    },
+    {
+      "title": "The New Yorker \u00bb The Political Scene Podcast",
+      "feed_url": "https://www.newyorker.com/feed/podcast/political-scene",
+      "website_url": "https://www.newyorker.com/podcast/political-scene",
+      "description": "A weekly discussion about politics, hosted by The New Yorker's executive editor.",
+      "followers": {
+        "facebook": 5000000,
+        "twitter": 8300000,
+        "instagram": 8900000
+      },
+      "image_url": "https://i1.feedspot.com/4885814.jpg"
+    },
+    {
+      "title": "The New Yorker \u00bb Fiction",
+      "feed_url": "https://www.newyorker.com/feed/podcast/fiction",
+      "website_url": "https://www.newyorker.com/podcast/fiction",
+      "description": "A monthly reading and conversation with the New Yorker fiction editor.",
+      "followers": {
+        "facebook": 5000000,
+        "twitter": 8300000,
+        "instagram": 8900000
+      },
+      "image_url": "https://i1.feedspot.com/4366584.jpg"
+    },
+    {
+      "title": "The New Yorker \u00bb Poetry Podcast",
+      "feed_url": "https://www.newyorker.com/feed/podcast/poetry",
+      "website_url": "https://www.newyorker.com/podcast/poetry",
+      "description": "Readings and conversation with The New Yorker's poetry editor.",
+      "followers": {
+        "facebook": 5000000,
+        "twitter": 8300000,
+        "instagram": 8900000
+      },
+      "image_url": "https://i1.feedspot.com/4885816.jpg"
+    },
+    {
+      "title": "The New Yorker \u00bb Cartoons",
+      "feed_url": "https://www.newyorker.com/feed/cartoons",
+      "website_url": "https://www.newyorker.com/humor",
+      "description": "Cartoons from The New Yorker's stable of cartoonists. Check out the latest drawings, or browse the magazine's archives.",
+      "followers": {
+        "facebook": 5000000,
+        "twitter": 8300000,
+        "instagram": 8900000
+      },
+      "image_url": "https://i1.feedspot.com/4885820.jpg"
+    },
+    {
+      "title": "The New Yorker Radio Hour",
+      "feed_url": "http://feeds.feedburner.com/newyorkerradiohour",
+      "website_url": "https://www.wnycstudios.org/podcasts/tnyradiohour",
+      "description": "Profiles, storytelling and insightful conversations, hosted by David Remnick.",
+      "followers": {
+        "facebook": 122100,
+        "twitter": 183200,
+        "instagram": 6900
+      },
+      "image_url": "https://i1.feedspot.com/4384528.jpg?t=1752410643"
+    },
+    {
+      "title": "The New Yorker \u00bb Books",
+      "feed_url": "https://www.newyorker.com/feed/books",
+      "website_url": "https://www.newyorker.com/culture",
+      "description": "The latest book reviews, literary criticism, and news, along with new weekly fiction, poetry, and podcasts from The New Yorker.",
+      "followers": {
+        "facebook": 5000000,
+        "twitter": 8300000,
+        "instagram": 8900000
+      },
+      "image_url": "https://i1.feedspot.com/4091304.jpg"
+    }
+  ]
+}

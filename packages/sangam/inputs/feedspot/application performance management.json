@@ -1,0 +1,94 @@
+{
+  "category": "Application Performance Management",
+  "source_url": "https://rss.feedspot.com/application_performance_management_rss_feeds",
+  "feeds": [
+    {
+      "title": "FusionReactor Blog",
+      "feed_url": "https://fusion-reactor.com/feed/",
+      "website_url": "https://fusion-reactor.com/blog/",
+      "description": "FusionReactor is an Application Performance Monitor for Java and ColdFusion, which goes beyond 'just monitoring' to actively minimize downtime and accelerate time to fix. Our mission is to provide products which make the lives of software developers and IT easier, by improving the quality, performance and service of software applications. Get the latest news and updates on release dates of software, application management tools, performance monitoring and more!",
+      "followers": {
+        "facebook": 425,
+        "twitter": 10000
+      },
+      "image_url": "https://i1.feedspot.com/5050625.jpg?t=1661423885"
+    },
+    {
+      "title": "Datadog Blog",
+      "feed_url": "https://www.datadoghq.com/blog/index.xml",
+      "website_url": "https://www.datadoghq.com/blog/",
+      "description": "Check out The Monitor, Datadog's main blog, to learn more about new Datadog products and features, integrations, and more. Datadog is the monitoring and security platform for cloud applications.",
+      "followers": {
+        "twitter": 50200,
+        "instagram": 71300
+      },
+      "image_url": "https://i1.feedspot.com/5435589.jpg?t=1661422756"
+    },
+    {
+      "title": "Blackfire Blog",
+      "feed_url": "https://blog.blackfire.io/feed",
+      "website_url": "https://blog.blackfire.io/",
+      "description": "Blackfire empowers all developers and IT/Ops to continuously verify and improve their app's performance, throughout its lifecycle, by getting the right information at the right moment. Get the latest updates on PHP, app performance and more!",
+      "followers": {
+        "facebook": 138,
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/5435595.jpg?t=1661423404"
+    },
+    {
+      "title": "Kadiska \u00bb Application Performance",
+      "feed_url": "https://kadiska.com/category/application-performance/feed/",
+      "website_url": "https://kadiska.com/category/application-performance/",
+      "description": "Kadiska helps you grow your digital business with modern user experience monitoring and guided performance #optimization of your networks, apps and cloud. Get the latest insights on application performing in this section.",
+      "followers": {
+        "facebook": 6,
+        "twitter": 59,
+        "instagram": 13
+      },
+      "image_url": "https://i1.feedspot.com/5435592.jpg?t=1661422775"
+    },
+    {
+      "title": "ManageEngine Blog \u00bb Applications Manager",
+      "feed_url": "https://blogs.manageengine.com/application-performance-2/appmanager/feed",
+      "website_url": "https://blogs.manageengine.com/application-performance/appmanager/page/18",
+      "description": "ManageEngine crafts comprehensive IT management software with a focus on making your job easier. Our 120+ award-winning products and free tools cover everything your IT needs. Browse through our articles on Applications Manager to know more about performance monitoring, the latest technology and more!",
+      "followers": {
+        "facebook": 20500,
+        "twitter": 7300
+      },
+      "image_url": "https://i1.feedspot.com/5435596.jpg?t=1661422801"
+    },
+    {
+      "title": "SigNoz Blog",
+      "feed_url": "https://signoz.io/blog/rss.xml",
+      "website_url": "https://signoz.io/blog/",
+      "description": "SigNoz is based natively on OpenTelemetry, a vendor-neutral open source standard for instrumentation. No fear of instrumenting with vendor SDK and getting locked in. Explore our blog to know more about our monitoring application, Application performance management, new features, open source and more!",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5435590.jpg?t=1661422763"
+    },
+    {
+      "title": "Systems Digest \u00bb APM",
+      "feed_url": "https://systemsdigest.com/taxonomy/term/2016/feed",
+      "website_url": "https://systemsdigest.com/taxonomy/term/2016",
+      "description": "The OpsMatters mission is to bring these ever-changing and evolving areas of technology to a larger audience of users, developers, enthusiasts and decision-makers by providing the latest information delivered using modern online channels. Know more about Application Performance Management, monitoring tools, the latest news and more!",
+      "followers": {
+        "facebook": 14,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5435593.jpg?t=1661424013"
+    },
+    {
+      "title": "Datavail Blog \u00bb Application Performance Management",
+      "feed_url": "https://www.datavail.com/blog/service/application-performance-management/feed/",
+      "website_url": "https://www.datavail.com/blog/service/application-performance-management/",
+      "description": "We help clients build and manage applications and data via a world-class tech-enabled delivery platform and software solutions across leading technologies. Read the latest insights, tips and opinions of our experts on all things Application Performance Management.",
+      "followers": {
+        "facebook": 981,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5435594.jpg?t=1661422788"
+    }
+  ]
+}

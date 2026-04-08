@@ -1,0 +1,418 @@
+{
+  "category": "Basketball News",
+  "source_url": "https://rss.feedspot.com/basketball_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "SLAM",
+      "feed_url": "https://www.slamonline.com/feed/",
+      "website_url": "https://www.slamonline.com/news/",
+      "description": "Your Source for the best in Basketball. NBA scores, news and rumors, College & High School hoops, old-school stories, sneakers and fashion of the game.",
+      "followers": {
+        "facebook": 3900000,
+        "twitter": 1300000,
+        "instagram": 642
+      },
+      "image_url": "https://i1.feedspot.com/4789393.jpg?t=1511868645"
+    },
+    {
+      "title": "Basketball Forever",
+      "feed_url": "https://basketballforever.com/feed",
+      "website_url": "https://basketballforever.com/",
+      "description": "Basketball Forever: Next Generation Basketball News. The best commentary, design, videos and analysis, straight to the palm of your hand.",
+      "followers": {
+        "facebook": 5700000,
+        "twitter": 84900,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/4789874.jpg"
+    },
+    {
+      "title": "TalkBasket.net",
+      "feed_url": "https://www.talkbasket.net/feed",
+      "website_url": "https://www.talkbasket.net/",
+      "description": "Latest EuroLeague NBA, EuroCup, FIBA Basketball Champions League, EuroBasket, Olympics and international basketball news, rumours, livescores, forums and more.",
+      "followers": {
+        "facebook": 11100,
+        "twitter": 11000,
+        "instagram": 536
+      },
+      "image_url": "https://i1.feedspot.com/4790482.jpg"
+    },
+    {
+      "title": "The Hoop Doctors",
+      "feed_url": "https://thehoopdoctors.com/feed/",
+      "website_url": "http://thehoopdoctors.com/",
+      "description": "NBA Basketball news, rumors, videos and other cool stuff for hardcore hoop heads.",
+      "followers": {
+        "facebook": 399200,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4641414.jpg?t=1643698258"
+    },
+    {
+      "title": "HoopsHype",
+      "feed_url": "https://hoopshype.com/feed/",
+      "website_url": "https://hoopshype.com/",
+      "description": "The go-to site for the hardcore NBA fan.Find the latest NBA rumors, news, salaries, and more.",
+      "followers": {
+        "facebook": 190300,
+        "twitter": 305700,
+        "instagram": 30900
+      },
+      "image_url": "https://i1.feedspot.com/4660969.jpg?t=1643697508"
+    },
+    {
+      "title": "Eurobasket",
+      "feed_url": "https://www.eurobasket.com/reports/RSS/rssfeed_EU_M.xml",
+      "website_url": "https://www.eurobasket.com/",
+      "description": "It is the world's most comprehensive, one-stop resource for basketball players, sports executives, and fans alike.This site provides daily updates and news regarding players, games and leagues.",
+      "followers": {
+        "facebook": 19000,
+        "twitter": 31800
+      },
+      "image_url": "https://i1.feedspot.com/1639442.jpg"
+    },
+    {
+      "title": "RealGM",
+      "feed_url": "https://basketball.realgm.com/rss/wiretap/0/0.xml",
+      "website_url": "https://basketball.realgm.com/",
+      "description": "Get the latest basketball news, scores, stats, standings, forums and more on RealGM.com.",
+      "followers": {
+        "facebook": 14000,
+        "twitter": 161500,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4789378.jpg"
+    },
+    {
+      "title": "CelticsBlog",
+      "feed_url": "https://www.celticsblog.com/rss/current.xml",
+      "website_url": "https://www.celticsblog.com/",
+      "description": "CelticsBlog is Your best source for quality Boston Celtics news, rumors, analysis, stats and scores from the fan perspective. CelticsBlog is a resource for Celtics fans and basketball enthusiasts who want to stay up to date on the latest news and analysis of the team.",
+      "followers": {
+        "facebook": 127100,
+        "twitter": 113800
+      },
+      "image_url": "https://i1.feedspot.com/4789797.jpg?t=1676609545"
+    },
+    {
+      "title": "Ballislife",
+      "feed_url": "https://ballislife.com/feed/",
+      "website_url": "https://ballislife.com/",
+      "description": "Ballislife.com is your 1 stop shop for everything basketball!",
+      "followers": {
+        "facebook": 4300000,
+        "twitter": 1600000,
+        "instagram": 8500000
+      },
+      "image_url": "https://i1.feedspot.com/1639382.jpg"
+    },
+    {
+      "title": "Inside the Hall",
+      "feed_url": "https://www.insidethehall.com/feed/",
+      "website_url": "https://www.insidethehall.com/",
+      "description": "Established in 2007, Inside the Hall stands at the forefront of Indiana basketball coverage, offering in-depth insights into IU men's basketball. With a focus on news, recruiting, and analysis, it serves as a premier destination for Hoosier fans seeking comprehensive coverage.",
+      "followers": {
+        "facebook": 52000,
+        "twitter": 51300,
+        "instagram": 14000
+      },
+      "image_url": "https://i1.feedspot.com/3774559.jpg?t=1603268579"
+    },
+    {
+      "title": "D3hoops",
+      "feed_url": "https://www.d3hoops.com/landing/headlines-featured?feed=rss_2.0",
+      "website_url": "https://www.d3hoops.com/landing/index",
+      "description": "Founded in 1995, D3hoops.com is the only comprehensive news site for NCAA Division III men's and women's basketball. It's the largest division of the NCAA. We are dedicated to giving NCAA Division III basketball and the student-athletes who play the sport the big-time treatment they deserve.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 49200,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/1034240.jpg?t=1603269409"
+    },
+    {
+      "title": "Naismith Basketball Hall of Fame News",
+      "feed_url": "https://www.hoophall.com/tools/blocks/page_list/rss?bID=5315&cID=176&arHandle=Main",
+      "website_url": "https://www.hoophall.com/news",
+      "description": "Check out the latest news provided by The Naismith Memorial Basketball Hall of Fame.",
+      "followers": {
+        "facebook": 158200,
+        "twitter": 115900,
+        "instagram": 523299
+      },
+      "image_url": "https://i1.feedspot.com/4478772.jpg?t=1603268594"
+    },
+    {
+      "title": "KnickerBlogger",
+      "feed_url": "https://knickerblogger.net/feed/",
+      "website_url": "http://knickerblogger.net/",
+      "description": "Get all the recent news and updates of your favourite team new york knickers.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/1171340.jpg?t=1603269790"
+    },
+    {
+      "title": "A10Talk",
+      "feed_url": "https://www.a10talk.com/feed/",
+      "website_url": "https://www.a10talk.com/",
+      "description": "Get the latest News and Updates on Atlantic 10 Basketball. A10Talk is a community developed by fans of Atlantic 10 basketball. We are working every day to make this community the best place to read about and discuss A-10 hoops.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 14200,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4478663.jpg?t=1603270223"
+    },
+    {
+      "title": "Project Spurs",
+      "feed_url": "https://projectspurs.com/feed/",
+      "website_url": "https://projectspurs.com/",
+      "description": "Michael De Leon founded Project Spurs in 2004.Always on the cusp of importing the latest technology to the site to positively deliver San Antonio Spurs basketball news to its fans.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 22900,
+        "instagram": 171
+      },
+      "image_url": "https://i1.feedspot.com/3019.jpg?t=1609855049"
+    },
+    {
+      "title": "Bruins Nation",
+      "feed_url": "https://www.bruinsnation.com/rss/current.xml",
+      "website_url": "https://www.bruinsnation.com/",
+      "description": "Your best source for quality UCLA Bruins news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 11800
+      },
+      "image_url": "https://i1.feedspot.com/4790059.jpg"
+    },
+    {
+      "title": "Ridiculous Upside",
+      "feed_url": "https://www.ridiculousupside.com/rss/current.xml",
+      "website_url": "https://www.ridiculousupside.com/",
+      "description": "Your best source for NBA D-League news, draft updates, analysis and opinion from the fan perspective.",
+      "followers": {
+        "facebook": 979,
+        "twitter": 6800
+      },
+      "image_url": "https://i1.feedspot.com/4790080.jpg?t=1511951929"
+    },
+    {
+      "title": "Forum Blue And Gold",
+      "feed_url": "https://www.forumblueandgold.com/feed/",
+      "website_url": "https://www.forumblueandgold.com/",
+      "description": "A Lakers Blog. Thoughts, reflections, and the odd rant on the Los Angeles Lakers and the NBA.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 52600
+      },
+      "image_url": "https://i1.feedspot.com/992382.jpg?t=1603270145"
+    },
+    {
+      "title": "Latest Basketball News",
+      "feed_url": "https://www.latestbasketballnews.com/feed/",
+      "website_url": "https://www.latestbasketballnews.com/",
+      "description": "Latest Basketball News is your guide to the breaking news, top stories, articles, columns, and more. Get the latest international basketball news, scores, standings, statistics, leagues, teams, players, transactions, and more.",
+      "followers": {
+        "facebook": 111900,
+        "twitter": 594
+      },
+      "image_url": "https://i1.feedspot.com/5202949.jpg?t=1601711802"
+    },
+    {
+      "title": "The Outlet Hoops",
+      "feed_url": "https://www.theoutlethoops.com/blog-feed.xml",
+      "website_url": "https://www.theoutlethoops.com/all-articles",
+      "description": "The Outlet Hoops is a New York Knicks and NBA News, Analysis and General Opions with a touch of honesty and realism you wont get from the big names.",
+      "followers": {
+        "facebook": 125,
+        "twitter": 35,
+        "instagram": 444
+      },
+      "image_url": "https://i1.feedspot.com/5164121.jpg"
+    },
+    {
+      "title": "Philippine Basketball Association",
+      "feed_url": "https://pba.inquirer.net/feed",
+      "website_url": "https://pba.inquirer.net/",
+      "description": "The Philippine Basketball Association is the first and most enduring organised professional sport in Asia. It is the fountainhead of sports entertainment that establishes and maintains a league consistent with the highest international standards of the game. Find news, scores, schedule, standings, stats and much more.",
+      "followers": {
+        "facebook": 6300000,
+        "twitter": 342200
+      },
+      "image_url": "https://i1.feedspot.com/3425771.jpg?t=1603276283"
+    },
+    {
+      "title": "Basketball Insiders",
+      "feed_url": "https://www.basketballinsiders.org/feed/",
+      "website_url": "https://www.basketballinsiders.org/",
+      "description": "BasketballInsiders.com brings the best NBA news, NCAAB College Basketball news, and NBA betting pick from the best online sportsbooks. Basketball Insiders, since the first few days of existence, have been huge supporters of the online betting industry. Our aim for the site is to provide everyday news and information about sports and sports betting, along with the best and most accurate online gambling information possible.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 164100
+      },
+      "image_url": "https://i1.feedspot.com/3937275.jpg?t=1662113012"
+    },
+    {
+      "title": "Raptors Rapture",
+      "feed_url": "https://raptorsrapture.com/feed/",
+      "website_url": "https://raptorsrapture.com/",
+      "description": "The ultimate home for Toronto Raptors news, rumors, player and team updates, commentary, trades, analysis, opinion, and more!",
+      "followers": {
+        "facebook": 541,
+        "twitter": 8000
+      },
+      "image_url": "https://i1.feedspot.com/4790654.jpg?t=1599550667"
+    },
+    {
+      "title": "Pelican Debrief",
+      "feed_url": "https://pelicandebrief.com/feed/",
+      "website_url": "https://pelicandebrief.com/",
+      "description": "The ultimate home for New Orleans Pelicans news, rumours, player and team updates, commentary, trades, analysis, opinion, and more!",
+      "followers": {
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4790872.jpg?t=1512042958"
+    },
+    {
+      "title": "NBA Blog",
+      "feed_url": "http://www.insidehoops.com/blog/?feed=rss2",
+      "website_url": "http://www.insidehoops.com/blog/",
+      "description": "The NBA basketball blog section of InsideHoops.com. NBA news and NBA league and team blogs with news, info and more. Inside Hoops is the most popular independent pro basketball website in the world, with a regular readership of hundreds of thousands of the biggest hoops fans on the planet.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 288300,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/42455.jpg?t=1603269479"
+    },
+    {
+      "title": "Swish Appeal",
+      "feed_url": "https://www.swishappeal.com/rss/index.xml",
+      "website_url": "https://www.swishappeal.com/",
+      "description": "Your best source for WNBA and Women's NCAA basketball news, analysis and opinion from the fan perspective.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 10700
+      },
+      "image_url": "https://i1.feedspot.com/4790095.jpg"
+    },
+    {
+      "title": "GB Basketball",
+      "feed_url": "https://gb.basketball/",
+      "website_url": "https://gb.basketball/",
+      "description": "British Basketball's Official News Website contains all the latest information and multimedia as British Basketball continues to influence the Olympics and the NBA",
+      "followers": {
+        "facebook": 104200,
+        "twitter": 31000
+      },
+      "image_url": "https://i1.feedspot.com/4478788.jpg?t=1603272138"
+    },
+    {
+      "title": "Euroleague Basketball \u00bb EuroLeague",
+      "feed_url": "https://www.euroleague.net/rssfeed/27/180.xml",
+      "website_url": "https://www.euroleaguebasketball.net/euroleague/",
+      "description": "Welcome to the Official Site of Euroleague Basketball.Find News, Live Matches, Stats, Standings, Teams, Players, Interviews, Fantasy Challenge, Devotion and much more...!!",
+      "followers": {
+        "facebook": 840400,
+        "twitter": 686800,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/1639509.jpg?t=1512123452"
+    },
+    {
+      "title": "National Basketball League",
+      "feed_url": "https://nbl.com.au/news",
+      "website_url": "https://nbl.com.au/news",
+      "description": "The NBL is the pre-eminent professional men's basketball league in Australia and New Zealand.Find latest news, videos,stats,schedule, player info and much more on this site.",
+      "followers": {
+        "facebook": 543800,
+        "twitter": 85200
+      },
+      "image_url": "https://i1.feedspot.com/4790625.jpg?t=1512127929"
+    },
+    {
+      "title": "Hoops Habit",
+      "feed_url": "https://hoopshabit.com/",
+      "website_url": "https://hoopshabit.com/",
+      "description": "The ultimate home for all NBA news, rumors, updates, trades, signings, injuries, commentary, analysis, and more!",
+      "followers": {
+        "facebook": 41800,
+        "twitter": 11400
+      },
+      "image_url": "https://i1.feedspot.com/4789394.jpg?t=1643697814"
+    },
+    {
+      "title": "Indiana University Athletics \u00bb Men's Basketball",
+      "feed_url": "https://iuhoosiers.com/rss.aspx?path=mbball",
+      "website_url": "https://iuhoosiers.com/sports/mens-basketball/archives",
+      "description": "Official home of the Indiana Hoosiers. Includes schedules, tickets, news, features and more.",
+      "followers": {
+        "facebook": 147100,
+        "twitter": 108700
+      },
+      "image_url": "https://i1.feedspot.com/4789954.jpg"
+    },
+    {
+      "title": "Nothin But Nets",
+      "feed_url": "https://nothinbutnets.com/feed/",
+      "website_url": "https://nothinbutnets.com/",
+      "description": "Welcome to Nothin' But Nets, the Brooklyn Nets news, and opinions site brought to you by the FanSided Network. Nothin' But Nets is dedicated to providing top-notch Nets news, views, and original content. This site also serves as a community for like-minded fans to come together to catch up on the latest news and to discuss their passion.",
+      "followers": {
+        "facebook": 785,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4790496.jpg?t=1626762869"
+    },
+    {
+      "title": "Valley of the Suns",
+      "feed_url": "https://valleyofthesuns.com/",
+      "website_url": "https://valleyofthesuns.com/",
+      "description": "The ultimate home for Phoenix Suns news, rumors, player and team updates, commentary, trades, analysis, opinion, and more!",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 15600
+      },
+      "image_url": "https://i1.feedspot.com/4790128.jpg?t=1512103823"
+    },
+    {
+      "title": "Basketball Victoria",
+      "feed_url": "https://www.basketballvictoria.com.au/feed/",
+      "website_url": "https://www.basketballvictoria.com.au/news",
+      "description": "Basketball Victoria is the peak body for basketball in Victoria.Find latest news, fixtures, results on this site.",
+      "followers": {
+        "facebook": 55400,
+        "twitter": 5600,
+        "instagram": 54900
+      },
+      "image_url": "https://i1.feedspot.com/4790046.jpg?t=1511960887"
+    },
+    {
+      "title": "MVP Magazine",
+      "feed_url": "http://www.mvp247.com/feed/",
+      "website_url": "http://www.mvp247.com/",
+      "description": "MVP Magazine - covering British Basketball, Team GB, the NBA, Euroleague, Streetball and more.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 3700,
+        "instagram": 412
+      },
+      "image_url": "https://i1.feedspot.com/4790911.jpg?t=1671011046"
+    },
+    {
+      "title": "Basketball Australia",
+      "feed_url": "https://www.australia.basketball/news",
+      "website_url": "https://www.australia.basketball/news",
+      "description": "Basketball Australia is the governing and controlling body for the sport of basketball in Australia.Find latest headlines, news, information of australian national team and much more related to basketball.",
+      "followers": {
+        "facebook": 133800,
+        "twitter": 53700,
+        "instagram": 111500
+      },
+      "image_url": "https://i1.feedspot.com/4789856.jpg"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "category": "Italy Movie",
+  "source_url": "https://rss.feedspot.com/italy_movie_rss_feeds",
+  "feeds": [
+    {
+      "title": "Best Movie",
+      "feed_url": "https://www.bestmovie.it/feed/",
+      "website_url": "https://www.bestmovie.it/",
+      "description": "Best Movie is the official website of the most popular cinema and streaming monthly magazine in Italy: news, reviews, previews, plots and trailers of films and TV series.",
+      "followers": {
+        "facebook": 137800,
+        "twitter": 17100,
+        "instagram": 87900
+      },
+      "image_url": "https://i1.feedspot.com/5351130.jpg?t=1638872881"
+    },
+    {
+      "title": "Italian Cinema Today",
+      "feed_url": "https://italiancinemaarttoday.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://italiancinemaarttoday.blogspot.com/",
+      "description": "Jeannine Guilyard covering Italian cinema in America since 2004.",
+      "followers": {
+        "facebook": 17900,
+        "twitter": 5000,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5351129.jpg?t=1638877085"
+    },
+    {
+      "title": "Cineblog",
+      "feed_url": "https://www.cineblog.it/feed",
+      "website_url": "https://www.cineblog.it/",
+      "description": "Reviews, trailers and previews, curiosities, photos and news, what you need to know, find out the most interesting information on the Cineblog.",
+      "followers": {
+        "facebook": 18200,
+        "twitter": 18800
+      },
+      "image_url": "https://i1.feedspot.com/5351670.jpg?t=1638970093"
+    },
+    {
+      "title": "ComingSoon \u00bb Cinema",
+      "feed_url": "https://www.comingsoon.it/feedrss/cinema/",
+      "website_url": "https://www.comingsoon.it/cinema/",
+      "description": "All films in cinemas with box office releases, calendar, reviews, news interviews, and more. ComingSoon is your source of information on cinema, home video, TV series, music, games and books.",
+      "followers": {
+        "facebook": 283500,
+        "twitter": 39800,
+        "instagram": 379500
+      },
+      "image_url": "https://i1.feedspot.com/5351131.jpg?t=1638873345"
+    },
+    {
+      "title": "3Cycle Blog",
+      "feed_url": "https://3cycle.it/category/blog/feed/",
+      "website_url": "https://3cycle.it/category/blog/",
+      "description": "3Cycle is a post production and dubbing company with forty years of experience. CEO Marco Guadagno, has been working in the field since 1970 as actor, director, writer, voice actor, dubbing director, and adapter.",
+      "followers": {
+        "facebook": 5900,
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/5351149.jpg?t=1638878953"
+    },
+    {
+      "title": "Italian Book and Movie Club",
+      "feed_url": "https://italianbookandmovieclub.wordpress.com/feed/",
+      "website_url": "https://italianbookandmovieclub.wordpress.com/",
+      "description": "Read about Italian books, movies and culture. Each month, members of The Italian Book and Movie Club at the Lewiston Public Library will either read a selected book or watch a movie.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5351667.jpg?t=1638970445"
+    },
+    {
+      "title": "Movie Blog",
+      "feed_url": "https://www.movieblog.it/feed/",
+      "website_url": "https://www.movieblog.it/",
+      "description": "News and curiosities about the world of cinema and TV series. In addition to in-depth information on Festivals and everything related to the small and large screen.",
+      "followers": {
+        "facebook": 993,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5351668.jpg?t=1638973342"
+    }
+  ]
+}

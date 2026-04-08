@@ -1,0 +1,76 @@
+{
+  "category": "UK Sunglasses",
+  "source_url": "https://rss.feedspot.com/uk_sunglasses_rss_feeds",
+  "feeds": [
+    {
+      "title": "Sunglasses UK",
+      "feed_url": "https://sunglassesuk.com/blogs/sunglasses-uk.atom",
+      "website_url": "https://sunglassesuk.com/blogs/sunglasses-uk",
+      "description": "A blog on Mens and Womens Designer Sunglasses.",
+      "followers": {
+        "facebook": 7900
+      },
+      "image_url": "https://i1.feedspot.com/4909131.jpg?t=1614147493"
+    },
+    {
+      "title": "MyGlassesAndMe Eyewear Blog",
+      "feed_url": "https://www.myglassesandme.co.uk/feed/",
+      "website_url": "https://www.myglassesandme.co.uk/",
+      "description": "The eyewear blog bridging the gap between fashion & eyewear. Read the eyewear blog for news, event coverage, interviews & get involved with MGAM!",
+      "followers": {
+        "facebook": 646,
+        "twitter": 1000,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4587999.jpg?t=1614147504"
+    },
+    {
+      "title": "LiP Watersports Sunglasses Blog",
+      "feed_url": "https://www.lip-sunglasses.com/feed/",
+      "website_url": "https://www.lip-sunglasses.com/blog/",
+      "description": "Protecting your eyes from the sun's glare, wind, and ocean spray is not just about letting you ride better, longer, and harder. LiP is committed to bringing sunglasses of the highest quality and functionality to style-conscious watermen/women and outdoor enthusiasts everywhere.",
+      "followers": {
+        "facebook": 45300,
+        "twitter": 50,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4792165.jpg?t=1609823170"
+    },
+    {
+      "title": "Pretavoir Blog",
+      "feed_url": "https://pretavoir.co.uk/blogs/news.atom",
+      "website_url": "https://pretavoir.co.uk/blogs/news/",
+      "description": "Read The Latest From The Eyewear Industry - From Celebrity Spots to Innovation and Design, PRETAVOIR Will Keep You Up To Date With All Things Glasses and Sunglasses. Read More Here!",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 3800,
+        "instagram": 33400
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/7580336/page/4588046/logo_1679318573.jpg"
+    },
+    {
+      "title": "Catwalk Eyewear Blog",
+      "feed_url": "https://www.catwalkeyewear.co.uk/blogs/articles.atom",
+      "website_url": "https://www.catwalkeyewear.co.uk/blogs/articles",
+      "description": "Read and learn from our blog post about eyewear, eye care, and the latest fashion trends in Men and Women's sunglasses and eyeglasses. Catwalk Eyewear is your up to the minute online eyewear outlet with a high street presence in the heart of Manchester. We deal with various types of eyeglasses and sunglasses and have a vantage of exclusive handpicked designer frames by our in-house opticians and optical designers.",
+      "followers": {
+        "facebook": 154,
+        "twitter": 2,
+        "instagram": 191
+      },
+      "image_url": "https://i1.feedspot.com/5455874.jpg?t=1665571382"
+    },
+    {
+      "title": "EyeStyle Blog",
+      "feed_url": "https://www.smartbuyglasses.com/blog/",
+      "website_url": "https://www.smartbuyglasses.co.uk/blog/",
+      "description": "Stay up to date with the coolest trends about latest sunglasses, prescription glasses and contact lenses styles!",
+      "followers": {
+        "facebook": 130699,
+        "twitter": 4000,
+        "instagram": 42500
+      },
+      "image_url": "https://i1.feedspot.com/4909144.jpg?t=1614147499"
+    }
+  ]
+}

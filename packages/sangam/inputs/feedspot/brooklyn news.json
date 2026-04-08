@@ -1,0 +1,100 @@
+{
+  "category": "Brooklyn News",
+  "source_url": "https://rss.feedspot.com/brooklyn_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Greenline",
+      "feed_url": "https://northbrooklynnews.com/feed/",
+      "website_url": "https://northbrooklynnews.com/",
+      "description": "Your monthly source for North Brooklyn community news covering Williamsburg, Greenpoint and Bushwick.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 344
+      },
+      "image_url": "https://i1.feedspot.com/5133289.jpg?t=1585642903"
+    },
+    {
+      "title": "New York Post \u00bb Brooklyn",
+      "feed_url": "https://nypost.com/tag/brooklyn/feed/",
+      "website_url": "https://nypost.com/tag/brooklyn/",
+      "description": "Get the latest and breaking news in your local Brooklyn area on the New York Post.",
+      "followers": {
+        "facebook": 6900000,
+        "twitter": 3500000,
+        "instagram": 2100000
+      },
+      "image_url": "https://i1.feedspot.com/5133316.jpg?t=1585655616"
+    },
+    {
+      "title": "Brooklyn Daily Eagle",
+      "feed_url": "http://brooklyneagle.com/feed/",
+      "website_url": "https://brooklyneagle.com/",
+      "description": "The Brooklyn Eagle is journalism for curious, creative, and constructive Brooklynites, featuring in-depth reporting on news, legal, real estate, politics, schools, history, sports, and neighborhoods.",
+      "followers": {
+        "facebook": 10500,
+        "twitter": 30900,
+        "instagram": 12300
+      },
+      "image_url": "https://i1.feedspot.com/5330188.jpg?t=1633935154"
+    },
+    {
+      "title": "Brooklyn Reporter",
+      "feed_url": "https://brooklynreporter.com/feed/",
+      "website_url": "https://brooklynreporter.com/",
+      "description": "Brooklyn Reporter provides the latest and most interesting information about South Brooklyn - be it breaking news, politics, and education, or dining, nightlife, real estate, and getting around.",
+      "followers": {
+        "facebook": 18200,
+        "twitter": 3800,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5330187.jpg?t=1633935673"
+    },
+    {
+      "title": "News 12 Brooklyn",
+      "feed_url": "https://brooklyn.news12.com/",
+      "website_url": "https://brooklyn.news12.com/",
+      "description": "News 12 Brooklyn is the exclusive 24-hour local news service dedicated to bringing residents of Brooklyn the best local news and information about their neighborhoods. Get breaking news, traffic, weather, sports, and more.",
+      "followers": {
+        "facebook": 402100,
+        "twitter": 19500
+      },
+      "image_url": "https://i1.feedspot.com/5133259.jpg"
+    },
+    {
+      "title": "BK Reader",
+      "feed_url": "https://www.bkreader.com/feed",
+      "website_url": "https://www.bkreader.com/",
+      "description": "BK Reader is an online hyperlocal daily news source reflecting the art, culture, business, and lifestyle of the fastest-developing areas of Central and East Brooklyn.",
+      "followers": {
+        "facebook": 34400,
+        "twitter": 5800,
+        "instagram": 32200
+      },
+      "image_url": "https://i1.feedspot.com/5133272.jpg?t=1585643096"
+    },
+    {
+      "title": "PIX11 \u00bb Brooklyn",
+      "feed_url": "https://pix11.com/news/local-news/brooklyn.rss",
+      "website_url": "https://pix11.com/news/local-news/brooklyn/",
+      "description": "Brooklyn news and events reported by New York's Very Own PIX11 News. Get up-to-the-minute reporting, videos and other special coverage of the New York City borough featured on WPIX and PIX11.com.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 114800,
+        "instagram": 261100
+      },
+      "image_url": "https://i1.feedspot.com/5133282.jpg?t=1585642761"
+    },
+    {
+      "title": "CBS News \u00bb Brooklyn",
+      "feed_url": "https://newyork.cbslocal.com/tag/brooklyn/feed/",
+      "website_url": "https://www.cbsnews.com/newyork/tag/brooklyn/",
+      "description": "Brooklyn latest breaking news, sports, weather and traffic.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 201400,
+        "instagram": 185500
+      },
+      "image_url": "https://i1.feedspot.com/5133310.jpg?t=1585642956"
+    }
+  ]
+}

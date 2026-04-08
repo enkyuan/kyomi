@@ -1,0 +1,1032 @@
+{
+  "category": "Data Science",
+  "source_url": "https://rss.feedspot.com/data_science_rss_feeds",
+  "feeds": [
+    {
+      "title": "Data Science Central",
+      "feed_url": "https://feeds.feedburner.com/FeaturedBlogPosts-DataScienceCentral",
+      "website_url": "https://www.datasciencecentral.com/",
+      "description": "Data Science Central is the industry's online resource for Big Data practitioners. From Analytics to Data Integration to Visualization, we provide a community experience that includes a robust editorial platform, social interaction, forum-based technical support, the latest in technology tools and trends and industry job opportunities.",
+      "followers": {
+        "twitter": 195200
+      },
+      "image_url": "https://i1.feedspot.com/972655.jpg?t=1612619282"
+    },
+    {
+      "title": "KDnuggets",
+      "feed_url": "https://www.kdnuggets.com/feed",
+      "website_url": "https://www.kdnuggets.com/news/index.html",
+      "description": "KDnuggets is a leading site on Business Analytics, Big Data, Data Mining, and Data Science. It is managed by Gregory Piatetsky-Shapiro, a leading expert in the field.",
+      "followers": {
+        "facebook": 39500,
+        "twitter": 219600
+      },
+      "image_url": "https://i1.feedspot.com/3800693.jpg?t=1612619286"
+    },
+    {
+      "title": "Datafloq",
+      "feed_url": "https://datafloq.com/feed/",
+      "website_url": "https://datafloq.com/",
+      "description": "Datafloq is the one-stop source for big data, blockchain, and artificial intelligence. We offer information, insights, and opportunities to drive innovation with emerging technologies.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 40000
+      },
+      "image_url": "https://i1.feedspot.com/5358710.jpg?t=1646396733"
+    },
+    {
+      "title": "SmartData Collective",
+      "feed_url": "https://www.smartdatacollective.com/feed/",
+      "website_url": "https://www.smartdatacollective.com/",
+      "description": "martData Collective is an editorially independent, moderated community providing enterprise leaders access to the latest trends in Business Intelligence and Data Management. Our innovative model serves as a platform for recognized, global experts to share their insights through peer contributions, custom content publishing, and alignment with industry leaders.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 32000
+      },
+      "image_url": "https://i1.feedspot.com/4895122.jpg?t=1646457739"
+    },
+    {
+      "title": "Towards Data Science",
+      "feed_url": "https://towardsdatascience.com/feed/",
+      "website_url": "https://towardsdatascience.com/",
+      "description": "Sharing concepts, ideas and codes on data science. Towards Data Science Inc. is a corporation registered in Canada. It provides a platform for thousands of people to exchange ideas and to expand their understanding of data science.",
+      "followers": {
+        "facebook": 196,
+        "twitter": 234000,
+        "instagram": 185
+      },
+      "image_url": "https://i1.feedspot.com/4825449.jpg?t=1616494733"
+    },
+    {
+      "title": "Xtract.io Blog",
+      "feed_url": "https://xtract.io/blog/feed/",
+      "website_url": "https://xtract.io/blog/",
+      "description": "Navigate the dynamic Data Science industry with intelligent insights, the latest product innovations, and expert management tips here in Xtract.io's blog. Xtract.io is an enterprise data management solutions platform from Mobius delivering meaningful data from various complex data sources to drive tangible business outcomes.",
+      "followers": {
+        "facebook": 45,
+        "twitter": 1500,
+        "instagram": 55
+      },
+      "image_url": "https://i1.feedspot.com/5694993.jpg?t=1698044831"
+    },
+    {
+      "title": "Statistical Modeling, Causal Inference, and Social Science",
+      "feed_url": "https://statmodeling.stat.columbia.edu/feed/",
+      "website_url": "https://statmodeling.stat.columbia.edu/",
+      "description": "Blog on Statistics by Andrew Gelman, a professor of statistics and political science and director of the Applied Statistics Center at Columbia University. He has received the Outstanding Statistical Application award from the American Statistical Association.",
+      "followers": {
+        "twitter": 49700
+      },
+      "image_url": "https://i1.feedspot.com/57686.jpg?t=1659933450"
+    },
+    {
+      "title": "Dataconomy",
+      "feed_url": "https://dataconomy.com/feed/",
+      "website_url": "https://dataconomy.com/",
+      "description": "Dataconomy is the leading portal for news, events, and expert opinion from the world of data-driven technology. It covers all things Big Data, with a focus on Data Science, Machine Learning, Database Technology, and Business Intelligence.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 17800,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5275747.jpg?t=1646397437"
+    },
+    {
+      "title": "Databricks Blog",
+      "feed_url": "https://www.databricks.com/feed",
+      "website_url": "https://www.databricks.com/blog",
+      "description": "Product updates, Apache Spark best practices, and use cases. As the leader in Unified Data Analytics, Databricks helps organizations make all their data ready for analytics, empower data science and data-driven decisions across the organization, and rapidly adopt machine learning to outpace the competition.",
+      "followers": {
+        "facebook": 40400,
+        "twitter": 76100
+      },
+      "image_url": "https://i1.feedspot.com/4217320.jpg?t=1612883485"
+    },
+    {
+      "title": "Data Double Confirm",
+      "feed_url": "https://projectosyo.wixsite.com/datadoubleconfirm/blog-feed.xml",
+      "website_url": "https://projectosyo.wixsite.com/datadoubleconfirm",
+      "description": "Hui Xiang Chua graduated with a B.Sc.(Hons) in Statistics and M.Sc. in Business Analytics from National University of Singapore in 2012 and 2016 respectively, and was an instructor with General Assembly. She is a Data Science for Social Good fellow and has over six years of experience solving problems using data in the public service as a research analyst. DATA DOUBLE CONFIRM documents her learning journey and doubles up as a starter kit for those interested to learn more about data science.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5197562.jpg?t=1600422531"
+    },
+    {
+      "title": "Analytics Vidhya Blog \u00bb Prompt Engineering",
+      "feed_url": "https://www.analyticsvidhya.com/feed/",
+      "website_url": "https://www.analyticsvidhya.com/blog/category/prompt-engineering/",
+      "description": "Analytics Vidhya is a passionate community to learn every aspect of Analytics from web analytics to big data, advanced predictive modeling techniques and application of analytics in business. Follow our blog that focuses on machine learning, artificial intelligence, business analytics, data science, big data, data visualization tools, and techniques.",
+      "followers": {
+        "facebook": 95600,
+        "twitter": 30600
+      },
+      "image_url": "https://i1.feedspot.com/4575696.jpg?t=1612619278"
+    },
+    {
+      "title": "Analytics Insight",
+      "feed_url": "https://feeds.feedburner.com/analyticsinsight/ijEZ",
+      "website_url": "https://www.analyticsinsight.net/",
+      "description": "The blog provides the latest insights on big data, data science and business analytics.",
+      "followers": {
+        "facebook": 39600,
+        "twitter": 12200
+      },
+      "image_url": "https://i1.feedspot.com/4729978.jpg?t=1614922934"
+    },
+    {
+      "title": "Analytics India Magazine \u00bb Artificial Intelligence News",
+      "feed_url": "https://analyticsindiamag.com/ai-news-updates/feed/",
+      "website_url": "https://analyticsindiamag.com/ai-news-updates/",
+      "description": "All latest articles about Artificial Intelligence from Analytics India Magazine.",
+      "followers": {
+        "facebook": 48300,
+        "twitter": 18400,
+        "instagram": 18800
+      },
+      "image_url": "https://i1.feedspot.com/5087440.jpg?t=1753078383"
+    },
+    {
+      "title": "DataFlair",
+      "feed_url": "https://data-flair.training/blogs/feed/",
+      "website_url": "https://data-flair.training/blogs/",
+      "description": "DataFlair, one of the best online training providers of Hadoop, Big Data, and Spark certifications through industry experts. Blog topics cover tutorials on Data Science, Machine Learning, Big Data (Hadoop ecosystem, Apache Spark, Apache flink, Apache Kafka), Python, BI, SQL & NoSQL, IoT, R language, SAS, AI, Programming languages (C, Scala, Java, Spring), Cloud, Android, Blockchain, Linux, Javascript, Angular JS and AWS.",
+      "followers": {
+        "facebook": 37900,
+        "twitter": 6800
+      },
+      "image_url": "https://i1.feedspot.com/4990288.jpg?t=1612883494"
+    },
+    {
+      "title": "DataRobot Blog",
+      "feed_url": "https://www.datarobot.com/blog/feed/",
+      "website_url": "https://www.datarobot.com/blog/",
+      "description": "Learn what's happening in the world of automated machine learning and data science by DataRobot. They are the AI Cloud leader, delivering a unified platform for all users, all data types, and all environments to accelerate delivery of AI to production for every organization.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 19700
+      },
+      "image_url": "https://i1.feedspot.com/4563135.jpg?t=1614925156"
+    },
+    {
+      "title": "InData Labs Blog",
+      "feed_url": "https://indatalabs.com/blog/feed",
+      "website_url": "https://indatalabs.com/blog",
+      "description": "The InData Labs Data Science blog features all the latest thinking in Artificial Intelligence, Computer Vision, and Advanced Data Analytics, along with company news and useful resources to move your business forward. InData Labs is a leading data science firm providing data science consulting and custom AI-powered software development services.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 341,
+        "instagram": 481
+      },
+      "image_url": "https://i1.feedspot.com/5296920.jpg?t=1624946057"
+    },
+    {
+      "title": "Verra Mobility",
+      "feed_url": "https://www.verramobility.com/feed/",
+      "website_url": "https://www.verramobility.com/",
+      "description": "Verra Mobility is committed to developing and using the latest in technology and data intelligence to help make transportation safer and easier. As a global company, Verra Mobility sits at the center of the mobility ecosystem. A leading provider of connected systems, Verra Mobility processes millions of transactions each year through connectivity.",
+      "followers": {
+        "facebook": 85800
+      },
+      "image_url": "https://i1.feedspot.com/5119284.jpg?t=1669201468"
+    },
+    {
+      "title": "NYC Data Science Academy Blog",
+      "feed_url": "https://nycdatascience.com/blog/feed/",
+      "website_url": "https://nycdatascience.com/blog/",
+      "description": "NYC Data Science Academy provides accelerated data science training programs and courses that prepare people for employment opportunities across all industries as data science professionals. Follow us and keep up with its latest data science articles & other updates.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 18800,
+        "instagram": 790
+      },
+      "image_url": "https://i1.feedspot.com/5026634.jpg?t=1620115249"
+    },
+    {
+      "title": "Seattle Data Guy Blog",
+      "feed_url": "https://www.theseattledataguy.com/feed/",
+      "website_url": "https://www.theseattledataguy.com/data-science-consulting-blog/",
+      "description": "Tips about analytics & data science and how to implement them! At Seattle Data Guy, our background and experience revolve heavily around data modeling, analytics, machine learning, and data science.",
+      "followers": {
+        "facebook": 626,
+        "twitter": 18400
+      },
+      "image_url": "https://i1.feedspot.com/5282702.jpg?t=1689250081"
+    },
+    {
+      "title": "data science ish",
+      "feed_url": "https://juliasilge.com/blog/index.xml",
+      "website_url": "https://juliasilge.com/blog/",
+      "description": "My name is Julia Silge and I am a data scientist at Stack Overflow. I work in data science where my background in astronomy, physics, and education has given me a strong foundation for using data to answer interesting questions.",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/4500397.jpg?t=1614923130"
+    },
+    {
+      "title": "Little Miss Data",
+      "feed_url": "https://www.littlemissdata.com/blog?format=RSS",
+      "website_url": "https://www.littlemissdata.com/",
+      "description": "A website dedicated to general musings about all things data and analytics.",
+      "followers": {
+        "twitter": 7400,
+        "instagram": 658
+      },
+      "image_url": "https://i1.feedspot.com/4954371.jpg?t=1671534558"
+    },
+    {
+      "title": "Data Science, Database, Tools and QA Learning's",
+      "feed_url": "https://feeds.feedburner.com/blogspot/yBntD",
+      "website_url": "https://sqlandsiva.blogspot.com/",
+      "description": "Started Primarily for SQL Learning's later extended to accommodate Data Science, QA, Domain, Tech related learning's.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4563069.jpg?t=1614923763"
+    },
+    {
+      "title": "Data Science Unicorn",
+      "feed_url": "https://datascienceunicorn.tumblr.com/rss",
+      "website_url": "https://datascienceunicorn.tumblr.com/",
+      "description": "This is my collection of interesting, noteworthy and useful links to articles, blogs and resources in all areas of data science.",
+      "followers": {
+        "facebook": 75,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4563061.jpg?t=1671531396"
+    },
+    {
+      "title": "Stats and R",
+      "feed_url": "https://statsandr.com/index.xml",
+      "website_url": "https://statsandr.com/",
+      "description": "A blog on statistics and R aiming at helping academics and professionals working with data to grasp important concepts in statistics and to apply them in R.",
+      "followers": {
+        "twitter": 957
+      },
+      "image_url": "https://i1.feedspot.com/5134987.jpg?t=1612588575"
+    },
+    {
+      "title": "DATAVERSITY \u00bb Data Science News, Articles, & Education",
+      "feed_url": "https://www.dataversity.net/category/data-topics/data-science-data-topics/feed/",
+      "website_url": "https://www.dataversity.net/category/data-topics/data-science-data-topics/",
+      "description": "Learn Data Management at DATAVERSITY",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 21600
+      },
+      "image_url": "https://i1.feedspot.com/4337309.jpg?t=1614925151"
+    },
+    {
+      "title": "Insight Extractor Blog",
+      "feed_url": "https://insightextractor.com/feed/",
+      "website_url": "https://insightextractor.com/",
+      "description": "Paras Doshi's Blog on Analytics, Data Science & Business Intelligence.",
+      "followers": {
+        "facebook": 511,
+        "twitter": 802
+      },
+      "image_url": "https://i1.feedspot.com/4558492.jpg?t=1671534315"
+    },
+    {
+      "title": "Win Vector LLC",
+      "feed_url": "https://win-vector.com/feed/",
+      "website_url": "https://win-vector.com/",
+      "description": "Win-Vector Blog is a data science blog which gives tips and tricks for using R programming in data science.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/109790.jpg?t=1612588523"
+    },
+    {
+      "title": "Dataaspirant",
+      "feed_url": "https://dataaspirant.com/feed/",
+      "website_url": "https://dataaspirant.com/",
+      "description": "A Data Science Portal For Beginners",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 519
+      },
+      "image_url": "https://i1.feedspot.com/4558488.jpg?t=1614922983"
+    },
+    {
+      "title": "Remix Institute",
+      "feed_url": "https://www.remixinstitute.com/feed/",
+      "website_url": "https://www.remixinstitute.com/",
+      "description": "Remix Institute is a technology firm that focuses on data science, machine learning, and AI for business via products, software, services, courses, and an elite Membership program.",
+      "followers": {
+        "twitter": 168
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/4057980/page/5134714/logo_1741758339.jpg"
+    },
+    {
+      "title": "The SAS Data Science Blog",
+      "feed_url": "https://blogs.sas.com/content/subconsciousmusings/feed/",
+      "website_url": "https://blogs.sas.com/content/subconsciousmusings/",
+      "description": "Through innovative software and services, SAS empowers and inspires customers around the world to transform data into intelligence. Their mission is to make it easier for more people to use powerful analytics every day, to shorten the path from data to insight - and to inspire bold new discoveries that drive progress. The result is analytics that breaks down barriers, fuels ambitions and gets results. The blog features the perspectives of SAS data scientists as they share the technical methods used to solve many of the challenging problems facing organizations today.",
+      "followers": {
+        "facebook": 288700,
+        "twitter": 62400,
+        "instagram": 24100
+      },
+      "image_url": "https://i1.feedspot.com/5456133.jpg?t=1665644719"
+    },
+    {
+      "title": "Pete Warden's Blog",
+      "feed_url": "https://petewarden.com/feed/",
+      "website_url": "https://petewarden.com/",
+      "description": "Pete Warden is an Engineer, CTO of Jetpac Inc, author of The Public Data Handbook and The Big Data Glossary for O'Reilly, builder of OpenHeatMap and the Data Science Toolkit, and other open source projects. Explore my articles on machine learning, big data and more in my blog.",
+      "followers": {
+        "twitter": 21000
+      },
+      "image_url": "https://i1.feedspot.com/4541165.jpg?t=1665559760"
+    },
+    {
+      "title": "Machine Learning Mastery Blog",
+      "feed_url": "https://feeds.feedburner.com/MachineLearningMastery",
+      "website_url": "https://machinelearningmastery.com/blog/",
+      "description": "Welcome to Machine Learning Mastery! Hi, I'm Jason Brownlee Ph.D. and I help developers like you skip years ahead. Explore my quick start guides and tutorials on machine learning and AI.",
+      "followers": {
+        "facebook": 81100,
+        "twitter": 69000
+      },
+      "image_url": "https://i1.feedspot.com/5199192.jpg?t=1662526115"
+    },
+    {
+      "title": "O'Reilly",
+      "feed_url": "https://www.oreilly.com/radar/feed/index.xml",
+      "website_url": "https://www.oreilly.com/radar/",
+      "description": "From books to leading tech conferences to a groundbreaking online learning platform, we've focused on creating the best technical learning content for more than four decades. O'Reilly's mission is to change the world by sharing the knowledge of innovators.",
+      "followers": {
+        "facebook": 121300,
+        "twitter": 107200
+      },
+      "image_url": "https://i1.feedspot.com/5055779.jpg?t=1627634592"
+    },
+    {
+      "title": "FlowingData",
+      "feed_url": "https://flowingdata.com/feed",
+      "website_url": "https://flowingdata.com/",
+      "description": "FlowingData explores how we use analysis and visualization to understand data and ourselves. The blog - a combination of highlighting others' work, my own projects, and visualization guides - is a free resource for everyone.",
+      "followers": {
+        "facebook": 22900,
+        "twitter": 83500
+      },
+      "image_url": "https://i1.feedspot.com/2075228.jpg?t=1646128536"
+    },
+    {
+      "title": "Datanami",
+      "feed_url": "https://www.datanami.com/feed/",
+      "website_url": "https://www.datanami.com/",
+      "description": "Big Data news from data-intensive computing and analytics to artificial intelligence, both in research and enterprise. From vendor interviews to breaking stories, Datanami brings big data & AI to readers worldwide. Datanami is a news portal dedicated to providing insight, analysis, and up-to-the-minute information about emerging trends and solutions in big data.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 23300
+      },
+      "image_url": "https://i1.feedspot.com/5267582.jpg?t=1646397757"
+    },
+    {
+      "title": "R-bloggers",
+      "feed_url": "https://feeds.feedburner.com/RBloggers",
+      "website_url": "https://www.r-bloggers.com/",
+      "description": "R-Bloggers is about empowering bloggers to empower other R users. R-Bloggers.com is a blog aggregator of content contributed by bloggers who write about R (in English). The site helps R bloggers and users to connect and follow the 'R blogosphere'.",
+      "followers": {
+        "facebook": 83100
+      },
+      "image_url": "https://i1.feedspot.com/26640.jpg?t=1666875887"
+    },
+    {
+      "title": "Kaggle Blog",
+      "feed_url": "https://medium.com/feed/kaggle-blog",
+      "website_url": "https://medium.com/kaggle-blog",
+      "description": "Kaggle is a platform for data-related competitions. The platform allows companies, researchers, government and other organizations to post their modeling problems and have data professionals and researchers compete to produce the best solutions.",
+      "followers": {
+        "facebook": 75500,
+        "twitter": 269800
+      },
+      "image_url": "https://i1.feedspot.com/4562803.jpg?t=1614922844"
+    },
+    {
+      "title": "Ryan Swanstrom",
+      "feed_url": "https://ryanswanstrom.com/feed/",
+      "website_url": "https://ryanswanstrom.com/datascience101/",
+      "description": "A Data Science Blog by Ryan Swanstrom. It contains a wealth of useful information for people just beginning the journey to becoming a data scientist.",
+      "followers": {
+        "facebook": 21700,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5260467.jpg?t=1616495583"
+    },
+    {
+      "title": "Data Piques",
+      "feed_url": "https://www.ethanrosenthal.com/index.xml",
+      "website_url": "https://www.ethanrosenthal.com/",
+      "description": "Blog by Data Scientist Ethan Rosenthal.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4558445.jpg?t=1614923126"
+    },
+    {
+      "title": "Hevo Blog",
+      "feed_url": "https://hevodata.com/blog/feed/",
+      "website_url": "https://hevodata.com/blog/",
+      "description": "Get the latest stories and practical tips on all technologies that concern Data Analytics, Big Data Management, Data Migration, Data Integration, Data Pipelines, Data Modelling, and more.",
+      "followers": {
+        "facebook": 463,
+        "twitter": 751
+      },
+      "image_url": "https://i1.feedspot.com/5064909.jpg?t=1614925174"
+    },
+    {
+      "title": "Codementor \u00bb Data Science Tutorials",
+      "feed_url": "https://www.codementor.io/community/topic/data-science/feed",
+      "website_url": "https://www.codementor.io/community/topic/data-science",
+      "description": "Codementor is the largest community for developer mentorship and an on-demand marketplace for software developers. Get instant coding help, build projects faster, and read programming tutorials from our community of developers. Follow this blog to get the latest trends in Data Science, tutorials, posts, and insights from top Data Science experts and developers.",
+      "followers": {
+        "facebook": 14100,
+        "twitter": 21400
+      },
+      "image_url": "https://i1.feedspot.com/4342188.jpg?t=1612620045"
+    },
+    {
+      "title": "Command Line Tips",
+      "feed_url": "https://cmdlinetips.com/feed/",
+      "website_url": "https://cmdlinetips.com/",
+      "description": "Python Tips, R Tips, Linux Tips, Command Line Tips, Python for Data Science, R for Data Science, Data Science",
+      "followers": {
+        "twitter": 832
+      },
+      "image_url": "https://i1.feedspot.com/596438.jpg?t=1614922950"
+    },
+    {
+      "title": "9TO5SAS",
+      "feed_url": "https://www.9to5sas.com/feed/",
+      "website_url": "https://www.9to5sas.com/",
+      "description": "Learn about Base SAS, Advanced SAS, SAS Macros, Proc SQL, data analytics, statistics tools and techniques.",
+      "followers": {
+        "facebook": 115,
+        "twitter": 6,
+        "instagram": 130
+      },
+      "image_url": "https://i1.feedspot.com/5148111.jpg?t=1614923161"
+    },
+    {
+      "title": "Predictive Hacks",
+      "feed_url": "https://predictivehacks.com/feed/",
+      "website_url": "https://predictivehacks.com/",
+      "description": "We're a team of Data Scientists, passionate about what we are doing and we love getting our hands dirty. The blog acts as a resource with insights, tutorials, and case studies. Our goal is to contribute to the Data Science community by helping people find valuable tips and answers in the data, effectively and quickly.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 503
+      },
+      "image_url": "https://i1.feedspot.com/5221768.jpg?t=1606888459"
+    },
+    {
+      "title": "Data Science Blog (English only)",
+      "feed_url": "https://data-science-blog.com/en/feed/",
+      "website_url": "https://data-science-blog.com/en/",
+      "description": "Applied Data Science Blog",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 950
+      },
+      "image_url": "https://i1.feedspot.com/4558183.jpg?t=1614923024"
+    },
+    {
+      "title": "Blue Orange",
+      "feed_url": "https://blueorange.digital/feed/",
+      "website_url": "https://blueorange.digital/blog/",
+      "description": "Blue Orange is a data science, machine learning, and data visualization firm. We work with businesses to implement data-driven analytic techniques derived from statistical modeling anddata science. We are a team of passionate data engineers, PhDs, data scientists, and visualization experts.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5069805.jpg?t=1614923144"
+    },
+    {
+      "title": "AnyInstructor",
+      "feed_url": "https://anyinstructor.com/feed/",
+      "website_url": "https://anyinstructor.com/",
+      "description": "A data-focused blog with helpful resources and tips for anyone who loves data science and analytics. This blog is perfect for beginners and advanced users in data science looking for a place to learning alongside me on my data journey!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5285723.jpg?t=1622203223"
+    },
+    {
+      "title": "Data For Science",
+      "feed_url": "https://medium.data4sci.com/feed",
+      "website_url": "https://medium.data4sci.com/",
+      "description": "A blog by Bruno Gon\u00e7alves specializing in data science, machine learning, and human behavior. Read his blog and learn to take control of your data.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 1500,
+        "instagram": 49
+      },
+      "image_url": "https://i1.feedspot.com/5275748.jpg?t=1620114139"
+    },
+    {
+      "title": "Data Science made in Switzerland",
+      "feed_url": "https://blog.zhaw.ch/datascience/feed/",
+      "website_url": "https://blog.zhaw.ch/datascience/",
+      "description": "The ZHAW Data Science Laboratory is the place to transform deep data science know how into innovative research projects and vibrant teaching in Switzerland.",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 487
+      },
+      "image_url": "https://i1.feedspot.com/4558162.jpg?t=1671530025"
+    },
+    {
+      "title": "Mad (Data) Scientist",
+      "feed_url": "https://matloff.wordpress.com/feed/",
+      "website_url": "https://matloff.wordpress.com/",
+      "description": "Musings, useful code etc. on R and data science. Blog authored by Norm Matloff.",
+      "followers": {
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4291989.jpg?t=1614924482"
+    },
+    {
+      "title": "Socrates Data Science Blog",
+      "feed_url": "http://blog.socratesk.com/atom.xml",
+      "website_url": "http://blog.socratesk.com/",
+      "description": "In this Blog you will find evidence of my journey towards becoming a Data Scientist including the challenges I faced and addressed, Data Science competitions, tools, and tips & tricks.",
+      "followers": {
+        "twitter": 12
+      },
+      "image_url": "https://i1.feedspot.com/4990229.jpg?t=1614923171"
+    },
+    {
+      "title": "Carlo Carandang - Data Science",
+      "feed_url": "https://carlocarandang.com/category/data-science/feed/",
+      "website_url": "https://carlocarandang.com/category/data-science/",
+      "description": "Blogs on Data Science | Digital Health by Carlo Carandang.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4681198.jpg?t=1614923527"
+    },
+    {
+      "title": "Nina B. Zumel | Data Science",
+      "feed_url": "https://ninazumel.com/feed.xml",
+      "website_url": "https://ninazumel.com/",
+      "description": "I am a Principal Consultant with Win-Vector LLC, a data science consulting firm based in San Francisco. My technical interests include data science, statistics, statistical learning, and data visualization.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4558467.jpg?t=1614925147"
+    },
+    {
+      "title": "Backyard Data Science | Precision Guesswork While You Wait",
+      "feed_url": "https://buckwoody.wordpress.com/feed/",
+      "website_url": "https://buckwoody.wordpress.com/",
+      "description": "Blog on Data Science by Buck Woody.",
+      "followers": {
+        "twitter": 9600
+      },
+      "image_url": "https://i1.feedspot.com/4352416.jpg?t=1671530511"
+    },
+    {
+      "title": "Data Plus Science",
+      "feed_url": "https://www.dataplusscience.com/RSSfeed.xml",
+      "website_url": "https://www.dataplusscience.com/insights.html",
+      "description": "Welcome to Data Plus Science by Jeffrey A. Shaffer. He is a regular speaker at conferences, symposiums, universities and corporate training programs on the topic of data visualization, data mining, and Tableau.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 36500
+      },
+      "image_url": "https://i1.feedspot.com/4557889.jpg?t=1612619274"
+    },
+    {
+      "title": "DSI Analytics - Data Science Insights",
+      "feed_url": "https://dsianalytics.com/feed/",
+      "website_url": "https://dsianalytics.com/",
+      "description": "Helping executives envision and execute new ways to use data and data science to grow their business. Blog by David Stephenson - Data Science and Big Data Analytics expert and keynote speaker.",
+      "followers": {
+        "twitter": 769
+      },
+      "image_url": "https://i1.feedspot.com/4558165.jpg?t=1614923519"
+    },
+    {
+      "title": "The Unofficial Google Data Science Blog",
+      "feed_url": "https://www.unofficialgoogledatascience.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.unofficialgoogledatascience.com/",
+      "description": "This blog is the work of some data scientists at Google who wish to bring out stories of interest to data scientists outside of Google. As editors, we hope to publish articles from across Google written by those individuals most knowledgeable about any given subject matter.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5036913.jpg?t=1620128619"
+    },
+    {
+      "title": "Analyzing Life",
+      "feed_url": "https://algobeans.com/feed/",
+      "website_url": "https://algobeans.com/",
+      "description": "Algobeans is authored by Annalyn Ng & Kenneth Soo. We noticed that while data science is increasingly used to improve workplace decisions, many people do not have a good understanding of how it works. Our goal is to support anyone who wants to get started in data science. Each tutorial covers the important functions & assumptions of a data science technique, without any math or jargon. We also illustrate these techniques with real-world data & examples.",
+      "followers": {
+        "facebook": 325,
+        "twitter": 211
+      },
+      "image_url": "https://i1.feedspot.com/4472915.jpg?t=1620110379"
+    },
+    {
+      "title": "Renesh Bedre",
+      "feed_url": "https://www.reneshbedre.com/feed.xml",
+      "website_url": "https://www.reneshbedre.com/",
+      "description": "Covering broad topics related to Bioinformatics, Statistics, Machine learning, Python, and R for data analysis and visualization. Dr. Renesh Bedre bridges the gap between high-throughput plant genetics data and actionable biological insights for experimental biologists.",
+      "followers": {
+        "twitter": 164
+      },
+      "image_url": "https://i1.feedspot.com/5315026.jpg?t=1629786363"
+    },
+    {
+      "title": "DataScience@SMU - Southern Methodist University",
+      "feed_url": "https://datascience.smu.edu/blog/feed/",
+      "website_url": "https://datascience.smu.edu/blog/",
+      "description": "DataScience@SMU prepares data science professionals to understand, manage & analyze large data sets, as well as communicate the results.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4557886.jpg?t=1671531803"
+    },
+    {
+      "title": "Data Science Association blog",
+      "feed_url": "http://www.datascienceassn.org/blog/feed",
+      "website_url": "http://www.datascienceassn.org/blog",
+      "description": "The Data Science Association is a non-profit professional group that offers education, professional certification, a 'Data Science Code of Professional Conduct' and conferences / meetups to discuss data science (e.g. predictive / prescriptive analytics, algorithm design and execution, applied machine learning, statistical modeling, and data visualization).",
+      "followers": {
+        "twitter": 346
+      },
+      "image_url": "https://i1.feedspot.com/4558170.jpg?t=1671531982"
+    },
+    {
+      "title": "Data Elixir",
+      "feed_url": "https://dataelixir.com/issues.rss",
+      "website_url": "https://dataelixir.com/",
+      "description": "Data Elixir is a weekly newsletter of curated data science news and resources from around the web. Free for data lovers.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 9200
+      },
+      "image_url": "https://i1.feedspot.com/4562827.jpg?t=1671532764"
+    },
+    {
+      "title": "Ujjwal Karn - The Data Science blog",
+      "feed_url": "https://ujjwalkarn.me/feed/",
+      "website_url": "https://ujjwalkarn.me/",
+      "description": "machine learning, deep learning, nlp, data science",
+      "followers": {
+        "facebook": 107600,
+        "twitter": 699
+      },
+      "image_url": "https://i1.feedspot.com/4557874.jpg?t=1671532281"
+    },
+    {
+      "title": "SV Data Science",
+      "feed_url": "https://www.svds.com/blog/feed/",
+      "website_url": "https://www.svds.com/blog/",
+      "description": "Silicon Valley Data Science is a data science consulting company specializing in agile and business-focused solutions.",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4557872.jpg?t=1671532370"
+    },
+    {
+      "title": "Becoming A Data Scientist",
+      "feed_url": "https://www.becomingadatascientist.com/feed/",
+      "website_url": "https://www.becomingadatascientist.com/",
+      "description": "Becoming A Data Scientist | Documenting my path from 'SQL Data Analyst pursuing an Engineering Master's Degree' to 'Data Scientist'",
+      "followers": {
+        "twitter": 66800
+      },
+      "image_url": "https://i1.feedspot.com/4342192.jpg"
+    },
+    {
+      "title": "District Data Labs",
+      "feed_url": "https://districtdatalabs.silvrback.com/feed",
+      "website_url": "https://districtdatalabs.silvrback.com/",
+      "description": "Hands-on data science tutorials, lessons, and other awesome content.",
+      "followers": {
+        "facebook": 330,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4372120.jpg?t=1671532536"
+    },
+    {
+      "title": "BAIR Blog",
+      "feed_url": "https://bair.berkeley.edu/blog/feed.xml",
+      "website_url": "https://bair.berkeley.edu/blog/",
+      "description": "The BAIR Blog provides an accessible, general-audience medium for BAIR researchers to communicate research findings, perspectives on the field, and various updates. Posts are written by students, post-docs, and faculty in BAIR, and are intended to provide relevant and timely discussion of research findings and results, both to experts and the general audience. The Berkeley Artificial Intelligence Research (BAIR) Lab brings together UC Berkeley graduate students, post-docs, and faculty working in AI.",
+      "followers": {
+        "facebook": 16500,
+        "twitter": 103100
+      },
+      "image_url": "https://i1.feedspot.com/4954351.jpg?t=1615870301"
+    },
+    {
+      "title": "Dataquest Blog",
+      "feed_url": "https://www.dataquest.io/blog/feed/",
+      "website_url": "https://www.dataquest.io/blog/",
+      "description": "Writings about data science, from the makers of Dataquest.io. Read articles about Python and R, learning data science, interviews with data scientists, and more.",
+      "followers": {
+        "facebook": 84900,
+        "twitter": 13700
+      },
+      "image_url": "https://i1.feedspot.com/4342187.jpg?t=1614922853"
+    },
+    {
+      "title": "Oracle Data Science Blog",
+      "feed_url": "https://blogs.oracle.com/ai-and-datascience/rss",
+      "website_url": "https://blogs.oracle.com/ai-and-datascience/",
+      "description": "Learn about data science and machine learning best practices from our team and contributing experts. Sign up to get data science insights in your inbox!",
+      "followers": {
+        "facebook": 2900000,
+        "twitter": 822000,
+        "instagram": 378500
+      },
+      "image_url": "https://i1.feedspot.com/4557882.jpg?t=1614923176"
+    },
+    {
+      "title": "Yanir Seroussi | Data science and beyond",
+      "feed_url": "https://yanirseroussi.com/feed/",
+      "website_url": "https://yanirseroussi.com/",
+      "description": "My name is Yanir Seroussi. This website/blog is mostly meant to group together stuff I write in various places. It's mainly focused on data science.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4562669.jpg?t=1614925636"
+    },
+    {
+      "title": "AnalytiXon",
+      "feed_url": "https://analytixon.com/feed/",
+      "website_url": "https://analytixon.com/",
+      "description": "Follow AnalytiXon blog that covers topics such as Data Science, Data Mining, Text Mining, Machine Learning, Statistical Learning, Statistics, Analytics Modeling, Business Analytics, Knowledge Discovery, Soft Computing, Natural Language Processing, Data Aggregation, Econometrics, Visualization & related Programming.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4563107.jpg?t=1612619672"
+    },
+    {
+      "title": "Neural Market Trends",
+      "feed_url": "https://www.neuralmarkettrends.com/feeds/all.atom.xml",
+      "website_url": "https://www.neuralmarkettrends.com/",
+      "description": "Machine Learning, Data Science, Tutorials, and Marketing blog from Data Analytic & Rapidminer Evangelist Thomas Ott.",
+      "followers": {
+        "facebook": 399
+      },
+      "image_url": "https://i1.feedspot.com/352718.jpg?t=1614923154"
+    },
+    {
+      "title": "Data Science Review | Learning Data Science Right",
+      "feed_url": "https://datasciencereview.com/feed/",
+      "website_url": "https://datasciencereview.com/",
+      "description": "My name is Jim Cochrane, and I created this website for you. If you are looking to find resources to help you learn about data science, this is the right place for you. I will be keeping on top of the latest developments in data science. I will evaluate and review programs that are geared toward helping data science practitioners or those who want to become practitioners.",
+      "followers": {
+        "facebook": 208,
+        "twitter": 59
+      },
+      "image_url": "https://i1.feedspot.com/4973186.jpg?t=1614923164"
+    },
+    {
+      "title": "Cloudera Blog",
+      "feed_url": "https://www.cloudera.com/blog.html",
+      "website_url": "https://www.cloudera.com/blog.html",
+      "description": "Cloudera delivers an enterprise data cloud for any data, anywhere, from the Edge to AI. Powered by the relentless innovation of the open-source community, Cloudera advances digital transformation for the world's largest enterprises. Learn more about Streaming Analytics and Cloudera's DataFlow platform in this blog.",
+      "followers": {
+        "facebook": 26500,
+        "twitter": 111100
+      },
+      "image_url": "https://i1.feedspot.com/5275746.jpg?t=1620114237"
+    },
+    {
+      "title": "insideBIGDATA",
+      "feed_url": "https://insideainews.com/wp-admin/setup-config.php",
+      "website_url": "https://insideainews.com/",
+      "description": "Founded on August 28, 2011, insideBIGDATA is a news outlet that distills news, strategies, products, and services in the world of Big Data for data scientists as well as IT and business professionals. Their editorial focus is big data, data science, AI, machine learning, and deep learning.",
+      "followers": {
+        "twitter": 637
+      },
+      "image_url": "https://i1.feedspot.com/5358060.jpg?t=1640780941"
+    },
+    {
+      "title": "DataCamp Blog",
+      "feed_url": "https://www.datacamp.com/community/rss.xml",
+      "website_url": "https://www.datacamp.com/blog/",
+      "description": "The DataCamp Blog offers a wealth of tutorials, guides, and resources on deep learning, covering topics from neural networks and PyTorch to real-world applications and career advice. Whether you're a beginner or looking to deepen your expertise, the blog provides accessible content to enhance your understanding of deep learning concepts and practices.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 105900,
+        "instagram": 248900
+      },
+      "image_url": "https://i1.feedspot.com/4557867.jpg?t=1758712188"
+    },
+    {
+      "title": "DataMites Blog",
+      "feed_url": "https://datamites.com/blog/feed/",
+      "website_url": "https://datamites.com/blog/",
+      "description": "Datamites is a leading training institute for all kind of the data science courses in Bangalore.",
+      "followers": {
+        "facebook": 53900,
+        "twitter": 174
+      },
+      "image_url": "https://i1.feedspot.com/5003657.jpg?t=1614923038"
+    },
+    {
+      "title": "Appsilon Blog | End\u00ad to\u00ad End Data Science Solutions",
+      "feed_url": "https://appsilon.com/feed/",
+      "website_url": "https://www.appsilon.com/blog",
+      "description": "Appsilon is a team of world class engineers taking up the hardest challenges. To deliver novel insights and create data science solutions that increase growth and push companies to higher technological literacy. Checkout Shiny dashboard tutorials, data science and machine learning insights, open-source announcements, and developer community news.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4726425.jpg?t=1614923028"
+    },
+    {
+      "title": "Revolutions",
+      "feed_url": "https://blog.revolutionanalytics.com/atom.xml",
+      "website_url": "https://blog.revolutionanalytics.com/",
+      "description": "Revolutions is a blog dedicated to news and information of interest to members of the R community. Follow to keep up with daily news about using open source R for data analysis, predictive modeling, data science, and visualization.",
+      "followers": {
+        "twitter": 31000
+      },
+      "image_url": "https://i1.feedspot.com/57631.jpg?t=1612588519"
+    },
+    {
+      "title": "mlwhiz",
+      "feed_url": "https://www.mlwhiz.com/index.xml",
+      "website_url": "https://www.mlwhiz.com/",
+      "description": "A Data Science Learning Resource to learn about AI, Deep Learning, NLP",
+      "followers": {
+        "facebook": 181,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4623719.jpg?t=1671534506"
+    },
+    {
+      "title": "Dr. Shahin Rostami",
+      "feed_url": "https://datacrayon.com/rss.xml",
+      "website_url": "https://datacrayon.com/",
+      "description": "Dr. Shahin Rostami is a Senior Academic (Associate Professor) and Consultant in Data Science and Artificial Intelligence, with applications in the areas of Healthcare and Defence. As a Senior Fellow of the Higher Education Academy and Programme Leader for many postgraduate programmes, he aims to contribute openly available learning resources through this website.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5185675.jpg?t=1598271076"
+    },
+    {
+      "title": "Aryng's Blog",
+      "feed_url": "https://blog.aryng.com/feed/",
+      "website_url": "https://blog.aryng.com/",
+      "description": "Aryng is a Data Science consulting, training, & advising company. Our SWAT Data Science team helps solve complex business problems, develop the company's Data DNA through Data Literacy programs, & deliver rapid ROI using machine learning, deep learning, & AI. This blog is a collection of articles written by experts from Aryng on different subject matters. You can find a detailed description of basic terminologies & advanced terms in these articles.",
+      "followers": {
+        "facebook": 500,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5275750.jpg?t=1620113649"
+    },
+    {
+      "title": "FOXY DATA SCIENCE",
+      "feed_url": "https://foxydatascience.com/1/feed",
+      "website_url": "https://foxydatascience.com/",
+      "description": "A modern blog about data science and artificial intelligence for out-of-the-box thinkers of all levels, by a passionate data scientist with a foxy mindset. Educational posts for data science enthusiasts of all levels are also available.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4558548.jpg?t=1614923699"
+    },
+    {
+      "title": "R Righart",
+      "feed_url": "https://www.rrighart.com/blog.html",
+      "website_url": "https://www.rrighart.com/blog.html",
+      "description": "Covers diverse data science topics as well as analytical and visualization tools.",
+      "followers": {
+        "twitter": 76
+      },
+      "image_url": "https://i1.feedspot.com/5309884.jpg?t=1628232882"
+    },
+    {
+      "title": "The Data Science Community",
+      "feed_url": "https://datasciencebe.com/feed/",
+      "website_url": "https://datasciensediary.tumblr.com/",
+      "description": "The European Knowledge Hub for BigData and DataScience",
+      "followers": {
+        "facebook": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4562411.jpg?t=1614923179"
+    },
+    {
+      "title": "Data Science Diary",
+      "feed_url": "https://datasciensediary.tumblr.com/rss",
+      "website_url": "https://datasciensediary.tumblr.com/",
+      "description": "Learn Humbly | Think Critically | Improve Continuously",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4563090.jpg"
+    },
+    {
+      "title": "Hi! I am Nagdev",
+      "feed_url": "https://iamnagdev.com/feed",
+      "website_url": "https://jbaquerot.tumblr.com/",
+      "description": "A personal Blog to express my free thoughts in the inner webs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5132765.jpg?t=1671530301"
+    },
+    {
+      "title": "My Data Science and Big Data blog",
+      "feed_url": "https://jbaquerot.tumblr.com/rss",
+      "website_url": "https://jbaquerot.tumblr.com/",
+      "description": "Would you like to find the needle in the haystack of the Big Data news? Follow me and I will keep you up to date on the most important news of Data Science and Big Data.",
+      "followers": {
+        "twitter": 432
+      },
+      "image_url": "https://i1.feedspot.com/4558483.jpg?t=1671530427"
+    },
+    {
+      "title": "ERDataDoc",
+      "feed_url": "https://erdatadoc.com/feed/",
+      "website_url": "https://erdatadoc.com/",
+      "description": "My blog about becoming a Healthcare Data Scientist, Healthcare Big Data and Analytics, Healthcare Predictive Analytics, Infographics, and assorted Emergency Medicine/Learning Health System/Complexity Science topics.",
+      "followers": {
+        "twitter": 464
+      },
+      "image_url": "https://i1.feedspot.com/4562359.jpg?t=1614923660"
+    },
+    {
+      "title": "The Data Blogger",
+      "feed_url": "https://webserver.data-blogger.com/feed/",
+      "website_url": "https://perceptrons.ai/blog/",
+      "description": "An interesting blog with tutorials and articles on Data Science. Authored by Kevin Jacobs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4558211.jpg"
+    },
+    {
+      "title": "Perceptrons",
+      "feed_url": "https://perceptrons.ai/blog/feed/",
+      "website_url": "https://perceptrons.ai/blog/",
+      "description": "Learn Data Science, Artificial Intelligence, Big Data Analytics and Tableau. We provide data science classroom and live online training courses.",
+      "followers": {
+        "facebook": 880
+      },
+      "image_url": "https://i1.feedspot.com/5150380.jpg"
+    },
+    {
+      "title": "Domino Data Science Blog",
+      "feed_url": "https://blog.dominodatalab.com/feed/",
+      "website_url": "https://blog.dominodatalab.com/",
+      "description": "The Domino Data Science Blog features news and in-depth articles on data science best practices, trends, and tools.",
+      "followers": {
+        "facebook": 217,
+        "twitter": 8100
+      },
+      "image_url": "https://i1.feedspot.com/4557870.jpg?t=1614922968"
+    },
+    {
+      "title": "UC Berkeley School of Information \u00bb Data Science",
+      "feed_url": "https://ischoolonline.berkeley.edu/data-science/",
+      "website_url": "https://ischoolonline.berkeley.edu/data-science/",
+      "description": "Learn more about DataScience@Berkeley, the first and only professional Master of Information and Data Science (MIDS) delivered fully online from the University of California-Berkeley.",
+      "followers": {
+        "facebook": 10,
+        "twitter": 14800
+      },
+      "image_url": "https://i1.feedspot.com/4557869.jpg?t=1671532117"
+    },
+    {
+      "title": "365 Data Science \u00bb Q&A Hub",
+      "feed_url": "https://365datascience.com/feed/",
+      "website_url": "https://365datascience.com/qa-hub/",
+      "description": "365datascience.com is an educational career website, designed for aspiring marketing analysts, BI analysts, data analysts and data scientists. The 365 DataScience blog is devoted to explaining the data science world. You will find data science interviews, tutorials, news and much more.",
+      "followers": {
+        "facebook": 46300,
+        "twitter": 6600
+      },
+      "image_url": "https://i1.feedspot.com/5124478.jpg?t=1614922954"
+    },
+    {
+      "title": "UC San Diego's Data Science Blog Center for Computational Biology & Bioinformatics",
+      "feed_url": "https://compbio.ucsd.edu/outreach/data-science-blog/feed/",
+      "website_url": "https://crayondata.ai/the-crayon-blog/",
+      "description": "A data science and bioinformatics blog written and maintained by UCSD's Center for Computational Biology & Bioinformatics",
+      "followers": {
+        "twitter": 716
+      },
+      "image_url": "https://i1.feedspot.com/4558215.jpg?t=1614922858"
+    },
+    {
+      "title": "The Crayon Blog",
+      "feed_url": "https://crayondata.ai/feed/",
+      "website_url": "https://crayondata.ai/the-crayon-blog/",
+      "description": "Crayon Data is a fast-growing big data and AI company, founded in 2012 in Singapore, with a vision to simplify the world's choices. The leading technology blog in the Big Data, Artificial Intelligence, Data Analytics, BI, Machine Learning, Personalization, and Data Science sectors.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 1900,
+        "instagram": 676
+      },
+      "image_url": "https://i1.feedspot.com/5456132.jpg?t=1665644714"
+    },
+    {
+      "title": "FastML",
+      "feed_url": "http://fastml.com/",
+      "website_url": "http://fastml.com/",
+      "description": "Everything related to machine learning and data science in general. This site is brought to you by the letters M and L. It is meant to tackle interesting topics in machine learning while being entertaining and easy to read and understand. The site is run by Zygmunt Zajac (pronounced Ziontz",
+      "followers": {
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/150496.jpg?t=1644911030"
+    },
+    {
+      "title": "What's The Big Data?",
+      "feed_url": "https://whatsthebigdata.com/feed/",
+      "website_url": "https://whatsthebigdata.com/",
+      "description": "Big Data is a major part of evolving IT industry and this blog explores its impact on information technology, the business world, government agencies, and our lives.",
+      "followers": {
+        "twitter": 21600
+      },
+      "image_url": "https://i1.feedspot.com/121781.jpg?t=1640785303"
+    }
+  ]
+}

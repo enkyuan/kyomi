@@ -1,0 +1,830 @@
+{
+  "category": "Geek",
+  "source_url": "https://rss.feedspot.com/geek_rss_feeds",
+  "feeds": [
+    {
+      "title": "How-To Geek",
+      "feed_url": "https://www.howtogeek.com/feed/",
+      "website_url": "https://www.wired.com/",
+      "description": "How-To Geek is an online technology magazine and one of the top 500 websites in the US. More than 15 million people read our articles every month. Follow this blog for regular updates.",
+      "followers": {
+        "facebook": 576000,
+        "twitter": 62600,
+        "instagram": 11300
+      },
+      "image_url": "https://i1.feedspot.com/5054909.jpg?t=1743079780"
+    },
+    {
+      "title": "WIRED",
+      "feed_url": "https://www.wired.com/feed/rss",
+      "website_url": "https://www.wired.com/",
+      "description": "Wired is a renowned technology and culture magazine, founded in 1993 by Louis Rossetto and Jane Metcalfe. Known for its deep dives into the impact of technology on society, Wired covers a broad spectrum of topics from science and business to design and politics. The magazine, owned by Cond\u00e9 Nast, features contributions from influential writers and editors such as Nicholas Thompson, its former editor-in-chief. Wired's innovative approach has earned it numerous accolades, including National Magazine Awards for General Excellence.",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 9700000,
+        "instagram": 2100000
+      },
+      "image_url": "https://i1.feedspot.com/4724360.jpg?t=1721210902"
+    },
+    {
+      "title": "Boing Boing",
+      "feed_url": "https://boingboing.net/feed",
+      "website_url": "https://boingboing.net/",
+      "description": "Boing Boing covers a number of topics that geeks love, including internet memes, science fiction, movies, music, and other cool nerd stuff. This blog is also a focal point for activism about online freedom, like opposition to the DMCA.",
+      "followers": {
+        "twitter": 480
+      },
+      "image_url": "https://i1.feedspot.com/4402305.jpg?t=1641818490"
+    },
+    {
+      "title": "MajorGeeks.Com",
+      "feed_url": "https://www.majorgeeks.com/files/rss",
+      "website_url": "https://www.majorgeeks.com/",
+      "description": "Providing free software downloads for windows, android, and ioS. Only the best freeware and shareware apps hand-picked by the editors. Follow to get more updates.",
+      "followers": {
+        "facebook": 299500,
+        "twitter": 14100,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4988077.jpg?t=1622629995"
+    },
+    {
+      "title": "Geeky Gadgets",
+      "feed_url": "https://www.geeky-gadgets.com/feed/",
+      "website_url": "https://www.geeky-gadgets.com/",
+      "description": "Geeky Gadgets is designed to provide up to the minute daily technology news on the latest advances in the technology sector including software, hardware, and gadgets from around the world. Geeky Gadgets is an authority in the gadgets and technology space. We have been providing the latest gadgets and technology news for the last decade.",
+      "followers": {
+        "facebook": 27500,
+        "twitter": 22100
+      },
+      "image_url": "https://i1.feedspot.com/4838846.jpg?t=1622629999"
+    },
+    {
+      "title": "A Java geek",
+      "feed_url": "https://blog.frankel.ch/feed.xml",
+      "website_url": "https://blog.frankel.ch/",
+      "description": "Nicolas Fr\u00e4nkel's blog. IT architect focusing on Java, Java EE, and their surrounding ecosystems. He is a trainer, book writer, speaker & blogger.",
+      "followers": {
+        "twitter": 14200
+      },
+      "image_url": "https://i1.feedspot.com/4528220.jpg?t=1618329170"
+    },
+    {
+      "title": "Geek Mamas Blog",
+      "feed_url": "https://geekmamas.com/feed/",
+      "website_url": "https://geekmamas.com/mom-blog/",
+      "description": "Covers articles about the real-life adventures of a crafty, geeky, first-time mom. Geek Mamas is dedicated to the parents who already had a stash of action figures and toys before the baby arrived, the ones who dress up as superheroes when it's not a kid's birthday or Halloween or just the ones that grew up geeky and still embrace it.",
+      "followers": {
+        "facebook": 116400,
+        "twitter": 28400,
+        "instagram": 17400
+      },
+      "image_url": "https://i1.feedspot.com/4806770.jpg?t=1608613806"
+    },
+    {
+      "title": "GeekExtreme",
+      "feed_url": "https://www.geekextreme.com/feed/",
+      "website_url": "https://www.geekextreme.com/",
+      "description": "GeekExtreme was established in 2000. We're dedicated to reporting about and reviewing hardware, software, and peripherals in a straightforward, fluff-free and unbiased way. GeekExtreme gathers news from several sources and does its best to confirm that the facts we report are actually factual. When we gather news from other sites, we make every effort to credit the original source.",
+      "followers": {
+        "facebook": 30400,
+        "twitter": 107
+      },
+      "image_url": "https://i1.feedspot.com/5399365.jpg?t=1676524130"
+    },
+    {
+      "title": "GeekGirlCon",
+      "feed_url": "https://geekgirlcon.com/blog/feed/",
+      "website_url": "https://geekgirlcon.com/blog/",
+      "description": "GeekGirlCon is an organization that works to empower women and girls to pursue their passions whether they love science and technology, comics, literature, gaming, or anything else! Everybody is a geek at heart, in one way or another. Follow to keep up with our blog.",
+      "followers": {
+        "facebook": 18300,
+        "twitter": 25300,
+        "instagram": 7400
+      },
+      "image_url": "https://i1.feedspot.com/5054915.jpg?t=1622630118"
+    },
+    {
+      "title": "Diverse Tech Geek",
+      "feed_url": "https://www.diversetechgeek.com/feed/",
+      "website_url": "https://www.diversetechgeek.com/",
+      "description": "Diverse Tech Geek is a blog about media and technology. Topics covered include comics, animation, technology news/tips, and diversity issues. Follow this blog for more updates.",
+      "followers": {
+        "twitter": 594,
+        "instagram": 77
+      },
+      "image_url": "https://i1.feedspot.com/5055069.jpg"
+    },
+    {
+      "title": "Control Geek",
+      "feed_url": "https://www.controlgeek.net/blog?format=RSS",
+      "website_url": "https://www.controlgeek.net/blog",
+      "description": "I'm John Huntington, a Professor of entertainment technology, sound engineer, and author of the book show networks and control systems. This site covers entertainment technology, severe weather, and photography.",
+      "followers": {
+        "twitter": 928
+      },
+      "image_url": "https://i1.feedspot.com/5054919.jpg"
+    },
+    {
+      "title": "Help Desk Geek",
+      "feed_url": "https://helpdeskgeek.com/feed/",
+      "website_url": "https://helpdeskgeek.com/",
+      "description": "Welcome to Help Desk Geek a blog full of help desk tips for technically-savvy consumers and IT Professionals. The main purpose of this site is to provide readers with daily computer tutorials, technology news, software reviews, and personal computing tips.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5054974.jpg?t=1622630038"
+    },
+    {
+      "title": "The Nerd Stash",
+      "feed_url": "https://thenerdstash.com/feed/",
+      "website_url": "https://thenerdstash.com/",
+      "description": "Welcome to the online home of The Nerd Stash, your exclusive portal into the world of geek culture and the nerd way of life. If you are into cosplay, gadgets and games, gizmos or more, The Nerd Stash is the site for you. We offer a comprehensive collection of articles, reviews, exclusives, interviews, tips, and advice all designed to keep you informed, enlightened and maybe even entertained as you read along. Join us on this journey into the nerd life subculture and let your inner geek shine!",
+      "followers": {
+        "facebook": 12500,
+        "twitter": 2900,
+        "instagram": 850
+      },
+      "image_url": "https://i1.feedspot.com/5240288.jpg?t=1611917420"
+    },
+    {
+      "title": "Granite Geek",
+      "feed_url": "https://granitegeek.concordmonitor.com/feed/",
+      "website_url": "https://granitegeek.concordmonitor.com/",
+      "description": "This blog has topics of geekish interest in and around New Hampshire, from software to sea level rise, population dynamics to 3D printing. Follow this blog for more geek news.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5055017.jpg"
+    },
+    {
+      "title": "GeekDad",
+      "feed_url": "https://geekdad.com/feed/",
+      "website_url": "https://geekdad.com/",
+      "description": "GeekDad is a blog about parenting in the digital age, and raising our kids in our own geeky image. The writers are all geeks and parents who have fun sharing their experiences.",
+      "followers": {
+        "facebook": 30600,
+        "twitter": 25300
+      },
+      "image_url": "https://i1.feedspot.com/4723288.jpg?t=1607577030"
+    },
+    {
+      "title": "Geek Insider",
+      "feed_url": "https://geekinsider.com/feed/",
+      "website_url": "https://geekinsider.com/",
+      "description": "Geek Insider is a leading source for the latest in tech news, gaming, gadgets, and geek culture. We report on the importance of technologically innovative lifestyles and how they connect and empower geeks around the world. Follow to get the latest articles from this feed in your inbox.",
+      "followers": {
+        "facebook": 10800,
+        "twitter": 2,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5055645.jpg?t=1622630078"
+    },
+    {
+      "title": "Skyje",
+      "feed_url": "https://feeds.feedburner.com/Skyje",
+      "website_url": "https://skyje.com/",
+      "description": "Skyje is a Blog for Web Designers and Web Developers featuring Social Networking news and everything that Web 2.0.",
+      "followers": {
+        "facebook": 5700
+      },
+      "image_url": "https://i1.feedspot.com/119273.jpg"
+    },
+    {
+      "title": "GeekEstate Blog",
+      "feed_url": "https://geekestateblog.com/feed/",
+      "website_url": "https://geekestateblog.com/blog/",
+      "description": "Geek Estate Blog is a transparent platform for real estate professionals and entrepreneurs to navigate the landscape of real estate technology and marketing tools. Follow to get the latest articles from this feed in your inbox.",
+      "followers": {
+        "facebook": 631,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4927521.jpg?t=1622630082"
+    },
+    {
+      "title": "Geek Letters",
+      "feed_url": "https://geekletters.com/feed/",
+      "website_url": "https://geekletters.com/",
+      "description": "Geek Letters is a technology blog you can find out how to-tricks, product reviews, and latest tech news. Let us Geek together.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5096482.jpg"
+    },
+    {
+      "title": "All Ages of Geek \u00bb Anime",
+      "feed_url": "https://allagesofgeek.com/feed/",
+      "website_url": "https://allagesofgeek.com/anime-and-manga-articles/",
+      "description": "By the geek, for the geek. All Ages of Geek unites the geek of all ages with anime, gaming, Dungeons & Dragons and all geekdom galore.",
+      "followers": {
+        "facebook": 694,
+        "twitter": 4500,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5135176.jpg?t=1610534809"
+    },
+    {
+      "title": "JoomlaGeek's Blog",
+      "feed_url": "https://www.joomlageek.com/blog?format=feed&type=rss",
+      "website_url": "https://www.joomlageek.com/blog",
+      "description": "JoomlaGeek the professional Joomla Extensions club and get access to beautiful, flexible and handy extensions. Learn about Joomla extensions with our tutorials, reviews and helpful articles on our blog.",
+      "followers": {
+        "facebook": 483,
+        "twitter": 30
+      },
+      "image_url": "https://i1.feedspot.com/5055099.jpg?t=1622630112"
+    },
+    {
+      "title": "MythBank",
+      "feed_url": "https://mythbank.com/feed/",
+      "website_url": "https://mythbank.com/",
+      "description": "Your one-stop shop for all things Mythology, both ancient and modern. From fiction to non-fiction and more! MythBank blog focuses on creating the chronological order of various geek franchises in a cool table that is completely sortable and filterable with lots of cool features.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5312776.jpg?t=1629182333"
+    },
+    {
+      "title": "DataGeek Blog",
+      "feed_url": "https://datageek.blog/en/feed/",
+      "website_url": "https://datageek.blog/en/",
+      "description": "DataGeek Blog expertise you in the data science quest. This blog hopes to make more collaborative and involve more guest bloggers. Discover the latest news related to data by following this feed.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5055011.jpg?t=1622630128"
+    },
+    {
+      "title": "Geek to Geek Media",
+      "feed_url": "https://geektogeekmedia.com/feed/",
+      "website_url": "https://geektogeekmedia.com/",
+      "description": "Geek Culture, Video Games, Retro Gaming, Comics, Anime, Board Games, TTRPGs, D&D, and blogs about everything you love to geek out about. Geek to Geek Media is a network of independent creators, dedicated to bringing high-quality content and building strong relationships within our community. The most important part of geekdom is the people. We want to talk about stuff we love, make friends, and most importantly, make sure that everyone feels appreciated and that there's a place for them.",
+      "followers": {
+        "facebook": 239,
+        "twitter": 516
+      },
+      "image_url": "https://i1.feedspot.com/5183180.jpg?t=1657710982"
+    },
+    {
+      "title": "The Geek Getaway",
+      "feed_url": "https://www.thegeekgetaway.com/feeds/posts/default",
+      "website_url": "https://www.thegeekgetaway.com/",
+      "description": "This blog includes articles related to games and their functions. Follow this blog for some amazing gaming news and reviews.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5055694.jpg"
+    },
+    {
+      "title": "WIL WHEATON",
+      "feed_url": "https://wilwheaton.net/feed/",
+      "website_url": "https://wilwheaton.net/",
+      "description": "WIL WHEATON is an American actor, blogger, voice actor, and writer. Wheaton is a real-life geek. He's been blogging since the medium started in the early '00s, posting on everything from his computers to his personal life. Follow to keep up with our blog.",
+      "followers": {
+        "twitter": 2600000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/131350.jpg?t=1622630864"
+    },
+    {
+      "title": "Cuteek",
+      "feed_url": "https://www.cuteek.com/feed/",
+      "website_url": "https://www.cuteek.com/",
+      "description": "Cuteek is The Geek Lifestyle Blog covering all things geeky, gaming, technology, geek culture, nerd merch, and geek fashion. This is the way!",
+      "followers": {
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/5222489.jpg?t=1607411452"
+    },
+    {
+      "title": "Geeks on Tour Blog",
+      "feed_url": "https://feeds.feedburner.com/blogspot/HUht",
+      "website_url": "https://geeksontour.blogspot.com/",
+      "description": "Join Jim and Chris Guld as they live, travel, and work in their motorhome while teaching technology to travelers. A personal blog that chronicles the life and travels of Jim and Chris Guld, aka Geeks on Tour.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5055742.jpg"
+    },
+    {
+      "title": "Geekfeed",
+      "feed_url": "https://www.geekfeed.com/feed/",
+      "website_url": "https://www.geekfeed.com/",
+      "description": "GeekFeed.com is the world's greatest dedicated geek news feed, providing you with fresh, juicy, breaking news and shareable content on all things geek.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 66800
+      },
+      "image_url": "https://i1.feedspot.com/5198303.jpg?t=1600754937"
+    },
+    {
+      "title": "The Geek",
+      "feed_url": "https://thegeek.games/feed/",
+      "website_url": "https://thegeek.games/",
+      "description": "The Geek is an online magazine with video games, PlayStation, Stadia, Nintendo, Xbox, tech, movies news and reviews.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5289261.jpg?t=1623671587"
+    },
+    {
+      "title": "gingerbookgeek Blogs",
+      "feed_url": "https://gingerbookgeek.wordpress.com/feed/",
+      "website_url": "https://gingerbookgeek.wordpress.com/",
+      "description": "I am a gingernut who happens to love reading. I have set up my own book blog (Ginger Book Geek). Follow this blog for more updates and reviews on the various books.",
+      "followers": {
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5055234.jpg?t=1629722183"
+    },
+    {
+      "title": "SeoGEEK",
+      "feed_url": "https://seogeek.io/feed/",
+      "website_url": "https://seogeek.io/blog/",
+      "description": "SeoGEEk is a Web Development company focused on SEO and social media management, one of our greatest struggles has been the management of our time. We would routinely try new tools and maintain a plethora of spreadsheets and drive files. Follow this blog for regular updates.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 95,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5055223.jpg?t=1622630900"
+    },
+    {
+      "title": "Career Geek",
+      "feed_url": "https://www.careergeekblog.com/feed/",
+      "website_url": "https://www.careergeekblog.com/",
+      "description": "Career Geek blog focuses on creating a career and personal development content for this generation. This blog consists of career advice and career hacks for students and graduates to go through the early stages of their careers.",
+      "followers": {
+        "facebook": 704,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4917503.jpg?t=1620397280"
+    },
+    {
+      "title": "The Geek Insider",
+      "feed_url": "http://thegeekinsider.blogspot.com/feeds/posts/default",
+      "website_url": "http://thegeekinsider.blogspot.com/",
+      "description": "This blog contains different technology used in mobile phones, articles related to various applications, information about android and ios. Follow this blog for frequent updates on mobile phone technology.",
+      "followers": {
+        "twitter": 985
+      },
+      "image_url": "https://i1.feedspot.com/5055675.jpg?t=1622630025"
+    },
+    {
+      "title": "Sartorial Geek",
+      "feed_url": "http://sartorialgeek.com/feed/",
+      "website_url": "http://sartorialgeek.com/",
+      "description": "The Sartorial Geek is a community for the geek in all of us. We to focus on pop culture, girl power, and unique stories through articles written by cool people, for cool people. Follow this blog for regular updates.",
+      "followers": {
+        "facebook": 875,
+        "twitter": 3400,
+        "instagram": 10000
+      },
+      "image_url": "https://i1.feedspot.com/5055031.jpg?t=1622630853"
+    },
+    {
+      "title": "The Geek Blog",
+      "feed_url": "http://www.thegeekblog.co.uk/the-geek-blog?format=RSS",
+      "website_url": "http://www.thegeekblog.co.uk/the-geek-blog",
+      "description": "The Geek Blog put out the information we think people might find helpful. We try to cover a wide range of topics. Follow this blog for some geeky updates.",
+      "followers": {
+        "twitter": 432
+      },
+      "image_url": "https://i1.feedspot.com/5054979.jpg?t=1622630889"
+    },
+    {
+      "title": "Good Old Geek IT Services",
+      "feed_url": "https://www.goodoldgeek.com/feed/",
+      "website_url": "https://www.goodoldgeek.com/blogs/",
+      "description": "The Best website development and social media marketing company in Surat. Good Old Geek is one of the best digital marketing company and check some of the recent blogs of Good Old Geek and say yes to Digitization.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 50,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5055657.jpg?t=1622630939"
+    },
+    {
+      "title": "The Geek Stuff",
+      "feed_url": "https://feeds.feedburner.com/TheGeekStuff",
+      "website_url": "https://www.thegeekstuff.com/",
+      "description": "Provides instruction guides, how-tos, troubleshooting tips and tricks on Linux, Database, Hardware, Security, Web and Open Source for both newbies and geeks",
+      "followers": {
+        "facebook": 15900,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5055027.jpg?t=1622630047"
+    },
+    {
+      "title": "College Info Geek",
+      "feed_url": "https://collegeinfogeek.com/feed/",
+      "website_url": "https://collegeinfogeek.com/",
+      "description": "Hi, I'm Thomas Frank. My team and I built College Info Geek from the ground up to help you learn effectively, spend less time studying, and become more productive (even if you're not in college).",
+      "followers": {
+        "facebook": 16100,
+        "twitter": 15000
+      },
+      "image_url": "https://i1.feedspot.com/4688634.jpg?t=1653282969"
+    },
+    {
+      "title": "WhatNerd",
+      "feed_url": "https://whatnerd.com/feed/",
+      "website_url": "https://whatnerd.com/",
+      "description": "WhatNerd is for nerds, by nerds. We are a site that covers everything about the nerd lifestyle and entertainment: TV, movies, games, health, food and drink, and more.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5060101.jpg?t=1607430809"
+    },
+    {
+      "title": "BlogsGeek",
+      "feed_url": "https://blogsgeek.com/feed/",
+      "website_url": "https://blogsgeek.com/",
+      "description": "BlogsGeek is a digital marketing blog where we share about Blogging, WordPress, SEO, Social Media Marketing and All about living a digital life.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5055229.jpg"
+    },
+    {
+      "title": "ForeverGeek",
+      "feed_url": "https://www.forevergeek.com/feed/",
+      "website_url": "https://www.forevergeek.com/",
+      "description": "Forever Geek offers coverage of a variety of geeky topics including video games, blockbuster science fiction movies, and tech. Follow this blog to get the geekiest news and updates about games, anime, comics and other cool geekery stuff.",
+      "followers": {
+        "facebook": 37700,
+        "twitter": 8500
+      },
+      "image_url": "https://i1.feedspot.com/5055369.jpg?t=1622630087"
+    },
+    {
+      "title": "TAIPEI GEEK",
+      "feed_url": "http://taipeigeek.blogspot.com/feeds/posts/default",
+      "website_url": "http://taipeigeek.blogspot.com/",
+      "description": "My name is Sam, I'm a tech enthusiast based in Taipei, who's into Apple, technology, gadgets, Nikon, photography, and lots of other geeky stuff. This blog is my outlet to share various opinions. Follow this blog for more updates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5055671.jpg?t=1622630521"
+    },
+    {
+      "title": "Insurance Geek",
+      "feed_url": "https://www.insurancegeek.com/blog/feed/",
+      "website_url": "https://www.insurancegeek.com/blog/",
+      "description": "Get multiple insurance quotes from an expert. From life insurance to disability insurance, we got you covered. Save money today with an Insurance Geek. Follow to keep up with the latest updates.",
+      "followers": {
+        "facebook": 121,
+        "instagram": 93
+      },
+      "image_url": "https://i1.feedspot.com/5055249.jpg?t=1622631473"
+    },
+    {
+      "title": "Geek News Central",
+      "feed_url": "https://geeknewscentral.com/index.xml",
+      "website_url": "https://geeknewscentral.com/",
+      "description": "Geek News Central brings the best tech content possible to the new media space breaking information down so that it makes sense to the common man. Articles include geek news, latest technology, product reviews, gadgets, and tech, podcast news for geeks.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 8100
+      },
+      "image_url": "https://i1.feedspot.com/5329708.jpg?t=1633688124"
+    },
+    {
+      "title": "Doors Geek",
+      "feed_url": "https://doorsgeek.blogspot.com/feeds/posts/default",
+      "website_url": "https://doorsgeek.blogspot.com/",
+      "description": "Doors Geek offers free answers, walkthroughs, cheats, and solutions for android and iPhone games. Follow this blog if you want to become a gaming geek.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5055683.jpg"
+    },
+    {
+      "title": "Geeknews",
+      "feed_url": "https://geeknews.net/feed/",
+      "website_url": "https://geeknews.net/",
+      "description": "This site is simply a labor of love, nothing more but news and interesting links for those that geek out on gadgets, computers, comics, D&D, military, art, games, science and so much more. Discover the latest news article by following this blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/26273.jpg?t=1622630411"
+    },
+    {
+      "title": "The Richer Geek Blog",
+      "feed_url": "https://www.therichergeek.com/blog?format=RSS",
+      "website_url": "https://www.therichergeek.com/blog",
+      "description": "Podcast on how to get ahead & increase financial security. Topics are self-directed in real estate investments, vacation rental investments & becoming a real estate entrepreneur. The Richer Geek Blog has experience with rental properties & commercial property investment and coaches others on real estate investment & how to start investing in real estate.",
+      "followers": {
+        "facebook": 355
+      },
+      "image_url": "https://i1.feedspot.com/5055024.jpg?t=1614159947"
+    },
+    {
+      "title": "A Geek With Guns",
+      "feed_url": "https://blog.christopherburg.com/feed/",
+      "website_url": "https://blog.christopherburg.com/",
+      "description": "Blog by Christopher Burg. An advocate of self-defense online and offline. I'm a self-proclaimed geek, a stereotypical one at that. I like dinking with computers, watching and reading science fiction, and getting into long arguments about why operation system X is better than Y. Follow for more updates.",
+      "followers": {
+        "twitter": 202
+      },
+      "image_url": "https://i1.feedspot.com/4330445.jpg?t=1615799380"
+    },
+    {
+      "title": "The Right Geek",
+      "feed_url": "http://therightgeek.blogspot.com/feeds/posts/default",
+      "website_url": "http://therightgeek.blogspot.com/",
+      "description": "Stephanie S. has been an active fan of science fiction for decades. This blog includes pedagogy, early American history, Church history, bioethics and medicine, politics, and moral theology. It covers geekery and politics from a classically liberal/American conservative perspective.",
+      "followers": {
+        "twitter": 236
+      },
+      "image_url": "https://i1.feedspot.com/5055711.jpg?t=1622630142"
+    },
+    {
+      "title": "Help! I'm Not a Geek",
+      "feed_url": "http://feeds.feedburner.com/blogspot/dsUZz",
+      "website_url": "http://helpimnotageek.blogspot.com/",
+      "description": "Technology is constantly changing. It can be frustrating at times and also amazing! The connections that can be made are often life-changing. However, it can feel like you need to be a GEEK in order to use it. Follow this blog for more updates.",
+      "followers": {
+        "twitter": 261
+      },
+      "image_url": "https://i1.feedspot.com/5055048.jpg?t=1622631003"
+    },
+    {
+      "title": "Born Geek",
+      "feed_url": "https://borngeekblog.com/feed/",
+      "website_url": "https://borngeekblog.com/",
+      "description": "Born Geek is a mom blog, unlike others you've read. Inspired by all things gaming and geek culture, Zoe seeks to raise her offspring with a unique view of the world, while figuring out what it all means to her. Follow to keep up with the latest updates.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1300,
+        "instagram": 587
+      },
+      "image_url": "https://i1.feedspot.com/5054926.jpg?t=1622631023"
+    },
+    {
+      "title": "Geek Hash",
+      "feed_url": "http://geekhash.blogspot.com/feeds/posts/default",
+      "website_url": "http://geekhash.blogspot.com/",
+      "description": "Follow this blog for some geeky news and reviews related to movie trailers, series trailers, and books.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5055703.jpg"
+    },
+    {
+      "title": "The geeky bobbin",
+      "feed_url": "https://geekybobbin.com/category/blog/feed/",
+      "website_url": "https://geekybobbin.com/category/blog/",
+      "description": "Hey, I'm Bobbie and I've been sewing about as long as I can remember, but my love of sewing went from casual romance to full-on passionate lifelong love affair when I started machine quilting. Follow this blog to know more about quilting.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 30,
+        "instagram": 10100
+      },
+      "image_url": "https://i1.feedspot.com/5055237.jpg?t=1622631040"
+    },
+    {
+      "title": "A Pius Geek",
+      "feed_url": "https://feeds.feedburner.com/APiusManAHolyThriller",
+      "website_url": "https://www.declanfinn.com/",
+      "description": "This blog tracks a ten year epic of kick-starting a whole writing career, with spies and thrillers and now, vampires. I cover the creative process, stuff that blows up, history, philosophy, and theology. If you like any or all of the above, you'll like this one. We talk about comic books, movies, music, and writing. Follow this blog for more articles.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5055763.jpg?t=1622631049"
+    },
+    {
+      "title": "Contact Center Geek",
+      "feed_url": "https://contactcentergeek.com/blog?format=RSS",
+      "website_url": "https://contactcentergeek.com/blog",
+      "description": "Contact Center Geek is a blog all about the exciting world of contact centers and customer experience. Matt describes his life's work as orchestrating people, process, and technology to deliver improved business outcomes through better customer experiences.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5055078.jpg?t=1622631064"
+    },
+    {
+      "title": "Geek Gal Go",
+      "feed_url": "https://www.geekgalgo.com/home?format=RSS",
+      "website_url": "https://www.geekgalgo.com/home",
+      "description": "As a young adult, I graduated from Central Connecticut State University with a BA in Graphic Design and served in the Air National Guard. Follow this blog if you want to be a geek in graphic design.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5055293.jpg?t=1622631192"
+    },
+    {
+      "title": "All Tech Geeks",
+      "feed_url": "https://www.alltechgeeks.com/feeds/posts/default",
+      "website_url": "https://www.alltechgeeks.com/",
+      "description": "All tech geeks is a computer science and technology portals For Geeks. Blogger tricks, hacks, tutorials, SEO tips, asp.net MVC, javascript, Node js. Follow to keep up with our blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5055719.jpg"
+    },
+    {
+      "title": "The London Geek",
+      "feed_url": "https://www.thelondongeek.co.uk/blog-feed.xml",
+      "website_url": "https://www.thelondongeek.co.uk/blog",
+      "description": "The London Geek is the geeky cultural and lifestyle hub of the British capital. From interviews with online creators to recommendations for nerdy places to go, this is the place to be. All run by a northern geek girl.",
+      "followers": {
+        "facebook": 273,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4741393.jpg?t=1622631090"
+    },
+    {
+      "title": "A Cornish Geek",
+      "feed_url": "https://acornishgeek.com/feed/",
+      "website_url": "https://acornishgeek.com/",
+      "description": "I'm a feminist bookworm and stationery addict, encouraging women to explore the joys of reading and journaling to feel inspired, empowered and improve their mental wellbeing. Follow for more updates.",
+      "followers": {
+        "facebook": 736,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5055310.jpg?t=1622631095"
+    },
+    {
+      "title": "The Geek",
+      "feed_url": "http://thegeekorthant.blogspot.com/feeds/posts/default",
+      "website_url": "http://thegeekorthant.blogspot.com/",
+      "description": "The sharpest, funniest and most fascinating science blog on the internet. Learn more facts , discover new documentaries and explore the new world by following this feed.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5055754.jpg"
+    },
+    {
+      "title": "Protection Geek",
+      "feed_url": "https://protectiongeek.co.uk/feed/",
+      "website_url": "https://protectiongeek.co.uk/blog/",
+      "description": "This blog says about the biggest mistakes done by marketers and distributors. Follow this blog to get some geeky news about protection.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5055217.jpg"
+    },
+    {
+      "title": "The Geek Post",
+      "feed_url": "https://geekpost.net/feed/",
+      "website_url": "https://geekpost.net/",
+      "description": "The Geek Post's goal is to share interesting geek news, products, people, and more, with an emphasis on getting to know the people and businesses that represent all things geek!",
+      "followers": {
+        "facebook": 205,
+        "twitter": 946,
+        "instagram": 87
+      },
+      "image_url": "https://i1.feedspot.com/5372900.jpg?t=1645102582"
+    },
+    {
+      "title": "Open Source For Geeks",
+      "feed_url": "http://opensourceforgeeks.blogspot.com/feeds/posts/default",
+      "website_url": "http://opensourceforgeeks.blogspot.com/",
+      "description": "A blog dedicated open source technologies.Topics span across Linux/Unix, Android, Java, Puzzles, Data Structures, Design patterns, Tools & Utilities.",
+      "followers": {
+        "twitter": 191
+      },
+      "image_url": "https://i1.feedspot.com/5055664.jpg"
+    },
+    {
+      "title": "Geeky Lifestyle",
+      "feed_url": "https://geekylifestyle.com/feed",
+      "website_url": "https://geekylifestyle.com/",
+      "description": "Geeky Lifestyle is a blog concentrated on geeky things. This blog consists of the latest technology used in our day to day life. Follow this blog to get the latest news and technology in your inbox",
+      "followers": {
+        "twitter": 144
+      },
+      "image_url": "https://i1.feedspot.com/5054929.jpg?t=1622631490"
+    },
+    {
+      "title": "The Lovely Geek",
+      "feed_url": "https://feeds.feedburner.com/thelovelygeek",
+      "website_url": "https://thelovelygeek.com/blog/",
+      "description": "Hello! I'm Cristina, the designer, and owner behind The Lovely Geek. This blog is the lifestyle experiences of Cristina Robinson, a full-stack designer in Northern California.",
+      "followers": {
+        "facebook": 184,
+        "twitter": 312,
+        "instagram": 665
+      },
+      "image_url": "https://i1.feedspot.com/5055208.jpg"
+    },
+    {
+      "title": "LearnGeek",
+      "feed_url": "https://learngeek.co/feed/",
+      "website_url": "https://learngeek.co/blog/",
+      "description": "LearnGeek provides consultative and educational services to organizations that want to provide better learning and performance support for their employees.",
+      "followers": {
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5055033.jpg?t=1622630912"
+    },
+    {
+      "title": "Geek Gals",
+      "feed_url": "https://geekgals.co/feed/",
+      "website_url": "https://geekgals.co/",
+      "description": "Geek Gals is a geek culture website for geeky and nerdy women.",
+      "followers": {
+        "facebook": 622,
+        "twitter": 1100,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5080225.jpg?t=1622630935"
+    },
+    {
+      "title": "Everybody's Hometown Geek",
+      "feed_url": "http://everybodyshometowngeek.com/feed/",
+      "website_url": "https://everybodyshometowngeek.com/blog/",
+      "description": "Geek culture, including interviews and reviews, videos, articles, and more - all coming at you semi-live from Everybody's Hometown. Get more information about geek by following our feed.",
+      "followers": {
+        "facebook": 253,
+        "twitter": 524
+      },
+      "image_url": "https://i1.feedspot.com/5055075.jpg?t=1622631441"
+    },
+    {
+      "title": "Den of Geek",
+      "feed_url": "https://www.denofgeek.com/uk/feeds/tv",
+      "website_url": "https://www.denofgeek.com/",
+      "description": "Den Of Geek is dedicated to serving the interests of today's entertainment enthusiasts. Reaching nearly 10 million worldwide users every month, our audience is passionate about the choices they make and act on our recommendations. Follow to get the latest articles from this feed in your inbox.",
+      "followers": {
+        "facebook": 481500,
+        "twitter": 73100,
+        "instagram": 60000
+      },
+      "image_url": "https://i1.feedspot.com/5055373.jpg?t=1622629991"
+    },
+    {
+      "title": "Geek Girl Authority",
+      "feed_url": "https://www.geekgirlauthority.com/feed/rss/",
+      "website_url": "https://www.geekgirlauthority.com/",
+      "description": "Geek Girl Authority has a simple mission: to provide a welcoming space for good old-fashioned nerdy fun within the Geek Culture and Pop Culture Universes. Though, as the name implies, we were founded by women, we are by no means exclusive. We seek inclusivity and encourage a variety of voices for the site and benefit greatly from those varied perspectives. All we ask is that our contributors be excited to geek out on just about everything. We encourage passion, knowledge and conversation on the topics which are important to all of us.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 5100,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5247661.jpg?t=1614062393"
+    },
+    {
+      "title": "Geekfence",
+      "feed_url": "https://www.geekfence.com/feed/",
+      "website_url": "https://123pcsolutions.com/geek-blog/",
+      "description": "Geekfence is the UAE's number 1 technology website. Follow this blog for the latest technology news and updates.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 124
+      },
+      "image_url": "https://i1.feedspot.com/5055038.jpg?t=1689926295"
+    },
+    {
+      "title": "Miami Computer Repair",
+      "feed_url": "https://123pcsolutions.com/feed/",
+      "website_url": "https://123pcsolutions.com/geek-blog/",
+      "description": "Here at 123pcsolutions.com, we aim at fixing your computer and laptop at the best and most affordable price possible. Our team of experts will offer you the best services within the shortest time span. Follow this blog to know more about computers, laptops, and mobile technology.",
+      "followers": {
+        "twitter": 136
+      },
+      "image_url": "https://i1.feedspot.com/5055051.jpg?t=1622630972"
+    },
+    {
+      "title": "Geeky Domain",
+      "feed_url": "https://geekydomain.com/feed/",
+      "website_url": "https://geekydomain.com/",
+      "description": "A collection of anime, gaming, and geeky guides, objects, and ramblings. Assessing geek culture's best contributions in one convenient location.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 53
+      },
+      "image_url": "https://i1.feedspot.com/5240010.jpg?t=1611836768"
+    },
+    {
+      "title": "Sarah Jane's Craft Blog",
+      "feed_url": "https://www.blogger.com/feeds/6277117531358513857/posts/default",
+      "website_url": "https://www.sarahjanescraftblog.com/",
+      "description": "I'm a crafty geek who enjoys writing, board games, and bargain hunting. Follow this craft blog exploring quick, easy, and inexpensive crafts and DIYs.",
+      "followers": {
+        "twitter": 138
+      },
+      "image_url": "https://i1.feedspot.com/5055728.jpg"
+    },
+    {
+      "title": "Geek Universal",
+      "feed_url": "https://www.geekuniversal.com/feeds/posts/default",
+      "website_url": "https://www.geekuniversal.com/",
+      "description": "Geek Universal is a fun geeky blog where we bring you the latest and press releases from Marvel Comics, DC Comics, IDW and Valiant too. We are from the makers of The Bearded Trio. We'll also bring you to press releases from the latest movies, TV shows, Funko Pops and more geeky goodness. Follow to keep up with new updates.",
+      "followers": {
+        "facebook": 24300,
+        "twitter": 6300
+      },
+      "image_url": "https://i1.feedspot.com/5055721.jpg?t=1622631018"
+    },
+    {
+      "title": "The English Geek",
+      "feed_url": "https://amysorensen.typepad.com/the_english_geek/rss.xml",
+      "website_url": "https://amysorensen.typepad.com/",
+      "description": "This blog contains each and every experience of Amy's life about how to be a geek. Follow this blog to get the latest article in your inbox.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5055053.jpg"
+    },
+    {
+      "title": "The Big Fat Geek",
+      "feed_url": "https://kidakaka.com/feed/",
+      "website_url": "https://kidakaka.com/",
+      "description": "The Big Fat Geek is a personal blog where Prasad Ajinkya talks about games, technology and all things web. Discover the latest collection by following our feed.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5004449.jpg"
+    },
+    {
+      "title": "Content Marketing Geek",
+      "feed_url": "https://contentmarketinggeek.com/cgi-sys/suspendedpage.cgi",
+      "website_url": "https://contentmarketinggeek.com/",
+      "description": "Content Marketing Geek is the new face of SEO for bloggers, authors, entrepreneurs, and small business owners. Follow this blog for SEO, Brand Building, Web Design, Content Writing, Online Reputation Management & Repair, Social Media Marketing, Online Marketing, Local Marketing.",
+      "followers": {
+        "facebook": 161,
+        "twitter": 39
+      },
+      "image_url": "https://i1.feedspot.com/5055203.jpg?t=1622631460"
+    }
+  ]
+}

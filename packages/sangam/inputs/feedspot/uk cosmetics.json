@@ -1,0 +1,30 @@
+{
+  "category": "UK Cosmetics",
+  "source_url": "https://rss.feedspot.com/uk_cosmetics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Really Ree - Beauty & Style",
+      "feed_url": "https://reallyree.com/feed/",
+      "website_url": "https://reallyree.com/",
+      "description": "The ReallyRee beauty blog is the authority in all things new and hot in the beauty world. You'll find in-depth reviews, beauty tips, photos, swatches and more! Subscribe to keep track of new posts from this blog.",
+      "followers": {
+        "facebook": 10900,
+        "twitter": 31000,
+        "instagram": 68600
+      },
+      "image_url": "https://i1.feedspot.com/4918124.jpg?t=1620632097"
+    },
+    {
+      "title": "Cult Beauty Blog",
+      "feed_url": "https://www.cultbeauty.co.uk/blog/feed/",
+      "website_url": "https://www.cultbeauty.co.uk/blog/",
+      "description": "Cult Beauty is an insider's destination to shop the world's best beauty products. From skin care to make up, each of the beauty products is chosen by our world-class expert panel for its efficacy and stand-alone brilliance. Subscribe to keep track of new posts from this blog.",
+      "followers": {
+        "facebook": 340000,
+        "twitter": 63200,
+        "instagram": 1600000
+      },
+      "image_url": "https://i1.feedspot.com/4754703.jpg?t=1609424862"
+    }
+  ]
+}

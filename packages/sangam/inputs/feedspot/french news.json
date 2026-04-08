@@ -1,0 +1,434 @@
+{
+  "category": "French News",
+  "source_url": "https://rss.feedspot.com/french_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "France 24",
+      "feed_url": "https://www.france24.com/en/rss",
+      "website_url": "https://www.france24.com/en/",
+      "description": "FRANCE 24 is the first international news channel that offers a French perspective and sensibility on world events. It broadcasts worldwide on a 24/7 basis, in French, English, Spanish, and Arabic. Get all the latest breaking news from France 24 on Business, Sports, Culture as well as news from the US, Europe, Asia Pacific, Africa, Middle East, America.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 4300000,
+        "instagram": 481800
+      },
+      "image_url": "https://i1.feedspot.com/3623203.jpg?t=1755150808"
+    },
+    {
+      "title": "The Local",
+      "feed_url": "https://feeds.thelocal.com/rss/fr",
+      "website_url": "https://www.thelocal.fr/",
+      "description": "News from France, French politics, French travel, French bureaucracy, moving to France, jobs in France, French property, learning French, by The Local, published from Paris. The Local's goal is to give you all the news and essential information you need about France.",
+      "followers": {
+        "facebook": 124100,
+        "twitter": 27700,
+        "instagram": 5600
+      },
+      "image_url": "https://i1.feedspot.com/4634182.jpg?t=1666869540"
+    },
+    {
+      "title": "RFI",
+      "feed_url": "https://www.rfi.fr/en/france/rss",
+      "website_url": "https://www.rfi.fr/en/",
+      "description": "Follow any political information, cultural, sporting and live streaming on RFI. The latest information, news and events in France and Europe.",
+      "followers": {
+        "facebook": 251000,
+        "twitter": 4900000
+      },
+      "image_url": "https://i1.feedspot.com/4634185.jpg"
+    },
+    {
+      "title": "Mediapart",
+      "feed_url": "https://www.mediapart.fr/articles/feed",
+      "website_url": "https://www.mediapart.fr/en/english",
+      "description": "Mediapart is a digital, participatory and independent newspaper, without advertising or subsidies, and which lives only from the support of its readers. Since 2008, Mediapart has become known for its exclusive information which makes it a newspaper without any equivalent in the French press.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 3100000,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/4472116.jpg?t=1755163769"
+    },
+    {
+      "title": "France Diplomacy",
+      "feed_url": "https://www.diplomatie.gouv.fr/spip.php?page=backend-fd",
+      "website_url": "https://www.diplomatie.gouv.fr/en/",
+      "description": "Website of the French Ministry for Europe and Foreign Affairs: news about France's foreign policy, information about coming to France, diplomatic news and magazine Label France publishing articles either written by freelance journalists or taken from the French newspapers, on every aspect of France today.",
+      "followers": {
+        "facebook": 58100,
+        "twitter": 138900,
+        "instagram": 232500
+      },
+      "image_url": "https://i1.feedspot.com/1797009.jpg?t=1666869518"
+    },
+    {
+      "title": "Le Monde diplomatique",
+      "feed_url": "https://mondediplo.com/backend",
+      "website_url": "https://mondediplo.com/",
+      "description": "English edition of Le Monde diplomatique, the Paris-based monthly paper, published in 28 languages and read by two and a half million people worldwide.",
+      "followers": {
+        "facebook": 85900,
+        "twitter": 248100
+      },
+      "image_url": "https://i1.feedspot.com/273057.jpg?t=1755163794"
+    },
+    {
+      "title": "The Paris News",
+      "feed_url": "https://theparisnews.com/search/?q=&t=article&l=10&d=&d1=&d2=&s=start_time&sd=desc&c%5B%5D=news&f=rss",
+      "website_url": "https://theparisnews.com/news/",
+      "description": "The Paris News as a bastion of truth will strive for excellence, accuracy and fairness through objective news-gathering methods. We will be constantly accessible, but remain fiercely independent as we guide the Red River Valley's deliberation of public issues and advocate for solutions. While serving as the area's watchdog, we will report the good news happening in our neighborhoods every day.",
+      "followers": {
+        "facebook": 33200,
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/4634375.jpg?t=1755163833"
+    },
+    {
+      "title": "The Paris Star",
+      "feed_url": "https://www.parisstaronline.com/feed",
+      "website_url": "https://www.parisstaronline.com/",
+      "description": "The Paris Star has been a trusted community newspaper since 1851. The news you want, when you want it! Each week our mission is to report the news accurately and fairly. Every print edition features human interest stories about residents in this small community, plenty of pictures, and comments/opinions.",
+      "followers": {
+        "facebook": 905,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/1250699.jpg?t=1755163888"
+    },
+    {
+      "title": "FrenchDailyNews",
+      "feed_url": "https://frenchdailynews.com/feed",
+      "website_url": "https://frenchdailynews.com/",
+      "description": "All latest articles from FrenchDailyNews.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5090484.jpg?t=1669879033"
+    },
+    {
+      "title": "France Today",
+      "feed_url": "https://francetoday.com/feed",
+      "website_url": "https://francetoday.com",
+      "description": "All latest articles from France Today.",
+      "followers": {
+        "facebook": 17700
+      },
+      "image_url": "https://i1.feedspot.com/8659009.jpg?t=1755181055"
+    },
+    {
+      "title": "Sud Ouest",
+      "feed_url": "https://www.sudouest.fr/essentiel/rss.xml",
+      "website_url": "https://www.sudouest.fr",
+      "description": "All latest articles from Sud Ouest.",
+      "followers": {
+        "facebook": 582800
+      },
+      "image_url": "https://i1.feedspot.com/56809.jpg?t=1755157491"
+    },
+    {
+      "title": "Midi Libre",
+      "feed_url": "https://www.midilibre.fr/rss.xml",
+      "website_url": "https://www.midilibre.fr",
+      "description": "All latest articles from Midi Libre.",
+      "followers": {
+        "twitter": 177800
+      },
+      "image_url": "https://i1.feedspot.com/520227.jpg?t=1755157653"
+    },
+    {
+      "title": "L'Est R\u00e9publicain",
+      "feed_url": "https://www.estrepublicain.fr/rss",
+      "website_url": "https://www.estrepublicain.fr",
+      "description": "All latest articles from L'Est R\u00e9publicain.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1024053.jpg?t=1755157602"
+    },
+    {
+      "title": "France Soir",
+      "feed_url": "https://www.francesoir.fr/rss.xml",
+      "website_url": "https://www.francesoir.fr",
+      "description": "All latest articles from France Soir.",
+      "followers": {
+        "facebook": 200500
+      },
+      "image_url": "https://i1.feedspot.com/1459477.jpg?t=1755158053"
+    },
+    {
+      "title": "Les Derni\u00e8res Nouvelles d'Alsace",
+      "feed_url": "https://www.dna.fr/rss",
+      "website_url": "https://www.dna.fr",
+      "description": "All latest articles from Les Derni\u00e8res Nouvelles d'Alsace.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1564950.jpg?t=1755157709"
+    },
+    {
+      "title": "La Croix",
+      "feed_url": "https://www.la-croix.com/feeds/rss/site.xml",
+      "website_url": "https://www.la-croix.com",
+      "description": "All latest articles from La Croix.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3809254.jpg?t=1755157328"
+    },
+    {
+      "title": "RFI",
+      "feed_url": "https://www.rfi.fr/en/rss",
+      "website_url": "https://www.rfi.fr/en",
+      "description": "RFI is a French current affairs radio station that broadcasts worldwide in French and 12 foreign languages. Follow any political information, cultural, sporting and live streaming on RFI. Get the latest information, news and events in France, Europe and around the world.",
+      "followers": {
+        "facebook": 6500000,
+        "twitter": 4900000,
+        "instagram": 744500
+      },
+      "image_url": "https://i1.feedspot.com/4503643.jpg"
+    },
+    {
+      "title": "Marienne",
+      "feed_url": "https://www.marianne.net/rss.xml",
+      "website_url": "https://www.marianne.net",
+      "description": "All latest articles from Marienne.",
+      "followers": {
+        "facebook": 400100
+      },
+      "image_url": "https://i1.feedspot.com/5024422.jpg?t=1755158012"
+    },
+    {
+      "title": "La D\u00e9p\u00eache",
+      "feed_url": "https://www.ladepeche.fr/rss.xml",
+      "website_url": "https://www.ladepeche.fr",
+      "description": "All latest articles from La D\u00e9p\u00eache.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5024426.jpg?t=1755157541"
+    },
+    {
+      "title": "20 Minutes",
+      "feed_url": "https://www.20minutes.fr/feeds/rss-une.xml",
+      "website_url": "https://www.20minutes.fr",
+      "description": "All latest articles from 20 Minutes.",
+      "followers": {
+        "twitter": 2600000
+      },
+      "image_url": "https://i1.feedspot.com/5052051.jpg?t=1755157380"
+    },
+    {
+      "title": "Yahoo Actualit\u00e9s",
+      "feed_url": "https://fr.news.yahoo.com/rss",
+      "website_url": "https://fr.news.yahoo.com",
+      "description": "All latest articles from Yahoo Actualit\u00e9s.",
+      "followers": {
+        "facebook": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5193337.jpg?t=1755159327"
+    },
+    {
+      "title": "Le Point",
+      "feed_url": "https://www.lepoint.fr/24h-infos/rss.xml",
+      "website_url": "https://www.lepoint.fr/",
+      "description": "All latest articles from Le Point.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 1000000,
+        "instagram": 316000
+      },
+      "image_url": "https://i1.feedspot.com/5193387.jpg?t=1755157950"
+    },
+    {
+      "title": "InfoMigrants \u00bb France",
+      "feed_url": "https://www.infomigrants.net/en/rss/all.xml",
+      "website_url": "https://www.infomigrants.net/en/country/France",
+      "description": "InfoMigrants is a news and information site for migrants at every point of their journey: in their country of origin, along the route, or in the places where they hope to start a new life.",
+      "followers": {
+        "facebook": 622200
+      },
+      "image_url": "https://i1.feedspot.com/5367548.jpg?t=1755163633"
+    },
+    {
+      "title": "Arab News \u00bb France",
+      "feed_url": "https://www.arabnews.com/taxonomy/term/1516/feed",
+      "website_url": "https://www.arabnews.com/category/tags/france",
+      "description": "All latest articles about France from Arab News.",
+      "followers": {
+        "facebook": 7800000
+      },
+      "image_url": "https://i1.feedspot.com/8658792.jpg?t=1755151877"
+    },
+    {
+      "title": "Foreign Affairs \u00bb France",
+      "feed_url": "https://www.foreignaffairs.com/feeds/region/France/rss.xml",
+      "website_url": "https://www.foreignaffairs.com/regions/france",
+      "description": "All latest articles about France from Foreign Affairs.",
+      "followers": {
+        "facebook": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/8658793.jpg?t=1755163392"
+    },
+    {
+      "title": "Atlantic Council \u00bb France",
+      "feed_url": "https://www.atlanticcouncil.org/region/france/feed",
+      "website_url": "https://www.atlanticcouncil.org/region/france",
+      "description": "All latest articles about France from Atlantic Council.",
+      "followers": {
+        "facebook": 62200
+      },
+      "image_url": "https://i1.feedspot.com/8658794.jpg?t=1755155596"
+    },
+    {
+      "title": "The Conversation \u00bb France",
+      "feed_url": "https://theconversation.com/topics/the-conversation-france-24313/articles.atom",
+      "website_url": "https://theconversation.com/topics/the-conversation-france-24313",
+      "description": "All latest articles about France from The Conversation.",
+      "followers": {
+        "facebook": 117400
+      },
+      "image_url": "https://i1.feedspot.com/8658795.jpg?t=1755154413"
+    },
+    {
+      "title": "Moroccon World News \u00bb France",
+      "feed_url": "https://www.moroccoworldnews.com/tag/france/feed",
+      "website_url": "https://www.moroccoworldnews.com/tag/france",
+      "description": "Stay on top of France with Morocco World News : latest developments with fact-based reporting, exclusive video footage, photos, and real-time updates.",
+      "followers": {
+        "facebook": 736700
+      },
+      "image_url": "https://i1.feedspot.com/8658796.jpg?t=1755157205"
+    },
+    {
+      "title": "TechCrunch \u00bb France",
+      "feed_url": "https://techcrunch.com/tag/france/feed/",
+      "website_url": "https://techcrunch.com/tag/france",
+      "description": "Read the latest tech news and analysis, covering startups in France, including investments, venture capital, and founders, on TechCrunch.",
+      "followers": {
+        "facebook": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/8658797.jpg?t=1755155210"
+    },
+    {
+      "title": "The Independent \u00bb France",
+      "feed_url": "https://www.the-independent.com/topic/france/rss",
+      "website_url": "https://www.the-independent.com/topic/france",
+      "description": "The latest breaking news, comment and features from The Independent.",
+      "followers": {
+        "facebook": 11000000
+      },
+      "image_url": "https://i1.feedspot.com/8658798.jpg?t=1755154308"
+    },
+    {
+      "title": "The New York Times \u00bb France",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/topic/destination/france/rss.xml",
+      "website_url": "https://www.nytimes.com/topic/destination/france",
+      "description": "News about France , including commentary and archival articles published in The New York Times.",
+      "followers": {
+        "facebook": 21000000
+      },
+      "image_url": "https://i1.feedspot.com/8658799.jpg?t=1755154501"
+    },
+    {
+      "title": "Le Nouvel Obs",
+      "feed_url": "https://www.nouvelobs.com/a-la-une/rss.xml",
+      "website_url": "https://www.nouvelobs.com",
+      "description": "All latest articles from Le Nouvel Obs.",
+      "followers": {
+        "facebook": 2000000
+      },
+      "image_url": "https://i1.feedspot.com/8658800.jpg?t=1755157754"
+    },
+    {
+      "title": "Channel 4 News \u00bb Francs",
+      "feed_url": "https://www.channel4.com/news/world/france/feed",
+      "website_url": "https://www.channel4.com/news/world/france",
+      "description": "All latest articles from Channel 4 News.",
+      "followers": {
+        "facebook": 6000000
+      },
+      "image_url": "https://i1.feedspot.com/8658801.jpg?t=1755159449"
+    },
+    {
+      "title": "Ouest-France",
+      "feed_url": "https://www.ouest-france.fr/rss/une",
+      "website_url": "https://www.ouest-france.fr",
+      "description": "All latest articles from Ouest-France.",
+      "followers": {
+        "facebook": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/8658803.jpg?t=1755157438"
+    },
+    {
+      "title": "Financial Times \u00bb France",
+      "feed_url": "https://www.ft.com/france?format=rss",
+      "website_url": "https://www.ft.com/france",
+      "description": "Breaking news and top stories from France. The latest on the economy, politics, government, and business.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8658808.jpg?t=1755154197"
+    },
+    {
+      "title": "La France Agricole",
+      "feed_url": "https://www.lafranceagricole.fr/rss",
+      "website_url": "https://www.lafranceagricole.fr",
+      "description": "All latest articles from La France Agricole.",
+      "followers": {
+        "facebook": 44300
+      },
+      "image_url": "https://i1.feedspot.com/8658813.jpg?t=1755163676"
+    },
+    {
+      "title": "Baltic News Network \u00bb France",
+      "feed_url": "https://bnn-news.com/tag/france/feed",
+      "website_url": "https://bnn-news.com/tag/france",
+      "description": "All latest articles about France from Baltic News Network.",
+      "followers": {
+        "facebook": 7700
+      },
+      "image_url": "https://i1.feedspot.com/8658814.jpg?t=1755156582"
+    },
+    {
+      "title": "The Local France",
+      "feed_url": "https://feeds.thelocal.com/rss/builder/fr",
+      "website_url": "https://www.thelocal.fr",
+      "description": "All latest articles from The Local France.",
+      "followers": {
+        "facebook": 124100
+      },
+      "image_url": "https://i1.feedspot.com/8658815.jpg?t=1755163430"
+    },
+    {
+      "title": "U.S. News & World Report \u00bb France",
+      "feed_url": "https://www.usnews.com/topics/locations/france/rss",
+      "website_url": "https://www.usnews.com/topics/locations/france",
+      "description": "All latest articles about France from U.S. News & World Report.",
+      "followers": {
+        "facebook": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/8658816.jpg?t=1755155104"
+    },
+    {
+      "title": "Le HuffPost",
+      "feed_url": "https://www.huffingtonpost.fr/rss/all_headline.xml",
+      "website_url": "https://www.huffingtonpost.fr",
+      "description": "All latest articles from Le HuffPost.",
+      "followers": {
+        "facebook": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/8659013.jpg?t=1755181058"
+    },
+    {
+      "title": "Le Monde",
+      "feed_url": "https://www.lemonde.fr/en/rss/une.xml",
+      "website_url": "https://www.lemonde.fr/en/",
+      "description": "Le Monde is the number one website for news and newspaper articles. Get the latest international news, news on France, Society, economy, culture, environment, blogs, and more. Le Monde is a French daily afternoon newspaper and the main publication of Le Monde Group founded in 1944.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 16700,
+        "instagram": 2600000
+      },
+      "image_url": "https://i1.feedspot.com/5460263.jpg?t=1666869108"
+    },
+    {
+      "title": "Expatica France",
+      "feed_url": "https://www.expatica.com/fr/feed/",
+      "website_url": "https://www.expatica.com/fr/news/",
+      "description": "Keeping you in touch with local and international news relating to France. Expatica is a English language media company serving news and information for expats living in or moving to France.",
+      "followers": {
+        "facebook": 28000,
+        "twitter": 8100,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4634190.jpg"
+    }
+  ]
+}

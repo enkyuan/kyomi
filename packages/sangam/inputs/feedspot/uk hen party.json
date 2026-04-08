@@ -1,0 +1,54 @@
+{
+  "category": "UK Hen Party",
+  "source_url": "https://rss.feedspot.com/uk_hen_party_rss_feeds",
+  "feeds": [
+    {
+      "title": "Weddingsonline",
+      "feed_url": "https://www.weddingsonline.ie/blog/category/hen-party/feed/",
+      "website_url": "https://www.weddingsonline.ie/blog/category/hen-party/",
+      "description": "Ireland's busiest wedding community with advice, inspiration, real weddings, lively forums and a huge selection of wedding suppliers and venues! Subscribe us to keep up with articles on Hen Party from Weddingsonline.",
+      "followers": {
+        "facebook": 93800,
+        "twitter": 9600,
+        "instagram": 25000
+      },
+      "image_url": "https://i1.feedspot.com/4682656.jpg?t=1606198529"
+    },
+    {
+      "title": "Bespoke-Bride",
+      "feed_url": "https://www.bespoke-bride.com/tag/hen-party/feed/",
+      "website_url": "https://www.bespoke-bride.com/tag/hen-party/",
+      "description": "Bespoke Bride hosts a plethora of wedding ideas, inspiration and advice all topped off with a sprinkling of character. Follow us to keep up with articles on Hen Party.",
+      "followers": {
+        "facebook": 14500,
+        "twitter": 10300,
+        "instagram": 49800
+      },
+      "image_url": "https://i1.feedspot.com/4679162.jpg?t=1606198505"
+    },
+    {
+      "title": "HenBox",
+      "feed_url": "https://www.henbox.co.uk/hen-party-ideas/feed/",
+      "website_url": "https://www.henbox.co.uk/hen-party-ideas/",
+      "description": "Looking for hen do ideas? Subscribe our blog for unique hen ideas, hen party games & useful planning advice.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 1300,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4679127.jpg?t=1607928232"
+    },
+    {
+      "title": "Henstuff.co.uk Blog",
+      "feed_url": "http://www.henstuff.co.uk/blog/syndication.axd",
+      "website_url": "http://www.henstuff.co.uk/blog/",
+      "description": "We've hen party ideas coming out of our ears! Henstuff's hen night blog is the only resource you need when you're planning a hen do.",
+      "followers": {
+        "facebook": 796,
+        "twitter": 1900,
+        "instagram": 82
+      },
+      "image_url": "https://i1.feedspot.com/4680913.jpg?t=1606198604"
+    }
+  ]
+}

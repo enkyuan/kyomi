@@ -1,0 +1,45 @@
+{
+  "category": "Self Driving Car",
+  "source_url": "https://rss.feedspot.com/self_driving_car_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Guardian \u00bb Self driving",
+      "feed_url": "https://www.theguardian.com/technology/self-driving-cars/rss",
+      "website_url": "https://www.theguardian.com/technology/self-driving-cars",
+      "description": "Latest news, reviews and features about Self driving from the Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4747510.jpg?t=1608279198"
+    },
+    {
+      "title": "Medium \u00bb Self Driving Car",
+      "feed_url": "https://medium.com/feed/self-driving-cars",
+      "website_url": "https://medium.com/self-driving-cars",
+      "description": "A publication covering news, predictions, and opinions about self-driving cars and other autonomous vehicles.",
+      "followers": {
+        "facebook": 520799,
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/4747485.jpg?t=1608279206"
+    },
+    {
+      "title": "Driverless global \u00bb Driverless",
+      "feed_url": "https://www.driverless.global/driverless-blog?format=feed&type=rss",
+      "website_url": "https://www.driverless.global/driverless-blog",
+      "description": "View Autonomous vehicle Business listings, Latest startups, articles, videos and blogs, add your own Free listing, view and list the latest Jobs",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4748390.jpg?t=1665394986"
+    },
+    {
+      "title": "Driverless car market watch",
+      "feed_url": "https://www.driverless-future.com/?feed=rss2",
+      "description": "The goal of this website brings attention to the great advances which are currently occurring in this field and to accelerate the adoption of this crucial and highly beneficial technology.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4385441.jpg?t=1612960874"
+    }
+  ]
+}
