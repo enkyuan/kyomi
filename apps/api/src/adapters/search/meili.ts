@@ -47,7 +47,7 @@ async function meiliFetch(path: string, init?: RequestInit): Promise<Response> {
   });
 }
 
-async function ensureFeedIndex(): Promise<void> {
+async function doEnsureFeedIndex(): Promise<void> {
   const uid = getIndexUid();
   const createResponse = await meiliFetch("/indexes", {
     method: "POST",
@@ -61,10 +61,28 @@ async function ensureFeedIndex(): Promise<void> {
     throw new Error(`Meilisearch index init failed (${createResponse.status})`);
   }
 
-  await meiliFetch(`/indexes/${uid}/settings/searchable-attributes`, {
+  const settingsResponse = await meiliFetch(`/indexes/${uid}/settings/searchable-attributes`, {
     method: "PUT",
     body: JSON.stringify(["title", "url", "description", "link"]),
   });
+
+  if (!settingsResponse.ok) {
+    throw new Error(
+      `Meilisearch searchable-attributes update failed (${settingsResponse.status})`,
+    );
+  }
+}
+
+let feedIndexPromise: Promise<void> | null = null;
+
+async function ensureFeedIndex(): Promise<void> {
+  if (!feedIndexPromise) {
+    feedIndexPromise = doEnsureFeedIndex().catch((err: unknown) => {
+      feedIndexPromise = null;
+      throw err;
+    });
+  }
+  return feedIndexPromise;
 }
 
 export async function upsertFeedSearchDocument(document: FeedSearchDocument): Promise<void> {

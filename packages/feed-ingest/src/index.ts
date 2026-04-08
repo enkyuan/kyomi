@@ -1,6 +1,6 @@
 import { drizzle } from "drizzle-orm/node-postgres";
 import { eq, sql } from "drizzle-orm";
-// @ts-ignore workspace runtime resolves pg correctly; package-local type resolution does not propagate here.
+// @ts-expect-error workspace runtime resolves pg correctly; package-local type resolution does not propagate here.
 import { Pool } from "pg";
 import { XMLParser } from "fast-xml-parser";
 import { feedItems, feeds } from "@cronos/db";
@@ -8,6 +8,38 @@ import * as schema from "@cronos/db";
 
 const FETCH_TIMEOUT_MS = 12_000;
 const MAX_BYTES = 2 * 1024 * 1024;
+const MAX_ENRICHMENTS_PER_REFRESH = 5;
+const ENRICHMENT_CONCURRENCY = 3;
+
+const PRIVATE_IP_PATTERNS = [
+  /^127\./,
+  /^10\./,
+  /^172\.(1[6-9]|2\d|3[01])\./,
+  /^192\.168\./,
+  /^::1$/,
+  /^fc00:/i,
+  /^fe80:/i,
+  /^localhost$/i,
+];
+
+function isSafeEnrichmentUrl(raw: string): boolean {
+  let url: URL;
+  try {
+    url = new URL(raw);
+  } catch {
+    return false;
+  }
+  if (url.protocol !== "http:" && url.protocol !== "https:") {
+    return false;
+  }
+  const hostname = url.hostname.replace(/^\[/, "").replace(/\]$/, "");
+  for (const pattern of PRIVATE_IP_PATTERNS) {
+    if (pattern.test(hostname)) {
+      return false;
+    }
+  }
+  return true;
+}
 
 export type FeedRefreshResult = {
   ok: boolean;
@@ -290,6 +322,9 @@ async function fetchFeedDocument(url: string): Promise<FetchFeedDocumentResult> 
 async function fetchArticleEnrichment(
   url: string,
 ): Promise<{ content: string | null; imageUrl: string | null }> {
+  if (!isSafeEnrichmentUrl(url)) {
+    return { content: null, imageUrl: null };
+  }
   const fetched = await fetchFeedDocument(url);
   if (!fetched.ok) {
     return { content: null, imageUrl: null };
@@ -318,13 +353,20 @@ async function syncFeedToSearch(
     headers.Authorization = `Bearer ${config.masterKey}`;
   }
 
-  await fetch(`${baseUrl}/indexes`, {
+  const createResponse = await fetch(`${baseUrl}/indexes`, {
     method: "POST",
     headers,
     body: JSON.stringify({ uid: indexUid, primaryKey: "id" }),
-  }).catch(() => undefined);
+  }).catch((error: unknown) => {
+    console.warn("[syncFeedToSearch] index creation request failed:", error);
+    return null;
+  });
 
-  await fetch(`${baseUrl}/indexes/${indexUid}/documents`, {
+  if (createResponse && !createResponse.ok && createResponse.status !== 409) {
+    console.warn(`[syncFeedToSearch] index creation returned ${createResponse.status}`);
+  }
+
+  const upsertResponse = await fetch(`${baseUrl}/indexes/${indexUid}/documents`, {
     method: "POST",
     headers,
     body: JSON.stringify([
@@ -336,7 +378,14 @@ async function syncFeedToSearch(
         link: document.link,
       },
     ]),
-  }).catch(() => undefined);
+  }).catch((error: unknown) => {
+    console.warn("[syncFeedToSearch] document upsert request failed:", error);
+    return null;
+  });
+
+  if (upsertResponse && !upsertResponse.ok) {
+    console.warn(`[syncFeedToSearch] document upsert returned ${upsertResponse.status}`);
+  }
 }
 
 function parseJsonFeedDocument(body: string, feedId: string, finalUrl: string): ParsedFeedDocument {
@@ -556,18 +605,24 @@ export async function runFeedRefresh(
     }
     const items = Array.from(deduped.values());
     // TODO: add language detection once we settle on the TS-side metadata/storage model.
-    for (const item of items) {
-      if (item.content && item.content.length >= 220 && item.imageUrl) {
-        continue;
-      }
-      const enrichment = await fetchArticleEnrichment(item.link);
-      if ((!item.content || item.content.length < 220) && enrichment.content) {
-        item.content = enrichment.content;
-        item.summary = summarizeText(enrichment.content) ?? item.summary;
-      }
-      if (!item.imageUrl && enrichment.imageUrl) {
-        item.imageUrl = enrichment.imageUrl;
-      }
+    const enrichmentCandidates = items
+      .filter((item) => !(item.content && item.content.length >= 220 && item.imageUrl))
+      .slice(0, MAX_ENRICHMENTS_PER_REFRESH);
+
+    for (let i = 0; i < enrichmentCandidates.length; i += ENRICHMENT_CONCURRENCY) {
+      const batch = enrichmentCandidates.slice(i, i + ENRICHMENT_CONCURRENCY);
+      await Promise.all(
+        batch.map(async (item) => {
+          const enrichment = await fetchArticleEnrichment(item.link);
+          if ((!item.content || item.content.length < 220) && enrichment.content) {
+            item.content = enrichment.content;
+            item.summary = summarizeText(enrichment.content) ?? item.summary;
+          }
+          if (!item.imageUrl && enrichment.imageUrl) {
+            item.imageUrl = enrichment.imageUrl;
+          }
+        }),
+      );
     }
 
     await database.transaction(async (tx) => {

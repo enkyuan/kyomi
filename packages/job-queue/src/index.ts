@@ -136,16 +136,31 @@ async function retryOrDeadLetterJob(
     error: unknown;
     maxAttempts: number;
     retryDelayMs: number;
+    signal?: AbortSignal;
   },
 ): Promise<void> {
-  const { streamKey, group, deadLetterStreamKey, message, error, maxAttempts, retryDelayMs } =
-    options;
+  const {
+    streamKey,
+    group,
+    deadLetterStreamKey,
+    message,
+    error,
+    maxAttempts,
+    retryDelayMs,
+    signal,
+  } = options;
   const nextAttempts = message.attempts + 1;
   const errorMessage = error instanceof Error ? error.message : String(error);
 
   if (nextAttempts <= maxAttempts) {
-    if (retryDelayMs > 0) {
-      await new Promise((resolve) => setTimeout(resolve, retryDelayMs));
+    if (retryDelayMs > 0 && !signal?.aborted) {
+      await new Promise<void>((resolve) => {
+        const timer = setTimeout(resolve, retryDelayMs);
+        signal?.addEventListener("abort", () => {
+          clearTimeout(timer);
+          resolve();
+        });
+      });
     }
     await redis.xadd(
       streamKey,
@@ -203,6 +218,7 @@ async function processMessage(
     deadLetterStreamKey: string;
     maxAttempts: number;
     retryDelayMs: number;
+    signal?: AbortSignal;
     onJob: (message: JobMessage) => Promise<void>;
     onError?: (error: unknown, message: JobMessage | null) => Promise<void> | void;
   },
@@ -224,7 +240,25 @@ async function processMessage(
         error,
         maxAttempts: options.maxAttempts,
         retryDelayMs: options.retryDelayMs,
+        signal: options.signal,
       });
+    } else {
+      // Parsing failed — dead-letter the raw message so it is not stuck in the PEL forever.
+      const rawFields = streamFieldsToRecord(fields);
+      const errorMessage = error instanceof Error ? error.message : String(error);
+      const deadLetterFields = {
+        ...rawFields,
+        attempts: rawFields.attempts ?? "0",
+        error: errorMessage,
+        failed_at: new Date().toISOString(),
+        original_stream_id: id,
+      };
+      await redis.xadd(
+        options.deadLetterStreamKey,
+        "*",
+        ...toRedisStreamFieldList(deadLetterFields),
+      );
+      await redis.xack(options.streamKey, options.group, id);
     }
     await options.onError?.(error, message);
   }
@@ -270,6 +304,7 @@ export async function consumeJobs(redis: Redis, options: ConsumeJobsOptions): Pr
             deadLetterStreamKey,
             maxAttempts,
             retryDelayMs,
+            signal,
             onJob,
             onError,
           },
@@ -318,6 +353,7 @@ export async function consumeJobs(redis: Redis, options: ConsumeJobsOptions): Pr
           deadLetterStreamKey,
           maxAttempts,
           retryDelayMs,
+          signal,
           onJob,
           onError,
         },
