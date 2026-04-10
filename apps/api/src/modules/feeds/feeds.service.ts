@@ -4,6 +4,7 @@ import type { db } from "@adapters/db/client";
 import { upsertFeedSearchDocument } from "@adapters/search/meili";
 import { resolveRemoteFeed } from "@modules/discover/discover.resolve-remote-feed";
 import { AppError } from "@shared/errors/app-error";
+import { DEFAULT_FOLDER_NAME, getOrCreateFolderByName } from "@modules/folders/folders.service";
 import { displayFeedTitle } from "./feeds.display-title";
 import type {
   BulkUnsubscribeResponseDto,
@@ -29,10 +30,13 @@ export async function listSubscribedFeeds(
       feedTitle: feeds.title,
       customTitle: feedSubscriptions.customTitle,
       link: feeds.link,
+      folderId: feedSubscriptions.folderId,
+      folderName: folders.name,
       subscribedAt: feedSubscriptions.createdAt,
     })
     .from(feedSubscriptions)
     .innerJoin(feeds, eq(feedSubscriptions.feedId, feeds.id))
+    .leftJoin(folders, eq(feedSubscriptions.folderId, folders.id))
     .where(eq(feedSubscriptions.userId, userId));
 
   return rows.map((r) => ({
@@ -42,6 +46,8 @@ export async function listSubscribedFeeds(
     title: displayFeedTitle(r.feedTitle, r.customTitle),
     customTitle: r.customTitle,
     link: r.link,
+    folderId: r.folderId,
+    folderName: r.folderName,
     subscribedAt: r.subscribedAt.toISOString(),
   }));
 }
@@ -110,10 +116,12 @@ export async function createOrSubscribeToFeed(
     }
 
     const subscriptionId = crypto.randomUUID();
+    const defaultFolder = await getOrCreateFolderByName(tx, userId, DEFAULT_FOLDER_NAME);
     await tx.insert(feedSubscriptions).values({
       id: subscriptionId,
       userId,
       feedId,
+      folderId: defaultFolder.id,
       createdAt: now,
     });
 
@@ -183,10 +191,12 @@ export async function subscribeToExistingFeed(
     }
 
     const subscriptionId = crypto.randomUUID();
+    const defaultFolder = await getOrCreateFolderByName(tx, userId, DEFAULT_FOLDER_NAME);
     await tx.insert(feedSubscriptions).values({
       id: subscriptionId,
       userId,
       feedId,
+      folderId: defaultFolder.id,
       createdAt: now,
     });
 

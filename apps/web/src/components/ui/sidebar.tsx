@@ -519,6 +519,7 @@ export function SidebarMenuItem({
 export function SidebarMenuButton({
   isActive = false,
   activeAdornment,
+  endAdornment,
   variant = "default",
   size = "default",
   tooltip,
@@ -528,21 +529,23 @@ export function SidebarMenuButton({
 }: useRender.ComponentProps<"button"> & {
   isActive?: boolean;
   activeAdornment?: React.ReactNode;
+  endAdornment?: React.ReactNode;
   tooltip?: string | React.ComponentProps<typeof TooltipPopup>;
 } & VariantProps<typeof sidebarMenuButtonVariants>): React.ReactElement {
   const { isMobile, state } = useSidebar();
 
-  const childrenWithAdornment =
-    isActive && activeAdornment ? (
-      <>
-        {props.children}
-        <span className="ms-auto shrink-0 group-data-[collapsible=icon]:hidden">
-          {activeAdornment}
-        </span>
-      </>
-    ) : (
-      props.children
-    );
+  const resolvedAdornment = isActive && activeAdornment ? activeAdornment : endAdornment;
+
+  const childrenWithAdornment = resolvedAdornment ? (
+    <>
+      {props.children}
+      <span className="ms-auto shrink-0 group-data-[collapsible=icon]:hidden">
+        {resolvedAdornment}
+      </span>
+    </>
+  ) : (
+    props.children
+  );
 
   const defaultProps = {
     className: cn(sidebarMenuButtonVariants({ size, variant }), className),

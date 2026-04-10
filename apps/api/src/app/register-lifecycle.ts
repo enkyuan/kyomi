@@ -2,6 +2,7 @@ import type { Elysia } from "elysia";
 import { env } from "@config/env";
 import { shutdownAdapters } from "@adapters/lifecycle";
 import { logger } from "@adapters/logger";
+import { parseFeedAdminUserIds } from "@modules/feeds/feeds.admin-allowlist";
 
 /**
  * Startup / shutdown hooks (FastAPI `lifespan` equivalent).
@@ -9,6 +10,12 @@ import { logger } from "@adapters/logger";
 export function registerLifecycle(app: Elysia) {
   app.onStart(() => {
     logger.info("application.startup.complete", { nodeEnv: env.NODE_ENV });
+    if (
+      parseFeedAdminUserIds(env.FEED_ADMIN_USER_IDS).length === 0 &&
+      !env.FEED_ADMIN_SHARED_SECRET
+    ) {
+      logger.warn("feed.admin.unconfigured", { nodeEnv: env.NODE_ENV });
+    }
   });
 
   app.onStop(async () => {

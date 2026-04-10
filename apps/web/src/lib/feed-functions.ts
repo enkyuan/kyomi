@@ -21,6 +21,26 @@ export type FollowFeedResult = {
   newSubscription: boolean;
 };
 
+export type FollowedFeed = {
+  subscriptionId: string;
+  feedId: string;
+  url: string;
+  title: string;
+  customTitle: string | null;
+  link: string | null;
+  folderId: string | null;
+  folderName: string | null;
+  subscribedAt: string;
+};
+
+type FollowedFeedsResponse = {
+  items: FollowedFeed[];
+};
+
+type FeedUnreadCountResponse = {
+  items: Array<{ id: string }>;
+};
+
 function looksLikeFeedUrl(value: string) {
   return /^https?:\/\/\S+$/i.test(value) || /^[\w-]+(\.[\w-]+)+\S*$/i.test(value);
 }
@@ -74,4 +94,46 @@ export const followFeed = createServerFn({ method: "POST" })
       headers,
       body: JSON.stringify({ url: normalizeUrlCandidate(data.url.trim()) }),
     });
+  });
+
+export const listFollowedFeeds = createServerFn({ method: "GET" }).handler(
+  async (): Promise<FollowedFeed[]> => {
+    const headers = buildForwardHeaders(getRequestHeaders());
+    const response = await apiJson<FollowedFeedsResponse>("/api/v1/feeds", {
+      headers,
+    });
+    return response.items;
+  },
+);
+
+export const unfollowFeed = createServerFn({ method: "POST" })
+  .inputValidator((input: { feedId: string }) => input)
+  .handler(async ({ data }): Promise<{ message: string }> => {
+    const headers = buildForwardHeaders(getRequestHeaders());
+    return apiJson<{ message: string }>(`/api/v1/feeds/${encodeURIComponent(data.feedId)}`, {
+      method: "DELETE",
+      headers,
+    });
+  });
+
+export const getFollowedFeedUnreadCounts = createServerFn({ method: "POST" })
+  .inputValidator((input: { feedIds: string[] }) => input)
+  .handler(async ({ data }): Promise<Record<string, number>> => {
+    const headers = buildForwardHeaders(getRequestHeaders());
+    const uniqueIds = [...new Set(data.feedIds.map((id) => id.trim()).filter(Boolean))];
+    if (uniqueIds.length === 0) {
+      return {};
+    }
+
+    const counts = await Promise.all(
+      uniqueIds.map(async (feedId) => {
+        const response = await apiJson<FeedUnreadCountResponse>(
+          `/api/v1/articles?is_read=false&feed_id=${encodeURIComponent(feedId)}&limit=100`,
+          { headers },
+        );
+        return [feedId, response.items.length] as const;
+      }),
+    );
+
+    return Object.fromEntries(counts);
   });

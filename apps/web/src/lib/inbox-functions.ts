@@ -53,6 +53,16 @@ type ArticleCountsResponse = {
   saved: number;
 };
 
+type SidebarInboxCounts = {
+  today: number;
+  unread: number;
+  saved: number;
+};
+
+type ScopedUnreadCountResponse = {
+  count: number;
+};
+
 type InboxResponse = {
   items: InboxItem[];
   total: number;
@@ -67,6 +77,8 @@ type InboxDetailResponse = {
 type GetInboxItemsInput = {
   filter?: InboxFilter;
   search?: string;
+  feedId?: string;
+  folderId?: string;
 };
 
 function mapInboxItem(item: CursorListResponse["items"][number]): InboxItem {
@@ -115,11 +127,34 @@ async function fetchInboxList(filter: InboxFilter, headers: Headers): Promise<Cu
   });
 }
 
+function buildArticlesUrl(filter: InboxFilter, feedId?: string, folderId?: string) {
+  const params = new URLSearchParams();
+  if (filter === "unread") {
+    params.set("is_read", "false");
+  } else if (filter === "saved") {
+    params.set("is_saved", "true");
+  }
+  if (feedId?.trim()) {
+    params.set("feed_id", feedId.trim());
+  }
+  if (folderId?.trim()) {
+    params.set("folder_id", folderId.trim());
+  }
+  params.set("limit", "100");
+  return `/api/v1/articles?${params.toString()}`;
+}
+
 export const getInboxItems = createServerFn({ method: "GET" })
   .inputValidator((input: GetInboxItemsInput) => input)
   .handler(async ({ data }): Promise<InboxResponse> => {
     const headers = getRequestHeaders();
-    const response = await fetchInboxList(data.filter ?? "today", headers);
+    const filter = data.filter ?? "today";
+    const response =
+      (data.feedId?.trim() || data.folderId?.trim()) && filter !== "today"
+        ? await apiJson<CursorListResponse>(buildArticlesUrl(filter, data.feedId, data.folderId), {
+            headers: buildForwardHeaders(headers),
+          })
+        : await fetchInboxList(filter, headers);
     const items = filterItemsBySearch(response.items.map(mapInboxItem), data.search);
 
     return {
@@ -160,3 +195,45 @@ export const getInboxCounts = createServerFn({ method: "GET" }).handler(async ()
     headers: buildForwardHeaders(headers),
   });
 });
+
+export const getSidebarInboxCounts = createServerFn({ method: "GET" }).handler(
+  async (): Promise<SidebarInboxCounts> => {
+    const headers = getRequestHeaders();
+    const forwarded = buildForwardHeaders(headers);
+
+    const [todayResponse, unreadResponse, savedResponse] = await Promise.all([
+      apiJson<CursorListResponse>("/api/v1/articles/views/today", { headers: forwarded }),
+      apiJson<CursorListResponse>("/api/v1/articles?is_read=false&limit=100", {
+        headers: forwarded,
+      }),
+      apiJson<CursorListResponse>("/api/v1/articles/views/read-later", { headers: forwarded }),
+    ]);
+
+    return {
+      today: todayResponse.items.length,
+      unread: unreadResponse.items.length,
+      saved: savedResponse.items.length,
+    };
+  },
+);
+
+export const getScopedUnreadCount = createServerFn({ method: "GET" })
+  .inputValidator((input: { feedId?: string; folderId?: string }) => input)
+  .handler(async ({ data }): Promise<ScopedUnreadCountResponse> => {
+    const headers = getRequestHeaders();
+
+    if (!data.feedId?.trim() && !data.folderId?.trim()) {
+      return { count: 0 };
+    }
+
+    const response = await apiJson<CursorListResponse>(
+      buildArticlesUrl("unread", data.feedId, data.folderId),
+      {
+        headers: buildForwardHeaders(headers),
+      },
+    );
+
+    return {
+      count: response.items.length,
+    };
+  });

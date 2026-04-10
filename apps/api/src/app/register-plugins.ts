@@ -2,6 +2,7 @@ import type { Elysia } from "elysia";
 import { corsPlugin } from "@adapters/cors/cors.plugin";
 import { openapiPlugin } from "@adapters/openapi/openapi.plugin";
 import { rateLimitPlugin } from "@adapters/rate-limit/rate-limit.plugin";
+import { env } from "@config/env";
 
 /**
  * Global stack only (CORS, OpenAPI, rate limit).
@@ -9,6 +10,8 @@ import { rateLimitPlugin } from "@adapters/rate-limit/rate-limit.plugin";
  */
 export function registerPlugins(app: Elysia) {
   app.use(corsPlugin);
-  app.use(openapiPlugin);
+  if (env.OPENAPI_ENABLED) {
+    app.use(openapiPlugin);
+  }
   app.use(rateLimitPlugin);
 }

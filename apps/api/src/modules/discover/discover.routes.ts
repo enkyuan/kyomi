@@ -1,7 +1,20 @@
 import type { Elysia } from "elysia";
 import { t } from "elysia";
+import { enforceRateLimitForContext } from "@adapters/rate-limit/rate-limit.plugin";
 import { v1HandlerContext } from "@shared/http/v1-handler-context";
 import { previewFeedFromUrl, searchFeeds } from "./discover.service";
+
+const discoverSearchRateLimit = {
+  name: "discover.search",
+  max: 60,
+  windowMs: 60_000,
+} as const;
+
+const discoverPreviewRateLimit = {
+  name: "discover.preview",
+  max: 20,
+  windowMs: 5 * 60_000,
+} as const;
 
 const feedPreviewResponse = t.Object({
   id: t.Union([t.String(), t.Null()]),
@@ -26,13 +39,16 @@ export function registerDiscoverRoutes(app: Elysia) {
     .get(
       "/discover/search",
       async (context) => {
-        const { db, logger, userId, query } = v1HandlerContext(context);
-        const rawQuery = typeof query.q === "string" ? query.q : "";
+        const { db, logger, userId, query } = v1HandlerContext<
+          unknown,
+          { q: string; limit?: number }
+        >(context);
+        await enforceRateLimitForContext(context, userId, discoverSearchRateLimit);
         const limit = Math.min(50, Math.max(1, Number(query.limit ?? 20) || 20));
-        const items = await searchFeeds(db, userId, rawQuery, limit);
+        const items = await searchFeeds(db, userId, query.q, limit, logger);
         logger.info("discover.search.ok", {
           userId,
-          query: rawQuery,
+          query: query.q,
           resultCount: items.length,
         });
         return items;
@@ -50,9 +66,9 @@ export function registerDiscoverRoutes(app: Elysia) {
     .get(
       "/discover/preview",
       async (context) => {
-        const { db, logger, userId, query } = v1HandlerContext(context);
-        const rawUrl = typeof query.url === "string" ? query.url : "";
-        const preview = await previewFeedFromUrl(db, userId, rawUrl);
+        const { db, logger, userId, query } = v1HandlerContext<unknown, { url: string }>(context);
+        await enforceRateLimitForContext(context, userId, discoverPreviewRateLimit);
+        const preview = await previewFeedFromUrl(db, userId, query.url);
         logger.info("discover.preview.ok", {
           userId,
           url: preview.url,

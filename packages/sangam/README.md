@@ -1,4 +1,4 @@
-# RSS Catalog Pipeline Integration
+# RSS Catalog Pipeline 
 
 This directory is the absorbed Python pipeline from the former `rss-r-us` repository.
 
@@ -42,3 +42,26 @@ After import, run:
 - `bun run catalog:smoke`
 
 This asserts discover search returns expected seeded results for a known query.
+
+## Local Scheduled Sync
+
+Use the repository script for local cron scheduling:
+
+- `bash packages/sangam/scripts/sync.sh`
+- or from package scope: `bun run --cwd packages/sangam sync`
+
+The script:
+
+- Runs `bun run catalog:sync` from repo root.
+- Writes logs to `.catalog-sync-logs/catalog-sync-YYYY-MM-DD.log`.
+- Uses `.catalog-sync.lock` to prevent overlapping runs.
+
+Example `crontab -e` entry (every 30 minutes):
+
+- `*/30 * * * * /bin/bash /ABSOLUTE_PATH_TO_REPO/packages/sangam/scripts/sync.sh`
+
+Troubleshooting:
+
+- If runs are skipped repeatedly, check for stale lock directory: `.catalog-sync.lock`.
+- If sync fails, inspect latest log in `.catalog-sync-logs/`.
+- Make sure `bun`, project `.env` files, and local Postgres/Redis/Meilisearch are available in the cron environment.

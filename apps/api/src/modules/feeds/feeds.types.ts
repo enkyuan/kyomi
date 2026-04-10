@@ -7,6 +7,8 @@ export type SubscribedFeedListItemDto = {
   /** Raw override; null means use global feed title. */
   customTitle: string | null;
   link: string | null;
+  folderId: string | null;
+  folderName: string | null;
   subscribedAt: string;
 };
 

@@ -9,16 +9,16 @@ import { SidebarPinnedSection } from "@components/navigation/sidebar-pinned-sect
 import { SidebarWorkspaceHeader } from "@components/navigation/sidebar-workspace-header";
 import { SettingsDialog } from "src/components/pages/settings";
 import { Sidebar, SidebarContent } from "@components/ui/sidebar";
-import { getInboxCounts } from "@lib/inbox-functions";
+import { getSidebarInboxCounts } from "@lib/inbox-functions";
 
 export function AppSidebar() {
   const [isMacPlatform, setIsMacPlatform] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const inboxSummaryQuery = useQuery({
     queryKey: ["sidebar", "inbox-summary"],
-    queryFn: () => getInboxCounts(),
+    queryFn: () => getSidebarInboxCounts(),
   });
-  const unreadCount = inboxSummaryQuery.data?.unread ?? 0;
+  const counts = inboxSummaryQuery.data ?? { today: 0, unread: 0, saved: 0 };
 
   useEffect(() => {
     if (typeof navigator === "undefined") {
@@ -39,7 +39,7 @@ export function AppSidebar() {
       <SidebarWorkspaceHeader isMacPlatform={isMacPlatform} />
 
       <SidebarContent className="overflow-x-hidden">
-        <SidebarInboxNav unreadCount={unreadCount} />
+        <SidebarInboxNav counts={counts} />
         <SidebarPinnedSection />
       </SidebarContent>
 

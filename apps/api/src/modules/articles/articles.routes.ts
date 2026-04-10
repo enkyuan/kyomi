@@ -157,9 +157,8 @@ export function registerArticleRoutes(app: Elysia) {
     .get(
       "/articles/check-saved",
       async (context) => {
-        const { db, query, userId } = v1HandlerContext(context);
-        const url = typeof query.url === "string" ? query.url : "";
-        return checkSavedArticleForUser(db, userId, url);
+        const { db, query, userId } = v1HandlerContext<unknown, { url: string }>(context);
+        return checkSavedArticleForUser(db, userId, query.url);
       },
       {
         query: t.Object({
@@ -196,18 +195,14 @@ export function registerArticleRoutes(app: Elysia) {
     .post(
       "/articles/:articleId/summarize",
       async (context) => {
-        const { body, db, logger, params, userId } = v1HandlerContext(context);
+        const { body, db, logger, params, userId } = v1HandlerContext<
+          { content?: string; language_key?: string },
+          Record<string, unknown>,
+          { articleId: string }
+        >(context);
         const article = await getArticleDetailForUser(db, userId, params.articleId);
-        const raw =
-          typeof body === "object" && body !== null ? (body as Record<string, unknown>) : {};
-        const content = resolveEnhancementContent(
-          typeof raw.content === "string" ? raw.content : undefined,
-          article,
-        );
-        const summary = summarizeContent(
-          content,
-          typeof raw.language_key === "string" ? raw.language_key : undefined,
-        );
+        const content = resolveEnhancementContent(body.content, article);
+        const summary = summarizeContent(content, body.language_key);
         logger.info("articles.summarize.succeeded", { userId, articleId: params.articleId });
         return { summary };
       },
@@ -220,16 +215,14 @@ export function registerArticleRoutes(app: Elysia) {
     .post(
       "/articles/:articleId/translate",
       async (context) => {
-        const { body, db, logger, params, userId } = v1HandlerContext(context);
+        const { body, db, logger, params, userId } = v1HandlerContext<
+          { content?: string; target_language: string },
+          Record<string, unknown>,
+          { articleId: string }
+        >(context);
         const article = await getArticleDetailForUser(db, userId, params.articleId);
-        const raw =
-          typeof body === "object" && body !== null ? (body as Record<string, unknown>) : {};
-        const targetLanguage =
-          typeof raw.target_language === "string" ? raw.target_language : "original";
-        const content = resolveEnhancementContent(
-          typeof raw.content === "string" ? raw.content : undefined,
-          article,
-        );
+        const targetLanguage = body.target_language;
+        const content = resolveEnhancementContent(body.content, article);
         const translated = translateContent(content, targetLanguage);
         logger.info("articles.translate.succeeded", {
           userId,
@@ -292,15 +285,17 @@ export function registerArticleRoutes(app: Elysia) {
     .post(
       "/articles",
       async (context) => {
-        const { body, db, logger, set, userId } = v1HandlerContext(context);
-        const raw =
-          typeof body === "object" && body !== null ? (body as Record<string, unknown>) : {};
-        const url = typeof raw.url === "string" ? raw.url : "";
+        const { body, db, logger, set, userId } = v1HandlerContext<{
+          url: string;
+          title?: string;
+          content?: string;
+          note?: string;
+        }>(context);
         const detail = await createArticleClip(db, userId, {
-          url,
-          title: typeof raw.title === "string" ? raw.title : undefined,
-          content: typeof raw.content === "string" ? raw.content : undefined,
-          note: typeof raw.note === "string" ? raw.note : undefined,
+          url: body.url,
+          title: body.title,
+          content: body.content,
+          note: body.note,
         });
         logger.info("articles.clip.created", { userId, clipId: detail.id });
         set.status = 201;
@@ -332,10 +327,18 @@ export function registerArticleRoutes(app: Elysia) {
     .put(
       "/articles/:articleId",
       async (context) => {
-        const { body, db, params, userId } = v1HandlerContext(context);
-        const raw =
-          typeof body === "object" && body !== null ? (body as Record<string, unknown>) : {};
-        await updateArticleOrClipForUser(db, userId, params.articleId, raw);
+        const { body, db, params, userId } = v1HandlerContext<
+          {
+            isRead?: boolean | null;
+            isSaved?: boolean;
+            title?: string;
+            note?: string | null;
+            content?: string | null;
+          },
+          Record<string, unknown>,
+          { articleId: string }
+        >(context);
+        await updateArticleOrClipForUser(db, userId, params.articleId, body);
         return { message: "Article updated" };
       },
       {

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { BookmarkFill } from "@mingcute/react";
-import { ChevronDownIcon } from "lucide-react";
+import { DownFill } from "@mingcute/react";
 import { Collapsible, CollapsiblePanel, CollapsibleTrigger } from "@components/ui/collapsible";
 import {
   SidebarGroup,
@@ -27,7 +27,7 @@ export function SidebarPinnedSection() {
         <CollapsibleTrigger className="w-full">
           <SidebarGroupLabel className="w-full cursor-pointer justify-between">
             <span>Pinned</span>
-            <ChevronDownIcon
+            <DownFill
               className={cn(
                 "size-4 transition-transform duration-200",
                 !pinnedOpen && "-rotate-90",

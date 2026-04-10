@@ -1,4 +1,5 @@
 import { env } from "@config/env";
+import { AppError } from "@shared/errors/app-error";
 
 export type FeedSearchDocument = {
   id: string;
@@ -35,7 +36,10 @@ export function isMeiliConfigured(): boolean {
 async function meiliFetch(path: string, init?: RequestInit): Promise<Response> {
   const baseUrl = getBaseUrl();
   if (!baseUrl) {
-    throw new Error("Meilisearch is not configured");
+    throw new AppError("Meilisearch is not configured", {
+      status: 503,
+      code: "MEILI_NOT_CONFIGURED",
+    });
   }
 
   return fetch(`${baseUrl}${path}`, {
@@ -58,7 +62,10 @@ async function doEnsureFeedIndex(): Promise<void> {
   });
 
   if (!createResponse.ok && createResponse.status !== 409) {
-    throw new Error(`Meilisearch index init failed (${createResponse.status})`);
+    throw new AppError(`Meilisearch index init failed (${createResponse.status})`, {
+      status: 503,
+      code: "MEILI_INDEX_INIT_FAILED",
+    });
   }
 
   const settingsResponse = await meiliFetch(`/indexes/${uid}/settings/searchable-attributes`, {
@@ -67,7 +74,13 @@ async function doEnsureFeedIndex(): Promise<void> {
   });
 
   if (!settingsResponse.ok) {
-    throw new Error(`Meilisearch searchable-attributes update failed (${settingsResponse.status})`);
+    throw new AppError(
+      `Meilisearch searchable-attributes update failed (${settingsResponse.status})`,
+      {
+        status: 503,
+        code: "MEILI_SETTINGS_UPDATE_FAILED",
+      },
+    );
   }
 }
 
@@ -94,7 +107,10 @@ export async function upsertFeedSearchDocument(document: FeedSearchDocument): Pr
     body: JSON.stringify([document]),
   });
   if (!response.ok) {
-    throw new Error(`Meilisearch upsert failed (${response.status})`);
+    throw new AppError(`Meilisearch upsert failed (${response.status})`, {
+      status: 503,
+      code: "MEILI_UPSERT_FAILED",
+    });
   }
 }
 
@@ -107,7 +123,10 @@ export async function deleteFeedSearchDocument(feedId: string): Promise<void> {
     method: "DELETE",
   });
   if (!response.ok && response.status !== 404) {
-    throw new Error(`Meilisearch delete failed (${response.status})`);
+    throw new AppError(`Meilisearch delete failed (${response.status})`, {
+      status: 503,
+      code: "MEILI_DELETE_FAILED",
+    });
   }
 }
 
@@ -128,7 +147,10 @@ export async function searchFeedSearchDocuments(
     }),
   });
   if (!response.ok) {
-    throw new Error(`Meilisearch search failed (${response.status})`);
+    throw new AppError(`Meilisearch search failed (${response.status})`, {
+      status: 503,
+      code: "MEILI_SEARCH_FAILED",
+    });
   }
   const payload = (await response.json()) as { hits?: FeedSearchDocument[] };
   return Array.isArray(payload.hits) ? payload.hits : [];

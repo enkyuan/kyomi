@@ -30,8 +30,8 @@ export function registerQueueRoutes(app: Elysia) {
     .get(
       "/queue/dead-letter",
       async (context) => {
-        const { logger, query, userId } = v1HandlerContext(context);
-        assertFeedAdminUser(userId);
+        const { logger, query, userId } = v1HandlerContext<unknown, { limit?: number }>(context);
+        assertFeedAdminUser(userId, context.request.headers);
         const limit = Math.min(100, Math.max(1, Number(query.limit ?? 25) || 25));
         const redis = getRedis();
         const rows = (await redis.xrevrange(
@@ -81,12 +81,10 @@ export function registerQueueRoutes(app: Elysia) {
     .post(
       "/queue/dead-letter/replay",
       async (context) => {
-        const { body, logger, userId } = v1HandlerContext(context);
-        assertFeedAdminUser(userId);
+        const { body, logger, userId } = v1HandlerContext<{ ids: string[] }>(context);
+        assertFeedAdminUser(userId, context.request.headers);
         const redis = getRedis();
-        const raw =
-          typeof body === "object" && body !== null ? (body as { ids?: string[] }) : undefined;
-        const ids = raw?.ids ?? [];
+        const ids = body.ids;
 
         let replayed = 0;
         for (const id of ids) {

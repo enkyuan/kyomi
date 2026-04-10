@@ -2,10 +2,12 @@
 
 import { useLocation, Link } from "@tanstack/react-router";
 import { Calendar3Fill, NewsFill, StarFill } from "@mingcute/react";
+import { cn } from "@lib/utils";
 import {
   SidebarGroup,
   SidebarGroupLabel,
   SidebarMenu,
+  SidebarMenuBadge,
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@components/ui/sidebar";
@@ -42,48 +44,64 @@ const INBOX_NAV: Array<{
 
 const FILTER_KEYS = ["filter"] as const;
 
-export function SidebarInboxNav({ unreadCount }: { unreadCount: number }) {
+export function SidebarInboxNav({
+  counts,
+}: {
+  counts: { today: number; unread: number; saved: number };
+}) {
   const location = useLocation();
+  const badgeValueByLabel: Record<string, number> = {
+    Today: counts.today,
+    "All Unread": counts.unread,
+    "Read Later": counts.saved,
+  };
 
   return (
     <SidebarGroup className="gap-1">
       <SidebarGroupLabel>Inbox</SidebarGroupLabel>
       <SidebarMenu>
-        {INBOX_NAV.map((item) => (
-          <SidebarMenuItem key={item.label}>
-            <SidebarMenuButton
-              activeAdornment={
-                item.label === "Today" && unreadCount > 0 ? (
-                  <span className="flex size-5 items-center justify-center rounded-full bg-sidebar-foreground/10 px-1 text-[11px] font-semibold text-sidebar-foreground tabular-nums">
-                    {unreadCount}
-                  </span>
-                ) : null
-              }
-              isActive={
-                location.pathname === "/inbox" &&
-                FILTER_KEYS.every((key) => {
-                  const expected = item.search[key];
-                  const actual = location.search[key];
-                  return expected === undefined ? actual === undefined : actual === expected;
-                })
-              }
-              tooltip={item.label}
-              render={
-                <Link
-                  to={item.to}
-                  search={(prev) => ({
-                    ...prev,
-                    ...item.search,
-                    itemId: undefined,
-                  })}
-                />
-              }
-            >
-              <item.icon />
-              <span>{item.label}</span>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-        ))}
+        {INBOX_NAV.map((item) => {
+          const badgeValue = badgeValueByLabel[item.label] ?? 0;
+
+          return (
+            <SidebarMenuItem key={item.label}>
+              <SidebarMenuButton
+                className={cn(badgeValue > 0 ? "pe-10" : undefined)}
+                isActive={
+                  location.pathname === "/inbox" &&
+                  !location.search.feedId &&
+                  !location.search.folderId &&
+                  FILTER_KEYS.every((key) => {
+                    const expected = item.search[key];
+                    const actual = location.search[key];
+                    return expected === undefined ? actual === undefined : actual === expected;
+                  })
+                }
+                tooltip={item.label}
+                render={
+                  <Link
+                    to={item.to}
+                    search={(prev) => ({
+                      ...prev,
+                      ...item.search,
+                      feedId: undefined,
+                      folderId: undefined,
+                      itemId: undefined,
+                    })}
+                  />
+                }
+              >
+                <item.icon />
+                <span className="truncate">{item.label}</span>
+              </SidebarMenuButton>
+              {badgeValue > 0 ? (
+                <SidebarMenuBadge className="right-2 rounded-full bg-sidebar-foreground/10 px-1.5 text-[11px] font-semibold">
+                  {badgeValue}
+                </SidebarMenuBadge>
+              ) : null}
+            </SidebarMenuItem>
+          );
+        })}
       </SidebarMenu>
     </SidebarGroup>
   );

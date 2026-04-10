@@ -4,6 +4,7 @@
   "scripts": {
     "install": "poetry install",
     "export:catalog": "poetry run python processing/export_catalog_for_cronos.py --output processing/exports/catalog-feeds.jsonl",
-    "export:catalog:sample": "poetry run python processing/export_catalog_for_cronos.py --output processing/exports/catalog-feeds.sample.jsonl --limit 1000"
+    "export:catalog:sample": "poetry run python processing/export_catalog_for_cronos.py --output processing/exports/catalog-feeds.sample.jsonl --limit 1000",
+    "sync": "bash scripts/sync.sh"
   }
 }

@@ -6,6 +6,8 @@ import { InboxPage } from "@pages/inbox/";
 const inboxSearchSchema = z.object({
   filter: z.enum(["today", "unread", "saved"]).optional(),
   search: z.string().optional(),
+  feedId: z.string().optional(),
+  folderId: z.string().optional(),
   itemId: z.string().optional(),
 });
 
